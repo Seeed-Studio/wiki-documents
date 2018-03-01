@@ -1,0 +1,97 @@
+﻿# Copyright (c) 2016-2017 Martin Donath <martin.donath@squidfunk.com>
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to
+# deal in the Software without restriction, including without limitation the
+# rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+# sell copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+# IN THE SOFTWARE.
+
+# Project information
+site_name: Seeed Wiki
+site_description: Seeed Product Document
+site_author: Bill
+site_url: http://wiki.seeedstudio.com
+
+# Repository
+#repo_name: SeeedDocument/SeeedDocument.github.io
+#repo_url: https://github.com/SeeedDocument/SeeedDocument.github.io
+
+# Copyright
+copyright: 'Seeedstudio 2018'
+
+# Theme directory
+theme_dir: material
+
+# Icon
+site_favicon: 'images/favicon.ico'
+
+# Options
+extra:
+  feature:
+    tabs: false
+  palette:
+    primary: light green
+    accent: indigo
+  social:
+    - type: facebook
+      link: https://www.facebook.com/seeedstudiosz/
+    - type: github-alt
+      link: https://github.com/SeeedDocument
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite(guess_lang=false)
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc(permalink=true)
+  - pymdownx.arithmatex
+  - pymdownx.betterem(smart_enable=all)
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist(custom_checkbox=true)
+  - pymdownx.tilde
+
+# Page tree
+pages:
+  - Seeed Wiki: 'index.md'
+  
+  - Platform:
+    - ReSpeaker:
+      - ReSpeaker: ReSpeaker.md
+      - ReSpeaker Mic Array: ReSpeaker_Mic_Array.md
+      - ReSpeaker Core: ReSpeaker_Core.md
+      - ReSpeaker Core V2: ReSpeaker_Core_v2.md
+      - ReSpeaker 2-Mics Pi HAT: ReSpeaker_2_Mics_Pi_HAT.md  
+      - ReSpeaker 4-Mics Pi HAT: ReSpeaker_4_Mic_Array_for_Raspberry_Pi.md
+    
+  
+  - How to edit Wiki:
+    - How to edit Wiki: How_to_edit_Wiki.md
+  
+  - License: license.md
+
+# Google Analytics
+google_analytics:
+  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+  - auto
