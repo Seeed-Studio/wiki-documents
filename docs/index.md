@@ -1,17 +1,17 @@
 
 ## Platform
 
-| **Arduino**  |    **Beaglebone**  |    **Raspberry**   | 
+| **Arduino**  |    **Raspberry**  |    **Beaglebone**   | 
 |:---:|:---:|:---:|
-|[![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/arduino.png)](http://seeed.wiki/Arduino)   |[![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/Beaglebone.png)](http://seeed.wiki/BeagleBone)   |[![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/Respberry%20Pi.png)](http://seeed.wiki/Raspberry)   |
+|[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/arduino.png)](http://seeed.wiki/Arduino)   |  [![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/Respberry%20Pi.png)](http://seeed.wiki/Raspberry) |[![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/Beaglebone.png)](http://seeed.wiki/BeagleBone)  |
+
+|  **ReSpeaker**     |    **Shield**   |  **LinkIt** | 
+|:---:|:---:|:---:|
+| [![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/ReSpeaker.png)](http://seeed.wiki/Respeaker)    |[![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/Shield.png)](http://seeed.wiki/Shield)    |[![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/LinkIt.png)](http://seeed.wiki/LinkIt)   |
 
 | **Wio**  |    **mbed**  |    **RePhone**   |  
 |:---:|:---:|:---:|
 |[![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/Wio.png)](http://seeed.wiki/Wio)   |[![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/arch%20ble.jpg)](http://seeed.wiki/mbed)   |[![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/Rephone.png)](http://seeed.wiki/Rephone)    |
-
-| **LinkIt**   |  **ReSpeaker**     |    **Shield**   |  
-|:---:|:---:|:---:|
-|[![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/LinkIt.png)](http://seeed.wiki/LinkIt)    | [![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/ReSpeaker.png)](http://seeed.wiki/Respeaker)    |[![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/Shield.png)](http://seeed.wiki/Shield)    |
 
 | **Essentials**   |  **Wireless**     |      |  
 |:---:|:---:|:---:|
@@ -29,38 +29,23 @@
 |[![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/Grove_Communication.jpg)](http://seeed.wiki/Communication)    |[![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/Grove_Others.JPG)](http://seeed.wiki/Others)    |![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/empty.png)   |
 
 
-## IOT
+## IOT/Maker Pro/Tutorial
 
-| **IOT**  |      |       |  
+| **IOT**  |**Maker Pro**| **Tutorial**|  
 |:---:|:---:|:---:|
-|[![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/IOT.jpg)](http://seeed.wiki/IoT)    |![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/empty.png)   |![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/empty.png)   |
+|[![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/IOT.jpg)](http://seeed.wiki/IoT)    |[![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/MakerPro.png)](http://seeed.wiki/MakerPro)    |![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/empty.png)  |[![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/Tutotial.png)](http://seeed.wiki/Tutorial)   |
 
-
-## Maker Pro
-
-| **Maker Pro**  |      |       |  
-|:---:|:---:|:---:|
-|[![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/MakerPro.png)](http://seeed.wiki/MakerPro)    |![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/empty.png)   |![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/empty.png)   |
-
-
-## Tutorial
-
-| **Tutorial**  |      |       |  
-|:---:|:---:|:---:|
-|[![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/Tutotial.png)](http://seeed.wiki/Tutorial)    |![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/empty.png)   |![](https://github.com/SeeedDocument/wiki_chinese/raw/master/docs/images/empty.png)   |
-
-
-协议
+Copyright
 -------
 Copyright (c) 2018-2017 Seeed Inc. (https://www.seeedstudio.com)
 
-文档及图片
+License
 ---
 
 <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />
-这里所有的图片和文档顺从 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"> </a>
-的协议
+All documents and pictures align with <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"> </a>
+License. 
 
-## 联系我们
+## Contact Us
 
-如果你有文档或者技术上的任何疑问，请联系 [techsupport@seeed.cc](techsupport@seeed.cc)
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
