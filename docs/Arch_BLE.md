@@ -1,0 +1,155 @@
+---
+title: Arch BLE
+category: mbed
+bzurl: https://seeedstudio.com/Arch-BLE-p-1998.html
+oldwikiname: Arch_BLE
+prodimagename: Arch_BLE.jpg
+bzprodimageurl: http://statics3.seeedstudio.com/images/product/arch ble.jpg
+surveyurl: https://www.research.net/r/Arch_BLE
+sku: 113010002
+---
+
+![](https://raw.githubusercontent.com/SeeedDocument/Arch_BLE/master/img/Arch_BLE.jpg)
+
+Arch BLE is an mbed enabled development board based on Nordic nRF51822. With Arduino form factor and Grove connectors, it is extremely easy to create a Bluetooth Low Energy(BLE) device.
+
+The nRF51822 is a powerful multi-protocol single chip solution for ULP wireless applications. It incorporates Nordic’s latest best-in-class performance radio transceiver, an ARM Cortex M0 MCU and 256kB flash + 16kB RAM memory. The nRF51822 supports Bluetooth® low energy and 2.4 GHz protocol stacks.
+
+[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Arch-BLE-p-1998.html)
+
+Features
+--------
+
+-   mbed enabled
+    -  Online IDE
+    -  Easy to use C/C++ SDK
+    -  Handy libraries
+-   CMSIS DAP based on LPC11U35
+    -  Drag-n-drop programming
+    -  Debug using CMSIS DAP standard
+    -  USB virtual serial for communication
+-   Arduino form factor with Grove connectors
+-   Nordic nRF51822 Multi-protocol Bluetooth® 4.0 low energy/2.4GHz RF SoC
+    -  ARM Cortex M0 processor
+    -  256kB flash/16kB RAM
+    -  Configurable I/O mapping for digital I/O
+-  USB Micro B connector
+
+Hardware Overview
+------
+
+![](https://raw.githubusercontent.com/SeeedDocument/Arch_BLE/master/img/Arch_BLE_Pinout.png)
+
+Get Started
+-----------
+
+![](https://raw.githubusercontent.com/SeeedDocument/Arch_BLE/master/img/Get_started_with_mbed.png)
+
+1.  Click [this link](https://developer.mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-BLE) to **login or signup to mbed**
+2.  Import the mbed\_blinky program
+3.  Click the **Compile** icon of the top toolbar to compile the program, then download the compiled hex file.
+4.  Drag-n-drop the downloaded hex file into the MBED disk
+
+You can open **main.cpp** to change the program. For example, use the following code to blink the LED every 0.1s
+```
+    #include "mbed.h"
+
+    DigitalOut led(p30);           // on-board led is connected to p30
+
+    int main()
+    {
+        while (true) {
+            led = !led;
+            wait(0.1);
+        }
+    }
+```
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+If you are get a compiling error that 'device.h' is not found, try to update the mbed library to the latest revision in your program.
+</div>
+
+
+Applications
+------------
+
+-  Color Pixels, a colorful LED strip, can be controlled by mobile phone.
+
+    *  Hardware
+        -  [Arch BLE](http://www.seeedstudio.com/depot/Arch-BLE-p-1998.html?cPath=19_21)
+        -  [Digital RGB LED Strip](http://www.seeedstudio.com/depot/Digital-RGB-LED-FlexiStrip-30-LED-1-Meter-p-1665.html)
+        -  Android device with BLE
+
+    ![](https://raw.githubusercontent.com/SeeedDocument/Arch_BLE/master/img/Ble_color_pixels_bb.png)
+    ![](https://raw.githubusercontent.com/SeeedDocument/Arch_BLE/master/img/Color_pixels_app.png)
+
+
+    *  Make it run
+
+        1.  Download [BLE\_Color\_Pixels\_Arch\_BLE.hex](http://tangram.qiniudn.com/BLE_Color_Pixels_ARCH_BLE.hex)
+        2.  Copy the hex file to the MBED disk of your Arch BLE
+        3.  Download [the Color Pixels Android app](http://tangram.qiniudn.com/seeed_ble_color_pixels.apk)
+
+If you want to change the program, click [this link](https://mbed.org/compiler/#import:/teams/Seeed/code/BLE_Color_Pixels/;platform:Seeed-Arch-BLE) to import the Color Pixels program to mbed online IDE.
+
+If the BLE device is disconnecting frequently, we can improve the stability by changing the BLE parameters - Advertising Duration (in main.cpp), Min Interval and Max Interval (in nRF51822/projectconfig.h)
+
+
+```
+#define CFG_GAP_CONNECTION_MIN_INTERVAL_MS           20                     /**< Minimum acceptable connection interval */
+#define CFG_GAP_CONNECTION_MAX_INTERVAL_MS          200                     /**< Maximum acceptable connection interval */
+```
+
+-  A Toy car controlled by mobile phone.
+
+    *  Hardware
+        -  [Arch BLE](http://www.seeedstudio.com/depot/Arch-BLE-p-1998.html?cPath=19_21)
+        -  [Shield Bot](http://www.seeedstudio.com/Shield-Bot-p-1380.html)
+
+    *  Make it run
+
+        1.  Read recipe/instructions [here](https://www.seeed.cc/A-Toy-Car-controlled-by-the-mobile-phone-p-390.html)
+
+
+
+Update or Restore Firmware
+--------------------------
+
+The latest firmware version for the Arch BLE is v0221 built on March 02 2015. To check your firmware version and built date, open the MBED.HTM file of your MBED disk in a text editor.
+
+Change log:
+
+-   2014-06-26: First version
+-   2014-08-25: Support to drag-n-drop hex file generated by gcc toolchain and without softdevice
+-   2014-10-08: Use USB EJECT INSET instead of reconnecting USB, increase intel hex data line buffer (from 64 bytes to 128 bytes)
+-   2015-02-03: Fix Mac OS X 10.10 Yosemite read only file system bug
+
+Known issues:
+
+-   Issues when *directly* downloading the hex file into the MBED disk with the Chrome browser. The reason is Chrome creates a temporary file while downloading. If you are using Chrome, please save the hex file to a different location and *then* copy it to the MBED disk.
+
+Firmware:
+
+-   [The firmware v0221 2015-02-03 for Arch BLE](https://developer.mbed.org/media/uploads/yihui/arch_ble_interface_v221_20150203_2.bin)
+-   [The firmware v0203 2014-10-08 for Arch BLE](https://developer.mbed.org/media/uploads/yihui/lpc11u35_nrf51822_if_mbed_v203_20141008.bin)
+-   [The firmware v0203 2014-08-25 for Arch BLE](https://developer.mbed.org/media/uploads/yihui/lpc11u35_nrf51822_if_mbed_v203_20140825.bin)
+
+To flash a new firmware:
+
+-   Hold the Arch BLE's button and power it ON.
+-   A CRP DISABLD disk will pop up.
+    -   On Windows, replace firmware.bin with the above firmware.
+    -   On Linux/Mac, use command: **dd if={new\_firmware.bin} of={firmware.bin} conv=notrunc**
+
+Resources
+---------
+
+-   [Arch BLE mbed developer platform page](https://developer.mbed.org/platforms/Seeed-Arch-BLE/)
+-   [Schematic in PDF format](https://raw.githubusercontent.com/SeeedDocument/Arch_BLE/master/res/Arch_BLE_v1.0_pdf.pdf)
+-   [Schematic and board files in EAGLE format](https://raw.githubusercontent.com/SeeedDocument/Arch_BLE/master/res/Arch_BLE_v1.0_Eagle.zip)
+-   [LPC11U35 Firmware](https://raw.githubusercontent.com/SeeedDocument/Arch_BLE/master/res/Lpc11u35_nrf51822_if_mbed.bin.zip)
+-   [Seeed BLE Color Pixels App for Android](http://tangram.qiniudn.com/seeed_ble_color_pixels.apk)
+-   [Sources of BLE Color Pixels App](https://github.com/Seeed-Studio/ble_color_pixels)
+
+<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Arch_BLE -->
