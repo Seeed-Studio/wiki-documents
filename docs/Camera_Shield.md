@@ -218,3 +218,6 @@ to use the UART mode.
 *   [Camera Shield Library on gitHub](https://github.com/Seeed-Studio/Camera_Shield_VC0706)
 
 *   [Schematic of Camera Shield](https://github.com/SeeedDocument/Camera_Shield/raw/master/res/CameraShield-Schematic.zip)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

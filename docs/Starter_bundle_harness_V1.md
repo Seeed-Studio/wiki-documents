@@ -150,3 +150,6 @@ Starter bundle harness is a board  keeping the component of grove-starter bundle
 *   [Grove - Sound Sensor ](/Grove-Sound_Sensor "Grove - Sound Sensor")
 
 *   [Grove - Base Shield](/Grove-Base_Shield "Grove - Base Shield")
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

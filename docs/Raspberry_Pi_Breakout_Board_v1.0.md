@@ -42,3 +42,6 @@ Resources
 - [Raspberry Pi Breakout Board v1.0 sch pcb-.zip](https://raw.githubusercontent.com/SeeedDocument/Raspberry_Pi_Breakout_Board_v1.0/master/res/Raspberry_Pi_Breakout_Board_v1.0_sch_pcb-.zip "File:Raspberry Pi Breakout Board v1.0 sch pcb-.zip")
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Raspberry_Pi_Breakout_Board_v1.0 -->
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

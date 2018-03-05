@@ -89,3 +89,6 @@ Resources
 -   [Demo Code](https://github.com/Seeed-Studio/Grove_EMG_detector_demo_code)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_EMG_Detector -->
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

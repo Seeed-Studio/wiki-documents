@@ -41,3 +41,6 @@ Nose LED Kit's pin layout is different from Hanahotaru's one.Please see followin
 ##  PR movie
 
 *   [http://www.youtube.com/watch?v=CQJDa41mKwA](http://www.youtube.com/watch?v=CQJDa41mKwA)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

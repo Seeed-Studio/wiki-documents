@@ -127,3 +127,6 @@ Open the serial monitor, set baud rate to be 57600, then play the sound. We have
 - [Website of Heelight](http://www.heelight.com/)
 - [500+ digital voice audio](https://github.com/SeeedDocument/Grove_Heelight_Sensor/raw/master/res/audio.zip)
 - [Example Code](https://github.com/SeeedDocument/Grove_Heelight_Sensor/tree/master/res/Grove_-_Heelight_Sensor_example)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

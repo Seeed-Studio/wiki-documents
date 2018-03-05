@@ -125,3 +125,6 @@ Grove series sensors can easily mounting to the PVC plate by rivet.
 <td> 1
 </td></tr>
 </table>
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

@@ -204,3 +204,6 @@ Get more information about Core User please email to:[recipe@seeed.cc](mailto:re
 - **[PDF]**[Ethernet Shield v2.0 PCB](https://github.com/SeeedDocument/Ethernet_Shield_V2.0/raw/master/res/Ethernet%20Shield%20v2.0.pdf)
 - **[PDF]**[Ethernet Shield v2.0 SCH](https://github.com/SeeedDocument/Ethernet_Shield_V2.0/raw/master/res/Ethernet%20Shield%20v2.0%20sch.pdf)
 - **[Datasheet]**[W5200 Datasheet.pdf](https://github.com/SeeedDocument/Ethernet_Shield_V2.0/raw/master/res/W5200_Datasheet.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

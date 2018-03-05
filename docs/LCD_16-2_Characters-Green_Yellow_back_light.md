@@ -556,3 +556,6 @@ While /RST is low, no instruction can be accepted except status read. Therefore,
 ##   Resources
 
 *   [Datasheet](https://bz.seeedstudio.com/depot/datasheet/LMB162ABC-Manual-Rev0.2.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

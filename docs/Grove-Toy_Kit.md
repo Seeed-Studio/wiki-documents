@@ -278,3 +278,6 @@ If you have questions or other better design ideas, you can go to our [forum](ht
 *   [GROVE - Starter Kit V1.1b](/GROVE-Starter_Kit_V1.1b "GROVE - Starter Kit V1.1b")
 
 *   [Grove - ADK Dash Kit](/w/index.php?title=Grove_-_ADK_Dash_Kit&amp;action=edit&amp;redlink=1 "Grove_-_ADK_Dash_Kit&amp;action=edit&amp;redlink=1")
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

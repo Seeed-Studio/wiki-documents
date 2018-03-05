@@ -322,3 +322,6 @@ The principal application of Seeeduino Stalker v3.0 is data-logging of sensor si
 *   [ Comparison between various versions of Seeeduino Stalker](http://wiki.seeedstudio.com/wiki/Seeeduino_Stalker#Comparison_between_various_versions_of_Seeeduino_Stalker)
 
 *   [SD card reading mini-USB cable, in a capsule](http://www.seeedstudio.com/depot/sd-card-reading-miniusb-cable-in-a-capsule-p-575.html?cPath=77)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

@@ -48,3 +48,6 @@ void loop()
 ## Resource
 ---
 - [Xadow Buzzer Eagle File](https://github.com/SeeedDocument/Xadow_Buzzer/raw/master/res/Xadow_Buzzer_eagle_file.zip)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

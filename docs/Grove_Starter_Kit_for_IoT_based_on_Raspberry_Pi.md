@@ -313,3 +313,6 @@ You can see the Distance Sound Light value and relay state on the LCD Screen. Th
 * [Windows Dev Center](https://dev.windows.com/en-us/iot)
 * [GrovePi C# Library Code](https://github.com/DexterInd/GrovePi/tree/master/Software/CSharp)
 * [Example Code](https://github.com/Seeed-Studio/GrovePiExamples_win10)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

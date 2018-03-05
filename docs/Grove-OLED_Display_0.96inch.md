@@ -362,3 +362,6 @@ if __name__=="__main__":
 - **[Datasheet]** [Resources of SSD1308_1.0.pdf](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/resource/SSD1308_1.0.pdf)
 - **[Datasheet]** [Resources of LY190-128064.pdf](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/resource/LY190-128064.pdf)
 - **[Wiki]** [Beaglebone Green Wiki](http://wiki.seeed.cc/BeagleBone_Green/)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

@@ -208,3 +208,6 @@ _**Note**_ that you need to soldering a electronic component with following basi
 ##  Resources
 ---
 [User manual](res/Mini_Soldering_Iron_manual.zip)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

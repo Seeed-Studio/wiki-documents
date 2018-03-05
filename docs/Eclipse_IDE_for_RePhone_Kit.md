@@ -263,3 +263,6 @@ As RePhone is mostly developed with the LinkIt Assist SDK, and Mediatek has made
 [![](https://github.com/SeeedDocument/Eclipse_IDE_for_RePhone_Kit/raw/master/img/Developer_guide_en-06.png)](res/MediaTek_LinkIt_Assist_2502_Developers_Guide_v1_1.pdf)
 
 [![](https://github.com/SeeedDocument/Eclipse_IDE_for_RePhone_Kit/raw/master/img/Developer_guide_cn-07_1.png)](res/MediaTek_LinkIt_Assist_2502_cn_v1_1.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

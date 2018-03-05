@@ -696,3 +696,6 @@ Russia
 *   [Description nRF24l01+](ftp://imall.iteadstudio.com/Modules/IM120606002_nRF24L01_module/DS_nRF24L01.pdf)
 
 *   [schematic of the device](http://wiki.devicter.ru/images/c/c7/Wl-Scheme.PNG)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

@@ -398,3 +398,6 @@ _This function can be used to draw a triangle. It is formed by three points._
 -  **[Datasheet]** [e-Paper panels Datasheet](https://github.com/SeeedDocument/Small_e-Paper_Shield/raw/master/res/4P008-00_02_COG_Driver_Interface_Timing_for_smallPlussize.pdf)
 -  **[Tool]** [epdImageKit Tool](https://github.com/SeeedDocument/Small_e-Paper_Shield/raw/master/res/EpdImageKit.zip)
 -  **[Library]** [New Panel Library【EPD_V230】](https://github.com/SeeedDocument/Small_e-Paper_Shield/raw/master/res/EPDV230.zip)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

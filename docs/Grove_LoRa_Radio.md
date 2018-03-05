@@ -165,3 +165,6 @@ The below chart shows the relationships between the band rate signal band width 
     *   [Grove - LoRa Radio Library and Examples](https://github.com/Seeed-Studio/Grove_LoRa_433MHz_and_915MHz_RF/)
 
 * [***Download ALL Above***](https://github.com/SeeedDocument/Grove_LoRa_Radio/blob/master/res/res.zip)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

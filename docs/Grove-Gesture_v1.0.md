@@ -326,3 +326,6 @@ In your own project, you may need multi-gestures instead of a single gesture to 
 - [Grove - Gesture_v1.0 sch pcb.zip](https://github.com/SeeedDocument/Grove_Gesture_V_1.0/raw/master/resources/Grove_-_Gesture_v1.0_sch_pcb.zip)
 - [PAJ7620U2_Datasheet_V0.8_20140611.pdf](https://github.com/SeeedDocument/Grove_Gesture_V_1.0/raw/master/resources/PAJ7620U2_Datasheet_V0.8_20140611.pdf)
 - [Library Grove - Guesture](https://github.com/Seeed-Studio/Gesture_PAJ7620)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

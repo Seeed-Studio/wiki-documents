@@ -422,3 +422,6 @@ Here's the list of supported Groves so far:
 |104030003 |    Grove - 4-Digit Display                 |UART      |itself                 | [link](http://www.seeedstudio.com/Grove-4-Digit-Display-p-1198.html) |
 |316010005 |    Grove - Servo                           |Digital   |itself                 | [link](http://www.seeedstudio.com/Grove-Servo-p-1241.html) |
 |101020067 |    Grove - CO2 Sensor                      |UART      |itself                 | [link](http://www.seeedstudio.com/Grove-CO2-Sensor-p-1863.html) |
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

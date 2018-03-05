@@ -120,3 +120,6 @@ Resources
 -   [STM32F407 datasheet](https://raw.githubusercontent.com/SeeedDocument/Arch_Max_v1.1/master/res/STM32F407.pdf)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Arch_Max_v1.1 -->
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

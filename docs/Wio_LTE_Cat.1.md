@@ -1613,3 +1613,6 @@ Please click here to see all [Wio_LTE](http://support.seeedstudio.com/knowledgeb
 - **[Library]**[Wio_LTE_Arduino_Library](https://github.com/Seeed-Studio/Wio_LTE_Arduino_Library)
 - **[Library]**[Wio_LTE_JavaScript_Demo](https://github.com/Seeed-Studio/Wio_LTE_JavaScript_Demo)
 - **[Datasheet]**[AT Command](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/AT_Command.zip)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

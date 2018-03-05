@@ -50,3 +50,6 @@ Now join us in the [RePhone Community](http://www.seeed.cc/discover.html?t=RePho
 ---
 The schematic diagram of Xadow GSM Breakout is provided in the following link:
 - [Xadow_GSM+BLE eagle files](https://github.com/SeeedDocument/Xadow_GSM_Breakout/raw/master/res/Xadow_GSM_Breakout.rar)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

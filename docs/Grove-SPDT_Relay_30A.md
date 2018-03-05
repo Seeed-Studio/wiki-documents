@@ -111,3 +111,6 @@ while True:
 ---
 - [Grove - SPDT Relay(30A) Eagle File](https://github.com/SeeedDocument/Grove-SPDT_Relay_30A/raw/master/res/Grove_-_SPDT_Relay(30A)_Eagle_File.zip)
 - [SLA-05VDC-SL-C Datasheet](https://github.com/SeeedDocument/Grove-SPDT_Relay_30A/raw/master/res/SLA-05VDC-SL-C_Datasheet.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

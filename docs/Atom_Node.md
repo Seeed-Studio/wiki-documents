@@ -865,3 +865,6 @@ Now you have completed the firmware upgrade.
 - [the application program:BeaconUI](https://github.com/SeeedDocument/Atom_Node/raw/master/res/BeaconUI.zip)
 
 - [Hardware design instruction](https://github.com/SeeedDocument/Atom_Node/raw/master/res/Beacon_Atom_Hardware_Design_Analysis_.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

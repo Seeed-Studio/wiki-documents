@@ -72,3 +72,6 @@ If you need further information about how to communicate, please refer to WIKI p
 - **[PDF]** [XBee Shield V2.0b PCB File](https://github.com/SeeedDocument/XBee_Shield_V2.0/raw/master/res/XBee%20Shield%20v2.0b%20PCB.pdf)
 - **[Datasheet]**[CJT1117 Datasheet](https://github.com/SeeedDocument/XBee_Shield_V2.0/raw/master/res/CJT1117_datasheet.pdf)
 - **[Datasheet]**[SN74LVC1G125 Datasheet](https://github.com/SeeedDocument/XBee_Shield_V2.0/raw/master/res/SN74LVC1G125DCKR.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

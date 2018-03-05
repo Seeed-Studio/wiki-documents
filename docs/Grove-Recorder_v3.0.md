@@ -171,3 +171,5 @@ You can enter some command in Serial monitor:
 
 * [Schematics in PDF](https://github.com/SeeedDocument/Grove_Recorder_V3/raw/master/res/Grove%20-%20Recorder%20v3.0a.pdf)
 * [Schematics in Eagle](https://github.com/SeeedDocument/Grove_Recorder_V3/raw/master/res/eagle.zip)
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

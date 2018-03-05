@@ -72,3 +72,6 @@ void loop() {
 ##  Resource
 ---
 - [Grove_-_Protoshield Eagle File](https://github.com/SeeedDocument/Grove-Protoshield/raw/master/res/Grove-Protoshield_v1.0_Source_File.zip)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

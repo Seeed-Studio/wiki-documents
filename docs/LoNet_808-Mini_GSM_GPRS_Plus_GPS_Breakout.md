@@ -457,3 +457,6 @@ $GPRMC,043326.000,A,
 *   [GPRS_Shield library on gitHub](https://github.com/Seeed-Studio/GPRS_Shield_Suli)
 
 *   [Adafruit_FONA_Library](https://github.com/adafruit/Adafruit_FONA_Library/)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

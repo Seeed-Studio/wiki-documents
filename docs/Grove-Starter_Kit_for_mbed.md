@@ -106,3 +106,6 @@ The idea is from [Makey Makey](http://makeymakey.com/), but uses different hardw
 - [Infrared keyboard](https://developer.mbed.org/teams/Seeed/wiki/Infrared-keybaord)
 - [Colorful light](https://developer.mbed.org/teams/Seeed/wiki/Grove-Chainable-RGB-LED)
 - [Temperature controls color](https://developer.mbed.org/teams/Seeed/wiki/Temperature-Color)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

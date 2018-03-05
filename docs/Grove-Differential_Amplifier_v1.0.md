@@ -188,3 +188,6 @@ The measurement range is determined by power supply voltage VCC , the maximum ou
 - [Amplifier1.0 Schematic](https://github.com/SeeedDocument/Grove-Differential_Amplifier_v1.0/raw/master/res/Amplifier.pdf)
 
 - [INA125 Datasheet](https://github.com/SeeedDocument/Grove-Differential_Amplifier_v1.0/raw/master/res/INA125.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

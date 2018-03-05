@@ -72,3 +72,6 @@ You can see :
 *   [AT42QT107 datasheet](https://github.com/SeeedDocument/Xadow_Q_Touch_Sensor/raw/master/res/AT42QT1070-MMH.pdf)
 
 *   [How to detect finger touch?](/How_to_detect_finger_touch)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

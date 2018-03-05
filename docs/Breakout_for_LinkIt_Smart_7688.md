@@ -135,3 +135,6 @@ This section will show those senior customers how to add recording funtion to th
 *   [OpenWrt](http://wiki.openwrt.org/doc/howto/user.beginner)
 
 *   [Link](http://www.seeedstudio.com/depot/LinkIt-Smart-7688-p-2573.html?cPath=122_142) to buy a LinkIt Smart 7688.
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

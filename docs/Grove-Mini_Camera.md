@@ -150,3 +150,6 @@ Resources
 - [Mini Camera Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-Mini_Camera/master/res/Mini_Camera_Eagle_File.zip)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Mini_Camera -->
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

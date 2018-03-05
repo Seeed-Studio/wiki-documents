@@ -1099,3 +1099,6 @@ After downloading program, open two serial terminal windows, the LEDs on Bluetoo
 *   [Eagle_BLE(dual)_Bee_V1.0_sch_pcb](https://github.com/SeeedDocument/BLE_dual_Bee_v1.0/raw/master/res/BLE-dual-Bee_V1.0_sch_pcb.zip)
 
 *   [PDF_BLE(dual)_bee_v1.0](https://github.com/SeeedDocument/BLE_dual_Bee_v1.0/raw/master/res/BLE-dual-bee_v1.0.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

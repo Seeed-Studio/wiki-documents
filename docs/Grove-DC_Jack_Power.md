@@ -63,3 +63,6 @@ Note that the DC - Jack Power [Grove](/Grove "Grove") module is sold only as par
 3.  Check if the supplied voltage and current is within the module's specified range
 
 4.  Contact your seller's customer service if you still can't solve the problem, or visit the [SeeedStudio Customer Support Site](http://support.seeedstudio.com/)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

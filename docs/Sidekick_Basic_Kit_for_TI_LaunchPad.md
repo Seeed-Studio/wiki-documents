@@ -199,3 +199,6 @@ Example: IR Emitter and Receiver (Wireless)
 [**More examples**](http://energia.nu/guide/#tutorials)
 
 <sup>*</sup>For these examples, it may require additional hardware beyond Sidekick Basic Kit for TI LaunchPad™
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

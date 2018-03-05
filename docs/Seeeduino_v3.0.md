@@ -133,3 +133,6 @@ This documentation is licensed under the Creative Commons [Attribution-ShareAlik
 - **[PDF]**[Seeeduino v3.0 PCB](https://github.com/SeeedDocument/Seeeduino-v3.0/raw/master/res/Seeeduino%20v3.0%20PCB.pdf)
 - **[PDF]**[Seeeduino v3.0 SCH](https://github.com/SeeedDocument/Seeeduino-v3.0/raw/master/res/Seeeduino_v3.0%20SCH.pdf)
 - **[PDF]**[Schematic in pdf](https://github.com/SeeedDocument/Seeeduino-v3.0/raw/master/res/Seeeduino_v3.0.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

@@ -520,3 +520,6 @@ If you have questions or other better design ideas, you can go to our [forum](ht
 - **[EAGLE]**[Wifi Bee v0.91b design files in Eagle format](http://wiki.seeedstudio.com/images/f/ff/Wifi_Bee_v0.91b_eagle.zip)
 - **[Library]**[WiShield Library](https://github.com/asynclabs/WiShield)
 - **[Library]**[a more up to date WiShield Library, compatible with Arduino 1.0](https://github.com/CapnBry/WiShield_user_contrib)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

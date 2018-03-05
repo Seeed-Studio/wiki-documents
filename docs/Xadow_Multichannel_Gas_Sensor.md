@@ -175,3 +175,6 @@ By opening the serial monitor, you can see the raw data read from sensor.
 - [Xadow - Multichannel Gas Sensor eagle files](https://github.com/SeeedDocument/Xadow_Multichannel_Gas_Sensor/raw/master/res/Xadow_-_Multichannel_Gas_Sensor_eagle_files.zip)
 - [MiCS-6814 Datasheet](https://github.com/SeeedDocument/Xadow_Multichannel_Gas_Sensor/raw/master/res/MiCS-6814_Datasheet.pdf)
 - [Arduino Library & Grove/Xadow firmware](https://github.com/Seeed-Studio/Mutichannel_Gas_Sensor)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

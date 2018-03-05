@@ -333,3 +333,6 @@ You can check the status of Touch Sensor now. Try press the Touch Sensor, and up
 *   [Started with AWS IoT Services on the LinkIt™ ONE Development Platform](https://labs.mediatek.com/site/global/developer_tools/mediatek_linkit/get-started/aws/get-started/index.gsp)
 
 *   [AWS IoT](https://aws.amazon.com/iot/)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

@@ -310,3 +310,6 @@ Documentation wiki: [CUI32Stem GROVE Lab Buncle](http://www.seeedstudio.com/wiki
 *   [http://www.cpustick.com/](http://www.cpustick.com/)
 
 *   [http://code.google.com/p/cui32/](http://code.google.com/p/cui32/)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

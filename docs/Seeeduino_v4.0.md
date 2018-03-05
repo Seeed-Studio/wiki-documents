@@ -364,3 +364,6 @@ Below is a list of changes that have been made to the Seeeduino board over all t
 - **[PDF]**  [Seeeduino v4.0 SCH file ](https://github.com/SeeedDocument/Seeeduino_v4.0/raw/master/res/Seeeduino_v4.0_pdf.pdf)
 - **[Datasheet]**  [ATMEGA328P-MU Summary](http://www.atmel.com/Images/Atmel-8271-8-bit-AVR-Microcontroller-ATmega48A-48PA-88A-88PA-168A-168PA-328-328P_datasheet_Summary.pdf)
 -  **[Datasheet]** [ATMEGA16U2 Summary](http://www.atmel.com/Images/7799S.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

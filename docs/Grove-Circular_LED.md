@@ -99,3 +99,6 @@ Please download the CircularLED lib and test this module with_<font color="red">
 - [Grove Circular LED schematics PDF File](https://github.com/SeeedDocument/Grove-Circular_LED/raw/master/res/Circular_LED_v0.9b.pdf)
 
 - [Grove-circular LED eagle files](https://github.com/SeeedDocument/Grove-Circular_LED/raw/master/res/Grove-circular_LED_eagle_files.zip)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

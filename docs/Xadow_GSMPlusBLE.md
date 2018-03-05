@@ -115,3 +115,6 @@ Check more info about the chipset MT2502:
 Check out this excel for the compatibility with Xadow 1.0 modules:  
 [- Compatibility between GSM+BLE and Xadow 1.0 modules  ](https://github.com/SeeedDocument/Xadow_GSM-BLE/blob/master/resource/Compatibility_between_GSM%2BBLE_and_Xadow_1.0_modules.xlsx)
  
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

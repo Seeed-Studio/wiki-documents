@@ -204,3 +204,6 @@ Arch GPRS doesn't come with [an mbed interface](https://mbed.org/handbook/mbed-H
 - **[Command]**[AT Command Reference](https://github.com/SeeedDocument/Arch_GPRS/raw/master/res/AT%E6%8C%87%E4%BB%A4%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C.pdf)
 - **[Datasheet]**[EG10 datasheet](https://github.com/SeeedDocument/Arch_GPRS/raw/master/res/EG10%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C.pdf)
 - **[Demo]**[demo](https://mbed.org/users/loovee/code/ARCH_GPRS_Demo/)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

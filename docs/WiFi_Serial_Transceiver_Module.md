@@ -171,3 +171,6 @@ Another easy trick, [why not make one for yourself?](http://www.seeed.cc/project
 Na, not enough? More [Awesome Projects with ESP8266](http://www.seeed.cc/discover.html?t=wio).
 
 Even more Awesome Projects On [Recipe](http://www.seeed.cc/projects.html#recipe)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

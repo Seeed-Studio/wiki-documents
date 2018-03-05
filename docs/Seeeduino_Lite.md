@@ -71,3 +71,6 @@ Replace two file in the path of Arduino. Open up Arduino-1.0.1/hardware/arduino/
 - [new USBCore.cpp](https://github.com/SeeedDocument/Seeeduino_Lite/blob/master/resource/Boards.zip).
 - [Lite Driver File](https://github.com/SeeedDocument/Seeeduino_Lite/blob/master/resource/Signed_USB_Serial_Driver-master.zip).  
 - [Getting Started](http://www.seeedstudio.com/wiki/index.php?title=Main_Page#Getting_Started).
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

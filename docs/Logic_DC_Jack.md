@@ -229,3 +229,6 @@ Below Groves can work with Logic DC Jack well:
 - **[EAGLE]**[Logic DC Jack v1.0 sch](https://github.com/SeeedDocument/Logic_DC_Jack/raw/master/res/Logic%20DC%20Jack%20v1.0.sch)
 -  **[Wik]**   [Wiki page of NOT Gate](https://en.wikipedia.org/wiki/Inverter_(logic_gate)
 - **[Wik]**    [Wiki page of AND Gate](https://en.wikipedia.org/wiki/AND_gate)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

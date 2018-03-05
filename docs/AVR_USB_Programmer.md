@@ -45,3 +45,6 @@ Click [here](http://www.jyetech.com/Products/073/073_Assembly.pdf) to check the 
 *   [Supporting software (Windows/linux, in English)](http://extremeelectronics.co.in/avr-tutorials/gui-software-for-usbasp-based-usb-avr-programmers/)
 
 *   [AVR programmer firmware and USB driver](http://www.jyetech.com/Products/073/usbasp.2009-02-28.tar.gz)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

@@ -39,3 +39,6 @@ For holding IR sensors while you can turn it with different angles
 |Plastic rivet|	2	|HKWASI	|D3x5.5(diameter 3 length 5.5 ,black)|
 |Plastic rivet|	10	|HKWASI	|D2X4.8(diameter 2 length 4.8 ,black)|
 |selflocking plastic rope|	2	|	|2x56|
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

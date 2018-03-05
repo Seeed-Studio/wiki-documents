@@ -139,3 +139,6 @@ Connect the ethernet shield with internet via RJ45 connector, and Arduino with P
 - **[Eagle]**[Ethernet Shield Eagle Files](https://github.com/SeeedDocument/Ethernet_Shield_V1.0/raw/master/res/Ethernet_Shield.zip)
 - **[PDF]**[W5100_ethernet_shield PCB](https://github.com/SeeedDocument/Ethernet_Shield_V1.0/raw/master/res/W5100_ethernet_shield.pdf)
 - **[PDF]**[W5100_ethernet_shield SCH](https://github.com/SeeedDocument/Ethernet_Shield_V1.0/raw/master/res/W5100_ethernet_shield%20SCH.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

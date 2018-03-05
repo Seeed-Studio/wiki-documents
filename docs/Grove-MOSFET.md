@@ -162,3 +162,6 @@ Resources
 - [MOSFET Wikipedia](http://en.wikipedia.org/wiki/MOSFET)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_MOSFET -->
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

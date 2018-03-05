@@ -87,3 +87,6 @@ Please refer to the simple drawing for the 315Mhz RF link. On the transimitter s
 ##   Resources
 ---
 *   [Manual for How to use](http://www.seeedstudio.com/depot/datasheet/How%20to%20Use%20315MHz%20Remote%20Relay%20Kits.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

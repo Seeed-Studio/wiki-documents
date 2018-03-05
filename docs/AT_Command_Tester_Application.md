@@ -369,3 +369,6 @@ FTP data transfer is complete
 
 +FTPGET:1,0
 FTP session end
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

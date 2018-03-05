@@ -19,3 +19,6 @@ Here is the list of the Wio_Tracker Boards you can find in the Seeed WiKi. The l
 - [Wio LTE Cat.1](/Wio_LTE_Cat.1/)
 - [Wio Tracker - GPS, BT3.0, GSM, Arduino Compatible](/wio_gps_board/)
 
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

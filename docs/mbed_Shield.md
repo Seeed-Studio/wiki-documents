@@ -71,3 +71,6 @@ The example demonstrates how to get started with the Ethernet function.
 - **[Tools]**[MSCUsbHost](https://github.com/SeeedDocument/mbed_Shield/raw/master/res/MSCUsbHost.zip)
 - **[Tools]**[MbedDriver](https://github.com/SeeedDocument/mbed_Shield/raw/master/res/MbedDriver.zip)
 - **[Tools]**[TCPSocket_HelloWorld](https://github.com/SeeedDocument/mbed_Shield/raw/master/res/TCPSocket_HelloWorld.zip)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

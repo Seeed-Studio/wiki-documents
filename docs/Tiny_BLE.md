@@ -135,3 +135,6 @@ We customized a DFU bootloader for you to update your application through Over-T
 *   [frizting part](https://github.com/Seeed-Studio/Tiny_BLE/blob/master/tiny_ble.fzpz?raw=true)
 
 *   [MPU6050 library](http://developer.mbed.org/teams/Seeed/code/eMPL_MPU6050/)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

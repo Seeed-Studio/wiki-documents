@@ -471,3 +471,6 @@ If you have questions or other better design ideas,
 </td>
 <td> 27.10.2013
 </td></tr></table>
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

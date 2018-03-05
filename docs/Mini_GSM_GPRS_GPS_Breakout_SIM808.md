@@ -503,3 +503,6 @@ Now share your awesome projects with us on [Recipe](http://www.seeedstudio.com/r
 ##   Support
 
 Any tech support, please contact [_support@deegou.com_](http://www.deegou.com)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

@@ -187,3 +187,6 @@ Please do not hesitate to contact **techsupport@seeed.cc** if you require furthe
 - **[PDF]** [Grove - Piezo Vibration Sensor Schematic PDF File](https://raw.githubusercontent.com/SeeedDocument/Grove-Piezo_Vibration_Sensor/master/res/Gvove-Piezo_Vibration_Sensor.pdf)
 - **[PDF]** [Grove - Piezo Vibration Sensor PCB PDF File](https://github.com/SeeedDocument/Grove-Piezo_Vibration_Sensor/raw/master/res/Gvove%20-%20Piezo%20Vibration%20Sensor%20v1.1%20PCB.pdf)
 - **[Datasheet]** [Piezo Vibration Sensor Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Piezo_Vibration_Sensor/master/res/Piezo_Vibration_Sensor.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

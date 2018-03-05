@@ -126,3 +126,6 @@ Performance to show:
 ##   Support
 
 &lt;a href="[http://www.seeedstudio.com/forum](http://www.seeedstudio.com/forum)"&gt;Ask questions on Seeed forum&lt;/a&gt;.
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

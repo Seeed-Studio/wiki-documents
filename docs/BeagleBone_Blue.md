@@ -887,3 +887,6 @@ Please do not hesitate to contact **techsupport@seeed.cc** if you require furthe
 - **[MoreReading]** [Troubleshooting](http://beagleboard.org/getting-started#troubleshooting)
 - **[MoreReading]** [Hardware documentation](http://beagleboard.org/getting-started#hardware)
 - **[MoreReading]** [Projects of BeagleBoard](http://beagleboard.org/project)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

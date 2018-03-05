@@ -65,3 +65,6 @@ The diagram below shows the orientation of the axes of sensitivity and the polar
 - [Xadow_IMU_9DOF_Eagle_File.zip](https://github.com/SeeedDocument/Xadow_IMU_9DOF/raw/master/res/Xadow-IMU_9DOF_v1.0.zip)
 - [Xadow_IMU_9DOF_Sch_PDF File](https://github.com/SeeedDocument/Xadow_IMU_9DOF/raw/master/res/Sch_Of_Xadow-IMU_9DOF_v1.0.pdf)
 - [MPU_9150_Datasheet.pdf](https://github.com/SeeedDocument/Xadow_IMU_9DOF/raw/master/res/MPU-9150.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

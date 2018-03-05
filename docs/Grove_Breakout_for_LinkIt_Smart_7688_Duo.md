@@ -108,3 +108,6 @@ while True:
 ---
 - [Schematic files](https://github.com/SeeedDocument/Grove-Breakout_for_LinkIt_Smart_7688_Duo/raw/master/res/Schematic_files_for_Grove_Breakout_for_LinkIt_Smart_7688_Duo.zip)
 - [OpenWrt](http://wiki.openwrt.org/doc/howto/user.beginner)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

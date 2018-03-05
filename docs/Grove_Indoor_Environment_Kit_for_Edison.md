@@ -255,3 +255,6 @@ _**Note: When visiting the web server, a port number(88)should be added,such as:
 *   [Edison Getting Started Guide](https://communities.intel.com/community/makers/edison/getting-started)
 
 *   [Intel Edison Software &amp; Documentation](https://communities.intel.com/community/makers/edison/documentation)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

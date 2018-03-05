@@ -87,3 +87,6 @@ Resources
 - [Grove - Switch(P) Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-Switch-P/master/res/Grove-Switch-P-Eagle_File.zip)
 - [Schematic at Easyeda](https://easyeda.com/Seeed/Grove_SwitchP-434f7707edf74f3c8eb0c4748fdccc5f)
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Switch(P) -->
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

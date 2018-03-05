@@ -217,3 +217,6 @@ From the above experimental results, the following conclusions can be drawn:
 - [S208T02 Datasheet](https://github.com/SeeedDocument/Grove-Solid_State_Relay/raw/master/res/S208t02_datasheet.pdf)
 - [Grove - Solid State Relay in PDF](https://github.com/SeeedDocument/Grove-Solid_State_Relay/raw/master/res/SSR_v0.9b.pdf)
 - [Grove - Solid State Relay Test Report](https://github.com/SeeedDocument/Grove-Solid_State_Relay/raw/master/res/Grove-SSR_Test_Report_V0.3.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

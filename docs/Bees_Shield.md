@@ -129,3 +129,6 @@ void loop() {}
 - **[PDF]** [Bees_Shield schematics](https://github.com/SeeedDocument/Bees_Shield/raw/master/res/Bees_Shield%20Sch.pdf)
 - **[PDF]** [Bees_Shield PCB](https://github.com/SeeedDocument/Bees_Shield/raw/master/res/Bees_Shield%20PCB.pdf)
 - **[Tools]** [Xbee setting profiles](https://github.com/SeeedDocument/Bees_Shield/raw/master/res/Xbee%20setting%20profiles.zip)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

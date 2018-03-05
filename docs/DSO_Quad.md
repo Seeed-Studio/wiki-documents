@@ -424,3 +424,6 @@ More details and Linux instructions here: [DSO_Quad:Upgrading_Firmware](/DSO_Qua
 - [DS203_yijian_app_user_manual.rar‎](https://github.com/SeeedDocument/DSO_Quad/raw/master/res/DS203_yijian_app_user_manual.rar)
 
 - [DSO Quad Manual (by the community)](http://wiki.seeedstudio.com/wiki/DSO_Quad_Manual_(by_the_community))
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

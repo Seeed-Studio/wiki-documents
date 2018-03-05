@@ -50,3 +50,6 @@ Here is the [Wireless FAQ](/w/index.php?title=Wireless_FAQ&amp;action=edit&amp;r
 </td>
 <td width="200px"> Nov 04, 2009
 </td></tr></table>
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

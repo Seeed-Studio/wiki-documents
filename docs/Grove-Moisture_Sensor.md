@@ -189,3 +189,6 @@ sudo python grove_moisture_sensor.py
 ## Resources
 ---
 - [202000089_PCBA-Grove Moisture sensor V1.3_schemic file](https://github.com/SeeedDocument/Grove_Moisture_Sensor/raw/master/resources/202000089_PCBA-Grove%20Moisture%20sensor%20V1.3_schemic%20file.zip)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

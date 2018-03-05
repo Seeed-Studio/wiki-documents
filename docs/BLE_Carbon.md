@@ -182,3 +182,6 @@ For more details, please refer to [Running a serialized application](http://info
 
 * [Schematics in Eagle](https://github.com/SeeedDocument/BLE-Carbon/raw/master/res/eagle.zip)
 * [Schematics in PDF](https://github.com/SeeedDocument/BLE-Carbon/raw/master/res/BLE%20Carbon%20v1.0_SCH.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

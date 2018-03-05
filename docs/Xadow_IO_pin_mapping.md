@@ -743,3 +743,6 @@ So items in purple in the IIC SCL &amp; IIC SDA columns do NOT also have breakou
 </td>
 <td> All via SMD pads on rear.
 </td></tr></table>
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

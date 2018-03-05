@@ -186,3 +186,6 @@ and then the average of these data will be treated as the reference value.
 **[Datasheet]** [File Signal Axis Analog Gyro datasheet](https://github.com/SeeedDocument/Grove-Single_Axis_Analog_Gyro/raw/master/res/Analog_Gyro_datasheet.pdf)
 
 **[Code]** [Demo code on github](https://github.com/Seeed-Studio/Grove_Single_Axis_Analog_Gyro)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

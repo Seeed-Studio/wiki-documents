@@ -227,3 +227,6 @@ Basic Fastener Kit contains many standard components, including Screws,nuts,rive
 Here is an example that used some parts of this Basic Fastener Kit. If you have similar projects, the Basic Fastener Kit is necessary.
 
 ![](https://github.com/SeeedDocument/Basic_Fastener_Kit/raw/master/img/Parts_lists.jpg)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

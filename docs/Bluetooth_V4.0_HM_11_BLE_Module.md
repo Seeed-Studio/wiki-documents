@@ -533,3 +533,6 @@ With this demo, we can:
 [**I want to make it.**](http://www.seeedstudio.com/recipe/66-ir-remote.html)
 
 [**More Awesome Projects by Bluetooth**](http://www.seeedstudio.com/recipe/index.php?query=bluetooth)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

@@ -67,3 +67,6 @@ The diagram below shows the orientation of the axes of sensitivity and the polar
 - [IMU 10DOF library](https://github.com/SeeedDocument/Xadow_IMU_10DOF/raw/master/res/IMU_10DOF_Library.zip)
 - [BMP180 datasheet](https://github.com/SeeedDocument/Xadow_IMU_10DOF/raw/master/res/BMP180.pdf)
 - [MPU-9250 datasheet](https://github.com/SeeedDocument/Xadow_IMU_10DOF/raw/master/res/MPU-9250A_Product_Specification.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

@@ -28,3 +28,6 @@ Here lists the comparison among various versions of Ethernet Shield:
 |**SD Card Socket**	|Support Micro SD card in FAT16 or FAT32, maximum storage is 2GB.	|No|	Support Micro SD card in FAT16 or FAT32, maximum storage is 2GB.|
 |**Grove Connector**	|UART and IIC Connector	|No|	UART and IIC Connector|
 |**Ethernet jack	**|Minimal RJ45	|Standard RJ45	|Minimal RJ45|
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

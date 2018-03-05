@@ -139,3 +139,6 @@ Here we select [TCPUDPbg](https://github.com/SeeedDocument/Wifi_Bee_v2.0/raw/mas
 *   [Wifi Command Reference](https://github.com/SeeedDocument/Wifi_Bee_v2.0/raw/master/res/WiFly-RN-UM.pdf)
 
 *   [Antenna Datasheet](https://github.com/SeeedDocument/Wifi_Bee_v2.0/raw/master/res/Antenna_Datasheet.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

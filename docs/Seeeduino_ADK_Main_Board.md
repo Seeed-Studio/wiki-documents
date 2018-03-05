@@ -395,3 +395,6 @@ Output:
 - **[Accessory]**[Android Open Accessory Development Kit Page](http://developer.android.com/guide/topics/usb/adk.html)
 - **[MicroBridge]**[MicroBridge Page](http://blogs.unpad.ac.id/dominodiaz/)
 - **[USB]**[Game controllers using USB Host Shield](http://adrian-fh98.web.unair.ac.id/)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

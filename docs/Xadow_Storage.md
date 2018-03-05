@@ -205,3 +205,6 @@ void i2c_eeprom_read_buffer( int deviceaddress, unsigned int eeaddress, byte *bu
 - [Xadow Storage eagle file](https://github.com/SeeedDocument/Xadow_Storage/blob/master/res/Xadow_Storage_eagle_file.zip)
 
 - [Serial EEPROM AT24C256C Datasheet](https://github.com/SeeedDocument/Xadow_Storage/blob/master/res/AT24C256C-SSHL-T.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

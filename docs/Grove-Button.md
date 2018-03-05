@@ -160,3 +160,6 @@ The Wooden Laser Gun and the Gun Target are all based on an Arduino board called
 - [Schematic at Easyeda](https://easyeda.com/Seeed/Grove_Button_v1_2-f0f9f212fcee460ebe3703dab813e5c4)
 - [Grove-Button Eagle Files](https://github.com/SeeedDocument/Grove_Button/raw/master/resources/Grove_-_Button_v1.0_Source_File.zip).
 - [How to upload code](http://wiki.seeedstudio.com/wiki/Upload_Code)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

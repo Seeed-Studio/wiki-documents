@@ -91,3 +91,6 @@ Here is a list of what we have posted on Instructable, we love these projects an
 |79|![](https://cdn.instructables.com/FA3/2ONP/J1MEWSF5/FA32ONPJ1MEWSF5.RECTANGLE1.jpg)|[DIY a Gesture Keyboard That Can Control the Media Player](http://www.instructables.com/id/DIY-a-Gesture-Keyboard-That-Can-Control-the-Media-/)|
 |80|![](https://cdn.instructables.com/F2B/L1CF/IPMUM78C/F2BL1CFIPMUM78C.RECTANGLE1.jpg)|[Rainbow Desk Ornament for Father](http://www.instructables.com/id/Rainbow-WordHappy-Fathers-Day/)|
 |81|![](https://cdn.instructables.com/FN7/G8H0/J4IPUJ8G/FN7G8H0J4IPUJ8G.RECTANGLE1.jpg)|[Build Google Assistant on Raspberry Pi With ReSpeaker Mic Array](http://www.instructables.com/id/Build-Google-Assistant-on-Raspberry-Pi-With-ReSpea/)|
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

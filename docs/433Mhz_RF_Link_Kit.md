@@ -52,3 +52,6 @@ External Links
 
 Links to external webpages which provide more application ideas, documents/datasheet or software libraries
 - [RCSwitch - Arduino Library to control 433Mhz remote power sockets](http://code.google.com/p/rc-switch)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

@@ -150,3 +150,6 @@ The Wooden Laser Gun and the Gun Target are all based on an Arduino board called
 - [LM358.PDF](https://github.com/SeeedDocument/Grove_Light_Sensor/raw/master/res/LM358.pdf)
 - [Light Sensor Library](https://github.com/Seeed-Studio/Light_Sensor)
 - [Schematic at Easyeda](https://easyeda.com/Seeed/Grove_Light_sensor_v1_1-32d2a4ff5a8a4d928df91da1d8c647a0)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

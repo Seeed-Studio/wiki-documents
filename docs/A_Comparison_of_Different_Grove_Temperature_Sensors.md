@@ -65,3 +65,6 @@ More details please download below list.
 |----------------------------|-------------------------------------|------------------------|
 |![](https://raw.githubusercontent.com/SeeedDocument/Tutorial_Temperature_Sensor/master/img/10.jpg)|![](https://raw.githubusercontent.com/SeeedDocument/Tutorial_Temperature_Sensor/master/img/11.jpg)|![](https://raw.githubusercontent.com/SeeedDocument/Tutorial_Temperature_Sensor/master/img/12.jpg)|
 |[GET ONE NOW!](http://www.seeedstudio.com/Grove-Barometer-Sensor-(BMP180)-p-1840.html)|[GET ONE NOW!](http://www.seeedstudio.com/depot/Grove-Barometer-Sensor-BMP280-p-2652.html)|[GET ONE NOW!](http://www.seeedstudio.com/depot/Grove-TempHumiBarometer-Sensor-BME280-p-2653.html)|
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

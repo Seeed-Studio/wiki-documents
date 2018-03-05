@@ -290,3 +290,6 @@ Resources
 - [Motor Controller Library](https://raw.githubusercontent.com/SeeedDocument/Hercules_Dual_15A_6-20V_Motor_Controller/master/res/Motor_Controller_Library.zip)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller -->
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

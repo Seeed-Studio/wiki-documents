@@ -36,3 +36,6 @@ Connect device into the Screw Terminal.
 *   [Grove - Screw Terminal.zip](https://github.com/SeeedDocument/Grove-Screw_Terminal/raw/master/res/Grove-Screw_Terminal.zip)
 
 *   [Screw-Terminal-3.5mm](https://github.com/SeeedDocument/Grove-Screw_Terminal/raw/master/res/Screw-Terminal-3.5mm.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

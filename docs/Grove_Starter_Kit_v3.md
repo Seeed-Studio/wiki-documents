@@ -482,3 +482,6 @@ void loop()
 
 ##   Acknowledgement
 We would like to express our gratitude to Rich Morin who modified this document with more appropriate grammar and words.
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

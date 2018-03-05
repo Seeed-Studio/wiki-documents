@@ -130,3 +130,6 @@ Build a irregular polygonal shell by using two 2mm nylon rivets and 3mm Screw st
 *   [Skeleton box10X10 assembling instructions](https://github.com/SeeedDocument/Skeleton_Box_10x7_10x10_17x10/raw/master/res/Skeleton_box_10X10_组装说明书.pdf)
 
 *   [Skeleton box17X10 assembling instructions](https://github.com/SeeedDocument/Skeleton_Box_10x7_10x10_17x10/raw/master/res/Skeleton_box_17X10_组装说明书.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

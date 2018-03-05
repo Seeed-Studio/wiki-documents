@@ -1152,3 +1152,6 @@ Resources
 -   [PDF\_Grove-BLE\_(dual\_model)\_v1.0\_sch](https://raw.githubusercontent.com/SeeedDocument/Grove-BLE-dual_model-v1.0/master/res/Grove-BLE-dual_model-v1.0.pdf)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_BLE_(dual_model)_v1.0 -->
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

@@ -140,3 +140,6 @@ Insert the board to PC via a micro USB cable, and double click mbedWinSerial_164
 * [Schematics in Eagle File](https://github.com/SeeedDocument/BLE-Nitrogen/raw/master/res/BLE_Nitrogen_Eagle_File.zip)
 * [Schematics in PDF](https://github.com/SeeedDocument/BLE-Nitrogen/raw/master/res/BLE%20Nitrogen%20v1.0_SCH.pdf)
 * [Driver for Mbed](https://developer.mbed.org/media/downloads/drivers/mbedWinSerial_16466.exe)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

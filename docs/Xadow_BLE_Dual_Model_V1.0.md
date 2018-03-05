@@ -415,3 +415,6 @@ After downloading program, open two serial terminal windows, the LEDs on Bluetoo
 - [Arduino code](https://github.com/Seeed-Studio/HM-13_SW)
 - <a href="https://github.com/SeeedDocument/Xadow_BLE_Dual_Model_V1.0/raw/master/res/Xadow-BLE_(dual_model)_v1.0_sch_pcb.zip">Eagle_Xadow-BLE_(dual_model)_v1.0_sch_pcb]</a>
 - <a href="https://github.com/SeeedDocument/Xadow_BLE_Dual_Model_V1.0/raw/master/res/Xadow-BLE_(dual_model)_v1.0.pdf"> PDF_Xadow-BLE_(dual_model)_v1.0</a>
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

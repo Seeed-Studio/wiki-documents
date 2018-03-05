@@ -352,3 +352,6 @@ Shieldbot shieldbot = Shieldbot(); //decares a Shieldbot object
 *   [L298 Datasheet](https://github.com/SeeedDocument/Shield_Bot_V1.1/raw/master/res/L298.pdf) H-Bridge Motor Driver
 
 *   [358 Datasheet](http://www.ti.com/product/lmv358) Op-Amp as a comparator for reflectance sensors
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

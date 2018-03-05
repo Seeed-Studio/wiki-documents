@@ -27,3 +27,6 @@ Here lists the comparison between various versions of WiFi Shield:
 | Standard Shield    | No                                                                                                     | Yes                                                                    | Yes                                                                                       |
 | Antenna Type       | mast antenna                                                                                           | PCB antenna                                                            | onboard antenna                                                                           |
 | Library File       | [Wifi Shield Library V1.0](https://github.com/SeeedDocument/WIFI_Shield/raw/master/res/WifiShield.zip) | [New Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield) | [New Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield) _the same to v1.2_ |
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

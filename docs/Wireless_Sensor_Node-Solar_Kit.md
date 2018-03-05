@@ -265,3 +265,6 @@ Information on how to setup / program Bee Modules are available in
 *   [UartSBee](/UartSBee "UartSBee")
 
 *   [Seeeduino_V2.2](/Seeeduino_V2.2 "Seeeduino V2.2")
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

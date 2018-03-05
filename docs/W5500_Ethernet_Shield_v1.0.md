@@ -254,3 +254,6 @@ Isn't it very easy? You can begin your project.
 - [W5500 Ethernet Shield Library](https://github.com/embeddist/WIZ_Ethernet_Library-IDE1.6.x)
 - [W5500 Ethernet Shield Datasheet.pdf](https://raw.githubusercontent.com/SeeedDocument/W5500_Ethernet_Shield_v1.0/master/res/W5500_datasheet_v1.0.2.pdf)
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/W5500_Ethernet_Shield_v1.0 -->
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

@@ -247,3 +247,6 @@ You'll find that the terminal outputs Temperature value every 2 seconds.
 *   [Grove - Temperature Sensor v1.0 Eagle File](https://github.com/SeeedDocument/Grove-Temperature_Sensor/raw/master/res/Grove-Temperature_Sensor-Analog-v1.0_Source_File.zip)
 
 *   [Demo code on github](https://github.com/Seeed-Studio/Grove_Temperature_Sensor)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

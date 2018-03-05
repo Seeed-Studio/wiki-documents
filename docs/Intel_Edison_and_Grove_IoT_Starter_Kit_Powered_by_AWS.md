@@ -494,3 +494,6 @@ thingShadows.<span class="me1">on</span><span class="br0">(</span><span class="s
 *   [【Wiki】Main Page for Grove IoT Starter Kits Powered by AWS](/Grove_IoT_Starter_Kits_Powered_by_AWS)
 
 *   [Getting started with Edison](https://software.intel.com/en-us/iot/library/edison-getting-started)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

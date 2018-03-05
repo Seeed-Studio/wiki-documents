@@ -31,3 +31,6 @@ Here lists the comparison between various versions of Relay Shield:
 |**Remote control**|	Yes|	No	|No|
 |**Standard Shield**||No|	Yes	|Yes|
 |**Working status indicators for each relay**|	No|	Yes|	Yes|
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

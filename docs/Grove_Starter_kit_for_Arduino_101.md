@@ -149,3 +149,6 @@ Arduino quickly and effectively. You can visit [https://www.arduino.cc/en/Tutori
 
 After you have gotten an LED blinking (for Windows user, you can find it at [https://www.arduino.cc/en/Guide/Windows](https://www.arduino.cc/en/Guide/Windows), you can find other versions for Mac OS and Linux variants at
 [https://www.arduino.cc/en/Guide/HomePage](https://www.arduino.cc/en/Guide/HomePage) ), you still need to get familiar with Seeedstudio Grove system at [http://www.seeedstudio.com/wiki/Grove_System](/Grove_System). And now, you can do some more practical quizzes which are specialized designed for this kit. Download the sketches of quizzes at [https://github.com/Seeed-Studio/Sketchbook_Starter_Kit_for_Arduino](https://github.com/Seeed-Studio/Sketchbook_Starter_Kit_for_Arduino).
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

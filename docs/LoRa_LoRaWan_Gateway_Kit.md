@@ -611,10 +611,6 @@ Then go to **Dashboard -> Applications -> SampleApp ->Device** , click the Node 
 ## FAQs
 Please click [here](http://support.seeedstudio.com/knowledgebase/articles/1822222-grove-ultrasonic-ranger-sku-101020010) to see all LoRa/LoRaWAN Gateway Kit FAQs.
 
-## Tech support
-
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you require further information.
-
 
 ## Resources
 
@@ -622,3 +618,6 @@ Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) i
 - **[Uer Manual]** [User Manual](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/res/%5BRHF-UM01649%5DIoT%20Discovery%20User%20Manual-seeed-v2.1.pdf).
 - **[More Reading]** [Wiki of Seeeduino LoRaWAN](/Seeeduino_LoRAWAN/)
 - **[More Reading]** [RisingHF Website](http://www.risinghf.com/product/risinghf-iot-dicovery/?lang=en)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

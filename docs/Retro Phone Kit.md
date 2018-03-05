@@ -115,3 +115,6 @@ Now join us in the [RePhone Community](http://www.seeedstudio.com/forum/viewforu
 - [Driver for RePhone core 2G Atmel32u4](https://github.com/SeeedDocument/Retro_Phone_Kit/raw/master/res/RePhone%20core%202G-Atmel32u4%20driver.zip)
 - [Datasheet of ETA6003](https://github.com/SeeedDocument/Retro_Phone_Kit/raw/master/res/ETA6003.pdf)
 - [AT Command of SIM800](https://github.com/SeeedDocument/Retro_Phone_Kit/raw/master/res/SIM800_AT.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

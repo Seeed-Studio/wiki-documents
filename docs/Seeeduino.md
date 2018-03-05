@@ -31,3 +31,6 @@ On the hardware part, remarkable changes are taken to improve the flexibility an
 |Seeeduino v3.0|1.change JST connector to DC Jack connector.2.Added two Grove connectors.|Jan 1, 2012|
 |Seeeduino v4.0|1.DC-to-DC converter to reduce power dissipation.|2.Remove RST switch.
 |Seeeduino v4.2|1.Add a Grove connectors2.Improve the power design|Aug 24, 2015|
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

@@ -277,3 +277,6 @@ Resources
 - [Dry-Reed Relay Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Dry-Reed_Relay/master/res/Dry-Reed_Relay_Datasheet.pdf)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Dry-Reed_Relay -->
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

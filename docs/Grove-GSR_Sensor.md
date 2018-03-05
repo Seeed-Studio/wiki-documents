@@ -112,9 +112,6 @@ void loop(){
 ## FAQ
 Please click [here](http://support.seeedstudio.com/knowledgebase/articles/1827199-grove-gsr-sensor-sku-101020052) to see all Grove - GSR sensor FAQs.
 
-## Tech Support
-Please do not hesitate to contact **techsupport@seeed.cc** if you require further information.
-
 ## Resources
 
 
@@ -128,3 +125,6 @@ Please do not hesitate to contact **techsupport@seeed.cc** if you require furthe
 - **[Datasheet]** [LM324 datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-GSR_Sensor/master/res/Lm324.pdf)
 
 
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

@@ -206,3 +206,6 @@ Resources
 - [INA132 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Differential_Amplifier_v1.2/master/res/Ina132.pdf)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Differential_Amplifier_v1.2 -->
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

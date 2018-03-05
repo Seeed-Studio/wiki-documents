@@ -196,3 +196,6 @@ Note: About the specific methods of some functions in the library, You can refer
 - **[Eagle]**[Music Shield sch](https://github.com/SeeedDocument/Music_Shield_V1.0/raw/master/res/Music%20Shield.sch)
 - **[PDF]**[Music Shield Schematic pdf](https://github.com/SeeedDocument/Music_Shield_V1.0/raw/master/res/Music_Shield.pdf)
 - **[Library]**[Music Shield Source code file for Arduino 0022](https://github.com/SeeedDocument/Music_Shield_V1.0/raw/master/res/Music_v1_14.zip)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

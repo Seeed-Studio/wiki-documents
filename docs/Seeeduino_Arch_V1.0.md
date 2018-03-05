@@ -476,3 +476,6 @@ The mbed C/C++ SDK provides the software platform and [libraries](http://mbed.or
 - [Seeeduino Arch Eagle files](https://github.com/SeeedDocument/Seeeduino_Arch_V1.0/raw/master/res/Seeeduino_Arch_Eagle_files.zip)
 
 - [LPC11U2x datasheet](https://github.com/SeeedDocument/Seeeduino_Arch_V1.0/raw/master/res/LPC11U2x_datasheet.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

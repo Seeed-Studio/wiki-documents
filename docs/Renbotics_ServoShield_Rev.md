@@ -116,3 +116,6 @@ void loop()
 *   [Manual Rev 1.5](http://www.seeedstudio.com/depot/datasheet/RenboticsServoShield1.5.pdf)
 
 *   [Arduino Library Rev 1.3 (Updated 07-09-2009)](http://www.seeedstudio.com/depot/images/product/ServoShield.zip)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

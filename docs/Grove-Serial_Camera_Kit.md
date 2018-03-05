@@ -89,3 +89,6 @@ Lens screwed different depths represent different focal length, you can have a t
 ##  Resources
 ---
 [Demo Code](https://github.com/Seeed-Studio/Grove_Serial_Camera_Kit)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

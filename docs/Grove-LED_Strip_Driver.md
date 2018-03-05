@@ -152,3 +152,6 @@ It can drive an LED strip 1 to 2 meters long with 9 V, while 1 to 5 meters long 
 *   [LED Strip Driver library](https://github.com/SeeedDocument/Grove-LED_Strip_Driver/raw/master/res/LEDStripDriver_library.zip)
 
 *   [Suli Library](https://github.com/Seeed-Studio/LED_Strip_Suli)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

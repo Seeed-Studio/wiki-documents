@@ -326,3 +326,6 @@ Then, send an "AT+ROLE0" command to BLE Shield; it will return an "OK+Set:0", wh
  - **[APK]**[BLE_apk_for_Android](https://github.com/SeeedDocument/BLE_Bee/raw/master/res/HMBLEComAssistant.rar)
 
 - **[DataSheet]**[DataSheet of BLE module](https://github.com/SeeedDocument/BLE_Bee/raw/master/res/Bluetooth40_en.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

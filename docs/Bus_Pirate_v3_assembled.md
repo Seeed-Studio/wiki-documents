@@ -64,3 +64,6 @@ This open source hardware and software is distributed in the hope that it will b
 *   [Latest firmware](http://code.google.com/p/the-bus-pirate/)
 
 *   [Bus Pirate forum](http://whereisian.com/forum/index.php?board=4.0)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

@@ -62,3 +62,6 @@ This demo can used as a compilation result-indicator.
 Please go to [Recipe](http://www.seeedstudio.com/recipe/1068-traffic-light-indicates-travis-ci-compiled-results.html) for the detailed manual.
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Wio_Link_Starter_Kit -->
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

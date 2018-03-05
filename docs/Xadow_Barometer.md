@@ -98,3 +98,6 @@ void loop()
 - [Xadow Barometer Eagle File](https://github.com/SeeedDocument/Xadow_Barometer/raw/master/res/Xadow_Barometer.zip)
 - [Xadow Barometer Library](https://github.com/SeeedDocument/Xadow_Barometer/raw/master/res/Xadow_Barometer_Library.zip)
 - [BST-BMP085-DS000-06](https://github.com/SeeedDocument/Xadow_Barometer/raw/master/res/BST-BMP085-DS000-06.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

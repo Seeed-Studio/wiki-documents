@@ -100,3 +100,6 @@ void loop()
 - [Xadow - Barometer BMP180 Eagle File](https://github.com/SeeedDocument/Xadow_Barometer_BMP180/raw/master/res/Xadow_-_Barometer_BMP180_v1.0_sch_pcb.zip)
 - [Barometer_Sensor Library](https://github.com/Seeed-Studio/Grove_Barometer_Sensor)
 - [BMP180 datasheet](https://github.com/SeeedDocument/Xadow_Barometer_BMP180/raw/master/res/BMP180.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

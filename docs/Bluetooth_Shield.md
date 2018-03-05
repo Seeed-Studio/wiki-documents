@@ -183,3 +183,6 @@ Now share your awesome projects with us on [Recipe](http://www.seeedstudio.com/r
 - **[Instruction]**[Bluetooth Software instruction](https://seeeddoc.github.io/Bluetooth_Shield/res/BTSoftware_Instruction.pdf)
 - **[Datasheet]**[Bluetooth - module Datasheet](https://seeeddoc.github.io/Bluetooth_Shield/res/Bluetooth_module.pdf)
 - **[Connections]** [Set up connections between two BluetoothBee step by step](http://www.seeedstudio.com/forum/viewtopic.php?f=4&amp;t=687)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

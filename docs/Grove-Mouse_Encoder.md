@@ -162,3 +162,6 @@ Resources
 - [Schematic files](https://raw.githubusercontent.com/SeeedDocument/Grove-Mouse_Encoder/master/res/Grove_Mouse_Encoder_v1.0_Schematic_File.zip)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Mouser_Encoder -->
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

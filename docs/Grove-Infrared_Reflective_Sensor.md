@@ -246,3 +246,6 @@ Resources
 -   [Schematic file of version 1.0 for this product](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Reflective_Sensor/master/res/Grove-Infrared_Reflective_Sensor_v1.0_SourceFile.zip)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Infrared_Reflective_Sensor -->
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

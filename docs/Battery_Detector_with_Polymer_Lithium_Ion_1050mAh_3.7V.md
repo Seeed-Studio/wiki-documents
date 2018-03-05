@@ -159,3 +159,6 @@ Resources
 -   [Battery Safety Datasheet and Certificates](https://raw.githubusercontent.com/SeeedDocument/Battery_Detector_with_Polymer_Lithium_Ion_1050mAh_3.7V/master/res/Lithium-ion_Battery_3.7v-1050_mAh_Safety_Datasheet_and_Certificates.zip)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Battery_Detector_with_Polymer_Lithium_Ion_1050mAh_3.7V -->
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

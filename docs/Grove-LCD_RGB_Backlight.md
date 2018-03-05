@@ -117,3 +117,6 @@ Upload the code again, woo, see the backlight turn to Red? Then why not try anot
 * [Software Library](https://github.com/Seeed-Studio/Grove_LCD_RGB_Backlight/archive/master.zip)
 * [Github page for the Library](https://github.com/Seeed-Studio/Grove_LCD_RGB_Backlight)
 * [Github page for this document](https://github.com/SeeedDocument/Grove_LCD_RGB_Backlight)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

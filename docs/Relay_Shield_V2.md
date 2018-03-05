@@ -180,3 +180,6 @@ delay(1000); // wait 1000 milliseconds (1 second)}
 - **[EAGLE]**[Relay Shield EagleCAD Files](https://github.com/SeeedDocument/Relay-Shield_V2.0/raw/master/res/Relay_Shield_eagle.zip)
 - **[PDF]**[Relay shield PCB](https://github.com/SeeedDocument/Relay-Shield_V2.0/raw/master/res/Relay%20shield%20PCB.pdf)
 - **[PDF]**[Relay shield sch](https://github.com/SeeedDocument/Relay-Shield_V2.0/raw/master/res/Relay%20shield%20sch.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

@@ -79,3 +79,6 @@ Resources
 -   [I2C Touch Sensor Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Touch_Sensor/master/res/Freescale_Semiconductor;MPR121QR2.pdf)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_I2C_Touch_Sensor -->
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

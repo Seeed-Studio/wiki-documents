@@ -251,3 +251,6 @@ There are several chainable add-on modules to extend the features and functional
 - [Datasheet of ETA6003](https://github.com/SeeedDocument/RePhone_core_2G-Atmel32u4/raw/master/res/ETA6003.pdf)
 - [AT Command of SIM800H](https://github.com/SeeedDocument/RePhone_core_2G-Atmel32u4/raw/master/res/SIM800_AT.pdf)
 - [Download ALL Above](https://github.com/SeeedDocument/RePhone_core_2G-Atmel32u4/archive/master.zip)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

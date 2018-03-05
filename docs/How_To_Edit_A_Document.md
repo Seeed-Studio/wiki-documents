@@ -44,3 +44,6 @@ Then, github will fork the whole repository to your personal account, please cli
 ![](https://github.com/SeeedDocument/How_To_Edit_A_Document/raw/master/img/wait%20for%20us%20reviewing.jpg)
 
 If this is too complicated to you, you are also welcome to fill in the survey at the end of the document or write to us at Jeremy.xiao@seeed.cc or Loovee@seeed.cc. We are looking forward to your message! Happy hacking!
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

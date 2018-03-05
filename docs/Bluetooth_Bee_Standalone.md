@@ -230,3 +230,6 @@ Use another Bluetooth Bee connect to the Bluetooth Bee-Standalone.How to connect
 *   [Information](http://www.seeedstudio.com/forum/viewtopic.php?f=18&amp;t=1436&amp;p=5637#p5637) on PC connecting Bluetooth Bee in Seeedstudio Forum
 
 *   [File:Bluetooth Bee Standalone v1.0.pdf](https://github.com/SeeedDocument/Bluetooth_Bee_Standalone/raw/master/res/Bluetooth_Bee_Standalone_v1.0.pdf "File:Bluetooth Bee Standalone v1.0.pdf")
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

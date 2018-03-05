@@ -183,3 +183,6 @@ When **+INQ=1** command is successful, the  **red**  and **green** LEDS blink al
 - [Serial Bluetooth Eagle File](res/Grove-Serial_Bluetooth_eagle_file.zip)
 - [Bluetooth Software instruction](res/Bluetooth_Software_Instruction.pdf)
 - [Bluetooth - module Datasheet](res/Bluetooth_module.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

@@ -32,3 +32,6 @@ The ADC raw data outputs run through 3 levels of digital filtering to filter out
 Touch and release is determined by comparing the immediate capacitance deviation that is the electrode second level filtered output data deviation to the baseline value. If the deviation passed the setting threshold, then a touch or release status is detected and reported in the status register. The touch and release threshold are independent and individually programmable for each electrode, providing hysteresis and electrode independence. Debounce setting can be used for further noise filtering to provide glitch free touch and release detection.
 
 ![](https://github.com/SeeedDocument/How_to_detect_finger_touch/raw/master/img/600px-4.jpg)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

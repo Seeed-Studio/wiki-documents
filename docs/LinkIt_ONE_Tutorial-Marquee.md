@@ -114,3 +114,6 @@ Modify the existing code such that the frequency of LED blinking increases.
 *   [SMS Control the LED](/LinkIt_ONE_Tutorial-SMS_control_the_LED)
 
 *   [Get Temperature with Webpage](/LinkIt_ONE_Tutorial-Get_temperature_with_Webpage)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

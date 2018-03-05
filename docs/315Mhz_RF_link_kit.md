@@ -46,3 +46,6 @@ More over, we will make more RF modules ourselves with different frequency and c
 *   [Example from sparkfun](http://www.sparkfun.com/datasheets/RF/KLP_Walkthrough.pdf)
 
 *   [Example running rf modules](http://winavr.scienceprog.com/example-avr-projects/running-tx433-and-rx433-rf-modules-with-avr-microcontrollers.html)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

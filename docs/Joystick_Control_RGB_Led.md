@@ -27,3 +27,6 @@ Joystick connect to A0, A1, RGB LED connect to D3, D9 and D10.
 **Code:**
 
 Open Arduino IDE, click File -&gt; Sketchbook -&gt; joystick.
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

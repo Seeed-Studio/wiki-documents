@@ -458,3 +458,6 @@ void loop() {
 * [MC20 GNSS AGPS ApplicationGuide](https://github.com/SeeedDocument/GPS_Tracker/blob/master/resources/Quectel_MC20_GNSS_AGPS_ApplicationGuide_V1.1.pdf)
 * [MC20 GNSS AT Commands Manual](https://github.com/SeeedDocument/GPS_Tracker/blob/master/resources/Quectel_MC20_GNSS_AT_Commands_Manual_V1.1.pdf)
 * [MC20 GNSS Protocol Specification](https://github.com/SeeedDocument/GPS_Tracker/blob/master/resources/Quectel_MC20_GNSS_Protocol_Specification_V1.0.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

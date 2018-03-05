@@ -22,3 +22,6 @@ Put Sketchbook location to the code you had downloaded, click OK to finish it. R
 Click File -&gt; Sketchbook, then you can fine some project now, that's the demo code of this chapter.
 
 ![](https://github.com/SeeedDocument/Sketchbook_of_Sidekick_Advanced_Kit/raw/master/img/Sidekick_40_2.png)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

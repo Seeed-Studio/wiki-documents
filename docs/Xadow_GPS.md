@@ -96,3 +96,6 @@ $GPRMC,091308.000,A,2235.1683,N,11356.3607,E,0.37,259.79,050813,,,A*6E
 - [Xadow GPS Eagle File](https://github.com/SeeedDocument/Xadow_GPS/raw/master/res/Xadow_GPS_Eagle_File.zip)
 - [Xadow GPS Schematic in PDF](https://github.com/SeeedDocument/Xadow_GPS/raw/master/res/Xadow_GPS_in_Schematic.pdf)
 - [Fastrax IT530M Datasheet](https://github.com/SeeedDocument/Xadow_GPS/raw/master/res/IT530M_DataSheet.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

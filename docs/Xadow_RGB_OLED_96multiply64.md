@@ -417,3 +417,6 @@ Upload the code, you can see Seeed's logo with yellow color will be drew on the 
 - [Xadow RGB OLED Library](https://github.com/Seeed-Studio/RGB_OLED_SSD1331)
 
 - [Seeed Graphics Library](https://github.com/Seeed-Studio/SGL)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

@@ -263,3 +263,6 @@ More information about the AT Commands please refer to the data sheet of BLE mod
 [BLE_apk_for_Android](https://github.com/SeeedDocument/Seeed_BLE_Shield/raw/master/res/HMBLEComAssistant.rar)
 
 [DataSheet of BLE module](https://github.com/SeeedDocument/Seeed_BLE_Shield/raw/master/res/Bluetooth4_en.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

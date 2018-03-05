@@ -168,3 +168,6 @@ UV intensity can nearly double with reflection from snow or other bright surface
 - [Spectrum](https://en.wikipedia.org/wiki/Spectrum)
 - [Lumen (unit)](https://en.wikipedia.org/wiki/Lumen_(unit))
 - [Ultraviolet index](https://en.wikipedia.org/wiki/Ultraviolet_index)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

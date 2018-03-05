@@ -608,3 +608,6 @@ PCB Assembly was done by [User:Gniibe](/User-Gniibe "User:Gniibe") by hand.  See
     3.  After USB address assignment, FST-01 application goes enter the loop
             * waiting 5 seconds
             * blink LED (emits lights for 25ms,off 200ms).
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

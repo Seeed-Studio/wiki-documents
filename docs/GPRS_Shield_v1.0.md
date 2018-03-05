@@ -645,3 +645,6 @@ With this demo, we make a mobile phone named Arduino Phone by  Arduino, GPRS Shi
 - [SIM900 Hardware Design](http://wiki.seeedstudio.com/images/e/e3/SIM900_HD_V1.05.pdf)
 - [SIM900 firmware and tool(firmware:1137B08SIM900M64_ST)](http://wiki.seeedstudio.com/images/8/87/SIM900_firmware_and_tool.zip)
 - [SIM900datasheeet](http://www.seeedstudio.com/document/SIM900datasheeet.zip)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

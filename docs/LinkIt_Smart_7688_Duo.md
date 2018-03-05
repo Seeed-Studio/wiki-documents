@@ -427,3 +427,6 @@ You can now extend the Arduino sketch to drive other devices such as PWM, I2C de
 * [MediaTek LinkIt? Smart 7688 Resources:](http://labs.mediatek.com/site/global/developer_tools/mediatek_linkit_smart_7688/hdk_intro/index.gsp)
 * [How to flash the firmware via a USB drive](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/res/Linkit_Smart_7688_DUO_Firmware.pdf)
 * [Certificates](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/res/LinkIt_Smart_7688_Duo-Certificate.zip)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

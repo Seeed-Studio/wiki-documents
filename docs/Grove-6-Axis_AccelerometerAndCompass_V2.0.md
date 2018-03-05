@@ -93,3 +93,6 @@ Resources
 -   [6-Axis\_Accelerometer%26Compass\_v2.0 eagle file](https://raw.githubusercontent.com/SeeedDocument/Grove-6-Axis_AccelerometerAndCompass_V2.0/master/res/Grove-6-Axis_AccelerometerAndCompass_v2.0_sch_pcb.zip)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_6-Axis_Accelerometer&Compass_V2.0 -->
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

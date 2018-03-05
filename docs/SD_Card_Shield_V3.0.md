@@ -161,3 +161,6 @@ With that done, you can take a look at the other library examples for reading, w
 - **[PDF]**   [PDF file of SD Card Sheild v3.1](https://github.com/SeeedDocument/SD_Card_Shield_V3.0/raw/master/res/SD_Card_Shield.pdf)
 
 - **[Eagle]**   [Eagle file of SD Card Shield v3.0](http://wiki.seeedstudio.com/images/0/09/Eagle_file_of_SD_Card_Shield_v3.0.ZIP).
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

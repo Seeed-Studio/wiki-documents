@@ -257,3 +257,6 @@ GPS is better used outdoors. It is recommended to put your raspberry pi outside 
 -  **[Document]** [SIMCom\_GPS\_DEMO\_V1.07](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/res/SIMCom_GPS_DEMO_V1.07.zip)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_GPS -->
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

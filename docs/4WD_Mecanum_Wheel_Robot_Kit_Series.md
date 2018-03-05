@@ -1181,3 +1181,6 @@ Moving all four wheels in the same direction causes forward or backward movement
 ##  Attachments
 
 [Specs for Motor](https://github.com/SeeedDocument/4WD_Mecanum_Wheel_Robot_Kit_Series/raw/master/res/Motor_Specs_for_4WD_Mecanum_Wheel_Robot_Kit_Series_Products.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

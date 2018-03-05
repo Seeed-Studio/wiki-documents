@@ -26,3 +26,6 @@ There is [Wiichuck- A Wii-Nunchuck break out board](http://www.seeedstudio.com/d
 Resource File: [Grove - NunChuck Eagle File](https://github.com/SeeedDocument/Grove-NunChuck/raw/master/res/Grove-NunChuck_Eagle_File.zip)
 
 If you have questions or other better design ideas, you can go to our [forum](http://www.seeedstudio.com/forum) or [wish](http://wish.seeedstudio.com) to discuss.
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

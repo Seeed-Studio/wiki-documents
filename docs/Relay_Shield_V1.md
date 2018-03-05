@@ -207,3 +207,6 @@ Step3: [Control the Transmitter](https://seeeddoc.github.io/315Mhz_RF_link_kits-
 - **[CODE]**  [Relay Shield demo code for Arduino](https://github.com/SeeedDocument/Relay-Shield_V1.0/raw/master/res/RelayShieldDemoCode.zip)
 
 - **[CODE]**  [Arduino Code for RFBee control RelayShield](https://github.com/SeeedDocument/Relay-Shield_V1.0/blob/master/res/RFBee_v1_1_for_RelayShield.zip)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

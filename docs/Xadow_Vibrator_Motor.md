@@ -74,3 +74,6 @@ void loop()
 ##  Resources
 ---
 [Xadow Vibrator Motor Eagle File](https://github.com/SeeedDocument/Xadow_Vibrator_Motor/blob/master/res/Xadow_Vibrator.zip)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

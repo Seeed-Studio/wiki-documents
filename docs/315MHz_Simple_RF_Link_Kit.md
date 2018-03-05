@@ -240,3 +240,6 @@ This is just a simple transmitter and receiver instance as a reference.
 *   [File:315MHz_demo.zip](https://github.com/SeeedDocument/315MHz_Simple_RF_Link_Kit/raw/master/res/315MHz_Demo.zip)
 
 *   [VirtualWire Documentation](http://www.open.com.au/mikem/arduino/VirtualWire.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

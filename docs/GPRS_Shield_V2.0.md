@@ -453,3 +453,6 @@ With this demo,  we can receive SMS When Gas Leakage at Home.
 - **[Datasheet]** [Si5902BDC](http://www.vishay.com/docs/70415/si5902bd.pdf)
 - **[Datasheet]** [SIM900 Datasheeet](http://www.seeedstudio.com/document/SIM900datasheeet.zip)
 - **[Tools]** [SIM900 firmware and tool(firmware:1137B08SIM900M64_ST)](http://wiki.seeedstudio.com/images/8/87/SIM900_firmware_and_tool.zip)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

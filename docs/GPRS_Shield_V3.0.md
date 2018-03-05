@@ -58,3 +58,6 @@ Please link to the documentation of [GPRS Shield V2.0](http://wiki.seeed.cc/GPRS
 - **[Datasheet]** [SIM_900_AGPS_instructions](https://github.com/SeeedDocument/GPRS_Shield_V3.0/raw/master/res/SIM_900_AGPS_instructions.zip)
 - **[Tools]** [SIM900 firmware and tool(firmware:1137B08SIM900M64_ST)](https://github.com/SeeedDocument/GPRS_Shield_V3.0/raw/master/res/1137B08SIM900M64_ST.zip)
 - **[Tools]** [SIM900 firmware and tool(firmware:1137B13SIM900M64_ST)](https://github.com/SeeedDocument/GPRS_Shield_V3.0/raw/master/res/1137B13SIM900M64_ST.zip)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

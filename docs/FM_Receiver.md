@@ -24,3 +24,5 @@ Hardware linking is very easy, Grove - LCD RGB Backlight and Grove - I2C FM Rece
 * To download the demo code in github, click [here](https://github.com/Seeed-Studio/Seeeduino_lotus_Usage).
 * Open the I2C_FM_RGB_LCD example sketch, compile and upload it to your board.
 * Press the button to start seeking FM and twist the Rotary Angle Sensor to adjust volume.
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

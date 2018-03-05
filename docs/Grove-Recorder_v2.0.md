@@ -204,3 +204,6 @@ Resources
 - Schematic file in [PDF](https://raw.githubusercontent.com/SeeedDocument/Grove-Recorder_v2.0/master/res/Grove-Recorder_v2.0_Schematic_PDF_file.zip) format
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Recorder_v2.0 -->
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

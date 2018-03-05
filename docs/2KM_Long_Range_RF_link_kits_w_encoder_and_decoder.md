@@ -61,3 +61,6 @@ This is a super long-range 433mhz RF link kit. It comes with VCO, PLL technology
 - **[Instruction]**   [Transmitter and receiver Setup Manual](https://github.com/SeeedDocument/2KM_Long_Range_RF_link_kits_w_encoder_and_decoder/raw/master/res/2KM_RF.rar)
 
 - **[Datasheet]**   [Datasheet for PT2272 and PT2262](http://www.datasheetcatalog.org/datasheet/PrincetonTechnologyCorporation/mXusxsq.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

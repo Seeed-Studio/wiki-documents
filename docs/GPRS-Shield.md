@@ -38,3 +38,6 @@ Here lists the comparison between various versions of GPRS Shield that you can f
 | **Standard Shield**|No|Yes  |
 |  **Antenna **|0.4W|0.8W(29dBm)  |   
 |**transit power**|0.4W|0.8W(29dBm)|
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

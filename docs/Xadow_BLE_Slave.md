@@ -147,3 +147,6 @@ void boot(void)
 ---
 - [Xadow BLE Slave](https://github.com/SeeedDocument/Xadow_BLE_Slave/raw/master/res/Xadow_BLE_Slave.zip)
 - [“BlueSPP” APP](https://github.com/SeeedDocument/Xadow_BLE_Slave/raw/master/res/BlueSPP_V4.0.zip)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

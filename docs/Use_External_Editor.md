@@ -21,3 +21,6 @@ The following is my favorite editor: Vim, is it more beautiful than Arduino IDE?
 ###   Resources
 
 - [down pdf file](https://github.com/SeeedDocument/Use_External_Editor/raw/master/res/Use_external_editor.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

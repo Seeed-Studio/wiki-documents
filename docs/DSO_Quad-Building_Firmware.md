@@ -51,3 +51,6 @@ $ du -sh  summon-arm-toolchain/  sat/  dsoquad/
  229M    sat/
  1.9M    dsoquad/
 ```
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

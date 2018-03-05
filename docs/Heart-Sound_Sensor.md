@@ -201,3 +201,6 @@ The latest firmware version for the Arch Max is v0203 built at Oct 8  2014. To c
 - **[PDF]**[Arch Max PCB](https://github.com/SeeedDocument/Arch_Max/raw/master/res/Arch%20Max.pdf)
 - **[EAGLE]**[Arch Max sch](https://github.com/SeeedDocument/Arch_Max/raw/master/res/Arch%20Max.sch)
 - **[Datasheet]**  [STM32F407 datasheet](https://github.com/SeeedDocument/Arch_Max/raw/master/res/STM32F407.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

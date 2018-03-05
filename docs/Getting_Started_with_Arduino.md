@@ -18,3 +18,6 @@ prodimagename:
 ### [How to add Seeed boards to Arduino IDE](http://wiki.seeed.cc/Seeed_Arduino_Boards/)
 
 ### [How to Install the driver for Seeeduino](http://wiki.seeed.cc/Driver_for_Seeeduino)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

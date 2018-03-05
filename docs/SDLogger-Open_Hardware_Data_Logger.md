@@ -72,3 +72,6 @@ SDLogger is a simple serial logger based on [SparkFun](http://www.sparkfun.com/)
 2.  OpenLog hardware and firmware developed by [SparkFun](http://www.sparkfun.com/)/[Nathan Seidle's OpenLog](http://github.com/nseidle/OpenLog/wiki) and released under CC-SA v3 license
 
 3.  Arduino SdFat library written by Bill Greiman and is released under GPL v3
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

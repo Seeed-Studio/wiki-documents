@@ -336,3 +336,6 @@ There's something need to be modified, please refer to the examples.
 - **[Library]** [Motor Shield Library](https://github.com/Seeed-Studio/SeeedMotorShieldV2/archive/master.zip)
 - **[Datasheet]** [L298 Datasheet](https://github.com/SeeedDocument/Motor_Shield_V2.0/raw/master/resource/L298.pdf)
 - **[Datasheet]** [78M05 Datasheet](https://github.com/SeeedDocument/Motor_Shield_V2.0/raw/master/resource/78M05_datasheet.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

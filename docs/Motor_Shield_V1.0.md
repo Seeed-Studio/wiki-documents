@@ -224,3 +224,6 @@ This is a recipe about how to control motors individually with the Seeedstudio 2
 - **[PDF]**[Motor Driver pcb](https://github.com/SeeedDocument/Motor-Shield_V1.0/raw/master/res/Motor%20Driver.pdf)
 - **[PDF]**[Motor Driver sch](https://github.com/SeeedDocument/Motor-Shield_V1.0/raw/master/res/Motor%20Driver%20SCH.pdf)
 - **[Code]**  [Motor shield Demo code](https://github.com/SeeedDocument/Motor-Shield_V1.0/raw/master/res/Grobe-Motor_Shield_Demo_Code.zip)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

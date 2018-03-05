@@ -92,3 +92,6 @@ Similar to the Arduino, the Xadow Main Board uses only a single microcontroller 
 ---
 - [Xadow Main Board eagle file.zip](https://github.com/SeeedDocument/Xadow_Main_Board/raw/master/res/Xadow_Main_Board.zip)
 - [Library of Xadow Main Board](https://github.com/Seeed-Studio/Xadow_MainBoard)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

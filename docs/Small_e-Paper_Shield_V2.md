@@ -380,3 +380,6 @@ _The function can be used to draw a triangle. It is formed by three points._
 - [epdImageKit Tool](https://github.com/SeeedDocument/Small_e-Paper_Shield_V2/raw/master/res/EpdImageKit.zip)
 
 - [New Panel Library【EPD_V230】](https://github.com/SeeedDocument/Small_e-Paper_Shield_V2/raw/master/res/EpdV230.rar)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

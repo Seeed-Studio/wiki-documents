@@ -92,3 +92,6 @@ The schematic diagram of Xadow Audio is provide in the following link:
 Check more info about the Speaker box and the Microphone:
 
 - [Datasheet for speaker box and microphone](https://github.com/SeeedDocument/Xadow_Audio/raw/master/res/SpeakerAndMicrophone.rar)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

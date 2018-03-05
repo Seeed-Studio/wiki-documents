@@ -106,3 +106,6 @@ After upload completed, you can open the serial monitor to see the result.
 *   [Grove - RTC](https://www.seeedstudio.com/Grove-RTC-p-758.html)
 
 
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

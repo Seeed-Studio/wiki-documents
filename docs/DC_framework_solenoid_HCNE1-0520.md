@@ -117,3 +117,6 @@ Performance to show:
 *   Insulation strengththe strength should be 600VAC/1 min DC standard product table.
 
 ![](https://github.com/SeeedDocument/DC_framework_solenoid_HCNE1-0520/raw/master/img/HCNE1-0520-5-.jpg)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

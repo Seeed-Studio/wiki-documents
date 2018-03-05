@@ -305,3 +305,6 @@ Using Espressif Systems ESP8266 AT Instruction Set Version 0.24 with SeeedStudio
 * [ESP-06](http://www.esp8266.com/wiki/doku.php?id=esp8266-module-family#esp-06)
 * [ESP8266 on Hackaday](http://hackaday.com/tag/esp8266/)
 * [https://nurdspace.nl/ESP8266](https://nurdspace.nl/ESP8266)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

@@ -430,3 +430,6 @@ This method is used to transmit and receive data to and from initiator. This cod
 - **[PDF]**[NFC Shield - Schematic in PDF format](http://wiki.seeedstudio.com/images/4/48/NFC_Shield_V0.9b.pdf)
 - **[PDF]**[NXP PN532 - User Manual](http://www.nxp.com/documents/user_manual/141520.pdf)
 - **[Links]**[NFC Forum](http://www.nfc-forum.org)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

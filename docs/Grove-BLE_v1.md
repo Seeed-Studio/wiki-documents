@@ -298,3 +298,6 @@ Resources
 - [Schematic](https://raw.githubusercontent.com/SeeedDocument/Grove-BLE_v1/master/res/Grove-BLE_v1.0.zip)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_BLE_v1 -->
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

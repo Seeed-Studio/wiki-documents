@@ -118,3 +118,6 @@ Resources
 -   [Firmware for this product](https://github.com/Seeed-Studio/Grove_LED_Matrix_Driver/tree/master/Firmware)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_LED_Matrix_Driver_v1.0 -->
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

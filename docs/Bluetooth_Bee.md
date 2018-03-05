@@ -706,3 +706,6 @@ Now share you awesome projects on with us on [Recipe](https://www.seeed.cc/proje
 - **[Datasheet]**  [Bluetooth Bee datasheet](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/res/Bluetooth_Bee_datasheet.pdf)
 
 - **[Datasheet]**[HM－01_Datasheet](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/res/HM%EF%BC%8D01_Datasheet.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

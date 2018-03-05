@@ -119,6 +119,18 @@ pages:
           - UartSBee V4: UartSBee_V4.md
           - UartSBee v5: UartSBee_v5.md
 
+      - Raspberry Pi:
+          - Raspberry Pi Introduction: Raspberry_Pi.md
+          - Grove Base HAT: Grove_Base_HAT.md
+          - Grove Starter Kit for IoT based on Raspberry Pi: Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi.md
+          - GrovePi&#43;: GrovePi_Plus.md
+          - Raspberry Pi Breakout Board v1.0: Raspberry_Pi_Breakout_Board_v1.0.md
+          - Raspberry Pi Motor Driver Board v1.0: Raspberry_Pi_Motor_Driver_Board_v1.0.md
+          - Raspberry Pi RS232 Board v1.0: Raspberry_Pi_R232_Board_v1.0.md
+          - Raspberry Pi Relay Board v1.0: Raspberry_Pi_Relay_Board_v1.0.md
+          - Skeleton Box for Raspberry Pi Compute Module Development Kit: Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit.md
+          - Skeleton box for Raspberry Pi: Skeleton_box_for_Rasberry_Pi.md
+
       - BeagleBone:
           - BeagleBone Introduction: BeagleBone.md
           - Beagle Bone Green and Grove IoT Starter Kit Powered by AWS: Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS.md
@@ -133,17 +145,60 @@ pages:
           - Motor Bridge Cape v1.0: Motor_Bridge_Cape_v1.0.md
           - Skeleton box for Beaglebone: Skeleton_box_for_Beaglebone.md
 
-      - Raspberry Pi:
-          - Raspberry Pi Introduction: Raspberry_Pi.md
-          - Grove Base HAT: Grove_Base_HAT.md
-          - Grove Starter Kit for IoT based on Raspberry Pi: Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi.md
-          - GrovePi&#43;: GrovePi_Plus.md
-          - Raspberry Pi Breakout Board v1.0: Raspberry_Pi_Breakout_Board_v1.0.md
-          - Raspberry Pi Motor Driver Board v1.0: Raspberry_Pi_Motor_Driver_Board_v1.0.md
-          - Raspberry Pi RS232 Board v1.0: Raspberry_Pi_R232_Board_v1.0.md
-          - Raspberry Pi Relay Board v1.0: Raspberry_Pi_Relay_Board_v1.0.md
-          - Skeleton Box for Raspberry Pi Compute Module Development Kit: Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit.md
-          - Skeleton box for Raspberry Pi: Skeleton_box_for_Rasberry_Pi.md
+      - ReSpeaker:
+          - ReSpeaker Introduction: ReSpeaker.md
+          - ReSpeaker 2-Mics Pi HAT: ReSpeaker_2_Mics_Pi_HAT.md
+          - ReSpeaker 4-Mic Array for Raspberry Pi: ReSpeaker_4_Mic_Array_for_Raspberry_Pi.md
+          - ReSpeaker Core: ReSpeaker_Core.md
+          - ReSpeaker Core v2: ReSpeaker_Core_v2.md
+          - ReSpeaker Drive Unit: ReSpeaker_Drive_Unit.md
+          - ReSpeaker Mic Array: ReSpeaker_Mic_Array.md
+
+      - Shield:
+          - Shield Introduction: Shield.md
+          - 2.8&#39;&#39; TFT Touch Shield v2.0: 2.8inch_TFT_Touch_Shield_v2.0.md
+          - 4A Motor Shield: 4A_Motor_Shield.md
+          - Base Shield V2: Base_Shield_V2.md
+          - Bluetooth Shield V2.0: Bluetooth_Shield_V2.md
+          - CAN-BUS Shield V1.2: CAN-BUS_Shield_V1.2.md
+          - CAN-BUS Shield V2.0: CAN-BUS_Shield_V2.0.md
+          - Camera Shield: Camera_Shield.md
+          - EL Shield: EL_Shield.md
+          - Energy Shield: Energy_Shield.md
+          - GPRS Shield V1.0: GPRS_Shield_v1.0.md
+          - GPRS Shield V3.0: GPRS_Shield_V3.0.md
+          - Mbed Shield: mbed_Shield.md
+          - Motor Shield V2.0: Motor_Shield_V2.0.md
+          - Music Shield V2.2: Music_Shield_V2.2.md
+          - NFC Shield V2.0: NFC_Shield_V2.0.md
+          - Protoshield Kit for Arduino: Protoshield_Kit_for_Arduino.md
+          - RS232 Shield: RS232_Shield.md
+          - Relay Shield v3.0: Relay_Shield_v3.md
+          - SD Card shield V4.0: SD_Card_shield_V4.0.md
+          - Seeed BLE Shield v1: Seeed_BLE_Shield.md
+          - Small e-Paper Shield V2: Small_e-Paper_Shield_V2.md
+          - Solar Charger Shield V2.2: Solar_Charger_Shield_V2.2.md
+          - W5500 Ethernet Shield v1.0: W5500_Ethernet_Shield_v1.0.md
+          - Wifi Shield (Fi250) V1.1: Wifi_Shield_Fi250_V1.1.md
+          - Wifi Shield V2.0: Wifi_Shield_V2.0.md
+          - XBee Shield V2.0: XBee_Shield_V2.0.md
+
+      - Wio_Tracker:
+          - Wio_Tracker Introduction: Wio_Tracker.md
+          - Wio LTE Cat.1: Wio_LTE_Cat.1.md
+          - Wio Tracker - GPS, BT3.0, GSM, Arduino Compatible: wio_gps_board.md
+
+      - Wio:
+          - Wio Introduction: Wio.md
+          - Wio Link: Wio_Link.md
+          - Wio Link Bootcamp Kit: Wio_Link_Bootcamp_Kit.md
+          - Wio Link Deluxe Kit: Wio_Link_Deluxe_Kit.md
+          - Wio Link Deluxe Plus Kit: Wio_Link_Deluxe_Plus_Kit.md
+          - Wio Link Environment Kit: Wio_Link_Environment_Kit.md
+          - Wio Link Event Kit: Wio_Link_Event_Kit.md
+          - Wio Link Starter Kit: Wio_Link_Starter_Kit.md
+          - Wio Node: Wio_Node.md
+
 
       - LinkIt:
           - LinkIt Introduction: LinkIt.md
@@ -225,51 +280,6 @@ pages:
           - Xadow-Q Touch Sensor: Xadow_Q_Touch_Sensor.md
           - XadowTtutorial-Shaking Shaking: Xadow_Tutorial_Shaking_Shaking.md
 
-      - Wio:
-          - Wio Introduction: Wio.md
-          - Wio Link: Wio_Link.md
-          - Wio Link Bootcamp Kit: Wio_Link_Bootcamp_Kit.md
-          - Wio Link Deluxe Kit: Wio_Link_Deluxe_Kit.md
-          - Wio Link Deluxe Plus Kit: Wio_Link_Deluxe_Plus_Kit.md
-          - Wio Link Environment Kit: Wio_Link_Environment_Kit.md
-          - Wio Link Event Kit: Wio_Link_Event_Kit.md
-          - Wio Link Starter Kit: Wio_Link_Starter_Kit.md
-          - Wio Node: Wio_Node.md
-
-      - Wio_Tracker:
-          - Wio_Tracker Introduction: Wio_Tracker.md
-          - Wio LTE Cat.1: Wio_LTE_Cat.1.md
-          - Wio Tracker - GPS, BT3.0, GSM, Arduino Compatible: wio_gps_board.md
-
-      - Shield:
-          - Shield Introduction: Shield.md
-          - 2.8&#39;&#39; TFT Touch Shield v2.0: 2.8inch_TFT_Touch_Shield_v2.0.md
-          - 4A Motor Shield: 4A_Motor_Shield.md
-          - Base Shield V2: Base_Shield_V2.md
-          - Bluetooth Shield V2.0: Bluetooth_Shield_V2.md
-          - CAN-BUS Shield V1.2: CAN-BUS_Shield_V1.2.md
-          - CAN-BUS Shield V2.0: CAN-BUS_Shield_V2.0.md
-          - Camera Shield: Camera_Shield.md
-          - EL Shield: EL_Shield.md
-          - Energy Shield: Energy_Shield.md
-          - GPRS Shield V1.0: GPRS_Shield_v1.0.md
-          - GPRS Shield V3.0: GPRS_Shield_V3.0.md
-          - Mbed Shield: mbed_Shield.md
-          - Motor Shield V2.0: Motor_Shield_V2.0.md
-          - Music Shield V2.2: Music_Shield_V2.2.md
-          - NFC Shield V2.0: NFC_Shield_V2.0.md
-          - Protoshield Kit for Arduino: Protoshield_Kit_for_Arduino.md
-          - RS232 Shield: RS232_Shield.md
-          - Relay Shield v3.0: Relay_Shield_v3.md
-          - SD Card shield V4.0: SD_Card_shield_V4.0.md
-          - Seeed BLE Shield v1: Seeed_BLE_Shield.md
-          - Small e-Paper Shield V2: Small_e-Paper_Shield_V2.md
-          - Solar Charger Shield V2.2: Solar_Charger_Shield_V2.2.md
-          - W5500 Ethernet Shield v1.0: W5500_Ethernet_Shield_v1.0.md
-          - Wifi Shield (Fi250) V1.1: Wifi_Shield_Fi250_V1.1.md
-          - Wifi Shield V2.0: Wifi_Shield_V2.0.md
-          - XBee Shield V2.0: XBee_Shield_V2.0.md
-
       - Wireless:
           - Wireless Introduction: Wireless.md
           - BLE (dual) Bee v1.0: BLE_dual_Bee_v1.0.md
@@ -296,18 +306,6 @@ pages:
           - USB To Uart 5V: USB_To_Uart_5V.md
           - USB To Uart 5V/3V3: USB_To_Uart_5V_3V3.md
           - Unibody box for Galileo Gen2: Unibody_box_for_Galileo_Gen2.md
-
-      - ReSpeaker:
-          - ReSpeaker Introduction: ReSpeaker.md
-          - ReSpeaker 2-Mics Pi HAT: ReSpeaker_2_Mics_Pi_HAT.md
-          - ReSpeaker 4-Mic Array for Raspberry Pi: ReSpeaker_4_Mic_Array_for_Raspberry_Pi.md
-          - ReSpeaker Core: ReSpeaker_Core.md
-          - ReSpeaker Core v2: ReSpeaker_Core_v2.md
-          - ReSpeaker Drive Unit: ReSpeaker_Drive_Unit.md
-          - ReSpeaker Mic Array: ReSpeaker_Mic_Array.md
-
-
-
 
   - Grove:
       - Grove Introduction: Grove.md

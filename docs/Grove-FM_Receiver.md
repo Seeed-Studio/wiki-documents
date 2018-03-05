@@ -75,3 +75,6 @@ Resources
 - [Datasheet of SX6119](https://raw.githubusercontent.com/SeeedDocument/Grove-FM_Receiver/master/res/SX6119_收音IC_datasheet.pdf)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_FM_Receiver -->
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

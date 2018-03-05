@@ -20,3 +20,6 @@ It may be your wrong choice of board type If there appears the below image, plea
 ![](https://github.com/SeeedDocument/Upload_Code/raw/master/img/Upload_state.jpg)
 
 When there appears "Done uploading", congratulate you upload successfully.
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

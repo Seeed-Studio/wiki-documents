@@ -66,3 +66,6 @@ You may need to write the code by yourself for the special applications. But we 
 ##  Resource
 ---
 - [Grove - RJ45 Adapter Eagle File](https://github.com/SeeedDocument/Grove-RJ45_Adapter/raw/master/res/Grove-RJ45_Adapter_Eagle_File.zip)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

@@ -159,3 +159,6 @@ The ADC IC ADC121C021 used in  Xadow Grove Adaptor have been adopter on  Grove -
 *   [Xadow Grove Adaptor Eagle File](https://github.com/SeeedDocument/Xadow_Grove_Adaptor/raw/master/res/Xadow_Grove_Adaptor_Eagle_File.zip)
 
 *   [A/DC IC ADC121C021 datasheet](https://github.com/SeeedDocument/Xadow_Grove_Adaptor/raw/master/res/Xadow_Grove_Adaptor_Eagle_File.zip)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

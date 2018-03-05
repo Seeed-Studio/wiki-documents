@@ -31,3 +31,6 @@ Thus, when you want to make a demo, you can try to build a Sketchbook, and put t
 ###   Resources
 
 - [download pdf file](https://github.com/SeeedDocument/How_To_Use_Sketchbook/raw/master/res/How_to_use_Sketchbook.pdf)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

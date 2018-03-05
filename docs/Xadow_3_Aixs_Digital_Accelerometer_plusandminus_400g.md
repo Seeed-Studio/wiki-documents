@@ -49,3 +49,6 @@ After uploading code, open the serial monitor to obverse the test result. The ou
 ---
 - [Xadow - 3-Axis Digital Accelerometer(±400g) Eagle File](https://github.com/SeeedDocument/Xadow_3_Aixs_Digital_Accelerometer_plusandminus_400g/raw/master/res/Xadow-3-Axis_Digital_Accelerometer(%C2%B1400g)v1.0_sch_pcb.zip)
 - [Github repository for 3-Axis Digital Accelerometer(±400g)](https://github.com/Seeed-Studio/Grove_3Axis_Digital_Accelerometer_H3LIS331DL)
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
