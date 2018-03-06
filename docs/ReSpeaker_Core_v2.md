@@ -17,7 +17,10 @@ ReSpeaker Core v2 runs GNU/Linux operation system. It benefits from powerful and
 ReSpeaker Core v2 is not only designed for makers/enthusiast, but also a turnkey solution for business company. The hardware consists of two parts, one is the minimized SoC module which is small and easy to manufacturing and ready for final product. Another is a bottom board can be full customizable.
 
 
-[![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png)](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)
+<p style="text-align:center"><a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="180" height="36"  border=0 /></a></p>
+
+
+
 
 
 ## Features
@@ -50,7 +53,6 @@ ReSpeaker Core v2 is not only designed for makers/enthusiast, but also a turnkey
 
 
 ## Specification
-
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;border-color:#999;}
@@ -197,9 +199,9 @@ Grove interface for digital or I2C.
 - 5V 1A Micro USB adapter for power
 - two Micro-USB cables
 
-<div class="admonition warning" style="background:; color:#FFF">
+<div class="admonition warning">
 <p class="admonition-title">Caution</p>
-<font face="Georgia" size=2 font color="white">Please plug the USB cable gently, otherwise you may damage the interface.Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click <a href="https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html"><B>here</B></a> to buy</font>
+Please plug the USB cable gently, otherwise you may damage the interface.Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click <a href="https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html"><B>here</B></a> to buy
 </div>
 
 
@@ -218,10 +220,10 @@ Click the OneDrive icon below to download our latest image zip files: ```respeak
 
 
 
-<div class="admonition note" style="background:#6ab0de; color:#FFF">
+<div class="admonition note" >
 <p class="admonition-title">Note</p>
-<font face="Georgia" size=2 font color="white">The lxqt version comes with Debian desktop and the iot version does not. If you are new to ReSpeaker Core v2, lxqt version is recommended.
-</font>
+The lxqt version comes with Debian desktop and the iot version does not. If you are new to ReSpeaker Core v2, lxqt version is recommended.
+
 </div>
 
 **step 2.**
@@ -400,10 +402,9 @@ ssh respeaker@192.168.***.***
 // password: respeaker
 ```
 
-<div class="admonition note" style="background:#6ab0de; color:#FFF">
+<div class="admonition note" >
 <p class="admonition-title">Note</p>
-<font face="Georgia" size=2 font color="white">Note that if experience slow performance using SSH, please switch to a less crowded WiFi network.
-</font>
+Note that if experience slow performance using SSH, please switch to a less crowded WiFi network.
 </div>
 
 #### 2. VNC
