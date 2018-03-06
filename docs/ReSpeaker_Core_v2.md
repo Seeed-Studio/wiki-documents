@@ -1,11 +1,11 @@
 ---
 title: ReSpeaker Core v2
 category: ReSpeaker
-bzurl: 
+bzurl:
 oldwikiname: ReSpeaker Core v2
 prodimagename: cover.JPG
 surveyurl:  https://www.research.net/r/Respeaker_Core
-sku: 
+sku: 102990883
 ---
 
 ![enter image description here](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/ReSpeaker_V2_front.JPG)
@@ -197,7 +197,7 @@ Grove interface for digital or I2C.
 - 5V 1A Micro USB adapter for power
 - two Micro-USB cables
 
-<div class="admonition warning" style="background:#f0b37e; color:#FFF">
+<div class="admonition warning" style="background:; color:#FFF">
 <p class="admonition-title">Caution</p>
 <font face="Georgia" size=2 font color="white">Please plug the USB cable gently, otherwise you may damage the interface.Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click <a href="https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html"><B>here</B></a> to buy</font>
 </div>
@@ -535,4 +535,4 @@ python ns_kws_doa_alexa_with_light.py
 ### FAQs
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/).
