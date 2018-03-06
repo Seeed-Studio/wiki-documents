@@ -119,7 +119,8 @@ Build a irregular polygonal shell by using two 2mm nylon rivets and 3mm Screw st
 
 ![](https://github.com/SeeedDocument/Skeleton_Box_10x7_10x10_17x10/raw/master/img/外壳搭建1.jpg)
 
-<font color="red">Note:Epoxy plate frames can concatenate into rectangle,  but you should concern about location relationship between frames. It should look like the figure below: all long epoxy plate frames are at the top, and all short epoxy plate frames are at the bottom. It is important about the unity of location  relationship between two epoxy plate frames, and it does not matter who are at the top. In other words, you should keep equal hight between two epoxy plate frames, so that acrylic panels and nylon studs can be successfully installed.  </font>
+!!!Note
+    Epoxy plate frames can concatenate into rectangle,  but you should concern about location relationship between frames. It should look like the figure below: all long epoxy plate frames are at the top, and all short epoxy plate frames are at the bottom. It is important about the unity of location  relationship between two epoxy plate frames, and it does not matter who are at the top. In other words, you should keep equal hight between two epoxy plate frames, so that acrylic panels and nylon studs can be successfully installed. 
 
 ![](https://github.com/SeeedDocument/Skeleton_Box_10x7_10x10_17x10/raw/master/img/环氧板位置关系.JPG)
 

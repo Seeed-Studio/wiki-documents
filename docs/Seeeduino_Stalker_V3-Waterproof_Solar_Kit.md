@@ -186,7 +186,9 @@ You will require the following hardware for running your first program.
 
 ![](https://github.com/SeeedDocument/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/raw/master/img/Seeeduino_Stalker_v3_Uartsbee_4.0_Connection.jpg)
 
-Seeeduino Stalker v3 &lt;---&gt; UartSBee v4.0 connection</div></div></div>
+Seeeduino Stalker v3 &lt;---&gt; UartSBee v4.0 connection
+
+
 <table >
 <caption> Jumper Wire connections
 </caption>

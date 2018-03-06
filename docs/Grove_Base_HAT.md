@@ -7,6 +7,7 @@ prodimagename:  Grove Base HAT.JPG
 surveyurl:
 sku:     
 ---
+
 ![](https://github.com/SeeedDocument/Grove_Base_HAT/raw/master/img/Grove%20Base%20HAT.JPG)
 
 Grove Base HAT is an add-on board that brings Grove Sensors to the Raspberry Pi. It supports Raspberry Pi 2 Model B, Raspberry Pi 3 Model B and Raspberry Pi B+. There are four mounting holes, matching well with normal size Raspberry Pi. It also keeps the space for Camera cables.

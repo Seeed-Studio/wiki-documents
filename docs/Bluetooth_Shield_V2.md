@@ -86,8 +86,9 @@ make sure the right connection of the jumpers
 
 4.  Click Upload to Upload the code, if you have any problem about how to start Arduino, please click [here](/Getting_Started_with_Seeeduino) for some help.
 
-<dl><dd>![](https://github.com/SeeedDocument/Bluetooth_Shield_V2/raw/master/img/Bluetooth_ide_1.jpg)</div></div>
-</dd></dl>
+
+![](https://github.com/SeeedDocument/Bluetooth_Shield_V2/raw/master/img/Bluetooth_ide_1.jpg)
+
 
 **Check The Result**
 

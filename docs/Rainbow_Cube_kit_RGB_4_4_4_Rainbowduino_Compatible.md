@@ -130,15 +130,15 @@ Rainbow Cube Kit illuminated with random colors
 ---
 All pins are accessible from the Panel board show below.
 
-![](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/img/Rainbow_Cube_Panel_Bottom.jpg) <div class="thumbcaption">Panel board (bottom view)</div></div></div>
+![](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/img/Rainbow_Cube_Panel_Bottom.jpg) <div class="thumbcaption">Panel board (bottom view)
 
 *   **Rainbow Cube** kit provides **2 x 16 pin header** for connecting to RGB LEDs driver board like **Rainbowduino**.
 
-![](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/img/Rainbow_pin_diagram.png) <div class="thumbcaption">**2 x 16** pin header connector</div></div></div>
+![](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/img/Rainbow_pin_diagram.png) <div class="thumbcaption">**2 x 16** pin header connector
 
 *   **xBee Socket**
 
-![](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/img/XBee_PinOut.jpeg) <div class="thumbcaption">**2 x 16** pin header connector</div></div></div>
+![](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/img/XBee_PinOut.jpeg) <div class="thumbcaption">**2 x 16** pin header connector
 
 *   **DC Jack Pin**
 
@@ -157,7 +157,7 @@ it.
 
 *   [Download and read assembly instructions](http://www.seeedstudio.com/depot/docu/CUBE.pdf)
 
-![](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/img/Rainbow-1.jpg) <div class="thumbcaption">RGB Rainbow Cube Kit (assembled)</div></div></div>
+![](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/img/Rainbow-1.jpg) <div class="thumbcaption">RGB Rainbow Cube Kit (assembled)
 
 ##   Mechanical Dimensions
 ---
@@ -171,15 +171,15 @@ To easily understand the working of **Rainbow Cube kit**, a very simplified sche
 
     *   Numbers **1 - 32** indicates the pin number of the **2x16** pin header shown above.
 
-<div class="thumb tnone"><div class="thumbinner" style="width:502px;">![](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/img/8x8_RGB_Matrix_Schematic.png) <div class="thumbcaption">Schematic in a **2D RGB LED Matrix** form</div></div></div>
+![](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/img/8x8_RGB_Matrix_Schematic.png) 
 
 *   The **RGB Cube kit** inter-connection are presented in a block diagram format. This block diagram clearly shows how the 64 LEDs in 2D form are mapped into a 3D Cube form.
 
-<div class="thumb tnone"><div class="thumbinner" style="width:902px;">![](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/img/Rainbow_Cube_kit_Block_Diagram.png) <div class="thumbcaption">**RGB Cube Kit** from driver software view point</div></div></div>
+![](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/img/Rainbow_Cube_kit_Block_Diagram.png) 
 
 *   The actual 3D positions of LEDs are marked in the below photograph.
 
-<div class="thumb tnone"><div class="thumbinner" style="width:452px;">![](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/img/Rainbow_Cube_LED_3D_Coordinates.png) <div class="thumbcaption">**RGB Cube Kit** LED's 3D Positions illustrated</div></div></div>
+![](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/img/Rainbow_Cube_LED_3D_Coordinates.png) 
 
 *   The X,Y coordinates of **2D RGB LED Matrix** is mapped to the **RGB Cube kit** block diagram as follows:
 
@@ -195,9 +195,13 @@ To easily understand the working of **Rainbow Cube kit**, a very simplified sche
 
 *   Connect **Rainbow Cube Kit** 2x16 male pin header to **Rainbowduino** as shown below
 
-![](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/img/Rainbow_Cube_Installation_1.jpg) <div class="thumbcaption">**2x16 pin header** positioning</div></div></div>
+![](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/img/Rainbow_Cube_Installation_1.jpg) 
 
-![](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/img/Rainbow_Cube_Installation_2.jpg) <div class="thumbcaption">A **Rainbowduino** properly connected to **Rainbow Cube kit**</div></div></div>
+positioning
+
+![](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/img/Rainbow_Cube_Installation_2.jpg) 
+
+A **Rainbowduino** properly connected to **Rainbow Cube kit**
 
 *   Attach an USB cable to **Rainbowduino** for programming
 
@@ -241,11 +245,9 @@ void loop()
     Rb.setPixelZXY(3,0,3,0x00FF00); //uses 24bit RGB color Code
 }
 ```
-<dl><dt>Output
-</dt><dd>
+Output
 
-</dd></dl>
-![](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/img/Rainbow_Cube1.jpg) <div class="thumbcaption">Cube1.pde Demo</div></div></div>
+![](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/img/Rainbow_Cube1.jpg) 
 
 ####   Application Programming Interfaces
 
@@ -331,10 +333,10 @@ void loop()
     }
 }
 ```
-<dl><dt>Output
-</dt></dl>
+Output
 
-![](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/img/Rainbow_Cube2.jpg) <div class="thumbcaption">Cube2.pde Demo</div></div></div>
+
+![](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/img/Rainbow_Cube2.jpg)
 
 *   In this demo, all LEDs are painted with some random color. After five seconds of delay, the whole cube is repainted with random colors.
 ```
@@ -375,10 +377,10 @@ void loop()
     Rb.blankDisplay(); //Clear the LEDs (make all blank)
 }
 ```
-<dl><dt>Output
-</dt></dl>
+Output
 
-![](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/img/Rainbow_Cube3.jpg) <div class="thumbcaption">Cube3.pde Demo</div></div></div>
+
+![](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/img/Rainbow_Cube3.jpg) 
 
 ##   Third-party Demos
 ---

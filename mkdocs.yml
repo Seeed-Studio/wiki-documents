@@ -95,7 +95,6 @@ pages:
           - Rainbowduino LED driver platform - ATmega328: Rainbowduino_LED_driver_platform-ATmega328.md
           - Rainbowduino v3.0: Rainbowduino_v3.0.md
           - Seeeduino Cloud: Seeeduino_Cloud.md
-          - Seeeduino Cloud and Grove IoT Starter Kit Powered by AWS: Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS.md
           - Seeeduino Ethernet: Seeeduino_Ethernet.md
           - Seeeduino GPRS: Seeeduino_GPRS.md
           - Seeeduino Lite: Seeeduino_Lite.md
@@ -122,7 +121,6 @@ pages:
       - Raspberry Pi:
           - Raspberry Pi Introduction: Raspberry_Pi.md
           - Grove Base HAT: Grove_Base_HAT.md
-          - Grove Starter Kit for IoT based on Raspberry Pi: Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi.md
           - GrovePi&#43;: GrovePi_Plus.md
           - Raspberry Pi Breakout Board v1.0: Raspberry_Pi_Breakout_Board_v1.0.md
           - Raspberry Pi Motor Driver Board v1.0: Raspberry_Pi_Motor_Driver_Board_v1.0.md
@@ -133,7 +131,6 @@ pages:
 
       - BeagleBone:
           - BeagleBone Introduction: BeagleBone.md
-          - Beagle Bone Green and Grove IoT Starter Kit Powered by AWS: Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS.md
           - BeagleBone Blue: BeagleBone_Blue.md
           - BeagleBone Case: Beaglebone_Case.md
           - BeagleBone Green: BeagleBone_Green.md
@@ -496,8 +493,6 @@ pages:
           - Grove Base Shield for NodeMCU V1.0: Grove_Base_Shield_for_NodeMCU_V1.0.md
           - Grove Base Shield for Photon: Grove_Base_Shield_for_Photon.md
           - Grove Indoor Environment Kit for Edison: Grove_Indoor_Environment_Kit_for_Edison.md
-          - Grove IoT Developer Kit - Microsoft Azure Edition: Grove_IoT_Developer_Kit-Microsoft_Azure_Edition.md
-          - Grove IoT Starter Kits Powered by AWS: Grove_IoT_Starter_Kits_Powered_by_AWS.md
           - Grove Shield for Intel Joule: Grove_Shield_for_Intel_Joule.md
           - Grove Smart Plant Care Kit: Grove_Smart_Plant_Care_Kit.md
 
@@ -505,9 +500,7 @@ pages:
   - IoT:
           - IoT Introduction: IoT.md
           - Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS: Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS.md
-          - LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS: LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS.md
           - IoT_Fast_Prototyping_Kit S5D9: IoT_Fast_Prototyping_Kit S5D9.md
-          - Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS: Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS.md
           - Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi: Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi.md
           - Grove_IoT_Starter_Kits_Powered_by_AWS: Grove_IoT_Starter_Kits_Powered_by_AWS.md
           - Grove_IoT_Developer_Kit-Microsoft_Azure_Edition: Grove_IoT_Developer_Kit-Microsoft_Azure_Edition.md
@@ -616,7 +609,6 @@ pages:
           - How to use and write a library: How_to_use_and_write_a_library.md
           - I2C And I2C Address of Seeed Product: I2C_And_I2C_Address_of_Seeed_Product.md
           - IR Remote: IR_Remote.md
-          - IoT Fast Prototyping Kit S5D9: IoT_Fast_Prototyping_Kit S5D9.md
           - JavaScript for RePhone: JavaScript_for_RePhone.md
           - Joystick Control RGB Led: Joystick_Control_RGB_Led.md
           - Light Sensor and LED Bar: Light_Sensor_and_LED_Bar.md
