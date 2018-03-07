@@ -17,7 +17,7 @@ ReSpeaker Core v2 runs GNU/Linux operation system. It benefits from powerful and
 ReSpeaker Core v2 is not only designed for makers/enthusiast, but also a turnkey solution for business company. The hardware consists of two parts, one is the minimized SoC module which is small and easy to manufacturing and ready for final product. Another is a bottom board can be full customizable.
 
 
-<p style="text-align:center"><a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="180" height="36"  border=0 /></a></p>
+<p style="text-align:center"><a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>
 
 
 
@@ -195,8 +195,8 @@ Grove interface for digital or I2C.
 - Wi-Fi Network
 - 4GB (or more) SD card and SD card reader
 - PC or Mac
-- [USB To Uart Adapter](https://www.seeedstudio.com/USB-To-Uart-5V%26amp%3B3V3-p-1832.html)
-- 5V 1A Micro USB adapter for power
+- [USB To Uart Adapter](https://www.seeedstudio.com/USB-To-Uart-5V%26amp%3B3V3-p-1832.html) (Optional)
+- 5V 1A Micro USB adapter for power (Optional)
 - two Micro-USB cables
 
 <div class="admonition warning">
@@ -210,56 +210,50 @@ Please plug the USB cable gently, otherwise you may damage the interface.Please 
 Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2 image from an SD card to get up and running. We offer two ways to boot the Respeaker core v2. You can either boot from the SD card or [boot from the eMMC](/boot from the eMMC).
 
 #### A. boot from the SD card
-**step 1.**
-
-Click the OneDrive icon below to download our latest image zip files: ```respeaker-debian-9-lxqt-sd-********-4gb.img.xz``` or ```respeaker-debian-9-iot-sd-********-4gb.img.xz```.
+- **Step 1.** Click the OneDrive icon below to download our latest image zip files: ```respeaker-debian-9-lxqt-sd-********-4gb.img.xz``` or ```respeaker-debian-9-iot-sd-********-4gb.img.xz```.
 
 
 
 <p style="text-align:center"><a href="https://bfaceafsieduau-my.sharepoint.com/personal/miaojg22_off365_cn/_layouts/15/guestaccess.aspx?folderid=0bb3c4f3f122d4c2bb0f65eee2b5938f8&authkey=AfLSkcE8QeeUHTQ8GGfrrsU" target="_blank"><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/onedrive.png" width="200" height="40"  border=0 /></a></p>
 
 
+|Section|Description|
+|---|----|
+|**iot** / **lxqt**|The **lxqt** version comes with a desktop GUI while the **iot** version does not. If you are new to ReSpeaker Core V2, **lxqt** version is recommended.|
+|**flasher** / **sd**|The **flasher** version is used to flash the onboard eMMC, after flashing you can remove the SD card. The **sd** version will require the SD card to stay inserted all the time.|
+
+For development, we recommend the **lxqt + sd** version. So please download the **respeaker-debian-9-lxqt-sd-[date]-4gb.img.xz** file.
+
 
 <div class="admonition note" >
 <p class="admonition-title">Note</p>
-The lxqt version comes with Debian desktop and the iot version does not. If you are new to ReSpeaker Core v2, lxqt version is recommended.
-
+This wiki is based on the **respeaker-debian-9-lxqt-sd-20180118-4gb.img.xz** version. This wiki have dropped all the verbosities of operations on old system versions, please make sure you have download the latest image.
 </div>
 
-**step 2.**
-
-Plug the SD card into your PC or MAC with an SD card reader.You need an SD card with a capacity of more than 4G.
 
 
-**step 3.**
+- **Step 2.** Plug the SD card into your PC or MAC with an SD card reader. You need an SD card with a capacity of more than 4G.
 
-<font face="">Click to download <a href="https://etcher.io/">Etcher</a> here, and burn the ```*.img.xz``` file directly to your SD card with Etcher. Or unzip the ```*.img.xz``` file to a ```*.img``` file, then burn it to SD card with other image writing tools.
+
+- **Step 3.** <font face="">Click to download <a href="https://etcher.io/">Etcher</a> here, and burn the ```*.img.xz``` file directly to your SD card with Etcher. Or unzip the ```*.img.xz``` file to a ```*.img``` file, then burn it to SD card with other image writing tools.
 <br>
 <br>Click the Plus icon to add the image you just download, the software will automatically select the SD card you plug.Then click Flash! to start burning. It will takes about 10 minutes to finish. </font>
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/v2-flash-sd.png)
 
 
-**step 4.**
-
-After writing the image to the SD card, insert the SD card in your ReSpeaker Core V2. Power the board using the PWR_IN micro usb port and DO NOT remove the SD card after powering on. ReSpeaker Core V2 will boot from the SD card, and you can see USER1 and USER2 LEDs light up. USER1 is typically configured at boot to blink in a heartbeat pattern and USER2 is typically configured at boot to light during SD card accesses. Now, you should go to the next part: Serial Console.
+- **Step 4.** After writing the image to the SD card, insert the SD card in your ReSpeaker Core V2. Power the board using the PWR_IN micro usb port and DO NOT remove the SD card after powering on. ReSpeaker Core V2 will boot from the SD card, and you can see USER1 and USER2 LEDs light up. USER1 is typically configured at boot to blink in a heartbeat pattern and USER2 is typically configured at boot to light during SD card accesses. Now, you should go to the next part: Serial Console.
 
 
 #### B. boot from the eMMC
 
 You may also directly flash the ReSpeaker image files to the ReSpeaker's eMMC (onboard flash memory) using your PC or Mac. Then the ReSpeaker will boot from it's eMMC (onboard flash memory) and not from the SD card.
 
-**step 1.**
+- **Step 1.** Download our latest image zip file ```respeaker-debian-9-iot-flasher-********-4gb.img.xz``` or ```respeaker-debian-9-lxqt-flasher-********-4gb.img.xz``` at OneDrive. The lxqt version comes with Debian desktop and the iot version does not. And the flasher version is for flashing eMMC, and the sd version is for booting from SD card.
 
-Download our latest image zip file ```respeaker-debian-9-iot-flasher-********-4gb.img.xz``` or ```respeaker-debian-9-lxqt-flasher-********-4gb.img.xz``` at OneDrive. The lxqt version comes with Debian desktop and the iot version does not. And the flasher version is for flashing eMMC, and the sd version is for booting from SD card.
+- **Step 2.** Burn the ```*.img.xz``` file directly to SD card with Etcher, or unzip the ```*.img.xz``` file to a ```*.img``` file, then burn it to SD card with other image writing tools.
 
-**step 2.**
-
-Burn the ```*.img.xz``` file directly to SD card with Etcher, or unzip the ```*.img.xz``` file to a ```*.img``` file, then burn it to SD card with other image writing tools.
-
-**step 3.**
-
-After burning SD card, insert the SD card in the ReSpeaker Core V2. Power the board using the PWR_IN micro usb port and do not remove the SD card while it's flashing.
+- **Step 3.** After burning SD card, insert the SD card in the ReSpeaker Core V2. Power the board using the PWR_IN micro usb port and do not remove the SD card while it's flashing.
 
 During the flashing process, you'll see the USER1 and USER2 LEDs blink alternately. It will take about 10 minutes to complete. When the LEDs turn off, you can power off the board, pull out the SD card and power again. If the LEDs light up, that means the image was flashed to the eMMC correctly.
 
@@ -269,51 +263,49 @@ You can also check the image version with this command: cat /etc/issue.net.
 
 ### Serial Console
 
-Now that your ReSpeaker can boot (it runs Debian Linux), you might want to get access to the Linux system by a console, to setup the ssh server, or setup WiFi, etc. You will have two choices to get the console, but please note that the first choice depends on your hardware version and your system version.
+Now your ReSpeaker Core V2 can boot, you might want to get access to the Linux system via a console, to setup the WiFi, etc. You have two ways to get the console:
 
-- A. The OTG USB port, for hardware version not earlier than "8/5/2017" (see the silk-screen on the board) and system image version not earlier than "20171023".
+- a. The OTG USB port - This requires a running Linux system on the board
 
-- B. The UART port
+- b. The UART port - This is the hard way to access the console, it can be used for debugging low level issues
 
 
 #### A. Connection via OTG
 
-- Step 1. Power the ReSpeaker Core v2 with Micro-USB able and 5V 1A Micro USB adapter via the **PWR_IN** Port.
-
-- Step 2. Find a micro USB cable, and please make sure it's a data cable (not just a power cable), plug the micro USB end to the ReSpeaker's **OTG** micro USB port (There're two micro USB ports on the ReSpeaker board, which are labeled with different silk-screen, one is PWR_IN and another is OTG), then another end of this cable into your computer.
+- **Step 1.** Find a micro USB cable, and please make sure it's a data cable (not just a power cable), plug the micro USB end to the ReSpeaker's **OTG** micro USB port (There're two micro USB ports on the ReSpeaker board, which are labeled with different silk-screen, one is **PWR_IN** and another is **OTG**), then plug another end of this cable into your computer.
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/otg_connect.jpg)
 
-- step 3. Check at your computer if the serial port has risen:
+- **Step 2.** Check at your computer if the serial port has risen:
 
     - Windows: check the device manager, there should be new serial deviced named ```COMx``` which x is an increasing number. If you use windows XP/7/8, maybe you need install [windows CDC drivers](https://github.com/respeaker/get_started_with_respeaker/blob/master/files/ReSpeaker_Gadget_CDC_driver.7z).
     - Linux: ls ```/dev/ttyACM*```, you should get ```/dev/ttyACMx``` where x will vary depending on which USB port you used.
     - Mac: ls ```/dev/cu.usb*```, you should get ```/dev/cu.usbmodem14xx``` where xx will vary depending on which USB port you used.
 
 
-- step 4. Use your favorite serial debugging tool to connect the serial port, the serial has: 115200 baud rate, 8Bits, Parity None, Stop Bits 1, Flow Control None. For examples:
+- **Step 3.** Use your favorite serial debugging tool to connect the serial port, the serial has: 115200 baud rate, 8Bits, Parity None, Stop Bits 1, Flow Control None. For examples:
 
     - Windows: use [PUTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), select ```Serial``` protocol, fill in the correct COM port of ReSpeaker Core V2, ```115200``` baud, 8Bits, Parity None, Stop Bits 1, Flow Control None.
     - Linux: Depend on your USB To TTL Adapter, it could be ```screen /dev/ttyACM0(,1, and so on)``` 115200 or ```screen /dev/ttyUSB0(,1, and so on) 115200```
     - Mac: Depend on your USB To TTL Adapter, it could be ```screen /dev/cu.usbserial1412(,1422, and so on) 115200``` or ```screen /dev/cu.usbmodem1412(,1422, and so on) 115200```
 
 
-- step 5. The default user name is ```respeaker```, and password is ```respeaker``` too.
+- **Step 4.** The default user name is ```respeaker```, and password is ```respeaker``` too.
 
 #### B. Connection via The UART port
 
 In this section we will guide you how to establish a connection from your computer to your ReSpeaker using your USB to TTL adapter which will be connected to the ReSpeaker's Uart port (Uart port located just to the left of the ReSpeaker speaker plug).
 
-- step 1. Connect Uart port and your PC/Mac with an USB To TTL Adapter. Note that the voltage of RX/TX are 3.3V. If you don't have an USB To TTL Adapter, you can click [here](https://www.seeedstudio.com/USB-To-Uart-5V%26amp%3B3V3-p-1832.html) to get one.
+- **Step 1.** Connect Uart port and your PC/Mac with an USB To TTL Adapter. Note that the voltage of RX/TX are 3.3V. If you don't have an USB To TTL Adapter, you can click [here](https://www.seeedstudio.com/USB-To-Uart-5V%26amp%3B3V3-p-1832.html) to get one.
 
-- step 2. Use the following Serial debugging tools with 115200 baud:
+- **Step 2.** Use the following Serial debugging tools with 115200 baud:
     - Windows: use [PUTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), select ```Serial``` protocol, fill in the correct COM port of ReSpeaker Core V2, 115200 baud, 8Bits, Parity None, Stop Bits 1, Flow Control None.
     - Linux: Depend on your USB To TTL Adapter, it could be ```screen /dev/ttyACM0(,1, and so on) 115200``` or ```screen /dev/ttyUSB0(,1, and so on) 115200```.
     - Mac: Depend on your USB To TTL Adapter, it could be ```screen /dev/cu.usbserial1412(,1422, and so on) 115200``` or ```screen /dev/cu.usbmodem1412(,1422, and so on) 115200```.
 
-- step 3. The login user name is respeaker, and password is respeaker too.
+- **Step 3.** The login user name is respeaker, and password is respeaker too.
 
-- step 4. If you do not have a USB to TTL Adapter, you may also use an Arduino. If using an Arduino, connect one end of a jumper wire to the RESET pin on the Arduino and the other end to the GND pin on the Arduino. This will bypass your Arduino's ATMEGA MCU and turn your Arduino into a USB to TTL adapter, see video tutorial here. Now connect the GND pin on the Arduino to the GND pin on the Uart port of the Respeaker. Connect the Rx pin on the Arduino to the Rx pin on the Uart port of the Respeaker. Connect the Tx pin on the Arduino to the Tx pin on the Uart port of the Respeaker. And lastly, connect the Arduino to your PC/Mac via the Arduino's USB cable. Now check that your Mac or Linux PC finds your Arduino by typing this command:
+- **Step 4.** If you do not have a USB to TTL Adapter, you may also use an Arduino. If using an Arduino, connect one end of a jumper wire to the RESET pin on the Arduino and the other end to the GND pin on the Arduino. This will bypass your Arduino's ATMEGA MCU and turn your Arduino into a USB to TTL adapter, see video tutorial here. Now connect the GND pin on the Arduino to the GND pin on the Uart port of the Respeaker. Connect the Rx pin on the Arduino to the Rx pin on the Uart port of the Respeaker. Connect the Tx pin on the Arduino to the Tx pin on the Uart port of the Respeaker. And lastly, connect the Arduino to your PC/Mac via the Arduino's USB cable. Now check that your Mac or Linux PC finds your Arduino by typing this command:
 
 ```
 ls /dev/cu.usb* (Mac)
@@ -330,7 +322,7 @@ Now follow step 2 above to connect to your Respeaker over this serial connection
 
 ### Network Setting Up
 
-#### 1. Wi-Fi Setting Up
+#### A. Wi-Fi Setting Up
 
 Configure your ReSpeaker's network with the Network Manager tool, nmtui. nmtui will already be installed on the ReSpeaker image.
 
@@ -383,12 +375,13 @@ nmcli con modify mywifi wifi-sec.psk your_wifi_password
 nmcli con up mywifi
 ```
 
-#### 2. Ethernet Connectivity
+#### B. Ethernet Connectivity
 
 You can connect to a network using an Ethernet cable. Just plug the Ethernet cable which has connected to the Internet will be OK.
 
 
-### SSH & VNC
+
+### Connect to SSH & VNC
 
 #### 1.SSH
 
@@ -409,131 +402,375 @@ Note that if experience slow performance using SSH, please switch to a less crow
 
 #### 2. VNC
 
+The system has VNC server built-in. The VNC server will launch the **lxqt** desktop GUI which is a lightweight Qt desktop environment.
 The VNC service also starts automatically. Use [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/) or [VNC Viewer for Google Chrome](https://chrome.google.com/webstore/detail/vnc%C2%AE-viewer-for-google-ch/iabmpiboiopbgfabjmgeedhcmjenhbla?hl=en) to connect to the desktop of ReSpeaker Core v2.
 
-To use VNC, connect your PC/Mac and ReSpeaker v2 to the same Wi-Fi network. Then open VNC Viewer, type ```192.168.xxx.xxx:5901``` at the address bar. ```192.168.xxx.xxx``` is IP address of the board and ```5901``` is the default port of VNC service. If you meet ```Unencrypted connection```, click Continue to go on. The password is ```respeaker```.
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/VNC-1.png)
+To use VNC, connect your PC/Mac and ReSpeaker v2 to the same Wi-Fi network. Then open VNC Viewer, type ```192.168.xxx.xxx``` at the address bar. ```192.168.xxx.xxx``` is IP address of the board，you can use the command **ifconfig** to check. If you meet ```Unencrypted connection```, click Continue to go on. The password is ```respeaker```.
+![](https://user-images.githubusercontent.com/5130185/34665797-93b222d6-f49c-11e7-8112-704f91163038.png)
 
-If nothing appears in the VNC desktop, please right-click on the gray area, then select terminal, type lxpanel in the terminal.
-
-If you find the VNC is not working smoothly, please switch to a faster network.
-
-
-If you can connect to the Respeaker Core v2 but can not do any operation, please make sure you do not choose the ```View-only``` option.
-
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/vnc_2.png)
+Note!!!
+- Please note that the VNC connection relies on good quality of the network, please have a mental preparation that you will probably get very low refresh rate of the VNC display.
 
 
-### Setup and Setting
 
-#### ALSA Setting
+### Connect to Speaker or Headset
 
-Download Github repository with ```respeaker``` user:
+The board uses the built-in codec of the SOC to render playback. Both the JST speaker port and the headset port are driven by their own amplifier, and both amplifiers are connected to the same codec of the SOC. The sound card driver that SEEED implemented drives both the capture device and the playback device. So there's no discrete capture or playback sound card in ALSA device list. They're all named seeed-8mic-voicecard.
+
+The simplest way to heard sound from the board is to plugin a headset. If you prefer loud speaker, the board can output up to 8W of drive capability.
+
+
+
+### Voice Capture and Playback Testing
+
+#### 1.Test via ALSA
+
+As this is a technical documentation of development phase, the index of the sound device may change along versions. So check out the correct device index first with the following commands:
 
 ```
-su respeaker && cd     # skip this steps if you are already using respeaker user
-git clone https://github.com/respeaker/respeaker_v2_eval.git       # skip this step if you have already downloaded
-cd ~/respeaker_v2_eval
-sudo cp asound.conf /etc/
+respeaker@v2:~$ arecord -l
+**** List of CAPTURE Hardware Devices ****
+card 0: seeed8micvoicec [seeed-8mic-voicecard], device 0: 100b0000.i2s1-ac108-pcm0 ac108-pcm0-0 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 1: bluetoothvoice [bluetooth-voice], device 0: 100e0000.i2s2-bt-sco-pcm bt-sco-pcm-0 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+respeaker@v2:~$ aplay -l
+**** List of PLAYBACK Hardware Devices ****
+card 0: seeed8micvoicec [seeed-8mic-voicecard], device 1: 100b0000.i2s1-rk3228-hifi rk3228-hifi-1 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 1: bluetoothvoice [bluetooth-voice], device 0: 100e0000.i2s2-bt-sco-pcm bt-sco-pcm-0 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
 ```
 
-#### PulseAudio Setting
+Find the sound card whose name has **seeed** prefix. For the example above, the capture device is **hw:0,0**, the playback device is **hw:0,1**. Then test recording and playing sound with the following commands:
+
 ```
-su respeaker && cd     # skip this steps if you are already using respeaker user
-git clone https://github.com/respeaker/respeaker_v2_eval.git       # skip this step if you have already downloaded
-cd ~/respeaker_v2_eval
-sudo cp pulse/default.pa /etc/pulse/            # config pulseaudio
-cp pulse/client.conf ~/.config/pulse/
-pulseaudio -k && pulseaudio -D                  # restart pulseaudio, don't run it as root user
-```
-#### Voice Capture and Playback
-```
-// record & playback 2channels
+# record & playback 2 channels audio
 arecord -Dhw:0,0 -f S16_LE -r 16000 -c 2 hello.wav
-aplay -Dhw:0,2 -r 16000 -c 2 hello.wav
-arecord -v -f cd hello.wav
-aplay hello.wav
-// record 8channels
-// there are 6 microphones on board, and ac108 compose the 2 remaining channels.
-arecord -Dhw:0,0 -f S16_LE -r 16000 -c 8 hello.wav
+aplay -Dhw:0,1 -r 16000 -c 2 hello.wav
+
+# record 8 channels audio
+# there are 6 microphones on board, and ac108 compose the 2 remaining channels.
+arecord -Dhw:0,0 -f S16_LE -r 16000 -c 8 hello_8ch.wav
 ```
 
-#### Virtual Environment
-```
-pip install virtualenv                                     # install virtualenv
-python -m virtualenv --system-site-packages ~/env          # create python virtual environment
-source ~/env/bin/activate                                  # activate python venv
-deactivate                                                 # deactivate python venv
-```
-#### Voice Engine Setting
+#### 2. Test via PulseAudio
 
-Install and configure ReSpeaker Voice Engine in virtual environment:
+First check whether the PulseAudio is running:
+
 ```
-source ~/env/bin/activate                                  # activate python venv
-cd ~/respeaker_v2_eval
-sudo apt update
-sudo apt install libatlas-base-dev                         
-pip install ./webrtc*.whl
-pip install ./snowboy*.whl
-pip install avs
+respeaker@v2:~$ ps aux|grep pulse|grep -v grep
+respeak+  1109  0.0  0.7 363272  7932 ?        S<l  01:01   0:00 /usr/bin/pulseaudio --start --log-target=syslog
+```
+If it's not, please refer to PulseAudio's documentation to enable the auto-spawn of PulseAudio. Then test via:
+```
+parecord --channels=8 --rate=16000 --format=s16le hello2.wav
+paplay hello2.wav
+```
+Further more, the default ALSA device now hooks to PulseAudio, so using the following commands also plays/records sound via PulseAudio:
+```
+arecord -v -f cd hello3.wav
+aplay hello3.wav
+```
+
+So far we learned the basic operations of the ReSpeaker Core V2 board, let's move forward, to build our own AVS(Alexa Voice Service) device using ReSpeaker Core V2.
+
+### AVS(Alexa Voice Service) Guide
+
+This guide will shows you how to build an AVS device based on the ReSpeaker Core V2.
+
+#### Step 1. Install AVS library (Python)
+
+```
+respeaker@v2:~$ sudo apt update
+respeaker@v2:~$ pip install avs
+```
+
+This will also install the following executables into **~/.local/bin: alexa-audio-check**, alexa-auth, dueros-auth, alexa-tap and alexa.
+
+Tap the command below to Check the audio configuration:
+```
+respeaker@v2:~$ ~/.local/bin/alexa-audio-check
+```
+This script calculates the RMS of the sound recorded by the microphones.
+
+#### Step 2. Authorize Alexa
+
+Connect to the board via [VNC](https://github.com/respeaker/get_started_with_respeaker/blob/master/docs/ReSpeaker_Core_V2/getting_started.md#ssh--vnc). In the VNC desktop, open terminal and execute:
+
+```
+respeaker@v2:~$ ~/.local/bin/alexa-auth
+```
+This script will open the web browser automatically, the web browser will display a login page. Sign in with your Amazon account:
+
+![](https://github.com/respeaker/get_started_with_respeaker/raw/master/img/aus-1.png)
+
+After succeed you will see:
+
+![](https://github.com/respeaker/get_started_with_respeaker/raw/master/img/aus-2.png)
+
+Now you can close the VNC client. The following commands can be executed in the SSH (If you prefer the VNC desktop, the terminal in VNC desktop also works).
+
+#### Step 3. Have fun with Alexa Applications
+
+We provide three python files based on Alexa, you can choose them freely.
+
+- Alexa-tap.py : Use the **Enter** key to wakeup Alexa, we call it Alexa Tap to Play.
+- ns_kws_alexa.py : Use the key word **Alexa** to wakeup Alexa, we call it Alexa Hands-Free.
+- ns_kws_alexa_with_light.py : The same as ns_kws_alexa.py, add the LED effect, We call it Alexa with light.
+
+##### Alexa Tap to Play
+Tap the command below in the terminal Of Putty(SSH is recommended).
+```
+respeaker@v2:~$ ~/.local/bin/alexa-tap
+```
+
+Wait until you see **on_ready** in the log printing. Press **Enter** key of your computer and talk to Alexa(Only support English now).
+
+##### Alexa Hands-Free via snowboy
+
+```
+sudo apt install libatlas-dev                # required by snowboy
+git clone https://github.com/respeaker/respeaker_v2_eval.git
+cd respeaker_v2_eval
+pip install --no-deps snowboy*.whl           # install pre-build snowboy
+pip install webrtc_audio_processing*.whl
 pip install voice-engine
+python ns_kws_alexa.py
+```
+Wait until you see **on_ready** in the log printing, say **Alexa** to trigger the conversation with Alexa.
+
+##### Alexa With light effect:
+
+```
+pip install pixel-ring
+python ns_kws_alexa_with_light.py
+```
+The same as last one, say **Alexa** to trigger the conversation with Alexa. You will the LED shinning while this program is running.
+
+### GPIO
+
+This part will introduce how to use **MRAA** and **UPM** to control GPIO and Grove Socket on Respeaker Core v2.
+
+#### Step 1. Update MRAA and UPM libraries to latest version
+
+First, we need to check the kernel version of the system we're running, if you're not sure that you flashed the system image of version 20171128 and later.
+```
+uname -a
 ```
 
+If you're using system image prior to version 4.4.95-respeaker-r2, please upadte the kernel first with
 
-#### Install gstreamer
 ```
-sudo apt-get install gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gir1.2-gstreamer-1.0 python-gi python-gst-1.0 python-pyaudio
+sudo apt update
+sudo apt install linux-image-4.4.95-respeaker-r2
+```
+Then we install the latest MRAA and UPM packages.
+
+```
+sudo apt install  python-mraa python-upm libmraa1 libupm1 mraa-tools
+```
+#### Step 2. Check your platform information
+
+```
+#only have bus 0 and id=03(/dev/i2c-3), 0 is the i2c number for mraa and upm
+respeaker@v2:~$ mraa-i2c list
+Bus   0: id=03 type=linux
+
+#mraa gpio numbers and system gpio numbers and it's pinmux
+respeaker@v2:~$ mraa-gpio list
+00      GPIO91: GPIO
+01         VCC:
+02      GPIO43: GPIO
+03     GPIO127: GPIO
+04      GPIO17: GPIO
+05      GPIO67: GPIO
+06         GND:
+07      GPIO13: GPIO
+08    I2C2_SCL: I2C  
+09    I2C2_SDA: I2C  
+10         VCC:
+11         GND:
+12      GPIO66: GPIO
+```
+And here we have the description of the PIN defines for the ReSpeaker Core V2 board.
+
+**Pin index definition for headers :**:
+
+8 pins header
+
+![](https://github.com/respeaker/get_started_with_respeaker/raw/master/img/respeakercorev2pin1.jpg?raw=true)
+
+Grove socket
+
+![](https://github.com/respeaker/get_started_with_respeaker/blob/master/img/respeakercorev2pin2.jpg?raw=true)
+
+**GPIO Pins**
+
+MRAA|	HEADER PIN INDEX |	SYSFS PIN	|RK3229 PIN
+--|--|--|--
+0	|0|	1091|	GPIO2_D3
+1	|1|   --|	VCC
+2	|2| 1043|	GPIO1_B3
+3	|3|	1127|	GPIO3_D7
+4 |4|	1017|	GPIO0_C1
+5	|5|	1067|	GPIO2_A3
+6	|6|	  --| GND
+7	|7|	1013| GPIO0_B5
+8	|8|	1085|	GPIO2_C5
+9	|9|	1084|	GPIO2_C4
+10|10|	--|	VCC
+11|11|	--|	GND
+
+**I2C Pins**
+
+|MRAA	|HEADER PIN INDEX	|SYSFS PIN|	RK3229 PIN|
+|--|--|--|--|
+|0	|8	|--	|I2C2_SCL|
+|0	|9	|--	|I2C2_SDA|
+
+#### Step 3. Demos with MRAA or UPM
+
+##### A. Use MRAA Library
+
+**Control GPIO Directly**
+
+This is a simple GPIO example. It toggles the GPIO pin **0**. **0** is the MRAA index in the pin mapping table.
+```
+respeaker@v2:~$ python
+Python 2.7.13 (default, Jan 19 2017, 14:48:08)
+[GCC 6.3.0 20170118] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import mraa
+>>> x = mraa.Gpio(0)
+>>> x.dir(mraa.DIR_OUT)
+0
+>>> x.write(0)
+0
+>>> x.write(1)
+0
+>>>
+```
+**PIR sensor example**
+
+In this example, we're gonna to listen on the trigger of the Grove PIR sensor, in Python code.
+```
+import mraa
+
+def on_trigger(gpio):
+    print("pin " + repr(gpio.getPin(True)) + " = " + repr(gpio.read()))
+
+pin = 0
+
+try:
+    x = mraa.Gpio(pin)
+    print("Starting ISR for pin " + repr(pin))
+    x.dir(mraa.DIR_IN)
+    # respeaker v2 only support EDGE_BOTH
+    x.isr(mraa.EDGE_BOTH, on_trigger, x)
+    var = raw_input("Press ENTER to stop")
+    x.isrExit()
+except ValueError as e:
+    print(e)
+
+```
+Save the above code snippet into a file, e.g. mraa_pir.py. Wire the Grove PIR sensor's D1 pin with the ReSpeaker Core V2's 0 header pin. Don't forget to wire the VCC and GND at the same time. Then run the code with
+
+```
+sudo python mraa_pir.py
 ```
 
-After installation, free feel to build your own AVS(Amazon Voice Service) on ReSpeaker Core V2.
-
-### AVS(Amazon Voice Service) Guide
-This guide will shows you how to build AVS on ReSpeaker Core V2.
-
-#### Get Alexa Authorization
-
-run authorization command in terminal with respeaker user:
+The result will be like
 ```
-source ~/env/bin/activate
-alexa-auth
-```
-Then visit ```127.0.0.1:3000``` at VNC web browser. Sign in to ReSpeaker AVS with your Amazon account, if you do not have one you can create a new one at the same page:
-
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/aus-1.png)
-
-Succeed:
-
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/aus-2.png)
-
-#### Kill pulseaudio
-Have to kill pulseaudio to use AVS:
-```
-echo "autospawn = no" > ~/.config/pulse/client.conf
-reboot -f
-```
-#### Alexa Tap to Play
-```
-source ~/env/bin/activate
-alexa-tap
-```
-Press ```enter``` key and talk to ReSpeaker V2, it will answer you.
-
-#### Alexa && snowboy
-```
-cd ~/respeaker_v2_eval/alexa
-pip install numpy
-python ns_kws_doa_alexa.py
-```
-#### Alexa works with pixel light:
-```
-pip install spidev
-sudo su
-cp /home/respeaker/.avs.json /root/.avs.json    # copy respeaker user alexa authorization to root user
-source /home/respeaker/env/bin/activate         # activate python venv
-python ns_kws_doa_alexa_with_light.py
+$ sudo python mraa_pir.py
+Starting ISR for pin 0
+Press ENTER to stoppin 1091 = 0
+pin 1091 = 0
+pin 1091 = 1
+...
 ```
 
-### FAQs
+##### B. Use UPM Library
+
+The UPM project implements sensors' driver based on the MRAA library, so we no longer need to care about the GPIO programming or what the I2C address of a sensor, all the default informations and logics for a particular sensor has been wrapped into a UPM library. UPM has supported bunch of sensors. https://iotdk.intel.com/docs/master/upm/modules.html. But please note that we didnt confirm every sensor works on the ReSpeaker Core V2.
+
+**Example for Grove Digital Light Sensor**
+
+This is an example for the Grove Digital Light Sensor, which is copied from the UPM github repo.
+```
+respeaker@v2:~$ cat tsl2561.py
+#!/usr/bin/env python
+# Author: Zion Orent <zorent@ics.com>
+# Copyright (c) 2015 Intel Corporation.
+#
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+#
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+from __future__ import print_function
+import time, sys, signal, atexit
+from upm import pyupm_tsl2561 as upmTsl2561
+
+def main():
+    # Instantiate a digital light sensor TSL2561 on I2C
+    myDigitalLightSensor = upmTsl2561.TSL2561()
+
+    ## Exit handlers ##
+    # This function stops python from printing a stacktrace when you hit control-C
+    def SIGINTHandler(signum, frame):
+        raise SystemExit
+
+    # This function lets you run code on exit, including functions from myDigitalLightSensor
+    def exitHandler():
+        print("Exiting")
+        sys.exit(0)
+
+    # Register exit handlers
+    atexit.register(exitHandler)
+    signal.signal(signal.SIGINT, SIGINTHandler)
+
+    while(1):
+        print("Light value is " + str(myDigitalLightSensor.getLux()))
+        time.sleep(1)
+if __name__ == '__main__':
+    main()
+```
+
+The result will be like:
+```
+respeaker@v2:~$ python tsl2561.py       
+Light value is 0
+Light value is 38
+Light value is 20
+Light value is 54
+Light value is 13
+Light value is 44
+Light value is 31  
+```
+
+## FAQs
 
 ## Tech Support
 Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/).
+
+## Resources
