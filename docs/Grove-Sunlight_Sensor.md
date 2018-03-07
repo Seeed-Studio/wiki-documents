@@ -28,7 +28,7 @@ Grove - Sunlight Sensor include an on-bard Grove connector, which help you to co
 - I2C Interface(7-bit)
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeed.cc/Grove_System/)
+    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
 ## Specification
 ---
@@ -57,7 +57,7 @@ After this section, you can make Grove - Sunlight Sensor run with only few steps
 
 Now we are making a simple demo to get data from Grove - Sunlight Sensor require following modules.
 
-- [Seeeduino v4.2](http://wiki.seeed.cc/Seeeduino_v4.2/)
+- [Seeeduino v4.2](http://wiki.seeedstudio.com/Seeeduino_v4.2/)
 
 Seeeduino V4.2 is fully compatible with Arduino.
 
@@ -65,7 +65,7 @@ If this is your first time using Arduino, Please put hand on [here](http://wiki.
 
 **Connecting hardware**
 
-Just connect Grove - Sunlight Sensor into I2C connector of [Seeeduino v4.2](http://wiki.seeed.cc/Seeeduino_v4.2/)
+Just connect Grove - Sunlight Sensor into I2C connector of [Seeeduino v4.2](http://wiki.seeedstudio.com/Seeeduino_v4.2/)
 
 
 As shown below:

@@ -33,9 +33,17 @@ The battery is not included.
 -   Battery Voltage：2.0~3.5 V
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeed.cc/Grove_System/)
+    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
 ## Platforms Supported
+
+| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
+|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo_n.jpg) |
+
+!!!Caution
+    The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
+
 
 
 ### Getting Started
@@ -78,7 +86,7 @@ Here we will show you how this Grove - RTC works via a simple demo. First of all
 ### Software
 ---
 -  Download the [RTC Library](https://raw.githubusercontent.com/SeeedDocument/Grove-RTC/master/res/RTC_Library.zip).
-- Please follow [how to install an arduino library](http://wiki.seeed.cc/How_to_install_Arduino_Library/) procedures to install library.
+- Please follow [how to install an arduino library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install library.
 -   Open the code directly by the path: **File -> Example ->RTC->SetTimeAndDisplay**.
 
   ![](https://github.com/SeeedDocument/Grove-RTC/raw/master/img/library%20example.jpg)
@@ -175,7 +183,7 @@ clock.fillDayOfWeek(SAT);//Saturday
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-RTC-p-758.html)|[Get ONE Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|
 
 
-- Follow [instruction](http://wiki.seeed.cc/GrovePi_Plus/) to configure the development environment.
+- Follow [instruction](http://wiki.seeedstudio.com/GrovePi_Plus/) to configure the development environment.
 -   Plug the sensor to grovepi+ socket i2c-x(1~3) by using a grove cable.
 
 ![](https://github.com/SeeedDocument/Grove-RTC/raw/master/img/pi%20connenction.jpg)

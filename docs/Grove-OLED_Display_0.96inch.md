@@ -28,7 +28,7 @@ tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_bbg, plat_pi, plat_wio, plat_li
 	Please notice: heavy impact or stress on the OLED will cause the breakdown of screen.
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeed.cc/Grove_System/)
+    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
 ## Specifications
 ------------
@@ -48,6 +48,14 @@ tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_bbg, plat_pi, plat_wio, plat_li
 
 ## Platforms Supported
 ------------
+
+| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
+|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo.jpg) |
+
+!!!Caution
+    The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
+
 
 ## Getting Started
 ------------
@@ -71,7 +79,7 @@ First of all, We need to prepare the below stuffs:
 #### Software
 
 - Download [Seeed OLED Display 128*64 library](https://github.com/Seeed-Studio/OLED_Display_128X64/archive/master.zip)
-- Please follow [how to install an arduino library](http://wiki.seeed.cc/How_to_install_Arduino_Library/) procedures to install library.
+- Please follow [how to install an arduino library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install library.
 - Open the code directly by the path: **File -> Example ->OLED_Display_128X64-master->OLED_Hello_World**.
 ![](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/images/library%20example.png)
 
@@ -106,7 +114,7 @@ void loop()
 
 
 ### With Beaglebone Green
-To begin editing programs that live on BBG, you can use the [Cloud9 IDE](https://c9.io) and refer [Beaglebone Green Wiki](http://wiki.seeed.cc/BeagleBone_Green/).
+To begin editing programs that live on BBG, you can use the [Cloud9 IDE](https://c9.io) and refer [Beaglebone Green Wiki](http://wiki.seeedstudio.com/BeagleBone_Green/).
 
 Here are the steps how to display "Hello World" on OLED.
 
@@ -361,7 +369,7 @@ if __name__=="__main__":
 - **[Library]** [GitHub Library for OLED](https://github.com/Seeed-Studio/OLED_Display_128X64/archive/master.zip)
 - **[Datasheet]** [Resources of SSD1308_1.0.pdf](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/resource/SSD1308_1.0.pdf)
 - **[Datasheet]** [Resources of LY190-128064.pdf](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/resource/LY190-128064.pdf)
-- **[Wiki]** [Beaglebone Green Wiki](http://wiki.seeed.cc/BeagleBone_Green/)
+- **[Wiki]** [Beaglebone Green Wiki](http://wiki.seeedstudio.com/BeagleBone_Green/)
 
 ## Tech Support
 Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 

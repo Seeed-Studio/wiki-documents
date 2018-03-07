@@ -24,7 +24,7 @@ Grove – Solid State Relay is a non-contact electronic switch module that has r
 - Grove compatible
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeed.cc/Grove_System/)
+    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
 
 ## Application Ideas

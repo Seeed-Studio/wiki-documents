@@ -23,7 +23,7 @@ Features
 -   Cut down your expense by including typical and popular modules.
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeed.cc/Grove_System/)
+    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
 
 Specifications

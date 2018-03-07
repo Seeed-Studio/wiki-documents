@@ -33,7 +33,7 @@ Application: You can use Gesture as an input device to control another grove, or
  - Wave
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeed.cc/Grove_System/)
+    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
 
 ## Specification

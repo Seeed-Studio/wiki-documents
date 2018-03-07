@@ -24,7 +24,7 @@ Features
 -   Powerful MCU for you to enrich your applications.
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeed.cc/Grove_System/)
+    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
 Application ideas
 -----------------

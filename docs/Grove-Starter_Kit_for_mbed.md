@@ -20,7 +20,7 @@ Grove is a modular electronics platform for quick prototyping that does not invo
 This kit is designed for you to get started with mbed as soon as possible. It contains many plug-n-play Grove modules to start exploring the mbed world. One goal is to have fun and build confidence with hardware and software in the journey.
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeed.cc/Grove_System/)
+    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
 ## Get Started
 ---

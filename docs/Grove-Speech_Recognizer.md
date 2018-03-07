@@ -46,7 +46,7 @@ When it recognizes the awaken word, LED turn red, then you can say the command w
 * Default Baudrate: 9600
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeed.cc/Grove_System/)
+    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
 
 **Platform Support**

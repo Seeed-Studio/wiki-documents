@@ -42,7 +42,7 @@ Features
 -   Supported max EL Capacitance: 15nF
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeed.cc/Grove_System/)
+    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
     
 Usage
 -----

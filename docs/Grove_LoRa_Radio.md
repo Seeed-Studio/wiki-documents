@@ -21,8 +21,8 @@ This is the 433MHz version, which can be used for 433MHz communication. You can 
 
 |Version|Released Date|How to Buy|
 |--------|-----------|-----------|
-|Grove - LoRa Radio 433 MHz |Dec 10, 2016|[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Grove-LoRa-Radio-433MHz-p-2777.html)|
-|Grove - LoRa Radio 868 MHz |Dec 10, 2016|[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Grove-LoRa-Radio-868MHz-p-2776.html)|
+|Grove - LoRa Radio 433 MHz |Dec 10, 2016|[![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Grove-LoRa-Radio-433MHz-p-2777.html)|
+|Grove - LoRa Radio 868 MHz |Dec 10, 2016|[![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Grove-LoRa-Radio-868MHz-p-2776.html)|
 
 
 ##  Features
@@ -43,9 +43,17 @@ This is the 433MHz version, which can be used for 433MHz communication. You can 
 - Resered MHF antenna connector
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeed.cc/Grove_System/)
+    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
-##Platforms Supported
+## Platforms Supported
+
+| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
+|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo_n.jpg) |
+
+!!!Caution
+    The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
+
 
 
 ## Hardware Overview
@@ -106,7 +114,7 @@ If this is your first time using Arduino, Please put hand on [here](http://ardui
 
 ###Download Library
 
-Click to download the library and install it ([How to install an Arduino Library](http://wiki.seeed.cc/How_to_install_Arduino_Library/))
+Click to download the library and install it ([How to install an Arduino Library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/))
 
 [![](https://raw.githubusercontent.com/SeeedDocument/Grove_LoRa_Radio/master/img/library.png)](https://github.com/Seeed-Studio/Grove_LoRa_433MHz_and_915MHz_RF/archive/master.zip)
 

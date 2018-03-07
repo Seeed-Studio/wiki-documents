@@ -19,7 +19,7 @@ The SPDT Relay(30A) is a high quality Single Pole Double Throw Relay(SPDT).The R
 - Normally closed relay
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeed.cc/Grove_System/)
+    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
 
 ## Specification
@@ -38,7 +38,7 @@ The SPDT Relay(30A) is a high quality Single Pole Double Throw Relay(SPDT).The R
 ---
 **With Arduino**
 
-Why do we want to use a relay and do we really need to? Anytime you want to switch on/off a device which draws more current or works with a high voltage, you'll need to use a relay. That is to say, the relay is "a high voltage or current switch controlled by low voltage". The coil of an SPDT relay that we most commonly use draws very little current (the [Grove - Relay](http://wiki.seeed.cc/Grove-Relay/)supports 10A). Now, with this 30A relay, you can control much more high-current switch devices such as headlights, parking lights, horns, etc.
+Why do we want to use a relay and do we really need to? Anytime you want to switch on/off a device which draws more current or works with a high voltage, you'll need to use a relay. That is to say, the relay is "a high voltage or current switch controlled by low voltage". The coil of an SPDT relay that we most commonly use draws very little current (the [Grove - Relay](http://wiki.seeedstudio.com/Grove-Relay/)supports 10A). Now, with this 30A relay, you can control much more high-current switch devices such as headlights, parking lights, horns, etc.
 
 The SPDT Relay internal structure:
 
@@ -52,7 +52,7 @@ Hardware Installation can refer to the following picture:
 
 ![](https://github.com/SeeedDocument/Grove-SPDT_Relay_30A/raw/master/img/SPDT_Relay.jpg)
 
-The coding to control this relay is the same as the [Grove - Relay](http://wiki.seeed.cc/Grove-Relay/)
+The coding to control this relay is the same as the [Grove - Relay](http://wiki.seeedstudio.com/Grove-Relay/)
 
 Good luck to you for controlling your air-condition or washing machine, with Arduino and the Grove - SPDT Relay(30A).
 

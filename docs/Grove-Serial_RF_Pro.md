@@ -188,7 +188,7 @@ Set high for communication (Default is high).
 ---
 Here we show two RF Pro Grove units mutually transmitting/receiving data. You need two RF Pro Grove units and two Seeeduino to do the demo.
 
-*   Connect one Grove - Serial RF Pro to UART of [Grove - Base Shield](http://wiki.seeed.cc/Base_Shield_V2/) and plug Grove - Base Shield into Seeeduino.
+*   Connect one Grove - Serial RF Pro to UART of [Grove - Base Shield](http://wiki.seeedstudio.com/Base_Shield_V2/) and plug Grove - Base Shield into Seeeduino.
 
 ![](https://github.com/SeeedDocument/Grove-Serial_RF_Pro/raw/master/img/Rfdemo.jpg)
 
@@ -201,7 +201,7 @@ if the red and green LED keep lighting. Then you can Config &amp; inquiry on the
 
 *   Connect CON pin to LOW/GND to enter configure mode.
 
-*   Send command to modify and query the config of the module. Config &amp; Inquiry instruction description see [Reference](http://wiki.seeed.cc/Grove-Serial_RF_Pro/#reference).
+*   Send command to modify and query the config of the module. Config &amp; Inquiry instruction description see [Reference](http://wiki.seeedstudio.com/Grove-Serial_RF_Pro/#reference).
 
 The Config instruction format is as AA+FA+[instruction]+[parameter]. The instruction is 1 byte, the parameter is the HEX data of 0-4 bytes (in big-endian ordering, with the high byte before the low byte).
 

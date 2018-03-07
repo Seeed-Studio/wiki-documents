@@ -31,7 +31,7 @@ Secondly, if you have ever used previous version, you would know that if you wan
 * Built-in Microphone
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeed.cc/Grove_System/)
+    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
     
 ###Platform Support
 

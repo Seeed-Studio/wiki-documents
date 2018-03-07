@@ -21,7 +21,7 @@ The Grove – Voltage Divider provides an interface for measuring external volta
 - Can adjust the gain
 
 !!!Tip
-    More details about Grove modules please refer [Grove System](http://wiki.seeed.cc/Grove_System/)
+    More details about Grove modules please refer [Grove System](http://wiki.seeedstudio.com/Grove_System/)
     
 ## Specification
 ---

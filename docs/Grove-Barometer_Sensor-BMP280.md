@@ -29,7 +29,7 @@ Features
 -   Highly abstracted library for building projects quicker
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeed.cc/Grove_System/)
+    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
 Specifications
 --------------
@@ -55,52 +55,15 @@ Specifications
 <p> 2. The altitude is calculated by a combination of temperature and atmospheric pressure. No specialized components for altitude.</p>
 </div>
 
-### Platforms supported (only for battery)
+Platforms supported
+-------------------
 
-<table>
-<tr>
-<td>
-Platform
-</td>
-<td>
-Seeeduino/Arduino
-</td>
-<td>
-Rasberry Pi
-</td>
-<td>
-Beaglebone
-</td>
-<td>
-LinkIt ONE
-</td>
-</tr>
-<tr>
-<td>
-Supported status
-</td>
-<td>
-Supported
-</td>
-<td>
-Not supported
-</td>
-<td>
-Supported
-</td>
-<td>
-Supported
-</td>
-</tr>
-<tr>
-<td>
-Notes
-</td>
-<td colspan="5">
-If no version number is present for a specific platform, it means this product supports all versions within this platform.
-</td>
-</tr>
-</table>
+| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
+|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo_n.jpg) |
+
+!!!Caution
+    The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
 Hardware Overview
 -----------------

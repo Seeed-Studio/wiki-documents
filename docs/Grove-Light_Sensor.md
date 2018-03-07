@@ -40,7 +40,7 @@ This document applies to the following version of products:
 * Recognize wider spectrum
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeed.cc/Grove_System/)
+    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
 ### Platform Support
 

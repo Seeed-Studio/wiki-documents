@@ -36,11 +36,19 @@ Specification
 |Respond Time	1/e(63%)|	6|	-	|20|	S|
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeed.cc/Grove_System/)
+    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
 
 Platforms Supported
 ------------------
+
+| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
+|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo_n.jpg) |
+
+!!!Caution
+    The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
+
 
 
 Getting Started
@@ -48,7 +56,7 @@ Getting Started
 Here are the getting started user guides.
 
 - [Preface - Getting Started](https://github.com/SeeedDocument/Grove-Temperature_and_Humidity_Sensor_Pro/blob/master/res/Preface.pdf)
-- [Introduction to Grove](http://wiki.seeed.cc/Grove_System/)
+- [Introduction to Grove](http://wiki.seeedstudio.com/Grove_System/)
 
 We provide 2 demos, include both arduino and raspberry pi platforms.
 
@@ -62,10 +70,10 @@ We will show you how this Grove - temperature and humidity Sensor pro works thro
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Temperature%26Humidity-Sensor-Pro-p-838.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
 
 
-- Connect the Temperature and Humidity Sensor Pro to A0 of [Grove - Base Shield](http://wiki.seeed.cc/Base_Shield_V2/). Then plug Grove - Base Shield into Arduino and connect Arduino to PC using a USB cable.
+- Connect the Temperature and Humidity Sensor Pro to A0 of [Grove - Base Shield](http://wiki.seeedstudio.com/Base_Shield_V2/). Then plug Grove - Base Shield into Arduino and connect Arduino to PC using a USB cable.
 ![](https://github.com/SeeedDocument/Grove-Temperature_and_Humidity_Sensor_Pro/raw/master/img/Temperature%26Humidity_Sensor_Pro_demo_Seeeduino_600_s.jpg)
 
-- Please follow [how to install an arduino library](http://wiki.seeed.cc/How_to_install_Arduino_Library/) procedures to install library.
+- Please follow [how to install an arduino library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install library.
 
 - Download [Seeed DHT library](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor) for arduino boards with 16MHz XTAL;  Another library - [DHTlib](https://github.com/RobTillaart/Arduino/tree/master/libraries/DHTlib) is also available instead of Seeed DHT library. This library supports both 16MHz and 8MHz Arduino (eg. Seeeduino Stalker)
 
@@ -74,7 +82,7 @@ We will show you how this Grove - temperature and humidity Sensor pro works thro
 ![](https://github.com/SeeedDocument/Grove-Temperature_and_Humidity_Sensor_Pro/raw/master/img/library%20example.jpg)
 
 !!!Note
-    This Grove - Temperature and Humidity Sensor Pro and our another product [Grove-Temperature and Humidity Sensor](http://wiki.seeed.cc/Grove_Temperature_and_Humidity_Sensor/) are sharing this library. No matter which product you are using, make sure that you have made the definition line of the sensor of your board into effect and commented out the definition lines of other specs. For example, the sensor we used on Grove - Temperature and Humidity Sensor Pro is DHT 22. So the definition part of the sensor spec should be:
+    This Grove - Temperature and Humidity Sensor Pro and our another product [Grove-Temperature and Humidity Sensor](http://wiki.seeedstudio.com/Grove_Temperature_and_Humidity_Sensor/) are sharing this library. No matter which product you are using, make sure that you have made the definition line of the sensor of your board into effect and commented out the definition lines of other specs. For example, the sensor we used on Grove - Temperature and Humidity Sensor Pro is DHT 22. So the definition part of the sensor spec should be:
 
 ```
 //#define DHTTYPE DHT11   // DHT 11
@@ -97,7 +105,7 @@ First, You need to prepare the below stuffs:
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Temperature%26Humidity-Sensor-Pro-p-838.html)|[Get ONE Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|
 
 
-- Follow [instruction](http://wiki.seeed.cc/GrovePi_Plus/) to configure the development environment.
+- Follow [instruction](http://wiki.seeedstudio.com/GrovePi_Plus/) to configure the development environment.
 
 - Plug grove DHT pro to the socket D4 of grovepi+.
 ![](https://github.com/SeeedDocument/Grove-Temperature_and_Humidity_Sensor_Pro/raw/master/img/Grovalpi%20dht%20pro)

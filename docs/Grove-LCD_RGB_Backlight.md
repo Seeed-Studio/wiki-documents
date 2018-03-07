@@ -31,7 +31,7 @@ have green yellow backlight version and blue backlight version on sale also.
 * 16x2 LCD
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeed.cc/Grove_System/)
+    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
 ## Specification
 
@@ -73,7 +73,7 @@ This getting started will show you how to use Grove - LCD RGB Backlight, we need
 
 You need to download the library and install to your Arduino IDE.
 
-Please follow [how to install an arduino library](http://wiki.seeed.cc/How_to_install_Arduino_Library/) procedures to install LCD RGB Backlight library.
+Please follow [how to install an arduino library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install LCD RGB Backlight library.
 
 [![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_LCD_RGB_Backlight/master/images/library.png)](https://github.com/Seeed-Studio/Grove_LCD_RGB_Backlight/archive/master.zip)
 
@@ -91,7 +91,7 @@ to connect it to I2C Grove via a Grove cable.
 
 You can download the demo code in Github, click [here](https://github.com/Seeed-Studio/Grove_LCD_RGB_Backlight), then extract it to anywhere.
 
-If you have some problem with this step, please refer to [Getting Start with Seeeduino](http://wiki.seeed.cc/) there is a Hello World example in the library, open it, and upload to Seeeduino V4.2. Then you can see "Hello world" on the first row, and second row will print the number of second since reset.
+If you have some problem with this step, please refer to [Getting Start with Seeeduino](http://wiki.seeedstudio.com/) there is a Hello World example in the library, open it, and upload to Seeeduino V4.2. Then you can see "Hello world" on the first row, and second row will print the number of second since reset.
 
 ![// image 1](https://raw.githubusercontent.com/SeeedDocument/Grove_LCD_RGB_Backlight/master/images/2.png)
 

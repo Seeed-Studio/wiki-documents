@@ -27,7 +27,7 @@ Specifications
 -   Auto-reconnect in 30 min when disconnected as a result of beyond the range of connection
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeed.cc/Grove_System/)
+    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
     
 Demonstration
 -------------
