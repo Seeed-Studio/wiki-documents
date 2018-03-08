@@ -25,8 +25,6 @@ ReSpeaker Core v2 is not only designed for makers/enthusiast, but also a turnkey
 
 ## Features
 
-### Hardware
-
 - High performance SoC
 - 1GB RAM & 4GB eMMC
 - 6 Microphone Array  
@@ -36,9 +34,6 @@ ReSpeaker Core v2 is not only designed for makers/enthusiast, but also a turnkey
 - Grove socket for other sensor
 - 3.5mm audio jack & JST connector
 - 8 channel ADCs for 6 microphone array and 2 loopback (hardware loopback)
-
-
-### Software
 
 - Debian-based Linux system
 - SDK for speech algorithm with Full documents
@@ -56,13 +51,13 @@ ReSpeaker Core v2 is not only designed for makers/enthusiast, but also a turnkey
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;border-color:#999;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#26ADE4;}
-.tg .tg-vn4c{background-color:#D2E4FC}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:;}
+.tg .tg-vn4c{background-color:#}
 .tg .tg-5hyy{background-color:#;text-align:center}
-.tg .tg-5hgy{background-color:#D2E4FC;text-align:center}
+.tg .tg-5hgy{background-color:#;text-align:center}
 .tg .tg-yw4l{vertical-align:top}
-.tg .tg-6k2t{background-color:#D2E4FC;vertical-align:top}
+.tg .tg-6k2t{background-color:#;vertical-align:top}
 </style>
 <table class="tg">
   <tr>
@@ -265,9 +260,9 @@ You can also check the image version with this command: cat /etc/issue.net.
 
 Now your ReSpeaker Core V2 can boot, you might want to get access to the Linux system via a console, to setup the WiFi, etc. You have two ways to get the console:
 
-- a. The OTG USB port - This requires a running Linux system on the board
+- A. The OTG USB port - This requires a running Linux system on the board
 
-- b. The UART port - This is the hard way to access the console, it can be used for debugging low level issues
+- B. The UART port - This is the hard way to access the console, it can be used for debugging low level issues
 
 
 #### A. Connection via OTG
@@ -383,7 +378,7 @@ You can connect to a network using an Ethernet cable. Just plug the Ethernet cab
 
 ### Connect to SSH & VNC
 
-#### 1.SSH
+#### A. SSH
 
 SSH server starts automatically in ReSpeaker V2. For Windows Users, third-party SSH clients are available. For Linux/Mac Users, SSH client is built in.
 
@@ -400,9 +395,9 @@ ssh respeaker@192.168.***.***
 Note that if experience slow performance using SSH, please switch to a less crowded WiFi network.
 </div>
 
-#### 2. VNC
+#### B. VNC
 
-The system has VNC server built-in. The VNC server will launch the **lxqt** desktop GUI which is a lightweight Qt desktop environment.
+In order to acquire the authorization from Alexa, you need to use VNC Viewer. The system has VNC server built-in. The VNC server will launch the **lxqt** desktop GUI which is a lightweight Qt desktop environment.
 The VNC service also starts automatically. Use [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/) or [VNC Viewer for Google Chrome](https://chrome.google.com/webstore/detail/vnc%C2%AE-viewer-for-google-ch/iabmpiboiopbgfabjmgeedhcmjenhbla?hl=en) to connect to the desktop of ReSpeaker Core v2.
 
 To use VNC, connect your PC/Mac and ReSpeaker v2 to the same Wi-Fi network. Then open VNC Viewer, type ```192.168.xxx.xxx``` at the address bar. ```192.168.xxx.xxx``` is IP address of the board，you can use the command **ifconfig** to check. If you meet ```Unencrypted connection```, click Continue to go on. The password is ```respeaker```.
@@ -638,9 +633,19 @@ MRAA|	HEADER PIN INDEX |	SYSFS PIN	|RK3229 PIN
 
 ##### A. Use MRAA Library
 
+
 **Control GPIO Directly**
 
-This is a simple GPIO example. It toggles the GPIO pin **0**. **0** is the MRAA index in the pin mapping table.
+Materials
+
+
+| ReSpeaker Core v2 |  Grove - Buzzer |
+|--------------|-------------|
+|![enter image description here](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/ReSpeaker_V2_back_little.jpg)|![enter image description here](https://github.com/SeeedDocument/Base_Shield_V2/raw/master/img/Buzzer.png)|
+|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|
+
+Connect the Grove PIR sensor's D1 pin to the ReSpeaker Core v2's header pin **0** with jumper. Don't forget to wire the VCC and GND at the same time. Then tap the code below into your console
+
 ```
 respeaker@v2:~$ python
 Python 2.7.13 (default, Jan 19 2017, 14:48:08)
@@ -656,9 +661,24 @@ Type "help", "copyright", "credits" or "license" for more information.
 0
 >>>
 ```
-**PIR sensor example**
+When you tap **x.write(1)**,you will heard a scream from the buzzer.
+
+
+**PIR Motion Sensor example**
+
+
+Materials
+
+| ReSpeaker Core v2 |  Grove -  PIR Motion Sensor |
+|--------------|-------------|
+|![enter image description here](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/ReSpeaker_V2_back_little.jpg)|![enter image description here](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Grove%20-%20PIR%20Motion%20Sensor.jpg)|
+|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-PIR-Motion-Sensor-p-802.html)|
+
 
 In this example, we're gonna to listen on the trigger of the Grove PIR sensor, in Python code.
+Connect the Grove PIR sensor's D1 pin to the ReSpeaker Core v2's header pin **0** with jumper. Don't forget to wire the VCC and GND at the same time.
+Then copy the code below into a new file and save it as a python file, name as **mraa_pir.py**. Copy this file into your ReSpeaker Core v2.
+
 ```
 import mraa
 
@@ -679,7 +699,8 @@ except ValueError as e:
     print(e)
 
 ```
-Save the above code snippet into a file, e.g. mraa_pir.py. Wire the Grove PIR sensor's D1 pin with the ReSpeaker Core V2's 0 header pin. Don't forget to wire the VCC and GND at the same time. Then run the code with
+
+Then run the code with the command below.(make sure you have located in the folder which contains the mraa_pir.py you've just saved)
 
 ```
 sudo python mraa_pir.py
@@ -695,15 +716,27 @@ pin 1091 = 1
 ...
 ```
 
+
 ##### B. Use UPM Library
 
 The UPM project implements sensors' driver based on the MRAA library, so we no longer need to care about the GPIO programming or what the I2C address of a sensor, all the default informations and logics for a particular sensor has been wrapped into a UPM library. UPM has supported bunch of sensors. https://iotdk.intel.com/docs/master/upm/modules.html. But please note that we didnt confirm every sensor works on the ReSpeaker Core V2.
 
 **Example for Grove Digital Light Sensor**
 
+
+Materials
+
+| ReSpeaker Core v2 |  Grove -  PIR Motion Sensor |
+|--------------|-------------|
+|![enter image description here](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/ReSpeaker_V2_back_little.jpg)|![enter image description here](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Digital_Light_Sensor.jpg)|
+|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|
+
 This is an example for the Grove Digital Light Sensor, which is copied from the UPM github repo.
+
+Please plug the PIR Motion Sensor into your Respeake Core v2 via the Grove socket.
+Then copy the code below into a new file and save it as a python file, name as **tsl2561.py**. Copy this file into your ReSpeaker Core v2.
+
 ```
-respeaker@v2:~$ cat tsl2561.py
 #!/usr/bin/env python
 # Author: Zion Orent <zorent@ics.com>
 # Copyright (c) 2015 Intel Corporation.
@@ -756,7 +789,7 @@ if __name__ == '__main__':
     main()
 ```
 
-The result will be like:
+The result should be something like:
 ```
 respeaker@v2:~$ python tsl2561.py       
 Light value is 0
