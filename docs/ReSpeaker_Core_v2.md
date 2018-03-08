@@ -21,8 +21,6 @@ ReSpeaker Core v2 is not only designed for makers/enthusiast, but also a turnkey
 
 
 
-
-
 ## Features
 
 - High performance SoC
@@ -121,8 +119,10 @@ ReSpeaker Core v2 is not only designed for makers/enthusiast, but also a turnkey
 
 
 ## Hardware Overview
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/hardware_overview.png)
 
+### Interface and storage
+
+![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/hardware_overview.png)
 
 
 - <font face="" size=3 font color="ff0000">①</font> **3.5mm Headphone jack:**
@@ -134,13 +134,13 @@ This USB Port is used to connect to your computer via serial mode of putty (or o
 - <font face="" size=3 font color="ff0000">③</font> **USB Power Input:**
 This port is used to provide power for Respeaker Core v2.
 
-- <font face="" size=3 font color="ff0000">④</font> **Speaker:**
-Output audio for passive speakers.
+- <font face="" size=3 font color="ff0000">④</font> **Speaker Jack:**
+Output audio for passive speakers. Jst 2.0 Socket.
 
 - <font face="" size=3 font color="ff0000">⑤</font> **UART:**
 You also can connect the ReSpeaker Core v2 with your computer via this UART port.
 
-- <font face="" size=3 font color="ff0000">⑥</font> **GPIO:**
+- <font face="" size=3 font color="ff0000">⑥</font> **8 Pins GPIO:**
 General Purpose Input Output interface for extended applications.
 
 - <font face="" size=3 font color="ff0000">⑦</font> **SD Card Slot:**
@@ -161,11 +161,48 @@ Output video.
 - <font face="" size=4 font color="ff0000">Ⓒ</font> **Bluetooth and WIFI Antenna:**
 The onboard Antenna is for WIFI and Bluetooth. Also we provide a interface for 2.4G Antenna or PCB Antenna.
 
-- <font face="" size=4 font color="ff0000">Ⓓ</font> **Grove Interface:**
-Grove interface for digital or I2C.
+- <font face="" size=4 font color="ff0000">Ⓓ</font> **Grove Socket:**
+Grove Socket for digital or I2C.
 
 
+### Pin Out
 
+**Pin index definition for headers :**:
+
+| 8 pins header | Grove Socket |
+|--------------|-------------|
+| ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/GPIO.png)|![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/socketBLACK.png)|
+
+**GPIO Pins**
+
+MRAA|	HEADER PIN INDEX |	SYSFS PIN	|RK3229 PIN
+--|--|--|--
+0	|0|	1091|	GPIO2_D3
+1	|1|   --|	VCC
+2	|2| 1043|	GPIO1_B3
+3	|3|	1127|	GPIO3_D7
+4 |4|	1017|	GPIO0_C1
+5	|5|	1067|	GPIO2_A3
+6	|6|	  --| GND
+7	|7|	1013| GPIO0_B5
+8	|8|	1085|	GPIO2_C5
+9	|9|	1084|	GPIO2_C4
+10|10|	--|	VCC
+11|11|	--|	GND
+
+**I2C Pins**
+
+|MRAA	|HEADER PIN INDEX	|SYSFS PIN|	RK3229 PIN|
+|--|--|--|--|
+|0	|8	|--	|I2C2_SCL|
+|0	|9	|--	|I2C2_SDA|
+
+
+### Dimensions
+
+![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Dimension_2.png)
+
+![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Dimension_1.png)
 
 
 ## Applications
@@ -178,6 +215,7 @@ Grove interface for digital or I2C.
 - Voice interacting robot
 - Car voice assistant
 - Other scenarios need voice command
+
 
 
 
@@ -205,11 +243,12 @@ Please plug the USB cable gently, otherwise you may damage the interface.Please 
 Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2 image from an SD card to get up and running. We offer two ways to boot the Respeaker core v2. You can either boot from the SD card or [boot from the eMMC](/boot from the eMMC).
 
 #### A. boot from the SD card
-- **Step 1.** Click the OneDrive icon below to download our latest image zip files: ```respeaker-debian-9-lxqt-sd-********-4gb.img.xz``` or ```respeaker-debian-9-iot-sd-********-4gb.img.xz```.
-
 
 
 <p style="text-align:center"><a href="https://bfaceafsieduau-my.sharepoint.com/personal/miaojg22_off365_cn/_layouts/15/guestaccess.aspx?folderid=0bb3c4f3f122d4c2bb0f65eee2b5938f8&authkey=AfLSkcE8QeeUHTQ8GGfrrsU" target="_blank"><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/onedrive.png" width="200" height="40"  border=0 /></a></p>
+
+
+- **Step 1.** Click the OneDrive icon above to download our latest image zip files: ```respeaker-debian-9-lxqt-sd-********-4gb.img.xz``` or ```respeaker-debian-9-iot-sd-********-4gb.img.xz```.
 
 
 |Section|Description|
@@ -217,7 +256,7 @@ Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2 image fro
 |**iot** / **lxqt**|The **lxqt** version comes with a desktop GUI while the **iot** version does not. If you are new to ReSpeaker Core V2, **lxqt** version is recommended.|
 |**flasher** / **sd**|The **flasher** version is used to flash the onboard eMMC, after flashing you can remove the SD card. The **sd** version will require the SD card to stay inserted all the time.|
 
-For development, we recommend the **lxqt + sd** version. So please download the **respeaker-debian-9-lxqt-sd-[date]-4gb.img.xz** file.
+  For development, we recommend the **lxqt + sd** version. So please download the **respeaker-debian-9-lxqt-sd-[date]-4gb.img.xz** file.
 
 
 <div class="admonition note" >
@@ -255,7 +294,6 @@ During the flashing process, you'll see the USER1 and USER2 LEDs blink alternate
 You can also check the image version with this command: cat /etc/issue.net.
 
 
-
 ### Serial Console
 
 Now your ReSpeaker Core V2 can boot, you might want to get access to the Linux system via a console, to setup the WiFi, etc. You have two ways to get the console:
@@ -269,7 +307,7 @@ Now your ReSpeaker Core V2 can boot, you might want to get access to the Linux s
 
 - **Step 1.** Find a micro USB cable, and please make sure it's a data cable (not just a power cable), plug the micro USB end to the ReSpeaker's **OTG** micro USB port (There're two micro USB ports on the ReSpeaker board, which are labeled with different silk-screen, one is **PWR_IN** and another is **OTG**), then plug another end of this cable into your computer.
 
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/otg_connect.jpg)
+![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/lianjiediannan.jpg)
 
 - **Step 2.** Check at your computer if the serial port has risen:
 
@@ -286,6 +324,7 @@ Now your ReSpeaker Core V2 can boot, you might want to get access to the Linux s
 
 
 - **Step 4.** The default user name is ```respeaker```, and password is ```respeaker``` too.
+
 
 #### B. Connection via The UART port
 
@@ -313,6 +352,7 @@ You should get back something like:
 /dev/ttyACMX where X will vary depending on which USB port you used  (on Linux)
 ```
 Now follow step 2 above to connect to your Respeaker over this serial connection. And note this is a one time procedure as you'll next setup your Respeaker for Wi-Fi connectivity and then connect via ssh or VNC going forward.
+
 
 
 ### Network Setting Up
@@ -473,7 +513,8 @@ arecord -v -f cd hello3.wav
 aplay hello3.wav
 ```
 
-So far we learned the basic operations of the ReSpeaker Core V2 board, let's move forward, to build our own AVS(Alexa Voice Service) device using ReSpeaker Core V2.
+So far we learned the basic operations of the ReSpeaker Core v2 board, let's move forward. We can use ReSpeaker Core v2 to build our own AVS(Alexa Voice Service) device or Dueros(Voice assistance of Baidu) device.
+
 
 ### AVS(Alexa Voice Service) Guide
 
@@ -503,7 +544,7 @@ respeaker@v2:~$ ~/.local/bin/alexa-auth
 ```
 This script will open the web browser automatically, the web browser will display a login page. Sign in with your Amazon account:
 
-![](https://github.com/respeaker/get_started_with_respeaker/raw/master/img/aus-1.png)
+![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/aus-1.png)
 
 After succeed you will see:
 
@@ -530,7 +571,7 @@ Wait until you see **on_ready** in the log printing. Press **Enter** key of your
 ##### Alexa Hands-Free via snowboy
 
 ```
-sudo apt install libatlas-dev                # required by snowboy
+sudo apt install libatlas-base-dev                # required by snowboy
 git clone https://github.com/respeaker/respeaker_v2_eval.git
 cd respeaker_v2_eval
 pip install --no-deps snowboy*.whl           # install pre-build snowboy
@@ -548,6 +589,29 @@ python ns_kws_alexa_with_light.py
 ```
 The same as last one, say **Alexa** to trigger the conversation with Alexa. You will the LED shinning while this program is running.
 
+
+### Dueros(Voice assistance of Baidu) Guide
+
+The same as AVS, the only difference is that you need to delete one profile file. Before [get the authorization](http://wiki.seeedstudio.com/ReSpeaker_Core_v2/#step-2-authorize-alexa),
+you should tap the command below to delete the **avs.json**.
+
+```
+rm -f ~/.avs.json
+```
+Then you can get the authorization from Baidu by tapping the following command:
+
+```
+respeaker@v2:~$ ~/.local/bin/dueros-auth
+```
+![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/dueros.jpg)
+
+
+
+After login, the following step is the same as AVS, Please refer to [AVS Demos](http://wiki.seeedstudio.com/ReSpeaker_Core_v2/#step-3-have-fun-with-alexa-applications).
+
+When you run the python program, you can say **Alexa** to wake up the Baidu voice assistance.
+
+
 ### GPIO
 
 This part will introduce how to use **MRAA** and **UPM** to control GPIO and Grove Socket on Respeaker Core v2.
@@ -555,6 +619,7 @@ This part will introduce how to use **MRAA** and **UPM** to control GPIO and Gro
 #### Step 1. Update MRAA and UPM libraries to latest version
 
 First, we need to check the kernel version of the system we're running, if you're not sure that you flashed the system image of version 20171128 and later.
+
 ```
 uname -a
 ```
@@ -593,41 +658,13 @@ respeaker@v2:~$ mraa-gpio list
 11         GND:
 12      GPIO66: GPIO
 ```
-And here we have the description of the PIN defines for the ReSpeaker Core V2 board.
+The description of the PIN defines for the ReSpeaker Core V2 board please refer to [Pin Out]()
 
-**Pin index definition for headers :**:
 
-8 pins header
 
-![](https://github.com/respeaker/get_started_with_respeaker/raw/master/img/respeakercorev2pin1.jpg?raw=true)
 
-Grove socket
 
-![](https://github.com/respeaker/get_started_with_respeaker/blob/master/img/respeakercorev2pin2.jpg?raw=true)
 
-**GPIO Pins**
-
-MRAA|	HEADER PIN INDEX |	SYSFS PIN	|RK3229 PIN
---|--|--|--
-0	|0|	1091|	GPIO2_D3
-1	|1|   --|	VCC
-2	|2| 1043|	GPIO1_B3
-3	|3|	1127|	GPIO3_D7
-4 |4|	1017|	GPIO0_C1
-5	|5|	1067|	GPIO2_A3
-6	|6|	  --| GND
-7	|7|	1013| GPIO0_B5
-8	|8|	1085|	GPIO2_C5
-9	|9|	1084|	GPIO2_C4
-10|10|	--|	VCC
-11|11|	--|	GND
-
-**I2C Pins**
-
-|MRAA	|HEADER PIN INDEX	|SYSFS PIN|	RK3229 PIN|
-|--|--|--|--|
-|0	|8	|--	|I2C2_SCL|
-|0	|9	|--	|I2C2_SDA|
 
 #### Step 3. Demos with MRAA or UPM
 
@@ -644,7 +681,7 @@ Materials
 |![enter image description here](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/ReSpeaker_V2_back_little.jpg)|![enter image description here](https://github.com/SeeedDocument/Base_Shield_V2/raw/master/img/Buzzer.png)|
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|
 
-Connect the Grove PIR sensor's D1 pin to the ReSpeaker Core v2's header pin **0** with jumper. Don't forget to wire the VCC and GND at the same time. Then tap the code below into your console
+Connect the Grove PIR sensor's **SIG** pin to the ReSpeaker Core v2's header pin **0** with jumper. Don't forget to wire the VCC and GND at the same time. Then tap the code below into your console
 
 ```
 respeaker@v2:~$ python
@@ -676,7 +713,7 @@ Materials
 
 
 In this example, we're gonna to listen on the trigger of the Grove PIR sensor, in Python code.
-Connect the Grove PIR sensor's D1 pin to the ReSpeaker Core v2's header pin **0** with jumper. Don't forget to wire the VCC and GND at the same time.
+Connect the Grove PIR sensor's **D1** pin to the ReSpeaker Core v2's header pin **0** with jumper. Don't forget to wire the VCC and GND at the same time.
 Then copy the code below into a new file and save it as a python file, name as **mraa_pir.py**. Copy this file into your ReSpeaker Core v2.
 
 ```
@@ -733,7 +770,7 @@ Materials
 
 This is an example for the Grove Digital Light Sensor, which is copied from the UPM github repo.
 
-Please plug the PIR Motion Sensor into your Respeake Core v2 via the Grove socket.
+Please plug the PIR Motion Sensor into your Respeaker Core v2 via the Grove socket.
 Then copy the code below into a new file and save it as a python file, name as **tsl2561.py**. Copy this file into your ReSpeaker Core v2.
 
 ```
@@ -803,7 +840,15 @@ Light value is 31
 
 ## FAQs
 
+     Q1.
+     Q2.
+     Q3.
+     Q4.
+
 ## Tech Support
 Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/).
 
 ## Resources
+- **[PDF]** [Download PDF of This Wiki](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/ReSpeaker_Core_v2.pdf)
+- **[PDF]** [Rockchip RK3229 Datasheet V1.1](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Rockchip%20RK3229%20Datasheet%20V1.1%2020151209.pdf)
+- **[SKP]** [3d Models For ReSpeaker Core v2](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Respeaker%20Core%20v2_20180301.skp)
