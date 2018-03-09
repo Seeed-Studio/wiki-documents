@@ -10,11 +10,11 @@ sku: 102990883
 
 ![enter image description here](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/ReSpeaker_V2_front.JPG)
 
-Seeed ReSpeaker Core v2 is designed for voice interactive applications. It based on quad-core ARM Cortex-A7, up to 1.5Ghz, and 1GB RAM on-board. Besides, it features six microphone array with necessary speech algorithm, like DoA(Direction of arrival), BF(Beam-Forming), AEC(Acoustic echo cancellation) and etc.
+Seeed ReSpeaker Core v2 is designed for voice interactive applications. It is based on quad-core ARM Cortex-A7, up to 1.5Ghz, and 1GB RAM on-board. Besides, it features six microphone array with necessary speech algorithm, like DoA(Direction of arrival), BF(Beam-Forming), AEC(Acoustic echo cancellation) and etc.
 
 ReSpeaker Core v2 runs GNU/Linux operation system. It benefits from powerful and active community, we can use lot of existing software/tools for development, testing and deploy, so that rapid product development become available.
 
-ReSpeaker Core v2 is not only designed for makers/enthusiast, but also a turnkey solution for business company. The hardware consists of two parts, one is the minimized SoC module which is small and easy to manufacturing and ready for final product. Another is a bottom board can be full customizable.
+ReSpeaker Core v2 is not only designed for makers/enthusiast, but also a turnkey solution for business company. The hardware consists of two parts, one is the minimized SoC module which is small and easy for manufacturing and ready for final product, the other is a bottom board which can be full customizable.
 
 
 <p style="text-align:center"><a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>
@@ -28,10 +28,11 @@ ReSpeaker Core v2 is not only designed for makers/enthusiast, but also a turnkey
 - 6 Microphone Array  
 - USB OTG, USB device
 - WiFi b/g/n and BLE 4.0
-- detect range: ~5 meter
+- Detect range: ~5 meters
 - Grove socket for other sensor
-- 3.5mm audio jack & JST connector
+- 3.5mm audio jack & JST2.0 connector
 - 8 channel ADCs for 6 microphone array and 2 loopback (hardware loopback)
+
 
 - Debian-based Linux system
 - SDK for speech algorithm with Full documents
@@ -47,75 +48,81 @@ ReSpeaker Core v2 is not only designed for makers/enthusiast, but also a turnkey
 
 ## Specification
 
+
 <style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;border-color:#999;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:;}
-.tg .tg-vn4c{background-color:#}
-.tg .tg-5hyy{background-color:#;text-align:center}
-.tg .tg-5hgy{background-color:#;text-align:center}
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
 .tg .tg-yw4l{vertical-align:top}
-.tg .tg-6k2t{background-color:#;vertical-align:top}
 </style>
-<table class="tg">
+<table class="tg" style="undefined;table-layout: fixed; width: 695px">
+<colgroup>
+<col style="width: 193px">
+<col style="width: 140px">
+<col style="width: 362px">
+</colgroup>
   <tr>
     <th class="tg-031e" colspan="3">Features</th>
   </tr>
   <tr>
-    <td class="tg-5hgy" rowspan="6">Soc<br>(Rockchip RK3229)</td>
-    <td class="tg-vn4c">CPU</td>
-    <td class="tg-vn4c">Quad-Core Cortex-A7,up to 1.5GHz</td>
+    <td class="tg-031e" rowspan="6">Soc(Rockchip RK3229)</td>
+    <td class="tg-031e">CPU</td>
+    <td class="tg-031e">Quad-Core Cortex-A7,up to 1.5GHz</td>
   </tr>
   <tr>
     <td class="tg-031e">GPU</td>
     <td class="tg-031e">Mali400MP, Support OpenGL ES1.1/2.0</td>
   </tr>
   <tr>
-    <td class="tg-vn4c">Memory</td>
-    <td class="tg-vn4c">1GB RAM(Core Module includes RAM and PMU)</td>
+    <td class="tg-yw4l">Memory</td>
+    <td class="tg-yw4l">1GB RAM(Core Module includes RAM and PMU)</td>
   </tr>
   <tr>
-    <td class="tg-031e" rowspan="3">System</td>
-    <td class="tg-031e">Operating Voltage:3.6-5V</td>
+    <td class="tg-yw4l" rowspan="3">System</td>
+    <td class="tg-yw4l">Operating Voltage:3.6-5V</td>
   </tr>
   <tr>
-    <td class="tg-vn4c">80 pins on-module</td>
+    <td class="tg-yw4l">80 pins on-module</td>
   </tr>
   <tr>
-    <td class="tg-031e">PMU on-module</td>
+    <td class="tg-yw4l">PMU on-module</td>
   </tr>
   <tr>
-    <td class="tg-5hyy" rowspan="7">Peripheral</td>
-    <td class="tg-vn4c">Networks</td>
-    <td class="tg-vn4c">WiFi b/g/n;<br>BLE 4.0;<br>Ethernet</td>
+    <td class="tg-yw4l" rowspan="7">Peripheral</td>
+    <td class="tg-yw4l">Networks</td>
+    <td class="tg-yw4l">WiFi b/g/n;<br>BLE 4.0;<br>Ethernet</td>
   </tr>
   <tr>
-    <td class="tg-031e">USB</td>
-    <td class="tg-031e">2 x USB Host;<br>1 x USB OTG;<br>1 x USB power</td>
+    <td class="tg-yw4l">USB</td>
+    <td class="tg-yw4l">2 x USB Host;   1 x USB OTG;    1 x USB power</td>
   </tr>
   <tr>
-    <td class="tg-vn4c">Grove</td>
-    <td class="tg-vn4c">1 x Grove socket (I2C and Digital)</td>
+    <td class="tg-yw4l">Grove</td>
+    <td class="tg-yw4l">1 x Grove socket (I2C and Digital)</td>
   </tr>
   <tr>
-    <td class="tg-031e">Vedio</td>
-    <td class="tg-031e">HDMI 2.0 with HDCP 1.4/2.2, up to 4K/60Hz</td>
+    <td class="tg-yw4l">Vedio</td>
+    <td class="tg-yw4l">HDMI 2.0 with HDCP 1.4/2.2, up to 4K/60Hz</td>
   </tr>
   <tr>
-    <td class="tg-vn4c">Audio</td>
-    <td class="tg-vn4c">6 Microphone Array;<br>3.5mm Audio Jack;<br>JST audio output connector</td>
+    <td class="tg-yw4l">Audio</td>
+    <td class="tg-yw4l">6 Microphone Array;<br>3.5mm Audio Jack;<br>JST2.0 Audio output connector</td>
   </tr>
   <tr>
     <td class="tg-yw4l">Storage</td>
     <td class="tg-yw4l">4GB eMMC on-board;<br>SD slot</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">Others</td>
-    <td class="tg-6k2t">12 x RGB LEDs;<br>Some pins</td>
+    <td class="tg-yw4l">Others</td>
+    <td class="tg-yw4l">12 x RGB LEDs;<br>8 GPIO pins</td>
   </tr>
-
-
+  <tr>
+    <td class="tg-yw4l">Power Consumption</td>
+    <td class="tg-yw4l">Standby Mode</td>
+    <td class="tg-yw4l">360mA</td>
+  </tr>
 </table>
+
 
 
 ## Hardware Overview
@@ -150,7 +157,7 @@ To plug in micro-SD card.
 Embedded Multi Media Card. You can burn the image into eMMC, so that the ReSpeaker Core v2 can boot from the eMMC.
 
 - <font face="" size=3 font color="ff0000">⑨</font> **USB Host:**
-You can plug USB device, such as USB mouse and USB keyboard, into ReSpeaker Core v2 via those two USB hosts.
+You can plug USB device, such as USB mouse,USB keyboard and USB flash disk into ReSpeaker Core v2 via those two USB hosts.
 
 - <font face="" size=4 font color="ff0000">Ⓐ</font> **Ethernet:**
 Access to the Internet.
@@ -242,7 +249,7 @@ Please plug the USB cable gently, otherwise you may damage the interface.Please 
 
 Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2 image from an SD card to get up and running. We offer two ways to boot the Respeaker core v2. You can either boot from the SD card or [boot from the eMMC](/boot from the eMMC).
 
-#### A. boot from the SD card
+#### A. Boot from the SD card
 
 
 <p style="text-align:center"><a href="https://bfaceafsieduau-my.sharepoint.com/personal/miaojg22_off365_cn/_layouts/15/guestaccess.aspx?folderid=0bb3c4f3f122d4c2bb0f65eee2b5938f8&authkey=AfLSkcE8QeeUHTQ8GGfrrsU" target="_blank"><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/onedrive.png" width="200" height="40"  border=0 /></a></p>
@@ -271,7 +278,7 @@ This wiki is based on the **respeaker-debian-9-lxqt-sd-20180118-4gb.img.xz** ver
 
 - **Step 3.** <font face="">Click to download <a href="https://etcher.io/">Etcher</a> here, and burn the ```*.img.xz``` file directly to your SD card with Etcher. Or unzip the ```*.img.xz``` file to a ```*.img``` file, then burn it to SD card with other image writing tools.
 <br>
-<br>Click the Plus icon to add the image you just download, the software will automatically select the SD card you plug.Then click Flash! to start burning. It will takes about 10 minutes to finish. </font>
+<br>Click the Plus icon to add the image you just download, the software will automatically select the SD card you plug.Then click Flash! to start burning. It will take about 10 minutes to finish. </font>
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/v2-flash-sd.png)
 
@@ -279,9 +286,9 @@ This wiki is based on the **respeaker-debian-9-lxqt-sd-20180118-4gb.img.xz** ver
 - **Step 4.** After writing the image to the SD card, insert the SD card in your ReSpeaker Core V2. Power the board using the PWR_IN micro usb port and DO NOT remove the SD card after powering on. ReSpeaker Core V2 will boot from the SD card, and you can see USER1 and USER2 LEDs light up. USER1 is typically configured at boot to blink in a heartbeat pattern and USER2 is typically configured at boot to light during SD card accesses. Now, you should go to the next part: Serial Console.
 
 
-#### B. boot from the eMMC
+#### B. Boot from the eMMC
 
-You may also directly flash the ReSpeaker image files to the ReSpeaker's eMMC (onboard flash memory) using your PC or Mac. Then the ReSpeaker will boot from it's eMMC (onboard flash memory) and not from the SD card.
+You also can flash the ReSpeaker image files to the ReSpeaker's eMMC (onboard flash memory) directly by using your PC or Mac. Then the ReSpeaker will boot from it's eMMC (onboard flash memory) and not from the SD card.
 
 - **Step 1.** Download our latest image zip file ```respeaker-debian-9-iot-flasher-********-4gb.img.xz``` or ```respeaker-debian-9-lxqt-flasher-********-4gb.img.xz``` at OneDrive. The lxqt version comes with Debian desktop and the iot version does not. And the flasher version is for flashing eMMC, and the sd version is for booting from SD card.
 
@@ -339,7 +346,7 @@ In this section we will guide you how to establish a connection from your comput
 
 - **Step 3.** The login user name is respeaker, and password is respeaker too.
 
-- **Step 4.** If you do not have a USB to TTL Adapter, you may also use an Arduino. If using an Arduino, connect one end of a jumper wire to the RESET pin on the Arduino and the other end to the GND pin on the Arduino. This will bypass your Arduino's ATMEGA MCU and turn your Arduino into a USB to TTL adapter, see video tutorial here. Now connect the GND pin on the Arduino to the GND pin on the Uart port of the Respeaker. Connect the Rx pin on the Arduino to the Rx pin on the Uart port of the Respeaker. Connect the Tx pin on the Arduino to the Tx pin on the Uart port of the Respeaker. And lastly, connect the Arduino to your PC/Mac via the Arduino's USB cable. Now check that your Mac or Linux PC finds your Arduino by typing this command:
+- **Step 4.** If you do not have a USB to TTL Adapter, you may also use an Arduino. If using an Arduino, connect one end of a jumper wire to the RESET pin on the Arduino and the other end to the GND pin on the Arduino. This will bypass your Arduino's ATMEGA MCU and turn your Arduino into a USB to TTL adapter, see video tutorial [here](https://www.youtube.com/watch?v=qqSLwK1DP8Q). Now connect the GND pin on the Arduino to the GND pin on the Uart port of the Respeaker. Connect the Rx pin on the Arduino to the Rx pin on the Uart port of the Respeaker. Connect the Tx pin on the Arduino to the Tx pin on the Uart port of the Respeaker. And lastly, connect the Arduino to your PC/Mac via the Arduino's USB cable. Now check that your Mac or Linux PC finds your Arduino by typing this command:
 
 ```
 ls /dev/cu.usb* (Mac)
@@ -456,7 +463,7 @@ The simplest way to heard sound from the board is to plugin a headset. If you pr
 
 
 
-### Voice Capture and Playback Testing
+### Record and Play
 
 #### 1.Test via ALSA
 
@@ -516,7 +523,8 @@ aplay hello3.wav
 So far we learned the basic operations of the ReSpeaker Core v2 board, let's move forward. We can use ReSpeaker Core v2 to build our own AVS(Alexa Voice Service) device or Dueros(Voice assistance of Baidu) device.
 
 
-### AVS(Alexa Voice Service) Guide
+
+### Play with AVS (Alexa Voice Service)
 
 This guide will shows you how to build an AVS device based on the ReSpeaker Core V2.
 
@@ -527,7 +535,7 @@ respeaker@v2:~$ sudo apt update
 respeaker@v2:~$ pip install avs
 ```
 
-This will also install the following executables into **~/.local/bin: alexa-audio-check**, alexa-auth, dueros-auth, alexa-tap and alexa.
+This will also install the following executables into **~/.local/bin**: alexa-audio-check, alexa-auth, dueros-auth, alexa-tap and alexa.
 
 Tap the command below to Check the audio configuration:
 ```
@@ -590,7 +598,9 @@ python ns_kws_alexa_with_light.py
 The same as last one, say **Alexa** to trigger the conversation with Alexa. You will the LED shinning while this program is running.
 
 
-### Dueros(Voice assistance of Baidu) Guide
+
+
+### Play with Dueros (Voice assistance of Baidu)
 
 The same as AVS, the only difference is that you need to delete one profile file. Before [get the authorization](http://wiki.seeedstudio.com/ReSpeaker_Core_v2/#step-2-authorize-alexa),
 you should tap the command below to delete the **avs.json**.
@@ -659,11 +669,6 @@ respeaker@v2:~$ mraa-gpio list
 12      GPIO66: GPIO
 ```
 The description of the PIN defines for the ReSpeaker Core V2 board please refer to [Pin Out]()
-
-
-
-
-
 
 
 #### Step 3. Demos with MRAA or UPM
@@ -840,10 +845,62 @@ Light value is 31
 
 ## FAQs
 
-     Q1.
-     Q2.
-     Q3.
-     Q4.
+#### Q1: How to record and play with Audacity?
+
+  **A1:**
+
+The **lxqt** version has pre-installed Audacity, Please click the **Bird button** at the lower left corner, and you will find it at the **Sound & Video -> Audacity**.
+
+  When you opened the Audacity, please click the little black arrow to choose the record and play device and set as the picture below.
+
+  ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/audacity.png)
+
+  You should choose Seeed-8mic-voicecard for both record and play device. And you can choose 1/2/4/6/8 channels to record and play. As you can see,
+  there are 8 channels in the picture, however there are no data in channel 7 and 8. That is because this two channels are the playback channel.
+  The channel 7 is for 3.5mm Headphone and the channel 8 for the JST2.0 Speaker (If you do not have a JST cable, you can use jumpers as well). Say, we use JST Speaker:
+
+  - Step 1. Set as the picture above, click the **Record** button, record a period audio.
+  - Step 2. Click the **Stop** button, then you will see channel 7 and 8 are empty.
+  - Step 3. Click **Record** button again, this time you will find Channel 8 changed.
+
+#### Q2: If I do not have suitable cable to access the Serial Console how can I get into ReSpeaker Core v2?
+
+**A2:**
+
+You can use two wires cable to power the ReSpeaker Core v2. When the system is running, the Respeaker Core v2 can act as an AP. You can use your computer to
+access this AP. As the picture show. You can follow the steps to configure the WiFi of ReSpeaker Core v2.
+
+![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Ap.png)
+
+- **Step 1.** Access the AP of ReSpeaker Core v2. The AP name is something like **ReSpeaker_xxxx**, the user is **respeaker**, the password is **respeaker** too.
+
+- **Step 2.** Now you can use Putty, SSH mode to get into the Serial Console. The ip of the Wlan1 is **192.168.42.1**, you need to use this ip to setup connection.
+And the user name of ReSpeaker Core v2 is **respeaker**, the password is **respeaker**.
+
+![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/AP2.png)
+
+- **Step 3.** When you get into the Serial Console， you can [setup the WiFi](http://wiki.seeedstudio.com/ReSpeaker_Core_v2/#a-wi-fi-setting-up)
+
+#### Q3: How to adjust the volume?
+
+**A3:**
+
+You can use Alsamixer to adjust the playback volume and capture sensitivity.
+
+- **Step 1.** Tap the following code to open Alsamixer:
+
+```
+Alsamixer
+```
+
+- **Step 2.** Press **F6** on your keyboard to choose **Seeed-8mic-voicec** card.
+- **Step 3.** You will find the interface as the picture below. You can choose the playback voice or record channel by pressing **Right** or **Left** key.
+And you can adjust the value by pressing the **Up** or **Down** key.
+
+![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Alexamixer.png)
+
+
+
 
 ## Tech Support
 Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/).
@@ -851,4 +908,7 @@ Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) i
 ## Resources
 - **[PDF]** [Download PDF of This Wiki](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/ReSpeaker_Core_v2.pdf)
 - **[PDF]** [Rockchip RK3229 Datasheet V1.1](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Rockchip%20RK3229%20Datasheet%20V1.1%2020151209.pdf)
+- **[PDF]** [Dimensions for Board](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/ReSpeaker_Core_v2_Demensions.pdf)
 - **[SKP]** [3d Models For ReSpeaker Core v2](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Respeaker%20Core%20v2_20180301.skp)
+- **[MoreReading]** [Mraa Python documents page](http://iotdk.intel.com/docs/master/mraa/python/)
+- **[MoreReading]** [Intel Mraa SDK](https://software.intel.com/en-us/mraa-sdk/documentation )
