@@ -847,9 +847,7 @@ Light value is 31
 
 #### Q1: How to record and play with Audacity?
 
-  **A1:**
-
-The **lxqt** version has pre-installed Audacity, Please click the **Bird button** at the lower left corner, and you will find it at the **Sound & Video -> Audacity**.
+  **A1:** The **lxqt** version has pre-installed Audacity, Please click the **Bird button** at the lower left corner, and you will find it at the **Sound & Video -> Audacity**.
 
   When you opened the Audacity, please click the little black arrow to choose the record and play device and set as the picture below.
 
@@ -865,9 +863,7 @@ The **lxqt** version has pre-installed Audacity, Please click the **Bird button*
 
 #### Q2: If I do not have suitable cable to access the Serial Console how can I get into ReSpeaker Core v2?
 
-**A2:**
-
-You can use two wires cable to power the ReSpeaker Core v2. When the system is running, the Respeaker Core v2 can act as an AP. You can use your computer to
+**A2:** You can use two wires cable to power the ReSpeaker Core v2. When the system is running, the Respeaker Core v2 can act as an AP. You can use your computer to
 access this AP. As the picture show. You can follow the steps to configure the WiFi of ReSpeaker Core v2.
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Ap.png)
@@ -883,9 +879,7 @@ And the user name of ReSpeaker Core v2 is **respeaker**, the password is **respe
 
 #### Q3: How to adjust the volume?
 
-**A3:**
-
-You can use Alsamixer to adjust the playback volume and capture sensitivity.
+**A3:** You can use Alsamixer to adjust the playback volume and capture sensitivity.
 
 - **Step 1.** Tap the following code to open Alsamixer:
 
