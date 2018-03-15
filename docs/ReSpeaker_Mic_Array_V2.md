@@ -178,7 +178,7 @@ The MP34DT01-M is an ultra-compact, lowpower, omnidirectional, digital MEMS micr
 ## Getting Started
 
 !!!Note
-  ReSpeaker_Mic_Array_V2 is compatiable with Windoes, Mac and Linux systems.
+    ReSpeaker_Mic_Array_V2 is compatiable with Windoes, Mac and Linux systems.
 
 ### Install DFU and LED Control Driver  
 
@@ -319,6 +319,7 @@ cd ~
 mkdir extract_voice
 nano device_index.py
 ```
+
 - Step 2, copy below code and paste on device_index.py.
 
 ```Python
@@ -332,6 +333,7 @@ for i in range(0, numdevices):
         if (p.get_device_info_by_host_api_device_index(0, i).get('maxInputChannels')) > 0:
             print "Input Device id ", i, " - ", p.get_device_info_by_host_api_device_index(0, i).get('name')
 ```
+
 - Step 3, press Ctrl + X to exit and press Y to save.
 
 - Step 4, run 'sudo python device_index.py' and we will see the device ID as below.
@@ -389,8 +391,25 @@ wf.close()
 #### Realtime Sound Source Localization and Tracking
 [ODAS](https://github.com/introlab/odas) stands for Open embeddeD Audition System. This is a library dedicated to perform sound source localization, tracking, separation and post-filtering. Let's have a fun with it.
 
-- Step 1. Get [ODAS Studio](https://github.com/introlab/odas_web/releases) and open it.
-- Step 2. The odascore will be at odas/bin/odascore, the config file is odas.cfg. Please change odas.cfg based on your sound card number.
+- Step 1. Get ODAS and build it.
+```
+sudo apt-get install libfftw3-dev libconfig-dev libasound2-dev
+wget https://cmake.org/files/v3.11/cmake-3.11.0-rc3.tar.gz
+tar xf cmake-3.11.0-rc3.tar.gz
+cd cmake-3.11.0-rc3
+./configure
+make
+sudo make install
+git clone https://github.com/introlab/odas.git --branch=dev
+mkdir odas/build
+cd odas/build
+cmake ..
+make
+```
+
+- Step 2. Get [ODAS Studio](https://github.com/introlab/odas_web/releases)  and open it.
+
+- Step 3. The odascore will be at odas/bin/odascore, the config file is [odas.cfg](https://github.com/respeaker/usb_4_mic_array/blob/master/odas.cfg). Please change odas.cfg based on your sound card number.
 
 ```
 interface: {
@@ -399,7 +418,8 @@ interface: {
     device = 0;
 }
 ```
-- Step 3. Upgrade mic array with i6_firmware.bin which includes 4 channels raw audio data.
+
+- Step 4. Upgrade mic array with i6_firmware.bin which includes 4 channels raw audio data.
 
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/live_data.png)
 
