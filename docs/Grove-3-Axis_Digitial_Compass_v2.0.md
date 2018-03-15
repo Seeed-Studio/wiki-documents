@@ -46,7 +46,7 @@ Platforms Supported
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo.jpg) |
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo.jpg) |
 
 !!!Caution
     The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
@@ -110,18 +110,18 @@ Within these 3 seconds， please tilt and rotate the compass back and forth on e
 
 ![](https://github.com/SeeedDocument/Bazaar_doc/raw/master/101020492/figure_8_calibration.jpg)
 
-Do figure-8 calibration in 10 seconds while serial monitor echo dot symbol. The calibration period can be changed through the parameter timeout in **calibrate(uint16_t timeout)**.
+The calibration period time can be changed through the parameter timeout in the fuction **calibrate(uint16_t timeout)**.
 
-Warning!!!
-The compass needs to be calibrated, otherwise you will get the inaccurate data! Please make sure you have done the Step 5.
+Note!!!
+  The compass needs to be calibrated, otherwise you will get the inaccurate data! Please make sure you have done the Step 5.
 
 
 Finally, you will see the something like the following picture.
 
 ![](https://github.com/SeeedDocument/Bazaar_doc/raw/master/101020492/result.png)
 
-Tips!!!
-Heading value is in range of 0º ~ 360º, this value is for Y axis, 0º means Y axis points at North, 90º means Y axis points at West, 180º means Y axis points at South, 270º means Y points at East.
+Tip!!!
+  Heading value is in range of 0º ~ 360º, this value is for Y axis, 0º means Y axis points at North, 90º means Y axis points at West, 180º means Y axis points at South, 270º means Y points at East.
 
 Enjoy your compass!
 
