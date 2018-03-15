@@ -24,5 +24,4 @@ Here is the list of the Wio Boards you can find in the Seeed WiKi. The list will
 - [Wio Link Event Kit](/Wio_Link_Event_Kit/)
 - [Wio Link Starter Kit](/Wio_Link_Starter_Kit/)
 - [Wio Node](/Wio_Node/)
-
-
+- [Grove Starter Kit for Wio LTE](/Grove_Starter_Kit_for_Wio_LTE/)

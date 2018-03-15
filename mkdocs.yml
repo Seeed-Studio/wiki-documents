@@ -195,6 +195,7 @@ pages:
           - Wio Link Event Kit: Wio_Link_Event_Kit.md
           - Wio Link Starter Kit: Wio_Link_Starter_Kit.md
           - Wio Node: Wio_Node.md
+          - Grovev Starter Kit for Wio LTE: Grove_Starter_Kit_for_Wio_LTE.md
 
 
       - LinkIt:
@@ -312,6 +313,7 @@ pages:
           - Grove - 3 Axis Digital Accelerometer(±16g): Grove-3-Axis_Digital_Accelerometer-16g.md
           - Grove - 3-Axis Analog Accelerometer: Grove-3-Axis_Analog_Accelerometer.md
           - Grove - 3-Axis Compass V1.0: Grove-3-Axis_Compass_V1.0.md
+          - Grove - 3-Axis Digitial Compass v2.0: Grove-3-Axis_Digitial_Compass_v2.0.md
           - Grove - 3-Axis Digital Accelerometer(±1.5g): Grove-3-Axis_Digital_Accelerometer-1.5g.md
           - Grove - 3-Axis Digital Accelerometer(±400g): Grove-3-Axis_Digital_Accelerometer-400g.md
           - Grove - 3-Axis Digital Gyro: Grove-3-Axis_Digital_Gyro.md

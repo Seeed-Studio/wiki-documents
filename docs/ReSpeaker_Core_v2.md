@@ -894,13 +894,14 @@ And you can adjust the value by pressing the **Up** or **Down** key.
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Alexamixer.png)
 
 #### Q4: How to use the user button.
-**A4:** As you can see, there is a user button at the back of ReSpeaker Core v2. Here we provide a python demo to show how to use it.
+**A4:** As you can see, there is an user button at the back of ReSpeaker Core v2. Here we provide a python demo to show how to use it.
 
 - **Step 1.** Tap the command below:
 
 ```
 sudo pip install evdev
 ```
+
 - **Step 2.** Copy the code below and save it as a python file, let's name it **usrer_button.py**.
 
 ```

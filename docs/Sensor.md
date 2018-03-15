@@ -11,6 +11,7 @@ Here is the list of the Grove - Sensor Boards you can find in the Seeed WiKi. Th
 - [Grove - 3 Axis Digital Accelerometer(±16g)](/Grove-3-Axis_Digital_Accelerometer-16g/)
 - [Grove - 3-Axis Analog Accelerometer](/Grove-3-Axis_Analog_Accelerometer/)
 - [Grove - 3-Axis Compass V1.0](/Grove-3-Axis_Compass_V1.0/)
+- [Grove - 3-Axis Digitial Compass v2.0](/Grove-3-Axis_Digitial_Compass_v2.0/)
 - [Grove - 3-Axis Digital Accelerometer(±1.5g)](/Grove-3-Axis_Digital_Accelerometer-1.5g/)
 - [Grove - 3-Axis Digital Accelerometer(±400g)](/Grove-3-Axis_Digital_Accelerometer-400g/)
 - [Grove - 3-Axis Digital Gyro](/Grove-3-Axis_Digital_Gyro/)
