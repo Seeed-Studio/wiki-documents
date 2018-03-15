@@ -20,7 +20,7 @@ Why do we call the Wio Tracker a solution, because it is really not just a board
 We have prepared everything, the last thing we need is your creative projects, so if you are making an out-door IOT tracking project, please don’t hesitate to use the Wio Tracker!
 
 !!!Warning
-    Please always plug 3.7V Lipo battery in case USB power supply is not sufficient. 
+    Please always plug 3.7V Lipo battery in case USB power supply is not sufficient.
 
 [![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Wio-Tracker-GPS%2C-BT3.0%2C-GSM%2C-Arduino-Compatible-p-2831.html)
 
@@ -161,7 +161,7 @@ First you need to install the latest Arduino IDE, and [ADD Seeeduino SAMD to you
 
 ### Install the Driver (For Windows)
 
-When the first time to insert the board, you should get a USB COM device name Wio Tracker that need to install a driver. Click [here](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/driver.zip) to download driver for the board.
+When the first time to insert the board, you should get a USB COM device name Wio Tracker that need to install a driver. Click [here](https://codeload.github.com/Seeed-Studio/Signed_USB_Serial_Driver/zip/master) to download driver for the board.
 
 
 
@@ -460,4 +460,4 @@ void loop() {
 * [MC20 GNSS Protocol Specification](https://github.com/SeeedDocument/GPS_Tracker/blob/master/resources/Quectel_MC20_GNSS_Protocol_Specification_V1.0.pdf)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/).
