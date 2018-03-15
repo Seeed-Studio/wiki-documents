@@ -187,7 +187,7 @@ The MP34DT01-M is an ultra-compact, lowpower, omnidirectional, digital MEMS micr
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/usb_4mic_array_driver.png)
 
 !!!Note
-  Please make sure that libusb-win32 is selected, not WinUSB or libusbK.
+    Please make sure that libusb-win32 is selected, not WinUSB or libusbK.
 
 - **MAC:** No driver is required.
 - **Linux:** No driver is required.
