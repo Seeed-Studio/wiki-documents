@@ -84,8 +84,8 @@ Please plug the USB cable gently, otherwise you may damage the interface.Please 
 
 ### Software
 
-Note!!!
-If this is the first time you are working with Seeeduino, please refer to this [page](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) to learn how to use Seeeduino and download the library.
+!!!Note
+    If this is the first time you are working with Seeeduino, please refer to this [page](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) to learn how to use Seeeduino and download the library.
 
 
 - **Step 1.** Download the [library](https://github.com/Seeed-Studio/Grove_3_Axis_Compass_V2.0_BMM150) for Grove-3-Axis Digital Compass.
@@ -112,16 +112,16 @@ Within these 3 seconds， please tilt and rotate the compass back and forth on e
 
 The calibration period time can be changed through the parameter timeout in the fuction **calibrate(uint16_t timeout)**.
 
-Note!!!
-  The compass needs to be calibrated, otherwise you will get the inaccurate data! Please make sure you have done the Step 5.
+!!!Note
+    The compass needs to be calibrated, otherwise you will get the inaccurate data! Please make sure you have done the Step 5.
 
 
 Finally, you will see the something like the following picture.
 
 ![](https://github.com/SeeedDocument/Bazaar_doc/raw/master/101020492/result.png)
 
-Tip!!!
-  Heading value is in range of 0º ~ 360º, this value is for Y axis, 0º means Y axis points at North, 90º means Y axis points at West, 180º means Y axis points at South, 270º means Y points at East.
+!!!Tip
+    Heading value is in range of 0º ~ 360º, this value is for Y axis, 0º means Y axis points at North, 90º means Y axis points at West, 180º means Y axis points at South, 270º means Y points at East.
 
 Enjoy your compass!
 
