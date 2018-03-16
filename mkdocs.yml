@@ -254,30 +254,31 @@ pages:
           - Xadow - Main Board: Xadow_Main_Board.md
           - Xadow - Motor Driver: Xadow_Motor_Driver.md
           - Xadow - Multichannel Gas Sensor: Xadow_Multichannel_Gas_Sensor.md
-          - Xadow - NFC Tag: Xadow_NFC_tag.md
           - Xadow - OLED 128*64: Xado_OLED_128multiply64.md
           - Xadow - RGB OLED 96*64: Xadow_RGB_OLED_96multiply64.md
           - Xadow - RTC: Xadow_RTC.md
           - Xadow - Storage: Xadow_Storage.md
           - Xadow - UV Sensor: Xadow_UV_Sensor.md
           - Xadow - Vibrator Motor: Xadow_Vibrator_Motor.md
-          - Xadow 1.54&#39;&#39; Touchscreen: Xadow_1.54_inch_Touchscreen.md
-          - Xadow Audio: Xadow_Audio.md
-          - Xadow BLE: Xadow_BLE.md
-          - Xadow Barometer: Xadow_Barometer.md
-          - Xadow Barometer BMP180: Xadow_Barometer_BMP180.md
-          - Xadow Basic Sensors: Xadow_Basic_Sensors.md
-          - Xadow Duino: Xadow_Duino.md
-          - Xadow GPS V2: Xadow_GPS_V2.md
-          - Xadow GSM Breakout: Xadow_GSM_Breakout.md
-          - Xadow GSM&#43;BLE: Xadow_GSMPlusBLE.md
-          - Xadow Metal Frame: Xadow_Metal_Frame.md
-          - Xadow NFC: Xadow_NFC.md
-          - Xadow Pebble Time Adapter: Xadow_Pebble_Time_Adapter.md
+          - Xadow - 1.54&#39;&#39; Touchscreen: Xadow_1.54_inch_Touchscreen.md
+          - Xadow - Audio: Xadow_Audio.md
+          - Xadow - BLE: Xadow_BLE.md
+          - Xadow - Barometer: Xadow_Barometer.md
+          - Xadow - Barometer BMP180: Xadow_Barometer_BMP180.md
+          - Xadow - Basic Sensors: Xadow_Basic_Sensors.md
+          - Xadow - Duino: Xadow_Duino.md
+          - Xadow - GPS V2: Xadow_GPS_V2.md
+          - Xadow - GSM Breakout: Xadow_GSM_Breakout.md
+          - Xadow - GSM&#43;BLE: Xadow_GSMPlusBLE.md
+          - Xadow - Metal Frame: Xadow_Metal_Frame.md
+          - Xadow - NFC: Xadow_NFC.md
+          - Xadow - NFC v2: Xadow_NFC_v2.md
+          - Xadow - NFC Tag: Xadow_NFC_tag.md
+          - Xadow - Pebble Time Adapter: Xadow_Pebble_Time_Adapter.md
+          - Xadow - Q Touch Sensor: Xadow_Q_Touch_Sensor.md
           - Xadow Tutorial - Acceleration Detector: Xadow_Tutorial_Acceleration_Detector.md
           - Xadow Tutorial - Communicate via BLE: Xadow_Tutorial_Communicate_via_BLE.md
           - Xadow Wearable Kit For Edison: Xadow_Wearable_Kit_For_Edison.md
-          - Xadow-Q Touch Sensor: Xadow_Q_Touch_Sensor.md
           - XadowTtutorial-Shaking Shaking: Xadow_Tutorial_Shaking_Shaking.md
 
       - Wireless:
