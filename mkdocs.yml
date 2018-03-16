@@ -399,6 +399,7 @@ pages:
           - Grove - Thumb Joystick: Grove-Thumb_Joystick.md
           - Grove - Tilt Switch: Grove-Tilt_Switch.md
           - Grove - Touch Sensor: Grove-Touch_Sensor.md
+          - Grove - Encoder: Grove-Encoder.md
           - Grove - UV Sensor: Grove-UV_Sensor.md
           - Grove - Ultrasonic Ranger: Grove-Ultrasonic_Ranger.md
           - Grove - Voltage Divider: Grove-Voltage_Divider.md
