@@ -17,7 +17,7 @@ ReSpeaker Core v2 runs GNU/Linux operation system. It benefits from powerful and
 ReSpeaker Core v2 is not only designed for makers/enthusiast, but also a turnkey solution for business company. The hardware consists of two parts, one is the minimized SoC module which is small and easy for manufacturing and ready for final product, the other is a bottom board which can be full customizable.
 
 
-<p style="text-align:center"><a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>
+<p style="text-align:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Respeaker_V2/master/img/images.png/" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>
 
 
 
