@@ -3,9 +3,9 @@ title: ReSpeaker Mic Array V2
 category: ReSpeaker
 bzurl:
 oldwikiname: ReSpeaker Mic Array V2
-prodimagename: 
-surveyurl: 
-sku: 
+prodimagename:
+surveyurl:
+sku:
 ---
 
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/usb_4_mic_array.png)
@@ -163,6 +163,8 @@ The MP34DT01-M is an ultra-compact, lowpower, omnidirectional, digital MEMS micr
 ## Dimensions
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/Dimension.png)
 
+![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/Dimension1.png)
+
 ## Applications
 
 - USB voice capture
@@ -178,23 +180,22 @@ The MP34DT01-M is an ultra-compact, lowpower, omnidirectional, digital MEMS micr
 ## Getting Started
 
 !!!Note
-    ReSpeaker_Mic_Array_V2 is compatiable with Windoes, Mac and Linux systems.
+    ReSpeaker_Mic_Array_V2 is compatiable with Windows, Mac and Linux systems.
 
 ### Install DFU and LED Control Driver  
 
-- **Windows:** Audio recording and playback works well by default. Libusb-win32 driver is only required to control LEDs an DSP parameters on Windows. We use [a handy tool - Zadig]() to install the libusb-win32 driver for both `SEEED DFU` and `SEEED Control` (ReSpeaker Mic Array has 2 devices on Windows Device Manager).
+- **Windows:** Audio recording and playback works well by default. Libusb-win32 driver is only required to control LEDs an DSP parameters on Windows. We use [a handy tool - Zadig](http://zadig.akeo.ie/) to install the libusb-win32 driver for both `SEEED DFU` and `SEEED Control` (ReSpeaker Mic Array has 2 devices on Windows Device Manager).
 
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/usb_4mic_array_driver.png)
 
-!!!Note
+!!!Warning
     Please make sure that libusb-win32 is selected, not WinUSB or libusbK.
 
 - **MAC:** No driver is required.
 - **Linux:** No driver is required.
 
-### Play with Raspberry
 
-#### Update firmwares
+### Update firmwares
 
 There are 2 firmwares. One includes 1 channel data, while the other inlcudes 6 channels data. Here is the table for the differences.
 
@@ -206,7 +207,7 @@ There are 2 firmwares. One includes 1 channel data, while the other inlcudes 6 c
 Here is the audacity recording for the i6_firmware.
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/Audacity.png)
 
-The Mic array supports the USB DFU. We develop a [python script](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/dfu.py) to update the firmware through USB.
+**For Linux:**  The Mic array supports the USB DFU. We develop a [python script dfu.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/dfu.py) to update the firmware through USB.
 
 ```python
 sudo apt-get update
@@ -218,8 +219,19 @@ sudo python dfu.py --download default_firmware.bin  # Change the bin names base 
 Here is the firmware downloading result.
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/Download_firmware.png)
 
+**For Windows:** We develop [python script dfu_windows.py](https://github.com/respeaker/usb_4_mic_array/raw/master/dfu_windows.py) to update the firmware through USB.
 
-#### Control the LEDs
+```python
+pip install pyusb click
+git clone https://github.com/respeaker/usb_4_mic_array.git
+cd usb_4_mic_array
+sudo python dfu_windows.py --download default_firmware.bin  # Change the bin names base on needs
+```
+
+Here is the firmware downloading result.
+![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/dfu_windows.png)
+
+### Control the LEDs
 
 We can control the ReSpeaker Mic Array V2's LEDs through USB. The USB device has a Vendor Specific Class Interface which can be used to send data through USB Control Transfer. We refer [pyusb python library](https://github.com/pyusb/pyusb) and come out the [usb_pixel_ring python library](https://github.com/respeaker/pixel_ring/blob/master/pixel_ring/usb_pixel_ring_v2.py).
 
@@ -247,16 +259,18 @@ Here are the usb_pixel_ring APIs.
 | 0x23    | [volume]                       | pixel_ring.set_volume()        | show volume, range: 0 ~ 12                                                                                        |
 | 0x24    | [pattern]                      | pixel_ring.change_pattern()    | set pattern, 0 - Google Home pattern, others - Echo pattern                                                       |
 
+**For Linux:** Here is the example to control the leds.
 
-Here is the example to control the leds.
-```
+```python
 git clone https://github.com/respeaker/pixel_ring.git
+cd pixel_ring
 sudo python setup.py install
 sudo python examples/usb_mic_array.py
 ```
+
 Here is the code of the usb_mic_array.py.
 
-```
+```python
 import time
 
 from pixel_ring import pixel_ring
@@ -284,10 +298,52 @@ if __name__ == '__main__':
 
 ```
 
+**For Windows:** Here is the example to control the leds.
 
-#### Tuning
+```python
+git clone https://github.com/respeaker/pixel_ring.git
+cd pixel_ring/pixel_ring
+```
 
-We can configure some parameters of built-in algorithms.
+Create a [led_control.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/led_control.py) with below code and run 'python led_control.py'
+
+```Python
+from usb_pixel_ring_v2 import PixelRing
+import usb.core
+import usb.util
+import time
+
+dev = usb.core.find(idVendor=0x2886, idProduct=0x0018)
+print dev
+if dev:
+    pixel_ring = PixelRing(dev)
+
+    while True:
+        try:
+            pixel_ring.wakeup(180)
+            time.sleep(3)
+            pixel_ring.listen()
+            time.sleep(3)
+            pixel_ring.think()
+            time.sleep(3)
+            pixel_ring.set_volume(8)
+            time.sleep(3)
+            pixel_ring.off()
+            time.sleep(3)
+        except KeyboardInterrupt:
+            break
+
+    pixel_ring.off()
+
+```
+
+!!!Note
+    If you see "None" printed on screen, please reinstall the libusb-win32 driver.
+
+
+### Tuning
+
+We can configure some parameters of built-in algorithms. It works well for Linux and Windows.
 
 - Get the full list parameters:
 
@@ -301,26 +357,30 @@ python tuning.py -p
 python tuning.py AGCONOFF 0
 ```
 
-#### Extract Voice
+### Extract Voice
 
-We use [PyAudio python library](https://people.csail.mit.edu/hubert/pyaudio/) to extract voice through USB. We also can use below commands to record or play the voice.
+We use [PyAudio python library](https://people.csail.mit.edu/hubert/pyaudio/) to extract voice through USB.
+
+**For Linux:**  We can use below commands to record or play the voice.
 
 ```Python
-arecord -D plughw:0,0 -f cd test.wav # record
-aplay -D plughw:1,0 -f cd test.wav # play
+arecord -D plughw:1,0 -f cd test.wav # record, please use the arecord -l to check the card and hardware first
+aplay -D plughw:1,0 -f cd test.wav # play, please use the aplay -l to check the card and hardware first
 arecord -D plughw:1,0 -f cd |aplay -D plughw:1,0 -f cd # record and play at the same time
 ```
+
+We also can use python script to extract voice.
 
 - Step 1, We need to run the following script to get the device index number of Mic Array:
 
 ```Python
 sudo pip install pyaudio
 cd ~
-mkdir extract_voice
-nano device_index.py
+mkdir get_index
+nano get_index.py
 ```
 
-- Step 2, copy below code and paste on device_index.py.
+- Step 2, copy below code and paste on [get_index.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/get_index.py).
 
 ```Python
 import pyaudio
@@ -336,13 +396,13 @@ for i in range(0, numdevices):
 
 - Step 3, press Ctrl + X to exit and press Y to save.
 
-- Step 4, run 'sudo python device_index.py' and we will see the device ID as below.
+- Step 4, run 'sudo python get_index.py' and we will see the device ID as below.
 
 ```
 Input Device id  2  -  ReSpeaker 4 Mic Array (UAC1.0): USB Audio (hw:1,0)
 ```
 
-- Step 5, change `RESPEAKER_INDEX = 2` to index number. Run the script to record a speech.
+- Step 5, change `RESPEAKER_INDEX = 2` to index number. Run python script [record.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/record.py) to record a speech.
 
 ```Python
 import pyaudio
@@ -352,7 +412,7 @@ RESPEAKER_RATE = 16000
 RESPEAKER_CHANNELS = 1 # change base on firmwares, default_firmware.bin as 1 or i6_firmware.bin as 6
 RESPEAKER_WIDTH = 2
 # run getDeviceInfo.py to get index
-RESPEAKER_INDEX = 1  # refer to input device id
+RESPEAKER_INDEX = 2  # refer to input device id
 CHUNK = 1024
 RECORD_SECONDS = 5
 WAVE_OUTPUT_FILENAME = "output.wav"
@@ -388,10 +448,18 @@ wf.writeframes(b''.join(frames))
 wf.close()
 ```
 
-#### Realtime Sound Source Localization and Tracking
+**For Windows:** We run command 'pip install pyaudio' first and then use  [get_index.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/get_index.py) and [record.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/record.py) to extract voice.
+
+!!!Warning
+    If we see "Error: %1 is not a valid Win32 application.", please install Python Win32 version.
+
+### Realtime Sound Source Localization and Tracking
 [ODAS](https://github.com/introlab/odas) stands for Open embeddeD Audition System. This is a library dedicated to perform sound source localization, tracking, separation and post-filtering. Let's have a fun with it.
 
+**For Linux:**
+
 - Step 1. Get ODAS and build it.
+
 ```
 sudo apt-get install libfftw3-dev libconfig-dev libasound2-dev
 wget https://cmake.org/files/v3.11/cmake-3.11.0-rc3.tar.gz
@@ -423,6 +491,7 @@ interface: {
 
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/live_data.png)
 
+**For Windows:** Please refer to [ODAS](https://github.com/introlab/odas).
 
 
 ## Resource
