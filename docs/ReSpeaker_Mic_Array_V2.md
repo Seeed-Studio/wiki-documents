@@ -1,8 +1,8 @@
 ---
-title: ReSpeaker Mic Array V2
+title: ReSpeaker Mic Array v2
 category: ReSpeaker
 bzurl:
-oldwikiname: ReSpeaker Mic Array V2
+oldwikiname: ReSpeaker Mic Array v2
 prodimagename:
 surveyurl:
 sku: 107990053
@@ -10,7 +10,6 @@ sku: 107990053
 
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/usb_4_mic_array.png)
 
-## Description
 
 Seeed’s ReSpeaker Mic Array v2.0 is an upgraded version of ReSpeaker Mic Array v1 which based on XVSM-2000. The v2.0 developed based on XVF-3000 from XMOS. It can be stacked (connected) right onto the top of ReSpeaker Core to significantly improve the voice interaction experience. The board integrates 4 PDM microphones to help enhance ReSpeaker's acoustic DSP performance to a much higher level.  
 

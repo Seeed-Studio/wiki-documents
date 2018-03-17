@@ -17,6 +17,6 @@ Here is the list of the ReSpeaker Boards you can find in the Seeed WiKi. The lis
 - [ReSpeaker Core v2](/ReSpeaker_Core_v2/)
 - [ReSpeaker Drive Unit](/ReSpeaker_Drive_Unit/)
 - [ReSpeaker Mic Array](/ReSpeaker_Mic_Array/)
-- [ReSpeaker Mic Array V2](/ReSpeaker_Mic_Array_V2/)
+- [ReSpeaker Mic Array v2](/ReSpeaker_Mic_Array_v2/)
 
 
