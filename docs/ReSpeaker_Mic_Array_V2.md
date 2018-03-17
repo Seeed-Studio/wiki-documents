@@ -5,7 +5,7 @@ bzurl:
 oldwikiname: ReSpeaker Mic Array V2
 prodimagename:
 surveyurl:
-sku:
+sku: 107990053
 ---
 
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/usb_4_mic_array.png)
@@ -18,7 +18,7 @@ ReSpeaker Mic Array v2.0 supports USB Audio Class 1.0(UAC 1.0) directly. All maj
 
 ReSpeaker Mic Array v2.0 has two firmwares, one includes speech algorithms, another is just capture raw voice data for specially purpose.
 
-[![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png)](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)
+[![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png)]()
 
 ## Version
 
