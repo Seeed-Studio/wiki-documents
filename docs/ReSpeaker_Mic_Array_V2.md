@@ -347,6 +347,8 @@ We can configure some parameters of built-in algorithms. It works well for Linux
 - Get the full list parameters:
 
 ```
+git clone https://github.com/respeaker/usb_4_mic_array.git
+cd usb_4_mic_array
 python tuning.py -p
 ```
 
@@ -375,7 +377,6 @@ We also can use python script to extract voice.
 ```Python
 sudo pip install pyaudio
 cd ~
-mkdir get_index
 nano get_index.py
 ```
 
@@ -461,12 +462,7 @@ wf.close()
 
 ```
 sudo apt-get install libfftw3-dev libconfig-dev libasound2-dev
-wget https://cmake.org/files/v3.11/cmake-3.11.0-rc3.tar.gz
-tar xf cmake-3.11.0-rc3.tar.gz
-cd cmake-3.11.0-rc3
-./configure
-make
-sudo make install
+sudo apt-get install cmake
 git clone https://github.com/introlab/odas.git --branch=dev
 mkdir odas/build
 cd odas/build
