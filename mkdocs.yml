@@ -25,8 +25,8 @@ site_author: Bill
 site_url: http://wiki.seeedstudio.com
 
 # Repository
-#repo_name: SeeedDocument/SeeedDocument.github.io
-#repo_url: https://github.com/SeeedDocument/SeeedDocument.github.io
+# repo_name: Bazaar
+# repo_url: https://www.seeedstudio.com/
 
 # Copyright
 copyright: 'Seeedstudio 2018'
@@ -50,6 +50,11 @@ extra:
       link: https://www.facebook.com/seeedstudiosz/
     - type: github-alt
       link: https://github.com/SeeedDocument
+  logo: 'images/favicon.ico'
+  search:
+    language: 'en'
+    tokenizer: '[\s\-\.]+'
+
 
 # Extensions
 markdown_extensions:
