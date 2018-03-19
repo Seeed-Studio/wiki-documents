@@ -609,7 +609,10 @@ Then go to **Dashboard -> Applications -> SampleApp ->Device** , click the Node 
 
 
 ## FAQs
-Please click [here](http://support.seeedstudio.com/knowledgebase/articles/1822222-grove-ultrasonic-ranger-sku-101020010) to see all LoRa/LoRaWAN Gateway Kit FAQs.
+
+### Q1: How to find the factory firmware?
+
+**A1:** When the firmware is broken or some terrible errors happen, you can download the [firmware](https://drive.google.com/open?id=1MVLQlxjhir_mWvKhvuqBsr1a0ievZRDC) here.
 
 
 ## Resources
@@ -620,4 +623,4 @@ Please click [here](http://support.seeedstudio.com/knowledgebase/articles/182222
 - **[More Reading]** [RisingHF Website](http://www.risinghf.com/product/risinghf-iot-dicovery/?lang=en)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/).

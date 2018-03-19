@@ -160,11 +160,11 @@ while True:
 - Step 4. We will see the led on and off.
 
 ```
-pi@raspberrypi:~/GrovePi/Software/Python $ python grove_led_blink.py 
+pi@raspberrypi:~/GrovePi/Software/Python $ python grove_led_blink.py
 This example will blink a Grove LED connected to the GrovePi+ on the port labeled D4.
 If you're having trouble seeing the LED blink, be sure to check the LED connection and the port number.
 You may also try reversing the direction of the LED on the sensor.
- 
+
 Connect the LED to the port labele D4!
 LED ON!
 LED OFF!
@@ -176,9 +176,10 @@ LED OFF!
 ##  Resources
 ---
 
-* **[PDF]** [Grove-Red LED Schematic](https://github.com/SeeedDocument/Grove-Red_LedLED/raw/master/res/Grove-LED_v1.3.pdf)
+* **[PDF]** [Grove-Red LED Schematic](https://github.com/SeeedDocument/Grove-Red_LED/raw/master/res/Grove-LED_v1.3.pdf)
+
 
 ## Tech Support
 ---
 
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/).
