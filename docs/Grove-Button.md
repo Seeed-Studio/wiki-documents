@@ -8,7 +8,7 @@ surveyurl: https://www.surveymonkey.com/r/grove-button
 sku: 101020003
 ---
 
-![](https://github.com/SeeedDocument/Grove_Button/raw/master/image/Button.jpg)
+![](https://github.com/SeeedDocument/Grove_Button/raw/master/img/Button.jpg)
 
 Grove - Button is a momentary push button. It contains one independent "momentary on/off" button. “Momentary” means that the button rebounds on its own after it is released. The button outputs a HIGH signal when pressed, and LOW when released. The Sig marked on silk layer stands for signal while NC stands for not used at all. There are two versions of this button available as showed in the pictures. The only difference is the direction of the Grove socket.
 
@@ -61,7 +61,7 @@ Grove - Button is a momentary push button. It contains one independent "momentar
 ![](https://github.com/SeeedDocument/Grove_Button/raw/master/img/seeeduino_button.jpg)
 
 !!!Note
-	If we don't have Grove Base Shield, We also can directly connect Grove-Red_Led to Arduino as below.
+	If we don't have Grove Base Shield, We also can directly connect Grove-Button to Arduino as below.
 
 | Seeeduino       | Grove-Button |
 |---------------|-------------------------|
