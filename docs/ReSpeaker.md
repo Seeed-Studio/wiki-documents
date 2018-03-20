@@ -14,9 +14,9 @@ Here is the list of the ReSpeaker Boards you can find in the Seeed WiKi. The lis
 - [ReSpeaker 2-Mics Pi HAT](/ReSpeaker_2_Mics_Pi_HAT/)
 - [ReSpeaker 4-Mic Array for Raspberry Pi](/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/)
 - [ReSpeaker Core](/ReSpeaker_Core/)
-- [ReSpeaker Core v2](/ReSpeaker_Core_v2/)
+- [ReSpeaker Core v2.0](/ReSpeaker_Core_v2.0/)
 - [ReSpeaker Drive Unit](/ReSpeaker_Drive_Unit/)
 - [ReSpeaker Mic Array](/ReSpeaker_Mic_Array/)
-- [ReSpeaker Mic Array v2](/ReSpeaker_Mic_Array_v2/)
+- [ReSpeaker Mic Array v2.0](/ReSpeaker_Mic_Array_v2.0/)
 
 

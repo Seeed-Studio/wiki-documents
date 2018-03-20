@@ -1,8 +1,8 @@
 ---
-title: ReSpeaker Core v2
+title: ReSpeaker Core v2.0
 category: ReSpeaker
 bzurl:
-oldwikiname: ReSpeaker Core v2
+oldwikiname: ReSpeaker Core v2.0
 prodimagename: cover.JPG
 surveyurl:  https://www.research.net/r/Respeaker_Core
 sku: 102990883
@@ -10,14 +10,14 @@ sku: 102990883
 
 ![enter image description here](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/ReSpeaker_V2_front.JPG)
 
-Seeed ReSpeaker Core v2 is designed for voice interactive applications. It is based on quad-core ARM Cortex-A7, up to 1.5Ghz, and 1GB RAM on-board. Besides, it features six microphone array with necessary speech algorithm, like DoA(Direction of arrival), BF(Beam-Forming), AEC(Acoustic echo cancellation) and etc.
+Seeed ReSpeaker Core v2.0 is designed for voice interactive applications. It is based on quad-core ARM Cortex-A7, up to 1.5Ghz, and 1GB RAM on-board. Besides, it features six microphone array with necessary speech algorithm, like DoA(Direction of arrival), BF(Beam-Forming), AEC(Acoustic echo cancellation) and etc.
 
-ReSpeaker Core v2 runs GNU/Linux operation system. It benefits from powerful and active community, we can use lot of existing software/tools for development, testing and deploy, so that rapid product development become available.
+ReSpeaker Core v2.0 runs GNU/Linux operation system. It benefits from powerful and active community, we can use lot of existing software/tools for development, testing and deploy, so that rapid product development become available.
 
-ReSpeaker Core v2 is not only designed for makers/enthusiast, but also a turnkey solution for business company. The hardware consists of two parts, one is the minimized SoC module which is small and easy for manufacturing and ready for final product, the other is a bottom board which can be full customizable.
+ReSpeaker Core v2.0 is not only designed for makers/enthusiast, but also a turnkey solution for business company. The hardware consists of two parts, one is the minimized SoC module which is small and easy for manufacturing and ready for final product, the other is a bottom board which can be full customizable.
 
 
-<p style="text-align:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Respeaker_V2/master/img/images.png/" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>
+<p style="text-align:center"><a href="https://www.seeedstudio.com/ReSpeaker-Core-V2.0-p-3039.html" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>
 
 
 
@@ -139,13 +139,13 @@ Output audio. You can plug active speakers or Headphones into this port.
 This USB Port is used to connect to your computer via serial mode of putty (or other serial tools).
 
 - <font face="" size=3 font color="ff0000">③</font> **USB Power Input:**
-This port is used to provide power for Respeaker Core v2.
+This port is used to provide power for Respeaker Core v2.0.
 
 - <font face="" size=3 font color="ff0000">④</font> **Speaker Jack:**
 Output audio for passive speakers. Jst 2.0 Socket.
 
 - <font face="" size=3 font color="ff0000">⑤</font> **UART:**
-You also can connect the ReSpeaker Core v2 with your computer via this UART port.
+You also can connect the ReSpeaker Core v2.0 with your computer via this UART port.
 
 - <font face="" size=3 font color="ff0000">⑥</font> **8 Pins GPIO:**
 General Purpose Input Output interface for extended applications.
@@ -154,10 +154,10 @@ General Purpose Input Output interface for extended applications.
 To plug in micro-SD card.
 
 - <font face="" size=3 font color="ff0000">⑧</font> **eMMC:**
-Embedded Multi Media Card. You can burn the image into eMMC, so that the ReSpeaker Core v2 can boot from the eMMC.
+Embedded Multi Media Card. You can burn the image into eMMC, so that the ReSpeaker Core v2.0 can boot from the eMMC.
 
 - <font face="" size=3 font color="ff0000">⑨</font> **USB Host:**
-You can plug USB device, such as USB mouse,USB keyboard and USB flash disk into ReSpeaker Core v2 via those two USB hosts.
+You can plug USB device, such as USB mouse,USB keyboard and USB flash disk into ReSpeaker Core v2.0 via those two USB hosts.
 
 - <font face="" size=4 font color="ff0000">Ⓐ</font> **Ethernet:**
 Access to the Internet.
@@ -231,7 +231,7 @@ MRAA|	HEADER PIN INDEX |	SYSFS PIN	|RK3229 PIN
 
 ### Prerequisites
 
-- ReSpeaker Core V2
+- ReSpeaker Core V2.0
 - Wi-Fi Network
 - 4GB (or more) SD card and SD card reader
 - PC or Mac
@@ -247,7 +247,7 @@ Please plug the USB cable gently, otherwise you may damage the interface.Please 
 
 ### Image Installation
 
-Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2 image from an SD card to get up and running. We offer two ways to boot the Respeaker core v2. You can either boot from the SD card or [boot from the eMMC](/boot from the eMMC).
+Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2.0 image from an SD card to get up and running. We offer two ways to boot the Respeaker core v2.0. You can either boot from the SD card or [boot from the eMMC](/boot from the eMMC).
 
 #### A. Boot from the SD card
 
@@ -260,7 +260,7 @@ Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2 image fro
 
 |Section|Description|
 |---|----|
-|**iot** / **lxqt**|The **lxqt** version comes with a desktop GUI while the **iot** version does not. If you are new to ReSpeaker Core V2, **lxqt** version is recommended.|
+|**iot** / **lxqt**|The **lxqt** version comes with a desktop GUI while the **iot** version does not. If you are new to ReSpeaker Core v2.0, **lxqt** version is recommended.|
 |**flasher** / **sd**|The **flasher** version is used to flash the onboard eMMC, after flashing you can remove the SD card. The **sd** version will require the SD card to stay inserted all the time.|
 
   For development, we recommend the **lxqt + sd** version. So please download the **respeaker-debian-9-lxqt-sd-[date]-4gb.img.xz** file.
@@ -283,7 +283,7 @@ This wiki is based on the **respeaker-debian-9-lxqt-sd-20180118-4gb.img.xz** ver
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/v2-flash-sd.png)
 
 
-- **Step 4.** After writing the image to the SD card, insert the SD card in your ReSpeaker Core V2. Power the board using the PWR_IN micro usb port and DO NOT remove the SD card after powering on. ReSpeaker Core V2 will boot from the SD card, and you can see USER1 and USER2 LEDs light up. USER1 is typically configured at boot to blink in a heartbeat pattern and USER2 is typically configured at boot to light during SD card accesses. Now, you should go to the next part: Serial Console.
+- **Step 4.** After writing the image to the SD card, insert the SD card in your ReSpeaker Core v2.0. Power the board using the PWR_IN micro usb port and DO NOT remove the SD card after powering on. ReSpeaker Core v2.0 will boot from the SD card, and you can see USER1 and USER2 LEDs light up. USER1 is typically configured at boot to blink in a heartbeat pattern and USER2 is typically configured at boot to light during SD card accesses. Now, you should go to the next part: Serial Console.
 
 
 #### B. Boot from the eMMC
@@ -294,7 +294,7 @@ You also can flash the ReSpeaker image files to the ReSpeaker's eMMC (onboard fl
 
 - **Step 2.** Burn the ```*.img.xz``` file directly to SD card with Etcher, or unzip the ```*.img.xz``` file to a ```*.img``` file, then burn it to SD card with other image writing tools.
 
-- **Step 3.** After burning SD card, insert the SD card in the ReSpeaker Core V2. Power the board using the PWR_IN micro usb port and do not remove the SD card while it's flashing.
+- **Step 3.** After burning SD card, insert the SD card in the ReSpeaker Core v2.0. Power the board using the PWR_IN micro usb port and do not remove the SD card while it's flashing.
 
 During the flashing process, you'll see the USER1 and USER2 LEDs blink alternately. It will take about 10 minutes to complete. When the LEDs turn off, you can power off the board, pull out the SD card and power again. If the LEDs light up, that means the image was flashed to the eMMC correctly.
 
@@ -303,7 +303,7 @@ You can also check the image version with this command: cat /etc/issue.net.
 
 ### Serial Console
 
-Now your ReSpeaker Core V2 can boot, you might want to get access to the Linux system via a console, to setup the WiFi, etc. You have two ways to get the console:
+Now your ReSpeaker Core v2.0 can boot, you might want to get access to the Linux system via a console, to setup the WiFi, etc. You have two ways to get the console:
 
 - A. The OTG USB port - This requires a running Linux system on the board
 
@@ -325,7 +325,7 @@ Now your ReSpeaker Core V2 can boot, you might want to get access to the Linux s
 
 - **Step 3.** Use your favorite serial debugging tool to connect the serial port, the serial has: 115200 baud rate, 8Bits, Parity None, Stop Bits 1, Flow Control None. For examples:
 
-    - Windows: use [PUTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), select ```Serial``` protocol, fill in the correct COM port of ReSpeaker Core V2, ```115200``` baud, 8Bits, Parity None, Stop Bits 1, Flow Control None.
+    - Windows: use [PUTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), select ```Serial``` protocol, fill in the correct COM port of ReSpeaker Core v2.0, ```115200``` baud, 8Bits, Parity None, Stop Bits 1, Flow Control None.
     - Linux: Depend on your USB To TTL Adapter, it could be ```screen /dev/ttyACM0(,1, and so on)``` 115200 or ```screen /dev/ttyUSB0(,1, and so on) 115200```
     - Mac: Depend on your USB To TTL Adapter, it could be ```screen /dev/cu.usbserial1412(,1422, and so on) 115200``` or ```screen /dev/cu.usbmodem1412(,1422, and so on) 115200```
 
@@ -340,7 +340,7 @@ In this section we will guide you how to establish a connection from your comput
 - **Step 1.** Connect Uart port and your PC/Mac with an USB To TTL Adapter. Note that the voltage of RX/TX are 3.3V. If you don't have an USB To TTL Adapter, you can click [here](https://www.seeedstudio.com/USB-To-Uart-5V%26amp%3B3V3-p-1832.html) to get one.
 
 - **Step 2.** Use the following Serial debugging tools with 115200 baud:
-    - Windows: use [PUTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), select ```Serial``` protocol, fill in the correct COM port of ReSpeaker Core V2, 115200 baud, 8Bits, Parity None, Stop Bits 1, Flow Control None.
+    - Windows: use [PUTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), select ```Serial``` protocol, fill in the correct COM port of ReSpeaker Core v2.0, 115200 baud, 8Bits, Parity None, Stop Bits 1, Flow Control None.
     - Linux: Depend on your USB To TTL Adapter, it could be ```screen /dev/ttyACM0(,1, and so on) 115200``` or ```screen /dev/ttyUSB0(,1, and so on) 115200```.
     - Mac: Depend on your USB To TTL Adapter, it could be ```screen /dev/cu.usbserial1412(,1422, and so on) 115200``` or ```screen /dev/cu.usbmodem1412(,1422, and so on) 115200```.
 
@@ -375,7 +375,7 @@ Then you will see a config page like this, select ```Activate a connection``` an
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/nmtui1-1.png)
 
-Select your Wi-Fi for ReSpeaker V2, press ```Enter``` key and type your Wi-Fi password and press ```Enter``` key again. When you see a ```*``` mark, it means that your ReSpeaker has successfully connected to your Wi-Fi network. Tap ```Esc``` key twice to leave the network manager config tool.
+Select your Wi-Fi for ReSpeaker v2.0, press ```Enter``` key and type your Wi-Fi password and press ```Enter``` key again. When you see a ```*``` mark, it means that your ReSpeaker has successfully connected to your Wi-Fi network. Tap ```Esc``` key twice to leave the network manager config tool.
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/nmtui1-2.png)
 
@@ -427,7 +427,7 @@ You can connect to a network using an Ethernet cable. Just plug the Ethernet cab
 
 #### A. SSH
 
-SSH server starts automatically in ReSpeaker V2. For Windows Users, third-party SSH clients are available. For Linux/Mac Users, SSH client is built in.
+SSH server starts automatically in ReSpeaker v2.0. For Windows Users, third-party SSH clients are available. For Linux/Mac Users, SSH client is built in.
 
 - Windows: Use PUTTY, select SSH protocol, fill in correct IP address and click open. Login as respeaker user and password is respeaker too.
 
@@ -445,9 +445,9 @@ Note that if experience slow performance using SSH, please switch to a less crow
 #### B. VNC
 
 In order to acquire the authorization from Alexa, you need to use VNC Viewer. The system has VNC server built-in. The VNC server will launch the **lxqt** desktop GUI which is a lightweight Qt desktop environment.
-The VNC service also starts automatically. Use [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/) or [VNC Viewer for Google Chrome](https://chrome.google.com/webstore/detail/vnc%C2%AE-viewer-for-google-ch/iabmpiboiopbgfabjmgeedhcmjenhbla?hl=en) to connect to the desktop of ReSpeaker Core v2.
+The VNC service also starts automatically. Use [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/) or [VNC Viewer for Google Chrome](https://chrome.google.com/webstore/detail/vnc%C2%AE-viewer-for-google-ch/iabmpiboiopbgfabjmgeedhcmjenhbla?hl=en) to connect to the desktop of ReSpeaker Core v2.0.
 
-To use VNC, connect your PC/Mac and ReSpeaker v2 to the same Wi-Fi network. Then open VNC Viewer, type ```192.168.xxx.xxx``` at the address bar. ```192.168.xxx.xxx``` is IP address of the board，you can use the command **ifconfig** to check. If you meet ```Unencrypted connection```, click Continue to go on. The password is ```respeaker```.
+To use VNC, connect your PC/Mac and ReSpeaker v2.0 to the same Wi-Fi network. Then open VNC Viewer, type ```192.168.xxx.xxx``` at the address bar. ```192.168.xxx.xxx``` is IP address of the board，you can use the command **ifconfig** to check. If you meet ```Unencrypted connection```, click Continue to go on. The password is ```respeaker```.
 ![](https://user-images.githubusercontent.com/5130185/34665797-93b222d6-f49c-11e7-8112-704f91163038.png)
 
 Note!!!
@@ -520,13 +520,13 @@ arecord -v -f cd hello3.wav
 aplay hello3.wav
 ```
 
-So far we learned the basic operations of the ReSpeaker Core v2 board, let's move forward. We can use ReSpeaker Core v2 to build our own AVS(Alexa Voice Service) device or Dueros(Voice assistance of Baidu) device.
+So far we learned the basic operations of the ReSpeaker Core v2.0 board, let's move forward. We can use ReSpeaker Core v2.0 to build our own AVS(Alexa Voice Service) device or Dueros(Voice assistance of Baidu) device.
 
 
 
 ### Play with AVS (Alexa Voice Service)
 
-This guide will shows you how to build an AVS device based on the ReSpeaker Core V2.
+This guide will shows you how to build an AVS device based on the ReSpeaker Core V2.0.
 
 #### Step 1. Install AVS library (Python)
 
@@ -624,7 +624,7 @@ When you run the python program, you can say **Alexa** to wake up the Baidu voic
 
 ### GPIO
 
-This part will introduce how to use **MRAA** and **UPM** to control GPIO and Grove Socket on Respeaker Core v2.
+This part will introduce how to use **MRAA** and **UPM** to control GPIO and Grove Socket on Respeaker Core v2.0.
 
 #### Step 1. Update MRAA and UPM libraries to latest version
 
@@ -668,7 +668,7 @@ respeaker@v2:~$ mraa-gpio list
 11         GND:
 12      GPIO66: GPIO
 ```
-The description of the PIN defines for the ReSpeaker Core V2 board please refer to [Pin Out]()
+The description of the PIN defines for the ReSpeaker Core v2.0 board please refer to [Pin Out]()
 
 
 #### Step 3. Demos with MRAA or UPM
@@ -681,12 +681,12 @@ The description of the PIN defines for the ReSpeaker Core V2 board please refer 
 Materials
 
 
-| ReSpeaker Core v2 |  Grove - Buzzer |
+| ReSpeaker Core v2.0 |  Grove - Buzzer |
 |--------------|-------------|
 |![enter image description here](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/ReSpeaker_V2_back_little.jpg)|![enter image description here](https://github.com/SeeedDocument/Base_Shield_V2/raw/master/img/Buzzer.png)|
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|
 
-Connect the Grove PIR sensor's **SIG** pin to the ReSpeaker Core v2's header pin **0** with jumper. Don't forget to wire the VCC and GND at the same time. Then tap the code below into your console
+Connect the Grove PIR sensor's **SIG** pin to the ReSpeaker Core v2.0's header pin **0** with jumper. Don't forget to wire the VCC and GND at the same time. Then tap the code below into your console
 
 ```
 respeaker@v2:~$ python
@@ -711,15 +711,15 @@ When you tap **x.write(1)**,you will heard a scream from the buzzer.
 
 Materials
 
-| ReSpeaker Core v2 |  Grove -  PIR Motion Sensor |
+| ReSpeaker Core v2.0 |  Grove -  PIR Motion Sensor |
 |--------------|-------------|
 |![enter image description here](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/ReSpeaker_V2_back_little.jpg)|![enter image description here](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Grove%20-%20PIR%20Motion%20Sensor.jpg)|
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-PIR-Motion-Sensor-p-802.html)|
 
 
 In this example, we're gonna to listen on the trigger of the Grove PIR sensor, in Python code.
-Connect the Grove PIR sensor's **D1** pin to the ReSpeaker Core v2's header pin **0** with jumper. Don't forget to wire the VCC and GND at the same time.
-Then copy the code below into a new file and save it as a python file, name as **mraa_pir.py**. Copy this file into your ReSpeaker Core v2.
+Connect the Grove PIR sensor's **D1** pin to the ReSpeaker Core v2.0's header pin **0** with jumper. Don't forget to wire the VCC and GND at the same time.
+Then copy the code below into a new file and save it as a python file, name as **mraa_pir.py**. Copy this file into your ReSpeaker Core v2.0.
 
 ```
 import mraa
@@ -761,7 +761,7 @@ pin 1091 = 1
 
 ##### B. Use UPM Library
 
-The UPM project implements sensors' driver based on the MRAA library, so we no longer need to care about the GPIO programming or what the I2C address of a sensor, all the default informations and logics for a particular sensor has been wrapped into a UPM library. UPM has supported bunch of sensors. https://iotdk.intel.com/docs/master/upm/modules.html. But please note that we didnt confirm every sensor works on the ReSpeaker Core V2.
+The UPM project implements sensors' driver based on the MRAA library, so we no longer need to care about the GPIO programming or what the I2C address of a sensor, all the default informations and logics for a particular sensor has been wrapped into a UPM library. UPM has supported bunch of sensors. https://iotdk.intel.com/docs/master/upm/modules.html. But please note that we didnt confirm every sensor works on the ReSpeaker Core v2.0.
 
 **Example for Grove Digital Light Sensor**
 
@@ -775,8 +775,8 @@ Materials
 
 This is an example for the Grove Digital Light Sensor, which is copied from the UPM github repo.
 
-Please plug the PIR Motion Sensor into your Respeaker Core v2 via the Grove socket.
-Then copy the code below into a new file and save it as a python file, name as **tsl2561.py**. Copy this file into your ReSpeaker Core v2.
+Please plug the PIR Motion Sensor into your Respeaker Core v2.0 via the Grove socket.
+Then copy the code below into a new file and save it as a python file, name as **tsl2561.py**. Copy this file into your ReSpeaker Core v2.0.
 
 ```
 #!/usr/bin/env python
@@ -861,17 +861,17 @@ Light value is 31
   - Step 2. Click the **Stop** button, then you will see channel 7 and 8 are empty.
   - Step 3. Click **Record** button again, this time you will find Channel 8 changed.
 
-#### Q2: If I do not have suitable cable to access the Serial Console how can I get into ReSpeaker Core v2?
+#### Q2: If I do not have suitable cable to access the Serial Console how can I get into ReSpeaker Core v2.0?
 
-**A2:** You can use two wires cable to power the ReSpeaker Core v2. When the system is running, the Respeaker Core v2 can act as an AP. You can use your computer to
-access this AP. As the picture show. You can follow the steps to configure the WiFi of ReSpeaker Core v2.
+**A2:** You can use two wires cable to power the ReSpeaker Core v2.0. When the system is running, the Respeaker Core v2.0 can act as an AP. You can use your computer to
+access this AP. As the picture show. You can follow the steps to configure the WiFi of ReSpeaker Core v2.0.
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Ap.png)
 
-- **Step 1.** Access the AP of ReSpeaker Core v2. The AP name is something like **ReSpeaker_xxxx**, the user is **respeaker**, the password is **respeaker** too.
+- **Step 1.** Access the AP of ReSpeaker Core v2.0. The AP name is something like **ReSpeaker_xxxx**, the user is **respeaker**, the password is **respeaker** too.
 
 - **Step 2.** Now you can use Putty, SSH mode to get into the Serial Console. The ip of the Wlan1 is **192.168.42.1**, you need to use this ip to setup connection.
-And the user name of ReSpeaker Core v2 is **respeaker**, the password is **respeaker**.
+And the user name of ReSpeaker Core v2.0 is **respeaker**, the password is **respeaker**.
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/AP2.png)
 
@@ -894,7 +894,7 @@ And you can adjust the value by pressing the **Up** or **Down** key.
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Alexamixer.png)
 
 #### Q4: How to use the user button.
-**A4:** As you can see, there is an user button at the back of ReSpeaker Core v2. Here we provide a python demo to show how to use it.
+**A4:** As you can see, there is an user button at the back of ReSpeaker Core v2.0. Here we provide a python demo to show how to use it.
 
 - **Step 1.** Tap the command below:
 

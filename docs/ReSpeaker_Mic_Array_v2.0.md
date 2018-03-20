@@ -1,8 +1,8 @@
 ---
-title: ReSpeaker Mic Array v2
+title: ReSpeaker Mic Array v2.0
 category: ReSpeaker
 bzurl:
-oldwikiname: ReSpeaker Mic Array v2
+oldwikiname: ReSpeaker Mic Array v2.0
 prodimagename:
 surveyurl:
 sku: 107990053

@@ -152,10 +152,10 @@ pages:
           - ReSpeaker 2-Mics Pi HAT: ReSpeaker_2_Mics_Pi_HAT.md
           - ReSpeaker 4-Mic Array for Raspberry Pi: ReSpeaker_4_Mic_Array_for_Raspberry_Pi.md
           - ReSpeaker Core: ReSpeaker_Core.md
-          - ReSpeaker Core v2: ReSpeaker_Core_v2.md
+          - ReSpeaker Core v2.0: ReSpeaker_Core_v2.0.md
           - ReSpeaker Drive Unit: ReSpeaker_Drive_Unit.md
           - ReSpeaker Mic Array: ReSpeaker_Mic_Array.md
-          - ReSpeaker Mic Array v2: ReSpeaker_Mic_Array_v2.md
+          - ReSpeaker Mic Array v2.0: ReSpeaker_Mic_Array_v2.0.md
           
 
       - Shield:
