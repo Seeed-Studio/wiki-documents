@@ -1,6 +1,6 @@
 ---
 title: Grove - Button
-category: Actuator
+category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-Button-p-766.html
 oldwikiname: Grove - Button
 prodimagename: Button.jpg
@@ -8,63 +8,73 @@ surveyurl: https://www.surveymonkey.com/r/grove-button
 sku: 101020003
 ---
 
----
-
 ![](https://github.com/SeeedDocument/Grove_Button/raw/master/image/Button.jpg)
 
-**Grove - Button** is a momentary push button. It contains one independent "momentary on/off" button. “Momentary” means that the button rebounds on its own after it is released. The button outputs a HIGH signal when pressed, and LOW when released. The button signals the SIG Pin of the Grove Interface while NC is not used at all. There are two versions of this button available as showed in the pictures. The only difference between them is the direction of the Grove socket.
+Grove - Button is a momentary push button. It contains one independent "momentary on/off" button. “Momentary” means that the button rebounds on its own after it is released. The button outputs a HIGH signal when pressed, and LOW when released. The Sig marked on silk layer stands for signal while NC stands for not used at all. There are two versions of this button available as showed in the pictures. The only difference is the direction of the Grove socket.
 
 [![](https://github.com/SeeedDocument/Grove_Button/raw/master/image/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-Button-p-766.html)
+
+## Version
+---
+
+| Product Version              | Changes                                                                                                                                                                                    | Released Date |
+|------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
+| Grove-Button | Initial                                                                                                                                                                                    | Nov 25 2010      |
 
 ## Features
 ---
 - Easy to use momentary ON/OFF button
-- Uses Standard 4-pin Grove Cables to connect to other Grove modules such as Grove Power Modules and Grove - Base Shield
+- Uses Standard 4-pin Grove Cables
 
 !!!Tip
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
-## Usage
+## Platforms Supported
 ---
-**Standalone**
 
-Follow these steps to build a sample circuit using this module but without using any microcontroller:
-- Connect the button module to the input side of your circuit (to the left of the power module). On the output side of the circuit, you may use a range of User [Interface modules](/Grove/Grove_System/) (Grove - Red LED, Grove - LED String Light, Grove - Mini Fan, Grove - Buzzer, Grove - Recorder etc.)
-- Power up the circuit when complete.
-- The button module can now be used to trigger an output. For example:
-  - When used in conjunction with a Grove - Red LED output module, observe that the LED turns ON when you press the button and turns OFF when you stop pressing it.
+| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
+|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo.jpg) |
 
-![](https://github.com/SeeedDocument/Grove_Button/raw/master/image/Grove-momentarySwitch-RedLED.jpg)
+!!!Caution
+    The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
-In terms of power modules, use either the Grove - USB Power module or the Grove - DC Jack Power module for the Grove circuit.
 
-**With Arduino**
+##  Getting Started
+---
 
-Follow these simple steps to build a Grove circuit using the momentary ON/OFF button:
+### Play With Arduino
 
-When using the module in conjunction with an Arduino or a Seeeduino, use the Grove - Base Shield and connect the Grove - Button module to the shield using a designated Grove interface. Also attach an output module such as a Grove - Red LED which will get triggered based on input received from the button.
-Upload the following sample sketch to make the LED turn ON and OFF based on input from Grove - Button:
+#### Hardware
+
+- Step 1. Prepare the below stuffs:
+
+| Seeeduino V4.2 | Base Shield|  Grove - Red LED |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Button/raw/master/img/button_s.jpg)|
+|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Button-p-766.html)|
+
+- Step 2. Connect Grove-Button to port D2 of Grove-Base Shield.
+- Step 3. Plug Grove - Base Shield into Arduino.
+- Step 4. Connect Arduino to PC through a USB cable.
+
+![](https://github.com/SeeedDocument/Grove_Button/raw/master/img/seeeduino_button.jpg)
+
+!!!Note
+	If we don't have Grove Base Shield, We also can directly connect Grove-Red_Led to Arduino as below.
+
+| Seeeduino       | Grove-Button |
+|---------------|-------------------------|
+| 5V           | Red                     |
+| GND           | Black                   |
+| Not Conencted | White                   |
+| D2            | Yellow                  |
+
+#### Software
+
+- Step 1. Copy the code into Arduino IDE and upload.
 
 ```c
-//Turns on and off a light emitting diode(LED) connected to digital pin 13, when pressing a pushbutton attached to pin 2.
-
-/*
- The circuit:
- * LED attached from pin 13 to ground
- * pushbutton attached to pin 2 from +5V
- * 10K resistor attached to pin 2 from ground
-
- * Note: on most Arduinos there is already an LED on the board
- attached to pin 13.
-
-
- This example code is in the public domain.
-
- http://www.arduino.cc/en/Tutorial/Button
- */
-
-// constants won't change. They're used here to
-// set pin numbers:
 const int buttonPin = 2;     // the number of the pushbutton pin
 const int ledPin =  13;      // the number of the LED pin
 
@@ -94,17 +104,48 @@ void loop(){
     }
 }
 ```
-**With Raspberry Pi**
 
-This is a simple example of Raspberry Pi. Run Program and press button, it will print 1 on the terminal, else print 0. Such as the picture below.
+- Step 2. We will see the on board Pin13 LED on and off.
 
-![](https://github.com/SeeedDocument/Grove_Button/raw/master/image/GrovePi%2B_grove_button.jpg)
 
-![](https://github.com/SeeedDocument/Grove_Button/raw/master/image/Grovepi%2B_grove_button_terminal.jpg)
+
+### Play With Raspberry Pi
+
+#### Hardware
+
+- Step 1. Prepare the below stuffs:
+
+| Raspberry pi | GrovePi_Plus | Grove - Button |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Button/raw/master/img/button_s.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Button-p-766.html)|
+
+- Step 2. Plug the GrovePi_Plus into Raspberry.
+- Step 3. Connect Grove-Button to D3 port of GrovePi_Plus.
+- Step 4. Connect the Raspberry to PC through USB cable.
+
+![](https://github.com/SeeedDocument/Grove_Button/raw/master/img/rasp_button.jpg)
+
+#### Software
+
+- Step 1. Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment.
+- Step 2. Git clone the Github repository.
+
+```
+cd ~
+git clone https://github.com/DexterInd/GrovePi.git
+
+```
+- Step 3. Excute below commands.
+
+```
+cd ~/GrovePi/Software/Python
+python grove_button.py
+```
+
+Here is the grove_button.py code.
 
 ```python
-# http://www.seeedstudio.com/wiki/Grove_-_Button
-
 import time
 import grovepi
 
@@ -116,36 +157,31 @@ grovepi.pinMode(button,"INPUT")
 
 while True:
     try:
-        print grovepi.digitalRead(button)
+        print(grovepi.digitalRead(button))
         time.sleep(.5)
 
     except IOError:
-        print "Error"
+        print ("Error")
 ```
 
-**Run The Program**
+- Step 4. We will see the button on and off.
 
-- Find the path to the file(According to your own path)
 ```
-cd GrovePi/Software/Python/
+pi@raspberrypi:~/GrovePi/Software/Python $ python grove_button.py
+0
+1
+1
+1
+1
+0
+0
 ```
-- Run Progrom
-```
-sudo python grove_button.py
-```
 
-**Related Grove Packer**
+## Resources
+---
+- **[Eagle&PDF]** [Grove-Button Eagle Files](https://github.com/SeeedDocument/Grove_Button/raw/master/resources/Grove_-_Button_v1.0_Source_File.zip)
 
-The standard Grove - Button module is available as part of the following Grove Kit Series:
-
-|Grove - Mixer Pack V2|Grove - Mixer Pack|Grove - Starter Kit V1.1b|
-|:---:|:---:|:---:|
-|![](https://github.com/SeeedDocument/Grove_Button/raw/master/image/mixer%20pack%20v2.jpg)|![](https://github.com/SeeedDocument/Grove_Button/raw/master/image/mixer%20pack.jpg)|![](https://github.com/SeeedDocument/Grove_Button/raw/master/image/Newbundle1.jpg)|
-|<a href="https://www.seeedstudio.com/Mixer-Pack-V2(Electronic-blocks%2Cwithout-Arduino%2Cplug-and-play-system)-p-1867.html">Get One Now</a>|[Get One Now](https://www.seeedstudio.com/Grove-Mixer-Pack-p-1590.html)|[Get One Now](https://www.seeedstudio.com/Grove-Starter-Kit-for-Arduino-p-1855.html)|
-Alternatively, it can be bought stand-alone [here](https://www.seeedstudio.com/Grove-Button-p-766.html)at the Seeed Studio [Bazaar](https://www.seeedstudio.com/). To buy the Panel Mount version of the module, go to [here](http://www.seeedstudio.com/depot/Grove-ButtonP-p-1243.html)
-
-
-##Project
+- **[More Reading]** [Wooden Laser Gun](http://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove_Button/master/img/gun.jpg)
 
@@ -153,13 +189,7 @@ Inspired by OVERWATCH, we have made a very cool Wooden Laser Gun toy for fun the
 
 The Wooden Laser Gun and the Gun Target are all based on an Arduino board called Seeeduino Lotus. The laser emitter on the Laser Gun is controlled to fire laser pulse to "activate" the Gun Target. And there are 3 light sensors on the Gun Target to detect the laser pulse. It seems very simple right? If you are interested in our project, please make one for yourself or your child! It's worth to spend one day DIY it as a Xmas present.    
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/make.png)](http://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)
-
-## Resources
----
-- [Schematic at Easyeda](https://easyeda.com/Seeed/Grove_Button_v1_2-f0f9f212fcee460ebe3703dab813e5c4)
-- [Grove-Button Eagle Files](https://github.com/SeeedDocument/Grove_Button/raw/master/resources/Grove_-_Button_v1.0_Source_File.zip).
-- [How to upload code](http://wiki.seeedstudio.com/wiki/Upload_Code)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+---
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/).

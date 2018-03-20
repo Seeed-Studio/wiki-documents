@@ -10,7 +10,6 @@ Grove - Actuators includes motor drivers, LED displays, Relay, Speakers, Buzzers
 
 - [Atom Node](/Atom_Node/)
 - [Grove - 2-Coil Latching Relay](/Grove-2-Coil_Latching_Relay/)
-- [Grove - Button](/Grove-Button/)
 - [Grove - Buzzer](/Grove-Buzzer/)
 - [Grove - Chainable RGB LED](/Grove-Chainable_RGB_LED/)
 - [Grove - Dry-Reed Relay](/Grove-Dry-Reed_Relay/)

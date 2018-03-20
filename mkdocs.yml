@@ -335,6 +335,7 @@ pages:
           - Grove - Barometer Sensor (BMP180): Grove-Barometer_Sensor-BMP180.md
           - Grove - Barometer Sensor (BMP280): Grove-Barometer_Sensor-BMP280.md
           - Grove - Barometer Sensor(BME280): Grove-Barometer_Sensor-BME280.md
+          - Grove - Button: Grove-Button.md
           - Grove - CO2 Sensor: Grove-CO2_Sensor.md
           - Grove - Chest Strap Heart Rate Sensor: Grove-Chest_Strap_Heart_Rate_Sensor.md
           - Grove - Collision Sensor: Grove-Collision_Sensor.md
@@ -416,7 +417,6 @@ pages:
           - Actuator Introduction: Actuator.md
           - Atom Node: Atom_Node.md
           - Grove - 2-Coil Latching Relay: Grove-2-Coil_Latching_Relay.md
-          - Grove - Button: Grove-Button.md
           - Grove - Buzzer: Grove-Buzzer.md
           - Grove - Chainable RGB LED: Grove-Chainable_RGB_LED.md
           - Grove - Dry-Reed Relay: Grove-Dry-Reed_Relay.md
