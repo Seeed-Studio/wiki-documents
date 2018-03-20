@@ -11,7 +11,7 @@ sku: 107990053
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/usb_4_mic_array.png)
 
 
-Seeed’s ReSpeaker Mic Array v2.0 is an upgraded version of ReSpeaker Mic Array v1 which based on XVSM-2000. The v2.0 developed based on XVF-3000 from XMOS. It can be stacked (connected) right onto the top of ReSpeaker Core to significantly improve the voice interaction experience. The board integrates 4 PDM microphones to help enhance ReSpeaker's acoustic DSP performance to a much higher level.  
+Seeed’s ReSpeaker Mic Array v2.0 is an upgraded version of ReSpeaker Mic Array v1 which is based on XVSM-2000. The v2.0 developed based on XVF-3000 from XMOS. It can be stacked (connected) right onto the top of ReSpeaker Core to significantly improve the voice interaction experience. The board integrates 4 PDM microphones to help enhance ReSpeaker's acoustic DSP performance to a much higher level.  
 
 ReSpeaker Mic Array v2.0 supports USB Audio Class 1.0(UAC 1.0) directly. All major Operating System, like Windows, macOS, Linux are compatible with UAC 1.0, so it can be runs as a sound card without ReSpeaker Core, but has speech algorithm, like farfield on those systems.
 
@@ -23,8 +23,8 @@ ReSpeaker Mic Array v2.0 has two firmwares, one includes speech algorithms, anot
 
 | Product Version          | Changes                                                                  | Released Date |
 |--------------------------|--------------------------------------------------------------------------|---------------|
-| ReSpeaker Mic Array V1.0 | Initial                                                                  | Aug 15, 2016  |
-| ReSpeaker Mic Array V2.0 | XVSM-2000 is EOL,change MCU to XVF-3000 and reduce the Mics from 7 to 4. | Jan 25, 2018  |
+| ReSpeaker Mic Array v1.0 | Initial                                                                  | Aug 15, 2016  |
+| ReSpeaker Mic Array v2.0 | XVSM-2000 is EOL,change MCU to XVF-3000 and reduce the Mics from 7 to 4. | Jan 25, 2018  |
 
 ## Features
 
@@ -179,7 +179,7 @@ The MP34DT01-M is an ultra-compact, lowpower, omnidirectional, digital MEMS micr
 ## Getting Started
 
 !!!Note
-    ReSpeaker_Mic_Array_V2 is compatiable with Windows, Mac and Linux systems.
+    ReSpeaker Mic Array v2.0 is compatiable with Windows, Mac and Linux systems. The below scripts are tested on Python2.7. 
 
 ### Install DFU and LED Control Driver  
 
@@ -201,7 +201,7 @@ There are 2 firmwares. One includes 1 channel data, while the other inlcudes 6 c
 | Firmware             | Channels | Note                                                                                                                                                                    |
 |----------------------|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | default_firmware.bin | 1              | Processed audio for ASR                                                                                                                                                 |
-| i6_firmware.bin      | 6              |  Channel 0: processed audio for ASR,  Channel 1: mic 13 raw data, Channel 2: mic 8 raw data, Channel 3: mic 10 raw data, Channel 4: mic 11 raw data, Channel 5: merged playback |
+| i6_firmware.bin      | 6              |  Channel 0: processed audio for ASR,  Channel 1: mic1 raw data, Channel 2: mic2 raw data, Channel 3: mic3 raw data, Channel 4: mic4 raw data, Channel 5: merged playback |
 
 Here is the audacity recording for the i6_firmware.
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/Audacity.png)
@@ -218,17 +218,7 @@ sudo python dfu.py --download default_firmware.bin  # Change the bin names base 
 Here is the firmware downloading result.
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/Download_firmware.png)
 
-**For Windows:** We develop [python script dfu_windows.py](https://github.com/respeaker/usb_4_mic_array/raw/master/dfu_windows.py) to update the firmware through USB.
-
-```python
-pip install pyusb click
-git clone https://github.com/respeaker/usb_4_mic_array.git
-cd usb_4_mic_array
-sudo python dfu_windows.py --download default_firmware.bin  # Change the bin names base on needs
-```
-
-Here is the firmware downloading result.
-![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/dfu_windows.png)
+**For Windows:** We do not suugest use Windows to update the firmware. 
 
 ### Control the LEDs
 
@@ -271,7 +261,6 @@ Here is the code of the usb_mic_array.py.
 
 ```python
 import time
-
 from pixel_ring import pixel_ring
 
 
