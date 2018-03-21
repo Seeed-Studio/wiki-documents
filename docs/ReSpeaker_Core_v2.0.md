@@ -35,14 +35,16 @@ ReSpeaker Core v2.0 is not only designed for makers/enthusiast, but also a turnk
 
 
 - Debian-based Linux system
-- SDK for speech algorithm with Full documents
 - C++ SDK and Python wrapper
-- Speech algorithms and features
-- Keyword wake-up
-- BF(Beam-Forming)
-- DoA (Direction of arrival)
-- NS(Noise suppression)
-- AEC (Acoustic echo cancellation) and AGC (Automatic gain control)
+- SDK for speech algorithm with Full documents
+- Speech algorithms and features:
+  - Keyword wake-up
+  - BF(Beam-Forming)
+  - DoA (Direction of arrival)
+  - NS(Noise suppression)
+  - AEC (Acoustic echo cancellation) and AGC (Automatic gain control)
+
+
 
 
 
@@ -122,6 +124,7 @@ ReSpeaker Core v2.0 is not only designed for makers/enthusiast, but also a turnk
     <td class="tg-yw4l">360mA</td>
   </tr>
 </table>
+
 
 
 
@@ -226,6 +229,7 @@ MRAA|	HEADER PIN INDEX |	SYSFS PIN	|RK3229 PIN
 
 
 
+
 ## Getting Started
 
 
@@ -249,7 +253,7 @@ Please plug the USB cable gently, otherwise you may damage the interface.Please 
 
 Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2.0 image from an SD card to get up and running. We offer two ways to boot the Respeaker core v2.0. You can either boot from the SD card or [boot from the eMMC](/boot from the eMMC).
 
-#### A. Boot from the SD card
+**A. Boot from the SD card**
 
 
 <p style="text-align:center"><a href="https://bfaceafsieduau-my.sharepoint.com/personal/miaojg22_off365_cn/_layouts/15/guestaccess.aspx?folderid=0bb3c4f3f122d4c2bb0f65eee2b5938f8&authkey=AfLSkcE8QeeUHTQ8GGfrrsU" target="_blank"><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/onedrive.png" width="200" height="40"  border=0 /></a></p>
@@ -268,7 +272,7 @@ Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2.0 image f
 
 <div class="admonition note" >
 <p class="admonition-title">Note</p>
-This wiki is based on the **respeaker-debian-9-lxqt-sd-20180118-4gb.img.xz** version. This wiki have dropped all the verbosities of operations on old system versions, please make sure you have download the latest image.
+This wiki is based on the **respeaker-debian-9-lxqt-sd-20180319-4gb.img.xz** image version.
 </div>
 
 
@@ -286,7 +290,7 @@ This wiki is based on the **respeaker-debian-9-lxqt-sd-20180118-4gb.img.xz** ver
 - **Step 4.** After writing the image to the SD card, insert the SD card in your ReSpeaker Core v2.0. Power the board using the PWR_IN micro usb port and DO NOT remove the SD card after powering on. ReSpeaker Core v2.0 will boot from the SD card, and you can see USER1 and USER2 LEDs light up. USER1 is typically configured at boot to blink in a heartbeat pattern and USER2 is typically configured at boot to light during SD card accesses. Now, you should go to the next part: Serial Console.
 
 
-#### B. Boot from the eMMC
+**B. Boot from the eMMC**
 
 You also can flash the ReSpeaker image files to the ReSpeaker's eMMC (onboard flash memory) directly by using your PC or Mac. Then the ReSpeaker will boot from it's eMMC (onboard flash memory) and not from the SD card.
 
@@ -364,7 +368,7 @@ Now follow step 2 above to connect to your Respeaker over this serial connection
 
 ### Network Setting Up
 
-#### A. Wi-Fi Setting Up
+**A. Wi-Fi Setting Up**
 
 Configure your ReSpeaker's network with the Network Manager tool, nmtui. nmtui will already be installed on the ReSpeaker image.
 
@@ -417,15 +421,16 @@ nmcli con modify mywifi wifi-sec.psk your_wifi_password
 nmcli con up mywifi
 ```
 
-#### B. Ethernet Connectivity
+**B. Ethernet Connectivity**
 
 You can connect to a network using an Ethernet cable. Just plug the Ethernet cable which has connected to the Internet will be OK.
 
 
 
+
 ### Connect to SSH & VNC
 
-#### A. SSH
+**A. SSH**
 
 SSH server starts automatically in ReSpeaker v2.0. For Windows Users, third-party SSH clients are available. For Linux/Mac Users, SSH client is built in.
 
@@ -442,7 +447,7 @@ ssh respeaker@192.168.***.***
 Note that if experience slow performance using SSH, please switch to a less crowded WiFi network.
 </div>
 
-#### B. VNC
+**B. VNC**
 
 In order to acquire the authorization from Alexa, you need to use VNC Viewer. The system has VNC server built-in. The VNC server will launch the **lxqt** desktop GUI which is a lightweight Qt desktop environment.
 The VNC service also starts automatically. Use [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/) or [VNC Viewer for Google Chrome](https://chrome.google.com/webstore/detail/vnc%C2%AE-viewer-for-google-ch/iabmpiboiopbgfabjmgeedhcmjenhbla?hl=en) to connect to the desktop of ReSpeaker Core v2.0.
@@ -455,6 +460,7 @@ Note!!!
 
 
 
+
 ### Connect to Speaker or Headset
 
 The board uses the built-in codec of the SOC to render playback. Both the JST speaker port and the headset port are driven by their own amplifier, and both amplifiers are connected to the same codec of the SOC. The sound card driver that SEEED implemented drives both the capture device and the playback device. So there's no discrete capture or playback sound card in ALSA device list. They're all named seeed-8mic-voicecard.
@@ -463,9 +469,120 @@ The simplest way to heard sound from the board is to plugin a headset. If you pr
 
 
 
+
+### Bluetooth Setting Up
+
+**Activate the bluetooth**
+
+Please tap the commands below to update and activate the Bluetooth of ReSpeaker Core v2.0.
+
+```
+sudo apt update
+sudo apt upgrade
+
+```
+!!!Note
+If everything goes well, a package named **re-blooth** will be set up. If not, please change to another WiFi with good network condition and do the update again.
+
+Then activate the bluetooth by the command:
+
+```
+sudo systemctl enable bt-auto-connect.service
+sudo reboot -f
+```
+
+**Using the ReSpeaker Core v2.0 as a Bluetooth Speaker**
+
+When the ReSpeaker Core v2.0 restart, open the bluetooth of your phone or computer, you will find a bluetooth device called **ReSpeaker-xxxx**.
+Choose and connect to it. Plug a speaker or headset into the ReSpeaker Core v2.0 then play music and enjoy your bluetooth speaker.
+
+
+![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Bluetooth_connect.png)
+
+**Using the ReSpeaker Core v2.0 as a Bluetooth Player**
+
+In addition to just working as a bluetooth speaker, it can also serve as a bluetooth player to hack your bluetooth headset or bluetooth speaker.
+OK, let's hacking.
+
+- **Step 1.** Tap `bluetoothctl` to open the bluetooth shell.
+
+- **Step 2.** Tap `scan on` to scan your bluetooth device.
+
+- **Step 3.** When the ReSpeaker Core v2.0 find your target device, tap `scan off`.
+For this wiki, say, MDR-1000X headset is our target, mark the device ID Device `04:5D:4B:81:35:84`.
+
+```
+respeaker@v2:~$ bluetoothctl
+[NEW] Controller 43:43:A0:12:1F:AC ReSpeaker-1FAC [default]
+Agent registered
+[bluetooth]# scan on
+Discovery started
+[CHG] Controller 43:43:A0:12:1F:AC Discovering: yes
+[NEW] Device C8:69:CD:BB:9B:B3 C8-69-CD-BB-9B-B3
+[NEW] Device E1:D9:68:0E:51:C0 MTKBTDEVICE
+[NEW] Device 62:15:9C:3F:40:AA 62-15-9C-3F-40-AA
+[NEW] Device 56:AF:DE:C0:34:25 56-AF-DE-C0-34-25
+[NEW] Device B8:86:87:99:FB:10 SOLARRAIN
+[CHG] Device B8:86:87:99:FB:10 Trusted: yes
+[NEW] Device 04:5D:4B:81:35:84 MDR-1000X
+[CHG] Device 04:5D:4B:81:35:84 Trusted: yes
+[CHG] Device 4C:04:59:38:D3:25 ManufacturerData Key: 0x004c
+[CHG] Device 4C:04:59:38:D3:25 ManufacturerData Value:
+  10 05 0b 10 99 18 0a                             .......
+[bluetooth]# scan off
+[CHG] Device 04:5D:4B:81:35:84 RSSI is nil
+[CHG] Device B8:86:87:99:FB:10 TxPower is nil
+[CHG] Device B8:86:87:99:FB:10 RSSI is nil
+[CHG] Device 4C:04:59:38:D3:25 RSSI is nil
+[CHG] Device 58:44:98:93:35:24 RSSI is nil
+Discovery stopped
+[bluetooth]#
+
+```
+
+- **Step 4.** Now using the command `pair + device ID` to match bluetooth device with the ReSpeaker Core v2.0.
+
+- **Step 5.** When you see the messega `Pairing successful`, tap `connect + device ID`.
+
+```
+[bluetooth]# pair 04:5D:4B:81:35:84
+Attempting to pair with 04:5D:4B:81:35:84
+[CHG] Device 04:5D:4B:81:35:84 Connected: yes
+[CHG] Device 04:5D:4B:81:35:84 UUIDs: 00001108-0000-1000-8000-00805f9b34fb
+[CHG] Device 04:5D:4B:81:35:84 UUIDs: 0000110b-0000-1000-8000-00805f9b34fb
+[CHG] Device 04:5D:4B:81:35:84 UUIDs: 0000110c-0000-1000-8000-00805f9b34fb
+[CHG] Device 04:5D:4B:81:35:84 UUIDs: 0000110e-0000-1000-8000-00805f9b34fb
+[CHG] Device 04:5D:4B:81:35:84 UUIDs: 0000111e-0000-1000-8000-00805f9b34fb
+[CHG] Device 04:5D:4B:81:35:84 ServicesResolved: yes
+[CHG] Device 04:5D:4B:81:35:84 Paired: yes
+Pairing successful
+[CHG] Controller 43:43:A0:12:1F:AC Discoverable: no
+[CHG] Device 04:5D:4B:81:35:84 ServicesResolved: no
+[CHG] Device 04:5D:4B:81:35:84 Connected: no
+[CHG] Controller 43:43:A0:12:1F:AC Discoverable: yes
+[bluetooth]# connect 04:5D:4B:81:35:84
+Attempting to connect to 04:5D:4B:81:35:84
+[CHG] Device 04:5D:4B:81:35:84 Connected: yes
+Connection successful
+[CHG] Device 04:5D:4B:81:35:84 ServicesResolved: yes
+[CHG] Controller 43:43:A0:12:1F:AC Discoverable: no
+[MDR-1000X]#
+```
+
+If `Connection successful` pops up, configuration!
+
+You can tap 'exit' to exit the shell, then use the commands below to test your bluetooth device.
+
+```
+arecord bluetoothtest.wav
+aplay bluetoothtest.wav
+
+```
+
+
 ### Record and Play
 
-#### 1.Test via ALSA
+**1.Test via ALSA**
 
 As this is a technical documentation of development phase, the index of the sound device may change along versions. So check out the correct device index first with the following commands:
 
@@ -475,21 +592,17 @@ respeaker@v2:~$ arecord -l
 card 0: seeed8micvoicec [seeed-8mic-voicecard], device 0: 100b0000.i2s1-ac108-pcm0 ac108-pcm0-0 []
   Subdevices: 1/1
   Subdevice #0: subdevice #0
-card 1: bluetoothvoice [bluetooth-voice], device 0: 100e0000.i2s2-bt-sco-pcm bt-sco-pcm-0 []
-  Subdevices: 1/1
-  Subdevice #0: subdevice #0
+
 respeaker@v2:~$ aplay -l
 **** List of PLAYBACK Hardware Devices ****
 card 0: seeed8micvoicec [seeed-8mic-voicecard], device 1: 100b0000.i2s1-rk3228-hifi rk3228-hifi-1 []
   Subdevices: 1/1
   Subdevice #0: subdevice #0
-card 1: bluetoothvoice [bluetooth-voice], device 0: 100e0000.i2s2-bt-sco-pcm bt-sco-pcm-0 []
-  Subdevices: 1/1
-  Subdevice #0: subdevice #0
 
 ```
 
-Find the sound card whose name has **seeed** prefix. For the example above, the capture device is **hw:0,0**, the playback device is **hw:0,1**. Then test recording and playing sound with the following commands:
+Find the sound card whose name has **seeed** prefix. For the example above, the capture device is **hw:0,0**, which means card **0**/device **0**.
+The playback device is **hw:0,1**, which means card **0**/device **1**.. Then test recording and playing sound with the following commands:
 
 ```
 # record & playback 2 channels audio
@@ -501,7 +614,14 @@ aplay -Dhw:0,1 -r 16000 -c 2 hello.wav
 arecord -Dhw:0,0 -f S16_LE -r 16000 -c 8 hello_8ch.wav
 ```
 
-#### 2. Test via PulseAudio
+Besides you can record and play at the same time.
+
+```
+arecord | aplay
+```
+
+
+**2. Test via PulseAudio**
 
 First check whether the PulseAudio is running:
 
@@ -528,7 +648,8 @@ So far we learned the basic operations of the ReSpeaker Core v2.0 board, let's m
 
 This guide will shows you how to build an AVS device based on the ReSpeaker Core V2.0.
 
-#### Step 1. Install AVS library (Python)
+
+- **Step 1. Install AVS library (Python)**
 
 ```
 respeaker@v2:~$ sudo apt update
@@ -543,7 +664,7 @@ respeaker@v2:~$ ~/.local/bin/alexa-audio-check
 ```
 This script calculates the RMS of the sound recorded by the microphones.
 
-#### Step 2. Authorize Alexa
+- **Step 2. Authorize Alexa**
 
 Connect to the board via [VNC](https://github.com/respeaker/get_started_with_respeaker/blob/master/docs/ReSpeaker_Core_V2/getting_started.md#ssh--vnc). In the VNC desktop, open terminal and execute:
 
@@ -560,15 +681,15 @@ After succeed you will see:
 
 Now you can close the VNC client. The following commands can be executed in the SSH (If you prefer the VNC desktop, the terminal in VNC desktop also works).
 
-#### Step 3. Have fun with Alexa Applications
+- **Step 3. Have fun with Alexa Applications**
 
 We provide three python files based on Alexa, you can choose them freely.
 
-- Alexa-tap.py : Use the **Enter** key to wakeup Alexa, we call it Alexa Tap to Play.
-- ns_kws_alexa.py : Use the key word **Alexa** to wakeup Alexa, we call it Alexa Hands-Free.
-- ns_kws_alexa_with_light.py : The same as ns_kws_alexa.py, add the LED effect, We call it Alexa with light.
+  - Alexa-tap.py : Use the **Enter** key to wakeup Alexa, we call it Alexa Tap to Play.
+  - ns_kws_alexa.py : Use the key word **Alexa** to wakeup Alexa, we call it Alexa Hands-Free.
+  - ns_kws_alexa_with_light.py : The same as ns_kws_alexa.py, add the LED effect, We call it Alexa with light.
 
-##### Alexa Tap to Play
+#### Alexa Tap to Play
 Tap the command below in the terminal Of Putty(SSH is recommended).
 ```
 respeaker@v2:~$ ~/.local/bin/alexa-tap
@@ -576,7 +697,7 @@ respeaker@v2:~$ ~/.local/bin/alexa-tap
 
 Wait until you see **on_ready** in the log printing. Press **Enter** key of your computer and talk to Alexa(Only support English now).
 
-##### Alexa Hands-Free via snowboy
+#### Alexa Hands-Free via snowboy
 
 ```
 sudo apt install libatlas-base-dev                # required by snowboy
@@ -589,13 +710,56 @@ python ns_kws_alexa.py
 ```
 Wait until you see **on_ready** in the log printing, say **Alexa** to trigger the conversation with Alexa.
 
-##### Alexa With light effect:
+#### Alexa With light effect:
 
 ```
 pip install pixel-ring
 python ns_kws_alexa_with_light.py
 ```
 The same as last one, say **Alexa** to trigger the conversation with Alexa. You will the LED shinning while this program is running.
+
+
+
+
+### Close-sourced Solution of AVS
+
+This part including a close-sourced solution based on librespeaker. The librespeaker is an audio processing library which can perform:
+
+- Noise suppression
+- Direction of arrival calculation
+- Beamforming
+- Hotword searching
+
+It reads the microphoone stream from linux sound server, e.g. PulseAudio. It exposes a few APIs which enable users to get indicated when hotword is said and the processed microphone data in PCM format, which then can be sent to cloud services like Alexa for further processing.
+
+Before experiencing this powerful solution, please make sure you have done all the things below.
+
+- System image burning - this demo needs the lxqt version system image
+- Get serial console via OTG USB port
+- Setup Wi-Fi / ethernet
+- SSH
+- VNC
+
+OK, let's play.
+
+Actually it's simple and easy. We've made a one-click installation script. For more detail about this solution, please refer to [here](https://github.com/respeaker/respeakerd)
+
+```
+curl https://raw.githubusercontent.com/respeaker/respeakerd/master/scripts/install_all.sh|bash
+```
+
+When prompt, type in the sudo password for user respeaker: respeaker. Wait the script install some packages, then follow the instructions printed. When finished the script, run:
+
+```
+python /home/respeaker/respeakerd/clients/Python/demo_respeaker_v2_vep_alexa_with_light.py
+
+```
+
+Say `snowboy`, wake up Alexa, Enjoy！
+
+!!!Tip
+One more thing, do you see the colorful LEDs on the back of ReSpeaker Core v2.0? Look carefully at the green LED, haha, you find it.
+Yes the green led just point to the voice directly, as you known, DOA.
 
 
 
@@ -622,30 +786,20 @@ After login, the following step is the same as AVS, Please refer to [AVS Demos](
 When you run the python program, you can say **Alexa** to wake up the Baidu voice assistance.
 
 
-### GPIO
+
+
+### Play with GPIO
 
 This part will introduce how to use **MRAA** and **UPM** to control GPIO and Grove Socket on Respeaker Core v2.0.
 
-#### Step 1. Update MRAA and UPM libraries to latest version
+- **Step 1. Update MRAA and UPM libraries to latest version**
 
-First, we need to check the kernel version of the system we're running, if you're not sure that you flashed the system image of version 20171128 and later.
-
-```
-uname -a
-```
-
-If you're using system image prior to version 4.4.95-respeaker-r2, please upadte the kernel first with
-
-```
-sudo apt update
-sudo apt install linux-image-4.4.95-respeaker-r2
-```
-Then we install the latest MRAA and UPM packages.
+At first, we need to install the latest MRAA and UPM packages.
 
 ```
 sudo apt install  python-mraa python-upm libmraa1 libupm1 mraa-tools
 ```
-#### Step 2. Check your platform information
+- **Step 2. Check your platform information**
 
 ```
 #only have bus 0 and id=03(/dev/i2c-3), 0 is the i2c number for mraa and upm
@@ -671,9 +825,9 @@ respeaker@v2:~$ mraa-gpio list
 The description of the PIN defines for the ReSpeaker Core v2.0 board please refer to [Pin Out]()
 
 
-#### Step 3. Demos with MRAA or UPM
+- **Step 3. Demos with MRAA or UPM**
 
-##### A. Use MRAA Library
+#### A. Use MRAA Library
 
 
 **Control GPIO Directly**
@@ -759,7 +913,7 @@ pin 1091 = 1
 ```
 
 
-##### B. Use UPM Library
+#### B. Use UPM Library
 
 The UPM project implements sensors' driver based on the MRAA library, so we no longer need to care about the GPIO programming or what the I2C address of a sensor, all the default informations and logics for a particular sensor has been wrapped into a UPM library. UPM has supported bunch of sensors. https://iotdk.intel.com/docs/master/upm/modules.html. But please note that we didnt confirm every sensor works on the ReSpeaker Core v2.0.
 
@@ -861,16 +1015,27 @@ Light value is 31
   - Step 2. Click the **Stop** button, then you will see channel 7 and 8 are empty.
   - Step 3. Click **Record** button again, this time you will find Channel 8 changed.
 
-#### Q2: If I do not have suitable cable to access the Serial Console how can I get into ReSpeaker Core v2.0?
+  ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/audacity_playback.png)
+
+#### Q2: How to access the AP of ReSpeaker Core v2.0?
 
 **A2:** You can use two wires cable to power the ReSpeaker Core v2.0. When the system is running, the Respeaker Core v2.0 can act as an AP. You can use your computer to
 access this AP. As the picture show. You can follow the steps to configure the WiFi of ReSpeaker Core v2.0.
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Ap.png)
 
-- **Step 1.** Access the AP of ReSpeaker Core v2.0. The AP name is something like **ReSpeaker_xxxx**, the user is **respeaker**, the password is **respeaker** too.
+- **Step 1.** Tap the command below to activate the Ap of ReSpeaker Core v2.0.
 
-- **Step 2.** Now you can use Putty, SSH mode to get into the Serial Console. The ip of the Wlan1 is **192.168.42.1**, you need to use this ip to setup connection.
+```
+sudo systemctl enable re-wifi.service
+sudo reboot -f
+
+```
+
+- **Step 2.** Access the AP of ReSpeaker Core v2.0. After the ReSpeaker Core v2.0 restarts, use your phone or computer to search the WiFi. You will find the AP name is something like
+   **ReSpeaker_xxxx**, the user is **respeaker**, the password is **respeaker** too.
+
+- **Step 3.** Now you can use Putty, SSH mode to get into the Serial Console. The ip of the Wlan1 is **192.168.42.1**, you need to use this ip to setup connection.
 And the user name of ReSpeaker Core v2.0 is **respeaker**, the password is **respeaker**.
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/AP2.png)
@@ -893,7 +1058,7 @@ And you can adjust the value by pressing the **Up** or **Down** key.
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Alexamixer.png)
 
-#### Q4: How to use the user button.
+#### Q4: How to use the user button?
 **A4:** As you can see, there is an user button at the back of ReSpeaker Core v2.0. Here we provide a python demo to show how to use it.
 
 - **Step 1.** Tap the command below:
@@ -923,15 +1088,34 @@ Then you will see the result is something like that:
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/userbutton.png)
 
+#### Q5: The computer can not recognize the ReSpeaker Core v2.0, driver problem?
+
+![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/CDC_Driver.png)
+
+**A5:** This may happen when you connect the ReSpeaker Core v2.0 with you computer via OTG or UART.
+This is because the CDC Serial driver has a conflict with other OTG driver. Please uninstall the conflicted driver
+ and connect the ReSpeaker Core v2.0 again.
+
+#### Q6: What if I want to use the external antenna?
+
+**A6:** The ReSpeaker Core v2.0 use **AP6212** to provide both WiFi and Bluetooth, they share the same antenna.
+Instead of the on-board antenna, you can use an external antenna. To do so, you need to remove one resistance and solder it
+on the new pads, as shown below.
+
+![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/ant.png)
+
+![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/ant1.png)
 
 
-## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/).
 
 ## Resources
 - **[PDF]** [Download PDF of This Wiki](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/ReSpeaker_Core_v2.pdf)
 - **[PDF]** [Rockchip RK3229 Datasheet V1.1](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Rockchip%20RK3229%20Datasheet%20V1.1%2020151209.pdf)
 - **[PDF]** [Dimensions for Board](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/ReSpeaker_Core_v2_Demensions.pdf)
-- **[SKP]** [3d Models For ReSpeaker Core v2](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Respeaker%20Core%20v2_20180301.skp)
+- **[ZIP]** [3d Models For ReSpeaker Core v2.0](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Respeaker_Core_v2_3D_SKP.zip)
 - **[MoreReading]** [Mraa Python documents page](http://iotdk.intel.com/docs/master/mraa/python/)
 - **[MoreReading]** [Intel Mraa SDK](https://software.intel.com/en-us/mraa-sdk/documentation )
+
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/).
