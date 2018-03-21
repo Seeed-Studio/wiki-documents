@@ -68,7 +68,7 @@ The Grove - Buzzer module has a [piezo buzzer](https://en.wikipedia.org/wiki/Buz
 - Step 3. Plug Grove - Base Shield into Arduino.
 - Step 4. Connect Arduino to PC through a USB cable.
 
-![](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/images/Conn-four.jpg)
+![](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/img/seeeduino_buzzer.jpg)
 
 !!!Note
 	If we don't have Grove Base Shield, We also can directly connect Grove-Button to Arduino as below.
@@ -118,7 +118,7 @@ void loop()
 - Step 3. Connect Grove-Buzzer to D8 port of GrovePi_Plus.
 - Step 4. Connect the Raspberry to PC through USB cable.
 
-![](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/images/GrovePi%2B_Grove_buzzer.jpg)
+![](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/img/rasp_buzzer.jpg)
 
 #### Software
 
