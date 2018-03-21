@@ -16,20 +16,20 @@ Grove - Red LED is similar to the Grove - LED module which houses an LED light s
 
 
 ## Version
----
+
 
 | Product Version              | Changes                                                                                                                                                                                    | Released Date |
 |------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
 | Grove-LED_v1.3 | Initial                                                                                                                                                                                    | Mar 15 2016      |
 
 ##  Features
----
+
 *   Provide an LED light indication for your project
 *   Support different color LEDs, the LED is pluged into the LED holder rather than soldered on the board
 *   Support brightness control and higher range of input voltages with On-board potentiometer adjustment
 
 ## Platforms Supported
----
+
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -39,7 +39,7 @@ Grove - Red LED is similar to the Grove - LED module which houses an LED light s
     The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
 ##  Getting Started
----
+
 
 ### Play With Arduino
 
@@ -174,12 +174,11 @@ LED OFF!
 
 
 ##  Resources
----
+
 
 * **[PDF]** [Grove-Red LED Schematic](https://github.com/SeeedDocument/Grove-Red_LED/raw/master/res/Grove-LED_v1.3.pdf)
 
 
 ## Tech Support
----
 
 Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/).

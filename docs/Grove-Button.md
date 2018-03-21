@@ -15,14 +15,14 @@ Grove - Button is a momentary push button. It contains one independent "momentar
 [![](https://github.com/SeeedDocument/Grove_Button/raw/master/image/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-Button-p-766.html)
 
 ## Version
----
+
 
 | Product Version              | Changes                                                                                                                                                                                    | Released Date |
 |------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
 | Grove-Button | Initial                                                                                                                                                                                    | Nov 25 2010      |
 
 ## Features
----
+
 - Easy to use momentary ON/OFF button
 - Uses Standard 4-pin Grove Cables
 
@@ -30,7 +30,7 @@ Grove - Button is a momentary push button. It contains one independent "momentar
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
 ## Platforms Supported
----
+
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -41,7 +41,7 @@ Grove - Button is a momentary push button. It contains one independent "momentar
 
 
 ##  Getting Started
----
+
 
 ### Play With Arduino
 
@@ -178,7 +178,7 @@ pi@raspberrypi:~/GrovePi/Software/Python $ python grove_button.py
 ```
 
 ## Resources
----
+
 - **[Eagle&PDF]** [Grove-Button Eagle Files](https://github.com/SeeedDocument/Grove_Button/raw/master/resources/Grove_-_Button_v1.0_Source_File.zip)
 
 - **[More Reading]** [Wooden Laser Gun](http://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)
@@ -191,5 +191,5 @@ The Wooden Laser Gun and the Gun Target are all based on an Arduino board called
 
 
 ## Tech Support
----
+
 Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/).
