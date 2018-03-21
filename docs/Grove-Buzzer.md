@@ -8,14 +8,24 @@ surveyurl: https://www.surveymonkey.com/r/grove-buzzer
 sku: 107020000
 ---
 
----
+
 ![](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/images/Grove%20Buzzer.jpg)
+
 The Grove - Buzzer module has a [piezo buzzer](https://en.wikipedia.org/wiki/Buzzer#Piezoelectric) as the main component. The piezo can be connected to digital outputs, and will emit a tone when the output is HIGH. Alternatively, it can be connected to an analog pulse-width modulation output to generate various tones and effects.
 
 [![](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/images/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)
 
+## Version
+
+
+| Product Version              | Changes                                                                                                                                                                                    | Released Date |
+|------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
+| Grove-Buzzer V1.0| Initial                                                                                                                                                                                    | Nov 25 2010      |
+| Grove-Buzzer V1.1 | Add S9013 Transistor                                                                                                                                                                                    | May 30 2014      |
+
+
 ## Features
----
+
 - Easy to use piezoelectric buzzer
 - Uses Standard 4-pin Grove Cables to connect to other Grove modules such as - [Grove Power Modules](/Grove/Grove_System/) and Grove - Base Shield
 
@@ -23,39 +33,58 @@ The Grove - Buzzer module has a [piezo buzzer](https://en.wikipedia.org/wiki/Buz
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
 ## Specifications
----
-- Operating Voltage: 4-8V
-- Sound Output: ≥85dB
-- Resonant Frequency: 2300±300Hz
 
-## Usage
----
-**Standalone**
+| Items              | Specification |
+|--------------------|---------------|
+| Operating Voltage  | 4-8V          |
+| Sound Output       | ≥85dB         |
+| Resonant Frequency | 2300±300Hz    |
 
-Follow these steps to build a sample circuit using this module but without using any microcontroller:
+## Platforms Supported
 
-1. Connect the buzzer module to the output side of your circuit (to the right of the power module). On the input side of the circuit, you may use a range of sensor based input modules (**Grove - Light Sensor**, **Grove - Button** or **Grove - Slide Potentiometer**).
-2. Power up the circuit.
-3. The buzzer will start to "buzz" when the input module supplies a trigger:
-  - If using with a momentary switch like the one on the **Grove - Button module**, simply press the button to turn ON the buzzer.
-  - If using with a **Grove - Slide Potentiometer**, move the slider from the GND position to VCC and see how the tone and frequency of the buzzer vary as the supplied voltage increases.
-  - If using with a **Grove - Light Sensor** connected directly to the input side of the circuit, you should hear the buzzer in bright light and it should stop "buzzing" in the dark. If you want the buzzer to sound only in the dark, add a **Grove - NOT** module between the light sensor and the power module.
 
-You can use either the **Grove - USB Power** module or the **Grove - DC Jack Power** module for the Grove circuit.
+| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
+|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo.jpg) |
 
-**With Arduino**
+!!!Caution
+    The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
-Follow these simple steps to build a Grove circuit using the buzzer:
-1. When using the module in conjunction with an Arduino or a **Seeeduino**, use the **Grove - Base Shield** and connect the Grove - Buzzer module to the shield using a designated Grove Interface as shown below:
+
+##  Getting Started
+
+### Play With Arduino
+
+#### Hardware
+
+- Step 1. Prepare the below stuffs:
+
+| Seeeduino V4.2 | Base Shield|  Grove - Button |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/img/buzzer_s.jpg)|
+|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|
+
+- Step 2. Connect Grove-Buzzer to port D6 of Grove-Base Shield.
+- Step 3. Plug Grove - Base Shield into Arduino.
+- Step 4. Connect Arduino to PC through a USB cable.
 
 ![](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/images/Conn-four.jpg)
 
-2. Upload the following sample sketch to make the Buzzer make a beeping noise:
+!!!Note
+	If we don't have Grove Base Shield, We also can directly connect Grove-Button to Arduino as below.
+
+| Seeeduino       | Grove-Buzzer |
+|---------------|-------------------------|
+| 5V           | Red                     |
+| GND           | Black                   |
+| Not Conencted | White                   |
+| D6            | Yellow                  |
+
+#### Software
+
+- Step 1. Copy the code into Arduino IDE and upload.
 
 ```c
-// Project Four - Noise maker
-//
-
 void setup()
 {
   pinMode(6, OUTPUT);
@@ -69,13 +98,96 @@ void loop()
   delay(analogRead(0));
 }
 ```
-**With TI LaunchPad**
 
-Playing Music (Buzzer)
+- Step 2. We will hear the buzzer on and off.
+
+
+
+### Play With Raspberry Pi
+
+#### Hardware
+
+- Step 1. Prepare the below stuffs:
+
+| Raspberry pi | GrovePi_Plus | Grove - Button |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/img/buzzer_s.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|
+
+- Step 2. Plug the GrovePi_Plus into Raspberry.
+- Step 3. Connect Grove-Buzzer to D8 port of GrovePi_Plus.
+- Step 4. Connect the Raspberry to PC through USB cable.
+
+![](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/images/GrovePi%2B_Grove_buzzer.jpg)
+
+#### Software
+
+- Step 1. Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment.
+- Step 2. Git clone the Github repository.
+
+```
+cd ~
+git clone https://github.com/DexterInd/GrovePi.git
+
+```
+- Step 3. Excute below commands.
+
+```
+cd ~/GrovePi/Software/Python
+python grove_buzzer.py
+```
+
+Here is the grove_buzzer.py code.
+
+```python
+import time
+import grovepi
+
+# Connect the Grove Buzzer to digital port D8
+# SIG,NC,VCC,GND
+buzzer = 8
+
+grovepi.pinMode(buzzer,"OUTPUT")
+
+while True:
+    try:
+        # Buzz for 1 second
+        grovepi.digitalWrite(buzzer,1)
+        print ('start')
+        time.sleep(1)
+
+        # Stop buzzing for 1 second and repeat
+        grovepi.digitalWrite(buzzer,0)
+        print ('stop')
+        time.sleep(1)
+
+    except KeyboardInterrupt:
+        grovepi.digitalWrite(buzzer,0)
+        break
+    except IOError:
+        print ("Error")
+```
+
+- Step 4. We will hear the buzzer on and off.
+
+```
+pi@raspberrypi:~/GrovePi/Software/Python $ python grove_buzzer.py
+start
+stop
+start
+stop
+```
+
+
+### Play With TI LaunchPad
+
+#### Hardware
 
 - This example shows how to use the Grove buzzer module to play melodies. It sends a square wave of the appropriate frequency to the buzzer, generating the corresponding tone.
 
 ![](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/images/Buzzer.jpg)
+
+#### Software
 
 ```c
 /*
@@ -146,65 +258,19 @@ void playNote(char note, int duration) {
     }
 }
 ```
-**With Raspberry Pi**
-The following is a simple example to show how to use the Grove - Buzzer module on Raspberry Pi. The buzzer makes noise and delays one second. Then quiet for a second.It repeats the above action.
 
-![](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/images/GrovePi%2B_Grove_buzzer.jpg)
+## Resources
 
-```python
-# GrovePi + Grove Buzzer
-import time
-import grovepi
+- **[Eagle&PDF]** [Grove - Buzzer Schematic Files v1.1](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/resources/Grove-Buzzer_V1.1_eagle.zip)
+- **[Eagle&PDF]** [Grove - Buzzer Schematic Files v1.0](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/resources/Grove_-_Buzzer_v1.0_Source_File.zip)
+- **[DataSheet]** [S9013datasheet](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/resources/S9013.pdf)
+- **[More Reading]** [Wooden Laser Gun](http://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)
 
-# Connect the Grove Buzzer to digital port D8
-# SIG,NC,VCC,GND
-buzzer = 8
-
-grovepi.pinMode(buzzer,"OUTPUT")
-
-while True:
-    try:
-        # Buzz for 1 second
-        grovepi.digitalWrite(buzzer,1)
-        print 'start'
-        time.sleep(1)
-
-        # Stop buzzing for 1 second and repeat
-        grovepi.digitalWrite(buzzer,0)
-        print 'stop'
-        time.sleep(1)
-
-    except KeyboardInterrupt:
-        grovepi.digitalWrite(buzzer,0)
-        break
-    except IOError:
-        print "Error"
-```
-**Run the program**
-
-Find the path to the file(According to your own path)
-```cd GrovePi/Software/Python/
-```
-Run Program
-```sudo python grove_buzzer.py
-```
-
-##Project
-
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Lotus/master/img/gun.jpg)
+![](https://raw.githubusercontent.com/SeeedDocument/Grove_Button/master/img/gun.jpg)
 
 Inspired by OVERWATCH, we have made a very cool Wooden Laser Gun toy for fun these day!
 
 The Wooden Laser Gun and the Gun Target are all based on an Arduino board called Seeeduino Lotus. The laser emitter on the Laser Gun is controlled to fire laser pulse to "activate" the Gun Target. And there are 3 light sensors on the Gun Target to detect the laser pulse. It seems very simple right? If you are interested in our project, please make one for yourself or your child! It's worth to spend one day DIY it as a Xmas present.    
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/make.png)](http://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)
-
-
-## Resources
----
-- [Grove - Buzzer Source Files v1.1](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/resources/Grove-Buzzer_V1.1_eagle.zip)
-- [Grove - Buzzer Source Files v1.0 (Eagle and pdf)](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/resources/Grove_-_Buzzer_v1.0_Source_File.zip)
-- [S9013datasheet](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/resources/S9013.pdf)
-- [Schematic at Easyeda](https://easyeda.com/Seeed/Grove_Buzzer_v1_2-c713baf3c1774da39ce0c995544ce5da)
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/).
