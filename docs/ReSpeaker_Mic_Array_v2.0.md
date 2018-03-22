@@ -481,8 +481,8 @@ interface: {
 ## Resource
 - **[PDF]** [ReSpeaker MicArray v2.0 Product Brief](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/ReSpeaker%20MicArray%20v2.0%20Product%20Brief.pdf)
 - **[PDF]** [ReSpeaker MicArray v2.0 3D Model](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/RESPEAKER%20MIC%20v2.0.pdf)
-- **[SKP]** [ReSpeaker MicArray v2.0 3D Model](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/Respeaker%20Microphone%20Array%20v2.0_20180316.skp)
-- **[STP]** [ReSpeaker MicArray v2.0 3D Model](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/RESPEAKER%20MIC-3D%20v2.0.stp)
+- **[SKP]** [ReSpeaker MicArray v2.0 3D Model](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/Respeaker%20Microphone%20Array%20v2.0_20180316.skp.zip)
+- **[STP]** [ReSpeaker MicArray v2.0 3D Model](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/RESPEAKER%20MIC-3D%20v2.0.stp.zip)
 - **[PDF]** [XVF3000 Product Brief](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/XVF3000-3100-product-brief_1.4.pdf)
 - **[PDF]** [XVF3000 Datasheet](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/XVF3000-3100-TQ128-Datasheet_1.0.pdf)
 
