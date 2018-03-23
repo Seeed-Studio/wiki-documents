@@ -1,7 +1,5 @@
----
-title: How to update wiki
-nointro:
----
+
+## How to edit Seeed Wiki
 
 We have the English and Chinese Wiki. The procedure is same. This article shows how to edit wiki step by step.
 
