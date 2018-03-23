@@ -1,84 +1,185 @@
-## Seeed中文文档
-
-这里你可以找到部分Seeed产品的[中文文档](http://seeed.wiki)，由于这个站点刚建立，所以只有部分已经翻译的文档。
-
-没有中文文档的产品，仍然需要到[英文站点](http://wiki.seeed.cc).
-
-这个站点基于优秀的并且开源的文档系统[MkDocs](http://www.mkdocs.org/)以及主题[Material](http://squidfunk.github.io/mkdocs-material/).
-
-## 基本操作
-
-Git clone 这个库到本地，可以在docs文件夹里面添加文档，在docs/images添加图片，在docs/res文件夹添加资源。
-添加完文档后，需要手动修改mkdocs.yml文件。
-
-```c
-# Page tree
-pages:
-  - Seeed.Wiki: index.md
-  - Respeaker麦克风整列FAQ: respeaker_array_faq.md
-  - 新添加的文档: new_docs_name.md
-  - License: license.md
-```
-执行**mkdocs serve**进行预览没有问题后，执行**mkdocs build --clean**，编译的静态文件会出现在**site**文件夹。
-
-Git clone [SeeedDocument.github.io](https://github.com/SeeedDocument/SeeedDocument.github.io) 到本地，把Site的内容替代原来的内容，重新上传，既可以更新网页。
-
-注: CNAME文件不要删掉。
-
-## 贡献
-
-这个文档系统有Seeed维护，并且欢迎你对文档的内容分析你的贡献，贡献包括但不限于：
-
-* 错别字或者不恰当的词汇表达
-* 增加内容以使教程更加的清晰
-* 上传更好的图片
-* 其他必要的修改或优化
-
-## MkDocs
-
-**这个项目基于开源的文档系统MKDocs**
-
-
-[![PyPI Downloads][pypi-dl-image]][pypi-dl-link]
-[![PyPI Version][pypi-v-image]][pypi-v-link]
-[![Build Status][travis-image]][travis-link]
-[![Windows Build Status][appveyor-image]][appveyor-link]
-[![Coverage Status][codecov-image]][codecov-link]
-
-- View the [MkDocs documentation][mkdocs].
-- Project [release notes][release-notes].
-- Visit the [MkDocs wiki](https://github.com/mkdocs/mkdocs/wiki) for community
-  resources, including third party themes and a list of MkDocs users.
-- IRC channel: `#mkdocs` on freenode.
-- Discussions and support: <https://groups.google.com/forum/#!forum/mkdocs>
-
-[appveyor-image]: https://img.shields.io/appveyor/ci/d0ugal/mkdocs/master.png
-[appveyor-link]: https://ci.appveyor.com/project/d0ugal/mkdocs
-[codecov-image]: http://codecov.io/github/mkdocs/mkdocs/coverage.svg?branch=master
-[codecov-link]: http://codecov.io/github/mkdocs/mkdocs?branch=master
-[landscape-image]: https://landscape.io/github/mkdocs/mkdocs/master/landscape.svg?style=flat-square
-[landscape-link]: https://landscape.io/github/mkdocs/mkdocs/master
-[pypi-dl-image]: https://img.shields.io/pypi/dm/mkdocs.png
-[pypi-dl-link]: https://pypi.python.org/pypi/mkdocs
-[pypi-v-image]: https://img.shields.io/pypi/v/mkdocs.png
-[pypi-v-link]: https://pypi.python.org/pypi/mkdocs
-[travis-image]: https://img.shields.io/travis/mkdocs/mkdocs/master.png
-[travis-link]: https://travis-ci.org/mkdocs/mkdocs
-
-[mkdocs]: http://www.mkdocs.org
-[release-notes]: http://www.mkdocs.org/about/release-notes/
-
-协议
--------
-Copyright (c) 2018-2017 Seeed Inc. (https://www.seeedstudio.com)
-
-文档及图片
+---
+title: How to update wiki
+nointro:
 ---
 
-<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />
-这里所有的图片和文档顺从 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"> </a>
-的协议
+We have the English and Chinese Wiki. The procedure is same. This article shows how to edit wiki step by step.
 
-## 联系我们
+## Wiki Structure
 
-如果你有文档或者技术上的任何疑问，请联系 [techsupport@seeed.cc](techsupport@seeed.cc)
+Seeed wiki uses [MkDocs template](https://squidfunk.github.io/mkdocs-material/) desgined by Martin Donath. It includes wiki source files and compiled html files.
+
+- The English wiki source files are located at [github](https://github.com/SeeedDocument/wiki_english). The English html files are located at amazon S3(wiki.seeedstudio.com warehouse).
+- The Chinese wiki source files are located at [github](https://github.com/SeeedDocument/wiki_chinese). The English html files are located at amazon S3(wiki.seeedstudio.com/cn warehouse).
+
+
+Here is the structure of the wiki source files.
+
+![](https://github.com/SeeedDocument/How_to_update_wiki/raw/master/img/source.png)
+
+Here is the structure of the html files.
+
+![](https://github.com/SeeedDocument/How_to_update_wiki/raw/master/img/html.png)
+
+
+## How to edit source files in github
+
+### Preparation
+
+- Step 1. Install Python, Pip and Mkdocs by following [mkdocs.org](http://www.mkdocs.org/).
+- Step 2. run below command to install mkdocs-material
+
+```python
+pip install mkdocs-material
+```
+
+### Download the source files
+
+- Run below command to download the source files into local folder.
+
+```c
+git clone https://github.com/SeeedDocument/wiki_english.git  # please change wiki_english to wiki_chinese for Chinese wiki.
+```
+
+###  Create a new wiki
+
+- Step 1. The md files are located at docs folder under wiki_english/wiki_chinese.
+
+  Here are the rules for the wiki name.
+    - No Space, use the **_** instead of Space.
+    - For Grove modules, start with **Grove-**, NOT Grove_.  
+
+  Here are wiki examples for templates.
+    - Grove template: Grove-Ultrasonic_Ranger.md
+    - Platform template: Seeeduino_v4.2.md
+    - Shield template: Base_Shield_V2.md
+    - Kits template: LoRa_LoRaWan_Gateway_Kit.md
+
+- Step 2. Edit the title by following below rules.  
+
+```
+title: Grove - Ultrasonic Ranger  # Please do not use Space and NOT **_**.
+category: Sensor # Define the category, such as Arduino, Raspberry and so on.
+bzurl: https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html  # Define the bazaar website.
+oldwikiname: Grove - Ultrasonic Ranger # Ignore
+prodimagename: 350px-Ultrasonic_Ranger.jpg # Ignore
+surveyurl: https://www.research.net/r/Grove-Ultrasonic-Ranger # Ignore
+sku: 101020010 # Define SKU
+tags: io_3v3, io_5v, plat_duino, plat_pi # Ignore
+```
+
+- Step 3. please follow below structures to design the wiki.
+
+```
+- Description
+- Version # [use tablesgenerator to generate the table](tablesgenerator.com)
+- Specification # [use tablesgenerator to generate the table](tablesgenerator.com)
+- Platform Supported # [use tablesgenerator to generate the table](tablesgenerator.com)
+- Getting Started
+- FAQs
+- Resources
+- Tech Support
+```
+
+!!!Note
+    For Grove modules, please add platform Supported(refer to ultrasonic sensor) and follow below structure inside of Getting Started.
+
+```
+- Getting Started
+  - Play with Arduino
+    - Hardware
+    - Software
+  - Play with Raspberry
+    - Hardware
+    - Software
+```
+
+
+- Step 4. Add the new item into category md file. For example, please edit Sensor.md under docs folder for Grove sensors. Here are the category md files.
+
+```
+- Actuator.md
+- Arduino.md
+- BeagleBone.md
+- Communication.md
+- Discontinued.md
+- Display.md
+- Essentials.md
+- Grove.md
+- IoT.md
+- LinkIt.md
+- MakerPro.md
+- OldWiki-NewWiki-Mapping.csv
+- Others.md
+- Platform.md
+- Raspberry_Pi.md
+- RePhone.md
+- Respeaker.md
+- Sensor.md
+- Shield.md
+- Tutorial.md
+- Wio.md
+- Wio_Tracker.md
+- Wireless.md
+- mbed.md
+```
+
+
+  Here is the example of arduino.md. please follow the format to add the new products.
+
+```
+- [4WD Driver Platform V1.0](/4WD_Driver_Platform_V1.0/)
+- [4WD Mecanum Wheel Robot Kit Series](/4WD_Mecanum_Wheel_Robot_Kit_Series/)
+- [Basic Fastener Kit](/Basic_Fastener_Kit/)
+- [Galileo Case](/Galileo_Case/)
+- [Grove Maker Kit for Intel Joule](/Grove Maker Kit for Intel Joule/)
+- [Grove Speech Recognizer Kit for Arduino](/Grove_Speech_Recognizer_Kit_for_Arduino/)
+- [Grove Starter kit for Arduino&amp;Genuino 101](/Grove_Starter_kit_for_Arduino_101/)
+- [Hercules Dual 15A 6-20V Motor Controller](/Hercules_Dual_15A_6-20V_Motor_Controller/)
+```
+
+- Step 5. Add the new product into mkdocs.yml under wiki_english foler. Then edit the Page tree. Here is the page tree structure. Please follow the template to add new products.
+
+```
+- ReSpeaker:
+    - ReSpeaker Introduction: ReSpeaker.md
+    - ReSpeaker 2-Mics Pi HAT: ReSpeaker_2_Mics_Pi_HAT.md
+    - ReSpeaker 4-Mic Array for Raspberry Pi: ReSpeaker_4_Mic_Array_for_Raspberry_Pi.md
+    - ReSpeaker Core: ReSpeaker_Core.md
+    - ReSpeaker Core v2.0: ReSpeaker_Core_v2.0.md
+    - ReSpeaker Drive Unit: ReSpeaker_Drive_Unit.md
+    - ReSpeaker Mic Array: ReSpeaker_Mic_Array.md
+    - ReSpeaker Mic Array v2.0: ReSpeaker_Mic_Array_v2.0.md
+```
+
+- Step 6. Run below command to preview the wiki.
+
+```
+mkdocs serve
+```
+
+- Step 7. Run below command to generate the wiki html files under site folder. It will take a while to generate more than 600 html files. Please open the site folder to monitor the progress.
+
+```
+mkdocs build --clean
+```
+
+!!!Note
+    If we just update an old wiki, please skip step 4 and step 5.
+
+## How to upload the html files to Amazon S3
+
+- Step 1. Open the [Amazon S3 website](https://s3.console.aws.amazon.com/s3/buckets/wiki.seeed.cc/?region=us-west-2&tab=overview).
+- Step 2. Key in account user name and password.
+- Step 3. Click **wiki.seeedstudio.com** folder for English wiki.
+
+!!!Warning
+    Please search **cn** and select **cn** folder. Then move to Step 4.
+
+- Step 4. Select **Upload** button.
+- Step 5. Drag all the folders under site to the pop up window for new wiki. If we just edit an old wiki, please drag the updated wiki only.
+- Step 6. Click **Upload** button.
+- Step 7. Visit [Wiki English](http://wiki.seeedstudio.com/) to verify the modifications. Or Visit [Wiki Chinese](http://wiki.seeedstudio.com/cn/) to verify the modifications.
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue.
