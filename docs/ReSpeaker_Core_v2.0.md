@@ -10,11 +10,13 @@ sku: 102990883
 
 ![enter image description here](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/ReSpeaker_V2_front.JPG)
 
-Seeed ReSpeaker Core v2.0 is designed for voice interactive applications. It is based on quad-core ARM Cortex-A7, up to 1.5Ghz, and 1GB RAM on-board. Besides, it features six microphone array with necessary speech algorithm, like DoA(Direction of arrival), BF(Beam-Forming), AEC(Acoustic echo cancellation) and etc.
 
-ReSpeaker Core v2.0 runs GNU/Linux operation system. It benefits from powerful and active community, we can use lot of existing software/tools for development, testing and deploy, so that rapid product development become available.
+Seeed’s ReSpeaker Core v2.0 is designed for voice interface applications. It is based on the Rockchip RK3229, a quad-core ARM Cortex A7, running up to 1.5GHz, with 1GB RAM. The board features a six microphone array with speech algorithms including DoA (Direction of Arrival), BF (Beam-Forming), AEC (Acoustic Echo Cancellation), etc.
 
-ReSpeaker Core v2.0 is not only designed for makers/enthusiast, but also a turnkey solution for business company. The hardware consists of two parts, one is the minimized SoC module which is small and easy for manufacturing and ready for final product, the other is a bottom board which can be full customizable.
+ReSpeaker Core v2.0 runs a GNU/Linux operating system. It benefits from a powerful and active community allowing for the use of existing software and tools for development, testing, and deployment, enabling rapid product development.
+
+ReSpeaker Core v2.0 is designed as a feature rich development board for businesses to evaluate. To this end the board consists of two main sections, the first being the center core module containing the CPU, Memory (RAM), and PMU. The second section is the outer carrier board which contains the peripherals such as the eMMC, connectors, and wireless connectivity components. Either section or both can be customized through Seeed’s customization services.
+
 
 
 <p style="text-align:center"><a href="https://www.seeedstudio.com/ReSpeaker-Core-V2.0-p-3039.html" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>
@@ -23,7 +25,7 @@ ReSpeaker Core v2.0 is not only designed for makers/enthusiast, but also a turnk
 
 ## Features
 
-- High performance SoC
+- All-in-One Solution with High Performance SoC
 - 1GB RAM & 4GB eMMC
 - 6 Microphone Array  
 - USB OTG, USB device
@@ -38,15 +40,12 @@ ReSpeaker Core v2.0 is not only designed for makers/enthusiast, but also a turnk
 - C++ SDK and Python wrapper
 - SDK for speech algorithm with Full documents
 - Speech algorithms and features:
-  - Keyword wake-up
-  - BF(Beam-Forming)
-  - DoA (Direction of arrival)
-  - NS(Noise suppression)
-  - AEC (Acoustic echo cancellation) and AGC (Automatic gain control)
 
-
-
-
+    - Keyword wake-up
+    - BF(Beam-Forming)
+    - DoA (Direction of arrival)
+    - NS(Noise suppression)
+    - AEC (Acoustic echo cancellation) and AGC (Automatic gain control)
 
 ## Specification
 
@@ -177,7 +176,7 @@ Grove Socket for digital or I2C.
 
 ### Pin Out
 
-**Pin index definition for headers :**:
+**Pin index definition for headers**
 
 | 8 pins header | Grove Socket |
 |--------------|-------------|
@@ -269,13 +268,10 @@ Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2.0 image f
 
   For development, we recommend the **lxqt + sd** version. So please download the **respeaker-debian-9-lxqt-sd-[date]-4gb.img.xz** file.
 
-
-<div class="admonition note" >
-<p class="admonition-title">Note</p>
-This wiki is based on the **respeaker-debian-9-lxqt-sd-20180319-4gb.img.xz** image version.
-</div>
-
-
+  <div class="admonition warning">
+  <p class="admonition-title">Caution</p>
+  This wiki is based on the **respeaker-debian-9-lxqt-sd-20180319-4gb.img.xz** image version.
+  </div>
 
 - **Step 2.** Plug the SD card into your PC or MAC with an SD card reader. You need an SD card with a capacity of more than 4G.
 
@@ -292,7 +288,7 @@ This wiki is based on the **respeaker-debian-9-lxqt-sd-20180319-4gb.img.xz** ima
 
 **B. Boot from the eMMC**
 
-You also can flash the ReSpeaker image files to the ReSpeaker's eMMC (onboard flash memory) directly by using your PC or Mac. Then the ReSpeaker will boot from it's eMMC (onboard flash memory) and not from the SD card.
+There is no firmware in the EMMC when leaving the factory, you can flash the ReSpeaker image files to the ReSpeaker's eMMC (onboard flash memory) by using your PC or Mac. Then the ReSpeaker will boot from it's eMMC (onboard flash memory) and not from the SD card.
 
 - **Step 1.** Download our latest image zip file ```respeaker-debian-9-iot-flasher-********-4gb.img.xz``` or ```respeaker-debian-9-lxqt-flasher-********-4gb.img.xz``` at OneDrive. The lxqt version comes with Debian desktop and the iot version does not. And the flasher version is for flashing eMMC, and the sd version is for booting from SD card.
 
@@ -314,7 +310,7 @@ Now your ReSpeaker Core v2.0 can boot, you might want to get access to the Linux
 - B. The UART port - This is the hard way to access the console, it can be used for debugging low level issues
 
 
-#### A. Connection via OTG
+**A. Connection via OTG**
 
 - **Step 1.** Find a micro USB cable, and please make sure it's a data cable (not just a power cable), plug the micro USB end to the ReSpeaker's **OTG** micro USB port (There're two micro USB ports on the ReSpeaker board, which are labeled with different silk-screen, one is **PWR_IN** and another is **OTG**), then plug another end of this cable into your computer.
 
@@ -337,7 +333,7 @@ Now your ReSpeaker Core v2.0 can boot, you might want to get access to the Linux
 - **Step 4.** The default user name is ```respeaker```, and password is ```respeaker``` too.
 
 
-#### B. Connection via The UART port
+**B. Connection via The UART port**
 
 In this section we will guide you how to establish a connection from your computer to your ReSpeaker using your USB to TTL adapter which will be connected to the ReSpeaker's Uart port (Uart port located just to the left of the ReSpeaker speaker plug).
 
@@ -455,11 +451,10 @@ The VNC service also starts automatically. Use [VNC Viewer](https://www.realvnc.
 To use VNC, connect your PC/Mac and ReSpeaker v2.0 to the same Wi-Fi network. Then open VNC Viewer, type ```192.168.xxx.xxx``` at the address bar. ```192.168.xxx.xxx``` is IP address of the board，you can use the command **ifconfig** to check. If you meet ```Unencrypted connection```, click Continue to go on. The password is ```respeaker```.
 ![](https://user-images.githubusercontent.com/5130185/34665797-93b222d6-f49c-11e7-8112-704f91163038.png)
 
-Note!!!
-- Please note that the VNC connection relies on good quality of the network, please have a mental preparation that you will probably get very low refresh rate of the VNC display.
-
-
-
+<div class="admonition note" >
+<p class="admonition-title">Note</p>
+Please note that the VNC connection relies on good quality of the network, please have a mental preparation that you will probably get very low refresh rate of the VNC display.
+</div>
 
 ### Connect to Speaker or Headset
 
@@ -474,15 +469,17 @@ The simplest way to heard sound from the board is to plugin a headset. If you pr
 
 **Activate the bluetooth**
 
-Please tap the commands below to update and activate the Bluetooth of ReSpeaker Core v2.0.
+Please tap the commands below to update and activate the Bluetooth of ReSpeaker Core v2.0:
 
 ```
 sudo apt update
 sudo apt upgrade
-
 ```
-!!!Note
-If everything goes well, a package named **re-blooth** will be set up. If not, please change to another WiFi with good network condition and do the update again.
+
+<div class="admonition note" >
+<p class="admonition-title">Note</p>
+If update fails, please change to another WiFi with good network condition and do the update again.
+</div>
 
 Then activate the bluetooth by the command:
 
@@ -491,7 +488,7 @@ sudo systemctl enable bt-auto-connect.service
 sudo reboot -f
 ```
 
-**Using the ReSpeaker Core v2.0 as a Bluetooth Speaker**
+**Using the ReSpeaker Core v2.0 as a Bluetooth Speaker-Slave Device**
 
 When the ReSpeaker Core v2.0 restart, open the bluetooth of your phone or computer, you will find a bluetooth device called **ReSpeaker-xxxx**.
 Choose and connect to it. Plug a speaker or headset into the ReSpeaker Core v2.0 then play music and enjoy your bluetooth speaker.
@@ -499,7 +496,7 @@ Choose and connect to it. Plug a speaker or headset into the ReSpeaker Core v2.0
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Bluetooth_connect.png)
 
-**Using the ReSpeaker Core v2.0 as a Bluetooth Player**
+**Using the ReSpeaker Core v2.0 as a Bluetooth Player-Master Device**
 
 In addition to just working as a bluetooth speaker, it can also serve as a bluetooth player to hack your bluetooth headset or bluetooth speaker.
 OK, let's hacking.
@@ -644,6 +641,74 @@ So far we learned the basic operations of the ReSpeaker Core v2.0 board, let's m
 
 
 
+
+### Out of Box Demo
+
+This part including a close-sourced solution based on librespeaker. The librespeaker is an audio processing library which can perform:
+
+- Noise suppression
+- Direction of arrival calculation
+- Beamforming
+- Hotword searching
+
+It reads the microphoone stream from linux sound server, e.g. PulseAudio. It exposes a few APIs which enable users to get indicated when hotword is said and the processed microphone data in PCM format, which then can be sent to cloud services like Alexa for further processing.
+
+Before experiencing this powerful solution, please make sure you have done all the things below.
+
+- System image burning - this demo needs the lxqt version system image
+- Get serial console via OTG USB port
+- Setup Wi-Fi / ethernet
+- SSH
+- VNC
+
+OK, let's play.
+
+Actually it's simple and easy. We've made a one-click installation script. For more detail about this solution and step by step configuration, please refer to [here](https://github.com/respeaker/respeakerd)
+
+**Step 1. Download packages**
+```
+curl https://raw.githubusercontent.com/respeaker/respeakerd/master/scripts/install_all.sh|bash
+```
+
+When prompt, type in the sudo password for user respeaker: respeaker. Wait the script install some packages.
+
+
+**Step 2. Authorize Alexa**
+
+Connect to the board via [VNC](https://github.com/respeaker/get_started_with_respeaker/blob/master/docs/ReSpeaker_Core_V2/getting_started.md#ssh--vnc). In the VNC desktop, open terminal and execute:
+
+```
+respeaker@v2:~$ ~/.local/bin/alexa-auth
+```
+This script will open the web browser automatically, the web browser will display a login page. Sign in with your Amazon account:
+
+![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/aus-1.png)
+
+After succeed you will see:
+
+![](https://github.com/respeaker/get_started_with_respeaker/raw/master/img/aus-2.png)
+
+Now you can close the VNC client. The following commands can be executed in the SSH (If you prefer the VNC desktop, the terminal in VNC desktop also works).
+
+
+**Step 3. Run the demo**
+
+When finished the steps above, run:
+
+```
+python /home/respeaker/respeakerd/clients/Python/demo_respeaker_v2_vep_alexa_with_light.py
+
+```
+
+Say `snowboy`, wake up Alexa, Enjoy！
+
+<div class="admonition note" >
+<p class="admonition-title">Note</p>
+One more thing, do you see the colorful LEDs on the back of ReSpeaker Core v2.0? Look carefully at the green LED, haha, you find it. Yes the green led just point to the voice directly, as you known, DOA.</div>
+
+
+
+
 ### Play with AVS (Alexa Voice Service)
 
 This guide will shows you how to build an AVS device based on the ReSpeaker Core V2.0.
@@ -697,7 +762,7 @@ respeaker@v2:~$ ~/.local/bin/alexa-tap
 
 Wait until you see **on_ready** in the log printing. Press **Enter** key of your computer and talk to Alexa(Only support English now).
 
-#### Alexa Hands-Free via snowboy
+#### Alexa Hands-Free via Snowboy
 
 ```
 sudo apt install libatlas-base-dev                # required by snowboy
@@ -710,56 +775,13 @@ python ns_kws_alexa.py
 ```
 Wait until you see **on_ready** in the log printing, say **Alexa** to trigger the conversation with Alexa.
 
-#### Alexa With light effect:
+#### Alexa With Light Effect
 
 ```
 pip install pixel-ring
 python ns_kws_alexa_with_light.py
 ```
-The same as last one, say **Alexa** to trigger the conversation with Alexa. You will the LED shinning while this program is running.
-
-
-
-
-### Close-sourced Solution of AVS
-
-This part including a close-sourced solution based on librespeaker. The librespeaker is an audio processing library which can perform:
-
-- Noise suppression
-- Direction of arrival calculation
-- Beamforming
-- Hotword searching
-
-It reads the microphoone stream from linux sound server, e.g. PulseAudio. It exposes a few APIs which enable users to get indicated when hotword is said and the processed microphone data in PCM format, which then can be sent to cloud services like Alexa for further processing.
-
-Before experiencing this powerful solution, please make sure you have done all the things below.
-
-- System image burning - this demo needs the lxqt version system image
-- Get serial console via OTG USB port
-- Setup Wi-Fi / ethernet
-- SSH
-- VNC
-
-OK, let's play.
-
-Actually it's simple and easy. We've made a one-click installation script. For more detail about this solution, please refer to [here](https://github.com/respeaker/respeakerd)
-
-```
-curl https://raw.githubusercontent.com/respeaker/respeakerd/master/scripts/install_all.sh|bash
-```
-
-When prompt, type in the sudo password for user respeaker: respeaker. Wait the script install some packages, then follow the instructions printed. When finished the script, run:
-
-```
-python /home/respeaker/respeakerd/clients/Python/demo_respeaker_v2_vep_alexa_with_light.py
-
-```
-
-Say `snowboy`, wake up Alexa, Enjoy！
-
-!!!Tip
-One more thing, do you see the colorful LEDs on the back of ReSpeaker Core v2.0? Look carefully at the green LED, haha, you find it.
-Yes the green led just point to the voice directly, as you known, DOA.
+The same as last one, say **Alexa** to trigger the conversation with Alexa. You will see the LED shinning while this program is running.
 
 
 
@@ -1108,13 +1130,17 @@ on the new pads, as shown below.
 
 
 
+
 ## Resources
 - **[PDF]** [Download PDF of This Wiki](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/ReSpeaker_Core_v2.pdf)
 - **[PDF]** [Rockchip RK3229 Datasheet V1.1](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Rockchip%20RK3229%20Datasheet%20V1.1%2020151209.pdf)
 - **[PDF]** [Dimensions for Board](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/ReSpeaker_Core_v2_Demensions.pdf)
 - **[ZIP]** [3d Models For ReSpeaker Core v2.0](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Respeaker_Core_v2_3D_SKP.zip)
+- **[DXF]** [ReSpeaker Core v2.0 CASE](https://github.com/respeaker/get_started_with_respeaker/raw/8111196e821fec10c65b00d96cf011dc90111546/files/RESPEAKER_CORE_V2_CASE.dxf)
+- **[PDF]** [ReSpeaker Core v2.0 CASE Assembly drawing](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/ReSpeaker_Core_v2.0_case_Assembly.pdf)
 - **[MoreReading]** [Mraa Python documents page](http://iotdk.intel.com/docs/master/mraa/python/)
 - **[MoreReading]** [Intel Mraa SDK](https://software.intel.com/en-us/mraa-sdk/documentation )
+
 
 
 ## Tech Support
