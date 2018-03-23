@@ -66,16 +66,16 @@ This Grove - Ultrasonic ranger is a non-contact distance measurement module whic
 | Seeeduino V4.2 | Base Shield|  Grove - Ultrasonic Ranger |
 |--------------|-------------|-----------------|
 |![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/Ultrasonic_small.jpg)|
-|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html)|
+|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html)|
 
 - Step 2. Connect Ultrasonic Ranger to port D7 of Grove-Base Shield.
-- Step 3. Plug Grove - Base Shield into Arduino.
-- Step 4. Connect Arduino to PC through a USB cable.
+- Step 3. Plug Grove - Base Shield into Seeeduino.
+- Step 4. Connect Seeeduino to PC through a USB cable.
 
 ![](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/arduino%20connection.jpg)
 
 !!!Note
-	If we don't have Grove Base Shield, We also can directly connect Grove_Ultrasonic_Ranger to Arduino as below.
+	If we don't have Grove Base Shield, We also can directly connect Grove_Ultrasonic_Ranger to Seeeduino as below.
 
 | Seeeduino       | Grove-Ultrasonic Ranger |
 |---------------|-------------------------|
@@ -139,7 +139,7 @@ The distance to obstacles in front is:
 | Raspberry pi | GrovePi_Plus | Grove - Ultrasonic Ranger |
 |--------------|-------------|-----------------|
 |![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/Ultrasonic_small.jpg)|
-|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html)|
+|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html)|
 
 - Step 2. Plug the GrovePi_Plus into Raspberry.
 - Step 3. Connect Grove-Ultrasonic ranger to D4 port of GrovePi_Plus.
@@ -220,4 +220,4 @@ Please click [here](http://support.seeedstudio.com/knowledgebase/articles/182222
 - **[Example]** [Example_Measure_and_display_the_distance](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/res/Example_Measure_and_display_the_distance.zip)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/).

@@ -8,7 +8,7 @@ sku: 101020173
 tags: io_3v3, io_5v, plat_duino, plat_wio, plat_pi, plat_bbg, plat_linkit
 ---
 
----
+
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/cover.jpg)
 
 
@@ -20,21 +20,21 @@ This module can be used to build a light controlled switch i.e. switch off light
 !!!Warning
     The light sensor value only reflects the approximated trend of the intensity of light, it DOES NOT represent the exact Lumen.
 
+[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Light-Sensor-v1.2-p-2727.html)
 
-### Version Track
-This document applies to the following version of products:
+## Version
 
-| Version 	| Released Date	| How to buy	|
-|-----------|---------------|---------------|
-|Grove - Light Sensor 1.0 | Apr28, 2013|[![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/300px-Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Light-Sensor-p-746.html)|
-|Grove - Light Sensor(P)| 2014 | [![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/300px-Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Light-Sensor(P)-p-1253.html)|
-|Grove - Light Sensor(P) V1.1| Aug, 2016| [![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/300px-Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Light-Sensor(P)-p-1253.html)|
-|Grove - Light Sensor 1.2|Dec. 2015|[![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-Light-Sensor-v1.2-p-2727.html)|
+| Product Version              | Changes                                                            | Released Date |
+|------------------------------|--------------------------------------------------------------------|---------------|
+| Grove - Light Sensor 1.0     | Initial                                                            | Apr 28 2013   |
+| Grove - Light Sensor(P)      | Move Grove connector to back side                                  | May 15 2014   |
+| Grove - Light Sensor(P) V1.1 | Replace photoresistor-5528 with LS06-S Vs.Grove - Light Sensor(P)  | Dec 31 2015   |
+| Grove - Light Sensor 1.2     | Replace photoresistor-5528 with LS06-S Vs.Grove - Light Sensor 1.0 | Jan 20 2016   |
 
 
 ## Features
------
-* **Analog value output**
+
+* Analog value output
 * High reliability and sensibility
 * Small footprint
 * Recognize wider spectrum
@@ -44,10 +44,16 @@ This document applies to the following version of products:
 
 ### Platform Support
 
+| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
+|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo.jpg) |
+
+!!!Caution
+    The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
 
 ## Specification
-----
+
 |Item|Value|
 |-----|--------|
 |Operating voltage|3~5V|
@@ -59,60 +65,179 @@ This document applies to the following version of products:
 
 ## Getting Started
 
+### Play With Arduino
+
+#### Hardware
+
+- Step 1. Prepare the below stuffs:
+
+| Seeeduino V4 | Base Shield |Grove - Light Sensor | Grove - LED Bar |
+|--------------|----------------------|-----------------|---------------------|
+|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Light_Sensor/raw/master/img/light_sensor_s.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_3.jpg)|
+|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](http://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Light-Sensor-v1.2-p-2727.html)|[Get One Now](http://www.seeedstudio.com/Grove-LED-Bar-v2.0-p-2474.html)|
+
+- Step 2. Connect Grove-Light Sensor to port A0 of Grove-Base Shield.
+- Step 3. Connect Grove-Led Bar to port D2 of Grove-Base Shield.
+- Step 4. Plug Grove - Base Shield into Seeeduino.
+- Step 5. Connect Seeeduino to PC through a USB cable.
+
+![](https://github.com/SeeedDocument/Grove_Light_Sensor/raw/master/img/seeeduino_light.jpg)
+
 !!!Note
-    This part is besed on Grove - Light Sensor(P) V1.0.
+	If we don't have Grove Base Shield, We also can directly connect Grove-Light Sensor to Seeeduino as below.
 
-Here we will show you how this Grove - Light Sensor works via a simple demo. First of all, you need to prepare the below stuffs:
-
-| Seeeduino V4 | Grove - Light Sensor | Grove - LED Bar |
-|--------------|----------------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_2.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_3.jpg)|
-|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](http://www.seeedstudio.com/Grove-Light-Sensor%28P%29-p-1253.html)|[Get ONE Now](http://www.seeedstudio.com/Grove-LED-Bar-v2.0-p-2474.html)|
-
-
-| Base Shield | micro USB cable | Grove cable |
-|---------------|---------------|-------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_5.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_6.jpg)|
-|[Get ONE Now](http://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](http://www.seeedstudio.com/Micro-USB-Cable-100cm-p-1476.html)|[Get ONE Now](http://www.seeedstudio.com/Grove-Universal-4-Pin-20cm-Unbuckled-Cable-%285-PCs-Pack%29-p-749.html)|
+| Seeeduino       | Grove-Light Sensor |
+|---------------|-------------------------|
+| 5V           | Red                     |
+| GND           | Black                   |
+| Not Conencted | White                   |
+| A0            | Yellow                  |
 
 
+| Seeeduino       | Grove-Led Bar |
+|---------------|-------------------------|
+| 5V            | Red                     |
+| GND           | Black                   |
+| D3            | White                   |
+| D2            | Yellow                  |
 
-### Connection
+#### Software
 
-Thanks to the benefit of Grove series module, you don't need soldering or bread board, what you need to do is connecting the modules to the appropriate grove port of Base Shield. For this demo, we will use 2 Grove modules.
+- Step 1. Download the  [ Grove-LED Bar Library](https://github.com/Seeed-Studio/Grove_LED_Bar/archive/master.zip) from Github.
+- Step 2. Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Seeeduino.
+- Step 3. Copy the code into Seeeduino IDE and upload.
 
-* Grove - Light Sensor is an analog output module, let's connect it to **A0**.
-* Grove - LED Bar is a digital input module with a 2-wire bus, let's connect it to **D2**
+```c
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/connect.jpeg)
+#include <Grove_LED_Bar.h>
 
-### Download sketch
+Grove_LED_Bar bar(3, 2, 0);  // Clock pin, Data pin, Orientation
 
-There's a sketchbook for Seeeduino Stalker V3.1, which includes:
+void setup()
+{
+  // nothing to initialize
+  bar.begin();
+  bar.setGreenToRed(true);
+}
 
-* Example of read raw value of the sensor
-* Example of this getting started
-* Example of the secret box demo
-* LED Bar library
+void loop()
+{
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/sketch_download.png)](https://github.com/Seeed-Studio/Sketch_Grove_Light_Sensor)
+  int value = analogRead(A0);
+  value = map(value, 0, 800, 0, 10);
 
-Download the sketch and put it at anywhere, open Arduino IDE, **File > Reference**, and copy the location path to **Sketchbook location**, then click on OK. Reopen Arduino IDE, then the sketchbook is set.
+  bar.setLevel(value);
+  delay(100);
+}
+```
 
-### Upload the code to Arduino
+- Step 2. The Led bar will change base on light.
 
-Open Arduino IDE, **File > Sketchbook > GettingStarted** to open the code for this part.
+### Play With Raspberry Pi
 
-Then choose the right Board and COM port, and then click on the Upload button, this process will take seconds. Then let's try to cover the light sensor with your hand, you will find LED Bar reduce its led.
+#### Hardware
 
-### Get Raw Data
+- Step 1. Prepare the below stuffs:
 
-If you don't need a Grove - LED Bar, there's another example you can try, Open Arduino IDE, **File > Sketchbook > RawData** to open the code, after uploaded the example to Seeeduino V4, click on **Serial > Plotter** to get the changing curve of the sensor.
+| Raspberry pi | GrovePi_Plus | Grove - Light Sensor | Grove - Red LED |
+|--------------|-------------|-----------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Light_Sensor/raw/master/img/light_sensor_s.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Red_LED/raw/master/img/Red%20LED_s.jpg)|
+|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/Grove-Light-Sensor-v1.2-p-2727.html)|[Get One Now](https://www.seeedstudio.com/s/Grove-Red-LED-p-1142.html)|
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/raw_data.png)
+- Step 2. Plug the GrovePi_Plus into Raspberry.
+- Step 3. Connect Grove-light sensor to A0 port of GrovePi_Plus.
+- Step 4. Connect Grove-Red Led to D4 port of GrovePi_Plus.
+- Step 5. Connect the Raspberry to PC through USB cable.
+
+![](https://github.com/SeeedDocument/Grove_Light_Sensor/raw/master/img/rasp_light.jpg)
+
+#### Software
+
+- Step 1. Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment.
+- Step 2. Git clone the Github repository.
+
+```
+cd ~
+git clone https://github.com/DexterInd/GrovePi.git
+
+```
+
+- Step 3. Excute below commands.
 
 
-### Project: Secret Box
+```
+cd ~/GrovePi/Software/Python
+python grove_light_sensor.py
+```
+
+Here is the grove_light_sensor.py code.
+
+```python
+import time
+import grovepi
+
+# Connect the Grove Light Sensor to analog port A0
+# SIG,NC,VCC,GND
+light_sensor = 0
+
+# Connect the LED to digital port D4
+# SIG,NC,VCC,GND
+led = 4
+
+# Turn on LED once sensor exceeds threshold resistance
+threshold = 10
+
+grovepi.pinMode(light_sensor,"INPUT")
+grovepi.pinMode(led,"OUTPUT")
+
+while True:
+    try:
+        # Get sensor value
+        sensor_value = grovepi.analogRead(light_sensor)
+
+        # Calculate resistance of sensor in K
+        resistance = (float)(1023 - sensor_value) * 10 / sensor_value
+
+        if resistance > threshold:
+            # Send HIGH to switch on LED
+            grovepi.digitalWrite(led,1)
+        else:
+            # Send LOW to switch off LED
+            grovepi.digitalWrite(led,0)
+
+        print("sensor_value = %d resistance = %.2f" %(sensor_value,  resistance))
+        time.sleep(.5)
+
+    except IOError:
+        print ("Error")
+```
+
+- Step 4. The led will turn on when the light sensor gets covered. 
+
+```
+pi@raspberrypi:~/GrovePi/Software/Python $ python grove_light_sensor.py 
+sensor_value = 754 resistance = 3.57
+sensor_value = 754 resistance = 3.57
+sensor_value = 752 resistance = 3.60
+sensor_value = 752 resistance = 3.60
+sensor_value = 752 resistance = 3.60
+sensor_value = 313 resistance = 22.68
+sensor_value = 155 resistance = 56.00
+sensor_value = 753 resistance = 3.59
+```
+
+
+## Resources
+
+
+- **[Eagle&PDF]** [Eagle File for Grove - Light Sensor V1.0](https://github.com/SeeedDocument/Grove_Light_Sensor/raw/master/resources/Grove%20-%20Light%20Sensor.zip)
+- **[Eagle&PDF]**  [Eagle File for Grove - Light Sensor(P) V1.0](https://github.com/SeeedDocument/Grove_Light_Sensor/raw/master/resources/Grove%20-%20Light%20Sensor%28P%29.zip)
+- **[Eagle&PDF]**  [Eagle File for Grove - Light Sensor(P) V1.1](https://github.com/SeeedDocument/Grove_Light_Sensor/raw/master/resources/Grove%20-%20Light%20Sensor%28P%29%20v1.1.zip)
+- **[Datasheet]** [LS06-MΦ5 Reference Information](https://github.com/SeeedDocument/Grove_Light_Sensor/raw/master/res/LS06-M%CE%A65_datasheet.pdf)
+- **[Datasheet]**  [LM358.PDF](https://github.com/SeeedDocument/Grove_Light_Sensor/raw/master/res/LM358.pdf)
+- **[More Reading]** Secret Box
+
+![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/secret_box.png)
 
 Here we will show you a project made with Grove - Light Sensor - Secret Box. First you need a box, a paper box, wooden box, any box is ok. Put something in the box, because we named it secret box, that means we don't want anybody to open it, otherwise there will be an alarm to inform you.
 
@@ -123,33 +248,67 @@ Here we use LinkIt ONE as the controller, which is an Arduino compatible board a
 * Grove - Base Shield
 * A Sim Card
 
-Let's connect Grove - Light Sensor to A0 or Base Shield, and open Arduino IDE, **File > Sketchbook > SecretBox**, what you need to do is upload the example to LinkIt ONE. Then someone open the box, the light will detect it, and send you a SMS.
+Let's connect Grove - Light Sensor to A0 or Base Shield, and open Arduino IDE, copy below code and upload the example to LinkIt ONE. Then someone open the box, the light will detect it, and send you a SMS.
+
+```c
+// demo of Grove Starter kit for LinkIt ONE
+// Secret box
+
+#include <LGSM.h>
+
+char num[20] = "13425171053";           // your number write here
+char text[100] = "Warning: Your box had been opened!!";    // what do you want to send
+
+
+const int pinLight = A0;                // light sensor connect to A0
+
+bool isLightInBox()
+{
+    return (analogRead(pinLight)<50);   // when get data less than 50, means light sensor was in box
+}
+
+void setup()
+{
+    Serial.begin(115200);
+
+    while(!isLightInBox());             // until put in box
+    delay(2000);
+}
+
+
+void loop()
+{
+    if(!isLightInBox())                 // box is open
+    {
+        Serial.println("box had been opened");
+
+        while(!LSMS.ready())
+        {
+            delay(1000);
+        }
+
+        Serial.println("SIM ready for work!");
+        LSMS.beginSMS(num);
+        LSMS.print(text);
+
+        if(LSMS.endSMS())
+        {
+            Serial.println("SMS is sent");
+        }
+        else
+        {
+            Serial.println("SMS send fail");
+        }
+
+        while(!isLightInBox());             // until put in box
+        delay(2000);
+    }
+
+    delay(10);
+}
+```
 
 Have fun.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/secret_box.png)
-
-##Project
-
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Lotus/master/img/gun.jpg)
-
-Inspired by OVERWATCH, we have made a very cool Wooden Laser Gun toy for fun these day!
-
-The Wooden Laser Gun and the Gun Target are all based on an Arduino board called Seeeduino Lotus. The laser emitter on the Laser Gun is controlled to fire laser pulse to "activate" the Gun Target. And there are 3 light sensors on the Gun Target to detect the laser pulse. It seems very simple right? If you are interested in our project, please make one for yourself or your child! It's worth to spend one day DIY it as a Xmas present.    
-
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/make.png)](http://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)
-
-## Resources
----
-
-* [Sketchbook for Light Sensor](https://github.com/Seeed-Studio/Sketch_Grove_Light_Sensor)
-* [Eagle File for Grove - Light Sensor V1.0](https://github.com/SeeedDocument/Grove_Light_Sensor/raw/master/resources/Grove%20-%20Light%20Sensor.zip)
-* [Eagle File for Grove - Light Sensor(P) V1.0](https://github.com/SeeedDocument/Grove_Light_Sensor/raw/master/resources/Grove%20-%20Light%20Sensor%28P%29.zip)
-* [Eagle File for Grove - Light Sensor(P) V1.1](https://github.com/SeeedDocument/Grove_Light_Sensor/raw/master/resources/Grove%20-%20Light%20Sensor%28P%29%20v1.1.zip)
-- [LS06-MΦ5 Reference Information](https://github.com/SeeedDocument/Grove_Light_Sensor/raw/master/res/LS06-M%CE%A65_datasheet.pdf)
-- [LM358.PDF](https://github.com/SeeedDocument/Grove_Light_Sensor/raw/master/res/LM358.pdf)
-- [Light Sensor Library](https://github.com/Seeed-Studio/Light_Sensor)
-- [Schematic at Easyeda](https://easyeda.com/Seeed/Grove_Light_sensor_v1_1-32d2a4ff5a8a4d928df91da1d8c647a0)
-
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/).
