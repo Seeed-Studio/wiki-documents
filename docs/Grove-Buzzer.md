@@ -59,19 +59,19 @@ The Grove - Buzzer module has a [piezo buzzer](https://en.wikipedia.org/wiki/Buz
 
 - Step 1. Prepare the below stuffs:
 
-| Seeeduino V4.2 | Base Shield|  Grove - Button |
+| Seeeduino V4.2 | Base Shield|  Grove - Buzzer |
 |--------------|-------------|-----------------|
 |![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/img/buzzer_s.jpg)|
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|
 
 - Step 2. Connect Grove-Buzzer to port D6 of Grove-Base Shield.
-- Step 3. Plug Grove - Base Shield into Arduino.
-- Step 4. Connect Arduino to PC through a USB cable.
+- Step 3. Plug Grove - Base Shield into Seeeduino.
+- Step 4. Connect Seeeduino to PC through a USB cable.
 
 ![](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/img/seeeduino_buzzer.jpg)
 
 !!!Note
-	If we don't have Grove Base Shield, We also can directly connect Grove-Button to Arduino as below.
+	If we don't have Grove Base Shield, We also can directly connect Grove-buzzer to Seeeduino as below.
 
 | Seeeduino       | Grove-Buzzer |
 |---------------|-------------------------|
@@ -109,7 +109,7 @@ void loop()
 
 - Step 1. Prepare the below stuffs:
 
-| Raspberry pi | GrovePi_Plus | Grove - Button |
+| Raspberry pi | GrovePi_Plus | Grove - Buzzer |
 |--------------|-------------|-----------------|
 |![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/img/buzzer_s.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|

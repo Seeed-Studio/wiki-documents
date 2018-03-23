@@ -49,19 +49,19 @@ Grove - Button is a momentary push button. It contains one independent "momentar
 
 - Step 1. Prepare the below stuffs:
 
-| Seeeduino V4.2 | Base Shield|  Grove - Red LED |
+| Seeeduino V4.2 | Base Shield|  Grove - Button |
 |--------------|-------------|-----------------|
 |![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Button/raw/master/img/button_s.jpg)|
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Button-p-766.html)|
 
 - Step 2. Connect Grove-Button to port D2 of Grove-Base Shield.
-- Step 3. Plug Grove - Base Shield into Arduino.
-- Step 4. Connect Arduino to PC through a USB cable.
+- Step 3. Plug Grove - Base Shield into Seeeduino.
+- Step 4. Connect Seeeduino to PC through a USB cable.
 
 ![](https://github.com/SeeedDocument/Grove_Button/raw/master/img/seeeduino_button.jpg)
 
 !!!Note
-	If we don't have Grove Base Shield, We also can directly connect Grove-Button to Arduino as below.
+	If we don't have Grove Base Shield, We also can directly connect Grove-Button to Seeeduino as below.
 
 | Seeeduino       | Grove-Button |
 |---------------|-------------------------|

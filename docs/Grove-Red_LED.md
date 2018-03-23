@@ -53,13 +53,13 @@ Grove - Red LED is similar to the Grove - LED module which houses an LED light s
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/s/Grove-Red-LED-p-1142.html)|
 
 - Step 2. Connect Grove-Red LED to port D2 of Grove-Base Shield.
-- Step 3. Plug Grove - Base Shield into Arduino.
-- Step 4. Connect Arduino to PC through a USB cable.
+- Step 3. Plug Grove - Base Shield into Seeeduino.
+- Step 4. Connect Seeeduino to PC through a USB cable.
 
 ![](https://github.com/SeeedDocument/Grove-Red_LED/raw/master/img/seeedstudio_red_led.jpg)
 
 !!!Note
-	If we don't have Grove Base Shield, We also can directly connect Grove-Red_Led to Arduino as below.
+	If we don't have Grove Base Shield, We also can directly connect Grove-Red_Led to Seeeduino as below.
 
 | Seeeduino       | Grove-Red Led |
 |---------------|-------------------------|
