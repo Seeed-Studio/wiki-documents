@@ -218,7 +218,7 @@ sudo python dfu.py --download default_firmware.bin  # Change the bin names base 
 Here is the firmware downloading result.
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/Download_firmware.png)
 
-**For Windows/Mac:** We do not suugest use Windows to update the firmware. 
+**For Windows/Mac:** We do not suugest use Windows/Mac to update the firmware. 
 
 ### Control the LEDs
 
