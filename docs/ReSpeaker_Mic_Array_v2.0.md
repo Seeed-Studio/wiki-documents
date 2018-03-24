@@ -218,7 +218,7 @@ sudo python dfu.py --download default_firmware.bin  # Change the bin names base 
 Here is the firmware downloading result.
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/Download_firmware.png)
 
-**For Windows:** We do not suugest use Windows to update the firmware. 
+**For Windows/Mac:** We do not suugest use Windows to update the firmware. 
 
 ### Control the LEDs
 
@@ -286,7 +286,7 @@ if __name__ == '__main__':
 
 ```
 
-**For Windows:** Here is the example to control the leds.
+**For Windows/Mac:** Here is the example to control the leds.
 
 ```python
 git clone https://github.com/respeaker/pixel_ring.git
@@ -331,7 +331,7 @@ if dev:
 
 ### Tuning
 
-We can configure some parameters of built-in algorithms. It works well for Linux and Windows.
+We can configure some parameters of built-in algorithms. It works well for Linux, Mac and Windows.
 
 - Get the full list parameters:
 
@@ -437,10 +437,59 @@ wf.writeframes(b''.join(frames))
 wf.close()
 ```
 
-**For Windows:** We run command 'pip install pyaudio' first and then use  [get_index.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/get_index.py) and [record.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/record.py) to extract voice.
+**For Windows:** 
+
+- Step 1. We run below command to install pyaudio.
+
+```
+ pip install pyaudio
+```
+
+- Step 2. Use [get_index.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/get_index.py) to get device index.
+
+```
+C:\Users\XXX\Desktop>python get_index.py
+Input Device id  0  -  Microsoft Sound Mapper - Input
+Input Device id  1  -  ReSpeaker 4 Mic Array (UAC1.0)
+Input Device id  2  -  Internal Microphone (Conexant I)
+```
+
+- Step 3. Modify the device index and channels of [record.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/record.py) and then extract voice.
+
+```
+C:\Users\XXX\Desktop>python record.py
+* recording
+* done recording
+```
 
 !!!Warning
     If we see "Error: %1 is not a valid Win32 application.", please install Python Win32 version.
+
+**For MAC:** 
+
+- Step 1. We run below command to install pyaudio.
+
+```
+ pip install pyaudio
+```
+
+- Step 2. Use [get_index.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/get_index.py) to get device index.
+
+```
+MacBook-Air:Desktop XXX$ python get_index.py 
+Input Device id  0  -  Built-in Microphone
+Input Device id  2  -  ReSpeaker 4 Mic Array (UAC1.0)
+```
+
+- Step 3. Modify the device index and channels of [record.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/record.py) and then extract voice.
+
+```
+MacBook-Air:Desktop XXX$ python record.py 
+2018-03-24 14:53:02.400 Python[2360:16629] 14:53:02.399 WARNING:  140: This application, or a library it uses, is using the deprecated Carbon Component Manager for hosting Audio Units. Support for this will be removed in a future release. Also, this makes the host incompatible with version 3 audio units. Please transition to the API's in AudioComponent.h.
+* recording
+* done recording
+```
+
 
 ### Realtime Sound Source Localization and Tracking
 [ODAS](https://github.com/introlab/odas) stands for Open embeddeD Audition System. This is a library dedicated to perform sound source localization, tracking, separation and post-filtering. Let's have a fun with it.
