@@ -30,34 +30,45 @@ The Wio LTE is well suited for outdoor projects where the device can connect to 
 |Wio LTE US Version|[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Wio-LTE-US-Version-4G%2C-Cat.1%2C-GNSS%2C-JavaScript%28Espruino%29-Compatible-p-2957.html)|
 
 ## Version
+| Product Version | Changes                                  | Released Date |
+|-----------------|------------------------------------------|---------------|
+| Wio Lte v1.0    | Initial                                  | Jul 24, 2017  |
+| Wio Lte v1.1    | Optimizing Production methods            | Oct 18, 2017  |
+| Wio Lte v1.3    | Hardware change with better power supply | March 9, 2018 |
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#6ab0de;}
-.tg .tg-yw4l{vertical-align:top;width:20%}
-.tg .tg-yw42{vertical-align:top;width:50%}
-.tg .tg-4eph{background-color:#f9f9f9;}
-.tg .tg-b7b8{background-color:#f9f9f9;vertical-align:top}
-</style>
-<table class="tg">
-  <tr>
-    <th class="tg-yw4l">Product Version</th>
-    <th class="tg-yw42">Changes</th>
-    <th class="tg-yw4l">Released Date</th>
-  </tr>
-  <tr>
-    <td class="tg-4eph">Wio Lte V1.0</td>
-    <td class="tg-4eph">Initial</td>
-    <td class="tg-b7b8">Jul 24, 2017</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">Wio Lte V1.1</td>
-    <td class="tg-031e">
-    Optimizing production methods<br>
-    <td class="tg-yw4l">Oct 18, 2017</td>
-  </tr>
-</table>
+### Wio Lte v1.3 Release Notes
+
+Since the launch of this product, we have received a lot of user feedback and suggestions. We decided to further improve this product based on user feedback, so here you see, the Wio Lte v1.3 comes out.
+
+We made some changes in the power circuit:
+
+- Change the PMIC (Power manage IC) into MP2617, which is more stable.
+- Remove the DC-DC Module which supplies for the Lte Module, instead, in this version we power the Lte Module by the main circuit or the Lipo battery.
+- Add two 100uf capacitors to make the power more stable.
+
+As you can see in the pictures below.
+
+                      v1.3                               v1.0
+
+![](https://github.com/SeeedDocument/Wio_LTE/raw/master/img/wio_ver1.jpg)
+![](https://github.com/SeeedDocument/Wio_LTE/raw/master/img/wio_ver2.jpg)
+
+As the power circuit changes, the logic of the power indicator has also changed.
+
+LED Statues | Battery Statues
+-----|----
+LED ON| Charging
+LED off | Charging finished
+LED Blinking | Battery error.(Including no battery statues)
+
+What's more, the **Reset Key** logic changed as well.
+
+Operation | Rest Range
+---|---
+Hold the reset button for a short time(within 2 seconds) | MCU reset/ Lte Module will not reset
+Hold the reset button for a short time(More than 10 seconds)| The hole board will reset
+
+
 
 
 ## Features
@@ -481,7 +492,7 @@ setInterval(function() {
 }, 100);
 ```
 
-#### Play with SD Card 
+#### Play with SD Card
 ***Note: espruino firmware v1.94 is not support SD card drive, please use v1.93 or v1.96(May not released)***
 - Step 1. Plug a micro SD card to the card slot
 - Step 2. Copy the code to Espruino IDE and upload it.
@@ -1606,13 +1617,19 @@ Files found on the card (name, date and size in bytes):
 Please click here to see all [Wio_LTE](http://support.seeedstudio.com/knowledgebase/articles/1829333-wio-lte-sku-102990925-102990924-102990923-1029) FAQs.
 
 ## Resource
-- **[Eagle]**[Wio LTE Cat.1 v1.1.SCH](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/Wio%20LTE%20Cat.1%20v1.1.sch.zip)
-- **[Eagle]**[Wio LTE Cat.1 v1.1.BRD](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/Wio%20LTE%20Cat.1%20v1.1.brd.zip)
-- **[PDF]**[Wio LTE Cat.1 v1.1.SCH](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/Wio%20LTE%20Cat.1%20Sch%20v1.1.pdf.zip)
-- **[PDF]**[Wio LTE Cat.1 v1.1.PCB](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/Wio%20LTE%20Cat.1%20PCB%20v1.1.pdf.zip)
-- **[Library]**[Wio_LTE_Arduino_Library](https://github.com/Seeed-Studio/Wio_LTE_Arduino_Library)
-- **[Library]**[Wio_LTE_JavaScript_Demo](https://github.com/Seeed-Studio/Wio_LTE_JavaScript_Demo)
-- **[Datasheet]**[AT Command](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/AT_Command.zip)
+- **[Eagle]** [Wio LTE Cat.1 v1.1.SCH](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/Wio%20LTE%20Cat.1%20v1.1.sch.zip)
+
+- **[Eagle]** [Wio LTE Cat.1 v1.1.BRD](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/Wio%20LTE%20Cat.1%20v1.1.brd.zip)
+
+- **[PDF]** [Wio LTE Cat.1 v1.1.SCH](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/Wio%20LTE%20Cat.1%20Sch%20v1.1.pdf.zip)
+
+- **[PDF]** [Wio LTE Cat.1 v1.1.PCB](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/Wio%20LTE%20Cat.1%20PCB%20v1.1.pdf.zip)
+
+- **[Library]** [Wio_LTE_Arduino_Library](https://github.com/Seeed-Studio/Wio_LTE_Arduino_Library)
+
+- **[Library]** [Wio_LTE_JavaScript_Demo](https://github.com/Seeed-Studio/Wio_LTE_JavaScript_Demo)
+
+- **[Datasheet]** [AT Command](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/AT_Command.zip)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/).

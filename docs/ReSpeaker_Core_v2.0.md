@@ -129,7 +129,7 @@ ReSpeaker Core v2.0 is designed as a feature rich development board for business
 
 ## Hardware Overview
 
-### Interface and storage
+**Interface and storage**
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/hardware_overview.png)
 
@@ -174,7 +174,7 @@ The onboard Antenna is for WIFI and Bluetooth. Also we provide a interface for 2
 Grove Socket for digital or I2C.
 
 
-### Pin Out
+**Pin Out**
 
 **Pin index definition for headers**
 
@@ -207,7 +207,7 @@ MRAA|	HEADER PIN INDEX |	SYSFS PIN	|RK3229 PIN
 |0	|9	|--	|I2C2_SDA|
 
 
-### Dimensions
+**Dimensions**
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Dimension_2.png)
 
@@ -232,7 +232,9 @@ MRAA|	HEADER PIN INDEX |	SYSFS PIN	|RK3229 PIN
 ## Getting Started
 
 
-### Prerequisites
+### preparation
+
+**Prerequisites**
 
 - ReSpeaker Core V2.0
 - Wi-Fi Network
@@ -248,7 +250,7 @@ Please plug the USB cable gently, otherwise you may damage the interface.Please 
 </div>
 
 
-### Image Installation
+**Image Installation**
 
 Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2.0 image from an SD card to get up and running. We offer two ways to boot the Respeaker core v2.0. You can either boot from the SD card or [boot from the eMMC](/boot from the eMMC).
 
@@ -301,7 +303,7 @@ During the flashing process, you'll see the USER1 and USER2 LEDs blink alternate
 You can also check the image version with this command: cat /etc/issue.net.
 
 
-### Serial Console
+**Serial Console**
 
 Now your ReSpeaker Core v2.0 can boot, you might want to get access to the Linux system via a console, to setup the WiFi, etc. You have two ways to get the console:
 
@@ -362,7 +364,7 @@ Now follow step 2 above to connect to your Respeaker over this serial connection
 
 
 
-### Network Setting Up
+**Network Setting Up**
 
 **A. Wi-Fi Setting Up**
 
@@ -424,7 +426,7 @@ You can connect to a network using an Ethernet cable. Just plug the Ethernet cab
 
 
 
-### Connect to SSH & VNC
+**Connect to SSH & VNC**
 
 **A. SSH**
 
@@ -456,7 +458,7 @@ To use VNC, connect your PC/Mac and ReSpeaker v2.0 to the same Wi-Fi network. Th
 Please note that the VNC connection relies on good quality of the network, please have a mental preparation that you will probably get very low refresh rate of the VNC display.
 </div>
 
-### Connect to Speaker or Headset
+**Connect to Speaker or Headset**
 
 The board uses the built-in codec of the SOC to render playback. Both the JST speaker port and the headset port are driven by their own amplifier, and both amplifiers are connected to the same codec of the SOC. The sound card driver that SEEED implemented drives both the capture device and the playback device. So there's no discrete capture or playback sound card in ALSA device list. They're all named seeed-8mic-voicecard.
 
@@ -465,7 +467,7 @@ The simplest way to heard sound from the board is to plugin a headset. If you pr
 
 
 
-### Bluetooth Setting Up
+**Bluetooth Setting Up**
 
 **Activate the bluetooth**
 
@@ -577,7 +579,7 @@ aplay bluetoothtest.wav
 ```
 
 
-### Record and Play
+**Record and Play**
 
 **1.Test via ALSA**
 
@@ -707,6 +709,44 @@ Say `snowboy`, wake up Alexa, Enjoy！
 One more thing, do you see the colorful LEDs on the back of ReSpeaker Core v2.0? Look carefully at the green LED, haha, you find it. Yes the green led just point to the voice directly, as you known, DOA.</div>
 
 
+
+
+## Closed Source Solution
+
+### Algorithms
+
+The Closed source solution contains NS/BF/
+
+**Keyword wake-up**
+**BF(Beam-Forming)**
+**DoA (Direction of arrival)**
+
+
+**NS(Noise suppression)**
+  - Filter the signal noise introduced by the circuit
+  - Filter out the steady-state noise in the environment, such as the sound of an electric fan.
+
+- AEC (Acoustic echo cancellation) and AGC (Automatic gain control)
+
+### Play with AVS (Alexa Voice Service)
+
+
+### Play with Dueros (Voice assistance of Baidu)
+
+
+
+
+
+
+
+
+
+
+## Open Source Solution
+
+### Algorithms
+
+The open source solution contains NS algorithms right now. We will continue to update.
 
 
 ### Play with AVS (Alexa Voice Service)
