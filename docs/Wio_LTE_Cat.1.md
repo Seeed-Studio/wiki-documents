@@ -48,7 +48,7 @@ We made some changes in the power circuit:
 
 As you can see in the pictures below.
 
-                      v1.3                               v1.0
+                      v1.3                                  v1.0
 
 ![](https://github.com/SeeedDocument/Wio_LTE/raw/master/img/wio_ver1.jpg)
 ![](https://github.com/SeeedDocument/Wio_LTE/raw/master/img/wio_ver2.jpg)
@@ -1617,6 +1617,7 @@ Files found on the card (name, date and size in bytes):
 Please click here to see all [Wio_LTE](http://support.seeedstudio.com/knowledgebase/articles/1829333-wio-lte-sku-102990925-102990924-102990923-1029) FAQs.
 
 ## Resource
+
 - **[Eagle]** [Wio LTE Cat.1 v1.1.SCH](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/Wio%20LTE%20Cat.1%20v1.1.sch.zip)
 
 - **[Eagle]** [Wio LTE Cat.1 v1.1.BRD](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/Wio%20LTE%20Cat.1%20v1.1.brd.zip)
