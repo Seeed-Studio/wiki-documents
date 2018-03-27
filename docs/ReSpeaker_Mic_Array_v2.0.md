@@ -156,10 +156,10 @@ Three-color RGB LED.
 - <font face="" size=3 font color="ff0000">⑥</font> **Digital Microphone:**
 The MP34DT01-M is an ultra-compact, lowpower, omnidirectional, digital MEMS microphone built with a capacitive sensing element and an IC interface.
 
-### Pin Map
+**Pin Map**
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/Pin_Map.png)
 
-## Dimensions
+**Dimensions**
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/Dimension.png)
 
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/Dimension1.png)
@@ -181,19 +181,6 @@ The MP34DT01-M is an ultra-compact, lowpower, omnidirectional, digital MEMS micr
 !!!Note
     ReSpeaker Mic Array v2.0 is compatiable with Windows, Mac and Linux systems. The below scripts are tested on Python2.7. 
 
-### Install DFU and LED Control Driver  
-
-- **Windows:** Audio recording and playback works well by default. Libusb-win32 driver is only required to control LEDs an DSP parameters on Windows. We use [a handy tool - Zadig](http://zadig.akeo.ie/) to install the libusb-win32 driver for both `SEEED DFU` and `SEEED Control` (ReSpeaker Mic Array has 2 devices on Windows Device Manager).
-
-![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/usb_4mic_array_driver.png)
-
-!!!Warning
-    Please make sure that libusb-win32 is selected, not WinUSB or libusbK.
-
-- **MAC:** No driver is required.
-- **Linux:** No driver is required.
-
-
 ### Update firmwares
 
 There are 2 firmwares. One includes 1 channel data, while the other inlcudes 6 channels data. Here is the table for the differences.
@@ -203,8 +190,28 @@ There are 2 firmwares. One includes 1 channel data, while the other inlcudes 6 c
 | default_firmware.bin | 1              | Processed audio for ASR                                                                                                                                                 |
 | i6_firmware.bin      | 6              |  Channel 0: processed audio for ASR,  Channel 1: mic1 raw data, Channel 2: mic2 raw data, Channel 3: mic3 raw data, Channel 4: mic4 raw data, Channel 5: merged playback |
 
-Here is the audacity recording for the i6_firmware.
+Here is the Acoustic Echo Cancellation example. 
+
+- Step 1. Connect the USB cable to PC and audio jack to speaker. 
+
+![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/playback.jpg)
+
+- Step 2. Select the mic array v2.0 as output device in PC side.
+- Step 3. Start the audacity to record.
+- Step 4. Play music at PC side first and then we talk.
+- Step 5. We will see the audacity screen as below, Please click **Solo** to hear each channel audio. 
+
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/Audacity.png)
+
+Channel0 Audio(processed by algorithms):
+![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/channel0_asr.wav)
+
+Channel1 Audio(Mic1 raw data):
+![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/channel1_raw.wav)
+
+Channel5 Audio(Playback data):
+![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/channel5_playback.wav)
+
 
 **For Linux:**  The Mic array supports the USB DFU. We develop a [python script dfu.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/dfu.py) to update the firmware through USB.
 
@@ -219,6 +226,44 @@ Here is the firmware downloading result.
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/Download_firmware.png)
 
 **For Windows/Mac:** We do not suugest use Windows/Mac to update the firmware. 
+
+### Install DFU and LED Control Driver  
+
+- **Windows:** Audio recording and playback works well by default. Libusb-win32 driver is only required to control LEDs an DSP parameters on Windows. We use [a handy tool - Zadig](http://zadig.akeo.ie/) to install the libusb-win32 driver for both `SEEED DFU` and `SEEED Control` (ReSpeaker Mic Array has 2 devices on Windows Device Manager).
+
+![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/usb_4mic_array_driver.png)
+
+!!!Warning
+    Please make sure that libusb-win32 is selected, not WinUSB or libusbK.
+
+- **MAC:** No driver is required.
+- **Linux:** No driver is required.
+
+### Tuning
+
+**For Linux/Mac/Windows:** We can configure some parameters of built-in algorithms. 
+
+- Get the full list parameters, for more info, please refer to FAQ.
+
+```
+git clone https://github.com/respeaker/usb_4_mic_array.git
+cd usb_4_mic_array
+python tuning.py -p
+```
+
+- Example#1, we can turn off Automatic Gain Control (AGC):
+
+```
+python tuning.py AGCONOFF 0
+```
+
+- Example#2, We can check the DOA angle.
+
+```
+pi@raspberrypi:~/usb_4_mic_array $ sudo python tuning.py DOAANGLE
+DOAANGLE: 180
+```
+
 
 ### Control the LEDs
 
@@ -248,7 +293,7 @@ Here are the usb_pixel_ring APIs.
 | 0x23    | [volume]                       | pixel_ring.set_volume()        | show volume, range: 0 ~ 12                                                                                        |
 | 0x24    | [pattern]                      | pixel_ring.change_pattern()    | set pattern, 0 - Google Home pattern, others - Echo pattern                                                       |
 
-**For Linux:** Here is the example to control the leds.
+**For Linux:** Here is the example to control the leds. Please follow below commands to run the demo.
 
 ```python
 git clone https://github.com/respeaker/pixel_ring.git
@@ -288,12 +333,14 @@ if __name__ == '__main__':
 
 **For Windows/Mac:** Here is the example to control the leds.
 
+- Step 1. Download pixel_ring.
+
 ```python
 git clone https://github.com/respeaker/pixel_ring.git
 cd pixel_ring/pixel_ring
 ```
 
-Create a [led_control.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/led_control.py) with below code and run 'python led_control.py'
+- Step 2. Create a [led_control.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/led_control.py) with below code and run 'python led_control.py'
 
 ```Python
 from usb_pixel_ring_v2 import PixelRing
@@ -322,29 +369,54 @@ if dev:
             break
 
     pixel_ring.off()
-
 ```
 
 !!!Note
     If you see "None" printed on screen, please reinstall the libusb-win32 driver.
 
+### DOA (Direction of Arrival)
 
-### Tuning
+**For Windows/Mac/Linux:** Here is the example to view the DOA. The Green LED is the indicator of the voice direction. For the angle, please refer to hardware overview.  
 
-We can configure some parameters of built-in algorithms. It works well for Linux, Mac and Windows.
+- Step 1. Download the usb_4_mic_array.
 
-- Get the full list parameters:
-
-```
+```python
 git clone https://github.com/respeaker/usb_4_mic_array.git
 cd usb_4_mic_array
-python tuning.py -p
 ```
 
-- For example, we can turn off Automatic Gain Control (AGC):
+- Step 2. Create a [DOA.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/DOA.py) with below code under usb_4_mic_array folder and run 'python DOA.py'
 
 ```
-python tuning.py AGCONOFF 0
+from tuning import Tuning
+import usb.core
+import usb.util
+import time
+
+dev = usb.core.find(idVendor=0x2886, idProduct=0x0018)
+#print dev
+if dev:
+    Mic_tuning = Tuning(dev)
+    print Mic_tuning.direction()
+    while True:
+        try:
+            print Mic_tuning.direction
+            time.sleep(1)
+        except KeyboardInterrupt:
+            break
+```
+
+- Step 3. We will see the DOA as below.
+
+```
+pi@raspberrypi:~/usb_4_mic_array $ sudo python doa.py 
+184
+183
+175
+105
+104
+104
+103
 ```
 
 ### Extract Voice
@@ -490,7 +562,6 @@ MacBook-Air:Desktop XXX$ python record.py
 * done recording
 ```
 
-
 ### Realtime Sound Source Localization and Tracking
 [ODAS](https://github.com/introlab/odas) stands for Open embeddeD Audition System. This is a library dedicated to perform sound source localization, tracking, separation and post-filtering. Let's have a fun with it.
 
@@ -524,8 +595,133 @@ interface: {
 
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/live_data.png)
 
-**For Windows:** Please refer to [ODAS](https://github.com/introlab/odas).
+**For Windows/Mac:** Please refer to [ODAS](https://github.com/introlab/odas).
 
+## FAQ
+
+**Q1: Parameters of built-in algorithms**
+
+A1: Here are the parameters of the build-in algorithms.
+
+```
+pi@raspberrypi:~/usb_4_mic_array $ python tuning.py -p
+name			type	max	min	r/w	info
+-------------------------------
+AECFREEZEONOFF  	int	1	0	rw	Adaptive Echo Canceler updates inhibit.
+                                                            0 = Adaptation enabled
+                                                            1 = Freeze adaptation, filter only
+AECNORM         	float	16	0.25	rw	Limit on norm of AEC filter coefficients
+AECPATHCHANGE   	int	1	0	ro	AEC Path Change Detection.
+                                                            0 = false (no path change detected)
+                                                            1 = true (path change detected)
+AECSILENCELEVEL 	float	1	1e-09	rw	Threshold for signal detection in AEC [-inf .. 0] dBov (Default: -80dBov = 10log10(1x10-8))
+AECSILENCEMODE  	int	1	0	ro	AEC far-end silence detection status. 
+                                                            0 = false (signal detected) 
+                                                            1 = true (silence detected)
+AGCDESIREDLEVEL 	float	0.99	1e-08	rw	Target power level of the output signal. 
+                                                            [−inf .. 0] dBov (default: −23dBov = 10log10(0.005))
+AGCGAIN         	float	1000	1	rw	Current AGC gain factor. 
+                                                            [0 .. 60] dB (default: 0.0dB = 20log10(1.0))
+AGCMAXGAIN      	float	1000	1	rw	Maximum AGC gain factor. 
+                                                            [0 .. 60] dB (default 30dB = 20log10(31.6))
+AGCONOFF        	int	1	0	rw	Automatic Gain Control. 
+                                                            0 = OFF 
+                                                            1 = ON
+AGCTIME         	float	1	0.1	rw	Ramps-up / down time-constant in seconds.
+CNIONOFF        	int	1	0	rw	Comfort Noise Insertion.
+                                                            0 = OFF
+                                                            1 = ON
+DOAANGLE        	int	359	0	ro	DOA angle. Current value. Orientation depends on build configuration.
+ECHOONOFF       	int	1	0	rw	Echo suppression.
+                                                            0 = OFF
+                                                            1 = ON
+FREEZEONOFF     	int	1	0	rw	Adaptive beamformer updates.
+                                                            0 = Adaptation enabled
+                                                            1 = Freeze adaptation, filter only
+FSBPATHCHANGE   	int	1	0	ro	FSB Path Change Detection.
+                                                            0 = false (no path change detected)
+                                                            1 = true (path change detected)
+FSBUPDATED      	int	1	0	ro	FSB Update Decision.
+                                                            0 = false (FSB was not updated)
+                                                            1 = true (FSB was updated)
+GAMMAVAD_SR     	float	1000	0	rw	Set the threshold for voice activity detection.
+                                                            [−inf .. 60] dB (default: 3.5dB 20log10(1.5))
+GAMMA_E         	float	3	0	rw	Over-subtraction factor of echo (direct and early components). min .. max attenuation
+GAMMA_ENL       	float	5	0	rw	Over-subtraction factor of non-linear echo. min .. max attenuation
+GAMMA_ETAIL     	float	3	0	rw	Over-subtraction factor of echo (tail components). min .. max attenuation
+GAMMA_NN        	float	3	0	rw	Over-subtraction factor of non- stationary noise. min .. max attenuation
+GAMMA_NN_SR     	float	3	0	rw	Over-subtraction factor of non-stationary noise for ASR. 
+                                                            [0.0 .. 3.0] (default: 1.1)
+GAMMA_NS        	float	3	0	rw	Over-subtraction factor of stationary noise. min .. max attenuation
+GAMMA_NS_SR     	float	3	0	rw	Over-subtraction factor of stationary noise for ASR. 
+                                                            [0.0 .. 3.0] (default: 1.0)
+HPFONOFF        	int	3	0	rw	High-pass Filter on microphone signals.
+                                                            0 = OFF
+                                                            1 = ON - 70 Hz cut-off
+                                                            2 = ON - 125 Hz cut-off
+                                                            3 = ON - 180 Hz cut-off
+MIN_NN          	float	1	0	rw	Gain-floor for non-stationary noise suppression.
+                                                            [−inf .. 0] dB (default: −10dB = 20log10(0.3))
+MIN_NN_SR       	float	1	0	rw	Gain-floor for non-stationary noise suppression for ASR.
+                                                            [−inf .. 0] dB (default: −10dB = 20log10(0.3))
+MIN_NS          	float	1	0	rw	Gain-floor for stationary noise suppression.
+                                                            [−inf .. 0] dB (default: −16dB = 20log10(0.15))
+MIN_NS_SR       	float	1	0	rw	Gain-floor for stationary noise suppression for ASR.
+                                                            [−inf .. 0] dB (default: −16dB = 20log10(0.15))
+NLAEC_MODE      	int	2	0	rw	Non-Linear AEC training mode.
+                                                            0 = OFF
+                                                            1 = ON - phase 1
+                                                            2 = ON - phase 2
+NLATTENONOFF    	int	1	0	rw	Non-Linear echo attenuation.
+                                                            0 = OFF
+                                                            1 = ON
+NONSTATNOISEONOFF	int	1	0	rw	Non-stationary noise suppression.
+                                                            0 = OFF
+                                                            1 = ON
+NONSTATNOISEONOFF_SR	int	1	0	rw	Non-stationary noise suppression for ASR.
+                                                            0 = OFF
+                                                            1 = ON
+RT60            	float	0.9	0.25	ro	Current RT60 estimate in seconds
+RT60ONOFF       	int	1	0	rw	RT60 Estimation for AES. 0 = OFF 1 = ON
+SPEECHDETECTED  	int	1	0	ro	Speech detection status.
+                                                            0 = false (no speech detected)
+                                                            1 = true (speech detected)
+STATNOISEONOFF  	int	1	0	rw	Stationary noise suppression.
+                                                            0 = OFF
+                                                            1 = ON
+STATNOISEONOFF_SR	int	1	0	rw	Stationary noise suppression for ASR.
+                                                            0 = OFF
+                                                            1 = ON
+TRANSIENTONOFF  	int	1	0	rw	Transient echo suppression.
+                                                            0 = OFF
+                                                            1 = ON
+VOICEACTIVITY   	int	1	0	ro	VAD voice activity status.
+                                                            0 = false (no voice activity)
+                                                            1 = true (voice activity)
+```
+
+**Q2: ImportError: No module named usb.core**
+
+A2: Run sudo pip install pyusb to install the pyusb.
+```
+pi@raspberrypi:~/usb_4_mic_array $ sudo python tuning.py DOAANGLE
+Traceback (most recent call last):
+  File "tuning.py", line 5, in <module>
+    import usb.core
+ImportError: No module named usb.core
+pi@raspberrypi:~/usb_4_mic_array $ sudo pip install pyusb
+Collecting pyusb
+  Downloading pyusb-1.0.2.tar.gz (54kB)
+    100% |████████████████████████████████| 61kB 101kB/s 
+Building wheels for collected packages: pyusb
+  Running setup.py bdist_wheel for pyusb ... done
+  Stored in directory: /root/.cache/pip/wheels/8b/7f/fe/baf08bc0dac02ba17f3c9120f5dd1cf74aec4c54463bc85cf9
+Successfully built pyusb
+Installing collected packages: pyusb
+Successfully installed pyusb-1.0.2
+pi@raspberrypi:~/usb_4_mic_array $ sudo python tuning.py DOAANGLE
+DOAANGLE: 180
+```
 
 ## Resource
 - **[PDF]** [ReSpeaker MicArray v2.0 Product Brief](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/ReSpeaker%20MicArray%20v2.0%20Product%20Brief.pdf)
