@@ -126,6 +126,8 @@ Hold the reset button for a short time(More than 10 seconds)| The hole board wil
 | Deep sleep mode, turn off all functions, require external wake-up (wake only by Reset) | 300uA                            |4.2V                            |  
 | MCU Deep Sleep mode, wake-up pin connected to module, wake-up via module               | over 300uA (requires testing)    |4.2V                            |  
 
+!!!Note
+    There are two working conditions. One is power from 5V usb supply. The other is from 4.2v battery supply.   
 
 ## Application Ideas
 
