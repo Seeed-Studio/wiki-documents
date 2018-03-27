@@ -141,20 +141,20 @@ ReSpeaker Mic Array v2.0 has two firmwares, one includes speech algorithms, anot
 - <font face="" size=3 font color="ff0000">①</font> **XMOS XVF-3000:**
 It integrates advanced DSP algorithms that include Acoustic Echo Cancellation (AEC), beamforming, dereverberation, noise suppression and gain control.
 
-- <font face="" size=3 font color="ff0000">②</font> **WM8960:**
-The WM8960 is a low power stereo codec featuring Class D speaker drivers to provide 1 W per channel into 8 W loads.
+- <font face="" size=3 font color="ff0000">②</font> **Digital Microphone:**
+The MP34DT01-M is an ultra-compact, lowpower, omnidirectional, digital MEMS microphone built with a capacitive sensing element and an IC interface.
 
-- <font face="" size=3 font color="ff0000">③</font> **3.5mm Headphone jack:**
-Output audio, We can plug active speakers or Headphones into this port.
+- <font face="" size=3 font color="ff0000">③</font> **RGB LED:**
+Three-color RGB LED.
 
 - <font face="" size=3 font color="ff0000">④</font> **USB Port:**
 Provide the power and control the mic array.
 
-- <font face="" size=3 font color="ff0000">⑤</font> **RGB LED:**
-Three-color RGB LED.
+- <font face="" size=3 font color="ff0000">⑤</font> **3.5mm Headphone jack:**
+Output audio, We can plug active speakers or Headphones into this port.
 
-- <font face="" size=3 font color="ff0000">⑥</font> **Digital Microphone:**
-The MP34DT01-M is an ultra-compact, lowpower, omnidirectional, digital MEMS microphone built with a capacitive sensing element and an IC interface.
+- <font face="" size=3 font color="ff0000">⑥</font> **WM8960:**
+The WM8960 is a low power stereo codec featuring Class D speaker drivers to provide 1 W per channel into 8 W loads.
 
 **Pin Map**
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/Pin_Map.png)
@@ -181,37 +181,14 @@ The MP34DT01-M is an ultra-compact, lowpower, omnidirectional, digital MEMS micr
 !!!Note
     ReSpeaker Mic Array v2.0 is compatiable with Windows, Mac and Linux systems. The below scripts are tested on Python2.7. 
 
-### Update firmwares
+### Update Firmware
 
-There are 2 firmwares. One includes 1 channel data, while the other inlcudes 6 channels data. Here is the table for the differences.
+There are 2 firmwares. One includes 1 channel data(factory firmware), while the other inlcudes 6 channels data. Here is the table for the differences.
 
 | Firmware             | Channels | Note                                                                                                                                                                    |
 |----------------------|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | default_firmware.bin | 1              | Processed audio for ASR                                                                                                                                                 |
 | i6_firmware.bin      | 6              |  Channel 0: processed audio for ASR,  Channel 1: mic1 raw data, Channel 2: mic2 raw data, Channel 3: mic3 raw data, Channel 4: mic4 raw data, Channel 5: merged playback |
-
-Here is the Acoustic Echo Cancellation example. 
-
-- Step 1. Connect the USB cable to PC and audio jack to speaker. 
-
-![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/playback.jpg)
-
-- Step 2. Select the mic array v2.0 as output device in PC side.
-- Step 3. Start the audacity to record.
-- Step 4. Play music at PC side first and then we talk.
-- Step 5. We will see the audacity screen as below, Please click **Solo** to hear each channel audio. 
-
-![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/Audacity.png)
-
-Channel0 Audio(processed by algorithms):
-![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/channel0_asr.wav)
-
-Channel1 Audio(Mic1 raw data):
-![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/channel1_raw.wav)
-
-Channel5 Audio(Playback data):
-![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/channel5_playback.wav)
-
 
 **For Linux:**  The Mic array supports the USB DFU. We develop a [python script dfu.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/dfu.py) to update the firmware through USB.
 
@@ -226,6 +203,42 @@ Here is the firmware downloading result.
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/Download_firmware.png)
 
 **For Windows/Mac:** We do not suugest use Windows/Mac to update the firmware. 
+
+### Out of Box Demo
+
+Here is the Acoustic Echo Cancellation example with 6 channels firmware. 
+
+- Step 1. Connect the USB cable to PC and audio jack to speaker. 
+
+![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/playback.jpg)
+
+- Step 2. Select the mic array v2.0 as output device in PC side.
+- Step 3. Start the audacity to record.
+- Step 4. Play music at PC side first and then we talk.
+- Step 5. We will see the audacity screen as below, Please click **Solo** to hear each channel audio. 
+
+![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/Audacity.png)
+
+Channel0 Audio(processed by algorithms):
+
+<audio controls="controls">
+  <source type="audio/wav" src="https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/channel0_asr.wav"></source>
+  <source type="audio/ogg" src="https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/channel0_asr.ogg"></source>
+</audio>
+
+Channel1 Audio(Mic1 raw data):
+
+<audio controls="controls">
+  <source type="audio/wav" src="https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/channel1_raw.wav"></source>
+  <source type="audio/ogg" src="https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/channel1_raw.ogg"></source>
+</audio>
+
+Channel5 Audio(Playback data):
+
+<audio controls="controls">
+  <source type="audio/wav" src="https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/channel5_playback.wav"></source>
+  <source type="audio/ogg" src="https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/channel5_playback.ogg"></source>
+</audio>
 
 ### Install DFU and LED Control Driver  
 
