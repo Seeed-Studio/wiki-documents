@@ -51,81 +51,84 @@ ReSpeaker Core v2.0 is designed as a feature rich development board for business
 
 
 <style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg .tg-yw4l{vertical-align:top}
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-dc35{background-color:#f9f9f9;border-color:inherit;vertical-align:top}
+.tg .tg-l711{border-color:inherit}
+.tg .tg-us36{border-color:inherit;vertical-align:top}
+.tg .tg-4646{background-color:#f9f9f9;border-color:inherit}
+.tg .tg-gcw3{border-color:#000000}
 </style>
-<table class="tg" style="undefined;table-layout: fixed; width: 695px">
-<colgroup>
-<col style="width: 193px">
-<col style="width: 140px">
-<col style="width: 362px">
-</colgroup>
+<table class="tg">
   <tr>
-    <th class="tg-031e" colspan="3">Features</th>
+    <th class="tg-gcw3" colspan="3">Features</th>
   </tr>
   <tr>
-    <td class="tg-031e" rowspan="6">Soc(Rockchip RK3229)</td>
-    <td class="tg-031e">CPU</td>
-    <td class="tg-031e">Quad-Core Cortex-A7,up to 1.5GHz</td>
+    <td class="tg-4646" rowspan="6">Soc(Rockchip RK3229)</td>
+    <td class="tg-4646">CPU</td>
+    <td class="tg-4646">Quad-Core Cortex-A7,up to 1.5GHz</td>
   </tr>
   <tr>
-    <td class="tg-031e">GPU</td>
-    <td class="tg-031e">Mali400MP, Support OpenGL ES1.1/2.0</td>
+    <td class="tg-l711">GPU</td>
+    <td class="tg-l711">Mali400MP, Support OpenGL ES1.1/2.0</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">Memory</td>
-    <td class="tg-yw4l">1GB RAM(Core Module includes RAM and PMU)</td>
+    <td class="tg-dc35">Memory</td>
+    <td class="tg-dc35">1GB RAM(Core Module includes RAM and PMU)</td>
   </tr>
   <tr>
-    <td class="tg-yw4l" rowspan="3">System</td>
-    <td class="tg-yw4l">Operating Voltage:3.6-5V</td>
+    <td class="tg-us36" rowspan="3">System</td>
+    <td class="tg-us36">Operating Voltage:3.6-5V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">80 pins on-module</td>
+    <td class="tg-dc35">80 pins on-module</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">PMU on-module</td>
+    <td class="tg-us36">PMU on-module</td>
   </tr>
   <tr>
-    <td class="tg-yw4l" rowspan="7">Peripheral</td>
-    <td class="tg-yw4l">Networks</td>
-    <td class="tg-yw4l">WiFi b/g/n;<br>BLE 4.0;<br>Ethernet</td>
+    <td class="tg-dc35" rowspan="7">Peripheral</td>
+    <td class="tg-dc35">Networks</td>
+    <td class="tg-dc35">WiFi b/g/n;<br>BLE 4.0;<br>Ethernet</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">USB</td>
-    <td class="tg-yw4l">2 x USB Host;   1 x USB OTG;    1 x USB power</td>
+    <td class="tg-us36">USB</td>
+    <td class="tg-us36">2 x USB Host;   1 x USB OTG;    1 x USB power</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">Grove</td>
-    <td class="tg-yw4l">1 x Grove socket (I2C and Digital)</td>
+    <td class="tg-dc35">Grove</td>
+    <td class="tg-dc35">1 x Grove socket (I2C and Digital)</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">Vedio</td>
-    <td class="tg-yw4l">HDMI 2.0 with HDCP 1.4/2.2, up to 4K/60Hz</td>
+    <td class="tg-us36">Vedio</td>
+    <td class="tg-us36">HDMI 2.0 with HDCP 1.4/2.2, up to 4K/60Hz</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">Audio</td>
-    <td class="tg-yw4l">6 Microphone Array;<br>3.5mm Audio Jack;<br>JST2.0 Audio output connector</td>
+    <td class="tg-dc35">Audio</td>
+    <td class="tg-dc35">6 Microphone Array;<br>3.5mm Audio Jack;<br>JST2.0 Audio output connector</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">Storage</td>
-    <td class="tg-yw4l">4GB eMMC on-board;<br>SD slot</td>
+    <td class="tg-us36">Storage</td>
+    <td class="tg-us36">4GB eMMC on-board;<br>SD slot</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">Others</td>
-    <td class="tg-yw4l">12 x RGB LEDs;<br>8 GPIO pins</td>
+    <td class="tg-dc35">Others</td>
+    <td class="tg-dc35">12 x RGB LEDs;<br>8 GPIO pins</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">Power Consumption</td>
-    <td class="tg-yw4l">Standby Mode</td>
-    <td class="tg-yw4l">360mA</td>
+    <td class="tg-us36" rowspan="2">Power Consumption</td>
+    <td class="tg-us36">Standby Mode</td>
+    <td class="tg-us36">200mA /5V</td>
+  </tr>
+  <tr>
+    <td class="tg-dc35">Work with Algorithm Mode</td>
+    <td class="tg-dc35">330mA /5V</td>
   </tr>
 </table>
 
-
-
+!!!Note
+    This table only lists the basic specification of ReSpeakser Core v2.0, for more professional parameters please refer to [Acoustic & Electrical Specification of ReSpeaker Core v2.0](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Acoustic%26Electrical_Specification_of_ReSpeaker_Core_v2.0.pdf).
 
 ## Hardware Overview
 
@@ -231,8 +234,8 @@ MRAA|	HEADER PIN INDEX |	SYSFS PIN	|RK3229 PIN
 
 ## Getting Started
 
+### Preparation
 
-### preparation
 
 **Prerequisites**
 
@@ -451,7 +454,9 @@ In order to acquire the authorization from Alexa, you need to use VNC Viewer. Th
 The VNC service also starts automatically. Use [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/) or [VNC Viewer for Google Chrome](https://chrome.google.com/webstore/detail/vnc%C2%AE-viewer-for-google-ch/iabmpiboiopbgfabjmgeedhcmjenhbla?hl=en) to connect to the desktop of ReSpeaker Core v2.0.
 
 To use VNC, connect your PC/Mac and ReSpeaker v2.0 to the same Wi-Fi network. Then open VNC Viewer, type ```192.168.xxx.xxx``` at the address bar. ```192.168.xxx.xxx``` is IP address of the board，you can use the command **ifconfig** to check. If you meet ```Unencrypted connection```, click Continue to go on. The password is ```respeaker```.
+
 ![](https://user-images.githubusercontent.com/5130185/34665797-93b222d6-f49c-11e7-8112-704f91163038.png)
+
 
 <div class="admonition note" >
 <p class="admonition-title">Note</p>
@@ -463,7 +468,6 @@ Please note that the VNC connection relies on good quality of the network, pleas
 The board uses the built-in codec of the SOC to render playback. Both the JST speaker port and the headset port are driven by their own amplifier, and both amplifiers are connected to the same codec of the SOC. The sound card driver that SEEED implemented drives both the capture device and the playback device. So there's no discrete capture or playback sound card in ALSA device list. They're all named seeed-8mic-voicecard.
 
 The simplest way to heard sound from the board is to plugin a headset. If you prefer loud speaker, the board can output up to 8W of drive capability.
-
 
 
 
@@ -652,6 +656,7 @@ This part including a close-sourced solution based on librespeaker. The librespe
 - Direction of arrival calculation
 - Beamforming
 - Hotword searching
+- Acoustic echo cancellation
 
 It reads the microphoone stream from linux sound server, e.g. PulseAudio. It exposes a few APIs which enable users to get indicated when hotword is said and the processed microphone data in PCM format, which then can be sent to cloud services like Alexa for further processing.
 
@@ -677,12 +682,7 @@ When prompt, type in the sudo password for user respeaker: respeaker. Wait the s
 
 **Step 2. Authorize Alexa**
 
-Connect to the board via [VNC](https://github.com/respeaker/get_started_with_respeaker/blob/master/docs/ReSpeaker_Core_V2/getting_started.md#ssh--vnc). In the VNC desktop, open terminal and execute:
-
-```
-respeaker@v2:~$ ~/.local/bin/alexa-auth
-```
-This script will open the web browser automatically, the web browser will display a login page. Sign in with your Amazon account:
+Connect to the board via [VNC](https://github.com/respeaker/get_started_with_respeaker/blob/master/docs/ReSpeaker_Core_V2/getting_started.md#ssh--vnc). In the VNC desktop, open the Internet Browser, and tap `127.0.0.1:3000` at the URL input field . The web browser will display a login page. Sign in with your Amazon account:
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/aus-1.png)
 
@@ -710,46 +710,328 @@ One more thing, do you see the colorful LEDs on the back of ReSpeaker Core v2.0?
 
 
 
-
-## Closed Source Solution
+## Closed source solution
 
 ### Algorithms
 
-The Closed source solution contains NS/BF/
+The closed source solution contains algorithms as following:
 
 **Keyword wake-up**
-**BF(Beam-Forming)**
+
+**BF (Beam-Forming)**
+
+  - The main role is to enhance the signal to noise ratio of the microphone
+  - Only listen to sounds in a certain direction
+
 **DoA (Direction of arrival)**
 
+  - Showing the direction of the sound through the LED light ring
 
-**NS(Noise suppression)**
-  - Filter the signal noise introduced by the circuit
+
+**NS (Noise suppression)**
+
+  - Filter the noise introduced by the circuit
   - Filter out the steady-state noise in the environment, such as the sound of an electric fan.
 
-- AEC (Acoustic echo cancellation) and AGC (Automatic gain control)
-
-### Play with AVS (Alexa Voice Service)
 
 
-### Play with Dueros (Voice assistance of Baidu)
+**AEC (Acoustic echo cancellation)**
+
+  - Remove the sound produced by the speaker itself from the sound collected by the microphone.
 
 
+**AGC (Automatic gain control)**
 
-
-
-
+  - Automatically adjust the volume of the microphone, maximize the pickup capability of microphone.
 
 
 
-
-## Open Source Solution
-
-### Algorithms
-
-The open source solution contains NS algorithms right now. We will continue to update.
+### Play with AVS
 
 
-### Play with AVS (Alexa Voice Service)
+#### C++
+
+This guide will show you how to run the Amazon official AVS C++ SDK with respeakerd. And this part requires you to have a certain technical background about Linux.
+
+**Part 1. Preparation**
+
+If you've already passed the [Out of Box demo](/#out-of-box-demo), please move forward to next chapter.
+
+If you just received the board and had done nothing on it, please learn the [Basic Operations](/#Preparation) of this board:
+
+- System image burning - this demo needs the lxqt version system image
+- Get serial console via OTG USB port
+- Setup Wi-Fi / ethernet
+- SSH
+- VNC
+
+Then install the basic software packages:
+
+```
+## install deps
+sudo apt update
+sudo apt install -y librespeaker git cmake
+sudo apt install -y python-mraa python-upm libmraa1 libupm1 mraa-tools
+sudo pip install pixel_ring pydbus
+
+cd /home/respeaker
+git clone https://github.com/respeaker/respeakerd.git
+
+cd /home/respeaker/respeakerd
+
+sudo cp -f build/respeakerd /usr/local/bin
+sudo cp -f scripts/respeakerd_safe /usr/local/bin
+sudo chmod a+x /usr/local/bin/respeakerd
+sudo chmod a+x /usr/local/bin/respeakerd_safe
+sudo mkdir -p /usr/local/etc/respeakerd
+sudo cp -Rf build/resources /usr/local/etc/respeakerd/
+sudo cp -f scripts/respeakerd.service /etc/systemd/system/
+
+
+#enable system service
+sudo systemctl enable respeakerd
+sudo systemctl start respeakerd
+
+
+```
+
+**Part 2. Configure respeakerd**
+
+2.1 PulseAudio Configuratin
+
+Use your favorite text editor to edit `default.pa`, in this wiki we use **vim editor**.Please tap the following command
+
+```
+sudo vim /etc/pulse/default.pa
+
+```
+
+Then the Vim editor will open this file, please press ++i++ to enter the editor mode. Copy and paste the following lines at the end of this file:
+
+```
+load-module module-pipe-source source_name="respeakerd_output" rate=16000 channels=1
+set-default-source respeakerd_output
+
+```
+
+- Press ++esc++ button to exit editor modequit
+- Press ++colon++ to access the command mode, tap ++w++ then ++enter++ to save the modification.
+- After saving please press ++q++ then ++enter++ to quit vim.
+
+When all of above done, please make sure the end of **default.pa**  is something like the following picture.
+
+![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/c1.png)
+
+
+Ok, now you can tap
+
+```
+sudo reboot -f
+```
+
+Reboot the board.
+
+2.2 Start respeakerd in PulseAudio mode
+
+
+When respeakerd works in PulseAudio mode, it outputs the processed audio stream into a named pipe which is created by the module-pipe-source of PulseAudio.
+
+```
+sudo systemctl stop respeakerd
+sudo vim /usr/local/bin/respeakerd_safe
+```
+Modify the content of this file as the following code, you can refer to the previous step for the vim editor operation.
+
+```
+#!/bin/bash
+
+pulseaudio --check
+
+while [ $? == 1 ]; do
+    sleep 1
+    pulseaudio --check
+done
+
+while [ ! -p /tmp/music.input ]; do
+   sleep 1
+done
+
+sleep 5
+
+/usr/local/bin/respeakerd --snowboy_res_path="/usr/local/etc/respeakerd/resources/common.res" --snowboy_model_path="/usr/local/etc/respeakerd/resources/snowboy.umdl" --snowboy_sensitivity="0.4" --source="alsa_input.platform-sound_0.seeed-8ch" --mode=pulse
+```
+
+!!!Note
+    Please make sure you have modified this file the same as the code above, especially the last line **/usr/local...--mode=pulse**, you may just ignore it.
+
+Restart the service:
+
+```
+sudo systemctl start respeakerd
+
+```
+
+Or you want to manually start the respeakerd for debugging purpose:
+
+```
+sudo systemctl stop respeakerd
+/usr/local/bin/respeakerd --snowboy_res_path="/usr/local/etc/respeakerd/resources/common.res" --snowboy_model_path="/usr/local/etc/respeakerd/resources/snowboy.umdl" --snowboy_sensitivity="0.4" --source="alsa_input.platform-sound_0.seeed-8ch" --mode=pulse --debug
+```
+
+**Part 3. Compile and Run AVS C++ SDK**
+
+3.1 Download and install the necessary files
+
+```
+$ cd /home/respeaker/ && mkdir sdk-folder && cd sdk-folder && mkdir sdk-build sdk-source third-party application-necessities && cd application-necessities && mkdir sound-files
+$ sudo apt-get -y install git gcc cmake build-essential libsqlite3-dev libcurl4-openssl-dev libfaad-dev libsoup2.4-dev libgcrypt20-dev libgstreamer-plugins-bad1.0-dev gstreamer1.0-plugins-good libasound2-dev doxygen
+$ cd /home/respeaker/sdk-folder/third-party && wget -c http://www.portaudio.com/archives/pa_stable_v190600_20161030.tgz && tar zxf pa_stable_v190600_20161030.tgz && cd portaudio && ./configure --without-jack && make
+$ sudo pip install commentjson
+$ sudo pip install flask
+$ cd /home/respeaker/sdk-folder/sdk-source && git clone git://github.com/respeaker/avs-device-sdk.git
+$ cd /home/respeaker/sdk-folder/sdk-build && cmake /home/respeaker/sdk-folder/sdk-source/avs-device-sdk -DCMAKE_BUILD_TYPE=DEBUG -DRESPEAKERD_KEY_WORD_DETECTOR=ON -DGSTREAMER_MEDIA_PLAYER=ON -DPORTAUDIO=ON -DPORTAUDIO_LIB_PATH=/home/respeaker/sdk-folder/third-party/portaudio/lib/.libs/libportaudio.a -DPORTAUDIO_INCLUDE_DIR=/home/respeaker/sdk-folder/third-party/portaudio/include
+$ make SampleApp -j2
+
+```
+
+3.2 Get Authorization of AVS
+
+In this section we are going to setup and run a local authorization server, which we'll use to obtain a refresh token. This refresh token, along with your **Client ID** and **Client Secret** are exchanged for an access token, which the sample app needs to send to Alexa with each event (request).
+
+Step 1. Register your product with Amazon
+
+First of all, please follow these [instructions](https://github.com/alexa/alexa-avs-sample-app/wiki/Create-Security-Profile) to register your product and create a security profile. You can skip this step if you have a registered product you'd like to test with.
+
+!!!Note
+    Make sure you save the **Product ID** from the **Product information** tab, and your **Client ID** and **Client Secret** from the **Security Profile** tab. You'll need these params to configure the authorization server.
+
+
+Step 2. Update AlexaClientSDKConfig.json
+
+
+Open `/home/respeaker/sdk-folder/sdk-build/Integration/AlexaClientSDKConfig.json` by the command below.
+
+```
+vim /home/respeaker/sdk-folder/sdk-build/Integration/AlexaClientSDKConfig.json
+
+```
+
+Replace the contents of AlexaClientSDKConfig.json with this JSON blob:
+
+```
+{
+    "authDelegate":{
+        "clientSecret":"YOUR_CLIENT_SECRET",
+        "deviceSerialNumber":"123456",
+        "refreshToken":"",
+        "clientId":"YOUR_CLIENT_ID",
+        "productId":"YOUR_PRODUCT_ID"
+   },
+   "alertsCapabilityAgent":{
+        "databaseFilePath":"/home/respeaker/sdk-folder/application-necessities/alerts.db"
+   },
+   "settings":{
+        "databaseFilePath":"/home/respeaker/sdk-folder/application-necessities/settings.db",
+        "defaultAVSClientSettings":{
+            "locale":"en-US"
+        }
+   },
+   "certifiedSender":{
+        "databaseFilePath":"/home/respeaker/sdk-folder/application-necessities/certifiedSender.db"
+   },
+   "notifications":{
+       "databaseFilePath":"/home/respeaker/sdk-folder/application-necessities/notifications.db"
+   }
+}
+
+```
+
+Enter the **clientId**, **clientSecret**, and **productId** that you saved during device registration and save.
+
+!!!warning
+    Do not remove the quotes and make sure there are no extra characters or spaces! The required values are strings. And It is a good idea to save a backup of this file. Subsequent builds may overwrite the values in **AlexaClientSDKConfig.json**.
+
+!!!note
+    deviceSerialNumber is pre-populated for this project, however, a commercial product should use a serial number or other unique identified for the device.
+
+!!!Tip
+    The locale is set to US English by default in the sample JSON, however other [locales are supported](https://developer.amazon.com/docs/alexa-voice-service/settings.html#settingsupdated). Feel free to test each language.
+
+
+Step 3. Obtain a refresh token
+
+After you've updated **AlexaClientSDKConfig.json**, run **AuthServer.py** to kick-off the token exchange:
+
+```
+cd /home/respeaker/sdk-folder/sdk-build && python AuthServer/AuthServer.py
+
+```
+!!!Note
+    You may need to change the locale settings for your ReSpeaker, as some Raspbian images default to **amazon.co.uk** to **amazon.com**.
+
+
+Open your browser and navigate to http://localhost:3000. Login with your Amazon credentials and follow the instructions provided.
+
+![](https://camo.githubusercontent.com/f4d1060ce3223a028af83c4743b4caee28ff107d/68747470733a2f2f6d2e6d656469612d616d617a6f6e2e636f6d2f696d616765732f472f30312f6d6f62696c652d617070732f6465782f6176732f73646b2f332e706e67253232)
+
+Step 4. AVS configuration test
+
+Tap the command below to test the AVS configuration.
+
+```
+/home/respeaker/sdk-folder/sdk-build/SampleApp/src/SampleApp /home/respeaker/sdk-folder/sdk-build/Integration/AlexaClientSDKConfig.json
+
+```
+If everything goes well, you will see the **Sample APP**. Now you are able to make conversations with Alexa, but all user experiences are done through the command line messages.
+
+![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/SDK_app.png)
+
+
+
+
+**Part 4. LED Ring Light Effect**
+
+To activate the on-board LED effect, you just need to tap commands below.
+
+```
+$ sudo cp -f /home/respeaker/respeakerd/scripts/pixel_ring_server /usr/local/bin/
+$ sudo chmod a+x /usr/local/bin/pixel_ring_server
+$ pixel_ring_server
+
+```
+Now you will see the LED rings shining and running.
+
+
+**Part 5. Startup**
+
+When this part done you will be able to wake up the ReSpeaker Core v2.0 by key word.
+
+Tap the commands below.
+
+```
+$ sudo cp -f /home/respeaker/respeakerd/scripts/avs_cpp_sdk_safe /usr/local/bin
+$ sudo chmod a+x /usr/local/bin/avs_cpp_sdk_safe
+$ sudo cp -f /home/respeaker/respeakerd/scripts/pixel_ring_server.service /etc/systemd/system/
+$ sudo cp -f /home/respeaker/respeakerd/scripts/avs_cpp_sdk.service /etc/systemd/system/
+$ sudo systemctl enable pixel_ring_server
+$ sudo systemctl enable avs_cpp_sdk
+$ sudo systemctl start pixel_ring_server
+$ sudo systemctl start avs_cpp_sdk
+
+```
+
+Finally, just call `Snowboy`, and he will return you a big surprise! Enjoy!
+
+
+## Open source solution
+
+**Algorithms**
+
+- NS
+- Key Word
+
+
+### Play with AVS
 
 This guide will shows you how to build an AVS device based on the ReSpeaker Core V2.0.
 
@@ -794,7 +1076,7 @@ We provide three python files based on Alexa, you can choose them freely.
   - ns_kws_alexa.py : Use the key word **Alexa** to wakeup Alexa, we call it Alexa Hands-Free.
   - ns_kws_alexa_with_light.py : The same as ns_kws_alexa.py, add the LED effect, We call it Alexa with light.
 
-#### Alexa Tap to Play
+**Alexa Tap to Play**
 Tap the command below in the terminal Of Putty(SSH is recommended).
 ```
 respeaker@v2:~$ ~/.local/bin/alexa-tap
@@ -802,7 +1084,7 @@ respeaker@v2:~$ ~/.local/bin/alexa-tap
 
 Wait until you see **on_ready** in the log printing. Press **Enter** key of your computer and talk to Alexa(Only support English now).
 
-#### Alexa Hands-Free via Snowboy
+**Alexa Hands-Free with Snowboy**
 
 ```
 sudo apt install libatlas-base-dev                # required by snowboy
@@ -815,7 +1097,7 @@ python ns_kws_alexa.py
 ```
 Wait until you see **on_ready** in the log printing, say **Alexa** to trigger the conversation with Alexa.
 
-#### Alexa With Light Effect
+**Alexa with Light Effect**
 
 ```
 pip install pixel-ring
@@ -826,7 +1108,7 @@ The same as last one, say **Alexa** to trigger the conversation with Alexa. You 
 
 
 
-### Play with Dueros (Voice assistance of Baidu)
+### Play with Dueros
 
 The same as AVS, the only difference is that you need to delete one profile file. Before [get the authorization](http://wiki.seeedstudio.com/ReSpeaker_Core_v2/#step-2-authorize-alexa),
 you should tap the command below to delete the **avs.json**.
@@ -850,7 +1132,7 @@ When you run the python program, you can say **Alexa** to wake up the Baidu voic
 
 
 
-### Play with GPIO
+## Play with GPIO
 
 This part will introduce how to use **MRAA** and **UPM** to control GPIO and Grove Socket on Respeaker Core v2.0.
 
@@ -904,7 +1186,7 @@ Materials
 
 Connect the Grove PIR sensor's **SIG** pin to the ReSpeaker Core v2.0's header pin **0** with jumper. Don't forget to wire the VCC and GND at the same time. Then tap the code below into your console
 
-```
+``` python
 respeaker@v2:~$ python
 Python 2.7.13 (default, Jan 19 2017, 14:48:08)
 [GCC 6.3.0 20170118] on linux2
@@ -937,7 +1219,7 @@ In this example, we're gonna to listen on the trigger of the Grove PIR sensor, i
 Connect the Grove PIR sensor's **D1** pin to the ReSpeaker Core v2.0's header pin **0** with jumper. Don't forget to wire the VCC and GND at the same time.
 Then copy the code below into a new file and save it as a python file, name as **mraa_pir.py**. Copy this file into your ReSpeaker Core v2.0.
 
-```
+``` python
 import mraa
 
 def on_trigger(gpio):
@@ -960,7 +1242,7 @@ except ValueError as e:
 
 Then run the code with the command below.(make sure you have located in the folder which contains the mraa_pir.py you've just saved)
 
-```
+``` python
 sudo python mraa_pir.py
 ```
 
@@ -994,7 +1276,7 @@ This is an example for the Grove Digital Light Sensor, which is copied from the 
 Please plug the PIR Motion Sensor into your Respeaker Core v2.0 via the Grove socket.
 Then copy the code below into a new file and save it as a python file, name as **tsl2561.py**. Copy this file into your ReSpeaker Core v2.0.
 
-```
+``` python
 #!/usr/bin/env python
 # Author: Zion Orent <zorent@ics.com>
 # Copyright (c) 2015 Intel Corporation.
@@ -1048,7 +1330,8 @@ if __name__ == '__main__':
 ```
 
 The result should be something like:
-```
+
+``` python
 respeaker@v2:~$ python tsl2561.py       
 Light value is 0
 Light value is 38
@@ -1061,7 +1344,7 @@ Light value is 31
 
 ## FAQs
 
-#### Q1: How to record and play with Audacity?
+Q1: How to record and play with Audacity?
 
   **A1:** The **lxqt** version has pre-installed Audacity, Please click the **Bird button** at the lower left corner, and you will find it at the **Sound & Video -> Audacity**.
 
@@ -1079,7 +1362,7 @@ Light value is 31
 
   ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/audacity_playback.png)
 
-#### Q2: How to access the AP of ReSpeaker Core v2.0?
+Q2: How to access the AP of ReSpeaker Core v2.0?
 
 **A2:** You can use two wires cable to power the ReSpeaker Core v2.0. When the system is running, the Respeaker Core v2.0 can act as an AP. You can use your computer to
 access this AP. As the picture show. You can follow the steps to configure the WiFi of ReSpeaker Core v2.0.
@@ -1104,7 +1387,7 @@ And the user name of ReSpeaker Core v2.0 is **respeaker**, the password is **res
 
 - **Step 3.** When you get into the Serial Console， you can [setup the WiFi](http://wiki.seeedstudio.com/ReSpeaker_Core_v2/#a-wi-fi-setting-up)
 
-#### Q3: How to adjust the volume?
+Q3: How to adjust the volume?
 
 **A3:** You can use Alsamixer to adjust the playback volume and capture sensitivity.
 
@@ -1120,7 +1403,7 @@ And you can adjust the value by pressing the **Up** or **Down** key.
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Alexamixer.png)
 
-#### Q4: How to use the user button?
+Q4: How to use the user button?
 **A4:** As you can see, there is an user button at the back of ReSpeaker Core v2.0. Here we provide a python demo to show how to use it.
 
 - **Step 1.** Tap the command below:
@@ -1150,7 +1433,7 @@ Then you will see the result is something like that:
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/userbutton.png)
 
-#### Q5: The computer can not recognize the ReSpeaker Core v2.0, driver problem?
+Q5: The computer can not recognize the ReSpeaker Core v2.0, driver problem?
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/CDC_Driver.png)
 
@@ -1158,7 +1441,7 @@ Then you will see the result is something like that:
 This is because the CDC Serial driver has a conflict with other OTG driver. Please uninstall the conflicted driver
  and connect the ReSpeaker Core v2.0 again.
 
-#### Q6: What if I want to use the external antenna?
+Q6: What if I want to use the external antenna?
 
 **A6:** The ReSpeaker Core v2.0 use **AP6212** to provide both WiFi and Bluetooth, they share the same antenna.
 Instead of the on-board antenna, you can use an external antenna. To do so, you need to remove one resistance and solder it
@@ -1178,6 +1461,7 @@ on the new pads, as shown below.
 - **[ZIP]** [3d Models For ReSpeaker Core v2.0](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Respeaker_Core_v2_3D_SKP.zip)
 - **[DXF]** [ReSpeaker Core v2.0 CASE](https://github.com/respeaker/get_started_with_respeaker/raw/8111196e821fec10c65b00d96cf011dc90111546/files/RESPEAKER_CORE_V2_CASE.dxf)
 - **[PDF]** [ReSpeaker Core v2.0 CASE Assembly drawing](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/ReSpeaker_Core_v2.0_case_Assembly.pdf)
+- **[PDF]** [Acoustic & Electrical Specification of ReSpeaker Core v2.0](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Acoustic%26Electrical_Specification_of_ReSpeaker_Core_v2.0.pdf)
 - **[MoreReading]** [Mraa Python documents page](http://iotdk.intel.com/docs/master/mraa/python/)
 - **[MoreReading]** [Intel Mraa SDK](https://software.intel.com/en-us/mraa-sdk/documentation )
 

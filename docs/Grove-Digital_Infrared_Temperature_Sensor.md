@@ -17,7 +17,7 @@ tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit
     </tr>
 </table>
 
-The Digital Infrared temperature sensor is a non-contact temperature measurement module which bases on MLX90615.Both the IR sensitive thermopile detector chip and the signal conditioning chip are integrated in the same package.This module communicates with Arduino using SMBus,up to 127 sensors can be read via common 2 wires.Thanks to the module's low noise amplifier, 16-bit ADC and powerful DSP unit, it can achieved a high accuracy of 1℃ over wide temperature rage and a high measurement resolution of 0.02℃.
+The Digital Infrared temperature sensor is a non-contact temperature measurement module which bases on MLX90615. Both the IR sensitive thermopile detector chip and the signal conditioning chip are integrated in the same package. This module communicates with Arduino using SMBus, up to 127 sensors can be read via common 2 wires. Thanks to the module's low noise amplifier, 16-bit ADC and powerful DSP unit, it can achieved a high accuracy of 1℃ over wide temperature rage and a high measurement resolution of 0.02℃.
 
 [![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Digital-Infrared-Temperature-Sensor-p-2385.html)
 
@@ -134,47 +134,77 @@ Hardware Overview
 | 3          | SDA  | in/out | I2C data input/output                            |
 | 4          | SCL  | in     | I2C CLK                                          |
 
-Usage
------
 
-We will provide an example here to show you how to use this sensor to measure the temperature of the target which is in front of the sensor,and print the result on the serial monitor.
 
--   Connect this module to seeeduino using [Grove - Base Shield](/Base_Shield_V2 "Grove - Base Shield") port D2.
+## Getting Started
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Digital_Infrared_Temperature_Sensor/master/img/Digital_Infrared_Temperature_Sensor4.JPG)
+### Play With Arduino
 
-### Software Part
+We provide an example here to show you how to use this sensor to measure the temperature of the target which is in front of the sensor, and print the result on the serial monitor.
 
-1. Download the library and demo code [Digital_Infrared_Temperature_Sensor_MLX90615](https://github.com/Seeed-Studio/Digital_Infrared_Temperature_Sensor_MLX90615).
-2. Unzip it into the libraries file of Arduino IDE by the path: ..\\arduino-1.0.5\\libraries.
-3. Open the demo code directly by the path:File -&gt; Examples ->Digital_Infrared_Temperature_Sensor_MLX90615->MLX90615Soft.
+!!!Note
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
-    You can see :
+#### Hardware
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Digital_Infrared_Temperature_Sensor/master/img/MLX90615_demo_code.jpg)
+**Hardware components:**
 
-    Since the sensor is factory calibrated with the digital SMBus compatible interface enabled,but the library is based on a soft i2c library,so you can use any digital pins on any AVR chip to drive the SDA and SCL lines.We use D2 as the SCL pin and D3 as the SDA pin in this demo code.
+| Seeeduino V4.2 | Base Shield|  Grove - Ultrasonic Ranger |
+|--------------|-------------|-----------------|
+|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Digital_Infrared_Temperature_Sensor/master/img/thumbnail.jpg)|
+|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Digital-Infrared-Temperature-Sensor-p-2385.html)|
 
-4. Upload the code into Arduino.
-5. Start up the Serial Monitor.
+- **Step 1.** Plug Grove - Digital Infrared Temperature Sensor into port **D2** of Grove-Base Shield.
+- **Step 2.** Plug Grove - Base Shield into Seeeduino.
+- **Step 3.** Connect Seeeduino to PC via a USB cable.
 
-    You can see :
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Digital_Infrared_Temperature_Sensor/master/img/Digital_Infrared_Temperature_Sensor_Serial_Monitor.jpg)
+![](https://github.com/SeeedDocument/Grove-Digital_Infrared_Temperature_Sensor/raw/master/img/connection.JPG)
 
-Now, you can measure the temperature with this sensor.Ambient temperature is the MLX90615 package temperature and Object temperature is the object target temperature.According to our experiment,when you place the sensor in the normal indoor temperature,and ensure that there is nothing source of heat in front of the sensor's 1M scope.The Object temperature will approximately equal to Ambient temperature.When measuring the Object temperature,you should ensure the object is as close as possible whit the sensor,but do not touch the surface of the sensor,we recommend the distance is less than 3cm. Wish you have a fun try.
+
+!!!Note
+	If we don't have Grove Base Shield, We also can directly connect Grove_Ultrasonic_Ranger to Arduino as below.
+
+| Seeeduino       | Grove-Ultrasonic Ranger |
+|---------------|-------------------------|
+| 5V           | Red                     |
+| GND           | Black                   |
+| SDA           | White                   |
+| SCL            | Yellow                  |
+
+#### Software
+
+
+- **Step 1.** Download the library and demo code [Digital_Infrared_Temperature_Sensor_MLX90615](https://github.com/Seeed-Studio/Digital_Infrared_Temperature_Sensor_MLX90615).
+- **Step 2.** Refer to [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- **Step 3.** Open the demo code directly by the path:
+
+  **File -> Examples -> Digital_Infrared_Temperature_Sensor_MLX90615 -> MLX90615Soft**. As the following picture shown:
+
+![](https://raw.githubusercontent.com/SeeedDocument/Grove-Digital_Infrared_Temperature_Sensor/master/img/example.png)
+
+Since the sensor is factory calibrated with the digital SMBus compatible interface enabled, but the library is based on a soft i2c library, so you can use any digital pins on any AVR chip to drive the **SDA** and **SCL** lines. We use **D2** as the **SCL** pin and **D3** as the **SDA** pin in this demo code. You can use other port as long as you modify the code with matched pins.
+
+- **Step 4.** Upload the code into Arduino. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 5.** Click **Tool -> Serial Monitor** to start up the Serial Monitor. And you will see the result.
+
+
+![](https://raw.githubusercontent.com/SeeedDocument/Grove-Digital_Infrared_Temperature_Sensor/master/img/Digital_Infrared_Temperature_Sensor_Serial_Monitor.jpg)
+
+
+Now, you can measure the temperature with this sensor. Ambient temperature is the MLX90615 package temperature and Object temperature is the object target temperature. According to our experiment, when you place the sensor in the normal indoor temperature, and ensure that there is nothing source of heat in front of the sensor's 1M scope. The Object temperature will approximately equal to Ambient temperature. When measuring the Object temperature, you should ensure the object is as close as possible whit the sensor, but do not touch the surface of the sensor, we recommend the distance is less than 3cm. Wish you have a fun try.
 
 !!!Tip
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
-    
+
 Resources
 --------
 
-- [Grove Digital Infrared Temperature Sensor v1.0 eagle file.zip](https://raw.githubusercontent.com/SeeedDocument/Grove-Digital_Infrared_Temperature_Sensor/master/res/Grove_Digital_Infrared_Temperature_Sensor_v1.0_eagle_file.zip "File:Grove Digital Infrared Temperature Sensor v1.0 eagle file.zip")
-- [MLX90615.pdf](https://raw.githubusercontent.com/SeeedDocument/Grove-Digital_Infrared_Temperature_Sensor/master/res/MLX90615.pdf "File:MLX90615.pdf")
-- [Demo Code](https://github.com/Seeed-Studio/Digital_Infrared_Temperature_Sensor_MLX90615)
+- **[Zip]** [Grove Digital Infrared Temperature Sensor v1.0 eagle file.zip](https://raw.githubusercontent.com/SeeedDocument/Grove-Digital_Infrared_Temperature_Sensor/master/res/Grove_Digital_Infrared_Temperature_Sensor_v1.0_eagle_file.zip "File:Grove Digital Infrared Temperature Sensor v1.0 eagle file.zip")
+- **[PDF]** [MLX90615.pdf](https://raw.githubusercontent.com/SeeedDocument/Grove-Digital_Infrared_Temperature_Sensor/master/res/MLX90615.pdf "File:MLX90615.pdf")
+- **[Code]** [Demo Code](https://github.com/Seeed-Studio/Digital_Infrared_Temperature_Sensor_MLX90615)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Digital_Infrared_Temperature_Sensor -->
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/).

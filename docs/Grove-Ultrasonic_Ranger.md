@@ -57,20 +57,23 @@ This Grove - Ultrasonic ranger is a non-contact distance measurement module whic
 
 ## Getting Started
 
+!!!Note
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+
 ### Play With Arduino
 
 #### Hardware
 
-- Step 1. Prepare the below stuffs:
+- **Step 1.** Prepare the below stuffs:
 
 | Seeeduino V4.2 | Base Shield|  Grove - Ultrasonic Ranger |
 |--------------|-------------|-----------------|
 |![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/Ultrasonic_small.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html)|
 
-- Step 2. Connect Ultrasonic Ranger to port D7 of Grove-Base Shield.
-- Step 3. Plug Grove - Base Shield into Seeeduino.
-- Step 4. Connect Seeeduino to PC through a USB cable.
+- **Step 2.** Connect Ultrasonic Ranger to port D7 of Grove-Base Shield.
+- **Step 3.** Plug Grove - Base Shield into Seeeduino.
+- **Step 4.** Connect Seeeduino to PC via a USB cable.
 
 ![](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/arduino%20connection.jpg)
 
@@ -86,9 +89,9 @@ This Grove - Ultrasonic ranger is a non-contact distance measurement module whic
 
 #### Software
 
-- Step 1. Download the  [ UltrasonicRanger Library](https://github.com/Seeed-Studio/Grove_Ultrasonic_Ranger/archive/master.zip)  from Github.
-- Step 2. Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
-- Step 3. Copy the code into Arduino IDE and upload.
+- **Step 1.** Download the  [ UltrasonicRanger Library](https://github.com/Seeed-Studio/Grove_Ultrasonic_Ranger/archive/master.zip)  from Github.
+- **Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- **Step 3.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
 ```
 #include "Ultrasonic.h"
@@ -116,7 +119,7 @@ void loop()
 }
 ```
 
-- Step 4. We will see the distance display on terminal as below.
+- **Step 4.** We will see the distance display on terminal as below.
 
 ```
 The distance to obstacles in front is:
@@ -134,30 +137,32 @@ The distance to obstacles in front is:
 
 #### Hardware
 
-- Step 1. Prepare the below stuffs:
+- **Step 1.** Prepare the below stuffs:
 
 | Raspberry pi | GrovePi_Plus | Grove - Ultrasonic Ranger |
 |--------------|-------------|-----------------|
 |![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/Ultrasonic_small.jpg)|
 |[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html)|
 
-- Step 2. Plug the GrovePi_Plus into Raspberry.
-- Step 3. Connect Grove-Ultrasonic ranger to D4 port of GrovePi_Plus.
-- Step 4. Connect the Raspberry to PC through USB cable.
+- **Step 2.** Plug the GrovePi_Plus into Raspberry.
+- **Step 3.** Connect Grove-Ultrasonic ranger to D4 port of GrovePi_Plus.
+- **Step 4.** Connect the Raspberry to PC through USB cable.
 
 ![](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/pi%20connection.jpg)
 
 #### Software
 
-- Step 1. Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment.
-- Step 2. Git clone the Github repository.
+- **Step 1.** Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment.
+- **Step 2.** Git clone the Github repository.
 
 ```
 cd ~
 git clone https://github.com/DexterInd/GrovePi.git
 
 ```
-- Step 3. Excute below commands to use the ultrasonic_ranger to meansure the distance.
+
+-	**Step 3.** Excute below commands to use the ultrasonic_ranger to meansure the distance.
+
 
 ```
 cd ~/GrovePi/Software/Python
@@ -187,7 +192,7 @@ while True:
         print "Error"
 ```
 
-- Step 4. We will see the distance display on terminal as below.
+- **Step 4.** We will see the distance display on terminal as below.
 
 ```
 pi@raspberrypi:~/GrovePi/Software/Python $ python grove_ultrasonic.py
@@ -213,9 +218,9 @@ Please click [here](http://support.seeedstudio.com/knowledgebase/articles/182222
 - **[PDF]** [Download Wiki PDF](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/res/Grove-Ultrasonic_Ranger_WiKi.pdf)
 - **[PDF]** [Grove_Ultrasonic Ranger Schematic](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/res/Grove_Ultrasonic%20Ranger%20Schematic.pdf)
 - **[Library]** [Grove_Ultrasonic Ranger library](https://github.com/Seeed-Studio/Grove_Ultrasonic_Ranger/archive/master.zip)
-- **[Project]**[The Color Helix](http://www.seeed.cc/project_detail.html?id=138)
-- **[Project]**[Indoor Lightning Cloud](http://www.seeed.cc/project_detail.html?id=182)
-- **[Project]**[Automatic Water Level Controller](http://www.seeed.cc/project_detail.html?id=241)
+- **[Project]** [The Color Helix](http://www.seeed.cc/project_detail.html?id=138)
+- **[Project]** [Indoor Lightning Cloud](http://www.seeed.cc/project_detail.html?id=182)
+- **[Project]** [Automatic Water Level Controller](http://www.seeed.cc/project_detail.html?id=241)
 - **[Example]** [Example_Measure_distance_and_led_display](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/res/Example_Measure_distance_and_led_display.zip)
 - **[Example]** [Example_Measure_and_display_the_distance](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/res/Example_Measure_and_display_the_distance.zip)
 
