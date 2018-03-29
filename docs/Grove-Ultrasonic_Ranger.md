@@ -144,8 +144,9 @@ The distance to obstacles in front is:
 |![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/Ultrasonic_small.jpg)|
 |[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html)|
 
+
 - **Step 2.** Plug the GrovePi_Plus into Raspberry.
-- **Step 3.** Connect Grove-Ultrasonic ranger to D4 port of GrovePi_Plus.
+- **Step 3.** Connect Grove-Ultrasonic ranger to **D4** port of GrovePi_Plus.
 - **Step 4.** Connect the Raspberry to PC through USB cable.
 
 ![](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/pi%20connection.jpg)
@@ -211,7 +212,24 @@ pi@raspberrypi:~/GrovePi/Software/Python $ python grove_ultrasonic.py
 ```
 
 ## FAQs
-Please click [here](http://support.seeedstudio.com/knowledgebase/articles/1822222-grove-ultrasonic-ranger-sku-101020010) to see all Grove-Ultrasonic Ranger FAQs.
+
+
+**Q1: How does the Grove-Ultrasonic sensor work?**
+
+	- A1: When we provide a pulse trigger signal with more than 10uS through singal pin, the Grove_Ultrasonic_Ranger will issue 8 cycles of 40kHz cycle level and detect the echo. The pulse width of the echo signal is proportional to the measured distance. Here is the formula: Distance = echo signal high time * Sound speed (340M/S)/2.
+
+
+
+
+**Q2: Why Grove-Ultrasonic sensor only has 1 signal pin, comparing with other ultrasonic sensor Trig and Echo pins?**
+
+	- A2:Grove_Ultrasonic_Ranger’s trig and echo signal share 1 SIG pin through MCU.  
+
+
+**Q3: Where can I find technical support if I have some other issue?**
+
+	- A3: Please send an email to techsupport@seeed.cc
+
 
 ## Resources
 
