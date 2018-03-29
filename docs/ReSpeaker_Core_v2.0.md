@@ -712,9 +712,9 @@ One more thing, do you see the colorful LEDs on the back of ReSpeaker Core v2.0?
 
 ## Closed source solution
 
-### Algorithms
+### APIs for Librespeaker
 
-The closed source solution contains algorithms as following:
+The closed source solution used librespeaker. Librespeaker is an audio processing library which can perform noise suppression, direction of arrival calculation, beamforming, hotword searching. It reads the microphoone stream from linux sound server, e.g. PulseAudio.
 
 **Keyword wake-up**
 
@@ -745,6 +745,8 @@ The closed source solution contains algorithms as following:
   - Automatically adjust the volume of the microphone, maximize the pickup capability of microphone.
 
 
+And we provide several APIs which enable users to get indicated when hotword is said and the processed microphone data in PCM format, which then can be sent to cloud services like Alexa for further processing. You can click [APIs Docs](http://respeaker.io/librespeaker_doc/) to check.
+
 
 ### Play with AVS
 
@@ -755,9 +757,9 @@ This guide will show you how to run the Amazon official AVS C++ SDK with respeak
 
 **Part 1. Preparation**
 
-If you've already passed the [Out of Box demo](/#out-of-box-demo), please move forward to next chapter.
+If you've already passed the [Out of Box demo](http://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#out-of-box-demo), please move forward to next chapter.
 
-If you just received the board and had done nothing on it, please learn the [Basic Operations](/#Preparation) of this board:
+If you just received the board and had done nothing on it, please learn the [Basic Operations](http://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#preparation) of this board:
 
 - System image burning - this demo needs the lxqt version system image
 - Get serial console via OTG USB port
@@ -1445,11 +1447,14 @@ Q6: What if I want to use the external antenna?
 
 **A6:** The ReSpeaker Core v2.0 use **AP6212** to provide both WiFi and Bluetooth, they share the same antenna.
 Instead of the on-board antenna, you can use an external antenna. To do so, you need to remove one resistance and solder it
-on the new pads, as shown below.
+on the new pads, as shown below：
+
+- First you need to remove the resistance in the orange box.
+- Then please solder it on the green box.
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/ant.png)
 
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/ant1.png)
+
 
 
 
