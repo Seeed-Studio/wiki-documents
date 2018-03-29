@@ -20,7 +20,7 @@ This module can be used to build a light controlled switch i.e. switch off light
 !!!Warning
     The light sensor value only reflects the approximated trend of the intensity of light, it DOES NOT represent the exact Lumen.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Light-Sensor-v1.2-p-2727.html)
+<p style="text-align:center"><a href="https://www.seeedstudio.com/ReSpeaker-Core-V2.0-p-3039.html" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
 
 ## Version
 
@@ -212,10 +212,10 @@ while True:
         print ("Error")
 ```
 
-- Step 4. The led will turn on when the light sensor gets covered. 
+- Step 4. The led will turn on when the light sensor gets covered.
 
 ```
-pi@raspberrypi:~/GrovePi/Software/Python $ python grove_light_sensor.py 
+pi@raspberrypi:~/GrovePi/Software/Python $ python grove_light_sensor.py
 sensor_value = 754 resistance = 3.57
 sensor_value = 754 resistance = 3.57
 sensor_value = 752 resistance = 3.60
