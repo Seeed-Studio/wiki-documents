@@ -11,11 +11,11 @@ sku: 107990053
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/usb_4_mic_array.png)
 
 
-Seeed’s ReSpeaker Mic Array v2.0 is an upgraded version of ReSpeaker Mic Array v1 which is based on XVSM-2000. The v2.0 developed based on XVF-3000 from XMOS. It can be stacked (connected) right onto the top of ReSpeaker Core to significantly improve the voice interaction experience. The board integrates 4 PDM microphones to help enhance ReSpeaker's acoustic DSP performance to a much higher level.  
+Seeed’s ReSpeaker Mic Array v2.0 is an upgraded version of ReSpeaker Mic Array v1 which based on XVSM-2000. The v2.0 developed based on XVF-3000 from XMOS. It can be stacked (connected) right onto the top of ReSpeaker Core to significantly improve the voice interaction experience. The board integrates 4 PDM microphones to help enhance ReSpeaker's acoustic DSP performance to a much higher level. 
 
-ReSpeaker Mic Array v2.0 supports USB Audio Class 1.0(UAC 1.0) directly. All major Operating System, like Windows, macOS, Linux are compatible with UAC 1.0, so it can be runs as a sound card without ReSpeaker Core, but has speech algorithm, like farfield on those systems.
+ReSpeaker Mic Array v2.0 supports USB Audio Class 1.0(UAC 1.0) directly. All major Operating System, like Windows, macOS, Linux are compatible with UAC 1.0, so it can be runs as a sound card without ReSpeaker Core, but has speech algorithm, like far-field on those systems.
 
-ReSpeaker Mic Array v2.0 has two firmwares, one includes speech algorithms, another is just capture raw voice data for specially purpose. 
+ReSpeaker Mic Array v2.0 has two firmwares, one includes speech algorithms, another is just capture raw voice data for specially purpose.
 
 [![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png)]()
 
@@ -33,106 +33,27 @@ ReSpeaker Mic Array v2.0 has two firmwares, one includes speech algorithms, anot
 - Four microphones array
 - 12 programmable RGB LED indicators
 - Speech algorithms and features
-- Voice Activity Detection
-- Direction of Arrival
-- Beamforming
-- Noise Suppression
-- De-reverberation
-- Acoustic Echo Cancellation
+    - Voice Activity Detection
+    - Direction of Arrival
+    - Beamforming
+    - Noise Suppression
+    - De-reverberation
+    - Acoustic Echo Cancellation
 
 ## Specification
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg .tg-yw4l{vertical-align:top}
-</style>
-<table class="tg" style="undefined;table-layout: fixed; width: 518px">
-<colgroup>
-<col style="width: 151px">
-<col style="width: 367px">
-</colgroup>
-  <tr>
-    <th class="tg-031e">Items</th>
-    <th class="tg-031e">Specification</th>
-  </tr>
-  <tr>
-    <td class="tg-031e" rowspan="7">XVF-3000 with 16 cores</td>
-    <td class="tg-031e">16 real-time logical cores on 2 xCore tiles</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">Cores share up to 2400 MIPS in dual issue mode</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">512KB internal single-cycle SRAM and 2MB built-in flash</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">16KB internal OTP (max 8KB per tile)</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">USB PHY, fully compliant with USB 2.0 specification</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Programmable I/O</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Supply DFU Mode</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l" rowspan="7">4 Digital Microphones(Model: MP34DT01-M)</td>
-    <td class="tg-yw4l">Single supply voltage</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Low power consumption</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">120 dBSPL acoustic overload point</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">61 dB signal-to-noise ratio</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Omnidirectional sensitivity</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">– 26 dBFS sensitivity</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">PDM output</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l" rowspan="2">12 RGB LEDs（Model: APA102）</td>
-    <td class="tg-yw4l">256 levels brightness</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">800kHz line data transmission</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l" rowspan="4">Audio output</td>
-    <td class="tg-yw4l">On board 3.5mm Aux output</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">WOLFSON WM8960</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">24 or 16bit 16kHz stereo output</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">40 mW output Power into 16 Ω @ 3.3 V</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Size</td>
-    <td class="tg-yw4l">Diameter 70mm</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l" rowspan="2">Power</td>
-    <td class="tg-yw4l">5V supply from Micro USB or expansion header</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Power Consumption 190ma</td>
-  </tr>
-</table>
+- XVF-3000 from XMOS
+- 4 high performance digital microphones
+- Supports Far-field Voice Capture 
+- Speech algorithm on-chip
+- 12 programmable RGB LED indicators  
+- Microphones: ST MP34DT01TR-M  
+- Sensitivity: -26 dBFS (Omnidirectional)  
+- Acoustic overload point: 120 dBSPL  
+- SNR: 63 dB  
+- Power Supply: 5V DC from Micro USB or expansion header  
+- Dimensions: 70mm (Diameter)  
+- 3.5mm Audio jack output socket
 
 ## Hardware Overview
 
