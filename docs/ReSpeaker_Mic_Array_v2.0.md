@@ -77,6 +77,9 @@ Output audio, We can plug active speakers or Headphones into this port.
 - <font face="" size=3 font color="ff0000">⑥</font> **WM8960:**
 The WM8960 is a low power stereo codec featuring Class D speaker drivers to provide 1 W per channel into 8 W loads.
 
+**System Diagram**
+![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/system_diag.png)
+
 **Pin Map**
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/Pin_Map.png)
 
