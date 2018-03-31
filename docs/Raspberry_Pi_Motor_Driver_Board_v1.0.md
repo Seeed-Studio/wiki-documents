@@ -210,23 +210,23 @@ Connect to network and power.
 
 ### Software Part
 
-1.Copy the code below;
+1. Download [Motor_Driver.py](https://github.com/SeeedDocument/Raspberry_Pi_Motor_Driver_Board_v1.0/raw/master/res/Motor_Driver.py) and [PiSoftPwn.py](https://github.com/SeeedDocument/Raspberry_Pi_Motor_Driver_Board_v1.0/raw/master/res/PiSoftPwm.py) into same folder. Here is the code of Motor_Driver.py.
 
 ```
-    #!/usr/bin/python
-    import RPi.GPIO as GPIO
-    import time
-    import signal   
+#!/usr/bin/python
+import RPi.GPIO as GPIO
+import time
+import signal   
 
-    from PiSoftPwm import *
+from PiSoftPwm import *
 
-    #print 'Go_1...'
-    #frequency = 1.0 / self.sc_1.GetValue()
-    #speed = self.sc_2.GetValue()
-        
-    class Motor():
-        def __init__(self):
-        # MC33932 pins
+#print 'Go_1...'
+#frequency = 1.0 / self.sc_1.GetValue()
+#speed = self.sc_2.GetValue()
+
+class Motor():
+    def __init__(self):
+    # MC33932 pins
         self.PWMA = 25  
         self.PWMB = 22
         self._IN1 = 23  
@@ -234,100 +234,99 @@ Connect to network and power.
         self._IN3 = 17
         self._IN4 = 27
 
-        # Initialize PWMA PWMB 
+    # Initialize PWMA PWMB 
         GPIO.setmode(GPIO.BCM)
         GPIO.setup(self.PWMA, GPIO.OUT)
         GPIO.setup(self.PWMB, GPIO.OUT)
         GPIO.output(self.PWMA, True)
         GPIO.output(self.PWMB, True)
 
-        # Initialize PWM outputs
+    # Initialize PWM outputs
         self.OUT_1  = PiSoftPwm(0.1, 100, self._IN1, GPIO.BCM)
         self.OUT_2  = PiSoftPwm(0.1, 100, self._IN2, GPIO.BCM)
         self.OUT_3  = PiSoftPwm(0.1, 100, self._IN3, GPIO.BCM)
         self.OUT_4  = PiSoftPwm(0.1, 100, self._IN4, GPIO.BCM)
 
-            # Close pwm output
+        # Close pwm output
         self.OUT_1.start(0)
         self.OUT_2.start(0)
         self.OUT_3.start(0)
         self.OUT_4.start(0)
-            
-            self.frequency = 0.01
-            self.duty = 60
 
-        def Setting(self, frequency, duty):
-            self.frequency = frequency
-            self.duty = duty
+        self.frequency = 0.01
+        self.duty = 60
 
-        def Go_1(self):
+    def Setting(self, frequency, duty):
+        self.frequency = frequency
+        self.duty = duty
+
+    def Go_1(self):
         self.OUT_1.changeBaseTime(self.frequency)
         self.OUT_2.changeBaseTime(self.frequency)
         self.OUT_1.changeNbSlicesOn(self.duty)
         self.OUT_2.changeNbSlicesOn(0)
 
-        def Back_1(self):
+    def Back_1(self):
         self.OUT_1.changeBaseTime(self.frequency)
         self.OUT_2.changeBaseTime(self.frequency)
         self.OUT_1.changeNbSlicesOn(0)
         self.OUT_2.changeNbSlicesOn(self.duty)
 
-        def Go_2(self):
+    def Go_2(self):
         self.OUT_3.changeBaseTime(self.frequency)
         self.OUT_4.changeBaseTime(self.frequency)
         self.OUT_3.changeNbSlicesOn(0)
         self.OUT_4.changeNbSlicesOn(self.duty)
 
-        def Back_2(self):
+    def Back_2(self):
         self.OUT_3.changeBaseTime(self.frequency)
         self.OUT_4.changeBaseTime(self.frequency)
         self.OUT_3.changeNbSlicesOn(self.duty)
         self.OUT_4.changeNbSlicesOn(0)
 
-        def Stop():
+    def Stop():
         self.OUT_1.changeNbSlicesOn(0)
         self.OUT_2.changeNbSlicesOn(0)
         self.OUT_3.changeNbSlicesOn(0)
         self.OUT_4.changeNbSlicesOn(0)
 
-    if __name__=="__main__":
-        motor=Motor()
-        # Called on process interruption. Set all pins to "Input" default mode.
-        def endProcess(signalnum = None, handler = None):
-            motor.OUT_1.stop()
-            motor.OUT_2.stop()
-            motor.OUT_3.stop()
-            motor.OUT_4.stop()
-            motor.GPIO.cleanup()
-            exit(0)
+if __name__=="__main__":
+    motor=Motor()
+    # Called on process interruption. Set all pins to "Input" default mode.
+    def endProcess(signalnum = None, handler = None):
+        motor.OUT_1.stop()
+        motor.OUT_2.stop()
+        motor.OUT_3.stop()
+        motor.OUT_4.stop()
+        motor.GPIO.cleanup()
+        exit(0)
 
-        # Prepare handlers for process exit
-        signal.signal(signal.SIGTERM, endProcess)
-        signal.signal(signal.SIGINT, endProcess)
-        signal.signal(signal.SIGHUP, endProcess)
-        signal.signal (signal.SIGQUIT, endProcess)
+    # Prepare handlers for process exit
+    signal.signal(signal.SIGTERM, endProcess)
+    signal.signal(signal.SIGINT, endProcess)
+    signal.signal(signal.SIGHUP, endProcess)
+    signal.signal (signal.SIGQUIT, endProcess)
 
-        motor.Setting(0.01, 60)
-        print 'motor start...'
-        while True:
-            print 'turning direction...'
-            motor.Go_1()
-            time.sleep(1)
-            motor.Back_1()
-            time.sleep(1)
-            motor.Go_2()
-            time.sleep(1)
-            motor.Back_2()
-            time.sleep(1)
+    motor.Setting(0.01, 60)
+    print 'motor start...'
+    while True:
+        print 'turning direction...'
+        motor.Go_1()
+        time.sleep(1)
+        motor.Back_1()
+        time.sleep(1)
+        motor.Go_2()
+        time.sleep(1)
+        motor.Back_2()
+        time.sleep(1)
+
 ```
 
-2.Saved in the Raspberry Pi, according to your own path.
-
-3.Run this program. LED1, LED2 on Raspberry Pi Motor Driver Board v1.0 will alternately light up; LED3, LED4 will also alternately light up.
+2.Run this program. LED1, LED2 on Raspberry Pi Motor Driver Board v1.0 will alternately light up; LED3, LED4 will also alternately light up.
 
 It means Out 1 and Out 2 (Out 3 and Out 4) connect Motor A(B) forward and back.
 
-4.You can see phenomemon as follows:
+3.You can see phenomemon as follows:
 
 Serial console:
 
