@@ -340,11 +340,13 @@ You will need some expansion board when you start a project. There're many cape 
 ## FAQ
 ---
 **1. What is the different between BBG 1 and BBG 2?**
+
  We have updated the eMMC on Beaglebone Green in 2016. So the previous firmware for BBG1 is not workable on BBG2, but the new firmware is ok on BBG1 and BBG2.
 
 ![](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/bbg12.png)
 
  **2. When booting the board the Ethernet port orange LED is ON for a while, then is OFF for a while, to be ON again for some time etc. The board is not reachable via the network.**
+ 
 Please remove the capacitor C162. 
 
  ![](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/images/Capatictor.png)

@@ -746,6 +746,6 @@ pages:
 # Google Analytics
 google_analytics:
 #  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
-#  - UA-115878881-1
-  - UA-84917600-1
+  - UA-115878881-1
+#  - UA-84917600-1
   - auto
