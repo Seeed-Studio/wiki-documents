@@ -161,6 +161,8 @@ pages:
           - ReSpeaker Mic Array: ReSpeaker_Mic_Array.md
           - ReSpeaker Mic Array v2.0: ReSpeaker_Mic_Array_v2.0.md
           
+      - Artik:
+          - Eagleye_530s: Eagleye_530s.md
 
       - Shield:
           - Shield Introduction: Shield.md
