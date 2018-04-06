@@ -114,7 +114,7 @@ There are 2 firmwares. One includes 1 channel data(factory firmware), while the 
 | default_firmware.bin | 1              | Processed audio for ASR                                                                                                                                                 |
 | i6_firmware.bin      | 6              |  Channel 0: processed audio for ASR,  Channel 1: mic1 raw data, Channel 2: mic2 raw data, Channel 3: mic3 raw data, Channel 4: mic4 raw data, Channel 5: merged playback |
 
-**For Linux:**  The Mic array supports the USB DFU. We develop a [python script dfu.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/dfu.py) to update the firmware through USB.
+**For Linux:**  The Mic array supports the USB DFU. We develop a python script dfu.py to update the firmware through USB.
 
 ```python
 sudo apt-get update
