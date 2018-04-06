@@ -76,15 +76,15 @@ Below figures show the overall preview of the Eagleye 530s' TOP and BOTTOM.
 
 ![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/eagleye_530s_back.JPG)
 
-- <font face="" size=5 font color="00b0f0">❶</font> **DC Power:** 5V DC power supply.
+- <font face="" size=5 font color="ff0000">ⓐ</font> **DC Power:** 5V DC power supply.
 
-- <font face="" size=5 font color="00b0f0">❷</font> **USB Host 2.0 Interface:** has two USB 2.0 Interface.
+- <font face="" size=5 font color="ff0000">ⓑ</font> **USB Host 2.0 Interface:** has two USB 2.0 Interface.
 
-- <font face="" size=5 font color="00b0f0">❸</font> **Ethernet:** The Ethernet Interface is based on 802.3az-2010 complying to the Energy Efficient Ethernet (EEE) standard. The maximum theoretical speed of the interface is 1000Mbps.
+- <font face="" size=5 font color="ff0000">ⓒ</font> **Ethernet:** The Ethernet Interface is based on 802.3az-2010 complying to the Energy Efficient Ethernet (EEE) standard. The maximum theoretical speed of the interface is 1000Mbps.
 
-- <font face="" size=5 font color="00b0f0">❹</font> **Ear Jack:** has one 4 pin ear jack interface supporting stereo audio
+- <font face="" size=5 font color="ff0000">ⓓ</font> **Ear Jack:** has one 4 pin ear jack interface supporting stereo audio
 
-- <font face="" size=5 font color="00b0f0">❺</font> **Boot Switch:** When ‘eMMc 1st Boot’ is selected as a booting option, the system will first try to boot from eMMc, if this fails the system will search for an SD Card to boot from. If booting from the SD-Card also fails the system tries to boot from USB. When choosing the SD-Card booting option, the system starts with booting from SD, and if this fails will continue to try a USB boot. When USB is selected as the booting mechanism of choice, only a USB boot will be attempted.
+- <font face="" size=5 font color="ff0000">ⓔ</font> **Boot Switch:** When ‘eMMc 1st Boot’ is selected as a booting option, the system will first try to boot from eMMc, if this fails the system will search for an SD Card to boot from. If booting from the SD-Card also fails the system tries to boot from USB. When choosing the SD-Card booting option, the system starts with booting from SD, and if this fails will continue to try a USB boot. When USB is selected as the booting mechanism of choice, only a USB boot will be attempted.
 
 | SW402 | eMMc 1st Boot | SD Card 1st Boot | USB 1st Boot |
 |-------|---------------|------------------|--------------|
@@ -93,36 +93,44 @@ Below figures show the overall preview of the Eagleye 530s' TOP and BOTTOM.
 | 3     | X             | X                | X            |
 | 4     | Off           | On               | X            |
 
-- <font face="" size=5 font color="00b0f0">❻</font> **HDMI:** has one HDMI 1.4a connector. The following video formats are supported:
+- <font face="" size=5 font color="ff0000">ⓕ</font> **HDMI:** has one HDMI 1.4a connector. The following video formats are supported:
     - 480p/480i @59.94Hz/60Hz, 576p/576i@50Hz
     - 720p/720i @50Hz/59.94Hz/60Hz
     - 1080p/1080i @50Hz/59.94Hz/60Hz
 
-- <font face="" size=5 font color="00b0f0">❼</font> **USB OTG:** has one USB OTG.
+- <font face="" size=5 font color="ff0000">ⓖ</font> **USB OTG:** has one USB OTG.
 
-- <font face="" size=5 font color="00b0f0">❽</font> **USB UART:** has one USB UART.
+- <font face="" size=5 font color="ff0000">ⓗ</font> **USB UART:** has one USB UART.
 
-- <font face="" size=5 font color="00b0f0">❾</font> **User Button S4:**  switch named as S4, mapped to GPIO 54.
+- <font face="" size=5 font color="ff0000">ⓘ</font> **User Button S4:**  switch named as S4, mapped to GPIO 54.
 
-- <font face="" size=5 font color="00b0f0">❿</font> **Power On LED:** Led will be turned on when board power on.
+- <font face="" size=5 font color="ff0000">ⓚ</font> **Power On LED:** Led will be turned on when board power on.
 
-- <font face="" size=5 font color="00b0f0">11</font> **Power in LED:** Led will be turned on when board get power supply in.
+- <font face="" size=5 font color="ff0000">ⓛ</font> **Power in LED:** Led will be turned on when board get power supply in.
 
-- <font face="" size=5 font color="00b0f0">12</font> **SD Card in LED:** Led will be turned on when SD is pluged into board.
+- <font face="" size=5 font color="ff0000">ⓜ</font> **SD Card in LED:** Led will be turned on when SD is pluged into board.
 
-- <font face="" size=5 font color="00b0f0">13</font> **User Button S3:** switch named as S3, mapped to GPIO 50.
+- <font face="" size=5 font color="ff0000">ⓝ</font> **User Button S3:** switch named as S3, mapped to GPIO 50.
 
-- <font face="" size=5 font color="00b0f0">14</font> **MIPI DSI:** The MIPI CSI interface can have a static resolution of 5M pixels or a dynamic resolution for video capturing of 1080P.
+- <font face="" size=5 font color="ff0000">ⓞ</font> **MIPI DSI:** The MIPI CSI interface can have a static resolution of 5M pixels or a dynamic resolution for video capturing of 1080P.
 
-- <font face="" size=5 font color="00b0f0">15</font> **ANT(802.11):** If 802.11 or Bluetooth® functionality is required, the antenna which is enclosed as part of the Eagleye530s has to be attached.
+- <font face="" size=5 font color="ff0000">ⓟ</font> **ANT(802.11):** If 802.11 or Bluetooth® functionality is required, the antenna which is enclosed as part of the Eagleye530s has to be attached.
 
-- <font face="" size=5 font color="00b0f0">16</font> **Reset:** board resest.
+- <font face="" size=5 font color="ff0000">ⓠ</font> **Reset:** board resest.
 
-- <font face="" size=5 font color="00b0f0">17</font> **Power:** Once the power switch is turned on, push the power button (S1), for about 1 second.
+- <font face="" size=5 font color="ff0000">ⓡ</font> **Power:** Once the power switch is turned on, push the power button (S1), for about 1 second.
 
-- <font face="" size=5 font color="00b0f0">18</font> **ANT(802.11):** If 802.11 or Bluetooth® functionality is required, the antenna which is enclosed as part of the Eagleye530s has to be attached.
+- <font face="" size=5 font color="ff0000">ⓢ</font> **ANT(802.11):** If 802.11 or Bluetooth® functionality is required, the antenna which is enclosed as part of the Eagleye530s has to be attached.
 
-- <font face="" size=5 font color="00b0f0">19</font> **User GPIO:** Here is pinout of the connectors with its meaning.
+- <font face="" size=5 font color="ff0000">ⓣ</font> **User Pins:**  To make them versatile control and monitoring devices, Eagleye 530s provides many programmable signal pins. These pins directly handle tasks like controlling relays, generating analog voltages, and monitoring analog sensors, as well as complex tasks involving parallel and serial communication with more sophisticated control and sensor devices.
+
+    - Analog Input (ADC) – reading a varying signal level and processing through an analog-to-digital converter
+    - Digital Input (GPIO) – sensing a DC signal level at low (GND) or high (Vcc)
+    - Digital Output (GPIO) – driving a DC level (GND or Vcc) that can be controlled dynamically
+    - Waveform Output (PWM) – switching DC levels by a Pulse Width Modulation circuit with frequency and duty cycle that can be programmed dynamically.
+    - Serial Ports (I2C and UART) – sending and receiving data according to industry-standard protocols.
+
+Here is pinout of the connectors with its meaning.
 
   ![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/pin_map.png)
 
@@ -151,17 +159,17 @@ Below figures show the overall preview of the Eagleye 530s' TOP and BOTTOM.
 | GND        | 39         | 40         | I2SDOUT1  |
 
 
-- <font face="" size=5 font color="00b0f0">20</font> **ANT(Zigbee):** If Zigbee functionality is required, the antenna which is enclosed as part of the Eagleye530s has to be attached.
+- <font face="" size=5 font color="ff0000">ⓤ</font> **ANT(Zigbee):** If Zigbee functionality is required, the antenna which is enclosed as part of the Eagleye530s has to be attached.
 
-- <font face="" size=5 font color="00b0f0">21</font> **Power Switch:** Through selection of the Jumpers JP1and JP2, the power source can be selected. When power is provided from a DC-5V Adapter ,  jumpers JP2 will be placed and 3-4 position will be connected.
+- <font face="" size=5 font color="ff0000">ⓥ</font> **Power Switch:** Through selection of the Jumpers JP1and JP2, the power source can be selected. When power is provided from a DC-5V Adapter ,  jumpers JP2 will be placed and 3-4 position will be connected.
 When the jumpers JP1 are in the 1-2 position, the power is provided from the usb-uart. When the Eagleye530s is used with an external power adapter make certain that you use a 5V-2.5A adapter with a 2.1x5.5mm plug.
 
 !!!warning
     NEVER connect both at the same time!
 
-- <font face="" size=5 font color="00b0f0">22</font> **SD card slot:** has one SD-CARD interface supporting SD3.0.  
+- <font face="" size=5 font color="ff0000">ⓦ</font> **SD card slot:** has one SD-CARD interface supporting SD3.0.  
 
-- <font face="" size=5 font color="00b0f0">23</font> **JTAG:** has one JTAG interface.
+- <font face="" size=5 font color="ff0000">ⓧ</font> **JTAG:** has one JTAG interface.
 
 **Mechanical Drawing**
 
@@ -397,9 +405,10 @@ connmanctl> quit
 
 - Step 8. Please shutdown the board, remove SD card and switch boot switch Pin4 back to off.
 
+
 ## Play with ReSpeakers Mics
 
-### Play with 2 Mics Pi HAT
+**Play with 2 Mics Pi HAT**
 
 **Hardware**
 
@@ -550,7 +559,7 @@ waveFile.close()
 !!!warning
     For more information, such as play with google assistant, please refer to [ReSpeaker 2-Mics Pi HAT](http://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/).
 
-### Play with 4 Mics Pi HAT
+**Play with 4 Mics Pi HAT**
 
 **Hardware**
 
@@ -708,7 +717,9 @@ waveFile.close()
 !!!warning
     For more information, such as play with Alexa/DuerOS, please refer to [ReSpeaker 4-Mic Array for Raspberry Pi](http://wiki.seeedstudio.com/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/).
 
-### Play with Mic Array v2.0
+**Play with Mic Array v2.0**
+
+**Hardware**
 
 ![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/usb_4Mics.jpg)
 
@@ -966,6 +977,105 @@ sensor_value = 387 voltage = 1.89 degrees = 113.4 brightness = 96
 
 !!!warning:
     For more Grove sensors, please refer to [DexterInd Python Library](https://github.com/DexterInd/GrovePi). We do not test all the sensors' compatiblity with Eagleye530s. Please contact techsupport if any issue.  
+
+## Play with Shield
+
+**Play with Relay Boards**
+
+**Hardware**
+
+![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/relay_shield.jpg)
+
+**Software**
+
+- Step 1. Run below command to enable the I2C. 
+
+```
+mkdir /sys/kernel/config/device-tree/overlays/i2c
+cat /boot/overlays/s5p4418-artik533-compy-i2c1.dtbo > /sys/kernel/config/device-tree/overlays/i2c/dtbo
+```
+
+!!!warning
+    Every time we reset the board, run the following two commands. Put them in a bash file to make it automatic.
+
+- Step 2. Run i2cdetect to detect the relay shield.
+
+```
+[root@artik ~]# i2cdetect -y -r 1
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- --
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+20: 20 -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+70: -- -- -- -- -- -- -- --
+```
+
+- Step 3. Run the below commands to run the relay_lib_seeed_test.py. 
+
+```
+[root@artik ~]# cd ~
+[root@artik ~]# git clone https://github.com/johnwargo/Seeed-Studio-Relay-Board.git
+[root@artik ~]# cd Seed-Studio-Relay-Board/
+[root@artik Seed-Studio-Relay-Board]# python relay_lib_seeed_test.py
+Turning all relays ON
+Turning all relays OFF
+Turning relay 1 ON
+Turning relay 1 OFF
+Turning relay 2 ON
+Turning relay 2 OFF
+Turning relay 3 ON
+Turning relay 3 OFF
+Turning relay 4 ON
+Turning relay 4 OFF
+```
+
+!!!warning
+    For more information, please refer to [Raspberry Pi Relay Board v1.0](http://wiki.seeedstudio.com/Raspberry_Pi_Relay_Board_v1.0/).
+
+**Play with RS232 Boards**
+
+**Hardware**
+
+![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/rs232_shield.jpg)
+
+- Step 1. Connect the USB cable to power source.
+- Step 2. Connect the RS232 cable between the RS232 sheild and PC.
+
+**Software**
+
+- Step 1. Open [putty](https://www.putty.org/) at PC side and config as below. The COM must be set as the device manager. In our case the COM port allocated is COM9.
+
+![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/Com.png)
+
+- Step 2. Set the PuTTY configuration as follows:
+    - Set the “Serial line” as the COM port number found in step 3.
+    - Set the COM speed to "115200".
+    - Set the connection type to "Serial".
+    - Save the session under Eagleye530s.
+- Step 3. Select your saved session and click the “Open” button.
+
+![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/Putty_setup.png)
+
+- Step 4. The username and password are root.
+- Step 5. We will see the terminal as below.
+
+![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/Putty_normal_boot.png)
+
+!!!warning
+    For more information, please refer to [Raspberry Pi RS232 Board v1.0](http://wiki.seeedstudio.com/Raspberry_Pi_R232_Board_v1.0/).
+
+**Play with Breakout Board**
+
+Raspberry Pi Breakout Board, it also provides power, state indicator light, button and universal transistor,such as NPN, PNP, N-MOS, P-MOS. It works well with Eagleye_530s. 
+
+![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/breakout_shield.jpg)
+
+!!!warning
+    For more information, please refer to [Raspberry Pi Breakout Board v1.0](http://wiki.seeedstudio.com/Raspberry_Pi_Breakout_Board_v1.0/).
+
 
 ## FAQs
 
