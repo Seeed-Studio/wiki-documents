@@ -1,5 +1,4 @@
-
-[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/grovewiki.png)](https://www.seeedstudio.com/grove.html)
+<p><a href="https://www.seeedstudio.com/grove.html" onclick="javascript:pageTracker._trackPageview('/goal/grove.html');"><img alt="" src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/grovewiki.png" /></a></p>
 
 ## Platform
 
