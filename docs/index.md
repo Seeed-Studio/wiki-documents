@@ -6,13 +6,13 @@
 |:---:|:---:|:---:|
 |[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/arduino.png)](/Arduino)   |  [![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Respberry%20Pi.png)](/Raspberry_Pi) |[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Beaglebone.png)](/BeagleBone)  |
 
-|  **ReSpeaker**     |    **Shield**   |  **LinkIt** | 
+|  **ReSpeaker**     |    **Artik**   |  **LinkIt** | 
 |:---:|:---:|:---:|
-| [![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/ReSpeaker.png)](/ReSpeaker)    |[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Shield.png)](/Shield)    |[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/LinkIt.png)](/LinkIt)   |
+| [![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/ReSpeaker.png)](/ReSpeaker)    |[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/artik.png)](/Artik)|[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/LinkIt.png)](/LinkIt)   |
 
-| **Wio**  |    **mbed**  |    **RePhone**   |  
+| **Wio**  |  **Shield**   |    **RePhone**   |  
 |:---:|:---:|:---:|
-|[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Wio.png)](/Wio)   |[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/arch%20ble.jpg)](/mbed)   |[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Rephone.png)](/RePhone)    |
+|[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Wio.png)](/Wio)   |[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Shield.png)](/Shield)     |[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Rephone.png)](/RePhone)    |
 
 
 ## Grove

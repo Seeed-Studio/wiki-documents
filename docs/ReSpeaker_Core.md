@@ -41,7 +41,7 @@ ReSpeaker is an open modular voice interface to hack things around you. Let you 
 ---
 ![](https://github.com/SeeedDocument/Respeaker_Core/raw/master/img/respeaker_core_hardware%20overview.jpg)
 
-### Technology Specs
+**Technology Specs**
 
 
 - AI7688 Wi-Fi Module:
@@ -74,7 +74,7 @@ ReSpeaker is an open modular voice interface to hack things around you. Let you 
 
 - Weight: 17g
 
-### Pin-out Diagram
+**Pin-out Diagram**
 
 ![](https://github.com/SeeedDocument/Respeaker_Core/raw/master/img/respeaker_core_pinmap.png)
 
@@ -94,13 +94,13 @@ ReSpeaker is an open modular voice interface to hack things around you. Let you 
 
 ### What should I do when I first get a ReSpeaker Core
 
-#### 1. Preparations
+**1. Preparations**
 - ReSpeaker Core
 - PC or Mac
 - Wi-Fi network
 - SD card
 
-#### 2. Connect to serial console
+**2. Connect to serial console**
 
 - For Windows, [putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) is recommended.
 
@@ -128,7 +128,7 @@ $ ls /dev/tty.usb*
 $ screen /dev/tty.usbmodem14221 57600
 ```
 
-#### 3. Setup Wi-Fi
+**3. Setup Wi-Fi**
 
 ReSpeaker is set to Repeater Mode as default, and you have to connect it to an existing wireless network before enjoying the speech recognition with the Internet.
 
@@ -192,7 +192,7 @@ ssh root@ssh *.*.*.*
 
 ```
 
-#### 4. Use SD Card to Extend Storage
+**4. Use SD Card to Extend Storage**
 
 More often than not, a limited amount of storage is available on embedded devices(ReSpeaker has only 5M on-board flash storage left for users). More storage for applications and data can expand ReSpeaker's potential, so use SD card to extend storage as an **extroot** is a good choice.
 
@@ -287,7 +287,7 @@ mount /dev/mmcblk0p2 /mnt ; tar -C /overlay -cvf - . | tar -C /mnt -xf - ; umoun
 
 -  Reboot ReSpeaker and check again. If SD card is mounted automatically, you are done. More informations about **extroot**, please click [here](https://wiki.openwrt.org/doc/howto/extroot).
 
-#### 5. Install software on ReSpeaker
+**5. Install software on ReSpeaker**
 
 After extending storage with a SD card, there are enough storage to install software on ReSpeaker.
 
@@ -298,7 +298,7 @@ Install git
 	opkg install git git-http
 ```
 
-#### 6. Update Python Library
+**6. Update Python Library**
 
 ```
 git clone https://github.com/respeaker/respeaker_python_library.git
@@ -452,34 +452,34 @@ It uses PocketSphinx for keyword spotting and uses webrtcvad for voice activity 
 
 ##   FAQ
 ---
-### Q1: How to do Factory Reset?
+**Q1: How to do Factory Reset?**
 
 - Open the serial console or a ssh session and run firstboot. [More detail](https://github.com/respeaker/get_started_with_respeaker/wiki/factory-reset).
 
-### Q2: How to Rescue from a failed upgrade?
+**Q2: How to Rescue from a failed upgrade?**
 
 - When the respeaker failed to boot into its openwrt system, we can't access the system through web terminal, ssh or serial console. We can follow [Rescue instruction](https://github.com/respeaker/get_started_with_respeaker/wiki/Rescue-from-a-failed-upgrade) to recover it.
 
-### Q3: ReSpeaker fail to find my Wi-Fi
+**Q3: ReSpeaker fail to find my Wi-Fi**
 
 - Try [factory reset](https://github.com/respeaker/get_started_with_respeaker/blob/master/faq.md#factory-reset) first.
 - And the Wi-Fi Channel 12 is not supported by ReSpeaker. Make sure your router is not using that channel.
 
-### Q4: Wifi-Config
+**Q4: Wifi-Config**
 
 - We advise you to configure Wi-Fi via [WEB-UI](https://github.com/respeaker/get_started_with_respeaker/blob/master/QuickStart.md#setup-wi-fi) and if it can't be used, try command line tool [wictl](https://github.com/respeaker/get_started_with_respeaker/wiki/WiFi) at the serial console.
 
-### Q5: How to change BING speech api recognize language
+**Q5: How to change BING speech api recognize language**
 
 - If you don't need to change the wake up words, just change text = bing.recognize(data) into text = bing.recognize(data,language="zh-CN") is fine. [More details](https://github.com/respeaker/respeaker_python_library/blob/master/respeaker/bing_speech_api.py).
 
 
-### Q6: Got SD card warning message "Volume was not properly unmounted. Some data may be corrupt. Please run fsck"
+**Q6: Got SD card warning message "Volume was not properly unmounted. Some data may be corrupt. Please run fsck"**
 
 - If the files on the SD card are fine, ignore it. Otherwise, try to format it with [sd card formatter](https://www.sdcard.org/downloads/formatter_4/).
 
 
-### Q7: Bad flash from Arduino
+**Q7: Bad flash from Arduino**
 
 - Re-flash the bootloader on openwrt.
 
@@ -491,7 +491,7 @@ cd /etc/arduino
 avrdude -c linuxgpio -p m32u4 -e -U lfuse:w:0xFF:m -U hfuse:w:0xD8:m -U efuse:w:0xCB:m  -U flash:w:Caterina-ReSpeaker.hex -u -U lock:w:0xEF:m
 ```
 
-### Q8: Forgot the password of WebUI
+**Q8: Forgot the password of WebUI**
 
 - Reset the juci password
 
@@ -499,51 +499,51 @@ avrdude -c linuxgpio -p m32u4 -e -U lfuse:w:0xFF:m -U hfuse:w:0xD8:m -U efuse:w:
 orangectl passwd root 12345678  //replace 12345678 with the password you want to set
 ```
 
-### Q9: How to support google speech or other Speach TO Text(STT) Engine?
+**Q9: How to support google speech or other Speach TO Text(STT) Engine?**
 
 - Install speech\_recognition library following the [guide](https://github.com/respeaker/get_started_with_respeaker/wiki/Use-speech_recognition-python-library)
 
 
-### Q10: Failed to run Alexa with error "IOError: [Errno -9998] Invalid number of channels"
+**Q10: Failed to run Alexa with error "IOError: [Errno -9998] Invalid number of channels"**
 
 - There is another application or alexa instance using the audio input device. Run /etc/init.d/alexa stop and /etc/init.d/mopidy stop to stop them. To disable mopidy to startup, run /etc/init.d/mopidy disable.
 
 
-### Q11: Failed to run python playmusic.py
+**Q11: Failed to run python playmusic.py**
 
 - It should be that mopidy is running in background and is using the USB device. try to run /etc/init.d/mopidy stop to stop mopidy and run your command again.
 
 
-### Q12: Don't have a RPC connection
+**Q12: Don't have a RPC connection**
 
 - You need to reflash the firmware, following the [guide](https://github.com/respeaker/get_started_with_respeaker/blob/master/QuickStart.md#update-for-old-version)
 
-### Q13: SFTP & FTP
+**Q13: SFTP & FTP**
 - We don't have a FTP on respeaker, just SFTP.
 
 
-### Q14: Serial Console locked up
+**Q14: Serial Console locked up**
 
 - Try to update the [arduino code](https://github.com/respeaker/respeaker_arduino_library/blob/master/examples/pixels_pattern/pixels_pattern.ino).
 
-### Q15: How to disable 'ap' mode
+**Q15: How to disable 'ap' mode**
 - We could set the 'ssid' flag of the 'ap' interface to '' at vi /etc/config/wireless. Then the ap will be hidden.
 
-### Q16: I2C Sound card issue
+**Q16: I2C Sound card issue**
 - We need check  codec driver compatible name and codec i2c address. Then rebuild the image firmware.
 
-### Q17: Respeaker is often wakeup even no voice.
+**Q17: Respeaker is often wakeup even no voice.**
 
 - We can reduce the false positive rate by increase the threshold in the keyword.txt, but it also reduce the sensibility.
 - Another way is to adapt your voice with current acoustic module, more detail via http://cmusphinx.sourceforge.net/wiki/tutorialadapt.
 - It will effectively improve individual keyword recognition, but may make the recognizer less general.
 
-### Q18: How to control GPIO pins from respeaker?
+**Q18: How to control GPIO pins from respeaker?**
 
 - We can use https://github.com/respeaker/respeaker_python_library/blob/master/respeaker/gpio.py
 - The example is https://github.com/respeaker/respeaker_python_library/blob/master/respeaker/spi.py, which uses GPIOs to simulate SPI
 
-### Q19: How to change wake up word?
+**Q19: How to change wake up word?**
 
 - keywords.txt contains keywords and their threshold. For example, keywords.txt from [here](https://github.com/respeaker/respeaker_python_library/blob/master/respeaker/pocketsphinx-data/keywords.txt) is
 
@@ -571,8 +571,10 @@ orangectl passwd root 12345678  //replace 12345678 with the password you want to
 	```
 	if mic.wakeup('respeaker'):
 	```
+- The directoy of the keyword is /root/respeaker_python_library/respeaker/pocketsphinx-data
 
-### Q20: System recovery by factory image.
+**Q20: System recovery by factory image.**
+
 Note: If you can not update your ReSpeaker via Web or can not visit http://192.168.100.1/home.html, please click [here](https://s3-us-west-2.amazonaws.com/respeaker.io/firmware/ramips-openwrt-latest-LinkIt7688-squashfs-sysupgrade.bin). to download the lastest firmware on your computer, copy it to a SD card and plug the SD card into ReSpeaker.
 
 Connect to the [serial console](https://github.com/respeaker/get_started_with_respeaker/blob/master/QuickStart.md#serial-console). of ReSpeaker, type the following command lines to update the firmware:
