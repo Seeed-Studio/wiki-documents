@@ -571,6 +571,7 @@ orangectl passwd root 12345678  //replace 12345678 with the password you want to
 	```
 	if mic.wakeup('respeaker'):
 	```
+    
 - The directoy of the keyword is /root/respeaker_python_library/respeaker/pocketsphinx-data
 
 **Q20: System recovery by factory image.**
