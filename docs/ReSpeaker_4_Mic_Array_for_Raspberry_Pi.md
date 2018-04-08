@@ -50,7 +50,7 @@ Different from [ReSpeaker 2-Mics Pi HAT](https://www.seeedstudio.com/ReSpeaker-2
 
 ## Getting Started
 
-### Connect ReSpeaker 4-Mic Array to Raspberry Pi
+**Connect ReSpeaker 4-Mic Array to Raspberry Pi**
 
 Mount ReSpeaker 4-Mic Array on Raspberry Pi, make sure that the pins are properly aligned when stacking the ReSpeaker 4-Mic Array for Raspberry Pi.
 
@@ -60,13 +60,14 @@ Mount ReSpeaker 4-Mic Array on Raspberry Pi, make sure that the pins are properl
 ![connection pic1](https://github.com/SeeedDocument/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/blob/master/img/connect1.jpg?raw=true)
 ![connection pic2](https://github.com/SeeedDocument/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/blob/master/img/connect2.jpg?raw=true)
 
-### Install driver
+**Install driver**
 
 The AC108 codec is not supported by Pi kernel builds currently, we have to build it manually.
 
-#### 1. Please Make sure running [the lastest Raspbian Operating System(debian 9)](https://www.raspberrypi.org/downloads/raspbian/) on Pi. *(updated at 2017.09.15)*
+- Step 1. Please Make sure running [the lastest Raspbian Operating System(debian 9)](https://www.raspberrypi.org/downloads/raspbian/) on Pi. *(updated at 2017.09.15)*
 
-#### 2. Get the seeed voice card source code.
+- Step 2. Get the seeed voice card source code.
+
 ```
 git clone https://github.com/respeaker/seeed-voicecard.git
 cd seeed-voicecard
@@ -74,7 +75,8 @@ sudo ./install.sh 4mic
 reboot
 ```
 
-#### 3. Then select the headphone jack on Raspberry Pi for audio output:
+- Step 3. Then select the headphone jack on Raspberry Pi for audio output:
+
 ```
 sudo raspi-config
 # Select 7 Advanced Options
@@ -83,7 +85,8 @@ sudo raspi-config
 # Select Finish
 ```
 
-#### 4. Check that the sound card name looks like this:
+- Step 4. Check that the sound card name looks like this:
+
 ```
 pi@raspberrypi:~/seeed-voicecard $ arecord -L
 null
@@ -115,7 +118,8 @@ plughw:CARD=seeed4micvoicec,DEV=0
 
 If we want to change the alsa settings, we can use `sudo alsactl --file=ac108_asound.state store` to save it. And when we need to use the settings again, copy it to: `sudo cp ~/seeed-voicecard/ac108_asound.state /var/lib/alsa/asound.state`
 
-#### 5. Open Audacity and select **AC108 & 4 channels** as input and **bcm2835 alsa: - (hw:0:0)** as output to test:
+- Step 5. Open Audacity and select **AC108 & 4 channels** as input and **bcm2835 alsa: - (hw:0:0)** as output to test:
+
 ```
 $ sudo apt update
 $ sudo apt install audacity
@@ -124,7 +128,7 @@ $ audacity                      // run audacity
 
 ![](https://github.com/SeeedDocument/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/blob/master/img/audacity.png?raw=true)
 
-#### 6. Or we could record with `arecord` and play with `aplay`:
+- Step 6. Or we could record with `arecord` and play with `aplay`:
 
 ```
 arecord -Dac108 -f S32_LE -r 16000 -c 4 hello.wav    // only support 4 channels
@@ -132,19 +136,19 @@ aplay hello.wav                                      // make sure default device
                                                      // Audio will come out via audio jack of Raspberry Pi
 ```
 
-### Play with APA102 LEDs
+**Play with APA102 LEDs**
 
 Each on-board APA102 LED has an additional driver chip. The driver chip takes care of receiving the desired color via its input lines, and then holding this color until a new command is received.
 
 ![](https://github.com/SeeedDocument/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/blob/master/img/rainbow.jpg?raw=true)
 
-#### 1. Activate SPI:
+- Step 1. Activate SPI:
     - sudo raspi-config
     - Go to "Interfacing Options"
     - Go to "SPI"
     - Enable SPI
     - Exit the tool
-#### 2. Get APA102 LEDs Library and examples
+- Step 2. Get APA102 LEDs Library and examples
 
 ```
 pi@raspberrypi:~ $ cd /home/pi
@@ -156,7 +160,7 @@ pi@raspberrypi:~/4mics_hat $ source ~/env/bin/activate                   # activ
 (env) pi@raspberrypi:~/4mics_hat $ pip install spidev gpiozero           # install spidev and gpiozero
 ```
 
-#### 3. Then run the example code under virtualenv, now we can see the LEDs blink like Google Assistant.
+- Step 3. Then run the example code under virtualenv, now we can see the LEDs blink like Google Assistant.
 
 ```
 (env) pi@raspberrypi:~/4mics_hat $ python pixels_demo.py
@@ -164,11 +168,11 @@ pi@raspberrypi:~/4mics_hat $ source ~/env/bin/activate                   # activ
 
 
 
-### DoA on ReSpeaker 4-Mic Array for Raspberry Pi
+## DoA
 
 With DoA(Direction of Arrial), ReSpeaker 4-Mic Array is able to find the direction where the sound source is located.
 
-#### 1. setup voice engine
+- Step 1. setup voice engine
 
 ```
 pi@raspberrypi:~ $ source ~/env/bin/activate                    # activate the virtual, if we have already activated, skip this step
@@ -183,7 +187,7 @@ pi@raspberrypi:~ $ source ~/env/bin/activate                    # activate the v
 (env) pi@raspberrypi:~/voice-engine $ python setup.py install
 ```
 
-#### 2. Run the demo under virtualenv. Please wake up respeaker with saying `snowboy` and we will see the direction.
+- Step 2. Run the demo under virtualenv. Please wake up respeaker with saying `snowboy` and we will see the direction.
 
 ```
 (env) pi@raspberrypi:~/voice-engine $ cd ~/4mics_hat
@@ -193,9 +197,9 @@ pi@raspberrypi:~ $ source ~/env/bin/activate                    # activate the v
 
 
 
-### Play with Alexa, Baidu and Snowboy
+## Play with Alexa, Baidu and Snowboy
 
-#### 1. Get Alexa or Baidu authorization
+- Step 1. Get Alexa or Baidu authorization
 
 ```
 pi@raspberrypi:~ $ source ~/env/bin/activate                    # activate the virtual, if we have already activated, skip this step
@@ -221,7 +225,7 @@ Run `alexa-auth` in the terminal to get Alexa authorization or run `dueros-auth`
 !!!Note
     If we want to switch between `alexa-auth` and `dueros-auth`, please delete `/home/pi/.avs.json` first. The file is hidden and use the `ls -la` to list the file.
 
-#### 2. Let's Enjoy!
+- Step 2. Let's Enjoy!
 
 Now run `python ns_kws_doa_alexa_with_light.py` under virtualenv, we will see lots of debug message rasing in the terminal. When we see **status code: 204**, try to wake up respeaker with saying `snowboy`. Then the leds will light up, and now we can speak to it, for example, asking "who is the most handsome guy in the world?" or "Do you know how to beat-box?". Just enjoy it!
 
@@ -229,7 +233,6 @@ Now run `python ns_kws_doa_alexa_with_light.py` under virtualenv, we will see lo
 (env) pi@raspberrypi:~/avs $ cd ~/4mics_hat
 (env) pi@raspberrypi:~/4mics_hat $ python ns_kws_doa_alexa_with_light.py
 ```
-
 
 
 ## Resources
