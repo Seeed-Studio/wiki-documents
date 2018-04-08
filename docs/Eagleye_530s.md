@@ -124,41 +124,6 @@ Below figures show the overall preview of the Eagleye 530s' TOP and BOTTOM.
 
 - <font face="" size=5 font color="ff0000">ⓣ</font> **User Pins:**  To make them versatile control and monitoring devices, Eagleye 530s provides many programmable signal pins. These pins directly handle tasks like controlling relays, generating analog voltages, and monitoring analog sensors, as well as complex tasks involving parallel and serial communication with more sophisticated control and sensor devices.
 
-    - Analog Input (ADC) – reading a varying signal level and processing through an analog-to-digital converter
-    - Digital Input (GPIO) – sensing a DC signal level at low (GND) or high (Vcc)
-    - Digital Output (GPIO) – driving a DC level (GND or Vcc) that can be controlled dynamically
-    - Waveform Output (PWM) – switching DC levels by a Pulse Width Modulation circuit with frequency and duty cycle that can be programmed dynamically.
-    - Serial Ports (I2C and UART) – sending and receiving data according to industry-standard protocols.
-
-Here is pinout of the connectors with its meaning.
-
-  ![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/pin_map.png)
-
-
-| Pin Name   | Pin Number | Pin Number | Pin Name  |
-|------------|------------|------------|-----------|
-| 3.3V       | 1          | 2          | 5V        |
-| XI2C0_SDA  | 3          | 4          | 5V        |
-| XI2C0_SCL  | 5          | 6          | GND       |
-| XAGPIO0    | 7          | 8          | XUART0_TX |
-| GND        | 9          | 10         | XUART0_RX |
-| XGPIO0     | 11         | 12         | I2SBCK1   |
-| XGPIO1     | 13         | 14         | GND       |
-| PWM2       | 15         | 16         | XGPIO2    |
-| 3.3V       | 17         | 18         | XGPIO3    |
-| XSPIO_MOSI | 19         | 20         | GND       |
-| XSPIO_MISO | 21         | 22         | PWM0      |
-| XSPIO_CLK  | 23         | 24         | XSPIO0_CS |
-| GND        | 25         | 26         | XGPIO4    |
-| NC         | 27         | 28         | NC        |
-| XGPIO9     | 29         | 30         | GND       |
-| XGPIO6     | 31         | 32         | XGPIO7    |
-| XGPIO8     | 33         | 34         | GND       |
-| I2SLRCLK1  | 35         | 36         | XADC0     |
-| XADC1      | 37         | 38         | I2SDIN1   |
-| GND        | 39         | 40         | I2SDOUT1  |
-
-
 - <font face="" size=5 font color="ff0000">ⓤ</font> **ANT(Zigbee):** If Zigbee functionality is required, the antenna which is enclosed as part of the Eagleye530s has to be attached.
 
 - <font face="" size=5 font color="ff0000">ⓥ</font> **Power Switch:** Through selection of the Jumpers JP1and JP2, the power source can be selected. When power is provided from a DC-5V Adapter ,  jumpers JP2 will be placed and 3-4 position will be connected.
@@ -189,7 +154,7 @@ When the jumpers JP1 are in the 1-2 position, the power is provided from the usb
 
 ## Getting Started
 
-### Unboxing Demo
+**Unboxing Demo**
 
 This section will describe how to start working with your Eagleye530s Development Environment by setting up a serial connection on your development PC and booting up the Eagleye530s Development Environment.
 
@@ -356,7 +321,8 @@ Set pin  54  as digital input
 0
 0
 ```
-### Ethernet and Wi-Fi Networks
+
+**Ethernet and Wi-Fi Networks**
 
 The below instructions discuss setting up a wired or wireless local area network (LAN). The Ethernet LAN (hard-wired) port is always available. A wireless LAN (WLAN) circuit is separately available, and can be configured by Connection Manager.
 
@@ -391,7 +357,7 @@ connmanctl> quit
 [root@artik ~]#
 ```
 
-### Firmware Update
+**Firmware Update**
 
 - Step 1. Download the [firmware](https://developer.artik.io/documentation/downloads.html#firmware).
 - Step 2. Use [Etcher](https://etcher.io/) tool to burn the firmware to SD card.
@@ -405,6 +371,134 @@ connmanctl> quit
 
 - Step 8. Please shutdown the board, remove SD card and switch boot switch Pin4 back to off.
 
+
+## Play with Pin Programming
+
+Eagleye boards provide many programmable signal pins. Some of these are General-Purpose Input/Output (GPIO) pins, while others are fixed-purpose pins for analog input, pulse-width-modulated output, and serialized communication.
+
+- Digital Input (GPIO) – sensing a DC signal level at low (GND) or high (Vcc)
+- Digital Output (GPIO) – driving a DC level (GND or Vcc) that can be controlled dynamically
+- Waveform Output (PWM) – switching DC levels by a Pulse Width Modulation circuit with frequency and duty cycle that can be programmed dynamically.
+- Serial Ports (I2C and UART) – sending and receiving data according to industry-standard protocols.
+- Analog Input (ADC) – reading a varying signal level and processing through an analog-to-digital converter
+
+ The sysfs functionality of the Linux kernel provides libraries to control and monitor programmable pins. Details are available at the [reference](https://www.kernel.org/doc/Documentation/gpio/sysfs.txt). 
+
+Here is pinout of the connectors with its meaning.
+
+![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/pin_map.png)
+
+
+| Description | Pin Name   | Pin Number | Pin Number | Pin Name  | Description |
+|-------------|------------|------------|------------|-----------|-------------|
+| 3.3V        | 3.3V       | 1          | 2          | 5V        | 5V          |
+| I2C         | XI2C0_SDA  | 3          | 4          | 5V        | 5V          |
+| I2C         | XI2C0_SCL  | 5          | 6          | GND       | GND         |
+| ？？？      | XAGPIO0    | 7          | 8          | XUART0_TX | UART        |
+| GND         | GND        | 9          | 10         | XUART0_RX | UART        |
+| GPIO_128    | XGPIO0     | 11         | 12         | I2SBCK1   | I2S         |
+| GPIO_129    | XGPIO1     | 13         | 14         | GND       | GND         |
+| PWM         | PWM2       | 15         | 16         | XGPIO2    | GPIO_130    |
+| 3.3V        | 3.3V       | 17         | 18         | XGPIO3    | GPIO_46     |
+| SPI         | XSPIO_MOSI | 19         | 20         | GND       | GND         |
+| SPI         | XSPIO_MISO | 21         | 22         | PWM0      | PWM         |
+| SPI         | XSPIO_CLK  | 23         | 24         | XSPIO0_CS | SPI         |
+| GND         | GND        | 25         | 26         | XGPIO4    | GPIO_14     |
+| NC          | NC         | 27         | 28         | NC        | NC          |
+| GPIO_27     | XGPIO9     | 29         | 30         | GND       | GND         |
+| GPIO_25     | XGPIO6     | 31         | 32         | XGPIO7    | GPIO_0      |
+| GPIO_26     | XGPIO8     | 33         | 34         | GND       | GND         |
+| I2S         | I2SLRCLK1  | 35         | 36         | XADC0     | ADC         |
+| ADC         | XADC1      | 37         | 38         | I2SDIN1   | I2S         |
+| GND         | GND        | 39         | 40         | I2SDOUT1  | I2S         |
+
+
+
+
+**GPIO Control through Sysfs**
+
+For example, pin 11 is GPIO and can be used as digital input or output. To use a particular GPIO, we would first set its direction (mode) as either input or output, and then read from or write to it as needed.
+
+The [Play with onboard LEDs](https://github.com/SeeedDocument/Eagleye_530s/raw/master/res/blink_led.py) and [Play with onboard buttons](https://github.com/SeeedDocument/Eagleye_530s/raw/master/res/read_button.py)  tutorials provided examples of the necessary programming for digital I/O pins.
+
+!!!warning
+    Please change the specific GPIO pin number in the led/button python program.
+
+**PWM Control through Sysfs**
+
+For example, pin 22 is PWM. We can connect PWM of LED to PWM of 40 Pins and GND as well. We can set period and duty_cycle（Maximum limit  is 1,000,000,000 (expressed in ns).) Duty_cycle should always be less than period.
+
+The following exercise demonstrates use of a PWM pin, setting a fixed blink rate. 
+
+- Step 1. Export PWM0
+
+    ```
+    echo 0 > /sys/class/pwm/pwmchip0/export
+    ```
+
+A pwm0 subdirectory is created. (We can use echo 0 to create pwm0, echo 2 to create pwm2.)
+
+- Step 2. Set attributes
+
+    - a)	Set period (Unit: ns) to 1 sec
+
+    ```
+    echo 1000000000 > /sys/class/pwm/pwmchip0/pwm0/period
+    ```
+
+    - b)	Set duty_cycle (Unit: ns) to 500 msec
+
+    ```
+    echo 500000000 > /sys/class/pwm/pwmchip0/pwm0/duty_cycle
+    ```
+    
+    - c)	Enable PWM0
+
+    ```
+    echo 1 > /sys/class/pwm/pwmchip0/pwm0/enable
+    ```   
+
+    - d)	Disable PWM0
+
+    ```
+    echo 0 > /sys/class/pwm/pwmchip0/pwm0/enable
+    ```
+
+- Step 3. Unexport PWM0
+
+    ```
+    echo 0 > /sys/class/pwm/pwmchip0/unexport
+    ```
+
+Here is the terminal information for pwm0. 
+
+```
+[root@artik pwmchip0]# echo 0 > /sys/class/pwm/pwmchip0/export    # please change to echo 2 for pwm2
+[root@artik pwmchip0]# echo 1000000000 > /sys/class/pwm/pwmchip0/pwm0/period # please change to pwm2 from pwm0 for pwm2
+[root@artik pwmchip0]# echo 500000000 > /sys/class/pwm/pwmchip0/pwm0/duty_cycle # please change to pwm2 from pwm0 for pwm2
+[root@artik pwmchip0]# echo 1 > /sys/class/pwm/pwmchip0/pwm0/enable  # please change to pwm2 from pwm0 for pwm2
+[root@artik pwmchip0]# echo 0 > /sys/class/pwm/pwmchip0/pwm0/enable # please change to pwm2 from pwm0 for pwm2
+```
+
+**ADC Control through Sysfs**
+
+For example, pin 36 is ADC0. The following command line examples demonstrate how to read the current value of ADC0.
+
+```
+[root@artik dev]# cat /sys/devices/platform/c0000000.soc/c0053000.adc/iio:device0/in_voltage0_raw
+0
+[root@artik dev]# cat /sys/devices/platform/c0000000.soc/c0053000.adc/iio:device0/in_voltage0_raw
+1211
+[root@artik dev]# cat /sys/devices/platform/c0000000.soc/c0053000.adc/iio:device0/in_voltage0_raw
+2027
+[root@artik dev]# cat /sys/devices/platform/c0000000.soc/c0053000.adc/iio:device0/in_voltage0_raw
+3017
+[root@artik dev]# cat /sys/devices/platform/c0000000.soc/c0053000.adc/iio:device0/in_voltage0_raw
+4095
+```
+
+!!!note
+    Please change the in_voltage0_raw to in_voltage1_raw if we use pin37 (ADC1). 
 
 ## Play with ReSpeakers Mics
 
