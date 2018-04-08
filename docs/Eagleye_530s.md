@@ -140,7 +140,7 @@ When the jumpers JP1 are in the 1-2 position, the power is provided from the usb
 
 ![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/MECHANICAL1.png)
 ![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/MECHANICAL2.png)
-![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/MECHANICAL3.png)
+![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/MECHANICAL5.png)
 ![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/MECHANICAL4.png)
 
 !!!note
