@@ -69,9 +69,11 @@ The AC108 codec is not supported by Pi kernel builds currently, we have to build
 - Step 2. Get the seeed voice card source code.
 
 ```
+sudo apt-get update
+sudo apt-get upgrade
 git clone https://github.com/respeaker/seeed-voicecard.git
 cd seeed-voicecard
-sudo ./install.sh 4mic
+sudo ./install.sh
 reboot
 ```
 
