@@ -69,7 +69,7 @@ tags: io_3v3, io_5v, plat_duino, plat_pi # Ignore
 - Step 3. please follow below structures to design the wiki.
 
 ```
-- Description
+- Description 
 - Version # [use tablesgenerator to generate the table](tablesgenerator.com)
 - Specification # [use tablesgenerator to generate the table](tablesgenerator.com)
 - Platform Supported # [use tablesgenerator to generate the table](tablesgenerator.com)
@@ -77,6 +77,12 @@ tags: io_3v3, io_5v, plat_duino, plat_pi # Ignore
 - FAQs
 - Resources
 - Tech Support
+```
+
+For Desciption session, please use below html code for get one now. Please just replace the href for product bazzar link. 
+
+```
+<p style="text-align:center"><a href="https://www.seeedstudio.com/ReSpeaker-Core-V2.0-p-3039.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>  
 ```
 
 !!!Note
