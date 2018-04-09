@@ -7,15 +7,22 @@ prodimagename: Moisture_sensor_.jpg
 surveyurl: https://www.research.net/r/grove-moisture-sensor
 sku: 101020008
 ---
----
+
 ![](https://github.com/SeeedDocument/Grove_Moisture_Sensor/raw/master/images/Moisture_sensor_.jpg)
 
 This Moisture Senor can be used for detecting the moisture of soil or judge if there is water around the sensor, let the plant in your garden able to reach out for human's help when they are thirsty. This sensor is very easy to use, you can just simply insert in into the soil and read the data. With this sensor, you can make a small project that can let the plant send a message to you like " I am thirsty now, please feed me some water."
 
-[![](https://github.com/SeeedDocument/Grove_Moisture_Sensor/raw/master/images/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-Moisture-Sensor-p-955.html)
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Moisture-Sensor-p-955.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>
+
+## Version
+
+| Product Version              | Changes                                   | Released Date |
+|------------------------------|-------------------------------------------|---------------|
+| Grove - Moisture Sensor V1.4 | Initial                                   | June 2014     |
+
 
 ## Features
----
+
 - Soil moisture sensor based on soil resistivity meansurement
 - Easy to use
 - 2.0 cm X 6.0 cm grove module
@@ -24,70 +31,186 @@ This Moisture Senor can be used for detecting the moisture of soil or judge if t
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
 ## Specification
----
+
 |Item|Condition|Min|Typical|Max|Unit|
 |---|---|---|---|---|---|
 |Voltage|-|3.3|-|5|V|
 |Current|-|0|-|35|mA|
 |Output Value|Sensor in dry soil<br>Sensor in humid soil<br>Sensor in water|0<br>300<br>700<br>|-|300<br>700<br>950|-|
 
+
+## Platforms Supported
+
+| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
+|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo_n.jpg) |
+
+!!!Caution
+    The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
+
+
 ## Application Ideas
----
+
 - Botanical Gardening
 - Moisture Sensoring
 - Consistency Measurement
 
-
-## Usage
----
-**With Arduino**
-
-This is a summary of the moisture sensor which can be used to detect the moisture of the soil. When the soil moisture deflicits, the sensor output value will decrease. You can know whether a plant needs water or not by observing the result that the sensor output. The following sketch demostrates a simple application of sensoring the moisture of the soil.
-
-- Connect this module to one of analog port of A0 of [Grove - Base Shield](https://www.seeedstudio.com/Grove-Base-Shield-p-754.html) with 4 pin Grove cable, and then insert the sensor into the soil or plase it in anywhere you want.
-
-- Plug Grove - Base Shield into the Arduino Seeeduino and connect Arduino to PC via an USB cable.
-
-The hardware installation as is shown as below:
-
-![](https://github.com/SeeedDocument/Grove_Moisture_Sensor/raw/master/images/518px-Moisture1.jpg)
+## Getting Started
 
 !!!Note
-    This sensor isn't hardened against contaimination or exposure of the control circuitry to water and may be prone to electrolytic corrosion across the probes, so it isn't well suited to being left in place or used outdoors.
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
-- Copy and paste the code below to a new Arduino Sketh
 
-```c
-// Test code for Grove - Moisture Sensor 
-int sensorPin = A0; // select the input pin for the potentiometer
-int sensorValue = 0; // variable to store the value coming from the sensor7
+### Play With Arduino
+
+**Hardware**
+
+- **Step 1.** Prepare the below stuffs:
+
+| Seeeduino V4.2 | Base Shield|  Grove-Moisture Sensor |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Moisture_Sensor/raw/master/img/Moisture_sensor_S.jpg)|
+|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Moisture-Sensor-p-955.html)|
+
+- **Step 2.** Connect Grove-Moisture Sensor to port A0 of Grove-Base Shield.
+- **Step 3.** Plug Grove - Base Shield into Seeeduino.
+- **Step 4.** Connect Seeeduino to PC via a USB cable.
+
+![](https://github.com/SeeedDocument/Grove_Moisture_Sensor/raw/master/img/Seeeduino_moisture.jpg)
+
+!!!Note
+	If we don't have Grove Base Shield, We also can directly connect Grove-Moisture Sensor to Seeeduino as below.
+
+| Seeeduino       | Grove-Moisture Sensor |
+|---------------|-------------------------|
+| 5V           | Red                     |
+| GND           | Black                   |
+| Not Conencted | White                   |
+| A0            | Yellow                  |
+
+**Software**
+
+- **Step 1.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+
+```c++
+int sensorPin = A0; 
+int sensorValue = 0; 
 
 void setup() {
-    // declare the ledPin as an OUTPUT:
     Serial.begin(9600);
 }
 void loop() {
     // read the value from the sensor:
     sensorValue = analogRead(sensorPin);
-    Serial.print("sensor = " );
+    Serial.print("Moisture = " );
     Serial.println(sensorValue);
     delay(1000);
 }
 ```
 
-- Upload the code, please click [here](https://seeeddoc.github.io/Upload_Code/) if you don't know how to upload.
-- The result in different condition after open the serial monitor
+- **Step 2.** We will see the moisture display on terminal as below.
 
-![](https://github.com/SeeedDocument/Grove_Moisture_Sensor/raw/master/images/in%20differen%20conditions.jpg)
+```
+Moisture = 0
+Moisture = 31
+Moisture = 48
+Moisture = 139
+Moisture = 155
+Moisture = 124
+Moisture = 236
+Moisture = 218
+Moisture = 215
+Moisture = 221
+```
 
-**With TI LaunchPad**
+### Play With Raspberry Pi
+
+**Hardware**
+
+- **Step 1.** Prepare the below stuffs:
+
+| Raspberry pi | GrovePi_Plus | Grove-Moisture Sensor |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Moisture_Sensor/raw/master/img/Moisture_sensor_S.jpg)|
+|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/Grove-Moisture-Sensor-p-955.html)|
 
 
-Taking care of your plants(Moisture Sensor)
+- **Step 2.** Plug the GrovePi_Plus into Raspberry.
+- **Step 3.** Connect Grove-Moisture Sensor to **A0** port of GrovePi_Plus.
+- **Step 4.** Connect the Raspberry to PC through USB cable.
+
+![](https://github.com/SeeedDocument/Grove_Moisture_Sensor/raw/master/img/rpi_moisture.jpg)
+
+**Software**
+
+- **Step 1.** Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment.
+- **Step 2.** Git clone the Github repository.
+
+```
+cd ~
+git clone https://github.com/DexterInd/GrovePi.git
+
+```
+
+-	**Step 3.** Excute below commands to use the Grove-Moisture Sensor to meansure the moisture.
+
+
+```
+cd ~/GrovePi/Software/Python
+python grove_moisture_sensor.py
+```
+
+Here is the grove_moisture_sensor.py code.
+
+```python
+# 	Here are suggested sensor values:
+# 		Min  Typ  Max  Condition
+# 		0    0    0    sensor in open air
+# 		0    20   300  sensor in dry soil
+# 		300  580  700  sensor in humid soil
+# 		700  940  950  sensor in water
+	
+
+import time
+import grovepi
+
+# Connect the Grove Moisture Sensor to analog port A0
+# SIG,NC,VCC,GND
+sensor = 0
+
+while True:
+    try:
+        print(grovepi.analogRead(sensor))
+        time.sleep(.5)
+
+    except KeyboardInterrupt:
+        break
+    except IOError:
+        print ("Error")
+```
+
+- **Step 4.** We will see the moisture display on terminal as below.
+
+```
+pi@raspberrypi:~/GrovePi/Software/Python $ python grove_moisture_sensor.py
+0
+90
+130
+150
+160
+218
+238
+```
+
+### Play With TI LaunchPad
+
+**Hardware**
 
 The following sketch demonstrates a simple application of sensing the moisture in soil.With this, you can know whether your plant needs water or not by observing the result from the output of the sensor
 
 ![](https://github.com/SeeedDocument/Grove_Moisture_Sensor/raw/master/images/Moisture.jpg)
+
+**Software**
 
 ```c
 /*
@@ -149,46 +272,10 @@ void loop() {
 }
 ```
 
-
-**With Raspberry Pi**
-1. You should have got a Raspberry Pi and a grove pi or grove pi+
-2. You should have completed configuring development environment, otherwise follow here.
-3. Connection
-- Plug the sensor to grove pi socket A0 by using a grove cable
-4. Navigate to the demo's directory.
-
-```
-cd yourpath/GrovePi/Software/Python/
-```
-
-To see the code
-
-```python
-nano grove_moisture_sensor.py # "Ctrl+x" to exit #
-import time
-import grovepi
-# Connect the Grove Moisture Sensor to analog port A0
-# SIG,NC,VCC,GND
-sensor = 0
-while True:
-try:
-print grovepi.analogRead(sensor)
-time.sleep(.5)
-except KeyboardInterrupt:
-break
-except IOError:
-print "Error
-```
-
-5. Run the demo
-
-```
-sudo python grove_moisture_sensor.py
-```
-
 ## Resources
----
-- [202000089_PCBA-Grove Moisture sensor V1.3_schemic file](https://github.com/SeeedDocument/Grove_Moisture_Sensor/raw/master/resources/202000089_PCBA-Grove%20Moisture%20sensor%20V1.3_schemic%20file.zip)
+
+- [**Eagle&PDF**][Grove - Moisture Sensor v1.4 Schematic](https://github.com/SeeedDocument/Grove_Moisture_Sensor/raw/master/resources/Grove%20-%20Moisture%20Sensor%20v1.4.zip)
+
 
 ## Tech Support
 Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
