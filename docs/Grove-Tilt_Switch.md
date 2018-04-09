@@ -119,7 +119,7 @@ The SIG pin of the Grove - Tilt Switch output LOW normally. When the Tilt Switch
 
 The following sketch demonstrates a simple application of using the Tilt Switch and Grove - Button to control the led.
 
--   As the following picture indicates, the Tilt Switch is connected to digital port 5 of the Grove - Base Shield and the Grove-Button to digital port 7. The LED is connected to digital port 2. The hardware installation is as follows:
+-   As the following picture indicates, the Tilt Switch is connected to digital port 5 of the Grove - Base Shield and the Grove-Button to digital port 7. The LED is connected to digital port 1. The hardware installation is as follows:
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Tilt_Switch/master/img/Digitalv1.0b.jpg)
 
