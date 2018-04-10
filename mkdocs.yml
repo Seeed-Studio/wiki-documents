@@ -165,7 +165,7 @@ pages:
           
       - Artik:
           - Artik Introduction: Artik.md
-          - Eagleye_530s: Eagleye_530s.md
+          - Eagleye 530s: Eagleye_530s.md
 
       - Shield:
           - Shield Introduction: Shield.md
@@ -197,7 +197,7 @@ pages:
           - XBee Shield V2.0: XBee_Shield_V2.0.md
 
       - Wio_Tracker:
-          - Wio_Tracker Introduction: Wio_Tracker.md
+          - Wio Tracker Introduction: Wio_Tracker.md
           - Wio LTE Cat.1: Wio_LTE_Cat.1.md
           - Wio Tracker - GPS, BT3.0, GSM, Arduino Compatible: wio_gps_board.md
 
@@ -519,12 +519,12 @@ pages:
 
   - IoT:
           - IoT Introduction: IoT.md
-          - Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS: Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS.md
-          - IoT_Fast_Prototyping_Kit S5D9: IoT_Fast_Prototyping_Kit S5D9.md
-          - Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi: Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi.md
-          - Grove_IoT_Starter_Kits_Powered_by_AWS: Grove_IoT_Starter_Kits_Powered_by_AWS.md
-          - Grove_IoT_Developer_Kit-Microsoft_Azure_Edition: Grove_IoT_Developer_Kit-Microsoft_Azure_Edition.md
-          - Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS: Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS.md
+          - Seeeduino Cloud and Grove IoT Starter Kit Powered by AWS: Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS.md
+          - IoT Fast Prototyping Kit S5D9: IoT_Fast_Prototyping_Kit S5D9.md
+          - Grove Starter Kit for IoT based on Raspberry Pi: Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi.md
+          - Grove IoT Starter Kits Powered by AWS: Grove_IoT_Starter_Kits_Powered_by_AWS.md
+          - Grove IoT Developer Kit Microsoft Azure Edition: Grove_IoT_Developer_Kit-Microsoft_Azure_Edition.md
+          - BeagleBone Green and Grove IoT Starter Kit Powered by AWS: Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS.md
 
   - MakerPro:
           - MakerPro Introduction: MakerPro.md
