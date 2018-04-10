@@ -184,7 +184,7 @@ cd ~/GrovePi/Software/Python
 sudo python grove_temperature_sensor.py
 ```
 
-Here is the grove_ultrasonic.py code.
+Here is the grove_temperature_sensor.py code.
 
 ```python
 # NOTE:
@@ -224,7 +224,7 @@ The result should be like:
 
 ```python
 
-sudo python grove_temperature_sensor.py
+pi@raspberrypi:~/GrovePi/Software/Python $ sudo python grove_temperature_sensor.py
 
 ('temp =', 25.28652137917777)
 ('temp =', 25.28652137917777)

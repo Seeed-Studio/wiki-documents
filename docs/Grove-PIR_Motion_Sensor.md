@@ -14,7 +14,7 @@ tags: io_3v3, io_5v, plat_duino, plat_pi
 
 This sensor allows you to sense motion, usually human movement in its range. Simply connect it to Grove - Base shield and program it, when anyone moves in its detecting range, the sensor will output HIGH on its SIG pin.
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/ReSpeaker-Core-V2.0-p-3039.html" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-PIR-Motion-Sensor-p-802.html" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
 
 ## Features
 ---
@@ -67,11 +67,25 @@ This sensor allows you to sense motion, usually human movement in its range. Sim
 
 
 - **Step 2.** Connect Grove - PIR Motion Sensor to port **D2** of Grove-Base Shield.
+
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
+
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove_PIR_Motion_Sensor/raw/master/images/PIR_Motion_test.jpg)
+![](https://github.com/SeeedDocument/Grove_PIR_Motion_Sensor/raw/master/img/connect_arduino.jpg)
+
+!!!Note
+	If we don't have Grove Base Shield, We also can directly connect Grove_Ultrasonic_Ranger to Seeeduino as below.
+
+| Seeeduino       | Grove - PIR Motion Sensor |
+|---------------|-------------------------|
+| 5V           | Red                     |
+| GND           | Black                   |
+| Not Conencted | White                   |
+| D2            | Yellow                  |
+
+
 
 #### Software
 
@@ -107,30 +121,48 @@ void loop()
     The detecting distance and holding time can be adjusted by adding two extra potentiometers on board. For the details please refer to the V1.2 Eagle below. The module can also be set as retriggerable or un- retriggerable by changing the jumper hat.
 
 
+The result should be like:
+
+
+![](https://github.com/SeeedDocument/Grove_PIR_Motion_Sensor/raw/master/img/result_arduino.png)
+
+
 ### Play with Raspberry Pi
 
 #### Hardware
 
 - **Step 1.** Prepare the below stuffs:
 
-| Raspberry pi | GrovePi_Plus | Grove - Ultrasonic Ranger |
+| Raspberry pi | GrovePi_Plus | Grove - PIR Motion Sensor |
 |--------------|-------------|-----------------|
 |![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_PIR_Motion_Sensor/raw/master/img/Grove%20-%20PIR%20Motion%20Sensor_s.jpg)|
 |[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/Grove-PIR-Motion-Sensor-p-802.html)|
 
 
 - **Step 2.** Plug the GrovePi_Plus into Raspberry.
+
 - **Step 3.** Connect the sensor to **D8** port of GrovePi_Plus.
+
 - **Step 4.** Connect the Raspberry to PC through USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove_PIR_Motion_Sensor/raw/master/img/pi%20connection.jpg)
+![](https://github.com/SeeedDocument/Grove_PIR_Motion_Sensor/raw/master/img/connect_pi.jpg)
 
 #### Software
 
 
 - **Step 1.** Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment.
-- **Step 2.** Git clone the Github repository.
+
+- **Step 2.** Follow [Updating the Firmware](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/updating-firmware/) to update the newest firmware of GrovePi.
+
+!!!Tip
+    In this wiki we use the path **~/GrovePi/** instead of **/home/pi/Desktop/GrovePi**, you need to make sure Step 2 and Step 3 use the same path.
+
+!!!Note
+    We firmly suggest you to update the firmware, or for some sensors you may get errors.
+
+
+- **Step 3.** Git clone the Github repository.
 
 ```
 cd ~
@@ -138,16 +170,12 @@ git clone https://github.com/DexterInd/GrovePi.git
 
 ```
 
--	**Step 3.** Run below commands to use the PIR Motion Sensor to monitor the movement of people.
+-	**Step 4.** Run below commands to use the PIR Motion Sensor to monitor the movement of people.
 
 ```
 cd ~/GrovePi/Software/Python
 sudo python grove_pir_motion_sensor.py
 ```
-
-
-
-
 
 Here is the grove_pir_motion_sensor.py code.
 
@@ -175,9 +203,10 @@ while True:
     except IOError:
         print "Error"
 ```
-- **Step 4.** We will see the distance display on terminal as below.
 
-```
+The result should be like:
+
+```python
 pi@raspberrypi:~/GrovePi/Software/Python $ sudo python grove_pir_motion_sensor.py
 
 -
