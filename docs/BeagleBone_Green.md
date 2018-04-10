@@ -307,7 +307,7 @@ Below listed the Grove modules that work well with BBG.
 |101020082	|Grove - Finger-clip Heart Rate Sensor with shell	|I2C|[link](http://www.seeedstudio.com/Grove-Finger-clip-Heart-Rate-Sensor-with-shell-p-2420.html)|
 |113020003	|Grove - GPS	                        |UART| [link](http://www.seeedstudio.com/Grove-GPS-p-959.html)|
 |104030007	|Grove - Green LED	|I/O| [link](http://www.seeedstudio.com/Grove-Green-LED-p-1144.html)|
-|103020013	|Grove - I2C ADC	|I2C| [link](http://www.seeedstudio.com/Grove-Green-LED-p-1144.html)|
+|103020013	|Grove - I2C ADC	|I2C| [link](http://wiki.seeedstudio.com/Grove-I2C_ADC/)|
 |103020006	|Grove - I2C Hub	|I2C| [link](http://www.seeedstudio.com/Grove-I2C-Hub-p-851.html)|
 |101020079	|Grove - IMU 10DOF	|I2C| [link](http://www.seeedstudio.com/Grove-IMU-10DOF-p-2386.html)|
 |101020080	|Grove - IMU 9DOF v2.0	|I2C| [link](http://www.seeedstudio.com/Grove-IMU-9DOF-v2.0-p-2400.html)|
@@ -346,8 +346,8 @@ You will need some expansion board when you start a project. There're many cape 
 ![](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/bbg12.png)
 
  **2. When booting the board the Ethernet port orange LED is ON for a while, then is OFF for a while, to be ON again for some time etc. The board is not reachable via the network.**
- 
-Please remove the capacitor C162. 
+
+Please remove the capacitor C162.
 
  ![](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/images/Capatictor.png)
 
@@ -376,4 +376,4 @@ There're many references to help you to get more information about the board.
 * [BEAGLEBONE_GREEN PCB(OrCAD)](https://github.com/SeeedDocument/BeagleBone_Green/blob/master/resources/BeagleBone_Green_v1.166%28board%29.rar)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/).
