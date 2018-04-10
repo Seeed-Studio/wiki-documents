@@ -17,7 +17,6 @@ ReSpeaker Mic Array v2.0 supports USB Audio Class 1.0(UAC 1.0) directly. All maj
 
 ReSpeaker Mic Array v2.0 has two firmwares, one includes speech algorithms, another is just capture raw voice data for specially purpose.
 
-[![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png)]()
 
 ## Version
 
