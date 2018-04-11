@@ -10,17 +10,19 @@ sku: 114991433
 
 ![enter image description here](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/eagleye_530s.JPG)
 
-There are many IoT platform out there in the market, among which we have developed many product kit for them. This time we created a new development kit named Eagleye 530s, which is powered by the [Samsung ARTIK™ IoT platform](https://www.artik.io/).
 
-The Eagleye 530s is a high-performance, pre-tested, cost-effective and production-ready development kit incorporates the Samsung ARTIK™ 530s, a 1GB system-on-module (SoM) on a custom credit card size board. For more information about ARTIK™ 530s, please refer to here.
+Seeed is an experienced designer of development kits for IoT technology platforms. Our latest development kit—the Eagleye 530s,--is designed to help you get started developing products and services for the [Samsung ARTIK™ IoT platform](https://www.artik.io/).
+ 
+The Eagleye 530s is a high-performance, pre-tested, cost-effective and production-ready development kit which incorporates the Samsung ARTIK™ 530s--a 1GB system-on-module (SoM)-- on a custom credit card size board. For more information about ARTIK™ 530s, please click here.
+ 
+What is Samsung ARTIK™? Samsung ARTIK™ is a pre-integrated IoT platform consisting of enterprise-grade system-on-modules (SoMs), cloud services, and end-to-end security for the design and development of robust IoT solutions. Developers frequently downplay the importance of security when designing and building IoT products. ARTIK integrated security services for SoMs and cloud make it easier for you to make your products secure.  
+ 
+As mentioned above, the Eagleye530s is based on the ARTIK 530s 1GB SoM, which is a Quad Core Cortex® A9 running @ 1.2 GHz with 4 B Flash memory, hardware-based security features, and Linux OS (Ubuntu). The Eagleye 530s also provides a 40 pin GPIO and accessory interface for Micro SD, Ethernet 10/100/1000, Wi-Fi 802.11 a/b/g/n, Bluetooth BLE 4.2 802.15.4, and ZigBee/Thread. It also supports full HDMI, MIPI camera interfaces, video, and audio media.
+ 
+Since the Eagleye 530s is pin-compatible with many “maker” hardware accessories, it allows Samsung ARTIK™ developers to easily tap into the extensive “maker” accessories marketplace and prototype and build with off-the-shelf sensors (eg. [GrovePi+](https://www.seeedstudio.com/GrovePi%2B-p-2241.html),[Grove sensors](https://www.seeedstudio.com/grove.html)), voice recognition (eg. [ReSpeaker 2-mic array](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html) and [ReSpeaker 4-mic array](https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi-p-2941.html)), relays, GPS, cellular connectivity, and more, providing many options for enterprise developers creating feature-rich proof-of-concepts (PoC) or production-ready products.
 
-What is Samsung ARTIK™? Samsung ARTIK™ is a pre-integrated IoT platform consisting of enterprise-grade modules, cloud services, and end-to-end security for the design and development of robust IoT solutions. People always neglect the importance of security to products in the IoT world. With services like ARTIK Module, Cloud, Security and ecosystem Samsung aims to provide a platform that takes care of your total security.
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Eagleye-530s-p-3035.html" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>
 
-As mentioned above, the Eagleye530s is based on the ARTIK 530s 1GB SoM, which is a Quad Core Cortex® A9 running @ 1.2 GHz with 4 B Flash memory, hardware-based security features, and Linux OS (Ubuntu). Eagleye 530s including 40 pin GPIO and accessory interface to provide support for Micro SD, Ethernet 10/100/1000, Wi-Fi 802.11 a/b/g/n, Bluetooth BLE 4.2 802.15.4, and ZigBee/Thread. It also supports full HDMI, MIPI camera interface, video, and audio media.
-
-Since the Eagleye 530s is pin-compatible with many “maker” hardware accessories, it allows Samsung ARTIK™ developers to easily tap into the extensive “maker” accessories marketplace and prototype and build with off-the-shelf sensors (eg. [GrovePi+](https://www.seeedstudio.com/GrovePi%2B-p-2241.html),[Grove sensors](https://www.seeedstudio.com/grove.html)), voice recognition (eg. [ReSpeaker 2-mic array](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html) and [ReSpeaker 4-mic array](https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi-p-2941.html)), relays, GPS, cellular connectivity, and more, further expands options for enterprise developers creating feature-rich proof-of-concepts (PoC) or production-ready products.
-
-[![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Eagleye-530s-p-3035.html)
 
 ## Version
 
@@ -112,22 +114,22 @@ Below figures show the overall preview of the Eagleye 530s' TOP and BOTTOM.
 
 - <font face="" size=5 font color="ff0000">ⓝ</font> **User Button S3:** switch named as S3, mapped to GPIO 50.
 
-- <font face="" size=5 font color="ff0000">ⓞ</font> **MIPI DSI:** The MIPI CSI interface can have a static resolution of 5M pixels or a dynamic resolution for video capturing of 1080P.
+- <font face="" size=5 font color="ff0000">ⓞ</font> **MIPI CSI:** The MIPI CSI interface can have a static resolution of 5M pixels or a dynamic resolution for video capturing of 1080P.
 
-- <font face="" size=5 font color="ff0000">ⓟ</font> **ANT(802.11):** If 802.11 or Bluetooth® functionality is required, the antenna which is enclosed as part of the Eagleye530s has to be attached.
+- <font face="" size=5 font color="ff0000">ⓟ</font> **ANT(802.11):** If 802.11 or Bluetooth® functionality is required, the antenna which is enclosed as part of the Eagleye 530s has to be attached.
 
 - <font face="" size=5 font color="ff0000">ⓠ</font> **Reset:** board resest.
 
 - <font face="" size=5 font color="ff0000">ⓡ</font> **Power:** Once the power switch is turned on, push the power button (S1), for about 1 second.
 
-- <font face="" size=5 font color="ff0000">ⓢ</font> **ANT(802.11):** If 802.11 or Bluetooth® functionality is required, the antenna which is enclosed as part of the Eagleye530s has to be attached.
+- <font face="" size=5 font color="ff0000">ⓢ</font> **ANT(802.11):** If 802.11 or Bluetooth® functionality is required, the antenna which is enclosed as part of the Eagleye 530s has to be attached.
 
 - <font face="" size=5 font color="ff0000">ⓣ</font> **User Pins:**  To make them versatile control and monitoring devices, Eagleye 530s provides many programmable signal pins. These pins directly handle tasks like controlling relays, generating analog voltages, and monitoring analog sensors, as well as complex tasks involving parallel and serial communication with more sophisticated control and sensor devices.
 
-- <font face="" size=5 font color="ff0000">ⓤ</font> **ANT(Zigbee):** If Zigbee functionality is required, the antenna which is enclosed as part of the Eagleye530s has to be attached.
+- <font face="" size=5 font color="ff0000">ⓤ</font> **ANT(Zigbee):** If Zigbee functionality is required, the antenna which is enclosed as part of the Eagleye 530s has to be attached.
 
 - <font face="" size=5 font color="ff0000">ⓥ</font> **Power Switch:** Through selection of the Jumpers JP1and JP2, the power source can be selected. When power is provided from a DC-5V Adapter ,  jumpers JP2 will be placed and 3-4 position will be connected.
-When the jumpers JP1 are in the 1-2 position, the power is provided from the usb-uart. When the Eagleye530s is used with an external power adapter make certain that you use a 5V-2.5A adapter with a 2.1x5.5mm plug.
+When the jumpers JP1 are in the 1-2 position, the power is provided from the usb-uart. When the Eagleye 530s is used with an external power adapter make certain that you use a 5V-2.5A adapter with a 2.1x5.5mm plug.
 
 !!!warning
     NEVER connect both at the same time!
@@ -156,7 +158,7 @@ When the jumpers JP1 are in the 1-2 position, the power is provided from the usb
 
 **Unboxing Demo**
 
-This section will describe how to start working with your Eagleye530s Development Environment by setting up a serial connection on your development PC and booting up the Eagleye530s Development Environment.
+This section will describe how to start working with your Eagleye 530s Development Environment by setting up a serial connection on your development PC and booting up the Eagleye 530s Development Environment.
 
 **Hardware**
 
@@ -168,7 +170,7 @@ This section will describe how to start working with your Eagleye530s Developmen
 
 **Software**
 
-Setting up a connection with the Eagleye530s Module can be done in a wired or wireless manner. Here we choose to install PuTTY a free serial console. The software can be downloaded from http://www.putty.org/. Once downloaded go through the following steps:
+Setting up a connection with the Eagleye 530s Module can be done in a wired or wireless manner. Here we choose to install PuTTY a free serial console. The software can be downloaded from http://www.putty.org/. Once downloaded go through the following steps:
 
 - Step 1. Open the device manager on the control panel.
 - Step 2. When using a PC install the USB to Serial driver. The driver can be found at the following location: (http://www.ftdichip.com/Drivers/CDM/CDM21218_Setup.zip). For other drivers please visit (http://www.ftdichip.com/Drivers/D2XX.htm).
@@ -180,7 +182,7 @@ Setting up a connection with the Eagleye530s Module can be done in a wired or wi
     - Set the “Serial line” as the COM port number found in step 3.
     - Set the COM speed to "115200".
     - Set the connection type to "Serial".
-    - Save the session under Eagleye530s.
+    - Save the session under Eagleye 530s.
 - Step 5. Select your saved session and click the “Open” button.
 
 ![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/Putty_setup.png)
@@ -359,9 +361,9 @@ connmanctl> quit
 
 **Firmware Update**
 
-- Step 1. Download the [firmware](https://developer.artik.io/documentation/downloads.html#firmware).
+- Step 1. Download the [firmware](https://developer.artik.io/documentation/downloads.html#firmware), the files for the “ARTIK 530s 1G”.
 - Step 2. Use [Etcher](https://etcher.io/) tool to burn the firmware to SD card.
-- Step 3. Plug the SD card to Eagleye530s SD slot.
+- Step 3. Plug the SD card to Eagleye 530s SD slot.
 - Step 4. Change boot switch(named as number 21 on hardware overview) Pin4 to on.
 - Step 5. Connect the USB cable from PC to USB UART(named as number 8 on hardware overview).
 - Step 6. Press the Power button for more than 1 second and we will see the Green/Red/Blue LEDs(refer to Number 10/11/12 on hardware overview) are turned on.
@@ -1070,7 +1072,7 @@ sensor_value = 387 voltage = 1.89 degrees = 113.4 brightness = 96
 ```
 
 !!!warning:
-    For more Grove sensors, please refer to [DexterInd Python Library](https://github.com/DexterInd/GrovePi). We do not test all the sensors' compatiblity with Eagleye530s. Please contact techsupport if any issue.  
+    For more Grove sensors, please refer to [DexterInd Python Library](https://github.com/DexterInd/GrovePi). We do not test all the sensors' compatiblity with Eagleye 530s. Please contact techsupport if any issue.  
 
 ## Play with Shield
 
@@ -1148,7 +1150,7 @@ Turning relay 4 OFF
     - Set the “Serial line” as the COM port number found in step 3.
     - Set the COM speed to "115200".
     - Set the connection type to "Serial".
-    - Save the session under Eagleye530s.
+    - Save the session under Eagleye 530s.
 - Step 3. Select your saved session and click the “Open” button.
 
 ![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/Putty_setup.png)
@@ -1173,13 +1175,23 @@ Raspberry Pi Breakout Board, it also provides power, state indicator light, butt
 
 ## FAQs
 
-- Q1: How to setup the VNC server?
+- Q1: Is Eagleye 530s compatiable with Raspberry Pi enclosures?
 
-A1: Please follow [instructions](https://github.com/SeeedDocument/Eagleye_530s/raw/master/res/Install_VNC_Server.pdf) from Digital Ocean.
+A1: Yes. Here are the compatiable list. 
+
+| SKU       | Description                                                                                                    | Comments                             |
+|-----------|----------------------------------------------------------------------------------------------------------------|--------------------------------------|
+| 103010002 | [GrovePi+](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)                                                 | Refer to Play with Grovepi+          |
+| 103030030 | [Raspberry Pi Breakout Board v1.0](https://www.seeedstudio.com/s/Raspberry-Pi-Breakout-Board-v1.0-p-2410.html) | Refer to Play with Shield            |
+| 103030029 | [Raspberry Pi Relay Board v1.0](https://www.seeedstudio.com/Raspberry-Pi-Relay-Board-v1.0-p-2409.html)         | Refer to Play with Shield            |
+| 103030028 | [Raspberry Pi RS232 Board v1.0](https://www.seeedstudio.com/Raspberry-Pi-RS232-Board-v1.0-p-2408.html)         | Refer to Play with Shield            |
+| 114990835 | [Raspberry Pi HDMI LCD (7 inch)](https://www.seeedstudio.com/Raspberry-Pi-HDMI-LCD-%287-inch%29-p-2763.html)   | Display works well except the touch. |
 
 
 ## Resources
 
+- **[PDF]** [ARTIK™ 530s SoM Module Datasheet](https://developer.artik.io/downloads/hw-datasheet-artik-530-v1-0-pdf/download)
+- **[More Reading]** [ARTIK™ 530s](https://www.artik.io/modules/artik-530/)
 - **[More Reading]** [Samsung ARTIK™ IoT platform](https://developer.artik.io/documentation/artik/getting-started/)
 - **[More Reading]** [Facial-Recog Project](https://developer.artik.io/documentation/artik/projects/facial-recog.html)
 
