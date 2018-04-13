@@ -93,8 +93,8 @@ This Moisture Senor can be used for detecting the moisture of soil or judge if t
 - **Step 1.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
 ```c++
-int sensorPin = A0; 
-int sensorValue = 0; 
+int sensorPin = A0;
+int sensorValue = 0;
 
 void setup() {
     Serial.begin(9600);
@@ -169,7 +169,7 @@ Here is the grove_moisture_sensor.py code.
 # 		0    20   300  sensor in dry soil
 # 		300  580  700  sensor in humid soil
 # 		700  940  950  sensor in water
-	
+
 
 import time
 import grovepi
@@ -278,4 +278,4 @@ void loop() {
 
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/).

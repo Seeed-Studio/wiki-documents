@@ -4,10 +4,8 @@ category: Display
 bzurl: https://seeedstudio.com/Grove-LED-Bar-p-1178.html
 oldwikiname: Grove_-_LED_Bar
 prodimagename: Grove-LED_Bar-1.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/bar.jpg
 surveyurl: https://www.research.net/r/Grove-LED_Bar
 sku: 104030002
-tags: grove_digital, io_3v3, io_5v, plat_duino, plat_linkit, plat_wio
 ---
 
 <table>
@@ -23,7 +21,15 @@ tags: grove_digital, io_3v3, io_5v, plat_duino, plat_linkit, plat_wio
 
 Grove – LED Bar is comprised of a 10 segment LED gauge bar and an MY9221 LED controlling chip. It can be used as an indicator for remaining battery life, voltage, water level, music volume or other values that require a gradient display. There are 10 LED bars in the LED bar graph: one red, one yellow, one light green, and seven green bars. Demo code is available to get you up and running quickly. It lights up the LEDs sequentially from red to green, so the entire bar graph is lit up in the end. Want to go further? Go ahead and code your own effect.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-LED-Bar-p-1178.html)
+<p style="text-align:center"><a href="http://www.seeedstudio.com/Grove-LED-Bar-p-1178.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>
+
+Version
+--------
+
+| Product Version              | Changes                                   | Released Date |
+|------------------------------|-------------------------------------------|---------------|
+| Grove – LED Bar V1 | Initial                                   | June 2014     |
+| Grove – LED Bar V2 | Initial                                   | June 2014     |
 
 Features
 --------
@@ -37,33 +43,53 @@ Features
 
 !!!Tip
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
-  
+
 
 Platforms Supported
 -------------------
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo.jpg) |
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo.jpg) |
 
 !!!Caution
     The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
 
-Demonstration
+Getting Started
 -------------
 
-### With [Arduino](/Arduino "Arduino")
+!!!Note
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
-This is a simple demo which can you help you to start with Grove - LED Bar quickly.
+### Play With Arduino
 
-We need a [Seeeduino V3.0](http://www.seeedstudio.com/depot/seeeduino-v30-atmega-328p-p-669.html?cPath=6_7) and a **Grove - Base Shield** as well.
+**Hardware**
 
-#### Hardware Installation
+- **Step 1.** Prepare the below stuffs:
 
-Plug the Grove - LED Bar onto the digital port 8 on Grove - Base Shield, and then plug the base shield onto Arduino.
+| Seeeduino V4.2 | Base Shield|  Grove-LED Bar |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-LED_Bar/master/img/Grove-LED_Bar-3.jpg)|
+|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/Grove-LED-Bar-p-1178.html)|
 
-#### Download Code and Upload
+- **Step 2.** Connect Grove-LED Bar to port **D8** of Grove-Base Shield.
+- **Step 3.** Plug Grove - Base Shield into Seeeduino.
+- **Step 4.** Connect Seeeduino to PC via a USB cable.
+
+!!!Note
+	If we don't have Grove Base Shield, We also can directly connect Grove-Moisture Sensor to Seeeduino as below.
+
+| Seeeduino       | Grove-LED Bar |
+|---------------|-------------------------|
+| 5V           | Red                     |
+| GND           | Black                   |
+| D9            | White                   |
+| D8            | Yellow                  |
+
+**Software**
+
+- **Step 1.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
 You can download the library in github, click [here](https://github.com/Seeed-Studio/Grove_LED_Bar), then extract it to libraries folder of Arduino.
 
@@ -73,32 +99,48 @@ Then open Arduino IDE, File -> examples -> LED_Bar -> Level, you can open the de
 
 Click Upload to Upload the code, if you have any problem about how to start Arduino, please click [here](/Getting_Started_with_Seeeduino) for some help.
 
-#### Working Now
-
-Your Grove - LED Bar is working now, it's shine.
+- **Step 2.** Your Grove - LED Bar is working now, it's shine.
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-LED_Bar/master/img/LED_Bar_shining.gif)
 
-### With Raspberry Pi
+### Play With Raspberry Pi
 
-1.You should have got a raspberry pi and a grovepi or grovepi+.
+**Hardware**
 
-2.You should have completed configuring the development enviroment, otherwise follow [here](/GrovePiPlus).
+- **Step 1.** Prepare the below stuffs:
 
-3.Connection
+| Raspberry pi | GrovePi_Plus | Grove-LED Bar |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-LED_Bar/master/img/Grove-LED_Bar-3.jpg)|
+|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](http://www.seeedstudio.com/Grove-LED-Bar-p-1178.html)|
 
--   Plug the sensor to grovepi socket D3 by using a grove cable.
+- **Step 2.** Plug the GrovePi_Plus into Raspberry.
 
-4.Navigate to the demos' directory:
+- **Step 3.** Connect Grove-LED Bar to **D3** port of GrovePi_Plus.
+
+- **Step 4.** Connect the Raspberry to PC through USB cable.
+
+**Software**
+
+- **Step 1.** Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment.
+
+- **Step 2.** Git clone the Github repository.
+
+```
+cd ~
+git clone https://github.com/DexterInd/GrovePi.git
+
+```
+
+-	**Step 3.** Navigate to the demos' directory:
+
 ```
 cd yourpath/GrovePi/Software/Python/
 ```
 
--   To see the code
-```
-nano grove_ledbar.py   # "Ctrl+x" to exit #
-```
-```
+Here is the grove_ledbar.py code.
+
+```python
 import time
 import grovepi
 import random
@@ -252,7 +294,7 @@ i = 0
 
         grovepi.ledBar_setLed(ledbar, 3, 0)
         time.sleep(.5)
-            
+
         grovepi.ledBar_setLed(ledbar, 5, 0)
         time.sleep(.5)
 
@@ -352,18 +394,19 @@ i = 0
         print "Error"
 ```
 
-5.Run the demo.
+- **Step 5.** Run the demo.
+
 ```
 sudo python grove_ledbar.py
 ```
 
-6.This demo may not work if your grovepi dosen't have the newest firmware, update the firmware.
+- **Step 6.** This demo may not work if your grovepi dosen't have the newest firmware, update the firmware.
 ```
 cd yourpath/GrovePi/Firmware
 sudo ./firmware_update.sh
 ```
 
-##Project
+## Project
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Lotus/master/img/gun.jpg)
 
@@ -376,12 +419,12 @@ The Wooden Laser Gun and the Gun Target are all based on an Arduino board called
 Resources
 ---------
 
--   [Grove - LED Bar Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-LED_Bar/master/res/Grove-LED_Bar_v1.0.zip)
--   [Grove - LED Bar Library](https://github.com/Seeed-Studio/Grove_LED_Bar)
--   [Suli-compatible Library](https://github.com/Seeed-Studio/LED_Bar_Suli)
--   [MY9221 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-LED_Bar/master/res/MY9221_DS_1.0.pdf)
+-   [**Eagle&PDF**][Grove - LED Bar Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-LED_Bar/master/res/Grove-LED_Bar_v1.0.zip)
+-   [**Library**][Grove - LED Bar Library](https://github.com/Seeed-Studio/Grove_LED_Bar)
+-   [**Library**][Suli-compatible Library](https://github.com/Seeed-Studio/LED_Bar_Suli)
+-   [**Datasheet**][MY9221 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-LED_Bar/master/res/MY9221_DS_1.0.pdf)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_LED_Bar -->
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/).
