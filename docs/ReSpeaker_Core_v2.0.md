@@ -574,7 +574,7 @@ Connection successful
 
 If `Connection successful` pops up, configuration!
 
-You can tap 'exit' to exit the shell, then use the commands below to test your bluetooth device.
+You can tap `exit` or `quit` to exit the shell, then use the commands below to test your bluetooth device.
 
 ```
 arecord bluetoothtest.wav
@@ -611,6 +611,9 @@ The playback device is **hw:0,1**, which means card **0**/device **1**.. Then te
 # record & playback 2 channels audio
 arecord -Dhw:0,0 -f S16_LE -r 16000 -c 2 hello.wav
 aplay -Dhw:0,1 -r 16000 -c 2 hello.wav
+
+# If you want to output the sound by the bluetooth device, you need to use the command below to play
+aplay -r 16000 -c 2 hello.wav
 
 # record 8 channels audio
 # there are 6 microphones on board, and ac108 compose the 2 remaining channels.
@@ -1268,7 +1271,7 @@ The UPM project implements sensors' driver based on the MRAA library, so we no l
 
 Materials
 
-| ReSpeaker Core v2 |  Grove -  PIR Motion Sensor |
+| ReSpeaker Core v2 |  Grove - Digital Light Sensor |
 |--------------|-------------|
 |![enter image description here](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/ReSpeaker_V2_back_little.jpg)|![enter image description here](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Digital_Light_Sensor.jpg)|
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|
@@ -1396,7 +1399,7 @@ Q3: How to adjust the volume?
 - **Step 1.** Tap the following code to open Alsamixer:
 
 ```
-Alsamixer
+alsamixer
 ```
 
 - **Step 2.** Press **F6** on your keyboard to choose **Seeed-8mic-voicec** card.
