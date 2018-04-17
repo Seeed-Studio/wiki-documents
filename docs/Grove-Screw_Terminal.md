@@ -13,29 +13,33 @@ sku:  103020007
 Grove - Screw Terminal with four 3.5mm pitch pins rate up to 125V @ 6A. Terminal can accept 30 to 20AWG wire. It is the most common pitch screw terminal. This grove has four ports, including GND, VCC
 and two other undefined ports. Screw terminals are commonly used to connect a chassis ground, such as on a record player or a surge protector. Most public address systems in buildings also use them for speakers, and sometimes for other outputs and inputs.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Screw-Terminal-p-996.html)
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Screw-Terminal-p-996.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>
+
+## Version
+
+| Product Version              | Changes                                   | Released Date |
+|------------------------------|-------------------------------------------|---------------|
+|Grove-Screw Terminal V1.0 | Initial | Oct 2011 |                  
 
 ##   Features
----
-*   3.5mm standard pitch pin
 
+*   3.5mm standard pitch pin
 *   High current/voltage adaptable
 
-##  Usage
----
-Have you ever owned a stereo with huge speakers that had to connect by yourself? What about surround sound speakers for your television set? Do you remember to connect the speakers to your stereo or television? If you had an old stereo, there is a good chance that your speakers could be connected with a screw terminal. The wire from each speaker would connect to the stereo unit, and to secure the connection you would tighten the screw on the back of your stereo. Once the wires are tightened, your speakers are connected and you could start listening to music.
+## Platforms Supported
 
-Hardware Installation Step as show below：
+| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
+|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo.jpg) |
 
-Connect the Screw Terminal to Digital I/O 10 of the [Grove - Base Shield](/Stem-Base_Shield) and then plug the Base Shield into Arduino/Seeeduino.
+!!!Caution
+    The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
-Connect device into the Screw Terminal.
+## Resources
 
-##   Resources
----
-*   [Grove - Screw Terminal.zip](https://github.com/SeeedDocument/Grove-Screw_Terminal/raw/master/res/Grove-Screw_Terminal.zip)
+- **[Eagle&PDF]**[Grove-Screw Terminal.zip](https://github.com/SeeedDocument/Grove-Screw_Terminal/raw/master/res/Grove-Screw_Terminal_v1.0.zip)
 
-*   [Screw-Terminal-3.5mm](https://github.com/SeeedDocument/Grove-Screw_Terminal/raw/master/res/Screw-Terminal-3.5mm.pdf)
+- **[PDF]**  [Screw-Terminal-3.5mm Dimension](https://github.com/SeeedDocument/Grove-Screw_Terminal/raw/master/res/Screw-Terminal-3.5mm.pdf)
 
 ## Tech Support
 Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
