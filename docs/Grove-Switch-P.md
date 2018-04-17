@@ -10,21 +10,22 @@ sku: 101020004
 tags: grove_digital, io_3v3, io_5v, plat_duino, plat_linkit, plat_pi, plat_bbg
 ---
 
-<table>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/SeeedDocument/Grove-Switch-P/master/img/SwitchP.jpg"></td>
-        <td><img src="https://raw.githubusercontent.com/SeeedDocument/Grove-Switch-P/master/img/GroveSwitchP_01.jpg"></td>
-    </tr>
-</table>
+![](https://github.com/SeeedDocument/Grove-Switch-P/raw/master/img/switch_p.jpg)
 
-This Grove – Switch is a mini SPDT slide, great for “ON/OFF” situations. It is such a reliable switch of great build quality that we adopt it on many of our boards. You should stock some for your Grove prototyping system.
+This Grove – Switch is a mini SPDT slide, great for “ON/OFF” situations. It is a reliable switch of great build quality that we adopt it on many of our boards. You should stock some for your Grove prototyping system.
 
-What does “P” mean? “P” is for “panel mount” in this product.
+What does “P” mean? “P” stands for “panel mount” in this product.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Switch(P)-p-1252.html)
+<p style="text-align:center"><a href="http://www.seeedstudio.com/Grove-Switch(P)-p-1252.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>
 
-Features
--------
+## Version
+
+| Product Version              | Changes                                   | Released Date |
+|------------------------------|-------------------------------------------|---------------|
+|Grove-Switch(P) V1.0          | Initial                                   | Jul 2012      |     
+
+
+## Features
 
 -   Grove Interface
 -   Easy to use
@@ -33,68 +34,167 @@ Features
 !!!Tip
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
-Platforms Supported
--------------------
+## Platforms Supported
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo.jpg) |
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo.jpg) |
 
 !!!Caution
     The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
 
-Usage
------
+## Getting Started
 
-Below is a simple example showing how to use a switch to turn on/off an LED.The working principle and use just the same as the [Grove-Button](/Grove-Button).
+!!!Note
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
-1. Connect the Grove-LED to the Digital 13 of Grove - Basic Shield and connect the Grove -Switch(P) to the Digital 2 of [Grove-Base Shield](/Base_Shield_V2) with two Grove cables.
-2. Plug the Grove - Base Shield into Arduino and connect Arduino to PC by using a USB cable.
-3. Copy and paste code below to a new Arduino sketch.
+
+### Play With Arduino
+
+**Hardware**
+
+- **Step 1.** Prepare the below stuffs:
+
+| Seeeduino V4.2 | Base Shield|  Grove-Switch(P) |Grove - Purple LED (3mm)|
+|--------------|-------------|-----------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Switch-P/raw/master/img/SwitchP_s.jpg)|![](https://github.com/SeeedDocument/Grove-Switch-P/raw/master/img/grove_led_s.jpg)|
+|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/Grove-Switch(P)-p-1252.html)|[Get One Now](https://www.seeedstudio.com/Grove-Purple-LED-%283mm%29-p-1143.html)|
+
+- **Step 2.** Connect Grove-Switch(P) to **D2** port of Grove-Base Shield.
+- **Step 3.** Connect Grove-LED to **D6** port of Grove-Base Shield.
+- **Step 4.** Plug Grove - Base Shield into Seeeduino.
+- **Step 5.** Connect Seeeduino to PC via a USB cable.
+
+![](https://github.com/SeeedDocument/Grove-Switch-P/raw/master/img/seeeduino_switch_led.jpg)
+
+!!!Note
+	If we don't have Grove Base Shield, We also can directly connect Grove-Switch(P) and Grove - Purple LED (3mm) to Seeeduino as below.
+
+| Seeeduino | Grove-Switch(P) | Seeeduino | Grove - Purple LED (3mm) |
+|-----------|-----------------|-----------|--------------------------|
+| 5V        | Red             | 5V        | Red                      |
+| GND       | Black           | GND       | Black                    |
+| NC        | White           | NC        | White                    |
+| D2        | Yellow          | D6        | Yellow                   |
+
+**Software**
+
+- **Step 1.** Please copy below code to Arduio IDE and upload to arduino. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+
 
 ```
-// constants won't change. They're used here to
-// set pin numbers:
 const int switchPin = 2;     // the number of the pushbutton pin
-const int ledPin =  13;      // the number of the LED pin
+const int ledPin =  6;      // the number of the LED pin
 
-// variables will change:
 int switchState = 0;         // variable for reading the pushbutton status
 
 void setup() {
     // initialize the LED pin as an output:
-    //pinMode(ledPin, OUTPUT);
+    pinMode(ledPin, OUTPUT);
     // initialize the switch pin as an input:
-    Serial.begin(9600);
     pinMode(switchPin, INPUT);
+    Serial.begin(9600);
 }
+
 void loop(){
     // read the state of the switch value:
     switchState = digitalRead(switchPin);
 
     if (switchState == HIGH) {
-        // turn LED on:
-        // digitalWrite(ledPin, HIGH);
+        //turn LED on:
+        digitalWrite(ledPin, HIGH);
         Serial.println("switch high!");
     }
     else {
-        // turn LED off:
-        // digitalWrite(ledPin, LOW);
+        //turn LED off:
+        digitalWrite(ledPin, LOW);
         Serial.println("switch low");
     }
 }
 
 ```
 
-After uploading the code, you can see the led will light up when the switch is at **high** side.
+- **Step 2.** When we switch to high and the LED will be on. We also can see the Serial output as  below. 
 
-Resources
---------
+```
+switch high!
+switch high!
+switch high!
+```
 
-- [Grove - Switch(P) Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-Switch-P/master/res/Grove-Switch-P-Eagle_File.zip)
-- [Schematic at Easyeda](https://easyeda.com/Seeed/Grove_SwitchP-434f7707edf74f3c8eb0c4748fdccc5f)
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Switch(P) -->
+### Play With Raspberry Pi
+
+**Hardware**
+
+- **Step 1.** Prepare the below stuffs:
+
+| Raspberry pi | GrovePi_Plus | Grove-Switch(P) |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Switch-P/raw/master/img/SwitchP_s.jpg)|
+|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](http://www.seeedstudio.com/Grove-Switch(P)-p-1252.html)|
+
+
+- **Step 2.** Plug the GrovePi_Plus into Raspberry.
+- **Step 3.** Connect Grove-Switch(P) to **D3** port of GrovePi_Plus.
+- **Step 4.** Connect the Raspberry to PC through USB cable.
+
+![](https://github.com/SeeedDocument/Grove-Switch-P/raw/master/img/rpi_switch.jpg)
+
+**Software**
+
+- **Step 1.** Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment.
+- **Step 2.** Git clone the Github repository.
+
+```
+cd ~
+git clone https://github.com/DexterInd/GrovePi.git
+
+```
+
+- **Step 3.** Excute below commands to monitor the switch status.
+
+
+```python
+cd ~/GrovePi/Software/Python
+python grove_switch.py
+```
+
+Here is the grove_switch.py code.
+
+```python
+import time
+import grovepi
+
+# Connect the Grove Switch to digital port D3
+# SIG,NC,VCC,GND
+switch = 3
+
+grovepi.pinMode(switch,"INPUT")
+
+while True:
+    try:
+        print(grovepi.digitalRead(switch))
+        time.sleep(.5)
+
+    except IOError:
+        print ("Error")
+```
+
+- **Step 4.** We will see the switch status as below.
+
+```python
+pi@raspberrypi:~/GrovePi/Software/Python $ python grove_switch.py 
+1
+1
+0
+0
+0
+```
+
+## Resources
+
+- **[Eagle&PDF]** [Grove-Switch(P) Schematic](https://github.com/SeeedDocument/Grove-Switch-P/raw/master/res/Grove-Switch-P-Eagle_File_v1.0.zip)
 
 ## Tech Support
 Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
