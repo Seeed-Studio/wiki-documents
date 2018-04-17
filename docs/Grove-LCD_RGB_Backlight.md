@@ -9,6 +9,7 @@ sku: 104030001
 ---
 
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_LCD_RGB_Backlight/master/images/intro.jpg)
+
 Done with tedious mono color backlight? This Grove enables you to set the color to whatever you like via
 the simple and concise Grove interface. It takes I2C as communication method with your microcontroller.
 So number of pins required for data exchange and backlight control shrinks from ~10 to 2, relieving IOs for
@@ -17,11 +18,19 @@ a love heart or some other foreign characters? Just take advantage of this featu
 This product is a replacement of Grove - Serial LCD. If you are looking for primitive 16x2 LCD modules, we
 have green yellow backlight version and blue backlight version on sale also.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now.png)](http://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html)
+<p style="text-align:center"><a href="http://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>
+
 
 !!!Note
-    This document work for Version 1.0, 2.0 and 4.0.
+    This document works for Grove-LCD RGB Backlight Version 1.0, 2.0 and 4.0.
 
+## Version
+
+| Product Version              | Changes                                   | Released Date |
+|------------------------------|-------------------------------------------|---------------|
+| Grove-LCD RGB Backlight V1.0 | Initial                                   | June 2012     |
+| Grove-LCD RGB Backlight V2.0 | Optimize PCB layout                       | Nov 2013     |
+| Grove-LCD RGB Backlight V4.0 | Optimize PCB layout                       | Sep 2016     |
 
 ## Features
 
@@ -35,12 +44,27 @@ have green yellow backlight version and blue backlight version on sale also.
 
 ## Specification
 
-|Intem|Value|
+|Item|Value|
 |------|----------|
 | Input Voltage|5V|
 | Operating Current | <60mA |
 |CGROM | 10880 bit |
 | CGRAM | 64x8 bit |
+| LCD I2C Address | 0X3E |
+| RGB I2C Address | 0X62 |
+
+
+!!!Note
+    There are 4 I2C addresses and we use 2 I2C addresses for LCD and RGB.
+
+## Platforms Supported
+
+| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
+|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo_n.jpg) |
+
+!!!Caution
+    The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
 ## Application Ideas
 
@@ -64,59 +88,238 @@ Here are some projects for your reference.
 
 ## Getting Started
 
-This getting started will show you how to use Grove - LCD RGB Backlight, we need a [Seeeduino](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html) as well.
+!!!Note
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+
+
+### Play With Arduino
+
+**Hardware**
+
+- **Step 1.** Prepare the below stuffs:
+
+| Seeeduino V4.2 | Base Shield|  Grove-LCD RGB Backlight |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_LCD_RGB_Backlight/raw/master/img/rgb.jpg)|
+|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html)|
+
+- **Step 2.** Connect Grove-LCD RGB Backlight to **I2C** port of Grove-Base Shield.
+- **Step 3.** Plug Grove - Base Shield into Seeeduino.
+- **Step 4.** Connect Seeeduino to PC via a USB cable.
+
+![](https://github.com/SeeedDocument/Grove_LCD_RGB_Backlight/raw/master/img/seeeduino_rgb.jpg)
 
 !!!Note
-    This demo is under Win10 and Arduino IDE1.6.9.
+	If we don't have Grove Base Shield, We also can directly connect Grove-LCD RGB Backlight to Seeeduino as below.
 
-### STEP1. Download Arduino Library
+| Seeeduino       | Grove-LCD RGB Backlight |
+|---------------|-------------------------|
+| 5V            | Red                     |
+| GND           | Black                   |
+| SDA           | White                   |
+| SCL           | Yellow                  |
 
-You need to download the library and install to your Arduino IDE.
+**Software**
 
-Please follow [how to install an arduino library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install LCD RGB Backlight library.
+- **Step 1.** Download the  [ Grove-LCD RGB Backlight Library](https://github.com/Seeed-Studio/Grove_LCD_RGB_Backlight/archive/master.zip)  from Github.
+- **Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- **Step 3.** Here are 12 examples in the library as below. 
 
-[![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_LCD_RGB_Backlight/master/images/library.png)](https://github.com/Seeed-Studio/Grove_LCD_RGB_Backlight/archive/master.zip)
+    - Autoscroll
+    - Blink
+    - Cursor
+    - CustomCharacter
+    - Display
+    - fade
+    - HelloWorld
+    - Scroll
+    - SerialDisplay
+    - setColor
+    - setCursor
+    - TextDirection
 
-### STEP2. Hardware Installation
+- **Step 4.** Please follow below picture to select example **HelloWorld** and upload the arduino. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
-Hardware installation is very easy, because there's an I2C Grove in Seeeduino, so what we need to do is
-to connect it to I2C Grove via a Grove cable.
+![](https://github.com/SeeedDocument/Grove_LCD_RGB_Backlight/raw/master/img/example.jpg)
 
-!!!Note
-    Please select 5v via the toggle switch on Seeeduino V4.2, otherwise the Grove - LCD RGB Backlight may not function properly.
+Here is the code of HelloWorld.ino.
 
-![// image 1](https://raw.githubusercontent.com/SeeedDocument/Grove_LCD_RGB_Backlight/master/images/1.png)
+```c++
+#include <Wire.h>
+#include "rgb_lcd.h"
 
-### STEP3. Download Code and Upload
+rgb_lcd lcd;
 
-You can download the demo code in Github, click [here](https://github.com/Seeed-Studio/Grove_LCD_RGB_Backlight), then extract it to anywhere.
+const int colorR = 255;
+const int colorG = 0;
+const int colorB = 0;
 
-If you have some problem with this step, please refer to [Getting Start with Seeeduino](http://wiki.seeedstudio.com/) there is a Hello World example in the library, open it, and upload to Seeeduino V4.2. Then you can see "Hello world" on the first row, and second row will print the number of second since reset.
+void setup() 
+{
+    // set up the LCD's number of columns and rows:
+    lcd.begin(16, 2);
+    
+    lcd.setRGB(colorR, colorG, colorB);
+    
+    // Print a message to the LCD.
+    lcd.print("hello, world!");
 
-![// image 1](https://raw.githubusercontent.com/SeeedDocument/Grove_LCD_RGB_Backlight/master/images/2.png)
+    delay(1000);
+}
 
-### STEP4. Change Color of Backlight
+void loop() 
+{
+    // set the cursor to column 0, line 1
+    // (note: line 1 is the second row, since counting begins with 0):
+    lcd.setCursor(0, 1);
+    // print the number of seconds since reset:
+    lcd.print(millis()/1000);
 
-One of Grove - LCD RGB Backlight's most important feature is: you can change the color backlight, and it's
-a very simple thing, just use the following function:
+    delay(100);
+}
+```
 
-    void setRGB(int r, int g, int b);
+- **Step 4.** We will see the hello world on LCD.
 
-Then let's try a Red backlight.
-Modify the code about color into:
+### Play With Raspberry Pi
 
-    const int colorR = 255;
-    const int colorG = 0;
-    const int colorB = 0;
+**Hardware**
 
-Upload the code again, woo, see the backlight turn to Red? Then why not try another color? Whatever you like.
+- **Step 1.** Prepare the below stuffs:
 
+| Raspberry pi | GrovePi_Plus | Grove-LCD RGB Backlight |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_LCD_RGB_Backlight/raw/master/img/rgb.jpg)|
+|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](http://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html)|
+
+
+- **Step 2.** Plug the GrovePi_Plus into Raspberry.
+- **Step 3.** Connect Grove-LCD RGB Backlight to **I2C** port of GrovePi_Plus.
+- **Step 4.** Connect the Raspberry to PC through USB cable.
+
+![](https://github.com/SeeedDocument/Grove_LCD_RGB_Backlight/raw/master/img/rpi_rgb.jpg)
+
+**Software**
+
+- **Step 1.** Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment.
+- **Step 2.** Git clone the Github repository.
+
+```
+cd ~
+git clone https://github.com/DexterInd/GrovePi.git
+
+```
+
+-	**Step 3.** Excute below commands to use the Grove-LCD RGB Backlight to display.
+
+
+```python
+cd ~/GrovePi/Software/Python/grove_rgb_lcd
+python grove_rgb_lcd.py
+```
+
+Here is the grove_rgb_lcd.py code.
+
+```python
+import time,sys
+
+if sys.platform == 'uwp':
+    import winrt_smbus as smbus
+    bus = smbus.SMBus(1)
+else:
+    import smbus
+    import RPi.GPIO as GPIO
+    rev = GPIO.RPI_REVISION
+    if rev == 2 or rev == 3:
+        bus = smbus.SMBus(1)
+    else:
+        bus = smbus.SMBus(0)
+
+# this device has two I2C addresses
+DISPLAY_RGB_ADDR = 0x62
+DISPLAY_TEXT_ADDR = 0x3e
+
+# set backlight to (R,G,B) (values from 0..255 for each)
+def setRGB(r,g,b):
+    bus.write_byte_data(DISPLAY_RGB_ADDR,0,0)
+    bus.write_byte_data(DISPLAY_RGB_ADDR,1,0)
+    bus.write_byte_data(DISPLAY_RGB_ADDR,0x08,0xaa)
+    bus.write_byte_data(DISPLAY_RGB_ADDR,4,r)
+    bus.write_byte_data(DISPLAY_RGB_ADDR,3,g)
+    bus.write_byte_data(DISPLAY_RGB_ADDR,2,b)
+
+# send command to display (no need for external use)    
+def textCommand(cmd):
+    bus.write_byte_data(DISPLAY_TEXT_ADDR,0x80,cmd)
+
+# set display text \n for second line(or auto wrap)     
+def setText(text):
+    textCommand(0x01) # clear display
+    time.sleep(.05)
+    textCommand(0x08 | 0x04) # display on, no cursor
+    textCommand(0x28) # 2 lines
+    time.sleep(.05)
+    count = 0
+    row = 0
+    for c in text:
+        if c == '\n' or count == 16:
+            count = 0
+            row += 1
+            if row == 2:
+                break
+            textCommand(0xc0)
+            if c == '\n':
+                continue
+        count += 1
+        bus.write_byte_data(DISPLAY_TEXT_ADDR,0x40,ord(c))
+
+#Update the display without erasing the display
+def setText_norefresh(text):
+    textCommand(0x02) # return home
+    time.sleep(.05)
+    textCommand(0x08 | 0x04) # display on, no cursor
+    textCommand(0x28) # 2 lines
+    time.sleep(.05)
+    count = 0
+    row = 0
+    while len(text) < 32: #clears the rest of the screen
+        text += ' '
+    for c in text:
+        if c == '\n' or count == 16:
+            count = 0
+            row += 1
+            if row == 2:
+                break
+            textCommand(0xc0)
+            if c == '\n':
+                continue
+        count += 1
+        bus.write_byte_data(DISPLAY_TEXT_ADDR,0x40,ord(c))
+
+# example code
+if __name__=="__main__":
+    setText("Hello world\nThis is an LCD test")
+    setRGB(0,128,64)
+    time.sleep(2)
+    for c in range(0,255):
+        setText_norefresh("Going to sleep in {}...".format(str(c)))
+        setRGB(c,255-c,0)
+        time.sleep(0.1)
+    setRGB(0,255,0)
+    setText("Bye bye, this should wrap onto next line")
+```
+
+- **Step 4.** We will see the Grove-LCD RGB Backlight display as Going to sleep in 1...
+
+## FAQ
+
+- Q1: How to use multiple Grove-LCD RGB Backlight? 
+    - A1: Please refer to [Arduino Software I2C user guide](http://wiki.seeedstudio.com/Arduino_Software_I2C_user_guide/).
 
 ## Resources
 
-* [Software Library](https://github.com/Seeed-Studio/Grove_LCD_RGB_Backlight/archive/master.zip)
-* [Github page for the Library](https://github.com/Seeed-Studio/Grove_LCD_RGB_Backlight)
-* [Github page for this document](https://github.com/SeeedDocument/Grove_LCD_RGB_Backlight)
+- **[Library]** [Software Library](https://github.com/Seeed-Studio/Grove_LCD_RGB_Backlight/archive/master.zip)
+- **[Document]** [Github page for this document](https://github.com/SeeedDocument/Grove_LCD_RGB_Backlight)
 
 ## Tech Support
 Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
