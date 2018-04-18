@@ -16,13 +16,6 @@ Grove - I2C FM Receiver is a wideband FM receiver module, this module is based o
 
 [![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-I2C-FM-Receiver-p-1953.html)
 
-Version
----------------
-
-| Revision                      | Description             | Release date  |
-|-------------------------------|-------------------------|---------------|
-| Grove - I2C FM Receiver v1.0  | Initial public release  |               |
-| Grove - I2C FM Receiver v1.1  | Fixed bug - DFM for J3  | Dec 2, 2011   |
 
 
 Features
@@ -691,9 +684,6 @@ long epReadLong(int where) {
 
 Resources
 ---------
--   [Grove - I2C FM Receiver v1.1 Schematic and PCB in Eagle Format](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_FM_Receiver/master/res/Grove_I2C_FM_Receiver_v1.1_Eagle.zip)
--   [Grove - I2C FM Receiver v1.1 PCB in PDF format](https://github.com/SeeedDocument/Grove-I2C_FM_Receiver/raw/master/res/Grove%20I2C%20FM%20Receiver%20v1.1%20PCB.pdf)
--   [Grove - I2C FM Receiver v1.1 Schematic in PDF format](https://github.com/SeeedDocument/Grove-I2C_FM_Receiver/raw/master/res/Grove%20I2C%20FM%20Receiver%20v1.1%20Sch.pdf)
 -   [Grove - I2C FM Receiver v1.0 Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_FM_Receiver/master/res/Grove_I2C_FM_Receiver_v1.0.zip)
 -   [Datasheet of RDA5807M](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_FM_Receiver/master/res/RDA5807M_datasheet_v1.1.pdf)
 
@@ -702,4 +692,4 @@ Resources
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_I2C_FM_Receiver -->
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/).
