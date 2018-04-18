@@ -184,6 +184,11 @@ sensor_value = 98
 sensor_value = 131
 ```
 
+## FAQ
+
+- Q1: What is the difference between Grove-Loudness sensor and Grove - Sound Sensor?
+    - A1: The Grove-Loudness sensor have screw potentiometer to adjust the output gain. 
+
 ## Resources
 
 - **[Eagle&PDF]** [Grove - Loudness Sensor Schematic](https://github.com/SeeedDocument/Grove-Loudness_Sensor/raw/master/res/Grove%20-%20Loudness%20Sensor%20Eagle%20File_v0.9b.zip)
