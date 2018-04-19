@@ -9,15 +9,16 @@ surveyurl: https://www.research.net/r/Grove-TemperatureAndHumidity_Sensor
 sku: 101020011
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor/master/img/Grove-TempAndHumiSensor.jpg)
+![](https://github.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor/raw/master/img/main.jpg)
 
-This temperature & humidity sensor provides a pre-calibrated digital output. A unique capacitive sensor element measures relative humidity and the temperature is measured by a negative temperature coefficient (NTC) thermistor. It has excellent reliability and long term stability. Please note that this sensor will not work for temperatures below 0 degree.
-
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-Temp%26Humi-Sensor-p-745.html)
+This Temperature&Humidity sensor provides a pre-calibrated digital output. A unique capacitive sensor element measures relative humidity and the temperature is measured by a negative temperature coefficient (NTC) thermistor. It has excellent reliability and long term stability. Please note that this sensor will not work for temperatures below 0 degree.
 
 
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Temp%26Humi-Sensor-p-745.html" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
 
-Features
+
+
+## Features
 --------
 
 -   Relative Humidity and temperature measurement
@@ -30,7 +31,7 @@ Features
 !!!Tip
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
-Applications Ideas
+## Applications Ideas
 ------------------
 
 -   Consumption product
@@ -38,12 +39,8 @@ Applications Ideas
 -   Humidity regulator
 -   Air conditioner
 
-Hardware Overview
------------------
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor/master/img/Temp_Humi_sch.jpg)
-
-Specifications
+## Specifications
 --------------
 
 ### Key Specifications
@@ -313,8 +310,22 @@ S
 </tr>
 </table>
 
-Usage
------
+
+
+Platforms Supported
+------------------
+
+| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
+|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo_n.jpg) |
+
+!!!Note
+    The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
+
+
+
+Getting Started
+
 
 When MCU sends a trigger signal, sensor will change from low power consumption mode to active mode. After the trigger signal sensor will send a response signal back to MCU, then 40 bit collected data is sent out and a new signal collecting is trigged.(Note that the 40 bit collected data which is sent from sensor to MCU is already collected before the trigger signal comes.) One trigger signal receives one time 40 bit response data from sensor. Single-bus data is used for communication between MCU and sensor.
 The communication process is shown below:
@@ -327,107 +338,202 @@ It costs 5ms for single time communication.The high-order bit of data sends out 
     +8bits integer part of temperature+8bits decimal part of temperature
     +8bits checksum.
 
-Programming
------------
+!!!Note
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
-Connect the Temperature and Humidity sensor to analog port A0.Then you can use the following programme to gain the temperature and humidity of the environment.(The code is for seeeduino only,if you use seeeduino mega you should change the code a little. See below, if you use seeeduino mega, you should change PINC to PINF, change DDRC to DDRF and change PORTC to PORTF)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor/master/img/Temperature_Sensor.jpg)
+### Play With Arduino
+
+#### Hardware
+
+- **Step 1.** Prepare the below stuffs:
+
+| Seeeduino V4.2 | Base Shield| Temperature&Humidity Sensor|
+|--------------|-------------|-----------------|
+|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor/raw/master/img/list.jpg)|
+|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Temp%26Humi-Sensor-p-745.html)|
+
+
+- **Step 2.** Connect Grove - Temperature&Humidity Sensor to port **D2** of Grove-Base Shield.
+
+- **Step 3.** Plug Grove - Base Shield into Seeeduino.
+
+- **Step 4.** Connect Seeeduino to PC via a USB cable.
+
+![](https://github.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor/raw/master/img/connect_arduino.jpg)
+
+
+!!!Note
+	If we don't have Grove Base Shield, We also can directly connect Grove - Temperature and Humidity Sensor Pro to Seeeduino as below.
+
+
+| Seeeduino       | Temperature&Humidity Sensor |
+|---------------|-------------------------|
+| 5V            | Red                     |
+| GND           | Black                   |
+| Not Conencted | White                   |
+| D2            | Yellow                  |
+
+
+#### Software
+
+- **Step 1.** Download the  [ Seeed DHT library](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor)  from Github.
+
+- **Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+
+- **Step 3.** Restart the Arduino IDE. Open “ DHTtester” example via the path: **File --> Examples --> Grove_Humidity_Temperature_Sensor-master --> DHTtester**. Through this demo, we can read the temperature and relative humidity information of the environment.
+
+![](https://github.com/SeeedDocument/Grove-Temperature_and_Humidity_Sensor_Pro/raw/master/img/path.png)
+
+
+!!!Note
+    This Grove - Temperature&Humidity Sensor and our another product [Grove-Temperature&Humidity Sensor pro](http://wiki.seeedstudio.com/Grove-Temperature_and_Humidity_Sensor_Pro/) are sharing this library. No matter which product you are using, make sure that you have made the definition line of the sensor of your board into effect and commented out the definition lines of other specs. For example, the sensor we used on Grove - Temperature&Humidity Sensor is DHT 11. So the definition part of the sensor spec should be:
 
 ```
-#define DHT11_PIN 0      // ADC0
-
-byte read_dht11_dat()
-{
-    byte i = 0;
-    byte result=0;
-    for(i=0; i< 8; i++){
-
-        while(!(PINC & _BV(DHT11_PIN)));  // wait for 50us
-        delayMicroseconds(30);
-
-        if(PINC & _BV(DHT11_PIN))
-        result |=(1<<(7-i));
-        while((PINC & _BV(DHT11_PIN)));  // wait '1' finish
-    }
-    return result;
-}
-
-void setup()
-{
-    DDRC |= _BV(DHT11_PIN);
-    PORTC |= _BV(DHT11_PIN);
-
-    Serial.begin(9600);
-    Serial.println("Ready");
-}
-
-void loop()
-{
-    byte dht11_dat[5];
-    byte dht11_in;
-    byte i;
-    // start condition
-    // 1. pull-down i/o pin from 18ms
-    PORTC &= ~_BV(DHT11_PIN);
-    delay(18);
-    PORTC |= _BV(DHT11_PIN);
-    delayMicroseconds(40);
-
-    DDRC &= ~_BV(DHT11_PIN);
-    delayMicroseconds(40);
-
-    dht11_in = PINC & _BV(DHT11_PIN);
-
-    if(dht11_in){
-        Serial.println("dht11 start condition 1 not met");
-        return;
-    }
-    delayMicroseconds(80);
-
-    dht11_in = PINC & _BV(DHT11_PIN);
-
-    if(!dht11_in){
-        Serial.println("dht11 start condition 2 not met");
-        return;
-    }
-    delayMicroseconds(80);
-    // now ready for data reception
-    for (i=0; i<5; i++)
-    dht11_dat[i] = read_dht11_dat();
-
-    DDRC |= _BV(DHT11_PIN);
-    PORTC |= _BV(DHT11_PIN);
-
-    byte dht11_check_sum = dht11_dat[0]+dht11_dat[1]+dht11_dat[2]+dht11_dat[3];
-    // check check_sum
-    if(dht11_dat[4]!= dht11_check_sum)
-    {
-        Serial.println("DHT11 checksum error");
-    }
-
-    Serial.print("Current humdity = ");
-    Serial.print(dht11_dat[0], DEC);
-    Serial.print(".");
-    Serial.print(dht11_dat[1], DEC);
-    Serial.print("%  ");
-    Serial.print("temperature = ");
-    Serial.print(dht11_dat[2], DEC);
-    Serial.print(".");
-    Serial.print(dht11_dat[3], DEC);
-    Serial.println("C  ");
-
-    delay(2000);
-}
+#define DHTTYPE DHT11   // DHT 11
+//#define DHTTYPE DHT22   // DHT 22  (AM2302)
+//#define DHTTYPE DHT21   // DHT 21 (AM2301)
 ```
 
-Resources
----------
+The default setting of the library is `DHT 22`, so you need to change it into `DHT 11` manually.
 
-- [Temperature Humidity.zip](https://raw.githubusercontent.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor/master/res/Temperature_Humidity.zip)
-- [Schematic at Easyeda](https://easyeda.com/Seeed/Grove_TemperatureHumidity_Sensor_v1_2-d24e88017bba4040907d4cee6c7edd74)
+
+- **Step 4.** Upload the demo. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+
+
+
+- **Step 5.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time. if every thing goes well, you will get the temperature.
+
+The result should be like:
+
+![](https://github.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor/raw/master/img/result_ar.png)
+
+
+
+### Play With Raspberry Pi
+
+#### Hardware
+First, You need to prepare the below stuffs:
+
+- **Step 1.** Prepare the below stuffs:
+
+| Raspberry pi | GrovePi_Plus | Temperature&Humidity Sensor|
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor/raw/master/img/list.jpg)|
+|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/Grove-Temperature%26Humidity-Sensor-Pro-p-838.html)|
+
+
+- **Step 2.** Plug the GrovePi_Plus into Raspberry.
+
+- **Step 3.** Connect Grove - Temperature&Humidity Sensor to **D4** port of GrovePi_Plus.
+
+- **Step 4.** Connect the Raspberry to PC via USB cable.
+
+![](https://github.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor/raw/master/img/connect_pi.jpg)
+
+
+#### Software
+- **Step 1.** Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment.
+
+- **Step 2.** Follow [Updating the Firmware](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/updating-firmware/) to update the newest firmware of GrovePi.
+
+
+!!!Tip
+    In this wiki we use the path **~/GrovePi/** instead of **/home/pi/Desktop/GrovePi**, you need to make sure Step 2 and Step 3 use the same path.
+
+!!!Note
+    We firmly suggest you to update the firmware, or for some sensors you may get errors.
+
+
+- **Step 3.** Git clone the Github repository.
+
+```
+cd ~
+git clone https://github.com/DexterInd/GrovePi.git
+
+```
+
+-	**Step 4.** Check the code.
+
+```python
+
+cd ~/GrovePi/Software/Python
+sudo nano grove_dht_pro.py
+
+```
+
+The code should be like:
+```python
+import grovepi
+import math
+# Connect the Grove Temperature & Humidity Sensor Pro to digital port D4
+# This example uses the blue colored sensor.
+# SIG,NC,VCC,GND
+sensor = 4  # The Sensor goes on digital port 4.
+
+# temp_humidity_sensor_type
+# Grove Base Kit comes with the blue sensor.
+blue = 0    # The Blue colored sensor.
+white = 1   # The White colored sensor.
+
+while True:
+    try:
+        # This example uses the blue colored sensor.
+        # The first parameter is the port, the second parameter is the type of sensor.
+        [temp,humidity] = grovepi.dht(sensor,blue)  
+        if math.isnan(temp) == False and math.isnan(humidity) == False:
+            print("temp = %.02f C humidity =%.02f%%"%(temp, humidity))
+
+    except IOError:
+        print ("Error")
+
+```
+
+Then tap ++ctrl+x++ to quit nano.
+
+!!!Note
+    The Grove - Temperature&Humidity Sensor and the Grove - Temperature&Humidity Sensor pro share the same python code which named
+    `grove_dht_pro.py`.  The only difference is that for the sentence `[temp,humidity] = grovepi.dht(sensor,blue)`. We use the parameter
+    `blue` for Grove - Temperature&Humidity Sensor while we use `white` for the Grove - Temperature&Humidity Sensor pro. The default value
+    is blue, so for this sensor you do not need to change the code.
+
+-	**Step 5.** Excute below commands to get the value.
+
+```
+sudo python grove_dht_pro.py
+```
+
+The result should be like:
+
+```python
+
+pi@raspberrypi:~/GrovePi/Software/Python $ sudo python grove_dht_pro.py
+temp = 26.00 C humidity =40.00%
+temp = 26.00 C humidity =40.00%
+temp = 26.00 C humidity =40.00%
+temp = 26.00 C humidity =40.00%
+temp = 26.00 C humidity =40.00%
+temp = 26.00 C humidity =40.00%
+temp = 26.00 C humidity =40.00%
+temp = 26.00 C humidity =40.00%
+temp = 26.00 C humidity =40.00%
+temp = 26.00 C humidity =40.00%
+temp = 26.00 C humidity =40.00%
+temp = 26.00 C humidity =40.00%
+
+```
+
+
+
+## Resources
+
+
+- **[Zip]** [Temperature&Humidity Sensor eagle file](https://raw.githubusercontent.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor/master/res/Temperature_Humidity.zip)
+
+- **[Zip]** [Temperature&Humidity Sensor Library](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor)
+
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Temperature&Humidity_Sensor -->
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/).

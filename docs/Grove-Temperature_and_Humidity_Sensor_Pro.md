@@ -1,5 +1,5 @@
 ---
-title: Grove - Temperature and Humidity Sensor Pro
+title: Grove - Temperature&Humidity Sensor Pro
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-Temperature%26Humidity-Sensor-Pro-p-838.html
 oldwikiname: Grove - Temperature and Humidity Sensor Pro
@@ -11,10 +11,10 @@ tags: io_3v3, io_5v, plat_duino, plat_pi
 ---
 
 
-<p style="text-align:center"><img src="https://github.com/SeeedDocument/Grove-Temperature_and_Humidity_Sensor_Pro/raw/master/img/Temp_humi_pro.jpg"   border=0 /></p>
+![](https://github.com/SeeedDocument/Grove-Temperature_and_Humidity_Sensor_Pro/raw/master/img/main.jpg)
 
 
- This is a powerful sister version of our Grove - Temperature and Humidity Sensor. It has more complete and accurate performance than the basic version. The detecting range of this sensor is 5% RH - 99% RH, and -40°C - 80°C. And its accuracy reaches up to 2% RH and 0.5°C. A professional choice for applications that have relatively strict requirements.
+ This is a powerful sister version of our Grove - Temperature&Humidity Sensor Pro. It has more complete and accurate performance than the basic version. The detecting range of this sensor is 5% RH - 99% RH, and -40°C - 80°C. And its accuracy reaches up to 2% RH and 0.5°C. A professional choice for applications that have relatively strict requirements.
 
 <p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Temperature%26Humidity-Sensor-Pro%EF%BC%88AM2302%EF%BC%89-p-838.html" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
 
@@ -69,13 +69,13 @@ Getting Started
 
 - **Step 1.** Prepare the below stuffs:
 
-| Seeeduino V4.2 | Base Shield| Temperature and Humidity Sensor Pro |
+| Seeeduino V4.2 | Base Shield| Temperature&Humidity Sensor Pro |
 |--------------|-------------|-----------------|
 |![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Temperature_and_Humidity_Sensor_Pro/raw/master/img/gs_1.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Temperature%26Humidity-Sensor-Pro-p-838.html)|
 
 
-- **Step 2.** Connect Grove - Temperature and Humidity Sensor Pro to port **D2** of Grove-Base Shield.
+- **Step 2.** Connect Grove - Temperature&Humidity Sensor Pro to port **D2** of Grove-Base Shield.
 
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
 
@@ -89,12 +89,12 @@ Getting Started
 	If we don't have Grove Base Shield, We also can directly connect Grove - Temperature and Humidity Sensor Pro to Seeeduino as below.
 
 
-| Seeeduino       | Temperature and Humidity Sensor Pro |
+| Seeeduino       | Temperature&Humidity Sensor Pro |
 |---------------|-------------------------|
 | 5V           | Red                     |
 | GND           | Black                   |
 | Not Conencted | White                   |
-| A0            | Yellow                  |
+| D2            | Yellow                  |
 
 
 
@@ -110,18 +110,18 @@ Getting Started
 
 ![](https://github.com/SeeedDocument/Grove-Temperature_and_Humidity_Sensor_Pro/raw/master/img/path.png)
 
-- **Step 4.** Upload the demo. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
 !!!Note
-    This Grove - Temperature and Humidity Sensor Pro and our another product [Grove-Temperature and Humidity Sensor](http://wiki.seeedstudio.com/Grove_Temperature_and_Humidity_Sensor/) are sharing this library. No matter which product you are using, make sure that you have made the definition line of the sensor of your board into effect and commented out the definition lines of other specs. For example, the sensor we used on Grove - Temperature and Humidity Sensor Pro is DHT 22. So the definition part of the sensor spec should be:
+    This Grove - Temperature&Humidity Sensor Pro and our another product [Grove-Temperature and Humidity Sensor](http://wiki.seeedstudio.com/Grove_Temperature_and_Humidity_Sensor/) are sharing this library. No matter which product you are using, make sure that you have made the definition line of the sensor of your board into effect and commented out the definition lines of other specs. For example, the sensor we used on Grove - Temperature and Humidity Sensor Pro is DHT 22. So the definition part of the sensor spec should be:
 
 ```
 //#define DHTTYPE DHT11   // DHT 11
 #define DHTTYPE DHT22   // DHT 22  (AM2302)
-//#define DHTTYPE DHT21   // DHT 21 (AM2301)or
+//#define DHTTYPE DHT21   // DHT 21 (AM2301)
 ```
 
 
+- **Step 4.** Upload the demo. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
 - **Step 5.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time. if every thing goes well, you will get the temperature.
 
@@ -140,14 +140,14 @@ First, You need to prepare the below stuffs:
 
 - **Step 1.** Prepare the below stuffs:
 
-| Raspberry pi | GrovePi_Plus | Temperature and Humidity Sensor Pro |
+| Raspberry pi | GrovePi_Plus | Temperature&Humidity Sensor Pro |
 |--------------|-------------|-----------------|
 |![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Temperature_and_Humidity_Sensor_Pro/raw/master/img/gs_1.jpg)|
 |[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/Grove-Temperature%26Humidity-Sensor-Pro-p-838.html)|
 
 - **Step 2.** Plug the GrovePi_Plus into Raspberry.
 
-- **Step 3.** Connect Grove - Temperature Sensor ranger to **D4** port of GrovePi_Plus.
+- **Step 3.** Connect Grove - Temperature&Humidity Sensor Pro to **D4** port of GrovePi_Plus.
 
 - **Step 4.** Connect the Raspberry to PC via USB cable.
 
@@ -188,6 +188,13 @@ sudo nano grove_dht_pro.py
 
 ```
 
+!!!Note
+    The Grove - Temperature&Humidity Sensor and the Grove - Temperature&Humidity Sensor pro share the same python code which named
+    `grove_dht_pro.py`.  The only difference is that for the sentence `[temp,humidity] = grovepi.dht(sensor,blue)`. We use the parameter
+    `blue` for Grove - Temperature&Humidity Sensor while we use `white` for the Grove - Temperature&Humidity Sensor pro. The default value
+    is blue, so for this sensor you need to change the code.
+
+
 Change the default parameter `[temp,humidity] = grovepi.dht(sensor,blue)` into `[temp,humidity] = grovepi.dht(sensor,white)`. Then the code should be like:
 
 
@@ -223,7 +230,6 @@ Then tap ++ctrl+x++ to quit nano. Tap ++y++ to save the change.
 -	**Step 5.** Excute below commands to get the value.
 
 ```
-
 sudo python grove_dht_pro.py
 ```
 
@@ -251,10 +257,10 @@ temp = 22.90 C humidity =42.30%
 
 ## Resources
 
-- **[Zip]** [Temp Humi Pro in eagle format](https://github.com/SeeedDocument/Grove-Temperature_and_Humidity_Sensor_Pro/raw/master/res/Temp_Humi_Pro_eagle_files.zip)
-- **[PDF]** [Temp Humi Pro PCB in PDF format](https://github.com/SeeedDocument/Grove-Temperature_and_Humidity_Sensor_Pro/raw/master/res/TemperatureHumidiy%20Pro%20PCB.pdf)
-- **[PDF]** [Temp Humi Pro Schematic in PDF format](https://github.com/SeeedDocument/Grove-Temperature_and_Humidity_Sensor_Pro/raw/master/res/TemperatureHumidiy%20Pro%20Schematic.pdf)
-- **[Library]** [Humidity Temperature Sensor pro library](https://github.com/SeeedDocument/Grove-Temperature_and_Humidity_Sensor_Pro/raw/master/res/Humidity_Temperature_Sensor_pro.zip)
+- **[Zip]** Temperature&Humidity Sensor Pro in eagle format](https://github.com/SeeedDocument/Grove-Temperature_and_Humidity_Sensor_Pro/raw/master/res/Temp_Humi_Pro_eagle_files.zip)
+- **[PDF]** [Temperature&Humidity Sensor Pro PCB in PDF format](https://github.com/SeeedDocument/Grove-Temperature_and_Humidity_Sensor_Pro/raw/master/res/TemperatureHumidiy%20Pro%20PCB.pdf)
+- **[PDF]** [Temperature&Humidity Sensor Pro Schematic in PDF format](https://github.com/SeeedDocument/Grove-Temperature_and_Humidity_Sensor_Pro/raw/master/res/TemperatureHumidiy%20Pro%20Schematic.pdf)
+- **[Library]** [Temperature&Humidity Sensor Pro library](https://github.com/SeeedDocument/Grove-Temperature_and_Humidity_Sensor_Pro/raw/master/res/Humidity_Temperature_Sensor_pro.zip)
 - **[Datasheet]** [AM2302-CN.pdf](https://github.com/SeeedDocument/Grove-Temperature_and_Humidity_Sensor_Pro/raw/master/res/AM2302-CN.pdf)
 - **[Datasheet]**  [AM2302-EN.pdf](https://github.com/SeeedDocument/Grove-Temperature_and_Humidity_Sensor_Pro/raw/master/res/AM2302-EN.pdf)
 
