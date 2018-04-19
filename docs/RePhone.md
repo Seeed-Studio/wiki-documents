@@ -7,7 +7,7 @@ RePhone Kit is an open source modular phone kit that changes the way we put our 
 
 With Rephone you can create your own phone in minutes by using the slim MODULES, accessible SOFTWARE, and customizable PHONE CASE. You can also hack things around you, giving inanimate objects the power of cellular communication, having conversations with your pets, plants, toys, motorcycle helmets, robots, or drones through cellular connectivity.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now.png)](http://www.seeed.cc/discover.html?t=rephone)
+[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now.png)](https://www.seeedstudio.com/RePhone-Kit-Create-p-2552.html)
 
 
 ## Features
@@ -45,22 +45,22 @@ The core of the RePhone is provided by Xadow GSM+BLE or by RePhone Core 3G Modul
 
 ###RePhone Strap Kit for Pebble
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/450px-RePhone_strap_kit_for_pebble-20.png)](http://www.seeedstudio.com/wiki/RePhone_Strap_Kit_for_Pebble)
+[![](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/450px-RePhone_strap_kit_for_pebble-20.png)](https://www.seeedstudio.com/RePhone-Strap-Kit-for-Pebble-Time-p-2633.html)
 
 
 ###RePhone Geo Kit
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/450px-RePhone_Geo_Kit_wiki_2.jpg)](http://www.seeedstudio.com/wiki/RePhone_Geo_Kit)
+[![](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/450px-RePhone_Geo_Kit_wiki_2.jpg)](https://www.seeedstudio.com/RePhone-Geo-Kit-p-2624.html)
 
 
 ###RePhone Lumi Kit
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/450px-RePhone_Lumi_Kit_wiki_2.jpg)](http://www.seeedstudio.com/wiki/RePhone_Lumi_Kit)
+[![](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/450px-RePhone_Lumi_Kit_wiki_2.jpg)](https://www.seeedstudio.com/RePhone-Lumi-Kit-p-2623.html)
 
 
 ###RePhone Extension Pack
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/450px-RePhone_Extesion_Pack_wiki_2.jpg)](http://www.seeedstudio.com/wiki/RePhone_Extension_Pack)
+[![](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/450px-RePhone_Extesion_Pack_wiki_2.jpg)](https://www.seeedstudio.com/RePhone-Extension-Pack-p-2630.html)
 
 
 ## Development Environment
@@ -71,13 +71,13 @@ We have developed rich libraries hooking into Arduino IDE, Lua and JavaScript, w
 
 Check out:
 
-[Arduino IDE for RePhone Kit](http://wiki.seeed.cc/Platform/RePhone/Arduino_IDE_for_RePhone/)
+[Arduino IDE for RePhone Kit](http://wiki.seeedstudio.com/Arduino_IDE_for_RePhone_Kit/)
 
-[Eclipse IDE for RePhone Kit](http://www.seeedstudio.com/wiki/Eclipse_IDE_for_RePhone_Kit)
+[Eclipse IDE for RePhone Kit](http://wiki.seeedstudio.com/Eclipse_IDE_for_RePhone_Kit)
 
-[Lua for RePhone Kit](http://www.seeedstudio.com/wiki/Lua_for_RePhone)
+[Lua for RePhone Kit](http://wiki.seeedstudio.com/Lua_for_RePhone)
 
-[JavaScript for RePhone Kit](http://www.seeedstudio.com/wiki/JavaScript_for_RePhone)
+[JavaScript for RePhone Kit](http://wiki.seeedstudio.com/JavaScript_for_RePhone)
 
 [Building RePhone Applications on Mac OS X](https://github.com/Seeed-Studio/CodeLite_for_RePhone/wiki/building-RePhone-applications-on-Mac-OS-X)
 
@@ -102,9 +102,9 @@ We will keep updating the RePhone SDK on our Github page:
 
 To reset your RePhone to **DEFAULTS:**
 
-1. Follow the instructions in "[Update/Flash the Firmware](http://wiki.seeed.cc/Arduino_IDE_for_RePhone_Kit/#updateflash-the-firmware)" section to flash the firmware
+1. Follow the instructions in "[Update/Flash the Firmware](http://wiki.seeedstudio.com/Arduino_IDE_for_RePhone_Kit/#updateflash-the-firmware)" section to flash the firmware
 2. Download the [RePhone_Create_Kit_VXP](https://github.com/WayenWeng/RePhone_Create_Kit_VXP/) file
-3. Enter the [RePhone Mass Storage Mode](http://www.seeedstudio.com/wiki/Xadow_GSM%2BBLE#Mass_Storage_Mode)
+3. Enter the [RePhone Mass Storage Mode](http://wiki.seeedstudio.com/Xadow_GSMPlusBLE/#mass-storage-mode)
 4. Copy everything under the file named "RePhone Create Kit VXP" into the RePhone 5MB mass storage.
 5. Restart your RePhone then its done. As reset have deleted all the files, you would have to put an mp3 file in the mass storage as well for the use of ringtone.
 
@@ -128,13 +128,13 @@ The schematic diagrams of RePhone Modules are provided in the following link:
 
 which includes:
 
-- [Xadow GSM+BLE](http://www.seeedstudio.com/wiki/Xadow_GSM%2BBLE).
-- [Xadow GSM Breakout](http://www.seeedstudio.com/wiki/Xadow_GSM_Breakout).
-- [Xadow 1.54” Touchscreen](http://www.seeedstudio.com/wiki/Xadow_1.54%27%27_Touchscreen).
-- [Xadow Audio](http://www.seeedstudio.com/wiki/Xadow_Audio).
-- [Xadow Duino](http://www.seeedstudio.com/wiki/Xadow_Duino).
-- [Xadow GPS v2](http://www.seeedstudio.com/wiki/Xadow_GPS_v2).
-- [Xadow Basic Sensors](http://www.seeedstudio.com/wiki/Xadow_Basic_Sensors).
-- [Xadow NFC v2](http://www.seeedstudio.com/wiki/Xadow_NFC_v2).
-- [Xadow LED 5x7](http://www.seeedstudio.com/wiki/Xadow_LED_5x7).
-- [Xadow Pebble Time Adapter](http://www.seeedstudio.com/wiki/Xadow_Pebble_Time_Adapter).
+- [Xadow GSM+BLE](http://wiki.seeedstudio.com/Xadow_GSMPlusBLE/).
+- [Xadow GSM Breakout](http://wiki.seeedstudio.com/Xadow_GSM_Breakout/).
+- [Xadow 1.54” Touchscreen](http://wiki.seeedstudio.com/Xadow_1.54_inch_Touchscreen/).
+- [Xadow Audio](http://wiki.seeedstudio.com/Xadow_Audio/).
+- [Xadow Duino](http://wiki.seeedstudio.com/Xadow_Duino/).
+- [Xadow GPS v2](http://wiki.seeedstudio.com/Xadow_GPS/).
+- [Xadow Basic Sensors](http://wiki.seeedstudio.com/Xadow_Basic_Sensors/).
+- [Xadow NFC v2](http://wiki.seeedstudio.com/Xadow_NFC_v2/).
+- [Xadow LED 5x7](http://wiki.seeedstudio.com/Xadow_LED_5x7/).
+- [Xadow Pebble Time Adapter](http://wiki.seeedstudio.com/Xadow_Pebble_Time_Adapter/).

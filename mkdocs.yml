@@ -248,6 +248,11 @@ pages:
           - Rephone Core 2G-Atmel32u4: RePhone_core_2G-Atmel32u4.md
           - Rephone Core 2G-AtmelSAMD21: Rephone_core_2G-AtmelSAMD21.md
           - Retro Phone Kit: Retro Phone Kit.md
+          - RePhone_APIs-Audio: RePhone_APIs-Audio.md
+          - Lua_for_RePhone: Lua_for_RePhone.md
+          - JavaScript_for_RePhone: JavaScript_for_RePhone.md
+          - Eclipse_IDE_for_RePhone_Kit: Eclipse_IDE_for_RePhone_Kit.md
+          - Arduino_IDE_for_RePhone_Kit: Arduino_IDE_for_RePhone_Kit.md
           - Xadow - 3-Axis Accelerometer: Xadow_3_Aixs_Accelerometer.md
           - Xadow - 3-Axis Digital Accelerometer(±400g): Xadow_3_Aixs_Digital_Accelerometer_plusandminus_400g.md
           - Xadow - BLE (Dual Model) v1.0: Xadow_BLE_Dual_Model_V1.0.md
