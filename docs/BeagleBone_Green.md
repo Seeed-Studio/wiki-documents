@@ -345,9 +345,9 @@ You will need some expansion board when you start a project. There're many cape 
 
 ![](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/bbg12.png)
 
- **2. When booting the board the Ethernet port orange LED is ON for a while, then is OFF for a while, to be ON again for some time etc. The board is not reachable via the network.**
+ **2. Sometimes the BBG's network port does not work and must be restarted to resume work. Occasionally this happens.**
 
-Please remove the capacitor C162.
+Please replace a stable power supply and try again. Usually mobile phone USB power adapter is more stable than that computer USB. Or you can remove the capacitor C162.
 
  ![](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/images/Capatictor.png)
 
