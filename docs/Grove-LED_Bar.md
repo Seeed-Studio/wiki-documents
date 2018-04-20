@@ -8,20 +8,11 @@ surveyurl: https://www.research.net/r/Grove-LED_Bar
 sku: 104030002
 ---
 
-<table>
-    <tr>
-        <td>
-            <img src="https://raw.githubusercontent.com/SeeedDocument/Grove-LED_Bar/master/img/Grove-LED_Bar-1.jpg">
-        </td>
-        <td>
-            <img src="https://raw.githubusercontent.com/SeeedDocument/Grove-LED_Bar/master/img/Grove-LED_Bar-2.jpg">
-        </td>
-    </tr>
-</table>
+![](https://raw.githubusercontent.com/SeeedDocument/Grove-LED_Bar/master/img/Grove-LED_Bar-1.jpg)
 
 Grove – LED Bar is comprised of a 10 segment LED gauge bar and an MY9221 LED controlling chip. It can be used as an indicator for remaining battery life, voltage, water level, music volume or other values that require a gradient display. There are 10 LED bars in the LED bar graph: one red, one yellow, one light green, and seven green bars. Demo code is available to get you up and running quickly. It lights up the LEDs sequentially from red to green, so the entire bar graph is lit up in the end. Want to go further? Go ahead and code your own effect.
 
-<p style="text-align:center"><a href="http://www.seeedstudio.com/Grove-LED-Bar-p-1178.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>
+<p style="text-align:center"><a href="https://www.seeedstudio.com/s/Grove-LED-Bar-v2.0-p-2474.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>
 
 Version
 --------
@@ -29,7 +20,7 @@ Version
 | Product Version              | Changes                                   | Released Date |
 |------------------------------|-------------------------------------------|---------------|
 | Grove – LED Bar V1 | Initial                                   | June 2014     |
-| Grove – LED Bar V2 | Initial                                   | June 2014     |
+| Grove – LED Bar V2 | Improved the power supply                                   | Oct 2015     |
 
 Features
 --------
@@ -80,7 +71,7 @@ Getting Started
 ![](https://github.com/SeeedDocument/Grove-LED_Bar/raw/master/img/seeeduino_ledbar.jpg)
 
 !!!Note
-	If we don't have Grove Base Shield, We also can directly connect Grove-Moisture Sensor to Seeeduino as below.
+	If we don't have Grove Base Shield, We also can directly connect Grove-LED Bar to Seeeduino as below.
 
 | Seeeduino       | Grove-LED Bar |
 |---------------|-------------------------|
@@ -91,17 +82,17 @@ Getting Started
 
 **Software**
 
-- **Step 1.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 1.** Download the [Grove - LED Bar Library](https://github.com/Seeed-Studio/Grove_LED_Bar) from Github
 
-You can download the library in github, click [here](https://github.com/Seeed-Studio/Grove_LED_Bar), then extract it to libraries folder of Arduino.
+- **Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
-Then open Arduino IDE, File -> examples -> LED_Bar -> Level, you can open the demo code.
+- **Step 3.**Restart the Arduino IDE. Open “Level” example via the path : **File --> Examples --> Grove LED Bar --> Level**.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-LED_Bar/master/img/LED_BAR_IDE.png)
+![](https://github.com/SeeedDocument/Grove-LED_Bar/raw/master/img/code.png)
 
-Click Upload to Upload the code, if you have any problem about how to start Arduino, please click [here](/Getting_Started_with_Seeeduino) for some help.
+- **Step 4.** Upload the demo. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
-- **Step 2.** Your Grove - LED Bar is working now, it's shine.
+The result should be like:
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-LED_Bar/master/img/LED_Bar_shining.gif)
 
@@ -128,7 +119,17 @@ Click Upload to Upload the code, if you have any problem about how to start Ardu
 
 - **Step 1.** Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment.
 
-- **Step 2.** Git clone the Github repository.
+- **Step 2.** Follow [Updating the Firmware](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/updating-firmware/) to update the newest firmware of GrovePi.
+
+
+!!!Tip
+    In this wiki we use the path **~/GrovePi/** instead of **/home/pi/Desktop/GrovePi**, you need to make sure Step 2 and Step 3 use the same path.
+
+
+!!!Note
+    We firmly suggest you to update the firmware, or for some sensors you may get errors.
+
+- **Step 3.** Git clone the Github repository.
 
 ```
 cd ~
@@ -136,7 +137,7 @@ git clone https://github.com/DexterInd/GrovePi.git
 
 ```
 
--	**Step 3.** Navigate to the demos' directory:
+-	**Step 4.** Navigate to the demos' directory:
 
 ```
 cd yourpath/GrovePi/Software/Python/
@@ -404,22 +405,6 @@ i = 0
 sudo python grove_ledbar.py
 ```
 
-- **Step 6.** This demo may not work if your grovepi dosen't have the newest firmware, update the firmware.
-```
-cd yourpath/GrovePi/Firmware
-sudo ./firmware_update.sh
-```
-
-## Project
-
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Lotus/master/img/gun.jpg)
-
-Inspired by OVERWATCH, we have made a very cool Wooden Laser Gun toy for fun these day!
-
-The Wooden Laser Gun and the Gun Target are all based on an Arduino board called Seeeduino Lotus. The laser emitter on the Laser Gun is controlled to fire laser pulse to "activate" the Gun Target. And there are 3 light sensors on the Gun Target to detect the laser pulse. It seems very simple right? If you are interested in our project, please make one for yourself or your child! It's worth to spend one day DIY it as a Xmas present.    
-
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/make.png)](http://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)
-
 Resources
 ---------
 
@@ -427,6 +412,7 @@ Resources
 -   [**Library**][Grove - LED Bar Library](https://github.com/Seeed-Studio/Grove_LED_Bar)
 -   [**Library**][Suli-compatible Library](https://github.com/Seeed-Studio/LED_Bar_Suli)
 -   [**Datasheet**][MY9221 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-LED_Bar/master/res/MY9221_DS_1.0.pdf)
+-   [**More Reading**][Wooden Laser Gun](http://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_LED_Bar -->
 
