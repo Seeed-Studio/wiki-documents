@@ -62,7 +62,7 @@ Getting Started
 | Seeeduino V4.2 | Base Shield|  Grove-LED Bar |
 |--------------|-------------|-----------------|
 |![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-LED_Bar/master/img/Grove-LED_Bar-3.jpg)|
-|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/Grove-LED-Bar-p-1178.html)|
+|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/s/Grove-LED-Bar-v2.0-p-2474.html)|
 
 - **Step 2.** Connect Grove-LED Bar to port **D8** of Grove-Base Shield.
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
@@ -86,7 +86,7 @@ Getting Started
 
 - **Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
-- **Step 3.**Restart the Arduino IDE. Open “Level” example via the path : **File --> Examples --> Grove LED Bar --> Level**.
+- **Step 3.** Restart the Arduino IDE. Open “Level” example via the path : **File --> Examples --> Grove LED Bar --> Level**.
 
 ![](https://github.com/SeeedDocument/Grove-LED_Bar/raw/master/img/code.png)
 
@@ -105,7 +105,7 @@ The result should be like:
 | Raspberry pi | GrovePi_Plus | Grove-LED Bar |
 |--------------|-------------|-----------------|
 |![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-LED_Bar/master/img/Grove-LED_Bar-3.jpg)|
-|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](http://www.seeedstudio.com/Grove-LED-Bar-p-1178.html)|
+|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/s/Grove-LED-Bar-v2.0-p-2474.html)|
 
 - **Step 2.** Plug the GrovePi_Plus into Raspberry.
 
