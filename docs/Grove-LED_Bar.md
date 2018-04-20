@@ -77,6 +77,8 @@ Getting Started
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
+![](https://github.com/SeeedDocument/Grove-LED_Bar/raw/master/img/seeeduino_ledbar.jpg)
+
 !!!Note
 	If we don't have Grove Base Shield, We also can directly connect Grove-Moisture Sensor to Seeeduino as below.
 
@@ -116,9 +118,11 @@ Click Upload to Upload the code, if you have any problem about how to start Ardu
 
 - **Step 2.** Plug the GrovePi_Plus into Raspberry.
 
-- **Step 3.** Connect Grove-LED Bar to **D3** port of GrovePi_Plus.
+- **Step 3.** Connect Grove-LED Bar to **D5** port of GrovePi_Plus.
 
 - **Step 4.** Connect the Raspberry to PC through USB cable.
+
+![](https://github.com/SeeedDocument/Grove-LED_Bar/raw/master/img/rpi_ledbar.jpg)
 
 **Software**
 
