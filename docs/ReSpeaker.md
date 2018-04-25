@@ -10,18 +10,32 @@ ReSpeaker is an open modular voice interface to hack things around you. Let you 
 
 ## Hardware
 
-The hardware components include I2S 2 microphone array, I2S 4 microphone array, USB 6+1 microphone array, ReSpeaker Core 7688.
+The hardware components include I2S microphone array for Raspberry Pi, USB microphone array for Linux/Windows/macOS, standalone ReSpeaker Core v1.0 & v2.0.
 
-|  | USB 6+1 Mic Array | 4 Mic Array for Pi | 2 Mic Array for Pi | MT7688 Core | USB 4 Mic Array |
-|:------------:|:-------------------------------------:|:------------------:|:------------------:|:----------------------------------------------------------------:|:---------------:|
-| Microphones | 7 | 4 | 2 | 1 | 4 |
-| Shape | circular | square | rectangle | circular | circular |
-| Interface | USB | I2S | I2S | WiFi | USB |
-| RGB LEDs | 12 | 12 | 3 | 12 | 12 |
-| Audio Output | Mono | NA | Stereo | Stereo | Mono |
-| Note | built-In audio processing algorithms  |  |  | on-baord ATmega32U4  for Arduino compatible usage,  touch sensor | coming soon |
+### Microphone Array
 
-## Sofware
+|              |  USB 6+1 Mic Array  | 4 Mic Array for Pi | 2 Mic Array for Pi | USB 4 Mic Array |
+|:------------:|:-------------------:|:------------------:|:------------------:|:---------------:|
+|  Microphones |          7          |          4         |          2         |        4        |
+|     Shape    |       circular      |       square       |      rectangle     |     circular    |
+|   Interface  |         USB         |         I2S        |         I2S        |       USB       |
+|   RGB LEDs   |          12         |         12         |          3         |        12       |
+| Audio Output |         Mono        |         NA         |       Stereo       |       Mono      |
+|     Note     | built-In algorithms |                    |                    |   coming soon   |
+
+
+### Standalone ReSpeaker Core
+
+|             | ReSpeaker Core v1 (MT7688)  | ReSpeaker Core v2 (RK3229)                    |
+|-------------|-----------------------------|-----------------------------------------------|
+| CPU         | MT7688 (MIPS24KEc, 580 MHz) | RK3229 (4 ARM Cortex A7 cores, 1.5GHz)        |
+| RAM         | 256 MB                      | 1 GB                                          |
+| Microphones | 1                           | 6                                             |
+| Shape       | circular                    | hexagon                                       |
+| Interfaces  | WiFi, USB device            | WiFi, Bluetooth, Ethernet, HDMI, USB otg/host |
+| loopback    | NA                          | 2 channels                                    |
+
+## Software
 
 Audio processing algorithms including VAD, DOA, Beamforming, NS, AEC and KWS are available and are evolving rapidly.
 
