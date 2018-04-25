@@ -9,15 +9,15 @@ sku: 101020020
 tags: io_3v3, io_5v, plat_duino, plat_pi
 ---
 
----
-![](https://github.com/SeeedDocument/Grove_PIR_Motion_Sensor/raw/master/images/Grove_-_PIR_Motion_Sensor.jpg)
+
+![](https://github.com/SeeedDocument/Grove_PIR_Motion_Sensor/raw/master/img/Grove_-_PIR_Motion_Sensor.jpg)
 
 This sensor allows you to sense motion, usually human movement in its range. Simply connect it to Grove - Base shield and program it, when anyone moves in its detecting range, the sensor will output HIGH on its SIG pin.
 
 <p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-PIR-Motion-Sensor-p-802.html" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
 
 ## Features
----
+
 - Grove compatible interface
 - Adjustable detecting distance
 - Adjustable holding time
@@ -26,7 +26,7 @@ This sensor allows you to sense motion, usually human movement in its range. Sim
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
 ## Specification
-----
+
 |Parameter	|Value/Range
 |---|---|
 |Operating Voltage|	3V–5V
@@ -39,7 +39,7 @@ This sensor allows you to sense motion, usually human movement in its range. Sim
 |Detecting Angle|	120 degrees
 
 ## Platforms Supported
------
+
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -234,9 +234,9 @@ Motion Detected
 
 
 ## Resources
----
 
-- **[Eagle]** [Grove - PIR Motion Sensor Eagle File v1.2](https://github.com/SeeedDocument/Grove_PIR_Motion_Sensor/raw/master/res/Grove_-_PIR_Motion_Sensor_Eagle_File.zip)
+
+- **[Eagle]** [Grove - PIR Motion Sensor Eagle File v1.2](https://github.com/SeeedDocument/Grove_PIR_Motion_Sensor/raw/master/res/Grove%20PIR%20Motion%20Sensor_v1_2.zip)
 - **[PDF]** [Grove - PIR Motion Sensor v1.2 Schematics](https://github.com/SeeedDocument/Grove_PIR_Motion_Sensor/raw/master/resources/Grove_PIR_Sensor_v1.2.pdf)
 - **[PDF]** [Grove - PIR Motion Sensor Eagle V1.2 PCB](https://github.com/SeeedDocument/Grove_PIR_Motion_Sensor/raw/master/res/Grove%20-%20PIR%20motion%20sensor%20v1.1b%20PCB.pdf)
 - **[Library]** [Github repository for PIR Motion Sensor](https://github.com/Seeed-Studio/PIR_Motion_Sensor)
