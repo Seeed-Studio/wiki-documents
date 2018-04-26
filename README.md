@@ -212,7 +212,7 @@ git commit -m "update banner"
 git push origin master
 ```
 
-- Step 8. run below command to upload the amazon S3. 
+- Step 8. run below command to build the site. 
 
 ```
 mkdocs build --clean
