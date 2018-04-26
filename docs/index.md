@@ -1,4 +1,4 @@
-<p><a href="https://www.seeedstudio.com/grove.html" onclick="javascript:pageTracker._trackPageview('/goal/grove.html');"><img alt="" src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/grovewiki.png" /></a></p>
+<p style="text-align:center"><a href="https://www.seeedstudio.com/grove.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/top_banner.png" /></a></p>
 
 ## Platform
 
