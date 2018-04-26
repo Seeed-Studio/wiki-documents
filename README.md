@@ -185,5 +185,41 @@ mkdocs build --clean
 - Step 6. Click **Upload** button.
 - Step 7. Visit [Wiki English](http://wiki.seeedstudio.com/) to verify the modifications. Or Visit [Wiki Chinese](http://wiki.seeedstudio.com/cn/) to verify the modifications.
 
+
+## How to update the banner
+
+- Step 1. Install [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) 
+- Step 2. git clone https://github.com/SeeedDocument/wiki_english.git
+- Step 3. cd wiki_english/docs/images/
+- Step 4. modify the top_banner.png or right_banner.png
+- Step 5. modify the top_banner hyperlink by editing the wiki_english/docs/index.md @ line #1 XXXXXX.
+
+```
+<a href="https://XXXXXX" target="_blank">
+```
+
+- Step 6. modify the right_banner hyperlink by editing the wiki_english\material\partials\toc.html @ line #32 XXXXXX.
+
+```
+<td align="left"><a href="XXXXXX" target="_blank">
+```
+
+- Step 7. run below command to push the changes to github
+
+```
+git add .
+git commit -m "update banner"
+git push origin master
+```
+
+- Step 8. run below command to upload the amazon S3. 
+
+```
+mkdocs build --clean
+```
+
+- Step 9. Follow **How to upload the html files to Amazon S3** to upload to S3.
+
+
 ## Tech Support
 Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue.
