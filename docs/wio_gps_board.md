@@ -161,7 +161,7 @@ First you need to install the latest Arduino IDE, and [ADD Seeeduino SAMD to you
 
 ### Install the Driver (For Windows)
 
-When the first time to insert the board, you should get a USB COM device name Wio Tracker that need to install a driver. Click [here](https://codeload.github.com/Seeed-Studio/Signed_USB_Serial_Driver/zip/master) to download driver for the board.
+When the first time to insert the board, you should get a USB COM device name Wio Tracker that need to install a driver. Click [here](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/driver.zip) to download driver for the board.
 
 
 
@@ -257,7 +257,7 @@ void loop() {
 
 To use 6 Grove connectors on Wio Tracker, we have to use `digitalWrite(12, HIGH)` to open 3V3\_B to power the Grove modules(D12 defaults to LOW in order to reduce consumption).
 
-The following code shows how to use Analog and Digital Grove modules:
+* The following code shows how to use Analog and Digital Grove modules:
 
 Open your Arduino IDE and click on **File > Examples > MC20\_GPS\_Traker > Button\_LightSensor** to open the sketch or copy the blow code:
 
@@ -288,6 +288,29 @@ void loop() {
 }   
 ```
 
+* The following code shows how to use Grove UART port:
+
+```c
+#define GrovePowerPin   12
+
+void setup() {
+  pinMode(GrovePowerPin, OUTPUT);
+  digitalWrite(GrovePowerPin, HIGH);    //power Grove
+  //SerialUSB.begin(115200);
+  SerialDBG.begin(115200);    //set Grove UART baud rate 115200
+}
+
+void loop() {  
+  //SerialUSB.println("Grove UART is sending message");
+  SerialDBG.println("This is Grove UART");
+  delay(1000);
+}
+```
+
+Please use [USB To Uart](https://www.seeedstudio.com/USB-To-Uart-5V%263V3-p-1832.html) to read the Grove UART port data.
+
+!!!Warning
+    If both SerialUSB and SerialDBG are used in the code, please open SerialUSB's com port when using, otherwise SerialDBG will not work.
 
 ### GNSS
 
@@ -458,6 +481,3 @@ void loop() {
 * [MC20 GNSS AGPS ApplicationGuide](https://github.com/SeeedDocument/GPS_Tracker/blob/master/resources/Quectel_MC20_GNSS_AGPS_ApplicationGuide_V1.1.pdf)
 * [MC20 GNSS AT Commands Manual](https://github.com/SeeedDocument/GPS_Tracker/blob/master/resources/Quectel_MC20_GNSS_AT_Commands_Manual_V1.1.pdf)
 * [MC20 GNSS Protocol Specification](https://github.com/SeeedDocument/GPS_Tracker/blob/master/resources/Quectel_MC20_GNSS_Protocol_Specification_V1.0.pdf)
-
-## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/).

@@ -10,7 +10,7 @@ sku: 101020074
 tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0/master/img/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-.jpg)
+![](https://github.com/SeeedDocument/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0/raw/master/img/main.jpg)
 
 This is a multifunctional sensor that gives you temperature and relative humidity information at the same time. It utilizes a TH02 sensor that can meet measurement needs of general purposes. It provides reliable readings when environment humidity condition in between 0-80% RH, and temperature condition in between 0-70°C, covering needs in most home and daily applications that don't contain extreme conditions.
 
@@ -80,7 +80,8 @@ Specifications
 
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0/raw/master/img/connect_arduino.jpg)
+![](https://github.com/SeeedDocument/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0/raw/master/img/arduino_connect.jpg)
+
 
 
 

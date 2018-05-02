@@ -10,78 +10,119 @@ sku: 101020016
 tags: grove_digital, io_3v3, io_5v, plat_duino
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Receiver/master/img/Grove-Infrared_Receiver.jpg)
 
-The Infrared Receiver is used to receive infrared signals and also used for remote control detection. There is an IR detector on the Infrared Receiver which is used to get the infrared light emitted by the Infrared Emitter. The IR detector have a demodulator inside that looks for modulated IR at 38 KHz. The Infrared Receiver can receive signals well within 10 meters. If more than 10 meters , the receiver may not get the signals. We often use the two Groves-the Infrared Receiver and the [Grove - Infrared Emitter](/Grove-Infrared_Emitter "Grove - Infrared Emitter") to work together.
+
+![](https://github.com/SeeedDocument/Grove-Infrared_Receiver/raw/master/img/Grove-Infrared_Receiver.jpg)
+
+The Infrared Receiver is used to receive infrared signals and also used for remote control detection. There is an IR detector on the Infrared Receiver which is used to get the infrared light emitted by the Infrared Emitter. The IR detector have a demodulator inside that looks for modulated IR at 38 KHz. The Infrared Receiver can receive signals well within 10 meters. If more than 10 meters , the receiver may not get the signals. We often use the two Groves-the Infrared Receiver and the [Grove - Infrared Emitter](http://wiki.seeedstudio.com/Grove-Infrared_Emitter) to work together.
 
 [![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Infrared-Receiver-p-994.html)
 
 
-Specifications
--------------
+
+## Version
+
+Product Version | Changes |	Released Date
+--|--|--
+Grove - Infrared Emitter v1.0	| Initial |	Nov. 01 2015
+Grove - Infrared Emitter v1.1	| Change the Silkscreen  |	Jul. 24 2016
+
+
+
+##　Specifications
 
 -   Voltage: 3.3-5V
--   Distance: 10m
+-   Distance:10m
 
 !!!Tip
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
     
-Platforms Supported
--------------------
+
+
+
+## Platforms Supported
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo_n.jpg) |
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo_n.jpg) |
 
 !!!Caution
     The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
 
-Demonstration
--------------
 
-We will use Grove-Infrared Receiver and Grove - Infrared Emitter in this demonstration. The Infrared Receiver will receive the data that the Grove - Infrared Emitter sends.
 
--   Connect the Grove - Infrared Emitter to D3.
--   Connect the Grove - Infrared Receiver to D2.
+## Getting Started
 
-With Arduino/Seeeduino
-----------------------
+The Grove - Infrared Emitter can send data while Grove - Infrared Receiver will receive them.
 
-### Suggest Reading for Starter
 
-- [Download Arduino and install Arduino driver](/Download_Arduino_and_install_Arduino_driver)
+### Play With Arduino
 
-- [Getting Started with Seeeduino/Arduino](/Getting_Started_with_Seeeduino)
+!!!Note
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
-### IRSendRev Library
 
-We have created a library to help you start playing quickly with the Seeeduino/Arduino, in this section we'll show you how to set up the library.
+#### Hardware
 
-#### Setup
+- **Step 1.** Prepare the below stuffs:
 
-1.  Download the [library code as a zip file](https://github.com/Seeed-Studio/IRSendRev) from the IRSendRev github page.
-2.  Unzip the downloaded file into your …/arduino/libraries.
-3.  Rename the unzipped folder "IRSendRev"
-4.  Start the Arduino IDE (or restart if it is open).
+| Seeeduino V4.2 | Base Shield| Grove - Infrared Emitter | Grove - Infrared Receiver
+|--------------|-------------|-----------------|-----|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduinoX2.png)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/baseshiledX2.png)|![enter image description here](https://github.com/SeeedDocument/Grove-Infrared_Emitter/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Infrared_Receiver/raw/master/img/little.jpg)|
+|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Infrared-Emitter-p-993.html)|[Get One Now](https://www.seeedstudio.com/Grove-Infrared-Receiver-p-994.html)|
 
-### Infrared Receiver Examples/Applications
+- **Step 2.** Connect Grove - Infrared Emitter to port **D3** of one Grove-Base Shield.
+              
+- **Step 3.** Connect Grove - Infrared Receiver to port **D2** of the other Grove-Base Shield.
 
-These examples are going to show you how to use features of Grove - Infrared Receiver. You can use Infrared Receiver in combination with Grove - Infrared Emitter. Connect the IR receiver pins to D2 for this demo.
+- **Step 4.** Plug Grove - Base Shield into Seeeduino.
 
-#### Receiver
+- **Step 5.** Connect Seeeduino to PC via a USB cable.
 
--   Open File->Examples->IRSendRev->example->recv sketch for a complete example, or copy and paste code below to a new Arduino sketch.
 
-**Description**: 
-This example connect the IR receiver pins to D2 for this demo. You can see the remote control's infrared data that received through a serial port terminal, then write the received infrared data into send.ino and upload to the board with Infrared Emitter Grove, so you can send the same data with remote control's button.
+![](https://github.com/SeeedDocument/Grove-Infrared_Emitter/raw/master/img/connect.jpg)
 
-**Application**: 
-You can note the remote control's infrared data down through Infrared Receiver, then send the same data through Infrared Emitter in some cases, such as open the fan switch when indoor temperature is greater than 26 degrees.
 
-```
+!!!Note
+	If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
+
+
+
+| Seeeduino       | Grove - Infrared Emitter |
+|---------------|-------------------------|
+| 5V           | Red                     |
+| GND           | Black                   |
+| Not Conencted | White                   |
+| D3            | Yellow                  |
+
+
+| Seeeduino       | Grove - Infrared Receiver |
+|---------------|-------------------------|
+| 5V           | Red                     |
+| GND           | Black                   |
+| Not Conencted | White                   |
+| D2            | Yellow                  |
+
+
+
+#### Software
+
+- **Step 1.** Download the  [IRSendRev-master library](https://github.com/Seeed-Studio/IRSendRev)  from Github.
+
+- **Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+
+- **Step 3.** Restart the Arduino IDE. Open `recv` example via the path: **File->Examples->Grove - Infrared Receiver  And Emitter->recv**. 
+
+![](https://github.com/SeeedDocument/Grove-Infrared_Receiver/raw/master/img/path.png)
+
+
+Or you can open a new sketch and copy the belowing code into your Arduino IDE.
+
+```c++
+
 #include <IRSendRev.h>
- 
+
 #define BIT_LEN         0
 #define BIT_START_H     1
 #define BIT_START_L     2
@@ -89,41 +130,41 @@ You can note the remote control's infrared data down through Infrared Receiver, 
 #define BIT_DATA_L      4
 #define BIT_DATA_LEN    5
 #define BIT_DATA        6
- 
+
 const int pinRecv = 2;              // ir receiver connect to D2
- 
+
 void setup()
 {
     Serial.begin(115200);
     IR.Init(pinRecv);
     Serial.println("init over");
 }
- 
+
 unsigned char dta[20];
- 
+
 void loop()
 {
     if(IR.IsDta())                  // get IR data
     {
         IR.Recv(dta);               // receive data to dta
- 
+
         Serial.println("+------------------------------------------------------+");
-        Serial.print("LEN = ");
+		Serial.print("LEN = ");
         Serial.println(dta[BIT_LEN]);
         Serial.print("START_H: ");
         Serial.print(dta[BIT_START_H]);
         Serial.print("\tSTART_L: ");
         Serial.println(dta[BIT_START_L]);
- 
+        
         Serial.print("DATA_H: ");
         Serial.print(dta[BIT_DATA_H]);
         Serial.print("\tDATA_L: ");
         Serial.println(dta[BIT_DATA_L]);
- 
+        
         Serial.print("\r\nDATA_LEN = ");
         Serial.println(dta[BIT_DATA_LEN]);
- 
-        Serial.print("DATA: ");
+        
+		Serial.print("DATA: ");
         for(int i=0; i<dta[BIT_DATA_LEN]; i++)
         {
             Serial.print("0x");
@@ -131,8 +172,8 @@ void loop()
             Serial.print("\t");
         }
         Serial.println();
- 
-        Serial.print("DATA: ");
+		
+		Serial.print("DATA: ");
         for(int i=0; i<dta[BIT_DATA_LEN]; i++)
         {
             Serial.print(dta[i+BIT_DATA], DEC);
@@ -142,34 +183,18 @@ void loop()
         Serial.println("+------------------------------------------------------+\r\n\r\n");
     }
 }
+
 ```
 
--   Upload the code to the development board.
--   Open the serial monitor window and wait for the input.
--   Using IR remote control sending data<font color="Blue">(This example uses MIDEA Company's IR remote control of fans, and press the open/close key.)</font>.
--   You can see the information below.
+- **Step 4.** Upload the `recv` demo to the seeeduino with Grove - Infrared Receiver. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Receiver/master/img/Data：IR_remote_control_of_fans.jpg)
+- **Step 5.** Open `send` example via the path: **File->Examples->Grove - Infrared Receiver  And Emitter->send**. 
 
-#### Emitter
-
--   Open File->Examples->IRSendRev->example->send sketch for a complete example, or copy and paste code below to a new Arduino sketch.
-
-**Description**: 
-Connect the IR send pins to D3 for this demo. You can see the remote control's infrared data that received through Infrared Receiver, such as the example above. Then write the received infrared data into this example and upload to the board with Infrared Emitter Grove, so you can send the same data with remote control's button.
-
-**Application**: 
-You can note the remote control's infrared data down through Infrared Receiver, then send the same data through Infrared Emitter in some cases, such as open the fan switch when indoor temperature is greater than 26 degrees.
-
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-You must connect the IR send pins to D3 for this demo.
-</div>
-
+Or you can open a new sketch and copy the belowing code into your Arduino IDE.
 
 ```
 #include <IRSendRev.h>
- 
+
 #define BIT_LEN         0
 #define BIT_START_H     1
 #define BIT_START_L     2
@@ -177,49 +202,64 @@ You must connect the IR send pins to D3 for this demo.
 #define BIT_DATA_L      4
 #define BIT_DATA_LEN    5
 #define BIT_DATA        6
- 
+
 const int ir_freq = 38;                 // 38k
- 
+
 unsigned char dtaSend[20];
- 
+
 void dtaInit()
 {
-    dtaSend[BIT_LEN]        = 11;          // all data that needs to be sent
-    dtaSend[BIT_START_H]    = 180;         // the logic high duration of "Start"
-    dtaSend[BIT_START_L]    = 91;          // the logic low duration of "Start"
-    dtaSend[BIT_DATA_H]     = 11;          // the logic "long" duration in the communication
-    dtaSend[BIT_DATA_L]     = 33;          // the logic "short" duration in the communication
- 
-    dtaSend[BIT_DATA_LEN]   = 6;           // Number of data which will sent. If the number is other, you should increase or reduce dtaSend[BIT_DATA+x].
- 
-    dtaSend[BIT_DATA+0]     = 128;           // data that will sent
+    dtaSend[BIT_LEN]        = 11;			// all data that needs to be sent
+    dtaSend[BIT_START_H]    = 179;			// the logic high duration of "Start"
+    dtaSend[BIT_START_L]    = 90;			// the logic low duration of "Start"
+    dtaSend[BIT_DATA_H]     = 11;			// the logic "long" duration in the communication
+    dtaSend[BIT_DATA_L]     = 33;			// the logic "short" duration in the communication
+    
+    dtaSend[BIT_DATA_LEN]   = 6;			// Number of data which will sent. If the number is other, you should increase or reduce dtaSend[BIT_DATA+x].
+    
+    dtaSend[BIT_DATA+0]     = 128;			// data that will sent
     dtaSend[BIT_DATA+1]     = 127;
     dtaSend[BIT_DATA+2]     = 192;
     dtaSend[BIT_DATA+3]     = 63;
-    dtaSend[BIT_DATA+4]     = 192;
+	dtaSend[BIT_DATA+4]     = 192;
     dtaSend[BIT_DATA+5]     = 63;
 }
- 
+
 void setup()
 {
     dtaInit();
 }
- 
+
 void loop()
 {
     IR.Send(dtaSend, 38);
- 
+    
     delay(2000);
 }
+
+
 ```
 
-Resources
----------
+- **Step 6.** Upload the `send` demo to the seeeduino with Grove - Infrared Emitter. 
 
--   [Grove - Infrared Receiver eagle files](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Receiver/master/res/Grove-Infrared_Receiver_eagle_files.zip)
--   [IR Send and Receiver Library](https://github.com/Seeed-Studio/IRSendRev)
--   [IR Receive Library for LinkIt ONE](https://github.com/Seeed-Studio/IR_Recv_LinkIt_ONE)
--   [TSOP282 Datasheet](http://www.vishay.com/docs/82491/tsop382.pdf)
+
+- **Step 7.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time.
+
+
+If every thing goes well, The result should be like:
+
+
+![](https://github.com/SeeedDocument/Grove-Infrared_Emitter/raw/master/img/results.png)
+
+
+
+## Resources
+
+
+- **[Zip]**  [Grove - Infrared Receiver eagle files](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Receiver/master/res/Grove-Infrared_Receiver_eagle_files.zip)
+- **[Lib]**  [IR Send and Receiver Library](https://github.com/Seeed-Studio/IRSendRev)
+- **[Lib]**  [IR Receive Library for LinkIt ONE](https://github.com/Seeed-Studio/IR_Recv_LinkIt_ONE)
+- **[Pdf]**  [TSOP282 Datasheet](http://www.vishay.com/docs/82491/tsop382.pdf)
 
 
 
