@@ -213,7 +213,7 @@ Connect to Cloud9 IDE and start a new terminal.
 Start the bluetooth config with the command:
 
 ```
-bb-wl18x-bluetooth
+bb-wl18xx-bluetooth
 bluetoothctl
 ```
 
