@@ -341,7 +341,7 @@ And **EC21-A** is what we are using in WIO Tracker - LTE, which supports AT&T an
 
 ### Update Firmware
 
-- Step 1: Download WioLTE firmware [**v1.93**](https://raw.githubusercontent.com/SeeedDocument/Wio_LTE/master/firmware/espruino_1v93.3171_Wio_LTE.bin) or look for **espruino_xxx_Wio_LTE.bin** [**here**](http://www.espruino.com/binaries/) (**v1.94** didn't support SD card, please download **v1.93**).
+- Step 1: Download [WioLTE firmware v1.95](http://www.espruino.com/binaries/espruino_1v95_Wio_LTE.bin) or look for **espruino_xxx_Wio_LTE.bin** [**here**](http://www.espruino.com/binaries/).
 - Step 2: Install [dfu-util](http://dfu-util.sourceforge.net/releases/), add **dfu-util** to **PATH** or **Environment Variables**, so that we can use it directlly in **command line**.
 - Step 3: Press and hold **BOOT0** button before connect to computer, release after connect.
 - Step 4: The Wio LTE board will access **DFU mode**.
