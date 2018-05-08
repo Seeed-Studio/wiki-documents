@@ -284,7 +284,7 @@ class Motor():
         self.OUT_3.changeNbSlicesOn(self.duty)
         self.OUT_4.changeNbSlicesOn(0)
 
-    def Stop():
+    def Stop(self):
         self.OUT_1.changeNbSlicesOn(0)
         self.OUT_2.changeNbSlicesOn(0)
         self.OUT_3.changeNbSlicesOn(0)
@@ -310,15 +310,24 @@ if __name__=="__main__":
     motor.Setting(0.01, 60)
     print 'motor start...'
     while True:
-        print 'turning direction...'
+        print 'motor A turning forward...'
         motor.Go_1()
         time.sleep(1)
+        print 'motor A turning backward...'
         motor.Back_1()
         time.sleep(1)
+        print 'motor A stop...'
+	    motor.Stop()
+	    time.sleep(1)
+        print 'motor B turning forward...'
         motor.Go_2()
         time.sleep(1)
+        print 'motor B turning backward...'
         motor.Back_2()
         time.sleep(1)
+        print 'motor B stop...'
+	    motor.Stop()
+	    time.sleep(1)
 
 ```
 
