@@ -313,6 +313,22 @@ Q: I have already updated the firmware successfully and can detect the I2C addre
 
 A: Please mention that there's a working mode switch on the board, be sure the switch is turn to working. If you still have other questions, please come to our forum.
 
+#### fail to run make flash
+
+Q: Can't run make flash with error code "Can't init. Ensure BOOT0=1 BOOT1=0, and reset Device"
+
+A: Please follow below steps to solve the issue. 
+
+- Step 1: Run sudo nano /boot/uEnv.txt and then add below 2 lines at bottom of the uEnv.txt.
+
+```
+uboot_overlay_addr0=/lib/firmware/BB-UART2-00A0.dtbo
+enable_uboot_cape_universal=1  
+```
+
+- Step 2. Restart the BBGW
+- Step 3. Run the Sudo make flash again.
+
 Resources
 ---------
 
