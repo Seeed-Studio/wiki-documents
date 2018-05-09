@@ -507,7 +507,7 @@ MacBook-Air:Desktop XXX$ python record.py
 ```
 sudo apt-get install libfftw3-dev libconfig-dev libasound2-dev
 sudo apt-get install cmake
-git clone https://github.com/introlab/odas.git --branch=dev
+git clone https://github.com/introlab/odas.git
 mkdir odas/build
 cd odas/build
 cmake ..
