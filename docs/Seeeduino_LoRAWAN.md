@@ -33,7 +33,7 @@ If you want to build an IoT application quickly, Seeeduino LoRaWAN is your best 
 * Minimum current (3.7V lipo battery) - 2mA
 * Minimum current (3.7V lipo battery & remove PWR LED) - 80 uA
 
-###Arduino/Processor
+**Arduino/Processor**
 
 * ATSAMD21G18 @ 48MHz with 3.3V logic/power
 * Arduino compatible (based on Arduino Zero bootloader)
@@ -46,7 +46,7 @@ If you want to build an IoT application quickly, Seeeduino LoRaWAN is your best 
 * 3.3V regulator with 200mA output
 * Reset button
 
-###LoRaWAN/RHF76-052
+**LoRaWAN/RHF76-052**
 
 * 1.45uA sleep current in WOR mode (Spec of the modules, not the board)
 * High link budget of 160dB. -140dBm sensitivity and 19dBm Output power.
@@ -122,7 +122,7 @@ In brief, Groves is hundreds of sensor that in standard style, which is consist 
 !!!Tip
     If you want to use the 4 on-board Grove connector, please use digitalWrite(38, HIGH) to open VCC. Otherwise you can't provide power to Grove modules.
 
-##Pin Map
+**Pin Map**
 
 |Pin Name|GPIO Num|External Interrupt|PWM|Analog In|Analog Out|Function|
 |--------|--------|-----------|---|---------|----------|--------|
@@ -153,14 +153,14 @@ In brief, Groves is hundreds of sensor that in standard style, which is consist 
     All pins can act as Digital Input and Output
 
 
-##Getting Started - Arduino IDE
+##Getting Started
 
 !!!Note
     This chapter is based on Win10 and Arduino IDE v1.6.0
 
 First you need to install the latest Arduino IDE, and [ADD Seeeduino LoRa to your Arduino IDE](http://wiki.seeed.cc/Seeed_Arduino_Boards/).
 
-###Install the Driver (For Windows)
+**Install the Driver (For Windows)**
 
 When the first time to insert the board, you should get a USB COM device name Seeeduino LoRaWAN that need to install a driver. Click on the below button to download driver for the board.
 
@@ -170,7 +170,8 @@ To make sure the driver was installed successful, open your Device Manager to se
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_LoRa/master/img/device_manager.png)
 
-###Blink
+**1. Blink**
+
 Now we can upload our first demo - Blink to Seeeduino LoRaWAN.
 
 Open your Arduino IDE and click on **File > Examples > 01.Basics > Blink** to open the sketch or copy the blow code:
@@ -206,7 +207,7 @@ If the uploading is success, you should the some info in red and please the on-b
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_LoRa/master/img/blink3.png)
 
-##Battery
+**2. Battery**
 
 You can power the board via a 3.7V Lipo battery. There's a JST2.0 cable included, use it if you can't get a battery with JST2.0 connector.
 
@@ -242,15 +243,20 @@ void loop() {
 !!!Note
     Charge status return 0 while charging, return 1 while charge done or no battery insert.
 
-##Send and Receive Example
+**3. Send and Receive Example**
 
 There is a well written library for the LoRaWAN modules, for simple applications you even don't need to know much about the protocol about LoRa, which is complex and hard to read.
-And please note that you till need some acknowledge about LoRa protocol if you want an advanced application.
-You don't need to download the library, it's included in the package already. You can open it at **File > Examples > LoRaWAN**.
+And please note that you still need some acknowledge about LoRa protocol if you want an advanced application.
+You don't need to download the library, it's included in the package already. You can open it at **File > Examples > LoRaWAN**. Those examples include:
+
+* p2p-tx
+* p2p-rx
+* ABP
+* OTAA
 
 You need 2 piece of Seeeduino LoRaWAN to complete this example, one for sending and another for receiving.
 
-###Sending
+**3.1 P2P Sending**
 
 Open your Arduino IDE and click on **File > Examples > LoRaWAN > p2p_tx** to open the sketch or you can copy the code below.
 This sketch will broadcast a string "Hello World!" every 3000 ms.
@@ -274,7 +280,7 @@ void loop(void)
 }
 ```
 
-###Receiving
+**3.2 P2P Receiving**
 
 Open your Arduino IDe and click on **File > Examples > LoRaWAN > p2p_rx** to open the sketch or you can copy the code below.
 
@@ -321,26 +327,119 @@ After both of the sketch is well uploaded, open the serial monitor of the receiv
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_LoRa/master/img/monitor_rx.png)
 
-!!!Note
-    There will be a gateway kit for LoRa soon, and we will add getting started about APB and OTAA mode at wiki of the kit.
+**3.3 ABP**
 
-##Examples
+- Step 1. Please refer to [LoRa/LoRaWAN Gateway Kit](http://wiki.seeedstudio.com/LoRa_LoRaWan_Gateway_Kit/) to setup gateway first.  
+- Step 2. Connect the [Grove-Temperature_and_Humidity_Sensor_Pro](http://wiki.seeedstudio.com/Grove-Temperature_and_Humidity_Sensor_Pro/) to D2 port of base shield. 
+- Step 3. Connect the base shield to Seeeduino Lorawan.
+- Step 4. Download [DHT Library](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/DHT.zip) and unzip to arduino library folder.
+- Step 5. Copy below code to arduino IDE and upload.
 
-We had provide many useful examples. You can open **File > Examples > LoRaWan** get more details. Those examples include:
 
-* ABP
-* OTAA
-* p2p-rx
-* p2p-tx
+```c++
 
-##GPS Data
+#include <LoRaWan.h>
+#include "DHT.h"
+
+#define DHTPIN            2   
+#define DHTTYPE           DHT22
+DHT dht(DHTPIN, DHTTYPE);
+unsigned char data[2] = {1, 2};
+char buffer[256];
+
+void setup(void)
+{     
+    dht.begin();
+    
+    SerialUSB.begin(115200);
+    //while(!SerialUSB);
+    
+    lora.init();
+    
+    memset(buffer, 0, 256);
+    lora.getVersion(buffer, 256, 1);
+    SerialUSB.print(buffer); 
+    
+    memset(buffer, 0, 256);
+    lora.getId(buffer, 256, 1);
+    SerialUSB.print(buffer);
+    
+    lora.setKey("2B7E151628AED2A6ABF7158809CF4F3C", "2B7E151628AED2A6ABF7158809CF4F3C", "2B7E151628AED2A6ABF7158809CF4F3C");
+    
+    lora.setDeciveMode(LWABP);
+    lora.setDataRate(DR0, EU868);
+    
+    lora.setChannel(0, 867.7);
+    lora.setChannel(1, 867.9);
+    lora.setChannel(2, 868.8);
+    
+    lora.setReceiceWindowFirst(0, 867.7);
+    lora.setReceiceWindowSecond(869.5, DR3);
+    
+    lora.setDutyCycle(false);
+    lora.setJoinDutyCycle(false);
+    
+    lora.setPower(14);
+}
+
+void loop(void)
+{   
+    bool result = false;
+
+    delay(2000);
+    int h = dht.readHumidity();
+    int t = dht.readTemperature();
+    
+    //result = lora.transferPacket("Hello World!", 10);
+    result = lora.transferPacket(data, 2, 10);
+    data[0] = h;
+    data[1] = t;
+    
+    if(result)
+    {
+        short length;
+        short rssi;
+        
+        memset(buffer, 0, 256);
+        length = lora.receivePacket(buffer, 256, &rssi);
+        
+        if(length)
+        {
+            SerialUSB.print("Length is: ");
+            SerialUSB.println(length);
+            SerialUSB.print("RSSI is: ");
+            SerialUSB.println(rssi);
+            SerialUSB.print("Data is: ");
+            for(unsigned char i = 0; i < length; i ++)
+            {
+                SerialUSB.print("0x");
+                SerialUSB.print(buffer[i], HEX);
+                SerialUSB.print(" ");
+            }
+            SerialUSB.println();
+        }
+    }
+}
+
+```
+
+- Step 6. For local server, click Application->Seeed(the name of the Application you just added)->View application data, you will see the data you've just sent from the Seeeduino_LoRAWAN. For Loriot Server, go to Dashboard -> Applications -> SampleApp ->Device , click the Node Device EUI or DevAddr, you will find the data you've just sent here. 
+
+**3.4 OTAA**
+
+- Step 1. Please refer to [User Manual](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/res/%5BRHF-UM01649%5DIoT%20Discovery%20User%20Manual-seeed-v2.1.pdf) Session 3.2.3 to setup the gateway. 
+- Step 2. For seeeduino Lorawan, Please open your Arduino IDE and click on **File > Examples > LoRaWAN > OTAA** and refer the code.
+
+**4. GPS Data**
 
 !!!Note
     This chapter works with Seeeduino LoRaWAN W/GPS only.
 
-Copy below code you Seeeduino LoRaWAN W/GPS.
+**4.1 NMEA**
 
-```
+- Step 1. Copy below code you Seeeduino LoRaWAN W/GPS.
+
+```c++
 void setup()
 {
     Serial.begin(9600);
@@ -360,11 +459,136 @@ void loop()
 }
 ```
 
-Open Serial Monitor then you will get data from GPS.
+- Step 2. Open Serial Monitor then you will get data from GPS.
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_LoRa/master/img/gps.png)
 
-##Low Power
+
+**4.2 Lat and Lng**
+
+Thanks for [Todd Krein](Todd Krein) for sharing the example in Github. Please download the [TinyGPS++ library](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/TinyGPSPlus-master.zip) and then copy below code to Seeeduino Lorawan. 
+
+```c++
+#define USE_GPS 1
+
+#include "LoRaWan.h"
+
+#ifdef USE_GPS
+#include "TinyGPS++.h"
+TinyGPSPlus gps;
+#endif
+
+
+void setup(void)
+{
+
+    char c;
+#ifdef USE_GPS
+    bool locked;
+#endif
+    
+    SerialUSB.begin(115200);
+    while(!SerialUSB);
+    
+    lora.init();
+    lora.setDeviceReset();
+
+#ifdef USE_GPS
+    Serial.begin(9600);     // open the GPS
+    locked = false;
+
+    // For S&G, let's get the GPS fix now, before we start running arbitary
+    // delays for the LoRa section
+
+    while (!gps.location.isValid()) {
+      while (Serial.available() > 0) {
+        if (gps.encode(c=Serial.read())) {
+          displayInfo();
+          if (gps.location.isValid()) {
+//            locked = true;
+            break;
+          }
+        }
+//        SerialUSB.print(c);
+      }
+
+//      if (locked)
+//        break;
+        
+      if (millis() > 15000 && gps.charsProcessed() < 10)
+      {
+        SerialUSB.println(F("No GPS detected: check wiring."));
+        SerialUSB.println(gps.charsProcessed());
+        while(true);
+      } 
+      else if (millis() > 20000) {
+        SerialUSB.println(F("Not able to get a fix in alloted time."));     
+        break;
+      }
+    }
+#endif
+}
+
+    
+void loop(void)
+{
+displayInfo();
+delay(1000);
+}
+
+void displayInfo()
+{
+  SerialUSB.print(F("Location: ")); 
+  if (gps.location.isValid())
+  {
+    SerialUSB.print(gps.location.lat(), 6);
+    SerialUSB.print(F(","));
+    SerialUSB.print(gps.location.lng(), 6);
+  }
+  else
+  {
+    SerialUSB.print(F("INVALID"));
+  }
+
+  SerialUSB.print(F("  Date/Time: "));
+  if (gps.date.isValid())
+  {
+    SerialUSB.print(gps.date.month());
+    SerialUSB.print(F("/"));
+    SerialUSB.print(gps.date.day());
+    SerialUSB.print(F("/"));
+    SerialUSB.print(gps.date.year());
+  }
+  else
+  {
+    SerialUSB.print(F("INVALID"));
+  }
+
+  SerialUSB.print(F(" "));
+  if (gps.time.isValid())
+  {
+    if (gps.time.hour() < 10) SerialUSB.print(F("0"));
+    SerialUSB.print(gps.time.hour());
+    SerialUSB.print(F(":"));
+    if (gps.time.minute() < 10) SerialUSB.print(F("0"));
+    SerialUSB.print(gps.time.minute());
+    SerialUSB.print(F(":"));
+    if (gps.time.second() < 10) SerialUSB.print(F("0"));
+    SerialUSB.print(gps.time.second());
+    SerialUSB.print(F("."));
+    if (gps.time.centisecond() < 10) SerialUSB.print(F("0"));
+    SerialUSB.print(gps.time.centisecond());
+  }
+  else
+  {
+    SerialUSB.print(F("INVALID"));
+  }
+
+  SerialUSB.println();
+}
+```
+
+**5. Low Power**
 
 The minimum current is 80uA(for Seeeduino LoRaWAN) under our testing.
 Please follow below steps.
@@ -420,13 +644,11 @@ void dummy(void)
 // END File
 ```
 
-##Update firmware
-
-The firmware version of is 2.0.10, if you want to update firmware, few steps need to follow.
+**6. Update firmware**
 
 If you want to check version of you board, please upload below code to your board.
 
-```
+```c++
 void setup()
 {
     Serial1.begin(9600);
@@ -445,7 +667,9 @@ void loop()
     }
 }
 ```
+
 Open your Serial Monitor and INPUT
+
 ```
 AT+VER
 ```
@@ -453,9 +677,9 @@ Then you will get the version of your board.
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_LoRa/master/img/VER.png)
 
-**Step1**
+The firmware version of is 2.0.10, if you want to update firmware, few steps need to follow.
 
-Copy and upload below code to your board.
+- Step 1. Copy and upload below code to your board.
 
 ```c
 // Update firmware to RHF76-052AM
@@ -481,34 +705,26 @@ void loop()
 
 ```
 
-**Step2**
+- Step 2. Remove the board form USB and reconnect again, then press the DFU Button, after the Firmware mode led blinking you can go to the next step.
 
-Remove the board form USB and reconnect again, then press the DFU Button, after the Firmware mode led blinking you can go to the next step.
-
-**Step3**
-
-Click to download the latest firmware, which is a .bin file.
+- Step 3. Click to download the latest firmware, which is a .bin file.
 
 [![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_LoRa/master/img/firmware_bin.png)](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/rhf76-052am-v2.0.10-20160923.ebin%202.bin)
 
-**Step4**
-
-Open PuTTy and connect to the board
+- Step 4. Open PuTTy and connect to the board
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_LoRa/master/img/firmware_1.png)
 
 !!!Tip
     You can find the latest PuTTy here: [http://www.extraputty.com/download.php](http://www.extraputty.com/download.php)
 
-**Step5**
-
-After connect your board to PuTTy successful, you will find the char 'C' print on the monitor continually.
+- Step 5. After connect your board to PuTTy successful, you will find the char 'C' print on the monitor continually.
 Click on **Files Transfer > Ymodem > Send**, and select the .bin file we had downloaded at Step4.
 
-Then the updating is started.
+- Step 6. Then the updating is started.
 ![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_LoRa/master/img/firmware_4.png)
 
-##Resources
+## Resources
 
 * [Schematics in Eagle](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/202001246 Seeeduino LoRaWAN Eagle.zip)
 * [Sketchup file(3D)](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/Seeeduino LoRaWAN.skp)
