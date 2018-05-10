@@ -218,7 +218,7 @@ Charge status pin and positive pin of the battery had beed connect to A4 and A5,
 
 Copy and upload the below code to detect the battery status.
 
-```c
+```c++
 // battey of Seeeduino LoRaWAN
 
 const int pin_battery_status  = A5;
@@ -240,6 +240,7 @@ void loop() {
     delay(1000);
 }
 ```
+
 !!!Note
     Charge status return 0 while charging, return 1 while charge done or no battery insert.
 
