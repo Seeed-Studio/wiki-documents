@@ -14,17 +14,16 @@ tags: plat_duino, plat_pi, plat_bbg, plat_linkit
 
 Grove - MP3 v2.0 is a tiny-sized and compact audio module. It supports various audio file operations for an audio file of MP3, WAV and WMV format, such as random music playing, play music in specific files, and so on. With serial communication, you can use all predefined command or command combinations to do all operations on music files. This module also supports general file systems such as FAT16 and FAT32. It gets a Grove UART interface, a 3.5 mm audio jack and a micro-SD slot. With this module, you can add some noise to your silent applications.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Grove-MP3-v20-p-2597.html?cPath=98_106_57)
+<p style="text-align:center"><a href="http://www.seeedstudio.com/depot/Grove-MP3-v20-p-2597.html?cPath=98_106_57" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
 
-Version Tracker
----------------
-| Product revision  | Release date   | Support status |
-|-------------------|----------------|----------------|
-| Version 1.0       | April 28 2013‎  | Supported      |
-| Version 2.0       | Dec 15 2015    | Supported      |
+## Version
 
-Features
---------
+| Product Version   | Changes          | Released Date |
+|-------------------|------------------|---------------|
+|  Grove - MP3 v1.0 | Initial          | April 28 2013 |
+|  Grove - MP3 v2.0 | Change to KT403A | Dec 15 2015   |
+
+## Features
 
 -   General operations on audio files
 -   On-board micro-SD slot and 3.5 mm audio jack
@@ -36,13 +35,11 @@ Features
 !!!Tip
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
     
-Application ideas
------------------
+## Application ideas
 
 -   Middle-level audio module for any applications.
 
-Specifications
--------------
+## Specifications
 
 | Parameter                                  | Value                                                                                                             |
 |--------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
@@ -57,8 +54,7 @@ Specifications
 | Sampling rate                              | 8 / 11.025 / 12 / 16 / 22.05 / 24 / 32 / 44.1 / 48(KHz)                                                           |
 
 
-Platforms Supported
--------------------
+## Platforms Supported
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -68,82 +64,256 @@ Platforms Supported
     The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
 
-Hardware Overview
------------------
+## Hardware Overview
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-MP3_v2.0/master/img/Grove-MP3_v2.0_Component_view-front-1200_S.jpg)
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-MP3_v2.0/master/img/Grove-MP3_v2.0_Component_View-Back-1200_S.jpg)
 
-### **Parts list**
 
-| Parts name              | Quantity |
-|-------------------------|----------|
-| Grove - MP3 v2.0        | 1PC      |
-| Grove - Universal Cable | 1PC      |
+## Getting Started
 
-Get started
------------
+!!!Note
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
-### **Material required**
+### Play With Arduino
 
--   Seeeduino × 1
--   Grove - Base Shield v2 × 1
--   Grove - MP3 v2.0 × 1
--   SD card with music inside × 1
--   USB cable (type A to micro type-B) × 1
--   Headset, earphone or stereo with 3.5 mm audio jack × 1
+**Hardware**
 
-### Preparations
+- **Step 1.** Prepare the below stuffs:
 
-Refer to following guides to building an appropriate IDE:.
+| Seeeduino V4.2 | Base Shield|  Grove - MP3 v2.0 |
+|--------------|-------------|-----------------|
+|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-MP3_v2.0/raw/master/img/Grove-MP3_v2.0_s.jpg)|
+|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/depot/Grove-MP3-v20-p-2597.html?cPath=98_106_57)|
 
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-We have chosen Seeeduino and it is compatible with Arduino in this case. So you can also use Arduino board instead.
-</div>
+!!!Note 
+    We need SD card with music inside and Headset/earphone or stereo with 3.5 mm audio jack as well. 
 
-[Getting Started on Windows](/Seeeduino_v4.2#Getting_Started_on_Windows)
+- **Step 2.** Connect Grove-MP3 v2.0 to port D2 of Grove-Base Shield.
+- **Step 3.** Plug Grove - Base Shield into Seeeduino.
+- **Step 4.** Connect Seeeduino to PC via a USB cable.
 
-[Getting Started on Mac OS X](/Seeeduino_v4.2#Getting_Started_on_Mac_OS_X)
+![](https://github.com/SeeedDocument/Grove-MP3_v2.0/raw/master/img/seeeduino_mp3.jpg)
 
-### Hardware connections
+!!!Note
+	If we don't have Grove Base Shield, We also can directly connect Grove-MP3 v2.0 to Seeeduino as below.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-MP3_v2.0/master/img/Grove-MP3_v2.0_Demo_connection_1200_S.jpg)
+| Seeeduino       | Grove-MP3 v2.0 |
+|---------------|-------------------------|
+| 5V            | Red                     |
+| GND           | Black                   |
+| D3            | White                   |
+| D2            | Yellow                  |
 
-### A example to run
+**Software**
 
-#### Download example
+- **Step 1.** Download the  [ Grove-MP3 v2.0](https://github.com/Seeed-Studio/Grove_Serial_MP3_Player_V2.0/archive/master.zip)  from Github.
+- **Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- **Step 3.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
-1.Github [address](https://github.com/Seeed-Studio/Grove_Serial_MP3_Player_V2.0) which also contain sufficient API to download codes.
+Here is the code.
 
-2.Refer to [here](/Guide_to_use_demos_downloaded_from_Seeed's_Github) to learn how to do some preliminary work before running code.
+```
+/*
+ * MP3_Play_Test.ino
+ * A quick start example for Grove-Serial MP3 Player V2.0
+ * Note: The MP3 chip of Grove-Serial MP3 Player V2.0 is different from Grove-Serial MP3 Player V1.0
+ * Description: This demo let you can send instruction 1-8 to control the Grove-Serial MP3 Player, via the serial port.
+ *
+ * Copyright (c) 2015 seeed technology inc.
+ * Website    : www.seeed.cc
+ * Author     : Wuruibin
+ * Created Time: Dec 2015
+ * Modified Time:
+ * 
+ * The MIT License (MIT)
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
-3.Load file *MP3_Play_Test.ino* into Arduino and upload to the main controller board.
 
-4.Open Serial Monitor (Ctrl + Shift + M) to send a command to play music.
+#include <SoftwareSerial.h>
+#include <MP3Player_KT403A.h>
 
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-We need to choose <span style="font-style:italic">No line ending</span> beside baud rate droplist at bottom-right of Serial Monitor window.
-</div>
+static uint8_t recv_cmd[8] = {};
 
-5.In this case, we type *1* which is a command to play music. You can find more command comments in demo source code.
 
-6.Now enjoy the music.
+// Note: You must define a SoftwareSerial class object that the name must be mp3, 
+//       but you can change the pin number according to the actual situation.
+SoftwareSerial mp3(2, 3);
 
-### Advanced programming
+void setup()
+{
+    mp3.begin(9600);
+    Serial.begin(9600); 
+    
+    while(!Serial);
 
-For advanced programming, you can [download](https://raw.githubusercontent.com/SeeedDocument/Grove-MP3_v2.0/master/res/Grove-MP3_v2.0_KT403A_datasheet_V1.3_EN-Recompiled_by_Seeed-.pdf) datasheet of chip KT403A.
+    Serial.println("Grove - Serial MP3 Demo");
+    Serial.println(
+        "Input command:\r\n\r\n"
+        "P[ ] play music by default index\r\n"
+        "Pm[ ] play music in MP3 folder by index\r\n"
+        "Pf[ ][ ] play music by specify folder and index\r\n"        
+        "p Pause\r\n"
+        "R Resume\r\n"
+        "N Next\r\n"
+        "L Previous\r\n"
+        "l Loop\r\n"
+        "I Increase volume\r\n"
+        "D Decrease volumern\r\n");
+    
+    delay(100);
+    
+    SelectPlayerDevice(0x02);       // Select SD card as the player device.
+    SetVolume(0x0E);                // Set the volume, the range is 0x00 to 0x1E.
+}
 
-Resources
----------
+void loop()
+{
+    uint8_t len = 0;
+    uint8_t i;
+
+    if(Serial.available())
+    {
+        char chr = '\0';
+        while(chr != '\n')  // Blockly read data from serial monitor
+        {
+            chr = Serial.read();
+            // Serial.print(chr);
+            recv_cmd[len++] = chr;        
+        }
+    }
+
+    if(len > 0)
+    {
+        // Print reveiced data    
+        // Serial.print("Received cmd: ");   
+        // for(i = 0; i < len; i++) {
+        //     Serial.print(recv_cmd[i]);
+        //     Serial.print(" ");
+        // }
+        // Serial.println();
+            
+        switch (recv_cmd[0])
+        {
+            case 'P':
+                if(recv_cmd[1] == 'm') 
+                {
+                    /** 
+                      * Play music in "MP3" folder by index 
+                      * example:
+                      * "Pm1" -> ./MP3/0001.mp3
+                    */
+                    PlayMP3folder(recv_cmd[2] - '0');
+                    Serial.print("Play ");
+                    Serial.write(recv_cmd[2]);
+                    Serial.println(".mp3 in MP3 folder");
+                } 
+                else if(recv_cmd[1] == 'f')
+                {
+                    /** 
+                      * Play specify folder and music
+                      * example:
+                      * "Pf11" -> ./01/001***.mp3
+                    */
+                    SpecifyfolderPlay(recv_cmd[2] - '0',recv_cmd[3] - '0');
+                    Serial.print("Play ");
+                    Serial.write(recv_cmd[3]);
+                    Serial.print("xxx.mp3");
+                    Serial.print(" in folder ");
+                    Serial.write(recv_cmd[2]);
+                    Serial.println();
+                    
+                } 
+                else
+                {
+                    /** 
+                      * Play music by default index
+                      * example:
+                      * "P1" -> ./***.mp3
+                    */                
+                    SpecifyMusicPlay(recv_cmd[1] - '0');
+                    Serial.print("Play xxx.MP3 by index ");
+                    Serial.write(recv_cmd[1]);
+                    Serial.println();
+                }            
+                // Serial.println("Specify the music index to play");
+                break;
+            case 'p':
+                PlayPause();            
+                Serial.println("Pause the MP3 player");
+                break;
+            case 'R':            
+                PlayResume();
+                Serial.println("Resume the MP3 player");
+                break;
+            case 'N':            
+                PlayNext();
+                Serial.println("Play the next song");
+                break;
+            case 'L':
+                PlayPrevious();
+                Serial.println("Play the previous song");
+                break;
+            case 'l':
+                PlayLoop();
+                Serial.println("Play loop for all the songs");
+                break;
+            case 'I':
+                IncreaseVolume();
+                Serial.println("Increase volume");
+                break;
+            case 'D':
+                DecreaseVolume();
+                Serial.println("Decrease volume");
+                break;
+            default:
+                break;
+        }
+
+        // clean data buffer
+        for(i = 0; i < sizeof(recv_cmd); i++) {
+            recv_cmd[i] = '\0';
+        }
+    }    
+    delay(100);
+    
+//    printReturnedData();
+}
+```
+
+- **Step 4.** We will see the info at COM terminal as below.
+
+![](https://github.com/SeeedDocument/Grove-MP3_v2.0/raw/master/img/COM.png)
+
+!!!Note
+    For advanced programming, you can [download](https://raw.githubusercontent.com/SeeedDocument/Grove-MP3_v2.0/master/res/Grove-MP3_v2.0_KT403A_datasheet_V1.3_EN-Recompiled_by_Seeed-.pdf) datasheet of chip KT403A.
+
+- **Step 5.** Please key in the related command to play the music.
+
+## Resources
 
 -   Hardware [Schematic files](https://raw.githubusercontent.com/SeeedDocument/Grove-MP3_v2.0/master/res/Grove-MP3_v2.0_Schematic_files.zip)
 -   [Libraries](https://github.com/Seeed-Studio/Grove_Serial_MP3_Player_V2.0) on Github.
 -   KT403A [Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-MP3_v2.0/master/res/Grove-MP3_v2.0_KT403A_datasheet_V1.3_EN-Recompiled_by_Seeed-.pdf) (part)
-
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_MP3_v2.0 -->
 
 ## Tech Support
 Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
