@@ -200,6 +200,8 @@ pages:
           - Wio Tracker Introduction: Wio_Tracker.md
           - Wio LTE Cat.1: Wio_LTE_Cat.1.md
           - Wio Tracker - GPS, BT3.0, GSM, Arduino Compatible: wio_gps_board.md
+          - LTE Cat 1 Pi HAT: LTE_Cat_1_Pi_HAT.md
+          - Wio LTE Cat M1/NB-IoT Tracker: Wio_LTE_Cat_M1_NB-IoT_Tracker.md
 
       - Wio:
           - Wio Introduction: Wio.md
@@ -619,6 +621,7 @@ pages:
           - Getting Started with Seeeduino: Getting_Started_with_Seeeduino.md
           - Grove Inventor Kit for micro:bit: Grove_Inventor_Kit_for_microbit.md
           - Guide to use demos downloaded from Seeed&#39;s Github: Guide_to_use_demos_downloaded_from_Seeed-s_Github.md
+          - Google Assistant: Google_Assistant.md
           - How To Choose The Right Cable: How_To_Choose_The_Right_Cable.md
           - How To Use Sketchbook: How_To_Use_Sketchbook.md
           - How to Add Seeed boards to Arduino IDE: Seeed_Arduino_Boards.md
