@@ -174,7 +174,7 @@ sudo python -m pip install --upgrade google-assistant-sdk[samples]
 
 
 
-**Step 2. Generate credentials**
+**Step 3. Generate credentials**
 
 Install or update the authorization tool:
 

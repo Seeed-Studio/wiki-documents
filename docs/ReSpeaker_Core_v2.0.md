@@ -19,7 +19,9 @@ ReSpeaker Core v2.0 is designed as a feature rich development board for business
 
 
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/ReSpeaker-Core-V2.0-p-3039.html" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>
+
+
+<p style="text-align:center"><a href="https://www.seeedstudio.com/ReSpeaker-Core-V2.0-p-3039.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 
@@ -237,6 +239,16 @@ MRAA|	HEADER PIN INDEX |	SYSFS PIN	|RK3229 PIN
 ### Preparation
 
 
+This part will tell you :
+
+- How to install image
+- How to access the serial console
+- How to set up WiFi
+- How to connect to SSH & VNC
+- How to set up Bluetooth
+- Audio record and play test
+
+
 **Prerequisites**
 
 - ReSpeaker Core V2.0
@@ -324,8 +336,8 @@ Now your ReSpeaker Core v2.0 can boot, you might want to get access to the Linux
 - **Step 2.** Check at your computer if the serial port has risen:
 
     - Windows: check the device manager, there should be new serial deviced named ```COMx``` which x is an increasing number. If you use windows XP/7/8, maybe you need install [windows CDC drivers](https://github.com/respeaker/get_started_with_respeaker/blob/master/files/ReSpeaker_Gadget_CDC_driver.7z).
-    - Linux: ls ```/dev/ttyACM*```, you should get ```/dev/ttyACMx``` where x will vary depending on which USB port you used.
-    - Mac: ls ```/dev/cu.usb*```, you should get ```/dev/cu.usbmodem14xx``` where xx will vary depending on which USB port you used.
+    - Linux: `ls /dev/ttyACM*`, you should get ```/dev/ttyACMx``` where x will vary depending on which USB port you used.
+    - Mac: `ls /dev/cu.usb*`, you should get ```/dev/cu.usbmodem14xx``` where xx will vary depending on which USB port you used.
 
 
 - **Step 3.** Use your favorite serial debugging tool to connect the serial port, the serial has: 115200 baud rate, 8Bits, Parity None, Stop Bits 1, Flow Control None. For examples:
@@ -661,7 +673,7 @@ This part including a close-sourced solution based on librespeaker. The librespe
 - Hotword searching
 - Acoustic echo cancellation
 
-It reads the microphoone stream from linux sound server, e.g. PulseAudio. It exposes a few APIs which enable users to get indicated when hotword is said and the processed microphone data in PCM format, which then can be sent to cloud services like Alexa for further processing.
+It reads the microphone stream from linux sound server, e.g. PulseAudio. It exposes a few APIs which enable users to get indicated when hotword is said and the processed microphone data in PCM format, which then can be sent to cloud services like Alexa for further processing.
 
 Before experiencing this powerful solution, please make sure you have done all the things below.
 
@@ -715,9 +727,17 @@ One more thing, do you see the colorful LEDs on the back of ReSpeaker Core v2.0?
 
 ## Closed source solution
 
+
+
+[![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/alango.jpg)](http://www.alango.com)
+
+
+The closed source solution used librespeaker which is provided by Alango company. Thanks for their excellent algorithm.
+
+
 ### APIs for Librespeaker
 
-The closed source solution used librespeaker. Librespeaker is an audio processing library which can perform noise suppression, direction of arrival calculation, beamforming, hotword searching. It reads the microphoone stream from linux sound server, e.g. PulseAudio.
+Librespeaker is an audio processing library which can perform noise suppression, direction of arrival calculation, beamforming, hotword searching. It reads the microphoone stream from linux sound server, e.g. PulseAudio.
 
 **Keyword wake-up**
 
@@ -1136,6 +1156,12 @@ When you run the python program, you can say **Alexa** to wake up the Baidu voic
 
 
 
+### Play with Google Assistant
+
+
+Please refer to our wiki [Google Assistant](http://wiki.seeedstudio.com/Google_Assistant). Follow the instruction step by step, then you will be able to use Google Assistant.
+
+
 
 ## Play with GPIO
 
@@ -1349,9 +1375,117 @@ Light value is 31
 
 ## FAQs
 
-Q1: How to record and play with Audacity?
+**Q1: How to change the senstivity of the wake up word?**
 
-  **A1:** The **lxqt** version has pre-installed Audacity, Please click the **Bird button** at the lower left corner, and you will find it at the **Sound & Video -> Audacity**.
+**A1:** 
+
+
+<div class="admonition note" >
+<p class="admonition-title">Note</p>
+This way to adjust the sensitivity is only for the Out of box demo. 
+</div>
+
+
+When you finish the Out of box demo, you may find the `Snowboy` is hard to wake up. You can modify the following file to adjust the sensitivity.
+
+
+```
+sudo nano /usr/local/bin/respeakerd_safe
+```
+
+You will see the following code. 
+
+```PYTHON
+#!/bin/bash
+
+pulseaudio --check
+
+while [ $? == 1 ]; do
+    sleep 1
+    pulseaudio --check
+done
+
+sleep 5
+
+/usr/local/bin/respeakerd --snowboy_res_path="/usr/local/etc/respeakerd/resources/common.res" --snowboy_model_path="/usr/local/etc/respeakerd/resources/snowboy.umdl" --snowboy_sensitivity="0.4" --source="alsa_input.platform-sound_0.seeed-8ch"
+```
+
+Find the `snowboy_sensitivity="0.4"`, the default valnue is `0.4`. The sensitivity range is 0.1-0.9, the larger the number, the higher the sensitivity. However, the probability of false triggering is also higher. For example, change the `0.4` to `0.6`, then press ++ctrl+x++ to save and quit. 
+
+Then tap
+```
+sudo reboot
+```
+
+
+Call `snowboy` to check.
+
+
+**Q2: How to change the wake up words?**
+
+**A2**
+
+step 1. Please go to the official web of [Snowboy](https://snowboy.kitt.ai/dashboard). Login in with your google ID or Github ID or just create one. 
+
+
+step 2. Then click `Create Hotword`, or just pick an existing `pmdl` file to download.
+
+Step 3. Copy the `pmdl` file into the following location of ReSpeaker Core v2.0 `/usr/local/etc/respeakerd/resources/`. You can use the command below to see.
+
+```
+cd /usr/local/etc/respeakerd/resources/
+ls
+
+```
+
+![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Q2.png)
+
+
+Step 4. Choose the hot word by modifying the congfig file.
+
+```
+sudo nano /usr/local/bin/respeakerd_safe
+
+```
+
+Find the `snowboy_model_path="/usr/local/etc/respeakerd/resources/snowboy.umdl"`, in this demo we use `jiojio.pmdl`, so we change it to `snowboy_model_path="/usr/local/etc/respeakerd/resources/jiojio.pmdl"`.
+You can change it with your own file.Then it should be something like:
+
+
+```PYTHON
+#!/bin/bash
+
+pulseaudio --check
+
+while [ $? == 1 ]; do
+    sleep 1
+    pulseaudio --check
+done
+
+sleep 5
+
+/usr/local/bin/respeakerd --snowboy_res_path="/usr/local/etc/respeakerd/resources/common.res" --snowboy_model_path="/usr/local/etc/respeakerd/resources/jiojio.pmdl" --snowboy_sensitivity="0.4" --source="alsa_input.platform-sound_0.seeed-8ch"
+```
+
+Then save and exit.And reboot with:
+
+```
+sudo reboot
+```
+
+Once the ReSpeaker Core v2.0 reboot, you can wake up it with your own hot word.
+
+
+Tip!!!
+    The defualt file is **umdl** which is released by the snowboy company,and the file you created is **pmdl** which means personal.
+
+
+
+
+
+**Q3: How to record and play with Audacity?**
+
+  **A3:** The **lxqt** version has pre-installed Audacity, Please click the **Bird button** at the lower left corner, and you will find it at the **Sound & Video -> Audacity**.
 
   When you opened the Audacity, please click the little black arrow to choose the record and play device and set as the picture below.
 
@@ -1367,9 +1501,9 @@ Q1: How to record and play with Audacity?
 
   ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/audacity_playback.png)
 
-Q2: How to access the AP of ReSpeaker Core v2.0?
+**Q4: How to access the AP of ReSpeaker Core v2.0?**
 
-**A2:** You can use two wires cable to power the ReSpeaker Core v2.0. When the system is running, the Respeaker Core v2.0 can act as an AP. You can use your computer to
+**A4:** You can use two wires cable to power the ReSpeaker Core v2.0. When the system is running, the Respeaker Core v2.0 can act as an AP. You can use your computer to
 access this AP. As the picture show. You can follow the steps to configure the WiFi of ReSpeaker Core v2.0.
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Ap.png)
@@ -1392,9 +1526,9 @@ And the user name of ReSpeaker Core v2.0 is **respeaker**, the password is **res
 
 - **Step 3.** When you get into the Serial Console， you can [setup the WiFi](http://wiki.seeedstudio.com/ReSpeaker_Core_v2/#a-wi-fi-setting-up)
 
-Q3: How to adjust the volume?
+**Q5: How to adjust the volume?**
 
-**A3:** You can use Alsamixer to adjust the playback volume and capture sensitivity.
+**A5:** You can use Alsamixer to adjust the playback volume and capture sensitivity.
 
 - **Step 1.** Tap the following code to open Alsamixer:
 
@@ -1408,8 +1542,8 @@ And you can adjust the value by pressing the **Up** or **Down** key.
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Alexamixer.png)
 
-Q4: How to use the user button?
-**A4:** As you can see, there is an user button at the back of ReSpeaker Core v2.0. Here we provide a python demo to show how to use it.
+**Q6: How to use the user button?**
+**A6:** As you can see, there is an user button at the back of ReSpeaker Core v2.0. Here we provide a python demo to show how to use it.
 
 - **Step 1.** Tap the command below:
 
@@ -1438,17 +1572,17 @@ Then you will see the result is something like that:
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/userbutton.png)
 
-Q5: The computer can not recognize the ReSpeaker Core v2.0, driver problem?
+**Q7: The computer can not recognize the ReSpeaker Core v2.0, driver problem?**
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/CDC_Driver.png)
 
-**A5:** This may happen when you connect the ReSpeaker Core v2.0 with you computer via OTG or UART.
+**A7:** This may happen when you connect the ReSpeaker Core v2.0 with you computer via OTG or UART.
 This is because the CDC Serial driver has a conflict with other OTG driver. Please uninstall the conflicted driver
  and connect the ReSpeaker Core v2.0 again.
 
-Q6: What if I want to use the external antenna?
+**Q8: What if I want to use the external antenna?**
 
-**A6:** The ReSpeaker Core v2.0 use **AP6212** to provide both WiFi and Bluetooth, they share the same antenna.
+**A8:** The ReSpeaker Core v2.0 use **AP6212** to provide both WiFi and Bluetooth, they share the same antenna.
 Instead of the on-board antenna, you can use an external antenna. To do so, you need to remove one resistance and solder it
 on the new pads, as shown below：
 
