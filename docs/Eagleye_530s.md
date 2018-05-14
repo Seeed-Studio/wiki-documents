@@ -1193,6 +1193,8 @@ A1: Yes. Here are the compatiable list.
 - **[PDF]** [ARTIK™ 530s SoM Module Datasheet](https://developer.artik.io/downloads/hw-datasheet-artik-530-v1-0-pdf/download)
 - **[Certification]** [CE Certificate&Report](https://github.com/SeeedDocument/Eagleye_530s/raw/master/res/CE%20Certificate%26Report.zip)
 - **[Certification]** [IC Certificate&Report](https://github.com/SeeedDocument/Eagleye_530s/raw/master/res/IC%20Certificate%26Report.zip)
+- **[Certification]** [FCC Certificate&Report](https://github.com/SeeedDocument/Eagleye_530s/raw/master/res/FCC%20Certificate%26Report.zip)
+- **[PDF]** [Eagleye 530s User Guide](https://github.com/SeeedDocument/Eagleye_530s/raw/master/res/FCC%20Certificate%26Report.zip)
 - **[More Reading]** [ARTIK™ 530s](https://www.artik.io/modules/artik-530/)
 - **[More Reading]** [Samsung ARTIK™ IoT platform](https://developer.artik.io/documentation/artik/getting-started/)
 - **[More Reading]** [Facial-Recog Project](https://developer.artik.io/documentation/artik/projects/facial-recog.html)
