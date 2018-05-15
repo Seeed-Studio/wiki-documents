@@ -11,11 +11,18 @@ sku: 107990053
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/usb_4_mic_array.png)
 
 
-Seeed’s ReSpeaker Mic Array v2.0 is an upgraded version of ReSpeaker Mic Array v1 which based on XVSM-2000. The v2.0 developed based on XVF-3000 from XMOS. It can be stacked (connected) right onto the top of ReSpeaker Core to significantly improve the voice interaction experience. The board integrates 4 PDM microphones to help enhance ReSpeaker's acoustic DSP performance to a much higher level. 
+The ReSpeaker Mic Array v2.0 is an upgrade to the original [ReSpeaker Mic Array v1.0](https://www.seeedstudio.com/ReSpeaker-Mic-Array-Far-field-w%2F-7-PDM-Microphones--p-2719.html). This upgraded version is based on XMOS’s XVF-3000, a significantly higher performing chipset than the previously used XVSM-2000. This new chipset includes many voice recognition algorithms to assist in performance. The array can be stacked (connected) right onto the top of the original ReSpeaker Core to significantly improve the voice interaction performance.The microphones have also been improved in this version allowing significant performance improvements over the first generation mic array with only 4 microphones.
 
-ReSpeaker Mic Array v2.0 supports USB Audio Class 1.0(UAC 1.0) directly. All major Operating System, like Windows, macOS, Linux are compatible with UAC 1.0, so it can be runs as a sound card without ReSpeaker Core, but has speech algorithm, like far-field on those systems.
+The ReSpeaker Mic Array v2.0 supports USB Audio Class 1.0 (UAC 1.0) directly. All major Operating System, including Windows,macOS, and Linux are compatible with UAC 1.0, allowing the mic array to function as a sound card without the ReSpeaker Core,while also retaining voice algorithms, such as DoA, BF, and AEC on those systems.
 
-ReSpeaker Mic Array v2.0 has two firmwares, one includes speech algorithms, another is just capture raw voice data for specially purpose.
+The ReSpeaker Mic Array v2.0 is a great solution for those who wish to add voice interface into their existing products or future products. It also works well as an entry point to higher level voice interface evaluation. The board allows some flexibility for customization upon request.
+
+The ReSpeaker Mic Array v2.0 has two firmware versions available, one including speech algorithms and a second for raw voice data.
+
+
+
+<p style="text-align:center"><a href="https://www.seeedstudio.com/ReSpeaker-Mic-Array-v2.0-p-3053.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+
 
 
 ## Version
@@ -89,15 +96,16 @@ The WM8960 is a low power stereo codec featuring Class D speaker drivers to prov
 
 ## Applications
 
-- USB voice capture
-- Smart speaker
-- Intelligent voice assistant systems
-- Voice recorders
-- Voice conferencing system
-- Meeting communicating equipment
-- Voice interacting robot
-- Car voice assistant
-- Other scenarios need voice command
+- USB Voice Capture
+- Smart Speaker
+- Intelligent Voice Assistant Systems
+- Voice Recorders
+- Voice Conferencing System
+- Meeting Communicating Equipment
+- Voice Interacting Robot
+- Car Voice Assistant
+- Other Voice Interface Scenarios
+
 
 ## Getting Started
 

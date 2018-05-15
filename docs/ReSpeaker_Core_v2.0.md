@@ -732,7 +732,7 @@ One more thing, do you see the colorful LEDs on the back of ReSpeaker Core v2.0?
 [![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/alango.jpg)](http://www.alango.com)
 
 
-The closed source solution used librespeaker which is provided by Alango company. Thanks for their excellent algorithm.
+The close source solution utilizes two algorithms provided by Alango: Beam-forming (BF) and Acoustic Echo Cancellation (AEC).
 
 
 ### APIs for Librespeaker
