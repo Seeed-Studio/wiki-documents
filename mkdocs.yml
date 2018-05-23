@@ -81,11 +81,11 @@ markdown_extensions:
   - pymdownx.tilde
   - pymdownx.keys
 
-extra_css:
-  - 'stylesheets/extra.css'
+#extra_css:
+#  - 'stylesheets/extra.css'
   
-extra_javascript:
-  - 'javascripts/extra.js'
+#extra_javascript:
+#  - 'javascripts/extra.js'
 
   
 # Page tree
