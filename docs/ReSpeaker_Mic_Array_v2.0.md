@@ -114,12 +114,12 @@ The WM8960 is a low power stereo codec featuring Class D speaker drivers to prov
 
 ### Update Firmware
 
-There are 2 firmwares. One includes 1 channel data(factory firmware), while the other inlcudes 6 channels data. Here is the table for the differences.
+There are 2 firmwares. One includes 1 channel data, while the other inlcudes 6 channels data (factory firmware). Here is the table for the differences.
 
 | Firmware             | Channels | Note                                                                                                                                                                    |
 |----------------------|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| default_firmware.bin | 1              | Processed audio for ASR                                                                                                                                                 |
-| i6_firmware.bin      | 6              |  Channel 0: processed audio for ASR,  Channel 1: mic1 raw data, Channel 2: mic2 raw data, Channel 3: mic3 raw data, Channel 4: mic4 raw data, Channel 5: merged playback |
+| 1_channel_firmware.bin  | 1              | Processed audio for ASR                                                                                                                                                 |
+|   6_channels_firmware.bin    | 6              |  Channel 0: processed audio for ASR,  Channel 1: mic1 raw data, Channel 2: mic2 raw data, Channel 3: mic3 raw data, Channel 4: mic4 raw data, Channel 5: merged playback |
 
 **For Linux:**  The Mic array supports the USB DFU. We develop a python script dfu.py to update the firmware through USB.
 
@@ -128,7 +128,12 @@ sudo apt-get update
 sudo pip install pyusb click
 git clone https://github.com/respeaker/usb_4_mic_array.git
 cd usb_4_mic_array
-sudo python dfu.py --download default_firmware.bin  # Change the bin names base on needs
+sudo python dfu.py --download 6_channels_firmware.bin  # The 6 channels version 
+
+# if you want to use 1 channel,then the command should be like:
+
+sudo python dfu.py --download 1_channel_firmware.bin
+
 ```
 Here is the firmware downloading result.
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/Download_firmware.png)
@@ -413,7 +418,7 @@ import pyaudio
 import wave
 
 RESPEAKER_RATE = 16000
-RESPEAKER_CHANNELS = 1 # change base on firmwares, default_firmware.bin as 1 or i6_firmware.bin as 6
+RESPEAKER_CHANNELS = 6 # change base on firmwares, 1_channel_firmware.bin as 1 or 6_channels_firmware.bin as 6
 RESPEAKER_WIDTH = 2
 # run getDeviceInfo.py to get index
 RESPEAKER_INDEX = 2  # refer to input device id
