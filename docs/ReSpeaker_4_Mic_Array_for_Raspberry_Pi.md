@@ -261,6 +261,10 @@ sudo apt install mpg123
 PLAYER=mpg123 python ns_kws_doa_alexa_with_light.py
 ```
 
+**Q3: There is no response When we run kws_doa.py and say snowboy**
+
+Q3: Please run audacity to make sure 4 channels are good. If there is no channl without data, there will be no response when we say snowboy.
+
 ## Resources
 
 **[PDF]** [ ReSpeaker 4-Mic Array for Raspberry Pi(PDF)](https://github.com/SeeedDocument/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/blob/master/src/ReSpeaker%204-Mic%20Array%20for%20Raspberry%20Pi%20%20v1.0.pdf)
