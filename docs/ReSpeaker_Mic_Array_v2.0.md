@@ -118,8 +118,8 @@ There are 2 firmwares. One includes 1 channel data, while the other inlcudes 6 c
 
 | Firmware             | Channels | Note                                                                                                                                                                    |
 |----------------------|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1_channel_firmware.bin  | 1              | Processed audio for ASR                                                                                                                                                 |
-|   6_channels_firmware.bin    | 6              |  Channel 0: processed audio for ASR,  Channel 1: mic1 raw data, Channel 2: mic2 raw data, Channel 3: mic3 raw data, Channel 4: mic4 raw data, Channel 5: merged playback |
+| 1_channel_firmware.bin  | 1              | Processed audio for ASR |
+| 6_channels_firmware.bin | 6  |Channel 0: processed audio for ASR <br> Channel 1: mic1 raw data <br>Channel 2: mic2 raw data <br>Channel 3: mic3 raw data <br>Channel 4: mic4 raw data <br>Channel 5: merged playback</br> |
 
 **For Linux:**  The Mic array supports the USB DFU. We develop a python script dfu.py to update the firmware through USB.
 
@@ -539,17 +539,23 @@ interface: {
 }
 ```
 
-- Step 4. Upgrade mic array with i6_firmware.bin which includes 4 channels raw audio data.
+- Step 4. Upgrade mic array with 6_channels_firmware.bin which includes 4 channels raw audio data.
 
-![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/live_data.png)
+
+
+<iframe width="800" height="500" src="https://www.youtube.com/embed/K5gZabfaaPI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
 
 **For Windows/Mac:** Please refer to [ODAS](https://github.com/introlab/odas).
+
+
+
 
 ## FAQ
 
 **Q1: Parameters of built-in algorithms**
 
-A1: Here are the parameters of the build-in algorithms.
 
 ```
 pi@raspberrypi:~/usb_4_mic_array $ python tuning.py -p
