@@ -263,7 +263,7 @@ PLAYER=mpg123 python ns_kws_doa_alexa_with_light.py
 
 **Q3: There is no response When we run kws_doa.py and say snowboy**
 
-Q3: Please run audacity to make sure 4 channels are good. If there is no channl without data, there will be no response when we say snowboy.
+Q3: Please run audacity to make sure 4 channels are good. If there is one channel without data, there will be no response when we say snowboy.
 
 ## Resources
 
