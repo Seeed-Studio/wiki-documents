@@ -209,8 +209,7 @@ pi@raspberrypi:~ $ source ~/env/bin/activate                    # activate the v
 (env) pi@raspberrypi:~ $ git clone https://github.com/respeaker/avs
 (env) pi@raspberrypi:~ $ cd avs                                 # install Requirements
 (env) pi@raspberrypi:~ $ python setup.py install                               
-(env) pi@raspberrypi:~/avs $ sudo apt install gstreamer1.0 gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly
-(env) pi@raspberrypi:~/avs $ sudo apt install python-gi gir1.2-gstreamer-1.0
+(env) pi@raspberrypi:~/avs $ sudo apt-get install gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gir1.2-gstreamer-1.0 python-gi python-gst-1.0
 (env) pi@raspberrypi:~/avs $ pip install tornado
 ```
 Then open a terminal at [VNC](https://www.raspberrypi.org/documentation/remote-access/vnc/), switch to the python virtual env with 
@@ -236,6 +235,31 @@ Now run `python ns_kws_doa_alexa_with_light.py` under virtualenv, we will see lo
 (env) pi@raspberrypi:~/4mics_hat $ python ns_kws_doa_alexa_with_light.py
 ```
 
+## FAQ
+
+**Q1: How to change the Raspbian Mirrors source?**
+
+A1: Please refer to [Raspbian Mirrors](http://www.raspbian.org/RaspbianMirrors) and follow below instructions to modify the source at begining. 
+
+```
+pi@raspberrypi ~ $ sudo nano /etc/apt/sources.list
+```
+
+For example, we suggest use the tsinghua source for China users. So please modify the sources.list as below.
+
+```
+deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main non-free contrib
+deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main non-free contrib
+```
+
+**Q2: We can hear the voice by aplay from the 3.5mm audio jack but we can't hear the voice when running ns_kws_doa_alexa_with_light.py**
+
+Q2: We have 3 players (mpv, mpg123 and gstreamer) to use. SpeechSynthesizer and Alerts prefer mpg123 which is more responsive. AudioPlayer likes gstreamer > mpv > mpg123. Gstreamer supports more audio format and works well on raspberry pi. We can also specify the player of AudioPlayer using the environment variable PLAYER. So please try below commands to enable the voice.
+
+```
+sudo apt install mpg123
+PLAYER=mpg123 python ns_kws_doa_alexa_with_light.py
+```
 
 ## Resources
 
