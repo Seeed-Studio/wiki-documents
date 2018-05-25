@@ -61,7 +61,7 @@ Specifications
 | Operating voltage(V)          | 3.3 or 5 Volts                                                                         |
 | Operating current(mA)         | Maximum: 20 mA                                                                         |
 | Effective detectable distance | 7.5–40 cm                                                                              |
-| Reflective photosensor        | [datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-IR_Distance_Interrupter_v1.2/master/res/Reflective_photosensor.pdf) |
+| Reflective photosensor        | [datasheet](https://github.com/SeeedDocument/Grove-IR_Distance_Interrupter_v1.2/raw/master/res/ITR9909_datasheet.pdf) |
 | Output operational amplifiers | [datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-IR_Distance_Interrupter_v1.2/master/res/LM393.pdf)                  |
 | Weight                        | 2.5 g(for the module), 8.5 g(for all single package)                                   |
 
@@ -82,7 +82,7 @@ Hardware Overview
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-IR_Distance_Interrupter_v1.2/master/img/Grove-IR_Distance_Interrupter_v1.2_hardware_overview_1200.jpg)
 
--   **RPR-359F Reflective photosensor**, Highly sensitive reflective photosensor.
+-   **ITR9909 Reflective photosensor**, Highly sensitive reflective photosensor.
 -   **LM393 operational amplifier**, rail-to-rail operational amplifier.
 -   **LED Indicator**, The LED will turn on when the received infrared light intensity exceeds a preset level.
 -   **Light sensitivity adjusting potentiometer** , adjust the sensitivity of reflective photosensor to light.
@@ -215,7 +215,7 @@ Resources
 ---------
 
 -   [Grove - IR Distance Interrupter v1.2 Eagle file](https://raw.githubusercontent.com/SeeedDocument/Grove-IR_Distance_Interrupter_v1.2/master/res/Eagle_files.zip)
--   [Reflective Photosensor Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-IR_Distance_Interrupter_v1.2/master/res/Reflective_photosensor.pdf)
+-   [Reflective Photosensor Datasheet(ITR9909)](https://github.com/SeeedDocument/Grove-IR_Distance_Interrupter_v1.2/raw/master/res/ITR9909_datasheet.pdf)
 -   [LM393 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-IR_Distance_Interrupter_v1.2/master/res/LM393.pdf)
 -   [LMV358 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-IR_Distance_Interrupter_v1.2/master/res/LMV358_datasheet.pdf)
 -   [Infrared Reflective Sensor Source Files](https://raw.githubusercontent.com/SeeedDocument/Grove-IR_Distance_Interrupter_v1.2/master/res/Grove-Infrared_Reflective_Sensor_v1.0_SourceFile.zip)
