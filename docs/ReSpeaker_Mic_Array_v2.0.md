@@ -679,6 +679,11 @@ pi@raspberrypi:~/usb_4_mic_array $ sudo python tuning.py DOAANGLE
 DOAANGLE: 180
 ```
 
+**Q3: Do you have the example for Raspberry alexa application?**
+
+A3: Yes, we can connect the mic array v2.0 to raspberry usb port and follow [Raspberry Pi Quick Start Guide with Script](https://github.com/alexa/avs-device-sdk/wiki/Raspberry-Pi-Quick-Start-Guide-with-Script) to do the voice interaction with alexa. 
+
+
 ## Resource
 - **[PDF]** [ReSpeaker MicArray v2.0 Product Brief](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/ReSpeaker%20MicArray%20v2.0%20Product%20Brief.pdf)
 - **[PDF]** [ReSpeaker MicArray v2.0 3D Model](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/RESPEAKER%20MIC%20v2.0.pdf)
