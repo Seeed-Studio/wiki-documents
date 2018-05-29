@@ -16,16 +16,14 @@ This CAN-BUS Shield adopts **MCP2515** CAN Bus controller with SPI interface and
 
 Previously we have made two versions of CAN-BUS Shield, the V1.0 and V1.2. They are all awesome shields that widely liked by our users. In order to make it better, several months ago we conducted a survey about CAN-BUS Shield V1.2 and received many valuable advices (Thanks to all the users who replied to us), so we decided to make an update and here it is - CAN-BUS Shield V2.
 
-**Version**
 
-This document applies to the following version of products:
+<p style="text-align:center"><a href="https://www.seeedstudio.com/CAN-BUS-Shield-V2-p-2921.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
-|Version|Released Date|How to Buy|
-|--------|-----------|-----------|
-|CAN BUS Shield V1.0 |Oct 14, 2012|![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/EOL.png)|
-|CAN BUS Shield V1.1 |Aug 10, 2013|![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/EOL.png)|
-|CAN BUS Shield V1.2|Jan 05, 2015|<a href="http://www.seeedstudio.com/CAN-BUS-Shield-V1.2-p-2256.html" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a>|
-| CAN BUS Shield V2.0 | Aug 01,2017    | <a href="https://www.seeedstudio.com/CAN-BUS-Shield-V2-p-2921.html" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a>|
+
+<p style="text-align:center"><a href="https://www.amazon.com/dp/B076DSQFXH" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/amaon.png"  width="300" height="48"  border=0/></a></p>
+
+
+
 
 **Version Tracker**
 

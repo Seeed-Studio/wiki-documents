@@ -14,7 +14,11 @@ SeeedStudio BeagleBone Green (BBG) is a low cost, open-source, community support
 
 Boot Linux in under 10 seconds and get started on development in less than 5 minutes with just a single USB cable.
 
-[![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now.png)](http://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-p-2504.html)
+
+<p style="text-align:center"><a href="http://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-p-2504.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+
+
+<p style="text-align:center"><a href="https://www.amazon.com/dp/B01AIC5AP4" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/amaon.png"  width="300" height="48"  border=0/></a></p>
 
 
 ## Features
