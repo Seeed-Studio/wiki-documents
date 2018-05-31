@@ -48,7 +48,7 @@ Previously we have made two versions of CAN-BUS Shield, the V1.0 and V1.2. They 
 
   -  OBD-II or CAN standard pinout can be selected by switching jumpers on DB9 interface, the default pinout is OBD-II.
   -  Add a TF card slot for data storage and the CS pin can be either set to D4 or D5.
-  -  The INT pin can be set to D2 or D3 by switching jumpers on the back of the shield.
+  -  The INT pin can be set to D2 or D3 by cutting and soldering pad on the back of the shield.
   -  Moved the P1 pad from front to the back of the shield to make it easier to cut and solder.
   -  Consider that the D0/D1 pin are usually used for downloading code, we changed the serial Grove connector to pin A0/A1.
   -  The I2C grove connector is also changed to more reasonable standard SDA/SCL pin instead of previous A4/A5.

@@ -234,13 +234,17 @@ void loop()
 
 ###   Step 3: Download the program
 
-Because there is no USB connector on the board. Seeeduino Ethernet requires a [UartSBee](http://www.seeedstudio.com/depot/uartsbee-v4-p-688.html?cPath=109) to download the program.
+Because there is no USB connector on the board. Seeeduino Ethernet requires a [UartSBee](http://www.seeedstudio.com/depot/uartsbee-v4-p-688.html?cPath=109) to download the program. 
 
 Connect the UartSBee to Seeeduino Ethernet as below:
 
 ![](https://github.com/SeeedDocument/Seeeduino_Ethernet/raw/master/img/Seeeduinoethernet-11.jpg)
 
  ![](https://github.com/SeeedDocument/Seeeduino_Ethernet/raw/master/img/Seeeduino_ethernet-5.jpg)
+
+!!!Warning
+    Please select Seeeduino V3.0 as board in tool menu to download the program.
+
 
 ###   Step 4: Result testing
 
