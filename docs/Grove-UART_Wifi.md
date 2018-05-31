@@ -411,7 +411,7 @@ Our module board got a firmware burned into it for factory settings, you can bur
 
 #### Hardware
 
-The **Materials required** and **Hardware connection** are the same as [Firmware update](/#Firmware update)
+The **Materials required** and **Hardware connection** are the same as [Firmware update](http://wiki.seeedstudio.com/Grove-UART_Wifi/#firmware-update)
 
 
 Let's go to software part  
