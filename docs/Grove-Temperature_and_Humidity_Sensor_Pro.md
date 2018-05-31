@@ -167,33 +167,43 @@ The result should be like:
 
 #### Software
 
+If this is the first time you use GrovePi, please do this part step by step. If you are an old friend with GrovePi, you can skip **Step1** and **Step2**.
 
-- **Step 1.** Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment.
+
+- **Step 1.** Setting Up The Software. In the command line, type the following commands:
+
+```
+sudo curl -kL dexterindustries.com/update_grovepi | bash
+
+```
+
+```
+sudo reboot
+```
+
+```
+cd /home/pi/Desktop
+```
+```
+git clone https://github.com/DexterInd/GrovePi.git
+```
+
+For more detail about this part, please refer to [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/).
+
 
 - **Step 2.** Follow [Updating the Firmware](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/updating-firmware/) to update the newest firmware of GrovePi.
-
-
-!!!Tip
-    In this wiki we use the path **~/GrovePi/** instead of **/home/pi/Desktop/GrovePi**, you need to make sure Step 2 and Step 3 use the same path.
 
 
 !!!Note
     We firmly suggest you to update the firmware, or for some sensors you may get errors.
 
 
-- **Step 3.** Git clone the Github repository.
 
-```
-cd ~
-git clone https://github.com/DexterInd/GrovePi.git
+- **Step 3.** Configure the parameter
 
 ```
 
--	**Step 4.** Configure the parameter
-
-```python
-
-cd ~/GrovePi/Software/Python
+cd /home/pi/Desktop/GrovePi/Software/Python/
 sudo nano grove_dht_pro.py
 
 ```
@@ -237,7 +247,7 @@ while True:
 Then tap ++ctrl+x++ to quit nano. Tap ++y++ to save the change.
 
 
--	**Step 5.** Excute below commands to get the value.
+- **Step 4.** Run the following command to get the result.
 
 ```
 sudo python grove_dht_pro.py

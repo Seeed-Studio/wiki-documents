@@ -8,11 +8,37 @@ surveyurl: https://www.surveymonkey.com/r/grove_uart_wifi
 sku: 113020010
 ---
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/img/Grove-uart-wifi-01.jpg)
+
+![enter image description here](https://github.com/SeeedDocument/Grove-Uart_Wifi/raw/master/img/main.jpg)
 
 Grove - UART WiFi is a serial transceiver module featuring the ubiquitous ESP8266 IoT SoC. With integrated TCP/IP protocol stack, this module lets your micro-controller interact with WiFi networks with only a few lines of code. Each ESP8266 module comes pre-programmed with an AT command set firmware, meaning you can send simple text commands to control the device. The SoC features integrated WEP, WPA/WPA2, TKIP, AES, and WAPI engines, can act as an access point with DHCP, can join existing WiFi networks and has configurable MAC and IP addresses.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Uart-Wifi-p-2495.html)
+
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Uart-Wifi-p-2495.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+
+
+
+## Version
+
+| Parameter     | V1.0     |V2.0     |
+| :------------- | :------------- |:------------- |
+| Product Release Date       | 24th Jue 2016       |26th Mach 2018|
+|WiFi Chip|ESP8266| ESP8285|
+|Antenna Type| External |On-board|
+|LEDs| 3 LEDs-Power/WiFi/AT Command|2 LEDs- Power/WiFi|
+|Button|1 Button: <br>Short press to **Reset** <br>Long press to enter **UART boot mode**</br>|2 Buttons for those two functions|
+
+
+![](https://github.com/SeeedDocument/Grove-Uart_Wifi/raw/master/img/Version_tracker.jpg)
+
+
+
+!!!Note
+        You may ask what is the difference between ESP8266 and ESP8285. The ESP8285 is an update version of ESP8266, which adds a build-in 1MB flash. Except that, they are almost the same.
+
+
+
+
 
 ## Features
 
@@ -34,7 +60,11 @@ Grove - UART WiFi is a serial transceiver module featuring the ubiquitous ESP826
 !!!Tip
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
-##Hardware Overview
+
+
+
+
+## Hardware Overview
 
 Here is block diagram of Grove - UART WiF module which consists of following parts.
 
@@ -50,7 +80,11 @@ Here is block diagram of Grove - UART WiF module which consists of following par
     * Middle - a red LED indicator - light on while Wifi connected or go into UART boot mode
     * Right - a green LED indicator - light on while power on.
 
-##Specifications
+
+
+
+
+## Specifications
 
 * Input voltage: 3V / 5V
 * Baud Rate: 115200
@@ -71,7 +105,7 @@ Here is block diagram of Grove - UART WiF module which consists of following par
 * A-MPDU & A-MSDU aggregation & 0.4ms guard interval
 * Dimensions: 25.43mm x 20.35mm
 
-##Ultra-low power technology
+**Ultra-low power technology**
 
 The ESP8266 was designed to achieve very low energy consumption with patented power management technology that reduces non-essential functions and regulates sleep patterns. There are five power states:
 
@@ -89,7 +123,9 @@ To meet the power requirements of mobile applications and wearable electronics, 
 
 
 
-##Application Ideas
+
+
+## Application Ideas
 
 * Home automation
 * Sensor networks
@@ -102,103 +138,259 @@ To meet the power requirements of mobile applications and wearable electronics, 
 * Smart power plug
 * Location-aware applications
 
-##Getting Started
-
-After this section, you can make **Grove - UART WiFi** run with only few steps.
-
-###Preparations
-
-Now we are making a demo for wireless access point(AP) scan which require following modules.
-
-* [Seeeduino Lite](http://www.seeedstudio.com/depot/Seeeduino-Lite-p-1487.html?cPath=6_7)
-* [Grove - OLED Display 1.12](http://www.seeedstudio.com/depot/Grove-OLED-Display-112-p-781.html?cPath=34_36)
-
-If this is your first time using [Seeeduino Lite](http://www.seeedstudio.com/depot/Seeeduino-Lite-p-1487.html?cPath=6_7), please refer to [Seeeduino Lite's wiki](https://seeeddoc.github.io/Seeeduino_Lite)
-
-Seeeduino Lite is compatible with Arduino which works as simple as Arduino.
-
-If this is your first time using Arduino, Please put hand on [here](http://arduino.cc) to start your Arduino journey.
-
-###Connecting hardware
-
-[Seeeduino Lite](http://www.seeedstudio.com/depot/Seeeduino-Lite-p-1487.html?cPath=6_7) got Grove socket for connecting two module mentioned above: Grove - [OLED Display 1.12](https://seeeddoc.github.io/Grove-OLED_Display_1.12inch) and [Grove - Uart Wi-Fi](https://seeeddoc.github.io/Grove-UART_WiFi).
-
-They are:
-
-* Grove - OLED Display 1.12 - connection to I2C socket
-* Grove - UART Wifi - connection to Serial socket
-*
-As shown below:
-
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/img/Grove_uart_wifi_connect.jpg)
-
-###Download
-
-Click [here](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/res/Grove_uart_wifi_test.zip) to download testing code and decompress it to any folders(e.g. Drive D or desktop)
 
 
-Now you need simple [configurations for Arduino](https://seeeddoc.github.io/How_To_Use_Sketchbook/) sketchbook.
-
-Launch Arduino IDE and click File>Preferences and add absolute location for downloaded testing code at Sketchbook location .
-
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/img/Grove_uart_wifi_wiki_sketchbook.png)
-
-After configurations, please restart Arduino, click File>Sketchbook and choose grove_uart_wifi_wiki after which testing code will show up.
-
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/img/Grove_uart_wifi_wiki_sketchbook2.png)
-
-Click Tools>Board to choose Seeeduino Lite and select respective serial port.
-
-Now click Upload(CTRL+U) to burn testing code. Please refer to here for any error prompt and you can also add comment on forum
 
 
-###Review Results
+## Getting Started
 
-After upload completed, you can see AP identifier on OLED display.Following AP identifiers are found in our office.
+After this section, you can make Grove - UART WiFi run with only few steps.
+
+### Play With Arduino
+!!!Note
+    If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+
+
+#### Materials required
+
+| Seeeduino Lite | Grove-OLED |Grove-UART Wifi|
+|--------------|-----------------|-----|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/lite.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/images/grove%20oled%200.96_s.jpg)|![](https://github.com/SeeedDocument/Grove-Uart_Wifi/raw/master/img/thumbnail.jpg)|
+|<a href="https://www.seeedstudio.com/Seeeduino-Lite-p-1487.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove---OLED-Display-0.96%22-p-781.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Uart-Wifi-p-2495.html" target="_blank">Get One Now</a>|
+
+
+!!!note
+    **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
+    
+    **2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy
+
+
+
+
+#### Hardware
+
+- **Step 1.** Connect Grove-UART Wifi to port **SERIAL** of Seeeduino Lite.
+
+- **Step 2.** Connect Grove-OLED to port **I2C** of Seeeduino Lite.
+
+- **Step 3.** Connect Seeeduino Lite to PC via a Micro-USB cable.
+
+
+![](https://github.com/SeeedDocument/Grove-Uart_Wifi/raw/master/img/Arduino_connect_1.jpg)
+
+
+
+#### Software
+
+
+- **Step 1.** Download the [128X64 OLED library](https://github.com/Seeed-Studio/OLED_Display_128X64/archive/master.zip) from Github.
+
+- **Step 2.** Refer to [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+
+- **Step 3.** Open the Arduino IDE and copy the following code into a new sketch. 
+
+
+```
+// test grove - uart wifi
+// scan ap and display on Grove - OLED 0.96'
+// Loovee @ 2015-7-28
+
+#include <Wire.h>
+#include <SeeedOLED.h>
+
+char ap_buf[30][16];
+int ap_cnt = 0;
+
+void setup()
+{
+    Serial1.begin(115200);
+
+    delay(3000);
+    Wire.begin();
+    SeeedOled.init();                   // initialze SEEED OLED display
+
+    SeeedOled.clearDisplay();           // clear the screen and set start position to top left corner
+    SeeedOled.setNormalDisplay();       // Set display to normal mode (i.e non-inverse mode)
+    SeeedOled.setPageMode();            // Set addressing mode to Page Mode
+
+}
+
+
+void loop()
+{
+    ap_cnt = 0;
+    SeeedOled.clearDisplay();
+    SeeedOled.setTextXY(3,0);    
+    SeeedOled.putString("Wifi Scan..."); 
+
+    cmd_send("AT+CWLAP");
+    wait_result();
+    
+    display_ap();
+    delay(5000);
+}
+
+// send command
+void cmd_send(char *cmd)
+{
+    if(NULL == cmd)return;
+    Serial1.println(cmd);
+}
+
+
+// wait result of ap scan
+// +CWLAP:(3,"360WiFi-UZ",-81,"08:57:00:01:61:ec",1)
+void wait_result()
+{
+    while(1)
+    {
+LOOP1:
+        char c1=0;
+        if(Serial1.available()>=2)
+        {
+            c1 = Serial1.read();
+            if(c1 == 'O' && 'K' == Serial1.read())return;       // OK means over
+        }
+        
+        if('('==c1)
+        {
+            while(Serial1.available()<3);
+            Serial1.read();
+            Serial1.read();
+            Serial1.read();
+
+            int d = 0;
+            while(1)
+            {
+                if(Serial1.available() && '"' == Serial1.read());      // find "
+                {
+                    while(1)
+                    {
+                        if(Serial1.available())
+                        {
+                            char c = Serial1.read();
+                            ap_buf[ap_cnt][d++] = c;
+                            if(c == '"' || d==16)
+                            {
+                                ap_buf[ap_cnt][d-1] = '\0';
+                                ap_cnt++;
+                                goto LOOP1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// display
+void display_ap()
+{
+    char strtmp[16];
+    sprintf(strtmp, "get %d ap", ap_cnt);
+    
+    SeeedOled.clearDisplay();           // clear
+    SeeedOled.setTextXY(3,3);           // Set the cursor to Xth Page, Yth Column
+    SeeedOled.putString(strtmp);        // Print the String
+ 
+    delay(2000);
+    
+    int cnt = ap_cnt;
+    int offset = 0;
+    while(1)
+    {
+        SeeedOled.clearDisplay(); 
+        if(cnt>=8)
+        {
+            for(int i=0; i<8; i++)
+            {
+                SeeedOled.setTextXY(i,0);           // Set the cursor to Xth Page, Yth Column
+                SeeedOled.putString(ap_buf[8*offset+i]);        // Print the String
+            }
+            cnt-=8;
+            offset++;
+        }
+        else 
+        {
+            for(int i=0; i<cnt; i++)
+            {
+                SeeedOled.setTextXY(i,0);           // Set the cursor to Xth Page, Yth Column
+                SeeedOled.putString(ap_buf[8*offset+i]);        // Print the String
+            }
+            
+            return;
+        }
+        
+        delay(2000);
+    }
+}
+
+```
+
+- **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+
+
+Then you will see the OLED show the wifi AP around you.
+
 
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/img/Grove_uart_wifi_result.jpg)
 
-##Firmware update
+
+
+
+## Firmware update
 
 Our module board got a firmware burned into it for factory settings, you can burn other firmware to it if you like. Click [here](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/res/Grove-Uart_Wifi_Firmware-code.zip) to download source code of factory setting firmware.
 
-###Preparations
 
-* A USB to serial converter is required for firmware updating, you can choose UartSBee V5 we offered if you don't know where to get one.
-* A Grove-Jump converting cable is required and we also offered for sale. Click here to check.
+
+### Materials required
+
+* A USB to serial converter is required for firmware updating, you can choose [UartSBee V5](https://www.seeedstudio.com/UartSBee-V5-p-1752.html) if you don't know where to get one.
+* A [Grove-Jump converting cable](https://www.seeedstudio.com/Grove-4-pin-Female-Jumper-to-Grove-4-pin-Conversion-Cable-%285-PCs-per-PAck%29-p-1020.html) is required and we also offered for sale. 
 * A micro USB cable(type A to type C) is required.
 
-###Connecting hardware
+### Hardware
 
-**1.**Connect one end of Grove-Jump converting cable with grove socket on Grove - Uart Wifi and connect other end with UartSBee V5 which shown as following.
+**Step 1.** Connect one end of Grove-Jump converting cable with grove socket on Grove - Uart Wifi and connect other end with UartSBee V5 which shown as following.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/img/Grove_uart_wifi_firmware_connect.jpg)
 
-**2.**Then connecting cables like following figure:
+
+![](https://github.com/SeeedDocument/Grove-Uart_Wifi/raw/master/img/UART_v1.jpg)
+
+
+**Step 2.** Then connecting cables like following figure:
 
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/img/Grove_uart_wifi_firmware_connect2.jpg)
 
-###Download burning tools
+
+
+
+### Software
+
+**Step 1.** Download burning tool and firmware
 
 * [FLASH DOWNLOAD TOOLS](https://github.com/SeeedDocument/Grove-Uart_Wifi/raw/master/res/FLASH_DOWNLOAD_TOOLS_v1.2_150512.zip)
 * [Bin files of firmware](https://github.com/SeeedDocument/Grove-Uart_Wifi/raw/master/res/Grove-uart-wifi-firmware-bin.zip)
 
-###Operation steps
 
-Now make sure you have downloaded burning software and bin file of firmware. Let us start burning to board.
 
-* Press and hold button until red LED indicator light on which indicate it is ready to burn firmware.
-* Start executable files in FLASH DOWNLOAD TOOLS files (double click) to make configurations like following steps:
+**Step 2.** Press and hold button until the red LED indicator turn on which means it is ready to burn firmware.
+
+
+**Step 3.** Start executable files in FLASH DOWNLOAD TOOLS files (double click) to make configurations like following steps:
 
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/img/Grove_uart_wifi_firmware_tools1.jpg)
 
 **1.** Choose desired files from firmware bin file downloaded.
 
-**2.** Check SpiAutoSet.
+**2.** Select the **SpiAutoSet** checkbox.
 
-**3.** Choose respective COM port and BAUDRATE.
+**3.** Choose COM port and BAUDRATE.
 
-###Click to START to burn firmware
+**4.** Click **START** button
+
 
 * Progress bar will be displayed in firmware-burning process.
 
@@ -208,11 +400,45 @@ Now make sure you have downloaded burning software and bin file of firmware. Let
 
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/img/Grove_uart_wifi_firmware_tools3.jpg)
 
-##AT Commands
 
-Using Espressif Systems ESP8266 AT Instruction Set Version 0.24 with SeeedStudio additions.
 
-###Basic AT Commands
+
+## AT Commands
+
+
+
+### Quick start of AT Commands
+
+#### Hardware
+
+The **Materials required** and **Hardware connection** are the same as [Firmware update](/#Firmware update)
+
+
+Let's go to software part  
+
+#### Software
+
+You can use any serial Tools you like, we use Arduino here. And please make sure you have connect the **USB to serial converter** to your PC. 
+
+
+
+**Step 1.** Open the Arduino IDE, Click **Tools** choose the corresponding **Port**.
+
+![](https://github.com/SeeedDocument/Grove-Uart_Wifi/raw/master/img/1.png)
+
+
+**Step 2.** Then click the <embed src="https://github.com/SeeedDocument/Grove-Uart_Wifi/raw/master/img/COM.png"> button on the upper right corner to open the **Serial Monitor** of Arduino.
+
+**Step 3.** Set the Serial Monitor as the following picture. Particularly :2- Select **Both NL & CR**, 3-Set the **baud rate** to 115200
+
+
+![](https://github.com/SeeedDocument/Grove-Uart_Wifi/raw/master/img/result.png)
+
+**Step 3.** Tap the AT command you need in the command line then click the **Send** button. You will see the return information as the picture above.
+
+
+
+### Basic AT Commands
 
 | Command | Description |
 |-------------|---------------|
@@ -229,7 +455,7 @@ Using Espressif Systems ESP8266 AT Instruction Set Version 0.24 with SeeedStudio
 |AT+RFPOWER|	Set RF TX Power|
 |AT+RFVDD|	Set RF TX Power according to VDD33|
 
-###WiFi AT Commands
+### WiFi AT Commands
 
 |Command	|Description|
 |--------------|-------------|
@@ -264,7 +490,7 @@ Using Espressif Systems ESP8266 AT Instruction Set Version 0.24 with SeeedStudio
 |AT+CWSTARTSMART|	Start SmartConfig|
 |AT+CWSTOPSMART|	Stop SmartConfig|
 
-###TCP/IP AT Commands
+### TCP/IP AT Commands
 
 |Command	|Description|
 |-------------|--------------|
@@ -287,7 +513,7 @@ Using Espressif Systems ESP8266 AT Instruction Set Version 0.24 with SeeedStudio
 |AT+PING|	Ping an IP address or hostname|
 
 
-###Seeed AT Commands
+### Seeed AT Commands
 
 |Command	|Description|
 |-------------|---------------|
@@ -297,14 +523,14 @@ Using Espressif Systems ESP8266 AT Instruction Set Version 0.24 with SeeedStudio
 
 ## Resources
 
-* [Schematic in PDF](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/res/Grove-UART_WiFi_v1.0.pdf)
-* [Schematic in Eagle](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/res/Grove-UART_WiFi_sch_pcb.zip)
-* [Espressif Systems ESP8266](http://espressif.com/en/products/esp8266/)
-* [Espressif Systems ESP8266 AT Instruction Set - v0.24](http://bbs.espressif.com/download/file.php?id=450)
-* [http://www.esp8266.com](http://www.esp8266.com)
-* [ESP-06](http://www.esp8266.com/wiki/doku.php?id=esp8266-module-family#esp-06)
-* [ESP8266 on Hackaday](http://hackaday.com/tag/esp8266/)
-* [https://nurdspace.nl/ESP8266](https://nurdspace.nl/ESP8266)
+- **[PDF]** [Schematic in PDF](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/res/Grove-UART_WiFi_v1.0.pdf)
+* **[Zip]** [Schematic in Eagle](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/res/Grove-UART_WiFi_sch_pcb.zip)
+* **[Datasheet]** [Espressif Systems ESP8266](http://espressif.com/en/products/esp8266/)
+* **[PDF]** [Espressif Systems ESP8266 AT Instruction Set - v0.24](http://bbs.espressif.com/download/file.php?id=450)
+* **[MoreReading]** [http://www.esp8266.com](http://www.esp8266.com)
+* **[MoreReading]** [ESP-06](http://www.esp8266.com/wiki/doku.php?id=esp8266-module-family#esp-06)
+* **[MoreReading]** [ESP8266 on Hackaday](http://hackaday.com/tag/esp8266/)
+* **[MoreReading]** [https://nurdspace.nl/ESP8266](https://nurdspace.nl/ESP8266)
 
 ## Tech Support
 Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
