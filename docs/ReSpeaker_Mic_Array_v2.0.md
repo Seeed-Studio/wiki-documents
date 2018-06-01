@@ -178,6 +178,11 @@ Channel5 Audio(Playback data):
   <source type="audio/ogg" src="https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/channel5_playback.ogg"></source>
 </audio>
 
+
+Here is the video about the DOA and AEC.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XivM-6PRgX8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 ### Install DFU and LED Control Driver  
 
 - **Windows:** Audio recording and playback works well by default. Libusb-win32 driver is only required to control LEDs an DSP parameters on Windows. We use [a handy tool - Zadig](http://zadig.akeo.ie/) to install the libusb-win32 driver for both `SEEED DFU` and `SEEED Control` (ReSpeaker Mic Array has 2 devices on Windows Device Manager).
