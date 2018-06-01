@@ -1622,8 +1622,6 @@ numid=12,iface=MIXER,name='CH8 volume'
 
 The Micphones has 8 ADC channels, 1-6 connects to microphones, 7 & 8 connect to the playback. When we say capture device, we’re saying the ADC. Here are the numid to ADC channel mapping. 
 
-
-```
 | numid          | ADC channel |
 |----------------|-------------|
 | 5              | 1           |
@@ -1634,7 +1632,6 @@ The Micphones has 8 ADC channels, 1-6 connects to microphones, 7 & 8 connect to 
 | 14             | 6           |
 | 15             | 7           |
 | 16             | 8           |
-```
 
 
 - **Step 2.** Tap cset below to set control contents for one control.
