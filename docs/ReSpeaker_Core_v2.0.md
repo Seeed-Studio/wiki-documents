@@ -179,6 +179,11 @@ The onboard Antenna is for WIFI and Bluetooth. Also we provide a interface for 2
 Grove Socket for digital or I2C.
 
 
+**System Diagram**
+
+![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/SYS.png)
+
+
 **Pin Out**
 
 **Pin index definition for headers**
