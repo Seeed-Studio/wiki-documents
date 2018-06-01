@@ -181,7 +181,9 @@ Grove Socket for digital or I2C.
 
 **System Diagram**
 
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/SYS.png)
+You can click it to view the original image
+
+<a href="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/SYS.png" target="_blank"><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/SYS.png"/></a>
 
 
 **Pin Out**
