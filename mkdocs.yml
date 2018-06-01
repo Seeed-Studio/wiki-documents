@@ -491,6 +491,7 @@ pages:
           - Grove - Serial Bluetooth v3.0: Grove-Serial_Bluetooth_v3.0.md
           - Grove - Serial RF Pro: Grove-Serial_RF_Pro.md
           - Grove - UART Wi-Fi: Grove-UART_Wifi.md
+          - Grove - UART Wifi V2: Grove-UART_Wifi_V2.md
           - Grove BLE v1: Grove-BLE_v1.md
 
       - Others:
