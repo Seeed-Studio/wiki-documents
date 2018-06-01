@@ -267,7 +267,7 @@ Please plug the USB cable gently, otherwise you may damage the interface.Please 
 
 **Image Installation**
 
-Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2.0 image from an SD card to get up and running. We offer two ways to boot the Respeaker core v2.0. You can either boot from the SD card or you can go to part B-- **Boot from the eMMC**
+Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2.0 image from an SD card to get up and running. We offer two ways to boot the Respeaker core v2.0. You can either boot from the SD card or [boot from the eMMC](/boot from the eMMC).
 
 **A. Boot from the SD card**
 
@@ -1528,9 +1528,7 @@ And the user name of ReSpeaker Core v2.0 is **respeaker**, the password is **res
 
 **Q5: How to adjust the volume?**
 
-**A5:** You can have 2 ways to adjust the playback volume and capture sensitivity. One is to use alsamixer as below and the other is amixer. 
-
-Here is the **alsamixer's procedure**. 
+**A5:** You can use Alsamixer to adjust the playback volume and capture sensitivity.
 
 - **Step 1.** Tap the following code to open Alsamixer:
 
@@ -1544,118 +1542,7 @@ And you can adjust the value by pressing the **Up** or **Down** key.
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Alexamixer.png)
 
-Here is the **amixer's procedure**. 
-
-- **Step 1.** Tap contents below to show contents of all controls for given card.
-
-```
-respeaker@v2:~$ amixer -c 0 contents
-numid=5,iface=MIXER,name='ADC1 PGA gain'
-  ; type=INTEGER,access=rw---R--,values=1,min=0,max=31,step=0
-  : values=31
-  | dBscale-min=0.00dB,step=1.00dB,mute=0
-numid=6,iface=MIXER,name='ADC2 PGA gain'
-  ; type=INTEGER,access=rw---R--,values=1,min=0,max=31,step=0
-  : values=31
-  | dBscale-min=0.00dB,step=1.00dB,mute=0
-numid=7,iface=MIXER,name='ADC3 PGA gain'
-  ; type=INTEGER,access=rw---R--,values=1,min=0,max=31,step=0
-  : values=31
-  | dBscale-min=0.00dB,step=1.00dB,mute=0
-numid=8,iface=MIXER,name='ADC4 PGA gain'
-  ; type=INTEGER,access=rw---R--,values=1,min=0,max=31,step=0
-  : values=31
-  | dBscale-min=0.00dB,step=1.00dB,mute=0
-numid=13,iface=MIXER,name='ADC5 PGA gain'
-  ; type=INTEGER,access=rw---R--,values=1,min=0,max=31,step=0
-  : values=31
-  | dBscale-min=0.00dB,step=1.00dB,mute=0
-numid=14,iface=MIXER,name='ADC6 PGA gain'
-  ; type=INTEGER,access=rw---R--,values=1,min=0,max=31,step=0
-  : values=31
-  | dBscale-min=0.00dB,step=1.00dB,mute=0
-numid=15,iface=MIXER,name='ADC7 PGA gain'
-  ; type=INTEGER,access=rw---R--,values=1,min=0,max=31,step=0
-  : values=31
-  | dBscale-min=0.00dB,step=1.00dB,mute=0
-numid=16,iface=MIXER,name='ADC8 PGA gain'
-  ; type=INTEGER,access=rw---R--,values=1,min=0,max=31,step=0
-  : values=31
-  | dBscale-min=0.00dB,step=1.00dB,mute=0
-numid=17,iface=MIXER,name='Playback Volume'
-  ; type=INTEGER,access=rw---R--,values=2,min=0,max=31,step=0
-  : values=0,0
-  | dBscale-min=-17.25dB,step=0.75dB,mute=0
-numid=1,iface=MIXER,name='CH1 volume'
-  ; type=INTEGER,access=rw---R--,values=1,min=0,max=255,step=0
-  : values=161
-  | dBscale-min=-119.25dB,step=0.75dB,mute=0
-numid=2,iface=MIXER,name='CH2 volume'
-  ; type=INTEGER,access=rw---R--,values=1,min=0,max=255,step=0
-  : values=161
-  | dBscale-min=-119.25dB,step=0.75dB,mute=0
-numid=3,iface=MIXER,name='CH3 volume'
-  ; type=INTEGER,access=rw---R--,values=1,min=0,max=255,step=0
-  : values=161
-  | dBscale-min=-119.25dB,step=0.75dB,mute=0
-numid=4,iface=MIXER,name='CH4 volume'
-  ; type=INTEGER,access=rw---R--,values=1,min=0,max=255,step=0
-  : values=161
-  | dBscale-min=-119.25dB,step=0.75dB,mute=0
-numid=9,iface=MIXER,name='CH5 volume'
-  ; type=INTEGER,access=rw---R--,values=1,min=0,max=255,step=0
-  : values=161
-  | dBscale-min=-119.25dB,step=0.75dB,mute=0
-numid=10,iface=MIXER,name='CH6 volume'
-  ; type=INTEGER,access=rw---R--,values=1,min=0,max=255,step=0
-  : values=161
-  | dBscale-min=-119.25dB,step=0.75dB,mute=0
-numid=11,iface=MIXER,name='CH7 volume'
-  ; type=INTEGER,access=rw---R--,values=1,min=0,max=255,step=0
-  : values=161
-  | dBscale-min=-119.25dB,step=0.75dB,mute=0
-numid=12,iface=MIXER,name='CH8 volume'
-  ; type=INTEGER,access=rw---R--,values=1,min=0,max=255,step=0
-  : values=161
-  | dBscale-min=-119.25dB,step=0.75dB,mute=0
-```
-
-The Micphones has 8 ADC channels, 1-6 connects to microphones, 7 & 8 connect to the playback. When we say capture device, we’re saying the ADC. Here are the numid to ADC channel mapping. 
-
-| numid          | ADC channel |
-|----------------|-------------|
-| 5              | 1           |
-| 6              | 2           |
-| 7              | 3           |
-| 8              | 4           |
-| 13             | 5           |
-| 14             | 6           |
-| 15             | 7           |
-| 16             | 8           |
-
-
-- **Step 2.** Tap cset below to set control contents for one control.
-
-```
-respeaker@v2:~$ amixer -c 0 cset numid=16 28
-numid=16,iface=MIXER,name='ADC8 PGA gain'
-  ; type=INTEGER,access=rw---R--,values=1,min=0,max=31,step=0
-  : values=28
-  | dBscale-min=0.00dB,step=1.00dB,mute=0
-```
-
-- **Step 3.** Tap cget below to get control contents for one control.
-
-```
-respeaker@v2:~$ amixer -c 0 cget numid=16 
-numid=16,iface=MIXER,name='ADC8 PGA gain'
-  ; type=INTEGER,access=rw---R--,values=1,min=0,max=31,step=0
-  : values=28
-  | dBscale-min=0.00dB,step=1.00dB,mute=0
-```
-
 **Q6: How to use the user button?**
-
 **A6:** As you can see, there is an user button at the back of ReSpeaker Core v2.0. Here we provide a python demo to show how to use it.
 
 - **Step 1.** Tap the command below:
