@@ -7,7 +7,7 @@ surveyurl: https://www.research.net/r/Wio_LTE_4G_Cat_1_GNSS_Espruino_Compatible
 sku: 102990837
 ---
 
-![](https://github.com/SeeedDocument/Wio_Tracker_LTE/raw/master/img/wio_tracker_lte_1.jpg)
+![](https://github.com/SeeedDocument/Wio_LTE/raw/master/img/wio_Lte.jpg)
 
 
 Wio Tracker (Wireless Input Output) is an open source gateway which enable faster IoT GPS solutions. It is Arduino and Grove compatible development boards that helps you track nearly any moving thing on the planet and then upload that data wirelessly. The Wio LTE is the LTE version of Wio Tracker, so now we’ve got 2 versions of Wio Tracker and the LTE (4G) version will make some differences.
@@ -35,8 +35,9 @@ The Wio LTE is well suited for outdoor projects where the device can connect to 
 | Wio Lte v1.0    | Initial                                  | Jul 24, 2017  |
 | Wio Lte v1.1    | Optimizing Production methods            | Oct 18, 2017  |
 | Wio Lte v1.3    | Hardware change with better power supply | March 9, 2018 |
+| Wio Lte v1.3b   | Adjust the layout                        | March 29, 2018|
 
-### Wio Lte v1.3 Release Notes
+**Wio Lte v1.3 Release Notes**
 
 Since the launch of this product, we have received a lot of user feedback and suggestions. We decided to further improve this product based on user feedback, so here you see, the Wio Lte v1.3 comes out.
 
@@ -155,7 +156,7 @@ Hold the reset button for a short time(More than 10 seconds)| The hole board wil
 !!!Tip
     If you want to use the on-board Grove connector, please use digitalWrite(B10, HIGH) to open 3V3_B. except D38 power on by default. Otherwise you can't provide power to Grove modules.
 
-### EC21 Module
+**EC21 Module**
 
 EC21 contains 9 variants: EC21-E, EC21-A, EC21-V, EC21-AUT, EC21-AUV, EC21-AU, EC21-KL, EC21-J and EC21-CEL. This makes it backward-compatible with existing EDGE and GSM/GPRS networks, ensuring that it can easily migrate from LTE to 2G or 3G networks.
 
@@ -235,7 +236,7 @@ And **EC21-A** is what we are using in WIO Tracker - LTE, which supports AT&T an
   </tr>
 </table>
 
-
+<br>
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -337,11 +338,24 @@ And **EC21-A** is what we are using in WIO Tracker - LTE, which supports AT&T an
 
 ### Change DFU driver
 
-**For windows users**: Press and hold BOOT button and connect to computer you will see **STM32 Device in DFU Mode** at device manager, this says that you need to use [zadig_xx.exe](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/zadig_2.1.2.exe) to change DFU driver from **STTub30** to **WinUSB** as bellow.
+**For windows users**: 
+
+- Step 1. Press and hold BOOT button and connect to computer you will see **STM32 Device in DFU Mode** at device manager as below.
+
+![](https://github.com/SeeedDocument/Wio_LTE/raw/master/img/before_driver_installation.png)
+
+- Step 2. This says that you need to use [zadig_xx.exe](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/zadig_2.1.2.exe) to change DFU driver from **STTub30** to **WinUSB** as below. If we can't see any info on the Zadig, please click Options--> List All Devices, then select STM32 Virtual COM Ports.
+
+![](https://github.com/SeeedDocument/Wio_LTE/raw/master/img/zadig.png)
+
+- Step 3. You will see the "STMicroelectronics Virtual COM Port" on device manager as below.
+
+![](https://github.com/SeeedDocument/Wio_LTE/raw/master/img/after_driver_installation.png)
+
 
 ### Update Firmware
 
-- Step 1: Download [WioLTE firmware v1.95](http://www.espruino.com/binaries/espruino_1v95_Wio_LTE.bin) or look for **espruino_xxx_Wio_LTE.bin** [**here**](http://www.espruino.com/binaries/).
+- Step 1: For the latest firmware, you can download from [**here**](http://www.espruino.com/binaries/).  The firmware is named as **espruino_xxx_Wio_LTE.bin**.  
 - Step 2: Install [dfu-util](http://dfu-util.sourceforge.net/releases/), add **dfu-util** to **PATH** or **Environment Variables**, so that we can use it directlly in **command line**.
 - Step 3: Press and hold **BOOT0** button before connect to computer, release after connect.
 - Step 4: The Wio LTE board will access **DFU mode**.
@@ -351,15 +365,11 @@ And **EC21-A** is what we are using in WIO Tracker - LTE, which supports AT&T an
 
 
 
-![](https://github.com/SeeedDocument/Wio_LTE/raw/master/img/zadig.png)
-
-
-
 ### Play with Javascript
 
 Thanks to G.Williams for providing Espruino the Javascript interpreter, so that we can prototype things with Javascript.
 
-#### Install Espruino web IDE
+**1. Install Espruino web IDE**
 
 - Step 1: Install [Chrome Web Browser](https://www.google.com/intl/en/chrome/browser/)
 - Step 2: [Click here to get Espruino Web IDE](https://chrome.google.com/webstore/detail/espruino-web-ide/bleoifhkdalbjfbobjackfdifdneehpo)
@@ -367,7 +377,7 @@ Thanks to G.Williams for providing Espruino the Javascript interpreter, so that 
 
 ![Espruino Web IDE](https://github.com/SeeedDocument/Wio_LTE/blob/master/img/wio_tracker_lte_v1_WebIDE.png?raw=true)
 
-#### How to use Espruino Web IDE
+**2. How to use Espruino Web IDE**
 
 - Step 1: Connect the Wio LTE board to computer using a micro USB cable. On device manager you can see a new COM Port device, on MacOS it is  **STM32 Virtual ComPort**, on windows it is **STMicroelectronic Virtual COM Port**.
 
@@ -380,17 +390,17 @@ Thanks to G.Williams for providing Espruino the Javascript interpreter, so that 
 ![](https://github.com/SeeedDocument/Wio_LTE/blob/master/img/wio_tracker_lte_v1_WebIDEGuide.png?raw=true)
 
 
-#### How to load modules
+**3. How to load modules**
 
 In Espruino, Modules are pieces of pre-written code (libraries) that perform common tasks, such as interfacing to different bits of hardware.
 
 They can currently be used in a few different ways:
 
-##### Espruino Web IDE
+**3.1. Espruino Web IDE**
 
 If you're using the Espruino Web IDE, simply write require("modulename") on the right-hand side - as you would have seen in the reference pages. When you click the Send to Espruino button, the Web IDE will automatically look online for minified versions of the modules you need, download them, and load them onto the board. You don't need an SD card or an internet connection to the Espruino board itself.
 
-##### Load Module - the default mechanism
+**3.2. Load Module - the default mechanism**
 
 If you are using the Web IDE as is, the modules will be loaded from [http://www.espruino.com/modules/](http://www.espruino.com/modules/). This URL can be changed in Web IDE settings.
 
@@ -398,7 +408,7 @@ To save space, most modules are provided as a minified version and the Web IDE t
 
 For example, using require("ADNS5050"); will make the Web IDE loading the minified module from [http://www.espruino.com/modules/ADNS5050.min.js](http://www.espruino.com/modules/ADNS5050.min.js).
 
-##### Load Module from Github
+**3.3. Load Module from Github**
 
 For now, as you can type a URL into require, you can actually just pull a module right off GitHub:
 ```
@@ -410,7 +420,7 @@ require("https://github.com/espruino/EspruinoDocs/blob/d4996cb3179abe260c030ed02
 ```
 The URL comes from clicking **<>** by the commit you were interested in.
 
-##### Load Module from NPM
+**3.4. Load Module from NPM**
 
 If you activate this option in Web IDE, you can load modules from the NPM repository. Right now it:
 
@@ -420,7 +430,7 @@ If you activate this option in Web IDE, you can load modules from the NPM reposi
 
 For example using require("async"); will make the Web IDE loading the tar.gz file (with automatic extraction) of the module from [http://registry.npmjs.org/async](http://registry.npmjs.org/async).
 
-##### Load Module from local folder
+**3.5. Load Module from local folder**
 
 If you are using a local project folder, the Web IDE will automatically create an empty modules folder inside. Put a module there and you can load it with require("myCustomModule");.
 
@@ -437,11 +447,11 @@ If your own module has the same name as one of the existing ones, the Web IDE wi
 
 If you need it anyway, you can provide a local minified version or you can change the Web IDE configuration from .min.js|.js to .js|.min.js or even myCustomModule.js|.min.js|.js to get it working.
 
-##### Stand-alone Espruino
+**3.6. Stand-alone Espruino**
 
 If you have an Espruino with an SD card (but you're not using the Web IDE), you can copy the modules you need into a directory called 'node_modules' on the SD card. Now, whenever you write require("modulename") the module will be used.
 
-##### Internet-enabled Espruino
+**3.7. Internet-enabled Espruino**
 
 Right now there isn't a way to make Espruino automatically load a module from the internet when **required** without the Web IDE. This may be added in the future, but the fact that require is synchronous while network connections are asynchronous makes this difficult to do reliably until **yield** is added into the interpreter.
 
@@ -463,7 +473,7 @@ function loadModule(moduleName, callback) {
 ```
 
 
-#### Play with Onboard RGB LED
+**4. Play with Onboard RGB LED**
 
 - Step 1. Config the R, G, B numbers, the arrange is 0~255.
 - Step 2. Copy the code to IDE and upload to board.
@@ -494,8 +504,11 @@ setInterval(function() {
 }, 100);
 ```
 
-#### Play with SD Card
-***Note: espruino firmware v1.94 is not support SD card drive, please use v1.93 or v1.96(May not released)***
+**5. Play with SD Card**
+
+!!!Note
+    Epruino firmware v1.94 is not support SD card drive, please use v1.96 or later, the latest version is v1.99.
+
 - Step 1. Plug a micro SD card to the card slot
 - Step 2. Copy the code to Espruino IDE and upload it.
 ```javascript
@@ -516,10 +529,10 @@ fs.appendFileSync("hello.txt", "!!!");
 console.log(fs.readFileSync("hello.txt"));
 ```
 
-####  Play with Grove Module
+**6. Play with Grove Module**
 
-##### Play with Digital Ports
-###### Grove-Button (Input)
+**6.1. Play with Digital Ports**
+**6.1.1 Grove-Button (Input)**
 - Step 1. Conenct Grove-Button to Wio LTE D38 port.
 - Step 2. Copy the code to IDE and upload to board.
 - Step 3. We will see the "Pressed" when we press the button. Or else, we will see "Released" printed on screen.
@@ -531,7 +544,7 @@ var button = new (require("GroveButton"))(WioLTE.D38, function(e) {
 });
 ```
 
-###### Grove-Ralay (Output)
+**6.1.2 Grove-Ralay (Output)**
 - Step 1. Conenct Grove-Ralay to Wio LTE D38 port.
 - Step 2. Copy the code to IDE and upload to board.
 - Step 3. We will hear the Relay switch and see the "Done" printed on screen.
@@ -546,8 +559,8 @@ setInterval(function() {
 }, 2000);
 ```
 
-##### Play with Analog Ports
-###### Grove-Light Sensor
+**6.2. Play with Analog Ports**
+
 - Step 1. Conenct Grove-Light Sensor to Wio LTE A4 port.
 - Step 2. Copy the code to IDE and upload to board.
 - Step 3. We will see the numbers printed on screen.
@@ -559,8 +572,8 @@ setInterval(function() {
 }, 500);
 ```
 
-##### Play with UART Ports
-###### Grove-GPS
+**6.3. Play with UART Ports**
+
 - Step 1. Conenct Grove-GPS to Wio LTE UART port.
 - Step 2. Copy the code to IDE and upload to board.
 ```javascript
@@ -577,9 +590,8 @@ var gps = new (require('GPS')).connect(Serial1, function(data) {
 {  "time": "09:35:04", "lat": 30.69765, "lon": 104.05363833333, "fix": 1, "satellites": 6, "altitude": 537.1 }
 ```
 
-##### Play with I2C Ports
+**6.4. Play with I2C Ports**
 
-###### Grove 3-Axis Digital Accerlerometer(±16g)
 - Step 1. Conenct Grove 3-Axis Digital Accerlerometer(±16g) to Wio LTE I2C port.
 - Step 2. Copy the code to IDE and upload to board.
 ```javascript
@@ -603,13 +615,13 @@ setInterval(function(){
 { "x": -0.05078125, "y": -0.47265625, "z": 0.765625 }
 ```
 
-#### Play with Onboard LTE and GPS
+**6.5. Play with Onboard LTE and GPS**
 
 When require modules the Espruino Web IDE will automaticlly search modules at the [modules repository](http://www.espruino.com/modules/).
 To use LTE and GPS functionalities, you need to require the wiolte module
 with require('wiolte').
 
-##### Play with Send and Receive SMS
+**6.5.1 Play with Send and Receive SMS**
 
 - Step 1. Plug the Nano SIM card into Nano SIM slot, near PCB board side.
 - Step 2. Change the phone number and info.
@@ -671,7 +683,8 @@ wiolteStart();
 ```
 
 
-##### Play with Call Out
+**6.5.2 Play with Call Out**
+
 - Step 1. Plug the Nano SIM card into Nano SIM slot, near PCB board side.
 - Step 2. Plug the Headphone into audio port.
 - Step 3. Change the phone number.
@@ -746,7 +759,7 @@ Disconnected
 ```
 
 
-##### Play with Answer Call
+**6.5.3 Play with Answer Call**
 
 - Step 1. Plug the Nano SIM card into Nano SIM slot, near PCB board side.
 - Step 2. Plug the Headphone into audio port.
@@ -802,7 +815,8 @@ wiolteStart();
 
 ```
 
-##### Play with GPS Location
+**6.5.4 Play with GPS Location**
+
 - Step 1. Plug the Nano SIM card into Nano SIM slot, near PCB board side.
 - Step 2. Copy the code to IDE and upload to board.
 - Step 3. After **Geolocalization error : +CME ERROR: 516** stop logging, type **Geoloc()** to show GPS infomation.
@@ -839,7 +853,7 @@ wiolteStart();
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Wio_LTE/master/img/espruino_GPS.png)
 
-##### Play with Get Html Page
+**6.5.5 Play with Get Html Page**
 
 - Step 1. Plug the Nano SIM card into Nano SIM slot, near PCB board side.
 - Step 2. Copy the code to IDE and upload to board.
@@ -945,7 +959,7 @@ full page content --->
 Hello World!
 ```
 
-#### Javascript APIs
+**6.6 Javascript APIs**
 
 For more info, please refer to [Wio_LTE_Module](http://www.espruino.com/modules/wiolte.js)
 
@@ -973,13 +987,14 @@ For more info, please refer to [Wio_LTE_Module](http://www.espruino.com/modules/
 
 ### Play with Arduino
 
-#### Software Configuration
+**1. Software Configuration**
+
 - Step 1. Install Arduino IDE, recommand IDE version upon 1.8.0.
 - Step 2. Follow [How to Add Seeed boards to Arduino IDE](http://wiki.seeed.cc/Seeed_Arduino_Boards/) to add Wio_LTE into arduino board manager.
 - Step 3. Download the [Wio_LTE Library](https://github.com/Seeed-Studio/Wio_LTE_Arduino_Library) from Github.
 - Step 4. Refer [How to install library](http://wiki.seeed.cc/How_to_install_Arduino_Library) to install library for Arduino.
 
-#### Play with SMS Send
+**2. Play with SMS Send**
 
 - Step 1. Plug the Nano SIM card into Nano SIM slot, near PCB board side.
 - Step 2. Select File--> Examples-->Wio_LTE_Arduino_Library-->SMSSend sketch.
@@ -1040,7 +1055,7 @@ Network ready!
 Send OK!
 ```
 
-#### Play with SMS Read
+**3. Play with SMS Read**
 
 - Step 1. Plug the Nano SIM card into Nano SIM slot, near PCB board side.
 - Step 2. Select File--> Examples-->Wio_LTE_Arduino_Library-->SMSRead sketch.
@@ -1122,7 +1137,7 @@ Waiting for new SMS!
 Waiting for new SMS!
 ```
 
-#### Play with GPS
+**4. Play with GPS**
 
 - Step 1. Plug the Nano SIM card into Nano SIM slot, near PCB board side.
 - Step 2. Select File--> Examples-->Wio_LTE_Arduino_Library-->GNNS-->GNSS_Show_Coordinate sketch.
@@ -1215,7 +1230,7 @@ Data type in double: 113.966248,22.583820
 Data type in string: 113.966248,22.583819
 ```
 
-#### Play with GPS in NMEA mode
+**5. Play with GPS in NMEA mode**
 
 - Step 1. Plug the Nano SIM card into Nano SIM slot, near PCB board side.
 - Step 2. Select File--> Examples-->Wio_LTE_Arduino_Library-->GNNS-->GNSS_NMEA sketch.
@@ -1343,7 +1358,7 @@ $GPVTG,,T,2.3,M,0.0,N,0.0,K,A*0C
 
 ```
 
-#### Play with Call out
+**6. Play with Call out**
 
 - Step 1. Plug the Nano SIM card into Nano SIM slot, near PCB board side.
 - Step 2. Select File--> Examples-->Wio_LTE_Arduino_Library-->Callup sketch.
@@ -1393,7 +1408,7 @@ void loop() {
 
 ```
 
-#### Play with Socket TCP/UDP client
+**7. Play with Socket TCP/UDP client**
 
 - Step 1. Plug the Nano SIM card into Nano SIM slot, near PCB board side.
 - Step 2. Select File--> Examples-->Wio_LTE_Arduino_Library-->TCPConnect.
@@ -1499,9 +1514,10 @@ Hello world!
 +QIURC: "closed",0
 ```
 
+**8. Play with SD Card**
 
-
-#### Play with SD Card
+!!!Note
+    Epruino firmware v1.94 is not support SD card drive, please use v1.96 or later, the latest version is v1.99.
 
 - Step 1. Plug micro SD card to the SD card slot.
 - Step 2. Select File--> Examples-->Wio_LTE_Arduino_Library-->SDCard->CardInfo.
@@ -1620,13 +1636,13 @@ Please click here to see all [Wio_LTE](http://support.seeedstudio.com/knowledgeb
 
 ## Resource
 
-- **[Eagle]** [Wio LTE Cat.1 v1.1.SCH](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/Wio%20LTE%20Cat.1%20v1.1.sch.zip)
+- **[Eagle&PDF]** [Wio LTE AU Version v1.3b](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/Wio%20LTE%20AU%20Version%20v1.3b-%204G%2C%20Cat.1%2C%20GNSS%2C%20Espruino%20Compatible.zip)
 
-- **[Eagle]** [Wio LTE Cat.1 v1.1.BRD](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/Wio%20LTE%20Cat.1%20v1.1.brd.zip)
+- **[Eagle&PDF]** [Wio LTE EU Version v1.3b](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/Wio%20LTE%20EU%20Version%20v1.3b-%204G%2C%20Cat.1%2C%20GNSS%2C%20Espruino%20Compatible.zip)
 
-- **[PDF]** [Wio LTE Cat.1 v1.1.SCH](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/Wio%20LTE%20Cat.1%20Sch%20v1.1.pdf.zip)
+- **[Eagle&PDF]** [Wio LTE JP Version v1.3b](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/Wio%20LTE%20JP%20Version%20v1.3b-%204G%2C%20Cat.1%2C%20Espruino%20Compatible.zip)
 
-- **[PDF]** [Wio LTE Cat.1 v1.1.PCB](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/Wio%20LTE%20Cat.1%20PCB%20v1.1.pdf.zip)
+- **[Eagle&PDF]** [Wio LTE US Version v1.3b](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/Wio%20LTE%20US%20Version%20v1.3b%20-%204G%2C%20Cat.1%2C%20GNSS%2C%20Espruino%20Compatible.zip)
 
 - **[Library]** [Wio_LTE_Arduino_Library](https://github.com/Seeed-Studio/Wio_LTE_Arduino_Library)
 
