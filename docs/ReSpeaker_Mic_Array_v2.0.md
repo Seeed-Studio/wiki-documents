@@ -374,6 +374,54 @@ pi@raspberrypi:~/usb_4_mic_array $ sudo python doa.py
 103
 ```
 
+### VAD (Voice Activity Detection)
+
+**For Windows/Mac/Linux:** Here is the example to view the VAD. The Red LED is the indicator of the VAD. 
+
+- Step 1. Download the usb_4_mic_array.
+
+```python
+git clone https://github.com/respeaker/usb_4_mic_array.git
+cd usb_4_mic_array
+```
+
+- Step 2. Create a [VAD.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/VAD.py) with below code under usb_4_mic_array folder and run 'python VAD.py'
+
+```
+from tuning import Tuning
+import usb.core
+import usb.util
+import time
+
+dev = usb.core.find(idVendor=0x2886, idProduct=0x0018)
+#print dev
+if dev:
+    Mic_tuning = Tuning(dev)
+    print Mic_tuning.is_voice()
+    while True:
+        try:
+            print Mic_tuning.is_voice()
+            time.sleep(1)
+        except KeyboardInterrupt:
+            break
+```
+
+- Step 3. We will see the DOA as below.
+
+```
+pi@raspberrypi:~/usb_4_mic_array $ sudo python VAD.py 
+0
+0
+0
+1
+0
+1
+0
+```
+
+!!!Note
+    For the threshold of VAD, we also can use the GAMMAVAD_SR to set. Please refer to [Tuning](http://wiki.seeedstudio.com/ReSpeaker_Mic_Array_v2.0/#tuning) for more detail.
+
 ### Extract Voice
 
 We use [PyAudio python library](https://people.csail.mit.edu/hubert/pyaudio/) to extract voice through USB.
@@ -688,6 +736,10 @@ DOAANGLE: 180
 
 A3: Yes, we can connect the mic array v2.0 to raspberry usb port and follow [Raspberry Pi Quick Start Guide with Script](https://github.com/alexa/avs-device-sdk/wiki/Raspberry-Pi-Quick-Start-Guide-with-Script) to do the voice interaction with alexa. 
 
+**Q4: Do you have the example for Mic array v2.0 with ROS system?**
+
+A4: Yes, thanks for Yuki sharing the package for integrating [ReSpeaker Mic Array v2 with ROS (Robot Operating System) Middleware](https://github.com/furushchev/respeaker_ros).
+
 
 ## Resource
 - **[PDF]** [ReSpeaker MicArray v2.0 Product Brief](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/ReSpeaker%20MicArray%20v2.0%20Product%20Brief.pdf)
@@ -696,6 +748,7 @@ A3: Yes, we can connect the mic array v2.0 to raspberry usb port and follow [Ras
 - **[STP]** [ReSpeaker MicArray v2.0 3D Model](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/RESPEAKER%20MIC-3D%20v2.0.stp.zip)
 - **[PDF]** [XVF3000 Product Brief](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/XVF3000-3100-product-brief_1.4.pdf)
 - **[PDF]** [XVF3000 Datasheet](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/XVF3000-3100-TQ128-Datasheet_1.0.pdf)
+- **[Github]** [ReSpeaker Mic Array v2 with ROS (Robot Operating System) Middleware](https://github.com/furushchev/respeaker_ros)
 
 
 
