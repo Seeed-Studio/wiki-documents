@@ -1690,7 +1690,29 @@ on the new pads, as shown below：
 - **[MoreReading]** [Mraa Python documents page](http://iotdk.intel.com/docs/master/mraa/python/)
 - **[MoreReading]** [Intel Mraa SDK](https://software.intel.com/en-us/mraa-sdk/documentation )
 
+## Projects
 
+**ReSpeaker Core v2.0 - Alexa Demo**
+
+In this demo, we use ReSpeaker Core v2.0 to talk with Alexa. You can ask any question and talk with ReSpeaker Core v2.0 just like a friend. Moreover, this product can work with google Assistant and Bing as well. The hotword is Snowboy, and of cause you can make your own  wake up word.
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/q7b8iLqRiPY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+**ReSpeaker Core v2.0 - Wake Up Distance Test**
+
+In this demo, we've tested the wake-up distance of ReSpeaker Core v2.0. We use the Alexa with the hot word Snowboy. As you can see in the screen, the ''Alexa:status  code 204" means wake up the Alexa successfully.
+
+With advanced algorithms and six high-quality microphones, the result is amazing! We can wake the ReSpeaker Core v2.0 up 16 meters(52Ft) away!
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/PpcwvOLlpEw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+**ReSpeaker Core v2.0 - Voice Reception System**
+
+This smart system consists of a voice assistant (ReSpeaker Core v2.0) and a phone assistant (Linklt One). As you can see, when a visitor tells the voice assistant the name of the person he is looking for, the little smart assistant will recognize and search the person in its database. If there is a matched name, our assistant will call him. And when the person confirms the visitor's ID, he just need to send the message "Open" to open the door so that the visitor can walk in.
+
+How about having such a voice reception system in front of your house or work space? Isn’t it cool?
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/tdIsCRXKoVI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Tech Support
 Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/).
