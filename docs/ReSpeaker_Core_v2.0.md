@@ -1169,6 +1169,55 @@ When you run the python program, you can say **Alexa** to wake up the Baidu voic
 Please refer to our wiki [Google Assistant](http://wiki.seeedstudio.com/Google_Assistant). Follow the instruction step by step, then you will be able to use Google Assistant.
 
 
+### Play with Bing
+
+This part will introduce Bing STT(Speech to Text) functions together with pocketsphinx to control GPIO pins. 
+
+- **Step 1. Install dependiencies**
+
+```
+sudo apt-get update && sudo apt-get upgrade
+sudo apt install libasound-dev portaudio19-dev libportaudiocpp0
+sudo apt-get install -y python python-dev python-pip build-essential swig git libpulse-dev
+sudo pip install pocketsphinx webrtcvad requests monotonic
+sudo pip install pyaudio respeaker
+```
+
+- **Step 2. Install respeaker python library**
+
+```
+git clone https://github.com/respeaker/respeaker_python_library.git
+```
+
+- **Step 3. Get Bing key from [Azure](https://www.microsoft.com/cognitive-services/en-us/speech-api).**
+
+- **Step 4. Connect a [Grove-LED](http://wiki.seeedstudio.com/Grove-Red_LED/) to respeaker core GPIO**
+
+| Grove-LED | ReSpeaker Core GPIO |
+|-----------|---------------------|
+| Yellow    | 2                   |
+| White     | NA                  |
+| Red       | 1                   |
+| Black     | 6                   |
+
+
+- **Step 5. Downlod the [SmartHome.py](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/SmartHome.py)**
+
+```
+cd ~
+wget https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/SmartHome.py
+python SmartHome.py  #Please add bing key first @ line 12
+```
+
+- **Step 6. Let's say *ReSpeaker* to wake up**
+
+- **Step 7. Control LED**
+
+We can say **turn on light** or **turn off light** to control Grove-LED. 
+
+!!!Note
+    Please refer to FAQ9 to change the PocketSphinx wake up world.
+
 
 ## Play with GPIO
 
@@ -1599,9 +1648,36 @@ on the new pads, as shown below：
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/ant.png)
 
 
+**Q9: How to change the bing & pocketsphinx wake up word and sensitivity?**
 
+**A9:** Please change the **keywords.txt** and **dictionary.txt** under **/home/respeaker/respeaker_python_library/respeaker/pocketsphinx-data** folder. 
 
+- keywords.txt contains keywords and their threshold. For example, [keywords.txt](https://github.com/respeaker/respeaker_python_library/blob/master/respeaker/pocketsphinx-data/keywords.txt) is
 
+	```
+	respeaker /1e-30/
+	alexa /1e-30/
+	play music /1e-40/
+	```
+
+	respeaker is a keyword, 1e-30 is its threshold. To improve sensitive, we can decrease the threshold, for example, 1e-50. We should know  decreasing the threshold will increase False Acceptance Rate.
+
+	If you want to add new keyword, you should firstly add the keyword to  [dictionary.txt](https://github.com/respeaker/respeaker_python_library/blob/master/respeaker/pocketsphinx-data/dictionary.txt).  The dictionary.txt is like:
+
+	```
+	respeaker	R IY S P IY K ER
+	alexa	AH L EH K S AH
+	play	P L EY
+	music	M Y UW Z IH K
+	```
+
+	The first part is a name (respeaker, alexa or music), the second part is its phonemes. You can find words in a large dictionary at [here](https://github.com/respeaker/pocketsphinx-data/blob/master/dictionary.txt).
+
+- then change the code:
+
+	```
+	if mic.wakeup('respeaker'):
+	```
 
 ## Resources
 - **[PDF]** [Download PDF of This Wiki](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/ReSpeaker_Core_v2.pdf)
