@@ -7,7 +7,7 @@ surveyurl: https://www.research.net/r/Wio_LTE_4G_Cat_1_GNSS_Espruino_Compatible
 sku: 102990837
 ---
 
-![](https://github.com/SeeedDocument/Wio_LTE/raw/master/img/wio_Lte.jpg)
+![](https://github.com/SeeedDocument/Wio_LTE/raw/master/img/wio_lte_v1.3.jpg)
 
 
 Wio Tracker (Wireless Input Output) is an open source gateway which enable faster IoT GPS solutions. It is Arduino and Grove compatible development boards that helps you track nearly any moving thing on the planet and then upload that data wirelessly. The Wio LTE is the LTE version of Wio Tracker, so now we’ve got 2 versions of Wio Tracker and the LTE (4G) version will make some differences.
@@ -1041,7 +1041,7 @@ void loop() {
   AT_bypass();
 }
 ```
-- Step 10.Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, bute reopen Arduino IDE can recover that issue**.
+- Step 10.Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, but reopen Arduino IDE can recover that issue**.
 - Step 11. The phone number owner will receive the message.
 
 ```C++
@@ -1113,7 +1113,7 @@ void loop() {
 
 ```
 
-- Step 9.Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, bute reopen Arduino IDE can recover that issue**.
+- Step 9.Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, but reopen Arduino IDE can recover that issue**.
 - Step 10. Open serial monitor, when seeing **Waitting for new SMS!**, send message to the board, the new message will display soon with phone number, time, content.
 
 ```C
@@ -1194,7 +1194,7 @@ void loop() {
 
 ```
 
-- Step 9.Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, bute reopen Arduino IDE can recover that issue**.
+- Step 9.Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, but reopen Arduino IDE can recover that issue**.
 - Step 10. We will see lat, lon info printed on screen.
 
 ```C
@@ -1292,7 +1292,7 @@ void loop() {
 }
 
 ```
-- Step 9.Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, bute reopen Arduino IDE can recover that issue**.
+- Step 9.Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, but reopen Arduino IDE can recover that issue**.
 - Step 10. We will see below logs.
 
 ```C
@@ -1369,7 +1369,7 @@ $GPVTG,,T,2.3,M,0.0,N,0.0,K,A*0C
 - Step 7. Keep COM Port blank.
 - Step 8. Select Sketch-->Upload to upload the code to Wio_LTE.
 - Step 9. Press **RST** button to enable the COM port.
-- Step 10.Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, bute reopen Arduino IDE can recover that issue**.
+- Step 10.Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, but reopen Arduino IDE can recover that issue**.
 - Step 11. The phone number owner will receive the call.
 
 ```c++
@@ -1472,7 +1472,7 @@ void loop() {
 }
 ```
 - Step 9. Press **RST** button to enable the COM port.
-- Step 10.Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, bute reopen Arduino IDE can recover that issue**.
+- Step 10.Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, but reopen Arduino IDE can recover that issue**.
 
 ```
 Begin...
@@ -1612,7 +1612,7 @@ void loop(void) {
 ```
 
 - Step 9. Press **RST** button to enable the COM port.
-- Step 10.Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, bute reopen Arduino IDE can recover that issue**.
+- Step 10.Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, but reopen Arduino IDE can recover that issue**.
 
 
 
@@ -1629,6 +1629,314 @@ Volume size (Mbytes): 2564
 
 Files found on the card (name, date and size in bytes):
 
+```
+
+**9. Play with Grove Module**
+
+**9.1 Play with Grove Digital Module**  
+
+We use [Grove-TemperatureAndHumidity_Sensor](http://wiki.seeedstudio.com/Grove-TemperatureAndHumidity_Sensor/) as digital input and connect to D20 of Wio LTE. 
+
+- Step 1. Press and hold BOOT button at back side of the Wio LTE and plug the USB to PC.
+- Step 2. We will see **STM BOOLARDER** in device manager.
+- Step 3. Select Tools-->Boards-->Wio_Tracker_LTE.
+- Step 4. Keep COM Port blank.
+- Step 5. Download [WioLTEforArduino Library](https://github.com/SeeedJP/WioLTEforArduino/archive/master.zip) and [Grove-TemperatureAndHumidity_Sensor Library](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor/archive/master.zip) from Github. Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- Step 6. Copy below code to Sketch.
+- Step 7. Click Upload to upload the code to Wio_LTE.
+
+
+```c
+#include <WioLTEforArduino.h>
+#include "DHT.h"
+#define DHTPIN  (WIOLTE_D20)
+#define INTERVAL    (100)
+
+// Uncomment whatever type you're using!
+#define DHTTYPE DHT11   // DHT 11 
+//#define DHTTYPE DHT22   // DHT 22  (AM2302)
+//#define DHTTYPE DHT21   // DHT 21 (AM2301)
+
+WioLTE Wio;
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup()
+{
+  delay(200);
+  SerialUSB.println("### I/O Initialize.");
+  Wio.Init();
+  SerialUSB.println("### Power supply ON.");
+  Wio.PowerSupplyGrove(true);
+  delay(500);
+  SerialUSB.println("### Initial temperature and humidity sensor.");
+  dht.begin();
+}
+
+void loop()
+{
+    // Reading temperature or humidity takes about 250 milliseconds!
+    // Sensor readings may also be up to 2 seconds 'old' (its a very slow sensor)
+    float h = dht.readHumidity();
+    float t = dht.readTemperature();
+
+    // check if returns are valid, if they are NaN (not a number) then something went wrong!
+    if (isnan(t) || isnan(h)) 
+    {
+        SerialUSB.println("Failed to read from DHT");
+    } 
+    else 
+    {
+        SerialUSB.print("Humidity: "); 
+        SerialUSB.print(h);
+        SerialUSB.print(" %\t");
+        SerialUSB.print("Temperature: "); 
+        SerialUSB.print(t);
+        SerialUSB.println(" *C");
+    }
+}
+```
+
+- Step 8. Press **RST** button to enable the COM port.
+- Step 9. Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, but reopen Arduino IDE can recover that issue**.
+
+```
+### I/O Initialize.
+### Power supply ON.
+### Initial temperature and humidity sensor.
+Humidity: 40.00 %	Temperature: 27.00 *C
+Humidity: 40.00 %	Temperature: 27.00 *C
+Humidity: 40.00 %	Temperature: 27.00 *C
+Humidity: 40.00 %	Temperature: 27.00 *C
+Humidity: 39.00 %	Temperature: 27.00 *C
+```
+
+**9.2 Play with Grove Analog Module**  
+
+We use [Grove-Light Sensor](http://wiki.seeedstudio.com/Grove-Light_Sensor/) as analog input and connect to A4 of Wio LTE(12bit ADC). 
+
+- Step 1. Press and hold BOOT button at back side of the Wio LTE and plug the USB to PC.
+- Step 2. We will see **STM BOOLARDER** in device manager.
+- Step 3. Select Tools-->Boards-->Wio_Tracker_LTE.
+- Step 4. Keep COM Port blank.
+- Step 5. Download [WioLTEforArduino Library](https://github.com/SeeedJP/WioLTEforArduino/archive/master.zip) from Github. Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- Step 6. Copy below code to Sketch.
+- Step 7. Click Upload to upload the code to Wio_LTE.
+
+
+```c
+#include <WioLTEforArduino.h>
+#define LIGHT_PIN  (WIOLTE_A4)
+WioLTE Wio;
+
+void setup() {
+  delay(200);
+  SerialUSB.println("### I/O Initialize.");
+  Wio.Init();
+  SerialUSB.println("### Power supply ON.");
+  Wio.PowerSupplyGrove(true);
+  delay(500);
+  SerialUSB.println("### Setup pin mode.");
+  pinMode(LIGHT_PIN, INPUT_ANALOG);
+}
+
+void loop() {
+  int light = analogRead(LIGHT_PIN);
+  SerialUSB.println(light);
+  delay(1000);
+}
+
+```
+
+- Step 8. Press **RST** button to enable the COM port.
+- Step 9. Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, but reopen Arduino IDE can recover that issue**.
+
+```
+### I/O Initialize.
+### Power supply ON.
+### Setup pin mode.
+2531
+2530
+2530
+2530
+2531
+2533
+2532
+2531
+```
+
+**9.3 Play with Grove I2C Module**  
+
+We use [Grove - 3-Axis Digital Accelerometer(±16g)](http://wiki.seeedstudio.com/Grove-3-Axis_Digital_Accelerometer-16g/) as I2C device and connect to I2C port of Wio LTE. 
+
+- Step 1. Press and hold BOOT button at back side of the Wio LTE and plug the USB to PC.
+- Step 2. We will see **STM BOOLARDER** in device manager.
+- Step 3. Select Tools-->Boards-->Wio_Tracker_LTE.
+- Step 4. Keep COM Port blank.
+- Step 5. Download [WioLTEforArduino Library](https://github.com/SeeedJP/WioLTEforArduino/archive/master.zip)  and [ADXL345](https://github.com/Seeed-Studio/Accelerometer_ADXL345/archive/master.zip) from Github. Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- Step 6. Copy below code to Sketch.
+- Step 7. Click Upload to upload the code to Wio_LTE.
+
+
+```c
+#include <WioLTEforArduino.h>
+#include <ADXL345.h>       
+
+#define INTERVAL    (100)
+
+WioLTE Wio;
+ADXL345 Accel;
+
+void setup()
+{ 
+  delay(200);
+  SerialUSB.println("### I/O Initialize.");
+  Wio.Init(); 
+  SerialUSB.println("### Power supply ON.");
+  Wio.PowerSupplyGrove(true);
+  delay(500);
+  Accel.powerOn();
+  SerialUSB.println("### Setup completed.");
+}
+
+void loop()
+{
+  int x;
+  int y;
+  int z;
+  Accel.readXYZ(&x, &y, &z);
+  SerialUSB.print(x);
+  SerialUSB.print(' ');
+  SerialUSB.print(y);
+  SerialUSB.print(' ');
+  SerialUSB.println(z); 
+  delay(INTERVAL);
+}
+```
+
+- Step 8. Press **RST** button to enable the COM port.
+- Step 9. Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, but reopen Arduino IDE can recover that issue**.
+
+```
+### I/O Initialize.
+### Power supply ON.
+### Setup completed.
+-224 -51 -82
+-227 -40 -90
+-231 -37 -91
+-229 -37 -90
+-227 -38 -90
+-229 -39 -90
+```
+
+**9.4 Play with Grove UART Module**  
+
+We use [Grove-CO2](http://wiki.seeedstudio.com/Grove-CO2_Sensor/) as UART device and connect to UART port of Wio LTE. 
+
+- Step 1. Press and hold BOOT button at back side of the Wio LTE and plug the USB to PC.
+- Step 2. We will see **STM BOOLARDER** in device manager.
+- Step 3. Select Tools-->Boards-->Wio_Tracker_LTE.
+- Step 4. Keep COM Port blank.
+- Step 5. Download [WioLTEforArduino Library](https://github.com/SeeedJP/WioLTEforArduino/archive/master.zip) from Github. Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- Step 6. Copy below code to Sketch.
+- Step 7. Click Upload to upload the code to Wio_LTE.
+
+
+```c
+#include <WioLTEforArduino.h>
+#include <ADXL345.h>       
+#define INTERVAL    (100)
+
+const unsigned char cmd_get_sensor[] =
+{
+    0xff, 0x01, 0x86, 0x00, 0x00,
+    0x00, 0x00, 0x00, 0x79
+};
+
+unsigned char dataRevice[9];
+int temperature;
+int CO2PPM;
+
+WioLTE Wio;
+
+void setup()
+{ 
+  delay(200);
+  SerialUSB.println("### I/O Initialize.");
+  Wio.Init(); 
+  SerialUSB.println("### Power supply ON.");
+  Wio.PowerSupplyGrove(true);
+  delay(500);
+  SerialUSB.println("Initial UART.");
+  Serial.begin(9600);
+}
+
+void loop() {
+    if(dataRecieve())
+    { 
+        SerialUSB.print("Temperature: ");
+        SerialUSB.print(temperature);
+        SerialUSB.print("  CO2: ");
+        SerialUSB.print(CO2PPM);
+        SerialUSB.println("");
+    }
+    delay(1000); 
+}
+
+
+bool dataRecieve(void)
+{
+    byte data[9];
+    int i = 0;
+
+    //transmit command data
+    for(i=0; i<sizeof(cmd_get_sensor); i++)
+    {
+        Serial.write(cmd_get_sensor[i]);
+    }
+    delay(10);
+    //begin reveiceing data
+    if(Serial.available())
+    {
+        while(Serial.available())
+        {
+            for(int i=0;i<9; i++)
+            {
+                data[i] = Serial.read();
+            }
+        }
+    }
+
+    for(int j=0; j<9; j++)
+    {
+        Serial.print(data[j]);
+        Serial.print(" ");
+    }
+    Serial.println("");
+
+    if((i != 9) || (1 + (0xFF ^ (byte)(data[1] + data[2] + data[3] + data[4] + data[5] + data[6] + data[7]))) != data[8])
+    {
+        return false;
+    }
+
+    CO2PPM = (int)data[2] * 256 + (int)data[3];
+    temperature = (int)data[4] - 40;
+
+    return true;
+}
+```
+
+- Step 8. Press **RST** button to enable the COM port.
+- Step 9. Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, but reopen Arduino IDE can recover that issue**.
+
+```
+### I/O Initialize.
+### Power supply ON.
+### Initial UART.
+Temperature: 22  CO2: 410
+Temperature: 22  CO2: 1031
+Temperature: 22  CO2: 2699
+Temperature: 22  CO2: 2579
+Temperature: 22  CO2: 2972
 ```
 
 ## FAQ
