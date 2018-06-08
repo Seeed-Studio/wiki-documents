@@ -11,12 +11,40 @@ tags: grove_analog, io_3v3, io_5v, plat_duino
 ---
 
 
+![](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/Img/main.JPG)
+
 Seeed’s LTE CAT.1 Pi HAT is an open sourcecellular extension modem for Raspberry Pi,
 based on u-blox LARA-R2xx series. Itcompatible with Raspberry Pi 1 Model B+ and later versions.
 
 LTE CAT.1 Pi HAT is designed for LTE Category 1 networks and with 2G fallback(EU version only). Embedding common protocols, like TCP/UDP, HTTP.
 
 LTE CAT.1 Pi HAT support UART and USB interfaces. By UART, Raspberry Pi communicate with LTE CAT.1 Pi HAT via AT command without any special driver. It’s well suited for building prototyping rapidly.
+
+
+
+ <center>
+
+
+|Version|Links|
+|--|--|
+|<br>Europe</br>|<p style="text-align:center"><a href="https://www.seeedstudio.com/LTE-Cat-1-Pi-HAT-%28Europe%29-p-3060.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/get_one_now_small.png" /></a></p>|
+|<br>USA-AT&T</br>|<p style="text-align:center"><a href="https://www.seeedstudio.com/LTE-Cat-1-Pi-HAT-%28USA-AT%26T%29-p-3056.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/get_one_now_small.png" /></a></p>|
+|<br>USA-VZW<br>|<p style="text-align:center"><a href="https://www.seeedstudio.com/LTE-Cat-1-Pi-HAT-%28USA-VZW%29-p-3061.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/get_one_now_small.png" /></a></p>|
+
+</center>
+
+
+
+## Version
+
+Now we have made three versions of the **LTE Cat 1 Pi HAT** .In addition to supporting different networks, they are almost the same. And you may pay attention that the only the Europe version support 2G net.
+
+Version|Modul|Network
+--|--|---
+Europe|LARA-R211|2G / 4G
+USA-AT&T|LARA-R203|4G
+USA-VZW|LARA-R204|4G
+
 
 
 ## Specifications
