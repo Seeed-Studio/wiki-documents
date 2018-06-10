@@ -676,6 +676,10 @@ pages:
           - Things We Make: Things_We_Make.md
           - Upload Code: Upload_Code.md
           - Use External Editor: Use_External_Editor.md
+          - Voice Interaction:
+            - Voice Interaction: Voice_Interaction.md
+            - Google Assistant: Google_Assistant.md
+            - ReSpeaker Core V2 & Wio Link: ReSpeaker_Core_V2_&_Wio_Link.md
           - Xadow IO pin mapping: Xadow_IO_pin_mapping.md
           - Zigbee Networking with XBee Series 2 and Seeed&#39;s Products: Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products.md
 

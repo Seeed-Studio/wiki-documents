@@ -18,6 +18,7 @@ Here is the list of the Tutorial you can find in the Seeed WiKi. The list will b
 - [FM Receiver](/FM_Receiver/)
 - [Get Started with Arduino](/Getting_Started_with_Arduino/)
 - [Getting Started with Seeeduino](/Getting_Started_with_Seeeduino/)
+- [Google Assistant](/Google_Assistant/)
 - [Grove Inventor Kit for micro:bit](/Grove_Inventor_Kit_for_microbit/)
 - [Guide to use demos downloaded from Seeed&#39;s Github](/Guide_to_use_demos_downloaded_from_Seeed-s_Github/)
 - [How To Choose The Right Cable](/How_To_Choose_The_Right_Cable/)
@@ -60,6 +61,7 @@ Here is the list of the Tutorial you can find in the Seeed WiKi. The list will b
 - [RePhone APIs - Audio](/RePhone_APIs-Audio/)
 - [Relay Control LED](/Relay_Control_LED/)
 - [Replacement LCD Screen for DSO nano](/Replacement_LCD_Screen_for_DSO_nano/)
+- [ReSpeaker Core V2 & Wio Link](/ReSpeaker_Core_V2_&_Wio_Link/)
 - [Secret Box](/Secret_Box/)
 - [Seeeduino Buying Guide](/Seeeduino_Buying_Guide/)
 - [Service for Fusion PCB](/Service_for_Fusion_PCB/)
@@ -70,6 +72,7 @@ Here is the list of the Tutorial you can find in the Seeed WiKi. The list will b
 - [Things We Make](/Things_We_Make/)
 - [Upload Code](/Upload_Code/)
 - [Use External Editor](/Use_External_Editor/)
+- [Voice Interaction](/Voice_Interaction/)
 - [Xadow IO pin mapping](/Xadow_IO_pin_mapping/)
 - [Zigbee Networking with XBee Series 2 and Seeed&#39;s Products](/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/)
 

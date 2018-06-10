@@ -1219,6 +1219,10 @@ We can say **turn on light** or **turn off light** to control Grove-LED.
     Please refer to FAQ9 to change the PocketSphinx wake up world.
 
 
+## Play with Wio Link
+
+Please follow [ReSpeaker Core V2 & Wio Link Tutorial](http://wiki.seeedstudio.com/ReSpeaker_Core_V2_&_Wio_Link/) to use the ReSpeaker Core V2 to control Wio Link through IFTTT.
+
 ## Play with GPIO
 
 This part will introduce how to use **MRAA** and **UPM** to control GPIO and Grove Socket on Respeaker Core v2.0.
