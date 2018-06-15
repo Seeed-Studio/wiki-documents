@@ -502,6 +502,44 @@ For example, pin 36 is ADC0. The following command line examples demonstrate how
 !!!note
     Please change the in_voltage0_raw to in_voltage1_raw if we use pin37 (ADC1). 
 
+
+**UART Control**
+
+- Step 1. Run below command to enable UART0, and we can see ttyAMA4 in list, tested with [ARTIK 530s 1G Secure Module Firmware (Ubuntu): A533s_os_18.05.00](https://developer.artik.io/downloads/2768bd32-383a-44cf-9e90-9292712a96ba/download).
+
+
+```
+cd /sys/kernel/config/device-tree/overlays/
+mkdir ttyAMA4
+cd /boot/overlays
+cat s5p4418-artik533-compy-serial4.dtbo  > /sys/kernel/config/device-tree/overlays/ttyAMA4/dtbo
+cd /dev
+ls tty*
+```
+
+- Step 2. Connect the UART0 TX/RX to USB2Serial adaptor.
+
+| Pin Number | Pin Name   | USB2Serial Adaptor |
+|------------|------------|--------------------|
+| 6          | GND        | GND                |
+| 8          | XUART0_TX  | RX                 |
+| 10         | XUART0_RX  | TX                 |
+
+- Step 3. Send "hello" to UART0
+
+```
+stty -F /dev/ttyAMA4 
+echo “hello ..” > /dev/ttyAMA4
+```
+
+- Step 4. We can see the serial monitor as below.
+
+```
+hello ..
+hello ..
+hello ..
+```
+
 ## Play with ReSpeakers Mics
 
 **Play with 2 Mics Pi HAT**
