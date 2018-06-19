@@ -161,6 +161,8 @@ pages:
           - ReSpeaker Introduction: ReSpeaker.md
           - ReSpeaker 2-Mics Pi HAT: ReSpeaker_2_Mics_Pi_HAT.md
           - ReSpeaker 4-Mic Array for Raspberry Pi: ReSpeaker_4_Mic_Array_for_Raspberry_Pi.md
+          - ReSpeaker 4-Mic Linear Array Kit for Raspberry Pi: ReSpeaker_4-Mic_Linear_Array_Kit_for_Raspberry_Pi.md
+          - ReSpeaker 6-Mic Circular Array kit for Raspberry Pi.md: ReSpeaker_6-Mic_Circular_Array_kit_for_Raspberry_Pi.md
           - ReSpeaker Core: ReSpeaker_Core.md
           - ReSpeaker Core v2.0: ReSpeaker_Core_v2.0.md
           - ReSpeaker Drive Unit: ReSpeaker_Drive_Unit.md
