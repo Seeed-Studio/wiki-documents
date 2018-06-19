@@ -279,7 +279,7 @@ Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2.0 image f
 **A. Boot from the SD card**
 
 
-<p style="text-align:center"><a href="https://bfaceafsieduau-my.sharepoint.com/personal/miaojg22_off365_cn/_layouts/15/guestaccess.aspx?folderid=0bb3c4f3f122d4c2bb0f65eee2b5938f8&authkey=AfLSkcE8QeeUHTQ8GGfrrsU" target="_blank"><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/onedrive.png" width="200" height="40"  border=0 /></a></p>
+<p style="text-align:center"><a href="https://1drv.ms/f/s!AqG2uRmVUhlShgzS_EXfVt_-54AU" target="_blank"><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/onedrive.png" width="200" height="40"  border=0 /></a></p>
 
 
 - **Step 1.** Click the OneDrive icon above to download our latest image zip files: ```respeaker-debian-9-lxqt-sd-********-4gb.img.xz``` or ```respeaker-debian-9-iot-sd-********-4gb.img.xz```.
@@ -294,7 +294,7 @@ Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2.0 image f
 
   <div class="admonition warning">
   <p class="admonition-title">Caution</p>
-  This wiki is based on the **respeaker-debian-9-lxqt-sd-20180319-4gb.img.xz** image version.
+  This wiki is based on the **respeaker-debian-9-lxqt-sd-20180610-4gb.img.xz** image version.
   </div>
 
 - **Step 2.** Plug the SD card into your PC or MAC with an SD card reader. You need an SD card with a capacity of more than 4G.
@@ -393,7 +393,7 @@ Now follow step 2 above to connect to your Respeaker over this serial connection
 Configure your ReSpeaker's network with the Network Manager tool, nmtui. nmtui will already be installed on the ReSpeaker image.
 
 ```
-respeaker@v2:~$ sudo nmtui              # respeaker user needs sudo
+sudo nmtui              # respeaker user needs sudo
 ```
 Then you will see a config page like this, select ```Activate a connection``` and press ```Enter``` key.
 
@@ -781,7 +781,7 @@ And we provide several APIs which enable users to get indicated when hotword is 
 ### Play with AVS
 
 
-#### C++
+**C++**
 
 This guide will show you how to run the Amazon official AVS C++ SDK with respeakerd. And this part requires you to have a certain technical background about Linux.
 
@@ -915,14 +915,15 @@ sudo systemctl stop respeakerd
 3.1 Download and install the necessary files
 
 ```
-$ cd /home/respeaker/ && mkdir sdk-folder && cd sdk-folder && mkdir sdk-build sdk-source third-party application-necessities && cd application-necessities && mkdir sound-files
-$ sudo apt-get -y install git gcc cmake build-essential libsqlite3-dev libcurl4-openssl-dev libfaad-dev libsoup2.4-dev libgcrypt20-dev libgstreamer-plugins-bad1.0-dev gstreamer1.0-plugins-good libasound2-dev doxygen
-$ cd /home/respeaker/sdk-folder/third-party && wget -c http://www.portaudio.com/archives/pa_stable_v190600_20161030.tgz && tar zxf pa_stable_v190600_20161030.tgz && cd portaudio && ./configure --without-jack && make
-$ sudo pip install commentjson
-$ sudo pip install flask
-$ cd /home/respeaker/sdk-folder/sdk-source && git clone git://github.com/respeaker/avs-device-sdk.git
-$ cd /home/respeaker/sdk-folder/sdk-build && cmake /home/respeaker/sdk-folder/sdk-source/avs-device-sdk -DCMAKE_BUILD_TYPE=DEBUG -DRESPEAKERD_KEY_WORD_DETECTOR=ON -DGSTREAMER_MEDIA_PLAYER=ON -DPORTAUDIO=ON -DPORTAUDIO_LIB_PATH=/home/respeaker/sdk-folder/third-party/portaudio/lib/.libs/libportaudio.a -DPORTAUDIO_INCLUDE_DIR=/home/respeaker/sdk-folder/third-party/portaudio/include
-$ make SampleApp -j2
+cd /home/respeaker/ && mkdir sdk-folder && cd sdk-folder && mkdir sdk-build sdk-source third-party application-necessities && cd application-necessities && mkdir sound-files
+sudo apt-get -y install git gcc cmake build-essential libsqlite3-dev libcurl4-openssl-dev libfaad-dev libsoup2.4-dev libgcrypt20-dev libgstreamer-plugins-bad1.0-dev gstreamer1.0-plugins-good libasound2-dev doxygen
+cd /home/respeaker/sdk-folder/third-party && wget -c http://www.portaudio.com/archives/pa_stable_v190600_20161030.tgz && tar zxf pa_stable_v190600_20161030.tgz && cd portaudio && ./configure --without-jack && make
+sudo pip install commentjson
+sudo pip install flask 
+sudo pip install requests
+cd /home/respeaker/sdk-folder/sdk-source && git clone git://github.com/respeaker/avs-device-sdk.git
+cd /home/respeaker/sdk-folder/sdk-build && cmake /home/respeaker/sdk-folder/sdk-source/avs-device-sdk -DCMAKE_BUILD_TYPE=DEBUG -DRESPEAKERD_KEY_WORD_DETECTOR=ON -DGSTREAMER_MEDIA_PLAYER=ON -DPORTAUDIO=ON -DPORTAUDIO_LIB_PATH=/home/respeaker/sdk-folder/third-party/portaudio/lib/.libs/libportaudio.a -DPORTAUDIO_INCLUDE_DIR=/home/respeaker/sdk-folder/third-party/portaudio/include
+make SampleApp -j2
 
 ```
 
@@ -1026,9 +1027,9 @@ If everything goes well, you will see the **Sample APP**. Now you are able to ma
 To activate the on-board LED effect, you just need to tap commands below.
 
 ```
-$ sudo cp -f /home/respeaker/respeakerd/scripts/pixel_ring_server /usr/local/bin/
-$ sudo chmod a+x /usr/local/bin/pixel_ring_server
-$ pixel_ring_server
+sudo cp -f /home/respeaker/respeakerd/scripts/pixel_ring_server /usr/local/bin/
+sudo chmod a+x /usr/local/bin/pixel_ring_server
+pixel_ring_server
 
 ```
 Now you will see the LED rings shining and running.
@@ -1041,14 +1042,14 @@ When this part done you will be able to wake up the ReSpeaker Core v2.0 by key w
 Tap the commands below.
 
 ```
-$ sudo cp -f /home/respeaker/respeakerd/scripts/avs_cpp_sdk_safe /usr/local/bin
-$ sudo chmod a+x /usr/local/bin/avs_cpp_sdk_safe
-$ sudo cp -f /home/respeaker/respeakerd/scripts/pixel_ring_server.service /etc/systemd/system/
-$ sudo cp -f /home/respeaker/respeakerd/scripts/avs_cpp_sdk.service /etc/systemd/system/
-$ sudo systemctl enable pixel_ring_server
-$ sudo systemctl enable avs_cpp_sdk
-$ sudo systemctl start pixel_ring_server
-$ sudo systemctl start avs_cpp_sdk
+sudo cp -f /home/respeaker/respeakerd/scripts/avs_cpp_sdk_safe /usr/local/bin
+sudo chmod a+x /usr/local/bin/avs_cpp_sdk_safe
+sudo cp -f /home/respeaker/respeakerd/scripts/pixel_ring_server.service /etc/systemd/system/
+sudo cp -f /home/respeaker/respeakerd/scripts/avs_cpp_sdk.service /etc/systemd/system/
+sudo systemctl enable pixel_ring_server
+sudo systemctl enable avs_cpp_sdk
+sudo systemctl start pixel_ring_server
+sudo systemctl start avs_cpp_sdk
 
 ```
 
@@ -1071,15 +1072,15 @@ This guide will shows you how to build an AVS device based on the ReSpeaker Core
 - **Step 1. Install AVS library (Python)**
 
 ```
-respeaker@v2:~$ sudo apt update
-respeaker@v2:~$ pip install avs
+sudo apt update
+pip install avs
 ```
 
 This will also install the following executables into **~/.local/bin**: alexa-audio-check, alexa-auth, dueros-auth, alexa-tap and alexa.
 
 Tap the command below to Check the audio configuration:
 ```
-respeaker@v2:~$ ~/.local/bin/alexa-audio-check
+~/.local/bin/alexa-audio-check
 ```
 This script calculates the RMS of the sound recorded by the microphones.
 
@@ -1088,7 +1089,7 @@ This script calculates the RMS of the sound recorded by the microphones.
 Connect to the board via [VNC](https://github.com/respeaker/get_started_with_respeaker/blob/master/docs/ReSpeaker_Core_V2/getting_started.md#ssh--vnc). In the VNC desktop, open terminal and execute:
 
 ```
-respeaker@v2:~$ ~/.local/bin/alexa-auth
+~/.local/bin/alexa-auth
 ```
 This script will open the web browser automatically, the web browser will display a login page. Sign in with your Amazon account:
 
@@ -1111,7 +1112,7 @@ We provide three python files based on Alexa, you can choose them freely.
 **Alexa Tap to Play**
 Tap the command below in the terminal Of Putty(SSH is recommended).
 ```
-respeaker@v2:~$ ~/.local/bin/alexa-tap
+~/.local/bin/alexa-tap
 ```
 
 Wait until you see **on_ready** in the log printing. Press **Enter** key of your computer and talk to Alexa(Only support English now).
@@ -1138,8 +1139,6 @@ python ns_kws_alexa_with_light.py
 The same as last one, say **Alexa** to trigger the conversation with Alexa. You will see the LED shinning while this program is running.
 
 
-
-
 ### Play with Dueros
 
 The same as AVS, the only difference is that you need to delete one profile file. Before [get the authorization](http://wiki.seeedstudio.com/ReSpeaker_Core_v2/#step-2-authorize-alexa),
@@ -1151,7 +1150,7 @@ rm -f ~/.avs.json
 Then you can get the authorization from Baidu by tapping the following command:
 
 ```
-respeaker@v2:~$ ~/.local/bin/dueros-auth
+~/.local/bin/dueros-auth
 ```
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/dueros.jpg)
 
@@ -1262,7 +1261,7 @@ The description of the PIN defines for the ReSpeaker Core v2.0 board please refe
 
 - **Step 3. Demos with MRAA or UPM**
 
-#### A. Use MRAA Library
+**A. Use MRAA Library**
 
 
 **Control GPIO Directly**
@@ -1348,7 +1347,7 @@ pin 1091 = 1
 ```
 
 
-#### B. Use UPM Library
+**B. Use UPM Library**
 
 The UPM project implements sensors' driver based on the MRAA library, so we no longer need to care about the GPIO programming or what the I2C address of a sensor, all the default informations and logics for a particular sensor has been wrapped into a UPM library. UPM has supported bunch of sensors. https://iotdk.intel.com/docs/master/upm/modules.html. But please note that we didnt confirm every sensor works on the ReSpeaker Core v2.0.
 
