@@ -1139,6 +1139,27 @@ python ns_kws_alexa_with_light.py
 The same as last one, say **Alexa** to trigger the conversation with Alexa. You will see the LED shinning while this program is running.
 
 
+- **Step 4. DOA(Direction of Arrival)**
+
+```
+cd ~
+git clone https://github.com/voice-engine/voice-engine.git
+cd ~/voice-engine/examples
+python kws_doa_alexa_respeaker_v2.py
+```
+
+Here is the output.
+
+```
+['arecord', '-t', 'raw', '-f', 'S16_LE', '-c', '8', '-r', '16000', '-D', 'default', '-q']
+detected 1 at direction 237.455170747
+detected 1 at direction 223.32811392
+detected 1 at direction 223.32811392
+detected 1 at direction 237.455170747
+detected 1 at direction 237.455170747
+```
+
+
 ### Play with Dueros
 
 The same as AVS, the only difference is that you need to delete one profile file. Before [get the authorization](http://wiki.seeedstudio.com/ReSpeaker_Core_v2/#step-2-authorize-alexa),
@@ -1233,7 +1254,9 @@ At first, we need to install the latest MRAA and UPM packages.
 ```
 sudo apt install  python-mraa python-upm libmraa1 libupm1 mraa-tools
 ```
+
 - **Step 2. Check your platform information**
+
 
 ```
 #only have bus 0 and id=03(/dev/i2c-3), 0 is the i2c number for mraa and upm
