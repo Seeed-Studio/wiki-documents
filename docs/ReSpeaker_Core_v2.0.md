@@ -1192,9 +1192,17 @@ When you run the python program, you can say **Alexa** to wake up the Baidu voic
 Please refer to our wiki [Google Assistant](http://wiki.seeedstudio.com/Google_Assistant). Follow the instruction step by step, then you will be able to use Google Assistant.
 
 
-### Play with STT
 
-This part will introduce Bing/Baidu STT(Speech to Text) functions together with pocketsphinx to control GPIO pins. 
+
+
+## Play with Wio Link
+
+Please follow [ReSpeaker Core V2 & Wio Link Tutorial](http://wiki.seeedstudio.com/ReSpeaker_Core_V2_&_Wio_Link/) to use the ReSpeaker Core V2 to control Wio Link through IFTTT.
+
+
+## Play with STT
+
+This part will introduce Bing/Baidu STT(Speech to Text) functions together with pocketsphinx. 
 
 **1. Bing STT**
 
@@ -1266,11 +1274,6 @@ Let's say **开灯** or **关灯** and monitor the screen output.
 
 !!!Note
     For more info about the baidu speech API, please refer to [here](http://ai.baidu.com/docs#/ASR-Online-Python-SDK/top).
-
-
-## Play with Wio Link
-
-Please follow [ReSpeaker Core V2 & Wio Link Tutorial](http://wiki.seeedstudio.com/ReSpeaker_Core_V2_&_Wio_Link/) to use the ReSpeaker Core V2 to control Wio Link through IFTTT.
 
 ## Play with GPIO
 
