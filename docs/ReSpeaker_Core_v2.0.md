@@ -103,8 +103,8 @@ ReSpeaker Core v2.0 is designed as a feature rich development board for business
     <td class="tg-dc35">1 x Grove socket (I2C and Digital)</td>
   </tr>
   <tr>
-    <td class="tg-us36">Vedio</td>
-    <td class="tg-us36">HDMI 2.0 with HDCP 1.4/2.2, up to 4K/60Hz</td>
+    <td class="tg-us36">Video</td>
+    <td class="tg-us36">4K VP9 and 4K 10bits H265/H264 video decode, up to 60fps</td>
   </tr>
   <tr>
     <td class="tg-dc35">Audio</td>
@@ -280,6 +280,9 @@ Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2.0 image f
 
 
 <p style="text-align:center"><a href="https://1drv.ms/f/s!AqG2uRmVUhlShgzS_EXfVt_-54AU" target="_blank"><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/onedrive.png" width="200" height="40"  border=0 /></a></p>
+
+!!!Note
+    For China user, please download the image from [Here](https://pan.baidu.com/s/1drNxblOBHWQNJ4V8ambGjg).
 
 
 - **Step 1.** Click the OneDrive icon above to download our latest image zip files: ```respeaker-debian-9-lxqt-sd-********-4gb.img.xz``` or ```respeaker-debian-9-iot-sd-********-4gb.img.xz```.
@@ -1189,9 +1192,11 @@ When you run the python program, you can say **Alexa** to wake up the Baidu voic
 Please refer to our wiki [Google Assistant](http://wiki.seeedstudio.com/Google_Assistant). Follow the instruction step by step, then you will be able to use Google Assistant.
 
 
-### Play with Bing
+### Play with STT
 
-This part will introduce Bing STT(Speech to Text) functions together with pocketsphinx to control GPIO pins. 
+This part will introduce Bing/Baidu STT(Speech to Text) functions together with pocketsphinx to control GPIO pins. 
+
+**1. Bing STT**
 
 - **Step 1. Install dependiencies**
 
@@ -1199,7 +1204,7 @@ This part will introduce Bing STT(Speech to Text) functions together with pocket
 sudo apt-get update && sudo apt-get upgrade
 sudo apt install libasound-dev portaudio19-dev libportaudiocpp0
 sudo apt-get install -y python python-dev python-pip build-essential swig git libpulse-dev
-sudo pip install pocketsphinx webrtcvad requests monotonic
+sudo pip install pocketsphinx webrtcvad  monotonic
 sudo pip install pyaudio respeaker
 ```
 
@@ -1211,32 +1216,56 @@ git clone https://github.com/respeaker/respeaker_python_library.git
 
 - **Step 3. Get Bing key from [Azure](https://www.microsoft.com/cognitive-services/en-us/speech-api).**
 
-- **Step 4. Connect a [Grove-LED](http://wiki.seeedstudio.com/Grove-Red_LED/) to respeaker core GPIO**
-
-| Grove-LED | ReSpeaker Core GPIO |
-|-----------|---------------------|
-| Yellow    | 2                   |
-| White     | NA                  |
-| Red       | 1                   |
-| Black     | 6                   |
-
-
-- **Step 5. Downlod the [SmartHome.py](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/SmartHome.py)**
+- **Step 4. Download the [Bing_STT.py](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Bing_STT.py)**
 
 ```
 cd ~
-wget https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/SmartHome.py
-python SmartHome.py  #Please add bing key first @ line 12
+wget https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Bing_STT.py
+python Bing_STT.py  
 ```
 
-- **Step 6. Let's say *ReSpeaker* to wake up**
+!!!Warning
+    Please add bing key @ line 12 before running python Bing_STT.py.
 
-- **Step 7. Control LED**
+- **Step 5. Let's say ReSpeaker to wake up**
 
-We can say **turn on light** or **turn off light** to control Grove-LED. 
+- **Step 6. Let's Play**
+
+Let's say **turn on light** or **turn off light** and monitor the screen output.
 
 !!!Note
     Please refer to FAQ9 to change the PocketSphinx wake up world.
+
+
+**2. Baidu STT**
+
+- **Step 1. Install dependiencies**
+
+```
+pip install baidu-aip
+```
+
+- **Step 2. Get Baidu key from [Here](https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index).**
+
+- **Step 3. Download the [Baidu_STT.py](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Baidu_STT.py)**
+
+```
+cd ~
+wget https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Baidu_STT.py
+python Baidu_STT.py  
+```
+
+!!!Warning
+    Please add baidu key @ line 16 before running python Baidu_STT.py.
+
+- **Step 4. Let's say ReSpeaker to wake up**
+
+- **Step 5. Let's Play**
+
+Let's say **开灯** or **关灯** and monitor the screen output.
+
+!!!Note
+    For more info about the baidu speech API, please refer to [here](http://ai.baidu.com/docs#/ASR-Online-Python-SDK/top).
 
 
 ## Play with Wio Link
