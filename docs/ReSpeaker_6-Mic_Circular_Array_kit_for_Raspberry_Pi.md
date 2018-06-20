@@ -425,11 +425,15 @@ pi@raspberrypi:~ $ source ~/env/bin/activate
 Then you can tap the ++enter++ key to ask Dueros question and talk with her.
 
 
-[^_^]:
-    #### Play with Snowboy
-    commentted-out contents
-    As you may see, the demos above trigger the Alexa or Dueros by tapping the ++enter++ key. What if you want to wake up the Alexa by voice?
-Well, you can use snowboy. And you only need two steps to make that happen.
+
+#### Play with Snowboy（With Doa Function）
+
+    
+To do this part, you also need to get the authorization of Alexa or Baidu at first.
+
+As you may see, the demos above trigger the Alexa or Dueros by tapping the ++enter++ key. What if you want to wake up the Alexa by voice?
+Well, you can use snowboy. And you only need simple steps to make that happen.
+
 **Step 1. Install Snowboy**
 ```
 cd ~
@@ -446,6 +450,7 @@ source ~/env/bin/activate              # activate the virtual, if we have alread
 (env) pi@raspberrypi:~/voice-engine $ python setup.py install
 
 ```
+
 **Step 2. Configure Pulse Audio**
 ```
 cd ~
@@ -475,12 +480,14 @@ The value of ATTR{number} can be found with command:
 ```
 udevadm info -a -p /sys/class/sound/card1/:
 ```
+
 **Step 3. config `default.pa` and `daemon.conf`**
 ```
 sudo cp default.pa /etc/pulse/
 sudo cp daemon.conf /etc/pulse/
 ```
-**Step 3. reboot raspberry pi and check**
+
+**Step 4. reboot raspberry pi and check**
 ```
 sudo reboot
 pulseaudio --start  # start pulse at first
@@ -505,8 +512,16 @@ Default Sink: alsa_output.platform-soc_sound.seeed-2ch
 Default Source: alsa_input.platform-soc_sound.seeed-8ch
 Cookie: 3523:e5af
 ```
+
 After you configure this snowboy, please do the following:
 
+
+```
+source ~/env/bin/activate 
+cd ~/voice-engine/examples
+python ds_kws_doa_for_respeaker_6mic_array_pihat.py
+```
+Then you will see the LEDs light up, and you can call `Snowboy` to wake it up. The <font color =“Green”>Green LED</font> will point to the direction of wake up word.
 
 
 ## FAQ
@@ -525,6 +540,3 @@ A1: There are 2 AC108 in this array, and each AC108 chip has 4 channel output. S
 Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/).
 
 
-
-[^_^]:
-    Seeedstudio

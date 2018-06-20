@@ -426,11 +426,15 @@ pi@raspberrypi:~ $ source ~/env/bin/activate
 (env) pi@raspberrypi:~ $ alexa-tap
 ```
 
-[^_^]:
-    #### Play with Snowboy
-    commentted-out contents
-    As you may see, the demos above trigger the Alexa or Dueros by tapping the ++enter++ key. What if you want to wake up the Alexa by voice?
-Well, you can use snowboy. And you only need two steps to make that happen.
+
+#### Play with Snowboy
+    
+To do this part, you also need to get the authorization of Alexa or Baidu at first.
+
+As you may see, the demos above trigger the Alexa or Dueros by tapping the ++enter++ key. What if you want to wake up the Alexa by voice?
+Well, you can use snowboy. And you only need simple steps to make that happen.
+
+
 **Step 1. Install Snowboy**
 ```
 cd ~
@@ -447,6 +451,8 @@ source ~/env/bin/activate              # activate the virtual, if we have alread
 (env) pi@raspberrypi:~/voice-engine $ python setup.py install
 
 ```
+
+
 **Step 2. Configure Pulse Audio**
 ```
 cd ~
@@ -476,12 +482,14 @@ The value of ATTR{number} can be found with command:
 ```
 udevadm info -a -p /sys/class/sound/card1/:
 ```
+
 **Step 3. config `default.pa` and `daemon.conf`**
 ```
 sudo cp default.pa /etc/pulse/
 sudo cp daemon.conf /etc/pulse/
 ```
-**Step 3. reboot raspberry pi and check**
+
+**Step 4. reboot raspberry pi and check**
 ```
 sudo reboot
 pulseaudio --start  # start pulse at first
@@ -506,12 +514,17 @@ Default Sink: alsa_output.platform-soc_sound.seeed-2ch
 Default Source: alsa_input.platform-soc_sound.seeed-8ch
 Cookie: 3523:e5af
 ```
+
 After you configure this snowboy, please do the following:
 
 ```
-(env) pi@raspberrypi:~ $ cd voice-engine/
-
+source ~/env/bin/activate 
+cd ~/voice-engine/examples
+python kws_alexa_for_4mic_liner_pihat.py
 ```
+Then you will see the LEDs light up, and you can call `Snowboy` to wake it up. 
+
+
 
 
 
@@ -533,6 +546,3 @@ A1: There are 2 AC108 in this array, and each AC108 chip has 4 channel output. S
 ## Tech Support
 Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/).
 
-
-[^_^]:
-    Seeedstudio
