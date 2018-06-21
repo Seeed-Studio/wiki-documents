@@ -1716,7 +1716,7 @@ sudo apt install adb
 
 ```
 
-When the tool is installed, you can use the same commands as [for window](http://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#For-windows) to record and play.
+When the tool is installed, you can use the same commands as [for window](http://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#for-windows) to record and play.
 
 
 
