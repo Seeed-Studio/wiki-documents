@@ -1688,16 +1688,6 @@ Check the FAQ for more detailed specifications of Wake-Up Detection.
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/distance.png)
 
 
-
-
-
-
-
-
-
-
-
-
 **Q1: How to change the senstivity of the wake up word?**
 
 **A1:** 
