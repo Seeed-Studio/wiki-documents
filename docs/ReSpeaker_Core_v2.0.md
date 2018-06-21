@@ -279,10 +279,21 @@ Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2.0 image f
 **A. Boot from the SD card**
 
 
+<font color="green">OneDrive</font>
+
+
 <p style="text-align:center"><a href="https://bfaceafsieduau-my.sharepoint.com/personal/miaojg22_off365_cn/_layouts/15/guestaccess.aspx?folderid=0bb3c4f3f122d4c2bb0f65eee2b5938f8&authkey=AfLSkcE8QeeUHTQ8GGfrrsU" target="_blank"><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/onedrive.png" width="200" height="40"  border=0 /></a></p>
 
 
-- **Step 1.** Click the OneDrive icon above to download our latest image zip files: ```respeaker-debian-9-lxqt-sd-********-4gb.img.xz``` or ```respeaker-debian-9-iot-sd-********-4gb.img.xz```.
+
+
+<font color="green">For Baiduyun</font>
+
+<p style="text-align:center"><a href="https://pan.baidu.com/s/1drNxblOBHWQNJ4V8ambGjg?qq-pf-to=pcqq.discussion&errno=0&errmsg=Auth%20Login%20Sucess&&bduss=&ssnerror=0&traceid=#list/path=%2F" target="_blank"><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/baiduicon.png" width="210" height="60"  border=0 /></a></p>
+
+
+
+- **Step 1.** Click the OneDrive or baiduyun icon above to download our latest image zip files: ```respeaker-debian-9-lxqt-sd-********-4gb.img.xz``` or ```respeaker-debian-9-iot-sd-********-4gb.img.xz```.
 
 
 |Section|Description|
