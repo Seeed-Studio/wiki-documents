@@ -103,7 +103,7 @@ ReSpeaker Core v2.0 is designed as a feature rich development board for business
     <td class="tg-dc35">1 x Grove socket (I2C and Digital)</td>
   </tr>
   <tr>
-    <td class="tg-us36">Vedio</td>
+    <td class="tg-us36">video</td>
     <td class="tg-us36">HDMI 2.0 with HDCP 1.4/2.2, up to 4K/60Hz</td>
   </tr>
   <tr>
@@ -1454,18 +1454,22 @@ In this part we will show you how to burn the Android image(Version Android O 8.
 |HDMI cable |*1|
 
 
-**Image install**
+### Image install
 
-Click the link below to download the latest image of Android
-
-For One Drive
-
-[Click here to down load the image](https://onedrive.live.com/?authkey=%21ANL8Rd9W3_7ngBQ&id=5219529519B9B6A1%21780&cid=5219529519B9B6A1)
+Click the link below to download the latest image of Android, and you can click here to check the [image change log](https://github.com/respeaker/axol_system_image_changelog/blob/master/respeaker_core_v2_android_changelog.md)
 
 
-For Baiduyun
+<font color="green">For OneDrive</font>
 
-[Click here to down load the image](https://pan.baidu.com/s/1drNxblOBHWQNJ4V8ambGjg?qq-pf-to=pcqq.discussion&errno=0&errmsg=Auth%20Login%20Sucess&&bduss=&ssnerror=0&traceid=#list/path=%2F)
+
+<p style="text-align:center"><a href="https://onedrive.live.com/?authkey=%21ANL8Rd9W3_7ngBQ&id=5219529519B9B6A1%21780&cid=5219529519B9B6A1" target="_blank"><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/onedrive.png" width="200" height="40"  border=0 /></a></p>
+
+
+<font color="green">For Baiduyun</font>
+
+<p style="text-align:center"><a href="https://pan.baidu.com/s/1drNxblOBHWQNJ4V8ambGjg?qq-pf-to=pcqq.discussion&errno=0&errmsg=Auth%20Login%20Sucess&&bduss=&ssnerror=0&traceid=#list/path=%2F" target="_blank"><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/baiduicon.png" width="210" height="60"  border=0 /></a></p>
+
+
 
 
 **Step 1. Burn the image into your TF card.**
@@ -1508,13 +1512,26 @@ It will last about 5-10 minutes, then the message will pop up  `Doing Actions su
     It will takes a long time to boot the system at the first time. The next time will be much better
 
 
-Ok, then you will be able to access the Android System.
+Ok, then you will be able to access the Android System. If you've connect your ReSpeaker Core v2.0 with a HDMI monitor, you will see the Boot interface as below.
 
+
+![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/screen.png)
+
+
+
+
+### For windows
 
 **Record and Play Audio in Window with ADB Tool**
 
 
 Since the system is on line, you can work with the build-in apps, here we provide another options -- you can use ADB tools for windown to access the ReSpeaker Core v2.0 to do more things, for example, in this demo, we will show you how to record and play audio.
+
+For window 7: You need to download the driver at first. Click [Here](http://adbdriver.com/downloads/) to download `ADB Driver Installer (9.22 MB)`.
+
+
+For window 8 or 10: There is no need to install the ADB driver, you can just move to the `step 1.`
+
 
 **Step 1. Download the ABD Tools**
 
@@ -1669,6 +1686,27 @@ You can use `pull` to copy the audio file from your ReSpeaker Core v2.0 to your 
 PS D:\Android> ./adb pull /sdcard/a.wav .
 3562 KB/s (101875756 bytes in 27.930s)
 ```   
+
+
+
+!!!Tips
+        For more detail and example about ADB Commands, please check [here](http://adbshell.com/commands) .
+
+
+
+
+### For Linux
+
+If you've connect your ReSpeaker Core v2.0 with a Linux system, then you can use the commands below to install ADB Tools
+
+```
+sudo apt update
+sudo apt install adb
+
+```
+
+When the tool is installed, you can use the same commands as [for window](http://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#For-windows) to record and play.
+
 
 
 
