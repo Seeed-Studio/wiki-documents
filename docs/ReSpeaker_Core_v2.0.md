@@ -103,8 +103,8 @@ ReSpeaker Core v2.0 is designed as a feature rich development board for business
     <td class="tg-dc35">1 x Grove socket (I2C and Digital)</td>
   </tr>
   <tr>
-    <td class="tg-us36">Video</td>
-    <td class="tg-us36">4K VP9 and 4K 10bits H265/H264 video decode, up to 60fps</td>
+    <td class="tg-us36">Vedio</td>
+    <td class="tg-us36">HDMI 2.0 with HDCP 1.4/2.2, up to 4K/60Hz</td>
   </tr>
   <tr>
     <td class="tg-dc35">Audio</td>
@@ -279,10 +279,7 @@ Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2.0 image f
 **A. Boot from the SD card**
 
 
-<p style="text-align:center"><a href="https://1drv.ms/f/s!AqG2uRmVUhlShgzS_EXfVt_-54AU" target="_blank"><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/onedrive.png" width="200" height="40"  border=0 /></a></p>
-
-!!!Note
-    For China user, please download the image from [Here](https://pan.baidu.com/s/1drNxblOBHWQNJ4V8ambGjg).
+<p style="text-align:center"><a href="https://bfaceafsieduau-my.sharepoint.com/personal/miaojg22_off365_cn/_layouts/15/guestaccess.aspx?folderid=0bb3c4f3f122d4c2bb0f65eee2b5938f8&authkey=AfLSkcE8QeeUHTQ8GGfrrsU" target="_blank"><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/onedrive.png" width="200" height="40"  border=0 /></a></p>
 
 
 - **Step 1.** Click the OneDrive icon above to download our latest image zip files: ```respeaker-debian-9-lxqt-sd-********-4gb.img.xz``` or ```respeaker-debian-9-iot-sd-********-4gb.img.xz```.
@@ -297,7 +294,7 @@ Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2.0 image f
 
   <div class="admonition warning">
   <p class="admonition-title">Caution</p>
-  This wiki is based on the **respeaker-debian-9-lxqt-sd-20180610-4gb.img.xz** image version.
+  This wiki is based on the **respeaker-debian-9-lxqt-sd-20180319-4gb.img.xz** image version.
   </div>
 
 - **Step 2.** Plug the SD card into your PC or MAC with an SD card reader. You need an SD card with a capacity of more than 4G.
@@ -396,7 +393,7 @@ Now follow step 2 above to connect to your Respeaker over this serial connection
 Configure your ReSpeaker's network with the Network Manager tool, nmtui. nmtui will already be installed on the ReSpeaker image.
 
 ```
-sudo nmtui              # respeaker user needs sudo
+respeaker@v2:~$ sudo nmtui              # respeaker user needs sudo
 ```
 Then you will see a config page like this, select ```Activate a connection``` and press ```Enter``` key.
 
@@ -784,7 +781,7 @@ And we provide several APIs which enable users to get indicated when hotword is 
 ### Play with AVS
 
 
-**C++**
+#### C++
 
 This guide will show you how to run the Amazon official AVS C++ SDK with respeakerd. And this part requires you to have a certain technical background about Linux.
 
@@ -918,15 +915,14 @@ sudo systemctl stop respeakerd
 3.1 Download and install the necessary files
 
 ```
-cd /home/respeaker/ && mkdir sdk-folder && cd sdk-folder && mkdir sdk-build sdk-source third-party application-necessities && cd application-necessities && mkdir sound-files
-sudo apt-get -y install git gcc cmake build-essential libsqlite3-dev libcurl4-openssl-dev libfaad-dev libsoup2.4-dev libgcrypt20-dev libgstreamer-plugins-bad1.0-dev gstreamer1.0-plugins-good libasound2-dev doxygen
-cd /home/respeaker/sdk-folder/third-party && wget -c http://www.portaudio.com/archives/pa_stable_v190600_20161030.tgz && tar zxf pa_stable_v190600_20161030.tgz && cd portaudio && ./configure --without-jack && make
-sudo pip install commentjson
-sudo pip install flask 
-sudo pip install requests
-cd /home/respeaker/sdk-folder/sdk-source && git clone git://github.com/respeaker/avs-device-sdk.git
-cd /home/respeaker/sdk-folder/sdk-build && cmake /home/respeaker/sdk-folder/sdk-source/avs-device-sdk -DCMAKE_BUILD_TYPE=DEBUG -DRESPEAKERD_KEY_WORD_DETECTOR=ON -DGSTREAMER_MEDIA_PLAYER=ON -DPORTAUDIO=ON -DPORTAUDIO_LIB_PATH=/home/respeaker/sdk-folder/third-party/portaudio/lib/.libs/libportaudio.a -DPORTAUDIO_INCLUDE_DIR=/home/respeaker/sdk-folder/third-party/portaudio/include
-make SampleApp -j2
+$ cd /home/respeaker/ && mkdir sdk-folder && cd sdk-folder && mkdir sdk-build sdk-source third-party application-necessities && cd application-necessities && mkdir sound-files
+$ sudo apt-get -y install git gcc cmake build-essential libsqlite3-dev libcurl4-openssl-dev libfaad-dev libsoup2.4-dev libgcrypt20-dev libgstreamer-plugins-bad1.0-dev gstreamer1.0-plugins-good libasound2-dev doxygen
+$ cd /home/respeaker/sdk-folder/third-party && wget -c http://www.portaudio.com/archives/pa_stable_v190600_20161030.tgz && tar zxf pa_stable_v190600_20161030.tgz && cd portaudio && ./configure --without-jack && make
+$ sudo pip install commentjson
+$ sudo pip install flask
+$ cd /home/respeaker/sdk-folder/sdk-source && git clone git://github.com/respeaker/avs-device-sdk.git
+$ cd /home/respeaker/sdk-folder/sdk-build && cmake /home/respeaker/sdk-folder/sdk-source/avs-device-sdk -DCMAKE_BUILD_TYPE=DEBUG -DRESPEAKERD_KEY_WORD_DETECTOR=ON -DGSTREAMER_MEDIA_PLAYER=ON -DPORTAUDIO=ON -DPORTAUDIO_LIB_PATH=/home/respeaker/sdk-folder/third-party/portaudio/lib/.libs/libportaudio.a -DPORTAUDIO_INCLUDE_DIR=/home/respeaker/sdk-folder/third-party/portaudio/include
+$ make SampleApp -j2
 
 ```
 
@@ -1030,9 +1026,9 @@ If everything goes well, you will see the **Sample APP**. Now you are able to ma
 To activate the on-board LED effect, you just need to tap commands below.
 
 ```
-sudo cp -f /home/respeaker/respeakerd/scripts/pixel_ring_server /usr/local/bin/
-sudo chmod a+x /usr/local/bin/pixel_ring_server
-pixel_ring_server
+$ sudo cp -f /home/respeaker/respeakerd/scripts/pixel_ring_server /usr/local/bin/
+$ sudo chmod a+x /usr/local/bin/pixel_ring_server
+$ pixel_ring_server
 
 ```
 Now you will see the LED rings shining and running.
@@ -1045,14 +1041,14 @@ When this part done you will be able to wake up the ReSpeaker Core v2.0 by key w
 Tap the commands below.
 
 ```
-sudo cp -f /home/respeaker/respeakerd/scripts/avs_cpp_sdk_safe /usr/local/bin
-sudo chmod a+x /usr/local/bin/avs_cpp_sdk_safe
-sudo cp -f /home/respeaker/respeakerd/scripts/pixel_ring_server.service /etc/systemd/system/
-sudo cp -f /home/respeaker/respeakerd/scripts/avs_cpp_sdk.service /etc/systemd/system/
-sudo systemctl enable pixel_ring_server
-sudo systemctl enable avs_cpp_sdk
-sudo systemctl start pixel_ring_server
-sudo systemctl start avs_cpp_sdk
+$ sudo cp -f /home/respeaker/respeakerd/scripts/avs_cpp_sdk_safe /usr/local/bin
+$ sudo chmod a+x /usr/local/bin/avs_cpp_sdk_safe
+$ sudo cp -f /home/respeaker/respeakerd/scripts/pixel_ring_server.service /etc/systemd/system/
+$ sudo cp -f /home/respeaker/respeakerd/scripts/avs_cpp_sdk.service /etc/systemd/system/
+$ sudo systemctl enable pixel_ring_server
+$ sudo systemctl enable avs_cpp_sdk
+$ sudo systemctl start pixel_ring_server
+$ sudo systemctl start avs_cpp_sdk
 
 ```
 
@@ -1075,15 +1071,15 @@ This guide will shows you how to build an AVS device based on the ReSpeaker Core
 - **Step 1. Install AVS library (Python)**
 
 ```
-sudo apt update
-pip install avs
+respeaker@v2:~$ sudo apt update
+respeaker@v2:~$ pip install avs
 ```
 
 This will also install the following executables into **~/.local/bin**: alexa-audio-check, alexa-auth, dueros-auth, alexa-tap and alexa.
 
 Tap the command below to Check the audio configuration:
 ```
-~/.local/bin/alexa-audio-check
+respeaker@v2:~$ ~/.local/bin/alexa-audio-check
 ```
 This script calculates the RMS of the sound recorded by the microphones.
 
@@ -1092,7 +1088,7 @@ This script calculates the RMS of the sound recorded by the microphones.
 Connect to the board via [VNC](https://github.com/respeaker/get_started_with_respeaker/blob/master/docs/ReSpeaker_Core_V2/getting_started.md#ssh--vnc). In the VNC desktop, open terminal and execute:
 
 ```
-~/.local/bin/alexa-auth
+respeaker@v2:~$ ~/.local/bin/alexa-auth
 ```
 This script will open the web browser automatically, the web browser will display a login page. Sign in with your Amazon account:
 
@@ -1115,7 +1111,7 @@ We provide three python files based on Alexa, you can choose them freely.
 **Alexa Tap to Play**
 Tap the command below in the terminal Of Putty(SSH is recommended).
 ```
-~/.local/bin/alexa-tap
+respeaker@v2:~$ ~/.local/bin/alexa-tap
 ```
 
 Wait until you see **on_ready** in the log printing. Press **Enter** key of your computer and talk to Alexa(Only support English now).
@@ -1142,25 +1138,6 @@ python ns_kws_alexa_with_light.py
 The same as last one, say **Alexa** to trigger the conversation with Alexa. You will see the LED shinning while this program is running.
 
 
-- **Step 4. DOA(Direction of Arrival)**
-
-```
-cd ~
-git clone https://github.com/voice-engine/voice-engine.git
-cd ~/voice-engine/examples
-python kws_doa_alexa_respeaker_v2.py
-```
-
-Here is the output.
-
-```
-['arecord', '-t', 'raw', '-f', 'S16_LE', '-c', '8', '-r', '16000', '-D', 'default', '-q']
-detected 1 at direction 237.455170747
-detected 1 at direction 223.32811392
-detected 1 at direction 223.32811392
-detected 1 at direction 237.455170747
-detected 1 at direction 237.455170747
-```
 
 
 ### Play with Dueros
@@ -1174,7 +1151,7 @@ rm -f ~/.avs.json
 Then you can get the authorization from Baidu by tapping the following command:
 
 ```
-~/.local/bin/dueros-auth
+respeaker@v2:~$ ~/.local/bin/dueros-auth
 ```
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/dueros.jpg)
 
@@ -1192,19 +1169,9 @@ When you run the python program, you can say **Alexa** to wake up the Baidu voic
 Please refer to our wiki [Google Assistant](http://wiki.seeedstudio.com/Google_Assistant). Follow the instruction step by step, then you will be able to use Google Assistant.
 
 
+### Play with Bing
 
-
-
-## Play with Wio Link
-
-Please follow [ReSpeaker Core V2 & Wio Link Tutorial](http://wiki.seeedstudio.com/ReSpeaker_Core_V2_&_Wio_Link/) to use the ReSpeaker Core V2 to control Wio Link through IFTTT.
-
-
-## Play with STT
-
-This part will introduce Bing/Baidu STT(Speech to Text) functions together with pocketsphinx. 
-
-**1. Bing STT**
+This part will introduce Bing STT(Speech to Text) functions together with pocketsphinx to control GPIO pins. 
 
 - **Step 1. Install dependiencies**
 
@@ -1212,7 +1179,7 @@ This part will introduce Bing/Baidu STT(Speech to Text) functions together with 
 sudo apt-get update && sudo apt-get upgrade
 sudo apt install libasound-dev portaudio19-dev libportaudiocpp0
 sudo apt-get install -y python python-dev python-pip build-essential swig git libpulse-dev
-sudo pip install pocketsphinx webrtcvad  monotonic
+sudo pip install pocketsphinx webrtcvad requests monotonic
 sudo pip install pyaudio respeaker
 ```
 
@@ -1224,56 +1191,37 @@ git clone https://github.com/respeaker/respeaker_python_library.git
 
 - **Step 3. Get Bing key from [Azure](https://www.microsoft.com/cognitive-services/en-us/speech-api).**
 
-- **Step 4. Download the [Bing_STT.py](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Bing_STT.py)**
+- **Step 4. Connect a [Grove-LED](http://wiki.seeedstudio.com/Grove-Red_LED/) to respeaker core GPIO**
+
+| Grove-LED | ReSpeaker Core GPIO |
+|-----------|---------------------|
+| Yellow    | 2                   |
+| White     | NA                  |
+| Red       | 1                   |
+| Black     | 6                   |
+
+
+- **Step 5. Downlod the [SmartHome.py](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/SmartHome.py)**
 
 ```
 cd ~
-wget https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Bing_STT.py
-python Bing_STT.py  
+wget https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/SmartHome.py
+python SmartHome.py  #Please add bing key first @ line 12
 ```
 
-!!!Warning
-    Please add bing key @ line 12 before running python Bing_STT.py.
+- **Step 6. Let's say *ReSpeaker* to wake up**
 
-- **Step 5. Let's say ReSpeaker to wake up**
+- **Step 7. Control LED**
 
-- **Step 6. Let's Play**
-
-Let's say **turn on light** or **turn off light** and monitor the screen output.
+We can say **turn on light** or **turn off light** to control Grove-LED. 
 
 !!!Note
     Please refer to FAQ9 to change the PocketSphinx wake up world.
 
 
-**2. Baidu STT**
+## Play with Wio Link
 
-- **Step 1. Install dependiencies**
-
-```
-pip install baidu-aip
-```
-
-- **Step 2. Get Baidu key from [Here](https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index).**
-
-- **Step 3. Download the [Baidu_STT.py](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Baidu_STT.py)**
-
-```
-cd ~
-wget https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Baidu_STT.py
-python Baidu_STT.py  
-```
-
-!!!Warning
-    Please add baidu key @ line 16 before running python Baidu_STT.py.
-
-- **Step 4. Let's say ReSpeaker to wake up**
-
-- **Step 5. Let's Play**
-
-Let's say **开灯** or **关灯** and monitor the screen output.
-
-!!!Note
-    For more info about the baidu speech API, please refer to [here](http://ai.baidu.com/docs#/ASR-Online-Python-SDK/top).
+Please follow [ReSpeaker Core V2 & Wio Link Tutorial](http://wiki.seeedstudio.com/ReSpeaker_Core_V2_&_Wio_Link/) to use the ReSpeaker Core V2 to control Wio Link through IFTTT.
 
 ## Play with GPIO
 
@@ -1286,9 +1234,7 @@ At first, we need to install the latest MRAA and UPM packages.
 ```
 sudo apt install  python-mraa python-upm libmraa1 libupm1 mraa-tools
 ```
-
 - **Step 2. Check your platform information**
-
 
 ```
 #only have bus 0 and id=03(/dev/i2c-3), 0 is the i2c number for mraa and upm
@@ -1316,7 +1262,7 @@ The description of the PIN defines for the ReSpeaker Core v2.0 board please refe
 
 - **Step 3. Demos with MRAA or UPM**
 
-**A. Use MRAA Library**
+#### A. Use MRAA Library
 
 
 **Control GPIO Directly**
@@ -1402,7 +1348,7 @@ pin 1091 = 1
 ```
 
 
-**B. Use UPM Library**
+#### B. Use UPM Library
 
 The UPM project implements sensors' driver based on the MRAA library, so we no longer need to care about the GPIO programming or what the I2C address of a sensor, all the default informations and logics for a particular sensor has been wrapped into a UPM library. UPM has supported bunch of sensors. https://iotdk.intel.com/docs/master/upm/modules.html. But please note that we didnt confirm every sensor works on the ReSpeaker Core v2.0.
 
@@ -1487,7 +1433,270 @@ Light value is 44
 Light value is 31  
 ```
 
+
+
+
+## Play with Android
+
+In this part we will show you how to burn the Android image(Version Android O 8.1.) into ReSpeaker Core v2.0. And we will tell you how to record and play audio in Window with ADB Tool.
+
+**Materials required**
+
+
+|Item  |Num|
+|---|----|
+|TF card (4G or more)| *1|
+|TF card reader| *1|
+|HDMI monitor| *1|
+|PC | *1|
+|Speaker or Earphone| *1|
+|Micro-USB cable| *1|
+|HDMI cable |*1|
+
+
+**Image install**
+
+Click the link below to download the latest image of Android
+
+For One Drive
+
+[Click here to down load the image](https://onedrive.live.com/?authkey=%21ANL8Rd9W3_7ngBQ&id=5219529519B9B6A1%21780&cid=5219529519B9B6A1)
+
+
+For Baiduyun
+
+[Click here to down load the image](https://pan.baidu.com/s/1drNxblOBHWQNJ4V8ambGjg?qq-pf-to=pcqq.discussion&errno=0&errmsg=Auth%20Login%20Sucess&&bduss=&ssnerror=0&traceid=#list/path=%2F)
+
+
+**Step 1. Burn the image into your TF card.**
+
+When the download is complete, unzip it and you will get the img file, named like `android_o_flasher_20180619.img`.
+Please plug your TF card into your TF card reader and connect the reader to your PC. Then use <a href="https://etcher.io/">Etcher</a> to burn this img into your TF card.
+
+Choose the right `img` and the TF card you've plugged in, then just click `Flash`, 5-20 mins later, it will be done. 
+
+![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/android_burn.png)
+
+
+
+**Step 2. Burn the image into the Emmc of ReSpeaker Core v2.0**
+
+First of all, let's do some push and plug.
+
+When the flash is done, take the TF card reader out of your PC, and plug the TF card into you ReSpeaker Core v2.0.
+
+Connect the HDMI monitor with your ReSpeaker Core v2.0 via the HDMI cable
+
+Connect the earphone to the 3.5mm headset jack or connect the speaker to the JST2.0 jack.
+
+
+![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Hardwareconnect.jpg)
+
+
+Ok, when all of above done, please connect the ReSpeaker Core v2.0 `OTG` port to your PC via the micro-USB cable.
+
+Then the ReSpeaker will boot from the TF card and burn the image to the EMMC.
+
+![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/install_Android.jpg)
+
+It will last about 5-10 minutes, then the message will pop up  `Doing Actions succeeded.please remove the sdcard...`, so please just plug out the TF card, and the ReSpeaker Core v2.0 will reboot.
+
+![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/android_finish.jpg)
+
+
+!!!Tips
+    It will takes a long time to boot the system at the first time. The next time will be much better
+
+
+Ok, then you will be able to access the Android System.
+
+
+**Record and Play Audio in Window with ADB Tool**
+
+
+Since the system is on line, you can work with the build-in apps, here we provide another options -- you can use ADB tools for windown to access the ReSpeaker Core v2.0 to do more things, for example, in this demo, we will show you how to record and play audio.
+
+**Step 1. Download the ABD Tools**
+
+First of all, let's click [here](http://adbshell.com/upload/adb.zip) to download the ABD Tools. Then extract the `abd.zip`, you will get three files `adb.exe`/ `AdbWinApi.dll`/`AdbWinUsbApi.dll`, please make sure they are in the same folder, in this demo, we put those files into `D:\Android`. Please enter the folder contains all this files, click the `File` button in the upper left corner of this window to open PowerShell
+
+![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/power.png)
+
+
+**Step 2. Access to the ReSpeaker Core v2.0**
+
+Then tap the following command into your PowerShell:
+
+```
+PS D:\Android> ./adb devices
+List of devices attached
+UNXKEOA8KH      device    
+```
+
+When you see the `UNXKEOA8KH device`, you PC is connected with your Android. Then you can use adb tools to access to the ReSpeaker Core v2.0.
+
+```
+PS D:\Android\> ./adb root
+restarting adbd as root
+PS D:\Android\> ./adb shell
+rk3229_respeaker:/ #
+```
+
+
+**Step 3. Presetings for Record and Play**
+
+At first, please check all the channels
+
+```
+rk3229_respeaker:/ # tinymix
+tinymix
+Mixer name: 'seeed-8mic-voicecard'
+Number of controls: 16
+ctl     type    num     name                                     value
+
+0       INT     1       CH1 volume                               160
+1       INT     1       CH2 volume                               160
+2       INT     1       CH3 volume                               160
+3       INT     1       CH4 volume                               160
+4       INT     1       ADC1 PGA gain                            0
+5       INT     1       ADC2 PGA gain                            0
+6       INT     1       ADC3 PGA gain                            0
+7       INT     1       ADC4 PGA gain                            0
+8       INT     1       CH5 volume                               160
+9       INT     1       CH6 volume                               160
+10      INT     1       CH7 volume                               160
+11      INT     1       CH8 volume                               160
+12      INT     1       ADC5 PGA gain                            0
+13      INT     1       ADC6 PGA gain                            0
+14      INT     1       ADC7 PGA gain                            0
+15      INT     1       ADC8 PGA gain                            0
+rk3229_respeaker:/ #
+
+```
+The `CH1 volume` ranges from 0 to 255; and the `ADC1 PGA gain` ranges 0-31,the default setting is 0, so the micphone can not pick up anything. Let's set it as 31.
+
+```
+tinymix 0 125
+tinymix 1 125                                             
+tinymix 3 125                                             
+tinymix 2 125                                             
+tinymix 4 31                                              
+tinymix 5 31                                              
+tinymix 6 31                                              
+tinymix 7 31                                              
+tinymix 8 125                                             
+tinymix 9 125                                             
+tinymix 10 125                                            
+tinymix 11 125                                            
+tinymix 12 31                                             
+tinymix 13 31                                             
+tinymix 14 31                                             
+tinymix 15 31
+
+```
+
+Now, you can ckeck the settings you've just made.
+
+```
+rk3229_respeaker:/ # tinymix
+tinymix
+Mixer name: 'seeed-8mic-voicecard'
+Number of controls: 16
+ctl     type    num     name                                     value
+
+0       INT     1       CH1 volume                               125
+1       INT     1       CH2 volume                               125
+2       INT     1       CH3 volume                               125
+3       INT     1       CH4 volume                               125
+4       INT     1       ADC1 PGA gain                            31
+5       INT     1       ADC2 PGA gain                            31
+6       INT     1       ADC3 PGA gain                            31
+7       INT     1       ADC4 PGA gain                            31
+8       INT     1       CH5 volume                               125
+9       INT     1       CH6 volume                               125
+10      INT     1       CH7 volume                               125
+11      INT     1       CH8 volume                               125
+12      INT     1       ADC5 PGA gain                            31
+13      INT     1       ADC6 PGA gain                            31
+14      INT     1       ADC7 PGA gain                            31
+15      INT     1       ADC8 PGA gain                            31
+rk3229_respeaker:/ #
+
+```
+
+**Step 4. Record and Play**
+
+Tap the following command to record a 2 channels audio.
+
+```
+cd sdcard
+rk3229_respeaker:/sdcard # tinycap a.wav -D 0 -d 0 -c 2 -r 44100 -b 16
+tinycap a.wav -D 0 -d 0 -c 2 -r 44100 -b 16
+Capturing sample: 2 ch, 44100 hz, 16 bit
+
+```
+
+For the command `tinycap a.wav -D 0 -d 0 -c 2 -r 44100 -b 16`. `a.wav` is the name of the audio file you record, `-D 0` means the card number is 0, and `-d 0` means the device number is 0, `-r 44100` means the sample rate is 44100, and `-b 16` means it's a 16bit audio.
+
+
+Then tap ++ctrl+c++ to exit the record progress.
+
+
+As you may see, we've exited the shell at the same time, let's enter the shell again and play the audio you've just recorded.
+
+```
+PS D:\Android\> ./adb root
+restarting adbd as root
+PS D:\Android\> ./adb shell
+rk3229_respeaker:/ #
+
+rk3229_respeaker:/ # cd sdcard
+cd sdcard
+rk3229_respeaker:/sdcard #
+tinyplay a.wav -D 0 -d 1
+```
+
+For the command `tinyplay a.wav -D 0 -d 1`. the `1` means the ReSpeaker will play the audio as mono audio. And this command only works for 1 or 2 channels audio.
+If there are more channels in the audio file, you can not use this command to play the audio. 
+
+!!!Tips
+        Actually, you can record at most 8 channels audio, just change the `-c 2`, for example `-c 8` will be 8 channels audio. However we don't support playing audios with more than 2 channels by tinyplay. 
+
+
+You can use `pull` to copy the audio file from your ReSpeaker Core v2.0 to your PC. 
+
+```
+PS D:\Android> ./adb pull /sdcard/a.wav .
+3562 KB/s (101875756 bytes in 27.930s)
+```   
+
+
+
 ## FAQs
+
+**Q0: What is the wake-up distance of ReSpeaker Core v2.0**
+
+**A0:**
+
+Note:
+This was tested in a low noise environment (~45dB).
+When we tested this in our other (open) office the average volume was ~60dB. The testers voice ranged from 80dB to 90dB.
+These were the results.
+Check the FAQ for more detailed specifications of Wake-Up Detection. 
+
+
+![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/distance.png)
+
+
+
+
+
+
+
+
+
+
+
 
 **Q1: How to change the senstivity of the wake up word?**
 
