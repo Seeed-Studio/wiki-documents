@@ -53,5 +53,7 @@ Here is the list of the ReSpeaker Boards you can find in the Seeed WiKi. The lis
 - [ReSpeaker Drive Unit](/ReSpeaker_Drive_Unit/)
 - [ReSpeaker Mic Array](/ReSpeaker_Mic_Array/)
 - [ReSpeaker Mic Array v2.0](/ReSpeaker_Mic_Array_v2.0/)
+- [ReSpeaker 4-Mic Linear Array Kit for Raspberry Pi](http://wiki.seeedstudio.com/ReSpeaker_4-Mic_Linear_Array_Kit_for_Raspberry_Pi/)
+- [ReSpeaker 6-Mic Circular Array kit for Raspberry Pi](http://wiki.seeedstudio.com/ReSpeaker_6-Mic_Circular_Array_kit_for_Raspberry_Pi/)
 
 
