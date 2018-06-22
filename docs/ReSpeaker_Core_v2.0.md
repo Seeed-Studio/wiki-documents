@@ -103,8 +103,8 @@ ReSpeaker Core v2.0 is designed as a feature rich development board for business
     <td class="tg-dc35">1 x Grove socket (I2C and Digital)</td>
   </tr>
   <tr>
-    <td class="tg-us36">video</td>
-    <td class="tg-us36">HDMI 2.0 with HDCP 1.4/2.2, up to 4K/60Hz</td>
+    <td class="tg-us36">Video</td>
+    <td class="tg-us36">4K VP9 and 4K 10bits H265/H264 video decode, up to 60fps</td>
   </tr>
   <tr>
     <td class="tg-dc35">Audio</td>
@@ -279,21 +279,13 @@ Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2.0 image f
 **A. Boot from the SD card**
 
 
-<font color="green">OneDrive</font>
+<p style="text-align:center"><a href="https://1drv.ms/f/s!AqG2uRmVUhlShgzS_EXfVt_-54AU" target="_blank"><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/onedrive.png" width="200" height="40"  border=0 /></a></p>
+
+!!!Note
+    For China user, please download the image from [Here](https://pan.baidu.com/s/1drNxblOBHWQNJ4V8ambGjg).
 
 
-<p style="text-align:center"><a href="https://bfaceafsieduau-my.sharepoint.com/personal/miaojg22_off365_cn/_layouts/15/guestaccess.aspx?folderid=0bb3c4f3f122d4c2bb0f65eee2b5938f8&authkey=AfLSkcE8QeeUHTQ8GGfrrsU" target="_blank"><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/onedrive.png" width="200" height="40"  border=0 /></a></p>
-
-
-
-
-<font color="green">For Baiduyun</font>
-
-<p style="text-align:center"><a href="https://pan.baidu.com/s/1drNxblOBHWQNJ4V8ambGjg?qq-pf-to=pcqq.discussion&errno=0&errmsg=Auth%20Login%20Sucess&&bduss=&ssnerror=0&traceid=#list/path=%2F" target="_blank"><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/baiduicon.png" width="210" height="60"  border=0 /></a></p>
-
-
-
-- **Step 1.** Click the OneDrive or baiduyun icon above to download our latest image zip files: ```respeaker-debian-9-lxqt-sd-********-4gb.img.xz``` or ```respeaker-debian-9-iot-sd-********-4gb.img.xz```.
+- **Step 1.** Click the OneDrive icon above to download our latest image zip files: ```respeaker-debian-9-lxqt-sd-********-4gb.img.xz``` or ```respeaker-debian-9-iot-sd-********-4gb.img.xz```.
 
 
 |Section|Description|
@@ -305,7 +297,7 @@ Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2.0 image f
 
   <div class="admonition warning">
   <p class="admonition-title">Caution</p>
-  This wiki is based on the **respeaker-debian-9-lxqt-sd-20180319-4gb.img.xz** image version.
+  This wiki is based on the **respeaker-debian-9-lxqt-sd-20180610-4gb.img.xz** image version.
   </div>
 
 - **Step 2.** Plug the SD card into your PC or MAC with an SD card reader. You need an SD card with a capacity of more than 4G.
@@ -404,7 +396,7 @@ Now follow step 2 above to connect to your Respeaker over this serial connection
 Configure your ReSpeaker's network with the Network Manager tool, nmtui. nmtui will already be installed on the ReSpeaker image.
 
 ```
-respeaker@v2:~$ sudo nmtui              # respeaker user needs sudo
+sudo nmtui              # respeaker user needs sudo
 ```
 Then you will see a config page like this, select ```Activate a connection``` and press ```Enter``` key.
 
@@ -792,7 +784,7 @@ And we provide several APIs which enable users to get indicated when hotword is 
 ### Play with AVS
 
 
-#### C++
+**C++**
 
 This guide will show you how to run the Amazon official AVS C++ SDK with respeakerd. And this part requires you to have a certain technical background about Linux.
 
@@ -926,14 +918,15 @@ sudo systemctl stop respeakerd
 3.1 Download and install the necessary files
 
 ```
-$ cd /home/respeaker/ && mkdir sdk-folder && cd sdk-folder && mkdir sdk-build sdk-source third-party application-necessities && cd application-necessities && mkdir sound-files
-$ sudo apt-get -y install git gcc cmake build-essential libsqlite3-dev libcurl4-openssl-dev libfaad-dev libsoup2.4-dev libgcrypt20-dev libgstreamer-plugins-bad1.0-dev gstreamer1.0-plugins-good libasound2-dev doxygen
-$ cd /home/respeaker/sdk-folder/third-party && wget -c http://www.portaudio.com/archives/pa_stable_v190600_20161030.tgz && tar zxf pa_stable_v190600_20161030.tgz && cd portaudio && ./configure --without-jack && make
-$ sudo pip install commentjson
-$ sudo pip install flask
-$ cd /home/respeaker/sdk-folder/sdk-source && git clone git://github.com/respeaker/avs-device-sdk.git
-$ cd /home/respeaker/sdk-folder/sdk-build && cmake /home/respeaker/sdk-folder/sdk-source/avs-device-sdk -DCMAKE_BUILD_TYPE=DEBUG -DRESPEAKERD_KEY_WORD_DETECTOR=ON -DGSTREAMER_MEDIA_PLAYER=ON -DPORTAUDIO=ON -DPORTAUDIO_LIB_PATH=/home/respeaker/sdk-folder/third-party/portaudio/lib/.libs/libportaudio.a -DPORTAUDIO_INCLUDE_DIR=/home/respeaker/sdk-folder/third-party/portaudio/include
-$ make SampleApp -j2
+cd /home/respeaker/ && mkdir sdk-folder && cd sdk-folder && mkdir sdk-build sdk-source third-party application-necessities && cd application-necessities && mkdir sound-files
+sudo apt-get -y install git gcc cmake build-essential libsqlite3-dev libcurl4-openssl-dev libfaad-dev libsoup2.4-dev libgcrypt20-dev libgstreamer-plugins-bad1.0-dev gstreamer1.0-plugins-good libasound2-dev doxygen
+cd /home/respeaker/sdk-folder/third-party && wget -c http://www.portaudio.com/archives/pa_stable_v190600_20161030.tgz && tar zxf pa_stable_v190600_20161030.tgz && cd portaudio && ./configure --without-jack && make
+sudo pip install commentjson
+sudo pip install flask 
+sudo pip install requests
+cd /home/respeaker/sdk-folder/sdk-source && git clone git://github.com/respeaker/avs-device-sdk.git
+cd /home/respeaker/sdk-folder/sdk-build && cmake /home/respeaker/sdk-folder/sdk-source/avs-device-sdk -DCMAKE_BUILD_TYPE=DEBUG -DRESPEAKERD_KEY_WORD_DETECTOR=ON -DGSTREAMER_MEDIA_PLAYER=ON -DPORTAUDIO=ON -DPORTAUDIO_LIB_PATH=/home/respeaker/sdk-folder/third-party/portaudio/lib/.libs/libportaudio.a -DPORTAUDIO_INCLUDE_DIR=/home/respeaker/sdk-folder/third-party/portaudio/include
+make SampleApp -j2
 
 ```
 
@@ -1037,9 +1030,9 @@ If everything goes well, you will see the **Sample APP**. Now you are able to ma
 To activate the on-board LED effect, you just need to tap commands below.
 
 ```
-$ sudo cp -f /home/respeaker/respeakerd/scripts/pixel_ring_server /usr/local/bin/
-$ sudo chmod a+x /usr/local/bin/pixel_ring_server
-$ pixel_ring_server
+sudo cp -f /home/respeaker/respeakerd/scripts/pixel_ring_server /usr/local/bin/
+sudo chmod a+x /usr/local/bin/pixel_ring_server
+pixel_ring_server
 
 ```
 Now you will see the LED rings shining and running.
@@ -1052,14 +1045,14 @@ When this part done you will be able to wake up the ReSpeaker Core v2.0 by key w
 Tap the commands below.
 
 ```
-$ sudo cp -f /home/respeaker/respeakerd/scripts/avs_cpp_sdk_safe /usr/local/bin
-$ sudo chmod a+x /usr/local/bin/avs_cpp_sdk_safe
-$ sudo cp -f /home/respeaker/respeakerd/scripts/pixel_ring_server.service /etc/systemd/system/
-$ sudo cp -f /home/respeaker/respeakerd/scripts/avs_cpp_sdk.service /etc/systemd/system/
-$ sudo systemctl enable pixel_ring_server
-$ sudo systemctl enable avs_cpp_sdk
-$ sudo systemctl start pixel_ring_server
-$ sudo systemctl start avs_cpp_sdk
+sudo cp -f /home/respeaker/respeakerd/scripts/avs_cpp_sdk_safe /usr/local/bin
+sudo chmod a+x /usr/local/bin/avs_cpp_sdk_safe
+sudo cp -f /home/respeaker/respeakerd/scripts/pixel_ring_server.service /etc/systemd/system/
+sudo cp -f /home/respeaker/respeakerd/scripts/avs_cpp_sdk.service /etc/systemd/system/
+sudo systemctl enable pixel_ring_server
+sudo systemctl enable avs_cpp_sdk
+sudo systemctl start pixel_ring_server
+sudo systemctl start avs_cpp_sdk
 
 ```
 
@@ -1082,15 +1075,15 @@ This guide will shows you how to build an AVS device based on the ReSpeaker Core
 - **Step 1. Install AVS library (Python)**
 
 ```
-respeaker@v2:~$ sudo apt update
-respeaker@v2:~$ pip install avs
+sudo apt update
+pip install avs
 ```
 
 This will also install the following executables into **~/.local/bin**: alexa-audio-check, alexa-auth, dueros-auth, alexa-tap and alexa.
 
 Tap the command below to Check the audio configuration:
 ```
-respeaker@v2:~$ ~/.local/bin/alexa-audio-check
+~/.local/bin/alexa-audio-check
 ```
 This script calculates the RMS of the sound recorded by the microphones.
 
@@ -1099,7 +1092,7 @@ This script calculates the RMS of the sound recorded by the microphones.
 Connect to the board via [VNC](https://github.com/respeaker/get_started_with_respeaker/blob/master/docs/ReSpeaker_Core_V2/getting_started.md#ssh--vnc). In the VNC desktop, open terminal and execute:
 
 ```
-respeaker@v2:~$ ~/.local/bin/alexa-auth
+~/.local/bin/alexa-auth
 ```
 This script will open the web browser automatically, the web browser will display a login page. Sign in with your Amazon account:
 
@@ -1122,7 +1115,7 @@ We provide three python files based on Alexa, you can choose them freely.
 **Alexa Tap to Play**
 Tap the command below in the terminal Of Putty(SSH is recommended).
 ```
-respeaker@v2:~$ ~/.local/bin/alexa-tap
+~/.local/bin/alexa-tap
 ```
 
 Wait until you see **on_ready** in the log printing. Press **Enter** key of your computer and talk to Alexa(Only support English now).
@@ -1149,6 +1142,25 @@ python ns_kws_alexa_with_light.py
 The same as last one, say **Alexa** to trigger the conversation with Alexa. You will see the LED shinning while this program is running.
 
 
+- **Step 4. DOA(Direction of Arrival)**
+
+```
+cd ~
+git clone https://github.com/voice-engine/voice-engine.git
+cd ~/voice-engine/examples
+python kws_doa_alexa_respeaker_v2.py
+```
+
+Here is the output.
+
+```
+['arecord', '-t', 'raw', '-f', 'S16_LE', '-c', '8', '-r', '16000', '-D', 'default', '-q']
+detected 1 at direction 237.455170747
+detected 1 at direction 223.32811392
+detected 1 at direction 223.32811392
+detected 1 at direction 237.455170747
+detected 1 at direction 237.455170747
+```
 
 
 ### Play with Dueros
@@ -1162,7 +1174,7 @@ rm -f ~/.avs.json
 Then you can get the authorization from Baidu by tapping the following command:
 
 ```
-respeaker@v2:~$ ~/.local/bin/dueros-auth
+~/.local/bin/dueros-auth
 ```
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/dueros.jpg)
 
@@ -1180,9 +1192,11 @@ When you run the python program, you can say **Alexa** to wake up the Baidu voic
 Please refer to our wiki [Google Assistant](http://wiki.seeedstudio.com/Google_Assistant). Follow the instruction step by step, then you will be able to use Google Assistant.
 
 
-### Play with Bing
+### Play with STT
 
-This part will introduce Bing STT(Speech to Text) functions together with pocketsphinx to control GPIO pins. 
+This part will introduce Bing/Baidu STT(Speech to Text) functions together with pocketsphinx to control GPIO pins. 
+
+**1. Bing STT**
 
 - **Step 1. Install dependiencies**
 
@@ -1190,7 +1204,7 @@ This part will introduce Bing STT(Speech to Text) functions together with pocket
 sudo apt-get update && sudo apt-get upgrade
 sudo apt install libasound-dev portaudio19-dev libportaudiocpp0
 sudo apt-get install -y python python-dev python-pip build-essential swig git libpulse-dev
-sudo pip install pocketsphinx webrtcvad requests monotonic
+sudo pip install pocketsphinx webrtcvad  monotonic
 sudo pip install pyaudio respeaker
 ```
 
@@ -1202,32 +1216,56 @@ git clone https://github.com/respeaker/respeaker_python_library.git
 
 - **Step 3. Get Bing key from [Azure](https://www.microsoft.com/cognitive-services/en-us/speech-api).**
 
-- **Step 4. Connect a [Grove-LED](http://wiki.seeedstudio.com/Grove-Red_LED/) to respeaker core GPIO**
-
-| Grove-LED | ReSpeaker Core GPIO |
-|-----------|---------------------|
-| Yellow    | 2                   |
-| White     | NA                  |
-| Red       | 1                   |
-| Black     | 6                   |
-
-
-- **Step 5. Downlod the [SmartHome.py](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/SmartHome.py)**
+- **Step 4. Download the [Bing_STT.py](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Bing_STT.py)**
 
 ```
 cd ~
-wget https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/SmartHome.py
-python SmartHome.py  #Please add bing key first @ line 12
+wget https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Bing_STT.py
+python Bing_STT.py  
 ```
 
-- **Step 6. Let's say *ReSpeaker* to wake up**
+!!!Warning
+    Please add bing key @ line 12 before running python Bing_STT.py.
 
-- **Step 7. Control LED**
+- **Step 5. Let's say ReSpeaker to wake up**
 
-We can say **turn on light** or **turn off light** to control Grove-LED. 
+- **Step 6. Let's Play**
+
+Let's say **turn on light** or **turn off light** and monitor the screen output.
 
 !!!Note
     Please refer to FAQ9 to change the PocketSphinx wake up world.
+
+
+**2. Baidu STT**
+
+- **Step 1. Install dependiencies**
+
+```
+pip install baidu-aip
+```
+
+- **Step 2. Get Baidu key from [Here](https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index).**
+
+- **Step 3. Download the [Baidu_STT.py](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Baidu_STT.py)**
+
+```
+cd ~
+wget https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Baidu_STT.py
+python Baidu_STT.py  
+```
+
+!!!Warning
+    Please add baidu key @ line 16 before running python Baidu_STT.py.
+
+- **Step 4. Let's say ReSpeaker to wake up**
+
+- **Step 5. Let's Play**
+
+Let's say **开灯** or **关灯** and monitor the screen output.
+
+!!!Note
+    For more info about the baidu speech API, please refer to [here](http://ai.baidu.com/docs#/ASR-Online-Python-SDK/top).
 
 
 ## Play with Wio Link
@@ -1245,7 +1283,9 @@ At first, we need to install the latest MRAA and UPM packages.
 ```
 sudo apt install  python-mraa python-upm libmraa1 libupm1 mraa-tools
 ```
+
 - **Step 2. Check your platform information**
+
 
 ```
 #only have bus 0 and id=03(/dev/i2c-3), 0 is the i2c number for mraa and upm
@@ -1273,7 +1313,7 @@ The description of the PIN defines for the ReSpeaker Core v2.0 board please refe
 
 - **Step 3. Demos with MRAA or UPM**
 
-#### A. Use MRAA Library
+**A. Use MRAA Library**
 
 
 **Control GPIO Directly**
@@ -1359,7 +1399,7 @@ pin 1091 = 1
 ```
 
 
-#### B. Use UPM Library
+**B. Use UPM Library**
 
 The UPM project implements sensors' driver based on the MRAA library, so we no longer need to care about the GPIO programming or what the I2C address of a sensor, all the default informations and logics for a particular sensor has been wrapped into a UPM library. UPM has supported bunch of sensors. https://iotdk.intel.com/docs/master/upm/modules.html. But please note that we didnt confirm every sensor works on the ReSpeaker Core v2.0.
 
@@ -1445,8 +1485,6 @@ Light value is 31
 ```
 
 
-
-
 ## Play with Android
 
 In this part we will show you how to burn the Android image(Version Android O 8.1.) into ReSpeaker Core v2.0. And we will tell you how to record and play audio in Window with ADB Tool.
@@ -1465,22 +1503,18 @@ In this part we will show you how to burn the Android image(Version Android O 8.
 |HDMI cable |*1|
 
 
-### Image install
+**Image install**
 
-Click the link below to download the latest image of Android, and you can click here to check the [image change log](https://github.com/respeaker/axol_system_image_changelog/blob/master/respeaker_core_v2_android_changelog.md)
+Click the link below to download the latest image of Android
 
+For One Drive
 
-<font color="green">For OneDrive</font>
-
-
-<p style="text-align:center"><a href="https://onedrive.live.com/?authkey=%21ANL8Rd9W3_7ngBQ&id=5219529519B9B6A1%21780&cid=5219529519B9B6A1" target="_blank"><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/onedrive.png" width="200" height="40"  border=0 /></a></p>
+[Click here to down load the image](https://onedrive.live.com/?authkey=%21ANL8Rd9W3_7ngBQ&id=5219529519B9B6A1%21780&cid=5219529519B9B6A1)
 
 
-<font color="green">For Baiduyun</font>
+For Baiduyun
 
-<p style="text-align:center"><a href="https://pan.baidu.com/s/1drNxblOBHWQNJ4V8ambGjg?qq-pf-to=pcqq.discussion&errno=0&errmsg=Auth%20Login%20Sucess&&bduss=&ssnerror=0&traceid=#list/path=%2F" target="_blank"><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/baiduicon.png" width="210" height="60"  border=0 /></a></p>
-
-
+[Click here to down load the image](https://pan.baidu.com/s/1drNxblOBHWQNJ4V8ambGjg?qq-pf-to=pcqq.discussion&errno=0&errmsg=Auth%20Login%20Sucess&&bduss=&ssnerror=0&traceid=#list/path=%2F)
 
 
 **Step 1. Burn the image into your TF card.**
@@ -1523,26 +1557,13 @@ It will last about 5-10 minutes, then the message will pop up  `Doing Actions su
     It will takes a long time to boot the system at the first time. The next time will be much better
 
 
-Ok, then you will be able to access the Android System. If you've connect your ReSpeaker Core v2.0 with a HDMI monitor, you will see the Boot interface as below.
+Ok, then you will be able to access the Android System.
 
-
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/screen.png)
-
-
-
-
-### For windows
 
 **Record and Play Audio in Window with ADB Tool**
 
 
 Since the system is on line, you can work with the build-in apps, here we provide another options -- you can use ADB tools for windown to access the ReSpeaker Core v2.0 to do more things, for example, in this demo, we will show you how to record and play audio.
-
-For window 7: You need to download the driver at first. Click [Here](http://adbdriver.com/downloads/) to download `ADB Driver Installer (9.22 MB)`.
-
-
-For window 8 or 10: There is no need to install the ADB driver, you can just move to the `step 1.`
-
 
 **Step 1. Download the ABD Tools**
 
@@ -1699,43 +1720,7 @@ PS D:\Android> ./adb pull /sdcard/a.wav .
 ```   
 
 
-
-!!!Tips
-        For more detail and example about ADB Commands, please check [here](http://adbshell.com/commands) .
-
-
-
-
-### For Linux
-
-If you've connect your ReSpeaker Core v2.0 with a Linux system, then you can use the commands below to install ADB Tools
-
-```
-sudo apt update
-sudo apt install adb
-
-```
-
-When the tool is installed, you can use the same commands as [for window](http://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#for-windows) to record and play.
-
-
-
-
 ## FAQs
-
-**Q0: What is the wake-up distance of ReSpeaker Core v2.0**
-
-**A0:**
-
-Note:
-This was tested in a low noise environment (~45dB).
-When we tested this in our other (open) office the average volume was ~60dB. The testers voice ranged from 80dB to 90dB.
-These were the results.
-Check the FAQ for more detailed specifications of Wake-Up Detection. 
-
-
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/distance.png)
-
 
 **Q1: How to change the senstivity of the wake up word?**
 
