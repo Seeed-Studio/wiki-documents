@@ -1485,58 +1485,56 @@ Light value is 31
 ```
 
 
-## Play with Android
+## Running with Android
 
-In this part we will show you how to burn the Android image(Version Android O 8.1.) into ReSpeaker Core v2.0. And we will tell you how to record and play audio in Window with ADB Tool.
+In this section we will show you how to burn the Android image (Version Android O 8.1.) onto ReSpeaker Core v2.0. We will also tell you how to record and play audio in Window with ADB Tool.
 
 **Materials required**
 
 
 |Item  |Num|
 |---|----|
-|TF card (4G or more)| *1|
-|TF card reader| *1|
+|microSD card (4G or more)| *1|
+|microSD card reader| *1|
 |HDMI monitor| *1|
 |PC | *1|
-|Speaker or Earphone| *1|
+|Speaker or Earphones| *1|
 |Micro-USB cable| *1|
 |HDMI cable |*1|
 
 
-**Image install**
+**Image installation**
 
 Click the link below to download the latest image of Android
 
-For One Drive
+From One Drive
 
-[Click here to down load the image](https://onedrive.live.com/?authkey=%21ANL8Rd9W3_7ngBQ&id=5219529519B9B6A1%21780&cid=5219529519B9B6A1)
-
-
-For Baiduyun
-
-[Click here to down load the image](https://pan.baidu.com/s/1drNxblOBHWQNJ4V8ambGjg?qq-pf-to=pcqq.discussion&errno=0&errmsg=Auth%20Login%20Sucess&&bduss=&ssnerror=0&traceid=#list/path=%2F)
+[Click here to download the image](https://onedrive.live.com/?authkey=%21ANL8Rd9W3_7ngBQ&id=5219529519B9B6A1%21780&cid=5219529519B9B6A1)
 
 
-**Step 1. Burn the image into your TF card.**
+From Baiduyun
 
-When the download is complete, unzip it and you will get the img file, named like `android_o_flasher_20180619.img`.
-Please plug your TF card into your TF card reader and connect the reader to your PC. Then use <a href="https://etcher.io/">Etcher</a> to burn this img into your TF card.
+[Click here to download the image](https://pan.baidu.com/s/1drNxblOBHWQNJ4V8ambGjg?qq-pf-to=pcqq.discussion&errno=0&errmsg=Auth%20Login%20Sucess&&bduss=&ssnerror=0&traceid=#list/path=%2F)
 
-Choose the right `img` and the TF card you've plugged in, then just click `Flash`, 5-20 mins later, it will be done. 
+
+**Step 1. Burn the image into your SD card.**
+
+When the download is complete, unzip it and you will get the img file. It should be named similar to `android_o_flasher_20180619.img`.
+Please plug your SD card into your SD card reader and connect the reader to your PC. Then use <a href="https://etcher.io/">Etcher</a> to burn the img into your SD card.
+
+Choose the right `img` and the SD card you've plugged in, then just click `Flash`, this can take anywhere from 5-20 minutes.
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/android_burn.png)
 
 
 
-**Step 2. Burn the image into the Emmc of ReSpeaker Core v2.0**
+**Step 2. Burn the image into the eMMC of the ReSpeaker Core v2.0**
 
-First of all, let's do some push and plug.
+When the flashing is complete, take the SD card reader out of your PC, and plug the SD card into you ReSpeaker Core v2.0.
 
-When the flash is done, take the TF card reader out of your PC, and plug the TF card into you ReSpeaker Core v2.0.
+Connect a HDMI monitor with your ReSpeaker Core v2.0 via a HDMI cable.
 
-Connect the HDMI monitor with your ReSpeaker Core v2.0 via the HDMI cable
-
-Connect the earphone to the 3.5mm headset jack or connect the speaker to the JST2.0 jack.
+Then connect the earphone to the 3.5mm headset jack or connect the speaker to the JST2.0 jack.
 
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Hardwareconnect.jpg)
@@ -1544,30 +1542,30 @@ Connect the earphone to the 3.5mm headset jack or connect the speaker to the JST
 
 Ok, when all of above done, please connect the ReSpeaker Core v2.0 `OTG` port to your PC via the micro-USB cable.
 
-Then the ReSpeaker will boot from the TF card and burn the image to the EMMC.
+Then the ReSpeaker will boot from the SD card and burn the image to the eMMC.
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/install_Android.jpg)
 
-It will last about 5-10 minutes, then the message will pop up  `Doing Actions succeeded.please remove the sdcard...`, so please just plug out the TF card, and the ReSpeaker Core v2.0 will reboot.
+It will last about 5-10 minutes, then the message will pop up  `Doing Actions succeeded. Please remove the SD card...`, so please just plug out the SD card, and the ReSpeaker Core v2.0 will reboot.
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/android_finish.jpg)
 
 
 !!!Tips
-    It will takes a long time to boot the system at the first time. The next time will be much better
+    The first time you boot the operating system it will take awhile. After the first boot it will be much faster.
 
 
-Ok, then you will be able to access the Android System.
+Now you should be able to access the Android system.
 
 
-**Record and Play Audio in Window with ADB Tool**
+**Record and Play Audio in Windows with ADB Tool**
 
 
-Since the system is on line, you can work with the build-in apps, here we provide another options -- you can use ADB tools for windown to access the ReSpeaker Core v2.0 to do more things, for example, in this demo, we will show you how to record and play audio.
+Since the system is now running, you can work with the built-in apps, here we provide another options -- you can use ADB tools for windown to access the ReSpeaker Core v2.0 to do more things, for example, in this demo, we will show you how to record and play audio.
 
 **Step 1. Download the ABD Tools**
 
-First of all, let's click [here](http://adbshell.com/upload/adb.zip) to download the ABD Tools. Then extract the `abd.zip`, you will get three files `adb.exe`/ `AdbWinApi.dll`/`AdbWinUsbApi.dll`, please make sure they are in the same folder, in this demo, we put those files into `D:\Android`. Please enter the folder contains all this files, click the `File` button in the upper left corner of this window to open PowerShell
+First of all, let's click [here](http://adbshell.com/upload/adb.zip) to download the ABD Tools. Then extract the `abd.zip`, you will get three files `adb.exe`/ `AdbWinApi.dll`/`AdbWinUsbApi.dll`, please make sure they are in the same folder. In this demo, we put those files into `D:\Android`. Please enter the folder contains all this files, click the `File` button in the upper left corner of this window to open PowerShell.
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/power.png)
 
@@ -1582,7 +1580,7 @@ List of devices attached
 UNXKEOA8KH      device    
 ```
 
-When you see the `UNXKEOA8KH device`, you PC is connected with your Android. Then you can use adb tools to access to the ReSpeaker Core v2.0.
+When you see the `UNXKEOA8KH device`, your PC is connected with the Android OS running on your ReSpeaker. Then you can use adb tools to access to the ReSpeaker Core v2.0.
 
 ```
 PS D:\Android\> ./adb root
@@ -1592,7 +1590,7 @@ rk3229_respeaker:/ #
 ```
 
 
-**Step 3. Presetings for Record and Play**
+**Step 3. Presets for Recording and Playing**
 
 At first, please check all the channels
 
@@ -1622,7 +1620,7 @@ ctl     type    num     name                                     value
 rk3229_respeaker:/ #
 
 ```
-The `CH1 volume` ranges from 0 to 255; and the `ADC1 PGA gain` ranges 0-31,the default setting is 0, so the micphone can not pick up anything. Let's set it as 31.
+The `CH1 volume` ranges from 0 to 255; and the `ADC1 PGA gain` ranges 0-31, the default setting is 0, so the microphone can not pick up anything. Let's set it as 31.
 
 ```
 tinymix 0 125
@@ -1644,7 +1642,7 @@ tinymix 15 31
 
 ```
 
-Now, you can ckeck the settings you've just made.
+Now, you can check the settings you've just made.
 
 ```
 rk3229_respeaker:/ # tinymix
@@ -1705,19 +1703,22 @@ rk3229_respeaker:/sdcard #
 tinyplay a.wav -D 0 -d 1
 ```
 
-For the command `tinyplay a.wav -D 0 -d 1`. the `1` means the ReSpeaker will play the audio as mono audio. And this command only works for 1 or 2 channels audio.
-If there are more channels in the audio file, you can not use this command to play the audio. 
+For the command `tinyplay a.wav -D 0 -d 1`. the `1` means the ReSpeaker will play the audio as mono audio. And this command only works for 1 or 2 channel audio.
+If there are more channels in the audio file, you can not use this command to play the audio.
 
 !!!Tips
-        Actually, you can record at most 8 channels audio, just change the `-c 2`, for example `-c 8` will be 8 channels audio. However we don't support playing audios with more than 2 channels by tinyplay. 
+        You can record at most 8 channel audio, just change the `-c 2`, for example `-c 8` will be 8 channels audio. However, we don't support playing audio with more than 2 channels by tinyplay.
 
 
-You can use `pull` to copy the audio file from your ReSpeaker Core v2.0 to your PC. 
+You can use `pull` to copy the audio file from your ReSpeaker Core v2.0 to your PC.
 
 ```
 PS D:\Android> ./adb pull /sdcard/a.wav .
 3562 KB/s (101875756 bytes in 27.930s)
 ```   
+
+
+
 
 
 ## FAQs
