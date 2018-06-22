@@ -1192,7 +1192,7 @@ When you run the python program, you can say **Alexa** to wake up the Baidu voic
 Please refer to our wiki [Google Assistant](http://wiki.seeedstudio.com/Google_Assistant). Follow the instruction step by step, then you will be able to use Google Assistant.
 
 
-### Play with STT
+## Play with STT
 
 This part will introduce Bing/Baidu STT(Speech to Text) functions together with pocketsphinx to control GPIO pins. 
 
