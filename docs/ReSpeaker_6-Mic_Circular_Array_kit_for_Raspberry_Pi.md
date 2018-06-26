@@ -120,7 +120,7 @@ Earphone or Speaker                 x1
 **Step 4.**  Connect the *Raspberry Pi* with the *PC* via the micro-USB cable
 
 
-![Pics here]()
+![Pics here](https://github.com/SeeedDocument/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/raw/master/img/6-mic.jpg)
 
 
 ### Software

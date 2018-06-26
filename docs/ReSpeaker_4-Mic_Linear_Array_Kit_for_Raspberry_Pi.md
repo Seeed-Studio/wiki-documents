@@ -109,13 +109,13 @@ Earphone or Speaker                 x1
 
 
 !!!Tips
-        Actually the ReSpeaker 6-Mic Circular Array support Raspberry Pi Zero, Raspberry Pi 1 B+, Raspberry Pi 2 B, Raspberry Pi 3 B and Raspberry Pi 3 model B+, in this wiki we are using Raspberry Pi 3.
+        Actually the ReSpeaker 4-Mic Circular Array support Raspberry Pi Zero, Raspberry Pi 1 B+, Raspberry Pi 2 B, Raspberry Pi 3 B and Raspberry Pi 3 model B+, in this wiki we are using Raspberry Pi 3.
 
 
 **Connection**
 
 
-**Step 1.**  Connect the *ReSpeaker Voice Accessory HAT* with *ReSpeaker 6-Mic circular Array* via the Ribbon Cable
+**Step 1.**  Connect the *ReSpeaker Voice Accessory HAT* with *ReSpeaker 4-Mic linear Array* via the Ribbon Cable
 
 **Step 2.**  Plug the *ReSpeaker Voice Accessory HAT* into the *Raspberry Pi* via the 40 Pin GPIO
 
@@ -124,7 +124,7 @@ Earphone or Speaker                 x1
 **Step 4.**  Connect the *Raspberry Pi* with the *PC* via the micro-USB cable
 
 
-![Pics here]()
+![Pics here](https://github.com/SeeedDocument/ReSpeaker_4-Mics_Linear_Array_Kit/raw/master/img/4-mic.jpg)
 
 
 ### Software
@@ -306,7 +306,7 @@ aplay -D plughw:1,0 -r 16000 mono_to_play.wav
 ```
 
 !!!Note
-        Limit for developer using 6-Mic Circular Array Kit(or 4-Mic Linear Array Kit) doing capture & playback the same time:
+        Limit for developer using 4-Mic linear Array Kit(or 4-Mic Linear Array Kit) doing capture & playback the same time:
             
         -1. capture must be start first, or else the capture channels will possibly be disorder.
             
@@ -333,20 +333,6 @@ $ audacity                      // run audacity
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/audacity.png)
 
 
-### Play with LEDs
-
-
-There are 12 GRB LEDs in the 6-mic circular array, you can configure the LEDs yourself, now let's see how to light them up.
-
-```
-git clone --depth 1 https://github.com/respeaker/pixel_ring.git
-cd pixel_ring
-pip install -U -e .
-python examples/respeaker_4mic_array.py
-
-```
-
-You will see LEDs light and run. And you can refer to the `python examples/respeaker_4mic_array.py` file to make your own effects.
 
 
 
