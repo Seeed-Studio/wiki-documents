@@ -1971,6 +1971,17 @@ on the new pads, as shown below：
 	if mic.wakeup('respeaker'):
 	```
 
+**Q10: How to build my owner flasher firmware? So I can burn my owner firmware to rest of ReSpeaker Core v2.0.**
+
+**A10:** please run the image builder on RAM>2G ARM debian system.
+
+Here are the detail instructions.
+
+- Step 1. git clone https://github.com/respeaker/image_builder 
+- Step 2. modify the upload path @ /publish/respeaker.io_stable.sh
+- Step 3. sudo ./publish/respeaker.io_stable.sh
+
+
 ## Resources
 - **[PDF]** [Download PDF of This Wiki](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/ReSpeaker_Core_v2.pdf)
 - **[PDF]** [Rockchip RK3229 Datasheet V1.1](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Rockchip%20RK3229%20Datasheet%20V1.1%2020151209.pdf)

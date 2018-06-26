@@ -62,6 +62,7 @@ The ReSpeaker Mic Array v2.0 has two firmware versions available, one including 
 - Power Supply: 5V DC from Micro USB or expansion header  
 - Dimensions: 70mm (Diameter)  
 - 3.5mm Audio jack output socket
+- Power consumption: 5V, 180mA with led on and 170mA with led off
 
 ## Hardware Overview
 
