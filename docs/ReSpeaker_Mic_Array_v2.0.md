@@ -63,6 +63,7 @@ The ReSpeaker Mic Array v2.0 has two firmware versions available, one including 
 - Dimensions: 70mm (Diameter)  
 - 3.5mm Audio jack output socket
 - Power consumption: 5V, 180mA with led on and 170mA with led off
+- Max Sample Rate: 16Khz
 
 ## Hardware Overview
 
@@ -141,7 +142,7 @@ sudo python dfu.py --download 1_channel_firmware.bin
 Here is the firmware downloading result.
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/Download_firmware.png)
 
-**For Windows/Mac:** We do not suugest use Windows/Mac to update the firmware. 
+**For Windows/Mac:** We do not suggest use Windows/Mac and Linux vitual machine to update the firmware. 
 
 ### Out of Box Demo
 

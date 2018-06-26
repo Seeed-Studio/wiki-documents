@@ -11,7 +11,7 @@ sku:  113050012
 
 The BLE Mcicro is a low cost ARM cortex-m0 based module for Bluetooth® Smart designs with the nRF51822 SoC. The module gives access to at most 23 GPIO pins via pin pads and incorporates an on board PCB antenna to minimize material cost but also with a good performance.The application engineers can easily apply the module for theirs application without worrying about the specific impedance matching or soldering fine pitch related radio designing issues.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](http://www.seeedstudio.com/depot/433mhz-rf-link-kit-p-127.html?cPath=139_140)
+[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Seeed-Micro-BLE-Module-w%26-Cortex-M0-Based-nRF51822-SoC-p-1975.html)
 
 ## Features
 ---

@@ -274,7 +274,7 @@ Please plug the USB cable gently, otherwise you may damage the interface.Please 
 
 **Image Installation**
 
-Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2.0 image from an SD card to get up and running. We offer two ways to boot the Respeaker core v2.0. You can either boot from the SD card or [boot from the eMMC](/boot from the eMMC).
+Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2.0 image from an SD card to get up and running. We offer two ways to boot the Respeaker core v2.0. You can either boot from the SD card or boot from the eMMC.
 
 **A. Boot from the SD card**
 

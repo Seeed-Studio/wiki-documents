@@ -97,8 +97,7 @@ We will show you an example.This example can upload data to webpage and store yo
 ### Software
 
 - Please follow [how to install an arduino library](http://wiki.seeed.cc/How_to_install_Arduino_Library/) procedures to install library.
-- Click on below button to download SD and W5500 Ethernet Shield libraries.
-[![](https://github.com/SeeedDocument/W5500_Ethernet_Shield_v1.0/raw/master/img/download%20SD%20library.png)](https://github.com/SeeedDocument/W5500_Ethernet_Shield_v1.0/raw/master/res/SdFat-master.zip)
+- Click on below button to download W5500 Ethernet Shield libraries.
 [![](https://github.com/SeeedDocument/W5500_Ethernet_Shield_v1.0/raw/master/img/download%20W5500%20library.png)](https://github.com/SeeedDocument/W5500_Ethernet_Shield_v1.0/raw/master/res/WIZ_Ethernet_Library-IDE1.6.x-master.zip)
 
 - Install the library to your Arduino IDE when it is downloaded.

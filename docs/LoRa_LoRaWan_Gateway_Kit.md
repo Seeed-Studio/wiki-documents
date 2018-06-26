@@ -203,8 +203,7 @@ your other favorite serial tools,of cause you can use them.However if you are no
 #### Step 1. Power up and connect to putty
 a) First, make sure the serial tool and RPi (RHF4T002 Adapter) are connected correctly.  
 
-b) Plug FT232 tool to PC (If COM port is not recognized correctly, please refer below driver
-installation chapter)
+b) Plug FT232 tool to PC (If COM port is not recognized correctly, please refer to [Virtual COM Port Drivers](http://www.ftdichip.com/Drivers/VCP.htm))
 
 c) Open **Device Manager** of your PC to get the right COM port. Like COM15 for example. Configure
 ExtraPuTTY according to below picture (Speed 115200, others use defaults), click **Open**. As the gateway is still not opened, so there is nothing in the terminal.
@@ -618,7 +617,7 @@ Then go to **Dashboard -> Applications -> SampleApp ->Device** , click the Node 
 ## Resources
 
 - **[PDF]** [Download Wiki PDF](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/res/LoRa_LoRaWan_Gateway_Kit.pdf)
-- **[Uer Manual]** [User Manual](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/res/%5BRHF-UM01649%5DIoT%20Discovery%20User%20Manual-seeed-v2.1.pdf).
+- **[Uer Manual]** [User Manual](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/res/%5BRHF-UM01649%5DIoT%20Discovery%20User%20Manual%20-%20v3.2.pdf).
 - **[More Reading]** [Wiki of Seeeduino LoRaWAN](/Seeeduino_LoRAWAN/)
 - **[More Reading]** [RisingHF Website](http://www.risinghf.com/product/risinghf-iot-dicovery/?lang=en)
 

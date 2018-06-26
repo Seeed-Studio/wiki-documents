@@ -63,7 +63,7 @@ Raspberry Pi zero Connection
 
 While the upstream wm8960 codec is not currently supported by current Pi kernel builds, upstream wm8960 has some bugs, we had fixed it. We must build it manually.
 
-Make sure that you are running [the lastest Raspbian Operating System(debian 9)](https://www.raspberrypi.org/downloads/raspbian/) on your Pi. *(updated at 2017.11.29)*
+Make sure that you are running [the lastest Raspbian Operating System(debian 9)](https://www.raspberrypi.org/downloads/raspbian/) on your Pi. *(updated at 2018.4.18)*
 
 - Step 1. Get the seeed voice card source code, install and reboot.
 
@@ -192,7 +192,7 @@ And the following guide will also show you how to get started with Google Assist
 
 **1. Configure a Developer Project and get JSON file**
 
-    Follow step 1. 2. 3. 4. in the  [guide](https://developers.google.com/assistant/sdk/prototype/getting-started-pi-python/config-dev-project-and-account#config-dev-project) to configure a project on Google Cloud Platform and create an OAuth Client ID JSON file. Don't forget to copy the JSON file to your Raspberry Pi.
+Follow step 1. 2. 3. 4. in the  [guide](https://developers.google.com/assistant/sdk/prototype/getting-started-pi-python/config-dev-project-and-account#config-dev-project) to configure a project on Google Cloud Platform and create an OAuth Client ID JSON file. Don't forget to copy the JSON file to your Raspberry Pi.
 
 **2. Use a Python virtual environment to isolate the SDK and its dependencies from the system Python packages.**
 
@@ -253,6 +253,16 @@ See the [Troubleshooting](https://developers.google.com/assistant/sdk/prototype/
 As Raspbian Operating System is updated to Debian 9, we won't provide our Raspbian image anymore. Click [here](https://www.raspberrypi.org/downloads/raspbian/) to get the lastest Raspbian Operating System.
 
 - [How to install the image](https://www.raspberrypi.org/documentation/installation/installing-images/)
+
+## FAQ
+
+**Q1: #include "portaudio.h" Error when run "sudo pip install pyaudio".**
+
+A1: Please run below command to solve the issue. 
+
+```
+sudo apt-get install portaudio19-dev
+```
 
 
 ## Resources

@@ -205,6 +205,13 @@ The SPI pins (SCK, MISO, MOSI) are routed to the ICSP pins by default. But for s
     Be careful when you are going to change SPI pins, it's easy to hurt yourself or the PCBA.
 
 
+**ODB pins**
+
+![](https://github.com/SeeedDocument/CAN-BUS-Shield-V2.0/raw/master/img/ODB.png)
+
+!!!Warning
+    Please do not cut the forth left PAD connection. Becasue there is no signal connected with forth right PAD.
+
 ## Getting Started
 -----
 Here's a simple example to show you how CAN-BUS Shield works. In this example we need 2 pieces of CAN-BUS Shields as well as Arduino or Seeeduino.

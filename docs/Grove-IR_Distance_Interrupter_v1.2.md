@@ -80,7 +80,7 @@ Platforms Supported
 Hardware Overview
 -----------------
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-IR_Distance_Interrupter_v1.2/master/img/Grove-IR_Distance_Interrupter_v1.2_hardware_overview_1200.jpg)
+![](https://github.com/SeeedDocument/Grove-IR_Distance_Interrupter_v1.2/raw/master/img/hardware_overview.png)
 
 -   **ITR9909 Reflective photosensor**, Highly sensitive reflective photosensor.
 -   **LM393 operational amplifier**, rail-to-rail operational amplifier.

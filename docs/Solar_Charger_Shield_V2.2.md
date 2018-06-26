@@ -83,7 +83,7 @@ Solar_Charger_Shield_v2.2_inputs.jpg
 
 4) When the battery is fully charged, the green light glows.
 
-5) Once you have charged the battery, you may mount the shield on to the arduino. As you power up the solar charger shield, it should power up the arduino as shown in the figure below:
+5) Then you can mount the shield on to the arduino. As you power up the solar charger shield, it should power up the arduino as shown in the figure below:
 
 ![](https://github.com/SeeedDocument/Solar_Charger_Shield_V2.2/raw/master/img/Solar-Charger-Shield-v2.2_power-arduino.jpg)
 

@@ -64,7 +64,7 @@ Mount ReSpeaker 4-Mic Array on Raspberry Pi, make sure that the pins are properl
 
 The AC108 codec is not supported by Pi kernel builds currently, we have to build it manually.
 
-- Step 1. Please Make sure running [the lastest Raspbian Operating System(debian 9)](https://www.raspberrypi.org/downloads/raspbian/) on Pi. *(updated at 2017.09.15)*
+- Step 1. Please Make sure running [the lastest Raspbian Operating System(debian 9)](https://www.raspberrypi.org/downloads/raspbian/) on Pi. *(updated at 2018.4.18)*
 
 - Step 2. Get the seeed voice card source code.
 
@@ -208,7 +208,7 @@ pi@raspberrypi:~ $ source ~/env/bin/activate                    # activate the v
 (env) pi@raspberrypi:~ $ cd ~/
 (env) pi@raspberrypi:~ $ git clone https://github.com/respeaker/avs
 (env) pi@raspberrypi:~ $ cd avs                                 # install Requirements
-(env) pi@raspberrypi:~ $ python setup.py install                               
+(env) pi@raspberrypi:~/avs $ python setup.py install                               
 (env) pi@raspberrypi:~/avs $ sudo apt-get install gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gir1.2-gstreamer-1.0 python-gi python-gst-1.0
 (env) pi@raspberrypi:~/avs $ pip install tornado
 ```
@@ -254,7 +254,7 @@ deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main non-
 
 **Q2: We can hear the voice by aplay from the 3.5mm audio jack but we can't hear the voice when running ns_kws_doa_alexa_with_light.py**
 
-Q2: We have 3 players (mpv, mpg123 and gstreamer) to use. SpeechSynthesizer and Alerts prefer mpg123 which is more responsive. AudioPlayer likes gstreamer > mpv > mpg123. Gstreamer supports more audio format and works well on raspberry pi. We can also specify the player of AudioPlayer using the environment variable PLAYER. So please try below commands to enable the voice.
+A2: We have 3 players (mpv, mpg123 and gstreamer) to use. SpeechSynthesizer and Alerts prefer mpg123 which is more responsive. AudioPlayer likes gstreamer > mpv > mpg123. Gstreamer supports more audio format and works well on raspberry pi. We can also specify the player of AudioPlayer using the environment variable PLAYER. So please try below commands to enable the voice.
 
 ```
 sudo apt install mpg123
@@ -263,7 +263,16 @@ PLAYER=mpg123 python ns_kws_doa_alexa_with_light.py
 
 **Q3: There is no response When we run kws_doa.py and say snowboy**
 
-Q3: Please run audacity to make sure 4 channels are good. If there is one channel without data, there will be no response when we say snowboy.
+A3: Please run audacity to make sure 4 channels are good. If there is one channel without data, there will be no response when we say snowboy.
+
+
+**Q4: #include "portaudio.h" Error when run "sudo pip install pyaudio".**
+
+A4: Please run below command to solve the issue. 
+
+```
+sudo apt-get install portaudio19-dev
+```
 
 ## Resources
 
