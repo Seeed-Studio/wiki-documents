@@ -1211,7 +1211,7 @@ sudo apt-get update && sudo apt-get upgrade
 sudo apt install libasound-dev portaudio19-dev libportaudiocpp0
 sudo apt-get install -y python python-dev python-pip build-essential swig git libpulse-dev
 sudo pip install pocketsphinx webrtcvad  monotonic
-sudo pip install pyaudio respeaker
+sudo pip install pyaudio respeaker requests
 ```
 
 - **Step 2. Install respeaker python library**
