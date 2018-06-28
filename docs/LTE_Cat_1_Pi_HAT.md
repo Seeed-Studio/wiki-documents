@@ -13,6 +13,10 @@ tags: grove_analog, io_3v3, io_5v, plat_duino
 
 ![](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/Img/overview.JPG)
 
+
+<iframe src="https://3dwarehouse.sketchup.com/embed.html?mid=eeee1715-69fe-4e5e-a643-15a3c1f3510d" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="800" height="450" allowfullscreen></iframe>
+
+
 Seeed’s LTE CAT.1 Pi HAT is an open sourcecellular extension modem for Raspberry Pi,
 based on u-blox LARA-R2xx series. Itcompatible with Raspberry Pi 1 Model B+ and later versions.
 
