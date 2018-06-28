@@ -226,6 +226,12 @@ MRAA|	HEADER PIN INDEX |	SYSFS PIN	|RK3229 PIN
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Dimension_1.png)
 
 
+
+<iframe src="https://3dwarehouse.sketchup.com/embed.html?mid=10325e7b-718b-477f-80d1-c85f5c2289c7" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="800" height="450" allowfullscreen></iframe>
+
+
+
+
 ## Applications
 
 - Smart speaker

@@ -98,6 +98,11 @@ The WM8960 is a low power stereo codec featuring Class D speaker drivers to prov
 
 ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/Dimension1.png)
 
+
+
+<iframe src="https://3dwarehouse.sketchup.com/embed.html?mid=759d56d7-c97c-4aa7-ad96-3ca1e0d5a13e" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="800" height="450" allowfullscreen></iframe>
+
+
 ## Applications
 
 - USB Voice Capture
