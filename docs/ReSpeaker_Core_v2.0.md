@@ -23,6 +23,7 @@ ReSpeaker Core v2.0 is designed as a feature rich development board for business
 
 <p style="text-align:center"><a href="https://www.seeedstudio.com/ReSpeaker-Core-V2.0-p-3039.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
+<p style="text-align:center"><a href="https://www.amazon.com/dp/B07DN43Q7L" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/amaon.png"  width="300" height="48"  border=0/></a></p>
 
 
 ## Features
@@ -1195,9 +1196,9 @@ When you run the python program, you can say **Alexa** to wake up the Baidu voic
 Please refer to our wiki [Google Assistant](http://wiki.seeedstudio.com/Google_Assistant). Follow the instruction step by step, then you will be able to use Google Assistant.
 
 
-## Play with STT
+## Play with online STT
 
-This part will introduce Bing/Baidu STT(Speech to Text) functions together with pocketsphinx to control GPIO pins. 
+This part will introduce Bing/Baidu STT(Speech to Text) functions together with pocketsphinx. 
 
 **1. Bing STT**
 
@@ -1214,7 +1215,10 @@ sudo pip install pyaudio respeaker requests
 - **Step 2. Install respeaker python library**
 
 ```
+cd ~
 git clone https://github.com/respeaker/respeaker_python_library.git
+cd respeaker_python_library
+sudo python setup.py install
 ```
 
 - **Step 3. Get Bing key from [Azure](https://www.microsoft.com/cognitive-services/en-us/speech-api).**
@@ -1269,6 +1273,68 @@ Let's say **开灯** or **关灯** and monitor the screen output.
 
 !!!Note
     For more info about the baidu speech API, please refer to [here](http://ai.baidu.com/docs#/ASR-Online-Python-SDK/top).
+
+## Play with offline STT
+
+This part will use pocketsphinx offline speech to text function. Please bypass Step 1 and Step 2 if you went through play with online STT.
+
+- **Step 1. Install dependiencies**
+
+```
+sudo apt-get update && sudo apt-get upgrade
+sudo apt install libasound-dev portaudio19-dev libportaudiocpp0
+sudo apt-get install -y python python-dev python-pip build-essential swig git libpulse-dev
+sudo pip install pocketsphinx webrtcvad  monotonic
+sudo pip install pyaudio respeaker requests
+```
+
+- **Step 2. Install respeaker python library**
+
+```
+cd ~
+git clone https://github.com/respeaker/respeaker_python_library.git
+cd respeaker_python_library
+sudo python setup.py install
+```
+
+- **Step 3. Setup the keywords**
+
+Please follow FAQ **Q9: How to change the bing & pocketsphinx wake up word and sensitivity?** to add new keywords to **keywords.txt** and **dictionary.txt** under **/usr/local/lib/python2.7/dist-packages/respeaker/pocketsphinx-data/** folder. For example, add hello as new keyword.
+
+Modify keywords.txt as below.
+
+```
+respeaker /1e-30/
+alexa /1e-30/
+play music /1e-30/
+hello /1e-50/
+```
+
+Modify the dictionary.txt as below.
+
+```
+respeaker	R IY S P IY K ER
+alexa	AH L EH K S AH
+play	P L EY
+music	M Y UW Z IH K
+hello	HH AH L OW
+```
+
+- **Step 4. Run the offline voice assistant**
+
+```
+cd ~/respeaker_python_library/examples$
+python offline_voice_assistant.py
+```
+
+- **Step 5. Let's have fun**
+
+ Let's say **ReSpeaker** to wakeup and then say **hello**. You can see terminal as below.
+
+```
+ Wake up
+1111+111111100000000-00000000000000000000000000000000000000000000000000001111+11111111111111111111100000000-0000000000000000000000000000000000000000Recognized hello
+```
 
 
 ## Play with Wio Link
@@ -1945,7 +2011,7 @@ on the new pads, as shown below：
 
 **Q9: How to change the bing & pocketsphinx wake up word and sensitivity?**
 
-**A9:** Please change the **keywords.txt** and **dictionary.txt** under **/home/respeaker/respeaker_python_library/respeaker/pocketsphinx-data** folder. 
+**A9:** Please change the **keywords.txt** and **dictionary.txt** under **/usr/local/lib/python2.7/dist-packages/respeaker/pocketsphinx-data/** folder. 
 
 - keywords.txt contains keywords and their threshold. For example, [keywords.txt](https://github.com/respeaker/respeaker_python_library/blob/master/respeaker/pocketsphinx-data/keywords.txt) is
 
