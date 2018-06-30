@@ -288,8 +288,9 @@ Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2.0 image f
 
 <p style="text-align:center"><a href="https://1drv.ms/f/s!AqG2uRmVUhlShgzS_EXfVt_-54AU" target="_blank"><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/onedrive.png" width="200" height="40"  border=0 /></a></p>
 
+<p style="text-align:center"><a href="https://v2.fangcloud.com/share/7395fd138a1cab496fd4792fe5" target="_blank"><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/efangyun.png" width="200" height="40"  border=0 /></a></p>
 
-- **Step 1.** Click the OneDrive icon above to download our latest image zip files: ```respeaker-debian-9-lxqt-sd-********-4gb.img.xz``` or ```respeaker-debian-9-iot-sd-********-4gb.img.xz```.
+- **Step 1.** Click the OneDrive/Fangcloud icon above to download our latest image zip files: ```respeaker-debian-9-lxqt-sd-********-4gb.img.xz``` or ```respeaker-debian-9-iot-sd-********-4gb.img.xz```.
 
 
 |Section|Description|
