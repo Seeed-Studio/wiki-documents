@@ -1577,14 +1577,9 @@ In this section we will show you how to burn the Android image (Version Android 
 
 Click the link below to download the latest image of Android
 
-From One Drive
+<p style="text-align:center"><a href="https://1drv.ms/f/s!AqG2uRmVUhlShgzS_EXfVt_-54AU" target="_blank"><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/onedrive.png" width="200" height="40"  border=0 /></a></p>
 
-[Click here to download the image](https://onedrive.live.com/?authkey=%21ANL8Rd9W3_7ngBQ&id=5219529519B9B6A1%21780&cid=5219529519B9B6A1)
-
-
-From Baiduyun
-
-[Click here to download the image](https://pan.baidu.com/s/1drNxblOBHWQNJ4V8ambGjg?qq-pf-to=pcqq.discussion&errno=0&errmsg=Auth%20Login%20Sucess&&bduss=&ssnerror=0&traceid=#list/path=%2F)
+<p style="text-align:center"><a href="https://v2.fangcloud.com/share/7395fd138a1cab496fd4792fe5" target="_blank"><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/efangyun.png" width="200" height="40"  border=0 /></a></p>
 
 
 **Step 1. Burn the image into your SD card.**
