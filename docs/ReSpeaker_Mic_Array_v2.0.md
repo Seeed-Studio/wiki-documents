@@ -119,7 +119,15 @@ The WM8960 is a low power stereo codec featuring Class D speaker drivers to prov
 ## Getting Started
 
 !!!Note
-    ReSpeaker Mic Array v2.0 is compatiable with Windows, Mac and Linux systems. The below scripts are tested on Python2.7. 
+    ReSpeaker Mic Array v2.0 is compatiable with Windows, Mac, Linux systems andriod. The below scripts are tested on Python2.7. 
+
+For andriod, we tested it with [emteria.OS](https://help.emteria.com/kb/emteria-os-installation)(andriod 7.1) on Raspberry. We plug the mic array v2.0 to raspberry pi USB port and select the ReSpeaker mic array v2.0 as audio device. Here is the audio recording screen.
+
+![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/andriod7.1_record.png)
+
+Here is the audio playing screen. We plug speaker to ReSpeaker mic array v2.0 3.5mm audio jack and hear what we record.
+
+![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/andriod7.1_play.png)
 
 ### Update Firmware
 
