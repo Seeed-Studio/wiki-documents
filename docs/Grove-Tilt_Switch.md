@@ -52,7 +52,7 @@ Unit
 Voltage
 </th>
 <td>
-4.75
+3
 </td>
 <td>
 5.0

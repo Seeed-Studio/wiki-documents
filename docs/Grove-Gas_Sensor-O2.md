@@ -37,6 +37,7 @@ Grove-Gas Sensor (O2) is a kind of sensor to test the oxygen concentration in ai
 |Sensitivity	| 0.05~0.15 mA(in air) |
 |Temperature Range |	-20 oC~50 oC |
 |Preheat Time	| 20 minutes|
+|Input voltage|3.3V / 5V|
 
 ## Platforms Supported
 

@@ -1,5 +1,5 @@
 ---
-title: Grove - Barometer Sensor(BME280)
+title: Grove - Temp&Humi&Barometer Sensor (BME280)
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-Temp&Humi&Barometer-Sensor-(BME280)-p-2653.html
 oldwikiname: Grove_-_Barometer_Sensor(BME280)
@@ -7,16 +7,16 @@ prodimagename: Grove-Barometer_Sensor-BMP280-700_s.jpg
 bzprodimageurl: https://statics3.seeedstudio.com/seeed/master/img/2016-06/R425Ianm2Rr93qmJQFUEwGx7.jpg
 surveyurl: https://www.research.net/r/Grove-Barometer_Sensor-BME280
 sku: 101020193
-tags: plat_duino, plat_bbg, plat_linkit -->
+tags: plat_duino, plat_bbg, plat_linkit 
 ---
 
 <!-- tags: io_3v3, io_5v, grove_i2c, grove_analog, grove_digital, grove_uart, plat_duino, plat_bbg, plat_pi, plat_wio, plat_linkit -->
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer_Sensor-BME280/master/img/Grove-Barometer_Sensor-BMP280-700_s.jpg)
 
-Grove - Barometer Sensor (BME280) is a breakout board for Bosch BMP280 high-precision, low-power combined humidity, pressure, and temperature sensor. This module can be used to measure temperature, atmospheric pressure and humidity accurately and fast. As the atmospheric pressure changes with altitude, it can also measure approximate **altitude** of a place. It can be connected to a microcontroller with I<sup>2</sup>C (integrated with Grove socket) or through SPI bus. We have also provided highly abstracted library to make this more product easier to use.
+Grove - Temp&Humi&Barometer Sensor (BME280) is a breakout board for Bosch BMP280 high-precision, low-power combined humidity, pressure, and temperature sensor. This module can be used to measure temperature, atmospheric pressure and humidity accurately and fast. As the atmospheric pressure changes with altitude, it can also measure approximate **altitude** of a place. It can be connected to a microcontroller with I<sup>2</sup>C (integrated with Grove socket) or through SPI bus. We have also provided highly abstracted library to make this more product easier to use.
 
-The BME280 is an upgraded version of BMP180, and BME280 gets dramatic improvements from BMP180. BME280 comes with a smaller footprint, lower power consumption, lower noise measurements, higher resolutions for pressure and temperature, lower RMS noise, newly added SPI bus, more measuring modes, higher measuring rate, and newly added filter against environmental interference. Since the atmosphere pressure reading is affected by altitude and temperature, we have added compensation features. Hence, Grove - Barometer Sensor (BME280) will be more reliable in providing precise temperature, atmospheric pressure values, humidity and approximate altitude data.
+The BME280 is an upgraded version of BMP180, and BME280 gets dramatic improvements from BMP180. BME280 comes with a smaller footprint, lower power consumption, lower noise measurements, higher resolutions for pressure and temperature, lower RMS noise, newly added SPI bus, more measuring modes, higher measuring rate, and newly added filter against environmental interference. Since the atmosphere pressure reading is affected by altitude and temperature, we have added compensation features. Hence, Grove - Temp&Humi&Barometer Sensor (BME280) will be more reliable in providing precise temperature, atmospheric pressure values, humidity and approximate altitude data.
 
 Using the sensor is easy. For [Seeeduino](http://www.seeedstudio.com/depot/Seeeduino-V42-p-2517.html?cPath=6_7) (compliant with Arduino), just connect this breakout board using [Grove cable](http://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) to I2C Grove connector. Then, use the provided library and example code from GitHub. If you are using an Arduino either use Base Shield v2.0 or simply connect the VCC pin to the 5V voltage pin, GND to ground, SCL to I2C Clock (Analog 5) and SDA to I2C Data (Analog 4).
 
@@ -26,7 +26,6 @@ Typical applications: Enhancement of GPS navigation, outdoor/indoor navigation, 
 
 Features
 --------
-
 -   Get more precise temperature, atmospheric pressure values, humidity and approximate altitude data fast.
 -   Grove compatible and easy to use
 -   Highly abstracted library for building projects quicker
@@ -93,7 +92,7 @@ Do not touch or shake or let this product in vibration when it works. This will 
 
 | Parts name                                                                                                                    | Quantity |
 |-------------------------------------------------------------------------------------------------------------------------------|----------|
-| Grove - Barometer Sensor (BME280)                                                                                             | 1 piece  |
+| Grove - Temp&Humi&Barometer Sensor (BME280)                                                                                            | 1 piece  |
 | [Grove cable](http://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) | 1 piece  |
 
 Getting Started
@@ -107,7 +106,7 @@ This section shows you how to build a simple project with Arduino platform. Even
 
 #### Materials required
 
--   Grove - Barometer Sensor (BME280) × 1
+-   Grove - Temp&Humi&Barometer Sensor (BME280) × 1
 -   [Seeeduino 4.2](http://www.seeedstudio.com/depot/Seeeduino-V42-p-2517.html) (fully compatible with Arduino) or Arduino UNO (other models are also fine) × 1
 -   Grove - Base Shield × 1 (it is optional if you are using Seeeduino which has two I2C sockets on Seeeduino v4.2)
 -   USB cable (type A to type B, for Arduino) × 1 or USB cable (Type-A to micro Type-B, for Seeeduino) × 1

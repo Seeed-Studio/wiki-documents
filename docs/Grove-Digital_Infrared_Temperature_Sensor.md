@@ -53,7 +53,7 @@ Voltage
 3
 </td>
 <td>
-3.4
+5
 </td>
 <td>
 V
