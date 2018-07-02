@@ -1617,10 +1617,13 @@ It will last about 5-10 minutes, then the message will pop up  `Doing Actions su
 
 
 !!!Tips
-    The first time you boot the operating system it will take awhile. After the first boot it will be much faster.
+    The first time you boot the operating system it will take a while. After the first boot it will be much faster.
 
 
 Now you should be able to access the Android system.
+
+!!!Warning
+    If you burned the debian 3.19 flasher firmware(use the GPT format) previously, it will fail due to andriod flasher can't format the GPT. Please use the debian 6.10 SD firmware and run **sudo dd if=/dev/zero of=/dev/mmcblk1 bs=1M count=100**. Then re-burn the andriod flasher again. We will eliminate the issue from debian 6.10 flasher firmware. 
 
 
 **Record and Play Audio in Windows with ADB Tool**
