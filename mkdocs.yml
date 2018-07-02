@@ -428,7 +428,8 @@ pages:
           - Grove - Voltage Divider: Grove-Voltage_Divider.md
           - Grove - Water Sensor: Grove-Water_Sensor.md
           - Grove - XBee Carrier: Grove-XBee_Carrier.md
-          - Grove-TF Mini LiDAR: Grove-TF_Mini_LiDAR.md
+          - Grove - TF Mini LiDAR: Grove-TF_Mini_LiDAR.md
+          - Grove - VOC and eCO2 Gas Sensor(SGP30): Grove-VOC_and_eCO2_Gas_Sensor-SGP30.md
 
       - Actuator:
           - Actuator Introduction: Actuator.md
@@ -484,6 +485,7 @@ pages:
           - Grove - High Precision RTC: Grove_High_Precision_RTC.md
           - Grove - I2C ADC: Grove-I2C_ADC.md
           - Grove - I2C FM Receiver: Grove-I2C_FM_Receiver.md
+          - Grove - I2C FM Receiver v1.1: Grove-I2C_FM_Receiver_v1.1.md
           - Grove - LoRa Radio: Grove_LoRa_Radio.md
           - Grove - NFC: Grove_NFC.md
           - Grove - NFC Tag: Grove_NFC_Tag.md
