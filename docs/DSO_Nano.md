@@ -80,7 +80,7 @@ A photo from inside the V2 was posted to the [forum](https://www.seeed.cc/discov
 ---
 The DSO Nano you hold in your hand took some time to reach you; it is more than likely that a newer version of the firmware is already available.
 
-The newest firmware from BenF is available from the [Tech Support](http://www.seeedstudio.com/forum/viewtopic.php?f=12&amp;t=1793)(This link is broken, if you are looking for the firmware please refer to the wiki of [DSO Nano V3](http://wiki.seeed.cc/DSO_Nano_v3/)) forum. Inside the ZIP file you will also find the operating manual for this firmware release.
+The newest firmware from BenF is available from the [Tech Support](http://www.forum.seeedstudio.com/viewtopic.php?f=12&amp;t=1793)(This link is broken, if you are looking for the firmware please refer to the wiki of [DSO Nano V3](http://wiki.seeed.cc/DSO_Nano_v3/)) forum. Inside the ZIP file you will also find the operating manual for this firmware release.
 
 To upgrade the firmware to the latest version, you have a few options:
 
@@ -219,4 +219,4 @@ To upgrade the firmware to the latest version, you have a few options:
 *   [Sewa Mobil Jakarta](http://www.awanirentcar.com), [Aksesoris mobil](http://kiosauto.com)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

@@ -44,4 +44,4 @@ void loop()
 The maximum delay value is 1023, as this is the upper limit of the value returned by the analogRead() function. You could use mathematical functions to increase or scale down the range of the delay.
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

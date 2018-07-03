@@ -1206,7 +1206,7 @@ To learn more about adhoc mode check out the [WiFly RN User Manual](https://gith
 
 ## Support
 
-*   [Forum](http://www.seeedstudio.com/forum/): _Please visit our forum and post your questions here if you have any problem about products._
+*   [Forum](http://www.forum.seeedstudio.com/): _Please visit our forum and post your questions here if you have any problem about products._
 *   [FAQ about Wifi Shield](http://support.seeedstudio.com/knowledgebase/articles/456737-wifi-shield)： _Click here to see if your questions have been solved._
 
 ## Licensing
@@ -1214,4 +1214,4 @@ To learn more about adhoc mode check out the [WiFly RN User Manual](https://gith
 This documentation is licensed under the Creative Commons [Attribution-ShareAlike License 3.0](http://creativecommons.org/licenses/by-sa/3.0/) Source code and libraries are licensed under [GPL/LGPL](http://www.gnu.org/licenses/gpl.html), see source code files for details.
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

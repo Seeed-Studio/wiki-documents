@@ -465,4 +465,4 @@ Note：
 *   **[Datasheet]** [HopeRF HM-TRP Series 100mW Transceiver modules V1.0 Datasheet](https://github.com/SeeedDocument/Grove-Serial_RF_Pro/raw/master/res/HM-TRP-RS232_enV1.0_20120604.pdf)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

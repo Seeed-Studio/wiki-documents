@@ -99,11 +99,11 @@ Then you wil receive a phone call from the Retro Phone.
 
 ##  RePhone Community
 ---
-[![](https://github.com/SeeedDocument/RePhone_Lumi_Kit/raw/master/img/RePhone_Community-2.png)](http://www.seeedstudio.com/forum/viewforum.php?f=71&amp;sid=b70f8138c89becf7701260bb41faf9f4)
+[![](https://github.com/SeeedDocument/RePhone_Lumi_Kit/raw/master/img/RePhone_Community-2.png)](http://www.forum.seeedstudio.com/viewforum.php?f=71&amp;sid=b70f8138c89becf7701260bb41faf9f4)
 
 We’ve been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the RePhone Community.
 
-Now join us in the [RePhone Community](http://www.seeedstudio.com/forum/viewforum.php?f=71&amp;sid=b70f8138c89becf7701260bb41faf9f4)! Together we seek answers, make interesting stuff, care about each other, and share our experiences.
+Now join us in the [RePhone Community](http://www.forum.seeedstudio.com/viewforum.php?f=71&amp;sid=b70f8138c89becf7701260bb41faf9f4)! Together we seek answers, make interesting stuff, care about each other, and share our experiences.
 
 
 ## Resources
@@ -117,4 +117,4 @@ Now join us in the [RePhone Community](http://www.seeedstudio.com/forum/viewforu
 - [AT Command of SIM800](https://github.com/SeeedDocument/Retro_Phone_Kit/raw/master/res/SIM800_AT.pdf)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

@@ -180,4 +180,4 @@ You can refer to [Edison 4WD Auto Robotic Platform 2.0](http://wiki.seeedstudio.
 *   [Git library(SDK) files](https://github.com/Pillar1989/webrobot/blob/master/motor.py)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

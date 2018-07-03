@@ -134,4 +134,4 @@ You should save these files which you are editing before installing driver with 
 ![](https://github.com/SeeedDocument/Download_Arduino_and_install_Arduino_driver/raw/master/img/Driver12.png)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

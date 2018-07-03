@@ -560,9 +560,9 @@ When **+INQ=1** command is successful, the <span style="color:red"> red </span> 
 
 ##   Additional Idea  
 
-*   [How to set PC connect with Serial Bluetooth Grove](http://www.seeedstudio.com/forum/viewtopic.php?f=18&amp;t=1436&amp;p=5637#p5637)
+*   [How to set PC connect with Serial Bluetooth Grove](http://www.forum.seeedstudio.com/viewtopic.php?f=18&amp;t=1436&amp;p=5637#p5637)
 
-*   [Set up connections between two Bluetooth modules step by step](http://www.seeedstudio.com/forum/viewtopic.php?f=4&amp;t=687)
+*   [Set up connections between two Bluetooth modules step by step](http://www.forum.seeedstudio.com/viewtopic.php?f=4&amp;t=687)
 
 ##   Resources  
 
@@ -629,4 +629,4 @@ Now share you awesome projects on with us on [Recipe](http://www.seeedstudio.com
 <font color="#FF0000">Get more information about Core User please email to: recipe@seeed.cc</font>
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

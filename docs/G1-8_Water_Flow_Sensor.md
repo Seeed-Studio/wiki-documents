@@ -148,7 +148,7 @@ void loop ()
 }
 ```
 
-You can refer our forum for more details about [Reading Water Flow rate with Water Flow Sensor](http://www.seeedstudio.com/forum/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632).
+You can refer our forum for more details about [Reading Water Flow rate with Water Flow Sensor](http://www.forum.seeedstudio.com/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632).
 
 ##  Wiring Diagram
 
@@ -186,11 +186,11 @@ Pulse frequency (Hz) in Horizontal Test= 7.5Q, Q is flow rate in L/min. (Results
 
 *   [Water flow sensor datasheet.pdf](https://github.com/SeeedDocument/G1-8_Water_Flow_Sensor/raw/master/res/Water_flow_sensor_datasheet.pdf)
 
-*   [Reading Water Flow rate with Water Flow Sensor](http://www.seeedstudio.com/forum/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632)
+*   [Reading Water Flow rate with Water Flow Sensor](http://www.forum.seeedstudio.com/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632)
 
 *   [Water Flow rate display on LCD](http://www.practicalarduino.com/projects/water-flow-gauge)
 
 *   [datasheet for the material](http://garden.seeedstudio.com/images/4/4e/YEE70G30HSLNC..pdf)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

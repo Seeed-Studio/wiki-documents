@@ -33,4 +33,4 @@ On the hardware part, remarkable changes are taken to improve the flexibility an
 |Seeeduino v4.2|1.Add a Grove connectors2.Improve the power design|Aug 24, 2015|
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

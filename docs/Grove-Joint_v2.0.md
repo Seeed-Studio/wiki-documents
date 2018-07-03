@@ -149,7 +149,7 @@ After configurations, please restart Arduino, click File&gt;Sketchbook and choos
 
 Click Tools&gt;Board to choose Arduino Fio and select respective serial port.
 
-Now click Upload(CTRL+U) to burn testing code. Please refer to [here](/Arduino_Common_Error "Arduino Common Error") for any error prompt and you can also add comment on [forum](http://www.seeedstudio.com/forum/)
+Now click Upload(CTRL+U) to burn testing code. Please refer to [here](/Arduino_Common_Error "Arduino Common Error") for any error prompt and you can also add comment on [forum](http://www.forum.seeedstudio.com/)
 
 ###  Review Results
 
@@ -199,4 +199,4 @@ void loop()
 *   [Schematic in PDF](https://github.com/SeeedDocument/Grove-Joint_v2.0/raw/master/res/Grove-Joint_v2.0_SCH.rar)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

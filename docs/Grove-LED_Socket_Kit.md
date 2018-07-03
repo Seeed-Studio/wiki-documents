@@ -134,4 +134,4 @@ sudo python grove_led_blink.py
 *   [Grove-LED Socket Kit](https://github.com/SeeedDocument/Grove-LED_Socket_Kit/raw/master/res/Grove-LED_Socket_Eagle_File.zip)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

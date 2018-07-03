@@ -432,7 +432,7 @@ Seeeduino Stalker v2.1 SolarPanel.png
 #####   A note on power consumption   #####
 
 The following screenshot shows the current consumption measurement of **Stalker** @ 3.3V input connected to LIPO_BAT. In actual application LIPO_BAT is connected to a 3.7V LiPo battery. Hence, consider the following measurement with a pinch of salt!!!
-Here in the [forum](http://www.seeedstudio.com/forum/viewtopic.php?f=16&amp;t=3911&amp;hilit=Stalker) are some discussions about power consumption.
+Here in the [forum](http://www.forum.seeedstudio.com/viewtopic.php?f=16&amp;t=3911&amp;hilit=Stalker) are some discussions about power consumption.
 It seems that just the RTC has a Standby Supply Current of 110µA. [Here](http://www.gammon.com.au/forum/?id=11497) are some infos on Low Power Consuption.
 
 But don't be sad now, even if you get down to an average draw of 1mA, you get 980 mAh/1 mA = 980h = **40.8** Dayswithout charging
@@ -520,4 +520,4 @@ This documentation is licensed under the Creative Commons [Attribution-ShareAlik
 - **[Eagle]**[Stalker v2.2 Eagle Files.zip](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/res/Stalker_v2.2_eagle.zip)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

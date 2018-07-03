@@ -1101,4 +1101,4 @@ After downloading program, open two serial terminal windows, the LEDs on Bluetoo
 *   [PDF_BLE(dual)_bee_v1.0](https://github.com/SeeedDocument/BLE_dual_Bee_v1.0/raw/master/res/BLE-dual-bee_v1.0.pdf)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

@@ -268,7 +268,7 @@ void loop ()
 }
 ```
 
-You can refer our forum for more details about [Reading Water Flow rate with Water Flow Sensor](http://www.seeedstudio.com/forum/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632).
+You can refer our forum for more details about [Reading Water Flow rate with Water Flow Sensor](http://www.forum.seeedstudio.com/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632).
 
 ##   Wiring Diagram
 ---
@@ -315,11 +315,11 @@ Yes, it's usage is safe for human consumption. It is frequently used on drinking
 
 ##   Resource
 
-*   [Reading Water Flow rate with Water Flow Sensor](http://www.seeedstudio.com/forum/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632)
+*   [Reading Water Flow rate with Water Flow Sensor](http://www.forum.seeedstudio.com/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632)
 
 *   [Water Flow rate display on LCD](http://www.practicalarduino.com/projects/water-flow-gauge)
 
 *   [datasheet for the material](http://wiki.seeedstudio.com/images/4/4e/YEE70G30HSLNC..pdf)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

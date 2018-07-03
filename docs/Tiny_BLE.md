@@ -137,4 +137,4 @@ We customized a DFU bootloader for you to update your application through Over-T
 *   [MPU6050 library](http://developer.mbed.org/teams/Seeed/code/eMPL_MPU6050/)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

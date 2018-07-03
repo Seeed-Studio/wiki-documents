@@ -84,4 +84,4 @@ A schematic representation of  the composite structure of comprehensive applicat
 ![](https://github.com/SeeedDocument/Skeleton_Box/raw/master/img/Skeleton_Box_4.jpg)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

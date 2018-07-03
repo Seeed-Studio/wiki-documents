@@ -21,4 +21,4 @@ the key out. This is illustrated in the image below:
 ![](https://github.com/SeeedDocument/Rainbow_Cube_Kit_Acrylic_Harness/raw/master/img/Rainbow_Cube_key.jpg)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

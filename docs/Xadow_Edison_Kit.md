@@ -122,4 +122,4 @@ Refer to Intel Edison offical site: Edison [Getting Started Guide](https://softw
 - [Xadow - Edison_SD Design Files v1.0](https://github.com/SeeedDocument/Xadow_Edison_Kit/raw/master/res/Xadow_-_Edison_SD_v1.0_sch%26pcb.zip)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

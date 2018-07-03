@@ -64,4 +64,4 @@ When you add a library successfully, there will be a demo in the Example. In thi
 ![enter image description here](https://github.com/SeeedDocument/Get_Started_With_Arduino/raw/master/img/successlly.png)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

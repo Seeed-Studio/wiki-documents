@@ -463,4 +463,4 @@ print "Hello World!"
 * **[Document]**   [Certificates](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/res/LinkIt_Smart_7688-Certificate.zip)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

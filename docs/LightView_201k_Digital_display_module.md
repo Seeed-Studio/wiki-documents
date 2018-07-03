@@ -47,4 +47,4 @@ The final assembly looks like:
 The display only needs an AV input. The camera shield is used to generate the AV signal. You need not uploading any code into the Seeeduino. Seeeduino only did one thing: power the camera shield. Outputing AV signal is the build-in functionality of the VC0706 chipset used at Camera Shield. In another words, you may not need the Seeeduino+Camera Shield. What you need is an AV signal. You can connect the display to any kind of TV box which can output the AV signal. You can also connect the display to GoPro’s AV output. That’s it.
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

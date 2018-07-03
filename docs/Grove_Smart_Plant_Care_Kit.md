@@ -139,4 +139,4 @@ Part list in [PDF format](https://github.com/SeeedDocument/Grove_Smart_Plant_Car
 - [Manual to build a Grove Smart Plant Care Kit.](https://github.com/SeeedDocument/Grove_Smart_Plant_Care_Kit/raw/master/res/Grove_Smart_Plant_Care_Kit_Manual_Final_S.pdf)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
