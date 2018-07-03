@@ -15,7 +15,7 @@ tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit  1- 购买链接 2- 缩�
 
 Grove - I2C FM Receiver is a wideband FM receiver module, this module is based on RDA5807M. The RDA5807M series are the latest generation single-chip broadcast FM stereo radio tuner with fully integrated synthesizer. The RDA5807M series have a powerful low-IF digital audio processor. The Grove - I2C FM Receiver has a headset jack, so it can connect to earphones or audio.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-I2C-FM-Receiver-p-1953.html)
+[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-FM-Receiver-V1.1-p-3076.html)
 
 
 
@@ -66,10 +66,10 @@ Grove - I2C FM Receiver v1.1  | Change some components to make the board more st
 
 **Materials required**
 
-| Seeeduino V4.2 | Base Shield| Grove - I2C FM Receiver v1.1 |
-|--------------|-------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-I2C_FM_Receiver_v1.1/raw/master/img/thumbnail.jpg)|
-|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Temperature%26Humidity-Sensor-Pro-p-838.html" target="_blank">Get One Now</a>|
+| Seeeduino V4.2 | Base Shield| Grove - I2C FM Receiver v1.1 |Grove - Button x 2| Grove - Rotary Angle Sensor|
+|--------------|-------------|-----------------|-------|--------|
+|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-I2C_FM_Receiver_v1.1/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-I2C_FM_Receiver/raw/master/img/bgpush%20_s.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-I2C_FM_Receiver/raw/master/img/rotary_s.jpg)|
+|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-FM-Receiver-V1.1-p-3076.html" target="_blank">Get One Now</a>|[Get ONE Now](https://www.seeedstudio.com/Grove-Button-p-766.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor-p-770.html)|
 
 
 !!!note
@@ -78,15 +78,22 @@ Grove - I2C FM Receiver v1.1  | Change some components to make the board more st
     **2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy 
 
 
-- **Step 1.** Connect Grove - I2C FM Receiver v1.1 to port **IIC** of Grove-Base Shield.
+- **Step 1.** Connect Grove - I2C FM Receiver v1.1 to port **IIC** of Grove-Base Shield. Plug your earphone or speaker into the 3.5mm jack of Grove - I2C FM Receiver v1.1.
 
 - **Step 2.** Connect Grove - Button 1 to **D2** port and connect Grove - Button 2 to **D3** port.
 
-- **Step 3.** Plug Grove - Base Shield into Seeeduino.
+- **Step 3.** Connect Grove - Rotary Angle Sensor to **A0** port of Grove-Base Shield.
 
-- **Step 4.** Plug the earphone or speaker to the 3.5mm jack of Grove - I2C FM Receiver v1.1.
+- **Step 4.** Plug Grove - Base Shield into Seeeduino.
 
-- **Step 5.** Connect Seeeduino to PC via a USB cable.
+- **Step 5.** Plug the earphone or speaker to the 3.5mm jack of Grove - I2C FM Receiver v1.1.
+
+- **Step 6.** Connect Seeeduino to PC via a USB cable.
+
+
+
+
+![](https://github.com/SeeedDocument/Grove-I2C_FM_Receiver_v1.1/raw/master/img/connect.jpg)
 
 
 
@@ -116,6 +123,13 @@ Grove - I2C FM Receiver v1.1  | Change some components to make the board more st
 | GND           | Black                   |
 | Null            | White                   |
 | D3           | Yellow                  |
+
+| Seeeduino       | Grove - Rotary Angle Sensor |
+|---------------|-------------------------|
+| 5V           | Red                     |
+| GND           | Black                   |
+| Null            | White                   |
+| A0           | Yellow                  |
 
 
 
@@ -257,7 +271,7 @@ uint8_t signalStrength;
 long previousMillis = 0;// last time the function was called
 long interval = 2000;// interval for the signal level function (2 seconds)
 int8_t stationStep = 10;// kHz steps bewteen the stations (North America = 10)
-boolean hasVolumePot = false;// flag if you have a POT attached or not
+boolean hasVolumePot = true;// flag if you have a POT attached or not
 //
 void setup()
 {
@@ -775,7 +789,7 @@ Signal Strength: 51
 ```
 
 
-Now you can hear the FM station, and you can press the `Grove- button 1` and `Grove- button 2` to change the radio stations.
+Now you can hear the FM station, and you can press the `Grove- button 1` and `Grove- button 2` to change the radio stations,and you can rotate the `Grove - Rotary Angle Sensor` to adjust the volume.
 
 Have fun~
 
@@ -784,3 +798,7 @@ Have fun~
 
 - **[Zip]** [Grove-I2C FM Receiver v1.1 eagle file](https://github.com/SeeedDocument/Grove-I2C_FM_Receiver_v1.1/raw/master/res/I2C%20FM%20Receiver%20v1.1.zip)
 - **[PDF]** [RDA5807 Datasheet](https://github.com/SeeedDocument/Grove-I2C_FM_Receiver_v1.1/raw/master/res/RDA5807%20Datasheet.pdf)
+
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](https://forum.seeedstudio.com/).
