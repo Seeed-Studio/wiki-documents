@@ -78,4 +78,4 @@ Please go to [recipe](https://www.seeed.cc/Built-an-IoT-application-with-Smart-L
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_Starter_kit_for_LinkIt_Smart7688_Duo -->
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

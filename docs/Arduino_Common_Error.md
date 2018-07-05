@@ -32,4 +32,4 @@ Finally, whenever you meet some unknown problem, try re-plug your USB cable, thi
 - [download pdf file](https://github.com/SeeedDocument/Arduino_Common_Error/raw/master/res/Arduino_common_error.pdf)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

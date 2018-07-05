@@ -37,6 +37,7 @@ Grove-Gas Sensor (O2) is a kind of sensor to test the oxygen concentration in ai
 |Sensitivity	| 0.05~0.15 mA(in air) |
 |Temperature Range |	-20 oC~50 oC |
 |Preheat Time	| 20 minutes|
+|Input voltage|3.3V / 5V|
 
 ## Platforms Supported
 
@@ -153,4 +154,4 @@ Open serial monitor of your Arduino IDE, and you will get the data now.
 * [Github Repository of this Document](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

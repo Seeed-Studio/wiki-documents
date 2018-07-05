@@ -699,13 +699,13 @@ Now share you awesome projects on with us on [Recipe](https://www.seeed.cc/proje
 
 - **[Library]** [NewSoftLibrary](http://arduiniana.org/NewSoftSerial/NewSoftSerial10c.zip)
 
-- **[Information]** [Information on how to setup connections between Bluetooth Bees is available in Seeedstudio Forum](http://www.seeedstudio.com/forum/viewtopic.php?f=4&amp;t=687)
+- **[Information]** [Information on how to setup connections between Bluetooth Bees is available in Seeedstudio Forum](http://www.forum.seeedstudio.com/viewtopic.php?f=4&amp;t=687)
 
-- **[Information]** [PC connecting Bluetooth Bee in Seeedstudio Forum](http://www.seeedstudio.com/forum/viewtopic.php?f=18&amp;t=1436&amp;p=5637#p5637)
+- **[Information]** [PC connecting Bluetooth Bee in Seeedstudio Forum](http://www.forum.seeedstudio.com/viewtopic.php?f=18&amp;t=1436&amp;p=5637#p5637)
 
 - **[Datasheet]**  [Bluetooth Bee datasheet](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/res/Bluetooth_Bee_datasheet.pdf)
 
 - **[Datasheet]**[HM－01_Datasheet](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/res/HM%EF%BC%8D01_Datasheet.pdf)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

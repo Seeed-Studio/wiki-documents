@@ -190,10 +190,10 @@ Resources
 -   [RFbee firmware for Arduino 1.0](https://raw.githubusercontent.com/SeeedDocument/RFbee_V1.1-Wireless_Arduino_compatible_node/master/res/RFbee_for_arduino1.0.zip)
 -   [RFbee firmware 1.1 (latest)](https://github.com/Seeed-Studio/RFBee)
 -   [Schematic and layout in EAGLE file](http://www.seeedstudio.com/depot/datasheet/RFBee%20hardware%20v1.1.zip)
--   [Forum](http://www.seeedstudio.com/forum/viewtopic.php?f=10&t=682&sid=7a9b1bed4f9fd10a9b1003ca1e48e756)
+-   [Forum](http://www.forum.seeedstudio.com/viewtopic.php?f=10&t=682&sid=7a9b1bed4f9fd10a9b1003ca1e48e756)
 
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/RFbee_V1.1_-_Wireless_Arduino_compatible_node -->
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

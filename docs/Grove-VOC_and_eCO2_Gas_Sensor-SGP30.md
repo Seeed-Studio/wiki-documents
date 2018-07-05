@@ -1,5 +1,5 @@
 ---
-title: Grove-VOC and eCO2 Gas Sensor-SGP30
+title: Grove-VOC and eCO2 Gas Sensor(SGP30)
 category: Sensor
 bzurl: 
 oldwikiname: 
@@ -13,7 +13,7 @@ tags:
 ![](https://github.com/SeeedDocument/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/raw/master/img/IMG_0012a.jpg)
 
 
-The Grove-VOC and eCO2 Gas Sensor-SGP30 is an air quality detection sensor. This grove module is based on SGP30, we provide TVOC(Total Volatile Organic Compounds) and CO2eq output for this module.
+The Grove-VOC and eCO2 Gas Sensor(SGP30) is an air quality detection sensor. This grove module is based on SGP30, we provide TVOC(Total Volatile Organic Compounds) and CO2eq output for this module.
 
 
 The SGP30 is a digital multi-pixel gas sensor designed for easy integration into air purifier, demand-controlled ventilation, and IoT applications. Sensirion’s CMOSens®technology offers a complete sensor system on a single chip featuring a digital I2C interface, a temperature controlled micro hotplate, and two preprocessed indoor air quality signals. As the first metal-oxide gas sensor featuring multiple sensing elements on one chip, the SGP30 provides more detailed information about the air quality.
@@ -150,7 +150,7 @@ The SGP30 is a digital multi-pixel gas sensor designed for easy integration into
 
 **Materials required**
 
-| Seeeduino V4.2 | Base Shield| Grove-VOC and eCO2 Gas Sensor-SGP30 |
+| Seeeduino V4.2 | Base Shield| Grove-VOC and eCO2 Gas Sensor(SGP30) |
 |--------------|-------------|-----------------|
 |![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/raw/master/img/thumbnail.jpg)|
 |<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/-Grove-VOC-and-eCO2-Gas-Sensor-(SGP30)-p-3071.html" target="_blank">Get One Now</a>|
@@ -164,14 +164,14 @@ The SGP30 is a digital multi-pixel gas sensor designed for easy integration into
 
 
 
-- **Step 1.** Connect Grove-VOC and eCO2 Gas Sensor-SGP30 to port **D2** of Grove-Base Shield.
+- **Step 1.** Connect Grove-VOC and eCO2 Gas Sensor(SGP30) to port **D2** of Grove-Base Shield.
 
 - **Step 2.** Plug Grove - Base Shield into Seeeduino.
 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![]()
+![](https://github.com/SeeedDocument/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/raw/master/img/3.jpg)
 
 
 
@@ -179,7 +179,7 @@ The SGP30 is a digital multi-pixel gas sensor designed for easy integration into
 	If we don't have Grove Base Shield, We also can directly connect Grove - Temperature and Humidity Sensor Pro to Seeeduino as below.
 
 
-| Seeeduino     | Grove-VOC and eCO2 Gas Sensor-SGP30 |
+| Seeeduino     | Grove-VOC and eCO2 Gas Sensor(SGP30) |
 |---------------|-------------------------|
 | 5V            | Red                     |
 | GND           | Black                   |
@@ -198,8 +198,13 @@ The SGP30 is a digital multi-pixel gas sensor designed for easy integration into
 - **Step 3.** Extract the `SGP30_Gas_Sensor-master.zip` you've just downloaded, in the `examples` folder you will see 3 subfolders:
 
 
+![](https://github.com/SeeedDocument/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/raw/master/img/ex.png)
+
+
 The `absolute_humidity_example` requires external humidity sensor calibration
+
 The `base_example` is simplely collecting date without any calibration
+
 The `baseline_operation_example` can save the data base value to flash. The software will automatically collects the base values and stores them.
 
 
@@ -252,6 +257,11 @@ CO2eq Concentration:502ppm
 
 ## Resources
 
-- **[Zip]** [Grove-VOC and eCO2 Gas Sensor-SGP30 eagle file](https://github.com/SeeedDocument/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/raw/master/res/Grove-VOC_and_eCO2_Gas_Sensor%20-SGP30.zip)
+- **[Zip]** [Grove-VOC and eCO2 Gas Sensor(SGP30) eagle file](https://github.com/SeeedDocument/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/raw/master/res/Grove-VOC_and_eCO2_Gas_Sensor%20-SGP30.zip)
 - **[PDF]** [SGP30 Datasheet](https://github.com/SeeedDocument/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/raw/master/res/Sensirion_Gas_Sensors_SGP30_Datasheet_EN.pdf)
 - **[PDF]** [SGP30 Driver Integration Guide HW I2C](https://github.com/SeeedDocument/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/raw/master/res/Sensirion_Gas_Sensors_SGP30_Driver-Integration-Guide_HW_I2C.pdf)
+
+
+
+## Tech Support
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](https://forum.seeedstudio.com/).

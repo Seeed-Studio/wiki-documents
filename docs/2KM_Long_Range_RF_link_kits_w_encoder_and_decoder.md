@@ -63,4 +63,4 @@ This is a super long-range 433mhz RF link kit. It comes with VCO, PLL technology
 - **[Datasheet]**   [Datasheet for PT2272 and PT2262](http://www.datasheetcatalog.org/datasheet/PrincetonTechnologyCorporation/mXusxsq.pdf)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

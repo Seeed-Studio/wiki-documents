@@ -248,11 +248,11 @@ To reset your RePhone to **DEFAULTS**:
 
 ##  RePhone Community
 ---
-[![](https://github.com/SeeedDocument/Eclipse_IDE_for_RePhone_Kit/raw/master/img/RePhone_Community-2.png)](http://www.seeedstudio.com/forum/viewforum.php?f=71&amp;sid=b70f8138c89becf7701260bb41faf9f4)
+[![](https://github.com/SeeedDocument/Eclipse_IDE_for_RePhone_Kit/raw/master/img/RePhone_Community-2.png)](http://www.forum.seeedstudio.com/viewforum.php?f=71&amp;sid=b70f8138c89becf7701260bb41faf9f4)
 
 We’ve been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the RePhone Community.
 
-Now join us in the [RePhone Community](http://www.seeedstudio.com/forum/viewforum.php?f=71&amp;sid=b70f8138c89becf7701260bb41faf9f4)!
+Now join us in the [RePhone Community](http://www.forum.seeedstudio.com/viewforum.php?f=71&amp;sid=b70f8138c89becf7701260bb41faf9f4)!
 
 Together we seek answers, make interesting stuff, care about each other, and share our experiences.
 
@@ -265,4 +265,4 @@ As RePhone is mostly developed with the LinkIt Assist SDK, and Mediatek has made
 [![](https://github.com/SeeedDocument/Eclipse_IDE_for_RePhone_Kit/raw/master/img/Developer_guide_cn-07_1.png)](res/MediaTek_LinkIt_Assist_2502_cn_v1_1.pdf)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

@@ -344,4 +344,4 @@ Available at the [SeeedStudio Bazaar](http://www.seeedstudio.com/depot/):
 *   [Grove Mixer Pack V2 Grove - Modules Schematics (Eagle files zip)](https://github.com/SeeedDocument/Grove-Mixer_Pack_V2/raw/master/res/Mixer_Pack_v2_Eagle.zip)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

@@ -116,4 +116,4 @@ Have you successfully make the buzzer to buzz? Here are 2 more awesome projects 
 - [OpenWrt](http://wiki.openwrt.org/doc/howto/user.beginner)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

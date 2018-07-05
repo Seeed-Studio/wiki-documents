@@ -117,4 +117,4 @@ Feel free to add your project to the list!
 - **[EAGLE]**[Grove - Tricks v1.0 pdf](https://github.com/SeeedDocument/Techbox_Tricks/raw/master/res/Grove%20-%20Tricks%20v1.0.sch)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 

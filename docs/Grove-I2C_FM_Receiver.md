@@ -18,8 +18,17 @@ Grove - I2C FM Receiver is a wideband FM receiver module, this module is based o
 
 
 
-Features
---------
+
+## Version
+
+Version|Change|Release date
+---|---|---
+Grove - I2C FM Receiver v1.0   | Initial | May 18, 2017
+Grove - I2C FM Receiver v1.1  | Change some components to make the board more stable|April 17, 2018
+
+
+
+## Features
 
 -   Grove interface
 -   Supports worldwide frequency band: 50 - 115MHz
@@ -32,40 +41,107 @@ Features
 !!!Tip
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
-Platforms Supported
--------------------
+## Platforms Supported
+
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo.jpg) |
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo_n.jpg) |
 
 !!!Caution
     The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
 
-Getting Started
------
 
-### Connection
-Here we will show you how this Grove - I2C FM Receiver works via a simple demo. First of all, you need to prepare the below stuffs:
+## Getting Started
 
-
-| Seeeduino Lotus | Grove - I2C FM Receiver | Grove - Button |Grove - Rotary|Earphone|
-|--------------|----------------------|-----------------|----------------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/Grove-I2C_FM_Receiver/raw/master/img/lotus_s.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-I2C_FM_Receiver/raw/master/img/Grove%20I2C%20FM_s.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-I2C_FM_Receiver/raw/master/img/bgpush%20_s.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-I2C_FM_Receiver/raw/master/img/rotary_s.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-I2C_FM_Receiver/raw/master/img/eraphone_s.png)|
-|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-Lotus-ATMega328-Board-with-Grove-Interface-p-1942.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-I2C-FM-Receiver-p-1953.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Button-p-766.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor-p-770.html)|NA|
+!!!Note
+    If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_FM_Receiver/master/img/Grove-I2C_FM_Receiver_Usage.jpg)
 
-### Software
-- Please follow [how to install an arduino library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install library.
+### Play With Arduino
 
-- Download [Grove-I2C FM Receiver library](https://github.com/mathertel/Radio/) and then install library.
+#### Hardware
 
-- Copy below code to sketch and upload to Lotus.
+**Materials required**
 
-```
+
+| Seeeduino V4.2 | Base Shield| Grove - I2C FM Receiver v1.1 |Grove - Button x 2| Grove - Rotary Angle Sensor|
+|--------------|-------------|-----------------|-------|--------|
+|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-I2C_FM_Receiver_v1.1/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-I2C_FM_Receiver/raw/master/img/bgpush%20_s.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-I2C_FM_Receiver/raw/master/img/rotary_s.jpg)|
+|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-I2C-FM-Receiver-p-1953.html" target="_blank">Get One Now</a>|[Get ONE Now](https://www.seeedstudio.com/Grove-Button-p-766.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor-p-770.html)|
+
+
+
+!!!note
+    **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
+    
+    **2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy 
+
+
+- **Step 1.** Connect Grove - I2C FM Receiver to port **IIC** of Grove-Base Shield.
+
+- **Step 2.** Connect Grove - Button 1 to **D2** port and connect Grove - Button 2 to **D3** port.
+
+- **Step 3.** Plug Grove - Base Shield into Seeeduino.
+
+- **Step 4.** Connect Seeeduino to PC via a USB cable.
+
+
+![](https://github.com/SeeedDocument/Grove-I2C_FM_Receiver_v1.1/raw/master/img/connect.jpg)
+
+
+
+
+!!!Note
+	If we don't have Grove Base Shield, We also can directly connect Grove - Temperature and Humidity Sensor Pro to Seeeduino as below.
+
+
+| Seeeduino       | Grove - I2C FM Receiver v1.1 |
+|---------------|-------------------------|
+| 5V           | Red                     |
+| GND           | Black                   |
+| SDA            | White                   |
+| SCL            | Yellow                  |
+
+
+| Seeeduino       | Grove - Button 1 |
+|---------------|-------------------------|
+| 5V           | Red                     |
+| GND           | Black                   |
+| Null            | White                   |
+| D2           | Yellow                  |
+
+| Seeeduino       | Grove - Button 2 |
+|---------------|-------------------------|
+| 5V           | Red                     |
+| GND           | Black                   |
+| Null            | White                   |
+| D3           | Yellow                  |
+
+| Seeeduino       | Grove - Rotary Angle Sensor |
+|---------------|-------------------------|
+| 5V           | Red                     |
+| GND           | Black                   |
+| Null            | White                   |
+| A0           | Yellow                  |
+
+
+
+
+
+
+#### Software
+
+- **Step 1.** Download [Grove-I2C FM Receiver library](https://github.com/mathertel/Radio/) and then install library.
+
+- **Step 2.** Refer to [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+
+- **Step 3.** Copy the following code into you Arduino IDE, then save and compile.
+
+
+```c++
 
 /*
  * I2C_FM.ino
@@ -194,7 +270,7 @@ uint8_t signalStrength;
 long previousMillis = 0;// last time the function was called
 long interval = 2000;// interval for the signal level function (2 seconds)
 int8_t stationStep = 10;// kHz steps bewteen the stations (North America = 10)
-boolean hasVolumePot = false;// flag if you have a POT attached or not
+boolean hasVolumePot = true;// flag if you have a POT attached or not
 //
 void setup()
 {
@@ -675,21 +751,49 @@ long epReadLong(int where) {
 }
 ```
 
-- We can see Center Frequency:
+- **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_FM_Receiver/master/img/Grove-I2C_FM_Receiver_com.jpg)
-
-- We can change channel by Grove - Button and adjust volume by Grove - Rotary. Enjoy your own FM receiver.
+- **Step 5.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time. if every thing goes well, you will get the result.
 
 
-Resources
----------
--   [Grove - I2C FM Receiver v1.0 Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_FM_Receiver/master/res/Grove_I2C_FM_Receiver_v1.0.zip)
--   [Datasheet of RDA5807M](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_FM_Receiver/master/res/RDA5807M_datasheet_v1.1.pdf)
+The result should be like: 
 
+```
+
+Started
+Chip ID: 0x5808
+Stable Freq:102.60MHz
+Signal Strength: 46
+Signal Strength: 46
+Signal Strength: 45
+Signal Strength: 45
+Signal Strength: 45
+Signal Strength: 45
+Start seeking down...
+Stable Freq:94.00MHz
+Signal Strength: 44
+Signal Strength: 51
+Signal Strength: 51
+Signal Strength: 50
+Signal Strength: 50
+Signal Strength: 51
+
+
+```
+
+
+Now you can hear the FM station, and you can press the `Grove- button 1` and `Grove- button 2` to change the radio stations. And you can rotate the `Grove - Rotary Angle Sensor` to adjust the volume.
+
+Have fun~
+
+
+## Resources
+
+- **[Zip]** [Grove - I2C FM Receiver v1.0 Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_FM_Receiver/master/res/Grove_I2C_FM_Receiver_v1.0.zip)
+- **[PDF]** [RDA5807 Datasheet](https://github.com/SeeedDocument/Grove-I2C_FM_Receiver_v1.1/raw/master/res/RDA5807%20Datasheet.pdf)
 
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_I2C_FM_Receiver -->
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/).
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](https://forum.seeedstudio.com/).

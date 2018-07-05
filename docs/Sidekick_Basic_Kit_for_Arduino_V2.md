@@ -543,4 +543,4 @@ void loop()
 - [Arduino Video tutorial series by Jeremy Blum](http://www.youtube.com/playlist?list=PLA567CE235D39FA84)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://seeedstudio.com/forum/). 
+Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
