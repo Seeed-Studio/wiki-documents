@@ -89,6 +89,10 @@ headers
 ![](https://github.com/SeeedDocument/ReSpeaker_4-Mics_Linear_Array_Kit/raw/master/img/Hardware.jpg)
 
 
+## Assembly drawing  
+
+![](https://github.com/SeeedDocument/Bazaar_file/raw/master/107990055/img/ab.png)
+
 
 ## Getting Started
 

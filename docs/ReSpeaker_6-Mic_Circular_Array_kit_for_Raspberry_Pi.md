@@ -85,6 +85,14 @@ dummy.
 ![](https://github.com/SeeedDocument/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/raw/master/img/hardware.jpg)
 
 
+## Assembly drawing   
+
+![](https://github.com/SeeedDocument/Bazaar_file/raw/master/107990055/img/ab.png)
+
+<p style="text-align:center"><img src="https://github.com/SeeedDocument/Bazaar_file/raw/master/107990055/img/6-mic_array_assemble.gif" /></p>
+
+
+
 
 ## Getting Started
 
