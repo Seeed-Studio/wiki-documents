@@ -2086,5 +2086,11 @@ How about having such a voice reception system in front of your house or work sp
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/tdIsCRXKoVI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
+**ReSpeaker Core v2.0 - Simple Voice Reception System**
+
+The basic function of the reception service is to greet visitors, make them feel welcome and prevent unauthorized access to the office. We leverage the ReSpeaker Core v2.0 functions to design a Voice Reception Service. The system can interact with visitor and drop message to the person to be visited. In future, we can design a small office employee phone list database, the employee can drop a message to the system, the system uses the GPIO functions of the ReSpeaker Core v2.0 to open the doors for the visitor. We use the Microsoft Bing Speech to text services and Twilio/Tencent message APIs to come out the python scripts.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/SeeedStudio/respeaker-voice-reception-system-209a6c/embed' width='800'></iframe>
+
 ## Tech Support
 Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/).
