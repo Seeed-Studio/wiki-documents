@@ -69,15 +69,15 @@ We will be keep updating the source code on our github page:
 
 The schematic diagram of Xadow NFC v2 is provided in the following link:
 
-*   [_Xadow NFC v2 Schematic Files_](res/Xadow_NFC_v2.rar)
+*   [_Xadow NFC v2 Schematic Files_](https://github.com/SeeedDocument/Xadow_NFC/raw/master/res/Xadow_NFC_v2.0.zip)
 
 Check more info about the datasheet of PN532:
 
-*   [_Datasheet of PN532_](res/PN532.pdf)
+*   [_Datasheet of PN532_](https://github.com/SeeedDocument/Xadow_NFC/raw/master/resources/PN532.pdf)
 
 And the MCU Kinetis KL02:
 
-*   [_Datasheet of Kinetis KL02_](res/KL02P32M48SF0RM.pdf)
+*   [_Datasheet of Kinetis KL02_](https://github.com/SeeedDocument/Xadow_NFC/raw/master/res/KL02P32M48SF0.pdf)
 
 Copyright (c) 2008-2016 Seeed Development Limited ([www.seeedstudio.com](http://www.seeedstudio.com) / [www.seeed.cc](http://www.seeed.cc))
 
