@@ -10,7 +10,7 @@ Because it is so flexible and open source, Arduino is the best solution if you a
 
 One of Seeed Studio’s motto is “Grow the Difference”, which has now become part of the culture of the company. This is not just reflected from what we are doing in popularizing open source culture, but also from our products. Ever since the company funded, we are continuously creating our own open platform to differentiate from the existing one.
 
-Here at  Seeed, you can find not only Arduino boardssuch such as Arduino Nano and Arduino Mega, but also many boards that drived fom Arduino such as Seeeduino, a joint effort by Seeed Studio and Arduino. Seeeduino is compatible with Arduino while has more powerful functions and lower price. To start with, you can try the latest version Seeeduino V4.2 or Seeeduino Mega that corresponding to Arduino Mega.
+Here at  Seeed, you can find not only Arduino boards, such such as Arduino Nano and Arduino Mega, but also many boards that derived from Arduino such as Seeeduino, a joint effort by Seeed Studio and Arduino. Seeeduino is compatible with Arduino while has more powerful functions and lower price. To start with, you can try the latest version Seeeduino V4.2 or Seeeduino Mega that corresponding to Arduino Mega.
 
 ## Product  List
 ---
