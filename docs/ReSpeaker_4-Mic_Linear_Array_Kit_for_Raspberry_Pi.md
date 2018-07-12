@@ -5,7 +5,7 @@ bzurl:
 oldwikiname: ReSpeaker 4-Mic Linear Array Kit
 prodimagename: cover.JPG
 surveyurl: 
-sku: 102990883
+sku: 107990056
 ---
 
 ![enter image description here](https://github.com/SeeedDocument/ReSpeaker_4-Mics_Linear_Array_Kit/raw/master/img/main_wiki.jpg)

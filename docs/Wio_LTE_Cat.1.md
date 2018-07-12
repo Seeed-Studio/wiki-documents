@@ -1000,7 +1000,7 @@ For more info, please refer to [Wio_LTE_Module](http://www.espruino.com/modules/
 - Step 2. Select File--> Examples-->Wio_LTE_Arduino_Library-->SMSSend sketch.
 - Step 3. Change the phone number and info.
 - Step 4. Press and hold BOOT button at back side of the Wio LTE and plug the USB to PC.
-- Step 5. We will see **STM BOOLARDER** in device manager.
+- Step 5. We will see **STM BOOTLARDER** in device manager.
 - Step 6. Select Tools-->Boards-->Wio_Tracker_LTE.
 - Step 7. Keep COM Port blank.
 - Step 8. Select Sketch-->Upload to upload the code to Wio_LTE.
@@ -1060,7 +1060,7 @@ Send OK!
 - Step 1. Plug the Nano SIM card into Nano SIM slot, near PCB board side.
 - Step 2. Select File--> Examples-->Wio_LTE_Arduino_Library-->SMSRead sketch.
 - Step 3. Press and hold BOOT button at back side of the Wio LTE and plug the USB to PC.
-- Step 4. We will see **STM BOOLARDER** in device manager.
+- Step 4. We will see **STM BOOTLARDER** in device manager.
 - Step 5. Select Tools-->Boards-->Wio_Tracker_LTE.
 - Step 6. Keep COM Port blank.
 - Step 7. Select Sketch-->Upload to upload the code to Wio_LTE.
@@ -1142,7 +1142,7 @@ Waiting for new SMS!
 - Step 1. Plug the Nano SIM card into Nano SIM slot, near PCB board side.
 - Step 2. Select File--> Examples-->Wio_LTE_Arduino_Library-->GNNS-->GNSS_Show_Coordinate sketch.
 - Step 3. Press and hold BOOT button at back side of the Wio LTE and plug the USB to PC.
-- Step 4. We will see **STM BOOLARDER** in device manager.
+- Step 4. We will see **STM BOOTLARDER** in device manager.
 - Step 5. Select Tools-->Boards-->Wio_Tracker_LTE.
 - Step 6. Keep COM Port blank.
 - Step 7. Select Sketch-->Upload to upload the code to Wio_LTE.
@@ -1235,7 +1235,7 @@ Data type in string: 113.966248,22.583819
 - Step 1. Plug the Nano SIM card into Nano SIM slot, near PCB board side.
 - Step 2. Select File--> Examples-->Wio_LTE_Arduino_Library-->GNNS-->GNSS_NMEA sketch.
 - Step 3. Press and hold BOOT button at back side of the Wio LTE and plug the USB to PC.
-- Step 4. We will see **STM BOOLARDER** in device manager.
+- Step 4. We will see **STM BOOTLARDER** in device manager.
 - Step 5. Select Tools-->Boards-->Wio_Tracker_LTE.
 - Step 6. Keep COM Port blank.
 - Step 7. Select Sketch-->Upload to upload the code to Wio_LTE.
@@ -1364,7 +1364,7 @@ $GPVTG,,T,2.3,M,0.0,N,0.0,K,A*0C
 - Step 2. Select File--> Examples-->Wio_LTE_Arduino_Library-->Callup sketch.
 - Step 3. Change the phone number.
 - Step 4. Press and hold BOOT button at back side of the Wio LTE and plug the USB to PC.
-- Step 5. We will see **STM BOOLARDER** in device manager.
+- Step 5. We will see **STM BOOTLARDER** in device manager.
 - Step 6. Select Tools-->Boards-->Wio_Tracker_LTE.
 - Step 7. Keep COM Port blank.
 - Step 8. Select Sketch-->Upload to upload the code to Wio_LTE.
@@ -1414,7 +1414,7 @@ void loop() {
 - Step 2. Select File--> Examples-->Wio_LTE_Arduino_Library-->TCPConnect.
 - Step 3. Change the phone number.
 - Step 4. Press and hold BOOT button at back side of the Wio LTE and plug the USB to PC.
-- Step 5. We will see **STM BOOLARDER** in device manager.
+- Step 5. We will see **STM BOOTLARDER** in device manager.
 - Step 6. Select Tools-->Boards-->Wio_Tracker_LTE.
 - Step 7. Keep COM Port blank.
 - Step 8. Select Sketch-->Upload to upload the code to Wio_LTE.
@@ -1523,7 +1523,7 @@ Hello world!
 - Step 2. Select File--> Examples-->Wio_LTE_Arduino_Library-->SDCard->CardInfo.
 - Step 3. Change the phone number.
 - Step 4. Press and hold BOOT button at back side of the Wio LTE and plug the USB to PC.
-- Step 5. We will see **STM BOOLARDER** in device manager.
+- Step 5. We will see **STM BOOTLARDER** in device manager.
 - Step 6. Select Tools-->Boards-->Wio_Tracker_LTE.
 - Step 7. Keep COM Port blank.
 - Step 8. Select Sketch-->Upload to upload the code to Wio_LTE.
@@ -1638,7 +1638,7 @@ Files found on the card (name, date and size in bytes):
 We use [Grove-TemperatureAndHumidity_Sensor](http://wiki.seeedstudio.com/Grove-TemperatureAndHumidity_Sensor/) as digital input and connect to D20 of Wio LTE. 
 
 - Step 1. Press and hold BOOT button at back side of the Wio LTE and plug the USB to PC.
-- Step 2. We will see **STM BOOLARDER** in device manager.
+- Step 2. We will see **STM BOOTLARDER** in device manager.
 - Step 3. Select Tools-->Boards-->Wio_Tracker_LTE.
 - Step 4. Keep COM Port blank.
 - Step 5. Download [WioLTEforArduino Library](https://github.com/SeeedJP/WioLTEforArduino/archive/master.zip) and [Grove-TemperatureAndHumidity_Sensor Library](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor/archive/master.zip) from Github. Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
@@ -1715,7 +1715,7 @@ Humidity: 39.00 %	Temperature: 27.00 *C
 We use [Grove-Light Sensor](http://wiki.seeedstudio.com/Grove-Light_Sensor/) as analog input and connect to A4 of Wio LTE(12bit ADC). 
 
 - Step 1. Press and hold BOOT button at back side of the Wio LTE and plug the USB to PC.
-- Step 2. We will see **STM BOOLARDER** in device manager.
+- Step 2. We will see **STM BOOTLARDER** in device manager.
 - Step 3. Select Tools-->Boards-->Wio_Tracker_LTE.
 - Step 4. Keep COM Port blank.
 - Step 5. Download [WioLTEforArduino Library](https://github.com/SeeedJP/WioLTEforArduino/archive/master.zip) from Github. Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
@@ -1769,7 +1769,7 @@ void loop() {
 We use [Grove - 3-Axis Digital Accelerometer(±16g)](http://wiki.seeedstudio.com/Grove-3-Axis_Digital_Accelerometer-16g/) as I2C device and connect to I2C port of Wio LTE. 
 
 - Step 1. Press and hold BOOT button at back side of the Wio LTE and plug the USB to PC.
-- Step 2. We will see **STM BOOLARDER** in device manager.
+- Step 2. We will see **STM BOOTLARDER** in device manager.
 - Step 3. Select Tools-->Boards-->Wio_Tracker_LTE.
 - Step 4. Keep COM Port blank.
 - Step 5. Download [WioLTEforArduino Library](https://github.com/SeeedJP/WioLTEforArduino/archive/master.zip)  and [ADXL345](https://github.com/Seeed-Studio/Accelerometer_ADXL345/archive/master.zip) from Github. Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
@@ -1833,7 +1833,7 @@ void loop()
 We use [Grove-CO2](http://wiki.seeedstudio.com/Grove-CO2_Sensor/) as UART device and connect to UART port of Wio LTE. 
 
 - Step 1. Press and hold BOOT button at back side of the Wio LTE and plug the USB to PC.
-- Step 2. We will see **STM BOOLARDER** in device manager.
+- Step 2. We will see **STM BOOTLARDER** in device manager.
 - Step 3. Select Tools-->Boards-->Wio_Tracker_LTE.
 - Step 4. Keep COM Port blank.
 - Step 5. Download [WioLTEforArduino Library](https://github.com/SeeedJP/WioLTEforArduino/archive/master.zip) from Github. Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.

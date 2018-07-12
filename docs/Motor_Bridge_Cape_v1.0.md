@@ -71,6 +71,16 @@ import MotorBridge
 motor = MotorBridge.MotorBridgeCape()
 ```
 
+### Install the dependencies
+
+sudo apt-get update
+sudo apt-get install build-essential python-pip python-dev python-smbus git
+sudo pip install Adafruit-GPIO
+
+sudo apt-get install build-essential python-dev python-pip -y
+sudo pip install Adafruit_BBIO
+
+
 ### Stepper Motor
 
 The Stepper Motor Interface of Motor Bridge Cape just as the picture below shows.

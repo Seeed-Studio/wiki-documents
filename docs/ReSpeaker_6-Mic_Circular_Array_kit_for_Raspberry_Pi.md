@@ -5,7 +5,7 @@ bzurl:
 oldwikiname: ReSpeaker 6-Mic Circular Array Kit for Raspberry Pi
 prodimagename: cover.JPG
 surveyurl:  
-sku: 102990883
+sku: 107990055
 ---
 
 ![enter image description here](https://github.com/SeeedDocument/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/raw/master/img/IMG_6051.jpg)
@@ -101,7 +101,7 @@ dummy.
 **Prerequisites**
 
 
-ReSpeaker 4-Mic Linear Array Kit    x1
+ReSpeaker 6-Mic Circular Array    x1
 
 [Raspberry Pi 3B or 3B+](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B%2B-p-3037.html?utm_source=homepage&utm_medium=homepagebanner&utm_campaign=hp_0605)              x1
 

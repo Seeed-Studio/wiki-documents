@@ -265,6 +265,21 @@ sudo apt-get install portaudio19-dev
 ```
 
 
+**Q2: How to change the Raspbian Mirrors source?**
+
+A2: Please refer to [Raspbian Mirrors](http://www.raspbian.org/RaspbianMirrors) and follow below instructions to modify the source at begining. 
+
+```
+pi@raspberrypi ~ $ sudo nano /etc/apt/sources.list
+```
+
+For example, we suggest use the tsinghua source for China users. So please modify the sources.list as below.
+
+```
+deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main non-free contrib
+deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main non-free contrib
+
+
 ## Resources
 
 - **[Eagle]** [Respeaker_2_Mics_Pi_HAT_SCH](https://github.com/SeeedDocument/MIC_HATv1.0_for_raspberrypi/raw/master/src/ReSpeaker%202-Mics%20Pi%20HAT_SCH.zip)
