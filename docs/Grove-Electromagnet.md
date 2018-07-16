@@ -201,7 +201,7 @@ Resources
 --------
 
 - [**Eagle**][Grove Electromagnet v1.0 SCH PCB.zip](https://raw.githubusercontent.com/SeeedDocument/Grove-Electromagnet/master/res/Grove_Electromagnet_v1.0_SCH_PCB.zip "File:Grove Electromagnet v1.0 SCH PCB.zip")
-- [**Datasheet**][Datasheet ZYE1-P20-15 PDF](https://raw.githubusercontent.com/SeeedDocument/Grove-Electromagnet/master/res/ZYE1-P20-15.pdf)
+- [**Datasheet**][Datasheet ZYE1-P20-15 PDF](https://github.com/SeeedDocument/Bazaar_file/raw/master/101020073/ZYE1-P%20electro%20holding%20magnets.pdf)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Electromagnet -->
 
