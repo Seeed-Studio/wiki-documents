@@ -257,7 +257,7 @@ As Raspbian Operating System is updated to Debian 9, we won't provide our Raspbi
 
 ## Play with STT
 
-This part will introduce Baidu STT(Speech to Text) functions together with GPIO control. Here is the GPIOs configuration. If you do not have a fan, You can connect 2 LEDs on GPIO12/GPIO13 to demonstrate the STT.
+This part will introduce Baidu STT(Speech to Text) functions together with GPIO control. Here is the GPIOs configuration. If you do not have a fan, You can connect 2 LEDs on GPIO12/GPIO13 to demonstrate.
 
 | GPIO   | Turn On | Faster | Slower | Turn Off |
 |--------|---------|--------|--------|----------|
@@ -265,7 +265,7 @@ This part will introduce Baidu STT(Speech to Text) functions together with GPIO 
 | GPIO13 | 0       | 1      | 0      | 0        |
 
 
-**Step 1. Install dependiencies**
+- **Step 1. Install dependiencies**
 
 ```
 pip install baidu-aip
@@ -285,13 +285,13 @@ python Smart_Fan.py
 ```
 
 !!!Warning
-    Please add baidu key @ line 36/37/38 before running python Smart_Fan.py. You also can generate your owner voice by running the synthesis_wav.py. Please do add baidu keys at line6/7/8 and modify string to what you want to generate.
+    Please add baidu key @ line 36,37,38 before running python Smart_Fan.py. You also can generate your owner voice by running the synthesis_wav.py. Please do add baidu keys at line 6,7,8 and modify string to what you want to generate.
 
 - **Step 4. Let's say '开风扇'**
 
 - **Step 5. You will see the fan moving.**
 
-- **Step 6. Let's try 快一点, 慢一点 and 关风扇**
+- **Step 6. Let's try '快一点', '慢一点' and '关风扇'.**
 
 
 
