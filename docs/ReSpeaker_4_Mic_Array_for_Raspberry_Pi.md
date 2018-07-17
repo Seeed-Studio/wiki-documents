@@ -64,7 +64,7 @@ Mount ReSpeaker 4-Mic Array on Raspberry Pi, make sure that the pins are properl
 
 The AC108 codec is not supported by Pi kernel builds currently, we have to build it manually.
 
-- Step 1. Please Make sure running [the lastest Raspbian Operating System(debian 9)](https://www.raspberrypi.org/downloads/raspbian/) on Pi. *(updated at 2018.4.18)*
+- Step 1. Please Make sure running [the lastest Raspbian Operating System(debian 9)](https://www.raspberrypi.org/downloads/raspbian/) on Pi. *(updated at 2018.6.27)*
 
 - Step 2. Get the seeed voice card source code.
 
@@ -197,9 +197,7 @@ pi@raspberrypi:~ $ source ~/env/bin/activate                    # activate the v
 ```
 
 
-
-
-## Play with Alexa, Baidu and Snowboy
+## Alexa/Baidu/Snowboy SDK
 
 - Step 1. Get Alexa or Baidu authorization
 
@@ -235,7 +233,7 @@ Now run `python ns_kws_doa_alexa_with_light.py` under virtualenv, we will see lo
 (env) pi@raspberrypi:~/4mics_hat $ python ns_kws_doa_alexa_with_light.py
 ```
 
-## Play with STT
+## STT(Speech to Text) SDK
 
 This part will introduce Baidu STT(Speech to Text) functions together with GPIO control. Here is the GPIOs configuration. If you do not have a fan, You can connect 2 LEDs on GPIO12/GPIO13 to demonstrate.
 

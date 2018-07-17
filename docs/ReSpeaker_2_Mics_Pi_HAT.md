@@ -63,7 +63,7 @@ Raspberry Pi zero Connection
 
 While the upstream wm8960 codec is not currently supported by current Pi kernel builds, upstream wm8960 has some bugs, we had fixed it. We must build it manually.
 
-Make sure that you are running [the lastest Raspbian Operating System(debian 9)](https://www.raspberrypi.org/downloads/raspbian/) on your Pi. *(updated at 2018.4.18)*
+Make sure that you are running [the lastest Raspbian Operating System(debian 9)](https://www.raspberrypi.org/downloads/raspbian/) on your Pi. *(updated at 2018.6.27)*
 
 - Step 1. Get the seeed voice card source code, install and reboot.
 
@@ -184,7 +184,7 @@ off
 
 
 
-## Play with Google Assistant
+## Google Assistant SDK
 
 To get started with Google Assistant([what is  Google Assistant](https://assistant.google.com/)), the first is that you should integrate the Google Assistant Library into your raspberry pi system. Here is the link to [Google official guidance](https://developers.google.com/assistant/sdk/prototype/getting-started-pi-python/run-sample).
 
@@ -255,7 +255,7 @@ As Raspbian Operating System is updated to Debian 9, we won't provide our Raspbi
 - [How to install the image](https://www.raspberrypi.org/documentation/installation/installing-images/)
 
 
-## Play with STT
+## STT(Speech to Text) SDK
 
 This part will introduce Baidu STT(Speech to Text) functions together with GPIO control. Here is the GPIOs configuration. If you do not have a fan, You can connect 2 LEDs on GPIO12/GPIO13 to demonstrate.
 

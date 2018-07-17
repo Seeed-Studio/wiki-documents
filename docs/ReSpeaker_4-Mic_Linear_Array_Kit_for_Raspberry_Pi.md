@@ -340,7 +340,7 @@ $ audacity                      // run audacity
 
 
 
-### Play with Voice assistant
+### Voice assistant SDK
 
 
 **Step 1. Set the python-virtualenv environment**
@@ -371,7 +371,7 @@ source ~/env/bin/activate                   # activate the virtual environment
 To get the authorization, you need to open the *Internet Brownser* to log in your Amazon or Baidu ID, so you need to use VNC Viewer or just do it via monitor and keyboard. The same as *ssh*, you need the IP of your raspberry to log in VNC.
 
 
-#### Play with Alexa
+#### Alexa SDK
 
 ```
 pi@raspberrypi:~ $ source ~/env/bin/activate
@@ -394,7 +394,7 @@ Then you can tap the ++enter++ key to ask Alexa question and talk with Alexa.
 
 
 
-#### Play with Dueros
+#### Dueros SDK
 
 If we want to switch between `alexa-auth` and `dueros-auth`, please delete `/home/pi/.avs.json` first. The file is hidden and use the `ls -la` to list the file.
 
@@ -417,7 +417,7 @@ pi@raspberrypi:~ $ source ~/env/bin/activate
 ```
 
 
-#### Play with Snowboy
+#### Snowboy SDK
     
 To do this part, you also need to get the authorization of Alexa or Baidu at first.
 
