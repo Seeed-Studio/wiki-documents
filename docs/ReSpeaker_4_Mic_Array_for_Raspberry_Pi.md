@@ -248,7 +248,8 @@ This part will introduce Baidu STT(Speech to Text) functions together with GPIO 
 - **Step 1. Install dependiencies**
 
 ```
-pip install baidu-aip monotonic
+sudo apt install mpg123
+pip install baidu-aip monotonic pyaudio
 ```
 
 - **Step 2. Get Baidu key from [Here](https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index).**
