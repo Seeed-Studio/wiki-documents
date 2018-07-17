@@ -235,6 +235,45 @@ Now run `python ns_kws_doa_alexa_with_light.py` under virtualenv, we will see lo
 (env) pi@raspberrypi:~/4mics_hat $ python ns_kws_doa_alexa_with_light.py
 ```
 
+## Play with STT
+
+This part will introduce Baidu STT(Speech to Text) functions together with GPIO control. Here is the GPIOs configuration. If you do not have a fan, You can connect 2 LEDs on GPIO12/GPIO13 to demonstrate.
+
+| GPIO   | Turn On | Faster | Slower | Turn Off |
+|--------|---------|--------|--------|----------|
+| GPIO12 | 1       | 0      | 1      | 0        |
+| GPIO13 | 0       | 1      | 0      | 0        |
+
+
+- **Step 1. Install dependiencies**
+
+```
+pip install baidu-aip monotonic
+```
+
+- **Step 2. Get Baidu key from [Here](https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index).**
+
+
+- **Step 3. Download the [Smart_Fan.py](https://github.com/SeeedDocument/MIC_HATv1.0_for_raspberrypi/raw/master/src/baidu_STT/Smart_fan.py)**
+
+```
+cd ~
+wget https://github.com/SeeedDocument/MIC_HATv1.0_for_raspberrypi/raw/master/src/baidu_STT.zip
+unzip baidu_STT.zip
+cd baidu_STT
+python Smart_Fan.py
+```
+
+!!!Warning
+    Please add baidu key @ line 36,37,38 before running python Smart_Fan.py. You also can generate your owner voice by running the synthesis_wav.py. Please do add baidu keys at line 6,7,8 and modify string to what you want to generate.
+
+- **Step 4. Let's say '开风扇'.**
+
+- **Step 5. You will see the fan moving.**
+
+- **Step 6. Let's try '快一点', '慢一点' and '关风扇'.**
+
+
 ## FAQ
 
 **Q1: How to change the Raspbian Mirrors source?**
