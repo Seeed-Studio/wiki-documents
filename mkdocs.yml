@@ -159,6 +159,7 @@ pages:
 
       - ReSpeaker:
           - ReSpeaker Introduction: ReSpeaker.md
+          - ReSpeaker_Solutions: ReSpeaker_Solutions.md
           - ReSpeaker 2-Mics Pi HAT: ReSpeaker_2_Mics_Pi_HAT.md
           - ReSpeaker 4-Mic Array for Raspberry Pi: ReSpeaker_4_Mic_Array_for_Raspberry_Pi.md
           - ReSpeaker 4-Mic Linear Array Kit for Raspberry Pi: ReSpeaker_4-Mic_Linear_Array_Kit_for_Raspberry_Pi.md
