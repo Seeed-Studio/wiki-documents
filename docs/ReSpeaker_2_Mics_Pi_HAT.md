@@ -320,6 +320,7 @@ For example, we suggest use the tsinghua source for China users. So please modif
 ```
 deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main non-free contrib
 deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main non-free contrib
+```
 
 
 ## Resources
