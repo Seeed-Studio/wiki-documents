@@ -10,21 +10,6 @@ tags: io_3v3, io_5v, plat_duino, plat_pi
 
 ---
 
-
-
-2- 购买链接
-
-4- 缩略链接
-5- 
-
-
-
-
-
-
-
-
-
 ![](https://github.com/SeeedDocument/Grove-Time_of_Flight_Distance_Sensor-VL53L0X-/raw/master/img/main.JPG)
 
 
@@ -201,8 +186,6 @@ time of mesurement: 205
 Measured distance:152 mm
 
 ```
-
-## Play with Raspberry
 
 
 
