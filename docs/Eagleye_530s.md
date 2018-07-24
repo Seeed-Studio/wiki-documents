@@ -345,6 +345,7 @@ Here is the terminal information.
 [root@artik ~]# connmanctl
 Error getting VPN connections: The name net.connman.vpn was not provided by any connmanctl> scan wifi
 Scan completed for wifi
+connmanctl> scan wifi
 connmanctl> services
 *AO Wired                ethernet_000000000000_cable
     seeed                wifi_722c1f37ca11_XXXXXXXX_managed_psk

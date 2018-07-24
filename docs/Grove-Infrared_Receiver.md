@@ -24,8 +24,8 @@ The Infrared Receiver is used to receive infrared signals and also used for remo
 
 Product Version | Changes |	Released Date
 --|--|--
-Grove - Infrared Emitter v1.0	| Initial |	Nov. 01 2015
-Grove - Infrared Emitter v1.1	| Change the Silkscreen  |	Jul. 24 2016
+Grove - Infrared Receiver v1.0	| Initial |	Nov. 01 2015
+Grove - Infrared Receiver v1.1	| Change the Silkscreen  |	Jul. 24 2016
 
 
 
