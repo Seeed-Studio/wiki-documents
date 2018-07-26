@@ -43,6 +43,12 @@ Seeeduino Lite is a microcontroller based on ATmega32U4. Just like Arduino Leona
 
 ## Driver Installation
 ---
+
+!!!Note
+    If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](http://wiki.seeed.cc/Getting_Started_with_Arduino)
+
+
+
 Download the driver files from here [https://github.com/Seeed-Studio/Signed_USB_Serial_Driver](https://github.com/Seeed-Studio/Signed_USB_Serial_Driver).
 
 Connect Seeeduino Lite to your computer via a micro-USB wire.

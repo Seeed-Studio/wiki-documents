@@ -120,13 +120,15 @@ There are 3 slide switches on LinkIt ONE which are used to configure the functio
 
 ### Installing Drivers
 
-- Disable **Driver Signature Enforcement** if you are using Windows 8/8.1 OS. Read[instructions]
-- (http://www.seeedstudio.com/wiki/Download_Arduino_and_install_Arduino_driver#Installing_drivers_for_the_Seeeduino_with_window8)
--
+
+- Disable **Driver Signature Enforcement** if you are using Windows 8/8.1 OS. Read  [instructions](http://www.seeedstudio.com/wiki/Download_Arduino_and_install_Arduino_driver#Installing_drivers_for_the_Seeeduino_with_window8)
+
 - Put the MS/UART slide switch to UART position and connect LinkIt ONE to PC.
 - Open Device Manager, the following COM ports will be displayed.
 
+
 ![](https://raw.githubusercontent.com/SeeedDocument/Linkit-ONE/master/image/LinkIt_ONE_Wiki_Temp1.jpg)
+
 
 - Install driver from ..\LinkIt_ONE_IDE\drivers\mtk folder.
 - After installing drivers, Device Manger should display the following two ports:
@@ -162,6 +164,12 @@ The firmware of LinkIt ONE board needs to be updated once in a while. Latest Lin
 
 - Open **File** -> **Examples** -> **Basics** -> **Blink** in LinkIt ONE IDE.
 - Select the COM Port number corresponding to **MTK USB Debug port** in **Tools** -> **Port**.
+- Select the board by clicking on **Tools > Board > LinkIt One**
+
+
+If you can not find the LinkIt One, please check [How to Add Seeed boards to Arduino IDE](http://wiki.seeedstudio.com/Seeed_Arduino_Boards/)
+
+
 - Compile and upload the code.
 - LED marked **L** should blink.
 

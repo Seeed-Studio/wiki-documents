@@ -42,7 +42,10 @@ Click on **Toos > Board > Board Manager**.
 
 ![](https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/img/board_manager.png)
 
-You will get many board that named with Seeed xxxx, let's take Seeeduino Stalker V3 as example.
+
+Now you can search the board by name, if you need to use `LinkIt ONE`, then just search `LinkIt`; and if you need to use `RePhone Series`,
+just tap `RePhone`. In this wiki, we will take `Seeeduino Stalker V3` example.
+
 
 Click Seeeduino Stalker V3 then an **Install** button appear, click on it to finish the step, this process takes about 5 minutes to half an hour, which depend on the speed of your network. 
 

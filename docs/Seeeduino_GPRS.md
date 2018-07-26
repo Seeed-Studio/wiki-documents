@@ -110,6 +110,8 @@ Operating Status Indication
 
 ## Install the Driver
 
+
+
 First of all, you need to:
 
 * **Get a Micro-USB cable**
@@ -143,7 +145,8 @@ You don't need to install any drivers.
 ## Getting Started
 
 !!!Note
-    This part is based on Arduino 1.6.9 under Windows 10.
+    If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](http://wiki.seeed.cc/Getting_Started_with_Arduino)
+
 
 First of all, you need to Install an Arduino Software.
 
@@ -167,7 +170,8 @@ Open the LED blink example sketch: **File > Examples >01.Basics > Blink**.
 **Select your board**
 
 You'll need to select the entry in the **Tools > Board** menu that corresponds to your Arduino.
-Selecting a **Arduino Leonardo**.
+Selecting a **Arduino Leonardo**. If you can not find the Arduino Leonardo, please check [How to Add Seeed boards to Arduino IDE](http://wiki.seeedstudio.com/Seeed_Arduino_Boards/)
+
 
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_GPRS/master/img/seeeduino_gprs_select_board.png)
 

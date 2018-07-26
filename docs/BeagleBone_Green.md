@@ -22,7 +22,7 @@ Boot Linux in under 10 seconds and get started on development in less than 5 min
 
 
 ## Features
-------
+
 
 * **Fully Compatible with BeagleBone Black**
 * **Processor: AM335x 1GHz ARMR Cortex-A8**
@@ -45,7 +45,7 @@ Boot Linux in under 10 seconds and get started on development in less than 5 min
     * plus much more
 
 ## Specification
-------
+
 
 |Item|Value|
 |----|------|
@@ -61,7 +61,7 @@ Boot Linux in under 10 seconds and get started on development in less than 5 min
 |Operating Temperature	|0 ~ 75 |
 
 ## Application Ideas
----
+
 * Internet of Things
 * Smart House
 * Industrial
@@ -84,7 +84,7 @@ Here are some funny projects for your reference.
 
 
 ## Hardware Overview
----
+
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/10201002703.jpg)
 
 
@@ -151,7 +151,7 @@ Each digital I/O pin has 8 different modes that can be selected, including GPIO.
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/PINMAP_SPI.png)
 
 ## Getting Started
-------
+
 
 !!!Note
     This chapter is writing under Win10. The steps are familiar for the other operate systems.
@@ -214,7 +214,7 @@ To begin editing programs that live on your board, you can use the Cloud9 IDE by
 
 
 ## Update to latest software
------
+
 
 You need to update the board to latest software to keep a better performance, here we will show you how to make it step by step.
 
@@ -286,7 +286,7 @@ Then you will find the 4 user led light as below
 When the flashing is complete, all 4 USRx LEDs will be **off**. The latest Debian flasher images automatically power down the board upon completion. This can take up to **10 minutes**. Power-down your board, remove the SD card and apply power again to be complete.
 
 ## Grove for BBG
-------
+
 
 Grove is a modular, standardized connecter prototyping system. Grove takes a building block approach to assembling electronics. Compared to the jumper or solder based system, it is easier to connect, experiment and build and simplifies the learning system, but not to the point where it becomes dumbed down.  Some of the other prototype systems out there takes the level down to building blocks.   Good stuff to be learned that way, but the Grove system allows you to build real systems.   It requires some learning and expertise to hook things up.
 
@@ -327,7 +327,7 @@ Below listed the Grove modules that work well with BBG.
 |101020019	|Grove - Temperature&Humidity Sensor Pro	|Analog| [link](http://www.seeedstudio.com/Grove-Temperature&Humidity-Sensor-Pro-p-838.html)|
 
 ## Cape for BBG
--------
+
 
 You will need some expansion board when you start a project. There're many cape for BBG already, they include LCD display, motor driver as well as HDMI expansion etc. Below is some of them recommend.
 
@@ -342,7 +342,7 @@ You will need some expansion board when you start a project. There're many cape 
 |[GET ONE NOW!](http://www.seeedstudio.com/Grove-Base-Cape-for-Beaglebone-v2.0-p-2644.html)|[GET ONE NOW!](http://www.seeedstudio.com/5-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2642.html)|[GET ONE NOW!](http://www.seeedstudio.com/7-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2643.html)|
 
 ## FAQ
----
+
 **1. What is the different between BBG 1 and BBG 2?**
 
  We have updated the eMMC on Beaglebone Green in 2016. So the previous firmware for BBG1 is not workable on BBG2, but the new firmware is ok on BBG1 and BBG2.
@@ -358,7 +358,7 @@ Please replace a stable power supply and try again. Usually mobile phone USB pow
 
     
 ## References
----
+
 There're many references to help you to get more information about the board.
 
 * [BeagleBoard Main Page](http://beagleboard.org/)
@@ -371,13 +371,14 @@ There're many references to help you to get more information about the board.
 * [FCC certification of BBG](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/FCC.zip)
 
 ## Resources
----
 
-* [BEAGLEBONE_GREEN SRM(v1a)(pdf)](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/BBG_SRM_V1a_20151009.pdf)
-* [BEAGLEBONE_GREEN SRM(v3)(pdf)](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/BBG_SRM_V3_20150804.pdf)
-* [BEAGLEBONE_GREEN Schematic(pdf)](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/BEAGLEBONE_GREEN_V1.pdf)
-* [BEAGLEBONE_GREEN Schematic(OrCAD)](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/BEAGLEBONE_GREEN_V1_166%28sch%29.rar)
-* [BEAGLEBONE_GREEN PCB(OrCAD)](https://github.com/SeeedDocument/BeagleBone_Green/blob/master/resources/BeagleBone_Green_v1.166%28board%29.rar)
+
+- **[PDF]** [BEAGLEBONE_GREEN SRM(v1a)(pdf)](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/BBG_SRM_V1a_20151009.pdf)
+- **[PDF]** [BEAGLEBONE_GREEN SRM(v3)(pdf)](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/BBG_SRM_V3_20150804.pdf)
+- **[PDF]** [BEAGLEBONE_GREEN Schematic(pdf)](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/BEAGLEBONE_GREEN_V1.pdf)
+- **[RAR]** [BEAGLEBONE_GREEN Schematic(OrCAD)](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/BEAGLEBONE_GREEN_V1_166%28sch%29.rar)
+- **[RAR]** [BEAGLEBONE_GREEN PCB(OrCAD)](https://github.com/SeeedDocument/BeagleBone_Green/blob/master/resources/BeagleBone_Green_v1.166%28board%29.rar)
+- **[Zip]** [AM335X Datasheet](https://github.com/SeeedDocument/Bazaar_file/raw/master/102010027/AM335x.pdf)
 
 ## Tech Support
 Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/).

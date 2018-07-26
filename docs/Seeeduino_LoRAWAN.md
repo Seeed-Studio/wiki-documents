@@ -155,8 +155,10 @@ In brief, Groves is hundreds of sensor that in standard style, which is consist 
 
 ##Getting Started
 
+
 !!!Note
-    This chapter is based on Win10 and Arduino IDE v1.6.0
+    If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](http://wiki.seeed.cc/Getting_Started_with_Arduino)
+
 
 First you need to install the latest Arduino IDE, and [ADD Seeeduino LoRa to your Arduino IDE](http://wiki.seeed.cc/Seeed_Arduino_Boards/).
 
@@ -195,6 +197,13 @@ void loop() {
 And Then,
 
 * Click on **Tools > Board > Seeeduino LoRaWAN**
+
+
+
+If you can not find the Seeeduino LoRaWAN, please check [How to Add Seeed boards to Arduino IDE](http://wiki.seeedstudio.com/Seeed_Arduino_Boards/)
+
+
+
 * Click on **Tools > Port** to select a right port number. (*Don't choose COM1*)
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_LoRa/master/img/blink1.png)

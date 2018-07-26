@@ -171,14 +171,6 @@ The TX and RX LED indicators are connected to TX and RX of USB-to-UART chip. The
 
 ## Getting Started
 
-<div class="admonition note" style="background:#6ab0de; color:#FFF">
-<p class="admonition-title">Note</p>
-<font face="Georgia" size=2 font color="white">    If this is your first time using Arduino, we highly recommend you to refer to  <a href="http://wiki.seeed.cc/Getting_Started_with_Arduino"><B>Getting Started with Arduino</B></a>
-</font>
-</div>
-
-
-
 ### Hardware
 
 - Step 1. Prepare a Seeeduino V4.2 and a Micro-USB cable.
@@ -197,6 +189,10 @@ Then the green power LED (labeled PWR) should go on.
 
 
 ### Software
+
+!!!Note
+    If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](http://wiki.seeed.cc/Getting_Started_with_Arduino)
+
 
 **Step 1. Install the Driver for Seeeduino V4.2.**
 
@@ -243,6 +239,12 @@ Find the LED blink example sketch: **File > Examples >01.Basics > Blink**.
 You'll need to select the entry in the **Tools > Board** menu that corresponds to your Arduino.Select the **Seeeduino v4.2**.
 
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/SeeeduinoV4/master/images/select_board.png)
+
+
+
+If you can not find the Seeeduino v4.2, please check [How to Add Seeed boards to Arduino IDE](http://wiki.seeedstudio.com/Seeed_Arduino_Boards/)
+
+
 
 **Step 5. Select your serial port.**
 

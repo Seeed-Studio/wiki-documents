@@ -128,6 +128,12 @@ void loop()
 And Then,
 
 * Click on **Tools > Board > RePhone core 2G-Atmel32u4**
+
+
+If you can not find the RePhone core 2G-Atmel32u4, please check [How to Add Seeed boards to Arduino IDE](http://wiki.seeedstudio.com/Seeed_Arduino_Boards/)
+
+
+
 * Click on **Tools > Port** to select a right port number. (*Don't choose COM1*)
 
 ![](https://raw.githubusercontent.com/SeeedDocument/RePhone_core_2G-Atmel32u4/master/img/arduino_ide.png)
