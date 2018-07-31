@@ -286,11 +286,9 @@ Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2.0 image f
 **A. Boot from the SD card**
 
 
-<p style="text-align:center"><a href="https://1drv.ms/f/s!AqG2uRmVUhlShgzS_EXfVt_-54AU" target="_blank"><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/onedrive.png" width="200" height="40"  border=0 /></a></p>
-
 <p style="text-align:center"><a href="https://v2.fangcloud.com/share/7395fd138a1cab496fd4792fe5" target="_blank"><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/efangyun.png" width="200" height="40"  border=0 /></a></p>
 
-- **Step 1.** Click the OneDrive/Fangcloud icon above to download our latest image zip files: ```respeaker-debian-9-lxqt-sd-********-4gb.img.xz``` or ```respeaker-debian-9-iot-sd-********-4gb.img.xz```.
+- **Step 1.** Click the Fangcloud icon above to download our latest image zip files: ```respeaker-debian-9-lxqt-sd-********-4gb.img.xz``` or ```respeaker-debian-9-iot-sd-********-4gb.img.xz```.
 
 
 |Section|Description|
@@ -322,7 +320,7 @@ Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2.0 image f
 
 There is no firmware in the EMMC when leaving the factory, you can flash the ReSpeaker image files to the ReSpeaker's eMMC (onboard flash memory) by using your PC or Mac. Then the ReSpeaker will boot from it's eMMC (onboard flash memory) and not from the SD card.
 
-- **Step 1.** Download our latest image zip file ```respeaker-debian-9-iot-flasher-********-4gb.img.xz``` or ```respeaker-debian-9-lxqt-flasher-********-4gb.img.xz``` at OneDrive. The lxqt version comes with Debian desktop and the iot version does not. And the flasher version is for flashing eMMC, and the sd version is for booting from SD card.
+- **Step 1.** Download our latest image zip file ```respeaker-debian-9-iot-flasher-********-4gb.img.xz``` or ```respeaker-debian-9-lxqt-flasher-********-4gb.img.xz``` at Fangcloud. The lxqt version comes with Debian desktop and the iot version does not. And the flasher version is for flashing eMMC, and the sd version is for booting from SD card.
 
 - **Step 2.** Burn the ```*.img.xz``` file directly to SD card with Etcher, or unzip the ```*.img.xz``` file to a ```*.img``` file, then burn it to SD card with other image writing tools.
 
@@ -1579,8 +1577,6 @@ In this section we will show you how to burn the Android image (Version Android 
 **Image installation**
 
 Click the link below to download the latest image of Android
-
-<p style="text-align:center"><a href="https://1drv.ms/f/s!AqG2uRmVUhlShgzS_EXfVt_-54AU" target="_blank"><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/onedrive.png" width="200" height="40"  border=0 /></a></p>
 
 <p style="text-align:center"><a href="https://v2.fangcloud.com/share/7395fd138a1cab496fd4792fe5" target="_blank"><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/efangyun.png" width="200" height="40"  border=0 /></a></p>
 

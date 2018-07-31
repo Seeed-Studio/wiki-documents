@@ -130,7 +130,7 @@ The Left and right arrow keys are used to select the channel or device and the U
 
 **4. Use the on-board APA102 LEDs**
 
-Each on-board APA102 LED has an additional driver chip. The driver chip takes care of receiving the desired colour via its input lines, and then holding this colour until a new command is received.
+Each on-board APA102 LED has an additional driver chip. The driver chip takes care of receiving the desired color via its input lines, and then holding this color until a new command is received.
 
 ```
 sudo pip install spidev
