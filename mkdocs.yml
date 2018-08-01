@@ -203,7 +203,7 @@ pages:
           - Wifi Shield V2.0: Wifi_Shield_V2.0.md
           - XBee Shield V2.0: XBee_Shield_V2.0.md
 
-      - Wio_Tracker:
+      - Wio Tracker:
           - Wio Tracker Introduction: Wio_Tracker.md
           - Wio LTE Cat.1: Wio_LTE_Cat.1.md
           - Wio Tracker - GPS, BT3.0, GSM, Arduino Compatible: wio_gps_board.md
