@@ -232,4 +232,4 @@ Use another Bluetooth Bee connect to the Bluetooth Bee-Standalone.How to connect
 *   [File:Bluetooth Bee Standalone v1.0.pdf](https://github.com/SeeedDocument/Bluetooth_Bee_Standalone/raw/master/res/Bluetooth_Bee_Standalone_v1.0.pdf "File:Bluetooth Bee Standalone v1.0.pdf")
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

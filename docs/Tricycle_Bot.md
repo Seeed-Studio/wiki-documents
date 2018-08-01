@@ -369,4 +369,4 @@ void beep() {
 * [Tricycle Bot Assembly Instructions(pdf)](https://github.com/SeeedDocument/Tricycle_Bot/blob/master/res/Tricycle%20Bot%20Assembly%20Instructions.pdf)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

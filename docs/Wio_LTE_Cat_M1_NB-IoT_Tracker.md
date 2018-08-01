@@ -740,4 +740,4 @@ For more info, please refer to [Wio_LTE_Module](http://www.espruino.com/modules/
 
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

@@ -87,4 +87,4 @@ This Passive Piezoelectric Type Buzzer is made of plastic, very eye catching col
 </td></tr></table>
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

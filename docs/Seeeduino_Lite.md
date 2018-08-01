@@ -79,4 +79,4 @@ Replace two file in the path of Arduino. Open up Arduino-1.0.1/hardware/arduino/
 - [Getting Started](http://www.seeedstudio.com/wiki/index.php?title=Main_Page#Getting_Started).
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

@@ -46,4 +46,4 @@ This is a simple but very useful capacitance meter. New version fixed design err
 *   [Capacitance Meter Manual](http://www.jyetech.com/Products/CapMeter/DN060-02v02.pdf)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

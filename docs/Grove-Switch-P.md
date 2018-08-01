@@ -197,4 +197,4 @@ pi@raspberrypi:~/GrovePi/Software/Python $ python grove_switch.py
 - **[Eagle&PDF]** [Grove-Switch(P) Schematic](https://github.com/SeeedDocument/Grove-Switch-P/raw/master/res/Grove-Switch-P-Eagle_File_v1.0.zip)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

@@ -381,4 +381,4 @@ There're many references to help you to get more information about the board.
 - **[Zip]** [AM335X Datasheet](https://github.com/SeeedDocument/Bazaar_file/raw/master/102010027/AM335x.pdf)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).

@@ -173,4 +173,4 @@ function checkButton(x) {
 *   More demos at [http://www.seeedstudio.com/recipe/index.php?query=beaglebone](http://www.seeedstudio.com/recipe/index.php?query=beaglebone) and [http://www.seeedstudio.com/recipe/index.php?query=beaglebone](http://www.seeedstudio.com/recipe/index.php?query=beaglebone)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

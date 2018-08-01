@@ -397,4 +397,4 @@ Output:
 - **[USB]**[Game controllers using USB Host Shield](http://adrian-fh98.web.unair.ac.id/)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

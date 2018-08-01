@@ -249,4 +249,4 @@ You'll find that the terminal outputs Temperature value every 2 seconds.
 *   [Demo code on github](https://github.com/Seeed-Studio/Grove_Temperature_Sensor)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

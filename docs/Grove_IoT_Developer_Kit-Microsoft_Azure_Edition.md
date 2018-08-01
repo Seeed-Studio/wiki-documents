@@ -370,4 +370,4 @@ _**Note: When visiting the web server, a port number(88)should be added,such as:
 *   [Intel Edison Software &amp; Documentation](https://communities.intel.com/community/makers/edison/documentation)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

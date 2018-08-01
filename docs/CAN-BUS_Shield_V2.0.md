@@ -464,4 +464,4 @@ From each node (IE Switch pod that controls your windows or electric door locks)
 * **【Cable】**[DB9 to OBD2 Cable](https://www.seeedstudio.com/DB9-to-OBD2-Cable-With-Switch-p-2872.html)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).

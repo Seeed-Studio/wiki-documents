@@ -69,4 +69,4 @@ The diagram below shows the orientation of the axes of sensitivity and the polar
 - [MPU-9250 datasheet](https://github.com/SeeedDocument/Xadow_IMU_10DOF/raw/master/res/MPU-9250A_Product_Specification.pdf)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

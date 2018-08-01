@@ -332,4 +332,4 @@ deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main non-
 - **[PDF]** [Respeaker_2_Mics_Pi_HAT_PCB](https://github.com/SeeedDocument/MIC_HATv1.0_for_raspberrypi/raw/master/src/ReSpeaker%202-Mics%20Pi%20HAT_PCB.pdf)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).

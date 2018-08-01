@@ -328,4 +328,4 @@ Then, send an "AT+ROLE0" command to BLE Shield; it will return an "OK+Set:0", wh
 - **[DataSheet]**[DataSheet of BLE module](https://github.com/SeeedDocument/BLE_Bee/raw/master/res/Bluetooth40_en.pdf)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

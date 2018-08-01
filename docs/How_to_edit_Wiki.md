@@ -192,4 +192,4 @@ Copyright (c) 2018-2017 Seeed Inc. (https://www.seeedstudio.com)
 如果你有文档或者技术上的任何疑问，请联系 [techsupport@seeed.cc](techsupport@seeed.cc)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

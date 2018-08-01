@@ -345,4 +345,4 @@ Here are some questions that we usually received from new users. If you have any
     - [CE/FCC/TELEC Certified(only) for core module ESP-WROOM-02](https://github.com/SeeedDocument/Wio_Node/raw/master/Recources/CE-FCC-TELEC_Certified(only)_for_core_module_ESP-WROOM-02.zip)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

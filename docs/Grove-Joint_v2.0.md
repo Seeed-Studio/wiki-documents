@@ -199,4 +199,4 @@ void loop()
 *   [Schematic in PDF](https://github.com/SeeedDocument/Grove-Joint_v2.0/raw/master/res/Grove-Joint_v2.0_SCH.rar)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

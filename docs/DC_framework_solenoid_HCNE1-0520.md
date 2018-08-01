@@ -119,4 +119,4 @@ Performance to show:
 ![](https://github.com/SeeedDocument/DC_framework_solenoid_HCNE1-0520/raw/master/img/HCNE1-0520-5-.jpg)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
