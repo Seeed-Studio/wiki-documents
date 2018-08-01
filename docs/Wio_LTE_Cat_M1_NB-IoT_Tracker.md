@@ -11,7 +11,7 @@ tags: grove_digital, io_3v3, io_5v, plat_duino, plat_pi, plat_wio
 ---
 
 
-![](https://github.com/SeeedDocument/Wio_LTE_Cat_M1_NB-IoT_Tracker/raw/master/img/NBIOT.JPG)
+![](https://github.com/SeeedDocument/Wio_LTE_Cat_M1_NB-IoT_Tracker/raw/master/img/NBIOT1.JPG)
 
 Seeed’s Wio LTE CAT M1/NB-IoT is designed for Low-Power Wide-Area Network (LPWAN) with CAT M1(eMTC) and NB-IoT combo module. Besides, It has an ARM Cortex-M4 MCU and GNSS module.
 
