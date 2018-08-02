@@ -428,5 +428,27 @@ You can now extend the Arduino sketch to drive other devices such as PWM, I2C de
 * [How to flash the firmware via a USB drive](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/res/Linkit_Smart_7688_DUO_Firmware.pdf)
 * [Certificates](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/res/LinkIt_Smart_7688_Duo-Certificate.zip)
 
+## Project
+
+**Alexa Based Smart Home Monitoring**: You're at your Office and want to know about your home? Control your household devices and get alerts about home no matter wherever you are!
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/adithya-tg/alexa-based-smart-home-monitoring-e36b7f/embed' width='350'></iframe>
+
+**DIY Smart Lamp - Controlled by Toggle Switch and Alexa**: Build a smart lamp that can be controlled by flipping a switch and Alexa, for only $35.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/darian-johnson/diy-smart-lamp-controlled-by-toggle-switch-and-alexa-7de243/embed' width='350'></iframe>
+
+**ReRouter - Make an Extensible IoT Router**: Integrate a printer to my Router, so my grandpa or me can write things down at a web page and let the printer print it out.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/seeed-studio/rerouter-make-an-extensible-iot-router-12f1e3/embed' width='350'></iframe>
+
+**IOT Aquarium controller**: An opensource 3D printed aquarium controller with IOT capabilities.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/roroid/iot-aquarium-controller-448dac/embed' width='350'></iframe>
+
+**Smart Lighting and Notifications**: Using a MediaTek LinkIt Smart 7688 Duo to wirelessly connect smart LEDs to your home automation system.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/phigax/smart-lighting-and-notifications-1c8a1b/embed' width='350'></iframe>
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

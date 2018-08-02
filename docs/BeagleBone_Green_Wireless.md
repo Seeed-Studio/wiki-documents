@@ -480,5 +480,12 @@ There're many references to help you to get more information about the board.
 - **[PDF]** [BeagleBone_Green_Wireless Schematic(pdf)](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/tree/master/resources/BeagleBone_Green Wireless_V1.0_SCH_20160314.pdf)
 - **[Zip]** [AM335X Datasheet](https://github.com/SeeedDocument/Bazaar_file/raw/master/102010027/AM335x.pdf)
 
+## Project
+
+**BeagleBone Green Wireless Irrigation Control**: BeagleBone Green Wireless Irrigation Control using HTML5, WebSockets, and Ecmascript 6.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/Greg-R/beaglebone-green-wireless-irrigation-control-ce7c4b/embed' width='350'></iframe>
+
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
