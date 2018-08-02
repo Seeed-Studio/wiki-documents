@@ -242,5 +242,11 @@ pi@raspberrypi:~/GrovePi/Software/Python $ python grove_ultrasonic.py
 - **[Example]** [Example_Measure_distance_and_led_display](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/res/Example_Measure_distance_and_led_display.zip)
 - **[Example]** [Example_Measure_and_display_the_distance](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/res/Example_Measure_and_display_the_distance.zip)
 
+## Project 
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/stairs-hackers/hacking-the-stairs-at-seeed-s-new-office-9ef30b/embed' width='350'></iframe>
+
+
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
