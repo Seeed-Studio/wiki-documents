@@ -318,6 +318,5 @@ void loop() {
 * **[PDF]** [Grove - Relay Schematic in PDF format](https://github.com/SeeedDocument/Grove-Relay/raw/master/res/Grove%20-%20Relay%20Schematic.pdf)
 * **[Datasheet]** [HLS8-T73 Series Relay Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Relay/master/res/Relay_Datasheet.pdf)
 
-
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
