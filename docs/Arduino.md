@@ -12,7 +12,7 @@ One of Seeed Studio’s motto is “Grow the Difference”, which has now become
 
 Here at  Seeed, you can find not only Arduino boards, such such as Arduino Nano and Arduino Mega, but also many boards that derived from Arduino such as Seeeduino, a joint effort by Seeed Studio and Arduino. Seeeduino is compatible with Arduino while has more powerful functions and lower price. To start with, you can try the latest version Seeeduino V4.2 or Seeeduino Mega that corresponding to Arduino Mega.
 
-## Product  List
+## Product List
 ---
 
 Here is the list of the Seeeduino Boards you can find in the Seeed WiKi. The list will constantly updated.
