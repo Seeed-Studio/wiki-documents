@@ -20,7 +20,7 @@ Example:
 ##**Integrate Quickly with Our SDKs & HDKs**
 In a rush to provide a proof of concept? Is your time to market sensitive? Our Software and Hardware Development Kits include many tools to speed up your development and help you deliver on schedule.
 
-**SDK**
+###**SDK**
 
 - Configuration Guides
 - 3rd Party Professional Algorithms
@@ -28,13 +28,13 @@ In a rush to provide a proof of concept? Is your time to market sensitive? Our S
 - Example Code and Tutorials
 - and more...
 
-**HDK**
+###**HDK**
 
 - Detailed Dimensions and Schematic Files
 - Key Components Guaranteed In Stock for Manufacturing
 - Case & Stand Files
 
-**Documentation**
+###**Documentation**
 
 - [Detailed Wiki Documentation](http://wiki.seeedstudio.com/ReSpeaker/)
 - [GitHub Repository](https://github.com/respeaker)
@@ -42,17 +42,17 @@ In a rush to provide a proof of concept? Is your time to market sensitive? Our S
 
 
 ##**Customize Your Voice Solution**
-![All ReSpeaker Dev Boards](https://github.com/SeeedDocument/ReSpeakerSolutions/blob/master/img/ReSpeakerCustomization.png?raw=true)
+
 Is our voice solution missing a feature or component? Make it your own solution by using our customization service. We will assist you with adding, removing, or rearranging many of the components to suit your projects needs. Each project is unique, and we are prepared to help turn our solution into your solution.  Below are some examples of what can be customized:
 
-**Hardware**
+###**Hardware**
 
 - Microphone Configuration
 - eMMC
 - Connectors
 - Peripherals
 
-**Software**
+###**Software**
 
 - Peripheral Drivers
 - Base Firmware
@@ -64,7 +64,7 @@ If you have questions please reach us at [iot@seeed.cc](iot@seeed.cc).
 
 We can also manufacture your customized ReSpeaker as well as any other items you may need. From less than several hundred boards to over 10,000 units, we are able to provide several key services as a manufacturing partner.
 
-**Manufacturing Services**
+###**Manufacturing Services**
 
 - Design Testing
 - Supply Chain Management
@@ -83,4 +83,4 @@ We are back with another addition to our ReSpeaker product line – the ReSpeake
 
 **Adding to the Family: ReSpeaker Mic Array v2.0**
 [![Blog a](http://www.seeedstudio.com/blog/wp-content/uploads/2018/05/playback.jpg)](http://www.seeedstudio.com/blog/2018/05/22/adding-to-the-family-respeaker-mic-array-v2-0/)
-SAdding voice interactivity to your device/project/product is something that many people would love to do. In 2016 Seeed, with the help of our Kickstarter backers, pushed out the ReSpeaker Core and the ReSpeaker Mic Array (discontinued). Over time we began to realize two things: first, that we were very interested in continuing to pursue this area of voice interaction... [Read More](http://www.seeedstudio.com/blog/2018/05/22/adding-to-the-family-respeaker-mic-array-v2-0/)
+Adding voice interactivity to your device/project/product is something that many people would love to do. In 2016 Seeed, with the help of our Kickstarter backers, pushed out the ReSpeaker Core and the ReSpeaker Mic Array (discontinued). Over time we began to realize two things: first, that we were very interested in continuing to pursue this area of voice interaction... [Read More](http://www.seeedstudio.com/blog/2018/05/22/adding-to-the-family-respeaker-mic-array-v2-0/)

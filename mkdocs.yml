@@ -83,15 +83,15 @@ markdown_extensions:
 
 extra_css:
   - 'stylesheets/extra.css'
-  
+
 extra_javascript:
   - 'javascripts/extra.js'
 
-  
+
 # Page tree
 pages:
   - Seeed Wiki: 'index.md'
-  
+
   - Platform:
       - Platform Introduction: Platform.md
       - Arduino:
@@ -146,6 +146,7 @@ pages:
 
       - BeagleBone:
           - BeagleBone Introduction: BeagleBone.md
+          - BeagleBone Solutions: Beaglebone_Solutions.md
           - BeagleBone Blue: BeagleBone_Blue.md
           - BeagleBone Case: Beaglebone_Case.md
           - BeagleBone Green: BeagleBone_Green.md
@@ -160,6 +161,7 @@ pages:
       - ReSpeaker:
           - ReSpeaker Introduction: ReSpeaker.md
           - ReSpeaker Solutions: ReSpeaker_Solutions.md
+          - ReSpeaker Product Guide: ReSpeaker_Product_Guide.md
           - ReSpeaker 2-Mics Pi HAT: ReSpeaker_2_Mics_Pi_HAT.md
           - ReSpeaker 4-Mic Array for Raspberry Pi: ReSpeaker_4_Mic_Array_for_Raspberry_Pi.md
           - ReSpeaker 4-Mic Linear Array Kit for Raspberry Pi: ReSpeaker_4-Mic_Linear_Array_Kit_for_Raspberry_Pi.md
@@ -169,7 +171,7 @@ pages:
           - ReSpeaker Drive Unit: ReSpeaker_Drive_Unit.md
           - ReSpeaker Mic Array: ReSpeaker_Mic_Array.md
           - ReSpeaker Mic Array v2.0: ReSpeaker_Mic_Array_v2.0.md
-          
+
       - Artik:
           - Artik Introduction: Artik.md
           - Eagleye 530s: Eagleye_530s.md
@@ -765,7 +767,7 @@ pages:
           - Wifi Shield V1.1‏‎: Wifi_Shield_V1.1.md
           - Wifi Shield V1.2: Wifi_Shield_V1.2.md
           - XBee Shield: XBee_Shield.md
-  
+
   - License: license.md
 
 # Google Analytics
