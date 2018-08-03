@@ -524,6 +524,10 @@ Then you will see the LEDs light up, and you can call `Snowboy` to wake it up.
 
 A1: There are 2 AC108 in this array, and each AC108 chip has 4 channel output. So it comes a total of 8 channels here, 4 of which are for the microphone, two channels for the playback and the the rest 2 channels are not used.
 
+**Q2: If Raspberry can detect ReSpeaker 2-mics hat, but can't detect ReSpeaker 4-mics linear array?**
+
+A2: Please click raspberry -> Preferences -> Raspberry Pi Configuration, then select the Interfaces tab, make sure the 1-Wire is Disabled.
+
 
 
 ## Resources
@@ -534,5 +538,5 @@ A1: There are 2 AC108 in this array, and each AC108 chip has 4 channel output. S
 
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
 

@@ -96,4 +96,4 @@ It is essential to explain a NDEF message in order to have a clear recognition a
 - [PN532 Datasheet](https://github.com/SeeedDocument/Xadow_NFC/raw/master/resources/PN532.pdf)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

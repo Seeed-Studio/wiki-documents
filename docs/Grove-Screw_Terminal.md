@@ -42,4 +42,4 @@ and two other undefined ports. Screw terminals are commonly used to connect a ch
 - **[PDF]**  [Screw-Terminal-3.5mm Dimension](https://github.com/SeeedDocument/Grove-Screw_Terminal/raw/master/res/Screw-Terminal-3.5mm.pdf)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

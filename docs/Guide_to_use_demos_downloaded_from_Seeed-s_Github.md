@@ -36,4 +36,4 @@ So we want to show you a scheduled procedure to run the demos quickly.
 **Tips:** Always add compress a library file(header file in majority circumstances) with **zip** format if Arduino prompt that it can not find a _foo.h_ file.
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

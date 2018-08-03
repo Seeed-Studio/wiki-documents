@@ -181,4 +181,4 @@ void loop()
 *   [How to connect Arduino and RFID](http://www.instructables.com/id/Arduino-and-RFID-from-seeedstudio/)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

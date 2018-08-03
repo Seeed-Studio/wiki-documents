@@ -114,4 +114,4 @@ Which should handle spaces in the file path and only uses the first file supplie
 - [File:Xadow M0 Schematic.zip](https://github.com/SeeedDocument/Xadow_M0/raw/master/res/Xadow_M0_Schematic.zip)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

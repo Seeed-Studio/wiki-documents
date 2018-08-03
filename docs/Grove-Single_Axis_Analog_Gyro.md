@@ -188,4 +188,4 @@ and then the average of these data will be treated as the reference value.
 **[Code]** [Demo code on github](https://github.com/Seeed-Studio/Grove_Single_Axis_Analog_Gyro)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

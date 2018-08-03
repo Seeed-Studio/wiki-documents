@@ -74,4 +74,4 @@ SDLogger is a simple serial logger based on [SparkFun](http://www.sparkfun.com/)
 3.  Arduino SdFat library written by Bill Greiman and is released under GPL v3
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

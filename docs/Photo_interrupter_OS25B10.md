@@ -321,4 +321,4 @@ The resources need to be downloaded, like Eagle file, Demo code, project or othe
 ![](https://github.com/SeeedDocument/Photo_interrupter_OS25B10/raw/master/img/OS25B10.jpg)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

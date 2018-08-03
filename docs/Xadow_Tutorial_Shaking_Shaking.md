@@ -34,4 +34,4 @@ Before uploading the code：smile to Xadow main board, please make sure there ar
 [Demo2 SMILE Code](https://github.com/SeeedDocument/Xadow_Tutorial_Shaking_Shaking/raw/master/res/SMILE.zip)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

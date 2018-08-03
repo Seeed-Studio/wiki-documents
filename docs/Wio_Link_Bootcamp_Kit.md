@@ -64,4 +64,4 @@ Please go to [Recipe](http://www.seeedstudio.com/recipe/1068-traffic-light-indic
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Wio_Link_Bootcamp_Kit -->
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

@@ -274,4 +274,4 @@ Before upgrade your F/W, you may set the module to Program mode (short BOOT jump
 *   [PDF_Wifi_Shield_(Fi250)_V1.1](https://github.com/SeeedDocument/Wifi_Shield_Fi250_V1.1/raw/master/res/Wifi_Shield-Fi250-V1.1.pdf)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

@@ -83,4 +83,4 @@ Click [here](/LinkIt_ONE_Tutorial-Get_temperature_with_Webpage) to see the full 
 *   [Github Repo for Sickkick Basic Kit for LinkIt ONE](https://github.com/Seeed-Studio/Sidekick_Basic_Kit_for_LinkIt)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

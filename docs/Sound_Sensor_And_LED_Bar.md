@@ -32,4 +32,4 @@ We can use analogRead() to read the value of light sensor, this value will indic
 To make the data more smoothly, we need some simple filtering. We read the value 32 times, and take the average value.
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

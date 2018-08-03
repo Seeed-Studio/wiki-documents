@@ -376,9 +376,10 @@ There're many references to help you to get more information about the board.
 - **[PDF]** [BEAGLEBONE_GREEN SRM(v1a)(pdf)](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/BBG_SRM_V1a_20151009.pdf)
 - **[PDF]** [BEAGLEBONE_GREEN SRM(v3)(pdf)](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/BBG_SRM_V3_20150804.pdf)
 - **[PDF]** [BEAGLEBONE_GREEN Schematic(pdf)](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/BEAGLEBONE_GREEN_V1.pdf)
+- **[Zip]** [BEAGLEBONE_GREEN Schematic(OrCAD) v1c](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/BeagleBone_Green_v1c.zip)
 - **[RAR]** [BEAGLEBONE_GREEN Schematic(OrCAD)](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/BEAGLEBONE_GREEN_V1_166%28sch%29.rar)
 - **[RAR]** [BEAGLEBONE_GREEN PCB(OrCAD)](https://github.com/SeeedDocument/BeagleBone_Green/blob/master/resources/BeagleBone_Green_v1.166%28board%29.rar)
 - **[Zip]** [AM335X Datasheet](https://github.com/SeeedDocument/Bazaar_file/raw/master/102010027/AM335x.pdf)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).

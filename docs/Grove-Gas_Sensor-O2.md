@@ -154,4 +154,4 @@ Open serial monitor of your Arduino IDE, and you will get the data now.
 * [Github Repository of this Document](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

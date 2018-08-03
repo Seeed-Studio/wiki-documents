@@ -74,4 +74,4 @@ If you need further information about how to communicate, please refer to WIKI p
 - **[Datasheet]**[SN74LVC1G125 Datasheet](https://github.com/SeeedDocument/XBee_Shield_V2.0/raw/master/res/SN74LVC1G125DCKR.pdf)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

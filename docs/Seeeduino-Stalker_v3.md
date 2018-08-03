@@ -571,4 +571,4 @@ RTC I2C
     *   [Completed file via Offline-AVRISP](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/res/Stalker_V2_Final.Prjt.zip)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

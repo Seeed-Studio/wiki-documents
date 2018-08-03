@@ -35,4 +35,4 @@ Here lists the comparison among various versions of Music Shield:
 |Library File|[library for Music shield V1.0](https://github.com/SeeedDocument/Music_Shield/raw/master/res/MusicPlayer_v1_7.zip)|[library for Music shield V2.0](https://github.com/SeeedDocument/Music_Shield/raw/master/res/Music_shield_library_V1.0.zip)|[library for Music shield V2.2](https://github.com/SeeedDocument/Music_Shield/raw/master/res/Music_shield_library_V1.0.zip)|
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

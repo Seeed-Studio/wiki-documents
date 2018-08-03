@@ -221,4 +221,4 @@ Please click [here](http://www.seeedstudio.com/wiki/Upload_Code) if you do not k
 *   [PS2 Adapter Library](https://github.com/SeeedDocument/Grove-PS_2_Adapter/raw/master/res/PS2_Adapter_Library.zip)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

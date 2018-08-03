@@ -44,4 +44,4 @@ Change the acceleration value by shaking the sensor,you will see the sensor valu
 [Demo1 acceleDetectoe Code](https://github.com/SeeedDocument/Xadow_Tutorial_Acceleration_Detector/raw/master/res/AccelerationDetector.zip)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

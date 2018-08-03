@@ -131,4 +131,4 @@ void loop() {}
 - **[Tools]** [Xbee setting profiles](https://github.com/SeeedDocument/Bees_Shield/raw/master/res/Xbee%20setting%20profiles.zip)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

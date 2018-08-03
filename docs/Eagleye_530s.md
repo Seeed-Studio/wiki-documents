@@ -1239,4 +1239,4 @@ A1: Yes. Here are the compatiable list.
 - **[More Reading]** [Facial-Recog Project](https://developer.artik.io/documentation/artik/projects/facial-recog.html)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).

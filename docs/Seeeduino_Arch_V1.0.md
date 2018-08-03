@@ -478,4 +478,4 @@ The mbed C/C++ SDK provides the software platform and [libraries](http://mbed.or
 - [LPC11U2x datasheet](https://github.com/SeeedDocument/Seeeduino_Arch_V1.0/raw/master/res/LPC11U2x_datasheet.pdf)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

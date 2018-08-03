@@ -88,4 +88,4 @@ You can use it for:
 There're some other cables for different use, clkic [here](http://www.seeedstudio.com/depot/index.php?main_page=advanced_search_result&amp;search_in_description=0&amp;keyword=cable&amp;inc_subcat=0&amp;sort=20a&amp;page=1)to find more information.
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

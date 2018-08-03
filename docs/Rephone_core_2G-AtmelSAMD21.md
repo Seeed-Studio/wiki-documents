@@ -281,4 +281,4 @@ There are several chainable add-on modules to extend the features and functional
 - [Download ALL Above](https://github.com/SeeedDocument/RePhone-core-2G-AtmelSAMD21/archive/master.zip)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

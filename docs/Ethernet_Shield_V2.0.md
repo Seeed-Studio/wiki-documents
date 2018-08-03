@@ -206,4 +206,4 @@ Get more information about Core User please email to:[recipe@seeed.cc](mailto:re
 - **[Datasheet]**[W5200 Datasheet.pdf](https://github.com/SeeedDocument/Ethernet_Shield_V2.0/raw/master/res/W5200_Datasheet.pdf)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

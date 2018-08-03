@@ -745,4 +745,4 @@ Click on **Files Transfer > Ymodem > Send**, and select the .bin file we had dow
 * [Datasheet of GPS Chip L70B-M39 ](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/L70B-M39.pdf)
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

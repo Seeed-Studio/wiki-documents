@@ -41,4 +41,4 @@ For holding IR sensors while you can turn it with different angles
 |selflocking plastic rope|	2	|	|2x56|
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
