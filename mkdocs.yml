@@ -60,6 +60,7 @@ extra:
 
 # Extensions
 markdown_extensions:
+  - codehilite
   - markdown.extensions.admonition
   - markdown.extensions.codehilite(guess_lang=false)
   - markdown.extensions.def_list
@@ -80,12 +81,16 @@ markdown_extensions:
   - pymdownx.tasklist(custom_checkbox=true)
   - pymdownx.tilde
   - pymdownx.keys
+  - codehilite:
+      linenums: true
 
 extra_css:
   - 'stylesheets/extra.css'
 
+
 extra_javascript:
   - 'javascripts/extra.js'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
 
 
 # Page tree
@@ -356,6 +361,7 @@ pages:
           - Grove - Barometer Sensor (BMP280): Grove-Barometer_Sensor-BMP280.md
           - Grove - Barometer Sensor(BME280): Grove-Barometer_Sensor-BME280.md
           - Grove - Button: Grove-Button.md
+          - Grove - LED Button: Grove-LED_Button.md
           - Grove - CO2 Sensor: Grove-CO2_Sensor.md
           - Grove - Chest Strap Heart Rate Sensor: Grove-Chest_Strap_Heart_Rate_Sensor.md
           - Grove - Collision Sensor: Grove-Collision_Sensor.md
@@ -436,6 +442,8 @@ pages:
           - Grove - Time of Flight Distance Sensor VL53L0X: Grove-Time_of_Flight_Distance_Sensor-VL53L0X.md
           - Grove - Digital Distance Interrupter 0.5 to 5cm(GP2Y0D805Z0F): Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F.md
           - Grove - Digital Distance Interrupter 0.5 to 5cm(GP2Y0D805Z0F)(P): Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F_P.md
+          - Grove - Round Force Sensor FSR402: Grove-Round_Force_Sensor_FSR402.md
+
 
       - Actuator:
           - Actuator Introduction: Actuator.md
