@@ -26,7 +26,7 @@ This is the second generation of Grove - 3-Axis Digital Compass, comparing to th
 - Easy to use
 
 ## Specifications
---------------
+
 
 | Item                         | Valnue                                |
 |------------------------------|---------------------------------------|
@@ -37,42 +37,56 @@ This is the second generation of Grove - 3-Axis Digital Compass, comparing to th
 | Interface                    | I2C                                   |
 | Working Temperature          | -40℃ to +85 ℃                        |
 | Dimensions                   | 20mm x 20mm x 15mm                    |
+|I2C Address|0x13|
+
+!!!Note
+    If you want to use multiplue I2C devices, please refer to [Software I2C](http://wiki.seeedstudio.com/Arduino_Software_I2C_user_guide/).
 
 !!!Tip
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
-Platforms Supported
--------------------
+## Platforms Supported
+
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo.jpg) |
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo_n.jpg) |
 
 !!!Caution
     The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
 
-## Getting Started
--------------
-
-### With [Arduino](http://wiki.seeedstudio.com/Arduino/)
-
-You can choose any Arduino compatible board with I2C Port, in this wiki we use seeeduino V4.2.
-
-**Materials**
-
-| ReSpeaker Core v2 |  Grove -  PIR Motion Sensor |
-|--------------|-------------|
-|![enter image description here](https://github.com/SeeedDocument/Bazaar_doc/raw/master/101020492/seeeduino.jpg)|![enter image description here](https://github.com/SeeedDocument/Bazaar_doc/raw/master/101020492/little.jpg)|
-|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-3-Axis-Digital-Compass-V2-p-3034.html)|
-
-#### Hardware Connection
-
-- **Step 1.** Plug the Grove-3-Axis Digital Compass into Seeeduino V4.2 via the **Grove I2C** Port.
-- **Step 2.** Connect the Seeeduino V4.2 board to your computer with an micro-USB cable.
+## Getting started
 
 
-![](https://github.com/SeeedDocument/Bazaar_doc/raw/master/101020492/20180314-connect1.jpg)
+### Play with Arduino
+####　Hardware
+
+- **Step 1.** Prepare the below stuffs:
+
+| Seeeduino V4.2 | Base Shield| Grove-3-Axis_Digitial_Compass_v2.0 |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-3-Axis_Digitial_Compass_v2.0/raw/master/img/45d_small.jpg)|
+|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-3-Axis-Digital-Compass-V2-p-3034.html)|
+
+- **Step 2.** Connect Grove-3-Axis_Digitial_Compass_v2.0 to port **I2C** of Grove-Base Shield.
+- **Step 3.** Plug Grove - Base Shield into Seeeduino.
+- **Step 4.** Connect Seeeduino to PC via a USB cable.
+
+    <!--link-->
+![with_ardu](https://github.com/SeeedDocument/Grove-3-Axis_Digitial_Compass_v2.0/raw/master/img/with_ardu.jpg)
+
+!!!Note
+    	If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
+
+
+| Seeeduino_v4 | Grove-3-Axis_Digitial_Compass_v2.0  |
+|-------------|--------------------------|
+| 5V          | VCC                      |
+| GND         | GND                      |
+| SDA         | SDA                      |
+| SCL         | SCL                      |
+
 
 
 
@@ -82,43 +96,95 @@ You can choose any Arduino compatible board with I2C Port, in this wiki we use s
 Please plug the USB cable gently, otherwise you may damage the interface.Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click <a href="https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html"><B>here</B></a> to buy
 </div>
 
-### Software
-
-!!!Note
-    If this is the first time you are working with Seeeduino, please refer to this [page](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) to learn how to use Seeeduino and download the library.
 
 
-- **Step 1.** Download the [library](https://github.com/Seeed-Studio/Grove_3_Axis_Compass_V2.0_BMM150) for Grove-3-Axis Digital Compass.
+#### Software
+**Step 1.** Download the [library](https://github.com/Seeed-Studio/Grove_3_Axis_Compass_V2.0_BMM150) from Github.
 
-- **Step 2.** After you installed the library, you can find the demo in **File->Examples->Grove_3_Axis_Compass_V2.0_BMM150-master**.
-
-![](https://github.com/SeeedDocument/Bazaar_doc/raw/master/101020492/IDE_EXAM.png)
-
-- **Step 3.** Make sure you've chosen the right port and Board, for this wiki we choose **Seeeduino V4(Atemega328P)**. Then click upload button at the top left corner, to upload the code.
-.
-
-![](https://github.com/SeeedDocument/Bazaar_doc/raw/master/101020492/port.png)
+**Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 
-- **Step 4.** When the message **Done Uploading** pops up, you can click **Tools->Serial Monitor** to open the serial monitor. Please set the baud rate as 9600.
+**Step 3.** Create a new Arduino sketch and paste the codes below to it or open the code directly by the path: **File->Examples->Grove_3_Axis_Compass_V2.0_BMM150-master->compass**
 
-- **Step 5.** After a while you will see the monitor print the notice **Start figure-8 calibration after 3 seconds**
 
-![](https://github.com/SeeedDocument/Bazaar_doc/raw/master/101020492/inital.png)
+Here is the code
+```c
+/**
+ * This example
+*/
 
-Within these 3 seconds， please tilt and rotate the compass back and forth on every axis, as shown in the picture below.
+#include <Arduino.h>
+#include <Wire.h>
+// libraries
+#include "bmm150.h"
+#include "bmm150_defs.h"
 
-![](https://github.com/SeeedDocument/Bazaar_doc/raw/master/101020492/figure_8_calibration.jpg)
+BMM150 bmm = BMM150();
+
+void setup()
+{
+  Serial.begin(9600);
+
+  if(bmm.initialize() == BMM150_E_ID_NOT_CONFORM) {
+    Serial.println("Chip ID can not read!");
+    while(1);
+  } else {
+    Serial.println("Initialize done!");
+  }
+
+}
+
+void loop()
+{
+  bmm150_mag_data value;
+  bmm.read_mag_data();
+
+  value.x = bmm.raw_mag_data.raw_datax;
+  value.y = bmm.raw_mag_data.raw_datay;
+  value.z = bmm.raw_mag_data.raw_dataz;
+
+  float xyHeading = atan2(value.x, value.y);
+  float zxHeading = atan2(value.z, value.x);
+  float heading = xyHeading;
+
+  if(heading < 0)
+    heading += 2*PI;
+  if(heading > 2*PI)
+    heading -= 2*PI;
+  float headingDegrees = heading * 180/M_PI;
+  float xyHeadingDegrees = xyHeading * 180 / M_PI;
+  float zxHeadingDegrees = zxHeading * 180 / M_PI;
+
+  Serial.print("Heading: ");
+  Serial.println(headingDegrees);
+
+  delay(100);
+}
+```
+
+
+**Step 4.** Upload the code. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+
+**Step 5.** Open the serial monitor to receive the sensor's data
+
+
+
+![](https://github.com/SeeedDocument/Grove-3-Axis_Digitial_Compass_v2.0/raw/master/img/ardu_serial.jpg)
+
+
+**Step 6.** Within these 3 seconds， please tilt and rotate the compass back and forth on every axis, as shown in the picture below.
+
+![](https://github.com/SeeedDocument/Grove-3-Axis_Digitial_Compass_v2.0/raw/master/img/calibrate.jpg)
 
 The calibration period time can be changed through the parameter timeout in the fuction **calibrate(uint16_t timeout)**.
 
 !!!Note
-    The compass needs to be calibrated, otherwise you will get the inaccurate data! Please make sure you have done the Step 5.
+      The compass needs to be calibrated, otherwise you will get the inaccurate data! Please make sure you have done the Step 5.
 
 
-Finally, you will see the something like the following picture.
+**Step 7.** Finally, you will see the something like the following picture.
 
-![](https://github.com/SeeedDocument/Bazaar_doc/raw/master/101020492/result.png)
+![](https://github.com/SeeedDocument/Grove-3-Axis_Digitial_Compass_v2.0/raw/master/img/ardu_serial2.jpg)
 
 !!!Tip
     Heading value is in range of 0º ~ 360º, this value is for Y axis, 0º means Y axis points at North, 90º means Y axis points at West, 180º means Y axis points at South, 270º means Y points at East.
@@ -128,12 +194,11 @@ Enjoy your compass!
 
 
 ## Resources
----------
-- **[PDF]** [PDF of this Wiki](https://github.com/SeeedDocument/Bazaar_doc/raw/master/101020492/Grove-3-Axis_Digitial_Compass_v2.0.pdf)
 
-- **[PDF]** [BST-BMM150-Datasheet](https://github.com/SeeedDocument/Bazaar_doc/raw/master/101020492/BST-BMM150-DS001-01-786480.pdf)
+- **[Library]**  [Grove-3_Axis_Compass_V2.0 lib](https://github.com/Seeed-Studio/Grove_3_Axis_Compass_V2.0_BMM150)
+- **[PDF]** [BST-BMM150-Datasheet](https://github.com/SeeedDocument/Grove-3-Axis_Digitial_Compass_v2.0/raw/master/res/Datasheet.pdf)
 
-- **[Zip]** [Grove - 3-Axis Digital Compass v2_Eagle File](https://github.com/SeeedDocument/Bazaar_doc/raw/master/101020492/Grove%20-%203-Axis%20Digital%20Compass%20v2_Eagle%20File.zip)  
+- **[Zip]** [Grove-3-Axis Digital Compass v2_Eagle File](https://github.com/SeeedDocument/Grove-3-Axis_Digitial_Compass_v2.0/raw/master/res/Eagle File.zip)
 
 
 ## Tech Support
