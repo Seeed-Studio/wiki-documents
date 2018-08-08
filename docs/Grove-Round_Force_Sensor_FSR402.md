@@ -237,4 +237,4 @@ void loop(){
 
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](https://forum.seeedstudio.com/).
+Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).

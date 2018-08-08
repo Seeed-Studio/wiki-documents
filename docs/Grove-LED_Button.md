@@ -17,14 +17,15 @@ The Grove - LED Button is composed of Grove - Yellow Button, Grove - Blue LED Bu
 With the build-in LED, you can apply it to many interesting projects, it is really useful to use the LED to show the status of the button. We use a high-quality N-Channel MOSFET to control the LED to ensure the high swithching speed and a low consumption.All in all, you want some relly awesome button? Here you go ...
 
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/-Grove-VOC-and-eCO2-Gas-Sensor-(SGP30)-p-3071.html" target="_blank"><img src="https://github.com/SeeedDocument/Grove-Red_LED_Button/raw/master/img/Y.png" height="48" width="300" /></a></p>
-<p style="text-align:center"><a href="https://www.seeedstudio.com/-Grove-VOC-and-eCO2-Gas-Sensor-(SGP30)-p-3071.html" target="_blank"><img src="https://github.com/SeeedDocument/Grove-Red_LED_Button/raw/master/img/B.png" height="48" width="300" /></a></p>
-<p style="text-align:center"><a href="https://www.seeedstudio.com/-Grove-VOC-and-eCO2-Gas-Sensor-(SGP30)-p-3071.html" target="_blank"><img src="https://github.com/SeeedDocument/Grove-Red_LED_Button/raw/master/img/R.png"  height="48" width="300" /></a></p>
+
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Yellow-LED-Button-p-3101.html" target="_blank"><img src="https://github.com/SeeedDocument/Grove-Red_LED_Button/raw/master/img/Y.png" height="48" width="300" /></a></p>
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Blue-LED-Button-p-3104.html" target="_blank"><img src="https://github.com/SeeedDocument/Grove-Red_LED_Button/raw/master/img/B.png" height="48" width="300" /></a></p>
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Red-LED-Button-p-3096.html" target="_blank"><img src="https://github.com/SeeedDocument/Grove-Red_LED_Button/raw/master/img/R.png"  height="48" width="300" /></a></p>
 
 
 ## Features
 
-- Long life
+- Long operating life
 - Easy to use
 - Grove Digital interface
 
@@ -214,6 +215,9 @@ void loop() {
 
 ```
 
+!!!Tip
+    In this demo, we choose mode 1 which is the toggle mode, you can change the line 4 <mark>#define LED_MODE   1</mark> into <mark>#define LED_MODE   2</mark> to use the follow mode.
+
 - **Step 2.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
 - **Step 3.** Now, try to press you button, you will see the LED light on with a fade on/fade off effect.
@@ -221,7 +225,7 @@ void loop() {
 
 It should be like:
 
-![](https://github.com/SeeedDocument/Grove-Red_LED_Button/raw/master/img/result.gif)
+<p style="text-align:center"><img src="https://github.com/SeeedDocument/Grove-Red_LED_Button/raw/master/img/result.gif"  /></p>
 
 
 
