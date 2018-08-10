@@ -462,5 +462,11 @@ print "Hello World!"
 * **[Document]**  [Firmware_upgrade_Instruction](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/res/LinkIt_Smart_7688_Firmware_upgrade.zip)
 * **[Document]**   [Certificates](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/res/LinkIt_Smart_7688-Certificate.zip)
 
+## Projects
+
+**myva-Home (Voice controlled home automation)**: My Voice Activated/Controlled Home, Using the Linkit Smart and an Android with easy to use examples and libraries
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/smerkousdavid/myva-home-voice-controlled-home-automation-f4cfe3/embed' width='350'></iframe>
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

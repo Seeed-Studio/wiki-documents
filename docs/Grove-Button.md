@@ -190,6 +190,17 @@ Inspired by OVERWATCH, we have made a very cool Wooden Laser Gun toy for fun the
 The Wooden Laser Gun and the Gun Target are all based on an Arduino board called Seeeduino Lotus. The laser emitter on the Laser Gun is controlled to fire laser pulse to "activate" the Gun Target. And there are 3 light sensors on the Gun Target to detect the laser pulse. It seems very simple right? If you are interested in our project, please make one for yourself or your child! It's worth to spend one day DIY it as a Xmas present.    
 
 
+## Projects
+
+**Grove - Introduction in a Button & LED String Light**: Beginner-Example - I bet Beginners will smile after project - sent me an selfie!
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/ingo-lohs/grove-introduction-in-a-button-led-string-light-f7e4d6/embed' width='350'></iframe>
+
+
+**Using Grove Button To Control Grove LED**: How to connect and use Grove Button to control Grove LED socket kit.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/user50338573/using-grove-button-to-control-grove-led-96d00b/embed' width='350'></iframe>
+
 ## Tech Support
 
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).

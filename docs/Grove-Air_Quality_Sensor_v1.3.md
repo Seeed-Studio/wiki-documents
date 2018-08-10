@@ -217,5 +217,20 @@ while True:
 - [Air_quality_sensor_MP503_Chinese.pdf](https://github.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/raw/master/res/Air_quality_sensor_MP503%20Chinese.pdf)
 - [Air_quality sensor_MP503_English.pdf](https://github.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/raw/master/res/Mp503%20English.pdf)
 
+## Projects
+
+**SPCPM (Solar Powered City Pollution Monitor)**: Low maintenance, high output air pollution, sound pollution that put throughout the city without wiring.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/100181/spcpm-solar-powered-city-pollution-monitor-ca4072/embed' width='350'></iframe>
+
+**A website to see the environment data around you**:
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/kevin-lee2/a-website-to-see-the-environment-data-around-you-1aea66/embed' width='350'></iframe>
+
+**Home Control Center using BeagleBone Green Wireless**:
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/kevin-lee2/home-control-center-using-beaglebone-green-wireless-107a0d/embed' width='350'></iframe>
+
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

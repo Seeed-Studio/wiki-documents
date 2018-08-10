@@ -321,5 +321,11 @@ if __name__=="__main__":
 - **[Library]** [Software Library](https://github.com/Seeed-Studio/Grove_LCD_RGB_Backlight/archive/master.zip)
 - **[Document]** [Github page for this document](https://github.com/SeeedDocument/Grove_LCD_RGB_Backlight)
 
+## Projects
+
+**Particle + Grove LCD RGB Backlight = Realtime Clock**: Connect Grove LCD RGB Backlight to Particle using I2C to display time.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/peacemoon/particle-grove-lcd-rgb-backlight-realtime-clock-42151f/embed' width='350'></iframe>
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

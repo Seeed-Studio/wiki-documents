@@ -103,5 +103,16 @@ Please click [here](http://support.seeedstudio.com/knowledgebase/articles/182644
 - **[PDF]** [Base Shiled V2 SCH](https://github.com/SeeedDocument/Base_Shield_V2/raw/master/res/Base%20Shield%20v2_SCH.pdf)
 - **[PDF]** [Base Shiled V2 PCB](https://github.com/SeeedDocument/Base_Shield_V2/raw/master/res/Base%20Shield%20v2_PCB.pdf)
 
+## Project
+
+**Smart Plant IoT**: Auto watering the plant and tracking plant's health through Helium and Microsoft Azure IoT.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/Nyceane/smart-plant-iot-59cbc3/embed' width='350'></iframe>
+
+**Solar Powered Environmental Monitoring Kit**: A solar-powered open source kit for monitoring air quality, sound level, humidity, and temperature.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/taifur/solar-powered-environmental-monitoring-kit-b1d03d/embed' width='350'></iframe>
+
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

@@ -310,5 +310,15 @@ void loop()
 
 Have fun.
 
+## Projects
+
+**Grove - Introduction in a Light Sensor**:
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/ingo-lohs/grove-introduction-in-a-light-sensor-a55efd/embed' width='350'></iframe>
+
+**The Environment Cube! Know the Land Beneath You using Sigfox**: A cube with all the necessary sensors, suitable for a wide range of applications like agriculture, monitoring, ,etc.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/dhairya-parikh/the-environment-cube-know-the-land-beneath-you-using-sigfox-952f29/embed' width='350'></iframe>
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).

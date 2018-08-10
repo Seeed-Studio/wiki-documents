@@ -41,5 +41,11 @@ and two other undefined ports. Screw terminals are commonly used to connect a ch
 
 - **[PDF]**  [Screw-Terminal-3.5mm Dimension](https://github.com/SeeedDocument/Grove-Screw_Terminal/raw/master/res/Screw-Terminal-3.5mm.pdf)
 
+## Projects
+
+**Family, Friend Or Foe - PIR Arm/disarm Using BLE**: It's a BLE-enabled, cloud-connected smartphone app used to control & monitor who/when PIR is armed/disarmed. Uses Slack for notifications.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/gerrikoiot/family-friend-or-foe-pir-arm-disarm-using-ble-e561e8/embed' width='350'></iframe>
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
