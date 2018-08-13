@@ -360,6 +360,7 @@ pages:
           - Grove - Barometer Sensor (BMP180): Grove-Barometer_Sensor-BMP180.md
           - Grove - Barometer Sensor (BMP280): Grove-Barometer_Sensor-BMP280.md
           - Grove - Barometer Sensor(BME280): Grove-Barometer_Sensor-BME280.md
+          - Grove - Temperature Humidity Pressure Gas Sensor(BME680): Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680.md
           - Grove - Button: Grove-Button.md
           - Grove - LED Button: Grove-LED_Button.md
           - Grove - CO2 Sensor: Grove-CO2_Sensor.md
@@ -428,6 +429,7 @@ pages:
           - Grove - Temperature&amp;Humidity Sensor: Grove-TemperatureAndHumidity_Sensor.md
           - Grove - Temperature&amp;Humidity Sensor (HDC1000): Grove-TemperatureAndHumidity_Sensor-HDC1000.md
           - Grove - Temperature&amp;Humidity Sensor (High-Accuracy &amp;Mini) v1.0: Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0.md
+          - Grove - I2C High Accuracy Temperature Sensor(MCP9808): Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808.md
           - Grove - Thumb Joystick: Grove-Thumb_Joystick.md
           - Grove - Tilt Switch: Grove-Tilt_Switch.md
           - Grove - Touch Sensor: Grove-Touch_Sensor.md
@@ -443,6 +445,8 @@ pages:
           - Grove - Digital Distance Interrupter 0.5 to 5cm(GP2Y0D805Z0F): Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F.md
           - Grove - Digital Distance Interrupter 0.5 to 5cm(GP2Y0D805Z0F)(P): Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F_P.md
           - Grove - Round Force Sensor FSR402: Grove-Round_Force_Sensor_FSR402.md
+          
+          
 
 
       - Actuator:
