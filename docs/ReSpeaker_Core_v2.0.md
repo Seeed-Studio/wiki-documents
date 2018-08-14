@@ -1270,68 +1270,6 @@ Let's say **开灯** or **关灯** and monitor the screen output.
 !!!Note
     For more info about the baidu speech API, please refer to [here](http://ai.baidu.com/docs#/ASR-Online-Python-SDK/top).
 
-## Play with offline STT
-
-This part will use pocketsphinx offline speech to text function. Please bypass Step 1 and Step 2 if you went through play with online STT.
-
-- **Step 1. Install dependiencies**
-
-```
-sudo apt-get update && sudo apt-get upgrade
-sudo apt install libasound-dev portaudio19-dev libportaudiocpp0
-sudo apt-get install -y python python-dev python-pip build-essential swig git libpulse-dev
-sudo pip install pocketsphinx webrtcvad  monotonic
-sudo pip install pyaudio respeaker requests
-```
-
-- **Step 2. Install respeaker python library**
-
-```
-cd ~
-git clone https://github.com/respeaker/respeaker_python_library.git
-cd respeaker_python_library
-sudo python setup.py install
-```
-
-- **Step 3. Setup the keywords**
-
-Please follow FAQ **Q9: How to change the bing & pocketsphinx wake up word and sensitivity?** to add new keywords to **keywords.txt** and **dictionary.txt** under **/usr/local/lib/python2.7/dist-packages/respeaker/pocketsphinx-data/** folder. For example, add hello as new keyword.
-
-Modify keywords.txt as below.
-
-```
-respeaker /1e-30/
-alexa /1e-30/
-play music /1e-30/
-hello /1e-50/
-```
-
-Modify the dictionary.txt as below.
-
-```
-respeaker	R IY S P IY K ER
-alexa	AH L EH K S AH
-play	P L EY
-music	M Y UW Z IH K
-hello	HH AH L OW
-```
-
-- **Step 4. Run the offline voice assistant**
-
-```
-cd ~/respeaker_python_library/examples$
-python offline_voice_assistant.py
-```
-
-- **Step 5. Let's have fun**
-
- Let's say **ReSpeaker** to wakeup and then say **hello**. You can see terminal as below.
-
-```
- Wake up
-1111+111111100000000-00000000000000000000000000000000000000000000000000001111+11111111111111111111100000000-0000000000000000000000000000000000000000Recognized hello
-```
-
 
 ## Play with Wio Link
 
@@ -2004,40 +1942,9 @@ on the new pads, as shown below：
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/ant.png)
 
 
-**Q9: How to change the bing & pocketsphinx wake up word and sensitivity?**
+**Q9: How to build my owner flasher firmware? So I can burn my owner firmware to rest of ReSpeaker Core v2.0.**
 
-**A9:** Please change the **keywords.txt** and **dictionary.txt** under **/usr/local/lib/python2.7/dist-packages/respeaker/pocketsphinx-data/** folder. 
-
-- keywords.txt contains keywords and their threshold. For example, [keywords.txt](https://github.com/respeaker/respeaker_python_library/blob/master/respeaker/pocketsphinx-data/keywords.txt) is
-
-	```
-	respeaker /1e-30/
-	alexa /1e-30/
-	play music /1e-40/
-	```
-
-	respeaker is a keyword, 1e-30 is its threshold. To improve sensitive, we can decrease the threshold, for example, 1e-50. We should know  decreasing the threshold will increase False Acceptance Rate.
-
-	If you want to add new keyword, you should firstly add the keyword to  [dictionary.txt](https://github.com/respeaker/respeaker_python_library/blob/master/respeaker/pocketsphinx-data/dictionary.txt).  The dictionary.txt is like:
-
-	```
-	respeaker	R IY S P IY K ER
-	alexa	AH L EH K S AH
-	play	P L EY
-	music	M Y UW Z IH K
-	```
-
-	The first part is a name (respeaker, alexa or music), the second part is its phonemes. You can find words in a large dictionary at [here](https://github.com/respeaker/pocketsphinx-data/blob/master/dictionary.txt).
-
-- then change the code:
-
-	```
-	if mic.wakeup('respeaker'):
-	```
-
-**Q10: How to build my owner flasher firmware? So I can burn my owner firmware to rest of ReSpeaker Core v2.0.**
-
-**A10:** please run the image builder on RAM>2G ARM debian system.
+**A9:** please run the image builder on RAM>2G ARM debian system.
 
 Here are the detail instructions.
 
