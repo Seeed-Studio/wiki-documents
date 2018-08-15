@@ -15,7 +15,7 @@ tags:
 
 The Grove - I2C High Accuracy Temperature Sensor(MCP9808) is a high accuracy digital module based on MCP9808. Unlike other sensors, you can choose 
 the measurement resolution of this sensor. In addition to high-precision temperature measurements, we also offer programmable temperature 
-alert. We use a separate pin to output the alarm signal, you will find it so convenient to use this signal as an interruption for you control board. 
+alert. We use a separate pin to output the alarm signal, you will find it so convenient to use this signal as an interruption to control other board. 
 
 All in all, we believe this sensor will be a new star for temperature control.
 
@@ -84,15 +84,15 @@ the I^2^C address in the file **Seeed_MCP9808.h** in the **Grove_Temperature_sen
 
 Address map
 
-A<sub>2</sub>=0|A0=0|A0=1
+A<sub>2</sub>=0|A<sub>0</sub>=0|A<sub>0</sub>=1
 --|--|---
-A1=0|A<sub>2</sub>A<sub>1</sub>A<sub>0</sub>-000,0x18|A<sub>2</sub>A<sub>1</sub>A<sub>0</sub>-001,0x19
-A1=1|A<sub>2</sub>A<sub>1</sub>A<sub>0</sub>-010,0x1A|A<sub>2</sub>A<sub>1</sub>A<sub>0</sub>-011,0x1B
+A<sub>1</sub>=0|A<sub>2</sub>A<sub>1</sub>A<sub>0</sub>-000,0x18|A<sub>2</sub>A<sub>1</sub>A<sub>0</sub>-001,0x19
+A<sub>1</sub>=1|A<sub>2</sub>A<sub>1</sub>A<sub>0</sub>-010,0x1A|A<sub>2</sub>A<sub>1</sub>A<sub>0</sub>-011,0x1B
 
-A<sub>2</sub>=1|A0=0|A0=1
+A<sub>2</sub>=1|A<sub>0</sub>=0|A<sub>0</sub>=1
 --|--|---
-A1=0|A<sub>2</sub>A<sub>1</sub>A<sub>0</sub>-100,0x1C|A<sub>2</sub>A<sub>1</sub>A<sub>0</sub>-101,0x1D
-A1=1|A<sub>2</sub>A<sub>1</sub>A<sub>0</sub>-110,0x1E|A<sub>2</sub>A<sub>1</sub>A<sub>0</sub>-111,0x1F
+A<sub>1</sub>=0=0|A<sub>2</sub>A<sub>1</sub>A<sub>0</sub>-100,0x1C|A<sub>2</sub>A<sub>1</sub>A<sub>0</sub>-101,0x1D
+A<sub>1</sub>=0=1|A<sub>2</sub>A<sub>1</sub>A<sub>0</sub>-110,0x1E|A<sub>2</sub>A<sub>1</sub>A<sub>0</sub>-111,0x1F
 
 
 **<SPAN style="TEXT-DECORATION: overline">ALE</SPAN> Pad**
@@ -317,7 +317,7 @@ temperature value is: 29.19
 temperature value is: 29.25
 ```
 
-**Now, let's see how to use the alert pad.**
+**Now, let's see how to use the <SPAN style="TEXT-DECORATION: overline">ALE</SPAN> Pad.**
 
 The code in the demo **MCP9808_demo_with_limit**:
 
@@ -407,7 +407,7 @@ delay(10);
 
 ## Resources
 
-- **[Zip]** [Grove - I2C High Accuracy Temperature Sensor(MCP9808)](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808.zip)
+- **[Zip]** [Grove - I2C High Accuracy Temperature Sensor(MCP9808) Eagle files](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808.zip)
 - **[Zip]** [Seeed MCP9808 Library](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/Grove_Temperature_sensor_MCP9808-master.zip)
 - **[PDF]** [Datasheet of MCP9808](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/MCP9808_datasheet.pdf)
 - **[PDF]** [Datasheet of 2N7002A](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/2N7002A_datasheet.pdf)
