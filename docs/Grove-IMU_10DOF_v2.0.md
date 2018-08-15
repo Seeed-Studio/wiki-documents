@@ -17,15 +17,15 @@ Grove-IMU 10DOF v2.0 is a upgrade version of Grove-IMU-10DOF， which replace BM
 [![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-IMU-10DOF-v2.0-p-2691.html)
 
 ## Version
-----
-| Product                | SKU       | Released Date  | Description                                | Purchase Link |
-|------------------------|-----------|----------------|--------------------------------------------|---------------|
-| Grove - IMU 10DOF      | 101020079 | March 2015     | Built on Built on [MPU-9250](https://raw.githubusercontent.com/SeeedDocument/Grove-IMU_10DOF/master/res/MPU-9250A_Product_Specification.pdf) and [BMP180](https://raw.githubusercontent.com/SeeedDocument/Grove-IMU_10DOF/master/res/BMP180.pdf)      | EOL           |
-| Grove - IMU 10DOF v2.0 | 101020252 | September 2016 | Upgrade BMP180 sensor to [BMP280](https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer_Sensor-BMP280/master/res/Grove-Barometer_Sensor-BMP280-BMP280-DS001-12_Datasheet.pdf) from BOSCH | [Get One Now](https://www.seeedstudio.com/Grove-IMU-10DOF-v2.0-p-2691.html)   |
+
+|  Product Version       | Changes                                                                                                                                                                                                                                      | Released Date  |
+|------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|
+| Grove - IMU 10DOF      | Built on [MPU-9250 ](https://raw.githubusercontent.com/SeeedDocument/Grove-IMU_10DOF/master/res/MPU-9250A_Product_Specification.pdf ) and [BMP180 ](https://raw.githubusercontent.com/SeeedDocument/Grove-IMU_10DOF/master/res/BMP180.pdf )  | March 2015     |
+| Grove - IMU 10DOF v2.0 | Upgrade BMP180 sensor to [BMP280 ](https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer_Sensor-BMP280/master/res/Grove-Barometer_Sensor-BMP280-BMP280-DS001-12_Datasheet.pdf ) from BOSCH                                         | September 2016 |
 
 
 ## Specifications
--------------
+
 
 -   I2C Grove interface, include GND, VCC, SDA, SCL.
 -   MPU-9250 I2C address selectable
@@ -36,12 +36,16 @@ Grove-IMU 10DOF v2.0 is a upgrade version of Grove-IMU-10DOF， which replace BM
 -   Digital-output magnetometer with a full scale range of ±4800uT
 -   Digital-output barometer with range of 300 ~ 1100hPa(+9000m ~ -500m relating to sea level)
 -   Dimensions: 25.43mm x 20.35mm
+- I2C Address: default connected a and b address from I2C select pad is 0x68, if connect b and c address is 0x69
+
+!!!Note
+    If you want to use multiplue I2C devices, please refer to [Software I2C](http://wiki.seeedstudio.com/Arduino_Software_I2C_user_guide/).
 
 !!!Tip
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
 ## Platforms Supported
--------------------
+
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -52,8 +56,8 @@ Grove-IMU 10DOF v2.0 is a upgrade version of Grove-IMU-10DOF， which replace BM
 
 
 ## Hardware Overview
-------------------
-![](https://github.com/SeeedDocument/Grove-IMU_10DOF_v2.0/raw/master/img/hardware.jpg)
+
+![](https://github.com/SeeedDocument/Grove-IMU_10DOF_v2.0/raw/master/img/dimensions.jpg)
 
 
 -  MPU-9250 I2C address select Pad, default connected **a** and **b** address is 0x68, if connect **b** and **c** address is 0x69
@@ -63,38 +67,46 @@ The diagram below shows the orientation of the axes of sensitivity and the polar
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-IMU_10DOF/master/img/Imu-10dof-dir-axes.png)
 - The BMP280 is an absolute barometric pressure sensor especially designed for mobile applications. The sensor module is housed in an extremely compact 8-pin metal-lid LGA package with a footprint of only 2.0 × 2.5 mm2 and 0.95 mm package height. Its small dimensions and its low power consumption of 2.7 μA @1Hz allow the implementation in battery driven devices such as mobile phones, GPS modules or watches.
 
-## Getting Started
------
-
-#### Connections
-
-Here we will show you how this Grove - IMU 10DOF V2.0 works via a simple demo. First of all, we need to prepare the below stuffs:
-
-| Seeeduino V4 | Grove - IMU 10DOF v2.0 | Base Shield |
-|--------------|----------------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-IMU_10DOF_v2.0/raw/master/img/Grove-imu-10dof-v2.0_s.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|
-|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-IMU-10DOF-v2.0-p-2691.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
 
 
-- Connect Grove - IMU 10DOF v2.0 to **I2C** port of base shield.
-- Plug the base Shield into Arduino.
-- Connect Arduino to PC by using a USB cable.
+## Getting started
 
-![](https://github.com/SeeedDocument/Grove-IMU_10DOF_v2.0/raw/master/img/arduino%20connection.jpg)
+
+### Play with Arduino
+
+#### Hardware
+
+- **Step 1.** Prepare the below stuffs:
+
+| Seeeduino V4.2 | Base Shield| Base Shield |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-IMU_10DOF_v2.0/raw/master/img/Grove-imu-10dof-v2.0_s.jpg)|
+|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-IMU-10DOF-v2.0-p-2691.html)|
+
+- **Step 2.** Connect Grove - IMU 10DOF v2.0 to **I2C** port of base shield.
+- **Step 3.** Plug Grove - Base Shield into Seeeduino.
+- **Step 4.** Connect Seeeduino to PC via a USB cable.
+
+<!--link-->
+![with_ardu](https://github.com/SeeedDocument/Grove-IMU_10DOF_v2.0/raw/master/img/with_ardu.jpg)
+
+
 
 #### Software
 
-- Download the [Grove-IMU_10DOF_v2 library.](https://github.com/Seeed-Studio/Grove_IMU_10DOF_v2.0/archive/master.zip)
-- Please follow [how to install an arduino library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install library.
-- Restart the Arduino IDE. Open “ IMM_10DOF_Test example via the path: **File -> Example ->GROVE_IMU_10DOF_V2-master-> IMU_10DOF_V2_Test**.
+- **Step 1.** Download the [Grove-IMU_10DOF_v2 library.](https://github.com/Seeed-Studio/Grove_IMU_10DOF_v2.0/archive/master.zip)
+- **Step 2.** Please follow [how to install an arduino library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install library.
+- **Step 3.** Restart the Arduino IDE. Open “ IMM_10DOF_Test example via the path: **File -> Example ->GROVE_IMU_10DOF_V2-master-> IMU_10DOF_V2_Test**.
+
 ![](https://github.com/SeeedDocument/Grove-IMU_10DOF_v2.0/raw/master/img/library%20example.jpg)
-- Upload the code. Note that we should select the correct board type and COM port.
-- We can see:
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-IMU_10DOF/master/img/Imu-10dof-test.png)
+- **Step 4.** Upload the code. Note that we should select the correct board type and COM port.
+We can see:
+
+![](https://github.com/SeeedDocument/Grove-IMU_10DOF_v2.0/raw/master/img/ardu_result.jpg)
 
 
-Resources
---------
+## Resources
+
 
 -   **[Eagle]** [Grove - IMU 10DOF v2 eagle file](https://github.com/SeeedDocument/Grove-IMU_10DOF_v2.0/raw/master/res/Grove%20-%20IMU%2010DOF%20v2.0.zip)
 -   **[PDF]** [Grove - IMU 10DOF v2 schematics pdf file](https://github.com/SeeedDocument/Grove-IMU_10DOF_v2.0/raw/master/res/Grove%20-%20IMU%2010DOF%20v2.0%20Sch.pdf)
@@ -107,4 +119,5 @@ Resources
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_IMU_10DOF -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
