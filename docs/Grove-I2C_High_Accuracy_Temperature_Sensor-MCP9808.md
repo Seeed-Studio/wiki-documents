@@ -60,7 +60,6 @@ All in all, we believe this sensor will be a new star for temperature control.
 
 
 
-
 ## Hardware Overview
 
 ### Pin Map
@@ -70,8 +69,9 @@ All in all, we believe this sensor will be a new star for temperature control.
 
 **I2C Address**
 
-We offer 3 sets of pads on the back of the PCB. The default AD0~AD2 are all connected to the Low level pads, you can cut some those pads and solder them to the other side(High level).
-The I^2^C address is a 7bits address <mark>0011A<sub>0</sub>A<sub>1</sub>A<sub>2</sub></mark>. The defaut setting is A<sub>0</sub>=0/A<sub>1</sub>=0/A<sub>2</sub>=0, so the default I^2^C
+We offer 3 sets of pads on the back of the PCB. The default AD0~AD2 are all connected to the Low level pads, you can cut those pads and solder them to the other side(High level).
+The I^2^C address is a 7bits address <mark>0011A<sub>0</sub>A<sub>1</sub>A<sub>2</sub></mark>. <mark>0011</mark> is the address code,  which is the factory setting, we can not change it.
+<mark>A<sub>0</sub>A<sub>1</sub>A<sub>2</sub></mark> is the slave address, we can change it. The defaut setting is A<sub>0</sub>=0/A<sub>1</sub>=0/A<sub>2</sub>=0, so the default I^2^C
 address is <mark>0011000</mark>. Normaly the address should be 8bits, so we need to add one bit 0 to the MSB(Most Significant Bit), then we get <mark>0001,1000</mark>. This is a binary address,
 we often use the hexadecimal address in the code, so let's convert the binary address to a hexadecimal address, here we get <mark>0x18</mark>. By the same token, if we solder all the pads to the
  high level, we will get <mark>0001,1111</mark>, which is <mark>0x1F</mark>. So the I^2^C address range from 0x18 to 0x1F, among them, you can choose whatever you want, just make sure you will change
@@ -81,6 +81,18 @@ the I^2^C address in the file **Seeed_MCP9808.h** in the **Grove_Temperature_sen
 ```c++
 #define DEFAULT_IIC_ADDR  0X18
 ```
+
+Address map
+
+A<sub>2</sub>=0|A0=0|A0=1
+--|--|---
+A1=0|A<sub>2</sub>A<sub>1</sub>A<sub>0</sub>-000,0x18|A<sub>2</sub>A<sub>1</sub>A<sub>0</sub>-001,0x19
+A1=1|A<sub>2</sub>A<sub>1</sub>A<sub>0</sub>-010,0x1A|A<sub>2</sub>A<sub>1</sub>A<sub>0</sub>-011,0x1B
+
+A<sub>2</sub>=1|A0=0|A0=1
+--|--|---
+A1=0|A<sub>2</sub>A<sub>1</sub>A<sub>0</sub>-100,0x1C|A<sub>2</sub>A<sub>1</sub>A<sub>0</sub>-101,0x1D
+A1=1|A<sub>2</sub>A<sub>1</sub>A<sub>0</sub>-110,0x1E|A<sub>2</sub>A<sub>1</sub>A<sub>0</sub>-111,0x1F
 
 
 **<SPAN style="TEXT-DECORATION: overline">ALE</SPAN> Pad**
@@ -305,7 +317,7 @@ temperature value is: 29.19
 temperature value is: 29.25
 ```
 
-Now, let's see how to use the alert pad.
+**Now, let's see how to use the alert pad.**
 
 The code in the demo **MCP9808_demo_with_limit**:
 
@@ -359,6 +371,38 @@ sensor.set_upper_limit(SET_UPPER_LIMIT_ADDR,0x01e0);
 We use this function to control the temperature, the first parameter is the UPPER_LIMIT register address and the second parameter <mark>0x01e0</mark> is the Hexadecimal temperature we set, as we mentioned above, it's 30℃. The <mark>0x01e0</mark> is a four bit Hexadecimal number, the last bit in the right represent the fractional part. We set it as 0, then the valid number is <mark>0x1e</mark>. **e** means 14 in decimal,
 and the higer bit **1** means 16 in decimal. So <mark>0x1e</mark> equals 16+14=30.
 
+We provide 3 functions in the file **Seeed_MCP9808.cpp**.  
+```sensor.set_upper_limit(SET_UPPER_LIMIT_ADDR,u16);```
+```sensor.set_lower_limit(SET_LOWER_LIMIT_ADDR,u16);```
+```sensor.set_critical_limit(SET_CRITICAL_LIMIT_ADDR,u16);```
+
+As we mentioned before, the default output of the **<SPAN style="TEXT-DECORATION: overline">ALE</SPAN> Pad** is high, and the output level goes low when the temperature meets certain conditions. You can use those 3 functions to set your own conditions.
+
+**sensor.set_lower_limit(SET_LOWER_LIMIT_ADDR,u16)** is used to set the lower temperature limit, **u16** is the 4 bit Hexadecimal temperature we set. When the temperature is lower than the value we set, the output of the **<SPAN style="TEXT-DECORATION: overline">ALE</SPAN> Pad** will goes down.
+
+**sensor.set_upper_limit(SET_UPPER_LIMIT_ADDR,u16)** is used to set the upper temperature limit, also **u16** is the 4 bit Hexadecimal temperature we set. When the temperature is higher than the value we set, the output of the **<SPAN style="TEXT-DECORATION: overline">ALE</SPAN> Pad** will goes down.
+
+**sensor.set_critical_limit(SET_CRITICAL_LIMIT_ADDR,u16)** is used for the inturrupt mode, in this wiki we only show you how to work as a comparator. If you want to know more, please check the [datasheet](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/MCP9808_datasheet.pdf) .
+
+
+Now we can set a condition zone by lower_limit and upper_limit, when the temperature comes to the condition zone, the output will goes low.
+
+![](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/img/Zone.jpg)
+
+For example, if you want the **<SPAN style="TEXT-DECORATION: overline">ALE</SPAN> Pad** output high between 28℃ and 30℃, and output low when the tempareture is higer than 30℃ or lower than 28℃.
+The code should be like:
+
+```c++
+
+sensor.set_lower_limit(SET_LOWER_LIMIT_ADDR,0x01c0);
+delay(10);
+sensor.set_upper_limit(SET_UPPER_LIMIT_ADDR,0x01e0);
+delay(10);
+
+```
+
+!!!Attention
+        Please make sure the **upper_limit** is higer than the **lower_limit**, otherwise it will not output properly. And please make sure the **critical_limit** is higer than the **upper_limit**. A certain delay() is required to ensure that the registers are written correctly.
 
 
 ## Resources
