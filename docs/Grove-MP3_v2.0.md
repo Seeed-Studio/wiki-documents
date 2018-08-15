@@ -16,6 +16,7 @@ Grove - MP3 v2.0 is a tiny-sized and compact audio module. It supports various a
 
 <p style="text-align:center"><a href="http://www.seeedstudio.com/depot/Grove-MP3-v20-p-2597.html?cPath=98_106_57" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
 
+
 ## Version
 
 | Product Version   | Changes          | Released Date |
@@ -34,7 +35,7 @@ Grove - MP3 v2.0 is a tiny-sized and compact audio module. It supports various a
 
 !!!Tip
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
-    
+
 ## Application ideas
 
 -   Middle-level audio module for any applications.
@@ -78,7 +79,7 @@ Grove - MP3 v2.0 is a tiny-sized and compact audio module. It supports various a
 
 ### Play With Arduino
 
-**Hardware**
+#### Hardware
 
 - **Step 1.** Prepare the below stuffs:
 
@@ -87,8 +88,8 @@ Grove - MP3 v2.0 is a tiny-sized and compact audio module. It supports various a
 |![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-MP3_v2.0/raw/master/img/Grove-MP3_v2.0_s.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/depot/Grove-MP3-v20-p-2597.html?cPath=98_106_57)|
 
-!!!Note 
-    We need SD card with music inside and Headset/earphone or stereo with 3.5 mm audio jack as well. 
+!!!Note
+    We need SD card with music inside and Headset/earphone or stereo with 3.5 mm audio jack as well.
 
 - **Step 2.** Connect Grove-MP3 v2.0 to port D2 of Grove-Base Shield.
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
@@ -106,7 +107,7 @@ Grove - MP3 v2.0 is a tiny-sized and compact audio module. It supports various a
 | D3            | White                   |
 | D2            | Yellow                  |
 
-**Software**
+#### Software
 
 - **Step 1.** Download the  [ Grove-MP3 v2.0](https://github.com/Seeed-Studio/Grove_Serial_MP3_Player_V2.0/archive/master.zip)  from Github.
 - **Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
@@ -114,7 +115,7 @@ Grove - MP3 v2.0 is a tiny-sized and compact audio module. It supports various a
 
 Here is the code.
 
-```
+```C++
 /*
  * MP3_Play_Test.ino
  * A quick start example for Grove-Serial MP3 Player V2.0
@@ -311,9 +312,17 @@ void loop()
 
 ## Resources
 
--   Hardware [Schematic files](https://raw.githubusercontent.com/SeeedDocument/Grove-MP3_v2.0/master/res/Grove-MP3_v2.0_Schematic_files.zip)
--   [Libraries](https://github.com/Seeed-Studio/Grove_Serial_MP3_Player_V2.0) on Github.
--   KT403A [Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-MP3_v2.0/master/res/Grove-MP3_v2.0_KT403A_datasheet_V1.3_EN-Recompiled_by_Seeed-.pdf) (part)
+-   **[Eagle&PDF]** [Grove-MP3_v2.0_Schematic files](https://raw.githubusercontent.com/SeeedDocument/Grove-MP3_v2.0/master/res/Grove-MP3_v2.0_Schematic_files.zip)
+- **[Librarie]**  [Grove-Serial MP3 Player V2.0 Libraries](https://github.com/Seeed-Studio/Grove_Serial_MP3_Player_V2.0)
+
+-   **[Datasheet]** [KT403A Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-MP3_v2.0/master/res/Grove-MP3_v2.0_KT403A_datasheet_V1.3_EN-Recompiled_by_Seeed-.pdf)
+
+## Projects
+
+**Arduino Based Security Project Using Cayenne**: Arduino based Home Security Project. SMS/email alerts when intruder detected. Personalized messages for authorized personnel.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/ArduinoBasics/arduino-based-security-project-using-cayenne-eb379b/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
