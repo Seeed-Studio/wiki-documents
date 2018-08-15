@@ -1952,6 +1952,16 @@ Here are the detail instructions.
 - Step 2. modify the upload path @ /publish/respeaker.io_stable.sh
 - Step 3. sudo ./publish/respeaker.io_stable.sh
 
+**Q10: When plug the burned SD card to ReSpeaker Core v2.0, there is no COM port in device manager and no display on HDMI interface.**
+
+**A10:** Please use the USb to TTL adaptor to connect to UART directly, you will see the below errors. 
+
+```
+[    2.119560] mmcblk0: timed out sending SET_BLOCK_COUNT command, card status 0x400900
+[    2.128134] mmcblk0: command error, retrying timeout
+```
+
+The root cause is that the old SD cards do not work with linux system. Please change to recent SD cards, which supports all the eMMC commands, such as ScanDisk Ultra.
 
 ## Resources
 - **[PDF]** [Download PDF of This Wiki](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/ReSpeaker_Core_v2.pdf)
