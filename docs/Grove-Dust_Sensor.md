@@ -270,5 +270,16 @@ More attention is being paid to the environmental air quality nowadays because t
 - **[Demo]** [Testing the Shinyei PPD42NS](http://irq5.io/2013/07/24/testing-the-shinyei-ppd42ns/) -- Made by darell tan
 - **[Demo]** [Air Quality Monitoring](http://www.howmuchsnow.com/arduino/airquality/grovedust/) -- Made by Chris Nafis
 
+## Projects
+
+**Air Quality Box**: Monitor air quality around you
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/ye-xiaobo/air-quality-box-d7658a/embed' width='350'></iframe>
+
+**Smart Crops: Implementing IoT in Conventional Agriculture!**: Our mission with nature is to preserve it, designing and implementing technologies and monitoring methods with the help of IoT via Helium.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/gabogiraldo/smart-crops-implementing-iot-in-conventional-agriculture-3674a6/embed' width='350'></iframe>
+
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

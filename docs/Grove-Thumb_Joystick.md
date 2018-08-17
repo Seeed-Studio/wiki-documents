@@ -196,8 +196,15 @@ Resources
 - [Joystick Schematic PDF File](https://github.com/SeeedDocument/Grove-Thumb_Joystick/raw/master/res/Joystick.pdf)
 
 
+## Projects
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Thumb_Joystick -->
+**Raspberry pi music server**: A first step to Raspberry Pi project.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/kishima7/raspberry-pi-music-server-f5a0ae/embed' width='350'></iframe>
+
+**Build a Custom Minecraft Controller**: Build a Custom Minecraft Controller With the GrovePi.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/dexterindustries/build-a-custom-minecraft-controller-d55d9c/embed' width='350'></iframe>
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

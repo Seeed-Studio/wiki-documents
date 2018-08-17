@@ -251,5 +251,17 @@ sudo python grove_sound_sensor.py
 - [**PDF**][PCB in PDF format](https://github.com/SeeedDocument/Grove_Sound_Sensor/raw/master/res/Grove%20-%20Sound%20Sensor%20v1.6%20PCB.pdf)
 - [**Datasheet**][LM386.PDF](https://github.com/SeeedDocument/Grove_Sound_Sensor/raw/master/res/LM386.pdf)
 
+## Projects
+
+**Create a multi-tasking IoT Wi-Fi sensor**: This tutorial showcases how to make an internet-connected sensor, while leveraging unique multi-tasking features of Energia & TI LaunchPad.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/adrianf/create-a-multi-tasking-iot-wi-fi-sensor-9d7fdf/embed' width='350'></iframe>
+
+
+**LED Sound Meter using Wio-Link and Node-Red**: SeeedStudio Grove sound sensor and LED strip attached to Wio-Link being driven by a Node-Red flow.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/potnik/led-sound-meter-using-wio-link-and-node-red-259e02/embed' width='350'></iframe>
+
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).

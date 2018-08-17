@@ -277,5 +277,13 @@ void loop() {
 - [**Eagle&PDF**][Grove - Moisture Sensor v1.4 Schematic](https://github.com/SeeedDocument/Grove_Moisture_Sensor/raw/master/resources/Grove%20-%20Moisture%20Sensor%20v1.4.zip)
 
 
+## Projects
+
+**Plant Monitoring System using AWS IoT**: If you plan on a vacation, here is a great project to track the temperature and soil moisture of your Plant using dweet.io and AWS IoT. 
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/carmelito/plant-monitoring-system-using-aws-iot-6cb054/embed' width='350'></iframe>
+
+
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).

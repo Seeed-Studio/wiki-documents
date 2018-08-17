@@ -424,5 +424,15 @@ Inspired by OVERWATCH, we have made a very cool Wooden Laser Gun toy for fun the
 
 The Wooden Laser Gun and the Gun Target are all based on an Arduino board called Seeeduino Lotus. The laser emitter on the Laser Gun is controlled to fire laser pulse to "activate" the Gun Target. And there are 3 light sensors on the Gun Target to detect the laser pulse. It seems very simple right? If you are interested in our project, please make one for yourself or your child! It's worth to spend one day DIY it as a Xmas present.    
 
+## Projects
+
+**MSP430 Alarm Clock with Grove Modules**: Create your own alarm clock using the MSP430F5529 LaunchPad and the SeeedStudio Grove Modules.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/carlosventura/alarm-clock-with-grove-modules-e4e9f1/embed' width='350'></iframe>
+
+**Clock - Grove 4-digit Display Using Photon**:　Your first clock with 4 components, based on Grove and TM1637
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/ingo-lohs/clock-grove-4-digit-display-using-photon-7c4369/embed' width='350'></iframe>
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

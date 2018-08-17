@@ -463,9 +463,8 @@ You will need some expansion board when you start a project. There're many cape 
 |![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/product4.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/product5.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/product6.jpg)|
 |[GET ONE NOW!](http://www.seeedstudio.com/Grove-Base-Cape-for-Beaglebone-v2.0-p-2644.html)|[GET ONE NOW!](http://www.seeedstudio.com/5-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2642.html)|[GET ONE NOW!](http://www.seeedstudio.com/7-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2643.html)|
 
-## References and Resources
-###References
-----
+## References 
+
 There're many references to help you to get more information about the board.
 
 * [BeagleBoard Main Page](http://beagleboard.org/)

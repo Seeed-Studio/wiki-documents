@@ -260,7 +260,12 @@ Take ID: 0009776930 for example:
 -   Output: 0700952F229F ------------- Hex [[Start Bit(07h) + Card Number(8 numbers) + Checksum]
 -   The calculator for decimal and hex numbers is available online.
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_125KHz_RFID_Reader -->
+
+## Projects
+
+**Arduino Based Security Project Using Cayenne**: Arduino based Home Security Project. SMS/email alerts when intruder detected. Personalized messages for authorized personnel.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/ArduinoBasics/arduino-based-security-project-using-cayenne-eb379b/embed' width='350'></iframe>
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

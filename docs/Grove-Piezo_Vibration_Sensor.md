@@ -185,8 +185,6 @@ pi@raspberrypi:~/GrovePi/Software/Python $ python grove_piezo_vibration_sensor.p
 ## FAQs
 Please click [here](http://support.seeedstudio.com/knowledgebase/articles/1832986-grove-piezo-vibration-sensor-sku-101020031) to see all Grove-Piezo Vibration Sensor FAQs.
 
-## Tech Support
-Please do not hesitate to contact **techsupport@seeed.cc** if you require further information.
 
 ## Resources
 
@@ -195,6 +193,18 @@ Please do not hesitate to contact **techsupport@seeed.cc** if you require furthe
 - **[PDF]** [Grove - Piezo Vibration Sensor Schematic PDF File](https://raw.githubusercontent.com/SeeedDocument/Grove-Piezo_Vibration_Sensor/master/res/Gvove-Piezo_Vibration_Sensor.pdf)
 - **[PDF]** [Grove - Piezo Vibration Sensor PCB PDF File](https://github.com/SeeedDocument/Grove-Piezo_Vibration_Sensor/raw/master/res/Gvove%20-%20Piezo%20Vibration%20Sensor%20v1.1%20PCB.pdf)
 - **[Datasheet]** [Piezo Vibration Sensor Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Piezo_Vibration_Sensor/master/res/Piezo_Vibration_Sensor.pdf)
+
+
+## Projects
+
+**Grove Starter Kit For Arduino - Piezo Vibration Sensor**: Teaches you how to use the Piezo vibration sensor in the Arduino Grove starter kit.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/trduunze/grove-starter-kit-for-arduino-piezo-vibration-sensor-92c531/embed' width='350'></iframe>
+
+
+**Seat Monitor**: Using ARTIK cloud to monitor cabin seat state.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/momososo/seat-monitor-4288dc/embed' width='350'></iframe>
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

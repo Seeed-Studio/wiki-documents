@@ -542,5 +542,12 @@ void loop()
 
 - [Arduino Video tutorial series by Jeremy Blum](http://www.youtube.com/playlist?list=PLA567CE235D39FA84)
 
+## Projects
+
+**Georgia Tech Getting Started with TI LaunchPad Workshop 2015**: Try out some basic breadboard circuits with a TI microcontroller 
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/launchpad/gtech2015-aa131c/embed' width='350'></iframe>
+
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

@@ -194,5 +194,16 @@ sensor_value = 131
 - **[Eagle&PDF]** [Grove - Loudness Sensor Schematic](https://github.com/SeeedDocument/Grove-Loudness_Sensor/raw/master/res/Grove%20-%20Loudness%20Sensor%20Eagle%20File_v0.9b.zip)
 - **[Datasheet]** [LM2904DR Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Loudness_Sensor/master/res/LM2904DR.pdf)
 
+## Projects
+
+**Solar Powered Environmental Monitoring Kit**: A solar-powered open source kit for monitoring air quality, sound level, humidity, and temperature.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/taifur/solar-powered-environmental-monitoring-kit-b1d03d/embed' width='350'></iframe>
+
+**The Da Vinci Code**: The work combines art and electronics. The art part makes the skeleton and consists of 11 layers of medium density fiberboard.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/coding-with-da-vince/the-da-vinci-code-3b91a8/embed' width='350'></iframe>
+
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

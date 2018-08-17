@@ -262,8 +262,12 @@ If every thing goes well, The result should be like:
 - **[Pdf]**  [TSOP282 Datasheet](http://www.vishay.com/docs/82491/tsop382.pdf)
 
 
+## Projects
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Infrared_Receiver -->
+**IR LaunchPad to LaunchPad Communication**: Send text from one LaunchPad to another using the Grove IR emitter and receiver!
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/ctroberts/ir-launchpad-to-launchpad-communication-0dd109/embed' width='350'></iframe>
+
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

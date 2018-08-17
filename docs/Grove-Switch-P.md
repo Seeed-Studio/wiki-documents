@@ -196,5 +196,11 @@ pi@raspberrypi:~/GrovePi/Software/Python $ python grove_switch.py
 
 - **[Eagle&PDF]** [Grove-Switch(P) Schematic](https://github.com/SeeedDocument/Grove-Switch-P/raw/master/res/Grove-Switch-P-Eagle_File_v1.0.zip)
 
+## Projects
+
+**Using a Switch to Open and Close a Relay**: You will learn the value of a switch, with its High and Low function. In addition you will learn how to use a relay as an actuator.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/sodaqmoja/using-a-switch-to-open-and-close-a-relay-3329ec/embed' width='350'></iframe>
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

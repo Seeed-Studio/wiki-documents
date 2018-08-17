@@ -131,8 +131,16 @@ The result should be like:
 - **[Library]** [Grove_Temper_Humidity_TH02 library](https://github.com/Seeed-Studio/Grove_Temper_Humidity_TH02)
 
 
+## Projects
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Tempture&Humidity_Sensor_(High-Accuracy_&Mini)_v1.0 -->
+**Smart Mali**: A Smart Pot for Indoor Gardening! {Wondering what Mali means?}
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/alpha007/smartmali-1fbdda/embed' width='350'></iframe>
+
+**Cold Transport Chain Monitoring and Tracking**: IoT based solution to make delivery of temperature sensitive perishable products more efficient and to reduce wastage.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/musketeers/cold-transport-chain-monitoring-and-tracking-48b2c5/embed' width='350'></iframe>
+
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

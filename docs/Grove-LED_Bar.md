@@ -414,7 +414,18 @@ Resources
 -   [**Datasheet**][MY9221 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-LED_Bar/master/res/MY9221_DS_1.0.pdf)
 -   [**More Reading**][Wooden Laser Gun](http://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_LED_Bar -->
+
+
+## Projects
+
+**Grove LED Bar v2.0**: Calliope Mini is equipped with two Grove connectors. In this project, I want to explore, how to talk to these Seeed Grove parts.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/luuc/grove-led-bar-v2-0-c4b74f/embed' width='350'></iframe>
+
+**Grove LED Bar Controller with the Bean+**: Learn the basics of using popular Grove components with the new LightBlue Bean+ to get started with building your own projects!
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/karel/grove-led-bar-controller-with-the-bean-c3b81e/embed' width='350'></iframe>
+
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
