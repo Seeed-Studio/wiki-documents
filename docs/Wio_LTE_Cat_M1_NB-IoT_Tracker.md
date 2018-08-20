@@ -617,7 +617,9 @@ console.log(fs.readFileSync("hello.txt"));
 **6. Play with Grove Module**
 
 **6.1. Play with Digital Ports**
+
 **6.1.1 Grove-Button (Input)**
+
 - Step 1. Conenct Grove-Button to Wio LTE D38 port.
 - Step 2. Copy the code to IDE and upload to board.
 - Step 3. We will see the "Pressed" when we press the button. Or else, we will see "Released" printed on screen.
@@ -631,6 +633,7 @@ var button = new (require("GroveButton"))(WioLTE.D38, function(e) {
 ```
 
 **6.1.2 Grove-Ralay (Output)**
+
 - Step 1. Conenct Grove-Ralay to Wio LTE D38 port.
 - Step 2. Copy the code to IDE and upload to board.
 - Step 3. We will hear the Relay switch and see the "Done" printed on screen.
@@ -732,7 +735,7 @@ For more info, please refer to [Wio_LTE_Module](http://www.espruino.com/modules/
 
 ## Resource
 
-- **[Eagle&PDF]** [Wio LTE AU Version v1.3b](https://github.com/SeeedDocument/Wio_LTE_Cat_M1_NB-IoT_Tracker/raw/master/res/WioLTE_Cat_NB1_Eagle-master.zip)
+- **[Eagle&PDF]** [WioLTE_Cat_NB1](https://github.com/SeeedDocument/Wio_LTE_Cat_M1_NB-IoT_Tracker/raw/master/res/WioLTE_Cat_NB1_Eagle-master.zip)
 
 - **[Library]** [WioLTE_Cat_NB1_Arduino_Library](https://github.com/Seeed-Studio/WioLTE_Cat_NB1_Arduino_Library)
 
