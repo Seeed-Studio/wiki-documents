@@ -111,7 +111,7 @@ The default output is high, in this board it should be 3.3V. When the condition 
 ![](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/img/schamitc_a.jpg)
 
 
-Look at this part, and you will understand the I^2^C address more easily.
+As we mentioned above, we use those three sets of pads to select the I^2^C address, if you want to change the default adress, you can cut of the wire and re-solder it.
 
 
 **MCP9808**
@@ -125,94 +125,11 @@ As you can see, the <SPAN style="TEXT-DECORATION: overline">ALE</SPAN> pad is co
 
 ![](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/img/schamitc.jpg)
 
-This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup> bus of this sensor use 3.3V, if the I<sup>2</sup>C bus of the Arduino use 5V, this circuit will be needed. In the schematic above, **Q6** and **Q5** are N-Channel MOSFET [2N7002A](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you need to know somthing about the [MOSFET](https://en.wikipedia.org/wiki/MOSFET). 
-
-![](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/img/MOSFET.jpg)
-
-There are three electrode in the MOSFET, **Gate(V<sub>G</sub>)**, **Soure(V<sub>S</sub>)** and **Drain(V<sub>D</sub>)**. The MOSFET use the voltage between Gate and Source(**V<sub>GS</sub>**) to determine the conduction between **Drain** and **Source**.
-We call the threshold voltage of the device **V<sub>th</sub>**, for the 2N7002A, the **V<sub>th</sub>**  should be 1.2v-2.0v.
-
-In short:
-
-- When the **V<sub>GS</sub>** < **V<sub>th</sub>**, the MOSFET is turned off,  there is no conduction between drain and source.
-- When the **V<sub>GS</sub>** > **V<sub>th</sub>**, the MOSFET is turned on, and a channel has been created which allows current between the drain and the source. 
-
-
-What's more, you should notice that there is a diode on between the **Soure** and **Drain**. This diode will be mentioned later.
-
-
-Now let's see how this circuit works:
-
-![](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/img/schematic_d.jpg)
-
-
-We call the left part of this schematic **Part_3V3** and the right part **Part_5V**(Vcc=5V). The **SDA** bus and the **SCL** bus are the same, we only analysis **SDA** bus here.There are three conversion states:
-
-
-① If there are no signals from the SDA bus. Both <mark>SDA_3V3</mark> and <mark>SDA</mark> are pulled high by the pull-up resistor. We set this status as default.
-
-
-For the **Part_3V3**: 
-
-$V_S ≈ 3.3v, V_G = 3.3v$
-
-$V_{GS} = V_G - V_S ≈ 0v$
-
-$V_{GS} < V_{th}$
-
-The MOSFET is turned off, the two parts circuit do not affect each other. 
-
-For the **Part_5V**:
-
-the V<sub>D</sub> is pulled up to 5V by the pull-up resistor, V<sub>D</sub> ≈ 5v.
-So both <mark>SDA_3V3</mark> and <mark>SDA</mark> wire are high voltage, but the level is different.All in all, in this status:
-
-<font color =#EE9A00>
-$V_S = 3.3v,   V_G = 5v$
-
-Voltage on SDA_3V3 wire is High, voltage on SDA wire is High.
-</font>
-
-
-② A 3.3v device in the **Part_3V3** pulls the bus line to a low level, which means the <mark>SDA_3V3(V<sub>S</sub>)</mark> line is low.
-
-
-$V_S ≈ 0v, V_G = 3.3v$
-
-$V_{GS} = V_G - V_S ≈ 3.3v$
-
-$V_{GS} > V_{th}$
-
-The MOSFET is turned on, the drain and the source are connected, so both V<sub>S</sub> and V<sub>D</sub> show be low. In this status, it should be:
-
-<font color =#EE9A00>
-$V_S = V_D ≈ 0v$
-
-Voltage on SDA_3V3 wire is LOW, voltage on SDA wire is LOW.
-</font>
-
-
-③ A 5v device in the **Part_5V** pulls the bus line to a low level, which means the <mark>SDA(V<sub>D</sub>)</mark> line is low. As the default,now the V<sub>S</sub> is 3.3V, and the V<sub>D</sub> is low.So:
-
-$V_S = 3.3v, V_D ≈ 0v$
-
-$V_{SD} = V_S - V_D ≈ 3.3v$
-
-
-Beacuase the V<sub>SD</sub> is 3.3v, the diode between the **Soure** and **Drain** will turn on(Normaly when the  V<sub>SD</sub> > 0.7v, the diode will turn on), which makes a conductive path for **Soure** and **Drain**. So the V<sub>S</sub> will decrease, V<sub>GS</sub> = V<sub>G</sub> - V<sub>S</sub> will rise. Once the V<sub>GS</sub> > V<sub>th</sub>, the MOSFET truns on, the drain and the source are connected, so both V<sub>S</sub> and V<sub>D</sub> show be low. In this status:
-
-<font color =#EE9A00>
-$V_S ≈ 0v, V_D ≈ 0v$
-
-Voltage on SDA wire is LOW, voltage on SDA_3V3 wire is LOW.
-</font>
-
-
-OK, let's move on.
+This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of this sensor use 3.3V, if the I<sup>2</sup>C bus of the Arduino use 5V, this circuit will be needed. In the schematic above, **Q6** and **Q5** are N-Channel MOSFET [2N7002A](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/AN10441.pdf)
 
 
 !!!Tip
-        In this section we only show you part of the schematic, for the full document please refer to the [Resources](#Resources)
+        In this section we only show you part of the schematic, for the full document please refer to the [Resources](http://wiki.seeedstudio.com/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/#resources)
 
 
 ## Platforms Supported
@@ -411,6 +328,7 @@ delay(10);
 - **[Zip]** [Seeed MCP9808 Library](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/Grove_Temperature_sensor_MCP9808-master.zip)
 - **[PDF]** [Datasheet of MCP9808](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/MCP9808_datasheet.pdf)
 - **[PDF]** [Datasheet of 2N7002A](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/2N7002A_datasheet.pdf)
+- **[PDF]** [AN10441](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/AN10441.pdf)
 
 
 ## Tech Support
