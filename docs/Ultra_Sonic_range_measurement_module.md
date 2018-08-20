@@ -7,16 +7,16 @@ prodimagename:  Mini_Soldering_Iron_product_view.jpg
 surveyurl: https://www.research.net/r/Ultra_Sonic_range_measurement_module
 sku:     101990004
 ---
-![](http://www.seeedstudio.com/depot/images/large/product/ultra_LRG.jpg)
+![](https://github.com/SeeedDocument/Ultra_Sonic_range_measurement_module/raw/master/img/front.jpg)
 
 Seeed ultrasonic sensor is non-contact distance measurement module, which is also compatible with electronic brick.
 It’s designed for easy modular project
 usage with industrial performance.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/ultra-sonic-range-measurement-module-p-626.html?cPath=144_149)
+[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](https://www.seeedstudio.com/ultra-sonic-range-measurement-module-p-626.html?cPath=144_149)
 
 ##   Features
----
+
 *   Detecting range: 3cm-4m
 *   Best in 30 degree angle
 *   Electronic brick compatible interface
@@ -26,7 +26,7 @@ usage with industrial performance.
 *   Arduino library ready
 
 ##   Specification
----
+
 <table>
 <tr>
 <td width="400px"> Supply voltage
@@ -69,93 +69,90 @@ usage with industrial performance.
 <td> 43x20x15 mm
 </td></tr></table>
 
-##   Usage
----
-###   Hardware Installation
+## Getting started
 
-![](https://github.com/SeeedDocument/Ultra_Sonic_range_measurement_module/raw/master/img/Ultra-Sonic-seq.JPG)
 
-A short ultrasonic pulse is transmitted at the time 0, reflected by an object. The senor receives this signal and converts it to an electric signal. The next pulse can be transmitted when the echo is faded away. This time period is called cycle period. The recommend cycle period should be no less than 50ms. If a 10μs width trigger pulse is sent to the signal pin, the Ultrasonic module will output eight 40kHz ultrasonic signal and detect the echo back. The measured distance is proportional to the echo pulse width and can be calculated by the formula above. If no obstacle is detected, the output pin will give a 38ms high level signal.
+A short ultrasonic pulse is transmitted at the time 0, reflected by an object. The sensor receives this signal and converts it to an electric signal. The next pulse can be transmitted when the echo is faded away. This time period is called cycle period. The recommend cycle period should be no less than 50ms. If a 10μs width trigger pulse is sent to the signal pin, the Ultrasonic module will output eight 40kHz ultrasonic signal and detect the echo back. The measured distance is proportional to the echo pulse width and can be calculated by the formula above. If no obstacle is detected, the output pin will give a 38ms high level signal.
 
-###   Programming
+### Play with Arduino
 
-Includes important code snippet.
-Demo code like :
-```
-/***************************************************************************/
-//    Function: Measure the distance to obstacles in front and print the distance
-//              value to the serial terminal.The measured distance is from
-//              the range 0 to 400cm(157 inches).
-//    Hardware: Ultrasonic Range sensor
-//    Arduino IDE: Arduino-1.0
-//    Author:     LG
-//    Date:      Jan 17,2013
-//    Version: v1.0 modified by FrankieChu
-//    by www.seeedstudio.com
-//
-//  This library is free software; you can redistribute it and/or
-//  modify it under the terms of the GNU Lesser General Public
-//  License as published by the Free Software Foundation; either
-//  version 2.1 of the License, or (at your option) any later version.
-//
-//  This library is distributed in the hope that it will be useful,
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-//  Lesser General Public License for more details.
-//
-//  You should have received a copy of the GNU Lesser General Public
-//  License along with this library; if not, write to the Free Software
-//  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
-//
-/*****************************************************************************/
+#### Hardware
+
+- **Step 1.** Prepare the below stuffs:
+
+| Seeeduino V4.2 | Base Shield| Ultra_Sonic_range_measurement_module |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Ultra_Sonic_range_measurement_module/raw/master/img/45d_small.jpg)|
+|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/ultra-sonic-range-measurement-module-p-626.html?cPath=144_149)|
+
+- **Step 2.** Connect  Ultra_Sonic_range_measurement_module to port **D2** of Grove-Base Shield.
+- **Step 3.** Plug Grove - Base Shield into Seeeduino.
+- **Step 4.** Connect Seeeduino to PC via a USB cable.
+
+!!!Note
+	If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
+
+| Seeeduino       |  ??? |
+|---------------|-------------------------|
+| 5V           | Red                     |
+| GND           | Black                   |
+| Not Conencted | White                   |
+| D2            | Yellow                  |
+
+#### Software
+
+**Step 1.** Copy the code and flash it into the controller board.
+**Step 2.**  Upload the code and open monitor window.
+
+```C
 #include "Arduino.h"
 class Ultrasonic
 {
     public:
     Ultrasonic(int pin);
     void DistanceMeasure(void);
-    long microsecondsToCentimeters(void);
-    long microsecondsToInches(void);
+    double microsecondsToCentimeters(void);
+    double microsecondsToInches(void);
     private:
-    int _pin;//pin number of Arduino that is connected with SIG pin of Ultrasonic Ranger.
+    int this_pin;//pin number of Arduino that is connected with SIG pin of Ultrasonic Ranger.
     long duration;// the Pulse time received;
 };
 Ultrasonic::Ultrasonic(int pin)
 {
-    _pin = pin;
+    this_pin = pin;
 }
 /*Begin the detection and get the pulse back signal*/
 void Ultrasonic::DistanceMeasure(void)
 {
-    pinMode(_pin, OUTPUT);
-    digitalWrite(_pin, LOW);
+    pinMode(this_pin, OUTPUT);
+    digitalWrite(this_pin, LOW);
     delayMicroseconds(2);
-    digitalWrite(_pin, HIGH);
+    digitalWrite(this_pin, HIGH);
     delayMicroseconds(5);
-    digitalWrite(_pin,LOW);
-    pinMode(_pin,INPUT);
-    duration = pulseIn(_pin,HIGH);
+    digitalWrite(this_pin,LOW);
+    pinMode(this_pin,INPUT);
+    duration = pulseIn(this_pin,HIGH);
 }
 /*The measured distance from the range 0 to 400 Centimeters*/
-long Ultrasonic::microsecondsToCentimeters(void)
+double Ultrasonic::microsecondsToCentimeters(void)
 {
-    return duration/29/2;
+    return duration/29.0/2.0;
 }
 /*The measured distance from the range 0 to 157 Inches*/
-long Ultrasonic::microsecondsToInches(void)
+double Ultrasonic::microsecondsToInches(void)
 {
-    return duration/74/2;
+    return duration/74.0/2.0;
 }
 
-Ultrasonic ultrasonic(7);
+Ultrasonic ultrasonic(2);
 void setup()
 {
     Serial.begin(9600);
 }
 void loop()
 {
-    long RangeInInches;
-    long RangeInCentimeters;
+    double RangeInInches;
+    double RangeInCentimeters;
     ultrasonic.DistanceMeasure();// get the current signal time;
     RangeInInches = ultrasonic.microsecondsToInches();//convert the time to inches;
     RangeInCentimeters = ultrasonic.microsecondsToCentimeters();//convert the time to centimeters
@@ -164,9 +161,10 @@ void loop()
     Serial.println(" inch");
     Serial.print(RangeInCentimeters);//0~400cm
     Serial.println(" cm");
-    delay(100);
+    delay(1000);
 }
 ```
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
