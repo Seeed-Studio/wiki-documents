@@ -744,5 +744,12 @@ Click on **Files Transfer > Ymodem > Send**, and select the .bin file we had dow
 * [Datasheet of RHF76-052AM](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/rhf-ds01500_rhf76-052_datasheet_v03.pdf)
 * [Datasheet of GPS Chip L70B-M39 ](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/L70B-M39.pdf)
 
+
+## Projects
+
+**LoRa IoTea**: An automatic information collection system applied to tea plantation. It is part of intelligent agricultural information collection.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/SeeedStudio/lora-iotea-b5ee95/embed' width='350'></iframe>
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

@@ -138,7 +138,11 @@ Resources
 -   [Library and example code](https://github.com/Seeed-Studio/Grove_BMP280) on GitHub
 -   [I<sup>2</sup>C how-to for Arduino](https://www.arduino.cc/en/Reference/Wire)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Barometer_Sensor_(BMP280) -->
+## Projects
+
+**LoRa IoTea**: An automatic information collection system applied to tea plantation. It is part of intelligent agricultural information collection.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/SeeedStudio/lora-iotea-b5ee95/embed' width='350'></iframe>
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

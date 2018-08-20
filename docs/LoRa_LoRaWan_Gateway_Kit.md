@@ -621,5 +621,11 @@ Then go to **Dashboard -> Applications -> SampleApp ->Device** , click the Node 
 - **[More Reading]** [Wiki of Seeeduino LoRaWAN](/Seeeduino_LoRAWAN/)
 - **[More Reading]** [RisingHF Website](http://www.risinghf.com/product/risinghf-iot-dicovery/?lang=en)
 
+## Projects
+
+**LoRa IoTea**: An automatic information collection system applied to tea plantation. It is part of intelligent agricultural information collection.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/SeeedStudio/lora-iotea-b5ee95/embed' width='350'></iframe>
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).

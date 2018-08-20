@@ -153,5 +153,11 @@ Open serial monitor of your Arduino IDE, and you will get the data now.
 * [Schematic in Eagle File](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2/raw/master/resources/Schematics_O2.zip)
 * [Github Repository of this Document](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2)
 
+## Projects
+
+**LoRa IoTea**: An automatic information collection system applied to tea plantation. It is part of intelligent agricultural information collection.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/SeeedStudio/lora-iotea-b5ee95/embed' width='350'></iframe>
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

@@ -206,7 +206,12 @@ Resources
 -   [MH-Z16\_CO2 datasheet\_EN.pdf](https://raw.githubusercontent.com/SeeedDocument/Grove-CO2_Sensor/master/res/MH-Z16_CO2_datasheet_EN.pdf)
 -   [Health Risk Evaluation for Carbon Dioxide](http://www.blm.gov/style/medialib/blm/wy/information/NEPA/cfodocs/howell.Par.2800.File.dat/25apxC.pdf)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_CO2_Sensor -->
+
+## Projects
+
+**LoRa IoTea**: An automatic information collection system applied to tea plantation. It is part of intelligent agricultural information collection.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/SeeedStudio/lora-iotea-b5ee95/embed' width='350'></iframe>
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
