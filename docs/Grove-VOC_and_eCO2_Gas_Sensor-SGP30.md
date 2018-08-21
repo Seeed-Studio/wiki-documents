@@ -164,7 +164,7 @@ The SGP30 is a digital multi-pixel gas sensor designed for easy integration into
 
 
 
-- **Step 1.** Connect Grove-VOC and eCO2 Gas Sensor(SGP30) to port **D2** of Grove-Base Shield.
+- **Step 1.** Connect Grove-VOC and eCO2 Gas Sensor(SGP30) to port **I2C** of Grove-Base Shield.
 
 - **Step 2.** Plug Grove - Base Shield into Seeeduino.
 
@@ -176,7 +176,7 @@ The SGP30 is a digital multi-pixel gas sensor designed for easy integration into
 
 
 !!!Note
-	If we don't have Grove Base Shield, We also can directly connect Grove - Temperature and Humidity Sensor Pro to Seeeduino as below.
+	If we don't have Grove Base Shield, We also can directly connect Grove-VOC and eCO2 Gas Sensor(SGP30) to Seeeduino as below.
 
 
 | Seeeduino     | Grove-VOC and eCO2 Gas Sensor(SGP30) |
