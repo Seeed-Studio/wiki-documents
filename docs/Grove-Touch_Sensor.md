@@ -10,14 +10,14 @@ sku: 101020037
 tags: grove_digital, io_3v3, io_5v, plat_duino, plat_linkit, plat_pi, plat_bbg
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Touch_Sensor/master/img/Grove-Touch_Sensor.jpg)
+![](https://raw.githubusercontent.com/SeeedDocument/Grove-Touch_Sensor/master/img/surface.jpg)
 
 Grove - Touch Sensor enables you to replace press with touch. It can detect the change in capacitance when a finger is near by. That means no matter your finger directly touches the pad or just stays close to the pad, Grove - Touch Sensor would outputs HIGH also.
 
 [![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Touch-Sensor-p-747.html)
 
-Specifications
---------------
+## Specifications
+
 
 - Operating Voltage: 2.0 - 5.5V
 - Operating Current(Vcc=3V):1.5 - 3.0μA
@@ -27,9 +27,8 @@ Specifications
 
 !!!Tip
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
-    
-Platforms Supported
--------------------
+
+## Platforms Supported
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -47,19 +46,37 @@ Platforms Supported
 | V                        | V           | 0          | 1            | 1               | X         | V           | X               |
 | Active High              | Disabled    | LOW        | Infinite     | 1.6 msec        | N/A       | Present     | N/A             |
 
-Demonstration
--------------
+## Getting started
 
-### With [Arduino](/Arduino)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Touch_Sensor/master/img/Touch_LED.jpg)
+### Play with Arduino
+
 This demo is going to show you how to turn on/off an LED.
 
-**Demo Code:**
 
-```
-const int TouchPin=9;
-const int ledPin=12;
+#### Hardware
+
+- **Step 1.** Prepare the below stuffs:
+
+| Seeeduino V4.2 | Base Shield|  Grove-Touch_Sensor |Grove-LED|
+|--------------|-------------|-----------------|-----|
+|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Touch_Sensor/raw/master/img/45d_small.jpg)|![enter image description](https://github.com/SeeedDocument/Grove-Red_LED/raw/master/img/45d_small.jpg)|
+|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/Grove-Touch-Sensor-p-747.html)|[Get One Now](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|
+
+- **Step 2.** Connect Grove-Touch_Sensor to port **D2** of Grove-Base Shield.
+- **Step 3.** Connect Grove-LED to port **D3** of Grove-Base Shield.
+- **Step 4.** Plug Grove - Base Shield into Seeeduino.
+- **Step 5.** Connect Seeeduino to PC via a USB cable.
+
+
+
+![with_ardu](https://github.com/SeeedDocument/Grove-Touch_Sensor/raw/master/img/with_ardu.jpg)
+
+#### Software
+ - **Step 1.** Please copy and paste code below to a new Arduino sketch.
+```c
+const int TouchPin=2;
+const int ledPin=3;
 
 void setup() {
     pinMode(TouchPin, INPUT);
@@ -78,57 +95,104 @@ void loop() {
     }
 }
 ```
+**Step 2.** Monitor the led on and off.
 
-### With Raspberry Pi
+### Play With Raspberry Pi
 
-1.  You should have a raspberry pi and a grovepi or grovepi+.
-2.  You should have completed configuring the development environment, otherwise follow [here](/GrovePiPlus).
-3.  Connection
+#### Hardware
 
-    -   Plug the sensor to grovepi socket D4 by using a grove cable.
+- **Step 1.** Prepare the below stuffs:
 
-4.  Navigate to the demos' directory:
+<!--false link-->
+| Raspberry pi | GrovePi_Plus | Grove-Touch_Sensor |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Touch_Sensor/raw/master/img/45d_small.jpg)|
+|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](http://www.seeedstudio.com/Grove-Touch-Sensor-p-747.html)|
+
+
+- **Step 2.** Plug the GrovePi_Plus into Raspberry.
+- **Step 3.** Connect Grove-Touch_Sensor  to **D2** port of GrovePi_Plus.
+- **Step 4.** Connect the Raspberry to PC through USB cable.
+
+![with_rpi](https://github.com/SeeedDocument/Grove-Touch_Sensor/raw/master/img/with_rpi.jpg)
+
+#### Software
+
+- **Step 1.** Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment.
+- **Step 2.** Git clone the Github repository.
 
 ```
-    cd yourpath/GrovePi/Software/Python/
-```
-
-   - To see the code
-
-
-```
-    nano grove_touch_sensor.py   # "Ctrl+x" to exit #
-```
-```
-    import time
-    import grovepi
-
-    # Connect the Grove Touch Sensor to digital port D4
-    # SIG,NC,VCC,GND
-    touch_sensor = 4
-
-    grovepi.pinMode(touch_sensor,"INPUT")
-
-    while True:
-        try:
-            print grovepi.digitalRead(touch_sensor)
-            time.sleep(.5)
-
-        except IOError:
-            print "Error"
+cd ~
+git clone https://github.com/DexterInd/GrovePi.git
 
 ```
 
-5.Run the demo.
-
-        sudo python grove_touch_sensor.py
+-	**Step 3.** Excute below commands to use this sensor, please change the port to from D4 to D2. 
 
 
-Resources
----------
+```bash
+python grove_touch_sensor.py
+```
 
--   [Eagle Files](https://raw.githubusercontent.com/SeeedDocument/Grove-Touch_Sensor/master/res/Touch_sensor_Eagle_File.zip)
--   [TTP223pdf](https://raw.githubusercontent.com/SeeedDocument/Grove-Touch_Sensor/master/res/TTP223.pdf)
+```Python
+#!/usr/bin/env python
+#
+# GrovePi Example for using the Grove Touch Sensor (http://www.seeedstudio.com/wiki/Grove_-_Touch_Sensor)
+#
+# The GrovePi connects the Raspberry Pi and Grove sensors.  You can learn more about GrovePi here:  http://www.dexterindustries.com/GrovePi
+#
+# Have a question about this example?  Ask on the forums here:  http://forum.dexterindustries.com/c/grovepi
+#
+'''
+## License
+The MIT License (MIT)
+GrovePi for the Raspberry Pi: an open source platform for connecting Grove Sensors to the Raspberry Pi.
+Copyright (C) 2017  Dexter Industries
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+'''
+import time
+import grovepi
+
+# Connect the Grove Touch Sensor to digital port D2
+# SIG,NC,VCC,GND
+touch_sensor = 2
+
+grovepi.pinMode(touch_sensor,"INPUT")
+
+while True:
+    try:
+        print(grovepi.digitalRead(touch_sensor))
+        time.sleep(.5)
+
+    except IOError:
+        print ("Error")
+
+```
+Here is result:
+
+![](https://github.com/SeeedDocument/Grove-Touch_Sensor/raw/master/img/rpi_result.jpg)
+
+
+## Resources
+
+
+-  **[Eagle]** [Grove-Touch_Sensor Schematic](https://raw.githubusercontent.com/SeeedDocument/Grove-Touch_Sensor/master/res/Touch_sensor_Eagle_File.zip)
+-  **[PDF]** [TTP223](https://raw.githubusercontent.com/SeeedDocument/Grove-Touch_Sensor/master/res/TTP223.pdf)
+
 
 ## Projects
 
@@ -137,4 +201,5 @@ Resources
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/user50338573/using-grove-touch-sensor-to-control-grove-led-56a5ed/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
