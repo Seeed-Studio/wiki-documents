@@ -138,7 +138,8 @@ Do not touch or shake or let this product in vibration when it works. This will 
 **Step 3.** Create a new Arduino sketch and paste the codes below to it or open the code directly by the path:File -> Example ->bmp280_example->bmp280_example
 
 Here is the code:
-```c
+
+```c++
 /*
  * bmp280_example.ino
  * Example sketch for BMP280
