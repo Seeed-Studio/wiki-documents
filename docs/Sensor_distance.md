@@ -1,6 +1,6 @@
 
 
-<p style="text-align:center"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_icon/Distance.png" width="205" height="205"/></p>
+
 
 - [Grove - Time of Flight Distance Sensor(VL53L0X)](https://www.seeedstudio.com/Grove-Time-of-Flight-Distance-Sensor(VL53L0X)-p-3086.html)
 

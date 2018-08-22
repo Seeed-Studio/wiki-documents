@@ -1,4 +1,4 @@
-<p style="text-align:center"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_icon/Accelerometer.png"/></p>
+
 
 - [Grove - 3 Axis Digital Accelerometer(±16g)](http://wiki.seeedstudio.com/Grove-3-Axis_Digital_Accelerometer-16g/)
 

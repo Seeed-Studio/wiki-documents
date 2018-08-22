@@ -1,5 +1,5 @@
 
-<p style="text-align:center"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_icon/Others.png" width="205" height="205"/></p>
+
 
 - [Grove - Electricity Sensor](http://wiki.seeedstudio.com/Grove-Electricity_Sensor/)
 

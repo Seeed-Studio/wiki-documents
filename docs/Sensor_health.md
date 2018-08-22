@@ -1,5 +1,4 @@
 
-<p style="text-align:center"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_icon/Health.png"/></p>
 
 - [Grove - Fingerprint Sensor](http://wiki.seeedstudio.com/Grove-Fingerprint_Sensor/)
 

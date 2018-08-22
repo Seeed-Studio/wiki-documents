@@ -1,5 +1,5 @@
 
-<p style="text-align:center"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_icon/Temperature.png"/></p>
+
 
 - [Grove - Digital Infrared Temperature Sensor ](http://wiki.seeedstudio.com/Grove-Digital_Infrared_Temperature_Sensor/)
 

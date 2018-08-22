@@ -1,5 +1,5 @@
 
-<p style="text-align:center"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_icon/Sound.png"/></p>
+
 
 - [Grove - Sound Sensor](http://wiki.seeedstudio.com/Grove-Sound_Sensor/)
 

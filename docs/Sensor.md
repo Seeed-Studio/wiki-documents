@@ -3,32 +3,6 @@ title: Sensor Introduction
 nointro:
 ---
 
-
-
-
-
-<div class="lianjie">
-<div id="one">
-<a > one </a>
-</div>
-<div id="two">
-<a > one </a>
-</div>
-</div>
-
-<style>
-.lianjie 
-a{ color:#333; text-decoration:none;}
-a:hover{ color:#F00; text-decoration:underline;}
-a:active{ color:#30F;}} 
-</style>
-
-
-
-
-
-
-
 <p>
 <div class="title" style="width:33%"><font color=#B4B4B4>  Gas</font></div>
 <div class="title" style="width:33%"><font color=#B4B4B4>  Barometer</font></div>
@@ -54,7 +28,7 @@ a:active{ color:#30F;}}
   </p>
 
   <p class="links">
-  <a href="http://127.0.0.1:8000/Sensor_gas/">More</a>
+  <a href="http://wiki.seeedstudio.com/Sensor_gas/">More</a>
   </p>
 </div>
 
@@ -76,7 +50,7 @@ a:active{ color:#30F;}}
   </p>
 
    <p class="links">
-  <a href="http://127.0.0.1:8000/Sensor_barometer/">More</a>
+  <a href="http://wiki.seeedstudio.com/Sensor_barometer/">More</a>
   </p>
 </div>
 
@@ -98,7 +72,7 @@ a:active{ color:#30F;}}
   </p>
 
   <p class="links">
-  <a href="http://127.0.0.1:8000/Sensor_accelerometer/">More</a>
+  <a href="http://wiki.seeedstudio.com/Sensor_accelerometer/">More</a>
   </p>
 </div>
 </div>
@@ -132,7 +106,7 @@ a:active{ color:#30F;}}
   </p>
 
   <p class="links">
-  <a href="http://127.0.0.1:8000/Sensor_temperature/">More</a>
+  <a href="http://wiki.seeedstudio.com/Sensor_temperature/">More</a>
   </p>
 </div>
 
@@ -154,7 +128,7 @@ a:active{ color:#30F;}}
   </p>
 
   <p class="links">
-  <a href="http://127.0.0.1:8000/Sensor_light/">More</a>
+  <a href="http://wiki.seeedstudio.com/Sensor_light/">More</a>
   </p>
 </div>
 
@@ -176,7 +150,7 @@ a:active{ color:#30F;}}
   </p>
 
   <p class="links">
-  <a href="http://127.0.0.1:8000/Sensor_health/">More</a>
+  <a href="http://wiki.seeedstudio.com/Sensor_health/">More</a>
   </p>
 </div>
 </div>
@@ -210,7 +184,7 @@ a:active{ color:#30F;}}
   </p>
 
   <p class="links">
-  <a href="http://127.0.0.1:8000/Sensor_sound/">More</a>
+  <a href="http://wiki.seeedstudio.com/Sensor_sound/">More</a>
   </p>
 </div>
 
@@ -232,7 +206,7 @@ a:active{ color:#30F;}}
   </p>
 
   <p class="links">
-  <a href="http://127.0.0.1:8000/Sensor_distance/">More</a>
+  <a href="http://wiki.seeedstudio.com/Sensor_distance/">More</a>
   </p>
 </div>
 
@@ -254,7 +228,7 @@ a:active{ color:#30F;}}
   </p>
 
   <p class="links">
-  <a href="http://127.0.0.1:8000/Others/">More</a>
+  <a href="http://wiki.seeedstudio.com/Sensor_Others/">More</a>
   </p>
 </div>
 </div>
