@@ -3,10 +3,320 @@ title: Sensor Introduction
 nointro:
 ---
 
-## Product List
----
 
-Here is the list of the Grove - Sensor Boards you can find in the Seeed WiKi. The list will be constantly updated.
+
+
+
+<div class="lianjie">
+<div id="one">
+<a > one </a>
+</div>
+<div id="two">
+<a > one </a>
+</div>
+</div>
+
+<style>
+.lianjie 
+a{ color:#333; text-decoration:none;}
+a:hover{ color:#F00; text-decoration:underline;}
+a:active{ color:#30F;}} 
+</style>
+
+
+
+
+
+
+
+<p>
+<div class="title" style="width:33%"><font color=#B4B4B4>  Gas</font></div>
+<div class="title" style="width:33%"><font color=#B4B4B4>  Barometer</font></div>
+<div class="title" style="width:33%"><font color=#B4B4B4>  Accelerometer</font></div>
+</p>
+
+
+<div>
+<div class="method1" style="width:33%">
+  <span class="tiptop"></span>
+  <img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_icon/Gas.png" width="110" height="110" border=0/>
+  
+  <p class="links"> 
+  <a href="http://wiki.seeedstudio.com/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/">VOC and eCO2 Gas Sensor</a>
+  </p>
+
+  <p class="links">
+  <a href="http://wiki.seeedstudio.com/Grove-Air_Quality_Sensor_v1.3/">Air Quality Sensor v1.3</a>
+  </p>
+
+  <p class="links">
+  <a href="http://wiki.seeedstudio.com/Grove-Gas_Sensor/">Gas Sensor</a>
+  </p>
+
+  <p class="links">
+  <a href="http://127.0.0.1:8000/Sensor_gas/">More</a>
+  </p>
+</div>
+
+
+<div class="method1" style="width:33%">
+  <span class="tiptop"></span>
+  <img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_icon/Barometer.png" width="110" height="110" border=0/>
+  
+  <p class="links">
+  <a href="http://wiki.seeedstudio.com/Grove-Barometer_Sensor-BMP180/">Barometer Sensor (BMP180)</a>
+  </p>
+
+  <p class="links">
+  <a href="http://wiki.seeedstudio.com/Grove-Barometer_Sensor-BMP280/">Barometer Sensor (BMP280)</a>
+  </p>
+
+  <p class="links">
+  <a href="http://wiki.seeedstudio.com/Grove-Barometer-High-Accuracy/">Barometer (High-Accuracy)</a>
+  </p>
+
+   <p class="links">
+  <a href="http://127.0.0.1:8000/Sensor_barometer/">More</a>
+  </p>
+</div>
+
+
+<div class="method1" style="width:33%">
+  <span class="tiptop"></span>
+  <img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_icon/Accelerometer.png" width="110" height="110" border=0/>
+  
+  <p class="links">
+  <a href="http://wiki.seeedstudio.com/Grove-6-Axis_AccelerometerAndCompass_V2.0/">6-Axis Accelerometer&Compass V2.0</a>
+  </p>
+
+  <p class="links">
+  <a href="http://wiki.seeedstudio.com/Grove-3-Axis_Digital_Accelerometer-16g/">3 Axis Digital Accelerometer(±16g)</a>
+  </p>
+
+  <p class="links">
+  <a href="http://wiki.seeedstudio.com/Grove-IMU_10DOF_v2.0/">IMU 10DOF v2.0</a>
+  </p>
+
+  <p class="links">
+  <a href="http://127.0.0.1:8000/Sensor_accelerometer/">More</a>
+  </p>
+</div>
+</div>
+
+
+
+<p>
+<div class="title" style="width:33%"><font color=#B4B4B4>Temperature</font></div>
+<div class="title" style="width:33%"><font color=#B4B4B4>Light</font></div>
+<div class="title" style="width:33%"><font color=#B4B4B4>Health</font></div>
+</p>
+
+
+
+
+<div>
+<div class="method1" style="width:33%">
+  <span class="tiptop"></span>
+  <img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_icon/Temperature.png" width="110" height="110" border=0/>
+  
+  <p class="links"> 
+  <a href="http://wiki.seeedstudio.com/Grove-Digital_Infrared_Temperature_Sensor/">Digital Infrared Temperature Sensor</a>
+  </p>
+
+  <p class="links">
+  <a href="http://wiki.seeedstudio.com/Grove-High_Temperature_Sensor/">High Temperature Sensor</a>
+  </p>
+
+  <p class="links">
+  <a href="http://wiki.seeedstudio.com/Grove-Temperature_Sensor_V1.2/">Temperature Sensor V1.2</a>
+  </p>
+
+  <p class="links">
+  <a href="http://127.0.0.1:8000/Sensor_temperature/">More</a>
+  </p>
+</div>
+
+
+<div class="method1" style="width:33%">
+  <span class="tiptop"></span>
+  <img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_icon/Light.png" width="110" height="110" border=0/>
+  
+  <p class="links">
+  <a href="http://wiki.seeedstudio.com/Grove-Digital_Light_Sensor/">Digital Light Sensor</a>
+  </p>
+
+  <p class="links">
+  <a href="http://wiki.seeedstudio.com/Grove-PIR_Motion_Sensor/">PIR Motion Sensor</a>
+  </p>
+
+  <p class="links">
+  <a href="http://wiki.seeedstudio.com/Grove-I2C_Color_Sensor/">I2C Color Sensor</a>
+  </p>
+
+  <p class="links">
+  <a href="http://127.0.0.1:8000/Sensor_light/">More</a>
+  </p>
+</div>
+
+
+<div class="method1" style="width:33%">
+  <span class="tiptop"></span>
+  <img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_icon/Health.png" width="110" height="110" border=0/>
+  
+  <p class="links">
+  <a href="http://wiki.seeedstudio.com/Grove-Ear-clip_Heart_Rate_Sensor/">Ear-clip Heart Rate Sensor</a>
+  </p>
+
+  <p class="links">
+  <a href="http://wiki.seeedstudio.com/Grove-Fingerprint_Sensor/">Fingerprint Sensor</a>
+  </p>
+
+  <p class="links">
+  <a href="http://wiki.seeedstudio.com/Grove-GSR_Sensor/">GSR Sensor</a>
+  </p>
+
+  <p class="links">
+  <a href="http://127.0.0.1:8000/Sensor_health/">More</a>
+  </p>
+</div>
+</div>
+
+
+
+
+<p>
+<div class="title" style="width:33%"><font color=#B4B4B4>Sound</font></div>
+<div class="title" style="width:33%"><font color=#B4B4B4>Distance</font></div>
+<div class="title" style="width:33%"><font color=#B4B4B4>Others</font></div>
+</p>
+
+
+
+<div>
+<div class="method1" style="width:33%">
+  <span class="tiptop"></span>
+  <img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_icon/Sound.png" width="110" height="110" border=0/>
+  
+  <p class="links">
+  <a href="http://wiki.seeedstudio.com/Grove-Speech_Recognizer/">Speech Recognizer</a>
+  </p>
+
+  <p class="links">
+  <a href="http://wiki.seeedstudio.com/Grove-Loudness_Sensor/">Loudness Sensor</a>
+  </p>
+
+  <p class="links"> 
+  <a href="http://wiki.seeedstudio.com/Grove-Sound_Sensor/">Sound Sensor</a>
+  </p>
+
+  <p class="links">
+  <a href="http://127.0.0.1:8000/Sensor_sound/">More</a>
+  </p>
+</div>
+
+
+<div class="method1" style="width:33%">
+  <span class="tiptop"></span>
+  <img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_icon/Distance.png" width="110" height="110" border=0/>
+  
+  <p class="links">
+  <a href="https://www.seeedstudio.com/Grove-Time-of-Flight-Distance-Sensor(VL53L0X)-p-3086.html">Time of Flight Distance Sensor</a>
+  </p>
+
+  <p class="links">
+  <a href="http://wiki.seeedstudio.com/Grove-Infrared_Reflective_Sensor/">Infrared Reflective Sensor</a>
+  </p>
+
+  <p class="links">
+  <a href="http://wiki.seeedstudio.com/Grove-Ultrasonic_Ranger/">Ultrasonic Ranger</a>
+  </p>
+
+  <p class="links">
+  <a href="http://127.0.0.1:8000/Sensor_distance/">More</a>
+  </p>
+</div>
+
+
+<div class="method1" style="width:33%">
+  <span class="tiptop"></span>
+  <img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_icon/Others.png" width="110" height="110" border=0/>
+  
+  <p class="links">
+  <a href="http://wiki.seeedstudio.com/Grove-Electricity_Sensor/">Electricity Sensor</a>
+  </p>
+
+  <p class="links">
+  <a href="http://wiki.seeedstudio.com/Grove-Dust_Sensor/">Dust Sensor</a>
+  </p>
+
+  <p class="links">
+  <a href="http://wiki.seeedstudio.com/Grove-RTC/">Grove–RTC</a>
+  </p>
+
+  <p class="links">
+  <a href="http://127.0.0.1:8000/Others/">More</a>
+  </p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<style>
+.title{
+font-size:22px;
+text-indent:20px;  
+float:left;
+line-height:66px
+}
+.method1{
+  text-align:center;
+  float:left;
+}
+/*vertical-align:middle  是依赖div内子元素最高的行高来实现对某元素居中的，而我们只需要建立一个新元素，给他加上inline-block属性 再把他高度设置为100%就行了,在下面的<img>设置vertical-align就生效了*/
+.tiptop{
+  height:100%;
+  display:inline-block;
+  vertical-align:middle;
+}
+img{
+  vertical-align:middle;
+}
+.links{
+line-height:7px;
+font-size:13px;
+text-align:center;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## All Grove List
 
 - [Grove - 3 Axis Digital Accelerometer(±16g)](/Grove-3-Axis_Digital_Accelerometer-16g/)
 - [Grove - 3-Axis Analog Accelerometer](/Grove-3-Axis_Analog_Accelerometer/)

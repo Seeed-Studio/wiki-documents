@@ -343,6 +343,15 @@ pages:
       - Grove System: Grove_System.md
       - Sensor:
           - Sensor Introduction: Sensor.md
+          - Sensor - Gas: Sensor_gas.md
+          - Sensor - Barometer: Sensor_barometer.md
+          - Sensor - Accelerometer: Sensor_accelerometer.md
+          - Sensor - Temperature: Sensor_temperature.md
+          - Sensor - Light: Sensor_light.md
+          - Sensor - Health.md: Sensor_health.md
+          - Sensor - Sound: Sensor_sound.md
+          - Sensor - Distance: Sensor_distance.md
+          - Sensor - Others: Sensor_Others.md
           - Grove - 3 Axis Digital Accelerometer(±16g): Grove-3-Axis_Digital_Accelerometer-16g.md
           - Grove - 3-Axis Analog Accelerometer: Grove-3-Axis_Analog_Accelerometer.md
           - Grove - 3-Axis Compass V1.0: Grove-3-Axis_Compass_V1.0.md
