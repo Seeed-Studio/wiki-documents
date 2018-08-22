@@ -102,7 +102,7 @@ Do not touch or shake or let this product in vibration when it works. This will 
 
 Now let us run some basic examples with this module.
 
-### Play with [Arduino](/Arduino "Arduino")
+### Play with Arduino
 
 #### Hardware
 
@@ -216,7 +216,7 @@ void loop()
 
 **Step 4.** Upload the code. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
-**Step 5.** Open the serial monitor to receive the sensor's data including temperature, barometric pressure value, relative atmosphere pressure and altitude.
+**Step 5.** Open the serial monitor to receive the sensor's data including temperature, barometric pressure value, altitude and humidity.
 
 
 

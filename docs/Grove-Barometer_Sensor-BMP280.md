@@ -208,6 +208,12 @@ void loop()
 }
 ```
 
+
+**Step 4.** Upload the code. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+
+**Step 5.** Open the serial monitor to receive the sensor's data including temperature, barometric pressure value, and altitude.
+
+
 ## Resources
 
 - **[Eagle]** [Grove-Barometer Sensor BMP280 Schematic](https://github.com/SeeedDocument/Grove-Barometer_Sensor-BMP280/raw/master/res/Grove%20-%20Barometer%20Sensor_BMP280_Schematic.zip)
