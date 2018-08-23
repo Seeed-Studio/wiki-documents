@@ -216,19 +216,19 @@ pi@raspberrypi:~/GrovePi/Software/Python $ python grove_ultrasonic.py
 
 **Q1: How does the Grove-Ultrasonic sensor work?**
 
-	- A1: When we provide a pulse trigger signal with more than 10uS through singal pin, the Grove_Ultrasonic_Ranger will issue 8 cycles of 40kHz cycle level and detect the echo. The pulse width of the echo signal is proportional to the measured distance. Here is the formula: Distance = echo signal high time * Sound speed (340M/S)/2.
+- A1: When we provide a pulse trigger signal with more than 10uS through singal pin, the Grove_Ultrasonic_Ranger will issue 8 cycles of 40kHz cycle level and detect the echo. The pulse width of the echo signal is proportional to the measured distance. Here is the formula: Distance = echo signal high time * Sound speed (340M/S)/2.
 
 
 
 
 **Q2: Why Grove-Ultrasonic sensor only has 1 signal pin, comparing with other ultrasonic sensor Trig and Echo pins?**
 
-	- A2:Grove_Ultrasonic_Ranger’s trig and echo signal share 1 SIG pin through MCU.  
+- A2:Grove_Ultrasonic_Ranger’s trig and echo signal share 1 SIG pin through MCU.  
 
 
 **Q3: Where can I find technical support if I have some other issue?**
 
-	- A3: Please send an email to techsupport@seeed.cc
+- A3: Please send an email to techsupport@seeed.cc
 
 
 ## Resources
