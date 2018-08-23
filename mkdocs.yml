@@ -343,6 +343,7 @@ pages:
       - Grove System: Grove_System.md
       - Sensor:
           - Sensor Introduction: Sensor.md
+          - Grove - New Products: Grove-New_Products.md
           - Sensor - Gas: Sensor_gas.md
           - Sensor - Barometer: Sensor_barometer.md
           - Sensor - Accelerometer: Sensor_accelerometer.md
