@@ -36,7 +36,7 @@ The Grove - Buzzer module has a [piezo buzzer](https://en.wikipedia.org/wiki/Buz
 
 | Items              | Specification |
 |--------------------|---------------|
-| Operating Voltage  | 4-8V          |
+| Operating Voltage  | 3.3V/5V       |
 | Sound Output       | ≥85dB         |
 | Resonant Frequency | 2300±300Hz    |
 
