@@ -1,7 +1,7 @@
 ---
 title: Grove - Water Sensor
 category: Sensor
-bzurl: https://seeedstudio.com/Grove-Water-Sensor-p-748.html
+bzurl: https://www.seeedstudio.com/Grove-Water-Sensor-p-748.html
 oldwikiname: Grove_-_Water_Sensor
 prodimagename: Grove-Water_Sensor.jpg
 bzprodimageurl: http://statics3.seeedstudio.com/images/101020018 1.jpg
@@ -10,38 +10,35 @@ sku: 101020018
 tags: grove_digital, io_3v3, io_5v, plat_duino, plat_linkit, plat_pi, plat_bbg
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Sensor/master/img/Grove-Water_Sensor.jpg)
+![](https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Sensor/master/img/Grove-Water_Sensor_1.png)
 
 The Water Sensor module is part of the Grove system. It indicates whether the sensor is dry, damp or completely immersed in water by measuring conductivity. The sensor traces have a weak pull-up resistor of 1 MΩ. The resistor will pull the sensor trace value high until a drop of water shorts the sensor trace to the grounded trace. Believe it or not this circuit will work with the digital I/O pins of your Arduino or you can use it with the analog pins to detect the amount of water induced contact between the grounded and sensor traces.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-Water-Sensor-p-748.html)
+
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Water-Sensor-p-748.html" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
+
+## Version
+
+| Product Version              | Changes                                                                                                                                                                                    | Released Date |
+|------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
+| Grove-Water Sensor V1.1 | Initial                                                                                                                                                                                    | July 2014      |
 
 
-Features
---------
+## Features
 
--   Grove compatible interface
--   Low power consumption
--   2.0cm x 2.0cm Grove module
--   High sensitivity
 
-!!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+- Grove compatible interface
+- Low power consumption
+- 2.0cm x 2.0cm Grove module
+- High sensitivity
 
-Applications Ideas
-------------------
+## Applications Ideas
 
--   Rainfall detecting
--   Liquid leakage
--   Tank overflow detector
+- Rainfall detecting
+- Liquid leakage
+- Tank overflow detector
 
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-This device is for educational and hobby applications only. It is not intended to be used in applications where its malfunction could result in damage to property or human safety.
-</div>
-
-Specifications
--------------
+## Specifications
 
 <table border="1" cellspacing="0" width="80%">
 <tr>
@@ -125,104 +122,111 @@ Working Humidity (without condensation)
 </tr>
 </table>
 
-Platforms Supported
--------------------
+!!!Tip
+    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+
+## Platforms Supported
+
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo.jpg) |
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo.jpg) |
 
 !!!Caution
     The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
 
-Getting Started
------
+## Getting Started
 
-### With [Arduino](/Arduino "Arduino")
+!!!Note If this is the first time you work with Arduino, we firmly recommend you to see Getting Started with Arduino before the start.
+
+### Play With Arduino
+
+#### Hardware
 
 Connect the module to the Basic board using any of the digital pin. You can gain the value of the signal pin. When there is water on the bare conducting wires, the value is LOW. Otherwise, it will be HIGH.
 
-The following sketch demonstrates a simple application of using the Water sensor to control the buzzer. As the picture on the below indicates, the Water sensor is connected to digital port 8 of the **Grove - Base Shield** and the Buzzer is connected to digital port 12. When there is water on the bare conducting wires, the SIG pin output a LOW voltage. Then the Buzzer sounds. The hardware installation is as follows:
+- **Step 1.** Prepare the below stuffs:
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Sensor/master/img/Water_Buzzer.jpg)
+| Seeeduino V4.2 | Base Shield|  Grove - Water Sensor |
+|--------------|-------------|-----------------|
+|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Sensor/master/img/Grove-Water_Sensor_small.png)|
+|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Water-Sensor-p-748.html)|
 
--   Then connect Arduino to PC by using a USB cable.
--   Copy and paste code below to a new Arduino sketch.
+- **Step 2.** Connect Water Sensor to port D2 of Grove-Base Shield.
+- **Step 3.** Plug Grove - Base Shield into Seeeduino.
+- **Step 4.** Connect Seeeduino to PC via a USB cable.
 
+![](https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Sensor/master/img/3.jpg)
+!!!Note
+	If we don't have Grove Base Shield, We also can directly connect Grove_Water_Sensor to Seeeduino as below.
+
+| Seeeduino       | Grove - Water Sensor |
+|---------------|-------------------------|
+| 5V           | Red                     |
+| GND           | Black                   |
+| Not Conencted | White                   |
+| D2            | Yellow                  |
+
+#### Software
+- **Step 1.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 ```c
-/*macro definition of water sensor and the buzzer*/
-#define WATER_SENSOR 8
-#define BUZZER 12
+#define WATER_SENSOR 2
 
 void setup()
 {
-    pins_init();
+  Serial.begin (9600);
+  pinMode(WATER_SENSOR, INPUT);
 }
 void loop()
 {
-    if(isExposedToWater())
-    soundAlarm();
+  Serial.println(digitalRead(WATER_SENSOR));
+  delay(500);
 }
 
-void pins_init()
-{
-    pinMode(WATER_SENSOR, INPUT);
-    pinMode(BUZZER, OUTPUT);
-}
+```
+- **Step 2.** We will see the output display on terminal as below.
 
-/************************************************************************/
-/*Function: When the sensor is exposed to the water, the buzzer sounds  */
-/*          for 2 seconds.                                              */
-/************************************************************************/
-void soundAlarm()
-{
-    for(uint8_t i = 0;i < 20;i ++)
-    {
-        digitalWrite(BUZZER, HIGH);
-        delay(50);
-        digitalWrite(BUZZER, LOW);
-        delay(50);
-    }
-}
-
-/************************************************************************/
-/*Function: Determine whether the sensor is exposed to the water        */
-/*Parameter:-void                                                       */
-/*Return:   -boolean,if it is exposed to the water,it will return true. */
-/************************************************************************/
-boolean isExposedToWater()
-{
-    if(digitalRead(WATER_SENSOR) == LOW)
-    return true;
-    else return false;
-}
+```c
+1
+1
+0
+0
+1
+1
 ```
 
--   Upload the code.
+### Play With Raspberry Pi
 
--   The buzzer sounds when the sensor is damp or completely immersed in water. Have a try!
+#### Hardware
 
-### With Raspberry Pi
+- **Step 1.** Prepare the below stuffs:
 
-1.You should have a raspberry pi and a grovepi or grovepi+.
+| Raspberry pi | GrovePi_Plus | Grove - Water Sensor |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Sensor/master/img/Grove-Water_Sensor_small.png)|
+|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/Grove-Water-Sensor-p-748.html)|
 
-2.You should have completed configuring the development enviroment, otherwise follow [here](/GrovePiPlus).
 
-3.Connection
+- **Step 2.** Plug the GrovePi_Plus into Raspberry.
+- **Step 3.** Connect Grove-Water Sensor to **D2** port of GrovePi_Plus.
+- **Step 4.** Connect the Raspberry to PC through USB cable.
 
--   Plug the sensor to grovepi socket D2 by using a grove cable.
+![](https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Sensor/master/img/7.jpg)
+#### Software
 
-4.Navigate to the demos' directory:
+- **Step 1.** Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment.
+- **Step 2.** Navigate to the demos' directory:
 ```
 cd yourpath/GrovePi/Software/Python/
 ```
 
--   To see the code
+-	**Step 3.** To see the code
 ```
-nano grove_water_sensor.py   # "Ctrl+x" to exit #
+nano grove_water_sensor.py
 ```
-```
+
+```python
 import time
 import grovepi
 
@@ -241,20 +245,27 @@ while True:
         print "Error"
 ```
 
-5.Run the demo.
+-	**Step 4.** Run the demo.
 ```
 sudo python grove_water_sensor.py
 ```
 
-Resources
----------
+- **Step 5.** We will see the output display on terminal as below.
 
--   [Water Sensor Eagle Files](https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Sensor/master/res/Water_sensor.zip)
--   [Demo code for Water Sensor](https://github.com/Seeed-Studio/Grove_Water_Sensor)
+```
+1
+1
+0
+0
+1
+```
 
+## Resources
 
+- **[Eagle]** [Grove Water Sensor Schematic](https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Sensor/master/res/Water_sensor.zip)
+- **[Library]** [Demo code for Grove Water Sensor](https://github.com/Seeed-Studio/Grove_Water_Sensor)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Water_Sensor -->
+<!-- This Markdown file was created from http://wiki.seeedstudio.com/Grove-Water_Sensor/ -->
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
