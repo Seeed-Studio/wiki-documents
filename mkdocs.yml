@@ -455,8 +455,9 @@ pages:
           - Grove - Digital Distance Interrupter 0.5 to 5cm(GP2Y0D805Z0F): Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F.md
           - Grove - Digital Distance Interrupter 0.5 to 5cm(GP2Y0D805Z0F)(P): Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F_P.md
           - Grove - Round Force Sensor FSR402: Grove-Round_Force_Sensor_FSR402.md
-          - Grove - 2-Channel Solid State Relay: Grove-2-Channel_Solid_State_Relay.md
-          - Grove - 2-Channel SPDT Relay: Grove-2-Channel_SPDT_Relay.md
+          
+          
+
           
 
 
@@ -480,6 +481,9 @@ pages:
           - Grove - Recorder: Grove_Recorder.md
           - Grove - Recorder V3: Grove-Recorder_v3.0.md
           - Grove - Relay: Grove-Relay.md
+          - Grove - 4-Channel SPDT Relay: Grove-4-Channel_SPDT_Relay.md
+          - Grove - 2-Channel SPDT Relay: Grove-2-Channel_SPDT_Relay.md
+          - Grove - 2-Channel Solid State Relay: Grove-2-Channel_Solid_State_Relay.md
           - Grove - Serial MP3 Player: Grove-Serial_MP3_Player.md
           - Grove - Servo: Grove-Servo.md
           - Grove - Solid State Relay: Grove-Solid_State_Relay.md
