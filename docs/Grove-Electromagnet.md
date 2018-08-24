@@ -59,7 +59,7 @@ An electromagnet is a type of magnet in which the magnetic field is produced by 
 |![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Electromagnet/raw/master/img/Grove_Electromagnet_02%20-%20%E5%89%AF%E6%9C%AC.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/Grove-Electromagnet-p-1820.html)|
 
-- **Step 2.** Connect Grove-Electromagnet to port **UART** of Grove-Base Shield.
+- **Step 2.** Connect Grove-Electromagnet to port **D2** of Grove-Base Shield.
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
@@ -68,12 +68,12 @@ An electromagnet is a type of magnet in which the magnetic field is produced by 
 !!!Note
     If we don't have Grove Base Shield, We also can directly connect Grove-Electromagnet to Seeeduino as below.
 
-| Seeeduino     | Grove-Electromagnet     |
+| Seeeduino       | Grove-Ultrasonic Ranger |
 |---------------|-------------------------|
-| 5V            | Red                     |
+| 5V           | Red                     |
 | GND           | Black                   |
-| TX            | White                   |
-| RX            | Yellow                  |
+| Not Conencted | White                   |
+| D2            | Yellow                  |
 
 
 **Software**
