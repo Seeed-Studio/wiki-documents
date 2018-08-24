@@ -238,7 +238,9 @@ while True:
     except IOError:
         print ("Error")
 ```
+
 - **Step 5.** Run the demo.
+
 
 ```
 sudo python grove_sound_sensor.py
