@@ -4,33 +4,33 @@
 
 | **Arduino**  |    **Raspberry**  |    **Beaglebone**   | 
 |:---:|:---:|:---:|
-|[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/arduino.png)](/Arduino)   |  [![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Respberry%20Pi.png)](/Raspberry_Pi) |[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Beaglebone.png)](/BeagleBone)  |
+|[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/index_logo/1%20Arduino.jpg)](/Arduino)   |  [![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/index_logo/2%20Raspberry.jpg)](/Raspberry_Pi) |[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/index_logo/3%20Beaglebone.jpg)](/BeagleBone)  |
 
 |  **ReSpeaker**     |    **Artik**   |  **LinkIt** | 
 |:---:|:---:|:---:|
-| [![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/ReSpeaker.png)](/ReSpeaker)    |[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/artik.png)](/Artik)|[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/LinkIt.png)](/LinkIt)   |
+| [![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/index_logo/4%20ReSpeaker.jpg)](/ReSpeaker)    |[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/index_logo/5%20Artik.jpg)](/Artik)|[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/index_logo/6%20LinkIt.jpg)](/LinkIt)   |
 
 | **Wio**  |  **Shield**   |    **RePhone**   |  
 |:---:|:---:|:---:|
-|[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Wio.png)](/Wio)   |[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Shield.png)](/Shield)     |[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Rephone.png)](/RePhone)    |
+|[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/index_logo/7%20Wio.jpg)](/Wio)   |[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/index_logo/8%20Shield.jpg)](/Shield)     |[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/index_logo/9%20RePhone.jpg)](/RePhone)    |
 
 
 ## Grove
 
 | **Sensor**  |    **Actuator**  |    **Display**   | 
 |:---:|:---:|:---:|
-|[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_Sensor.jpg)](/Sensor) | [![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_Actuator.jpg)](/Actuator) |[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_Display.jpg)](/Display)    |
+|[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/index_logo/10%20Sensor.jpg)](/Sensor) | [![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/index_logo/11%20Actuator.jpg)](/Actuator) |[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/index_logo/12%20Display.jpg)](/Display)    |
 
 | **Communication**  |   **Others**    |       |  
 |:---:|:---:|:---:|
-|[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_Communication.jpg)](/Communication)    |[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_Others.JPG)](/Others)    |![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/empty.png)   |
+|[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/index_logo/13%20Communication.jpg)](/Communication)    |[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/index_logo/14%20Others.jpg)](/Others)    |![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/empty.png)   |
 
 
 ## IOT/Maker Pro/Tutorial
 
 | **IOT**  |**Maker Pro**| **Tutorial**|  
 |:---:|:---:|:---:|
-|[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/IOT.jpg)](/IoT)    |[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/MakerPro.png)](/MakerPro)    |[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Tutotial.png)](/Tutorial)   |
+|[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/index_logo/15%20IOT.jpg)](/IoT)    |[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/index_logo/16%20Maker%20Pro.jpg)](/MakerPro)    |[![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/index_logo/17%20Tutorial.jpg)](/Tutorial)   |
 
 ## Copyright/License
 -------
