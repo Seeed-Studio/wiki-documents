@@ -138,7 +138,8 @@ Working Humidity (without condensation)
 
 ## Getting Started
 
-!!!Note If this is the first time you work with Arduino, we firmly recommend you to see Getting Started with Arduino before the start.
+!!!Note
+    If this is the first time you work with Arduino, we firmly recommend you to see Getting Started with Arduino before the start.
 
 ### Play With Arduino
 
@@ -170,6 +171,7 @@ Connect the module to the Basic board using any of the digital pin. You can gain
 
 #### Software
 - **Step 1.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+
 ```c
 #define WATER_SENSOR 2
 
@@ -217,11 +219,13 @@ void loop()
 
 - **Step 1.** Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment.
 - **Step 2.** Navigate to the demos' directory:
+
 ```
 cd yourpath/GrovePi/Software/Python/
 ```
 
 -	**Step 3.** To see the code
+
 ```
 nano grove_water_sensor.py
 ```
@@ -246,6 +250,7 @@ while True:
 ```
 
 -	**Step 4.** Run the demo.
+
 ```
 sudo python grove_water_sensor.py
 ```
