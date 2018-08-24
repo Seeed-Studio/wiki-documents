@@ -472,5 +472,9 @@ We define some register data of gesture, refer to the following table.
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/Momy93/jesty-control-your-pc-with-gestures-5d4a3e/embed' width='350'></iframe>
 
+**PHPoC - Control Pan-Tilt via Hand Gesture**: An interesting way to control your robot: via hand gesture
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/Homer/phpoc-control-pan-tilt-via-hand-gesture-1daacc/embed' width='350'></iframe>
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

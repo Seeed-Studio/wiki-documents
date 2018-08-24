@@ -132,6 +132,11 @@ Please click [here](http://support.seeedstudio.com/knowledgebase/articles/182719
 - **[Datasheet]** [LM324 datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-GSR_Sensor/master/res/Lm324.pdf)
 
 
+## Projects
+
+**eMotion - Towards a Better Future**: We believe we can use biometric sensors, the security of the Helium platform and strength of Google Cloud to surface possible anxiety states.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/factoryeight/emotion-towards-a-better-future-a01489/embed' width='350'></iframe>
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

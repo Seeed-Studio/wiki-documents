@@ -423,5 +423,11 @@ Here's the list of supported Groves so far:
 |316010005 |    Grove - Servo                           |Digital   |itself                 | [link](http://www.seeedstudio.com/Grove-Servo-p-1241.html) |
 |101020067 |    Grove - CO2 Sensor                      |UART      |itself                 | [link](http://www.seeedstudio.com/Grove-CO2-Sensor-p-1863.html) |
 
+## Project 
+
+**LED Sound Meter using Wio-Link and Node-Red**: SeeedStudio Grove sound sensor and LED strip attached to Wio-Link being driven by a Node-Red flow.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/potnik/led-sound-meter-using-wio-link-and-node-red-259e02/embed' width='350'></iframe>
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

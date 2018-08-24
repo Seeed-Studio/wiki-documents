@@ -118,6 +118,12 @@ We can see:
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_IMU_10DOF -->
 
+## Projects
+
+**Motorcycle Data App**: Learn from your ride like a pro! Motorcycle race teams have used IMU data for years, with RideData+Arduino it's easy for you to do the same.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/RideData/motorcycle-data-app-11698f/embed' width='350'></iframe>
+
 ## Tech Support
 
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).

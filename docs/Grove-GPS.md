@@ -347,5 +347,11 @@ GPS is better used outdoors. It is recommended to put your raspberry pi outside 
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_GPS -->
 
+## Projects
+
+**Project of GPS/GPRS Tracker**: In this new project we will present our GPS Tracker connected using the GPRS technique and MQTT protocol.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/OHAlgerie/project-of-gps-gprs-tracker-36c425/embed' width='350'></iframe>
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

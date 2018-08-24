@@ -272,5 +272,11 @@ sudo python grove_water_sensor.py
 
 <!-- This Markdown file was created from http://wiki.seeedstudio.com/Grove-Water_Sensor/ -->
 
+## Project 
+
+**Smart Crops: Implementing IoT in Conventional Agriculture!**:Our mission with nature is to preserve it, designing and implementing technologies and monitoring methods with the help of IoT via Helium.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/gabogiraldo/smart-crops-implementing-iot-in-conventional-agriculture-3674a6/embed' width='350'></iframe>
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

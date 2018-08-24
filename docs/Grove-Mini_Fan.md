@@ -88,5 +88,11 @@ Alternatively, it can be bought stand-alone at the [Seeed Studio Bazaar](http://
 
 *   [Grove - Mini Fan v1.0 (pdf)](https://github.com/SeeedDocument/Grove-Mini_Fan/raw/master/res/Grove-Mini_Fan_v1.0.pdf)
 
+## Projects
+
+**Grove Mini Fan Controller + TI LaunchPad**: Power a mini fan with PWM using Seeed Grove and TI LaunchPad.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/measley2/grove-mini-fan-controller-ti-launchpad-cba304/embed' width='350'></iframe>
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

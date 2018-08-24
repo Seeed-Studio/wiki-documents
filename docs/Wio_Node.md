@@ -344,5 +344,9 @@ Here are some questions that we usually received from new users. If you have any
 - **Certificate**
     - [CE/FCC/TELEC Certified(only) for core module ESP-WROOM-02](https://github.com/SeeedDocument/Wio_Node/raw/master/Recources/CE-FCC-TELEC_Certified(only)_for_core_module_ESP-WROOM-02.zip)
 
+## Projects
+
+**Smart Home with Wio Link/Wio Node and Telegram App**: Building a smart home with seeedstudio Wio-Link/Wio-Node and connect it to Telegram bot.
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

@@ -150,5 +150,15 @@ Arduino quickly and effectively. You can visit [https://www.arduino.cc/en/Tutori
 After you have gotten an LED blinking (for Windows user, you can find it at [https://www.arduino.cc/en/Guide/Windows](https://www.arduino.cc/en/Guide/Windows), you can find other versions for Mac OS and Linux variants at
 [https://www.arduino.cc/en/Guide/HomePage](https://www.arduino.cc/en/Guide/HomePage) ), you still need to get familiar with Seeedstudio Grove system at [http://www.seeedstudio.com/wiki/Grove_System](/Grove_System). And now, you can do some more practical quizzes which are specialized designed for this kit. Download the sketches of quizzes at [https://github.com/Seeed-Studio/Sketchbook_Starter_Kit_for_Arduino](https://github.com/Seeed-Studio/Sketchbook_Starter_Kit_for_Arduino).
 
+## Project
+
+**Arduino101 BLE Autonomous Rover**:Augmenting the Arduino101 BLE Rover with sensors for autonomous driving.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/31926/arduino101-ble-autonomous-rover-2cb19f/embed' width='350'></iframe>
+
+**Arduino 101 BLE Rover**:Converting a rover to use the Arduino 101 including the Bluetooth Low Energy (BLE) radio and 6-axis Inertial Measurement Unit (IMU).
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/shadeydave/arduino-101-ble-rover-05fa85/embed' width='350'></iframe>
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
