@@ -9,7 +9,7 @@ sku: 101020023
 tags: io_3v3, io_5v, plat_duino, plat_linkit, plat_bbg, plat_wio, plat_pi, plat_linkit
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Sound_Sensor/master/images/page.jpg)
+![](https://github.com/SeeedDocument/Grove_Sound_Sensor/raw/master/img/page_small_1.jpg)
 
 Grove - Sound Sensor can detect the sound intensity of the environment. The main component of the module is a simple microphone, which is based on the LM386 amplifier and an electret microphone. This module's output is analog and can be easily sampled and tested by a Seeeduino.
 
@@ -65,7 +65,7 @@ Grove - Sound Sensor can detect the sound intensity of the environment. The main
 
 |Seeeduino V4.2| Base Shield|Grove-Sound Sensor|
 |--------------|------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Sound_Sensor/master/images/gs_1.jpg)|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Sound_Sensor/raw/master/img/page_small_1.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/Grove-Sound-Sensor-p-752.html)|
 
 - **Step 2.** Connect Grove-Sound Sensor to port **A0** of Grove-Base Shield.
