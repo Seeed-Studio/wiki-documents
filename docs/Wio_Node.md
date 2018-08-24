@@ -348,5 +348,7 @@ Here are some questions that we usually received from new users. If you have any
 
 **Smart Home with Wio Link/Wio Node and Telegram App**: Building a smart home with seeedstudio Wio-Link/Wio-Node and connect it to Telegram bot.
 
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/idreams/smart-home-with-wio-link-wio-node-and-telegram-app-831f78/embed' width='350'></iframe>
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
