@@ -9,28 +9,46 @@ sku: 101020078
 ---
 
 ---
-![](https://github.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/raw/master/img/Grove%20Air%20Quality%20Sensor.jpg)
+![](https://github.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/raw/master/img/Grove%20Air%20Quality%20Sensor_big.jpg)
+
 This sensor is designed for comprehensive monitor over indoor air condition. It's responsive to a wide scope of harmful gases, as carbon monoxide, alcohol, acetone, thinner, formaldehyde and so on. Due to the measuring mechanism, this sensor can't output specific data to describe target gases' concentrations quantitatively. But it's still competent enough to be used in applications that require only qualitative results, like auto refresher sprayers and auto air cycling systems.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Air-quality-sensor-v1.3-p-2439.html)
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Air-quality-sensor-v1.3-p-2439.html" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
+
+## Version
+
+| Product Version | Changes | Released Date |
+|-----------------|---------|---------------|
+| Grove - Air Quality Sensor v1.3 | Initial | May 2016      |
 
 ## Features
----
 - Responsive to a wide scope of target gases
 - Cost efficient
 - Durable
 - Compatible with 5V and 3.3V
 
- 
 !!!Cautions
     1. Requires relatively clean air as an initial condition.
     2. Long time exposure to highly polluted air can significantly weaken its sensitivity.
     3. Coffre-fort et armoire forte:
 
+## Platforms Supported
 
-## Usage
----
-**With Arduino**
+| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
+|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo_n.jpg) |
+
+!!!Caution
+    The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
+
+## Getting Started
+
+!!!Note
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+
+### Play With Arduino
+
+#### Demonstration
 
 As described in Introduction, this sensor performs better in providing qualitative results over a wide scope of target gases. In this demo, we will define 4 statuses for reference in the '.cpp' file. They are:
 
@@ -43,14 +61,38 @@ We encapsulated the decision structure in a '.cpp' file. You can find informatio
 
 Let's try it out!
 
-1.Connect the Sensor to A0 port of [Grove - Base Shield](https://www.seeedstudio.com/Grove-Base-Shield-p-754.html).
+#### Hardware
+
+- **Step 1.** Prepare the below stuffs:
+
+| Seeeduino V4.2 | Base Shield|  Grove - Air Quality Sensor |
+|--------------|-------------|-----------------|
+|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/raw/master/img/Grove%20Air%20Quality%20Sensor_small.jpg)|
+|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Air-quality-sensor-v1.3-p-2439.html)|
+
+- **Step 2.** Connect Grove - Air Quality Sensor to port **A0** of Grove-Base Shield.
+- **Step 3.** Plug Grove - Base Shield into Seeeduino.
+- **Step 4.** Connect Seeeduino to PC via a USB cable.
 
 ![](https://github.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/raw/master/img/Grove_-_Air_Quality_Sensor_v1.3_Test.jpg)
 
-2.Download the File :[AirQuality_Sensor Library](https://github.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/raw/master/res/AirQuality_Sensor.zip).
+!!!Note
+	If we don't have Grove Base Shield, We also can directly connect Grove - Air Quality Sensor to Seeeduino as below.
 
-3.Wait at least 2 minutes after powering on for heat-up of the sensor. Then open the example below by the path: File -> Example ->AirQuality_Sensor->AirQuality_Sensor.
-```
+| Seeeduino       | Grove - Air Quality Sensor |
+|---------------|-------------------------|
+| 5V           | Red                     |
+| GND           | Black                   |
+| Not Conencted | White                   |
+| A0            | Yellow                  |
+
+#### Software
+
+- **Step 1.** Download the  [AirQuality_Sensor Library](https://github.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/raw/master/res/AirQuality_Sensor.zip).
+- **Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- **Step 3.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+
+```c
 /*
 AirQuality Demo V1.0.
 connect to A1 to start testing. it will needs about 20s to start
@@ -98,15 +140,13 @@ ISR(TIMER2_OVF_vect)
 }
 ```
 
-4.Upload the code.
-
-5.Open serial monitor.
+- **Step 4.** We will see the distance display on terminal as below.- **Step 4.** We will see the distance display on terminal as below.
 
 ![](https://github.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/raw/master/img/AirQualitySensot_Demo.jpg)
 
 To adjust the thresholds and indicating messages, refer to the decision structure below in the .cpp file.
 
-```
+```c
 int AirQuality::slope(void)
 {
     while(timer_index)
@@ -153,28 +193,36 @@ int AirQuality::slope(void)
 }
 ```
 
-**With Raspberry Pi**
+### Play With Raspberry Pi
 
-1.You need to prepare a raspberry pi and a grovepi or grovepi+.
+#### Hardware
 
-2.You need to completed configuring the development enviroment, otherwise follow [here](https://seeeddoc.github.io/GrovePiPlus/#Introducing_the_GrovePi.2B).
+- **Step 1.** Prepare the below stuffs:
 
-3.Connection
-- Plug the sensor to grovepi socket A0 by using a grove cable.
+| Raspberry pi | GrovePi_Plus |  Grove - Air Quality Sensor |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/raw/master/img/Grove%20Air%20Quality%20Sensor_small.jpg)|
+|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Air-quality-sensor-v1.3-p-2439.html)|
 
-4.Navigate to the demos' directory:
+- **Step 2.** Plug the GrovePi_Plus into Raspberry.
+- **Step 3.** Connect Grove-MOSFET ranger to **A0** port of GrovePi_Plus.
+- **Step 4.** Connect the Raspberry to PC through USB cable.
+
+#### Software
+
+- **Step 1.** Navigate to the demos' directory:
 
 ```
 cd yourpath/GrovePi/Software/Python/
 ```
 
-To see the code
+- **Step 2.**  To see the code
 
 ```
-   nano grove_air_quality_sensor.py   # "Ctrl+x" to exit #
+nano grove_air_quality_sensor.py   # "Ctrl+x" to exit #
 ```
 
-```
+```python
 import time
 import grovepi
 
@@ -203,19 +251,24 @@ while True:
         print "Error"
 ```
 
-5.Run the demo.
+- **Step 3.** Run the demo.
 
 ```
-   sudo python grove_air_quality_sensor.py
+sudo python grove_air_quality_sensor.py
 ```
+
+- **Step 4.** We will see the output display on terminal as below.
+
+![enter image description here](https://github.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/raw/master/img/pi_result.png)
+
 
 ## Resources
----
-- [AirQuality Sensor Library.zip](https://github.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/raw/master/res/AirQuality_Sensor.zip)
-- [Grove_-_Air_quality_sensor_v1.3_sch_pcb.zip](https://github.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/raw/master/res/Grove_-_Air_quality_sensor_v1.3_sch_pcb.zip)
-- [Grove_-_Air_quality_sensor_v1.3_sch.pdf](https://github.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/raw/master/res/Grove_-_Air_quality_sensor_v1.3_sch.pdf)
-- [Air_quality_sensor_MP503_Chinese.pdf](https://github.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/raw/master/res/Air_quality_sensor_MP503%20Chinese.pdf)
-- [Air_quality sensor_MP503_English.pdf](https://github.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/raw/master/res/Mp503%20English.pdf)
+
+- **[Library]** [AirQuality Sensor Library](https://github.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/raw/master/res/AirQuality_Sensor.zip)
+- **[Eagle]** [Grove_-_Air_quality_sensor_v1.3_sch_pcb](https://github.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/raw/master/res/Grove_-_Air_quality_sensor_v1.3_sch_pcb.zip)
+- **[PDF]** [Grove_-_Air_quality_sensor_v1.3_sch](https://github.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/raw/master/res/Grove_-_Air_quality_sensor_v1.3_sch.pdf)
+- **[PDF]** [Air_quality_sensor_MP503_Chinese](https://github.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/raw/master/res/Air_quality_sensor_MP503%20Chinese.pdf)
+- **[PDF]** [Air_quality sensor_MP503_English](https://github.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/raw/master/res/Mp503%20English.pdf)
 
 ## Projects
 
