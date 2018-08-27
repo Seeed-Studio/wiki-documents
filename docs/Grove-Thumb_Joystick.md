@@ -142,6 +142,7 @@ The output value from the analog port of Arduino can be converted to the corresp
 cd yourpath/GrovePi/Software/Python/
 
 ```
+
 - **Step 2.**  To see the code
 
 ```
@@ -209,6 +210,7 @@ while True:
 ```
 sudo python grove_thumb_joystick.py
 ```
+
 - **Step 4.** We will see the output display on terminal as below.
 
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Thumb_Joystick/master/img/pi_result.png)|
