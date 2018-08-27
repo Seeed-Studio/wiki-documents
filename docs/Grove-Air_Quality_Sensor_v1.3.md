@@ -140,7 +140,7 @@ ISR(TIMER2_OVF_vect)
 }
 ```
 
-- **Step 4.** We will see the distance display on terminal as below.- **Step 4.** We will see the distance display on terminal as below.
+- **Step 4.** We will see the distance display on terminal as below.
 
 ![](https://github.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/raw/master/img/AirQualitySensot_Demo.jpg)
 
