@@ -16,8 +16,7 @@ This is a mini vibration motor suitable as a non-audible indicator. When the inp
 
 [![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Vibration-Motor-p-839.html)
 
-Version Tracker
----------------
+## Version Tracker
 
 | Revision | Description                                                    | Release       |
 |----------|----------------------------------------------------------------|---------------|
@@ -25,8 +24,7 @@ Version Tracker
 | v1.0     | Directly uses an I/O port to drive Vibration Motor             | Nov 5, 2011   |
 | v1.2     | Transistor added, uses bigger current to drive Vibration Motor | July 11, 2013 |
 
-Features
---------
+## Features
 
 -   Grove compatible
 -   Non-audible
@@ -36,8 +34,7 @@ Features
 !!!Tip
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
-Specifications
---------------
+## Specifications
 
 <table border="1" cellspacing="0" width="80%">
 <tr>
@@ -87,8 +84,7 @@ Rated speed
 </tr>
 </table>
 
-Platforms Supported
--------------------
+## Platforms Supported
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -98,22 +94,45 @@ Platforms Supported
     The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
 
-Usage
------
+## Getting Started
 
-### With [Arduino](/Arduino "Arduino")
+!!!Note
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+
+### Play With Arduino
 
 To make it vibrate is just as easy as to turn on an LED. Here is an example showing how to turn on the vibration motor.
 
-1. Plug it onto the Digital port 9 of Grove - Base Shield using a Grove cable.
-2. Plug the Grove - Base Shield onto Arduino.
+#### Hardware
+
+- **Step 1.** Prepare the below stuffs:
+
+| Seeeduino V4.2 | Base Shield|  Grove - Vibration Motor |
+|--------------|-------------|-----------------|
+|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Vibration_Motor/master/img/Gvib_small.jpg)|
+|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/Grove-Vibration-Motor-p-839.html)|
+
+- **Step 2.** Grove - Vibration Motor to port 9 of Grove-Base Shield.
+- **Step 3.** Plug Grove - Base Shield into Seeeduino.
+- **Step 4.** Connect Seeeduino to PC via a USB cable.
+
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Vibration_Motor/master/img/IMG_0506.jpg)
-3. Connect Arduino to PC by using a USB cable.
-4. Copy and paste code below to a new Arduino sketch, and upload it to your Arduino. 
 
-Use the demo code shown below:
+!!!Note
+	If we don't have Grove Base Shield, We also can directly connect Grove - Vibration Motor to Seeeduino as below.
 
-```
+| Seeeduino       | Grove - Vibration Motor |
+|---------------|-------------------------|
+| 5V            | Red                     |
+| GND           | Black                   |
+| Not Conencted | White                   |
+| D9            | Yellow                  |
+
+#### Software
+
+- **Step 1.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+
+```c
 int MoPin = 9;    // vibrator Grove connected to digital pin 9
 
 void setup()  {
@@ -131,27 +150,35 @@ void loop()  {
 
 ```
 
-Now, feel the vibration of your motor!
+- **Step 2.** Now, feel the vibration of your motor!
 
-### With Raspberry Pi
+### Play With Raspberry Pi
 
-1.You should have a Raspberry Pi and a grovepi or grovepi+.
+#### Hardware
 
-2.You should have completed configuring the development enviroment, otherwise follow [here](/GrovePiPlus).
+- **Step 1.** Prepare the below stuffs:
 
-3.Connection
+| Raspberry pi | GrovePi_Plus | Grove - Vibration Motor |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Vibration_Motor/master/img/Gvib_small.jpg)|
+|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/Grove-Vibration-Motor-p-839.html)|
 
--   Plug the sensor to grovepi socket D8 by using a grove cable.
+- **Step 2.** Plug the GrovePi_Plus into Raspberry.
+- **Step 3.** Connect Grove - Vibration Motor ranger to **D8** port of GrovePi_Plus.
+- **Step 4.** Connect the Raspberry to PC through USB cable.
 
-4.Navigate to the demos' directory:
+#### Software
+
+- **Step 1.** Navigate to the demos' directory:
 ```
 cd yourpath/GrovePi/Software/Python/
 ```
--   To see the code
+- **Step 2.** To see the code
 ```
 nano grove_vibration_motor.py   # "Ctrl+x" to exit #
 ```
-```
+
+```python
 import time
 import grovepi
 
@@ -179,23 +206,16 @@ while True:
     except IOError:
         print "Error"
 ```
-5.Run the demo.
+
+- **Step 3.** Run the demo.
+
 ```
 sudo python grove_vibration_motor.py
 ```
 
-##Project
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Lotus/master/img/gun.jpg)
+## Resources
 
-Inspired by OVERWATCH, we have made a very cool Wooden Laser Gun toy for fun these day!
-
-The Wooden Laser Gun and the Gun Target are all based on an Arduino board called Seeeduino Lotus. The laser emitter on the Laser Gun is controlled to fire laser pulse to "activate" the Gun Target. And there are 3 light sensors on the Gun Target to detect the laser pulse. It seems very simple right? If you are interested in our project, please make one for yourself or your child! It's worth to spend one day DIY it as a Xmas present.    
-
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/make.png)](http://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)
-
-Resources
----------
 
 -   [Grove - Vibration Motor Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-Vibration_Motor/master/res/Grove-Vibration_Motor_Eagle_Files.zip)
 -   [S9013 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Vibration_Motor/master/res/S9013.pdf)
@@ -210,6 +230,13 @@ Resources
 **Grove - Introduction in a Vibration Motor - only for adults**: Beginner-Example
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/ingo-lohs/grove-introduction-in-a-vibration-motor-only-for-adults-2acfc2/embed' width='350'></iframe>
+
+
+**Inspired by OVERWATCH, we have made a very cool Wooden Laser Gun toy for fun these day!**
+
+The Wooden Laser Gun and the Gun Target are all based on an Arduino board called Seeeduino Lotus. The laser emitter on the Laser Gun is controlled to fire laser pulse to "activate" the Gun Target. And there are 3 light sensors on the Gun Target to detect the laser pulse. It seems very simple right? If you are interested in our project, please make one for yourself or your child! It's worth to spend one day DIY it as a Xmas present.    
+
+[![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Lotus/master/img/gun.jpg)](http://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
