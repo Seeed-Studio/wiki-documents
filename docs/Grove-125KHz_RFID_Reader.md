@@ -20,39 +20,69 @@ And you should use the module below while using RFID reader:
 
 [![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/grove-125khz-rfid-reader-p-1008.html)
 
-Specifications
---------------
+## Version
 
--   Voltage: 4.75-5.25V
--   Working Frequency: 125 KHz
--   Sensing Distance(Max): 70mm
--   TTL Output: 9600 baudrate, 8 data bits, 1 stop bit, and no verify bit
--   Wiegand Output: 26 bits Wiegand format, 1 even verify bit, 24 data bits, and 1 odd verify bit
+| Product Version | Changes | Released Date |
+|-----------------|---------|---------------|
+| Grove - 125KHz RFID Reader V1.0 | Initial | Oct 2015      |
+
+## Specifications
+|Parameter|	Value/Range|
+|:------|:------------------|
+|Voltage| 4.75-5.25V|
+|Working Frequency| 125 KHz|
+|Sensing Distance(Max)|70mm|
+|TTL Output| 9600 baudrate, 8 data bits, 1 stop bit, and no verify bit|
+|Wiegand Output|26 bits Wiegand format, 1 even verify bit, 24 data bits, and 1 odd verify bit|
 
 !!!Tip
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
-    
-Platforms Supported
--------------------
+
+## Platforms Supported
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo_n.jpg) |
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo_n.jpg) |
 
 !!!Caution
     The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
+## Getting Started
 
-Demonstration
--------------
+!!!Note
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
-Here we show how to read RFID information using the Grove - 125KHz RFID Reader. Connect Grove - 125KHz RFID Reader to UART of Grove - Base Shield.
+
+### Play With Arduino
+
+#### Hardware
+
+- **Step 1.** Prepare the below stuffs:
+
+| Seeeduino V4.2 | Base Shield|  Grove - 125KHz RFID Reader |
+|--------------|-------------|-----------------|
+|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-125KHz_RFID_Reader/master/img/gr125k_01.jpg)|
+|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/depot/grove-125khz-rfid-reader-p-1008.html)|
+
+- **Step 2.** Connect Grove - 125KHz RFID Reader to port **D2** of Grove-Base Shield.
+- **Step 3.** Plug Grove - Base Shield into Seeeduino.
+- **Step 4.** Connect Seeeduino to PC via a USB cable.
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-125KHz_RFID_Reader/master/img/RFID_reader.jpg)
 
-### Uart Mode (Jumper set to the left two pins)
+!!!Note
+	If we don't have Grove Base Shield, We also can directly connect Grove_Ultrasonic_Ranger to Seeeduino as below.
 
-You would need to select the jumper to "U" to enter this mode, and the setting is: 9600bps, N, 8, 1, TTL output
+| Seeeduino     | Grove - 125KHz RFID Reader |
+|---------------|----------------------------|
+| 5V            | Red                        |
+| GND           | Black                      |
+| D3            | White                      |
+| D2            | Yellow                     |
+
+#### Software
+
+- **Step 1.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
 ```c
 /*
@@ -101,7 +131,7 @@ void clearBufferArray()                 // function to clear buffer array
 }
 ```
 
-Open the Serial Monitor, the card information can be displayed as shown below:
+- **Step 2.** Open the Serial Monitor, the card information can be displayed as shown below:
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-125KHz_RFID_Reader/master/img/Read_Data_.jpg)
 
@@ -260,6 +290,9 @@ Take ID: 0009776930 for example:
 -   Output: 0700952F229F ------------- Hex [[Start Bit(07h) + Card Number(8 numbers) + Checksum]
 -   The calculator for decimal and hex numbers is available online.
 
+## Resources
+
+- **[Demo]** [Grove - 125KHz RFID Reader Demo](https://github.com/SeeedDocument/Grove-125KHz_RFID_Reader/raw/master/res/RFID_Wiegand_INT.zip)
 
 ## Projects
 
