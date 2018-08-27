@@ -25,7 +25,6 @@ Grove-Piezo Vibration Sensor is suitable for measurements of flexibility, vibrat
 | Grove - Piezo Vibration Sensor V1.1 | Initial                                                                                                                                                                                    | Jul 2014      |
 
 ## Features
---------
 
 -   Standard grove socket
 -   Wide dynamic range：0.1Hz~180Hz
@@ -36,7 +35,6 @@ Grove-Piezo Vibration Sensor is suitable for measurements of flexibility, vibrat
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
 ## Platforms Supported
--------------------
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -47,7 +45,7 @@ Grove-Piezo Vibration Sensor is suitable for measurements of flexibility, vibrat
 
 
 ## Applications
-------------
+
 -   Vibration Sensing in Washing Machine
 -   Low Power Wakeup Switch
 -   Low Cost Vibration Sensing
@@ -56,7 +54,7 @@ Grove-Piezo Vibration Sensor is suitable for measurements of flexibility, vibrat
 -   Security Systems
 
 ## Getting Started
------
+
 
 ### Play With Arduino
 
@@ -133,8 +131,8 @@ void loop() {
 ```python
 cd ~
 git clone https://github.com/DexterInd/GrovePi.git
-
 ```
+
 - Step 3. Excute below commands to detect the vibration.
 
 ```python
@@ -199,7 +197,6 @@ Please click [here](http://support.seeedstudio.com/knowledgebase/articles/183298
 **Grove Starter Kit For Arduino - Piezo Vibration Sensor**: Teaches you how to use the Piezo vibration sensor in the Arduino Grove starter kit.
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/trduunze/grove-starter-kit-for-arduino-piezo-vibration-sensor-92c531/embed' width='350'></iframe>
-
 
 **Seat Monitor**: Using ARTIK cloud to monitor cabin seat state.
 
