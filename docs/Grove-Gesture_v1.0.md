@@ -458,8 +458,8 @@ We define some register data of gesture, refer to the following table.
 
 ## Resources
 
-- **[ZIP]** [Grove - Gesture_v1.0 sch pcb.zip](https://github.com/SeeedDocument/Grove_Gesture_V_1.0/raw/master/resources/Grove_-_Gesture_v1.0_sch_pcb.zip)
-- **[Datasheet]** [PAJ7620U2_Datasheet_V0.8_20140611.pdf](https://github.com/SeeedDocument/Grove_Gesture_V_1.0/raw/master/resources/PAJ7620U2_Datasheet_V0.8_20140611.pdf)
+- **[ZIP]** [Grove - Gesture_v1.0 sch pcb.zip](https://github.com/SeeedDocument/Grove_Gesture_V_1.0/raw/master/res/Grove_-_Gesture_v1.0_sch_pcb.zip)
+- **[Datasheet]** [PAJ7620U2_Datasheet_V0.8_20140611.pdf](https://github.com/SeeedDocument/Grove_Gesture_V_1.0/raw/master/res/PAJ7620U2_Datasheet_V0.8_20140611.pdf)
 - **[Library]** [Library Grove - Guesture](https://github.com/Seeed-Studio/Gesture_PAJ7620)
 
 ## Project
