@@ -170,10 +170,12 @@ void loop()  {
 #### Software
 
 - **Step 1.** Navigate to the demos' directory:
+
 ```
 cd yourpath/GrovePi/Software/Python/
 ```
 - **Step 2.** To see the code
+
 ```
 nano grove_vibration_motor.py   # "Ctrl+x" to exit #
 ```
@@ -216,10 +218,11 @@ sudo python grove_vibration_motor.py
 
 ## Resources
 
+- **[Eagle]** [Grove - Vibration Motor Schematic](https://raw.githubusercontent.com/SeeedDocument/Grove-Vibration_Motor/master/res/Grove-Vibration_Motor_Eagle_Files.zip)
 
--   [Grove - Vibration Motor Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-Vibration_Motor/master/res/Grove-Vibration_Motor_Eagle_Files.zip)
--   [S9013 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Vibration_Motor/master/res/S9013.pdf)
--   [ANDA-B1020 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Vibration_Motor/master/res/ANDA-B1020_datasheet.pdf)
+- **[Datasheet]** [S9013 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Vibration_Motor/master/res/S9013.pdf)
+
+- **[Datasheet]** [ANDA-B1020 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Vibration_Motor/master/res/ANDA-B1020_datasheet.pdf)
 
 
 
