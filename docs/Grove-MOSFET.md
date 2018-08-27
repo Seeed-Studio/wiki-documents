@@ -78,6 +78,7 @@ Here we demonstrate how to use Grove - MOSFET to control a motor. We provide pow
 | GND           | Black                   |
 | Not Conencted | White                   |
 | D6            | Yellow                  |
+
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-MOSFET/master/img/MOSFET_Interface_Function.jpg)
 
 Vin: Accepts 5V ~ 15V power of which current is less than 2A.
@@ -89,7 +90,7 @@ Vout: Attach actuators here.
 
 ```c
 // demo of Grove - MOSFET
-// use pin 6 to control a motor
+// use  pwm pin 6 to control a motor
 
 int motorPin = 6;
 
@@ -157,13 +158,15 @@ void motorAcceleration()
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-MOSFET/master/img/1.jpg)
 
-- **Step 5.** Navigate to the demos' directory:
+#### Software
+
+- **Step 1.** Navigate to the demos' directory:
 
 ```
 cd yourpath/GrovePi/Software/Python/
 ```
 
-- **Step 6.**  To see the code
+- **Step 2.**  To see the code
 
 ```
 nano grove_mosfet.py   # "Ctrl+x" to exit #
@@ -173,7 +176,7 @@ nano grove_mosfet.py   # "Ctrl+x" to exit #
 import time
 import grovepi
 
-# Connect the Grove MOSFET to analog port D6
+# Connect the Grove MOSFET to digital port D6
 # SIG,NC,VCC,GND
 mosfet = 6
 
@@ -204,14 +207,14 @@ while True:
         print "Error"
 ```
 
-- **Step 7.** Run the demo.
+- **Step 3.** Run the demo.
 
 ```
 sudo python grove_mosfet.py
 ```
 
 
-- **Step 8.** We will see the output display on terminal as below.
+- **Step 4.** We will see the output display on terminal as below.
 
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-MOSFET/master/img/pi_result.png)|
 
