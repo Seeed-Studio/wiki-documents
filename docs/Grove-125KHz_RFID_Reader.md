@@ -285,10 +285,15 @@ D0[7..0]
 
 ## FAQs
 **Q1: How to convert the output to Card Number**
+
 - A1:
+
 - Take ID: 0009776930 for example:
+
 - Card Number ID: 0009776930 ------- Decimalism [Start Bit(00) + Card Number(8 numbers)]
+
 - Output: 0700952F229F ------------- Hex [[Start Bit(07h) + Card Number(8 numbers) + Checksum]
+
 - The calculator for decimal and hex numbers is available online.
 
 ## Resources
