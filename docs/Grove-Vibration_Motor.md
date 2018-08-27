@@ -174,6 +174,7 @@ void loop()  {
 ```
 cd yourpath/GrovePi/Software/Python/
 ```
+
 - **Step 2.** To see the code
 
 ```
