@@ -135,8 +135,9 @@ void clearBufferArray()                 // function to clear buffer array
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-125KHz_RFID_Reader/master/img/Read_Data_.jpg)
 
-### Wiegand Mode (Jumper Set to the Right two Pins)
+## Wiegand Mode 
 
+(Jumper Set to the Right two Pins)
 You would need to select the jumper to "W" to enter this mode.
 The [Wiegand demo code](https://raw.githubusercontent.com/SeeedDocument/Grove-125KHz_RFID_Reader/master/res/RFID_Wiegand_INT.zip) for Seeeduino is designed to read Wiegand data in interrupt mode.
 
@@ -282,13 +283,13 @@ D0[7..0]
 -   E is the data bit which was involved in even, O is the data bit which was involved in odd;
 -   DX\[7..0\] is the data bit which correspond to Mifare@ Standard & Light card read only ID;
 
-### How to convert the output to Card Number
-
-Take ID: 0009776930 for example:
-
--   Card Number ID: 0009776930 ------- Decimalism [Start Bit(00) + Card Number(8 numbers)]
--   Output: 0700952F229F ------------- Hex [[Start Bit(07h) + Card Number(8 numbers) + Checksum]
--   The calculator for decimal and hex numbers is available online.
+## FAQs
+**Q1: How to convert the output to Card Number**
+- A1:
+- Take ID: 0009776930 for example:
+- Card Number ID: 0009776930 ------- Decimalism [Start Bit(00) + Card Number(8 numbers)]
+- Output: 0700952F229F ------------- Hex [[Start Bit(07h) + Card Number(8 numbers) + Checksum]
+- The calculator for decimal and hex numbers is available online.
 
 ## Resources
 
