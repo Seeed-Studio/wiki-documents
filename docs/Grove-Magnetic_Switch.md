@@ -283,7 +283,7 @@ void turnOffLED()
 }
 ```
 
-- **Step 2.**  Then the LED light when there is Magnetic approaches the switch. Have a try!
+- **Step 2.**  Then the LED turns on when there is Magnetic approaches the switch. Have a try!
 
 ### Play With Raspberry Pi
 
@@ -297,20 +297,22 @@ void turnOffLED()
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/Grove-Magnetic-Switch-p-744.html)|
 
 - **Step 2.** Plug the GrovePi_Plus into Raspberry.
-- **Step 3.** Connect Grove-Magnetic-Switch ranger to **D3** port of GrovePi_Plus.
+- **Step 3.** Connect Grove-Magnetic-Switch ranger to **D2** port of GrovePi_Plus.
 - **Step 4.** Connect the Raspberry to PC through USB cable.
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Magnetic_Switch/master/img/with_rpi.jpg)
 
 #### Software
 
-- **Step 1.** Navigate to the demos' directory:
+- **Step 1.** Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment.
+
+- **Step 2.** Navigate to the demos' directory:
 
 ```
 cd yourpath/GrovePi/Software/Python/
 ```
 
-- **Step 2.** To see the code (this demo has the same usage with tilt switch)
+- **Step 3.** To see the code (this demo has the same usage with tilt switch)
 
 ```
 nano grovepi_tilt_switch.py   # "Ctrl+x" to exit #
@@ -320,9 +322,9 @@ nano grovepi_tilt_switch.py   # "Ctrl+x" to exit #
 import time
 import grovepi
 
-# Connect the Grove Tilt Switch to digital port D3
+# Connect the Grove Tilt Switch to digital port D2
 # SIG,NC,VCC,GND
-tilt_switch = 3
+tilt_switch = 2
 
 grovepi.pinMode(tilt_switch,"INPUT")
 
@@ -335,13 +337,13 @@ while True:
         print "Error"
 ```
 
-- **Step 3.** Run the demo.
+- **Step 4.** Run the demo.
 
 ```
 sudo python grovepi_tilt_switch.py
 ```
 
-- **Step 4.** Result
+- **Step 5.** Result
 
 Put a magnet upon the sensor, the SIG pin will output HIGH.
 
@@ -350,11 +352,11 @@ Put a magnet upon the sensor, the SIG pin will output HIGH.
 ## Resources
 - **[Eagle]**  [Grove-Magnetic Switch v0.9 Schematic](https://raw.githubusercontent.com/SeeedDocument/Grove-Magnetic_Switch/master/res/Magnetic_Switch.zip)
 
-- **[Datasheet]**  [CT10 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Magnetic_Switch/master/res/CT10.pdf)
-
 - **[Eagle]**  [Grove-Magnetic Switch v1.3 Schematic](https://raw.githubusercontent.com/SeeedDocument/Grove-Magnetic_Switch/master/res/Grove-Magnetic_Switch_v1.3_Eagle_File.zip)
 
 - **[PDF]**  [Grove-Magnetic Switch v1.3 PDF File](https://raw.githubusercontent.com/SeeedDocument/Grove-Magnetic_Switch/master/res/Grove-Magnetic_Switch_v1.3_PDF_File.pdf)
+
+- **[Datasheet]**  [CT10 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Magnetic_Switch/master/res/CT10.pdf)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Magnetic_Switch -->
 
