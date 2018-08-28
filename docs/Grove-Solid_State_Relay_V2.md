@@ -1,38 +1,39 @@
 ---
-title: Grove - 2-Channel Solid State Relay
+title: Grove - Solid State Relay V2
 category: Sensor
 bzurl: 
 oldwikiname: 
 prodimagename:
 surveyurl: 
-sku: 103020134
+sku: 103020137
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-2-Channel_Solid_State_Relay/raw/master/img/mian.jpg)
+![](https://github.com/SeeedDocument/Grove-Solid_State_Relay_V2/raw/master/img/main.jpg)
 
-Instead of using coil, packaged solid-state relays(SSR) use power semiconductor devices such as thyristors and transistors, which provide a much faster switching speed than the mechanical relays. The **Grove - 2-Channel Solid State Relay** is based on the high-quality **G3MC202P** module, which allows you to use a 5VDC to control MAX. 240VAC. This module has two channels, you can control them separately. With the help of Grove interface, it becomes very convenient to use the SSR with your arduino.
+Instead of using coil, packaged solid-state relays(SSR) use power semiconductor devices such as thyristors and transistors, which provide a much faster switching speed than the mechanical relays. The **Grove - Solid State Relay V2** is based on the high-quality **G3MC202P** module, which allows you to use a 5VDC to control MAX. 240VAC. With the help of Grove interface, it becomes very convenient to use the SSR with your arduino.
 
 
 According to different application scenarios, we have prepared a series of solid state relays for you.
 
-[Grove - Solid State Relay V2](http://wiki.seeedstudio.com/Grove-Solid_State_Relay_V2)
+Grove - Solid State Relay V2
 
-Grove - 2-Channel Solid State Relay
+[Grove - 2-Channel Solid State Relay](http://wiki.seeedstudio.com/Grove-2-Channel_Solid_State_Relay)
 
 [Grove - 4-Channel Solid State Relay](http://wiki.seeedstudio.com/Grove-4-Channel_Solid_State_Relay)
 
 [Grove - 8-Channel Solid State Relay](http://wiki.seeedstudio.com/Grove-8-Channel_Solid_State_Relay)
 
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-2-Channel-Solid-State-Relay-p-3129.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Solid-State-Relay-V2-p-3128.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 ## Features
 
 - Advantages over mechanical relays:
 
-    - Solid-state relays have fast switching speeds compared with mechanical relays, and have no physical contacts to wear out
+    - Solid-state relays have much faster switching speeds compared with electromechanical relays, and have no physical contacts to wear out
     - Totally silent operation
     - No physical contacts means no sparking, allows it to be used in explosive environments, where it is critical that no spark is generated during switching
     - Increased lifetime, even if it is activated many times, as there are no moving parts to wear and no contacts to pit or build up carbon
@@ -56,14 +57,14 @@ Grove - 2-Channel Solid State Relay
 |Rated Input Voltage|5V|
 |Rated Load Voltage|100 to 240 VAC 50/60 Hz|
 |Load Voltage Range|75 to 264 VAC 50/60 Hz||
-|Load current|0.1 to 2 A per switch|
+|Load current|0.1 to 2 A|
 |Leakage current|1.5 mA max. (at 200 VAC)|
 |Insulation Resistance|1,000 MΩ min. (at 500 VDC)|
 |Storage Temperature|-30°C to 100°C (with no icing or condensation)|
 |Operating Temperature|-30°C to 80°C (with no icing or condensation)|
 |Operating Humidity| 45% to 85%RH|
 |Input Interface|Digital|
-|Output Port|Two DIP Female Blue 2 pin |
+|Output Port|DIP Female Blue 2 pin |
 
 !!!Note
         You may pay attention to the **Leakage current**, 1.5mA is strong enough to drive Low power LED, so when the relay is off, the LED may still emits a faint light.
@@ -79,16 +80,16 @@ Grove - 2-Channel Solid State Relay
 
 ### Pin MAP
 
-![](https://github.com/SeeedDocument/Grove-2-Channel_Solid_State_Relay/raw/master/img/pin_map.jpg)
+![](https://github.com/SeeedDocument/Grove-Solid_State_Relay_V2/raw/master/img/PIN_map_.jpg)
 
 ### Schematic
 
-![](https://github.com/SeeedDocument/Grove-2-Channel_Solid_State_Relay/raw/master/img/schematic_.jpg)
+![](https://github.com/SeeedDocument/Grove-Solid_State_Relay_V2/raw/master/img/schematic_.jpg)
 
-**K1** is the Relay module, When a  5V voltage is applied between the **INT+** and **INT-**, the relay will be turned on. Then the **LOAD1** will connect to the **LOAD2**.We use a NPN transistors **Q2**(BC817-40) to control the voltage between the **INT+** and **INT-**.
+**K1** is the Relay module, When a  5V voltage is applied between the **INT+** and **INT-**, the relay will be turned on. Then the **LOAD1** will connect to the **LOAD2**.We use a NPN transistors **Q1**(BC817-40) to control the voltage between the **INT+** and **INT-**.
 
 
-The **CTR1** is the control signal from the Arduino or other board. It is pulled down by the 10k R7, if there is no signal, the 'Gate'(port 1) of **Q2** will be 0v, and Q2 is turned off, so that the K1 will be turned off. If **CTR1** becomes 5v, then the Q2 will be turned on. **INT-** of k1 will be connected to the GND of the system, for the K1 there will be 5V between **INT+** and **INT-**, so the K1 will be turned on, and the **LOAD1** will connect to **LOAD2**.
+The **CTR** is the control signal from the Arduino or other board. It is pulled down by the 10k R2, if there is no signal, the 'Gate'(port 1) of **Q1** will be 0v, and Q1 is turned off, so that the K1 will be turned off. If **CTR** becomes 5v, then the Q1 will be turned on. **INT-** of k1 will be connected to the GND of the system, for the K1 there will be 5V between **INT+** and **INT-**, so the K1 will be turned on, and the **LOAD1** will connect to **LOAD2**.
 
 
 !!!NOTE
@@ -117,10 +118,10 @@ The **CTR1** is the control signal from the Arduino or other board. It is pulled
 
 **Materials required**
 
-| Seeeduino V4.2 | Base Shield| Grove - 2-Channel Solid State Relay |
+| Seeeduino V4.2 | Base Shield| Grove - Solid State Relay V2 |
 |--------------|-------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-2-Channel_Solid_State_Relay/raw/master/img/thumbnail.jpg)|
-|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-2-Channel-Solid-State-Relay-p-3129.html" target="_blank">Get One Now</a>|
+|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Solid_State_Relay_V2/raw/master/img/thumbnail.jpg)|
+|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Solid-State-Relay-V2-p-3128.html" target="_blank">Get One Now</a>|
 
 
 !!!note
@@ -128,25 +129,19 @@ The **CTR1** is the control signal from the Arduino or other board. It is pulled
     
     **2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
 
-    **3** You need to prepare two fans yourself.
+
+- **Step 1.** Connect the Grove - Solid State Relay to port **D7** of Grove-Base Shield.
+
+- **Step 2.** Cut off one wire, one end is connected to **LOAD1**, and the other end is connected to **LOAD2**.
+
+- **Step 3.** Connect the **LOAD1** to the power, and connect the **LOAD2** to the Fan
+
+- **Step 4.** Plug Grove - Base Shield into Seeeduino.
+
+- **Step 5.** Connect Seeeduino to PC via a Micro-USB cable.
 
 
-- **Step 1.** Connect the Grove - 2-Channel Solid State Relay to port **D2** of Grove-Base Shield.
-
-- **Step 2.** Cut off one wire, one end is connected to **LOAD1** of switch1, and the other end is connected to **LOAD2** of switch1.
-
-- **Step 3.** Cut off another wire, one end is connected to **LOAD1** of switch2, and the other end is connected to **LOAD2** of switch2.
-
-- **Step 4.** Connect the **LOAD1** of switch1 to the power, and connect the **LOAD2** of switch1 to the Fan1
-
-- **Step 5.** Connect the **LOAD1** of switch2 to the power, and connect the **LOAD2** of switch2 to the Fan2
-
-- **Step 6.** Plug Grove - Base Shield into Seeeduino.
-
-- **Step 7.** Connect Seeeduino to PC via a Micro-USB cable.
-
-
-![](https://github.com/SeeedDocument/Grove-2-Channel_Solid_State_Relay/raw/master/img/connect.jpg)
+![](https://github.com/SeeedDocument/Grove-Solid_State_Relay_V2/raw/master/img/connect.jpg)
 
 
 #### Software
@@ -159,33 +154,29 @@ The **CTR1** is the control signal from the Arduino or other board. It is pulled
 
 ```c++
 #include <Arduino.h>
-uint8_t channel1 = 2;
-uint8_t channel2 = 3;
+uint8_t pin = 7;
 void setup() {
-  pinMode(channel1, OUTPUT);
-  pinMode(channel2, OUTPUT);
-}
+  pinMode(pin, OUTPUT);}
 void loop() {
-  digitalWrite(channel1, HIGH);
-  digitalWrite(channel2, LOW);
-  delay(2000);
-  digitalWrite(channel1, LOW);
-  digitalWrite(channel2, HIGH);
-  delay(2000);
+  digitalWrite(pin, HIGH);
+  delay(5000);
+  digitalWrite(pin, LOW);
+  delay(5000);
 }
+
 ```
 
 - **Step 2.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
 
 !!!success
-    You will see the two on-board LEDs alternately lit and extinguished, two fans alternately turn on and off.
+    You will see the on-board LED alternately lit and extinguished, and the Fan alternately turns on and off.
 
 
 
 ## Resources
 
-- **[Zip]** [Grove - 2-Channel Solid State Relay eagle files](https://github.com/SeeedDocument/Grove-2-Channel_Solid_State_Relay/raw/master/res/Grove-2-Channel_Solid_State_Relay.zip)
+- **[Zip]** [Grove - Solid State Relay V2 eagle files](https://github.com/SeeedDocument/Grove-Solid_State_Relay_V2/raw/master/res/Grove-Solid_State_Relay_V2_Eagle.zip)
 - **[PDF]** [Datasheet of G3MC202P](https://github.com/SeeedDocument/Grove-Solid_State_Relay_V2/raw/master/res/G3MC202p.pdf)
 
 

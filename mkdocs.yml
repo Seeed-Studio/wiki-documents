@@ -483,10 +483,13 @@ pages:
           - Grove - Relay: Grove-Relay.md
           - Grove - 4-Channel SPDT Relay: Grove-4-Channel_SPDT_Relay.md
           - Grove - 2-Channel SPDT Relay: Grove-2-Channel_SPDT_Relay.md
+          - Grove - Solid State Relay: Grove-Solid_State_Relay.md
+          - Grove - Solid State Relay V2: Grove-Solid_State_Relay_V2.md
           - Grove - 2-Channel Solid State Relay: Grove-2-Channel_Solid_State_Relay.md
+          - Grove - 4-Channel Solid State Relay: Grove-4-Channel_Solid_State_Relay.md
+          - Grove - 8-Channel Solid State Relay: Grove-8-Channel_Solid_State_Relay.md
           - Grove - Serial MP3 Player: Grove-Serial_MP3_Player.md
           - Grove - Servo: Grove-Servo.md
-          - Grove - Solid State Relay: Grove-Solid_State_Relay.md
           - Grove - Speaker: Grove-Speaker.md
           - Grove - Variable Color LED: Grove-Variable_Color_LED.md
           - Grove - Vibration Motor: Grove-Vibration_Motor.md
