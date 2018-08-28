@@ -92,11 +92,6 @@ Using the sensor is easy. For [Seeeduino](http://www.seeedstudio.com/depot/Seeed
 Do not touch, shake or let this product vibrate while using. Otherwise, it will affect the accuracy of data measured.
 </div>
 
-!!!note
-    **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
-    **2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy 
-
-
 !!!Note
 	If we don't have Grove Base Shield, We also can directly Grove - Temperature&Humidity Sensor(SHT31) to Seeeduino as below.
 
@@ -152,13 +147,10 @@ The result should be like:
 
 ![](https://github.com/SeeedDocument/Grove-TempAndHumi_Sensor-SHT31/raw/master/img/RESULT.png)
 
-
-
-
 ## Resources
 
-- **[Zip]** [EAGLE schematics, PCB files and PDF schematic](https://raw.githubusercontent.com/SeeedDocument/Grove-TempAndHumi_Sensor-SHT31/master/res/Grove-TempAndHumi_Sensor-SHT31-v1.0_Schematics.zip)
-- **[Zip]** [SHT31 Sensor Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-TempAndHumi_Sensor-SHT31/master/res/Grove-TempAndHumi_Sensor-SHT31-Datasheets.zip)
+- **[EAGLE]** [Grove - Temperature&Humidity Sensor(SHT31) PCB files and PDF schematic](https://raw.githubusercontent.com/SeeedDocument/Grove-TempAndHumi_Sensor-SHT31/master/res/Grove-TempAndHumi_Sensor-SHT31-v1.0_Schematics.zip)
+- **[Datasheet]** [SHT31 Sensor Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-TempAndHumi_Sensor-SHT31/master/res/Grove-TempAndHumi_Sensor-SHT31-Datasheets.zip)
 - **[Library]** [Library and example code](https://github.com/Seeed-Studio/Grove_SHT31_Temp_Humi_Sensor)
 - **[MoreReading]** [I<sup>2</sup>C How-to for Arduino](https://www.arduino.cc/en/Reference/Wire)
 
