@@ -341,15 +341,15 @@ pages:
   - Grove:
       - Grove Introduction: Grove.md
       - Grove System: Grove_System.md
+      - Grove - New Products: Grove-New_Products.md
       - Sensor:
           - Sensor Introduction: Sensor.md
-          - Grove - New Products: Grove-New_Products.md
           - Sensor - Gas: Sensor_gas.md
           - Sensor - Barometer: Sensor_barometer.md
           - Sensor - Accelerometer: Sensor_accelerometer.md
           - Sensor - Temperature: Sensor_temperature.md
           - Sensor - Light: Sensor_light.md
-          - Sensor - Health.md: Sensor_health.md
+          - Sensor - Health: Sensor_health.md
           - Sensor - Sound: Sensor_sound.md
           - Sensor - Distance: Sensor_distance.md
           - Sensor - Others: Sensor_Others.md
