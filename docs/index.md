@@ -64,10 +64,6 @@
 <img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/index_logo/17%20Tutorial.jpg" width="220" height="220" border=0/></a></div>
 </p>
 
-##
-
-<p style="text-align:center"><a href="https://www.seeedstudio.com/grove.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/top_banner.png" /></a></p>
-
 
 ## Copyright/License
 -------

@@ -5,9 +5,9 @@ prodimagename: grove_cover.png
 surveyurl: https://www.research.net/r/grove_system
 ---
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/grove_cover.png)
+<p style="text-align:center"><a href="https://www.seeedstudio.com/grove.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/top_banner.png" /></a></p>
 
-##What is the Grove System?
+## What is the Grove System?
 
 Grove is a modular, standardized connector prototyping system. Grove takes a building block approach to assembling electronics. Compared to the jumper or solder based system, it is easier to connect, experiment and build and simplifies the learning system, but not to the point where it becomes dumbed down. Some of the other prototype systems out there takes the level down to building blocks. Good stuff to be learned that way, but the Grove system allows you to build real systems. It requires some learning and expertise to hook things up.
 
@@ -17,8 +17,9 @@ The Base unit, generally a microprocessor, allows for easy connection of any inp
 
 You don't need a Base unit to connect up to Grove modules. You can use a cable (Grove to Pin Header Converter) to run from the pins on the Raspberry Pi or Arduino to the Grove connectors.
 
+![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/grove_cover.png)
 
-##Grove Projects
+## Grove Projects
 
 Here are some project made with Grove for your reference, more projects please refer to [Recipe](http://www.seeed.cc/discover.html?t=Grove) or [Instructables](http://www.instructables.com/howto/Grove/).
 
@@ -50,7 +51,7 @@ Here are some project made with Grove for your reference, more projects please r
 |[MAKE IT NOW!](http://www.instructables.com/id/Glasso-a-button-free-RGB-timer/)|[MAKE IT NOW!](http://www.instructables.com/id/The-Internet-of-Led-Wall-1/)|[MAKE IT NOW!](http://www.instructables.com/id/DIY-a-Raspberry-Game-2048/)|
 
 
-##Size of Grove
+## Size of Grove
 
 There're 5 size of Grove.
 
@@ -60,7 +61,7 @@ There're 5 size of Grove.
 |![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/size1x1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/size1x2.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/size1x3.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/size2x2.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/size2x3.jpg)|
 
 
-##How to connect Grove to your board
+## How to connect Grove to your board
 
 If there's no Grove connector on your board, you need a **Grove Expansion Board** which to attach the Grove modules. The Grove Expansion Board provides the processing power, and the modules offer the input sensors and output actuators of your system. There are many Grove Expansion Board for different platform already, they include Arduino UNO, Particle Phone, BeagleBone board etc.
 
@@ -82,7 +83,7 @@ If there's no Grove connector on your board, you need a **Grove Expansion Board*
     * LinkIt ONE
 
 
-##Interface of Grove modules
+## Interface of Grove modules
 
 You may notice that there're 4 color of the Grove cable.
 
@@ -93,7 +94,7 @@ You may notice that there're 4 color of the Grove cable.
 
 There're mainly 4 type of Interface of Grove modules.
 
-###Digital
+### Digital
 
 A digital Grove connector consists of the standard four lines coming into the Grove plug.   The two signal lines are generically called D0 and D1.  Most modules only use D0, but some do (like the LED Bar Grove display) use both.   Often base units will have the first connector called D0 and the second called D1 and they will be wired D0/D1 and then D1/D2, etc.
 
@@ -107,7 +108,7 @@ Examples of Grove Digital modules are:   Switch Modules, the Fan Module, and the
 |pin4	| GND  | Ground |
 
 
-###Grove Analog
+### Grove Analog
 
 An Grove Analog connector consists of the standard four lines coming into the Grove plug.   The two signal lines are generically called A0 and A1.  Most modules only use A0.   Often base units will have the first connector called A0 and the second called A1 and they will be wired A0/A1 and then A1/A2, etc.
 
@@ -118,7 +119,7 @@ An Grove Analog connector consists of the standard four lines coming into the Gr
 |pin3   | VCC  | Power for Grove Module, 5V/3.3V|
 |pin4	| GND  | Ground |
 
-###Grove UART
+### Grove UART
 
 The Grove UART module is a specialized version of a Grove Digital Module.  It uses both Pin 1 and Pin 2 for the serial input and transmit.  The Grove UART plug is labeled from the base unit point of view.   In other words, Pin 1 is the RX line (which the base unit uses to receive data, so it is an input) where Pin 2 is the TX line (which the base unit uses to transmit data to the Grove module).
 
@@ -129,7 +130,7 @@ The Grove UART module is a specialized version of a Grove Digital Module.  It us
 |pin3   | VCC  | Power for Grove Module, 5V/3.3V|
 |pin4	| GND  | Ground |
 
-###Grove I2C
+### Grove I2C
 
 Those long term readers of this blog know that our favourite devices are I2C sensors.   There are many types of I2C Grove sensors available.   Most are 5V/3.3V devices, but there are a few that are only 3.3V or 5.0V.  You need to check the specifications.
 
@@ -143,9 +144,9 @@ The Grove I2C connector has the standard layout.   Pin 1 is the SCL signal and P
 |pin4	| GND  | Ground |
 
 
-##Grove Cables
+## Grove Cables
 
-###Normal Grove Cable
+### Normal Grove Cable
 There're 4 size of Grove cables for your projects, the length is consist of 5cm, 20cm, 30cm, 40cm as well as 50 cm. As shown below.
 
 | 5cm | 20 cm | 30 cm | 40 cm | 50 cm |
@@ -153,7 +154,7 @@ There're 4 size of Grove cables for your projects, the length is consist of 5cm,
 |![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/cable_5.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/cable_20.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/cable_30.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/cable_40.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/cable_50.jpg)|
 |[BUY ONE NOW!](http://www.seeedstudio.com/depot/grove-universal-4-pin-buckled-5cm-cable-5-pcs-pack-p-925.html?cPath=98_106_57)|[BUY ONE NOW!](http://www.seeedstudio.com/depot/grove-universal-4-pin-20cm-unbuckled-cable-5-pcs-pack-p-749.html?cPath=98_106_57)|[BUY ONE NOW!](http://www.seeedstudio.com/depot/grove-universal-4-pin-buckled-30cm-cable-5-pcs-pack-p-926.html?cPath=98_106_57)|[BUY ONE NOW!](http://www.seeedstudio.com/depot/grove-universal-4-pin-buckled-40cm-cable-5-pcs-pack-p-927.html?cPath=98_106_57)|[BUY ONE NOW!](http://www.seeedstudio.com/depot/grove-universal-4-pin-buckled-50cm-cable-5-pcs-pack-p-928.html?cPath=98_106_57)|
 
-###Grove - Branch Cable
+### Grove - Branch Cable
 
 Grove Branch Cable is a cable used in the Grove system. It consists of three male-type latching connectors and four color-coded wires. Grove Branch Cables can be used to support daisy-chaining multiple Grove devices to a Grove shield. Typically, one end is connected to a Grove shield, and the second and third connectors are attached to two Grove devices.
 
@@ -169,7 +170,7 @@ Sample applications include:
 * Connecting two devices that need to work at the same time. For example, a LED and a Relay could be connected to a Grove Shield using a single Grove Branch Cable. It would then be possible to turn both the LED and the Relay off or on simultaneously since the two devices would be controlled by a single digital pin.
 
 
-###Grove - Branch Cable for Servo
+### Grove - Branch Cable for Servo
 
 Grove Branch Cable for Servos are another type of Grove Cable, and are primarily used to connect one or two servos to your project. They consist of three connectors: one keyed four pin male connector suitable for connecting to a Grove Shield, and two three pin male post-type connectors. In this configuration, power and ground (pins 3 and 4 from the four pin male) are carried to both three pin male connectors. Pin 1 (yellow)of the four pin connector is connected to one of the pins of the Arduino capable of PWM, and is carried out to one of the three pin male post connectors. Pin 2 (white wire) of the four pin connector is also connected to a second PWM-capable pin of the Arduino, and is carried out to the second three pin male post connector.
 
@@ -177,7 +178,7 @@ The four pin keyed connector of the Grove Branch Cable for Servos will usually b
 
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/cable_servo.jpg)
 
-###Grove to 4pin Female/Male Jumper
+### Grove to 4pin Female/Male Jumper
 
 You can use it for:
 
@@ -186,7 +187,7 @@ You can use it for:
 
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/cable_male_female.png)
 
-###Link to buy a cable
+### Link to buy a cable
 
 | Cable | Link |
 |------|------|
@@ -196,7 +197,7 @@ You can use it for:
 | Grove to 4Pin Male |[BUY ONE NOW!](http://www.seeedstudio.com/Grove-4-pin-Male-Jumper-to-Grove-4-pin-Conversion-Cable-%285-PCs-per-Pack%29-p-1565.html)|
 
 
-##Grove Starter Kit
+## Grove Starter Kit
 
 We designed many kits for the beginner. Normally, a Grove starter kit include a Grove Extension Board, many Grove modules and a user manual, which include many lessons for the beginners. If you want to start a platform or just learn about electronic, Grove Starter kit is your best choice.
 
@@ -218,11 +219,11 @@ There are many kits for different platform.
 |GrovePi+ Starter Kit for Raspberry Pi|[BUY ONE NOW!](http://www.seeedstudio.com/GrovePi+-Starter-Kit-for-Raspberry-Pi-A+,B,B+&2,3-%28CE-certified%29-p-2572.html)|
 
 
-##Choose your Grove
+## Choose your Grove
 
 Want some Grove modules for your project? Here are some recommend.
 
-###Grove Basic Input and Output
+### Grove Basic Input and Output
 
 | Grove - LED| Grove - Rotary Angle Sensor | Grove - Button |
 |-----------|--------------------------|----------------------------|
@@ -235,7 +236,7 @@ Want some Grove modules for your project? Here are some recommend.
 |![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/basic_4.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/basic_5.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/basic_6.jpg)|
 | [More Details](http://www.seeedstudio.com/Grove-Switch(P)-p-1252.html) | [More Details](http://www.seeedstudio.com/Grove-Encoder-p-1352.html) | [More Details](http://www.seeedstudio.com/Grove-Touch-Sensor-p-747.html) |
 
-###Grove for Display
+### Grove for Display
 
 | I2C_LCD | Grove - OLED Display 0.96" | Grove - OLED Display 1.12" |
 |-----------|--------------------------|----------------------------|
@@ -249,7 +250,7 @@ Want some Grove modules for your project? Here are some recommend.
 | [More Details](http://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html) | [More Details](http://www.seeedstudio.com/Grove-4-Digit-Display-p-1198.html) | [More Details](http://www.seeedstudio.com/Grove-LED-Bar-v2.0-p-2474.html) |
 
 
-###Grove for Motion Detect
+### Grove for Motion Detect
 
 | Grove - IMU 10DOF v2.0 | Digital Accelerometer(±400g) | 3-Axis Digital Gyro |
 |--------------------------|---------------------------|-----------------------|
@@ -268,7 +269,7 @@ Want some Grove modules for your project? Here are some recommend.
 
 
 
-###Grove for Communication
+### Grove for Communication
 
 | Grove – Uart Wifi | 433MHz Simple RF link kit | 315MHz Simple RF Link Kit |
 |--------------------------|---------------------------|-----------------------|
@@ -289,7 +290,7 @@ Want some Grove modules for your project? Here are some recommend.
 
 
 
-###Grove for Environment
+### Grove for Environment
 
 | Air quality sensor | Gas Sensor(MQ2) | Gas Sensor(MQ5) |
 |--------------------------|---------------------------|-----------------------|
@@ -310,7 +311,7 @@ Want some Grove modules for your project? Here are some recommend.
 
 
 
-###Grove for Robot
+### Grove for Robot
 
 | I2C Mini Motor Driver | I2C Motor Driver | Grove - Servo |
 |--------------------------|---------------------------|-----------------------|
