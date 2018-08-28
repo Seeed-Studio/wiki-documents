@@ -30,6 +30,9 @@ tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_bbg, plat_pi, plat_wio, plat_li
 - Wide range of operating temperature:-20℃~70℃
 - I2C Address 0x3C
 
+!!!Note
+    If you want to use multiplue I2C devices, please refer to [Software I2C](http://wiki.seeedstudio.com/Arduino_Software_I2C_user_guide/).
+
 !!!warning
 	Please notice: heavy impact or stress on the OLED will cause the breakdown of screen.
 
