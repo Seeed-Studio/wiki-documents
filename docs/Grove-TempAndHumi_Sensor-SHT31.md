@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/Grove-TempAndHumi_Sensor-SHT31
 sku: 101020212
 ---
 
-<p style="text-align:center"><img src="https://github.com/SeeedDocument/Grove-TempAndHumi_Sensor-SHT31/raw/master/img/main.jpg" /></p>
+<p style="text-align:center"><img src="https://github.com/SeeedDocument/Grove-TempAndHumi_Sensor-SHT31/raw/master/img/main_new.jpg" /></p>
 
 Grove - Temp&Humi Sensor(SHT31) is a highly reliable, accurate, quick response and integrated temperature & humidity sensor. The sensor(chip) used in the module is designed with Sensirion's CMOSens<sup>®</sup> technology. The chip is well calibrated, linearized and compensated for digital output.
 
@@ -21,15 +21,22 @@ Using the sensor is easy. For [Seeeduino](http://www.seeedstudio.com/depot/Seeed
 
 <p style="text-align:center"><a href="http://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-SHT31-p-2655.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
+## Version
 
+| Product Version              | Changes                                                                                                                                                                                    | Released Date |
+|------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
+| Grove - Temperature&Humidity Sensor(SHT31) V1.0 | Initial                                                                                                                                                                                    | Jan 2016      |
 
 ## Features
-
 
 -   Highly reliable, accurate and quick response time
 -   Grove compatible and easy to use
 -   Well calibrated, linearized, compensated for digital output
 -   Highly abstracted development library
+-   I2C Address  0x44
+
+!!!Note
+    If you want to use multiplue I2C devices, please refer to [Software I2C](http://wiki.seeedstudio.com/Arduino_Software_I2C_user_guide/).
 
 !!!Tip
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
@@ -60,11 +67,23 @@ Using the sensor is easy. For [Seeeduino](http://www.seeedstudio.com/depot/Seeed
 !!!Caution
     The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
+### Play With Arduino
 
+#### Hardware
+
+- **Step 1.** Prepare the below stuffs:
+
+| Seeeduino V4.2 | Base Shield|  Grove - Temperature&Humidity Sensor(SHT31) |
+|--------------|-------------|-----------------|
+|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-TempAndHumi_Sensor-SHT31/raw/master/img/thumbnail.jpg)|
+|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-SHT31-p-2655.html)|
+
+- **Step 2.** Connect Grove - Temperature&Humidity Sensor(SHT31) to port D6 of Grove-Base Shield.
+- **Step 3.** Plug Grove - Base Shield into Seeeduino.
+- **Step 4.** Connect Seeeduino to PC via a USB cable.
+![](https://github.com/SeeedDocument/Grove-TempAndHumi_Sensor-SHT31/raw/master/img/arduino_connect.jpg)
 
 ## Hardware Overview
-
-
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-TempAndHumi_Sensor-SHT31/master/img/Grove-TempAndHumi_Sensor-SHT31-components_1200_s.jpg)
 
@@ -73,48 +92,13 @@ Using the sensor is easy. For [Seeeduino](http://www.seeedstudio.com/depot/Seeed
 Do not touch, shake or let this product vibrate while using. Otherwise, it will affect the accuracy of data measured.
 </div>
 
-
-
-## Getting Started
-
-
-Now let us run some basic examples with this module using the library/examples provided.
-
-### Play With Arduino
-
-This section shows you how to build a simple project with Arduino platform. If you are using a different type of main control board, these instructions and source code probably still helps.
-
-
-#### Materials required
-
-| Seeeduino V4.2 | Base Shield| Grove - Temperature&Humidity Sensor(SHT31) |
-|--------------|-------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-TempAndHumi_Sensor-SHT31/raw/master/img/thumbnail.jpg)|
-|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-TemperatureHumidity-Sensor-SHT31-p-2655.html)|
-
-
 !!!note
     **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
-    
     **2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy 
-
-
-
-#### Hardwave
-
-- **Step 1.** Connect Grove - Temperature&Humidity Sensor(SHT31) to port **I2C** of Grove-Base Shield.
-
-- **Step 2.** Plug Grove - Base Shield into Seeeduino.
-
-- **Step 3.** Connect Seeeduino to PC via a USB cable.
-
-
-![](https://github.com/SeeedDocument/Grove-TempAndHumi_Sensor-SHT31/raw/master/img/arduino_connect.jpg)
 
 
 !!!Note
 	If we don't have Grove Base Shield, We also can directly Grove - Temperature&Humidity Sensor(SHT31) to Seeeduino as below.
-
 
 | Seeeduino       | Grove - Temperature&Humidity Sensor(SHT31) |
 |---------------|-------------------------|
@@ -122,8 +106,6 @@ This section shows you how to build a simple project with Arduino platform. If y
 | GND           | Black                   |
 | SDA           | White                   |
 | SCL           | Yellow                  |
-
-
 
 #### Software
 
@@ -133,7 +115,7 @@ This section shows you how to build a simple project with Arduino platform. If y
 
 - **Step 3.** Restart the Arduino IDE. Open a new sketch, and copy the following code into the new sketch.
 
-```C++
+```C
 #include <Arduino.h>
 #include <Wire.h>
 #include "SHT31.h"
@@ -159,8 +141,6 @@ void loop() {
   Serial.println();
   delay(1000);
 }
-
-
 ```
 
 - **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
