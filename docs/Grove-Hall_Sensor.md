@@ -21,7 +21,7 @@ The Hall sensor is based on Hall Effect, which is the production of a voltage di
 
 | Revision | Descriptions           | Release    |
 |----------|------------------------|------------|
-| v0.9b    | Initial public release | 3,Oct,2011 |
+| Grove - Hall Sensor v0.9b    | Initial public release | 3,Oct,2011 |
 
 
 ## Features
