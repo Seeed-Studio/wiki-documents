@@ -273,28 +273,6 @@ temp = 22.90 C humidity =42.30%
 
 ```
 
-
-
-## Projects
-
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}
-.tg .tg-yw4l{vertical-align:top}
-</style>
-<table class="tg">
-  <tr>
-    <th class="tg-031e"><iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/loovee/linkit-one-iot-demo-546a9c/embed' width='350'></iframe></th>
-    <th class="tg-031e"><iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/hagakure/automated-snake-enclosure-with-camera-a56ea9/embed' width='350'></iframe></th>
-    <th class="tg-yw4l"><iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/Momy93/foton-the-connected-lightsaber-a6c159/embed' width='350'></iframe></th>
-  </tr>
-</table>
-
-
-
-
-
 ## Resources
 
 - **[Zip]** [Temperature&Humidity Sensor Pro in eagle format](https://github.com/SeeedDocument/Grove-Temperature_and_Humidity_Sensor_Pro/raw/master/res/Temp_Humi_Pro_eagle_files.zip)
@@ -310,6 +288,17 @@ temp = 22.90 C humidity =42.30%
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/alpha007/temperature-humidity-data-logger-767570/embed' width='350'></iframe>
 
+**LinkIt ONE IoT Demo**: An IoT demo made by LinkIt ONE.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/loovee/linkit-one-iot-demo-546a9c/embed' width='350'></iframe>
+
+**Automated Snake Enclosure with Camera**: Interactive snake enclosure that is temperature and humidity controlled and uses lat-long to mimic natural light cycles, with an online cam.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/hagakure/automated-snake-enclosure-with-camera-a56ea9/embed' width='350'></iframe>
+
+**Foton - The connected lightsaber**: Foton is a special lightsaber, which can monitor temperature and humidity of a room, detect movements, and send those data to a smartphone.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/Momy93/foton-the-connected-lightsaber-a6c159/embed' width='350'></iframe>
 
 ## Tech Support
 Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](https://forum.seeedstudio.com/).
