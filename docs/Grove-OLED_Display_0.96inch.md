@@ -629,7 +629,7 @@ class GroveOledDisplay128x64(object):
 
 
 if __name__ == "__main__":
-    display = GroveOledDisplay128x64(bus=2)
+    display = GroveOledDisplay128x64(bus=1)
 
     display.set_cursor(0, 0)
     display.puts('hello')
