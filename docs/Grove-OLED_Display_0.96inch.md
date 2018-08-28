@@ -9,15 +9,20 @@ sku: 104030008
 tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_bbg, plat_pi, plat_wio, plat_linkit
 ---
 
-
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove_OLED_Display_0.96/master/images/Grove-OLED-0.96.png)
 
 **Grove - OLED Display 0.96"** module is an OLED monochrome 128×64dot matrix display module with Grove 4pin I2C Interface.Comparing to LCD, OLED screens are more competitive, which has a number of advantages such as high brightness, self-emission, high contrast ratio, slim / thin outline, wide viewing angle, wide temperature range, and low power consumption. It has bigger screen so that it can display more contents than the OLED 96×96.
 
 [![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now.png)](https://www.seeedstudio.com/item_detail.html?p_id=781)
 
+## Version
+
+| Product Version              | Changes                                                                                                                                                                                    | Released Date |
+|------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
+| Grove - OLED Display 0.96 inch | Initial                                                                                                                                                                                    | Oct 2015      |
+
 ## Features
-------------
+
 - Grove compatible interface
 - Communicate Mode:I2C
 - Low power consumption
@@ -31,7 +36,7 @@ tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_bbg, plat_pi, plat_wio, plat_li
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
 ## Specifications
-------------
+
 
 |Items	                             |Min	 |Norm	   |Max	   |Unit          |
 |------------------------------------|-----------|---------|-------|--------------|
@@ -45,9 +50,10 @@ tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_bbg, plat_pi, plat_wio, plat_li
 |Dot Size	                     |-|0.15(W)×0.15 (H)|-	           |mm            |
 |Wide range of operating temperature |-|-20~70 |-                      |℃            |
 
+!!!Tip
+    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
 ## Platforms Supported
-------------
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -57,37 +63,54 @@ tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_bbg, plat_pi, plat_wio, plat_li
     The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
 
-## Getting Started
-------------
-### With Arduino
 
-#### Connection
+## Getting Started
+
+!!!Note
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+
+
+### Play With Arduino
+
+#### Demonstration
 
 The OLED128*64 uses all the pins of SSD1308 chip, the default original point is on the top left corner. You can also change the original point by adjusting the program and in order to display your desired patterns. For more details, please refer [SSD1308_1.0.pdf](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/resource/SSD1308_1.0.pdf) and [LY190-128064.pdf](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/resource/LY190-128064.pdf).
 
-Here we demonstrate how to display "Hello World" on the screen.
+#### Hardware
 
-First of all, We need to prepare the below stuffs:
+- **Step 1.** Prepare the below stuffs:
 
-| Seeeduino V4 | Grove - OLED Display 0.96inch | Base Shield |
+| Seeeduino V4 | Base Shield | Grove - OLED Display 0.96inch |
 |--------------|-------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/images/grove%20oled%200.96_s.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|
-|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-OLED-Display-0.96%26quot%3B-p-781.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
+|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/images/grove%20oled%200.96_s.jpg)|
+|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-OLED-Display-0.96%26quot%3B-p-781.html)|
 
-- Plug the Grove OLED Display 128*64 onto the I2C port on Grove Base Shield, and then plug the Base Shield into  Seeeduino;
+- **Step 2.** Plug the Grove OLED Display 128*64 onto the I2C port on Grove Base Shield.
+- **Step 3.** Plug Grove - Base Shield into Seeeduino.
+- **Step 4.** Connect Seeeduino to PC via a USB cable.
+
+![](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/images/with_ardu.jpg)
+
+!!!Note
+	If we don't have Grove Base Shield, We also can directly connect Grove - OLED Display 0.96 inch to Seeeduino as below.
+
+| Seeeduino     | Grove - OLED Display 0.96 inch |
+|---------------|-------------------------|
+| 5V            | Red                     |
+| GND           | Black                   |
+| SDA           | White                   |
+| SCL           | Yellow                  |
+
 
 #### Software
 
-- Download [Seeed OLED Display 128*64 library](https://github.com/Seeed-Studio/OLED_Display_128X64/archive/master.zip)
-- Please follow [how to install an arduino library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install library.
-- Open the code directly by the path: **File -> Example ->OLED_Display_128X64-master->OLED_Hello_World**.
-![](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/images/library%20example.png)
+- **Step 1.** Download the  [Seeed OLED Display 128*64 library](https://github.com/Seeed-Studio/OLED_Display_128X64/archive/master.zip)  from Github.
+- **Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- **Step 3.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
-
-```
+```c
 #include <Wire.h>
 #include <SeeedOLED.h>
-
 
 void setup()
 {
@@ -97,9 +120,8 @@ void setup()
   SeeedOled.clearDisplay();          //clear the screen and set start position to top left corner
   SeeedOled.setNormalDisplay();      //Set display to normal mode (i.e non-inverse mode)
   SeeedOled.setPageMode();           //Set addressing mode to Page Mode
-  SeeedOled.setTextXY(0,0);          //Set the cursor to Xth Page, Yth Column  
+  SeeedOled.setTextXY(0, 0);         //Set the cursor to Xth Page, Yth Column
   SeeedOled.putString("Hello World!"); //Print the String
-
 }
 
 void loop()
@@ -109,24 +131,24 @@ void loop()
 
 ```
 
-- Upload the code.  
-- We can see "hello world" on screen.
+- **Step 3.** We can see "Hello World!" on screen.
 
 
-### With Beaglebone Green
+### Play With Beaglebone Green
+
 To begin editing programs that live on BBG, you can use the [Cloud9 IDE](https://c9.io) and refer [Beaglebone Green Wiki](http://wiki.seeedstudio.com/BeagleBone_Green/).
 
 Here are the steps how to display "Hello World" on OLED.
 
-**Step1**: Click the "+" in the top-right to create a new file.
+**Step 1:** Click the "+" in the top-right to create a new file.
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove_OLED_Display_0.96/master/images/C9-create-tab.png)
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove_OLED_Display_0.96/master/images/C9_newfile.jpg)
 
-**Step2**:Copy and paste the following code into the new tab
-``` python
+**Step 2:** Copy and paste the following code into the new tab
 
+``` python
 import time
 import smbus2 as smbus
 
@@ -343,20 +365,59 @@ if __name__ == "__main__":
     display.puts('hello')
     display.set_cursor(1, 4)
     display.puts('world')
-
 ```
-**Step3**: Save the file by clicking the disk icon with with the .py extension.
 
-**Step4**: Connect Grove - OLED to Grove I2C socket on BBG.
+**Step 3:** Save the file by clicking the disk icon with with the .py extension.
 
-**Step5**: Install smbus2 library `sudo pip install smbus2`
+**Step 4:** Connect Grove - OLED to Grove I2C socket on BBG.
 
-**Step6**: Run the code. We'll find that the Grove - OLED outputs "Hello World".
+**Step 5:** Install smbus2 library `sudo pip install smbus2`
 
-### with Raspberry Pi
+**Step 6:** Run the code. We'll find that the Grove - OLED outputs "Hello World".
+
+
+
+
+
+
+
+
+
+### Play with Raspberry Pi
 The above python script for BeagleBone Green also works for Raspberry Pi, But the I2C bus is different. On Raspberry Pi 2/3, the I2C bus is 1. The script with changing `bus=2` to `bus=1` will  work on Pi.
 
+#### Hardware
+
+- **Step 1.** Prepare the below stuffs:
+
+| Raspberry pi | GrovePi_Plus | Grove - OLED Display 0.96 inch  |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/images/grove%20oled%200.96_s.jpg)|
+|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-OLED-Display-0.96%26quot%3B-p-781.html)|
+
+- **Step 2.** Plug the GrovePi_Plus into Raspberry.
+- **Step 3.** Connect Grove - OLED Display 0.96 inch ranger to **I2C-2** port of GrovePi_Plus.
+- **Step 4.** Connect the Raspberry to PC through USB cable.
+
+![](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/images/with_rpi.jpg)
+
+#### Software
+
+- **Step 1.** Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment.
+
+- **Step 2.** Navigate to the demos' directory:
+
 ```
+cd yourpath/GrovePi/Software/Python/
+```
+
+- **Step 3.**  To see the code
+
+```
+nano Grove-OLED_Display_0.96inch.py   # "Ctrl+x" to exit #
+```
+
+```py
 if __name__ == "__main__":
     display = GroveOledDisplay128x64(bus=1)
 
@@ -366,15 +427,31 @@ if __name__ == "__main__":
     display.puts('world')
 ```
 
+**Step 4:** Install smbus2 library `sudo pip install smbus2`
+
+**Step 5:** Run the code. We'll find that the Grove - OLED outputs "Hello World".
+
+```
+sudo python Grove-OLED_Display_0.96inch.py
+```
+
+
 ## Resources
------------
-- **[Eagle]** [Grove-OLED128x64](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/resource/OLED%20128x64.zip)
+
 - **[PDF]** [Grove-OLED128x64 Schematic](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/resource/OLED%20128x64%20SCH.pdf)
+
 - **[PDF]** [Grove-OLED128x64 PCB](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/resource/OLED%20128x64%20PCB.pdf)
-- **[Library]** [GitHub Library for OLED](https://github.com/Seeed-Studio/OLED_Display_128X64/archive/master.zip)
-- **[Datasheet]** [Resources of SSD1308_1.0.pdf](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/resource/SSD1308_1.0.pdf)
-- **[Datasheet]** [Resources of LY190-128064.pdf](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/resource/LY190-128064.pdf)
+
 - **[Wiki]** [Beaglebone Green Wiki](http://wiki.seeedstudio.com/BeagleBone_Green/)
+
+- **[Eagle]** [Grove-OLED128x64](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/resource/OLED%20128x64.zip)
+
+- **[Library]** [GitHub Library for OLED](https://github.com/Seeed-Studio/OLED_Display_128X64/archive/master.zip)
+
+- **[Datasheet]** [Resources of SSD1308_1.0.pdf](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/resource/SSD1308_1.0.pdf)
+
+- **[Datasheet]** [Resources of LY190-128064.pdf](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/resource/LY190-128064.pdf)
+
 
 ## Tech Support
 
