@@ -134,7 +134,7 @@ void loop()
 
 - **Step 3.** We can see "Hello World!" on screen.
 
-### Play with Raspberry Pi
+### Play With Raspberry Pi
 The above python script for BeagleBone Green also works for Raspberry Pi, But the I2C bus is different. On Raspberry Pi 2/3, the I2C bus is 1. The script with changing `bus=2` to `bus=1` will  work on Pi.
 
 #### Hardware
