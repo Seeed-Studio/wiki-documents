@@ -19,19 +19,22 @@ We can switch among three detection modes to take your readings. They are infrar
 [![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)
 
 ## Features
---------
 
 -   Selectable detection modes
 -   High resolution 16-Bit digital output at 400 kHz I2C Fast-Mode
 -   Wide dynamic range: 0.1 - 40,000 LUX
 -   Wide operating temperature range: -40°C to 85°C
 -   Programmable interrupt function with User-Defined Upper and lower threshold settings
+-   I2C Address  0x29
+
+!!!Note
+    If you want to use multiplue I2C devices, please refer to [Software I2C](http://wiki.seeedstudio.com/Arduino_Software_I2C_user_guide/).
 
 !!!Tip
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
 ## Specifications
---------------
+
 
 | Items                      | Min  |  Typical |  Max  |  Unit |
 |----------------------------|------|----------|-------|-------|
@@ -41,7 +44,7 @@ We can switch among three detection modes to take your readings. They are infrar
 | SCL,SDA input high voltage | 2.3  |     \    |  5.1  |   V   |
 
 ## Platforms Supported
--------------------
+
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -78,93 +81,95 @@ We can switch among three detection modes to take your readings. They are infrar
 
 
 ## Getting Started
-------
 
-### With [Arduino](/Arduino "Arduino")
+!!!Note
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
-#### Connection
-Here we will show you how this Grove - Digital light sensor works via a simple demo. First of all, we need to prepare the below stuffs:
+### Play With Arduino
 
-| Seeeduino V4 | Grove - Digital light sensor | Base Shield |
+#### Hardware
+
+- **Step 1.** Prepare the below stuffs:
+
+| Seeeduino V4 | Base Shield | Grove - Digital light sensor |
 |--------------|----------------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Digital_Light_Sensor/raw/master/img/digital%20light%20sensor_s.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|
-|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
+|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Digital_Light_Sensor/raw/master/img/digital%20light%20sensor_s.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|
 
 
-- Connect Grove - Digital light Sensor to **I2C** port of base shield.
-- Plug the base Shield into Arduino.
-- Connect Arduino to PC by using a USB cable.
+- **Step 2.** Connect Grove - Digital light Sensor to **I2C** port of base shield.
+- **Step 3.** Plug the base Shield into Arduino.
+- **Step 4.** Connect Arduino to PC by using a USB cable.
 
 ![](https://github.com/SeeedDocument/Grove-Digital_Light_Sensor/raw/master/img/arduino%20connection.jpg)
 
 #### Software
 
-- Download the library from here [Digital Light Sensor Library](https://github.com/Seeed-Studio/Grove_Digital_Light_Sensor/archive/master.zip);
-- Please follow [how to install an arduino library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install library.
-- Open the code directly by the path: **File -> Example ->Digital_Light_Sensor->Digital_Light_Sensor**.
+- **Step 1.** Download the library from here [Digital Light Sensor Library](https://github.com/Seeed-Studio/Grove_Digital_Light_Sensor/archive/master.zip);
+- **Step 2.** Please follow [how to install an arduino library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install library.
+- **Step 3.** Open the code directly by the path: **File -> Example ->Digital_Light_Sensor->Digital_Light_Sensor**.
 
 ![](https://github.com/SeeedDocument/Grove-Digital_Light_Sensor/raw/master/img/library%20example.jpg)
 
 - Or copy below code to IDE and upload to Arduino.
-```      
-    /*
-     * Digital_Light_Sensor.ino
-     * A library for TSL2561
-     *
-     * Copyright (c) 2012 seeed technology inc.
-     * Website    : www.seeed.cc
-     * Author     : zhangkun
-     * Create Time:
-     * Change Log :
-     *
-     * The MIT License (MIT)
-     *
-     * Permission is hereby granted, free of charge, to any person obtaining a copy
-     * of this software and associated documentation files (the "Software"), to deal
-     * in the Software without restriction, including without limitation the rights
-     * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-     * copies of the Software, and to permit persons to whom the Software is
-     * furnished to do so, subject to the following conditions:
-     *
-     * The above copyright notice and this permission notice shall be included in
-     * all copies or substantial portions of the Software.
-     *
-     * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-     * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-     * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-     * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-     * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-     * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-     * THE SOFTWARE.
-     */
+```c  
+/*
+    Digital_Light_Sensor.ino
+    A library for TSL2561
 
-    #include <Wire.h>
-    #include <Digital_Light_TSL2561.h>
-    void setup()
-    {
-      Wire.begin();
-      Serial.begin(9600);
-      TSL2561.init();
-    }
+    Copyright (c) 2012 seeed technology inc.
+    Website    : www.seeed.cc
+    Author     : zhangkun
+    Create Time:
+    Change Log :
 
-    void loop()
-    {
-      Serial.print("The Light value is: ");
-      Serial.println(TSL2561.readVisibleLux());
-      delay(1000);
-    }
+    The MIT License (MIT)
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+*/
+
+#include <Wire.h>
+#include <Digital_Light_TSL2561.h>
+void setup()
+{
+  Wire.begin();
+  Serial.begin(9600);
+  TSL2561.init();
+}
+
+void loop()
+{
+  Serial.print("The Light value is: ");
+  Serial.println(TSL2561.readVisibleLux());
+  delay(1000);
+}
 ```
 
-- Open the serial monitor to monitor the result.
+- **Step 4.** Open the serial monitor to monitor the result.
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Digital_Light_Sensor/master/img/Digital_Light_Sensor_Score_Picture.jpg)
 
+### Play With Raspberry Pi
 
-### With Raspberry Pi
+#### Hardware
 
-#### Connection
-
-First of all, we need to prepare the below stuffs:
+- **Step 1.** Prepare the below stuffs:
 
 | Raspberry pi | Grove - Digital light sensor | GrovePi_Plus |
 |--------------|-------------|-----------------|
@@ -178,331 +183,346 @@ First of all, we need to prepare the below stuffs:
 
 #### Software
 
-- Navigate to the demos' directory:
-```
-    cd yourpath/GrovePi/Software/Python/grove_i2c_digital_light_sensor/
-```
--   To see the code
+- **Step 1.** Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment.
+
+- **Step 1.** Navigate to the demos' directory:
 
 ```
-    nano grove_i2c_digital_light_sensor.py  # "Ctrl+x" to exit #
-```
-```
-    import time
-    import smbus
-    from Adafruit_I2C import Adafruit_I2C
-    import RPi.GPIO as GPIO
-    import grovepi
-    from smbus import SMBus
-
-    global I2C_ADDRESS
-    global I2C_SMBUS
-    global _CMD
-    global _CMD_CLEAR
-    global _CMD_WORD
-    global _CMD_BLOCK
-    global _REG_CONTROL
-    global _REG_TIMING
-    global _REG_ID
-    global _REG_BLOCKREAD
-    global _REG_DATA0
-    global _REG_DATA1
-    global _POWER_UP
-    global _POWER_DOWN
-    global _GAIN_LOW
-    global _GAIN_HIGH
-    global _INTEGRATION_START
-    global _INTEGRATION_STOP
-    global _INTEGRATE_13
-    global _INTEGRATE_101
-    global _INTEGRATE_402
-    global _INTEGRATE_DEFAULT
-    global _INTEGRATE_NA
-    global _GAIN
-    global _MANUAL
-    global _INTEG
-    global _CHANNEL0
-    global _CHANNEL1
-    global _D0
-    global _D1
-    global _LUX
-
-
-    # bus parameters
-    rev = GPIO.RPI_REVISION
-    if rev == 2 or rev == 3:
-        I2C_SMBUS = smbus.SMBus(1)
-    else:
-        I2C_SMBUS = smbus.SMBus(0)
-
-    # Default I2C address
-    I2C_ADDRESS = 0x29
-
-    # Commands
-    _CMD       = 0x80
-    _CMD_CLEAR = 0x40
-    _CMD_WORD  = 0x20
-    _CMD_BLOCK = 0x10
-
-    # Registers
-    _REG_CONTROL   = 0x00
-    _REG_TIMING    = 0x01
-    _REG_ID        = 0x0A
-    _REG_BLOCKREAD = 0x0B
-    _REG_DATA0     = 0x0C
-    _REG_DATA1     = 0x0E
-
-    # Control parameters
-    _POWER_UP   = 0x03
-    _POWER_DOWN = 0x00
-
-    # Timing parameters
-    _GAIN_LOW          = 0b00000000
-    _GAIN_HIGH         = 0b00010000
-    _INTEGRATION_START = 0b00001000
-    _INTEGRATION_STOP  = 0b00000000
-    _INTEGRATE_13      = 0b00000000
-    _INTEGRATE_101     = 0b00000001
-    _INTEGRATE_402     = 0b00000010
-    _INTEGRATE_DEFAULT = _INTEGRATE_402
-    _INTEGRATE_NA      = 0b00000011
-
-    # Testing parameters
-    ambient  = None
-    IR       = None
-    _ambient = 0
-    _IR      = 0
-    _LUX     = None
-
-
-    class Tsl2561(object):
-            i2c = None
-
-            def _init__(self, bus = I2C_SMBUS, addr = I2C_ADDRESS, debug = 1, pause = 0.8):  # set debug = 0 stops debugging output on screen
-                    assert(bus is not None)
-                assert(addr > 0b000111 and addr < 0b1111000)
-
-                    self.i2c     = Adafruit_I2C(addr)
-                    self.pause   = pause
-                    self.debug   = debug
-                    self.gain    = 0
-                self._bus    = bus
-                    self._addr   = addr
-
-                ambient        = None
-                    IR             = None
-                self._ambient  = 0
-                    self._IR       = 0
-                self._LUX      = None
-                    self._control(_POWER_UP)
-                    self._partno_revision()
-
-    #        @property
-
-            def _lux(self, gain):
-                    '''
-                    Returns a lux value.  Returns None if no valid value is set yet.
-                    '''
-                    var = readLux(gain)
-                    ambient = var[0]
-                    IR = var[1]
-                    self._ambient = var[2]
-                    self._IR = var[3]
-                    self_LUX = var[4]
-                    return (ambient, IR, self._ambient, self._IR, self._LUX)
-
-
-            def setGain(self, gain = 1):
-                    """ Set the gain """
-                    if (gain != self.gain):
-                            if (gain==1):
-                                    cmd = _CMD | _REG_TIMING
-                                    value = 0x02
-                                    self.i2c.write8(cmd, value)  # Set gain = 1X and timing = 402 mSec
-                                    if (self.debug):
-                                            print "Setting low gain"
-                            else:
-                                    cmd = _CMD | _REG_TIMING
-                                    value = 0x12
-                                    self.i2c.write8(cmd, value)  # Set gain = 16X and timing = 402 mSec
-                                    if (self.debug):
-                                            print "Setting high gain"
-                            self.gain=gain;  # Safe gain for calculation
-                            time.sleep(self.pause)  # Pause for integration (self.pause must be bigger than integration time)
-
-
-            def readWord(self, reg):
-                    """ Reads a word from the TSL2561 I2C device """
-                    try:
-                            wordval = self.i2c.readU16(reg)
-                            newval = self.i2c.reverseByteOrder(wordval)
-                            if (self.debug):
-                                    print("I2C: Device 0x%02X: returned 0x%04X from reg 0x%02X" % (self._addr, wordval & 0xFFFF, reg))
-                            return newval
-                    except IOError:
-                            print("Error accessing 0x%02X: Chcekcyour I2C address" % self._addr)
-                            return -1
-
-
-            def readFull(self, reg = 0x8C):
-                    """ Read visible + IR diode from the TSL2561 I2C device """
-                    return self.readWord(reg);
-
-            def readIR(self, reg = 0x8E):
-                    """ Reads only IR diode from the TSL2561 I2C device """
-                    return self.readWord(reg);
-
-            def readLux(self, gain = 0):
-                    """ Grabs a lux reading either with autoranging (gain=0) or with specific gain (1, 16) """
-                    if (self.debug):
-                            print "gain = ", gain
-                    if (gain == 1 or gain == 16):
-                            self.setGain(gain)  # Low/highGain
-                            ambient = self.readFull()
-                            IR = self.readIR()
-                    elif (gain == 0):  # Auto gain
-                            self.setGain(16)  # First try highGain
-                            ambient = self.readFull()
-                            if (ambient < 65535):
-                                    IR = self.readIR()
-                            if (ambient >= 65535 or IR >= 65535):  # Value(s) exeed(s) datarange
-                                    self.setGain(1)  # Set lowGain
-                                    ambient = self.readFull()
-                                    IR = self.readIR()
-
-                    # If either sensor is saturated, no acculate lux value can be achieved.
-                    if (ambient == 0xffff or IR == 0xffff):
-                    self._LUX = None
-                    self._ambient = None
-                    self._IR = None
-                    return (self.ambient, self.IR, self._ambient, self._IR, self._LUX)
-                    if (self.gain == 1):
-                            self._ambient = 16 * ambient  # Scale 1x to 16x
-                            self._IR = 16 * IR            # Scale 1x to 16x
-                    else:
-                            self._ambient = 1 * ambient
-                            self._IR = 1 * IR
-                    if (self.debug):
-                            print "IR Result without scaling: ", IR
-                            print "IR Result: ", self._IR
-                            print "Ambient Result without scaling: ", ambient
-                            print "Ambient Result: ", self._ambient
-
-                    if (self._ambient == 0):
-                    # Sometimes, the channel 0 returns 0 when dark ...
-                    self._LUX = 0.0
-                    return (ambient, IR, self._ambient, self._IR, self._LUX)
-
-                    ratio = (self._IR / float(self._ambient))  # Change to make it run under python 2
-
-                    if (self.debug):
-                            print "ratio: ", ratio
-
-                    if ((ratio >= 0) and (ratio <= 0.52)):
-                            self._LUX = (0.0315 * self._ambient) - (0.0593 * self._ambient * (ratio ** 1.4))
-                    elif (ratio <= 0.65):
-                            self._LUX = (0.0229 * self._ambient) - (0.0291 * self._IR)
-                    elif (ratio <= 0.80):
-                            self._LUX = (0.0157 * self._ambient) - (0.018 * self._IR)
-                    elif (ratio <= 1.3):
-                            self._LUX = (0.00338 * self._ambient) - (0.0026 * self._IR)
-                    elif (ratio > 1.3):
-                            self._LUX = 0
-
-                    return (ambient, IR, self._ambient, self._IR, self._LUX)
-
-            def _partno_revision(self):
-                    """ Read Partnumber and revision of the sensor """
-                    cmd = _CMD | _REG_ID
-                    value = self.i2c.readS8(cmd)
-                    part = str(value)[7:4]
-                    if (part == "0000"):
-                            PartNo = "TSL2560CS"
-                    elif (part == "0001"):
-                            PartNo = "TSL2561CS"
-                    elif (part == "0100"):
-                            PartNo = "TSL2560T/FN/CL"
-                    elif (part == "0101"):
-                            PartNo = "TSL2561T/FN/CL"
-                    else:
-                            PartNo = "not TSL2560 or TSL 2561"
-                    RevNo = str(value)[3:0]
-                    if (self.debug):
-                            print "responce: ", value
-                            print "PartNo = ", PartNo
-                            print "RevNo = ", RevNo
-                    return (PartNo, RevNo)
-
-            def _control(self, params):
-                    if (params == _POWER_UP):
-                            print "Power ON"
-                    elif (params == _POWER_DOWN):
-                            print "Power OFF"
-                    else:
-                            print "No params given"
-                    cmd = _CMD | _REG_CONTROL | params
-                    self.i2c.write8(self._addr, cmd)  # select command register and power on
-                time.sleep(0.4)  # Wait for 400ms to power up or power down.
-
-
-
-    def main():
-            TSL2561 = Tsl2561()
-            TSL2561._init__(I2C_SMBUS, I2C_ADDRESS)
-            while (True):
-                    gain=0
-                    val = TSL2561.readLux(gain)
-                    ambient = val[0]
-                    IR = val[1]
-                    _ambient = val[2]
-                    _IR = val[3]
-                    _LUX = val[4]
-                    if (ambient == 0xffff or IR == 0xffff):
-                            print ("Sensor is saturated, no lux value can be achieved:")
-                    print ("ambient = " + ambient)
-                        print ("IR = " + IR)
-                            print ("light = " + _LUX)
-                elif (_ambient == 0):
-                        print ("It's dark:")
-                            print ("ambient = " + str(ambient))
-                    print ("IR = " + str(IR))
-                        print ("_ambient = " + str(_ambient))
-                            print ("_IR = " + str(_IR))
-                    print ("Light = " + str(_LUX) + " lux.")
-                    else:
-                            print ("There is light:")
-                    print ("ambient = " + str(ambient))
-                            print ("IR = " + str(IR))
-                            print ("_ambient = " + str(_ambient))
-                            print ("_IR = " + str(_IR))
-                            print ("Light = " + str(_LUX) + " lux.")
-                    time.sleep(2)
-                    ambient  = None
-                    IR       = None
-                    _ambient = 0
-                    _IR      = 0
-                    _LUX     = None
-                TSL2561._control(_POWER_DOWN)
-
-
-    if __name__=="__main__":
-            main()
+cd yourpath/GrovePi/Software/Python/grove_i2c_digital_light_sensor/
 ```
 
-- Run the demo.
+- **Step 2.** To see the code
+
 ```
-    sudo python grove_i2c_digital_light_sensor.py
+nano grove_i2c_digital_light_sensor.py  # "Ctrl+x" to exit #
 ```
 
-- Here is the Result.
+```py
+#!/usr/bin/python
+# TSL2561 I2C Light-To-Digital converter library for the Raspberry Pi.
+# Datasheet: https://www.adafruit.com/datasheets/TSL2561.pdf
+#
+# This library is based on the work by Cedric Maion https://github.com/cmaion/TSL2561
+#
+# Read http://www.dexterindustries.com/topic/greehouse-project/ for the forum discussion about the sensor
+
+from time import sleep
+import smbus
+from Adafruit_I2C import Adafruit_I2C
+import RPi.GPIO as GPIO
+from smbus import SMBus
+
+TSL2561_Control = 0x80
+TSL2561_Timing = 0x81
+TSL2561_Interrupt = 0x86
+TSL2561_Channel0L = 0x8C
+TSL2561_Channel0H = 0x8D
+TSL2561_Channel1L = 0x8E
+TSL2561_Channel1H = 0x8F
+
+TSL2561_Address = 0x29 #device address
+
+LUX_SCALE = 14 # scale by 2^14
+RATIO_SCALE = 9 # scale ratio by 2^9
+CH_SCALE = 10 # scale channel values by 2^10
+CHSCALE_TINT0 = 0x7517 # 322/11 * 2^CH_SCALE
+CHSCALE_TINT1 = 0x0fe7 # 322/81 * 2^CH_SCALE
+
+K1T = 0x0040 # 0.125 * 2^RATIO_SCALE
+B1T = 0x01f2 # 0.0304 * 2^LUX_SCALE
+M1T = 0x01be # 0.0272 * 2^LUX_SCALE
+K2T = 0x0080 # 0.250 * 2^RATIO_SCA
+B2T = 0x0214 # 0.0325 * 2^LUX_SCALE
+M2T = 0x02d1 # 0.0440 * 2^LUX_SCALE
+K3T = 0x00c0 # 0.375 * 2^RATIO_SCALE
+B3T = 0x023f # 0.0351 * 2^LUX_SCALE
+M3T = 0x037b # 0.0544 * 2^LUX_SCALE
+K4T = 0x0100 # 0.50 * 2^RATIO_SCALE
+B4T = 0x0270 # 0.0381 * 2^LUX_SCALE
+M4T = 0x03fe # 0.0624 * 2^LUX_SCALE
+K5T = 0x0138 # 0.61 * 2^RATIO_SCALE
+B5T = 0x016f # 0.0224 * 2^LUX_SCALE
+M5T = 0x01fc # 0.0310 * 2^LUX_SCALE
+K6T = 0x019a # 0.80 * 2^RATIO_SCALE
+B6T = 0x00d2 # 0.0128 * 2^LUX_SCALE
+M6T = 0x00fb # 0.0153 * 2^LUX_SCALE
+K7T = 0x029a # 1.3 * 2^RATIO_SCALE
+B7T = 0x0018 # 0.00146 * 2^LUX_SCALE
+M7T = 0x0012 # 0.00112 * 2^LUX_SCALE
+K8T = 0x029a # 1.3 * 2^RATIO_SCALE
+B8T = 0x0000 # 0.000 * 2^LUX_SCALE
+M8T = 0x0000 # 0.000 * 2^LUX_SCALE
+
+
+
+K1C = 0x0043 # 0.130 * 2^RATIO_SCALE
+B1C = 0x0204 # 0.0315 * 2^LUX_SCALE
+M1C = 0x01ad # 0.0262 * 2^LUX_SCALE
+K2C = 0x0085 # 0.260 * 2^RATIO_SCALE
+B2C = 0x0228 # 0.0337 * 2^LUX_SCALE
+M2C = 0x02c1 # 0.0430 * 2^LUX_SCALE
+K3C = 0x00c8 # 0.390 * 2^RATIO_SCALE
+B3C = 0x0253 # 0.0363 * 2^LUX_SCALE
+M3C = 0x0363 # 0.0529 * 2^LUX_SCALE
+K4C = 0x010a # 0.520 * 2^RATIO_SCALE
+B4C = 0x0282 # 0.0392 * 2^LUX_SCALE
+M4C = 0x03df # 0.0605 * 2^LUX_SCALE
+K5C = 0x014d # 0.65 * 2^RATIO_SCALE
+B5C = 0x0177 # 0.0229 * 2^LUX_SCALE
+M5C = 0x01dd # 0.0291 * 2^LUX_SCALE
+K6C = 0x019a # 0.80 * 2^RATIO_SCALE
+B6C = 0x0101 # 0.0157 * 2^LUX_SCALE
+M6C = 0x0127 # 0.0180 * 2^LUX_SCALE
+K7C = 0x029a # 1.3 * 2^RATIO_SCALE
+B7C = 0x0037 # 0.00338 * 2^LUX_SCALE
+M7C = 0x002b # 0.00260 * 2^LUX_SCALE
+K8C = 0x029a # 1.3 * 2^RATIO_SCALE
+B8C = 0x0000 # 0.000 * 2^LUX_SCALE
+M8C = 0x0000 # 0.000 * 2^LUX_SCALE
+
+# bus parameters
+rev = GPIO.RPI_REVISION
+if rev == 2 or rev == 3:
+	bus = smbus.SMBus(1)
+else:
+	bus = smbus.SMBus(0)
+i2c = Adafruit_I2C(TSL2561_Address)
+
+debug = False
+cooldown_time = 0.005 # measured in seconds
+packageType = 0 # 0=T package, 1=CS package
+gain = 0        # current gain: 0=1x, 1=16x [dynamically selected]
+gain_m = 1      # current gain, as multiplier
+timing = 2      # current integration time: 0=13.7ms, 1=101ms, 2=402ms [dynamically selected]
+timing_ms = 0   # current integration time, in ms
+channel0 = 0    # raw current value of visible+ir sensor
+channel1 = 0    # raw current value of ir sensor
+schannel0 = 0   # normalized current value of visible+ir sensor
+schannel1 = 0   # normalized current value of ir sensor
+
+
+def readRegister(address):
+	try:
+		byteval = i2c.readU8(address)
+
+		sleep(cooldown_time)
+		if (debug):
+			print("TSL2561.readRegister: returned 0x%02X from reg 0x%02X" % (byteval, address))
+		return byteval
+	except IOError:
+		print("TSL2561.readRegister: error reading byte from reg 0x%02X" % address)
+		return -1
+
+
+def writeRegister(address, val):
+	try:
+		i2c.write8(address, val)
+
+		sleep(cooldown_time)
+		if (debug):
+			print("TSL2561.writeRegister: wrote 0x%02X to reg 0x%02X" % (val, address))
+	except IOError:
+
+		sleep(cooldown_time)
+		print("TSL2561.writeRegister: error writing byte to reg 0x%02X" % address)
+		return -1
+
+def powerUp():
+	writeRegister(TSL2561_Control, 0x03)
+
+def powerDown():
+	writeRegister(TSL2561_Control, 0x00)
+
+def setTintAndGain():
+	global gain_m, timing_ms
+
+	if gain == 0:
+		gain_m = 1
+	else:
+		gain_m = 16
+
+	if timing == 0:
+		timing_ms = 13.7
+	elif timing == 1:
+		timing_ms = 101
+	else:
+		timing_ms = 402
+	writeRegister(TSL2561_Timing, timing | gain << 4)
+
+def readLux():
+	sleep(float(timing_ms + 1) / 1000)
+
+	ch0_low  = readRegister(TSL2561_Channel0L)
+	ch0_high = readRegister(TSL2561_Channel0H)
+	ch1_low  = readRegister(TSL2561_Channel1L)
+	ch1_high = readRegister(TSL2561_Channel1H)
+
+	global channel0, channel1
+	channel0 = (ch0_high<<8) | ch0_low
+	channel1 = (ch1_high<<8) | ch1_low
+
+	sleep(cooldown_time)
+	if debug:
+		print("TSL2561.readVisibleLux: channel 0 = %i, channel 1 = %i [gain=%ix, timing=%ims]" % (channel0, channel1, gain_m, timing_ms))
+
+def readVisibleLux():
+	global timing, gain
+
+	powerUp()
+	readLux()
+
+	if channel0 < 500 and timing == 0:
+		timing = 1
+		sleep(cooldown_time)
+		if debug:
+			print("TSL2561.readVisibleLux: too dark. Increasing integration time from 13.7ms to 101ms")
+		setTintAndGain()
+		readLux()
+
+	if channel0 < 500 and timing == 1:
+		timing = 2
+		sleep(cooldown_time)
+		if debug:
+			print("TSL2561.readVisibleLux: too dark. Increasing integration time from 101ms to 402ms")
+		setTintAndGain()
+		readLux()
+
+	if channel0 < 500 and timing == 2 and gain == 0:
+		gain = 1
+		sleep(cooldown_time)
+		if debug:
+			print("TSL2561.readVisibleLux: too dark. Setting high gain")
+		setTintAndGain()
+		readLux()
+
+	if (channel0 > 20000 or channel1 > 20000) and timing == 2 and gain == 1:
+		gain = 0
+		sleep(cooldown_time)
+		if debug:
+			print("TSL2561.readVisibleLux: enough light. Setting low gain")
+		setTintAndGain()
+		readLux()
+
+	if (channel0 > 20000 or channel1 > 20000) and timing == 2:
+		timing = 1
+		sleep(cooldown_time)
+		if debug:
+			print("TSL2561.readVisibleLux: enough light. Reducing integration time from 402ms to 101ms")
+		setTintAndGain()
+		readLux()
+
+	if (channel0 > 10000 or channel1 > 10000) and timing == 1:
+		timing = 0
+		sleep(cooldown_time)
+		if debug:
+			print("TSL2561.readVisibleLux: enough light. Reducing integration time from 101ms to 13.7ms")
+		setTintAndGain()
+		readLux()
+
+	powerDown()
+
+	if (timing == 0 and (channel0 > 5000 or channel1 > 5000)) or (timing == 1 and (channel0 > 37000 or channel1 > 37000)) or (timing == 2 and (channel0 > 65000 or channel1 > 65000)):
+		# overflow
+		return -1
+
+	return calculateLux(channel0, channel1)
+
+def calculateLux(ch0, ch1):
+	chScale = 0
+	if timing == 0:   # 13.7 msec
+		chScale = CHSCALE_TINT0
+	elif timing == 1: # 101 msec
+		chScale = CHSCALE_TINT1;
+	else:           # assume no scaling
+		chScale = (1 << CH_SCALE)
+
+	if gain == 0:
+		chScale = chScale << 4 # scale 1X to 16X
+
+	# scale the channel values
+	global schannel0, schannel1
+	schannel0 = (ch0 * chScale) >> CH_SCALE
+	schannel1 = (ch1 * chScale) >> CH_SCALE
+
+	ratio = 0
+	if schannel0 != 0:
+		ratio = (schannel1 << (RATIO_SCALE+1)) / schannel0
+	ratio = (ratio + 1) >> 1
+
+	if packageType == 0: # T package
+		if ((ratio >= 0) and (ratio <= K1T)):
+			b=B1T; m=M1T;
+		elif (ratio <= K2T):
+			b=B2T; m=M2T;
+		elif (ratio <= K3T):
+			b=B3T; m=M3T;
+		elif (ratio <= K4T):
+			b=B4T; m=M4T;
+		elif (ratio <= K5T):
+			b=B5T; m=M5T;
+		elif (ratio <= K6T):
+			b=B6T; m=M6T;
+		elif (ratio <= K7T):
+			b=B7T; m=M7T;
+		elif (ratio > K8T):
+			b=B8T; m=M8T;
+	elif packageType == 1: # CS package
+		if ((ratio >= 0) and (ratio <= K1C)):
+			b=B1C; m=M1C;
+		elif (ratio <= K2C):
+			b=B2C; m=M2C;
+		elif (ratio <= K3C):
+			b=B3C; m=M3C;
+		elif (ratio <= K4C):
+			b=B4C; m=M4C;
+		elif (ratio <= K5C):
+			b=B5C; m=M5C;
+		elif (ratio <= K6C):
+			b=B6C; m=M6C;
+		elif (ratio <= K7C):
+			b=B7C; m=M7C;
+
+	temp = ((schannel0*b)-(schannel1*m))
+	if temp < 0:
+		temp = 0;
+	temp += (1<<(LUX_SCALE-1))
+	# strip off fractional portion
+	lux = temp>>LUX_SCALE
+	sleep(cooldown_time)
+	if debug:
+		print("TSL2561.calculateLux: %i" % lux)
+
+	return lux
+
+def init():
+	powerUp()
+	setTintAndGain()
+	writeRegister(TSL2561_Interrupt, 0x00)
+	powerDown()
+
+def main():
+	init()
+	while (True):
+		print("Lux: %i [Vis+IR=%i, IR=%i @ Gain=%ix, Timing=%.1fms]" % (readVisibleLux(), channel0, channel1, gain_m, timing_ms))
+		sleep(1)
+
+if __name__ == "__main__":
+        main()
+```
+
+- **Step 3.** Run the demo.
+```
+sudo python grove_i2c_digital_light_sensor.py
+```
+
+- **Step 4.** Here is the Result.
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Digital_Light_Sensor/master/img/Grovepi_digital_light_sensor_00.png)
 
 
 ## Resources
---------
 
-- **[Eagle]** [Grove - Digital Light Sensor Eagle File](https://github.com/SeeedDocument/Grove-Digital_Light_Sensor/raw/master/res/Grove-Digital%20%20light%20%20sensor%20v1.0%20eagle%20file.zip)
+- **[Eagle]** [Grove - Digital Light Sensor Schematic](https://github.com/SeeedDocument/Grove-Digital_Light_Sensor/raw/master/res/Grove-Digital%20%20light%20%20sensor%20v1.0%20eagle%20file.zip)
 - **[PDF]** [Grove - Digital Light Sensor Sch PDF File](https://github.com/SeeedDocument/Grove-Digital_Light_Sensor/raw/master/res/Digital%20light%20sensor%20v1.0%20Sch.pdf)
 - **[PDF]** [Grove - Digital Light Sensor PCB PDF File](https://github.com/SeeedDocument/Grove-Digital_Light_Sensor/raw/master/res/Digital%20light%20sensor%20v1.0%20PCB.pdf)
 - **[Library]** [Library Github Grove-Digital Light](https://github.com/Seeed-Studio/Grove_Digital_Light_Sensor/archive/master.zip)
@@ -510,6 +530,20 @@ First of all, we need to prepare the below stuffs:
 
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Digital_Light_Sensor -->
+
+## Projects
+
+**Seeed LoRa IoTea Solution**: An automatic information collection system applied to tea plantation. It is part of intelligent agricultural information collection.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/SeeedStudio/seeed-lora-iotea-solution-b5ee95/embed' width='350'></iframe>
+
+**Intel Edison IoT Hydroponic Controller**: An IoT enabled Hydroponics Controller using the Intel Edison during the Boston IoT Hackathon.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/bltrobotics/intel-edison-iot-hydroponic-controller-d7132d/embed' width='350'></iframe>
+
+**COI - Light Transmission Meter**: The finished product uses the light sensor provided in the Grove Starter Kit Plus to measure change in light intensity.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/DigitalFabber/coi-light-transmission-meter-8044fd/embed' width='350'></iframe>
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
