@@ -103,7 +103,6 @@ The Hall Sensor is used by utilizing the external interrupts available on the ar
 
 - **Step 3.**  Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Hall_Sensor/master/img/Hall_Sensor_Demo_Code.jpg)
 
 ```c
 /****************************************************************************/	
