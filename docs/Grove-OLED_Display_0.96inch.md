@@ -140,6 +140,13 @@ To begin editing programs that live on BBG, you can use the [Cloud9 IDE](https:/
 
 Here are the steps how to display "Hello World" on OLED.
 
+#### Hardware
+
+- **Step 1.** Connect Grove - OLED to Grove I2C socket on BBG.
+- **Step 2.** Connect Seeeduino to PC via a USB cable.
+
+#### Software
+
 **Step 1:** Click the "+" in the top-right to create a new file.
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove_OLED_Display_0.96/master/images/C9-create-tab.png)
@@ -369,23 +376,13 @@ if __name__ == "__main__":
 
 **Step 3:** Save the file by clicking the disk icon with with the .py extension.
 
-**Step 4:** Connect Grove - OLED to Grove I2C socket on BBG.
+**Step 4:** Install smbus2 library `sudo pip3 install smbus2`
 
-**Step 5:** Install smbus2 library `sudo pip3 install smbus2`
-
-**Step 6:** Run the code. We'll find that the Grove - OLED outputs "Hello World".
+**Step 5:** Run the code. We'll find that the Grove - OLED outputs "Hello World".
 
 ```
 sudo python3 Grove-OLED_Display_0.96inch.py
 ```
-
-
-
-
-
-
-
-
 
 ### Play with Raspberry Pi
 The above python script for BeagleBone Green also works for Raspberry Pi, But the I2C bus is different. On Raspberry Pi 2/3, the I2C bus is 1. The script with changing `bus=2` to `bus=1` will  work on Pi.
