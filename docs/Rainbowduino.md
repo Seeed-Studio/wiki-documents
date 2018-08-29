@@ -10,7 +10,7 @@ The Rainbowduino series is an Arduino compatible controller board with professio
 
 *   Older versions :
 
-    *   [Rainbowduino LED driver platform - Atmega 168](/w/index.php?title=Rainbowduino_LED_driver_platform_-_Atmega_168&amp;action=edit&amp;redlink=1 "Rainbowduino_LED_driver_platform_-_Atmega_168&amp;action=edit&amp;redlink=1"): Not available now.
+    *   Rainbowduino LED driver platform - Atmega 168: Not available now.
 
     *   [Rainbowduino LED driver platform - ATmega328](/Rainbowduino_LED_driver_platform-ATmega328 "Rainbowduino LED driver platform - ATmega328"): The Rainbowduino board is an Arduino compatible controller board with professional LED driving capacity. It will drive an 8x8 RGB Led Matrix (Common Anode). It has revised to [Rainbowduino v3.0](/Rainbowduino_v3.0 "Rainbowduino v3.0").
 

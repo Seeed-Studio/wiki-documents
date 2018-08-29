@@ -450,7 +450,6 @@ This firmware allows you to use Processing to control the rainbowduino, so its o
 
 *   Processing Software, get it from [http://processing.org/](http://processing.org/)
 
-If you don't like Processing (JAVA) you are not limited to it. Check [http://wish.seeedstudio.com/?p=320](http://wish.seeedstudio.com/?p=320) for an example using [autoitscript](http://www.autoitscript.com/autoit3/index.shtml) sending data to the Arduino.
 
 <big>Patches for Arduino IDE</big>
 

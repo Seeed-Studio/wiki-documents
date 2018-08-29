@@ -205,7 +205,7 @@ void loop()
 
 *   It's very simple to use Speech Recognizer alone, please see the wiki of it first.
 
-We can choose what buttons we need according to the table&lt;ref&gt;Table of return value, [Grove - Speech Recognizer](/Seeed_BLE_Shield_v1)&lt;/ref&gt; of return value of Speech Recognizer. Following is the table of return value:
+We can choose what buttons we need according to the table&lt;ref&gt;Table of return value, [Grove - Speech Recognizer](/Seeed_BLE_Shield)&lt;/ref&gt; of return value of Speech Recognizer. Following is the table of return value:
 
 <center>
 <table >

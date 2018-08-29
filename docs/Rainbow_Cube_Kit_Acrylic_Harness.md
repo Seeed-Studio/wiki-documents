@@ -9,7 +9,7 @@ sku:    110060012
 ---
 ![](https://github.com/SeeedDocument/Rainbow_Cube_Kit_Acrylic_Harness/raw/master/img/Rainbow_Cube_Assembled.jpg)
 
-Rainbow Cube Kit Acrylic Harness is an exquisite, Transparent and easy-to-assembled acrylic case which custom made for [Rainbow Cube](/Rainbow_Cube "Rainbow Cube") Kit, it is designed by Riley Porter @Synthetos. This Harness is made of six piece of acrylic board, two bags of keys, four 16mm high plastic column and several screw nuts.
+Rainbow Cube Kit Acrylic Harness is an exquisite, Transparent and easy-to-assembled acrylic case which custom made for [Rainbow_Cube_Kit_Acrylic_Harness](/Rainbow_Cube_Kit_Acrylic_Harness "Rainbow_Cube_Kit_Acrylic_Harness") Kit, it is designed by Riley Porter @Synthetos. This Harness is made of six piece of acrylic board, two bags of keys, four 16mm high plastic column and several screw nuts.
 
 [![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Rainbow-Cube-Kit-Acrylic-Harness-p-1021.html)
 

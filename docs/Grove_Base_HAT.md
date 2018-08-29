@@ -62,7 +62,7 @@ The images below show an overview of Grove Base HAT hardware features. The pin-o
 
 - <font face="" size=5 font color="00b0f0">❹</font> **UART:**
 1 UART Grove port is used to connect Grove UART sensors. The UART of Raspberry Pi 3 is used by bluetooth. Please follow [THE RASPBERRY PI UARTS
-](Rashttps://www.raspberrypi.org/documentation/configuration/uart.md) to enable the UART.
+](https://www.raspberrypi.org/documentation/configuration/uart.md) to enable the UART.
 
 - <font face="" size=5 font color="00b0f0">❺</font> **System Power Switch:**
 Slide switch is used to change the logic level and operating voltage of the board to either 5V or 3.3V.

@@ -137,7 +137,7 @@ When you first power on ReSpeaker, it will create a Wi-Fi network called "ReSpea
 ![](https://github.com/SeeedDocument/Respeaker_Core/raw/master/img/wifi1.png)
 
 !!!Note
-    If "ReSpeakerXXXXXX" does not appear, but "LinkIt_Smart_7688_XXXXXX" is found. Please click [here](http://wiki.seeed.cc/Respeaker_Core/#q20-system-recovery-by-factory-image).
+    If "ReSpeakerXXXXXX" does not appear, but "LinkIt_Smart_7688_XXXXXX" is found. Please click [here](http://wiki.seeed.cc/ReSpeaker_Core/#q20-system-recovery-by-factory-image).
 
 
 Once you've obtained an IP address, open a web browser, and enter 192.168.100.1 in the address bar. After a few seconds, a web page will appear asking for ssid and password of an existing Wi-Fi network.
