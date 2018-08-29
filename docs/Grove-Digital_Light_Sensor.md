@@ -20,6 +20,8 @@ We can switch among three detection modes to take your readings. They are infrar
 
 [![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)
 
+## Version
+
 | Product Version              | Changes                                                                                                                                                                                    | Released Date |
 |------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
 | Grove - Digital Light Sensor V1.1 | Initial                                                                                                                                                                                    | Oct 2015      |
