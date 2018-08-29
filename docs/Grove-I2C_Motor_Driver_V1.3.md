@@ -251,7 +251,7 @@ With stop() function, you are able to stop a running DC motor.
 - **motor_id** represents which motor to use. You can fill MOTOR1 or MOTOR2.
 
 
-### 4. Drive a Stepper Motor
+- Drive a Stepper Motor
 
 Take [24BYJ48 Stepper Motor](http://www.seeedstudio.com/depot/high-quality-stepper-motor-12v-p-335.html?cPath=170_171) as an example, The hardware installation as shown below:
 
