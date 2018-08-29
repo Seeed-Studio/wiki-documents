@@ -16,8 +16,13 @@ This Grove - GPS module is a cost-efficient and field-programmable gadget armed 
 
 [![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/grove-gps-p-959.html)
 
+## Version
+
+| Product Version              | Changes                                                                                                                                                                                    | Released Date |
+|------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
+| Grove - GPS V1.2 | Initial                                                                                                                                                                                    | Oct 2015      |
+
 ## Features
---------
 
 -   Supports NMEA and u-blox 6 protocols. ( Till Jan,10 2014, after that SIM28 instead)
 -   Low power consumption
@@ -29,7 +34,6 @@ This Grove - GPS module is a cost-efficient and field-programmable gadget armed 
 
 
 ## Specifications
--------------
 
 | **Parameter**    | **Range/Value**              |
 |------------------|------------------------------|
@@ -39,7 +43,6 @@ This Grove - GPS module is a cost-efficient and field-programmable gadget armed 
 | Default BaudRate | 9600                         |
 
 ## Platforms Supported
--------------------
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -50,36 +53,48 @@ This Grove - GPS module is a cost-efficient and field-programmable gadget armed 
 
 
 ## Getting Started
----------------
 
-Following [Grove system](http://wiki.seeedstudio.com/Grove_System/) to help the user getting started with Grove.
+!!!Note
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
-### With Arduino
+### Play With Arduino
+
 This sample simply reads from the GPS by using software serial and sends it back on the serial port.
 
-#### Connection
-Here we will show you how this Grove - GPS works via a simple demo. First of all, we need to prepare the below stuffs:
+#### Hardware
 
-| Seeeduino V4 | Grove - GPS | Base Shield |
-|--------------|----------------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-GPS/raw/master/img/Grove-GPS_s.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|
-|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-GPS-p-959.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
+- **Step 1.** Prepare the below stuffs:
 
-- Connect the Grove-GPS to **Digital Port 2** on the Grove - Base Shield by using a Grove Universal 4 pin cable.
-- Plug the base Shield into Seeeduino-V4.
-- Connect Arduino to PC by using a USB cable.
+| Seeeduino V4.2 | Base Shield|  Grove - GPS |
+|--------------|-------------|-----------------|
+|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-GPS/raw/master/img/45d_small.jpg)|
+|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-GPS-p-959.html)|
 
-![](https://github.com/SeeedDocument/Grove-GPS/raw/master/img/Connection.jpg)
+- **Step 2.** Connect Grove - GPS to port **D2** of Grove-Base Shield.
+- **Step 3.** Plug Grove - Base Shield into Seeeduino.
+- **Step 4.** Connect Seeeduino to PC via a USB cable.
+
+![](https://github.com/SeeedDocument/Grove-GPS/raw/master/img/with_ardu.jpg)
+
+!!!Note
+	If we don't have Grove Base Shield, We also can directly connect Grove - GPS to Seeeduino as below.
+
+| Seeeduino     | Grove - GPS |
+|---------------|-------------------------|
+| 5V            | Red                     |
+| GND           | Black                   |
+| D3            | White                   |
+| D2            | Yellow                  |
 
 #### Software
 
 !!!Note
     Please note that the u-center software is for windows only.
 
--   Install [u-center](https://www.u-blox.com/en/product/u-center-windows) software.
-- Upload the code below to your Arduino/Seeeduino.
+- **Step 1.** Install [u-center](https://www.u-blox.com/en/product/u-center-windows) software.
+- **Step 2.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
-```
+```c
 #include <SoftwareSerial.h>
 SoftwareSerial SoftSerial(2, 3);
 unsigned char buffer[64];                   // buffer array for data receive over serial port
@@ -117,55 +132,68 @@ void clearBufferArray()                     // function to clear buffer array
 }
 ```
 
+- **Step 3.** Open U-center.
 
-- Open U-center.
--  Click Receiver -> Port and select the COM port that the Arduino is using.
--  Click Receiver -> Baudrate and make sure 9600 is selected.
--  Click View -> Text Console and you should get a window that will stream NMEA data.
--  Open the serial monitor,You can see as show below:
+- **Step 4.** Click Receiver -> Port and select the COM port that the Arduino is using.
+
+- **Step 5.** Click Receiver -> Baudrate and make sure 9600 is selected.
+
+- **Step 6.** Click View -> Text Console and you should get a window that will stream NMEA data.
+
+- **Step 7.** Open the serial monitor,You can see as show below:
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/img/GPS_result.jpg)
 
 
 **We also can view data in Google Earth:**
 
-1. Click File -&gt; Database Export -&gt; Google Earth KML
-2. This should launch Google Earth with the history that was captured by u-center.
-3. Alternatively, data can be recorded by pressing the red circle on the toolbar which will then ask where you want to save the record.
-4. When we have captured enough data, click the black square to stop recording.
-5. We can then convert the .ubx file generated to KML by using uploading the ubx file to [GPSVisualizer](http://www.gpsvisualizer.com/).
+- **Step 1.** Click File -&gt; Database Export -&gt; Google Earth KML
 
-### With Raspberry Pi
+- **Step 2.** This should launch Google Earth with the history that was captured by u-center.
 
-#### Connection
-First of all, we need to prepare the below stuffs:
+- **Step 3.** Alternatively, data can be recorded by pressing the red circle on the toolbar which will then ask where you want to save the record.
 
-| Raspberry pi | Grove - GPS | GrovePi_Plus |
+- **Step 4.** When we have captured enough data, click the black square to stop recording.
+
+- **Step 5.** We can then convert the .ubx file generated to KML by using uploading the ubx file to [GPSVisualizer](http://www.gpsvisualizer.com/).
+
+### Play With Raspberry Pi
+
+#### Hardware
+
+- **Step 1.** Prepare the below stuffs:
+
+| Raspberry pi | GrovePi_Plus | Grove - GPS |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/Grove-Temperature_and_Humidity_Sensor_Pro/raw/master/img/pi.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-GPS/raw/master/img/Grove-GPS_s.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Temperature_and_Humidity_Sensor_Pro/raw/master/img/grovepi%2B.jpg)|
-|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-GPS-p-959.html)|[Get ONE Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|
+|![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-GPS/raw/master/img/45d_small.jpg)|
+|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](http://www.seeedstudio.com/depot/grove-gps-p-959.html)|
 
-- Follow [instruction](http://wiki.seeedstudio.com/GrovePi_Plus/) to configure the development environment.
-- Plug the sensor to grovepi+ socket **RPISER** by using a grove cable.
 
-![](https://github.com/SeeedDocument/Grove-GPS/raw/master/img/Pi_Connection.jpg)
+- **Step 2.** Plug the GrovePi_Plus into Raspberry.
+- **Step 3.** Plug the sensor to grovepi+ socket **RPISER** by using a grove cable.
+- **Step 4.** Connect the Raspberry to PC through USB cable.
+
+![](https://github.com/SeeedDocument/Grove-GPS/raw/master/img/witu_rpi.jpg)
 
 #### Software
 
-- Navigate to the demos' directory:
+- **Step 1.** Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment.
+
+- **Step 2.** Navigate to the demos' directory:
 
 ```
 cd ~
 git clone https://github.com/DexterInd/GrovePi.git
 cd GrovePi/Software/Python/grove_gps
 ```
--   To see the code
+
+- **Step 3.** To see the code
 
 ```
 nano grove_gps_data.py   # "Ctrl+x" to exit #
 ```
 
-```
+```py
 import serial, time
 import smbus
 import math
@@ -310,9 +338,9 @@ if __name__ == "__main__":
 			sys.exit(0)
 ```
 
-- Run the demo.
+- **Step 4.** Run the demo.
 ```
-    sudo python grove_gps_data.py
+sudo python grove_gps_data.py
 ```
 
 <div class="admonition note">
@@ -321,29 +349,27 @@ GPS is better used outdoors. It is recommended to put your raspberry pi outside 
 </div>
 
 ## SIM28 module Note:
-------------------
 
 1.  Grove-GPS  has change the module as SIM28 which the same footprint as origin version.
 2. We should use ["SIMCom GPS DEMO"](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/res/SIMCom_GPS_DEMO_V1.07.zip) tools to receive SIM28 module data.
 3. Open SIMCom_GPS_DEMO tools, go to Module->properties->module->select SIM28.
 4. SIMCom_GPS_DEMO_V1.07 is for Windows only.
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/img/SIM28_module_select.jpg)
+![](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/img/SIM28_module_select.jpg)
 
 5. Open SIMCom_GPS_DEMO tools, go to Module->connect. Select the serial port which the GPS module used.
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/img/SIM28_module_tools_pannel.jpg)
+![](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/img/SIM28_module_tools_pannel.jpg)
 
 ## Resources
----------
 
--   **[Eagle]** [Grove-GPS Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/res/GPS.zip)
--   **[PDF]** [GPS Schematic(PDF)](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/res/GPS.pdf)
--   **[Datasheet]** [E-1612-UB Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/res/E-1612-UB_Datasheets_Sheet.pdf)
--   **[Datasheet]** [U-Blox6 Receiver Description Protocol Spec](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/res/U-blox-6-Receiver-Description-Including-Protocol-Specification.zip)
--   **[Software]** [U-Blox u-center GPS evaluation software](https://www.u-blox.com/en/product/u-center-windows)
+- **[Eagle]** [Grove-GPS Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/res/GPS.zip)
+- **[PDF]** [GPS Schematic(PDF)](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/res/GPS.pdf)
+- **[Datasheet]** [E-1612-UB Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/res/E-1612-UB_Datasheets_Sheet.pdf)
+- **[Datasheet]** [U-Blox6 Receiver Description Protocol Spec](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/res/U-blox-6-Receiver-Description-Including-Protocol-Specification.zip)
+- **[Software]** [U-Blox u-center GPS evaluation software](https://www.u-blox.com/en/product/u-center-windows)
 - **[Document]**  [SIM28\_DATA\_File](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/res/SIM28_DATA_File.zip)
--  **[Document]** [SIMCom\_GPS\_DEMO\_V1.07](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/res/SIMCom_GPS_DEMO_V1.07.zip)
+- **[Document]** [SIMCom\_GPS\_DEMO\_V1.07](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/res/SIMCom_GPS_DEMO_V1.07.zip)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_GPS -->
 
