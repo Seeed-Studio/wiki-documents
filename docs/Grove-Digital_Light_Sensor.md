@@ -94,7 +94,7 @@ We can switch among three detection modes to take your readings. They are infrar
 | Seeeduino V4 | Base Shield | Grove - Digital light sensor |
 |--------------|----------------------|-----------------|
 |![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Digital_Light_Sensor/raw/master/img/digital%20light%20sensor_small.jpg)|
-|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
+|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|
 
 
 - **Step 2.** Connect Grove - Digital light Sensor to **I2C** port of base shield.
