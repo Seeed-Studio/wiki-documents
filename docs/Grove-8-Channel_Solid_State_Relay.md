@@ -69,14 +69,17 @@ According to different application scenarios, we have prepared a series of solid
 |Load current|0.1 to 2 A|
 |Leakage current|1.5 mA max. (at 200 VAC)|
 |Insulation Resistance|1,000 MΩ min. (at 500 VDC)|
+|Operate Time|1/2 of load power source cycle +1 ms max.|
+|Release Time|1/2 of load power source cycle + 1 ms max.|
 |Storage Temperature|-30°C to 100°C (with no icing or condensation)|
 |Operating Temperature|-30°C to 80°C (with no icing or condensation)|
 |Operating Humidity| 45% to 85%RH|
 |Input Interface|I^2^C|
-|Output Port|DIP Female  Blue 2 pin |
 |Default I^2^C Address|0x11 or 0x12|
 |Available I^2^C Address |0x00 ~ 0x7F|
 |Output interface|DIP Female Blue 2 pin x8|
+|Zero Cross|support|
+|Certification|UL /  CSA|
 
 
 !!!Attention
@@ -102,7 +105,7 @@ According to different application scenarios, we have prepared a series of solid
 
 
 !!!Note
-    - The switch 1-4 have the same pin fuction, so for the other switches, you can refer to **LOAD1**/**LOAD2**.
+    - The switch 1-8 have the same pin fuction, so for the other switches, you can refer to **LOAD1**/**LOAD2**.
     - On the back of the PCB, there are two interfaces: SWD and I^2^C. The SWD interface is used by default when programming firmware, if you want to use the I^2^C(actually work as the boot UART), you should set the 
     **BOOT** High.
 
@@ -175,7 +178,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/img/8.22%E8%BF%9E%E6%8E%A51.jpg)
+![](https://github.com/SeeedDocument/Grove-8-Channel_Solid_State_Relay/raw/master/img/connect.jpg)
 
 
 !!!Note
@@ -358,7 +361,7 @@ Channel 2 on
 ```
 
 
-![](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/img/_DAS5552.MOV_20180822_104218.gif)
+![](https://github.com/SeeedDocument/Grove-8-Channel_Solid_State_Relay/raw/master/img/gif.gif)
 
 
 

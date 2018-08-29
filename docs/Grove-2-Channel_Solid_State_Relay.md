@@ -59,11 +59,15 @@ Grove - 2-Channel Solid State Relay
 |Load current|0.1 to 2 A per switch|
 |Leakage current|1.5 mA max. (at 200 VAC)|
 |Insulation Resistance|1,000 MΩ min. (at 500 VDC)|
+|Operate Time|1/2 of load power source cycle +1 ms max.|
+|Release Time|1/2 of load power source cycle + 1 ms max.|
 |Storage Temperature|-30°C to 100°C (with no icing or condensation)|
 |Operating Temperature|-30°C to 80°C (with no icing or condensation)|
 |Operating Humidity| 45% to 85%RH|
 |Input Interface|Digital|
 |Output Port|Two DIP Female Blue 2 pin |
+|Zero Cross|support|
+|Certification|UL /  CSA|
 
 !!!Note
         You may pay attention to the **Leakage current**, 1.5mA is strong enough to drive Low power LED, so when the relay is off, the LED may still emits a faint light.
