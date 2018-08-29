@@ -20,6 +20,11 @@ We can switch among three detection modes to take your readings. They are infrar
 
 [![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)
 
+| Product Version              | Changes                                                                                                                                                                                    | Released Date |
+|------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
+| Grove - Digital Light Sensor V1.1 | Initial                                                                                                                                                                                    | Oct 2015      |
+
+
 ## Features
 
 -   Selectable detection modes
@@ -172,7 +177,7 @@ void loop()
 
 - **Step 1.** Prepare the below stuffs:
 
-| Raspberry pi | Grove - Digital light sensor | GrovePi_Plus |
+| Raspberry pi | GrovePi_Plus | Grove - Digital light sensor |
 |--------------|-------------|-----------------|
 |![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Digital_Light_Sensor/raw/master/img/digital%20light%20sensor_small.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|
