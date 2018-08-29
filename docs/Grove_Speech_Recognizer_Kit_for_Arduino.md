@@ -20,7 +20,7 @@ The Grove Speech Recognizer Kit for Arduino is designed for prototype of Smart H
 
 2.	[Grove - MP3 v2.0](/Grove-MP3_v2.0)
 
-3.	[Grove – RTC](//Grove-RTC/)
+3.	[Grove – RTC](/Grove-RTC/)
 
 4.	[Base Shield](/Base_Shield_V2/)
 
