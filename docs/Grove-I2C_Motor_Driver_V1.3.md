@@ -251,7 +251,7 @@ With stop() function, you are able to stop a running DC motor.
 - **motor_id** represents which motor to use. You can fill MOTOR1 or MOTOR2.
 
 
-- Drive a Stepper Motor
+**Drive a Stepper Motor**
 
 Take [24BYJ48 Stepper Motor](http://www.seeedstudio.com/depot/high-quality-stepper-motor-12v-p-335.html?cPath=170_171) as an example, The hardware installation as shown below:
 
@@ -272,9 +272,6 @@ void StepperRun(int _step);
 - **_step** represents the steps you set to the stepper motor to run. You can fill -1024~1024. When _step>0, stepper motor runs clockwise, while _step<0, stepper motor runs anticlockwise. When _step is 512/-512, the stepper motor will run a complete turn and if _step is 1024/-1024, the stepper motor will run 2 turns. The stepper motor will stop automatically after it finishes its steps.
 
 ## Resources
-- **[Eagle]** [Grove - MOSFET Schematic]
-
-
 - **[Eagle]** [Grove - I2C Motor Driver V1.3 Schematic](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.3/master/res/Grove-I2C_Motor_Driver_v1.3_Eagle_File.zip)
 
 - **[PDF]** [Grove - I2C Motor Driver V1.3 PCB in PDF Format](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.3/raw/master/res/Grove%20-%20I2C%20Motor%20Driver%20%20v1.3b%20PCB.pdf)
