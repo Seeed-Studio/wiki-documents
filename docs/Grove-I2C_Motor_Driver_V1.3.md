@@ -18,8 +18,7 @@ Contrast to the [Grove - I2C motor driver V1.2](http://wiki.seeedstudio.com/Grov
 
 [![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-I2C-Motor-Driver-p-907.html)
 
-Version
----------------
+## Version
 
 | Revision | Descriptions                                    | Release        |
 |----------|-------------------------------------------------|----------------|
@@ -28,8 +27,7 @@ Version
 | v1.3     | Modify the firmware to support off-line Stepper | Feb 18th, 2013 |
 
 
-Features
---------
+## Features
 
 -   Grove Compatible
 -   I2C Interface
@@ -39,8 +37,7 @@ Features
 !!!Tip
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
-Specifications
---------------
+## Specifications
 
 <table border="1" cellspacing="0" width="80%">
 <tr>
@@ -123,8 +120,11 @@ I2C
 </tr>
 </table>
 
-Platforms Supported
--------------------
+!!!Note
+    If you want to use multiplue I2C devices, please refer to [Software I2C](http://wiki.seeedstudio.com/Arduino_Software_I2C_user_guide/).
+
+
+## Platforms Supported
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -134,10 +134,10 @@ Platforms Supported
     The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
 
-Hardware Overview
-------------------
+## Hardware Overview
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.3/master/img/I2CMotorDriver-1.jpg)
+
 **78M05 IC:** 5V voltage regulator
 
 **L298 IC:** Dual full bridge driver
@@ -149,8 +149,7 @@ Hardware Overview
 Input voltage on screw terminals is regulated to 5V and connected to I2C +5V via a jumper (J4). Remove jumper if both external power via the screw terminals and power via the I2C header are used. Use jumper if 5V should be supplied to the I2C bus.
 </div>
 
-Application Ideas
------------------
+## Application Ideas
 
 -   Robots
 -   Homebuilt RC cars
@@ -163,35 +162,58 @@ The board will be very hot while operating over 1Amp. Do keep your hands off!
 </div>
 
 
-Getting Started
------
+## Getting Started
+
+!!!Note
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+
+
+### Play With Arduino
+
+#### Demonstration
 
 The I2C Motor Driver can control motor which is based on the chip L298. The L298 isn’t just a dual motor driver, it is a dual H-bridge. An h-bridge is basically a specific setup of transistors that allow you to switch direction of current. Hooking up to a motor means you can have it spin in both directions; and with PWM input, you can use your Arduino to make them spin at any speed. Because the L298 has 2 H-bridges, you can make a robot turn around by spinning each wheel in different directions, and of course go forwards and backwards.
 
-### 1. Install the library
-- Please follow [how to install an arduino library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install library.
+#### Hardware
 
-- Run the command or or download the [zip file](https://github.com/Seeed-Studio/Grove_I2C_Motor_Driver_v1_3/archive/master.zip) directly.
+- **Step 1.** Prepare the below stuffs:
 
-```
-  git clone https://github.com/Seeed-Studio/Grove_I2C_Motor_Driver_v1_3.git
-  
-```
-
+| Seeeduino V4.2 | Base Shield|  Grove - I2C Motor Driver V1.3 |
+|--------------|-------------|-----------------|
+|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.3/master/img/I2CMotorDriver_New_small.jpg)|
+|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/Grove-I2C-Motor-Driver-p-907.html)|
 
 
-- Simply copy the Grove_I2C_Motor_Driver_v1_3 folder to your Arduino library collection. For example, arduino-1.6.12/libraries. Next time you run the Arduino IDE, you'll have a new option in Sketch -> Include Library -> Grove_I2C_Motor_Driver_v1_3. Review the included examples in Grove_I2C_Motor_Driver_v1_3. We provide both DC and stepper motor control examples.
-![](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.3/raw/master/img/library%20example.jpg)
-
-### 2. Set the address of the I2C Motor Driver
+- **Step 2.** Set the address of the I2C Motor Driver
 
 - Set the address by dial switch is a new function added to the new I2C Motor Driver.
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.3/master/img/I2CMotorDriver-9.jpg)
+![](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.3/master/img/I2CMotorDriver-9.jpg)
 
 - Then keep the address setup in the program the same as the address setup on the I2C motor driver. The default address setup in the program is 0x0f.
+- **Step 3.** Connect Grove - I2C Motor Driver V1.3 to port I2C of Grove-Base Shield.
+- **Step 4.** Plug Grove - Base Shield into Seeeduino.
+- **Step 5.** Connect Seeeduino to PC via a USB cable.
 
-```
+![](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.3/master/img/I2CMotorDriver-4.jpg)
+
+!!!Note
+	If we don't have Grove Base Shield, We also can directly connect Grove - I2C Motor Driver V1.3 to Seeeduino as below.
+
+| Seeeduino       | Grove - I2C Motor Driver V1.3 |
+|-----------------|-------------------------|
+| 5V              | Red                     |
+| GND             | Black                   |
+| SDA             | White                   |
+| SCL             | Yellow                  |
+
+#### Software
+
+- **Step 1.** Download the  [ Grove_I2C_Motor_Driver_v1_3 Library](https://github.com/Seeed-Studio/Grove_I2C_Motor_Driver_v1_3/archive/master.zip) from Github.
+- **Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- **Step 3.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+
+```c
 // default I2C address is 0x0f
 #define I2C_ADDRESS 0x0f
 
@@ -201,11 +223,6 @@ void setup()
 }
 ```
 
-### 3. Drive 2 DC motors
-
-
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.3/master/img/I2CMotorDriver-4.jpg)
-
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 The first thing to notice, is that you need an external power source for your DC motors. The 5V pin on the Arduino cannot provide enough power to drive 2 motors, you may damage your Arduino if you do so.
@@ -213,8 +230,7 @@ The first thing to notice, is that you need an external power source for your DC
 
 - There are 2 functions to control DC motors:
 
-```
-
+```c
 // Set the speed of a motor, speed is equal to duty cycle here
 void speed(unsigned char motor_id, int _speed);
 
@@ -248,23 +264,30 @@ The connection between [24BYJ48](http://www.seeedstudio.com/depot/high-quality-s
 
 - We provide one function to drive a stepper motor.
 
-```
+```c
 // Drive a stepper motor
 void StepperRun(int _step);
 ```
 
-**_step** represents the steps you set to the stepper motor to run. You can fill -1024~1024. When _step>0, stepper motor runs clockwise, while _step<0, stepper motor runs anticlockwise. When _step is 512/-512, the stepper motor will run a complete turn and if _step is 1024/-1024, the stepper motor will run 2 turns. The stepper motor will stop automatically after it finishes its steps.
+- **_step** represents the steps you set to the stepper motor to run. You can fill -1024~1024. When _step>0, stepper motor runs clockwise, while _step<0, stepper motor runs anticlockwise. When _step is 512/-512, the stepper motor will run a complete turn and if _step is 1024/-1024, the stepper motor will run 2 turns. The stepper motor will stop automatically after it finishes its steps.
 
-Resources
----------
+## Resources
+- **[Eagle]** [Grove - MOSFET Schematic]
 
--   [Grove - I2C Motor Driver V1.3 in Eagle Format](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.3/master/res/Grove-I2C_Motor_Driver_v1.3_Eagle_File.zip)
--   [Grove - I2C Motor Driver V1.3 PCB in PDF Format](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.3/raw/master/res/Grove%20-%20I2C%20Motor%20Driver%20%20v1.3b%20PCB.pdf)
--   [Grove - I2C Motor Driver V1.3 Schematic in PDF Format](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.3/raw/master/res/Grove%20-%20I2C%20Motor%20Driver%20%20v1.3b.pdf)
--   [Grove - I2C Motor Driver V1.3 Library](https://github.com/Seeed-Studio/Grove_I2C_Motor_Driver_v1_3)
--   [L298 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.3/master/res/L298datasheet.pdf)
--   [78M05 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.3/master/res/ST_78M05DataSheet.pdf)
--   [On-Chip Firmware for I2C motor driver](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.3/master/res/On-Chipfirmware_for_Motor_driver.zip)
+
+- **[Eagle]** [Grove - I2C Motor Driver V1.3 Schematic](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.3/master/res/Grove-I2C_Motor_Driver_v1.3_Eagle_File.zip)
+
+- **[PDF]** [Grove - I2C Motor Driver V1.3 PCB in PDF Format](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.3/raw/master/res/Grove%20-%20I2C%20Motor%20Driver%20%20v1.3b%20PCB.pdf)
+
+- **[PDF]** [Grove - I2C Motor Driver V1.3 Schematic in PDF Format](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.3/raw/master/res/Grove%20-%20I2C%20Motor%20Driver%20%20v1.3b.pdf)
+
+- **[Library]** [Grove - I2C Motor Driver V1.3 Library](https://github.com/Seeed-Studio/Grove_I2C_Motor_Driver_v1_3)
+
+- **[Firmware]** [On-Chip Firmware for I2C motor driver](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.3/master/res/On-Chipfirmware_for_Motor_driver.zip)
+
+- **[Datasheet]** [L298 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.3/master/res/L298datasheet.pdf)
+
+- **[Datasheet]** [78M05 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.3/master/res/ST_78M05DataSheet.pdf)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_I2C_Motor_Driver_V1.3 -->
 

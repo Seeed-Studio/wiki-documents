@@ -72,7 +72,7 @@ GSR stands for galvanic skin response, is a method of measuring the electrical c
     If we don't have a Base Shield, don't worry, the sensor can be connected to your Arduino directly. Please follow below tables to connect with Arduino.
 
 | Seeeduino |Grove-GSR Sensor |
-|------------------|------- --|
+|------------------|---------|
 | GND              | Black  |
 | 5V               |  Red   |
 | NC               | White  |
