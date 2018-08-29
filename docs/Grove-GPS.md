@@ -350,14 +350,14 @@ GPS is better used outdoors. It is recommended to put your raspberry pi outside 
 
 ## SIM28 module Note:
 
-1.  Grove-GPS  has change the module as SIM28 which the same footprint as origin version.
-2. We should use ["SIMCom GPS DEMO"](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/res/SIMCom_GPS_DEMO_V1.07.zip) tools to receive SIM28 module data.
-3. Open SIMCom_GPS_DEMO tools, go to Module->properties->module->select SIM28.
-4. SIMCom_GPS_DEMO_V1.07 is for Windows only.
+- 1. Grove-GPS  has change the module as SIM28 which the same footprint as origin version.
+- 2. We should use ["SIMCom GPS DEMO"](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/res/SIMCom_GPS_DEMO_V1.07.zip) tools to receive SIM28 module data.
+- 3. Open SIMCom_GPS_DEMO tools, go to Module->properties->module->select SIM28.
+- 4. SIMCom_GPS_DEMO_V1.07 is for Windows only.
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/img/SIM28_module_select.jpg)
 
-5. Open SIMCom_GPS_DEMO tools, go to Module->connect. Select the serial port which the GPS module used.
+- 5. Open SIMCom_GPS_DEMO tools, go to Module->connect. Select the serial port which the GPS module used.
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/img/SIM28_module_tools_pannel.jpg)
 
