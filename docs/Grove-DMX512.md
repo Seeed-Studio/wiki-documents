@@ -25,7 +25,7 @@ The Grove – DMX512 is a adapter from Grove interface to DMX512 interface(indus
 ---
 Arduino can easily control DMX512 device by using the Grove - DXM512 module. Take the LED crystal magic ball light as an example. The Specific Operation as follows:
 
-*   Connect Grove interface of Grove - DMX512 to D3 port of [Grove - Base Shield](/Grove-Base_Shield "Grove - Base Shield") and plug Grove - Base Shield to Arduino.
+*   Connect Grove interface of Grove - DMX512 to D3 port of [Grove - Base Shield](/Base_Shield_V2 "Grove - Base Shield") and plug Grove - Base Shield to Arduino.
 
 *   Connect DMX512 interface of Grove - DMX512 to the DMXIN interface of the LED crystal magic ball light using a DMX cable. And power for the LED crystal magic ball light.
 

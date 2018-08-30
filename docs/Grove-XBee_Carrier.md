@@ -123,7 +123,7 @@ Pin 16 may need to be driven low to provide enough power to the I/O Grove [via m
 
 ####  Charging
 
-Now you can choose a suitable battery for your application from **SeeedStudio** [Batteries and Chargers](/w/index.php?title=Batteries_and_Chargers&amp;action=edit&amp;redlink=1 "Batteries_and_Chargers&amp;action=edit&amp;redlink=1")
+Now you can choose a suitable battery for your application from **SeeedStudio** [Batteries and Chargers](/Solar_Charger_Shield_V2.2 "Solar_Charger_Shield_V2.2")
 
 *   Connect a 3.7v LiPo battery to **BAT** JST-socket.
 

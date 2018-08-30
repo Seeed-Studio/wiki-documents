@@ -716,7 +716,7 @@ Now let's configure it and set the device name as "temp".
 *   Place it on the Android device screen. Note that the light sensor is facing the screen. It is better that the brightness of the screen is set to about 35%.
 ![](https://github.com/SeeedDocument/Atom_Node/raw/master/img/Node_Interface3.jpg)
 
-*   Click "Submit". It will start configuring. <font color="red">After successful configuration, the user indicator lights green and blinks.</font>If the configuration fails, click Again. If it keeps failing, you can refer to [FAQ](/Talk-Atom_Node).
+*   Click "Submit". It will start configuring. <font color="red">After successful configuration, the user indicator lights green and blinks.</font>If the configuration fails, click Again. If it keeps failing, you can refer to [FAQ](/Atom_Node).
 
 ![](https://github.com/SeeedDocument/Atom_Node/raw/master/img/Node_Interface4.jpg)
 

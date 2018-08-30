@@ -127,7 +127,7 @@ To begin editing programs that live on BBG, you can use the Cloud9 IDE.
 
 As a simple exercise to become familiar with Cloud9 IDE, creating a simple application to blink one of the 4 user programmable LEDs on the BeagleBone is a good start.
 
-If this is your first time to use Cloud9 IDE, please follow this [**link**](/Beaglebone_green#Getting_Started).
+If this is your first time to use Cloud9 IDE, please follow this [**link**](/BeagleBone_Green#getting-started).
 
 **Step1:** Click the "+" in the top-right to create a new file.
 

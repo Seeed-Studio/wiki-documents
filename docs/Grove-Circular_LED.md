@@ -82,7 +82,7 @@ This is a unique ring– it has a florid body with 24 controllable LEDs. Maybe i
 ---
 ###   Hardware
 
-With the definition "CircularLED circularLED1(10,9);" in the demo, please connect this module to the D9 Grove Connector of [Grove base shield](/Base_shield_v2) with the 4- pin Grove cable. You can also connect the "Yellow" signal to D9 and "White" to D10 with jumper wires.
+With the definition "CircularLED circularLED1(10,9);" in the demo, please connect this module to the D9 Grove Connector of [Grove base shield](/Base_Shield_V2) with the 4- pin Grove cable. You can also connect the "Yellow" signal to D9 and "White" to D10 with jumper wires.
 
 ###   Software
 

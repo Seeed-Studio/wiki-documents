@@ -61,7 +61,7 @@ Now we are making a simple demo to get data from Grove - Sunlight Sensor require
 
 Seeeduino V4.2 is fully compatible with Arduino.
 
-If this is your first time using Arduino, Please put hand on [here](http://wiki.seeedstudio.com/wiki/Getting_Started_with_Seeeduino) to start your Arduino journey.
+If this is your first time using Arduino, Please put hand on [here](http://wiki.seeedstudio.com/Getting_Started_with_Seeeduino) to start your Arduino journey.
 
 **Connecting hardware**
 

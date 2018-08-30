@@ -64,7 +64,7 @@ Follow these steps to build a sample circuit using this module:
 </dd></dl>
 </dd></dl>
 
-You can use either the [Grove - USB Power](/Grove-Mixer_Pack#2._USB_Power "Grove - Mixer Pack") module or the [Grove - DC Jack Power](/Grove-DC_Jack_Power "Grove - DC Jack Power") module for the Grove circuit.
+You can use either the [Grove - USB Power](/Grove-Mixer_Pack_V2/#2._USB_Power "Grove - Mixer Pack") module or the [Grove - DC Jack Power](/Grove-DC_Jack_Power "Grove - DC Jack Power") module for the Grove circuit.
 
 For building a circuit that controls a servomotor using a potentiometer, follow the steps below:
 
@@ -78,7 +78,7 @@ For building a circuit that controls a servomotor using a potentiometer, follow 
 ---
 This [Grove](/Grove "Grove") module is available as part of the following [Grove Kit Series](/GROVE_System#GROVE_Kit_Series "GROVE System"):
 
-*   [Grove Mixer Pack V2](/GROVE_MIXER_PACK_V2 "GROVE MIXER PACK V2")
+*   [Grove Mixer Pack V2](/Grove-Mixer_Pack_V2 "GROVE MIXER PACK V2")
 
 Alternatively, it can be bought stand-alone at the [Seeed Studio Bazaar](http://www.seeedstudio.com/depot/Grove-Mini-Fan-p-1819.html).
 

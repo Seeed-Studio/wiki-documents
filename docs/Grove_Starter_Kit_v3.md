@@ -198,7 +198,7 @@ For a detailed information on how to use your Grove - Rotary Angle Sensor,you ca
 
 ####   Grove – Temperature Sensor
 
-[400px](/w/index.php?title=%E7%BC%BA%E5%9B%BE&amp;action=edit&amp;redlink=1 "%E7%BC%BA%E5%9B%BE&amp;action=edit&amp;redlink=1")
+![400px](https://github.com/SeeedDocument/Grove-Temperature_Sensor/raw/master/img/Tempreture_Sensor_Connector.jpg)
 
 Grove - Temperature Sensor uses a thermistor which returns the ambient temperature. Our board then converts this voltage value measured by an analog input pin to a temperature. The operating range is -40 to 125 degrees Celsius.
 

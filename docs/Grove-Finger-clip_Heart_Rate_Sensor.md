@@ -73,7 +73,7 @@ void loop() {
 }
 ```
 
-####  With [Mbed](/w/index.php?title=Mbed&amp;action=edit&amp;redlink=1 "Mbed&amp;action=edit&amp;redlink=1")
+####  With [Mbed](/mbed "mbed")
 
 Read a byte from I2C device 0xA0 (8 bit address), it's the heart rate.
 ```

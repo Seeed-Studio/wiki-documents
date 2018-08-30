@@ -36,7 +36,7 @@ Grove - Serial Camera Kit includes one control board and two interchangeable len
 
 ##  Demonstration
 ---
-This demo will show you how to use Grove - Serial Camera Kit. We need a [Seeeduino](http://www.seeedstudio.com/depot/seeeduino-v30-atmega-328p-p-669.html?cPath=6_7), an [SD Card Shield](http://www.seeedstudio.com/depot/sd-card-shield-v40-p-1381.html?cPath=105) and a [Grove - Button](/Grove_Button/). When the button pressed, we take a photo and save it to SD Card.
+This demo will show you how to use Grove - Serial Camera Kit. We need a [Seeeduino](http://www.seeedstudio.com/depot/seeeduino-v30-atmega-328p-p-669.html?cPath=6_7), an [SD Card Shield](http://www.seeedstudio.com/depot/sd-card-shield-v40-p-1381.html?cPath=105) and a [Grove - Button](/Grove-Button/). When the button pressed, we take a photo and save it to SD Card.
 
 Follow the below steps step by step, you can easily run your Grove - Serial Camera Kit. Then let's go.
 

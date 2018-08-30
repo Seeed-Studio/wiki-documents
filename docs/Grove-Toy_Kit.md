@@ -13,7 +13,7 @@ Grove Toy Kit includes:
 
 *   1 x [Grove - Base Shield](/Grove-Base_Shield "Grove - Base Shield")
 
-*   1 x [Grove - OLED Display 128*64](/Grove-OLED_Display_128x64 "Grove - OLED Display 128*64")
+*   1 x [Grove - OLED Display 128*64](/Grove-OLED_Display_0.96inch "Grove - OLED Display 128*64")
 
 *   1 x [Grove - Sound Sensor](/Grove-Sound_Sensor "Grove - Sound Sensor")
 
@@ -105,7 +105,7 @@ This very cool OLED Display with Grove 4pin I2C Interface, is high brightness, s
 
 <center>
 
-[![](https://github.com/SeeedDocument/Grove-Toy_Kit/raw/master/img/Twig-OLED_Display_128x64.jpg)](/Grove-OLED_Display_128x64 "Grove- OLED Display 128*64")
+[![](https://github.com/SeeedDocument/Grove-Toy_Kit/raw/master/img/Twig-OLED_Display_128x64.jpg)](/Grove-OLED_Display_0.96inch "/Grove-OLED_Display_0.96inch/")
 
 </center>
 

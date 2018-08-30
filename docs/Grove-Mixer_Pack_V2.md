@@ -34,7 +34,7 @@ With the [Grove - Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2E
 
 1.  1x [Grove - DC Jack Power](/Grove-DC_Jack_Power "Grove - DC Jack Power")
 
-2.  1x [Grove - Recorder](/Grove-Recorder "Grove - Recorder")
+2.  1x [Grove - Recorder](/Grove_Recorder "Grove - Recorder")
 
 3.  1x [Grove - LED String Light](/Grove-LED_String_Light "Grove - LED String Light")
 
@@ -64,7 +64,7 @@ With the [Grove - Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2E
 
 2.  1x Colorful Fan that fits onto the DC Motor
 
-3.  1x Small Audio Speaker to work with the [Grove - Recorder](/Grove-Recorder "Grove - Recorder") module
+3.  1x Small Audio Speaker to work with the [Grove - Recorder](/Grove_Recorder "Grove - Recorder") module
 
 4.  1x LED String Light to work with the [Grove - LED String Light](/Grove-LED_String_Light "Grove - LED String Light") module
 
@@ -182,7 +182,7 @@ The [Grove - DC Jack Power](/Grove-DC_Jack_Power "Grove - DC Jack Power") module
 
 ![](https://github.com/SeeedDocument/Grove-Mixer_Pack_V2/raw/master/img/Recoder_photo1.jpg)
 
-The [Grove - Recorder](/Grove-Recorder "Grove - Recorder") module can record 8-20 secs of audio and play it back. The default recording time is 10 secs. The module uses non-volatile storage, which means that the recorded sound or audio is not lost when the module is switched off. It remains stored in the memory and when the module is switched back on, the same sound or audio can be played again. The module is very easy to control - just press the on-board push button to record and attach the speaker included in the pack to hear the playback.
+The [Grove - Recorder](/Grove_Recorder "Grove - Recorder") module can record 8-20 secs of audio and play it back. The default recording time is 10 secs. The module uses non-volatile storage, which means that the recorded sound or audio is not lost when the module is switched off. It remains stored in the memory and when the module is switched back on, the same sound or audio can be played again. The module is very easy to control - just press the on-board push button to record and attach the speaker included in the pack to hear the playback.
 
 ###  Grove - LED String Light
 

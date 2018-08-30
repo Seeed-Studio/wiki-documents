@@ -82,7 +82,7 @@ Grove products have an eco system and all have the same connector which can plug
 Software Installation
 ---------------------
 
-[Download Arduino and install Arduino driver](/Download_Arduino_and_install_Arduino_driver)
+[Download Arduino and install Arduino driver](/Driver_for_Seeeduino)
 
 [Getting Started with Seeeduino/Arduino](/Getting_Started_with_Seeeduino)
 

@@ -23,7 +23,7 @@ sku: 105020001
 </tr>
 <tr class="even">
 <td><div style="text-align: center">
-<a href="/Grove-I2C_Motor_Driver_V1.0" title="Grove - I2C Motor Driver V1.0">Grove - I2C Motor Driver V1.0</a>
+<a href="/Grove-Mini_I2C_Motor_Driver_v1.0" title="Grove - I2C Motor Driver V1.0">Grove - I2C Motor Driver V1.0</a>
 </div></td>
 <td><div style="text-align: center">
 <a href="/Grove-I2C_Motor_Driver_V1.2" title="Grove - I2C Motor Driver V1.2">Grove - I2C Motor Driver V1.2</a>
