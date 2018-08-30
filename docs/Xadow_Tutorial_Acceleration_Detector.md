@@ -11,9 +11,9 @@ This demo required:
 
 *   [Xadow Main Board](/Xadow_Main_Board/)
 
-*   [Xadow OLED](/Xado_OLED_128multiply64/D)
+*   [Xadow OLED](/Xado_OLED_128multiply64)
 
-*   [Xadow Vibrator](http://wiki.seeedstudio.com/wiki/Xadow_Vibrator)
+*   [Xadow Vibrator Motor](http://wiki.seeedstudio.com/Xadow_Vibrator_Motor/)
 
 *   [Xadow Accelerometer](/Xadow_3_Aixs_Accelerometer/)
 

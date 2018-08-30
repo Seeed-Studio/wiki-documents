@@ -433,7 +433,7 @@ The ReSpeaker Mic Array can be stacked (connected) right onto the top of ReSpeak
 ##   About our software
 ---
 
-### [ReSpeaker Arduino Library](https://github.com/respeaker/get_started_with_respeaker/blob/master/ReSpeakerArduinoLibrary.md#respeaker-arduino-library)
+### [ReSpeaker Arduino Library](https://github.com/respeaker/get_started_with_respeaker/blob/master/docs/ReSpeaker/ReSpeakerArduinoLibrary.md#respeaker-arduino-library)
 
 ReSpeaker Arudino Library provides the following features:
 
@@ -462,12 +462,12 @@ It uses PocketSphinx for keyword spotting and uses webrtcvad for voice activity 
 
 **Q3: ReSpeaker fail to find my Wi-Fi**
 
-- Try [factory reset](https://github.com/respeaker/get_started_with_respeaker/blob/master/faq.md#factory-reset) first.
+- Try [factory reset](https://github.com/respeaker/get_started_with_respeaker/blob/master/docs/ReSpeaker/faq.md#factory-reset) first.
 - And the Wi-Fi Channel 12 is not supported by ReSpeaker. Make sure your router is not using that channel.
 
 **Q4: Wifi-Config**
 
-- We advise you to configure Wi-Fi via [WEB-UI](https://github.com/respeaker/get_started_with_respeaker/blob/master/QuickStart.md#setup-wi-fi) and if it can't be used, try command line tool [wictl](https://github.com/respeaker/get_started_with_respeaker/wiki/WiFi) at the serial console.
+- We advise you to configure Wi-Fi via [WEB-UI](https://github.com/respeaker/get_started_with_respeaker/blob/master/docs/ReSpeaker/QuickStart.md#setup-wi-fi) and if it can't be used, try command line tool [wictl](https://github.com/respeaker/get_started_with_respeaker/wiki/WiFi) at the serial console.
 
 **Q5: How to change BING speech api recognize language**
 

@@ -75,11 +75,11 @@ Pins on both sides of Xadow modules are symmetrical, here are pins descriptions 
 ## Get Start with Xadow Main Board
 ---
 Similar to the Arduino, the Xadow Main Board uses only a single microcontroller (the Atmel ATmega32U4) to both run your sketches and communicate over USB with the computer. This means that you only need a USB cable to program the Xadow. The specific steps are as follows:
-- To make your Arduino IDE support Xadow, there're a few steps you need to follow, please refer to [here](http://wiki.seeedstudio.com/wiki/Support_Seeed_Product_in_Arduino_IDE)
+- To make your Arduino IDE support Xadow, there're a few steps you need to follow, please refer to [here]()
 - Download the driver files from [https://github.com/Seeed-Studio/Signed_USB_Serial_Driver](https://github.com/Seeed-Studio/Signed_USB_Serial_Driver)
 - Connect the Micro-USB cable to the Xadow Main Board.
 - Connect the other side of the Micro-USB connector to the computer's USB port.
-- Then install the Xadow Driver. You can refer to [Download Arduino and install Arduino driver](http://wiki.seeedstudio.com/wiki/Download_Arduino_and_install_Arduino_driver) to learn how to install the Xadow driver.
+- Then install the Xadow Driver. You can refer to [Download Arduino and install Arduino driver](http://wiki.seeedstudio.com/Guide_to_use_demos_downloaded_from_Seeed-s_Github/) to learn how to install the Xadow driver.
 
 ![](https://github.com/SeeedDocument/Xadow_Main_Board/raw/master/img/Xadow_Main_Board_Driver_step4.jpg)
 

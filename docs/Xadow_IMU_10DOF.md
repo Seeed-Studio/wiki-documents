@@ -10,7 +10,7 @@ sku:  101040004
 
 ![](https://github.com/SeeedDocument/Xadow_IMU_10DOF/raw/master/img/Xadow-imu-10dof-shao.JPG)
 
-Xadow - IMU 10DOF is a combination of [Xadow - IMU 9DOF](http://wiki.seeedstudio.com/wiki/Xadow_-_IMU_9DOF) and [Xadow - Barometer BMP180](http://wiki.seeedstudio.com/wiki/Xadow_-_Barometer_BMP180).This module is base on MPU-9250 and BMP180, the MPU-9250 is a 9-axis MotionTracking device that combines a 3-axis gyroscope, 3-axis accelerometer, 3-axis magnetometer and a Digital Motion Processor(DMP), and BMP180 is a high precision,ultra-low power digital pressure sensors for consumer applications.This module is very suitable for the application of smartphones, tablets and wearable devices
+Xadow - IMU 10DOF is a combination of [Xadow - IMU 9DOF](http://wiki.seeedstudio.com/Xadow_IMU_9DOF) and [Xadow - Barometer BMP180](http://wiki.seeedstudio.com/Xadow_Barometer_BMP180).This module is base on MPU-9250 and BMP180, the MPU-9250 is a 9-axis MotionTracking device that combines a 3-axis gyroscope, 3-axis accelerometer, 3-axis magnetometer and a Digital Motion Processor(DMP), and BMP180 is a high precision,ultra-low power digital pressure sensors for consumer applications.This module is very suitable for the application of smartphones, tablets and wearable devices
 
 [![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-IMU-10DOF-p-2446.html)
 

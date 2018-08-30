@@ -189,8 +189,6 @@ You can follow the instructions to download the Xadow APP for Pebble Time, acces
 
 The Demo App can be downloaded from [https://github.com/Seeed-Studio/Xadow_Strap/raw/master/build/pebbleapp_jack.pbw](https://github.com/Seeed-Studio/Xadow_Strap/raw/master/build/pebbleapp_jack.pbw). You can download it from your smart phone or send it from your PC to smart phone. Then select to open it with "Pebble Time" App in your phone. You will have an option to install the demo App into your Pebble Time.
 
-[File:Xadow Pebble Time Adapter app download.JPG](/w/index.php?title=Special:Upload&amp;wpDestFile=Xadow_Pebble_Time_Adapter_app_download.JPG "Special:Upload&amp;wpDestFile=Xadow_Pebble_Time_Adapter_app_download.JPG")
-
 ![](https://github.com/SeeedDocument/RePhone_Strap_Kit_for_Pebble/raw/master/img/Xadow_Pebble_Time_Adapter_APP_UI.png)
 
 ##  Programming Guide

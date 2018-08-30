@@ -58,13 +58,13 @@ Click [here](/LinkIt_ONE_Tutorial-Analog_Interface) to see the full tutorial.
 
 Servo motor (servo) is commonly used in small robots and other machines to control angular position. It is wrapped by a small gear box, and positioned by the timing control pulses. In this section we control the angular position of the mini servo with the help of potentiometer.
 
-Click [here](/LinkIt_ONE_Tutorial-Mini_Servo) to see the full tutorial.
+Click [here](/LinkIt-ONE-Tutorial---Mini-Servo) to see the full tutorial.
 
 ##   Lesson 8: Light Sensor
 
 It's time to know about new sensors that could make our projects even more interesting. A photoresistor (light dependent resistor or photocell) is a light sensor which varies its resistance value based on the intensity of the ambient light. A buzzer is a electro-acoustic device used to generate standard tone when it is connected to the power supply. Lets use both these components in our experiments.
 
-Click [here](/LinkIt_ONE_Tutorial-Light_Sensor) to see the full tutorial.
+Click [here](/LinkIt_ONE_Tutorial-Light-Sensor) to see the full tutorial.
 
 ##   Lesson 9: SMS control the LED
 

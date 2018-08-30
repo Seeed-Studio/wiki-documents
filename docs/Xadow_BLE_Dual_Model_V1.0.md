@@ -49,7 +49,7 @@ Xadow - BLE (dual model) v1.0 uses CSR dual mode Bluetooth chip,with the ARM arc
 ---
 **Connecting Bluetooth to PC through Uart Bee**
 
-The Xadow - BLE has a standard Xadow interface with lead pitch, we use a [Xadow - Breakout](http://wiki.seeedstudio.com/wiki/Xadow_Breakout)to convert it to Grove socket.
+The Xadow - BLE has a standard Xadow interface with lead pitch, we use a [Xadow - Breakout](http://wiki.seeedstudio.com/Xadow_Breakout)to convert it to Grove socket.
 
 As Xadow interface is a axial symmetry port, so it's necessary to comply with the assembly direction, please refer to below picture.
 
@@ -59,7 +59,7 @@ As Xadow interface is a axial symmetry port, so it's necessary to comply with th
 
 **Connecting Bluetooth to Xadow - Main Board**
 
-Connect the Xadow BLE Slave to [Xadow - Main Board](http://wiki.seeedstudio.com/wiki/Xadow_Main_Board) and connect Main Board to PC with a USB cable.
+Connect the Xadow BLE Slave to [Xadow - Main Board](http://wiki.seeedstudio.com/Xadow_Main_Board) and connect Main Board to PC with a USB cable.
 
 Note: when connect Xadow - BLE to Xadow Main Board, you should concern about the connection direction. The connection method is that the unfilled corner of one xadow module need to connect to the right angle of another module(see four corners of each xadow module).
 

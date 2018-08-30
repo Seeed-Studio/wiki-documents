@@ -9,7 +9,7 @@ sku:   110060001
 ---
 ![http://www.seeedstudio.com/depot/images/large/product/protomega_LRG.jpg](http://www.seeedstudio.com/depot/images/large/product/protomega_LRG.jpg)
 
-This is the 1st Protoshield for [Seeeduino Mega](/Seeeduino_Mega "Seeeduino Mega") which brought all pins from [Seeeduino](/Seeeduino_V2.2 "Seeeduino V2.2"), even [Arduino](/w/index.php?title=Arduino&amp;action=edit&amp;redlink=1 "Arduino&amp;action=edit&amp;redlink=1") to the top! With this protoshield, users will find a large prototyping area, you can even use Xbee with this board to make it a Xbee shield.
+This is the 1st Protoshield for [Seeeduino Mega](/Seeeduino_Mega "Seeeduino Mega") which brought all pins from [Seeeduino](/Seeeduino_V2.2 "Seeeduino V2.2"), even [Arduino](/Arduino "Arduino") to the top! With this protoshield, users will find a large prototyping area, you can even use Xbee with this board to make it a Xbee shield.
 
 [![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/seeeduino-mega-protoshield-kit-p-597.html?cPath=132_134)
 

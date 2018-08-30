@@ -9,7 +9,7 @@ sku:     103010002
 ---
 ![](https://github.com/SeeedDocument/GrovePi_Plus/raw/master/img/110060049%2010_02.jpg)
 
-[GrovePi](http://www.dexterindustries.com/GrovePi/) is an add-on board that brings [Grove Sensors](/GROVE_System "GROVE System") to the [Raspberry Pi](http://www.seeedstudio.com/depot/s/Raspberry%2520Pi.html?search_in_description=0). As a new version of [GrovePi](http://www.seeedstudio.com/depot/GrovePi-p-1672.html).
+[GrovePi](http://www.dexterindustries.com/GrovePi/) is an add-on board that brings [Grove Sensors](/Grove_System "Grove System") to the [Raspberry Pi](http://www.seeedstudio.com/depot/s/Raspberry%2520Pi.html?search_in_description=0). As a new version of [GrovePi](http://www.seeedstudio.com/depot/GrovePi-p-1672.html).
 It adds support for the newly RaspberryPi Model B+ and Model A+.
 There are three mounting holes can perfect match all version of Raspberry Pi. Camera cable outlet hole.
 It also improves the voltage level converting sub circuits.
@@ -100,19 +100,15 @@ We have developed three simple projects to illustrate how the GrovePi works.
 
 *   [5. Grove - Red LED ](/Grove-Red_LED#With_Raspberry_Pi)
 
-*   [6. Grove - Blue LED ](/Grove-LED#With_Raspberry_Pi)
+*   [6. LCD RGB Backlight ](/Grove-LCD_RGB_Backlight#With_Raspberry_Pi)
 
-*   [7. Grove - Green LED ](/Grove-LED#With_Raspberry_Pi)
+*   [7. Rotary Angle Sensor ](/Grove-Rotary_Angle_Sensor#With_Raspberry_Pi)
 
-*   [8. LCD RGB Backlight ](/Grove-LCD_RGB_Backlight#With_Raspberry_Pi)
+*   [8. Temperature_and_Humidity_Sensor_Pro ](/Temperature_and_Humidity_Sensor_Pro#With_Raspberry_Pi)
 
-*   [9. Rotary Angle Sensor ](/Grove-Rotary_Angle_Sensor#With_Raspberry_Pi)
+*   [9. Ultrasonic Ranger Sensor](/Grove-Ultrasonic_Ranger#With_Raspberry_Pi)
 
-*   [10. Temperature Humidity Sensor ](/Grove-Temperature_and_Humidity_Sensor#With_Raspberry_Pi)
-
-*   [11. Ultrasonic Ranger Sensor](/Grove-Ultrasonic_Ranger#With_Raspberry_Pi)
-
-*   [12. Relay](/Grove-Relay#With_Raspberry_Pi)
+*   [10. Relay](/Grove-Relay#With_Raspberry_Pi)
 
 
 ##   Resources

@@ -9,7 +9,7 @@ sku:  113030013
 ---
 ![](https://github.com/SeeedDocument/Seeed_BLE_Shield/raw/master/img/Seeed_BLE-4.png)
 
-This Seeed BLE Shield utilizes an [HM-11](/Bluetooth_V4.0_HM-11_BLE_Module) module to provide your Arduino/Seeeduino with serial BLE function. It only takes two pins of the micro controller to communicate your device with this shield. With support for a BLE ComAssistant APK, this BLE Shield can talk to your mobile phone more easily without pairing. You can use it in many conditions, like robot controls or remote control equipment ,etc. We prepared an easy and convenient command set for this shield so that you can use neat and concise code to run the function.
+This Seeed BLE Shield utilizes an [HM-11](/Bluetooth_V4.0_HM_11_BLE_Module) module to provide your Arduino/Seeeduino with serial BLE function. It only takes two pins of the micro controller to communicate your device with this shield. With support for a BLE ComAssistant APK, this BLE Shield can talk to your mobile phone more easily without pairing. You can use it in many conditions, like robot controls or remote control equipment ,etc. We prepared an easy and convenient command set for this shield so that you can use neat and concise code to run the function.
 
 [![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Seeed-BLE-Shield-p-1859.html)
 
@@ -112,7 +112,7 @@ We have produced a lot of extension board that can make your platform board more
 
 <div class="center"><div class="floatnone">![](https://github.com/SeeedDocument/Seeed_BLE_Shield/raw/master/img/BLE_Shield.png)</div></div>
 
-*   HM-11: The basic module is HM-11, more information you can refer to this wiki of [HM-11](/Bluetooth_V4.0_HM-11_BLE_Module).
+*   HM-11: The basic module is HM-11, more information you can refer to this wiki of [HM-11](/Bluetooth_V4.0_HM_11_BLE_Module).
 
 *   Signal lamp: Lamp will blink if no one connect BLE, but the lamp would keep lighting after BLE has been connected.
 
@@ -254,7 +254,7 @@ More information about the AT Commands please refer to the data sheet of BLE mod
 
 ##   Related Reading
 ---
-*   [FAQ about Seeed BLE Shield](/Talk-Seeed_BLE_Shield_v1). _Also, you can enter the FAQ page by clicking the "FAQ" button which in the right side of product's wiki page. _
+*   [FAQ about Seeed BLE Shield](/Seeed_BLE_Shield). _Also, you can enter the FAQ page by clicking the "FAQ" button which in the right side of product's wiki page. _
 
 ##   Resource
 

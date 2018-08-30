@@ -451,8 +451,6 @@ Here is what it looks like with the watch case:
 
 *   [Seeed depot](http://www.seeedstudio.com/depot/)
 
-*   [Seeed product wiki](/Main_Page)
-
 *   [source code on github](https://github.com/Seeed-Studio/Xadow_Edison_Demos)
 
 *   [Edison Pedometer 3D models](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/res/Edison_Pedometer_3D_models.zip)

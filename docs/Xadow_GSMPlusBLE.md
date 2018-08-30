@@ -83,7 +83,7 @@ Open **Device Manager** by clicking the **Start** button, clicking **Control Pan
 We have developed rich libraries hooking into Arduino IDE, Lua and JavaScript, with detailed example sketches to help entry-level programmers develop with RePhone modules easily and quickly.
 
 We also provide a powerful SDK based on Eclipse IDE for C/C++ developers to work with more intelligent applications.  
-[![](https://raw.githubusercontent.com/SeeedDocument/Xadow_GSM-BLE/master/image/Arduino_IDE-17.png)  ](/Platform/RePhone/RePhone/)  
+[![](https://raw.githubusercontent.com/SeeedDocument/Xadow_GSM-BLE/master/image/Arduino_IDE-17.png)  ](/RePhone/)
 [![](https://raw.githubusercontent.com/SeeedDocument/Xadow_GSM-BLE/master/image/Eclipse_IDE-13.png) ](http://www.seeedstudio.com/wiki/Eclipse_IDE_for_RePhone_Kit)   
 [![](https://raw.githubusercontent.com/SeeedDocument/Xadow_GSM-BLE/master/image/Lua-14.png)](http://www.seeedstudio.com/wiki/Lua_for_RePhone#Use_Lua_Shellt)  
 [![](https://raw.githubusercontent.com/SeeedDocument/Xadow_GSM-BLE/master/image/JS-15.png) ](http://www.seeedstudio.com/wiki/JavaScript_for_RePhone) 

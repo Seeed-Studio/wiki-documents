@@ -707,7 +707,7 @@ When prompt, type in the sudo password for user respeaker: respeaker. Wait the s
 
 **Step 2. Authorize Alexa**
 
-Connect to the board via [VNC](https://github.com/respeaker/get_started_with_respeaker/blob/master/docs/ReSpeaker_Core_V2/getting_started.md#ssh--vnc). In the VNC desktop, open the Internet Browser, and tap `127.0.0.1:3000` at the URL input field . The web browser will display a login page. Sign in with your Amazon account:
+Connect to the board via [VNC](https://github.com/respeaker/get_started_with_respeaker/blob/master/docs/ReSpeaker_Core_v2.0/getting_started.md#ssh--vnc). In the VNC desktop, open the Internet Browser, and tap `127.0.0.1:3000` at the URL input field . The web browser will display a login page. Sign in with your Amazon account:
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/aus-1.png)
 
@@ -1089,7 +1089,7 @@ This script calculates the RMS of the sound recorded by the microphones.
 
 - **Step 2. Authorize Alexa**
 
-Connect to the board via [VNC](https://github.com/respeaker/get_started_with_respeaker/blob/master/docs/ReSpeaker_Core_V2/getting_started.md#ssh--vnc). In the VNC desktop, open terminal and execute:
+Connect to the board via [VNC](https://github.com/respeaker/get_started_with_respeaker/blob/master/docs/ReSpeaker_Core_v2.0/getting_started.md#ssh--vnc). In the VNC desktop, open terminal and execute:
 
 ```
 ~/.local/bin/alexa-auth
@@ -1165,7 +1165,7 @@ detected 1 at direction 237.455170747
 
 ### Play with Dueros
 
-The same as AVS, the only difference is that you need to delete one profile file. Before [get the authorization](http://wiki.seeedstudio.com/ReSpeaker_Core_v2/#step-2-authorize-alexa),
+The same as AVS, the only difference is that you need to delete one profile file. Before [get the authorization](http://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#step-2-authorize-alexa),
 you should tap the command below to delete the **avs.json**.
 
 ```
@@ -1180,7 +1180,7 @@ Then you can get the authorization from Baidu by tapping the following command:
 
 
 
-After login, the following step is the same as AVS, Please refer to [AVS Demos](http://wiki.seeedstudio.com/ReSpeaker_Core_v2/#step-3-have-fun-with-alexa-applications).
+After login, the following step is the same as AVS, Please refer to [AVS Demos](http://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#step-3-have-fun-with-alexa-applications).
 
 When you run the python program, you can say **Alexa** to wake up the Baidu voice assistance.
 

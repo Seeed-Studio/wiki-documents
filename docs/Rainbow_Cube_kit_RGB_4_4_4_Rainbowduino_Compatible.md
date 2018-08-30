@@ -10,7 +10,7 @@ sku:  110060007
 
 **<font color="Red">R</font><font color="Orange">a</font><font color="Yellow">i</font><font color="Green">n</font><font color="Blue">b</font><font color="Indigo">o</font><font color="Violet">w</font> ** **Cube Kit** is a **3D<font color="red"> R</font><font color="green">G</font><font color="blue">B</font>** LED Cube useful for creating colorful design. The 3D Cube is artistically crafted with sixty-four 8mm **<font color="red">R</font><font color="green">G</font><font color="blue">B</font>** LEDs arranged in a 4 x 4 x 4 manner. **Rainbow Cube Kit** can be used to create many beautiful visual effects with A **Rainbowduino**. The **Rainbow Cube Kit** comes with an inbuilt 3.3V / 1 Amp LDO useful for  powering the kit independently. A XBee compatible socket is provided as well, this can be used to connect Rainbowduino with a PC or an Arduino wirelessly.
 
-This is sold in a Kit form. For a fully assembled kit see [Rainbow Cube](/Rainbow_Cube "Rainbow Cube")
+This is sold in a Kit form. For a fully assembled kit see [Rainbow_Cube_Kit_Acrylic_Harness](/Rainbow_Cube_Kit_Acrylic_Harness "Rainbow Cube")
 
 ![](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/img/Rainbowcuben.jpg)
 

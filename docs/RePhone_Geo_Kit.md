@@ -71,7 +71,7 @@ For more info about this module please check on [**Xadow GSM+BLE Wiki Page**](/X
 
 ###   Xadow GPS v2
 
-For more info about this module please check on [**Xadow GPS v2 Wiki Page**](/Xadow_GPS_v2).
+For more info about this module please check on [**Xadow GPS V2 Wiki Page**](/Xadow_GPS_V2).
 
 <table>
 <tr>
@@ -275,7 +275,7 @@ Some frequently asked questions in RePhone Community are collected and answered 
 
 ##  Resources
 
-Please go the Wiki page [Xadow GPS v2](/Xadow_GPS_v2) for more info.
+Please go the Wiki page [Xadow GPS V2](/Xadow_GPS_V2) for more info.
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

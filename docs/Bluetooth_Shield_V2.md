@@ -144,10 +144,9 @@ When connect is ok, send 't' to SeeedBTSlave, and you can get the temperature no
 ![](https://github.com/SeeedDocument/Bluetooth_Shield_V2/raw/master/img/Bluetooth_Shield_get_temp.png)
 
 ##   Resources
+*   [Schematic and Layout in Eagle format](https://github.com/SeeedDocument/Bluetooth_Shield_V2/raw/master/res/Bluetooth_en.pdf)
 
-*   [Schematic and Layout in Eagle format](https://github.com/SeeedDocument/Bluetooth_Shield_V2/raw/master/res/Bluetooth_en.pdfBuletooth_Shield_v2.0_sch_pcb.zip)
-
-*   [module Datasheet](https://github.com/SeeedDocument/Bluetooth_Shield_V2/raw/master/res/Bluetooth_en.pdfBluetooth_en.pdf)
+*   [module Datasheet](https://github.com/SeeedDocument/Bluetooth_Shield_V2/raw/master/res/Bluetooth_en.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

@@ -476,7 +476,7 @@ void loop()
 
 **4.2 Lat and Lng**
 
-Thanks for [Todd Krein](Todd Krein) for sharing the example in Github. Please download the [TinyGPS++ library](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/TinyGPSPlus-master.zip) and then copy below code to Seeeduino Lorawan. 
+Thanks for **Todd Krein** for sharing the example in Github. Please download the [TinyGPS++ library](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/TinyGPSPlus-master.zip) and then copy below code to Seeeduino Lorawan. 
 
 ```c++
 #define USE_GPS 1

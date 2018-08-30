@@ -76,7 +76,7 @@ We also provide an even more powerful version of new RePhone core 2G because its
     * blink - no battery insert
     * on - charging
     * off - charge done
-* **9- **IC - ETA6003([datasheet](baidu.com))
+* **9- **IC - ETA6003(datasheet)
 * **A- **ICSP pads
 * **B- **Antenna Connector
 * **C- **I/O PIN pad

@@ -9,7 +9,7 @@ sku:  102040001
 ---
 ![](https://github.com/SeeedDocument/Xadow_M0/raw/master/img/Xadowm0.jpg)
 
-Xadow - M0 is an mbed enabled development board with [Xadow](http://wiki.seeedstudio.com/wiki/Xadow) form factor. [Xadow](http://wiki.seeedstudio.com/wiki/Xadow) is a series of flexible electronic modules including sensors, displays and etc. Several Xadow modules can be cascaded to create interactive objects.
+Xadow - M0 is an mbed enabled development board with [Xadow]() form factor. [Xadow]() is a series of flexible electronic modules including sensors, displays and etc. Several Xadow modules can be cascaded to create interactive objects.
 
 [![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-M0-mbed-enabled-ARM-Cortex-M0-board-for-Rapid-Prototyping-p-1880.html)
 

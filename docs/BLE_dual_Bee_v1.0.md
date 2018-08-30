@@ -73,7 +73,7 @@ The Bluetooth provides a standard XBee socket. In here we use a [UartSBee V5](/U
 
 ###   Connecting Bluetooth to Arduino
 
-Here we use [XBee Shield](/XBee_Shield_V2.0) as a bridge between Bluetooth and [Seeeduino Lotus](/Seeeduino_Lotus_v1.0).
+Here we use [XBee Shield](/XBee_Shield_V2.0) as a bridge between Bluetooth and [Seeeduino Lotus](/Seeeduino_Lotus).
 
 Since the hardware UART of Seeedino was used as debug with PC, We choose D2 and D3 to simulate software UART to communicate with Bluetooth. please refer to the jumper setting on below picture
 

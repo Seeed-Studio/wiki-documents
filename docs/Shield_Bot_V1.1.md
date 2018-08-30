@@ -180,14 +180,7 @@ We've built a nice library for the Shield Bot with useful functions to control y
 
 ###  Install the battery
 
-The battery is needed when you want to make Shield Bot run on the ground. Please reference the below picture to install the battery.
-
-[图片](/w/index.php?title=%E5%9B%BE%E7%89%87&amp;action=edit&amp;redlink=1 "%E5%9B%BE%E7%89%87&amp;action=edit&amp;redlink=1")
-
-After the installation is complete, You will see:
-
-[图片](/w/index.php?title=%E5%9B%BE%E7%89%87&amp;action=edit&amp;redlink=1 "%E5%9B%BE%E7%89%87&amp;action=edit&amp;redlink=1")
-
+The battery is needed when you want to make Shield Bot run on the ground.
 !!!Note
     - 1) Once the battery is installed, you can charge  battery with a mini-b USB cable. When the battery is charging, a red LED will be on. When it is done charging, a green LED will be lit.
     - 2) When upload the code, you need connect the usb port of your seeeduino to your PC. The usb port on the shield bot is used for charging for battery.

@@ -40,7 +40,7 @@ Firstly, before any action you are going to take, you need to prepare a paramete
 - Complete the hardware installation:
 !!!Note
     When connect Xadow Compass to Xadow Main Board, you should concern about the connection direction. The connection method is that the unfilled corner of one Xadow module need to connect to the right angle of another module (see four corners of each Xadow module).
-- Download the library file: [Digital Compass Library](https://github.com/Seeed-Studio/Grove_3Axis_Digital_Compass), and install it to your Arduino Library. See [How to install Arduino Library](http://wiki.seeedstudio.com/wiki/How_to_install_Arduino_Library) to learn the install method.
+- Download the library file: [Digital Compass Library](https://github.com/Seeed-Studio/Grove_3Axis_Digital_Compass), and install it to your Arduino Library. See [How to install Arduino Library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to learn the install method.
 - Open the demo by the path:File -> Example -> Digital Compass -> HMC5883L_Example. Replace the value of variable "declinationAngle" with the one you've figured out already.
 
 ![](https://github.com/SeeedDocument/Xadow_Compass/raw/master/img/Xadow_Compass_Code.jpg)
