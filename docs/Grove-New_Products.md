@@ -1,6 +1,4 @@
-
-
-<img src="https://github.com/SeeedDocument/Grove-2-Channel_SPDT_Relay/raw/master/img/20180823144904.jpg" width="" height="" border=0/>
+<p style="text-align:center"><a href="https://www.seeedstudio.com/act-4" target="_blank"><img src="https://github.com/SeeedDocument/Grove-2-Channel_SPDT_Relay/raw/master/img/20180823144904.jpg" /></a></p>
 
 
 ## August, 2018
