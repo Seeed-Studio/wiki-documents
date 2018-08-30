@@ -11,7 +11,7 @@ tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_bbg, plat_pi, plat_wio, plat_li
 
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_OLED_1.12/master/images/main.jpg)
 
-Our new 1.12” OLED displays are perfect when you need a small display with 16 grayscale. The visible portion of the OLED measures 1.12” diagonal and contains 96x96 grayscale pixels. Because the display uses OLEDs, there is no backlight, and the contrast is very high.
+Our new 1.12” OLED displays are perfect when you need a small display with 16 grayscale. The visible portion of the OLED measures 1.12” diagonal and contains 96x96(version 1.0) |  128x128(version 2.0) grayscale pixels. Because the display uses OLEDs, there is no backlight, and the contrast is very high.
 
 This OLED uses the SSD1327(V1.0) or SH1107G(V2.1) driver chip, which manages the display. You can talk to the driver chip using 4-wire I2C (clock, data, power, and GND pins).
 
@@ -28,7 +28,7 @@ This OLED uses the SSD1327(V1.0) or SH1107G(V2.1) driver chip, which manages the
   | Product Version              | Changes                                                                                                                                                                                    | Released Date |
   |------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
   |Grove - OLED Display 1.12" V1.0 | Initial                                                                                                                                                                                    | Mar 2012      |
-  |Grove - OLED Display 1.12" V2.1 | Change the driver IC from SSD1327 to SH1107G | Nov 2015     |
+  |Grove - OLED Display 1.12" V2.1 | Change the driver IC from SSD1327 to SH1107G, upgrade the grayscale pixels from 96X96 to 128X128 | Nov 2015     |
 
 
 ## Specifications
