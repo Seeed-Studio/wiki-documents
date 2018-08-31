@@ -9,6 +9,7 @@ We have made an acceleration detector, it detects the acceleration and reminds u
 
 This demo required:
 
+
 *   [Xadow Main Board](/Xadow_Main_Board/)
 
 *   [Xadow OLED](/Xado_OLED_128multiply64)
@@ -16,6 +17,7 @@ This demo required:
 *   [Xadow Vibrator Motor](http://wiki.seeedstudio.com/Xadow_Vibrator_Motor/)
 
 *   [Xadow Accelerometer](/Xadow_3_Aixs_Accelerometer/)
+
 
 ![](https://github.com/SeeedDocument/Xadow_Tutorial_Acceleration_Detector/raw/master/img/Untitled2.jpg)
 

@@ -104,7 +104,7 @@ We have developed three simple projects to illustrate how the GrovePi works.
 
 *   [7. Rotary Angle Sensor ](/Grove-Rotary_Angle_Sensor#With_Raspberry_Pi)
 
-*   [8. Temperature_and_Humidity_Sensor_Pro ](/Temperature_and_Humidity_Sensor_Pro#With_Raspberry_Pi)
+*   [8. Grove-Temperature_and_Humidity_Sensor_Pro](/Grove-Temperature_and_Humidity_Sensor_Pro/#With_Raspberry_Pi)
 
 *   [9. Ultrasonic Ranger Sensor](/Grove-Ultrasonic_Ranger#With_Raspberry_Pi)
 

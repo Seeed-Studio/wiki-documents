@@ -17,7 +17,7 @@ There is [Wiichuck- A Wii-Nunchuck break out board](http://www.seeedstudio.com/d
 
 • Designed to be inserted into the connector of a Nintendo Wii Nunchuck
 
-• Connects to [Grove  - Base Shield](/Grove-Base_Shield "Grove - Base Shield")
+• Connects to [Base Shield V2](/Base_Shield_V2 "Base_Shield_V2")
 
 • Interface Type: I2C
 

@@ -60,7 +60,7 @@ Good luck to you for controlling your air-condition or washing machine, with Ard
 
 1.You should have got a raspberry pi and a grovepi or grovepi+.
 
-2.You should have completed configuring the development enviroment, otherwise follow [here](http://wiki.seeedstudio.com/wiki/GrovePi+#Introducing_the_GrovePi.2B).
+2.You should have completed configuring the development enviroment, otherwise follow [here](http://wiki.seeedstudio.com/GrovePi_Plus#Introducing_the_GrovePi.2B).
 
 3.Connection
 - Plug the sensor to grovepi socket D4 by using a grove cable.

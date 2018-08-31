@@ -126,7 +126,7 @@ Follow these steps to build a sample circuit using the **Grove - Recorder** modu
 
 5.  To override the recorded audio, simply repeat step 3 above. The new message will override the old one.
 
-Below is an illustration of a Grove circuit built using the [Grove - USB Power](/Grove-Mixer_Pack#2._USB_Power "Grove - Mixer Pack") power module:
+Below is an illustration of a Grove circuit built using the [Grove - USB Power](/Grove-Mixer_Pack_V2k#2._USB_Power "Grove - Mixer Pack") power module:
 
 ![](https://github.com/SeeedDocument/Grove_Recorder/raw/master/img/REC_Grove-Recoder.JPG)
 
@@ -138,7 +138,7 @@ If you do not have the Grove - USB Power module, use the [Grove - DC Jack Power]
 ---
 This [Grove](/Grove "Grove") module is available as part of the following [Grove Kit Series](/GROVE_System#GROVE_Kit_Series "GROVE System"):
 
-*   [Grove Mixer Pack V2](/GROVE_MIXER_PACK_V2 "GROVE MIXER PACK V2")
+*   [Grove Mixer Pack V2](/Grove-Mixer_Pack_V2 "GROVE MIXER PACK V2")
 
 Alternatively, it can be bought stand-alone at the [Seeed Studio Bazaar](http://www.seeedstudio.com/depot/Grove-Recorder-p-1825.html).
 

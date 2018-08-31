@@ -685,7 +685,7 @@ Using the device, you need at least an RFBee/Xbee (when using only one Atom Node
 
 Now using an Atom Node working in IFTTT mode, follow the steps below:
 
-*   Connect a Grove - Temperature to ADC port and Grove - Buzzer to PWM port using [Grove - Universal 4 Pin cables](/GROVE_System#Grove_Cable).
+*   Connect a Grove - Temperature to ADC port and Grove - Buzzer to PWM port using [Grove - Universal 4 Pin cables](/Grove_System/#grove-cables).
 
 *   Plug RFBee in the Bee Socket.
 *   Press the button on one side of the Atom Node to turn it on. The LED on the other side will light up. Then press the button again to make the Atom Node enter the configuration mode. Meanwhile, the user indicator is red.

@@ -159,7 +159,7 @@ Usage
 
 **1. Sensor Choosing**
 
-The amplifier can turn signals in mA scale up to A scale. Before using it, make sure the output range of your sensor is in mA scale. For example, [Weight Sensor](/Weight_Sensor-Load_Cell-0-500g) is one of them.
+The amplifier can turn signals in mA scale up to A scale. Before using it, make sure the output range of your sensor is in mA scale. For example, [Weight Sensor](/Weight_Sensor_Load_Cell_0-500g) is one of them.
 
 **2. Connector Reforming**
 

@@ -50,7 +50,7 @@ Also the protoshield is shipped with two 20-pin male headers. You can break them
 
 4. Plug the Grove - Basic Shield into Arduino and connect Arduino to PC by using a USB cable.
 
-5. Copy and paste code below to a new Arduino sketch. Please click [here](http://wiki.seeedstudio.com/wiki/Upload_Code) if you do not know how to upload.
+5. Copy and paste code below to a new Arduino sketch. Please click [here](http://wiki.seeedstudio.com/Upload_Code) if you do not know how to upload.
 ```
 Demo code:
 int led = 8;

@@ -51,7 +51,7 @@ Link the Sensor to I2C port of Seeeduino with Grove Cable.
 
 ###  Software Part
 
-####  With [Arduino](/w/index.php?title=Arduino&amp;action=edit&amp;redlink=1 "Arduino&amp;action=edit&amp;redlink=1")
+####  With Arduino
 
 Copy the following code into a new sketch of Arduino and upload the sketch, then you can get heart rate from the Serial Monitor.
 It may take about a minute to get valid heart rate after you touch your finger with sensor.

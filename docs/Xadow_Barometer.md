@@ -38,7 +38,7 @@ The demo will show you how to get the air pressure and temperature of the curren
 ## Download Library
 ----
 - Xadow Barometer is sharing the library with Grove - Barometer Sensor. You can download directly the [library](https://github.com/Seeed-Studio/Grove_Barometer_Sensor) from Github.
-- Now you can open the code and upload it to Xadow Main Board. If you have not installed the Xadow Driver, You can learn the operation steps by referring to the [getting started](http://wiki.seeedstudio.com/wiki/Getting_Started) in wiki main page .
+- Now you can open the code and upload it to Xadow Main Board. If you have not installed the Xadow Driver, You can learn the operation steps by referring to the [getting started](http://wiki.seeedstudio.com/Xadow_Main_Board/) in wiki main page .
 
 ```
 /*

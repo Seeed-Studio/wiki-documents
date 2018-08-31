@@ -27,9 +27,9 @@ Please refer to each modules' specifications:
 
 *   [Grove - Temp &amp; Humidity Sensor](/Grove-Temperature_and_Humidity_Sensor#Specification)
 
-*   Grove - Sunlight Sensor V1.0
+*   [Grove - Sunlight Sensor V1.0](/Grove-Sunlight_Sensor)
 
-*   [Grove - Water Flow Sensor](/G1-4inch_Water_Flow_Sensor#Specification)
+*   [Grove - Water Sensor](/Grove-Water_Sensor)
 
 *   [Grove - Moisture Sensor](http://Grove_-_Moisture_Sensor#Specification)
 
@@ -45,7 +45,7 @@ Please refer to each modules' specifications:
 
 *   12V Power connector
 
-*   [Base Shield V2](/Grove-Base_shield_v2)
+*   [Base Shield V2](/Base_Shield_V2)
 
 ##  Application Ideas
 ---

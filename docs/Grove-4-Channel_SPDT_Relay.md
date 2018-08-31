@@ -290,7 +290,7 @@ Channel 2 on
 
 
 !!!Note
-        We do not add load in this demo, if you want to check how to add load, please check the [Grove - 2-Channel SPDT Relay](http://wiki.seeedstudio.com//Grove-2-Channel_SPDT_Relay/).
+        We do not add load in this demo, if you want to check how to add load, please check the [Grove - 2-Channel SPDT Relay](http://wiki.seeedstudio.com/Grove-2-Channel_SPDT_Relay/).
 
 
 #### Function description

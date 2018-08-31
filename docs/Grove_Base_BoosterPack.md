@@ -189,7 +189,7 @@ With the help of these pin diagrams, you know which pin has the function you nee
 
 *   [9. Ultrasonic Ranger Sensor](/Grove-Ultrasonic_Ranger#With_TI_LaunchPad)
 
-*   [10. Temperature Humidity Sensor ](/Grove-Temperature_and_Humidity_Sensor#With_TI_LaunchPad)
+*   [10. Temperature Humidity Sensor ](/Grove-TemperatureAndHumidity_Sensor)
 
 
 

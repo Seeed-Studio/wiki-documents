@@ -707,7 +707,7 @@ When prompt, type in the sudo password for user respeaker: respeaker. Wait the s
 
 **Step 2. Authorize Alexa**
 
-Connect to the board via [VNC](https://github.com/respeaker/get_started_with_respeaker/blob/master/docs/ReSpeaker_Core_v2.0/getting_started.md#ssh--vnc). In the VNC desktop, open the Internet Browser, and tap `127.0.0.1:3000` at the URL input field . The web browser will display a login page. Sign in with your Amazon account:
+Connect to the board via [VNC](https://github.com/respeaker/get_started_with_respeaker/blob/master/docs/ReSpeaker_Core_V2/getting_started.md#ssh--vnc). In the VNC desktop, open the Internet Browser, and tap `127.0.0.1:3000` at the URL input field . The web browser will display a login page. Sign in with your Amazon account:
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/aus-1.png)
 
@@ -1089,7 +1089,7 @@ This script calculates the RMS of the sound recorded by the microphones.
 
 - **Step 2. Authorize Alexa**
 
-Connect to the board via [VNC](https://github.com/respeaker/get_started_with_respeaker/blob/master/docs/ReSpeaker_Core_v2.0/getting_started.md#ssh--vnc). In the VNC desktop, open terminal and execute:
+Connect to the board via [VNC](https://github.com/respeaker/get_started_with_respeaker/blob/master/docs/ReSpeaker_Core_V2/getting_started.md#ssh--vnc). In the VNC desktop, open terminal and execute:
 
 ```
 ~/.local/bin/alexa-auth
@@ -1874,7 +1874,7 @@ And the user name of ReSpeaker Core v2.0 is **respeaker**, the password is **res
 
 ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/AP2.png)
 
-- **Step 3.** When you get into the Serial Console， you can [setup the WiFi](http://wiki.seeedstudio.com/ReSpeaker_Core_v2/#a-wi-fi-setting-up)
+- **Step 3.** When you get into the Serial Console， you can [setup the WiFi](http://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#a-wi-fi-setting-up)
 
 **Q5: How to adjust the volume?**
 

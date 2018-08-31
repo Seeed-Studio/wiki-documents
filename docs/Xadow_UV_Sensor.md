@@ -31,7 +31,6 @@ Required Xadow module: [Xadow - Main Board](/Xadow_Main_Board/), [Xadow - OLED 1
 
 **Hardware Installation**
 
-[图片](/w/index.php?title=%E5%9B%BE%E7%89%87&amp;action=edit&amp;redlink=1 "%E5%9B%BE%E7%89%87&amp;action=edit&amp;redlink=1")
 
 !!!Note
     When connect Xadow UV Sensor to Xadow Main Board, you should concern about the connection direction. The connection method is that the unfilled corner of one Xadow module need to connect to the right angle of another module(see four corners of each Xadow module).

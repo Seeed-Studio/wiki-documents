@@ -136,7 +136,7 @@ poly 307 143 336 136 398 140 392 189 333 187 318 174 302 176 [BluetoothBee](/Blu
 
 poly 290 238 308 221 394 214 396 271 306 283 290 265 [XBee](/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products "Zigbee Networking with XBee Series_2 and Seeeds Products")
 
-poly 321 353 333 330 395 306 427 364 359 393 335 380 [GPSBee](/w/index.php?title=GPS_Bee_kit_(with_Mini_Embedded_Antenna)&amp;action=edit&amp;redlink=1 "GPS_Bee_kit_(with_Mini_Embedded_Antenna)&amp;action=edit&amp;redlink=1")
+poly 321 353 333 330 395 306 427 364 359 393 335 380 [GPSBee](/GPS_Bee_kit "GPS_Bee_kit")
 
 poly 409 464 417 432 488 389 537 445 463 498 426 491 [RFBee](/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee V1.1 - Wireless Arduino compatible node")
 
@@ -231,7 +231,7 @@ Seeeduino Stalker v3 &lt;---&gt; UartSBee v4.0 connection
 
 <big>Connection Notes </big>
 
-*   **Bee series socket** - 2*10 pin 2.0mm pitch (which will mate with - one at a time - any of the [wireless modules](/Wifi_Bee "Wifi_Bee"): [XBee](/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products "Zigbee Networking with XBee Series_2 and Seeeds Products"), [BluetoothBee](/Bluetooth_Bee "Bluetooth Bee"), [GPSBee](/w/index.php?title=GPS_Bee_kit_(with_Mini_Embedded_Antenna)&amp;action=edit&amp;redlink=1 "GPS_Bee_kit_(with_Mini_Embedded_Antenna)&amp;action=edit&amp;redlink=1") or [RFBee](/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee V1.1 - Wireless Arduino compatible node").) Communication with these modules are done through UART.
+*   **Bee series socket** - 2*10 pin 2.0mm pitch (which will mate with - one at a time - any of the [wireless modules](/Wifi_Bee "Wifi_Bee"): [XBee](/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products "Zigbee Networking with XBee Series_2 and Seeeds Products"), [BluetoothBee](/Bluetooth_Bee "Bluetooth Bee"), [GPSBee](/GPS_Bee_kit "GPS_Bee_kit") or [RFBee](/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee V1.1 - Wireless Arduino compatible node").) Communication with these modules are done through UART.
 *   **Serial interface** – To save space and lower costs, USB&lt;-&gt;Serial connectivity is not provided by default. You may use the FT232 based [UartSBee_V4](/UartSBee_V4 "UartSBee_V4") or other USB to serial adapter boards to do the programming or communicate with the PC.
 *   **User LED** – An LED has been provided onboard for use in your application as desired.
 *   **I<sup>2</sup>C Interface**: Onboard I<sup>2</sup>C level shifter IC provides voltage translation between 3.3V and 5V devices. This allows you to connect 5.0 Volt I<sup>2</sup> ICs to you microcontroller when its operating on 3.3 Volts.

@@ -253,7 +253,7 @@ There are two kind of Wi-Fi modes: AP mode and Station mode. Refer here for the 
 
 **7.**Type the IP in a new Tab of browser and you can login to Web user interface to configure the system.
 
-**8.**Now both the host computer and LinkIt Smart 7688 are connected to internet. Type ping [www.mediatek.com](www.mediatek.com) in console and you will get:
+**8.**Now both the host computer and LinkIt Smart 7688 are connected to internet. Type ping [www.mediatek.com](https://www.mediatek.com/) in console and you will get:
 
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/img/Ping_result.jpg)
 

@@ -120,7 +120,7 @@ Plug Grove - 6-Axis Accelerometer&Gyroscope to I<sup>2</sup>C interface on Grove
 
 ### **A little demo**
 
-Download the [library](https://github.com/Seeed-Studio/Accelerometer_And_Gyroscope_LSM6DS3) for Grove - 6-Axis Accelerometer&Gyroscope. Refer to [Guide to use demos downloaded from Seeed's Github](/Guide_to_use_demos_downloaded_from_Seeed's_Github) for quicker flashing your code to main controller board. There are three demo examples in total in sub directory ***examples***.
+Download the [library](https://github.com/Seeed-Studio/Accelerometer_And_Gyroscope_LSM6DS3) for Grove - 6-Axis Accelerometer&Gyroscope. Refer to [Guide to use demos downloaded from Seeed's Github](/Guide_to_use_demos_downloaded_from_Seeed-s_Github) for quicker flashing your code to main controller board. There are three demo examples in total in sub directory ***examples***.
 
 Resources
 ---------

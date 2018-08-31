@@ -73,7 +73,7 @@ As shown below:
 ![](https://github.com/SeeedDocument/Grove-Sunlight_Sensor/raw/master/img/Grove_sunlight_hardware_connect.jpg)
 
 !!!Note
-    If you need a plug more modules on main control board, you may need a [Grove base shield](http://wiki.seeedstudio.com/wiki/Grove_-_Base_Shield) which will make your work easy.
+    If you need a plug more modules on main control board, you may need a [Grove base shield](http://wiki.seeedstudio.com/Base_Shield_V2/) which will make your work easy.
 
 **Download**
 
@@ -87,7 +87,7 @@ Launch Arduino IDE and click **File>Examples>Grove_Sunlight_Sensor>SI1145DEMO** 
 
 Click Tools>Board to choose Arduino UNO and select respective serial port.
 
-Now click Upload(CTRL+U) to burn testing code. Please refer to [**here**](http://wiki.seeedstudio.com/wiki/Arduino_Common_Error) for any error prompt and you can also add comment on [**forum**](www.seeed.cc).
+Now click Upload(CTRL+U) to burn testing code. Please refer to [**here**](http://wiki.seeedstudio.com/Arduino_Common_Error) for any error prompt and you can also add comment on [**forum**](www.seeed.cc).
 
 **Review Results**
 

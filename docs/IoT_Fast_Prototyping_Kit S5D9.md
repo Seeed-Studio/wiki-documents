@@ -40,9 +40,9 @@ Please contact a Renesas Electronics sales office if you have any questions rega
 
 ![](https://github.com/SeeedDocument/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/raw/master/img/Quick%20Start%20Guide.jpeg)
 
-- The link of Step4: [www.renesas.com/iotsandbox/S5D9/tutorial](www.renesas.com/iotsandbox/S5D9/tutorial)
+- The link of Step4: [www.renesas.com/iotsandbox/S5D9/tutorial](http://www.renesas.com/iotsandbox/S5D9/tutorial)
 
-- The link of Step5: [www.renesas.com/iotsandbox/S5D9/getstarted](www.renesas.com/iotsandbox/S5D9/getstarted)
+- The link of Step5: [www.renesas.com/iotsandbox/S5D9/getstarted](http://www.renesas.com/iotsandbox/S5D9/getstarted)
 
 ## 1. Overview
 

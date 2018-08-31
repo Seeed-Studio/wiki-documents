@@ -333,7 +333,7 @@ while True:
 ## Resources
 
 
--  **[Suggest Reading]** [How to choose a Gas Sensor](/How_to_choose_A_Gas_Sensor)
+-  **[Suggest Reading]** [How to choose a Gas Sensor](/How_to_Chose_A_Gas_Sensor)
 -  **[References]** [What's LEL](http://en.wikipedia.org/wiki/Flammability_limit)
 -  **[Schematic]** [Grove Gas Sensor - EAGLE (Schematic and Board) files](https://raw.githubusercontent.com/SeeedDocument/Grove-Gas_Sensor-MQ2/master/res/Gas_Sensor_Eagle_files.zip)
 -  **[Schematic]** [Grove Gas Sensor - PDF Schematic](https://raw.githubusercontent.com/SeeedDocument/Grove-Gas_Sensor-MQ2/master/res/Gas_Sensor_Schematic.pdf)

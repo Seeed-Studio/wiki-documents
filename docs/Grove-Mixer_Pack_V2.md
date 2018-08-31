@@ -9,7 +9,7 @@ sku:  110060026
 ---
 ![](https://github.com/SeeedDocument/Grove-Mixer_Pack_V2/raw/master/img/U8GUZNb9TVZ14lLRW6ialXEV.jpg)
 
-The [Grove - Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) is a stand-alone, Lego-like electronics kit that consists of 13 select Grove modules from the [ Grove System](/GROVE_System "GROVE System") developed by [Seeed Studio](http://www.seeedstudio.com/depot/). These mini-modules can be used as building blocks to create electronic circuits and prototypes quite rapidly without necessarily using a Microcontroller board such as a [Seeeduino](/Seeeduino "Seeeduino") or an [ Arduino](/Main_Page#Arduino "Main Page").
+The [Grove - Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) is a stand-alone, Lego-like electronics kit that consists of 13 select Grove modules from the [ Grove System](/GROVE_System "GROVE System") developed by [Seeed Studio](http://www.seeedstudio.com/depot/). These mini-modules can be used as building blocks to create electronic circuits and prototypes quite rapidly without necessarily using a Microcontroller board such as a [Seeeduino](/Seeeduino "Seeeduino") or an [ Arduino](/Arduino "Main Page").
 
 The 13 Grove modules included are a combination of sensor modules, actuators, logic and power modules that are extremely easy to use and fun to work with. Within minutes, you can design new circuits and assemble functional prototypes.
 

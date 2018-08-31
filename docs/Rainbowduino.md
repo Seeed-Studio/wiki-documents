@@ -18,7 +18,7 @@ The Rainbowduino series is an Arduino compatible controller board with professio
 
 *   [Rainbowduino Extension Board v0.9b](/Rainbowduino_Extension_Board_v0.9b "Rainbowduino Extension Board v0.9b"): Rainbowduino Extension Shield is a breakout board of Rainbowduino’s 192 separate LED driving channels. The channels are divided into three 8*8 arrays: red, green and blue for easier controlling, it is designed to ease customized LED projects based on Rainbowduino.
 
-*   [Rainbow Cube ](/Rainbow_Cube "Rainbow Cube"): The “Rainbow Cube – Ready to Shine” requires no soldering and comes pre-assembled with a Rainbowduino (Arduino-compatible) LED driver controller. Just plug it in to your PC or Mac, grab a copy of the free design software, and you’ll discover just how easy it is to program this spectacular device and see the results in real time.
+*   [Rainbow Cube ](/Rainbow_Cube_Kit_Acrylic_Harness "Rainbow_Cube_Kit_Acrylic_Harness"): The “Rainbow Cube – Ready to Shine” requires no soldering and comes pre-assembled with a Rainbowduino (Arduino-compatible) LED driver controller. Just plug it in to your PC or Mac, grab a copy of the free design software, and you’ll discover just how easy it is to program this spectacular device and see the results in real time.
 
 *   [Rainbow Cube Kit Acrylic Harness](/Rainbow_Cube_Kit_Acrylic_Harness "Rainbow Cube Kit Acrylic Harness"): An exquisite, Transparent and easy-to-assembled acrylic case which custom made for Rainbow Cube Kit, it is designed by Riley Porter @Synthetos. This Harness is made of six piece of acrylic boards, two bags of keys, four 16mm high plastic columns and several screw nuts.
 
@@ -33,7 +33,7 @@ The Rainbowduino series is an Arduino compatible controller board with professio
 
 |[![](https://github.com/SeeedDocument/Rainbowduino/raw/master/img/Rainbowcuben.jpg)](/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible "Rainbow Cube kit - RGB 4*4*4 (Rainbowduino Compatible)")|[![](https://github.com/SeeedDocument/Rainbowduino/raw/master/img/Rainbow_Cube_Assembled.jpg)](/Rainbow_Cube_Kit_Acrylic_Harness "Rainbow Cube Kit Acrylic Harness")|![](https://github.com/SeeedDocument/Rainbowduino/raw/master/img/acrycubebox.jpg)|
 |:---:|:---:|:---:|
-|[Rainbow Cube kit - RGB 4*4*4 (Rainbowduino Compatible)](/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible "Rainbow Cube kit - RGB 4*4*4 (Rainbowduino Compatible)")|[Rainbow Cube](/Rainbow_Cube "Rainbow Cube")|[Rainbow Cube Kit Acrylic Harness](/Rainbow_Cube_Kit_Acrylic_Harness "Rainbow Cube Kit Acrylic Harness")</font>
+|[Rainbow Cube kit - RGB 4*4*4 (Rainbowduino Compatible)](/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible "Rainbow Cube kit - RGB 4*4*4 (Rainbowduino Compatible)")|[Rainbow_Cube_Kit_Acrylic_Harness](/Rainbow_Cube_Kit_Acrylic_Harness "Rainbow_Cube_Kit_Acrylic_Harness")|[Rainbow Cube Kit Acrylic Harness](/Rainbow_Cube_Kit_Acrylic_Harness "Rainbow Cube Kit Acrylic Harness")</font>
 
 
 ##   Seeed depot sales

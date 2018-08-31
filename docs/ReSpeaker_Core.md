@@ -516,7 +516,7 @@ orangectl passwd root 12345678  //replace 12345678 with the password you want to
 
 **Q12: Don't have a RPC connection**
 
-- You need to reflash the firmware, following the [guide](https://github.com/respeaker/get_started_with_respeaker/blob/master/QuickStart.md#update-for-old-version)
+- You need to reflash the firmware, following the [guide](https://github.com/respeaker/get_started_with_respeaker/blob/master/docs/ReSpeaker/QuickStart.md#update-for-old-version)
 
 **Q13: SFTP & FTP**
 - We don't have a FTP on respeaker, just SFTP.
@@ -578,7 +578,7 @@ orangectl passwd root 12345678  //replace 12345678 with the password you want to
 
 Note: If you can not update your ReSpeaker via Web or can not visit http://192.168.100.1/home.html, please click [here](https://s3-us-west-2.amazonaws.com/respeaker.io/firmware/ramips-openwrt-latest-LinkIt7688-squashfs-sysupgrade.bin). to download the lastest firmware on your computer, copy it to a SD card and plug the SD card into ReSpeaker.
 
-Connect to the [serial console](https://github.com/respeaker/get_started_with_respeaker/blob/master/QuickStart.md#serial-console). of ReSpeaker, type the following command lines to update the firmware:
+Connect to the [serial console](https://github.com/respeaker/get_started_with_respeaker/blob/master/docs/ReSpeaker/QuickStart.md#serial-console). of ReSpeaker, type the following command lines to update the firmware:
 
 ```
 mount /dev/mmcblk0p1 /mnt

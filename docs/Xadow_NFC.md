@@ -45,7 +45,7 @@ Before reading/writing tag, what you need to prepare is the hardware installatio
 ![](https://github.com/SeeedDocument/Xadow_NFC/raw/master/images/XadowNFC.jpg)
 
 !!!Note:
-    When connect Xadow - NFC to [Xadow - Main Board](http://wiki.seeedstudio.com/wiki/Xadow_-_Main_Board), you should concern about the connection direction. The connection method is that the unfilled corner of one Xadow module need to connect to the right angle of another module (see four corners of each Xadow module).
+    When connect Xadow - NFC to [Xadow - Main Board](http://wiki.seeedstudio.com/Xadow_Main_Board), you should concern about the connection direction. The connection method is that the unfilled corner of one Xadow module need to connect to the right angle of another module (see four corners of each Xadow module).
 
 
 - Download [PN532 library](https://github.com/Seeed-Studio/PN532) and [NDEF Library](https://github.com/don/NDEF). Do not forget to install these libraries into Arduino Library. If you haven't knew clearly the operation, please refer [here](http://www.seeedstudio.com/wiki/How_to_install_Arduino_Library) for a closer look.

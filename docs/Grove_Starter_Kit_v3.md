@@ -24,7 +24,7 @@ The base shield allows for easy connection of any microprocessor input or output
 
 If this is your first time using an Arduino, you will need to complete the following steps:
 
-*   [Download Arduino IDE and Install Arduino Driver](/Download_Arduino_and_install_Arduino_driver)
+*   [Getting Started with Arduino](/Download_Getting_Started_with_Arduino)
 
 *   [Install your microcontroller](/Getting_Started_with_Seeeduino)
 
@@ -55,6 +55,7 @@ You are now ready to explore the Grove ecosystem.
 *   1*9V to Barrel Jack Adapter
 *   1*Grove starter kit  Manual
 *   1*Green Plastic Box
+
 
 ###  Modules Detail
 

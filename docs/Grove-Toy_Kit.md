@@ -23,7 +23,7 @@ Grove Toy Kit includes:
 
 *   1 x [Grove - PIR Motion Sensor](/Grove-PIR_Motion_Sensor "Grove - PIR Motion Sensor")
 
-*   1 x [Grove - I2C 3-axis Accelerometer](/Grove-I2C_3-axis_Accelerometer "Grove - I2C 3-axis Accelerometer")
+*   1 x [Grove - 3-Axis Analog Accelerometer](/Grove-3-Axis_Analog_Accelerometer "Grove-3-Axis_Analog_Accelerometer")
 
 *   10 x Grove - Universal 4 pin Cable
 
@@ -143,7 +143,7 @@ This Piezo_Buzzer can be connected to an analog pulse-width modulation output to
 
 ##  Usage
 
-The Toy kit work with the [Arduino](http://www.seeedstudio.com/depot/arduino-uno-p-694.html?cPath=132_133) or [Seeeduino](http://www.seeedstudio.com/depot/arduino-uno-p-694.html?cPath=132_133)board,and the [Grove Shield series](/index.php-title=GROVE_System#Grove_Shield_Series "GROVE_System#Grove_Shield_Series")
+The Toy kit work with the [Arduino](http://www.seeedstudio.com/depot/arduino-uno-p-694.html?cPath=132_133) or [Seeeduino](http://www.seeedstudio.com/depot/arduino-uno-p-694.html?cPath=132_133)board,and the [Grove Shield series](/Grove_System "Grove_System")
 
 Here are some Application Examples designed by Seeed customers.
 
@@ -263,11 +263,6 @@ If you want to go for this project, you may still need to have:
 
 *   A demo [video](http://www.youtube.com/watch?v=AjtvoA2FFAs) on YouTube.
 
-###  7. CrayonXiaoXin by Seeed
-
-*   [Make theCrayonXiaoxin Talk as you Touch him](/Make_theCrayonXiaoxin_Talk_as_you_Touch_him "Make theCrayonXiaoxin Talk as you Touch him")
-
-
 ##  Support
 
 If you have questions or other better design ideas, you can go to our [forum](http://forum.seeedstudio.com)
@@ -275,9 +270,9 @@ If you have questions or other better design ideas, you can go to our [forum](ht
 
 ##  See Also
 
-*   [GROVE - Starter Kit V1.1b](/GROVE-Starter_Kit_V1.1b "GROVE - Starter Kit V1.1b")
+*   [Grove - Starter Kit](https://www.seeedstudio.com/Grove-Starter-Kit-p-709.html)
 
-*   [Grove - ADK Dash Kit](/w/index.php?title=Grove_-_ADK_Dash_Kit&amp;action=edit&amp;redlink=1 "Grove_-_ADK_Dash_Kit&amp;action=edit&amp;redlink=1")
+*   [Grove - ADK Dash Kit](https://www.seeedstudio.com/Grove-ADK-Dash-Kit-p-929.html)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

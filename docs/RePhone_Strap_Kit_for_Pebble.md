@@ -23,7 +23,7 @@ The ‘GND’ and ‘PWR’on the back frame means you can charge your Pebble Ti
 
 ###   Xadow GPS v2
 ---
-For more info about this module please check on [**Xadow GPS v2 Wiki Page**](/Xadow_GPS_v2).
+For more info about this module please check on [**Xadow GPS V2 Wiki Page**](/Xadow_GPS_V2).
 
 <table>
 <tr>

@@ -70,11 +70,11 @@ Bottom-view:
 
 ##   Usage
 ---
-Example : Use Bluetooth Bee-Standalone to control a [Grove-LED](/Grove-LED) with XBee carrier.
+Example : Use Bluetooth Bee-Standalone to control a [Grove-Red_LED](/Grove-Red_LED) with XBee carrier.
 
 - Step 1
 
-Connect Grove-Led and Bluetooth Bee-Standalone module to XBee carrier like this.
+Connect Grove-Red_LED and Bluetooth Bee-Standalone module to XBee carrier like this.
 
 ![](https://github.com/SeeedDocument/Bluetooth_Bee_Standalone/raw/master/img/Bluetooth_Bee-Standalone3.jpg)
 

@@ -19,7 +19,7 @@ Grove Indoor Environment Kit for Edison makes it easy to create complete indoor 
 
 *   [Grove - Tempture&amp;Humidity Sensor (High-Accuracy &amp;Mini)](/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0)  x1
 
-*   [Grove - Moisture sensor](/Grove-Moisture_sensor)  x1
+*   [Grove - Moisture sensor](/Grove-Moisture_Sensor)  x1
 
 *   [Grove - Light Sensor](/Grove-Light_Sensor)  x1
 

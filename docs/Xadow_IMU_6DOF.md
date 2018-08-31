@@ -33,8 +33,8 @@ Based on our available library，you can get accele and gyro value easily.Now le
 Note: when connect Xadow IMU 6DOF to Xadow Main Board, the connection direction should be cautious. The connection method is that the unfilled corner of one Xadow module connect to the right angle of another module(see four corners of each Xadow module).
 
 **Test Code：**
-
-- Download [Xadow - IMU 6DOF  MPU6050 Library](https://github.com/Seeed-Studio/Xadow_IMU_6DOF) from Github, and install I2Cdev file and MPU6050 file to your Arduino Library. About the library installation，please refer to [here](http://wiki.seeedstudio.com/wiki/How_to_install_Arduino_Library) in wiki page.
+  
+- Download [Xadow - IMU 6DOF  MPU6050 Library](https://github.com/Seeed-Studio/Xadow_IMU_6DOF) from Github, and install I2Cdev file and MPU6050 file to your Arduino Library. About the library installation，please refer to [here](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) in wiki page.
 - Open the example: **MPU6050_DMP6 by the pathFile - >Examples -> MPU6050 ->Examples->MPU6050_DMP6**.
 
 ```

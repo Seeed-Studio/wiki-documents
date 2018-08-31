@@ -404,7 +404,7 @@ Note2: SPI related pins can be used as digital IO only if you know how to disabl
 ###   5.1 Hardware Installation
 
 The Mesh Bee has a general Bee socket. So you can use it just like XBee or RFBee etc. One thing to notice is that, the pins are not 100% compatible with each other except for part of them.
-If you're newer to Bee series, please follow [this link](/w/index.php?title=Bee_series&amp;action=edit&amp;redlink=1 "Bee_series&amp;action=edit&amp;redlink=1") to learn The Bee Series and [this link](/RFbee_V1.1-Wireless_Arduino_compatible_node#Usage "RFbee V1.1 - Wireless Arduino compatible node") to know how to install Bee with other hardware.
+If you're newer to Bee series, please follow [this link](/Grove_Cape_for_BeagleBone_Series "Grove_Cape_for_BeagleBone_Series") to learn The Bee Series and [this link](/RFbee_V1.1-Wireless_Arduino_compatible_node#Usage "RFbee V1.1 - Wireless Arduino compatible node") to know how to install Bee with other hardware.
 
 ###   5.2 How to update firmware
 
