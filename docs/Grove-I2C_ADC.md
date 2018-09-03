@@ -391,6 +391,11 @@ Resources
 -   [I2C ADC Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_ADC/master/res/I2C_ADC_Eagle_File.zip)
 -   [ADC121C021 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_ADC/master/res/ADC121C021_Datasheet.pdf)
    
+## Project
+
+**BeagleBone Green Temperature Monitor on Artik Cloud** Publish Grove Temperature Sensor values collected by a BeagleBone Green to Artik Cloud.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/LaurenceHR/beaglebone-green-temperature-monitor-on-artik-cloud-08ca3b/embed' width='350'></iframe>
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_I2C_ADC -->
 

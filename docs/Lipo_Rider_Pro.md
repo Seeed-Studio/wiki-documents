@@ -232,5 +232,16 @@ Larger/multiple batteries and/or solar panels can be used, but only with end-use
 -   [Get Lipo rider pro to charge Ipod or Iphone](http://www.forum.seeedstudio.com/viewtopic.php?f=4&t=3575)
 -   [Lithium Ion polymer Battery pack - 6A](https://www.seeedstudio.com/Lithium-Ion-polymer-Battery-pack-6A-p-602.html)
 
+## Project
+
+**PlantSigfox Monitoring** Retrieving air/soil moisture & temperature and brightness (and RGB rays). It also sends the localization, and so gives weather forecasts.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/plantsigfox-ei2i4/plantsigfox-monitoring-3d66be/embed' width='350'></iframe>
+
+**Step Detection System By A Way With Arduino**
+The purpose of the project is to detect the passing of cars and people at the entrance to an orchard and a warning beep inside this house.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/juan-salvador-aleixandre-talens/step-detection-system-by-a-way-with-arduino-bc6f3a/embed' width='350'></iframe>
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

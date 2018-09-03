@@ -754,5 +754,9 @@ Resources
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/kevin-lee2/diy-a-device-for-explaining-rgb-color-model-496cbc/embed' width='350'></iframe>
 
+**Security Access Using Seeeduino Lotus** When you knock on the door or close to the door, the door will open automatically.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/limanchen/security-access-using-seeeduino-lotus-7eb90f/embed' width='350'></iframe>
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

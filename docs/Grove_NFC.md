@@ -262,6 +262,11 @@ void loop(void) {
 - **[Zip]** [Grove - NFC v1.1 EAGLE (schematic and board) files](https://raw.githubusercontent.com/SeeedDocument/Grove-NFC/master/res/Grove-NFC_v1.1.zip)
 - **[PDF]** [PN532 Datasheet PDF](https://raw.githubusercontent.com/SeeedDocument/Grove-NFC/master/res/PN532.pdf)
 
+## Project
+
+**Particle Photon + Grove NFC + Grove LCD via I2C** Use Particle Photon to read UID of a NFC Card and display on LCD, all with I2C.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/peacemoon/particle-photon-grove-nfc-grove-lcd-via-i2c-7e7d36/embed' width='350'></iframe>
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_NFC -->
 

@@ -169,5 +169,11 @@ UV intensity can nearly double with reflection from snow or other bright surface
 - [Lumen (unit)](https://en.wikipedia.org/wiki/Lumen_(unit))
 - [Ultraviolet index](https://en.wikipedia.org/wiki/Ultraviolet_index)
 
+## Project
+
+**The Environment Cube! Know the Land Beneath You!** A cube with all the necessary sensors, suitable for a wide range of applications like agriculture. Know the land beneath you!
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/dhairya-parikh/the-environment-cube-know-the-land-beneath-you-b3c2dd/embed' width='350'></iframe>
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

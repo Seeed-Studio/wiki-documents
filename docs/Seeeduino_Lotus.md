@@ -214,5 +214,16 @@ Please check,
 
 You can post a question to [Seeed Forum](http://www.seeed.cc/discover.html?t=Arduino) or send an email to **techsupport@seeed.cc**.
 
+
+## Project
+
+**The Da Vinci Code** The work combines art and electronics. The art part makes the skeleton and consists of 11 layers of medium density fiberboard.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/coding-with-da-vince/the-da-vinci-code-3b91a8/embed' width='350'></iframe>
+
+**The Little Universe, a Gesture-Controlled Floor Lamp** The Little Universe is a gesture-controlled floor lamp with three wooden legs and an artistic lamp head.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/100385/the-little-universe-a-gesture-controlled-floor-lamp-323503/embed' width='350'></iframe>
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

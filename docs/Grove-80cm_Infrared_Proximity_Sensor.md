@@ -245,6 +245,13 @@ Resources
 
 - [GP2Y0A21YK datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-80cm_Infrared_Proximity_Sensor/master/res/GP2Y0A21YK.pdf)
 
+
+## Project
+
+**Arduino101 BLE Autonomous Rover** Augmenting the Arduino101 BLE Rover with sensors for autonomous driving.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/31926/arduino101-ble-autonomous-rover-2cb19f/embed' width='350'></iframe>
+
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_80cm_Infrared_Proximity_Sensor -->
 
 ## Tech Support

@@ -221,6 +221,17 @@ void loop()
 - **[Library]** [Grove_BMP280 Library](https://github.com/Seeed-Studio/Grove_BMP280) on GitHub
 - **[References]**  [I<sup>2</sup>C how-to for Arduino](https://www.arduino.cc/en/Reference/Wire)
 
+## Project
+
+**Intelligent alarm system made with BBG ( IoT)**
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/kevin-lee2/intelligent-alarm-system-made-with-bbg-iot-5fdccd/embed' width='350'></iframe>
+
+**Monitoring System for Smart Crops** Design and build a system to monitor the status of your crops using the Netduino 3 WiFi.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/gabogiraldo/monitoring-system-for-smart-crops-dfa4bd/embed' width='350'></iframe>
+
+
 ## Tech Support
 
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).

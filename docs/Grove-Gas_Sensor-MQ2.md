@@ -350,5 +350,13 @@ while True:
 
 [**ED-E: Home Automation and Monitoring System**](https://hackaday.io/project/8011-ed-e-home-automation-and-monitoring-system)
 
+**Scalable Intelligent Air Quality Monitoring and Response** Air Quality Monitoring that uses the Intel Edison Compute Module, Amazon AWS, Visualization through Kibana, and drones!
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/iot-warriors/scalable-intelligent-air-quality-monitoring-and-response-b72732/embed' width='350'></iframe>
+
+**Octopod: Smart IoT Home Automation Project** Octopod, a uniquely shaped full home automation system that allows you to monitor your home and keep security with AI and smart RFID locks.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/sakshambhutani2001/octopod-smart-iot-home-automation-project-fa939b/embed' width='350'></iframe>
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

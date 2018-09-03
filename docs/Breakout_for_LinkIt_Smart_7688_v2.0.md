@@ -134,5 +134,11 @@ For below 2, I think you surely have them.
 * [OpenWrt](http://wiki.openwrt.org/doc/howto/user.beginner)
 * [Link to buy a LinkIt Smart 7688](http://www.seeedstudio.com/depot/LinkIt-Smart-7688-p-2573.html?cPath=122_142)
 
+## Project
+
+**Smart Vendy** Tracking vendor sales so that effectively manage what inventory needs to buy to fill machines before it gets out of stock.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/sainath-komakula/smart-vendy-cd197e/embed' width='350'></iframe>
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

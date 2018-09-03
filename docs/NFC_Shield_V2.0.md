@@ -649,6 +649,15 @@ Resources
 - [PN532 Datasheet](https://raw.githubusercontent.com/SeeedDocument/NFC_Shield_V2.0/master/res/PN532.pdf)
 - [FAQ of NFC Shield](http://support.seeedstudio.com/knowledgebase/articles/462025-nfc-shield-sku-sld01097p)
 
+## Project
+
+**Paper Man** An interesting way to communicate with your Android device through the NFC technology.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/xiaobo__/paper-man-0a6833/embed' width='350'></iframe>
+
+**NFC Card Controlled Remote Car** Challenge your coordination: build your own NFC-controlled car
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/litliao/nfc-card-controlled-remote-car-af27c9/embed' width='350'></iframe>
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/NFC_Shield_V2.0 -->
 

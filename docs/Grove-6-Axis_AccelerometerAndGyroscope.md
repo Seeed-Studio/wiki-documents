@@ -131,6 +131,11 @@ Resources
 -  **[Library]** [Grove-6-Axis_AccelerometerAndGyroscope](https://github.com/Seeed-Studio/Accelerometer_And_Gyroscope_LSM6DS3)
 -  **[Datasheet]** [Datasheet of LSM6DS3](https://raw.githubusercontent.com/SeeedDocument/Grove-6-Axis_AccelerometerAndGyroscope/master/res/LSM6DS3TR.pdf)
 
+## Project
+
+**Plug 'n Play Remote Control Sailboat**
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/simon-werner/plug-n-play-remote-control-sailboat-b5724e/embed' width='350'></iframe>
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_6-Axis_Accelerometer&Gyroscope -->
 

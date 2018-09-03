@@ -160,6 +160,17 @@ Resources
 -   [github repository for 3-Axis Digital Accelerometer(±1.5g)](https://github.com/Seeed-Studio/Accelerometer_MMA7660)
 
 
+## Project
+
+**Tilt Activated Spinning Fan Light Stick** Portable LED color stick reacts to your shaking motion. With extra fan and alarm.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/chuartdo/tilt-activated-spinning-fan-light-stick-e05cec/embed' width='350'></iframe>
+
+**Lean Green RC Sailing Machine**
+An Internet connected device that controls servos and sends sensor (GPS/gyro/accel/compass) updates in real time over a GSM cell link.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/anemoi/lean-green-rc-sailing-machine-2cdde5/embed' width='350'></iframe>
+
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_3-Axis_Digital_Accelerometer(±1.5g) -->
 
 ## Tech Support

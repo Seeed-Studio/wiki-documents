@@ -105,8 +105,17 @@ Resources
 
 -   [ADXL335 datasheet.pdf](https://raw.githubusercontent.com/SeeedDocument/Grove-3-Axis_Analog_Accelerometer/master/res/ADXL335_datasheet.pdf)
 
+## Project 
+
+**Grove - Introduction in 3-Axis Digital Accelerometer** How to use a 3-axis digital accelerometer.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/ingo-lohs/grove-introduction-in-3-axis-digital-accelerometer-ea05c3/embed' width='350'></iframe>
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_3-Axis_Analog_Accelerometer -->
+
+**Solar Panel Dual Management System (SP DMS)** This IoT prototype performs two functions: 1) Theft prevention and 2) Maintenance Indication of solar panel using LinkIt ONE and Sensors.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/skyline/solar-panel-dual-management-system-sp-dms-3a87ca/embed' width='350'></iframe>
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

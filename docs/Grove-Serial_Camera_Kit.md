@@ -90,5 +90,12 @@ Lens screwed different depths represent different focal length, you can have a t
 ---
 [Demo Code](https://github.com/Seeed-Studio/Grove_Serial_Camera_Kit)
 
+
+## Project
+
+**Grove Camera -> PHPoC -> Web Application** This project shows how to read data from Grove camera and send the data to web application via WebSocket.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/phpoc_man/grove-camera-phpoc-web-application-1dfd63/embed' width='350'></iframe>
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

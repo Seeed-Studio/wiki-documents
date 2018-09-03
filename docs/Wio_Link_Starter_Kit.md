@@ -61,6 +61,16 @@ This demo can used as a compilation result-indicator.
 
 Please go to [Recipe](http://www.seeedstudio.com/recipe/1068-traffic-light-indicates-travis-ci-compiled-results.html) for the detailed manual.
 
+## Project
+
+**ReSpeaker Smart Home** We use the ReSpeaker Core v2.0 and Wio Link to control a light and fan via IFTTT.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/SeeedStudio/respeaker-smart-home-cfba70/embed' width='350'></iframe>
+
+**LED Sound Meter using Wio-Link and Node-Red** SeeedStudio Grove sound sensor and LED strip attached to Wio-Link being driven by a Node-Red flow.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/potnik/led-sound-meter-using-wio-link-and-node-red-259e02/embed' width='350'></iframe>
+
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Wio_Link_Starter_Kit -->
 
 ## Tech Support

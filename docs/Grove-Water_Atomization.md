@@ -179,6 +179,12 @@ Resources
 - [Schematic files in PDF](https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Atomization/master/res/Schematic_file_in_PDF.zip)
 
 
+## Project
+
+**Smart Humidifier** Make your room comfortable in winter.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/taifur/smart-humidifier-dac66f/embed' width='350'></iframe>
+
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Water_Atomization -->
 
 ## Tech Support
