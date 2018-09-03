@@ -118,7 +118,7 @@ return false;
 
 1.You should have got a raspberry pi and a grovepi or grovepi+.
 
-2.You should have completed configuring the development enviroment, otherwise follow [here](/GrovePiPlus).
+2.You should have completed configuring the development enviroment, otherwise follow [here](/GrovePi_Plus).
 
 3.Connection
 

@@ -15,7 +15,7 @@ Grove Indoor Environment Kit for Edison makes it easy to create complete indoor 
 
 ##   What's included in the kit?
 ---
-*   [Base Shield V2](/Base_shield_v2)  x1
+*   [Base Shield V2](/Base_Shield_V2)  x1
 
 *   [Grove - Tempture&amp;Humidity Sensor (High-Accuracy &amp;Mini)](/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0)  x1
 

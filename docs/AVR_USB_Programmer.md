@@ -31,8 +31,7 @@ Click [here](http://www.jyetech.com/Products/073/073_Assembly.pdf) to check the 
 
 2.  **Optional:**
 
-    *   [Mini USB cable](/w/index.php?title=Mini_USB_cable_110cm&amp;action=edit&amp;redlink=1 "Mini_USB_cable_110cm&amp;action=edit&amp;redlink=1")
-
+    *   Mini USB cable
 
 ##   Resources
 

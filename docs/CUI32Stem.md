@@ -24,7 +24,7 @@ The CUI32Stem can run Arduino code (compiled via the multiplatform [ChipKIT MPID
 
 The CUI32Stem is available to purchase alone (headers in a bag, not soldered on, providing a slim profile for low profile mounting locations), or as part of two different GROVE bundles (the first of which is shown above - a larger kit with wireless and more Grove elements is forthcoming). When shipped as part of a bundle, CUI32Stem boards will have pre-soldered header pins on them (allowing simple plug-on / plug-off for GROVE elements). See section below on 'how to buy' for more details. You can choose whether the "V* pins" should provide 3.3V or 5V via the "V* selector" on the board, to correlate to the proper voltage for the chosen GROVE element(s) - non-analog pins on the CUI32Stem are 5V-tolerant (even though the micrcontroller itself runs at 3.3V).
 
-Some of the GROVE elements add wireless features to the CUI32Stem, including Bluetooth and simple 'Serial RF' modules, as well as an upcoming 'Serial WiFi' module that is in design now (not yet released). This Serial WiFi module allows the CUI32Stem to access the internet and/or use the Open Sound Control protocol ([OSC](http://opensoundcontrol.org/)) via 802.11 wireless. StickOS supports extremely simple wireless links (see example [here](http://www.cpustick.com/examples.htm#ex3)) via an add-on board designed specifically for the CUI32Stem called [ZigFlea](/ZigFlea), as well as the possibility for simple data logging to a USB memory stick. There is a footprint for a female USB connector (both on the top and bottom sides of the board, your choice which one to use - female USB connector purchased separately, or included in the bundles) that allows you to use USB-host mode - StickOS includes a FAT32 file system and supports logging data to a standard flash drive.
+Some of the GROVE elements add wireless features to the CUI32Stem, including Bluetooth and simple 'Serial RF' modules, as well as an upcoming 'Serial WiFi' module that is in design now (not yet released). This Serial WiFi module allows the CUI32Stem to access the internet and/or use the Open Sound Control protocol ([OSC](http://opensoundcontrol.org/)) via 802.11 wireless. StickOS supports extremely simple wireless links (see example [here](http://www.cpustick.com/examples.htm#ex3)) via an add-on board designed specifically for the CUI32Stem called ZigFlea, as well as the possibility for simple data logging to a USB memory stick. There is a footprint for a female USB connector (both on the top and bottom sides of the board, your choice which one to use - female USB connector purchased separately, or included in the bundles) that allows you to use USB-host mode - StickOS includes a FAT32 file system and supports logging data to a standard flash drive.
 
 [StickOS](http://www.cpustick.com/), which is pre-installed onto each shipped CUI32Stem, includes an on-board BASIC compiler, line editor, debugger, profiler, and in-line help system to create new firmware programs, save them and run them. All this can be done without having to install any software on your computer, just by using a standard terminal emulator for communication.
 
@@ -300,10 +300,10 @@ The CUI32Stem board (no headers) alone:
 **Model: [http://www.seeedstudio.com/depot/cui32stem-p-1100.html?cPath=132_208](http://www.seeedstudio.com/depot/cui32stem-p-1100.html?cPath=132_208)**
 
 A "starter kit": (insert link to bazaar)
-Documentation wiki: [CUI32Stem GROVE Dash Bundle](http://wiki.seeedstudio.com/wiki/CUI32Stem_GROVE_Dash_Kit), and
+Documentation wiki: CUI32Stem GROVE Dash Bundle, and
 
 A "full kit": (insert link to bazaar)
-Documentation wiki: [CUI32Stem GROVE Lab Buncle](http://www.seeedstudio.com/wiki/CUI32Stem_GROVE_Lab_Kit).
+Documentation wiki: CUI32Stem GROVE Lab Buncle.
 
 ##   See Also
 

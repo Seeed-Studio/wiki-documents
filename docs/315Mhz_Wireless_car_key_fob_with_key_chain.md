@@ -27,12 +27,6 @@ This is a Wireless car key FOB with 4 buttons: Lock,unlock,mute and alarm on.  A
 
 *   Operating temperature: -30 ℃ ~ +85 ° C
 
-
-##   FAQ
-
-Here is the [Wireless FAQ](/w/index.php?title=Wireless_FAQ&amp;action=edit&amp;redlink=1 "Wireless_FAQ&amp;action=edit&amp;redlink=1"), people can go here to find questions and answers for this kind of products.
-
-
 ##   Version Tracker
 
 <table>

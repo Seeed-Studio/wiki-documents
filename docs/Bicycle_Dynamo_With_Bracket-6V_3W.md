@@ -190,7 +190,7 @@ Q: My intended use is to a) charge my cellphone, or b) power an Arduino and do c
 
 A: That's *quite* doable but again, you'll need to change that (quite variable) 3-~12ish volts AC to DC at something more appropriate (and steady) If you use any on and off switch, in addition to the dynamo's own "switch" watch out that you use a voltage regulator because the voltage coming out of a dynamo - via diodes, *with no load* could easily charge a capacitor up to the dynamo's absolute *peak* output voltage which may be quite high. Then the instant you reconnected your LED, you could burn it out. If you leave your lights connected and on all the time and use a capacitor as a standlight, and just remove the dynamo from the wheel when you want to turn it off, thats not a problem.
 
-Cheers --[Nighto](/w/index.php?title=User:Nighto&amp;action=edit&amp;redlink=1 "User:Nighto&amp;action=edit&amp;redlink=1") 01:37, 10 June 2011 (CST)
+Cheers --Nighto 01:37, 10 June 2011 (CST)
 
 *   SUPPLIED DYNAMO IS MEANT TO BE MOUNTED ON FRONT FORK ONLY.  And any given dynamo will only work on one side. This dynamo is fairly inflexible in that respect. See [http://en.wikipedia.org/wiki/Bottle_dynamo](http://en.wikipedia.org/wiki/Bottle_dynamo) for a picture of a dynamo mounted on the front fork of a bike, facing forward.
 

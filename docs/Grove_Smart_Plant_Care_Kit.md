@@ -25,7 +25,7 @@ The kit implements two functions. One is to detect environment factors affecting
 ---
 Please refer to each modules' specifications:
 
-*   [Grove - Temp &amp; Humidity Sensor](/Grove-Temperature_and_Humidity_Sensor#Specification)
+*   [Grove - Temp &amp; Humidity Sensor](/Grove-TemperatureAndHumidity_Sensor/#specifications)
 
 *   [Grove - Sunlight Sensor V1.0](/Grove-Sunlight_Sensor)
 
@@ -130,7 +130,7 @@ Part list in [PDF format](https://github.com/SeeedDocument/Grove_Smart_Plant_Car
 
 [Guide of building IDE on Seeeduino V4.2(compatible with Arduino)](/Seeeduino_v4.2)
 
-**Note** that you can use [Base shield](/Grove-Base_shield_v2 "Grove - Base shield v2") for connecting modules quickly.
+**Note** that you can use [Base shield](/Base_Shield_V2 "Base_Shield_V2") for connecting modules quickly.
 
 ##  Demos
 

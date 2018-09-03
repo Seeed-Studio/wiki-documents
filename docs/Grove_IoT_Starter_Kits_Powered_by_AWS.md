@@ -233,9 +233,9 @@ For _**User Manual**_, please go to: [Intel® Edison and Grove IoT Starter Kit P
 
 ![](https://github.com/SeeedDocument/Grove_IoT_Starter_Kits_Powered_by_AWS/raw/master/img/Aws_kit_bbg.JPG) 
 
-_Main article: [Beaglebone green](/Beaglebone_green "Beaglebone green")_
+_Main article: [BeagleBone Green](/BeagleBone_Green "BeagleBone Green")_
 
-**[Beaglebone green](/Beaglebone_green "Beaglebone green")** (BBG) is a joint effort by BeagleBoard.org and Seeed Studio. It is involved from the open source hardware design of [BeagleBone Black](http://beagleboard.org/BLACK) and has added two Grove connectors. The kit contains the new BBG, 10 Grove modules as well as step-by-step tutorials to hook them up quickly.
+**[BeagleBone Green](/BeagleBone_Green "BeagleBone Green")** (BBG) is a joint effort by BeagleBoard.org and Seeed Studio. It is involved from the open source hardware design of [BeagleBone Black](http://beagleboard.org/BLACK) and has added two Grove connectors. The kit contains the new BBG, 10 Grove modules as well as step-by-step tutorials to hook them up quickly.
 
 [![](../common/Get_One_Now_Banner.png)](http://www.amazon.com/dp/B0168L6B0C)
 
@@ -253,7 +253,7 @@ For _**User Manual**_, please go to:
 <tr>
 <td>[BeagleBone Green](http://www.seeedstudio.com/depot/BeagleBone-Green-p-2504.html?cPath=122_113) </td>
 <td> 1 </td>
-<td> [ Read Here](/Beaglebone_green "Beaglebone green")
+<td> [ Read Here](/BeagleBone_Green "Beaglebone green")
 </td></tr>
 <tr>
 <td>[Grove - I2C ADC](http://www.seeedstudio.com/depot/Grove-I2C-ADC-p-1580.html?cPath=98_16) </td>

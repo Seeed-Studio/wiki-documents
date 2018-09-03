@@ -27,7 +27,7 @@ Grove - Recorder is based on the ISD1820P chip, and can record 8-20 secs of audi
 *   Add a resistor to set play cycle mode
 
 *   Ships with and connects to an 8Ω/2W mini-speaker (as shown in the picture)
-*   Uses Standard 4-pin [Grove Cables](/GROVE_System#Grove_Cables "GROVE System") to connect to other [Grove](/Grove "Grove") modules or a micro-controller such as the [Seeeduino](/Seeeduino "Seeeduino").
+*   Uses Standard 4-pin [Grove Cables](/Grove_System/#grove-cables "GROVE System") to connect to other [Grove](/Grove "Grove") modules or a micro-controller such as the [Seeeduino](/Seeeduino "Seeeduino").
 
 ##  Interface Function
 ---
@@ -136,7 +136,7 @@ If you do not have the Grove - USB Power module, use the [Grove - DC Jack Power]
 
 ##  Availability
 ---
-This [Grove](/Grove "Grove") module is available as part of the following [Grove Kit Series](/GROVE_System#GROVE_Kit_Series "GROVE System"):
+This [Grove](/Grove "Grove") module is available as part of the following [Grove Kit Series](/Grove_System/#grove-starter-kit "GROVE System"):
 
 *   [Grove Mixer Pack V2](/Grove-Mixer_Pack_V2 "GROVE MIXER PACK V2")
 

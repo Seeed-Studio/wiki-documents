@@ -26,7 +26,7 @@ The Grove - Temperature Sensor uses a [Thermistor](http://www.legacydistribution
 
 ##  Demonstration
 ---
-###  With [Arduino](/w/index.php?title=Arduino&amp;action=edit&amp;redlink=1 "Arduino&amp;action=edit&amp;redlink=1")
+###  With [Arduino](/Arduino "Arduino")
 
 Here is an example to show you how to read temperature information from the sensor.
 

@@ -126,7 +126,7 @@ poly 18 105 294 107 295 203 18 203 [BluetoothBee](/Bluetooth_Bee "Bluetooth Bee"
 
 poly 2 212 274 212 275 327 2 326 [XBee](/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products "Zigbee Networking with XBee Series_2 and Seeeds Products")
 
-poly 18 337 303 338 303 448 15 447 [GPSBee](/w/index.php?title=GPS_Bee_kit_(with_Mini_Embedded_Antenna)&amp;action=edit&amp;redlink=1 "GPS_Bee_kit_(with_Mini_Embedded_Antenna)&amp;action=edit&amp;redlink=1")
+poly 18 337 303 338 303 448 15 447 [GPSBee](/GPS_Bee_kit "GPS_Bee_kit")
 
 poly 38 459 379 459 379 570 37 571 [RFBee](/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee V1.1 - Wireless Arduino compatible node")
 

@@ -235,7 +235,7 @@ File -&gt; Sketchbook -&gt; Grove_LED
 
 We prepare three colors of LED bulbs for you, you can get the color you want by changing the LED on the tiny Grove – LED Socket .LEDs have an cathode on the flat side of the bulb, and a anode on the round side of the bulb. The anode needs to be installed corresponding to the ‘+’ sign on the seat for the LED to work properly.
 
-For a detailed information on how to use your Grove - LED,you can go to [Grove - LED page](/Grove-LED)
+For a detailed information on how to use your Grove - LED,you can go to [Grove - Red LED](/Grove-Red_LED)
 
 ####   Grove - Light Sensor
 

@@ -20,7 +20,7 @@ Click the image to get to different version of DSO Nano.
 
 ##   Hardware details
 ---
-So far there have been three major versions of the DSO Nano, the original one in 2009, and the DSO Nano V2 in 2010. (A significant hardware upgrade including dual channels was introduced with the [DSO Quad](http://wiki.seeedstudio.com/wiki/DSO_Quad).) Apart from the improved charging unit in V2, and a redesigned PCB, the specifications are pretty much the same. They can use the same firmware.
+So far there have been three major versions of the DSO Nano, the original one in 2009, and the DSO Nano V2 in 2010. (A significant hardware upgrade including dual channels was introduced with the [DSO Quad](http://wiki.seeedstudio.com/DSO_Quad).) Apart from the improved charging unit in V2, and a redesigned PCB, the specifications are pretty much the same. They can use the same firmware.
 
 A photo from inside the V2 was posted to the [forum](https://www.seeed.cc/discover.html?t=DSO).
 

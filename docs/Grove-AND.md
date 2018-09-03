@@ -14,16 +14,16 @@ This module provides the function of a [logical AND gate](http://en.wikipedia.or
 [![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Mixer-Pack-V2-(Electronic-blocks%2Cwithout-Arduino%2Cplug-and-play-system)-p-1867.html)
 
 ##  Features
-
+Grove-Mixer_Pack
 *   Simple AND gate function with two inputs and a single output
 
 *   Makes integrating a Logical AND gate in your circuit a breeze
 
-*   Uses Standard 4-pin [Grove Cables](/GROVE_System#Grove_Cables "GROVE System") to connect to other [Grove](/Grove "Grove") modules
+*   Uses Standard 4-pin [Grove Cables](/GROVE_System/#Grove_Cables "GROVE System") to connect to other [Grove](/Grove "Grove") modules
 
 ##  Usage
 
-*   See [Grove - AND module typical usage](/GROVE_MIXER_PACK_V2#Grove-AND_module "GROVE MIXER PACK V2")
+*   See [Grove - AND module typical usage](/Grove-Mixer_Pack_V2/#grove-and-module "GROVE MIXER PACK V2")
 
 ##  See also
 
@@ -36,8 +36,6 @@ This module provides the function of a [logical AND gate](http://en.wikipedia.or
 This [Grove](/Grove "Grove") module is available as part of the following [Grove Kit Series](/GROVE_System#GROVE_Kit_Series "GROVE System"):
 
 *   [Grove Mixer Pack V2](/GROVE_MIXER_PACK_V2 "GROVE MIXER PACK V2")
-
-*   [Grove Mixer Pack](/Grove-Mixer_Pack "Grove - Mixer Pack")
 
 Note that this Grove - AND module is sold only as part of the above mentioned packs and is not available stand-alone from the [Seeed Studio Bazaar](http://www.seeedstudio.com/depot/).
 
