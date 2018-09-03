@@ -59,7 +59,7 @@ Follow these steps to build a sample circuit using this module:
 </dd></dl>
 </dd></dl>
 
-Below is an illustration of a Grove circuit built using the [Grove - USB Power](/Grove-Mixer_Pack#2._USB_Power "Grove - Mixer Pack") power module:
+Below is an illustration of a Grove circuit built using the [Grove - USB Power](/Grove-Mixer_Pack_V2 "Grove - Mixer Pack") power module:
 
 ![](https://github.com/SeeedDocument/Grove-LED_String_Light/raw/master/img/LED_String_Light_Photo.gif)
 
@@ -69,7 +69,7 @@ If you do not have the Grove - USB Power module, use the [Grove - DC Jack Power]
 ---
 This [Grove](/Grove_System/) module is available as part of the following [Grove Kit Series](/Grove_System/#grove-starter-kit):
 
-*   [Grove Mixer Pack V2](/GROVE_MIXER_PACK_V2 "GROVE MIXER PACK V2")
+*   [Grove Mixer Pack V2](/Grove-Mixer_Pack_V2 "GROVE MIXER PACK V2")
 
 Alternatively, it can be bought stand-alone at the [Seeed Studio Bazaar](http://www.seeedstudio.com/depot/Grove-LED-String-Light-p-1821.html).
 

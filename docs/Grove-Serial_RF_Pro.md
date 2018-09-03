@@ -219,7 +219,7 @@ The Config instruction format is as AA+FA+[instruction]+[parameter]. The instruc
 
 ###  Communication Mode
 
-Upload the below code into Seeeduino, Please click [here](http://wiki.seeedstudio.com/wiki/Upload_Code) if you do not know how to upload.
+Upload the below code into Seeeduino, Please click [here](http://wiki.seeedstudio.com/Upload_Code) if you do not know how to upload.
 
 ```
 //send data routine

@@ -194,7 +194,7 @@ Second, we need an **output** Grove module as an actuator. The following Grove m
 <td colspan="3" rowspan="1"> Swith On/Off other circuits
 </td></tr></table>
 
-For example, we intend to create a light which automatically turns on if the environment is dark and turns off if otherwise, then we select a [Grove_-_Light_Sensor](/Grove-Light_Sensor "Grove - Light Sensor") and a [Grove_-_LED](/Grove-LED "Grove - LED").
+For example, we intend to create a light which automatically turns on if the environment is dark and turns off if otherwise, then we select a [Grove-Light_Sensor](/Grove-Light_Sensor "Grove - Light Sensor") and a [Grove-Red_LED](/Grove-Red_LED "Grove-Red_LED").
 
 Third, teach the Grove Node a logic.
 

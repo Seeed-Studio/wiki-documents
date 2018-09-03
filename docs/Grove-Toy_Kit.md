@@ -11,7 +11,7 @@ Grove Toy Kit provides an easy way for you to hack and upgrade toys to fit with 
 
 Grove Toy Kit includes:
 
-*   1 x [Grove - Base Shield](/Grove-Base_Shield "Grove - Base Shield")
+*   1 x [Grove - Base_Shield_V2](/Base_Shield_V2 "Grove - Base Shield")
 
 *   1 x [Grove - OLED Display 128*64](/Grove-OLED_Display_0.96inch "Grove - OLED Display 128*64")
 
@@ -19,7 +19,7 @@ Grove Toy Kit includes:
 
 *   1 x [Grove - Chainable RGB LED](/Grove-Chainable_RGB_LED "Grove - Chainable RGB LED")
 
-*   1 x [Grove - Buzzer](/GROVE-Starter_Kit_V1.0b#Piezo_Buzzer)
+*   1 x [Grove - Buzzer](/Grove_Starter_Kit_Plus/#7-grove-buzzer)
 
 *   1 x [Grove - PIR Motion Sensor](/Grove-PIR_Motion_Sensor "Grove - PIR Motion Sensor")
 

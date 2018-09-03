@@ -23,7 +23,7 @@ The **Grove - Mini Fan** module is a DC motor driver based on the AVR Atmega168 
 *   On-board micro-controller can be re-programmed to change module operation
 *   Micro-controller runs [Arduino](/w/index.php?title=Arduino&amp;action=edit&amp;redlink=1 "Arduino&amp;action=edit&amp;redlink=1") Compatible code
 *   Change code to drive Servo motors instead of DC motors
-*   Uses Standard 4-pin [Grove Cables](/GROVE_System#Grove_Cables "GROVE System") to connect to other [Grove](/Grove "Grove") modules
+*   Uses Standard 4-pin [Grove Cables](Grove_System/#grove-cables "GROVE System") to connect to other [Grove](/Grove "Grove") modules
 *   <span style="color: red">Note:</span>for latest version(v1.1), the output voltage for motor is updated to 3.3 volts.
 
 ##  Interface Function
@@ -76,7 +76,7 @@ For building a circuit that controls a servomotor using a potentiometer, follow 
 
 ##  Availability
 ---
-This [Grove](/Grove "Grove") module is available as part of the following [Grove Kit Series](/GROVE_System#GROVE_Kit_Series "GROVE System"):
+This [Grove](/Grove "Grove") module is available as part of the following [Grove Kit Series](/Grove_System/#grove-starter-kit "GROVE System"):
 
 *   [Grove Mixer Pack V2](/Grove-Mixer_Pack_V2 "GROVE MIXER PACK V2")
 

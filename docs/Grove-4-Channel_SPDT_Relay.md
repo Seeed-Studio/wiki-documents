@@ -284,9 +284,7 @@ Channel 1 on
 Channel 2 on
 ```
 
-
 ![](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/img/_DAS5552.MOV_20180822_104218.gif)
-
 
 
 !!!Note

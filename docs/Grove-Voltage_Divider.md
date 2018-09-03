@@ -37,8 +37,8 @@ The Grove – Voltage Divider provides an interface for measuring external volta
 ## Usage
 ---
 When measuring the external voltage, connect the external voltage to J1 and then connect the on-board Grove connector to analog port of Arduino/Seeeduino:
-- Connect the module to A0 port of [Grove - Base Shield](http://wiki.seeedstudio.com/wiki/Grove_-_Base_Shield) with a universal Grove Cable.
-- Connect [Grove - Base Shield](http://wiki.seeedstudio.com/wiki/Grove_-_Base_Shield) to Arduino/Seeeduino.
+- Connect the module to A0 port of [Grove - Base Shield](http://wiki.seeedstudio.com/Base_Shield_V2) with a universal Grove Cable.
+- Connect [Grove - Base Shield](http://wiki.seeedstudio.com/Base_Shield_V2) to Arduino/Seeeduino.
 
 In order to test the precision of this module, I tested some voltage inputs and get the following data:
 

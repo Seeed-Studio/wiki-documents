@@ -24,7 +24,7 @@ The base shield allows for easy connection of any microprocessor input or output
 
 If this is your first time using an Arduino, you will need to complete the following steps:
 
-*   [Getting Started with Arduino](/Download_Getting_Started_with_Arduino)
+*   [Getting Started with Arduino](/Getting_Started_with_Arduino)
 
 *   [Install your microcontroller](/Getting_Started_with_Seeeduino)
 
@@ -77,7 +77,7 @@ On the left-hand side are four Grove ports for taking analog readings. Analog se
 
 Below the digital ports are four I2C Grove ports. I2C is a low-speed bus protocol that transfers data via two wires: SCL and SDA. SCL is the clock line for synchronizing data transfer over the I2C bus; SDA is the data line.
 
-For detailed information on how to use your Grove – Base Shield, go to [Base Shield v2](/Base_shield_v2).
+For detailed information on how to use your Grove – Base Shield, go to [Base Shield V2](/Base_Shield_V2).
 
 ####  Grove - LCD RGB Backlight
 

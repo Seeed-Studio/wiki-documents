@@ -104,7 +104,7 @@ The Stalker Kit includes all necessary components to work with Seeeduino Stalker
 |![](https://github.com/SeeedDocument/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/raw/master/img/Stalker_kit_battery.jpg) |![](https://github.com/SeeedDocument/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/raw/master/img/Stalker_v3_with_battery.jpg)
 |---|---|
 
-##   Application Ideas
+## Application Ideas
 ---
 *   Wireless Sensor Network (using [XBee](/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products "Zigbee Networking with XBee Series_2 and Seeeds Products") - bought separately)
 
