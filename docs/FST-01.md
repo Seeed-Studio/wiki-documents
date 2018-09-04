@@ -17,7 +17,7 @@ The concept is "Minimalist Design".    It is by free (as in freedom) hardware de
 
 Flying Stone Technology is a second source manufacturer of "Gnuk", which is copyrighted by the Non-Profit organization, Free Software Initiative of Japan.
 
-For those who want rich features, please consider [Leaf Maple](/Leaf_Maple-Cortex_M3 "Leaf Maple (Cortex M3)") or [Maple Mini](http://www.seeedstudio.com/depot/maple-mini-p-861.html), instead.
+For those who want rich features, please consider [Maple Mini](http://www.seeedstudio.com/depot/maple-mini-p-861.html), instead.
 
 ```
                         SWD port
@@ -41,7 +41,7 @@ It is also available at Flying Stone Technology (飛石技術), person to person
 
 ##   Applications
 ---
-As explained in the section above, we intend to run [Gnuk](http://www.fsij.org/gnuk/) on FST-01.  It is copyrighted software distributed under [GPLv3](/w/index.php?title=GPLv3&amp;action=edit&amp;redlink=1 "GPLv3&amp;action=edit&amp;redlink=1") license.
+As explained in the section above, we intend to run [Gnuk](http://www.fsij.org/gnuk/) on FST-01.  It is copyrighted software distributed under **GPLv3** license.
 
 ![](https://github.com/SeeedDocument/FST-01/raw/master/img/Gnuk-sticker.png)
 
@@ -63,7 +63,7 @@ For Gnuk 1.0.1, we use [GCC ARM Embedded 4.6-2012-q2](https://launchpad.net/gcc-
 
 ###   For the first lot of FST-01
 
-In this product, it contains copyrighted software, Gnuk version 1.0.1, that is licensed under the GPLv3. A copy of that license is included in this WiKi, see [GPLv3](/w/index.php?title=GPLv3&amp;action=edit&amp;redlink=1 "GPLv3&amp;action=edit&amp;redlink=1").
+In this product, it contains copyrighted software, Gnuk version 1.0.1, that is licensed under the **GPLv3**. A copy of that license is included in this WiKi, see **GPLv3**.
 You may obtain the complete Corresponding Source code for a period of three years after the last shipment of this product, which will be no earlier than 2016-01-01, on the manufacturer website at [http://git.gniibe.org/gitweb/?p=gnuk/gnuk.git](http://git.gniibe.org/gitweb/?p=gnuk/gnuk.git) and we put the tag "release/1.0.1" for the version of the product.
 
 Note that Gnuk binary in the first lot of FST-01 was compiled with "-O3 -Os" option by GCC ARM Embedded 4.6-2012-q2.
@@ -594,7 +594,7 @@ Thanks to Fusion PCB service, we made PCB of FST-01 Engineering Prototype.
 
 ![](https://github.com/SeeedDocument/FST-01/raw/master/img/FST-01-prototype.jpg)
 
-PCB Assembly was done by [User:Gniibe](/User-Gniibe "User:Gniibe") by hand.  See [my article](http://www.gniibe.org/memo/development/fst-01/qfn-diy-soldering) for detail.
+PCB Assembly was done by **User:Gniibe** by hand.  See [my article](http://www.gniibe.org/memo/development/fst-01/qfn-diy-soldering) for detail.
 
 ##   Test plan outline
 ---

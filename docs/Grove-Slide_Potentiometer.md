@@ -218,22 +218,25 @@ Slide Potentiometer can be an effective Human Interface Device (HID) and can be 
 
 1.You should have got a raspberry pi and a grovepi or grovepi+.
 
-2.You should have completed configuring the development enviroment, otherwise follow [here](/GrovePiPlus).
+2.You should have completed configuring the development enviroment, otherwise follow [here](/GrovePi_Plus).
 
 3.Connection
 
 -   Plug the sensor to grovepi socket A0 by using a grove cable.
 
 4.Navigate to the demos' directory:
+
 ```
     cd yourpath/GrovePi/Software/Python/
 ```
 
 -   To see the code
+
 ```
     nano grove_slide_potentiometer.py   # "Ctrl+x" to exit #
 ```
-```
+
+```py
 import time
 import grovepi
 

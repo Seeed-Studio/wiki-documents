@@ -230,7 +230,7 @@ The [Grove - Light Sensor](/Grove-Light_Sensor "Grove - Light Sensor") module in
 
 ![](https://github.com/SeeedDocument/Grove-Mixer_Pack_V2/raw/master/img/Grove-LED_Photo.jpg)
 
-The [Grove - Red LED](/Grove-Red_LED "Grove - Red LED") module is similar to the Grove - LED module in that it houses an LED light source. In addition, it also has a potentiometer on-board to manage the input voltage to the LED and to adjust its brightness. The module also has mounting holes for the LED and the LED is not soldered onto the PCB. This means you can remove the Red LED that comes with the mixer pack and use any other LED of any other color or size as well. You can also use this module to add a pilot lamp for indicating power or signal presence for [Arduino](/w/index.php?title=Arduino&amp;action=edit&amp;redlink=1 "Arduino&amp;action=edit&amp;redlink=1") or [Seeeduino](/Seeeduino "Seeeduino") based projects.
+The [Grove - Red LED](/Grove-Red_LED "Grove - Red LED") module is similar to the Grove - LED module in that it houses an LED light source. In addition, it also has a potentiometer on-board to manage the input voltage to the LED and to adjust its brightness. The module also has mounting holes for the LED and the LED is not soldered onto the PCB. This means you can remove the Red LED that comes with the mixer pack and use any other LED of any other color or size as well. You can also use this module to add a pilot lamp for indicating power or signal presence for [Arduino](/Arduino "Arduino") or [Seeeduino](/Seeeduino "Seeeduino") based projects.
 
 ###  Grove - Sound Sensor
 

@@ -249,7 +249,7 @@ Improper operation of this device could result in physical injury and/or damage 
 
 ##   Upgrading firmware
 ---
-Please note that this procedure currently only works under Windows. [Instructions For Linux are here](/DSO_Quad-Upgrading_Firmware#Linux "DSO Quad:Upgrading Firmware"). (2011-04-29) If we can get the upgrade disk to work on Linux and Mac, it would be quite easy to write an application to automate this process for less experienced users. It might even be possible to have the upgrade program check the hardware version to prevent uploading the wrong firmware.
+Please note that this procedure currently only works under Windows. [Instructions For Linux are here](/DSO_Quad/#upgrading-firmware "DSO_Quad/#upgrading-firmware"). (2011-04-29) If we can get the upgrade disk to work on Linux and Mac, it would be quite easy to write an application to automate this process for less experienced users. It might even be possible to have the upgrade program check the hardware version to prevent uploading the wrong firmware.
 
 ###   Where to find firmware
 
@@ -271,7 +271,7 @@ The order that you upload the files in DOES matter. Start by uploading the .hex 
 
 When you're finished uploading all the firmware files, turn off the device to complete the upgrade. When you boot the device again, your firmware versions should be updated. If you get an error at the splash screen, try uploading the firmware again, carefully following the instructions above.
 
-More details and Linux instructions here: [DSO_Quad:Upgrading_Firmware](/DSO_Quad-Upgrading_Firmware "DSO Quad:Upgrading Firmware")
+More details and Linux instructions here: [DSO_Quad:Upgrading_Firmware](/DSO_Quad/#upgrading-firmware "DSO_Quad/#upgrading-firmware")
 
 ###   File Descriptions
 
@@ -401,11 +401,11 @@ More details and Linux instructions here: [DSO_Quad:Upgrading_Firmware](/DSO_Qua
 
 ##   Related Pages
 
-*   [DSO Quad:Calibration](http://wiki.seeedstudio.com/wiki/DSO_Quad:Calibration)
+*   [DSO Quad:Calibration](http://wiki.seeedstudio.com/DSO_Quad-Calibration)
 
-*   [DSO Quad:Upgrading Firmware](/http://wiki.seeedstudio.com/wiki/DSO_Quad:Upgrading_Firmware)
+*   [DSO Quad:Upgrading Firmware](http://wiki.seeedstudio.com/DSO_Quad/#upgrading-firmware)
 
-*   [DSO Quad:Beta HW](http://wiki.seeedstudio.com/wiki/DSO_Quad:Beta_HW)
+*   [DSO Quad:Beta HW](http://wiki.seeedstudio.com/DSO_Quad-Beta_HW)
 
 ##   External Links
 
@@ -417,7 +417,7 @@ More details and Linux instructions here: [DSO_Quad:Upgrading_Firmware](/DSO_Qua
 
 ##   Resources
 ---
-- [Schematic and firmware (HW2.2 ~ HW2.72)](http://www.seeedstudio.com/wiki/DSO_Quad:Upgrading_Firmware#Firmware_List)
+- [Schematic and firmware (HW2.2 ~ HW2.72)](http://wiki.seeedstudio.com/DSO_Quad/#upgrading-firmware)
 
 - [Discussion board with resouces for HW2.6](http://www.forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1929)
 

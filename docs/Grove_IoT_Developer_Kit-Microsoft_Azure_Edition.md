@@ -116,19 +116,19 @@ Grove - Buzzer[(to Wiki)](/Grove-Buzzer)
 
 *   [![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Red_LED.jpg)](http://www.seeedstudio.com/depot/Grove-Red-LED-p-1142.html)
 
-Grove - Red LED[(to Wiki)](/Grove-LED)
+Grove - Red LED[(to Wiki)](/Grove-Red_LED)
 
 
 
 *   [![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Green_LED.jpg)](http://www.seeedstudio.com/depot/Grove-Green-LED-p-1144.html)
 
-Grove - Green LED[(to Wiki)](/Grove-LED)
+Grove - Green LED
 
 
 
 *   [![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Blue_LED.jpg)](http://www.seeedstudio.com/depot/Grove-Green-LED-p-1144.html)
 
-Grove - Blue LED[(to Wiki)](/Grove-LED)
+Grove - Blue LED
 
 
 

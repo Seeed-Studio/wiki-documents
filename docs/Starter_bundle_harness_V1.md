@@ -123,25 +123,25 @@ Starter bundle harness is a board  keeping the component of grove-starter bundle
 
 *   [GROVE - Starter Bundle](/GROVE_System "GROVE System")
 
-*   [2-axis compass Module](/2-axis_compass_Module "2-axis compass Module")
+*   2-axis compass Module
 
 *   [Grove - I2C 3-axis Accelerometer](/Grove-I2C_3-axis_Accelerometer "Grove - I2C 3-axis Accelerometer")
 
-*   [Grove - 3-axis Gyro](/Grove-3-axis_Gyro "Grove - 3-axis Gyro")
+*   [Grove - 3-axis Gyro](/Grove-3-Axis_Digital_Gyro "Grove - 3-axis Gyro")
 
-*   [Grove - 3-axis Compass](/w/index.php?title=Grove_-_3-axis_Compass&amp;action=edit&amp;redlink=1 "Grove_-_3-axis_Compass&amp;action=edit&amp;redlink=1")
+*   [Grove - 3-axis Compass](/Grove-3-Axis_Compass_V1.0 "Grove_-_3-axis_Compass")
 
 *   [Grove - Light Sensor](/Grove-Light_Sensor "Grove - Light Sensor")
 
 *   [Grove - Touch Sensor](/Grove-Touch_Sensor "Grove - Touch Sensor")
 
-*   [Grove - Temperature and Humidity Sensor](/Grove-Temperature_and_Humidity_Sensor "Grove - Temperature and Humidity Sensor")
+*   [Grove - Temperature and Humidity Sensor](/Grove-TemperatureAndHumidity_Sensor/ "Grove - Temperature and Humidity Sensor")
 
 *   [Grove - Magnetic Switch](/Grove-Magnetic_Switch "Grove - Magnetic Switch")
 
 *   [Grove - Alcohol Sensor](/Grove-Alcohol_Sensor "Grove - Alcohol Sensor")
 
-*   [Grove - Serial LCD](/Grove-Serial_LCD "Grove - Serial LCD")
+*   [Grove - Serial LCD](/Grove-Serial_LCD_V1.0/ "Grove - Serial LCD")
 
 *   [Grove - RTC](/Grove-RTC "Grove - RTC")
 
@@ -149,7 +149,7 @@ Starter bundle harness is a board  keeping the component of grove-starter bundle
 
 *   [Grove - Sound Sensor ](/Grove-Sound_Sensor "Grove - Sound Sensor")
 
-*   [Grove - Base Shield](/Grove-Base_Shield "Grove - Base Shield")
+*   [Grove - Base Shield](/Base_Shield_V2 "Grove - Base Shield")
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

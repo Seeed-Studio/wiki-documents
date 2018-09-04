@@ -311,7 +311,7 @@ Pulse frequency (Hz) in Horizontal Test= 5.5Q, Q is flow rate in L/min. (Results
 
 ##   FAQ
 ---
-Here is the [Sensors FAQ](/w/index.php?title=Sensors_FAQ&amp;action=edit&amp;redlink=1 "Sensors_FAQ&amp;action=edit&amp;redlink=1"), people can go here to find questions and answers for this kind of products.
+Here is the Sensors FAQ, people can go here to find questions and answers for this kind of products.
 
 **What materials is water flow sensor made of?**
 

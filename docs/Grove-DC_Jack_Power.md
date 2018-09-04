@@ -9,7 +9,7 @@ sku:    110060026
 ---
 ![](https://github.com/SeeedDocument/Grove-DC_Jack_Power/raw/master/img/Power_photo1.jpg)
 
-This is a [Grove](/Grove "Grove") Power module meant for [Grove kits](/GROVE_System#GROVE_Kit_Series "GROVE System") such as the [Grove Mixer Pack V2](/GROVE_MIXER_PACK_V2 "GROVE MIXER PACK V2"). It is the source of power or energy for all the circuits with which it is used. It can plug in a range of power sources such as a 9V battery as shown in the picture, or any battery pack or wall power adapter that supplies power in the range of 5.5V-20V. Grove - DC Jack Power module is based on the TD1410 DC-DC step down converter chip and achieves 2A continuous output current over a wide input supply range with excellent load and line regulation.
+This is a [Grove](/Grove "Grove") Power module meant for [Grove kits](/Grove_System/#grove-starter-kit "GROVE System") such as the [Grove Mixer Pack V2](/GROVE_MIXER_PACK_V2 "GROVE MIXER PACK V2"). It is the source of power or energy for all the circuits with which it is used. It can plug in a range of power sources such as a 9V battery as shown in the picture, or any battery pack or wall power adapter that supplies power in the range of 5.5V-20V. Grove - DC Jack Power module is based on the TD1410 DC-DC step down converter chip and achieves 2A continuous output current over a wide input supply range with excellent load and line regulation.
 
 ##  Features
 
@@ -21,9 +21,9 @@ This is a [Grove](/Grove "Grove") Power module meant for [Grove kits](/GROVE_Sys
 
 *   ON/OFF switch eliminates the need for connecting and disconnecting the power source in order to switch the circuit on or off respectively.
 
-*   Interfaces to an 'input module' such as an [Environmental Monitoring](/GROVE_System#Environmental_Monitoring "GROVE System") module on one side and an 'output module' such as a [User Interface](/GROVE_System#User_Interface "GROVE System") module on another side as indicated on the small illustration on the case
+*   Interfaces to an 'input module' such as an [Environmental Monitoring](/Grove_System/#grove-for-environment "GROVE System") module on one side and an 'output module' such as a [User Interface](/Grove_System/#interface-of-grove-modules "GROVE System") module on another side as indicated on the small illustration on the case
 
-*   Uses Standard 4-pin [Grove Cables](/GROVE_System#Grove_Cables "GROVE System") to connect to other [Grove](/Grove "Grove") modules
+*   Uses Standard 4-pin [Grove Cables](/Grove_System/#grove-cables "GROVE System") to connect to other [Grove](/Grove "Grove") modules
 
 ##  Usage
 
@@ -43,9 +43,9 @@ Follow these steps to power up your circuit:
 
 ##  Availability
 
-This [Grove](/Grove "Grove") module is available as part of the following [Grove Kit Series](/GROVE_System#GROVE_Kit_Series "GROVE System"):
+This [Grove](/Grove "Grove") module is available as part of the following [Grove Kit Series](/Grove_System/#grove-starter-kit "GROVE System"):
 
-*   [Grove Mixer Pack V2](/GROVE_MIXER_PACK_V2 "GROVE MIXER PACK V2")
+*   [Grove Mixer Pack V2](/Grove-Mixer_Pack_V2 "GROVE MIXER PACK V2")
 
 Note that the DC - Jack Power [Grove](/Grove "Grove") module is sold only as part of the above mentioned packs and is not available stand-alone from the [Seeed Studio Bazaar](http://www.seeedstudio.com/depot/).
 

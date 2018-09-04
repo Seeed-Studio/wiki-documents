@@ -19,7 +19,7 @@ The DSO Quad is a pocket oscilloscope. It has lots of great features in a small 
 
 *   Auto, Normal, Single, Scan, and free-running triggering modes.
 
-If this is your first time using the DSO Quad, please read the [Getting Started](#Getting_Started) section.
+If this is your first time using the DSO Quad, please read the [Getting Started](#getting-started) section.
 
 The [Specifications](#Specifications) section has all the details about the DSO Quad's capabilities.
 
@@ -47,7 +47,7 @@ This manual may help if you're wondering:
 
 7.  What are the buttons for?
 
-I felt like this all belongs in one place -- a manual -- and I just kept working on it until it is what you see now. - [Tgo](/w/index.php?title=User:Tgo&amp;action=edit&amp;redlink=1 "User:Tgo&amp;action=edit&amp;redlink=1")
+I felt like this all belongs in one place -- a manual -- and I just kept working on it until it is what you see now.
 
 ###  Other Seeedstudio Documentation
 
