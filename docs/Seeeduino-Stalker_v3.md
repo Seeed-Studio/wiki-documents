@@ -315,7 +315,8 @@ Download and install the DS1337 library and sketches available in the resources 
         *   **Ex:-** `DateTime dt(2015, 10, 1, 11, 43, 0, 4);`
 
 *   compile and upload to **Seeeduino-Stalker v3**
-<div class="thumb tnone"><div class="thumbinner" style="width:352px;">![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3_adjust.png) <div class="thumbcaption">**adjust.ino output**</div></div></div>
+
+![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3_adjust.png)
 
 ####   Get Current Date/Time
 
@@ -330,7 +331,8 @@ Download and install the DS1337 library and sketches available in the resources 
     *   **Ex:- ` DateTime now = RTC.now();`**
 
 *   compile and upload to **Seeeduino-Stalker v3**
-<div class="thumb tnone"><div class="thumbinner" style="width:352px;">![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3_now.png) <div class="thumbcaption">**now.ino output**</div></div></div>
+
+![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3_now.png)
 
 ####   DS1337 Interrupts Example
 
@@ -347,7 +349,8 @@ This example is a demonstration of interrupt detection from DS1337 <span style="
 *   Open **interrupts.ino** example from DS1337 library
 
 *   compile and upload to **Seeeduino-Stalker v3**
-<div class="thumb tnone"><div class="thumbinner" style="width:452px;">![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3_interrupt.png) <div class="thumbcaption">**interrupts.ino output**</div></div></div>
+
+![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3_interrupt.png)
 
 ####   Data Logger Example
 
@@ -363,7 +366,8 @@ The principal application of Seeeduino Stalker v3.0 is data-logging of sensor si
         *   ex:- `interruptTime = DateTime(interruptTime.get() + interruptInterval);  //decide the time for next interrupt`
 
         *   This sketch also produces verbose output i.e the various events happening inside MCU are displayed in serial terminal.
-<div class="thumb tnone"><div class="thumbinner" style="width:552px;">![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Stalker_v3.0_datalogger_flowchart.png) <div class="thumbcaption">**Overview of Data-logger implementation**</div></div></div>
+
+![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Stalker_v3.0_datalogger_flowchart.png)
 
 ###   Read the charging status
 
@@ -503,8 +507,7 @@ The Images are taken from the EAGLE Files
 
 Seeeduino_Stalker_v3.0_Board
 
-![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3.0_Sceme_1.PNG)</div></div>
-<div class="gallerytext">
+![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3.0_Sceme_1.PNG)
 
 Power
 
@@ -516,8 +519,7 @@ Arduino
 
 BEE TF
 
-![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3.0_Sceme_4.PNG)</div></div>
-<div class="gallerytext">
+![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3.0_Sceme_4.PNG)
 
 RTC I2C
 

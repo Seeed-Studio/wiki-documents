@@ -84,7 +84,7 @@ The battery is not included.
 
 
 #### Software
-**Step 1.** Download the [RTC Library](https://raw.githubusercontent.com/SeeedDocument/Grove-RTC/master/res/RTC_Library.zip).
+**Step 1.** Download the [RTC Library](https://github.com/Seeed-Studio/RTC_DS1307/archive/master.zip).
 
 **Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
