@@ -199,7 +199,7 @@ Resources
 
 **Suggest Reading / References**
 
--   [How to choose a Gas Sensor](/How_to_choose_A_Gas_Sensor)
+-   [How to choose a Gas Sensor](/How_to_Chose_A_Gas_Sensor)
 -   [What's LEL](http://en.wikipedia.org/wiki/Flammability_limit)
 
 **Schematic**

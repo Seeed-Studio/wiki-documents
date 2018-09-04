@@ -20,7 +20,7 @@ The CUI32Stem can run Arduino code (compiled via the multiplatform [ChipKIT MPID
 
 ![](https://github.com/SeeedDocument/CUI32Stem/raw/master/img/CUI32Stem_Grove_Dash_Kit-2.jpg)
 
-[CUI32Stem Dash Kit](/CUI32Stem_GROVE_Dash_Kit) and the [CUI32Stem Lab Kit](/CUI32Stem_GROVE_Lab_Kit).
+[CUI32Stem Dash Kit]
 
 The CUI32Stem is available to purchase alone (headers in a bag, not soldered on, providing a slim profile for low profile mounting locations), or as part of two different GROVE bundles (the first of which is shown above - a larger kit with wireless and more Grove elements is forthcoming). When shipped as part of a bundle, CUI32Stem boards will have pre-soldered header pins on them (allowing simple plug-on / plug-off for GROVE elements). See section below on 'how to buy' for more details. You can choose whether the "V* pins" should provide 3.3V or 5V via the "V* selector" on the board, to correlate to the proper voltage for the chosen GROVE element(s) - non-analog pins on the CUI32Stem are 5V-tolerant (even though the micrcontroller itself runs at 3.3V).
 

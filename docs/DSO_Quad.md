@@ -110,7 +110,7 @@ use 'wave out' to generate a pulse/step when master unit triggers, use C/D as tr
 
 *   _Please add more ideas..._
 
-See also information on [application development](/DSO_Quad-ApplicationDevelopment "DSO Quad:ApplicationDevelopment") for the DSO Quad
+See also information on application development for the DSO Quad
 
 ##   Specifications
 ---

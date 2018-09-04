@@ -21,7 +21,7 @@ The **Grove - Mini Fan** module is a DC motor driver based on the AVR Atmega168 
 *   JST 2.0 Interface used to connect to the motor
 *   DC motor comes with a colorful soft-leaved fan accessory (as shown in the picture)
 *   On-board micro-controller can be re-programmed to change module operation
-*   Micro-controller runs [Arduino](/w/index.php?title=Arduino&amp;action=edit&amp;redlink=1 "Arduino&amp;action=edit&amp;redlink=1") Compatible code
+*   Micro-controller runs [Arduino](/Arduino "Arduino") Compatible code
 *   Change code to drive Servo motors instead of DC motors
 *   Uses Standard 4-pin [Grove Cables](Grove_System/#grove-cables "GROVE System") to connect to other [Grove](/Grove "Grove") modules
 *   <span style="color: red">Note:</span>for latest version(v1.1), the output voltage for motor is updated to 3.3 volts.

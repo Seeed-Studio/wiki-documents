@@ -143,7 +143,7 @@ Designed for expert makers, entrepreneurs, and industrial IoT companies, the **I
 
 [![](../common/Get_One_Now_Banner.png)](http://www.amazon.com/dp/B0168KU5FK)
 
-For _**User Manual**_, please go to: [Intel® Edison and Grove IoT Starter Kit Powered by AWS](/Intel-Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS) wiki page
+For _**User Manual**_, please go to: [Intel® Edison and Grove IoT Starter Kit Powered by AWS](/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS) wiki page
 
 **Part List**
 
@@ -394,7 +394,7 @@ For _**User Manual**_, please go to:
 
 *   [Wiki for Seeeduino Cloud and Grove IoT Starter Kit Powered by AWS](/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS)
 
-*   [Wiki for Intel® Edison and Grove IoT Starter Kit Powered by AWS](/Intel-Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS)
+*   [Wiki for Intel® Edison and Grove IoT Starter Kit Powered by AWS](/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS)
 
 *   [Wiki for Beagle Bone Green and Grove IoT Starter Kit Powered by AWS](/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS)
 

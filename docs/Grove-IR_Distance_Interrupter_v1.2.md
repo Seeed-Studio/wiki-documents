@@ -163,7 +163,7 @@ void loop()  {
 
 1.You should have a Raspberry Pi and a GrovePi or GrovePi+. In this demo, we use GrovePi.
 
-2.We assume you have built the development environment successful. If not, follow [this tutorial](/GrovePiPlus).
+2.We assume you have built the development environment successful. If not, follow [this tutorial](/GrovePi_Plus).
 
 3.Connection: 
 

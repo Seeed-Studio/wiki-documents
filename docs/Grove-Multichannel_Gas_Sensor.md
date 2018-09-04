@@ -337,7 +337,7 @@ FAQ
 
 
 !!!Tip
-    If you need futhur support, please feel free to contact [techsupport@seeed.cc]([techsupport@seeed.cc])
+    If you need futhur support, please feel free to contact [techsupport@seeed.cc](mailto:techsupport@seeed.cc)
 
 ## Projects
 

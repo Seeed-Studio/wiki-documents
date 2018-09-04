@@ -49,7 +49,7 @@ Inter Edison For Arduino
 
 [![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Base_Shield_v2-1.png)](http://www.seeedstudio.com/depot/Base-Shield-V2-p-1378.html)
 
-Base Shield V2[(to Wiki)](/Base_shield_v2)
+Base Shield V2[(to Wiki)](/Base_Shield_V2)
 
 
 ###   Sensors

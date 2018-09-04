@@ -85,7 +85,7 @@ The newest firmware from BenF is available from the [Tech Support](http://www.fo
 To upgrade the firmware to the latest version, you have a few options:
 
 *   If you work with Windows, follow the instructions contained in the official [v2 User Manual](https://github.com/SeeedDocument/DSO_Nano/raw/master/res/DSO%20Nano%20v2%20Manual.pdf) (pages 8-10). The required utility DfuSeDemo.exe is also available [here](http://dsonano.googlecode.com/files/um0412.zip).
-*   On Linux and Mac OS X you can use [dfu-util](http://wiki.seeedstudio.com/wiki/Dfu-util) (0.5 or newer).
+*   On Linux and Mac OS X you can use [Dfu-util](http://wiki.seeedstudio.com/Dfu-util) (0.5 or newer).
 
 ##   Capabilities
 ---
@@ -212,7 +212,6 @@ To upgrade the firmware to the latest version, you have a few options:
 *   [Official firmware, schematics and development documentation](http://code.google.com/p/dsonano/)
 
 *   [Community firmware source git tree](http://gitorious.org/dsonano/dso-firmware) (for gcc and IAR)
-*   [Developer's corner](http://wiki.seeedstudio.com/wiki/DSO_Nano/Development)
 
 *   [MOD your DSO nano UI](https://github.com/SeeedDocument/DSO_Nano/raw/master/res/DSOUI.pdf)
 
