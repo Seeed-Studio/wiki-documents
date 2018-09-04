@@ -499,48 +499,29 @@ After modification
 
 The Images are taken from the EAGLE Files
 
-*   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:33px auto;">![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3.0_Board.PNG)</div></div>
-<div class="gallerytext">
+![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3.0_Board.PNG)
 
 Seeeduino_Stalker_v3.0_Board
 
-</div>
-</div>
-*   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:33.5px auto;">![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3.0_Sceme_1.PNG)</div></div>
+![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3.0_Sceme_1.PNG)</div></div>
 <div class="gallerytext">
 
 Power
 
-</div>
-</div>
-*   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:34px auto;">![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3.0_Sceme_2.PNG)</div></div>
-<div class="gallerytext">
+![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3.0_Sceme_2.PNG)
 
 Arduino
 
-</div>
-</div>
-*   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:33.5px auto;">![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3.0_Sceme_3.PNG)</div></div>
-<div class="gallerytext">
+![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3.0_Sceme_3.PNG)
 
 BEE TF
 
-</div>
-</div>
-*   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:33.5px auto;">![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3.0_Sceme_4.PNG)</div></div>
+![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3.0_Sceme_4.PNG)</div></div>
 <div class="gallerytext">
 
 RTC I2C
 
-</div>
-</div>
-
-##   Resources
+## Resources
 
 *   Software:
 
