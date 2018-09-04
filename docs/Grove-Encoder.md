@@ -1,23 +1,24 @@
 ---
 title: Grove - Encoder
 category: Sensor
-bzurl: https://seeedstudio.com/Grove-Gas-Sensor(MQ2)-p-937.html
+bzurl: 
 oldwikiname:
-prodimagename: Twig-Gas_Sensor.bmp
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/Gas Sensor MQ.jpg
-surveyurl: https://www.research.net/r/Grove-Gas_Sensor-MQ2
+prodimagename: 
+bzprodimageurl: 
+surveyurl: 
 sku: 111020001
 tags:
 ---
 
-![](https://statics3.seeedstudio.com/images/product/Grove%20Encoder.jpg)
+![](https://github.com/SeeedDocument/Grove-Encoder/raw/master/img/Grove%20Encoder.jpg)
 
 
 
 This module is an incremental rotary encoder. It encodes the rotation signal from the axis and output the signal by electronic pulse. The Grove – Encoder is one of the Grove series and has a standard Grove interface.
 When you need to add a rotary knob to your project, for example a volume knob for a speaker, a selection panel or a digital input, this will be your first choice.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Encoder-p-1352.html)
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Encoder-p-1352.html" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
+
 
 ## Features
 
@@ -34,23 +35,73 @@ When you need to add a rotary knob to your project, for example a volume knob fo
 | Dimension | |20x 20 | |mm |
 | Net Weight || 12 || g |
 
+
+## Platforms Supported
+
+| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
+|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo_n.jpg) |
+
+!!!Caution
+    The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
+
+
 ## Getting Started
 
-This Grove-Encoder is very easy to use with the [Encoder Lib](https://seeeddoc.github.io/Grove-Encoder/res/Encoder.zip) designed by seeedstudio. Simply connect this module to the D2 connector of Base Shield and you can start using. The following is a introduction of how to make a [Circular LED bar](https://www.seeedstudio.com/Grove-Circular-LED-p-1353.html) (the idea came from [seeedstudio wish](http://www.seeedstudio.com/wish/)）.
+!!!Note
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
-*   This Circular LED bar consists of an Encoder and a Grove-CircularLED module. Connect the two modules to Base shield as the following picture:<b
+### Play With Arduino
 
-![](https://seeeddoc.github.io/Grove-Encoder/img/Cirhard.jpg)
+#### Hardware
 
-*   In the project, the [TimeOne Lib](https://seeeddoc.github.io/Grove-Encoder/res/TimerOne.zip) and [Encoder Lib](https://seeeddoc.github.io/Grove-Encoder/res/Encoder.zip) and [CircularLED Library](https://seeeddoc.github.io/Grove-Encoder/res/CircularLED.zip) are needed. Download all the librarys and install them to your Arduino IDE.
+- **Step 1.** Prepare the below stuffs:
 
-*   Restart the Arduino IDE and open the example by the path :**File->Examples->Encoder->EncodeCircuiBar.**
+| Seeeduino V4.2 | Base Shield|  Grove - Circular LED | Grove - Encoder|
+|--------------|-------------|-----------------|----------------|
+|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Encoder/raw/master/img/Grove%20Circular%20LED._Sjpg.jpg)|![](https://github.com/SeeedDocument/Grove-Encoder/raw/master/img/Grove%20Encoder.jpg)|
+|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Circular-LED-p-1353.html)|[Get One Now](https://www.seeedstudio.com/Grove-Encoder-p-1352.html)|
 
-```
+- **Step 2.** Connect Grove-Encoder to port D2 of Grove-Base Shield.
+- **Step 3.** Connect Grove-Circular LED to port D5 of Grove-Base Shield.
+- **Step 4.** Plug Grove-Base Shield into Seeeduino.
+- **Step 5.** Connect Seeeduino to PC via a USB cable.
+
+![](https://github.com/SeeedDocument/Grove-Encoder/raw/master/img/ardu_connection.JPG)
+
+!!!Note
+	If we don't have Grove Base Shield, We also can directly connect Grove-Encoder and Connect Grove-Circular LED to Seeeduino as below.
+
+| Seeeduino       | Grove-Encoder  |
+|---------------|-------------------------|
+| 5V           | Red                     |
+| GND           | Black                   |
+| D3           | White                   |
+| D2            | Yellow                  |
+
+
+| Seeeduino       | Grove-Circular LED  |
+|---------------|-------------------------|
+| 5V           | Red                     |
+| GND           | Black                   |
+| D6           | White                   |
+| D5           | Yellow                  |
+
+!!!Note
+    If you want to change to other port for Grove-Encoder, please change the digitalRead(2) and digitalRead(2) in Encoder.cpp.
+
+#### Software
+
+- **Step 1.** Download the  [Encoder Library](https://github.com/SeeedDocument/Grove-Encoder/raw/master/res/Encoder.zip), [CircularLED Library](https://github.com/SeeedDocument/Grove-Encoder/raw/master/res/CircularLED.zip), [TimerOne Library](https://github.com/SeeedDocument/Grove-Encoder/raw/master/res/TimerOne.zip) from Github.
+- **Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- **Step 3.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+
+```c++
 #include <CircularLED.h>
 #include <Encoder.h>
 #include <TimerOne.h>
-CircularLED circularLED;
+CircularLED circularLED(6,5);
+
 unsigned int LED[24];
 int index_LED;
 void setup()
@@ -91,26 +142,23 @@ void SenttocircularBar(int index)
   }
   circularLED.CircularLEDWrite(LED);
 }
+
 ```
 
-*   Upload it to your Arduino/Seeeduino, please refer to [here](https://seeeddoc.github.io/Upload_Code) to learn how to upload sketches. You can see:
+- **Step 4.** The light will be changed as encoder rotating as below.
 
-![](https://seeeddoc.github.io/Grove-Encoder/img/EncoderAndCircular_LED.gif)
+![](https://github.com/SeeedDocument/Grove-Encoder/raw/master/img/EncoderAndCircular_LED.gif)
 
 !!!Note
   It is able to generate another signal when it’s being pressed down. However due to the limitation of the number of Grove signal cable, the module is made without output of this signal.
 
 ## Resources
 
-*   [Encoder Spec](https://seeeddoc.github.io/Grove-Encoder/res/Encoder_Spe.zip)
-
-*   [Demo in Arduino forum](http://www.arduino.cc/playground/Main/RotaryEncoders)
-
-*   [TimeOne Lib](https://seeeddoc.github.io/Grove-Encoder/res/TimerOne.zip)
-
-*   [Encoder Lib](https://seeeddoc.github.io/Grove-Encoder/res/Encoder.zip)
-
-*   [Grove-Encoder Eagle files](https://seeeddoc.github.io/Grove-Encoder/res/Grove-Encoder_eagle_files.zip)
+- **[Eagle]** [Grove-Encoder Eagle files](https://seeeddoc.github.io/Grove-Encoder/res/Grove-Encoder_eagle_files.zip)
+- **[Library]** [TimeOne Library](https://github.com/SeeedDocument/Grove-Encoder/raw/master/res/TimerOne.zip)
+- **[Library]** [Encoder Library](https://github.com/SeeedDocument/Grove-Encoder/raw/master/res/Encoder.zip)
+- **[Library]** [CircularLED Library](https://github.com/SeeedDocument/Grove-Encoder/raw/master/res/CircularLED.zip)
+- **[Demo]** [Demo in Arduino forum](http://www.arduino.cc/playground/Main/RotaryEncoders)
 
 
 ## Tech Support
