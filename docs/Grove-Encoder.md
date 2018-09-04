@@ -10,7 +10,7 @@ sku: 111020001
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-Encoder/raw/master/img/Grove%20Encoder.jpg)
+![](https://github.com/SeeedDocument/Grove-Encoder/raw/master/img/encoder.jpg)
 
 
 
@@ -40,7 +40,7 @@ When you need to add a rotary knob to your project, for example a volume knob fo
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo_n.jpg) |
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo_n.jpg) |
 
 !!!Caution
     The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
@@ -88,7 +88,7 @@ When you need to add a rotary knob to your project, for example a volume knob fo
 | D5           | Yellow                  |
 
 !!!Note
-    If you want to change to other port for Grove-Encoder, please change the digitalRead(2) and digitalRead(2) in Encoder.cpp.
+    If you want to change to other port for Grove-Encoder, please change the digitalRead(2) and digitalRead(3) in Encoder.cpp.
 
 #### Software
 
@@ -150,7 +150,7 @@ void SenttocircularBar(int index)
 ![](https://github.com/SeeedDocument/Grove-Encoder/raw/master/img/EncoderAndCircular_LED.gif)
 
 !!!Note
-  It is able to generate another signal when it’s being pressed down. However due to the limitation of the number of Grove signal cable, the module is made without output of this signal.
+    It is able to generate another signal when it’s being pressed down. However due to the limitation of the number of Grove signal cable, the module is made without output of this signal.
 
 ## Resources
 
