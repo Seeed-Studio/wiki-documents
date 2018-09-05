@@ -177,6 +177,9 @@ pages:
           - ReSpeaker Mic Array: ReSpeaker_Mic_Array.md
           - ReSpeaker Mic Array v2.0: ReSpeaker_Mic_Array_v2.0.md
 
+      - Azure Sphere:
+          - Azure Sphere MT3620 Development Kit: Azure_Sphere_MT3620_Development_Kit.md
+
       - Artik:
           - Artik Introduction: Artik.md
           - Eagleye 530s: Eagleye_530s.md
