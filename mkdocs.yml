@@ -433,6 +433,8 @@ pages:
           - Grove - Sunlight Sensor: Grove-Sunlight_Sensor.md
           - Grove - Switch(P): Grove-Switch-P.md
           - Grove - Mech Keycap: Grove-Mech_Keycap.md
+          - Grove - 5-Way Switch: Grove-5-Way_Switch.md
+          - Grove - 6-Position DIP Switch: Grove-6-Position_DIP_Switch.md
           - Grove - Temp&amp;Humi Sensor(SHT31): Grove-TempAndHumi_Sensor-SHT31.md
           - Grove - Temperature Sensor: Grove-Temperature_Sensor.md
           - Grove - Temperature Sensor V1.2: Grove-Temperature_Sensor_V1.2.md
