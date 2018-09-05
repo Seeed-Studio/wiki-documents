@@ -53,7 +53,7 @@ I felt like this all belongs in one place -- a manual -- and I just kept working
 
 *   [DSO Quad Manual (official wiki page)](/DSO_Quad "DSO Quad")
 
-*   [Official list of firmware versions](/DSO_Quad-Upgrading_Firmware "DSO Quad:Upgrading Firmware")
+*   [DSO Quad Building Firmware](/DSO_Quad-Building_Firmware "DSO Quad Building Firmware")
 
 *   [DSO Quad battery installation tutorial with video](http://www.forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2074)
 
@@ -230,7 +230,7 @@ The DSO Quad is charged by connecting the USB cable. The LTC4054 battery control
 
 There are several versions of the DSO Quad, and the firmware for each is different. Please carefully identify your hardware. When you first turn on the DSO Quad, look for the hardware version. Compare what you see to the following table:
 
-Check here for the latest firmware: [DSO_Quad:Upgrading_Firmware#Firmware_List](/DSO_Quad-Upgrading_Firmware#Firmware_List "DSO Quad:Upgrading Firmware")
+Check here for the latest firmware: [DSO Quad Building Firmware](/DSO_Quad-Building_Firmware "DSO Quad Building Firmware")
 
 <table>
 <tr>
@@ -490,7 +490,7 @@ Note that the values on screen are 1/10 of the input, so please multiply by 10 i
 
 The DSO Quad can be charged from any normal USB port. Please charge your DSO Quad for at least 1 hour before using it.
 
-The DSO Quad firmware does a rapid USB disconnect-reconnect to do a "live" firmware update. This method is incompatible with Mac OS X or Linux. Please see [this forum thread](http://www.forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1934) for more information.  See [DSO_Quad:Upgrading_Firmware#Linux](/DSO_Quad-Upgrading_Firmware#Linux "DSO Quad:Upgrading Firmware") for how to upgrade firmware from Linux.
+The DSO Quad firmware does a rapid USB disconnect-reconnect to do a "live" firmware update. This method is incompatible with Mac OS X or Linux. Please see [this forum thread](http://www.forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1934) for more information.  See [DSO Quad Building Firmware](/DSO_Quad-Building_Firmware "DSO Quad Building Firmware") for how to upgrade firmware from Linux.
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

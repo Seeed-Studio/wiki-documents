@@ -74,7 +74,7 @@ Usage
 
 **Encoder Connectors**
 
-There are encoders in the motors of the [Hercules platform](http://seeedstudio.com/wiki/Skeleton_Bot_-_4WD_hercules_mobile_robotic_platform) to measure the motor speed. These two Connectors are used to connect these encoders. The header also supplies 5VDC to power the encoder.
+There are encoders in the motors of the [Hercules platform](http://wiki.seeedstudio.com/Skeleton_Bot-4WD_hercules_mobile_robotic_platform) to measure the motor speed. These two Connectors are used to connect these encoders. The header also supplies 5VDC to power the encoder.
 
 **Grove Connectors**
 
@@ -86,7 +86,7 @@ The battery connectors are marked with a GND and VM on the input screw terminal.
 
 **Motor Screw Terminals**
 
-The motor screw terminals are marked with M1A / M1B for channel 1 and M2A / M2B for channel 2. There is no specific polarities for the motors. If the motor runs in the opposite way that you want, you may reverse the motor wires to reverse rotation. Please note that the J21&J20,J22&J23 are parallel connected, that is, you should connect the left 2 motors of the [Hercules](http://seeedstudio.com/wiki/Skeleton_Bot_-_4WD_hercules_mobile_robotic_platform) to one channel, and the right 2 motors to the other channel.
+The motor screw terminals are marked with M1A / M1B for channel 1 and M2A / M2B for channel 2. There is no specific polarities for the motors. If the motor runs in the opposite way that you want, you may reverse the motor wires to reverse rotation. Please note that the J21&J20,J22&J23 are parallel connected, that is, you should connect the left 2 motors of the [Hercules](http://wiki.seeedstudio.com/Skeleton_Bot-4WD_hercules_mobile_robotic_platform) to one channel, and the right 2 motors to the other channel.
 
 ### The Usage
 

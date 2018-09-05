@@ -7,7 +7,7 @@ Here is the list of the Tutorial you can find in the Seeed WiKi. The list will b
 
 - [A Comparison of Different Grove Temperature Sensors](/A_Comparison_of_Different_Grove_Temperature_Sensors/)
 - [A Handy Serial Library](/A_Handy_Serial_Library/)
-- [Atmel AVRISP STK500 USB ISP Programmer](/Atmel_AVRISP_STK500_USB_ISP_Programmer.md/)
+- [Atmel AVRISP STK500 USB ISP Programmer](/Atmel_AVRISP_STK500_USB_ISP_Programmer/)
 - [AT Command Tester](/AT_Command_Tester/)
 - [AT Command Tester Application](/AT_Command_Tester_Application/)
 - [Arduino Common Error](/Arduino_Common_Error/)

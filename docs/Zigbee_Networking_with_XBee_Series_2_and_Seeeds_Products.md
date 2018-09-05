@@ -6,7 +6,7 @@ prodimagename:
 surveyurl: https://www.research.net/r/Zigbee_Networking_with_XBee_Series_2_and_Seeed-s_Products
 ---
 
-1.  This step-by-step tutorial is created to help users learn to use XBee ZB modules with [ Seeeduino](/Seeeduino_V2.2 "Seeeduino V2.2") / Arduino, [XBee® Shield](/XBee-Shield "XBee® Shield"), [UartSBee](/UartSBee "UartSBee"), [Grove - XBee Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier"), [Seeeduino Stalker v2.0](/Seeeduino_Stalker_v2.0 "Seeeduino Stalker v2.0"). These products makes life easier for working with XBee ZB modules.
+1.  This step-by-step tutorial is created to help users learn to use XBee ZB modules with [ Seeeduino](/Seeeduino_V2.2 "Seeeduino V2.2") / Arduino, [XBee® Shield](/XBee_Shield "XBee® Shield"), [UartSBee](/UartSBee "UartSBee"), [Grove - XBee Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier"), Seeeduino Stalker v2.0. These products makes life easier for working with XBee ZB modules.
 
 2.  XBee ZB modules can be used in many different ways. They also provide lots of configuration parameters. In this tutorial, we have tried to showcase the essential configurations in simple steps.
 3.  <font color="darkred"> Please read through the complete tutorial at-least once, before deciding which configuration to use for your application. </font>
@@ -215,7 +215,7 @@ This demo configures two XBee modules to connect to each other automatically upo
 
 ###  Configuring a standalone sensor nodes using XBee ZB module and [Grove - XBee Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier")
 
-###  Configuring a Zigbee Coordinator using XBee ZB module, Seeeduino and [XBee® Shield](/XBee-Shield "XBee® Shield")
+###  Configuring a Zigbee Coordinator using XBee ZB module, Seeeduino and [XBee® Shield](/XBee_Shield "XBee® Shield")
 
 ###  Using Seeeduino as Internet Gateway using XBee ZB module,[Wifi Bee](/Wifi_Bee "Wifi Bee") and [Bees Shield](/Bees_Shield "Bees Shield")
 

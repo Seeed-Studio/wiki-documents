@@ -184,13 +184,13 @@ Information on how to setup / program Bee Modules are available in
 
 *   [Bees Shield](/Bees_Shield "Bees Shield")
 
-*   [XBee](/w/index.php?title=Bee_series&amp;action=edit&amp;redlink=1 "Bee_series&amp;action=edit&amp;redlink=1")
+*   [XBee](/XBee_Shield_V2.0 "XBee_Shield_V2.0")
 
 *   [Wifi Bee](/Wifi_Bee "Wifi Bee")
 
-*   [ RFBee](/w/index.php?title=Bee_series&amp;action=edit&amp;redlink=1 "Bee_series&amp;action=edit&amp;redlink=1")
+*   [RFBee](/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee_V1.1-Wireless_Arduino_compatible_node")
 
-*   [UartSBee](/UartSBee "UartSBee")
+*   [UartSBee](/UartSBee_V3.1 "UartSBee_V3.1")
 
 *   [Seeeduino_V2.2](/Seeeduino_V2.2 "Seeeduino V2.2")
 

@@ -259,7 +259,7 @@ And modify IP_ADDRESS(line 40) to this line of numbers. (Here is 54.164.100.76)
 
 Material required:
 
-*   [Base Shield v2.0](/Grove-Base_shield_v2), Set to 3V3(corner-most section of Base shield board)
+*   [Base Shield v2.0](/Base_Shield_V2), Set to 3V3(corner-most section of Base shield board)
 
 *   [Grove - Touch Sensor](/Grove-Touch_Sensor) connect to D6
 

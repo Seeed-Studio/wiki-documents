@@ -9,7 +9,7 @@ sku:  110060026
 ---
 ![](https://github.com/SeeedDocument/Grove-Mixer_Pack_V2/raw/master/img/U8GUZNb9TVZ14lLRW6ialXEV.jpg)
 
-The [Grove - Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) is a stand-alone, Lego-like electronics kit that consists of 13 select Grove modules from the [ Grove System](/GROVE_System "GROVE System") developed by [Seeed Studio](http://www.seeedstudio.com/depot/). These mini-modules can be used as building blocks to create electronic circuits and prototypes quite rapidly without necessarily using a Microcontroller board such as a [Seeeduino](/Seeeduino "Seeeduino") or an [ Arduino](/Arduino "Main Page").
+The [Grove - Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) is a stand-alone, Lego-like electronics kit that consists of 13 select Grove modules from the [ Grove System](/Grove_System "GROVE System") developed by [Seeed Studio](http://www.seeedstudio.com/depot/). These mini-modules can be used as building blocks to create electronic circuits and prototypes quite rapidly without necessarily using a Microcontroller board such as a [Seeeduino](/Seeeduino "Seeeduino") or an [ Arduino](/Arduino "Main Page").
 
 The 13 Grove modules included are a combination of sensor modules, actuators, logic and power modules that are extremely easy to use and fun to work with. Within minutes, you can design new circuits and assemble functional prototypes.
 
@@ -68,7 +68,7 @@ With the [Grove - Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2E
 
 4.  1x LED String Light to work with the [Grove - LED String Light](/Grove-LED_String_Light "Grove - LED String Light") module
 
-5.  7x [Grove Cables](/GROVE_System#Grove_Cables "GROVE System") (3x 200mm, 3x 50mm, 1x Branch Cable)
+5.  7x [Grove Cables](/Grove_System/#grove-cables "GROVE System") (3x 200mm, 3x 50mm, 1x Branch Cable)
 
 ##  Usage
 ---
@@ -242,7 +242,7 @@ The [Grove - Sound Sensor](/Grove-Sound_Sensor "Grove - Sound Sensor") module is
 
 ![](https://github.com/SeeedDocument/Grove-Mixer_Pack_V2/raw/master/img/Sliding1.JPG)
 
-The [Grove - Slide Potentiometer](/Grove-Slide_Potentiometer "Grove - Slide Potentiometer") module incorporates a linear variable resistor with a total resistance of 10KΩ. When you move the lever from one side to the other, its output voltage will range from 0 V to the Vcc you apply. It connects to the other Grove modules through a standard 4-Pin [Grove Cable](/GROVE_System#Grove_Cables "GROVE System"). Three of the pins are connected to OUT (Pin 1), Vcc (Pin 3) and GND (Pin 4), while the fourth pin (Pin 2) is connected to a green indicator LED. The LED is used to visually represent the resistance change on the potentiometer.
+The [Grove - Slide Potentiometer](/Grove-Slide_Potentiometer "Grove - Slide Potentiometer") module incorporates a linear variable resistor with a total resistance of 10KΩ. When you move the lever from one side to the other, its output voltage will range from 0 V to the Vcc you apply. It connects to the other Grove modules through a standard 4-Pin [Grove Cable](/Grove_System/#grove-cables "GROVE System"). Three of the pins are connected to OUT (Pin 1), Vcc (Pin 3) and GND (Pin 4), while the fourth pin (Pin 2) is connected to a green indicator LED. The LED is used to visually represent the resistance change on the potentiometer.
 
 ###  Grove - Button
 

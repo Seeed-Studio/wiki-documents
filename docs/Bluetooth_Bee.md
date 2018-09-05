@@ -597,7 +597,7 @@ user@user-desktop:~$ ls /dev/rfcomm*
 
 ####   Connecting Bluetooth Bee to PC using [UartsBee](https://seeeddoc.github.io/UartSBee/)  in Master Mode  ####
 
-This demo uses hardware arrangement described in [Hardware Installation - UartSBee](http://wiki.seeedstudio.com/index.php?title=Bluetooth_Bee#Connecting_to_PC_with_UartSbee). Connect UartSbee to PC using a mini USB cable.
+This demo uses hardware arrangement described in [Hardware Installation - UartSBee](http://wiki.seeedstudio.com/Bluetooth_Bee/#connecting-to-pc-with-uartsbee). Connect UartSbee to PC using a mini USB cable.
 
 - Open a serial terminal and connect to [UartSBee](/UartSBee) (title=undefined) serial port device like COM1 in Windows or /dev/ttyUSB0 in GNU/Linux with baud rate:38400, Databits: 8, Stopbits: 1 and No Flow Control
 

@@ -67,7 +67,7 @@ void loop()
 
 ##   Specification  
 
-See [features](http://wiki.seeedstudio.com/index.php?title=XBee%C2%AE_Shield#Features "XBee%C2%AE_Shield#Features") above.
+See [features](http://wiki.seeedstudio.com/XBee_Shield/#features "XBee_Shield#Features") above.
 
 ##   Mechanic Dimensions  
 

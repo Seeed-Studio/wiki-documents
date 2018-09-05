@@ -463,7 +463,7 @@ evaluation software [m-center for Windows, version 1.11.0](https://www.u-blox.co
 
 ![](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/Img/device_manager.png)
 
-- For the UART port,　Please use the [usb to serial adaptor](https://shop.seeedstudio.com/UartSBee-V5-p-1752.html), follow below connection and use the baudrate as 115200. We can use any Serial COM monitor tool to run AT commands.
+- For the UART port,　Please use the [usb to serial adaptor](https://www.seeedstudio.com/UartSBee-V5-p-1752.html), follow below connection and use the baudrate as 115200. We can use any Serial COM monitor tool to run AT commands.
 
 |   USB to UART Adaptor | LTE Cat1 Pi HAT              |
 |-----------------------|------------------------------|

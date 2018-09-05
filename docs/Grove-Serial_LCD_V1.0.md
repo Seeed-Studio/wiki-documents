@@ -70,7 +70,7 @@ This LCD makes for a great gift, because it can be used for so many different pr
 
 ###   Programming   ###
 
-Serial LCD library provides a rich set of APIs to interact with Serial LCD Module. All operations that could be performed with normal LCDs could be achieved by sending commands and data serially. The APIs are designed similar to LiquidCrystal library of Arduino, for instant migration to Serial LCD driver. Interaction with Serial LCD module begins with initialization,wherein the Serial LCD module sends instruction to the MCU to begin communication. After intitialization, the LCD gets into Working mode, where it starts accepting commands and data for display. The commands and responses involved in the interaction are summarized at [[1](http://wiki.seeedstudio.com/index.php?title=Twig_-_Serial_LCD#Commands_and_Responses_Summary)]
+Serial LCD library provides a rich set of APIs to interact with Serial LCD Module. All operations that could be performed with normal LCDs could be achieved by sending commands and data serially. The APIs are designed similar to LiquidCrystal library of Arduino, for instant migration to Serial LCD driver. Interaction with Serial LCD module begins with initialization,wherein the Serial LCD module sends instruction to the MCU to begin communication. After intitialization, the LCD gets into Working mode, where it starts accepting commands and data for display. The commands and responses involved in the interaction are summarized at [1]
 
 ###   Demonstration  Applications  ###
 

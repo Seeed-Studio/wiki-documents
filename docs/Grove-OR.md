@@ -37,8 +37,6 @@ This [Grove](/Grove "Grove") module is available as part of the following [Grove
 
 *   [Grove Mixer Pack V2](/GROVE_MIXER_PACK_V2 "GROVE MIXER PACK V2")
 
-*   [Grove Mixer Pack](/Grove-Mixer_Pack "Grove - Mixer Pack")
-
 Note that this Grove - OR module is sold only as part of the above mentioned packs and is not available stand-alone from the [Seeed Studio Bazaar](http://www.seeedstudio.com/depot/).
 
 ##  Resources

@@ -97,7 +97,7 @@ GP2Y0D805Z0F is a distance measuring sensor unit, composed of an integrated comb
 
 
 !!!Note
-	If we don't have Grove Base Shield, We also can directly connect Grove-Mech keycap to Seeeduino as below.
+	If we don't have Grove Base Shield, We also can directly connect Grove - Digital Distance Interrupter 0.5 to 5cm(GP2Y0D805Z0F) keycap to Seeeduino as below.
 
 
 | Seeeduino     | Grove - Digital Distance Interrupter 0.5 to 5cm|

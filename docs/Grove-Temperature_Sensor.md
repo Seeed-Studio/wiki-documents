@@ -38,6 +38,7 @@ Here is an example to show you how to read temperature information from the sens
 ![](https://github.com/SeeedDocument/Grove-Temperature_Sensor/raw/master/img/Tempreture_Sensor_Connector.jpg)
 
 4. Upload Code below. Please click [here](/Upload_Code) if you do not know how to upload.
+
 ```
 /*
 /* Grove - Temperature Sensor demo v1.0
@@ -76,11 +77,11 @@ As a reference, the following is the resistance curve of TTC3A103*39H, the therm
 
 ![](https://github.com/SeeedDocument/Grove-Temperature_Sensor/raw/master/img/Twig-Temperature-Sensor-value.jpg)
 
-###   With [Raspberry Pi](/GrovePiPlus "GrovePi+")
+###   With [Raspberry Pi](/GrovePi_Plus "GrovePi+")
 
 1.You should have got a raspberry pi and a grovepi or grovepi+.
 
-2.You should have completed configuring the development enviroment, otherwise follow [here](/GrovePiPlus#Introducing_the_GrovePi.2B).
+2.You should have completed configuring the development enviroment, otherwise follow [here](/GrovePi_Plus#Introducing_the_GrovePi.2B).
 
 3.Connection
 

@@ -125,7 +125,7 @@ Starter bundle harness is a board  keeping the component of grove-starter bundle
 
 *   2-axis compass Module
 
-*   [Grove - I2C 3-axis Accelerometer](/Grove-I2C_3-axis_Accelerometer "Grove - I2C 3-axis Accelerometer")
+*   [Grove - I2C 3-axis Accelerometer](/Grove-3-Axis_Digital_Accelerometer-400g "Grove - I2C 3-axis Accelerometer")
 
 *   [Grove - 3-axis Gyro](/Grove-3-Axis_Digital_Gyro "Grove - 3-axis Gyro")
 

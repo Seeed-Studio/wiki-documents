@@ -50,7 +50,7 @@ The Relay Shield is an Arduino compatible smart module with 4 mechanical relays 
 ##   Cautions   ##
 
 **
-Place 2 layers of electrical tape on the top of the[Arduino's](/w/index.php?title=Arduino%27s&amp;action=edit&amp;redlink=1) (title=undefined) usb connector.  This will prevent the relay shield from making contact.
+Place 2 layers of electrical tape on the top of the[Arduino's](/Arduino) (title=undefined) usb connector.  This will prevent the relay shield from making contact.
 Do not operate voltage more than 35V DC.
 **
 
