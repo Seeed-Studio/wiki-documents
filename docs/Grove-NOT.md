@@ -19,7 +19,7 @@ This [Grove](/Grove "Grove") module provides the function of a [logical NOT gate
 
 *   Makes integrating a Logical NOT in your circuit a breeze
 
-*   Uses Standard 4-pin [Grove Cables](/GROVE_System#Grove_Cables "GROVE System") to connect to other [Grove](/Grove "Grove") modules
+*   Uses Standard 4-pin [Grove Cables](/Grove_System/#grove-cables "GROVE System") to connect to other [Grove](/Grove "Grove") modules
 
 ##  Usage
 
@@ -35,7 +35,7 @@ This [Grove](/Grove "Grove") module provides the function of a [logical NOT gate
 
 ##  Availability
 
-This [Grove](/Grove "Grove") module is available as part of the following [Grove Kit Series](/GROVE_System#GROVE_Kit_Series "GROVE System"):
+This [Grove](/Grove "Grove") module is available as part of the following [Grove Kit Series](/Grove_System/#grove-starter-kit "GROVE System"):
 
 *   [Grove Mixer Pack V2](/GROVE_MIXER_PACK_V2 "GROVE MIXER PACK V2")
 

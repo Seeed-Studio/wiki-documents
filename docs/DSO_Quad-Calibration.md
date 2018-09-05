@@ -54,7 +54,7 @@ The calibration procedure for the Quad DSO it is already described, e.g. here: [
 
 *   [DSO Quad](/DSO_Quad "DSO Quad")
 
-*   [DSO Quad:Upgrading Firmware](/DSO_Quad-Upgrading_Firmware "DSO Quad:Upgrading Firmware")
+*   [DSO Quad:Upgrading Firmware](/DSO_Quad-Building_Firmware "DSO Quad:Upgrading Firmware")
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

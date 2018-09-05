@@ -315,7 +315,7 @@ _Hint:_ Use a combination of the sound sensor and LED string lights. Can you mak
 _Hint:_ Use a combination of the sound and light sensors along with an LED string lights. Can you guess which logic gate modules you will need to use along with the 2 sensors? You will need two!
 
 3.  **Add an LED light to your Bike Helmet**
-_Hint:_ The circuit for this is the same as the [Photosensitive Lights](/GROVE_MIXER_PACK_V2#Photosensitive_Lights "GROVE MIXER PACK V2") project shown above. Use a 9V battery to make your project portable!
+_Hint:_ The circuit for this is the same as the Photosensitive Lights project shown above. Use a 9V battery to make your project portable!
 
 4.  **Use a piezo buzzer as a Bike Horn**
 _Hint:_ Press on a button to sound a squeaky horn! Use a 9V battery to make your project portable. Explore what happens when you replace the [Grove - Button](/Grove-Button "Grove - Button") with a [Grove - Slide Potentiometer](/Grove-Slide_Potentiometer "Grove - Slide Potentiometer").

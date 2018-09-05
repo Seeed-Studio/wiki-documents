@@ -83,7 +83,7 @@ Model: [ARD104D2P](http://www.seeedstudio.com/depot/seeeduino-stalker-v2-p-727.h
 
 - Solar JST Input voltage: 4.6-6V
 
-- Global Current Consumption: See [note ](http://wiki.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3)
+- Global Current Consumption: See [note ](http://wiki.seeedstudio.com/Seeeduino_Stalker_v2.3)
 
 - UART Baud Rate (while programming): 115200 bps
 

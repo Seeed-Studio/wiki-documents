@@ -167,7 +167,7 @@ Draws a string of text starting from (poX,poY) using inbuilt font of size size a
 
 ---
 
-TFT Touch Shield uses the [Adafruit Touch Screen Library](https://github.com/adafruit/Touch-Screen-Library). To understand the principle behind resistive touch screen refer [External Links](http://wiki.seeedstudio.com/index.php?title=2.8%27%27_TFT_Touch_Shield#External_Links). In short, a 4-wire resistive touch screen provides two voltage divider each for X and Y axis. By applying proper voltages for each axis and scanning the ADC values the position of the touch can be detected. These values are always prone to noise. Hence a digital filter is used.
+TFT Touch Shield uses the [Adafruit Touch Screen Library](https://github.com/adafruit/Touch-Screen-Library). To understand the principle behind resistive touch screen refer [External Links](/2.8inch-TFT_Touch_Shield_V1.0/#resources). In short, a 4-wire resistive touch screen provides two voltage divider each for X and Y axis. By applying proper voltages for each axis and scanning the ADC values the position of the touch can be detected. These values are always prone to noise. Hence a digital filter is used.
 
 - To use the TouchScreen Library first create a TouchScreen object by
 

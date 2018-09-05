@@ -406,7 +406,7 @@ This documentation is licensed under the Creative Commons [Attribution-ShareAlik
 
 ##   See also  
 
-[Bluetooth Bee documentation](http://wiki.seeedstudio.com/index.php?title=Bluetooth_Bee "Bluetooth_Bee") demostrating use of **XBee®_Shield**
+[Bluetooth Bee documentation](/Bluetooth_Bee "Bluetooth_Bee") demostrating use of **XBee®_Shield**
 
 
 ##   External Links  

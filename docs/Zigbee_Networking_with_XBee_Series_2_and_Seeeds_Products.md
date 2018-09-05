@@ -6,7 +6,7 @@ prodimagename:
 surveyurl: https://www.research.net/r/Zigbee_Networking_with_XBee_Series_2_and_Seeed-s_Products
 ---
 
-1.  This step-by-step tutorial is created to help users learn to use XBee ZB modules with [ Seeeduino](/Seeeduino_V2.2 "Seeeduino V2.2") / Arduino, [XBee® Shield](/XBee_Shield "XBee® Shield"), [UartSBee](/UartSBee "UartSBee"), [Grove - XBee Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier"), Seeeduino Stalker v2.0. These products makes life easier for working with XBee ZB modules.
+1.  This step-by-step tutorial is created to help users learn to use XBee ZB modules with [ Seeeduino](/Seeeduino_V2.2 "Seeeduino V2.2") / Arduino, [XBee® Shield](/XBee_Shield "XBee® Shield"), [UartSBee_V3.1](/UartSBee_V3.1 "UartSBee_V3.1"), [Grove - XBee Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier"), Seeeduino Stalker v2.0. These products makes life easier for working with XBee ZB modules.
 
 2.  XBee ZB modules can be used in many different ways. They also provide lots of configuration parameters. In this tutorial, we have tried to showcase the essential configurations in simple steps.
 3.  <font color="darkred"> Please read through the complete tutorial at-least once, before deciding which configuration to use for your application. </font>
@@ -57,17 +57,17 @@ In this tutorial we are going to use **XBee ZB firmware** on a **XBee Znet 2.5 M
 
 ![](https://github.com/SeeedDocument/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/raw/master/img/XBee_PinOut.jpeg)
 
-##  Upgrading XBee firmware with UartSBee or Grove - XBee Carrier
+##  Upgrading XBee firmware with UartSBee_V3.1 or Grove - XBee Carrier
 
-The XBee modules have to be configured with a 3.3V logic UART. Both [UartSBee](/UartSBee "UartSBee") and [Grove - XBee Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier") comes with **FT232RL based USB to Serial Port** and a XBee compatible socket.
+The XBee modules have to be configured with a 3.3V logic UART. Both [UartSBee_V3.1](/UartSBee_V3.1 "UartSBee_V3.1") and [Grove - XBee Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier") comes with **FT232RL based USB to Serial Port** and a XBee compatible socket.
 
 ###  Installing drivers for USB-to-Serial Port
 
-*   If you are using [UartSBee](/UartSBee "UartSBee") set the power switch to 3.3V before connecting to PC. [Grove - XBee Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier") always works 3.3V logic.
-*   Connect the **XBee ZB** to XBee socket of [UartSBee](/UartSBee "UartSBee") or [Grove - XBee Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier") like this :
+*   If you are using [UartSBee_V3.1](/UartSBee_V3.1 "UartSBee_V3.1") set the power switch to 3.3V before connecting to PC. [Grove - XBee Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier") always works 3.3V logic.
+*   Connect the **XBee ZB** to XBee socket of [UartSBee_V3.1](/UartSBee_V3.1 "UartSBee_V3.1") or [Grove - XBee Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier") like this :
 <table>
 <tr>
-<th> **XBee ZB** connected to [UartSBee](/UartSBee "UartSBee") for configuration
+<th> **XBee ZB** connected to [UartSBee_V3.1](/UartSBee_V3.1 "UartSBee_V3.1") for configuration
 </th>
 <th> **XBee ZB** connected to [Grove - XBee Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier") for configuration
 </th></tr>
@@ -178,7 +178,7 @@ All modern **GNU/Linux OS** comes with FT232RL drivers. To check if UartSBee or 
 
 This demo configures two XBee modules to connect to each other automatically upon power-up and continuously trans-receive data. This setup can be used as a Wireless UART to connect any two PCs or two MCUs with serial ports.
 
-*   Use two [UartSBee](/UartSBee "UartSBee") or two [Grove - XBee Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier") with two XBee ZB modules.
+*   Use two [UartSBee_V3.1](/UartSBee_V3.1 "UartSBee_V3.1") or two [Grove - XBee Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier") with two XBee ZB modules.
 
 *   Connect these modules to PCs Serial port and make sure the drivers are installed.
 

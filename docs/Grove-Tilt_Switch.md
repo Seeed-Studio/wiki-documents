@@ -172,7 +172,7 @@ The mark J1 on the Grove is the reference terminal.
 
 1.You should have a Raspberry Pi and a Grovepi or Grovepi+. 
 
-2.You should have completed configuring the development enviroment, otherwise follow [here](/GrovePiPlus).
+2.You should have completed configuring the development enviroment, otherwise follow [here](/GrovePi_Plus).
 
 3.Connection
 
