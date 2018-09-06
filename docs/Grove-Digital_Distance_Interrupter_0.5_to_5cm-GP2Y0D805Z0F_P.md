@@ -74,7 +74,7 @@ GP2Y0D805Z0F is a distance measuring sensor unit, composed of an integrated comb
 
 | Seeeduino V4.2 | Base Shield| Grove - Digital Distance Interrupter 0.5 to 5cm |
 |--------------|-------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F/raw/master/img/thumnail_p.jpg)|
+|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F/raw/master/img/thumbnail_p.jpg)|
 |<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Digital-Distance-Interrupter-0.5-to-5cm%28GP2Y0D805Z0F%29%28P%29-p-3085.html" target="_blank">Get One Now</a>|
 
 
@@ -97,7 +97,7 @@ GP2Y0D805Z0F is a distance measuring sensor unit, composed of an integrated comb
 
 
 !!!Note
-	If we don't have Grove Base Shield, We also can directly connect Grove - Digital Distance Interrupter 0.5 to 5cm(GP2Y0D805Z0F)(P) keycap to Seeeduino as below.
+	If we don't have Grove Base Shield, We also can directly connect Grove-Mech keycap to Seeeduino as below.
 
 
 | Seeeduino     | Grove - Digital Distance Interrupter 0.5 to 5cm|
@@ -198,7 +198,7 @@ Normaly the output of this sensor is 1(High), when the object enters the measure
 
 ## Resources
 
-- **[Zip]** [Grove - Digital Distance Interrupter 0.5 to 5cm eagle file](https://github.com/SeeedDocument/Grove-Round_Force_Sensor_FSR402/raw/master/res/Grove-Round_Force_Sensor_FSR402.zip)
+- **[Zip]** [Grove - Digital Distance Interrupter 0.5 to 5cm eagle file](https://github.com/SeeedDocument/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F/raw/master/res/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F.zip)
 - **[PDF]** [GP2Y0D805Z0F Datasheet](https://github.com/SeeedDocument/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F/raw/master/res/GP2Y0D805Z0F.pdf)
 
 
