@@ -6,7 +6,7 @@ prodimagename: Xadow_GSMPlusBLE_pingguo.JPG
 surveyurl: https://www.research.net/r/JavaScript_for_RePhone
 ---
 
-[![](https://raw.githubusercontent.com/SeeedDocument/JavaScript_for_RePhone/master/img/Xadow_GSMPlusBLE_pingguo.JPG)](/Rephone)
+![](https://raw.githubusercontent.com/SeeedDocument/JavaScript_for_RePhone/master/img/Xadow_GSMPlusBLE_pingguo.JPG)
 
 RePhone can be a learning tool for you to start interesting projects. Currently, RePhone supports various development environment and development languages, you can either built applications with C/C++ based on Eclipse IDE, Arduino IDE, or with Lua and JavaScript.
 

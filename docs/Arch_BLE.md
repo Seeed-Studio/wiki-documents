@@ -107,11 +107,6 @@ If the BLE device is disconnecting frequently, we can improve the stability by c
         -  [Arch BLE](http://www.seeedstudio.com/depot/Arch-BLE-p-1998.html?cPath=19_21)
         -  [Shield Bot](http://www.seeedstudio.com/Shield-Bot-p-1380.html)
 
-    *  Make it run
-
-        1.  Read recipe/instructions [here](https://www.seeed.cc/A-Toy-Car-controlled-by-the-mobile-phone-p-390.html)
-
-
 
 Update or Restore Firmware
 --------------------------

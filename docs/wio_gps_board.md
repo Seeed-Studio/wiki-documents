@@ -169,7 +169,7 @@ To make sure the driver was installed successful, open your Device Manager to se
 
 ### Install the library of Wio Tracker(For Windows, Linux and Mac)
 
-Click [here](https://github.com/lanselambor/MC20_GPS_Tracker/archive/master.zip) to download the library(zip file) of Wio Tracker and import the zip library into your Arduino IDE. If you are new to this, please click [here](https://www.arduino.cc/en/Guide/Libraries#toc4) for more information.
+Click [here](https://github.com/Seeed-Studio/Seeed_Wio_GPS_Board/archive/master.zip) to download the library(zip file) of Wio Tracker and import the zip library into your Arduino IDE. If you are new to this, please click [here](https://www.arduino.cc/en/Guide/Libraries#toc4) for more information.
 
 
 ### Blink

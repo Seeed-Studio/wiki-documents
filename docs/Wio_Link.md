@@ -325,7 +325,7 @@ We deploy the REST API server to iot.seeed.cc, so you can get access to sensor a
 
 Wio Link can be programed with Arduino IDE, in that case it will lose the functionality of RESTful APIs except you implement another one in the same time. Wio Link is mostly expected to archive the Web of Things conversion for physical hardware, so interactions are expected to perform in web / internet. But no worries, the software architecture is flexible, you can pull down the source code to local and connect Wio Link to the local servers, then you could modify the source code which will be compiled.
 
-If you would like to interact with Arduino or RPI, you can develop a 3rd-party module driver and here’s the guide: https://github.com/Seeed-Studio/Wio_Link/wiki/How-to-write-module-driver-for-Wio-Link%3F and example driver: https://github.com/Seeed-Studio/Wio_Link/tree/master/grove_drivers/grove_example
+If you would like to interact with Arduino or RPI, you can develop a 3rd-party module driver and here’s the guide: https://github.com/Seeed-Studio/Wio_Link/wiki/How-to-write-module-driver-for-Wio-Link%3F and example driver: https://github.com/Seeed-Studio/Grove_Drivers_for_Wio/tree/master/grove_example
 
 
 **7. Platform Supported -Does Wio Link support Windows Platform?**

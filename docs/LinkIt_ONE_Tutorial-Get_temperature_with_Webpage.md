@@ -76,9 +76,9 @@ If want to control the LinkIt One with web. How control the work of hardware can
 
 *   [Analog Interface](/LinkIt_ONE_Tutorial-Analog_Interface)
 
-*   [Mini Servo](/LinkIt_ONE_Tutorial-Mini_Servo)
+*   [Mini Servo](/LinkIt-ONE-Tutorial---Mini-Servo)
 
-*   [Light Sensor](/LinkIt_ONE_Tutorial-Light_Sensor)
+*   [Light Sensor](/LinkIt_ONE_Tutorial-Light-Sensor)
 
 *   [SMS Control the LED](/LinkIt_ONE_Tutorial-SMS_control_the_LED)
 

@@ -66,7 +66,7 @@ Model:[WLS125E1P](http://www.seeedstudio.com/depot/bluetooth-bee-p-598.html?cPat
 
 - As a Wireless Serial Port for Arduino / [ Seeeduino](https://seeeddoc.github.io/Seeeduino_V2.2/)  and other MCUs
 
-- As a Bluetooth Serial Port for PC when connected with [UartSBee](https://seeeddoc.github.io/UartSBee/)
+- As a Bluetooth Serial Port for PC when connected with UartSBee
 
 ##   Cautions   ##
 
@@ -137,7 +137,7 @@ Use a [XBee® Shield](https://seeeddoc.github.io/XBee-Shield/)  to connect **Blu
 
 ####   Connecting to PC with UartSbee  ####
 
-Use an [UartSBee](https://seeeddoc.github.io/UartSBee/)  to connect **Bluetooth Bee** to PC. Set the power selection toggle switch to 3.3V before connecting BlueTooth Bee.
+Use an UartSBee to connect **Bluetooth Bee** to PC. Set the power selection toggle switch to 3.3V before connecting BlueTooth Bee.
 
 ![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/BluetoothBee_with_UartSBee.JPG)
 
@@ -595,11 +595,11 @@ user@user-desktop:~$ ls /dev/rfcomm*
 
 ![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/Bluetooth_windows8.jpg)
 
-####   Connecting Bluetooth Bee to PC using [UartsBee](https://seeeddoc.github.io/UartSBee/)  in Master Mode  ####
+####   Connecting Bluetooth Bee to PC using UartsBee in Master Mode  ####
 
-This demo uses hardware arrangement described in [Hardware Installation - UartSBee](http://wiki.seeedstudio.com/Bluetooth_Bee/#connecting-to-pc-with-uartsbee). Connect UartSbee to PC using a mini USB cable.
+This demo uses hardware arrangement described in [Hardware Installation - UartSBee. Connect UartSbee to PC using a mini USB cable.
 
-- Open a serial terminal and connect to [UartSBee](/UartSBee) (title=undefined) serial port device like COM1 in Windows or /dev/ttyUSB0 in GNU/Linux with baud rate:38400, Databits: 8, Stopbits: 1 and No Flow Control
+- Open a serial terminal and connect to UartSBee serial port device like COM1 in Windows or /dev/ttyUSB0 in GNU/Linux with baud rate:38400, Databits: 8, Stopbits: 1 and No Flow Control
 
 - Send \r\n+STWMOD=1\r\n command. This configures the **Bluetooth Bee** in master mode.
 

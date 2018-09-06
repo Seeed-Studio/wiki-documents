@@ -23,9 +23,9 @@ This [Grove](/Grove "Grove") module provides the function of a [logical NOT gate
 
 ##  Usage
 
-*   See the [ Glow-in-the-dark LED String Lights](/GROVE_MIXER_PACK_V2#Glow_in_the_Dark_String_Lights "GROVE MIXER PACK V2") example on the [ Grove Mixer Pack V2](/GROVE_MIXER_PACK_V2 "GROVE MIXER PACK V2") wiki page for how to build a circuit that uses NOT Logic.
+*   See the [ Glow-in-the-dark LED String Lights](/Grove-Mixer_Pack_V2/#glow-in-the-dark-string-lights "GROVE MIXER PACK V2") example on the [ Grove Mixer Pack V2](/Grove-Mixer_Pack_V2 "GROVE MIXER PACK V2") wiki page for how to build a circuit that uses NOT Logic.
 
-*   Also see [Grove - NOT module typical usage](/GROVE_MIXER_PACK_V2#Grove-NOT_module "GROVE MIXER PACK V2")
+*   Also see [Grove - NOT module typical usage](/Grove-Mixer_Pack_V2/#grove-not-module "GROVE MIXER PACK V2")
 
 ##  See also
 
@@ -37,7 +37,7 @@ This [Grove](/Grove "Grove") module provides the function of a [logical NOT gate
 
 This [Grove](/Grove "Grove") module is available as part of the following [Grove Kit Series](/Grove_System/#grove-starter-kit "GROVE System"):
 
-*   [Grove Mixer Pack V2](/GROVE_MIXER_PACK_V2 "GROVE MIXER PACK V2")
+*   [Grove Mixer Pack V2](/Grove-Mixer_Pack_V2 "GROVE MIXER PACK V2")
 
 Note that this Grove - NOT module is sold only as part of the above mentioned packs and is not available stand-alone from the [Seeed Studio Bazaar](http://www.seeedstudio.com/depot/).
 

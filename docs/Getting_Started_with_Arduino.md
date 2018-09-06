@@ -7,8 +7,6 @@ prodimagename:
 ## Get Started with Arduino IDE
 
 
-### [How to download and setup Arduino IDE](http://wiki.seeed.cc/Download_Arduino_and_install_Arduino_driver/)
-
 ### [How to install Arduino Library](http://wiki.seeed.cc/How_to_install_Arduino_Library)
 
 ### [How to Upload Code](http://wiki.seeed.cc/Upload_Code/)

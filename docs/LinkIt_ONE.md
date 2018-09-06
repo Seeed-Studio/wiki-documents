@@ -20,7 +20,7 @@ LinkIt One is an all-in-one prototyping board for IoT/wearables devices. Integra
 
 
 !!!Note
-    LinkIt ONE board comes with a lot of features and its SDK(Software Development Kit) is quite comprehensive. Read this document throughly once before using the board. Being a co-design product basic level Technical Support for hardware is provided at [ Seeedstudio LinkIt One Forum](http://www.seeed.cc/discover.html?t=linkit).Advanced Technical support is available at  [  MediaTek LinkIt One Forums](https://labs.mediatek.com/forums/forums/list.page).These forums have a good number of FAQs about this board.Please search solutions for your requirements/issues first before posting questions for saving your time.
+    LinkIt ONE board comes with a lot of features and its SDK(Software Development Kit) is quite comprehensive. Read this document throughly once before using the board. Being a co-design product basic level Technical Support for hardware is provided at Seeedstudio LinkIt One Forum. Advanced Technical support is available at  [MediaTek LinkIt One Forums](https://labs.mediatek.com/forums/forums/list.page).These forums have a good number of FAQs about this board.Please search solutions for your requirements/issues first before posting questions for saving your time.
 
 ## Features
 --------------
@@ -60,7 +60,7 @@ LinkIt One is an all-in-one prototyping board for IoT/wearables devices. Integra
 * Sensor Hub
 * Automation & Transportation
 
-Here are some projects for your reference. More awesome project at [Recipe](https://www.seeed.cc/projects.html?t=LinkIt) and [Instructables](http://www.instructables.com/howto/linkit+one/).
+Here are some projects for your reference. More awesome project at Recipe and [Instructables](http://www.instructables.com/howto/linkit+one/).
 
 |Facebook Like Monitor|Texting Door Alarm|Smart Bed Alarm|
 |--------------------------|-------------|---------------|
@@ -249,7 +249,6 @@ The Sidekick Basic Kit for LinkIt ONE is designed to be used with your LinkIt ON
 
 **Getting Help**
 
-- [Seeedstudio LinkIt ONE Forum](http://www.seeed.cc/discover.html?t=linkit)
 - [MediaTek LinkIt ONE Forums](https://labs.mediatek.com/forums/forums/list.page)
 
 **More**

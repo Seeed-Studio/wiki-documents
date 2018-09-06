@@ -70,11 +70,6 @@ You can build an IoT application easily with Grove modules supplied in this kit.
 -   Grove - IR Receiver
 -   IR remote
 
-### A detailed how-to
-
-Please go to [recipe](https://www.seeed.cc/Built-an-IoT-application-with-Smart-LinkIt-7688-p-428.html) for the detailed manual.
-
-
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_Starter_kit_for_LinkIt_Smart7688_Duo -->
 
 ## Tech Support
