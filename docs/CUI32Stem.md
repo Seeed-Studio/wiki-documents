@@ -8,7 +8,7 @@ surveyurl: https://www.research.net/r/CUI32Stem
 sku:      103990012
 ---
 
-The Create USB Interface is an open source microcontroller board that can be programmed in C, BASIC, or Arduino languages. This latest version is called the CUI32Stem, which is designed to work ‘hand-in-hand’ with the [GROVE prototyping system](/GROVE_System#Grove_elements) including a wide range of sensors and actuators. It utilizes a high-performance Microchip® PIC32 microcontroller, allowing programmable interaction with all sorts of user inventions, no soldering required! :)
+The Create USB Interface is an open source microcontroller board that can be programmed in C, BASIC, or Arduino languages. This latest version is called the CUI32Stem, which is designed to work ‘hand-in-hand’ with the [GROVE prototyping system](/Grove_System) including a wide range of sensors and actuators. It utilizes a high-performance Microchip® PIC32 microcontroller, allowing programmable interaction with all sorts of user inventions, no soldering required! :)
 
 ![](https://github.com/SeeedDocument/CUI32Stem/raw/master/img/CUI32StemFrontSmall.png)
 

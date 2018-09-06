@@ -23,7 +23,7 @@ This module provides the function of a [logical OR gate](http://en.wikipedia.org
 
 ##  Usage
 
-*   See [Grove - OR module typical usage](/GROVE_MIXER_PACK_V2#Grove-OR_module "GROVE MIXER PACK V2")
+*   See [Grove - OR module typical usage](/Grove-Mixer_Pack_V2/#grove-or-module "GROVE MIXER PACK V2")
 
 ##  See also
 
@@ -35,7 +35,7 @@ This module provides the function of a [logical OR gate](http://en.wikipedia.org
 
 This [Grove](/Grove "Grove") module is available as part of the following [Grove Kit Series](/Grove_System/#grove-starter-kit "GROVE System"):
 
-*   [Grove Mixer Pack V2](/GROVE_MIXER_PACK_V2 "GROVE MIXER PACK V2")
+*   [Grove Mixer Pack V2](/Grove-Mixer_Pack_V2 "GROVE MIXER PACK V2")
 
 Note that this Grove - OR module is sold only as part of the above mentioned packs and is not available stand-alone from the [Seeed Studio Bazaar](http://www.seeedstudio.com/depot/).
 

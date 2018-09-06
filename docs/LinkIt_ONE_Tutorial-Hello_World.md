@@ -96,7 +96,7 @@ How do you change the frequency of the LED by modifying the code?
 
 *   [Analog Interface](/LinkIt_ONE_Tutorial-Analog_Interface)
 
-*   [Mini Servo](/LinkIt_ONE_Tutorial-Mini_Servo)
+*   [Mini Servo](/LinkIt-ONE-Tutorial---Mini-Servo)
 
 *   [Light Sensor](/LinkIt_ONE_Tutorial-Light_Sensor)
 
