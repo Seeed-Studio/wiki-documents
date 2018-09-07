@@ -29,7 +29,7 @@ sku: 101020054
 - Suli-compatible Library
 
 !!!Tip
-    - More details about Grove modules please refer to [Grove System](http://seeed.wiki/Grove_System/)
+    - More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
 ## Demonstration
 ---

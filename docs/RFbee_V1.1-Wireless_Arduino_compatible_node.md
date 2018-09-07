@@ -193,7 +193,7 @@ Resources
 -   [Forum](http://www.forum.seeedstudio.com/viewtopic.php?f=10&t=682&sid=7a9b1bed4f9fd10a9b1003ca1e48e756)
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/RFbee_V1.1_-_Wireless_Arduino_compatible_node -->
+<!-- This Markdown file was created from http://wiki.seeedstudio.com/RFbee_V1.1-Wireless_Arduino_compatible_node/ -->
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

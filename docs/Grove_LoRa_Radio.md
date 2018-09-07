@@ -99,7 +99,7 @@ Now we are making a demo for P2P(point to point) communication with the Grove - 
 |Grove - LoRa Radio 433MHz|2|[GET ONE NOW!](https://www.seeedstudio.com/Grove-LoRa-Radio-433MHz-p-2777.html)|
 |Micro USB Cable|2|[GET ONE NOW!](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|
 
-If this is your first time using [Seeeduino Lotus](https://www.seeedstudio.com/Seeeduino-Lotus-ATMega328-Board-with-Grove-Interface-p-1942.html), please refer to [Seeeduino Lotus's wiki](http://www.seeedstudio.com/wiki/Seeeduino_Lotus_v1.0).
+If this is your first time using [Seeeduino Lotus](https://www.seeedstudio.com/Seeeduino-Lotus-ATMega328-Board-with-Grove-Interface-p-1942.html), please refer to [Seeeduino Lotus's wiki](http://wiki.seeedstudio.com/Seeeduino_Lotus/).
 
 Seeeduino Lotus is fully compatible with Arduino which works as simple as Arduino.
 

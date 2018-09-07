@@ -75,7 +75,7 @@ With Bluetooth, GPS, Wi-Fi function module. What a look whether to have the new 
 
 *   [Analog Interface](/LinkIt_ONE_Tutorial-Analog_Interface)
 
-*   [Mini Servo](/LinkIt_ONE_Tutorial-Mini_Servo)
+*   [Mini Servo](/LinkIt-ONE-Tutorial---Mini-Servo)
 
 *   [Light Sensor](/LinkIt_ONE_Tutorial-Light_Sensor)
 

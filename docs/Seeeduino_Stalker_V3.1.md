@@ -77,7 +77,7 @@ We also added 2 toggle switch on RTC circuitry corresponding 2 INT pin of MCU, s
 - Wireless Sensor Network (using [XBee](http://www.seeedstudio.com/wiki/XBee_Pro_Series2_RF_module) bought separately)
 - GPS Logging (using [GPSBee](http://www.seeedstudio.com/wiki/GPS_Bee_kit) bought separately)
 - Data Acquisition System capable of communicating with an App running on iPhone/Android Phone (using [BluetoothBee](http://www.seeedstudio.com/wiki/Bluetooth_Bee) bought separately).
-- RF Remote Control (using [RFBee](http://www.seeedstudio.com/wiki/RFbee_V1.1_-_Wireless_Arduino_compatible_node) bought separately).
+- RF Remote Control (using [RFBee](http://wiki.seeedstudio.com/RFbee_V1.1-Wireless_Arduino_compatible_node/) bought separately).
 - As a simple standalone Arduino compatible physical computing platform.
 
 ## Hardware Overview

@@ -31,7 +31,7 @@ Please refer to each modules' specifications:
 
 *   [Grove - Water Sensor](/Grove-Water_Sensor)
 
-*   [Grove - Moisture Sensor](http://Grove_-_Moisture_Sensor#Specification)
+*   [Grove - Moisture Sensor](http://wiki.seeedstudio.com/Grove-Moisture_Sensor/#specification)
 
 *   [Grove – Encoder](/Grove-Encoder#Specification)
 

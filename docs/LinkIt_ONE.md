@@ -121,7 +121,7 @@ There are 3 slide switches on LinkIt ONE which are used to configure the functio
 ### Installing Drivers
 
 
-- Disable **Driver Signature Enforcement** if you are using Windows 8/8.1 OS. Read  [instructions](http://www.seeedstudio.com/wiki/Download_Arduino_and_install_Arduino_driver#Installing_drivers_for_the_Seeeduino_with_window8)
+- Disable **Driver Signature Enforcement** if you are using Windows 8/8.1 OS. Read  [instructions](http://wiki.seeedstudio.com/Driver_for_Seeeduino/#installing-drivers-for-the-seeeduino-with-window8)
 
 - Put the MS/UART slide switch to UART position and connect LinkIt ONE to PC.
 - Open Device Manager, the following COM ports will be displayed.
@@ -215,18 +215,17 @@ The Sidekick Basic Kit for LinkIt ONE is designed to be used with your LinkIt ON
 
 [![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now.png)](https://www.seeedstudio.com/item_detail.html?p_id=2027)
 
-- [The Basics](http://www.seeedstudio.com/wiki/LinkIt_ONE_Tutorial_-_The_Basics)
-- [Hello World](http://www.seeedstudio.com/wiki/LinkIt_ONE_Tutorial_-_Hello_World)
-- [Push Button](http://www.seeedstudio.com/wiki/LinkIt_ONE_Tutorial_-_Push_Button)
-- [Marquee](http://www.seeedstudio.com/wiki/LinkIt_ONE_Tutorial_-_Marquee)
-- [Colorful World](http://www.seeedstudio.com/wiki/LinkIt_ONE_Tutorial_-_Colorful_World)
-- [Analog Interface](http://www.seeedstudio.com/wiki/LinkIt_ONE_Tutorial_-_Analog_Interface)
-- [Mini Servo](http://www.seeedstudio.com/wiki/LinkIt_ONE_Tutorial_-_Mini_Servo)
-- [Light Sensor](http://www.seeedstudio.com/wiki/LinkIt_ONE_Tutorial_-_Light_Sensor)
-- [SMS Control the LED](http://www.seeedstudio.com/wiki/LinkIt_ONE_Tutorial_-_SMS_control_the_LED)
-- [Get Temperature with Webpage](http://www.seeedstudio.com/wiki/LinkIt_ONE_Tutorial_-_Get_temperature_with_Webpage)
-
-- [Github Repo for Sidekick Basic Kit for LinkIt ONE](http://www.seeedstudio.com/wiki/LinkIt_ONE_Tutorial_-_Get_temperature_with_Webpage)
+- [The Basics](http://wiki.seeedstudio.com/LinkIt_ONE_Tutorial-The_Basics/)
+- [Hello World](http://wiki.seeedstudio.com/LinkIt_ONE_Tutorial-Hello_World/)
+- [Push Button](http://wiki.seeedstudio.com/LinkIt_ONE_Tutorial-Push_Button/)
+- [Marquee](http://wiki.seeedstudio.com/LinkIt_ONE_Tutorial-Marquee/)
+- [Colorful World](http://wiki.seeedstudio.com/LinkIt_ONE_Tutorial-Colorful_World/)
+- [Analog Interface](http://wiki.seeedstudio.com/LinkIt_ONE_Tutorial-Analog_Interface/)
+- [Mini Servo](http://wiki.seeedstudio.com/LinkIt-ONE-Tutorial---Mini-Servo/)
+- [Light Sensor](http://wiki.seeedstudio.com/LinkIt_ONE_Tutorial-Light-Sensor/)
+- [SMS Control the LED](http://wiki.seeedstudio.com/LinkIt_ONE_Tutorial-SMS_control_the_LED/)
+- [Get Temperature with Webpage](http://wiki.seeedstudio.com/LinkIt_ONE_Tutorial-Get_temperature_with_Webpage/)
+- [Github Repo for Sidekick Basic Kit for LinkIt ONE](http://wiki.seeedstudio.com/LinkIt_ONE_Tutorial-Get_temperature_with_Webpage/)
 
 ## Resources
 **Schematic / Design Files:**

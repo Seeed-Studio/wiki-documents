@@ -91,7 +91,7 @@ We also provide a powerful SDK based on Eclipse IDE for C/C++ developers to work
 For more info you can refer to the RePhone Development Environment at RePhone Main Page:  
 
 [
-RePhone Development Environment](http://www.seeedstudio.com/wiki/Rephone#Development_Environment)  
+RePhone Development Environment](http://wiki.seeedstudio.com/RePhone/#development-environment)  
 ##Related Projects  
 Check on awesome RePhone projects that has been achieved with RePhone.  
 **A Traceable Dog Collar**  

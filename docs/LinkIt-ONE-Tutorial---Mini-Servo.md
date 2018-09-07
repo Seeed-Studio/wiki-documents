@@ -89,7 +89,7 @@ How do you control two servo motors simultaneously so that you can make a robot?
 
 *   [Analog Interface](/LinkIt_ONE_Tutorial-Analog_Interface)
 
-*   [Mini Servo](/LinkIt_ONE_Tutorial-Mini_Servo)
+*   [Mini Servo](/LinkIt-ONE-Tutorial---Mini-Servo)
 
 *   [Light Sensor](/LinkIt_ONE_Tutorial-Light_Sensor)
 

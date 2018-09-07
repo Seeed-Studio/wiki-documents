@@ -64,7 +64,7 @@ What is the component used for growing the luminosity of the LED slowly when it 
 
 *   [Analog Interface](/LinkIt_ONE_Tutorial-Analog_Interface)
 
-*   [Mini Servo](/LinkIt_ONE_Tutorial-Mini_Servo)
+*   [Mini Servo](/LinkIt-ONE-Tutorial---Mini-Servo)
 
 *   [Light Sensor](/LinkIt_ONE_Tutorial-Light_Sensor)
 
