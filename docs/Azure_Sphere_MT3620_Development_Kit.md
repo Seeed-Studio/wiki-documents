@@ -16,13 +16,16 @@ The MT3620 Development Kit has expanded most MT3620 hardware resources on the ex
 
 The Azure Sphere operating system is pre-installed on the MT3620 and is designed to work with the Azure Sphere Security Service to create a secured IoT platform. Together the Azure Sphere OS and security service deliver:  
 
-- certificate-based device authentication to any web service
-- software attestation and secure boot
-- threat detection via failure reporting
-- ongoing security updates
-- an integrated, secured end-to-end IoT solution
+- Certificate-based device authentication to any web service
+- Software attestation and secure boot
+- Threat detection via failure reporting
+- Ongoing security updates
+- An integrated, secured end-to-end IoT solution
 
 MT3620 software development is supported using the powerful Microsoft Visual Studio IDE: Install Visual Studio and the Azure Sphere extension, plug the development board into a PC over USB, and start developing IoT applications with unprecedented levels of security.
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/iiDF26HNh-Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 
 |Product Name | How to Buy|
 |----------------|-----------|
@@ -124,8 +127,9 @@ MT3620 software development is supported using the powerful Microsoft Visual Stu
 
 **Software**
 
-| IDE                  | Visual Studio |
+|Description            |Value          |
 |----------------------|---------------|
+| IDE                  | Visual Studio |
 | System               | Windows10     |
 | Programming Language | C             |
 
@@ -136,68 +140,91 @@ MT3620 software development is supported using the powerful Microsoft Visual Stu
 
 <a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/Diagram.png" target="_blank"><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/Diagram.png"/></a>
 
-Please refer to resource session for the MT3620 and FT4232HQ(Backside) datasheet.
+Please refer to resource session for the [MT3620](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/datasheet/MediaTek%20MT3620%20Product%20Brief.pdf) and [FT4232HQ](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/datasheet/DS_FT4232H.pdf)(Backside) datasheet.
 
-!!!Note
-    You can click it to view the original image.
+**J1**: ADC Reference Voltage, On: using internal 2.5v; Off: Connect External 1.8v to Pin 1. Off by default. 
+**J2**: 3.3V Isolation, On: Enable system 3.3v power; Off: Cut off the system 3.3v power. On by default.
+**J3**: RTC Power Selection: Left 2 pins: Using RTC Battery(Model:CR2032) at backside.
+**4 User RGB LED**: LED model is LTST-C19HE1WT.
+**USB Port**: Power supply(5V/2A) and debug, connected to FT4232HQ chip at backside. 
+**4 System LED**: Led1(Near USB port): Green, FTDI Activity LED. Led2: RED, Power Indicator. Led3: RGB, Wifi Status. Led4: RGB, App Status.
+**DC Power**: 5V/2A
+**3 System Button**: Button A&B(White) are user botton. Button Reset(Blue) is System Reset.
 
 **Board Pinmap**
 
 <a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/PinMap.png" target="_blank"><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/PinMap.png"/></a>
 
-!!!Note
-    You can click it to view the original image.
+![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/H1_2.png)
+
+![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/H3_4.png)
 
 **Dimensions**
 
 <a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/dimension.png" target="_blank"><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/dimension.png"/></a>
 
-!!!Note
-    You can click it to view the original image.
+**Power**
 
 
+**Hardware Design and Manufacture**
+
+The current Azure Sphere software release does not support all features of the [MT3620](https://www.mediatek.com/products/azureSphere/mt3620) hardware. For example, the following are not yet supported in software:
+
+- 2 x ARM Cortex-M4 with FPU
+- ADC, I2C, I2S, PWM and SPI peripheral interfaces (GPIO and UART are supported)
+- Wi-Fi 802.11a (b/g/n are supported)
+- RTC with clock selection and battery backup
+
+!!!Tip
+    For more info, please refer to [Information and tools for hardware design and manufacture](https://docs.microsoft.com/en-us/azure-sphere/manufacturers/hardware-manufacturing).
+
+## Product Handling
+
+**Packaging**
+
+The Azure Sphere MT3620 Development Kit packaging contains Azure Sphere MT3620 Development Kit and Micro B USB cable.
+
+![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/box.JPG)
+
+**ESD Precautions**
+
+The Azure Sphere MT3620 Development Kit contains highly sensitive electronic circuitry and is an Electrostatic Sensitive Device (ESD). Handling The Azure Sphere MT3620 Development Kit without proper ESD protection may destroy or damage it permanently. Proper ESD handling and packaging procedures must be applied throughout the processing, handling and operation of any application that incorporates Azure Sphere MT3620 Development Kit.
 
 ## Applications
 
-- Smart speaker
-- Intelligent voice assistant systems
+- Agriculture
+- Building
+- Public safety
 
-## Certification
+!!!Tip
+    To understand how Azure Sphere works in a real-world setting, consider [Contoso, Ltds cenario](https://docs.microsoft.com/en-us/azure-sphere/product-overview/scenario).
 
-| US FCC | Europe CE | Japan MIC |
-|--------|-----------|-----------|
-| [![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/fcc.png)](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-FCC-FCC.zip)       |   [![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/ce.png)](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-CE.zip)        |  [![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/mic.jpg)](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-MIC.zip)         |
+## Qualification and approvals
 
-## Getting Started
-
-### Prerequisite
-
-You need following prerequisite to run demo on the Azure Sphere development board: 
-
-- Installed [Visual Studio 2017 version 15.3 or later](https://visualstudio.microsoft.com/)
+| US FCC | Europe CE | Japan MIC |ROHS |
+|--------|-----------|-----------|-----------|
+| [![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/fcc.png)](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-FCC-FCC.zip)       |   [![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/ce.png)](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-CE.zip)        |  [![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/mic.jpg)](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-MIC.zip)         |![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/rohs-logo.jpg)|s
 
 
-- Installed Azure Sphere SDK and Tools version 4.0.1
-- Configured all drivers and network settings per description in SDK/Tool documentation 
-- Updated Azure Sphere development board with firmware 4.0.1
-- Claimed and assigned Azure Sphere development board under your AAD (cutil.exe)
-- Configured WiFi(dutil.exe)
-- Connected Azure Sphere development board via USB to Computer
-- Connected Azure Sphere development via WiFi
+CE ID: 18/0331/SZ
+FCC ID: Z4T-MT3620DEVB 
+MIC ID: CSRT18207
 
+## Quickstarts for Azure Sphere
 
-### Visual Studio 2017
+To use MT3620 Dev Board for Azure Sphere, you’ll need a Windows 10 PC with the latest Windows Updates, alongwith the Visual Studio Tools for Azure Sphere (which will be available for download from Microsoft). These tools will include application templates, development tools and the Azure Sphere software development kit (SDK).
 
-- Step 1. Start Visual Studio 2017, create new project: File  ->  New  ->  Project
+The quickstarts guide you through:
 
+- [Setting up an account](https://docs.microsoft.com/en-us/azure-sphere/quickstart/qs-azure-directory-account) for Azure Sphere
+- [Installing Azure Sphere](https://docs.microsoft.com/en-us/azure-sphere/quickstart/qs-install) and setting up your development board
+- [Claiming your device](https://docs.microsoft.com/en-us/azure-sphere/quickstart/claim-device)
+- [Configuring Wi-Fi](https://docs.microsoft.com/en-us/azure-sphere/quickstart/qs-configure-wifi) and updating your device OS
+- [Building your first application](https://docs.microsoft.com/en-us/azure-sphere/quickstart/qs-blink-application) by using the Visual Studio Tools Preview for Azure Sphere
+- [Deploying the application](https://docs.microsoft.com/en-us/azure-sphere/quickstart/qs-first-deployment) over Wi-Fi
+- [Setting up an Azure IoT Hub to work with Azure Sphere](https://docs.microsoft.com/en-us/azure-sphere/quickstart/qs-setup-iot-hub)
 
-- Step 2. Select: Visual C++  ->  Cross Platform  ->  Azure Sphere
-
-- Step 3. In Solution Explorer, add a new connected service with right mouse click on References
-
-
-
-
+## 
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
