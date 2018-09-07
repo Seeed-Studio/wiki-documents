@@ -127,11 +127,31 @@ MT3620 software development is supported using the powerful Microsoft Visual Stu
 
 **Software**
 
-|Description            |Value          |
-|----------------------|---------------|
-| IDE                  | Visual Studio |
-| System               | Windows10     |
-| Programming Language | C             |
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-0pky">Description</th>
+    <th class="tg-0pky">Value</th>
+  </tr>
+  <tr>
+    <td class="tg-0pky">IDE</td>
+    <td class="tg-0pky">Visual Studio</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">System</td>
+    <td class="tg-0lax">Windows10</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Programming Language</td>
+    <td class="tg-0lax">C</td>
+  </tr>
+</table>
 
 
 ## Hardware Overview
@@ -142,14 +162,14 @@ MT3620 software development is supported using the powerful Microsoft Visual Stu
 
 Please refer to resource session for the [MT3620](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/datasheet/MediaTek%20MT3620%20Product%20Brief.pdf) and [FT4232HQ](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/datasheet/DS_FT4232H.pdf)(Backside) datasheet.
 
-**J1**: ADC Reference Voltage, On: using internal 2.5v; Off: Connect External 1.8v to Pin 1. Off by default. 
-**J2**: 3.3V Isolation, On: Enable system 3.3v power; Off: Cut off the system 3.3v power. On by default.
-**J3**: RTC Power Selection: Left 2 pins: Using RTC Battery(Model:CR2032) at backside.
-**4 User RGB LED**: LED model is LTST-C19HE1WT.
-**USB Port**: Power supply(5V/2A) and debug, connected to FT4232HQ chip at backside. 
-**4 System LED**: Led1(Near USB port): Green, FTDI Activity LED. Led2: RED, Power Indicator. Led3: RGB, Wifi Status. Led4: RGB, App Status.
-**DC Power**: 5V/2A
-**3 System Button**: Button A&B(White) are user botton. Button Reset(Blue) is System Reset.
+- **J1**: ADC Reference Voltage, On: using internal 2.5v; Off: Connect External 1.8v to Pin 1. Off by default. 
+- **J2**: 3.3V Isolation, On: Enable system 3.3v power; Off: Cut off the system 3.3v power. On by default.
+- **J3**: RTC Power Selection: Left 2 pins: Using RTC Battery(Model:CR2032) at backside.
+- **4 User RGB LED**: LED model is LTST-C19HE1WT.
+- **USB Port**: Power supply(5V/2A) and debug, connected to FT4232HQ chip at backside. 
+- **4 System LED**: Led1(Near USB port): Green, FTDI Activity LED. Led2: RED, Power Indicator. Led3: RGB, Wifi Status. Led4: RGB, App Status.
+- **DC Power**: 5V/2A
+- **3 System Button**: Button A&B(White) are user botton. Button Reset(Blue) is System Reset.
 
 **Board Pinmap**
 
