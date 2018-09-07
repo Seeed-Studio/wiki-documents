@@ -145,7 +145,7 @@ Apart from 3.3V and 5V power outputs provided by UartSBee , the logic level of I
 ![](https://github.com/SeeedDocument/UartSBee_V3.1/raw/master/img/UartSBee_as_uCPowerSupplyAndProgPort_BreadBoard.JPG)
 Switch: 3.3V I/O Selected
 
-   ![](https://github.com/SeeedDocument/UartSBee_V3.1/raw/master/img/UarSBee-Switch_3.3V_selected.jpg)
+![](https://github.com/SeeedDocument/UartSBee_V3.1/raw/master/img/UarSBee-Switch_3.3V_selected.jpg)
 
 ###   Bee Module Interfacing for PC Wireless application   ###
 

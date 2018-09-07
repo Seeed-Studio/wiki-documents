@@ -121,7 +121,7 @@ Starter bundle harness is a board  keeping the component of grove-starter bundle
 
 ##   See Also
 
-*   [GROVE - Starter Bundle](/GROVE_System "GROVE System")
+*   [GROVE - Starter Bundle](/Grove_System "GROVE System")
 
 *   2-axis compass Module
 

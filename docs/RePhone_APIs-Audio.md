@@ -480,7 +480,7 @@ unsigned int task_uart_key()
 Resources
 ---------
 
--   [Main wiki for RePhone](/Rephone)
+-   [Main wiki for RePhone](/RePhone)
 -   [Xadow - Audio](/Xadow_Audio)
 -   [RePhone APIs main page](/RePhone)
 

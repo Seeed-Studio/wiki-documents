@@ -77,7 +77,7 @@ With Bluetooth, GPS, Wi-Fi function module. What a look whether to have the new 
 
 *   [Mini Servo](/LinkIt-ONE-Tutorial---Mini-Servo)
 
-*   [Light Sensor](/LinkIt_ONE_Tutorial-Light_Sensor)
+*   [Light Sensor](/LinkIt_ONE_Tutorial-Light-Sensor)
 
 *   [SMS Control the LED](/LinkIt_ONE_Tutorial-SMS_control_the_LED)
 
