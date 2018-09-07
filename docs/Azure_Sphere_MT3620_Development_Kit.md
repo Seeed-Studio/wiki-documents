@@ -160,8 +160,6 @@ MT3620 software development is supported using the powerful Microsoft Visual Stu
 
 <a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/Diagram.png" target="_blank"><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/Diagram.png"/></a>
 
-Please refer to resource session for the [MT3620](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/datasheet/MediaTek%20MT3620%20Product%20Brief.pdf) and [FT4232HQ](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/datasheet/DS_FT4232H.pdf)(Backside) datasheet.
-
 - **J1**: ADC Reference Voltage, On: using internal 2.5v; Off: Connect External 1.8v to Pin 1. Off by default. 
 - **J2**: 3.3V Isolation, On: Enable system 3.3v power; Off: Cut off the system 3.3v power. On by default.
 - **J3**: RTC Power Selection: Left 2 pins: Using RTC Battery(Model:CR2032) at backside.
@@ -170,6 +168,8 @@ Please refer to resource session for the [MT3620](https://github.com/SeeedDocume
 - **4 System LED**: Led1(Near USB port): Green, FTDI Activity LED. Led2: RED, Power Indicator. Led3: RGB, Wifi Status. Led4: RGB, App Status.
 - **DC Power**: 5V/2A
 - **3 System Button**: Button A&B(White) are user botton. Button Reset(Blue) is System Reset.
+- **MT3620**：The [MT3620](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/datasheet/MediaTek%20MT3620%20Product%20Brief.pdf) is a highly integrated, high performance IoT MCU with the high level of security necessary for modern, robust internet-connected devices. The MT3620 targets a wide range of IoT applications including smart home, commercial, industrial and many other domains thanks to its extensive I/O peripheral subsystem that allows device design flexibility and freedom.
+- **FT4232HQ**: The [FT4232H](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/datasheet/DS_FT4232H.pdf) is a USB 2.0 High Speed (480Mb/s) to UART/MPSSE ICs.
 
 **Board Pinmap**
 
@@ -184,6 +184,15 @@ Please refer to resource session for the [MT3620](https://github.com/SeeedDocume
 <a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/dimension.png" target="_blank"><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/dimension.png"/></a>
 
 **Power**
+
+Power to the Azure Sphere MT3620 Development Kit is supplied via the on-board USB Micro B connector or directly via the DC connector. 
+
+- GPIO voltage is 3.3v, has a limited overhead of only 100mA available.
+- 5v_out on H3 connector has a limited overhead of only 500mA available.
+- 3.3v on H3 connector has a limited overhead of only 400mA available. 
+- Typical average current consumption is 150mA with 5V Wi-Fi on. Wifi scan current is typically 330ma.
+
+![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/power.png)
 
 
 **Hardware Design and Manufacture**
@@ -225,10 +234,9 @@ The Azure Sphere MT3620 Development Kit contains highly sensitive electronic cir
 |--------|-----------|-----------|-----------|
 | [![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/fcc.png)](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-FCC-FCC.zip)       |   [![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/ce.png)](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-CE.zip)        |  [![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/mic.jpg)](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-MIC.zip)         |![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/rohs-logo.jpg)|s
 
-
-CE ID: 18/0331/SZ
-FCC ID: Z4T-MT3620DEVB 
-MIC ID: CSRT18207
+- CE ID: 18/0331/SZ
+- FCC ID: Z4T-MT3620DEVB 
+- MIC ID: CSRT18207
 
 ## Quickstarts for Azure Sphere
 
