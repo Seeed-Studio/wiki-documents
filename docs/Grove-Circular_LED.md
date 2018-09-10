@@ -86,7 +86,7 @@ With the definition "CircularLED circularLED1(10,9);" in the demo, please connec
 
 ###   Software
 
-Please download the CircularLED lib and test this module with_<font color="red">CircularLEDtest</font>_ example. You can click [here](/Upload_Code) to learn how to upgrade the sketches.
+Please download the [CircularLED Library](https://github.com/SeeedDocument/Grove-Circular_LED/raw/master/res/CircularLED.zip) and test this module with_<font color="red">CircularLEDtest</font>_ example. You can click [here](/Upload_Code) to learn how to upgrade the sketches.
 
  ![](https://github.com/SeeedDocument/Grove-Circular_LED/raw/master/img/Circular_LED_shining.gif)
 
