@@ -33,23 +33,23 @@ DSO Quad also known as DSO203 is a pocket size 4 channel digital oscilloscope fo
 
 Ongoing projects:
 
-*   GCC port with FFT, spectrogram and various fixes [by pmos69 and marcosin](http://www.forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2957)
+*   GCC port with FFT, spectrogram and various fixes [by pmos69 and marcosin](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2957)
 
-*   Alternative user interface [by gabonator1](http://www.forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2362)
+*   Alternative user interface [by gabonator1](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2362)
 
-*   GCC port of the default firmware [by tmbinc](http://www.forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2274)
+*   GCC port of the default firmware [by tmbinc](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2274)
 
-*   Frequency response plotter [by jpa](http://www.forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2485)
+*   Frequency response plotter [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2485)
 
-*   FFT example application [by gabonator1](http://www.forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2098)
+*   FFT example application [by gabonator1](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2098)
 
-*   Logic analyzer [by jpa](http://www.forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2861)
+*   Logic analyzer [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2861)
 
-*   Pawn programming environment and various applications [by jpa](http://www.forum.seeedstudio.com/viewtopic.php?f=22&amp;t=3239)
+*   Pawn programming environment and various applications [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=3239)
 
 *   Port of SYS to gcc: [[1]](https://github.com/neilstockbridge/dsoquad-BIOS)
 
-*   Tetris [by LinX](http://www.forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2344)
+*   Tetris [by LinX](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2344)
 
 <big>Idea Collection </big>
 
@@ -64,7 +64,7 @@ Ongoing projects:
 *   Semiconductor Analyzer - Use the DAC to test and chart the voltage response of a diode / transistor (and simply identify components, such as transistor pinout and polarity)
 *   RF spectrum analyzer
 *   A 2D X-Y mode that plots the analog channels against each other on two axes with a digital channel optionally functioning as a "beam" enable/disable.
-    *   [Something](http://www.forum.seeedstudio.com/viewtopic.php?f=22t=2458) seems to exist? Not in APP2.50 yet.
+    *   [Something](http://forum.seeedstudio.com/viewtopic.php?f=22t=2458) seems to exist? Not in APP2.50 yet.
 
 *   A DMX Decoder/Analyser and generator (used in conjunction with an external RS485 IC) would make this a VERY useful gadget for theatre techs.
 
@@ -419,7 +419,7 @@ More details and Linux instructions here: [DSO_Quad:Upgrading_Firmware](/DSO_Qua
 ---
 - [Schematic and firmware (HW2.2 ~ HW2.72)](http://wiki.seeedstudio.com/DSO_Quad/#upgrading-firmware)
 
-- [Discussion board with resouces for HW2.6](http://www.forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1929)
+- [Discussion board with resouces for HW2.6](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1929)
 
 - [DS203_yijian_app_user_manual.rar‎](https://github.com/SeeedDocument/DSO_Quad/raw/master/res/DS203_yijian_app_user_manual.rar)
 

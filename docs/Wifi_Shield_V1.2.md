@@ -1206,7 +1206,7 @@ To learn more about adhoc mode check out the [WiFly RN User Manual](https://gith
 
 ## Support
 
-*   [Forum](http://www.forum.seeedstudio.com/): _Please visit our forum and post your questions here if you have any problem about products._
+*   [Forum](http://forum.seeedstudio.com/): _Please visit our forum and post your questions here if you have any problem about products._
 *   [FAQ about Wifi Shield](http://support.seeedstudio.com/knowledgebase/articles/456737-wifi-shield)： _Click here to see if your questions have been solved._
 
 ## Licensing

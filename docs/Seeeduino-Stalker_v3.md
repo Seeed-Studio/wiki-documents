@@ -267,7 +267,7 @@ The picture above shows the hardware and components required for Seeeduino Stalk
 
 ##   Demos
 
-Download and install the DS1337 library and sketches available in the resources section. DS1337 library includes modified version DateTime class by Jean-Claude Wippler at [JeeLabs](http://jeelabs.net/projects/cafe/wiki/RTClib)
+Download and install the DS1337 library and sketches available in the resources section. DS1337 library includes modified version DateTime class by Jean-Claude Wippler at [JeeLabs](http://jeelabs.net/projects/cafe/wiki/)
 
 *   The datalogger demo sketches makes use of the Arduino SD Library.
 

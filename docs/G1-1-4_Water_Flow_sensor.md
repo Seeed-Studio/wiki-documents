@@ -274,7 +274,7 @@ void loop ()
 }
 ```
 
-You can refer our forum for more details about [Reading Water Flow rate with Water Flow Sensor](http://www.forum.seeedstudio.com/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632).
+You can refer our forum for more details about [Reading Water Flow rate with Water Flow Sensor](http://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632).
 
 ##   Wiring Diagram
 ---
@@ -324,7 +324,7 @@ Yeah, it has been used on drinking machine.
 
 ##   Resource
 ---
-*   [Reading Water Flow rate with Water Flow Sensor](http://www.forum.seeedstudio.com/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632)
+*   [Reading Water Flow rate with Water Flow Sensor](http://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632)
 
 *   [Water Flow rate display on LCD](http://www.practicalarduino.com/projects/water-flow-gauge)
 

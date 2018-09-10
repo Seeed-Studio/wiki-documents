@@ -182,7 +182,7 @@ Now share your awesome projects with us on [Recipe](http://www.seeedstudio.com/r
 - **[Library]**[Bluetooth Shield Library for Arduino 1.0](https://github.com/SeeedDocument/Bluetooth-Shield/raw/master/res/BluetoothShieldDemoCode_For_Arduino1.0.zip)
 - **[Instruction]**[Bluetooth Software instruction](https://seeeddoc.github.io/Bluetooth_Shield/res/BTSoftware_Instruction.pdf)
 - **[Datasheet]**[Bluetooth - module Datasheet](https://seeeddoc.github.io/Bluetooth_Shield/res/Bluetooth_module.pdf)
-- **[Connections]** [Set up connections between two BluetoothBee step by step](http://www.forum.seeedstudio.com/viewtopic.php?f=4&amp;t=687)
+- **[Connections]** [Set up connections between two BluetoothBee step by step](http://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=687)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

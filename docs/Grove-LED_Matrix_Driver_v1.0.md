@@ -106,7 +106,7 @@ Connect all parts as following:
 
 #### Coding Work
 
-You can find more demo sketch at <https://github.com/Seeed-Studio/Grove_LED_Matrix_Driver> and development library at <https://github.com/Seeed-Studio/Grove_LED_Matrix_Driver/tree/master/Arduino/LEDMatrix>
+You can find more demo sketch at <https://github.com/Seeed-Studio/Grove_LED_Matrix_Driver> and development library at <https://github.com/Seeed-Studio/Grove_LED_Matrix_Driver>
 
 1. A typical demo code. You can upload code to main control board with [Codebender](https://codebender.cc).
 

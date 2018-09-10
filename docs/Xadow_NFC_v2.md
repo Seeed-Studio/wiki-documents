@@ -51,11 +51,11 @@ Near Field Communication (NFC) is the set of protocols for the communication of 
 
 ## RePhone Community
 
-[![](https://seeeddoc.github.io/Xadow_NFC_v2/img/RePhone_Community-2.png)](http://www.forum.seeedstudio.com/viewforum.php?f=71&sid=b70f8138c89becf7701260bb41faf9f4)
+[![](https://seeeddoc.github.io/Xadow_NFC_v2/img/RePhone_Community-2.png)](http://forum.seeedstudio.com/viewforum.php?f=71&sid=b70f8138c89becf7701260bb41faf9f4)
 
 We’ve been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the RePhone Community.
 
-Now join us in the [RePhone Community](http://www.forum.seeedstudio.com/viewforum.php?f=71&sid=b70f8138c89becf7701260bb41faf9f4)! Together we seek answers, make interesting stuff, care about each other, and share our experiences.
+Now join us in the [RePhone Community](http://forum.seeedstudio.com/viewforum.php?f=71&sid=b70f8138c89becf7701260bb41faf9f4)! Together we seek answers, make interesting stuff, care about each other, and share our experiences.
 
 ### **<span style="font-size:1.1em;">Frequently Asked Questions</span>**
 

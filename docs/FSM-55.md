@@ -26,14 +26,14 @@ The license is CC-BY 3.0 Unported for its schematic design, and CC-BY-SA 3.0 Unp
 
 When you use the PCB design for yourself, please modify it for your own purpose.  Please not include the logo of Flying Stone Technology for your PCB.
 
-*   [http://git.gniibe.org/gitweb/?p=fsm-55.git](http://git.gniibe.org/gitweb/?p=fsm-55.git)
+*   http://git.gniibe.org/gitweb/?p=fsm-55.git
 
 ###   Firmware
 
 Firmware is available as Free Software under GPLv3+.
 
-*   [http://git.gniibe.org/gitweb/?p=chopstx/chopstx.git;h=refs/heads/cortex-m0-support](http://git.gniibe.org/gitweb/?p=chopstx/chopstx.git;h=refs/heads/cortex-m0-support)
-<pre> $ git clone --branch cortex-m0-support [git://git.gniibe.org/chopstx/chopstx.git](git://git.gniibe.org/chopstx/chopstx.git)
+*   http://git.gniibe.org/gitweb/?p=chopstx/chopstx.git;h=refs/heads/cortex-m0-support
+<pre> $ git clone --branch cortex-m0-support git://git.gniibe.org/chopstx/chopstx.git
 </pre>
 
 The main program is under: example-fsm-55 directory.
@@ -50,8 +50,8 @@ I use my own tool, which originally written for Gnuk Project (for FST-01).
 
 I needed to modify the tool (stlinkv2.py) so that it can work with Cortex-M0 MCU.
 
-*   [http://git.gniibe.org/gitweb/?p=gnuk/gnuk.git;h=refs/heads/stlink-m0-support](http://git.gniibe.org/gitweb/?p=gnuk/gnuk.git;h=refs/heads/stlink-m0-support)
-<pre> $ git clone --branch stlink-m0-support [git://git.gniibe.org/gnuk/gnuk.git](git://git.gniibe.org/gnuk/gnuk.git)
+*   http://git.gniibe.org/gitweb/?p=gnuk/gnuk.git;h=refs/heads/stlink-m0-support
+<pre> $ git clone --branch stlink-m0-support git://git.gniibe.org/gnuk/gnuk.git
 </pre>
 
 It was originally developed for FST-01.  And there is something specific to FST-01 like SPI flash checking.  You need to invoke it with -i option (inhibit SPI flash checking) for FSM-55.

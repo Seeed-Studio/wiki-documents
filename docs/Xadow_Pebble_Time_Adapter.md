@@ -191,7 +191,7 @@ Resources
 ---------
 
 - [Xadow Pebble Time Adapter eagle files](https://raw.githubusercontent.com/SeeedDocument/Xadow_Pebble_Time_Adapter/master/res/Xadow_Pebble_Time_Adapter.rar)
-- [Frequently Asked Questions on RePhone (FAQs)](http://www.forum.seeedstudio.com/viewtopic.php?f=71&t=6664&p=23753)
+- [Frequently Asked Questions on RePhone (FAQs)](http://forum.seeedstudio.com/viewtopic.php?f=71&t=6664&p=23753)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Xadow_Pebble_Time_Adapter -->
 

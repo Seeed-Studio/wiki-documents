@@ -248,11 +248,11 @@ To reset your RePhone to **DEFAULTS**:
 
 ##  RePhone Community
 ---
-[![](https://github.com/SeeedDocument/Eclipse_IDE_for_RePhone_Kit/raw/master/img/RePhone_Community-2.png)](http://www.forum.seeedstudio.com/viewforum.php?f=71&amp;sid=b70f8138c89becf7701260bb41faf9f4)
+[![](https://github.com/SeeedDocument/Eclipse_IDE_for_RePhone_Kit/raw/master/img/RePhone_Community-2.png)](http://forum.seeedstudio.com/viewforum.php?f=71&amp;sid=b70f8138c89becf7701260bb41faf9f4)
 
 We’ve been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the RePhone Community.
 
-Now join us in the [RePhone Community](http://www.forum.seeedstudio.com/viewforum.php?f=71&amp;sid=b70f8138c89becf7701260bb41faf9f4)!
+Now join us in the [RePhone Community](http://forum.seeedstudio.com/viewforum.php?f=71&amp;sid=b70f8138c89becf7701260bb41faf9f4)!
 
 Together we seek answers, make interesting stuff, care about each other, and share our experiences.
 

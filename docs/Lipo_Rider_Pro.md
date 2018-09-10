@@ -229,7 +229,7 @@ Larger/multiple batteries and/or solar panels can be used, but only with end-use
 -   [CN3065 Datasheet in PDF](https://raw.githubusercontent.com/SeeedDocument/Lipo_Rider_Pro/master/res/DSE-CN3065.pdf)
 -   [Schematic and Layout in Eagle format](https://raw.githubusercontent.com/SeeedDocument/Lipo_Rider_Pro/master/res/Lipo_Rider_Pro_v0.9b.rar)
 -   [Schematic in pdf format](https://raw.githubusercontent.com/SeeedDocument/Lipo_Rider_Pro/master/res/LiPo_Rider_Pro_v0.9b.pdf)
--   [Get Lipo rider pro to charge Ipod or Iphone](http://www.forum.seeedstudio.com/viewtopic.php?f=4&t=3575)
+-   [Get Lipo rider pro to charge Ipod or Iphone](http://forum.seeedstudio.com/viewtopic.php?f=4&t=3575)
 -   [Lithium Ion polymer Battery pack - 6A](https://www.seeedstudio.com/Lithium-Ion-polymer-Battery-pack-6A-p-602.html)
 
 ## Project

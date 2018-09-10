@@ -64,7 +64,7 @@ For Gnuk 1.0.1, we use [GCC ARM Embedded 4.6-2012-q2](https://launchpad.net/gcc-
 ###   For the first lot of FST-01
 
 In this product, it contains copyrighted software, Gnuk version 1.0.1, that is licensed under the **GPLv3**. A copy of that license is included in this WiKi, see **GPLv3**.
-You may obtain the complete Corresponding Source code for a period of three years after the last shipment of this product, which will be no earlier than 2016-01-01, on the manufacturer website at [http://git.gniibe.org/gitweb/?p=gnuk/gnuk.git](http://git.gniibe.org/gitweb/?p=gnuk/gnuk.git) and we put the tag "release/1.0.1" for the version of the product.
+You may obtain the complete Corresponding Source code for a period of three years after the last shipment of this product, which will be no earlier than 2016-01-01, on the manufacturer website at http://git.gniibe.org/gitweb/?p=gnuk/gnuk.git and we put the tag "release/1.0.1" for the version of the product.
 
 Note that Gnuk binary in the first lot of FST-01 was compiled with "-O3 -Os" option by GCC ARM Embedded 4.6-2012-q2.
 
@@ -152,7 +152,7 @@ Although FST-01 PCB is designed following the recommendation of P1A-120704U spec
 
 Fst-01-schematic.png
 
-The board design is available as [KiCAD](http://www.kicad-pcb.org/) format. Please visit [FST-01 Git repository](http://git.gniibe.org/gitweb?p=gnuk/fst-01.git).
+The board design is available as [KiCAD](http://www.kicad-pcb.org/) format. Please visit http://git.gniibe.org/gitweb?p=gnuk/fst-01.git.
 
 The schematic design is distributed under Creative Commons Attribution 3.0 Unported License (CC BY 3.0).
 
