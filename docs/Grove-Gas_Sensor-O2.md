@@ -85,7 +85,7 @@ Copy the below code to Arduino IDE.
 
 const float VRefer = 3.3;       // voltage of adc reference
 
-const int pinAdc   = A5;
+const int pinAdc   = A0;
 
 void setup() 
 {
