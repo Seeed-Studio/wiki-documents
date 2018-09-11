@@ -197,7 +197,7 @@ Power to the Azure Sphere MT3620 Development Kit is supplied via the on-board US
 
 **Hardware Design and Manufacture**
 
-The current Azure Sphere software release does not support all features of the [MT3620](https://www.mediatek.com/products/azureSphere/mt3620) hardware. For example, the following are not yet supported in software:
+The current Azure Sphere software release does not support all features of the [MT3620](https://www.mediatek.com/products/azureSphere/mt3620) hardware. For example, the following are **not yet supported** in software:
 
 - 2 x ARM Cortex-M4 with FPU
 - ADC, I2C, I2S, PWM and SPI peripheral interfaces (GPIO and UART are supported)
@@ -232,7 +232,7 @@ The Azure Sphere MT3620 Development Kit contains highly sensitive electronic cir
 
 | US FCC | Europe CE | Japan MIC |ROHS |
 |--------|-----------|-----------|-----------|
-| [![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/fcc.png)](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-FCC-FCC.zip)       |   [![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/ce.png)](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-CE.zip)        |  [![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/mic.jpg)](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-MIC.zip)         |![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/rohs-logo.jpg)|s
+| [![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/fcc.png)](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-FCC-FCC.zip)       |   [![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/ce.png)](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-CE.zip)        |  [![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/mic.jpg)](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-MIC.zip)         |![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/rohs-logo.jpg)|
 
 - CE ID: 18/0331/SZ
 - FCC ID: Z4T-MT3620DEVB 
@@ -252,7 +252,42 @@ The quickstarts guide you through:
 - [Deploying the application](https://docs.microsoft.com/en-us/azure-sphere/quickstart/qs-first-deployment) over Wi-Fi
 - [Setting up an Azure IoT Hub to work with Azure Sphere](https://docs.microsoft.com/en-us/azure-sphere/quickstart/qs-setup-iot-hub)
 
-## 
+## Azure Sphere Demo
+
+We build two demoes which combine Sphere dev kit and [Seeed Grove system](http://wiki.seeedstudio.com/Grove_System/). 
+
+**Demo1**: Sphere performs as an MCU, which connects with temperature sensor(SHT31), relay, fan, display, analog device. Demo simulates a fan with IoT connectivity, people can measure the ambient temperature and setup a threshold value to turn on/off the fan from Azure Cloud. The temperature will display on the LED display. User can swap the resistor to change the fan’s speed level from 0,1,2,3(0 means switch off the fan).
+
+**Demo2**: Sphere works as an IoT safety connectivity device, which will be connect to an already made appliance, the appliance has its own MCU , which in this demo, we use an Arduino to simulate a fan’s control board, the board can get the status of the fan’s motor data , by analyzing the data , people can get the failure status and send maintainer to fix it. By pushing the button, this simulates the health status of the fan device , when button being pushed, that means the device need maintenance.
+
+### Hardware
+
+**Part List**
+
+| MT3620 development kits | Grove - Temperature&Humidity Sensor (SHT31)|  Grove - Relay |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/azure_s.jpg)|![enter image description here](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/SHT3_s.jpg)|![enter image description here](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/Relay_s.jpg)|
+|[Get One Now](https://www.seeedstudio.com/Azure-Sphere-MT3620-Development-Kit-p-3052.html)|[Get One Now](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT3-p-2655.html)|[Get One Now](https://www.seeedstudio.com/Grove-Relay-p-769.html)|
+
+| Grove - Slide Potentiometer | Grove - 4-Digit Display |  Fan |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/Slide_Potentiometer_s.jpg)|![enter image description here](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/4_digital_s.jpg)|![enter image description here](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/fan.png)|
+|[Get One Now](https://www.seeedstudio.com/Grove-Slide-Potentiometer-p-1196.html)|[Get One Now](https://www.seeedstudio.com/Grove-4-Digit-Display-p-1198.html)|[Get One Now]()|
+
+**System Diagram**
+
+![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/demo.png)
+
+**Hardware Connection**
+
+Front View of hardware setup.
+![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/MT3620_demo_Front.jpg)
+
+Top View of hardware setup.
+![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/MT3620_demo_backside.jpg)
+
+
+### Software
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
