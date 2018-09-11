@@ -123,7 +123,6 @@ Here is the code.
  * Description: This demo let you can send instruction 1-8 to control the Grove-Serial MP3 Player, via the serial port.
  *
  * Copyright (c) 2015 seeed technology inc.
- * Website    : www.seeed.cc
  * Author     : Wuruibin
  * Created Time: Dec 2015
  * Modified Time:

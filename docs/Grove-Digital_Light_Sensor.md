@@ -126,7 +126,6 @@ We can switch among three detection modes to take your readings. They are infrar
     A library for TSL2561
 
     Copyright (c) 2012 seeed technology inc.
-    Website    : www.seeed.cc
     Author     : zhangkun
     Create Time:
     Change Log :

@@ -117,7 +117,6 @@ GP2Y0D805Z0F is a distance measuring sensor unit, composed of an integrated comb
 /*
  *  
  * Copyright (c) 2018 Seeed Technology Co., Ltd.
- * Website    : www.seeed.cc
  * Author     : downey
  * Create Time: May 2018
  * Change Log :

@@ -148,7 +148,6 @@ Grove - I2C FM Receiver v1.1  | Change some components to make the board more st
  * Demo code for the Grove-I2C_FM_Receiver module
  *
  * Copyright (c) 2012 seeed technology inc.
- * Website    : www.seeed.cc
  * Author     : Jack Shao (jacky.shaoxg@gmail.com)
  * Create Time: Jul 2014
  * Change Log :

@@ -270,7 +270,6 @@ Here is how to use Grove - Temperature&Humidity Sensor (HDC1000) with Seeeduino 
  * A library for HDC1000 1.0
  *
  * Copyright (c) 2015 seeed technology inc.
- * Website    : www.seeed.cc
  * Author     : Pillar Zuo (baozhu.zuo@seeed.cc)
  * Create Time: April 2015
  * Change Log :
