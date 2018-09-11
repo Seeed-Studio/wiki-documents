@@ -22,7 +22,7 @@ Click the image to get to different version of DSO Nano.
 ---
 So far there have been three major versions of the DSO Nano, the original one in 2009, and the DSO Nano V2 in 2010. (A significant hardware upgrade including dual channels was introduced with the [DSO Quad](http://wiki.seeedstudio.com/DSO_Quad).) Apart from the improved charging unit in V2, and a redesigned PCB, the specifications are pretty much the same. They can use the same firmware.
 
-A photo from inside the V2 was posted to the [forum](https://www.seeed.cc/discover.html?t=DSO).
+A photo from inside the V2 was posted to the [forum](https://community.seeedstudio.com/discover.html?t=DSO).
 
 <table >
 <tr>
@@ -208,7 +208,7 @@ To upgrade the firmware to the latest version, you have a few options:
 
 ##   Resources
 ---
-*   Please visit our [DSO Nano forum](https://www.seeed.cc/discover.html?t=DSO) for prompt technical support and usage discussion.
+*   Please visit our [DSO Nano forum](https://community.seeedstudio.com/discover.html?t=DSO) for prompt technical support and usage discussion.
 *   [Official firmware, schematics and development documentation](http://code.google.com/p/dsonano/)
 
 *   [Community firmware source git tree](http://gitorious.org/dsonano/dso-firmware) (for gcc and IAR)

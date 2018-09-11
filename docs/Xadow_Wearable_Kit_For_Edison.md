@@ -459,7 +459,7 @@ Here is what it looks like with the watch case:
 
 *   [Edison Getting Started Guide](https://communities.intel.com/docs/DOC-23147)
 
-*   [Xadow wear](http://www.seeed.cc/wear/)
+*   [Xadow wear](http://community.seeedstudio.com/wear/)
 
 
 

@@ -273,7 +273,7 @@ You can also use this demo to show the time in common. Please create grove_rtc.p
      * Demo for Raspberry Pi
      *
      * Copyright (c) 2014 seeed technology inc.
-     * Website    : www.seeed.cc
+     * Website    : community.seeedstudio.com
      * Author     : Lambor
      * Create Time: Nov 2014
      * Change Log :

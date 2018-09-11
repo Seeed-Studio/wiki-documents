@@ -236,9 +236,9 @@ pi@raspberrypi:~/GrovePi/Software/Python $ python grove_ultrasonic.py
 - **[PDF]** [Download Wiki PDF](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/res/Grove-Ultrasonic_Ranger_WiKi.pdf)
 - **[PDF]** [Grove_Ultrasonic Ranger Schematic](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/res/Grove_Ultrasonic%20Ranger%20Schematic.pdf)
 - **[Library]** [Grove_Ultrasonic Ranger library](https://github.com/Seeed-Studio/Grove_Ultrasonic_Ranger/archive/master.zip)
-- **[Project]** [The Color Helix](http://www.seeed.cc/project_detail.html?id=138)
-- **[Project]** [Indoor Lightning Cloud](http://www.seeed.cc/project_detail.html?id=182)
-- **[Project]** [Automatic Water Level Controller](http://www.seeed.cc/project_detail.html?id=241)
+- **[Project]** [The Color Helix](http://community.seeedstudio.com/project_detail.html?id=138)
+- **[Project]** [Indoor Lightning Cloud](http://community.seeedstudio.com/project_detail.html?id=182)
+- **[Project]** [Automatic Water Level Controller](http://community.seeedstudio.com/project_detail.html?id=241)
 - **[Example]** [Example_Measure_distance_and_led_display](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/res/Example_Measure_distance_and_led_display.zip)
 - **[Example]** [Example_Measure_and_display_the_distance](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/res/Example_Measure_and_display_the_distance.zip)
 

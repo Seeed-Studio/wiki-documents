@@ -291,7 +291,7 @@ Open Arduino IDE, **File > Sketchbook > StalkerV30_DataLogger_10Sec** to open th
 ## FAQ
 ----
 
-Here are some questions that we usually received from new users. If you have any other issues when you are using Seeeduino Stalker V3.1, welcome to the [Community of Arduino](http://www.seeed.cc/discover.html?t=Arduino) where there are many professional users waiting to give you advices and also many advanced users providing plenty of ideas on how to use this products!
+Here are some questions that we usually received from new users. If you have any other issues when you are using Seeeduino Stalker V3.1, welcome to the [Community of Arduino](http://community.seeedstudio.com/discover.html?t=Arduino) where there are many professional users waiting to give you advices and also many advanced users providing plenty of ideas on how to use this products!
 
 **Q1:** The RTC is reset to the original time when power off and on again.
 > There's a cell battery to power the RTC when there's no power from the system. The cell battery is supposed to last at least 3 years. You can check if the cell battery run off.

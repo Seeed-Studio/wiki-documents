@@ -66,15 +66,15 @@ The Global Positioning System (GPS) is a space-based navigation system that prov
 
 ## Rephone Community
 ---
-[![](https://github.com/SeeedDocument/Xadow_GPS_V2/raw/master/images/300px-RePhone_Community-2.png)](http://www.seeed.cc/discover.html?t=RePhone)
+[![](https://github.com/SeeedDocument/Xadow_GPS_V2/raw/master/images/300px-RePhone_Community-2.png)](http://community.seeedstudio.com/discover.html?t=RePhone)
 
-We’ve been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the [RePhone Community](http://www.seeed.cc/discover.html?t=RePhone).
+We’ve been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the [RePhone Community](http://community.seeedstudio.com/discover.html?t=RePhone).
 
-Now join us in the [RePhone Community](http://www.seeed.cc/discover.html?t=RePhone)! Together we seek answers, make interesting stuff, care about each other, and share our experiences.
+Now join us in the [RePhone Community](http://community.seeedstudio.com/discover.html?t=RePhone)! Together we seek answers, make interesting stuff, care about each other, and share our experiences.
 
 **Frequently Asked Questions**
 
-Some frequently asked questions in [RePhone Community](http://www.seeed.cc/discover.html?t=RePhone) are collected and answered to the topic "Frequently Asked Questions of RePhone (FAQ)" , the topic will be kept updating whenever a new FAQ comes out.
+Some frequently asked questions in [RePhone Community](http://community.seeedstudio.com/discover.html?t=RePhone) are collected and answered to the topic "Frequently Asked Questions of RePhone (FAQ)" , the topic will be kept updating whenever a new FAQ comes out.
 
 ## Resources
 ---

@@ -439,7 +439,7 @@ With this demo, we make a mobile phone named Arduino Phone by  Arduino, GPRS Shi
 This is a demo made by GPRS Shield V2.0.
 
 With this demo,  we can receive SMS When Gas Leakage at Home.
-[![](https://github.com/SeeedDocument/GPRS_Shield_v1.0/raw/master/img/Wiki_makeitnow_logo.png)](http://www.seeed.cc/project_detail.html?id=242)
+[![](https://github.com/SeeedDocument/GPRS_Shield_v1.0/raw/master/img/Wiki_makeitnow_logo.png)](http://community.seeedstudio.com/project_detail.html?id=242)
 
 ##  Resources
 

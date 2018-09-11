@@ -79,7 +79,7 @@ And the MCU Kinetis KL02:
 
 *   [_Datasheet of Kinetis KL02_](https://github.com/SeeedDocument/Xadow_NFC/raw/master/res/KL02P32M48SF0.pdf)
 
-Copyright (c) 2008-2016 Seeed Development Limited ([www.seeedstudio.com](http://www.seeedstudio.com) / [www.seeed.cc](http://www.seeed.cc))
+Copyright (c) 2008-2016 Seeed Development Limited ([www.seeedstudio.com](http://www.seeedstudio.com) / [community.seeedstudio.com](http://community.seeedstudio.com))
 
 ###### This static html page was created from http://www.seeedstudio.com/wiki
 

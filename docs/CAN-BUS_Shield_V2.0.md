@@ -420,7 +420,7 @@ If you want to make some awesome projects with CAN-BUS shield, here are some pro
 
 Ever wanted to play a car/truck simulator with a real dashboard on your PC? Me too! I'm trying to control a VW Polo 6R dashboard via CAN Bus with an Arduino Uno and a Seeed CAN Bus Shield. Inspired by Silas Parker. Thanks Sepp and Is0-Mick for their great support!
 
-[![](https://github.com/SeeedDocument/CAN_BUS_Shield/blob/master/image/Wiki_makeitnow_logo.png?raw=true)](http://www.seeed.cc/project_detail.html?id=291)
+[![](https://github.com/SeeedDocument/CAN_BUS_Shield/blob/master/image/Wiki_makeitnow_logo.png?raw=true)](http://community.seeedstudio.com/project_detail.html?id=291)
 
 ### Hack your vehicle CAN-BUS
 
@@ -448,7 +448,7 @@ From each node (IE Switch pod that controls your windows or electric door locks)
 
 **Q3. Where can I find technical support if I have some other issues.**
 
-* You can post a question to [Seeed Forum](http://www.seeed.cc/discover.html?t=Arduino) or send an email to **techsupport@seeed.cc**.
+* You can post a question to [Seeed Forum](http://community.seeedstudio.com/discover.html?t=Arduino) or send an email to **techsupport@seeed.cc**.
 
 ## Resources
 -----

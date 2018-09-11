@@ -34,7 +34,7 @@ More over, we will make more RF modules ourselves with different frequency and c
 
 ## Support
 
-If you have questions or other better design ideas, you can go to our [forum](http://www.seeed.cc/) discuss.
+If you have questions or other better design ideas, you can go to our [forum](http://community.seeedstudio.com/) discuss.
 
 ## Resources
 

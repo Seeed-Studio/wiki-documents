@@ -37,7 +37,7 @@ Here is some funny project for your reference.
 |Car Controlled by Track Ball|FM Receiver|Make a Wooden Gun|
 |-------|-------|-------|
 |![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Lotus/master/img/example_1.png)|![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Lotus/master/img/Fm%20demo.jpg)|![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Lotus/master/img/gun.jpg)|
-|[Make it Now](http://www.seeed.cc/A-Car-Controlled-by-Track-Ball-p-1132.html)|[Make it Now](/FM_Receiver/)|[Make it Now](http://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)|
+|[Make it Now](http://community.seeedstudio.com/A-Car-Controlled-by-Track-Ball-p-1132.html)|[Make it Now](/FM_Receiver/)|[Make it Now](http://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)|
 
 
 ## Feature
@@ -212,7 +212,7 @@ Please check,
 
 **Q3. Where can I find technical support if I have some other issue.**
 
-You can post a question to [Seeed Forum](http://www.seeed.cc/discover.html?t=Arduino) or send an email to **techsupport@seeed.cc**.
+You can post a question to [Seeed Forum](http://community.seeedstudio.com/discover.html?t=Arduino) or send an email to **techsupport@seeed.cc**.
 
 
 ## Project

@@ -87,7 +87,7 @@ Launch Arduino IDE and click **File>Examples>Grove_Sunlight_Sensor>SI1145DEMO** 
 
 Click Tools>Board to choose Arduino UNO and select respective serial port.
 
-Now click Upload(CTRL+U) to burn testing code. Please refer to [**here**](http://wiki.seeedstudio.com/Arduino_Common_Error) for any error prompt and you can also add comment on [**forum**](www.seeed.cc).
+Now click Upload(CTRL+U) to burn testing code. Please refer to [**here**](http://wiki.seeedstudio.com/Arduino_Common_Error) for any error prompt and you can also add comment on [**forum**](community.seeedstudio.com).
 
 **Review Results**
 

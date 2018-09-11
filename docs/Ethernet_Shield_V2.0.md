@@ -188,7 +188,7 @@ It does not matter what you are and what you have made, hacker, maker, artist or
 
 As long as you start sharing your works with others, you are being part of the open source community and you are making your contributions.
 
-Now share your awesome projects with us on [Recipe](https://www.seeed.cc/projects.html#recipe), and win a chance to become the Core User of Seeed.
+Now share your awesome projects with us on [Recipe](https://community.seeedstudio.com/projects.html#recipe), and win a chance to become the Core User of Seeed.
 
 -  Core Users, are those who show high interests in Seeed products and make significant contributions on Recipe.
 

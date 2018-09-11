@@ -670,7 +670,7 @@ If you want to make some awesome projects by Bluetooth Bee, here's some projects
 This is an interesting demo made by seeduino and [Grove](https://seeeddoc.github.io/Grove_System/) (title=undefined).
 SEEED PET is kind of an electronic pet in our studio. It is a platform for the newbie engineers to be familiar with our company’s products and practice. Every newbie engineer will be added some new ideas or elements on the SEEED PET.
 
-[I want to make it.](https://www.seeed.cc/project_detail.html?id=16)
+[I want to make it.](https://community.seeedstudio.com/project_detail.html?id=16)
 
 ###   Share Your Awesome Projects with Us  ###
 
@@ -684,7 +684,7 @@ as long as you start sharing your works with others,
 
 you are being part of the open source community and you are making your contributions .
 
-Now share you awesome projects on with us on [Recipe](https://www.seeed.cc/projects.html#recipe), and win a chance to become the Core User of Seeed.
+Now share you awesome projects on with us on [Recipe](https://community.seeedstudio.com/projects.html#recipe), and win a chance to become the Core User of Seeed.
 
 -  Core Users, are those who showing high interests and significant contributions in Seeed products.
 

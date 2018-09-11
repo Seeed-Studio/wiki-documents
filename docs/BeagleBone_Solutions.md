@@ -105,7 +105,7 @@ If you have additional certification needs please contact us at iot@
 
 ##Portfolio
 
-We have completed numerous customized BeagleBone projects. You can view some of them [here](https://www.seeed.cc/portfolio).
+We have completed numerous customized BeagleBone projects. You can view some of them [here](https://community.seeedstudio.com/portfolio).
 
 
 If you have additional questions or customization needs please contact us at [iot@seeed.cc](iot@seeed.cc).

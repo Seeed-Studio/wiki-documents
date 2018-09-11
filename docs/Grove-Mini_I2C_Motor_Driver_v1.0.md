@@ -52,7 +52,7 @@ Here are some projects for your reference.
 | **Make a Mini Toy Car**                                              | **Make a Steampunk Style Award**                                       |
 |----------------------------------------------------------------------|------------------------------------------------------------------------|
 | ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Mini_I2C_Motor_Driver_v1.0/master/img/Mini_toy_car.jpg)   | ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Mini_I2C_Motor_Driver_v1.0/master/img/Seeed_award2015.jpg)  |
-| [Make it NOW!](http://www.seeed.cc/project_detail.html?id=392)       | [Make it NOW!](http://www.seeed.cc/project_detail.html?id=1131)        |
+| [Make it NOW!](http://community.seeedstudio.com/project_detail.html?id=392)       | [Make it NOW!](http://community.seeedstudio.com/project_detail.html?id=1131)        |
 
 Specifications
 --------------
@@ -419,7 +419,7 @@ void delayUntil(unsigned long elapsedTime)
 }
 ```
 
-Now click Upload(CTRL+U) to burn testing code. Please refer to [here](/Arduino_Common_Error "Arduino Common Error") for any error prompt and you can also add comment on [community](http://www.seeed.cc).
+Now click Upload(CTRL+U) to burn testing code. Please refer to [here](/Arduino_Common_Error "Arduino Common Error") for any error prompt and you can also add comment on [community](http://community.seeedstudio.com).
 
 ### Review Results
 

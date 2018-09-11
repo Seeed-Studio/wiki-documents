@@ -245,7 +245,7 @@ Please check,
 
 #### Q3. Where can I find technical support if I have some other issue.
 
-You can post a question to [Seeed Forum](http://www.seeed.cc/discover.html?t=Arduino) or send an email to **techsupport@seeed.cc**.
+You can post a question to [Seeed Forum](http://community.seeedstudio.com/discover.html?t=Arduino) or send an email to **techsupport@seeed.cc**.
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
