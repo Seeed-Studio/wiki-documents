@@ -31,8 +31,7 @@ According to different application scenarios, we have prepared a series of solid
 
 
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-8-Channel-Solid-State-Relay-p-3131.html
-" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-8-Channel-Solid-State-Relay-p-3131.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 ## Features

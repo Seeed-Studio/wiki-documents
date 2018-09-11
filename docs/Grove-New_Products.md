@@ -5,6 +5,10 @@
 
 ## September, 2018
 
+- [Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121) ](https://www.seeedstudio.com/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V2-%28MPR121%29-p-3141.html)
+
+- [Grove - Optical Rotary Encoder(TCUT1600X01)](https://www.seeedstudio.com/Grove-Optical-Rotary-Encoder%28TCUT1600X01%29-p-3142.html)
+
 - [Grove - 5-Way Switch](https://www.seeedstudio.com/Grove-5-Way-Switch-p-3136.html)
 
 - [Grove - 6-Position DIP Switch](https://www.seeedstudio.com/Grove-6-Position-DIP-Switch-p-3137.html)

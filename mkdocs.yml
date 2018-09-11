@@ -406,6 +406,7 @@ pages:
           - Grove - High Temperature Sensor: Grove-High_Temperature_Sensor.md
           - Grove - I2C Color Sensor: Grove-I2C_Color_Sensor.md
           - Grove - I2C Touch Sensor: Grove-I2C_Touch_Sensor.md
+          - Grove - 12 Key Capacitive I2C Touch Sensor V2(MPR121): Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121.md
           - Grove - IMU 10DOF: Grove-IMU_10DOF.md
           - Grove - IMU 10DOF v2.0: Grove-IMU_10DOF_v2.0.md
           - Grove - IMU 9DOF v2.0: Grove-IMU_9DOF_v2.0.md
@@ -461,6 +462,7 @@ pages:
           - Grove - Digital Distance Interrupter 0.5 to 5cm(GP2Y0D805Z0F): Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F.md
           - Grove - Digital Distance Interrupter 0.5 to 5cm(GP2Y0D805Z0F)(P): Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F_P.md
           - Grove - Round Force Sensor FSR402: Grove-Round_Force_Sensor_FSR402.md
+          - Grove - Optical Rotary Encoder(TCUT1600X01): Grove-Optical_Rotary_Encoder-TCUT1600X01.md
           
           
 
