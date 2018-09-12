@@ -419,7 +419,7 @@ void delayUntil(unsigned long elapsedTime)
 }
 ```
 
-Now click Upload(CTRL+U) to burn testing code. Please refer to [here](/Arduino_Common_Error "Arduino Common Error") for any error prompt and you can also add comment on [community](http://community.seeedstudio.com).
+Now click Upload(CTRL+U) to burn testing code. Please refer to [here](/Arduino_Common_Error "Arduino Common Error") for any error prompt and you can also add comment on [community](http://community.seeedstudio.com/).
 
 ### Review Results
 

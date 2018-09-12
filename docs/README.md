@@ -16,7 +16,7 @@ We warmly welcome contribution to this documentation project. You can do this ba
 
 LICENSE
 -------
-Copyright (c) 2008-2016 Seeed Development Limited (www.seeedstudio.com / community.seeedstudio.com)
+Copyright (c) 2008-2016 Seeed Development Limited (www.seeedstudio.com / community.seeedstudio.com/)
 
 ### Documents and Images
 <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />
