@@ -85,11 +85,8 @@ MT3620 software development is supported using the powerful Microsoft Visual Stu
     <td class="tg-0lax">ISU is Serial Communication Interface</td>
   </tr>
   <tr>
-    <td class="tg-amwm" rowspan="2"><br>Connectivity</td>
+    <td class="tg-amwm">Connectivity</td>
     <td class="tg-0lax">2.4/5GHz dual-band 802.11a/b/g/n Wi-Fi</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax"><span style="font-style:italic">SDK only support 802.11b/g/n currently</span></td>
   </tr>
   <tr>
     <td class="tg-amwm">I2S</td>
@@ -105,11 +102,11 @@ MT3620 software development is supported using the powerful Microsoft Visual Stu
   </tr>
   <tr>
     <td class="tg-amwm">USB</td>
-    <td class="tg-0lax">1 * Micro USB port for power supply and debugging, 5V/2A</td>
+    <td class="tg-0lax">1 * Micro USB port for power supply and debugging, 5V/1A</td>
   </tr>
   <tr>
     <td class="tg-amwm">DC Jack</td>
-    <td class="tg-0lax">1* 5V/2A DC power jack</td>
+    <td class="tg-0lax">1* 5V/1A DC power jack</td>
   </tr>
   <tr>
     <td class="tg-amwm">Operating Temperature</td>
@@ -136,10 +133,6 @@ MT3620 software development is supported using the powerful Microsoft Visual Stu
 </style>
 <table class="tg">
   <tr>
-    <th class="tg-0pky">Description</th>
-    <th class="tg-0pky">Value</th>
-  </tr>
-  <tr>
     <td class="tg-0pky">IDE</td>
     <td class="tg-0pky">Visual Studio</td>
   </tr>
@@ -164,9 +157,9 @@ MT3620 software development is supported using the powerful Microsoft Visual Stu
 - **J2**: 3.3V Isolation, On: Enable system 3.3v power; Off: Cut off the system 3.3v power. On by default.
 - **J3**: RTC Power Selection: Left 2 pins: Using RTC Battery(Model:CR2032) at backside.
 - **4 User RGB LED**: LED model is LTST-C19HE1WT.
-- **USB Port**: Power supply(5V/2A) and debug, connected to FT4232HQ chip at backside. 
+- **USB Port**: Power supply(5V/1A) and debug, connected to FT4232HQ chip at backside. 
 - **4 System LED**: Led1(Near USB port): Green, FTDI Activity LED. Led2: RED, Power Indicator. Led3: RGB, Wifi Status. Led4: RGB, App Status.
-- **DC Power**: 5V/2A
+- **DC Power**: 5V/1A
 - **3 System Button**: Button A&B(White) are user botton. Button Reset(Blue) is System Reset.
 - **MT3620**：The [MT3620](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/datasheet/MediaTek%20MT3620%20Product%20Brief.pdf) is a highly integrated, high performance IoT MCU with the high level of security necessary for modern, robust internet-connected devices. The MT3620 targets a wide range of IoT applications including smart home, commercial, industrial and many other domains thanks to its extensive I/O peripheral subsystem that allows device design flexibility and freedom.
 - **FT4232HQ**: The [FT4232H](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/datasheet/DS_FT4232H.pdf) is a USB 2.0 High Speed (480Mb/s) to UART/MPSSE ICs.
@@ -264,30 +257,96 @@ We build two demoes which combine Sphere dev kit and [Seeed Grove system](http:/
 
 **Part List**
 
+
 | MT3620 development kits | Grove - Temperature&Humidity Sensor (SHT31)|  Grove - Relay |
 |--------------|-------------|-----------------|
 |![enter image description here](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/azure_s.jpg)|![enter image description here](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/SHT3_s.jpg)|![enter image description here](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/Relay_s.jpg)|
 |[Get One Now](https://www.seeedstudio.com/Azure-Sphere-MT3620-Development-Kit-p-3052.html)|[Get One Now](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT3-p-2655.html)|[Get One Now](https://www.seeedstudio.com/Grove-Relay-p-769.html)|
 
-| Grove - Slide Potentiometer | Grove - 4-Digit Display |  Fan |
+| Grove - Slide Potentiometer | Grove - 4-Digit Display |   Grove - Blue LED Button  |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/Slide_Potentiometer_s.jpg)|![enter image description here](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/4_digital_s.jpg)|![enter image description here](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/fan.png)|
-|[Get One Now](https://www.seeedstudio.com/Grove-Slide-Potentiometer-p-1196.html)|[Get One Now](https://www.seeedstudio.com/Grove-4-Digit-Display-p-1198.html)|[Get One Now]()|
+|![enter image description here](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/Slide_Potentiometer_s.jpg)|![enter image description here](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/4_digital_s.jpg)|![enter image description here](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/Grov-Blue_led_button.jpg)|
+|[Get One Now](https://www.seeedstudio.com/Grove-Slide-Potentiometer-p-1196.html)|[Get One Now](https://www.seeedstudio.com/Grove-4-Digit-Display-p-1198.html)|[Get One Now](https://www.seeedstudio.com/Grove-Blue-LED-Button-p-3104.html)|
+
+
+| MT3620 Grove Shield |Seeeduino V4.2  | Base Shield  |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/mt3620groveshieldb_s.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/blank.jpg)|
+|[Get One Now](https://www.seeedstudio.com/MT3620-Grove-Shield-p-3145.html)|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
 
 **System Diagram**
 
-![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/demo.png)
+<a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/demo.png" target="_blank"><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/demo.png"/></a>
+
+**MT3620 Grove Shield**
+
+The current Azure Sphere software release does not support all features of the [MT3620](https://www.mediatek.com/products/azureSphere/mt3620) hardware. For example, the following are **not yet supported** in software: ADC, I2C, I2S, PWM and SPI peripheral interfaces, only **GPIO and UART are supported**. 
+
+MT3620 Grove Shield includes 2 chips, AD7992(Anlog to I2C) and SC18IM700(I2C to UART) to enable the ADC and I2C function from hardware side. So the analog sensors' signal go through AD7992 and then SC18IM700 to UART of develop board. The I2C sensors go through SC18IM700 to UART of develop board as well.
+
+The [AD7992](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/datasheet/AD7992.pdf) is a 12-bit, low power, successive approximation ADC with an I2C-compatible interface. It transforms the anlog signal A0, A1 to I2C data.
+
+![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/ADC_2_I2C.png)
+
+The [SC18IM700](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/datasheet/SC18IM700.pdf) is designed to serve as an interface between the standard UART port of a microcontroller or microprocessor and the serial I2C-bus; this allows the microcontroller or microprocessor to communicate directly with other I2C-bus devices. It transforms SDA/SCL signals to GPIO26_TXD0 and GPIO28_RXD0. 
+
+![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/I2C_2_UART.png)
+
+![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/MT3620_Grove_Shield-2018-09-11.png)
+
+<div style="text-align:center">MT3620 Grove Shield Hardware Overview</div>
+
 
 **Hardware Connection**
 
-Front View of hardware setup.
 ![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/MT3620_demo_Front.jpg)
 
-Top View of hardware setup.
+<div style="text-align:center">Front View of hardware setup</div>
+
 ![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/MT3620_demo_backside.jpg)
+
+<div style="text-align:center">Top View of hardware setup</div>
+
+- Step 1. Connect Grove-Blue LED Button to port 2 of Grove base shield.
+- Step 2. Connect Fan PWM signal to port 5 of Grove base shield.
+- Step 3. Connect port 7(Software Serial Port) of Grove base shield to UART3 of MT3620 Grove Shield.
+- Step 4. Plug Grove-Base shield to Seeeduino/Arduino.
+- Step 5. Connect Grove-4 Digital Display to GPIO4 port of MT3620 Grove Shield.
+- Step 6. Connect Grove-Temperature&Humidity Sensor(SHT31) to I2C port of MT3620 Grove Shield.
+- Step 7. Connect Grove-Relay to GPIO0 port of MT3620 Grove Shield and Grove-Relay output terminal to control Fan on/off.
+- Step 8. Connect Grove-Slide Potentiometer to Analog port of MT3620 Grove Shield.
+- Step 9. Plug the MT3620 base shield to Azure Sphere MT3620 Development board.
+- Step 10. Plug the USB cable to Azure Sphere MT3620 Development board and PC.
+- Step 11. Plug the USB cable to Ardunio/Seeeduino and PC.
+- Step 11. Plug the power supply to Fan. 
 
 
 ### Software
+
+The software include the smart fan simulation system and Azure Sphere MT3620 Development system. 
+
+For the smart fan simulation system, use the arduino board to read Grove-Blue LED button press/release input signal, output the PWM to control the fan speed and control the Grove-Blue LED button LED status as well. Then use the port 7 to communicate with Azure Sphere MT3620 Development system through UART. 
+
+For Azure Sphere MT3620 Development system, Grove-4 Digital LED displays the temperature from Grove-Temperature&Humidity Sensor(SHT31) sensor, which demonstrates the UART-I2C shield function and MT3620 GPIO output function. Slide the Grove-Slide Potentiometer to change the fan speed, which demonstrates the MT3620 I/O input function. Configure a threshold temperature value from Azure Cloud, when value > threshold, Grove-relay turns fan on, otherwise turns fan off. User also can adjust Grove-Slide Potentiometer,  when the fan working status goes wrong, the fan's MCU will post the failure to Azure Sphere by UART, then failure report goes to the Azure Cloud and wait for maintance. 
+
+**Smart Fan Simulation System**
+
+- Step 1. Open the Arduino IDE.
+- Step 2. Copy [Arduino Smart Fan Simulation code](https://raw.githubusercontent.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/master/sdk/Azure_Sphere_Sample_Smart_Fan-master/Arduino_code/Arduino_code.ino) and paste to Arduino IDE. 
+- Step 3. Select Arduino/Seeeduino v4 as board from Tools menu. 
+- Step 4. Select related COM port from Tools menu. 
+- Step 5. Click upload to upload code the Arduino/Seeeduino. 
+
+!!!Note
+    If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+
+**Azure Sphere MT3620 Development System**
+
+- Step 1. Download [Azure Sphere Code](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/sdk/Azure_Sphere_Sample_Smart_Fan-master/Azure_Sphere_Code.zip) and unzip. 
+- Step 2. Follow [Quickstarts for Azure Sphere](https://docs.microsoft.com/en-us/azure-sphere/quickstart/qs-overview) to open the **AzureSphereDemo2.vcxproj** project.
+- Step 3. Open the main.c under Source Files. 
+- Step 4. Modify wifiSsid and wifiPsk.
+- Step 5. Follow [Build and run the Blink sample](https://docs.microsoft.com/en-us/azure-sphere/quickstart/qs-blink-application#build-and-run-the-blink-sample) to run Azure Sphere Code.
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
