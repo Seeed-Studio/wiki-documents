@@ -269,5 +269,12 @@ uint32_t Wheel(byte WheelPos) {
 
 
 
+## Project
+
+This is the introduction Video of this product, simple demos, you can have a try.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wz1GzW2-VW4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](https://forum.seeedstudio.com/).
+Please submit the issue into our [forum](https://forum.seeedstudio.com/).

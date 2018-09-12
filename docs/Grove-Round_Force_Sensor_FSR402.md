@@ -235,6 +235,11 @@ void loop(){
 - **[PDF]** [Datasheet of FSR402](https://github.com/SeeedDocument/Grove-Round_Force_Sensor_FSR402/raw/master/res/FSR402.pdf)
 
 
+## Project
+
+This is the introduction Video of this product, simple demos, you can have a try.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/55WQ3ia52JM?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Tech Support
 Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).

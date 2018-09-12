@@ -22,7 +22,7 @@ The Grove-Temperature&Humidity&Pressure&Gas Sensor(BME680) is a multiple functio
 
 
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/-Grove-VOC-and-eCO2-Gas-Sensor-(SGP30)-p-3071.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Temperature%2C-Humidity%2C-Pressure-and-Gas-Sensor-(BME680)-p-3109.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 
@@ -48,6 +48,9 @@ The Grove-Temperature&Humidity&Pressure&Gas Sensor(BME680) is a multiple functio
 |Operating range|-40~+85℃; 0-100% r.H.; 300-1100hPa|
 |Digital interface|I^2^C(up to 3.4MHZ)/ SPI(3 and 4 wire, up to 10MHz)|
 |I^2^C address|0x76(default)/ 0x77(optional)|
+
+
+
 
 
 
@@ -92,7 +95,7 @@ The Grove-Temperature&Humidity&Pressure&Gas Sensor(BME680) is a multiple functio
 | Seeeduino V4.2 | Base Shield| Grove-BME680 |
 |--------------|-------------|-----------------|
 |![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Temperature-Humidity-Pressure-Gas-Sensor_BME680/raw/master/img/thumbnail.jpg)|
-|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/" target="_blank">Get One Now</a>|
+|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Temperature%2C-Humidity%2C-Pressure-and-Gas-Sensor-(BME680)-p-3109.html" target="_blank">Get One Now</a>|
 
 
 !!!note
@@ -179,7 +182,7 @@ gas ===>> 101.76 Kohms
 ```
 
 
-!!!Attention
+!!!bug
         1 - To get the stable and accurate value, you need to let the arduino run the code for about 2 hours. The result is much more reliable then. 
         
         2 - For the gas part, it's a variable resistance which reflect the value of the VOC gas, so the unit is Kohms. 
@@ -192,6 +195,14 @@ gas ===>> 101.76 Kohms
 - **[Zip]** [Grove-BME680 Eagle file](https://github.com/SeeedDocument/Grove-Temperature-Humidity-Pressure-Gas-Sensor_BME680/raw/master/res/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor_BME680.zip)
 - **[Zip]** [Seeed BME680 Library](https://github.com/SeeedDocument/Grove-Temperature-Humidity-Pressure-Gas-Sensor_BME680/raw/master/res/Seeed_BME680-master.zip)
 - **[PDF]** [Datasheet of BME680](https://github.com/SeeedDocument/Grove-Temperature-Humidity-Pressure-Gas-Sensor_BME680/raw/master/res/BME680.pdf)
+
+
+
+## Project
+
+This is the introduction Video of this product, simple demos, you can have a try.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O3oHtW2TlXY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 
 

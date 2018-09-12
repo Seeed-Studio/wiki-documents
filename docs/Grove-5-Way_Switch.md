@@ -308,5 +308,13 @@ KEY E: RAW - HIGH RELEASED
 - **[Zip]** [Grove Multi Switch Library](https://github.com/Seeed-Studio/Grove_Multi_Switch/archive/master.zip)
 
 
+## Project
+
+This is the introduction Video of this product, simple demos, you can have a try.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wz1GzW2-VW4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+
 ## Tech Support
 Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).

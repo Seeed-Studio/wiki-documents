@@ -25,6 +25,9 @@ summed together to create a single large electrode.
 Based on Freescale MPR121, this sensor have 12 completely independent electrodes with build-in autoconfiguration. Thanks to I2C interface, you can detect all the 12 electrodes signals with only one Grove port, and the I2C address is hardware configurable, from 0X5B to 0X5D. This also makes it possible for multiple
 **Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121)** to be used together for channel expansions in a single system, you can build a touch system which contains max. 36 electrodes.
 
+This sensor is an upgrade version of [Grove - I2C Touch Sensor](https://www.seeedstudio.com/Grove-I2C-Touch-Sensor-p-840.html), to meet Matsuzawa.Takashi's(one of our customer) needs, we make the I^2^C address changeable, and even cheaper than the old version. So if you have any suggestions about all the Groves, please just shoot to us. We will always listen to your voice, it may make another upgrade, even a new grove. Please kindly write your suggestions in the [Grove 100+](https://www.seeedstudio.com/grove_100) page. 
+
+
 
 <p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V2-%28MPR121%29-p-3141.html
 " target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
@@ -33,9 +36,13 @@ Based on Freescale MPR121, this sensor have 12 completely independent electrodes
 ## Version Change
 
 |Item| Grove - 12 Key Capacitive I2C Touch Sensor V2 | Grove - I2C Touch Sensor |
-|---|---|
-|||
-
+|---|---|---|
+|Main Chip|MPR121|MPR121|
+|I^2^C Address|changeable(0X5B ~ 0X5D)|unmodifiable(0X5A)|
+|Touch Sensor Feeler|x|√|
+|Input Interface|alligator interface|DIP 2Pin Female Header|
+|Cost Performance|High|Low|
+|Release Time|September 11-2018|October 31-2015|
 
 
 ## Features
@@ -73,8 +80,6 @@ Based on Freescale MPR121, this sensor have 12 completely independent electrodes
 - Remote Controls
 - Mobile Phones
 - Lighting Controls
-
-
 
 
 ## Hardware Overview
@@ -156,8 +161,7 @@ In this part, we will show you how to use the **Grove - 12 Key Capacitive I2C To
 | Seeeduino V4.2 | Base Shield | I2C Touch Sensor V2|
 |--------------|-------------|-----------------|
 |![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/raw/master/img/thumbnail.jpg)|
-|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V2-%28MPR121%29-p-3141.html
-" target="_blank">Get One Now</a>|
+|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V2-%28MPR121%29-p-3141.html" target="_blank">Get One Now</a>|
 
 
 !!!note
@@ -295,6 +299,15 @@ key 2release
 - **[PDF]** [Datasheet of MPR121](https://github.com/SeeedDocument/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/raw/master/res/MPR121.pdf)
 
 - **[PDF]** [AN3894](https://github.com/SeeedDocument/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/raw/master/res/AN3894.pdf)
+
+
+
+## Project
+
+This is the introduction Video of this product, simple demos, you can have a try.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nTOxzl_Rg4Y?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 
 
 ## Tech Support

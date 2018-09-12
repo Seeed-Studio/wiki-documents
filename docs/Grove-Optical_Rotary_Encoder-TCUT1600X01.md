@@ -239,5 +239,12 @@ Basic Encoder Test:
 - **[PDF]** [Datasheet of MP3120](https://github.com/SeeedDocument/Grove-Optical_Rotary_Encoder-TCUT1600X01/raw/master/res/MP3120.pdf)
 
 
+## Project
+
+This is the introduction Video of this product, simple demos, you can have a try.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nTOxzl_Rg4Y?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
 ## Tech Support
 Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).

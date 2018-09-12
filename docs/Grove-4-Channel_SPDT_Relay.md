@@ -44,8 +44,8 @@ We use an on-board STM32F030F4P6 to control the channels separately. The command
 |UL Certification Load|10A 125VAC  28VDC|
 |Max. Allowable Voltage|250VAC/110VDC|
 |Power Consumption|abt. 0.45W|
-|Contact Resistance|100mW Max.|
-|Insulation Resistance|100 MW Min. (500VDC)|
+|Contact Resistance|100mΩ Max.|
+|Insulation Resistance|100MΩ Min. (500VDC)|
 |Max. ON/OFF Switching|30 operation/min|
 |Ambient Temperature|-40°C to +85°C|
 |Operating Humidity|45% to 85% r.h.|
@@ -72,24 +72,47 @@ We use an on-board STM32F030F4P6 to control the channels separately. The command
 ## Hardware Overview
 
 
+### Pin Map
+
+![](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/img/pin_map_front.jpg)
+
+![](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/img/pin_map_back.jpg)
+
+
+!!!Note
+    - The switch 1-4 have the same pin fuction, so for the other switches, you can refer to **NC1**/**COM1**/**NO1**.
+    - On the back of the PCB, there are two interfaces: SWD and I^2^C. The SWD interface is used by default when programming firmware, if you want to use the I^2^C(actually work as the boot UART), you should set the 
+    **BOOT** High.
+
 
 ### Schematic
+
+
+**Relay control**
 
 ![](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/img/schematic.jpg)
 
 
-**K2** is the Relay module, there is a coil between **pin1** and **pin3** of K1. Defaultly, the **COM2** will connect to **NC2**.If the pin3 of K1 connected to the grand, then this coil will be 'open', so the **COM2** will connect to **NO2**; 
+**K2** is the Relay module, there is a coil between **pin1** and **pin3** of K1. Defaultly, the **COM2** will connect to **NC2**.If the pin3 of K1 connected to the grand, then this coil will be 'closed', so the **COM2** will connect to **NO2**.
 
 To open this coil, it requires about 90mA, however, normally the GPIO pin of Arduino only can afford 20mA(40mA max.). Therefor, we use a NPN transistors [S9013](https://github.com/SeeedDocument/Grove-2-Channel_SPDT_Relay/raw/master/res/Transistors_NPN_25V-500mA.pdf) which can proviede 500mA. 
 
-The **PA7** is pulled down by the 10k R2, if there is no signal, the 'Gate' of **Q2** will be 0v, and Q1 is closed, so that the K1 will be closed. If **PA7** becomes 5v, then the Q1 will be opened.
-**Pin3** of k1 will be connected to the GND of the system, for the K1 there will be 5V between **pin3** and **pin1**, so the coil will be 'opened', and the **COM2** will connect to **NO2** 
-
+The **PA7** is pulled down by the 10k R2, if there is no signal, the 'Gate' of **Q2** will be 0v, and Q2 is turned off, so that the K2 will be 'opened'. If **PA7** becomes 5v, then the Q2 will be turned on.
+**Pin3** of k2 will be connected to the GND of the system, for the K2 there will be 5V between **pin3** and **pin1**, so the coil will be 'closed', and the **COM2** will connect to **NO2** 
 
 !!!Tip
     The **D1** is a [flyback diode(kickback diode)](https://en.wikipedia.org/wiki/Flyback_diode). A flyback diode is a diode connected across an inductor used to eliminate flyback, which is the sudden voltage spike seen across an inductive load when its supply current is suddenly reduced or interrupted. It is used in circuits in which inductive loads are controlled by switches, and in switching power supplies and inverters.
 
 
+**Bi-directional level shifter circuit**
+![](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/img/schematic_1.jpg)
+
+
+This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of this sensor use 3.3V, if the I<sup>2</sup>C bus of the Arduino use 5V, this circuit will be needed. In the schematic above, **Q17** and **Q18** are N-Channel MOSFET [2N7002A](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/AN10441.pdf)
+
+
+!!!NOTE
+        In this section we only show you part of the schematic, for the full document please refer to the [Resources](/#resources)
 
 
 ## Platforms Supported
@@ -164,12 +187,12 @@ The **PA7** is pulled down by the 10k R2, if there is no signal, the 'Gate' of *
 
 - **Step 2.** Refer to [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
-- **Step 3.** Restart the Arduino IDE. Open “BME680” example via the path: **File --> Examples --> Multi Channel Relay Arduino Library --> four_channel_relay_control**. 
+- **Step 3.** Restart the Arduino IDE. Open example via the path: **File --> Examples --> Multi Channel Relay Arduino Library --> four_channel_relay_control**. 
 
 ![](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/img/path.jpg)
 
 
-or, you can just copy the following code into a new sketch in the Arduino IDE.
+Or, you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 ```c++
 #include <multi_channel_relay.h>
@@ -259,11 +282,10 @@ void loop()
 
 - **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
-- **Step 5.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time. if every thing goes well, you will get the result:
-
+- **Step 5.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time.
 
 !!!success
-    Meanwhile, you will see the on-board LEDs alternately lit and extinguished.
+     If every thing goes well, you will get the result. Meanwhile, you will see the on-board LEDs alternately lit and extinguished.
 
 ```c++
 Scanning...
@@ -284,7 +306,9 @@ Channel 1 on
 Channel 2 on
 ```
 
+
 ![](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/img/_DAS5552.MOV_20180822_104218.gif)
+
 
 
 !!!Note
@@ -365,14 +389,38 @@ void setup()
 
 ```
 
+## FAQ
+
+**Q1: How to burn the firmware?**
+
+**A1:** We recommend you use the J-Link burner and the WSD interface to burn the firmware. 
+
+You can download the firmware here:
+
+[Factory firmware](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/res/Grove-4-Channel-SPDT-Relay-Firmware.bin)
+
+We recommed you use the J-flash for the software:
+
+[J-flash](https://www.segger.com/downloads/jlink#J-LinkSoftwareAndDocumentationPack)
+
+
+![](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/img/J-flash.jpg)
+
 ## Resources
 
-- **[Zip]** [Grove-2-Channel SPDT Relay eagle files](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/res/Grove-4-Channel_SPDT_Relay.zip)
-- **[Zip]** [Multi Channel Relay Arduino Library](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/res/Multi_Channel_Relay_Arduino_Library-master.zip)
+- **[Zip]** [Grove-4-Channel SPDT Relay eagle files](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/res/Grove-4-Channel_SPDT_Relay.zip)
+- **[Zip]** [Multi Channel Relay Arduino Library](https://github.com/Seeed-Studio/Multi_Channel_Relay_Arduino_Library/archive/master.zip)
+- **[Bin]** [Factory firmware](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/res/Grove-4-Channel-SPDT-Relay-Firmware.bin)
 - **[PDF]** [Datasheet of SRD 05VDC-SL-C Relay](https://github.com/SeeedDocument/Grove-2-Channel_SPDT_Relay/raw/master/res/SRD_05VDC-SL-C.pdf)
 - **[PDF]** [Datasheet of S9013](https://github.com/SeeedDocument/Grove-2-Channel_SPDT_Relay/raw/master/res/Transistors_NPN_25V-500mA.pdf)
 - **[PDF]** [Datasheet of STM32](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/res/STM32F030F4P6.pdf)
 
+
+## Project
+
+This is the introduction Video of this product, simple demos, you can have a try.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5NBdUr5D-8M?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Tech Support
 Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).
