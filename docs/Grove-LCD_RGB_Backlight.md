@@ -96,6 +96,7 @@ Here are some projects for your reference.
 
 **Hardware**
 
+
 - **Step 1.** Prepare the below stuffs:
 
 | Seeeduino V4.2 | Base Shield|  Grove-LCD RGB Backlight |

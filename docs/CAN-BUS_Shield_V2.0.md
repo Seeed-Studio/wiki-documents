@@ -422,6 +422,7 @@ Ever wanted to play a car/truck simulator with a real dashboard on your PC? Me t
 
 [![](https://github.com/SeeedDocument/CAN_BUS_Shield/blob/master/image/Wiki_makeitnow_logo.png?raw=true)](http://community.seeedstudio.com/project_detail.html?id=291)
 
+
 ### Hack your vehicle CAN-BUS
 
 ![](https://github.com/SeeedDocument/CAN_BUS_Shield/blob/master/image/project2.jpg?raw=true)

@@ -54,6 +54,7 @@ Here are some projects for your reference.
 | ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Mini_I2C_Motor_Driver_v1.0/master/img/Mini_toy_car.jpg)   | ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Mini_I2C_Motor_Driver_v1.0/master/img/Seeed_award2015.jpg)  |
 | [Make it NOW!](http://community.seeedstudio.com/project_detail.html?id=392)       | [Make it NOW!](http://community.seeedstudio.com/project_detail.html?id=1131)        |
 
+
 Specifications
 --------------
 
