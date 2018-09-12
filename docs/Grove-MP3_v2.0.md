@@ -51,7 +51,7 @@ Grove - MP3 v2.0 is a tiny-sized and compact audio module. It supports various a
 | Chip LDO output voltage                    | 3.3 V                                                                                                             |
 | Chip output current                        | 100mA(at Max.)                                                                                                    |
 | File formats supported                     | MP3, WAV, WMA                                                                                                     |
-| Maximum memory supported for SD card       | 32 GB                                                                                                             |
+| Maximum memory supported for SD card       | 8 GB                                                                                                             |
 | Sampling rate                              | 8 / 11.025 / 12 / 16 / 22.05 / 24 / 32 / 44.1 / 48(KHz)                                                           |
 
 
