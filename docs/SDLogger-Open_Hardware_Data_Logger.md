@@ -69,7 +69,7 @@ SDLogger is a simple serial logger based on [SparkFun](http://www.sparkfun.com/)
 
 1.  The FAT16/FAT32 firmware was originally designed by Roland Riegel and is released under GPL v2.
 
-2.  OpenLog hardware and firmware developed by [SparkFun](http://www.sparkfun.com/)/[Nathan Seidle's OpenLog](http://github.com/nseidle/OpenLog/wiki) and released under CC-SA v3 license
+2.  OpenLog hardware and firmware developed by [SparkFun](http://www.sparkfun.com/)/Nathan Seidle's OpenLog and released under CC-SA v3 license
 
 3.  Arduino SdFat library written by Bill Greiman and is released under GPL v3
 

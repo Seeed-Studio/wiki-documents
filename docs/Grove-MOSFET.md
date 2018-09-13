@@ -223,7 +223,7 @@ sudo python grove_mosfet.py
 - **[Eagle]** [Grove - MOSFET Schematic](https://raw.githubusercontent.com/SeeedDocument/Grove-MOSFET/master/res/Grove-MOSFET_Eagle_File.zip)
 - **[PDF]** [Grove - MOSFET Schematic PDF](https://github.com/SeeedDocument/Grove-MOSFET/raw/master/res/Grove%20-%20MOSFET%20.pdf)
 - **[Datasheet]** [CJQ4435 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-MOSFET/master/res/CJQ4435.pdf)
-- **[WIKI]** [MOSFET Wikipedia](http://en.wikipedia.org/wiki/MOSFET)
+- **[WIKI]** [MOSFET Wikipedia](https://en.wikipedia.org/wiki/MOSFET)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_MOSFET -->
 

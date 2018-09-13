@@ -41,7 +41,7 @@ Model: [WLS48188P](http://www.seeedstudio.com/depot/wifi-bee-p-823.html?cPath=13
 - Wireless Sensor Network using [Grove - XBee Carrier](https://seeeddoc.github.io/Grove-XBee_Carrier/)
 - Internet connectivity
 
-- Build endless network applications with [uIP TCP/IP Stack](http://en.wikipedia.org/wiki/UIP_(micro_IP)
+- Build endless network applications with [uIP TCP/IP Stack](https://en.wikipedia.org/wiki/UIP_(micro_IP))
 - Ideal for people wanting to learn and experiment with TCP/IP Stack
 
 ##   Schematic   ##

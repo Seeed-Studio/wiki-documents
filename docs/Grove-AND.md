@@ -9,7 +9,7 @@ sku:    110060026
 ---
 ![](https://github.com/SeeedDocument/Grove-AND/raw/master/img/AND_photo1.jpg)
 
-This module provides the function of a [logical AND gate](http://en.wikipedia.org/wiki/AND_gate). It is based on the 74HC1G08 chip, which is a high-speed Si-gate CMOS device that provides a 2-input AND function. The Grove - AND module therefore has two inputs on the left and one output on the right. The output is HIGH only when all the input signals are HIGH.
+This module provides the function of a [logical AND gate](https://en.wikipedia.org/wiki/AND_gate). It is based on the 74HC1G08 chip, which is a high-speed Si-gate CMOS device that provides a 2-input AND function. The Grove - AND module therefore has two inputs on the left and one output on the right. The output is HIGH only when all the input signals are HIGH.
 
 [![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Mixer-Pack-V2-(Electronic-blocks%2Cwithout-Arduino%2Cplug-and-play-system)-p-1867.html)
 

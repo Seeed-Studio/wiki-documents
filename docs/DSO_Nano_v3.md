@@ -284,7 +284,7 @@ The Nano has six triggering modes, accessible in the top left corner of the scre
 
 To set the triggering level, move cursor to <font color="red">Vt = ??.?mV </font>and press the up/down buttons. Press OK to display or hide the trigger level markers (horizontal green dotted lines). To fine tune triggering, you may tweak the trigger sensitivity range <font color="red">TR </font> and the <font color="red">trigger type</font>. By default the trigger type is set to <font color="red">up S</font> which means the trigger will fire when the signal crosses from the lower trigger line to the higher line. <font color="red">Down S </font>will likewise trigger on a falling signal edge.
 
-This could prevent mistaken triggering caused by noise, especially while measuring fast low-amplitude signals. If you set the sensitivity to 0, where the two trigger level markers overlap each other, you get level triggering. Please refer to [Wikipedia for more informaiton on oscilloscope triggering](http://en.wikipedia.org/wiki/Oscilloscope#Triggered_sweeps).
+This could prevent mistaken triggering caused by noise, especially while measuring fast low-amplitude signals. If you set the sensitivity to 0, where the two trigger level markers overlap each other, you get level triggering. Please refer to [Wikipedia for more informaiton on oscilloscope triggering](https://en.wikipedia.org/wiki/Oscilloscope#Triggered_sweeps).
 
 ###   Measurement
 

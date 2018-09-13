@@ -227,7 +227,7 @@ Below Groves can work with Logic DC Jack well:
 - **[Eagle]**    [Schematic in Eagle](https://github.com/SeeedDocument/Logic_DC_Jack/raw/master/res/Logic_DC_Jack_v1.0_SCH_PCB.zip)
 - **[PDF]**[Logic DC Jack v1.0 pdf](https://github.com/SeeedDocument/Logic_DC_Jack/raw/master/res/Logic%20DC%20Jack%20v1.0.pdf)
 - **[EAGLE]**[Logic DC Jack v1.0 sch](https://github.com/SeeedDocument/Logic_DC_Jack/raw/master/res/Logic%20DC%20Jack%20v1.0.sch)
--  **[Wik]**   [Wiki page of NOT Gate](https://en.wikipedia.org/wiki/Inverter_(logic_gate)
+-  **[Wik]**   [Wiki page of NOT Gate](https://en.wikipedia.org/wiki/Inverter_(logic_gate))
 - **[Wik]**    [Wiki page of AND Gate](https://en.wikipedia.org/wiki/AND_gate)
 
 ## Tech Support

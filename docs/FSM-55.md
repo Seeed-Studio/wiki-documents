@@ -119,7 +119,7 @@ Another reason for this board was I (gniibe) found that OpenOCD's SWD support is
 
 ###   Open Design
 
-*   Open Design: [http://en.wikipedia.org/wiki/Open_design](http://en.wikipedia.org/wiki/Open_design)
+*   Open Design: [https://en.wikipedia.org/wiki/Open_design](https://en.wikipedia.org/wiki/Open_design)
 
 ###   GCC
 

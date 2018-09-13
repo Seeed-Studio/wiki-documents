@@ -275,7 +275,7 @@ Now that our test setup is ready, let's play around with some AT Commands manual
 
 *   Create the setup as described in Step 1 above.
 *   Through your serial terminal software, send **AT+CMGF=1** and press the Enter key. The GPRS Shield can send SMSes in two modes: Text mode and PDU (or binary) mode. Since we want to send out a human readable message, we will select the text mode. The GPRS Shield will respond with an **OK**.
-*   Click "send new" option and send **AT+CMGS="+18888888888"**. This will instruct the GPRS Shield to start to accept text for a new message，numbers mean the specified phone number(replace the number with the phone number of the target phone). The GPRS Shield will send a '_**&gt;'**_ to remind you to type the message. Please note that phone numbers in any AT Command must follow [E.123 format](http://en.wikipedia.org/wiki/E.123) format.
+*   Click "send new" option and send **AT+CMGS="+18888888888"**. This will instruct the GPRS Shield to start to accept text for a new message，numbers mean the specified phone number(replace the number with the phone number of the target phone). The GPRS Shield will send a '_**&gt;'**_ to remind you to type the message. Please note that phone numbers in any AT Command must follow [E.123 format](https://en.wikipedia.org/wiki/E.123) format.
 
 *   Start to type your message, after finishing the typing, click "send hex" option and then send a hex: **1A**. The modem will accept the message and respond with an **OK**. A few moments later, the message should be received on the handset whose number you had specified. I sent "How are you ?". You can check the history by clicking "EXT". The commands history is listed below "Set Multi Char".
 

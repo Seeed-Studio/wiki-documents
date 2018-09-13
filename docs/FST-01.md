@@ -553,7 +553,7 @@ This change is within the margin of the design.
 
 It would be better to also replace C1 and C2 to 33pF together in that case, if you will do that from the beginning.
 
-See [explanation about load capacitance in Wikipedia](http://en.wikipedia.org/wiki/Pierce_oscillator#Load_capacitance).
+See [explanation about load capacitance in Wikipedia](https://en.wikipedia.org/wiki/Pierce_oscillator#Load_capacitance).
 
 **<big>Shield GND to Signal GND</big>**
 

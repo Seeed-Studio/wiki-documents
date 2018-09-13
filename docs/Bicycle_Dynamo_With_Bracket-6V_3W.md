@@ -192,7 +192,7 @@ A: That's *quite* doable but again, you'll need to change that (quite variable) 
 
 Cheers --Nighto 01:37, 10 June 2011 (CST)
 
-*   SUPPLIED DYNAMO IS MEANT TO BE MOUNTED ON FRONT FORK ONLY.  And any given dynamo will only work on one side. This dynamo is fairly inflexible in that respect. See [http://en.wikipedia.org/wiki/Bottle_dynamo](http://en.wikipedia.org/wiki/Bottle_dynamo) for a picture of a dynamo mounted on the front fork of a bike, facing forward.
+*   SUPPLIED DYNAMO IS MEANT TO BE MOUNTED ON FRONT FORK ONLY.  And any given dynamo will only work on one side. This dynamo is fairly inflexible in that respect. See [https://en.wikipedia.org/wiki/Bottle_dynamo](https://en.wikipedia.org/wiki/Bottle_dynamo) for a picture of a dynamo mounted on the front fork of a bike, facing forward.
 
 Many people who buy it here are using it for other purposes than bicycle lighting, so for them this all doesn't matter anyway.
 

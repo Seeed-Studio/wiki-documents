@@ -64,7 +64,7 @@ Ongoing projects:
 *   Semiconductor Analyzer - Use the DAC to test and chart the voltage response of a diode / transistor (and simply identify components, such as transistor pinout and polarity)
 *   RF spectrum analyzer
 *   A 2D X-Y mode that plots the analog channels against each other on two axes with a digital channel optionally functioning as a "beam" enable/disable.
-    *   [Something](http://forum.seeedstudio.com/viewtopic.php?f=22t=2458) seems to exist? Not in APP2.50 yet.
+    *   [Something](https://forum.seeedstudio.com/) seems to exist? Not in APP2.50 yet.
 
 *   A DMX Decoder/Analyser and generator (used in conjunction with an external RS485 IC) would make this a VERY useful gadget for theatre techs.
 

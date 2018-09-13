@@ -187,12 +187,12 @@ This demo will use an open source library [Music_Shield_Demo_2_Library](res/Musi
 
 7.Run the arduino program compile and upload the sketch of MusicShieldNewSdLib into Arduino board.
 
-Note: About the specific methods of some functions in the library, You can reference [the sofeware installation](http://seeedstudio.com/wiki/Music_Shield_V2.0#Software_Installation) of the Music Shield V2.0.
+Note: About the specific methods of some functions in the library, You can reference [the sofeware installation](http://wiki.seeedstudio.com/Music_Shield_V1.0/#software-installation) of the Music Shield V2.0.
 
 ##   Resources   ##
 
 - **[Eagle]**[Music Shield Eagle Files](https://github.com/SeeedDocument/Music_Shield_V1.0/raw/master/res/MusicShielEagleFiles.zip)
-- **[PDF]**[Music Shield pdf](https://github.com/SeeedDocument/Music_Shield_V1.0/blob/master/res/Music%20Shield pdf)
+- **[PDF]**[Music Shield pdf](https://github.com/SeeedDocument/Music_Shield_V1.0/raw/master/res/Music%20Shield.pdf)
 - **[Eagle]**[Music Shield sch](https://github.com/SeeedDocument/Music_Shield_V1.0/raw/master/res/Music%20Shield.sch)
 - **[PDF]**[Music Shield Schematic pdf](https://github.com/SeeedDocument/Music_Shield_V1.0/raw/master/res/Music_Shield.pdf)
 - **[Library]**[Music Shield Source code file for Arduino 0022](https://github.com/SeeedDocument/Music_Shield_V1.0/raw/master/res/Music_v1_14.zip)

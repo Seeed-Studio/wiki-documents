@@ -418,13 +418,13 @@ thingShadows.<span class="me1">on</span><span class="br0">(</span><span class="s
 
 ##  Resources
 
-*   [aws-iot-intel github page](https://github.com/intel-iot-devkit/aws-iot-intel)
+*   [aws-iot-intel github page](https://github.com/intel-iot-devkit/avs-alexa-iot-intel-speech-enabling-kit)
 
 *   [aws-iot-device-sdk-js github page](https://github.com/aws/aws-iot-device-sdk-js)
 
 *   [Intel UPM github page](https://github.com/intel-iot-devkit/upm)
 
-*   [AWS IoT Intel Github Page](https://github.com/intel-iot-devkit/aws-iot-intel)
+*   [AWS IoT Intel Github Page](https://github.com/intel-iot-devkit/avs-alexa-iot-intel-speech-enabling-kit)
 
 *   [AWS IoT MQTT update topic formate](http://docs.aws.amazon.com/iot/latest/developerguide/thing-shadow-mqtt.html#update-pub-sub-message)
 

@@ -39,7 +39,7 @@ The board is developed based on WM8960, a low power stereo codec. There are 2 mi
 - MIC_Land MIC_R: 2 Microphones on both sides of the board
 - RGB LED: 3 APA102 RGB LEDs, connected to SPI interface
 - WM8960: a low power stereo codec
-- Raspberry Pi 40-Pin Headers: support Raspberry Pi Zero, Raspberry Pi 1 B+, Raspberry Pi 2 B and Raspberry Pi 3 B
+- Raspberry Pi 40-Pin Headers: support Raspberry Pi Zero, Raspberry Pi 1 B+, Raspberry Pi 2 B , Raspberry Pi 3 B and Raspberry Pi 3 B+
 - POWER: Micro USB port for powering the ReSpeaker 2-Mics Pi HAT, please power the board for providing enough current when using the speaker.
 - I2C: Grove I2C port, connected to I2C-1
 - GPIO12: Grove digital port, connected to GPIO12 & GPIO13

@@ -48,7 +48,7 @@ The GPRS Shield is compatible with all boards which have the same form factor (a
 *   M2M (Machine 2 Machine) Applications - To transfer control data using SMS or GPRS between two machines located at two different factories.
 *   Remote control of appliances - Send SMS to turn on or off your washing machine at home while you are at your office.
 *   Remote Weather station or a Wireless Sensor Network - Make it with [Seeeduino Stalker](http://wiki.seeed.cc/Seeeduino_Stalker_V3.1/) and create a sensor node which is capable of transferring sensor data (like from a weather station - temperature, humidity etc.) to a web server (like [pachube.com](http://www.pachube.com)).
-*   Interactive Voice Response System - Couple the GPRS Shield with an MP3 Decoder and DTMF Decoder (besides an Arduino) to create an [Interactive Vocice Response System (IVRS)](http://en.wikipedia.org/wiki/Interactive_voice_response).
+*   Interactive Voice Response System - Couple the GPRS Shield with an MP3 Decoder and DTMF Decoder (besides an Arduino) to create an [Interactive Vocice Response System (IVRS)](https://en.wikipedia.org/wiki/Interactive_voice_response).
 *   Vehicle Tracking System - Couple the GPRS Shield with an Arduino and GPS module. Then install it in your car and publish your location live on the internet. It can be used as a automotive burglar alarm.
 
 ##  Cautions
@@ -188,7 +188,7 @@ We have produced a lot of extension boards that can make your platform board mor
       * Lock the SIM Card Holder
 ![](https://github.com/SeeedDocument/GPRS_Shield_v1.0/raw/master/img/SIM_card_inserted.jpg)
 
-*   **Make sure the antenna pad buckled properly** - A miniature coaxial RF connector is presented on the GPRS Shield board to connect a GSM Antenna. The connector presented on the GPRS Shield is called a [U.FL connector](http://en.wikipedia.org/wiki/Hirose_U.FL). The GSM The Antenna being attached on the GPRS Shield has an [SMA connector](http://en.wikipedia.org/wiki/SMA_connector) (and not an RP-SMA connector) on it. A patch cord is also supplied with the GPRS Shield to interface the antenna to the board. The connection topology is shown in the diagram below:
+*   **Make sure the antenna pad buckled properly** - A miniature coaxial RF connector is presented on the GPRS Shield board to connect a GSM Antenna. The connector presented on the GPRS Shield is called a [U.FL connector](https://en.wikipedia.org/wiki/Hirose_U.FL). The GSM The Antenna being attached on the GPRS Shield has an [SMA connector](https://en.wikipedia.org/wiki/SMA_connector) (and not an RP-SMA connector) on it. A patch cord is also supplied with the GPRS Shield to interface the antenna to the board. The connection topology is shown in the diagram below:
 
 ![](https://github.com/SeeedDocument/GPRS_Shield_v1.0/raw/master/img/The_antenna_pad.jpg)
 
@@ -324,7 +324,7 @@ Now that our test setup is ready, let's play around with some AT Commands manual
 
 *   Create the setup as described in Step 1 above.
 *   Through your serial terminal software, send **AT+CMGF=1** and press the Enter key. The GPRS Shield can send SMSes in two modes: Text mode and PDU (or binary) mode. Since we want to send out a human readable message, we will select the text mode. The GPRS Shield will respond with an **OK**.
-*   Click "send new" option and send **AT+CMGS="+918446043032"**. This will instruct the GPRS Shield to start to accept text for a new message，numbers mean the specified phone number(replace the number with the phone number of the target phone). The GPRS Shield will send a '_**&gt;'**_ to remind you to type the message. Please note that phone numbers in any AT Command must follow [E.123 format](http://en.wikipedia.org/wiki/E.123) format.
+*   Click "send new" option and send **AT+CMGS="+918446043032"**. This will instruct the GPRS Shield to start to accept text for a new message，numbers mean the specified phone number(replace the number with the phone number of the target phone). The GPRS Shield will send a '_**&gt;'**_ to remind you to type the message. Please note that phone numbers in any AT Command must follow [E.123 format](https://en.wikipedia.org/wiki/E.123) format.
 
 ![](https://github.com/SeeedDocument/GPRS_Shield_v1.0/raw/master/img/GPRS_send_a_message.jpg)
 

@@ -650,9 +650,6 @@ Bug Tracker is the place you can publish any bugs you think you might have found
 
 Click here to buy:[http://www.seeedstudio.com/depot/bluetooth-bee-p-598.html?cPath=139_142](http://www.seeedstudio.com/depot/bluetooth-bee-p-598.html?cPath=139_142).
 
-##   See Also   ##
-
-- [Bee series](https://seeeddoc.github.io/w/index.php?title=Bee_series&action=edit&redlink=1)
 
 ##   Licensing   ##
 

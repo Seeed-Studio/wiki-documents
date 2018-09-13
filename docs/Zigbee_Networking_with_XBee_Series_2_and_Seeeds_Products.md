@@ -221,7 +221,7 @@ This demo configures two XBee modules to connect to each other automatically upo
 
 ##  References
 
-*   Wikipedia Zigbee Page - [Device types ](http://en.wikipedia.org/wiki/ZigBee#Device_types) (CC-BY-SA)
+*   Wikipedia Zigbee Page - [Device types ](https://en.wikipedia.org/wiki/ZigBee#Device_types) (CC-BY-SA)
 
 ##  Related Projects
 

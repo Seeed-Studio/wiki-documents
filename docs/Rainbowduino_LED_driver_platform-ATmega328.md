@@ -758,7 +758,7 @@ Can easily be changed to use I2C; only one file (RainbowDash.pde) needs to be ch
 
 <big>Constant Current LED driver<big>
 
-This driver uses the MBI5168. The MBI5168 is a 8bit [shift register](http://en.wikipedia.org/wiki/Shift_register). It converts the serial data to parallel data. All 3 MBI5168 share the LE,CLK and OE input.
+This driver uses the MBI5168. The MBI5168 is a 8bit [shift register](https://en.wikipedia.org/wiki/Shift_register). It converts the serial data to parallel data. All 3 MBI5168 share the LE,CLK and OE input.
 
 ![](https://github.com/SeeedDocument/Rainbowduino_LED_driver_platform-ATmega328/raw/master/img/RAINBOW-Mbi-schema.png)
 
