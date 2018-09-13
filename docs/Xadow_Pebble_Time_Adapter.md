@@ -181,11 +181,11 @@ After building the firmware binary, you can follow the steps below to flash the 
 RePhone Community
 -----------------
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Xadow_Pebble_Time_Adapter/master/img/RePhone_Community-2.png)](http://community.seeedstudio.com/discover.html?t=RePhone)
+[![](https://raw.githubusercontent.com/SeeedDocument/Xadow_Pebble_Time_Adapter/master/img/RePhone_Community-2.png)](https://community.seeedstudio.com/discover.html?t=RePhone)
 
 We’ve been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the RePhone Community.
 
-Now join us in the [RePhone Community](http://community.seeedstudio.com/discover.html?t=RePhone)! Together we seek answers, make interesting stuff, care about each other, and share our experiences.
+Now join us in the [RePhone Community](https://community.seeedstudio.com/discover.html?t=RePhone)! Together we seek answers, make interesting stuff, care about each other, and share our experiences.
 
 Resources
 ---------

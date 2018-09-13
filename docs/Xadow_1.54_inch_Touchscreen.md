@@ -80,11 +80,11 @@ This TFT Display contains 240 x 240 pixels that can be controlled individually t
 
 ## Rephone Community
 ---
-[![](https://github.com/SeeedDocument/Xadow_1.54_Inch_Touchscreen/raw/master/images/300px-RePhone_Community-2.png)](http://community.seeedstudio.com/discover.html?t=RePhone)
+[![](https://github.com/SeeedDocument/Xadow_1.54_Inch_Touchscreen/raw/master/images/300px-RePhone_Community-2.png)](https://community.seeedstudio.com/discover.html?t=RePhone)
 
-We’ve been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the [RePhone Community](http://community.seeedstudio.com/discover.html?t=RePhone).
+We’ve been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the [RePhone Community](https://community.seeedstudio.com/discover.html?t=RePhone).
 
-Now join us in the [RePhone Community](http://community.seeedstudio.com/discover.html?t=RePhone)! Together we seek answers, make interesting stuff, care about each other, and share our experiences.
+Now join us in the [RePhone Community](https://community.seeedstudio.com/discover.html?t=RePhone)! Together we seek answers, make interesting stuff, care about each other, and share our experiences.
 
 ## Resources
 ---

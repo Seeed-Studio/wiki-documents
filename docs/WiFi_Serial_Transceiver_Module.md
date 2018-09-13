@@ -154,7 +154,7 @@ Build your own Wifi Scanner with few simple steps, all you need to do is prepare
 - Some cables
 - And most importantly, a HOT HEART ON ESP8266
 
-[So, why not make one for yourself?](http://community.seeedstudio.com/project_detail.html?id=220)
+[So, why not make one for yourself?](https://community.seeedstudio.com/project_detail.html?id=220)
 
 
 **Primary IoT Make with NodeMcu >ESP8266<**
@@ -169,11 +169,11 @@ An online Temperature&Humidity Monitor made with:
 
 
 
-Another easy trick, [why not make one for yourself?](http://community.seeedstudio.com/project_detail.html?id=232)
+Another easy trick, [why not make one for yourself?](https://community.seeedstudio.com/project_detail.html?id=232)
 
-Na, not enough? More [Awesome Projects with ESP8266](http://community.seeedstudio.com/discover.html?t=wio).
+Na, not enough? More [Awesome Projects with ESP8266](https://community.seeedstudio.com/discover.html?t=wio).
 
-Even more Awesome Projects On [Recipe](http://community.seeedstudio.com/projects.html#recipe)
+Even more Awesome Projects On [Recipe](https://community.seeedstudio.com/projects.html#recipe)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

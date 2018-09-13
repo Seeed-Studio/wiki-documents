@@ -80,7 +80,7 @@ Here are some funny projects for your reference.
 |BBG Acrylic Case|GPIO Control|Smart Light|
 |---------------|-----|--------------|
 |![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/project4.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/project5.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/project6.png)|
-|[MAKE IT NOW!](http://www.instructables.com/id/5-Design-of-Laser-Cut-Cases-for-5-Popular-Platform/)|[MAKE IT NOW!](https://community.seeedstudio.com/How-to-use-the-Grove-UART-port-as-a-GPIO-on-BBG-p-365.html)|[MAKE IT NOW!](http://community.seeedstudio.com/Smart-Light-Demo-with-BBG-%26amp%3B-BBG-Start-Kit(HA)-p-366.html)|
+|[MAKE IT NOW!](http://www.instructables.com/id/5-Design-of-Laser-Cut-Cases-for-5-Popular-Platform/)|[MAKE IT NOW!](https://community.seeedstudio.com/How-to-use-the-Grove-UART-port-as-a-GPIO-on-BBG-p-365.html)|[MAKE IT NOW!](https://community.seeedstudio.com/Smart-Light-Demo-with-BBG-%26amp%3B-BBG-Start-Kit(HA)-p-366.html)|
 
 
 ## Hardware Overview

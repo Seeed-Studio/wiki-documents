@@ -42,9 +42,9 @@ The Xadow GSM Breakout draws out 30 pins from the 35 pin Xadow connector to five
 ---
 ![](https://github.com/SeeedDocument/Xadow_GSM_Breakout/raw/master/img/300px-RePhone_Community-2.png)
 
-We’ve been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the [RePhone Community](http://community.seeedstudio.com/discover.html?t=RePhone).
+We’ve been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the [RePhone Community](https://community.seeedstudio.com/discover.html?t=RePhone).
 
-Now join us in the [RePhone Community](http://community.seeedstudio.com/discover.html?t=RePhone)! Together we seek answers, make interesting stuff, care about each other, and share our experiences.
+Now join us in the [RePhone Community](https://community.seeedstudio.com/discover.html?t=RePhone)! Together we seek answers, make interesting stuff, care about each other, and share our experiences.
 
 ## Resources
 ---

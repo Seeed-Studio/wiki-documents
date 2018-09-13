@@ -21,7 +21,7 @@ You don't need a Base unit to connect up to Grove modules. You can use a cable (
 
 ## Grove Projects
 
-Here are some project made with Grove for your reference, more projects please refer to [Recipe](http://community.seeedstudio.com/discover.html?t=Grove) or [Instructables](http://www.instructables.com/howto/Grove/).
+Here are some project made with Grove for your reference, more projects please refer to [Recipe](https://community.seeedstudio.com/discover.html?t=Grove) or [Instructables](http://www.instructables.com/howto/Grove/).
 
 | DIY a Humidifier | Personal Voice Assistant | Acrylic Monitor Stand |
 |------------------|--------------------------|-----------------------|

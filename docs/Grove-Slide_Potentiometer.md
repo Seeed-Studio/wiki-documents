@@ -34,7 +34,7 @@ Here are some projects for your reference.
 | **Arduino BoomBox**                                                  | **Arduino BeatBox**                                                    |
 |----------------------------------------------------------------------|------------------------------------------------------------------------|
 | ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Slide_Potentiometer/master/img/Recipe-Arduino_BoomBox.jpg)| ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Slide_Potentiometer/master/img/Recipe-Arduino_BeatBox.jpg)  |
-| [Make it NOW!](http://community.seeedstudio.com/project_detail.html?id=171)       | [Make it NOW!](http://community.seeedstudio.com/project_detail.html?id=187)         |
+| [Make it NOW!](https://community.seeedstudio.com/project_detail.html?id=171)       | [Make it NOW!](https://community.seeedstudio.com/project_detail.html?id=187)         |
 
 
 

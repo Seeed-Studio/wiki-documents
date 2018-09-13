@@ -88,7 +88,7 @@ Here is some funny project for your reference.
 |Automatic Humidifier|Snake Game|
 |-------|-------|
 |![enter image description here](https://raw.githubusercontent.com/SparkingStudio/I2C_LCD/master/images/AutomaticHumidifier.png)|![enter image description here](https://raw.githubusercontent.com/SparkingStudio/I2C_LCD/master/images/DIY_SnakeGame.png)|
-| [Make it Now](http://www.instructables.com/id/DIY-a-Simple-Automatic-Humidifier/) | [Make it Now](http://community.seeedstudio.com/project_detail.html?id=1621)|
+| [Make it Now](http://www.instructables.com/id/DIY-a-Simple-Automatic-Humidifier/) | [Make it Now](https://community.seeedstudio.com/project_detail.html?id=1621)|
 
 
 

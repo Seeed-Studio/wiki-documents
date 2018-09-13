@@ -83,7 +83,7 @@ Here are some projects for your reference.
 |Toothbrushing Instructor|LinkIt ONE Pager|LinkIt ONE IoT Demo|
 |------------------------|-------------------|--------------------|
 |![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_LCD_RGB_Backlight/master/images/project4.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_LCD_RGB_Backlight/master/images/project5.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_LCD_RGB_Backlight/master/images/project6.jpg)|
-|[Make it Now!](http://www.instructables.com/id/Toothbrushing-Instructor/)|[Make it Now!](http://www.instructables.com/id/LinkIt-ONE-Pager/)|[Make it Now!](http://community.seeedstudio.com/project_detail.html?id=78)|
+|[Make it Now!](http://www.instructables.com/id/Toothbrushing-Instructor/)|[Make it Now!](http://www.instructables.com/id/LinkIt-ONE-Pager/)|[Make it Now!](https://community.seeedstudio.com/project_detail.html?id=78)|
 
 
 ## Getting Started

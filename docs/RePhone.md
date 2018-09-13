@@ -113,13 +113,13 @@ To reset your RePhone to **DEFAULTS:**
 
 We’ve been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the RePhone Community.
 
-Now join us in the [RePhone Community](http://community.seeedstudio.com/discover.html?t=rephone)
+Now join us in the [RePhone Community](https://community.seeedstudio.com/discover.html?t=rephone)
 
 Together we seek answers, make interesting stuff, care about each other, and share our experiences.
 
 **Frequently Asked Questions**
 
-Some frequently asked questions in RePhone Community are collected and answered to the topic [ "Frequently Asked Questions of RePhone (FAQ)"](http://community.seeedstudio.com/topic_detail.html?id=5170#p23753),the topic will be kept updating whenever a new FAQ comes out.
+Some frequently asked questions in RePhone Community are collected and answered to the topic [ "Frequently Asked Questions of RePhone (FAQ)"](https://community.seeedstudio.com/topic_detail.html?id=5170#p23753),the topic will be kept updating whenever a new FAQ comes out.
 
 ## Resources
 The schematic diagrams of RePhone Modules are provided in the following link:

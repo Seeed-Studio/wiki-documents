@@ -58,11 +58,11 @@ The Xadow Audio integrates a speaker box and a microphone on one single board. T
 ## Make it now
 ---
 Check on awesome RePhone projects that has been achieved with RePhone.
-A Traceable [Dog Collar](http://community.seeedstudio.com/RePhone-Traceable-Dog-Collar-p-425.html). By using this collar, you are able to make a phone call to your dog.
+A Traceable [Dog Collar](https://community.seeedstudio.com/RePhone-Traceable-Dog-Collar-p-425.html). By using this collar, you are able to make a phone call to your dog.
 
-5 steps to make a traceable [Dog collar](http://community.seeedstudio.com/RePhone-Traceable-Dog-Collar-p-425.html) for your lovely puppy.
+5 steps to make a traceable [Dog collar](https://community.seeedstudio.com/RePhone-Traceable-Dog-Collar-p-425.html) for your lovely puppy.
 
-[![](https://github.com/SeeedDocument/Xadow_Audio/raw/master/images/450px-Dog_Collar.png.jpeg)](http://community.seeedstudio.com/RePhone-Traceable-Dog-Collar-p-425.html)
+[![](https://github.com/SeeedDocument/Xadow_Audio/raw/master/images/450px-Dog_Collar.png.jpeg)](https://community.seeedstudio.com/RePhone-Traceable-Dog-Collar-p-425.html)
 
 ## Module Connection
 ---
@@ -72,15 +72,15 @@ Connect the Modules as instructed, please bear in mind that the unfilled corner 
 
 ## RePhone Community
 ---
-[![](https://github.com/SeeedDocument/Xadow_Audio/raw/master/images/300px-RePhone_Community-2.png)](http://community.seeedstudio.com/discover.html?t=RePhone)
+[![](https://github.com/SeeedDocument/Xadow_Audio/raw/master/images/300px-RePhone_Community-2.png)](https://community.seeedstudio.com/discover.html?t=RePhone)
 
-We’ve been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the [RePhone Community](http://community.seeedstudio.com/discover.html?t=RePhone).
+We’ve been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the [RePhone Community](https://community.seeedstudio.com/discover.html?t=RePhone).
 
-Now join us in the [RePhone Community](http://community.seeedstudio.com/discover.html?t=RePhone)! Together we seek answers, make interesting stuff, care about each other, and share our experiences.
+Now join us in the [RePhone Community](https://community.seeedstudio.com/discover.html?t=RePhone)! Together we seek answers, make interesting stuff, care about each other, and share our experiences.
 
 **Frequently Asked Questions**
 
-Some frequently asked questions in [RePhone Community](http://community.seeedstudio.com/discover.html?t=RePhone) are collected and answered to the topic "Frequently Asked Questions of RePhone (FAQ)" , the topic will be kept updating whenever a new FAQ comes out.
+Some frequently asked questions in [RePhone Community](https://community.seeedstudio.com/discover.html?t=RePhone) are collected and answered to the topic "Frequently Asked Questions of RePhone (FAQ)" , the topic will be kept updating whenever a new FAQ comes out.
 
 
 ## Resources

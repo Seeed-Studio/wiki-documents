@@ -102,10 +102,10 @@ Check on awesome RePhone projects that has been achieved with RePhone.
 [![](https://raw.githubusercontent.com/SeeedDocument/Xadow_GSM-BLE/master/image/300px-RePhone_Community-2.png) ](http://www.forum.seeedstudio.com/viewforum.php?f=71&sid=b70f8138c89becf7701260bb41faf9f4)   
 We’ve been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the RePhone Community.
 
-Now join us in the [RePhone Community](http://community.seeedstudio.com/discover.html?t=rephone)! Together we seek answers, make interesting stuff, care about each other, and share our experiences.
+Now join us in the [RePhone Community](https://community.seeedstudio.com/discover.html?t=rephone)! Together we seek answers, make interesting stuff, care about each other, and share our experiences.
 
 ###Frequently Asked Questions  
-Some frequently asked questions in RePhone Community are collected and answered to the topic "[Frequently Asked Questions of RePhone (FAQ)](http://community.seeedstudio.com/topic_detail.html?id=5170#p23753)" , the topic will be kept updating whenever a new FAQ comes out.  
+Some frequently asked questions in RePhone Community are collected and answered to the topic "[Frequently Asked Questions of RePhone (FAQ)](https://community.seeedstudio.com/topic_detail.html?id=5170#p23753)" , the topic will be kept updating whenever a new FAQ comes out.  
 
 ##Resources  
 The schematic diagram of Xadow GSM+BLE is provided in the following link:  

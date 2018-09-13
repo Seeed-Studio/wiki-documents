@@ -147,7 +147,7 @@ Pulse frequency (Hz) in Horizontal Test= 7.5Q, Q is flow rate in L/min. (Results
 
 ## Related Projects
 
-It's a pity that we don't have any demo about G1/2 Water Flow Sensor in the [Recipe](http://community.seeedstudio.com/projects.html#recipe) yet.
+It's a pity that we don't have any demo about G1/2 Water Flow Sensor in the [Recipe](https://community.seeedstudio.com/projects.html#recipe) yet.
 
 Here we introduce some projects about [Grove-Water Sensor](http://www.seeedstudio.com/depot/Grove-Water-Sensor-p-748.html).
 
@@ -175,7 +175,7 @@ How it works:
 - Supply the variation in color by 10 RGB LEDs.
 
 
-[I want to make it.](http://community.seeedstudio.com/project_detail.html?id=103)
+[I want to make it.](https://community.seeedstudio.com/project_detail.html?id=103)
 
 [More Awesome Projects by Water Sensor](http://www.seeedstudio.com/recipe/index.php?query=water+sensor)
 
@@ -186,7 +186,7 @@ And only because of this, the open source community can be as prosperous as it i
 It does not matter what you are and what you have made, hacker, maker, artist or engineers.
 As long as you start sharing your works with others, you are being part of the open source community and you are making your contributions.
 
-Now share your awesome projects with us on [Recipe](http://community.seeedstudio.com/), and win a chance to become the Core User of Seeed.
+Now share your awesome projects with us on [Recipe](https://community.seeedstudio.com/), and win a chance to become the Core User of Seeed.
 
 - Core Users, are those who show high interests in Seeed products and make significant contributions on Recipe.
 
@@ -215,7 +215,7 @@ Here is the Sensors FAQ, people can go here to find questions and answers for th
 ## Resource
 ---
 - [Water flow sensor datasheet.pdf](https://github.com/SeeedDocument/G1_and_2_inch_Water_Flow_Sensor/raw/master/res/Water_flow_sensor_datasheet.pdf)
-- [Reading Water Flow rate with Water Flow Sensor](http://community.seeedstudio.com/topic_detail.html?id=575#p3632)
+- [Reading Water Flow rate with Water Flow Sensor](https://community.seeedstudio.com/topic_detail.html?id=575#p3632)
 - [Water Flow rate display on LCD](https://github.com/practicalarduino/WaterFlowGauge)
 - [datasheet for the material](http://garden.seeedstudio.com/images/4/4e/YEE70G30HSLNC..pdf)
 

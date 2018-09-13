@@ -58,17 +58,17 @@ Wio Node is well designed to provide simple and economic Wi-Fi solutions for pro
 - Internet of Things
 
 
-In fact, there're many projects in our [**recipe**](http://community.seeedstudio.com/projects.html?t=Wio), come and visit it to find some interesting projects or even share you own projects, I am sure it will gain a lot of fans for you.
+In fact, there're many projects in our [**recipe**](https://community.seeedstudio.com/projects.html?t=Wio), come and visit it to find some interesting projects or even share you own projects, I am sure it will gain a lot of fans for you.
 
 |Irrigation control system |The internet of led wall | Dog feeding machine|
 |---|---|---|
 |![](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/2.png)|![](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/1.png)|![](https://raw.githubusercontent.com/SeeedDocument/Wio_Node/master/pictures/3.png)|
-|[MAKE IT NOW](http://community.seeedstudio.com/project_detail.html?id=1274)    |[MAKE IT NOW](http://community.seeedstudio.com/project_detail.html?id=1594) |[MAKE IT NOW](http://community.seeedstudio.com/project_detail.html?id=1066)|
+|[MAKE IT NOW](https://community.seeedstudio.com/project_detail.html?id=1274)    |[MAKE IT NOW](https://community.seeedstudio.com/project_detail.html?id=1594) |[MAKE IT NOW](https://community.seeedstudio.com/project_detail.html?id=1066)|
 
 |Kickstarter Monitor|MIssing Call Monitor|Boss Key|
 |---|---|---|
 |![](https://raw.githubusercontent.com/SeeedDocument/Wio_Node/master/pictures/4.png)|![](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/5.png)|![](https://raw.githubusercontent.com/SeeedDocument/Wio_Node/master/pictures/6.png)|
-|[MAKE IT NOW](http://community.seeedstudio.com/project_detail.html?id=1081)    |[MAKE IT NOW](http://community.seeedstudio.com/project_detail.html?id=1059) |[MAKE IT NOW](http://community.seeedstudio.com/project_detail.html?id=1077)|
+|[MAKE IT NOW](https://community.seeedstudio.com/project_detail.html?id=1081)    |[MAKE IT NOW](https://community.seeedstudio.com/project_detail.html?id=1059) |[MAKE IT NOW](https://community.seeedstudio.com/project_detail.html?id=1077)|
 
 
 !!!Note
@@ -205,7 +205,7 @@ What is DoButton? DoButton is one of IFTTT's application that empowers you to cr
 
 |**IFTTT**|**DoButton**|
 |:---|:---|
-|[**Recipe**][DIY an Automatic Garden Irrigation without coding](http://community.seeedstudio.com/project_detail.html?id=1080)|[**Recipe**][How to feed your pets when you're not home](http://community.seeedstudio.com/project_detail.html?id=1066)|
+|[**Recipe**][DIY an Automatic Garden Irrigation without coding](https://community.seeedstudio.com/project_detail.html?id=1080)|[**Recipe**][How to feed your pets when you're not home](https://community.seeedstudio.com/project_detail.html?id=1066)|
 |[**Video**][How to use ITFFF](https://vimeo.com/148590984)|[**Video**][How to use DoButton](https://vimeo.com/146988454)|
 
 
@@ -309,7 +309,7 @@ The guide covers:
 
 ## FAQ
 ----
-Here are some questions that we usually received from new users. If you have any other issues when you are using Wio Node or other Wio products, welcome to the [Community of Wio](http://community.seeedstudio.com/topics.html?t=Wio) where there are many professional users waiting to give you advices and also many advanced users providing plenty of ideas on how to use Wio products!
+Here are some questions that we usually received from new users. If you have any other issues when you are using Wio Node or other Wio products, welcome to the [Community of Wio](https://community.seeedstudio.com/topics.html?t=Wio) where there are many professional users waiting to give you advices and also many advanced users providing plenty of ideas on how to use Wio products!
 
 **Q1. What's the difference between Wio Node and Wio Link?**
 
