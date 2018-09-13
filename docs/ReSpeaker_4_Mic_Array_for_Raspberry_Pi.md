@@ -40,7 +40,7 @@ Different from [ReSpeaker 2-Mics Pi HAT](https://www.seeedstudio.com/ReSpeaker-2
 
 - MIC: 4 analog microphones
 - LED: 12 APA102 programable RGB LEDs, connected to SPI interface
-- Raspberry Pi 40-Pin Headers: support Raspberry Pi Zero, Raspberry Pi 1 B+, Raspberry Pi 2 B and Raspberry Pi 3 B
+- Raspberry Pi 40-Pin Headers: support Raspberry Pi Zero, Raspberry Pi 1 B+, Raspberry Pi 2 B, Raspberry Pi 3 B and Raspberry Pi 3 B+
 - AC108: highly integrated quad-channel ADC with I2S/TDM output transition
 - I2C: Grove I2C port, connected to I2C-1
 - GPIO12: Grove digital port, connected to GPIO12 & GPIO13
