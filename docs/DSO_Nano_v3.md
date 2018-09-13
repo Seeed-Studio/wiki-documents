@@ -94,7 +94,7 @@ To ensure your safety &amp; avoid any damages to the product/connected devices, 
 <tr>
 <td> Max input voltage
 </td>
-<td> 80Vpp (by ×1 probe)
+<td> 40Vpp (by ×1 probe)
 </td></tr>
 <tr>
 <td> Coupling
