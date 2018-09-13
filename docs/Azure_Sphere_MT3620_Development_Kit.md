@@ -271,12 +271,14 @@ We build two demoes which combine Sphere dev kit and [Seeed Grove system](http:/
 
 | MT3620 Grove Shield |Seeeduino V4.2  | Base Shield  |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/mt3620groveshieldb_s.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/blank.jpg)|
+|![enter image description here](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/mt3620groveshieldb_s.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|
 |[Get One Now](https://www.seeedstudio.com/MT3620-Grove-Shield-p-3145.html)|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
 
 **System Diagram**
 
-<a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/demo.png" target="_blank"><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/demo.png"/></a>
+<a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/demo1.png" target="_blank"><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/demo1.png"/></a>
+
+<a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/demo2.png" target="_blank"><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/demo2.png"/></a>
 
 **MT3620 Grove Shield**
 
@@ -318,16 +320,16 @@ The [SC18IM700](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development
 - Step 9. Plug the MT3620 base shield to Azure Sphere MT3620 Development board.
 - Step 10. Plug the USB cable to Azure Sphere MT3620 Development board and PC.
 - Step 11. Plug the USB cable to Ardunio/Seeeduino and PC.
-- Step 11. Plug the power supply to Fan. 
+- Step 12. Plug the power supply to Fan. 
 
 
 ### Software
 
 The software include the smart fan simulation system and Azure Sphere MT3620 Development system. 
 
-For the smart fan simulation system, use the arduino board to read Grove-Blue LED button press/release input signal, output the PWM to control the fan speed and control the Grove-Blue LED button LED status as well. Then use the port 7 to communicate with Azure Sphere MT3620 Development system through UART. 
+- For the smart fan simulation system, use the arduino board to read Grove-Blue LED button press/release input signal, output the PWM to control the fan speed and control the Grove-Blue LED button LED status as well. Then use the port 7 to communicate with Azure Sphere MT3620 Development system through UART. 
 
-For Azure Sphere MT3620 Development system, Grove-4 Digital LED displays the temperature from Grove-Temperature&Humidity Sensor(SHT31) sensor, which demonstrates the UART-I2C shield function and MT3620 GPIO output function. Slide the Grove-Slide Potentiometer to change the fan speed, which demonstrates the MT3620 I/O input function. Configure a threshold temperature value from Azure Cloud, when value > threshold, Grove-relay turns fan on, otherwise turns fan off. User also can adjust Grove-Slide Potentiometer,  when the fan working status goes wrong, the fan's MCU will post the failure to Azure Sphere by UART, then failure report goes to the Azure Cloud and wait for maintance. 
+- For Azure Sphere MT3620 Development system, Grove-4 Digital LED displays the temperature from Grove-Temperature&Humidity Sensor(SHT31) sensor, which demonstrates the UART-I2C shield function and MT3620 GPIO output function. Slide the Grove-Slide Potentiometer to change the fan speed, which demonstrates the MT3620 I/O input function. Configure a threshold temperature value from Azure Cloud, when value > threshold, Grove-relay turns fan on, otherwise turns fan off. User also can adjust Grove-Slide Potentiometer,  when the fan working status goes wrong, the fan's MCU will post the failure to Azure Sphere by UART, then failure report goes to the Azure Cloud and wait for maintance. 
 
 **Smart Fan Simulation System**
 
@@ -347,6 +349,21 @@ For Azure Sphere MT3620 Development system, Grove-4 Digital LED displays the tem
 - Step 3. Open the main.c under Source Files. 
 - Step 4. Modify wifiSsid and wifiPsk.
 - Step 5. Follow [Build and run the Blink sample](https://docs.microsoft.com/en-us/azure-sphere/quickstart/qs-blink-application#build-and-run-the-blink-sample) to run Azure Sphere Code.
+
+**Demo Video**
+
+Pending for video...
+
+## Resource
+
+- **[Product]** [Azure Sphere MT3620 Development Kit Product Brief](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/product_document/Azure%20Sphere%20MT3620%20Development%20Kit%20Product%20Brief-2018-09-10.pdf)
+- **[Product]** [Welcome to Azure Sphere](https://docs.microsoft.com/en-us/azure-sphere/)
+- **[Certification]** [Azure Sphere MT3620 Development Kit-CE](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-CE.zip)
+- **[Certification]** [Azure Sphere MT3620 Development Kit-FCC](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-FCC-FCC.zip)
+- **[Certification]** [Azure Sphere MT3620 Development Kit-MIC](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-MIC.zip)
+- **[DataSheet]]** [MediaTek MT3620 Product Brief](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/datasheet/MediaTek%20MT3620%20Product%20Brief.pdf)
+- **[DataSheet]** [DS_FT4232H](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/datasheet/DS_FT4232H.pdf)
+- **[Mechanical]** [Azure Sphere MT3620 Development Board-2D-Drawing](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/tree/master/mechanical)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
