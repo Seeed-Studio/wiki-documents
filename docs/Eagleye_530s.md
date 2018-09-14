@@ -1235,8 +1235,6 @@ A2: Find the D401 diode as below picture, remove D401 diode by soldering, short 
 ![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/Auto_boot_2.jpg)
 
 
-A1: Yes. Here are the compatiable list. 
-
 ## Resources
 
 - **[PDF]** [ARTIK™ 530s SoM Module Datasheet](https://developer.artik.io/downloads/hw-datasheet-artik-530-v1-0-pdf/download)
