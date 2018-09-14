@@ -1226,6 +1226,16 @@ A1: Yes. Here are the compatiable list.
 | 103030028 | [Raspberry Pi RS232 Board v1.0](https://www.seeedstudio.com/Raspberry-Pi-RS232-Board-v1.0-p-2408.html)         | Refer to Play with Shield            |
 | 114990835 | [Raspberry Pi HDMI LCD (7 inch)](https://www.seeedstudio.com/Raspberry-Pi-HDMI-LCD-%287-inch%29-p-2763.html)   | Display works well except the touch. |
 
+- Q2: How to set the auto-boot function?
+
+A2: Find the D401 diode as below picture, remove D401 diode by soldering, short the D401's two pins by soldering a solder dot. 
+
+![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/Auto_boot_1.jpg)
+
+![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/Auto_boot_2.jpg)
+
+
+A1: Yes. Here are the compatiable list. 
 
 ## Resources
 
