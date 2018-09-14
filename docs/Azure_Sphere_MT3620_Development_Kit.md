@@ -10,11 +10,13 @@ sku:
 
 ![enter image description here](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/azure.jpg)
 
-Azure Sphere MT3620 Development Kit is specially designed for rapid prototyping and help developer experience Azure Sphere technology. MT3620 is the first Azure Sphere certified MCU. Azure Sphere certified MCUs are a new class of secured, connected crossover microcontrollers. MT3620 features three user-accessible microcontroller cores, one application processor subsystem based on an ARM Cortex-A7 core which runs at up to 500MHz, two general purpose ARM Cortex-M4F I/O subsystems, each of which runs at up to 200MHz. MT3620 were designed to support real-time requirements when interfacing with a variety of on-chip peripherals including UART, I2C, SPI, I2S, and ADC. It has built-in security subsystem with its own dedicated CM4F core for secure boot and secure system operation, dual-band 802.11a/b/g/n Wi-Fi.
+Azure Sphere MT3620 Development Kit is specially designed to support rapid prototyping and to enable developers to experience Azure Sphere technology. MT3620 is the first Azure Sphere certified MCU. Azure Sphere certified MCUs are a new class of secured, connected crossover microcontrollers. MT3620 features three user-accessible microcontroller cores: one ARM Cortex-A7 core and two general purpose ARM Cortex-M4F cores. The MT3620 is designed to support real-time requirements when interfacing with a variety of on-chip peripherals including GPIO, UART, I2C, SPI, I2S, PWM and ADC. It has a built-in security subsystem with its own dedicated CM4F core for secure boot and secure system operation, along with dual-band 802.11 b/g/n Wi-Fi.
+
+Please note that the current Azure Sphere software release does not support all features of the MT3620 hardware, including the two general purpose ARM Cortex-M4F cores, some peripheral interfaces (ADC, I2C, I2S, PWM and SPI), Wi-Fi 802.11a, and RTC with clock selection and battery backup. For ADC and I2C, customers can use [MT3620 Grove Shield board](https://www.seeedstudio.com/MT3620-Grove-Shield-p-3145.html), which has a UART to I2C chip and a I2C12-bit ADC chip.
 
 The MT3620 Development Kit has expanded most MT3620 hardware resources on the expansion pin headers, by wiring to breadboard or adding a shield board , user can easily connect to other hardware accessories.
 
-The Azure Sphere operating system is pre-installed on the MT3620 and is designed to work with the Azure Sphere Security Service to create a secured IoT platform. Together the Azure Sphere OS and security service deliver:  
+The Azure Sphere operating system is pre-installed on the MT3620 and is designed to work with the Azure Sphere Security Service to create a secured IoT platform. Their features are：
 
 - Certificate-based device authentication to any web service
 - Software attestation and secure boot
@@ -22,7 +24,9 @@ The Azure Sphere operating system is pre-installed on the MT3620 and is designed
 - Ongoing security updates
 - An integrated, secured end-to-end IoT solution
 
-MT3620 software development is supported using the powerful Microsoft Visual Studio IDE: Install Visual Studio and the Azure Sphere extension, plug the development board into a PC over USB, and start developing IoT applications with unprecedented levels of security.
+MT3620 software development is supported using the powerful Microsoft Visual Studio IDE:
+- Install [Visual Studio](https://visualstudio.microsoft.com/) (Support Community, Enterprise or Professional) and the Azure Sphere extension, plug the development board into a PC over USB, and start developing IoT applications with unprecedented levels of security.
+- To use the MT3620 Dev Board for Azure Sphere, you’ll need a Windows 10 PC with the latest Windows Updates, along with [Azure Sphere software development kit](http://aka.ms/AzureSphereSDK) (SDK). 
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/iiDF26HNh-Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
@@ -37,12 +41,11 @@ MT3620 software development is supported using the powerful Microsoft Visual Stu
 
 ## Features
 
-- Azure Sphere: End-to-end security for IoT devices.
-- Dual-band 802.11 a/b/g/n with antenna diversity.
-- Tri-core microcontroller with on-chip RAM & flash.
-- Microsoft Visual Studio development environment.
-- Online authentication & updates for device lifetime.
-- Expand UART, I2C, I2S, SPI, ADC, GPIO resource on pin header.
+- Azure Sphere: End-to-end security for IoT devices
+- Dual-band 802.11 b/g/n with antenna diversity
+- Tri-core microcontroller with on-chip RAM & flash
+- Microsoft Visual Studio development environment
+- Online authentication & updates for device lifetime
 
 ## Specification
 
@@ -86,7 +89,7 @@ MT3620 software development is supported using the powerful Microsoft Visual Stu
   </tr>
   <tr>
     <td class="tg-amwm">Connectivity</td>
-    <td class="tg-0lax">2.4/5GHz dual-band 802.11a/b/g/n Wi-Fi</td>
+    <td class="tg-0lax">2.4/5GHz dual-band 802.11 b/g/n Wi-Fi</td>
   </tr>
   <tr>
     <td class="tg-amwm">I2S</td>
@@ -214,9 +217,12 @@ The Azure Sphere MT3620 Development Kit contains highly sensitive electronic cir
 
 ## Applications
 
-- Agriculture
-- Building
-- Public safety
+- Home/Building/Facilities
+- Automation
+- Security
+- Equipment Management
+- Utilities
+- Public Safety
 
 !!!Tip
     To understand how Azure Sphere works in a real-world setting, consider [Contoso, Ltds cenario](https://docs.microsoft.com/en-us/azure-sphere/product-overview/scenario).
@@ -233,7 +239,7 @@ The Azure Sphere MT3620 Development Kit contains highly sensitive electronic cir
 
 ## Quickstarts for Azure Sphere
 
-To use MT3620 Dev Board for Azure Sphere, you’ll need a Windows 10 PC with the latest Windows Updates, alongwith the Visual Studio Tools for Azure Sphere (which will be available for download from Microsoft). These tools will include application templates, development tools and the Azure Sphere software development kit (SDK).
+To use MT3620 Dev Board for Azure Sphere, you’ll need a Windows 10 PC with the latest Windows Updates, alongwith the Visual Studio Tools for Azure Sphere (which will be available for download from Microsoft). These tools will include application templates, development tools and the Azure Sphere software development kit ([SDK]( aka.ms/AzureSphereSDK)).
 
 The quickstarts guide you through:
 
@@ -249,9 +255,9 @@ The quickstarts guide you through:
 
 We build two demoes which combine Sphere dev kit and [Seeed Grove system](http://wiki.seeedstudio.com/Grove_System/). 
 
-**Demo1**: Sphere performs as an MCU, which connects with temperature sensor(SHT31), relay, fan, display, analog device. Demo simulates a fan with IoT connectivity, people can measure the ambient temperature and setup a threshold value to turn on/off the fan from Azure Cloud. The temperature will display on the LED display. User can swap the resistor to change the fan’s speed level from 0,1,2,3(0 means switch off the fan).
+**Demo1**: MT3620 Dev Board performs as an MCU, which connects with temperature sensor(SHT31), relay, fan, display, analog device. Demo simulates a fan with IoT connectivity, people can measure the ambient temperature and setup a threshold value to turn on/off the fan from Azure Cloud. The temperature will display on the LED display. User can swap the resistor to change the fan’s speed level from 0,1,2,3(0 means switch off the fan).
 
-**Demo2**: Sphere works as an IoT safety connectivity device, which will be connect to an already made appliance, the appliance has its own MCU , which in this demo, we use an Arduino to simulate a fan’s control board, the board can get the status of the fan’s motor data , by analyzing the data , people can get the failure status and send maintainer to fix it. By pushing the button, this simulates the health status of the fan device , when button being pushed, that means the device need maintenance.
+**Demo2**: MT3620 Dev Board works as an IoT safety connectivity device, which will be connect to an already made appliance, the appliance has its own MCU , which in this demo, we use an Arduino to simulate a fan’s control board, the board can get the status of the fan’s motor data , by analyzing the data , people can get the failure status and send maintainer to fix it. By pressing the button, this simulates the health status of the fan device , when button being pressed, that means the device need maintenance.
 
 ### Hardware
 
@@ -282,9 +288,9 @@ We build two demoes which combine Sphere dev kit and [Seeed Grove system](http:/
 
 **MT3620 Grove Shield**
 
-The current Azure Sphere software release does not support all features of the [MT3620](https://www.mediatek.com/products/azureSphere/mt3620) hardware. For example, the following are **not yet supported** in software: ADC, I2C, I2S, PWM and SPI peripheral interfaces, only **GPIO and UART are supported**. 
+Since [Azure Sphere SDK](http://aka.ms/AzureSphereSDK) has not yet supported ADC and I2C on MT3620. This shield serves as an interface between MT3620 UART port and external I2C devices, like the I2C temperature sensor. The basic function of the shield is to help to connect to I2C external device. By using an I2C compatible ADC chip, developer can also read the analog data from analog port.
 
-MT3620 Grove Shield includes 2 chips, AD7992(Anlog to I2C) and SC18IM700(I2C to UART) to enable the ADC and I2C function from hardware side. So the analog sensors' signal go through AD7992 and then SC18IM700 to UART of develop board. The I2C sensors go through SC18IM700 to UART of develop board as well.
+[MT3620 Grove Shield](https://www.seeedstudio.com/MT3620-Grove-Shield-p-3145.html) includes 2 chips, AD7992(Anlog to I2C) and SC18IM700(I2C to UART) to enable the ADC and I2C function from hardware side. So the analog sensors' signal go through AD7992 and then SC18IM700 to UART of develop board. The I2C sensors go through SC18IM700 to UART of develop board as well.
 
 The [AD7992](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/datasheet/AD7992.pdf) is a 12-bit, low power, successive approximation ADC with an I2C-compatible interface. It transforms the anlog signal A0, A1 to I2C data.
 
