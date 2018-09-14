@@ -56,7 +56,7 @@ dummy.
 ## Specification
 
 - 2 x X-Power AC108 ADC
-- 4 x high performance microphones
+- 6 x high performance microphones
 - 1 x X-Power AC101 DAC
 - Voice output:
     - 3.5mm headset audio jack
