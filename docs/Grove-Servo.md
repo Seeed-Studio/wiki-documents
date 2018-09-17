@@ -149,13 +149,21 @@ void loop() {
 
 - Upload the sketch. We can see the servo sweep.
 
-Resources
----------
+## Resources
 
 - **[Document]** [Understanding RC Servos](http://www.rchelicopterfun.com/rc-servos.html)
 - **[Library]**[Arduino Tutorial - Servo Library](https://www.arduino.cc/en/Reference/Servo)
 - **[Demo]** [Digital/Analog Clock - Arduino + PaperCraft](http://www.instructables.com/id/DigitalAnalog-Clock-Arduino-PaperCraft/?ALLSTEPS)
 - **[Demo]** [Low Cost Hobby Servo XY Table](http://www.instructables.com/id/Low-Cost-Hobby-Servo-XY-Table/?ALLSTEPS)
+
+## Projects
+
+**Servomotor Grove module**:
+ 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XNPn7AUmgqU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8GTej6Lv8us" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
