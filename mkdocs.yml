@@ -410,6 +410,7 @@ pages:
           - Grove - IMU 10DOF: Grove-IMU_10DOF.md
           - Grove - IMU 10DOF v2.0: Grove-IMU_10DOF_v2.0.md
           - Grove - IMU 9DOF v2.0: Grove-IMU_9DOF_v2.0.md
+          - Grove - IMU 9DOF(lcm20600+AK09918): Grove-IMU_9DOF-lcm20600+AK09918.md
           - Grove - IR Distance Interrupter v1.2: Grove-IR_Distance_Interrupter_v1.2.md
           - Grove - Infrared Receiver: Grove-Infrared_Receiver.md
           - Grove - Infrared Reflective Sensor: Grove-Infrared_Reflective_Sensor.md
@@ -454,6 +455,7 @@ pages:
           - Grove - UV Sensor: Grove-UV_Sensor.md
           - Grove - Ultrasonic Ranger: Grove-Ultrasonic_Ranger.md
           - Grove - Voltage Divider: Grove-Voltage_Divider.md
+          - Grove - Vibration Sensor(SW-420): Grove-Vibration_Sensor_SW-420.md
           - Grove - Water Sensor: Grove-Water_Sensor.md
           - Grove - XBee Carrier: Grove-XBee_Carrier.md
           - Grove - TF Mini LiDAR: Grove-TF_Mini_LiDAR.md
