@@ -37,7 +37,9 @@ MT3620 software development is supported using the powerful Microsoft Visual Stu
 |Azure Sphere MT3620 Development Kit JP Version|[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Azure-Sphere-MT3620-Development-Kit_JP-Version-p-3135.html)|
 |Azure Sphere MT3620 Development Kit EU Version|[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Azure-Sphere-MT3620-Development-Kit_EU-Version-p-3134.html)|
 
- If you need help on version selection, please check the [Countries or regions available list](https://view.officeapps.live.com/op/view.aspx?src=https://statics3.seeedstudio.com/document/Available_country.docx) for more details.
+ 
+!!!Warning
+    If you need help on version selection, please check the [Countries or regions available list](https://view.officeapps.live.com/op/view.aspx?src=https://statics3.seeedstudio.com/document/Available_country.docx) for more details.
 
 ## Features
 
@@ -229,13 +231,59 @@ The Azure Sphere MT3620 Development Kit contains highly sensitive electronic cir
 
 ## Qualification and approvals
 
-| US FCC | Europe CE | Japan MIC |ROHS |
-|--------|-----------|-----------|-----------|
-| [![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/fcc.png)](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-FCC-FCC.zip)       |   [![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/ce.png)](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-CE.zip)        |  [![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/mic.jpg)](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-MIC.zip)         |![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/rohs-logo.jpg)|
 
-- CE ID: 18/0331/SZ
-- FCC ID: Z4T-MT3620DEVB 
-- MIC ID: CSRT18207
+<div class="method1" style="width:16%">
+
+<p style="text-align:center"><a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-FCC-FCC.zip" target="_blank"><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/FCC.jpg"/></a></p>
+
+</div>
+
+
+
+<div class="method1" style="width:16%">
+
+<p style="text-align:center"><a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-CE.zip" target="_blank"><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/CE.jpg" /></a></p>
+
+</div>
+
+
+
+<div class="method1" style="width:16%">
+
+<p style="text-align:center"><a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-MIC.zip" target="_blank"><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/mic.jpg" /></a></p>
+
+</div>
+
+
+<div class="method1" style="width:16%">
+
+<p style="text-align:center"><a href="" target="_blank"><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/RoHS.jpg" /></a></p>
+
+</div>
+
+
+<style>
+.method1{
+  text-align:center;
+  float:left;
+}
+.title{
+font-size:1px;
+text-indent:1px;
+line-height:3px
+}
+</style>
+
+
+
+<div class="title" style="width:39%">
+.
+</div>
+
+
+- FCC ID: [Z4T-MT3620DEVB](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-FCC-FCC.zip) 
+- CE ID: [18/0331/SZ](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-CE.zip)
+- MIC ID: [CSRT18207](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-MIC.zip)
 
 ## Quickstarts for Azure Sphere
 
@@ -264,9 +312,9 @@ We build two demoes which combine Sphere dev kit and [Seeed Grove system](http:/
 **Part List**
 
 
-| MT3620 development kits | Grove - Temperature&Humidity Sensor (SHT31)|  Grove - Relay |
+| MT3620 development kits | Grove-Temperature&Humidity|  Grove - Relay |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/azure_s.jpg)|![enter image description here](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/SHT3_s.jpg)|![enter image description here](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/Relay_s.jpg)|
+|![enter image description here](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/azure_s.jpg)|![enter image description here](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/SHT3_s.jpg)|![enter image description here](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/relay.jpg)|
 |[Get One Now](https://www.seeedstudio.com/Azure-Sphere-MT3620-Development-Kit-p-3052.html)|[Get One Now](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT3-p-2655.html)|[Get One Now](https://www.seeedstudio.com/Grove-Relay-p-769.html)|
 
 | Grove - Slide Potentiometer | Grove - 4-Digit Display |   Grove - Blue LED Button  |
@@ -376,6 +424,8 @@ For detail operation, please refer to the video.
 - **[DataSheet]]** [MediaTek MT3620 Product Brief](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/datasheet/MediaTek%20MT3620%20Product%20Brief.pdf)
 - **[DataSheet]** [DS_FT4232H](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/datasheet/DS_FT4232H.pdf)
 - **[Mechanical]** [Azure Sphere MT3620 Development Board-2D-Drawing](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/tree/master/mechanical)
+- **[FAQ Web]** [Azure Sphere Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=azuresphere)
+- **[FAQ Web]** [Azure Sphere Github issues](https://github.com/MicrosoftDocs/azure-sphere-issues/issues?utf8=%E2%9C%93&q=is%3Aissue)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
