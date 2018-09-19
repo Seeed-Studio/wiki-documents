@@ -37,7 +37,7 @@ MT3620 software development is supported using the powerful Microsoft Visual Stu
 |Azure Sphere MT3620 Development Kit JP Version|[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Azure-Sphere-MT3620-Development-Kit_JP-Version-p-3135.html)|
 |Azure Sphere MT3620 Development Kit EU Version|[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Azure-Sphere-MT3620-Development-Kit_EU-Version-p-3134.html)|
 
-
+ If you need help on version selection, please check the [Countries or regions available list](https://view.officeapps.live.com/op/view.aspx?src=https://statics3.seeedstudio.com/document/Available_country.docx) for more details.
 
 ## Features
 
@@ -358,7 +358,7 @@ The software include the smart fan simulation system and Azure Sphere MT3620 Dev
 
 **Demo Video**
 
-Pending for video...
+<iframe width="1189" height="669" src="https://www.youtube.com/embed/KXThR9RUNvw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Resource
 
