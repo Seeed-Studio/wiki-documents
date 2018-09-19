@@ -353,10 +353,16 @@ The software include the smart fan simulation system and Azure Sphere MT3620 Dev
 - Step 1. Download [Azure Sphere Code](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/sdk/Azure_Sphere_Sample_Smart_Fan-master/Azure_Sphere_Code.zip) and unzip. 
 - Step 2. Follow [Quickstarts for Azure Sphere](https://docs.microsoft.com/en-us/azure-sphere/quickstart/qs-overview) to open the **AzureSphereDemo2.vcxproj** project.
 - Step 3. Open the main.c under Source Files. 
-- Step 4. Modify wifiSsid and wifiPsk.
-- Step 5. Follow [Build and run the Blink sample](https://docs.microsoft.com/en-us/azure-sphere/quickstart/qs-blink-application#build-and-run-the-blink-sample) to run Azure Sphere Code.
+- Step 4. Modify wifiSsid and wifiPsk @line21 and 22.
+- Step 5. Connect the demo to Azure IoT.
+- Step 6. Click Build -> Rebuild Solution directly to the device.
+- Step 7. Use the Remote Debug Tool to access the device.  
+- Step 8. See the stream back temperature data from console.
+- Step 9. Configure the device explorer and link the physical deivces and the devices on the cloud.
+- Step 10. Press the temperature sensor and see the trigger message on console.
+- Step 11. Press the button to simulate the fan error and see the status on the console. 
 
-**Demo Video**
+For detail operation, please refer to the video. 
 
 <iframe width="1189" height="669" src="https://www.youtube.com/embed/KXThR9RUNvw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
