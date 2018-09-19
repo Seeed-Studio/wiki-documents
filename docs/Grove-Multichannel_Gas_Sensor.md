@@ -34,10 +34,6 @@ The sensor value only reflects the approximated trend of gas concentration in a 
 [![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Multichannel-Gas-Sensor-p-2502.html)
 
 
-!!!Warning
-    This is not a professional sensor, it can not be used for professional measurements, can only be used for reference.
-
-
 ## Before usage
 
 ### Related Reading
