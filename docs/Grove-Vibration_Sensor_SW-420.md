@@ -76,7 +76,7 @@ For the **V+** you can adjust it by rotate the potentiometer, for instance, we c
 
 For the **V-**, it depends on the **SW1(SW-420)**:
 
-- If this module is in a stable state, the **SW1** is turned on, Pin2 of **U1A** is connected to the **GND** though **SW1**. It will be:
+- If this module is in a stable state, the **SW1** is turned on, Pin2 of **U1A** is connected to the **GND** through **SW1**. It will be:
 
 
 $$
@@ -84,7 +84,7 @@ $$
 $$
 
 
-- If the module vibrates or tilts, the **SW1** will be turned off, the voltage of **V-** will be pulled up by the **VCC** though R1. Once the **V-** is higher than the VCC/2, then:
+- If the module vibrates or tilts, the **SW1** will be turned off, the voltage of **V-** will be pulled up by the **VCC** through R1. Once the **V-** is higher than the VCC/2, then:
 
 $$
 \left. \begin{array}{l}  & V- > VCC/2 \\ & V+ = VCC/2 \end{array} \right\}  V_{out} = Low
@@ -203,7 +203,7 @@ void loop() {
 }
 ```
 
-- **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 3.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
 !!!success
     If every thing goes well, everytime you move, shake or tilt the Grove - Vibration Sensor the Grove - buzzer will ring.

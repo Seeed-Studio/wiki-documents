@@ -105,7 +105,7 @@ According to different application scenarios, we have prepared a series of solid
 
 
 !!!Note
-    - The switch 1-4 have the same pin fuction, so for the other switches, you can refer to **LOAD1**/**LOAD2**.
+    - The switch 1-4 have the same pin function, so for the other switches, you can refer to **LOAD1**/**LOAD2**.
     - On the back of the PCB, there are two interfaces: SWD and I^2^C. The SWD interface is used by default when programming firmware, if you want to use the I^2^C(actually work as the boot UART), you should set the 
     **BOOT** High.
 
