@@ -26,7 +26,7 @@ The Azure Sphere operating system is pre-installed on the MT3620 and is designed
 
 MT3620 software development is supported using the powerful Microsoft Visual Studio IDE:
 - Install [Visual Studio](https://visualstudio.microsoft.com/) (Support Community, Enterprise or Professional) and the Azure Sphere extension, plug the development board into a PC over USB, and start developing IoT applications with unprecedented levels of security.
-- To use the MT3620 Dev Board for Azure Sphere, you’ll need a Windows 10 PC with the latest Windows Updates, along with [Azure Sphere software development kit](http://aka.ms/AzureSphereSDK) (SDK). 
+- To use the MT3620 Dev Board for Azure Sphere, you’ll need a Windows 10 PC with the latest Windows Updates, along with [Azure Sphere software development kit](http://aka.ms/AzureSphereSDK) SDK. 
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/iiDF26HNh-Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
@@ -398,7 +398,7 @@ The software include the smart fan simulation system and Azure Sphere MT3620 Dev
 
 **Azure Sphere MT3620 Development System**
 
-- Step 1. Download [Azure Sphere Code](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/sdk/Azure_Sphere_Sample_Smart_Fan-master/Azure_Sphere_Code.zip) and unzip. 
+- Step 1. Download [Azure Sphere Code](https://github.com/Seeed-Studio/Azure_Sphere_Sample_Smart_Fan). 
 - Step 2. Follow [Quickstarts for Azure Sphere](https://docs.microsoft.com/en-us/azure-sphere/quickstart/qs-overview) to open the **AzureSphereDemo2.vcxproj** project.
 - Step 3. Open the main.c under Source Files. 
 - Step 4. Modify wifiSsid and wifiPsk @line21 and 22.
