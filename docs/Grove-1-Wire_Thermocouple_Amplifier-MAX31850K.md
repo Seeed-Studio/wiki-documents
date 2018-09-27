@@ -16,7 +16,7 @@ The Grove - 1-Wire Thermocouple Amplifier (MAX31850K) is a thermocouple-to-digit
 This module is based on the MAX31850K, which integrates amplifier, ADC and 64-bit ROM. Thanks to the 64-bit ROM, each device has a unique 64-bit serial code, which allows multiple units to function on the same 1-Wire bus. Therefore, it is simple to use one microcontroller (the master device) to monitor temperature from many thermocouples distributed over a large area.
 
 
-Again, this module cann't work alone, it must work with a k-type thermocouple, if you do not have one, you can consider [Thermocouple Temperature Sensor K Type-1M](https://www.seeedstudio.com/Thermocouple-Temperature-Sensor-K-Type-1M-p-3132.html) in our bazaar.
+Again, this module can't work alone, it must work with a k-type thermocouple, if you do not have one, you can consider [Thermocouple Temperature Sensor K Type-1M](https://www.seeedstudio.com/Thermocouple-Temperature-Sensor-K-Type-1M-p-3132.html) in our bazaar.
 
 
 <p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-1-Wire-Thermocouple-Amplifier-%28MAX31850K%29-p-3159.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
@@ -64,6 +64,8 @@ Again, this module cann't work alone, it must work with a k-type thermocouple, i
 ### Pin Map
 
 ![](https://github.com/SeeedDocument/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/raw/master/img/pin_map.jpg)
+
+![](https://github.com/SeeedDocument/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/raw/master/img/pin_map_back.jpg)
 
 
 ### Schematic
@@ -129,38 +131,45 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 |<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-1-Wire-Thermocouple-Amplifier-%28MAX31850K%29-p-3159.html" target="_blank">Get One Now</a>|
 
 
-|k-type thermocouple|Grove - I2C Hub|
+|k-type thermocouple x 2|Grove - I2C Hub|
 |----|---|
 |![](https://github.com/SeeedDocument/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/raw/master/img/thermocouple.jpg)|![](https://github.com/SeeedDocument/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/raw/master/img/12C%20hub.jpg)|
 |<a href="https://www.seeedstudio.com/Thermocouple-Temperature-Sensor-K-Type-1M-p-3132.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-I2C-Hub-p-851.html" target="_blank">Get One Now</a>|
 
 
 !!!Note
-        We've offered two software examples, **simple** and **multiple**, the materials requirement above is for the  **multiple** example. If you want to test the **simple** example, then the Grove - I2C Hub is not necessary, and only one Grove - 1-Wire Thermocouple Amplifier will be enough.
+        **1-** We've offered two software examples, **simple** and **multiple**, the materials requirement above is for the  **multiple** example. If you want to test the **simple** example, then the Grove - I2C Hub is not necessary, and only one Grove - 1-Wire Thermocouple Amplifier will be enough.
+
+        **2-** We use I2C Hub here not as a I^2^C interface, but just as a normal one-to-two transfer interface.
 
 
-- **Step 1.** Insert the red wire of k-type thermocouple into **T+**
+- **Step 1.** Insert the red wire of k-type thermocouple into **T+**, insert the light white wire of k-type thermocouple into **T-**
 
-- **Step 2.** Connect the Grove - 1-Wire Thermocouple Amplifier to the **D3** port of the Base Shield.
+- **Step 2.** Connect the Grove - I2C Hub to the **D3** port of the Base Shield.
 
-- **Step 3.** Plug Grove - Base Shield into Seeeduino.
+- **Step 3.** Plug the Grove - 1-Wire Thermocouple Amplifier A and B into the Grove - I2C Hub.
 
-- **Step 4.** Connect Seeeduino to PC via a USB cable.
+- **Step 4.** Plug Grove - Base Shield into Seeeduino.
+
+- **Step 5.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/raw/master/img/%E8%BF%9E%E6%8E%A51.jpg)
+![](https://github.com/SeeedDocument/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/raw/master/img/connect.jpg)
 
 
 !!!Note
         If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
 
 
-| Seeeduino     |  Grove - 1-Wire Thermocouple Amplifier  |
-|---------------|-------------------------|
-| 5V            | Red                     |
-| GND           | Black                   |
-| NC           | White                    |
-| DQOUT          | Yellow                 |
+| Seeeduino     |  Grove Cable |Grove - I2C Hub |Grove - 1-Wire Thermocouple Amplifier|
+|---------------|-------------------------|----|-----|
+| GND            |  Black                   |G|GND|
+| 5V           | Red                   |V|VCC|
+| NC            | White                   |SDA|NC|
+| D3            | Yellow                  |SCL|DQOUT|
+
+
+
 
 
 #### Software
@@ -302,7 +311,7 @@ void loop(void)
 
 
 !!!success
-     If every thing goes well, you will get the result. Meanwhile, you will see the on-board LEDs alternately lit and extinguished.
+     If every thing goes well, you will get the result.
 
 ```c++
 DONE
