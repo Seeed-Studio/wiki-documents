@@ -299,6 +299,30 @@ The quickstarts guide you through:
 - [Deploying the application](https://docs.microsoft.com/en-us/azure-sphere/quickstart/qs-first-deployment) over Wi-Fi
 - [Setting up an Azure IoT Hub to work with Azure Sphere](https://docs.microsoft.com/en-us/azure-sphere/quickstart/qs-setup-iot-hub)
 
+!!!Warning 
+    If we see error during claiming your device, please follow the soltuion to update azure sphere on board SDK.   
+
+```c
+C:\Users\Seeed05\Documents>azsphere device claim
+error: The Azure Sphere OS on the attached device requires an update to be used with this version of the SDK.
+Diagnostic info: [1.2.0, 3]
+error: Failed to retrieve device ID from attached device: 'The Azure Sphere OS on the attached device requires an update to be used with this version of the SDK.
+Diagnostic info: [1.2.0, 3]'.
+error: Command failed in 00:00:00.9187758.
+```
+
+- Step 1.	In order to access the latest version of the device image you need to be enrolled on [MS Collaborate](http://aka.ms/collaborate). When you download the latest version from there (TP4.2.1) you will have access to a "ReleaseNotesTP4.2.1.pdf" file where the steps to recover the device with the new image are explained.
+- Step 2. Open an Azure Sphere Developer Command Prompt; 
+- Step 3. In the Azure Sphere Developer Command Prompt, change directory to the root of the unzipped folder; 
+- Step 4. Ensure that your board is connected to your computer by USB; 
+- Step 5. Issue the following command:
+
+```
+azsphere device recover --images <recovery-image-folder>
+For example:
+azsphere device recover –images images
+```
+
 ## Azure Sphere Demo
 
 We build two demoes which combine Sphere dev kit and [Seeed Grove system](http://wiki.seeedstudio.com/Grove_System/). 

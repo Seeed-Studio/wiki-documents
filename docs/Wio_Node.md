@@ -325,7 +325,7 @@ Here are some questions that we usually received from new users. If you have any
 
 **4. If I want to connect more than 1 I2C devices, what should I do?**
 
->[Grove-I2C hub](https://www.seeedstudio.com/s/I2C%20hub.html) can branch 1 I2C port into 4. Come to [Bazzar](https://www.seeedstudio.com/s/I2C%20hub.html) to get one!
+>We can not connect 2 Grove-I2C devices to Wio node 2 Grove-I2C Port at the same time. [Grove-I2C hub](https://www.seeedstudio.com/s/I2C%20hub.html) can branch 1 I2C port into 4. Come to [Bazzar](https://www.seeedstudio.com/s/I2C%20hub.html) to get one! 
 
 **5. Can I change Wio Node into sleep mode?**
 
