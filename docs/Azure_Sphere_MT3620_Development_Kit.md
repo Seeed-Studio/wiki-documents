@@ -389,7 +389,7 @@ The [SC18IM700](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development
 
 - Step 1. Connect Grove-Blue LED Button to port 2 of Grove base shield.
 - Step 2. Connect Fan PWM signal to port 5 of Grove base shield.
-- Step 3. Connect port 7(Software Serial Port) of Grove base shield to UART3 of MT3620 Grove Shield.
+- Step 3. Connect port 7(Software Serial Port) of Grove base shield to UART3 of MT3620 Grove Shield. Cut the Vcc(Red cable) and leave the TX/RX/GND for the serial communication.
 - Step 4. Plug Grove-Base shield to Seeeduino/Arduino.
 - Step 5. Connect Grove-4 Digital Display to GPIO4 port of MT3620 Grove Shield.
 - Step 6. Connect Grove-Temperature&Humidity Sensor(SHT31) to I2C port of MT3620 Grove Shield.
@@ -400,6 +400,8 @@ The [SC18IM700](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development
 - Step 11. Plug the USB cable to Ardunio/Seeeduino and PC.
 - Step 12. Plug the power supply to Fan. 
 
+!!!Warning
+    Please make sure the voltage switch on Grove base shield is turned to **3.3v**. 
 
 ### Software
 
