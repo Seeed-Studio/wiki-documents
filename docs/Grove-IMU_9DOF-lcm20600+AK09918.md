@@ -9,6 +9,9 @@ sku: 101020585
 tags:
 ---
 
+![](https://github.com/SeeedDocument/Grove-IMU_9DOF-lcm20600_AK09918/raw/master/img/Main.jpg)
+
+
  The Grove - IMU 9DOF (lcm20600+AK09918) is a 9 Degrees of Freedom [IMU](https://en.wikipedia.org/wiki/Inertial_measurement_unit) (Inertial measurement unit) which combines gyroscope, accelerometer and electronic compass. We use two chips LCM20600+AK09918 to implement those 3 functions.
  
  The LCM20600 is a 6-axis MotionTracking device that combines a 3-axis gyroscope, 3-axis accelerometer. [Gyroscope](https://en.wikipedia.org/wiki/Gyroscope) is a device used for measuring or maintaining orientation and angular velocity, normally, we use it to measure spin and twist. [Accelerometer](https://en.wikipedia.org/wiki/Accelerometer) is a device that measures proper acceleration.
@@ -53,7 +56,7 @@ tags:
 |Magnetic sensor measurement range|±4912μT (typical)|
 |Magnetic sensor sensitivity|0.15μT (typical)|
 |Interface|I^2^C|
-|I^2^C Address|**LCM20600** <br> 0x69(default) <br> 0x68(optional) <br> **AK09918** <br> 0x0C@AK09918|
+|I^2^C Address|**LCM20600** <br> 0x69(default) <br> 0x68(optional) <br> **AK09918** <br> 0x0C|
 
 ## Applications
 
@@ -209,6 +212,7 @@ void setup()
     Serial.println("Start figure-8 calibration after 2 seconds.");
     delay(2000);
     calibrate(10000, &offset_x, &offset_y, &offset_z);
+    Serial.println("");
 }
 
 void loop()
@@ -217,54 +221,55 @@ void loop()
     acc_x = icm20600.getAccelerationX();
     acc_y = icm20600.getAccelerationY();
     acc_z = icm20600.getAccelerationZ();
-    // roll/pitch in radian
-    roll = atan2((float)acc_y, (float)acc_z);
-    pitch = atan2(-(float)acc_x, sqrt((float)acc_y*acc_y+(float)acc_z*acc_z));
-    Serial.print("roll: ");
-    Serial.print(roll*57.3);
-    Serial.print("\tpitch: ");
-    Serial.print(pitch*57.3);
+
+    Serial.print("A:  ");
+    Serial.print(acc_x);
+    Serial.print(",  ");
+    Serial.print(acc_y);
+    Serial.print(",  ");
+    Serial.print(acc_z);
+    Serial.println(" mg");
+
+    Serial.print("G:  ");
+    Serial.print(icm20600.getGyroscopeX());
+    Serial.print(",  ");
+    Serial.print(icm20600.getGyroscopeY());
+    Serial.print(",  ");
+    Serial.print(icm20600.getGyroscopeZ());
+    Serial.println(" dps");
 
     ak09918.getData(&x, &y, &z);
     x = x - offset_x;
     y = y - offset_y;
     z = z - offset_z;
 
+    Serial.print("M:  ");
+    Serial.print(x);
+    Serial.print(",  ");
+    Serial.print(y);
+    Serial.print(",  ");
+    Serial.print(z);
+    Serial.println(" uT");
+
+    // roll/pitch in radian
+    roll = atan2((float)acc_y, (float)acc_z);
+    pitch = atan2(-(float)acc_x, sqrt((float)acc_y*acc_y+(float)acc_z*acc_z));
+    Serial.print("Roll: ");
+    Serial.println(roll*57.3);
+    Serial.print("Pitch: ");
+    Serial.println(pitch*57.3);
+
     double Xheading = x * cos(pitch) + y * sin(roll) * sin(pitch) + z * cos(roll) * sin(pitch);
     double Yheading = y * cos(roll) - z * sin(pitch);
     
 
     double heading = 180 + 57.3*atan2(Yheading, Xheading) + declination_shenzhen;
-    // if (Xheading < 0 && Yheading < 0)
-    // {
-    //     heading = 180.0 - 57.3*atan2(Yheading, Xheading);
-    // }
-    // else if (Xheading > 0 && Yheading < 0)
-    // {
-    //     heading = 57.3*atan2(Yheading, Xheading);
-    // }
-    // else if (Xheading > 0 && Yheading > 0)
-    // {
-    //     heading = 360.0 - 57.3*atan2(Yheading, Xheading);
-    // }
-    // else if (Xheading < 0 && Yheading > 0)
-    // {
-    //     heading = 180.0 + 57.3*atan2(Yheading, Xheading); 
-    // }
-    // else if (Xheading == 0 && Yheading < 0)
-    // {
-    //     heading = 90.0;
-    // }
-    // else if (Xheading == 0 && Yheading > 0)
-    // {
-    //     heading = 270.0;
-    // }
 
-
-    Serial.print("\tHeading: ");
+    Serial.print("Heading: ");
     Serial.println(heading);
+    Serial.println("--------------------------------");
   
-    delay(200);
+    delay(500);
     
 }
 
@@ -350,14 +355,16 @@ void calibrate(uint32_t timeout, int32_t *offsetx, int32_t *offsety, int32_t*off
 }
 ```
 
-!!!Tip
-        There are 3 demos in the example folder. You can choose according to your own needs.
-
-        **test_6axis**: This example shows how to get gyroscope and acceleration data from ICM20600.
-
-        **test_magnet**: This example shows how to get magnetic data from AK09918.
-
-        **compass**: This example gets magnetic data and acceleration data, to count patch and roll, and make a compass application.
+!!!Note
+        There are 3 demos in the library:  
+        **test_6axis**
+        >This example shows how to get gyroscope and acceleration data from ICM20600.  
+        
+        **test_magnet**  
+        >This example shows how to get magnetic data from AK09918.  
+        
+        **compass**  
+        >This example gets magnetic data and acceleration data, to count pitch and roll, and make a compass application.
 
 
 
@@ -366,20 +373,34 @@ void calibrate(uint32_t timeout, int32_t *offsetx, int32_t *offsety, int32_t*off
 - **Step 5.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time. Set the baud rate to **9600**.
 
 !!!success
-     If every thing goes well, when you open the Serial Monitor, the notice should be pop up--*Start figure-8 calibration after 2 seconds.*  Which means in order to calibrate this module, you should move it and draw the number 8 trajectory in the air. When the "......." appears, you can start your calibration.
+     If every thing goes well, when you open the Serial Monitor, the notice will pop up--*Start figure-8 calibration after 2 seconds.*  Which means in order to calibrate this module, you should move it and draw the number 8 trajectory in the air. When the "......." appears, you can start your calibration.
 
 
 ```C++
 Start figure-8 calibration after 2 seconds.
-...................................................................................................
-roll: -14.96	pitch: 45.86	Heading: 309.13
-roll: -10.05	pitch: 47.57	Heading: 288.67
-roll: 138.87	pitch: -7.55	Heading: 158.03
-roll: 5.56	    pitch: 47.58	Heading: 230.18
-roll: -29.83	pitch: 60.96	Heading: 294.57
-roll: -60.30	pitch: -3.46	Heading: 344.49
-roll: -71.27	pitch: 4.45  	Heading: 341.17
-roll: -25.11	pitch: 40.04	Heading: 250.60
+.......................................................................
+A:  -362,  -205,  738 mg
+G:  -45,  12,  -1 dps
+M:  -6,  -23,  -33 uT
+Roll: -15.53
+Pitch: 25.30
+Heading: 23.99
+--------------------------------
+A:  -269,  583,  61 mg
+G:  102,  377,  -2 dps
+M:  18,  -21,  -18 uT
+Roll: 84.03
+Pitch: 24.65
+Heading: 215.58
+--------------------------------
+A:  -495,  229,  37 mg
+G:  -43,  -231,  201 dps
+M:  7,  -30,  6 uT
+Roll: 80.83
+Pitch: 64.90
+Heading: 21.76
+--------------------------------
+
 ```
 
 
@@ -410,7 +431,7 @@ roll: -25.11	pitch: 40.04	Heading: 250.60
 
 ## Resources
 
-- **[Zip]** [Grove - IMU 9DOF (lcm20600+AK09918)](https://github.com/SeeedDocument/Grove-IMU_9DOF-lcm20600_AK09918/raw/master/res/Grove%20-%20IMU%209DOF%20(ICM20600%20%26%20AK09918).zip)
+- **[Zip]** [Grove - IMU 9DOF (lcm20600+AK09918) Eagle Files](https://github.com/SeeedDocument/Grove-IMU_9DOF-lcm20600_AK09918/raw/master/res/Grove%20-%20IMU%209DOF%20(ICM20600%20%26%20AK09918).zip)
 
 - **[Zip]** [Seeed ICM20600+AK09918 Library](https://github.com/Seeed-Studio/Seeed_ICM20600_AK09918/archive/master.zip)
 

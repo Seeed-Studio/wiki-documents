@@ -225,11 +225,11 @@ void setup()
   while(!Serial);   
 
    /* Scan I2C device detect device address */
-  uint8_t old_address = relay. ;
+  uint8_t old_address = relay.scanI2CDevice();
   if((0x00 == old_address) || (0xff == old_address)) { 
     while(1);
   }
-    
+
   Serial.println("Start write address");
   relay.changeI2CAddress(old_address, 0x11);  /* Set I2C address and save to Flash */  
   Serial.println("End write address");
@@ -364,7 +364,7 @@ Channel 2 on
   </tr>
   <tr>
     <td><span style="font-weight:600">channelCtrl(uint8_t state)</span></td>
-    <td>to change all channels  you picked immediately, the <span style="font-weight:600">state parameter list:</span><br> <br>  <span style="font-weight:bold">CHANNLE1_BIT  </span>or  <span style="font-weight:bold">0x01</span><br>  <span style="font-weight:bold">CHANNLE2_BIT</span>  or  <span style="font-weight:bold">0x02</span><br>  <span style="font-weight:bold">CHANNLE3_BIT</span>  or  <span style="font-weight:bold">0x04</span><br>  <span style="font-weight:bold">CHANNLE4_BIT</span>  or  <span style="font-weight:bold">0x08</span><br><br>e.g. <br><span style="font-weight:600">        channelCtrl(CHANNLE2_BIT|CHANNLE3_BIT),</span>will turn on the channel 2,channel 3<br><span style="font-weight:600">        channelCtrl(01|02|08), </span>will turn on the channel 1,channel 2 and channel 4.<br><span style="font-weight:600">        channelCtrl(0), </span>will turn off all the channels.</td>
+    <td>to change all channels  you picked immediately, the <span style="font-weight:600">state parameter list:</span><br> <br>  <span style="font-weight:bold">CHANNLE1_BIT  </span>or  <span style="font-weight:bold">0x01</span><br>  <span style="font-weight:bold">CHANNLE2_BIT</span>  or  <span style="font-weight:bold">0x02</span><br>  <span style="font-weight:bold">CHANNLE3_BIT</span>  or  <span style="font-weight:bold">0x04</span><br>  <span style="font-weight:bold">CHANNLE4_BIT</span>  or  <span style="font-weight:bold">0x08</span><br><br>e.g. <br><span style="font-weight:600">        channelCtrl(CHANNLE2_BIT|CHANNLE3_BIT),</span>will turn on the channel 2,channel 3<br><span style="font-weight:600">        channelCtrl(0x01|0x02|0x08), </span>will turn on the channel 1,channel 2 and channel 4.<br><span style="font-weight:600">        channelCtrl(0), </span>will turn off all the channels.</td>
   </tr>
   <tr>
     <td><span style="font-weight:600">turn_on_channel(uint8_t channel)</span></td>
