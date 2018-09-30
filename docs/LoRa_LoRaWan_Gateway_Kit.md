@@ -18,7 +18,7 @@ Regarding the gateway module RHF0M301, it is a 10 channel(8 x Multi-SF + 1 x Sta
 
 <div class="admonition warning" style="background:#f0b37e; color:#FFF">
 <p class="admonition-title">Caution</p>
-<font face="Georgia" size=2 font color="white">Please always plug 3.7V Lipo battery in case USB power supply is not sufficient. This wiki works for both 868MHz kit and 915MHz kit.</font>
+<font face="Georgia" size=2 font color="white">Please always plug 3.7V Lipo battery in case USB power supply is not sufficient. We use 868MHZ kit in this wiki, but this wiki works for both 868MHz kit and 915MHz kit.  </font>
 </div>
 
 
