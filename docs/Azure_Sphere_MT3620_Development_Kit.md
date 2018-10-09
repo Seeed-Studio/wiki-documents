@@ -295,8 +295,7 @@ The quickstarts guide you through:
 - [Set up an account](https://docs.microsoft.com/en-us/azure-sphere/install/azure-directory-account)
 - [Claiming your device](https://docs.microsoft.com/en-us/azure-sphere/install/claim-device)
 - [Configuring Wi-Fi](https://docs.microsoft.com/en-us/azure-sphere/install/configure-wifi)
-- [Build the Blink sample application](https://docs.microsoft.com/en-us/azure-sphere/quickstarts/qs-blink-application)
-- [Deploying the application](https://docs.microsoft.com/en-us/azure-sphere/quickstart/qs-first-deployment) over Wi-Fi
+- [Build an application](https://docs.microsoft.com/en-us/azure-sphere/quickstarts/qs-blink-application)
 - [Deploy an application over the air](https://docs.microsoft.com/en-us/azure-sphere/quickstarts/qs-first-deployment)
 
 !!!Warning 
