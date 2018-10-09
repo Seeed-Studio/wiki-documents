@@ -287,17 +287,17 @@ line-height:3px
 
 ## Quickstarts for Azure Sphere
 
-To use MT3620 Dev Board for Azure Sphere, you’ll need a Windows 10 PC with the latest Windows Updates, alongwith the Visual Studio Tools for Azure Sphere (which will be available for download from Microsoft). These tools will include application templates, development tools and the Azure Sphere software development kit ([SDK]( aka.ms/AzureSphereSDK)).
+To use MT3620 Dev Board for Azure Sphere, you’ll need a Windows 10 PC with the latest Windows Updates, alongwith the Visual Studio Tools for Azure Sphere (which will be available for download from Microsoft). These tools will include application templates, development tools and the Azure Sphere software development kit ([SDK](https://azure.microsoft.com/en-us/services/azure-sphere/get-started/)).
 
 The quickstarts guide you through:
 
-- [Setting up an account](https://docs.microsoft.com/en-us/azure-sphere/quickstart/qs-azure-directory-account) for Azure Sphere
-- [Installing Azure Sphere](https://docs.microsoft.com/en-us/azure-sphere/quickstart/qs-install) and setting up your development board
-- [Claiming your device](https://docs.microsoft.com/en-us/azure-sphere/quickstart/claim-device)
-- [Configuring Wi-Fi](https://docs.microsoft.com/en-us/azure-sphere/quickstart/qs-configure-wifi) and updating your device OS
-- [Building your first application](https://docs.microsoft.com/en-us/azure-sphere/quickstart/qs-blink-application) by using the Visual Studio Tools Preview for Azure Sphere
+- [Install the Azure Sphere SDK](https://docs.microsoft.com/en-us/azure-sphere/install/install) 
+- [Set up an account](https://docs.microsoft.com/en-us/azure-sphere/install/azure-directory-account)
+- [Claiming your device](https://docs.microsoft.com/en-us/azure-sphere/install/claim-device)
+- [Configuring Wi-Fi](https://docs.microsoft.com/en-us/azure-sphere/install/configure-wifi)
+- [Build the Blink sample application](https://docs.microsoft.com/en-us/azure-sphere/quickstarts/qs-blink-application)
 - [Deploying the application](https://docs.microsoft.com/en-us/azure-sphere/quickstart/qs-first-deployment) over Wi-Fi
-- [Setting up an Azure IoT Hub to work with Azure Sphere](https://docs.microsoft.com/en-us/azure-sphere/quickstart/qs-setup-iot-hub)
+- [Deploy an application over the air](https://docs.microsoft.com/en-us/azure-sphere/quickstarts/qs-first-deployment)
 
 !!!Warning 
     If we see error during claiming your device, please follow the soltuion to update azure sphere on board SDK.   
