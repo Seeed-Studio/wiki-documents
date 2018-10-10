@@ -407,6 +407,7 @@ pages:
           - Grove - I2C Color Sensor: Grove-I2C_Color_Sensor.md
           - Grove - I2C Touch Sensor: Grove-I2C_Touch_Sensor.md
           - Grove - 12 Key Capacitive I2C Touch Sensor V2(MPR121): Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121.md
+          - Grove - Capacitive Touch Slide Sensor(CY8C4014LQI): Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI.md
           - Grove - IMU 10DOF: Grove-IMU_10DOF.md
           - Grove - IMU 10DOF v2.0: Grove-IMU_10DOF_v2.0.md
           - Grove - IMU 9DOF v2.0: Grove-IMU_9DOF_v2.0.md
@@ -441,6 +442,7 @@ pages:
           - Grove - 5-Way Switch: Grove-5-Way_Switch.md
           - Grove - 6-Position DIP Switch: Grove-6-Position_DIP_Switch.md
           - Grove - Temp&amp;Humi Sensor(SHT31): Grove-TempAndHumi_Sensor-SHT31.md
+          - Grove - I2C High Accuracy Temp&Humi Sensor(SHT35): Grove-I2C_High_Accuracy_Temp&Humi_Sensor-SHT35.md
           - Grove - Temperature Sensor: Grove-Temperature_Sensor.md
           - Grove - Temperature Sensor V1.2: Grove-Temperature_Sensor_V1.2.md
           - Grove - Temperature&Humidity Sensor Pro: Grove-Temperature_and_Humidity_Sensor_Pro.md
