@@ -322,6 +322,10 @@ void loop()
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/ArduinoBasics/arduino-based-security-project-using-cayenne-eb379b/embed' width='350'></iframe>
 
+**Leaf Piano**: We made a piano using a touch sensor, as well as leaves for piano keys.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/SeeedStudio/leaf-piano-5261a6/embed' width='350'></iframe>
+
 ## Tech Support
 
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).

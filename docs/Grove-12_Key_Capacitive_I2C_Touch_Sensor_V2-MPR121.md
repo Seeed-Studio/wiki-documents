@@ -308,6 +308,9 @@ This is the introduction Video of this product, simple demos, you can have a try
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ds7kBVdeY4U?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
+**Leaf Piano**: We made a piano using a touch sensor, as well as leaves for piano keys.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/SeeedStudio/leaf-piano-5261a6/embed' width='350'></iframe>
 
 
 ## Tech Support

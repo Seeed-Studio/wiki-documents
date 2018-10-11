@@ -413,7 +413,7 @@ The software include the smart fan simulation system and Azure Sphere MT3620 Dev
 **Smart Fan Simulation System**
 
 - Step 1. Open the Arduino IDE.
-- Step 2. Copy [Arduino Smart Fan Simulation code](https://raw.githubusercontent.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/master/sdk/Azure_Sphere_Sample_Smart_Fan-master/Arduino_code/Arduino_code.ino) and paste to Arduino IDE. 
+- Step 2. Copy [Arduino Smart Fan Simulation code](https://github.com/Seeed-Studio/Azure_Sphere_Sample_Smart_Fan/blob/master/Arduino_code/Arduino_code.ino) and paste to Arduino IDE. 
 - Step 3. Select Arduino/Seeeduino v4 as board from Tools menu. 
 - Step 4. Select related COM port from Tools menu. 
 - Step 5. Click upload to upload code the Arduino/Seeeduino. 
@@ -424,7 +424,7 @@ The software include the smart fan simulation system and Azure Sphere MT3620 Dev
 **Azure Sphere MT3620 Development System**
 
 - Step 1. Download [Azure Sphere Code](https://github.com/Seeed-Studio/Azure_Sphere_Sample_Smart_Fan). 
-- Step 2. Follow [Quickstarts for Azure Sphere](https://docs.microsoft.com/en-us/azure-sphere/quickstart/qs-overview) to open the **AzureSphereDemo2.vcxproj** project.
+- Step 2. Follow Quickstarts for Azure Sphere to open the **AzureSphereDemo2.vcxproj** project.
 - Step 3. Open the main.c under Source Files. 
 - Step 4. Modify wifiSsid and wifiPsk @line21 and 22.
 - Step 5. Connect the demo to Azure IoT.
