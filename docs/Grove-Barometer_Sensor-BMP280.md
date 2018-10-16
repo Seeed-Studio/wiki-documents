@@ -130,7 +130,7 @@ Do not touch or shake or let this product in vibration when it works. This will 
 
 #### Software
 
-**Step 1.** Download the [library](https://github.com/SeeedDocument/Grove-Barometer_Sensor-BMP280/raw/master/res/Grove%20-%20Barometer%20Sensor_BMP280_Schematic.zip) from Github.
+**Step 1.** Download the [library](https://github.com/Seeed-Studio/Grove_BMP280) from Github.
 
 **Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
