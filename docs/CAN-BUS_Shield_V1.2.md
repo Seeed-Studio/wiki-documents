@@ -22,7 +22,7 @@ This document applies to the following version of products:
 |--------|-----------|-----------|
 |CAN BUS Shield V1.0 |Oct 14, 2012|![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/EOL.png)|
 |CAN BUS Shield V1.1 |Aug 10, 2013|![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/EOL.png)|
-|CAN BUS Shield V1.2|Jan 5, 2015|<a href="http://www.seeedstudio.com/CAN-BUS-Shield-V1.2-p-2256.html" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a>|
+|CAN BUS Shield V1.2|Jan 5, 2015|![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/EOL.png)|
 | CAN BUS Shield V2.0 | Aug 01,2017    |<a href="https://www.seeedstudio.com/CAN-BUS-Shield-V2-p-2921.html" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a>|
 
 
