@@ -416,6 +416,7 @@ pages:
           - Grove - Infrared Receiver: Grove-Infrared_Receiver.md
           - Grove - Infrared Reflective Sensor: Grove-Infrared_Reflective_Sensor.md
           - Grove - Infrared Temperature Sensor: Grove-Infrared_Temperature_Sensor.md
+          - Grove - Infrared Temperature Sensor Array(AMG8833): Grove-Infrared_Temperature_Sensor_Array-AMG8833.md
           - Grove - Light Sensor: Grove-Light_Sensor.md
           - Grove - Line Finder: Grove-Line_Finder.md
           - Grove - Loudness Sensor: Grove-Loudness_Sensor.md

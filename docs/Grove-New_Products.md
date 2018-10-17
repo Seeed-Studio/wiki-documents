@@ -3,9 +3,25 @@
 
 
 
+## October, 2018
+
+- [Grove - Infrared Temperature Sensor Array (AMG8833)](https://www.seeedstudio.com/Grove-Infrared-Temperature-Sensor-Array-%28AMG8833%29-p-3185.html)
+
+- [Grove - Capacitive Touch Slide Sensor(CY8C4014LQI)](https://www.seeedstudio.com/Grove-Capacitive-Touch-Slide-Sensor%28CY8C4014LQI%29-p-3183.html)
+
+- [Grove - I2C High Accuracy Temp&Humi Sensor(SHT35)](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temp%26Humi-Sensor%28SHT35%29-p-3182.html)
+
+
+
 ## September, 2018
 
-- [Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121) ](https://www.seeedstudio.com/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V2-%28MPR121%29-p-3141.html)
+- [Grove - 1-Wire Thermocouple Amplifier (MAX31850K)](https://www.seeedstudio.com/Grove-1-Wire-Thermocouple-Amplifier-%28MAX31850K%29-p-3159.html)
+
+- [Grove - Vibration Sensor (SW-420)](https://www.seeedstudio.com/Grove-Vibration-Sensor-%28SW-420%29-p-3158.html)
+
+- [Grove - IMU 9DOF (ICM20600+AK09918)](https://www.seeedstudio.com/Grove-IMU-9DOF-%28ICM20600%2BAK09918%29-p-3157.html)
+
+- [Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121)](https://www.seeedstudio.com/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V2-%28MPR121%29-p-3141.html)
 
 - [Grove - Optical Rotary Encoder(TCUT1600X01)](https://www.seeedstudio.com/Grove-Optical-Rotary-Encoder%28TCUT1600X01%29-p-3142.html)
 
