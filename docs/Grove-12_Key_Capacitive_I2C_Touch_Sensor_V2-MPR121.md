@@ -312,6 +312,9 @@ This is the introduction Video of this product, simple demos, you can have a try
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/SeeedStudio/leaf-piano-5261a6/embed' width='350'></iframe>
 
+**Play with Scratch**: How to play a scratch game with a Touch Sensor?
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/SeeedStudio/play-with-scratch-b3f9fc/embed' width='350'></iframe>
 
 ## Tech Support
 Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).
