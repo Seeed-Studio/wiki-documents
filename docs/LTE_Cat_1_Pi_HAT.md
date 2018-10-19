@@ -491,6 +491,7 @@ A3: Please refer to [u-blox LARA-R2 series product page](https://www.u-blox.com/
 - **[PDF]** [u-blox-CEL_ATCommands](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/res/u-blox-CEL_ATCommands_(UBX-13002752).pdf)
 - **[PDF]** [LARA-R2_DataSheet](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/res/LARA-R2_DataSheet_(UBX-16005783).pdf)
 - **[PDF]** [LARA-R2_SysIntegrManual](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/res/LARA-R2_SysIntegrManual_(UBX-16010573).pdf)
+- **[PDF]** [AT-Commands Examples AppNote](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/res/AT-CommandsExamples_AppNote_(UBX-13001820).pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
