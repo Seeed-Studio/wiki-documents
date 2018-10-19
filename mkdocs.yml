@@ -237,7 +237,7 @@ pages:
           - Luat:
               - Index: lua_index.md
               - lua Introduction: lua.md
-              - Lua Api: luaApi.md
+              - Lua Api: luatApi.md
 
 
       - LinkIt:
