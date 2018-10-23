@@ -481,6 +481,7 @@ There're many references to help you to get more information about the board.
 -----
 - **[PDF]** [BeagleBone_Green_Wireless Schematic(pdf)](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/tree/master/resources/BeagleBone_Green Wireless_V1.0_SCH_20160314.pdf)
 - **[Zip]** [AM335X Datasheet](https://github.com/SeeedDocument/Bazaar_file/raw/master/102010027/AM335x.pdf)
+- **[3D]** [BBGW 3D Model](https://github.com/SeeedDocument/forum_doc/tree/master/reg/BBGW_3D)
 
 ## Project
 
