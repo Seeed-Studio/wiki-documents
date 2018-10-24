@@ -478,6 +478,7 @@ pages:
           - Grove - Optical Rotary Encoder(TCUT1600X01): Grove-Optical_Rotary_Encoder-TCUT1600X01.md
           - Grove - 1-Wire Thermocouple Amplifier(MAX31850K): Grove-1-Wire_Thermocouple_Amplifier-MAX31850K.md
           - Grove - Step Counter(BMA456): Grove-Step_Counter-BMA456.md
+          - Grove - 6-Axis Accelerometer&Gyroscope(BMI088): Grove-6-Axis_Accelerometer&Gyroscope(BMI088).md
           
           
 
