@@ -5,6 +5,10 @@
 
 ## October, 2018
 
+- [Grove - 6-Axis Accelerometer&Gyroscope (BMI088)](https://www.seeedstudio.com/Grove-6-Axis-Accelerometer-Gyroscope-BMI08-p-3188.html)
+
+- [Grove - Step Counter (BMA456)](https://www.seeedstudio.com/Grove-Step-Counter-BMA45-p-3189.html)
+
 - [Grove - Infrared Temperature Sensor Array (AMG8833)](https://www.seeedstudio.com/Grove-Infrared-Temperature-Sensor-Array-%28AMG8833%29-p-3185.html)
 
 - [Grove - Capacitive Touch Slide Sensor(CY8C4014LQI)](https://www.seeedstudio.com/Grove-Capacitive-Touch-Slide-Sensor%28CY8C4014LQI%29-p-3183.html)
