@@ -137,6 +137,9 @@ Please refer the [ThumbJoystick python demo](https://github.com/Microbit-Grove-L
 
 ## Grove compatible with Micro:bit
 
+
+|Name and link |SKU|
+|---|---|
 |[Grove - Speaker](https://www.seeedstudio.com/Grove-Speaker-p-1445.html)|107020001|
 |[Grove - Relay](https://www.seeedstudio.com/Grove-Relay-p-769.html)|103020005|
 |[Grove - Red LED](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|104030005|
