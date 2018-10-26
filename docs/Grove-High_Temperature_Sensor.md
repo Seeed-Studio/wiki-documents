@@ -87,7 +87,7 @@ Thermocouples are very sensitive devices. It requires a good amplifier with cold
 
 #### Software
 
-- Step 1. Download the  [ UltrasonicRanger Library](https://github.com/Seeed-Studio/Grove_HighTemp_Sensor/archive/master.zip) from Github.
+- Step 1. Download the  [ Grove-High Temperature Sensor Library](https://github.com/Seeed-Studio/Grove_HighTemp_Sensor/archive/master.zip) from Github.
 - Step 2. Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 - Step 3. Copy the code into Arduino IDE and upload.
 
