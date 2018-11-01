@@ -478,8 +478,11 @@ pages:
           - Grove - Round Force Sensor FSR402: Grove-Round_Force_Sensor_FSR402.md
           - Grove - Optical Rotary Encoder(TCUT1600X01): Grove-Optical_Rotary_Encoder-TCUT1600X01.md
           - Grove - 1-Wire Thermocouple Amplifier(MAX31850K): Grove-1-Wire_Thermocouple_Amplifier-MAX31850K.md
+          - Grove - I2C Thermocouple Amplifier (MCP9600): Grove-I2C_Thermocouple_Amplifier-MCP9600.md
           - Grove - Step Counter(BMA456): Grove-Step_Counter-BMA456.md
           - Grove - 6-Axis Accelerometer&Gyroscope(BMI088): Grove-6-Axis_Accelerometer&Gyroscope(BMI088).md
+          - Grove - 16x2 LCD Series: Grove-16x2_LCD_Series.md
+          - Grove - I2C UV Sensor (VEML6070): Grove-I2C_UV_Sensor-VEML6070.md
           
           
 

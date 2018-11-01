@@ -12,6 +12,15 @@ tags:
 ![](https://github.com/SeeedDocument/Grove-I2C_Thermocouple_Amplifier-MCP9600/raw/master/img/Main.jpg)
 
 
+The Grove - I2C Thermocouple Amplifier (MCP9600) is a thermocouple-to-digital converter with integrated cold-junction and I2C communication protocol. This module is designed to be used in conjunction with a k-type thermocouple. The thermocouples have a much larger measurement range than thermistors. For example, this [k-type thermocouple](https://www.seeedstudio.com/Thermocouple-Temperature-Sensor-K-Type-1M-p-3132.html) on our website has a measurement range of -50℃ to +600℃.
+
+We also provide the alert function for this module, you can use the progarammable alert pin to provide an interrupt signal to the controller.
+
+Again, this module can't work alone, it must work with a k-type thermocouple, if you do not have one, you can consider [Thermocouple Temperature Sensor K Type-1M](https://www.seeedstudio.com/Thermocouple-Temperature-Sensor-K-Type-1M-p-3132.html) in our bazaar.
+
+
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-I2C-Thermocouple-Amplifier-%28MCP9600%29-p-3199.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+
 
 
 ## Features
@@ -354,6 +363,26 @@ channel 0generate interruption!!!
 ![](https://github.com/SeeedDocument/Grove-I2C_Thermocouple_Amplifier-MCP9600/raw/master/img/Function_ep.jpg)
 
 
+As you can see, there is a hysteresis when the temperature rises and the temperature drops trigger an interrupt. e.g., when the temperature rises, when it reaches 28℃, the alert pin0 will trigger, and when the temperature drops, the limit point becomes 26℃. Only when the temperature become lower than 26 ℃, the alert pin0 will release. 
+
+$$
+hysteresis= 28℃-26℃ = 2℃
+$$
+
+
+Alert pin 1, alert pin2 and alert pin3 follow the same principle. You can change the  hysteresis value and the limit by modify the line 23 and line 26.
+
+
+```C++
+CHECK_RESULT(ret,sensor.set_alert_limit(i,sensor.covert_temp_to_reg_form(28+i)));
+/*Set hysteresis.for example,set hysteresis to 2℃,when the INT limitation is 30℃,interruption will be generated when 
+the temp ecceed limitation,and the interruption flag will stay unless the temp below 30-2(limitation-hysteresis) 28℃. */
+CHECK_RESULT(ret,sensor.set_alert_hys(i,2)); 
+```
+
+Use the parameter **i** to choose the alert pin number, and parameter **28** is the limit value,  as for hysteresis, we use the function **sensor.set_alert_hys(i,2)**.
+The parameter **2** is the hysteresis value. 
+
 
 
 ## Resources
@@ -364,6 +393,13 @@ channel 0generate interruption!!!
 
 - **[PDF]** [Datasheet of MCP9600](https://github.com/SeeedDocument/Grove-I2C_Thermocouple_Amplifier-MCP9600/raw/master/res/MCP9600.pdf)
 
+
+
+## Project
+
+This is the introduction Video of this product, simple demos, you can have a try.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3slfeHKSSCw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 
 ## Tech Support
