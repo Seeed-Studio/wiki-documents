@@ -9,6 +9,7 @@ sku:
 tags:
 ---
 
+![](https://github.com/SeeedDocument/All_bazaar_image/raw/master/Microbit.jpg)
 
 ## Micro:bit Introduction
 
@@ -20,118 +21,51 @@ Hello, here is the Micro:bit feature page, welcome. We are here to prepare a gen
 2. [Grove Shield for micro:bit v2.0](https://www.seeedstudio.com/Grove-Shield-for-micro-bit-v2-0-p-3083.html)
 3. [Grove Inventor Kit for micro:bit](http://wiki.seeedstudio.com/Grove_Inventor_Kit_for_microbit/)
 
-## Makk Code tutorial
 
-### Play with OledDisplay
+## MakeCode tutorial
 
-This is Makecode Grove - Oled Display(SH1107) package for micro:bit.
+### 1.Play with OledDisplay
 
-![image](https://user-images.githubusercontent.com/18615354/47497569-1b9c0c00-d88d-11e8-98fb-06a9d1d6b7a3.png)
+Please refer to the github page
 
-#### Demo 1: Display numbers and strings
-
-Let's start with a very simple program:
-
-![](https://user-images.githubusercontent.com/18615354/47498729-b21dfc80-d890-11e8-8801-a08ebe25e58b.png)
-
-- In this program, the second line `set oled to Create Oled Display` means we will create an object to use Oled Display, this step is important and nessary.
-- Line `oled Clear display` means the display will be clear. This step is recommanded at the begin of a program.
-- Line `oled Set display position at row 0 and column 0` is very useful. We can use this before `Display string` or `Dispaly integer number`, to set our display position. Note that there are 16 row and 128 column in Grove Oled Display, and `row 0, column 0` is at the upper left corner.
-
-    ![image](https://user-images.githubusercontent.com/18615354/47498459-ec3ace80-d88f-11e8-96e3-3d4ccea0635e.png)
-
-- Line `oled Display string "Hello!"` is to display a string "Hello!"
-
-Try to download the program to your Microbit! Then you will find "Hello!" on the display. Now let's try a big program like this, and guess what will happen:
-
-![image](https://user-images.githubusercontent.com/18615354/47500303-062ae000-d895-11e8-81d5-8d92c8e09509.png)
+[Play with OledDisplay](https://github.com/Microbit-Grove-Library/pxt-OledDisplay)
 
 
-### Demo 2: Draw lines and rectangle
 
-Let's draw 2 lines first:
+### 2.Play with the Grove - ThumbJoystick
 
-![image](https://user-images.githubusercontent.com/18615354/47500608-d29c8580-d895-11e8-92be-66545c881f84.png)
+Please refer to the github page
 
-- `oled Draw horizontal line start at x 0 and y 0, length 128` means draw a horizontal line. Please check the second picture of Demo 1, it also indicates the XY axis.
+[Play with the Grove - ThumbJoystick](https://github.com/Microbit-Grove-Library/pxt-ThumbJoystick)
 
 
-And draw a rectange by giving 2 XY coordinates.
 
-![](https://user-images.githubusercontent.com/18615354/47501286-b4d02000-d897-11e8-9a52-a1eb826ba81a.png)
+### 3.play with Grove - VoiceRecognizer
+
+Please refer to the github page
+
+[play with Grove - VoiceRecognizer](https://github.com/Microbit-Grove-Library/pxt-VoiceOrganizer)
+
+
+
+
+
 
 
 ## Micro Python tutorial
 
-### Play with Grove - ThumbJoystick
+### 1.Play with Grove - ThumbJoystick
 
-This is Makecode Grove - ThumbJoystick package for micro:bit.
+Please refer to the github page
 
-![8](https://user-images.githubusercontent.com/18615354/47488634-54c98180-d877-11e8-861f-667e8b720334.jpg)
-
-
-**Prepare**
-
-Connecting a Grove - ThumbJoystick to Microbit is a bit tricky, but it is worth doing. So let's go!!
-
-Firstly, we need to prepare a [Micro:bit](https://microbit.org/), a [Grove shield](https://www.seeedstudio.com/Grove-Inventor-Kit-for-micro-bit-p-2891.html), a tweezers(or needle), a scissors, a [Grove - Thumb Joystick](https://www.seeedstudio.com/Grove-Thumb-Joystick-p-935.html), and a [Grove - Branch Cable](https://www.seeedstudio.com/Grove-Branch-Cable-5PCs-pac-p-847.html).
-
-**It is very very important to pay attention when using scissors and tweezers!**
-
-![1](https://user-images.githubusercontent.com/18615354/47488623-52ffbe00-d877-11e8-824d-6f2254cb648c.jpg)
+[Play with Grove - ThumbJoystick(python)](https://github.com/Microbit-Grove-Library/mpy-ThumbJoystick)
 
 
-- **Step1**
+### 2.Use microbit to control WS2812 LEDs
 
-As the pictures shown, the Grove - Branch Cable has 3 connectors. We name them `Conector#1`, `Conector#2` and `Conector#3`. Note that `Conector#2` and `Conector#3` have no differences at first. 
+Please download the ppt file
 
-Then carefully pick the **white cable** out of `Conector#2` with a tweezers(or needle). 
-
-![2](https://user-images.githubusercontent.com/18615354/47488624-53985480-d877-11e8-8cf9-d99b62482caa.jpg)
-
-
-- **Step2**
-
-Carefully pick the **yellow cable** and **white cable** out of `Conector#3` with a tweezers(or needle). 
-
-![3](https://user-images.githubusercontent.com/18615354/47488628-53985480-d877-11e8-988c-32ed3ffe098f.jpg)
-
-
-- **Step3**
-
-**Be careful not to cut the wrong cable!!!**
-
-Cut the **white cable** of `Conector#2` and the **yellow cable** of `Conector#3`. 
-
-![4](https://user-images.githubusercontent.com/18615354/47488629-5430eb00-d877-11e8-9bb2-22f211ee23d5.jpg)
-
-
-- **Step4**
-
-Insert the **white cable** to the **first slot** of `Conector#3` as the picture shown.
-
-![5](https://user-images.githubusercontent.com/18615354/47488630-5430eb00-d877-11e8-92a5-93d5df4be469.jpg)
-
-
-- **Step5**
-
-Almost done!
-
-Now we connect `Conector#2` to `P0/P14` port  and `Conector#3` to `P1/P15` port of Grove shield.
-
-![6](https://user-images.githubusercontent.com/18615354/47488631-5430eb00-d877-11e8-9782-2f8a0c326a6b.jpg)
-
-
-- **Step6**
-
-The last step! We connect `Conector#1` to Grove - Thumb Joystick and finish!
-
-![7](https://user-images.githubusercontent.com/18615354/47488634-54c98180-d877-11e8-861f-667e8b720334.jpg)
-
-
-#### Demo: 
-
-Please refer the [ThumbJoystick python demo](https://github.com/Microbit-Grove-Library/mpy-ThumbJoystick) for the code part.
+[Use microbit to control WS2812 LEDs](https://github.com/SeeedDocument/Micro-bit_start/raw/master/Use%20microbit%20to%20control%20WS2812%20LEDs.pptx)
 
 
 
@@ -183,7 +117,7 @@ Please refer the [ThumbJoystick python demo](https://github.com/Microbit-Grove-L
 |[Grove - Slide Potentiometer](https://www.seeedstudio.com/Grove-Slide-Potentiometer-p-1196.html)|101020036|
 |[Grove - Luminance Sensor](https://www.seeedstudio.com/Grove-Luminance-Sensor-p-1941.html)|101020076|
 |[Grove - Electricity Sensor](https://www.seeedstudio.com/Grove-Electricity-Sensor-p-777.html)|101020027|
-||[Grove - Light Sensor (P) v1.1](https://www.seeedstudio.com/Grove-Light-Sensor-P-v1-1-p-2693.html)|101020173|
+|[Grove - Light Sensor (P) v1.1](https://www.seeedstudio.com/Grove-Light-Sensor-P-v1-1-p-2693.html)|101020173|
 |[Grove - 80cm Infrared Proximity Sensor](https://www.seeedstudio.com/Grove-80cm-Infrared-Proximity-Sensor-p-788.html)|101020042|
 |[Grove - Mini Fan v1.1](https://www.seeedstudio.com/Grove-Mini-Fan-v1-1-p-2685.html)|108020021|
 |[Grove - Light Sensor](https://www.seeedstudio.com/Grove-Light-Sensor-p-746.html)|101020014|
@@ -210,10 +144,7 @@ Please refer the [ThumbJoystick python demo](https://github.com/Microbit-Grove-L
 |[Grove - Digital Distance Interrupter 0.5 to 5cm(GP2Y0D805Z0F)(P)](https://www.seeedstudio.com/Grove-Digital-Distance-Interrupter-0-5-to-5cm-GP2Y0D805Z0F--p-3085.html)|101020578|
 |[Grove - Digital Distance Interrupter 0.5 to 5cm(GP2Y0D805Z0F)](https://www.seeedstudio.com/Grove-Digital-Distance-Interrupter-0-5-to-5cm-GP2Y0D805Z0-p-3084.html)|101020533|
 |[Grove - I2C FM Receiver v1.1](https://www.seeedstudio.com/Grove-I2C-FM-Receiver-v1-1-p-3076.html)|107020049|
-|[Grove - VOC and eCO2 Gas Sensor (SGP30)](https://www.seeedstudio.com/Grove-VOC-and-eCO2-Gas-Sensor-SGP3-p-3071.html|)|101020512|
+|[Grove - VOC and eCO2 Gas Sensor (SGP30)](https://www.seeedstudio.com/Grove-VOC-and-eCO2-Gas-Sensor-SGP3-p-3071.html)|101020512|
 |[Grove - UART WiFi V2 (ESP8285)](https://www.seeedstudio.com/Grove-UART-WiFi-V2-ESP828-p-3054.html)|113020011|
 
 
-## Resource
-
-- **[PPT]** [Use microbit to control WS2812 LEDs](https://github.com/SeeedDocument/Micro-bit_start/raw/master/Use%20microbit%20to%20control%20WS2812%20LEDs.pptx)
