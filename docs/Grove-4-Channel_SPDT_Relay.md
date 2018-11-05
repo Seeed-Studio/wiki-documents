@@ -205,11 +205,11 @@ void setup()
   while(!Serial);   
 
    /* Scan I2C device detect device address */
-  uint8_t old_address = relay. ;
+  uint8_t old_address = relay.scanI2CDevice();
   if((0x00 == old_address) || (0xff == old_address)) { 
     while(1);
   }
-    
+
   Serial.println("Start write address");
   relay.changeI2CAddress(old_address, 0x11);  /* Set I2C address and save to Flash */  
   Serial.println("End write address");
@@ -279,6 +279,10 @@ void loop()
   delay(2000);
 }
 ```
+
+!!!Attention
+        The library file may be updated. This code may not be applicable to the updated library file, so we recommend that you use the first methods.
+
 
 - **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
