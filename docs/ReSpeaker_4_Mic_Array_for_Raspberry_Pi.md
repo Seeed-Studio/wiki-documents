@@ -320,6 +320,7 @@ sudo apt-get install portaudio19-dev
 - **[DXF]** [ReSpeaker 4-Mic Array for Raspberry Pi v1.0](https://github.com/SeeedDocument/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/raw/master/src/ReSpeaker%204-Mic%20Array%20for%20Raspberry%20Pi%20v1.0.dxf)
 - **[3D]** [ReSpeaker 4-Mic Array for Raspberry Pi v1.0 3D Model](https://github.com/SeeedDocument/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/raw/master/src/ReSpeaker%204-Mics%20Pi%20HAT%20v1.0.skp.zip)
 
+- **[AC108]** [AC108 DataSheet](http://www.x-powers.com/en.php/Info/product_detail/article_id/41)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
