@@ -147,6 +147,7 @@ pages:
           - Raspberry Pi RS232 Board v1.0: Raspberry_Pi_R232_Board_v1.0.md
           - Raspberry Pi Relay Board v1.0: Raspberry_Pi_Relay_Board_v1.0.md
           - Grove Base Hat for Raspberry Pi: Grove_Base_Hat_for_Raspberry_Pi.md
+          - Grove Base Hat for Raspberry Pi Zero: Grove_Base_Hat_for_Raspberry_Pi_Zero.md
           - Skeleton Box for Raspberry Pi Compute Module Development Kit: Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit.md
           - Skeleton box for Raspberry Pi: Skeleton_box_for_Rasberry_Pi.md
 
