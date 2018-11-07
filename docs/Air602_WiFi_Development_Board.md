@@ -116,7 +116,7 @@ We use the serial port tool **sscom** to send the AT command. You can use your f
 
 What ever, please make sure you have checked the option **AddCrLf**, and set the baud rate to **115200**
 
-![](https://github.com/SeeedDocument/Grove-6-Axis_Accelerometer-Gyroscope-BMI088/raw/master/img/AT_2.jpg)
+![](https://github.com/SeeedDocument/Air602_WiFi_Module/raw/master/img/AT_2.jpg)
 
 
 Tap **AT+** then click **SEND** or press ++enter++ key to to check if the connection was successfully established.
@@ -187,7 +187,7 @@ AT+PMTF
 - 7- **WJOIN** Create wireless network *MyAp*
 
 ```C
- AT+WJOIN
+AT+WJOIN
 ```
 
 - 8- **SLIST**  Query the STA information which connected to your SoftAP.
