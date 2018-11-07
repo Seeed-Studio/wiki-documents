@@ -9,7 +9,14 @@ sku: 113990577
 tags:
 ---
 
+![](https://github.com/SeeedDocument/Air602_WiFi_Module/raw/master/img/main.jpg)
+
+
 This wiki works for both Air602 WiFi Development Board and Air602 WiFi Module.
+
+The Air602 is a 2.4G Wi-Fi module based on the embedded Wi-Fi SoC chip (W600) with a  12-pin Stamp Hole Expansion Interface. Miracly, it is even smaller than a stamp. It's only 12mm*10mm, small but complete, it offers a rich interface and complete functionality. This module support IEEE802.11b/g/n and AT command.
+
+The Air602 WiFi Development Board is based on Air602 Wi-Fi module and integrated USB interface and Antenna. If you plug this board into your computer, it will be recognized as an Ports (COM & LPT), so that you can code it with Serial port tool. This module support IEEE802.11b/g/n and AT command.
 
 
 <p style="text-align:center"><a href="https://www.seeedstudio.com/Air602-WiFi-Module-p-3139.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
@@ -17,18 +24,102 @@ This wiki works for both Air602 WiFi Development Board and Air602 WiFi Module.
 <p style="text-align:center"><a href="https://www.seeedstudio.com/Air602-WiFi-Development-Board-p-3140.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
+
+## Features
+
+**Interface**
+
+• USB interface
+
+• UART/SPI
+
+• Integrated GPIO device controller
+
+**Wireless**
+
+• Support IEEE802.11 b/g/e/i/d/k/r/s/w/n
+
+• Support 2.4~2.4835 GHz
+
+• Support Wi-Fi WMM/WMM-PS/WPA/WPA2/WPS
+
+• Support Wi-Fi Direct
+
+• STBC、GreenField、Short-GI
+
+• Support multiple network protocols: TCP/UDP/ICMP/DHCP/DNS/HTTP
+
+**Others**
+
+• Supports AT+ instruction protocol based on ASCII encoding (UART interface)
+
+• Support for user‐programmable GPIO control
+
+
+
+## Specification
+
+|Category|Item|Parameter|
+|--|---|---|
+|Wireless|Support Wi‐Fi  Mode|IEEE802.11b/g/n|
+||RF system impedance|50Ω|
+||Frequency Range|2.4~2.4835 GHz|
+||Receiving sensitivity|20MHz MCS7@‐71dBm;<br>40MHz MCS7@‐68dBm;<br>54Mbps@‐73dBm;<br>11Mbps@‐86dBm;<br>1Mbps@‐95dBm;|
+||Physical layer data rate|802.11n MCS 0~7   150Mbps|
+||Modulation|DSSS、OFDM、DBPSK、DQPSK、CCK、QAM16/64|
+||Output Power|IEEE802.11b, DSSS 1Mbps, POUT = +17dBm;<br>IEEE802.11g, OFDM 54Mbps, POUT = +10dBm;<br>IEEE802.11n, OFDM MCS7, POUT = +10dBm|
+|Hardware|Interface Type|UART/SPI/GPIO|
+||Interface rate|2Mbps@UART (Max) <br>50Mbps@SPI (Max)|
+||Operating Voltage|3.3V(Module)/5V(Development Board)|
+||Operating humidity|5%~90% (No condensation)|
+||storage temperature|‐40~+125 ℃|
+||Operating temperature|‐40~+85℃|
+|Software|Network Type|STA/AP/AP+STA/Wi‐Fi Direct|
+||Verification|WEP/WPA‐PSK/WPA2‐PSK|
+||Encryption|WEP64/WEP128/TKIP/CCMP(AES)|
+||WPS  Function|WPS|
+||Energy saving|PS‐POLL/Standby|
+||Network protocol|TCP/UDP/ARP/ICMP/DHCP/DNS/HTTP|
+||Interface Protocol| AT+ instruction set|
+
+
+## Typical Applications
+
+- intelligent home appliances
+- smart home
+- wireless audio and video
+- smart toys
+- medical monitoring
+- industrial control
+- other Internet of Things applications
+
+
+## Pin Out
+
+
+![](https://github.com/SeeedDocument/Bazaar_file/raw/master/113990576/PIN_MAP.jpg)
+![](https://github.com/SeeedDocument/Bazaar_file/raw/master/113990576/PIN_table.jpg)
+![](https://github.com/SeeedDocument/Bazaar_file/raw/master/113990576/PIN_MAP_B.jpg)
+
+
+
 ## Getting Started
 
-We use the serial port tool **sscom** to send the AT command. You can use your favorite serial port tool, in case you want to use **sscom**
+For the **Air602 WiFi Development Board**, you can just plug it into you computer, it will be recognized as an Ports (COM & LPT).
+For the **Air602 WiFi Module**, you need to use USB-to-Serial Tools to connect the RX/TX pins to your computer.
+ 
+!!!Note
+        For mac, we found that some version of mac system can not recognize the on-board USB-to-Serial chip CH330N, please check here for solution [Mac os driver issue](https://forum.seeedstudio.com/viewtopic.php?f=106&t=8299&sid=aa548f2de0fb26380f50e0b328a49a80)
 
-You can download it [Here](https://github.com/SeeedDocument/Grove-6-Axis_Accelerometer-Gyroscope-BMI088/raw/master/res/sscom51.zip). 
+
+We use the serial port tool **sscom** to send the AT command. You can use your favorite serial port tool, in case you want to use **sscom**, you can download it [Here](https://github.com/SeeedDocument/Grove-6-Axis_Accelerometer-Gyroscope-BMI088/raw/master/res/sscom51.zip). 
 
 What ever, please make sure you have checked the option **AddCrLf**, and set the baud rate to **115200**
 
-[](https://github.com/SeeedDocument/Grove-6-Axis_Accelerometer-Gyroscope-BMI088/raw/master/img/AT_2.jpg)
+![](https://github.com/SeeedDocument/Grove-6-Axis_Accelerometer-Gyroscope-BMI088/raw/master/img/AT_2.jpg)
 
 
-You can use the following commad to check if the connection was successfully established. 
+Tap **AT+** then click **SEND** or press ++enter++ key to to check if the connection was successfully established.
 
 ```C
 AT+
@@ -114,6 +205,9 @@ Wireless network card scanning AP's AT command is ：
 AT+WSCAN
 ```
 
+![](https://github.com/SeeedDocument/Air602_WiFi_Module/raw/master/img/AT_3.jpg)
+
+The last paremeter is the signal strength,  unit db
 
 ### STA joins the AP process
 
@@ -159,6 +253,8 @@ AT+PMTF
 ```C
 AT+WJOIN
 ```
+
+![](https://github.com/SeeedDocument/Air602_WiFi_Module/raw/master/img/AT_4.jpg)
 
 
 ### Create an APSTA process
@@ -260,6 +356,13 @@ AT+APLKSTT
 
 
 ## Resouce
+
+
+- **[PDF]** [Air602 AT Command User Manual](https://github.com/SeeedDocument/Air602_WiFi_Module/raw/master/res/Air602%20AT%20Command%20User%20Manual.pdf)
+
+- **[PDF]** [Air602 Hardware Design Manual](https://github.com/SeeedDocument/Air602_WiFi_Module/raw/master/res/Air602%20Hardware%20Design%20Manual.pdf)
+
+- **[ZIP]** [AIR602_lbr for eagle](https://github.com/SeeedDocument/Air602_WiFi_Module/raw/master/res/AIR602_lbr.zip)
 
 - **[ZIP]** [sscom](https://github.com/SeeedDocument/Grove-6-Axis_Accelerometer-Gyroscope-BMI088/raw/master/res/sscom51.zip)
 
