@@ -58,7 +58,7 @@ The ReSpeaker Mic Array v2.0 has two firmware versions available, one including 
 - Microphones: ST MP34DT01TR-M  
 - Sensitivity: -26 dBFS (Omnidirectional)  
 - Acoustic overload point: 120 dBSPL  
-- SNR: 63 dB  
+- SNR: 61 dB  
 - Power Supply: 5V DC from Micro USB or expansion header  
 - Dimensions: 70mm (Diameter)  
 - 3.5mm Audio jack output socket
