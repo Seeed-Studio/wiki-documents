@@ -87,6 +87,10 @@ Please becareful when you press the reset button to prevent the USB device false
 ![](https://github.com/SeeedDocument/Air602_WiFi_Module/raw/master/img/Tool_7.jpg)
 
 
+!!!Note
+        If it fails, it may show **握手超时**, which means handshake timeout, please repeat step 5 several times, it will be OK then.
+
+
 !!!success
         If everything goes well, you will see the following picture, which means you have successfully burned the firmware into the Air602 development board. Enjoy :D
     
