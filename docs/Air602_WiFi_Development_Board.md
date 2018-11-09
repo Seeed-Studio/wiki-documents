@@ -319,6 +319,12 @@ AT+PMTF
 AT+WJOIN
 ```
 
+## Firmware Programming
+
+For the firmware programming please check here：
+
+[Air602 Firmware Programming Manual](http://wiki.seeedstudio.com/Air602_Firmware_Programming_Manual)
+
 
 ## FAQ
 
@@ -365,6 +371,11 @@ AT+APLKSTT
 - **[ZIP]** [AIR602_lbr for eagle](https://github.com/SeeedDocument/Air602_WiFi_Module/raw/master/res/AIR602_lbr.zip)
 
 - **[ZIP]** [sscom](https://github.com/SeeedDocument/Grove-6-Axis_Accelerometer-Gyroscope-BMI088/raw/master/res/sscom51.zip)
+
+
+## Tech Support
+
+Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/)
 
 
 

@@ -241,10 +241,8 @@ pages:
       
       - Air Serial:
           - Air602 WiFi Development Board: Air602_WiFi_Development_Board.md
-          - Luat:
-              - Index: lua_index.md
-              - lua Introduction: lua.md
-              - Lua Api: luatApi.md
+          - Air602 Firmware Programming Manual: Air602_Firmware_Programming_Manual.md
+
 
 
       - LinkIt:
