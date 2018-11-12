@@ -124,7 +124,7 @@ void loop()
 }
 ISR(TIMER2_OVF_vect)
 {
-    if(airqualitysensor.counter==122)//set 2 seconds as a detected duty
+    if(airqualitysensor.counter==61)
     {
 
         airqualitysensor.last_vol=airqualitysensor.first_vol;
