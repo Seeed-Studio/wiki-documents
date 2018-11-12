@@ -124,7 +124,7 @@ The following sketch demonstrates a simple application of using the Ear-clip Hea
 -   Connect this module to the digital port D2 on [Grove-Base shield](http://www.seeedstudio.com/depot/grove-base-shield-p-754.html?cPath=132). And connect Grove-LED to Digital port 4.
 -   Plug the Base Shield into Arduino/Seeeduino.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Ear-clip_Heart_Rate_Sensor/master/img/Ear_Clip_Heart_Rate.jpg)
+![](https://github.com/SeeedDocument/Grove-Ear-clip_Heart_Rate_Sensor/raw/master/img/with_ardu.jpg)
 
 -   Copy and paste code below to a new Arduino sketch.
 
@@ -226,9 +226,9 @@ The following sketch demonstrates a simple application of using the Ear-clip Hea
 -   Upload the code.
 -   Make sure the sensor contacts your ear skin. This is the signal when we are measuring the heart rate:
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Ear-clip_Heart_Rate_Sensor/master/img/GROVE_heart_rate_chest_belt.bmp)
+![](https://github.com/SeeedDocument/Grove-Ear-clip_Heart_Rate_Sensor/raw/master/img/ardu_serial1.jpg)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Ear-clip_Heart_Rate_Sensor/master/img/Grove-heart_rate_serial.jpg)
+![](https://github.com/SeeedDocument/Grove-Ear-clip_Heart_Rate_Sensor/raw/master/img/ardu_serial2.jpg)
 
 In the first of the figures, which is a waveform diagram of the detected heartbeat, a high pulse comes when beating. 
 
