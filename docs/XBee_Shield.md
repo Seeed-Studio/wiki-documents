@@ -360,7 +360,7 @@ void sendBlueToothCommand(char command[])
 }
 ```
 
-See **Bluetooth Bee Programming**for further information.</div></div>
+See **Bluetooth Bee Programming**for further information.
 
 ##   FAQ  
 
