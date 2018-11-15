@@ -14,7 +14,7 @@ tags:
 The Grove - 3-Axis Digital Accelerometer ±16g Ultra-low Power (BMA400) sensor is a 12 bit, digital, triaxial acceleration sensor with smart on-chip motion and position-triggered interrupt features. It can detect your movement posture, such as Walking, Running, Standing still.
 
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Step-Counter-(BMA456)-p-3189.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-%C2%B116g-Ultra-low-Power-(BMA400)-p-3201.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 ## Features
@@ -109,7 +109,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 | Seeeduino V4.2 | Base Shield | Grove BMA400 |
 |--------------|-------------|-----------------|
 |![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-3-Axis_Digital_Accelerometer-16g_Ultra-low_Power-BMA400/raw/master/img/thumbnail.jpg)|
-|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Step-Counter-(BMA456)-p-3189.html" target="_blank">Get One Now</a>|
+|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-%C2%B116g-Ultra-low-Power-(BMA400)-p-3201.html" target="_blank">Get One Now</a>|
 
 
 !!!note
@@ -249,13 +249,6 @@ X-axis/unit mg; Y-axis/unit mg; Z-axis/unit mg; temperature/unit ℃
 
 - **[PDF]** [XC6206 DATASHEET](https://github.com/SeeedDocument/Grove-Infrared_Temperature_Sensor_Array-AMG8833/raw/master/res/XC6206.pdf)
 
-
-
-## Project
-
-This is the introduction Video of this product, simple demos, you can have a try.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gPi4EWuAGtg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 
 ## Tech Support
