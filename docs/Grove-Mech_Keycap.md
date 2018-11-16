@@ -134,7 +134,7 @@ Once the button is pushed, the K1 will be closed and the **SIG1** will connected
 |---------------|-------------------------|
 | 5V            | Red                     |
 | GND           | Black                   |
-| Not Conencted          | White                   |
+| D3         | White                   |
 | D2            | Yellow                  |
 
 

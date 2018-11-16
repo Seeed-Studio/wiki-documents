@@ -1,6 +1,19 @@
 <p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Grove-2-Channel_SPDT_Relay/raw/master/img/20180823144904.jpg" /></a></p>
 
 
+## November
+
+- [Grove - I2C UV Sensor (VEML6070)](https://www.seeedstudio.com/Grove-I2C-UV-Sensor-(VEML6070)-p-3195.html)
+
+- [Grove - I2C Thermocouple Amplifier (MCP9600)](https://www.seeedstudio.com/Grove-I2C-Thermocouple-Amplifier-(MCP9600)-p-3199.html)
+
+- [Grove - 16 x 2 LCD (Black on Yellow)](https://www.seeedstudio.com/Grove-16-x-2-LCD-(Black-on-Yellow)-p-3198.html)
+
+- [Grove - 16 x 2 LCD (Black on Red)](https://www.seeedstudio.com/Grove-16-x-2-LCD-(Black-on-Red)-p-3197.html)
+
+- [Grove - 16 x 2 LCD (White on Blue)](https://www.seeedstudio.com/Grove-16-x-2-LCD-(White-on-Blue)-p-3196.html)
+
+- [Grove - 3-Axis Digital Accelerometer ±16g Ultra-low Power (BMA400)](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-%C2%B116g-Ultra-low-Power-(BMA400)-p-3201.html)
 
 
 ## October, 2018
