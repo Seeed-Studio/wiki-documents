@@ -3,6 +3,9 @@ title: Grove Introduction
 nointro:
 ---
 
+
+[![](https://github.com/SeeedDocument/Bazaar_file/raw/master/Grove.png)](https://www.seeedstudio.com/grove_100)
+
 Learn more about Grove System [here](/Grove_System/). The following category of Grove modules are available:
 
 - [Grove - Sensor](/Sensor/)
