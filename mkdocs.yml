@@ -182,6 +182,7 @@ pages:
 
       - Azure Sphere:
           - Azure Sphere MT3620 Development Kit: Azure_Sphere_MT3620_Development_Kit.md
+          - Grove Starter Kit for Azure Sphere MT3620 Development Kit.md: Grove_Starter_Kit_for_Azure_Sphere_MT3620_Development_Kit.md
 
       - Artik:
           - Artik Introduction: Artik.md
