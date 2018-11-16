@@ -285,42 +285,9 @@ line-height:3px
 - CE ID: [18/0331/SZ](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-CE.zip)
 - MIC ID: [CSRT18207](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-MIC.zip)
 
-## Quickstarts for Azure Sphere
+## Install Azure Sphere
 
-To use MT3620 Dev Board for Azure Sphere, you’ll need a Windows 10 PC with the latest Windows Updates, alongwith the Visual Studio Tools for Azure Sphere (which will be available for download from Microsoft). These tools will include application templates, development tools and the Azure Sphere software development kit ([SDK](https://azure.microsoft.com/en-us/services/azure-sphere/get-started/)).
-
-The quickstarts guide you through:
-
-- [Install the Azure Sphere SDK](https://docs.microsoft.com/en-us/azure-sphere/install/install) 
-- [Set up an account](https://docs.microsoft.com/en-us/azure-sphere/install/azure-directory-account)
-- [Claiming your device](https://docs.microsoft.com/en-us/azure-sphere/install/claim-device)
-- [Configuring Wi-Fi](https://docs.microsoft.com/en-us/azure-sphere/install/configure-wifi)
-- [Build an application](https://docs.microsoft.com/en-us/azure-sphere/quickstarts/qs-blink-application)
-- [Deploy an application over the air](https://docs.microsoft.com/en-us/azure-sphere/quickstarts/qs-first-deployment)
-
-!!!Warning 
-    If we see error during claiming your device, please follow the soltuion to update azure sphere on board SDK.   
-
-```c
-C:\Users\Seeed05\Documents>azsphere device claim
-error: The Azure Sphere OS on the attached device requires an update to be used with this version of the SDK.
-Diagnostic info: [1.2.0, 3]
-error: Failed to retrieve device ID from attached device: 'The Azure Sphere OS on the attached device requires an update to be used with this version of the SDK.
-Diagnostic info: [1.2.0, 3]'.
-error: Command failed in 00:00:00.9187758.
-```
-
-- Step 1.	In order to access the latest version of the device image you need to be enrolled on [MS Collaborate](http://aka.ms/collaborate). When you download the latest version from there (TP4.2.1) you will have access to a "ReleaseNotesTP4.2.1.pdf" file where the steps to recover the device with the new image are explained.
-- Step 2. Open an Azure Sphere Developer Command Prompt; 
-- Step 3. In the Azure Sphere Developer Command Prompt, change directory to the root of the unzipped folder; 
-- Step 4. Ensure that your board is connected to your computer by USB; 
-- Step 5. Issue the following command:
-
-```
-azsphere device recover --images <recovery-image-folder>
-For example:
-azsphere device recover –images images
-```
+If you have an Azure Sphere development kit that has not yet been used, complete [these steps](https://docs.microsoft.com/en-us/azure-sphere/install/overview) first to get up and running.
 
 ## Azure Sphere Demo
 
@@ -446,6 +413,8 @@ For detail operation, please refer to the video.
 - **[Certification]** [Azure Sphere MT3620 Development Kit-CE](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-CE.zip)
 - **[Certification]** [Azure Sphere MT3620 Development Kit-FCC](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-FCC-FCC.zip)
 - **[Certification]** [Azure Sphere MT3620 Development Kit-MIC](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-MIC.zip)
+- **[Library]** [MT3620 Grove Shield Library](https://github.com/Seeed-Studio/MT3620_Grove_Shield)
+- **[Wiki]** [MT3620 Grove Shield](http://wiki.seeedstudio.com/Grove_Starter_Kit_for_Azure_Sphere_MT3620_Development_Kit/) 
 - **[DataSheet]]** [MediaTek MT3620 Product Brief](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/datasheet/MediaTek%20MT3620%20Product%20Brief.pdf)
 - **[DataSheet]** [DS_FT4232H](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/datasheet/DS_FT4232H.pdf)
 - **[Mechanical]** [Azure Sphere MT3620 Development Board-2D-Drawing](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/tree/master/mechanical)
