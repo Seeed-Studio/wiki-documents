@@ -129,24 +129,25 @@ Here is the tourial how to use the [MT3620 Grove Shield Library](https://github.
 
 - Create a MT3620 application with Visual Studio 2017
 
-   1. Open Visual Studio 2017
-   2. Select __File > New > Project__
-   3. Select __Installed > Visual C++ > Cross Platform > Azure Sphere__ at the left side
-   4. Select __Blank Application for MT3620 RDB (Azure Sphere)__ and type a project name, select a project location then click __OK__.
+1. Open Visual Studio 2017
+2. Select __File > New > Project__
+3. Select __Installed > Visual C++ > Cross Platform > Azure Sphere__ at the left side
+4. Select __Blank Application for MT3620 RDB (Azure Sphere)__ and type a project name, select a project location then click __OK__.
 
 !!!Tip
     There are some templates for MT3620, select __Blank Application for MT3620 RDB (Azure Sphere)__ to create a blank project, or if you want to use __Azure IoT Hub__ then select __Azure IoT Hub Sample for MT3620 RDB(Azure Sphere)__.
 
+
 - Import MT3620_Grove_Shield_Library to the project
 
-   1. Right-Click the solution title In __Solution Explorer__ window on the right side
-   2. Select __Add > Existing Project__
-   3. Select __MT3620_Grove_Shield_Library > MT3620_Grove_Shield_Library.vcxproj__, then click __Open__ 
-   4. Now MT3620_Grove_Shield_Library has been added to the solution.
-   5. Right-Click the project name of your application, select __Properties > C/C++ > General > Additional Include Directories__
-   6. Click the __down arraw >  Edit... > New Line__ icons, add the path of  __MT3620_Grove_Shield_Library__ to the blank item, click __Select Folder__ > __OK__ > __OK__
-   7. Go to the application project Right-Click __References__ > __Add References__, select __Projets__, click the check box of __MT3620_Grove_Shield_Library__, then click __OK__
-   8. Select __app_manifest.json__ in the application project, add the below attributions, so that we can use the peripherals that MT3620 Grove Shield would use.
+1. Right-Click the solution title In __Solution Explorer__ window on the right side
+2. Select __Add > Existing Project__
+3. Select __MT3620_Grove_Shield_Library > MT3620_Grove_Shield_Library.vcxproj__, then click __Open__ 
+4. Now MT3620_Grove_Shield_Library has been added to the solution.
+5. Right-Click the project name of your application, select __Properties > C/C++ > General > Additional Include Directories__
+6. Click the __down arraw >  Edit... > New Line__ icons, add the path of  __MT3620_Grove_Shield_Library__ to the blank item, click __Select Folder__ > __OK__ > __OK__
+7. Go to the application project Right-Click __References__ > __Add References__, select __Projets__, click the check box of __MT3620_Grove_Shield_Library__, then click __OK__
+8. Select __app_manifest.json__ in the application project, add the below attributions, so that we can use the peripherals that MT3620 Grove Shield would use.
 
 ```JSON
 "Capabilities": {
@@ -156,47 +157,47 @@ Here is the tourial how to use the [MT3620 Grove Shield Library](https://github.
 	"WifiConfig": false
 }
 ```
-   9. Now you can edit main.c file in __Source Files__, to include __Grove.h__ and __Sensor/xxx.h__ to drive the MT3620 Grove Shield.
+
+9. Now you can edit main.c file in __Source Files__, to include __Grove.h__ and __Sensor/xxx.h__ to drive the MT3620 Grove Shield.
 
 - Some available header files
 
-   - Grove.h
-   - Sensors/Grove4DigitDisplay.h
-   - Sensors/GroveRelay.h
-   - Sensors/GroveTempHumiBaroBME280.h
-   - Sensors/GroveTempHumiSHT31.h
-   - Sensors/GroveAD7992.h
-   - Sensors/GroveOledDisplay96x96.h
-   - Sensors/GroveRelay.h
-   - Sensors/GroveRotaryAngleSensor.h
-   - Sensors/GroveLEDButton.h
-   - Sensors/GroveLightSensor.h
-
+1. Grove.h
+2. Sensors/Grove4DigitDisplay.h
+3. Sensors/GroveRelay.h
+4. Sensors/GroveTempHumiBaroBME280.h
+5. Sensors/GroveTempHumiSHT31.h
+6. Sensors/GroveAD7992.h
+7. Sensors/GroveOledDisplay96x96.h
+8. Sensors/GroveRelay.h
+9. Sensors/GroveRotaryAngleSensor.h
+10. Sensors/GroveLEDButton.h
+11. Sensors/GroveLightSensor.h
 
 - Usage of the library, see Example - Temp and Huminidy SHT31
 
-    1. Add headers
+1. Add headers
 
 ```C
 #include "Grove.h"
 #include "Sensors/GroveTempHumiSHT31.h"
 ```
 
-   2. Initialize the shield in main() function
+2. Initialize the shield in main() function
 
 ```C
 int i2cFd;
 GroveShield_Initialize(&i2cFd, 115200); // baudrate - 9600,14400,19200,115200,230400 
 ```
 
-   3. Initialize and instantiation
+3. Initialize and instantiation
 
 ```C
 void* sht31 = GroveTempHumiSHT31_Open(i2cFd);
 ```
 
 
-  4. Read temp and humidiy from the sensor
+4. Read temp and humidiy from the sensor
    
 ```C
 GroveTempHumiSHT31_Read(sht31);
