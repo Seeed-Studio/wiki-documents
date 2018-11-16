@@ -123,7 +123,7 @@ If you have an Azure Sphere development kit that has not yet been used, complete
 
 **MT3620 Grove Shield Library**
 
-This is library for Azure Sphere MT3620 Grove Shield, the shield enhences Azure Sphere by adding I2C interface and Analog input.Here is the tourial how to use the [MT3620 Grove Shield Library](https://github.com/Seeed-Studio/MT3620_Grove_Shield).
+This is library for Azure Sphere MT3620 Grove Shield, the shield enhences Azure Sphere by adding I2C interface and Analog input.Here is the [tourial](https://github.com/Seeed-Studio/MT3620_Grove_Shield/blob/master/README.md) how to use the [MT3620 Grove Shield Library](https://github.com/Seeed-Studio/MT3620_Grove_Shield).
 
 ### Analog Input
 
