@@ -131,7 +131,7 @@ ReSpeaker Core v2.0 is designed as a feature rich development board for business
 </table>
 
 !!!Note
-    This table only lists the basic specification of ReSpeakser Core v2.0, for more professional parameters please refer to [Acoustic & Electrical Specification of ReSpeaker Core v2.0](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Acoustic%26Electrical_Specification_of_ReSpeaker_Core_v2.0.pdf).
+​    This table only lists the basic specification of ReSpeakser Core v2.0, for more professional parameters please refer to [Acoustic & Electrical Specification of ReSpeaker Core v2.0](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Acoustic%26Electrical_Specification_of_ReSpeaker_Core_v2.0.pdf).
 
 ## Hardware Overview
 
@@ -358,7 +358,6 @@ Now your ReSpeaker Core v2.0 can boot, you might want to get access to the Linux
 
 
 - **Step 4.** The default user name is ```respeaker```, and password is ```respeaker``` too.
-
 
 **B. Connection via The UART port**
 
@@ -724,7 +723,6 @@ When finished the steps above, run:
 
 ```
 python /home/respeaker/respeakerd/clients/Python/demo_respeaker_v2_vep_alexa_with_light.py
-
 ```
 
 Say `snowboy`, wake up Alexa, Enjoy！
@@ -800,132 +798,59 @@ If you just received the board and had done nothing on it, please learn the [Bas
 - SSH
 - VNC
 
-Then install the basic software packages:
+Then install the basic software packages with the following command, when you see the prompt "When you finish that, the script will continue, or press Ctrl+C if you've done this before", just press Ctrl + C to interrupt the script.
 
+```shell
+curl https://raw.githubusercontent.com/respeaker/respeakerd/master/scripts/install_all.sh|bash
 ```
-## install deps
-sudo apt update
-sudo apt install -y librespeaker git cmake
-sudo apt install -y python-mraa python-upm libmraa1 libupm1 mraa-tools
-sudo pip install pixel_ring pydbus
 
-cd /home/respeaker
-git clone https://github.com/respeaker/respeakerd.git
-
-cd /home/respeaker/respeakerd
-
-sudo cp -f build/respeakerd /usr/local/bin
-sudo cp -f scripts/respeakerd_safe /usr/local/bin
-sudo chmod a+x /usr/local/bin/respeakerd
-sudo chmod a+x /usr/local/bin/respeakerd_safe
-sudo mkdir -p /usr/local/etc/respeakerd
-sudo cp -Rf build/resources /usr/local/etc/respeakerd/
-sudo cp -f scripts/respeakerd.service /etc/systemd/system/
-
-
-#enable system service
-sudo systemctl enable respeakerd
-sudo systemctl start respeakerd
-
-
-```
+This will install `librespeaker` and `respeakerd`.
 
 **Part 2. Configure respeakerd**
 
-2.1 PulseAudio Configuratin
-
-Use your favorite text editor to edit `default.pa`, in this wiki we use **vim editor**.Please tap the following command
+Use your favorite text editor to edit `/etc/respeaker/respeakerd.conf`, in this wiki we use **vim editor**.
 
 ```
-sudo vim /etc/pulse/default.pa
+sudo vim /etc/respeaker/respeakerd.conf
 
 ```
 
-Then the Vim editor will open this file, please press ++i++ to enter the editor mode. Copy and paste the following lines at the end of this file:
+Then change the `mode` to `pulse`
 
 ```
-load-module module-pipe-source source_name="respeakerd_output" rate=16000 channels=1
-set-default-source respeakerd_output
-
+# mode
+# the mode of respeakerd, can be: standard, pulse
+mode = pulse
 ```
 
-- Press ++esc++ button to exit editor modequit
-- Press ++colon++ to access the command mode, tap ++w++ then ++enter++ to save the modification.
-- After saving please press ++q++ then ++enter++ to quit vim.
-
-When all of above done, please make sure the end of **default.pa**  is something like the following picture.
-
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/c1.png)
-
-
-Ok, now you can tap
-
-```
-sudo reboot -f
-```
-
-Reboot the board.
-
-2.2 Start respeakerd in PulseAudio mode
-
-
-When respeakerd works in PulseAudio mode, it outputs the processed audio stream into a named pipe which is created by the module-pipe-source of PulseAudio.
-
-```
-sudo systemctl stop respeakerd
-sudo vim /usr/local/bin/respeakerd_safe
-```
-Modify the content of this file as the following code, you can refer to the previous step for the vim editor operation.
-
-```
-#!/bin/bash
-
-pulseaudio --check
-
-while [ $? == 1 ]; do
-    sleep 1
-    pulseaudio --check
-done
-
-while [ ! -p /tmp/music.input ]; do
-   sleep 1
-done
-
-sleep 5
-
-/usr/local/bin/respeakerd --snowboy_res_path="/usr/local/etc/respeakerd/resources/common.res" --snowboy_model_path="/usr/local/etc/respeakerd/resources/snowboy.umdl" --snowboy_sensitivity="0.4" --source="alsa_input.platform-sound_0.seeed-8ch" --mode=pulse
-```
-
-!!!Note
-    Please make sure you have modified this file the same as the code above, especially the last line **/usr/local...--mode=pulse**, you may just ignore it.
-
-Restart the service:
+We need to restart the `respeakerd` service
 
 ```
 sudo systemctl start respeakerd
-
 ```
 
 Or you want to manually start the respeakerd for debugging purpose:
 
 ```
 sudo systemctl stop respeakerd
-/usr/local/bin/respeakerd --snowboy_res_path="/usr/local/etc/respeakerd/resources/common.res" --snowboy_model_path="/usr/local/etc/respeakerd/resources/snowboy.umdl" --snowboy_sensitivity="0.4" --source="alsa_input.platform-sound_0.seeed-8ch" --mode=pulse --debug
+/usr/bin/respeakerd --source="alsa_input.platform-sound_0.seeed-8ch" --mode=pulse --debug
 ```
+
+!!!Note
+​    You can specify any configuration items inside the configuration file `/etc/respeaker/respeakerd.conf` on the command line to overwrite the corresponding configuration items in the configuration file. You can also inspect all the command line options with `respeakerd --help`.
 
 **Part 3. Compile and Run AVS C++ SDK**
 
 3.1 Download and install the necessary files
 
 ```
-cd /home/respeaker/ && mkdir sdk-folder && cd sdk-folder && mkdir sdk-build sdk-source third-party application-necessities && cd application-necessities && mkdir sound-files
+cd ~ && mkdir sdk-folder && cd sdk-folder && mkdir sdk-build sdk-source third-party application-necessities && cd application-necessities && mkdir sound-files
 sudo apt-get -y install git gcc cmake build-essential libsqlite3-dev libcurl4-openssl-dev libfaad-dev libsoup2.4-dev libgcrypt20-dev libgstreamer-plugins-bad1.0-dev gstreamer1.0-plugins-good libasound2-dev doxygen
-cd /home/respeaker/sdk-folder/third-party && wget -c http://www.portaudio.com/archives/pa_stable_v190600_20161030.tgz && tar zxf pa_stable_v190600_20161030.tgz && cd portaudio && ./configure --without-jack && make
+cd ~/sdk-folder/third-party && wget -c http://www.portaudio.com/archives/pa_stable_v190600_20161030.tgz && tar zxf pa_stable_v190600_20161030.tgz && cd portaudio && ./configure --without-jack && make
 sudo pip install commentjson
-sudo pip install flask 
-sudo pip install requests
-cd /home/respeaker/sdk-folder/sdk-source && git clone git://github.com/respeaker/avs-device-sdk.git
-cd /home/respeaker/sdk-folder/sdk-build && cmake /home/respeaker/sdk-folder/sdk-source/avs-device-sdk -DCMAKE_BUILD_TYPE=DEBUG -DRESPEAKERD_KEY_WORD_DETECTOR=ON -DGSTREAMER_MEDIA_PLAYER=ON -DPORTAUDIO=ON -DPORTAUDIO_LIB_PATH=/home/respeaker/sdk-folder/third-party/portaudio/lib/.libs/libportaudio.a -DPORTAUDIO_INCLUDE_DIR=/home/respeaker/sdk-folder/third-party/portaudio/include
+sudo pip install flask
+cd ~/sdk-folder/sdk-source && git clone git://github.com/respeaker/avs-device-sdk.git
+cd ~/sdk-folder/sdk-build && cmake ~/sdk-folder/sdk-source/avs-device-sdk -DCMAKE_BUILD_TYPE=DEBUG -DRESPEAKERD_KEY_WORD_DETECTOR=ON -DGSTREAMER_MEDIA_PLAYER=ON -DPORTAUDIO=ON -DPORTAUDIO_LIB_PATH=~/sdk-folder/third-party/portaudio/lib/.libs/libportaudio.a -DPORTAUDIO_INCLUDE_DIR=~/sdk-folder/third-party/portaudio/include
 make SampleApp -j2
 
 ```
@@ -939,7 +864,7 @@ Step 1. Register your product with Amazon
 First of all, please follow these [instructions](https://github.com/alexa/alexa-avs-sample-app/wiki/Create-Security-Profile) to register your product and create a security profile. You can skip this step if you have a registered product you'd like to test with.
 
 !!!Note
-    Make sure you save the **Product ID** from the **Product information** tab, and your **Client ID** and **Client Secret** from the **Security Profile** tab. You'll need these params to configure the authorization server.
+​    Make sure you save the **Product ID** from the **Product information** tab, and your **Client ID** and **Client Secret** from the **Security Profile** tab. You'll need these params to configure the authorization server.
 
 
 Step 2. Update AlexaClientSDKConfig.json
@@ -948,7 +873,7 @@ Step 2. Update AlexaClientSDKConfig.json
 Open `/home/respeaker/sdk-folder/sdk-build/Integration/AlexaClientSDKConfig.json` by the command below.
 
 ```
-vim /home/respeaker/sdk-folder/sdk-build/Integration/AlexaClientSDKConfig.json
+vim ~/sdk-folder/sdk-build/Integration/AlexaClientSDKConfig.json
 
 ```
 
@@ -985,13 +910,13 @@ Replace the contents of AlexaClientSDKConfig.json with this JSON blob:
 Enter the **clientId**, **clientSecret**, and **productId** that you saved during device registration and save.
 
 !!!warning
-    Do not remove the quotes and make sure there are no extra characters or spaces! The required values are strings. And It is a good idea to save a backup of this file. Subsequent builds may overwrite the values in **AlexaClientSDKConfig.json**.
+​    Do not remove the quotes and make sure there are no extra characters or spaces! The required values are strings. And It is a good idea to save a backup of this file. Subsequent builds may overwrite the values in **AlexaClientSDKConfig.json**.
 
 !!!note
-    deviceSerialNumber is pre-populated for this project, however, a commercial product should use a serial number or other unique identified for the device.
+​    deviceSerialNumber is pre-populated for this project, however, a commercial product should use a serial number or other unique identified for the device.
 
 !!!Tip
-    The locale is set to US English by default in the sample JSON, however other [locales are supported](https://developer.amazon.com/docs/alexa-voice-service/settings.html#settingsupdated). Feel free to test each language.
+​    The locale is set to US English by default in the sample JSON, however other [locales are supported](https://developer.amazon.com/docs/alexa-voice-service/settings.html#settingsupdated). Feel free to test each language.
 
 
 Step 3. Obtain a refresh token
@@ -999,11 +924,11 @@ Step 3. Obtain a refresh token
 After you've updated **AlexaClientSDKConfig.json**, run **AuthServer.py** to kick-off the token exchange:
 
 ```
-cd /home/respeaker/sdk-folder/sdk-build && python AuthServer/AuthServer.py
+cd ~/sdk-folder/sdk-build && python AuthServer/AuthServer.py
 
 ```
 !!!Note
-    You may need to change the locale settings for your ReSpeaker, as some Raspbian images default to **amazon.co.uk** to **amazon.com**.
+​    You may need to change the locale settings for your ReSpeaker, as some Raspbian images default to **amazon.co.uk** to **amazon.com**.
 
 
 Open your browser and navigate to http://localhost:3000. Login with your Amazon credentials and follow the instructions provided.
@@ -1015,7 +940,7 @@ Step 4. AVS configuration test
 Tap the command below to test the AVS configuration.
 
 ```
-/home/respeaker/sdk-folder/sdk-build/SampleApp/src/SampleApp /home/respeaker/sdk-folder/sdk-build/Integration/AlexaClientSDKConfig.json
+~/sdk-folder/sdk-build/SampleApp/src/SampleApp ~/sdk-folder/sdk-build/Integration/AlexaClientSDKConfig.json
 
 ```
 If everything goes well, you will see the **Sample APP**. Now you are able to make conversations with Alexa, but all user experiences are done through the command line messages.
@@ -1024,13 +949,12 @@ If everything goes well, you will see the **Sample APP**. Now you are able to ma
 
 
 
-
 **Part 4. LED Ring Light Effect**
 
 To activate the on-board LED effect, you just need to tap commands below.
 
 ```
-sudo cp -f /home/respeaker/respeakerd/scripts/pixel_ring_server /usr/local/bin/
+sudo cp -f ~/respeakerd/scripts/pixel_ring_server /usr/local/bin/
 sudo chmod a+x /usr/local/bin/pixel_ring_server
 pixel_ring_server
 
@@ -1045,10 +969,10 @@ When this part done you will be able to wake up the ReSpeaker Core v2.0 by key w
 Tap the commands below.
 
 ```
-sudo cp -f /home/respeaker/respeakerd/scripts/avs_cpp_sdk_safe /usr/local/bin
+sudo cp -f ~/respeakerd/scripts/avs_cpp_sdk_safe /usr/local/bin
 sudo chmod a+x /usr/local/bin/avs_cpp_sdk_safe
-sudo cp -f /home/respeaker/respeakerd/scripts/pixel_ring_server.service /etc/systemd/system/
-sudo cp -f /home/respeaker/respeakerd/scripts/avs_cpp_sdk.service /etc/systemd/system/
+sudo cp -f ~/respeakerd/scripts/pixel_ring_server.service /etc/systemd/system/
+sudo cp -f ~/respeakerd/scripts/avs_cpp_sdk.service /etc/systemd/system/
 sudo systemctl enable pixel_ring_server
 sudo systemctl enable avs_cpp_sdk
 sudo systemctl start pixel_ring_server
@@ -1228,7 +1152,7 @@ python Bing_STT.py
 ```
 
 !!!Warning
-    Please add bing key @ line 12 before running python Bing_STT.py.
+​    Please add bing key @ line 12 before running python Bing_STT.py.
 
 - **Step 5. Let's say ReSpeaker to wake up**
 
@@ -1237,7 +1161,7 @@ python Bing_STT.py
 Let's say **turn on light** or **turn off light** and monitor the screen output.
 
 !!!Note
-    Please refer to FAQ9 to change the PocketSphinx wake up world.
+​    Please refer to FAQ9 to change the PocketSphinx wake up world.
 
 
 **2. Baidu STT**
@@ -1259,7 +1183,7 @@ python Baidu_STT.py
 ```
 
 !!!Warning
-    Please add baidu key @ line 16 before running python Baidu_STT.py.
+​    Please add baidu key @ line 16 before running python Baidu_STT.py.
 
 - **Step 4. Let's say ReSpeaker to wake up**
 
@@ -1268,7 +1192,7 @@ python Baidu_STT.py
 Let's say **开灯** or **关灯** and monitor the screen output.
 
 !!!Note
-    For more info about the baidu speech API, please refer to [here](http://ai.baidu.com/docs#/ASR-Online-Python-SDK/top).
+​    For more info about the baidu speech API, please refer to [here](http://ai.baidu.com/docs#/ASR-Online-Python-SDK/top).
 
 
 ## Play with Wio Link
@@ -1594,7 +1518,7 @@ Once the ReSpeaker Core v2.0 reboot, you can wake up it with your own hot word.
 
 
 Tip!!!
-    The defualt file is **umdl** which is released by the snowboy company,and the file you created is **pmdl** which means personal.
+​    The defualt file is **umdl** which is released by the snowboy company,and the file you created is **pmdl** which means personal.
 
 
 
