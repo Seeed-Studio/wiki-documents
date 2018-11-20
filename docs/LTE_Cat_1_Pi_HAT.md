@@ -495,6 +495,14 @@ AT+UMNOCONF=2
 AT+COPS=0
 ```
 
+You can try below command to verify AT&T network connection. 
+
+```
+AT+UPSD=0,1,"AT&T"
+AT+UPSDA=0,3
+AT+UPING="www.google.com"
+```
+
 **Q5: How to register to Verizon network?**
 
 A5: Please run below commands.
@@ -504,6 +512,15 @@ AT+COPS=2
 AT+UMNOCONF=3
 AT+COPS=0
 ```
+
+You can try below command to verify Verizon network connection. 
+
+```
+AT+UPSD=0,1,"Verizon"
+AT+UPSDA=0,3
+AT+UPING="www.google.com"
+```
+
 
 ## Resource
 
