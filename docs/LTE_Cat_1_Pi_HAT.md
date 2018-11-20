@@ -485,7 +485,7 @@ A2: Here is [u-blox-CEL_ATCommands](https://github.com/SeeedDocument/LTE_Cat_1_P
 
 A3: Please refer to [u-blox LARA-R2 series product page](https://www.u-blox.com/en/product/lara-r2-series).
 
-**Q4: How to add to AT&T network?**
+**Q4: How to register to AT&T network?**
 
 A4: Please run below commands.
 
@@ -495,7 +495,7 @@ AT+UMNOCONF=2
 AT+COPS=0
 ```
 
-**Q5: How to add to Verizon network?**
+**Q5: How to register to Verizon network?**
 
 A5: Please run below commands.
 
