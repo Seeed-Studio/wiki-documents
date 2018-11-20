@@ -485,7 +485,7 @@ A2: Here is [u-blox-CEL_ATCommands](https://github.com/SeeedDocument/LTE_Cat_1_P
 
 A3: Please refer to [u-blox LARA-R2 series product page](https://www.u-blox.com/en/product/lara-r2-series).
 
-**Q4: How to register to AT&T network?**
+**Q4: How to register to AT&T network for LARA-203?**
 
 A4: Please run below commands.
 
@@ -503,7 +503,7 @@ AT+UPSDA=0,3
 AT+UPING="www.google.com"
 ```
 
-**Q5: How to register to Verizon network?**
+**Q5: How to register to Verizon network for LARA-204?**
 
 A5: Please run below commands.
 
