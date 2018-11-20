@@ -836,8 +836,9 @@ sudo systemctl stop respeakerd
 /usr/bin/respeakerd --source="alsa_input.platform-sound_0.seeed-8ch" --mode=pulse --debug
 ```
 
-!!!Note
-​    You can specify any configuration items inside the configuration file /etc/respeaker/respeakerd.conf on the command line to overwrite the corresponding configuration items in the configuration file. You can also inspect all the command line options with respeakerd --help.
+<div class="admonition note" >
+<p class="admonition-title">Note</p>
+​You can specify any configuration items inside the configuration file `/etc/respeaker/respeakerd.conf` on the command line to overwrite the corresponding configuration items in the configuration file. You can also inspect all the command line options with `respeakerd --help`.</div>
 
 **Part 3. Compile and Run AVS C++ SDK**
 
@@ -863,8 +864,9 @@ Step 1. Register your product with Amazon
 
 First of all, please follow these [instructions](https://github.com/alexa/alexa-avs-sample-app/wiki/Create-Security-Profile) to register your product and create a security profile. You can skip this step if you have a registered product you'd like to test with.
 
-!!!Note
-​        Make sure you save the **Product ID** from the **Product information** tab, and your **Client ID** and **Client Secret** from the **Security Profile** tab. You'll need these params to configure the authorization server.
+<div class="admonition note" >
+<p class="admonition-title">Note</p>
+Make sure you save the **Product ID** from the **Product information** tab, and your **Client ID** and **Client Secret** from the **Security Profile** tab. You'll need these params to configure the authorization server.</div>
 
 
 Step 2. Update AlexaClientSDKConfig.json
@@ -909,14 +911,17 @@ Replace the contents of AlexaClientSDKConfig.json with this JSON blob:
 
 Enter the **clientId**, **clientSecret**, and **productId** that you saved during device registration and save.
 
-!!!warning
-​        Do not remove the quotes and make sure there are no extra characters or spaces! The required values are strings. And It is a good idea to save a backup of this file. Subsequent builds may overwrite the values in **AlexaClientSDKConfig.json**.
+<div class="admonition note" >
+<p class="admonition-title">Warning</p>
+​Do not remove the quotes and make sure there are no extra characters or spaces! The required values are strings. And It is a good idea to save a backup of this file. Subsequent builds may overwrite the values in **AlexaClientSDKConfig.json**.</div>
 
-!!!note
-​        deviceSerialNumber is pre-populated for this project, however, a commercial product should use a serial number or other unique identified for the device.
+<div class="admonition note" >
+<p class="admonition-title">Note</p>
+​deviceSerialNumber is pre-populated for this project, however, a commercial product should use a serial number or other unique identified for the device.</div>
 
-!!!Tip
-​        The locale is set to US English by default in the sample JSON, however other [locales are supported](https://developer.amazon.com/docs/alexa-voice-service/settings.html#settingsupdated). Feel free to test each language.
+<div class="admonition note" >
+<p class="admonition-title">Tip</p>
+​The locale is set to US English by default in the sample JSON, however other [locales are supported](https://developer.amazon.com/docs/alexa-voice-service/settings.html#settingsupdated). Feel free to test each language.</div>
 
 
 Step 3. Obtain a refresh token
@@ -928,8 +933,9 @@ cd ~/sdk-folder/sdk-build && python AuthServer/AuthServer.py
 
 ```
 
-!!!Note
-​        You may need to change the locale settings for your ReSpeaker, as some Raspbian images default to **amazon.co.uk** to **amazon.com**.
+<div class="admonition note" >
+<p class="admonition-title">Note</p>
+You may need to change the locale settings for your ReSpeaker, as some Raspbian images default to **amazon.co.uk** to **amazon.com**.</div>
 
 
 Open your browser and navigate to http://localhost:3000. Login with your Amazon credentials and follow the instructions provided.
