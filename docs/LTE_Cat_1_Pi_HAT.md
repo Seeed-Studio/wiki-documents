@@ -485,6 +485,26 @@ A2: Here is [u-blox-CEL_ATCommands](https://github.com/SeeedDocument/LTE_Cat_1_P
 
 A3: Please refer to [u-blox LARA-R2 series product page](https://www.u-blox.com/en/product/lara-r2-series).
 
+**Q4: How to add to AT&T network?**
+
+A4: Please run below commands.
+
+```
+AT+COPS=2
+AT+UMNOCONF=2
+AT+COPS=0
+```
+
+**Q5: How to add to Verizon network?**
+
+A5: Please run below commands.
+
+```
+AT+COPS=2
+AT+UMNOCONF=3
+AT+COPS=0
+```
+
 ## Resource
 
 - **[PDF]** [LTE Cat.1 Pi HAT Schematic](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/res/LTE%20CAT.1%20Pi%20HAT%20v1.0.pdf)
