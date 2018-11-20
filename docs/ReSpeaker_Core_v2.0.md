@@ -837,7 +837,7 @@ sudo systemctl stop respeakerd
 ```
 
 !!!Note
-​        You can specify any configuration items inside the configuration file `/etc/respeaker/respeakerd.conf` on the command line to overwrite the corresponding configuration items in the configuration file. You can also inspect all the command line options with `respeakerd --help`.
+​    You can specify any configuration items inside the configuration file /etc/respeaker/respeakerd.conf on the command line to overwrite the corresponding configuration items in the configuration file. You can also inspect all the command line options with respeakerd --help.
 
 **Part 3. Compile and Run AVS C++ SDK**
 
