@@ -838,7 +838,7 @@ sudo systemctl stop respeakerd
 
 <div class="admonition note" >
 <p class="admonition-title">Note</p>
-​You can specify any configuration items inside the configuration file `/etc/respeaker/respeakerd.conf` on the command line to overwrite the corresponding configuration items in the configuration file. You can also inspect all the command line options with `respeakerd --help`.</div>
+​You can specify any configuration items inside the configuration file /etc/respeaker/respeakerd.conf on the command line to overwrite the corresponding configuration items in the configuration file. You can also inspect all the command line options with respeakerd --help.</div>
 
 **Part 3. Compile and Run AVS C++ SDK**
 
@@ -911,7 +911,7 @@ Replace the contents of AlexaClientSDKConfig.json with this JSON blob:
 
 Enter the **clientId**, **clientSecret**, and **productId** that you saved during device registration and save.
 
-<div class="admonition note" >
+<div class="admonition Warning" >
 <p class="admonition-title">Warning</p>
 ​Do not remove the quotes and make sure there are no extra characters or spaces! The required values are strings. And It is a good idea to save a backup of this file. Subsequent builds may overwrite the values in **AlexaClientSDKConfig.json**.</div>
 
@@ -919,7 +919,7 @@ Enter the **clientId**, **clientSecret**, and **productId** that you saved durin
 <p class="admonition-title">Note</p>
 ​deviceSerialNumber is pre-populated for this project, however, a commercial product should use a serial number or other unique identified for the device.</div>
 
-<div class="admonition note" >
+<div class="admonition Tip" >
 <p class="admonition-title">Tip</p>
 ​The locale is set to US English by default in the sample JSON, however other [locales are supported](https://developer.amazon.com/docs/alexa-voice-service/settings.html#settingsupdated). Feel free to test each language.</div>
 
