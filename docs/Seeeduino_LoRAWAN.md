@@ -16,6 +16,8 @@ The 4 onboard standard Grove connectors allow Seeeduino LoRaWan to connect with 
 
 If you want to build an IoT application quickly, Seeeduino LoRaWAN is your best choice.
 
+<iframe width="800" height="450" src="https://www.youtube.com/embed/4df5kaaKa6I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 |Product Version|Released Date | How to Buy|
 |-------|-------------|----------|
 |Seeeduino LoRaWAN |Dec 20, 2016|[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Seeeduino-LoRaWAN-p-2780.html)|
