@@ -490,12 +490,9 @@ pages:
           - Grove - 6-Axis Accelerometer&Gyroscope(BMI088): Grove-6-Axis_Accelerometer&Gyroscope(BMI088).md
           - Grove - 16x2 LCD Series: Grove-16x2_LCD_Series.md
           - Grove - I2C UV Sensor (VEML6070): Grove-I2C_UV_Sensor-VEML6070.md
+          - Grove - Coulomb Counter 3.3V to 5V (LTC2941): Grove-Coulomb_Counter_3.3V_to_5V-LTC2941.md
           
           
-
-          
-
-
       - Actuator:
           - Actuator Introduction: Actuator.md
           - Atom Node: Atom_Node.md
