@@ -36,7 +36,7 @@ The Grove - Coulomb Counter 3.3V to 5V (LTC2941) is based on LTC2941, its operat
 |Operating Temperature|0℃ to +70℃|
 |Accuracy|±2ppm from 0°C to +40°C|
 |Interface|I2C|
-|I2C Address|0x68|
+|I2C Address|0x64|
 
 
 
@@ -159,8 +159,7 @@ Connect to the AL/CC pin of LTC2941, alert output or charge complete input. The 
 
 - **Step 5.** Connect Seeeduino to PC via a USB cable.
 
-![]()
-
+![](https://github.com/SeeedDocument/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/raw/master/img/connect.jpg)
 
 !!!Note
         If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
@@ -289,7 +288,7 @@ What's more, every time you re-open the serial port, or re-power the control boa
 
 This is the introduction Video of this product, simple demos, you can have a try.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gPi4EWuAGtg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SKJ9iXhx0mc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 
 ## Tech Support
