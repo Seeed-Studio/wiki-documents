@@ -27,7 +27,7 @@ Based on Freescale MPR121, this sensor have 12 completely independent electrodes
 
 This sensor is an upgrade version of [Grove - I2C Touch Sensor](https://www.seeedstudio.com/Grove-I2C-Touch-Sensor-p-840.html), to meet Matsuzawa.Takashi's(one of our customer) needs, we make the I^2^C address changeable, and even cheaper than the old version. So if you have any suggestions about all the Groves, please just shoot to us. We will always listen to your voice, it may make another upgrade, even a new grove. Please kindly write your suggestions in the [Grove 100+](https://www.seeedstudio.com/grove_100) page. 
 
-
+<iframe width="800" height="450" src="https://www.youtube.com/embed/CPq4VSAXBgI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V2-%28MPR121%29-p-3141.html
 " target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
