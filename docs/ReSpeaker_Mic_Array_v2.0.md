@@ -588,7 +588,7 @@ MacBook-Air:Desktop XXX$ python record.py
 - Step 1. Get ODAS and build it.
 
 ```
-sudo apt-get install libfftw3-dev libconfig-dev libasound2-dev
+sudo apt-get install libfftw3-dev libconfig-dev libasound2-dev libgconf-2-4
 sudo apt-get install cmake
 git clone https://github.com/introlab/odas.git
 mkdir odas/build
@@ -599,19 +599,9 @@ make
 
 - Step 2. Get [ODAS Studio](https://github.com/introlab/odas_web/releases)  and open it.
 
-- Step 3. The odascore will be at odas/bin/odascore, the config file is [odas.cfg](https://github.com/respeaker/usb_4_mic_array/blob/master/odas.cfg). Please change odas.cfg based on your sound card number.
-
-```
-interface: {
-    type = "soundcard";
-    card = 1;
-    device = 0;
-}
-```
+- Step 3. The odascore will be at odas/bin/odascore, the **config file** is [odas.cfg](https://raw.githubusercontent.com/respeaker/usb_4_mic_array/master/odas.cfg). 
 
 - Step 4. Upgrade mic array with 6_channels_firmware.bin which includes 4 channels raw audio data.
-
-
 
 <iframe width="800" height="500" src="https://www.youtube.com/embed/K5gZabfaaPI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
