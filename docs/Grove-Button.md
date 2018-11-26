@@ -115,9 +115,9 @@ void loop(){
 
 - **Step 1**. Things used in this project:
 
-| Raspberry pi | Grove Base Hat for RasPi | Grove - Moisture Sensor |
+| Raspberry pi | Grove Base Hat for RasPi | Grove - Button |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](])|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Button/raw/master/img/button_s.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Button-p-766.html)
 
 - **Step 2**. Plug the Grove Base Hat into Raspberry Pi.
