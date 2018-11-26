@@ -113,7 +113,118 @@ void loop()
 ![](https://github.com/SeeedDocument/Grove-Loudness_Sensor/raw/master/img/seeeduino_serial.png)
 
 
-### Play With Raspberry Pi
+
+### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| Raspberry pi | Grove Base Hat for RasPi | Grove - Loudness Sensor |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Loudness_Sensor/raw/master/img/LoudnessSensor_s.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Loudness-Sensor-p-1382.html)
+
+- **Step 2**. Plug the Grove Base Hat into Raspberry Pi.
+- **Step 3**. Connect the Grove - Loudness Sensor to to the A0 port of the Base Hat.
+- **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+![](https://github.com/SeeedDocument/Grove-Loudness_Sensor/raw/master/img/withrpi_basehat.jpg)
+
+
+#### Software
+
+- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 2**. Download the source file by cloning the grove.py library. 
+
+```
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+
+```
+
+- **Step 3.** Excute below command to run the code.
+
+```
+cd grove.py/grove
+python grove_loudness_sensor.py 0 1
+```
+
+
+Following is the grove_water_sensor.py code.
+
+```python
+
+import math
+import sys
+import time
+from grove.adc import ADC
+
+
+class GroveLoudnessSensor:
+
+    def __init__(self, channel):
+        self.channel = channel
+        self.adc = ADC()
+
+    @property
+    def value(self):
+        return self.adc.read(self.channel)
+
+Grove = GroveLoudnessSensor
+
+
+def main():
+    if len(sys.argv) < 2:
+        print('Usage: {} adc_channel'.format(sys.argv[0]))
+        sys.exit(1)
+
+    sensor = GroveLoudnessSensor(int(sys.argv[1]))
+
+    print('Detecting loud...')
+    while True:
+        value = sensor.value
+        if value > 10:
+            print("Loud value {}, Loud Detected.".format(value))
+            time.sleep(.5)
+
+if __name__ == '__main__':
+    main()
+
+
+```
+
+
+!!!success
+    If everything goes well, you will be able to see the following result:
+```python
+
+pi@raspberrypi:~/grove.py/grove $ python grove_loudness_sensor.py 0 1
+Detecting loud...
+Loud value 15, Loud Detected.
+Loud value 11, Loud Detected.
+Loud value 250, Loud Detected.
+Loud value 429, Loud Detected.
+Loud value 203, Loud Detected.
+Loud value 16, Loud Detected.
+Loud value 11, Loud Detected.
+^CTraceback (most recent call last):
+  File "grove_loudness_sensor.py", line 68, in <module>
+    main()
+  File "grove_loudness_sensor.py", line 65, in main
+    time.sleep(.5)
+KeyboardInterrupt
+
+
+```
+
+You can use this sensor to detect the loudness. Press ++ctrl+c++ to quit.
+
+
+!!!Notice
+        You may have noticed that for the analog port, the silkscreen pin number is something like **A1, A0**, however in the command we use parameter **0** and **1**, just the same as digital port. So please make sure you plug the module into the correct port, otherwise there may be pin conflicts.
+
+
+### Play With Raspberry Pi(with GrovePi_Plus)
 
 **Hardware**
 

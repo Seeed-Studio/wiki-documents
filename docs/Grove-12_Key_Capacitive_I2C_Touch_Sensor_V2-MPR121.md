@@ -140,7 +140,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo_n.jpg)  |
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo_n.jpg)  |
 
 !!!Caution
     The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
@@ -273,7 +273,7 @@ void loop()
 
 
 !!!success
-     If every thing goes well, you will get the result. When you touch the CH0 ~ CH11 pads, it will trigger **key ?pressed** and **key ?release**
+     If everything goes well, you will get the result. When you touch the CH0 ~ CH11 pads, it will trigger **key ?pressed** and **key ?release**
 
 
 ```C++
@@ -289,6 +289,152 @@ key 2release
 
 ``` 
 
+### Play With Raspberry Pi
+
+#### Hardware
+
+- **Step 1.** Things used in this project:
+
+| Raspberry pi | Grove Base Hat for RasPi| I2C Touch Sensor V2 |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/raw/master/img/thumbnail.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V2-%28MPR121%29-p-3141.html)|
+
+- **Step 2.** Plug the Grove Base Hat into Raspberry.
+- **Step 3.** Connect the Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121) to the **I^2^C** port of the Base Hat.
+- **Step 4.** Connect the Raspberry Pi to PC through USB cable.
+![](https://github.com/SeeedDocument/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/raw/master/img/rasp_MPR121.jpg)
+
+#### Software
+
+- **Step 1.** Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 2.** Download the source file by cloning the grove.py library. 
+
+```
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+
+```
+
+- **Step 3.** Excute below command to run the code.
+
+```
+cd grove.py/grove
+python grove_12_chan_touch_sensor_MPR121.py
+```
+
+Following is the grove_12_chan_touch_sensor_MPR121.py code.
+
+```python
+import time
+from grove.i2c import Bus
+
+
+TOUCH_SENSOR_DEFAULT_ADDR                 = 0x5b
+
+MODE_CONFIG_REG_ADDR                      = 0x5e
+GLOBAL_PARAM_REG_ADDR_L                   = 0x5c
+TOUCH_STATUS_REG_ADDR_L                   = 0x00
+SET_DEBOUNCE_REG_ADDR                     = 0x5b
+
+FILTERED_DATA_REG_START_ADDR_L            = 0x04
+CHANNEL_NUM                               = 12
+
+STOP_MODE                                 = 0
+NORMAL_MODE                               = 0x3c
+
+class TouchSensorMpr121():
+    def __init__(self,bus_num = 1,addr = TOUCH_SENSOR_DEFAULT_ADDR):
+        self.bus = Bus(bus_num)
+        self.addr = addr
+        self.threshold = 0
+        self.touch_flag = [0]*CHANNEL_NUM
+
+    def sensor_init(self):
+        self._set_mode(STOP_MODE)
+        data = [0x23,0x10]
+        self._set_global_param(data)
+        self._set_debounce(0x22)
+        self._set_mode(NORMAL_MODE)
+
+    def set_threshold(self,threshold):
+        self.threshold = threshold
+
+    def wait_for_ready(self):
+        time.sleep(.2)
+
+    def _set_mode(self,mode):
+        self.bus.write_byte_data(self.addr,MODE_CONFIG_REG_ADDR,mode)
+    
+    def _set_global_param(self,data):
+        self.bus.write_i2c_block_data(self.addr,GLOBAL_PARAM_REG_ADDR_L,data)
+    
+    def _set_debounce(self,data):
+        self.bus.write_byte_data(self.addr,SET_DEBOUNCE_REG_ADDR,data)
+
+    def _check_status_register(self):
+        data_status = self.bus.read_i2c_block_data(self.addr,TOUCH_STATUS_REG_ADDR_L,2)
+        return data_status
+    
+    def get_filtered_touch_data(self,sensor_status):
+        result_value = []
+        for i in range(CHANNEL_NUM):
+            time.sleep(.01)
+            if(sensor_status & (1<<i)):
+                channel_data = self.bus.read_i2c_block_data(self.addr,FILTERED_DATA_REG_START_ADDR_L+2*i,2)
+                result_value.append(channel_data[0] | channel_data[1]<<8 )
+            else:
+                result_value.append(0)
+        return result_value
+
+    def listen_sensor_status(self):
+        data = self._check_status_register()
+        touch_status = data[0] | (data[1]<<8) 
+        touch_result_value = self.get_filtered_touch_data(touch_status)
+
+        for i in range(CHANNEL_NUM):
+            if(touch_result_value[i] < self.threshold ):
+                touch_result_value[i] = 0
+        return touch_result_value
+    
+    def parse_and_print_result(self,result):
+        for i in range(CHANNEL_NUM):
+            if(result[i] != 0):
+                if(0 == self.touch_flag[i]):
+                    self.touch_flag[i] = 1
+                    print("Channel %d is pressed,value is %d" %(i,result[i]))
+            else:
+                if(1 == self.touch_flag[i]):
+                    self.touch_flag[i] = 0
+                    print("Channel %d is released,value is %d" %(i,result[i]))
+        
+
+
+mpr121 = TouchSensorMpr121() 
+def main():
+    mpr121.sensor_init()
+    mpr121.set_threshold(0x60)
+    mpr121.wait_for_ready()
+    while 1:
+        result = mpr121.listen_sensor_status()
+        mpr121.parse_and_print_result(result)
+        time.sleep(.1)
+
+if __name__  == '__main__':
+    main()
+```
+!!!success
+     If everything goes well, you will get the result. When you touch the CH0 ~ CH11 pads, it will trigger **channel # pressed** and **Channel # released** with corresponding pressure values.
+     
+```C++
+>>> %Run grove_12_chan_touch_sensor_MPR121.py
+    Channel 8 is pressed, value is 308
+    Channel 8 is released, value is 0
+    Channel 9 is pressed, value is 170
+    Channel 9 is released, value is 0
+    Channel 10 is pressed, value is 340
+    Channel 8 is pressed, value is 180
+``` 
 
 ## Resources
 

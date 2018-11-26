@@ -57,16 +57,16 @@ The Grove - Buzzer module has a [piezo buzzer](https://en.wikipedia.org/wiki/Buz
 
 #### Hardware
 
-- Step 1. Prepare the below stuffs:
+- **Step 1.** Prepare the below stuffs:
 
 | Seeeduino V4.2 | Base Shield|  Grove - Buzzer |
 |--------------|-------------|-----------------|
 |![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/img/buzzer_s.jpg)|
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|
 
-- Step 2. Connect Grove-Buzzer to port D6 of Grove-Base Shield.
-- Step 3. Plug Grove - Base Shield into Seeeduino.
-- Step 4. Connect Seeeduino to PC through a USB cable.
+- **Step 2.** Connect Grove-Buzzer to port D6 of Grove-Base Shield.
+- **Step 3.** Plug Grove - Base Shield into Seeeduino.
+- **Step 4.** Connect Seeeduino to PC through a USB cable.
 
 ![](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/img/seeeduino_buzzer.jpg)
 
@@ -103,34 +103,120 @@ void loop()
 
 
 
-### Play With Raspberry Pi
+### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
 
 #### Hardware
 
-- Step 1. Prepare the below stuffs:
+- **Step 1**. Things used in this project:
+
+| Raspberry pi | Grove Base Hat for RasPi| Grove -  Buzzer|
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/img/buzzer_s.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|
+
+- **Step 2**. Plug the Grove Base Hat into Raspberry Pi.
+- **Step 3**. Connect the Grove Buzzer to PWM port of the Base Hat.
+- **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+![](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/connect1.jpg)
+
+
+#### Software
+
+- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 2**. Download the source file by cloning the grove.py library. 
+
+```
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+
+```
+
+- **Step 3**. Excute below command to run the code.
+
+```
+cd grove.py/grove
+python grove_pwm_buzzer.py
+```
+
+
+Following is the grove_led.py code.
+
+```python
+
+from __future__ import print_function
+
+import time
+from mraa import getGpioLookup
+from upm import pyupm_buzzer as upmBuzzer
+
+def main():
+    print("Insert Grove-Buzzer to Grove-Base-Hat slot PWM[12 13 VCC GND]")
+
+    # Grove Base Hat for Raspberry Pi
+    #   PWM JST SLOT - PWM[12 13 VCC GND]
+    pin = 12
+    #
+    # Create the buzzer object using RaspberryPi GPIO12
+    mraa_pin = getGpioLookup("GPIO%d" % pin)
+    buzzer = upmBuzzer.Buzzer(mraa_pin)
+
+    chords = [upmBuzzer.BUZZER_DO, upmBuzzer.BUZZER_RE, upmBuzzer.BUZZER_MI,
+              upmBuzzer.BUZZER_FA, upmBuzzer.BUZZER_SOL, upmBuzzer.BUZZER_LA,
+              upmBuzzer.BUZZER_SI];
+
+    # Print sensor name
+    print(buzzer.name())
+
+    # Play sound (DO, RE, MI, etc.), pausing for 0.1 seconds between notes
+    for chord_ind in range (0,7):
+        # play each note for a half second
+        print(buzzer.playSound(chords[chord_ind], 500000))
+        time.sleep(0.1)
+
+    print("exiting application")
+
+    # Delete the buzzer object
+    del buzzer
+
+if __name__ == '__main__':
+    main()
+
+
+
+```
+!!!success
+    If everything goes well, the buzzer will ring a few times and then stop, the program will automatically exit.
+     
+
+
+### Play With Raspberry Pi (with GrovePi_Plus)
+
+#### Hardware
+
+- **Step 1.** Prepare the below stuffs:
 
 | Raspberry pi | GrovePi_Plus | Grove - Buzzer |
 |--------------|-------------|-----------------|
 |![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/img/buzzer_s.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|
 
-- Step 2. Plug the GrovePi_Plus into Raspberry.
-- Step 3. Connect Grove-Buzzer to D8 port of GrovePi_Plus.
-- Step 4. Connect the Raspberry to PC through USB cable.
+- **Step 2.** Plug the GrovePi_Plus into Raspberry.
+- **Step 3.** Connect Grove-Buzzer to D8 port of GrovePi_Plus.
+- **Step 4.** Connect the Raspberry to PC through USB cable.
 
 ![](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/img/rasp_buzzer.jpg)
 
 #### Software
 
-- Step 1. Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment.
-- Step 2. Git clone the Github repository.
+- **Step 1.** Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment.
+- **Step 2.** Git clone the Github repository.
 
 ```
 cd ~
 git clone https://github.com/DexterInd/GrovePi.git
 
 ```
-- Step 3. Excute below commands.
+- **Step 3.** Excute below commands.
 
 ```
 cd ~/GrovePi/Software/Python

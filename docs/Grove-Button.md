@@ -109,7 +109,161 @@ void loop(){
 
 
 
-### Play With Raspberry Pi
+### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| Raspberry pi | Grove Base Hat for RasPi | Grove - Moisture Sensor |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](])|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Button-p-766.html)
+
+- **Step 2**. Plug the Grove Base Hat into Raspberry Pi.
+- **Step 3**. Connect the Grove - Button to the PWM port(port 12) of the Base Hat.
+- **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+![](https://github.com/SeeedDocument/Grove_Button/raw/master/img/with_hat.jpg)
+
+
+#### Software
+
+- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 2**. Download the source file by cloning the grove.py library. 
+
+```
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+
+```
+
+- **Step 3**. Excute below command to run the code.
+
+```
+cd grove.py/grove
+python grove_button.py 12
+```
+If you connect the Red LED to the different port of the Base Hat, instead of excuting **python grove_led.py 12**, you should run the following command.
+```
+python grove_button.py portnumber
+```
+
+
+Following is the grove_button.py code.
+
+```python
+
+import time
+from grove.button import Button
+from grove.factory import Factory
+
+
+class GroveButton(object):
+    def __init__(self, pin):
+        # High = pressed
+        self.__btn = Factory.getButton("GPIO-HIGH", pin)
+        self.__last_time = time.time()
+        self.__on_press = None
+        self.__on_release = None
+        self.__btn.on_event(self, GroveButton.__handle_event)
+
+    @property
+    def on_press(self):
+        return self.__on_press
+
+    @on_press.setter
+    def on_press(self, callback):
+        if not callable(callback):
+            return
+        self.__on_press = callback
+
+    @property
+    def on_release(self):
+        return self.__on_release
+
+    @on_release.setter
+    def on_release(self, callback):
+        if not callable(callback):
+            return
+        self.__on_release = callback
+
+    def __handle_event(self, evt):
+        dt, self.__last_time = evt["time"] - self.__last_time, evt["time"]
+        # print("event index:{} event:{} pressed:{}".format(evt["index"], evt["code"], evt["pressed"]))
+        if evt["code"] == Button.EV_LEVEL_CHANGED:
+            if evt["pressed"]:
+                if callable(self.__on_press):
+                    self.__on_press(dt)
+            else:
+                if callable(self.__on_release):
+                    self.__on_release(dt)
+
+
+Grove = GroveButton
+
+def main():
+    from grove.helper import SlotHelper
+    sh = SlotHelper(SlotHelper.GPIO)
+    pin = sh.argv2pin()
+
+    button = GroveButton(pin)
+
+    def on_press(t):
+        print('Button is pressed')
+    def on_release(t):
+        print("Button is released, pressed for {0} seconds".format(round(t,6)))
+
+    button.on_press = on_press
+    button.on_release = on_release
+
+    while True:
+        time.sleep(1)
+
+
+if __name__ == '__main__':
+    main()
+
+
+```
+
+
+!!!success
+    If everything goes well, you will be able to see the following result:
+```python
+
+pi@raspberrypi:~/grove.py/grove $ python grove_button.py 12
+Hat Name = 'Grove Base Hat RPi'
+Button is pressed
+Button is pressed
+Button is pressed
+Button is pressed
+Button is pressed
+Button is pressed
+Button is released, pressed for 0.002685 seconds
+Button is pressed
+Button is released, pressed for 0.219019 seconds
+Button is pressed
+Button is released, pressed for 0.001372 seconds
+Button is pressed
+Button is pressed
+Button is released, pressed for 0.043143 seconds
+Button is pressed
+Button is released, pressed for 1.083292 seconds
+^CTraceback (most recent call last):
+  File "grove_button.py", line 103, in <module>
+    main()
+  File "grove_button.py", line 99, in main
+    time.sleep(1)
+KeyboardInterrupt
+
+
+```
+
+You can press ++ctrl+c++ to quit this program.
+
+
+
+### Play With Raspberry Pi(with GrovePi_Plus)
 
 #### Hardware
 
