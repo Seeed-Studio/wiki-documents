@@ -78,21 +78,16 @@ Reference
 
 **2.Set BAUDRATE**
 
-<table>
-<tr>
-<td width="200px">
-AT+BAUD6
-</td>
-<td width="400px">
-Set baudrate 38400. Save and Rest.
-</td>
-</tr>
-<tr>
-<td colspan="2">
-Supported baudrate: 4--9600, 5--19200,6--38400,7--57600,8--115200,9--230400,A--460800.
-</td>
-</tr>
-</table>
+| Command  | Description                                 |
+|----------|---------------------------------------------|
+| AT+BAUD4 | Set baudrate 9600. Save and Reset.  |
+| AT+BAUD5 | Set baudrate 19200. Save and Reset.  |
+| AT+BAUD6 | Set baudrate 38400. Save and Reset.  |
+| AT+BAUD7 | Set baudrate 57600. Save and Reset.  |
+| AT+BAUD8 | Set baudrate 115200. Save and Reset.  |
+| AT+BAUD9 | Set baudrate 230400. Save and Reset.  |
+| AT+BAUDA | Set baudrate 460800. Save and Reset.  |
+
 
 **3. Set Device NAME**
 

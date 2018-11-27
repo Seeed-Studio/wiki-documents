@@ -60,6 +60,8 @@ There're 5 size of Grove.
 |20x20mm|20x40mm|20x60mm|40x40mm|40x60mm|
 |![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/size1x1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/size1x2.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/size1x3.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/size2x2.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/size2x3.jpg)|
 
+For the detail mechnical drawing, please refer to [Grove Mechnical Drawing](https://github.com/SeeedDocument/GroveSystem/tree/master/res).
+
 
 ## How to connect Grove to your board
 
