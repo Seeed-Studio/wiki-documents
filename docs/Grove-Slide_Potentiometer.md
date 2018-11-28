@@ -227,10 +227,16 @@ Slide Potentiometer can be an effective Human Interface Device (HID) and can be 
 |![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Slide_Potentiometer/raw/master/img/Slide_small.JPG)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Slide-Potentiometer-p-1196.html)|
 
+
+
 - **Step 2**. Plug the Grove Base Hat into Raspberry.
 - **Step 3**. Connect the Slide Potentiometer to A0 port of the Base Hat.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+
+
 ![](https://github.com/SeeedDocument/Grove-Slide_Potentiometer/raw/master/img/Slide_Hat.jpg)
+
+
 !!! Note
     For step 3 you are able to connect the slide potentiometer to **any Analog Port** but make sure you change the command with the corresponding port number.
 

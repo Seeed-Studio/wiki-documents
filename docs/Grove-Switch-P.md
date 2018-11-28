@@ -134,10 +134,15 @@ switch high!
 |![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Switch-P/raw/master/img/SwitchP_s.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](http://www.seeedstudio.com/Grove-Switch(P)-p-1252.html)|
 
+
 - **Step 2**. Plug the Grove Base Hat into Raspberry.
 - **Step 3**. Connect the Switch to port 12 of the Base Hat.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+
+
 ![](https://github.com/SeeedDocument/Grove-Switch-P/raw/master/img/Switch_Hat.jpg)
+
+
 !!! Note
     For step 3 you are able to connect the switch to **any GPIO Port** but make sure you change the command with the corresponding port number.
 

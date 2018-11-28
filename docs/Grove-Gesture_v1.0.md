@@ -314,9 +314,13 @@ Left
 |![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Gesture_V_1.0/raw/master/img/45d_small.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Gesture-p-2463.html)|
 
+
+
 - **Step 2**. Plug the Grove Base Hat into Raspberry.
 - **Step 3**. Connect the gesture sensor to the **I^2^C** port of the Base Hat.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+
+
 ![](https://github.com/SeeedDocument/Grove_Gesture_V_1.0/raw/master/img/Gesture_Hat.jpg)
 
 

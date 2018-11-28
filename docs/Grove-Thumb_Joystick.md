@@ -127,10 +127,16 @@ The output value from the analog port of Arduino can be converted to the corresp
 |![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Thumb_Joystick/master/img/Bgjoy1_small.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Thumb-Joystick-p-935.html)|
 
+
+
 - **Step 2**. Plug the Grove Base Hat into Raspberry.
 - **Step 3**. Connect the Thumb Joystick  to port A0 of the Base Hat.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+
+
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Thumb_Joystick/master/img/Thumb_Hat.jpg)
+
+
 !!! Note
     For step 3 you are able to connect the the thumb joystick to **any Analog Port** but make sure you change the command with the corresponding port number.
 
