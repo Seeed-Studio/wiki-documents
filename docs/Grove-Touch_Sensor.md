@@ -112,7 +112,7 @@ void loop() {
 - **Step 3**. Connect the touch sensor to port 12 of the Base Hat.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 ![](https://github.com/SeeedDocument/Grove-Touch_Sensor/raw/master/img/Touch_Hat.jpg)
-!!! Please note
+!!! Note
     For step 3 you are able to connect the touch sensor to **any GPIO Port** but make sure you change the command with the corresponding port number.
 
 

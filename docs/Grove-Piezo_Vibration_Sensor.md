@@ -123,7 +123,7 @@ void loop() {
 - **Step 3**. Connect the Grove - Piezo Vibration Sensor to port 12 of the Base Hat.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 ![](https://github.com/SeeedDocument/Grove-Piezo_Vibration_Sensor/raw/master/img/Piezo_Hat.jpg)
-!!! Please note
+!!! Note
     For step 3 you are able to connect the piezo vibration sensor to **any GPIO Port** but make sure you change the command with the corresponding port number.
 
 

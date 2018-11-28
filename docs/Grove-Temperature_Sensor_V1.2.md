@@ -147,7 +147,7 @@ The result should be like:
 - **Step 3**. Connect the temperature sensor to port A0 of the Base Hat.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 ![](https://github.com/SeeedDocument/Grove-Temperature_Sensor_V1.2/raw/master/img/Temperature_Hat.jpg)
-!!! Please note
+!!! Note
     For step 3 you are able to connect the temperature sensor to **any analog Port** but make sure you change the command with the corresponding port number.
 
 

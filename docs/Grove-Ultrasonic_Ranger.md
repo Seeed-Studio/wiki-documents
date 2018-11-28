@@ -150,7 +150,7 @@ The distance to obstacles in front is:
 - **Step 3**. Connect the Grove - Ultrasonic Ranger to port D5 of the Base Hat.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 ![](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/connect2.jpg)
-!!! Please note
+!!! Note
     For step 3 you are able to connect the ultrasonic ranger to **any GPIO Port** but make sure you change the command with the corresponding port number.
 
 

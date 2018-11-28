@@ -131,7 +131,7 @@ The output value from the analog port of Arduino can be converted to the corresp
 - **Step 3**. Connect the Thumb Joystick  to port A0 of the Base Hat.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Thumb_Joystick/master/img/Thumb_Hat.jpg)
-!!! Please note
+!!! Note
     For step 3 you are able to connect the the thumb joystick to **any Analog Port** but make sure you change the command with the corresponding port number.
 
 

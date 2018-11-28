@@ -37,6 +37,8 @@ This module can be used to build a light controlled switch i.e. switch off light
 * Analog value output
 * High reliability and sensibility
 * Small footprint
+
+
 * Recognize wider spectrum
 
 !!!Tip
@@ -148,7 +150,7 @@ void loop()
 - **Step 3**. Connect the light sensor to port A0 of the Base Hat.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 ![](https://github.com/SeeedDocument/Grove_Light_Sensor/raw/master/img/Light_Hat.jpg)
-!!! Please note
+!!! Note
     For step 3 you are able to connect the light sensor to **any Analog Port** but make sure you change the command with the corresponding port number.
 
 

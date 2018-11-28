@@ -138,7 +138,7 @@ switch high!
 - **Step 3**. Connect the Switch to port 12 of the Base Hat.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 ![](https://github.com/SeeedDocument/Grove-Switch-P/raw/master/img/Switch_Hat.jpg)
-!!! Please note
+!!! Note
     For step 3 you are able to connect the switch to **any GPIO Port** but make sure you change the command with the corresponding port number.
 
 
