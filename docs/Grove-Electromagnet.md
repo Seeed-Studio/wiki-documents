@@ -86,7 +86,7 @@ An electromagnet is a type of magnet in which the magnetic field is produced by 
   This example code is in the public domain.
 */
 
-int Electromagnet = 0;
+int Electromagnet = 2;
 int LED = 13;
 
 // the setup routine runs once when you press reset:
