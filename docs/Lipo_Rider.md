@@ -19,4 +19,4 @@ Clicking on the images below will take you to the documentation for the correspo
 |Lipo Rider V0.9b|Lipo Rider V1.0|Lipo Rider V1.1|
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

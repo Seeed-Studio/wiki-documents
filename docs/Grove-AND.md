@@ -44,4 +44,4 @@ Note that this Grove - AND module is sold only as part of the above mentioned pa
 *   [Grove - AND v2.0 Source Files](https://github.com/SeeedDocument/Grove-AND/raw/master/res/Grove-AND_v2.0_Eagle.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

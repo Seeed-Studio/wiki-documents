@@ -195,4 +195,4 @@ Information on how to setup / program Bee Modules are available in
 *   [Seeeduino_V2.2](/Seeeduino_V2.2 "Seeeduino V2.2")
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

@@ -226,4 +226,4 @@ You can post a question to [Seeed Forum](https://community.seeedstudio.com/disco
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/100385/the-little-universe-a-gesture-controlled-floor-lamp-323503/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

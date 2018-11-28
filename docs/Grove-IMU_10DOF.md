@@ -226,4 +226,4 @@ The diagram below shows the orientation of the axes of sensitivity and the polar
 
 ## Tech Support
 
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc.

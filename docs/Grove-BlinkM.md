@@ -71,4 +71,4 @@ If you have questions or other better design ideas, you can go to our [forum](ht
 [BlinkM_Examples from ThingM.com](http://thingm.com/fileadmin/thingm/downloads/BlinkM_Examples.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

@@ -312,4 +312,4 @@ Documentation wiki: CUI32Stem GROVE Lab Buncle.
 *   [http://code.google.com/p/cui32/](http://code.google.com/p/cui32/)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

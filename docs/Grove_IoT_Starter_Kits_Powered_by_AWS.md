@@ -401,4 +401,4 @@ For _**User Manual**_, please go to:
 *   [Wiki for LinkIT One and Grove IoT Starter Kit Powered by AWS](/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

@@ -387,4 +387,4 @@ void loop() {
 - **[Library]** [Library file in Github](https://github.com/Seeed-Studio/Grove_Mini_Track_Ball)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc.

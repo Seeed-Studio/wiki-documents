@@ -74,4 +74,4 @@ You can see :
 *   [How to detect finger touch?](/How_to_detect_finger_touch)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

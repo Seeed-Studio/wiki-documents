@@ -185,4 +185,4 @@ Now share your awesome projects with us on [Recipe](http://www.seeedstudio.com/r
 - **[Connections]** [Set up connections between two BluetoothBee step by step](http://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=687)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

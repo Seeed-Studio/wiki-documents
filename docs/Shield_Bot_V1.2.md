@@ -268,4 +268,4 @@ Resources
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Shield_Bot_V1.2 -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

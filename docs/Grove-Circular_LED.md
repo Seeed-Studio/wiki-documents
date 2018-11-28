@@ -101,4 +101,4 @@ Please download the [CircularLED Library](https://github.com/SeeedDocument/Grove
 - [Grove-circular LED eagle files](https://github.com/SeeedDocument/Grove-Circular_LED/raw/master/res/Grove-circular_LED_eagle_files.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

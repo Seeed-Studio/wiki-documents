@@ -175,4 +175,4 @@ The below chart shows the relationships between the band rate signal band width 
 * [***Download ALL Above***](https://github.com/SeeedDocument/Grove_LoRa_Radio/blob/master/res/res.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

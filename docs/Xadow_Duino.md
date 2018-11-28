@@ -208,4 +208,4 @@ Check more info about the fascinating RGB LED WS2812B:
 - [WS2812B](https://github.com/SeeedDocument/Xadow-Duino/raw/master/Resources/WS2812B%20Datasheet.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

@@ -34,4 +34,4 @@ You can get humidity by readHumidity() and temperature by readTemperature(). Thi
 About LCD, please refer to [LCD](http://arduino.cc/en/Tutorial/LiquidCrystal).
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

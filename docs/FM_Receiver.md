@@ -25,4 +25,4 @@ Hardware linking is very easy, Grove - LCD RGB Backlight and Grove - I2C FM Rece
 * Open the I2C_FM_RGB_LCD example sketch, compile and upload it to your board.
 * Press the button to start seeking FM and twist the Rotary Angle Sensor to adjust volume.
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

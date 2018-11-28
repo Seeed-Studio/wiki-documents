@@ -242,4 +242,4 @@ This is just a simple transmitter and receiver instance as a reference.
 *   [VirtualWire Documentation](http://www.open.com.au/mikem/arduino/VirtualWire.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

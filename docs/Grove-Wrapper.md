@@ -166,4 +166,4 @@ For a novice, it may find a little hard to assemble them. Do not be frustrated. 
 [Mechanical Files](https://github.com/SeeedDocument/Grove-Wrapper/raw/master/res/Mechanical_Diagram.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

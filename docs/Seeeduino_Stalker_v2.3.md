@@ -520,4 +520,4 @@ This documentation is licensed under the Creative Commons [Attribution-ShareAlik
 - **[Eagle]**[Stalker v2.2 Eagle Files.zip](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/res/Stalker_v2.2_eagle.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

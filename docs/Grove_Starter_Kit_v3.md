@@ -485,4 +485,4 @@ void loop()
 We would like to express our gratitude to Rich Morin who modified this document with more appropriate grammar and words.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

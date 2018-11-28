@@ -28,4 +28,4 @@ Here lists the comparison between various versions of SD Card Shield:
  |**Compatibility**|Do not compatible with Mega|Compatible with Mega|
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

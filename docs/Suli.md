@@ -124,4 +124,4 @@ Our plan is to make all Seeed libraries Suli compatible and porting Suli of some
 - [git repository of Suli](https://github.com/Seeed-Studio/Suli)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

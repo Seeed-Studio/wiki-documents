@@ -278,4 +278,4 @@ Some frequently asked questions in RePhone Community are collected and answered 
 Please go the Wiki page [Xadow GPS V2](/Xadow_GPS_V2) for more info.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

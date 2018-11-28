@@ -48,4 +48,4 @@ Arduino can easily control DMX512 device by using the Grove - DXM512 module. Tak
 - [DmxSimple Library](https://github.com/SeeedDocument/Grove-DMX512/raw/master/res/DmxSimple.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

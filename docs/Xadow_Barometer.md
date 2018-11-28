@@ -100,4 +100,4 @@ void loop()
 - [BST-BMP085-DS000-06](https://github.com/SeeedDocument/Xadow_Barometer/raw/master/res/BST-BMP085-DS000-06.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

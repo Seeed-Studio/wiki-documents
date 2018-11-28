@@ -226,4 +226,4 @@ This is a recipe about how to control motors individually with the Seeedstudio 2
 - **[Code]**  [Motor shield Demo code](https://github.com/SeeedDocument/Motor-Shield_V1.0/raw/master/res/Grobe-Motor_Shield_Demo_Code.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

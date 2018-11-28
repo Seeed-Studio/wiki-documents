@@ -541,4 +541,4 @@ For example, use [multifunction_for_reset_button](http://developer.mbed.org/user
 - **[PDF]**   [LPC11Uxx User Manaul](https://github.com/SeeedDocument/Seeeduino_Arch/raw/master/res/LPC11UxxUserManual.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

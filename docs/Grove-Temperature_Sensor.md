@@ -259,4 +259,4 @@ You'll find that the terminal outputs Temperature value every 2 seconds.
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

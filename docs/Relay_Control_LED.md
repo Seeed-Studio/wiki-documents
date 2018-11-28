@@ -32,4 +32,4 @@ Open Arduino IDE, click File -&gt; Sketchbook -&gt; relay_led.
 Upload the code, you can find the led blink.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

@@ -176,4 +176,4 @@ Na, not enough? More [Awesome Projects with ESP8266](https://community.seeedstud
 Even more Awesome Projects On [Recipe](https://community.seeedstudio.com/projects.html#recipe)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

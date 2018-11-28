@@ -538,5 +538,5 @@ A2: Please click raspberry -> Preferences -> Raspberry Pi Configuration, then se
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc.
 

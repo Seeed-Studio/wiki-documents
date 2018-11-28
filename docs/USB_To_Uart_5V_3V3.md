@@ -107,4 +107,4 @@ Note that you should select the correct board type and COM port.
 - [Datasheet of CH340](https://github.com/SeeedDocument/USB_To_Uart_5V_3V3/raw/master/res/CH340DS1_EN.PDF)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

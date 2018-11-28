@@ -135,4 +135,4 @@ This documentation is licensed under the Creative Commons [Attribution-ShareAlik
 - **[PDF]**[Schematic in pdf](https://github.com/SeeedDocument/Seeeduino-v3.0/raw/master/res/Seeeduino_v3.0.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

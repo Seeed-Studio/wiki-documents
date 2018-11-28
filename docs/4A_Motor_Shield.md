@@ -71,4 +71,4 @@ This demo enables the motor rotate in one direction for 2 sec, take a break for 
 - [MC33932 Datasheet](https://github.com/SeeedDocument/4A_Motor_Shield/raw/master/res/MC33932.pdf)  
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

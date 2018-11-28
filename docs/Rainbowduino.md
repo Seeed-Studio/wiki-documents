@@ -49,4 +49,4 @@ The Rainbowduino series is an Arduino compatible controller board with professio
 *   [Rainbow Cube Kit Acrylic Harness](http://www.seeedstudio.com/depot/rainbow-cube-kit-acrylic-harness-p-1021.html?cPath=178_184)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

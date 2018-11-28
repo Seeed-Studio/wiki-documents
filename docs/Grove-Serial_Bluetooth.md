@@ -185,4 +185,4 @@ When **+INQ=1** command is successful, the  **red**  and **green** LEDS blink al
 - [Bluetooth - module Datasheet](res/Bluetooth_module.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

@@ -136,4 +136,4 @@ The Xadow Motor has four I2C address which is decided by A0 pin and A1 pin. A0 a
 - [LB1836 datasheet](https://github.com/SeeedDocument/Xadow_Motor_Driver/raw/master/res/LB1836M.PDF)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

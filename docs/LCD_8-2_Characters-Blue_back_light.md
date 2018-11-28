@@ -446,4 +446,4 @@ L:Write
 *   [Datasheet](http://www.seeedstudio.com/depot/datasheet/LMB0820-info.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

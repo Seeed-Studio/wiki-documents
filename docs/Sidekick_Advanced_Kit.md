@@ -130,4 +130,4 @@ Welcome to the world of electronic creation! Sidekick Advanced Kit is an Arduino
 *   [Arduino Tutorial](http://arduino.cc/en/Tutorial/HomePage)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

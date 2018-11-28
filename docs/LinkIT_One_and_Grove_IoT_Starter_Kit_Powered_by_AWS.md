@@ -335,4 +335,4 @@ You can check the status of Touch Sensor now. Try press the Touch Sensor, and up
 *   [AWS IoT](https://aws.amazon.com/iot/)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

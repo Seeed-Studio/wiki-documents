@@ -108,4 +108,4 @@ Thus, we finish our Calc Library, and it works fine. If you want to try at the l
 [download pdf file](https://github.com/SeeedDocument/How_to_use_and_write_a_library/raw/master/res/How_to_use_and_write_a_library.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

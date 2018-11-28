@@ -24,4 +24,4 @@ Click File -&gt; Sketchbook, then you can fine some project now, that's the demo
 ![](https://github.com/SeeedDocument/Sketchbook_of_Sidekick_Advanced_Kit/raw/master/img/Sidekick_40_2.png)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

@@ -179,4 +179,4 @@ void loop()  {
 - [Relay Shield v3.0](https://github.com/SeeedDocument/Relay_Shield_v3.0/raw/master/res/Relay_Shield_v3.0.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

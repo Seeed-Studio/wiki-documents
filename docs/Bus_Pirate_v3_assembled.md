@@ -66,4 +66,4 @@ This open source hardware and software is distributed in the hope that it will b
 *   [Bus Pirate forum](http://whereisian.com/forum/index.php?board=4.0)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

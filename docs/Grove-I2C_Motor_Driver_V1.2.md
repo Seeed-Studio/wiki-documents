@@ -286,4 +286,4 @@ _Description: Adjust the direction and speed together of Motors._
 *   [File:Burn Firmware for Atmega8 using ISP](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.2/raw/master/res/Burn_firmware_for_Atmega8_using_ISP.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

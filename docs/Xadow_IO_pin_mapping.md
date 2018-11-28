@@ -745,4 +745,4 @@ So items in purple in the IIC SCL &amp; IIC SDA columns do NOT also have breakou
 </td></tr></table>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

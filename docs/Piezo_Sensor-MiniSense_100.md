@@ -151,4 +151,4 @@ The MiniSense 100 is a low cost cantilever-type vibration sensor loaded by a mas
 *   [MiniSense 100 Vibration Sensor Manual](http://www.seeedstudio.com/depot/images/product/MiniSense_100.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

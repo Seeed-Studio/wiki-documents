@@ -40,4 +40,4 @@ Accembled view:
 [SeeeduinoMegaProtoShield Schmatics](http://garden.seeedstudio.com/images/3/3d/SeeeduinoMegaProtoShield_v1.1_source.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

@@ -50,4 +50,4 @@ Connect the module with Bread Board like following picture. It can quickly selec
 *   [MP1496 Datasheet](https://github.com/SeeedDocument/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A/raw/master/res/MP1496-277526.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

@@ -18,4 +18,4 @@ prodimagename:
 ### [How to Install the driver for Seeeduino](http://wiki.seeed.cc/Driver_for_Seeeduino)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

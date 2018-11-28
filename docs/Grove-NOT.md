@@ -46,4 +46,4 @@ Note that this Grove - NOT module is sold only as part of the above mentioned pa
 *   [Grove - NOT v2.0 Source (Eagle files)](https://github.com/SeeedDocument/Grove-NOT/raw/master/res/Grove-NOT_v2.0_Eagle.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

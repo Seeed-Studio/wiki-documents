@@ -81,4 +81,4 @@ Please go to Recipe for the detailed manual:
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Wio_Link_Deluxe_Plus_Kit -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

@@ -337,4 +337,4 @@ Figure 9.2 JTAG probe interface connections
 | 1.00 | March 3, 2017 | Initial version |
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

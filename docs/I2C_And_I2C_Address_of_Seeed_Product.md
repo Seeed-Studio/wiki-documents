@@ -37,4 +37,4 @@ The following table will help you find I2C addresses of Seeed products.
 [I2C Wikipedia](https://en.wikipedia.org/wiki/I%C2%B2C)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

@@ -109,4 +109,4 @@ Your finished kit should look similar to the picture above.
 *   [Sources file](https://github.com/SeeedDocument/Protoshield_Kit_for_Arduino/raw/master/res/ProtoShield.brd)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

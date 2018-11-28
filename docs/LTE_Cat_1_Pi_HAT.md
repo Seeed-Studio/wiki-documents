@@ -531,4 +531,4 @@ AT+UPING="www.google.com"
 - **[PDF]** [AT-Commands Examples AppNote](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/res/AT-CommandsExamples_AppNote_(UBX-13001820).pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

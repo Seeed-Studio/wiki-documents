@@ -46,4 +46,4 @@ Hey! Guys. Show off your any innovative APP for Xadow.
 [Xdow Metal Frame Assembly Guide](https://github.com/SeeedDocument/Xadow_Metal_Frame/raw/master/res/Xdow_Metal_Frame_Guide.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

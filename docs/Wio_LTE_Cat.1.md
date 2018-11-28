@@ -1959,4 +1959,4 @@ Please click here to see all [Wio_LTE](http://support.seeedstudio.com/knowledgeb
 - **[Datasheet]** [AT Command](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/AT_Command.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc.

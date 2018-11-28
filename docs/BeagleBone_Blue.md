@@ -889,4 +889,4 @@ Please do not hesitate to contact **techsupport@seeed.cc** if you require furthe
 - **[MoreReading]** [Projects of BeagleBoard](http://beagleboard.org/project)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

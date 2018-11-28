@@ -400,4 +400,4 @@ _This function can be used to draw a triangle. It is formed by three points._
 -  **[Library]** [New Panel Library【EPD_V230】](https://github.com/SeeedDocument/Small_e-Paper_Shield/raw/master/res/EPDV230.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

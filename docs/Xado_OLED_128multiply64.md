@@ -48,4 +48,4 @@ Download OLED Library and install it to your Arduino Library.Open any code by th
 [Xadow OLED Library](https://github.com/SeeedDocument/Xado_OLED_128multiply64/raw/master/res/SeeedOLED03142012.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

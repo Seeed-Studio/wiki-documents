@@ -184,4 +184,4 @@ Please enjoy soldering them:
 *   [Guide for Danger Shield 1.0](http://wiki.nycresistor.com/wiki/Danger_Shield_1.0)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

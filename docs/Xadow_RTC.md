@@ -186,4 +186,4 @@ The output time is changing like the clock. Once you set a time, RTC will update
 *   [RTC DS1307 Datasheet](https://github.com/SeeedDocument/Xadow_RTC/raw/master/res/DS1307.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

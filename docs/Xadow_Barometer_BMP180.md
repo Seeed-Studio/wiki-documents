@@ -102,4 +102,4 @@ void loop()
 - [BMP180 datasheet](https://github.com/SeeedDocument/Xadow_Barometer_BMP180/raw/master/res/BMP180.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

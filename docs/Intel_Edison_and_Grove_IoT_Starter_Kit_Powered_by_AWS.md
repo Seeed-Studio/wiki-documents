@@ -435,4 +435,4 @@ thingShadows.<span class="me1">on</span><span class="br0">(</span><span class="s
 *   [Getting started with Edison](https://software.intel.com/en-us/iot/library/edison-getting-started)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

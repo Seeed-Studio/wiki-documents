@@ -12,4 +12,4 @@ Products are grouped into the following platforms:
 - [Wio](/Wio/)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

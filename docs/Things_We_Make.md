@@ -93,4 +93,4 @@ Here is a list of what we have posted on Instructable, we love these projects an
 |81|![](https://cdn.instructables.com/FN7/G8H0/J4IPUJ8G/FN7G8H0J4IPUJ8G.RECTANGLE1.jpg)|[Build Google Assistant on Raspberry Pi With ReSpeaker Mic Array](http://www.instructables.com/id/Build-Google-Assistant-on-Raspberry-Pi-With-ReSpea/)|
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

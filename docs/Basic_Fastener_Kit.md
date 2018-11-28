@@ -229,4 +229,4 @@ Here is an example that used some parts of this Basic Fastener Kit. If you have 
 ![](https://github.com/SeeedDocument/Basic_Fastener_Kit/raw/master/img/Parts_lists.jpg)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

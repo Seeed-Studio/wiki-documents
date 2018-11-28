@@ -1257,4 +1257,4 @@ Resources
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Wifi_Shield_V2.0 -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

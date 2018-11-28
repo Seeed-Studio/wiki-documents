@@ -22,4 +22,4 @@ It may be your wrong choice of board type If there appears the below image, plea
 When there appears "Done uploading", congratulate you upload successfully.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
