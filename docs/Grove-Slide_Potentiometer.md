@@ -140,7 +140,7 @@ Platforms Supported
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo.jpg) |
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo.jpg) |
 
 !!!Caution
     The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
@@ -215,7 +215,121 @@ Slide Potentiometer can be an effective Human Interface Device (HID) and can be 
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Slide_Potentiometer/master/img/Car.JPG)
 
-### With Raspberry Pi
+
+### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| Raspberry pi | Grove Base Hat for RasPi| Grove - Slide Potentiometer |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Slide_Potentiometer/raw/master/img/Slide_small.JPG)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Slide-Potentiometer-p-1196.html)|
+
+- **Step 2**. Plug the Grove Base Hat into Raspberry.
+- **Step 3**. Connect the Slide Potentiometer to A0 port of the Base Hat.
+- **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+![](https://github.com/SeeedDocument/Grove-Slide_Potentiometer/raw/master/img/Slide_Hat.jpg)
+!!! Please note
+    For step 3 you are able to connect the slide potentiometer to **any Analog Port** but make sure you change the command with the corresponding port number.
+
+
+#### Software
+
+- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 2**. Download the source file by cloning the grove.py library. 
+
+```
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+
+```
+
+- **Step 3**. Excute below commands to run the code.
+
+```
+cd grove.py/grove
+python grove_slide_potentiometer.py 0
+```
+
+Following is the grove_slide_potentiometer.py code.
+
+```python
+
+import math
+import sys
+import time
+from grove.adc import ADC
+
+
+class GroveSlidePotentiometer(ADC):
+    def __init__(self, channel):
+        self.channel = channel
+        self.adc = ADC()
+    
+    @property
+    def value(self):
+        return self.adc.read(self.channel)
+
+
+Grove = GroveSlidePotentiometer
+
+
+def main():
+    if len(sys.argv) < 2:
+        print('Usage: {} adc_channel'.format(sys.argv[0]))
+        sys.exit(1)
+
+    sensor = GroveSlidePotentiometer(int(sys.argv[1]))
+
+    while True:
+        print('Slide potentiometer value: {}'.format(sensor.value))
+        time.sleep(.2)
+
+
+if __name__ == '__main__':
+    main()
+
+```
+!!!success
+    If everything goes well, you will be able to see the following result
+```python
+
+pi@raspberrypi:~/grove.py/grove $ python grove_slide_potentiometer.py 0
+Slide potentiometer value: 987
+Slide potentiometer value: 988
+Slide potentiometer value: 986
+Slide potentiometer value: 8
+Slide potentiometer value: 2
+Slide potentiometer value: 0
+Slide potentiometer value: 1
+Slide potentiometer value: 0
+Slide potentiometer value: 24
+Slide potentiometer value: 0
+Slide potentiometer value: 0
+Slide potentiometer value: 11
+Slide potentiometer value: 995
+Slide potentiometer value: 999
+Slide potentiometer value: 999
+^CTraceback (most recent call last):
+  File "grove_slide_potentiometer.py", line 66, in <module>
+    main()
+  File "grove_slide_potentiometer.py", line 62, in main
+    time.sleep(.2)
+KeyboardInterrupt
+
+```
+
+
+You can quit this program by simply press ++ctrl+c++.
+
+!!!Notice
+        You may have noticed that for the analog port, the silkscreen pin number is something like **A0, A1**, however in the command we use parameter **0** and **1**, just the same as digital port. So please make sure you plug the module into the correct port, otherwise there may be pin conflicts.
+
+
+
+### Play With Raspberry Pi (with GrovePi_Plus)
 
 1.You should have got a raspberry pi and a grovepi or grovepi+.
 
@@ -292,4 +406,4 @@ Resources
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/kishima7/raspberry-pi-music-server-f5a0ae/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

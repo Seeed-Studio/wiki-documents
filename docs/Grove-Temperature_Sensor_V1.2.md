@@ -132,7 +132,100 @@ The result should be like:
 
 
 
-### Play With Raspberry Pi
+### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| Raspberry pi | Grove Base Hat for RasPi| Grove - Temperature Sensor |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Temperature_Sensor_V1.2/raw/master/img/Grove_Temperature_Sensor_View_little.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Temperature-Sensor-p-774.html)|
+
+- **Step 2**. Plug the Grove Base Hat into Raspberry.
+- **Step 3**. Connect the temperature sensor to port A0 of the Base Hat.
+- **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+![](https://github.com/SeeedDocument/Grove-Temperature_Sensor_V1.2/raw/master/img/Temperature_Hat.jpg)
+!!! Please note
+    For step 3 you are able to connect the temperature sensor to **any analog Port** but make sure you change the command with the corresponding port number.
+
+
+#### Software
+
+- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 2**. Download the source file by cloning the grove.py library. 
+
+```
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+
+```
+
+- **Step 3**. Excute below commands to run the code.
+
+```
+cd grove.py/grove
+python grove_temperature_sensor.py 0
+
+```
+
+Following is the grove_temperature_sensor.py code.
+
+```python
+
+import sys
+import time
+from grove.factory import Factory
+
+
+def main():
+    from grove.helper import SlotHelper
+    sh = SlotHelper(SlotHelper.ADC)
+    pin = sh.argv2pin()
+
+    sensor = Factory.getTemper("NTC-ADC", pin)
+
+    print('Detecting temperature...')
+    while True:
+        print('{} Celsius'.format(sensor.temperature))
+        time.sleep(1)
+
+
+if __name__ == '__main__':
+    main()
+
+```
+!!!success
+    If everything goes well, you will be able to see the following result
+```python
+
+pi@raspberrypi:~/grove.py/grove $ python grove_temperature_sensor.py 0
+Hat Name = 'Grove Base Hat RPi'
+Detecting temperature...
+24.7473402633 Celsius
+24.7473402633 Celsius
+24.7473402633 Celsius
+24.7112751977 Celsius
+24.7112751977 Celsius
+^CTraceback (most recent call last):
+  File "grove_temperature_sensor.py", line 53, in <module>
+    main()
+  File "grove_temperature_sensor.py", line 49, in main
+    time.sleep(1)
+KeyboardInterrupt
+
+```
+
+
+You can quit this program by simply press ++ctrl+c++.
+
+!!!Notice
+        You may have noticed that for the analog port, the silkscreen pin number is something like **A1, A0**, however in the command we use parameter **0** and **1**, just the same as digital port. So please make sure you plug the module into the correct port, otherwise there may be pin conflicts.
+
+
+
+### Play With Raspberry Pi (with GrovePi_Plus)
 
 #### Hardware
 
@@ -264,4 +357,4 @@ If you want to know how the algorithm of temperature coming, please refer to the
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vI9pkmiK8EM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc.
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).

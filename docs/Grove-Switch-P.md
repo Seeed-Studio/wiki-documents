@@ -123,7 +123,115 @@ switch high!
 switch high!
 ```
 
-### Play With Raspberry Pi
+### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| Raspberry pi | Grove Base Hat for RasPi| Grove - Switch P |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Switch-P/raw/master/img/SwitchP_s.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](http://www.seeedstudio.com/Grove-Switch(P)-p-1252.html)|
+
+- **Step 2**. Plug the Grove Base Hat into Raspberry.
+- **Step 3**. Connect the Switch to port 12 of the Base Hat.
+- **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+![](https://github.com/SeeedDocument/Grove-Switch-P/raw/master/img/Switch_Hat.jpg)
+!!! Please note
+    For step 3 you are able to connect the switch to **any GPIO Port** but make sure you change the command with the corresponding port number.
+
+
+#### Software
+
+- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 2**. Download the source file by cloning the grove.py library. 
+
+```
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+
+```
+
+- **Step 3**. Excute below commands to run the code.
+
+```
+cd grove.py/grove
+python grove_switch.py 12
+
+```
+
+Following is the grove_switch.py code.
+
+```python
+
+import time
+from grove.gpio import GPIO
+
+
+class GroveTiltSwitch(GPIO):
+    def __init__(self, pin):
+        super(GroveTiltSwitch, self).__init__(pin, GPIO.IN)
+
+    @property
+    def state(self):
+        return super(GroveTiltSwitch, self).read()
+
+
+Grove = GroveTiltSwitch
+
+
+def main():
+    import sys
+
+    if len(sys.argv) < 2:
+        print('Usage: {} pin'.format(sys.argv[0]))
+        sys.exit(1)
+
+    swicth = GroveTiltSwitch(int(sys.argv[1]))
+
+
+    while True:
+        if swicth.state is 1:
+            print("on")
+        else:
+            print("off")
+        time.sleep(1)
+
+
+if __name__ == '__main__':
+    main()
+
+
+```
+!!!success
+    If everything goes well, you will be able to see the following result
+```python
+
+pi@raspberrypi:~/grove.py/grove $ python grove_switch.py 12
+off
+off
+on
+off
+on
+on
+off
+^CTraceback (most recent call last):
+  File "grove_switch.py", line 70, in <module>
+    main()
+  File "grove_switch.py", line 66, in main
+    time.sleep(1)
+KeyboardInterrupt
+
+
+```
+
+
+You can quit this program by simply press ++ctrl+c++.
+
+
+
+### Play With Raspberry Pi (with GrovePi_Plus)
 
 **Hardware**
 
@@ -203,4 +311,4 @@ pi@raspberrypi:~/GrovePi/Software/Python $ python grove_switch.py
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/sodaqmoja/using-a-switch-to-open-and-close-a-relay-3329ec/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

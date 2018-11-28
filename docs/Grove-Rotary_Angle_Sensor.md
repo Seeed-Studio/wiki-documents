@@ -201,7 +201,133 @@ void loop()
 - **Step 2.** Adjust Grove-Rotary Angle Sensor and we will see the Grove-LED changes the brightness.
 
 
-### Play With Raspberry Pi
+### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| Raspberry pi | Grove Base Hat for RasPi| Grove - Rotary Angle Sensor |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Rotary_Angle_Sensor/raw/master/img/rorary_s.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor--p-1242.html)|
+
+- **Step 2**. Plug the Grove Base Hat into Raspberry.
+- **Step 3**. Connect the rotary sensor to port A0 of the Base Hat.
+- **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+![](https://github.com/SeeedDocument/Grove-Rotary_Angle_Sensor/raw/master/img/Rotary_Hat.jpg)
+!!! Please note
+    For step 3 you are able to connect the rotary angle sensor to **any Analog Port** but make sure you change the command with the corresponding port number.
+
+
+#### Software
+
+- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 2**. Download the source file by cloning the grove.py library. 
+
+```
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+
+```
+
+- **Step 3**. Excute below commands to run the code.
+
+```
+cd grove.py/grove
+python grove_rotary_angle_sensor.py 0
+
+```
+
+Following is the grove_rotary_angle_sensor.py code.
+
+```python
+
+import math
+import sys
+import time
+from grove.adc import ADC
+
+
+class GroveRotaryAngleSensor(ADC):
+    def __init__(self, channel):
+        self.channel = channel
+        self.adc = ADC()
+    
+    @property
+    def value(self):
+        return self.adc.read(self.channel)
+
+
+Grove = GroveRotaryAngleSensor
+
+
+def main():
+    if len(sys.argv) < 2:
+        print('Usage: {} adc_channel'.format(sys.argv[0]))
+        sys.exit(1)
+
+    sensor = GroveRotaryAngleSensor(int(sys.argv[1]))
+
+    while True:
+        print('Rotary Value: {}'.format(sensor.value))
+        time.sleep(.2)
+
+
+if __name__ == '__main__':
+    main()
+
+```
+!!!success
+    If everything goes well, you will be able to see the following result
+```python
+
+pi@raspberrypi:~/grove.py/grove $ python grove_rotary_angle_sensor.py 0
+Rotary Value: 932
+Rotary Value: 931
+Rotary Value: 931
+Rotary Value: 931
+Rotary Value: 933
+Rotary Value: 931
+Rotary Value: 742
+Rotary Value: 666
+Rotary Value: 666
+Rotary Value: 549
+Rotary Value: 520
+Rotary Value: 499
+Rotary Value: 430
+Rotary Value: 430
+Rotary Value: 321
+Rotary Value: 286
+Rotary Value: 205
+Rotary Value: 127
+Rotary Value: 88
+Rotary Value: 0
+Rotary Value: 0
+Rotary Value: 0
+Rotary Value: 0
+Rotary Value: 0
+Rotary Value: 0
+Rotary Value: 0
+^CTraceback (most recent call last):
+  File "grove_rotary_angle_sensor.py", line 66, in <module>
+    main()
+  File "grove_rotary_angle_sensor.py", line 62, in main
+    time.sleep(.2)
+KeyboardInterrupt
+
+
+```
+
+
+You can quit this program by simply press ++ctrl+c++.
+
+!!!Notice
+        You may have noticed that for the analog port, the silkscreen pin number is something like **A0, A1**, however in the command we use parameter **0** and **1**, just the same as digital port. So please make sure you plug the module into the correct port, otherwise there may be pin conflicts.
+
+
+
+### Play With Raspberry Pi (with GrovePi_Plus)
 
 **Hardware**
 
@@ -383,4 +509,4 @@ void loop() {
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

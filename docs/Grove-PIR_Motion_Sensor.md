@@ -127,7 +127,126 @@ The result should be like:
 ![](https://github.com/SeeedDocument/Grove_PIR_Motion_Sensor/raw/master/img/result_arduino.png)
 
 
-### Play with Raspberry Pi
+### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| Raspberry pi | Grove Base Hat for RasPi| Grove - PIR Motion Sensor |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_PIR_Motion_Sensor/raw/master/img/Grove%20-%20PIR%20Motion%20Sensor_s.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-PIR-Motion-Sensor-p-802.html)|
+
+- **Step 2**. Plug the Grove Base Hat into Raspberry.
+- **Step 3**. Connect the PIR motion sensor to port 12 of the Base Hat.
+- **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+![](https://github.com/SeeedDocument/Grove_PIR_Motion_Sensor/raw/master/img/Motion_Hat.jpg)
+!!! Please note
+    For step 3 you are able to connect the PIR motion sensor to **any GPIO Port** but make sure you change the command with the corresponding port number.
+
+
+#### Software
+
+- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 2**. Download the source file by cloning the grove.py library. 
+
+```
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+
+```
+
+- **Step 3**. Excute below commands to run the code.
+
+```
+cd grove.py/grove
+python grove_mini_pir_motion_sensor.py 12
+
+```
+
+Following is the grove_mini_pir_motion_sensor.py code.
+
+```python
+
+import time
+from grove.gpio import GPIO
+
+
+class GroveMiniPIRMotionSensor(GPIO):
+    def __init__(self, pin):
+        super(GroveMiniPIRMotionSensor, self).__init__(pin, GPIO.IN)
+        self._on_detect = None
+
+    @property
+    def on_detect(self):
+        return self._on_detect
+
+    @on_detect.setter
+    def on_detect(self, callback):
+        if not callable(callback):
+            return
+
+        if self.on_event is None:
+            self.on_event = self._handle_event
+
+        self._on_detect = callback
+
+    def _handle_event(self, pin, value):
+        if value:
+            if callable(self._on_detect):
+                self._on_detect()
+
+Grove = GroveMiniPIRMotionSensor
+
+
+def main():
+    import sys
+
+    if len(sys.argv) < 2:
+        print('Usage: {} pin'.format(sys.argv[0]))
+        sys.exit(1)
+
+    pir = GroveMiniPIRMotionSensor(int(sys.argv[1]))
+
+    def callback():
+        print('Motion detected.')
+
+    pir.on_detect = callback
+
+    while True:
+        time.sleep(1)
+
+
+if __name__ == '__main__':
+    main()
+
+```
+!!!success
+    If everything goes well, you will be able to see the following result
+```python
+
+pi@raspberrypi:~/grove.py/grove $ python grove_mini_pir_motion_sensor.py 12
+Motion detected.
+Motion detected.
+Motion detected.
+^CTraceback (most recent call last):
+  File "grove_mini_pir_motion_sensor.py", line 84, in <module>
+    main()
+  File "grove_mini_pir_motion_sensor.py", line 80, in main
+    time.sleep(1)
+KeyboardInterrupt
+
+
+```
+
+
+You can quit this program by simply press ++ctrl+c++.
+
+
+
+
+### Play With Raspberry Pi (with GrovePi_Plus)
 
 #### Hardware
 
@@ -232,7 +351,6 @@ Motion Detected
 
 
 
-
 ## Resources
 
 
@@ -251,4 +369,4 @@ Motion Detected
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/pooja_baraskar/burglar-alarm-with-pir-motion-sensor-964c42/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc.
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).

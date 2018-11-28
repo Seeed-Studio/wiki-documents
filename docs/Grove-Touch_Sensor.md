@@ -95,7 +95,159 @@ void loop() {
 ```
 **Step 2.** Monitor the led on and off.
 
-### Play With Raspberry Pi
+
+
+### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| Raspberry pi | Grove Base Hat for RasPi| Grove - Touch Sensor|
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Touch_Sensor/raw/master/img/45d_small.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](http://www.seeedstudio.com/Grove-Touch-Sensor-p-747.html)|
+
+- **Step 2**. Plug the Grove Base Hat into Raspberry.
+- **Step 3**. Connect the touch sensor to port 12 of the Base Hat.
+- **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+![](https://github.com/SeeedDocument/Grove-Touch_Sensor/raw/master/img/Touch_Hat.jpg)
+!!! Please note
+    For step 3 you are able to connect the touch sensor to **any GPIO Port** but make sure you change the command with the corresponding port number.
+
+
+#### Software
+
+- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 2**. Download the source file by cloning the grove.py library. 
+
+```
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+
+```
+
+- **Step 3**. Excute below commands to run the code.
+
+```
+cd grove.py/grove
+python grove_touch_sensor.py 12
+
+```
+
+Following is the grove_touch_sensor.py code.
+
+```python
+
+import time
+from grove.gpio import GPIO
+
+
+class GroveTouchSensor(GPIO):
+    def __init__(self, pin):
+        super(GroveTouchSensor, self).__init__(pin, GPIO.IN)
+        self._last_time = time.time()
+
+        self._on_press = None
+        self._on_release = None
+
+    @property
+    def on_press(self):
+        return self._on_press
+
+    @on_press.setter
+    def on_press(self, callback):
+        if not callable(callback):
+            return
+
+        if self.on_event is None:
+            self.on_event = self._handle_event
+
+        self._on_press = callback
+
+    @property
+    def on_release(self):
+        return self._on_release
+
+    @on_release.setter
+    def on_release(self, callback):
+        if not callable(callback):
+            return
+
+        if self.on_event is None:
+            self.on_event = self._handle_event
+
+        self._on_release = callback
+
+    def _handle_event(self, pin, value):
+        t = time.time()
+        dt, self._last_time = t - self._last_time, t
+
+        if value:
+            if callable(self._on_press):
+                self._on_press(dt)
+        else:
+            if callable(self._on_release):
+                self._on_release(dt)
+
+Grove = GroveTouchSensor
+
+
+def main():
+    import sys
+
+    if len(sys.argv) < 2:
+        print('Usage: {} pin'.format(sys.argv[0]))
+        sys.exit(1)
+
+    touch = GroveTouchSensor(int(sys.argv[1]))
+
+    def on_press(t):
+        print('Pressed')
+    def on_release(t):
+        print("Released.")
+
+    touch.on_press = on_press
+    touch.on_release = on_release
+
+    while True:
+        time.sleep(1)
+
+
+if __name__ == '__main__':
+    main()
+
+
+```
+!!!success
+    If everything goes well, you will be able to see the following result
+```python
+
+pi@raspberrypi:~/grove.py/grove $ python grove_touch_sensor.py 12
+Pressed
+Released.
+Pressed
+Released.
+Pressed
+Released.
+Pressed
+Released.
+^CTraceback (most recent call last):
+  File "grove_touch_sensor.py", line 110, in <module>
+    main()
+  File "grove_touch_sensor.py", line 106, in main
+    time.sleep(1)
+KeyboardInterrupt
+
+```
+
+
+You can quit this program by simply press ++ctrl+c++.
+
+
+
+
+### Play With Raspberry Pi (with GrovePi_Plus)
 
 #### Hardware
 
@@ -207,4 +359,4 @@ Here is result:
 
 ## Tech Support
 
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc.
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).

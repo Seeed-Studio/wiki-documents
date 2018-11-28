@@ -116,7 +116,131 @@ void loop()
 
 The output value from the analog port of Arduino can be converted to the corresponding resistance by using the formula:R=(float)(1023-sensorValue)\*10/sensorValue.
 
-### Play With Raspberry Pi
+### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| Raspberry pi | Grove Base Hat for RasPi| Grove - Thumb Joystick |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Thumb_Joystick/master/img/Bgjoy1_small.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Thumb-Joystick-p-935.html)|
+
+- **Step 2**. Plug the Grove Base Hat into Raspberry.
+- **Step 3**. Connect the Thumb Joystick  to port A0 of the Base Hat.
+- **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+![](https://raw.githubusercontent.com/SeeedDocument/Grove-Thumb_Joystick/master/img/Thumb_Hat.jpg)
+!!! Please note
+    For step 3 you are able to connect the the thumb joystick to **any Analog Port** but make sure you change the command with the corresponding port number.
+
+
+#### Software
+
+- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 2**. Download the source file by cloning the grove.py library. 
+
+```
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+
+```
+
+- **Step 3**. Excute below commands to run the code.
+
+```
+cd grove.py/grove
+python grove_thumb_joystick.py 0
+
+```
+!!!Note
+    you can excute the program with ++python grove_thumb_joystick.py pin++, where pin could be one of {0, 2, 4, 6} in the ADC group and connect the device to the corresponding slot {A0, A2, A4, A6}.
+
+Following is the grove_thumb_joystick.py code.
+
+```python
+
+import math
+import sys
+import time
+from grove.adc import ADC
+
+
+class GroveThumbJoystick:
+
+    def __init__(self, channelX, channelY):
+        self.channelX = channelX
+        self.channelY = channelY
+        self.adc = ADC()
+
+    @property
+    def value(self):
+        return self.adc.read(self.channelX), self.adc.read(self.channelY)
+
+Grove = GroveThumbJoystick
+
+
+def main():
+    from grove.helper import SlotHelper
+    sh = SlotHelper(SlotHelper.ADC)
+    pin = sh.argv2pin()
+
+    sensor = GroveThumbJoystick(int(pin), int(pin + 1))
+
+    while True:
+        x, y = sensor.value
+        if x > 900:
+            print('Joystick Pressed')
+        print("X, Y = {0} {1}".format(x, y))
+        time.sleep(.2)
+
+if __name__ == '__main__':
+    main()
+
+
+```
+!!!success
+    If everything goes well, you will be able to see the following result
+```python
+
+pi@raspberrypi:~/grove.py/grove $ python grove_thumb_joystick.py 0
+Hat Name = 'Grove Base Hat RPi'
+X, Y = 506 484
+X, Y = 484 484
+X, Y = 506 484
+X, Y = 506 487
+Joystick Pressed
+X, Y = 999 485
+X, Y = 310 736
+X, Y = 681 484
+Joystick Pressed
+X, Y = 999 277
+Joystick Pressed
+X, Y = 999 487
+X, Y = 506 484
+X, Y = 501 486
+X, Y = 509 484
+X, Y = 511 486
+X, Y = 510 485
+^CTraceback (most recent call last):
+  File "grove_thumb_joystick.py", line 69, in <module>
+    main()
+  File "grove_thumb_joystick.py", line 66, in main
+    time.sleep(.2)
+KeyboardInterrupt
+
+```
+
+
+You can quit this program by simply press ++ctrl+c++.
+
+!!!Notice
+        You may have noticed that for the analog port, the silkscreen pin number is something like **A1, A0**, however in the command we use parameter **0** and **1**, just the same as digital port. So please make sure you plug the module into the correct port, otherwise there may be pin conflicts.
+
+
+
+
+### Play With Raspberry Pi (with GrovePi_Plus)
 
 #### Hardware
 
@@ -233,4 +357,4 @@ Resources
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/dexterindustries/build-a-custom-minecraft-controller-d55d9c/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

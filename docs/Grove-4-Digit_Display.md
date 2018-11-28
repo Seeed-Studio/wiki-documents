@@ -176,7 +176,281 @@ g
 - **Step 4.** We will see the Grove-4-Digit Display being turned on.
 
 
-### Play With Raspberry Pi
+### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| Raspberry pi | Grove Base Hat for RasPi| Grove - 4 Digit Display |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_4_Digit_Display/raw/master/image/500px-Grove_-_4_digit_display_s.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/grove-4digital-display-p-1198.html)|
+
+- **Step 2**. Plug the Grove Base Hat into Raspberry Pi.
+- **Step 3**. Connect the 4-digit display to port 12 of the Base Hat.
+- **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+![](https://github.com/SeeedDocument/Grove_4_Digit_Display/raw/master/image/Digit_Hat.jpg)
+!!! Please note
+    For step 3 you are able to connect the digit to **any GPIO Port** but make sure you change the command with the corresponding port number.
+
+
+#### Software
+
+- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 2**. Download the source file by cloning the grove.py library. 
+
+```
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+
+```
+
+- **Step 3**. Excute below commands to run the code.
+
+```
+cd grove.py/grove
+python grove_4_digit_display.py 12 13
+
+```
+
+Following is the grove_4_digit_display.py code.
+
+```python
+
+import sys
+import time
+from grove.gpio import GPIO
+
+
+charmap = {
+    '0': 0x3f,
+    '1': 0x06,
+    '2': 0x5b,
+    '3': 0x4f,
+    '4': 0x66,
+    '5': 0x6d,
+    '6': 0x7d,
+    '7': 0x07,
+    '8': 0x7f,
+    '9': 0x6f,
+    'A': 0x77,
+    'B': 0x7f,
+    'b': 0x7C,
+    'C': 0x39,
+    'c': 0x58,
+    'D': 0x3f,
+    'd': 0x5E,
+    'E': 0x79,
+    'F': 0x71,
+    'G': 0x7d,
+    'H': 0x76,
+    'h': 0x74,
+    'I': 0x06,
+    'J': 0x1f,
+    'K': 0x76,
+    'L': 0x38,
+    'l': 0x06,
+    'n': 0x54,
+    'O': 0x3f,
+    'o': 0x5c,
+    'P': 0x73,
+    'r': 0x50,
+    'S': 0x6d,
+    'U': 0x3e,
+    'V': 0x3e,
+    'Y': 0x66,
+    'Z': 0x5b,
+    '-': 0x40,
+    '_': 0x08,
+    ' ': 0x00
+}
+
+ADDR_AUTO = 0x40
+ADDR_FIXED = 0x44
+STARTADDR = 0xC0
+BRIGHT_DARKEST = 0
+BRIGHT_DEFAULT = 2
+BRIGHT_HIGHEST = 7
+
+
+class Grove4DigitDisplay(object):
+    colon_index = 1
+
+    def __init__(self, clk, dio, brightness=BRIGHT_DEFAULT):
+        self.brightness = brightness
+
+        self.clk = GPIO(clk, direction=GPIO.OUT)
+        self.dio = GPIO(dio, direction=GPIO.OUT)
+        self.data = [0] * 4
+        self.show_colon = False
+
+    def clear(self):
+        self.show_colon = False
+        self.data = [0] * 4
+        self._show()
+
+    def show(self, data):
+        if type(data) is str:
+            for i, c in enumerate(data):
+                if c in charmap:
+                    self.data[i] = charmap[c]
+                else:
+                    self.data[i] = 0
+                if i == self.colon_index and self.show_colon:
+                    self.data[i] |= 0x80
+                if i == 3:
+                    break
+        elif type(data) is int:
+            self.data = [0, 0, 0, charmap['0']]
+            if data < 0:
+                negative = True
+                data = -data
+            else:
+                negative = False
+            index = 3
+            while data != 0:
+                self.data[index] = charmap[str(data % 10)]
+                index -= 1
+                if index < 0:
+                    break
+                data = int(data / 10)
+
+            if negative:
+                if index >= 0:
+                    self.data[index] = charmap['-']
+                else:
+                    self.data = charmap['_'] + [charmap['9']] * 3
+        else:
+            raise ValueError('Not support {}'.format(type(data)))
+        self._show()
+
+    def _show(self):
+        with self:
+            self._transfer(ADDR_AUTO)
+
+        with self:
+            self._transfer(STARTADDR)
+            for i in range(4):
+                self._transfer(self.data[i])
+
+        with self:
+            self._transfer(0x88 + self.brightness)
+
+    def update(self, index, value):
+        if index < 0 or index > 4:
+            return
+
+        if value in charmap:
+            self.data[index] = charmap[value]
+        else:
+            self.data[index] = 0
+
+        if index == self.colon_index and self.show_colon:
+            self.data[index] |= 0x80
+
+        with self:
+            self._transfer(ADDR_FIXED)
+
+        with self:
+            self._transfer(STARTADDR | index)
+            self._transfer(self.data[index])
+
+        with self:
+            self._transfer(0x88 + self.brightness)
+
+
+    def set_brightness(self, brightness):
+        if brightness > 7:
+            brightness = 7
+
+        self.brightness = brightness
+        self._show()
+
+    def set_colon(self, enable):
+        self.show_colon = enable
+        if self.show_colon:
+            self.data[self.colon_index] |= 0x80
+        else:
+            self.data[self.colon_index] &= 0x7F
+        self._show()
+
+    def _transfer(self, data):
+        for _ in range(8):
+            self.clk.write(0)
+            if data & 0x01:
+                self.dio.write(1)
+            else:
+                self.dio.write(0)
+            data >>= 1
+            time.sleep(0.000001)
+            self.clk.write(1)
+            time.sleep(0.000001)
+
+        self.clk.write(0)
+        self.dio.write(1)
+        self.clk.write(1)
+        self.dio.dir(GPIO.IN)
+
+        while self.dio.read():
+            time.sleep(0.001)
+            if self.dio.read():
+                self.dio.dir(GPIO.OUT)
+                self.dio.write(0)
+                self.dio.dir(GPIO.IN)
+        self.dio.dir(GPIO.OUT)
+
+    def _start(self):
+        self.clk.write(1)
+        self.dio.write(1)
+        self.dio.write(0)
+        self.clk.write(0)
+
+    def _stop(self):
+        self.clk.write(0)
+        self.dio.write(0)
+        self.clk.write(1)
+        self.dio.write(1)
+
+    def __enter__(self):
+        self._start()
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self._stop()
+
+
+Grove = Grove4DigitDisplay
+
+
+def main():
+    if len(sys.argv) < 3:
+        print('Usage: {} clk dio'.format(sys.argv[0]))
+        sys.exit(1)
+
+    display = Grove4DigitDisplay(int(sys.argv[1]), int(sys.argv[2]))
+
+    count = 0
+    while True:
+        t = time.strftime("%H%M", time.localtime(time.time()))
+        display.show(t)
+        display.set_colon(count & 1)
+        count += 1
+        time.sleep(1)
+
+
+if __name__ == '__main__':
+    main()
+
+
+```
+!!!success
+    If everything goes well, the 4-digit display will show the current time.
+
+
+You can quit this program by simply press ++ctrl+c++.
+
+
+### Play With Raspberry Pi (with GrovePi_Plus)
 
 **Hardware**
 
@@ -435,4 +709,4 @@ The Wooden Laser Gun and the Gun Target are all based on an Arduino board called
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/ingo-lohs/clock-grove-4-digit-display-using-photon-7c4369/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
