@@ -1,10 +1,10 @@
 ---
 title: Grove - Time of Flight Distance Sensor-VL53L0X
 category: Sensor
-bzurl: https://www.seeedstudio.com/Grove-Time-of-Flight-Distance-Sensor-VL53L0-p-3086.html
+bzurl: https://www.seeedstudio.com/Grove-Temperature%26Humidity-Sensor-Pro-p-838.html
 oldwikiname: 
 prodimagename:
-surveyurl: https://www.surveymonkey.com/r/Grove-Time_of_Flight_Distance_Sensor-VL53L0X
+surveyurl: https://www.surveymonkey.com/r/Grove_Temperature_and_Humidity_Sensor_Pro
 sku: 101020532
 tags: io_3v3, io_5v, plat_duino, plat_pi
 
@@ -23,7 +23,7 @@ The VL53L0X’s 940 nm VCSEL emitter (VerticalCavity Surface-Emitting Laser), is
 
 
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Time-of-Flight-Distance-Sensor-VL53L0-p-3086.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style="text-align:center"><a href="https://www.seeedstudio.com/" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 ## Features
 
@@ -60,7 +60,7 @@ Recommed measure distance|30mm-1000mm
 Resolution|1mm
 Infrared emitter|940 nm
 Bus rate|Up to 400 kHz (FAST mode) serial bus
-IIC Address|0x52
+IIC Address|0x29
 
 
 
@@ -102,7 +102,7 @@ IIC Address|0x52
 | Seeeduino V4.2 | Base Shield| Grove - Time of Flight Distance Sensor |
 |--------------|-------------|-----------------|
 |![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Time_of_Flight_Distance_Sensor-VL53L0X-/raw/master/img/thumbnail.jpg)|
-|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Time-of-Flight-Distance-Sensor-VL53L0-p-3086.html" target="_blank">Get One Now</a>|
+|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Temperature%26Humidity-Sensor-Pro-p-838.html" target="_blank">Get One Now</a>|
 
 
 
@@ -123,7 +123,7 @@ IIC Address|0x52
 
 
 !!!Note
-	If we don't have Grove Base Shield, We also can directly connect Grove - Time of Flight Distance Sensor to Seeeduino as below.
+	If we don't have Grove Base Shield, We also can directly connect Grove - Temperature and Humidity Sensor Pro to Seeeduino as below.
 
 
 | Seeeduino       | Grove - Time of Flight Distance Sensor |

@@ -527,6 +527,8 @@ pages:
           - Grove - Variable Color LED: Grove-Variable_Color_LED.md
           - Grove - Vibration Motor: Grove-Vibration_Motor.md
           - Grove - Water Atomization: Grove-Water_Atomization.md
+          - Grove - 16 Channel PWM Driver (PCA9685): Grove-16-Channel_PWM_Driver-PCA9685.md
+          - Grove - I2C Motor Driver (TB6612FNG): Grove-I2C_Motor_Driver-TB6612FNG.md
 
       - Display:
           - Display Introduction: Display.md

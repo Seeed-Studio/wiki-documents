@@ -300,20 +300,15 @@ PM10 concentration(Atmospheric environment,unit:ug/m3): 59
 
 - **[Zip]** [Grove - Laser PM2.5 Sensor (HM3301) Eagle Files](https://github.com/SeeedDocument/Grove-Laser_PM2.5_Sensor-HM3301/raw/master/res/Grove%20-%20Laser%20PM2.5%20Sensor%20(HM3301).zip)
 
-- **[Zip]** [Seeed_PM2_5_sensor_HM3301](https://github.com/Seeed-Studio/Seeed_PM2_5_sensor_HM3301/archive/master.zip)
+- **[Zip]** [Seeed_PM2_5_sensor_HM3301 Software Library](https://github.com/Seeed-Studio/Seeed_PM2_5_sensor_HM3301/archive/master.zip)
 
 - **[PDF]** [Datasheet HM3301](https://github.com/SeeedDocument/Grove-Laser_PM2.5_Sensor-HM3301/raw/master/res/HM-3300%263600_V2.1.pdf)
 
 
 
-## Project
-
-This is the introduction Video of this product, simple demos, you can have a try.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gPi4EWuAGtg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 
 ## Tech Support
 
-Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/)
+Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/) or drop mail to [techsupport@seeed.cc](techsupport@seeed.cc).
 
