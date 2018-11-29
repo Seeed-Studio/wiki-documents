@@ -125,12 +125,15 @@ There are 16 groups of Pins(1 - 16) on this board, each group of pins contains o
 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-16-Channel_PWM_Driver-PCA9685/raw/master/img/Arduino.jpg)
-
+![](https://github.com/SeeedDocument/Grove-16-Channel_PWM_Driver-PCA9685/raw/master/img/connect1.jpg)
 
 
 !!!Note
         In this example for LED, as we are not using pin '5V' in output group we do not need to power up the power input port. If you want to use servo, you need to connect the 5V pin to the power pin of servo, and you need to offer external power for **Power In** port.
+
+If you want to use servo, you can connect as shown below:
+
+![](https://github.com/SeeedDocument/Grove-16-Channel_PWM_Driver-PCA9685/raw/master/img/connect2.jpg)
 
 
 #### Software
