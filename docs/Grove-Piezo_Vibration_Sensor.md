@@ -209,8 +209,10 @@ if __name__ == '__main__':
 
 
 ```
+
 !!!success
     If everything goes well, you will be able to see the following result
+
 ```python
 
 pi@raspberrypi:~/grove.py/grove $ python grove_piezo_vibration_sensor.py 12

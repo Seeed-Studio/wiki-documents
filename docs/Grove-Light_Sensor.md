@@ -218,10 +218,11 @@ def main():
 if __name__ == '__main__':
     main()
 
-
 ```
+
 !!!success
     If everything goes well, you will be able to see the following result corresponding to the surrounding light
+    
 ```python
 
 pi@raspberrypi:~/grove.py/grove $ python grove_light_sensor_v1_2.py 0

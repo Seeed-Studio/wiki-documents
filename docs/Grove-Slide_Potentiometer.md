@@ -298,8 +298,10 @@ if __name__ == '__main__':
     main()
 
 ```
+
 !!!success
     If everything goes well, you will be able to see the following result
+    
 ```python
 
 pi@raspberrypi:~/grove.py/grove $ python grove_slide_potentiometer.py 0

@@ -201,8 +201,10 @@ if __name__ == '__main__':
     main()
 
 ```
+
 !!!success
     If everything goes well, you will be able to see the following result
+    
 ```python
 
 pi@raspberrypi:~/grove.py/grove $ python grove_temperature_sensor.py 0
@@ -284,6 +286,7 @@ sudo python grove_temperature_sensor.py
 Here is the grove_temperature_sensor.py code.
 
 ```python
+
 # NOTE:
 # 	The sensor uses a thermistor to detect ambient temperature.
 # 	The resistance of a thermistor will increase when the ambient temperature decreases.

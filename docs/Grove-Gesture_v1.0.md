@@ -864,10 +864,12 @@ if __name__ == "__main__":
 		# print g.return_gesture()
 		# time.sleep(.1)
 		
-
 ```
+
 !!!success
     If everything goes well, you will be able to see the following result
+
+	
 ```python
 
 pi@raspberrypi:~/grove.py/grove $ python3 grove_gesture_sensor.py 

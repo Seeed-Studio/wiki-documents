@@ -170,6 +170,7 @@ Following is the grove_switch.py code.
 
 ```python
 
+
 import time
 from grove.gpio import GPIO
 
@@ -209,8 +210,10 @@ if __name__ == '__main__':
 
 
 ```
+
 !!!success
     If everything goes well, you will be able to see the following result
+    
 ```python
 
 pi@raspberrypi:~/grove.py/grove $ python grove_switch.py 12

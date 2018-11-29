@@ -205,8 +205,10 @@ if __name__ == '__main__':
 
 
 ```
+
 !!!success
     If everything goes well, you will be able to see the following result
+    
 ```python
 
 pi@raspberrypi:~/grove.py/grove $ python grove_sound_sensor.py 0 
@@ -289,6 +291,7 @@ cd yourpath/GrovePi/Software/Python/
 Here is the grove_sound_sensor.py code.
 
 ```python
+
 #!/usr/bin/env python
 #
 # GrovePi Example for using the Grove Sound Sensor and the Grove LED
