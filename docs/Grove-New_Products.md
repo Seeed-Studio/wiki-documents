@@ -3,6 +3,14 @@
 
 ## November
 
+- [Grove - Coulomb Counter 3.3V to 5V (LTC2941)](https://www.seeedstudio.com/Grove-Coulomb-Counter-3.3V-to-5V-%28LTC2941%29-p-3215.html)
+
+- [Grove - Laser PM2.5 Sensor (HM3301)](https://www.seeedstudio.com/Grove-Laser-PM2.5-Sensor-%28HM3301%29-p-3219.html)
+
+- [Grove - I2C Motor Driver (TB6612FNG)](https://www.seeedstudio.com/Grove-I2C-Motor-Driver-%28TB6612FNG%29-p-3220.html)
+
+- [Grove - 16-Channel PWM Driver (PCA9685)](https://www.seeedstudio.com/Grove-16-Channel-PWM-Driver-%28PCA9685%29-p-3221.html)
+
 - [Grove - I2C UV Sensor (VEML6070)](https://www.seeedstudio.com/Grove-I2C-UV-Sensor-(VEML6070)-p-3195.html)
 
 - [Grove - I2C Thermocouple Amplifier (MCP9600)](https://www.seeedstudio.com/Grove-I2C-Thermocouple-Amplifier-(MCP9600)-p-3199.html)
