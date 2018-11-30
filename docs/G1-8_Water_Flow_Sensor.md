@@ -13,7 +13,7 @@ Water flow sensor consists of a plastic valve body, a water rotor, and a hall-ef
 
 We have a comprehensive line of water flow sensors in different diameters. Check them out to find the one that meets your need most.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Skeleton-Box-p-1407.html)
+[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/G1-8-Water-Flow-Sensor-p-1346.html)
 
 ##  Features
 
