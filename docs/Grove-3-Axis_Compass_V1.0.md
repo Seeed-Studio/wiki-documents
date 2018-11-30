@@ -36,16 +36,15 @@ Platforms Supported
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo.jpg) |
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo.jpg) |
 
 !!!Caution
     The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
 
-Demonstration
--------------
+##Getting Started
 
-### With [Arduino](/Arduino "Arduino")
+### Play with Arduino
 
 This demo is going to show you how to read raw data, how to calibrate the data with your local magnetic declination angle and how to get heading angle.
 
@@ -73,7 +72,148 @@ Now let's start to run your compass.
 
     ![](https://raw.githubusercontent.com/SeeedDocument/Grove-3-Axis_Compass_V1.0/master/img/Digital_Compass2.jpg)
 
-### With Raspberry Pi
+
+### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| Raspberry pi | Grove Base Hat for RasPi| Grove - 3-axis compass|
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-3-Axis_Compass_V1.0/raw/master/img/thumbnail.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-3-Axis-Digital-Compass-V2-p-3034.html)|
+
+- **Step 2**. Plug the Grove Base Hat into Raspberry.
+- **Step 3**. Connect the 3-axis compass to I2C port of the Base Hat.
+- **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+
+
+![](https://github.com/SeeedDocument/Grove-3-Axis_Compass_V1.0/raw/master/img/Compass_Hat.jpg)
+
+
+
+#### Software
+
+- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 2**. Download the source file by cloning the grove.py library. 
+
+!!!Note
+    You are required to install python-mraa and python-upm, see the instruction here https://github.com/Seeed-Studio/pi_repo#mraa--upm-package-repository-for-raspberry-pi for more information.
+
+
+```
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+
+```
+
+- **Step 3**. Excute below commands to run the code.
+
+```
+cd grove.py/grove
+python grove_3_axis_compass_bmm150.py 
+
+```
+
+Following is the grove_3_axis_compass_bmm150.py code.
+
+```python
+
+from __future__ import print_function
+import time, sys, signal, atexit, math
+try:
+    from upm import pyupm_bmm150 as sensorObj
+except ImportError:
+    print('Error: Please install python-mraa python-upm module.\r\n' 
+          'See instruction here https://github.com/Seeed-Studio/pi_repo#mraa--upm-package-repository-for-raspberry-pi ')
+
+
+def main():
+    # Instantiate a BMP250E instance using default i2c bus and address
+    sensor = sensorObj.BMM150(0, 0x13)
+
+    # For SPI, bus 0, you would pass -1 as the address, and a valid pin for CS:
+    # BMM150(0, -1, 10);
+
+    ## Exit handlers ##
+    # This function stops python from printing a stacktrace when you hit control-C
+    def SIGINTHandler(signum, frame):
+        raise SystemExit
+
+    # This function lets you run code on exit
+    def exitHandler():
+        print("Exiting")
+        sys.exit(0)
+
+    # Register exit handlers
+    atexit.register(exitHandler)
+    signal.signal(signal.SIGINT, SIGINTHandler)
+
+    # now output data every 250 milliseconds
+    while (1):
+        sensor.update()
+
+        data = sensor.getMagnetometer()
+        print("Magnetometer x: {0:.2f}".format(data[0]), end=' ')
+        print(" y: {0:.2f}".format(data[1]), end=' ')
+        print(" z: {0:.2f}".format(data[2]), end=' ')
+        print(" uT")
+
+        xyHeading = math.atan2(data[0], data[1])
+        zxHeading = math.atan2(data[2], data[0])
+        heading = xyHeading
+
+        if heading < 0:
+            heading += 2*math.pi
+        if heading > 2*math.pi:
+            heading -= 2*math.pi
+        
+        headingDegrees = heading * 180/(math.pi); 
+        xyHeadingDegrees = xyHeading * 180 / (math.pi)
+        zxHeadingDegrees = zxHeading * 180 / (math.pi)
+
+        print('heading(axis_Y point to): {0:.2f} degree'.format(headingDegrees))
+        time.sleep(.250)
+
+if __name__ == '__main__':
+    main()
+
+
+```
+
+!!!success
+    If everything goes well, you will be able to see the following result
+
+```python
+
+pi@raspberrypi:~/grove.py/grove $ python grove_3_axis_compass_bmm150.py 
+Magnetometer x: -34.12  y: 36.71  z: -21.25  uT
+heading(axis_Y point to): 317.10 degree
+Magnetometer x: -34.49  y: 38.20  z: -16.32  uT
+heading(axis_Y point to): 317.92 degree
+Magnetometer x: -34.12  y: 38.20  z: -9.87  uT
+heading(axis_Y point to): 318.23 degree
+Magnetometer x: -32.64  y: 38.94  z: -5.69  uT
+heading(axis_Y point to): 320.03 degree
+Magnetometer x: -31.52  y: 38.20  z: -2.28  uT
+heading(axis_Y point to): 320.47 degree
+Magnetometer x: -29.67  y: 38.20  z: 0.38  uT
+heading(axis_Y point to): 322.16 degree
+Magnetometer x: -26.33  y: 38.20  z: 4.55  uT
+heading(axis_Y point to): 325.42 degree
+^CExiting
+
+
+```
+
+
+You can quit this program by simply press ++ctrl+c++.
+
+
+
+
+### Play With Raspberry Pi (with GrovePi_Plus)
 
 1.You should have got a raspberry pi and a grovepi or grovepi+.
 
@@ -118,4 +258,4 @@ Resources
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_3-Axis_Compass_V1.0 -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

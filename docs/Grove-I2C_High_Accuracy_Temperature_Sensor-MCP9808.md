@@ -136,7 +136,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo_n.jpg) |
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo_n.jpg) |
 
 
 !!!Caution
@@ -320,6 +320,99 @@ delay(10);
 
 !!!Attention
         Please make sure the **upper_limit** is higer than the **lower_limit**, otherwise it will not output properly. And please make sure the **critical_limit** is higer than the **upper_limit**. A certain delay() is required to ensure that the registers are written correctly.
+
+
+### Play With Raspberry Pi 
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| Raspberry pi | Grove Base Hat for RasPi| Grove - I2C High Accuracy Temperature Sensor|
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/img/thumbnail.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temperature-Sensor%28MCP9808%29-p-3108.html)|
+
+- **Step 2**. Plug the Grove Base Hat into Raspberry.
+- **Step 3**. Connect the Grove - I2C High Accuracy Temperature Sensor to I2C port of the Base Hat.
+- **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+
+
+![](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/img/MCP9808_Hat.jpg)
+
+
+#### Software
+
+- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 2**. Download the source file by cloning the grove.py library. 
+
+```
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+
+```
+
+- **Step 3**. Excute below commands to run the code.
+
+```
+cd grove.py/grove
+python grove_high_accuracy_temperature.py 
+
+```
+
+Following is the grove_high_accuracy_temperature.py code.
+
+```python
+
+import sys
+import time
+from grove.factory import Factory
+from grove.temperature import Temper
+
+def main():
+    print("Insert Grove - I2C-High-Accuracy-Temperature")
+    print("  to Grove-Base-Hat any I2C slot")
+
+    sensor = Factory.getTemper("MCP9808-I2C")
+    sensor.resolution(Temper.RES_1_16_CELSIUS)
+
+    print('Detecting temperature...')
+    while True:
+        print('{} Celsius'.format(sensor.temperature))
+        time.sleep(1)
+
+
+if __name__ == '__main__':
+    main()
+
+```
+
+!!!success
+    If everything goes well, you will be able to see the following result
+
+```python
+
+pi@raspberrypi:~/grove.py/grove $ python grove_high_accuracy_temperature.py 
+Insert Grove - I2C-High-Accuracy-Temperature
+  to Grove-Base-Hat any I2C slot
+Detecting temperature...
+24.5 Celsius
+24.5 Celsius
+24.375 Celsius
+^CTraceback (most recent call last):
+  File "grove_high_accuracy_temperature.py", line 54, in <module>
+    main()
+  File "grove_high_accuracy_temperature.py", line 50, in main
+    time.sleep(1)
+KeyboardInterrupt
+
+
+```
+
+
+You can quit this program by simply press ++ctrl+c++.
+
+
 
 
 ## Resources

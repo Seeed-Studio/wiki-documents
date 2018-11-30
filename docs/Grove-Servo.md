@@ -82,15 +82,15 @@ Platforms Supported
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo.jpg) |
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo.jpg) |
 
 !!!Caution
     The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
 
-Getting Started
----
-### Connection
+## Getting Started
+
+### Play with Arduino
 
 Here we will show you how this Grove - Servo works via a simple demo. First of all, we need to prepare the below stuffs:
 
@@ -106,7 +106,7 @@ The Servo has three wires: power, ground, and signal. The power wire is typicall
 -   Connect Arduino to PC via a USB cable.
 
 
-### Software
+#### Software
 
 - Let's sweep the shaft of a servo back and forth across 180 degrees by using [Adruino Servo Library](http://arduino.cc/en/Reference/Servo).
 - Open the code directly by the path: **File -> Examples ->Servo->Sweep**.
@@ -149,6 +149,147 @@ void loop() {
 
 - Upload the sketch. We can see the servo sweep.
 
+
+### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| Raspberry pi | Grove Base Hat for RasPi| Grove - Servo|
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Servo/raw/master/img/Grove%20Servo_s.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Servo-p-1241.html)|
+
+- **Step 2**. Plug the Grove Base Hat into Raspberry.
+- **Step 3**. Connect the Grove - Servo to port 12 of the Base Hat.
+- **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+
+
+![](https://github.com/SeeedDocument/Grove-Servo/raw/master/img/Servo_Hat.jpg)
+
+!!! Note
+    For step 3 you are able to connect the servo module to **any GPIO Port** but make sure you change the command with the corresponding port number.
+
+
+#### Software
+
+- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 2**. Download the source file by cloning the grove.py library. 
+
+```
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+
+```
+
+- **Step 3**. Excute below commands to run the code.
+
+```
+cd grove.py/grove
+python grove_servo.py 12
+
+```
+
+Following is the grove_servo.py code.
+
+```python
+
+import RPi.GPIO as IO
+import sys
+import time
+from numpy import interp
+
+IO.setwarnings(False)
+IO.setmode(IO.BCM)
+
+class GroveServo:
+    MIN_DEGREE = 0
+    MAX_DEGREE = 180
+    INIT_DUTY = 2.5
+
+    def __init__(self, channel):
+        IO.setup(channel,IO.OUT)
+        self.pwm = IO.PWM(channel,50)
+        self.pwm.start(GroveServo.INIT_DUTY)
+
+    def __del__(self):
+        self.pwm.stop()
+
+    def setAngle(self, angle):
+        # Map angle from range 0 ~ 180 to range 25 ~ 125
+        angle = max(min(angle, GroveServo.MAX_DEGREE), GroveServo.MIN_DEGREE)
+        tmp = interp(angle, [0, 180], [25, 125])
+        self.pwm.ChangeDutyCycle(round(tmp/10.0, 1))
+
+Grove = GroveServo
+
+def main():
+    if len(sys.argv) < 2:
+        print('Usage: {} servo_channel'.format(sys.argv[0]))
+        sys.exit(1)
+
+    servo = GroveServo(int(sys.argv[1]))
+
+    while True:
+        for x in range(0, 180):
+            print x, "degree"
+            servo.setAngle(x)
+            time.sleep(0.05)
+        for x in range(180, 0, -1):
+            print x, "degree"
+            servo.setAngle(x)
+            time.sleep(0.05)
+
+if __name__ == '__main__':
+    main()
+
+
+
+```
+
+!!!success
+    If everything goes well, you will be able to see the servo sweep.
+
+```python
+
+pi@raspberrypi:~/grove.py/grove $ python grove_servo.py 12
+0 degree
+1 degree
+2 degree
+3 degree
+4 degree
+5 degree
+6 degree
+7 degree
+8 degree
+9 degree
+10 degree
+11 degree
+12 degree
+13 degree
+14 degree
+15 degree
+16 degree
+17 degree
+18 degree
+19 degree
+20 degree
+21 degree
+^CTraceback (most recent call last):
+  File "grove_servo.py", line 81, in <module>
+    main()
+  File "grove_servo.py", line 74, in main
+    time.sleep(0.05)
+KeyboardInterrupt
+
+
+```
+
+
+You can quit this program by simply press ++ctrl+c++.
+
+
 ## Resources
 
 - **[Document]** [Understanding RC Servos](http://www.rchelicopterfun.com/rc-servos.html)
@@ -166,4 +307,4 @@ void loop() {
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

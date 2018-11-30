@@ -92,7 +92,7 @@ With the build-in LED, you can apply it to many interesting projects, it is real
 | Seeeduino V4.2 | Base Shield| Grove- Red LED Button |
 |--------------|-------------|-----------------|
 |![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Red_LED_Button/raw/master/img/IMG_0068a.jpg)|
-|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/" target="_blank">Get One Now</a>|
+|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Red-LED-Button-p-3096.html" target="_blank">Get One Now</a>|
 
 
 
@@ -226,6 +226,145 @@ void loop() {
 It should be like:
 
 <p style="text-align:center"><img src="https://github.com/SeeedDocument/Grove-Red_LED_Button/raw/master/img/result.gif"  /></p>
+
+
+
+### Play With Raspberry Pi
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| Raspberry pi | Grove Base Hat for RasPi| Grove - Red LED Button|
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Red_LED_Button/raw/master/img/IMG_0068a.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Red-LED-Button-p-3096.html)|
+
+- **Step 2**. Plug the Grove Base Hat into Raspberry.
+- **Step 3**. Connect the red LED button to D5 port of the Base Hat.
+- **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+
+![](https://github.com/SeeedDocument/Grove-Red_LED_Button/raw/master/img/LED_Hat.jpg)
+
+!!! Note
+    For step 3 you are able to connect the LED button to **any GPIO Port** but make sure you change the command with the corresponding port number.
+
+
+#### Software
+
+- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 2**. Download the source file by cloning the grove.py library. 
+
+```
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+
+```
+
+- **Step 3**. Excute below commands to run the code.
+
+```
+cd grove.py/grove
+python grove_ryb_led_button.py 5
+
+```
+
+Following is the grove_ryb_led_button.py code.
+
+```python
+
+import time
+from grove.button import Button
+from grove.factory import Factory
+
+class GroveLedButton(object):
+    def __init__(self, pin):
+        # High = light on
+        self.__led = Factory.getOneLed("GPIO-HIGH", pin)
+        # Low = pressed
+        self.__btn = Factory.getButton("GPIO-LOW", pin + 1)
+        self.__on_event = None
+        self.__btn.on_event(self, GroveLedButton.__handle_event)
+
+    @property
+    def on_event(self):
+        return self.__on_event
+
+    @on_event.setter
+    def on_event(self, callback):
+        if not callable(callback):
+            return
+        self.__on_event = callback
+
+    def __handle_event(self, evt):
+        # print("event index:{} event:{} pressed:{}".format(evt['index'], evt['code'], evt['presesed']))
+        if callable(self.__on_event):
+            self.__on_event(evt['index'], evt['code'], evt['time'])
+            return
+
+        self.__led.brightness = self.__led.MAX_BRIGHT
+        event = evt['code']
+        if event & Button.EV_SINGLE_CLICK:
+            self.__led.light(True)
+            print("turn on  LED")
+        elif event & Button.EV_DOUBLE_CLICK:
+            self.__led.blink()
+            print("blink    LED")
+        elif event & Button.EV_LONG_PRESS:
+            self.__led.light(False)
+            print("turn off LED")
+
+
+Grove = GroveLedButton
+
+def main():
+    from grove.helper import SlotHelper
+    sh = SlotHelper(SlotHelper.GPIO)
+    pin = sh.argv2pin()
+
+    ledbtn = GroveLedButton(pin)
+
+    # remove ''' pairs below to begin your experiment
+    '''
+    # define a customized event handle your self
+    def cust_on_event(index, event, tm):
+        print("event with code {}, time {}".format(event, tm))
+
+    ledbtn.on_event = cust_on_event
+    '''
+    while True:
+        time.sleep(1)
+
+
+if __name__ == '__main__':
+    main()
+
+
+```
+
+!!!success
+    If everything goes well, you will be able to see the LED turns on if you press it and turns off if you long press it. If you double click the LED button, the LED will blink.
+
+```python
+
+pi@raspberrypi:~/grove.py/grove $ python grove_ryb_led_button.py 5
+Hat Name = 'Grove Base Hat RPi'
+turn on  LED
+turn on  LED
+blink    LED
+turn on  LED
+turn off LED
+^CTraceback (most recent call last):
+  File "grove_ryb_led_button.py", line 101, in <module>
+    main()
+  File "grove_ryb_led_button.py", line 97, in main
+    time.sleep(1)
+KeyboardInterrupt
+
+```
+
+
+You can quit this program by simply press ++ctrl+c++.
 
 
 

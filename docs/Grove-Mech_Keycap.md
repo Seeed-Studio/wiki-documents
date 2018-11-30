@@ -104,7 +104,7 @@ Once the button is pushed, the K1 will be closed and the **SIG1** will connected
 | Seeeduino V4.2 | Base Shield| Grove-Mech keycap |
 |--------------|-------------|-----------------|
 |![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Mech_Keycap/raw/master/img/thumbnail.jpg)|
-|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/-Grove-VOC-and-eCO2-Gas-Sensor-(SGP30)-p-3071.html" target="_blank">Get One Now</a>|
+|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Mech-Keycap-p-3138.html" target="_blank">Get One Now</a>|
 
 
 
@@ -259,6 +259,158 @@ uint32_t Wheel(byte WheelPos) {
 - **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
 - **Step 5.** Every time you press the Grove-Mech Keycap, you will see the LED color change. If you press and hold the button for about 2 sencond, you will see the breathing light effect.
+
+
+### Play With Raspberry Pi 
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| Raspberry pi | Grove Base Hat for RasPi| Grove - Mech Keycap|
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Mech_Keycap/raw/master/img/thumbnail.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Mech-Keycap-p-3138.html)|
+
+- **Step 2**. Plug the Grove Base Hat into Raspberry.
+- **Step 3**. Connect the Grove - Mech Keycap to the PWM port(port 12) of the Base Hat.
+
+!!!Note
+  pin could be one of below values in the pin column for PWM function and connect the device to the corresponding slot.
+
+|Pin|Slot|
+|---|---|
+|18|D18|
+|12|PWM|
+
+
+- **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+
+
+![](https://github.com/SeeedDocument/Grove-Mech_Keycap/raw/master/img/Mech_Hat.jpg)
+
+
+
+#### Software
+
+- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 2**. Download the source file by cloning the grove.py library. 
+
+```
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+
+```
+
+- **Step 3**. Excute below commands to run the code.
+
+```
+cd grove.py/grove
+sudo python grove_mech_keycap.py 12
+
+```
+
+!!! Caution
+  Unix has a "security model". As a normal users you can do stuff, but you should not be able to access other people's files on the same computer. And as a user you should not be able to cause the computer to stop working. Now "/dev/mem" allows you much, much more "mischief" than just changing a GPIO. So that's why /dev/mem must be protected against normal users. Thus in order to run this code, you should type **sudo python grove_mech_keycap.py** in the command line
+
+
+Following is the grove_mech_keycap.py code.
+
+```python
+
+import time
+from grove.button import Button
+from grove.factory import Factory
+
+class GroveKeycap(object):
+    def __init__(self, pin):
+        # High = pressed
+        self.__btn = Factory.getButton("GPIO-HIGH", pin)
+        # single WS2812 LED
+        self.__led = Factory.getOneLed("WS2812-PWM", pin + 1)
+        self.__on_event = None
+        self.__btn.on_event(self, GroveKeycap.__handle_event)
+
+    @property
+    def on_event(self):
+        return self.__on_event
+
+    @on_event.setter
+    def on_event(self, callback):
+        if not callable(callback):
+            return
+        self.__on_event = callback
+
+    def __handle_event(self, evt):
+        # print("event index:{} event:{} pressed:{}".format(evt['index'], evt['code'], evt['presesed']))
+        if callable(self.__on_event):
+            self.__on_event(evt['index'], evt['code'], evt['time'])
+            return
+
+        self.__led.brightness = self.__led.MAX_BRIGHT
+        event = evt['code']
+        if event & Button.EV_SINGLE_CLICK:
+            self.__led.light(True)
+            print("turn on  LED")
+        elif event & Button.EV_DOUBLE_CLICK:
+            self.__led.blink()
+            print("blink    LED")
+        elif event & Button.EV_LONG_PRESS:
+            self.__led.light(False)
+            print("turn off LED")
+
+
+Grove = GroveKeycap
+
+def main():
+    from grove.helper import SlotHelper
+    sh = SlotHelper(SlotHelper.PWM)
+    pin = sh.argv2pin()
+
+    ledbtn = GroveKeycap(pin)
+
+    # remove ''' pairs below to begin your experiment
+    '''
+    # define a customized event handle your self
+    def cust_on_event(index, event, tm):
+        print("event with code {}, time {}".format(event, tm))
+
+    ledbtn.on_event = cust_on_event
+    '''
+    while True:
+        time.sleep(1)
+
+
+if __name__ == '__main__':
+    main()
+
+
+```
+
+!!!success
+    If everything goes well, you will be able to see the following result. If you single click the keycap, you will see "turn on LED", if you double-click the keycap, you will see "blink LED". Long press the keycap will give "turn off LED".
+
+```python
+
+pi@raspberrypi:~/grove.py/grove $ sudo python grove_mech_keycap.py 12
+Hat Name = 'Grove Base Hat RPi'
+turn on  LED
+turn on  LED
+blink    LED
+turn on  LED
+turn off LED
+^CTraceback (most recent call last):
+  File "grove_mech_keycap.py", line 98, in <module>
+    main()
+  File "grove_mech_keycap.py", line 94, in main
+    time.sleep(1)
+KeyboardInterrupt
+
+
+```
+
+
+You can quit this program by simply press ++ctrl+c++.
 
 
 ## Resources

@@ -152,7 +152,107 @@ Done uploading, if you press the button#1 the relay should be on; and if you pre
 
 
 
-### Play With Raspberry Pi
+### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| Raspberry pi | Grove Base Hat for RasPi| Grove - Relay |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Relay/raw/master/img/Thumbnail.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Relay-p-769.html)|
+
+- **Step 2**. Plug the Grove Base Hat into Raspberry.
+- **Step 3**. Connect the Grove - Relay to port 12 of the Base Hat.
+- **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+
+
+![](https://github.com/SeeedDocument/Grove-Relay/raw/master/img/Relay_Hat.jpg)
+
+!!! Note
+    For step 3 you are able to connect the relay module to **any GPIO Port** but make sure you change the command with the corresponding port number.
+
+
+#### Software
+
+- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 2**. Download the source file by cloning the grove.py library. 
+
+```
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+
+```
+
+- **Step 3**. Excute below commands to run the code.
+
+```
+cd grove.py/grove
+python grove_relay.py 12
+
+```
+
+Following is the grove_relay.py code.
+
+```python
+
+from grove.gpio import GPIO
+
+
+class GroveRelay(GPIO):
+    def __init__(self, pin):
+        super(GroveRelay, self).__init__(pin, GPIO.OUT)
+
+    def on(self):
+        self.write(1)
+
+    def off(self):
+        self.write(0)
+
+
+Grove = GroveRelay
+
+
+def main():
+    import sys
+    import time
+
+    if len(sys.argv) < 2:
+        print('Usage: {} pin'.format(sys.argv[0]))
+        sys.exit(1)
+
+    relay = GroveRelay(int(sys.argv[1]))
+
+    while True:
+        try:
+            relay.on()
+            time.sleep(1)
+            relay.off()
+            time.sleep(1)
+        except KeyboardInterrupt:
+            relay.off()
+            print("exit")
+            exit(1)            
+
+if __name__ == '__main__':
+    main()
+
+
+
+```
+
+!!!success
+    If everything goes well, you will be able to see the LED indicator blinking.
+
+
+You can quit this program by simply press ++ctrl+c++.
+
+
+
+
+
+### Play With Raspberry Pi (with GrovePi_Plus)
 
 #### Hardware
 
@@ -322,4 +422,4 @@ void loop() {
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JOsjUOI9FU8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
