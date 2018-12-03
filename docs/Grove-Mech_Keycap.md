@@ -276,7 +276,8 @@ uint32_t Wheel(byte WheelPos) {
 - **Step 3**. Connect the Grove - Mech Keycap to the PWM port(port 12) of the Base Hat.
 
 !!!Note
-  pin could be one of below values in the pin column for PWM function and connect the device to the corresponding slot.
+    pin could be one of below values in the pin column for PWM function and connect the device to the corresponding slot.
+
 
 |Pin|Slot|
 |---|---|
@@ -311,7 +312,7 @@ sudo python grove_mech_keycap.py 12
 ```
 
 !!! Caution
-  Unix has a "security model". As a normal users you can do stuff, but you should not be able to access other people's files on the same computer. And as a user you should not be able to cause the computer to stop working. Now "/dev/mem" allows you much, much more "mischief" than just changing a GPIO. So that's why /dev/mem must be protected against normal users. Thus in order to run this code, you should type **sudo python grove_mech_keycap.py** in the command line
+    Unix has a "security model". As a normal users you can do stuff, but you should not be able to access other people's files on the same computer. And as a user you should not be able to cause the computer to stop working. Now "/dev/mem" allows you much, much more "mischief" than just changing a GPIO. So that's why /dev/mem must be protected against normal users. Thus in order to run this code, you should type **sudo python grove_mech_keycap.py** in the command line
 
 
 Following is the grove_mech_keycap.py code.
