@@ -330,7 +330,7 @@ make
 
 - Step 3. The odascore will be at **odas/bin/odaslive**, the config file is at **odas/config/odaslive/respeaker_4_mic_array.cfg**. 
 
-![](https://github.com/introlab/odas_web/raw/master/screenshots/live_data.png)
+![](https://github.com/SeeedDocument/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/raw/master/img/odas.png)
 
 
 ## FAQ
