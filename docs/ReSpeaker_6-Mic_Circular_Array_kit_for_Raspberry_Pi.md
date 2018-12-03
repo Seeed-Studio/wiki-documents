@@ -584,7 +584,7 @@ make
 
 - Step 2. Get [ODAS Studio](https://github.com/introlab/odas_web/releases)  and open it.
 
-- Step 3. The odascore will be at **odas/bin/odaslive**, the config file is at **odas/config/odaslive/respeaker_6_mic_array.cfg**. 
+- Step 3. The odascore will be at **odas/bin/odaslive**, the **config file** is at [here](https://raw.githubusercontent.com/xiongyihui/odas/master/config/odaslive/respeaker_6_mic_array.cfg). 
 
 ![](https://github.com/SeeedDocument/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/raw/master/img/odas.png)
 
