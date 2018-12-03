@@ -66,7 +66,7 @@ Mount ReSpeaker 4-Mic Array on Raspberry Pi, make sure that the pins are properl
 
 The AC108 codec is not supported by Pi kernel builds currently, we have to build it manually.
 
-- Step 1. Please Make sure running [the lastest Raspbian Operating System(debian 9)](https://www.raspberrypi.org/downloads/raspbian/) on Pi. *(updated at 2018.6.27)*
+- Step 1. Please Make sure running [the lastest Raspbian Operating System(debian 9)](https://www.raspberrypi.org/downloads/raspbian/) on Pi. *(updated at 2018.11.13)*
 
 - Step 2. Get the seeed voice card source code.
 
@@ -174,6 +174,8 @@ pi@raspberrypi:~/4mics_hat $ source ~/env/bin/activate                   # activ
 
 ## DoA
 
+**DOA with Keywords**
+
 With DoA(Direction of Arrial), ReSpeaker 4-Mic Array is able to find the direction where the sound source is located.
 
 - Step 1. setup voice engine
@@ -196,6 +198,39 @@ pi@raspberrypi:~ $ source ~/env/bin/activate                    # activate the v
 ```
 (env) pi@raspberrypi:~/voice-engine $ cd ~/4mics_hat
 (env) pi@raspberrypi:~/4mics_hat $ python kws_doa.py
+```
+
+**DOA without Keywords**
+
+- Step 1. Setup the dependency
+
+```
+sudo apt-get install portaudio19-dev
+pip install pyaudio
+```
+
+- Step 2. Run the vad_doa.py
+
+```
+cd ~
+git clone https://github.com/respeaker/mic_array.git
+cd mic_array
+python vad_doa.py
+```
+
+- Step 3. Here is the output. 
+
+```
+1111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111110111111111111111111
+135
+10000000000000000000000000000000000000000000000000000000000000011111111111111111
+135
+11111111111111111111
+135
+1001111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111111111110000000
+135
+000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111
+135
 ```
 
 
@@ -275,6 +310,29 @@ python Smart_Fan.py
 - **Step 6. Let's try '快一点', '慢一点' and '关风扇'.**
 
 
+## Realtime Sound Source Localization and Tracking
+
+[ODAS](https://github.com/introlab/odas) stands for Open embeddeD Audition System. This is a library dedicated to perform sound source localization, tracking, separation and post-filtering. Let's have a fun with it.
+
+- Step 1. Get ODAS and build it.
+
+```
+sudo apt-get install libfftw3-dev libconfig-dev libasound2-dev libgconf-2-4
+sudo apt-get install cmake
+git clone https://github.com/introlab/odas.git
+mkdir odas/build
+cd odas/build
+cmake ..
+make
+```
+
+- Step 2. Get [ODAS Studio](https://github.com/introlab/odas_web/releases)  and open it.
+
+- Step 3. The odascore will be at **odas/bin/odaslive**, the config file is at **odas/config/odaslive/respeaker_4_mic_array.cfg**. 
+
+![](https://github.com/introlab/odas_web/raw/master/screenshots/live_data.png)
+
+
 ## FAQ
 
 **Q1: How to change the Raspbian Mirrors source?**
@@ -319,8 +377,11 @@ sudo apt-get install portaudio19-dev
 - **[PDF]** [ ReSpeaker 4-Mic Array for Raspberry Pi(PDF)](https://github.com/SeeedDocument/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/blob/master/src/ReSpeaker%204-Mic%20Array%20for%20Raspberry%20Pi%20%20v1.0.pdf)
 - **[DXF]** [ReSpeaker 4-Mic Array for Raspberry Pi v1.0](https://github.com/SeeedDocument/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/raw/master/src/ReSpeaker%204-Mic%20Array%20for%20Raspberry%20Pi%20v1.0.dxf.zip)
 - **[3D]** [ReSpeaker 4-Mic Array for Raspberry Pi v1.0 3D Model](https://github.com/SeeedDocument/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/raw/master/src/ReSpeaker%204-Mics%20Pi%20HAT%20v1.0.skp.zip)
-
 - **[AC108]** [AC108 DataSheet](http://www.x-powers.com/en.php/Info/product_detail/article_id/41)
+- **[Driver]** [Seeed-Voice Driver](https://github.com/respeaker/seeed-voicecard)
+- **[Algorithms]** [Algorithms includes DOA, VAD, NS](https://github.com/respeaker/mic_array)
+- **[Voice Engine** [Voice Engine project, provides building blocks to create voice enabled objects](https://github.com/voice-engine/voice-engine)
+- **[Algorithms]** [AEC](https://github.com/voice-engine/ec)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
