@@ -56,4 +56,6 @@ Here is the list of the ReSpeaker Boards you can find in the Seeed WiKi. The lis
 - [ReSpeaker 4-Mic Linear Array Kit for Raspberry Pi](http://wiki.seeedstudio.com/ReSpeaker_4-Mic_Linear_Array_Kit_for_Raspberry_Pi/)
 - [ReSpeaker 6-Mic Circular Array kit for Raspberry Pi](http://wiki.seeedstudio.com/ReSpeaker_6-Mic_Circular_Array_kit_for_Raspberry_Pi/)
 
+## The ReSpeaker Project
 
+Please refer to [ReSpeaker.io](https://respeaker.io/) for more info. 
