@@ -331,6 +331,10 @@ deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main non-
 - **[PDF]** [Respeaker_2_Mics_Pi_HAT_SCH](https://github.com/SeeedDocument/MIC_HATv1.0_for_raspberrypi/raw/master/src/ReSpeaker%202-Mics%20Pi%20HAT_SCH.pdf)
 - **[PDF]** [Respeaker_2_Mics_Pi_HAT_PCB](https://github.com/SeeedDocument/MIC_HATv1.0_for_raspberrypi/raw/master/src/ReSpeaker%202-Mics%20Pi%20HAT_PCB.pdf)
 - **[3D]** [ReSpeaker 2 Mics Pi HAT 3D](https://github.com/SeeedDocument/MIC_HATv1.0_for_raspberrypi/raw/master/src/ReSpeaker%202-Mics%20Pi%20HAT.zip)
+- **[Driver]** [Seeed-Voice Driver](https://github.com/respeaker/seeed-voicecard)
+- **[Algorithms]** [Algorithms includes DOA, VAD, NS](https://github.com/respeaker/mic_array)
+- **[Voice Engine** [Voice Engine project, provides building blocks to create voice enabled objects](https://github.com/voice-engine/voice-engine)
+- **[Algorithms]** [AEC](https://github.com/voice-engine/ec)
 
 ## Projects
 
