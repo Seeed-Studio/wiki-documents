@@ -353,7 +353,7 @@ python examples/respeaker_4mic_array.py
 You will see LEDs light and run. And you can refer to the `python examples/respeaker_4mic_array.py` file to make your own effects.
 
 
-## DoA
+### DoA
 
 **DOA without Keywords**
 
