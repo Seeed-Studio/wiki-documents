@@ -531,6 +531,28 @@ python ds_kws_doa_for_respeaker_6mic_array_pihat.py
 ```
 Then you will see the LEDs light up, and you can call `Snowboy` to wake it up. The <font color =“Green”>Green LED</font> will point to the direction of wake up word.
 
+## Realtime Sound Source Localization and Tracking
+
+[ODAS](https://github.com/introlab/odas) stands for Open embeddeD Audition System. This is a library dedicated to perform sound source localization, tracking, separation and post-filtering. Let's have a fun with it.
+
+- Step 1. Get ODAS and build it.
+
+```
+sudo apt-get install libfftw3-dev libconfig-dev libasound2-dev libgconf-2-4
+sudo apt-get install cmake
+git clone https://github.com/introlab/odas.git
+mkdir odas/build
+cd odas/build
+cmake ..
+make
+```
+
+- Step 2. Get [ODAS Studio](https://github.com/introlab/odas_web/releases)  and open it.
+
+- Step 3. The odascore will be at **odas/bin/odaslive**, the config file is at **odas/config/odaslive/respeaker_6_mic_array.cfg**. 
+
+![](https://github.com/SeeedDocument/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/raw/master/img/odas.png)
+
 
 ## FAQ
 
@@ -549,6 +571,10 @@ A2: Please click raspberry -> Preferences -> Raspberry Pi Configuration, then se
 - **[PDF]** [AC108 Datesheet](https://github.com/SeeedDocument/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/raw/master/reg/AC108_Datasheet_V1.2.pdf)
 - **[Dxf]** [ReSpeaker Circular Array for Voice Accessory HAT with 6 Microphones case file](https://github.com/SeeedDocument/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/raw/master/reg/ReSpeaker%20Circular%20Array%20for%20Voice%20Accessory%20HAT%20with%206%20Microphones.dxf)
 - **[Dxf]** [ReSpeaker Circular Array for Voice Accessory HAT with 6 Microphone 2D File](https://github.com/SeeedDocument/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/raw/master/reg/2d.zip)
+- **[Driver]** [Seeed-Voice Driver](https://github.com/respeaker/seeed-voicecard)
+- **[Algorithms]** [Algorithms includes DOA, VAD, NS](https://github.com/respeaker/mic_array)
+- **[Voice Engine** [Voice Engine project, provides building blocks to create voice enabled objects](https://github.com/voice-engine/voice-engine)
+- **[Algorithms]** [AEC](https://github.com/voice-engine/ec)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc.
