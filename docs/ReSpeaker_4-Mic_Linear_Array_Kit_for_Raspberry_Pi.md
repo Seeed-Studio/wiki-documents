@@ -540,6 +540,12 @@ A2: Please click raspberry -> Preferences -> Raspberry Pi Configuration, then se
 - **[Algorithms]** [AEC](https://github.com/voice-engine/ec)
 
 
+## Projects
+
+**Mojing Mojing - A Smart Mirror with ReSpeaker!**: A smart mirror with voice interface control via ReSpeaker. We also connect with Wio Link to control other objects! Based on Raspberry Pi. 
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/SeeedStudio/mojing-mojing-a-smart-mirror-with-respeaker-e1ae20/embed' width='350'></iframe>
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc.
 
