@@ -109,7 +109,7 @@ ReSpeaker Core v2.0 is designed as a feature rich development board for business
   </tr>
   <tr>
     <td class="tg-dc35">Audio</td>
-    <td class="tg-dc35">6 Microphone Array;<br>3.5mm Audio Jack;<br>JST2.0 Audio output connector</td>
+    <td class="tg-dc35">Max Sample Rate: 96Khz;<br>6 Microphone Array;<br>3.5mm Audio Jack;<br>JST2.0 Audio output connector</td>
   </tr>
   <tr>
     <td class="tg-us36">Storage</td>
