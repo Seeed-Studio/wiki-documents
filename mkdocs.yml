@@ -371,6 +371,7 @@ pages:
           - Sensor - Sound: Sensor_sound.md
           - Sensor - Distance: Sensor_distance.md
           - Sensor - Others: Sensor_Others.md
+          - Grove - 2 Channel Inductive Sensor (LDC1612): Grove-2_Channel_Inductive_Sensor-LDC1612.md
           - Grove - 3 Axis Digital Accelerometer(±16g): Grove-3-Axis_Digital_Accelerometer-16g.md
           - Grove - 3-Axis Analog Accelerometer: Grove-3-Axis_Analog_Accelerometer.md
           - Grove - 3-Axis Compass V1.0: Grove-3-Axis_Compass_V1.0.md
@@ -419,6 +420,7 @@ pages:
           - Grove - Hall Sensor: Grove-Hall_Sensor.md
           - Grove - Heelight Sensor: Grove-Heelight_Sensor.md
           - Grove - High Temperature Sensor: Grove-High_Temperature_Sensor.md
+          - Grove - Human Presence Sensor (AK9753): Grove-Human_Presence_Sensor-AK9753.md
           - Grove - I2C Color Sensor: Grove-I2C_Color_Sensor.md
           - Grove - I2C Touch Sensor: Grove-I2C_Touch_Sensor.md
           - Grove - 12 Key Capacitive I2C Touch Sensor V2(MPR121): Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121.md
