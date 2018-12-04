@@ -851,7 +851,7 @@ cd ~/sdk-folder/third-party && wget -c http://www.portaudio.com/archives/pa_stab
 sudo pip install commentjson
 sudo pip install flask
 cd ~/sdk-folder/sdk-source && git clone git://github.com/respeaker/avs-device-sdk.git
-cd ~/sdk-folder/sdk-build && cmake ~/sdk-folder/sdk-source/avs-device-sdk -DCMAKE_BUILD_TYPE=DEBUG -DRESPEAKERD_KEY_WORD_DETECTOR=ON -DGSTREAMER_MEDIA_PLAYER=ON -DPORTAUDIO=ON -DPORTAUDIO_LIB_PATH=~/sdk-folder/third-party/portaudio/lib/.libs/libportaudio.a -DPORTAUDIO_INCLUDE_DIR=~/sdk-folder/third-party/portaudio/include
+cd ~/sdk-folder/sdk-build && cmake /home/respeaker/sdk-folder/sdk-source/avs-device-sdk -DCMAKE_BUILD_TYPE=DEBUG -DRESPEAKERD_KEY_WORD_DETECTOR=ON -DGSTREAMER_MEDIA_PLAYER=ON -DPORTAUDIO=ON -DPORTAUDIO_LIB_PATH=/home/respeaker/sdk-folder/third-party/portaudio/lib/.libs/libportaudio.a -DPORTAUDIO_INCLUDE_DIR=/home/respeaker/sdk-folder/third-party/portaudio/include
 make SampleApp -j2
 
 ```
