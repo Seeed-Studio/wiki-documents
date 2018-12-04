@@ -25,6 +25,7 @@ The board is developed based on WM8960, a low power stereo codec. There are 2 mi
 * 1 User Button
 * 3.5mm Audio Jack
 * JST2.0 Speaker Out
+* Max Sample Rate: 48Khz
 
 ## Application Ideas
 

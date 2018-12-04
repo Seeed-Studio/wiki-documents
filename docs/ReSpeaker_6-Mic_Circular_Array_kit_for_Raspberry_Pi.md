@@ -66,6 +66,7 @@ dummy.
 - Microphones: Knowles SPU0414HR5HSB
 - Sensitivity: -22 dBFS (Omnidirectional)
 - SNR: 59 dB
+- Max Sample Rate: 48Khz
 
 
 ## Applications
