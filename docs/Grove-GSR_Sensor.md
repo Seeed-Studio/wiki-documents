@@ -52,8 +52,8 @@ GSR stands for galvanic skin response, is a method of measuring the electrical c
 
 
 ## Getting Started
-
-### Hardware
+### Play With Arduino
+#### Hardware
 
 - Step 1. We need to prepare the below stuffs:
 
@@ -78,7 +78,7 @@ GSR stands for galvanic skin response, is a method of measuring the electrical c
 | NC               | White  |
 | A0               | Yellow |
 
-### Software
+#### Software
 
 - Step 1. Copy the code into Arduino IDE and upload.
 
@@ -269,6 +269,7 @@ Please click [here](http://support.seeedstudio.com/knowledgebase/articles/182719
 ## Projects
 
 **eMotion - Towards a Better Future**: We believe we can use biometric sensors, the security of the Helium platform and strength of Google Cloud to surface possible anxiety states.
+
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/factoryeight/emotion-towards-a-better-future-a01489/embed' width='350'></iframe>
 
