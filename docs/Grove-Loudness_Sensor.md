@@ -146,7 +146,7 @@ git clone https://github.com/Seeed-Studio/grove.py
 
 ```
 cd grove.py/grove
-python grove_loudness_sensor.py 0 1
+python grove_loudness_sensor.py 0
 ```
 
 
@@ -198,7 +198,7 @@ if __name__ == '__main__':
     If everything goes well, you will be able to see the following result:
 ```python
 
-pi@raspberrypi:~/grove.py/grove $ python grove_loudness_sensor.py 0 1
+pi@raspberrypi:~/grove.py/grove $ python grove_loudness_sensor.py 0
 Detecting loud...
 Loud value 15, Loud Detected.
 Loud value 11, Loud Detected.
@@ -317,4 +317,4 @@ sensor_value = 131
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

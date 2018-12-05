@@ -220,7 +220,148 @@ Now, we can get the concentration of gas from the figure below.
 According to the graph, we can see that the minimum concentration we can test is 100ppm and the maximum is 10000ppm, in a other word, we can get a concentration of gas between 0.01% and 1%. However, we can't provide a formula because the relation between ratio and concentration is nonlinear.
 
 
-### Play With Raspberry Pi
+
+
+### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| Raspberry pi | Grove Base Hat for RasPi| Grove-Gas_Sensor-MQ2 |
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Gas_Sensor-MQ2/raw/master/img/45d_small.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Gas-Sensor(MQ2)-p-937.html)|
+
+- **Step 2**. Plug the Grove Base Hat into Raspberry.
+- **Step 3**. Connect the Grove-Gas Sensor MQ2 to port A0 of the Base Hat.
+- **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+
+
+![](https://github.com/SeeedDocument/Grove_Gas_Sensor_MQ2/raw/master/image/With_Hat.jpg)
+
+!!! Note
+    For step 3 you are able to connect the Grove-Gas Sensor MQ2 to **any Analog Port** but make sure you change the command with the corresponding port number.
+
+
+#### Software
+
+- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 2**. Download the source file by cloning the grove.py library. 
+
+```
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+
+```
+
+- **Step 3**. Excute below commands to write the code.
+
+```
+cd grove.py/grove
+nano grove_gas_sensor_mq2.py
+```
+Then you should copy following code in this file and hit ++ctrl+x++ to quit and save.
+
+```python
+
+
+import math
+import sys
+import time
+from grove.adc import ADC
+
+
+class GroveGasSensorMQ2:
+
+    def __init__(self, channel):
+        self.channel = channel
+        self.adc = ADC()
+
+    @property
+    def MQ2(self):
+        value = self.adc.read(self.channel)
+        return value
+
+Grove = GroveGasSensorMQ2
+
+
+def main():
+    if len(sys.argv) < 2:
+        print('Usage: {} adc_channel'.format(sys.argv[0]))
+        sys.exit(1)
+
+    sensor = GroveGasSensorMQ2(int(sys.argv[1]))
+
+    print('Detecting...')
+    while True:
+        print('Gas value: {0}'.format(sensor.MQ2))
+        time.sleep(.3)
+
+if __name__ == '__main__':
+    main()
+
+
+```
+
+- **Step 4**. Excute below command to run the code 
+
+```
+
+python grove_gas_sensor_mq2.py 0
+
+```
+
+
+
+!!!success
+    If everything goes well, you will be able to see the following result
+
+
+```python
+
+pi@raspberrypi:~/grove.py/grove $ python grove_gas_sensor_mq2.py 0
+Detecting...
+Gas value: 760
+Gas value: 714
+Gas value: 675
+Gas value: 637
+Gas value: 603
+Gas value: 568
+Gas value: 535
+Gas value: 506
+Gas value: 481
+Gas value: 464
+Gas value: 449
+Gas value: 429
+Gas value: 413
+Gas value: 456
+Gas value: 470
+Gas value: 440
+Gas value: 404
+Gas value: 373
+Gas value: 352
+Gas value: 339
+Gas value: 330
+^CTraceback (most recent call last):
+  File "grove_gas_sensor_mq2.py", line 69, in <module>
+    main()
+  File "grove_gas_sensor_mq2.py", line 66, in main
+    time.sleep(.3)
+KeyboardInterrupt
+
+
+```
+
+
+You can quit this program by simply press ++ctrl+c++.
+
+!!!Notice
+        You may have noticed that for the analog port, the silkscreen pin number is something like **A1, A0**, however in the command we use parameter **0** and **1**, just the same as digital port. So please make sure you plug the module into the correct port, otherwise there may be pin conflicts.
+
+
+
+### Play With Raspberry Pi (with GrovePi_Plus)
 
 #### Hardware
 
@@ -251,7 +392,7 @@ git clone https://github.com/DexterInd/GrovePi.git
 
 ```
 
--	**Step 3.** Excute below commands to use this sensor
+-   **Step 3.** Excute below commands to use this sensor
 
 ```bash
 cd ~/GrovePi/Software/Python

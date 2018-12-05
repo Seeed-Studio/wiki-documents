@@ -116,6 +116,140 @@ void loop(){
 **Human Resistance** = ((1024+2*Serial_Port_Reading)*10000)/(512-Serial_Port_Reading), unit is ohm, Serial_Port_Reading is the value display on Serial Port(between 0~1023)
 
 
+
+
+### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| Raspberry pi | Grove Base Hat for RasPi| Grove - GSR Sensor|
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-GSR_Sensor/raw/master/img/Grove-GSR_s.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-GSR-sensor-p-1614.html)|
+
+- **Step 2**. Plug the Grove Base Hat into Raspberry Pi.
+- **Step 3**. Connect the Grove - GSR Sensor to to the A0 port of the Base Hat.
+- **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+
+![](https://github.com/SeeedDocument/Grove-GSR_Sensor/raw/master/img/With_Hat.jpg)
+
+!!! Note
+    For step 3 you are able to connect the Grove - GSR sensor to **any Analog Port** but make sure you change the command with the corresponding port number.
+
+
+#### Software
+
+- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 2**. Download the source file by cloning the grove.py library. 
+
+```
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+
+```
+
+- **Step 3**. Excute below commands to run the code.
+
+```
+cd grove.py/grove
+nano grove_gsr_sensor.py
+
+```
+Then you should copy following code in this file and hit ++ctrl+x++ to quit and save.
+
+```python
+
+import math
+import sys
+import time
+from grove.adc import ADC
+
+
+class GroveGSRSensor:
+
+    def __init__(self, channel):
+        self.channel = channel
+        self.adc = ADC()
+
+    @property
+    def GSR(self):
+        value = self.adc.read(self.channel)
+        return value
+
+Grove = GroveGSRSensor
+
+
+def main():
+    if len(sys.argv) < 2:
+        print('Usage: {} adc_channel'.format(sys.argv[0]))
+        sys.exit(1)
+
+    sensor = GroveGSRSensor(int(sys.argv[1]))
+
+    print('Detecting...')
+    while True:
+        print('GSR value: {0}'.format(sensor.GSR))
+        time.sleep(.3)
+
+if __name__ == '__main__':
+    main()
+
+
+```
+
+- **Step 4**. Excute below command to run the code 
+
+```
+
+python grove_gsr_sensor.py 0
+
+```
+
+```
+
+
+!!!success
+    If everything goes well, you will be able to see the following result
+    
+
+```python
+
+pi@raspberrypi:~/grove.py/grove $ python grove_gsr_sensor.py 0
+Detecting...
+GSR value: 503
+GSR value: 503
+GSR value: 503
+GSR value: 503
+GSR value: 503
+GSR value: 383
+GSR value: 256
+GSR value: 314
+GSR value: 348
+GSR value: 361
+GSR value: 368
+GSR value: 371
+^CTraceback (most recent call last):
+  File "grove_gsr_sensor.py", line 69, in <module>
+    main()
+  File "grove_gsr_sensor.py", line 66, in main
+    time.sleep(.3)
+KeyboardInterrupt
+
+
+```
+
+
+You can quit this program by simply press ++ctrl+c++.
+
+!!!Notice
+        You may have noticed that for the analog port, the silkscreen pin number is something like **A1, A0**, however in the command we use parameter **0** and **1**, just the same as digital port. So please make sure you plug the module into the correct port, otherwise there may be pin conflicts.
+
+
+
+
+
 ## FAQ
 Please click [here](http://support.seeedstudio.com/knowledgebase/articles/1827199-grove-gsr-sensor-sku-101020052) to see all Grove - GSR sensor FAQs.
 

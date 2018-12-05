@@ -230,7 +230,7 @@ git clone https://github.com/Seeed-Studio/grove.py
 
 ```
 cd grove.py/grove
-python grove_water_sensor.py 0 1
+python grove_water_sensor.py 0
 ```
 
 
@@ -285,7 +285,7 @@ if __name__ == '__main__':
     If everything goes well, you will be able to see the following result
 ```python
 
-pi@raspberrypi:~/grove.py/grove $ python grove_water_sensor.py 0 1
+pi@raspberrypi:~/grove.py/grove $ python grove_water_sensor.py 0
 Detecting ...
 612, Dry.
 749, Detected Water.
@@ -410,4 +410,4 @@ sudo python grove_water_sensor.py
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/gabogiraldo/smart-crops-implementing-iot-in-conventional-agriculture-3674a6/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

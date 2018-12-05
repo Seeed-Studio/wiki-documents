@@ -155,7 +155,7 @@ git clone https://github.com/Seeed-Studio/grove.py
 
 ```
 cd grove.py/grove
-python grove_moisture_sensor.py 0 1
+python grove_moisture_sensor.py 0
 ```
 
 
@@ -212,7 +212,7 @@ if __name__ == '__main__':
     If everything goes well, you will be able to see the following result:
 ```python
 
-pi@raspberrypi:~/grove.py/grove $ python grove_moisture_sensor.py 0 1
+pi@raspberrypi:~/grove.py/grove $ python grove_moisture_sensor.py 0
 Detecting moisture...
 Moisture value: 0, Dry
 Moisture value: 1, Dry
@@ -404,4 +404,4 @@ void loop() {
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc.
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).

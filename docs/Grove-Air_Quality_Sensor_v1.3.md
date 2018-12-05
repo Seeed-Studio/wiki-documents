@@ -228,11 +228,11 @@ git clone https://github.com/Seeed-Studio/grove.py
 
 ```
 cd grove.py/grove
-python grove_air_quality_sensor_v1_3.py 0 1
+python grove_air_quality_sensor_v1_3.py 0
 ```
 
 
-Following is the grove_air_quality_sensor_v1_3.py 0 1 code.
+Following is the grove_air_quality_sensor_v1_3.py code.
 
 ```python
 
@@ -282,7 +282,7 @@ if __name__ == '__main__':
     If everything goes well, you will be able to see the following result:
 ```python
 
-pi@raspberrypi:~/grove.py/grove $ python grove_air_quality_sensor_v1_3.py 0 1
+pi@raspberrypi:~/grove.py/grove $ python grove_air_quality_sensor_v1_3.py 0 
 Detecting ...
 138, High Pollution.
 139, High Pollution.
@@ -406,4 +406,4 @@ sudo python grove_air_quality_sensor.py
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
