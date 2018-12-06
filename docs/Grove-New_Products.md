@@ -1,7 +1,16 @@
 <p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Grove-2-Channel_SPDT_Relay/raw/master/img/20180823144904.jpg" /></a></p>
 
 
-## November
+## December, 2018
+
+- [Grove - Adjustable PIR Motion Sensor](https://www.seeedstudio.com/Grove-Adjustable-PIR-Motion-Sensor-p-3225.html)
+
+- [Grove - Human Presence Sensor (AK9753)](https://www.seeedstudio.com/Grove-Human-Presence-Sensor-AK975-p-3224.html)
+
+- [Grove - 2-Channel Inductive Sensor (LDC1612)](https://www.seeedstudio.com/Grove-2-Channel-Inductive-Sensor-LDC161-p-3223.html)
+
+
+## November, 2018
 
 - [Grove - Coulomb Counter 3.3V to 5V (LTC2941)](https://www.seeedstudio.com/Grove-Coulomb-Counter-3.3V-to-5V-%28LTC2941%29-p-3215.html)
 
