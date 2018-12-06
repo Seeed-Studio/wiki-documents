@@ -60,6 +60,10 @@ Grove - Adjustable PIR Motion Sensor is an easy to use Passive Infrared motion s
 
 
 
+!!!Warning
+		The Fresnel lens equipped with the module is a plastic piece and is prohibited from approaching high temperatures or open flames.
+
+
 ### Schemaitc
 
 **Power**
