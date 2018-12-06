@@ -87,9 +87,9 @@ Find anything different from the ceiling image previous?
 Lens screwed different depths represent different focal length, you can have a try.
 
 ##  Resources
----
-[Demo Code](https://github.com/Seeed-Studio/Grove_Serial_Camera_Kit)
 
+- **[Library]** [Demo Code](https://github.com/Seeed-Studio/Grove_Serial_Camera_Kit)
+- **[Datasheet]** [CJ OV528](https://github.com/SeeedDocument/Grove-Serial_Camera_Kit/raw/master/res/cj-ov528_protocol.pdf)
 
 ## Project
 
