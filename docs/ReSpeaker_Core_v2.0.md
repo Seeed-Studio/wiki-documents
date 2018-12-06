@@ -1662,6 +1662,12 @@ Here are the detail instructions.
 The root cause is that the old SD cards do not work with linux system. Please change to recent SD cards, which supports all the eMMC commands, such as ScanDisk Ultra.
 
 ## Resources
+- **[Algorithms]** [Audio front-end processing algorithms including AEC, Beamforming, NS and KWS](https://github.com/respeaker/respeakerd)
+- **[Google Assistant]** [Google Assistant Demo](https://github.com/respeaker/googleassistant_respeakerd)
+- **[Alexa]** [Alexa Voice Service C++ SDK for ReSpeaker Core v2.0](https://github.com/respeaker/avs-device-sdk)
+- **[Alexa/DuerOS]** [Alexa Voice Service & DuerOS Python SDK](https://github.com/respeaker/avs)
+- **[Microsoft]** [Microsoft Speech Translation Demo](https://github.com/respeaker/Python-Speech-Translate)
+- **[Pixel]** [RGB LEDs library](https://github.com/respeaker/pixel_ring)
 - **[PDF]** [Download PDF of This Wiki](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/ReSpeaker_Core_v2.pdf)
 - **[PDF]** [Rockchip RK3229 Datasheet V1.1](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Rockchip%20RK3229%20Datasheet%20V1.1%2020151209.pdf)
 - **[PDF]** [Dimensions for Board](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/ReSpeaker_Core_v2_Demensions.pdf)
@@ -1673,6 +1679,7 @@ The root cause is that the old SD cards do not work with linux system. Please ch
 - **[MoreReading]** [Mraa Python documents page](http://iotdk.intel.com/docs/master/mraa/python/)
 - **[MoreReading]** [Intel Mraa SDK](https://software.intel.com/en-us/mraa-sdk/documentation )
 - **[MoreReading]** [Snips SDK](https://snips.gitbook.io/documentation/installing-snips/respeaker-core-2.0)
+
 
 ## Projects
 

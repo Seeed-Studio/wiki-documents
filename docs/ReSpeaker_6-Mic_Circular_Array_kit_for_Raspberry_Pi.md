@@ -84,10 +84,16 @@ dummy.
 
 ## Hardware Overview
 
+**System Diagram**
+
+![](https://github.com/SeeedDocument/ReSpeaker_4-Mics_Linear_Array_Kit/raw/master/img/voice_hat_acc.png)
+
+**Interface**
+
 ![](https://github.com/SeeedDocument/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/raw/master/img/hardware.jpg)
 
 
-## Assembly drawing   
+## Assembly Drawing   
 
 ![](https://github.com/SeeedDocument/Bazaar_file/raw/master/107990055/img/ab.png)
 
