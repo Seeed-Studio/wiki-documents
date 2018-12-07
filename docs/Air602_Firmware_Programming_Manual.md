@@ -97,6 +97,56 @@ Please becareful when you press the reset button to prevent the USB device false
 ![](https://github.com/SeeedDocument/Air602_WiFi_Module/raw/master/img/Tool_8.jpg)
 
 
+
+## FAQ
+
+### Q1: Problems after burning FW AirM2M_Luat_V0011_W600T_USER(By tarp.andreas)
+
+**Quote"**
+it seems, that if one burns the AirM2M_Luat_V0011_W600T_USER.FLS Firmware as described in the Wiki, it is impossible to use the LuaTool
+for that module again.
+
+**"**
+
+A1: That is beacause the Ver 11 have changed the SDK boot structure, you need to rewrite the flash before burn it back to ver08/09/10. For more detail please check
+our forum.
+
+[Problems after burning FW AirM2M_Luat_V0011_W600T_USER](https://forum.seeedstudio.com/viewtopic.php?f=106&t=8498&p=28790#p28790)
+
+___
+### Q2: How to Programming from Linux.
+
+**Quote"**
+Now I find out that the "firmware tools" zipfile does not contain any sources, but just a few windows binaries. So how do I go about programming this thing from my Linux workstation?
+
+**"**
+
+A2: Unfortunately, we don't have the firmware tool for linux. However you can use the serial port tool with xmodem send function.
+
+>Step 1. Send 1B (HEX), Cyclically.  
+>Step 2. Offered by **tarp.andreas**. "Try to push the RESET button (or pull down LOW the Res-PIN on the stand-alone module) while sending "\x1b" then you'll get the desired response."  
+>Step 3. When it recall "secboot running" and then with "CCCCCC...." you can choose the firmware file, and send them under xmodem protocol 
+
+For more detail please check our forum.  
+
+[Programming from Linux.](https://forum.seeedstudio.com/viewtopic.php?f=106&t=8393&sid=acb3a9a37671cf031800ea6073adb854)
+
+___
+
+### Q3: Mac os driver issue
+
+We found that some version of the mac system can not recognize this board.
+
+
+A3 : In that case you may need to install the CH340 driver manually, this board uses CH330N, which shares the same driver with CH340.
+
+For more detail please check our forum.  
+
+[Mac os driver issue](https://forum.seeedstudio.com/viewtopic.php?f=106&t=8299&sid=acb3a9a37671cf031800ea6073adb854)
+
+___
+
+
 ## Resource
 
 - **[Zip]** [Firmware Tool](https://v2.fangcloud.com/share/f348cba5a0e3899fd97c57b9f2)
