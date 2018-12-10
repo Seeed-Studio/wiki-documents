@@ -542,7 +542,7 @@ A2: Please click raspberry -> Preferences -> Raspberry Pi Configuration, then se
 - **[Algorithms]** [Algorithms includes DOA, VAD, NS](https://github.com/respeaker/mic_array)
 - **[Voice Engine** [Voice Engine project, provides building blocks to create voice enabled objects](https://github.com/voice-engine/voice-engine)
 - **[Algorithms]** [AEC](https://github.com/voice-engine/ec)
-
+- **[Mechanical Drawing]** [2D Drawing](https://github.com/SeeedDocument/ReSpeaker_4-Mics_Linear_Array_Kit/raw/master/res/2d.zip)
 
 ## Projects
 
