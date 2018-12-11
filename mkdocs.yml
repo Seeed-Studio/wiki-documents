@@ -539,6 +539,8 @@ pages:
           - Grove - Circular LED: Grove-Circular_LED.md
           - Grove - LCD RGB Backlight: Grove-LCD_RGB_Backlight.md
           - Grove - LED Bar: Grove-LED_Bar.md
+          - Grove - RGB LED Stick (10 - WS2813 Mini): Grove-RGB_LED_Stick-10-WS2813_Mini.md
+          - Grove - RGB LED Ring (20 - WS2813 Mini): Grove-LED_ring.md
           - Grove - LED Socket Kit: Grove-LED_Socket_Kit.md
           - Grove - LED String Light: Grove-LED_String_Light.md
           - Grove - LED Strip Driver: Grove-LED_Strip_Driver.md
