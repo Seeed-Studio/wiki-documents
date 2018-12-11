@@ -20,15 +20,15 @@ The sensor value only reflects the approximated trend of gas concentration in a 
 </div>
 
 |Sensor|Gas Type|Get One Now|
-|:---:|---|---|---|
-|MQ2|Combustible Gas, Smoke|[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](http://wiki.seeedstudio.com/Grove-Gas_Sensor-MQ2/)|
-|MQ3|Alcohol Vapor|[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](http://wiki.seeedstudio.com/Grove-Gas_Sensor-MQ3/)|
-|MQ5|LPG, Natural Gas, Town Gas|[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](http://wiki.seeedstudio.com/Grove-Gas_Sensor-MQ5/)|
-|MQ9|Carbon Monoxide, Coal Gas, Liquefied Gas|[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](http://wiki.seeedstudio.com/Grove-Gas_Sensor-MQ9/)|
+|---|---|---|
+|MQ2|Combustible Gas, Smoke|[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Gas-Sensor-MQ-p-937.html)|
+|MQ3|Alcohol Vapor|[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Gas-Sensor-MQ-p-1418.html)|
+|MQ5|LPG, Natural Gas, Town Gas|[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Gas-Sensor-MQ-p-938.html)|
+|MQ9|Carbon Monoxide, Coal Gas, Liquefied Gas|[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Gas-Sensor-MQ-p-1419.html)|
 
 
-Features
---------
+## Features
+
 
 -   High sensitivity to alcohol and small sensitivity to Benzine
 -   Stable and long life
@@ -37,8 +37,7 @@ Features
 !!!Tip
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
-Specification
--------------
+##Specification
 
 | Item  | Parameter               | Min  | Typical    | Max | Unit |
 |-------|-------------------------|------|------------|-----|------|
@@ -49,26 +48,16 @@ Specification
 | Rs    | Sensing Resistance      | 1    | -          | 8   | MΩ   |
 | Scope | Detecting Concentration | 0.05 | -          | 10  | mg/L |
 
-Platforms Supported
--------------------
-
-| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
-|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo_n.jpg) |
-
-!!!Caution
-    The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
 
-Application Ideas
------------------
+
+## Application
 
 -   Alcohol checker.
 -   Breathalyser.
 -   Toys.
 
-Hardware Overview
------------------
+## Hardware Overview
 
 This is an Analog output sensor. This needs to be connected to any one Analog socket in [Grove Base Shield](/Base_Shield_V2). The examples used in this tutorial makes uses of A0 analog pin. Connect this module to the A0 port of Base Shield.
 
@@ -83,14 +72,32 @@ It is possible to connect the Grove module to Arduino directly by using jumper w
 
 The output voltage from the Gas sensor increases when the concentration of gas increases. Sensitivity can be adjusted by varying the potentiometer. <font color="Red">Please note that the best preheat time for the sensor is above 24 hours</font>. For detailed information about the MQ-3 sensor, please refer to the data-sheet provided in **Resources** section.
 
-Getting Started
----------------
+
+## Platforms Supported
+
+| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
+|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo_n.jpg) |
+
+!!!Caution
+    The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
+
+
+## Getting Started
+
+### Play With Arduino
+
+| Seeeduino V4.2 | Base Shield | Grove - Gas Sensor(MQ3) |
+|--------------|-------------|-----------------|
+|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Gas_Sensor-MQ3/raw/master/img/45d_small.jpg)|
+|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Gas-Sensor-MQ-p-1418.html" target="_blank">Get One Now</a>|
+
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Gas_Sensor-MQ3/master/img/Read_Gas_Sensor_data.jpg)
 
 Connect the Grove - Gas Sensor(MQ3) to A0 port as shown in the picture above.
 
-### Gas Detection : Basic Example
+#### Gas Detection : Basic Example
 
 In this example, the sensor is connected to A0 pin. The voltage read from the sensor is displayed. This value can be used as a threshold to detect any increase/decrease in gas concentration.
 
@@ -113,7 +120,7 @@ void loop() {
 }
 ```
 
-### Measurement : Approximation
+#### Measurement : Approximation
 
 This examples demonstrates a way to know the approximate concentration of Gas. As per the data-sheet of the MQ3 sensors, these equations are tested for standard conditions and are not calibrated. It may vary based on change in temperature or humidity.
 
@@ -196,6 +203,139 @@ Now, we can get the concentration of gas from the figure below.
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Gas_Sensor-MQ3/master/img/GAS_Sensor_3.png)
 
 According to the figure, we can see that the minimum concentration we can test is 0.1mg/L and the maximum is 10mg/L. However, we can't provide a formula because the relation between ratio and concentration is nonlinear.But also, we can convert mg/L to ppm, it's may convenient for us to watch the value.
+
+
+
+
+
+### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| Raspberry pi | Grove Base Hat for RasPi| Grove - Gas Sensor(MQ3)|
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Gas_Sensor-MQ3/raw/master/img/45d_small.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Gas-Sensor-MQ-p-1418.html)|
+
+- **Step 2**. Plug the Grove Base Hat into Raspberry.
+- **Step 3**. Connect the Grove - Gas Sensor(MQ3) to port A0 of the Base Hat.
+- **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+
+
+![](https://github.com/SeeedDocument/Grove-Gas_Sensor-MQ3/raw/master/img/With_Hat.jpg)
+
+!!! Note
+    For step 3 you are able to connect the Grove - Gas Sensor(MQ3) to **any Analog Port** but make sure you change the command with the corresponding port number.
+
+
+#### Software
+
+- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 2**. Download the source file by cloning the grove.py library. 
+
+```
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+
+```
+
+- **Step 3**. Excute below commands to write the code.
+
+```
+cd grove.py/grove
+nano grove_gas_sensor_mq3.py
+
+```
+Then you should copy following code in this file and hit ++ctrl+x++ to quit and save.
+
+
+```python
+
+import math
+import sys
+import time
+from grove.adc import ADC
+
+
+class GroveGasSensorMQ3:
+
+    def __init__(self, channel):
+        self.channel = channel
+        self.adc = ADC()
+
+    @property
+    def MQ3(self):
+        value = self.adc.read(self.channel)
+        return value
+
+Grove = GroveGasSensorMQ3
+
+
+def main():
+    if len(sys.argv) < 2:
+        print('Usage: {} adc_channel'.format(sys.argv[0]))
+        sys.exit(1)
+
+    sensor = GroveGasSensorMQ3(int(sys.argv[1]))
+
+    print('Detecting...')
+    while True:
+        print('Gas value: {0}'.format(sensor.MQ3))
+        time.sleep(.3)
+
+if __name__ == '__main__':
+    main()
+
+```
+
+- **Step 4**. Excute below commands to run code.
+
+```python 
+
+python grove_gas_sensor_mq3.py  0
+
+```
+
+
+!!!success
+    If everything goes well, you will be able to see the following result
+
+```python
+
+pi@raspberrypi:~/grove.py/grove $ python grove_gas_sensor_mq3.py 0
+Detecting...
+Gas value: 564
+Gas value: 564
+Gas value: 564
+Gas value: 565
+Gas value: 565
+Gas value: 565
+Gas value: 566
+Gas value: 566
+Gas value: 566
+Gas value: 566
+Gas value: 566
+^CTraceback (most recent call last):
+  File "grove_gas_sensor_mq3.py", line 69, in <module>
+    main()
+  File "grove_gas_sensor_mq3.py", line 66, in main
+    time.sleep(.3)
+KeyboardInterrupt
+
+
+```
+
+
+You can quit this program by simply press ++ctrl+c++.
+
+!!!Notice
+        You may have noticed that for the analog port, the silkscreen pin number is something like **A0, A1**, however in the command we use parameter **0** and **1**, just the same as digital port. So please make sure you plug the module into the correct port, otherwise there may be pin conflicts.
+
+
+
+
 
 Resources
 ---------
