@@ -33,6 +33,7 @@ You can find a lot of infrared sensors on our website, this one will be one of t
 |---|---|
 |Operating Voltage|3.3V / 5V|
 |Operating Temperature|-30℃ ~ 85℃|
+|Human Presence Detect Range| < 3m|
 |IR Output Resolution|16 bit|
 |Temperature Measurement Range|-10℃ ~ 60 ℃|
 |Interface|I2C|
