@@ -19,7 +19,7 @@ The Grove - 2-Channel Inductive Sensor is based on Texas Instruments(TI) LDC1612
 
 ## Feature
 
-- Up to 4 Channels With Matched Sensor Drive
+- 2 Channels With Matched Sensor Drive
 - Easy-to-Use: Minimal Configuration Required
 - Multiple Channels	Support Environmental and Aging Compensation
 - Remote Sensor Position of >20 cm Supports Operation In Harsh Environments
