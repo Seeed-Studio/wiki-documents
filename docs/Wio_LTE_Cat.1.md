@@ -18,6 +18,8 @@ Apart from the three main updates, the LTE version is almost the same as the 2G 
 
 The Wio LTE is well suited for outdoor projects where the device can connect to the GPS satellites and provide a real-time location of the item it is attached to. The LTE provides a wide bandwidth which allows much faster interaction between the user and device. If you are going to build  projects like a bicycle sharing service, tracking pets or livestock, locating a vehicle, or even keeping track of a child, the Wio LTE is the best solution.
 
+<iframe width="800" height="450" src="https://www.youtube.com/embed/D6DX5P9ncrc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 !!!Warning
     Please always plug 3.7V Lipo battery in case USB power supply is not sufficient.
 
@@ -1957,6 +1959,17 @@ Please click here to see all [Wio_LTE](http://support.seeedstudio.com/knowledgeb
 - **[Library]** [Wio_LTE_JavaScript_Demo](https://github.com/Seeed-Studio/Wio_LTE_JavaScript_Demo)
 
 - **[Datasheet]** [AT Command](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/AT_Command.zip)
+
+## Projects
+
+**Transportation data visualization with Google Map**：We use the Wio LTE cat.1 to monitor transportation GPS and other info. For cold chain, we can monitor the GPS location together with temperature and humidity. For the bicycling,  we can monitor the GPS location together with the hear rate. 
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/SeeedStudio/atmospheric-pollution-visualization-1940f4/embed' width='350'></iframe>
+
+
+**Atmospheric Pollution Visualization**：The air pollution problem attracts more and more attention. This time we tried to monitoring PM2.5 with Wio LTE and new Laser PM2.5 Sensor.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/SeeedStudio/atmospheric-pollution-visualization-1940f4/embed' width='350'></iframe>
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc.
