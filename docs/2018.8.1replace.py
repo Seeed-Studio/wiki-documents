@@ -18,8 +18,8 @@ if __name__ == '__main__':
             file2 = directoryPath + '\\New\\' + fileName
             with open(file1, "r") as f1, open(file2, "w") as f2:
                 for line in f1:
-                    if 'Please submit any technical issue into our [forum](http://forum.seeedstudio.com/)' in line:
-                        line = line.replace('Please submit any technical issue into our [forum](http://forum.seeedstudio.com/)', 'Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc')
+                    if 'hardware or theoritical compatibility.' in line:
+                        line = line.replace('hardware or theoritical compatibility.', 'software or theoritical compatibility.')
                     f2.write(line)
             os.remove(file1)
             os.rename(file2, file1)
