@@ -120,6 +120,27 @@ The SGP30 is a digital multi-pixel gas sensor designed for easy integration into
 - New house air condition monitor
 
 
+## Hardware Overview
+
+### Pin Map
+
+![](https://github.com/SeeedDocument/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/raw/master/img/pin.jpg)
+
+### Schematic
+
+**Power**
+
+![](https://github.com/SeeedDocument/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/raw/master/img/sc2.jpg)
+
+The typical operating voltage SGP30 is 1.8v, we use a power conversion chip *XC6206P182MR* to provide a stable 3.3V for the MCP9600.
+
+
+**Bi-directional level shifter circuit**
+
+![](https://github.com/SeeedDocument/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/raw/master/img/sc1.jpg)
+
+This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of this sensor use 1.8V, if the I<sup>2</sup>C bus of the Arduino use 5V or 3.3V, this circuit will be needed. In the schematic above, **Q7** and **Q8** are N-Channel MOSFET [BSS138LT3G](https://github.com/SeeedDocument/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/raw/master/res/BSS138.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/AN10441.pdf)
+
 
 
 ## Platforms Supported
@@ -130,7 +151,7 @@ The SGP30 is a digital multi-pixel gas sensor designed for easy integration into
 | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo_n.jpg) |
 
 !!!Caution
-    The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
+    The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
 
 
@@ -164,7 +185,7 @@ The SGP30 is a digital multi-pixel gas sensor designed for easy integration into
 
 
 
-- **Step 1.** Connect Grove-VOC and eCO2 Gas Sensor(SGP30) to port **I2C** of Grove-Base Shield.
+- **Step 1.** Connect Grove-VOC and eCO2 Gas Sensor(SGP30) to **I2C** port  of Grove-Base Shield.
 
 - **Step 2.** Plug Grove - Base Shield into Seeeduino.
 
@@ -176,7 +197,7 @@ The SGP30 is a digital multi-pixel gas sensor designed for easy integration into
 
 
 !!!Note
-	If we don't have Grove Base Shield, We also can directly connect Grove-VOC and eCO2 Gas Sensor(SGP30) to Seeeduino as below.
+	If we don't have Grove Base Shield, We also can directly connect Grove - Temperature and Humidity Sensor Pro to Seeeduino as below.
 
 
 | Seeeduino     | Grove-VOC and eCO2 Gas Sensor(SGP30) |
@@ -255,13 +276,33 @@ CO2eq Concentration:502ppm
 
 
 
+## Notice
+
+- The SGP30 uses a dynamic baseline compensation algorithm and on-chip calibration parameters to provide two complementary air quality signals. The baseline should be stored in EEPROM.When there is no baseline value in EEPROM at the first time power-ON or the baseline record is older than seven days.The sensor has to run for 12 hours until the baseline can be stored. You can refer to program flow chart blow.
+
+![](https://github.com/SeeedDocument/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/raw/master/img/Get%20baseline%20program%20flow%20chart%20.png)
+
+
+- The H2_Signal and Ethanol_signal,Both signals can be used to calculate gas concentrations c relative to a reference concentration cref by ln(C/Cref)=(Sref-Sout)/a with a = 512, sref the H2_signal or Ethanol_signal output at the reference concentration, and sout = Sout_H2 or Sout = Sout_EthOH.
+
+- For more accurate measurement,You can set the abslute humidity compensation,Defalt value is 11.57g/m3,A little troublesome is that you should get relatively humidity value of environment from another way,Because there is no humidity measurement part integrated in SGP30..
+
+![](https://github.com/SeeedDocument/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/raw/master/img/absolute%20humidity%20with%20the%20formula.png)
+
+Luckly, It's not much neccessary in a normal situation
+
+
+
 ## Resources
 
 - **[Zip]** [Grove-VOC and eCO2 Gas Sensor(SGP30) eagle file](https://github.com/SeeedDocument/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/raw/master/res/Grove-VOC_and_eCO2_Gas_Sensor%20-SGP30.zip)
 - **[PDF]** [SGP30 Datasheet](https://github.com/SeeedDocument/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/raw/master/res/Sensirion_Gas_Sensors_SGP30_Datasheet_EN.pdf)
+- **[PDF]** [BSS138L Datasheet](https://github.com/SeeedDocument/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/raw/master/res/BSS138.pdf)
 - **[PDF]** [SGP30 Driver Integration Guide HW I2C](https://github.com/SeeedDocument/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/raw/master/res/Sensirion_Gas_Sensors_SGP30_Driver-Integration-Guide_HW_I2C.pdf)
+
 
 
 
 ## Tech Support
 Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](https://forum.seeedstudio.com/).
+
