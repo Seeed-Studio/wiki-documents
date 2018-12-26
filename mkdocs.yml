@@ -152,6 +152,9 @@ pages:
           - Grove Base Hat for Raspberry Pi Zero: Grove_Base_Hat_for_Raspberry_Pi_Zero.md
           - Skeleton Box for Raspberry Pi Compute Module Development Kit: Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit.md
           - Skeleton box for Raspberry Pi: Skeleton_box_for_Rasberry_Pi.md
+          - 8-Channel 12-Bit ADC for Raspberry Pi (STM32F030): 8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030.md
+          - 4-Channel 16-Bit ADC for Raspberry Pi (ADS1115): 4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115.md
+          
 
 
       - BeagleBone:
@@ -607,7 +610,7 @@ pages:
           - Grove Indoor Environment Kit for Edison: Grove_Indoor_Environment_Kit_for_Edison.md
           - Grove Shield for Intel Joule: Grove_Shield_for_Intel_Joule.md
           - Grove Smart Plant Care Kit: Grove_Smart_Plant_Care_Kit.md
-          
+          - Grove Beginner Kit for Arduino: Grove_Beginner_Kit_for_Arduino.md
 
 
   - IoT:
