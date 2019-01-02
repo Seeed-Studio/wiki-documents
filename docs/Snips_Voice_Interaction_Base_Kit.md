@@ -12,7 +12,13 @@ tags:
 ![](https://github.com/SeeedDocument/Snips_Voice_Interaction_Base_Kit/raw/master/img/main_wiki.jpg)
 
 
-This kit is the starter development kit for Snips Platform. The voice assistant is installed on the Raspberry Pi with the Seeed ReSpeaker 2-Mics Pi HAT, so that developers can easily get the development kit up and running and experience the Snips assistant with the Grove modules. The kit includes two Grove modules, Grove - Temperature & Humidity Sensor and Grove - Relay, which makes it possible to obtain environmental data and control the device’s ON and OFF states via voice commands.
+The Snips Voice Interaction Development Kits empowers users to jump start their development of voice interfaces and easily integrate the Snips AI Voice Platform with hardware. Snips runs on device, meaning all of your voice commands and data are processed locally rather than being sent to the cloud. This on-device processing results in a completely secure offline voice assistant that keeps your personal data private, as it should be.
+
+
+The Voice Interaction Base Kit allows you to run the entire Snips AI Voice Platform. Powered by a [Raspberry Pi 3 Model B+](https://www.seeedstudio.com/Raspberry-Pi-3-Model--p-3037.html) and the [ReSpeaker 2-Mics Pi HAT](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html), it is capable of acting as your home smart speaker. Along with the kit comes a speaker, a [Grove - Temperature & Humidity Sensor (SHT31)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT3-p-2655.html), a [Grove - Relay](https://www.seeedstudio.com/Grove-Relay-p-769.html), and a pegboard to hang it on a wall or create a nifty stand.
+
+
+But that's not all! The [Voice Interaction Satellite Kit](https://www.seeedstudio.com/Snips_Voice_Interaction_Satellite_Kit.html) will extend your base station to reach each room of your house and allow you to interact with the hardware based on where you issue your commands!
 
 
 <p style="text-align:center"><a href="https://www.seeedstudio.com/Snips_Voice_Interaction_Base_Kit.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
@@ -20,11 +26,11 @@ This kit is the starter development kit for Snips Platform. The voice assistant 
 
 ## Feature 
 
-- Out of the box ai development kit
+- Out of the box Ai Development Kit
 - Easy to assemble
 - Voice assistant
 
-## Partlist
+## Part List
 
 |Category|Part Name|Quantity|
 |---|---|---|
@@ -56,10 +62,10 @@ This kit is the starter development kit for Snips Platform. The voice assistant 
 
 ## Quick Starter Guide
 
-This guide shows the basic steps to build the out-of-the-box application. For more in-depth development technical documentation, please visit [https://docs.snips.ai/](https://docs.snips.ai/)
+This guide shows the basic steps to build the out-of-the-box application. For more in-depth development technical documentation, please visit [Snips AI quick start](https://docs.snips.ai/the-maker-kit/dev-kit)
 
 
-### Assembly steps:
+### Assembly Steps:
 
 The following picture is the overview of the assembly parts.
 
@@ -100,7 +106,7 @@ This is how it looks when the above 2 parts are connected to the base panel.
 
 ---
 
-Finally, its ready to play with Snips. 
+Finally, you are ready to play with Snips.
 
 ![](https://github.com/SeeedDocument/Snips_Voice_Interaction_Base_Kit/raw/master/img/s7.jpg)
 
@@ -130,3 +136,5 @@ Turn the relay off.	| The relay opens and the red LED turns off.
 ## Resource
 
 - **[PDF]** [User manual](https://github.com/SeeedDocument/Snips_Voice_Interaction_Base_Kit/raw/master/res/User%20manual.pdf)
+
+- **[Web]** [Snips AI Quick Start](https://docs.snips.ai/the-maker-kit/dev-kit)
