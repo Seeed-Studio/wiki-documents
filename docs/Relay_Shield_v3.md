@@ -35,7 +35,7 @@ The Relay Shield features four high quality relays and provides NO/NC interfaces
 |---|:---:|:---:|:---:|:---:|
 |Supply Voltage	|4.75	|5|	5.25	|VDC|
 |Working Current	|8|	-|	250|	mA|
-|Switching Voltage|	-|	-|	35|	VDC|
+|Switching Voltage|	-|	-|	30|	VDC|
 |Switching Current|	-|	-|	8|A|
 |Frequency|	-|	1|	-|	HZ|
 |Switching Power|	-|	-|	70|	W|
