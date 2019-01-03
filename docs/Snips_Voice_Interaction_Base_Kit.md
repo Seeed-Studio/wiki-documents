@@ -9,7 +9,7 @@ sku: 105020074
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Snips_Voice_Interaction_Base_Kit/raw/master/img/main_wiki.jpg)
+![](https://github.com/SeeedDocument/Snips_Voice_Interaction_Base_Kit/raw/master/img/Base_Kit.jpg)
 
 
 The Snips Voice Interaction Development Kits empowers users to jump start their development of voice interfaces and easily integrate the Snips AI Voice Platform with hardware. Snips runs on device, meaning all of your voice commands and data are processed locally rather than being sent to the cloud. This on-device processing results in a completely secure offline voice assistant that keeps your personal data private, as it should be.
@@ -26,7 +26,7 @@ But that's not all! The [Voice Interaction Satellite Kit](https://www.seeedstudi
 
 ## Feature 
 
-- Out of the box Ai Development Kit
+- Out of the box AI Development Kit
 - Easy to assemble
 - Voice assistant
 
@@ -116,13 +116,13 @@ The kit provides two ways of placement. It can either be placed on a horizontal 
 Please be careful with the Relay when the kit is powered on since the working voltage will be high.
 
 
-###　Start playing!
+###　Start Playing!
 
-- 1. Power the kit by the default power adapter in the kit or use a 5V-2A DC adapter with a Micro USB connector.
+- a. Power the kit by the default power adapter in the kit or use a 5V-2A DC adapter with a Micro USB connector.
 
-- 2. The next step is installing the Snips assistant into the Raspberry Pi. To save your setup time, the MicroSD card in the kit has been flashed with the full functional system image, which means the Snips assistant is ready for your trigger words. We strongly suggest you to study the step by step installation guide by visiting : https://docs.snips.ai/getting-started/quick-start-raspberry-pi and learn the sam tool in command line.
+- b. The next step is installing the Snips assistant into the Raspberry Pi. To save your setup time, the MicroSD card in the kit has been flashed with the full functional system image, which means the Snips assistant is ready for your trigger words. We strongly suggest you to study the step by step installation guide by visiting : https://docs.snips.ai/getting-started/quick-start-raspberry-pi and learn the sam tool in command line.
 
-- 3. Trigger the assistant by saying “Hey-snips”, and follow the command:
+- c. Trigger the assistant by saying “Hey-snips”, and follow the command:
 
 
 Command	| Action
