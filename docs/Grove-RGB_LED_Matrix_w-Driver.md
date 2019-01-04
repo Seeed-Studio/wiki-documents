@@ -100,20 +100,7 @@ so we need **<font color="red">R</font><font color="green">G</font><font color="
 
 We use 64 KTR-3528RGB LEDs to form an 8x8 matrix LED
 
-![](https://github.com/SeeedDocument/Grove-RGB_LED_Matrix_w-Driver/raw/master/img/schematic1.jpg)
-
-$$
-\downdownarrows
-$$
-
-![](https://github.com/SeeedDocument/Grove-RGB_LED_Matrix_w-Driver/raw/master/img/schematic2.jpg)
-
-$$
-\downdownarrows
-$$
-
-![](https://github.com/SeeedDocument/Grove-RGB_LED_Matrix_w-Driver/raw/master/img/schematic3.jpg)
-
+![](https://github.com/SeeedDocument/Grove-RGB_LED_Matrix_w-Driver/raw/master/img/RGB.jpg)
 
 
 We use the V signal for column selection and the RGB signal for row selection.  
