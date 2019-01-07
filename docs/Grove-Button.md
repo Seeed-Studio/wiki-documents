@@ -29,6 +29,16 @@ Grove - Button is a momentary push button. It contains one independent "momentar
 !!!Tip
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
+## Specification
+
+| Parameter             | Value/Range    |
+|-----------------------|----------------|
+| Operating voltage     | 3.3/5V         |
+| Electrical Life       | 200,000 cycles |
+| Operation Force       | 100 ± 50gf     |
+| Operation Temperature | -25℃ to +70℃   |
+| Size                  | 20mmX20mm      |
+
 ## Platforms Supported
 
 

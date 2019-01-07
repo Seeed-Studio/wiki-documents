@@ -22,6 +22,15 @@ Features
 
 -   Chainable
 
+
+## Specification
+
+| Parameter             | Value/Range  |
+|-----------------------|--------------|
+| Operating voltage     | 3.3/5V       |
+| Operation Temperature | -25℃ to +85℃ |
+| Size                  | 40mm x20mm   |
+
 Platforms Supported
 -------------------
 

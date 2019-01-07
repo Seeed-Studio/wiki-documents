@@ -500,6 +500,7 @@ Please tap the commands below to update and activate the Bluetooth of ReSpeaker 
 
 ```
 sudo apt update
+sudo apt-mark hold firefox 
 sudo apt upgrade
 ```
 

@@ -22,6 +22,18 @@ Arduino Uno is the most popular Arduino board so far, however it is sometimes fr
 | Base Shield V1.3 | Change the Grove connector layout and quantity                                                        | Aug 2012      |
 | Base Shield V2.0 | Change the Grove connector layout and quantity, as well as a power switch to enable both 3.3V and 5V. | Mar 2014      |
 
+## Specification
+
+| Parameter             | Value/Range  |
+|-----------------------|--------------|
+| Operating voltage     | 3.3/5V       |
+| Operation Temperature | -25℃ to +85℃ |
+| Analog Ports          | 4            |
+| Digital Ports         | 7            |
+| UART Ports            | 1            |
+| I2C Ports             | 1            |
+| Size                  | 69mm x53mm   |
+
 ## Compatible Boards
 
 The Base Shield is tested and fully compatible with following boards:

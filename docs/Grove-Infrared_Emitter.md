@@ -30,13 +30,22 @@ Grove - Infrared Emitter v1.0	| Initial |	Nov. 01 2015
 Grove - Infrared Emitter v1.1	| Change the Infrared transmitting tube location  |	Jul. 24 2016
 Grove - Infrared Emitter v1.2	| Change the valnue of C1 to make the power more stable  |	Dec. 14 2016
 
+## Application
+- Infrared remote control units with high power requirements
+- Free air transmission systems
+- Infrared source for optical counters and card readers
 
+##　Specification
 
-
-##　Specifications
-
--   Voltage: 3.3-5V
--   Distance:10m
+| Parameter               | Value/Range   |
+|-------------------------|---------------|
+| Operating voltage       | 3.3/5V        |
+| Peak wavelength         | 940nm         |
+| Angle of half intensity | ϕ = ± 17°     |
+| Radiant Intensity       | 72 mW/sr      |
+| Distance                | 10 meter(MAX) |
+| Operation Temperature   | -40℃ to +80℃  |
+| Size                    | 20mmX20mm     |
 
 !!!Tip
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)

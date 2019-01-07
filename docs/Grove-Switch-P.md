@@ -34,6 +34,17 @@ What does “P” mean? “P” stands for “panel mount” in this product.
 !!!Tip
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
+## Specification
+
+| Parameter             | Value/Range    |
+|-----------------------|----------------|
+| Operating voltage     | 3.3/5V         |
+| Electrical Life       | 10,000 cycles  |
+| Operation Force       | 200 ± 50gf     |
+| Operation Temperature | -20℃ to +80℃   |
+| Size                  | 20mmX20mm      |
+
+
 ## Platforms Supported
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |

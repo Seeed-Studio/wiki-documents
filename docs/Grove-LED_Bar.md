@@ -36,6 +36,22 @@ Features
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
 
+## Specification
+
+| Parameter                                                   | Value/Range  |
+|-------------------------------------------------------------|--------------|
+| Operating voltage                                           | 3.3/5V       |
+| Operation Temperature                                       | -20℃ to +80℃ |
+| Peak Emission Wavelength-RED(Current 20mA)                  | 630-637nm    |
+| Peak Emission Wavelength-Yellow Green(Current  20mA )       | 570-573nm    |
+| Peak Emission Wavelength-Yellow(Current  20mA )             | 585-592nm    |
+| Luminous Intensity Per Segment-RED(Current  20mA )          | 50-70mcd     |
+| Luminous Intensity Per Segment-Yellow Green(Current  20mA ) | 28-35mcd     |
+| Luminous Intensity Per Segment-Yellow(Current  20mA )       | 45-60mcd     |
+| LED segment                                                 | 10           |
+| Size                                                        | 40mm * 20mm  |
+
+
 Platforms Supported
 -------------------
 
