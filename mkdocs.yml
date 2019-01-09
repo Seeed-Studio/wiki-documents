@@ -197,7 +197,9 @@ pages:
           - Eagleye 530s: Eagleye_530s.md
 
       - micro:bit:
-          - microbit wiki Page: microbit_wiki_page.md 
+          - microbit wiki Page: microbit_wiki_page.md
+          - Grove Inventor Kit for micro:bit: Grove_Inventor_Kit_for_microbit.md
+
 
       - Shield:
           - Shield Introduction: Shield.md
