@@ -3,6 +3,16 @@
 
 ## December, 2018
 
+- [Grove - LED Matrix Driver (HT16K33)](https://www.seeedstudio.com/Grove-LED-Matrix-Driver-(HT16K33).html)
+
+- [Grove - RGB LED Matrix w/Driver](https://www.seeedstudio.com/Grove-RGB-LED-Matrix-w/Driver.html)
+
+- [Grove - Red LED Matrix w/Driver](https://www.seeedstudio.com/Grove-Red-LED-Matrix-w-Driver.html)
+
+- [Grove - RGB LED Ring (20 - WS2813 Mini)](https://www.seeedstudio.com/Grove-RGB-LED-Ring-(20-WS2813-Mini)-p-3227.html)
+
+- [Grove - RGB LED Stick (10 - WS2813 Mini)](https://www.seeedstudio.com/Grove-RGB-LED-Stick-(10-WS2813-Mini)-p-3226.html)
+
 - [Grove - Adjustable PIR Motion Sensor](https://www.seeedstudio.com/Grove-Adjustable-PIR-Motion-Sensor-p-3225.html)
 
 - [Grove - Human Presence Sensor (AK9753)](https://www.seeedstudio.com/Grove-Human-Presence-Sensor-AK975-p-3224.html)
