@@ -154,6 +154,7 @@ pages:
           - Skeleton box for Raspberry Pi: Skeleton_box_for_Rasberry_Pi.md
           - 8-Channel 12-Bit ADC for Raspberry Pi (STM32F030): 8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030.md
           - 4-Channel 16-Bit ADC for Raspberry Pi (ADS1115): 4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115.md
+          - RS-485 Shield for Raspberry Pi: RS-485_Shield_for_Raspberry_Pi.md
           
 
 
