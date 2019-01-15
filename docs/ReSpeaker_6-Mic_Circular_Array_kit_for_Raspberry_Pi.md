@@ -781,7 +781,7 @@ hotword_count = 1
 ```
 
 
-### 4. Another way to output processed audio: ALOOP 
+**4. Another way to output processed audio: ALOOP** 
 
 AloopOutputNode is designed to redirect the processed audio stream into a specific Alsa device(Loopback PCM). In this way, some third-party voice assistants can get  real-time processed audio stream from a PCM device, which provides a convenient way to build your application.
 
