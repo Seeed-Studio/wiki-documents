@@ -275,7 +275,7 @@ SerialLCD slcd(11,12);// Assign 11 and 12 as RxD and TxD lines of Software Seria
 
 This function is used for initializing the Serial LCD module.
 
-Example�
+Example:
 
 ```
 slcd.begin(); // Intialize LCD
@@ -285,7 +285,7 @@ slcd.begin(); // Intialize LCD
 
 Prints the text to the LCD. It is of two forms:
 
-Example�
+Example:
 
 ```
 slcd.print(data);  // Data can be any text
