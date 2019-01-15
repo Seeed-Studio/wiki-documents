@@ -1,8 +1,8 @@
 ---
-title:  Grove Serial LCD V1.0‏‎
+title:  Grove Serial LCD V1.0‏
 category: Discontinued
 bzurl:
-oldwikiname: Grove-Serial_LCD_V1.0‏‎
+oldwikiname: Grove-Serial_LCD_V1.0‏
 prodimagename:
 bzprodimageurl:
 surveyurl: https://www.research.net/r/Grove-Serial_LCD_V1-0
@@ -275,7 +275,7 @@ SerialLCD slcd(11,12);// Assign 11 and 12 as RxD and TxD lines of Software Seria
 
 This function is used for initializing the Serial LCD module.
 
-Example：
+Example�
 
 ```
 slcd.begin(); // Intialize LCD
@@ -285,7 +285,7 @@ slcd.begin(); // Intialize LCD
 
 Prints the text to the LCD. It is of two forms:
 
-Example：
+Example�
 
 ```
 slcd.print(data);  // Data can be any text
@@ -535,15 +535,11 @@ slcd.backlight();  // Turn on the backlight
 
 ##   Resources   ##
 
-- **[Eagle]** [Schematic and Board Files](http://wiki.seeedstudio.com/images/f/fe/SerialLCDdriverV1.0B.zip)
+- **[Eagle]** [Schematic and Board Files](https://github.com/SeeedDocument/Grove-Serial_LCD_V1.0/raw/master/res/202000309_PCBA-Grove-Serial%20LCD_%E5%8E%9F%E7%90%86%E5%9B%BE.zip)
 - **[Library]** [SerialLCD Library for v1.0b and v1.1b](https://github.com/SeeedDocument/Grove-Serial_LCD_V1.0/raw/master/res/New_SerialLCD_Library_.zip)
 - **[repository]** [github repository for SerialLCD](https://github.com/Seeed-Studio/Grove_SerialLCD)
 - **[Library]**  [NewSoftLibrary](http://arduiniana.org/NewSoftSerial/NewSoftSerial10c.zip)
 - **[Library]** [a small fix to v1.0b-Library](https://github.com/ydirson/Wiring/commit/60e58003e8c1dc9be81d0f58b1d0f3ef9fad1446) for begin() not following the correct protocol
-
-##   Support   ##
-
-If you have questions or other better design ideas, you can go to our [forum](http://www.seeedstudio.com/forum) or **wish** to discuss.
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
