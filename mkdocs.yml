@@ -404,6 +404,7 @@ pages:
           - Grove - CO2 Sensor: Grove-CO2_Sensor.md
           - Grove - Chest Strap Heart Rate Sensor: Grove-Chest_Strap_Heart_Rate_Sensor.md
           - Grove - Collision Sensor: Grove-Collision_Sensor.md
+          - Grove - Capacitive Moisture Sensor (Corrosion-Resistant): Grove-Capacitive_Moisture_Sensor-Corrosion-Resistant.md
           - Grove - Differential Amplifier v1.0: Grove-Differential_Amplifier_v1.0.md
           - Grove - Digital Infrared Temperature Sensor: Grove-Digital_Infrared_Temperature_Sensor.md
           - Grove - Digital Light Sensor: Grove-Digital_Light_Sensor.md
@@ -459,6 +460,7 @@ pages:
           - Grove - Q Touch Sensor: Grove-Q_Touch_Sensor.md
           - Grove - RTC: Grove-RTC.md
           - Grove - Rotary Angle Sensor: Grove-Rotary_Angle_Sensor.md
+          - Grove - RS232: Grove-RS232.md
           - Grove - Serial Camera Kit: Grove-Serial_Camera_Kit.md
           - Grove - Slide Potentiometer: Grove-Slide_Potentiometer.md
           - Grove - Sound Recorder: Grove-Sound_Recorder.md
@@ -701,6 +703,9 @@ pages:
           - WireLess Gate Shield V1.0: WireLess_Gate_Shield_V1.0.md
           - Wireless Sensor Node - Solar Kit: Wireless_Sensor_Node-Solar_Kit.md
           - Gear Stepper Motor Driver Pack: Gear_Stepper_Motor_Driver_Pack.md
+          - RS-232 To TTL Conveter (MAX3232IDR): RS-232_To_TTL_Conveter-MAX3232IDR.md
+
+
 
   - Tutorial:
           - Tutorial Introduction: Tutorial.md
