@@ -141,7 +141,7 @@ pages:
       - Raspberry Pi:
           - Raspberry Pi Introduction: Raspberry_Pi.md
           - Grove Base HAT: Grove_Base_HAT.md
-          - GrovePi&#43;: GrovePi_Plus.md
+          - GrovePi Plus: GrovePi_Plus.md
           - Raspberry Pi Breakout Board v1.0: Raspberry_Pi_Breakout_Board_v1.0.md
           - Raspberry Pi Motor Driver Board v1.0: Raspberry_Pi_Motor_Driver_Board_v1.0.md
           - Pi RTC (DS1307): Pi_RTC-DS1307.md
@@ -203,7 +203,7 @@ pages:
 
       - Shield:
           - Shield Introduction: Shield.md
-          - 2.8&#39;&#39; TFT Touch Shield v2.0: 2.8inch_TFT_Touch_Shield_v2.0.md
+          - 2.8 inch TFT Touch Shield v2.0: 2.8inch_TFT_Touch_Shield_v2.0.md
           - 4A Motor Shield: 4A_Motor_Shield.md
           - Base Shield V2: Base_Shield_V2.md
           - Bluetooth Shield V2.0: Bluetooth_Shield_V2.md
@@ -316,7 +316,7 @@ pages:
           - Xadow - Storage: Xadow_Storage.md
           - Xadow - UV Sensor: Xadow_UV_Sensor.md
           - Xadow - Vibrator Motor: Xadow_Vibrator_Motor.md
-          - Xadow - 1.54&#39;&#39; Touchscreen: Xadow_1.54_inch_Touchscreen.md
+          - Xadow - 1.54 inch Touchscreen: Xadow_1.54_inch_Touchscreen.md
           - Xadow - Audio: Xadow_Audio.md
           - Xadow - BLE: Xadow_BLE.md
           - Xadow - Barometer: Xadow_Barometer.md
@@ -471,7 +471,7 @@ pages:
           - Grove - Mech Keycap: Grove-Mech_Keycap.md
           - Grove - 5-Way Switch: Grove-5-Way_Switch.md
           - Grove - 6-Position DIP Switch: Grove-6-Position_DIP_Switch.md
-          - Grove - Temp&amp;Humi Sensor(SHT31): Grove-TempAndHumi_Sensor-SHT31.md
+          - Grove - Temp and Humi Sensor(SHT31): Grove-TempAndHumi_Sensor-SHT31.md
           - Grove - I2C High Accuracy Temp&Humi Sensor(SHT35): Grove-I2C_High_Accuracy_Temp&Humi_Sensor-SHT35.md
           - Grove - Temperature Sensor: Grove-Temperature_Sensor.md
           - Grove - Temperature Sensor V1.2: Grove-Temperature_Sensor_V1.2.md
@@ -671,16 +671,16 @@ pages:
           - FSM-55: FSM-55.md
           - FST-01: FST-01.md
           - Fubarino SD: Fubarino_SD.md
-          - G1&#34; Water Flow Sensor: G1_Water_Flow_Sensor.md
-          - G1&amp;2&#34; Water Flow Sensor: G1_and_2_inch_Water_Flow_Sensor.md
-          - G1&#39;1/4 Water Flow sensor: G1-1-4_Water_Flow_sensor.md
-          - G1/8&#34; Water Flow Sensor: G1-8_Water_Flow_Sensor.md
-          - G3/4 Water Flow sensor: G3-4_Water_Flow_sensor.md
+          - G1 inch Water Flow Sensor: G1_Water_Flow_Sensor.md
+          - G1/2 inch Water Flow Sensor: G1_and_2_inch_Water_Flow_Sensor.md
+          - G1/4 inch Water Flow sensor: G1-1-4_Water_Flow_sensor.md
+          - G1/8 inch Water Flow Sensor: G1-8_Water_Flow_Sensor.md
+          - G3/4 inch Water Flow sensor: G3-4_Water_Flow_sensor.md
           - GPS Bee kit: GPS_Bee_kit.md
           - Grove - Base Shield for IOIO-OTG: Grove-Base_Shield_for_IOIO-OTG.md
           - LCD 16*2 Characters- Green Yellow back light: LCD_16-2_Characters-Green_Yellow_back_light.md
           - LCD 8*2 Characters- Blue back light: LCD_8-2_Characters-Blue_back_light.md
-          - LoNet 808 - Mini GSM/GPRS &#43; GPS Breakout: LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout.md
+          - LoNet 808 - Mini GSM/GPRS Plus GPS Breakout: LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout.md
           - M11*1.25 Water Flow Sensor: M11_1.25_Water_flow_Sensor.md
           - Matrix Clock: Matrix_Clock.md
           - Mini Soldering Iron: Mini_Soldering_Iron.md
@@ -690,7 +690,7 @@ pages:
           - Piezo Sensor - MiniSense 100: Piezo_Sensor-MiniSense_100.md
           - RF Explorer Software: RF_Explorer_Software.md
           - RGBW Stripe WireLess Shield V1.0: RGBW_Stripe_WireLess_Shield_V1.0.md
-          - Raspberry PI B&#43; Case: Raspberry_PI_Bplus_Case.md
+          - Raspberry PI B Plus Case: Raspberry_PI_Bplus_Case.md
           - Raspberry Pi 3 Model B: Raspberry_Pi_3_Model_B.md
           - Renbotics ServoShield Rev: Renbotics_ServoShield_Rev.md
           - SDLogger - Open Hardware Data Logger: SDLogger-Open_Hardware_Data_Logger.md
@@ -780,7 +780,7 @@ pages:
             - Google Assistant: Google_Assistant.md
             - ReSpeaker Core V2 & Wio Link: ReSpeaker_Core_V2_&_Wio_Link.md
           - Xadow IO pin mapping: Xadow_IO_pin_mapping.md
-          - Zigbee Networking with XBee Series 2 and Seeed&#39;s Products: Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products.md
+          - Zigbee Networking with XBee Series 2 and Seeed Products: Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products.md
 
 
   - Discontinued:
@@ -813,7 +813,7 @@ pages:
           - Lipo Rider: Lipo_Rider.md
           - Lipo Rider V1.1: Lipo_Rider_V1.1.md
           - Logic_DC_Jack‏‎: Logic_DC_Jack.md
-          - Mini GSM/GPRS&#43;GPS Breakout SIM808: Mini_GSM_GPRS_GPS_Breakout_SIM808.md
+          - Mini GSM/GPRS GPS Breakout SIM808: Mini_GSM_GPRS_GPS_Breakout_SIM808.md
           - Motor Shield V1.0: Motor_Shield_V1.0.md
           - Motor Shield‏‎: Motor_Shield.md
           - Music Shield: Music_Shield.md
