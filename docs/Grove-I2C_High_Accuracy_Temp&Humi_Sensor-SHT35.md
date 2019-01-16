@@ -137,7 +137,7 @@ This module is based on **SHT35**, the input voltage of this chip range from 2.1
 
 
 
-- **Step 1.** Download the [Grove_touch_sensor_CY8C40XX](https://github.com/Seeed-Studio/Seeed_SHT35) Library from Github.
+- **Step 1.** Download the [Grove-SHT35 Sensor](https://github.com/Seeed-Studio/Seeed_SHT35) Library from Github.
 
 - **Step 2.** Refer to [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
