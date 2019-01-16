@@ -82,7 +82,7 @@ This is a simple module that only needs to connect the corresponding interface t
 
 - **[PDF]** [MAX3232 Datasheet](https://github.com/SeeedDocument/RS-232_To_TTL_Conveter-MAX3232IDR/raw/master/res/Max3232.pdf)
 
-- **[PDF]** [PDF Format Wiki](https://github.com/SeeedDocument/Grove-Capacitive_Moisture_Sensor_Corrosion_Resistant/raw/master/res/RS-232_To_TTL_Conveter-MAX3232IDR.pdf)
+- **[PDF]** [PDF Format Wiki](https://github.com/SeeedDocument/RS-232_To_TTL_Conveter-MAX3232IDR/raw/master/res/RS-232_To_TTL_Conveter-MAX3232IDR.pdf)
 
 
 
