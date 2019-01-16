@@ -113,7 +113,7 @@ It is important to note that this sensor can only qualitatively test the humidit
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
 
-![]()
+![](https://github.com/SeeedDocument/Grove-Capacitive_Moisture_Sensor_Corrosion_Resistant/raw/master/img/connect.jpg)
 
 
 
