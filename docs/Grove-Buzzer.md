@@ -93,9 +93,9 @@ void setup()
 void loop()
 {
   digitalWrite(6, HIGH);
-  delay(analogRead(0));
+  delay(1000);
   digitalWrite(6, LOW);
-  delay(analogRead(0));
+  delay(1000);
 }
 ```
 
