@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ReSpeaker_6-Mic_Circular_Array_kit_for_Raspberry_Pi.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<hr>
+<h2 id="title-respeaker-6-mic-circular-array-kit-for-raspberry-picategory-respeakerbzurloldwikiname-respeaker-6-mic-circular-array-kit-for-raspberry-piprodimagename-coverjpgsurveyurlsku-107990055">title: ReSpeaker 6-Mic Circular Array Kit for Raspberry Pi
+category: ReSpeaker
+bzurl:
+oldwikiname: ReSpeaker 6-Mic Circular Array Kit for Raspberry Pi
+prodimagename: cover.JPG
+surveyurl:<br>
+sku: 107990055</h2>
+<p><img src="https://github.com/SeeedDocument/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/raw/master/img/IMG_6051.jpg" alt="enter image description here"></p>
+<p>Seeed’s ReSpeaker 6-Mic Circular Array Kit
+is an extension board, aka HAT designed for
+Raspberry Pi. It's a circular microphone
+array kit, comes with six microphones and
+designed for AI and voice applications. That
+means you can build a more powerful and
+flexible voice product with Raspberry Pi
+which can integrate Amazon Alexa Voice
+Service, Google Assistant, and so on.</p>
+<p>ReSpeaker 6-Mic Circular Array Kit for
+Raspberry Pi consists of two boards, one is
+voice accessory HAT, another is six
+microphones circular array.</p>
+<p>ReSpeaker 6-Mic Circular Array Kit for
+Raspberry Pi support 8 input &amp; 8 output
+channels in Raspbian system. The first 6
+input channel for microphone recording,
+rest of 2 input channel are echo channel of
+playback. The first 2 output channel for
+playing, rest of 6 output channel are
+dummy.</p>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/NxZx9nz67Bc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p style="text-align:center"><a href="https://www.seeedstudio.com/ReSpeaker-6-Mic-Circular-Array-Kit-for-Raspberry-Pi-p-3067.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png"></a></p>
+<h2 id="features">Features</h2>
+<ul>
+<li>2 ADC chips and 1 DAC chip</li>
+<li>8 input and 8 output channels</li>
+<li>Six microphones array</li>
+<li>Grove support</li>
+<li>Compatible with Raspberry Pi 40-pin headers</li>
+<li>Headset and speaker voice output</li>
+</ul>
+<h2 id="specification">Specification</h2>
+<ul>
+<li>2 x X-Power AC108 ADC</li>
+<li>6 x high performance microphones</li>
+<li>1 x X-Power AC101 DAC</li>
+<li>Voice output:
+<ul>
+<li>3.5mm headset audio jack</li>
+<li>Speaker jack</li>
+</ul>
+</li>
+<li>Compatible with Raspberry Pi 40-pin headers</li>
+<li>Microphones: MSM321A3729H9CP</li>
+<li>Sensitivity: -22 dBFS (Omnidirectional)</li>
+<li>SNR: 59 dB</li>
+<li>Max Sample Rate: 48Khz</li>
+</ul>
+<h2 id="applications">Applications</h2>
+<ul>
+<li>Smart speaker</li>
+<li>Intelligent voice assistant systems</li>
+<li>Voice recorders</li>
+<li>Voice conferencing system</li>
+<li>Meeting communicating equipment</li>
+<li>Voice interacting robot</li>
+<li>Car voice assistant</li>
+<li>Other scenarios need voice command</li>
+</ul>
+<h2 id="hardware-overview">Hardware Overview</h2>
+<p><strong>System Diagram</strong></p>
+<p><a href="https://github.com/SeeedDocument/ReSpeaker_4-Mics_Linear_Array_Kit/raw/master/img/voice_hat_acc.png" target="_blank"><img src="https://github.com/SeeedDocument/ReSpeaker_4-Mics_Linear_Array_Kit/raw/master/img/voice_hat_acc.png"/></a></p>
+<p><strong>Interface</strong></p>
+<p><img src="https://github.com/SeeedDocument/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/raw/master/img/hardware.jpg" alt=""></p>
+<h2 id="assembly-drawing">Assembly Drawing</h2>
+<p><img src="https://github.com/SeeedDocument/Bazaar_file/raw/master/107990055/img/ab.png" alt=""></p>
+<p style="text-align:center"><img src="https://github.com/SeeedDocument/Bazaar_file/raw/master/107990055/img/6-mic_array_assemble.gif"></p>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="hardware">Hardware</h3>
+<p><strong>Prerequisites</strong></p>
+<p>ReSpeaker 6-Mic Circular Array    x1</p>
+<p><a href="https://www.seeedstudio.com/Raspberry-Pi-3-Model-B%2B-p-3037.html?utm_source=homepage&amp;utm_medium=homepagebanner&amp;utm_campaign=hp_0605">Raspberry Pi 3B or 3B+</a>              x1</p>
+<p><a href="https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html">Micro-USB Cable</a>                     x1</p>
+<p>PC                                  x1</p>
+<p>Earphone or Speaker                 x1</p>
+<p>!!!Tips
+Actually the ReSpeaker 6-Mic Circular Array support Raspberry Pi Zero, Raspberry Pi 1 B+, Raspberry Pi 2 B, Raspberry Pi 3 B, Raspberry Pi 3 model B+ and Raspberry Pi 3 A+, in this wiki we are using Raspberry Pi 3.</p>
+<p><strong>Connection</strong></p>
+<p><strong>Step 1.</strong>  Connect the <em>ReSpeaker Voice Accessory HAT</em> with <em>ReSpeaker 6-Mic circular Array</em> via the Ribbon Cable</p>
+<p><strong>Step 2.</strong>  Plug the <em>ReSpeaker Voice Accessory HAT</em> into the <em>Raspberry Pi</em> via the 40 Pin GPIO</p>
+<p><strong>Step 3.</strong>  Plug the <em>earphone</em> into the <em>3.5mm headset audio jack</em> or plug the <em>speaker</em> into the <em>JST 2.0 speaker jack</em></p>
+<p><strong>Step 4.</strong>  Connect the <em>Raspberry Pi</em> with the <em>PC</em> via the micro-USB cable</p>
+<p><img src="https://github.com/SeeedDocument/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/raw/master/img/6-mic.jpg" alt="Pics here"></p>
+<h3 id="software">Software</h3>
+<p><strong>Prerequisites</strong></p>
+<p><em>Plan A</em></p>
+<p><a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PUTTY</a></p>
+<p>You need to use <em>Putty</em> or other <em>ssh</em> tools to connect with your raspberry pi. Before started, please make sure:</p>
+<p>1- Open <em>ssh</em> fuction of your pi to let the putty in. If you do not know how to open <em>ssh</em>, please google <code>how to setup ssh raspberry pi</code></p>
+<p>2- Your raspberry pi and your PC are working on the same WiFi net. If you do not know how to config WiFi, please google <code>how to setup wifi raspberry pi</code></p>
+<p>3- Get the ip address of your raspberry pi, if you do not know how to get the ip address please refer to <a href="https://www.raspberrypi.org/documentation/remote-access/ip-address.md">raspberry offical documentation</a></p>
+<p>4- Use the ip address to connect the raspberry pi with your PC via putty ssh serve.</p>
+<p><img src="https://github.com/SeeedDocument/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/raw/master/img/putty.png" alt="pic"></p>
+<p>Then please tap the host name and the password. the default ID is <code>pi</code> and the password is <code>raspberry</code>.</p>
+<pre class="hljs"><code><div>login as: pi
+pi@192.168.43.210's password:raspberry
+
+</div></code></pre>
+<p>Now you are in, and you can tap the command in putty and play with your raspberry.</p>
+<p><a href="https://www.realvnc.com/en/connect/download/viewer/">VNC Viewer</a></p>
+<p>To make this kit work with alexa or dueros, you need to open a web site to get the authorization. So you need to use <em>VNC Viewer</em> to log in your amazon or baidu account. So please make sure you have open the <em>VNC</em> service of your raspberry.</p>
+<p>Or you can just consider plan B.</p>
+<p><em>Plan B</em></p>
+<p>If you are tired of all above, you can just use a HDMI Monitor and plug the USB Keyboard and USB mouse in to your raspberry, it works too, simple and easy.</p>
+<p><strong>Step 1. Install seeed-voicecard</strong></p>
+<p>Get the seeed voice card source code. and install all linux kernel drivers.</p>
+<pre class="hljs"><code><div>sudo apt-get update
+sudo apt-get upgrade
+git clone https://github.com/respeaker/seeed-voicecard.git
+cd seeed-voicecard
+sudo ./install.sh 
+sudo reboot
+
+</div></code></pre>
+<p><strong>Step 2. Check the Sound Card</strong></p>
+<p>Tap the command below to check the record device.</p>
+<pre class="hljs"><code><div>pi@raspberrypi:~ $ arecord -L
+</div></code></pre>
+<p>It should be like:</p>
+<pre class="hljs"><code><div>null
+    Discard all samples (playback) or generate zero samples (capture)
+default
+playback
+dmixed
+ac108
+multiapps
+ac101
+sysdefault:CARD=seeed8micvoicec
+    seeed-8mic-voicecard, 
+    Default Audio Device
+dmix:CARD=seeed8micvoicec,DEV=0
+    seeed-8mic-voicecard, 
+    Direct sample mixing device
+dsnoop:CARD=seeed8micvoicec,DEV=0
+    seeed-8mic-voicecard, 
+    Direct sample snooping device
+hw:CARD=seeed8micvoicec,DEV=0
+    seeed-8mic-voicecard, 
+    Direct hardware device without any conversions
+plughw:CARD=seeed8micvoicec,DEV=0
+    seeed-8mic-voicecard, 
+    Hardware device with all software conversions
+ 
+</div></code></pre>
+<p>Use the following command to check the play device.</p>
+<pre class="hljs"><code><div>pi@raspberrypi:~ $ aplay -L
+</div></code></pre>
+<p>It should be like:</p>
+<pre class="hljs"><code><div>null
+    Discard all samples (playback) or generate zero samples (capture)
+default
+playback
+dmixed
+ac108
+multiapps
+ac101
+sysdefault:CARD=ALSA
+    bcm2835 ALSA, bcm2835 ALSA
+    Default Audio Device
+dmix:CARD=ALSA,DEV=0
+    bcm2835 ALSA, bcm2835 ALSA
+    Direct sample mixing device
+dmix:CARD=ALSA,DEV=1
+    bcm2835 ALSA, bcm2835 IEC958/HDMI
+    Direct sample mixing device
+dsnoop:CARD=ALSA,DEV=0
+    bcm2835 ALSA, bcm2835 ALSA
+    Direct sample snooping device
+dsnoop:CARD=ALSA,DEV=1
+    bcm2835 ALSA, bcm2835 IEC958/HDMI
+    Direct sample snooping device
+hw:CARD=ALSA,DEV=0
+    bcm2835 ALSA, bcm2835 ALSA
+    Direct hardware device without any conversions
+hw:CARD=ALSA,DEV=1
+    bcm2835 ALSA, bcm2835 IEC958/HDMI
+    Direct hardware device without any conversions
+plughw:CARD=ALSA,DEV=0
+    bcm2835 ALSA, bcm2835 ALSA
+    Hardware device with all software conversions
+plughw:CARD=ALSA,DEV=1
+    bcm2835 ALSA, bcm2835 IEC958/HDMI
+    Hardware device with all software conversions
+sysdefault:CARD=seeed8micvoicec
+    seeed-8mic-voicecard,
+    Default Audio Device
+dmix:CARD=seeed8micvoicec,DEV=0
+    seeed-8mic-voicecard,
+    Direct sample mixing device
+dsnoop:CARD=seeed8micvoicec,DEV=0
+    seeed-8mic-voicecard,
+    Direct sample snooping device
+hw:CARD=seeed8micvoicec,DEV=0
+    seeed-8mic-voicecard,
+    Direct hardware device without any conversions
+plughw:CARD=seeed8micvoicec,DEV=0
+    seeed-8mic-voicecard,
+    Hardware device with all software conversions
+
+</div></code></pre>
+<p><strong>Step 3. Record and Play</strong></p>
+<p>You can record then play, or you can record and play at the same time.</p>
+<pre class="hljs"><code><div>#It will capture sound on AC108 and save as a.wav
+arecord -Dac108 -f S32_LE -r 16000 -c 8 a.wav
+#Take care of that the captured mic audio is on the first 6 channels
+
+#It will play sound file a.wav on AC101
+aplay -D ac101 a.wav
+#Do not use -D plughw:1,0 directly except your wave file is single channel only.
+
+#Doing capture &amp;&amp; playback the same time
+arecord -D hw:1,0 -f S32_LE -r 16000 -c 8 to_be_record.wav &amp;
+#mono_to_play.wav is a mono channel wave file to play
+aplay -D plughw:1,0 -r 16000 mono_to_play.wav
+
+</div></code></pre>
+<p>!!!Note
+Limit for developer using 6-Mic Circular Array Kit(or 4-Mics Linear Array Kit) doing capture &amp; playback the same time:</p>
+<pre><code>    -1. capture must be start first, or else the capture channels will possibly be disorder.
+        
+    -2. playback output channels must fill with 8 same channels data or 4 same stereo channels data, or else the speaker or headphone will output nothing possibly.
+    
+    -3. If you want to play and record at the same time, the aplay music file must be mono, or you can not use this command to play.
+</code></pre>
+<p>Also you can play and record with Audacity.</p>
+<p>!!!Tips
+You should open Audacity via VNC or you can just use a monitor to open it</p>
+<pre class="hljs"><code><div>$ sudo apt update
+$ sudo apt install audacity
+$ audacity                      // run audacity
+
+</div></code></pre>
+<p><img src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/audacity.png" alt=""></p>
+<h3 id="play-with-leds">Play with LEDs</h3>
+<p>There are 12 GRB LEDs in the 6-mic circular array, you can configure the LEDs yourself, now let's see how to light them up.</p>
+<pre class="hljs"><code><div>git clone --depth 1 https://github.com/respeaker/pixel_ring.git
+cd pixel_ring
+pip install -U -e .
+python examples/respeaker_4mic_array.py
+
+</div></code></pre>
+<p>You will see LEDs light and run. And you can refer to the <code>python examples/respeaker_4mic_array.py</code> file to make your own effects.</p>
+<h3 id="doa">DoA</h3>
+<p><strong>DOA without Keywords</strong></p>
+<ul>
+<li>Step 1. Setup the dependency</li>
+</ul>
+<pre class="hljs"><code><div>sudo apt-get install portaudio19-dev
+pip install pyaudio
+</div></code></pre>
+<ul>
+<li>Step 2. Run the vad_doa.py</li>
+</ul>
+<pre class="hljs"><code><div>cd ~
+git clone https://github.com/respeaker/mic_array.git
+cd mic_array
+nano vad_doa.py   # modify CHANNELS = 4 to CHANNELS = 8
+python vad_doa.py
+</div></code></pre>
+<ul>
+<li>Step 3. Here is the output.</li>
+</ul>
+<pre class="hljs"><code><div>1111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111110111111111111111111
+135
+10000000000000000000000000000000000000000000000000000000000000011111111111111111
+135
+11111111111111111111
+135
+1001111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111111111110000000
+135
+000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111
+135
+</div></code></pre>
+<h3 id="voice-assistant-sdk">Voice assistant SDK</h3>
+<p><strong>Step 1. Set the python-virtualenv environment</strong></p>
+<pre class="hljs"><code><div>
+sudo apt install python-virtualenv          # install python virtualenv tool
+virtualenv --system-site-packages ~/env     # create a virtual python environment
+source ~/env/bin/activate                   # activate the virtual environment
+(env) pi@raspberrypi:~ $
+
+</div></code></pre>
+<p><strong>Step 2. Install AVS</strong></p>
+<pre class="hljs"><code><div>(env) pi@raspberrypi:~ $ cd ~/
+(env) pi@raspberrypi:~ $ git clone https://github.com/respeaker/avs
+(env) pi@raspberrypi:~ $ cd avs    # install Requirements
+(env) pi@raspberrypi:~ $ python setup.py install 
+(env) pi@raspberrypi:~ $ sudo apt-get install gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gir1.2-gstreamer-1.0 python-gi python-gst-1.0
+(env) pi@raspberrypi:~ $ sudo apt remove gstreamer1.0-omx gstreamer1.0-omx-rpi
+</div></code></pre>
+<p><strong>Step 3. Get Alexa or Baidu authorization</strong></p>
+<p>To get the authorization, you need to open the <em>Internet Brownser</em> to log in your Amazon or Baidu ID, so you need to use VNC Viewer or just do it via monitor and keyboard. The same as <em>ssh</em>, you need the IP of your raspberry to log in VNC.</p>
+<h4 id="alexa-sdk">Alexa SDK</h4>
+<pre class="hljs"><code><div>pi@raspberrypi:~ $ source ~/env/bin/activate
+(env) pi@raspberrypi:~ $ alexa-auth
+</div></code></pre>
+<p><img src="https://github.com/SeeedDocument/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/raw/master/img/auth.png" alt=""></p>
+<p>When you log in successfully, you can tap the following command to run Alexa</p>
+<pre class="hljs"><code><div>pi@raspberrypi:~ $ source ~/env/bin/activate
+(env) pi@raspberrypi:~ $ alexa-tap
+</div></code></pre>
+<p>Then you can tap the ++enter++ key to ask Alexa question and talk with Alexa.</p>
+<h4 id="dueros-sdk">Dueros SDK</h4>
+<p>If we want to switch between <code>alexa-auth</code> and <code>dueros-auth</code>, please delete <code>/home/pi/.avs.json</code> first. The file is hidden and use the <code>ls -la</code> to list the file.</p>
+<pre class="hljs"><code><div>rm -f /home/pi/.avs.json
+</div></code></pre>
+<p>Then you can use the command in VNC to log in Baidu ID</p>
+<pre class="hljs"><code><div>pi@raspberrypi:~ $ source ~/env/bin/activate
+(env) pi@raspberrypi:~ $ dueros-auth
+</div></code></pre>
+<p>When you log in successfully, you can tap the following command to run Dueros.</p>
+<pre class="hljs"><code><div>pi@raspberrypi:~ $ source ~/env/bin/activate
+(env) pi@raspberrypi:~ $ alexa-tap
+</div></code></pre>
+<p>Then you can tap the ++enter++ key to ask Dueros question and talk with her.</p>
+<h4 id="play-with-snowboy%EF%BC%88with-doa-function%EF%BC%89">Play with Snowboy（With Doa Function）</h4>
+<p>To do this part, you also need to get the authorization of Alexa or Baidu at first.</p>
+<p>As you may see, the demos above trigger the Alexa or Dueros by tapping the ++enter++ key. What if you want to wake up the Alexa by voice?
+Well, you can use snowboy. And you only need simple steps to make that happen.</p>
+<p><strong>Step 1. Install Snowboy</strong></p>
+<pre class="hljs"><code><div>cd ~
+git clone https://github.com/respeaker/4mics_hat.git
+source ~/env/bin/activate              # activate the virtual, if we have already activated, skip this step
+(env) pi@raspberrypi:~ $ cd ~/4mics_hat
+(env) pi@raspberrypi:~/4mics_hat $ sudo apt install libatlas-base-dev     # install snowboy dependencies
+(env) pi@raspberrypi:~/4mics_hat $ sudo apt install python-pyaudio        # install pyaudio
+(env) pi@raspberrypi:~/4mics_hat $ pip install ./snowboy*.whl             # install snowboy for KWS
+(env) pi@raspberrypi:~/4mics_hat $ pip install ./webrtc*.whl              # install webrtc for DoA
+(env) pi@raspberrypi:~/4mics_hat $ cd ~/
+(env) pi@raspberrypi:~ $ git clone https://github.com/voice-engine/voice-engine
+(env) pi@raspberrypi:~ $ cd voice-engine/
+(env) pi@raspberrypi:~/voice-engine $ python setup.py install
+
+</div></code></pre>
+<p><strong>Step 2. Configure Pulse Audio</strong></p>
+<pre class="hljs"><code><div>cd ~
+sudo apt install pulseaudio
+cd seeed-voicecard
+cd pulseaudio
+cd pulse_config_6mic
+sudo cp seeed-voicecard.conf /usr/share/pulseaudio/alsa-mixer/profile-sets/
+</div></code></pre>
+<p>Then you need to edit the rules.
+As the system start, when the card &quot;seeed8micvoicec&quot; is detected, the PULSE_PROFILE_SET variable will be set in the udev database, and PulseAudio will be forced to use <code>seeed-voicecard.conf</code>.
+At first, please use the following command to check the rule.</p>
+<pre class="hljs"><code><div>sudo nano /lib/udev/rules.d/90-pulseaudio.rules
+
+</div></code></pre>
+<p>Then add the following lines at about line 87(behind the setting for some laptops and before the line GOTO=&quot;pulseaudio_end&quot;)</p>
+<pre class="hljs"><code><div># Seeed Voicecard
+ATTR{id}==&quot;seeed8micvoicec&quot;,ATTR{number}==&quot;1&quot;,ENV{PULSE_PROFILE_SET}=&quot;seeed-voicecard.conf&quot;
+
+</div></code></pre>
+<p>It should be like:
+<img src="https://github.com/respeaker/seeed-voicecard/raw/master/pulseaudio/udev_rules_6mic.png" alt="">
+Then presss ++ctrl+x++ to quite, and tap ++y++ to save the modification you've just made.
+The value of ATTR{number} can be found with command:</p>
+<pre class="hljs"><code><div>udevadm info -a -p /sys/class/sound/card1/:
+</div></code></pre>
+<p><strong>Step 3. config <code>default.pa</code> and <code>daemon.conf</code></strong></p>
+<pre class="hljs"><code><div>sudo cp default.pa /etc/pulse/
+sudo cp daemon.conf /etc/pulse/
+</div></code></pre>
+<p><strong>Step 4. reboot raspberry pi and check</strong></p>
+<pre class="hljs"><code><div>sudo reboot
+pulseaudio --start  # start pulse at first
+pactl info  # check the setting
+
+# The output should be like this
+# You could see the default sink is seeed-2ch and default source is seeed-8ch
+pi@raspberrypi:~ $ pactl info
+Server String: /run/user/1000/pulse/native
+Library Protocol Version: 32
+Server Protocol Version: 32
+Is Local: yes
+Client Index: 6
+Tile Size: 65496
+User Name: pi
+Host Name: raspberrypi
+Server Name: pulseaudio
+Server Version: 10.0
+Default Sample Specification: s32le 8ch 96000Hz
+Default Channel Map: front-left,front-left-of-center,front-center,front-right,front-right-of-center,rear-center,aux0,aux1
+Default Sink: alsa_output.platform-soc_sound.seeed-2ch
+Default Source: alsa_input.platform-soc_sound.seeed-8ch
+Cookie: 3523:e5af
+</div></code></pre>
+<p>After you configure this snowboy, please do the following:</p>
+<pre class="hljs"><code><div>source ~/env/bin/activate 
+cd ~/voice-engine/examples
+python kws_doa_alexa_for_6mic_array_pihat.py
+</div></code></pre>
+<p>Then you will see the LEDs light up, and you can call <code>Snowboy</code> to wake it up. The <font color ="Green">Green LED</font> will point to the direction of wake up word.</p>
+<h2 id="librespeaker-aduio-process">Librespeaker Aduio Process</h2>
+<p>Librespeaker is an audio processing library which can perform noise suppression, direction of arrival calculation, beamforming, hotword searching. It reads the microphoone stream from linux sound server, e.g. PulseAudio.</p>
+<h3 id="install-librespeaker">Install librespeaker</h3>
+<p><strong>1. Add the apt repository of Seeed</strong></p>
+<pre class="hljs"><code><div>echo "deb https://seeed-studio.github.io/pi_repo/ stretch main" | sudo tee /etc/apt/sources.list.d/seeed.list
+curl https://seeed-studio.github.io/pi_repo/public.key | sudo apt-key add -
+sudo apt update
+</div></code></pre>
+<p><strong>2. Install librespeaker and dependencies</strong></p>
+<pre class="hljs"><code><div>sudo apt install -y librespeaker-dev libsndfile1-dev libasound2-dev 
+<span class="hljs-meta">#</span><span class="bash"> Reboot to make configuration effective</span>
+sudo reboot 
+</div></code></pre>
+<h3 id="librespeaker-examples">Librespeaker Examples</h3>
+<p>Here is the list of examples in <a href="http://respeaker.io/librespeaker_doc/examples.html">Librespeaker Documentation</a>. These examples will help you understand how to make different applications with librespeaker.</p>
+<p>First of all, as an audio processing application, we always have to collect audio stream. In librespeaker, we have 3 ways to capture audio stream: PulseAudio Server, ALSA API and a wav file.</p>
+<p><strong>1. PulseAudio Server</strong></p>
+<p>PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy for your sound applications. It allows you to do advanced operations on your sound data as it passes between your application and your hardware.</p>
+<ul>
+<li>Step1. PulseAudio Configuration</li>
+</ul>
+<p>To use PulseAudio on Raspberry Pi with 6-Mics Circular Array Kit, please follow below steps. If you done the <a href="http://wiki.seeedstudio.com/ReSpeaker_6-Mic_Circular_Array_kit_for_Raspberry_Pi/#play-with-snowboywith-doa-function">Play with Snowboy（With Doa Function</a>, please bypass this step. For more info, please refer to <a href="https://github.com/respeaker/seeed-voicecard/tree/master/pulseaudio#pulseaudio-configuration-for-seeed-voicecard">this guide</a>.</p>
+<pre class="hljs"><code><div>sudo apt install pulseaudio
+cd ~/seeed-voicecard/pulseaudio/
+sudo cp pulse_config_6mic/seeed-voicecard.conf /usr/share/pulseaudio/alsa-mixer/profile-sets/seeed-voicecard-8mic.conf
+sudo cp 91-seeedvoicecard.rules /etc/udev/rules.d/91-seeedvoicecard.rules
+sudo cp pulse_config_6mic/default.pa /etc/pulse/
+sudo cp pulse_config_6mic/daemon.conf /etc/pulse/
+sudo reboot
+pulseaudio --start 
+pactl info 
+</div></code></pre>
+<p>You will see the output as below.</p>
+<pre class="hljs"><code><div>pi@raspberrypi:~ $ pactl info 
+Server String: unix:/run/user/1000/pulse/native
+Library Protocol Version: 32
+Server Protocol Version: 32
+Is Local: yes
+Client Index: 8
+Tile Size: 65496
+User Name: pi
+Host Name: raspberrypi
+Server Name: pulseaudio
+Server Version: 10.0
+Default Sample Specification: s32le 8ch 96000Hz
+Default Channel Map: front-left,front-left-of-center,front-center,front-right,front-right-of-center,rear-center,aux0,aux1
+Default Sink: alsa_output.platform-soc_sound.seeed-2ch
+Default Source: alsa_input.platform-soc_sound.seeed-8ch
+Cookie: ba71:cba6
+</div></code></pre>
+<ul>
+<li>Step2. C++ Coding</li>
+</ul>
+<p>The example <a href="http://respeaker.io/librespeaker_doc/pulse_snowboy_1b_test_8cc-example.html">pulse_snowboy_1b_test.cc</a> shows how to use the VepAecBeamformingNode node, the Snowboy1bDoaKwsNode node and the ReSpeaker supervisor, to make a simple snowboy KWS demo. This example supports keyword &quot;alexa&quot; and &quot;snowboy&quot;, adjustable target gain level and wav log.</p>
+<pre class="hljs"><code><div>cd ~
+<span class="hljs-meta">#</span><span class="bash">copy above link code to pulse_snowboy_1b_test.cc, <span class="hljs-keyword">then</span> press Ctrl+X, and Y to save the file.</span>
+touch pulse_snowboy_1b_test.cc
+<span class="hljs-meta">#</span><span class="bash"> compile</span>
+g++ pulse_snowboy_1b_test.cc -o pulse_snowboy_1b_test -lrespeaker -lsndfile -fPIC -std=c++11 -fpermissive -I/usr/include/respeaker/ -DWEBRTC_LINUX -DWEBRTC_POSIX -DWEBRTC_NS_FLOAT -DWEBRTC_APM_DEBUG_DUMP=0 -DWEBRTC_INTELLIGIBILITY_ENHANCER=0
+<span class="hljs-meta">#</span><span class="bash"> run, <span class="hljs-keyword">then</span> say <span class="hljs-string">"snowboy"</span> to <span class="hljs-built_in">test</span> the KWS engine</span>
+./pulse_snowboy_1b_test
+<span class="hljs-meta">#</span><span class="bash"> show the <span class="hljs-built_in">help</span> page of this example</span>
+./pulse_snowboy_1b_test --help
+</div></code></pre>
+<p>Here is the output as below. We can see the DOA as 60, hotword dectect count as 12 times, the major audio comes from channel 0.</p>
+<pre class="hljs"><code><div>collector: 18, vep_1beam: 0, snowboy_kws: 0
+collector: 8, vep_1beam: 0, snowboy_kws: 0
+collector: 4, vep_1beam: 0, snowboy_kws: 0
+collector: 19, vep_1beam: 0, snowboy_kws: 0
+collector: 7, vep_1beam: 1, snowboy_kws: 0
+collector: 6, vep_1beam: 0, snowboy_kws: 0
+collector: 20, vep_1beam: 0, snowboy_kws: 0
+collector: 7, vep_1beam: 0, snowboy_kws: 0
+(155274ms)DEBUG -- DoA: 60 Vep: 1902, 2045, 1555, 1704, 1728, 2064, 1881 Chan: 0 Chan_real: 0  [snowboy_1b_doa_kws_node.cc:429]
+(155274ms)DEBUG -- DoA: 60 Vep: 1912, 2055, 1564, 1713, 1738, 2074, 1890 Chan: 0 Chan_real: 0  [snowboy_1b_doa_kws_node.cc:429]
+(155275ms)DEBUG -- DoA: 60 Vep: 1921, 2065, 1574, 1723, 1748, 2084, 1900 Chan: 0 Chan_real: 0  [snowboy_1b_doa_kws_node.cc:429]
+(155275ms)DEBUG -- DoA: 60 Vep: 1931, 2075, 1584, 1733, 1758, 2093, 1910 Chan: 0 Chan_real: 0  [snowboy_1b_doa_kws_node.cc:429]
+(155275ms)DEBUG -- DoA: 60 Vep: 1940, 2085, 1593, 1742, 1768, 2103, 1920 Chan: 0 Chan_real: 0  [snowboy_1b_doa_kws_node.cc:429]
+(155275ms)DEBUG -- DoA: 60 Vep: 1948, 2094, 1602, 1750, 1777, 2111, 1928 Chan: 0 Chan_real: 0  [snowboy_1b_doa_kws_node.cc:429]
+(155275ms)DEBUG -- DoA: 60 Vep: 1952, 2102, 1608, 1757, 1784, 2117, 1934 Chan: 0 Chan_real: 0  [snowboy_1b_doa_kws_node.cc:429]
+(155275ms)DEBUG -- DoA: 60 Vep: 1951, 2110, 1612, 1765, 1788, 2120, 1938 Chan: 0 Chan_real: 0  [snowboy_1b_doa_kws_node.cc:429]
+(155275ms)DEBUG -- DoA: 60 Vep: 1947, 2114, 1615, 1770, 1789, 2122, 1941 Chan: 0 Chan_real: 0  [snowboy_1b_doa_kws_node.cc:429]
+(155275ms)DEBUG -- DoA: 60 Vep: 1946, 2118, 1617, 1775, 1787, 2125, 1944 Chan: 0 Chan_real: 0  [snowboy_1b_doa_kws_node.cc:429]
+hotword_count = 12
+</div></code></pre>
+<p>!!!Note
+If you need to see the process audio, you can set <strong>bool enable_wav = false;</strong> to true. Then you can get <strong>pulse_snowboy_1b_test.wav</strong> processed audio file.</p>
+<p><strong>2. ALSA API</strong></p>
+<p>ALSA stands for Advanced Linux Sound Architecture. It provides audio and MIDI functionality to the Linux operating system. If you want a more efficient(low latency and low CPU consumption) way to capture voice, ALSA will be your choice.</p>
+<ul>
+<li>Step1. Audio Setting</li>
+</ul>
+<p>If pulseaudio is running, the output of the <strong>ps aux|grep pulse</strong> will be as below.</p>
+<pre class="hljs"><code><div>pi@raspberrypi:~ $ ps aux|grep pulse
+pi         978  0.1  0.9 112456  9236 ?        S&lt;l  18:48   0:01 /usr/bin/pulseaudio --start --log-target=syslog
+pi        1247  0.0  0.0   4376   564 pts/0    S+   18:57   0:00 grep --color=auto pulse
+</div></code></pre>
+<p>please make sure that <strong>pulseaudio is not running</strong> by below commands:</p>
+<pre class="hljs"><code><div><span class="hljs-meta">$</span><span class="bash"> pulseaudio --k</span>
+<span class="hljs-meta">$</span><span class="bash"> ps aux|grep pulse</span>
+pi        1355  0.0  0.0   4376   568 pts/0    S+   16:48   0:00 grep --color=auto pulse
+</div></code></pre>
+<ul>
+<li>Step2. C++ Coding</li>
+</ul>
+<p>The example <a href="http://respeaker.io/librespeaker_doc/alsa_snips_1b_test_8cc-example.html">alsa_snips_1b_test.cc</a> shows how to use the AlsaCollectorNode node with VepAecBeamformingNode node and Snips1bDoaKwsNode node.</p>
+<pre class="hljs"><code><div>cd ~
+<span class="hljs-meta">#</span><span class="bash">copy above link code to alsa_snips_1b_test.cc, <span class="hljs-keyword">then</span> press Ctrl+X, and Y to save the file.</span>
+touch alsa_snips_1b_test.cc
+<span class="hljs-meta">#</span><span class="bash"> compile</span>
+g++ alsa_snips_1b_test.cc -o alsa_snips_1b_test -lrespeaker -lsndfile -fPIC -std=c++11 -fpermissive -I/usr/include/respeaker/ -DWEBRTC_LINUX -DWEBRTC_POSIX -DWEBRTC_NS_FLOAT -DWEBRTC_APM_DEBUG_DUMP=0 -DWEBRTC_INTELLIGIBILITY_ENHANCER=0
+<span class="hljs-meta">#</span><span class="bash"> run, <span class="hljs-keyword">then</span> say <span class="hljs-string">"hey, snips"</span> to <span class="hljs-built_in">test</span> the KWS engine</span>
+./alsa_snips_1b_test
+<span class="hljs-meta">#</span><span class="bash"> show the <span class="hljs-built_in">help</span> page of this example</span>
+./alsa_snips_1b_test --help
+</div></code></pre>
+<p>Here is the output as below. We can see the DOA as 30, hotword dectect count as 2 times, the major audio comes from channel 0.</p>
+<pre class="hljs"><code><div>collector: 0, vep_1beam: 16, snips_kws: 0
+collector: 1, vep_1beam: 0, snips_kws: 0
+collector: 0, vep_1beam: 16, snips_kws: 0
+collector: 2, vep_1beam: 0, snips_kws: 0
+collector: 2, vep_1beam: 0, snips_kws: 5
+collector: 2, vep_1beam: 0, snips_kws: 0
+(9560ms)DEBUG -- DoA: 30 Vep: 1674, 1078, 1348, 1196, 1351, 1796, 1596 Chan: 0  [snips_1b_doa_kws_node.cc:423]
+(9560ms)DEBUG -- DoA: 30 Vep: 1667, 1065, 1339, 1185, 1342, 1787, 1588 Chan: 0  [snips_1b_doa_kws_node.cc:423]
+(9560ms)DEBUG -- DoA: 30 Vep: 1661, 1055, 1331, 1175, 1333, 1779, 1580 Chan: 0  [snips_1b_doa_kws_node.cc:423]
+(9560ms)DEBUG -- DoA: 30 Vep: 1655, 1046, 1321, 1166, 1324, 1771, 1573 Chan: 0  [snips_1b_doa_kws_node.cc:423]
+(9560ms)DEBUG -- DoA: 30 Vep: 1646, 1036, 1311, 1155, 1314, 1763, 1564 Chan: 0  [snips_1b_doa_kws_node.cc:423]
+hotword_count = 2
+</div></code></pre>
+<p><strong>3. WAV FILE</strong></p>
+<p>If you need to test the performance of KWS, ASR, NLP or something else, it is not a good way to test it with your mouth repeatly. It is recommanded to record a testing recording first, and just send the recording to your program to get the result.</p>
+<p><a href="http://respeaker.io/librespeaker_doc/file_1beam_test_8cc-example.html">file_1beam_test.cc</a> shows how to read a 8-channels 16K 16-bit wav file, send the recording stream to VepAecBeamformingNode node and detect hotword from the output beam. This example supports keyword &quot;alexa&quot;, &quot;snowboy&quot; and &quot;heysnips&quot;, adjustable target gain level and wav log.</p>
+<pre class="hljs"><code><div>cd ~
+<span class="hljs-meta">#</span><span class="bash">copy above link code to file_1beam_test.cc, <span class="hljs-keyword">then</span> press Ctrl+X, and Y to save the file.</span>
+touch file_1beam_test.cc
+<span class="hljs-meta">#</span><span class="bash"> compile</span>
+g++ file_1beam_test.cc -o file_1beam_test -lrespeaker -lsndfile -fPIC -std=c++11 -fpermissive -I/usr/include/respeaker/ -DWEBRTC_LINUX -DWEBRTC_POSIX -DWEBRTC_NS_FLOAT -DWEBRTC_APM_DEBUG_DUMP=0 -DWEBRTC_INTELLIGIBILITY_ENHANCER=0
+<span class="hljs-meta">#</span><span class="bash"> record a testing wav file to <span class="hljs-built_in">test</span> keyword <span class="hljs-string">"snowboy"</span></span>
+arecord -Dac108 -c 8 -r 16000 -f S16_LE my_test.wav
+<span class="hljs-meta">#</span><span class="bash"> run</span>
+./file_1beam_test -f my_test.wav
+<span class="hljs-meta">#</span><span class="bash"> you need to press Ctrl+C to <span class="hljs-built_in">exit</span> when the <span class="hljs-built_in">log</span> is stopped</span>
+</div></code></pre>
+<p>Here is the output as below. We can see the DOA as 330, hotword dectect count as 1 times, the major audio comes from channel 4.</p>
+<pre class="hljs"><code><div>......................(1932ms)DEBUG -- DoA: 330 Vep: 4212, 4382, 4218, 4737, 4884, 5013, 4776 Chan: 4 Chan_real: 4  [snowboy_1b_doa_kws_node.cc:429]
+(1933ms)DEBUG -- DoA: 330 Vep: 4206, 4376, 4212, 4729, 4877, 5006, 4770 Chan: 4 Chan_real: 4  [snowboy_1b_doa_kws_node.cc:429]
+(1933ms)DEBUG -- DoA: 330 Vep: 4200, 4369, 4205, 4720, 4869, 4999, 4764 Chan: 4 Chan_real: 4  [snowboy_1b_doa_kws_node.cc:429]
+(1933ms)DEBUG -- DoA: 330 Vep: 4193, 4363, 4200, 4712, 4861, 4992, 4757 Chan: 4 Chan_real: 4  [snowboy_1b_doa_kws_node.cc:429]
+(1933ms)DEBUG -- DoA: 330 Vep: 4187, 4357, 4194, 4703, 4854, 4985, 4751 Chan: 4 Chan_real: 4  [snowboy_1b_doa_kws_node.cc:429]
+(1933ms)DEBUG -- DoA: 330 Vep: 4180, 4351, 4188, 4691, 4845, 4976, 4743 Chan: 4 Chan_real: 4  [snowboy_1b_doa_kws_node.cc:429]
+(1933ms)DEBUG -- DoA: 330 Vep: 4168, 4343, 4181, 4677, 4836, 4967, 4733 Chan: 4 Chan_real: 4  [snowboy_1b_doa_kws_node.cc:429]
+(1933ms)DEBUG -- DoA: 330 Vep: 4158, 4336, 4173, 4664, 4825, 4957, 4724 Chan: 4 Chan_real: 4  [snowboy_1b_doa_kws_node.cc:429]
+(1933ms)DEBUG -- DoA: 330 Vep: 4149, 4327, 4162, 4653, 4811, 4944, 4712 Chan: 4 Chan_real: 4  [snowboy_1b_doa_kws_node.cc:429]
+(1933ms)DEBUG -- DoA: 330 Vep: 4141, 4317, 4149, 4642, 4794, 4929, 4700 Chan: 4 Chan_real: 4  [snowboy_1b_doa_kws_node.cc:429]
+hotword_count = 1
+</div></code></pre>
+<p><strong>4. Another way to output processed audio: ALOOP</strong></p>
+<p>AloopOutputNode is designed to redirect the processed audio stream into a specific Alsa device(Loopback PCM). In this way, some third-party voice assistants can get  real-time processed audio stream from a PCM device, which provides a convenient way to build your application.</p>
+<p><a href="http://respeaker.io/librespeaker_doc/alsa_aloop_test_8cc-example.html">alsa_aloop_test.cc</a> shows how to achieve it. To run this example, you have to run 'sudo modprobe snd-aloop' first. And make sure &quot;pulseaudio&quot; doesn't start, then, after runing this example, you can open another terminal and use <code>arecord -Dhw:Loopback,1,0 -c 1 -r 16000 -f S16_LE loop_test.wav</code> to arecord the processed audio stream. Further more, you can setup a third party voice assistant to capture voice from &quot;hw:Loopback,1,0&quot;, to run the assistant directly. Check <a href="http://respeaker.io/librespeaker_doc/classrespeaker_1_1AloopOutputNode.html">respeaker::AloopOutputNode Class Reference</a> for more details of this node.</p>
+<pre class="hljs"><code><div>cd ~
+<span class="hljs-meta">#</span><span class="bash">copy above link code to file_1beam_test.cc, <span class="hljs-keyword">then</span> press Ctrl+X, and Y to save the file.</span>
+touch file_1beam_test.cc
+<span class="hljs-meta">#</span><span class="bash"> compile</span>
+g++ alsa_aloop_test.cc -o alsa_aloop_test -lrespeaker -lsndfile -fPIC -std=c++11 -fpermissive -I/usr/include/respeaker/ -DWEBRTC_LINUX -DWEBRTC_POSIX -DWEBRTC_NS_FLOAT -DWEBRTC_APM_DEBUG_DUMP=0 -DWEBRTC_INTELLIGIBILITY_ENHANCER=0
+</div></code></pre>
+<h2 id="respeakerd-aduio-process">Respeakerd Aduio Process</h2>
+<p>Respeakerd is the server application for the microphone array solutions of SEEED, based on librespeaker which combines the audio front-end processing algorithms.</p>
+<p>The guide of respeakerd can be found at <a href="https://github.com/respeaker/respeakerd/tree/master">here</a>. Download that repository to your Pi. Don't forget to do <code>Alexa authorization</code> and update avs <code>sudo pip install -U avs</code> before you run python client of respeakerd <code>python ~/respeakerd/clients/Python/demo_pi_vep_alexa.py</code>.</p>
+<h2 id="realtime-sound-source-localization-and-tracking">Realtime Sound Source Localization and Tracking</h2>
+<p><a href="https://github.com/introlab/odas">ODAS</a> stands for Open embeddeD Audition System. This is a library dedicated to perform sound source localization, tracking, separation and post-filtering. Let's have a fun with it.</p>
+<ul>
+<li>Step 1. Get ODAS and build it.</li>
+</ul>
+<pre class="hljs"><code><div>sudo apt-get install libfftw3-dev libconfig-dev libasound2-dev libgconf-2-4
+sudo apt-get install cmake
+git clone https://github.com/introlab/odas.git
+mkdir odas/build
+cd odas/build
+cmake ..
+make
+</div></code></pre>
+<ul>
+<li>
+<p>Step 2. Get <a href="https://github.com/introlab/odas_web/releases">ODAS Studio</a>  and open it.</p>
+</li>
+<li>
+<p>Step 3. The odascore will be at <strong>odas/bin/odaslive</strong>, the <strong>config file</strong> is at <a href="https://raw.githubusercontent.com/xiongyihui/odas/master/config/odaslive/respeaker_6_mic_array.cfg">here</a>.</p>
+</li>
+</ul>
+<p><img src="https://github.com/SeeedDocument/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/raw/master/img/odas.png" alt=""></p>
+<h2 id="faq">FAQ</h2>
+<p><strong>Q1: There are only 6 Mic in the Mic Array, how could it be 8 channels?</strong></p>
+<p>A1: There are 2 AC108 in this array, and each AC108 chip has 4 channel output. So it comes a total of 8 channels here, 6 of which are for the microphone, and the the rest 2 are the playback channels.</p>
+<p><strong>Q2: If Raspberry can detect ReSpeaker 2-mics hat, but can't detect ReSpeaker 6-mics Circular array?</strong></p>
+<p>A2: Please click raspberry -&gt; Preferences -&gt; Raspberry Pi Configuration, then select the Interfaces tab, make sure the 1-Wire is Disabled.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><strong>[PDF]</strong> <a href="https://github.com/SeeedDocument/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/raw/master/reg/AC101_User_Manual_v1.1.pdf">AC101 Datasheet</a></li>
+<li><strong>[PDF]</strong> <a href="https://github.com/SeeedDocument/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/raw/master/reg/AC108_Datasheet_V1.2.pdf">AC108 Datesheet</a></li>
+<li><strong>[Dxf]</strong> <a href="https://github.com/SeeedDocument/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/raw/master/reg/ReSpeaker%20Circular%20Array%20for%20Voice%20Accessory%20HAT%20with%206%20Microphones.dxf">ReSpeaker Circular Array for Voice Accessory HAT with 6 Microphones case file</a></li>
+<li><strong>[Dxf]</strong> <a href="https://github.com/SeeedDocument/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/raw/master/reg/2d.zip">ReSpeaker Circular Array for Voice Accessory HAT with 6 Microphone 2D File</a></li>
+<li><strong>[Driver]</strong> <a href="https://github.com/respeaker/seeed-voicecard">Seeed-Voice Driver</a></li>
+<li><strong>[Algorithms]</strong> <a href="https://github.com/respeaker/mic_array">Algorithms includes DOA, VAD, NS</a></li>
+<li><strong>[Voice Engine</strong> <a href="https://github.com/voice-engine/voice-engine">Voice Engine project, provides building blocks to create voice enabled objects</a></li>
+<li><strong>[Algorithms]</strong> <a href="https://github.com/voice-engine/ec">AEC</a></li>
+</ul>
+<h2 id="tech-support">Tech Support</h2>
+<p>Please submit any technical issue into our <a href="http://forum.seeedstudio.com/">forum</a> or drop mail to techsupport@seeed.cc.</p>
+
+</body>
+</html>

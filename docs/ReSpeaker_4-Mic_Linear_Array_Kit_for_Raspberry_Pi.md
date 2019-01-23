@@ -62,7 +62,7 @@ headers
     - 3.5mm headset audio jack
     - Speaker jack
 - Compatible with Raspberry Pi 40-pin headers
-- Microphones: Knowles SPU0414HR5HSB
+- Microphones: MSM321A3729H9CP
 - Sensitivity: -22 dBFS (Omnidirectional)
 - SNR: 59 dB
 - Max Sample Rate: 48Khz
