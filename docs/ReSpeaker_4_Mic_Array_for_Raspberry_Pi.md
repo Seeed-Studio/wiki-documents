@@ -206,7 +206,10 @@ pi@raspberrypi:~ $ source ~/env/bin/activate                    # activate the v
 
 ```
 sudo apt-get install portaudio19-dev
-pip install pyaudio
+sudo pip install pyaudio
+sudo pip install webrtcvad
+sudo apt-get install python-numpy 
+sudo pip install pyusb
 ```
 
 - Step 2. Run the vad_doa.py
