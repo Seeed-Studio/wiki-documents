@@ -313,7 +313,7 @@ Then you will see the OLED show the wifi AP around you.
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/img/Grove_uart_wifi_result.jpg)
 
 
-
+```
 
 ## Firmware update
 
@@ -375,7 +375,7 @@ Our module board got a firmware burned into it for factory settings, you can bur
 
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/img/Grove_uart_wifi_firmware_tools3.jpg)
 
-
+```
 
 
 ## AT Commands

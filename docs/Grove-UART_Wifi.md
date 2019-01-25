@@ -341,6 +341,10 @@ Then you will see the OLED show the wifi AP around you.
 
 ## Firmware update
 
+!!!Warning
+        This firmware only support V1, if you burn this firmware into the Grove UART WIFI V2, it will brick your module. 
+
+
 Our module board got a firmware burned into it for factory settings, you can burn other firmware to it if you like. Click [here](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/res/Grove-Uart_Wifi_Firmware-code.zip) to download source code of factory setting firmware.
 
 
