@@ -36,7 +36,7 @@ The  Grove - 16-Channel PWM Driver is based on NXP PCA9685, which is a 16-Channe
 |Ground Supply Current|400mA|
 |Operating temperature|-40～85℃|
 |Interface|I2C|
-|I2C address|0x7f|
+|I2C Address Range|0x40 ~ 0x7f(default)|
 
 
 ## Typical applications
@@ -54,7 +54,7 @@ The  Grove - 16-Channel PWM Driver is based on NXP PCA9685, which is a 16-Channe
 ![](https://github.com/SeeedDocument/Grove-16-Channel_PWM_Driver-PCA9685/raw/master/img/pin-out/pin_out.jpg)
 
 !!!Warning
-	Hot swap is not supported, you may want to disconnect arduino from the power source before any replacement or change.
+    Hot swap is not supported, you may want to disconnect arduino from the power source before any replacement or change.
 
 
 ### Hardware Detail
@@ -77,10 +77,33 @@ Provide 5V DC power for the servo.
 ![](https://github.com/SeeedDocument/Grove-16-Channel_PWM_Driver-PCA9685/raw/master/img/pin-out/pin-out-2.jpg)
 
 ___
-***PWM Out***
+**PWM Out**
 
 There are 16 groups of Pins(1 - 16) on this board, each group of pins contains one PWM signal pin, one 5V power supply pin and one pin for ground. 
 ![](https://github.com/SeeedDocument/Grove-16-Channel_PWM_Driver-PCA9685/raw/master/img/pin-out/pin-out-0.jpg)
+
+
+---
+**I2C Address**
+
+*you can click the following figure to view the origin file*
+
+The 6 selectable pads on the back of this board, all have 64 optional I2C addresses.
+
+[![](https://github.com/SeeedDocument/Grove-16-Channel_PWM_Driver-PCA9685/raw/master/img/i2c_ad.jpg)](https://raw.githubusercontent.com/SeeedDocument/Grove-16-Channel_PWM_Driver-PCA9685/master/img/i2c_ad.jpg)
+
+
+As shown in the figure above, all address pads are connected to the high level by default. The address rules are as shown below:
+
+![](https://github.com/SeeedDocument/Grove-16-Channel_PWM_Driver-PCA9685/raw/master/img/i2c_ad_1.jpg)
+
+
+The address consists of 7 bits and the highest bit is fixed at 1. When we are converting the address to a hexadecimal number, we need to add a 0 to the left of the highest bit.
+
+So the default address is **111 1111**, when we add a 0, it becomes **0111 1111** which is 0x7f.  
+And if we connect all the address pads to the ground, it turns to be **100 0000**, when we add a 0, it becomes **0100 0000**. Which is 0x40.
+
+
 
 
 ## Working Principle
@@ -142,7 +165,7 @@ If you want to use servo, you can connect as shown below:
         If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
 
-- **Step 1.** Download the [Grove-16-Channel_PWM_Driver-PCA9685](https://github.com/SeeedDocument/Grove-16-Channel_PWM_Driver-PCA9685) Library from Github.
+- **Step 1.** Download the [Grove-16-Channel_PWM_Driver-PCA9685](https://github.com/Seeed-Studio/Seeed_PCA9685/archive/master.zip) Library from Github.
 
 - **Step 2.** Refer to [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
@@ -190,7 +213,7 @@ void loop()
 
 
 !!!Success
-		If everything goes well, you will be able to see the LED goes on.
+        If everything goes well, you will be able to see the LED goes on.
 
 
 
