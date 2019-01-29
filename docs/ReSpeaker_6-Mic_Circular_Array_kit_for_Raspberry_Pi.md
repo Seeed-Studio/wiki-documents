@@ -789,8 +789,8 @@ AloopOutputNode is designed to redirect the processed audio stream into a specif
 
 ```shell
 cd ~
-#copy above link code to file_1beam_test.cc, then press Ctrl+X, and Y to save the file.
-nano file_1beam_test.cc
+#copy above link code to alsa_aloop_test.cc, then press Ctrl+X, and Y to save the file.
+nano alsa_aloop_test.cc
 # compile
 g++ alsa_aloop_test.cc -o alsa_aloop_test -lrespeaker -lsndfile -fPIC -std=c++11 -fpermissive -I/usr/include/respeaker/ -DWEBRTC_LINUX -DWEBRTC_POSIX -DWEBRTC_NS_FLOAT -DWEBRTC_APM_DEBUG_DUMP=0 -DWEBRTC_INTELLIGIBILITY_ENHANCER=0
 ```

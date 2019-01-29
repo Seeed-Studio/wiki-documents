@@ -1422,6 +1422,204 @@ Light value is 44
 Light value is 31  
 ```
 
+## Librespeaker Aduio Process
+
+Librespeaker is an audio processing library which can perform noise suppression, direction of arrival calculation, beamforming, hotword searching. It reads the microphoone stream from linux sound server, e.g. PulseAudio.
+
+Here is the list of examples in [Librespeaker Documentation](http://respeaker.io/librespeaker_doc/examples.html). These examples will help you understand how to make different applications with librespeaker. 
+
+### Install librespeaker
+ 
+```shell
+sudo apt install -y librespeaker-dev libsndfile1-dev libasound2-dev 
+# Reboot to make configuration effective
+sudo reboot 
+```
+
+### Librespeaker Examples
+
+First of all, as an audio processing application, we always have to collect audio stream. In librespeaker, we have 3 ways to capture audio stream: PulseAudio Server, ALSA API and a wav file.
+
+
+**1. PulseAudio Server**
+
+PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy for your sound applications. It allows you to do advanced operations on your sound data as it passes between your application and your hardware.
+
+- Step1. Check PulseAudio Status  
+
+Run **pactl info**, You will see the output as below. 
+
+```
+respeaker@v2:~$ pactl info
+Server String: /run/user/1000/pulse/native
+Library Protocol Version: 33
+Server Protocol Version: 33
+Is Local: yes
+Client Index: 5
+Tile Size: 65496
+User Name: respeaker
+Host Name: v2
+Server Name: pulseaudio
+Server Version: 12.2.0-rebootstrapped
+Default Sample Specification: s16le 2ch 48000Hz
+Default Channel Map: front-left,front-right
+Default Sink: alsa_output.platform-sound_0.seeed-2ch
+Default Source: alsa_input.platform-sound_0.seeed-8ch
+Cookie: 971b:7ffb
+```
+
+- Step2. C++ Coding
+
+The example [pulse_snowboy_1b_test.cc](http://respeaker.io/librespeaker_doc/pulse_snowboy_1b_test_8cc-example.html) shows how to use the VepAecBeamformingNode node, the Snowboy1bDoaKwsNode node and the ReSpeaker supervisor, to make a simple snowboy KWS demo. This example supports keyword "alexa" and "snowboy", adjustable target gain level and wav log.
+
+
+```shell
+cd ~
+#copy above link code to pulse_snowboy_1b_test.cc, then press Ctrl+X, and Y to save the file.
+nano pulse_snowboy_1b_test.cc
+# compile
+g++ pulse_snowboy_1b_test.cc -o pulse_snowboy_1b_test -lrespeaker -lsndfile -fPIC -std=c++11 -fpermissive -I/usr/include/respeaker/ -DWEBRTC_LINUX -DWEBRTC_POSIX -DWEBRTC_NS_FLOAT -DWEBRTC_APM_DEBUG_DUMP=0 -DWEBRTC_INTELLIGIBILITY_ENHANCER=0
+# run, then say "snowboy" to test the KWS engine
+./pulse_snowboy_1b_test
+# show the help page of this example
+./pulse_snowboy_1b_test --help
+```
+
+Here is the output as below. We can see the DOA as 180, hotword dectect count as 2 times, the major audio comes from channel 2. 
+
+```
+collector: 1, vep_1beam: 0, snowboy_kws: 0
+collector: 1, vep_1beam: 0, snowboy_kws: 0
+collector: 0, vep_1beam: 0, snowboy_kws: 0
+(7617ms)DEBUG -- DoA: 180 Vep: 8451, 9135, 8644, 8805, 8088, 7921, 3373 Chan: 2 Chan_real: 2  [snowboy_1b_doa_kws_node.cc:429]
+(7617ms)DEBUG -- DoA: 180 Vep: 8455, 9144, 8650, 8811, 8097, 7914, 3380 Chan: 2 Chan_real: 2  [snowboy_1b_doa_kws_node.cc:429]
+(7617ms)DEBUG -- DoA: 180 Vep: 8458, 9149, 8652, 8816, 8102, 7904, 3383 Chan: 2 Chan_real: 2  [snowboy_1b_doa_kws_node.cc:429]
+(7617ms)DEBUG -- DoA: 180 Vep: 8460, 9149, 8650, 8822, 8100, 7888, 3383 Chan: 2 Chan_real: 2  [snowboy_1b_doa_kws_node.cc:429]
+(7617ms)DEBUG -- DoA: 180 Vep: 8459, 9144, 8642, 8825, 8094, 7870, 3377 Chan: 2 Chan_real: 2  [snowboy_1b_doa_kws_node.cc:429]
+(7617ms)DEBUG -- DoA: 180 Vep: 8458, 9130, 8626, 8823, 8085, 7853, 3368 Chan: 2 Chan_real: 2  [snowboy_1b_doa_kws_node.cc:429]
+(7617ms)DEBUG -- DoA: 180 Vep: 8456, 9096, 8579, 8816, 8070, 7834, 3352 Chan: 2 Chan_real: 2  [snowboy_1b_doa_kws_node.cc:429]
+(7618ms)DEBUG -- DoA: 180 Vep: 8454, 9053, 8520, 8806, 8047, 7811, 3331 Chan: 2 Chan_real: 2  [snowboy_1b_doa_kws_node.cc:429]
+(7618ms)DEBUG -- DoA: 180 Vep: 8458, 9034, 8496, 8788, 8008, 7779, 3320 Chan: 2 Chan_real: 2  [snowboy_1b_doa_kws_node.cc:429]
+(7618ms)DEBUG -- DoA: 180 Vep: 8460, 9009, 8478, 8770, 7965, 7744, 3307 Chan: 2 Chan_real: 2  [snowboy_1b_doa_kws_node.cc:429]
+hotword_count = 2
+```
+
+!!!Note
+    If you need to see the process audio, you can set **bool enable_wav = false;** to true. Then you can get **pulse_snowboy_1b_test.wav** processed audio file.
+
+**2. ALSA API**
+
+ALSA stands for Advanced Linux Sound Architecture. It provides audio and MIDI functionality to the Linux operating system. If you want a more efficient(low latency and low CPU consumption) way to capture voice, ALSA will be your choice.
+
+- Step1. Audio Setting 
+
+If pulseaudio is running, the output of the **ps aux|grep pulse** will be as below. 
+
+```shell
+pi@raspberrypi:~ $ ps aux|grep pulse
+pi         978  0.1  0.9 112456  9236 ?        S<l  18:48   0:01 /usr/bin/pulseaudio --start --log-target=syslog
+pi        1247  0.0  0.0   4376   564 pts/0    S+   18:57   0:00 grep --color=auto pulse
+```
+
+please make sure that **pulseaudio is not running** by below commands: 
+
+```shell
+$ pulseaudio --k
+$ ps aux|grep pulse
+pi        1355  0.0  0.0   4376   568 pts/0    S+   16:48   0:00 grep --color=auto pulse
+```
+    
+- Step2. C++ Coding
+
+The example [alsa_snips_1b_test.cc](http://respeaker.io/librespeaker_doc/alsa_snips_1b_test_8cc-example.html) shows how to use the AlsaCollectorNode node with VepAecBeamformingNode node and Snips1bDoaKwsNode node.
+
+
+```shell
+cd ~
+#copy above link code to alsa_snips_1b_test.cc, then press Ctrl+X, and Y to save the file.
+nano alsa_snips_1b_test.cc
+# compile
+g++ alsa_snips_1b_test.cc -o alsa_snips_1b_test -lrespeaker -lsndfile -fPIC -std=c++11 -fpermissive -I/usr/include/respeaker/ -DWEBRTC_LINUX -DWEBRTC_POSIX -DWEBRTC_NS_FLOAT -DWEBRTC_APM_DEBUG_DUMP=0 -DWEBRTC_INTELLIGIBILITY_ENHANCER=0
+# run, then say "hey, snips" to test the KWS engine
+./alsa_snips_1b_test
+# show the help page of this example
+./alsa_snips_1b_test --help
+```
+
+Here is the output as below. We can see the DOA as 180, hotword dectect count as 3 times, the major audio comes from channel 2. 
+
+```
+collector: 3, vep_1beam: 0, snips_kws: 0
+collector: 3, vep_1beam: 0, snips_kws: 0
+collector: 3, vep_1beam: 0, snips_kws: 0
+(48683ms)DEBUG -- DoA: 180 Vep: 0, 0, 0, 0, 0, 0, 0 Chan: 2  [snips_1b_doa_kws_node.cc:423]
+(48683ms)DEBUG -- DoA: 180 Vep: 0, 0, 0, 0, 0, 0, 0 Chan: 2  [snips_1b_doa_kws_node.cc:423]
+(48683ms)DEBUG -- DoA: 180 Vep: 0, 0, 0, 0, 0, 0, 0 Chan: 2  [snips_1b_doa_kws_node.cc:423]
+(48683ms)DEBUG -- DoA: 180 Vep: 0, 0, 0, 0, 0, 0, 0 Chan: 2  [snips_1b_doa_kws_node.cc:423]
+(48683ms)DEBUG -- DoA: 180 Vep: 0, 0, 0, 0, 0, 0, 0 Chan: 2  [snips_1b_doa_kws_node.cc:423]
+hotword_count = 3
+```
+
+**3. WAV FILE**
+
+If you need to test the performance of KWS, ASR, NLP or something else, it is not a good way to test it with your mouth repeatly. It is recommanded to record a testing recording first, and just send the recording to your program to get the result.
+
+[file_1beam_test.cc](http://respeaker.io/librespeaker_doc/file_1beam_test_8cc-example.html) shows how to read a 8-channels 16K 16-bit wav file, send the recording stream to VepAecBeamformingNode node and detect hotword from the output beam. This example supports keyword "alexa", "snowboy" and "heysnips", adjustable target gain level and wav log.
+
+
+```shell
+cd ~
+#copy above link code to file_1beam_test.cc, then press Ctrl+X, and Y to save the file.
+nano file_1beam_test.cc
+# compile
+g++ file_1beam_test.cc -o file_1beam_test -lrespeaker -lsndfile -fPIC -std=c++11 -fpermissive -I/usr/include/respeaker/ -DWEBRTC_LINUX -DWEBRTC_POSIX -DWEBRTC_NS_FLOAT -DWEBRTC_APM_DEBUG_DUMP=0 -DWEBRTC_INTELLIGIBILITY_ENHANCER=0
+# record a testing wav file to test keyword "snowboy"
+arecord -Dhw:0,0 -f S16_LE -r 16000 -c 8 my_test.wav
+# run
+./file_1beam_test -f my_test.wav
+# you need to press Ctrl+C to exit when the log is stopped
+```
+
+Here is the output as below. We can see the DOA as 180, hotword dectect count as 3 times, the major audio comes from channel 2. 
+
+```
+.............................(6606ms)DEBUG -- DoA: 180 Vep: 1593, 1713, 1658, 1710, 1927, 1784, 1848 Chan: 2 Chan_real: 2  [snowboy_1b_doa_kws_node.cc:429]
+(6606ms)DEBUG -- DoA: 180 Vep: 1574, 1691, 1620, 1672, 1910, 1767, 1820 Chan: 2 Chan_real: 2  [snowboy_1b_doa_kws_node.cc:429]
+(6606ms)DEBUG -- DoA: 180 Vep: 1555, 1668, 1580, 1647, 1893, 1746, 1789 Chan: 2 Chan_real: 2  [snowboy_1b_doa_kws_node.cc:429]
+(6606ms)DEBUG -- DoA: 180 Vep: 1539, 1646, 1550, 1624, 1877, 1733, 1764 Chan: 2 Chan_real: 2  [snowboy_1b_doa_kws_node.cc:429]
+(6606ms)DEBUG -- DoA: 180 Vep: 1523, 1616, 1525, 1601, 1854, 1702, 1736 Chan: 2 Chan_real: 2  [snowboy_1b_doa_kws_node.cc:429]
+(6606ms)DEBUG -- DoA: 180 Vep: 1494, 1571, 1504, 1583, 1827, 1664, 1698 Chan: 2 Chan_real: 2  [snowboy_1b_doa_kws_node.cc:429]
+(6606ms)DEBUG -- DoA: 180 Vep: 1465, 1517, 1487, 1562, 1780, 1603, 1660 Chan: 2 Chan_real: 2  [snowboy_1b_doa_kws_node.cc:429]
+(6607ms)DEBUG -- DoA: 180 Vep: 1442, 1485, 1468, 1541, 1730, 1561, 1630 Chan: 2 Chan_real: 2  [snowboy_1b_doa_kws_node.cc:429]
+(6607ms)DEBUG -- DoA: 180 Vep: 1421, 1474, 1447, 1510, 1693, 1525, 1605 Chan: 2 Chan_real: 2  [snowboy_1b_doa_kws_node.cc:429]
+(6607ms)DEBUG -- DoA: 180 Vep: 1424, 1465, 1445, 1507, 1680, 1507, 1589 Chan: 2 Chan_real: 2  [snowboy_1b_doa_kws_node.cc:429]
+hotword_count = 3
+```
+
+
+**4. Another way to output processed audio: ALOOP** 
+
+AloopOutputNode is designed to redirect the processed audio stream into a specific Alsa device(Loopback PCM). In this way, some third-party voice assistants can get  real-time processed audio stream from a PCM device, which provides a convenient way to build your application.
+
+[alsa_aloop_test.cc](http://respeaker.io/librespeaker_doc/alsa_aloop_test_8cc-example.html) shows how to achieve it. To run this example, you have to run 'sudo modprobe snd-aloop' first. And make sure "pulseaudio" doesn't start, then, after runing this example, you can open another terminal and use `arecord -Dhw:Loopback,1,0 -c 1 -r 16000 -f S16_LE loop_test.wav` to arecord the processed audio stream. Further more, you can setup a third party voice assistant to capture voice from "hw:Loopback,1,0", to run the assistant directly. Check [respeaker::AloopOutputNode Class Reference](http://respeaker.io/librespeaker_doc/classrespeaker_1_1AloopOutputNode.html) for more details of this node.
+
+```shell
+cd ~
+#copy above link code to file_1beam_test.cc, then press Ctrl+X, and Y to save the file.
+nano alsa_aloop_test.cc
+# compile
+g++ alsa_aloop_test.cc -o alsa_aloop_test -lrespeaker -lsndfile -fPIC -std=c++11 -fpermissive -I/usr/include/respeaker/ -DWEBRTC_LINUX -DWEBRTC_POSIX -DWEBRTC_NS_FLOAT -DWEBRTC_APM_DEBUG_DUMP=0 -DWEBRTC_INTELLIGIBILITY_ENHANCER=0
+```
+
+## Respeakerd Aduio Process
+
+Respeakerd is the server application for the microphone array solutions of SEEED, based on librespeaker which combines the audio front-end processing algorithms.
+
+The guide of respeakerd can be found at [here](https://github.com/respeaker/respeakerd/tree/master). Download that repository to your Pi. Don't forget to do `Alexa authorization` and update avs `sudo pip install -U avs` before you run python client of respeakerd `python ~/respeakerd/clients/Python/demo_pi_vep_alexa.py`.
+
+
+
+
 ## FAQs
 
 **Q1: How to change the senstivity of the wake up word?**
