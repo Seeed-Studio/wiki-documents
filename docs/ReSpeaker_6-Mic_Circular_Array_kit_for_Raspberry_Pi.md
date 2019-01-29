@@ -652,7 +652,7 @@ The example [pulse_snowboy_1b_test.cc](http://respeaker.io/librespeaker_doc/puls
 ```shell
 cd ~
 #copy above link code to pulse_snowboy_1b_test.cc, then press Ctrl+X, and Y to save the file.
-touch pulse_snowboy_1b_test.cc
+nano pulse_snowboy_1b_test.cc
 # compile
 g++ pulse_snowboy_1b_test.cc -o pulse_snowboy_1b_test -lrespeaker -lsndfile -fPIC -std=c++11 -fpermissive -I/usr/include/respeaker/ -DWEBRTC_LINUX -DWEBRTC_POSIX -DWEBRTC_NS_FLOAT -DWEBRTC_APM_DEBUG_DUMP=0 -DWEBRTC_INTELLIGIBILITY_ENHANCER=0
 # run, then say "snowboy" to test the KWS engine
@@ -718,7 +718,7 @@ The example [alsa_snips_1b_test.cc](http://respeaker.io/librespeaker_doc/alsa_sn
 ```shell
 cd ~
 #copy above link code to alsa_snips_1b_test.cc, then press Ctrl+X, and Y to save the file.
-touch alsa_snips_1b_test.cc
+nano alsa_snips_1b_test.cc
 # compile
 g++ alsa_snips_1b_test.cc -o alsa_snips_1b_test -lrespeaker -lsndfile -fPIC -std=c++11 -fpermissive -I/usr/include/respeaker/ -DWEBRTC_LINUX -DWEBRTC_POSIX -DWEBRTC_NS_FLOAT -DWEBRTC_APM_DEBUG_DUMP=0 -DWEBRTC_INTELLIGIBILITY_ENHANCER=0
 # run, then say "hey, snips" to test the KWS engine
@@ -754,7 +754,7 @@ If you need to test the performance of KWS, ASR, NLP or something else, it is no
 ```shell
 cd ~
 #copy above link code to file_1beam_test.cc, then press Ctrl+X, and Y to save the file.
-touch file_1beam_test.cc
+nano file_1beam_test.cc
 # compile
 g++ file_1beam_test.cc -o file_1beam_test -lrespeaker -lsndfile -fPIC -std=c++11 -fpermissive -I/usr/include/respeaker/ -DWEBRTC_LINUX -DWEBRTC_POSIX -DWEBRTC_NS_FLOAT -DWEBRTC_APM_DEBUG_DUMP=0 -DWEBRTC_INTELLIGIBILITY_ENHANCER=0
 # record a testing wav file to test keyword "snowboy"
@@ -790,7 +790,7 @@ AloopOutputNode is designed to redirect the processed audio stream into a specif
 ```shell
 cd ~
 #copy above link code to file_1beam_test.cc, then press Ctrl+X, and Y to save the file.
-touch file_1beam_test.cc
+nano file_1beam_test.cc
 # compile
 g++ alsa_aloop_test.cc -o alsa_aloop_test -lrespeaker -lsndfile -fPIC -std=c++11 -fpermissive -I/usr/include/respeaker/ -DWEBRTC_LINUX -DWEBRTC_POSIX -DWEBRTC_NS_FLOAT -DWEBRTC_APM_DEBUG_DUMP=0 -DWEBRTC_INTELLIGIBILITY_ENHANCER=0
 ```
