@@ -218,7 +218,9 @@ sudo pip install pyusb
 cd ~
 git clone https://github.com/respeaker/mic_array.git
 cd mic_array
-python vad_doa.py
+nano vad_doa.py 
+#change CHANNELS = 8 to CHANNELS = 4 @line10
+python vad_doa.py 
 ```
 
 - Step 3. Here is the output. 
