@@ -220,6 +220,23 @@ mkdocs build --clean
 
 - Step 9. Follow **How to upload the html files to Amazon S3** to upload to S3.
 
+## FAQ
+
+The yam file format is related with the PyYAML, please install the below version packages, such as "pip install Markdown==2.6.11" 
+
+
+```
+C:\Users\xyu6>pip list
+Package                       Version
+----------------------------- ----------
+Markdown                      2.6.11
+mkdocs                        0.17.3
+mkdocs-material               2.9.2
+Pygments                      2.2.0
+pylint                        1.9.2
+pymdown-extensions            4.11
+PyYAML                        3.12
+```
 
 ## Tech Support
 Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue.
