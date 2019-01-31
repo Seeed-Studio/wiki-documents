@@ -736,6 +736,14 @@ Click on **Files Transfer > Ymodem > Send**, and select the .bin file we had dow
 - Step 6. Then the updating is started.
 ![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_LoRa/master/img/firmware_4.png)
 
+
+## FAQ
+
+**Q1: Seeeduino Lorawan stopped being recognized by PC**
+
+**A1:** Quickly double-tapping the reset buton to recover the board.
+
+
 ## Resources
 
 * [Schematics in Eagle](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/202001246 Seeeduino LoRaWAN Eagle.zip)
