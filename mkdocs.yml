@@ -38,7 +38,7 @@ theme_dir: material
 
 # Icon
 # site_favicon: 'images/favicon.ico'
-site_favicon: https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/favicon.ico
+#site_favicon: https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/favicon.ico
 
 # Options
 extra:
