@@ -14,6 +14,8 @@ tags:
 Grove - Adjustable PIR Motion Sensor is an easy to use Passive Infrared motion sensor, which can detect infrared object motion up to 3 meters. Any infrared object moves in its detecting range, the sensor outputs HIGH on its SIG pin. And you can adjust the SIG HIGH time up to 130s via the  potentiometer, moreover, you can adjust the detect range via the other potentiometer.
 
 
+<iframe width="800" height="450" src="https://youtu.be/EhZ7uDvoALE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Adjustable-PIR-Motion-Sensor-p-3225.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
