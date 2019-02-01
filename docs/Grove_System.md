@@ -60,6 +60,33 @@ There're 5 size of Grove.
 |20x20mm|20x40mm|20x60mm|40x40mm|40x60mm|
 |![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/size1x1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/size1x2.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/size1x3.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/size2x2.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/size2x3.jpg)|
 
+
+Here are the dimensions.
+
+- Grove 20X20 DIP: 
+
+![](https://github.com/SeeedDocument/GroveSystem/raw/master/images/20_20dip.png)
+
+- Grove 20X20 SMD Horizontal: 
+
+![](https://github.com/SeeedDocument/GroveSystem/raw/master/images/20_20smd_horizontal.png)
+
+- Grove 20X20 SMD Vertical: 
+
+![](https://github.com/SeeedDocument/GroveSystem/raw/master/images/20_20smd_vertical.png)
+
+- Grove 40X40 DIP: 
+
+![](https://github.com/SeeedDocument/GroveSystem/raw/master/images/40_40dip.png)
+
+- Grove 40X40 SMD Horizontal: 
+
+![](https://github.com/SeeedDocument/GroveSystem/raw/master/images/40_40smd_horizontal.png)
+
+- Grove 40X40 SMD Vertical: 
+
+![](https://github.com/SeeedDocument/GroveSystem/raw/master/images/40_40smd_vertical.png)
+
 For the detail mechnical drawing, please refer to [Grove Mechnical Drawing](https://github.com/SeeedDocument/GroveSystem/tree/master/res).
 
 
