@@ -3,8 +3,8 @@ title: Grove Introduction
 nointro:
 ---
 
+<iframe width="800" height="450" src="https://www.youtube.com/embed/1Rc_OiebDPo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-[![](https://github.com/SeeedDocument/Bazaar_file/raw/master/Grove.png)](https://www.seeedstudio.com/grove_100)
 
 Learn more about Grove System [here](/Grove_System/). The following category of Grove modules are available:
 
