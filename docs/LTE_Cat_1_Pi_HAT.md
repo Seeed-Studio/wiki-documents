@@ -531,5 +531,12 @@ AT+UPING="www.google.com"
 - **[PDF]** [LARA-R2_SysIntegrManual](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/res/LARA-R2_SysIntegrManual_(UBX-16010573).pdf)
 - **[PDF]** [AT-Commands Examples AppNote](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/res/AT-CommandsExamples_AppNote_(UBX-13001820).pdf)
 
+
+## Projects
+
+**Face Recognization Smart Lock with LTE Pi HAT**: Face recognition is becoming more and more widely used, we can use it to make a smart lock.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/SeeedStudio/face-recognization-smart-lock-with-lte-pi-hat-abcec9/embed' width='350'></iframe>
+
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
