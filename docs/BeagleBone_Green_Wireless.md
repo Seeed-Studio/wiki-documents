@@ -477,6 +477,28 @@ There're many references to help you to get more information about the board.
 * [Hardware documentation](http://beagleboard.org/getting-started#hardware)
 * [Projects of BeagleBoard](http://beagleboard.org/project)
 
+## FAQs
+
+**Q1: How to connect your BBGW to your Bluetooth Device with Debian 9.5 2018-10-07 4GB image?**
+
+**A1:** Please follow below instructions. thanks.
+
+```
+udebian@beaglebone:~$ uname -a
+Linux beaglebone 4.14.71-ti-r80 #1 SMP PREEMPT Fri Oct 5 23:50:11 UTC 2018 armv7l GNU/Linux
+debian@beaglebone:~$ bluetoothctl --agent
+[NEW] Controller A4:D5:78:6D:6F:E0 beaglebone [default]
+Agent registered
+[bluetooth]# scan on
+Discovery started
+[CHG] Controller A4:D5:78:6D:6F:E0 Discovering: yes
+[NEW] Device C0:72:BC:0A:E6:1E HB7910703602
+[NEW] Device E8:19:C4:6B:03:5C YONGNUO LED
+[NEW] Device C0:F6:1E:02:0A:1E HB7690138998
+```
+
+
+
 ## Resources
 -----
 - **[PDF]** [BeagleBone_Green_Wireless Schematic(pdf)](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/tree/master/resources/BeagleBone_Green Wireless_V1.0_SCH_20160314.pdf)
