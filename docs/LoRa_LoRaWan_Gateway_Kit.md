@@ -610,9 +610,27 @@ Then go to **Dashboard -> Applications -> SampleApp ->Device** , click the Node 
 
 ## FAQs
 
-### Q1: How to find the factory firmware?
+**Q1: How to find the factory firmware?**
 
-**A1:** When the firmware is broken or some terrible errors happen, you can download the [firmware](https://drive.google.com/open?id=1MVLQlxjhir_mWvKhvuqBsr1a0ievZRDC) here.
+**A1:** When the firmware is broken or some terrible errors happen, you can download the [firmware](https://drive.google.com/open?id=1MVLQlxjhir_mWvKhvuqBsr1a0ievZRDC) here. It is for raspberry 3b only, NOT support raspberry 3b +. 
+
+**Q2: How to build the latest image?**
+
+**A2:** It works well with both raspberry 3b and 3b+. We tested it under 2018-11-13 raspbian image. 
+
+- Step 1. Download the [latest raspberry image](https://www.raspberrypi.org/downloads/raspbian/)
+
+- Step 2. Download libssl1.0.0.deb to your Raspberry Pi by running `wget https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/res/libssl1.0.0.deb`, and run `sudo dpkg -i ./libssl1.0.0.deb` to install it in terminal.
+
+- Step 3.  Run `sudo raspi-config` in terminal, select _Interfacing Options_ -- _P4 SPI_ -- _YES_ to enable SPI, so that Raspberry Pi can communicate with RHF0M301.
+
+- Step 4. Run following commands in terminal, download and start loriot gateway.
+
+```
+wget https://cn1.loriot.io/home/gwsw/loriot-pi-3-rhf1257-SPI-0-latest.bin -O loriot-gw
+chmod +x loriot-gw
+./loriot-gw -f
+```
 
 
 ## Resources
