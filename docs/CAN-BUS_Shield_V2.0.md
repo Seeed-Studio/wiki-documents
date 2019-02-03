@@ -99,6 +99,15 @@ If you want a CAN Bus Analyzer to debug your CAN Bus, this [USB-CAN Analyzer](ht
 [![](https://raw.githubusercontent.com/SeeedDocument/CAN_BUS_Shield/master/image/usb_can.jpg)](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html)
 
 
+If you want to record the GPS log at the same time, this [OBD-II CAN Bus GPS Development Kit](https://www.seeedstudio.com/OBD-II-CAN-Bus-GPS-Development-Kit-p-2868.html) is recommended.
+
+
+<div align="center">
+<figure>
+<img src="https://www.seeedstudio.com/media/catalog/product/cache/134ea8534034ded9d909870d8862ea94/2/_/2_1_6.jpg" alt="OBD-II CAN Bus GPS Development Kit" title="OBD-II CAN Bus GPS Development Kit" />
+</figure>
+</div> 
+
 
 ## Features
 -----
