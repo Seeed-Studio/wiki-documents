@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Azure_Sphere_MT3620_Development_Kit.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<hr>
+<h2 id="title-azure-sphere-mt3620-development-kitcategory-azurebzurloldwikinameprodimagenamesurveyurlsku">title: Azure Sphere MT3620 Development Kit
+category: Azure
+bzurl:
+oldwikiname:
+prodimagename:
+surveyurl:<br>
+sku:</h2>
+<p><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/azure.jpg" alt="enter image description here"></p>
+<p>Azure Sphere MT3620 Development Kit is specially designed to support rapid prototyping and to enable developers to experience Azure Sphere technology. MT3620 is the first Azure Sphere certified MCU. Azure Sphere certified MCUs are a new class of secured, connected crossover microcontrollers. MT3620 features three user-accessible microcontroller cores: one ARM Cortex-A7 core and two general purpose ARM Cortex-M4F cores. The MT3620 is designed to support real-time requirements when interfacing with a variety of on-chip peripherals including GPIO, UART, I2C, SPI, I2S, PWM and ADC. It has a built-in security subsystem with its own dedicated CM4F core for secure boot and secure system operation, along with dual-band 802.11 b/g/n Wi-Fi.</p>
+<p>Please note that the current Azure Sphere software release does not support all features of the MT3620 hardware, including the two general purpose ARM Cortex-M4F cores, some peripheral interfaces (ADC, I2C, I2S, PWM and SPI), Wi-Fi 802.11a, and RTC with clock selection and battery backup. For ADC and I2C, customers can use <a href="https://www.seeedstudio.com/MT3620-Grove-Shield-p-3145.html">MT3620 Grove Shield board</a>, which has a UART to I2C chip and a I2C12-bit ADC chip.</p>
+<p>The MT3620 Development Kit has expanded most MT3620 hardware resources on the expansion pin headers, by wiring to breadboard or adding a shield board , user can easily connect to other hardware accessories.</p>
+<p>The Azure Sphere operating system is pre-installed on the MT3620 and is designed to work with the Azure Sphere Security Service to create a secured IoT platform. Their features are：</p>
+<ul>
+<li>Certificate-based device authentication to any web service</li>
+<li>Software attestation and secure boot</li>
+<li>Threat detection via failure reporting</li>
+<li>Ongoing security updates</li>
+<li>An integrated, secured end-to-end IoT solution</li>
+</ul>
+<p>MT3620 software development is supported using the powerful Microsoft Visual Studio IDE:</p>
+<ul>
+<li>Install <a href="https://visualstudio.microsoft.com/">Visual Studio</a> (Support Community, Enterprise or Professional) and the Azure Sphere extension, plug the development board into a PC over USB, and start developing IoT applications with unprecedented levels of security.</li>
+<li>To use the MT3620 Dev Board for Azure Sphere, you’ll need a Windows 10 PC with the latest Windows Updates, along with <a href="http://aka.ms/AzureSphereSDK">Azure Sphere software development kit</a> SDK.</li>
+</ul>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/iiDF26HNh-Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<table>
+<thead>
+<tr>
+<th>Product Name</th>
+<th>How to Buy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Azure Sphere MT3620 Development Kit US Version</td>
+<td><a href="https://www.seeedstudio.com/Azure-Sphere-MT3620-Development-Kit-US-Version-p-3052.html"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" alt=""></a></td>
+</tr>
+<tr>
+<td>Azure Sphere MT3620 Development Kit JP Version</td>
+<td><a href="https://www.seeedstudio.com/Azure-Sphere-MT3620-Development-Kit-JP-Version-p-3135.html"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" alt=""></a></td>
+</tr>
+<tr>
+<td>Azure Sphere MT3620 Development Kit EU Version</td>
+<td><a href="https://www.seeedstudio.com/Azure-Sphere-MT3620-Development-Kit-EU-Version-p-3134.html"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" alt=""></a></td>
+</tr>
+</tbody>
+</table>
+<p>!!!Warning
+If you need help on version selection, please check the <a href="https://view.officeapps.live.com/op/view.aspx?src=https://statics3.seeedstudio.com/document/Available_country.docx">Countries or regions available list</a> for more details.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Azure Sphere: End-to-end security for IoT devices</li>
+<li>Dual-band 802.11 b/g/n with antenna diversity</li>
+<li>Tri-core microcontroller with on-chip RAM &amp; flash</li>
+<li>Microsoft Visual Studio development environment</li>
+<li>Online authentication &amp; updates for device lifetime</li>
+</ul>
+<h2 id="specification">Specification</h2>
+<p><strong>Hardware</strong></p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-baqh"><span style="font-weight:bold">Description</span></th>
+    <th class="tg-baqh"><span style="font-weight:bold">Value</span></th>
+  </tr>
+  <tr>
+    <td class="tg-amwm" rowspan="2"><br>MCU</td>
+    <td class="tg-0lax">1 * ARM Cortex A7 core @500MHz , 4MB RAM</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">2 * ARM Cortex M4 core @200MHz, 64KB RAM</td>
+  </tr>
+  <tr>
+    <td class="tg-amwm" rowspan="5"><br><br><br><br>ISU</td>
+    <td class="tg-0lax">4 * &#x201C;ISU&#x201D; serial interface which can be configured as:</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">&#xA0;&#xA0;- I2C runs at up to 1MHz</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">&#xA0;&#xA0;- SPI runs at up to 40MHz</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">&#xA0;&#xA0;- UART runs at up to 3Mbps</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">ISU is Serial Communication Interface</td>
+  </tr>
+  <tr>
+    <td class="tg-amwm">Connectivity</td>
+    <td class="tg-0lax">2.4/5GHz dual-band 802.11 b/g/n Wi-Fi</td>
+  </tr>
+  <tr>
+    <td class="tg-amwm">I2S</td>
+    <td class="tg-0lax">1 * I2S support slave and TDM slave mode</td>
+  </tr>
+  <tr>
+    <td class="tg-amwm">ADC</td>
+    <td class="tg-0lax">4 * 12-bit ADC input I/O</td>
+  </tr>
+  <tr>
+    <td class="tg-amwm">RTC</td>
+    <td class="tg-0lax">1 * RTC with CR2032 3V battery holder</td>
+  </tr>
+  <tr>
+    <td class="tg-amwm">USB</td>
+    <td class="tg-0lax">1 * Micro USB port for power supply and debugging, 5V/1A</td>
+  </tr>
+  <tr>
+    <td class="tg-amwm">DC Jack</td>
+    <td class="tg-0lax">1* 5V/1A DC power jack</td>
+  </tr>
+  <tr>
+    <td class="tg-amwm">Operating Temperature</td>
+    <td class="tg-0lax">-40~85&#xB0;C</td>
+  </tr>
+  <tr>
+    <td class="tg-amwm">Dimensions</td>
+    <td class="tg-0lax">L:85mm*W:50mm*H:16mm</td>
+  </tr>
+  <tr>
+    <td class="tg-amwm">Certification</td>
+    <td class="tg-0lax">CE / FCC / MIC / RoHS</td>
+  </tr>
+</table>
+<p><strong>Software</strong></p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <td class="tg-0pky">IDE</td>
+    <td class="tg-0pky">Visual Studio</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">System</td>
+    <td class="tg-0lax">Windows10</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Programming Language</td>
+    <td class="tg-0lax">C</td>
+  </tr>
+</table>
+<h2 id="hardware-overview">Hardware Overview</h2>
+<p><strong>Board Diagram</strong></p>
+<p><a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/Diagram.png" target="_blank"><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/Diagram.png"/></a></p>
+<ul>
+<li><strong>J1</strong>: ADC Reference Voltage, On: using internal 2.5v; Off: Connect External 1.8v to Pin 1. Off by default.</li>
+<li><strong>J2</strong>: 3.3V Isolation, On: Enable system 3.3v power; Off: Cut off the system 3.3v power. On by default.</li>
+<li><strong>J3</strong>: RTC Power Selection: Left 2 pins: Using RTC Battery(Model:CR2032) at backside.</li>
+<li><strong>4 User RGB LED</strong>: LED model is LTST-C19HE1WT.</li>
+<li><strong>USB Port</strong>: Power supply(5V/1A) and debug, connected to FT4232HQ chip at backside.</li>
+<li><strong>4 System LED</strong>: Led1(Near USB port): Green, FTDI Activity LED. Led2: RED, Power Indicator. Led3: RGB, Wifi Status. Led4: RGB, App Status.</li>
+<li><strong>DC Power</strong>: 5V/1A</li>
+<li><strong>3 System Button</strong>: Button A&amp;B(White) are user botton. Button Reset(Blue) is System Reset.</li>
+<li><strong>MT3620</strong>：The <a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/datasheet/MediaTek%20MT3620%20Product%20Brief.pdf">MT3620</a> is a highly integrated, high performance IoT MCU with the high level of security necessary for modern, robust internet-connected devices. The MT3620 targets a wide range of IoT applications including smart home, commercial, industrial and many other domains thanks to its extensive I/O peripheral subsystem that allows device design flexibility and freedom.</li>
+<li><strong>FT4232HQ</strong>: The <a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/datasheet/DS_FT4232H.pdf">FT4232H</a> is a USB 2.0 High Speed (480Mb/s) to UART/MPSSE ICs.</li>
+</ul>
+<p><strong>Board Pinmap</strong></p>
+<p><a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/PinMap.png" target="_blank"><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/PinMap.png"/></a></p>
+<p><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/H1_2.png" alt=""></p>
+<p><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/H3_4.png" alt=""></p>
+<p><strong>Dimensions</strong></p>
+<p><a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/dimension.png" target="_blank"><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/dimension.png"/></a></p>
+<p><strong>Power</strong></p>
+<p>Power to the Azure Sphere MT3620 Development Kit is supplied via the on-board USB Micro B connector or directly via the DC connector.</p>
+<ul>
+<li>GPIO voltage is 3.3v, has a limited overhead of only 100mA available.</li>
+<li>5v_out on H3 connector has a limited overhead of only 500mA available.</li>
+<li>3.3v on H3 connector has a limited overhead of only 400mA available.</li>
+<li>Typical average current consumption is 150mA with 5V Wi-Fi on. Wifi scan current is typically 330ma.</li>
+</ul>
+<p><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/power.png" alt=""></p>
+<p><strong>Hardware Design and Manufacture</strong></p>
+<p>The current Azure Sphere software release does not support all features of the <a href="https://www.mediatek.com/products/azureSphere/mt3620">MT3620</a> hardware. For example, the following are <strong>not yet supported</strong> in software:</p>
+<ul>
+<li>2 x ARM Cortex-M4 with FPU</li>
+<li>ADC, I2C, I2S, PWM and SPI peripheral interfaces (GPIO and UART are supported)</li>
+<li>Wi-Fi 802.11a (b/g/n are supported)</li>
+<li>RTC with clock selection and battery backup</li>
+</ul>
+<p>!!!Tip
+For more info, please refer to <a href="https://docs.microsoft.com/en-us/azure-sphere/manufacturers/hardware-manufacturing">Information and tools for hardware design and manufacture</a>.</p>
+<h2 id="product-handling">Product Handling</h2>
+<p><strong>Packaging</strong></p>
+<p>The Azure Sphere MT3620 Development Kit packaging contains Azure Sphere MT3620 Development Kit and Micro B USB cable.</p>
+<p><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/box.JPG" alt=""></p>
+<p><strong>ESD Precautions</strong></p>
+<p>The Azure Sphere MT3620 Development Kit contains highly sensitive electronic circuitry and is an Electrostatic Sensitive Device (ESD). Handling The Azure Sphere MT3620 Development Kit without proper ESD protection may destroy or damage it permanently. Proper ESD handling and packaging procedures must be applied throughout the processing, handling and operation of any application that incorporates Azure Sphere MT3620 Development Kit.</p>
+<h2 id="applications">Applications</h2>
+<ul>
+<li>Home/Building/Facilities</li>
+<li>Automation</li>
+<li>Security</li>
+<li>Equipment Management</li>
+<li>Utilities</li>
+<li>Public Safety</li>
+</ul>
+<p>!!!Tip
+To understand how Azure Sphere works in a real-world setting, consider <a href="https://docs.microsoft.com/en-us/azure-sphere/product-overview/scenario">Contoso, Ltds cenario</a>.</p>
+<h2 id="qualification-and-approvals">Qualification and approvals</h2>
+<div class="method1" style="width:16%">
+</div><p style="text-align:center"><a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-FCC-FCC.zip" target="_blank"><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/FCC.jpg"></a></p>
+
+<div class="method1" style="width:16%">
+</div><p style="text-align:center"><a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-CE.zip" target="_blank"><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/CE.jpg"></a></p>
+
+<div class="method1" style="width:16%">
+</div><p style="text-align:center"><a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-MIC.zip" target="_blank"><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/mic.jpg"></a></p>
+
+<div class="method1" style="width:16%">
+</div><p style="text-align:center"><a href="" target="_blank"><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/RoHS.jpg"></a></p>
+
+<style>
+.method1{
+  text-align:center;
+  float:left;
+}
+.title{
+font-size:1px;
+text-indent:1px;
+line-height:3px
+}
+</style>
+<div class="title" style="width:39%">
+.
+</div>
+<ul>
+<li>FCC ID: <a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-FCC-FCC.zip">Z4T-MT3620DEVB</a></li>
+<li>CE ID: <a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-CE.zip">18/0331/SZ</a></li>
+<li>MIC ID: <a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-MIC.zip">CSRT18207</a></li>
+</ul>
+<h2 id="install-azure-sphere">Install Azure Sphere</h2>
+<p>If you have an Azure Sphere development kit that has not yet been used, complete <a href="https://docs.microsoft.com/en-us/azure-sphere/install/overview">these steps</a> first to get up and running.</p>
+<h2 id="azure-sphere-demo">Azure Sphere Demo</h2>
+<p>We build two demoes which combine Sphere dev kit and <a href="http://wiki.seeedstudio.com/Grove_System/">Seeed Grove system</a>.</p>
+<p><strong>Demo1</strong>: MT3620 Dev Board performs as an MCU, which connects with temperature sensor(SHT31), relay, fan, display, analog device. Demo simulates a fan with IoT connectivity, people can measure the ambient temperature and setup a threshold value to turn on/off the fan from Azure Cloud. The temperature will display on the LED display. User can swap the resistor to change the fan’s speed level from 0,1,2,3(0 means switch off the fan).</p>
+<p><strong>Demo2</strong>: MT3620 Dev Board works as an IoT safety connectivity device, which will be connect to an already made appliance, the appliance has its own MCU , which in this demo, we use an Arduino to simulate a fan’s control board, the board can get the status of the fan’s motor data , by analyzing the data , people can get the failure status and send maintainer to fix it. By pressing the button, this simulates the health status of the fan device , when button being pressed, that means the device need maintenance.</p>
+<h3 id="hardware">Hardware</h3>
+<p><strong>Part List</strong></p>
+<table>
+<thead>
+<tr>
+<th>MT3620 development kits</th>
+<th>Grove-Temperature&amp;Humidity</th>
+<th>Grove - Relay</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/azure_s.jpg" alt="enter image description here"></td>
+<td><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/SHT3_s.jpg" alt="enter image description here"></td>
+<td><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/relay.jpg" alt="enter image description here"></td>
+</tr>
+<tr>
+<td><a href="https://www.seeedstudio.com/Azure-Sphere-MT3620-Development-Kit-p-3052.html">Get One Now</a></td>
+<td><a href="https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT3-p-2655.html">Get One Now</a></td>
+<td><a href="https://www.seeedstudio.com/Grove-Relay-p-769.html">Get One Now</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Grove - Slide Potentiometer</th>
+<th>Grove - 4-Digit Display</th>
+<th>Grove - Blue LED Button</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/Slide_Potentiometer_s.jpg" alt="enter image description here"></td>
+<td><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/4_digital_s.jpg" alt="enter image description here"></td>
+<td><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/Grov-Blue_led_button.jpg" alt="enter image description here"></td>
+</tr>
+<tr>
+<td><a href="https://www.seeedstudio.com/Grove-Slide-Potentiometer-p-1196.html">Get One Now</a></td>
+<td><a href="https://www.seeedstudio.com/Grove-4-Digit-Display-p-1198.html">Get One Now</a></td>
+<td><a href="https://www.seeedstudio.com/Grove-Blue-LED-Button-p-3104.html">Get One Now</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>MT3620 Grove Shield</th>
+<th>Seeeduino V4.2</th>
+<th>Base Shield</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/mt3620groveshieldb_s.jpg" alt="enter image description here"></td>
+<td><img src="https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg" alt="enter image description here"></td>
+<td><img src="https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg" alt="enter image description here"></td>
+</tr>
+<tr>
+<td><a href="https://www.seeedstudio.com/MT3620-Grove-Shield-p-3145.html">Get One Now</a></td>
+<td><a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html">Get One Now</a></td>
+<td><a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html">Get One Now</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>System Diagram</strong></p>
+<p><a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/demo1.png" target="_blank"><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/demo1.png"/></a></p>
+<p><a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/demo2.png" target="_blank"><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/demo2.png"/></a></p>
+<p><strong>MT3620 Grove Shield</strong></p>
+<p>Since <a href="http://aka.ms/AzureSphereSDK">Azure Sphere SDK</a> has not yet supported ADC and I2C on MT3620. This shield serves as an interface between MT3620 UART port and external I2C devices, like the I2C temperature sensor. The basic function of the shield is to help to connect to I2C external device. By using an I2C compatible ADC chip, developer can also read the analog data from analog port.</p>
+<p><a href="https://www.seeedstudio.com/MT3620-Grove-Shield-p-3145.html">MT3620 Grove Shield</a> includes 2 chips, AD7992(Anlog to I2C) and SC18IM700(I2C to UART) to enable the ADC and I2C function from hardware side. So the analog sensors' signal go through AD7992 and then SC18IM700 to UART of develop board. The I2C sensors go through SC18IM700 to UART of develop board as well.</p>
+<p>The <a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/datasheet/AD7992.pdf">AD7992</a> is a 12-bit, low power, successive approximation ADC with an I2C-compatible interface. It transforms the anlog signal A0, A1 to I2C data.</p>
+<p><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/ADC_2_I2C.png" alt=""></p>
+<p>The <a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/datasheet/SC18IM700.pdf">SC18IM700</a> is designed to serve as an interface between the standard UART port of a microcontroller or microprocessor and the serial I2C-bus; this allows the microcontroller or microprocessor to communicate directly with other I2C-bus devices. It transforms SDA/SCL signals to GPIO26_TXD0 and GPIO28_RXD0.</p>
+<p><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/I2C_2_UART.png" alt=""></p>
+<p><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/MT3620_Grove_Shield-2018-09-11.png" alt=""></p>
+<div style="text-align:center">MT3620 Grove Shield Hardware Overview</div>
+<p><strong>Hardware Connection</strong></p>
+<p><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/MT3620_demo_Front.jpg" alt=""></p>
+<div style="text-align:center">Front View of hardware setup</div>
+<p><img src="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/MT3620_demo_backside.jpg" alt=""></p>
+<div style="text-align:center">Top View of hardware setup</div>
+<ul>
+<li>Step 1. Connect Grove-Blue LED Button to port 2 of Grove base shield.</li>
+<li>Step 2. Connect Fan PWM signal to port 5 of Grove base shield.</li>
+<li>Step 3. Connect port 7(Software Serial Port) of Grove base shield to UART3 of MT3620 Grove Shield. Cut the Vcc(Red cable) and leave the TX/RX/GND for the serial communication.</li>
+<li>Step 4. Plug Grove-Base shield to Seeeduino/Arduino.</li>
+<li>Step 5. Connect Grove-4 Digital Display to GPIO4 port of MT3620 Grove Shield.</li>
+<li>Step 6. Connect Grove-Temperature&amp;Humidity Sensor(SHT31) to I2C port of MT3620 Grove Shield.</li>
+<li>Step 7. Connect Grove-Relay to GPIO0 port of MT3620 Grove Shield and Grove-Relay output terminal to control Fan on/off.</li>
+<li>Step 8. Connect Grove-Slide Potentiometer to Analog port of MT3620 Grove Shield.</li>
+<li>Step 9. Plug the MT3620 base shield to Azure Sphere MT3620 Development board.</li>
+<li>Step 10. Plug the USB cable to Azure Sphere MT3620 Development board and PC.</li>
+<li>Step 11. Plug the USB cable to Ardunio/Seeeduino and PC.</li>
+<li>Step 12. Plug the power supply to Fan.</li>
+</ul>
+<p>!!!Warning
+Please make sure the voltage switch on Grove base shield is turned to <strong>3.3v</strong>.</p>
+<h3 id="software">Software</h3>
+<p>The software include the smart fan simulation system and Azure Sphere MT3620 Development system.</p>
+<ul>
+<li>
+<p>For the smart fan simulation system, use the arduino board to read Grove-Blue LED button press/release input signal, output the PWM to control the fan speed and control the Grove-Blue LED button LED status as well. Then use the port 7 to communicate with Azure Sphere MT3620 Development system through UART.</p>
+</li>
+<li>
+<p>For Azure Sphere MT3620 Development system, Grove-4 Digital LED displays the temperature from Grove-Temperature&amp;Humidity Sensor(SHT31) sensor, which demonstrates the UART-I2C shield function and MT3620 GPIO output function. Slide the Grove-Slide Potentiometer to change the fan speed, which demonstrates the MT3620 I/O input function. Configure a threshold temperature value from Azure Cloud, when value &gt; threshold, Grove-relay turns fan on, otherwise turns fan off. User also can adjust Grove-Slide Potentiometer,  when the fan working status goes wrong, the fan's MCU will post the failure to Azure Sphere by UART, then failure report goes to the Azure Cloud and wait for maintance.</p>
+</li>
+</ul>
+<p><strong>Smart Fan Simulation System</strong></p>
+<ul>
+<li>Step 1. Open the Arduino IDE.</li>
+<li>Step 2. Copy <a href="https://github.com/Seeed-Studio/Azure_Sphere_Sample_Smart_Fan/blob/master/Arduino_code/Arduino_code.ino">Arduino Smart Fan Simulation code</a> and paste to Arduino IDE.</li>
+<li>Step 3. Select Arduino/Seeeduino v4 as board from Tools menu.</li>
+<li>Step 4. Select related COM port from Tools menu.</li>
+<li>Step 5. Click upload to upload code the Arduino/Seeeduino.</li>
+</ul>
+<p>!!!Note
+If you do not know how to upload the code, please check <a href="http://wiki.seeedstudio.com/Upload_Code/">how to upload code</a>.</p>
+<p><strong>Azure Sphere MT3620 Development System</strong></p>
+<ul>
+<li>Step 1. Download <a href="https://github.com/Seeed-Studio/Azure_Sphere_Sample_Smart_Fan">Azure Sphere Code</a>.</li>
+<li>Step 2. Follow Quickstarts for Azure Sphere to open the <strong>AzureSphereDemo2.vcxproj</strong> project.</li>
+<li>Step 3. Open the main.c under Source Files.</li>
+<li>Step 4. Modify wifiSsid and wifiPsk @line21 and 22.</li>
+<li>Step 5. Connect the demo to Azure IoT.</li>
+<li>Step 6. Click Build -&gt; Rebuild Solution directly to the device.</li>
+<li>Step 7. Use the Remote Debug Tool to access the device.</li>
+<li>Step 8. See the stream back temperature data from console.</li>
+<li>Step 9. Configure the device explorer and link the physical deivces and the devices on the cloud.</li>
+<li>Step 10. Press the temperature sensor and see the trigger message on console.</li>
+<li>Step 11. Press the button to simulate the fan error and see the status on the console.</li>
+</ul>
+<p>For detail operation, please refer to the video.</p>
+<iframe width="1189" height="669" src="https://www.youtube.com/embed/KXThR9RUNvw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<h2 id="resource">Resource</h2>
+<ul>
+<li><strong>[Product]</strong> <a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/product_document/Azure%20Sphere%20MT3620%20Development%20Kit%20Product%20Brief-2018-09-10.pdf">Azure Sphere MT3620 Development Kit Product Brief</a></li>
+<li><strong>[Product]</strong> <a href="https://docs.microsoft.com/en-us/azure-sphere/">Welcome to Azure Sphere</a></li>
+<li><strong>[Certification]</strong> <a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-CE.zip">Azure Sphere MT3620 Development Kit-CE</a></li>
+<li><strong>[Certification]</strong> <a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-FCC-FCC.zip">Azure Sphere MT3620 Development Kit-FCC</a></li>
+<li><strong>[Certification]</strong> <a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/certification/Azure%20Sphere%20MT3620%20Development%20Kit-MIC.zip">Azure Sphere MT3620 Development Kit-MIC</a></li>
+<li><strong>[Library]</strong> <a href="https://github.com/Seeed-Studio/MT3620_Grove_Shield">MT3620 Grove Shield Library</a></li>
+<li><strong>[Wiki]</strong> <a href="http://wiki.seeedstudio.com/Grove_Starter_Kit_for_Azure_Sphere_MT3620_Development_Kit/">MT3620 Grove Shield</a></li>
+<li><strong>[DataSheet]]</strong> <a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/datasheet/MediaTek%20MT3620%20Product%20Brief.pdf">MediaTek MT3620 Product Brief</a></li>
+<li><strong>[DataSheet]</strong> <a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/datasheet/DS_FT4232H.pdf">DS_FT4232H</a></li>
+<li><strong>[Mechanical]</strong> <a href="https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/tree/master/mechanical">Azure Sphere MT3620 Development Board-2D-Drawing</a></li>
+<li><strong>[FAQ Web]</strong> <a href="https://social.msdn.microsoft.com/Forums/en-US/home?forum=azuresphere">Azure Sphere Forum</a></li>
+<li><strong>[FAQ Web]</strong> <a href="https://github.com/MicrosoftDocs/azure-sphere-issues/issues?utf8=%E2%9C%93&amp;q=is%3Aissue">Azure Sphere Github issues</a></li>
+</ul>
+<h2 id="tech-support">Tech Support</h2>
+<p>Please submit any technical issue into our <a href="http://forum.seeedstudio.com/">forum</a> or drop mail to techsupport@seeed.cc.</p>
+
+</body>
+</html>
