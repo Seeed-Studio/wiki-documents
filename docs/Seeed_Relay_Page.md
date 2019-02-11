@@ -3,7 +3,7 @@
 We have released various types of relays on our website. You may find it difficult to make a choice. We feel you pain, let's talk about what's the difference between all those relays, and what's the advantage or disadvantage among them. 
 
 
-For all the relay in our bazaar, please click [bazaar relay tag](https://www.seeedstudio.com/tag/relay.html) to check?
+For all the relay in our bazaar, please click [bazaar relay tag](https://www.seeedstudio.com/tag/relay.html) to check.
 
 
 Before the start, let's check the following table, perhaps, all you need is just a table.
@@ -74,6 +74,13 @@ You may find that these two throws are called **NC** and **NO** respectively, an
 
 
 We only have SPST and SPDT relays in our website now, if you want to check other types of relays please refer to the relay page by [NATIONAL INSTRUMENTS](http://www.ni.com/white-paper/3960/en/).
+
+
+
+**Latching Relay**
+
+Latching Relay is a relay that is set (ON) or reset (OFF) by the input of a pulse voltage. Even after the input voltage is interrupted, this relay maintains its set or reset condition until it receives the next inverting input. It is also called a keep relay.
+Conversely, a non-latching relay maintains its state only while being actuated, most of relays in our website is non-latching relay except the [Grove - 2-Coil Latching Relay](https://www.seeedstudio.com/Grove-2-Coil-Latching-Relay-p-1446.html).
 
 
 
@@ -211,27 +218,40 @@ As shown in Figure 7, there is no axial magnetic field generated when there is n
 In addition to the typical relays described above, we have several special-function relays in our website.
 
 
-**1.Heelight Relay**
+**1.Relay Shield v3.0**
+
+We also provide a relay shield for arduino, this shield integrates four mechanical relays, can carry 8A, 30V load.
+
+<div align="center">
+<figure>
+  <a href="https://www.seeedstudio.com/Relay-Shield-v3-0-p-2440.html" target="_blank"><img src="https://github.com/SeeedDocument/Seeed_Relay_Page/raw/master/img/seeed_relay_shield.jpg" alt="Relay Shield v3.0" title="Relay Shield v3.0" />
+  <figcaption><b>Figure 9</b>. <i>Relay Shield, you can click this figure to check</i></figcaption></a>
+</figure>
+</div>
+
+
+
+**2.Heelight Relay**
 
 You can control the relay through a sound command, isn't it interesting!?
 
 <div align="center">
 <figure>
   <a href="https://www.seeedstudio.com/Heelight-Relay-p-2935.html" target="_blank"><img src="https://github.com/SeeedDocument/Seeed_Relay_Page/raw/master/img/Heelight_Relay.jpg" alt="Heelight Relay" title="Heelight Relay" />
-  <figcaption><b>Figure 8</b>. <i>Heelight Relay, you can click this figure to check this magic relay</i></figcaption></a>
+  <figcaption><b>Figure 9</b>. <i>Heelight Relay, you can click this figure to check this magic relay</i></figcaption></a>
 </figure>
 </div>
 
 
-**2.315MHz Codec-Adaptive Wireless Relay**
+**3.315MHz Codec-Adaptive Wireless Relay**
 
 A wireless relay is a codec-adaptive RF receiver with single channel relay.
 
 
 <div align="center">
 <figure>
-  <a href="https://www.seeedstudio.com/315MHz-Codec-Adaptive-Wireless-Relay-p-550.html" target="_blank"><img src="https://github.com/SeeedDocument/Seeed_Relay_Page/raw/master/img/315MHz%20Codec-Adaptive%20Wireless%20Relay.jpg" alt="Heelight Relay" title="Heelight Relay" />
-  <figcaption><b>Figure 9</b>. <i>Wireless Relay, you can click this figure to check this magic relay</i></figcaption></a>
+  <a href="https://www.seeedstudio.com/315MHz-Codec-Adaptive-Wireless-Relay-p-550.html" target="_blank"><img src="https://github.com/SeeedDocument/Seeed_Relay_Page/raw/master/img/315MHz%20Codec-Adaptive%20Wireless%20Relay.jpg" alt="Wireless Relay" title="Wireless Relay" />
+  <figcaption><b>Figure 10</b>. <i>Wireless Relay, you can click this figure to check</i></figcaption></a>
 </figure>
 </div>
 
