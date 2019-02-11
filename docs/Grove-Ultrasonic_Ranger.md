@@ -390,7 +390,36 @@ pi@raspberrypi:~/GrovePi/Software/Python $ python grove_ultrasonic.py
 
 - A3: Please send an email to techsupport@seeed.cc
 
+**Q4: Can we connect mulitule ultrasonic to one arduino?**
 
+- A4: Yes, Here is the example, one sensor is connected to D2 and other to D3. 
+
+```c++
+#include "Ultrasonic.h"
+
+Ultrasonic ultrasonic1(2);
+Ultrasonic ultrasonic2(3);
+void setup()
+{
+    Serial.begin(9600);
+}
+void loop()
+{
+    long RangeInCentimeters1;
+    long RangeInCentimeters2;
+
+    RangeInCentimeters1 = ultrasonic1.MeasureInCentimeters(); // two measurements should keep an interval
+    Serial.print(RangeInCentimeters1);//0~400cm
+    Serial.println(" cm");
+    
+    RangeInCentimeters2 = ultrasonic2.MeasureInCentimeters(); // two measurements should keep an interval
+    Serial.print(RangeInCentimeters2);//0~400cm
+    Serial.println(" cm");
+    
+    delay(250);
+}
+
+```
 
 ## Resources
 
