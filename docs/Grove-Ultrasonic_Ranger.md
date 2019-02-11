@@ -1,5 +1,4 @@
 ---
-title: Grove - Ultrasonic Ranger
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html
 oldwikiname: Grove - Ultrasonic Ranger
