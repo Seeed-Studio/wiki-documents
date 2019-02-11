@@ -313,7 +313,7 @@ If you always get an unauthentic value, please try to calibrate the sensor.
 Open the example **calibration** and upload to your Arduino, open Serial monitor to get info when it's calibrating. 
 
 !!!Note
-    The calibration has been done before the modules leave the factory. If you want to recalibrate, please do make sure that the air condition is fresh. And the calibration may need munutes to half an hour. 
+    The calibration has been done before the modules leave the factory. If you want to recalibrate, please do make sure that the air condition is fresh. And the calibration may need minutes to half an hour. 
 
 Resources
 ---------
