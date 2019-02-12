@@ -69,6 +69,7 @@ SeeedStudio BeagleBone Green Wireless (BBGW) is a joint effort by [BeagleBoard.o
 - Sensor Hub
 - Robot
 
+
 ###BBGW Starter Tutorial #1-#6
 Here are some tutorials for the starters to use some Grove modules to realize their interesting ideas with BeagleBone Green Wireless(BBGW). The tutorials are based on Python and mraa/upm library.  
 
@@ -88,6 +89,7 @@ Here are some tutorials for the starters to use some Grove modules to realize th
 |---------------|-----|--------------|
 |![](http://statics3.seeedstudio.com/upload/img/community/20160526075527-90edbd.png)|![](http://statics3.seeedstudio.com/upload/img/community/20160524014508-4a47a0.png)|![](http://statics3.seeedstudio.com/upload/img/community/20160523121641-1ed045.png)|
 |[MAKE IT NOW!](https://community.seeedstudio.com/Bluetooth-Device-Detection-with-the-BeagleBone-Green-Wireless-p-1601.html)|[MAKE IT NOW!](https://community.seeedstudio.com/Home-Control-Center-using-BeagleBone-Green-Wireless-p-1596.html)|[MAKE IT NOW!](https://community.seeedstudio.com/SAP-HCP-IOT-SERVICE-WITH-WIOLINK-p-1581.html)|
+
 
 ## Hardware Overview
 
@@ -140,6 +142,11 @@ Each digital I/O pin has 8 different modes that can be selected, including GPIO.
     For shifting out data fast, you might consider using one of the SPI ports.
 
 ![enter image description here](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/blob/master/images/cape-headers-spi.png?raw=true)
+
+
+## Mechincal Drawing
+
+<iframe src="https://3dwarehouse.sketchup.com/embed.html?mid=3b02b643-b219-43b8-b5d5-d8e886608aaa" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="800" height="450" allowfullscreen></iframe>
 
 
 ## Getting Started
@@ -503,7 +510,7 @@ Discovery started
 -----
 - **[PDF]** [BeagleBone_Green_Wireless Schematic(pdf)](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/tree/master/resources/BeagleBone_Green Wireless_V1.0_SCH_20160314.pdf)
 - **[Zip]** [AM335X Datasheet](https://github.com/SeeedDocument/Bazaar_file/raw/master/102010027/AM335x.pdf)
-- **[3D]** [BBGW 3D Model](https://github.com/SeeedDocument/forum_doc/tree/master/reg/BBGW_3D)
+- **[3D]** [BBGW 3D Model](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/raw/master/resources/BBGW_0421.zip)
 
 ## Project
 
