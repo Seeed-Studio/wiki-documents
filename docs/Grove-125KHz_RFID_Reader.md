@@ -299,6 +299,8 @@ D0[7..0]
 ## Resources
 
 - **[Demo]** [Grove - 125KHz RFID Reader Demo](https://github.com/SeeedDocument/Grove-125KHz_RFID_Reader/raw/master/res/RFID_Wiegand_INT.zip)
+- **[PDF]** [Declaration of conformity](https://github.com/SeeedDocument/Grove-125KHz_RFID_Reader/raw/master/res/CSTR140821808_Declaration%20of%20conformity.pdf)
+- **[PDF]** [Test Report](https://github.com/SeeedDocument/Grove-125KHz_RFID_Reader/raw/master/res/CSTR140821808_test%20report.pdf)
 
 ## Projects
 
