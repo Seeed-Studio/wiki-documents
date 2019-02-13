@@ -225,7 +225,7 @@ We also provide a relay shield for arduino, this shield integrates four mechanic
 <div align="center">
 <figure>
   <a href="https://www.seeedstudio.com/Relay-Shield-v3-0-p-2440.html" target="_blank"><img src="https://github.com/SeeedDocument/Seeed_Relay_Page/raw/master/img/seeed_relay_shield.jpg" alt="Relay Shield v3.0" title="Relay Shield v3.0" />
-  <figcaption><b>Figure 9</b>. <i>Relay Shield, you can click this figure to check</i></figcaption></a>
+  <figcaption><b>Figure 8</b>. <i>Relay Shield, you can click this figure to check</i></figcaption></a>
 </figure>
 </div>
 
