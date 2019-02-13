@@ -26,7 +26,7 @@ Before the start, let's check the following table, perhaps, all you need is just
 <div align="center"><b>Table 1.</b><i>Seeed Relay Parameter</i></div>
 
 
-## Glossary
+## Glossary 
 
 A relay is an electrically operated switch, the relay opens when the two contacts are disconnected, and the relay turns on when the two contacts touch.
 
