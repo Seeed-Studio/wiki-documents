@@ -505,6 +505,7 @@ pages:
           - Grove - 16x2 LCD Series: Grove-16x2_LCD_Series.md
           - Grove - I2C UV Sensor (VEML6070): Grove-I2C_UV_Sensor-VEML6070.md
           - Grove - Coulomb Counter 3.3V to 5V (LTC2941): Grove-Coulomb_Counter_3.3V_to_5V-LTC2941.md
+          - Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931: Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931.md
           
           
       - Actuator:
