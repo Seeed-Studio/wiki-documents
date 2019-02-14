@@ -26,7 +26,7 @@ Temperature sensors like thermocouples have very wide measuring range and are ad
 
 |Temperature Sensor Name|Interface|Range|Accuracy|Sensitivity|Datasheet|
 |-----------------------|---------|----|---------|-----------|----|
-|[Temp&Humi Sensor](http://wiki.seeed.cc/Grove-TemperatureAndHumidity_Sensor/) | Digital | 0~50C|+-2C|1C|[DHT11](http://wiki.seeedstudio.com/images/3/31/DHT11.pdf)|
+|[Temp&Humi Sensor](http://wiki.seeed.cc/Grove-TemperatureAndHumidity_Sensor/) | Digital | 0~50C|+-2C|1C|[DHT11](https://github.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor/raw/master/res/DHT11.pdf)|
 |[Temp&Humi Sensor Pro](http://wiki.seeed.cc/Grove-Temperature_and_Humidity_Sensor_Pro/) | Digital | -40~80C|+-0.5C|0.1C| [DHT22/AM2302](https://github.com/SeeedDocument/Grove-Temperature_and_Humidity_Sensor_Pro/raw/master/res/AM2302.pdf) |
 |[Temperature Sensor](http://wiki.seeed.cc/Grove-Temperature_Sensor_V1.2/) | Analog | -40~125C|+-1.5C|N/A|[NCP18WF104F03RC](https://github.com/SeeedDocument/Grove-Temperature_Sensor_V1.2/raw/master/res/NCP18WF104F03RC.pdf) |
 |[One Wire Temperature Sensor](http://datasheets.maxim-ic.com/en/ds/DS18B20.pdf) | One Wire | -55~125C|+-0.5C|0.5C|[DS18B20](http://datasheets.maxim-ic.com/en/ds/DS18B20.pdf) |
