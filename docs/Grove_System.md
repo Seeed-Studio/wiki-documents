@@ -75,15 +75,15 @@ Here are the dimensions.
 
 ![](https://github.com/SeeedDocument/GroveSystem/raw/master/images/20_20smd_vertical.png)
 
-- Grove 40X40 DIP: 
+- Grove 20X40 DIP: 
 
 ![](https://github.com/SeeedDocument/GroveSystem/raw/master/images/40_40dip.png)
 
-- Grove 40X40 SMD Horizontal: 
+- Grove 20X40 SMD Horizontal: 
 
 ![](https://github.com/SeeedDocument/GroveSystem/raw/master/images/40_40smd_horizontal.png)
 
-- Grove 40X40 SMD Vertical: 
+- Grove 20X40 SMD Vertical: 
 
 ![](https://github.com/SeeedDocument/GroveSystem/raw/master/images/40_40smd_vertical.png)
 

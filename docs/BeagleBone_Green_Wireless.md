@@ -146,7 +146,13 @@ Each digital I/O pin has 8 different modes that can be selected, including GPIO.
 
 ## Mechincal Drawing
 
+![](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/raw/master/images/bbgw_drawing_1.png)
+
+![](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/raw/master/images/bbgw_drawing_2.png)
+
 <iframe src="https://3dwarehouse.sketchup.com/embed.html?mid=3b02b643-b219-43b8-b5d5-d8e886608aaa" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="800" height="450" allowfullscreen></iframe>
+
+
 
 
 ## Getting Started
@@ -511,6 +517,7 @@ Discovery started
 - **[PDF]** [BeagleBone_Green_Wireless Schematic(pdf)](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/tree/master/resources/BeagleBone_Green Wireless_V1.0_SCH_20160314.pdf)
 - **[Zip]** [AM335X Datasheet](https://github.com/SeeedDocument/Bazaar_file/raw/master/102010027/AM335x.pdf)
 - **[3D]** [BBGW 3D Model](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/raw/master/resources/BBGW_0421.zip)
+- **[PDF]** [BBGW Mechincal Drawing](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/raw/master/resources/BBGW-PCBA.pdf)
 
 ## Project
 

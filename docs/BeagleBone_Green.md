@@ -150,6 +150,15 @@ Each digital I/O pin has 8 different modes that can be selected, including GPIO.
 
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/PINMAP_SPI.png)
 
+
+## Mechincal Drawing
+
+![](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/images/BBG_drawing_1.png)
+
+![](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/images/BBG_drawing_2.png)
+
+<iframe src="https://3dwarehouse.sketchup.com/embed.html?mid=26887ef4-fe20-4d82-b4dc-25f58774d64f" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="800" height="450" allowfullscreen></iframe>
+
 ## Getting Started
 
 
@@ -380,6 +389,8 @@ There're many references to help you to get more information about the board.
 - **[RAR]** [BEAGLEBONE_GREEN Schematic(OrCAD)](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/BEAGLEBONE_GREEN_V1_166%28sch%29.rar)
 - **[RAR]** [BEAGLEBONE_GREEN PCB(OrCAD)](https://github.com/SeeedDocument/BeagleBone_Green/blob/master/resources/BeagleBone_Green_v1.166%28board%29.rar)
 - **[Zip]** [AM335X Datasheet](https://github.com/SeeedDocument/Bazaar_file/raw/master/102010027/AM335x.pdf)
+- **[3D]** [BBG 3D Model](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/BBG.zip)
+- **[PDF]** [BBG Mechincal Drawing](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/BBG-PCBA.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc.
