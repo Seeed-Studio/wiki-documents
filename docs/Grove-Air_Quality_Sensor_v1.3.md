@@ -93,101 +93,94 @@ Let's try it out!
 - **Step 3.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
 ```c
-/*
-  AirQuality Demo V1.0.
-  connect to A1 to start testing. it will needs about 20s to start 
-* By: http://www.seeedstudio.com
-*/
-#include"AirQuality.h"
-#include"Arduino.h"
-AirQuality airqualitysensor;
-int current_quality =-1;
-void setup()
-{
-    Serial.begin(9600);
-    airqualitysensor.init(A0);
+ #include "Air_Quality_Sensor.h"
+
+AirQualitySensor sensor(A0);
+
+void setup(void) {
+  Serial.begin(9600);
+  while (!Serial);
+
+  Serial.println("Waiting sensor to init...");
+  delay(20000);
+  
+  if (sensor.init()) {
+    Serial.println("Sensor ready.");
+  }
+  else {
+    Serial.println("Sensor ERROR!");
+  }
 }
-void loop()
-{
-    current_quality=airqualitysensor.slope();
-    if (current_quality >= 0)// if a valid data returned.
-    {
-        if (current_quality==0)
-            Serial.println("High pollution! Force signal active");
-        else if (current_quality==1)
-            Serial.println("High pollution!");
-        else if (current_quality==2)
-            Serial.println("Low pollution!");
-        else if (current_quality ==3)
-            Serial.println("Fresh air");
-    }
+
+void loop(void) {
+  int quality = sensor.slope();
+
+  Serial.print("Sensor value: ");
+  Serial.println(sensor.getValue());
+  
+  if (quality == AirQualitySensor::FORCE_SIGNAL) {
+    Serial.println("High pollution! Force signal active.");
+  }
+  else if (quality == AirQualitySensor::HIGH_POLLUTION) {
+    Serial.println("High pollution!");
+  }
+  else if (quality == AirQualitySensor::LOW_POLLUTION) {
+    Serial.println("Low pollution!");
+  }
+  else if (quality == AirQualitySensor::FRESH_AIR) {
+    Serial.println("Fresh air.");
+  }
+  
+  delay(1000);
 }
-ISR(TIMER2_OVF_vect)
-{
-    if(airqualitysensor.counter==122)//set 2 seconds as a detected duty
-    {
-        airqualitysensor.last_vol=airqualitysensor.first_vol;
-        airqualitysensor.first_vol=analogRead(A0);
-        airqualitysensor.counter=0;
-        airqualitysensor.timer_index=1;
-        PORTB=PORTB^0x20;
-    }
-    else
-    {
-        airqualitysensor.counter++;
-    }
-}
+
 ```
 
 - **Step 4.** We will see the distance display on terminal as below.
 
-![](https://github.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/raw/master/img/AirQualitySensot_Demo.jpg)
+```
+Waiting sensor to init...
+Sensor ready.
+Sensor value: 48
+Fresh air.
+Sensor value: 51
+Fresh air.
+Sensor value: 49
+Fresh air.
+Sensor value: 48
+Fresh air.
+Sensor value: 48
+Fresh air.
+Sensor value: 48
+Fresh air.
+```
 
 To adjust the thresholds and indicating messages, refer to the decision structure below in the .cpp file.
 
 ```c
-int AirQuality::slope(void)
-{
-    while(timer_index)
-    {
-        if(first_vol-last_vol>400||first_vol>700)
-        {
-            Serial.println("High pollution! Force signal active.");
-            timer_index=0;
-            avg_voltage();
-            return 0;
+int AirQualitySensor::slope(void) {
+    _lastVoltage = _currentVoltage;
+    _currentVoltage = analogRead(_pin);
 
-        }
-        else if((first_vol-last_vol>400&&first_vol<700)||first_vol-vol_standard>150)
-        {
-            Serial.print("sensor_value:");
-            Serial.print(first_vol);
-            Serial.println("\t High pollution!");
-            timer_index=0;
-            avg_voltage();
-            return 1;
+    _voltageSum += _currentVoltage;
+    _volSumCount += 1;
 
-        }
-        else if((first_vol-last_vol>200&&first_vol<700)||first_vol-vol_standard>50)
-        {
-            //Serial.println(first_vol-last_vol);
-            Serial.print("sensor_value:");
-            Serial.print(first_vol);
-            Serial.println("\t Low pollution!");
-            timer_index=0;
-            avg_voltage();
-            return 2;
-        }
-        else
-        {
-            avg_voltage();
-            Serial.print("sensor_value:");
-            Serial.print(first_vol);
-            Serial.println("\t Air fresh");
-            timer_index=0;
-            return 3;
-        }
+    updateStandardVoltage();
+    if (_currentVoltage - _lastVoltage > 400 || _currentVoltage > 700) {
+        return AirQualitySensor::FORCE_SIGNAL;
     }
+    else if ((_currentVoltage - _lastVoltage > 400 && _currentVoltage < 700)
+             || _currentVoltage - _standardVoltage > 150) {
+        return AirQualitySensor::HIGH_POLLUTION;
+    }
+    else if ((_currentVoltage - _lastVoltage > 200 && _currentVoltage < 700)
+             || _currentVoltage - _standardVoltage > 50) {
+        return AirQualitySensor::LOW_POLLUTION;
+    }
+    else {
+        return AirQualitySensor::FRESH_AIR;
+    }
+
     return -1;
 }
 ```
