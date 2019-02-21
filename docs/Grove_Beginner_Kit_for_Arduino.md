@@ -11,6 +11,8 @@ sku: 110020171
 
 ## GROVE SYSTEM
 
+![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/pack.jpg)
+
 Grove is a modular prototyping system consist of a base unit and various modules with standardized connector. the base unit is generally a microprocessor which allows for communicates, processes and controls the input or output from the Grove modules. Every single Grove module typically addresses a single function, range from a simple button to a more complex heart rate sensor. the standardised Grove connector allows user to assemble Grove units with building block approach, compared to the jumper or solder based system it is much easier to assemble or disassemble, which simplifies the learning system for  experimenting, building and prototyping.
 We also provide Grove to Pin Header Converter or Grove Base HAT available for variety developing platforms for those who wants to use grove sensor and actuator modules without Grove System Development Board.
 
@@ -20,7 +22,6 @@ Grove system users need to have at least some basic electronic knowledge backgro
 
 ## GROVE STARTER KIT
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/pack.jpg)
 
 Grove start kit contains one Seeeduino Lotus V1.1 Dev Board(Arduino Compatible) and 8 modules. The detailed information are listed below.
 
@@ -111,12 +112,11 @@ The Grove - Light sensor integrates a photo-resistor(light dependent resistor) t
 
 Grove-Line finder is designed for line-following robot. It has an IR emitting LED and an IR sensitive phototransistor. It can output digital signal to a microcontroller so that the robot can follow a black line on white background, or vice versa. 
 
-**[Grove - 16 * 2 LCD](https://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html)**
-
+**[Grove - LCD RGB Backlight](https://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html)**
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/LCD.jpg)
 
-This Grove – 162 LCD module is a 16 Characters  2 Lines LCD display, it uses I2C bus interface to communicate with the development board, thus these will reduce the pin header from 10 to 2 which is very convenient for the Grove system. This LCD display module also supports customise characters, you can create and display heart symbol or stick-man on this LCD module through a simple coding configuration.
+This Grove - LCD RGB Backlight module is a 16 Characters  2 Lines LCD display, it uses I2C bus interface to communicate with the development board, thus these will reduce the pin header from 10 to 2 which is very convenient for the Grove system. This LCD display module also supports customise characters, you can create and display heart symbol or stick-man on this LCD module through a simple coding configuration.
 
 **[Grove - Temperature & Humidity Sensor(DHT11)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DHT1-p-745.html)**
 
@@ -1580,13 +1580,13 @@ You should notice when the line finder detects black line, the LED will emit Red
 
 Now you can build your own line tracking car by using this line finder module and two motors with a motor driver(H-bridge), so when the line finder detects black line, active one side of the wheel motor, once the line finder is off the black line, stop the spinning side of the wheel motor, and active the other side of wheel motor, so car will drive along the black line with the front of the car constant turning left or right.
 
-### Session 6: Grove - 16 * 2 LCD
+### Session 6: Grove - LCD RGB Backlight
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/LCD.jpg)
 
 **Objective**	
 
-Uses 16*2 LCD screen to display “Hello World” and some custom characters.
+Uses Grove - LCD RGB Backlight screen to display “Hello World” and some custom characters.
 
 **Key knowledge**
 
@@ -1609,12 +1609,12 @@ Included in the kit
 
 - Seeeduino Lotus V1.1 development board
 - Grove cable
-- Grove – 16 * 2 LCD
+- Grove - LCD RGB Backlight
 
 
 **Hardware connection**
 
-Step 1: Connect Grove – 16 * 2 LCD module to I2C. port of Seeeduino Lotus note: it is the I2C port followed by one dot.
+Step 1: Connect Grove - LCD RGB Backlight module to I2C. port of Seeeduino Lotus note: it is the I2C port followed by one dot.
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/lcd_ard.jpg)
 
@@ -1626,7 +1626,7 @@ Step 2:  Link Seeeduino Lotus with computer by a micro USB cable.
 
 **Add Library**
 
-Add [Library](https://github.com/Seeed- Studio/Grove_LCD_RGB_Backlight/archive/master.zip) for Grove-16  2 LCD Screen 
+Add [Library](https://github.com/Seeed- Studio/Grove_LCD_RGB_Backlight/archive/master.zip) for Grove - LCD RGB Backlight Screen 
 
 Please follow the instructions in tutorial 3 on how to <a href="#step3">add library</a>.
 
@@ -2181,7 +2181,7 @@ You should see a similar text of temperature and humidity data display in serial
 
 **Example 2**: Uses LCD screen to display data from DHT11 sensor
 
-Firstly Connect Grove – 16 * 2 LCD module to I2C. port of Seeeduino Lotus note: it is the I2C port followed by one dot.
+Firstly Connect Grove - LCD RGB Backlight module to I2C. port of Seeeduino Lotus note: it is the I2C port followed by one dot.
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/DHT11_lcd.png)
 
@@ -2265,7 +2265,7 @@ you can see the current room temperature and humidity display on the LCD screen.
 
 **Further Explore**
 
-After this session, you can build your own weather station by using DHT11 sensor and the 16*2 LCD display.
+After this session, you can build your own weather station by using DHT11 sensor and the Grove - LCD RGB Backlight display.
 
 ### Session 8: Grove - 3-Axis Digital Accelerometer
 
@@ -2294,7 +2294,7 @@ Included in the kit
 - Seeeduino Lotus V1.1 development board
 - Grove cable
 - Grove – 3-Axis Digital Accelerometer
-- Grove – 16  2 LCD
+- Grove - LCD RGB Backlight
 - Grove – Tilt Switch	
 
 
@@ -2504,7 +2504,7 @@ Now we can use 3-axis accelerometer to control or correct the direction of air p
 
 **Example 3**: Uses LCD screen to display the output data from 3-axis accelerometer
 
-Please connect Grove – Tilt Switch to D5 port of Seeeduino Lotus, and connect Grove – 16 * 2 LCD module to I2C. port of Seeeduino Lotus, NOTE: it is the I2C port followed by one dot.
+Please connect Grove – Tilt Switch to D5 port of Seeeduino Lotus, and connect Grove - LCD RGB Backlight module to I2C. port of Seeeduino Lotus, NOTE: it is the I2C port followed by one dot.
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/3_axis_lcd_tilt.jpg)
 
@@ -2716,7 +2716,7 @@ Included in the kit
 	- Grove – Buzzer
 	- Grove – Chainable RGB LED
 	- Grove – Light Sensor
-	- Grove – 16  2 LCD
+	- Grove - LCD RGB Backlight
 	- Grove – Temperature &Humidity Sensor(DHT11)
 	- Grove – Tilt Switch
 
@@ -2735,7 +2735,7 @@ Connect Grove – Light Sensor module to A0 port of Seeeduino Lotus
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/connect2.jpg)
 
-Connect Grove – 16 * 2 LCD module to I2C. port of Seeeduino Lotus note: it is the I2C port followed by one dot.
+Connect Grove - LCD RGB Backlight module to I2C. port of Seeeduino Lotus note: it is the I2C port followed by one dot.
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/connect3.jpg)
 
@@ -3029,7 +3029,7 @@ Included in the kit
 - Grove cable
 - Grove – Buzzer
 - Grove – LED Chainable RGB LED
-- Grove – 16  2 LCD
+- Grove - LCD RGB Backlight
 - Grove – 3-Axis Digital Accelerometer
 
 **Hardware connection**
@@ -3045,7 +3045,7 @@ Connect Grove – Chainable RGB LED to D7 port of Seeeduino Lotus
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/connect1.jpg)
 
 
-Connect Grove – 16 * 2 LCD module to I2C. port of Seeeduino Lotus note: it is the I2C port followed by one dot.
+Connect Grove - LCD RGB Backlight module to I2C. port of Seeeduino Lotus note: it is the I2C port followed by one dot.
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/connect6.jpg)
  
