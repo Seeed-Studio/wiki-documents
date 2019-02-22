@@ -1,5 +1,5 @@
 ---
-title: Grove - Servo
+name: Grove - Servo
 category: Actuator
 bzurl: https://www.seeedstudio.com/Grove-Servo-p-1241.html
 oldwikiname:  Grove - Servo

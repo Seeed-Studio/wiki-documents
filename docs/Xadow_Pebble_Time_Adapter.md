@@ -1,5 +1,5 @@
 ---
-title: Xadow Pebble Time Adapter
+name: Xadow Pebble Time Adapter
 category: RePhone
 bzurl: https://www.seeedstudio.com/RePhone-Strap-Kit-for-Pebble-Time-p-2633.html
 oldwikiname: Xadow_Pebble_Time_Adapter

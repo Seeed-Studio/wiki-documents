@@ -1,5 +1,5 @@
 ---
-title: Grove - Bee Socket
+name: Grove - Bee Socket
 category: Communication
 bzurl: https://www.seeedstudio.com/Grove-Bee-Socket-p-1449.html
 oldwikiname:  Grove - Bee Socket

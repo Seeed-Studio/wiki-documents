@@ -1,5 +1,5 @@
 ---
-title: LinkIt ONE Tutorial - Light Sensor
+name: LinkIt ONE Tutorial - Light Sensor
 category: Tutorial
 oldwikiname:  LinkIt ONE Tutorial - Light Sensor
 prodimagename:

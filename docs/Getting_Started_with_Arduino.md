@@ -1,5 +1,5 @@
 ---
-title: Get Started with Arduino
+name: Get Started with Arduino
 category: Tutorial
 oldwikiname:  Get_Started_with_Arduino
 prodimagename:

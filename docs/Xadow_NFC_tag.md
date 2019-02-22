@@ -1,5 +1,5 @@
 ---
-title: Xadow - NFC Tag
+name: Xadow - NFC Tag
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-NFC-Tag-p-1881.html
 oldwikiname: Xadow - NFC Tag

@@ -1,5 +1,5 @@
 ---
-title: Xadow - BLE Slave
+name: Xadow - BLE Slave
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-BLE-Slave-p-1546.html
 oldwikiname: Xadow - BLE  Slave

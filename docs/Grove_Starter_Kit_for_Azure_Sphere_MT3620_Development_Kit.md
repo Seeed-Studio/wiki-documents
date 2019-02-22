@@ -1,5 +1,5 @@
 ---
-title: Grove Starter Kit for Azure Sphere MT3620 Development Kit
+name: Grove Starter Kit for Azure Sphere MT3620 Development Kit
 category: Azure
 bzurl:
 oldwikiname: 

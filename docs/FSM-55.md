@@ -1,5 +1,5 @@
 ---
-title: FSM-55
+name: FSM-55
 category: MakerPro
 bzurl: https://www.seeedstudio.com/FSM-55-LED-Matrix-Display-p-2121.html
 oldwikiname:  FSM-55

@@ -1,5 +1,5 @@
 ---
-title: License
+name: License
 nointro:
 ---
 

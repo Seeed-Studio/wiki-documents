@@ -1,5 +1,5 @@
 ---
-title: CAN-BUS Shield V1.2
+name: CAN-BUS Shield V1.2
 category: Shield
 bzurl: https://www.seeedstudio.com/CAN-BUS-Shield-V1.2-p-2256.html
 oldwikiname: CAN-BUS_Shield_V1.2

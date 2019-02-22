@@ -1,5 +1,5 @@
 ---
-title: Grove - Flame Sensor
+name: Grove - Flame Sensor
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Flame-Sensor-p-1450.html
 oldwikiname: Grove_-_Flame_Sensor

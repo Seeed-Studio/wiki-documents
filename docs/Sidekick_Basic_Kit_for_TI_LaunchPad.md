@@ -1,5 +1,5 @@
 ---
-title: Sidekick Basic Kit for TI LaunchPad
+name: Sidekick Basic Kit for TI LaunchPad
 category: Arduino
 bzurl:  https://www.seeedstudio.com/Sidekick-Basic-Kit-for-TI-LaunchPad-p-2571.html
 oldwikiname: Sidekick Basic Kit for TI LaunchPad

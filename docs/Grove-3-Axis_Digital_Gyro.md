@@ -1,5 +1,5 @@
 ---
-title: Grove - 3-Axis Digital Gyro
+name: Grove - 3-Axis Digital Gyro
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-3-Axis-Digital-Gyro-p-750.html
 oldwikiname: Grove_-_3-Axis_Digital_Gyro

@@ -1,5 +1,5 @@
 ---
-title: Atom Node
+name: Atom Node
 category: Actuator
 bzurl: https://www.seeedstudio.com/Atom-Node-Black-Alloy-Limited-Edition-p-1494.html
 oldwikiname: Atom Node

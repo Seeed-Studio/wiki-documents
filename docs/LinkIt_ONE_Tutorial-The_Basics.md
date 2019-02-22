@@ -1,5 +1,5 @@
 ---
-title: LinkIt ONE Tutorial - The Basics
+name: LinkIt ONE Tutorial - The Basics
 category: Tutorial
 oldwikiname:  LinkIt ONE Tutorial - The Basics
 prodimagename:

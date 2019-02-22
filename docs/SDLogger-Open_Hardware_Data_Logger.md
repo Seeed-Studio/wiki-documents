@@ -1,5 +1,5 @@
 ---
-title: SDLogger - Open Hardware Data Logger
+name: SDLogger - Open Hardware Data Logger
 category: MakerPro
 bzurl: https://www.seeedstudio.com/sdlogger-open-hardware-data-logger-p-723.html?cPath=132_136
 oldwikiname:  SDLogger - Open Hardware Data Logger

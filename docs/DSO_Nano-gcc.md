@@ -1,5 +1,5 @@
 ---
-title: DSO Nano/gcc
+name: DSO Nano/gcc
 category: MakerPro
 bzurl:
 oldwikiname:  DSO Nano/gcc

@@ -1,5 +1,5 @@
 ---
-title: Grove - Sound Recorder
+name: Grove - Sound Recorder
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Sound-Recorder-p-904.html
 oldwikiname: Grove_-_Sound_Recorder

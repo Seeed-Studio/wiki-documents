@@ -1,5 +1,5 @@
 ---
-title: Grove - Temp&Humi&Barometer Sensor (BME280)
+name: Grove - Temp&Humi&Barometer Sensor (BME280)
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-Temp&Humi&Barometer-Sensor-(BME280)-p-2653.html
 oldwikiname: Grove_-_Barometer_Sensor(BME280)

@@ -1,5 +1,5 @@
 ---
-title: Grove - Mouse Encoder
+name: Grove - Mouse Encoder
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Mouse-Encoder-p-2607.html
 oldwikiname: Grove_-_Mouser_Encoder

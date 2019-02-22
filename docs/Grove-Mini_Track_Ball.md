@@ -1,5 +1,5 @@
 ---
-title: Grove - Mini Track Ball
+name: Grove - Mini Track Ball
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Mini-Track-Ball-p-2586.html
 oldwikiname: Grove_-_Mini_Track_Ball

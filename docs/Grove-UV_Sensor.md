@@ -1,5 +1,5 @@
 ---
-title: Grove - UV Sensor
+name: Grove - UV Sensor
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-UV-Sensor-p-1540.html
 oldwikiname: Grove_-_UV_Sensor

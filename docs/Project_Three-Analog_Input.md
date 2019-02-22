@@ -1,6 +1,6 @@
 # Project Three – Analog Input
 ---
-title: Project Three – Analog Input
+name: Project Three – Analog Input
 category: Tutorial
 oldwikiname:  Project Two – Digital Input
 prodimagename:

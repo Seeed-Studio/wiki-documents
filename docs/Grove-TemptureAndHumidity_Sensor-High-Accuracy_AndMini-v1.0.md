@@ -1,5 +1,5 @@
 ---
-title: Grove - Temperature&Humidity Sensor (High-Accuracy &Mini) v1.0
+name: Grove - Temperature&Humidity Sensor (High-Accuracy &Mini) v1.0
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-Temperature&Humidity-Sensor-(High-Accuracy-&-Mini)-p-1921.html
 oldwikiname: Grove_-_Tempture&Humidity_Sensor_(High-Accuracy_&Mini)_v1.0

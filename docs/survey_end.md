@@ -1,5 +1,5 @@
 ---
-title: survey_end
+name: survey_end
 category: About
 ---
 

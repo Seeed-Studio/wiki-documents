@@ -1,5 +1,5 @@
 ---
-title: Grove - OR
+name: Grove - OR
 category: Others
 bzurl:  https://www.seeedstudio.com/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14
 oldwikiname:  Grove - OR

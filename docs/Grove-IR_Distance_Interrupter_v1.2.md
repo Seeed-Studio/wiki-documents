@@ -1,5 +1,5 @@
 ---
-title: Grove - IR Distance Interrupter v1.2
+name: Grove - IR Distance Interrupter v1.2
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-IR-Distance-Interrupter-p-1278.html
 oldwikiname: Grove_-_IR_Distance_Interrupter_v1.2

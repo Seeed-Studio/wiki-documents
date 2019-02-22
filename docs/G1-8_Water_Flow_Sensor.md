@@ -1,5 +1,5 @@
 ---
-title: G1/8" Water Flow Sensor
+name: G1/8" Water Flow Sensor
 category: MakerPro
 bzurl: http://www.seeedstudio.com/depot/G18-Water-Flow-Sensor-p-1346.html?cPath=25_32
 oldwikiname:  G1/8" Water Flow Sensor

@@ -1,5 +1,5 @@
 ---
-title: LinkIt Smart 7688
+name: LinkIt Smart 7688
 category: LinkIt
 bzurl: https://www.seeedstudio.com/LinkIt-Smart-7688-p-2573.html
 oldwikiname:

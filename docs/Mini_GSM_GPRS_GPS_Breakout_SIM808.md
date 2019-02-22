@@ -1,5 +1,5 @@
 ---
-title: Mini GSM/GPRS+GPS Breakout SIM808
+name: Mini GSM/GPRS+GPS Breakout SIM808
 category: Discontinued
 bzurl:
 oldwikiname: Mini-GSM-GPRS-GPS-Breakout-SIM808

@@ -1,5 +1,5 @@
 ---
-title: Grove - 6-Axis Accelerometer&Gyroscope
+name: Grove - 6-Axis Accelerometer&Gyroscope
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-6-Axis-Accelerometer&Gyroscope-p-2606.html
 oldwikiname: Grove_-_6-Axis_Accelerometer&Gyroscope

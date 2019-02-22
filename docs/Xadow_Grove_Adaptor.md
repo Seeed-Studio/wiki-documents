@@ -1,5 +1,5 @@
 ---
-title: Xadow - Grove Adaptor
+name: Xadow - Grove Adaptor
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-Adaptor-p-1624.html
 oldwikiname: Xadow - Grove Adaptor

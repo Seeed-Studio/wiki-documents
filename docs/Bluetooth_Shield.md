@@ -1,5 +1,5 @@
 ---
-title:  Bluetooth Shield‏‎
+name:  Bluetooth Shield‏‎
 category: Discontinued
 bzurl:
 oldwikiname: Bluetooth_Shield‏‎

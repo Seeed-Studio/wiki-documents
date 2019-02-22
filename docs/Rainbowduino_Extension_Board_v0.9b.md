@@ -1,5 +1,5 @@
 ---
-title: Rainbowduino Extension Board v0.9b
+name: Rainbowduino Extension Board v0.9b
 category: Discontinued
 bzurl:
 oldwikiname: Rainbowduino_Extension_Board_v0.9b

@@ -1,5 +1,5 @@
 ---
-title: Xadow Tutorial - Communicate via BLE
+name: Xadow Tutorial - Communicate via BLE
 category: RePhone
 oldwikiname: Xadow tutorial-Communicate via BLE
 surveyurl: https://www.research.net/r/Xadow_Tutorial_Communicate_via_BLE

@@ -1,5 +1,5 @@
 ---
-title: Grove - Piezo Vibration Sensor
+name: Grove - Piezo Vibration Sensor
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Piezo-Vibration-Sensor-p-1411.html
 oldwikiname: Grove_-_Piezo_Vibration_Sensor

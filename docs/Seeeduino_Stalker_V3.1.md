@@ -1,5 +1,5 @@
 ---
-title: Seeeduino Stalker V3.1
+name: Seeeduino Stalker V3.1
 category: Arduino
 bzurl: http://www.seeedstudio.com/Seeeduino-Stalker-V3.1-p-2686.html
 prodimagename: cover.JPG

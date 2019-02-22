@@ -1,5 +1,5 @@
 ---
-title: XadowTtutorial-Shaking Shaking
+name: XadowTtutorial-Shaking Shaking
 category: RePhone
 oldwikiname: Xadow tutorial-shaking shaking
 surveyurl: https://www.research.net/r/Xadow_Tutorial_Shaking_Shaking

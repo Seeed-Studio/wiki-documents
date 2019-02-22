@@ -1,5 +1,5 @@
 ---
-title: Rainbowduino LED driver platform - ATmega328
+name: Rainbowduino LED driver platform - ATmega328
 category: Arduino
 bzurl: https://www.seeedstudio.com/Rainbowduino-LED-driver-platform-Atmega-328-p-371.html
 oldwikiname:  Rainbowduino LED driver platform - ATmega328

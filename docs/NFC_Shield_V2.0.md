@@ -1,5 +1,5 @@
 ---
-title: NFC Shield V2.0
+name: NFC Shield V2.0
 category: Shield
 bzurl: https://seeedstudio.com/NFC-Shield-V2.0-p-1370.html
 oldwikiname: NFC_Shield_V2.0

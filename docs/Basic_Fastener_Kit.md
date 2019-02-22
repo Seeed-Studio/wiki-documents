@@ -1,5 +1,5 @@
 ---
-title: Basic Fastener Kit
+name: Basic Fastener Kit
 category: Arduino
 bzurl: https://www.seeedstudio.com/Basic-Fastener-Kit-p-1555.html
 oldwikiname:  Basic Fastener Kit

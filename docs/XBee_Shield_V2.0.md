@@ -1,5 +1,5 @@
 ---
-title: XBee Shield V2.0
+name: XBee Shield V2.0
 category: Shield
 bzurl: https://www.seeedstudio.com/XBee-Shield-V2.0-p-1375.html
 oldwikiname:  XBee Shield V2.0

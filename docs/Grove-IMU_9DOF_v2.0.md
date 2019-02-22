@@ -1,5 +1,5 @@
 ---
-title: Grove - IMU 9DOF v2.0
+name: Grove - IMU 9DOF v2.0
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-IMU-9DOF-v2.0-p-2400.html
 oldwikiname: Grove_-_IMU_9DOF_v2.0

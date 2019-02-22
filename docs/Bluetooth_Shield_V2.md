@@ -1,5 +1,5 @@
 ---
-title: Bluetooth Shield V2.0
+name: Bluetooth Shield V2.0
 category: Shield
 bzurl: https://www.seeedstudio.com/Bluetooth-Shield-V2-p-2416.html
 oldwikiname: Bluetooth Shield V2.0

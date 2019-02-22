@@ -1,5 +1,5 @@
 ---
-title: 2KM Long Range RF link kits w/ encoder and decoder
+name: 2KM Long Range RF link kits w/ encoder and decoder
 category: MakerPro
 bzurl: https://www.seeedstudio.com/2km-long-range-rf-link-kits-w-encoder-and-decoder-p-321.html?cPath=139_140
 oldwikiname:  2KM Long Range RF link kits w/ encoder and decoder

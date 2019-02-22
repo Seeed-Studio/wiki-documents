@@ -1,5 +1,5 @@
 ---
-title: How To Choose The Right Cable
+name: How To Choose The Right Cable
 category: Tutorial
 oldwikiname:  How To Choose The Right Cable
 prodimagename:

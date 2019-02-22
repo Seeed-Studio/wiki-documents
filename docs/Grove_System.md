@@ -1,5 +1,5 @@
 ---
-title: Grove System
+name: Grove System
 oldwikiname: Grove_System
 prodimagename: grove_cover.png
 surveyurl: https://www.research.net/r/grove_system

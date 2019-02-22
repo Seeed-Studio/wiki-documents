@@ -1,5 +1,5 @@
 ---
-title: Xadow - 3-Axis Digital Accelerometer(±400g)
+name: Xadow - 3-Axis Digital Accelerometer(±400g)
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-3-Axis-Digital-Accelerometer(%C2%B1400g)-p-1896.html
 oldwikiname: Xadow - 3-Axis Digital Accelerometer(±400g)

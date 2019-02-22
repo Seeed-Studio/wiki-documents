@@ -1,5 +1,5 @@
 ---
-title: 315Mhz remote relay switch kits - 2 channels
+name: 315Mhz remote relay switch kits - 2 channels
 category: MakerPro
 bzurl: https://www.seeedstudio.com/315mhz-remote-relay-switch-kits-2-channels-p-150.html?cPath=139_140
 oldwikiname:  315Mhz remote relay switch kits - 2 channels

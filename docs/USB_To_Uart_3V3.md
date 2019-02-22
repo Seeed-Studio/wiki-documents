@@ -1,5 +1,5 @@
 ---
-title: USB To Uart 3V3‏‎
+name: USB To Uart 3V3‏‎
 category: Discontinued
 bzurl:
 oldwikiname: USB_To_Uart_3V3‏‎

@@ -1,5 +1,5 @@
 ---
-title: Grove - Mega Shield
+name: Grove - Mega Shield
 category: Wireless
 bzurl: https://www.seeedstudio.com/Grove-Mega-Shield-v12-p-2539.html
 oldwikiname:  Grove - Mega Shield

@@ -1,5 +1,5 @@
 ---
-title: A Comparison of Different Grove Temperature Sensors
+name: A Comparison of Different Grove Temperature Sensors
 category: Tutorial
 
 ---

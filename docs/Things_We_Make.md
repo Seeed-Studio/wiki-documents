@@ -1,5 +1,5 @@
 ---
-title: Things We Make
+name: Things We Make
 category: Tutorial
 surveyurl: https://www.research.net/r/things-we-make
 ---

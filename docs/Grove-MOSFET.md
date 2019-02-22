@@ -1,5 +1,5 @@
 ---
-title: Grove - MOSFET
+name: Grove - MOSFET
 category: Others
 bzurl: https://seeedstudio.com/Grove-MOSFET-p-1594.html
 oldwikiname: Grove_-_MOSFET

@@ -1,5 +1,5 @@
 ---
-title: Grove - PS/2 Adapter
+name: Grove - PS/2 Adapter
 category: Others
 bzurl: https://www.seeedstudio.com/Grove-PS%262-Adapter-p-966.html
 oldwikiname:  Grove - PS/2 Adapter

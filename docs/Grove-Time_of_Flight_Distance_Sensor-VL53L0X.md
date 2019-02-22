@@ -1,5 +1,5 @@
 ---
-title: Grove - Time of Flight Distance Sensor-VL53L0X
+name: Grove - Time of Flight Distance Sensor-VL53L0X
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-Temperature%26Humidity-Sensor-Pro-p-838.html
 oldwikiname: 

@@ -1,5 +1,5 @@
 ---
-title: Motor Shield V2.0
+name: Motor Shield V2.0
 category: Shield
 bzurl: https://www.seeedstudio.com/Motor-Shield-V2.0-p-1377.html
 oldwikiname: Motor_Shield_V2.0

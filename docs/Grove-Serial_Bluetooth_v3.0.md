@@ -1,5 +1,5 @@
 ---
-title: Grove - Serial Bluetooth v3.0
+name: Grove - Serial Bluetooth v3.0
 category: Communication
 bzurl: https://seeedstudio.com/Grove-Serial-Bluetooth-v3.0-p-2475.html
 oldwikiname: Grove_-_Serial_Bluetooth_v3.0‏‎

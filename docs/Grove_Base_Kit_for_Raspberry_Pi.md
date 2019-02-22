@@ -1,5 +1,5 @@
 ---
-title: Grove Base Kit for Raspberry Pi
+name: Grove Base Kit for Raspberry Pi
 category: Others
 bzurl:  
 oldwikiname:  

@@ -1,5 +1,5 @@
 ---
-title: Bluetooth Bee-Standalone
+name: Bluetooth Bee-Standalone
 category: Wireless
 bzurl: https://www.seeedstudio.com/Bluetooth-Bee-Standalone-p-1157.html
 oldwikiname:  Bluetooth Bee-Standalone

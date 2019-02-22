@@ -1,5 +1,5 @@
 ---
-title: Grove - Communication
+name: Grove - Communication
 nointro:
 ---
 

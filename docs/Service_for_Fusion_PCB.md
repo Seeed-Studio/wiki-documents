@@ -1,5 +1,5 @@
 ---
-title: Service for Fusion PCB
+name: Service for Fusion PCB
 category: Tutorial
 oldwikiname:   Service for Fusion PCB
 surveyurl: https://www.research.net/r/Service_for_Fusion_PCB

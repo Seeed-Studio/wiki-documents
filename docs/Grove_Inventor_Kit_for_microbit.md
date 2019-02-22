@@ -1,5 +1,5 @@
 ---
-title: Grove Inventor Kit for micro:bit
+name: Grove Inventor Kit for micro:bit
 category: Tutorial
 bzurl:  https://www.seeedstudio.com/Grove-Inventor-Kit-for-micro%3Abit-p-2891.html
 oldwikiname: Grove_Inventor_Kit_for_micro:bit

@@ -1,5 +1,5 @@
 ---
-title:  UartSB Frame‏‎
+name:  UartSB Frame‏‎
 category: Discontinued
 bzurl:
 oldwikiname:  UartSB_Frame‏‎

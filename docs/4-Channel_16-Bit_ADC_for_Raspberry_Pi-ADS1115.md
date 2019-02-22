@@ -1,5 +1,5 @@
 ---
-title: 
+name: 
 category: 4-Channel 16-Bit ADC for Raspberry Pi (ADS1115)
 bzurl: 
 oldwikiname: 

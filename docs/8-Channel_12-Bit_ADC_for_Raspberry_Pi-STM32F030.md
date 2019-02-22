@@ -1,5 +1,5 @@
 ---
-title: 8-Channel 12-Bit ADC for Raspberry Pi (STM32F030)
+name: 8-Channel 12-Bit ADC for Raspberry Pi (STM32F030)
 category:
 bzurl: 
 oldwikiname: 

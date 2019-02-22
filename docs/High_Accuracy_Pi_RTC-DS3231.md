@@ -1,5 +1,5 @@
 ---
-title: High Accuracy Pi RTC (DS3231)
+name: High Accuracy Pi RTC (DS3231)
 category: Pi
 bzurl: 
 oldwikiname: 

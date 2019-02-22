@@ -1,5 +1,5 @@
 ---
-title: Sidekick Basic Kit for Arduino V2
+name: Sidekick Basic Kit for Arduino V2
 category: Arduino
 bzurl: https://www.seeedstudio.com/Sidekick-Basic-Kit-for-Arduino-V2-p-1858.html
 oldwikiname:   Sidekick Basic Kit for Arduino V2

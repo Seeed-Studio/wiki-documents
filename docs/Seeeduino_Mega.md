@@ -1,5 +1,5 @@
 ---
-title: Seeeduino Mega
+name: Seeeduino Mega
 category: Arduino
 bzurl: https://www.seeedstudio.com/Seeeduino-Mega-p-717.html
 oldwikiname: Seeeduino_Mega

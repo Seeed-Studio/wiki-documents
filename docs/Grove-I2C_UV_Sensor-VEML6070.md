@@ -1,5 +1,5 @@
 ---
-title: Grove - I2C UV Sensor (VEML6070)
+name: Grove - I2C UV Sensor (VEML6070)
 category: Sensor
 bzurl: 
 oldwikiname: 

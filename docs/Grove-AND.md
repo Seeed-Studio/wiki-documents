@@ -1,5 +1,5 @@
 ---
-title: Grove - AND
+name: Grove - AND
 category: Others
 bzurl:  https://www.seeedstudio.com/Mixer-Pack-V2-(Electronic-blocks%2Cwithout-Arduino%2Cplug-and-play-system)-p-1867.html
 oldwikiname:  Grove - AND

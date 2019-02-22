@@ -1,5 +1,5 @@
 ---
-title: Grove - 3 Axis Digital Accelerometer(±16g)
+name: Grove - 3 Axis Digital Accelerometer(±16g)
 category: Sensor
 bzurl: <a href="https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer(%C2%B116g)-p-1156.html">https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer(%C2%B116g)-p-1156.html</a>
 oldwikiname: Grove - 3 Axis Digital Accelerometer(±16g)

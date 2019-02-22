@@ -1,5 +1,5 @@
 ---
-title: Grove - I2C Motor Driver V1.2
+name: Grove - I2C Motor Driver V1.2
 category: Actuator
 bzurl: https://www.seeedstudio.com/twig-i2c-motor-driver-p-907.html
 oldwikiname:  Grove - I2C Motor Driver V1.2

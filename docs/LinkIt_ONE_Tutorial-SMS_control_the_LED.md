@@ -1,5 +1,5 @@
 ---
-title: LinkIt ONE Tutorial - SMS control the LED
+name: LinkIt ONE Tutorial - SMS control the LED
 category: Tutorial
 oldwikiname:  LinkIt ONE Tutorial - SMS control the LED
 prodimagename:

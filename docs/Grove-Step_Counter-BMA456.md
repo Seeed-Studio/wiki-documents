@@ -1,5 +1,5 @@
 ---
-title: Grove - Step Counter(BMA456)
+name: Grove - Step Counter(BMA456)
 category: Sensor
 bzurl: 
 oldwikiname: 

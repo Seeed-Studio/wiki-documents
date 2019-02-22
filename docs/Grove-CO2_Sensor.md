@@ -1,5 +1,5 @@
 ---
-title: Grove - CO2 Sensor
+name: Grove - CO2 Sensor
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-CO2-Sensor-p-1863.html
 oldwikiname: Grove_-_CO2_Sensor

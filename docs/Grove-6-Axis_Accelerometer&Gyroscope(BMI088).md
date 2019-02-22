@@ -1,5 +1,5 @@
 ---
-title: Grove - 6-Axis Accelerometer&Gyroscope(BMI088)
+name: Grove - 6-Axis Accelerometer&Gyroscope(BMI088)
 category: Sensor
 bzurl: 
 oldwikiname: 

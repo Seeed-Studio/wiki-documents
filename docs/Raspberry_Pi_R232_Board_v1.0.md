@@ -1,5 +1,5 @@
 ---
-title: Raspberry Pi RS232 Board v1.0
+name: Raspberry Pi RS232 Board v1.0
 category: Raspberry Pi
 bzurl: https://seeedstudio.com/Raspberry-Pi-RS232-Board-v1.0-p-2408.html
 oldwikiname: Raspberry_Pi_R232_Board_v1.0

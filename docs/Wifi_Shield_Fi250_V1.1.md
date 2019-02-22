@@ -1,5 +1,5 @@
 ---
-title: Wifi Shield (Fi250) V1.1
+name: Wifi Shield (Fi250) V1.1
 category: Shield
 bzurl: https://www.seeedstudio.com/Wifi-Shield-(Fi250)-V1.1-p-2449.html
 oldwikiname:  Wifi Shield (Fi250) V1.1

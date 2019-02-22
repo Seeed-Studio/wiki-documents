@@ -1,5 +1,5 @@
 ---
-title: Relay Shield v3.0
+name: Relay Shield v3.0
 category: Shield
 bzurl: https://www.seeedstudio.com/Relay-Shield-v3.0-p-2440.html
 oldwikiname: Relay Shield v3.0

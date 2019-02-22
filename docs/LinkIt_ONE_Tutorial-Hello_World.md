@@ -1,5 +1,5 @@
 ---
-title: LinkIt ONE Tutorial - Hello World
+name: LinkIt ONE Tutorial - Hello World
 category: Tutorial
 oldwikiname:  LinkIt ONE Tutorial - Hello World
 prodimagename:

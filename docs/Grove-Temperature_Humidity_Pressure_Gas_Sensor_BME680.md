@@ -1,5 +1,5 @@
 ---
-title: Grove-Temperature&Humidity&Pressure&Gas Sensor(BME680)
+name: Grove-Temperature&Humidity&Pressure&Gas Sensor(BME680)
 category: Sensor
 bzurl: 
 oldwikiname: 

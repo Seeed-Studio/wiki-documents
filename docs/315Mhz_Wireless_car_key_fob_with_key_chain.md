@@ -1,5 +1,5 @@
 ---
-title: 315Mhz Wireless car key fob with key chain
+name: 315Mhz Wireless car key fob with key chain
 category: MakerPro
 bzurl: http://www.seeedstudio.com/depot/315mhz-wireless-car-key-fob-with-key-chain-battery-included-p-557.html?cPath=139_140
 oldwikiname:  315Mhz Wireless car key fob with key chain

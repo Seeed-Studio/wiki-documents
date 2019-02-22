@@ -1,5 +1,5 @@
 ---
-title: Grove - GPS
+name: Grove - GPS
 category: Communication
 bzurl: https://seeedstudio.com/Grove-GPS-p-959.html
 oldwikiname: Grove_-_GPS

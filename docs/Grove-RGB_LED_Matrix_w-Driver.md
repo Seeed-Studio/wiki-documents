@@ -1,5 +1,5 @@
 ---
-title:  Grove - RGB LED Matrix w/Driver
+name:  Grove - RGB LED Matrix w/Driver
 category: Sensor
 bzurl: 
 oldwikiname: 

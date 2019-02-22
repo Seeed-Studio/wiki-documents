@@ -1,5 +1,5 @@
 ---
-title: Grove - Q Touch Sensor
+name: Grove - Q Touch Sensor
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Q-Touch-Sensor-p-1854.html
 oldwikiname: Grove_-_Q_Touch_Sensor

@@ -1,5 +1,5 @@
 ---
-title: Grove - Haptic Motor
+name: Grove - Haptic Motor
 category: Actuator
 bzurl: https://seeedstudio.com/Grove - Haptic Motor-p-2546.html
 oldwikiname: Grove_-_Haptic_Motor

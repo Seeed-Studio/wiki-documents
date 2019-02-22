@@ -1,5 +1,5 @@
 ---
-title: How To Use Sketchbook
+name: How To Use Sketchbook
 category: Tutorial
 oldwikiname:  How To Use Sketchbook
 prodimagename:

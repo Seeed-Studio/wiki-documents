@@ -1,5 +1,5 @@
 ---
-title: Music Shield
+name: Music Shield
 category: Discontinued
 bzurl:
 oldwikiname: Music_Shield

@@ -1,5 +1,5 @@
 ---
-title: Fubarino SD
+name: Fubarino SD
 category: MakerPro
 bzurl: https://www.seeedstudio.com/Fubarino-SD-p-1265.html
 oldwikiname:  Fubarino SD

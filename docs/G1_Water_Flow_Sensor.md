@@ -1,5 +1,5 @@
 ---
-title: G1" Water Flow Sensor
+name: G1" Water Flow Sensor
 category: MakerPro
 bzurl: https://www.seeedstudio.com/g34-water-flow-sensor-p-1083.html?cPath=144_151
 oldwikiname:  G1" Water Flow Sensor

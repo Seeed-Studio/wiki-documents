@@ -1,5 +1,5 @@
 ---
-title: Micro:bit Wiki Page
+name: Micro:bit Wiki Page
 category: 
 bzurl: 
 oldwikiname: 

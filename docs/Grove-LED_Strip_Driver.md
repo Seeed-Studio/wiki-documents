@@ -1,5 +1,5 @@
 ---
-title: Grove - LED Strip Driver
+name: Grove - LED Strip Driver
 category: Display
 bzurl: https://www.seeedstudio.com/Grove-LED-Strip-Driver-p-1197.html
 oldwikiname:  Grove - LED Strip Driver

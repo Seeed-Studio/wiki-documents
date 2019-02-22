@@ -1,5 +1,5 @@
 ---
-title: Lua for RePhone
+name: Lua for RePhone
 category: Tutorial
 oldwikiname: Lua_for_RePhone
 prodimagename: Xadow_GSMPlusBLE_pingguo.JPG

@@ -1,5 +1,5 @@
 ---
-title: Sound Sensor And LED Bar
+name: Sound Sensor And LED Bar
 category: Tutorial
 oldwikiname:  Sound Sensor And LED Bar
 prodimagename:

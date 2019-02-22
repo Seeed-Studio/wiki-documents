@@ -1,5 +1,5 @@
 ---
-title: Grove BLE v1
+name: Grove BLE v1
 category: Communication
 bzurl: https://seeedstudio.com/Grove-BLE-p-1929.html
 oldwikiname: Grove_BLE_v1

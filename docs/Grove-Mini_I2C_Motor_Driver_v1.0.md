@@ -1,5 +1,5 @@
 ---
-title: Grove - Mini I2C Motor Driver v1.0
+name: Grove - Mini I2C Motor Driver v1.0
 category: Actuator
 bzurl: https://www.seeedstudio.com/Grove - I2C Mini Motor Driver-p-2508.html
 oldwikiname: Grove_-_Mini_I2C_Motor_Driver_v1.0

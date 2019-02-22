@@ -1,7 +1,7 @@
 http://wiki.seeed.cc/Get_Started_with_Arduino/
 
 ---
-title: Download Arduino and install Arduino driver
+name: Download Arduino and install Arduino driver
 category: Tutorial
 oldwikiname:  Download Arduino and install Arduino driver
 surveyurl: https://www.research.net/r/Download_Arduino_and_install_Arduino_driver

@@ -1,5 +1,5 @@
 ---
-title: Grove - Hall Sensor
+name: Grove - Hall Sensor
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Hall-Sensor-p-965.html
 oldwikiname: Grove_-_Hall_Sensor

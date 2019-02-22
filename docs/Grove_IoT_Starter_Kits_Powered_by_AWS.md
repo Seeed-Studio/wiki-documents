@@ -1,5 +1,5 @@
 ---
-title: Grove IoT Starter Kits Powered by AWS
+name: Grove IoT Starter Kits Powered by AWS
 category: Others
 bzurl:
 oldwikiname: Grove IoT Starter Kits Powered by AWS

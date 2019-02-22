@@ -1,5 +1,5 @@
 ---
-title: Photo interrupter (OS25B10)
+name: Photo interrupter (OS25B10)
 category: MakerPro
 bzurl: https://www.seeedstudio.com/photo-interrupter-os25b10-p-541.html?cPath=144_148
 oldwikiname:  Photo interrupter (OS25B10)

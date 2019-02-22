@@ -1,5 +1,5 @@
 ---
-title: FM Receiver
+name: FM Receiver
 category: Tutorial
 ---
 

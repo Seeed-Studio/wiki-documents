@@ -1,5 +1,5 @@
 ---
-title: Grove Starter kit for Arduino&Genuino 101
+name: Grove Starter kit for Arduino&Genuino 101
 category: Arduino
 bzurl:  https://www.seeedstudio.com/Grove-Starter-kit-for-Arduino%26Genuino-101-p-2664.html
 oldwikiname: Grove Starter kit for Arduino&Genuino 101

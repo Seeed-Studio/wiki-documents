@@ -1,5 +1,5 @@
 ---
-title: Bluetooth Multimeter
+name: Bluetooth Multimeter
 category: MakerPro
 bzurl: https://www.seeedstudio.com/Bluetooth-Multimeter-p-1535.html
 oldwikiname: Bluetooth Multimeter

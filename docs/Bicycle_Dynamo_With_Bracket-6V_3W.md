@@ -1,5 +1,5 @@
 ---
-title: Bicycle Dynamo With Bracket - 6V 3W
+name: Bicycle Dynamo With Bracket - 6V 3W
 category: MakerPro
 bzurl: https://www.seeedstudio.com/bicycle-dynamo-with-bracket-6v-3w-p-798.html?cPath=155
 oldwikiname:  Bicycle Dynamo With Bracket - 6V 3W

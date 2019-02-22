@@ -1,5 +1,5 @@
 ---
-title: Xadow 1.54'' Touchscreen
+name: Xadow 1.54'' Touchscreen
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-1.54-inch-Touchscreen-p-2553.html
 oldwikiname: Xadow 1.54'' Touchscreen

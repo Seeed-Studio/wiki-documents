@@ -1,5 +1,5 @@
 ---
-title: Seeeduino V2.2 Atmega 168P
+name: Seeeduino V2.2 Atmega 168P
 category: Discontinued
 bzurl:
 oldwikiname: Seeeduino_V2.2_Atmega-168P

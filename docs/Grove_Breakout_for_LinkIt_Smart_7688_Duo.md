@@ -1,5 +1,5 @@
 ---
-title: Grove Breakout for LinkIt Smart 7688 Duo
+name: Grove Breakout for LinkIt Smart 7688 Duo
 category: LinkIt
 bzurl: https://www.seeedstudio.com/Grove-Breakout-for-LinkIt-Smart-7688-Duo-p-2575.html
 oldwikiname: Grove Breakout for LinkIt Smart 7688 Duo

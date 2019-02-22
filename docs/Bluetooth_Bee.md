@@ -1,5 +1,5 @@
 ---
-title:  Bluetooth Bee
+name:  Bluetooth Bee
 category: Discontinued
 bzurl:
 oldwikiname: Bluetooth_Bee

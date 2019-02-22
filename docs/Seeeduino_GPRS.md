@@ -1,5 +1,5 @@
 ---
-title: Seeeduino GPRS
+name: Seeeduino GPRS
 category: Arduino
 bzurl: https://www.seeedstudio.com/Seeeduino-GPRS-p-1909.html
 oldwikiname: Seeeduino_GPRS

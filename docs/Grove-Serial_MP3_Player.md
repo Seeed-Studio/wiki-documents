@@ -1,5 +1,5 @@
 ---
-title: Grove - Serial MP3 Player
+name: Grove - Serial MP3 Player
 category: Actuator
 bzurl: https://seeedstudio.com/Grove-Serial-MP3-Player-p-1542.html
 oldwikiname: Grove_-_Serial_MP3_Player

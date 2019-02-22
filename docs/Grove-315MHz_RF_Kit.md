@@ -1,5 +1,5 @@
 ---
-title: Grove - 315MHz RF Kit
+name: Grove - 315MHz RF Kit
 category: Communication
 bzurl: https://seeedstudio.com/Grove-315MHz-Simple-RF-Link-Kit-p-1061.html
 oldwikiname: Grove_-_315MHz_RF_Kit

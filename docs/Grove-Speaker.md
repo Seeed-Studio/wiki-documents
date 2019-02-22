@@ -1,5 +1,5 @@
 ---
-title: Grove - Speaker
+name: Grove - Speaker
 category: Actuator
 bzurl: https://seeedstudio.com/Grove-Speaker-p-1445.html
 oldwikiname: Grove_-_Speaker

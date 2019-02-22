@@ -1,5 +1,5 @@
 ---
-title:  Wifi Bee‏‎
+name:  Wifi Bee‏‎
 category: Discontinued
 bzurl:
 oldwikiname: Wifi_Bee‏‎

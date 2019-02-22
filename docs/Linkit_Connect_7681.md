@@ -1,5 +1,5 @@
 ---
-title: Linkit Connect 7681
+name: Linkit Connect 7681
 category: LinkIt
 bzurl: https://seeedstudio.com/LinkIt-Connect-7681-Wi-Fi-HDK-for-IoT-p-2262.html
 oldwikiname: Linkit_Connect_7681

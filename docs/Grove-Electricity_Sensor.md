@@ -1,5 +1,5 @@
 ---
-title: Grove - Electricity Sensor
+name: Grove - Electricity Sensor
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Electricity-Sensor-p-777.html
 oldwikiname: Grove_-_Electricity_Sensor

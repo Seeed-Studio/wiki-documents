@@ -1,5 +1,5 @@
 ---
-title: Raspberry Pi Introduction
+name: Raspberry Pi Introduction
 nointro:
 ---
 

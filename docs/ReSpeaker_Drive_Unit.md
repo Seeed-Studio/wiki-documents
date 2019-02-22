@@ -1,5 +1,5 @@
 ---
-title: ReSpeaker Drive Unit
+name: ReSpeaker Drive Unit
 category: ReSpeaker
 bzurl:
 oldwikiname:  ReSpeaker Drive Unit

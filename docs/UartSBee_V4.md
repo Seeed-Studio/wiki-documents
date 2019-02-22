@@ -1,5 +1,5 @@
 ---
-title: UartSBee V4
+name: UartSBee V4
 category: Arduino
 bzurl: https://www.seeedstudio.com/UartSBee-V4-p-688.html
 oldwikiname: UartSBee V4

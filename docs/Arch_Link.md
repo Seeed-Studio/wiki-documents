@@ -1,5 +1,5 @@
 ---
-title: Arch Link
+name: Arch Link
 category: mbed
 bzurl: https://seeedstudio.com/Arch-Link-p-2511.html
 oldwikiname: Arch_Link

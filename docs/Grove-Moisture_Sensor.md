@@ -1,5 +1,5 @@
 ---
-title: Grove - Moisture Sensor
+name: Grove - Moisture Sensor
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-Moisture-Sensor-p-955.html
 oldwikiname: Grove - Moisture Sensor

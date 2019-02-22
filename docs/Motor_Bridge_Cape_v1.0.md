@@ -1,5 +1,5 @@
 ---
-title: Motor Bridge Cape v1.0
+name: Motor Bridge Cape v1.0
 category: BeagleBone
 bzurl: https://seeedstudio.com/Motor-Bridge-Cape-p-2569.html
 oldwikiname: Motor_Bridge_Cape_v1.0

@@ -1,5 +1,5 @@
 ---
-title: Grove Shield for Intel Joule
+name: Grove Shield for Intel Joule
 category: Others
 bzurl: https://www.seeedstudio.com/Grove-Button-p-766.html
 oldwikiname:

@@ -1,5 +1,5 @@
 ---
-title: Atmel AVRISP STK500 USB ISP Programmer
+name: Atmel AVRISP STK500 USB ISP Programmer
 category: depot
 bzurl: http://www.seeedstudio.com/depot/atmel-avrisp-stk500-usb-isp-programmer-p-207.html?cPath=132_135
 oldwikiname: Atmel AVRISP STK500 USB ISP Programmer

@@ -1,5 +1,5 @@
 ---
-title: Rainbow Cube Kit Acrylic Harness
+name: Rainbow Cube Kit Acrylic Harness
 category: Arduino
 bzurl:  https://www.seeedstudio.com/Rainbow-Cube-Kit-Acrylic-Harness-p-1021.html
 oldwikiname: Rainbow Cube Kit Acrylic Harness

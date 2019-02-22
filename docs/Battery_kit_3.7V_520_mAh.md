@@ -1,5 +1,5 @@
 ---
-title:  Battery kit 3.7V 520mAh
+name:  Battery kit 3.7V 520mAh
 category: Discontinued
 bzurl:
 oldwikiname: Battery_kit-3.7V_520_mAh

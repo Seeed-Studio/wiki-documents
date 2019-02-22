@@ -1,5 +1,5 @@
 ---
-title: LinkIt ONE Tutorial - Marquee
+name: LinkIt ONE Tutorial - Marquee
 category: Tutorial
 oldwikiname:  LinkIt ONE Tutorial - Marquee
 prodimagename:

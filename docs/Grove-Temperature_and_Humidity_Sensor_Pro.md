@@ -1,5 +1,5 @@
 ---
-title: Grove - Temperature&Humidity Sensor Pro
+name: Grove - Temperature&Humidity Sensor Pro
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-Temperature%26Humidity-Sensor-Pro-p-838.html
 oldwikiname: Grove - Temperature and Humidity Sensor Pro

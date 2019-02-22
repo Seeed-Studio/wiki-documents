@@ -1,5 +1,5 @@
 ---
-title: IoT Introduction
+name: IoT Introduction
 nointro:
 ---
 ---

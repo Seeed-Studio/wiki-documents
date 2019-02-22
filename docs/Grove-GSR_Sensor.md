@@ -1,5 +1,5 @@
 ---
-title: Grove - GSR Sensor
+name: Grove - GSR Sensor
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-GSR-sensor-p-1614.html
 oldwikiname: Grove_-_GSR_Sensor

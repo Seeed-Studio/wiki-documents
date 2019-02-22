@@ -1,5 +1,5 @@
 ---
-title: Grove - Encoder
+name: Grove - Encoder
 category: Sensor
 bzurl: 
 oldwikiname:

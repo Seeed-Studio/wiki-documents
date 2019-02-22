@@ -1,5 +1,5 @@
 ---
-title: Xadow Barometer BMP180
+name: Xadow Barometer BMP180
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-Barometer-BMP180-v1.0-p-2412.html
 oldwikiname: Xadow - Barometer BMP180

@@ -1,5 +1,5 @@
 ---
-title: DC framework miniature solenoid VL-0063
+name: DC framework miniature solenoid VL-0063
 category: MakerPro
 bzurl: https://www.seeedstudio.com/DC-framework-miniature-solenoid-VL-0063-p-1049.html
 oldwikiname:  DC framework miniature solenoid VL-0063

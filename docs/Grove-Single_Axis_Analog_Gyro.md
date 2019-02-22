@@ -1,5 +1,5 @@
 ---
-title: Grove-Single Axis Analog Gyro‏‎
+name: Grove-Single Axis Analog Gyro‏‎
 category: Discontinued
 bzurl:
 oldwikiname: Grove-Single_Axis_Analog_Gyro‏‎

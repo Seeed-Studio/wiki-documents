@@ -1,5 +1,5 @@
 ---
-title: BeagleBone Case
+name: BeagleBone Case
 category: BeagleBone
 bzurl: https://www.seeedstudio.com/BeagleBone-Case-p-2285.html
 oldwikiname:  BeagleBone Case

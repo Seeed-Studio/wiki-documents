@@ -1,5 +1,5 @@
 ---
-title: Air602 WiFi Development Board
+name: Air602 WiFi Development Board
 category: Sensor
 bzurl: 
 oldwikiname: 

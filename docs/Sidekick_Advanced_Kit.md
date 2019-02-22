@@ -1,5 +1,5 @@
 ---
-title: Sidekick Advanced Kit‏‎
+name: Sidekick Advanced Kit‏‎
 category: Discontinued
 bzurl:
 oldwikiname: Sidekick_Advanced_Kit‏‎

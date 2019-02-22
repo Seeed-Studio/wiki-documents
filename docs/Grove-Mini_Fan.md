@@ -1,5 +1,5 @@
 ---
-title: Grove - Mini Fan
+name: Grove - Mini Fan
 category: Actuator
 bzurl: https://www.seeedstudio.com/Grove-Mini-Fan-p-1819.html
 oldwikiname:  Grove - Mini Fan

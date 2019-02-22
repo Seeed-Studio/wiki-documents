@@ -1,5 +1,5 @@
 ---
-title: Grove - LED Bar
+name: Grove - LED Bar
 category: Display
 bzurl: https://seeedstudio.com/Grove-LED-Bar-p-1178.html
 oldwikiname: Grove_-_LED_Bar

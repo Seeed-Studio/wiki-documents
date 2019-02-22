@@ -1,5 +1,5 @@
 ---
-title: Grove - Laser PM2.5 Sensor (HM3301)
+name: Grove - Laser PM2.5 Sensor (HM3301)
 category: Sensor
 bzurl: 
 oldwikiname: 

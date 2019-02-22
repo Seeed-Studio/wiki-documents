@@ -1,5 +1,5 @@
 ---
-title: Seeeduino Cloud and Grove IoT Starter Kit Powered by AWS
+name: Seeeduino Cloud and Grove IoT Starter Kit Powered by AWS
 category: Arduino
 bzurl: https://www.amazon.com/Seeeduino-Cloud-Grove-Starter-Powered/dp/B01669BB60
 oldwikiname: Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS

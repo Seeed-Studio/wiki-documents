@@ -1,5 +1,5 @@
 ---
-title: Rainbowduino
+name: Rainbowduino
 category: Arduino
 oldwikiname:  Rainbowduino
 surveyurl: https://www.research.net/r/Rainbowduino

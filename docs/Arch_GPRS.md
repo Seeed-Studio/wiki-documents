@@ -1,5 +1,5 @@
 ---
-title:  Arch GPRS
+name:  Arch GPRS
 category: Discontinued
 bzurl:
 oldwikiname: Arch_GPRS

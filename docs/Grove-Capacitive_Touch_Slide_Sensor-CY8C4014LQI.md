@@ -1,5 +1,5 @@
 ---
-title: Grove - Capacitive Touch Slide Sensor(CY8C4014LQI)
+name: Grove - Capacitive Touch Slide Sensor(CY8C4014LQI)
 category: Sensor
 bzurl: 
 oldwikiname: 

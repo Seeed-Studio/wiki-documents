@@ -1,5 +1,5 @@
 ---
-title: Grove - UART Wi-Fi
+name: Grove - UART Wi-Fi
 category: Communication
 bzurl: https://www.seeedstudio.com/Grove-Uart-Wifi-p-2495.html
 oldwikiname:

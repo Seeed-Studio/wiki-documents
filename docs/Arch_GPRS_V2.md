@@ -1,5 +1,5 @@
 ---
-title: Arch GPRS V2
+name: Arch GPRS V2
 category: mbed
 bzurl: https://seeedstudio.com/Arch-GPRS-V2-p-2026.html
 oldwikiname: Arch_GPRS_V2

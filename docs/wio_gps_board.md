@@ -1,5 +1,5 @@
 ---
-title: Wio Tracker - GPS, BT3.0, GSM, Arduino Compatible
+name: Wio Tracker - GPS, BT3.0, GSM, Arduino Compatible
 category: Wio_Tracker
 bzurl: https://www.seeedstudio.com/Wio-Tracker-GPS%2C-BT3.0%2C-GSM%2C-Arduino-Compatible-p-2831.html
 prodimagename: Wio_GPS_Antanna.jpg

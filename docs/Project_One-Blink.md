@@ -1,5 +1,5 @@
 ---
-title: Project One - Blink
+name: Project One - Blink
 category: Tutorial
 oldwikiname:  Project One - Blink
 prodimagename:

@@ -1,5 +1,5 @@
 ---
-title: Grove - 3-Axis Digital Accelerometer ±16g Ultra-low Power (BMA400)
+name: Grove - 3-Axis Digital Accelerometer ±16g Ultra-low Power (BMA400)
 category: Sensor
 bzurl: 
 oldwikiname: 

@@ -1,5 +1,5 @@
 ---
-title: 3W Solar Panel 138*160
+name: 3W Solar Panel 138*160
 category: MakerPro
 bzurl: https://www.seeedstudio.com/Bluetooth-V4.0-HM-11-BLE-Module-p-1803.html
 oldwikiname:  3W Solar Panel 138*160

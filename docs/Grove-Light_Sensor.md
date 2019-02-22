@@ -1,5 +1,5 @@
 ---
-title: Grove - Light Sensor
+name: Grove - Light Sensor
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-Light-Sensor-(P)-v1.1-p-2693.html
 oldwikiname: Grove_-_Light_Sensor

@@ -1,5 +1,5 @@
 ---
-title: Grove - Infrared Receiver
+name: Grove - Infrared Receiver
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Infrared-Receiver-p-994.html
 oldwikiname: Grove_-_Infrared_Receiver

@@ -1,5 +1,5 @@
 ---
-title: Grove - Barometer Sensor (BMP180)
+name: Grove - Barometer Sensor (BMP180)
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Barometer-Sensor-(BMP180)-p-1840.html
 oldwikiname: Grove_-_Barometer_Sensor_(BMP180)

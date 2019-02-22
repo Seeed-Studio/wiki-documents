@@ -1,5 +1,5 @@
 ---
-title: DSO Nano/Development
+name: DSO Nano/Development
 category: MakerPro
 bzurl:
 oldwikiname:  DSO Nano/Development

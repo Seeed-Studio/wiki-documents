@@ -1,5 +1,5 @@
 ---
-title: Grove - 4-Channel Solid State Relay
+name: Grove - 4-Channel Solid State Relay
 category: Sensor
 bzurl: 
 oldwikiname: 

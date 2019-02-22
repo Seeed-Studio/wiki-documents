@@ -1,5 +1,5 @@
 ---
-title: Grove - Infrared Emitter
+name: Grove - Infrared Emitter
 category: Actuator
 bzurl: https://seeedstudio.com/Grove-Infrared-Emitter-p-993.html
 oldwikiname: Grove_-_Infrared_Emitter

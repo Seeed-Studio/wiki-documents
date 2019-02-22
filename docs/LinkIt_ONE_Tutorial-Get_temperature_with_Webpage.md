@@ -1,5 +1,5 @@
 ---
-title: LinkIt ONE Tutorial - Get temperature with Webpage
+name: LinkIt ONE Tutorial - Get temperature with Webpage
 category: Tutorial
 oldwikiname:  LinkIt ONE Tutorial - Get temperature with Webpage
 prodimagename:  

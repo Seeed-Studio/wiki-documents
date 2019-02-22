@@ -1,5 +1,5 @@
 ---
-title: BeagleBone Green Wireless
+name: BeagleBone Green Wireless
 category: BeagleBone
 bzurl: https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-Wireless-p-2650.html
 oldwikiname: SeeedStudio_BeagleBone_Green_Wireless

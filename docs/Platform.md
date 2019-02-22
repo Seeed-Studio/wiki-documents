@@ -1,5 +1,5 @@
 ---
-title: Platform Introduction
+name: Platform Introduction
 ---
 Products are grouped into the following platforms:
 

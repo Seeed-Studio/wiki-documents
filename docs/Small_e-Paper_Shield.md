@@ -1,5 +1,5 @@
 ---
-title:  Small e-Paper Shield‏‎
+name:  Small e-Paper Shield‏‎
 category: Discontinued
 bzurl:
 oldwikiname:  Small_e-Paper_Shield‏‎

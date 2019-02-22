@@ -1,5 +1,5 @@
 ---
-title: Grove - 2-Channel Inductive Sensor(LDC1612)
+name: Grove - 2-Channel Inductive Sensor(LDC1612)
 category: Sensor
 bzurl: 
 oldwikiname: 

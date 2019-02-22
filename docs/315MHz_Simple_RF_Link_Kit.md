@@ -1,5 +1,5 @@
 ---
-title: 315MHz Simple RF Link Kit
+name: 315MHz Simple RF Link Kit
 category: MakerPro
 bzurl: https://www.seeedstudio.com/grove-315mhz-simple-rf-link-kit-p-1061.html?cPath=139_140
 oldwikiname:  315MHz Simple RF Link Kit

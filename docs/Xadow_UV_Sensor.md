@@ -1,5 +1,5 @@
 ---
-title: Xadow - UV Sensor
+name: Xadow - UV Sensor
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-UV-Sensor-p-1694.html
 oldwikiname: Xadow - UV Sensor

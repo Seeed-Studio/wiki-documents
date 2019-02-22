@@ -1,5 +1,5 @@
 ---
-title: Grove - Gesture V1.0
+name: Grove - Gesture V1.0
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-Gesture-p-2463.html
 oldwikiname: Grove - Gesture V1.0

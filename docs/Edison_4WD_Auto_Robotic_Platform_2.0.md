@@ -1,5 +1,5 @@
 ---
-title: Edison 4WD Auto Robotic Platform 2.0‏‎
+name: Edison 4WD Auto Robotic Platform 2.0‏‎
 category: Discontinued
 bzurl:
 oldwikiname: Edison_4WD_Auto_Robotic_Platform_2.0‏‎

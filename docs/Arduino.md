@@ -1,5 +1,5 @@
 ---
-title: Arduino Introduction
+name: Arduino Introduction
 nointro:
 ---
 

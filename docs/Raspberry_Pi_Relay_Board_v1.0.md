@@ -1,5 +1,5 @@
 ---
-title: Raspberry Pi Relay Board v1.0
+name: Raspberry Pi Relay Board v1.0
 category: Raspberry Pi
 bzurl: https://seeedstudio.com/Raspberry-Pi-Relay-Board-v1.0-p-2409.html
 oldwikiname: Raspberry_Pi_Relay_Board_v1.0

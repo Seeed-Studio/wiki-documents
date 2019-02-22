@@ -1,5 +1,5 @@
 ---
-title: Serial port bluetooth module(Master/Slave)‏‎
+name: Serial port bluetooth module(Master/Slave)‏‎
 category: Discontinued
 bzurl:
 oldwikiname: Serial_port_bluetooth_module_(Master/Slave)‏‎

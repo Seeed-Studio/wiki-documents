@@ -1,5 +1,5 @@
 ---
-title: Snips Voice Interaction Satellite Kit
+name: Snips Voice Interaction Satellite Kit
 category: Grove/LED
 bzurl: 
 oldwikiname: 

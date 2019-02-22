@@ -1,5 +1,5 @@
 ---
-title: Arduino Common Error
+name: Arduino Common Error
 category: Tutorial
 oldwikiname:  Arduino Common Error
 prodimagename:

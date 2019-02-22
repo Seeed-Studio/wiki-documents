@@ -1,5 +1,5 @@
 ---
-title: Grove - 125KHz RFID Reader
+name: Grove - 125KHz RFID Reader
 category: Communication
 bzurl: https://seeedstudio.com/Grove-125KHz-RFID-Reader-p-1008.html
 oldwikiname: Grove_-_125KHz_RFID_Reader

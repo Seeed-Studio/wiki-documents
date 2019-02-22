@@ -1,5 +1,5 @@
 ---
-title:  Motor Shield‏‎
+name:  Motor Shield‏‎
 category: Discontinued
 bzurl:
 oldwikiname: Motor_Shield‏‎

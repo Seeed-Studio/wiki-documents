@@ -1,5 +1,5 @@
 ---
-title: Xadow GSM+BLE
+name: Xadow GSM+BLE
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-GSM-BLE-p-2560.html
 oldwikiname: Xadow_GSM+BLE

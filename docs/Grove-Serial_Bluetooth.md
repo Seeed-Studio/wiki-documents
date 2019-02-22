@@ -1,5 +1,5 @@
 ---
-title: Grove Serial Bluetooth‏‎
+name: Grove Serial Bluetooth‏‎
 category: Discontinued
 bzurl:
 oldwikiname: Grove-Serial_Bluetooth‏‎

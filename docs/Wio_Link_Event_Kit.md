@@ -1,5 +1,5 @@
 ---
-title: Wio Link Event Kit
+name: Wio Link Event Kit
 category: Wio
 bzurl: https://seeedstudio.com/Wio-Link-Event-Kit-p-2611.html
 oldwikiname: Wio_Link_Event_Kit

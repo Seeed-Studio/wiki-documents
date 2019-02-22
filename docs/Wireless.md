@@ -1,5 +1,5 @@
 ---
-title: Wireless Introduction
+name: Wireless Introduction
 nointro:
 ---
 

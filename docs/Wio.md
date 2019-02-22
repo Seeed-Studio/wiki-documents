@@ -1,5 +1,5 @@
 ---
-title: Wio Introduction
+name: Wio Introduction
 nointro:
 ---
 

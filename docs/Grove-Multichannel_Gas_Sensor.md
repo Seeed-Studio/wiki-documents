@@ -1,5 +1,5 @@
 ---
-title: Grove - Multichannel Gas Sensor
+name: Grove - Multichannel Gas Sensor
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Multichannel-Gas-Sensor-p-2502.html
 oldwikiname: Grove_-_Multichannel_Gas_Sensor

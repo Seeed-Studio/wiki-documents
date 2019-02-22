@@ -1,5 +1,5 @@
 ---
-title: Grove - EL Driver
+name: Grove - EL Driver
 category: Actuator
 bzurl: https://seeedstudio.com/Grove-EL-Driver-p-2269.html
 oldwikiname: Grove_-_EL_Driver

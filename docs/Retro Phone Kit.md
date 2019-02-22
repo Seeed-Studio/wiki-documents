@@ -1,5 +1,5 @@
 ---
-title: Retro Phone Kit
+name: Retro Phone Kit
 category: RePhone
 bzurl:  https://www.seeedstudio.com/Retro-Phone-Kit-p-2797.html
 prodimagename:

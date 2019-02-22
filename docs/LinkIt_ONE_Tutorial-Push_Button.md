@@ -1,5 +1,5 @@
 ---
-title: LinkIt ONE Tutorial - Push Button
+name: LinkIt ONE Tutorial - Push Button
 category: Tutorial
 oldwikiname:  LinkIt ONE Tutorial - Push Button
 prodimagename:

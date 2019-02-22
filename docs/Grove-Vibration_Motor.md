@@ -1,5 +1,5 @@
 ---
-title: Grove - Vibration Motor
+name: Grove - Vibration Motor
 category: Actuator
 bzurl: https://seeedstudio.com/Grove-Vibration-Motor-p-839.html
 oldwikiname: Grove_-_Vibration_Motor

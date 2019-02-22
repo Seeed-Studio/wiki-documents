@@ -1,5 +1,5 @@
 ---
-title: Arduino IDE for RePhone Kit
+name: Arduino IDE for RePhone Kit
 category: Tutorial
 oldwikiname: Arduino_IDE_for_RePhone_Kit
 prodimagename: Xadow_GSMPlusBLE_pingguo.JPG

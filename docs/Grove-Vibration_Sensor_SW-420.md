@@ -1,5 +1,5 @@
 ---
-title: Grove - Vibration Sensor (SW-420)
+name: Grove - Vibration Sensor (SW-420)
 category: Sensor
 bzurl: 
 oldwikiname: 

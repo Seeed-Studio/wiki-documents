@@ -1,5 +1,5 @@
 ---
-title: ReSpeaker Mic Array v2.0
+name: ReSpeaker Mic Array v2.0
 category: ReSpeaker
 bzurl:
 oldwikiname: ReSpeaker Mic Array v2.0

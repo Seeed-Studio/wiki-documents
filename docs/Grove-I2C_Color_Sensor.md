@@ -1,5 +1,5 @@
 ---
-title: Grove - I2C Color Sensor
+name: Grove - I2C Color Sensor
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-I2C-Color-Sensor-p-854.html
 oldwikiname: Grove_-_I2C_Color_Sensor

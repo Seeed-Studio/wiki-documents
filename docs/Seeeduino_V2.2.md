@@ -1,5 +1,5 @@
 ---
-title:  Seeeduino V2.2‏‎
+name:  Seeeduino V2.2‏‎
 category: Discontinued
 bzurl:
 oldwikiname: Seeeduino_V2.2‏‎

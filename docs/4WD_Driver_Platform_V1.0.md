@@ -1,5 +1,5 @@
 ---
-title: 4WD Driver Platform V1.0
+name: 4WD Driver Platform V1.0
 category: Arduino
 bzurl: https://www.seeedstudio.com/4WD-Driver-Platform-V1.0-p-2536.html
 oldwikiname:  4WD Driver Platform V1.0

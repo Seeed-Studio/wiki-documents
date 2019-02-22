@@ -1,5 +1,5 @@
 ---
-title: LCD 8*2 Characters- Blue back light
+name: LCD 8*2 Characters- Blue back light
 category: MakerPro
 bzurl: https://www.seeedstudio.com/lcd-82-characters-blue-back-light-p-120.html?cPath=163_164
 oldwikiname:  LCD 8*2 Characters- Blue back light

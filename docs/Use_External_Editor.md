@@ -1,5 +1,5 @@
 ---
-title: Use External Editor
+name: Use External Editor
 category: Tutorial
 oldwikiname:  Use External Editor
 prodimagename:

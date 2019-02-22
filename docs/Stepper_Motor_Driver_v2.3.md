@@ -1,5 +1,5 @@
 ---
-title: Stepper Motor Driver v2.3‏‎
+name: Stepper Motor Driver v2.3‏‎
 category: Discontinued
 bzurl:
 oldwikiname: Stepper_Motor_Driver_v2.3‏‎

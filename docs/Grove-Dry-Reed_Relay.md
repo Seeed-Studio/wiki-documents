@@ -1,5 +1,5 @@
 ---
-title: Grove - Dry-Reed Relay
+name: Grove - Dry-Reed Relay
 category: Actuator
 bzurl: https://seeedstudio.com/Grove-Dry-Reed-Relay-p-1412.html
 oldwikiname: Grove_-_Dry-Reed_Relay

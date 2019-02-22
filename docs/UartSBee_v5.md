@@ -1,5 +1,5 @@
 ---
-title: UartSBee v5
+name: UartSBee v5
 category: Arduino
 bzurl: https://seeedstudio.com/UartSBee-V5-p-1752.html
 oldwikiname: UartSBee_v5

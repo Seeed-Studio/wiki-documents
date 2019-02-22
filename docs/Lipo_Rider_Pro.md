@@ -1,5 +1,5 @@
 ---
-title: Lipo Rider Pro
+name: Lipo Rider Pro
 category: Essentials
 bzurl: https://seeedstudio.com/LiPo-Rider-Pro-p-992.html
 oldwikiname: Lipo_Rider_Pro

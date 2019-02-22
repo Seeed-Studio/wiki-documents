@@ -1,5 +1,5 @@
 ---
-title: Grove - Chest Strap Heart Rate Sensor
+name: Grove - Chest Strap Heart Rate Sensor
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Chest-Strap-Heart-Rate-Sensor-p-1115.html
 oldwikiname: Grove_-_Chest_Strap_Heart_Rate_Sensor

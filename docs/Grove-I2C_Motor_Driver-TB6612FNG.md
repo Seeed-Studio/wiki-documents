@@ -1,5 +1,5 @@
 ---
-title: Grove - I2C Motor Driver (TB6612FNG)
+name: Grove - I2C Motor Driver (TB6612FNG)
 category: Sensor
 bzurl: 
 oldwikiname: 

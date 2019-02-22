@@ -1,5 +1,5 @@
 ---
-title: Raspberry Pi 3 Model B
+name: Raspberry Pi 3 Model B
 category: MakerPro
 bzurl: https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html
 oldwikiname:  Raspberry Pi 3 Model B

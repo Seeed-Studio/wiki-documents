@@ -1,5 +1,5 @@
 ---
-title: Relay Control LED
+name: Relay Control LED
 category: Tutorial
 oldwikiname:  Relay Control LED
 prodimagename:

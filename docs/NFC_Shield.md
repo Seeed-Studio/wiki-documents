@@ -1,5 +1,5 @@
 ---
-title:  NFC Shield‏‎
+name:  NFC Shield‏‎
 category: Discontinued
 bzurl:
 oldwikiname: NFC_Shield‏‎

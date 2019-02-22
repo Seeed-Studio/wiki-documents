@@ -1,5 +1,5 @@
 ---
-title: How to install an Arduino library
+name: How to install an Arduino library
 category: Tutorial
 ---
 

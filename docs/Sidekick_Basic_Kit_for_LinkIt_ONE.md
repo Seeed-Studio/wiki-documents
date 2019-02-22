@@ -1,5 +1,5 @@
 ---
-title: Sidekick Basic Kit for LinkIt ONE
+name: Sidekick Basic Kit for LinkIt ONE
 category: LinkIt
 bzurl:  https://www.seeedstudio.com/Sidekick-Basic-Kit-for-LinkIt-ONE-p-2027.html
 oldwikiname: Sidekick Basic Kit for LinkIt ONE

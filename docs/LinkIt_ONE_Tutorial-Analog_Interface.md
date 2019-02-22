@@ -1,5 +1,5 @@
 ---
-title: LinkIt ONE Tutorial - Analog Interface
+name: LinkIt ONE Tutorial - Analog Interface
 category: Tutorial
 oldwikiname:   LinkIt ONE Tutorial - Analog Interface
 prodimagename:

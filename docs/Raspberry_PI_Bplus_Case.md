@@ -1,5 +1,5 @@
 ---
-title: Raspberry PI B+ Case
+name: Raspberry PI B+ Case
 category: MakerPro
 bzurl: https://www.seeedstudio.com/Rasbperry-Pi-Model-B-Case-p-2147.html
 oldwikiname:  Raspberry PI B+ Case

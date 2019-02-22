@@ -1,5 +1,5 @@
 ---
-title: How to edit a document
+name: How to edit a document
 category: Tutorial
 surveyurl: https://www.research.net/r/how_to_edit_a_document
 ---

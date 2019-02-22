@@ -1,5 +1,5 @@
 ---
-title: Small e-Paper Shield V2
+name: Small e-Paper Shield V2
 category: Shield
 bzurl: https://www.seeedstudio.com/Small-e-paper-Shield-V2-p-2462.html
 oldwikiname:  Small e-Paper Shield V2

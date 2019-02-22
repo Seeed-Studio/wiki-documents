@@ -1,5 +1,5 @@
 ---
-title: SD Card Shield V3.0‏‎
+name: SD Card Shield V3.0‏‎
 category: Discontinued
 bzurl:
 oldwikiname: SD_Card_Shield_V3.0‏‎

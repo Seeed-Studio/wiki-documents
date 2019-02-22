@@ -1,5 +1,5 @@
 ---
-title: Temperature Sensor
+name: Temperature Sensor
 category: Tutorial
 oldwikiname:  Temperature Sensor
 prodimagename:

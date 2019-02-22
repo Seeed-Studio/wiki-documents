@@ -1,5 +1,5 @@
 ---
-title: Grove - Differential Amplifier v1.0
+name: Grove - Differential Amplifier v1.0
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-Differential-Amplifier-p-1284.html
 oldwikiname:  Grove - Differential Amplifier v1.0

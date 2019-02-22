@@ -1,5 +1,5 @@
 ---
-title: Xadow - 3-Axis Accelerometer
+name: Xadow - 3-Axis Accelerometer
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-3-Axis-Accelerometer-p-1521.html
 oldwikiname: Xadow - 3-Axis Accelerometer

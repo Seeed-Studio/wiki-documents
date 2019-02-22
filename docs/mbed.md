@@ -1,5 +1,5 @@
 ---
-title: mbed Introduction
+name: mbed Introduction
 nointro:
 ---
 

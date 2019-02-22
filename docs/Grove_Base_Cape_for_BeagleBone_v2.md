@@ -1,5 +1,5 @@
 ---
-title: Grove Base Cape for BeagleBone v2
+name: Grove Base Cape for BeagleBone v2
 category: BeagleBone
 bzurl: https://www.seeedstudio.com/Grove-Base-Cape-for-Beaglebone-v2.0-p-2644.html
 oldwikiname:  Grove Base Cape for BeagleBone v2

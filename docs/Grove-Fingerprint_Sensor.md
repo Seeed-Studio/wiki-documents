@@ -1,5 +1,5 @@
 ---
-title: Grove - Fingerprint Sensor
+name: Grove - Fingerprint Sensor
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Fingerprint-Sensor-p-1424.html
 oldwikiname: Grove_-_Fingerprint_Sensor

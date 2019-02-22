@@ -1,5 +1,5 @@
 ---
-title: Google Assistant
+name: Google Assistant
 category: Tutorial
 bzurl: 
 oldwikiname: 

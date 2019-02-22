@@ -1,5 +1,5 @@
 ---
-title: BeagleBone Blue
+name: BeagleBone Blue
 category: BeagleBone
 bzurl: https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-Wireless-p-2650.html
 oldwikiname:

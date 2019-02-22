@@ -1,5 +1,5 @@
 ---
-title: Grove - Dust Sensor
+name: Grove - Dust Sensor
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-Dust-Sensor-p-1050.html
 oldwikiname: Grove - Dust Sensor

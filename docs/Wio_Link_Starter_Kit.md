@@ -1,5 +1,5 @@
 ---
-title: Wio Link Starter Kit
+name: Wio Link Starter Kit
 category: Wio
 bzurl: https://seeedstudio.com/Wio-Link-Starter-Kit-p-2614.html
 oldwikiname: Wio_Link_Starter_Kit

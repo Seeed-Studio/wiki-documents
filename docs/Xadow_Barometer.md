@@ -1,5 +1,5 @@
 ---
-title: Xadow Barometer
+name: Xadow Barometer
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-Barometer-p-1522.html
 oldwikiname: Xadow Barometer

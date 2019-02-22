@@ -1,5 +1,5 @@
 ---
-title:  UartSBee V3.1
+name:  UartSBee V3.1
 category: Discontinued
 bzurl:
 oldwikiname: UartSBee_V3.1

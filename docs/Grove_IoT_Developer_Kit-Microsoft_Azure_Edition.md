@@ -1,5 +1,5 @@
 ---
-title: Grove IoT Developer Kit - Microsoft Azure Edition
+name: Grove IoT Developer Kit - Microsoft Azure Edition
 category: Others
 bzurl:  https://www.seeedstudio.com/Grove-IoT-Developer-Kit-Microsoft-Azure-Edition-p-2631.html
 oldwikiname:  Grove IoT Developer Kit - Microsoft Azure Edition

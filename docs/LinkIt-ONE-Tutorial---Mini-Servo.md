@@ -1,5 +1,5 @@
 ---
-title: LinkIt ONE Tutorial - Mini Servo
+name: LinkIt ONE Tutorial - Mini Servo
 category: Tutorial
 oldwikiname:   LinkIt ONE Tutorial - Mini Servo
 prodimagename:

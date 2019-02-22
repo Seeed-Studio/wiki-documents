@@ -1,5 +1,5 @@
 ---
-title: RePhone Lumi Kit
+name: RePhone Lumi Kit
 category: RePhone
 bzurl: https://www.seeedstudio.com/RePhone-Lumi-Kit-p-2623.html
 oldwikiname:  RePhone Lumi Kit

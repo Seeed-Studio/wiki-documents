@@ -1,5 +1,5 @@
 ---
-title: Grove - Barometer Sensor (BMP280)
+name: Grove - Barometer Sensor (BMP280)
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Barometer-Sensor-(BMP280)-p-2652.html
 oldwikiname: Grove_-_Barometer_Sensor_(BMP280)

@@ -1,5 +1,5 @@
 ---
-title: Bluetooth Bee v2.0
+name: Bluetooth Bee v2.0
 category: Wireless
 bzurl: https://www.seeedstudio.com/Bluetooth-Bee-v2.0-p-2373.html
 oldwikiname:  Bluetooth Bee v2.0

@@ -1,5 +1,5 @@
 ---
-title: 4A Motor Shield
+name: 4A Motor Shield
 category: Shield
 bzurl: https://www.seeedstudio.com/4A-Motor-Shield-p-1954.html
 oldwikiname:  4A_Motor_Shield

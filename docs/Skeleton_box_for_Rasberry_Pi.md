@@ -1,5 +1,5 @@
 ---
-title: Skeleton box for Raspberry Pi
+name: Skeleton box for Raspberry Pi
 category: Raspberry Pi
 bzurl: https://www.seeedstudio.com/Skeleton-box-for-Raspberry-Pi-p-1547.html
 oldwikiname:   Skeleton box for Raspberry Pi

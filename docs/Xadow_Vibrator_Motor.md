@@ -1,5 +1,5 @@
 ---
-title: Xadow - Vibrator Motor
+name: Xadow - Vibrator Motor
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-Vibration-Motor-p-1517.html
 oldwikiname: Xadow - Vibrator Motor

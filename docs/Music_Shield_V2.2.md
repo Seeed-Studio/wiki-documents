@@ -1,5 +1,5 @@
 ---
-title: Music Shield V2.2
+name: Music Shield V2.2
 category: Shield
 bzurl: https://www.seeedstudio.com/Music-Shield-V2.0-p-1372.html
 oldwikiname: Music_Shield_V2.2

@@ -1,5 +1,5 @@
 ---
-title: Grove - Barometer (High-Accuracy)
+name: Grove - Barometer (High-Accuracy)
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Barometer-(High-Accuracy)-p-1865.html
 oldwikiname: Grove_-_Barometer_(High-Accuracy)

@@ -1,5 +1,5 @@
 ---
-title: 1w Solar Panel 80*100
+name: 1w Solar Panel 80*100
 category: MakerPro
 bzurl: https://www.seeedstudio.com/1w-solar-panel-75x100-p-633.html?cPath=155
 oldwikiname:  1w Solar Panel 80*100

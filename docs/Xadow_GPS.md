@@ -1,5 +1,5 @@
 ---
-title: Xadow - GPS
+name: Xadow - GPS
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-GPS-p-1600.html
 oldwikiname: Xadow - GPS

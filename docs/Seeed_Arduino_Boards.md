@@ -1,5 +1,5 @@
 ---
-title: How to Add Seeed boards to Arduino IDE
+name: How to Add Seeed boards to Arduino IDE
 category: Tutorial
 ---
 

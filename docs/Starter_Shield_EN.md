@@ -1,5 +1,5 @@
 ---
-title: Starter_Shield_EN
+name: Starter_Shield_EN
 category: Discontinued
 bzurl:
 oldwikiname: Seeeduino_Stalker‏‎

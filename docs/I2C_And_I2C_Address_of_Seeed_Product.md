@@ -1,5 +1,5 @@
 ---
-title: I2C And I2C Address of Seeed Product
+name: I2C And I2C Address of Seeed Product
 category: Tutorial
 oldwikiname:  I2C And I2C Address of Seeed Product
 prodimagename:

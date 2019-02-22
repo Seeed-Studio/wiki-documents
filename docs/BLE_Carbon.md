@@ -1,5 +1,5 @@
 ---
-title: BLE Carbon
+name: BLE Carbon
 category: Wireless
 bzurl: https://www.seeedstudio.com/BLE-Carbon-p-2710.html
 oldwikiname:

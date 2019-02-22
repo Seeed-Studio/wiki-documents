@@ -1,5 +1,5 @@
 ---
-title: Grove Base BoosterPack
+name: Grove Base BoosterPack
 category: Others
 bzurl: https://www.seeedstudio.com/Grove-Base-BoosterPack-p-2177.html
 oldwikiname:  Grove Base BoosterPack

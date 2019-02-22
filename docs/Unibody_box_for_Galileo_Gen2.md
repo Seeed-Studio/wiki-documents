@@ -1,5 +1,5 @@
 ---
-title: Unibody box for Galileo Gen2
+name: Unibody box for Galileo Gen2
 category: Essentials
 bzurl: https://www.seeedstudio.com/Unibody-Box-for-Galileo-Gen2-p-2605.html
 oldwikiname:  Unibody box for Galileo Gen2

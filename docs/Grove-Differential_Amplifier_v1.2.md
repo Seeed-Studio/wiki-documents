@@ -1,5 +1,5 @@
 ---
-title: Grove - Differential Amplifier v1.2
+name: Grove - Differential Amplifier v1.2
 category: Others
 bzurl: https://www.seeedstudio.com/Grove-Differential-Amplifier-p-1284.html
 oldwikiname: Grove_-_Differential_Amplifier_v1.2

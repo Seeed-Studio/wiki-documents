@@ -1,5 +1,5 @@
 ---
-title: Replacement LCD Screen for DSO nano
+name: Replacement LCD Screen for DSO nano
 category: Tutorial
 oldwikiname:  Replacement LCD Screen for DSO nano
 prodimagename:

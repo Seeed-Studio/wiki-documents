@@ -1,5 +1,5 @@
 ---
-title: Xadow Tutorial - Acceleration Detector
+name: Xadow Tutorial - Acceleration Detector
 category: RePhone
 oldwikiname: Xadow tutorial-Acceleration detector
 surveyurl: https://www.research.net/r/Xadow_Tutorial_Acceleration_Detector

@@ -1,5 +1,5 @@
 ---
-title: WireLess Gate Shield V1.0
+name: WireLess Gate Shield V1.0
 category: MakerPro
 bzurl: https://www.seeedstudio.com/WireLess-Gate-Shield-p-2117.html
 oldwikiname:  WireLess Gate Shield V1.0

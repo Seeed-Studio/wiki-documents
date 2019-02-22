@@ -1,5 +1,5 @@
 ---
-title: Skeleton Box for Raspberry Pi Compute Module Development Kit
+name: Skeleton Box for Raspberry Pi Compute Module Development Kit
 category: Raspberry Pi
 bzurl: https://www.seeedstudio.com/Skeleton-Box-for-Raspberry-Pi-Compute-Module-p-2078.html
 oldwikiname:   Skeleton Box for Raspberry Pi Compute Module Development Kit

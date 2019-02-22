@@ -1,5 +1,5 @@
 ---
-title:  SD Card Shield
+name:  SD Card Shield
 category: Discontinued
 bzurl:
 oldwikiname: SD_Card_Shield

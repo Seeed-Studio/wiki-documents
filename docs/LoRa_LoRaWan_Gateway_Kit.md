@@ -1,5 +1,5 @@
 ---
-title: LoRa/LoRaWAN Gateway Kit
+name: LoRa/LoRaWAN Gateway Kit
 category: Wireless
 bzurl:  https://www.seeedstudio.com/LoRa-LoRaWAN-Gateway-868MHz-Kit-with-Raspberry-Pi-3-p-2823.html
 prodimagename:

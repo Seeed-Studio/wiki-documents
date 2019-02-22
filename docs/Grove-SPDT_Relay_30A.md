@@ -1,5 +1,5 @@
 ---
-title: Grove - SPDT Relay(30A)
+name: Grove - SPDT Relay(30A)
 category: Others
 bzurl: https://www.seeedstudio.com/Grove-SPDT-Relay(30A)-p-1473.html
 oldwikiname: Grove - SPDT Relay(30A)

@@ -1,5 +1,5 @@
 ---
-title: Grove - Voltage Divider
+name: Grove - Voltage Divider
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-Voltage-Divider-p-1472.html
 oldwikiname: Grove - Sunlight Sensor

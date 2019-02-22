@@ -1,5 +1,5 @@
 ---
-title: DSO Quad:Building Firmware
+name: DSO Quad:Building Firmware
 category: MakerPro
 bzurl:
 oldwikiname:  DSO Quad:Building Firmware

@@ -1,5 +1,5 @@
 ---
-title: Project Seven - Temperature
+name: Project Seven - Temperature
 category: Tutorial
 oldwikiname:  Project Seven - TemperatureProject Seven - Temperature
 prodimagename:

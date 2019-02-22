@@ -1,5 +1,5 @@
 ---
-title: BLE (dual) Bee v1.0
+name: BLE (dual) Bee v1.0
 category: Wireless
 bzurl: https://www.seeedstudio.com/BLE(dual-model)-Bee-p-2406.html
 oldwikiname:  BLE (dual) Bee v1.0

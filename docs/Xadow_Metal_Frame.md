@@ -1,5 +1,5 @@
 ---
-title: Xadow Metal Frame
+name: Xadow Metal Frame
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-Metal-Frame-p-1554.html
 oldwikiname: Xadow Metal Frame

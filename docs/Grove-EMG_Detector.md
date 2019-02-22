@@ -1,5 +1,5 @@
 ---
-title: Grove - EMG Detector
+name: Grove - EMG Detector
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-EMG-Detector-p-1737.html
 oldwikiname: Grove_-_EMG_Detector

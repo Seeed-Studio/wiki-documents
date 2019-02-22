@@ -1,5 +1,5 @@
 ---
-title: Bees Shield
+name: Bees Shield
 category: Discontinued
 bzurl: https://www.seeedstudio.com/Bees-Shield-p-672.html
 oldwikiname: Bees Shield

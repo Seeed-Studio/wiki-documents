@@ -1,5 +1,5 @@
 ---
-title: Xadow IO pin mapping
+name: Xadow IO pin mapping
 category: Tutorial
 bzurl:
 oldwikiname:  Xadow IO pin mapping

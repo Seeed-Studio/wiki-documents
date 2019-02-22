@@ -1,5 +1,5 @@
 ---
-title: Seeeduino Arch
+name: Seeeduino Arch
 category: Discontinued
 bzurl:
 oldwikiname: Seeeduino_Arch

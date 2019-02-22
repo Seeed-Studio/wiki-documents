@@ -1,5 +1,5 @@
 ---
-title: Grove - I2C Touch Sensor
+name: Grove - I2C Touch Sensor
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-I2C-Touch-Sensor-p-840.html
 oldwikiname: Grove_-_I2C_Touch_Sensor

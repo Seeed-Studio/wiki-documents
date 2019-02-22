@@ -1,5 +1,5 @@
 ---
-title: Matrix Clock
+name: Matrix Clock
 category: MakerPro
 bzurl: https://www.seeedstudio.com/Matrix-Clock-p-1824.html
 oldwikiname:  Matrix Clock

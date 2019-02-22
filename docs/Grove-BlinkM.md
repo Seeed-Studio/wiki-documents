@@ -1,5 +1,5 @@
 ---
-title:  Grove BlinkM‏‎
+name:  Grove BlinkM‏‎
 category: Discontinued
 bzurl:
 oldwikiname: Grove-BlinkM‏‎

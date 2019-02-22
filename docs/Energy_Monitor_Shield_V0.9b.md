@@ -1,5 +1,5 @@
 ---
-title: Energy Monitor Shield V0.9b‏‎
+name: Energy Monitor Shield V0.9b‏‎
 category: Discontinued
 bzurl:
 oldwikiname: Energy_Monitor_Shield_V0.9b‏‎

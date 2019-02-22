@@ -1,5 +1,5 @@
 ---
-title: Grove - Thumb Joystick
+name: Grove - Thumb Joystick
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Thumb-Joystick-p-935.html
 oldwikiname: Grove_-_Thumb_Joystick

@@ -1,5 +1,5 @@
 ---
-title: JavaScript for RePhone
+name: JavaScript for RePhone
 category: Tutorial
 oldwikiname: JavaScript_for_RePhone
 prodimagename: Xadow_GSMPlusBLE_pingguo.JPG

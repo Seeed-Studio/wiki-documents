@@ -1,5 +1,5 @@
 ---
-title: Grove Starter Kit for BeagleBone Green
+name: Grove Starter Kit for BeagleBone Green
 category: BeagleBone
 bzurl: https://www.seeedstudio.com/Grove-Starter-Kit-for-SeeedStudio-BeagleBone-Green-p-2526.html
 oldwikiname: Grove_Starter_Kit_for_BeagleBone_Green

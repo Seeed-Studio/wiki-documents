@@ -1,5 +1,5 @@
 ---
-title: Grove - Buzzer
+name: Grove - Buzzer
 category: Actuator
 bzurl: https://www.seeedstudio.com/Grove-Buzzer-p-768.html
 oldwikiname: Grove - Buzzer

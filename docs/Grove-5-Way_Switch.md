@@ -1,5 +1,5 @@
 ---
-title: Grove - 5-Way Switch
+name: Grove - 5-Way Switch
 category: Sensor
 bzurl: 
 oldwikiname: 

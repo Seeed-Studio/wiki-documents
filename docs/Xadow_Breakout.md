@@ -1,5 +1,5 @@
 ---
-title: Xadow - Breakout
+name: Xadow - Breakout
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-Breakout-p-1519.html
 oldwikiname: Xadow - Breakout

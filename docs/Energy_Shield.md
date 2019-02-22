@@ -1,5 +1,5 @@
 ---
-title: Energy Shield
+name: Energy Shield
 category: Shield
 bzurl: https://seeedstudio.com/Energy-Shield-p-1373.html
 oldwikiname: Energy_Shield

@@ -1,5 +1,5 @@
 ---
-title: MakerPro Introduction
+name: MakerPro Introduction
 nointro:
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Grove - 8-Channel Solid State Relay
+name: Grove - 8-Channel Solid State Relay
 category: Sensor
 bzurl: 
 oldwikiname: 

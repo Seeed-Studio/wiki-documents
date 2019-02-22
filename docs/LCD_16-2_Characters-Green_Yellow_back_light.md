@@ -1,5 +1,5 @@
 ---
-title: LCD 16*2 Characters- Green Yellow back light
+name: LCD 16*2 Characters- Green Yellow back light
 category: MakerPro
 bzurl: https://www.seeedstudio.com/lcd-162-characters-green-yellow-back-light-p-62.html?cPath=163_164
 oldwikiname:  LCD 16*2 Characters- Green Yellow back light

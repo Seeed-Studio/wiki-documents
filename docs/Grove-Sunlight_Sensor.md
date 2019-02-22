@@ -1,5 +1,5 @@
 ---
-title: Grove - Sunlight Sensor
+name: Grove - Sunlight Sensor
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-Sunlight-Sensor-p-2530.html
 oldwikiname: Grove - Sunlight Sensor

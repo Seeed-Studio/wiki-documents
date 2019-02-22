@@ -1,5 +1,5 @@
 ---
-title: Grove - RGB LED Stick (10 WS2813 Mini)
+name: Grove - RGB LED Stick (10 WS2813 Mini)
 category: Sensor
 bzurl: 
 oldwikiname: 

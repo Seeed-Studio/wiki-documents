@@ -1,5 +1,5 @@
 ---
-title: RFbee V1.1 - Wireless Arduino compatible node
+name: RFbee V1.1 - Wireless Arduino compatible node
 category: Wireless
 bzurl: https://seeedstudio.com/RFbee-V1.1-Wireless-arduino-compatible-node-p-614.html
 oldwikiname: RFbee_V1.1_-_Wireless_Arduino_compatible_node

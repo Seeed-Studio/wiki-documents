@@ -1,5 +1,5 @@
 ---
-title: AT Command Tester Application
+name: AT Command Tester Application
 category: Tutorial
 oldwikiname:  AT Command Tester Application
 prodimagename:

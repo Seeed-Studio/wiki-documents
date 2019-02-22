@@ -1,5 +1,5 @@
 ---
-title: Grove - Air Quality Sensor v1.3
+name: Grove - Air Quality Sensor v1.3
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-Air-quality-sensor-v1.3-p-2439.html
 oldwikiname: Grove - Air Quality Sensor v1.3

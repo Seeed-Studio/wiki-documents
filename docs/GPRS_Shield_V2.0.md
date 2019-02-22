@@ -1,5 +1,5 @@
 ---
-title: GPRS Shield V2.0
+name: GPRS Shield V2.0
 category: Discontinued
 bzurl: https://www.seeedstudio.com/GPRS-Shield-V2.0-p-1379.html
 oldwikiname:  GPRS Shield V2.0

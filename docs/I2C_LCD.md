@@ -1,5 +1,5 @@
 ---
-title: I2C LCD
+name: I2C LCD
 category: Display
 bzurl: https://www.seeedstudio.com/I2C_LCD-%28With-universal-Grove-cable%29-p-2601.html
 oldwikiname: I2C_LCD

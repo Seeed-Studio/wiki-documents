@@ -1,5 +1,5 @@
 ---
-title: Grove - UART WiFi V2 (ESP8285)
+name: Grove - UART WiFi V2 (ESP8285)
 category: Communication
 bzurl: https://www.seeedstudio.com/Grove-Uart-Wifi-p-2495.html
 oldwikiname:

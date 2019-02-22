@@ -1,5 +1,5 @@
 ---
-title: Zigbee Networking with XBee Series 2 and Seeed's Products
+name: Zigbee Networking with XBee Series 2 and Seeed's Products
 category: Tutorial
 oldwikiname:  Zigbee Networking with XBee Series 2 and Seeed's Products
 prodimagename:  

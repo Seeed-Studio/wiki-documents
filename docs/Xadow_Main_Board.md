@@ -1,5 +1,5 @@
 ---
-title: Xadow - Main Board
+name: Xadow - Main Board
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-Main-Board-p-1524.html
 oldwikiname: Xadow - Main Board

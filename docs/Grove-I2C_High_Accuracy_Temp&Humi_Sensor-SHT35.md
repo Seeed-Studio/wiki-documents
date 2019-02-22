@@ -1,5 +1,5 @@
 ---
-title: Grove - I2C High Accuracy Temp&Humi Sensor(SHT35)
+name: Grove - I2C High Accuracy Temp&Humi Sensor(SHT35)
 category: Sensor
 bzurl: 
 oldwikiname: 

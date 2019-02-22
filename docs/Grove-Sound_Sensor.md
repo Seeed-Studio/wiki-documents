@@ -1,5 +1,5 @@
 ---
-title: Grove - Sound Sensor
+name: Grove - Sound Sensor
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-Sound-Sensor-p-752.html
 oldwikiname: Grove_-_Sound_Sensor

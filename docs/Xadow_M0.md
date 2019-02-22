@@ -1,5 +1,5 @@
 ---
-title: Xadow - M0
+name: Xadow - M0
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-M0-mbed-enabled-ARM-Cortex-M0-board-for-Rapid-Prototyping-p-1880.html
 oldwikiname: Xadow - M0

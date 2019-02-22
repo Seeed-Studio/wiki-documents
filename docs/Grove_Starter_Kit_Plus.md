@@ -1,5 +1,5 @@
 ---
-title: Grove - Starter Kit Plus
+name: Grove - Starter Kit Plus
 category: Others
 bzurl: https://www.seeedstudio.com/Grove-Starter-Kit-Plus-p-1294.html
 oldwikiname: Grove - Starter Kit Plus

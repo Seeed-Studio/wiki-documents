@@ -1,5 +1,5 @@
 ---
-title: Beagle Bone Green and Grove IoT Starter Kit Powered by AWS
+name: Beagle Bone Green and Grove IoT Starter Kit Powered by AWS
 category: BeagleBone
 bzurl: https://www.amazon.com/BeagleBone-Green-Grove-Starter-Powered/dp/B017O3H49K
 oldwikiname: Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS

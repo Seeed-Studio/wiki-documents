@@ -1,5 +1,5 @@
 ---
-title: RFID Control LED
+name: RFID Control LED
 category: Tutorial
 oldwikiname:  RFID Control LED
 prodimagename:

@@ -1,5 +1,5 @@
 ---
-title: G1&2" Water Flow Sensor
+name: G1&2" Water Flow Sensor
 category: MakerPro
 bzurl: https://www.seeedstudio.com/g12-water-flow-sensor-p-635.html?cPath=84_87&zenid=020999c566d2f31841dc54602b7d02ef
 oldwikiname: G1/2 Water Flow sensor

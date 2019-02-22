@@ -1,5 +1,5 @@
 ---
-title: Grove Base Shield for Photon
+name: Grove Base Shield for Photon
 category: Others
 bzurl: https://www.seeedstudio.com/Particle-Photon-Base-Shield-p-2598.html?cPath=98_106_57
 oldwikiname:  Grove Base Shield for Photon

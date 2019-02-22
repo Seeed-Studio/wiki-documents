@@ -1,5 +1,5 @@
 ---
-title: Bluetooth V4.0 HM-11 BLE Module
+name: Bluetooth V4.0 HM-11 BLE Module
 category: MakerPro
 bzurl: https://www.seeedstudio.com/Bluetooth-V4.0-HM-11-BLE-Module-p-1803.html
 oldwikiname:  Bluetooth V4.0 HM-11 BLE Module

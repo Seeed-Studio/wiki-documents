@@ -1,5 +1,5 @@
 ---
-title: Grove - Digital Infrared Temperature Sensor
+name: Grove - Digital Infrared Temperature Sensor
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Digital-Infrared-Temperature-Sensor-p-2385.html
 oldwikiname: Grove_-_Digital_Infrared_Temperature_Sensor

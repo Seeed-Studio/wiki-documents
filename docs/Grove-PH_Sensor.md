@@ -1,5 +1,5 @@
 ---
-title: Grove - PH Sensor
+name: Grove - PH Sensor
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-PH-Sensor-p-1564.html
 oldwikiname:  Grove - PH Sensor

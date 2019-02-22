@@ -1,5 +1,5 @@
 ---
-title: DSO Quad Manual (by the community)
+name: DSO Quad Manual (by the community)
 category: MakerPro
 bzurl:
 oldwikiname:  DSO Quad Manual (by the community)

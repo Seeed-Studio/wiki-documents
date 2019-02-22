@@ -1,5 +1,5 @@
 ---
-title: Grove - Recorder
+name: Grove - Recorder
 category: Actuator
 bzurl: https://www.seeedstudio.com/Grove-Recorder-p-1825.html
 oldwikiname:  Grove - Recorder

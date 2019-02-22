@@ -1,5 +1,5 @@
 ---
-title: Wio LTE Cat.1
+name: Wio LTE Cat.1
 category: Wio_Tracker
 bzurl: https://www.seeedstudio.com/Wio-LTE-4G%2C-Cat.1%2C-GNSS%2C-Espruino-Compatible-p-2957.html
 prodimagename: wio_tracker_lte_1.jpg

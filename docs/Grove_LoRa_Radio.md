@@ -1,5 +1,5 @@
 ---
-title: Grove - LoRa Radio
+name: Grove - LoRa Radio
 category: Communication
 bzurl: https://www.seeedstudio.com
 oldwikiname: Grove - LoRa Radio

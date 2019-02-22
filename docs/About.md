@@ -1,5 +1,5 @@
 ---
-title: About Seeeed
+name: About Seeeed
 nointro:
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Tutorial Introduction
+name: Tutorial Introduction
 nointro:
 ---
 

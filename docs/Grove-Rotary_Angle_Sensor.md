@@ -1,5 +1,5 @@
 ---
-title: Grove - Rotary Angle Sensor
+name: Grove - Rotary Angle Sensor
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Rotary-Angle-Sensor-p-770.html
 oldwikiname: Grove_-_Rotary_Angle_Sensor

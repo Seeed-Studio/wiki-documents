@@ -1,5 +1,5 @@
 ---
-title: IR Remote
+name: IR Remote
 category: Tutorial
 oldwikiname:  IR Remote
 prodimagename:  

@@ -1,5 +1,5 @@
 ---
-title: Xadow - RTC
+name: Xadow - RTC
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-RTC-p-1523.html
 oldwikiname: Xadow - RTC

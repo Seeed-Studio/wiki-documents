@@ -1,5 +1,5 @@
 ---
-title: Grove - NunChuck
+name: Grove - NunChuck
 category: Others
 bzurl:  https://www.seeedstudio.com/grove-nunchuck-p-1474.html
 oldwikiname:  Grove - NunChuck

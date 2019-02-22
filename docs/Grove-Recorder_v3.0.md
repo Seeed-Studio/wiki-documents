@@ -1,5 +1,5 @@
 ---
-title: Grove - Recorder V3
+name: Grove - Recorder V3
 category: Actuator
 bzurl: 
 oldwikiname: 

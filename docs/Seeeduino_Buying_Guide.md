@@ -1,5 +1,5 @@
 ---
-title: Seeeduino Buying Guide
+name: Seeeduino Buying Guide
 category: Tutorial
 oldwikiname:  Seeeduino Buying Guide
 prodimagename:

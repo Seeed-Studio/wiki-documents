@@ -1,5 +1,5 @@
 ---
-title: Seeeduino Stalker‏‎ V3
+name: Seeeduino Stalker‏‎ V3
 category: Discontinued
 bzurl:
 oldwikiname: Seeeduino_Stalker‏‎

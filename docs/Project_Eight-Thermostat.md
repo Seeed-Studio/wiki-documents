@@ -1,5 +1,5 @@
 ---
-title: Project Eight - Thermostat
+name: Project Eight - Thermostat
 category: Tutorial
 oldwikiname:  Project Eight - Thermostat
 prodimagename:  

@@ -1,5 +1,5 @@
 ---
-title: Wio LTE Cat M1/NB-IoT Tracker
+name: Wio LTE Cat M1/NB-IoT Tracker
 category: Actuator
 bzurl: https://seeedstudio.com/Grove-Infrared-Emitter-p-993.html
 oldwikiname: Grove_-_Infrared_Emitter

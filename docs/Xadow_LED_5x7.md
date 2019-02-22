@@ -1,5 +1,5 @@
 ---
-title: Xadow - LED 5x7
+name: Xadow - LED 5x7
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-LED-5-x-7-p-2561.html
 oldwikiname: Xadow - LED 5x7

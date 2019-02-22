@@ -1,5 +1,5 @@
 ---
-title: Seeeduino Arch V1.0
+name: Seeeduino Arch V1.0
 category: mbed
 bzurl: https://www.seeedstudio.com/seeeduino-arch-p-1561.html
 oldwikiname:  Seeeduino Arch V1.0

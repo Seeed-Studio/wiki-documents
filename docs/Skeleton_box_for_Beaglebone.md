@@ -1,5 +1,5 @@
 ---
-title: Skeleton box for Beaglebone
+name: Skeleton box for Beaglebone
 category: BeagleBone
 bzurl: https://www.seeedstudio.com/Skeleton-Box-For-Beaglebone-p-1952.html
 oldwikiname:   Skeleton box for Beaglebone

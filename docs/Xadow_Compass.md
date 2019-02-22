@@ -1,5 +1,5 @@
 ---
-title: Xadow - Compass
+name: Xadow - Compass
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-Compass-p-1669.html
 oldwikiname: Xadow - Compass

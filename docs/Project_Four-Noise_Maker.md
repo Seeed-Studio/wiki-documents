@@ -1,5 +1,5 @@
 ---
-title: Project Four – Noise Maker
+name: Project Four – Noise Maker
 category: Tutorial
 oldwikiname:  Project Four – Noise Maker
 prodimagename:

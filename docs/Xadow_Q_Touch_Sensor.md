@@ -1,5 +1,5 @@
 ---
-title: Xadow-Q Touch Sensor
+name: Xadow-Q Touch Sensor
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-Q-Touch-Sensor-p-1853.html
 oldwikiname: Xadow-Q Touch Sensor

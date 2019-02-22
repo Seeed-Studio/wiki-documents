@@ -1,5 +1,5 @@
 ---
-title: Grove - I2C Thermocouple Amplifier (MCP9600)
+name: Grove - I2C Thermocouple Amplifier (MCP9600)
 category: Sensor
 bzurl: 
 oldwikiname: 

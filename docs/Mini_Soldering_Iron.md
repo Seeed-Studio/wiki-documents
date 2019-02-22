@@ -1,5 +1,5 @@
 ---
-title: Mini Soldering Iron
+name: Mini Soldering Iron
 category: MakerPro
 bzurl: https://www.seeedstudio.com/Mini%C2%A0Soldering%C2%A0Iron%C2%A0Deluxe%C2%A0Kit%C2%A0US%C2%A0Standard-p-2593.html?ref=newInBazaar
 oldwikiname:  Mini Soldering Iron

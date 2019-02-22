@@ -1,5 +1,5 @@
 ---
-title: Grove - Alcohol Sensor
+name: Grove - Alcohol Sensor
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Alcohol-Sensor-p-764.html
 oldwikiname: Grove_-_Alcohol_Sensor

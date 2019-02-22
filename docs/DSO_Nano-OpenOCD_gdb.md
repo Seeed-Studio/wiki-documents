@@ -1,5 +1,5 @@
 ---
-title: DSO Nano/OpenOCD gdb
+name: DSO Nano/OpenOCD gdb
 category: MakerPro
 bzurl:
 oldwikiname:  DSO Nano/OpenOCD gdb

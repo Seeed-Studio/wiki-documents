@@ -1,5 +1,5 @@
 ---
-title: XBee Shield
+name: XBee Shield
 category: Discontinued
 bzurl:
 oldwikiname: XBee-Shield

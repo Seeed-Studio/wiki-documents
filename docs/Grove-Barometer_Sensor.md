@@ -1,5 +1,5 @@
 ---
-title: Grove - Barometer Sensor
+name: Grove - Barometer Sensor
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-Barometer-Sensor-p-1199.html
 oldwikiname: Grove_-_Barometer_Sensor

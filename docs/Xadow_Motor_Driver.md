@@ -1,5 +1,5 @@
 ---
-title: Xadow - Motor Driver
+name: Xadow - Motor Driver
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-Motor-Driver-p-1626.html
 oldwikiname: Xadow - Motor Driver

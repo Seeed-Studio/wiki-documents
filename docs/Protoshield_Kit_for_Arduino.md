@@ -1,5 +1,5 @@
 ---
-title: Protoshield Kit for Arduino
+name: Protoshield Kit for Arduino
 category: Shield
 bzurl: https://www.seeedstudio.com/Protoshield-Kit-for-Arduino-p-318.html
 oldwikiname: Protoshield Kit for Arduino

@@ -1,5 +1,5 @@
 ---
-title: Wio Link
+name: Wio Link
 category: Wio
 bzurl: https://www.seeedstudio.com/Wio-Link-p-2604.html
 oldwikiname: Wio_Link

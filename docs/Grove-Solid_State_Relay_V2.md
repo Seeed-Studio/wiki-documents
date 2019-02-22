@@ -1,5 +1,5 @@
 ---
-title: Grove - Solid State Relay V2
+name: Grove - Solid State Relay V2
 category: Sensor
 bzurl: 
 oldwikiname: 

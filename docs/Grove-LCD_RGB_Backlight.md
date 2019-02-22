@@ -1,5 +1,5 @@
 ---
-title: Grove - LCD RGB Backlight
+name: Grove - LCD RGB Backlight
 category: Display
 bzurl: https://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html
 oldwikiname: Grove_-_LCD_RGB_Backlight

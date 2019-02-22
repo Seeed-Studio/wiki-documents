@@ -1,5 +1,5 @@
 ---
-title:  BLE Bee
+name:  BLE Bee
 category: Discontinued
 bzurl:
 oldwikiname: BLE_Bee

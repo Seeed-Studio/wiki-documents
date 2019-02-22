@@ -1,5 +1,5 @@
 ---
-title: Grove - RGB LED Ring (20 - WS2813 Mini)
+name: Grove - RGB LED Ring (20 - WS2813 Mini)
 category: Acator
 bzurl: 
 oldwikiname: 

@@ -1,5 +1,5 @@
 ---
-title: Grove - Electromagnet
+name: Grove - Electromagnet
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Electromagnet-p-1820.html
 oldwikiname: Grove_-_Electromagnet

@@ -1,5 +1,5 @@
 ---
-title: Eclipse IDE for RePhone Kit
+name: Eclipse IDE for RePhone Kit
 category: Tutorial
 oldwikiname:  Eclipse IDE for RePhone Kit
 prodimagename: Xadow_GSMPlusBLE_pingguo.JPG

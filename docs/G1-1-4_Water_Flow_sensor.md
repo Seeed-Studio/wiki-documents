@@ -1,5 +1,5 @@
 ---
-title: G1'1/4 Water Flow sensor
+name: G1'1/4 Water Flow sensor
 category: MakerPro
 bzurl: https://www.seeedstudio.com/g114-water-flow-sensor-p-1082.html?cPath=144_151
 oldwikiname:  G1'1/4 Water Flow sensor

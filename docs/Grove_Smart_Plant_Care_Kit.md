@@ -1,5 +1,5 @@
 ---
-title: Grove Smart Plant Care Kit
+name: Grove Smart Plant Care Kit
 category: Others
 bzurl: https://www.seeedstudio.com/Grove-Smart-Plant-Care-Kit-for-Arduino-p-2528.html
 oldwikiname:  Grove Smart Plant Care Kit

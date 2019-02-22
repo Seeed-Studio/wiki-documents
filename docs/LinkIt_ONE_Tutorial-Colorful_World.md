@@ -1,5 +1,5 @@
 ---
-title: LinkIt ONE Tutorial - Colorful World
+name: LinkIt ONE Tutorial - Colorful World
 category: Tutorial
 oldwikiname:  LinkIt ONE Tutorial - Colorful World
 prodimagename:

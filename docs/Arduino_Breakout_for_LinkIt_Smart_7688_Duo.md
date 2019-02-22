@@ -1,5 +1,5 @@
 ---
-title: Arduino Breakout for LinkIt Smart 7688 Duo
+name: Arduino Breakout for LinkIt Smart 7688 Duo
 category: LinkIt
 bzurl: https://www.seeedstudio.com/Arduino-Breakout-for-LinkIt-Smart-7688-Duo-p-2576.html
 oldwikiname: Arduino Breakout for LinkIt Smart 7688 Duo

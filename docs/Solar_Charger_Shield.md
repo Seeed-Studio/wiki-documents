@@ -1,5 +1,5 @@
 ---
-title:  Solar Charger Shield‏‎
+name:  Solar Charger Shield‏‎
 category: Discontinued
 bzurl:
 oldwikiname: Solar_Charger_Shield‏‎

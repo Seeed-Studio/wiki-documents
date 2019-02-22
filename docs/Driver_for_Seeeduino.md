@@ -1,5 +1,5 @@
 ---
-title: Driver for Seeeduino
+name: Driver for Seeeduino
 category: Tutorial
 ---
 

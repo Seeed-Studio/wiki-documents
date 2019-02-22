@@ -1,5 +1,5 @@
 ---
-title: Grove - IMU 10DOF
+name: Grove - IMU 10DOF
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-IMU-10DOF-p-2386.html
 oldwikiname: Grove_-_IMU_10DOF

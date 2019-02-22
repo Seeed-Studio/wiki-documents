@@ -1,5 +1,5 @@
 ---
-title: Grove Starter Kit for IoT based on Raspberry Pi
+name: Grove Starter Kit for IoT based on Raspberry Pi
 category: Raspberry Pi
 bzurl: https://www.seeedstudio.com/Microsoft-IoT-Grove-Kit-(Azure-Certified)-p-2694.html
 prodimagename: cover.jpg

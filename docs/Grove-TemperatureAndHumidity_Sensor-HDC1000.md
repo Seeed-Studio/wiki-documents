@@ -1,5 +1,5 @@
 ---
-title: Grove - Temperature&Humidity Sensor (HDC1000)
+name: Grove - Temperature&Humidity Sensor (HDC1000)
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Temperature&Humidity-Sensor-(HDC1000)-p-2535.html
 oldwikiname: Grove_-_Temperature&Humidity_Sensor_(HDC1000)

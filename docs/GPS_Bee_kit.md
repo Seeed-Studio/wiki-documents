@@ -1,5 +1,5 @@
 ---
-title: GPS Bee kit
+name: GPS Bee kit
 category: MakerPro
 bzurl: https://www.seeedstudio.com/gps-bee-kit-with-mini-embedded-antenna-p-560.html?cPath=144_145
 oldwikiname:  GPS Bee kit

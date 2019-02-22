@@ -1,5 +1,5 @@
 ---
-title: Base Shield V2
+name: Base Shield V2
 category: Shield
 bzurl: https://www.seeedstudio.com/base-shield-v13-p-1378.html
 oldwikiname:

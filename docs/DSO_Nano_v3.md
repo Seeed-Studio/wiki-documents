@@ -1,5 +1,5 @@
 ---
-title: DSO Nano v3
+name: DSO Nano v3
 category: MakerPro
 bzurl: https://www.seeedstudio.com/DSO-Nano-v3-p-1358.html
 oldwikiname:  DSO Nano v3

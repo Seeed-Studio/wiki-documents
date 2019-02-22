@@ -1,6 +1,6 @@
 # How to Choose A Gas Sensor
 ---
-title: How to Choose A Gas Sensor
+name: How to Choose A Gas Sensor
 category: Tutorial
 oldwikiname:  How to Choose A Gas Sensor
 prodimagename:

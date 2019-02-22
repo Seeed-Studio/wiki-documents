@@ -1,5 +1,5 @@
 ---
-title: Project Two – Digital Input
+name: Project Two – Digital Input
 category: Tutorial
 oldwikiname:  Project Two – Digital Input
 prodimagename:

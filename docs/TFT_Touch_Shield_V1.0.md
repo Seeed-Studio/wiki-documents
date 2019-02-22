@@ -1,5 +1,5 @@
 ---
-title:  TFT Touch Shield V1.0‏‎
+name:  TFT Touch Shield V1.0‏‎
 category: Discontinued
 bzurl:
 oldwikiname: TFT_Touch_Shield_V1.0‏‎

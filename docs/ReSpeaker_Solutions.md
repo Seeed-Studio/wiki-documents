@@ -1,5 +1,5 @@
 ---
-title: ReSpeaker Solutions
+name: ReSpeaker Solutions
 nointro:
 ---
 

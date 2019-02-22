@@ -1,5 +1,5 @@
 ---
-title: Renbotics ServoShield Rev
+name: Renbotics ServoShield Rev
 category: MakerPro
 bzurl: https://www.seeedstudio.com/Renbotics-ServoShield-V2.0-p-1299.html
 oldwikiname:  Renbotics ServoShield Rev

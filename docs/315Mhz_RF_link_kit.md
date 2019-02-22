@@ -1,5 +1,5 @@
 ---
-title: 315Mhz RF link kit
+name: 315Mhz RF link kit
 category: MakerPro
 bzurl: https://www.seeedstudio.com/315mhz-rf-link-kit-p-76.html
 oldwikiname:  315Mhz RF link kit

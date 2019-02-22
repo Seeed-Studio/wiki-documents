@@ -1,5 +1,5 @@
 ---
-title: Grove - PIR Motion Sensor
+name: Grove - PIR Motion Sensor
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-PIR-Motion-Sensor-p-802.html
 oldwikiname: Grove - PIR Motion Sensor

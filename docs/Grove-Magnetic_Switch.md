@@ -1,5 +1,5 @@
 ---
-title: Grove - Magnetic Switch
+name: Grove - Magnetic Switch
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Magnetic-Switch-p-744.html
 oldwikiname: Grove_-_Magnetic_Switch

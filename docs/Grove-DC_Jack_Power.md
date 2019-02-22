@@ -1,5 +1,5 @@
 ---
-title: Grove - DC Jack Power
+name: Grove - DC Jack Power
 category: Others
 bzurl:  https://www.seeedstudio.com/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14
 oldwikiname:  Grove - DC Jack Power

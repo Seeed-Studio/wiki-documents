@@ -1,5 +1,5 @@
 ---
-title: Grove - Button
+name: Grove - Button
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-Button-p-766.html
 oldwikiname: Grove - Button

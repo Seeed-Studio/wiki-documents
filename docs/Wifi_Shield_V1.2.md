@@ -1,5 +1,5 @@
 ---
-title:  Wifi Shield V1.2
+name:  Wifi Shield V1.2
 category: Discontinued
 bzurl:
 oldwikiname: Wifi_shield_v1.2

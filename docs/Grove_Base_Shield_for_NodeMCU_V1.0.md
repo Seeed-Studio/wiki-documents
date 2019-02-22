@@ -1,5 +1,5 @@
 ---
-title: Grove Base Shield for NodeMCU V1.0
+name: Grove Base Shield for NodeMCU V1.0
 category: Others
 bzurl: https://www.seeedstudio.com/Grove-Base-BoosterPack-p-2177.html
 oldwikiname:  Grove Base Shield for NodeMCU V1.0

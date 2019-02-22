@@ -1,5 +1,5 @@
 ---
-title: Grove - Serial RF Pro
+name: Grove - Serial RF Pro
 category: Communication
 bzurl: https://www.seeedstudio.com/Grove-Serial-RF-Pro-p-794.html
 oldwikiname:  Grove - Serial RF Pro

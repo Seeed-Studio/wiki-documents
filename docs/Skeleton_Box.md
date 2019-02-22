@@ -1,5 +1,5 @@
 ---
-title: Skeleton Box
+name: Skeleton Box
 category: Arduino
 bzurl: https://www.seeedstudio.com/Skeleton-Box-p-1407.html
 oldwikiname:   Skeleton Box

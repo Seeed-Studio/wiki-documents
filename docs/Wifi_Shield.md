@@ -1,5 +1,5 @@
 ---
-title: WIFI Shield‏‎
+name: WIFI Shield‏‎
 category: Discontinued
 bzurl:
 oldwikiname: WIFI_Shield‏‎

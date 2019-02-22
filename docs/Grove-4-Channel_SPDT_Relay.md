@@ -1,5 +1,5 @@
 ---
-title: Grove - 4-Channel SPDT Relay
+name: Grove - 4-Channel SPDT Relay
 category: Sensor
 bzurl: 
 oldwikiname: 

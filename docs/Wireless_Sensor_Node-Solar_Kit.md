@@ -1,5 +1,5 @@
 ---
-title: Wireless Sensor Node - Solar Kit
+name: Wireless Sensor Node - Solar Kit
 category: MakerPro
 bzurl: https://www.seeedstudio.com/Wireless-Sensor-Node-Solar-Kit-p-919.html
 oldwikiname:  Wireless Sensor Node - Solar Kit

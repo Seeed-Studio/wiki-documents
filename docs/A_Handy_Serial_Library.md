@@ -1,5 +1,5 @@
 ---
-title: A Handy Serial Library
+name: A Handy Serial Library
 category: Tutorial
 oldwikiname:  A Handy Serial Library
 prodimagename:

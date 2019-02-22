@@ -1,5 +1,5 @@
 ---
-title: Eagleye 530s
+name: Eagleye 530s
 category: Artik
 bzurl: https://www.seeedstudio.com/Eagleye-530s-p-3035.html
 oldwikiname:

@@ -1,5 +1,5 @@
 ---
-title: Grove - FM Receiver
+name: Grove - FM Receiver
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-FM-Receiver-p-1841.html
 oldwikiname: Grove_-_FM_Receiver

@@ -1,5 +1,5 @@
 ---
-title: Skeleton Box (10x7,10x10,17x10)
+name: Skeleton Box (10x7,10x10,17x10)
 category: Arduino
 bzurl: https://www.seeedstudio.com/Skeleton-Box-10x7-p-1813.html
 oldwikiname:   Skeleton Box (10x7,10x10,17x10)

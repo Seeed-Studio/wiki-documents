@@ -1,5 +1,5 @@
 ---
-title: Codec-Adaptive Wireless Relay
+name: Codec-Adaptive Wireless Relay
 category: MakerPro
 bzurl: https://www.seeedstudio.com/codecadaptive-wireless-relay-p-550.html?cPath=139_140
 oldwikiname:  Codec-Adaptive Wireless Relay

@@ -1,5 +1,5 @@
 ---
-title: Capacitance Meter Kit
+name: Capacitance Meter Kit
 category: MakerPro
 bzurl: https://www.seeedstudio.com/Capacitance-Meter-Kit-p-268.html
 oldwikiname:  Capacitance Meter Kit

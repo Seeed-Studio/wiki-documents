@@ -1,5 +1,5 @@
 ---
-title: Bracket for Infrared Proximity Sensor
+name: Bracket for Infrared Proximity Sensor
 category: MakerPro
 bzurl: https://www.seeedstudio.com/Bracket-for-Infrared-Proximity-Sensor-p-946.html
 oldwikiname:  Bracket for Infrared Proximity Sensor

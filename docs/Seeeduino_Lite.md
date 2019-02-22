@@ -1,5 +1,5 @@
 ---
-title: Seeeduino Lite
+name: Seeeduino Lite
 category: Arduino
 bzurl: https://www.seeedstudio.com/Seeeduino-Lite-p-1487.html
 oldwikiname:   Seeeduino Lite

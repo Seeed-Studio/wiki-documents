@@ -1,5 +1,5 @@
 ---
-title: Grove - 2-Channel SPDT Relay
+name: Grove - 2-Channel SPDT Relay
 category: Sensor
 bzurl: 
 oldwikiname: 

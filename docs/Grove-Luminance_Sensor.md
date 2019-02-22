@@ -1,5 +1,5 @@
 ---
-title: Grove - Luminance Sensor
+name: Grove - Luminance Sensor
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Luminance-Sensor-p-1941.html
 oldwikiname: Grove_-_Luminance_Sensor

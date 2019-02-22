@@ -1,5 +1,5 @@
 ---
-title: ReSpeaker Mic Array
+name: ReSpeaker Mic Array
 category: ReSpeaker
 bzurl: https://www.seeedstudio.com/ReSpeaker-Mic-Array-Far-field-w--7-PDM-Microphones--p-2719.html
 oldwikiname: ReSpeaker Mic Array

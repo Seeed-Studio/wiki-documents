@@ -1,5 +1,5 @@
 ---
-title: Grove - Digital Distance Interrupter 0.5 to 5cm(GP2Y0D805Z0F)(P)
+name: Grove - Digital Distance Interrupter 0.5 to 5cm(GP2Y0D805Z0F)(P)
 category: Sensor
 bzurl: 
 oldwikiname: 

@@ -1,5 +1,5 @@
 ---
-title: Grove - Serial Camera
+name: Grove - Serial Camera
 category: Others
 bzurl: https://seeedstudio.com/Grove-Serial-Camera-Kit-p-1608.html
 oldwikiname: Grove_-_Serial_Camera

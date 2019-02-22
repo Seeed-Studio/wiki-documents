@@ -1,5 +1,5 @@
 ---
-title: LinkIt ONE
+name: LinkIt ONE
 category: LinkIt
 bzurl: https://www.seeedstudio.com/LinkIt-ONE-p-2017.html
 oldwikiname: LinkIt_ONE

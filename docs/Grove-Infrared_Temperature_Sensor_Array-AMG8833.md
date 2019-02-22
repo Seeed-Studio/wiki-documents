@@ -1,5 +1,5 @@
 ---
-title: Grove - Infrared Temperature Sensor Array (AMG8833)
+name: Grove - Infrared Temperature Sensor Array (AMG8833)
 category: Sensor
 bzurl: 
 oldwikiname: 

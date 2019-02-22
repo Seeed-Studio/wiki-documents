@@ -1,5 +1,5 @@
 ---
-title: Grove - Serial Camera Kit
+name: Grove - Serial Camera Kit
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-Serial-Camera-Kit-p-1608.html
 oldwikiname:  Grove - Serial Camera Kit

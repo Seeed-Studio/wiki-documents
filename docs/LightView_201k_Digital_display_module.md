@@ -1,5 +1,5 @@
 ---
-title: LightView 201k Digital display module
+name: LightView 201k Digital display module
 category: Tutorial
 bzurl:
 oldwikiname: LightView 201k Digital display module

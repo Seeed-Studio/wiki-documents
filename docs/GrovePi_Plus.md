@@ -1,5 +1,5 @@
 ---
-title: GrovePi+
+name: GrovePi+
 category: Raspberry Pi
 bzurl: https://www.seeedstudio.com/GrovePi%2B-p-2241.html
 oldwikiname:  GrovePi+

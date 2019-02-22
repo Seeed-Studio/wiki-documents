@@ -1,5 +1,5 @@
 ---
-title: LinkIt Introduction
+name: LinkIt Introduction
 nointro:
 ---
 

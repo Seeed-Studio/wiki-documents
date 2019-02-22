@@ -1,5 +1,5 @@
 ---
-title: Grove - 80cm Infrared Proximity Sensor
+name: Grove - 80cm Infrared Proximity Sensor
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-80cm-Infrared-Proximity-Sensor-p-788.html
 oldwikiname: Grove_-_80cm_Infrared_Proximity_Sensor

@@ -1,5 +1,5 @@
 ---
-title: Snips Voice Interaction Base Kit
+name: Snips Voice Interaction Base Kit
 category: Grove/LED
 bzurl: 
 oldwikiname: 

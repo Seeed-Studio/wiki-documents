@@ -1,5 +1,5 @@
 ---
-title: Grove - OLED Display 0.96 inch
+name: Grove - OLED Display 0.96 inch
 category: Display
 bzurl: https://www.seeedstudio.com/Grove-OLED-Display-0.96%22-p-781.html
 oldwikiname: Grove - OLED Display 0.96"

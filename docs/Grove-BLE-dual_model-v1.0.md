@@ -1,5 +1,5 @@
 ---
-title: Grove - BLE (dual model) v1.0
+name: Grove - BLE (dual model) v1.0
 category: Communication
 bzurl: https://seeedstudio.com/Grove-BLE-(dual-model)-p-2407.html
 oldwikiname: Grove_-_BLE_(dual_model)_v1.0

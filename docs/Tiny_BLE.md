@@ -1,5 +1,5 @@
 ---
-title: Tiny BLE
+name: Tiny BLE
 category: mbed
 bzurl: https://www.seeedstudio.com/Seeed-Tiny-BLE-BLE-%2B-6DOF-Mbed-Platform-p-2268.html
 oldwikiname:  Tiny BLE

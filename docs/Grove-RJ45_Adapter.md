@@ -1,5 +1,5 @@
 ---
-title: Grove - RJ45 Adapter
+name: Grove - RJ45 Adapter
 category: Communication
 bzurl: https://www.seeedstudio.com/Grove-RJ45-Adapter-p-1426.html
 oldwikiname:  Grove - RJ45 Adapter

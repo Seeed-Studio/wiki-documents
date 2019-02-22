@@ -1,5 +1,5 @@
 ---
-title: Sketchbook of Sidekick Advanced Kit
+name: Sketchbook of Sidekick Advanced Kit
 category: Tutorial
 bzurl:
 oldwikiname: Sketchbook of Sidekick Advanced Kit

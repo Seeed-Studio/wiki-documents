@@ -1,5 +1,5 @@
 ---
-title: Guide to use demos downloaded from Seeed's Github
+name: Guide to use demos downloaded from Seeed's Github
 category: Tutorial
 bzurl:  
 oldwikiname: Guide to use demos downloaded from Seeed's Github

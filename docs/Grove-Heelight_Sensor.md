@@ -1,5 +1,5 @@
 ---
-title: Grove - Heelight Sensor
+name: Grove - Heelight Sensor
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-Heelight-Sensor-p-2867.html
 prodimagename: 350px-Ultrasonic_Ranger.jpg

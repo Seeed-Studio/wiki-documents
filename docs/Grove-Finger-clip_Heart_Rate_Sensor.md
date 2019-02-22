@@ -1,5 +1,5 @@
 ---
-title: Grove - Finger-clip Heart Rate Sensor
+name: Grove - Finger-clip Heart Rate Sensor
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-Finger-clip-Heart-Rate-Sensor-p-2425.html
 oldwikiname:  Grove - Finger-clip Heart Rate Sensor

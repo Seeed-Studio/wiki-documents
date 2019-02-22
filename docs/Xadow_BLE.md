@@ -1,5 +1,5 @@
 ---
-title: Xadow BLE
+name: Xadow BLE
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-BLE-p-1727.html
 oldwikiname: Xadow - BLE

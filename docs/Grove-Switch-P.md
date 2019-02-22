@@ -1,5 +1,5 @@
 ---
-title: Grove - Switch(P)
+name: Grove - Switch(P)
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Switch(P)-p-1252.html
 oldwikiname: Grove_-_Switch(P)

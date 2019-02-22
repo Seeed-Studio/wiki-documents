@@ -1,5 +1,5 @@
 ---
-title: Grove - Optical Rotary Encoder(TCUT1600X01)
+name: Grove - Optical Rotary Encoder(TCUT1600X01)
 category: Sensor
 bzurl: 
 oldwikiname: 

@@ -1,5 +1,5 @@
 ---
-title: Joystick Control RGB Led
+name: Joystick Control RGB Led
 category: Tutorial
 oldwikiname:  Joystick Control RGB Led
 prodimagename:

@@ -1,5 +1,5 @@
 ---
-title:  Grove Serial LCD V1.0‏
+name:  Grove Serial LCD V1.0‏
 category: Discontinued
 bzurl:
 oldwikiname: Grove-Serial_LCD_V1.0‏

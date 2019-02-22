@@ -1,5 +1,5 @@
 ---
-title: Seeeduino Ethernet
+name: Seeeduino Ethernet
 category: Arduino
 bzurl: https://www.seeedstudio.com/Seeeduino-Ethernet-p-1231.html
 oldwikiname:   Seeeduino Ethernet

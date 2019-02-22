@@ -1,5 +1,5 @@
 ---
-title: ReSpeaker 4-Mic Linear Array Kit
+name: ReSpeaker 4-Mic Linear Array Kit
 category: ReSpeaker
 bzurl:
 oldwikiname: ReSpeaker 4-Mic Linear Array Kit

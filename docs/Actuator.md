@@ -1,5 +1,5 @@
 ---
-title: Grove - Actuator
+name: Grove - Actuator
 nointro:
 ---
 

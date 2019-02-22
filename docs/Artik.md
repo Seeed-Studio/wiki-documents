@@ -1,5 +1,5 @@
 ---
-title: Artik Introduction
+name: Artik Introduction
 nointro:
 ---
 

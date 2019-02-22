@@ -1,5 +1,5 @@
 ---
-title: DSO Quad
+name: DSO Quad
 category: MakerPro
 bzurl: https://www.seeedstudio.com/DSO-Quad-Aluminium-Alloy-Silver-p-1033.html?cPath=63_65
 oldwikiname:  DSO Quad

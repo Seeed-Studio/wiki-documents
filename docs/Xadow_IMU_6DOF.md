@@ -1,5 +1,5 @@
 ---
-title: Xadow - IMU 6DOF
+name: Xadow - IMU 6DOF
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-IMU-6DOF-p-1670.html
 oldwikiname: Xadow - IMU 6DOF

@@ -1,5 +1,5 @@
 ---
-title: Grove - 2-Channel Solid State Relay
+name: Grove - 2-Channel Solid State Relay
 category: Sensor
 bzurl: 
 oldwikiname: 

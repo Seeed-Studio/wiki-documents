@@ -1,5 +1,5 @@
 ---
-title: Grove - I2C Hub
+name: Grove - I2C Hub
 category: Others
 bzurl: https://seeedstudio.com/Grove-I2C-Hub-p-851.html
 oldwikiname: Grove_-_I2C_Hub

@@ -1,5 +1,5 @@
 ---
-title: Secret Box
+name: Secret Box
 category: Tutorial
 oldwikiname:  Secret Box
 prodimagename:

@@ -1,5 +1,5 @@
 ---
-title: ESP32 Breakout Kit
+name: ESP32 Breakout Kit
 category: Wireless
 bzurl: https://www.seeedstudio.com/ESP32-Breakout-Kit-p-2783.html
 oldwikiname:

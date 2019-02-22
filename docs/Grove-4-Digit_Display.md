@@ -1,5 +1,5 @@
 ---
-title: Grove - 4-Digit Display
+name: Grove - 4-Digit Display
 category: Display
 bzurl: https://seeedstudio.com/Grove-4-Digit-Display-p-1198.html
 oldwikiname: Grove_-_4-Digit_Display

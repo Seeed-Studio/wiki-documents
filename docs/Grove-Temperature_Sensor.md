@@ -1,5 +1,5 @@
 ---
-title: Grove - Temperature Sensor
+name: Grove - Temperature Sensor
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-Temperature-Sensor-p-774.html
 oldwikiname:  Grove - Temperature Sensor

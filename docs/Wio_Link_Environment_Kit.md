@@ -1,5 +1,5 @@
 ---
-title: Wio Link Environment Kit
+name: Wio Link Environment Kit
 category: Wio
 bzurl: https://seeedstudio.com/Wio-Link-Environment-Kit-p-2612.html
 oldwikiname: Wio_Link_Environment_Kit

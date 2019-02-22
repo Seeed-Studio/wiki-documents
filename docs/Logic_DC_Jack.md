@@ -1,5 +1,5 @@
 ---
-title: Logic_DC_Jack‏‎
+name: Logic_DC_Jack‏‎
 category: Discontinued
 bzurl:
 oldwikiname: Logic_DC_Jack‏‎

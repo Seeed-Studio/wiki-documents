@@ -1,5 +1,5 @@
 ---
-title: Mbed Shield
+name: Mbed Shield
 category: Shield
 bzurl: https://www.seeedstudio.com/mbed-shield-p-1390.html?cPath=132_134
 oldwikiname:  Mbed Shield

@@ -1,5 +1,5 @@
 ---
-title: Grove - Infrared Reflective Sensor
+name: Grove - Infrared Reflective Sensor
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Infrared-Reflective-Sensor-p-1230.html
 oldwikiname: Grove_-_Infrared_Reflective_Sensor

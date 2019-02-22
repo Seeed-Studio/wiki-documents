@@ -1,5 +1,5 @@
 ---
-title: Danger Shield Complete Kits
+name: Danger Shield Complete Kits
 category: MakerPro
 bzurl: https://www.seeedstudio.com/Danger-Shield-Complete-kits-p-141.html
 oldwikiname:  Danger Shield Complete Kits

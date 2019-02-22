@@ -1,5 +1,5 @@
 ---
-title: Grove - Variable Color LED
+name: Grove - Variable Color LED
 category: Actuator
 bzurl: https://seeedstudio.com/Grove-Variable-Color-LED-p-852.html
 oldwikiname: Grove_-_Variable_Color_LED

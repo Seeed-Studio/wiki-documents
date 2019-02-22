@@ -1,5 +1,5 @@
 ---
-title: Heart Sound Sensor‏‎
+name: Heart Sound Sensor‏‎
 category: Discontinued
 bzurl:
 oldwikiname:  Heart-Sound_sensor‏‎

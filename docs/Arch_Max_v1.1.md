@@ -1,5 +1,5 @@
 ---
-title: Arch Max v1.1
+name: Arch Max v1.1
 category: mbed
 bzurl: https://seeedstudio.com/Arch-Max-v1.1-p-2632.html
 oldwikiname: Arch_Max_v1.1

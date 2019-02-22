@@ -1,5 +1,5 @@
 ---
-title: Rephone Core 2G-AtmelSAMD21
+name: Rephone Core 2G-AtmelSAMD21
 category: RePhone
 bzurl: https://www.seeedstudio.com/RePhone-core-2G-AtmelSAMD21-p-2775.html
 oldwikiname:

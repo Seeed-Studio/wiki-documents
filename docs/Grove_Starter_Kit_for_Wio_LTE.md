@@ -1,5 +1,5 @@
 ---
-title: Grove Starter Kit for Wio LTE
+name: Grove Starter Kit for Wio LTE
 category: Wio_Tracker
 bzurl:  https://www.seeedstudio.com/Grove-Starter-Kit-for-Wio-LTE-p-3030.html
 oldwikiname: Grove Starter Kit for Wio LTE

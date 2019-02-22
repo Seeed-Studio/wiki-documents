@@ -1,5 +1,5 @@
 ---
-title: Arch Max‏‎
+name: Arch Max‏‎
 category: Discontinued
 bzurl:
 oldwikiname:  Arch_Max‏‎

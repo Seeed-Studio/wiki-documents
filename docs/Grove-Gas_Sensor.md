@@ -1,5 +1,5 @@
 ---
-title: Grove - Gas Sensor
+name: Grove - Gas Sensor
 category: Sensor
 oldwikiname: Grove_-_Gas_Sensor
 prodimagename: Twig-Gas_Sensor.bmp

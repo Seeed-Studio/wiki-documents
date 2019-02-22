@@ -1,5 +1,5 @@
 ---
-title: Grove - Relay
+name: Grove - Relay
 category: Actuator
 bzurl: https://www.seeedstudio.com/Grove-Relay-p-769.html
 oldwikiname:

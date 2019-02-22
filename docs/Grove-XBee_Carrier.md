@@ -1,5 +1,5 @@
 ---
-title: Grove - XBee Carrier
+name: Grove - XBee Carrier
 category: Sensor
 bzurl: https://www.seeedstudio.com/grove-xbee-carrier-p-905.html?cPath=132_134
 oldwikiname:  Grove - XBee Carrier

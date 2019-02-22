@@ -1,5 +1,5 @@
 ---
-title: G3/4 Water Flow sensor
+name: G3/4 Water Flow sensor
 category: MakerPro
 bzurl: https://www.seeedstudio.com/g34-water-flow-sensor-p-1083.html?cPath=144_151
 oldwikiname:  G3/4 Water Flow sensor

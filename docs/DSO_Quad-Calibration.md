@@ -1,5 +1,5 @@
 ---
-title: DSO Quad:Calibration
+name: DSO Quad:Calibration
 category: MakerPro
 bzurl:
 oldwikiname:  DSO Quad:Calibration

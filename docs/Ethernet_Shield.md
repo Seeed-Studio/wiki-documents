@@ -1,5 +1,5 @@
 ---
-title:  Ethernet Shield‏‎
+name:  Ethernet Shield‏‎
 category: Discontinued
 bzurl:
 oldwikiname: Ethernet_Shield‏‎

@@ -1,5 +1,5 @@
 ---
-title: Grove - RTC
+name: Grove - RTC
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-RTC-p-758.html
 oldwikiname: Grove_-_RTC

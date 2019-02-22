@@ -1,5 +1,5 @@
 ---
-title: Grove - Base Shield for IOIO-OTG
+name: Grove - Base Shield for IOIO-OTG
 category: MakerPro
 bzurl: https://www.seeedstudio.com/Grove-Base-Shield-for-IOIO-OTG-p-1613.html
 oldwikiname:  Grove - Base Shield for IOIO-OTG

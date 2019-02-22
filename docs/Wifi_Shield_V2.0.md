@@ -1,5 +1,5 @@
 ---
-title: Wifi Shield V2.0
+name: Wifi Shield V2.0
 category: Shield
 bzurl: https://seeedstudio.com/Wifi-Shield-V2.0-p-2505.html
 oldwikiname: Wifi_Shield_V2.0

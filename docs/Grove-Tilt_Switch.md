@@ -1,5 +1,5 @@
 ---
-title: Grove - Tilt Switch
+name: Grove - Tilt Switch
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Tilt-Switch-p-771.html
 oldwikiname: Grove_-_Tilt_Switch

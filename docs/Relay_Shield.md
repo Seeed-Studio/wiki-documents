@@ -1,5 +1,5 @@
 ---
-title:  Relay Shield
+name:  Relay Shield
 category: Discontinued
 bzurl:
 oldwikiname: Relay_Shield

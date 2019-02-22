@@ -1,5 +1,5 @@
 ---
-title: Grove - 1-Wire Thermocouple Amplifier (MAX31850K)
+name: Grove - 1-Wire Thermocouple Amplifier (MAX31850K)
 category: Sensor
 bzurl: 
 oldwikiname: 

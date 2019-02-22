@@ -1,5 +1,5 @@
 ---
-title: Grove - Display
+name: Grove - Display
 nointro:
 ---
 

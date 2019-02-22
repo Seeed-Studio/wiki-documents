@@ -1,5 +1,5 @@
 ---
-title: Grove - 6-Position DIP Switch
+name: Grove - 6-Position DIP Switch
 category: Sensor
 bzurl: 
 oldwikiname: 

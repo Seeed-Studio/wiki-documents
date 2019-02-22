@@ -1,5 +1,5 @@
 ---
-title: Wio Link Deluxe Plus Kit
+name: Wio Link Deluxe Plus Kit
 category: Wio
 bzurl: https://seeedstudio.com/Wio-Link-Deluxe-Plus-Kit-p-2616.html
 oldwikiname: Wio_Link_Deluxe_Plus_Kit

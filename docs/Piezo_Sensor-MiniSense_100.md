@@ -1,5 +1,5 @@
 ---
-title: Piezo Sensor - MiniSense 100
+name: Piezo Sensor - MiniSense 100
 category: MakerPro
 bzurl: https://www.seeedstudio.com/Piezo-Sensor-MiniSense-100-p-426.html
 oldwikiname:  Piezo Sensor - MiniSense 100

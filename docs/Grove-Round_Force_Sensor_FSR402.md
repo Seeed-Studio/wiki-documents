@@ -1,5 +1,5 @@
 ---
-title: Grove-Round Force Sensor(FSR402)
+name: Grove-Round Force Sensor(FSR402)
 category: Sensor
 bzurl: 
 oldwikiname: 

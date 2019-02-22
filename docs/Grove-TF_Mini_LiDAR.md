@@ -1,5 +1,5 @@
 ---
-title: Grove-TF Mini LiDAR
+name: Grove-TF Mini LiDAR
 category: Sensor
 bzurl: https://www.seeedstudio.com/Seeedstudio-Grove-TF-Mini-LiDAR-p-2996.html
 oldwikiname: Grove-TF Mini LiDAR

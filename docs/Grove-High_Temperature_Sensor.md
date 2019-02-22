@@ -1,5 +1,5 @@
 ---
-title: Grove - High Temperature Sensor
+name: Grove - High Temperature Sensor
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-High-Temperature-Sensor-p-1810.html
 oldwikiname: Grove_-_High_Temperature_Sensor

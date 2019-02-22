@@ -1,5 +1,5 @@
 ---
-title: Lipo Rider V1.3
+name: Lipo Rider V1.3
 category: Essentials
 bzurl: https://seeedstudio.com/Lipo-Rider-v1.3-p-2403.html
 oldwikiname: Lipo_Rider_V1.3

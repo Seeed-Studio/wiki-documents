@@ -1,5 +1,5 @@
 ---
-title: How to use and write a library
+name: How to use and write a library
 category: Tutorial
 oldwikiname:  How to use and write a library
 prodimagename:

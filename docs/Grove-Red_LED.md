@@ -1,5 +1,5 @@
 ---
-title: Grove - Red LED
+name: Grove - Red LED
 category: Display
 bzurl: https://www.seeedstudio.com/Grove-Red-LED-p-1142.html
 oldwikiname:  Grove - Red LED

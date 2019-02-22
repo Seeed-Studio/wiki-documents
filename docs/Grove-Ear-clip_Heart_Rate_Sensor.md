@@ -1,5 +1,5 @@
 ---
-title: Grove - Ear-clip Heart Rate Sensor
+name: Grove - Ear-clip Heart Rate Sensor
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Ear-clip-Heart-Rate-Sensor-p-1116.html
 oldwikiname: Grove_-_Ear-clip_Heart_Rate_Sensor

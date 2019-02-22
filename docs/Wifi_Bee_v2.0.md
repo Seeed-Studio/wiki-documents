@@ -1,5 +1,5 @@
 ---
-title: Wifi Bee v2.0
+name: Wifi Bee v2.0
 category: Wireless
 bzurl: https://www.seeedstudio.com/Wifi-Bee-v2.0-p-1637.html
 oldwikiname:  Wifi Bee v2.0

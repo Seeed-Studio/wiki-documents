@@ -1,5 +1,5 @@
 ---
-title: Project Six – LCD Demonstration
+name: Project Six – LCD Demonstration
 category: Tutorial
 oldwikiname:  Project Six – LCD Demonstration
 prodimagename:  

@@ -1,5 +1,5 @@
 ---
-title: Solar Charger Shield V2.2
+name: Solar Charger Shield V2.2
 category: Shield
 bzurl: https://www.seeedstudio.com/Solar-Charger-Shield-v2.2-p-2391.html
 oldwikiname:  Solar Charger Shield V2.2

@@ -1,5 +1,5 @@
 ---
-title: Grove - I2C Motor Driver
+name: Grove - I2C Motor Driver
 category: Actuator
 bzurl: https://seeedstudio.com/Grove-I2C-Motor-Driver-p-907.html
 oldwikiname: Grove_-_I2C_Motor_Driver

@@ -1,5 +1,5 @@
 ---
-title: Xadow - Edison Kit
+name: Xadow - Edison Kit
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-Edison-Kit-p-2444.html
 oldwikiname: Xadow - Edison Kit

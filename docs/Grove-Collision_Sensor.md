@@ -1,5 +1,5 @@
 ---
-title: Grove - Collision Sensor
+name: Grove - Collision Sensor
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Collision-Sensor-p-1132.html
 oldwikiname: Grove_-_Collision_Sensor

@@ -1,5 +1,5 @@
 ---
-title: Grove Introduction
+name: Grove Introduction
 nointro:
 ---
 

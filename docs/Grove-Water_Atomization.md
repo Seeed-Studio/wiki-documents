@@ -1,5 +1,5 @@
 ---
-title: Grove - Water Atomization
+name: Grove - Water Atomization
 category: Actuator
 bzurl: https://seeedstudio.com/Grove-Water-Atomization-v1.0-p-2542.html
 oldwikiname: Grove_-_Water_Atomization

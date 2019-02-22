@@ -1,5 +1,5 @@
 ---
-title: Grove - 2-Coil Latching Relay
+name: Grove - 2-Coil Latching Relay
 category: Actuator
 bzurl: https://seeedstudio.com/Grove-2-Coil-Latching-Relay-p-1446.html
 oldwikiname: Grove_-_2-Coil_Latching_Relay

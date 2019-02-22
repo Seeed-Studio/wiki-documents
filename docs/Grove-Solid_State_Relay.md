@@ -1,5 +1,5 @@
 ---
-title: Grove - Solid State Relay
+name: Grove - Solid State Relay
 category: Actuator
 bzurl: https://www.seeedstudio.com/Grove-Solid-State-Relay-p-1359.html
 oldwikiname: Grove - Solid State Relay

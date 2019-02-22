@@ -1,5 +1,5 @@
 ---
-title: Arch BLE
+name: Arch BLE
 category: mbed
 bzurl: https://seeedstudio.com/Arch-BLE-p-1998.html
 oldwikiname: Arch_BLE

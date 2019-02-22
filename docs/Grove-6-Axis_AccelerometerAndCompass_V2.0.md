@@ -1,5 +1,5 @@
 ---
-title: Grove - 6-Axis Accelerometer&Compass V2.0
+name: Grove - 6-Axis Accelerometer&Compass V2.0
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-6-Axis-Accelerometer&Compass-v2.0-p-2476.html
 oldwikiname: Grove_-_6-Axis_Accelerometer&Compass_V2.0

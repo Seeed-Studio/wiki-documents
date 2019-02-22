@@ -1,5 +1,5 @@
 ---
-title: Photo Reflective Sensor
+name: Photo Reflective Sensor
 category: MakerPro
 bzurl: https://www.seeedstudio.com/Photo-Reflective-Sensor-p-543.html
 oldwikiname:  Photo Reflective Sensor

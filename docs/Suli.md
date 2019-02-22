@@ -1,5 +1,5 @@
 ---
-title: Suli
+name: Suli
 category: Tutorial
 bzurl:
 oldwikiname: Suli

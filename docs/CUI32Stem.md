@@ -1,5 +1,5 @@
 ---
-title: CUI32Stem
+name: CUI32Stem
 category: MakerPro
 bzurl: https://www.seeedstudio.com/cui32stem-p-1100.html?cPath=132_208
 oldwikiname:  CUI32Stem

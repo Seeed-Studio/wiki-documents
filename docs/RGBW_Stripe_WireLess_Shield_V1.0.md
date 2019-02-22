@@ -1,5 +1,5 @@
 ---
-title: RGBW Stripe WireLess Shield V1.0
+name: RGBW Stripe WireLess Shield V1.0
 category: MakerPro
 bzurl: https://www.seeedstudio.com/RGBW-Strip-WireLess-Shield-V10-p-2629.html
 oldwikiname:  RGBW Stripe WireLess Shield V1.0

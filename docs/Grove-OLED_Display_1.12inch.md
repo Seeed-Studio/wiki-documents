@@ -1,5 +1,5 @@
 ---
-title: Grove - OLED Display 1.12"
+name: Grove - OLED Display 1.12"
 category: Display
 bzurl: https://www.seeedstudio.com/Grove-OLED-Display-1.12%22-p-824.html
 oldwikiname: Grove_-_OLED_Display_1.12"

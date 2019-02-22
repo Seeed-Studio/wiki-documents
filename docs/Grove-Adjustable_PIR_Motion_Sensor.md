@@ -1,5 +1,5 @@
 ---
-title: Grove - Adjustable PIR Motion Sensor
+name: Grove - Adjustable PIR Motion Sensor
 category: Sensor
 bzurl: 
 oldwikiname: 

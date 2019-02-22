@@ -1,5 +1,5 @@
 ---
-title: RePhone Geo Kit
+name: RePhone Geo Kit
 category: RePhone
 bzurl: https://www.seeedstudio.com/RePhone-Geo-Kit-p-2624.html
 oldwikiname:  RePhone Geo Kit

@@ -1,5 +1,5 @@
 ---
-title: Rainbowduino v3.0
+name: Rainbowduino v3.0
 category: Arduino
 bzurl: https://www.seeedstudio.com/Rainbowduino-LED-driver-platform-Atmega-328-p-371.html
 oldwikiname: Rainbowduino_v3.0

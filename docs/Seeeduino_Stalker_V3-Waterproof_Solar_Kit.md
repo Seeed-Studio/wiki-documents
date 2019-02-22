@@ -1,5 +1,5 @@
 ---
-title: Seeeduino Stalker V3 - Waterproof Solar Kit
+name: Seeeduino Stalker V3 - Waterproof Solar Kit
 category: Arduino
 bzurl: https://www.seeedstudio.com/Seeeduino-Stalker-V3-Waterproof-Solar-Kit-p-2441.html
 oldwikiname:   Seeeduino Stalker V3 - Waterproof Solar Kit

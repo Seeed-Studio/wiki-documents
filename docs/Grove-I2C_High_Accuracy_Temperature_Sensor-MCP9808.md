@@ -1,5 +1,5 @@
 ---
-title: Grove - I2C High Accuracy Temperature Sensor(MCP9808)
+name: Grove - I2C High Accuracy Temperature Sensor(MCP9808)
 category: Sensor
 bzurl: 
 oldwikiname: 

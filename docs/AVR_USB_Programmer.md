@@ -1,5 +1,5 @@
 ---
-title: AVR USB Programmer
+name: AVR USB Programmer
 category: MakerPro
 bzurl: https://www.seeedstudio.com/AVR-USB-Programmer-p-696.html
 oldwikiname:  AVR USB Programmer

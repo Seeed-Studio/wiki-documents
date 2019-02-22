@@ -1,5 +1,5 @@
 ---
-title: DSO Nano/Qemu gdb
+name: DSO Nano/Qemu gdb
 category: MakerPro
 bzurl:
 oldwikiname:  DSO Nano/Qemu gdb

@@ -1,5 +1,5 @@
 ---
-title: Grove - 433MHz Simple RF Link Kit
+name: Grove - 433MHz Simple RF Link Kit
 category: Communication
 bzurl: https://seeedstudio.com/Grove-433MHz-Simple-RF-link-kit-p-1062.html
 oldwikiname: Grove_-_433MHz_Simple_RF_Link_Kit

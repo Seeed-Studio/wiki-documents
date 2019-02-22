@@ -1,5 +1,5 @@
 ---
-title: Breakout for LinkIt Smart 7688
+name: Breakout for LinkIt Smart 7688
 category: LinkIt
 bzurl: https://www.seeedstudio.com/Breakout-for-LinkIt-Smart-7688-p-2590.html
 oldwikiname:   Breakout for LinkIt Smart 7688

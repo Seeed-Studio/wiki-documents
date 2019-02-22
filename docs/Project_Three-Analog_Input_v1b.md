@@ -1,5 +1,5 @@
 ---
-title: Project Three – Analog Input v1.0b
+name: Project Three – Analog Input v1.0b
 category: Tutorial
 oldwikiname:  Project Three – Analog Input v1.0b
 prodimagename:

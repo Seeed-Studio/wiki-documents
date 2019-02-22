@@ -1,5 +1,5 @@
 ---
-title: Grove - Slide Potentiometer
+name: Grove - Slide Potentiometer
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Slide-Potentiometer-p-1196.html
 oldwikiname: Grove_-_Slide_Potentiometer

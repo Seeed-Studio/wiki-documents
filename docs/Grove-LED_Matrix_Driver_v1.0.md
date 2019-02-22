@@ -1,5 +1,5 @@
 ---
-title: Grove - LED Matrix Driver v1.0
+name: Grove - LED Matrix Driver v1.0
 category: Actuator
 bzurl: https://seeedstudio.com/Grove-LED-Matrix-Driver-v1.0-p-2645.html
 oldwikiname: Grove_-_LED_Matrix_Driver_v1.0

@@ -1,5 +1,5 @@
 ---
-title: Grove - HCHO Sensor
+name: Grove - HCHO Sensor
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-HCHO-Sensor-p-1593.html
 oldwikiname: Grove_-_HCHO_Sensor

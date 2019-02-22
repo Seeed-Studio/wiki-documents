@@ -1,5 +1,5 @@
 ---
-title: Sensor Introduction
+name: Sensor Introduction
 nointro:
 ---
 

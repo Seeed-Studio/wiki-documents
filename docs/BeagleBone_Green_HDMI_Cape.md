@@ -1,5 +1,5 @@
 ---
-title: BeagleBone Green HDMI Cape
+name: BeagleBone Green HDMI Cape
 category: BeagleBone
 bzurl: https://seeedstudio.com/SeeedStudio-BeagleBone-Green-HDMI-Cape-p-2570.html
 oldwikiname: BeagleBone_Green_HDMI_Cape

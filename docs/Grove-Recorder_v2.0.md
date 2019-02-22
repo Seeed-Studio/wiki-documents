@@ -1,5 +1,5 @@
 ---
-title: Grove - Recorder v2.0
+name: Grove - Recorder v2.0
 category: Others
 bzurl: https://www.seeedstudio.com/Grove-Recorder-p-1825.html
 oldwikiname: Grove_-_Recorder_v2.0

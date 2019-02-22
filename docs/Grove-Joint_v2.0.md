@@ -1,5 +1,5 @@
 ---
-title: Grove - Joint v2.0
+name: Grove - Joint v2.0
 category: Others
 bzurl:
 oldwikiname: Grove - Joint v2.0

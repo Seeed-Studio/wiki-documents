@@ -1,5 +1,5 @@
 ---
-title: EL Shield
+name: EL Shield
 category: Shield
 bzurl: https://seeedstudio.com/EL-Shield-p-1287.html
 oldwikiname: EL_Shield

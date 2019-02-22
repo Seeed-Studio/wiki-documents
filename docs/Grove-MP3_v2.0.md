@@ -1,5 +1,5 @@
 ---
-title: Grove - MP3 v2.0
+name: Grove - MP3 v2.0
 category: Actuator
 bzurl: https://seeedstudio.com/Grove-MP3-v2.0-p-2597.html
 oldwikiname: Grove_-_MP3_v2.0

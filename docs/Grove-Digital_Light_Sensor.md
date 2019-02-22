@@ -1,5 +1,5 @@
 ---
-title: Grove - Digital Light Sensor
+name: Grove - Digital Light Sensor
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html
 oldwikiname: Grove_-_Digital_Light_Sensor

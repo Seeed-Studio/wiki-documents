@@ -1,5 +1,5 @@
 ---
-title: Bus Pirate v3 (assembled)
+name: Bus Pirate v3 (assembled)
 category: MakerPro
 bzurl: https://www.seeedstudio.com/bus-pirate-v3-assembled-p-609.html?cPath=174
 oldwikiname:  Bus Pirate v3 (assembled)

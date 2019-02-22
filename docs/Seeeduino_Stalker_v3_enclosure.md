@@ -1,5 +1,5 @@
 ---
-title: Seeeduino Stalker v3 enclosure
+name: Seeeduino Stalker v3 enclosure
 category: Arduino
 bzurl:  https://www.seeedstudio.com/Seeeduino-Stalker-v3-enclosure-p-2419.html
 oldwikiname: Seeeduino Stalker v3 enclosure

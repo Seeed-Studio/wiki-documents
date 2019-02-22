@@ -1,5 +1,5 @@
 ---
-title: Grove - DMX512
+name: Grove - DMX512
 category: Communication
 bzurl: https://www.seeedstudio.com/Grove-DMX512-p-1447.html
 oldwikiname:  Grove - DMX512

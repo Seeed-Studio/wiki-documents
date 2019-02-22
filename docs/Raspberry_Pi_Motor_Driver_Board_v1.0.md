@@ -1,5 +1,5 @@
 ---
-title: Raspberry Pi Motor Driver Board v1.0
+name: Raspberry Pi Motor Driver Board v1.0
 category: Raspberry Pi
 bzurl: https://www.seeedstudio.com/Raspberry-Pi-Motor-Board-v1.0-p-2411.html
 oldwikiname: Raspberry_Pi_Motor_Driver_Board_v1.0

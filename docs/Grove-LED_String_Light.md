@@ -1,5 +1,5 @@
 ---
-title: Grove - LED String Light
+name: Grove - LED String Light
 category: Display
 bzurl: https://www.seeedstudio.com/Grove-LED-String-Light-p-2324.html
 oldwikiname:  Grove - LED String Light

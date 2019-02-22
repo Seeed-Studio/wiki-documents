@@ -1,5 +1,5 @@
 ---
-title: DC framework solenoid HCNE1-0630
+name: DC framework solenoid HCNE1-0630
 category: MakerPro
 bzurl: https://www.seeedstudio.com/DC-framework-solenoid-HCNE1-0630-p-1046.html
 oldwikiname:  DC framework solenoid HCNE1-0630

@@ -1,5 +1,5 @@
 ---
-title: Dfu-util
+name: Dfu-util
 category: Tutorial
 oldwikiname:  Dfu-util
 prodimagename:

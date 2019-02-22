@@ -1,5 +1,5 @@
 ---
-title: Grove Indoor Environment Kit for Edison
+name: Grove Indoor Environment Kit for Edison
 category: Others
 bzurl: https://www.seeedstudio.com/Grove-Indoor-Environment-Kit-for-Intel%C2%AE-Edison-p-2427.html
 oldwikiname:  Grove Indoor Environment Kit for Edison

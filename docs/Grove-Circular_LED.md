@@ -1,5 +1,5 @@
 ---
-title: Grove - Circular LED
+name: Grove - Circular LED
 category: Display
 bzurl: https://www.seeedstudio.com/Grove-Circular-LED-p-1353.html
 oldwikiname:  Grove - Circular LED

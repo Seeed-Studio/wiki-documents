@@ -1,5 +1,5 @@
 ---
-title: PIR Motion sensor module
+name: PIR Motion sensor module
 category: MakerPro
 bzurl: https://www.seeedstudio.com/pir-motion-sensor-module-p-74.html?cPath=84_88&zenid=020999c566d2f31841dc54602b7d02ef
 oldwikiname:  PIR Motion sensor module

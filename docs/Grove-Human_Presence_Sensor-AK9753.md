@@ -1,5 +1,5 @@
 ---
-title: Grove - Human Presence Sensor (AK9753)
+name: Grove - Human Presence Sensor (AK9753)
 category: Sensor
 bzurl: 
 oldwikiname: 

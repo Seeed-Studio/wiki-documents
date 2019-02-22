@@ -1,5 +1,5 @@
 ---
-title: Others Introduction
+name: Others Introduction
 nointro:
 ---
 

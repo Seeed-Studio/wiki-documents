@@ -1,5 +1,5 @@
 ---
-title: Xadow - Storage
+name: Xadow - Storage
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-Storage-p-1625.html
 oldwikiname: Xadow - Storage

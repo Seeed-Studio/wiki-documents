@@ -1,5 +1,5 @@
 ---
-title: Seeeduino Mega Protoshield Kit
+name: Seeeduino Mega Protoshield Kit
 category: Arduino
 bzurl: https://www.seeedstudio.com/seeeduino-mega-protoshield-kit-p-597.html?cPath=132_134
 oldwikiname:   Seeeduino Mega Protoshield Kit

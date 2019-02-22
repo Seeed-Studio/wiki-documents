@@ -1,5 +1,5 @@
 ---
-title: Grove - Wrapper
+name: Grove - Wrapper
 category: Others
 bzurl: https://www.seeedstudio.com/s/Grove%20-%20Wrapper.html
 oldwikiname: Grove - Wrapper

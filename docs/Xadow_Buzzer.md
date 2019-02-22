@@ -1,5 +1,5 @@
 ---
-title: Xadow - Buzzer
+name: Xadow - Buzzer
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-Buzzer-p-1599.html
 oldwikiname: Xadow - Buzzer

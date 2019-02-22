@@ -1,5 +1,5 @@
 ---
-title: Wio Link Bootcamp Kit
+name: Wio Link Bootcamp Kit
 category: Wio
 bzurl: https://seeedstudio.com/Wio-Link-Bootcamp-Kit-p-2613.html
 oldwikiname: Wio_Link_Bootcamp_Kit

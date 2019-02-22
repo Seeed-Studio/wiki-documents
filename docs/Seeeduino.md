@@ -1,5 +1,5 @@
 ---
-title:  Seeeduino‏‎
+name:  Seeeduino‏‎
 category: Discontinued
 bzurl:
 oldwikiname: Seeeduino‏‎

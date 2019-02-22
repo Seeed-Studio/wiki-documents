@@ -1,5 +1,5 @@
 ---
-title: Xadow Wearable Kit For Edison
+name: Xadow Wearable Kit For Edison
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-Wearable-Kit-For-Intel%C2%AE-Edison-p-2428.html
 oldwikiname: Xadow Wearable Kit For Edison

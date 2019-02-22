@@ -1,5 +1,5 @@
 ---
-title: Grove - Speech Recognizer
+name: Grove - Speech Recognizer
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-Speech-Recognizer-p-2708.html
 oldwikiname:

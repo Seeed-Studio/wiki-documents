@@ -1,5 +1,5 @@
 ---
-title: Weight Sensor (Load Cell)0-500g
+name: Weight Sensor (Load Cell)0-500g
 category: MakerPro
 bzurl: https://www.seeedstudio.com/weight-sensor-load-cell-0500g-p-525.html?cPath=144_150
 oldwikiname:  Weight Sensor (Load Cell)0-500g

@@ -1,5 +1,5 @@
 ---
-title: Galileo Case
+name: Galileo Case
 category: Arduino
 bzurl: https://www.seeedstudio.com/Galileo-Case-p-1826.html
 oldwikiname:  Galileo Case

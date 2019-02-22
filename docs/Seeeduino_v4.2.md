@@ -1,5 +1,5 @@
 ---
-title: Seeeduino v4.2
+name: Seeeduino v4.2
 category: Arduino
 bzurl: http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html
 oldwikiname: Seeeduino_v4.2

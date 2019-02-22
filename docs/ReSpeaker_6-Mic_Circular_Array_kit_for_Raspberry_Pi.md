@@ -1,5 +1,5 @@
 ---
-title: ReSpeaker 6-Mic Circular Array Kit for Raspberry Pi
+name: ReSpeaker 6-Mic Circular Array Kit for Raspberry Pi
 category: ReSpeaker
 bzurl:
 oldwikiname: ReSpeaker 6-Mic Circular Array Kit for Raspberry Pi

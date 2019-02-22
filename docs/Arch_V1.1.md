@@ -1,5 +1,5 @@
 ---
-title: Arch V1.1
+name: Arch V1.1
 category: mbed
 bzurl: https://www.seeedstudio.com/Arch-p-1561.html
 oldwikiname: Arch_V1.1

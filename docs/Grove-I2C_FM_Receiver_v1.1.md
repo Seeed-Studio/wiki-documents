@@ -1,5 +1,5 @@
 ---
-title: Grove - I2C FM Receiver v1.1
+name: Grove - I2C FM Receiver v1.1
 category: Communication
 bzurl: https://seeedstudio.com/Grove-I2C-FM-Receiver-p-1953.html
 oldwikiname: Grove_-_I2C_FM_Receiver

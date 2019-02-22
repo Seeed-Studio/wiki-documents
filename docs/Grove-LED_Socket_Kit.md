@@ -1,5 +1,5 @@
 ---
-title: Grove - LED Socket Kit
+name: Grove - LED Socket Kit
 category: Display
 bzurl: https://www.seeedstudio.com/Grove-White-LED-p-1140.html
 oldwikiname:  Grove - LED Socket Kit

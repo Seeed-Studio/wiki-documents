@@ -1,5 +1,5 @@
 ---
-title: Grove - Screw Terminal
+name: Grove - Screw Terminal
 category: Communication
 bzurl: https://www.seeedstudio.com/Grove-Screw-Terminal-p-996.html
 oldwikiname:  Grove - Screw Terminal

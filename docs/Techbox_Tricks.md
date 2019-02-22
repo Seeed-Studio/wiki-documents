@@ -1,5 +1,5 @@
 ---
-title: Techbox Tricks‏‎
+name: Techbox Tricks‏‎
 category: Discontinued
 bzurl:
 oldwikiname: Techbox_Tricks‏‎

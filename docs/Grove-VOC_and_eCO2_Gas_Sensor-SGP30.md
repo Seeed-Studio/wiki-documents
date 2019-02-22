@@ -1,5 +1,5 @@
 ---
-title: Grove-VOC and eCO2 Gas Sensor(SGP30)
+name: Grove-VOC and eCO2 Gas Sensor(SGP30)
 category: Sensor
 bzurl: 
 oldwikiname: 

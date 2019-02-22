@@ -1,5 +1,5 @@
 ---
-title: Rephone Core 2G-Atmel32u4
+name: Rephone Core 2G-Atmel32u4
 category: RePhone
 bzurl: https://www.seeedstudio.com/RePhone-core-2G-Atmel32u4-v1.0-p-2779.html
 oldwikiname:

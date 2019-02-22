@@ -1,5 +1,5 @@
 ---
-title: Tricycle Bot
+name: Tricycle Bot
 category: Arduino
 bzurl: https://www.seeedstudio.com/Grove-Button-p-766.html
 oldwikiname:

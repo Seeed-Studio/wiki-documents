@@ -1,5 +1,5 @@
 ---
-title: Seeeduino Lotus
+name: Seeeduino Lotus
 category: Arduino
 bzurl: https://www.seeedstudio.com/Seeeduino-Lotus-ATMega328-Board-with-Grove-Interface-p-1942.html
 oldwikiname: Seeeduino_Lotus_v1.0

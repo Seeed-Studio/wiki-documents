@@ -1,5 +1,5 @@
 ---
-title: Xadow - Multichannel Gas Sensor
+name: Xadow - Multichannel Gas Sensor
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-Multichannel-Gas-Sensor-p-2459.html
 oldwikiname: Xadow - Multichannel Gas Sensor

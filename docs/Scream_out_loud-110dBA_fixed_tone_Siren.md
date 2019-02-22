@@ -1,5 +1,5 @@
 ---
-title: Scream out loud - 110dBA fixed tone Siren
+name: Scream out loud - 110dBA fixed tone Siren
 category: MakerPro
 bzurl: https://www.seeedstudio.com/scream-out-loud-110dBA-fixed-tone-Siren-p-301.html
 oldwikiname:  Scream out loud - 110dBA fixed tone Siren

@@ -1,5 +1,5 @@
 ---
-title: BLE Nitrogen
+name: BLE Nitrogen
 category: Wireless
 bzurl: https://www.seeedstudio.com/BLE-Nitrogen-p-2711.html
 oldwikiname:

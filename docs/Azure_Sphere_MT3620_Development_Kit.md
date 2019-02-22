@@ -1,5 +1,5 @@
 ---
-title: Azure Sphere MT3620 Development Kit
+name: Azure Sphere MT3620 Development Kit
 category: Azure
 bzurl:
 oldwikiname: 

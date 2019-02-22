@@ -1,5 +1,5 @@
 ---
-title: Grove - Starter Kit for LinkIt ONE
+name: Grove - Starter Kit for LinkIt ONE
 category: LinkIt
 bzurl: https://seeedstudio.com/Grove-Starter-Kit-for-LinkIt-ONE-p-2028.html
 oldwikiname: Grove_-_Starter_Kit_for_LinkIt_ONE

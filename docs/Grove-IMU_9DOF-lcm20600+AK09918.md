@@ -1,5 +1,5 @@
 ---
-title: Grove - IMU 9DOF (lcm20600+AK09918)
+name: Grove - IMU 9DOF (lcm20600+AK09918)
 category: Sensor
 bzurl: 
 oldwikiname: 

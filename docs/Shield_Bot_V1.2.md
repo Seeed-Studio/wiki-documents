@@ -1,5 +1,5 @@
 ---
-title: Shield Bot V1.2
+name: Shield Bot V1.2
 category: Arduino
 bzurl: https://www.seeedstudio.com/Shield-Bot-p-1380.html
 oldwikiname: Shield_Bot_V1.2

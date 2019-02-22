@@ -1,5 +1,5 @@
 ---
-title: Mesh Bee
+name: Mesh Bee
 category: Wireless
 bzurl: https://www.seeedstudio.com/s/Mesh%20Bee%20-%20Open%20Source%20Zigbee%20Pro%20Module%20with%20MCU%20(JN5168).html
 oldwikiname: Mesh Bee

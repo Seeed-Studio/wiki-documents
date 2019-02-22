@@ -1,5 +1,5 @@
 ---
-title: 4WD Mecanum Wheel Robot Kit Series
+name: 4WD Mecanum Wheel Robot Kit Series
 category: Arduino
 bzurl: https://www.seeedstudio.com/4WD-Mecanum-Wheel-Robot-Kit-p-2276.html
 oldwikiname:  4WD Mecanum Wheel Robot Kit Series

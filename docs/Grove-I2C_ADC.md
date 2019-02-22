@@ -1,5 +1,5 @@
 ---
-title: Grove - I2C ADC
+name: Grove - I2C ADC
 category: Communication
 bzurl: https://seeedstudio.com/Grove-I2C-ADC-p-1580.html
 oldwikiname: Grove_-_I2C_ADC

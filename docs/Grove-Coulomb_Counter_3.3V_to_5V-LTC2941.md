@@ -1,5 +1,5 @@
 ---
-title: Grove - Coulomb Counter 3.3V to 5V (LTC2941)
+name: Grove - Coulomb Counter 3.3V to 5V (LTC2941)
 category: Pi
 bzurl: 
 oldwikiname: 

@@ -1,5 +1,5 @@
 ---
-title: Gear Stepper Motor Driver Pack
+name: Gear Stepper Motor Driver Pack
 category: Sensor
 bzurl: 
 oldwikiname: 

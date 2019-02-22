@@ -1,5 +1,5 @@
 ---
-title:  Edison_4WD_Auto_Robotic_Platform‏‎
+name:  Edison_4WD_Auto_Robotic_Platform‏‎
 category: Discontinued
 bzurl:
 oldwikiname:  Edison_4WD_Auto_Robotic_Platform‏‎

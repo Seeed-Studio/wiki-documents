@@ -1,5 +1,5 @@
 ---
-title: Grove Speech Recognizer Kit for Arduino
+name: Grove Speech Recognizer Kit for Arduino
 category: Arduino
 bzurl: https://www.seeedstudio.com/Grove-Speech-Recognizer-kit-for-Arduino-p-2726.html
 oldwikiname:  Grove Speech Recognizer Kit for Arduino

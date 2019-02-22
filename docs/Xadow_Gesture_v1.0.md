@@ -1,5 +1,5 @@
 ---
-title: Xadow - Gesture v1.0
+name: Xadow - Gesture v1.0
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-Gesture-v1.0-p-2460.html
 oldwikiname: Xadow - Gesture v1.0

@@ -1,5 +1,5 @@
 ---
-title: IoT Fast Prototyping Kit S5D9
+name: IoT Fast Prototyping Kit S5D9
 category: Tutorial
 oldwikiname:  IoT Fast Prototyping Kit S5D9
 prodimagename:  

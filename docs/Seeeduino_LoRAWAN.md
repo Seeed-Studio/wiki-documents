@@ -1,5 +1,5 @@
 ---
-title: Seeeduino LoRaWAN
+name: Seeeduino LoRaWAN
 category: Arduino
 bzurl: http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html
 oldwikiname:

@@ -1,5 +1,5 @@
 ---
-title: FST-01
+name: FST-01
 category: MakerPro
 bzurl: https://www.seeedstudio.com/FST-01-without-Enclosure-p-1276.html
 oldwikiname:  FST-01

@@ -1,5 +1,5 @@
 ---
-title: BLE Micro
+name: BLE Micro
 category: Wireless
 bzurl: https://www.seeedstudio.com/Seeed-Micro-BLE-Module-w%26-Cortex-M0-Based-nRF51822-SoC-p-1975.html
 oldwikiname:  BLE Micro

@@ -1,5 +1,5 @@
 ---
-title: Grove Cape for BeagleBone Series
+name: Grove Cape for BeagleBone Series
 category: BeagleBone
 bzurl: https://www.seeedstudio.com/Grove-Cape-for-BeagleBone-Series-p-1718.html
 oldwikiname:  Grove Cape for BeagleBone Series

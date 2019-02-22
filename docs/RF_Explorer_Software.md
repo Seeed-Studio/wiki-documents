@@ -1,5 +1,5 @@
 ---
-title: RF Explorer Software
+name: RF Explorer Software
 category: MakerPro
 oldwikiname:  RF Explorer Software
 prodimagename:

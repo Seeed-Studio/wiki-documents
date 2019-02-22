@@ -1,5 +1,5 @@
 ---
-title: Xadow - RGB OLED 96*64
+name: Xadow - RGB OLED 96*64
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-RGB-OLED-96x64-p-2125.html
 oldwikiname: Xadow - RGB OLED 96*64

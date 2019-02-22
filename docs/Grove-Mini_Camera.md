@@ -1,5 +1,5 @@
 ---
-title: Grove - Mini Camera
+name: Grove - Mini Camera
 category: Others
 bzurl: https://seeedstudio.com/Grove-Mini-Camera-p-1578.html
 oldwikiname: Grove_-_Mini_Camera

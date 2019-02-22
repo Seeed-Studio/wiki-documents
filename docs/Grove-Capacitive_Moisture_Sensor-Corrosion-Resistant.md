@@ -1,5 +1,5 @@
 ---
-title: Grove - Capacitive Moisture Sensor (Corrosion Resistant)
+name: Grove - Capacitive Moisture Sensor (Corrosion Resistant)
 category: Grove
 bzurl: 
 oldwikiname: 

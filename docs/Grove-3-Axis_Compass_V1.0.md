@@ -1,5 +1,5 @@
 ---
-title: Grove - 3-Axis Compass V1.0
+name: Grove - 3-Axis Compass V1.0
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-3-Axis-Digital-Compass-p-759.html
 oldwikiname: Grove_-_3-Axis_Compass_V1.0

@@ -1,5 +1,5 @@
 ---
-title: Grove - 16-Channel PWM Driver (PCA9685)
+name: Grove - 16-Channel PWM Driver (PCA9685)
 category: Sensor
 bzurl: 
 oldwikiname: 

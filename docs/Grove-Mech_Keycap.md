@@ -1,5 +1,5 @@
 ---
-title: Grove-Mech keycap
+name: Grove-Mech keycap
 category: Sensor
 bzurl: 
 oldwikiname: 

@@ -1,5 +1,5 @@
 ---
-title: Bugduino
+name: Bugduino
 category: MakerPro
 bzurl: https://www.seeedstudio.com/Bugduino-V2.0-p-863.html
 oldwikiname:  Bugduino

@@ -1,5 +1,5 @@
 ---
-title: BeagleBone Introduction
+name: BeagleBone Introduction
 nointro:
 ---
 

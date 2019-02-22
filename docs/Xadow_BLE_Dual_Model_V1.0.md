@@ -1,5 +1,5 @@
 ---
-title: Xadow - BLE (Dual Model) v1.0
+name: Xadow - BLE (Dual Model) v1.0
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-BLE-(dual-model)-p-2405.html
 oldwikiname: Xadow - BLE (dual model) v1.0

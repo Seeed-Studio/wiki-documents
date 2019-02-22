@@ -1,5 +1,5 @@
 ---
-title: Grove - Loudness Sensor
+name: Grove - Loudness Sensor
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Loudness-Sensor-p-1382.html
 oldwikiname: Grove_-_Loudness_Sensor

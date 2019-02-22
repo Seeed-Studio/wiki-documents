@@ -1,5 +1,5 @@
 ---
-title: ReSpeaker Product Guide
+name: ReSpeaker Product Guide
 nointro:
 ---
 

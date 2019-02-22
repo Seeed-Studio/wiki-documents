@@ -1,5 +1,5 @@
 ---
-title: Raspberry Pi Breakout Board v1.0
+name: Raspberry Pi Breakout Board v1.0
 category: Raspberry Pi
 bzurl: https://seeedstudio.com/Raspberry-Pi-Breakout-Board-v1.0-p-2410.html
 oldwikiname: Raspberry_Pi_Breakout_Board_v1.0

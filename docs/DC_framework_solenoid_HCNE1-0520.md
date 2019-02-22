@@ -1,5 +1,5 @@
 ---
-title: DC framework solenoid HCNE1-0520
+name: DC framework solenoid HCNE1-0520
 category: MakerPro
 bzurl: https://www.seeedstudio.com/DC-framework-solenoid-HCNE1-0520-p-1043.html
 oldwikiname:  DC framework solenoid HCNE1-0520

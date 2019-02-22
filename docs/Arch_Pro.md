@@ -1,5 +1,5 @@
 ---
-title: Arch Pro
+name: Arch Pro
 category: mbed
 bzurl: https://seeedstudio.com/Arch-Pro-p-1677.html
 oldwikiname: Arch_Pro

@@ -1,5 +1,5 @@
 ---
-title: Pi RTC (DS1307)
+name: Pi RTC (DS1307)
 category: Pi
 bzurl: 
 oldwikiname: 

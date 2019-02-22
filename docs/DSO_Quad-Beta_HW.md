@@ -1,5 +1,5 @@
 ---
-title: DSO Quad:Beta HW
+name: DSO Quad:Beta HW
 category: MakerPro
 bzurl:
 oldwikiname:  DSO Quad:Beta HW

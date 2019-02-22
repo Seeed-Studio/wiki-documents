@@ -1,5 +1,5 @@
 ---
-title: 125Khz RFID module - UART
+name: 125Khz RFID module - UART
 category: MakerPro
 bzurl: https://www.seeedstudio.com/125Khz-RFID-module-UART-p-171.html
 oldwikiname:  125Khz RFID module - UART

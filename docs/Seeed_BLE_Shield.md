@@ -1,5 +1,5 @@
 ---
-title: Seeed BLE Shield v1
+name: Seeed BLE Shield v1
 category: Shield
 bzurl: https://www.seeedstudio.com/Seeed-BLE-Shield-p-1859.html
 oldwikiname:   Seeed BLE Shield v1

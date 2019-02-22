@@ -1,5 +1,5 @@
 ---
-title: Light Sensor and LED Bar
+name: Light Sensor and LED Bar
 category: Tutorial
 oldwikiname:  Light Sensor and LED Bar
 prodimagename:

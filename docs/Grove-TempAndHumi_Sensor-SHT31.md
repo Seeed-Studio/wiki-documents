@@ -1,5 +1,5 @@
 ---
-title: Grove - Temperature&Humidity Sensor(SHT31)
+name: Grove - Temperature&Humidity Sensor(SHT31)
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-Temperature&Humidity-Sensor-(SHT31)-p-2655.html
 oldwikiname: Grove_-_Temp&Humi_Sensor(SHT31)

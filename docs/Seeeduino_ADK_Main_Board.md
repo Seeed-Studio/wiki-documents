@@ -1,5 +1,5 @@
 ---
-title:  Seeeduino ADK Main Board‏‎
+name:  Seeeduino ADK Main Board‏‎
 category: Discontinued
 bzurl:
 oldwikiname: Seeeduino_ADK_Main_Board‏‎

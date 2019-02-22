@@ -1,5 +1,5 @@
 ---
-title: How to detect finger touch
+name: How to detect finger touch
 category: Tutorial
 bzurl:
 oldwikiname: How to detect finger touch

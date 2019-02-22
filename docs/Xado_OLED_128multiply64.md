@@ -1,5 +1,5 @@
 ---
-title: Xadow - OLED 128*64
+name: Xadow - OLED 128*64
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-OLED-0.96-p-1520.html
 oldwikiname: Xadow - OLED 128*64

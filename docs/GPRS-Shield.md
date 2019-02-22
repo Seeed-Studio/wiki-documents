@@ -1,5 +1,5 @@
 ---
-title:  GPRS Shield‏‎
+name:  GPRS Shield‏‎
 category: Discontinued
 bzurl:
 oldwikiname: GPRS-Shield‏‎

@@ -1,5 +1,5 @@
 ---
-title: Camera Shield
+name: Camera Shield
 category: Shield
 bzurl: https://www.seeedstudio.com/Camera-Shield-p-2106.html
 oldwikiname:  Camera Shield

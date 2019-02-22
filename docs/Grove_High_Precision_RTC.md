@@ -1,5 +1,5 @@
 ---
-title: Grove - High Precision RTC
+name: Grove - High Precision RTC
 category: Communication
 bzurl: https://www.seeedstudio.com/Grove-High-Precision-RTC-p-2741.html
 oldwikiname: Grove - High Precision RTC

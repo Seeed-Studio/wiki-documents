@@ -1,5 +1,5 @@
 ---
-title: Grove - 3-Axis Analog Accelerometer
+name: Grove - 3-Axis Analog Accelerometer
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-3-Axis-Analog-Accelerometer-p-1086.html
 oldwikiname: Grove_-_3-Axis_Analog_Accelerometer

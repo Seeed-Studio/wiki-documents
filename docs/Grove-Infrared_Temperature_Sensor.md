@@ -1,5 +1,5 @@
 ---
-title: Grove - Infrared Temperature Sensor
+name: Grove - Infrared Temperature Sensor
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Infrared-Temperature-Sensor-p-1058.html
 oldwikiname: Grove_-_Infrared_Temperature_Sensor

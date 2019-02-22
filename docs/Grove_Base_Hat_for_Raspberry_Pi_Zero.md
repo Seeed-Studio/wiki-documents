@@ -1,5 +1,5 @@
 ---
-title: Grove Base Hat for Raspberry Pi Zero
+name: Grove Base Hat for Raspberry Pi Zero
 category: shield
 bzurl: 
 oldwikiname: 

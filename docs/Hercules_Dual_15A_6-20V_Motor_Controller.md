@@ -1,5 +1,5 @@
 ---
-title: Hercules Dual 15A 6-20V Motor Controller
+name: Hercules Dual 15A 6-20V Motor Controller
 category: Arduino
 bzurl: https://seeedstudio.com/Hercules-Dual-15A-6-20V-Motor-Controller-p-1515.html
 oldwikiname: Hercules_Dual_15A_6-20V_Motor_Controller

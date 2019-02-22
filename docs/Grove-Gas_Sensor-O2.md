@@ -1,5 +1,5 @@
 ---
-title: Grove - Gas Sensor(O₂)
+name: Grove - Gas Sensor(O₂)
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-Gas-Sensor(O2)-p-1541.html
 oldwikiname: Grove_-_Gas_Sensor(O₂)

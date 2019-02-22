@@ -1,5 +1,5 @@
 ---
-title: ReSpeaker Core v2.0
+name: ReSpeaker Core v2.0
 category: ReSpeaker
 bzurl:
 oldwikiname: ReSpeaker Core v2.0

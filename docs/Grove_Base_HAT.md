@@ -1,5 +1,5 @@
 ---
-title: Grove Base HAT
+name: Grove Base HAT
 category: Raspberry Pi
 bzurl:
 oldwikiname:  

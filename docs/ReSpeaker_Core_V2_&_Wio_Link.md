@@ -1,5 +1,5 @@
 ---
-title: ReSpeaker Core V2 & Wio Link
+name: ReSpeaker Core V2 & Wio Link
 category: Tutorial
 bzurl: 
 oldwikiname: 

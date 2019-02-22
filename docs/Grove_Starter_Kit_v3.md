@@ -1,5 +1,5 @@
 ---
-title: Grove - Starter Kit v3
+name: Grove - Starter Kit v3
 category: Others
 bzurl: https://www.seeedstudio.com/Grove-Starter-Kit-V3-p-1855.html
 oldwikiname: Grove - Starter Kit v3

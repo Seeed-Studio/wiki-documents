@@ -1,5 +1,5 @@
 ---
-title: GPRS Shield V3.0
+name: GPRS Shield V3.0
 category: Shield
 bzurl: https://www.seeedstudio.com/GPRS-Shield-V3.0-p-2333.html
 oldwikiname:  GPRS Shield V3.0

@@ -1,5 +1,5 @@
 ---
-title: Grove - Chainable RGB LED
+name: Grove - Chainable RGB LED
 category: Actuator
 bzurl: https://seeedstudio.com/Grove-Chainable-RGB-LED-p-850.html
 oldwikiname: Grove_-_Chainable_RGB_LED

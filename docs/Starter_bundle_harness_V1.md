@@ -1,5 +1,5 @@
 ---
-title: Starter bundle harness V1.0
+name: Starter bundle harness V1.0
 category: MakerPro
 bzurl: https://www.seeedstudio.com/Starter-Bundle-Harness-p-906.html
 oldwikiname:  Starter bundle harness V1.0

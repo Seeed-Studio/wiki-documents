@@ -1,5 +1,5 @@
 ---
-title: Shield MaTrix V0.9
+name: Shield MaTrix V0.9
 category: MakerPro
 bzurl: https://www.seeedstudio.com/Shield-Matrix-p-1773.html
 oldwikiname:  Shield MaTrix V0.9b

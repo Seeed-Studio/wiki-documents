@@ -1,5 +1,5 @@
 ---
-title:  Arduino Software I2C user guide
+name:  Arduino Software I2C user guide
 category: Tutorial
 oldwikiname:   Arduino Software I2C user guide
 prodimagename:

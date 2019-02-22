@@ -1,5 +1,5 @@
 ---
-title: Xadow NFC v2
+name: Xadow NFC v2
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-NFC-p-1627.html
 oldwikiname: Xadow - NFC

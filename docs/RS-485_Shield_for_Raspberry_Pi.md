@@ -1,5 +1,5 @@
 ---
-title: RS-485 Shield for Raspberry Pi
+name: RS-485 Shield for Raspberry Pi
 category:
 bzurl: 
 oldwikiname: 

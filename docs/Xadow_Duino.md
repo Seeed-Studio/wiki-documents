@@ -1,5 +1,5 @@
 ---
-title: Xadow Duino
+name: Xadow Duino
 category: RePhone
 bzurl: https://www.seeedstudio.com/Xadow-Duino-p-2556.html
 oldwikiname: Xadow Duino

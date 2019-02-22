@@ -1,5 +1,5 @@
 ---
-title: Ultra Sonic range measurement module
+name: Ultra Sonic range measurement module
 category: MakerPro
 bzurl: https://www.seeedstudio.com/ultra-sonic-range-measurement-module-p-626.html?cPath=144_149
 oldwikiname:  Ultra Sonic range measurement module

@@ -1,5 +1,5 @@
 ---
-title: Grove - Starter Kit for mbed
+name: Grove - Starter Kit for mbed
 category: mbed
 bzurl: https://www.seeedstudio.com/Grove-Starter-Kit-for-mbed-p-2032.html
 oldwikiname: Grove - Starter Kit for mbed

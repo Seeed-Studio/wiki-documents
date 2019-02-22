@@ -1,5 +1,5 @@
 ---
-title: Upload Code
+name: Upload Code
 category: Tutorial
 oldwikiname:  Upload Code
 prodimagename:

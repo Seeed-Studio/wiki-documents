@@ -1,5 +1,5 @@
 ---
-title: Grove - 16 x 2 LCD
+name: Grove - 16 x 2 LCD
 category: Display
 bzurl: 
 oldwikiname: 

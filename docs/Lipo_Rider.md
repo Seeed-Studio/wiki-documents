@@ -1,5 +1,5 @@
 ---
-title:  Lipo Rider
+name:  Lipo Rider
 category: Discontinued
 bzurl:
 oldwikiname: Lipo_Rider

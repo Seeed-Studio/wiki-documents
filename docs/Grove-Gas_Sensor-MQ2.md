@@ -1,5 +1,5 @@
 ---
-title: Grove - Gas Sensor(MQ2)
+name: Grove - Gas Sensor(MQ2)
 category: Sensor
 bzurl: https://seeedstudio.com/Grove-Gas-Sensor(MQ2)-p-937.html
 oldwikiname: Grove_-_Gas_Sensor(MQ2)
