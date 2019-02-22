@@ -1,5 +1,5 @@
 ---
-name: Grove - Arduino Basic Tutorial (Grove Starter Kit)
+name: Grove Beginner Kit for Arduino
 category: Others
 bzurl:  
 oldwikiname:  
@@ -20,10 +20,10 @@ We also provide Grove to Pin Header Converter or Grove Base HAT available for va
 
 Grove system users need to have at least some basic electronic knowledge background, otherwise you need go through this basic tutorial to learn some basic operations on the Grove system, the first part of this tutorial consists list of basic information on the components included in the starter kit, followed by the basic setup of the Arduino IDE for Seeeduino Lotus. Then, the 11 tutorial sessions provide the basic operation on each individual components in the starter kit and the applications by combine multiple modules together, which gives learner some insight and basic knowledge on hooking up and coding with the Grove system.
 
-## GROVE STARTER KIT
+## Grove Beginner Kit for Arduino
 
 
-Grove start kit contains one Seeeduino Lotus V1.1 Dev Board(Arduino Compatible) and 8 modules. The detailed information are listed below.
+Grove Beginner Kit for Arduino contains one Seeeduino Lotus V1.1 Dev Board(Arduino Compatible) and 8 modules. The detailed information are listed below.
 
 ### Development Board
 
