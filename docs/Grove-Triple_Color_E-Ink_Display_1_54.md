@@ -82,7 +82,7 @@ Due to the advantages like ultra low power consumption, wide viewing angle, clea
 ## Getting Started
 
 
-### Play With Arduino
+### Arduino Demo
 
 
 #### Hardware
@@ -114,8 +114,8 @@ Due to the advantages like ultra low power consumption, wide viewing angle, clea
 
 <div align="center">
 <figure>
-<img src="https://github.com/SeeedDocument/Grove-Triple_Color_E-Ink_Display_1.54/raw/master/img/connect.jpg" alt="Grove - Triple Color E-Ink Display 1.54'' connect" title="connect" />
-<figcaption><b>Figure 2</b>. <i>connect</i></figcaption>
+<img src="https://github.com/SeeedDocument/Grove-Triple_Color_E-Ink_Display_1.54/raw/master/img/connect.jpg" alt="Grove - Triple Color E-Ink Display 1.54'' connect" title="connection" />
+<figcaption><b>Figure 2</b>. <i>connection</i></figcaption>
 </figure>
 </div>
 
@@ -150,7 +150,138 @@ Due to the advantages like ultra low power consumption, wide viewing angle, clea
 
 
 
+### DIY
 
+
+
+<div align="center">
+<figure>
+<img src="https://github.com/SeeedDocument/Grove-Triple_Color_E-Ink_Display_1.54/raw/master/img/demo_wiki.jpg" alt="Grove - Triple Color E-Ink Display 1.54'' DIY" title="DIY demo" />
+<figcaption><b>Figure 3</b>. <i>DIY demo</i></figcaption>
+</figure>
+</div>
+
+
+It will be a lot fun to display your own image, now, let's show you how to DIY your own E-paper.
+
+Before the start, please check the **E_ink154_factoryCode.ino** again. You can find the two array easily.
+
+
+```c++
+const unsigned char IMAGE_BLACK[] PROGMEM = { /* 0X00,0X01,0XC8,0X00,0XC8,0X00, */
+0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,
+0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,
+0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,
+....
+....
+....
+0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,
+0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,
+0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,};
+```
+
+and
+
+
+```c++
+const unsigned char IMAGE_RED[] PROGMEM = { /* 0X00,0X01,0XC8,0X00,0XC8,0X00, */
+0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,
+0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,
+0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,
+0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,
+....
+....
+....
+0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,
+0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,
+0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,};
+```
+
+As you can see, the two array is called **const unsigned char IMAGE_BLACK[]** and **const unsigned char IMAGE_RED[]**, 
+> **const unsigned char IMAGE_BLACK[]** is used for black image display  
+> **const unsigned char IMAGE_RED[]** is used for red image display
+
+Actually, to display your own image, you just need to replace those two image array. That is to say, you just need to get your own image array. Luckily, there is a tool **Image2LCD**, you can google it, it's not difficult to find. Suppose you have downloaded and installed this software. Next, we will show you how to use this software.
+
+
+- **Step 1.** Prepare a picture of 152*152 pixels.
+
+!!!Tip
+        The ink screen only supports pictures with gray level of second-order, that is, black and white. If the gray level of the picture is too much, the whole color cannot be completely displayed.
+
+
+- **Step 2.** Open the **Image2LCD** software and click the Open icon to open your picture. You will see the fallowing window.
+
+
+<div align="center">
+<figure>
+<img src="https://github.com/SeeedDocument/Grove-Triple_Color_E-Ink_Display_1.54/raw/master/img/image2LCD_1.png" alt="Grove - Triple Color E-Ink Display 1.54'' DIY" title="DIY demo" />
+<figcaption><b>Figure 4</b>. <i>Image2LCD configuration</i></figcaption>
+</figure>
+</div>
+
+
+Please check the corresponding option as shown above.
+
+>1. Output file type -> *.C  
+>2. Scan mode -> Horizon Scan  
+>3. BitsPixel -> monochrome  
+>4. Max Width and Height -> 152 x 152  
+>5. Reverse color:  Whether you need to check this option is based on the effect you need to display. For more detail please check the **Table 1** below.
+
+
+- **Step 3.** After you configure the above options, you only need to click the **Save** button in the upper left corner to generate the corresponding image array. Then replace the the factoryCode array with your own image array.
+
+
+<div align="center">
+<figure>
+<img src="https://github.com/SeeedDocument/Grove-Triple_Color_E-Ink_Display_1.54/raw/master/img/code.png" alt="Grove - Triple Color E-Ink Display 1.54'' DIY" title="" />
+<figcaption><b>Figure 5</b>. <i>Just replace the part selected with the red box, which means you should keep the array name</i></figcaption>
+</figure>
+</div>
+
+
+As we mentioned above, there are two arrays, you may be cofused: which one to replace? Well, it depends on what display effect do you want. Check the **Table 1**.
+
+
+|<br>Display|<p style="background:black"><font color="red">Black background<br> Red image</font></p>|<p style="background:white"><font color="red">White background<br> Red image</font></p>|<p style="background:red"><font color="black">Red background<br> Black image</font></p>|<p style="background:red"><font color="white">Red background<br> White image</font></p> |
+|---|----|----|----|----|
+|Black Array|00|FF|00|FF|
+|Red Array|Image(Reversed)|Image(Reversed)|Image|Image|
+
+
+
+|<br>Display|<p style="background:red"><font color="red">Full screen <br>red</font></p>|<p style="background:white"><font color="black">White background<br> Black image</font></p>|<p style="background:red"><font color="red">Red background<br> red</font></p>|<p style="background:black"><font color="white">Black background<br> White image</font></p> |
+|---|----|----|----|----|
+|Black Array|Image(Reversed)|Image(Reversed)|Image|Image|
+|Red Array|00|FF|00|FF|
+
+<div align="center"><b>Table 1.</b><i>Array display effect</i></div>
+
+
+!!!Note
+        a.**00** means all elements in the array are 0x00, actually you need 2888 0x00   
+        b.**FF** means all elements in the array are 0xFF, actually you need 2888 0xFF  
+        c.**Image(Reversed)** means you need to check the **Reverse color** option in the **Step 2(Figure 4)**  
+        b.**Image** means do not check the **Reverse color** option in the **Step 2(Figure 4)**
+
+!!!Tip
+        *Make a 2888 0x00 or 0xFF array?*  
+        *Don't worry, we feel you pain, you can just click the 0x00.c and 0xFF.c file and copy into your code.*
+
+[0x00.c](https://raw.githubusercontent.com/SeeedDocument/Grove-Triple_Color_E-Ink_Display_1.54/master/res/00.c)  
+[0xff.c](https://raw.githubusercontent.com/SeeedDocument/Grove-Triple_Color_E-Ink_Display_1.54/master/res/FF.c)
+
+
+
+We consider the original state is full screen white. When updating the image, the black array is updated first, then the red array is updated, and the image of the red array overwrites the black image.
+
+
+This display is 152 x 152, so there are 152x152=23104 pixels, each pixel is controled by one bit. The element in the array is a two-digit hexadecimal number, like **0xF0**. Convert **0xF0** to a binary number we will get
+**1111 0000**. A pixel with a value of 1 will display white, and a pixel with a value of 0 will display the color of the corresponding array (red or black). Which means each element in the image array controls 8 pixels. So you need an array of 23104/8=2888 elements.
+
+
+**Step 4.** Download the code into your arduino, then you plug the display module into the arduino board. After blinking for a while, you will see the pattern you set.
 
 
 
