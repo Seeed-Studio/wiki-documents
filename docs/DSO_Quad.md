@@ -253,9 +253,7 @@ Please note that this procedure currently only works under Windows. [Instruction
 
 ###   Where to find firmware
 
-Track the latest version to firmware at:
-[http://garden.seeedstudio.com/index.php?title=DSO_Quad:Upgrading_Firmware#Firmware_List](http://garden.seeedstudio.com/index.php?title=DSO_Quad:Upgrading_Firmware#Firmware_List "DSO_Quad:Upgrading_Firmware#Firmware_List")
-you can always download the latest version of firmware
+Here is the [latest firmware](https://github.com/SeeedDocument/DSO_Quad/raw/master/res/PA1_V113.zip).
 
 You could also [build the firmware from source](/DSO_Quad-Building_Firmware "DSO Quad:Building Firmware").
 
