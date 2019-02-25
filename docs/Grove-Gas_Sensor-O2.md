@@ -150,11 +150,20 @@ Open serial monitor of your Arduino IDE, and you will get the data now.
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Gas_Sensor_O2/master/images/data.png)
 
 
-##Resources
+
+## FAQs
+
+**Q1: How to solve sensor's reading is out of arrange?**
+
+**A1:**  Please download [the libray with calibration function](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2/raw/master/resources/Read_O2_value.zip) and run the example. 
+
+
+## Resources
 
 * [ME2-O2 Datasheet](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2/raw/master/resources/ME2-O2-D20%200-25%25%20Manual%20%28ver1.2%29.pdf)
 * [Schematic in Eagle File](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2/raw/master/resources/Schematics_O2.zip)
 * [Github Repository of this Document](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2)
+
 
 ## Projects
 
