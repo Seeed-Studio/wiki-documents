@@ -317,6 +317,75 @@ if __name__=="__main__":
 - Q1: How to use multiple Grove-LCD RGB Backlight? 
     - A1: Please refer to [Arduino Software I2C user guide](http://wiki.seeedstudio.com/Arduino_Software_I2C_user_guide/).
 
+- Q2: How to use button to switch Grove RGB LCD to display different pages? 
+    - A2: Here is the code. 
+
+```c++
+
+#include <Wire.h>
+#include "rgb_lcd.h"
+
+rgb_lcd lcd;
+const int switchPin = 2;
+static int hits = 0;
+int switchState = 0;
+int prevSwitchState = 0;
+
+void setup() {
+    lcd.begin(16, 2);
+    pinMode(switchPin,INPUT);
+    Serial.begin(9600);
+    lcd.setCursor(0, 0);
+    lcd.print("Page 1");
+}
+
+void loop() {  
+  switchState = digitalRead(switchPin);
+  Serial.print("switchState:");Serial.println(switchState);
+  if (switchState != prevSwitchState) {
+    if (switchState == HIGH) {
+          hits = hits + 1;
+          delay(10);
+    }
+  }
+ 
+  Serial.print("hits:");Serial.println(hits);
+  if(hits==1)
+  {
+    Serial.println("Page 1");
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Page 1");
+  }else
+  if(hits==2)
+  {
+   Serial.println("Page 2");
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Page 2"); 
+  }else
+
+  if(hits==3)
+  {
+   Serial.println("Page 3");
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Page 3"); 
+  }else
+  
+  if ( hits>=4)
+  {
+     hits = 0;
+     Serial.println("couter is reset");
+     Serial.println("Page 1");
+     lcd.clear();
+     lcd.setCursor(0, 0);
+     lcd.print("Page 1");
+  }
+delay(500);
+}
+```
+
 ## Resources
 
 - **[Library]** [Software Library](https://github.com/Seeed-Studio/Grove_LCD_RGB_Backlight/archive/master.zip)
