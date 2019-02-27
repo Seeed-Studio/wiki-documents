@@ -225,10 +225,26 @@ pi@raspberrypi:~/GrovePi/Software/Python/grove_hightemperature_sensor $ python h
 [room temperature: 20.60°C][probe temperature: 32.19°C]
 ```
 
+## FAQs
 
 
-## Tech Support
-Please do not hesitate to contact **techsupport@seeed.cc** if you require further information.
+**Q1: How to do Grove-High temperature sensor calibration?**
+
+**A1:**  Please download the [libray](https://github.com/SeeedDocument/Grove_High_Temperature_Sensor/raw/master/resource/Grove_HighTemp_Sensor-master_cal.zip) and then follow below instructions.  
+
+- Step 1. run the getTemperature-calibration-measurement.ino to get below info. 
+
+```
+10:02:17.792 -> "You have Scucessfully record the sample data,please copy the following line of code to your clipboard and replace the first line of function loop()
+10:02:17.935 ->       double TMP[]={10.29,10.29,10.29,10.29,10.29,10.29,10.29,10.29,10.29,10.29};
+10:02:18.038 ->       double Real_temperature[]={10.00,20.00,30.00,40.00,50.00,60.00,70.00,80.00,90.00,100.00};
+```
+
+- Step 2. paste to getTemperature-calibration_demo.ino and run the calibration.
+
+- Step 3. run getTemperature.ino to read the temperature.  
+
+
 
 ## Resources
 
