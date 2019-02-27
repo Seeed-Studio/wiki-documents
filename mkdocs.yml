@@ -172,6 +172,7 @@ pages:
           - Grove Starter Kit for BeagleBone Green: Grove_Starter_Kit_for_BeagleBone_Green.md
           - Motor Bridge Cape v1.0: Motor_Bridge_Cape_v1.0.md
           - Skeleton box for Beaglebone: Skeleton_box_for_Beaglebone.md
+          - SeeedStudio BeagleBone Green Gateway Baseboard: BeagleBone Green_Gateway_Baseboard.md
 
       - ReSpeaker:
           - ReSpeaker Introduction: ReSpeaker.md

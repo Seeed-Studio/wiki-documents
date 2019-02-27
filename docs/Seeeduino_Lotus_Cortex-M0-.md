@@ -76,14 +76,15 @@ Compared with Seeeduino Lotus V1.1, the Seeeduino Lotus Cortex-M0+ mainly upgrad
 
 ## Feature
 
-* Fully compatible with Arduino UNO
-* SAM D21 microcontroller
-* 12 on-board Grove connectors
-* 14 Digital I/O Pins (10 PWM outputs)
-* 6 Analog Inputs
-* ISP Header
-* Arduino UNO-R3 Shield Compatible
-* Micro USB programming and power supply
+- Fully compatible with Arduino UNO
+- ARM® Cortex®-M0+ 32bit 48MHz microcontroller(SAMD21)
+- 12 on-board Grove connectors
+- 14 Digital I/O Pins (10 PWM outputs)
+- 6 Analog Inputs
+- Support Power Path Management
+- Support micro-usb or Li-Po battery powered
+- 2A maximum charging current
+- Suitable for low power design
 
 
 
