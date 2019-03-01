@@ -309,6 +309,7 @@ Please click **[here](http://support.seeedstudio.com/knowledgebase/articles/1826
 - **[MoreReading]** [Arduino Introduction](https://www.arduino.cc/en/guide/introduction)
 - **[MoreReading]** [Wikipedia page for Arduino](https://en.wikipedia.org/wiki/Arduino)
 - **[MoreReading]** [How to fit RF Explorer 3G+ IoT modules on Seeeduino](http://j3.rf-explorer.com/60-rfe/specifications/184-rf-explorer-3g-iot-for-seeeduino)
+- **[Firmware]** [How to burn the bootloader](https://github.com/SeeedDocument/forum_doc/raw/master/reg/seeeduino_boot.zip)
 
 ## Project
 
