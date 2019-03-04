@@ -241,6 +241,7 @@ Resources
 ---------
 
 - [Grove - Ear-clip Heart Rate Sensor Demo code](https://raw.githubusercontent.com/SeeedDocument/Grove-Ear-clip_Heart_Rate_Sensor/master/res/Grove-Heart_rate_chest_belt_V1.0.zip)
+- [PPG Sensor System](https://github.com/SeeedDocument/Grove-Ear-clip_Heart_Rate_Sensor/raw/master/res/PPG%20Sensor%20System.pdf)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Ear-clip_Heart_Rate_Sensor -->
 
