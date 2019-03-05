@@ -751,6 +751,7 @@ Click on **Files Transfer > Ymodem > Send**, and select the .bin file we had dow
 * [CE certification of RHF 76-052](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/ce-rhf76-052.pdf)
 * [RHF76-052 Firmware V2.0.10](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/rhf76-052am-v2.0.10-20160923.ebin 2.bin)
 * [RHF76-052 Firmware V2.1.16](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/rhf76-052am-v2.1.16-20171203.ebin.bin)
+* [RHF76-052 Firmware V2.1.19](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/rhf76-052am-v2.1.19-20180525.ebin)
 * [Datasheet of RHF76-052AM](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/rhf-ds01500_rhf76-052_datasheet_v03.pdf)
 * [Datasheet of GPS Chip L70B-M39 ](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/L70B-M39.pdf)
 * [Azure IoT Edge LoRaWAN](https://github.com/Azure/iotedge-lorawan-starterkit/)
