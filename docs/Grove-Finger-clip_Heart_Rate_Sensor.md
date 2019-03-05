@@ -77,7 +77,8 @@ void loop() {
 
 **Software Serial**
 
-The standard I2C library for the Arduino is the Wire Library. While this library is sufficient most of the time when the I2C pins SDA/SCL are in use already for other purposes. You can connect the SCL do D2 and SDA to D3. Please download the [SoftI2CMaster library](https://github.com/felias-fogg/SoftI2CMaster) and follow [How to install arduino library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/). 
+The standard I2C library for the Arduino is the Wire Library. While this library does not work when the I2C pins SDA/SCL are in use already for other purposes. So you can use the SoftwareI2C. You can connect the SCL to D2 and SDA to D3. Please download the [SoftI2CMaster library](https://github.com/felias-fogg/SoftI2CMaster) and follow [How to install arduino library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/) to setup the library. Copy the following code into a new sketch of Arduino and upload the sketch, then you can get heart rate from the Serial Monitor.
+It may take about a minute to get valid heart rate after you touch your finger with sensor. 
 
 ```
 #define SDA_PORT PORTD
