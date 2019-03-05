@@ -24,7 +24,7 @@ Seeeduino Lotus has 14 digital input/outputs (6 of which can output PWM) and 7 a
 
 
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/Seeeduino-Lotus-Cortex-M0.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Seeeduino-Lotus-Cortex-M0-p-2896.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 

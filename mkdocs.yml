@@ -172,7 +172,7 @@ pages:
           - Grove Starter Kit for BeagleBone Green: Grove_Starter_Kit_for_BeagleBone_Green.md
           - Motor Bridge Cape v1.0: Motor_Bridge_Cape_v1.0.md
           - Skeleton box for Beaglebone: Skeleton_box_for_Beaglebone.md
-          - SeeedStudio BeagleBone Green Gateway Baseboard: BeagleBone Green_Gateway_Baseboard.md
+          - SeeedStudio BeagleBone Green Gateway Baseboard: BeagleBone_Green_Gateway_Baseboard.md
 
       - ReSpeaker:
           - ReSpeaker Introduction: ReSpeaker.md
@@ -256,6 +256,9 @@ pages:
           - Air602 WiFi Development Board: Air602_WiFi_Development_Board.md
           - Air602 Firmware Programming Manual: Air602_Firmware_Programming_Manual.md
 
+     
+     - Arch:
+         - Arch_Mix.md
 
 
       - LinkIt:
