@@ -190,7 +190,7 @@ Download [Raspbian Stretch](https://www.raspberrypi.org/downloads/raspbian/) fro
 
 **Wireless connection and SSH**
 
-**1.** Create a file called "wpa_supplicant.conf" into the image folder, and copy the following code.
+**1.** Create a file called "wpa_supplicant.conf" into the /boot folder, and copy the following code.
 
 
 ```txt
@@ -211,7 +211,7 @@ priority=1
 	The Wi-Fi name and password should be the same as your local Wi-Fi which your PC connected to(make sure your PC and Raspberry Pi are in the same LAN).
 
 
-**2.** Create a blank file called "ssh" into the image folder.
+**2.** Create a blank file called "ssh" into the /boot folder.
 
 **3.** Insert the SD Card with Raspbian into the Raspberry Pi
 

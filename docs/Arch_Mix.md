@@ -12,7 +12,7 @@ sku: 102080027
 ![](https://github.com/SeeedDocument/Arch_Mix/raw/master/img/main1.jpg)
 
 
-Arch Mix is a thin, lightweight development board based on NXP i.MX RT1050 processor. The i.MX RT1050 is a new processor family featuring NXP’s advanced implementation of the Arm Cortex®-M7 core. This development board comes pre-installed RT-Thread real-time operating system(RTOS) and built-in micro-python. Which makes it suitable for industrial control,  especially for scenes with large code and high real-time application requirements.
+Arch Mix is a thin, lightweight development board based on NXP i.MX RT1052 processor. The i.MX RT1052 is a new processor family featuring NXP’s advanced implementation of the Arm Cortex®-M7 core. This development board comes pre-installed RT-Thread real-time operating system(RTOS) and built-in micro-python. Which makes it suitable for industrial control,  especially for scenes with large code and high real-time application requirements.
 
 
 The RTOS is an open source IoT operating system for embedded devices. The kernel has real-time multi-task scheduling, semaphore, mutex, mail box, message queue, signal etc. This is a lightweight system that loads quickly. For more detail about the RTOS, please refer to the [Github Page](https://github.com/RT-Thread/rt-thread).
@@ -36,7 +36,7 @@ The RTOS is an open source IoT operating system for embedded devices. The kernel
 
 ## Feature
 
-- ARM® Cortex®-M7 528MHz microcontroller(NXP i.MX RT1050)
+- ARM® Cortex®-M7 528MHz microcontroller(NXP i.MX RT1052)
 - Comes with real-time operating system RT-Thread
 - Build-in micro-python
 - Ultra-fast system loading speed
@@ -389,7 +389,7 @@ Now the code is running, the RGB LED will turn yellow, and when you press and ho
 
 ## Resources
 
-- **[ZIP]** [Arch Mix Eagle file](https://github.com/SeeedDocument/Arch_Mix/raw/master/res/Arch%20Mix_v1.0_SCH%20%26%20PCB.zip)
+- **[ZIP]** [Arch Mix Schematic file](https://github.com/SeeedDocument/Arch_Mix/raw/master/res/Arch%20Mix_v1.0_SCH%20%26%20PCB.zip)
 - **[PDF]** [PDF Format Wiki](https://github.com/SeeedDocument/Arch_Mix/raw/master/res/Arch_Mix.pdf)
 - **[PDF]** [i.MX RT1050 Datasheet](https://github.com/SeeedDocument/Arch_Mix/raw/master/res/i.MX%20RT1050.pdf)
 - **[PDF]** [Dimension Diagram](https://github.com/SeeedDocument/Arch_Mix/raw/master/res/ARCH%20MIX_V1.0_Dimension.pdf)
