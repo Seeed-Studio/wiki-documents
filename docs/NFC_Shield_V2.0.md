@@ -638,6 +638,20 @@ You may now create two separate NFC objects, one for each shield, as follows:
     NfcAdapter nfc_shield_2 = NfcAdapter(interface_shield_2); // create an NFC adapter object for shield two
 ```
 
+## FAQs
+
+**Q1: What's the length of the cable? And how long it can be if I want a longer one?**
+
+A1: The cable we sold with NFC shield is 12cm. If you want a longer one yourself, please no more than 15cm with a IPX/U.FL connector.
+
+**Q2: Why I always got error "Didn\'t find PN53x board" while using NFC shield with M1 RFID card (13.56Mhz)?**
+
+A2: Please use the sketch "mifareclassic_formatndef" under "PN532" library to format the card, then try with "ReadTag" again. 
+
+**Q3: Can two or more antennae be added to NFC Shield V2.0 (SKU: 113030001)?**
+
+A3: NFC shield v2 is based on PN532 chip. Please note that the design only supports one antenna.
+
 Resources
 ---------
 

@@ -284,17 +284,19 @@ D0[7..0]
 -   DX\[7..0\] is the data bit which correspond to Mifare@ Standard & Light card read only ID;
 
 ## FAQs
-**Q1: How to convert the output to Card Number**
 
-- A1:
+**Q1: How to convert the output to Card Number?**
+
+A1: Please follow below steps.
 
 - Take ID: 0009776930 for example:
-
 - Card Number ID: 0009776930 ------- Decimalism [Start Bit(00) + Card Number(8 numbers)]
-
 - Output: 0700952F229F ------------- Hex [[Start Bit(07h) + Card Number(8 numbers) + Checksum]
-
 - The calculator for decimal and hex numbers is available online.
+
+**Q2: How to read tags continuously?**
+
+A2: The RFID reader can read tags continuously without any setting. Keep the tag 2.5-4 cm from the antenna, and the reader can read data continuously. And if the distance is below 2.5cm, the reader reads data once if not moving tags away.
 
 ## Resources
 

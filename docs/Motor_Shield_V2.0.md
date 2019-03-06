@@ -326,6 +326,54 @@ void brake(unsigned char motor_id);
 
 There's something need to be modified, please refer to the examples.
 
+
+## FAQs
+
+**Q1: The purpose of the jumper MB_EN**
+
+A1: You can see a power jumper(MB_EN) on the motor shield. If you move it, the Arduino can provide power to Shield, but the shield(if the shield has connected to a external power) can't provide power to Arduino.
+
+If the jumper exists, one can provide power to the other under two situation:
+
+- USB to Arduino: if no external power connected to Shield separately, the Arduino will provide power to Shield via VCC pin.
+
+- External Power connected to Shield：If shield has a separate power, the voltage would through a rectifier(78M05) first, and then provide power to Arduino. At this situation, no current of Arduino could through Arduino to Shield via 78M05.
+
+So the purpose of this jumper is a choice whether you would wanna use shield to provide power to Arduino or not.
+
+**Q2: Is there a pin conflict between the SD card shield (103030005) and the Motor shield (105030001) on Arduino UNO? How to use them together?**
+
+A2: There is a pin conflict between Motor shield and SD card shield in digital pins D11,D12,D13 of the Arduino Uno. So you cannot stack them together with the Arduino Uno board. Here is the solution to use them together.
+
+- Step 1.Stack the SD card shield to the Arduino.
+- Step 2.Modify the library of Motordriver.h as follows.
+
+```
+/******Pins definitions*************/
+#define MOTORSHIELD_IN1    8
+#define MOTORSHIELD_IN2    7
+#define MOTORSHIELD_IN3    6
+#define MOTORSHIELD_IN4    5
+#define SPEEDPIN_A        9
+#define SPEEDPIN_B        10
+```
+
+**Q3.Do not stack the motor shield but make connections separately as follows from the Arduino using jumper wires.**
+
+A3: Here is the connection.
+
+```
+ Arduino   Motor shield
+ 5v       ------>5v
+ GND    ------>GND
+ D5      ------>D13
+ D6      ------>D12
+ D7      ------>D11
+ D8       ------>D8
+ D9       ------>D9
+ D10     ------>D10
+ ```
+
 ## Resources
 -------------------
 - **[Eagle]** [ Motor Shield V2.0 Eagle File ](https://github.com/SeeedDocument/Motor_Shield_V2.0/raw/master/resource/Motor_Shield_Eagle_File.zip)
