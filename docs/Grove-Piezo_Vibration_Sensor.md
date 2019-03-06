@@ -312,6 +312,14 @@ pi@raspberrypi:~/GrovePi/Software/Python $ python grove_piezo_vibration_sensor.p
 !!!note
     We also can use grovepi.digitalRead(2) to read the vibration status with attaching the sensor to D2 port of GrovePi.
 
+
+## FAQs
+
+**Q1: Is it digital or analog output?**
+
+A1: It is digital output, Low or High.
+
+
 ## Resources
 
 - **[PDF]** [Download Wiki PDF](https://github.com/SeeedDocument//Grove-Piezo_Vibration_Sensor/raw/master/res//Grove-Piezo_Vibration_Sensor_wiki.pdf)
@@ -332,4 +340,4 @@ pi@raspberrypi:~/GrovePi/Software/Python $ python grove_piezo_vibration_sensor.p
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/momososo/seat-monitor-4288dc/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

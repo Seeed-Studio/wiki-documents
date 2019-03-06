@@ -251,7 +251,10 @@ You can quit this program by simply press ++ctrl+c++.
 
 
 ## FAQ
-Please click [here](http://support.seeedstudio.com/knowledgebase/articles/1827199-grove-gsr-sensor-sku-101020052) to see all Grove - GSR sensor FAQs.
+
+**Q1: What is the unit of output?**
+
+A1:  We measure the signal by voltage and print to COM port as (0~1023). 
 
 ## Resources
 

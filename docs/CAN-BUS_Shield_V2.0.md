@@ -456,9 +456,6 @@ From each node (IE Switch pod that controls your windows or electric door locks)
 
 * Check if the CS pin setting is matched with the code. For CAN Bus Shield V1.1/1.2, CS pin is connected to D9, others are to D10.
 
-**Q3. Where can I find technical support if I have some other issues.**
-
-* You can post a question to [Seeed Forum](https://community.seeedstudio.com/discover.html?t=Arduino) or send an email to **techsupport@seeed.cc**.
 
 ## Resources
 -----

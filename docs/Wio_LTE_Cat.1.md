@@ -1942,7 +1942,148 @@ Temperature: 22  CO2: 2972
 ```
 
 ## FAQ
-Please click here to see all [Wio_LTE](http://support.seeedstudio.com/knowledgebase/articles/1829333-wio-lte-sku-102990925-102990924-102990923-1029) FAQs.
+
+**Q1:   Why does Espruino IDE display  "Disconnected" during phone call?**
+
+A1: If we see "Disconnected" during phone call as below, the root cause is that power supply is not sufficient. Please conenct the battery or connect to a hub with sufficiant power.
+--------------------------------------------
+_____               _
+| __|___ ___ ___ _ _|_|___ ___
+| __|_ -| . | _| | | | | . |
+|_____|___| _|_| |___|_|_|_|___|
+        |_| http://espruino.com
+1v94 Copyright 2016 G.Williams
+Espruino is Open Source. Our work is supported
+only by sales of official boards and donations:
+http://espruino.com/Donate
+>
+=undefined
+AT passedd
+PS attachment succeeded
+currently selected operator :+COPS: 0,0,"CHINA MOBILE",7
+connectCB entered...
+PDP context successfully activated
+connectCB entered...
+null 10.114.177.248
+IP address allocated, modem is ready to use
+>
+Disconnected
+
+**Q2: Why do we see **Geolocalization error : +CME ERROR: 516** during running GPS code on Espruino IDE?**
+
+A2:  When +CME ERROR: 516 stop logging out, type GeoLoc() to get location data. Sometimes  other GNSS error code may log out like +CME: 514, it tell GNSS was locked. Go to GNSS AT Command Manual for the explanations.
+
+-------------------------------------------- 
+ ___               _
+| __|___ ___ ___ _ _|_|___ ___
+| __|_ -| . | _| | | | | . |
+|_____|___| _|_| |___|_|_|_|___|
+          |_| http://espruino.com
+1v94 Copyright 2016 G.Williams
+Espruino is Open Source. Our work is supported
+only by sales of official boards and donations:
+http://espruino.com/Donate
+>
+=undefined
+AT passed
+PS attachment succeeded
+currently selected operator :+COPS: 0,0,"CHINA MOBILE",7
+connectCB entered...
+PDP context successfully activated
+connectCB entered...
+null 10.200.47.30
+IP address allocated, modem is ready to use
+Starting GeoLocalization
+Geolocalization error : +CME ERROR: 516
+Geolocalization error : +CME ERROR: 516
+
+**Q3: We fail to use Arduino IDE to download the program and see below error info at bottom of Arduino IDE.**
+
+A3: It is a bug. When using Arduino serial port to print info, the Arduino IDE remembers the serial port number. So there is no serial port available for downloading new program. We can reboot the Arduino IDE to solve the issue as temporary solution. For the preventive solution, please use other COM monitor software, such as SSCOM. Please make sure we see the processing bar during program downloading. Or else, we will see below info and the program is not downloaded. 
+ --------------------------------------------  
+Sketch uses 23068 bytes (2%) of program storage space. Maximum is 1048576 bytes.
+Global variables use 13864 bytes of dynamic memory.
+DFU begin
+dfu-util 0.8
+
+Copyright 2005-2009 Weston Schmidt, Harald Welte and OpenMoko Inc.
+Copyright 2010-2014 Tormod Volden and Stefan Schmidt
+This program is Free Software and has ABSOLUTELY NO WARRANTY
+Please report bugs to dfu-util@lists.gnumonks.org
+
+Invalid DFU suffix signature
+A valid DFU suffix will be required in a future dfu-util release!!!
+No DFU capable USB device available
+DFU end
+
+**Q4: We See the "STM32 Virtual ComPort in FS Mode" in device manger and can't download the program.**
+
+A4: Please press RST and Boot buttons, then release RST button first and then Boot button. Or we can hold the boot button and then plug the USB to PC. We will see the "STM32 BOOTLOADER". We can download the programing now. Here is the successful programing downloading log. 
+   --------------------------------------------  
+Sketch uses 23076 bytes (2%) of program storage space. Maximum is 1048576 bytes.
+Global variables use 13864 bytes of dynamic memory.
+DFU begin
+dfu-util 0.8
+
+Copyright 2005-2009 Weston Schmidt, Harald Welte and OpenMoko Inc.
+Copyright 2010-2014 Tormod Volden and Stefan Schmidt
+This program is Free Software and has ABSOLUTELY NO WARRANTY
+Please report bugs to dfu-util@lists.gnumonks.org
+
+Opening DFU capable USB device...
+ID 0483:df11
+Run-time device DFU version 011a
+Claiming USB DFU Interface...
+Setting Alternate Setting #0 ...
+Determining device status: state = dfuERROR, status = 10
+dfuERROR, clearing status
+Determining device status: state = dfuIDLE, status = 0
+dfuIDLE, continuing
+DFU mode device DFU version 011a
+Device returned transfer size 2048
+DfuSe interface name: "Internal Flash "
+Downloading to address = 0x08000000, size = 30724
+
+Download [                       ] 0%           0 bytes
+Download [=                       ] 6%       2048 bytes
+Download [===                     ] 13%       4096 bytes
+Download [====                   ] 19%       6144 bytes
+Download [======                 ] 26%       8192 bytes
+Download [========               ] 33%       10240 bytes
+Download [=========               ] 39%       12288 bytes
+Download [===========             ] 46%       14336 bytes
+Download [=============           ] 53%       16384 bytes
+Download [==============         ] 59%       18432 bytes
+Download [================       ] 66%       20480 bytes
+Download [==================     ] 73%       22528 bytes
+Download [===================     ] 79%       24576 bytes
+Download [=====================   ] 86%       26624 bytes
+Download [======================= ] 93%       28672 bytes
+Download [======================== ] 99%       30720 bytes
+Download [=========================] 100%       30724 bytes
+Download done.
+File downloaded successfully
+Resetting USB to switch back to runtime mode
+Invalid DFU suffix signature
+A valid DFU suffix will be required in a future dfu-util release!!!
+can't detach
+DFU end
+
+
+**Q5: We can't see the COM port in device manager after changing dfu driver.**
+
+A5: Please press the RST button and we will see the COM port in device manager.
+
+**Q6: We can't see any info on the Zadig software.**
+
+A6: Please click Options--> List All Devices, then select STM32 Virtual COM Ports.
+
+**Q7: When we change the DFU driver to WINUSB during Arduino programming, do we need to change back to original when we switch to Javascript program?**
+
+A7: No, the WINUSB driver works well with Javascript.
+
+**Q8: Where can I get more Javascript demos?**
+A8: Here is https://github.com/Seeed-Studio/Wio_LTE_JavaScript_Demo . 
 
 ## Resource
 

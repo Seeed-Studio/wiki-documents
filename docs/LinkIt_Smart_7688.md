@@ -451,6 +451,10 @@ print "Hello World!"
 **6.** Now you can see **Hello World**! printed in console.
 
 
+## FAQs
+
+[Here](https://docs.labs.mediatek.com/resource/linkit-smart-7688/en/faq) is the FAQ from Mediatek. 
+
 ## Resources
 ----
 * **[Eagle]** [LinkIt_Smart_7688](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/res/Hardware_Schematics.zip)
@@ -459,8 +463,9 @@ print "Hello World!"
 * **[Document]** [Manual](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/res/Manual.zip)
 * **[Document]** [OpenWrt](http://wiki.openwrt.org/doc/howto/user.beginner)
 * **[Document]** [MediaTek LinkIt? Smart 7688 Resources:](http://labs.mediatek.com/site/global/developer_tools/mediatek_linkit_smart_7688/hdk_intro/index.gsp)
-* **[Document]**  [Firmware_upgrade_Instruction](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/res/LinkIt_Smart_7688_Firmware_upgrade.zip)
-* **[Document]**   [Certificates](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/res/LinkIt_Smart_7688-Certificate.zip)
+* **[Document]** [Firmware_upgrade_Instruction](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/res/LinkIt_Smart_7688_Firmware_upgrade.zip)
+* **[Document]** [Certificates](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/res/LinkIt_Smart_7688-Certificate.zip)
+* **[Document]** [Mediatek](https://labs.mediatek.com/en/platform/linkit-smart-7688)
 
 ## Projects
 

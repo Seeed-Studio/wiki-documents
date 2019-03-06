@@ -352,8 +352,20 @@ Motion Detected
 
 ```
 
+## FAQs
 
+**Q1: How to make the distance adjustable?**
 
+A1: R2: used to adjust the detecting distance(the AMP coefficient, 2MΩ). R6: used to adjust the holding time(the trigger duty, 100KΩ). 
+
+The detecting distance can be adjusted from 6 meters to only several centimeters. If the potentiometer is set to one end, the module will be too sensitive to be triggered by the atmosphere even there is no people moving before it. The holding time can also be adjusted by the Delay_time potentiometer, the value is about from  25s to 1s.
+
+If R2 and R6 are soldered, please make sure R13 and R14 are empty.
+
+!!!Note
+  There is risk that the board may be destroyed. Please think it over before making this modification.
+
+![](https://github.com/SeeedDocument/Grove_PIR_Motion_Sensor/raw/master/img/Resistor.png)
 
 
 ## Resources

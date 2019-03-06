@@ -420,6 +420,17 @@ void loop()
 
 ```
 
+## FAQs
+
+**Q1: How does the Grove-Ultrasonic sensor work?**
+
+A1: When we provide a pulse trigger signal with more than 10uS through singal pin, the Grove_Ultrasonic_Ranger will issue 8 cycles of 40kHz cycle level and detect the echo. The pulse width of the echo signal is proportional to the measured distance. Here is the formula: Distance = echo signal high time * Sound speed (340M/S)/2. 
+
+**Q2: Why Grove-Ultrasonic sensor only has 1 signal pin, comparing with other ultrasonic sensor Trig and Echo pins?**
+
+A2:Grove_Ultrasonic_Ranger’s trig and echo signal share 1 SIG pin through MCU.  
+
+
 ## Resources
 
 - **[PDF]** [Download Wiki PDF](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/res/Grove-Ultrasonic_Ranger_WiKi.pdf)

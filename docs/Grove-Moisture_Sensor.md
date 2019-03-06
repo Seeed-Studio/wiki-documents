@@ -390,6 +390,13 @@ void loop() {
 }
 ```
 
+## FAQs
+
+**Q1: What does the output mean? voltage or counts?**
+
+A1: The output is voltage values. When using analogRead(), 5V will be divided by 1023. So the output value = Vout * 1023/5
+. The higher output voltage is, the higher moisture there is.
+
 ## Resources
 
 - [**Eagle&PDF**][Grove - Moisture Sensor v1.4 Schematic](https://github.com/SeeedDocument/Grove_Moisture_Sensor/raw/master/resources/Grove%20-%20Moisture%20Sensor%20v1.4.zip)

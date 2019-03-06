@@ -291,7 +291,19 @@ Here is some funny project for your reference.
 
 ## FAQs
 
-Please click **[here](http://support.seeedstudio.com/knowledgebase/articles/1826437-seeeduino-v4-2-sku-102010026)** to see all Seeeduino V4.2 FAQs.
+**Q1：In Ubuntu, I get the error 'avrdue: ser_open(): can't open device "dev/tty/ACM0": Permission denied'. How do I connect Seeeduino V4 to a Linux PC?**
+
+A1： Please read the instuction [here](http://playground.arduino.cc/Linux/Debian) to make Arduino IDE work without root permission in Ubuntu. Please find below the relevant part.
+
+**Q2: What's the difference between Arduino UNO and Seeeduino v4.2?**
+
+A2: Seeeduino v4.2 is fully compatible with Arduino UNO. The mainly difference list below:
+
+* Use a micro USB to power and program the board
+* 3 on-board Grove connector
+* 3.3/5V system power switch
+* DCDC circuit instead of LDO, more efficiency
+* Others circuit improve
 
 
 ## Resources

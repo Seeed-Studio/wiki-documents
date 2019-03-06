@@ -218,6 +218,14 @@ Transformation Equations
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Color_Sensor/master/img/Chromaticity_Diagram.jpg)
 
+## FAQs
+
+**Q1: How to understand the commands? For example, REG_GREEN_LOW = 0xD0**
+
+A1: From the attached picture, you can see what's in the command. When using byte protocol command, it must be like 0x80+ADDRESS. For example, REG_TIMING( 01h ) = 0x81
+For byte and block read, the command should be 0xC0+ADDRESS, REG_GREEN_LOW( 10h ) = 0xD0.
+
+![](https://github.com/SeeedDocument/Grove-I2C_Color_Sensor/raw/master/img/Color%20sensor%20register.png)
 
 Resources
 ---------

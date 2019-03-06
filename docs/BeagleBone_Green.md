@@ -365,6 +365,9 @@ Please replace a stable power supply and try again. Usually mobile phone USB pow
  ![](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/images/Capatictor.png)
 
 
+**3: What is the operating temperature range of the BBG?**
+
+Beagle Bone Green works in the temperature range of 0-75 Deg Celsius.
     
 ## References
 

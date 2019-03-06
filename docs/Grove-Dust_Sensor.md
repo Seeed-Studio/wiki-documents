@@ -264,6 +264,13 @@ More attention is being paid to the environmental air quality nowadays because t
 
 [![](https://raw.githubusercontent.com/SeeedDocument/Grove_Dust_Sensor/master/image/200px-Wiki_makeitnow_logo.png)](http://www.instructables.com/id/Air-Quality-Test-Box/?ALLSTEPS)
 
+
+## FAQs
+
+**Q1: How can Grove - Dust Sensor (with 5V logic) be used with Seeeduino Stalker (with 3.3V logic)?**
+
+A1: The output signal from Dust Sensor needs to be scaled down to 3.3V logic to work with Seeeduino Stalker (or any such board). The output from Dust Sensor is 0.7V for Logic Low and greater than 4.0V for Logic High. You could use a voltage divider to scale the output to be compatible with 3.3V logic or use a TTL logic level translator.
+
 ## Resources
 
 - **[Datasheet]** [Grove-Dust_sensor datasheet](https://github.com/SeeedDocument/Grove_Dust_Sensor/raw/master/resource/Grove_-_Dust_sensor.pdf)
