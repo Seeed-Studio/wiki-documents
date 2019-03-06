@@ -104,15 +104,17 @@ Q3: The specification of SIM900 says it has a RTC backup,but we have not used it
 
 A4: Please follow below instructions. 
 
-a. Please make sure that the SIM card is well inserted 
-b. Check the card on the phone whether it works.
-c. Try to upload the test code from our wiki and send AT commands to see whether any good returns.
-d. Try to change the "#define _SS_MAX_RX_BUFF 64 // RX buffer size" in "libraries\SoftwareSerial\SoftwareSeriall.h" to "#define _SS_MAX_RX_BUFF 128 // RX buffer size
+- Please make sure that the SIM card is well inserted 
+- Check the card on the phone whether it works.
+- Try to upload the test code from our wiki and send AT commands to see whether any good returns.
+- Try to change the "#define _SS_MAX_RX_BUFF 64 // RX buffer size" in "libraries\SoftwareSerial\SoftwareSeriall.h" to "#define _SS_MAX_RX_BUFF 128 // RX buffer size
      
 **Q5: Two alternative ways to help to wake up the GPRS shield**
 
-A5: (1) Pull DTR pin low : The serial port will be active after DTR is pulled to low for 20ms
-    (2) RTC alarm expires 
+A5: Here are the 2 ways. 
+
+- Pull DTR pin low : The serial port will be active after DTR is pulled to low for 20ms
+- RTC alarm expires 
 
 **Q6: Which type of SIM cards work with GPRS Shield?**
 
