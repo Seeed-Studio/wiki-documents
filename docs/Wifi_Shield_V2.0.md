@@ -1242,8 +1242,26 @@ You should now be able to connect to your WiFi shield as an access point, for ex
 
 To learn more about adhoc mode check out the [WiFly RN User Manual](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/res/WiFly-RN-UM.pdf) section 16 "Adhoc Networking Mode"
 
-Resources
----------
+
+## FAQs
+
+**Q1: How to set a configuration when using WiFi shield with Mega?**
+
+A1: Please follow below instructions. More information about Software serial please refer to [SoftwareSerial Library](http://arduino.cc/en/Reference/SoftwareSerial).
+
+- Connect D2 to D10 then D3 to D11 by jumper wires           
+- Modify the program: Wifly(2,3); → Wifly(10,11);
+
+**Q2: Is Wifi Shield compatible with Arduino Due?**
+
+A2: Wifi shield can work with Arduino Due. On hardware, you can connect them via one of the four Serial Ports on Arduino Due(If you use Serial 1-3, you may need to make the connection with jumper wires). The current wifi shield library uses SoftwareSerial, you should modify it to Serial port of Arduino Due. 
+
+**Q3: How to improve the connectivity between the Wifi Shield and the router?**
+
+A3: Do not place plastic or any other dielectric material in touch with the antenna. Any metallic objects in close proximity to the antenna will prevent the antenna from radiating freely. 
+
+
+## Resources
 
 -   [WiFi Shield V2.0 Eagle Files](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/res/Wifi_Shield_v2.0.zip)
 -   [Schematic PDF](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/res/Wifi_shield_v2_schematic.pdf)

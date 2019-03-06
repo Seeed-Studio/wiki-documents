@@ -227,7 +227,58 @@ The Sidekick Basic Kit for LinkIt ONE is designed to be used with your LinkIt ON
 - [Get Temperature with Webpage](http://wiki.seeedstudio.com/LinkIt_ONE_Tutorial-Get_temperature_with_Webpage/)
 - [Github Repo for Sidekick Basic Kit for LinkIt ONE](http://wiki.seeedstudio.com/LinkIt_ONE_Tutorial-Get_temperature_with_Webpage/)
 
+
+## FAQs
+
+**Q1: Can I access to 3G or 4G network with LinkIt ONE?**
+
+A1: No, but you can use GPRS network.
+
+**Q2: There’s nothing printed on the serial monitor after uploading GSM demo successfully.**
+
+A2: Please follow below steps. 
+
+- Choose Modem USB port for printing.
+- Choose the right baud rate.
+- Use another demo to test.
+- Update the firmware and then try again.
+
+**Q3: The GPRS function doesn’t work. I tried the sketch “LGPRS” without success.**
+
+A3: Please follow below steps. 
+
+- Please make sure that your GPRS card isn’t locked.
+- Can you access to GPRS network with this card on your phone?
+- Does the SMS work?
+
+**Q4: Why can’t I upload the sketch “Blink” to LinkIt ONE? Is it defective?**
+
+A4: Please follow below steps. 
+
+- Check whether the two switches are on the right side (Uart & USB)
+- Choose the right COM Port(MTK USB DEBUG PORT)
+- Update the firmware and try again
+- Try on another PC
+- Try another USB cable
+
+**Q5: Does LinkIt ONE support recording?**
+
+A5: Yes, the audio jack can be the input interface of recording. Its ADC has been integrated inside MT2502A.
+
+**Q6: Does the LinkIt One integrated WiFi module support Monitor mode?**
+
+A6: Please refer the [WiFi API](http://labs.mediatek.com/api/linkit-one/frames.html?frmname=topic&frmfile=index.html) reference of LinkIt One. There is a support for RSSI for connected networks. There is no monitor mode available for non-connected WiFi networks.
+
+**Q7: Can I apply 5v through the battery socket on the LinkIt ONE?**
+
+A7: Sorry, you cannot use a 5V battery. The Linkit ONE board comes with a 3.7V Lithium-ion rechargeable battery. It is advised to use the battery provided with it.
+
+**Q8: Where can I find information about connecting LinkIt ONE to the web using GPRS?**
+
+A8: The LinkitONE IDE comes with examples to use the GPRS to connect to web. Just install the latest version of IDE and check the examples. Here is [GPRS API](http://labs.mediatek.com/api/linkit-one/frames.html?frmname=topic&frmfile=index.html)E.
+
 ## Resources
+
 **Schematic / Design Files:**
 
 - [LinkIt ONE V1.0 Eagle File](https://github.com/SeeedDocument/Linkit_ONE/raw/master/resource/202000437_PCBA%20Linkit%20ONE_PDF.zip)

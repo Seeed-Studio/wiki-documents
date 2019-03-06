@@ -459,6 +459,19 @@ void loop()
 
 *   **Community based** – satisfying needs through voting, democratized design, project and recipe sharing, profit sharing business pattern, Renting and Reuse
 
+
+## FAQs
+
+**Q1:  Would this work with Intel Galileo Gen 1 Board?**
+     
+A1: Yes, you can use this kit on Intel Galileo Gen1/Gen2 board and Edison for Arduino.
+
+**Q2: There's nothing displayed on the Grove - RGB LCD backlight, but the back color works fine.**
+
+A2: Please check whether the powering switch(3.3V/5V) is on 5V side.
+
+
+
 ##   Resources
 ---
 *   [Sch pdf](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/res/Grove-Starter_Kit_v3_sch_pdf.zip)
