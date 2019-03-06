@@ -362,17 +362,16 @@ A2: There is a pin conflict between Motor shield and SD card shield in digital p
 
 A3: Here is the connection.
 
-```
- Arduino   Motor shield
- 5v       ------>5v
- GND    ------>GND
- D5      ------>D13
- D6      ------>D12
- D7      ------>D11
- D8       ------>D8
- D9       ------>D9
- D10     ------>D10
- ```
+| Arduino | Motor shield |
+|---------|--------------|
+| 5V      | 5V           |
+| GND     | GND          |
+| D5      | D13          |
+| D6      | D12          |
+| D7      | D11          |
+| D8      | D8           |
+| D9      | D9           |
+| D10     | D10          |
 
 ## Resources
 -------------------
