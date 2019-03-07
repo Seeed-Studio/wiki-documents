@@ -11,7 +11,7 @@ sku: 105030006
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Motor_Bridge_Cape_v1.0/master/img/Motor_bridge_driver.jpg)
 
-The Motor Bridge Cape features bi-directional motor control using two TB6612FNG integrated dual H-bridge, so it can control two stepper motors or four brushed DC motors with 6 ~15V DC power and about 1A current draw per motor. The cape provides 5V regulated power to BBG or BBB with a max input voltage of 15V. It also has six servo control interfaces and six expand I\O.  All the features are provided by the on board STM32F0 coprocessor. The MCU can communicate with BeagleBone by I<sup>2</sup>C or UART interface. 
+The Motor Bridge Cape features bi-directional motor control using two TB6612FNG integrated dual H-bridge, so it can control two stepper motors or four brushed DC motors with 6 ~15V DC  ower and about 1A current draw per motor. The cape provides 5V regulated power to BBG or BBB with a max input voltage of 15V. It also has six servo control interfaces and six expand I\O.  All the features are provided by the on board STM32F0 coprocessor. The MCU can communicate with BeagleBone by I<sup>2</sup>C or UART interface. 
 
 [![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Motor-Bridge-Cape-p-2569.html)
 
@@ -78,8 +78,6 @@ motor = MotorBridge.MotorBridgeCape()
 sudo apt-get update
 sudo apt-get install build-essential python-pip python-dev python-smbus git
 sudo pip install Adafruit-GPIO
-sudo apt-get install build-essential python-dev python-pip -y
-sudo pip install Adafruit_BBIO
 ```
 
 
