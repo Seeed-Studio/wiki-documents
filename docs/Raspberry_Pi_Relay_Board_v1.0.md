@@ -183,11 +183,6 @@ mm
 </table>
 
 
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-Place 2 layers of electrical tape on the top of the Arduino's usb connector. This will prevent the relay shield from making contact. Do not operate voltage more than 35V DC.
-</div>
-
 ## Hardware Overview
 -----------------
 
