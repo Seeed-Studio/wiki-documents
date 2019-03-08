@@ -12,10 +12,11 @@ sku: 102080027
 ![](https://github.com/SeeedDocument/Arch_Mix/raw/master/img/main1.jpg)
 
 
-Arch Mix is a thin, lightweight development board based on NXP i.MX RT1052 processor. The i.MX RT1052 is a new processor family featuring NXP’s advanced implementation of the Arm Cortex®-M7 core. This development board comes pre-installed RT-Thread real-time operating system(RTOS) and built-in micro-python. Which makes it suitable for industrial control,  especially for scenes with large code and high real-time application requirements.
+Arch Mix is a thin, lightweight development board based on NXP i.MX RT1052 processor(3020 CoreMark/1284 DMIPS @ 600 MHz). This development board comes pre-installed RT-Thread real-time operating system and built-in micro-python. Which makes it suitable for industrial control, especially for scenes with large code and high real-time application requirements.
 
+The i.MX RT1052 is a new processor family featuring NXP’s advanced implementation of the Arm Cortex®-M7 core. Currently, the i.MX RT1052 is the highest performing Cortex-M7 solution delivering 3036 CoreMarks, which is 13 times better than the LPC1788 microcontroller. In addition to the high-speed performance it provides fast real-time responsiveness. The i.MX RT1050 also has rich audio and video features, including LCD display, basic 2D graphics, camera interface, SPDIF, and I2S audio interface.
 
-The RTOS is an open source IoT operating system for embedded devices. The kernel has real-time multi-task scheduling, semaphore, mutex, mail box, message queue, signal etc. This is a lightweight system that loads quickly. For more detail about the RTOS, please refer to the [Github Page](https://github.com/RT-Thread/rt-thread).
+The RT-Thread is an open source IoT operating system for embedded devices. The kernel has real-time multi-task scheduling, semaphore, mutex, mail box, message queue, signal etc. This is a lightweight system that loads quickly. For more detail about the RTOS, please refer to the [Github Page](https://github.com/RT-Thread/rt-thread).
 
 
 
@@ -36,7 +37,7 @@ The RTOS is an open source IoT operating system for embedded devices. The kernel
 
 ## Feature
 
-- ARM® Cortex®-M7 528MHz microcontroller(NXP i.MX RT1052)
+- ARM® Cortex®-M7 600MHz microcontroller(NXP i.MX RT1052)
 - Comes with real-time operating system RT-Thread
 - Build-in micro-python
 - Ultra-fast system loading speed
@@ -53,7 +54,7 @@ The RTOS is an open source IoT operating system for embedded devices. The kernel
 |----|----|
 |**Processor: NXP i.MX RT1052**||
 |Platform|ARM Cortex-M7 MPCore|
-|Frequency|528 MHz|
+|Frequency|600 MHz|
 |Boot ROM|96KB|
 |ON-Chip RAM|512KB|
 |**Memory**||
@@ -278,6 +279,33 @@ USB to Serial Module|VCC|GND|RX|TX
 
 ## RT-Thread
 
+
+### About RT-Thread
+
+The RT-Thread was born in 2006, the license is similar to FreeRTOS and is released in an open source, free way. Unlike FreeRTOS and uC/OS, RT-Thread was released with a middleware platform that included components such as the network, file system, and GUI interface. After a short transition period, the Cortex M MCU was supported in 2009 and received a lot of developer recognition and support. After 2011, due to its mature and stable components, it is widely used in industrial control, electric power, new energy, high-speed rail, medical equipment, water conservancy, consumer electronics and other industries. We've made a comparison table for those three RTOS.
+
+| Item                              | FreeRTOS                                                     | µC/OS                                                        | RT-Thread                                                    |
+| --------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Kernel size                       | 5KB ROM, 2KB RAM                                             | 6KB ROM, 1KB RAM                                             | 3KB ROM,1KB RAM                                              |
+| Kernel mechanism                  | Mailbox  <font color='red'><b>✘</b></font> <br>Event <font color='red'><b>✔</b></font> <br>Coroutine <font color='red'><b>✔</b></font> | Mailbox  <font color='red'><b>✔</b></font> <br>Event <font color='red'><b>✔</b></font> | Mailbox  <font color='red'><b>✔</b></font> <br>Event <font color='red'><b>✔</b></font><br/>Message queue<font color='red'><b>✔</b></font> |
+| Development tools                 | Support a variety of mainstream tools, full toolchain        | Support a variety of mainstream tools, full toolchain        | Support a variety of mainstream tools, full toolchain, provide accessibility tools |
+| Debug tools                       | Shell<br/>SystemView                                         | SystemView                                                   | Shell<br/>Logging system<br/>NetUtils<br/>ADB<br/>SystemView<br/> |
+| Testing system                    | Don't support                                                | Don't support                                                | Unit test framework<br/>Auto test system                     |
+| Support chip and CPU architecture | Support ARM, MIPS, RISC-V, xtensa and other mainstream CPU architecture | Support ARM, MIPS and other mainstream CPU architecture      | Support ARM, MIPS, RISC-V and other mainstream CPU architecture |
+| File system                       | Support FAT                                                  | Need authorization                                           | Provide various file systems layer. Support fatfs, littlefs, jffs2, romfs and the popular file systems. |
+| Low power consumption             | Partial support                                              | Partial support                                              | Support                                                      |
+| GUI                               | None                                                         | µC/GUI                                                       | Provide GUI engine                                           |
+| Component ecology                 | Provide network, debugging, security related components      | There are some, but need to be authorized                    | Provide a software package platform, currently about 100 components, covering a wide range |
+| IoT component                     | TCP/UDP/AWS                                                  | Need authorization                                           | TCP/UDP, Azure, Ayla, Aliyun，onenet, webclient, mqtt， websocket, WebNet... |
+
+
+<div align="center"><b>Table 5.</b><i>Technical and ecological comparison of three embedded operating systems</i></div>
+
+
+
+### Running MicroPython
+
+
 This development board comes pre-installed RT-Thread real-time operating system(RTOS) and built-in micro-python, so when you follow the steps above to connect the hardware and power on the system, you will see the system log.
 The RTOS is a lightweight system which loads very quickly, one or two seconds later, the system starts up and you will see the following interface:
 
@@ -291,7 +319,6 @@ The RTOS is a lightweight system which loads very quickly, one or two seconds la
 </div>
 
 
-### Running MicroPython
 
 Enter `python` in the Finsh/MSH command line to enter MicroPython's interactive command line -- REPL(Read-Evaluate-Print-Loop). You can see the following interface on the terminal:
 
@@ -307,7 +334,7 @@ Enter `python` in the Finsh/MSH command line to enter MicroPython's interactive 
 You can tap ++ctrl+d++ or input `quit()` or `exit()` to exit REPL and return to RT-Thread Finsh/MSH.
 
 
-### Paste Mode
+#### Paste Mode
 
 
 MicroPython is a lean and efficient implementation of the Python 3 programming language that includes a small subset of the Python standard library and is optimised to run on microcontrollers and in constrained environments.
@@ -386,10 +413,24 @@ Now the code is running, the RGB LED will turn yellow, and when you press and ho
 
 
 
+### Firmware upgrade
+
+
+This Arch Mix comes pre-installed RT-Thread real-time operating system(RTOS) and built-in micro-python. In case you need to burn the firmware or upgrade the firmware, you can refer the Guide and download the tools.
+
+
+
+[Arch Mix Firmware Guide](https://github.com/SeeedDocument/Arch_Mix/raw/master/res/micropython_firmware.pdf)  
+[Tools](https://github.com/SeeedDocument/GM6020/raw/master/res/Firmware_and_Tools.zip)
+
+
+
+
 
 ## Resources
 
 - **[ZIP]** [Arch Mix Schematic file](https://github.com/SeeedDocument/Arch_Mix/raw/master/res/Arch%20Mix_v1.0_SCH%20%26%20PCB.zip)
+- **[ZIP]** [Firmware and Tools]()
 - **[PDF]** [PDF Format Wiki](https://github.com/SeeedDocument/Arch_Mix/raw/master/res/Arch_Mix.pdf)
 - **[PDF]** [i.MX RT1050 Datasheet](https://github.com/SeeedDocument/Arch_Mix/raw/master/res/i.MX%20RT1050.pdf)
 - **[PDF]** [Dimension Diagram](https://github.com/SeeedDocument/Arch_Mix/raw/master/res/ARCH%20MIX_V1.0_Dimension.pdf)
