@@ -137,15 +137,15 @@ The sample uses the following Azure Sphere libraries and includes [beta APIs](ht
 
 **To build and run the sample**
 
-1. Set up your Azure Sphere device and development environment as described in the [Azure Sphere documentation](https://docs.microsoft.com/azure-sphere/install/install).
-1. Even if you've performed this set up previously, ensure you have Azure Sphere SDK version 19.02 or above. In an Azure Sphere Developer Command Prompt, run **azsphere show-version** to check. Download and install the [latest SDK](https://aka.ms/AzureSphereSDKDownload) as needed.
-1. Connect your Azure Sphere device to your PC by USB.
-1. Enable [application development](https://docs.microsoft.com/azure-sphere/quickstarts/qs-blink-application#prepare-your-device-for-development-and-debugging), if you have not already done so:
+- Set up your Azure Sphere device and development environment as described in the [Azure Sphere documentation](https://docs.microsoft.com/azure-sphere/install/install).
+- Even if you've performed this set up previously, ensure you have Azure Sphere SDK version 19.02 or above. In an Azure Sphere Developer Command Prompt, run **azsphere show-version** to check. Download and install the [latest SDK](https://aka.ms/AzureSphereSDKDownload) as needed.
+- Connect your Azure Sphere device to your PC by USB.
+- Enable [application development](https://docs.microsoft.com/azure-sphere/quickstarts/qs-blink-application#prepare-your-device-for-development-and-debugging), if you have not already done so:
 
    `azsphere device prep-debug`
 
 
-1. Package and deploy the [board configuration image](https://docs.microsoft.com/azure-sphere/network/connect-private-network) for the Microchip ENC286J60 Ethernet chip:
+- Package and deploy the [board configuration image](https://docs.microsoft.com/azure-sphere/network/connect-private-network) for the Microchip ENC286J60 Ethernet chip:
 
   
    `azsphere image package-board-config --preset lan-enc28j60-isu0-int5 --output enc28j60-isu0-int5.imagepackage`
@@ -153,9 +153,9 @@ The sample uses the following Azure Sphere libraries and includes [beta APIs](ht
    `azsphere device sideload deploy --imagepackage enc28j60-isu0-int5.imagepackage`
    
 
-1. Clone the [Azure Sphere samples](https://github.com/Azure/azure-sphere-samples) repo and find the PrivateEthernet sample.
-1. In Visual Studio, open PrivateEthernet.sln and press F5 to compile and build the solution and load it onto the device for debugging.
-1. Leave the app running while you perform the following steps.
+- Clone the [Azure Sphere samples](https://github.com/Azure/azure-sphere-samples) repo and find the PrivateEthernet sample.
+- In Visual Studio, open PrivateEthernet.sln and press F5 to compile and build the solution and load it onto the device for debugging.
+- Leave the app running while you perform the following steps.
 
 **Troubleshooting**
 
@@ -168,13 +168,13 @@ Then it is likely you have an older version of the Azure Sphere SDK installed; e
 
 **Configure the Ethernet connection on your computer**
 
-1. Open Settings and then click **Network and Internet** > **Change adapter options**.  
-1. Right-click on your Ethernet adapter and select **Properties**.
-1. In the **Ethernet Properties** window, disable all items except for **Internet Protocol Version 4 (TCP/IPv4)**.
-1. Select **Internet Protocol Version 4 (TCP/IPv4)**, and then click the **Properties** button to launch the **Internet Protocol Version 4 (TCP/IPv4) Properties** window.
-1. Check that "Obtain IP address automatically" is selected. (Previous versions of this sample required configuration of a static IP address at this point. That is no longer necessary because the application now provides a DHCP server.)
-1. Click **OK** to close the **IPv4 properties window**, then close the **Ethernet Properties** window.
-1. Attach an Ethernet cable from the ENC286J60-H to the Ethernet connection on your computer.
+- Open Settings and then click **Network and Internet** > **Change adapter options**.  
+- Right-click on your Ethernet adapter and select **Properties**.
+- In the **Ethernet Properties** window, disable all items except for **Internet Protocol Version 4 (TCP/IPv4)**.
+- Select **Internet Protocol Version 4 (TCP/IPv4)**, and then click the **Properties** button to launch the **Internet Protocol Version 4 (TCP/IPv4) Properties** window.
+- Check that "Obtain IP address automatically" is selected. (Previous versions of this sample required configuration of a static IP address at this point. That is no longer necessary because the application now provides a DHCP server.)
+- Click **OK** to close the **IPv4 properties window**, then close the **Ethernet Properties** window.
+- Attach an Ethernet cable from the ENC286J60-H to the Ethernet connection on your computer.
 
 !!!Note 
     If your computer is managed by policies that prevent it from being connected to multiple network interfaces at once, you may need to disable other network interfaces while using this sample.
@@ -200,8 +200,8 @@ You could also find, download and use a DHCP client test tool on your PC to insp
 
 **Test the device's SNTP server**
 
-1. Ensure the device is [connected to Wi-Fi](https://docs.microsoft.com/azure-sphere/install/configure-wifi), so it can obtain time from a public NTP server. The device's own SNTP server won't respond until it knows the current time.
-1. Open a command prompt on your computer and type **w32tm /stripchart /computer:192.168.100.10 /dataonly /samples:1**. This invokes the [Windows Time tool](https://docs.microsoft.com/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings) to query the device's SNTP server and to display the calculated difference between your computer's time and the device's time:
+- Ensure the device is [connected to Wi-Fi](https://docs.microsoft.com/azure-sphere/install/configure-wifi), so it can obtain time from a public NTP server. The device's own SNTP server won't respond until it knows the current time.
+- Open a command prompt on your computer and type **w32tm /stripchart /computer:192.168.100.10 /dataonly /samples:1**. This invokes the [Windows Time tool](https://docs.microsoft.com/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings) to query the device's SNTP server and to display the calculated difference between your computer's time and the device's time:
    ```sh
    Tracking 192.168.100.10 [192.168.100.10:123].
    Collecting 1 samples.
@@ -209,7 +209,7 @@ You could also find, download and use a DHCP client test tool on your PC to insp
    14:18:09, +00.0349344s
    ```
 
-1. If the SNTP server isn't running or doesn't respond, then you may see the following output. Check that app is running and that Wi-Fi is configured.
+- If the SNTP server isn't running or doesn't respond, then you may see the following output. Check that app is running and that Wi-Fi is configured.
    ```sh
    Tracking 192.168.100.10 [192.168.100.10:123].
    Collecting 1 samples.
@@ -223,9 +223,9 @@ Ensure the sample app is still running on your Azure Sphere device. Then, on you
 
 To use the built-in Telnet client for Windows:
 
-1. Open Control Panel and click **Programs and Features** > **Turn Windows features on or off** to launch the **Windows Features** window.
-1. Ensure **Telnet Client** is selected and click **OK**.
-1. Open a command prompt and type **telnet 192.168.100.10 11000**.
+- Open Control Panel and click **Programs and Features** > **Turn Windows features on or off** to launch the **Windows Features** window.
+- Ensure **Telnet Client** is selected and click **OK**.
+- Open a command prompt and type **telnet 192.168.100.10 11000**.
 
 The characters that you type will render in the debug console in Visual Studio–either immediately or when you enter a newline–showing they have been received by the example TCP server on the MT3620.  Furthermore, when you enter a newline, the MT3620 will send a string back to the terminal, which says:
 
@@ -244,15 +244,15 @@ Note that this sample server has a simple 16 character input buffer. If you send
 
 If you no longer require Ethernet, for example because you wish to use your board for a different project, you must manually remove the Ethernet board configuration image:
 
-1. Find the installed image with type 'Board config', and note its component ID:
+- Find the installed image with type 'Board config', and note its component ID:
 
    `azsphere device image list-installed`
 
-1. Delete this image: 
+- Delete this image: 
 
    `azsphere device sideload delete --componentid <component ID>`
 
-1. Press the reset button on the MT3620 dev board.
+- Press the reset button on the MT3620 dev board.
 
 **Note:** This sample uses ISU0 (I2C/SPI/UART port 0) on the MT3620, which is also used by other samples. Other samples can be adapted to use a different ISU port. For now, it’s not possible to adapt this Private Ethernet sample to use another ISU port.
 
