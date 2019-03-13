@@ -29,7 +29,7 @@ Microsoft Azure Sphere is a solution for creating highly-secured, connected, MCU
 - Operating Temperature(℃): 0 ~ +70℃
 
 !!!Note
-  If you need it work under -40 ~ +85℃, please contact iot@seeed.cc for customization. 
+    If you need it work under -40 ~ +85℃, please contact iot@seeed.cc for customization. 
 
 
 ## Hardware Overview
@@ -118,7 +118,7 @@ The sample uses the following Azure Sphere libraries and includes [beta APIs](ht
 |networking    | Gets and sets network interface configuration |
 
 !!!Note
-  Current the MT3620 Ethernet Shield does not support the internet connection due to Microsoft software is not ready. It supports connect to PC only. 
+    Current the MT3620 Ethernet Shield does not support the internet connection due to Microsoft software is not ready. It supports connect to PC only. 
 
 **Hardware Connection**
 
@@ -130,7 +130,7 @@ The sample uses the following Azure Sphere libraries and includes [beta APIs](ht
 
 - Step 1. Connect MT3620 Ethernet Shield to Azure Sphere MT3620 Development board.
 - Step 2. Plug the USB cable to Azure Sphere MT3620 Development board and PC.
-- Step 3. Plug the network cable to PC.
+- Step 3. Connect the network cable between MT3620 Ethernet board and PC.
 
 ![](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/img/stack_with_azuresphere.png)
 
@@ -143,11 +143,16 @@ The sample uses the following Azure Sphere libraries and includes [beta APIs](ht
 1. Enable [application development](https://docs.microsoft.com/azure-sphere/quickstarts/qs-blink-application#prepare-your-device-for-development-and-debugging), if you have not already done so:
 
    `azsphere device prep-debug`
+
+
 1. Package and deploy the [board configuration image](https://docs.microsoft.com/azure-sphere/network/connect-private-network) for the Microchip ENC286J60 Ethernet chip:
 
+  
    `azsphere image package-board-config --preset lan-enc28j60-isu0-int5 --output enc28j60-isu0-int5.imagepackage`
    
    `azsphere device sideload deploy --imagepackage enc28j60-isu0-int5.imagepackage`
+   
+
 1. Clone the [Azure Sphere samples](https://github.com/Azure/azure-sphere-samples) repo and find the PrivateEthernet sample.
 1. In Visual Studio, open PrivateEthernet.sln and press F5 to compile and build the solution and load it onto the device for debugging.
 1. Leave the app running while you perform the following steps.
@@ -158,6 +163,7 @@ If you see numerous errors in the Visual Studio Error List relating to missing h
 
    `error MSB6004: The specified task executable location "C:\Program Files (x86)\Microsoft Azure Sphere SDK\\SysRoot\tools\gcc\arm-poky-linux-musleabi-gcc.exe" is invalid.`
 
+   
 Then it is likely you have an older version of the Azure Sphere SDK installed; ensure you have version 19.02 or newer.
 
 **Configure the Ethernet connection on your computer**
@@ -170,9 +176,11 @@ Then it is likely you have an older version of the Azure Sphere SDK installed; e
 1. Click **OK** to close the **IPv4 properties window**, then close the **Ethernet Properties** window.
 1. Attach an Ethernet cable from the ENC286J60-H to the Ethernet connection on your computer.
 
-**Note:** If your computer is managed by policies that prevent it from being connected to multiple network interfaces at once, you may need to disable other network interfaces while using this sample.
+!!!Note 
+    If your computer is managed by policies that prevent it from being connected to multiple network interfaces at once, you may need to disable other network interfaces while using this sample.
 
-**Note:** The samples uses the IP address range 192.168.100.xxx. If you have another network adapter using the same range, then you will need to either modify the sample or disable the other network adapter temporarily.
+!!!Note 
+    The samples uses the IP address range 192.168.100.xxx. If you have another network adapter using the same range, then you will need to either modify the sample or disable the other network adapter temporarily.
 
 **Test the device's DHCP server**
 
@@ -239,9 +247,11 @@ If you no longer require Ethernet, for example because you wish to use your boar
 1. Find the installed image with type 'Board config', and note its component ID:
 
    `azsphere device image list-installed`
+
 1. Delete this image: 
 
    `azsphere device sideload delete --componentid <component ID>`
+
 1. Press the reset button on the MT3620 dev board.
 
 **Note:** This sample uses ISU0 (I2C/SPI/UART port 0) on the MT3620, which is also used by other samples. Other samples can be adapted to use a different ISU port. For now, it’s not possible to adapt this Private Ethernet sample to use another ISU port.
@@ -249,7 +259,8 @@ If you no longer require Ethernet, for example because you wish to use your boar
 
 ## Resource
 
-- **[Eagle&PDF]** [MT3620 Ethernet Shield v1.0](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/res/MT3620%20Ethernet%20Shield_v1.0_SCH_181220.pdf)
+- **[PDF]** [MT3620 Ethernet Shield v1.0](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/res/MT3620%20Ethernet%20Shield_v1.0_SCH_181220.pdf)
+- **[Eagle]** [MT3620 Ethernet Shield v1.0](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/res/202002332_MT3620%20Ethernet%20Shield_v1.0_SCH%20%26%20PCB.zip)
 - **[Library]** [MT3620 Ethernet Shield Library](https://github.com/Azure/azure-sphere-samples/tree/master/Samples/PrivateEthernet)
 - **[DataSheet]** [ENC28J60 Datasheet](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/res/ENC28J60.pdf)
 - **[FAQ Web]** [Azure Sphere Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=azuresphere)
