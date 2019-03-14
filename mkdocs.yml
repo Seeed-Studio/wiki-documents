@@ -408,6 +408,7 @@ pages:
           - Grove - Button: Grove-Button.md
           - Grove - LED Button: Grove-LED_Button.md
           - Grove - CO2 Sensor: Grove-CO2_Sensor.md
+          - Grove - CO2 & Temperature & Humidity Sensor (SCD30): Grove-CO2_Temperature_Humidity_Sensor-SCD30.md
           - Grove - Chest Strap Heart Rate Sensor: Grove-Chest_Strap_Heart_Rate_Sensor.md
           - Grove - Collision Sensor: Grove-Collision_Sensor.md
           - Grove - Capacitive Moisture Sensor (Corrosion-Resistant): Grove-Capacitive_Moisture_Sensor-Corrosion-Resistant.md
