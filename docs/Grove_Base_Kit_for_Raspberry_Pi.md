@@ -42,7 +42,7 @@ The Grove Base Hat for Raspberry Pi provide Digital/Analog/I2C/PWM/UART port to 
 
 **Features**
 
-- Support Raspberry 2/ 3 B/B+ Zero
+- Support Raspberry 2/3B/3B+/Zero
 - build-in MCU
 - 12-bit ADC
 - Multi-type Grove port
@@ -537,7 +537,7 @@ If everything goes well, you should notice the buzzer is making “Do Re Mi Fa S
 
 	
 
-### lesson 2: Red LED Button
+### Lesson 2: Red LED Button
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/LEDButton.jpg)
 
@@ -718,15 +718,15 @@ from grove.grove_light_sensor_v1_2 import GroveLightSensor
 def main():
     # Grove - Servo connected to PWM port
     servo = GroveServo(12)
-    
+
     # Grove - Light Sensor connected to port A0
     sensor = GroveLightSensor(0)
-    
+
     while True:
-        angle = sensor.light % 180
+        angle = sensor.light * 180 / 1000
         print('light value {}, turn to {} degree.'.format(sensor.light, angle))
-        servo.setAngle(sensor.light % 180)
-        
+        servo.setAngle(angle)
+
         time.sleep(1)
 
 if __name__ == '__main__':
@@ -1065,15 +1065,15 @@ Step 2: Copy following code
 
 import time
 
-from grove.lcd.sh1107g import JHD1802
+from grove.display.jhd1802 import JHD1802
 
 def main():
     # Grove - 16x2 LCD(White on Blue) connected to I2C port
     lcd = JHD1802()
-    
+
     lcd.setCursor(0, 0)
     lcd.write('hello, world!!!')
-    
+
     print('application exiting...')
 
 if __name__ == '__main__':
@@ -1155,25 +1155,25 @@ Step 2: Copy following code
 import time
 
 from grove.grove_temperature_humidity_sensor import DHT
-from grove.lcd.sh1107g import JHD1802
+from grove.display.jhd1802 import JHD1802
 
 def main():
     # Grove - 16x2 LCD(White on Blue) connected to I2C port
     lcd = JHD1802()
-    
+
     # Grove - Temperature&Humidity Sensor connected to port D5
     sensor = DHT('11', 5)
-    
+
     while True:
         humi, temp = sensor.read()
         print('temperature {}C, humidity {}%'.format(temp, humi))
-        
+
         lcd.setCursor(0, 0)
         lcd.write('temperature: {0:2}C'.format(temp))
-        
+
         lcd.setCursor(1, 0)
         lcd.write('humidity: {0:5}%'.format(humi))
-        
+
         time.sleep(1)
 
 if __name__ == '__main__':
@@ -1331,6 +1331,6 @@ pi@raspberrypi:~/grove.py $
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/lesson8.png)
 
-## TTECH SUPPORT
+## TECH SUPPORT
 
 Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/) or drop mail to [techsupport@seeed.cc](techsupport@seeed.cc).
