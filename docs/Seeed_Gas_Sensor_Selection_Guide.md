@@ -1,9 +1,7 @@
-![]()
-
 Gas sensor is a device which can detect the presence of various toxic and combustible gases
 present in the environment. 
 
-## Principle
+## Operating Principle
 
 The interaction between the test gas and the sensing surface can be detected by the measurements of change in resistance, capacitance, work function, mass, optical characteristics etc. 
 
@@ -21,7 +19,7 @@ The interaction between the test gas and the sensing surface can be detected by 
 <div align="left"><b></b><i>Source: Reprinted from I lulanicki et al. (1991). Published by International Union of Pure and Applied Chemistry</i></div>
 
 
-## Applicaitons
+## Field of Applicaitons
 
 There are a numerous use of these gas sensors. Particularly, using these gas sensors human beings can be saved from potential dangers. Hence the gas sensors play important roles in various sectors, which include industry, medical, environmental applications, and domestic applications for monitoring toxic and flammable gases.
 
@@ -69,12 +67,6 @@ For all the Grove Gas sensors in our bazaar, please click [bazaar Grove Gas sens
 | Grove - HCHO Sensor                                             | Toluene, methanal, benzene, alcohol, acetone                                                 | Electrochemical      | Environment                                                                                                                                          | WSP2110    | 1～50ppm                                                                                                                           | NA                                                                                                                                                                                         | 3.3V 5V         | Analog    | [Order](https://www.seeedstudio.com/Grove-HCHO-Sensor-p-1593.html)                                                      |
 | Grove - Multichannel Gas Sensor                                 | Carbon monoxide,Nitrogen dioxide, Ethanol, Hydrogen, Ammonia, Methane, Propane, Iso-butane   | Electrical           | Environment                                                                                                                                          | MiCS-6814  | CO: 1–1000ppm   NO2: 0.05–10ppm   H2: 10–500ppm   C2H5OH: 1-1000ppm  NH3: 1-500ppm  CH4: >1000ppm  C3H8: >1000ppm  C4H10: >1000ppm | NA                                                                                                                                                                                         | 3.3V 5V         | I2C       | [Order](https://www.seeedstudio.com/Grove-Multichannel-Gas-Sensor-p-2502.html)                                          |
 | Grove - Temperature, Humidity, Pressure and Gas Sensor (BME680) | IAQ                                                                                          | Electrical           | Environment  Domestic safety/household application                                                                                                   | BME680     | 0-500                                                                                                                              | NA                                                                                                                                                                                         | 3.3V 5V         | I2C       | [Order](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-BME68-p-3109.html)               |
-
-
-## Resource
-
-- **[PDF]** [Seeed Gas Sensor Selection Guide PDF Version](https://github.com/SeeedDocument/Seeed_Relay_Page/raw/master/Datasheet/Seeed_Gas_Sensor_Selection_Guide.pdf)
-
 
 ## Tech Support
 Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](http://forum.seeedstudio.com/). 
