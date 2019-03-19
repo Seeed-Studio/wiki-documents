@@ -175,6 +175,30 @@ g
 
 - **Step 4.** We will see the Grove-4-Digit Display being turned on.
 
+### Play with Codecraft
+
+#### Hardware
+
+**Step 1.** Connect Grove - 4-Digit Diaplsy to port D2 in a Base Shield
+
+**Step 2.** Plug the Base Shield to your Seeeduino/Arduino.
+
+**Step 3.** Link Seeeduino/Arduino to your PC via an USB cable.
+
+#### Software
+
+**Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
+
+!!!Note If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+
+**Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
+
+![](https://github.com/SeeedDocument/Grove_4_Digit_Display/raw/master/image/4-Digit_Display.png)
+
+Upload the program to your Arduino/Seeeduino.
+
+!!!Success When the code finishes uploaded, you will see number flowing from 0 to 9.
+
 
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
 
@@ -636,30 +660,6 @@ Test 9) Monitor analog pin
 Test 10) Switch all on
 Test 11) Switch all off
 ```
-
-### Play with Codecraft
-
-#### Hardware
-
-**Step 1.** Connect Grove - 4-Digit Diaplsy to port D2 in a Base Shield
-
-**Step 2.** Plug the Base Shield to your Seeeduino/Arduino.
-
-**Step 3.** Link Seeeduino/Arduino to your PC via an USB cable.
-
-#### Software
-
-**Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
-
-!!!Note If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
-
-**Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
-
-![](https://github.com/SeeedDocument/Grove_4_Digit_Display/raw/master/image/4-Digit_Display.png)
-
-Upload the program to your Arduino/Seeeduino.
-
-!!!Success When the code finishes uploaded, you will see number flowing from 0 to 9.
 
 
 ### Play with TI LaunchPad
