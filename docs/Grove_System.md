@@ -22,7 +22,7 @@ You don't need a Base unit to connect up to Grove modules. You can use a cable (
 ## Grove Selection Guides
 
 - [Seeed Relay Selection Guide](http://wiki.seeedstudio.com/Seeed_Relay_Page/)
-- [Seeed Gas Sensor Selection Guide](http://wiki.seeedstudio.com/Seeed_Gas_Sensor_Selection_Guid)
+- [Seeed Gas Sensor Selection Guide](http://wiki.seeedstudio.com/Seeed_Gas_Sensor_Selection_Guide)
 
 ## Grove Projects
 
