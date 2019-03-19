@@ -149,6 +149,30 @@ void loop() {
 
 - Upload the sketch. We can see the servo sweep.
 
+### Play with Codecraft
+
+#### Hardware
+
+**Step 1.** Connect Grove - Servo to port D5 in a Base Shield.
+
+**Step 2.** Plug the Base Shield to your Seeeduino/Arduino.
+
+**Step 3.** Link Seeeduino/Arduino to your PC via an USB cable.
+
+#### Software
+
+**Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
+
+!!!Note If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+
+**Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
+
+![servo](https://github.com/SeeedDocument/Grove-Servo/raw/master/img/Servo.png)
+
+Upload the program to your Arduino/Seeeduino.
+
+!!!Success When the code finishes uploaded, you will see the servo sweep.
+
 
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
 
@@ -294,6 +318,7 @@ You can quit this program by simply press ++ctrl+c++.
 
 - **[Document]** [Understanding RC Servos](http://www.rchelicopterfun.com/rc-servos.html)
 - **[Library]**[Arduino Tutorial - Servo Library](https://www.arduino.cc/en/Reference/Servo)
+- **[Library]** [CodeCraft Code](https://github.com/SeeedDocument/Grove-Servo/raw/master/res/Servo.zip)
 - **[Demo]** [Digital/Analog Clock - Arduino + PaperCraft](http://www.instructables.com/id/DigitalAnalog-Clock-Arduino-PaperCraft/?ALLSTEPS)
 - **[Demo]** [Low Cost Hobby Servo XY Table](http://www.instructables.com/id/Low-Cost-Hobby-Servo-XY-Table/?ALLSTEPS)
 
