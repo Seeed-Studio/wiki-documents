@@ -49,6 +49,8 @@ Platforms Supported
 Usage
 -----
 
+### Play with Arduino
+
 The speaker can emit a variety of sounds like a car horn, doorbell and ignition . The different sounds are based on the frequency of the input signal.
 
 You can supply different frequency signal to this module with Arduino. Arduino generates these signal via PWM or even digital write and delay.Here we are going to show you how to generate these signals using *delay()*, the speaker sound bass 1~7.
@@ -95,6 +97,30 @@ void sound(uint8_t note_index)
 Due to the influence of the capacitance, the module can only output the bass signal, and the treble is unable to emit.
 </div>
 
+### Play with Codecraft
+
+#### Hardware
+
+**Step 1.** Connect Grove - Speaker to port D3 in a Base Shield
+
+**Step 2.** Plug the Base Shield to your Seeeduino/Arduino.
+
+**Step 3.** Link Seeeduino/Arduino to your PC via an USB cable.
+
+#### Software
+
+**Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
+
+!!! Note If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+
+**Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
+
+![](https://github.com/SeeedDocument/Grove-Speaker/raw/master/img/Speaker.png)
+
+Upload the program to your Arduino/Seeeduino.
+
+!!!Success When the code finishes uploaded, you will hear the Speaker making a DO to SI sound.
+
 Resources
 --------
 
@@ -103,6 +129,7 @@ Resources
 -   [Grove\_-\_Speaker\_v1.0\_brd.pdf](https://raw.githubusercontent.com/SeeedDocument/Grove-Speaker/master/res/Grove-Speaker_v1.0_brd.pdf)
 -   [Grove\_-\_Speaker\_v1.0\_sch.pdf](https://raw.githubusercontent.com/SeeedDocument/Grove-Speaker/master/res/Grove-Speaker_v1.0_sch.pdf)
 -   [LM386 Low Voltage Audio Power Amplifier Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Speaker/master/res/LM386_Low_Voltage_Audio_Power_Amplifier_Datasheet.pdf)
+-   [CodeCraft Code](https://github.com/SeeedDocument/Grove-Speaker/raw/master/res/Speaker.zip)
 
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Speaker -->
