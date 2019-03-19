@@ -18,15 +18,16 @@ The interaction between the test gas and the sensing surface can be detected by 
 | Optical devices             | Changes in light intensity, color, or emission spectra: 1. Absorbance 2. Reflectance 3. Luminescence 4. Refractive index 5. Optothermal effect 6. Light scattering (Raman scattering, plasmon resonance)               |
 | Thermometric (calorimetric) | Heat effects of a specific chemical reaction. Changes in temperature, heat flow, heat content: 1. Thermoelectric 2. Pyroelectric 3. Catalytic bead (pellistors) 4. Thermal conductivity                                |
 
+<div align="left"><b></b><i>Source: Reprinted from I lulanicki et al. (1991). Published by International Union of Pure and Applied Chemistry</i></div>
+
+
 ## Applicaitons
 
 There are a numerous use of these gas sensors. Particularly, using these gas sensors human beings can be saved from potential dangers. Hence the gas sensors play important roles in various sectors, which include industry, medical, environmental applications, and domestic applications for monitoring toxic and flammable gases.
 
 
-<div align="left"><b></b><i>Source: Reprinted from I lulanicki et al. (1991). Published by International Union of Pure and Applied Chemistry</i></div>
-
-
 <div align="center"><b>Table 2.</b><i>Some examples of gas sensor applications</i></div>
+
 
 | Field of application                                          | Function                                                                                                                                                                                                                                       | Examples of detected gases                                      |
 |---------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
@@ -43,12 +44,12 @@ There are a numerous use of these gas sensors. Particularly, using these gas sen
 | Defense/military                                              | Detection of chemical, biological, and toxin warfare agents; treaty verification                                                                                                                                                               | Agents, explosives, propellants                                 |
 | Aerospace                                                     | Monitoring of oxygen and toxic and flammable gases in the environ­ment atmosphere                                                                                                                                                              | H2, O2, CO3, humidity                                           |
 | Traffic/tunnels/car parks                                     | City traffic control and management; air quality monitoring in tunnels or underground parking garages                                                                                                                                          |                                                                 |
+
 <div align="left"><b></b><i>Source: Data from Taylor (1996), Stcttcr et al. (2003), Capone ct al. (2003), etc. HCs hydrocarbons, VOCs volatile organic compounds</i></div>
 
 ## Seeed Gas Sensor
 
 For all the Grove Gas sensors in our bazaar, please click [bazaar Grove Gas sensors tag](https://www.seeedstudio.com/tag/index/index/tag/GAS-SENSOR/?product_list_limit=all) to check.
-
 
 <div align="center"><b>Table 3.</b><i>Seeed Gas Sensor Category</i></div>
 
