@@ -637,6 +637,30 @@ Test 10) Switch all on
 Test 11) Switch all off
 ```
 
+### Play with Codecraft
+
+#### Hardware
+
+**Step 1.** Connect Grove - 4-Digit Diaplsy to port D2 in a Base Shield
+
+**Step 2.** Plug the Base Shield to your Seeeduino/Arduino.
+
+**Step 3.** Link Seeeduino/Arduino to your PC via an USB cable.
+
+#### Software
+
+**Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
+
+!!!Note If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+
+**Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
+
+![](https://github.com/SeeedDocument/Grove_4_Digit_Display/raw/master/image/4-Digit_Display.png)
+
+Upload the program to your Arduino/Seeeduino.
+
+!!!Success When the code finishes uploaded, you will see number flowing from 0 to 9.
+
 
 ### Play with TI LaunchPad
 
@@ -693,6 +717,7 @@ void loop()
 - **[Library]** [4-Digit Display library](https://raw.githubusercontent.com/SeeedDocument/Grove-4-Digit_Display/master/res/DigitalTube.zip)
 - **[Library]** [TimerOne library](https://code.google.com/p/arduino-timerone/downloads/detail?name=TimerOne-v9.zip&can=2&q=)
 - **[Library]** [Four-Digit Display Suli Library](https://github.com/Seeed-Studio/Four_Digit_Display_Suli)
+- **[Library]** [CodeCraft Code](https://github.com/SeeedDocument/Grove_4_Digit_Display/raw/master/resource/4-Digit%20Display.zip)
 - **[Datasheet]** [TM1637 datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-4-Digit_Display/master/res/TM1637_datasheet.pdf)
 - **[More Reading]** [The Wooden Laser Gun](http://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)
 
