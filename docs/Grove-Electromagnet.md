@@ -111,6 +111,30 @@ void loop() {
 
 ![](https://github.com/SeeedDocument/Grove-Electromagnet/raw/master/img/Grove_Electromagnet-3.png)
 
+### Play with Codecraft
+
+#### Hardware
+
+**Step 1.** Connect Grove - Electromagnet to port D2 of a Base Shield.
+
+**Step 2.** Plug the Base Shield to your Seeeduino/Arduino.
+
+**Step 3.** Link Seeeduino/Arduino to your PC via an USB cable.
+
+#### Software
+
+**Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
+
+!!!Note If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+
+**Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
+
+![cc](https://raw.githubusercontent.com/SeeedDocument/Grove-Electromagnet/master/img/cc_Electromagnet.png)
+
+Upload the program to your Arduino/Seeeduino.
+
+!!!Success When the code finishes uploaded, you can try to bring the ironwork close to the electromagnet. The LED on the Arduino 13 pin will be lighted up when the electromagnet is working.
+
 ### Play With Raspberry Pi
 
 **Hardware**
@@ -202,6 +226,7 @@ Resources
 
 - [**Eagle**][Grove Electromagnet v1.0 SCH PCB.zip](https://raw.githubusercontent.com/SeeedDocument/Grove-Electromagnet/master/res/Grove_Electromagnet_v1.0_SCH_PCB.zip "File:Grove Electromagnet v1.0 SCH PCB.zip")
 - [**Datasheet**][Datasheet ZYE1-P20-15 PDF](https://github.com/SeeedDocument/Bazaar_file/raw/master/101020073/ZYE1-P%20electro%20holding%20magnets.pdf)
+- [**Codecraft**][CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove-Electromagnet/master/res/Grove_Electromagnet_CDC_File.zip)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Electromagnet -->
 
