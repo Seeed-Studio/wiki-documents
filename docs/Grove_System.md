@@ -19,6 +19,11 @@ You don't need a Base unit to connect up to Grove modules. You can use a cable (
 
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/GroveSystem/master/images/grove_cover.png)
 
+## Grove Selection Guides
+
+- [Seeed Relay Selection Guide](http://wiki.seeedstudio.com/Seeed_Relay_Page/)
+- [Seeed Gas Sensor Selection Guide](http://wiki.seeedstudio.com/Seeed_Gas_Sensor_Selection_Guid)
+
 ## Grove Projects
 
 Here are some project made with Grove for your reference, more projects please refer to [Recipe](https://community.seeedstudio.com/discover.html?t=Grove) or [Instructables](http://www.instructables.com/howto/Grove/).
