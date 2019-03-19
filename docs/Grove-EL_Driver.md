@@ -47,6 +47,8 @@ Features
 Usage
 -----
 
+### Play with Arduino
+
 Here we show how to use Arduino to control the state of the LED.
 
 1. Connect the Grove - EL Driver to Base Shield's **digital port 2** with 4pin Grove Cable. Of course you can change to other valid digital ports if it's necessary and the definitions of the port should be changed too. Connect a EL Wire to EL Driver **J1** port with the given cable in product package.
@@ -80,11 +82,40 @@ void loop() {
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-EL_Driver/master/img/Grove-EL_Driver_usage.jpg)
 
+
+### Play with Codecraft
+
+#### Hardware
+
+**Step 1.** Connect Grove - EL Driver to port D2 in a Base Shield
+
+**Step 2.** Plug the Base Shield to your Seeeduino/Arduino.
+
+**Step 3.** Link Seeeduino/Arduino to your PC via an USB cable.
+
+#### Software
+
+**Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
+
+!!! Note If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+
+**Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
+
+![](https://github.com/SeeedDocument/Grove-EL_Driver/raw/master/img/EL_Driver.png)
+
+Upload the program to your Arduino/Seeeduino.
+
+!!!Success When the code finishes uploaded, you will see the EL blinking.
+
+
+
+
 Resources
 ---------
 
 -   [sch_pcb_eagle](https://raw.githubusercontent.com/SeeedDocument/Grove-EL_Driver/master/res/Grove-EL_Driver_v1.0.zip)
 -   [sch_pdf](https://raw.githubusercontent.com/SeeedDocument/Grove-EL_Driver/master/res/Grove-EL_Driver_v1.0.pdf)
+-   [CodeCraft Library](https://github.com/SeeedDocument/Grove-EL_Driver/raw/master/res/EL%20Driver.zip)
 
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_EL_Driver -->
