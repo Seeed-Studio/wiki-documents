@@ -189,7 +189,8 @@ g
 
 **Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
 
-!!!Note If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+!!!Note
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
@@ -197,7 +198,8 @@ g
 
 Upload the program to your Arduino/Seeeduino.
 
-!!!Success When the code finishes uploaded, you will see number flowing from 0 to 9.
+!!!Success
+    When the code finishes uploaded, you will see number flowing from 0 to 9.
 
 
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
