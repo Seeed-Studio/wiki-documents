@@ -91,6 +91,32 @@ void loop() {
 
 - **Step 2**. We will see the LED on and off.
 
+### Play with Codecraft
+
+#### Hardware
+
+**Step 1.** Connect Grove - Red LED to port D2 of a Base Shield.
+
+**Step 2.** Plug the Base Shield to your Seeeduino/Arduino.
+
+**Step 3.** Link Seeeduino/Arduino to your PC via an USB cable.
+
+#### Software
+
+**Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
+
+!!!Note
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+
+**Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
+
+![cc](https://raw.githubusercontent.com/SeeedDocument/Grove-Red_LED/master/img/cc_LED.png)
+
+Upload the program to your Arduino/Seeeduino.
+
+!!!Success
+    When the code finishes uploaded, you will see the LED blinking.
+
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
 
 #### Hardware
@@ -271,6 +297,7 @@ LED OFF!
 ##  Resources
 
 * **[PDF]** [Grove-Red LED Schematic](https://github.com/SeeedDocument/Grove-Red_LED/raw/master/res/Grove-LED_v1.3.pdf)
+* **[Codecraft]** [CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove-Red_LED/master/res/Grove_Red_LED_CDC_File.zip)
 
 ## Projects
 

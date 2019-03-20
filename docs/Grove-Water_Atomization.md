@@ -171,12 +171,38 @@ Do not touch transducer interface pins directly because peak output voltage of D
 The inductor <span style="font-weight:bold">L2</span> (marked in red rectangle above) will be heated. So do not touch it directly.
 </div>
 
+### Play with Codecraft
+
+#### Hardware
+
+**Step 1.** Connect Grove - Water Atomization to port D2, and connect Grove - Button to port D5 of a Base Shield.
+
+**Step 2.** Plug the Base Shield to your Seeeduino/Arduino.
+
+**Step 3.** Link Seeeduino/Arduino to your PC via an USB cable.
+
+#### Software
+
+**Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
+
+!!!Note
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+
+**Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
+
+![cc](https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Atomization/master/img/cc_Water_Atomization.png)
+
+Upload the program to your Arduino/Seeeduino.
+
+!!!Success
+    When the code finishes uploaded, the water atomization starts atomize when you push the button.
 
 Resources
 ---------
 
 - [Schematic files in Eagle](https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Atomization/master/res/Schematic_file_in_Eagle.zip)
 - [Schematic files in PDF](https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Atomization/master/res/Schematic_file_in_PDF.zip)
+- [Codecraft CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Atomization/master/res/Grove_Water_Atomization_CDC_File.zip)
 
 
 ## Project

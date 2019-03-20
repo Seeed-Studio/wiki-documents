@@ -101,7 +101,31 @@ void loop()
 
 - Step 2. We will hear the buzzer on and off.
 
+### Play with Codecraft
 
+#### Hardware
+
+**Step 1.** Connect Grove - Buzzer to port D6 of a Base Shield.
+
+**Step 2.** Plug the Base Shield to your Seeeduino/Arduino.
+
+**Step 3.** Link Seeeduino/Arduino to your PC via an USB cable.
+
+#### Software
+
+**Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
+
+!!!Note
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+
+**Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
+
+![cc](https://raw.githubusercontent.com/SeeedDocument/Grove_Buzzer/master/img/cc_Buzzer.png)
+
+Upload the program to your Arduino/Seeeduino.
+
+!!!Success
+    When the code finishes uploaded, you will hear the buzzer sound intermittently.
 
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
 
@@ -351,6 +375,7 @@ void playNote(char note, int duration) {
 - **[Eagle&PDF]** [Grove - Buzzer Schematic Files v1.0](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/resources/Grove_-_Buzzer_v1.0_Source_File.zip)
 - **[DataSheet]** [S9013datasheet](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/resources/S9013.pdf)
 - **[More Reading]** [Wooden Laser Gun](http://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)
+- **[Codecraft]** [CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove_Buzzer/master/res/Grove_Buzzer_CDC_File.zip)
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove_Button/master/img/gun.jpg)
 
