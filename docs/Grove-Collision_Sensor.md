@@ -114,6 +114,31 @@ if(!digitalRead(COLLISION_SENSOR))
 return false;
 ```
 
+### Play with Codecraft
+
+#### Hardware
+
+**Step 1.** Connect a Grove - Collision Sensor to port D2 of a Base Shield.
+
+**Step 2.** Plug the Base Shield to your Seeeduino/Arduino.
+
+**Step 3.** Link Seeeduino/Arduino to your PC via an USB cable.
+
+#### Software
+
+**Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
+
+!!!Note
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+
+**Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
+
+![cc](https://raw.githubusercontent.com/SeeedDocument/Grove-Collision_Sensor/master/img/cc_Collision_Sensor.png)
+
+Upload the program to your Arduino/Seeeduino.
+
+!!!Success
+    When the code finishes uploaded, the LED on the pin 13 of Arduino will goes on when Collision Sensor detects collision.
 
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
 
@@ -319,6 +344,7 @@ sudo python grove_collision_sensor.py
 
 -  **[Zip]** [Grove - Collision Sensor Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-Collision_Sensor/master/res/Grove-Collision_Sensor_eagle_file.zip)
 -  **[PDF]** [MVS0608.02 datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Collision_Sensor/master/res/DataSheet-MVS0608_02-v2_1.pdf)
+-  **[Codecraft]** [CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove-Collision_Sensor/master/res/Grove_Collision_Sensor_CDC_File.zip)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Collision_Sensor -->
 
