@@ -208,13 +208,36 @@ void loop() {
 !!!success
     If every thing goes well, everytime you move, shake or tilt the Grove - Vibration Sensor the Grove - buzzer will ring.
 
+### Play with Codecraft
 
+#### Hardware
+
+**Step 1.** Connect a Grove - Vibration Sensor to port D2, and connect a Grove - Buzzer to port D3 of a Base Shield.
+
+**Step 2.** Plug the Base Shield to your Seeeduino/Arduino.
+
+**Step 3.** Link Seeeduino/Arduino to your PC via an USB cable.
+
+#### Software
+
+**Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
+
+!!!Note
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+
+**Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
+
+![cc](https://raw.githubusercontent.com/SeeedDocument/Grove-Vibration_Sensor-SW-420/master/img/cc_Vibration_Sensor.png)
+
+Upload the program to your Arduino/Seeeduino.
+
+!!!Success
+    When the code finishes uploaded, the buzzer will beep when the vibration sensor detects vibration.
 
 ## Resources
 
 - **[Zip]** [Grove - Vibration Sensor (SW-420) eagle files](https://github.com/SeeedDocument/Grove-Vibration_Sensor-SW-420/raw/master/res/Grove%20-%20Vibration%20Sensor%20(SW-420)%20v1.1.zip)
-
-
+- **[Codecraft]** [CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove-Vibration_Sensor-SW-420/master/res/Grove_Vibration_Sensor_CDC_File.zip)
 
 ## Project
 
