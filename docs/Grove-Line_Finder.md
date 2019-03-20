@@ -120,6 +120,32 @@ black
 black
 ```
 
+### Play with Codecraft
+
+#### Hardware
+
+**Step 1.** Connect a Grove - Line Finder to port D3 of a Base Shield.
+
+**Step 2.** Plug the Base Shield to your Seeeduino/Arduino.
+
+**Step 3.** Link Seeeduino/Arduino to your PC via an USB cable.
+
+#### Software
+
+**Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
+
+!!!Note
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+
+**Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
+
+![cc](https://raw.githubusercontent.com/SeeedDocument/Grove_Line_Finder/master/img/cc_Line_Finder.png)
+
+Upload the program to your Arduino/Seeeduino.
+
+!!!Success
+    When the code finishes uploaded, you will see line found or not in Serial Monitor.
+
 ### Play With Raspberry Pi
 
 #### Hardware
@@ -196,6 +222,7 @@ white line detected
 - **[Eagle&PDF]** [Grove-Line Finder Schematic V1.0](https://github.com/SeeedDocument/Grove_Line_Finder/raw/master/res/202000970_Grove%20-%20Line%20Finder%EF%BC%88CN%EF%BC%89%20v1.0.zip)
 - **[Eagle&PDF]** [Grove-Line Finder Schematic V1.1](https://github.com/SeeedDocument/Grove_Line_Finder/raw/master/res/202000932_Grove%20-%20Line%20Finder%20v1.1.zip)
 - **[Datasheet]** [LMV358.PDF](https://github.com/SeeedDocument/Grove_Line_Finder/raw/master/res/Lmv358.pdf)
+- **[Codecraft]** [CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove_Line_Finder/master/res/Grove_Line_Finder_CDC_File.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

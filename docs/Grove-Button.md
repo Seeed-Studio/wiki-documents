@@ -117,7 +117,31 @@ void loop(){
 
 - Step 2. We will see the on board Pin13 LED on and off.
 
+### Play with Codecraft
 
+#### Hardware
+
+**Step 1.** Connect a Grove - Button to port D2 of a Base Shield.
+
+**Step 2.** Plug the Base Shield to your Seeeduino/Arduino.
+
+**Step 3.** Link Seeeduino/Arduino to your PC via an USB cable.
+
+#### Software
+
+**Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
+
+!!!Note
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+
+**Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
+
+![cc](https://raw.githubusercontent.com/SeeedDocument/Grove_Button/master/img/cc_Button.png)
+
+Upload the program to your Arduino/Seeeduino.
+
+!!!Success
+    When the code finishes uploaded, the buzzer will beep when the vibration sensor detects vibration.
 
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
 
@@ -346,6 +370,8 @@ pi@raspberrypi:~/GrovePi/Software/Python $ python grove_button.py
 - **[Eagle&PDF]** [Grove-Button Eagle Files](https://github.com/SeeedDocument/Grove_Button/raw/master/resources/Grove_-_Button_v1.0_Source_File.zip)
 
 - **[More Reading]** [Wooden Laser Gun](http://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)
+
+- **[Codecraft]** [CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove_Button/master/res/Grove_Button_CDC_File.zip)
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove_Button/master/img/gun.jpg)
 

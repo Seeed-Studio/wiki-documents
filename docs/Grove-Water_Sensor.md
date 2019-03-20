@@ -198,6 +198,32 @@ void loop()
 1
 ```
 
+### Play with Codecraft
+
+#### Hardware
+
+**Step 1.** Connect a Grove - Water Sensor to port D2 of a Base Shield.
+
+**Step 2.** Plug the Base Shield to your Seeeduino/Arduino.
+
+**Step 3.** Link Seeeduino/Arduino to your PC via an USB cable.
+
+#### Software
+
+**Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
+
+!!!Note
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+
+**Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
+
+![cc](https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Sensor/master/img/cc_Water_Sensor.png)
+
+Upload the program to your Arduino/Seeeduino.
+
+!!!Success
+    When the code finishes uploaded, you will see there is water or not in Serial Monitor.
+
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
 
 #### Hardware
@@ -400,6 +426,7 @@ sudo python grove_water_sensor.py
 
 - **[Eagle]** [Grove Water Sensor Schematic](https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Sensor/master/res/Water_sensor.zip)
 - **[Library]** [Demo code for Grove Water Sensor](https://github.com/Seeed-Studio/Grove_Water_Sensor)
+- **[Codecraft]** [CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Sensor/master/res/Grove_Water_Sensor_CDC_File.zip)
 
 <!-- This Markdown file was created from http://wiki.seeedstudio.com/Grove-Water_Sensor/ -->
 

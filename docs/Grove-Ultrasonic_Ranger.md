@@ -132,7 +132,31 @@ The distance to obstacles in front is:
 6 cm
 ```
 
+### Play with Codecraft
 
+#### Hardware
+
+**Step 1.** Connect a Grove - Ultrasonic Ranger to port D7 of a Base Shield.
+
+**Step 2.** Plug the Base Shield to your Seeeduino/Arduino.
+
+**Step 3.** Link Seeeduino/Arduino to your PC via an USB cable.
+
+#### Software
+
+**Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
+
+!!!Note
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+
+**Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
+
+![cc](https://raw.githubusercontent.com/SeeedDocument/Grove_Ultrasonic_Ranger/master/img/cc_Ultrasonic_Ranger.png)
+
+Upload the program to your Arduino/Seeeduino.
+
+!!!Success
+    When the code finishes uploaded, you will see distance displayed in Serial Monitor.
 
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
 
@@ -436,6 +460,7 @@ A2:Grove_Ultrasonic_Ranger’s trig and echo signal share 1 SIG pin through MCU.
 - **[PDF]** [Download Wiki PDF](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/res/Grove-Ultrasonic_Ranger_WiKi.pdf)
 - **[PDF]** [Grove_Ultrasonic Ranger Schematic](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/res/Grove_Ultrasonic%20Ranger%20Schematic.pdf)
 - **[Library]** [Grove_Ultrasonic Ranger library](https://github.com/Seeed-Studio/Grove_Ultrasonic_Ranger/archive/master.zip)
+- **[Codecraft]** [CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove_Ultrasonic_Ranger/master/res/Grove_Ultrasonic_Ranger_CDC_File.zip)
 - **[Project]** [The Color Helix](https://community.seeedstudio.com/project_detail.html?id=138)
 - **[Project]** [Indoor Lightning Cloud](https://community.seeedstudio.com/project_detail.html?id=182)
 - **[Project]** [Automatic Water Level Controller](https://community.seeedstudio.com/project_detail.html?id=241)
