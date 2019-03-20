@@ -19,6 +19,8 @@ Grove-Gas Sensor (O2) is a kind of sensor to test the oxygen concentration in ai
 
 [![](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/blob/master/images/get_one_now.png?raw=true)](http://www.seeedstudio.com/grove-gas-sensoro2-p-1541.html)
 
+!!!Tip
+    We've released the [Seeed Gas Sensor Selection Guide](http://wiki.seeedstudio.com/Seeed_Gas_Sensor_Selection_Guide/), it will help you choose the gas sensor that best suits your needs.
 
 ##Feature
 
