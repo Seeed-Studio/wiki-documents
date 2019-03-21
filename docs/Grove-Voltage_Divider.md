@@ -87,10 +87,37 @@ void loop()
 }
 ```
 
+### Play with Codecraft
+
+#### Hardware
+
+**Step 1.** Connect a Grove - Voltage Divider to port A0 of a Base Shield.
+
+**Step 2.** Plug the Base Shield to your Seeeduino/Arduino.
+
+**Step 3.** Link Seeeduino/Arduino to your PC via an USB cable.
+
+#### Software
+
+**Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
+
+!!!Note
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+
+**Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
+
+![cc](https://raw.githubusercontent.com/SeeedDocument/Grove-Voltage_Divider/master/img/cc_Voltage_Divider.png)
+
+Upload the program to your Arduino/Seeeduino.
+
+!!!Success
+    When the code finishes uploaded, you will see the voltage in the Serial Monitor.
+
 ## Resource
 ---
 - [Grove - Voltage Divider Eagle File](https://github.com/SeeedDocument/Grove-Voltage_Divider/raw/master/res/Grove-Voltage_Divider_Eagle_File.zip)
 - [LMV358ID Datasheet](https://github.com/SeeedDocument/Grove-Voltage_Divider/raw/master/res/LMV358ID_Datasheet.pdf)
+- [Codecraft CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove-Voltage_Divider/master/res/Grove_Voltage_Divider_CDC_File.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

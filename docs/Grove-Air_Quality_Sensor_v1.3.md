@@ -189,7 +189,31 @@ int AirQualitySensor::slope(void) {
 ```
 
 
+### Play with Codecraft
 
+#### Hardware
+
+**Step 1.** Connect a Grove - Air Quality Sensor to port A0 of a Base Shield.
+
+**Step 2.** Plug the Base Shield to your Seeeduino/Arduino.
+
+**Step 3.** Link Seeeduino/Arduino to your PC via an USB cable.
+
+#### Software
+
+**Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
+
+!!!Note
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+
+**Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
+
+![cc](https://raw.githubusercontent.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/master/img/cc_Air_Quality_Sensor.png)
+
+Upload the program to your Arduino/Seeeduino.
+
+!!!Success
+    When the code finishes uploaded, you will see air quality in the Serial Monitor.
 
 
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
@@ -385,6 +409,7 @@ sudo python grove_air_quality_sensor.py
 - **[PDF]** [Grove_-_Air_quality_sensor_v1.3_sch](https://github.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/raw/master/res/Grove_-_Air_quality_sensor_v1.3_sch.pdf)
 - **[PDF]** [Air_quality_sensor_MP503_Chinese](https://github.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/raw/master/res/Air_quality_sensor_MP503%20Chinese.pdf)
 - **[PDF]** [Air_quality sensor_MP503_English](https://github.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/raw/master/res/Mp503%20English.pdf)
+- **[Codecraft]** [CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove_Air_Quality_Sensor_v1.3/master/res/Grove_Air_Quality_Sensor_CDC_File.zip)
 
 ## Projects
 
