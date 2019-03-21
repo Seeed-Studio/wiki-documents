@@ -95,7 +95,31 @@ void loop() {
 ```
 **Step 2.** Monitor the led on and off.
 
+### Play with Codecraft
 
+#### Hardware
+
+**Step 1.** Connect a Grove - Touch Sensor to port D2, and connect a Grove - Red LED to port D3 of a Base Shield.
+
+**Step 2.** Plug the Base Shield to your Seeeduino/Arduino.
+
+**Step 3.** Link Seeeduino/Arduino to your PC via an USB cable.
+
+#### Software
+
+**Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
+
+!!!Note
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+
+**Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
+
+![cc](https://raw.githubusercontent.com/SeeedDocument/Grove_Touch_Sensor/master/image/cc_Touch_Sensor.png)
+
+Upload the program to your Arduino/Seeeduino.
+
+!!!Success
+    When the code finishes uploaded, the LED will goes on when you touch the Touch Sensor.
 
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
 
@@ -350,6 +374,7 @@ Here is result:
 
 -  **[Eagle]** [Grove-Touch_Sensor Schematic](https://raw.githubusercontent.com/SeeedDocument/Grove-Touch_Sensor/master/res/Touch_sensor_Eagle_File.zip)
 -  **[PDF]** [TTP223](https://raw.githubusercontent.com/SeeedDocument/Grove-Touch_Sensor/master/res/TTP223.pdf)
+-  **[Codecraft]** [CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove_Touch_Sensor/master/resource/Grove_Touch_Sensor_CDC_File.zip)
 
 
 ## Projects
