@@ -154,7 +154,7 @@ Done uploading, if you press the button#1 the relay should be on; and if you pre
 
 #### Hardware
 
-**Step 1.** Connect Grove - Relay to port D4, connect Grove - Button to port D2 of a Base Shield.
+**Step 1.** Connect a Grove - Relay to port D4, connect two Grove - Button to port D2 and port D3 of a Base Shield.
 
 **Step 2.** Plug the Base Shield to your Seeeduino/Arduino.
 
@@ -174,7 +174,7 @@ Done uploading, if you press the button#1 the relay should be on; and if you pre
 Upload the program to your Arduino/Seeeduino.
 
 !!!Success
-    When the code finishes uploaded, relay turns on when you push the button. 
+    When the code finishes uploaded. Relay will turns on when you push the button connected to port D2, and it will turns off when you push the button connected to port D3. 
 
 
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
