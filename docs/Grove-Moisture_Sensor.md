@@ -123,6 +123,32 @@ Moisture = 215
 Moisture = 221
 ```
 
+### Play with Codecraft
+
+#### Hardware
+
+**Step 1.** Connect a Grove - Moisture Sensor to port A0 of a Base Shield.
+
+**Step 2.** Plug the Base Shield to your Seeeduino/Arduino.
+
+**Step 3.** Link Seeeduino/Arduino to your PC via an USB cable.
+
+#### Software
+
+**Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
+
+!!!Note
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+
+**Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
+
+![cc](https://raw.githubusercontent.com/SeeedDocument/Grove_Moisture_Sensor/master/img/cc_Moisture_Sensor.png)
+
+Upload the program to your Arduino/Seeeduino.
+
+!!!Success
+    When the code finishes uploaded, you will see the moisture value displayed in the Serial Monitor.
+
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
 
 #### Hardware
@@ -444,6 +470,7 @@ A1: The output is voltage values. When using analogRead(), 5V will be divided by
 ## Resources
 
 - [**Eagle&PDF**][Grove - Moisture Sensor v1.4 Schematic](https://github.com/SeeedDocument/Grove_Moisture_Sensor/raw/master/resources/Grove%20-%20Moisture%20Sensor%20v1.4.zip)
+- [**Codecraft**][CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove_Moisture_Sensor/master/res/Grove_Moisture_Sensor_CDC_File.zip)
 
 
 ## Projects

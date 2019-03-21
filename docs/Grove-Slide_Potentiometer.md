@@ -215,6 +215,31 @@ Slide Potentiometer can be an effective Human Interface Device (HID) and can be 
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Slide_Potentiometer/master/img/Car.JPG)
 
+### Play with Codecraft
+
+#### Hardware
+
+**Step 1.** Connect a Grove - Slide Potentiometer to port A0 of a Base Shield.
+
+**Step 2.** Plug the Base Shield to your Seeeduino/Arduino.
+
+**Step 3.** Link Seeeduino/Arduino to your PC via an USB cable.
+
+#### Software
+
+**Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
+
+!!!Note
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+
+**Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
+
+![cc](https://raw.githubusercontent.com/SeeedDocument/Grove-Slide_Potentiometer/master/img/cc_Slide_Potentiometer.png)
+
+Upload the program to your Arduino/Seeeduino.
+
+!!!Success
+    When the code finishes uploaded, slide the Slide Potentiometer, you will see sensor value displayed in the Serial Monitor. And if you slide excceed half of Potentiometer, the LED on it will goes on. 
 
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
 
@@ -403,6 +428,7 @@ Resources
 -   [Sliding Potentiometer Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-Slide_Potentiometer/master/res/Sliding_Potentiometer.rar)
 -   [Sliding Potentiometer in PDF](https://raw.githubusercontent.com/SeeedDocument/Grove-Slide_Potentiometer/master/res/Sliding_protentiometer_sch.pdf)
 -   [Sliding Potentiometer datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Slide_Potentiometer/master/res/Sliding_potentiometer_datasheet.pdf)
+-   [Codecraft CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove-Slide_Potentiometer/master/res/Grove_Slide_Potentiometer_CDC_File.zip)
 
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Slide_Potentiometer -->

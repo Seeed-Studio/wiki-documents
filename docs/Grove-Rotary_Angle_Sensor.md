@@ -200,6 +200,31 @@ void loop()
 
 - **Step 2.** Adjust Grove-Rotary Angle Sensor and we will see the Grove-LED changes the brightness.
 
+### Play with Codecraft
+
+#### Hardware
+
+**Step 1.** Connect a Grove - Rotary Angle Sensor to port A0, and connect a Grove - Red LED to port D3 of a Base Shield.
+
+**Step 2.** Plug the Base Shield to your Seeeduino/Arduino.
+
+**Step 3.** Link Seeeduino/Arduino to your PC via an USB cable.
+
+#### Software
+
+**Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
+
+!!!Note
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+
+**Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
+
+![cc](https://raw.githubusercontent.com/SeeedDocument/Grove-Rotary_Angle_Sensor/master/img/cc_Rotary_Angle_Sensor.png)
+
+Upload the program to your Arduino/Seeeduino.
+
+!!!Success
+    When the code finishes uploaded, the brightness of the LED will vary depending on the angle of the sensor, and the angle value displayed in the Serial Monitor.
 
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
 
@@ -502,6 +527,7 @@ void loop() {
 -  **[Eagle&PDF]** [Grove-Rotary Angle Sensor v1.2 Schematic File](https://github.com/SeeedDocument/Grove-Rotary_Angle_Sensor/raw/master/res/Grove%20-%20Rotary%20Angle%20Sensor%20v1.2.zip)
 -  **[Eagle&PDF]** [Grove - Rotary Angle Sensor(P) v1.1 Schematic File](https://github.com/SeeedDocument/Grove-Rotary_Angle_Sensor/raw/master/res/Grove%20%20-%20Rotary%20Angle%20Sensor(P)%20v1.1.zip)
 -  **[Library]** [Github repository for Rotary Angle Sensor](https://github.com/Seeed-Studio/Grove_Rotary_Angle_Sensor)
+-  **[Codecraft]** [CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove-Rotary_Angle_Sensor/master/res/Grove_Rotary_Angle_Sensor_CDC_File.zip)
 
 ## Projects
 
