@@ -92,6 +92,32 @@ Please download the [CircularLED Library](https://github.com/SeeedDocument/Grove
 
  Please also refer to the [Grove-Encoder](/Grove-Encoder) to learn more about this module.
 
+### Play with Codecraft
+
+#### Hardware
+
+**Step 1.** Connect a Grove - Circular LED to port D5 of a Base Shield.
+
+**Step 2.** Plug the Base Shield to your Seeeduino/Arduino.
+
+**Step 3.** Link Seeeduino/Arduino to your PC via an USB cable.
+
+#### Software
+
+**Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
+
+!!!Note
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+
+**Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
+
+![cc](https://raw.githubusercontent.com/SeeedDocument/Grove-Circular_LED/master/img/cc_Circular_LED.png)
+
+Upload the program to your Arduino/Seeeduino.
+
+!!!Success
+    When the code finishes uploaded, you will see the LED run in the circular.
+
 ##   Source
 ---
 - [CircularLED Library](https://github.com/SeeedDocument/Grove-Circular_LED/raw/master/res/CircularLED.zip)
@@ -99,6 +125,8 @@ Please download the [CircularLED Library](https://github.com/SeeedDocument/Grove
 - [Grove Circular LED schematics PDF File](https://github.com/SeeedDocument/Grove-Circular_LED/raw/master/res/Circular_LED_v0.9b.pdf)
 
 - [Grove-circular LED eagle files](https://github.com/SeeedDocument/Grove-Circular_LED/raw/master/res/Grove-circular_LED_eagle_files.zip)
+
+- [Codecraft CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove-Circular_LED/master/res/Grove_Circular_LED_CDC_File.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 

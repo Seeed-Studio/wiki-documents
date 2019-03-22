@@ -74,6 +74,32 @@ For building a circuit that controls a servomotor using a potentiometer, follow 
 
 3.  Now you should be able to control your servomotor with a potentiometer
 
+### Play with Codecraft
+
+#### Hardware
+
+**Step 1.** Connect a Grove - Mini Fan to port D2, and connect a Grove - Light Sensor to port A0 of a Base Shield.
+
+**Step 2.** Plug the Base Shield to your Seeeduino/Arduino.
+
+**Step 3.** Link Seeeduino/Arduino to your PC via an USB cable.
+
+#### Software
+
+**Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
+
+!!!Note
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+
+**Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
+
+![cc](https://raw.githubusercontent.com/SeeedDocument/Grove-Mini_Fan/master/img/cc_Mini_Fan.png)
+
+Upload the program to your Arduino/Seeeduino.
+
+!!!Success
+    When the code finishes uploaded, cover the light of the Light Sensor with your hand and the fan will turn on.
+
 ##  Availability
 ---
 This [Grove](/Grove "Grove") module is available as part of the following [Grove Kit Series](/Grove_System/#grove-starter-kit "GROVE System"):
@@ -87,6 +113,8 @@ Alternatively, it can be bought stand-alone at the [Seeed Studio Bazaar](http://
 *   [Grove - Mini Fan v1.0 (Eagle Files)](https://github.com/SeeedDocument/Grove-Mini_Fan/raw/master/res/Grove-Mini_Fan_v1.0.zip)
 
 *   [Grove - Mini Fan v1.0 (pdf)](https://github.com/SeeedDocument/Grove-Mini_Fan/raw/master/res/Grove-Mini_Fan_v1.0.pdf)
+
+*	[Codecraft CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove-Mini_Fan/master/res/Grove_Mini_Fan_CDC_File.zip)
 
 ## Projects
 
