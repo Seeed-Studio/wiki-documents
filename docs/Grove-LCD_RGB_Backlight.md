@@ -182,6 +182,30 @@ void loop()
 
 - **Step 4.** We will see the hello world on LCD.
 
+### Play with Codecraft
+
+#### Hardware
+
+**Step 1.** Using a Grove cable connect Grove - LCD  RGB Backlight to Seeeduino's I2C port. If you are using Arduino, please take advantage of a Base Shield.
+
+**Step 2.** Link Seeedino/Arduino to your PC via an USB cable.
+
+#### Software
+
+**Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
+
+!!!Note
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+
+**Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
+
+![cc](https://raw.githubusercontent.com/SeeedDocument/Grove_LCD_RGB_Backlight/master/img/cc_LCD_RGB_Backlight.png)
+
+Upload the program to your Arduino/Seeeduino.
+
+!!!Success
+    When the code finishes uploaded, you will see "hello, world!" and system running time displayed in the LCD.
+
 ### Play With Raspberry Pi
 
 **Hardware**
@@ -390,6 +414,7 @@ delay(500);
 
 - **[Library]** [Software Library](https://github.com/Seeed-Studio/Grove_LCD_RGB_Backlight/archive/master.zip)
 - **[Document]** [Github page for this document](https://github.com/SeeedDocument/Grove_LCD_RGB_Backlight)
+- **[Codecraft]** [CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove_LCD_RGB_Backlight/master/res/Grove_LCD_RGB_Backlight_CDC_File.zip)
 
 ## Projects
 

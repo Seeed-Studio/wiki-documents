@@ -77,6 +77,30 @@ The feelers can also feel the human being fingers with something between, that's
 
 With a paperboard about 3 mm thick, the feeler can feel the touch of fingers, makes it a good solution for many applications.
 
+### Play with Codecraft
+
+#### Hardware
+
+**Step 1.** Using a Grove cable connect Grove - I2C Touch Sensor to Seeeduino's I2C port. If you are using Arduino, please take advantage of a Base Shield.
+
+**Step 2.** Link Seeedino/Arduino to your PC via an USB cable.
+
+#### Software
+
+**Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
+
+!!!Note
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+
+**Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
+
+![cc](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Touch_Sensor/master/img/cc_I2C_Touch_Sensor.png)
+
+Upload the program to your Arduino/Seeeduino.
+
+!!!Success
+    When the code finishes uploaded, you will see which channel you touched in the Serial Monitor. 
+
 Resources
 ---------
 
@@ -85,6 +109,7 @@ Resources
 -   [I2C Touch Sensor PDF](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Touch_Sensor/master/res/Grove-I2C_Color_sensor_v1.2.pdf)
 -   [How to detect finger touch?](/How_to_detect_finger_touch?)
 -   [I2C Touch Sensor Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Touch_Sensor/master/res/Freescale_Semiconductor;MPR121QR2.pdf)
+-   [Codecraft CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Touch_Sensor/master/res/Grove_I2C_Touch_Sensor_CDC_File.zip)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_I2C_Touch_Sensor -->
 
