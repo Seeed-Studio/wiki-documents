@@ -1943,10 +1943,11 @@ Temperature: 22  CO2: 2972
 
 ## FAQ
 
-**Q1:   Why does Espruino IDE display  "Disconnected" during phone call?**
+**Q1: Espruino IDE display  "Disconnected" during phone call?**
 
 A1: If we see "Disconnected" during phone call as below, the root cause is that power supply is not sufficient. Please conenct the battery or connect to a hub with sufficiant power.
---------------------------------------------
+
+```
 _____               _
 | __|___ ___ ___ _ _|_|___ ___
 | __|_ -| . | _| | | | | . |
@@ -1968,12 +1969,13 @@ null 10.114.177.248
 IP address allocated, modem is ready to use
 >
 Disconnected
+```
 
 **Q2: Why do we see **Geolocalization error : +CME ERROR: 516** during running GPS code on Espruino IDE?**
 
 A2:  When +CME ERROR: 516 stop logging out, type GeoLoc() to get location data. Sometimes  other GNSS error code may log out like +CME: 514, it tell GNSS was locked. Go to GNSS AT Command Manual for the explanations.
 
--------------------------------------------- 
+```
  ___               _
 | __|___ ___ ___ _ _|_|___ ___
 | __|_ -| . | _| | | | | . |
@@ -1997,10 +1999,13 @@ Starting GeoLocalization
 Geolocalization error : +CME ERROR: 516
 Geolocalization error : +CME ERROR: 516
 
+```
+
 **Q3: We fail to use Arduino IDE to download the program and see below error info at bottom of Arduino IDE.**
 
 A3: It is a bug. When using Arduino serial port to print info, the Arduino IDE remembers the serial port number. So there is no serial port available for downloading new program. We can reboot the Arduino IDE to solve the issue as temporary solution. For the preventive solution, please use other COM monitor software, such as SSCOM. Please make sure we see the processing bar during program downloading. Or else, we will see below info and the program is not downloaded. 
- --------------------------------------------  
+
+```
 Sketch uses 23068 bytes (2%) of program storage space. Maximum is 1048576 bytes.
 Global variables use 13864 bytes of dynamic memory.
 DFU begin
@@ -2015,11 +2020,13 @@ Invalid DFU suffix signature
 A valid DFU suffix will be required in a future dfu-util release!!!
 No DFU capable USB device available
 DFU end
+```
 
 **Q4: We See the "STM32 Virtual ComPort in FS Mode" in device manger and can't download the program.**
 
 A4: Please press RST and Boot buttons, then release RST button first and then Boot button. Or we can hold the boot button and then plug the USB to PC. We will see the "STM32 BOOTLOADER". We can download the programing now. Here is the successful programing downloading log. 
-   --------------------------------------------  
+
+```
 Sketch uses 23076 bytes (2%) of program storage space. Maximum is 1048576 bytes.
 Global variables use 13864 bytes of dynamic memory.
 DFU begin
@@ -2068,6 +2075,7 @@ Invalid DFU suffix signature
 A valid DFU suffix will be required in a future dfu-util release!!!
 can't detach
 DFU end
+```
 
 
 **Q5: We can't see the COM port in device manager after changing dfu driver.**
