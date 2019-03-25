@@ -1069,7 +1069,7 @@ Send OK!
 - Step 8. Press **RST** button to enable the COM port.
 
 ```C++
-#include "wiowio_trackerlte.h"
+#include "wio_tracker.h"
 
 uint16_t newSMSNumber = -1;
 char message[128];
