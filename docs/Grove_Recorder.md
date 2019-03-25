@@ -134,32 +134,6 @@ Below is an illustration of a Grove circuit built using the [Grove - USB Power](
 
 If you do not have the Grove - USB Power module, use the [Grove - DC Jack Power](/Grove-DC_Jack_Power "Grove - DC Jack Power") module instead.
 
-### Play with Codecraft
-
-#### Hardware
-
-**Step 1.** Connect a Grove - Record to port D2 of a Base Shield.
-
-**Step 2.** Plug the Base Shield to your Seeeduino/Arduino.
-
-**Step 3.** Link Seeeduino/Arduino to your PC via an USB cable.
-
-#### Software
-
-**Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
-
-!!!Note
-    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
-
-**Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
-
-![cc](https://raw.githubusercontent.com/SeeedDocument/Grove_Recorder/master/img/cc_Recorder.png)
-
-Upload the program to your Arduino/Seeeduino.
-
-!!!Success
-    When the code finishes uploaded, you can use Recorder to record and play via Serial Monitor.
-
 ##  Availability
 ---
 This [Grove](/Grove "Grove") module is available as part of the following [Grove Kit Series](/Grove_System/#grove-starter-kit "GROVE System"):
@@ -175,8 +149,6 @@ Alternatively, it can be bought stand-alone at the [Seeed Studio Bazaar](http://
 *   [Grove - Recorder v1.0 Schematics (pdf)](https://github.com/SeeedDocument/Grove_Recorder/raw/master/res/Grove-Recorder_v1.0.pdf)
 
 *   [Datasheet ISD1820P.pdf (Chinese)](https://github.com/SeeedDocument/Grove_Recorder/raw/master/res/ISD1820P.pdf)
-
-*	[Codecraft CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove_Recorder/master/res/Grove_Recorder_CDC_File.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
