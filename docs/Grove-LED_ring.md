@@ -15,6 +15,7 @@ tags:
 The Grove - RGB LED Ring (20 - WS2813 Mini) is a mini version of [WS2813 Digital RGB LED Ring](https://www.seeedstudio.com/WS2813-Digital-RGB-LED-Ring-p-2871.html). The RGB LED Ring are 3535-sized LEDs with an embedded microcontroller inside the LED. The WS2813s are each addressable as the driver chip is located inside the LED. 
 Each LED has a constrant current drive so the color will be very consistent even if the change of the voltage.
 
+<iframe width="800" height="450" src="https://www.youtube.com/embed/zQj8RRJcZsk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-RGB-LED-Ring-20-WS2813-Min-p-3227.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
