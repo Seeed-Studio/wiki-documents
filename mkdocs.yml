@@ -469,6 +469,7 @@ pages:
           - Grove - RTC: Grove-RTC.md
           - Grove - Rotary Angle Sensor: Grove-Rotary_Angle_Sensor.md
           - Grove - RS232: Grove-RS232.md
+          - Grove - RS485: Grove-RS485.md
           - Grove - Serial Camera Kit: Grove-Serial_Camera_Kit.md
           - Grove - Slide Potentiometer: Grove-Slide_Potentiometer.md
           - Grove - Sound Recorder: Grove-Sound_Recorder.md
