@@ -151,7 +151,7 @@ SW4|Power On/OFF|Switch the system on and off by pressing and holding(about 3~5 
 
 **LCD Interface**
 
-As you can see, there is a 50 pin LCD Interface on this board, in case you need a LCD screen for this board, you can use the LCD8000 serial screen. Check the links below.
+As you can see, there is a 50 pin LCD Interface on this board, it Support up to 1366 x 768 WXGA resolution. In case you need a LCD screen for this board, you can use the LCD8000 serial screen. Check the links below.
 
 [LCD from NXP](https://www.nxp.com/support/developer-resources/software-development-tools/i.mx-developer-resources/evaluation-kit-for-the-i.mx-6ull-and-6ulz-applications-processor:MCIMX6ULL-EVK?tab=Buy_Parametric_Tab#/)  
 [LCD from Embest](http://www.embest-tech.com/prod_view.aspx?TypeId=118&Id=277)
@@ -301,6 +301,12 @@ The RT-Thread was born in 2006, the license is similar to FreeRTOS and is releas
 
 <div align="center"><b>Table 5.</b><i>Technical and ecological comparison of three embedded operating systems</i></div>
 
+
+### RT-Thread Resource and Manual
+
+Thanks the RT-Thread official team, they will continue to translate relevant resources and documents, we will publish the latest English documents here.
+
+- [RT-Thread Programming-Manual](https://github.com/RT-Thread/rtthread-manual-doc)
 
 
 ### Running MicroPython
