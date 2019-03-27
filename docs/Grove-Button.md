@@ -141,7 +141,7 @@ void loop(){
 Upload the program to your Arduino/Seeeduino.
 
 !!!Success
-    When the code finishes uploaded, the buzzer will beep when the vibration sensor detects vibration.
+    When the code finishes uploaded, the LED on the Arduino/Seeeduino board will goes on when the Button pressed.
 
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
 
