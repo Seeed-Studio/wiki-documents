@@ -916,6 +916,114 @@ wf.writeframes(b''.join(frames))
 wf.close()
 ```
 
+## DOA
+
+### DOA with Keywords
+
+**Requirements**
+
+- pyaudio
+- numpy
+- snowboy
+
+**Installation**
+
+Install pyaudio, numpy and snowboy, use virtualenv a virtual python environment.
+
+```shell
+sudo apt install python-pyaudio python-numpy python-virtualenv
+sudo apt-get install swig python-dev libatlas-base-dev build-essential make
+git clone --depth 1 https://github.com/Kitt-AI/snowboy.git
+cd snowboy
+virtualenv --system-site-packages env
+source env/bin/activate
+python setup.py build
+python setup.py bdist_wheel
+pip install dist/snowboy*.whl
+git clone https://github.com/voice-engine/voice-engine.git
+cd voice-engine
+python setup.py bdist_wheel
+pip install dist/*.whl
+```
+
+**Let's say snowboy**
+
+- Step 1. Run the kws_doa.py 
+
+```shell
+cd ~/voice-engine/examples/respeaker_6mic_array_for_pi/
+python kws_doa.py
+```
+
+Here is the code of the kws_doa.py
+
+```python
+"""
+Search the keyword "snowboy".
+After finding the keyword, Direction Of Arrival (DOA) is estimated.
+
+Hardware: ReSpeaker 6 Mic Array for Raspberry Pi
+"""
+
+import sys
+import time
+from voice_engine.source import Source
+from voice_engine.channel_picker import ChannelPicker
+from voice_engine.kws import KWS
+from voice_engine.doa_respeaker_6mic_array import DOA
+
+
+def main():
+    src = Source(rate=16000, channels=8)
+    ch0 = ChannelPicker(channels=src.channels, pick=0)
+    kws = KWS(model='snowboy', sensitivity=0.6, verbose=True)
+    doa = DOA(rate=16000)
+
+    src.link(ch0)
+    ch0.link(kws)
+    src.link(doa)
+
+    def on_detected(keyword):
+        print('detected {} at direction {}'.format(keyword, doa.get_direction()))
+
+    kws.set_callback(on_detected)
+
+    src.recursive_start()
+    while True:
+        try:
+            time.sleep(1)
+        except KeyboardInterrupt:
+            break
+
+    src.recursive_stop()
+
+    # wait a second to allow other threads to exit
+    time.sleep(1)
+
+
+if __name__ == '__main__':
+    main()
+```
+
+
+- Step 2. Let's say snowboy and here is output of DOA.
+
+```shell
+(env) pi@raspberrypi:~/voice-engine/examples/respeaker_6mic_array_for_pi $ python kws_doa.py 
+['arecord', '-t', 'raw', '-f', 'S16_LE', '-c', '8', '-r', '16000', '-D', 'default', '-q']
+0000000000000000000000000000000000000000000000000000000000000000000000000000000002222222222222222222222222222222222222222222222/usr/local/lib/python2.7/dist-packages/voice_engine-0.1.3-py2.7.egg/voice_engine/gcc_phat.py:22: RuntimeWarning: invalid value encountered in divide
+  cc = np.fft.irfft(R / np.abs(R), n=(interp * n))
+detected 1 at direction 283.32811392
+3000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002222222222222222222222222222222222222222222222detected 1 at direction 210.0
+30000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002222222222222222222222222222222222222222222222detected 1 at direction 62.5448292531
+30000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002222222222222222222222222222222222222222222222222detected 1 at direction 62.5448292531
+300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002222222222222222222222222222222222222222222detected 1 at direction 223.32811392
+300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000022222222222222222222222222222222222222222222222222detected 1 at direction 223.32811392
+30000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000222222222222222222222222222222222222222detected 1 at direction 283.32811392
+300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002222222222222222222222222222222222222222222detected 1 at direction 237.455170747
+```
+
+
 ## FAQ
 
 **Q1: There are only 6 Mic in the Mic Array, how could it be 8 channels?**
