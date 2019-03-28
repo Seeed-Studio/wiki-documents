@@ -17,6 +17,9 @@ Microsoft Azure Sphere is a solution for creating highly-secured, connected, MCU
 
 <p style="text-align:center"><a href="https://www.seeedstudio.com/MT3620-Ethernet-Shield-v1-0-p-2917.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
+!!!Warning
+    Now the  Azure Sphere dev board only supports private Ehternet by acting as a DHCP and SNTP server, it does not act as a router.  
+
 ## Features
 
 - Processor: Microchip, ENC28J60
