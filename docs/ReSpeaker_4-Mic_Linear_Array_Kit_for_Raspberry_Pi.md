@@ -601,7 +601,7 @@ wf.close()
 
 - Step 6. If you want to extract channel 0 data from 8 channels, please follow below code. For other channel X, please change [0::8] to [X::8].
 
-```
+```python
 import pyaudio
 import wave
 import numpy as np

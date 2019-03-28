@@ -787,6 +787,135 @@ make
 ![](https://github.com/SeeedDocument/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/raw/master/img/odas.png)
 
 
+## Extract Voice
+
+We use [PyAudio python library](https://people.csail.mit.edu/hubert/pyaudio/) to extract voice.
+
+- Step 1, We need to run the following script to get the device index number of 6 Mic pi hat:
+
+```Python
+sudo pip install pyaudio
+cd ~
+nano get_index.py
+```
+
+- Step 2, copy below code and paste on get_index.py.
+
+```Python
+import pyaudio
+
+p = pyaudio.PyAudio()
+info = p.get_host_api_info_by_index(0)
+numdevices = info.get('deviceCount')
+
+for i in range(0, numdevices):
+        if (p.get_device_info_by_host_api_device_index(0, i).get('maxInputChannels')) > 0:
+            print "Input Device id ", i, " - ", p.get_device_info_by_host_api_device_index(0, i).get('name')
+```
+
+- Step 3, press Ctrl + X to exit and press Y to save.
+
+- Step 4, run 'sudo python get_index.py' and we will see the device ID as below.
+
+```
+Input Device id  2  -  seeed-8mic-voicecard: - (hw:1,0)
+```
+
+- Step 5, change `RESPEAKER_INDEX = 2` to index number. Run python script record.py to record a speech.
+
+```Python
+import pyaudio
+import wave
+
+RESPEAKER_RATE = 16000
+RESPEAKER_CHANNELS = 8 
+RESPEAKER_WIDTH = 2
+# run getDeviceInfo.py to get index
+RESPEAKER_INDEX = 2  # refer to input device id
+CHUNK = 1024
+RECORD_SECONDS = 5
+WAVE_OUTPUT_FILENAME = "output.wav"
+
+p = pyaudio.PyAudio()
+
+stream = p.open(
+            rate=RESPEAKER_RATE,
+            format=p.get_format_from_width(RESPEAKER_WIDTH),
+            channels=RESPEAKER_CHANNELS,
+            input=True,
+            input_device_index=RESPEAKER_INDEX,)
+
+print("* recording")
+
+frames = []
+
+for i in range(0, int(RESPEAKER_RATE / CHUNK * RECORD_SECONDS)):
+    data = stream.read(CHUNK)
+    frames.append(data)
+
+print("* done recording")
+
+stream.stop_stream()
+stream.close()
+p.terminate()
+
+wf = wave.open(WAVE_OUTPUT_FILENAME, 'wb')
+wf.setnchannels(RESPEAKER_CHANNELS)
+wf.setsampwidth(p.get_sample_size(p.get_format_from_width(RESPEAKER_WIDTH)))
+wf.setframerate(RESPEAKER_RATE)
+wf.writeframes(b''.join(frames))
+wf.close()
+```
+
+- Step 6. If you want to extract channel 0 data from 8 channels, please follow below code. For other channel X, please change [0::8] to [X::8].
+
+```python
+import pyaudio
+import wave
+import numpy as np
+
+RESPEAKER_RATE = 16000
+RESPEAKER_CHANNELS = 8
+RESPEAKER_WIDTH = 2
+# run getDeviceInfo.py to get index
+RESPEAKER_INDEX = 2  # refer to input device id
+CHUNK = 1024
+RECORD_SECONDS = 3
+WAVE_OUTPUT_FILENAME = "output.wav"
+
+p = pyaudio.PyAudio()
+
+stream = p.open(
+            rate=RESPEAKER_RATE,
+            format=p.get_format_from_width(RESPEAKER_WIDTH),
+            channels=RESPEAKER_CHANNELS,
+            input=True,
+            input_device_index=RESPEAKER_INDEX,)
+
+print("* recording")
+
+frames = [] 
+
+for i in range(0, int(RESPEAKER_RATE / CHUNK * RECORD_SECONDS)):
+    data = stream.read(CHUNK)
+    # extract channel 0 data from 8 channels, if you want to extract channel 1, please change to [1::8]
+    a = np.fromstring(data,dtype=np.int16)[0::8]
+    frames.append(a.tostring())
+
+print("* done recording")
+
+stream.stop_stream()
+stream.close()
+p.terminate()
+
+wf = wave.open(WAVE_OUTPUT_FILENAME, 'wb')
+wf.setnchannels(1)
+wf.setsampwidth(p.get_sample_size(p.get_format_from_width(RESPEAKER_WIDTH)))
+wf.setframerate(RESPEAKER_RATE)
+wf.writeframes(b''.join(frames))
+wf.close()
+```
+
 ## FAQ
 
 **Q1: There are only 6 Mic in the Mic Array, how could it be 8 channels?**
