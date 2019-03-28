@@ -299,7 +299,7 @@ python Smart_Fan.py
 
 ## Extract Voice
 
-We use [PyAudio python library](https://people.csail.mit.edu/hubert/pyaudio/) to extract voice through USB.
+We use [PyAudio python library](https://people.csail.mit.edu/hubert/pyaudio/) to extract voice.
 
 We also can use python script to extract voice.
 
