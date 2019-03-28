@@ -301,8 +301,6 @@ python Smart_Fan.py
 
 We use [PyAudio python library](https://people.csail.mit.edu/hubert/pyaudio/) to extract voice.
 
-We also can use python script to extract voice.
-
 - Step 1, We need to run the following script to get the device index number of 2 Mic pi hat:
 
 ```Python
