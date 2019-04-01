@@ -863,7 +863,7 @@ In this section we are going to setup and run a local authorization server, whic
 
 Step 1. Register your product with Amazon
 
-First of all, please follow these [instructions](https://github.com/alexa/alexa-avs-sample-app/wiki/Create-Security-Profile) to register your product and create a security profile. You can skip this step if you have a registered product you'd like to test with.
+First of all, please follow these [instructions](https://github.com/alexa/avs-device-sdk/wiki/Create-Security-Profile) to register your product and create a security profile. You can skip this step if you have a registered product you'd like to test with.
 
 <div class="admonition note" >
 <p class="admonition-title">Note</p>
