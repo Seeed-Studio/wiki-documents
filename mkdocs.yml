@@ -387,6 +387,9 @@ pages:
           - Sensor - Distance: Sensor_distance.md
           - Sensor - Others: Sensor_Others.md
           - Grove - 2 Channel Inductive Sensor (LDC1612): Grove-2_Channel_Inductive_Sensor-LDC1612.md
+          - Grove - 2.5A DC Current Sensor(ACS70331): Grove-2.5A-DC-Current-Sensor-ACS70331.md
+          - Grove - ±5A DC/AC Current Sensor (ACS70331): Grove-5A_DC_AC_Current_Sensor-ACS70331.md
+          - Grove - 10A DC Current Sensor (ACS725): Grove-10A_DC_Current_Sensor-ACS725.md
           - Grove - 3 Axis Digital Accelerometer(±16g): Grove-3-Axis_Digital_Accelerometer-16g.md
           - Grove - 3-Axis Analog Accelerometer: Grove-3-Axis_Analog_Accelerometer.md
           - Grove - 3-Axis Compass V1.0: Grove-3-Axis_Compass_V1.0.md
