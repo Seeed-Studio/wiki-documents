@@ -83,6 +83,14 @@ Microsoft Azure Sphere is a solution for creating highly-secured, connected, MCU
 
 ![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/H3_4.png)
 
+**Dimensions**
+
+![](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/img/drawing1.png)
+
+![](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/img/drawing2.png)
+
+![](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/img/drawing3.png)
+
 
 ## Application Ideas
 
@@ -264,6 +272,7 @@ If you no longer require Ethernet, for example because you wish to use your boar
 
 - **[PDF]** [MT3620 Ethernet Shield v1.0](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/res/MT3620%20Ethernet%20Shield_v1.0_SCH_181220.pdf)
 - **[Eagle]** [MT3620 Ethernet Shield v1.0](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/res/202002332_MT3620%20Ethernet%20Shield_v1.0_SCH%20%26%20PCB.zip)
+- **[Mechanical Drawing]** [MT3620 Ethernet Shield Mechanical Drawing](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/res/103990403%2C%20MT3620%20Ethernet%20Shield%20v1.0.pdf)
 - **[Library]** [MT3620 Ethernet Shield Library](https://github.com/Azure/azure-sphere-samples/tree/master/Samples/PrivateEthernet)
 - **[DataSheet]** [ENC28J60 Datasheet](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/res/ENC28J60.pdf)
 - **[FAQ Web]** [Azure Sphere Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=azuresphere)
