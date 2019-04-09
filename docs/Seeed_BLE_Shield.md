@@ -110,7 +110,7 @@ We have produced a lot of extension board that can make your platform board more
 
 ## Hardwarw Overview
 
-<div class="center"><div class="floatnone">![](https://github.com/SeeedDocument/Seeed_BLE_Shield/raw/master/img/BLE_Shield.png)</div></div>
+![](https://github.com/SeeedDocument/Seeed_BLE_Shield/raw/master/img/BLE_Shield.png)
 
 *   HM-11: The basic module is HM-11, more information you can refer to this wiki of [HM-11](/Bluetooth_V4.0_HM_11_BLE_Module).
 
