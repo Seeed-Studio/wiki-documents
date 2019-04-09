@@ -10,8 +10,7 @@ sku:
 
 ![enter image description here](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/img/product_picture.png)
 
-[Azure Sphere MT3620 Development kit](https://www.seeedstudio.com/Azure-Sphere-MT3620-Development-Kit-US-Version-p-3052.html) comes with four 2.54mm headers for hardware resources extension from MT3620. MT3620 Ethernet Shield is an add-on breakout board designed for MT3620 development kit. The Azure Sphere ethernet shield enables support for private LAN connection only. External Wi-Fi is required for internet access and Azure Sphere services. Azure Sphere does not support routing or bridging between the private LAN and Wi-Fi interface.
-
+[Azure Sphere MT3620 Development kit](https://www.seeedstudio.com/Azure-Sphere-MT3620-Development-Kit-US-Version-p-3052.html) comes with four 2.54mm headers for hardware resources extension from MT3620. MT3620 Ethernet Shield is an add-on breakout board designed for MT3620 development kit. The Azure Sphere ethernet shield enables support for private LAN connection only. Please see [here](https://docs.microsoft.com/en-us/azure-sphere/network/connect-private-network) for more details.
 
 Microsoft Azure Sphere is a solution for creating highly-secured, connected, MCU-powered devices. Azure Sphere brings together the best of Microsoft’s expertise in cloud, software and silicon—resulting in a unique approach to security that starts in the silicon and extends to the cloud. Together, Azure Sphere certified MCUs, the Azure Sphere OS, and the Azure Sphere Security Service provide you with the confidence and the power to reimagine your business and create the future.
 
@@ -19,7 +18,7 @@ Microsoft Azure Sphere is a solution for creating highly-secured, connected, MCU
 <p style="text-align:center"><a href="https://www.seeedstudio.com/MT3620-Ethernet-Shield-v1-0-p-2917.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 !!!Warning
-    Now the  Azure Sphere dev board only supports private Ehternet by acting as a DHCP and SNTP server, it does not act as a router.  
+    External Wi-Fi is required for internet access and Azure Sphere services. Azure Sphere does not support routing or bridging between the private LAN and Wi-Fi interface. 
 
 ## Features
 
