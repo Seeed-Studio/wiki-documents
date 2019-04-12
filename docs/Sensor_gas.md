@@ -1,6 +1,8 @@
-Here is [Seeed Relay Selection Guide](http://wiki.seeedstudio.com/Seeed_Relay_Page/). 
+![](https://github.com/SeeedDocument/Seeed_Gas_Sensor_Selection_Guide/raw/master/img/Seeed_Gas_Sensor_Selection_Guide.jpg)
 
+Gas sensor is a device which can detect the presence of various toxic and combustible gases present in the environment. 
 
+You can refer to [Seeed Gas Sensor Selection Guide](http://wiki.seeedstudio.com/Seeed_Gas_Sensor_Selection_Guide/)
 
 - [Grove - VOC and eCO2 Gas Sensor (SGP30)](http://wiki.seeedstudio.com/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/)
 
