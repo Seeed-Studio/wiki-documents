@@ -1,9 +1,4 @@
-
-
-
-
-
-
+Here is [Seeed Relay Selection Guide](http://wiki.seeedstudio.com/Seeed_Relay_Page/). 
 
 
 
