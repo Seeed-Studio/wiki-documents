@@ -155,6 +155,3 @@ AI is pervasive today, from consumer to enterprise applications. Developers bega
 4. [RL Course by David Silver](https://www.youtube.com/watch?v=2pWv7GOvuf0&list=PLzuuYNsE1EZAXYR4FJ75jcJseBmo4KQ9-)
 
 
-**Thx for Reading!**
-
-
