@@ -3,17 +3,18 @@
 **Reading time:** 30 minutes
 
 
-**Audience:  **
+**Audience:**
+
 - Hardware makers who are interested in AI but do not have a solid background in Computer Science
 
 **INDEX**
 
-An Essay for Hardware Developers who want to start with AI
-Summarize
-1.What is ‘AI’
-2.Application&Some Amazing Projects
-3.Relevant Products
-4.Course & Primer Tutorial
+An Essay for Hardware Developers who want to start with AI Summarize
+
+- 1.What is ‘AI’
+- 2.Application&Some Amazing Projects
+- 3.Relevant Products
+- 4.Course & Primer Tutorial
 
 ## Summarize
 
@@ -45,7 +46,7 @@ Deep learning is a young experimental subject, and it updates every day. If you 
 For Humans identification of any object by just seeing towards it done within few second, it's really easy for them, but when we concern about the machine to identify the object, it is the really complex thing until Hinton and Alex Krizhevsky won the champion of ImageNet in 2012.
   Then Neural Network dominated Vision field, especially the problem of classification and segmentation, and the convolutional neural network is one of the most prominent approaches who won numerous competitions in recent years. It has outstanding results in image recognition. 
 Nvidia has built a lot of [Vision Demo](https://github.com/dusty-nv/jetson-inference) for Jetson Nano, and we have tested two of them as classification and face detection:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/U0rNdI9pl_0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/U0rNdI9pl_0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ### Art
