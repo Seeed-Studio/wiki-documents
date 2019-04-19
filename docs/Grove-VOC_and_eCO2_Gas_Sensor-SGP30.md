@@ -199,7 +199,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 
 !!!Note
-	If we don't have Grove Base Shield, We also can directly connect Grove - Temperature and Humidity Sensor Pro to Seeeduino as below.
+	If we don't have Grove Base Shield, We also can directly connectGrove-VOC and eCO2 Gas Sensor(SGP30) to Seeeduino as below.
 
 
 | Seeeduino     | Grove-VOC and eCO2 Gas Sensor(SGP30) |
