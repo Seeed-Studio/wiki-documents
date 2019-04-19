@@ -34,7 +34,7 @@ Seeeduino Lotus has 14 digital input/outputs (6 of which can output PWM) and 7 a
 |----------|-----------------------------------------------------------|--------------|--------------|
 | v1.0   | Initial public release (beta)                             | Jul 22, 2014  |[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Seeeduino-Lotus-ATMega328-Board-with-Grove-Interface-p-1942.html)|
 | v1.1   | Replace CH340 with CP2102N to enable the compatibilty with MAC |Dec 22,2016   |[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Seeeduino-Lotus-V1.1-ATMega328-Board-with-Grove-Interface-p-2917.html)|
-|Seeeduino Lotus Cortex-M0+| Change the Atmega328 microcontroller chip into SAM D21<br> <br> Optimized circuit design, power supply is more stable|October.29, 2018||
+|Seeeduino Lotus Cortex-M0+| Change the Atmega328 microcontroller chip into SAM D21<br> <br> Optimized circuit design, power supply is more stable|October.29, 2018|[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Seeeduino-Lotus-Cortex-M0-p-2896.html)|
 
 
 ### Upgrade Instructions
