@@ -18,40 +18,40 @@ An Essay for Hardware Developers who want to start with AI Summarize
 
 ## Summarize
 
-AI is a hotspot nowadays, and relevant products sells well in our [online shop](https://www.seeedstudio.com/). But we find some of our customers——traditional hardware developers, often do not have a solid background in computer science.
-The purpose of this article is to build interest and a general understanding for developers who want to start their deep learning journey but do not have a background knowledge yet. I will list the common interests and problems of novices in this article. And in the last part of this passage,  I'll recommend some course and books to start with.
+AI is a hot nowadays, and relevant products sell well in our [online shop](https://www.seeedstudio.com/). But we find some of our customers——traditional hardware developers, often do not have a solid background in computer science.
+The purpose of this article is to build interest and a general understanding for developers who want to start their deep learning journey but do not have a background knowledge yet. I will list the common interests and problems that novices face in this article. And at the end of this document,  I'll recommend some course and books to learn more about the topic.
 
 
 
 ## 1. What is 'AI'
-AI is pervasive today. "Data Mining", "Artificial Intelligence", "Artificial Neural Network"……pretty confusing hum? capitalist and computer scientists create thousands of new terms every year, but never explain to you ***what they actually are**. 
+AI is pervasive today. "Data Mining", "Artificial Intelligence", "Artificial Neural Network"……pretty confusing hum? Companies and computer scientists create thousands of new terms every year, but never explain to you ***what they actually are**.
 In the wiki, it says:
  >Artificial intelligence (AI), sometimes called machine intelligence, is intelligence demonstrated by machines, in contrast to the natural intelligence displayed by humans and animals.
- 
+
  However, unless it is used as a rigorously academic terminology, we generally use this term to refer to the Artificial Neural Network. Because the explosive development of this technology in recent years has resulted in too many computing products and commercial publicity, gradually replacing the meaning of the term 'AI' itself. So now when businesses say "AI products", they generally refer to products used to speed up neural network operations.
 
-Some advertisements and ‘tutorals' will show you pic like the following one, which reminds you of neurons in our brains. But in fact,  neurons are just a graceful analogy. The term Neural Networks' in computer science is a totally mathematical problem. And if you do not comprehend the algorithm, this pic means **nothing.**
+Some advertisements and ‘tutorals' will show you picture like the following one, which reminds you of neurons in our brains. But in fact,  neurons are just a graceful analogy. The term Neural Networks' in computer science is a totally mathematical problem. And if you do not comprehend the algorithm, this picture means **nothing.**
 
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Introduction_to_Artificial_Intelligence_for_Maker/master/1554974523222.png)
 
 
 
-So if you want to get into deep learning, the first thing you need do is to comprehend the mathematical principles under the terms. I do not want to explain the algorithm detailed today, what you should know is that Neural Networks modules are distant relatives of a simple problem in your Algebra Class at Senior High School. In the last part of this passage. I'll recommend some course and books for the novice. 
+So if you want to get into deep learning, the first thing you need do is to comprehend the mathematical principles under the terms. I do not want to explain the algorithm detailed today, what you should know is that Neural Networks modules are distant relatives of a simple problem in your Algebra Class at Senior High School. In the last part of this passage. I'll recommend some course and books for the novice.
 Deep learning is a young experimental subject, and it updates every day. If you want to master it, the most important thing is to choose a topic or a real problem and read relevant papers as much as possible.
 
 ## 2. Application&Some Amazing Projects
 
 ### Vision
 For Humans identification of any object by just seeing towards it done within few second, it's really easy for them, but when we concern about the machine to identify the object, it is the really complex thing until Hinton and Alex Krizhevsky won the champion of ImageNet in 2012.
-  Then Neural Network dominated Vision field, especially the problem of classification and segmentation, and the convolutional neural network is one of the most prominent approaches who won numerous competitions in recent years. It has outstanding results in image recognition. 
+  Then Neural Network dominated Vision field, especially the problem of classification and segmentation, and the convolutional neural network is one of the most prominent approaches who won numerous competitions in recent years. It has outstanding results in image recognition.
 Nvidia has built a lot of [Vision Demo](https://github.com/dusty-nv/jetson-inference) for Jetson Nano, and we have tested two of them as classification and face detection:
 <iframe width="800" height="450" src="https://www.youtube.com/embed/U0rNdI9pl_0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ### Art
 
-**[Google Magenta](https://magenta.tensorflow.org/)** An open-source research project is exploring the role of machine learning as a tool in the creative process. This project group is known to the public because of AI-powered Doodle [Celebrating-Johann-Sebastian-Bach](https://www.google.com/doodles/celebrating-johann-sebastian-bach) 
+**[Google Magenta](https://magenta.tensorflow.org/)** An open-source research project is exploring the role of machine learning as a tool in the creative process. This project group is known to the public because of AI-powered Doodle [Celebrating-Johann-Sebastian-Bach](https://www.google.com/doodles/celebrating-johann-sebastian-bach)
 ![Alt text](https://raw.githubusercontent.com/SeeedDocument/Introduction_to_Artificial_Intelligence_for_Maker/master/1555056026898.png)
 
 And here are some demo even more interaction:
@@ -64,7 +64,7 @@ And here are some demo even more interaction:
 
 ![Alt text](https://raw.githubusercontent.com/SeeedDocument/Introduction_to_Artificial_Intelligence_for_Maker/master/1555059135929.png)
 
-[Latent Loops](https://goo.gl/magenta/latent-loops) Sketch melodies on a matrix tuned to different scales, explore a palette of generated melodic loops, and sequence longer compositions using them. Built by Google’s Pie Shop using 
+[Latent Loops](https://goo.gl/magenta/latent-loops) Sketch melodies on a matrix tuned to different scales, explore a palette of generated melodic loops, and sequence longer compositions using them. Built by Google’s Pie Shop using
 
 ![Alt text](https://raw.githubusercontent.com/SeeedDocument/Introduction_to_Artificial_Intelligence_for_Maker/master/1555059104497.png)
 
@@ -91,7 +91,7 @@ In the age of knowledge, Natural Language Processing (NLP) express its demand by
 
 #### Medical Information
 
-Artificial Intelligence is transforming the world of medicine. AI can help doctors make faster, more accurate diagnoses. It can predict the risk of a disease in time to prevent it. It can help researchers understand how genetic variations lead to disease. It enhances doctors’ ability to analyze medical images. It’s advancing the future of personalized medicine. 
+Artificial Intelligence is transforming the world of medicine. AI can help doctors make faster, more accurate diagnoses. It can predict the risk of a disease in time to prevent it. It can help researchers understand how genetic variations lead to disease. It enhances doctors’ ability to analyze medical images. It’s advancing the future of personalized medicine.
 Currently, substantial efforts are developed for the enrichment of medical imaging applications using these algorithms to diagnose the errors in disease diagnostic systems which may result in extremely ambiguous medical treatments. Machine and deep learning algorithms are important ways in medical imaging to predict the symptoms of early disease. Deep learning techniques, in specific convolutional networks, have promptly developed a methodology of particular for investigating medical images. It carries consideration concerning the suite of these algorithms which can be used for the investigation of diseases and automatic decision-making.
 
 [**Deep Learning Toolkit (DLTK) for Medical Imaging**](https://github.com/DLTK/DLTK)
@@ -136,22 +136,20 @@ AI is pervasive today, from consumer to enterprise applications. Developers bega
 ### Books
 
 1. [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/) This is one of the most friendly textbook of Neural Networks over the world without any annoying terms, and it's totally free and online. But the code in this book is a little bit over time, and if you are familiar with c++, you can just use them to comprehend the principle.
-2. [Deep Learning with Python](https://www.amazon.com/Deep-Learning-Python-Francois-Chollet/dp/1617294438) This book was written for anyone who wishes to explore deep learning from scratch or broaden their understanding of deep learning. Whether you’re a practising machine-learning engineer, a software developer, or a college student, you’ll find value in these pages. 
+2. [Deep Learning with Python](https://www.amazon.com/Deep-Learning-Python-Francois-Chollet/dp/1617294438) This book was written for anyone who wishes to explore deep learning from scratch or broaden their understanding of deep learning. Whether you’re a practising machine-learning engineer, a software developer, or a college student, you’ll find value in these pages.
 3. [Python For Data Analysis](https://www.cin.ufpe.br/~embat/Python%20for%20Data%20Analysis.pdf)  Classic tutorial for Data Analysis, and it's not out of date yet.
- 
+
 ### Course
 
-1. [Creative Applications of Deep Learning with TensorFlow](https://link.zhihu.com/?target=https://www.class-central.com/mooc/6679/kadenze-creative-applications-of-deep-learning-with-tensorflow) This course introduces you to deep learning: the state-of-the-art approach to building artificial intelligence algorithms. 
+1. [Creative Applications of Deep Learning with TensorFlow](https://link.zhihu.com/?target=https://www.class-central.com/mooc/6679/kadenze-creative-applications-of-deep-learning-with-tensorflow) This course introduces you to deep learning: the state-of-the-art approach to building artificial intelligence algorithms.
 
-2. [Stanford CS231n: Convolutional Neural Networks for Visual Recognition](https://link.zhihu.com/?target=http://cs231n.stanford.edu/) This course is a deep dive into details of the deep learning architectures with a focus on learning end-to-end models for these tasks, particularly image classification. 
+2. [Stanford CS231n: Convolutional Neural Networks for Visual Recognition](https://link.zhihu.com/?target=http://cs231n.stanford.edu/) This course is a deep dive into details of the deep learning architectures with a focus on learning end-to-end models for these tasks, particularly image classification.
 
 3. [UC Berkeley AI-Sys Spring 2019](https://ucbrise.github.io/cs294-ai-sys-sp19/) This course describes from the classic structure like AlexNet to the latest trends in systems designs to better support the next generation of AI applications, and applications of AI to optimize the architecture and the performance of systems. The most valuable part for students online is the Required Reading List it provided.
-   
+
 ### Videos
 
 1. [ScaledML 2019](https://www.youtube.com/playlist?list=PLRM2gQVaW_wWXoUnSfZTxpgDmNaAS1RtG)
-2. [A New Golden Age for Computer Architecture History, Challenges, and Opportunities.](https://www.youtube.com/watch?v=uyc_pDBJotI&t=767s) 
+2. [A New Golden Age for Computer Architecture History, Challenges, and Opportunities.](https://www.youtube.com/watch?v=uyc_pDBJotI&t=767s)
 3. [SysML 18: Perspectives and Challenges.](https://www.youtube.com/watch?v=4inIBmY8dQI&t=26s)
 4. [RL Course by David Silver](https://www.youtube.com/watch?v=2pWv7GOvuf0&list=PLzuuYNsE1EZAXYR4FJ75jcJseBmo4KQ9-)
-
-
