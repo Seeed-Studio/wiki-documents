@@ -5,27 +5,25 @@
 
 **Audience:**
 
-- Hardware makers who are interested in AI but do not have a solid background in Computer Science
+- A beginners guide to Artificial Intelligence (AI) for makers with no prior training in computer science.
 
 **INDEX**
 
-An Essay for Hardware Developers who want to start with AI Summarize
+A quick overview of the sections of this article.
 
-- 1.What is ‘AI’
-- 2.Application&Some Amazing Projects
-- 3.Relevant Products
-- 4.Course & Primer Tutorial
+- 1.What is ‘Artificial Intelligence (AI)’ ?
+- 2.Some interesting application of Artificial Intelligence (AI)
+- 3.List of Artificial Intelligence (AI) products
+- 4.Recommended books, courses and video tutorials
 
-## Summarize
+## Summary
 
-AI is a hot nowadays, and relevant products sell well in our [online shop](https://www.seeedstudio.com/). But we find some of our customers——traditional hardware developers, often do not have a solid background in computer science.
-The purpose of this article is to build interest and a general understanding for developers who want to start their deep learning journey but do not have a background knowledge yet. I will list the common interests and problems that novices face in this article. And at the end of this document,  I'll recommend some course and books to learn more about the topic.
+AI is a hot topic nowadays, and relevant AI products sell well in our [online shop](https://www.seeedstudio.com/). But we find some of our customers:traditional hardware developers, often do not have a solid background in computer science. The purpose of this article to build interest and provide a general understanding for makers who want to start their deep learning journey. I will point some of the common use cases and potential pitfalls. Also at the end of this article,  I'll recommend some courses and books to learn more about this topic.
 
+## 1. What is ‘Artificial Intelligence (AI)’?
+AI is pervasive today. "Data Mining", "Artificial Intelligence", "Artificial Neural Network"… it gets pretty confusing ,huh?. Companies and computer scientists create thousands of new terms every year, but never explain to you ***what they actually are**.
 
-
-## 1. What is 'AI'
-AI is pervasive today. "Data Mining", "Artificial Intelligence", "Artificial Neural Network"……pretty confusing hum? Companies and computer scientists create thousands of new terms every year, but never explain to you ***what they actually are**.
-In the wiki, it says:
+According to Wikipedia:
  >Artificial intelligence (AI), sometimes called machine intelligence, is intelligence demonstrated by machines, in contrast to the natural intelligence displayed by humans and animals.
 
  However, unless it is used as a rigorously academic terminology, we generally use this term to refer to the Artificial Neural Network. Because the explosive development of this technology in recent years has resulted in too many computing products and commercial publicity, gradually replacing the meaning of the term 'AI' itself. So now when businesses say "AI products", they generally refer to products used to speed up neural network operations.
@@ -37,15 +35,16 @@ Some advertisements and ‘tutorals' will show you picture like the following on
 
 
 
-So if you want to get into deep learning, the first thing you need do is to comprehend the mathematical principles under the terms. I do not want to explain the algorithm detailed today, what you should know is that Neural Networks modules are distant relatives of a simple problem in your Algebra Class at Senior High School. In the last part of this passage. I'll recommend some course and books for the novice.
-Deep learning is a young experimental subject, and it updates every day. If you want to master it, the most important thing is to choose a topic or a real problem and read relevant papers as much as possible.
+So if you want to get into deep learning, the first thing you need do is to comprehend the mathematical principles behind the term. I do not want to explain the algorithm detailed today, what you should know is that Neural Networks models are distant relatives of a simple problem in your Algebra Class at Senior High School. In the last part of this passage. I'll recommend some courses and books for the novice learners.
+Deep learning is a young experimental subject, and with regular updates every day. If you want to master it, the most important thing is to choose a topic or a real problem and read relevant research papers as much as possible.
 
-## 2. Application&Some Amazing Projects
+## 2. Some interesting applications of Artificial Intelligence (AI)
 
-### Vision
-For Humans identification of any object by just seeing towards it done within few second, it's really easy for them, but when we concern about the machine to identify the object, it is the really complex thing until Hinton and Alex Krizhevsky won the champion of ImageNet in 2012.
-  Then Neural Network dominated Vision field, especially the problem of classification and segmentation, and the convolutional neural network is one of the most prominent approaches who won numerous competitions in recent years. It has outstanding results in image recognition.
-Nvidia has built a lot of [Vision Demo](https://github.com/dusty-nv/jetson-inference) for Jetson Nano, and we have tested two of them as classification and face detection:
+### Computer Vision
+Humans can identify any object by just gazing at it for few seconds, it's really easy for them. But for machines on the other hand, identification of an object was really complex task until Hinton and Alex Krizhevsky won the ImageNet competition in 2012.
+
+Then Neural Network dominated Vision field, especially the problem of classification and segmentation, and the convolutional neural network is one of the most prominent approaches which won numerous competitions in recent years. It has outstanding results in image recognition.
+Nvidia has built a lot of [Vision Demos](https://github.com/dusty-nv/jetson-inference) for Jetson Nano, and we have tested two of them for classification and face detection:
 <iframe width="800" height="450" src="https://www.youtube.com/embed/U0rNdI9pl_0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
@@ -54,7 +53,7 @@ Nvidia has built a lot of [Vision Demo](https://github.com/dusty-nv/jetson-infer
 **[Google Magenta](https://magenta.tensorflow.org/)** An open-source research project is exploring the role of machine learning as a tool in the creative process. This project group is known to the public because of AI-powered Doodle [Celebrating-Johann-Sebastian-Bach](https://www.google.com/doodles/celebrating-johann-sebastian-bach)
 ![Alt text](https://raw.githubusercontent.com/SeeedDocument/Introduction_to_Artificial_Intelligence_for_Maker/master/1555056026898.png)
 
-And here are some demo even more interaction:
+And here are some demo of the interaction:
 
 [Magic Sketchpad](https://magic-sketchpad.glitch.me/) Every time you start drawing a doodle, Sketch RNN tries to finish it and match the category you’ve selected.
 
@@ -71,9 +70,9 @@ And here are some demo even more interaction:
 
 
 
-### LOT & Sensors
+### IOT and Sensors
 
-**Smart Parking** Parking a vehicle in dense traffic environments often leads to an excess time of driving in search of free space which leads to congestions and environmental pollution. Lack of guidance information to vacant parking spaces is one reason for inefficient parking behaviour. Smart parking sensors and technologies facilitate guidance of drivers to free parking spaces thereby improving parking efficiency. Currently, no such sensors or technologies are in use for the open parking lot. So there is still something to be done.
+**Smart Parking** Parking a vehicle in dense traffic environments often leads to an excess time of driving in search of free space which leads to congestion and environmental pollution. Lack of guidance information to vacant parking spaces is one reason for inefficient parking behaviour. Smart parking sensors and technologies facilitate guidance of drivers to free parking spaces thereby improving parking efficiency. Currently, no such sensors or technologies are in use for the open parking lot. So there is still something to be done.
 [Deep Learning for Decentralized Parking Lot Occupancy](https://github.com/fabiocarrara/deep-parking)
 
 ![Alt text](https://raw.githubusercontent.com/SeeedDocument/Introduction_to_Artificial_Intelligence_for_Maker/master/1555055835602.png)
@@ -89,7 +88,7 @@ In the age of knowledge, Natural Language Processing (NLP) express its demand by
 
 
 
-#### Medical Information
+#### Medicine
 
 Artificial Intelligence is transforming the world of medicine. AI can help doctors make faster, more accurate diagnoses. It can predict the risk of a disease in time to prevent it. It can help researchers understand how genetic variations lead to disease. It enhances doctors’ ability to analyze medical images. It’s advancing the future of personalized medicine.
 Currently, substantial efforts are developed for the enrichment of medical imaging applications using these algorithms to diagnose the errors in disease diagnostic systems which may result in extremely ambiguous medical treatments. Machine and deep learning algorithms are important ways in medical imaging to predict the symptoms of early disease. Deep learning techniques, in specific convolutional networks, have promptly developed a methodology of particular for investigating medical images. It carries consideration concerning the suite of these algorithms which can be used for the investigation of diseases and automatic decision-making.
@@ -103,7 +102,7 @@ DLTK is a neural networks toolkit written in python, on top of TensorFlow. It is
 [**LotteryPredict**](https://github.com/chengstone/LotteryPredict) This demo used lstm and TensorFlow to predict lottery.
 
 
-## 3. Relevant Products
+## 3. List of Artificial Intelligence (AI) products
 AI is pervasive today, from consumer to enterprise applications. Developers began to try to apply it to the embedded and robotic field, but the performance of traditional embedded development board is obviously insufficient. Multinational companies such as Intel, Nvidia, Google and Huawei have all launched their deep-learning products, of which Jetson Nano has received the most attention recently, which makes it possible to deploy medium-sized neural networks in embedded systems at affordable prices and ultra-low power consumption. Small companies such as Sipeed and Firefly, also launched their own products for specific subdivision field. Here are some examples.
 
 [**NVIDIA Jetson Nano**](https://www.seeedstudio.com/NVIDIA-Jetson-Nano-Development-Kit-p-2916.html)
@@ -131,15 +130,15 @@ AI is pervasive today, from consumer to enterprise applications. Developers bega
 >Hikey970 is Super Edge AI Computing Platform Powered by Kirin970 SOC with 4 x Cortex A73,4 x Cortex A53. Hikey970 has 6GB LPDDR4 RAM, 64GB UFS storage, Gigabit Ethernet, GPS,PCIE Gen2 and CAN on board. As the world’s first dedicated NPU AI platform, Hikey970 integrates Huawei HiAI computing architecture and popular neural network frameworks which supports CPU, GPU AI and Neural Processing Unit dedicated to AI acceleration. Also, It also comes with Huawei’s HiAI SDK. Hikey 970 can be used in the most application in build Deep Learning, Robots, Automobile and Smart City.
 >![Alt text](https://raw.githubusercontent.com/SeeedDocument/Introduction_to_Artificial_Intelligence_for_Maker/master/1555051309338.png)
 
-## 4. Course &  Primer Tutorial
+## 4. Recommended books, courses and video tutorials
 
 ### Books
 
 1. [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/) This is one of the most friendly textbook of Neural Networks over the world without any annoying terms, and it's totally free and online. But the code in this book is a little bit over time, and if you are familiar with c++, you can just use them to comprehend the principle.
-2. [Deep Learning with Python](https://www.amazon.com/Deep-Learning-Python-Francois-Chollet/dp/1617294438) This book was written for anyone who wishes to explore deep learning from scratch or broaden their understanding of deep learning. Whether you’re a practising machine-learning engineer, a software developer, or a college student, you’ll find value in these pages.
+2. [Deep Learning with Python](https://www.amazon.com/Deep-Learning-Python-Francois-Chollet/dp/1617294438) This book was written for anyone who wishes to explore deep learning from scratch or broaden their understanding of deep learning. Whether you’re a practicing machine-learning engineer, a software developer, or a college student, you’ll find value in these pages.
 3. [Python For Data Analysis](https://www.cin.ufpe.br/~embat/Python%20for%20Data%20Analysis.pdf)  Classic tutorial for Data Analysis, and it's not out of date yet.
 
-### Course
+### Courses
 
 1. [Creative Applications of Deep Learning with TensorFlow](https://link.zhihu.com/?target=https://www.class-central.com/mooc/6679/kadenze-creative-applications-of-deep-learning-with-tensorflow) This course introduces you to deep learning: the state-of-the-art approach to building artificial intelligence algorithms.
 
@@ -147,7 +146,7 @@ AI is pervasive today, from consumer to enterprise applications. Developers bega
 
 3. [UC Berkeley AI-Sys Spring 2019](https://ucbrise.github.io/cs294-ai-sys-sp19/) This course describes from the classic structure like AlexNet to the latest trends in systems designs to better support the next generation of AI applications, and applications of AI to optimize the architecture and the performance of systems. The most valuable part for students online is the Required Reading List it provided.
 
-### Videos
+### Video tutorials
 
 1. [ScaledML 2019](https://www.youtube.com/playlist?list=PLRM2gQVaW_wWXoUnSfZTxpgDmNaAS1RtG)
 2. [A New Golden Age for Computer Architecture History, Challenges, and Opportunities.](https://www.youtube.com/watch?v=uyc_pDBJotI&t=767s)
