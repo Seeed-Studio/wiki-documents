@@ -1,5 +1,3 @@
-
-
 ---
 name: Grove - 3-Axis Digital Accelerometer ±200g (ADXL372)
 category: 
@@ -29,6 +27,9 @@ Product|Measurement Range|Output Port|Power Consumption
 [Grove - 3-Axis Digital Accelerometer ±200g (ADXL372)](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-200g-ADXL372-p-4003.html)|±200g|Digital I2C|measurement mode:22μA
 
  
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-200g-ADXL372-p-4003.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+
+
 
 ## Features
 
