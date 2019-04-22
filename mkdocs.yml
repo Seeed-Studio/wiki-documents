@@ -396,6 +396,10 @@ pages:
           - Grove - 3-Axis Digitial Compass v2.0: Grove-3-Axis_Digitial_Compass_v2.0.md
           - Grove - 3-Axis Digital Accelerometer(±1.5g): Grove-3-Axis_Digital_Accelerometer-1.5g.md
           - Grove - 3-Axis Digital Accelerometer(±400g): Grove-3-Axis_Digital_Accelerometer-400g.md
+          - Grove - 3-Axis Analog Accelerometer 20g (ADXL356B): Grove-3-Axis_Analog_Accelerometer_20g-ADXL356B.md
+          - Grove - 3-Axis Analog Accelerometer 40g (ADXL356C): Grove-3-Axis_Analog_Accelerometer_40g-ADXL356C.md
+          - Grove - 3-Axis Digital Accelerometer 40g (ADXL357): Grove-3-Axis_Digital_Accelerometer_40g-ADXL357.md
+          - Grove - 3-Axis Digital Accelerometer 200g (ADXL372): Grove-3-Axis_Digital_Accelerometer_200g-ADXL372.md
           - Grove - 3-Axis Digital Gyro: Grove-3-Axis_Digital_Gyro.md
           - Grove - 6-Axis Accelerometer&amp;Compass V2.0: Grove-6-Axis_AccelerometerAndCompass_V2.0.md
           - Grove - 6-Axis Accelerometer&amp;Gyroscope: Grove-6-Axis_AccelerometerAndGyroscope.md
