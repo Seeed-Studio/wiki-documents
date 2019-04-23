@@ -240,6 +240,7 @@ pages:
           - Wio Tracker - GPS, BT3.0, GSM, Arduino Compatible: wio_gps_board.md
           - LTE Cat 1 Pi HAT: LTE_Cat_1_Pi_HAT.md
           - Wio LTE Cat M1/NB-IoT Tracker: Wio_LTE_Cat_M1_NB-IoT_Tracker.md
+          - Wio Extension RTC: Wio-Extension-RTC.md
 
       - Wio:
           - Wio Introduction: Wio.md
