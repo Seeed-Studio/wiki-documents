@@ -116,7 +116,7 @@ To make it vibrate is just as easy as to turn on an LED. Here is an example show
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Vibration_Motor/master/img/IMG_0506.jpg)
+![](https://github.com/SeeedDocument/Grove-Vibration_Motor/raw/master/img/vibration_motor.png)
 
 !!!Note
 	If we don't have Grove Base Shield, We also can directly connect Grove - Vibration Motor to Seeeduino as below.
@@ -171,7 +171,7 @@ void loop()  {
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
-![cc](https://raw.githubusercontent.com/SeeedDocument/Grove_Vibration_Motor/master/image/cc_Vibration_Motor.png)
+![cc](https://github.com/SeeedDocument/Grove-Vibration_Motor/raw/master/img/cc_Vibration_Motor.png)
 
 Upload the program to your Arduino/Seeeduino.
 
