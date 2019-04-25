@@ -337,19 +337,22 @@ Seeed oled 96*96 demo.
 
 This is the Azure Sphere Secure Lock Demo. We build this Box with the new MT3620 Mini Dev Board and its Grove Breakout board. The MT3620 works as a device micro-controller and provides secure access to the cloud. 
 
-![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/Azure%20Sphere%20Mini%20Dev%20Board%20Demo%20(4).jpg)
+![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/Azure%20Sphere%20Mini%20Dev%20Board%20Demo4.jpg)
+
+<div align="center"><b>Front View</b><i></i></div>
 
 
 **1. Let's find out how the hardware works:**
 
 On top of the box , there is a warning light ,which will flash when the door is open. The MT3620 reads the micro switch status and knows the door is open or not. The door is locked by an electromagnet switch. There are two relays, they are both driven by MT3620‘s GPIOs. One relay controls the electromagnet power source, by opening the relay, the electromagnet will be opened. The other relay controls the warning light. 
 
-![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/Azure%20Sphere%20Mini%20Dev%20Board%20Demo%20(2).jpg)
+![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/Azure%20Sphere%20Mini%20Dev%20Board%20Demo2.jpg)
 
+<div align="center"><b>Top View</b><i></i></div>
 
-![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/Azure%20Sphere%20Mini%20Dev%20Board%20Demo%20(5).jpg)
+![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/Azure%20Sphere%20Mini%20Dev%20Board%20Demo5.jpg)
 
-
+<div align="center"><b>Side View</b><i></i></div>
 
 
 **2. We have three demos:**
