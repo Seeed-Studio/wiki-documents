@@ -193,6 +193,7 @@ pages:
 
       - Azure Sphere:
           - Azure Sphere MT3620 Development Kit: Azure_Sphere_MT3620_Development_Kit.md
+          - MT3620 Mini Dev Board: MT3620_Mini_Dev_Board.md
           - Grove Starter Kit for Azure Sphere MT3620 Development Kit: Grove_Starter_Kit_for_Azure_Sphere_MT3620_Development_Kit.md
           - MT3620 Ethernet Shield v1.0: MT3620_Ethernet_Shield_v1.0.md
 
