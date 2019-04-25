@@ -339,7 +339,6 @@ This is the Azure Sphere Secure Lock Demo. We build this Box with the new MT3620
 
 ![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/Azure%20Sphere%20Mini%20Dev%20Board%20Demo%20(4).jpg)
 
-<div align="center"><b>Front View</b><i> </i></div>
 
 **1. Let's find out how the hardware works:**
 
@@ -347,11 +346,10 @@ On top of the box , there is a warning light ,which will flash when the door is 
 
 ![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/Azure%20Sphere%20Mini%20Dev%20Board%20Demo%20(2).jpg)
 
-<div align="center"><b>Top View</b><i> </i></div>
 
 ![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/Azure%20Sphere%20Mini%20Dev%20Board%20Demo%20(5).jpg)
 
-<div align="center"><b>Side View</b><i> </i></div>
+
 
 
 **2. We have three demos:**
