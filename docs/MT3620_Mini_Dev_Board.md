@@ -197,7 +197,12 @@ We build there demoes which combine MT3620 Mini Dev Board and [Seeed Grove syste
 
 **Demo#2**: MT3620 Mini Dev Board performs as an MCU, which connects with Grove-Light Sensor and USB to Grove-Rotary Sensor. Then you connect MT3620 Mini Dev Board to PC usb ports.  After you downloading the code, you move your hand on top of the Grove-Light Sensor or rotate the Grove-Rotary Sensor, you can see analog outputs for both sensors from Visual Studio Output window.  
 
-**Demo#3**: MT3620 Mini Dev Board performs as an MCU, which connects with Grove - OLED Display 1.12". Then you connect MT3620 Mini Dev Board to PC usb ports.  After you downloading the code, you press Grove-Button and enter "Hello World!" from USB to TTL adapter, you can receive "Hello World!" from Visual Studio Output window.  
+**Demo#3**: MT3620 Mini Dev Board performs as an MCU, which connects with Grove - OLED Display 1.12". Then you connect MT3620 Mini Dev Board to PC usb ports.  After you downloading the code, you press Grove-Button and enter "Hello World!" from USB to TTL adapter, you can receive "Hello World!" from Visual Studio Output window. 
+
+**MT3620 Grove Breakout**：MT3620 Mini Dev Board supports SPI, UART, I2C, Digital functions, but does not support the ADC function. So the MT3620 Grove Breakout includes [AD7992](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/res/AD7992.pdf) chip, which is a 12-bit, low power, successive approximation ADC with an I2C-compatible interface. Then connect to I2C interface of MT3620 Mini Dev Board. 
+
+![](https://raw.githubusercontent.com/SeeedDocument/MT3620_Mini_Dev_Board/master/img/adc_i2c.png)
+
 
 ### Demo#1 Digital and UART
 
@@ -328,8 +333,36 @@ Remote debugging from host 192.168.35.1
 Seeed oled 96*96 demo.
 ```
 
+## Door Remote Control Project
+
+This is the Azure Sphere Secure Lock Demo. We build this Box with the new MT3620 Mini Dev Board and its Grove Breakout board. The MT3620 works as a device micro-controller and provides secure access to the cloud. 
+
+![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/Azure%20Sphere%20Mini%20Dev%20Board%20Demo%20(4).jpg)
+
+<div align="center"><b>Front View</b><i> </i></div>
+
+**1. Let's find out how the hardware works:**
+
+On top of the box , there is a warning light ,which will flash when the door is open. The MT3620 reads the micro switch status and knows the door is open or not. The door is locked by an electromagnet switch. There are two relays, they are both driven by MT3620‘s GPIOs. One relay controls the electromagnet power source, by opening the relay, the electromagnet will be opened. The other relay controls the warning light. 
+
+![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/Azure%20Sphere%20Mini%20Dev%20Board%20Demo%20(2).jpg)
+
+<div align="center"><b>Top View</b><i> </i></div>
+
+![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/Azure%20Sphere%20Mini%20Dev%20Board%20Demo%20(5).jpg)
+
+<div align="center"><b>Side View</b><i> </i></div>
 
 
+**2. We have three demos:**
+
+- **Demo#1:** Open the lock by human fingerprint
+- **Demo#2:** Open the lock by azure device explorer remotely from the cloud
+- **Demo#3:** Report alarm message when the door has been broken in illegally
+
+For detail operation, please refer to the video. 
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/NgH3Ot9pM1Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Resource
 
