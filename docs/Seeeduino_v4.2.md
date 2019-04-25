@@ -306,6 +306,15 @@ A2: Seeeduino v4.2 is fully compatible with Arduino UNO. The mainly difference l
 * Others circuit improve
 
 
+**Q3: Error downloading http://downloads.arduino.cc/packages/package_index.json**
+
+A3: Please follow below steps to solve the issue. 
+
+* Click File -> Preferences
+* Click  in the url C:\Users\...\AppData\Local\Arduino15\preferences.txt at the bottom of the Preferences window.
+* Delete all the files except preferences.txt, staging and packages.
+* Close and reopen an IDE window and it shall work. 
+
 ## Resources
 - **[PDF]** [Download Wiki PDF](https://github.com/SeeedDocument/SeeeduinoV4/raw/master/resources/Seeeduino_v4.2.pdf)
 - **[Eagle]** [Seeeduino V4.2 in EAGLE file](https://github.com/SeeedDocument/SeeeduinoV4/raw/master/resources/SeeeduinoV4.2.zip)
