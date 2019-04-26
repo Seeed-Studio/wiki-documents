@@ -355,13 +355,16 @@ On top of the box , there is a warning light ,which will flash when the door is 
 <div align="center"><b>Side View</b><i></i></div>
 
 
-**2. We have three demos:**
+**2. MT3620 Mini Dev Board**
 
-- **Demo#1:** Open the lock by human fingerprint
-- **Demo#2:** Open the lock by azure device explorer remotely from the cloud
-- **Demo#3:** Report alarm message when the door has been broken in illegally
-
-For detail operation, please refer to the video. 
+- Step 1. Download [Azure Sphere Demo](https://github.com/Seeed-Studio/Azure_Sphere_Demo). 
+- Step 2. Follow Quickstarts for Azure Sphere to open the **Azure_Sphere_Demo\Demostrations\RemoteControlDoor\RemoteControlDoor.sln** project.
+- Step 3. Open the main.c under Source Files. 
+- Step 4. Modify wifiSsid and wifiPsk @line28 and 29.
+- Step 5. Connect the demo to Azure IoT.
+- Step 6. Click Build -> Rebuild Solution directly to the device.
+- Step 7. Use the Remote Debug Tool to access the device.  
+- Step 8. Follow the video to operate the example in 3 different ways.
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/NgH3Ot9pM1Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
