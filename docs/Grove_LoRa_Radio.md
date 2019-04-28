@@ -171,8 +171,11 @@ The below chart shows the relationships between the band rate signal band width 
 
 * ***Library***
     *   [Grove - LoRa Radio Library and Examples](https://github.com/Seeed-Studio/Grove_LoRa_433MHz_and_915MHz_RF/)
+    *   [LMIC Library](https://github.com/matthijskooijman/arduino-lmic)
 
 * [***Download ALL Above***](https://github.com/SeeedDocument/Grove_LoRa_Radio/blob/master/res/res.zip)
+
+
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
