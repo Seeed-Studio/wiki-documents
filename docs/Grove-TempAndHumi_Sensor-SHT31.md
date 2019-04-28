@@ -78,7 +78,7 @@ Using the sensor is easy. For [Seeeduino](http://www.seeedstudio.com/depot/Seeed
 |![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-TempAndHumi_Sensor-SHT31/raw/master/img/thumbnail.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-SHT31-p-2655.html)|
 
-- **Step 2.** Connect Grove - Temperature&Humidity Sensor(SHT31) to port D6 of Grove-Base Shield.
+- **Step 2.** Connect Grove - Temperature&Humidity Sensor(SHT31) to I2C port of Grove-Base Shield.
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 ![](https://github.com/SeeedDocument/Grove-TempAndHumi_Sensor-SHT31/raw/master/img/arduino_connect.jpg)
