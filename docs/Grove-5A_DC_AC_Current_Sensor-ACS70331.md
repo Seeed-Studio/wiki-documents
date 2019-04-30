@@ -190,7 +190,13 @@ The four GMR elements are arranged in a Wheatstone bridge configuration as shown
 
 
 
-- **Step 1.** Copy the following code into a new sketch in the Arduino IDE
+- **Step 1.** Download the [Grove Current Sensor](https://github.com/Seeed-Studio/Grove_Current_Sensor) Library from Github.
+
+
+
+
+- **Step 2.** In the /example/ folder, you can find the demo code. Here we take the [Grove - ±5A DC/AC Current Sensor (ACS70331)](https://github.com/Seeed-Studio/Grove_Current_Sensor/blob/master/examples/Grove_5A_DC_Current_Sensor/Grove_5A_DC_Current_Sensor.ino) for instance. Just click the **Grove_5A_DC_Current_Sensor.ino** to open the demo. Or you can copy the following code:
+
 
 ```C++
 #ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
@@ -213,8 +219,6 @@ long int sensorValue = 0;
 float sensitivity = 1000.0 / 200.0; //1000mA per 200mV 
 
 
-
-//float Vref = 244;
 float Vref = 1508;
 
 void setup() 
@@ -275,11 +279,11 @@ void loop()
 ```
 
 
-- **Step 2.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 3.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
-- **Step 3.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time. Set the baud rate to **9600**.
+- **Step 4.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time. Set the baud rate to **9600**.
 
-- **Step 4. Calibration**  
+- **Step 5. Calibration**  
         When there is no current flowing, the sensor will still have a output value. We call this value **zero offset**. 
 
 
@@ -319,7 +323,7 @@ Then save the code and upload the code again, follow the Step 2. and Step 3. Now
 When the current output becomes to 0mA or a small value, you have completed the calibration.
 
 
-- **Step 5.** Now it's all yours, you can power up the current. Please feel free to use it, remember this is a 5A Current Sensor, current cannot exceed 5A!  
+- **Step 6.** Now it's all yours, you can power up the current. Please feel free to use it, remember this is a 5A Current Sensor, current cannot exceed 5A!  
  
 If you want to know the calculation formula of the result, please refer to the [FAQ Q1](#faq)
 

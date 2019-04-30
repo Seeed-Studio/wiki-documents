@@ -1,5 +1,5 @@
 ---
-name: Grove - 10A DC Current Sensor (ACS725)
+name: Grove - 2.5A DC Current Sensor (ACS725)
 category: 
 bzurl: 
 oldwikiname: 
@@ -187,7 +187,12 @@ The four GMR elements are arranged in a Wheatstone bridge configuration as shown
 
 
 
-- **Step 1.** Copy the following code into a new sketch in the Arduino IDE
+- **Step 1.** Download the [Grove Current Sensor](https://github.com/Seeed-Studio/Grove_Current_Sensor) Library from Github.
+
+
+- **Step 2.** In the /example/ folder, you can find the demo code. Here we take the [Grove_2_5A_Current_Sensor.ino](https://github.com/Seeed-Studio/Grove_Current_Sensor/tree/master/examples/Grove_2_5A_Current_Sensor) for instance. Just click the Grove_2_5A_Current_Sensor.ino to open the demo. Or you can copy the following code:
+
+
 
 ```C++
 #ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
@@ -210,7 +215,7 @@ int sensorValue = 0;
 float sensitivity = 1000.0 / 800.0; //1000mA per 800mV 
 
 
-float Vref = 265;  //Vref is zero drift value, you need to change this value to the value you actually measured before using it.
+float Vref = 265;  //Firstly,change this!!!
 
 void setup() 
 {
@@ -269,11 +274,11 @@ void loop()
 ```
 
 
-- **Step 2.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 3.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
-- **Step 3.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time. Set the baud rate to **9600**.
+- **Step 4.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time. Set the baud rate to **9600**.
 
-- **Step 4. Calibration**  
+- **Step 5. Calibration**  
         When there is no current flowing, the sensor will still have a small output value. We call this value **zero offset**. 
 
 
@@ -367,7 +372,7 @@ If you want to know the calculation formula of the result, please refer to the [
 
 - **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
 
-- **Step 2**. Download the source file by cloning the grove.py library. 
+- **Step 2**. Download the source file by cloning the [grove.py](https://github.com/Seeed-Studio/grove.py) library. 
 
 ```
 cd ~
@@ -378,13 +383,135 @@ git clone https://github.com/Seeed-Studio/grove.py
 - **Step 3**. Excute following commands to run the code.
 
 ```python
-cd grove.py/grove/current_sensor
-python 2.5A_current_sonsor.py
+cd grove.py/grove   # to enter the demo file folder
+python grove_current_sensor.py 0 2.5A   # to run the demo program 
 ```
 
-Here is the code block of **2.5A_current_sonsor.**
+Then the terminal will output as following:
 
 ```python
+
+pi@raspberrypi:~/grove.py/grove $ python grove_current_sensor.py 0 2.5A
+pin_voltage(mV):
+270
+current(mA):
+13.0
+()
+pin_voltage(mV):
+270
+current(mA):
+13.0
+()
+pin_voltage(mV):
+270
+current(mA):
+13.0
+()
+pin_voltage(mV):
+269
+current(mA):
+11.0
+()
+pin_voltage(mV):
+270
+current(mA):
+13.0
+()
+^CTraceback (most recent call last):
+  File "grove_current_sensor.py", line 200, in <module>
+    main()
+  File "grove_current_sensor.py", line 185, in main
+    time.sleep(1)
+KeyboardInterrupt
+```
+
+Tap ++ctrl+c++ to quit.
+
+
+!!!Note
+        Please note the second command, There are two parameters after the file name:   
+        
+        - <font style="font-weight:bold;color:#AE0000">0</font> means the sensor is connected to port A0. If you connect the sensor to port A2, then you need to change this parameter to 2.  This parameter has a range of 0-7, but if you use the Grove base hat, you can only use 0/2/4/6 because of the physical limitations of the interface.  
+
+        - <font style="font-weight:bold;color:#AE0000">2.5A</font> means the current sensor type is 2.5A DC 
+
+
+
+Sensor                                     |Current type|Parameter Value
+-------------------------------------------|------------|----
+Grove - 2.5A DC Current Sensor(ACS70331)   |DC          |2.5A
+Grove - ±5A DC/AC Current Sensor (ACS70331)|DC          |5A_DC
+                                           |AC          |5A_AC
+Grove - 10A DC Current Sensor (ACS725)     |DC          |10A
+
+
+<div align="center"><i>This series has three current sensors, the parameter list is as above</i></div>
+
+
+- **Step 4 Calibration**.  
+
+    When there is no current flowing, the sensor will still have a small output value. We call this value zero offset. As you can see, in the step 3, the zero offset of this board is 270mV, converted into current is 13mA.
+
+    Due to the presence of zero offset, the sensor will also have a reading when there is no current. So we set a parameter **Vref** to fix it, you can find it in the **python grove_current_sensor.py**. For the Grove - 2.5A DC Current Sensor(ACS70331), we set the **Vref** to 260 by default, however the zero offset varies from board to board. That's why we need to do the calibration first.
+    
+    
+    Check the python code below：
+
+```python
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+# The MIT License (MIT)
+# Copyright (C) 2018  Seeed Technology Co.,Ltd.
+#
+# This is the library for Grove Base Hat
+# which used to connect grove sensors for Raspberry Pi.
+'''
+This is the code for
+    - `Grove - 2.5A DC current sensor  <https://www.seeedstudio.com/Grove-2-5A-DC-Current-Sensor-ACS70331-p-2929.html>`_
+    - `Grove - 5A AC/DC current sensor <https://www.seeedstudio.com/Grove-5A-DC-AC-Current-Sensor-ACS70331-p-2928.html>`_
+    - `Grove - 10A current sensor      <https://www.seeedstudio.com/Grove-10A-DC-Current-Sensor-ACS725-p-2927.html>`_
+Examples:
+    .. code-block:: python
+        import time
+        from grove_current_sensor import Current
+        pin = 0
+        sensor_type = "2.5A"
+        #if use 10A current sensor input: pin = 0 , sensor_type = "10A"
+        if (sensor_type == "2.5A"):
+            sensitivity = 1000.0 / 800.0
+            Vref = 260
+        if (sensor_type == "5A_DC"):
+            sensitivity = 1000.0 / 200.0
+            Vref = 1498
+        if (sensor_type == "5A_AC"):
+            sensitivity = 1000.0 / 200.0
+            Vref = 1498
+        if (sensor_type == "10A"):
+            sensitivity = 1000.0 / 264.0
+            Vref = 322
+        averageValue = 500
+        ADC = Current()
+        while True:
+            if(sensor_type == "5A_AC"):
+                pin_voltage = ADC.get_nchan_vol_milli_data(pin,averageValue)
+                current = ADC.get_nchan_AC_current_data(pin,sensitivity,Vref,averageValue)
+            else:
+                temp = ADC.get_nchan_current_data(pin,sensitivity,Vref,averageValue)
+                current = temp[0]
+                pin_voltage = temp[1]
+        
+            current = round(current)
+            print("pin_voltage(mV):")
+            print(pin_voltage)
+            print("current(mA):")
+            print(current)
+            print()
+            time.sleep(1)
+    
+'''
+
+import sys
 import time
 from grove.i2c import Bus
 
@@ -398,137 +525,204 @@ REG_RTO_START = 0X30
 
 REG_SET_ADDR = 0XC0
 
-sensitivity = 1000.0 / 800.0
-Vref = 260              #The value of the sensorValue is read when there is no current load.
-averageValue = 10       #Take the average of 10 times
-class Pi_hat_adc():
-    def __init__(self,bus_num=1,addr=ADC_DEFAULT_IIC_ADDR):
-        self.bus=Bus(bus_num)
-        self.addr=addr
-    #get n chanel data with unit mv.  
-    def get_nchan_vol_milli_data(self,n):
-        data=self.bus.read_i2c_block_data(self.addr,REG_VOL_START+n,2)
-        val =data[1]<<8|data[0]
-        return val
+__all__ = ['Current','Bus']
 
-    #get n chanel data with unit mv.  
-    def get_nchan_current_data(self,n):
+class Current():
+    '''
+    Grove Current Sensor class
+    '''
+
+    def __init__(self,bus_num=1,addr=ADC_DEFAULT_IIC_ADDR):
+        '''
+        Init iic.
+        Args: 
+            bus_num(int): the bus number;
+            addr(int): iic address;
+        '''
+        self.bus = Bus(bus_num)
+        self.addr = addr
+  
+    def get_nchan_vol_milli_data(self,n,averageValue):
+        '''
+        Get n chanel data with unit mV.
+        :param int n: the adc pin.
+        :param int averageValue: Average acquisition frequency.
+        Returns: 
+            int: voltage value
+        '''
         val = 0
         for i in range(averageValue):
-            data=self.bus.read_i2c_block_data(self.addr,REG_VOL_START+n,2)
-            val +=data[1]<<8|data[0]
+            data = self.bus.read_i2c_block_data(self.addr,REG_VOL_START+n,2)
+            val += data[1]<<8|data[0]
+        val = val / averageValue
+        return val
+
+    def get_nchan_current_data(self,n,sensitivity,Vref,averageValue):
+        '''
+        2.5A/5A DC/10A cunrrent sensor get n chanel data with unit mA.
+        :param int n: the adc pin.
+        :param float sensitivity: The coefficient by which voltage is converted into current.
+        :param int Vref: Initial voltage at no load.
+        :param int averageValue: Average acquisition frequency.
+        Returns: 
+            int: current value
+        '''
+        val = 0
+        for i in range(averageValue):
+            data = self.bus.read_i2c_block_data(self.addr,REG_VOL_START+n,2)
+            val += data[1]<<8|data[0]
         val = val / averageValue
         currentVal = (val - Vref) * sensitivity
-        return currentVal
+        return currentVal,val
 
-ADC = Pi_hat_adc()
+    def get_nchan_AC_current_data(self,n,sensitivity,Vref,averageValue):
+        '''
+        5A current sensor AC output and get n chanel data with unit mA.
+        :param int n: the adc pin.
+        :param float sensitivity: The coefficient by which voltage is converted into current.
+        :param int Vref: Initial voltage at no load.
+        :param int averageValue: Average acquisition frequency.
+        Returns: 
+            int: current value
+        '''
+        sensorValue = 0
+        for i in range(averageValue):
+            data=self.bus.read_i2c_block_data(self.addr,REG_VOL_START+n,2)
+            val=data[1]<<8|data[0]
+            if(val > sensorValue):
+                sensorValue=val
+            time.sleep(0.00004)
+        currentVal = ((sensorValue - Vref) * sensitivity)*0.707
+        return currentVal   
+
+ADC = Current()
 def main():
-    while True:
-        pin_voltage = ADC.get_nchan_vol_milli_data(0)   #A0
-        current = ADC.get_nchan_current_data(0)         #A0
-        current = round(current)
-        print("pin_voltage(mV):")
-        print(pin_voltage)
-        print("current(mA):")
-        print(current)
-        print
-        time.sleep(1)
+    if(len(sys.argv) == 3):
 
+        pin = int(sys.argv[1])
+        sensor_type = sys.argv[2]
+        if (pin < 8 and (sensor_type == "2.5A" or sensor_type == "5A_DC" or sensor_type == "5A_AC" or sensor_type == "10A") ):
+            if (sensor_type == "2.5A"):
+                sensitivity = 1000.0 / 800.0
+                Vref = 260
+            if (sensor_type == "5A_DC"):
+                sensitivity = 1000.0 / 200.0
+                Vref = 1498
+            if (sensor_type == "5A_AC"):
+                sensitivity = 1000.0 / 200.0
+                Vref = 1498
+            if (sensor_type == "10A"):
+                sensitivity = 1000.0 / 264.0
+                Vref = 322
+            averageValue = 500
+
+            while True:
+
+                if(sensor_type == "5A_AC"):
+                    pin_voltage = ADC.get_nchan_vol_milli_data(pin,averageValue)
+                    current = ADC.get_nchan_AC_current_data(pin,sensitivity,Vref,averageValue)
+                else:
+                    temp = ADC.get_nchan_current_data(pin,sensitivity,Vref,averageValue)
+                    current = temp[0]
+                    pin_voltage = temp[1]
+
+                current = round(current)
+                print("pin_voltage(mV):")
+                print(pin_voltage)
+                print("current(mA):")
+                print(current)
+                print()
+                time.sleep(1)
+            
+        else:
+            print("parameter input error!")
+            print("Please enter parameters for example: python grove_current_sensor 0 2.5A")
+            print("parameter1: 0-7")
+            print("parameter2: 2.5A/5A_DC/5A_AC/10A")
+    
+    else:
+        print("Please enter parameters for example: python grove_current_sensor 0 2.5A")
+        print("parameter1: 0-7")
+        print("parameter2: 2.5A/5A_DC/5A_AC/10A")
+    
+    
 if __name__ == '__main__':
     main()
+
 ```
 
-Then you will see the output like that(The current in the circuit to be tested is 0mA.)
+You can modify the **Vref** at line 147 of the code block above:
 
+```python
 
-```Python
-pi@raspberrypi:~/grove.py/grove/current_sensor $ python 2.5A_current_sonsor.py
-pin_voltage(mV):
-273
-current(mA):
-13.0
+        if (pin < 8 and (sensor_type == "2.5A" or sensor_type == "5A_DC" or sensor_type == "5A_AC" or sensor_type == "10A") ):
+            if (sensor_type == "2.5A"):
+                sensitivity = 1000.0 / 800.0
+                Vref = 260
+            if (sensor_type == "5A_DC"):
+                sensitivity = 1000.0 / 200.0
+                Vref = 1498
+            if (sensor_type == "5A_AC"):
+                sensitivity = 1000.0 / 200.0
+                Vref = 1498
+            if (sensor_type == "10A"):
+                sensitivity = 1000.0 / 264.0
+                Vref = 322
+            averageValue = 500
 
-pin_voltage(mV):
-274
-current(mA):
-13.0
-
-pin_voltage(mV):
-262
-current(mA):
-11.0
-
-pin_voltage(mV):
-264
-current(mA):
-13.0
 ```
 
-
-
-- **Step 4 Calibration**. As you can see, the current value of the output is not 0 when the actual current value in the circuit to be tested is 0, so we need to calibration.  
-Open the **2.5A_current_sonsor.py** with nano or any other editor you like. 
+As you can see, for the 2.5A Current Sensor the default **Vref** is 260, and in the **Step 3**, we can find it when there is no current the zero offset value is 270mV. So let's change it into 270.
 
 
 ```python
-pi@raspberrypi:~/grove.py/grove/current_sensor $ nano 2.5A_current_sonsor.py
-
+            if (sensor_type == "2.5A"):
+                sensitivity = 1000.0 / 800.0
+                Vref = 270
 ```
 
-Let's jump to line 15.
+Now, let's run this demo again.
+
 
 ```python
-Vref = 260    #The value of the sensorValue is read when there is no current load.
-```
 
-When there is no current flowing, the sensor will still have a small output value. We call this value zero offset. The default zero offset we set is 260, but the zero offset value varies from board to board.
-You need to change it with your own, in the demo case, it is 273,274,262,264, so let's calculate the average. It's about 268, then we will set the **Vref** to 268.
-
-
-```
-Vref = 268    #The value of the sensorValue is read when there is no current load.
-```
-
-Now, tap ++ctrl+x++ to quit the nano editor and tap ++y++ to save the modification.  
-
-
-Do the step 3 again.
-
-```python
-pi@raspberrypi:~/grove.py/grove/current_sensor $ python 2.5A_current_sonsor.py
-
+pi@raspberrypi:~/grove.py/grove $ python grove_current_sensor.py 0 2.5A
 pin_voltage(mV):
-265
+269
 current(mA):
-0.0
-
-pin_voltage(mV):
-267
-current(mA):
-1.0
-
+-1.0
+()
 pin_voltage(mV):
 270
 current(mA):
-4.0
-
+0.0
+()
 pin_voltage(mV):
-278
-current(mA):
-1.0
-
-pin_voltage(mV):
-265
+270
 current(mA):
 0.0
-
+()
 pin_voltage(mV):
-266
+270
 current(mA):
-1.0
+0.0
+()
+pin_voltage(mV):
+270
+current(mA):
+0.0
+()
+^CTraceback (most recent call last):
+  File "grove_current_sensor.py", line 200, in <module>
+    main()
+  File "grove_current_sensor.py", line 185, in main
+    time.sleep(1)
+KeyboardInterrupt
 ```
 
-Much better, now you can power up the circuit to be tested.
+Well, better than before, now you can measure the current more accurately 😄
+
+
 
 
 
