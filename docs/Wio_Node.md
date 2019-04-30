@@ -141,11 +141,12 @@ Download the Android or iOS App and install. Or you can go to app store of Apple
     Make sure your Android OS version is 4.1 or advanced, iOS version is 7 or advanced.
 
 ### **STEP 2:** Create your Account
+
 - If it is your first time to use Wio APP, it may require GPS authorization, please approve it, then sign up.
 - If you already have an account, check the server location before logging in.
 
 !!!Note
-   Please pay attention to the server location, because wrong server location will lead to failure when connecting to Wio Node.
+    Please pay attention to the server location, because wrong server location will lead to failure when connecting to Wio Node.
 
 [![](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/Wio%20App/sign%20in%2Blog%20in%2Bchoose%20server.png)](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/Wio%20App/sign%20in%2Blog%20in%2Bchoose%20server.png)
 
