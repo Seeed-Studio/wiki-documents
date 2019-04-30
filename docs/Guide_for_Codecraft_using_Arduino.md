@@ -5,7 +5,7 @@ Codecraft is a programming software based on Scratch3.0 and supports both graphi
 There are 2 modes in Codecraft which are Stage Mode and Device Mode. In Stage Mode, users can control an object which is called a “sprite” by using code blocks. Also, this mode can be used to help students learn about shapes, arithmetic and also other areas of math.
 
 In Device mode, users can connect with a Grove Zero or an Arduino to build their cool projects by simply dragging and dropping code blocks into the IDE.
-
+LE
 ## Codecraft
 
 ### Blocks in device mode
@@ -41,6 +41,10 @@ C blocks are blocks that take the shape of “C’s”. Also known as “Wrap bl
 ![output boolean blocks](https://github.com/SeeedDocument/Guide_for_Codecraft_using_Arduino/raw/master/img/p5.png)
 
 Output Boolean Blocks are hexagonal shaped blocks that checks if a condition is “true” or “false” and performs an operation once the condition is met. These block can be placed inside Boolean Blocks and C blocks.
+
+### Compatible Grove
+
+Please refer to the [CodeCraft Grove Compatible List](http://wiki.seeedstudio.com/Codecraft_Grove_Compatible_List/) to confirm if your Grove is supported.
 
 ### Basic Tutorial
 
@@ -301,7 +305,7 @@ Display the rotation of Grove - Rotary Angle Sensor in Serial.
 !!!Success
     Rotate Rotary Angle Sensor, you can see data changes in monitor.
 
-### Lesson 6. Grove - LED
+### Lesson 6. Using Grove - LED
 
 ![Grove - LED](https://github.com/SeeedDocument/Guide_for_Codecraft_using_Arduino/raw/master/img/grove_led.jpg)
 
@@ -348,7 +352,7 @@ Other than that, we also need "count with...from...to...step" block in Control t
 !!!Success
     When the code finishes uploaded, you will see the LED breathing.
 
-### Lesson 8. Grove - Light Sensor
+### Lesson 8. Using Grove - Light Sensor
 
 ![Grove - Light Sensor](https://github.com/SeeedDocument/Guide_for_Codecraft_using_Arduino/raw/master/img/grove_light.jpg)
 
