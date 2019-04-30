@@ -42,8 +42,8 @@ MT3620 software development is supported using the powerful Microsoft Visual Stu
  
 !!!Warning
     1. Return policy: This product can only be activated once. Seeed will not accept return once the package has been opened. Check Warranty & Returns here. If there are any quality issues after opening the package, please contact Seeed Tech Support Team techsupport@seeed.cc. 
-    2. Usage: This Azure Sphere development kit can be only used for prototyping. It cannot be built into a product for commercial distribution. It cannot be re-sold or used as part of a production environment.
-    3. Open Source Licenses: The software included in this product contains copyrighted software that is licensed under the GPL, LGPL or other open source licenses, listed ataka.ms/AzureSphereSDK. You may obtain the source code for applicable software from aka.ms/AzureSphereSDK or by sending an email to order@seeed.cc.
+    
+    2. Open Source Licenses: The software included in this product contains copyrighted software that is licensed under the GPL, LGPL or other open source licenses, listed ataka.ms/AzureSphereSDK. You may obtain the source code for applicable software from aka.ms/AzureSphereSDK or by sending an email to order@seeed.cc.
 
 ## Features
 
