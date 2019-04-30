@@ -1,4 +1,4 @@
-python grove_air_quality_sensor_v1_3.py 0 1---
+---
 name: Grove - Water Sensor
 category: Sensor
 bzurl: https://www.seeedstudio.com/Grove-Water-Sensor-p-748.html
