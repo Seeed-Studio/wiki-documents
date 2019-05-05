@@ -147,6 +147,17 @@ git clone https://github.com/Seeed-Studio/grove.py
 
 ```
 
+- **Step 2**. Install the grove.py library
+
+```
+cd grove.py
+# Python2
+sudo pip install .
+# Python3
+sudo pip3 install .
+``` 
+
+
 - **Step 3**. Excute below commands to run the code.
 
 ```
