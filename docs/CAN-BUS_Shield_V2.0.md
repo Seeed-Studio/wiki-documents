@@ -221,6 +221,15 @@ The SPI pins (SCK, MISO, MOSI) are routed to the ICSP pins by default. But for s
 !!!Warning
     Please do not cut the forth left PAD connection. Becasue there is no signal connected with forth right PAD.
 
+
+**Dimensions**
+
+![](https://github.com/SeeedDocument/CAN-BUS-Shield-V2.0/raw/master/img/drawing1.png)
+
+![](https://github.com/SeeedDocument/CAN-BUS-Shield-V2.0/raw/master/img/drawing2.png)
+
+![](https://github.com/SeeedDocument/CAN-BUS-Shield-V2.0/raw/master/img/drawing3.png)
+
 ## Getting Started
 -----
 Here's a simple example to show you how CAN-BUS Shield works. In this example we need 2 pieces of CAN-BUS Shields as well as Arduino or Seeeduino.
@@ -460,15 +469,17 @@ From each node (IE Switch pod that controls your windows or electric door locks)
 ## Resources
 -----
 
-* **【PDF】**[CAN-BUS Shield V2.0 Schmatics](https://github.com/SeeedDocument/CAN-BUS-Shield-V2.0/raw/master/res/CAN-BUS%20Shield%20%20v2.0.pdf)
-* **【Eagle】**[Schematic & PCB of CAN-BUS Shield V2.0](https://github.com/SeeedDocument/CAN-BUS-Shield-V2.0/raw/master/res/CAN-BUS%20Shield%20%20v2.0.rar)
-* **【Library】**[Arduino Library for CAN-BUS Shield](https://github.com/Seeed-Studio/CAN_BUS_Shield)
-* **【Datasheet】**[MCP2515 datasheet](https://github.com/SeeedDocument/CAN_BUS_Shield/raw/master/resource/MCP2515.pdf)
-* **【Datasheet】**[MCP2551 datasheet](https://github.com/SeeedDocument/CAN_BUS_Shield/raw/master/resource/Mcp2551.pdf)
-* **【Demo】**[An OBD Demo](https://github.com/Seeed-Studio/CANBUS_SHIELD_OBD_RECIPLE)
-* **【Tool】**[MCP2515 Baud Rate Tool](https://github.com/SeeedDocument/CAN_BUS_Shield/raw/master/resource/CAN_Baudrate_CalcV1.3.zip)
-* **【Tool】**[USB-CAN Analyzer](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html)
-* **【Cable】**[DB9 to OBD2 Cable](https://www.seeedstudio.com/DB9-to-OBD2-Cable-With-Switch-p-2872.html)
+* **[PDF]**[CAN-BUS Shield V2.0 Schmatics](https://github.com/SeeedDocument/CAN-BUS-Shield-V2.0/raw/master/res/CAN-BUS%20Shield%20%20v2.0.pdf)
+* **[Eagle]**[Schematic & PCB of CAN-BUS Shield V2.0](https://github.com/SeeedDocument/CAN-BUS-Shield-V2.0/raw/master/res/CAN-BUS%20Shield%20%20v2.0.rar)
+* **[Library]**[Arduino Library for CAN-BUS Shield](https://github.com/Seeed-Studio/CAN_BUS_Shield)
+* **[Datasheet]**[MCP2515 datasheet](https://github.com/SeeedDocument/CAN_BUS_Shield/raw/master/resource/MCP2515.pdf)
+* **[Datasheet]**[MCP2551 datasheet](https://github.com/SeeedDocument/CAN_BUS_Shield/raw/master/resource/Mcp2551.pdf)
+* **[Demo]**[An OBD Demo](https://github.com/Seeed-Studio/CANBUS_SHIELD_OBD_RECIPLE)
+* **[Tool]**[MCP2515 Baud Rate Tool](https://github.com/SeeedDocument/CAN_BUS_Shield/raw/master/resource/CAN_Baudrate_CalcV1.3.zip)
+* **[Tool]**[USB-CAN Analyzer](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html)
+* **[Cable]**[DB9 to OBD2 Cable](https://www.seeedstudio.com/DB9-to-OBD2-Cable-With-Switch-p-2872.html)
+* **[Drawing]**[CAN BUS Shield v2.0 Drawing in PDF](https://github.com/SeeedDocument/CAN-BUS-Shield-V2.0/raw/master/res/CAN-BUS%C2%A0SHIELD%C2%A0V2.0.pdf)
+* **[Drawing]**[CAN BUS Shield v2.0 Drawing in DXF](https://github.com/SeeedDocument/CAN-BUS-Shield-V2.0/raw/master/res/CAN-BUS%C2%A0SHIELD%C2%A0V2.0.dxf.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc.
