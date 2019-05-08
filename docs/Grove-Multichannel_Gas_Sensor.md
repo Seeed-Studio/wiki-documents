@@ -338,9 +338,135 @@ FAQ
 
     * *A2. Don't worry about it, run factory_setting example to make it default. Please note that the calibration data will factory setting as well.*
 
+* **Q3. Does the multichannel gas sensor work with Wio GPS and Wio LTE?**
 
-!!!Tip
-    If you need futhur support, please feel free to contact [techsupport@seeed.cc](mailto:techsupport@seeed.cc)
+    * *A3. Yes, please refer to below code. 
+
+Wio GPS: 
+
+```
+#include <Wire.h>
+#include "MutichannelGasSensor.h"
+
+#define WIOLTE_GROVE_PIN (12)
+#define SENSOR_ADDR     0X04        // default to 0x04
+
+void setup()
+{
+    SerialUSB.begin(115200);
+    pinMode(WIOLTE_GROVE_PIN, OUTPUT);
+    digitalWrite(WIOLTE_GROVE_PIN, HIGH);
+    delay(2000);
+    gas.begin(SENSOR_ADDR);     // 
+}
+
+void loop()
+{
+    float R0_NH3, R0_CO, R0_NO2;
+    float Rs_NH3, Rs_CO, Rs_NO2;
+    float ratio_NH3, ratio_CO, ratio_NO2;
+    
+    R0_NH3 = gas.getR0(0);
+    R0_CO  = gas.getR0(1);
+    R0_NO2 = gas.getR0(2);
+    
+    Rs_NH3 = gas.getRs(0);
+    Rs_CO  = gas.getRs(1);
+    Rs_NO2 = gas.getRs(2);
+    
+    ratio_NH3 = Rs_NH3/R0_NH3;
+    ratio_CO  = Rs_CO/R0_CO;
+    ratio_NO2 = Rs_NH3/R0_NO2;
+    
+    SerialUSB.println("R0:");
+    SerialUSB.print(R0_NH3);
+    SerialUSB.print('\t');
+    SerialUSB.print(R0_CO);
+    SerialUSB.print('\t');
+    SerialUSB.println(R0_NO2);
+    
+    SerialUSB.println("Rs:");
+    SerialUSB.print(Rs_NH3);
+    SerialUSB.print('\t');
+    SerialUSB.print(Rs_CO);
+    SerialUSB.print('\t');
+    SerialUSB.println(Rs_NO2);
+    
+    SerialUSB.println("ratio:");
+    SerialUSB.print(ratio_NH3);
+    SerialUSB.print('\t');
+    SerialUSB.print(ratio_CO);
+    SerialUSB.print('\t');
+    SerialUSB.println(ratio_NO2);
+
+    SerialUSB.println("------------------------");
+    delay(1000);
+}
+```
+
+
+Wio LTE:
+
+```
+#include <Wire.h>
+#include "MutichannelGasSensor.h"
+
+#define WIOLTE_GROVE_PIN (26)
+#define SENSOR_ADDR     0X04        // default to 0x04
+
+void setup()
+{
+    // SerialUSB.begin(115200);
+    pinMode(WIOLTE_GROVE_PIN, OUTPUT);
+    digitalWrite(WIOLTE_GROVE_PIN, HIGH);
+    delay(2000);
+    gas.begin(SENSOR_ADDR);     // 
+}
+
+void loop()
+{
+    float R0_NH3, R0_CO, R0_NO2;
+    float Rs_NH3, Rs_CO, Rs_NO2;
+    float ratio_NH3, ratio_CO, ratio_NO2;
+    
+    R0_NH3 = gas.getR0(0);
+    R0_CO  = gas.getR0(1);
+    R0_NO2 = gas.getR0(2);
+    
+    Rs_NH3 = gas.getRs(0);
+    Rs_CO  = gas.getRs(1);
+    Rs_NO2 = gas.getRs(2);
+    
+    ratio_NH3 = Rs_NH3/R0_NH3;
+    ratio_CO  = Rs_CO/R0_CO;
+    ratio_NO2 = Rs_NH3/R0_NO2;
+    
+    SerialUSB.println("R0:");
+    SerialUSB.print(R0_NH3);
+    SerialUSB.print('\t');
+    SerialUSB.print(R0_CO);
+    SerialUSB.print('\t');
+    SerialUSB.println(R0_NO2);
+    
+    SerialUSB.println("Rs:");
+    SerialUSB.print(Rs_NH3);
+    SerialUSB.print('\t');
+    SerialUSB.print(Rs_CO);
+    SerialUSB.print('\t');
+    SerialUSB.println(Rs_NO2);
+    
+    SerialUSB.println("ratio:");
+    SerialUSB.print(ratio_NH3);
+    SerialUSB.print('\t');
+    SerialUSB.print(ratio_CO);
+    SerialUSB.print('\t');
+    SerialUSB.println(ratio_NO2);
+
+    SerialUSB.println("------------------------");
+    delay(1000);
+}
+```
+
 
 ## Projects
 

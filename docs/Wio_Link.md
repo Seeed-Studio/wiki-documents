@@ -425,6 +425,18 @@ Here's the list of supported Groves so far:
 |316010005 |    Grove - Servo                           |Digital   |itself                 | [link](http://www.seeedstudio.com/Grove-Servo-p-1241.html) |
 |101020067 |    Grove - CO2 Sensor                      |UART      |itself                 | [link](http://www.seeedstudio.com/Grove-CO2-Sensor-p-1863.html) |
 
+**10. Wio Link Error code and solution**
+
+| 1021 | Fail connect to Wifi     | Could not connection to Wi-Fi. Please check Wi-Fi password and try again                                                           |
+|------|--------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| 1031 | Fail connect to Wio Wifi | Could not connect to Wio wi-fi hotspot, please try again or manually choose Wio's Wi-Fi hotspot in system settings.                |
+| 1032 | Select wifi error        | Please select a Wifi like"Wio_xxxxxx"                                                                                              |
+| 1033 | Wifi Inconformity        | The current connection before the WiFi and choice of WiFi                                                                          |
+| 1041 | Send order error         | Please check your internet connection and try again.still can’t slove the problem, please try FAQ section and contact us.    |
+| 1042 | Connect error            | Your phone and device wifi disconnect                                                                                              |
+| 1043 | Fail connect to Wifi     | Please check your internet connection and try again.Or click "Setting" go to manual settings view.                                 |
+| 1044 | Connection Error         | Please check your internet connection and try again.If still can’t solve the problem, please try FAQ section and contact us. |
+
 ## Project 
 
 **LED Sound Meter using Wio-Link and Node-Red**: SeeedStudio Grove sound sensor and LED strip attached to Wio-Link being driven by a Node-Red flow.
