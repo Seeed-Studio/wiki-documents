@@ -795,6 +795,10 @@ A3: Yes, we can connect the mic array v2.0 to raspberry usb port and follow [Ras
 
 A4: Yes, thanks for Yuki sharing the package for integrating [ReSpeaker Mic Array v2 with ROS (Robot Operating System) Middleware](https://github.com/furushchev/respeaker_ros).
 
+**Q5: How to enable 3.5mm audio port to receive the signal as well as usb port?**
+
+A5: Please download the [new firmware](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/i2s_i1o2.bin) and burn the XMOS by following [How to update firmware](http://wiki.seeedstudio.com/ReSpeaker_Mic_Array_v2.0/#update-firmware).
+
 
 
 ## Resource
