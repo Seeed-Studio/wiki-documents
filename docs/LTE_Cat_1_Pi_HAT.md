@@ -517,7 +517,7 @@ AT+COPS=0
 You can try below command to verify Verizon network connection. 
 
 ```
-AT+UPSD=0,1,"Verizon"
+AT+UPSD=0,1,"vzwinternet"
 AT+UPSDA=0,3
 AT+UPING="www.google.com"
 ```
