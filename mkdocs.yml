@@ -566,6 +566,7 @@ pages:
       - Display:
           - Display Introduction: Display.md
           - Grove - 4-Digit Display: Grove-4-Digit_Display.md
+          - Grove - 0.54 inch Red Dual Alphanumeric Display: Grove-0.54_inch_Red_Dual_Alphanumeric_Display.md
           - Grove - Circular LED: Grove-Circular_LED.md
           - Grove - LCD RGB Backlight: Grove-LCD_RGB_Backlight.md
           - Grove - LED Bar: Grove-LED_Bar.md
