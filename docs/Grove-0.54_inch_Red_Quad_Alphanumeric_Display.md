@@ -168,7 +168,17 @@ Here is the table about the I2C addresses.
 ![](https://github.com/SeeedDocument/Grove-0.54-Red-Quad-Alphanumeric-Display/raw/master/img/arduino_ide_example.png)
 
 - **Step 4.** You can see the led is running 123 -> 4567 -> ABCD repeatly.
+- 
 
+
+**API**
+
+- Init(): initialization 
+- setBrightness(): set the brightness, the range is 0-15, the more brightness, the more power consumption 
+- setBlinkRate(): set the interval of blinking, you can set as BLINK_OFF to turn off the flashing
+- displayNum(): display the number, only Four numbers can be displayed
+- dsplayString(): display the character, only Four characters can be displayed
+  
 
 ## Resources
 
