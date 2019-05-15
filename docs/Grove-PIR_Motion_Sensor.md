@@ -388,7 +388,7 @@ The detecting distance can be adjusted from 6 meters to only several centimeters
 If R2 and R6 are soldered, please make sure R13 and R14 are empty.
 
 !!!Note
-  There is risk that the board may be destroyed. Please think it over before making this modification.
+    There is risk that the board may be destroyed. Please think it over before making this modification.
 
 ![](https://github.com/SeeedDocument/Grove_PIR_Motion_Sensor/raw/master/img/Resistor.png)
 
