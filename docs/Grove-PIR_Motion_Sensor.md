@@ -76,7 +76,7 @@ This sensor allows you to sense motion, usually human movement in its range. Sim
 ![](https://github.com/SeeedDocument/Grove_PIR_Motion_Sensor/raw/master/img/connect_arduino.jpg)
 
 !!!Note
-	If we don't have Grove Base Shield, We also can directly connect Grove_Ultrasonic_Ranger to Seeeduino as below.
+	If we don't have Grove Base Shield, We also can directly connect Grove-PIR Motion Sensor to Seeeduino as below.
 
 | Seeeduino       | Grove - PIR Motion Sensor |
 |---------------|-------------------------|
