@@ -156,7 +156,9 @@ pages:
           - 8-Channel 12-Bit ADC for Raspberry Pi (STM32F030): 8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030.md
           - 4-Channel 16-Bit ADC for Raspberry Pi (ADS1115): 4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115.md
           - RS-485 Shield for Raspberry Pi: RS-485_Shield_for_Raspberry_Pi.md
+          - Grove AI HAT for Edge Computing: Grove_AI_HAT_for_Edge_Computing.md
           - Grove Base Kit for Raspberry Pi: Grove_Base_Kit_for_Raspberry_Pi.md
+
           
 
 
@@ -523,7 +525,7 @@ pages:
           - Grove - 16x2 LCD Series: Grove-16x2_LCD_Series.md
           - Grove - I2C UV Sensor (VEML6070): Grove-I2C_UV_Sensor-VEML6070.md
           - Grove - Coulomb Counter 3.3V to 5V (LTC2941): Grove-Coulomb_Counter_3.3V_to_5V-LTC2941.md
-          - Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931: Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931.md
+          - Grove - Light Gesture Color Proximity Sensor (TMG39931): Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931.md
           
           
       - Actuator:
@@ -583,8 +585,8 @@ pages:
           - Grove - Red LED Matrix w/Driver: Grove-Red_LED_Matrix_w_Driver.md
           - Grove - LED Matrix Driver (HT16K33): Grove-LED_Matrix_Driver-HT16K33.md
           - Grove - RGB LED Matrix w/Driver: Grove-RGB_LED_Matrix_w-Driver.md
-          - Grove-Triple_Color_E-Ink_Display_2_13: Grove-Triple_Color_E-Ink_Display_2_13.md
-          - Grove-Triple_Color_E-Ink_Display_1_54: Grove-Triple_Color_E-Ink_Display_1_54.md
+          - Grove - Triple Color E-Ink Display 2.13": Grove-Triple_Color_E-Ink_Display_2_13.md
+          - Grove - Triple Color E-Ink Display 1.54": Grove-Triple_Color_E-Ink_Display_1_54.md
 
       - Communication:
           - Communication Introduction: Communication.md
