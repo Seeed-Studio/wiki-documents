@@ -95,6 +95,9 @@ Power input, power supply for the **OUT**
 
 ![](https://github.com/SeeedDocument/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/raw/master/img/pin-out/pin-out3.jpg)
 
+!!!warning
+    If you use the [I2C Scanner](https://playground.arduino.cc/Main/I2cScanner/) to scan the device I2C ID, you have to supply 3.3v/5v to IN terminal. 
+
 ___
 **Battery Input**
 
