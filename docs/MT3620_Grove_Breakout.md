@@ -18,7 +18,7 @@ MT3620 Grove breakout enable users to quickly apply sensors modules -[SeeedStudi
 Since [Azure Sphere SDK](http://aka.ms/AzureSphereSDK) has not yet supported ADC on MT3620, this breakout serves as an interface between MT3620 I2C port and external ADC, which provide a way to read the analog data from analog port. Besides the analog port , this breakout has UART,SPI,I2C,GPIO ports.
 
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/MT3620-Mini-Dev-Board-p-2919.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style="text-align:center"><a href="https://www.seeedstudio.com/MT3620-Grove-Breakout-p-4043.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
  
 
@@ -121,11 +121,14 @@ We build there demoes which combine MT3620 Mini Dev Board and [Seeed Grove syste
 | MT3620 Mini Dev Board | MT3620 Grove Breakout |  Grove - Button |USB To Uart 5V&3V3 |
 |--------------|-------------|-----------------|-----------------|
 |![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/product_s.png)|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/breakout_s.jpg)|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/button_s.jpg)|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/usb_2_ttl_s.jpg)|
-|[Get One Now](https://www.seeedstudio.com/MT3620-Mini-Dev-Board-p-2919.html)|[Get One Now]()|[Get One Now](https://www.seeedstudio.com/Grove-Button-p-766.html)|[Get One Now](https://www.seeedstudio.com/USB-To-Uart-5V-3V3-p-1832.html)|
+|[Get One Now](https://www.seeedstudio.com/MT3620-Mini-Dev-Board-p-2919.html)|[Get One Now](https://www.seeedstudio.com/MT3620-Grove-Breakout-p-4043.html)|[Get One Now](https://www.seeedstudio.com/Grove-Button-p-766.html)|[Get One Now](https://www.seeedstudio.com/USB-To-Uart-5V-3V3-p-1832.html)|
 
 **Hardware Connection**
 
 ![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/demo1_connection.png)
+
+!!!warning
+    Please make sure the plug the MT3620 Mini Dev Board into MT3620 Grove Breakout in the correct way. There is USB silk screen on the MT3620 Grove Breakout and make sure it at the same side as USB port of MT3620 Mini Dev Board. 
 
 - Step 1. Connect Grove-Button to D1 of MT3620 Grove Breakout.
 - Step 2. Connect USB To Uart adapter to UART0 of MT3620 Grove Breakout through [Grove-Cable](https://www.seeedstudio.com/Grove-4-pin-Female-Jumper-to-Grove-4-pin-Conversion-Cable-5-PCs-per-PAck.html). 
@@ -168,11 +171,14 @@ UART received 2 bytes: '
 | MT3620 Mini Dev Board | MT3620 Grove Breakout |  Grove-Light Sensor |Grove - Rotary Angle Sensor|
 |--------------|-------------|-----------------|-----------------|
 |![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/product_s.png)|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/breakout_s.jpg)|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/light_sensor_s.jpg)|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/Rotary_Angle_Sensor_s.jpg)|
-|[Get One Now](https://www.seeedstudio.com/MT3620-Mini-Dev-Board-p-2919.html)|[Get One Now]()|[Get One Now](https://www.seeedstudio.com/Grove-Light-Sensor-v1-2.html)|[Get One Now](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html)|
+|[Get One Now](https://www.seeedstudio.com/MT3620-Mini-Dev-Board-p-2919.html)|[Get One Now](https://www.seeedstudio.com/MT3620-Grove-Breakout-p-4043.html)|[Get One Now](https://www.seeedstudio.com/Grove-Light-Sensor-v1-2.html)|[Get One Now](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html)|
 
 **Hardware Connection**
 
 ![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/demo2_connection.png)
+
+!!!warning
+    Please make sure the plug the MT3620 Mini Dev Board into MT3620 Grove Breakout in the correct way. There is USB silk screen on the MT3620 Grove Breakout and make sure it at the same side as USB port of MT3620 Mini Dev Board. 
 
 - Step 1. Connect Grove-Rotary Angle Sensor to A0 of MT3620 Grove Breakout.
 - Step 2. Connect Grove-Light Sensor to A1 of MT3620 Grove Breakout. 
@@ -216,11 +222,14 @@ A0: 2057 A1: 2647
 | MT3620 Mini Dev Board | MT3620 Grove Breakout |  Grove-OLED Display 1.12'' V2 |
 |--------------|-------------|-----------------|
 |![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/product_s.png)|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/breakout_s.jpg)|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/oled_s.jpg)|
-|[Get One Now](https://www.seeedstudio.com/MT3620-Mini-Dev-Board-p-2919.html)|[Get One Now]()|[Get One Now](https://www.seeedstudio.com/Grove-Light-Sensor-v1-2.html)|[Get One Now](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html)|
+|[Get One Now](https://www.seeedstudio.com/MT3620-Mini-Dev-Board-p-2919.html)|[Get One Now](https://www.seeedstudio.com/MT3620-Grove-Breakout-p-4043.html)|[Get One Now](https://www.seeedstudio.com/Grove-Light-Sensor-v1-2.html)|[Get One Now](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html)|
 
 **Hardware Connection**
 
 ![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/demo3_connection.png)
+
+!!!warning
+    Please make sure the plug the MT3620 Mini Dev Board into MT3620 Grove Breakout in the correct way. There is USB silk screen on the MT3620 Grove Breakout and make sure it at the same side as USB port of MT3620 Mini Dev Board. 
 
 - Step 1. Connect Grove-OLED Display 1.12'' V2 to I2C of MT3620 Grove Breakout.
 - Step 2. Plug MT3620 Grove Breakout to MT3620 Mini Dev Board.
