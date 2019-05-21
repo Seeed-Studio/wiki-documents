@@ -223,6 +223,7 @@ pages:
           - GPRS Shield V3.0: GPRS_Shield_V3.0.md
           - Mbed Shield: mbed_Shield.md
           - Motor Shield V2.0: Motor_Shield_V2.0.md
+          - Brushless Motor Shield (TB6605FTG): Brushless-Motor-Shield-TB6605FTG.md
           - Music Shield V2.2: Music_Shield_V2.2.md
           - NFC Shield V2.0: NFC_Shield_V2.0.md
           - Protoshield Kit for Arduino: Protoshield_Kit_for_Arduino.md
