@@ -79,7 +79,7 @@ As is logic Input. Address select input that selects one of three I2C addresses 
 
 **Board Pinmap**
 
-<a href="https://github.com/SeeedDocument/MT3620_Grove_Breakout/raw/master/img/pinmap1.jpg" target="_blank"><img src="https://github.com/SeeedDocument/MT3620_Grove_Breakout/raw/master/img/pinmap2.png"/></a>
+<a href="https://github.com/SeeedDocument/MT3620_Grove_Breakout/raw/master/img/pinmap2.png" target="_blank"><img src="https://github.com/SeeedDocument/MT3620_Grove_Breakout/raw/master/img/pinmap2.png"/></a>
 
 **Board Dimensions**
 
@@ -124,6 +124,8 @@ We build there demoes which combine MT3620 Mini Dev Board and [Seeed Grove syste
 |[Get One Now](https://www.seeedstudio.com/MT3620-Mini-Dev-Board-p-2919.html)|[Get One Now](https://www.seeedstudio.com/MT3620-Grove-Breakout-p-4043.html)|[Get One Now](https://www.seeedstudio.com/Grove-Button-p-766.html)|[Get One Now](https://www.seeedstudio.com/USB-To-Uart-5V-3V3-p-1832.html)|
 
 **Hardware Connection**
+
+![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/break_miniboard.png)
 
 ![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/demo1_connection.png)
 
