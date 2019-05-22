@@ -79,7 +79,7 @@ As is logic Input. Address select input that selects one of three I2C addresses 
 
 **Board Pinmap**
 
-<a href="https://github.com/SeeedDocument/MT3620_Grove_Breakout/raw/master/img/pinmap1.jpg" target="_blank"><img src="https://github.com/SeeedDocument/MT3620_Grove_Breakout/raw/master/img/pinmap1.jpg"/></a>
+<a href="https://github.com/SeeedDocument/MT3620_Grove_Breakout/raw/master/img/pinmap1.jpg" target="_blank"><img src="https://github.com/SeeedDocument/MT3620_Grove_Breakout/raw/master/img/pinmap2.png"/></a>
 
 **Board Dimensions**
 
