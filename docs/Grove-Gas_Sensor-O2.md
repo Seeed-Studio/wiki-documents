@@ -44,6 +44,33 @@ Grove-Gas Sensor (O2) is a kind of sensor to test the oxygen concentration in ai
 |Preheat Time	| 20 minutes|
 |Input voltage|3.3V / 5V|
 
+
+## Hardware
+
+**Voltage Convertor**
+
+![](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2/raw/master/images/Converter.png)
+
+The XC6206332MR converts 3.3v/5v input to 3.3v.
+
+**ME2-O2 current source**
+
+![](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2/raw/master/images/ME2-O2.png)
+
+The ME2-O2 is current source. The voltage of the label #3 point is R7 * Current(ME2-O2).
+
+
+
+**Amplifer**
+
+![](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2/raw/master/images/Amplifer.png)
+
+The gain of the amplifer is 201, SIGA voltage is 201 times of label #3 point voltage. 
+
+![](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2/raw/master/images/concentration_current.png)
+
+Here is the correlation between ME2-O2 output current and concentration of O2. The current of 20% concentration O2 is around 120uA. So the Grove SIGA voltage @ 20% concentration = R7 * Current(ME2-O2) * 201 = 100 * 120uA * 201 = 2.4V. 
+
 ## Platforms Supported
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
@@ -67,6 +94,8 @@ Here we will show you how this Grove - Gas Sensor(O2) works via a simple demo. F
 |--------------|----------------------|-----------------|
 |![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Gas_Sensor_O2/master/images/gas_sensor_210.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](http://www.seeedstudio.com/grove-gas-sensoro2-p-1541.html)|[Get ONE Now](http://www.seeedstudio.com/Grove-Universal-4-Pin-20cm-Unbuckled-Cable-%285-PCs-Pack%29-p-749.html)|
+
+
 
 ###Connection 
 
@@ -153,11 +182,7 @@ Open serial monitor of your Arduino IDE, and you will get the data now.
 
 
 
-## FAQs
 
-**Q1: How to solve sensor's reading is out of arrange?**
-
-**A1:**  Please download [the libray with calibration function](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2/raw/master/resources/Read_O2_value.zip) and run the example. 
 
 
 ## Resources
