@@ -60,7 +60,6 @@ The XC6206332MR converts 3.3v/5v input to 3.3v.
 The ME2-O2 is current source. The voltage of the label #3 point is R7 * Current(ME2-O2).
 
 
-
 **Amplifer**
 
 ![](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2/raw/master/images/Amplifer.png)
@@ -70,6 +69,9 @@ The gain of the amplifer is 201, SIGA voltage is 201 times of label #3 point vol
 ![](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2/raw/master/images/concentration_current.png)
 
 Here is the correlation between ME2-O2 output current and concentration of O2. The current of 20% concentration O2 is around 120uA. So the Grove SIGA voltage @ 20% concentration = R7 * Current(ME2-O2) * 201 = 100 * 120uA * 201 = 2.4V. 
+
+!!!warning
+    The current ranage of ME2-O2 is 80uA~160uA due to individual difference. So the sensor ouput voltage also will different. Please explosure the sensor to fresh air and get reading of output voltage as reference at beginning. You can refer to [this example](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2/raw/master/resources/Read_O2_value.zip) to get the calibration at beginning and then read the sensor values.   
 
 ## Platforms Supported
 

@@ -118,6 +118,47 @@ Click to download the library and install it ([How to install an Arduino Library
 
 [![](https://raw.githubusercontent.com/SeeedDocument/Grove_LoRa_Radio/master/img/library.png)](https://github.com/Seeed-Studio/Grove_LoRa_433MHz_and_915MHz_RF/archive/master.zip)
 
+!!!Tips
+    The library supports AVR/SAMD/STM32F4 devices, both hardware and software serial as well.
+
+1. For the AVR, 
+
+```
+#include <RH_RF95.h>
+
+#################### AVR #######################
+
+#ifdef __AVR__
+#include <SoftwareSerial.h>
+SoftwareSerial  SSerial(10, 11); // RX, TX
+#define COMSerial Serial
+#define ShowSerial SSerial 
+
+RH_RF95<HardwareSerial> rf95(COMSerial);
+#endif
+
+#################### SAMD ######################
+
+#ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
+#define COMSerial Serial1
+#define ShowSerial SerialUSB 
+
+RH_RF95<Uart> rf95(COMSerial);
+#endif
+
+#################### STM32F4 ###################
+
+#ifdef ARDUINO_ARCH_STM32F4
+#define COMSerial Serial
+#define ShowSerial SerialUSB 
+
+RH_RF95<HardwareSerial> rf95(COMSerial);
+#endif
+```
+
+
+
+
 ###Open the example
 
 Open your Arduino IDE, click **File > Examples>Grove_LoRa_433MHz_and_915MHz_RF-master** you will get many examples for the module.
@@ -151,6 +192,9 @@ After upload completed, you can open the serial monitor to see the result.
 The below chart shows the relationships between the band rate signal band width spreding factor and sensitivity.
 
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_LoRa_Radio/master/img/DateRate.png)
+
+
+
 
 
 ##  Resources
