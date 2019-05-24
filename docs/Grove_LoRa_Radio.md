@@ -121,7 +121,19 @@ Click to download the library and install it ([How to install an Arduino Library
 !!!Tips
     The library supports AVR/SAMD/STM32F4 devices, both hardware and software serial as well.
 
-1. For the AVR, 
+There are 2 kinds of serial ports. One is COMSerial, stands for communication port(connecting with Grove-LoRa Radio). The other is ShowSerial, stands for serial info display port(connectiong with PC). 
+
+Most of arduino boards have at least one Serial, some have multiple serials(Arduino Mega has 4 Serials). It communicates on digital pins 0 (RX) and 1 (TX) as well as with the computer via USB. So if you connect UART device on pin D0 and pin D1, you have to remove them before downloading program through USB. Or else it will cause upload fails. Sometimes you need more serial ports than the number of hardware serial ports available. If this is the case, you can use an Software Serial that uses software to emulate serial hardware. Software serial requires a lot of help from the Arduino controller to send and receive data, so it’s not as fast or efficient as hardware serial. For more info about the Serial, please refer to [Seeed Arduino Serial](http://wiki.seeedstudio.com/Seeed_Arduino_Serial/). 
+
+- **AVR:** For the below example, We define Software Serial as SSCOM(connectiong with PC), you need USB to TTL adapter to connect with PC. NOT all the digital pins can be used for software serial. You can refer to [Software Serial](https://www.arduino.cc/en/Reference/SoftwareSerial) for detail pins. We define hardware Serial as COMSerial(connecting with Grove-LoRa Radio). If you use Arduino Mega, you can connect the hardware Serial to ShowSerial and the other Serial1/2/3 to COMSerial. So you can refer to AVR Mega setting. 
+
+- **SAMD:** For the below example, The SAMD does not support software serial. We use the hardware serial **Serial1** to commuincate with Grove-LoRa Radio and **SerialUSB** to print message on PC. 
+
+- **STM32F4:** For the below example, We use the hardware serial **Serial** to commuincate with Grove-LoRa Radio and **SerialUSB** to print message on PC. 
+
+!!!Note
+    For more info about the Serial, please refer to [Seeed Arduino Serial](http://wiki.seeedstudio.com/Seeed_Arduino_Serial/). 
+
 
 ```
 #include <RH_RF95.h>
@@ -129,35 +141,50 @@ Click to download the library and install it ([How to install an Arduino Library
 #################### AVR #######################
 
 #ifdef __AVR__
+
 #include <SoftwareSerial.h>
 SoftwareSerial  SSerial(10, 11); // RX, TX
+
 #define COMSerial Serial
 #define ShowSerial SSerial 
 
 RH_RF95<HardwareSerial> rf95(COMSerial);
+
+#endif
+
+#################### AVR Mega ###################
+
+#ifdef __AVR__
+
+#define COMSerial Serial1
+#define ShowSerial Serial 
+
+RH_RF95<HardwareSerial> rf95(COMSerial);
+
 #endif
 
 #################### SAMD ######################
 
 #ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
+
 #define COMSerial Serial1
 #define ShowSerial SerialUSB 
 
 RH_RF95<Uart> rf95(COMSerial);
+
 #endif
 
 #################### STM32F4 ###################
 
 #ifdef ARDUINO_ARCH_STM32F4
+
 #define COMSerial Serial
 #define ShowSerial SerialUSB 
 
 RH_RF95<HardwareSerial> rf95(COMSerial);
+
 #endif
 ```
-
-
-
 
 ###Open the example
 
