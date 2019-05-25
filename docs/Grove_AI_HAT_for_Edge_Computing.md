@@ -27,6 +27,7 @@ We hope this board may help you with your edge computing, AI vision, voice recog
 <p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-AI-HAT-for-Edge-Computing-p-4026.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
+
 ## Features
 
 - Processor: Sipeed MAIX-I module w/o WiFi ( 1st RISC-V 64 AI Module, K210 inside )
@@ -201,8 +202,8 @@ Also, to use the Grove AI HAT in the Arduino IDE, you need to select the **K-fla
 
 ##### Hardware Connection
 
-- 1 Conect the Grove - LED to the Grove **J2** port(D13 pin) of the Grove AI HAT
-- 2 Conect the Grove AI HAT to the computer via USB Type C port.
+- 1 Connect the Grove - LED to the Grove **J2** port(D13 pin) of the Grove AI HAT
+- 2 Connect the Grove AI HAT to the computer via USB Type C port.
 
 
 <div align="center">
@@ -290,6 +291,264 @@ Then, press the Grove -  Round Force Sensor, the A0 valnue will change.
   <figcaption><b>Figure 11</b>. <i>Output</i></figcaption>
 </figure>
 </div>
+
+
+
+
+### kendryte k210 Standalone SDK
+
+In order to use the kendryte k210 Standalone SDK with Grove AI HAT you should config the Arduino IDE as the previous chapter [Play with Arduino](http://wiki.seeedstudio.com/Grove_AI_HAT_for_Edge_Computing/#play-with-arduino).  
+
+Now let's assume that you have downloaded the K210 development board in the Arduino IDE, selected **Seeed K210 Pi** board and **k-flash**.
+
+First of all download the [kendryte-standalone-demo](https://github.com/kendryte/kendryte-standalone-demo) at github.
+
+We will take the [face_detect](https://github.com/kendryte/kendryte-standalone-demo/tree/develop/face_detect) for instance.
+
+
+
+
+
+#### Face Detect Demo
+
+
+**Materials required**
+
+- [Grove AI HAT for Edge Computing](https://www.seeedstudio.com/Grove-AI-HAT-for-Edge-Computing-p-4026.html) x1
+- [OV2640 Camera](http://seeedstudio.com/OV2640-Fisheye-Camera-p-4048.html) x1
+- [2.4 inch TFT LCD](http://seeedstudio.com/2-4-TFT-LCD-p-4049.html) x1
+- USB Type C cable x1
+
+
+##### Hardware Connection
+
+- a. Connect the OV2640 camera into the Grove AI Hat 24 pin FPC camera connector
+- b. Connect the 2.4 inch TFT LCD into the Grove AI Hat 24 pin FPC LCD connector 
+- c. Connect the Grove AI HAT to the computer via USB Type C port.
+
+
+<div align="center">
+<figure>
+  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/wiki-connect.jpg" alt="Grove AI HAT face detect demo-1" title="" />
+  <figcaption><b>Figure 12</b>. <i>Hardware connection of face detect demo</i></figcaption>
+</figure>
+</div>
+
+
+
+##### Software
+
+
+###### Download the AI module
+
+- Step 1. Enter the folder, **D:XXXXXX\kendryte-standalone-demo\face_detect\kfpkg**, **D:XXXXXX** is the path where you download the **kendryte-standalone-demo**. You will find four files as following:
+
+<div align="center">
+<figure>
+  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-01.jpg" alt="Grove AI HAT face detect demo-1" title="" />
+  <figcaption><b>Figure 13</b>. <i>This folder contains the AI module of face detect</i></figcaption>
+</figure>
+</div>
+
+
+- Step 2. Open the Arduino IDE, click **File --> Preferences**, click on the part marked in the red box to open the Arduino package folder.
+
+<div align="center">
+<figure>
+  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-02.jpg" alt="Grove AI HAT face detect demo-2" title="" />
+  <figcaption><b>Figure 14</b>. <i>Open preferences windows</i></figcaption>
+</figure>
+</div>
+
+<div align="center">
+<figure>
+  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-03.jpg" alt="Grove AI HAT face detect demo-3" title="" />
+  <figcaption><b>Figure 15</b>. <i>Click on the part marked in the red box</i></figcaption>
+</figure>
+</div>
+
+<div align="center">
+<figure>
+  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-04.jpg" alt="Grove AI HAT face detect demo-4" title="" />
+  <figcaption><b>Figure 16</b>. <i>Click on the part marked in the red box</i></figcaption>
+</figure>
+</div>
+
+
+
+- Step 3. Find the **Kflash_py.exe** in the path **XXXXX\packages\Seeeduino\tools\kflash\1.1.0**, XXXX is the folder you just open by click the links in the Arduino references Windows. For instance mine is `C:\Users\seeed\AppData\Local\Arduino15\packages\Seeeduino\tools\kflash\1.1.0`, copy the whole path of your own, we need to use it in the next step. 
+
+
+<div align="center">
+<figure>
+  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-05.jpg" alt="Grove AI HAT face detect demo-5" title="" />
+  <figcaption><b>Figure 17</b>. <i>Copy the path of Kflash_py.exe</i></figcaption>
+</figure>
+</div>
+
+
+- Step 4. Back to the **kfpkg** folder, enter a command console, you can use any console you like. If you don't know how to open one, for win10 user, you can click **File -->Open Windows Power Shell -->Open Windows Power Shell**
+
+
+<div align="center">
+<figure>
+  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-06.jpg" alt="Grove AI HAT face detect demo-6" title="" />
+  <figcaption><b>Figure 18</b>. <i>Open power shell</i></figcaption>
+</figure>
+</div>
+
+
+<div align="center">
+<figure>
+  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-07.jpg" alt="Grove AI HAT face detect demo-7" title="" />
+  <figcaption><b>Figure 19</b>. <i>Open power shell</i></figcaption>
+</figure>
+</div>
+
+
+- Step 5. Download the AI module into your Grove AI Hat  
+Remember the path we copied in the **step3**? Mine is:
+
+```C
+C:\Users\seeed\AppData\Local\Arduino15\packages\Seeeduino\tools\kflash\1.1.0
+``` 
+
+For windows user, you should change all the `\` in the path into `/`, then we get:
+
+```c
+C:/Users/seeed/AppData/Local/Arduino15/packages/Seeeduino/tools/kflash/1.1.0
+```
+
+Replace the following command with you own Path
+
+```C
+C:/Users/seeed/AppData/Local/Arduino15/packages/Seeeduino/tools/kflash/1.1.0/kflash_py -n -p COM31 -b 2000000 -B dan face_detect.kfpkg
+```
+
+
+Check your COM number in the Computer Device Manager 
+
+<div align="center">
+<figure>
+  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-08.jpg" alt="Grove AI HAT face detect demo-8" title="" />
+  <figcaption><b>Figure 20</b>. <i>Check the COM number</i></figcaption>
+</figure>
+</div>
+
+
+Replace the COM number with your own COM number, as you can see, mine is COM21, then enter the following command and run:
+
+
+```C
+C:/Users/seeed/AppData/Local/Arduino15/packages/Seeeduino/tools/kflash/1.1.0/kflash_py -n -p COM21 -b 2000000 -B dan face_detect.kfpkg
+```
+
+<div align="center">
+<figure>
+  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-09.jpg" alt="Grove AI HAT face detect demo-9" title="" />
+  <figcaption><b>Figure 21</b>. <i>Replace the Path of kflash_py and the COM port number with your own path and COM port</i></figcaption>
+</figure>
+</div>
+
+
+
+When the download is finish, you will see:
+
+
+<div align="center">
+<figure>
+  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-10.jpg" alt="Grove AI HAT face detect demo-10" title="" />
+  <figcaption><b>Figure 22</b>. <i>Download Success</i></figcaption>
+</figure>
+</div>
+
+
+Now you will see the LCD screen light on with full white. Let's move to next step.
+
+
+###### Download Demo code
+
+
+- Step 1. Creat a new folder, creat a new blank `xxx.ino` file. `xxx` must be the same as the folder name. For instance both of mine is `Face_Detect_Demo`
+
+
+!!!Attention
+    Please make sure the .ino file is blank and the .ino name is the same as your folder.
+
+
+<div align="center">
+<figure>
+  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-1.jpg" alt="Grove AI HAT face detect download-1" title="" />
+  <figcaption><b>Figure 23</b>. <i>Great blank ino</i></figcaption>
+</figure>
+</div>
+
+
+- Step 2. Copy all the files in the folder `XXXXX\kendryte-standalone-demo\face_detect` into the new folder you've just created.
+
+<div align="center">
+<figure>
+  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-2.jpg" alt="Grove AI HAT face detect download-2" title="" />
+  <figcaption><b>Figure 24</b>. <i>Copy file into the ino folder</i></figcaption>
+</figure>
+</div>
+
+
+- Step 3. Open the .ino file with your Arduino IDE. The whole project will opened in the Arduino IDE.
+
+<div align="center">
+<figure>
+  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-3.jpg" alt="Grove AI HAT face detect download-3" title="" />
+  <figcaption><b>Figure 25</b>. <i>Open the .ino file with Arduino IDE</i></figcaption>
+</figure>
+</div>
+
+
+- Step 4. Board Config. Before building, we need to config the camera and LED. In this demo, we use OV2604 and Grove AI Hat.  
+The code for Grove AI Hat is `BOARD_LICHEEDAN`, so we need to config as below:
+
+
+<div align="center">
+<figure>
+  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-4.jpg" alt="Grove AI HAT face detect download-4" title="" />
+  <figcaption><b>Figure 26</b>. <i>Board Config</i></figcaption>
+</figure>
+</div>
+
+
+- Step 5. Build the main.c, please make sure you have selected the right board and flasher.  
+K-flash/Seeed k210 Pi/  
+
+
+<div align="center">
+<figure>
+  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-6.jpg" alt="Grove AI HAT face detect download-6" title="" />
+  <figcaption><b>Figure 27</b>. <i>Board Select</i></figcaption>
+</figure>
+</div>
+
+
+<div align="center">
+<figure>
+  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-5.jpg" alt="Grove AI HAT face detect download-5" title="" />
+  <figcaption><b>Figure 28</b>. <i>Build the main.c</i></figcaption>
+</figure>
+</div>
+
+
+
+- Step 6. Download the face_detect_demo into your Grove AI Hat. When the downloading is success, you can see as below:
+
+<div align="center">
+<figure>
+  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-7.jpg" alt="Grove AI HAT face detect download-7" title="" />
+  <figcaption><b>Figure 29</b>. <i>Success</i></figcaption>
+</figure>
+</div>
+
+
+Now you can use the camera to shoot faces, rotate the focus ring on the camera or adjust the distance from the camera to the face to make the face clear. A red box appears when it recognizes a face.
+
 
 
 
