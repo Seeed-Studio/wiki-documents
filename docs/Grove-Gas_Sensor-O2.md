@@ -64,11 +64,11 @@ The ME2-O2 is current source. The voltage of the label #3 point is R7 * Current(
 
 ![](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2/raw/master/images/Amplifer.png)
 
-The gain of the amplifer is 120, SIGA voltage is 120 times of label #3 point voltage. 
+The gain of the amplifer is 121, SIGA voltage is 121 times of label #3 point voltage. 
 
 ![](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2/raw/master/images/concentration_current.png)
 
-Here is the correlation between ME2-O2 output current and concentration of O2. The current of 20% concentration O2 is around 120uA. So the Grove SIGA voltage @ 20% concentration = R7 * Current(ME2-O2) * 120 = 100 * 120uA * 120 = 1.44V. 
+Here is the correlation between ME2-O2 output current and concentration of O2. The current of 20% concentration O2 is around 120uA. So the Grove SIGA voltage @ 20% concentration = R7 * Current(ME2-O2) * 121 = 100 * 120uA * 121 = 1.452V. 
 
 !!!warning
     The current ranage of ME2-O2 is 80uA~160uA due to individual difference. So the sensor ouput voltage also will different. Please explosure the sensor to fresh air and get reading of output voltage as reference at beginning. You can refer to [this example](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2/raw/master/resources/Read_O2_value.zip) to get the calibration at beginning and then read the sensor values.   
