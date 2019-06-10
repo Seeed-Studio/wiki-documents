@@ -18,7 +18,7 @@ In order to simplify all these steps, at the end of 2015, Seeed Studio initiated
 
 
 !!!Warning
-     The Wio IFTTT function is EOL. But Wio APP is avaiable. You can use the API from Wio APP to read sensor status and control the actuator. 
+     The Wio IFTTT function is EOL. But Wio APP is available. You can use the API from Wio APP to read sensor status and control the actuator. 
 
 
 ## Features

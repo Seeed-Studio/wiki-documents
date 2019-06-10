@@ -16,7 +16,7 @@ If you have no programming skills, and you want to build some cool gadgets for y
 [![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Wio-Link-Bootcamp-Kit-p-2613.html?cPath=19_20)
 
 !!!Warning
-     The Wio IFTTT function is EOL. But Wio APP is avaiable. You can use the API from Wio APP to read sensor status and control the actuator. 
+     The Wio IFTTT function is EOL. But Wio APP is available. You can use the API from Wio APP to read sensor status and control the actuator. 
 
 Features
 --------

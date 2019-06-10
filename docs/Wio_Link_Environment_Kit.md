@@ -17,7 +17,7 @@ We are always closely connected with our surrounding environment. So it is impor
 
 
 !!!Warning
-     The Wio IFTTT function is EOL. But Wio APP is avaiable. You can use the API from Wio APP to read sensor status and control the actuator. 
+     The Wio IFTTT function is EOL. But Wio APP is available. You can use the API from Wio APP to read sensor status and control the actuator. 
 
 Features
 --------

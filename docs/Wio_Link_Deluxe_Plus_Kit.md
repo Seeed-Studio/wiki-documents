@@ -16,7 +16,7 @@ This kit is same as **Wio Link Deluxe Kit** except that this kit additionally co
 [![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Wio-Link-Deluxe-Plus-Kit-p-2616.html)
 
 !!!Warning
-     The Wio IFTTT function is EOL. But Wio APP is avaiable. You can use the API from Wio APP to read sensor status and control the actuator. 
+     The Wio IFTTT function is EOL. But Wio APP is available. You can use the API from Wio APP to read sensor status and control the actuator. 
 
 
 Features

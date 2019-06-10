@@ -25,7 +25,7 @@ The ecosystem of Wio Node also consists of Open Hardware **Wio Node board**, **O
 
 
 !!!Warning
-     The Wio IFTTT function is EOL. But Wio APP is avaiable. You can use the API from Wio APP to read sensor status and control the actuator. 
+     The Wio IFTTT function is EOL. But Wio APP is available. You can use the API from Wio APP to read sensor status and control the actuator. 
 
 ## Features
 ----
