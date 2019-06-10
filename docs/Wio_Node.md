@@ -23,6 +23,10 @@ The ecosystem of Wio Node also consists of Open Hardware **Wio Node board**, **O
 
 [![Get one now](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Wio-Node-p-2637.html)
 
+
+!!!Warning
+     The Wio IFTTT function is EOL. But Wio APP is avaiable. You can use the API from Wio APP to read sensor status and control the actuator. 
+
 ## Features
 ----
 - No hardware programming or No breadboard or No jumper wires or No soldering required.

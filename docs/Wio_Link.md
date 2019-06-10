@@ -16,6 +16,11 @@ In order to simplify all these steps, at the end of 2015, Seeed Studio initiated
 
 [![](https://github.com/SeeedDocument/Wio_Link/raw/master/image/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Wio-Link-p-2604.html)
 
+
+!!!Warning
+     The Wio IFTTT function is EOL. But Wio APP is avaiable. You can use the API from Wio APP to read sensor status and control the actuator. 
+
+
 ## Features
 
 - No hardware programming, No breadboard, No jumper wires, No soldering required.

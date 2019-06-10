@@ -15,6 +15,10 @@ We are always closely connected with our surrounding environment. So it is impor
 
 [![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Wio-Link-Environment-Kit-p-2612.html)
 
+
+!!!Warning
+     The Wio IFTTT function is EOL. But Wio APP is avaiable. You can use the API from Wio APP to read sensor status and control the actuator. 
+
 Features
 --------
 

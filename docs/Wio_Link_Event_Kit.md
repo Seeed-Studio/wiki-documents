@@ -15,6 +15,10 @@ Wio Link Event Kit is a event-monitoring kit which include some typical event-tr
 
 [![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Wio-Link-Event-Kit-p-2611.html)
 
+
+!!!Warning
+     The Wio IFTTT function is EOL. But Wio APP is avaiable. You can use the API from Wio APP to read sensor status and control the actuator. 
+
 Features
 --------
 
