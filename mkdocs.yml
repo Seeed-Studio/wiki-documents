@@ -264,6 +264,9 @@ pages:
           - Air602 WiFi Development Board: Air602_WiFi_Development_Board.md
           - Air602 Firmware Programming Manual: Air602_Firmware_Programming_Manual.md
 
+      - W600:
+          - W600 Module: W600_Module.md
+
      
       - Arch:
           - Arch_Mix.md
@@ -528,6 +531,7 @@ pages:
           - Grove - I2C UV Sensor (VEML6070): Grove-I2C_UV_Sensor-VEML6070.md
           - Grove - Coulomb Counter 3.3V to 5V (LTC2941): Grove-Coulomb_Counter_3.3V_to_5V-LTC2941.md
           - Grove - Light Gesture Color Proximity Sensor (TMG39931): Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931.md
+          - Grove 12 Channel Capacitive Touch Keypad (ATtiny1616): Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616-.md
           
           
       - Actuator:
