@@ -220,4 +220,4 @@ Here is the Sensors FAQ, people can go here to find questions and answers for th
 - [datasheet for the material](http://garden.seeedstudio.com/images/4/4e/YEE70G30HSLNC..pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

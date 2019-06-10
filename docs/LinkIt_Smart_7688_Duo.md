@@ -456,4 +456,4 @@ You can now extend the Arduino sketch to drive other devices such as PWM, I2C de
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/phigax/smart-lighting-and-notifications-1c8a1b/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

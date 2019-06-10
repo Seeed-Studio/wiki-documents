@@ -37,4 +37,4 @@ The downside is that the board is mostly SMT, although we made a conscious desig
 *   Read our **Electronics Fabrication Guide** if you're new.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

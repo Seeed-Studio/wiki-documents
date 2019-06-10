@@ -30,4 +30,4 @@ Here lists the comparison among various versions of Ethernet Shield:
 |**Ethernet jack	**|Minimal RJ45	|Standard RJ45	|Minimal RJ45|
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

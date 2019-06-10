@@ -385,4 +385,4 @@ A3: Here is the connection.
 - **[Datasheet]** [78M05 Datasheet](https://github.com/SeeedDocument/Motor_Shield_V2.0/raw/master/resource/78M05_datasheet.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

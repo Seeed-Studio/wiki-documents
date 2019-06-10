@@ -813,4 +813,4 @@ A5: Please download the [new firmware](https://github.com/SeeedDocument/ReSpeake
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc.
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).

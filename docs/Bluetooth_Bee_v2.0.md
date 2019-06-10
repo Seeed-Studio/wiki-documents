@@ -1104,4 +1104,4 @@ After downloading program, open two serial terminal windows, the LEDs on Bluetoo
 ![](https://github.com/SeeedDocument/Bluetooth_Bee_v2.0/raw/master/img/HM-01-Debug_Output_Slave.png)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

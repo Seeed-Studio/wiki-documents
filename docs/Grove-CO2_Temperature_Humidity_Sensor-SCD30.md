@@ -303,4 +303,4 @@ There are two ino sample in the SCD30 library foldor, you can run the `SCD30_aut
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/)

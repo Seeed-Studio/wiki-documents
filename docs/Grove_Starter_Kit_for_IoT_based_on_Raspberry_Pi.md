@@ -315,4 +315,4 @@ You can see the Distance Sound Light value and relay state on the LCD Screen. Th
 * [Example Code](https://github.com/Seeed-Studio/GrovePiExamples_win10)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

@@ -110,4 +110,4 @@ while True:
 - [OpenWrt](http://wiki.openwrt.org/doc/howto/user.beginner)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

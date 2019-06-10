@@ -41,4 +41,4 @@ Following is the link of all gases to Bazaar, choose the one you needed!
 *   [Grove - Dust Sensor](http://www.seeedstudio.com/depot/Grove-Dust-Sensor-p-1050.html)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

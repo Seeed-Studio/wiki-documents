@@ -43,4 +43,4 @@ This website is built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

@@ -38,4 +38,4 @@ This is a custom solar panel, which mates directly with many of our development 
 ![](https://github.com/SeeedDocument/3W_Solar_Panel_138x160/raw/master/img/3W.jpg)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

@@ -56,4 +56,4 @@ Firstly, before any action you are going to take, you need to prepare a paramete
 - [Xadow Compass Library File](https://github.com/Seeed-Studio/Grove_3Axis_Digital_Compass)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

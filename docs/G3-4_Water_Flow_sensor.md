@@ -387,4 +387,4 @@ Now share your awesome projects with us on [Recipe](http://www.seeedstudio.com/r
 <font color="#FF0000">Get more information about Core User, please email to:</font> [recipe@seeed.cc](mailto:recipe@seeed.cc)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

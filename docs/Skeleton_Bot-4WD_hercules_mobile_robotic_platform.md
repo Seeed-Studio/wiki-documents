@@ -424,4 +424,4 @@ Here is a video, Showing the hercules strong: [http://www.youtube.com/watch?v=uc
 - [Specification for Motor](https://github.com/SeeedDocument/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/raw/master/res/Specifications_for_Motor.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

@@ -265,4 +265,4 @@ More information about the AT Commands please refer to the data sheet of BLE mod
 [DataSheet of BLE module](https://github.com/SeeedDocument/Seeed_BLE_Shield/raw/master/res/Bluetooth4_en.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

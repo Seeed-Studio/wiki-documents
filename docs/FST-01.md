@@ -610,4 +610,4 @@ PCB Assembly was done by **User:Gniibe** by hand.  See [my article](http://www.g
             * blink LED (emits lights for 25ms,off 200ms).
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

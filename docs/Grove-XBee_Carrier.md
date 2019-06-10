@@ -226,4 +226,4 @@ void loop() {
 *   [RT9167A_33PB](http://www.richtek.com/download_ds.jsp?s=238)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

@@ -52,4 +52,4 @@ After you have uploaded the sketch, open the serial monitor window in the Arduin
 ![](https://github.com/SeeedDocument/Project_Seven-Temperature/raw/master/img/Aq0PYQjuq.png)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

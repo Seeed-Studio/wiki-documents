@@ -542,4 +542,4 @@ slcd.backlight();  // Turn on the backlight
 - **[Library]** [a small fix to v1.0b-Library](https://github.com/ydirson/Wiring/commit/60e58003e8c1dc9be81d0f58b1d0f3ef9fad1446) for begin() not following the correct protocol
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

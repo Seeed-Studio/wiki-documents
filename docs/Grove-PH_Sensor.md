@@ -156,4 +156,4 @@ Hope this helps!
 - [Grove - PH Sensor Schematic in PDF](https://github.com/SeeedDocument/Grove-PH_Sensor/raw/master/res/Grove-PH_Sensor_v1.0.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

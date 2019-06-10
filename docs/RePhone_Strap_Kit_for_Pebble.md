@@ -340,4 +340,4 @@ The schematic diagram of Xadow Pebble Time Adapter is provided in the following 
 *   [_Xadow Pebble Time Adapter eagle files_](res/Xadow_Pebble_Time_Adapter.rar)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

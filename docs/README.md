@@ -35,4 +35,4 @@ All trademarks are the property of their respective owners.
 Write to us at ![](contact-us.png) with subject line "Wiki". Thanks
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

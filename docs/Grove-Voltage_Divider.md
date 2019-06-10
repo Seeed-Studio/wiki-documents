@@ -120,4 +120,4 @@ Upload the program to your Arduino/Seeeduino.
 - [Codecraft CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove-Voltage_Divider/master/res/Grove_Voltage_Divider_CDC_File.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

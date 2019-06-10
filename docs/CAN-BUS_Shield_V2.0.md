@@ -482,4 +482,4 @@ From each node (IE Switch pod that controls your windows or electric door locks)
 * **[Drawing]**[CAN BUS Shield v2.0 Drawing in DXF](https://github.com/SeeedDocument/CAN-BUS-Shield-V2.0/raw/master/res/CAN-BUS%C2%A0SHIELD%C2%A0V2.0.dxf.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc.
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).

@@ -1047,6 +1047,6 @@ A2: Please click raspberry -> Preferences -> Raspberry Pi Configuration, then se
 - **[Algorithms]** [AEC](https://github.com/voice-engine/ec)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc.
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
 
 

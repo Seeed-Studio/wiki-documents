@@ -698,4 +698,4 @@ Russia
 *   [schematic of the device](http://wiki.devicter.ru/images/c/c7/Wl-Scheme.PNG)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

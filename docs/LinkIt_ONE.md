@@ -306,4 +306,4 @@ A8: The LinkitONE IDE comes with examples to use the GPRS to connect to web. Jus
 - [See Also: Sidekick Base Kit for LinkIt ONE](http://www.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_LinkIt_ONE)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

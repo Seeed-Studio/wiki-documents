@@ -31,4 +31,4 @@ Please share your modifications at the DSO Nano forum. The best is to post a "di
 - [Firmware generation and upgrade](http://dsonano.googlecode.com/files/DSO%20nano%20firmware%20generation%20and%20upgrade.pdf) (PDF)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

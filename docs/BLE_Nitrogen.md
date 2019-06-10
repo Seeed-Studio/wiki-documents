@@ -142,4 +142,4 @@ Insert the board to PC via a micro USB cable, and double click mbedWinSerial_164
 * [Driver for Mbed](https://developer.mbed.org/media/downloads/drivers/mbedWinSerial_16466.exe)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

@@ -62,4 +62,4 @@ I made some small change to this library, you can download here: [https://github
 - [download pdf file](https://github.com/SeeedDocument/A_Handy_Serial_Library/raw/master/res/A_handy_Serial_library.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

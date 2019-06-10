@@ -205,4 +205,4 @@ We consistency agreed that the color of the previous two versions are not bright
 - [The application program package:SmartMeter](https://github.com/SeeedDocument/Bluetooth_Multimeter/raw/master/res/SmartMeterWithUI_Installation_package.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

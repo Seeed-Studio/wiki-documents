@@ -264,4 +264,4 @@ Seeed oled 96*96 demo.
 - **[DataSheet]** [AD7992 datasheet](https://github.com/SeeedDocument/MT3620_Grove_Breakout/raw/master/res/AD7992.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc.
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).

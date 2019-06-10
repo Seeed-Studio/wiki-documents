@@ -1911,4 +1911,4 @@ The basic function of the reception service is to greet visitors, make them feel
 <iframe width="800" height="450" src="https://www.youtube.com/embed/-nTOa3LLpVo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc.
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).

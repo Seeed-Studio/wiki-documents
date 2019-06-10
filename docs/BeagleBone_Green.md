@@ -396,4 +396,4 @@ There're many references to help you to get more information about the board.
 - **[PDF]** [BBG Mechincal Drawing](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/BBG-PCBA.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc.
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).

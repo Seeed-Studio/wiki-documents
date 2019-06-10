@@ -66,4 +66,4 @@ Here we go, now you can take the screen and motherboard away from the case.
 6.  8-Channel Analog Multiplexer : change the match channel for different V/div
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

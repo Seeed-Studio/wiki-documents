@@ -71,4 +71,4 @@ You can now start stepping through the program, just some examples
 *   [http://embdev.net/topic/129757](http://embdev.net/topic/129757)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

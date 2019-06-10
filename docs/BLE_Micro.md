@@ -119,4 +119,4 @@ By default, the BLE Micro is acted as a BLE to UART device. It can be connected 
 *   [Firmware](https://github.com/SeeedDocument/BLE_Micro/raw/master/res/Ble_micro_firmware.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

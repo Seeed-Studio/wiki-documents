@@ -121,4 +121,4 @@ Connect battery and battery power detector as following image. You can see LEDs 
 - **[Datasheet]**[Battery Datasheet](https://github.com/SeeedDocument/Battery-kit-3.7V_520-mAh/raw/master/res/Lithium-ion_Battery_3.7V-520mAH_Datasheet.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

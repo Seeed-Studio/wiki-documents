@@ -196,4 +196,4 @@ Resources
 <!-- This Markdown file was created from http://wiki.seeedstudio.com/RFbee_V1.1-Wireless_Arduino_compatible_node/ -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

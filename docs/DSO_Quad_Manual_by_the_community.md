@@ -493,4 +493,4 @@ The DSO Quad can be charged from any normal USB port. Please charge your DSO Qua
 The DSO Quad firmware does a rapid USB disconnect-reconnect to do a "live" firmware update. This method is incompatible with Mac OS X or Linux. Please see [this forum thread](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1934) for more information.  See [DSO Quad Building Firmware](/DSO_Quad-Building_Firmware "DSO Quad Building Firmware") for how to upgrade firmware from Linux.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

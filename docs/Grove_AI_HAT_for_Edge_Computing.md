@@ -560,4 +560,4 @@ Now you can use the camera to shoot faces, rotate the focus ring on the camera o
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/)

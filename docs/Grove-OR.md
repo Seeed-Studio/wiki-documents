@@ -44,4 +44,4 @@ Note that this Grove - OR module is sold only as part of the above mentioned pac
 *   [Grove - OR v2.0 Source (Eagle files)](https://github.com/SeeedDocument/Grove-OR/raw/master/res/Grove-OR_v2.0_Eagle.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

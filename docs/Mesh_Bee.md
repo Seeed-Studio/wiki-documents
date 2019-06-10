@@ -944,4 +944,4 @@ End-device's firmware: [https://github.com/Seeed-Studio/Mesh_Bee/raw/v1.0.4/buil
 *   [Mesh Bee firmware source code on Github](https://github.com/Seeed-Studio/Mesh_Bee)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

@@ -163,4 +163,4 @@ If the Wifi Shield doesn't response any commands, try to do factory reset follow
 - **[Manual]**[WiFi Module User Manual](https://github.com/SeeedDocument/Wifi_Shield_V1.1/raw/master/res/WiFly-RN-UM.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

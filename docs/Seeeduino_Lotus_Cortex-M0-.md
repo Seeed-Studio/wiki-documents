@@ -313,4 +313,4 @@ A few seconds after the upload finishes, you should see the pin 13 (L) LED on th
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

@@ -52,4 +52,4 @@ The schematic diagram of Xadow GSM Breakout is provided in the following link:
 - [Xadow_GSM+BLE eagle files](https://github.com/SeeedDocument/Xadow_GSM_Breakout/raw/master/res/Xadow_GSM_Breakout.rar)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

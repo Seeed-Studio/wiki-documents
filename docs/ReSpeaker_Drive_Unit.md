@@ -107,4 +107,4 @@ Now wait a few seconds, find your smart phone and prepare to stream your music o
         An additional tip is that, try to tune the volume up of your player application if you hear no sound after the playing.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

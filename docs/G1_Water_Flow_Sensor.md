@@ -322,4 +322,4 @@ Yes, it's usage is safe for human consumption. It is frequently used on drinking
 *   [datasheet for the material](http://wiki.seeedstudio.com/images/4/4e/YEE70G30HSLNC..pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

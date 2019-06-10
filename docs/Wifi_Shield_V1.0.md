@@ -238,4 +238,4 @@ For more detailed information about RN171, you can download the datasheet here [
 - **[Library]**[Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

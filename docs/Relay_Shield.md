@@ -33,4 +33,4 @@ Here lists the comparison between various versions of Relay Shield:
 |**Working status indicators for each relay**|	No|	Yes|	Yes|
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

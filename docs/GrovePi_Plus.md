@@ -119,4 +119,4 @@ We have developed three simple projects to illustrate how the GrovePi works.
 -   **[Document]** [Setting_Up_Software_for_GrovePi](https://github.com/SeeedDocument/GrovePi_Plus/raw/master/res/Setting_Up_Software_for_GrovePi.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

@@ -241,4 +241,4 @@ The pins describe mapping to the Grove - Base Shield for IOIO-OTG board as show 
 - [Grove - Base Shield for IOIO-OTG Eagle File](https://github.com/SeeedDocument/Grove-Base_Shield_for_IOIO-OTG/raw/master/res/Grove-Base_Shield_for_IOIO-OTG_Eagle_File.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

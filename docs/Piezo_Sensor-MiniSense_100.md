@@ -149,4 +149,4 @@ The MiniSense 100 is a low cost cantilever-type vibration sensor loaded by a mas
 *   [MiniSense 100 datasheet](https://github.com/SeeedDocument/Piezo-Sensor---MiniSense-100/raw/master/res/MiniSense_100.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

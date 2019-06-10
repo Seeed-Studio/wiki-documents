@@ -35,4 +35,4 @@ You can see there are two commands(ledon and ledoff) in the phone screen. They a
 [Demo3 BLESlave Code](https://github.com/SeeedDocument/Xadow_Tutorial_Communicate_via_BLE/raw/master/res/BLE_Slave.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

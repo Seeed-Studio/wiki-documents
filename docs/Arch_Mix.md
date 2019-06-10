@@ -445,4 +445,4 @@ This Arch Mix comes pre-installed RT-Thread real-time operating system(RTOS) and
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

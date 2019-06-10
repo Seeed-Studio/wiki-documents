@@ -117,4 +117,4 @@ The diagram below shows the orientation of the axes of sensitivity and the polar
 - [Library File](https://github.com/Seeed-Studio/Xadow_IMU_6DOF)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

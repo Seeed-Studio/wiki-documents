@@ -537,4 +537,4 @@ You can use any serial Tools you like, we use Arduino here. And please make sure
 * **[MoreReading]** [https://nurdspace.nl/ESP8266](https://nurdspace.nl/ESP8266)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

@@ -858,4 +858,4 @@ To achieve 15 bit color resolution, the firmware needs two changes:
 *   [File:RAINBOW-MBI5168 Datasheet VA.02-English.pdf](https://github.com/SeeedDocument/Rainbowduino_LED_driver_platform-ATmega328/raw/master/res/RAINBOW-MBI5168_Datasheet_VA.02-English.pdf "File:RAINBOW-MBI5168 Datasheet VA.02-English.pdf")
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

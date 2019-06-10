@@ -354,4 +354,4 @@ From the above experimental results, the following conclusions can be drawn:
 - **[PDF]** [Grove - Solid State Relay Test Report](https://github.com/SeeedDocument/Grove-Solid_State_Relay/raw/master/res/Grove-SSR_Test_Report_V0.3.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

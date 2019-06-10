@@ -94,4 +94,4 @@ Check more info about the Speaker box and the Microphone:
 - [Datasheet for speaker box and microphone](https://github.com/SeeedDocument/Xadow_Audio/raw/master/res/SpeakerAndMicrophone.rar)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

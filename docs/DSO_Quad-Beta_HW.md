@@ -52,4 +52,4 @@ You can find the product page for the beta device [here: TES101D2P](http://www.s
 *   [Free digital probe for DSO Quad beta testers](http://www.seeedstudio.com/blog/2011/06/01/free-digital-probe-for-dso-quad-beta-testers/)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

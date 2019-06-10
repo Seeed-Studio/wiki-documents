@@ -59,4 +59,4 @@ Available for Android OTG phones and tablets, it combines GPS location from Andr
 Available for Android OTG phones and tablets, it turns data collected from RF Explorer spectrum analyzers into highly graphical charts and displays, enabling users to more readily visualize the RF environment, monitor RF signals, troubleshoot RF issues, and detect sources of RF interference.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

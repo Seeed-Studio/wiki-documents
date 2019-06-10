@@ -383,4 +383,4 @@ Can be used when your DSO's bricked.
 *   [Pocket Oscilloscope-DS0201 forum](http://www.minidso.com/bbs/thread.php?fid=6)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

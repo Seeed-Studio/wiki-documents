@@ -132,4 +132,4 @@ The Additional Idea is the place to write your project ideas about this product,
 Here to buy Seeeduino V2.2 **Atmega 168P** and [Atmega 328P](http://www.seeedstudio.com/depot/seeeduino-v22-atmega-328p-p-669.html?cPath=79_80)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

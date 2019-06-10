@@ -157,4 +157,4 @@ Please click **[here](http://support.seeedstudio.com/knowledgebase/articles/1831
 - **[Github]** [HAT](https://github.com/raspberrypi/hats)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

@@ -110,4 +110,4 @@ And the MCU STM32F030F4:
 - [STM32F030F4](https://github.com/SeeedDocument/Xadow_Basic_Sensors/raw/master/res/STM32F030F4.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

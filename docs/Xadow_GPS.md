@@ -98,4 +98,4 @@ $GPRMC,091308.000,A,2235.1683,N,11356.3607,E,0.37,259.79,050813,,,A*6E
 - [Fastrax IT530M Datasheet](https://github.com/SeeedDocument/Xadow_GPS/raw/master/res/IT530M_DataSheet.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

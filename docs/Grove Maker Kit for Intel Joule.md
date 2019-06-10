@@ -57,4 +57,4 @@ The Grove Shield for Intel Joule is the key to bridge the Intel Joule to the fam
 - [Grove Shield for Intel Joule_eagle.zip](https://github.com/SeeedDocument/Grove_Maker_Kit_for_Intel_Joule/raw/master/res/Grove%20Shield%20for%20Intel%20Joule_eagle.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

@@ -71,4 +71,4 @@ Pins on both sides of Xadow modules are symmetrical, here are pins descriptions 
 - [Library of Xadow - Guesture](https://github.com/Seeed-Studio/Grove_Guesture)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

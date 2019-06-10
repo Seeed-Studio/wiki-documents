@@ -63,4 +63,4 @@ Note that the DC - Jack Power [Grove](/Grove "Grove") module is sold only as par
 4.  Contact your seller's customer service if you still can't solve the problem, or visit the [SeeedStudio Customer Support Site](http://support.seeedstudio.com/)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

@@ -359,4 +359,4 @@ Want some Grove modules for your project? Here are some recommend.
 |[More Details](http://www.seeedstudio.com/Grove-Line-Finder-p-825.html)|[More Details](http://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html)|[More Details](http://www.seeedstudio.com/Grove-80cm-Infrared-Proximity-Sensor-p-788.html)|
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

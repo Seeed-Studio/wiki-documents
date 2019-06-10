@@ -237,4 +237,4 @@ Upload the program to your Arduino/Seeeduino.
 * [Codecraft CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove_Speech_Recognizer/master/res/Grove_Speech_Recognizer_CDC_File.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

@@ -73,4 +73,4 @@ The example demonstrates how to get started with the Ethernet function.
 - **[Tools]**[TCPSocket_HelloWorld](https://github.com/SeeedDocument/mbed_Shield/raw/master/res/TCPSocket_HelloWorld.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

@@ -46,4 +46,4 @@ Open Arduino IDE, click File-&gt;Sketchbook-&gt;infrared.
 If you had get the value of your TV turn-on-off key, then point infrared emitter to your TV, and press the button.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

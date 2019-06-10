@@ -151,4 +151,4 @@ Alternatively, it can be bought stand-alone at the [Seeed Studio Bazaar](http://
 *   [Datasheet ISD1820P.pdf (Chinese)](https://github.com/SeeedDocument/Grove_Recorder/raw/master/res/ISD1820P.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

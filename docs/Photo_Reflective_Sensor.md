@@ -318,4 +318,4 @@ This is a reflective sensor combines a GaA1As infrared light emitting diode with
 ![](https://github.com/SeeedDocument/Photo_Reflective_Sensor/raw/master/img/Photo-ref-dimen.JPG)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

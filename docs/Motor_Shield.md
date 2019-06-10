@@ -25,4 +25,4 @@ Here lists the comparison between various versions of Motor Shield:
  |**Power**|Extern power supply|Extern power or +5 Pin of Arduino/Seeeduino|
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

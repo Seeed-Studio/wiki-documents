@@ -118,4 +118,4 @@ void loop()
 *   [Arduino Library Rev 1.3 (Updated 07-09-2009)](http://www.seeedstudio.com/depot/images/product/ServoShield.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

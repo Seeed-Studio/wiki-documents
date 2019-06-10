@@ -259,4 +259,4 @@ There are several chainable add-on modules to extend the features and functional
 - [Download ALL Above](https://github.com/SeeedDocument/RePhone_core_2G-Atmel32u4/archive/master.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

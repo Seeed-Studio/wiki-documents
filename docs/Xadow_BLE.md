@@ -267,4 +267,4 @@ Here we show you how to make Xadow - BLE communicate with your Android mobile ph
 - [More Documents URL](http://www.huamaosoft.com/index_en.asp?page=2&ID=1)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

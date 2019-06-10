@@ -424,4 +424,4 @@ More details and Linux instructions here: [DSO_Quad:Upgrading_Firmware](/DSO_Qua
 - [DSO Quad Manual](https://github.com/SeeedDocument/DSO_Quad/raw/master/res/DSO203_user_Guide_2.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc.
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).

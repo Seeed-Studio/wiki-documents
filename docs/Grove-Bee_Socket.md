@@ -69,4 +69,4 @@ If you need further information about how to communicate, please refer to WIKI p
 [Bee Socket Eagle File](https://github.com/SeeedDocument/Grove-Bee_Socket/raw/master/res/Bee_Socket_Eagle_File.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

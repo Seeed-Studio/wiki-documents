@@ -40,4 +40,4 @@ Here lists the comparison between various versions of GPRS Shield that you can f
 |**transit power**|0.4W|0.8W(29dBm)|
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

@@ -152,4 +152,4 @@ Starter bundle harness is a board  keeping the component of grove-starter bundle
 *   [Grove - Base Shield](/Base_Shield_V2 "Grove - Base Shield")
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

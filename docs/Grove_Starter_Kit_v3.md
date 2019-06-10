@@ -498,4 +498,4 @@ A2: Please check whether the powering switch(3.3V/5V) is on 5V side.
 We would like to express our gratitude to Rich Morin who modified this document with more appropriate grammar and words.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

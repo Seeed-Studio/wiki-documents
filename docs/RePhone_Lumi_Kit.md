@@ -285,4 +285,4 @@ Some frequently asked questions in RePhone Community are collected and answered 
 Please go the Wiki page [Xadow Duino](/Xadow_Duino) for more info.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

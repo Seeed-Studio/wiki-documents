@@ -182,4 +182,4 @@ delay(1000); // wait 1000 milliseconds (1 second)}
 - **[PDF]**[Relay shield sch](https://github.com/SeeedDocument/Relay-Shield_V2.0/raw/master/res/Relay%20shield%20sch.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

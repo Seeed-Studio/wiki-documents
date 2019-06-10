@@ -198,4 +198,4 @@ Note: About the specific methods of some functions in the library, You can refer
 - **[Library]**[Music Shield Source code file for Arduino 0022](https://github.com/SeeedDocument/Music_Shield_V1.0/raw/master/res/Music_v1_14.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

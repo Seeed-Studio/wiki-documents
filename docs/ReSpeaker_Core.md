@@ -601,4 +601,4 @@ It will cost about 3 minutes for ReSpeaker to install the firmware and reboot, p
 - **[PDF]** [AI7688 Datasheet](https://github.com/SeeedDocument/Bazaar_file/raw/master/AI7688.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

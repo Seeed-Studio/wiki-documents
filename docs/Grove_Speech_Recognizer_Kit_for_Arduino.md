@@ -704,4 +704,4 @@ void loop ()
 - [Sound files of broadcast](https://github.com/SeeedDocument/Grove_Speech_Recognizer_Kit_for_Arduino/raw/master/res/Sound_file.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

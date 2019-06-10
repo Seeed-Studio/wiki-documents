@@ -518,4 +518,4 @@ sudo apt-get install portaudio19-dev
 - **[Algorithms]** [AEC](https://github.com/voice-engine/ec)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

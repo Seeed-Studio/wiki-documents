@@ -21,4 +21,4 @@ Here is the list of the Wio_Tracker Boards you can find in the Seeed WiKi. The l
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

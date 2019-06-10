@@ -306,4 +306,4 @@ Here are some questions that we usually received from new users. If you have any
 > Make sure your solar panel is able to supple 4.5~6V voltage.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

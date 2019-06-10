@@ -181,4 +181,4 @@ You can see the belowing scene after uploading the code to Xadow Main Board.
 *   [Xadow LED Firmware](https://github.com/SeeedDocument/Xadow_LED_5_multiply_7_v1.0/raw/master/res/Xadow_LED_Firmware.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

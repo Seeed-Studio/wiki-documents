@@ -126,4 +126,4 @@ PCB design: 70mm X 70mm   Option: 50mm X 150mm X   100mm X 100mm √
 **Eagle Design Rule:** http://support.seeedstudio.com/knowledgebase/articles/447362-fusion-pcb-specification
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 

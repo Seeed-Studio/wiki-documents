@@ -535,4 +535,4 @@ With this demo, we can:
 [**More Awesome Projects by Bluetooth**](http://www.seeedstudio.com/recipe/index.php?query=bluetooth)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc. 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
