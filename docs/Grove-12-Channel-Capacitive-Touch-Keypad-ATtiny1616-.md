@@ -261,6 +261,56 @@ void printData() {
 
 #### Software
 
+
+##### UART Setting
+
+Before start, we need to configure the Raspberry Pi UART.
+
+
+
+- Step 1. Enable Raspberry Pi3 **UART0**.
+
+```
+sudo nano /boot/config.txt
+```
+Then add the content `dtoverlay=pi3-disable-bt` to the end of the **config.txt**
+
+Tap ++ctrl+x++ to quit nano, and tap ++y++ to save the modification.
+
+
+
+- Step 2. Disable the system serivce to use the UART0.
+
+```
+sudo systemctl disable hciuart
+```
+
+!!!Note
+        Pi3-disable-bt disables the Bluetooth device and restores UART0/ttyAMA0 to GPIOs 14 and 15. It is also necessary to disable the system service that initialises the modem so it doesn't use the UART: sudo systemctl disable hciuart.
+
+- Step 3. Delete the `console=serial0,115200` in **cmdline.txt**.
+
+```
+sudo nano /boot/cmdline.txt
+```
+
+Then delete `console=serial0,115200` in this file.
+
+!!!Note
+        If you can not find `console=serial0,115200` in this txt file, just skip this step.
+
+
+- Step 4. Reboot the Raspberry Pi
+
+```
+sudo reboot
+```
+
+For more detial, please check the official [Raspberry Pi UART Config](https://www.raspberrypi.org/documentation/configuration/uart.md)
+
+
+##### Raspberry Pi Demo
+
 - **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
 
 
@@ -305,6 +355,8 @@ python grove_12_channel_touch_keypad.py
     Then touch the keycap, the terminal will output the corresponding key.
 
 
+![](https://github.com/SeeedDocument/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/raw/master/img/grove-py-result.jpg)
+
 
 
 ## Resources
@@ -315,4 +367,4 @@ python grove_12_channel_touch_keypad.py
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/)
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/) or drop mail to techsupport@seeed.cc
