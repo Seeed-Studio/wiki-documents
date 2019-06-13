@@ -235,22 +235,6 @@ Cope this code into your console
 Then you will see the notice `credentials saved: /path/to/.config/google-oauthlib-tool/credentials.json`. That means everything goes well so far.
 
 
-Let's try **pushtotalk**. 
-
-```
-respeaker@v2:~/googleassistant_respeakerd$ googlesamples-assistant-pushtotalk --project-id respeaker-XXX --device-model-id respeaker-XXX-respeaker-core-v2.0-XXX
-INFO:root:Connecting to embeddedassistant.googleapis.com
-WARNING:root:Device config not found: [Errno 2] No such file or directory: u'/home/respeaker/.config/googlesamples-assistant/device_config.json'
-INFO:root:Registering device
-INFO:root:Device registered: XXX-XXX-XXX-XXX-XXX
-Press Enter to send a new request...
-INFO:root:Recording audio request.
-INFO:root:Transcript of user request: "how do I".
-INFO:root:Transcript of user request: "how hot".
-INFO:root:Transcript of user request: "Huddle House".
-INFO:root:Transcript of user request: "hello how are you".
-INFO:root:Transcript of user request: "hello how are you".
-```
 
 
 #### Install Respeakerd
@@ -262,7 +246,7 @@ sudo apt-get install portaudio19-dev libffi-dev libssl-dev
 git clone https://github.com/respeaker/googleassistant_respeakerd
 cd googleassistant_respeakerd
 sudo python setup.py install
-sudo cp script/io.respeaker.respeakerd.conf /etc/dbus-1/system.d/
+sudo cp script/io.respeaker.respeaker.conf /etc/dbus-1/system.d/
 # set respeakerd to pulse mode
 sudo vim /etc/respeaker/respeakerd.conf 
 # reboot to make it work
