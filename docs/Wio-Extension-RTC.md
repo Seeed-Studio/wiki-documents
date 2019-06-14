@@ -158,7 +158,7 @@ Unzip the [sample sketch](https://github.com/Seeed-Studio/Wio_Extension_RTC/raw/
 6. Use Serial monitor to print the serial message. 
 
 
-```cpp
+```c++
 #include <WioLTEforArduino.h>
 #include "WioRTC.h"
 
@@ -171,7 +171,7 @@ Unzip the [sample sketch](https://github.com/Seeed-Studio/Wio_Extension_RTC/raw/
 // Global variables
 
 WioLTE Wio;
-WioRTC RTC;
+WioRTC Rtc;
 
 ////////////////////////////////////////////////////////////////////////////////
 // setup and loop
@@ -199,7 +199,7 @@ void setup()
   
   SerialUSB.println("### Device initialize.");
   Wire.begin();
-  RTC.begin();
+  Rtc.begin();
 
   ////////////////////////////////////////
   // Completed
@@ -210,12 +210,12 @@ void setup()
 void loop()
 {
   uint8_t val;
-  RTC.EepromRead(0, &val, sizeof(val));
+  Rtc.EepromRead(0, &val, sizeof(val));
   SerialUSB.print("EEPROM value is ");
   SerialUSB.println(val);
   
   val++;
-  RTC.EepromWrite(0, &val, sizeof(val));
+  Rtc.EepromWrite(0, &val, sizeof(val));
   
   SerialUSB.println("Beep.");
   pinMode(WIO_D38, OUTPUT);
@@ -224,21 +224,10 @@ void loop()
   digitalWrite(WIO_D38, LOW);
   
   SerialUSB.println("Shutdown.");
-  RTC.SetWakeupPeriod(BOOT_INTERVAL);
-  RTC.Shutdown();
+  Rtc.SetWakeupPeriod(BOOT_INTERVAL);
+  Rtc.Shutdown();
   while (1) {}
 }
-
-////////////////////////////////////////////////////////////////////////////////
-
-```
-After you download the sample sketch, Wio Extension - RTC set to shut down the system for 30 sec with
-```
-RTC.SetWakeupPeriod(BOOT_INTERVAL);
-```
-and then set to shut down the whole system on
-```
-RTC.Shutdown();
 ```
 
 
