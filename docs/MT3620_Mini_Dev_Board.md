@@ -80,7 +80,7 @@ MT3620 software development is supported using the powerful Microsoft Visual Stu
   </tr>
   <tr>
     <td class="tg-c3ow" rowspan="4">ISU</td>
-    <td class="tg-0pky">ISU 0 configured as SPI0 or UART0, ISU 1 configured as SPI1 or UART1 or I2C1</td>
+    <td class="tg-0pky">ISU 0 configured as SPI0 or UART0 or I2C0, ISU 1 configured as SPI1 or UART1 or I2C1</td>
   </tr>
   <tr>
     <td class="tg-0pky">- I2C runs at up to 1MHz</td>
