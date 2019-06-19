@@ -19,7 +19,7 @@ RS485 is cost-effective solution in serial communication, it can be used to data
 
 
 
-<p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://www.seeedstudio.com/Grove-RS485-p-2924.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-RS485-p-2924.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 ## Features
@@ -37,7 +37,7 @@ RS485 is cost-effective solution in serial communication, it can be used to data
 
 <div align="center">
 <figure>
-  <p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://github.com/SeeedDocument/Grove-RS485/raw/master/img/pinout.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Grove-RS485/raw/master/img/pinout.jpg" /></a></p>
+  <p style=":center"><a href="https://github.com/SeeedDocument/Grove-RS485/raw/master/img/pinout.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Grove-RS485/raw/master/img/pinout.jpg" /></a></p>
   <figcaption><b>Figure 1</b>. <i>Pinout</i></figcaption>
 </figure>
 </div>

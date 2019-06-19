@@ -17,7 +17,7 @@ Microsoft Azure Sphere is a solution for creating highly-secured, connected, MCU
 !!!Warning
     Please note that Azure Sphere MT3620 Development kit is required but not included in this Starter kit.  You can purchase it [here](https://www.seeedstudio.com/s/Azure%20Sphere%20MT3620.html). 
  
-<p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://www.seeedstudio.com/Grove-Starter-Kit-for-Azure-Sphere-MT3620-Development-Kit-p-3150.html" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-Starter-Kit-for-Azure-Sphere-MT3620-Development-Kit-p-3150.html" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
 
 ## Features
 
@@ -43,7 +43,7 @@ The [SC18IM700](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development
 
 ![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/MT3620_Grove_Shield-2018-09-11.png)
 
-<div style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center">MT3620 Grove Shield Hardware Overview</div>
+<div style=":center">MT3620 Grove Shield Hardware Overview</div>
 
 **Part List**
 
@@ -51,8 +51,8 @@ The [SC18IM700](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
 .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg .tg-xldj{border-color:inherit;<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:left}
-.tg .tg-0pky{border-color:inherit;<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:left;vertical-align:top}
+.tg .tg-xldj{border-color:inherit;:left}
+.tg .tg-0pky{border-color:inherit;:left;vertical-align:top}
 </style>
 <table class="tg">
   <tr>

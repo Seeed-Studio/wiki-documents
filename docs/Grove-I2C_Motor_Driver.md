@@ -22,13 +22,13 @@ sku: 105020001
 <td><img src="https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Motor_Driver/master/img/I2CMotorDriver_New.jpg" /></td>
 </tr>
 <tr class="even">
-<td><div style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>: center">
+<td><div style=": center">
 <a href="/Grove-Mini_I2C_Motor_Driver_v1.0" title="Grove - I2C Motor Driver V1.0">Grove - I2C Motor Driver V1.0</a>
 </div></td>
-<td><div style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>: center">
+<td><div style=": center">
 <a href="/Grove-I2C_Motor_Driver_V1.2" title="Grove - I2C Motor Driver V1.2">Grove - I2C Motor Driver V1.2</a>
 </div></td>
-<td><div style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>: center">
+<td><div style=": center">
 <a href="/Grove-I2C_Motor_Driver_V1.3" title="Grove - I2C Motor Driver V1.3">Grove - I2C Motor Driver V1.3</a>
 </div></td>
 </tr>

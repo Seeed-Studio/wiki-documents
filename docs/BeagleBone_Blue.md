@@ -445,7 +445,7 @@ Then you will get the light value as the picture below.
 
 
 <style>
-.div1{ border:0px solid #000; <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:left}
+.div1{ border:0px solid #000; :left}
 
 </style>
 </head>

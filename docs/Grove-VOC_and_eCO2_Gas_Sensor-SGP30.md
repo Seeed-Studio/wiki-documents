@@ -20,7 +20,7 @@ The SGP30 is a digital multi-pixel gas sensor designed for easy integration into
 
 
 
-<p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://www.seeedstudio.com/-Grove-VOC-and-eCO2-Gas-Sensor-(SGP30)-p-3071.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/-Grove-VOC-and-eCO2-Gas-Sensor-(SGP30)-p-3071.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 !!!Tip
     We've released the [Seeed Gas Sensor Selection Guide](http://wiki.seeedstudio.com/Seeed_Gas_Sensor_Selection_Guide/), it will help you choose the gas sensor that best suits your needs.
@@ -42,12 +42,12 @@ The SGP30 is a digital multi-pixel gas sensor designed for easy integration into
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;}
 .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#26ADE4;}
 .tg .tg-eh2d{background-color:#ffffff;border-color:inherit;vertical-align:top}
-.tg .tg-xf7g{background-color:#444444;border-color:inherit;<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center}
+.tg .tg-xf7g{background-color:#444444;border-color:inherit;:center}
 .tg .tg-f5ry{background-color:#ffffff;border-color:inherit}
-.tg .tg-28l8{background-color:#ffffff;border-color:inherit;<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center}
-.tg .tg-3xi5{background-color:#ffffff;border-color:inherit;<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center;vertical-align:top}
+.tg .tg-28l8{background-color:#ffffff;border-color:inherit;:center}
+.tg .tg-3xi5{background-color:#ffffff;border-color:inherit;:center;vertical-align:top}
 .tg .tg-3we0{background-color:#ffffff;vertical-align:top}
-.tg .tg-i81m{background-color:#ffffff;<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center;vertical-align:top}
+.tg .tg-i81m{background-color:#ffffff;:center;vertical-align:top}
 </style>
 <table class="tg" style="undefined;table-layout: fixed; width: 529px">
 <colgroup>

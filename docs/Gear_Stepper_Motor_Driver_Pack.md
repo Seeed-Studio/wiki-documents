@@ -16,7 +16,7 @@ The Gear Stepper Motor Driver Pack includes a stepper motor and a motor drive bo
 You can use this pack for position control.
 
 
-<p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://www.seeedstudio.com/Gear-Stepper-Motor-Driver-Pack-p-3200.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Gear-Stepper-Motor-Driver-Pack-p-3200.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 ## Features
@@ -61,7 +61,7 @@ You can use this pack for position control.
 
 you can click it to see the original picture.
 
-<p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Gear-Stepper-Motor-Driver-Pack/master/img/mechanical.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Gear-Stepper-Motor-Driver-Pack/raw/master/img/mechanical.jpg" /></a></p>
+<p style=":center"><a href="https://raw.githubusercontent.com/SeeedDocument/Gear-Stepper-Motor-Driver-Pack/master/img/mechanical.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Gear-Stepper-Motor-Driver-Pack/raw/master/img/mechanical.jpg" /></a></p>
 
 
 

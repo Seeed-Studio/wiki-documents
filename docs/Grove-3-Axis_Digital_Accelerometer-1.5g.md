@@ -29,10 +29,10 @@ tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit, plat_wio
 </div></td>
 </tr>
 <tr class="even">
-<td><div style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>: center">
+<td><div style=": center">
 Grove - 3-Axis Digital Accelerometer v1.2
 </div></td>
-<td><div style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>: center">
+<td><div style=": center">
 Grove - 3-Axis Digital Accelerometer v1.2b
 </div></td>
 </tr>

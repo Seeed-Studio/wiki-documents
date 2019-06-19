@@ -16,6 +16,6 @@ if __name__ == '__main__':
         if(fileName.endswith(file_extension)):
             file1 = directoryPath + '\\' + fileName
             f1 = open(file1, "a+")
-            f1.write("text-align")
+            f1.write("hhkllfirhsaaaadfdfdghjukuilkiolloo")
 			#f1.close()
         
