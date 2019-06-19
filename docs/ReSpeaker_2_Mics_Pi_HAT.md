@@ -17,6 +17,7 @@ The board is developed based on WM8960, a low power stereo codec. There are 2 mi
 
 [![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html)
 
+
 ## Features
 
 * Raspberry Pi compatible(Support Raspberry Pi Zero and Zero W, Raspberry Pi B+, Raspberry Pi 2 B, Raspberry Pi 3 B, Raspberry Pi 3 B+ and Raspberry Pi 3 A+)
@@ -463,7 +464,7 @@ deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main non-
 - **[3D]** [ReSpeaker 2 Mics Pi HAT 3D](https://github.com/SeeedDocument/MIC_HATv1.0_for_raspberrypi/raw/master/src/ReSpeaker%202-Mics%20Pi%20HAT.zip)
 - **[Driver]** [Seeed-Voice Driver](https://github.com/respeaker/seeed-voicecard)
 - **[Algorithms]** [Algorithms includes DOA, VAD, NS](https://github.com/respeaker/mic_array)
-- **[Voice Engine** [Voice Engine project, provides building blocks to create voice enabled objects](https://github.com/voice-engine/voice-engine)
+- **[Voice Engine]** [Voice Engine project, provides building blocks to create voice enabled objects](https://github.com/voice-engine/voice-engine)
 - **[Algorithms]** [AEC](https://github.com/voice-engine/ec)
 
 ## Projects
@@ -478,3 +479,5 @@ deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main non-
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+
+
