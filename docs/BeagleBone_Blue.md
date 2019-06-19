@@ -445,7 +445,7 @@ Then you will get the light value as the picture below.
 
 
 <style>
-.div1{ border:0px solid #000; text-align:left}
+.div1{ border:0px solid #000; <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:left}
 
 </style>
 </head>
@@ -889,4 +889,4 @@ Please do not hesitate to contact **techsupport@seeed.cc** if you require furthe
 - **[MoreReading]** [Projects of BeagleBoard](http://beagleboard.org/project)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

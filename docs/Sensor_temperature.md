@@ -21,3 +21,4 @@
 
 - [Grove - Temperature&Humidity Sensor (High-Accuracy &Mini) v1.0](http://wiki.seeedstudio.com/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0/)
 
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

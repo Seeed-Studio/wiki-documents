@@ -18,7 +18,7 @@ MT3620 Grove breakout enable users to quickly apply sensors modules -[SeeedStudi
 Since [Azure Sphere SDK](http://aka.ms/AzureSphereSDK) has not yet supported ADC on MT3620, this breakout serves as an interface between MT3620 I2C port and external ADC, which provide a way to read the analog data from analog port. Besides the analog port , this breakout has UART,SPI,I2C,GPIO ports.
 
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/MT3620-Grove-Breakout-p-4043.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://www.seeedstudio.com/MT3620-Grove-Breakout-p-4043.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
  
 
@@ -265,3 +265,4 @@ Seeed oled 96*96 demo.
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

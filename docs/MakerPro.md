@@ -86,3 +86,4 @@ Here is the list of the MakerPro Boards you can find in the Seeed WiKi. The list
 - [WireLess Gate Shield V1.0](/WireLess_Gate_Shield_V1.0/)
 - [Wireless Sensor Node - Solar Kit](/Wireless_Sensor_Node-Solar_Kit/)
 
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

@@ -26,3 +26,4 @@ Here is the list of the mbed Boards you can find in the Seeed WiKi. The list wil
 - [Seeeduino Arch V1.0](/Seeeduino_Arch_V1.0/)
 - [Tiny BLE](/Tiny_BLE/)
 
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

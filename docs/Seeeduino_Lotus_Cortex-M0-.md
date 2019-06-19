@@ -24,7 +24,7 @@ Seeeduino Lotus has 14 digital input/outputs (6 of which can output PWM) and 7 a
 
 
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/Seeeduino-Lotus-Cortex-M0-p-2896.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://www.seeedstudio.com/Seeeduino-Lotus-Cortex-M0-p-2896.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 
@@ -111,7 +111,7 @@ Compared with Seeeduino Lotus V1.1, the Seeeduino Lotus Cortex-M0+ mainly upgrad
 
 <div align="center">
 <figure>
-  <p style="text-align:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Lotus_Cortex-M0-/master/img/Pin_out.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Seeeduino_Lotus_Cortex-M0-/raw/master/img/Pin_out.jpg" /></a></p>
+  <p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Lotus_Cortex-M0-/master/img/Pin_out.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Seeeduino_Lotus_Cortex-M0-/raw/master/img/Pin_out.jpg" /></a></p>
   <figcaption><b>Figure 2</b>. <i>Pinout, you can ckick the image to view the original file</i></figcaption>
 </figure>
 </div>
@@ -314,3 +314,4 @@ A few seconds after the upload finishes, you should see the pin 13 (L) LED on th
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

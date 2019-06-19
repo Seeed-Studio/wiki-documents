@@ -109,3 +109,4 @@ We have completed numerous customized BeagleBone projects. You can view some of 
 
 
 If you have additional questions or customization needs please contact us at [iot@seeed.cc](iot@seeed.cc).
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

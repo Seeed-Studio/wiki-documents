@@ -14,7 +14,7 @@ tags:
 RS-485 is a cost-effective solution in serial communication networks. It can be used up to data rates at 10 Mbit/s or distances up to 1200m at lower speeds. This RS-485 Shield is a standard add-on board for Raspberry Pi. It is integrated with simple screw terminal as well as DB9 interface. 
 
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/RS-485-Shield-for-Raspberry-Pi.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://www.seeedstudio.com/RS-485-Shield-for-Raspberry-Pi.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 ## Feature
@@ -87,7 +87,7 @@ The 485 interface uses differential signal transmission. Please make sure the po
 
 [![](https://raw.githubusercontent.com/SeeedDocument/RS-485_Shield_for_Raspberry_Pi/master/img/schematic_1.jpg)](https://raw.githubusercontent.com/SeeedDocument/RS-485_Shield_for_Raspberry_Pi/master/img/schematic_1.jpg)
 
-<p style="text-align:center"><font color="green">You can click the picture to view the original file</font></p>
+<p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><font color="green">You can click the picture to view the original file</font></p>
 
 
 As you can see, GPIO14 and GPIO15 are applied for data transmission, and we use GPIO18 as the enable signal.
@@ -307,3 +307,4 @@ You need two shield and two raspberry to test the code above, or you can use the
 ## Tech Support
 
 Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/) or drop mail to [techsupport@seeed.cc](techsupport@seeed.cc).
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

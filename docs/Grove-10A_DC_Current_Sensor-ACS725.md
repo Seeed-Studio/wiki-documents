@@ -22,7 +22,7 @@ The Grove - 10A DC Current Sensor (ACS725) can measure the DC current up to 10A 
 
 
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-10A-DC-Current-Sensor-ACS725-p-2927.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://www.seeedstudio.com/Grove-10A-DC-Current-Sensor-ACS725-p-2927.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 
@@ -84,7 +84,7 @@ The Grove - 10A DC Current Sensor (ACS725) is based on the Hall priciple, differ
 
 <div align="center">
 <figure>
-  <p style="text-align:center"><a href="https://github.com/SeeedDocument/Grove-10A_Current_Sensor-ACS725/raw/master/img/pinout.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Grove-10A_Current_Sensor-ACS725/raw/master/img/pinout.jpg" /></a></p>
+  <p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://github.com/SeeedDocument/Grove-10A_Current_Sensor-ACS725/raw/master/img/pinout.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Grove-10A_Current_Sensor-ACS725/raw/master/img/pinout.jpg" /></a></p>
   <figcaption><b>Figure 3</b>. <i>Pinout</i></figcaption>
 </figure>
 </div>
@@ -149,7 +149,7 @@ The Grove - 10A DC Current Sensor (ACS725) is based on the Hall priciple, differ
 
 <div align="center">
 <figure>
-  <p style="text-align:center"><a href="https://github.com/SeeedDocument/Grove-10A_Current_Sensor-ACS725/raw/master/img/101020616-connect.png" target="_blank"><img src="https://github.com/SeeedDocument/Grove-10A_Current_Sensor-ACS725/raw/master/img/101020616-connect.png" /></a></p>
+  <p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://github.com/SeeedDocument/Grove-10A_Current_Sensor-ACS725/raw/master/img/101020616-connect.png" target="_blank"><img src="https://github.com/SeeedDocument/Grove-10A_Current_Sensor-ACS725/raw/master/img/101020616-connect.png" /></a></p>
   <figcaption><b>Figure 4</b>. <i>We use the DC Power Supply in this demo, please set the current to 0A or do not power on it at first</i></figcaption>
 </figure>
 </div>
@@ -258,7 +258,7 @@ void loop()
 
 <div align="center">
 <figure>
-  <p style="text-align:center"><a href="https://github.com/SeeedDocument/Grove-10A_Current_Sensor-ACS725/raw/master/img/ca1.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Grove-10A_Current_Sensor-ACS725/raw/master/img/ca1.jpg" /></a></p>
+  <p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://github.com/SeeedDocument/Grove-10A_Current_Sensor-ACS725/raw/master/img/ca1.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Grove-10A_Current_Sensor-ACS725/raw/master/img/ca1.jpg" /></a></p>
   <figcaption><b>Figure 5</b>. <i>The zero offset of this board is 346.68mV，Converted into current is 93.48mA</i></figcaption>
 </figure>
 </div>
@@ -283,7 +283,7 @@ Then save the code and upload the code again, follow the Step 2. and Step 3. Now
 
 <div align="center">
 <figure>
-  <p style="text-align:center"><a href="https://github.com/SeeedDocument/Grove-10A_Current_Sensor-ACS725/raw/master/img/ca2.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Grove-10A_Current_Sensor-ACS725/raw/master/img/ca2.jpg" /></a></p>
+  <p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://github.com/SeeedDocument/Grove-10A_Current_Sensor-ACS725/raw/master/img/ca2.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Grove-10A_Current_Sensor-ACS725/raw/master/img/ca2.jpg" /></a></p>
   <figcaption><b>Figure 6</b>. <i>Now the current zero offset turns to 0mA</i></figcaption>
 </figure>
 </div>
@@ -324,7 +324,7 @@ If you want to know the calculation formula of the result, please refer to the [
 
 <div align="center">
 <figure>
-  <p style="text-align:center"><a href="https://github.com/SeeedDocument/Grove-10A_Current_Sensor-ACS725/raw/master/img/101020616-connect2.png" target="_blank"><img src="https://github.com/SeeedDocument/Grove-10A_Current_Sensor-ACS725/raw/master/img/101020616-connect2.png" /></a></p>
+  <p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://github.com/SeeedDocument/Grove-10A_Current_Sensor-ACS725/raw/master/img/101020616-connect2.png" target="_blank"><img src="https://github.com/SeeedDocument/Grove-10A_Current_Sensor-ACS725/raw/master/img/101020616-connect2.png" /></a></p>
   <figcaption><b>Figure 7</b>. <i>We use the DC Power Supply in this demo, please set the current to 0A or do not power on it at first</i></figcaption>
 </figure>
 </div>
@@ -747,4 +747,4 @@ So, in the figure 6, when we set the **Vref** to 346.68, the **Ip** turns to 0mA
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/)
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

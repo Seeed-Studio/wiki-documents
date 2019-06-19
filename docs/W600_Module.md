@@ -20,7 +20,7 @@ The W600 Module is a cost-effective 2.4GHz WiFi module support 802.11b/g/n. Seee
 We take the pins of the W600 chip out and put them on the back of the board, including I2S/I2C/SPI/GPIO/PWM/UART/SDIO. In addition, this module has an on-board PCB Antenna, no need to design the antenna separately, so you can quickly deploy the module to your own board. We also have made CE/FCC certification for this module and you can use it directly for business projects.
 
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/W600-Module-p-4020.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://www.seeedstudio.com/W600-Module-p-4020.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 
@@ -424,3 +424,4 @@ Please do not hesitate to submit the issue into our [forum](https://forum.seeeds
 
 
 
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

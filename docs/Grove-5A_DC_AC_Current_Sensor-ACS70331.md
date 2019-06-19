@@ -21,7 +21,7 @@ The Grove - ±5A DC/AC Current Sensor (ACS70331) can measure both the DC current
 
 
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-5A-DC-AC-Current-Sensor-ACS70331-p-2928.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://www.seeedstudio.com/Grove-5A-DC-AC-Current-Sensor-ACS70331-p-2928.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 
@@ -84,7 +84,7 @@ The internal construction of the ACS70331 QFN package is shown in Figure 2. The 
 
 <div align="center">
 <figure>
-  <p style="text-align:center"><a href="https://github.com/SeeedDocument/Grove-2.5A_DC_Current_Sensor-ACS70331/raw/master/img/principle1.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Grove-2.5A_DC_Current_Sensor-ACS70331/raw/master/img/principle1.jpg" /></a></p>
+  <p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://github.com/SeeedDocument/Grove-2.5A_DC_Current_Sensor-ACS70331/raw/master/img/principle1.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Grove-2.5A_DC_Current_Sensor-ACS70331/raw/master/img/principle1.jpg" /></a></p>
   <figcaption><b>Figure 1</b>. <i>ACS70331 Internal Construction</i></figcaption>
 </figure>
 </div>
@@ -95,7 +95,7 @@ The four GMR elements are arranged in a Wheatstone bridge configuration as shown
 
 <div align="center">
 <figure>
-  <p style="text-align:center"><a href="https://github.com/SeeedDocument/Grove-2.5A_DC_Current_Sensor-ACS70331/raw/master/img/principle2.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Grove-2.5A_DC_Current_Sensor-ACS70331/raw/master/img/principle2.jpg" /></a></p>
+  <p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://github.com/SeeedDocument/Grove-2.5A_DC_Current_Sensor-ACS70331/raw/master/img/principle2.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Grove-2.5A_DC_Current_Sensor-ACS70331/raw/master/img/principle2.jpg" /></a></p>
   <figcaption><b>Figure 2</b>. <i>Wheatstone Bridge Configuration</i></figcaption>
 </figure>
 </div>
@@ -109,7 +109,7 @@ The four GMR elements are arranged in a Wheatstone bridge configuration as shown
 
 <div align="center">
 <figure>
-  <p style="text-align:center"><a href="https://github.com/SeeedDocument/Grove--5A_DC-AC_Current_Sensor-ACS70331/raw/master/img/pinout.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Grove--5A_DC-AC_Current_Sensor-ACS70331/raw/master/img/pinout.jpg" /></a></p>
+  <p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://github.com/SeeedDocument/Grove--5A_DC-AC_Current_Sensor-ACS70331/raw/master/img/pinout.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Grove--5A_DC-AC_Current_Sensor-ACS70331/raw/master/img/pinout.jpg" /></a></p>
   <figcaption><b>Figure 3</b>. <i>Pinout</i></figcaption>
 </figure>
 </div>
@@ -176,7 +176,7 @@ The four GMR elements are arranged in a Wheatstone bridge configuration as shown
 
 <div align="center">
 <figure>
-  <p style="text-align:center"><a href="https://github.com/SeeedDocument/Grove--5A_DC-AC_Current_Sensor-ACS70331/raw/master/img/101020615-connect.png" target="_blank"><img src="https://github.com/SeeedDocument/Grove--5A_DC-AC_Current_Sensor-ACS70331/raw/master/img/101020615-connect.png" /></a></p>
+  <p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://github.com/SeeedDocument/Grove--5A_DC-AC_Current_Sensor-ACS70331/raw/master/img/101020615-connect.png" target="_blank"><img src="https://github.com/SeeedDocument/Grove--5A_DC-AC_Current_Sensor-ACS70331/raw/master/img/101020615-connect.png" /></a></p>
   <figcaption><b>Figure 4</b>. <i>We use the DC Power Supply in this demo, please set the current to 0A or do not power on it at first</i></figcaption>
 </figure>
 </div>
@@ -289,7 +289,7 @@ void loop()
 
 <div align="center">
 <figure>
-  <p style="text-align:center"><a href="https://github.com/SeeedDocument/Grove--5A_DC-AC_Current_Sensor-ACS70331/raw/master/img/ca1.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Grove--5A_DC-AC_Current_Sensor-ACS70331/raw/master/img/ca1.jpg" /></a></p>
+  <p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://github.com/SeeedDocument/Grove--5A_DC-AC_Current_Sensor-ACS70331/raw/master/img/ca1.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Grove--5A_DC-AC_Current_Sensor-ACS70331/raw/master/img/ca1.jpg" /></a></p>
   <figcaption><b>Figure 5</b>. <i>The zero offset of this board is 595.70mV，Converted into current is -4561.48mA</i></figcaption>
 </figure>
 </div>
@@ -314,7 +314,7 @@ Then save the code and upload the code again, follow the Step 2. and Step 3. Now
 
 <div align="center">
 <figure>
-  <p style="text-align:center"><a href="https://github.com/SeeedDocument/Grove--5A_DC-AC_Current_Sensor-ACS70331/raw/master/img/ca2.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Grove--5A_DC-AC_Current_Sensor-ACS70331/raw/master/img/ca2.jpg" /></a></p>
+  <p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://github.com/SeeedDocument/Grove--5A_DC-AC_Current_Sensor-ACS70331/raw/master/img/ca2.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Grove--5A_DC-AC_Current_Sensor-ACS70331/raw/master/img/ca2.jpg" /></a></p>
   <figcaption><b>Figure 6</b>. <i>Now the current zero offset turns to 0.02mA</i></figcaption>
 </figure>
 </div>
@@ -478,4 +478,4 @@ So, in the figure 6, when we set the **Vref** to 595.70, the **Ip** turns to 0mA
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/)
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

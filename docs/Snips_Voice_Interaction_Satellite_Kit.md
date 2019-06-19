@@ -25,7 +25,7 @@ The Voice Interaction Satellite Kit is powered by a [Raspberry Pi Zero W](https:
 Check out the video below and get started assembling the Snips Voice Interaction Kits to build your next voice interaction project.
 
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/Snips_Voice_Interaction_Satellite_Kit.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://www.seeedstudio.com/Snips_Voice_Interaction_Satellite_Kit.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 ## Feature 
@@ -141,4 +141,4 @@ Turn the relay off.	| The relay opens and the red LED turns off.
 
 - **[PDF]** [User manual](https://github.com/SeeedDocument/Snips_Voice_Interaction_Base_Kit/raw/master/res/User%20manual.pdf)
 
-- **[Web]** [Snips AI Quick Start](https://docs.snips.ai/the-maker-kit/dev-kit)
+- **[Web]** [Snips AI Quick Start](https://docs.snips.ai/the-maker-kit/dev-kit)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

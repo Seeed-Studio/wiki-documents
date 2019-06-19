@@ -138,3 +138,4 @@ which includes:
 - [Xadow NFC v2](http://wiki.seeedstudio.com/Xadow_NFC_v2/).
 - [Xadow LED 5x7](http://wiki.seeedstudio.com/Xadow_LED_5x7/).
 - [Xadow Pebble Time Adapter](http://wiki.seeedstudio.com/Xadow_Pebble_Time_Adapter/).
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

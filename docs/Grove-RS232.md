@@ -20,7 +20,7 @@ Most of the MCUs use TTL levels, and the computer serial port generally uses 232
 This module is based on Max3232, it supports multiple baud rate communication and theoretically supports communication up to 230400bps baud. 
 
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-RS232-P-2852.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://www.seeedstudio.com/Grove-RS232-P-2852.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 
@@ -91,3 +91,4 @@ This is a simple module that only needs to connect the corresponding interface t
 ## Tech Support
 
 Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/)
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

@@ -29,3 +29,4 @@ Here is the list of the BeagleBone Boards you can find in the Seeed WiKi. The li
 - [Motor Bridge Cape v1.0](/Motor_Bridge_Cape_v1.0/)
 - [Skeleton box for Beaglebone](/Skeleton_box_for_Beaglebone/)
 
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

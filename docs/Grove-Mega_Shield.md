@@ -39,4 +39,4 @@ The Digital Area of Grove - Mega Shield can also be partitioned into four sectio
 - [Eagle File of Grove - Mega Shield v1.1.](https://github.com/SeeedDocument/Grove-Mega_Shield/raw/master/res/Eagle_file_of_Megashield_v1.1.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

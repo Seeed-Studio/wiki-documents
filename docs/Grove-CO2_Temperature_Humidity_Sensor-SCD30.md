@@ -18,7 +18,7 @@ In addition to the Non-Dispersive Infrared(NDIR) measurement technology for CO2 
 
 
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD30-p-2911.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD30-p-2911.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 !!!Tip
@@ -111,7 +111,7 @@ In addition to the Non-Dispersive Infrared(NDIR) measurement technology for CO2 
 
 <div align="center">
 <figure>
-  <p style="text-align:center"><a href="https://github.com/SeeedDocument/Grove-CO2-Temperature-Humidity-Sensor-SCD30/raw/master/img/pinout.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Grove-CO2-Temperature-Humidity-Sensor-SCD30/raw/master/img/pinout.jpg" /></a></p>
+  <p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://github.com/SeeedDocument/Grove-CO2-Temperature-Humidity-Sensor-SCD30/raw/master/img/pinout.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Grove-CO2-Temperature-Humidity-Sensor-SCD30/raw/master/img/pinout.jpg" /></a></p>
 </figure>
 </div>
 
@@ -303,4 +303,4 @@ There are two ino sample in the SCD30 library foldor, you can run the `SCD30_aut
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/)
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

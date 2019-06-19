@@ -20,7 +20,7 @@ The RT-Thread is an open source IoT operating system for embedded devices. The k
 
 
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/Arch-Mix-p-2901.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://www.seeedstudio.com/Arch-Mix-p-2901.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 
@@ -83,7 +83,7 @@ The RT-Thread is an open source IoT operating system for embedded devices. The k
 
 <div align="center">
 <figure>
-  <p style="text-align:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Arch_Mix/master/img/pinout_f.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Arch_Mix/raw/master/img/pinout_f.jpg" /></a></p>
+  <p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Arch_Mix/master/img/pinout_f.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Arch_Mix/raw/master/img/pinout_f.jpg" /></a></p>
   <figcaption><b>Figure 1</b>. <i>Front Hardware Overview</i></figcaption>
 </figure>
 </div>
@@ -91,7 +91,7 @@ The RT-Thread is an open source IoT operating system for embedded devices. The k
 
 <div align="center">
 <figure>
-  <p style="text-align:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Arch_Mix/master/img/pinout_b.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Arch_Mix/raw/master/img/pinout_b.jpg" /></a></p>
+  <p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Arch_Mix/master/img/pinout_b.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Arch_Mix/raw/master/img/pinout_b.jpg" /></a></p>
   <figcaption><b>Figure 2</b>. <i>Back Hardware Overview</i></figcaption>
 </figure>
 </div>
@@ -163,7 +163,7 @@ As you can see, there is a 50 pin LCD Interface on this board, it Support up to 
 
 <div align="center">
 <figure>
-  <p style="text-align:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Arch_Mix/master/img/pinout.png" target="_blank"><img src="https://github.com/SeeedDocument/Arch_Mix/raw/master/img/pinout.png" /></a></p>
+  <p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Arch_Mix/master/img/pinout.png" target="_blank"><img src="https://github.com/SeeedDocument/Arch_Mix/raw/master/img/pinout.png" /></a></p>
   <figcaption><b>Figure 3</b>. <i>Pinout, ckick the image to view the original file</i></figcaption>
 </figure>
 </div>
@@ -178,7 +178,7 @@ As you can see, there is a 50 pin LCD Interface on this board, it Support up to 
 
 <div align="center">
 <figure>
-  <p style="text-align:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Arch_Mix/master/img/Block.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Arch_Mix/raw/master/img/Block.jpg" /></a></p>
+  <p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Arch_Mix/master/img/Block.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Arch_Mix/raw/master/img/Block.jpg" /></a></p>
   <figcaption><b>Figure 4</b>. <i>Arch Mix Blcok Diagram, ckick the image to view the original file</i></figcaption>
 </figure>
 </div>
@@ -189,14 +189,14 @@ As you can see, there is a 50 pin LCD Interface on this board, it Support up to 
 
 <div align="center">
 <figure>
-  <p style="text-align:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Arch_Mix/master/img/D1.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Arch_Mix/raw/master/img/D1.jpg" /></a></p>
+  <p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Arch_Mix/master/img/D1.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Arch_Mix/raw/master/img/D1.jpg" /></a></p>
 </figure>
 </div>
 
 
 <div align="center">
 <figure>
-  <p style="text-align:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Arch_Mix/master/img/D2.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Arch_Mix/raw/master/img/D2.jpg" /></a></p>
+  <p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Arch_Mix/master/img/D2.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Arch_Mix/raw/master/img/D2.jpg" /></a></p>
   <figcaption><b>Figure 5</b>. <i>Board Dimension, Unit(mm)</i></figcaption>
 </figure>
 </div>
@@ -233,7 +233,7 @@ USB to Serial Module|VCC|GND|RX|TX
 
 <div align="center">
 <figure>
-  <p style="text-align:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Arch_Mix/master/img/UART.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Arch_Mix/raw/master/img/UART.jpg" /></a></p>
+  <p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Arch_Mix/master/img/UART.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Arch_Mix/raw/master/img/UART.jpg" /></a></p>
   <figcaption><b>Figure 6</b>. <i>UART Connection</i></figcaption>
 </figure>
 </div>
@@ -245,7 +245,7 @@ USB to Serial Module|VCC|GND|RX|TX
 
 <div align="center">
 <figure>
-  <p style="text-align:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Arch_Mix/master/img/RTT1.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Arch_Mix/raw/master/img/on.jpg" /></a></p>
+  <p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Arch_Mix/master/img/RTT1.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Arch_Mix/raw/master/img/on.jpg" /></a></p>
   <figcaption><b>Figure 7</b>. <i>Power On</i></figcaption>
 </figure>
 </div>
@@ -255,7 +255,7 @@ USB to Serial Module|VCC|GND|RX|TX
 
 <div align="center">
 <figure>
-  <p style="text-align:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Arch_Mix/master/img/RTT1.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Arch_Mix/raw/master/img/RTT1.jpg" /></a></p>
+  <p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Arch_Mix/master/img/RTT1.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Arch_Mix/raw/master/img/RTT1.jpg" /></a></p>
   <figcaption><b>Figure 8</b>. <i>Check the COM port, ckick the image to view the original file</i></figcaption>
 </figure>
 </div>
@@ -266,7 +266,7 @@ USB to Serial Module|VCC|GND|RX|TX
 
 <div align="center">
 <figure>
-  <p style="text-align:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Arch_Mix/master/img/COM22.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Arch_Mix/raw/master/img/COM22.jpg" /></a></p>
+  <p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Arch_Mix/master/img/COM22.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Arch_Mix/raw/master/img/COM22.jpg" /></a></p>
   <figcaption><b>Figure 9</b>. <i>Configure the serial tool</i></figcaption>
 </figure>
 </div>
@@ -319,7 +319,7 @@ The RTOS is a lightweight system which loads very quickly, one or two seconds la
 
 <div align="center">
 <figure>
-  <p style="text-align:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Arch_Mix/master/img/RTT2.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Arch_Mix/raw/master/img/RTT2.jpg" /></a></p>
+  <p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Arch_Mix/master/img/RTT2.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Arch_Mix/raw/master/img/RTT2.jpg" /></a></p>
   <figcaption><b>Figure 10</b>. <i>RTOS Startup Interface</i></figcaption>
 </figure>
 </div>
@@ -331,7 +331,7 @@ Enter `python` in the Finsh/MSH command line to enter MicroPython's interactive 
 
 <div align="center">
 <figure>
-  <p style="text-align:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Arch_Mix/master/img/RTT3.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Arch_Mix/raw/master/img/RTT3.jpg" /></a></p>
+  <p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Arch_Mix/master/img/RTT3.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Arch_Mix/raw/master/img/RTT3.jpg" /></a></p>
   <figcaption><b>Figure 11</b>. <i>Enter the REPL(Read-Evaluate-Print-Loop)</i></figcaption>
 </figure>
 </div>
@@ -353,7 +353,7 @@ MicroPython is a lean and efficient implementation of the Python 3 programming l
 
 <div align="center">
 <figure>
-  <p style="text-align:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Arch_Mix/master/img/RTT4.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Arch_Mix/raw/master/img/RTT4.jpg" /></a></p>
+  <p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://raw.githubusercontent.com/SeeedDocument/Arch_Mix/master/img/RTT4.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Arch_Mix/raw/master/img/RTT4.jpg" /></a></p>
   <figcaption><b>Figure 12</b>. <i>Paste Mode</i></figcaption>
 </figure>
 </div>
@@ -445,4 +445,4 @@ This Arch Mix comes pre-installed RT-Thread real-time operating system(RTOS) and
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

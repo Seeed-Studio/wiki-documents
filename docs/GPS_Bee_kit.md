@@ -403,4 +403,4 @@ Click [here](http://garden.seeedstudio.com/images/2/20/GPSBee-exam-3.jpg) to see
 *   [GPSBee V1.3 Eagle File](https://github.com/SeeedDocument/GPS_Bee_kit/raw/master/res/GPS_Bee_v1.3_eagle.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

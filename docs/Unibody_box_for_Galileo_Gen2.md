@@ -88,4 +88,4 @@ It is quite necessary to read this guide before assembling you Galileo board int
 - [CNC files](https://github.com/SeeedDocument/Unibody_box_for_Galileo_Gen2/raw/master/res/CNC_files.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

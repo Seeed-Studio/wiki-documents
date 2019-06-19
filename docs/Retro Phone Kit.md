@@ -117,4 +117,4 @@ Now join us in the [RePhone Community](http://forum.seeedstudio.com/viewforum.ph
 - [AT Command of SIM800](https://github.com/SeeedDocument/Retro_Phone_Kit/raw/master/res/SIM800_AT.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

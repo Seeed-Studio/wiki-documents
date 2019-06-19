@@ -38,3 +38,4 @@ Here is the list of the Seeeduino Boards you can find in the Seeed WiKi. The lis
 - [Wifi Shield V2.0](/Wifi_Shield_V2.0/)
 - [XBee Shield V2.0](/XBee_Shield_V2.0/)
 
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

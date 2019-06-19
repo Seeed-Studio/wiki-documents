@@ -29,10 +29,10 @@ tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit, plat_wio
 </div></td>
 </tr>
 <tr class="even">
-<td><div style="text-align: center">
+<td><div style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>: center">
 Grove - 3-Axis Digital Accelerometer v1.2
 </div></td>
-<td><div style="text-align: center">
+<td><div style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>: center">
 Grove - 3-Axis Digital Accelerometer v1.2b
 </div></td>
 </tr>
@@ -174,4 +174,4 @@ An Internet connected device that controls servos and sends sensor (GPS/gyro/acc
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_3-Axis_Digital_Accelerometer(±1.5g) -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

@@ -366,4 +366,4 @@ Below is a list of changes that have been made to the Seeeduino board over all t
 -  **[Datasheet]** [ATMEGA16U2 Summary](http://www.atmel.com/Images/7799S.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

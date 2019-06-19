@@ -84,3 +84,4 @@ Copyright (c) 2008-2016 Seeed Development Limited ([www.seeedstudio.com](http://
 ###### This static html page was created from http://www.seeedstudio.com/wiki
 
 </div>
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

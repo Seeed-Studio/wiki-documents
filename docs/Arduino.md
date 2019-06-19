@@ -55,3 +55,4 @@ Here is the list of the Seeeduino Boards you can find in the Seeed WiKi. The lis
 - [UartSBee V4](/UartSBee_V4/)
 - [UartSBee v5](/UartSBee_v5/)
 
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

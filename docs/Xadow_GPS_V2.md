@@ -96,4 +96,4 @@ Check more info about the GPS L70 and the chip antenna:
 - [Specification for GPS L70 and the chip antenna](https://github.com/SeeedDocument/Xadow_GPS_V2/raw/master/resources/GPS_L70_%26_Chip_Antenna.rar)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

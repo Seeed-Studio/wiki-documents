@@ -248,7 +248,7 @@ float:left;
 line-height:66px
 }
 .method1{
-  text-align:center;
+  <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center;
   float:left;
 }
 /*vertical-align:middle  是依赖div内子元素最高的行高来实现对某元素居中的，而我们只需要建立一个新元素，给他加上inline-block属性 再把他高度设置为100%就行了,在下面的<img>设置vertical-align就生效了*/
@@ -263,7 +263,7 @@ img{
 .links{
 line-height:7px;
 font-size:13px;
-text-align:center;
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center;
 }
 </style>
 
@@ -387,3 +387,4 @@ text-align:center;
 - [Grove-TF Mini LiDAR](/Grove-TF_Mini_LiDAR/)
 
 
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

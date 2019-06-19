@@ -5,7 +5,7 @@ prodimagename: grove_cover.png
 surveyurl: https://www.research.net/r/grove_system
 ---
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/grove.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/top_banner.png" /></a></p>
+<p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://www.seeedstudio.com/grove.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/top_banner.png" /></a></p>
 
 ## What is the Grove System?
 
@@ -359,4 +359,4 @@ Want some Grove modules for your project? Here are some recommend.
 |[More Details](http://www.seeedstudio.com/Grove-Line-Finder-p-825.html)|[More Details](http://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html)|[More Details](http://www.seeedstudio.com/Grove-80cm-Infrared-Proximity-Sensor-p-788.html)|
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

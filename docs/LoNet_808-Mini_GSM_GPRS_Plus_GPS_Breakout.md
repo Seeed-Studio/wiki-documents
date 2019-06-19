@@ -249,28 +249,28 @@ Besides the antenna, you may need the following accessories using with LoNet 808
 <table>
 <tr>
 <td> <div class="center"><div class="floatnone">![](https://github.com/SeeedDocument/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/raw/master/img/Simcard.jpg)</div></div>
-<div style="text-align: center;">SIM-Card
+<div style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>: center;">SIM-Card
  for GSM/GPRS Communication </div>
 </td>
 <td> <div class="center"><div class="floatnone">[![](https://github.com/SeeedDocument/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/raw/master/img/Battery_2200ma.jpg)](http://www.seeedstudio.com/depot/Polymer-Lithium-Ion-Battery-2200mAh-37V-p-1709.html?cPath=1_3)</div></div>
-<div style="text-align: center;"> 3.7V Li-ion Battery
+<div style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>: center;"> 3.7V Li-ion Battery
  for power supply</div>
 </td>
 <td> <div class="center"><div class="floatnone">[![](https://github.com/SeeedDocument/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/raw/master/img/Power_Converter.jpg)](http://www.seeedstudio.com/depot/Adjustable-DCDC-Power-Converter-125V-35V3A-p-1534.html?cPath=1_4)</div></div>
-<div style="text-align: center;">DC/DC Voltage Regulator
+<div style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>: center;">DC/DC Voltage Regulator
  for power supply</div>
 </td></tr>
 <tr>
 <td> <div class="center"><div class="floatnone">[![](https://github.com/SeeedDocument/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/raw/master/img/100cmUSBc.jpg)](http://www.seeedstudio.com/depot/USB-To-Uart-5V3V3-p-1832.html)</div></div>
-<div style="text-align: center;"> MicroUSB Cable
+<div style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>: center;"> MicroUSB Cable
 for charging battery</div>
 </td>
 <td> <div class="center"><div class="floatnone">[![](https://github.com/SeeedDocument/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/raw/master/img/USB_To_Uart_5V3V3.jpg)](http://www.seeedstudio.com/depot/USB-To-Uart-5V3V3-p-1832.html)</div></div>
-<div style="text-align: center;"> USB to UART Tool
+<div style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>: center;"> USB to UART Tool
 for testing ATcommand on PC</div>
 </td>
 <td> <div class="center"><div class="floatnone">[![](https://github.com/SeeedDocument/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/raw/master/img/3wsp.JPG)](http://www.seeedstudio.com/depot/3W-Solar-Panel-138X160-p-954.html?cPath=1_118)</div></div>
-<div style="text-align: center;"> Solder Panel
+<div style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>: center;"> Solder Panel
 for charging battery </div>
 </td></tr>
 </table>
@@ -459,4 +459,4 @@ $GPRMC,043326.000,A,
 *   [Adafruit_FONA_Library](https://github.com/adafruit/Adafruit_FONA_Library/)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

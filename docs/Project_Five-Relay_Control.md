@@ -54,4 +54,4 @@ When using this with an XBee Carrier, please be aware that you should set output
 The reason for the delay function after setting the relay high or low is to allow the sketch to pause – in doing so ignoring the buttons for one tenth of a second. This is more commonly known as 'software de-bouncing”. Although doing so may not seem necessary in this particular example, doing so is a good habit to start with.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

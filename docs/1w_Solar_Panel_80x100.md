@@ -85,4 +85,4 @@ This is a custom solar panel, which mates directly with many of our development 
 *   [3W Solar Panel 138*160](/3W_Solar_Panel_138x160 "3W Solar Panel 138*160")
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

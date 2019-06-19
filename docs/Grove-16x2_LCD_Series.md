@@ -22,9 +22,9 @@ Except for RGB backlights, these three products are almost identical to the the 
 
 
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-16-x-2-LCD-%28Black-on-Yellow%29-p-3198.html" target="_blank"><img src="https://github.com/SeeedDocument/Grove-16x2_LCD_Series/raw/master/img/Y1.png" height="48" width="300" /></a></p>
-<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-16-x-2-LCD-%28Black-on-Red%29-p-3197.html" target="_blank"><img src="https://github.com/SeeedDocument/Grove-16x2_LCD_Series/raw/master/img/R1.png" height="48" width="300" /></a></p>
-<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-16-x-2-LCD-%28White-on-Blue%29-p-3196.html" target="_blank"><img src="https://github.com/SeeedDocument/Grove-16x2_LCD_Series/raw/master/img/B1.png"  height="48" width="300" /></a></p>
+<p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://www.seeedstudio.com/Grove-16-x-2-LCD-%28Black-on-Yellow%29-p-3198.html" target="_blank"><img src="https://github.com/SeeedDocument/Grove-16x2_LCD_Series/raw/master/img/Y1.png" height="48" width="300" /></a></p>
+<p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://www.seeedstudio.com/Grove-16-x-2-LCD-%28Black-on-Red%29-p-3197.html" target="_blank"><img src="https://github.com/SeeedDocument/Grove-16x2_LCD_Series/raw/master/img/R1.png" height="48" width="300" /></a></p>
+<p style="<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>:center"><a href="https://www.seeedstudio.com/Grove-16-x-2-LCD-%28White-on-Blue%29-p-3196.html" target="_blank"><img src="https://github.com/SeeedDocument/Grove-16x2_LCD_Series/raw/master/img/B1.png"  height="48" width="300" /></a></p>
 
 
 ## Features
@@ -230,3 +230,4 @@ Please do not hesitate to submit the issue into our [forum](https://forum.seeeds
 
 
 
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

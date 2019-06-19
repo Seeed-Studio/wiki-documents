@@ -98,4 +98,4 @@ Check more info about the TFT Display and the Capacitive Touchscreen:
 - [Datasheet of the capacitive touchscreen](https://github.com/SeeedDocument/Xadow_1.54_Inch_Touchscreen/raw/master/res/TFT_Display.rar)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

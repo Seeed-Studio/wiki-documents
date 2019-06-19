@@ -35,4 +35,4 @@ The folowing code didn't judge the ID, whatever tag close to Reader, it can chan
 Open Arduino IDE, click File -&gt; Sketchbook -&gt; RFID Reader.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

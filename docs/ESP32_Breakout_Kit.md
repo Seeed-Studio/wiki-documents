@@ -51,4 +51,4 @@ This is the breakout kit specially designed for ESP32, it contains a breakout bo
 * [ESP32 Breakout Kit PCB in PDF format](https://github.com/SeeedDocument/ESP32_Breakout_Kit/raw/master/res/ESP32%20Extension%20Board%20v1.0%20PCB.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

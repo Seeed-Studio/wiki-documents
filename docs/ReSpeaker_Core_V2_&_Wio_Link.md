@@ -67,3 +67,4 @@ Let say "Alexa trigger on" and we can see the Grove-LED is on and LED is off whe
     We can also can use the google assitant to work with Wio Link.
 
 
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

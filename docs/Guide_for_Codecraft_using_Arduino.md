@@ -456,3 +456,4 @@ Using a Grove - Rotary Angle Sensor to control a Grove - Servo.
 
 !!!Success
     When the code finishes uploaded, rotate Rotary Angle Sensor, the angle of the Servo motor will change.
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

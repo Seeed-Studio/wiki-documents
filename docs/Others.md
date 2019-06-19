@@ -39,3 +39,4 @@ Here is the list of Grove Others Boards you can find in the Seeed WiKi. The list
 - [Grove Shield for Intel Joule](/Grove_Shield_for_Intel_Joule/)
 - [Grove Smart Plant Care Kit](/Grove_Smart_Plant_Care_Kit/)
 
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

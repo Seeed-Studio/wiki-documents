@@ -149,4 +149,4 @@ void boot(void)
 - [“BlueSPP” APP](https://github.com/SeeedDocument/Xadow_BLE_Slave/raw/master/res/BlueSPP_V4.0.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

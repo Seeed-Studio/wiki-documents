@@ -20,3 +20,4 @@ Here is the list of the Seeeduino Boards you can find in the Seeed WiKi. The lis
 - [USB To Uart 5V/3V3](/USB_To_Uart_5V_3V3/)
 - [Unibody box for Galileo Gen2](/Unibody_box_for_Galileo_Gen2/)
 
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>
