@@ -474,7 +474,7 @@ It should be like:
 Then presss ++ctrl+x++ to quite, and tap ++y++ to save the modification you've just made.
 The value of ATTR{number} can be found with command:
 ```
-udevadm info -a -p /sys/class/sound/card1/:
+udevadm info -a -p /sys/class/sound/card1/
 ```
 
 **Step 3. config `default.pa` and `daemon.conf`**
