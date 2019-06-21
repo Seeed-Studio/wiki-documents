@@ -63,8 +63,7 @@ running up to 168MHZ
 - Peripheral
     - 1 x USB for power supply and DFU
     - JST 1.0 connector for battery
-    - 3 Buttons: 1. for Reset 2. for User
-function 3. into upload mode
+    - 3 Buttons: MCU Reset Button, MCU Boot (DFU) Button，EC21 Power Button
     - Nano SIM and TF card 2 in 1 socket
 - Grove
     - 2 x Digital Port
