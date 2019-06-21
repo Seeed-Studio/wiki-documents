@@ -53,148 +53,70 @@ Hardware Overview
 -   ⑥：UART Grove Interface
 -   ⑦：SD Card: micro SD Card(≤2GB)
 
-Usage
------
+## Play With Arduino
+
+### Hardware
 
 The Grove - Serial MP3 Play can be controlled by Arduino/Seeeduino. And there is a Serial_MP3 test code for you to use. I believe you can easily get started. For more detailed information, please refer to the following description. The hardware installation:
 
 -   Connect Grove - Serial MP3 Play to the Digital 2 port of Arduino/Seeeduino, Notice that you can change the pin number as you like, just make sure corresponding changes the code. Then connect your Arduino/Seeeduino to PC with a USB cable.
 -   Plug a earphone into Grove - Serial MP3 Play. Now the hardware part has been completed.
--   After uploading it, open serial tool to send commands.
--   Upload the code below.
 
-The following code includes play mode parameter. You only need to change the parameter to switch the play mode.
+### Software
+
+- **Step 1.** Download the  [ Grove-MP3 v2.0](https://github.com/Seeed-Studio/Seeed_Serial_MP3_Player)  from Github.
+- **Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- **Step 3.** You can select **Seeed_Serial_MP3_Player/examples/WT2003S_Terminal_Player** example and upload to arduino. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 4.** We will see the info at COM terminal as below.
+
+![](https://github.com/SeeedDocument/Grove-MP3_v2.0/raw/master/img/COM.png)
+
+
+- **Step 5.** Please key in the related command to play the music.
+
+!!!Tips
+    The library supports AVR/SAMD/STM32F4 devices, both hardware and software serial as well.
+
+There are 2 kinds of serial ports. One is COMSerial, stands for communication port(connecting with Grove-MP3 module). The other is ShowSerial, stands for serial info display port(connectiong with PC). 
+
+Most of arduino boards have at least one Serial, some have multiple serials(Arduino Mega has 4 Serials). It communicates on digital pins 0 (RX) and 1 (TX) as well as with the computer via USB. So if you connect UART device on pin D0 and pin D1, you have to remove them before downloading program through USB. Or else it will cause upload fails. Sometimes you need more serial ports than the number of hardware serial ports available. If this is the case, you can use an Software Serial that uses software to emulate serial hardware. Software serial requires a lot of help from the Arduino controller to send and receive data, so it’s not as fast or efficient as hardware serial. For more info about the Serial, please refer to [Seeed Arduino Serial](http://wiki.seeedstudio.com/Seeed_Arduino_Serial/). 
+
+- **AVR:** For the below example, We define Software Serial as COMSerial(connectiong with Grove-MP3 module). NOT all the digital pins can be used for software serial. You can refer to [Software Serial](https://www.arduino.cc/en/Reference/SoftwareSerial) for detail pins. We define hardware Serial as ShowSerial(connecting with PC). If you use Arduino Mega, you can connect the hardware Serial to ShowSerial and the other Serial1/Serial2/Serial3 to COMSerial. So you can refer to AVR Mega setting. 
+
+- **SAMD:** For the below example, The SAMD does not support software serial. We use the hardware serial **Serial1** to commuincate with Grove-MP3 Module and **SerialUSB** to print message on PC. 
+
+- **STM32F4:** For the below example, We use the hardware serial **Serial** to commuincate with Grove-MP3 Module and **SerialUSB** to print message on PC. 
+
+!!!Note
+    For more info about the Serial, please refer to [Seeed Arduino Serial](http://wiki.seeedstudio.com/Seeed_Arduino_Serial/). 
 
 ```
-/*****************************************************************************/
-//    Function: control the seeedstudio Grove MP3 player
-//      Hardware: Grove - Serial MP3 Player
-/*******************************************************************************/
+#ifdef __AVR__
 #include <SoftwareSerial.h>
-SoftwareSerial mp3(2, 3);//modify this with the connector you are using.
-void setup()
-{
-    mp3.begin(9600);
-    Serial.begin(9600);
-    delay(100);
-    if (true ==SetPlayMode(0x01))
-    Serial.println("Set The Play Mode to 0x01, Single Loop Mode.");
-    else
-    Serial.println("Playmode Set Error");
-    PauseOnOffCurrentMusic();
- 
-}
-void loop()
-{
-    SetPlayMode(0x01);
-    delay(1000);
-    SetMusicPlay(00,01);
-    delay(1000);
-    SetVolume(0x0E);
-    while(1);
-}
-//Set the music index to play, the index is decided by the input sequence
-//of the music;
-//hbyte: the high byte of the index;
-//lbyte: the low byte of the index;
-boolean SetMusicPlay(uint8_t hbyte,uint8_t lbyte)
-{
-    mp3.write(0x7E);
-    mp3.write(0x04);
-    mp3.write(0xA0);
-    mp3.write(hbyte);
-    mp3.write(lbyte);
-    mp3.write(0x7E);
-    delay(10);
-    while(mp3.available())
-    {
-        if (0xA0==mp3.read())
-        return true;
-        else
-        return false;
-    }
-}
-// Pause on/off  the current music
-boolean PauseOnOffCurrentMusic(void)
-{
-    mp3.write(0x7E);
-    mp3.write(0x02);
-    mp3.write(0xA3);
-    mp3.write(0x7E);
-    delay(10);
-    while(mp3.available())
-    {
-        if (0xA3==mp3.read())
-        return true;
-        else
-        return false;
-    }
-}
- 
-//Set the volume, the range is 0x00 to 0x1F
-boolean SetVolume(uint8_t volume)
-{
-    mp3.write(0x7E);
-    mp3.write(0x03);
-    mp3.write(0xA7);
-    mp3.write(volume);
-    mp3.write(0x7E);
-    delay(10);
-    while(mp3.available())
-    {
-        if (0xA7==mp3.read())
-        return true;
-        else
-        return false;
-    }
-}
- 
-boolean SetPlayMode(uint8_t playmode)
-{
-    if (((playmode==0x00)|(playmode==0x01)|(playmode==0x02)|(playmode==0x03))==false)
-    {
-        Serial.println("PlayMode Parameter Error! ");
-        return false;
-    }
-    mp3.write(0x7E);
-    mp3.write(0x03);
-    mp3.write(0xA9);
-    mp3.write(playmode);
-    mp3.write(0x7E);
-    delay(10);
-    while(mp3.available())
-    {
-        if (0xA9==mp3.read())
-        return true;
-        else
-        return false;
-    }
-}
+SoftwareSerial SSerial(2, 3); // RX, TX
+#define COMSerial SSerial
+#define ShowSerial Serial 
+
+WT2003S<SoftwareSerial> Mp3Player;
+#endif
+
+#ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
+#define COMSerial Serial1
+#define ShowSerial SerialUSB 
+
+WT2003S<Uart> Mp3Player;
+#endif
+
+#ifdef ARDUINO_ARCH_STM32F4
+#define COMSerial Serial
+#define ShowSerial SerialUSB 
+
+WT2003S<HardwareSerial> Mp3Player;
+#endif
 ```
 
-**1. SetPlayMode(uint8_t playmode)**
 
-The Function is used to set the MP3 Play Mode.
 
-uint8_t playmode: The parameter to change the play mode. Can be 0x00, 0x01, 0x02 or 0x03.
-
-**2. SetVolume(uint8_t volume)**
-
-The Function is used to set the MP3 Play Volume.
-
-uint8_t volume: The parameter to change the play volume. The parameter range is 0x00 to 0x1F.
-
-**3. SetMusicPlay(uint8_t hbyte,uint8_t lbyte)**
-
-The Function is used to set the music index to play, the index is decided by the input sequence of the music
-
-uint8_t hbyte: The high byte of the index;
-
-uint8_t lbyte: The low byte of the index;
-
-**4. PauseOnOffCurrentMusic(void)**
-
-The Function is used to Pause on/off the current music.
 
 -   Now you can hear songs stored in your SD card. And in the playing mode, the D1 indicator is on. If in the pause mode, the indicator will blink. More experience is waiting for you！
 
@@ -311,7 +233,7 @@ Resources
 
 - [Grove - Serial MP3 Play Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-Serial_MP3_Player/master/res/Grove-UART_MP3_Play_Eagle_File.zip)
 - [Grove - Serial MP3 Play Schematic in PDF format](https://raw.githubusercontent.com/SeeedDocument/Grove-Serial_MP3_Player/master/res/Grove-Serial_MP3_Player.pdf)
-- [Demo code on github](https://github.com/Seeed-Studio/Grove_Serial_MP3_Player)
+- [Demo code on github](https://github.com/Seeed-Studio/Seeed_Serial_MP3_Player)
 - [WT5001 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Serial_MP3_Player/master/res/WT5001_datasheet_V1.5.pdf)
 
 

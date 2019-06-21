@@ -111,197 +111,9 @@ Grove - MP3 v2.0 is a tiny-sized and compact audio module. It supports various a
 
 #### Software
 
-- **Step 1.** Download the  [ Grove-MP3 v2.0](https://github.com/Seeed-Studio/Grove_Serial_MP3_Player_V2.0/archive/master.zip)  from Github.
+- **Step 1.** Download the  [ Grove-MP3 v2.0](https://github.com/Seeed-Studio/Seeed_Serial_MP3_Player)  from Github.
 - **Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
-- **Step 3.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
-
-Here is the code.
-
-```C++
-/*
- * MP3_Play_Test.ino
- * A quick start example for Grove-Serial MP3 Player V2.0
- * Note: The MP3 chip of Grove-Serial MP3 Player V2.0 is different from Grove-Serial MP3 Player V1.0
- * Description: This demo let you can send instruction 1-8 to control the Grove-Serial MP3 Player, via the serial port.
- *
- * Copyright (c) 2015 seeed technology inc.
- * Author     : Wuruibin
- * Created Time: Dec 2015
- * Modified Time:
- * 
- * The MIT License (MIT)
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */
-
-
-#include <SoftwareSerial.h>
-#include <MP3Player_KT403A.h>
-
-static uint8_t recv_cmd[8] = {};
-
-
-// Note: You must define a SoftwareSerial class object that the name must be mp3, 
-//       but you can change the pin number according to the actual situation.
-SoftwareSerial mp3(2, 3);
-
-void setup()
-{
-    mp3.begin(9600);
-    Serial.begin(9600); 
-    
-    while(!Serial);
-
-    Serial.println("Grove - Serial MP3 Demo");
-    Serial.println(
-        "Input command:\r\n\r\n"
-        "P[ ] play music by default index\r\n"
-        "Pm[ ] play music in MP3 folder by index\r\n"
-        "Pf[ ][ ] play music by specify folder and index\r\n"        
-        "p Pause\r\n"
-        "R Resume\r\n"
-        "N Next\r\n"
-        "L Previous\r\n"
-        "l Loop\r\n"
-        "I Increase volume\r\n"
-        "D Decrease volumern\r\n");
-    
-    delay(100);
-    
-    SelectPlayerDevice(0x02);       // Select SD card as the player device.
-    SetVolume(0x0E);                // Set the volume, the range is 0x00 to 0x1E.
-}
-
-void loop()
-{
-    uint8_t len = 0;
-    uint8_t i;
-
-    if(Serial.available())
-    {
-        char chr = '\0';
-        while(chr != '\n')  // Blockly read data from serial monitor
-        {
-            chr = Serial.read();
-            // Serial.print(chr);
-            recv_cmd[len++] = chr;        
-        }
-    }
-
-    if(len > 0)
-    {
-        // Print reveiced data    
-        // Serial.print("Received cmd: ");   
-        // for(i = 0; i < len; i++) {
-        //     Serial.print(recv_cmd[i]);
-        //     Serial.print(" ");
-        // }
-        // Serial.println();
-            
-        switch (recv_cmd[0])
-        {
-            case 'P':
-                if(recv_cmd[1] == 'm') 
-                {
-                    /** 
-                      * Play music in "MP3" folder by index 
-                      * example:
-                      * "Pm1" -> ./MP3/0001.mp3
-                    */
-                    PlayMP3folder(recv_cmd[2] - '0');
-                    Serial.print("Play ");
-                    Serial.write(recv_cmd[2]);
-                    Serial.println(".mp3 in MP3 folder");
-                } 
-                else if(recv_cmd[1] == 'f')
-                {
-                    /** 
-                      * Play specify folder and music
-                      * example:
-                      * "Pf11" -> ./01/001***.mp3
-                    */
-                    SpecifyfolderPlay(recv_cmd[2] - '0',recv_cmd[3] - '0');
-                    Serial.print("Play ");
-                    Serial.write(recv_cmd[3]);
-                    Serial.print("xxx.mp3");
-                    Serial.print(" in folder ");
-                    Serial.write(recv_cmd[2]);
-                    Serial.println();
-                    
-                } 
-                else
-                {
-                    /** 
-                      * Play music by default index
-                      * example:
-                      * "P1" -> ./***.mp3
-                    */                
-                    SpecifyMusicPlay(recv_cmd[1] - '0');
-                    Serial.print("Play xxx.MP3 by index ");
-                    Serial.write(recv_cmd[1]);
-                    Serial.println();
-                }            
-                // Serial.println("Specify the music index to play");
-                break;
-            case 'p':
-                PlayPause();            
-                Serial.println("Pause the MP3 player");
-                break;
-            case 'R':            
-                PlayResume();
-                Serial.println("Resume the MP3 player");
-                break;
-            case 'N':            
-                PlayNext();
-                Serial.println("Play the next song");
-                break;
-            case 'L':
-                PlayPrevious();
-                Serial.println("Play the previous song");
-                break;
-            case 'l':
-                PlayLoop();
-                Serial.println("Play loop for all the songs");
-                break;
-            case 'I':
-                IncreaseVolume();
-                Serial.println("Increase volume");
-                break;
-            case 'D':
-                DecreaseVolume();
-                Serial.println("Decrease volume");
-                break;
-            default:
-                break;
-        }
-
-        // clean data buffer
-        for(i = 0; i < sizeof(recv_cmd); i++) {
-            recv_cmd[i] = '\0';
-        }
-    }    
-    delay(100);
-    
-//    printReturnedData();
-}
-```
-
+- **Step 3.** You can select **Seeed_Serial_MP3_Player/examples/KT403A_Terminal_player** example and upload to arduino. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 - **Step 4.** We will see the info at COM terminal as below.
 
 ![](https://github.com/SeeedDocument/Grove-MP3_v2.0/raw/master/img/COM.png)
@@ -311,11 +123,55 @@ void loop()
 
 - **Step 5.** Please key in the related command to play the music.
 
+!!!Tips
+    The library supports AVR/SAMD/STM32F4 devices, both hardware and software serial as well.
+
+There are 2 kinds of serial ports. One is COMSerial, stands for communication port(connecting with Grove-MP3 module). The other is ShowSerial, stands for serial info display port(connectiong with PC). 
+
+Most of arduino boards have at least one Serial, some have multiple serials(Arduino Mega has 4 Serials). It communicates on digital pins 0 (RX) and 1 (TX) as well as with the computer via USB. So if you connect UART device on pin D0 and pin D1, you have to remove them before downloading program through USB. Or else it will cause upload fails. Sometimes you need more serial ports than the number of hardware serial ports available. If this is the case, you can use an Software Serial that uses software to emulate serial hardware. Software serial requires a lot of help from the Arduino controller to send and receive data, so it’s not as fast or efficient as hardware serial. For more info about the Serial, please refer to [Seeed Arduino Serial](http://wiki.seeedstudio.com/Seeed_Arduino_Serial/). 
+
+- **AVR:** For the below example, We define Software Serial as COMSerial(connectiong with Grove-MP3 module). NOT all the digital pins can be used for software serial. You can refer to [Software Serial](https://www.arduino.cc/en/Reference/SoftwareSerial) for detail pins. We define hardware Serial as ShowSerial(connecting with PC). If you use Arduino Mega, you can connect the hardware Serial to ShowSerial and the other Serial1/Serial2/Serial3 to COMSerial. So you can refer to AVR Mega setting. 
+
+- **SAMD:** For the below example, The SAMD does not support software serial. We use the hardware serial **Serial1** to commuincate with Grove-MP3 Module and **SerialUSB** to print message on PC. 
+
+- **STM32F4:** For the below example, We use the hardware serial **Serial** to commuincate with Grove-MP3 Module and **SerialUSB** to print message on PC. 
+
+!!!Note
+    For more info about the Serial, please refer to [Seeed Arduino Serial](http://wiki.seeedstudio.com/Seeed_Arduino_Serial/). 
+
+
+
+```c++
+#ifdef __AVR__
+#include <SoftwareSerial.h>
+SoftwareSerial SSerial(2, 3); // RX, TX
+#define COMSerial SSerial
+#define ShowSerial Serial 
+
+KT403A<SoftwareSerial> Mp3Player;
+#endif
+
+#ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
+#define COMSerial Serial1
+#define ShowSerial SerialUSB 
+
+KT403A<Uart> Mp3Player;
+#endif
+
+#ifdef ARDUINO_ARCH_STM32F4
+#define COMSerial Serial
+#define ShowSerial SerialUSB 
+
+KT403A<HardwareSerial> Mp3Player;
+#endif
+```
+
+
+
 ## Resources
 
 -   **[Eagle&PDF]** [Grove-MP3_v2.0_Schematic files](https://raw.githubusercontent.com/SeeedDocument/Grove-MP3_v2.0/master/res/Grove-MP3_v2.0_Schematic_files.zip)
-- **[Librarie]**  [Grove-Serial MP3 Player V2.0 Libraries](https://github.com/Seeed-Studio/Grove_Serial_MP3_Player_V2.0)
-
+-   **[Librarie]**  [Grove-Serial MP3 Player V2.0 Libraries](https://github.com/Seeed-Studio/Seeed_Serial_MP3_Player)
 -   **[Datasheet]** [KT403A Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-MP3_v2.0/master/res/Grove-MP3_v2.0_KT403A_datasheet_V1.3_EN-Recompiled_by_Seeed-.pdf)
 
 ## Projects
