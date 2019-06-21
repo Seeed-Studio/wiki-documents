@@ -481,4 +481,4 @@ void loop() {
 * [MC20 GNSS AGPS ApplicationGuide](https://github.com/SeeedDocument/GPS_Tracker/blob/master/resources/Quectel_MC20_GNSS_AGPS_ApplicationGuide_V1.1.pdf)
 * [MC20 GNSS AT Commands Manual](https://github.com/SeeedDocument/GPS_Tracker/blob/master/resources/Quectel_MC20_GNSS_AT_Commands_Manual_V1.1.pdf)
 * [MC20 GNSS Protocol Specification](https://github.com/SeeedDocument/GPS_Tracker/blob/master/resources/Quectel_MC20_GNSS_Protocol_Specification_V1.0.pdf)
-<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

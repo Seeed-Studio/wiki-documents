@@ -127,4 +127,4 @@
 - [Grove - VOC and eCO2 Gas Sensor (SGP30)](https://www.seeedstudio.com/-Grove-VOC-and-eCO2-Gas-Sensor-(SGP30)-p-3071.html)
 
 - [Grove - UART WiFi V2 (ESP8285)](https://www.seeedstudio.com/Grove-UART-WiFi-V2-(ESP8285)-p-3054.html)
-<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

@@ -69,4 +69,4 @@ Baidu Speech includes STT, TTS, voice interaction, offline wakeup.
 Here is voice interaction tutorial list.
 
 - [ReSpeaker Core V2 & Wio Link](/ReSpeaker_Core_V2_&_Wio_Link/)
-- [Google Assistant](/Google_Assistant)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>
+- [Google Assistant](/Google_Assistant)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

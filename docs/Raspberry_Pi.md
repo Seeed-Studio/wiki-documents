@@ -27,4 +27,4 @@ Here is the list of the Raspberry Pi Boards you can find in the Seeed WiKi. The 
 - [Skeleton box for Raspberry Pi](/Skeleton_box_for_Rasberry_Pi/)
 
 
-<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

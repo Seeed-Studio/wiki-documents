@@ -83,4 +83,4 @@ tags: io_3v3, io_5v, plat_duino
 - [USB Driver](https://github.com/SeeedDocument/Atmel_AVRISP_STK500_USB_ISP_Programmer/tree/master/USB%20Driver)
 - [aStudio4b528](https://github.com/SeeedDocument/Atmel_AVRISP_STK500_USB_ISP_Programmer/raw/master/aStudio4b528/aStudio413b528.exe)
 - [AVRISP User's Guide](https://raw.githubusercontent.com/SeeedDocument/Atmel_AVRISP_STK500_USB_ISP_Programmer/master/res/AVRISP.chm)
-<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

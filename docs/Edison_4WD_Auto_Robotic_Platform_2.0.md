@@ -854,4 +854,4 @@ Now you can control you robot movement by virtual joystick on your phone.
 - [Module Interfaces](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/res/4WD_Driver_Platform_V1.0_3400_Modules.jpg)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

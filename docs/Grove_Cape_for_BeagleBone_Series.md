@@ -230,4 +230,4 @@ The pins decribe mapping to the Grove Cape for BeagleBone Series board as show b
 - [Grove Cape for BeagleBone Series Eagle File](https://github.com/SeeedDocument/Grove_Cape_for_BeagleBone_Series/raw/master/res/Grove_Cape_for_BeagleBone_Series_V1.0.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

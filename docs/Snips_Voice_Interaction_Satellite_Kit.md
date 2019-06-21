@@ -141,4 +141,4 @@ Turn the relay off.	| The relay opens and the red LED turns off.
 
 - **[PDF]** [User manual](https://github.com/SeeedDocument/Snips_Voice_Interaction_Base_Kit/raw/master/res/User%20manual.pdf)
 
-- **[Web]** [Snips AI Quick Start](https://docs.snips.ai/the-maker-kit/dev-kit)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>
+- **[Web]** [Snips AI Quick Start](https://docs.snips.ai/the-maker-kit/dev-kit)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

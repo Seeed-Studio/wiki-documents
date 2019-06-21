@@ -22,4 +22,4 @@ Here is the list of the Display Board you can find in the Seeed WiKi. The list w
 - [Grove - Red LED](/Grove-Red_LED/)
 - [I2C LCD](/I2C_LCD/)
 
-<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>
