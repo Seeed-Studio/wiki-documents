@@ -515,7 +515,8 @@ source ~/env/bin/activate
 cd ~/voice-engine/examples
 python kws_alexa_for_4mic_liner_pihat.py
 ```
-Then you will see the LEDs light up, and you can call `Snowboy` to wake it up. 
+
+You can call `Snowboy` to wake it up. 
 
 
 ## Extract Voice
