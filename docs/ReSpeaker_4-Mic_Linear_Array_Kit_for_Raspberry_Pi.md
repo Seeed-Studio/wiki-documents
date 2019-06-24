@@ -204,13 +204,13 @@ pi@raspberrypi:~ $ arecord -L
 It should be like:
 
 ```
+pi@raspberrypi:~ $ arecord -L
 null
     Discard all samples (playback) or generate zero samples (capture)
 default
-playback
-dmixed
+    Playback/recording through the PulseAudio sound server
 ac108
-multiapps
+dmixer
 ac101
 sysdefault:CARD=seeed8micvoicec
     seeed-8mic-voicecard, 
@@ -227,7 +227,6 @@ hw:CARD=seeed8micvoicec,DEV=0
 plughw:CARD=seeed8micvoicec,DEV=0
     seeed-8mic-voicecard, 
     Hardware device with all software conversions
- 
 ```
 
 Use the following command to check the play device.
@@ -239,13 +238,13 @@ pi@raspberrypi:~ $ aplay -L
 It should be like:
 
 ```
+pi@raspberrypi:~ $ aplay -L
 null
     Discard all samples (playback) or generate zero samples (capture)
 default
-playback
-dmixed
+    Playback/recording through the PulseAudio sound server
 ac108
-multiapps
+dmixer
 ac101
 sysdefault:CARD=ALSA
     bcm2835 ALSA, bcm2835 ALSA
@@ -275,19 +274,19 @@ plughw:CARD=ALSA,DEV=1
     bcm2835 ALSA, bcm2835 IEC958/HDMI
     Hardware device with all software conversions
 sysdefault:CARD=seeed8micvoicec
-    seeed-8mic-voicecard,
+    seeed-8mic-voicecard, 
     Default Audio Device
 dmix:CARD=seeed8micvoicec,DEV=0
-    seeed-8mic-voicecard,
+    seeed-8mic-voicecard, 
     Direct sample mixing device
 dsnoop:CARD=seeed8micvoicec,DEV=0
-    seeed-8mic-voicecard,
+    seeed-8mic-voicecard, 
     Direct sample snooping device
 hw:CARD=seeed8micvoicec,DEV=0
-    seeed-8mic-voicecard,
+    seeed-8mic-voicecard, 
     Direct hardware device without any conversions
 plughw:CARD=seeed8micvoicec,DEV=0
-    seeed-8mic-voicecard,
+    seeed-8mic-voicecard, 
     Hardware device with all software conversions
 
 ```
