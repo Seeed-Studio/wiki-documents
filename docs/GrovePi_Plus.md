@@ -14,6 +14,10 @@ It adds support for the newly RaspberryPi Model B+ and Model A+.
 There are three mounting holes can perfect match all version of Raspberry Pi. Camera cable outlet hole.
 It also improves the voltage level converting sub circuits.
 
+
+<p style=":center"><a href="https://www.seeedstudio.com/GrovePi-p-2241.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+
+
 ##   Features
 ---
 *   7 digital Ports
