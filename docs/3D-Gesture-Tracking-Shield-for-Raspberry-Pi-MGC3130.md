@@ -46,8 +46,8 @@ What an amazing module, with the help it, you can use gestures to control lights
 |---|---|
 |Operating Voltage|3.3V|
 |Output Interface|I2C(Default I2C address: 0X42)|
-|Gross Weight||
-|Net Weight||
+|Gross Weight|55g|
+|Package Size|115mm*75mm*25mm|
 |Size|65mm*56mm|
 
 
@@ -134,12 +134,12 @@ make clean && make
  *
 ```
 
-* Position X/Y/Z: Lower left corner is X=0, Y=0. Z is the height. Max is 65535.
-* Gesture: Wave your hands over the module, you can see the wave direction as West to East, East to West, South to North and North to South.
-* Airwheel：The number will increase with clockwise direction and reduce with counterclockwise direction. It will have some delay on the display. 
-* Touch electrode: Put your finger on the specific area, you will get Center, East, West, South and North.   
-* Tap electrode: Tap your finger on the specific area, you will get Center, East, West, South and North.  
-* Double Tap electrode: Double Tap your finger on the specific area, you will get Center, East, West, South and North.  
+* **Position X/Y/Z**: Lower left corner is X=0, Y=0. Z is the height. Max is 65535.
+* **Gesture**: Wave your hands over the module, you can see the wave direction as West to East, East to West, South to North and North to South.
+* **Airwheel**：The number will increase with clockwise direction and reduce with counterclockwise direction. It will have some delay on the display. 
+* **Touch electrode**: Put your finger on the specific area, you will get Center, East, West, South and North.   
+* **Tap electrode**: Tap your finger on the specific area, you will get Center, East, West, South and North.  
+* **Double Tap electrode**: Double Tap your finger on the specific area, you will get Center, East, West, South and North.  
 
 
 ## Resources
