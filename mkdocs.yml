@@ -141,6 +141,7 @@ pages:
 
       - Raspberry Pi:
           - Raspberry Pi Introduction: Raspberry_Pi.md
+          - 3D Gesture Tracking Shield for Raspberry Pi MGC3130: 3D-Gesture-Tracking-Shield-for-Raspberry-Pi-MGC3130.md
           - Grove Base HAT: Grove_Base_HAT.md
           - GrovePi Plus: GrovePi_Plus.md
           - Raspberry Pi Breakout Board v1.0: Raspberry_Pi_Breakout_Board_v1.0.md
@@ -158,6 +159,7 @@ pages:
           - RS-485 Shield for Raspberry Pi: RS-485_Shield_for_Raspberry_Pi.md
           - Grove AI HAT for Edge Computing: Grove_AI_HAT_for_Edge_Computing.md
           - Grove Base Kit for Raspberry Pi: Grove_Base_Kit_for_Raspberry_Pi.md
+
 
           
 
