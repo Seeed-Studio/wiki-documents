@@ -149,8 +149,7 @@ make clean && make
 * **Tap electrode**: Tap your finger on the specific area, you will get Center, East, West, South and North.  
 * **Double Tap electrode**: Double Tap your finger on the specific area, you will get Center, East, West, South and North.  
 
-<iframe width="800" height="450" src="<iframe width="727" height="409" src="https://www.youtube.com/embed/__9Vas2kGHw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<iframe width="800" height="450" src="https://www.youtube.com/embed/__9Vas2kGHw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## Resources
