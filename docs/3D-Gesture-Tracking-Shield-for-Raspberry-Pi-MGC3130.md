@@ -54,6 +54,7 @@ What an amazing module, with the help it, you can use gestures to control lights
 |Carrier Frequency|44 kHz to 115 kHz|
 |Output Interface|I2C(Default I2C address: 0X42)|
 |Gross Weight|55g|
+|Net Weight|17.6g|
 |Package Size|115mm*75mm*25mm|
 |Size|65mm*56mm|
 
