@@ -47,7 +47,7 @@ Here is an example to show you how to read temperature information from the sens
 *  Serial monitor to get the result.
 *  By: http://www.seeedstudio.com
 */
-#include &lt;math.h&gt;
+#include <math.h>
 int a;
 float temperature;
 int B=3975;                  //B value of the thermistor
