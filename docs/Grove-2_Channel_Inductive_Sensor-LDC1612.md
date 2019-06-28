@@ -36,6 +36,10 @@ The Grove - 2-Channel Inductive Sensor is based on Texas Instruments(TI) LDC1612
 |Best Detecting Range|15mm|
 |Interface|I2C|
 |I2C address|0x2B(defult)<br>0x2A(configurable)|
+|Package size|L: 140mm W: 90mm H: 10mm|
+|Gross Weight|12g|
+
+
 
 When the ADDR pin is set low, the LDC I2C address is 0x2A; when the ADDR pin is set high, the LDC I2C address is 0x2B. 
 

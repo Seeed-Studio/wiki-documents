@@ -22,6 +22,24 @@ With the build-in LED, you can apply it to many interesting projects, it is real
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-Blue-LED-Button-p-3104.html" target="_blank"><img src="https://github.com/SeeedDocument/Grove-Red_LED_Button/raw/master/img/B.png" height="48" width="300" /></a></p>
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-Red-LED-Button-p-3096.html" target="_blank"><img src="https://github.com/SeeedDocument/Grove-Red_LED_Button/raw/master/img/R.png"  height="48" width="300" /></a></p>
 
+## Version
+
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| Grove-LED Button | Initial                                                                                               | Jun 2018      |
+
+## Version
+
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| Grove-LED Button | Initial                                                                                               | Jun 2018      |
+
+
+## Version
+
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| Grove-LED Button | Initial                                                                                               | Jun 2018      |
 
 ## Features
 
@@ -40,6 +58,12 @@ With the build-in LED, you can apply it to many interesting projects, it is real
 |LED rated current|50mA|
 |Press Resistance^1^|<100mΩ|
 |Release Resistance^2^|>100MΩ|
+|Size|L: 40mm W: 20mm H: 13mm| 
+|Weight|4.3g|
+|Package size|L: 140mm W: 90mm H: 10mm|
+|Gross Weight|11g|
+
+
 
 !!!Tips
         1,2- If you want to measure the resistance, please take the key cap off the board. Otherwise you will get the value of the equivalent resistance of the board instead of the true resistance of the key cap. 

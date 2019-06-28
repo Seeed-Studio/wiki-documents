@@ -16,6 +16,12 @@ The  Grove - 16-Channel PWM Driver is based on NXP PCA9685, which is a 16-Channe
 
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-16-Channel-PWM-Driver-(PCA9685)-p-3221.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
+## Version
+
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| Grove - 16-Channel PWM Driver (PCA9685) | Initial                                                                                               | Sep 2018      |
+
 
 ## Feature
 
@@ -37,7 +43,10 @@ The  Grove - 16-Channel PWM Driver is based on NXP PCA9685, which is a 16-Channe
 |Operating temperature|-40～85℃|
 |Interface|I2C|
 |I2C Address Range|0x40 ~ 0x7f(default)|
-
+|Size|L: 60mm W: 40mm H: 18mm| 
+|Weight|14.3g|
+|Package size|L: 135mm W: 85mm H: 19mm|
+|Gross Weight|21g|
 
 ## Typical applications
 

@@ -23,6 +23,12 @@ As the you can see, this module is based on FSR402,Interlink Electronics FSR® 4
 
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-Round-Force-Sensor-%28FSR402%29-p-3110.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
+## Version
+
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| Grove-Round Force Sensor(FSR402) | Initial                                                                                               | Jun 2018      |
+
 
 ## Features
 
@@ -44,7 +50,10 @@ As the you can see, this module is based on FSR402,Interlink Electronics FSR® 4
 |Non-Actuated Resistance|>10 MΩ|
 |Minimum Resistance|1 KΩ|
 |Device Rise Time|<3 Microseconds|
-
+|Size|L: 75mm W: 20mm H: 11mm| 
+|Weight|2.5g|
+|Package size|L: 140mm W: 90mm H: 10mm|
+|Gross Weight|10g|
 
 !!!Tip
     If you want to measure the Non-Actuated Resistance, please remove this thing from the sensor

@@ -28,6 +28,12 @@ Grove - 2-Channel Solid State Relay
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-2-Channel-Solid-State-Relay-p-3129.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
+## Version
+
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| Grove - 2-Channel Solid State Relay | Initial                                                                                               | Aug 2018      |
+
 ## Features
 
 - Advantages over mechanical relays:
@@ -68,6 +74,12 @@ Grove - 2-Channel Solid State Relay
 |Output Port|Two DIP Female Blue 2 pin |
 |Zero Cross|support|
 |Certification|UL /  CSA|
+|Size|L: 40mm W: 40mm H: 23mm| 
+|Weight|16.0g|
+|Package size|L: 115mm W: 65mm H: 50mm|
+|Gross Weight|138g|
+
+
 
 !!!Note
         You may pay attention to the **Leakage current**, 1.5mA is strong enough to drive Low power LED, so when the relay is off, the LED may still emits a faint light.

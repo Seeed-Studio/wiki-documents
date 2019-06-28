@@ -21,7 +21,11 @@ Again, this module can't work alone, it must work with a k-type thermocouple, if
 
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-I2C-Thermocouple-Amplifier-%28MCP9600%29-p-3199.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
+## Version
 
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| Grove - I2C Thermocouple Amplifier (MCP9600) | Initial                                                                                               | Aug 2018      |
 
 ## Features
 
@@ -53,7 +57,10 @@ Again, this module can't work alone, it must work with a k-type thermocouple, if
 |Measurement Resolution|Hot and Cold-Junctions: 0.0625°C (typical)|
 |Interface|I^2^C|
 |I^2^C Address|0x60(default) / 0x67(optional)|
-
+|Size|L: 40mm W: 20mm H: 18mm| 
+|Weight|4.8g|
+|Package size|L: 130mm W: 85mm H: 20mm|
+|Gross Weight|11g|
 
 
 ## Applications

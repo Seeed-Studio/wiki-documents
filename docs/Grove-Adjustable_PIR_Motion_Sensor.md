@@ -19,6 +19,12 @@ Grove - Adjustable PIR Motion Sensor is an easy to use Passive Infrared motion s
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-Adjustable-PIR-Motion-Sensor-p-3225.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
+## Version
+
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| Grove - Adjustable PIR Motion Sensor | Initial                                                                                               | Sep 2018      |
+
 ## Features
 
 - Built-in filter, high immunity to RFI
@@ -38,7 +44,10 @@ Grove - Adjustable PIR Motion Sensor is an easy to use Passive Infrared motion s
 |Detction Distance|0 ~ 3m|
 |High Level On Time| <130s|
 |Interface|Digital|
-
+|Size|L: 40mm W: 20mm H: 15mm| 
+|Weight|4.5g|
+|Package size|L: 140mm W: 90mm H: 15mm|
+|Gross Weight|10g|
 
 
 ## Typical applications

@@ -28,6 +28,12 @@ Grove - Solid State Relay V2
 
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-Solid-State-Relay-V2-p-3128.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
+## Version
+
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| Grove - Solid State Relay V2 | Initial                                                                                               | Aug 2018      |
+
 
 ## Features
 
@@ -69,6 +75,11 @@ Grove - Solid State Relay V2
 |Output Port|DIP Female Blue 2 pin |
 |Zero Cross|support|
 |Certification|UL /  CSA|
+|Size|L: 40mm W: 20mm H: 23mm| 
+|Weight|8.2g|
+|Package size|L: 120mm W: 65mm H: 52 mm|
+|Gross Weight|132g|
+
 
 !!!Note
         You may pay attention to the **Leakage current**, 1.5mA is strong enough to drive Low power LED, so when the relay is off, the LED may still emits a faint light.

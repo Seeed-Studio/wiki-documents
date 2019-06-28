@@ -19,7 +19,11 @@ LED Matrix is low cost and usually used to display simple numbers and images. Th
 
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-LED-Matrix-Driver-HT16K33.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
+## Version
 
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| Grove - LED Matrix Driver (HT16K33) | Initial                                                                                               | Sep 2018      |
 
 ## Feature 
 
@@ -39,6 +43,11 @@ LED Matrix is low cost and usually used to display simple numbers and images. Th
 |Storage temperature|-50～125℃|
 |Interface|I2C|
 |I2C address|0x70(defult)<br>0x71~0x77(configurable)|
+|size|L: 40mm W: 40mm H: 17mm| 
+|Weight|8.8g|
+|Package size|L: 140mm W: 90mm H: 18mm|
+|Gross Weight|15g|
+
 
 !!! Note
 There are 8 possible I2C address of this grove, from 0x70 to 0x77. The defult I^2^C address is 0x77. You can change the I2C address by do some soldering as instructed in the below table. 

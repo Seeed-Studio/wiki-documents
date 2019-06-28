@@ -23,6 +23,12 @@ It will be a lot fun to use this module as a game controler or apply it to other
 
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-Capacitive-Touch-Slide-Sensor%28CY8C4014LQI%29-p-3183.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
+## Version
+
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| Grove - Capacitive Touch Slide Sensor(CY8C4014LQI) | Initial                                                                                               | Jul 2018      |
+
 
 
 ## Features
@@ -44,6 +50,10 @@ It will be a lot fun to use this module as a game controler or apply it to other
 |Operating Junction Temperature|-40°C to +100°C|
 |Interface|I^2^C|
 |Default I^2^C Address|0x08|
+|Size|L: 60mm W: 20mm H: 6mm| 
+|Weight|8g|
+|Package size|L: 140mm W: 90mm H: 10mm|
+|Gross Weight|15g|
 
 
 ## Applications

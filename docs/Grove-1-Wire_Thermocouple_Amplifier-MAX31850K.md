@@ -22,6 +22,13 @@ Again, this module can't work alone, it must work with a k-type thermocouple, if
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-1-Wire-Thermocouple-Amplifier-%28MAX31850K%29-p-3159.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
+## Version
+
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| Grove - 1-Wire Thermocouple Amplifier (MAX31850K) | Initial                                                                                               | Aug 2018      |
+
+
 ## Features
 
 - Integrated Cold-Junction Compensation
@@ -49,7 +56,10 @@ Again, this module can't work alone, it must work with a k-type thermocouple, if
 |Storage Temperature Range|-65℃  to +150℃ |
 |Input Jack|DIP Female Blue-2Pin|
 |Output Interface|1-Wire bus|
-
+|Size|L: 40mm W: 20mm H: 18mm| 
+|Weight|4.8g|
+|Package size|L: 140mm W: 90mm H: 20mm|
+|Gross Weight|11g|
 
 ## Applications
 

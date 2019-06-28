@@ -18,7 +18,11 @@ The Grove - 6-Position DIP Switch has 6 individual switch positions, which use I
 
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-6-Position-DIP-Switch-p-3137.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
+## Version
 
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| Grove - 6-Position DIP Switch | Initial                                                                                               | Jun 2018      |
 
 ## Features
 
@@ -36,7 +40,10 @@ The Grove - 6-Position DIP Switch has 6 individual switch positions, which use I
 |Operating voltage|3.3V / 5V|
 |Interface|I^2^C|
 |Default I^2^C Address|0x03|
-
+|Size|L: 40mm W: 20mm H: 13mm| 
+|Weight|5g|
+|Package size|L: 140mm W: 90mm H: 10mm|
+|Gross Weight|11g|
 
 ## Applications
 

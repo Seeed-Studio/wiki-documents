@@ -18,6 +18,11 @@ This diver board is based on TB6612FNG, which is a driver IC for DC motor and st
 
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-I2C-Motor-Driver-(TB6612FNG)-p-3220.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
+## Version
+
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| Grove - I2C Motor Driver (TB6612FNG) | Initial                                                                                               | Sep 2018      |
 
 ## Features
 
@@ -38,7 +43,10 @@ This diver board is based on TB6612FNG, which is a driver IC for DC motor and st
 |Logic Interface|I2C|
 |I2C Address|0x14 (default)|
 |I2C Address Range|0x01 ~ 0x7f (Configurable)|
-
+|Size|L: 60mm W: 40mm H: 12mm| 
+|Weight|13g|
+|Package size|L: 140mm W: 90mm H: 12mm|
+|Gross Weight|20g|
 
 
 ## Typical applications

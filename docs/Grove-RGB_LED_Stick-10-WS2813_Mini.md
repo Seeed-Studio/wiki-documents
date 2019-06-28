@@ -19,6 +19,11 @@ You can use this little stick create hundreds of thausands light effect, we hope
 
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-RGB-LED-Stick-10-WS2813-Min-p-3226.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
+## Version
+
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| Grove - RGB LED Stick (10 WS2813 Mini) | Initial                                                                                               | Nov 2018      |
 
 ## Features
 
@@ -47,7 +52,10 @@ As long as not two or more adjacent LEDs are broken, the remaining LEDs will be 
 |Storage Temperature|-40℃ ~ +105℃|
 |RGB Channel Constant Current|16mA|
 |Interface|Digital|
-
+|Size|L: 80mm W: 10mm H: 10mm| 
+|Weight|3.7g|
+|Package Size|L: 150mm W: 100mm H: 25mm|
+|Gross Weight|13g|
 
 
 ## Typical Applications

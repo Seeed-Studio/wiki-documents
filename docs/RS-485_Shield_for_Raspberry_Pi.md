@@ -16,6 +16,11 @@ RS-485 is a cost-effective solution in serial communication networks. It can be 
 
 <p style=":center"><a href="https://www.seeedstudio.com/RS-485-Shield-for-Raspberry-Pi.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
+## Version
+
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| RS-485 Shield for Raspberry Pi | Initial                                                                                               | Sep 2018      |
 
 ## Feature
 
@@ -42,10 +47,10 @@ RS-485 is a cost-effective solution in serial communication networks. It can be 
 |Channel Number|8|
 |Resolution|12-Bit|
 |Power Consumption|Different power consumption depending on the transmission rate|
-|Weight|42g|
-|Length|62.0mm|
-|Width|39.2mm|
-|Height|21.8mm|
+|size|L: 62mm W: 39.2mm H: 21.8mm| 
+|Weight|23g|
+|Package size|L: 140mm W: 75mm H: 25mm|
+|Gross Weight|42g|
 
 
 <div class="page"/></div>

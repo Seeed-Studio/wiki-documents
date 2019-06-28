@@ -48,6 +48,10 @@ ADC is a common accessory for Raspberry Pi. Nowadays many cheap MCUs has built-i
 |Operating Temperature|-40～85℃|
 |Communication Interfaces|I2C|
 |I2C address|0x04(default)|
+|Size|L: 65mm W: 55mm H: 18mm| 
+|Weight|25.9g|
+|Package size|L: 140mm W: 75mm H: 25mm|
+|Gross Weight|45g|
 
 
 ## Typical applications

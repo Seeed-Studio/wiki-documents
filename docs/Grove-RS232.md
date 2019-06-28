@@ -22,7 +22,11 @@ This module is based on Max3232, it supports multiple baud rate communication an
 
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-RS232-P-2852.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
+## Version
 
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| Grove - RS232 | Initial                                                                                               | Oct 2018      |
 
 ## Feature 
 
@@ -51,7 +55,10 @@ This module is based on Max3232, it supports multiple baud rate communication an
 |Length|46mm|
 |Width|42mm|
 |Height|16.5mm|
-
+|size|L: 40mm W: 40mm H: 15mm| 
+|Weight|13.3g|
+|Package size|L: 140mm W: 90mm H: 15mm|
+|Gross Weight|20g|
 
 ## Typical Applications
 

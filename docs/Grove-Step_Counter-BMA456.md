@@ -20,6 +20,13 @@ Relaiable, cost-effective, on top of that, it's very easy to use, you can easily
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-Step-Counter-(BMA456)-p-3189.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
+## Version
+
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| Grove - Step Counter(BMA456) | Initial                                                                                               | Oct 2018      |
+
+
 ## Features
 
 - On chip FIFO
@@ -38,7 +45,10 @@ Relaiable, cost-effective, on top of that, it's very easy to use, you can easily
 |Sensitivity|16384 @±2g<br>8192 @±4g<br>4096 @±8g<br>2048 @±16g|
 |Interface|I^2^C|
 |I^2^C Address|0x19(default) / 0x18(optional)|
-
+|Size|L: 40mm W: 20mm H: 10mm| 
+|Weight|3.2g|
+|Package size|L: 140mm W: 90mm H: 10mm|
+|Gross Weight|9g|
 
 
 ## Typical applications

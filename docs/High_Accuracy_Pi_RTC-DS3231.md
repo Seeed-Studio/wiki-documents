@@ -22,6 +22,11 @@ If you want to keep this module timing when the Raspberry Pi is powered off, you
 
 <p style=":center"><a href="https://www.seeedstudio.com/High-Accuracy-Pi-RTC-%28DS3231%29-p-3214.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
+## Version
+
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| High Accuracy Pi RTC (DS3231) | Initial                                                                                               | Sep 2018      |
 
 
 !!!Note
@@ -48,7 +53,10 @@ If you want to keep this module timing when the Raspberry Pi is powered off, you
 |Accuracy|±2ppm from 0°C to +40°C|
 |Interface|I2C|
 |I2C Address|0x68|
-
+|Size|L: 25mm W: 25mm H: 8mm| 
+|Weight|4.2g|
+|Package size|L: 85mm W: 75mm H: 25mm|
+|Gross Weight|15g|
 
 ## Typical applications
 

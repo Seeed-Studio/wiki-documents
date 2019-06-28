@@ -18,6 +18,12 @@ It is important to note that this sensor can only qualitatively test the humidit
 
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-Capacitive-Moisture-Sensor-Corrosion-Resistant-p-2850.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
+## Version
+
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| Grove - Capacitive Moisture Sensor (Corrosion Resistant)  | Initial                                                                                               | Sep 2018      |
+
 
 ## Feature 
 
@@ -35,7 +41,10 @@ It is important to note that this sensor can only qualitatively test the humidit
 |Length|92.1mm|
 |Width|23.5mm|
 |Height|6.5mm|
-
+|size|L: 40mm W: 20mm H: 13mm| 
+|Weight|10.6g|
+|Package size|L: 150mm W: 100mm H: 15mm|
+|Gross Weight|19g|
 
 
 ## Typical Applications

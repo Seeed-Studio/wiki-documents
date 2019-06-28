@@ -19,6 +19,12 @@ The analog-to-digital converter(ADC) is a common accessory for Raspberry Pi. Thi
 
 <p style=":center"><a href="https://www.seeedstudio.com/4-Channel-16-Bit-ADC-for-Raspberry-Pi-ADS1115.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
+## Version
+
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| 4-Channel 16-Bit ADC for Raspberry Pi (ADS1115) | Initial                                                                                               | Sep 2018      |
+
 
 ## Feature
 
@@ -45,7 +51,10 @@ The analog-to-digital converter(ADC) is a common accessory for Raspberry Pi. Thi
 |Maximum junction temperature|150℃|
 |Interface|I2C|
 |I2C address|0x48(defult)<br>0x49~0x4B(configurable)|
-
+|Size|L: 65mm W: 30mm H: 20mm| 
+|Weight|36.5g|
+|Package size|L: 140mm W: 78mm H: 27mm|
+|Gross Weight|37g|
 
 There are 4 possible I2C addresses of this grove, from 0x48 to 0x4B. The default I^2^C address is 0x48. You can change the I2C address by doing some soldering.
 

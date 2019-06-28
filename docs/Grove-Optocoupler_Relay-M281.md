@@ -21,6 +21,12 @@ Unlike the other TRIAC SSR in our website, this relay is based on MOSFET, so it 
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-Optocoupler-Relay-M281-p-2923.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
+## Version
+
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| Grove-Optocoupler Relay (M281) | Initial                                                                                               | Dec 2018      |
+
 ## Features
 
 - Low on-resistance(0.5Ω MAX.)
@@ -54,6 +60,10 @@ Unlike the other TRIAC SSR in our website, this relay is based on MOSFET, so it 
 |Turn-On time|1.4 ms(TYP.)<br>5 ms(Max.)|
 |Turn-Off time|0.2 ms(TYP.)<br>2 ms(Max.)|
 |Interface|Digital|
+|Size|L: 40mm W: 20mm H: 13mm| 
+|Weight|10.6g|
+|Package Size|L: 135mm W: 85mm H: 13mm|
+|Gross Weight|11g|
 
 <div align="center"><b>Table 1.</b><i>General Specification</i></div>
 

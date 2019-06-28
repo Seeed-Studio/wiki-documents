@@ -19,6 +19,11 @@ This module is based on Max3232, it supports multiple baud rate communication an
 
 <p style=":center"><a href="https://www.seeedstudio.com/RS-232-To-TTL-Conveter-MAX3232IDR-p-2851.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
+## Version
+
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| RS-232 To TTL Conveter (MAX3232IDR) | Initial                                                                                               | Sep 2018      |
 
 
 ## Feature 
@@ -44,9 +49,10 @@ This module is based on Max3232, it supports multiple baud rate communication an
 |Storage temperature range|-65℃ ~ 150℃|
 |Maximum data rate|250 Kbit/s|
 |Support baud rate|300bps ~ 230400bps|
-|Length|46mm|
-|Width|42mm|
-|Height|16.5mm|
+|Size|L: 35mm W: 30mm H: 15mm| 
+|Weight|10.9g|
+|Package size|L: 150mm W: 100mm H: 15mm|
+|Gross Weight|14g|
 
 
 

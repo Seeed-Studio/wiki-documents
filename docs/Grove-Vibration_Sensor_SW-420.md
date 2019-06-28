@@ -18,7 +18,11 @@ All in all, this is a perfect module for vibration or tilt sensor.
 
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-Vibration-Sensor-%28SW-420%29-p-3158.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
+## Version
 
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| Grove - Vibration Sensor (SW-420) | Initial                                                                                               | Sep 2018      |
 
 ## Features
 
@@ -35,6 +39,10 @@ All in all, this is a perfect module for vibration or tilt sensor.
 |---|---|
 |Operating voltage|3.3V / 5V|
 |Interface|Digital|
+|Size|L: 40mm W: 20mm H: 10mm| 
+|Weight|4.3g|
+|Package size|L: 140mm W: 85mm H: 10mm|
+|Gross Weight|10g|
 
 
 ## Applications

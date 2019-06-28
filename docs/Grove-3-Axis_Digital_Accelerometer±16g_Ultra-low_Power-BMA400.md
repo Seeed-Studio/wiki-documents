@@ -17,6 +17,14 @@ The Grove - 3-Axis Digital Accelerometer ±16g Ultra-low Power (BMA400) sensor i
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-%C2%B116g-Ultra-low-Power-(BMA400)-p-3201.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
+## Version
+
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| Grove - 3-Axis Digital Accelerometer ±16g Ultra-low Power (BMA400)  | Initial                                                                                               | Nov 2018      |
+
+
+
 ## Features
 
 - Ultra-low power
@@ -43,6 +51,10 @@ The Grove - 3-Axis Digital Accelerometer ±16g Ultra-low Power (BMA400) sensor i
 |Sensitivity|1024LSB/g @±2g <br>512LSB/g  @±4g<br>256LSB/g @±8g<br>128LSB/g @±16g|
 |Interface|I^2^C|
 |I^2^C Address|0x15(default) / 0x14(optional)|
+|Size|L: 40mm W: 20mm H: 10mm| 
+|Weight|3.2g|
+|Package size|L: 140mm W: 90mm H: 10mm|
+|Gross Weight|10g|
 
 
 

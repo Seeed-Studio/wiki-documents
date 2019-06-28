@@ -18,6 +18,11 @@ tags:
 
 <p style=":center"><a href="https://www.seeedstudio.com/grove-rgb-led-matrix-w-driver.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
+## Version
+
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| Grove - RGB LED Stick (10 WS2813 Mini) | Initial                                                                                               | Dec 2018      |
 
 ## Features
 
@@ -36,7 +41,10 @@ tags:
 |Operating Temperature|-40℃ ~ +85℃|
 |Interface|I2C|
 |I2C Address|0x65|
-
+|size|L: 40mm W: 40mm H: 21mm| 
+|Weight|17.3g|
+|Package size|L: 120mm W: 100mm H: 33mm|
+|Gross Weight|28g|
 
 
 ## Typical Applications

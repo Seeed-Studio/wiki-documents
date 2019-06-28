@@ -21,6 +21,11 @@ With only one small switch to meet all your needs for switch control!
 
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-5-Way-Switch-p-3136.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
+## Version
+
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| Grove - 5-Way Switch | Initial                                                                                               | Jun 2018      |
 
 ## Features
 
@@ -37,7 +42,10 @@ With only one small switch to meet all your needs for switch control!
 |Operating voltage|3.3V / 5V|
 |Interface|I^2^C|
 |Default I^2^C Address|0x03|
-
+|Size|L: 40mm W: 20mm H: 10mm| 
+|Weight|4.1g|
+|Package size|L: 140mm W: 90mm H: 10mm|
+|Gross Weight|10g|
 
 ## Applications
 

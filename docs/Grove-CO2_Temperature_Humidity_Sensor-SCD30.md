@@ -25,6 +25,13 @@ In addition to the Non-Dispersive Infrared(NDIR) measurement technology for CO2 
     We've released the [Seeed Gas Sensor Selection Guide](http://wiki.seeedstudio.com/Seeed_Gas_Sensor_Selection_Guide/), it will help you choose the gas sensor that best suits your needs.
 
 
+## Version
+
+| Product Version  | Changes                                                                                               | Released Date |
+|------------------|-------------------------------------------------------------------------------------------------------|---------------|
+| Grove - CO2 & Temperature & Humidity Sensor (SCD30) V1.0 | Initial                                                                                               | Dec 2018      |
+
+
 ## Application Ideas
 
 - Air Purifier
@@ -57,6 +64,13 @@ In addition to the Non-Dispersive Infrared(NDIR) measurement technology for CO2 
 |Sensor lifetime|15 years|
 |Interface|I2C|
 |I2C Address|0x61|
+|Size|L: 58mm W: 38mm H: 19mm|
+|Weight|19.7g|
+|Package Size|L: 110mm W: 70mm H: 40mm|   
+|Gross weight| 27g|
+
+
+
 
 <div align="center"><b>Table 1.</b><i>General Specification</i></div>
 

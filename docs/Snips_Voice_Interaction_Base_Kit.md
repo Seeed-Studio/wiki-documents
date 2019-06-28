@@ -55,7 +55,8 @@ But that's not all! The [Voice Interaction Satellite Kit](https://www.seeedstudi
 ||6mm,M2 full thread black hex nylon spacer |3|
 ||Blue rope|1|
 ||Screw driver|1|
-
+||Package size|200mm 130mm 70mm|
+||Gross weight|514g|
 
 
 

@@ -59,7 +59,8 @@ Check out the video below and get started assembling the Snips Voice Interaction
 ||6mm,M2 full thread black hex nylon spacer |3|
 ||Blue rope|1|
 ||Screw driver|1|
-
+||Package size|L: 200mm W: 130mm H: 70mm|
+||Gross weight|513g|
 
 
 
