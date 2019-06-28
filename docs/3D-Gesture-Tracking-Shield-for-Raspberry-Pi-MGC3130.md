@@ -78,6 +78,19 @@ What an amazing module, with the help it, you can use gestures to control lights
 
 ## Play with Raspberry Pi
 
+### Enable I2C
+
+
+- Step 1. Run sudo raspi-config.
+- Step 2. Use the down arrow to select 5 Interfacing Options.
+- Step 3. Arrow down to P5 I2C.
+- Step 4. Select yes when it asks you to enable I2C.
+- Step 5. Also select yes if it asks about automatically loading the kernel module.
+- Step 6. Use the right arrow to select the <Finish> button.
+- Step 7. Select yes when it asks to reboot.
+
+!!!Tip
+    For more info about raspi-config, please refer to ![](https://www.raspberrypi.org/documentation/configuration/raspi-config.md).
 
 ### Install ncurses
 
@@ -103,6 +116,7 @@ sudo make install
 ```
 ncurses6-config --version
 ```
+
 
 ### Run Demo
 
