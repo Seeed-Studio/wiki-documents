@@ -428,7 +428,6 @@ As you may see, the demos above trigger the Alexa or Dueros by tapping the ++ent
 Well, you can use snowboy. And you only need simple steps to make that happen.
 
 
-**Step 1. Install Snowboy**
 ```
 cd ~
 git clone https://github.com/respeaker/4mics_hat.git
@@ -443,69 +442,6 @@ source ~/env/bin/activate              # activate the virtual, if we have alread
 (env) pi@raspberrypi:~ $ cd voice-engine/
 (env) pi@raspberrypi:~/voice-engine $ python setup.py install
 
-```
-
-
-**Step 2. Configure Pulse Audio**
-```
-cd ~
-sudo apt install pulseaudio
-cd seeed-voicecard
-cd pulseaudio
-cd pulse_config_6mic
-sudo cp seeed-voicecard.conf /usr/share/pulseaudio/alsa-mixer/profile-sets/
-```
-Then you need to edit the rules.
-As the system start, when the card "seeed8micvoicec" is detected, the PULSE_PROFILE_SET variable will be set in the udev database, and PulseAudio will be forced to use `seeed-voicecard.conf`.
-At first, please use the following command to check the rule.
-```
-sudo nano /lib/udev/rules.d/90-pulseaudio.rules
-
-```
-Then add the following lines at about line 87(behind the setting for some laptops and before the line GOTO="pulseaudio_end")
-```
-# Seeed Voicecard
-ATTR{id}=="seeed8micvoicec",ATTR{number}=="1",ENV{PULSE_PROFILE_SET}="seeed-voicecard.conf"
-
-```
-It should be like:
-![](https://github.com/respeaker/seeed-voicecard/raw/master/pulseaudio/udev_rules_6mic.png)
-Then presss ++ctrl+x++ to quite, and tap ++y++ to save the modification you've just made.
-The value of ATTR{number} can be found with command:
-```
-udevadm info -a -p /sys/class/sound/card1/
-```
-
-**Step 3. config `default.pa` and `daemon.conf`**
-```
-sudo cp default.pa /etc/pulse/
-sudo cp daemon.conf /etc/pulse/
-```
-
-**Step 4. reboot raspberry pi and check**
-```
-sudo reboot
-pulseaudio --start  # start pulse at first
-pactl info  # check the setting
-
-# The output should be like this
-# You could see the default sink is seeed-2ch and default source is seeed-8ch
-pi@raspberrypi:~ $ pactl info
-Server String: /run/user/1000/pulse/native
-Library Protocol Version: 32
-Server Protocol Version: 32
-Is Local: yes
-Client Index: 6
-Tile Size: 65496
-User Name: pi
-Host Name: raspberrypi
-Server Name: pulseaudio
-Server Version: 10.0
-Default Sample Specification: s32le 8ch 96000Hz
-Default Channel Map: front-left,front-left-of-center,front-center,front-right,front-right-of-center,rear-center,aux0,aux1
-Default Sink: alsa_output.platform-soc_sound.seeed-2ch
-Default Source: alsa_input.platform-soc_sound.seeed-8ch
-Cookie: 3523:e5af
 ```
 
 After you configure this snowboy, please do the following:
