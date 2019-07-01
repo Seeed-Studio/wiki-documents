@@ -160,24 +160,28 @@ Here is the table about the I2C addresses.
 !!!Attention
         If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
+**1. Getting Started with display_basic**
 
-- **Step 1.** Download the  [Grove - 0.54" Red Quad Alphanumeric Display Library](https://github.com/Seeed-Studio/Seeed_Alphanumeric_display_4)  from Github.
+- **Step 1.** Download the  [Grove - 0.54" Red Quad Alphanumeric Display Library](https://github.com/Seeed-Studio/Seeed_Alphanumeric_Display_HT16K33)  from Github.
 - **Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
-- **Step 3.** Open **Arduino IDE -> File -> Examples -> Grove-Four Digital Tubes Display -> display_basic**, then upload the example to Arduino. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 3.** Open **Arduino IDE -> File -> Examples -> Seeed_Alphanumeric_Display_HT16K33 -> display_basic**, then upload the example to Arduino. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 4.** You can see the led is running 123 -> 4567 -> ABCD -> abcd repeatly.
 
-![](https://github.com/SeeedDocument/Grove-0.54-Red-Quad-Alphanumeric-Display/raw/master/img/arduino_ide_example.png)
+**2. Other Examples**
 
-- **Step 4.** You can see the led is running 123 -> 4567 -> ABCD repeatly.
-- 
+- **display_custom_4:** Only support for qual(four tubes) alphanumeric Digital Tubes.
+- **display_scroll_string:** Display scrolling string which longer than 4. 
+- **display_scroll_number:** Display scrolling number which bigger than 9999. 
+- **number_increment_2:** Do not support Grove - 0.54" Red Quad Alphanumeric Display.
 
 
-**API**
+**3. API**
 
-- Init(): initialization 
-- setBrightness(): set the brightness, the range is 0-15, the more brightness, the more power consumption 
-- setBlinkRate(): set the interval of blinking, you can set as BLINK_OFF to turn off the flashing
-- displayNum(): display the number, only Four numbers can be displayed
-- dsplayString(): display the character, only Four characters can be displayed
+- **Init(NUMERIC_I2C_ADDR):** initialize the device with I2C address, Grove - 0.54" Red Quad Alphanumeric Display I2C address is 0x71.
+- **setBrightness(15):** set the brightness, the range is 0-15, the more brightness, the more power consumption. 
+- **setBlinkRate(BLINK_OFF):** set the interval of blinking, you can set as BLINK_OFF/BLINK_2HZ/BLINK_1HZ.
+- **displayNum(1234567,500):** display the number, there are 2 parameters. The first parameter is number and the second one is the scrolling interval(ms). If the num <10000, The tubes display static number. Otherwise,it displays scrolling number. The scrolling interval(ms) only works on scrolling mode and you can set the interval as 0.
+- **displayString("ABCDEFGHJIYZ",500):** display the character, there are 2 parameters. The first parameter is character and the second one is the scrolling interval(ms). If the character less than 4 characters, The tubes display static character. Otherwise,it displays scrolling characters. The scrolling interval(ms) only works on scrolling mode and you can set the interval as 0. The function does not support lower case letters and displays the same as upper case letters. 
   
 
 ## Resources
@@ -186,7 +190,7 @@ Here is the table about the I2C addresses.
 - **[PDF]** [LED Module Datasheet](https://github.com/SeeedDocument/Grove-0.54-Red-Quad-Alphanumeric-Display/raw/master/res/DIP-LED-4.pdf)
 - **[PDF]** [HT16K33 Datasheet](https://github.com/SeeedDocument/Grove-0.54-Red-Dual-Alphanumeric-Display/raw/master/res/HT16K33.pdf)
 - **[PDF]** [MPS MP2155 Datasheet](https://github.com/SeeedDocument/Grove-0.54-Red-Dual-Alphanumeric-Display/raw/master/res/MPS_MP2155%20datasheetpdf.pdf)
-- **[Library]** [Grove - 0.54" Qual Dual Alphanumeric Display Library](https://github.com/Seeed-Studio/Seeed_Alphanumeric_display_4)
+- **[Library]** [Grove - 0.54" Qual Dual Alphanumeric Display Library](https://github.com/Seeed-Studio/Seeed_Alphanumeric_Display_HT16K33)
 
 
 ## Tech Support

@@ -142,22 +142,36 @@ Here is the table about the I2C addresses.
 !!!Attention
         If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
+**1. Getting Started with display_basic**
+
 
 - **Step 1.** Download the  [Grove - 0.54" Red Dual Alphanumeric Display Library](https://github.com/Seeed-Studio/Seeed_Alphanumeric_Display_HT16K33)  from Github.
 - **Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
-- **Step 3.** Open **Arduino IDE -> File -> Examples -> Grove-Alphanumeric Display -> number_increment**, then upload the example to Arduino. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 3.** Open **Arduino IDE -> File -> Examples -> Seeed_Alphanumeric_Display_HT16K33 -> display_basic**
+- **Step 4.** Uncomment the **#define DUAL_NUMERIC** as below, you have to uncomment it for all other examples as well.
 
-![](https://github.com/SeeedDocument/Grove-0.54-Red-Dual-Alphanumeric-Display/raw/master/img/example.png)
+```
+#define DUAL_NUMERIC
+```
 
-- **Step 4.** You can see the led is running from 00 to FF repeatly.
+- **Step 5.** Upload the example to Arduino. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 6.** You can see the led is running from .C, 23 and AB repeatly.
 
-**API**
+**2. Other Examples**
 
-- Init(): initialization 
-- setBrightness(): set the brightness, the range is 0-15, the more brightness, the more power consumption 
-- setBlinkRate(): set the interval of blinking, you can set as BLINK_OFF to turn off the flashing
-- displayNum(): display the number, only two numbers can be displayed
-- dsplayString(): display the character, only two characters can be displayed
+- **display_custom_4:** Dot not support Grove - 0.54" Red Dual Alphanumeric Display. 
+- **display_scroll_string:** Display scrolling string which longer than 2. 
+- **display_scroll_number:** Display scrolling number which bigger than 99. 
+- **number_increment_2:** Only support for dual alphanumeric Digital Tubes.
+
+
+**3. API**
+
+- **Init(NUMERIC_I2C_ADDR):** initialize the device with I2C address, Grove - 0.54" Red Dual Alphanumeric Display I2C address is 0x70.
+- **setBrightness(15):** set the brightness, the range is 0-15, the more brightness, the more power consumption. 
+- **setBlinkRate(BLINK_OFF):** set the interval of blinking, you can set as BLINK_OFF/BLINK_2HZ/BLINK_1HZ.
+- **displayNum(1234567,500):** display the number, there are 2 parameters. The first parameter is number and the second one is the scrolling interval(ms). If the num <100, The tubes display static number. Otherwise,it displays scrolling number. The scrolling interval(ms) only works on scrolling mode and you can set the interval as 0.
+- **displayString("ABCDEFGHJIYZ",500):** display the character, there are 2 parameters. The first parameter is character and the second one is the scrolling interval(ms). If the character less than 2 characters, The tubes display static character. Otherwise,it displays scrolling characters. The scrolling interval(ms) only works on scrolling mode and you can set the interval as 0. The function does not support lower case letters and displays the same as upper case letters. 
   
 
 ## Resources
