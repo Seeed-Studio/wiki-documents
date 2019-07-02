@@ -57,43 +57,48 @@ To complete this demo, you can use one or more Grove - Chainable RGB LED. Note t
 -   Open the example CycleThroughColors by the path:File->Examples->ChainableLED_master and upload it to Seeeduino.
 
 ```
-    /*
-     * Example of using the ChainableRGB library for controlling a Grove RGB.
-     * This code cycles through all the colors in an uniform way. This is accomplished using a HSB color space.
-     */
-    #include <ChainableLED.h>
 
-    #define NUM_LEDS  5
+/* 
+ * Example of using the ChainableRGB library for controlling a Grove RGB.
+ * This code cycles through all the colors in an uniform way. This is accomplished using a HSB color space. 
+ */
 
-    ChainableLED leds(7, 8, NUM_LEDS);
 
-    void setup()
-    {
-    }
+#include <ChainableLED.h>
 
-    float hue = 0.0;
-    boolean up = true;
+#define NUM_LEDS  5
 
-    void loop()
-    {
-      for (byte i=0; i<NUM_LEDS; i++)
-        leds.setColorHSB(i, hue, 1.0, 0.5);
+ChainableLED leds(7, 8, NUM_LEDS);
 
-      delay(50);
+void setup()
+{
+  leds.init();
+}
 
-      if (up)
-        hue+= 0.025;
-      else
-        hue-= 0.025;
+float hue = 0.0;
+boolean up = true;
 
-      if (hue>=1.0 && up)
-        up = false;
-      else if (hue<=0.0 && !up)
-        up = true;
-    }
+void loop()
+{
+  for (byte i=0; i<NUM_LEDS; i++)
+    leds.setColorHSB(i, hue, 1.0, 0.5);
+    
+  delay(50);
+    
+  if (up)
+    hue+= 0.025;
+  else
+    hue-= 0.025;
+    
+  if (hue>=1.0 && up)
+    up = false;
+  else if (hue<=0.0 && !up)
+    up = true;
+}
+
 ```
 
-You can observe this scene: colors of two LED will gradient consistently.
+You can observe this scene: colors of five LED will gradient consistently.
 
 **Extended application:**
 Based on [Chainable LED Library](https://github.com/pjpmarques/ChainableLED), we have designed this demo: RGB color varies with the temperature measured by Grove - temperature. The RGB color vary from green to red when the temperature is from 25 to 32. The test code is shown below. Do it if you are interested in it.
