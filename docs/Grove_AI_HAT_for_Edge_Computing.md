@@ -24,6 +24,9 @@ We have released varies of SIPPED AI products, we believe it is time to make it 
 We hope this board may help you with your edge computing, AI vision, voice recognition, and other AI projects, just enjoy it.
 
 
+<iframe width="800" height="450" src="https://www.youtube.com/embed/5BF3ExL1HOQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-AI-HAT-for-Edge-Computing-p-4026.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
