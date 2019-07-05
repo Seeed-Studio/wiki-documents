@@ -148,31 +148,63 @@ Here is the table about the I2C addresses.
 - **Step 1.** Download the  [Grove - 0.54" Red Dual Alphanumeric Display Library](https://github.com/Seeed-Studio/Seeed_Alphanumeric_Display_HT16K33)  from Github.
 - **Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 - **Step 3.** Open **Arduino IDE -> File -> Examples -> Seeed_Alphanumeric_Display_HT16K33 -> display_basic**
-- **Step 4.** Uncomment the **#define DUAL_NUMERIC** as below, you have to uncomment it for all other examples as well.
+- **Step 4.** Uncomment the **tube.setTubeType(TYPE_2,TYPE_2_DEFAULT_I2C_ADDR)** as below, you have to uncomment it for all other examples as well.
 
 ```
-#define DUAL_NUMERIC
+    // If using four digital tubes, use this configuration.
+    // tube.setTubeType(TYPE_4,TYPE_4_DEFAULT_I2C_ADDR);
+
+    // If using two digital tubes, use this configuration.
+     tube.setTubeType(TYPE_2,TYPE_2_DEFAULT_I2C_ADDR);
 ```
 
 - **Step 5.** Upload the example to Arduino. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
-- **Step 6.** You can see the led is running from .C, 23 and AB repeatly.
+- **Step 4.** You can see the led is running 12 -> 4567 -> AB -> abcd repeatly.
 
 **2. Other Examples**
 
-- **display_custom_4:** Dot not support Grove - 0.54" Red Dual Alphanumeric Display. 
+- **display_custom:** Display single characters and dots.
 - **display_scroll_string:** Display scrolling string which longer than 2. 
 - **display_scroll_number:** Display scrolling number which bigger than 99. 
-- **number_increment_2:** Only support for dual alphanumeric Digital Tubes.
+- **number_increment:** Display increase number.
+- **combine_two_displays:** You can connect 2 Grove - 0.54" Red Quad Alphanumeric Displays or Grove - 0.54" Red Dual Alphanumeric Display or both Grove - 0.54" Red Dual Alphanumeric Display and Grove - 0.54" Red Quad Alphanumeric Display. 
 
+If you use 2 Grove - 0.54" Red Dual Alphanumeric Displays, please modify the code as below. 
+
+```
+#define I2C_ADDR_AFTER_CHANGE_FOUR  0x75     //Grove - 0.54" Red Dual Alphanumeric Displays Changed I2C address
+#define I2C_ADDR_DEFAULT_FOUR       0x70     //Grove - 0.54" Red Dual Alphanumeric Displays Default I2C address
+
+
+tube1.setTubeType(TYPE_2,I2C_ADDR_AFTER_CHANGE_FOUR);
+tube2.setTubeType(TYPE_2,I2C_ADDR_DEFAULT_FOUR);
+```
+
+If you use both Grove - 0.54" Red Dual Alphanumeric Display and Grove - 0.54" Red Qual Alphanumeric Display, please modify the code as below. 
+
+```
+#define I2C_ADDR_AFTER_CHANGE_FOUR  0x70     //Grove - 0.54" Red Dual Alphanumeric Displays Changed I2C address
+#define I2C_ADDR_DEFAULT_FOUR       0x71     //Grove - 0.54" Red Qual Alphanumeric Displays Default I2C address
+
+
+tube1.setTubeType(TYPE_2,I2C_ADDR_AFTER_CHANGE_FOUR);
+tube2.setTubeType(TYPE_4,I2C_ADDR_DEFAULT_FOUR);
+```
+
+!!!warninging
+    If you plug 2 modules, the red tube will be a little dark due to arduino limited power supply. 
 
 **3. API**
 
-- **Init(NUMERIC_I2C_ADDR):** initialize the device with I2C address, Grove - 0.54" Red Dual Alphanumeric Display I2C address is 0x70.
+- **Init(NUMERIC_I2C_ADDR):** initialize the device with I2C address, Grove - 0.54" Red Quad Alphanumeric Display I2C default address is 0x71.
 - **setBrightness(15):** set the brightness, the range is 0-15, the more brightness, the more power consumption. 
 - **setBlinkRate(BLINK_OFF):** set the interval of blinking, you can set as BLINK_OFF/BLINK_2HZ/BLINK_1HZ.
 - **displayNum(1234567,500):** display the number, there are 2 parameters. The first parameter is number and the second one is the scrolling interval(ms). If the num <100, The tubes display static number. Otherwise,it displays scrolling number. The scrolling interval(ms) only works on scrolling mode and you can set the interval as 0.
 - **displayString("ABCDEFGHJIYZ",500):** display the character, there are 2 parameters. The first parameter is character and the second one is the scrolling interval(ms). If the character less than 2 characters, The tubes display static character. Otherwise,it displays scrolling characters. The scrolling interval(ms) only works on scrolling mode and you can set the interval as 0. The function does not support lower case letters and displays the same as upper case letters. 
-  
+- **setTubeSingleChar(FIRST_TUBE,'t'):** set the single character @ specific tube. 
+- **tube.setPoint(true,false):** set the 2 dots on and off. This example sets the first dot on and the second as off.
+
+
 
 ## Resources
 
