@@ -164,7 +164,7 @@ Here is the table about the I2C addresses.
 
 - **Step 1.** Download the  [Grove - 0.54" Red Quad Alphanumeric Display Library](https://github.com/Seeed-Studio/Seeed_Alphanumeric_Display_HT16K33)  from Github.
 - **Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
-- **Step 3.** Open **Arduino IDE -> File -> Examples -> Seeed_Alphanumeric_Display_HT16K33 -> display_basic**, then upload the example to Arduino. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 3.** Open **Arduino IDE -> File -> Examples -> Seeed_Alphanumeric_Display_HT16K33 -> display_basic**
 - **Step 4.** Uncomment the **tube.setTubeType(TYPE_4,TYPE_4_DEFAULT_I2C_ADDR)** as below, you have to uncomment it for all other examples as well.
 
 ```
@@ -207,6 +207,10 @@ If you use both Grove - 0.54" Red Dual Alphanumeric Display and Grove - 0.54" Re
 tube1.setTubeType(TYPE_2,I2C_ADDR_AFTER_CHANGE_FOUR);
 tube2.setTubeType(TYPE_4,I2C_ADDR_DEFAULT_FOUR);
 ```
+
+!!!warninging
+    If you plug 2 modules, the red tube will be a little dark due to arduino limited power supply.   
+
 
 **3. API**
 
