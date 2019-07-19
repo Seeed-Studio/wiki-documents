@@ -162,7 +162,7 @@ Each digital I/O pin has 8 different modes that can be selected, including GPIO.
     This chapter is writing under Win10. The steps are familiar for the other operate systems.
 
 ###STEP1. Plug in your SeeedStudio BeagleBone Green Wireless via USB
-Use the provided micro USB cable to plug your SeeedStudio BeagleBone Green Wireless into your computer. This will both power the board and provide a development interface. BBGW will boot Linux from the **on-board 2GB** or 4GB eMMC.
+Use the provided micro USB cable to plug your SeeedStudio BeagleBone Green Wireless into your computer. This will both power the board and provide a development interface. SeeedStudio BeagleBone Green WirelessW will boot Linux from the **on-board 2GB** or 4GB eMMC.
 
 SeeedStudio BeagleBone Green Wireless will operate as a flash drive providing you with a local copy of the documentation and drivers. Note that this interface may not be used to re-configure the microSD card with a new image, but may be used to update the boot parameters using the uEnv.txt file.
 
@@ -332,7 +332,7 @@ When the flashing is complete, all 4 USRx LEDs will be **off**. The latest Debia
 
 We have provided Mraa library and UPM library to make it easy for developers and sensor manufacturers to map their sensors & actuators on top of supported hardware and to allow control of low level communication protocol by high level languages & constructs.
 ###What are Mraa and UPM?
-Mraa is a C/C++ library with bindings to Python, Javascript and Java to interface with the I/O on BBG, SeeedStudio BeagleBone Green Wireless and other platforms, with a structured and sane API where port names/numbering matches the board that you are on. Use of Mraa does not tie you to specific hardware with board detection done at runtime you can create portable code that will work across the supported platforms.
+Mraa is a C/C++ library with bindings to Python, Javascript and Java to interface with the I/O on SeeedStudio BeagleBone Green, SeeedStudio BeagleBone Green Wireless and other platforms, with a structured and sane API where port names/numbering matches the board that you are on. Use of Mraa does not tie you to specific hardware with board detection done at runtime you can create portable code that will work across the supported platforms.
 UPM is a high level repository for sensors that use MRAA. Each sensor links to MRAA and are not meant to be interlinked although some groups of sensors may be. Each sensor contains a header which allows to interface with it. Typically a sensor is represented as a class and instantiated.The constructor is expected to initialise the sensor and parameters may be used to provide identification/pin location on the board.
 
 ###Install and update
@@ -422,12 +422,12 @@ Grove - RTC v2.0
 
 ![UART](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/blob/master/images/BBGW_Mraa_UART.png?raw=true)
 
-## Grove for BBG
+## Grove for SeeedStudio BeagleBone Green
 ------
 
 Grove is a modular, standardized connecter prototyping system. Grove takes a building block approach to assembling electronics. Compared to the jumper or solder based system, it is easier to connect, experiment and build and simplifies the learning system, but not to the point where it becomes dumbed down.  Some of the other prototype systems out there takes the level down to building blocks.   Good stuff to be learned that way, but the Grove system allows you to build real systems.   It requires some learning and expertise to hook things up.
 
-Below listed the Grove modules that work well with BBG.
+Below listed the Grove modules that work well with SeeedStudio BeagleBone Green.
 
 
 |SKU        |Name|Interface|link|
@@ -464,10 +464,10 @@ Below listed the Grove modules that work well with BBG.
 |101020019	|Grove - Temperature&Humidity Sensor Pro	|Analog| [link](http://www.seeedstudio.com/Grove-Temperature&Humidity-Sensor-Pro-p-838.html)|
 
 
-## Cape for BBG
+## Cape for SeeedStudio BeagleBone Green
 -------
 
-You will need some expansion board when you start a project. There're many cape for BBG already, they include LCD display, motor driver as well as HDMI expansion etc. Below is some of them recommend.
+You will need some expansion board when you start a project. There're many cape for SeeedStudio BeagleBone Green already, they include LCD display, motor driver as well as HDMI expansion etc. Below is some of them recommend.
 
 |Grove Cape| Motor Bridge Cape|HDMI Cape|
 |------------|----------------|----------|
