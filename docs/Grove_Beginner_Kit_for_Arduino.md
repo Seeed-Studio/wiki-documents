@@ -3089,8 +3089,6 @@ unsigned long previousMillis = 0;
 
 //assign buzzer as pin 6
 #define buzzer 6
-//set title of pin 5 as tiltSwitch
-#define tiltSwitch 5
 
 //assign accelerometer as the name of MMA7660 accelerometer
 MMA7660 accelerometer;
@@ -3149,8 +3147,6 @@ void setup()
   //initialise the lcd screen;
   //set up the lcd's number of columns and rows:
   lcd.begin(16, 2);
-  //set pin 5(tilt switch) as input pin
-  pinMode(tiltSwitch, INPUT);
   //calibrate the accelerometer for at the begining
   calibrateAccel();
   //wait for 2
