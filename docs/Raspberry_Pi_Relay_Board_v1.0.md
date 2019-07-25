@@ -20,7 +20,7 @@ The Relay Shield utilizes four high quality relays and provides NO/NC interfaces
 
 ## Features
 --------
--   Raspberry Pi compatible
+-   Raspberry Pi3B, Pi3B+, Pi4 compatible
 -   Interface: IIC, Three hardware SW1 (1, 2, 3) select the fixed I2C-bus address
 -   Relay screw terminals
 -   Standardized shield shape and design
