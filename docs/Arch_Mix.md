@@ -435,6 +435,7 @@ This Arch Mix comes pre-installed RT-Thread real-time operating system(RTOS) and
 
 ## Resources
 
+- **[ZIP]** [Schematic](https://github.com/SeeedDocument/Arch_Mix/raw/master/res/202001930_PCBA_Arch%20Mix_v1.0_SCH%20%26%20PCB.zip)
 - **[ZIP]** [Firmware and Tools]()
 - **[PDF]** [PDF Format Wiki](https://github.com/SeeedDocument/Arch_Mix/raw/master/res/Arch_Mix.pdf)
 - **[PDF]** [i.MX RT1050 Datasheet](https://github.com/SeeedDocument/Arch_Mix/raw/master/res/i.MX%20RT1050.pdf)
