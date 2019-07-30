@@ -49,7 +49,7 @@ dummy.
 - 8 input and 8 output channels
 - Six microphones array
 - Grove support
-- Compatible with Raspberry Pi 40-pin headers
+- Raspberry Pi compatible(Support Raspberry Pi Zero and Zero W, Raspberry Pi B+, Raspberry Pi 2 B, Raspberry Pi 3 B, Raspberry Pi 3 B+, Raspberry Pi 3 A+ and Raspberry Pi4)
 - Headset and speaker voice output
 
 
