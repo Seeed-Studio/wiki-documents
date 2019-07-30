@@ -25,8 +25,11 @@ This hat communicates with Raspberry Pi via the I2C interface, also we have rese
 
 What an amazing module, with the help it, you can use gestures to control lights, TV, speakers... Just unleash your imagination and create more magical projects.
 
+<iframe width="800" height="450" src="https://www.youtube.com/embed/iLav34w77ns" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 <p style=":center"><a href="https://www.seeedstudio.com/3D-Gesture-Tracking-Shield-for-Raspberry-Pi-MGC3130-p-4073.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+
 
 
 ## Feature 
