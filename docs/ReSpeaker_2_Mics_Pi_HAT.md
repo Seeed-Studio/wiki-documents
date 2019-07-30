@@ -20,7 +20,7 @@ The board is developed based on WM8960, a low power stereo codec. There are 2 mi
 
 ## Features
 
-* Raspberry Pi compatible(Support Raspberry Pi Zero and Zero W, Raspberry Pi B+, Raspberry Pi 2 B, Raspberry Pi 3 B, Raspberry Pi 3 B+, Raspberry Pi 3 A+ and Raspberry Pi 4B)
+* Raspberry Pi compatible(Support Raspberry Pi Zero and Zero W, Raspberry Pi B+, Raspberry Pi 2 B, Raspberry Pi 3 B, Raspberry Pi 3 B+, Raspberry Pi 3 A+ and Raspberry Pi 4)
 * 2 Microphones
 * 2 Grove Interfaces
 * 1 User Button

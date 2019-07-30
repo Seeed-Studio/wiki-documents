@@ -40,7 +40,7 @@ What an amazing module, with the help it, you can use gestures to control lights
 - Advanced 3D Signal Processing Unit
 - Detection Range: 0 to 10 cm
 - On-chip Auto Calibration
-- Compatible with various models of Raspberry Pi 2, 3, and zero
+- Compatible with various models of Raspberry Pi 2, 3, 4, and zero
 
 
 ## Specification
