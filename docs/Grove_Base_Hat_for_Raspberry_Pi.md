@@ -24,7 +24,7 @@ Frankly speaking, it's about 60 Grove modules support the Grove Base Hat for Ras
 
 ## Features
 
-- Support Raspberry 2/ 3 B/B+ Zero
+- Support Raspberry Pi 2/3B/3B+/4B/Zero
 - build-in MCU
 - 12-bit ADC
 - Multi-type Grove port  
