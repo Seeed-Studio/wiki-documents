@@ -30,7 +30,7 @@ RS-485 is a cost-effective solution in serial communication networks. It can be 
 - No driver slew rate limitation
 - Short-circuit current limited
 - Fail-Safe Applications
-
+- Support Raspberry Pi 3B/3B+/4
 
 <div class="page"/></div>
 

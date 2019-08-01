@@ -32,6 +32,7 @@ ADC is a common accessory for Raspberry Pi. Nowadays many cheap MCUs has built-i
 	- SysTick timer
 - Real-time clock (RTC)
 - Serial wire debug (SWD)
+- Support Raspberry Pi 3B/3B+/4
 
 
 

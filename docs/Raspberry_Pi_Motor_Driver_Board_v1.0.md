@@ -23,7 +23,7 @@ Features
 -   Output short-circuit protection (short to VPWR or GND)
 -   Over-current limiting (regulation) via internal constant-off-time PWM
 -   Temperature dependant current limit threshold reduction
--   Raspberry Pi compatible
+-   Raspberry Pi 3B/3B+/4 compatible
 
 Specifications
 --------------

@@ -36,7 +36,7 @@ If you want to keep this module timing when the Raspberry Pi is powered off, you
 
 ## Features
 
-- Support Raspberry Pi 2/ 3 B/B+ Zero
+- Support Raspberry Pi 2/ 3 B/B+/4/Zero
 - Suport seconds,minuutes,hours,day of week,month, year
 - Support 24-hour or 12-hour format with AM/PM indicator
 - Low-Power Consumption

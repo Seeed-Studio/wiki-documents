@@ -22,7 +22,7 @@ The Pi RTC is based on the clock chip DS1307, it can provide a real-time clock(R
 
 ## Features
 
-- Support Raspberry Pi 2/ 3 B/B+ Zero
+- Support Raspberry Pi 2/ 3 B/B+/4/Zero
 - Suport seconds,minuutes,hours,day of week,month, year
 - Support 24-hour or 12-hour format with AM/PM indicator
 - 56-byte, battery-backed, nonvolatile (NV) RAM for data storage

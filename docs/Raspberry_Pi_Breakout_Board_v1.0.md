@@ -19,7 +19,7 @@ As a prototype board, it also provides power, state indicator light, button and 
 Features
 --------
 
--   Raspberry pi compatible
+-   Support Raspberry Pi 2/3B/3B+/4/Zero
 -   Micro USB power supply
 -   Basic Circuit : state indicator light, button and universal transistor（NPN,PNP,N-MOS,P-MOS）
 -   3.3 volts, 5 volts and ground power rails are easily available anywhere on the board

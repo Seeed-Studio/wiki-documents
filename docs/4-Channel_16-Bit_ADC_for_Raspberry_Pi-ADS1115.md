@@ -39,6 +39,7 @@ The analog-to-digital converter(ADC) is a common accessory for Raspberry Pi. Thi
 - Internal PGA
 - Programmable data rate: 8SPS to 860SPS
 - I^2^C-compatible serial  interface
+- Support Raspberry Pi 3B/3B+/4
 
 
 ## Specification
