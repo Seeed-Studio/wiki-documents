@@ -1,89 +1,97 @@
-<!--
-  Copyright (c) 2016-2017 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Application header -->
 <header class="md-header" data-md-component="header">
-
-  <!-- Top-level navigation -->
+  <div class="header-wrap-box">
+    <div class="header-content-wrap clear">
+      <!--start logo-->
+      <div class="logo-box">
+        <a href="/">
+          <img class="logo-img" src="https://statics3.seeedstudio.com/assets/img/common/logo_2018_horizontal.png" width="156" alt="seeedstudio"/>
+        </a>
+      </div>
+      <!--end logo-->
+      <!--start 导航栏目-->
+      <ul class="nav-tab-list">
+        <li class="nav-tab-item">
+          <h2 class="title-h2">
+            <a class="title j-bz-text" href="https://www.seeedstudio.com/" target="_blank">
+              Bazaar
+            </a>
+          </h2>
+        </li>
+        <li class="nav-tab-item">
+          <h2 class="title-h2">
+            <a class="title j-bz-text" href="https://www.seeedstudio.com/fusion.html" target="_blank">
+              Fusion
+            </a>
+          </h2>
+        </li>
+        <li class="nav-tab-item">
+          <h2 class="title-h2">
+            <a class="title j-bz-text" href="https://www.seeedstudio.com/propagate/" target="_blank">
+              Services
+            </a>
+          </h2>
+        </li>
+        <li class="nav-tab-item">
+          <h2 class="title-h2">
+            <a class="title j-bz-text" href="https://forum.seeedstudio.com/" target="_blank">
+              Forum
+            </a>
+          </h2>
+        </li>
+        <li class="nav-tab-item">
+          <h2 class="title-h2">
+            <a href="https://project.seeedstudio.com/" title="Project Hub" rel="nofollow" target="_blank">Project</a>
+          </h2>
+        </li>
+      </ul>
+      <!--end 导航栏目-->
+    </div>
+  </div>
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
-
-      <!-- Link to home -->
-      <div class="md-flex__cell md-flex__cell--shrink">
+      <div class="md-flex__cell md-flex__cell--shrink hide">
         {% if config.extra.logo %}
-          <a href="{{ config.site_url | default(nav.homepage.url, true) }}"
-              title="{{ config.site_name }}"
-              class="md-logo md-header-nav__button">
-            <img src="{{ base_url }}/{{ config.extra.logo }}"
-                width="24" height="24" />
-          </a>
+        <a href="{{ config.site_url | default(nav.homepage.url, true) }}" title="{{ config.site_name }}" class="md-logo md-header-nav__button">
+          <img src="{{ base_url }}/{{ config.extra.logo }}" width="24" height="24">
+        </a>
         {% else %}
-          <a href="{{ config.site_url | default(nav.homepage.url, true) }}"
-              title="{{ config.site_name }}"
-              class="md-icon md-icon--home md-header-nav__button">
-          </a>
+        <a href="{{ config.site_url | default(nav.homepage.url, true) }}" title="{{ config.site_name }}" class="md-icon md-icon--home md-header-nav__button">
+        </a>
         {% endif %}
       </div>
-
-      <!-- Button to toggle drawer -->
       <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button"
-            for="drawer"></label>
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
       </div>
-
-      <!-- Header title -->
       <div class="md-flex__cell md-flex__cell--stretch">
         <span class="md-flex__ellipsis md-header-nav__title">
-          {% block site_name %}
-            {% if page %}
-              {% for parent in page.ancestors %}
-                <span class="md-header-nav__parent">
-                  {{ parent.title }}
-                </span>
-              {% endfor %}
-            {% endif %}
-            {{ page.title | default(config.site_name, true) }}
-          {% endblock %}
+          {% block site_name %} {% if page %} {% for parent in page.ancestors %}
+          <span class="md-header-nav__parent">
+            {{ parent.title }}
+          </span>
+          {% endfor %} {% endif %} {{ page.title | default(config.site_name, true) }} {% endblock %}
+        </span>
+        <span class="language mLanguage">
+          <a href="javascript:;" class="en">EN</a>
+          <a href="javascript:;" class="cn">中文</a>
+          <a href="javascript:;" class="jp">日本語</a>
         </span>
       </div>
-
-      <!-- Button to open search dialogue -->
       <div class="md-flex__cell md-flex__cell--shrink">
         {% block search_box %}
-          <label class="md-icon md-icon--search md-header-nav__button"
-              for="search"></label>
-
-          <!-- Search interface -->
-          {% include "partials/search.html" %}
-        {% endblock %}
+        <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+        {% include "partials/search.html" %} {% endblock %}
       </div>
-
-      <!-- Repository containing source -->
       {% if config.repo_url %}
-        <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
-            {% include "partials/source.html" %}
-          </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          {% include "partials/source.html" %}
+          <span class="language">
+            <a href="javascript:;" class="en">EN</a>
+            <a href="javascript:;" class="cn">中文</a>
+            <a href="javascript:;" class="jp">日本語</a>
+          </span>
         </div>
+      </div>
       {% endif %}
     </div>
   </nav>
