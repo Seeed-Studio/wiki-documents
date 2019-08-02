@@ -385,20 +385,15 @@ ul {
   height: 9rem;   
 
 }
-.language:hover .en,.language:hover .cn{
-  display: block!important;
-}
 .language .en,.language .cn,.language .jp,.language>a {
-  display: block;
+  display: block!important;
   color: #fff;
   cursor: pointer;
   height: 3rem;
   line-height: 3rem;
   box-sizing: border-box;
-
 }
 .language .en:hover,.language .cn:hover,.language .jp:hover,.language>a:hover{
-  border-bottom: 1px solid #eaf9e4;
   background: #8cbc59;
   opacity: 1!important;
 }
