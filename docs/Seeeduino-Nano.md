@@ -69,6 +69,27 @@ One more thing, we know that only one on-board Grove connector may not be enough
 ![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino-Nano/master/img/pinout-2.png)
 
 
+!!!Attention
+    The I2C interface is not equipped with a pull-up resistor. It is recommended to use a 4.7k resistor to pull up to VCC when using it.
+
+
+### Power
+
+Instead of supply power by the **Type C** port, you can also use the **VIN** and **GND** pins to power Seeeduino Nano. Then input range of VIN is 7V ~ 12 V.
+
+![](https://github.com/SeeedDocument/Seeeduino-Nano/raw/master/img/Power-1.jpg)
+
+
+
+The max power parameter
+
+|Item|Value|
+|---|---|
+|The max. input circurt of USB Type C|2A|
+|The max. output circurt of VCC|1A|
+|The max. output circurt of 3V3 pin|200mA| 
+
+
 
 
 ## Getting Started

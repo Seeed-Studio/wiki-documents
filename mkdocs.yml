@@ -115,6 +115,7 @@ pages:
           - Rainbowduino LED driver platform - ATmega328: Rainbowduino_LED_driver_platform-ATmega328.md
           - Rainbowduino v3.0: Rainbowduino_v3.0.md
           - Seeeduino Cloud: Seeeduino_Cloud.md
+          - Seeeduino Cortex M0: Seeeduino-Cortex-M0.md
           - Seeeduino Ethernet: Seeeduino_Ethernet.md
           - Seeeduino GPRS: Seeeduino_GPRS.md
           - Seeeduino Lite: Seeeduino_Lite.md
@@ -531,7 +532,6 @@ pages:
           - Grove - Step Counter(BMA456): Grove-Step_Counter-BMA456.md
           - Grove - 3 Axis Digital Accelerometer±16g Ultra-low Power (BMA400): Grove-3-Axis_Digital_Accelerometer±16g_Ultra-low_Power-BMA400.md
           - Grove - 6-Axis Accelerometer&Gyroscope(BMI088): Grove-6-Axis_Accelerometer&Gyroscope(BMI088).md
-          - Grove - 16x2 LCD Series: Grove-16x2_LCD_Series.md
           - Grove - I2C UV Sensor (VEML6070): Grove-I2C_UV_Sensor-VEML6070.md
           - Grove - Coulomb Counter 3.3V to 5V (LTC2941): Grove-Coulomb_Counter_3.3V_to_5V-LTC2941.md
           - Grove - Light Gesture Color Proximity Sensor (TMG39931): Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931.md
@@ -580,6 +580,7 @@ pages:
           - Grove - 4-Digit Display: Grove-4-Digit_Display.md
           - Grove - 0.54 inch Red Dual Alphanumeric Display: Grove-0.54_inch_Red_Dual_Alphanumeric_Display.md
           - Grove - 0.54 inch Red Quad Alphanumeric Display: Grove-0.54_inch_Red_Quad_Alphanumeric_Display.md
+          - Grove - 16x2 LCD Series: Grove-16x2_LCD_Series.md          
           - Grove - Circular LED: Grove-Circular_LED.md
           - Grove - LCD RGB Backlight: Grove-LCD_RGB_Backlight.md
           - Grove - LED Bar: Grove-LED_Bar.md
