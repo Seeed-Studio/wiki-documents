@@ -148,11 +148,11 @@ sudo raspi-config
 - **Step 2**. Open the terminal and type the following commands.
 
 ```C++
-
+cd ~
 git clone https://github.com/Seeed-Studio/pi-hats.git
-cd pi-hats
+cd ~/pi-hats/tools
 sudo ./install.sh -u adc_ads1115
-
+sync
 ```
 
 - **Step 3**. Power off Raspberry Pi.
