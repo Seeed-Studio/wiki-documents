@@ -415,6 +415,8 @@ delay(500);
 - **[Library]** [Software Library](https://github.com/Seeed-Studio/Grove_LCD_RGB_Backlight/archive/master.zip)
 - **[Document]** [Github page for this document](https://github.com/SeeedDocument/Grove_LCD_RGB_Backlight)
 - **[Codecraft]** [CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove_LCD_RGB_Backlight/master/res/Grove_LCD_RGB_Backlight_CDC_File.zip)
+- **[Datasheet]** [PCA9633](https://github.com/SeeedDocument/Grove_LCD_RGB_Backlight/raw/master/res/PCA9633.pdf)
+- **[Datasheet]** [JHD1214Y](https://github.com/SeeedDocument/Grove_LCD_RGB_Backlight/raw/master/res/JHD1214Y_YG_1.0.pdf)
 
 ## Projects
 
