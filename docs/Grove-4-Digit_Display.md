@@ -716,7 +716,7 @@ void loop()
 ## Resources
 
 - **[Eagle&PDF]** [Grove-4-Digit Display V1.0 Schematic](https://github.com/SeeedDocument/Grove_4_Digit_Display/raw/master/resource/Grove%20-%204-Digit%20Display%20V1.0%20eagle%20files.zip)
-- **[Library]** [4-Digit Display library](https://raw.githubusercontent.com/SeeedDocument/Grove-4-Digit_Display/master/res/DigitalTube.zip)
+- **[Library]** [4-Digit Display library](https://github.com/Seeed-Studio/Grove_4Digital_Display)
 - **[Library]** [TimerOne library](https://code.google.com/p/arduino-timerone/downloads/detail?name=TimerOne-v9.zip&can=2&q=)
 - **[Library]** [Four-Digit Display Suli Library](https://github.com/Seeed-Studio/Four_Digit_Display_Suli)
 - **[Library]** [CodeCraft Code](https://github.com/SeeedDocument/Grove_4_Digit_Display/raw/master/resource/4-Digit%20Display.zip)
