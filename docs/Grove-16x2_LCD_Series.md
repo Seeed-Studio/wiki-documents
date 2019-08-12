@@ -23,7 +23,9 @@ Except for RGB backlights, these three products are almost identical to the the 
 
 
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-16-x-2-LCD-%28Black-on-Yellow%29-p-3198.html" target="_blank"><img src="https://github.com/SeeedDocument/Grove-16x2_LCD_Series/raw/master/img/Y1.png" height="48" width="300" /></a></p>
+
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-16-x-2-LCD-%28Black-on-Red%29-p-3197.html" target="_blank"><img src="https://github.com/SeeedDocument/Grove-16x2_LCD_Series/raw/master/img/R1.png" height="48" width="300" /></a></p>
+
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-16-x-2-LCD-%28White-on-Blue%29-p-3196.html" target="_blank"><img src="https://github.com/SeeedDocument/Grove-16x2_LCD_Series/raw/master/img/B1.png"  height="48" width="300" /></a></p>
 
 
@@ -48,7 +50,7 @@ Except for RGB backlights, these three products are almost identical to the the 
 |I^2^C Address|0X3E|
 
 
-## Typical applications
+## Typical Applications
 
 - Temperature display
 - Time display
@@ -57,6 +59,17 @@ Except for RGB backlights, these three products are almost identical to the the 
 
 
 ## Hardware Overview
+
+### I2C Pull-Up Resistor
+
+The first version of Grove - 16 x 2 LCD series does not have a built-in pull-up resistor, nor does it provide a pad to solder the optional pull-up resistor. We have redesigned the module, and the new version has built-in pull-up resistors.  
+ 
+ If you have an older version on your hand, you can solder a 10kΩ DIP resistor yourself on the back pad of the Grove connector. Please follow the picture below, solder a 10kΩ DIP resistor between **VCC** and **SCL** pins and a 10kΩ DIP resistor between **VCC** and **SDA** pins.
+
+
+![](https://github.com/SeeedDocument/Grove-16x2_LCD_Series/raw/master/img/I2C-R.jpg) 
+
+
 
 ### Outline
 
