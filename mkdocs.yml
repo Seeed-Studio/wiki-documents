@@ -264,6 +264,7 @@ pages:
           - Wio Node: Wio_Node.md
           - Wio W600: Wio-W600.md
           - Grovev Starter Kit for Wio LTE: Grove_Starter_Kit_for_Wio_LTE.md
+          - Grove-Shield-for-Wio-Lite: Grove-Shield-for-Wio-Lite.md
 
       
       - Air Serial:
