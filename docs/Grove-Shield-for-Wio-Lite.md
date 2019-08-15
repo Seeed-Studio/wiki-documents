@@ -25,7 +25,7 @@ This Shield can break out the processor pins of Wio Lite (for instance, it is SA
 
 | Parameter             | Value/Range    |
 |-----------------------|----------------|
-| Operating voltage     | 3.3/5V         |
+| Operating voltage     | 3.3 / 5V       |
 | Operation Temperature | -25℃ to +85℃ |
 | Analog Ports          | 4              |
 | Digital Ports         | 4              |
@@ -57,6 +57,7 @@ And this board is also form factor compatible with the other Adafruit Feather Bo
 
 
 - **Analog Ports**: include 4 anlog ports, 5 anlog pins
+ 
 >A0 Port including A0 and A1 pins 
 
 >A1 Port including A1 and A2 pins 
@@ -66,6 +67,7 @@ And this board is also form factor compatible with the other Adafruit Feather Bo
 >A3 Port including A3 and A4 pins
 
 - **Digital Ports**: include 4 digital ports, 5 digital pins
+ 
 >D5 Port including D5 and D6 pins 
 
 >D6 Port including D6 and D9 pins 
