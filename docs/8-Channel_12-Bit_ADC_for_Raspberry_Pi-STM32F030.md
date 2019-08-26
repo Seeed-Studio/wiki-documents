@@ -302,7 +302,7 @@ Tap the following command ++python grove_sound_sensor.py 0++ in the command line
 
 ```C++
 
-pi@raspberrypi:~/grove.py/grove $ python grove_sound_sensor.py 6
+pi@raspberrypi:~/grove.py/grove $ python grove_sound_sensor.py 0
 Detecting sound...
 Sound value: 433
 Sound value: 342
