@@ -173,176 +173,30 @@ The result should be like:
 
 ```
 cd ~
-git clone https://github.com/Seeed-Studio/grove.py
+git clone https://github.com/Seeed-Studio/Seeed_Python_DHT.git
 
 ```
 
 - **Step 3**. Excute below commands to run the code.
 
 ```
-cd grove.py/grove
-python grove_temperature_humidity_sensor.py 22 12
-
+cd Seeed_Python_DHT
+sudo python setup.py install
+cd ~/Seeed_Python_DHT/examples
+nano dht_simpleread.py 
 ```
 
-!!!Note
-    1.  To run this program, the command line should be +++python grove_temperature_humidity_sensor.py DHT type pin+++. As for this module, DHT type is 22 and we connected temperature and humidity sensor to pin 12 in the above case.
-    2. This Grove - Temperature&Humidity Sensor Pro and our another product [Grove-Temperature and Humidity Sensor](http://wiki.seeedstudio.com/Grove-TemperatureAndHumidity_Sensor/) are sharing the same python code which named 'grove_temperature_humidity_sensor.py'. The only difference is that the DHT type is 22 for Temperature &Humidity Sensor Pro and 11 for Temperature & Humidity Sensor.
-
-
-Following is the grove_temperature_humidity_sensor.py code.
+Change the sensor = seeed_dht.DHT("11", 12) to sensor = seeed_dht.DHT("22", 12), Following is the dht_simpleread.py code.
 
 ```python
-
-import RPi.GPIO as GPIO
-# from grove.helper import *
-def set_max_priority(): pass
-def set_default_priority(): pass
-from time import sleep
-
-GPIO.setmode(GPIO.BCM)
-GPIO.setwarnings(False)
-
-PULSES_CNT = 41
-
-class DHT(object):
-    DHT_TYPE = {
-        'DHT11': '11',
-        'DHT22': '22'
-    }
-
-    MAX_CNT = 320
-
-    def __init__(self, dht_type, pin):        
-        self.pin = pin
-        if dht_type != self.DHT_TYPE['DHT11'] and dht_type != self.DHT_TYPE['DHT22']:
-            print('ERROR: Please use 11|22 as dht type.')
-            exit(1)
-        self._dht_type = '11'
-        self.dht_type = dht_type
-        GPIO.setup(self.pin, GPIO.OUT)
-
-    @property
-    def dht_type(self):
-        return self._dht_type
-
-    @dht_type.setter
-    def dht_type(self, type):
-        self._dht_type = type
-        self._last_temp = 0.0
-        self._last_humi = 0.0
-
-    def _read(self):
-        # Send Falling signal to trigger sensor output data
-        # Wait for 20ms to collect 42 bytes data
-        GPIO.setup(self.pin, GPIO.OUT)
-        set_max_priority()
-
-        GPIO.output(self.pin, 1)
-        sleep(.2)
-
-        GPIO.output(self.pin, 0)
-        sleep(.018)
-
-        GPIO.setup(self.pin, GPIO.IN)
-        # a short delay needed
-        for i in range(10):
-            pass
-
-        # pullup by host 20-40 us
-        count = 0
-        while GPIO.input(self.pin):
-            count += 1
-            if count > self.MAX_CNT:
-                # print("pullup by host 20-40us failed")
-                set_default_priority()
-                return None, "pullup by host 20-40us failed"
-
-        pulse_cnt = [0] * (2 * PULSES_CNT)
-        fix_crc = False
-        for i in range(0, PULSES_CNT * 2, 2):
-            while not GPIO.input(self.pin):
-                pulse_cnt[i] += 1
-                if pulse_cnt[i] > self.MAX_CNT:
-                    # print("pulldown by DHT timeout %d" % i)
-                    set_default_priority()
-                    return None, "pulldown by DHT timeout %d" % i
-
-            while GPIO.input(self.pin):
-                pulse_cnt[i + 1] += 1
-                if pulse_cnt[i + 1] > self.MAX_CNT:
-                    # print("pullup by DHT timeout %d" % (i + 1))
-                    if i == (PULSES_CNT - 1) * 2:
-                        # fix_crc = True
-                        # break
-                        pass
-                    set_default_priority()
-                    return None, "pullup by DHT timeout %d" % i
-
-        # back to normal priority
-        set_default_priority()
-
-        total_cnt = 0
-        for i in range(2, 2 * PULSES_CNT, 2):
-            total_cnt += pulse_cnt[i]
-
-        # Low level ( 50 us) average counter
-        average_cnt = total_cnt / (PULSES_CNT - 1)
-        # print("low level average loop = %d" % average_cnt)
-       
-        data = ''
-        for i in range(3, 2 * PULSES_CNT, 2):
-            if pulse_cnt[i] > average_cnt:
-                data += '1'
-            else:
-                data += '0'
-        
-        data0 = int(data[ 0: 8], 2)
-        data1 = int(data[ 8:16], 2)
-        data2 = int(data[16:24], 2)
-        data3 = int(data[24:32], 2)
-        data4 = int(data[32:40], 2)
-
-        if fix_crc and data4 != ((data0 + data1 + data2 + data3) & 0xFF):
-            data4 = data4 ^ 0x01
-            data = data[0: PULSES_CNT - 2] + ('1' if data4 & 0x01 else '0')
-
-        if data4 == ((data0 + data1 + data2 + data3) & 0xFF):
-            if self._dht_type == self.DHT_TYPE['DHT11']:
-                humi = int(data0)
-                temp = int(data2)
-            elif self._dht_type == self.DHT_TYPE['DHT22']:
-                humi = float(int(data[ 0:16], 2)*0.1)
-                temp = float(int(data[17:32], 2)*0.2*(0.5-int(data[16], 2)))
-        else:
-            # print("checksum error!")
-            return None, "checksum error!"
-
-        return humi, temp
-
-    def read(self, retries = 15):
-        for i in range(retries):
-            humi, temp = self._read()
-            if not humi is None:
-                break
-        if humi is None:
-            return self._last_humi, self._last_temp
-        self._last_humi,self._last_temp = humi, temp
-        return humi, temp
-
-Grove = DHT
-
-
+import time
+import seeed_dht
 def main():
-    import sys
-    import time
 
-    if len(sys.argv) < 3:
-        print('Usage: {} dht_type pin'.format(sys.argv[0]))
-        sys.exit(1)
-
-    typ = sys.argv[1]
-    sensor = DHT(typ, int(sys.argv[2]))
+    # for DHT11/DHT22
+    sensor = seeed_dht.DHT("22", 12)
+    # for DHT10
+    # sensor = seeed_dht.DHT("10")
     
     while True:
         humi, temp = sensor.read()
@@ -355,38 +209,27 @@ def main():
 
 if __name__ == '__main__':
     main()
-
 ```
 
 !!!success
-    If everything goes well, you will be able to see the following result
+    If everything goes well, you will be able to see the following result by running python dht_simpleread.py
     
 ```python
 
-pi@raspberrypi:~/grove.py/grove $ python grove_temperature_humidity_sensor.py 22 12
-DHT22, humidity 49.2%, temperature 21.8*
-DHT22, humidity 48.5%, temperature 21.9*
-DHT22, humidity 48.1%, temperature 21.9*
-DHT22, humidity 47.7%, temperature 22.0*
-DHT22, humidity 47.1%, temperature 22.0*
-DHT22, humidity 46.9%, temperature 22.0*
-DHT22, humidity 49.3%, temperature 22.1*
-DHT22, humidity 56.1%, temperature 22.2*
-^CTraceback (most recent call last):
-  File "grove_temperature_humidity_sensor.py", line 192, in <module>
-    main()
-  File "grove_temperature_humidity_sensor.py", line 183, in main
-    humi, temp = sensor.read()
-  File "grove_temperature_humidity_sensor.py", line 160, in read
-    humi, temp = self._read()
-  File "grove_temperature_humidity_sensor.py", line 77, in _read
-    sleep(.2)
-KeyboardInterrupt
-
-
+pi@raspberrypi:~/Seeed_Python_DHT/examples $ python dht_simpleread.py 
+DHT22, humidity 39.2%, temperature 29.1*
+DHT22, humidity 39.2%, temperature 29.1*
+DHT22, humidity 39.2%, temperature 29.1*
+DHT22, humidity 39.1%, temperature 29.1*
+DHT22, humidity 40.0%, temperature 29.1*
+DHT22, humidity 39.9%, temperature 29.1*
+DHT22, humidity 40.3%, temperature 29.1*
+DHT22, humidity 42.0%, temperature 29.1*
 ```
 
+
 You can quit this program by simply press ++ctrl+c++.
+
 
 
 
