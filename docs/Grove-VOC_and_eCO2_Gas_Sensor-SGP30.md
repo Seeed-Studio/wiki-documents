@@ -278,6 +278,96 @@ CO2eq Concentration:502ppm
 
 
 
+### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| Raspberry pi | Grove Base Hat for RasPi| Grove-VOC and eCO2 Gas Sensor(SGP30)|
+|--------------|-------------|-----------------|
+|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/raw/master/img/thumbnail.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/-Grove-VOC-and-eCO2-Gas-Sensor-(SGP30)-p-3071.html)|
+
+
+- **Step 2**. Plug the Grove Base Hat into Raspberry.
+- **Step 3**. Connect Grove-VOC and eCO2 Gas Sensor(SGP30) to port I2C of the Base Hat.
+- **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+
+
+![]()
+
+
+#### Software
+
+- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 2**. Download the source file by cloning the grove.py library. 
+
+```
+cd ~
+git clone https://github.com/Seeed-Studio/Seeed_Python_SGP30.git
+
+```
+
+- **Step 3**. Excute below commands to run the code.
+
+```
+cd Seeed_Python_SGP30
+sudo python setup.py install
+cd examples
+python sgp30_simpleread.py
+```
+
+Following is the sgp30_simpleread.py code.
+
+```python
+import seeed_sgp30
+from grove.i2c import Bus
+
+sgp30 = seeed_sgp30.grove_sgp30(Bus())
+while True:
+  data = sgp30.read_measurements()
+  co2_eq_ppm, tvoc_ppb = data.data
+  print("\r  tVOC = {} ppb CO2eq = {}  ".format(
+                               tvoc_ppb, co2_eq_ppm))
+```
+
+!!!success
+    If everything goes well, you will be able to see the following result.
+    
+```python
+
+pi@raspberrypi:~/Seeed_Python_SGP30/examples $ python sgp30_simpleread.py
+  tVOC = 9 ppb CO2eq = 943  
+  tVOC = 9 ppb CO2eq = 931  
+  tVOC = 10 ppb CO2eq = 920  
+  tVOC = 14 ppb CO2eq = 904  
+  tVOC = 12 ppb CO2eq = 888  
+  tVOC = 13 ppb CO2eq = 873  
+  tVOC = 11 ppb CO2eq = 865  
+  tVOC = 11 ppb CO2eq = 842  
+  tVOC = 9 ppb CO2eq = 828  
+  tVOC = 10 ppb CO2eq = 814  
+  tVOC = 11 ppb CO2eq = 794  
+  tVOC = 14 ppb CO2eq = 786  
+  tVOC = 9 ppb CO2eq = 764  
+  tVOC = 12 ppb CO2eq = 744  
+  tVOC = 11 ppb CO2eq = 739  
+  tVOC = 12 ppb CO2eq = 715  
+  tVOC = 15 ppb CO2eq = 688  
+  tVOC = 13 ppb CO2eq = 669  
+
+```
+
+
+You can quit this program by simply press ++ctrl+c++.
+
+
+
+
+
+
+
 ## Notice
 
 - The SGP30 uses a dynamic baseline compensation algorithm and on-chip calibration parameters to provide two complementary air quality signals. The baseline should be stored in EEPROM.When there is no baseline value in EEPROM at the first time power-ON or the baseline record is older than seven days.The sensor has to run for 12 hours until the baseline can be stored. You can refer to program flow chart blow.
