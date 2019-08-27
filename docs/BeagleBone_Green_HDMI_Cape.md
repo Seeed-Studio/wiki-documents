@@ -146,6 +146,7 @@ Resources
 ---------
 
 - [Schematic files](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green_HDMI_Cape/master/res/Schematic_Files.zip)
+- [HDMI Cape Beaglebone Image](https://drive.google.com/open?id=15wXOtG4pZMifNoldoSvdOX9sBrev733L)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/BeagleBone_Green_HDMI_Cape -->
 
