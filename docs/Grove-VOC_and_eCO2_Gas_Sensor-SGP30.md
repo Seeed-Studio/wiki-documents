@@ -295,7 +295,7 @@ CO2eq Concentration:502ppm
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 
 
-![]()
+![](https://github.com/SeeedDocument/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/raw/master/img/sgp30.jpg)
 
 
 #### Software
