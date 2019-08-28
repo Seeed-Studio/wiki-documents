@@ -1878,6 +1878,7 @@ The root cause is that the old SD cards do not work with linux system. Please ch
 - **[MoreReading]** [Mraa Python documents page](http://iotdk.intel.com/docs/master/mraa/python/)
 - **[MoreReading]** [Intel Mraa SDK](https://software.intel.com/en-us/mraa-sdk/documentation )
 - **[MoreReading]** [Snips SDK](https://snips.gitbook.io/documentation/installing-snips/respeaker-core-2.0)
+- **[Source Code]** [ReSpeaker Core v2.0 source code](https://github.com/respeaker/rk-linux-develop)
 
 
 ## Projects
