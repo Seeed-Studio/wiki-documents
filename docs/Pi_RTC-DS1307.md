@@ -173,11 +173,11 @@ hwclock --help
 
 ## Resources
 
-- **[Zip]** [Pi RTC(DS1307) Eagle Files](https://github.com/SeeedDocument/Grove-Step_Counter-BMA456/raw/master/res/Grove%20-%20Step%20Counter(BMA456).zip)
+- **[Zip]** [Pi RTC(DS1307) Eagle Files](https://github.com/SeeedDocument/Pi_RTC-DS1307/raw/master/res/Pi%20RTC%20(DS1307).zip)
 
 - **[http]** [Seeed Pi RTC Library](https://github.com/Seeed-Studio/pi-hats)
 
-- **[PDF]** [Datasheet DS1307](https://github.com/SeeedDocument/Grove-Step_Counter-BMA456/raw/master/res/BMA456.pdf)
+- **[PDF]** [Datasheet DS1307](https://github.com/SeeedDocument/Pi_RTC-DS1307/raw/master/res/DS1307.pdf)
 
 
 ## Project
