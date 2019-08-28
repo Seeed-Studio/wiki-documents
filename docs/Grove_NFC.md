@@ -101,7 +101,7 @@ The default setting is UART, if you need to change it into I2C, then you should 
     If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
 
-The Grove - NFC supports I2C and UART, if you use Seeeduino V4.2 or(Arduino UNO), we suggest you to use I2C. If you use Seeeduino Lite(Arduino Leonardo) or Seeeduino Mega(Arduino Mega) we suggest you to use UART.
+The Grove - NFC supports I2C and UART, [Seeed Arduino NFC Library](https://github.com/Seeed-Studio/Seeed_Arduino_NFC) supports Arduino Uno/Seeeduino v4.2, Arduino Mega/Seeeduino Mega, Arduino Zero/Seeeduino Lorawan and Arduino Leonardo/Seeeduino Lite. 
 
 
 
