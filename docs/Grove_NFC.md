@@ -93,7 +93,7 @@ Solder following connections:
 
 The default setting is UART, if you need to change it into I2C, then you should cut the UART connection and then solder the I2C pins as below.
 
-![]()
+![](https://github.com/SeeedDocument/Grove-NFC/raw/master/img/v1.1%20hardware%20connection.png)
 
 ## Getting Started
 
@@ -173,7 +173,7 @@ NfcAdapter nfc = NfcAdapter(pn532_i2c);
 - **Step 9.** Use the Grove - NFC to get close to an NFC Tag. If everything goes well, you will get the NFC Tag information in the Serial Monitor.
 
 
-!!!Note
+!!!warning
     If you want to connect to Arduino Mega UART ports, You can change the PN532_HSU pn532hsu(Serial1) to PN532_HSU pn532hsu(SerialX). X stands for the arduino mega serial port you use. If you want to connect Grove-NFC sensors to Arduino Uno, you can use the software serial. Please follow below to configure [software serial](https://www.arduino.cc/en/Reference/softwareSerial). 
 
 ```
