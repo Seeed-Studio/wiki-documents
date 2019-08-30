@@ -13,7 +13,7 @@ sku:
 ![](https://github.com/SeeedDocument/ReSpeaker-Mic-Array-v2.1/raw/master/img/ReSpeaker-Mic-Array-v2.1-Wiki.jpg)
 
 
-The ReSpeaker Mic Array v2.1 is an upgrade to the original [ReSpeaker Mic Array v2.0](https://www.seeedstudio.com/ReSpeaker-Mic-Array-v2.0-p-3053.html). It changes the power chip to eliminate howling issue. It moves the micro usb and 3.5mm audio port to backside. So the mics can get close to the case and achieve better acoustic effect. It also removes the header interface. 
+The ReSpeaker Mic Array v2.1 is an upgrade to the original [ReSpeaker Mic Array v2.0](https://www.seeedstudio.com/ReSpeaker-Mic-Array-v2.0-p-3053.html). It changes the power circuit to eliminate howling issue. It moves the micro usb and 3.5mm audio port to backside. So the mics can get close to the case and achieve better acoustic effect. It also removes the header interface. 
 
 The ReSpeaker Mic Array v2.1 supports USB Audio Class 1.0 (UAC 1.0) directly. All major Operating System, including Windows,macOS, and Linux are compatible with UAC 1.0, while also retaining voice algorithms, such as DoA, BF, and AEC on those systems.
 
@@ -32,7 +32,7 @@ The ReSpeaker Mic Array v2.1 has 2 kinds of firmware versions available, one inc
 |--------------------------|--------------------------------------------------------------------------------------------------------|---------------|
 | ReSpeaker Mic Array v1.0 | Initial                                                                                                | Aug 15, 2016  |
 | ReSpeaker Mic Array v2.0 | XVSM-2000 is EOL,change MCU to XVF-3000 and reduce the Mics from 7 to 4.                               | Jan 25, 2018  |
-| ReSpeaker Mic Array v2.1 | Change the power chip, move audio jack and micro usb to back side, as well as remove header interfaces.| Jan 21, 2019  |
+| ReSpeaker Mic Array v2.1 | Change the power circuit, move audio jack and micro usb to back side, as well as remove header interfaces.| Jan 21, 2019  |
 
 ## Features
 
