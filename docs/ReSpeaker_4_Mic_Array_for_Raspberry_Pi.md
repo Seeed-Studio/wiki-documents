@@ -92,32 +92,37 @@ sudo raspi-config
 - Step 4. Check that the sound card name looks like this:
 
 ```
-pi@raspberrypi:~/seeed-voicecard $ arecord -L
+pi@raspberrypi:~ $ arecord -L
 null
     Discard all samples (playback) or generate zero samples (capture)
+jack
+    JACK Audio Connection Kit
+pulse
+    PulseAudio Sound Server
+default
 playback
-capture
-dmixed
-array
 ac108
-default:CARD=seeed4micvoicec
-    seeed-4mic-voicecard,
-    Default Audio Device
 sysdefault:CARD=seeed4micvoicec
-    seeed-4mic-voicecard,
+    seeed-4mic-voicecard, 
     Default Audio Device
 dmix:CARD=seeed4micvoicec,DEV=0
-    seeed-4mic-voicecard,
+    seeed-4mic-voicecard, 
     Direct sample mixing device
 dsnoop:CARD=seeed4micvoicec,DEV=0
-    seeed-4mic-voicecard,
+    seeed-4mic-voicecard, 
     Direct sample snooping device
 hw:CARD=seeed4micvoicec,DEV=0
-    seeed-4mic-voicecard,
+    seeed-4mic-voicecard, 
     Direct hardware device without any conversions
 plughw:CARD=seeed4micvoicec,DEV=0
-    seeed-4mic-voicecard,
+    seeed-4mic-voicecard, 
     Hardware device with all software conversions
+usbstream:CARD=seeed4micvoicec
+    seeed-4mic-voicecard
+    USB Stream Output
+usbstream:CARD=ALSA
+    bcm2835 ALSA
+    USB Stream Output
 ```
 
 If we want to change the alsa settings, we can use `sudo alsactl --file=ac108_asound.state store` to save it. And when we need to use the settings again, copy it to: `sudo cp ~/seeed-voicecard/ac108_asound.state /var/lib/alsa/asound.state`
