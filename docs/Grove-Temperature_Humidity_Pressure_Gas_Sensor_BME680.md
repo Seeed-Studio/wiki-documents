@@ -194,7 +194,7 @@ gas ===>> 101.76 Kohms
 ## Resources
 
 - **[Zip]** [Grove-BME680 Eagle file](https://github.com/SeeedDocument/Grove-Temperature-Humidity-Pressure-Gas-Sensor_BME680/raw/master/res/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor_BME680.zip)
-- **[Zip]** [Seeed BME680 Library](https://github.com/SeeedDocument/Grove-Temperature-Humidity-Pressure-Gas-Sensor_BME680/raw/master/res/Seeed_BME680-master.zip)
+- **[Library]** [Seeed BME680 Library](https://github.com/Seeed-Studio/Seeed_BME680)
 - **[PDF]** [Datasheet of BME680](https://github.com/SeeedDocument/Grove-Temperature-Humidity-Pressure-Gas-Sensor_BME680/raw/master/res/BME680.pdf)
 
 
