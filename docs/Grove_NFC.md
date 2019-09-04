@@ -288,6 +288,8 @@ NfcAdapter nfc = NfcAdapter(pn532_i2c);
 - **[Zip]** [Grove - NFC v1.0 EAGLE (schematic and board) files](https://raw.githubusercontent.com/SeeedDocument/Grove-NFC/master/res/Grove-NFC.zip)
 - **[Zip]** [Grove - NFC v1.1 EAGLE (schematic and board) files](https://raw.githubusercontent.com/SeeedDocument/Grove-NFC/master/res/Grove-NFC_v1.1.zip)
 - **[PDF]** [PN532 Datasheet PDF](https://raw.githubusercontent.com/SeeedDocument/Grove-NFC/master/res/PN532.pdf)
+- **[Library]** [Seeed Arduino NFC Library](https://github.com/Seeed-Studio/Seeed_Arduino_NFC)
+- **[Library]** [PN532 Library](https://github.com/Seeed-Studio/PN532)
 
 ## Project
 

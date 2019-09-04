@@ -97,15 +97,43 @@ NFC Shield Setup
 
 ### Software Libraries Installation
 
-1.  Close the Arduino IDE if you have it open.
-2.  Download the [PN532 library](https://github.com/Seeed-Studio/PN532) ZIP folder and extract the files.
-3.  Copy the folders PN532, PN532_HSU, PN532_SPI, and PN532_I2C into the Arduino "libraries" folder.
-4.  Download [Don's NDEF library](https://github.com/don/NDEF) ZIP folder and extract the files.
-5.  Open the extracted folder and rename the "NDEF-master" folder to "NDEF".
-6.  Copy the "NDEF" folder to the Arduino "libraries" folder.
-7.  Restart the Arduino IDE. You should now be able to see "NDEF" and "PN532" as options in the Arduino "Examples" sub-menu (See figure below).
+- **Step 1.**  Download [Seeed Arduino NFC Library](https://github.com/Seeed-Studio/Seeed_Arduino_NFC).
 
-![](https://raw.githubusercontent.com/SeeedDocument/NFC_Shield_V2.0/master/img/Ndef-and-pn532-libraries-installed-in-arduino-ide.png)
+- **Step 2.**  Refer to [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install **Seeed Arduino NFC** library for Arduino.
+
+- **Step 3.**  Download [PN532 Library](https://github.com/Seeed-Studio/PN532) and put it under **C:\Program Files (x86)\Arduino\libraries\Seeed_Arduino_NFC-master\src**.
+
+- **Step 4.**  Open “ReadTag” code via the path: **File --> Examples --> ReadTag**. 
+
+- **Step 5.**  Modify the code as below to enable SPI communication.
+
+```
+#if 1 // use SPI
+#include <SPI.h>
+#include <PN532/PN532_SPI/PN532_SPI.h>
+PN532_SPI pn532spi(SPI, 10);
+NfcAdapter nfc = NfcAdapter(pn532spi);
+#elif 0 // use hardware serial
+
+#include <PN532/PN532_HSU/PN532_HSU.h>
+PN532_HSU pn532hsu(Serial1);
+NfcAdapter nfc(pn532hsu);
+#elif 0  // use software serial
+
+#include <PN532/PN532_SWHSU/PN532_SWHSU.h>
+#include "SoftwareSerial.h"
+SoftwareSerial SWSerial(2, 3);
+PN532_SWHSU pn532swhsu(SWSerial);
+NfcAdapter nfc(pn532swhsu);
+#else //use I2C
+
+#include <Wire.h>
+#include <PN532/PN532_I2C/PN532_I2C.h>
+
+PN532_I2C pn532_i2c(Wire);
+NfcAdapter nfc = NfcAdapter(pn532_i2c);
+#endif
+```
 
 **Arduino available libraries menu**
 
@@ -119,14 +147,33 @@ This example will show you how to use the NFC shield to scan an NFC tag and disp
 In the Arduino IDE copy, paste, then upload the code below to your board.
 
 #### Code
-```
-    #include <SPI.h>
-    #include "PN532_SPI.h"
-    #include "PN532.h"
-    #include "NfcAdapter.h"
 
-    PN532_SPI interface(SPI, 10); // create a PN532 SPI interface with the SPI CS terminal located at digital pin 10
-    NfcAdapter nfc = NfcAdapter(interface); // create an NFC adapter object
+```
+	#if 1 // use SPI
+	#include <SPI.h>
+	#include <PN532/PN532_SPI/PN532_SPI.h>
+	PN532_SPI pn532spi(SPI, 10);
+	NfcAdapter nfc = NfcAdapter(pn532spi);
+	#elif 0 // use hardware serial
+
+	#include <PN532/PN532_HSU/PN532_HSU.h>
+	PN532_HSU pn532hsu(Serial1);
+	NfcAdapter nfc(pn532hsu);
+	#elif 0  // use software serial
+
+	#include <PN532/PN532_SWHSU/PN532_SWHSU.h>
+	#include "SoftwareSerial.h"
+	SoftwareSerial SWSerial(2, 3);
+	PN532_SWHSU pn532swhsu(SWSerial);
+	NfcAdapter nfc(pn532swhsu);
+	#else //use I2C
+
+	#include <Wire.h>
+	#include <PN532/PN532_I2C/PN532_I2C.h>
+
+	PN532_I2C pn532_i2c(Wire);
+	NfcAdapter nfc = NfcAdapter(pn532_i2c);
+	#endif
 
     void setup(void) {
         Serial.begin(115200); // begin serial communication
@@ -176,17 +223,35 @@ This example will show you how to use an NFC tag as a key to unlock a door or a 
 
 #### Code
 ```
-    #include <SPI.h>
-    #include "PN532_SPI.h"
-    #include "PN532.h"
-    #include "NfcAdapter.h"
+	#if 1 // use SPI
+	#include <SPI.h>
+	#include <PN532/PN532_SPI/PN532_SPI.h>
+	PN532_SPI pn532spi(SPI, 10);
+	NfcAdapter nfc = NfcAdapter(pn532spi);
+	#elif 0 // use hardware serial
+
+	#include <PN532/PN532_HSU/PN532_HSU.h>
+	PN532_HSU pn532hsu(Serial1);
+	NfcAdapter nfc(pn532hsu);
+	#elif 0  // use software serial
+
+	#include <PN532/PN532_SWHSU/PN532_SWHSU.h>
+	#include "SoftwareSerial.h"
+	SoftwareSerial SWSerial(2, 3);
+	PN532_SWHSU pn532swhsu(SWSerial);
+	NfcAdapter nfc(pn532swhsu);
+	#else //use I2C
+
+	#include <Wire.h>
+	#include <PN532/PN532_I2C/PN532_I2C.h>
+
+	PN532_I2C pn532_i2c(Wire);
+	NfcAdapter nfc = NfcAdapter(pn532_i2c);
+	#endif
 
     String const myUID = "1B B3 C6 EF"; // replace this UID with your NFC tag's UID
     int const greenLedPin = 3; // green led used for correct key notification
     int const redLedPin = 4; // red led used for incorrect key notification
-
-    PN532_SPI interface(SPI, 10); // create a SPI interface for the shield with the SPI CS terminal at digital pin 10
-    NfcAdapter nfc = NfcAdapter(interface); // create an NFC adapter object
 
     void setup(void) {
         Serial.begin(115200); // start serial comm
@@ -266,10 +331,31 @@ The NFC shield’s interrupt pin (IRQ) is disconnect from the Arduino's digital 
 
 Upload the following code to your Arduino board:
 ```
-    #include <SPI.h>
-    #include "PN532_SPI.h"
-    #include "PN532.h"
-    #include "NfcAdapter.h"
+	#if 1 // use SPI
+	#include <SPI.h>
+	#include <PN532/PN532_SPI/PN532_SPI.h>
+	PN532_SPI pn532spi(SPI, 10);
+	NfcAdapter nfc = NfcAdapter(pn532spi);
+	#elif 0 // use hardware serial
+
+	#include <PN532/PN532_HSU/PN532_HSU.h>
+	PN532_HSU pn532hsu(Serial1);
+	NfcAdapter nfc(pn532hsu);
+	#elif 0  // use software serial
+
+	#include <PN532/PN532_SWHSU/PN532_SWHSU.h>
+	#include "SoftwareSerial.h"
+	SoftwareSerial SWSerial(2, 3);
+	PN532_SWHSU pn532swhsu(SWSerial);
+	NfcAdapter nfc(pn532swhsu);
+	#else //use I2C
+
+	#include <Wire.h>
+	#include <PN532/PN532_I2C/PN532_I2C.h>
+
+	PN532_I2C pn532_i2c(Wire);
+	NfcAdapter nfc = NfcAdapter(pn532_i2c);
+	#endif
 
     // FLAG_NONE used to signal nothing needs to be done
     #define FLAG_NONE 0
@@ -287,10 +373,6 @@ Upload the following code to your Arduino board:
 
     // the interrupt we'll be using (interrupt 0) is located at digital pin 2
     int const irqPin = 2; // interrupt pin
-
-    PN532_SPI interface(SPI, 10); // create a SPI interface for the shield with the SPI CS terminal at digital pin 10
-
-    NfcAdapter nfc = NfcAdapter(interface); // create an NFC adapter object
 
     String scannedUID = ""; // this is where we'll store the scanned tag's UID
 
@@ -446,14 +528,31 @@ If your NFC tag is not properly formatted ("Message write failed" will be displa
 
 #### Code
 ```
-    #include <SPI.h>
-    #include "PN532_SPI.h"
-    #include "PN532.h"
-    #include "NfcAdapter.h"
+	#if 1 // use SPI
+	#include <SPI.h>
+	#include <PN532/PN532_SPI/PN532_SPI.h>
+	PN532_SPI pn532spi(SPI, 10);
+	NfcAdapter nfc = NfcAdapter(pn532spi);
+	#elif 0 // use hardware serial
 
-    PN532_SPI interface(SPI, 10); // create a SPI interface for the shield with the SPI CS terminal at digital pin 10
+	#include <PN532/PN532_HSU/PN532_HSU.h>
+	PN532_HSU pn532hsu(Serial1);
+	NfcAdapter nfc(pn532hsu);
+	#elif 0  // use software serial
 
-    NfcAdapter nfc = NfcAdapter(interface); // create an NFC adapter object
+	#include <PN532/PN532_SWHSU/PN532_SWHSU.h>
+	#include "SoftwareSerial.h"
+	SoftwareSerial SWSerial(2, 3);
+	PN532_SWHSU pn532swhsu(SWSerial);
+	NfcAdapter nfc(pn532swhsu);
+	#else //use I2C
+
+	#include <Wire.h>
+	#include <PN532/PN532_I2C/PN532_I2C.h>
+
+	PN532_I2C pn532_i2c(Wire);
+	NfcAdapter nfc = NfcAdapter(pn532_i2c);
+	#endif
 
     void setup(void)
     {
@@ -500,14 +599,31 @@ Your brand new NFC tag might not be NDEF formatted initially. To format a tag as
 
 #### Code
 ```
-    #include <SPI.h>
-    #include "PN532_SPI.h"
-    #include "PN532.h"
-    #include "NfcAdapter.h"
+	#if 1 // use SPI
+	#include <SPI.h>
+	#include <PN532/PN532_SPI/PN532_SPI.h>
+	PN532_SPI pn532spi(SPI, 10);
+	NfcAdapter nfc = NfcAdapter(pn532spi);
+	#elif 0 // use hardware serial
 
-    PN532_SPI interface(SPI, 10); // create a SPI interface for the shield with the SPI CS terminal at digital pin 10
+	#include <PN532/PN532_HSU/PN532_HSU.h>
+	PN532_HSU pn532hsu(Serial1);
+	NfcAdapter nfc(pn532hsu);
+	#elif 0  // use software serial
 
-    NfcAdapter nfc = NfcAdapter(interface); // create an NFC adapter object
+	#include <PN532/PN532_SWHSU/PN532_SWHSU.h>
+	#include "SoftwareSerial.h"
+	SoftwareSerial SWSerial(2, 3);
+	PN532_SWHSU pn532swhsu(SWSerial);
+	NfcAdapter nfc(pn532swhsu);
+	#else //use I2C
+
+	#include <Wire.h>
+	#include <PN532/PN532_I2C/PN532_I2C.h>
+
+	PN532_I2C pn532_i2c(Wire);
+	NfcAdapter nfc = NfcAdapter(pn532_i2c);
+	#endif
 
     void setup(void)
     {
@@ -558,14 +674,31 @@ As you have seen in the example's above, the NFC shield is capable of writing me
 Upload the following code to your Arduino development board.
 
 ```
-    #include <SPI.h>
-    #include "PN532_SPI.h"
-    #include "PN532.h"
-    #include "NfcAdapter.h"
+	#if 1 // use SPI
+	#include <SPI.h>
+	#include <PN532/PN532_SPI/PN532_SPI.h>
+	PN532_SPI pn532spi(SPI, 10);
+	NfcAdapter nfc = NfcAdapter(pn532spi);
+	#elif 0 // use hardware serial
 
-    PN532_SPI interface(SPI, 10); // create a SPI interface for the shield with the SPI CS terminal at digital pin 10
+	#include <PN532/PN532_HSU/PN532_HSU.h>
+	PN532_HSU pn532hsu(Serial1);
+	NfcAdapter nfc(pn532hsu);
+	#elif 0  // use software serial
 
-    NfcAdapter nfc = NfcAdapter(interface); // create an NFC adapter object
+	#include <PN532/PN532_SWHSU/PN532_SWHSU.h>
+	#include "SoftwareSerial.h"
+	SoftwareSerial SWSerial(2, 3);
+	PN532_SWHSU pn532swhsu(SWSerial);
+	NfcAdapter nfc(pn532swhsu);
+	#else //use I2C
+
+	#include <Wire.h>
+	#include <PN532/PN532_I2C/PN532_I2C.h>
+
+	PN532_I2C pn532_i2c(Wire);
+	NfcAdapter nfc = NfcAdapter(pn532_i2c);
+	#endif
 
     void setup(void)
     {
@@ -631,11 +764,35 @@ You may now create two separate NFC objects, one for each shield, as follows:
 
 #### Code
 ```
-    PN532_SPI interface_shield_1(SPI, 10); // create a SPI interface for the shield with the SPI CS terminal at digital pin 10
-    PN532_SPI interface_shield_2(SPI, 9); // create a SPI interface for the shield with the SPI CS terminal at digital pin 9
+	#if 1 // use SPI
+	#include <SPI.h>
+	#include <PN532/PN532_SPI/PN532_SPI.h>
+	PN532_SPI pn532spi1(SPI, 10); //create a SPI interface for the shield with the SPI CS terminal at digital pin 10
+	NfcAdapter nfc1 = NfcAdapter(pn532spi1); create an NFC adapter object for shield one
+	PN532_SPI pn532spi2(SPI, 9); //create a SPI interface for the shield with the SPI CS terminal at digital pin 9
+	NfcAdapter nfc2 = NfcAdapter(pn532spi2); create an NFC adapter object for shield two
+	
+	#elif 0 // use hardware serial
 
-    NfcAdapter nfc_shield_1 = NfcAdapter(interface_shield_1); // create an NFC adapter object for shield one
-    NfcAdapter nfc_shield_2 = NfcAdapter(interface_shield_2); // create an NFC adapter object for shield two
+	#include <PN532/PN532_HSU/PN532_HSU.h>
+	PN532_HSU pn532hsu(Serial1);
+	NfcAdapter nfc(pn532hsu);
+	#elif 0  // use software serial
+
+	#include <PN532/PN532_SWHSU/PN532_SWHSU.h>
+	#include "SoftwareSerial.h"
+	SoftwareSerial SWSerial(2, 3);
+	PN532_SWHSU pn532swhsu(SWSerial);
+	NfcAdapter nfc(pn532swhsu);
+	#else //use I2C
+
+	#include <Wire.h>
+	#include <PN532/PN532_I2C/PN532_I2C.h>
+
+	PN532_I2C pn532_i2c(Wire);
+	NfcAdapter nfc = NfcAdapter(pn532_i2c);
+	#endif
+
 ```
 
 ## FAQs
@@ -644,13 +801,9 @@ You may now create two separate NFC objects, one for each shield, as follows:
 
 A1: The cable we sold with NFC shield is 12cm. If you want a longer one yourself, please no more than 15cm with a IPX/U.FL connector.
 
-**Q2: Why I always got error "Didn\'t find PN53x board" while using NFC shield with M1 RFID card (13.56Mhz)?**
+**Q2: Can two or more antennae be added to NFC Shield V2.0 (SKU: 113030001)?**
 
-A2: Please use the sketch "mifareclassic_formatndef" under "PN532" library to format the card, then try with "ReadTag" again. 
-
-**Q3: Can two or more antennae be added to NFC Shield V2.0 (SKU: 113030001)?**
-
-A3: NFC shield v2 is based on PN532 chip. Please note that the design only supports one antenna.
+A2: NFC shield v2 is based on PN532 chip. Please note that the design only supports one antenna.
 
 Resources
 ---------
@@ -659,9 +812,10 @@ Resources
 - [NFC Shield v2.0 Eagle File](https://raw.githubusercontent.com/SeeedDocument/NFC_Shield_V2.0/master/res/NFC_Shield_V2.0b_Eagle_files.zip)
 - [NFC Shield v2.1 Schematic](https://raw.githubusercontent.com/SeeedDocument/NFC_Shield_V2.0/master/res/NFC_Shield_v2.1.pdf)
 - [NFC Shield v2.1 Eagle File](https://raw.githubusercontent.com/SeeedDocument/NFC_Shield_V2.0/master/res/NFC_Shield_v2.1_Eagle_File.zip)
-- [PN532_SPI Library For NFC Shield v2.0](https://github.com/Seeed-Studio/PN532)
 - [PN532 Datasheet](https://raw.githubusercontent.com/SeeedDocument/NFC_Shield_V2.0/master/res/PN532.pdf)
 - [FAQ of NFC Shield](http://support.seeedstudio.com/knowledgebase/articles/462025-nfc-shield-sku-sld01097p)
+- [Seeed Arduino NFC Library](https://github.com/Seeed-Studio/Seeed_Arduino_NFC)
+- [PN532 Library](https://github.com/Seeed-Studio/PN532)
 
 ## Project
 
