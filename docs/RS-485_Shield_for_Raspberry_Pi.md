@@ -221,26 +221,18 @@ You can create a new python file and copy the following code into the new file, 
 import time
 import serial
 import os
+from gpiozero import LED
 
+send_str = "*******rs485888888--\n"
 
-send_str = "*******rs485888888--\r\n"
+ser = serial.Serial(port='/dev/ttyS0',baudrate =115200)
 
-os.system("echo 18 > /sys/class/gpio/export")
-os.system("echo out > /sys/class/gpio/gpio18/direction")
-ser = serial.Serial(port='/dev/ttyAMA0',baudrate =10000000,bytesize=8,stopbits=1,timeout=1)
+Tx_Enable = LED(18)
+Tx_Enable.on()
 
-
-last_time = time.time()
-
-now_time = time.time()
-os.system("echo 1 > /sys/class/gpio/gpio18/value")
-time.sleep(0.01)
-n = 800
-while n>0:
+while 1:
     ser.write(send_str)
-    n=n-1
-#    time.sleep(0.001)
-os.system("echo 0 > /sys/class/gpio/gpio18/value")
+    time.sleep(1)
 
 ```
 
@@ -253,40 +245,22 @@ os.system("echo 0 > /sys/class/gpio/gpio18/value")
 ```Python
 
 #!/usr/bin/env python
-          
+
 import time
 import serial
 import os
+from gpiozero import LED
 
+ser = serial.Serial(port='/dev/ttyS0',baudrate =115200,timeout=1)
+data = ''
 
+Rx_Disable = LED(18)
+Rx_Disable.off()
 
-send_str = "********abcdefghijklmnopqrstuvwxyz&"
-
-          
-os.system("echo 18 > /sys/class/gpio/export")
-os.system("echo out > /sys/class/gpio/gpio18/direction") 
-      
-ser = serial.Serial(port='/dev/ttyAMA0',baudrate =115200,bytesize=8,stopbits=1,timeout=1)
-    
-last_time = time.time()
-while 1:
-    now_time = time.time()
-    if((now_time-last_time)>=1):
-        last_time = now_time
-#        print "172 sending"
-        os.system("echo 1 > /sys/class/gpio/gpio18/value")
-        time.sleep(0.01)
-        ser.write(send_str)
-        time.sleep(0.01)
-        os.system("echo 0 > /sys/class/gpio/gpio18/value")
-    os.system("echo 0 > /sys/class/gpio/gpio18/value")
-    time.sleep(0.01)
-    count = ser.inWaiting()
-    if(count != 0):
-        x=ser.readline()
-        if "********" in x:
-#            print "str length is: " + str(count)
-            print x
+while True:
+    str = ser.readall()  
+    if str:  
+        print str 
 
 ```
 
