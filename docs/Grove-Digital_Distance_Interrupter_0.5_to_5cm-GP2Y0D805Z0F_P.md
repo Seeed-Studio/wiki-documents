@@ -162,7 +162,7 @@ void loop()
 	{
 		Serial.println("Sensor is triggered!!");
 	}
-	delay(1000);
+	delay(100);
 }
 
 ```
