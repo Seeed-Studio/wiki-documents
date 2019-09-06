@@ -473,11 +473,11 @@ void loop() {
 
 ### SD Card
 
-**Step 1.** Plug SD card to Wio GPS board. 
-**Step 2.** Use the usb cable to connect Wio GPS board to PC. 
-**Step 3.** Open your Arduino IDE, Select **Tools** -> **Board** -> **Wio GPS board**.
-**Step 4.** Click on **File > Examples > Seeed_Wio_GPS_Board\SD_Card_Test_DumpFile** to open the sketch or copy the blow code.
-**Step 5.** Upload code to Wio GPS board, it shows how to read a file from the SD card using the SD library and send it over the serial port.
+- **Step 1.** Plug SD card to Wio GPS board. 
+- **Step 2.** Use the usb cable to connect Wio GPS board to PC. 
+- **Step 3.** Open your Arduino IDE, Select **Tools** -> **Board** -> **Wio GPS board**.
+- **Step 4.** Click on **File > Examples > Seeed_Wio_GPS_Board\SD_Card_Test_DumpFile** to open the sketch or copy the blow code.
+- **Step 5.** Upload code to Wio GPS board, it shows how to read a file from the SD card using the SD library and send it over the serial port.
 
 
 ```c++
