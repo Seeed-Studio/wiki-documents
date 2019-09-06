@@ -205,7 +205,11 @@ pages:
           - MT3620 Ethernet Shield v1.0: MT3620_Ethernet_Shield_v1.0.md
           - MT3620 Mini Dev Board: MT3620_Mini_Dev_Board.md
           - MT3620 Grove Breakout: MT3620_Grove_Breakout.md
-
+      
+      - ADALM2000-M2K:
+          - ADALM2000-M2K CN Version: ADALM2000-M2K-CN-Version.md
+          - ADALM2000 for End Users: ADALM2000-for-End-Users.md
+      
       - Artik:
           - Artik Introduction: Artik.md
           - Eagleye 530s: Eagleye_530s.md
