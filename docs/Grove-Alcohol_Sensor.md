@@ -87,7 +87,7 @@ void setup() {
 void loop() {
     float sensor_volt;
     float RS_air; //  Get the value of RS via in a clear air
-    float sensorValue;
+    float sensorValue = 0;
 
 /*--- Get a average data by testing 100 times ---*/
     for(int x = 0 ; x < 100 ; x++)
@@ -126,7 +126,7 @@ void loop() {
     float ratio; // Get ratio RS_GAS/RS_air
     int sensorValue = analogRead(A0);
     sensor_volt=(float)sensorValue/1024*5.0;
-    RS_gas = sensor_volt/5.0-sensor_volt; // omit *R16
+    RS_gas = sensor_volt/(5.0-sensor_volt); // omit *R16
 
   /*-Replace the name "R0" with the value of R0 in the demo of First Test -*/
     ratio = RS_gas/RS_air;  // ratio = RS/R0
