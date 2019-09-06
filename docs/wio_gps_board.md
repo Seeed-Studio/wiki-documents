@@ -471,7 +471,7 @@ void loop() {
 }
 ```
 
-## SD Card
+### SD Card
 
 **Step 1.** Plug SD card to Wio GPS board. 
 **Step 2.** Use the usb cable to connect Wio GPS board to PC. 
