@@ -471,6 +471,85 @@ void loop() {
 }
 ```
 
+## SD Card
+
+**Step 1.** Plug SD card to Wio GPS board. 
+**Step 2.** Use the usb cable to connect Wio GPS board to PC. 
+**Step 3.** Open your Arduino IDE, Select **Tools** -> **Board** -> **Wio GPS board**.
+**Step 4.** Click on **File > Examples > Seeed_Wio_GPS_Board\SD_Card_Test_DumpFile** to open the sketch or copy the blow code.
+**Step 5.** Upload code to Wio GPS board, it shows how to read a file from the SD card using the SD library and send it over the serial port.
+
+
+```c++
+/*
+  SD card file dump
+
+ This example shows how to read a file from the SD card using the
+ SD library and send it over the serial port.
+
+ The circuit:
+ * SD card attached to SPI bus as follows:
+ ** MOSI - pin 11
+ ** MISO - pin 12
+ ** CLK - pin 13
+ ** CS - pin 4 (for MKRZero SD: SDCARD_SS_PIN)
+
+ created  22 December 2010
+ by Limor Fried
+ modified 9 Apr 2012
+ by Tom Igoe
+
+ This example code is in the public domain.
+
+ */
+
+#include <SPI.h>
+#include <SD.h>
+
+const int chipSelect = 4;
+char* fileName = "gps.txt";
+
+void setup() {
+  // Open serial communications and wait for port to open:
+  SerialUSB.begin(115200);
+  while (!SerialUSB) {
+    ; // wait for serialUSB port to connect. Needed for native USB port only
+  }
+
+
+  SerialUSB.print("Initializing SD card...");
+
+  // see if the card is present and can be initialized:
+  if (!SD.begin(chipSelect)) {
+    SerialUSB.println("Card failed, or not present");
+    // don't do anything more:
+    return;
+  }
+  SerialUSB.println("card initialized.");
+
+  // open the file. note that only one file can be open at a time,
+  // so you have to close this one before opening another.
+  File dataFile = SD.open(fileName);
+
+  // if the file is available, write to it:
+  if (dataFile) {
+    while (dataFile.available()) {
+      SerialUSB.write(dataFile.read());
+    }
+    dataFile.close();
+  }
+  // if the file isn't open, pop up an error:
+  else {
+    SerialUSB.println("error opening datalog.txt");
+  }
+}
+
+void loop() {
+}
+```
+
+
+
 ## Resources
 
 * [Schematics in Eagle](https://github.com/SeeedDocument/GPS_Tracker/blob/master/resources/GPS_Tracker_Eagle.zip)
