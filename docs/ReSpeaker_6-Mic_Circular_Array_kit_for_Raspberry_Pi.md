@@ -92,6 +92,9 @@ dummy.
 
 ![](https://github.com/SeeedDocument/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/raw/master/img/hardware.jpg)
 
+!!!Note
+    
+    After connecting, be sure to use a multimeter to determine if the conduction of the circuit is as indicated in the figure above.
 
 ## Assembly Drawing   
 

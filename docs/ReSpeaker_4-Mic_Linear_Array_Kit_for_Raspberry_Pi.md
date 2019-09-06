@@ -91,7 +91,11 @@ channel are dummy.
 
 ![](https://github.com/SeeedDocument/ReSpeaker_4-Mics_Linear_Array_Kit/raw/master/img/Hardware.jpg)
 
+!!!Note
+    
+    After connecting, be sure to use a multimeter to determine if the conduction of the circuit is as indicated in the figure above.
 
+    
 ## Assembly drawing  
 
 ![](https://github.com/SeeedDocument/Bazaar_file/raw/master/107990055/img/ab.png)
