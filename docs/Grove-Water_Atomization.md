@@ -112,7 +112,7 @@ We have chosen Seeeduino in this case.
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-We also need a Grove - Touch Sensor in this demo and also connect it to A5(Use as digital pin).
+We also need a Grove - Touch Sensor in this demo and also connect it to D5.
 </div>
 
 1.Copy code below to Arduino IDE editor.
