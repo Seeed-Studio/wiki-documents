@@ -178,12 +178,25 @@ mkdocs build --clean
 - Step 3. Click **wiki.seeedstudio.com** folder for English wiki.
 
 !!!Warning
-    Please search **cn** and select **cn** folder. Then move to Step 4.
+    For wiki Chinese, Please search **cn** and select **cn** folder. Then move to Step 4.
 
 - Step 4. Select **Upload** button.
 - Step 5. Drag all the folders under site to the pop up window for new wiki. If we just edit an old wiki, please drag the updated wiki only.
 - Step 6. Click **Upload** button.
 - Step 7. Visit [Wiki English](http://wiki.seeedstudio.com/) to verify the modifications. Or Visit [Wiki Chinese](http://wiki.seeedstudio.com/cn/) to verify the modifications.
+
+
+## Search file compress
+
+The default json search file is too large, which makes the serch time becomes more and more slow. So we need to compress the search file.
+
+
+1-copy the big file `search_index.json` from **/site/search** folder.
+
+2-run `search_index.py` 
+
+3-rename the small file `search_index_new.json` to `search_index.json`, and upload this file into S3
+wiki **English-->mkdocs**
 
 
 ## How to update the banner
