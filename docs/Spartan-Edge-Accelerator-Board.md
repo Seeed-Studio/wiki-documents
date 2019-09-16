@@ -321,7 +321,7 @@ In this section, you will learn about the Project mode features for project crea
 
 <div align="center">
 <figure>
-  <img src="https://i.screenshot.net/03j6ot5"/>
+  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/1.png"/>
     <div class="text"><b>Figure 1.</b></div>
 </figure>
 </div>
@@ -333,7 +333,7 @@ The Vivado IDE opens project_tutorial in the default layout, as shown in figure 
 
 <div align="center">
 <figure>
-  <img src="https://i.screenshot.net/55kmphv"/>
+  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/2.png"/>
   <div class="text"><b>Figure 2.</b></div>
 </div>
 
@@ -358,12 +358,12 @@ The **running status** of vivado is displayed in the upper right corner.
 
 2. Select **Add or create design sources** and click Next.
 
-3. Click the button![img](https://i.screenshot.net/0dnqqco) and select options or click the options directly to add or create files, as shown in figure 3.
+3. Click the button ![img](https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/icon-plus.png) and select options or click the options directly to add or create files, as shown in figure 3.
 
 
 <div align="center">
 <figure>
-  <img src="https://i.screenshot.net/nqo47fg"/>
+  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/3.png"/>
   <div class="text"><b>Figure 3.</b></div>
 </figure>
 </div>
@@ -376,7 +376,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 <div align="center">
 <figure>
-  <img src="https://i.screenshot.net/pdy6vsj"/>
+  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/4.png"/>
   <div class="text"><b>Figure 4.</b></div>
 </figure>
 </div>
@@ -394,7 +394,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
     <div align="center">
     <figure>
-      <img src="https://i.screenshot.net/m3mj2uk"/>
+      <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/5.png"/>
       <div class="text"><b>Figure 5.</b></div>
     </figure>
     </div>
@@ -409,7 +409,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
      <div align="center">
      <figure>
-       <img src="https://i.screenshot.net/xokgpbl"/>
+       <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/6.png"/>
        <div class="text"><b>Figure 6.</b></div>
      </figure>
      </div>
@@ -422,7 +422,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 <div align="center">
 <figure>
-  <img src="https://i.screenshot.net/8k8lqfk"/>
+  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/7.png"/>
    <div class="text"><b>Figure 7.</b></div>
 </figure>
 </div>
@@ -452,7 +452,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 <div align="center">
 <figure>
-  <img src="https://i.screenshot.net/5pe00t7"/>
+  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/8.png"/>
    <div class="text"><b>Figure 8.</b></div>
 </figure>
 </div>
@@ -493,7 +493,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 <div align="center">
 <figure>
-  <img src="https://i.screenshot.net/0ndggi8"/>
+  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/9.png"/>
   <div class="text"><b>Figure 9.</b></div>
 </figure>
 </div>
@@ -510,7 +510,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 <div align="center">
 <figure>
-  <img src="https://i.screenshot.net/eg1kytn"/>
+  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/10.png"/>
   <div class="text"><b>Figure 10.</b></div>
 </figure>
 </div>
@@ -521,14 +521,14 @@ The **running status** of vivado is displayed in the upper right corner.
 
    <div align="center">
    <figure>
-     <img src="https://i.screenshot.net/00pnosv"/>
+     <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/11.png"/>
      <div class="text"><b>Figure 11.</b></div>
    </figure>
    </div>
 
    <div align="center">
    <figure>
-     <img src="https://i.screenshot.net/9207psw"/>
+     <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/12.png"/>
      <div class="text"><b>Figure 12.</b></div>
    </figure>
    </div>
@@ -537,7 +537,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
    <div align="center">
    <figure>
-     <img src="https://i.screenshot.net/89n07f8"/>
+     <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/13.png"/>
      <div class="text"><b>Figure 13.</b></div>
    </figure>
    </div>
@@ -559,7 +559,7 @@ The **running status** of vivado is displayed in the upper right corner.
 - **Step 7: Synthesizing and Implementing the Design**
 
 
-  After configuring the synthesis and implementation run options, you can **run synthesis** and **run implementation** in the **Design Runs** or click the button ![img](https://i.screenshot.net/llo40sg)  or click corresponding buttons in the **Flow Navigator** to do this. The **running status** of vivado is displayed in the upper right corner while Synthesizing and Implementing.
+  After configuring the synthesis and implementation run options, you can **run synthesis** and **run implementation** in the **Design Runs** or click the button ![img](https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/68747470733a2f2f692e73637265656e73686f742e6e65742f6c6c6f34307367.png)  or click corresponding buttons in the **Flow Navigator** to do this. The **running status** of vivado is displayed in the upper right corner while Synthesizing and Implementing.
 
  
 
@@ -569,7 +569,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 <div align="center">
 <figure>
-  <img src="https://i.screenshot.net/1x2kkiw"/>
+  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/14.png"/>
   <div class="text"><b>Figure 14.</b></div>
 </figure>
 </div>
@@ -582,7 +582,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 <div align="center">
 <figure>
-  <img src="https://i.screenshot.net/qwk7qf7"/>
+  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/15.png"/>
   <div class="text"><b>Figure 15.</b></div>
 </figure>
 </div>
@@ -595,7 +595,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 <div align="center">
 <figure>
-  <img src="https://i.screenshot.net/xx691a3"/>
+  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/16.png"/>
   <div class="text"><b>Figure 16.</b></div>
 </figure>
 </div>
@@ -608,7 +608,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 <div align="center">
 <figure>
-  <img src="https://i.screenshot.net/4zr88i5"/>
+  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/17.png"/>
   <div class="text"><b>Figure 17.</b></div>
 </figure>
 </div>
@@ -627,7 +627,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 <div align="center">
 <figure>
-  <img src="https://i.screenshot.net/l0ge2te"/>
+  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/18.png"/>
   <div class="text"><b>Figure 18.</b></div>
 </figure>
 </div>
@@ -648,7 +648,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 <div align="center">
 <figure>
-  <img src="https://i.screenshot.net/6dj84so"/>
+  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/19.png"/>
   <div class="text"><b>Figure 19.</b></div>
 </figure>
 </div>
@@ -667,7 +667,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 <div align="center">
 <figure>
-  <img src="https://i.screenshot.net/26kqqur"/>
+  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/20.png"/>
   <div class="text"><b>Figure 20.</b></div>
 </figure>
 </div>
