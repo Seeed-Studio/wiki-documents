@@ -682,7 +682,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 ## Resources
 
-- **[ZIP]** [Spartan Edge Accelerator Board Eagle file](https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/res/Spartan%20Edge%20Accelerator%20Board%20v1.0.zip)
+
 - **[PDF]** [Spartan-7 FPGAs Datasheet](https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/res/Spartan-7%20FPGAs%20Data%20Sheet.pdf)
 - **[PDF]** [ESP32 Datasheet](https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/res/ESP32-datasheet.pdf)
 
