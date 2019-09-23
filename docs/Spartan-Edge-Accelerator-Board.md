@@ -134,7 +134,7 @@ In brief, it can work as a Arduino shield to bring the Arduino FPGA and Wireless
 
 ### Arduino shield Mode
 
-In this wiki, we use Seeeduino V4.2, you can also use Arduino UNO, there are fully compatible with each other.
+In this wiki, we use Seeeduino V4.2, you can also use Arduino UNO, they are fully compatible with each other.
 
 #### Hardware
 
