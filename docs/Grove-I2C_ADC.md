@@ -20,7 +20,8 @@ Grove - I2C ADC is a 12-bit precision ADC module based on ADC121C021. It helps y
 
 ## Version
 
-|Version|I2C Address|
+|Version|Default I2C Address|
+|---|---|
 |Grove - I2C ADC v1.0/v1.1|0x55|
 |Grove - I2C ADC v1.2|0x55|
 
@@ -87,7 +88,7 @@ Now you can read the gas sensor value using the code below.
 ```
 #include <Wire.h>
  
-#define ADDR_ADC121             0x50 // For v1.0 and v1.1, I2C address is 0x55
+#define ADDR_ADC121             0x50 // For v1.0 & v1.1, I2C address is 0x55
  
 #define V_REF 3.00
  
