@@ -173,15 +173,15 @@ In this wiki, we use Seeeduino V4.2, you can also use Arduino UNO, they are full
     You can also power both the SEA board and the Arduino at the same time, but please make sure you have set the Power Mode Position to **OFF**. Only then, the system power will be isolated, and you can power the Arduino and SEA board separately.
 
 
-#### Software
-
-
-Firstly, to work with Arduino, we should load bitstream(FPGA Logic) from SD Card to the on-board FPGA(xc7s15). The following library will show you how to do this via on-board ESP32.
 
 
 -------
 
-##### Spartan Edge Accelerator Board ESP32 Boot
+
+#### Spartan Edge Accelerator Board ESP32 Boot
+
+
+Firstly, to work with Arduino, we should load bitstream(FPGA Logic) from SD Card to the on-board FPGA(xc7s15). The following library will show you how to do this via on-board ESP32.
 
 
 a library for Spartan Edge Accelerator Board
@@ -207,20 +207,61 @@ If you want more details, you can click the [link](https://github.com/espressif/
 
 <br>
 
-- **Library Usage**
+##### Library Usage
 
-1. ***Library Installation***  
-  see [Installing Additional Arduino Libraries](https://www.arduino.cc/en/Guide/Libraries)
 
-2. ***Prepare SDCard***  
+- **1.Download the following Library**
+
+
+<div align="center">
+<figure>
+  <a href="https://github.com/sea-s7/spartan-edge-esp32-boot/archive/master.zip" target="_blank"><img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/SD-boot/Snipaste_2019-09-24_18-22-37.jpg" />
+  </a>
+</figure>
+</div>
+
+
+
+If you don't know how to install the library, please kindly check:  
+ 
+ [Installing Additional Arduino Libraries](https://www.arduino.cc/en/Guide/Libraries)
+
+
+ You can find two example folders in this library
+
+![](https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/SD-boot/example.jpg)
+
+
+
+|Example|Description|
+|----|----|
+|01LoadDefaultBitstream |This example will load SDCard file /overlay/default.bit to FPGA|
+|02LoadConfigBitstream |This example will read a ini format file /board_config.ini in SDCard,then load the bitstream spcified by the value of key **overlay_on_boot** to FPGA.|
+
+
+
+
+
+
+- **2.Prepare SDCard**  
   2.1 Format the SDCard with FAT16/FAT32 filesystem.  
+
+![](https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/SD-boot/format.jpg)
+
   2.2 Create a top level subfolder named __overlay__ in the SDCard.  
-  2.3 Put your bitstream or [sample bitstream](#Sample-bitstreams) files (must have a extend name .bit) into the folder __overlay__.  
+  2.3 Put your bitstream or [sample bitstream](https://github.com/sea-s7/AlphaTest_V1.0/tree/master/spi2gpio) files (must have a extend name .bit) into the folder __overlay__.  
+
+!!!Tip
+    The sample bitsteam : GPIO extension controlled by SPI interface, with support of ADC/DAC/RGB-LED, see [source code](https://github.com/sea-s7/Demo_project/tree/master/spi2gpio).
+
   2.4 If you run example 01LoadDefaultBitstream, rename the bitstream file in __overlay__ to __default.bit__.  
-  2.5 If you run example 02LoadConfigBitstream, put [**board_config.ini**](extras/board_config.ini) into SDCard root folder.  
+
+![](https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/SD-boot/folder.jpg)
+
+  2.5 If you run example 02LoadConfigBitstream, put [**board_config.ini**](https://github.com/sea-s7/spartan-edge-esp32-boot/blob/master/extras/board_config.ini) into SDCard root folder.  
   2.6 Insert the SDCard to the Spartan (Edge Accelerator) Board.  
 
-3. ***Upload example***  
+- **3.Upload example**  
   3.1 Connect the Spartan Board through USB Type-C wire to the PC, and install USB232 driver (chip CP2102).  
   3.2 Turn the power switch (near the USB Type-C slot) to USB side to power on the board.  
   3.3 Open one of the library examples by Arduino IDE.  
@@ -228,33 +269,17 @@ If you want more details, you can click the [link](https://github.com/espressif/
   3.5 Press 'BOOT' Button on Sparton Board and last more than 1 seconds to force ESP32 enter Bootloader mode.  
   3.6 Press 'Upload' button in Arduino IDE to upload the example ('s compiled binary) to ESP32.  
 
-4. ***Run example***  
+- **4.Run example**  
   4.1 Make sure the on-board DIP-switch K5 (last one) on Slave(ON) side, which enable FPGA programing by other device(MCU).  
   4.2 Press 'RST' button on Spartan Board to startup the example.  
   4.3 After the example bootup a few seconds, the FPGA_DONE(red color) LED on the board will light on.
 
-<br>
 
-- **Sample bitstreams**  
-
-  Some bitstream/FPGA_LOGIC files we compiled are provided here, you can download them directly.  
-  + [spi2gpio.bit](https://github.com/sea-s7/AlphaTest_V1.0/tree/master/spi2gpio)  
-  GPIO extension controlled by SPI interface, with support of ADC/DAC/RGB-LED, see ***[source code](https://github.com/sea-s7/Demo_project/tree/master/spi2gpio)***.  
-
-<br>
-
-- **Library examples**
-  + 01LoadDefaultBitstream  
-    This example will load SDCard file /overlay/default.bit to FPGA  
-
-  + 02LoadConfigBitstream  
-    This example will read a ___ini___ format file /board_config.ini in SDCard,  
-    then load the bitstream spcified by the value of key ***overlay_on_boot*** to FPGA.  
 
 
 ------
 
-##### Spartan Edge Accelerator Board IO Example
+#### Spartan Edge Accelerator Board IO Example
 
 
 Then, the following tutorial will show you how to control the GPIO/ADC/DAC/RGB-LED resources of Spartan Edge Accelerator Board with Arduino.
