@@ -23,7 +23,7 @@ Grove - I2C ADC is a 12-bit precision ADC module based on ADC121C021. It helps y
 |Version|Default I2C Address|
 |---|---|
 |Grove - I2C ADC v1.0/v1.1|0x55|
-|Grove - I2C ADC v1.2|0x55|
+|Grove - I2C ADC v1.2|0x50|
 
 
 
