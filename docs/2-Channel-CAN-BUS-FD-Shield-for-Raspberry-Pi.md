@@ -25,7 +25,7 @@ Also it have two On-board 120Ω terminating resistors which are controlled by th
 
 - High-speed transfer rate: 8Mbps@10m 20AWG shielded cable / 1Mbps@40m 20AWG shielded cable
 - Stable power supply, selectable Raspberry Pi power supply or DC power supply
-- Compatible with Raspberry Pi 2, Raspberry Pi 3, Raspberry Pi 3 and Raspberry Pi Zero
+- Compatible with Raspberry Pi 2, Raspberry Pi 3, Raspberry Pi 3, Raspberry Pi 4 and Raspberry Pi Zero
 - One-button configuration of 120Ω terminating resistor
 - Support CAN FD
 
