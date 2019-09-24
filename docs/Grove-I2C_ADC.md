@@ -10,14 +10,24 @@ sku: 103020013
 tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit, plat_pi, plat_bbg
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_ADC/master/img/I2C_ADC_01.jpg)
+![](https://github.com/SeeedDocument/Grove-RGB-LED-Stick-20-WS2813-Mini/raw/master/img/ssd.jpg)
 
 Grove - I2C ADC is a 12-bit precision ADC module based on ADC121C021. It helps you increase the accuracy of value collected from analog sensor by providing a constant reference voltage. Because its address is changeable, you can use up to 9 I2C ADC at the same time at most. At the other hand, this module provides auto sleep function which lowers the power consumption considerably.
 
 [![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/grove-i2c-adc-p-1580.html)
 
-Features
--------
+
+
+## Version
+
+|Version|I2C Address|
+|Grove - I2C ADC v1.0/v1.1|0x55|
+|Grove - I2C ADC v1.2|0x55|
+
+
+
+## Features
+
 
 -   Low power consumption
 -   High precision
@@ -27,7 +37,7 @@ Features
 !!!Tip
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
-Specifications
+## Specifications
 -------------
 
 | Item            | Typical | Unit |
@@ -37,7 +47,7 @@ Specifications
 | Sample Rate     | 188.9   | ksps |
 | Dimension       | 40X20   | mm   |
 
-Platforms Supported
+## Platforms Supported
 -------------------
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
@@ -48,7 +58,7 @@ Platforms Supported
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
 
-Hardware Overview
+## Hardware Overview
 ------------------
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_ADC/master/img/IIC_ADC_Interface.png)
@@ -60,7 +70,7 @@ Hardware Overview
 
 **The black line area is used to set the IIC address. ADDR0 and ADDR1 are shipped connected to L. You can change them to "H" or floating by a little modification on the board(floating is neither connecting "H" nor connecting "L"). Find details in the Reference.**
 
-Getting Started
+## Getting Started
 ---------------
 
 ### With [Arduino](/Arduino "Arduino")
@@ -77,7 +87,7 @@ Now you can read the gas sensor value using the code below.
 ```
 #include <Wire.h>
  
-#define ADDR_ADC121             0x55
+#define ADDR_ADC121             0x50 // For v1.0 and v1.1, I2C address is 0x55
  
 #define V_REF 3.00
  
@@ -385,7 +395,7 @@ In order to find out which result is more close to the actual condition, here we
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_ADC/master/img/Measure_the_real_sensor_value_using_DMM.JPG)
 
-Resources
+## Resources
 --------
 
 -   [I2C ADC Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_ADC/master/res/I2C_ADC_Eagle_File.zip)
