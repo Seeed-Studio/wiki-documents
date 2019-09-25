@@ -210,16 +210,18 @@ If you want more details, you can click the [link](https://github.com/espressif/
 ##### Library Usage
 
 
-- **1.Download the following Library**
+- **1.Download the ESP32 Boot Library**
 
 
 <div align="center">
 <figure>
-  <a href="https://github.com/sea-s7/spartan-edge-esp32-boot/archive/master.zip" target="_blank"><img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/SD-boot/Snipaste_2019-09-24_18-22-37.jpg" />
+  <a href="https://github.com/sea-s7/spartan-edge-esp32-boot/archive/master.zip" target="_blank"><img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/SD-boot/download-library-boot.png" />
   </a>
 </figure>
 </div>
 
+
+Then add this library to your Arduino IDE.
 
 
 If you don't know how to install the library, please kindly check:  
@@ -285,9 +287,22 @@ If you don't know how to install the library, please kindly check:
 Then, the following tutorial will show you how to control the GPIO/ADC/DAC/RGB-LED resources of Spartan Edge Accelerator Board with Arduino.
 
 
-- Download the Library:
+- Download the IO Example Library:
 
-[Spartan Edge Accelerator Board IO example](https://github.com/sea-s7/spartan-edge-ioex)
+
+<div align="center">
+<figure>
+  <a href="https://github.com/sea-s7/spartan-edge-ioex/archive/master.zip" target="_blank"><img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/SD-boot/download-library-IO.png" />
+  </a>
+</figure>
+</div>
+
+
+- Add this library to your Arduino IDE. If you don't know how to install the library, please kindly check:  
+ 
+ 
+ [Installing Additional Arduino Libraries](https://www.arduino.cc/en/Guide/Libraries)
+
 
 
 - Located to the `examples` folder, choose any example, double cilck the .ino file.
