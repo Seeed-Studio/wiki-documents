@@ -359,6 +359,13 @@ python grove_12_channel_touch_keypad.py
 
 
 
+## Schematic Online Viewer - Altium 365
+
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/raw/master/res/Grove%20-%2012-Channel%20Capacitive%20Touch%20Keypad%20(ATtiny1616).zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ## Resources
 
 - **[ZIP]** [Grove 12 Channel Capacitive Touch Keypad (ATtiny1616) Schematic file](https://github.com/SeeedDocument/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/raw/master/res/Grove%20-%2012-Channel%20Capacitive%20Touch%20Keypad%20(ATtiny1616).zip)

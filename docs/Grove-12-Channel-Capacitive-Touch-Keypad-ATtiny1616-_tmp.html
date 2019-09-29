@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616-.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<hr>
+<p>name: Grove 12 Channel Capacitive Touch Keypad (ATtiny1616)
+category:
+bzurl:
+oldwikiname:
+prodimagename:
+surveyurl:
+sku: 101020636</p>
+<hr>
+<p><img src="https://github.com/SeeedDocument/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/raw/master/img/wiki.jpg" alt="enter image description here"></p>
+<p>The Grove 12 button Capacitive Touch Keypad is built around the ATtiny1616, an AVR® 8-bit processor running at up to 16 MHz. ATtiny1616 is a low-power, high-performance chip integrated QTouch® peripheral touch controller which supports capacitive touch interfaces with proximity sensing and driven shield. With this module, you can easily create an arduino password keypad or a DIY phone keypad.</p>
+<p>We made this keypad into a 3x4 form, just like the layout of a mobile phone keyboard. The traditional keypad requires 3 vertical lines and 4 horizontal lines to scan, which will occupy 7 I/O pins of the microcontroller. With the help of ATtiny1616 and Grove connector, only RX and TX two pins are enough for Grove - 12-Channel Capacitive Touch Keypad. You can easily use this module with a microcontroller with a hardware UART interface, or you can use the software UART to read the button input with two normal I/O pins.</p>
+<p>All in all, the Grove 12 button Capacitive Touch Keypad is an easy-to-use module that requires very little code, especially when you use it with <a href="https://www.seeedstudio.com/seeeduino-boards-c-987.html">Grove compatible mainboards</a>, no soldering, just plug and play.</p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616-p-4068.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png"></a></p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Low Power ATtiny1616 controller</li>
+<li>3.3V / 5V compatible</li>
+<li>Capacitive touch, high sensitivity</li>
+<li>12 button keypad</li>
+<li>4 pin Grove UART connector</li>
+<li>On-board LED indicator</li>
+</ul>
+<h2 id="applications">Applications</h2>
+<ul>
+<li>Phone keypad</li>
+<li>Password access</li>
+<li>Extended input interface</li>
+</ul>
+<h2 id="pinout">Pinout</h2>
+<div align="center">
+<figure>
+  <a href="https://raw.githubusercontent.com/SeeedDocument/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/master/img/pinmap.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/raw/master/img/pinmap.jpg" alt="Touch Keypad hardware" title="hardware overview">
+  <figcaption><b>Figure 1</b>. <i>Hardware overview</i></figcaption></a>
+</figure>
+</div>
+<h2 id="specification">Specification</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Supply voltage</td>
+<td>3.3V / 5V</td>
+</tr>
+<tr>
+<td>CPU</td>
+<td>AVR® 8-bit CPU @ 16MHz</td>
+</tr>
+<tr>
+<td>Sensor type</td>
+<td>Capacitive Touch Keypad</td>
+</tr>
+<tr>
+<td>Button Quantity</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Operate temperature Range</td>
+<td>-40°C to 105°C</td>
+</tr>
+<tr>
+<td>Output Interface</td>
+<td>UART</td>
+</tr>
+<tr>
+<td>Firmware Download Interface</td>
+<td>UPDI</td>
+</tr>
+</tbody>
+</table>
+<h2 id="platforms-supported">Platforms Supported</h2>
+<table>
+<thead>
+<tr>
+<th>Arduino</th>
+<th>Raspberry Pi</th>
+<th>BeagleBone</th>
+<th>Wio</th>
+<th>LinkIt ONE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg" alt=""></td>
+<td><img src="https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg" alt=""></td>
+<td><img src="https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg" alt=""></td>
+<td><img src="https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg" alt=""></td>
+<td><img src="https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo_n.jpg" alt=""></td>
+</tr>
+</tbody>
+</table>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="play-with-arduino">Play With Arduino</h3>
+<p><strong>Materials required</strong></p>
+<table>
+<thead>
+<tr>
+<th>Seeeduino V4.2</th>
+<th>Base Shield</th>
+<th>Grove 12 button Capacitive Touch Keypad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg" alt="enter image description here"></td>
+<td><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg" alt="enter image description here"></td>
+<td><img src="https://github.com/SeeedDocument/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/raw/master/img/Grove---12-Channel-Capacitive-Touch-Keypad-ATtiny1616-thumbnail.png" alt="enter image description here"></td>
+</tr>
+<tr>
+<td><a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html">Get ONE Now</a></td>
+<td><a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html">Get ONE Now</a></td>
+<td><a href="https://www.seeedstudio.com/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616-p-4068.html">Get ONE Now</a></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>In addition, you can consider our new <a href="https://www.seeedstudio.com/Seeeduino-Lotus-Cortex-M0-p-2896.html">Seeeduino Lotus M0+</a>, which is equivalent to the combination of Seeeduino V4.2 and Baseshield.</p>
+</blockquote>
+<p>!!!note
+<strong>1</strong> Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click <a href="https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html">here</a> to buy</p>
+<pre><code>**2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
+</code></pre>
+<h4 id="hardware-connection">Hardware Connection</h4>
+<ul>
+<li><strong>Step 1.</strong> Connect the Grove 12 Channel Capacitive Touch Keypad to the <strong>D2</strong> port of the Base Shield.</li>
+</ul>
+<blockquote>
+<p>If you are using a SAM board, then you should connect to the <strong>UART</strong> port. Please refer to table 1 for more detail</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Board</th>
+<th>UART Type</th>
+<th>Connect Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AVR Board(like Seeeduino V4.2</td>
+<td>Soft UART</td>
+<td>D2,D3</td>
+</tr>
+<tr>
+<td>SAM Board(like Seeeduino Lotus M0+</td>
+<td>Hardware UART</td>
+<td>UART</td>
+</tr>
+</tbody>
+</table>
+<div align="center"><b>Table 1.</b><i>UART Port Selection</i></div>
+<ul>
+<li>
+<p><strong>Step 2.</strong> Plug Grove - Base Shield into Seeeduino.</p>
+</li>
+<li>
+<p><strong>Step 3.</strong> Connect Seeeduino to PC via a USB cable.</p>
+</li>
+</ul>
+<p><img src="https://github.com/SeeedDocument/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/raw/master/img/wiki-connect.jpg" alt=""></p>
+<h4 id="software">Software</h4>
+<p>!!!Attention
+If this is the first time you work with Arduino, we strongly recommend you to see <a href="http://wiki.seeedstudio.com/Getting_Started_with_Arduino/">Getting Started with Arduino</a> before the start.</p>
+<ul>
+<li>
+<p><strong>Step 1.</strong> Download the <a href="https://github.com/Seeed-Studio/Seeed_ATtiny1616/blob/master/12_Channel_Keypad.ino">12_Channel_Keypad.ino</a> from Github.</p>
+</li>
+<li>
+<p><strong>Step 2</strong>. Then open <code>12_Channel_Keypad.ino</code>, or you can just copy the following code into a new Arduino sketch.</p>
+</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"SoftwareSerial.h"</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">if</span> defined(ARDUINO_ARCH_AVR)</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SERIAL Serial</span>
+<span class="hljs-function">SoftwareSerial <span class="hljs-title">mySerial</span><span class="hljs-params">(<span class="hljs-number">2</span>,<span class="hljs-number">3</span>)</span></span>;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> TRANS_SERIAL  mySerial</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">elif</span> defined(ARDUINO_ARCH_SAMD)</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SERIAL SerialUSB</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> TRANS_SERIAL  Serial</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">else</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+
+
+<span class="hljs-comment">//RX=2,TX=3(D2) Software Serial Port</span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+	TRANS_SERIAL.begin(<span class="hljs-number">9600</span>); 
+
+    SERIAL.begin(<span class="hljs-number">9600</span>);  <span class="hljs-comment">// start serial for output</span>
+    SERIAL.println(<span class="hljs-string">"Version:v1.0"</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+    printData();
+}
+
+<span class="hljs-comment">/*
+* data mapping:E1---1；E2---2；E3---3；E4---4；E5---5；E6---6；
+*              E7---7；E8---8；E9---9；EA---*；EB---0；EC---#；
+*/</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printData</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">while</span>(TRANS_SERIAL.available()) {
+        <span class="hljs-keyword">uint8_t</span> data = TRANS_SERIAL.read();
+        <span class="hljs-keyword">switch</span>(data) {
+                <span class="hljs-keyword">case</span> <span class="hljs-number">0xE1</span> :
+                    SERIAL.println(<span class="hljs-string">"1"</span>);
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-number">0xE2</span> :
+                    SERIAL.println(<span class="hljs-string">"2"</span>);
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-number">0xE3</span> :
+                    SERIAL.println(<span class="hljs-string">"3"</span>);
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-number">0xE4</span> :
+                    SERIAL.println(<span class="hljs-string">"4"</span>);
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-number">0xE5</span> :
+                    SERIAL.println(<span class="hljs-string">"5"</span>);
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-number">0xE6</span> :
+                    SERIAL.println(<span class="hljs-string">"6"</span>);
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-number">0xE7</span> :
+                    SERIAL.println(<span class="hljs-string">"7"</span>);
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-number">0xE8</span> :
+                    SERIAL.println(<span class="hljs-string">"8"</span>);
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-number">0xE9</span> :
+                    SERIAL.println(<span class="hljs-string">"9"</span>);
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-number">0xEA</span> :
+                    SERIAL.println(<span class="hljs-string">"*"</span>);
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-number">0xEB</span> :
+                    SERIAL.println(<span class="hljs-string">"0"</span>);
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-number">0xEC</span> :
+                    SERIAL.println(<span class="hljs-string">"#"</span>);
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">default</span>:
+                    <span class="hljs-keyword">break</span>;
+            }
+    }
+
+}
+
+</div></code></pre>
+<ul>
+<li>
+<p><strong>Step 3.</strong> Upload the demo. If you do not know how to upload the code, please check <a href="http://wiki.seeedstudio.com/Upload_Code/">How to upload code</a>.</p>
+</li>
+<li>
+<p><strong>Step 4.</strong> Open the <strong>Serial Monitor</strong> of Arduino IDE by click <strong>Tool-&gt; Serial Monitor</strong>. Or tap the ++ctrl+shift+m++ key at the same time. Set the baud rate to <strong>9600</strong>.</p>
+</li>
+</ul>
+<p>!!!success
+Now, touch the keypad, then the monitor will output the corresponding key.</p>
+<div align="center">
+<figure>
+  <img src="https://github.com/SeeedDocument/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/raw/master/img/arduino-output.jpg" alt="grove keypad demo" title="output">
+  
+</figure>
+</div>
+<h3 id="play-with-raspberry-pi">Play with Raspberry pi</h3>
+<p><strong>Materials required</strong></p>
+<table>
+<thead>
+<tr>
+<th>Raspberry pi</th>
+<th>Grove Base Hat for RasPi</th>
+<th>Grove 12 button Capacitive Touch Keypad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg" alt="enter image description here"></td>
+<td><img src="https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg" alt="enter image description here"></td>
+<td><img src="https://github.com/SeeedDocument/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/raw/master/img/Grove---12-Channel-Capacitive-Touch-Keypad-ATtiny1616-thumbnail.png" alt="enter image description here"></td>
+</tr>
+<tr>
+<td><a href="https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html">Get ONE Now</a></td>
+<td><a href="https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html">Get ONE Now</a></td>
+<td><a href="https://www.seeedstudio.com/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616-p-4068.html">Get ONE Now</a></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><strong>Step 1</strong>. Plug the Grove Base Hat into Raspberry.</p>
+</li>
+<li>
+<p><strong>Step 2</strong>. Connect the Grove 12 button Capacitive Touch Keypad to <strong>UART</strong> port of the Base Hat.</p>
+</li>
+<li>
+<p><strong>Step 3</strong>. Power on the Raspberry Pi.</p>
+</li>
+</ul>
+<p><img src="https://github.com/SeeedDocument/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/raw/master/img/pii-connect.jpg" alt=""></p>
+<h4 id="software">Software</h4>
+<h5 id="uart-setting">UART Setting</h5>
+<p>Before start, we need to configure the Raspberry Pi UART.</p>
+<ul>
+<li>Step 1. Enable Raspberry Pi3 <strong>UART0</strong>.</li>
+</ul>
+<pre class="hljs"><code><div>sudo nano /boot/config.txt
+</div></code></pre>
+<p>Then add the content <code>dtoverlay=pi3-disable-bt</code> to the end of the <strong>config.txt</strong></p>
+<p>Tap ++ctrl+x++ to quit nano, and tap ++y++ to save the modification.</p>
+<ul>
+<li>Step 2. Disable the system serivce to use the UART0.</li>
+</ul>
+<pre class="hljs"><code><div>sudo systemctl disable hciuart
+</div></code></pre>
+<p>!!!Note
+Pi3-disable-bt disables the Bluetooth device and restores UART0/ttyAMA0 to GPIOs 14 and 15. It is also necessary to disable the system service that initialises the modem so it doesn't use the UART: sudo systemctl disable hciuart.</p>
+<ul>
+<li>Step 3. Delete the <code>console=serial0,115200</code> in <strong>cmdline.txt</strong>.</li>
+</ul>
+<pre class="hljs"><code><div>sudo nano /boot/cmdline.txt
+</div></code></pre>
+<p>Then delete <code>console=serial0,115200</code> in this file.</p>
+<p>!!!Note
+If you can not find <code>console=serial0,115200</code> in this txt file, just skip this step.</p>
+<ul>
+<li>Step 4. Reboot the Raspberry Pi</li>
+</ul>
+<pre class="hljs"><code><div>sudo reboot
+</div></code></pre>
+<p>For more detial, please check the official <a href="https://www.raspberrypi.org/documentation/configuration/uart.md">Raspberry Pi UART Config</a></p>
+<h5 id="raspberry-pi-demo">Raspberry Pi Demo</h5>
+<ul>
+<li><strong>Step 1</strong>. Follow <a href="http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation">Setting Software</a> to configure the development environment.</li>
+</ul>
+<p>After the system environment is successfully configured, you can see a prompt like this:</p>
+<pre class="hljs"><code><div>Running setup.py install <span class="hljs-keyword">for</span> grove.py ... done
+Successfully installed grove.py<span class="hljs-number">-0.6</span>
+#######################################################
+  Lastest Grove.py from github install complete   !!!!!
+#######################################################
+
+</div></code></pre>
+<p>Now, tap 'ls', you can find the <strong>grove.py</strong> folder under the root directory.</p>
+<pre class="hljs"><code><div>pi@raspberrypi:~ $ ls
+<span class="hljs-number">01</span>_HelloRPi            Desktop    MagPi         rpi_apa102driver
+<span class="hljs-number">01</span>_HelloRPi.cpp        Documents  Music         Templates
+<span class="hljs-number">4</span>mics_hat              Downloads  ofxGPIO       Videos
+apa102_led.c           env        Pictures      wiringpi_apa102
+bcm2835<span class="hljs-number">-1.50</span>           grove.py   Public        wiringpi_apa102.cpp
+bcm2835<span class="hljs-number">-1.50</span>.tar.gz    led        python_games
+bcm2835<span class="hljs-number">-1.50</span>.tar.gz<span class="hljs-number">.1</span>  led1       respeaker
+
+</div></code></pre>
+<ul>
+<li><strong>Step 3</strong>. Excute the following commands to run the demo.</li>
+</ul>
+<pre class="hljs"><code><div>cd grove.py/grove
+python grove_12_channel_touch_keypad.py
+
+</div></code></pre>
+<p>!!!Success
+Then touch the keycap, the terminal will output the corresponding key.</p>
+<p><img src="https://github.com/SeeedDocument/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/raw/master/img/grove-py-result.jpg" alt=""></p>
+<h2 id="schematic-online-viewer---altium-365">Schematic Online Viewer - Altium 365</h2>
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/raw/master/res/Grove%20-%2012-Channel%20Capacitive%20Touch%20Keypad%20(ATtiny1616).zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;">
+</div>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><strong>[ZIP]</strong> <a href="https://github.com/SeeedDocument/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/raw/master/res/Grove%20-%2012-Channel%20Capacitive%20Touch%20Keypad%20(ATtiny1616).zip">Grove 12 Channel Capacitive Touch Keypad (ATtiny1616) Schematic file</a></li>
+<li><strong>[PDF]</strong> <a href="https://github.com/SeeedDocument/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/raw/master/res/ATtiny1616-1617_Datasheet.pdf">ATtiny1616 Datasheet</a></li>
+</ul>
+<h2 id="tech-support">Tech Support</h2>
+<p>Please submit any technical issue into our <a href="http://forum.seeedstudio.com/">forum</a> or drop mail to techsupport@seeed.cc
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p></p>
+
+</body>
+</html>
