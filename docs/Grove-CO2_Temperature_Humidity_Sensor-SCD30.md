@@ -304,12 +304,14 @@ When activated for the first time a period of minimum 7 days is needed so that t
 There are two ino sample in the SCD30 library foldor, you can run the `SCD30_auto_calibration.ino` to start the calibration.
 
 
-
 ## Schematic Online Viewer
 
 
 <div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-CO2-Temperature-Humidity-Sensor-SCD30/raw/master/res/Grove-CO2_Temperature_Humidity_Sensor-SCD30.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
+
+
+
 
 
 

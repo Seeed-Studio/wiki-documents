@@ -850,6 +850,12 @@ uint32_t Wheel(byte WheelPos) {
 
 ```
 
+## Schematic Online Viewer
+
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-RGB_LED_Ring-20-WS2813Mini/raw/master/res/Grove%20-%20RGB%20LED%20Ring%20(20%20-%20WS2813%20Mini).zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
 
 ## Resources
 

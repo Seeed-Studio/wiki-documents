@@ -225,6 +225,13 @@ Step: 38
 ```
 
 
+## Schematic Online Viewer
+
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-Step_Counter-BMA456/raw/master/res/Grove%20-%20Step%20Counter(BMA456).zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ## Resources
 
 - **[Zip]** [Grove - Step Counter(BMA456) Eagle Files](https://github.com/SeeedDocument/Grove-Step_Counter-BMA456/raw/master/res/Grove%20-%20Step%20Counter(BMA456).zip)

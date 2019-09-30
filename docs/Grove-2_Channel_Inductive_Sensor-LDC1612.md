@@ -445,6 +445,11 @@ can't detect coil Coil Inductance!!!
         In basic_demo and muti_channel_demo examples, you may keep in mind that each output is corresponding to the intensity of inductance. There is the functional relationship between the output and the intensity of inductance, if you are interested in further information, you may want to refer to [Datasheet LDC1612](https://github.com/SeeedDocument/Grove-2-Channel_Inductive_Sensor-LDC1612/blob/master/res/LDC1612.pdf) provided by Texas Instrument(TI).
 
 
+## Schematic Online Viewer
+
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-2-Channel_Inductive_Sensor-LDC1612/blob/master/res/Grove%20-%202-Channel%20Inductive%20Sensor%20(LDC1612).zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
 
 
 ## Resources

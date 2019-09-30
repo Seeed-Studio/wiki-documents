@@ -285,7 +285,11 @@ This display is 104 x 212, so there are 104x212=22048 pixels, each pixel is cont
 **Step 4.** Download the code into your arduino, then you plug the display module into the arduino board. After blinking for a while, you will see the pattern you set.
 
 
+## Schematic Online Viewer
 
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-Triple_Color_E-Ink_Display_2.13/raw/master/res/Triple_Color_E-Ink_Display_2_13.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
 
 
 ## Resources

@@ -276,6 +276,12 @@ ltc2941.setBatteryFullMAh(400); // set the battery capacity here
 What's more, every time you re-open the serial port, or re-power the control board, the data will be reset to `100.00%`. So, there still a lot work to do if you want to use it in your phone :D
 
 
+## Schematic Online Viewer
+
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/raw/master/res/Grove%20-%20Coulomb%20Counter%203.3V%20to%205V%20(LTC2941).zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
 
 ## Resources
 

@@ -468,6 +468,13 @@ $$
 So, in the figure 6, when we set the **Vref** to 595.70, the **Ip** turns to 0mA.
 
 
+## Schematic Online Viewer
+
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove--5A_DC-AC_Current_Sensor-ACS70331/raw/master/res/5A%20DCAC%20Current%20Sensor(ACS70331)%20v1.0.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ## Resources
 
 - **[ZIP]** [Grove - ±5A DC/AC Current Sensor (ACS70331) Schematic file](https://github.com/SeeedDocument/Grove--5A_DC-AC_Current_Sensor-ACS70331/raw/master/res/5A%20DCAC%20Current%20Sensor(ACS70331)%20v1.0.zip)
