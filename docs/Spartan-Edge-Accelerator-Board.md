@@ -337,6 +337,21 @@ In this section, you will learn about the Project mode features for project crea
 
 
 
+First of all, you should download the vivado tutorial library, we will need some sorce files.
+
+
+
+<div align="center">
+<figure>
+  <a href="https://github.com/swjtu-mxb/vivado-tutorial/archive/master.zip" target="_blank"><img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/SD-boot/Vivado-Tutorial-Library.png" />
+  </a>
+</figure>
+</div>
+
+
+
+
+
 - **Step 1: Creating a Project**   
 
   *Launching Vivado*
