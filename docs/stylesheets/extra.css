@@ -382,10 +382,10 @@ ul {
   box-shadow: 0 2px 5px #8cbc59;
 }
 .language:hover{
-  height: 9rem;   
+  height: 12rem;   
 
 }
-.language .en,.language .cn,.language .jp,.language>a {
+.language .en,.language .cn,.language .jp,.language .vn,.language>a {
   display: block!important;
   color: #fff;
   cursor: pointer;
@@ -393,7 +393,7 @@ ul {
   line-height: 3rem;
   box-sizing: border-box;
 }
-.language .en:hover,.language .cn:hover,.language .jp:hover,.language>a:hover{
+.language .en:hover,.language .cn:hover,.language .jp:hover,.language .vn:hover,.language>a:hover{
   background: #8cbc59;
   opacity: 1!important;
 }

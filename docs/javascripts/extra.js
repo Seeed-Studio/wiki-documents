@@ -3,25 +3,36 @@
  *
  */
 function checkLanguage() {
-  var reg = /\/cn\//,
+  var regCn = /\/cn\//,
       regJp = /\/jp\//,
+      regVn = /\/vn\//,
       oCNs = document.querySelectorAll('.cn'),
       oENs = document.querySelectorAll('.en'),
       oJPs = document.querySelectorAll('.jp'),
-      cnApi = 'http://wiki.seeedstudio.com/cn' + location.pathname.replace(/^\/jp/,""),
-      jpApi = 'http://wiki.seeedstudio.com/jp' + location.pathname.replace(/^\/cn/,""),
-      enApi = 'http://wiki.seeedstudio.com' + location.pathname.replace(/^(\/cn|\/jp)/,"");
-  if (reg.test(location.href)) {
+      oVNs = document.querySelectorAll('.vn'),
+      cnApi = 'http://wiki.seeedstudio.com/cn' + location.pathname.replace(/^(\/jp|\/vn)/,""),
+      jpApi = 'http://wiki.seeedstudio.com/jp' + location.pathname.replace(/^(\/cn|\/vn)/,""),
+      vnApi = 'http://wiki.seeedstudio.com/vn' + location.pathname.replace(/^(\/jp|\/cn)/,""),
+      enApi = 'http://wiki.seeedstudio.com' + location.pathname.replace(/^(\/cn|\/jp|\/vn)/,"");
+  if (regCn.test(location.href)) {
     isShow(oCNs, 'none');
-    isShow(oJPs, 'block',jpApi);
+    isShow(oJPs, 'block', jpApi);
     isShow(oENs, 'block', enApi);
+    isShow(oVNs, 'block', vnApi);
   }else if(regJp.test(location.href)){
     isShow(oJPs, 'none');
     isShow(oCNs, 'block', cnApi);
     isShow(oENs, 'block', enApi);
+    isShow(oVNs, 'block', vnApi);
+  } else if(regVn.test(location.href)){
+    isShow(oVNs, 'none');
+    isShow(oCNs, 'block', cnApi);
+    isShow(oENs, 'block', enApi);
+    isShow(oJPs, 'block', jpApi);
   } else {
     isShow(oCNs, 'block', cnApi);
     isShow(oJPs, 'block', jpApi);
+    isShow(oVNs, 'block', vnApi);
     isShow(oENs, 'none');
   }
 }
@@ -57,7 +68,7 @@ if(!document.getElementById("acac-script")){
   acadScript.id = "acad-script";
   acadScript.setAttribute("async","async");
   acadScript.setAttribute("type","text/javascript");
-  acadScript.setAttribute("src","https://viewer.altium.com/client/static/js/embed.js");
+  acadScript.setAttribute("src","https://viewer.dev1.altium.com/client/static/js/embed.js");
   document.head.appendChild(acadScript);
 }
   /* add ACAD View JS Script END*/
