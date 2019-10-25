@@ -26,16 +26,58 @@ On top of that, we provide the full FPGA APIs for Arduino, which means Arduino u
 
 ## Features
 
+
+#### High-speed image processing
+- Integrated mipi, mini HDMI interface
+- Supports Raspberry Pi camera v1.0 (OV5640)
+- Maximum support for 30fps image transmission
+
+#### Encrypted Internet of Things
+- IoT WiFi and Bluetooth with ESP32
+- Support AWS, Azure and other cloud services
+- Support software encryption algorithm
+
+#### Multiple I/O port extensions
+- 20 user-defined extended I/O ports（Stand-alone mode）
+- 10 user-defined extended I/O ports（Arduino shield mode）
 - Full FPGA APIs for Arduino
-- Stand alone mode/Arduino Shield mode
-- On-board WiFi and bluetooth 4.1 with BLE
-- On-board 8 bit ADC
-- On-board 6 axis Accelerometer and Gyroscope
-- On-board Grove Connector(I2C/D2)
 
+#### Onboard functional modules
+- 8-bit ADC & DAC
+- 6-axis accelerometer & gyroscope
+- 2 user RGB LEDs & buttons
 
+#### Two customized development modes
+- Arduino Shield Mode
+- FPGA Stand Alone Mode
 
-## Specification
+_Remarks: Users can choose different pin headers according to different needs and solder the pins according to their development needs._
+
+## Target users
+- Arduino Developers 
+- IoT Developers
+- FPGA Developers
+
+## Applicable Cases
+- MIPI camera input and HDMI output Vivado engineering
+- On-board LED, DIP switch, ADC and DAC reference case
+- Onboard gyroscope case
+- Provide GPIO/UART/ADC/DAC/RGB-LED expansion for Arduino
+- Signal generator case (requires Arduino configuration)
+- ESP32 controlled signal generator case
+- Use the AWS GreenGrass IoT platform case
+- Color recognition and object tracking case
+- Graphic recognition case (triangle, circle and square recognition)
+- Digital Character Recognition Case
+- AES encryption and decryption algorithm implementation in FPGA
+- Implementation of the PID algorithm in the FPGA
+
+ 
+_New applications will be updated............._
+
+For more case resources, please visit [this Github page.](https://github.com/sea-s7)
+
+## Specifications
 
 |Parameter|Value|
 |---|---|
