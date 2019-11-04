@@ -51,7 +51,7 @@ We break out all the I/O Pins(80 GPIOs in total) of GD32VF103, which will meet y
 ## Getting Started
 
 
-### Use Arduino IDE Platform for a Test Demo
+### Use PlatformIO for a Test Demo
 
 
 #### Hardware
@@ -148,15 +148,19 @@ Choose the Index 4 and click "ok" to download the code to the board, after downl
 
 
 !!!Note
-If you want to download another code, just press the reset button on the board, open the [DFU tool](https://github.com/SeeedDocument/GD32VF103/raw/master/res/GD32_MCU_Dfu_Tool_V3.8.1.5784_1.rar), and the DFU tool will recognise the board again. You can also connect the boot0 to the ground in case you press the reset button and delete the code in your board.
+    If you want to download another code, just press the reset button on the board, open the [DFU tool](https://github.com/SeeedDocument/GD32VF103/raw/master/res/GD32_MCU_Dfu_Tool_V3.8.1.5784_1.rar), and the DFU tool will recognise the board again. You can also connect the boot0 to the ground in case you press the reset button and delete the code in your board.
 
 ##Resources
 
+
+- **[PDF]** [SeeedStudio GD32 RISC-V Board Shecmatic File](https://github.com/SeeedDocument/GD32VF103/raw/master/res/GD32VF103VBT6-dev-board.pdf)
 - **[PDF]** [GD32VF103_Datasheet_Rev1.0](https://github.com/SeeedDocument/Bazaar_Document/raw/master/GD32VF103_Datasheet_Rev1.0.pdf)
 - **[PDF]** [GD32VF103_User_Manual_EN_V1.0](https://github.com/SeeedDocument/Bazaar_Document/raw/master/GD32VF103_User_Manual_EN_V1.0.pdf)
 - **[Zip]** ["LCD" library](https://github.com/Seeed-Studio/Seeed_Arduino_LCD/archive/master.zip)
 - **[Zip]** [Project file "TFT_GD32"](https://github.com/Seeed-Studio/Seeed_Arduino_LCD/archive/TFT_GD32.zip)
 - **[Zip]** [DFU Tool](https://github.com/SeeedDocument/GD32VF103/raw/master/res/GD32_MCU_Dfu_Tool_V3.8.1.5784_1.rar)
+
+
 
 ## Tech Support
 Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).
