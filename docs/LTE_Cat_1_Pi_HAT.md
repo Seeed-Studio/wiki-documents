@@ -405,7 +405,14 @@ Now we have made three versions of the LTE Cat 1 Pi HAT. In addition to supporti
 sudo nano /boot/config.txt
 ```
 
-Then add `dtoverlay=pi3-disable-bt` and `enable_uart=1` to bottom of the config.txt
+Then add `dtoverlay=pi3-disable-bt` and `enable_uart=1` to bottom of the config.txt. it should look like this.
+
+```bash
+[all]
+#dtoverlay=vc4-fkms-v3d
+dtoverlay=pi3-disable-bt
+enable_uart=1
+```
 
 - Step 2. Disable the system serivce to use the UART0.
 
