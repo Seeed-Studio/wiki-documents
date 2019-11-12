@@ -399,13 +399,13 @@ Now we have made three versions of the LTE Cat 1 Pi HAT. In addition to supporti
 
 ### Software
 
-- Step 1. Use dtoverlay=pi3-disable-bt to enable Raspberry Pi3 UART0.
+- Step 1. Use dtoverlay=pi3-disable-bt to enable Raspberry Pi3/Pi4 UART0.
 
 ```
 sudo nano /boot/config.txt
 ```
 
-Then add dtoverlay=pi3-disable-bt to bottom of the config.txt
+Then add `dtoverlay=pi3-disable-bt` and `enable_uart=1` to bottom of the config.txt
 
 - Step 2. Disable the system serivce to use the UART0.
 
@@ -424,7 +424,7 @@ sudo nano /boot/cmdline.txt
 
 Then delete console=serial0,115200 from the string. 
 
-- Step 4. Reboot the Raspberry Pi3
+- Step 4. Reboot the Raspberry Pi3/Pi4
 
 ```
 sudo reboot
