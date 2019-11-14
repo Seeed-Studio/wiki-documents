@@ -191,6 +191,31 @@ Click "SYSTEM", select your Wi-Fi network, enter the password and click "CONFIGU
 
 When you connect Seeeduino Cloud to a wired network with an ethernet cable, it will try to connect automatically via DHCP. The board will show up on the ports menu just as it would over WiFi.
 
+**4.Sysupgrade Firmware**
+
+Below is detailed by using Browser to upgrade new firmware. 
+
+* Burn File -> Examples -> Birdge -> YunSerialTerminal.ino to Seeeduino Cloud
+
+![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/YunSerialTerminal.png)
+
+* Find ip of Seeeduino Cloud by using putty that can communicate with Seeeduino Cloud
+
+![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/putty_configure.png)
+
+![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/inet_addr.png)
+
+* Visit Seeeduino Cloud by typing ip of Seeeduino Cloud in the Browser. and the password is `seeeduino`
+
+![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/password.png)
+
+* Get [newest_Firmware](http://www.dragino.com/downloads/index.php?dir=motherboards/ms14/Firmware/Yun/Newest_Firmware/)
+
+* Upgrade through the upgrade button.
+
+![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/upgrade.png)
+
+![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/upgrade_configure.png)
 
 **Terminal**
 
@@ -329,6 +354,8 @@ String getTimeStamp() {
 ![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/500px-SeeeduinoCloud_Sketch_USB.png)
 
 
+
+
 ## Resources
 
 * **Schematic**
@@ -336,7 +363,7 @@ String getTimeStamp() {
     * [Seeeduino Cloud PDF file](https://github.com/SeeedDocument/Seeeduino_Cloud/raw/master/res/Seeeduino_Cloud_PDF.pdf)
 
 * **Firmware**
-    * [Seeeduino Cloud Firmware](https://github.com/SeeedDocument/Seeeduino_Cloud/raw/master/res/Seeeduino_Cloud_Firmware--v1.3.4--20140815-1100.zip)
+    * [Seeeduino Cloud Firmware](http://www.dragino.com/downloads/index.php?dir=motherboards/ms14/Firmware/Yun/Newest_Firmware/)
 
 * **References**
     * [Getting Started with Arduino](https://www.arduino.cc/en/Guide/HomePage)
