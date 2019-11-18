@@ -112,7 +112,7 @@ In addition, some pins have specialized functions:
 Seeeduino Cloud has two processors on board. One is an ATmega32U4 like on the Leonardo. The other is an Atheros 9331, running Linux and the OpenWRT wireless stack, which enables the board to connect to WiFi and Ethernet networks. With [Yun Bridge Library](https://www.arduino.cc/en/Reference/YunBridgeLibrary), it is possible to call programs or custom scripts on the Linux system through the Arduino to connect with various internet services.
 
 
-**Program on ATmega32U4 side**
+### Program on ATmega32U4 side
 
 The ATmega32U4 is programmed using the [Arduino Software (IDE)](https://www.arduino.cc/en/Main/Software?setlang=en), if you haven't install, please click [here](https://www.arduino.cc/en/Guide/HomePage) for installation instructions.
 
@@ -166,7 +166,7 @@ Now, simply click the "Upload" button in the environment. Wait a few seconds - y
 
 A few seconds after the upload finishes, you should see the LED(D13) on the board start to blink (in green). If it does, congratulations! You’ve gotten Arduino up-and-running. If you have problems, please see the troubleshooting suggestions.
 
-**Program on ATHEROS AR9331 side**
+### Program on ATHEROS AR9331 side
 
 **Configure Network**
 
@@ -191,7 +191,7 @@ Click "SYSTEM", select your Wi-Fi network, enter the password and click "CONFIGU
 
 When you connect Seeeduino Cloud to a wired network with an ethernet cable, it will try to connect automatically via DHCP. The board will show up on the ports menu just as it would over WiFi.
 
-**4.Sysupgrade Firmware**
+### Sysupgrade Firmware
 
 Below is detailed by using Browser to upgrade new firmware. 
 
@@ -199,7 +199,7 @@ Below is detailed by using Browser to upgrade new firmware.
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/YunSerialTerminal.png)
 
-* Find ip of Seeeduino Cloud by using putty that can communicate with Seeeduino Cloud
+* Find ip of Seeeduino Cloud through type `ifconfig` on the putty that can communicate with Seeeduino Cloud
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/putty_configure.png)
 
@@ -217,7 +217,7 @@ Below is detailed by using Browser to upgrade new firmware.
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/upgrade_configure.png)
 
-**Terminal**
+### Terminal
 
 You could access the terminal of Seeeduino Cloud via SSH to Program or configure on ATHEROS AR9331 side.
 
@@ -232,7 +232,7 @@ password: seeeduino
 ![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/seeeduino_cloud_terminal.png)
 
 
-**Yun Bridge Library**
+### Yun Bridge Library
 
 The Bridge Library simplifies the communication between the Arduino Board and Dragino HE. Bridge commands from the AVR (Arduino Board) are interpreted by Python on the HE.
 Its role is to
