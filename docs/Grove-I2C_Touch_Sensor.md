@@ -25,7 +25,7 @@ Specifications
 | Standby Mode Current   | 2μA                                 |
 | Touch Channels         | 12 (Including 4 with Touch feelers) |
 | Communicating Protocol | I2C                                 |
-| I2C Address            | 0x5A - 0x5D                         |
+| I2C Address            | 0x5A                     |
 
 !!!Tip
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
