@@ -180,7 +180,6 @@ pages:
           - Grove Base Cape for Seeed Studio BeagleBone Green v2: Grove_Base_Cape_for_BeagleBone_v2.md
           - Grove Cape for BeagleBone Series: Grove_Cape_for_BeagleBone_Series.md
           - Grove Starter Kit for Seeed Studio BeagleBone Green: Grove_Starter_Kit_for_BeagleBone_Green.md
-          - Grove Music Kit for Pocket Beagle: Grove-Music-Kit-for-Pocket-Beagle.md
           - Motor Bridge Cape v1.0: Motor_Bridge_Cape_v1.0.md
           - Skeleton box for Beaglebone: Skeleton_box_for_Beaglebone.md
           - Seeed Studio BeagleBone Green Gateway Baseboard: BeagleBone_Green_Gateway_Baseboard.md
@@ -521,6 +520,7 @@ pages:
           - Grove - Temperature&amp;Humidity Sensor: Grove-TemperatureAndHumidity_Sensor.md
           - Grove - Temperature&amp;Humidity Sensor (HDC1000): Grove-TemperatureAndHumidity_Sensor-HDC1000.md
           - Grove - Temperature&amp;Humidity Sensor (High-Accuracy &amp;Mini) v1.0: Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0.md
+          - Grove - Thermal Imaging Camera IR Array: Grove-Thermal-Imaging-Camera-IR-Array.md
           - Grove - I2C High Accuracy Temperature Sensor(MCP9808): Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808.md
           - Grove - Thumb Joystick: Grove-Thumb_Joystick.md
           - Grove - Tilt Switch: Grove-Tilt_Switch.md

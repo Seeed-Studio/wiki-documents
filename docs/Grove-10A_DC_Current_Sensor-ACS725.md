@@ -273,7 +273,7 @@ float Vref = 322;
 //Vref is zero drift value, you need to change this value to the value you actually measured before using it.
 ```
 
-In the demo code, we set the Vref to 265, however, the zero offset value varies from board to board. As you know, the board we use in this demo is 288.09. So let's modify the Line 21:
+In the demo code, we set the Vref to 322, however, the zero offset value varies from board to board. As you know, the board we use in this demo is 346.68. So let's modify the Line 21:
 
 ```C++
 float Vref = 346.68;
