@@ -123,7 +123,7 @@ Grove - Servo is DC motor with gearing and feedback system. It is used in drivin
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/DHT11.jpg)
 
-This temperature & humidity sensor provides a pre-calibrated digital output. A unique capacitive sensor element measures relative humidity and the temperature is measured by a negative temperature coefficient (NTC) thermistor. It has excellent reliability and long term stability. Please note that this sensor will not work for temperatures below 0 degree. 
+This temperature & humidity sensor provides a pre-calibrated digital output. A unique capacitive sensor element measures relative humidity and the temperature is measured by a negative temperature coefficient (NTC) thermistor. It has excellent reliability and long term stability. Please note that this sensor will not work for temperatures below 0 degree.
 
 **[Grove - Relay](https://www.seeedstudio.com/Grove-Relay-p-769.html)**
 
@@ -143,7 +143,6 @@ This Grove - Ultrasonic ranger is a non-contact distance measurement module whic
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/lcd.jpg)
 
 This Grove – 162 LCD module is a 16 Characters  2 Lines LCD display, it uses I2C bus interface to communicate with the development board, thus these will reduce the pin header from 10 to 2 which is very convenient for the Grove system. This LCD display module also supports customise characters, you can create and display heart symbol or stick-man on this LCD module through a simple coding configuration.
-
 
 ## GETTING STARTED 
 
@@ -1140,9 +1139,10 @@ Included in the kit
 
 	Please make sure you have cloned the python.py repository library to your Raspberry Pi.
 
-Step 1: Run the following commands to create a python file
+Step 1: Run the following commands to create a python file and install seeed-python-dht.
 
 ```bash	
+sudo pip3 install seeed-python-dht
 cd grove.py
 nano lesson_7.py
 ```
@@ -1150,11 +1150,11 @@ nano lesson_7.py
 Step 2: Copy following code
 
 ```python	
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import time
 
-from grove.grove_temperature_humidity_sensor import DHT
+from seeed_dht import DHT
 from grove.display.jhd1802 import JHD1802
 
 def main():
@@ -1178,6 +1178,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 ```
 
 Step 3：run the program
