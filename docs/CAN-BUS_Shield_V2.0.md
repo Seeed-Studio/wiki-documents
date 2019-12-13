@@ -45,7 +45,6 @@ Previously we have made two versions of CAN-BUS Shield, the V1.0 and V1.2. They 
 
 **Hardware**
 
-
   -  OBD-II or CAN standard pinout can be selected by switching jumpers on DB9 interface, the default pinout is OBD-II.
   -  Add a TF card slot for data storage and the CS pin can be either set to D4 or D5.
   -  The INT pin can be set to D2 or D3 by cutting and soldering pad on the back of the shield.
@@ -54,9 +53,7 @@ Previously we have made two versions of CAN-BUS Shield, the V1.0 and V1.2. They 
   -  The I2C grove connector is also changed to more reasonable standard SDA/SCL pin instead of previous A4/A5.
   -  The two grove connectors are both changed to horizontal rather than vertical to the shield so that it would be more convenient when connecting to other grove modules.
 
-
 **Software**
-
 
   -  Add the function and example to access the data of your car.
   -  Add the function to read the SD card.
@@ -76,8 +73,6 @@ Previously we have made two versions of CAN-BUS Shield, the V1.0 and V1.2. They 
 |7|CAN_H|Dominant High|
 |8|Reserved|Upgrade Path|
 |9|CAN_V+|Power, Optional|
-
-
 
 **Alternative Choice**
 
@@ -154,18 +149,18 @@ If you want to record the GPS log at the same time, this [OBD-II CAN Bus GPS Dev
     When you use more than two CAN Bus Shield in one net, you should take the impedance into consideration.
     You should either cut P1 in the PCB with a knife, or just remove R3 on the PCB.
 
-**Pin map**
+### Pin map
 
 ![](https://github.com/SeeedDocument/CAN-BUS-Shield-V2.0/raw/master/img/PingMAP_CANBUS_V2.png)
 
 !!!note
     - The FREE pin is available for the other usages.
 
-**DB9&OBDii Interface**
+### DB9&OBDii Interface
 
 ![](https://raw.githubusercontent.com/SeeedDocument/CAN_BUS_Shield/master/image/OBD.png)
 
-**CS_CAN pin**
+### CS_CAN pin
 
 SPI_CS pin of V2.0 is connected to **D9** by default. If you want to change to **D10**, please follow below instructions.
 
@@ -186,7 +181,7 @@ SPI_CS pin of V2.0 is connected to **D9** by default. If you want to change to *
     Be careful with the box cutter, it's easy to hurt yourself or the PCBA.
 
 
-**INT pin**
+### INT pin
 
 INT pin of V2.0 is connected to **D2** by default. If you want to change to **D3**, please follow below instructions.
 
@@ -203,7 +198,7 @@ INT pin of V2.0 is connected to **D2** by default. If you want to change to **D3
 ![](https://github.com/SeeedDocument/CAN-BUS-Shield-V2.0/raw/master/img/INT_2.png)
 
 
-**SPI pins**
+### SPI pins
 
 The SPI pins (SCK, MISO, MOSI) are routed to the ICSP pins by default. But for some boards, the SPI pins are located at D11~D13. if this happens, you need make some change to the PCBA. Take a look at the backside of the PCBA, there're three pads, MOSI, MISO and SCK, they are connected to A by default. You can change them to B if needed.
 
@@ -214,7 +209,7 @@ The SPI pins (SCK, MISO, MOSI) are routed to the ICSP pins by default. But for s
     Be careful when you are going to change SPI pins, it's easy to hurt yourself or the PCBA.
 
 
-**ODB pins**
+### ODB pins
 
 ![](https://github.com/SeeedDocument/CAN-BUS-Shield-V2.0/raw/master/img/ODB.png)
 
@@ -285,7 +280,7 @@ Open the Serial Monitor of Arduino IDE(**slaver**), you will get the data sent f
 ## APIs
 -----
 
-### 1. Set the Baud rate
+### 1.Set the Baud rate
 
 This function is used to initialize the baud rate of the CAN Bus system.
 
@@ -310,7 +305,7 @@ The available baud rates are listed as follows:
 	#define CAN_666kbps  17
 	#define CAN_1000KBPS 18
 
-### 2. Set Receive Mask and Filter
+### 2.Set Receive Mask and Filter
 
 There are **2** receive mask registers and **5** filter registers on the controller chip that guarantee you getting data from the target device. They are useful especially in a large network  consisting of numerous nodes.
 
@@ -329,7 +324,8 @@ We provide two functions for you to utilize these mask and filter registers. The
 - **ext** represents the status of the frame. 0 means it's a mask or filter for a standard frame. 1 means it's for a extended frame.
 - **ulData** represents the content of the mask of filter.
 
-###3. Check Receive
+### 3.Check Receive
+
 The MCP2515 can operate in either a polled mode, where the software checks for a received frame, or using additional pins to signal that a frame has been received or transmit completed.
 
 Use the following function to poll for received frames.
@@ -338,12 +334,13 @@ Use the following function to poll for received frames.
 
 The function will return 1 if a frame arrives, and 0 if nothing arrives.
 
-###4. Get CAN ID
+### 4.Get CAN ID
+
 When some data arrive, you can use the following function to get the CAN ID of the "send" node.
 
     INT32U MCP_CAN::getCanId(void)
 
-###5. Send Data
+### 5.Send Data
 
     CAN.sendMsgBuf(INT8U id, INT8U ext, INT8U len, data_buf);
 
@@ -359,7 +356,7 @@ For example, In the 'send' example, we have:
     unsigned char stmp[8] = {0, 1, 2, 3, 4, 5, 6, 7};
     CAN.sendMsgBuf(0x00, 0, 8, stmp); //send out the message 'stmp' to the bus and tell other devices this is a standard frame from 0x00.
 
-###6. Receive Data
+### 6.Receive Data
 
 The following function is used to receive data on the 'receive' node:
 
@@ -368,6 +365,14 @@ In conditions that masks and filters have been set. This function can only get f
 
 * **len** represents the data length.
 * **buf** is where you store the data.
+
+### 7.init_CS
+
+it is very usefule for you to use two CAN-BUS shields with one Arduino.we provide CS_CAN pin to select for you.if you cannot kown how to use CS_CAN pin , you can go to [CS_CAN pin](http://wiki.seeedstudio.com/CAN-BUS_Shield_V2.0/#hardware-overview/##CS_CAN-pin) to learn.
+
+	void MCP_CAN::init_CS(byte _CS)
+
+* **_CS** represents what you select pin.(9 or 10)
 
 ## Generate a New BaudRate
 
