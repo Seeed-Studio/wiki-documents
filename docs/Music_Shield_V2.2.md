@@ -170,7 +170,7 @@ But you must ensure that the song has been stored in the SD card and the format 
 
 1. This demo will show you how to play notes from 3.5mm using MIDI.Open the "MidiDemoPlayer" example via the path: File --> Examples --> MusicPlayer --> MidiDemoPlayer.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Music_Shield_V2.2/master/img/Music_shield_midi_demo.jpeg)
+    ![](https://raw.githubusercontent.com/SeeedDocument/Music_Shield_V2.2/master/img/Music_shield_midi_demo.jpeg)
 
 2. Upload Code to your arduino UNO.
 
