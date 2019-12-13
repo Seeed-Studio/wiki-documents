@@ -166,58 +166,13 @@ But you must ensure that the song has been stored in the SD card and the format 
 4. Quickly press down the multifunction button again, it will stop recording.
 5. Record will be played in the last place.
 
-### **Using MIDI, no need to modify the hardware**
+**Demo 5: Using MIDI**
 
-The VS1058X's real time MIDI mode:
-
-The "real time MIDI mode",in which it will instantly execute MIDI commands send to it through either SPI or UART,can be enabled with the method below:
-
-Method: At the beginning,send a small software patch through SPI port.
-
-```
-    /*software patch for MIDI Play*/
-const unsigned short gVS1053_MIDI_Patch[28]={
-    /*if you don't let GPIO1 = H,please send this patch by spi*/
-    0x0007, 0x0001, 0x8050, 0x0006, 0x0014, 0x0030, 0x0715, 0xb080, /* 0 */
-    0x3400, 0x0007, 0x9255, 0x3d00, 0x0024, 0x0030, 0x0295, 0x6890, /* 8 */
-    0x3400, 0x0030, 0x0495, 0x3d00, 0x0024, 0x2908, 0x4d40, 0x0030, /* 10 */
-    0x0200, 0x000a, 0x0001, 0x0050,
-};
-using that function to load:
-    /*
-    **@ function name: loadMidiPatch
-    **@ usage:load a software patch for vs10xx
-    **@ input:none
-    **@ retval:none
-    */
-void VS10XX::loadMidiPlugin(void)
-{
-    int i=0;
-    Serial.print("load MIDI Plugin...\r\n");
-    while(i < sizeof(gVS1053_MIDI_Patch)/sizeof(gVS1053_MIDI_Patch[0]))
-    {
-        unsigned short addr, n, val;
-        addr = gVS1053_MIDI_Patch[i++];
-        n = gVS1053_MIDI_Patch[i++];
-        while(n--)
-        {
-            val = gVS1053_MIDI_Patch[i++];
-            writeRegister(addr, val >> 8, val&0xff);
-        }
-    }
-    Serial.print("done\r\n");
-}
-```
-
-I would like to tell you that there is an open source library called jdksmidi,by which you can make your own MIDI decoder through some small changes. [jdksmidi git-hub page](https://github.com/jdkoftinoff/jdksmidi) offers you some real time mode MIDI APIs(MusicPlayer.cpp):
-```
-     midiNoteOn()
-     midiNoteOff()
-     midiWriteData()
-```
-Now, it is time to build your real-time MIDI instrument/music player in any format(single-channel or multi-channel). Your contribution is appreciated. A demo MIDI player was add to the latest library. MIDI Demo(upload the code. When completed, you will hear Fancy MIDI music):
+1. This demo will show you how to play notes from 3.5mm using MIDI.Open the "MidiDemoPlayer" example via the path: File --> Examples --> MusicPlayer --> MidiDemoPlayer.
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Music_Shield_V2.2/master/img/Music_shield_midi_demo.jpeg)
+
+2. Upload Code to your arduino UNO.
 
 Reference
 ---------
@@ -225,8 +180,6 @@ Reference
 **MIDI number to note reference list**
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Music_Shield_V2.2/master/img/MIDIlist.gif)
-
-
 
 Resources
 ---------
