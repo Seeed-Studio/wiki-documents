@@ -102,6 +102,14 @@ const int B = 4275;               // B value of the thermistor
 const int R0 = 100000;            // R0 = 100k
 const int pinTempSensor = A0;     // Grove - Temperature Sensor connect to A0
 
+#if defined(ARDUINO_ARCH_AVR)
+#define debug  Serial
+#elif defined(ARDUINO_ARCH_SAMD) ||  defined(ARDUINO_ARCH_SAM)
+#define debug  SerialUSB
+#else
+#define debug  Serial
+#endif
+
 void setup()
 {
     Serial.begin(9600);

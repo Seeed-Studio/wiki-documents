@@ -116,9 +116,9 @@ If you want to record the GPS log at the same time, this [OBD-II CAN Bus GPS Dev
 - Screw terminal that easily to connect CAN_H and CAN_L
 - Arduino Uno pin headers
 - 2 Grove connectors (I2C and UART)
-- SPI Interface up to 10 MHz    
-- Standard (11 bit) and extended (29 bit) data and remote frames    
-- Two receive buffers with prioritized message storage    
+- SPI Interface up to 10 MHz
+- Standard (11 bit) and extended (29 bit) data and remote frames
+- Two receive buffers with prioritized message storage
 
 !!!Note
     CAN BUS Shield Work well with Arduino UNO (ATmega328), Arduino Mega (ATmega1280/2560) as well as Arduino Leonardo (ATmega32U4).
@@ -368,7 +368,7 @@ In conditions that masks and filters have been set. This function can only get f
 
 ### 7.init_CS
 
-it is very usefule for you to use two CAN-BUS shields with one Arduino.we provide CS_CAN pin to select for you.if you cannot kown how to use CS_CAN pin , you can go to [CS_CAN pin](http://wiki.seeedstudio.com/CAN-BUS_Shield_V2.0/#hardware-overview/##CS_CAN-pin) to learn.
+it is very usefule for you to use two CAN-BUS shields with one Arduino.we provide CS_CAN pin to select for you.if you cannot kown how to use CS_CAN pin , you can go to [CS_CAN pin](http://wiki.seeedstudio.com/CAN-BUS_Shield_V2.0/#cs_can-pin) to learn.
 
 	void MCP_CAN::init_CS(byte _CS)
 
