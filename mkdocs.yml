@@ -184,6 +184,9 @@ pages:
           - Skeleton box for Beaglebone: Skeleton_box_for_Beaglebone.md
           - Seeed Studio BeagleBone Green Gateway Baseboard: BeagleBone_Green_Gateway_Baseboard.md
    
+      
+      - SenseCap:
+          - Sensecap LoRaWAN Gateway and Wireless Sensor User Guide: Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide.md
 
       - ReSpeaker:
           - ReSpeaker Introduction: ReSpeaker.md
@@ -547,7 +550,7 @@ pages:
           - Grove - I2C UV Sensor (VEML6070): Grove-I2C_UV_Sensor-VEML6070.md
           - Grove - Coulomb Counter 3.3V to 5V (LTC2941): Grove-Coulomb_Counter_3.3V_to_5V-LTC2941.md
           - Grove - Light Gesture Color Proximity Sensor (TMG39931): Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931.md
-          - Grove 12 Channel Capacitive Touch Keypad (ATtiny1616): Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616-.md
+          - Grove - 12 Channel Capacitive Touch Keypad (ATtiny1616): Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616-.md
           
           
       - Actuator:
@@ -665,6 +668,7 @@ pages:
           - Grove Shield for Intel Joule: Grove_Shield_for_Intel_Joule.md
           - Grove Smart Plant Care Kit: Grove_Smart_Plant_Care_Kit.md
           - Grove Beginner Kit for Arduino: Grove_Beginner_Kit_for_Arduino.md
+          - Grove Creator Kit: Grove-Creator-Kit.md
 
 
 
