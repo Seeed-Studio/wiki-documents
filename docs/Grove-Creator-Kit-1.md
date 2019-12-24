@@ -144,19 +144,23 @@ You can have access to the Grove Creator Kit through our country distributors.
 
 
 
-<img src="https://github.com/SeeedDocument/Bazaar_Document/raw/master/south-asia-map-latest.jpg" width="850" height="644" alt="Planets" usemap="#planetmap">
+<img src="https://github.com/SeeedDocument/Bazaar_Document/raw/master/india.jpg" alt="India" width="500" height="599" usemap="#India">
 
-<map name="planetmap">
-  <area shape="rect" coords="4,178, 112,218" href="https://www.thingbits.net/t/brands/seeed-studio">
-  <area shape="rect" coords="102,217, 182,260" href="https://www.robu.in">
-  <area shape="rect" coords="6,260, 87,300" href="https://www.evelta.com">
-  <area shape="rect" coords="335,350, 418,392" href="https://my.cytron.io/grove-seeedstudio?">
-  <area shape="rect" coords="607,231, 713,273" href="https://www.makerlab-electronics.com">
-  <area shape="rect" coords="417,145, 557,193" href="https://www.seeedstudio.com/">
-</map>
+<map name="India">
+  <area shape="rect" coords="20, 355, 131, 408" href="https://www.evelta.com/">
+  <area shape="rect" coords="151, 297, 262, 354" href="https://www.robu.in">
+  <area shape="rect" coords="15, 243, 165, 295" href="https://www.thingbits.net/t/brands/seeed-studio">
+
+<img src="https://github.com/SeeedDocument/Bazaar_Document/raw/master/Malaysia.jpg" alt="Malaysia" width="500" height="599" usemap="#Malaysia">
+
+<map name="Malaysia">
+  <area shape="rect" coords="83, 258, 197, 312" href="https://my.cytron.io/grove-seeedstudio?">
 
 
+<img src="https://github.com/SeeedDocument/Bazaar_Document/raw/master/Philipines.jpg" alt="Philippines" width="500" height="599" usemap="#Philippines">
 
+<map name="Philippines">
+  <area shape="rect" coords="143, 168, 325, 234" href="http://www.makerlab-electronics.com">
 
 
 ##  Tech Support 
@@ -169,3 +173,4 @@ Please submit any technical issue into our <a href="http://forum.seeedstudio.com
 
 
 
+ 
