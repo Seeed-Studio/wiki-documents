@@ -160,7 +160,7 @@ You can have access to the Grove Creator Kit through our country distributors.
 <img src="https://github.com/SeeedDocument/Bazaar_Document/raw/master/Philippines.jpg" alt="Philippines" width="500" height="599" usemap="#Philippines">
 
 <map name="Philippines">
-  <area shape="rect" coords="143, 168, 325, 234" href="http://www.makerlab-electronics.com">
+  <area shape="rect" coords="122, 178, 269, 232" href="http://www.makerlab-electronics.com">
 
 
 ##  Tech Support 

@@ -113,7 +113,7 @@ void loop(){
 
 ![](https://github.com/SeeedDocument/Grove-GSR_Sensor/raw/master/img/Grove-GSR_Result.png)
 
-**Human Resistance** = ((1024+2*Serial_Port_Reading)*10000)/(512-Serial_Port_Reading), unit is ohm, Serial_Port_Reading is the value display on Serial Port(between 0~1023)
+**Human Resistance** = ((1024+2*Serial_Port_Reading)*100000)/(512-Serial_Port_Reading), unit is ohm, Serial_Port_Reading is the value display on Serial Port(between 0~1023)
 
 
 
@@ -252,9 +252,141 @@ You can quit this program by simply press ++ctrl+c++.
 
 ## FAQ
 
-**Q1: What is the unit of output?**
+### Q1: What is the unit of output?
 
 A1:  We measure the signal by voltage and print to COM port as (0~1023). 
+
+
+### Q2: About the formula of **Human Resistance**.
+
+A2:
+
+Let's look at the schematic file.
+
+![](https://github.com/SeeedDocument/Grove-GSR_Sensor/raw/master/img/11.jpg)
+
+
+We can divide this schematic into two parts, there are two [Voltage Follower](https://www.electrical4u.com/voltage-follower/) on the left and an [Op Amp Subtractor](https://www.electrical4u.com/difference-amplifier/) on the right.
+
+Let's check the left side at first.
+
+![](https://github.com/SeeedDocument/Grove-GSR_Sensor/raw/master/img/2.jpg)
+
+
+For the point between `R2` and `R7`, the voltage is
+
+ 
+$$
+V_{R27}= VCC*\frac{R_2}{R_2+R_7}
+$$
+
+
+Since both `R2` and `R7` are 4.7KΩ
+
+
+$$
+V_{R27}= \frac{VCC}{2}
+$$
+
+
+According to the characteristics of [Voltage Follower](https://www.electrical4u.com/voltage-follower/), `U2=U3`, `U5=U6`. Let's check `U3` and `U5`
+
+$$
+U_3= \frac{VCC}{2}*\frac{R_1}{R_1+R_5}
+$$
+
+
+
+
+
+`R1` is a rheostat, we set it to 200k ohms by default, if you don't know whether it is 200KΩ, you can leave the GSR sensor empty and rotate the rheostat until the value of the serial output becomes **512**.
+
+>Why 512? For the 10-bit ADC, the output full range is 1024, 512 is the half value. Adjusting to 512 will make subsequent calculations easy. The derivation of this formula is also based on R1 equal to 200K ohms.
+
+OK, now R1=R5=200kΩ
+
+
+$$
+U_3= \frac{VCC}{2}*\frac{R_1}{R_1+R_5}=\frac{VCC}{4}=U_2
+$$
+
+How about `U5`
+
+
+$$
+U_5= \frac{VCC}{2}*\frac{R_{GSR}}{R_6+R_{GSR}}=U_6
+$$
+
+R<sub>GSR</sub> is the human skin resistance.
+
+
+Now let's check about the right side.
+
+
+![](https://github.com/SeeedDocument/Grove-GSR_Sensor/raw/master/img/3.jpg)
+
+
+You can consider the right part as an **Op Amp Subtractor**, we won't talk much about what is an [Op Amp Subtractor](https://www.electrical4u.com/difference-amplifier/)(click to check), all you need to know is that:
+
+When $\frac{R_4}{R_8}=\frac{R_{11}}{R_{10}}$
+
+$$
+U_{SIG}=\frac{R_4}{R_8}*(U_6-U_2)=2*(U_6-U_2)
+$$
+
+
+That is to say:
+
+
+$$
+U_{SIG}=2*(U_5-U_3)=2*(\frac{VCC}{2}*\frac{R_{GSR}}{R_6+R_{GSR}}-\frac{VCC}{4})
+$$
+
+
+Which is
+
+
+$$
+U_{SIG}=VCC*(\frac{R_{GSR}}{R_6+R_{GSR}}-\frac{1}{2})
+$$
+
+Now let's check the serial output. For the 10-bit ADC, the output full range is 1024 corresponding VCC.
+
+
+
+$$
+\frac{U_{SIG}}{VCC}=\frac{Serial-Port-Reading}{1024}
+$$
+
+$\downarrow$ $\downarrow$
+
+$$
+U_{SIG}=VCC*\frac{Serial-Port-Reading}{1024}
+$$
+
+
+Therefor,
+
+$$
+\frac{Serial-Port-Reading}{1024}=(\frac{R_{GSR}}{R_6+R_{GSR}}-\frac{1}{2})
+$$
+
+
+Let's sort it out, and the final result is as follows:
+
+
+$$
+R_{GSR}=R_6*\frac{2*Serial-Port-Reading+1024}{1024-2*Serial-Port-Reading}
+$$
+
+
+R6=200KΩ=200000Ω
+
+$$
+R_{GSR}=100000*\frac{2*Serial-Port-Reading+1024}{512-Serial-Port-Reading}
+$$
+
+
 
 ## Resources
 
