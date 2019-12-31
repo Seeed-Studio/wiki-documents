@@ -130,7 +130,7 @@ Click on **File > Preference**, and fill Additional Boards Manager URLs with bel
     *https://raw.githubusercontent.com/Seeed-Studio/Seeeduino-Boards/master/package_seeeduino_index.json*
 
 
-Click **OK** to finish the setting. Then Click on **Tools > Board > Boards Manager**, you can tap the keyword 'MegaAVR' at the search bar , find **Arduino MegaAVR**, and Install it.
+Click **OK** to finish the setting. Then Click on **Tools > Board > Boards Manager**, you can tap the keyword `MegaAVR` at the search bar , find **Arduino MegaAVR**, and Install it.
 
 
 
