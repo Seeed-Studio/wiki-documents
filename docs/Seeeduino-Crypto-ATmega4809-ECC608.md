@@ -126,15 +126,10 @@ Open the LED blink example sketch: **File > Examples >01.Basics > Blink**.
 
 **Add Seeeduino to your Arduino IDE**
 
-Click on **File > Preference**, and fill Additional Boards Manager URLs with below url:
-    *https://raw.githubusercontent.com/Seeed-Studio/Seeeduino-Boards/master/package_seeeduino_index.json*
+
+Click on **Tools > Board > Boards Manager**, you can tap the keyword 'MegaAVR' at the search bar , find **Arduino MegaAVR**, and Install it.
 
 
-Click **OK** to finish the setting. Then Click on **Tools > Board > Boards Manager**, you can tap the keyword `MegaAVR` at the search bar , find **Arduino MegaAVR**, and Install it.
-
-
-
-![enter image description here](https://github.com/SeeedDocument/SeeeduinoV4/blob/master/images/add_board.png?raw=true)
 
 
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Seeeduino-Crypto-ATmega4809-ECC608-/master/img/install.png)
@@ -178,7 +173,7 @@ A few seconds after the upload finishes, you should see the pin 13 (L) LED on th
 
 - **Schematic**    
 
-   [Seeeduino Crypto Schematic Diagram](https://github.com/SeeedDocument/Seeeduino-Crypto-ATmega4809-ECC608-/raw/master/res/Seeeduino%20Crypto%20(ATmega4809%20%26%20ECC608)_v1.0_SCH_190725.pdf.zip)  
+   [Seeeduino Crypto Schematic Diagram](https://github.com/SeeedDocument/Seeeduino-Crypto-ATmega4809-ECC608-/raw/master/res/Seeeduino-Crypto-(ATmega4809%26ECC608).zip)  
 
 - **Data Sheet**
 
@@ -190,24 +185,24 @@ A few seconds after the upload finishes, you should see the pin 13 (L) LED on th
 
 - **References**
 
-    [Getting Started with Arduino](https://www.arduino.cc/en/Guide/HomePage)
+   [Getting Started with Arduino](https://www.arduino.cc/en/Guide/HomePage)
 
-    [Arduino Language Reference](https://www.arduino.cc/en/Reference/HomePage)
+   [Arduino Language Reference](https://www.arduino.cc/en/Reference/HomePage)
 
-    [Download the Arduino Software(IDE)](https://www.arduino.cc/en/Main/Software)
+   [Download the Arduino Software(IDE)](https://www.arduino.cc/en/Main/Software)
 
-    [Arduino FAQ](https://www.arduino.cc/en/Main/FAQ)
+   [Arduino FAQ](https://www.arduino.cc/en/Main/FAQ)
 
-    [Arduino Introduction](https://www.arduino.cc/en/guide/introduction)
+   [Arduino Introduction](https://www.arduino.cc/en/guide/introduction)
 
-    [Wikipedia page for Arduino](https://en.wikipedia.org/wiki/Arduino)
+   [Wikipedia page for Arduino](https://en.wikipedia.org/wiki/Arduino)
 
 
 
 ## Schematic Online Viewer
 
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Seeeduino-Crypto-ATmega4809-ECC608-/raw/master/res/Seeeduino%20Crypto%20(ATmega4809%20%26%20ECC608)_v1.0_SCH_190725.pdf.zip" style="border-radius: 0px 0px 4px 4px; height:500px; border-style: solid; border-width: 1px; border-color: rgb(241,241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" /></div>
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Seeeduino-Crypto-ATmega4809-ECC608-/raw/master/res/Seeeduino-Crypto-(ATmega4809%26ECC608).zip" style="border-radius: 0px 0px 4px 4px; height:500px; border-style: solid; border-width: 1px; border-color: rgb(241,241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" /></div>
 
 
 ## Tech Support
