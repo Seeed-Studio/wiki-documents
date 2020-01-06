@@ -554,6 +554,8 @@ pages:
           - Grove - Coulomb Counter 3.3V to 5V (LTC2941): Grove-Coulomb_Counter_3.3V_to_5V-LTC2941.md
           - Grove - Light Gesture Color Proximity Sensor (TMG39931): Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931.md
           - Grove - 12 Channel Capacitive Touch Keypad (ATtiny1616): Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616-.md
+          - Grove - 12 bit Magnetic Rotary Position Sensor(AS5600): Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600.md
+          - Grove - High Precision Barometric Pressure Sensor DPS310: Grove-High-Precision-Barometric-Pressure-Sensor-DPS310.md
           
           
       - Actuator:
