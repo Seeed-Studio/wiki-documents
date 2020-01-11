@@ -12,8 +12,6 @@ sku:
 
 Azure Sphere MT3620 Development Kit is specially designed to support rapid prototyping and to enable developers to experience Azure Sphere technology. MT3620 is the first Azure Sphere certified MCU. Azure Sphere certified MCUs are a new class of secured, connected crossover microcontrollers. MT3620 features three user-accessible microcontroller cores: one ARM Cortex-A7 core and two general purpose ARM Cortex-M4F cores. The MT3620 is designed to support real-time requirements when interfacing with a variety of on-chip peripherals including GPIO, UART, I2C, SPI, I2S, PWM and ADC. It has a built-in security subsystem with its own dedicated CM4F core for secure boot and secure system operation, along with dual-band 802.11 b/g/n Wi-Fi.
 
-Please note that the current Azure Sphere software release does not support all features of the MT3620 hardware, including the two general purpose ARM Cortex-M4F cores, some peripheral interfaces (ADC, I2C, I2S, PWM and SPI), Wi-Fi 802.11a, and RTC with clock selection and battery backup. For ADC and I2C, customers can use [MT3620 Grove Shield board](https://www.seeedstudio.com/MT3620-Grove-Shield-p-3145.html), which has a UART to I2C chip and a I2C12-bit ADC chip.
-
 The MT3620 Development Kit has expanded most MT3620 hardware resources on the expansion pin headers, by wiring to breadboard or adding a shield board , user can easily connect to other hardware accessories.
 
 The Azure Sphere operating system is pre-installed on the MT3620 and is designed to work with the Azure Sphere Security Service to create a secured IoT platform. Their features are：
@@ -195,12 +193,9 @@ Power to the Azure Sphere MT3620 Development Kit is supplied via the on-board US
 
 **Hardware Design and Manufacture**
 
-The current Azure Sphere software release does not support all features of the [MT3620](https://www.mediatek.com/products/azureSphere/mt3620) hardware. For example, the following are **not yet supported** in software:
 
-- 2 x ARM Cortex-M4 with FPU
-- ADC, I2C, I2S, PWM and SPI peripheral interfaces (GPIO and UART are supported)
-- Wi-Fi 802.11a (b/g/n are supported)
-- RTC with clock selection and battery backup
+For using I2S, please refer to [M4 User Manual](https://d86o2zu8ugzlg.cloudfront.net/mediatek-craft/documents/MT3620-M4-User-Manual.pdf)
+
 
 !!!Tip
     For more info, please refer to [Information and tools for hardware design and manufacture](https://docs.microsoft.com/en-us/azure-sphere/manufacturers/hardware-manufacturing).

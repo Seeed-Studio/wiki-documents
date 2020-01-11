@@ -1,4 +1,4 @@
-## Grove - High Precision Barometric Pressure Sensor (DPS310)
+Grove - High Precision Barometric Pressure Sensor (DPS310)
 
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-High-Precision-Barometer-Sensor-DPS310/master/img/Grove-High-Precision-Barometer-Sensor-DPS310-wiki.jpg)
@@ -241,7 +241,7 @@ void loop()
 
 ## Resources
 
-- **[Library]** [DPS310-Pressure-Sensor](https://github.com/Infineon/DPS310-Pressure-Sensor.git)
+- **[Library]** [DPS310-Pressure-Sensor](https://github.com/Seeed-Studio/Seeed_Arduino_DPS310.git)
 - **[Datasheet]** [DPS310-Datasheet](https://github.com/SeeedDocument/Grove-High-Precision-Barometer-Sensor-DPS310/raw/master/res/DPS310-datasheet.pdf)
 - **[Zip]** [Grove-High-Precision-Barometer-Sensor-(DPS310)](https://github.com/SeeedDocument/Grove-High-Precision-Barometer-Sensor-DPS310/raw/master/res/Grove%20-%20High%20Precision%20Barometer%20Sensor%20(DPS310)_v1.0.zip)
 
