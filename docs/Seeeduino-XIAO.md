@@ -43,10 +43,9 @@ Seeeduino XIAO has 14 GPIO PINs, which can be used for 11 digital interfaces, 11
 |Dimensions|23.5×17.5×3.5mm|
 
 
-!!!note:
+!!!Note
 
-    1.The MCU of this design is powered by 3.3v, please pay attention not to introduce the IO level of 5V into the IO interface of the system, otherwise the chip may be damaged;
-    2.Please pay attention to use, do not lift the shield cover.
+    Sometimes the Seeeduino XIAO port may disappear when user programming process fails. we can solve this problem by the following operation: Use tweezers or short lines to short the RST pins in the diagram twice, we'll see the orange LED lights flicker on and light up, at this point, the chip enters Bootloader mode and the burn port appears again. Because the samd21 chip has two partitions, one is the Bootloader and the other is the user program. The product will burn a bootloader code in the system memory when it leaves the factory. We can switch modes with a quick reset.
 
 
 
@@ -57,9 +56,13 @@ Seeeduino XIAO has 14 GPIO PINs, which can be used for 11 digital interfaces, 11
 ![](https://github.com/SeeedDocument/Seeeduino-XIAO/raw/master/img/Seeeduino-XIAO-pinout.jpg)
 
 
-![](https://github.com/SeeedDocument/Seeeduino-XIAO/raw/master/img/Seeeduino%20XIAO%20pinout2.jpg)
+![](https://github.com/SeeedDocument/Seeeduino-XIAO/raw/master/img/Seeeduino%20XIAO%20pinout%202.png)
 
 
+!!!Note
+
+    1.The MCU of this design is powered by 3.3v, please pay attention not to introduce the IO level of 5V into the IO interface of the system, otherwise the chip may be damaged;
+    2.Please pay attention to use, do not lift the shield cover.
 
 
 ## Getting Started
@@ -121,7 +124,7 @@ Open the LED blink example sketch: **File > Examples >01.Basics > Blink**.
 - **Step 3. Add Seeeduino to your Arduino IDE**
 
 Click on **File > Preference**, and fill Additional Boards Manager URLs with below url:
-    *https://raw.githubusercontent.com/Seeed-Studio/Seeeduino-Boards/master/package_seeeduino_index.json*
+    *https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_seeeduino_boards_index.json*
 
 
 ![](https://github.com/SeeedDocument/Seeeduino-Femto/raw/master/.img/wiki2.png)
@@ -172,18 +175,15 @@ Now, simply click the "Upload" button in the environment. Wait a few seconds and
 
 
 
+
 ## Resourses
 
-- **[ZIP]** [Seeeduino XIAO](https://github.com/SeeedDocument/Seeeduino-XIAO/raw/master/res/Seeeduino-XIAO-v1.0.zip)
+- **[PDF]** [Seeeduino XIAO](https://github.com/SeeedDocument/Seeeduino-XIAO/raw/master/res/Seeeduino-XIAO-v1.0-SCH-191112.pdf)
 
 - **[PDF]** [ATSAMD218A-MU datasheet](https://github.com/SeeedDocument/Seeeduino-XIAO/raw/master/res/ATSAMD21G18A-MU-Datasheet.pdf)
 
 
-## Schematic Online Viewer
 
-
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Seeeduino-XIAO/raw/master/res/Seeeduino-XIAO-v1.0.zip" style="border-radius: 0px 0px 4px 4px; height:500px; border-style: solid; border-width: 1px; border-color: rgb(241,241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" /></div>
- 
- 
 ## Tech Support
+
 Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).

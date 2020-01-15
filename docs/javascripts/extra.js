@@ -1,74 +1,80 @@
-/**
- * [checkLanguage 设置页面语言链接]
- *
- */
-function checkLanguage() {
-  var regCn = /\/cn\//,
-      regJp = /\/jp\//,
-      regVn = /\/vn\//,
-      oCNs = document.querySelectorAll('.cn'),
-      oENs = document.querySelectorAll('.en'),
-      oJPs = document.querySelectorAll('.jp'),
-      oVNs = document.querySelectorAll('.vn'),
-      cnApi = 'http://wiki.seeedstudio.com/cn' + location.pathname.replace(/^(\/jp|\/vn)/,""),
-      jpApi = 'http://wiki.seeedstudio.com/jp' + location.pathname.replace(/^(\/cn|\/vn)/,""),
-      vnApi = 'http://wiki.seeedstudio.com/vn' + location.pathname.replace(/^(\/jp|\/cn)/,""),
-      enApi = 'http://wiki.seeedstudio.com' + location.pathname.replace(/^(\/cn|\/jp|\/vn)/,"");
-  if (regCn.test(location.href)) {
-    isShow(oCNs, 'none');
-    isShow(oJPs, 'block', jpApi);
-    isShow(oENs, 'block', enApi);
-    isShow(oVNs, 'block', vnApi);
-  }else if(regJp.test(location.href)){
-    isShow(oJPs, 'none');
-    isShow(oCNs, 'block', cnApi);
-    isShow(oENs, 'block', enApi);
-    isShow(oVNs, 'block', vnApi);
-  } else if(regVn.test(location.href)){
-    isShow(oVNs, 'none');
-    isShow(oCNs, 'block', cnApi);
-    isShow(oENs, 'block', enApi);
-    isShow(oJPs, 'block', jpApi);
-  } else {
-    isShow(oCNs, 'block', cnApi);
-    isShow(oJPs, 'block', jpApi);
-    isShow(oVNs, 'block', vnApi);
-    isShow(oENs, 'none');
-  }
+
+/* 
+*****
+add more language steps 
+*****
+*/
+
+// 1. add the shortcode of the language 
+_Languages = ["en" , "cn" ,"jp" ,"vn", "id"];
+
+// 2. add the title 
+_LanguageTitle = {
+    "en" : "EN",
+    "cn" : "中文",
+    "jp" : "日本語",
+    "vn" : "VN",
+    "id" : "IDN",
 }
 
-function isShow(obj, style, url) {
-  if (!url) {
-    obj.forEach(function(item, key) {
-      item.style.display = style;
+/* 
+*****
+    Over 
+*****
+*/
+
+
+// 获取每个选择按钮的对应超链接
+function setSiteMaps(sites){
+    var rootURl = 'http://wiki.seeedstudio.com'
+    var obj = {}
+    sites.map(function(item,index){
+        var regs = sites.slice();
+        regs.splice(index,1);
+        var siteReg = new RegExp("\^\(\/" + regs.join("\|/") + "\)");
+        console.log(siteReg)
+        if(item == "en"){
+            obj[item] = rootURl + location.pathname.replace(siteReg,"");
+        }else{
+            obj[item] = rootURl + "/" +item + location.pathname.replace(siteReg,"");
+        }
     })
-  } else {
-    obj.forEach(function(item, key) {
-      item.style.display = style;
-      item.onclick = function(){
-          location.href = url;
-      }
-    })
+    return obj
   }
-}
 
-checkLanguage();
+  // 根据路径 匹配语言,初始化按钮
+  function setSiteRule(){
+    var languages = _Languages.slice();  
+    var languagesTitle = _LanguageTitle;        
+    var siteMap = setSiteMaps(languages);
+    var element = document.querySelectorAll(".md-header .md-header-nav .language")
+    var mElement = document.querySelector(".md-header .md-header-nav .mLanguage")
+    for(var i = 0 ;i<element.length ;i++){
+        var ele = element[i] ;
+        ele.innerHTML = "" ;
+        ele.addEventListener("mouseover",function(){
+            ele.style.height = languages.length * 3 + "rem"
+        })
+        ele.addEventListener("mouseleave",function(){
+            ele.style.height = "3rem"
+        });
+        languages.map(function(item,index){
+            var currentReg = new RegExp("/"+item+"/");
+            var el = document.createElement("a");
+            el.innerText = languagesTitle[item];
+            el.setAttribute("class",item);
+            if(currentReg.test(location.pathname)){
+                el.setAttribute("href","javascript:;")
+            }else{
+                el.setAttribute("href",siteMap[item])
+            }
+            ele.appendChild(el);
+        })
+    }
+    
+    
+   
+  }
 
-// 邮箱输入 阻止F/S触发搜索聚焦
-if(document.getElementById("mce-EMAIL")){
-  document.getElementById("mce-EMAIL").addEventListener("keydown",function(e){
-  window.event ? window.event.cancelBubble = true : e.stopPropagation();
-},false); 
-}
- 
+  setSiteRule()
 
-/* add ACAD View JS Script */
-if(!document.getElementById("acac-script")){
-  const acadScript = document.createElement("script");
-  acadScript.id = "acad-script";
-  acadScript.setAttribute("async","async");
-  acadScript.setAttribute("type","text/javascript");
-  acadScript.setAttribute("src","https://viewer.altium.com/client/static/js/embed.js");
-  document.head.appendChild(acadScript);
-}
-  /* add ACAD View JS Script END*/
