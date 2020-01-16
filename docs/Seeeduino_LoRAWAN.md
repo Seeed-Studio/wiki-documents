@@ -531,19 +531,19 @@ void loop(void)
 ```c++
 void setup()
 {
-    Serial.begin(9600);
+    Serial5.begin(9600);
     SerialUSB.begin(115200);
 }
 
 void loop()
 {
-    while(Serial.available())
+    while(Serial5.available())
     {
-        SerialUSB.write(Serial.read());
+        SerialUSB.write(Serial5.read());
     }
     while(SerialUSB.available())
     {
-        Serial.write(SerialUSB.read());
+        Serial5.write(SerialUSB.read());
     }
 }
 ```
