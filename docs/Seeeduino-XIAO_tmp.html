@@ -492,13 +492,10 @@ tags:</h2>
 </tr>
 <tr>
 <td>Dimensions</td>
-<td>23.5×17.5×3.5mm</td>
+<td>20×17.5×3.5mm</td>
 </tr>
 </tbody>
 </table>
-<p>!!!Note</p>
-<pre><code>Sometimes the Seeeduino XIAO port may disappear when user programming process fails. we can solve this problem by the following operation: Use tweezers or short lines to short the RST pins in the diagram twice, we'll see the orange LED lights flicker on and light up, at this point, the chip enters Bootloader mode and the burn port appears again. Because the samd21 chip has two partitions, one is the Bootloader and the other is the user program. The product will burn a bootloader code in the system memory when it leaves the factory. We can switch modes with a quick reset.
-</code></pre>
 <h2 id="hardware-overview">Hardware Overview</h2>
 <p><img src="https://github.com/SeeedDocument/Seeeduino-XIAO/raw/master/img/Seeeduino-XIAO-pinout.jpg" alt=""></p>
 <p><img src="https://github.com/SeeedDocument/Seeeduino-XIAO/raw/master/img/Seeeduino%20XIAO%20pinout%202.png" alt=""></p>
@@ -506,6 +503,73 @@ tags:</h2>
 <pre><code>1.The MCU of this design is powered by 3.3v, please pay attention not to introduce the IO level of 5V into the IO interface of the system, otherwise the chip may be damaged;
 2.Please pay attention to use, do not lift the shield cover.
 </code></pre>
+<h3 id="reset">Reset</h3>
+<p>Sometimes the Seeeduino XIAO port may disappear when user programming process fails. we can solve this problem by the following operation:</p>
+<ul>
+<li>Connect the Seeeduino XIAO to your computer.</li>
+<li>Use tweezers or short lines to short the RST pins in the diagram twice.</li>
+<li>The orange LED lights flicker on and light up.</li>
+</ul>
+<p>At this point, the chip enters Bootloader mode and the burn port appears again. Because the samd21 chip has two partitions, one is the Bootloader and the other is the user program. The product will burn a bootloader code in the system memory when it leaves the factory. We can switch modes with a quick reset.</p>
+<p><img src="https://github.com/SeeedDocument/Seeeduino-XIAO/raw/master/img/XIAO-reset.gif" alt=""></p>
+<h3 id="interrupt">Interrupt</h3>
+<p>All pins on Seeeduino XIAO support interrupts, but two pins cannot be used at the same time: 5 pin and 7 pin. For more detail about Interrupt please check <a href="https://github.com/Seeed-Studio/ArduinoCore-samd/blob/master/variants/XIAO_m0/variant.cpp">here</a>.</p>
+<h3 id="pin-multuiplexing">Pin Multuiplexing</h3>
+<p>We don't need to configure the pins ourselves, after using the pins, you can call a function directly.</p>
+<ul>
+<li>Use pin 6 as the digital pin:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> buttonPin = <span class="hljs-number">6</span>;     <span class="hljs-comment">// the number of the pushbutton pin</span>
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> ledPin =  <span class="hljs-number">13</span>;      <span class="hljs-comment">// the number of the LED pin</span>
+
+<span class="hljs-keyword">int</span> buttonState = <span class="hljs-number">0</span>;         <span class="hljs-comment">// variable for reading the pushbutton status</span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-comment">// initialize the LED pin as an output:</span>
+  pinMode(ledPin, OUTPUT);
+  <span class="hljs-comment">// initialize the pushbutton pin as an input:</span>
+  pinMode(buttonPin, INPUT);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-comment">// read the state of the pushbutton value:</span>
+  buttonState = digitalRead(buttonPin);
+
+  <span class="hljs-comment">// check if the pushbutton is pressed. If it is, the buttonState is HIGH:</span>
+  <span class="hljs-keyword">if</span> (buttonState == HIGH) {
+    <span class="hljs-comment">// turn LED on:</span>
+    digitalWrite(ledPin, HIGH);
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-comment">// turn LED off:</span>
+    digitalWrite(ledPin, LOW);
+  }
+}
+</div></code></pre>
+<ul>
+<li>Use pin 6 as the analog pin:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">int</span> sensorPin = A6;    <span class="hljs-comment">// select the input pin for the potentiometer</span>
+<span class="hljs-keyword">int</span> ledPin = <span class="hljs-number">13</span>;      <span class="hljs-comment">// select the pin for the LED</span>
+<span class="hljs-keyword">int</span> sensorValue = <span class="hljs-number">0</span>;  <span class="hljs-comment">// variable to store the value coming from the sensor</span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-comment">// declare the ledPin as an OUTPUT:</span>
+  pinMode(ledPin, OUTPUT);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-comment">// read the value from the sensor:</span>
+  sensorValue = analogRead(sensorPin);
+  <span class="hljs-comment">// turn the ledPin on</span>
+  digitalWrite(ledPin, HIGH);
+  <span class="hljs-comment">// stop the program for &lt;sensorValue&gt; milliseconds:</span>
+  delay(sensorValue);
+  <span class="hljs-comment">// turn the ledPin off:</span>
+  digitalWrite(ledPin, LOW);
+  <span class="hljs-comment">// stop the program for for &lt;sensorValue&gt; milliseconds:</span>
+  delay(sensorValue);
+}
+</div></code></pre>
 <h2 id="getting-started">Getting Started</h2>
 <h3 id="hardware">Hardware</h3>
 <p><strong>Materials required</strong></p>
@@ -546,11 +610,11 @@ tags:</h2>
 <ul>
 <li><strong>Step 3. Add Seeeduino to your Arduino IDE</strong></li>
 </ul>
-<p>Click on <strong>File &gt; Preference</strong>, and fill Additional Boards Manager URLs with below url:
+<p>Click on <strong>File &gt; Preference</strong>, and fill Additional Boards Manager URLs with the url below:
 <em>https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_seeeduino_boards_index.json</em></p>
 <p><img src="https://github.com/SeeedDocument/Seeeduino-Femto/raw/master/.img/wiki2.png" alt=""></p>
 <p>Click <strong>Tools-&gt; Board-&gt; Boards Manager...</strong>, print  keyword &quot;<strong>Seeeduino XIAO</strong>&quot; in the searching blank. Here comes the &quot;Seeed SAMD Boards&quot;. Install it.</p>
-<p><img src="https://raw.githubusercontent.com/SeeedDocument/Seeeduino-XIAO/master/img/Seeeduino-XIAO-board.png" alt=""></p>
+<p><img src="https://github.com/SeeedDocument/Seeeduino-XIAO/raw/master/img/XIAO-board.png" alt=""></p>
 <ul>
 <li><strong>Step 4. Select your board and port</strong></li>
 </ul>
@@ -567,7 +631,7 @@ tags:</h2>
 <h2 id="the-sample-application">The sample application</h2>
 <ul>
 <li>
-<p><a href="https://github.com/SeeedDocument/Seeeduino-XIAO/blob/master/USB-to-Serial-Port.md">USB to Serial Port</a></p>
+<p><a href="https://github.com/SeeedDocument/Seeeduino-XIAO/blob/master/How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI.md">How to use Seeeduino XIAO to log in to your Raspberry PI</a></p>
 </li>
 <li>
 <p><a href="https://github.com/SeeedDocument/Seeeduino-XIAO/blob/master/SPI-Communication-Interface.md">SPI Communication Interface</a></p>

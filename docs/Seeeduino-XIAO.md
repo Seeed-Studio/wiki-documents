@@ -40,12 +40,7 @@ Seeeduino XIAO has 14 GPIO PINs, which can be used for 11 digital interfaces, 11
 |UART interface|1|
 |Power supply and downloading interface| Type-C|
 |Power|3.3V/5V DC|
-|Dimensions|23.5×17.5×3.5mm|
-
-
-!!!Note
-
-    Sometimes the Seeeduino XIAO port may disappear when user programming process fails. we can solve this problem by the following operation: Use tweezers or short lines to short the RST pins in the diagram twice, we'll see the orange LED lights flicker on and light up, at this point, the chip enters Bootloader mode and the burn port appears again. Because the samd21 chip has two partitions, one is the Bootloader and the other is the user program. The product will burn a bootloader code in the system memory when it leaves the factory. We can switch modes with a quick reset.
+|Dimensions|20×17.5×3.5mm|
 
 
 
@@ -63,6 +58,89 @@ Seeeduino XIAO has 14 GPIO PINs, which can be used for 11 digital interfaces, 11
 
     1.The MCU of this design is powered by 3.3v, please pay attention not to introduce the IO level of 5V into the IO interface of the system, otherwise the chip may be damaged;
     2.Please pay attention to use, do not lift the shield cover.
+    
+    
+### Reset
+
+
+Sometimes the Seeeduino XIAO port may disappear when user programming process fails. we can solve this problem by the following operation: 
+
+- Connect the Seeeduino XIAO to your computer.
+- Use tweezers or short lines to short the RST pins in the diagram twice.
+- The orange LED lights flicker on and light up.
+
+At this point, the chip enters Bootloader mode and the burn port appears again. Because the samd21 chip has two partitions, one is the Bootloader and the other is the user program. The product will burn a bootloader code in the system memory when it leaves the factory. We can switch modes with a quick reset.
+
+
+![](https://github.com/SeeedDocument/Seeeduino-XIAO/raw/master/img/XIAO-reset.gif)
+
+
+### Interrupt
+
+
+All pins on Seeeduino XIAO support interrupts, but two pins cannot be used at the same time: 5 pin and 7 pin. For more detail about Interrupt please check [here](https://github.com/Seeed-Studio/ArduinoCore-samd/blob/master/variants/XIAO_m0/variant.cpp).
+
+
+### Pin Multuiplexing
+
+We don't need to configure the pins ourselves, after using the pins, you can call a function directly.
+
+- Use pin 6 as the digital pin:
+
+```c
+const int buttonPin = 6;     // the number of the pushbutton pin
+const int ledPin =  13;      // the number of the LED pin
+
+int buttonState = 0;         // variable for reading the pushbutton status
+
+void setup() {
+  // initialize the LED pin as an output:
+  pinMode(ledPin, OUTPUT);
+  // initialize the pushbutton pin as an input:
+  pinMode(buttonPin, INPUT);
+}
+
+void loop() {
+  // read the state of the pushbutton value:
+  buttonState = digitalRead(buttonPin);
+
+  // check if the pushbutton is pressed. If it is, the buttonState is HIGH:
+  if (buttonState == HIGH) {
+    // turn LED on:
+    digitalWrite(ledPin, HIGH);
+  } else {
+    // turn LED off:
+    digitalWrite(ledPin, LOW);
+  }
+}
+```
+
+- Use pin 6 as the analog pin:
+
+```c
+int sensorPin = A6;    // select the input pin for the potentiometer
+int ledPin = 13;      // select the pin for the LED
+int sensorValue = 0;  // variable to store the value coming from the sensor
+
+void setup() {
+  // declare the ledPin as an OUTPUT:
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  // read the value from the sensor:
+  sensorValue = analogRead(sensorPin);
+  // turn the ledPin on
+  digitalWrite(ledPin, HIGH);
+  // stop the program for <sensorValue> milliseconds:
+  delay(sensorValue);
+  // turn the ledPin off:
+  digitalWrite(ledPin, LOW);
+  // stop the program for for <sensorValue> milliseconds:
+  delay(sensorValue);
+}
+```
+
 
 
 ## Getting Started
@@ -123,7 +201,7 @@ Open the LED blink example sketch: **File > Examples >01.Basics > Blink**.
 
 - **Step 3. Add Seeeduino to your Arduino IDE**
 
-Click on **File > Preference**, and fill Additional Boards Manager URLs with below url:
+Click on **File > Preference**, and fill Additional Boards Manager URLs with the url below:
     *https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_seeeduino_boards_index.json*
 
 
@@ -133,7 +211,7 @@ Click on **File > Preference**, and fill Additional Boards Manager URLs with bel
 Click **Tools-> Board-> Boards Manager...**, print  keyword "**Seeeduino XIAO**" in the searching blank. Here comes the "Seeed SAMD Boards". Install it.
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino-XIAO/master/img/Seeeduino-XIAO-board.png)
+![](https://github.com/SeeedDocument/Seeeduino-XIAO/raw/master/img/XIAO-board.png)
 
 
 - **Step 4. Select your board and port** 
@@ -163,10 +241,11 @@ Now, simply click the "Upload" button in the environment. Wait a few seconds and
  
  A few seconds after the upload finishes, you should see the pin 13 (L) LED on the board start to blink (in orange). If it does, congratulations! You've gotten Arduino up-and-running. If you have problems, please see the troubleshooting suggestions.
 
+
 ## The sample application
 
 
- - [USB to Serial Port](https://github.com/SeeedDocument/Seeeduino-XIAO/blob/master/USB-to-Serial-Port.md)
+ - [How to use Seeeduino XIAO to log in to your Raspberry PI](https://github.com/SeeedDocument/Seeeduino-XIAO/blob/master/How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI.md)
 
 
 
