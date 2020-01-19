@@ -44,7 +44,6 @@ Seeeduino XIAO has 14 GPIO PINs, which can be used for 11 digital interfaces, 11
 
 
 
-
 ## Hardware Overview
 
 
@@ -118,9 +117,7 @@ void loop() {
 - Use pin 6 as the analog pin:
 
 ```c
-int sensorPin = A6;    // select the input pin for the potentiometer
-int ledPin = 13;      // select the pin for the LED
-int sensorValue = 0;  // variable to store the value coming from the sensor
+
 
 void setup() {
   // declare the ledPin as an OUTPUT:
@@ -141,7 +138,55 @@ void loop() {
 }
 ```
 
+- Use pin 6 as the TX pin of UART(TX pin of UART is pin 7):
 
+```c
+
+void setup() {
+    Serial1.begin(115200);
+    while (!Serial);
+}
+
+void loop() {
+    Serial1.println("Hello,World");
+    delay(1000);
+}
+```
+
+- Use pin 5 as the SCL pin of IIC(SDA pin of IIC is pin 4):
+
+```c
+// Wire Master Writer
+// by Nicholas Zambetti <http://www.zambetti.com>
+
+// Demonstrates use of the Wire library
+// Writes data to an I2C/TWI slave device
+// Refer to the "Wire Slave Receiver" example for use with this
+
+// Created 29 March 2006
+
+// This example code is in the public domain.
+
+
+#include <Wire.h>
+
+void setup()
+{
+  Wire.begin(); // join i2c bus (address optional for master)
+}
+
+byte x = 0;
+
+void loop()
+{
+  Wire.beginTransmission(4); // transmit to device #4
+  Wire.write("x is ");        // sends five bytes
+  Wire.write(x);              // sends one byte  
+  Wire.endTransmission();    // stop transmitting
+  x++;
+  delay(500);
+}
+```
 
 ## Getting Started
 
