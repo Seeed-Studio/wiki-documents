@@ -11,9 +11,9 @@ sku: 101020692
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600/master/img/Grove-12-bit-Magnetic-Rotary-Sensor-AS5600-preview.jpg)
 
-The Grove - AS5600 is a programmable 12-bit high-resolution contactless magnetic rotary position sensor. The Grove - AS5600 can work as a magnetic potentialmeter or a magnetic encoder with excellent realiability and durability.
+The Grove - AS5600 is a programmable 12-bit high-resolution contactless magnetic rotary position sensor. The Grove - AS5600 can work as a magnetic potentiometer or a magnetic encoder with excellent reliability and durability.
 
-Compared with the traditional potentialmeter/encoder, the Grove - AS5600 has significant advantages: high precision, non-contact, no rotation angle limitation. All those advantages making it suitable for non-contact angle measurement applications, such as the robot arm, tripod head, moter closed-loop control, machine tool axis postioning.
+Compared with the traditional potentiometer/encoder, the Grove - AS5600 has significant advantages: high precision, non-contact, no rotation angle limitation. All those advantages making it suitable for non-contact angle measurement applications, such as the robot arm, tripod head, motor closed-loop control, machine tool axis positioning.
 
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600-p-4192.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
@@ -39,7 +39,7 @@ Compared with the traditional potentialmeter/encoder, the Grove - AS5600 has sig
 
 ## Working Principle
 
-Grove - AS5600 is based on the Hall Effect, the build-in Hall sensor can detect changes in the direction of the magnetic field, thus there is also no rotation angle limit. The magnetic field direction information is amplified by the amplifier, with the help of the build-in 12-bit A/D, the AS5600 module can output 4096 positions per round. The output is selectable, you can either use the I2C interface to output the RAW data or output the PWM wave/Analog wave via the OUT pin. Meanwhile, the maximum anlgle is also programmable, you can set the maximum angle from 18° to 360°, which means that the measured angular accuracy is up to 18/4096.
+Grove - AS5600 is based on the Hall Effect, the build-in Hall sensor can detect changes in the direction of the magnetic field, thus there is also no rotation angle limit. The magnetic field direction information is amplified by the amplifier, with the help of the build-in 12-bit A/D, the AS5600 module can output 4096 positions per round. The output is selectable, you can either use the I2C interface to output the RAW data or output the PWM wave/Analog wave via the OUT pin. Meanwhile, the maximum angle is also programmable, you can set the maximum angle from 18° to 360°, which means that the measured angular accuracy is up to 18/4096.
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600/master/img/Grove-12-bit-Magnetic-Rotary-Sensor-AS5600-show-NS.jpg)
 
@@ -84,7 +84,7 @@ Grove - AS5600 is based on the Hall Effect, the build-in Hall sensor can detect 
 
 - **Step 1.** Connect the Grove - 12-bit Magnetic Rotary Position Sensor / Encoder (AS5600) to the **I2C** port of the Base Shield.
 
-- **Step 2.** Plug Grove - Base Shield into Seeduino.
+- **Step 2.** Plug Grove - Base Shield into Seeeduino.
 
 - **Step 3** Connect the Seeeduino to PC via a USB cable.
 
@@ -166,13 +166,17 @@ void loop()
 
 - **Step 5.** The result should be like this when it detected magnet underneath the sensor:
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600/master/img/Results.jpg)
+<div align=center><img src="https://raw.githubusercontent.com/SeeedDocument/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600/master/img/AS5600%20with%20Calibrators.gif"/></div>
+
+!!!Note
+        A calibrator is used here. The Calibrator 2D file is listed in Resources, so feel free to download and laser cut yourself!
+
 
 ## FAQ
 
 **Q1#** How to achieve maximum accuracy?
 
-**A1:** Make sure the Grove - 12-bit Magnetic Rotary Position Sensor / Encoder (AS5600) sensor is at a fixed distance/position to the magnet. Rotate the magnet to get from angle 0 all the way to angle 360 at first time to ensure positoning is correct.
+**A1:** Make sure the Grove - 12-bit Magnetic Rotary Position Sensor / Encoder (AS5600) sensor is at a fixed distance/position to the magnet. Rotate the magnet to get from angle 0 all the way to angle 360 at first time to ensure positioning is correct.
 
 The [AS5600](https://github.com/Seeed-Studio/Seeed_Arduino_AS5600) library also provides a full testing function to operate for the sensor.
 
@@ -187,10 +191,7 @@ The [AS5600](https://github.com/Seeed-Studio/Seeed_Arduino_AS5600) library also 
 
 - **[ZIP]** [Grove - 12-bit Magnetic Rotary Position Sensor / Encoder (AS5600) Schematic file](https://github.com/SeeedDocument/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600/raw/master/res/Grove%20-%2012-bit%20Magnetic%20Rotary%20Position%20Sensor%20(AS5600).zip)
 - **[PDF]** [AS5600 Datasheet](https://github.com/SeeedDocument/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600/raw/master/res/Magnetic%20Rotary%20Position%20Sensor%20AS5600%20Datasheet.pdf)
+- **[DWG]** [Grove - 12 bit Magnetic Rotary Position Sensor(AS5600) Calibrator](https://github.com/SeeedDocument/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600/raw/master/res/Grove%20-%2012%20bit%20Magnetic%20Rotary%20Position%20Sensor(AS5600)%20Calibrator.dwg)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>
-
-
-
-

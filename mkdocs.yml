@@ -557,6 +557,8 @@ pages:
           - Grove - 12 Channel Capacitive Touch Keypad (ATtiny1616): Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616-.md
           - Grove - 12 bit Magnetic Rotary Position Sensor(AS5600): Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600.md
           - Grove - High Precision Barometric Pressure Sensor DPS310: Grove-High-Precision-Barometric-Pressure-Sensor-DPS310.md
+          - Grove - Turbidity Sensor Meter for Arduino V1.0: Grove-Turbidity-Sensor-Meter-for-Arduino-V1.0.md
+          - Grove - TDS Sensor: Grove-TDS-Sensor.md
           
           
       - Actuator:
