@@ -144,8 +144,13 @@ The result should be like:
 
 ![](https://github.com/SeeedDocument/Grove-Infrared_Temperature_Sensor/raw/master/img/result_arduino.png)
 
+# Grove-Infrared Temperature Sensor V1.0
+<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Temperature_Sensor/master/res/Infrared_Temperature_Sensor_V1.0_egale_file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
 
-
+# Grove-Infrared Temperature Sensor V1.2
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-Infrared_Temperature_Sensor/raw/master/res/Grove-Infrared_Temperature_Sensor_v1.2.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
 
 ## Resources
 

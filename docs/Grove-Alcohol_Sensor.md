@@ -166,7 +166,16 @@ According to the figure, we can see that the minimum concentration we can test i
 <p> d. Maintain proper working voltage.</p>
 </div>
 
-Resources
+# Grove-Alcohol Sensor
+<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-Alcohol_Sensor/master/res/Twig_-_Alcohol_Sensor_Eagle_Files.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+# Grove-Alcohol Sensor v1.2
+<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-Alcohol_Sensor/master/res/Grove-Alcohol_Sensor_sch_pcbv1.2.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
+# Resources
 ---------
 
 - [Grove-Alcohol Sensor Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-Alcohol_Sensor/master/res/Twig_-_Alcohol_Sensor_Eagle_Files.zip)

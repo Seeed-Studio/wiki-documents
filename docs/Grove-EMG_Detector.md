@@ -88,6 +88,15 @@ When you are moving, you can find that the level of Led Bar will change.
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-EMG_Detector/master/img/Grove_emg_demo_2.gif)
 
+# Grove-EMG Sensor v1.0
+<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-EMG_Detector/master/res/Grove-EMG_Sensor_v1.0.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+# Grove-EMG Sensor v1.1
+<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-EMG_Detector/master/res/Grove-EMG_Sensor_v1.1_Eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 Resources
 --------
 

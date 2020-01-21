@@ -144,13 +144,14 @@ AIN3: 4095
 Please click **[here](http://support.seeedstudio.com/knowledgebase/articles/1831468-grove-base-hat-sku-tbd)** to see all Grove_Base_HAT FAQs.
 
 
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove_Base_HAT/raw/master/res/Raspberry%20Pi%20Grove%20Base%20HAT.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ## Resources
 
 - **[PDF]** [Download Wiki PDF](https://github.com/SeeedDocument/Grove_Base_HAT/raw/master/res/Grove_Base_HAT.pdf)
-- **[PDF]** [Grove Base HAT SCH](https://github.com/SeeedDocument/Grove_Base_HAT/raw/master/res/Raspberry%20Pi%20Grove%20Base%20HAT%20SCH.pdf)
-- **[PDF]** [Grove Base HAT BRD](https://github.com/SeeedDocument/Grove_Base_HAT/raw/master/res/Raspberry%20Pi%20Grove%20Base%20HAT%20BRD.pdf)
-- **[Eagle]** [Grove Base HAT SCH](https://github.com/SeeedDocument/Grove_Base_HAT/raw/master/res/Raspberry%20Pi%20Grove%20Base%20HAT%20SCH.zip)
-- **[Eagle]** [Grove Base HAT BRD](https://github.com/SeeedDocument/Grove_Base_HAT/raw/master/res/Raspberry%20Pi%20Grove%20Base%20HAT%20PCB.zip)
+- **[Eagle]** [Grove Base HAT Schematic file](https://github.com/SeeedDocument/Grove_Base_HAT/raw/master/res/Raspberry%20Pi%20Grove%20Base%20HAT.zip)
 - **[Datasheet]** [ADS1015](https://github.com/SeeedDocument/Grove_Base_HAT/raw/master/res/ads1015.pdf)
 - **[Datasheet]** [TXS0108](https://github.com/SeeedDocument/Grove_Base_HAT/raw/master/res/txs0108e.pdf)
 - **[PDF]** [Grove Base HAT Mechanical](https://github.com/SeeedDocument/Grove_Base_HAT/raw/master/res/hat-board-mechanical.pdf)

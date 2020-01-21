@@ -105,12 +105,14 @@ We can see:
 ![](https://github.com/SeeedDocument/Grove-IMU_10DOF_v2.0/raw/master/img/ardu_result.jpg)
 
 
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-IMU_10DOF_v2.0/raw/master/res/Grove%20-%20IMU%2010DOF%20v2.0.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ## Resources
 
 
 -   **[Eagle]** [Grove - IMU 10DOF v2 eagle file](https://github.com/SeeedDocument/Grove-IMU_10DOF_v2.0/raw/master/res/Grove%20-%20IMU%2010DOF%20v2.0.zip)
--   **[PDF]** [Grove - IMU 10DOF v2 schematics pdf file](https://github.com/SeeedDocument/Grove-IMU_10DOF_v2.0/raw/master/res/Grove%20-%20IMU%2010DOF%20v2.0%20Sch.pdf)
--   **[PDF]** [Grove - IMU 10DOF v2 PCB pdf file](https://github.com/SeeedDocument/Grove-IMU_10DOF_v2.0/raw/master/res/Grove%20-%20IMU%2010DOF%20v2.0%20PCB.pdf)
 -   **[Library]** [Get library from github](https://github.com/Seeed-Studio/Grove_IMU_10DOF_v2.0/archive/master.zip)
 -   **[Dtasheet]** [BMP280 datasheet](https://github.com/SeeedDocument/Grove-IMU_10DOF_v2.0/raw/master/res/BMP280-Datasheet.pdf)
 -   **[Dtasheet]** [MPU-9250 datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-IMU_10DOF/master/res/MPU-9250A_Product_Specification.pdf)

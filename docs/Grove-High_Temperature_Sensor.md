@@ -245,14 +245,14 @@ pi@raspberrypi:~/GrovePi/Software/Python/grove_hightemperature_sensor $ python h
 - Step 3. run getTemperature.ino to read the temperature.  
 
 
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-High_Temperature_Sensor/raw/master/res/Grove%20-%20High%20Temperature%20Sensor%20v1.0.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
 
 ## Resources
 
 - **[PDF]** [Download Wiki PDF](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/res/Grove-High_Temperature_Sensor.pdf)
-- **[PDF]** [Grove - High Temperature Sensor SCH PDF](https://raw.githubusercontent.com/SeeedDocument/Grove-High_Temperature_Sensor/master/res/Grove-High_Temperature_Sensor_v1.0.pdf)
-- **[PDF]** [Grove - High Temperature Sensor PCB PDF](https://github.com/SeeedDocument/Grove-High_Temperature_Sensor/raw/master/res/Grove%20-%20High%20Temperature%20Sensor%20v1.0%20-%20PCB.pdf)
-- **[Eagle]** [Grove - High Temperature Sensor Eagle SCH](https://github.com/SeeedDocument/Grove-High_Temperature_Sensor/raw/master/res/Grove%20-%20High%20Temperature%20Sensor%20v1.0.sch.zip)
-- **[Eagle]** [Grove - High Temperature Sensor Eagle PCB](https://github.com/SeeedDocument/Grove-High_Temperature_Sensor/raw/master/res/Grove%20-%20High%20Temperature%20Sensor%20v1.0%20.brd.zip)
+- **[Eagle]** [Grove - High Temperature Sensor Eagle file](https://github.com/SeeedDocument/Grove-High_Temperature_Sensor/raw/master/res/Grove%20-%20High%20Temperature%20Sensor%20v1.0.zip)
 - **[Library]** [High Temperature Sensor Library](https://github.com/Seeed-Studio/Grove_HighTemp_Sensor)
 - **[Datasheet]** [OPA333 PDF](http://www.ti.com/lit/ds/symlink/opa333.pdf)
 - **[Datasheet]** [LMV358 PDF](https://raw.githubusercontent.com/SeeedDocument/Grove-High_Temperature_Sensor/master/res/Lmv358.pdf)

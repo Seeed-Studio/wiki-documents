@@ -122,12 +122,15 @@ Plug Grove - 6-Axis Accelerometer&Gyroscope to I<sup>2</sup>C interface on Grove
 
 Download the [library](https://github.com/Seeed-Studio/Accelerometer_And_Gyroscope_LSM6DS3) for Grove - 6-Axis Accelerometer&Gyroscope. Refer to [Guide to use demos downloaded from Seeed's Github](/Guide_to_use_demos_downloaded_from_Seeed-s_Github) for quicker flashing your code to main controller board. There are three demo examples in total in sub directory ***examples***.
 
-Resources
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-6-Axis_AccelerometerAndGyroscope/raw/master/res/Grove%20-%206-Axis%20Accelerometer%26Gyroscope%20v1.0.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
+# Resources
 ---------
 
-- **[Eagle]** [Grove - 6-Axis Accelerometer&Gyroscopev 1.0](https://github.com/SeeedDocument/Grove-6-Axis_AccelerometerAndGyroscope/raw/master/res/Grove%20-%206-Axis%20AccelerometerGyroscopev1.0.zip)
-- **[PDF]** [Grove - 6-Axis Accelerometer&Gyroscopev 1.0 SCH](https://github.com/SeeedDocument/Grove-6-Axis_AccelerometerAndGyroscope/raw/master/res/Grove%20-%206-Axis%20Accelerometer%26Gyroscope%20v1.0-SCH.zip)
-- **[PDF]** [Grove - 6-Axis Accelerometer&Gyroscopev 1.0 PCB](https://github.com/SeeedDocument/Grove-6-Axis_AccelerometerAndGyroscope/raw/master/res/Grove%20-%206-Axis%20Accelerometer%26Gyroscope%20v1.0_PCB.pdf)
+- **[Eagle]** [Grove - 6-Axis Accelerometer&Gyroscopev 1.0 Eagle file](https://github.com/SeeedDocument/Grove-6-Axis_AccelerometerAndGyroscope/raw/master/res/Grove%20-%206-Axis%20Accelerometer%26Gyroscope%20v1.0.zip)
 -  **[Library]** [Grove-6-Axis_AccelerometerAndGyroscope](https://github.com/Seeed-Studio/Accelerometer_And_Gyroscope_LSM6DS3)
 -  **[Datasheet]** [Datasheet of LSM6DS3](https://raw.githubusercontent.com/SeeedDocument/Grove-6-Axis_AccelerometerAndGyroscope/master/res/LSM6DS3TR.pdf)
 

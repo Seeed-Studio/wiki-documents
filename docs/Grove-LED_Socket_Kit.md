@@ -123,6 +123,15 @@ cd GrovePi/Software/Python/
 sudo python grove_led_blink.py
 ```
 
+# Grove - LED
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-LED_Socket_Kit/raw/master/res/Grove-LED_v1.0_Source_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+# Grove - LED v1.3
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-LED_Socket_Kit/raw/master/res/Grove-LED_v1.3_Schematics.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##  Resources
 ---
 *   [Grove - LED V1.3 Source files (Eagle and pdf)](https://github.com/SeeedDocument/Grove-LED_Socket_Kit/raw/master/res/Grove-LED_v1.3_Schematics.zip)

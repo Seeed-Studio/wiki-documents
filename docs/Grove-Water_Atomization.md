@@ -197,6 +197,11 @@ Upload the program to your Arduino/Seeeduino.
 !!!Success
     When the code finishes uploaded, the water atomization starts atomize when you push the button.
 
+
+<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Atomization/master/res/Schematic_file_in_Eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 Resources
 ---------
 

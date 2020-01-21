@@ -218,9 +218,14 @@ sudo python grove_mosfet.py
 
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-MOSFET/master/img/pi_result.png)|
 
+
+<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-MOSFET/master/res/Grove-MOSFET_Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ## Resources
 
-- **[Eagle]** [Grove - MOSFET Schematic](https://raw.githubusercontent.com/SeeedDocument/Grove-MOSFET/master/res/Grove-MOSFET_Eagle_File.zip)
+- **[Eagle]** [Grove - MOSFET Schematic file](https://raw.githubusercontent.com/SeeedDocument/Grove-MOSFET/master/res/Grove-MOSFET_Eagle_File.zip)
 - **[PDF]** [Grove - MOSFET Schematic PDF](https://github.com/SeeedDocument/Grove-MOSFET/raw/master/res/Grove%20-%20MOSFET%20.pdf)
 - **[Datasheet]** [CJQ4435 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-MOSFET/master/res/CJQ4435.pdf)
 - **[WIKI]** [MOSFET Wikipedia](https://en.wikipedia.org/wiki/MOSFET)

@@ -220,8 +220,13 @@ The below chart shows the relationships between the band rate signal band width 
 
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_LoRa_Radio/master/img/DateRate.png)
 
+# 433MHz
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove_LoRa_Radio/blob/master/res/433_eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
 
-
+# 868MHz
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove_LoRa_Radio/blob/master/res/868_eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
 
 
 ##  Resources

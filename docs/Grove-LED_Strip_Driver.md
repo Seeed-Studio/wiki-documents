@@ -135,6 +135,15 @@ It can drive an LED strip 1 to 2 meters long with 9 V, while 1 to 5 meters long 
 3.In case of two LED strips, upload the DualLEDStrip demo code instead.
 ![](https://github.com/SeeedDocument/Grove-LED_Strip_Driver/raw/master/img/DualLEDStripDemo.jpg)
 
+# LED Strip driver eagle files V1.1
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-LED_Strip_Driver/raw/master/res/LED_Strip_driver_eagle_files.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+# LED Strip driver eagle files V1.2
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-LED_Strip_Driver/raw/master/res/LED_Strip_Driver_eagle_file_V1.2.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##   Resources
 ---
 *   [LED Strip driver eagle files V1.1](https://github.com/SeeedDocument/Grove-LED_Strip_Driver/raw/master/res/LED_Strip_driver_eagle_files.zip)
