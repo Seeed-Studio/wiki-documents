@@ -78,3 +78,21 @@ function setSiteMaps(sites){
 
   setSiteRule()
 
+// 邮箱输入 阻止F/S触发搜索聚焦
+if(document.getElementById("mce-EMAIL")){
+    document.getElementById("mce-EMAIL").addEventListener("keydown",function(e){
+    window.event ? window.event.cancelBubble = true : e.stopPropagation();
+  },false); 
+  }
+   
+  
+  /* add ACAD View JS Script */
+  if(!document.getElementById("acac-script")){
+    const acadScript = document.createElement("script");
+    acadScript.id = "acad-script";
+    acadScript.setAttribute("async","async");
+    acadScript.setAttribute("type","text/javascript");
+    acadScript.setAttribute("src","https://viewer.altium.com/client/static/js/embed.js");
+    document.head.appendChild(acadScript);
+  }
+    /* add ACAD View JS Script END*/
