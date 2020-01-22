@@ -161,6 +161,21 @@
             "title": "Seeeduino v4.2"
         },
         {
+            "location": "/Seeeduino-XIAO/",
+            "text": "",
+            "title": "Seeeduino XIAO"
+        },
+        {
+            "location": "/SeeedStudio-GD32-RISC-V-Dev-Board/",
+            "text": "",
+            "title": "SeeedStudio GD32 RISC-V Dev Board"
+        },
+        {
+            "location": "/Seeeduino-Crypto-ATmega4809-ECC608/",
+            "text": "",
+            "title": "Seeeduino Crypto (ATmega4809 ECC608)"
+        },
+        {
             "location": "/Shield_Bot_V1.1/",
             "text": "",
             "title": "Shield Bot V1.1"
@@ -376,6 +391,16 @@
             "title": "Seeed Studio BeagleBone Green Gateway Baseboard"
         },
         {
+            "location": "/Seeed-Studio-BeagleBone-Green-LCD-Cape-with-Resistive-Touch/",
+            "text": "",
+            "title": "Seeed Studio BeagleBone Green LCD Cape with Resistive Touch"
+        },
+        {
+            "location": "/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide/",
+            "text": "",
+            "title": "Sensecap LoRaWAN Gateway and Wireless Sensor User Guide"
+        },
+        {
             "location": "/ReSpeaker/",
             "text": "",
             "title": "ReSpeaker Introduction"
@@ -436,9 +461,14 @@
             "title": "ReSpeaker Mic Array v2.0"
         },
         {
-            "location": "/ReSpeaker_Mic_Array_v2.1/",
+            "location": "/ReSpeaker-USB-Mic-Array/",
             "text": "",
-            "title": "ReSpeaker Mic Array v2.1"
+            "title": "ReSpeaker USB Mic Array"
+        },
+        {
+            "location": "/respeaker-USB-Mics/",
+            "text": "",
+            "title": "ReSpeaker USB Mic Array"
         },
         {
             "location": "/Snips_Voice_Interaction_Satellite_Kit/",
@@ -1681,6 +1711,11 @@
             "title": "Grove - Infrared Temperature Sensor Array(AMG8833)"
         },
         {
+            "location": "/Grove-Integrated-Pressure-Sensor-Kit/",
+            "text": "",
+            "title": "Grove - Integrated Pressure Sensor Kit"
+        },
+        {
             "location": "/Grove-Light_Sensor/",
             "text": "",
             "title": "Grove - Light Sensor"
@@ -1861,6 +1896,11 @@
             "title": "Grove - Temperature&amp;Humidity Sensor (High-Accuracy &amp;Mini) v1.0"
         },
         {
+            "location": "/Grove-Thermal-Imaging-Camera-IR-Array/",
+            "text": "",
+            "title": "Grove - Thermal Imaging Camera IR Array"
+        },
+        {
             "location": "/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/",
             "text": "",
             "title": "Grove - I2C High Accuracy Temperature Sensor(MCP9808)"
@@ -1993,7 +2033,27 @@
         {
             "location": "/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616-/",
             "text": "",
-            "title": "Grove 12 Channel Capacitive Touch Keypad (ATtiny1616)"
+            "title": "Grove - 12 Channel Capacitive Touch Keypad (ATtiny1616)"
+        },
+        {
+            "location": "/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600/",
+            "text": "",
+            "title": "Grove - 12 bit Magnetic Rotary Position Sensor(AS5600)"
+        },
+        {
+            "location": "/Grove-High-Precision-Barometric-Pressure-Sensor-DPS310/",
+            "text": "",
+            "title": "Grove - High Precision Barometric Pressure Sensor DPS310"
+        },
+        {
+            "location": "/Grove-Turbidity-Sensor-Meter-for-Arduino-V1.0/",
+            "text": "",
+            "title": "Grove - Turbidity Sensor Meter for Arduino V1.0"
+        },
+        {
+            "location": "/Grove-TDS-Sensor/",
+            "text": "",
+            "title": "Grove - TDS Sensor"
         },
         {
             "location": "/Actuator/",
@@ -2536,6 +2596,11 @@
             "title": "Grove Beginner Kit for Arduino"
         },
         {
+            "location": "/Grove-Creator-Kit-1/",
+            "text": "",
+            "title": "Grove Creator Kit"
+        },
+        {
             "location": "/IoT/",
             "text": "",
             "title": "IoT Introduction"
@@ -2798,7 +2863,7 @@
         {
             "location": "/G1-1-4_Water_Flow_sensor/",
             "text": "",
-            "title": "G1/4 inch Water Flow sensor"
+            "title": "G5/4 inch Water Flow sensor"
         },
         {
             "location": "/G1-8_Water_Flow_Sensor/",
@@ -3089,6 +3154,11 @@
             "location": "/How_to_use_and_write_a_library/",
             "text": "",
             "title": "How to use and write a library"
+        },
+        {
+            "location": "/How-to-build-a-home-soft-router-and-NAS-With-ReComputer/",
+            "text": "",
+            "title": "How to build a home soft router and NAS With ReComputer"
         },
         {
             "location": "/I2C_And_I2C_Address_of_Seeed_Product/",
