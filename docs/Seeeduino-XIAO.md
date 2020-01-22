@@ -23,7 +23,7 @@ Seeeduino XIAO has 14 GPIO PINs, which can be used for 11 digital interfaces, 11
 - Powerful CPU: ARM® Cortex®-M0+ 32bit 48MHz microcontroller(SAMD21G18) with 256KB Flash,32KB SRAM.
 - Flexible compatibility: Compatible with Arduino IDE.
 - Easy project operation: Breadboard-friendly.
-- Small size: As small as a thumb(23.5x17.5mm) for wearable devices and small projects.
+- Small size: As small as a thumb(20x17.5mm) for wearable devices and small projects.
 - Multiple development interfaces: 11 digital/analog pins, 10 PWM Pins, 1 DAC output, 1 SWD Bonding pad interface, 1 I2C interface, 1 UART interface, 1 SPI interface.
 
 ## Specification
