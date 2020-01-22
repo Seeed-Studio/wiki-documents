@@ -136,6 +136,13 @@ To flash a new firmware:
     -   On Windows, replace firmware.bin with the above firmware
     -   On Linux/Mac, use command: dd if={new\_firmware.bin} of={firmware.bin} conv=notrunc
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Arch_Link/master/res/Arch_Link_v1.0_Eagle.rar" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 Resources
 ---------
 

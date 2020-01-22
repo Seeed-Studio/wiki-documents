@@ -132,6 +132,13 @@ SCL  -  RX
 - (1)Fasten the sensor snugly makes tight contact with your skin and maintain table (no motion) while measuring to acquire accurate heart rate. If the sensor does not contact the skin well or have extreme motion while measuring that the heart rate will not be measured correctly.
 - (2)Sensor's performance is optimized with greater blood flow. On cold days or users have poor circulation(ex: cold hands, fingers and cold feet) the sensor performance (heart rate accuracy)can be impacted because of lower blood flow in the measuring position.
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-Finger-clip_Heart_Rate_Sensor_with_shell/raw/master/res/Grove%20-%20Finger-clip%20Heart%20Rate%20Sensor%20eagle%20file.rar" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##  Resources
 ---
 *   [Grove - Finger-clip Heart Rate Sensor eagle file](https://github.com/SeeedDocument/Grove-Finger-clip_Heart_Rate_Sensor_with_shell/raw/master/res/Grove%20-%20Finger-clip%20Heart%20Rate%20Sensor%20eagle%20file.rar)

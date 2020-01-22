@@ -301,6 +301,12 @@ You can control the quality/duration trade off by controlling the sampling frequ
 The R7 is 24K when it is shipped to your hand, you can change it to 38K/44K to get a longer duration of recording, with the tradeoff of lower sample rate.
 
 
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-Sound_Recorder/master/res/Sound_Recorder_Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 Resources
 ---------
 

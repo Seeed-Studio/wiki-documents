@@ -1079,6 +1079,12 @@ We define some register data of gesture, refer to the following table.
 |Wave|	data==GES_WAVE_FLAG|	0x44|Gesture detected	|No gesture detected|
 
 
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove_Gesture_V_1.0/raw/master/res/Grove_-_Gesture_v1.0_sch_pcb.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ## Resources
 
 - **[ZIP]** [Grove - Gesture_v1.0 sch pcb.zip](https://github.com/SeeedDocument/Grove_Gesture_V_1.0/raw/master/res/Grove_-_Gesture_v1.0_sch_pcb.zip)

@@ -52,6 +52,12 @@ The Grove Shield for Intel Joule is the key to bridge the Intel Joule to the fam
 |[**Gear Stepper Motor with Driver**](https://www.seeedstudio.com/Gear-Stepper-Motor-with-Driver-p-1685.html)|![](https://github.com/SeeedDocument/Grove_Maker_Kit_for_Intel_Joule/raw/master/img/Motor%20with%20Driver.jpg)|It allows you to drive a stepper motor by connecting the stepper motor to the driver board, and connect the driver to any digital port on Grove Shield for Intel Joule that has a PWM output. Then you can control your stepper motor easily with lines of code.
 
 
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove_Maker_Kit_for_Intel_Joule/raw/master/res/Grove%20Shield%20for%20Intel%20Joule_eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ## Resources
 - [Grove Shield for Intel Joule v1.0.pdf](https://github.com/SeeedDocument/Grove_Maker_Kit_for_Intel_Joule/raw/master/res/Grove%20Shield%20for%20Intel%20Joule%20v1.0.pdf)
 - [Grove Shield for Intel Joule_eagle.zip](https://github.com/SeeedDocument/Grove_Maker_Kit_for_Intel_Joule/raw/master/res/Grove%20Shield%20for%20Intel%20Joule_eagle.zip)

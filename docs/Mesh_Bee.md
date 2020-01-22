@@ -905,6 +905,14 @@ Download page: [http://www.nxp.com/techzones/wireless-connectivity/smart-energy.
 
 We created a google group for Mesh Bee's general discussion and development related topics. Please follow this link to see what's happening there: [https://groups.google.com/forum/#!forum/seeedstudio-mesh-bee-discussion-group](https://groups.google.com/forum/#!forum/seeedstudio-mesh-bee-discussion-group)
 
+
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Mesh_Bee/raw/master/res/Mesh_Bee_v1.0_eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##   9. Resources
 
 *   [Eagle file for Mesh Bee v1.0](https://github.com/SeeedDocument/Mesh_Bee/raw/master/res/Mesh_Bee_v1.0_eagle.zip)

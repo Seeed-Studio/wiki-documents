@@ -148,6 +148,13 @@ Use the standard USB port on the shield to supply power to mobile devices.
 
 The graph above describes the conversion efficiency of boost circuit of Energy Shield. Boost circuit boosts the voltage of Lipo battery, which is typically 4.2V or 3.7V with the drop of remaining power, to 5V and supplies outward. You can find this conversion efficiency peaks when output current is around 200mA.
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Energy_Shield/master/res/Energy_Shield_Eagel_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 Resources
 ---------
 

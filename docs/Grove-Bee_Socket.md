@@ -64,6 +64,13 @@ Using the Grove - Bee Socket, it is easy to control Bee Modules by Arduino/Seeed
 
 If you need further information about how to communicate, please refer to WIKI pages of relevant Bee modules.
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-Bee_Socket/raw/master/res/Bee_Socket_Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##  Resource
 ---
 [Bee Socket Eagle File](https://github.com/SeeedDocument/Grove-Bee_Socket/raw/master/res/Bee_Socket_Eagle_File.zip)

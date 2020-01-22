@@ -423,6 +423,13 @@ This method is used to transmit and receive data to and from initiator. This cod
 
 ```
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="http://wiki.seeedstudio.com/images/8/81/NFC_Shield_V0.9b_Schematic_Board_Files.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##   Resources   ##
 
 - **[Library]**[PN532_SPI Library For NFC Shield](https://github.com/SeeedDocument/NFC_Shield_V1.0/raw/master/res/PN532_SPI_V2.zip)

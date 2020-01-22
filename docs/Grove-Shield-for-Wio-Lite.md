@@ -94,7 +94,10 @@ For the pinout, please refer to the silkscreen on the backside of this shield.
 ![](https://github.com/SeeedDocument/Grove-Shield-for-Wio-Lite/raw/master/img/wiki-pinout.jpg)
 
 
+## Schematic Online Viewer
 
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-Shield-for-Wio-Lite/raw/master/res/Grove%20Shield%20for%20Wio%20Lite_v1.0_190716.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
 
 
 ## Resources

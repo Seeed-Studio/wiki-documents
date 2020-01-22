@@ -70,6 +70,14 @@ Choose "Search for the best driver in these locations", and check the box "incud
 
 Replace two file in the path of Arduino. Open up Arduino-1.0.1/hardware/arduino/cores/arduino directory, replace the file:USBCore.cpp with the new USBCore.cpp.And replace file：boards.txt with the new boards.txt in the path:Arduino-1.0.1/hardware/arduino. Now, you can program and use the seeeduino lite as you use other Arduino boards.
 
+
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Seeeduino_Lite/blob/master/resource/Seeeduino_Lite_Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ## Resources
 ---
 - [Seeeduino Lite Eagle File](https://github.com/SeeedDocument/Seeeduino_Lite/blob/master/resource/Seeeduino_Lite_Eagle_File.zip).

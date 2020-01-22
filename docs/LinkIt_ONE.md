@@ -277,6 +277,13 @@ A7: Sorry, you cannot use a 5V battery. The Linkit ONE board comes with a 3.7V L
 
 A8: The LinkitONE IDE comes with examples to use the GPRS to connect to web. Just install the latest version of IDE and check the examples. Here is [GPRS API](http://labs.mediatek.com/api/linkit-one/frames.html?frmname=topic&frmfile=index.html).
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Linkit_ONE/raw/master/resource/%5B202000437%5DLinkIt%20ONE-V1_Eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ## Resources
 
 **Schematic / Design Files:**

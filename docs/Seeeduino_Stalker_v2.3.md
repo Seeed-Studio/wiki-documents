@@ -504,6 +504,19 @@ Here is the Seeeduino Stalker FAQ, users can list the Frequently Asked Questions
 
 This documentation is licensed under the Creative Commons [Attribution-ShareAlike License 3.0](http://creativecommons.org/licenses/by-sa/3.0/) Source code and libraries are licensed under various open source license, see source code files for details.
 
+
+
+## Stalker v2.3 Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/res/Stalker_v2.3_Eagle_Files.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+## Stalker v2.2 Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/res/Stalker_v2.2_eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ###  Library and Eagle File ###
 **Note:** If you want to use Datalogger Sketches, you should first download and install Fat16lib Arduino 1.0 Version from **fat16lib**
 

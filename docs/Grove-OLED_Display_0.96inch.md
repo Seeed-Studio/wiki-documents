@@ -919,6 +919,13 @@ if __name__ == "__main__":
 sudo python3 Grove-OLED_Display_0.96inch.py
 ```
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/resource/OLED%20128x64.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ## Resources
 
 - **[PDF]** [Grove-OLED128x64 Schematic](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/resource/OLED%20128x64%20SCH.pdf)

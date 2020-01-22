@@ -35,6 +35,12 @@ Accembled view:
 ![http://www.seeedstudio.com/depot/images/large/product/protomega_01_LRG.jpg](http://www.seeedstudio.com/depot/images/large/product/protomega_01_LRG.jpg)
 
 
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="http://garden.seeedstudio.com/images/3/3d/SeeeduinoMegaProtoShield_v1.1_source.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##   Resources
 ---
 [SeeeduinoMegaProtoShield Schmatics](http://garden.seeedstudio.com/images/3/3d/SeeeduinoMegaProtoShield_v1.1_source.zip)

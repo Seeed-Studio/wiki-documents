@@ -333,6 +333,13 @@ Now join us in the [RePhone Community](http://forum.seeedstudio.com/viewforum.ph
 
 Some frequently asked questions in RePhone Community are collected and answered to the topic **["Frequently Asked Questions of RePhone (FAQ)"](http://forum.seeedstudio.com/viewtopic.php?f=71&amp;t=6664&amp;p=23753#p23753)** , the topic will be kept updating whenever a new FAQ comes out.
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="res/Xadow_Pebble_Time_Adapter.rar" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##  Resources
 ---
 The schematic diagram of Xadow Pebble Time Adapter is provided in the following link:

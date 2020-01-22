@@ -373,6 +373,20 @@ A3: Here is the connection.
 | D9      | D9           |
 | D10     | D10          |
 
+
+
+## Motor Shield V2.0 Eagle File Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Motor_Shield_V2.0/raw/master/resource/Motor_Shield_Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
+## Motor shield V2.1 Eagle File Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Motor_Shield_V2.0/raw/master/resource/Motor_shield_2.1.rar" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ## Resources
 -------------------
 - **[Eagle]** [ Motor Shield V2.0 Eagle File ](https://github.com/SeeedDocument/Motor_Shield_V2.0/raw/master/resource/Motor_Shield_Eagle_File.zip)

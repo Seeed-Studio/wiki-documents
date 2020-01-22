@@ -187,6 +187,13 @@ We’ve been looking for a better place where our backers (RePhone Users) can si
 
 Now join us in the [RePhone Community](https://community.seeedstudio.com/discover.html?t=RePhone)! Together we seek answers, make interesting stuff, care about each other, and share our experiences.
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Xadow_Pebble_Time_Adapter/master/res/Xadow_Pebble_Time_Adapter.rar" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 Resources
 ---------
 

@@ -338,6 +338,13 @@ Available at the [SeeedStudio Bazaar](http://www.seeedstudio.com/depot/):
 
 *   [Buy Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14)
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-Mixer_Pack_V2/raw/master/res/Mixer_Pack_v2_Eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 # Resources
 
 *   [Grove Mixer Pack V2 Grove - Modules Schematics (pdfs zip)](https://github.com/SeeedDocument/Grove-Mixer_Pack_V2/raw/master/res/Mixer_Pack_v2_sch_pdf.zip)

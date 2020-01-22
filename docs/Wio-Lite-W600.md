@@ -200,6 +200,12 @@ Now, simply click the "Upload" button in the environment. Wait a few seconds and
 A few seconds after the upload finishes, then the Wio Lite W600 will access the AP you set and you can use your phone to accees the AP created by Wio Lite W600
 
 
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Wio-Lite-W600/raw/master/res/Wio-Lite-W600.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ## Resources
 
 - **[ZIP]** [Wio Lite W600 Eagle file](https://github.com/SeeedDocument/Wio-Lite-W600/raw/master/res/Wio-Lite-W600.zip)

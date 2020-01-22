@@ -194,6 +194,14 @@ If you have questions or other better design ideas, you can go to our [forum](ht
 |Lipo Rider V1.0 |Revise release|Jan 11, 2011|Silas Wan|
 |Lipo Rider V1.1 |Change the Jst connector from 2.54 to 2.0|Nov 2, 2011|Mike|
 
+
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Lipo_Rider_V1.1/blob/master/res/Lipo_rider_v1.1.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##   Resources   ##
 
 - [File:Lipo rider v1.1.zip](https://github.com/SeeedDocument/Lipo_Rider_V1.1/blob/master/res/Lipo_rider_v1.1.zip)

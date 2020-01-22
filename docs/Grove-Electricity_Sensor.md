@@ -296,6 +296,11 @@ Here is the result.
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Electricity_Sensor/master/img/rpi_result.jpg)
 
 
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-Electricity_Sensor/master/res/Electricity_sensor_v1.0_eagle_files.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
 
 ## Resources
 

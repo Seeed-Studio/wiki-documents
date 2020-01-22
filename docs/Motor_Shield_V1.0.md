@@ -217,6 +217,13 @@ This is a recipe about how to control motors individually with the Seeedstudio 2
 
 [I want to make it](http://www.seeedstudio.com/recipe/171-seeed-2-0-motor-shield-individual-control.html).
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Motor-Shield_V1.0/raw/master/res/Motorshield09gerber.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##   Resources   ##
 
 - **[Datasheet]** [L298datasheet](http://wiki.seeedstudio.com/images/5/5e/L298datasheet.pdf)

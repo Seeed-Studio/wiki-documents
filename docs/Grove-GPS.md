@@ -362,6 +362,13 @@ GPS is better used outdoors. It is recommended to put your raspberry pi outside 
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/img/SIM28_module_tools_pannel.jpg)
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/res/GPS.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ## Resources
 
 - **[Eagle]** [Grove-GPS Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/res/GPS.zip)

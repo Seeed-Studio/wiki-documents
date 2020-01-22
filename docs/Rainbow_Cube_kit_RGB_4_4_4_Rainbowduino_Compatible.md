@@ -407,6 +407,13 @@ Output
 [http://0.gvt0.com/vi/cC_xqA5irLA/0.jpg](http://0.gvt0.com/vi/cC_xqA5irLA/0.jpg)
 
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/res/RainbowCube_v1.1_Panel_v1.2_Eaglefiles.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##   Resources
 ---
 *   Click here to download Rainbow Cube Kit -

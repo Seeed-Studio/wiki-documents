@@ -177,6 +177,12 @@ When **+INQ=1** command is successful, the  **red**  and **green** LEDS blink al
 (**Note:** This is not a command, but the information returned from the module after every command)
 
 
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="res/Grove-Serial_Bluetooth_eagle_file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##  Resources ##
 
 - [Serial Bluetooth Library](res/Bluetooth_demo_code.zip)

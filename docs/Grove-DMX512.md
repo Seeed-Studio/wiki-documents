@@ -39,6 +39,13 @@ Arduino can easily control DMX512 device by using the Grove - DXM512 module. Tak
 
 *   You can see a interesting scene. Try to change code for your enjoy.
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-DMX512/raw/master/res/Grove-DMX512_Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##  Resources
 ---
 - [SN75176 Datasheet](https://github.com/SeeedDocument/Grove-DMX512/raw/master/res/Sn75176a.pdf)

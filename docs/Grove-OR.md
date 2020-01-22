@@ -39,6 +39,13 @@ This [Grove](/Grove "Grove") module is available as part of the following [Grove
 
 Note that this Grove - OR module is sold only as part of the above mentioned packs and is not available stand-alone from the [Seeed Studio Bazaar](http://www.seeedstudio.com/depot/).
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-OR/raw/master/res/Grove-OR_v2.0_Eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##  Resources
 
 *   [Grove - OR v2.0 Source (Eagle files)](https://github.com/SeeedDocument/Grove-OR/raw/master/res/Grove-OR_v2.0_Eagle.zip)

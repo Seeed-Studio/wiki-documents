@@ -316,6 +316,13 @@ Bug Tracker is the place you can publish any bugs you think you might have found
 
 The Additional Idea is the place to write your project ideas about this product, or other usages you've found. Or you can write them on Projects page.
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="http://garden.seeedstudio.com/images/b/b4/Uartsbee31_Schematic_Board.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##   Resources   ##
 
 Schematic and Board Files [[[2]](http://garden.seeedstudio.com/images/b/b4/Uartsbee31_Schematic_Board.zip)];

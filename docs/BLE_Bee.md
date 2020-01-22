@@ -315,6 +315,13 @@ Then, send an "AT+ROLE0" command to BLE Shield; it will return an "OK+Set:0", wh
 
 ![](https://github.com/SeeedDocument/BLE_Bee/raw/master/img/Seeed_BLE-3.png)
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/BLE_Bee/raw/master/res/BLE_Bee_v1.0.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##   Resource  ##
 
  - **[Schematic]**[Schematic of BLE_Bee_v1.0](https://github.com/SeeedDocument/BLE_Bee/raw/master/res/BLE_Bee_v1.0.zip)

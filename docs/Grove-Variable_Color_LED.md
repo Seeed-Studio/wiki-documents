@@ -99,6 +99,12 @@ void loop()  {
 -   Upload the code.Adjust the three adjustable resistances, I am sure you will like it. Have a try!
 
 
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-Variable_Color_LED/master/res/Variable_Color_LED_eagle_file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 Resources
 ---------
 

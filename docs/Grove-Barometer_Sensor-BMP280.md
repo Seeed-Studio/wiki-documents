@@ -214,6 +214,11 @@ void loop()
 **Step 5.** Open the serial monitor to receive the sensor's data including temperature, barometric pressure value, and altitude.
 
 
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-Barometer_Sensor-BMP280/raw/master/res/Grove%20-%20Barometer%20Sensor_BMP280_Schematic.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
 ## Resources
 
 - **[Eagle]** [Grove-Barometer Sensor BMP280 Schematic](https://github.com/SeeedDocument/Grove-Barometer_Sensor-BMP280/raw/master/res/Grove%20-%20Barometer%20Sensor_BMP280_Schematic.zip)

@@ -36,10 +36,18 @@ Assembly
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Raspberry_Pi_Breakout_Board_v1.0/master/img/Raspberry_Pi_Breakout_Board_v1.0_p5.jpg)
 
+
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Raspberry_Pi_Breakout_Board_v1.0/master/res/Raspberry_Pi_Breakout_Board_v1.0_sch_pcb-.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 Resources
 ---------
 
-- [Raspberry Pi Breakout Board v1.0 sch pcb-.zip](https://raw.githubusercontent.com/SeeedDocument/Raspberry_Pi_Breakout_Board_v1.0/master/res/Raspberry_Pi_Breakout_Board_v1.0_sch_pcb-.zip "File:Raspberry Pi Breakout Board v1.0 sch pcb-.zip")
+- [Raspberry Pi Breakout Board v1.0 sch pcb-.zip](https://raw.githubusercontent.com/SeeedDocument/Raspberry_Pi_Breakout_Board_v1.0/master/res/Raspberry_Pi_Breakout_Board_v1.0_sch_pcb-.zip)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Raspberry_Pi_Breakout_Board_v1.0 -->
 

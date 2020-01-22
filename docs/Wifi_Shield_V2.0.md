@@ -1261,6 +1261,13 @@ A2: Wifi shield can work with Arduino Due. On hardware, you can connect them via
 A3: Do not place plastic or any other dielectric material in touch with the antenna. Any metallic objects in close proximity to the antenna will prevent the antenna from radiating freely. 
 
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/res/Wifi_Shield_v2.0.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ## Resources
 
 -   [WiFi Shield V2.0 Eagle Files](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/res/Wifi_Shield_v2.0.zip)

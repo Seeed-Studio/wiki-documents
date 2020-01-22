@@ -268,6 +268,13 @@ If you no longer require Ethernet, for example because you wish to use your boar
 **Note:** This sample uses ISU0 (I2C/SPI/UART port 0) on the MT3620, which is also used by other samples. Other samples can be adapted to use a different ISU port. For now, it’s not possible to adapt this Private Ethernet sample to use another ISU port.
 
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/res/202002332_MT3620%20Ethernet%20Shield_v1.0_SCH%20%26%20PCB.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ## Resource
 
 - **[PDF]** [MT3620 Ethernet Shield v1.0](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/res/MT3620%20Ethernet%20Shield_v1.0_SCH_181220.pdf)

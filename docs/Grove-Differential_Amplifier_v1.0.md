@@ -181,6 +181,13 @@ The horizontal axis represents the input voltage and the vertical axis represent
 
 The measurement range is determined by power supply voltage VCC , the maximum output voltage is between (VCC-1.2) and (VCC-0.8).
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-Differential_Amplifier_v1.0/raw/master/res/Amplifier_eagle_file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##  Resource
 ---
 - [Amplifier 1.0 Eagle File](https://github.com/SeeedDocument/Grove-Differential_Amplifier_v1.0/raw/master/res/Amplifier_eagle_file.zip)

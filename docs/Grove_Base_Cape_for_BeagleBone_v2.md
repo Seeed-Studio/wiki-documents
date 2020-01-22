@@ -123,6 +123,7 @@ In this section, we will show you a basic example to use this board. You can fin
 ![](https://github.com/SeeedDocument/Grove_Base_Cape_for_BeagleBone_v2/raw/master/img/Grove_Base_Cape_for_BeagleBone_v2_wiki_demo_1200.jpg)
 </dd></dl>
 3.Copy following code to Cloud9, save it to a **.js** file.
+
 ```
 var b = require('bonescript');
 b.pinMode('P9_16', b.INPUT);//GPIO 51 correspond to P9_16. More details at http://beagleboard.org/Support/bone101/#headers
@@ -151,6 +152,13 @@ function checkButton(x) {
 
 
 ![](https://github.com/SeeedDocument/Grove_Base_Cape_for_BeagleBone_v2/raw/master/img/Grove_Base_Cape_for_BeagleBone_v2_wiki_demo_result_600_s.png)
+
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove_Base_Cape_for_BeagleBone_v2/raw/master/res/Grove_Base_Cape_for_BeagleBone_v2.0_Schematics.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
 
 ##  Resources
 ---

@@ -59,6 +59,13 @@ Here we do not list a specific example.
 !!!Tip
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Hub/master/res/I2C_Hub_Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 Resources
 ---------
 

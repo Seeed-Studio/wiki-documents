@@ -385,6 +385,13 @@ Output:
 
 - Oleg Mazurov of  **Circuits@Home** is the one who originally designed USB Host Shield based on MAX3421E. This was adapted by Google's ADK Referece Board. His site has tons of information and code examples to use MAX3421E based USB Host Shield to with USB keyboard, Mouse, Bluetooth Dongle, Wii Remote, etc.
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="http://wiki.seeedstudio.com/images/1/1a/Seeeduino_ADK_0.9b_final_Eagle_files.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##   Resources   ##
 
 - **[Library]** [Modified MicroBridge Arduino Library](http://wiki.seeedstudio.com/images/1/19/MicroBridge-ModifiedForSeeeduinoADK.zip)

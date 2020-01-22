@@ -213,6 +213,13 @@ to use the UART mode.
 
 6. When the program finishes, pull out the SD card and insert it to your computer, you can see your photos. Have fun
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Camera_Shield/raw/master/res/CameraShield-Schematic.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##  Resources
 
 *   [Camera Shield Library on gitHub](https://github.com/Seeed-Studio/Camera_Shield_VC0706)

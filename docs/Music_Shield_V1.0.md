@@ -189,6 +189,13 @@ This demo will use an open source library [Music_Shield_Demo_2_Library](res/Musi
 
 Note: About the specific methods of some functions in the library, You can reference [the sofeware installation](http://wiki.seeedstudio.com/Music_Shield_V1.0/#software-installation) of the Music Shield V2.0.
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Music_Shield_V1.0/raw/master/res/MusicShielEagleFiles.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##   Resources   ##
 
 - **[Eagle]**[Music Shield Eagle Files](https://github.com/SeeedDocument/Music_Shield_V1.0/raw/master/res/MusicShielEagleFiles.zip)

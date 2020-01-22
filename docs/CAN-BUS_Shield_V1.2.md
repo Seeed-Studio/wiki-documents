@@ -375,6 +375,14 @@ From each node (IE Switch pod that controls your windows or electric door locks)
 
 * You can post a question to [Seeed Forum](https://community.seeedstudio.com/discover.html?t=Arduino) or send an email to **techsupport@seeed.cc**.
 
+
+
+
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/CAN_BUS_Shield/raw/master/resource/CAN-BUS_Shield_v1.2_sch_pcb.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ## Resources
 -----
 

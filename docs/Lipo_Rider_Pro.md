@@ -223,6 +223,14 @@ Larger/multiple batteries and/or solar panels can be used, but only with end-use
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Lipo_Rider_Pro/master/img/LiPo_Rider_Pro1.jpg)
 
+
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Lipo_Rider_Pro/master/res/Lipo_Rider_Pro_v0.9b.rar" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ## Resources
 ---
 

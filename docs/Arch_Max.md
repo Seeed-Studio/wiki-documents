@@ -196,6 +196,13 @@ The latest firmware version for the Arch Max is v0203 built at Oct 8  2014. To c
 <td> 5V power supplier can connect to USB power
 </td></tr></table>
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Arch_Max/raw/master/res/ARCH_Max.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##   Resources
 
 - **[Eagle]**  [Schematics Eagle file for ARCH Max](https://github.com/SeeedDocument/Arch_Max/raw/master/res/ARCH_Max.zip)

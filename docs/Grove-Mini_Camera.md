@@ -144,6 +144,13 @@ Here is the state description of this mini camera. There are 5 working states.
 
 **5. Files storage:** Connect camera to pc using USB cable, you can open image file and VIDEO file. You can also access the files in the SD card by a SD card reader.
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-Mini_Camera/master/res/Mini_Camera_Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 Resources
 ---------
 

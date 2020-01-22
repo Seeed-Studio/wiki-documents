@@ -126,6 +126,13 @@ This section will show those senior customers how to add recording funtion to th
 6.Now you will hear the music.
 </dd></dl>
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Breakout_for_LinkIt_Smart_7688/raw/master/res/Breakout_for_LinkIt_Smart_7688_v2.0_schematic_files.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##  Resources
 
 *   [Schematic files](https://github.com/SeeedDocument/Breakout_for_LinkIt_Smart_7688/raw/master/res/Breakout_for_LinkIt_Smart_7688_v2.0_schematic_files.zip)

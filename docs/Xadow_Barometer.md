@@ -93,6 +93,13 @@ void loop()
 
 ![](https://github.com/SeeedDocument/Xadow_Barometer/raw/master/img/Pressure_and_Altitude.jpg)
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Xadow_Barometer/raw/master/res/Xadow_Barometer.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ## Resources
 ---
 - [Xadow Barometer Eagle File](https://github.com/SeeedDocument/Xadow_Barometer/raw/master/res/Xadow_Barometer.zip)

@@ -389,6 +389,13 @@ _This function can be used to draw a triangle. It is formed by three points._
 
 *   poY1(poY2,poY3): the Y-coordinate of the triangle one point.
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Small_e-Paper_Shield/raw/master/res/Small_e-Paper_Shield_V2.1.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##  Resources
 
 - **[Eagle]** [Small e-Paper Shield Eagle File](https://github.com/SeeedDocument/Small_e-Paper_Shield/raw/master/res/Small_e-Paper_Shield_V2.1.zip)

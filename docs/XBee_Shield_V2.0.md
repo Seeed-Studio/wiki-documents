@@ -65,6 +65,13 @@ Here we will show you how this XBee Shield V2.0 works with RF Bee. We also can u
 
 If you need further information about how to communicate, please refer to WIKI pages of relevant modules.
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/XBee_Shield_V2.0/raw/master/res/XBee_Shield_Eagle_file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##   Resource
 ---
 - **[Eagle]** [XBee Shield V2.0 Eagle File](https://github.com/SeeedDocument/XBee_Shield_V2.0/raw/master/res/XBee_Shield_Eagle_file.zip)

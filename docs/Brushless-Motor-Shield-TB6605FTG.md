@@ -139,6 +139,11 @@ Download the [Grove-LCD RGB Backlight Library](https://github.com/Seeed-Studio/G
 		If everything goes well, you can see the DC motor run and the LCD will show the speed. Now you can rotate the potentiometer to control the speed of the motor.  
 
 
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/BLDC-Motor-Shield-TB6605/raw/master/res/Brushless%20Motor%20Shield%20(TB6605FTG)%20v1.01.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
 
 ## Resources
 

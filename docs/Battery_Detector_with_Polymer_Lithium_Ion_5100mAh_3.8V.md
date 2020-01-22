@@ -150,6 +150,12 @@ Connect battery and battery power detector as in the following image. You can se
 <!-- \[\[|600px|none|Front view \]\] -->
 
 
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V/master/res/110060467_Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V_Battery_Power_Detector.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 Resources
 ---------
 

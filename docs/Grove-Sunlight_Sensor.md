@@ -159,6 +159,12 @@ UV intensity can nearly double with reflection from snow or other bright surface
 - Because of the way the UV Index is calculated, it technically expresses the risk of developing sunburn, which is caused mostly by UVB radiation. However, UVA radiation also causes damage (photoaging, melanoma). Under some conditions, including most tanning beds, the UVA level may be disproportionately higher than described by the UV Index. The use of broad-spectrum (UVA/UVB) sunscreen can help address this concern.
 
 
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-Sunlight_Sensor/raw/master/res/Grove_-_Sunlight_Sensor_v1.0_SCH%26PCB%26PDF.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ## Resources
 ---
 - [Schematic in PDF](https://github.com/SeeedDocument/Grove-Sunlight_Sensor/raw/master/res/Grove_-_Sunlight_Sensor_v1.0.pdf)

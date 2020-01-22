@@ -83,6 +83,12 @@ Now join us in the [RePhone Community](https://community.seeedstudio.com/discove
 Some frequently asked questions in [RePhone Community](https://community.seeedstudio.com/discover.html?t=RePhone) are collected and answered to the topic "Frequently Asked Questions of RePhone (FAQ)" , the topic will be kept updating whenever a new FAQ comes out.
 
 
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Xadow_Audio/raw/master/resources/202000723_PCBA%3BXadow%20Audio%20v1.0_schemic%20file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ## Resources
 ---
 The schematic diagram of Xadow Audio is provide in the following link:

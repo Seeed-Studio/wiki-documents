@@ -98,6 +98,13 @@ We can download code to Seeeduino Ethernet by USB To Uart 5V/3V3.
 
 Note that you should select the correct board type and COM port.
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/USB_To_Uart_5V_3V3/raw/master/res/USB_To_Uart_5V_3V3_Eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##  Resource
 ---
 - [USB To Uart 5V/3V3 v1.0 Eagle File](https://github.com/SeeedDocument/USB_To_Uart_5V_3V3/raw/master/res/USB_To_Uart_5V_3V3_Eagle.zip)

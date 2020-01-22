@@ -325,6 +325,14 @@ for i in range(1, 5):
 
 That’s it, that’s all there is to it. Enjoy.
 
+
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Raspberry_Pi_Relay_Board_v1.0/master/res/Raspberry_Pi_Relay_Board_v1.0_sch_pcb.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 Resources
 ---------
 - [Raspberry_Pi_Relay_Board_v1.0_sch_pcb](https://raw.githubusercontent.com/SeeedDocument/Raspberry_Pi_Relay_Board_v1.0/master/res/Raspberry_Pi_Relay_Board_v1.0_sch_pcb.zip)

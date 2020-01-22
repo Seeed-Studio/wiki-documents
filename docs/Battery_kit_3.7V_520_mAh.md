@@ -112,6 +112,12 @@ Connect battery and battery power detector as following image. You can see LEDs 
 ![](https://github.com/SeeedDocument/Battery-kit-3.7V_520-mAh/raw/master/img/Battery_kit-3.7V_520mAh_Battery_power_demo_1200_s.jpg)
 
 
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Battery-kit-3.7V_520-mAh/raw/master/res/Battery_kit-3.7V_520mAh_Schematics.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##  Resources ##
 
 - **[Eagle]**[Schematic(Eagle) file](https://github.com/SeeedDocument/Battery-kit-3.7V_520-mAh/raw/master/res/Battery_kit-3.7V_520mAh_Schematics.zip)

@@ -315,6 +315,15 @@ A3: Please follow below steps to solve the issue.
 * Delete all the files except preferences.txt, staging and packages.
 * Close and reopen an IDE window and it shall work. 
 
+
+## Seeeduino V4.2 Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/SeeeduinoV4/raw/master/resources/SeeeduinoV4.2.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
+
+
 ## Resources
 - **[PDF]** [Download Wiki PDF](https://github.com/SeeedDocument/SeeeduinoV4/raw/master/resources/Seeeduino_v4.2.pdf)
 - **[Eagle]** [Seeeduino V4.2 in EAGLE file](https://github.com/SeeedDocument/SeeeduinoV4/raw/master/resources/SeeeduinoV4.2.zip)

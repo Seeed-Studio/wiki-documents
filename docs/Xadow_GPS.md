@@ -91,6 +91,13 @@ $GPRMC,091308.000,A,2235.1683,N,11356.3607,E,0.37,259.79,050813,,,A*6E
 
 - The right part in the picture above is Satellite Position, World Position, Compass, Watch. You can click View -> Docking Windows and select the windows you want to see.
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Xadow_GPS/raw/master/res/Xadow_GPS_Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ## Resources
 ---
 - [Xadow GPS Eagle File](https://github.com/SeeedDocument/Xadow_GPS/raw/master/res/Xadow_GPS_Eagle_File.zip)

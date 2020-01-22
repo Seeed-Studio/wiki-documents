@@ -61,6 +61,13 @@ You can see :
 
 ![](https://github.com/SeeedDocument/Xadow_Q_Touch_Sensor/raw/master/img/Q_Touch_Demo_output.jpg)
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Xadow_Q_Touch_Sensor/raw/master/res/Xadow-Q_Touch_Sensor_v1.0_sch_pcb.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ## Resource
 ---
 *   [Q Touch Library](https://github.com/Seeed-Studio/Seeed_QTouch)

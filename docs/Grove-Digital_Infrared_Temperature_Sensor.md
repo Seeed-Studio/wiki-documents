@@ -197,10 +197,17 @@ Now, you can measure the temperature with this sensor. Ambient temperature is th
 !!!Tip
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-Digital_Infrared_Temperature_Sensor/master/res/Grove_Digital_Infrared_Temperature_Sensor_v1.0_eagle_file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 Resources
 --------
 
-- **[Zip]** [Grove Digital Infrared Temperature Sensor v1.0 eagle file.zip](https://raw.githubusercontent.com/SeeedDocument/Grove-Digital_Infrared_Temperature_Sensor/master/res/Grove_Digital_Infrared_Temperature_Sensor_v1.0_eagle_file.zip "File:Grove Digital Infrared Temperature Sensor v1.0 eagle file.zip")
+- **[Zip]** [Grove Digital Infrared Temperature Sensor v1.0 eagle file.zip](https://raw.githubusercontent.com/SeeedDocument/Grove-Digital_Infrared_Temperature_Sensor/master/res/Grove_Digital_Infrared_Temperature_Sensor_v1.0_eagle_file.zip)
 - **[PDF]** [MLX90615.pdf](https://raw.githubusercontent.com/SeeedDocument/Grove-Digital_Infrared_Temperature_Sensor/master/res/MLX90615.pdf "File:MLX90615.pdf")
 - **[Code]** [Demo Code](https://github.com/Seeed-Studio/Digital_Infrared_Temperature_Sensor_MLX90615)
 

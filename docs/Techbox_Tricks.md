@@ -105,6 +105,13 @@ Only if the switch is on "AND" and the Touch Switch is pressed and the Light Swi
 
 Feel free to add your project to the list!
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Techbox_Tricks/raw/master/res/Grove-Tricks_v1.0_EAGLE.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##  Resources
 
 - **[PDF]**   [Grove - Tricks v1.0 位号.pdf](https://github.com/SeeedDocument/Techbox_Tricks/raw/master/res/Grove-Tricks_v1.0_%E4%BD%8D%E5%8F%B7.pdf)

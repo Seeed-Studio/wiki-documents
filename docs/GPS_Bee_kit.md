@@ -382,6 +382,13 @@ Click [here](http://garden.seeedstudio.com/images/2/20/GPSBee-exam-3.jpg) to see
 <td> Jan 10,2014
 </td></tr></table>
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/GPS_Bee_kit/raw/master/res/GPS_Bee_v1.3_eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##   Resources
 ---
 *   [NEO-5 DataSheet Of U-blox](http://www.seeedstudio.com/depot/datasheet/NEO-5x_Data_Sheet(GPS.G5-MS5-07025).pdf)

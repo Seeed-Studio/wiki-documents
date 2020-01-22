@@ -244,6 +244,13 @@ print "Error"
 **Step6:** Run the code.
 You'll find that the terminal outputs Temperature value every 2 seconds.
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-Temperature_Sensor/raw/master/res/Grove-Temperature_Sensor-Analog-v1.0_Source_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##  Resource
 ---
 *   [Grove - Temperature Sensor v1.0 Eagle File](https://github.com/SeeedDocument/Grove-Temperature_Sensor/raw/master/res/Grove-Temperature_Sensor-Analog-v1.0_Source_File.zip)

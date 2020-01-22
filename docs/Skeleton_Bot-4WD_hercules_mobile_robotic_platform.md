@@ -417,6 +417,13 @@ Hercules is a suite of open-platform. It is convenient for users to install all 
 About the usage of the kit, please click [here](http://seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller#Expand_Usage).
 Here is a video, Showing the hercules strong: [http://www.youtube.com/watch?v=uc4-Dqgwrq8](http://www.youtube.com/watch?v=uc4-Dqgwrq8).
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/raw/master/res/Source_file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##  Resources
 ---
 - [4WD Robot Controller Eagle File](https://github.com/SeeedDocument/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/raw/master/res/Source_file.zip)

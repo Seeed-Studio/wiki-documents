@@ -876,11 +876,15 @@ Please click **[here](http://support.seeedstudio.com/knowledgebase/articles/1826
 Please do not hesitate to contact **techsupport@seeed.cc** if you require further information.
 
 
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/BeagleBone_Blue_eagle-file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
 
 ## Resources
 -----
-- **[PCB]** [BeagleBone_Blue PCB](https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/res/BeagleBone_Blue_brd.zip)
-- **[Schematic]** [BeagleBone_Blue Schematic](https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/res/BeagleBone_Blue_sch.zip)
+- **[Schematic]** [BeagleBone_Blue Schematic](https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/BeagleBone_Blue_eagle-file.zip)
 - **[Grove]** [Beaglebone Blue Grove Compatibility List.xlsx](https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/res/Beaglebone%20Blue%20Grove%20Compatibility%20List.xlsx)
 - **[MoreReading]** [BeagleBoard Main Page](http://beagleboard.org/)
 - **[MoreReading]** [BeagleBoard Getting Started](http://beagleboard.org/getting-started)

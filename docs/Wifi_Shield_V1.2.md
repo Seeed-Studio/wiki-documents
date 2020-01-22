@@ -1194,6 +1194,13 @@ To learn more about adhoc mode check out the [WiFly RN User Manual](https://gith
 
 *   [w3schools](http://www.w3schools.com/) Great website to learn HTML, Javascript, and JQuery
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Wifi_shield_v1.2/raw/master/res/Wifi_shield_v1.2_eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ## Resources
 
 - **[Eagle]**  [WiFi Shield v1.2 Eagle Files](https://github.com/SeeedDocument/Wifi_shield_v1.2/raw/master/res/Wifi_shield_v1.2_eagle.zip)

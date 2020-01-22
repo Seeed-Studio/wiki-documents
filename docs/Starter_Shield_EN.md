@@ -278,6 +278,13 @@ This is a final demo that involves all hardware resources we mentioned above and
 
   - 4) K2 is assigned to set the status of alarm clock. You can know the status of alarm clock via ALARM_ENABLE Indicator.
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Starter_Shield_EN/raw/master/res/Starter_Shield_v1.1.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##   Resources  
 
 - **[Library]**[Starter Shield library](https://github.com/Seeed-Studio/Starter_Shield)

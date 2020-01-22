@@ -1090,6 +1090,13 @@ After downloading program, open two serial terminal windows, the LEDs on Bluetoo
 ![](https://github.com/SeeedDocument/BLE_dual_Bee_v1.0/raw/master/img/HM-13-Debug_Output_Master.png)
 ![](https://github.com/SeeedDocument/BLE_dual_Bee_v1.0/raw/master/img/HM-13-Debug_Output_Slave.png)
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/BLE_dual_Bee_v1.0/raw/master/res/BLE-dual-Bee_V1.0_sch_pcb.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##   Resources
 ---
 *   [HM-13 Bluetooth Datasheet](https://github.com/SeeedDocument/BLE_dual_Bee_v1.0/raw/master/res/Bluetooth_HM-13_en.pdf)

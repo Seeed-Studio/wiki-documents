@@ -689,6 +689,13 @@ Now share you awesome projects on with us on [Recipe](https://community.seeedstu
 -  We cooperate with our Core Users in the development of our new product, this, in another word, the Core Users will have the chance to experience any new products of Seeed before its official launch, and in return we expect valuable feedback from them to help us improving the product performance and user experience. And for most of cases if our Core Users have any good ideas for making things, we'll offer hardware pieces, PCBA services as well as technical support. Besides, further commercial cooperation with the Core Users is highly possible.
 
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="http://wiki.seeedstudio.com/images/f/f6/Bluetooth_Bee_Schematic_Board.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##   Resources   ##
 
 - **[Eagle]** [Bluetooth Bee Schematic and Board Files](http://wiki.seeedstudio.com/images/f/f6/Bluetooth_Bee_Schematic_Board.zip)

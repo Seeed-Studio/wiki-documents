@@ -423,7 +423,14 @@ You can now extend the Arduino sketch to drive other devices such as PWM, I2C de
 
 [Here](https://docs.labs.mediatek.com/resource/linkit-smart-7688/en/faq) is the FAQ from Mediatek. 
 
-##Resources
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/res/Hardware_Schematics.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
+## Resources
 
 * [Hardware Schematic files](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/res/Hardware_Schematics.zip)
 * [Manual](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/res/Manual.zip)

@@ -341,6 +341,11 @@ It seems nothing happened, however you can find the most famous sentence in the 
         If you use the I2C tool to scan the I2C address of the grove module, you may find two or more address. 0x04 is the adrress of the *Grove Base Hat for Raspberry Pi*.
 
 
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi_Zero/raw/master/res/Grove%20Base%20HAT%20For%20Raspberry%20Pi%20Zero.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
 
 ## Resources
 

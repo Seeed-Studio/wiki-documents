@@ -257,6 +257,13 @@ Open a web browser and enter the web address:192.168.1.177, then you can check t
 
 ![](https://github.com/SeeedDocument/Seeeduino_Ethernet/raw/master/img/Ethernet_shield2.jpg)
 
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Seeeduino_Ethernet/raw/master/res/Seeed_Ethernet_Source_Files.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ##   Resources
 
 *   [Seeeduino Ethernet Eagle Files](https://github.com/SeeedDocument/Seeeduino_Ethernet/raw/master/res/Seeed_Ethernet_Source_Files.zip)

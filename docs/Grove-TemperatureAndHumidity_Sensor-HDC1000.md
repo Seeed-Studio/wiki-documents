@@ -471,11 +471,19 @@ You have to copy the file <span style="font-style:italic">readTempHumi.ino</span
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor-HDC1000/master/img/Grove-TemperatureAndHumidity_Sensor-HDC1000-demo_result-with_launchpad-600.png)
 
+
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor-HDC1000/master/res/Grove-TemperatureAndHumidity_Sensor-HDC1000-v1.0_sch_pcb.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+
 ## Resources
 
 
-- **[Zip]** [Grove - Temperature&Humidity Sensor(HDC1000) v1.0 sch pcb.zip](https://raw.githubusercontent.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor-HDC1000/master/res/Grove-TemperatureAndHumidity_Sensor-HDC1000-v1.0_sch_pcb.zip "File:Grove - Temperature&Humidity Sensor(HDC1000) v1.0 sch pcb.zip")
-- **[Pdf]** [Grove - Temperature&Humidity Sensor(HDC1000) v1.0 sch.pdf](https://raw.githubusercontent.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor-HDC1000/master/res/Grove-TemperatureAndHumidity_Sensor-HDC1000-v1.0_sch.pdf "File:Grove - Temperature&Humidity Sensor(HDC1000) v1.0 sch.pdf")
+- **[Zip]** [Grove - Temperature&Humidity Sensor(HDC1000) v1.0 sch pcb.zip](https://raw.githubusercontent.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor-HDC1000/master/res/Grove-TemperatureAndHumidity_Sensor-HDC1000-v1.0_sch_pcb.zip)
+- **[Pdf]** [Grove - Temperature&Humidity Sensor(HDC1000) v1.0 sch.pdf](https://raw.githubusercontent.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor-HDC1000/master/res/Grove-TemperatureAndHumidity_Sensor-HDC1000-v1.0_sch.pdf)
 - **[Library]** [Demo code](https://github.com/Seeed-Studio/HDC1000)
 - **[Datasheet]** [HDC1000\_DataSheet.pdf](https://raw.githubusercontent.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor-HDC1000/master/res/HDC1000.pdf)
 
