@@ -9,7 +9,7 @@ sku: 102991334
 ---
 
 
-![](https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/AWS.png)
+![](https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/Side.png)
 
 The Seeed IoT Button For AWS is a Wi-Fi based, programmable button that is easy to configure and simple to use. You can use the Seeed IoT Button For AWS to capture quick customer feedback without burdening customers with time-consuming questionnaires.  It is designed for enterprises and developers to easily integrate with existing business workflows and systems using the AWS IoT 1-Click service. And this IoT Button is fully compatible with official AWS IoT 1-Click iOS app and Android app. The battery for this device is NCR18650B chargeable Li-ion battery. It is removable and not included when you get this IoT Button. Customer can easy to buy this battery by themselves. And what we propose is Panasonic NCR18650B 3.6V 3400mAh.There is a bracket for this IoT Button. Customer can stick it on the wall or other surface and easy to put the IoT Button  in and get out from the bracket. The Seeed IoT Button for AWS supports three types of clicks: single, double, and long press, and 3 LEDs for different indications.
 
@@ -33,7 +33,7 @@ The Seeed IoT Button For AWS is a Wi-Fi based, programmable button that is easy 
 |---|---|
 |Size|92\*32\*25mm|
 |MCU|Dual core: 20MHz Cortex M0; 200MHz Cortex M4F|
-|Flash|Serial SPI Flash: 104MHz |
+|Flash|4MB |
 |Button| 100,000 Cycles|
 |LED|RGB|
 |Wi-Fi|802.11 a/b/g/n 2.4GHz & 5GHz|
@@ -49,7 +49,7 @@ The Seeed IoT Button For AWS is a Wi-Fi based, programmable button that is easy 
 
 <div align="center">
 <figure>
-  <p style=":center"><a href="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/Seeed_IOT_Button_Overview.png" target="_blank"><img src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/Seeed_IOT_Button_Overview.png" /></a></p>
+  <p style=":center"><a href="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/Seeed_IOT_Button_HardwareOverview.png" target="_blank"><img src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/Seeed_IOT_Button_HardwareOverview.png" /></a></p>
 </figure>
 </div>
 
@@ -100,7 +100,7 @@ When first time using the device, you must connect the device to a computer or a
 
 The Event Status LED is near the button(Above the button).
 
-![](https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/Seeed_IOT_Button.gif)
+![](https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/Seeed_IOT_Button_Overview.gif)
 
 | LED Status   | Indication                      |
 | :----------------------- | :----------------------------------------- |
