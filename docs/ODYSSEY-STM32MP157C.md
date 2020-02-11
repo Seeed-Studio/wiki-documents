@@ -12,16 +12,18 @@ sku: 102010048
 
  ![](https://github.com/SeeedDocument/Seeed-NPi-STM32MP157C/raw/master/IMG/overview.png)
 
-ODYSSEY - STM32MP157C is a single board computer based on STM32MP157C, the STM32MP157C is a dual-core arm-cortex-a7 core processor operating at 650Mhz, the processor is also integrated with the Arm cortex-m4 coprocessor, make the Arm cortex-m4 integrated inside FPU and MPU, Cortex-a7 mainly does things at the operating system level, Cortex-m handles things at the MCU level. It can reach the optimal state at any time, making it suitable for various application scenarios.
+The ODYSSEY – STM32MP157C is a single board computer that based on STM32MP157C, a dual-core Arm-Cortex-A7 core processor operating at 650Mhz. The processor also integrates an Arm Cortex-M4 coprocessor, which makes it suitable for real-time task. The ODYSSEY – STM32MP157C is created in a form of SoM(system on module) plus a Carrier board. The SoM has consisted of the MPU, PMIC, RAM and the carrier board is in Raspberry Pi form factor. The carries board includes all the necessary peripherals including Gigabytes Ethernet, WiFi/BLE, DC Power，USB Hosts, USB-C, MIPI-DSI, DVP for camera, audio, etc. With this board, customers can fast evaluate the SoM and deploy the SoM on their own carrier board easily and quickly.
 
 [![Get one now](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now.png)](https://www.seeedstudio.com/1.5W-Solar-Panel-81X137-p-952.html)
 
 
 ## Features
 
-- Compact in size and powerful in function
-- scalable industrial grade
-- open source hardware/SDK/API/BSP/OS
+- Dual-core Arm-Cortex-A7 core processor with Cortex-M4 integrated
+- SoM(system on module) includes MPU, PMIC, RAM. 
+- Raspberry Pi 40-Pin Compatible Carrier Board.
+- Compact size and powerful.
+- Open source hardware/SDK/API/BSP/OS.
 
 ## Specification
 
@@ -37,11 +39,11 @@ ODYSSEY - STM32MP157C is a single board computer based on STM32MP157C, the STM32
 
 ## Application
 
-- Consumers
-- Industrial
-- White goods
-- Medical
-- Quality wearable devices
+- Industrial (CAN-Ethernet gateways etc)
+- White goods(refrigerators,microwaves etc)
+- Medical(data loggers etc)
+- High-end wearables(VR device etc)
+
 
 ## Hardware Overview
 
