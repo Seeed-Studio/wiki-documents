@@ -192,6 +192,7 @@ pages:
           - Sensecap LoRaWAN Gateway and Wireless Sensor User Guide: Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide.md
       - ODYSSEY:
           - ODYSSEY STM32MP157C: ODYSSEY-STM32MP157C.md
+          - ODYSSEY X86J4105: ODYSSEY-X86J4105.md
       - ReSpeaker:
           - ReSpeaker Introduction: ReSpeaker.md
           - ReSpeaker Solutions: ReSpeaker_Solutions.md
@@ -539,6 +540,7 @@ pages:
           - Grove - Voltage Divider: Grove-Voltage_Divider.md
           - Grove - Vibration Sensor(SW-420): Grove-Vibration_Sensor_SW-420.md
           - Grove - Water Sensor: Grove-Water_Sensor.md
+          - Grove - Water Level Sensor: Grove-Water-Level-Sensor.md
           - Grove - XBee Carrier: Grove-XBee_Carrier.md
           - Grove - TF Mini LiDAR: Grove-TF_Mini_LiDAR.md
           - Grove - VOC and eCO2 Gas Sensor(SGP30): Grove-VOC_and_eCO2_Gas_Sensor-SGP30.md
