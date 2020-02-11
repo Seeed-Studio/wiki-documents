@@ -77,7 +77,7 @@ We used capacitive pads on the PCB of the module and did conformal coating over 
 
 #### Hardware Connection
 
-- **Step 1.** Plug Grove - TDS Sensor to **I2C** port of Grove - Base Shield.
+- **Step 1.** Plug Grove - Water Level Sensor to **I2C** port of Grove - Base Shield.
 
 - **Step 2.** Plug Grove - Base Shield into Seeeduino.
 
