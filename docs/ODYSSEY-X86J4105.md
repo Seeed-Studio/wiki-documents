@@ -181,7 +181,7 @@ You can also power the ODYSSEY - X86J4105 through the USB-C port with 12V input.
 
 ### Wi-Fi Connecitivity
 
-![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/blob/master/img/Stats.png)
+![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/Stats.png)
 
 ### Bluetooth Connecitivity
 
