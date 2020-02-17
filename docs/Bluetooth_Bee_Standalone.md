@@ -8,7 +8,7 @@ surveyurl: https://www.research.net/r/Bluetooth_Bee-Standalone
 sku:  113050004
 ---
 
-![](https://github.com/SeeedDocument/Bluetooth_Bee_Standalone/raw/master/https://github.com/SeeedDocument/Bluetooth_Bee_Standalone/raw/master/img/P3302883_02.jpg)
+![](https://github.com/SeeedDocument/Bluetooth_Bee_Standalone/raw/master/img/P3302883_02.jpg)
 
 Save that extra Arduino you have lying around for another project, this two-for-one device has the Arduino built-in. Bluetooth Bee with Arduino is an enhanced version of the Bluetooth Bee. We added an onboard ATMEGA168 to it to make it a full-featured Arduino while maintaining the same footprint and instruction set as the Bluetooth Bee. Plus, it still allows you to stack it on XBee Carrier, XBee® Shield, and UartSBee for expansion or reprogramming.
 

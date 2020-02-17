@@ -238,6 +238,8 @@ void loop()
 
 **A1:** Here provides a simple application using the **Grove - Water Level Sensor** with **Buzzer** and **LED module** for water level detecting. Please check the [full code](https://github.com/SeeedDocument/Grove-Water-Level-Sensor/blob/master/water-level-sensor-demo.ino) here.
 
+![](https://files.seeedstudio.com/products/101020635/img/water%20level.2020-01-17%2018_27_47.gif)
+
 ## Schematic Online Viewer
 
 

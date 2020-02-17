@@ -92,7 +92,7 @@ Main steps required required to complete assembly.
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:15px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_05.jpgG)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:15px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_05.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>

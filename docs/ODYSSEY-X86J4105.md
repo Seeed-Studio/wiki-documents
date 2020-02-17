@@ -30,23 +30,25 @@ The ODYSSEY - X86J4105, is based on Intel Celeron J4105, a Quad-Core 1.5GHz CPU 
 
 | Components       | ODYSSEY - X86J4105                                                                                                                                      |
 |------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Processor        | Intel® Celeron® J4105 \(Frequency: 1\.5 \- 2\.5GHz\)                                                                                                    |
-| Coprocessor      | Microchip® ATSAMD21G18 32\-Bit ARM® Cortex® M0\+                                                                                                        |
-| Graphics         | Intel® UHD Graphics 600 \(Frequency: 250 – 750MHz\)                                                                                                     |
+| Processor        | Intel® Celeron® J4105 (Frequency: 1.5 - 2.5GHz)                                                                                                    |
+| Coprocessor      | Microchip® ATSAMD21G18 32-Bit ARM® Cortex® M0+                                                                                                        |
+| Graphics         | Intel® UHD Graphics 600 (Frequency: 250 – 750MHz)                                                                                                     |
 | Memory           | LPDDR4 8GB                                                                                                                                              |
-| Storage          | 64GB eMMC V5\.1                                                                                                                                         |
-| Wireless         | Wi\-Fi 802\.11 a/b/g/n/ac @ 2\.4/5 GHz HT160 & Bluetooth® 5\.0                                                                                          |
+| Storage          | 64GB eMMC V5.1                                                                                                                                         |
+| Wireless         | Wi-Fi 802.11 a/b/g/n/ac @ 2.4/5 GHz HT160 & Bluetooth® 5.0                                                                                          |
 | Networking       | Intel® I211AT PCIe Gigabit LAN                                                                                                                          |
-| Audio            | Microphone \+ headphone Combo Connector                                                                                                                 |
-| Headers          | 28\-pin header from SAMD21G18 & 40\-pin header compatible with Raspberry Pi                                                                             |
-| USB              | USB 2\.0 Type\-A x2, USB 3\.1 Type\-A x1, USB 3\.1 Type\-C x1                                                                                           |
+| Audio            | Microphone + headphone Combo Connector                                                                                                                 |
+| Headers          | 28-pin header from SAMD21G18 & 40-pin header compatible with Raspberry Pi                                                                             |
+| USB              | USB 2.0 Type-A x2, USB 3.1 Type-A x1, USB 3.1 Type-C x1                                                                                           |
 | Video Interfaces | HDMI2.0a: Up to 4096x2160 @ 60Hz 24bpp / DP1.2a: Up to 4096x2160 @60Hz 24bpp                                                                                                                                                                 |
-| Expansion Slots  | M\.2\(Key B, 2242/2280\): SATA III, USB2\.0, UIM; M\.2 \(Key M, 2242/2280\): PCIe 2\.0 ×4; Micro SD card Socket; SIM Card Socket; SATA III           |
-| RTC              | JST 1\.0 CR2032 3V                                                                                                                                      |
-| TPM              | Built\-in TPM \(2\.0\)                                                                                                                                  |
-| Power            | DC Jack 5\.5/2\.1mm or Type\-C PD; DC Jack input: 12\-19V DC; Type\-C input: 12V DC                                                                 |
+| Expansion Slots  | M.2(Key B, 2242/2280): SATA III, USB2.0, UIM; M.2 (Key M, 2242/2280): PCIe 2.0 ×4; Micro SD card Socket; SIM Card Socket; SATA III           |
+| RTC              | JST 1.0 CR2032 3V                                                                                                                                      |
+| TPM              | Built-in TPM (2.0)                                                                                                                                  |
+| Power            | DC Jack 5.5/2.1mm or Type-C PD; DC Jack input: 12-19V DC; Type-C input: 12V DC                                                                 |
 | Dimensions       | 110x110mm                                                                                                                                               |
 | Certifications   | FCC, CE                                                                                                                                                 |
+
+
 ## Hardware Overview
 
 ![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/X86%20Hardware%20Overview.png)

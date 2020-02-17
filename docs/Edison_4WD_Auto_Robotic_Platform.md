@@ -603,7 +603,7 @@ After connected to the WiFi, open any web browser visit **http://192.168.42.1:80
 
 [Wi-Fi car Android apk](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform/raw/master/res/WiFiCarcn.xiongyihui.wificar2.apk.zip)
 
-![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform/raw/master/img/Edison_4WD_Auto_Robotic_Platform33.png)
+![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform/raw/master/img/Edison_4WD_Auto_Robotic_Platform33.jpg)
 ![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform/raw/master/img/Edison_4WD_Auto_Robotic_Platform34.png)
 
 ###  How to program it

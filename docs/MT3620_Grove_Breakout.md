@@ -125,8 +125,6 @@ We build there demoes which combine MT3620 Mini Dev Board and [Seeed Grove syste
 
 **Hardware Connection**
 
-![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/break_miniboard.png)
-
 ![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/demo1_connection.png)
 
 !!!warning

@@ -110,7 +110,7 @@ This sensor is an upgrade version of [Grove - I2C Touch Sensor](https://www.seee
 
 
 
-![](https://github.com/SeeedDocument/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/raw/master/img/pin_map_back_1.jpg )
+![](https://github.com/SeeedDocument/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/raw/master/img/pin_map_back_1.jpg)
 
 
 !!!Danger
