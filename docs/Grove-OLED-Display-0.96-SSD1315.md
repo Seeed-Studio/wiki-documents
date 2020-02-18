@@ -121,6 +121,26 @@ void loop(void) {
 
 <div align=center><img src="https://github.com/SeeedDocument/Grove-OLED-Display-0.96-SSD1315-/raw/master/img/result.png"/></div>
 
+## U8g2 Library Introduction
+
+U8g2 is a monochrome graphics library for embedded devices. U8g2 supports monochrome OLEDs and LCDs, which include our chip SSD1315.
+
+The Arduino library U8g2 can be installed from the library manager of the Arduino IDE. U8g2 also includes U8x8 library:
+
+**U8g2**
+
+- Includes all graphics procedures (line/box/circle draw).
+- Supports many fonts. (Almost) no restriction on the font height.
+- Requires some memory in the microcontroller to render the display.
+
+**U8x8**
+
+- Text output only (character) device.
+- Only fonts allowed with fit into a 8x8 pixel grid.
+- Writes directly to the display. No buffer in the microcontroller required.
+
+Here provides the [**U8g2 Library wiki**](https://github.com/olikraus/u8g2/wiki) as well as the [U8g2 API Reference](https://github.com/olikraus/u8g2/wiki/u8g2reference) page.
+
 ## FAQ
 
 **Q1#** Example not working with other boards?
