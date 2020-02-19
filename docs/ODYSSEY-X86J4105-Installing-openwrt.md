@@ -109,5 +109,5 @@ Navigate to **`Network`** -> **`Interfaces`** and configure WAN settings for int
 
   *For further development, you can start downloading and deploying all sort of applications such as Ad block, port mirroring and etc! For more, please visit [OpenWrt](https://openwrt.org/).*
 
-  ## Tech Support
+## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

@@ -54,13 +54,13 @@ This part describes how to create an IoT Hub using Azure portal:
 
 4.On the **Basics** tab, complete the field:
 
-    - **Subscription:** Select the subscription to use for your hub.
+- **Subscription:** Select the subscription to use for your hub.
 
-    - **Resource Group:** Select a resource group or create a new one. To create a new one, select **Create new** and fill in the name you want to use.
+- **Resource Group:** Select a resource group or create a new one. To create a new one, select **Create new** and fill in the name you want to use.
 
-    - **Region:** Select the region in which your hub to be located. Select the region that is closest to you.
+- **Region:** Select the region in which your hub to be located. Select the region that is closest to you.
 
-    - **IoT Hub Name:** Enter a name for your IoT hub. This name must be globally unique. If name is available, a green check mark will appear.
+- **IoT Hub Name:** Enter a name for your IoT hub. This name must be globally unique. If name is available, a green check mark will appear.
 
 **Important Note:** the IoT hub will be pubilicity discoverable as a DNS endpoint, so ensure to avoid any sensitive information while naming the IoT Hub.
 
