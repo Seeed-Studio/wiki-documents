@@ -80,29 +80,29 @@ Just like creating a bootable USB for installing OS, format the USB into `FAT32`
 
 Plug the USB into ODYSSEY - X86J4105 and boot up and follow steps below:
 
-1. Keep pressing `F7` Key to Enter Boot Manager Screen. Select the `UEFI: Built-in EFI Shell` as boot device and press `Enter`.
+- Keep pressing `F7` Key to Enter Boot Manager Screen. Select the `UEFI: Built-in EFI Shell` as boot device and press `Enter`.
 
 <div align=center><img width= 500 src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/InstallingOS/upgrading-bios.png"/></div>
 
-2. Enter the shell by pressing any key.
+- Enter the shell by pressing any key.
 
 <div align=center><img width = 600 src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/InstallingOS/process1.png"/></div>
 
-3. Enter the USB drive by typing `fs1:` and press `Enter`. Then, use `dir` to check the directories. The folder name will appear and use `cd SD-BS-CJ41G-M101-A` to go into the folder.
+- Enter the USB drive by typing `fs1:` and press `Enter`. Then, use `dir` to check the directories. The folder name will appear and use `cd SD-BS-CJ41G-M101-A` to go into the folder.
 
 **Note:** Can use `tab` to autofill the folder name
 
 <div align=center><img width = 600 src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/InstallingOS/process2.png"/></div>
 
-4. Once inside this folder, use `dir` again to list out all the files in the folder and use `cd SD-BS-CJ41G-M-101-A` to go in this folder. Use `dir` one more time to list out files in this secondary folder.
+- Once inside this folder, use `dir` again to list out all the files in the folder and use `cd SD-BS-CJ41G-M-101-A` to go in this folder. Use `dir` one more time to list out files in this secondary folder.
 
 <div align=center><img width = 600 src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/InstallingOS/process3.png"/></div>
 
-5. Run the `BIOS.nsh` and the updating process will begin.
+- Run the `BIOS.nsh` and the updating process will begin.
 
 <div align=center><img width = 600 src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/InstallingOS/process4.png"/></div>
 
-5. The BIOS update will finish in few moments.
+- The BIOS update will finish in few moments.
 
 <div align=center><img width = 600 src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/InstallingOS/biosDone.png"/></div>
 
@@ -116,3 +116,5 @@ When the BIOS is upgraded, reboot the ODYSSEY - X86J4105(Switch on and off the p
 
 - **Ubuntu 16 is not supported by ODYSSEY - X86J4105**
 
+## Tech Support
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>
