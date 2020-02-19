@@ -52,7 +52,7 @@ The control solution Seeeduino Crypto is the same as ARDUINO UNO WIFI REV2. The 
 | Clock Speed | 16Mhz |
 | I/O Resource |Analog Input Channels: 6<br>Digital I/O Pins: 14<br>PWM Channels: 5|
 | Peripheral Interface |2 Grove I2C Port<br>1 Grove UART Port<br>1 ICSP Interface<br>1 USB Type C data port|
-|Operating Voltage | 5V|
+| Operating Voltage | 5V|
 | Power Supply |5V USB Type C<br>8 -15 V DC Jack Input|
 
 
