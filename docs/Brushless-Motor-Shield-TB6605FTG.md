@@ -36,6 +36,7 @@ We also released the [TB6605 BLDC Motor Kit for Arduino](https://www.seeedstudio
 |---|---|
 |Supply voltage|3.3V / 5V|
 |DC Power Input|9V ~ 24V|
+|Max Output Current|0.02A|
 |Driving mode|Sine wave/Square wave|
 |Motor Interface|Screw terminal|
 |External Grove Interface|I2C|
