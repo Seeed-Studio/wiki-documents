@@ -755,6 +755,10 @@ void loop()
 
 If you want to make some awesome projects by Grove - Starter Kit Plus, here's some projects for reference.
 
+We have this part available in [geppetto](https://geppetto.seeedstudio.com/), easy modular electronic design with Seeed and Geppeto. Build it Now. [geppetto.seeedstudio.com](https://geppetto.seeedstudio.com/)
+
+
+
 ###  Intel Edison Live Temperature Display
 
 ![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Intel_Edison_Live_Temperature_Display.jpg)
