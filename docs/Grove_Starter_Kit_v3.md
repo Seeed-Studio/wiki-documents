@@ -494,6 +494,8 @@ A2: Please check whether the powering switch(3.3V/5V) is on 5V side.
 
 *   [Grove - Buzzer Source File](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/res/Grove-Buzzer_V1.1_eagle.zip)
 
+We have this part available in [geppetto](https://geppetto.seeedstudio.com/), easy modular electronic design with Seeed and Geppeto. Build it Now. [geppetto.seeedstudio.com](https://geppetto.seeedstudio.com/)
+
 ##   Acknowledgement
 We would like to express our gratitude to Rich Morin who modified this document with more appropriate grammar and words.
 

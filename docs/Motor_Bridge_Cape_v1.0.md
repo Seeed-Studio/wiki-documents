@@ -346,6 +346,8 @@ enable_uboot_cape_universal=1
 <div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Motor_Bridge_Cape_v1.0/raw/master/res/Motor%20Bridge%20Cape%20v1.0%20eagle%20file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
+We have this part available in [geppetto](https://geppetto.seeedstudio.com/), easy modular electronic design with Seeed and Geppeto. Build it Now. [geppetto.seeedstudio.com](https://geppetto.seeedstudio.com/)
+
 
 Resources
 ---------

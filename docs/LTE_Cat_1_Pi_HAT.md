@@ -538,6 +538,9 @@ AT+UPING="www.google.com"
 - **[PDF]** [LARA-R2_SysIntegrManual](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/res/LARA-R2_SysIntegrManual_(UBX-16010573).pdf)
 - **[PDF]** [AT-Commands Examples AppNote](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/res/AT-CommandsExamples_AppNote_(UBX-13001820).pdf)
 
+We have this part available in [geppetto](https://geppetto.seeedstudio.com/), easy modular electronic design with Seeed and Geppeto. Build it Now. [geppetto.seeedstudio.com](https://geppetto.seeedstudio.com/)
+
+
 
 ## Projects
 
