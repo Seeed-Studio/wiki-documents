@@ -104,7 +104,7 @@ Getting Started
 
 - **Step 3.** Restart the Arduino IDE. Open “Level” example via the path : **File --> Examples --> Grove LED Bar --> Level**.
 
-![](https://github.com/SeeedDocument/Grove-LED_Bar/raw/master/img/code.png)
+![](https://github.com/SeeedDocument/Grove-LED_Bar/raw/master/img/LED_BAR_IDE.png)
 
 - **Step 4.** Upload the demo. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 

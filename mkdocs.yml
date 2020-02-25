@@ -193,6 +193,9 @@ pages:
       - ODYSSEY:
           - ODYSSEY STM32MP157C: ODYSSEY-STM32MP157C.md
           - ODYSSEY X86J4105: ODYSSEY-X86J4105.md
+          - ODYSSEY X86J4105: ODYSSEY-X86J4105-Installing-OS.md
+          - ODYSSEY X86J4105: ODYSSEY-X86J4105-Installing-openwrt.md
+          - ODYSSEY X86J4105: ODYSSEY-X86J4105-AzureIOT.md
       - ReSpeaker:
           - ReSpeaker Introduction: ReSpeaker.md
           - ReSpeaker Solutions: ReSpeaker_Solutions.md
@@ -616,6 +619,7 @@ pages:
           - Grove - LED String Light: Grove-LED_String_Light.md
           - Grove - LED Strip Driver: Grove-LED_Strip_Driver.md
           - Grove - OLED Display 0.96 inch: Grove-OLED_Display_0.96inch.md
+          - Grove - OLED Display 0.96" (SSD1315): Grove-OLED-Display-0.96-SSD1315.md
           - Grove - OLED Display 1.12&#34;: Grove-OLED_Display_1.12inch.md
           - Grove - Red LED: Grove-Red_LED.md
           - I2C LCD: I2C_LCD.md

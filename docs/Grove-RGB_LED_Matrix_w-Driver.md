@@ -169,9 +169,6 @@ e.g.
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-RGB_LED_Matrix_w-Driver/raw/master/img/connect.jpg)
-
-
 !!!Note
         If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
 

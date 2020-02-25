@@ -6,7 +6,7 @@ add more language steps
 */
 
 // 1. add the shortcode of the language 
-_Languages = ["en" , "cn" ,"jp" ,"vn", "id"];
+_Languages = ["en" , "cn" ,"jp" ,"vn", "id", "cz"];
 
 // 2. add the title 
 _LanguageTitle = {
@@ -15,6 +15,7 @@ _LanguageTitle = {
     "jp" : "日本語",
     "vn" : "VN",
     "id" : "IDN",
+    "cz" : "Czech",
 }
 
 /* 

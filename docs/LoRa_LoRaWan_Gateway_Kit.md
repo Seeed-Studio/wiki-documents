@@ -241,7 +241,7 @@ g)  Run **ifconfig** to check the ip address and mac address.
 To login through SSH, you need to fill in the Hostname with the IP address you've just got.And use port 22,choose the SSH connection type. Just leave the other options by default. Then simply click **Open**.
 
 
-![](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/img/putty_ssh.png)
+![](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/img/putty_lora.png)
 
 #### Step 2. Expand SD Card File System
 

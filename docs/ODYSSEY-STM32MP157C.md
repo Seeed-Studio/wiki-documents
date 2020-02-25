@@ -47,15 +47,15 @@ The ODYSSEY – STM32MP157C is a single board computer that based on STM32MP157C
 
 ## Hardware Overview
 
-ODYSSEY – STM32MP157C consists of two parts: Seeed NPi - STM32MP157C and Seeed SoM - STM32MP157C.
+ODYSSEY – STM32MP157C consists of two parts: breakout board of Seeed SoM - STM32MP157C and Seeed SoM - STM32MP157C.
 
-Seeed NPi-STM32MP157C hardware details follow:
+Breakout board of Seeed SoM - STM32MP157C hardware details follow:
 
  ![](https://github.com/SeeedDocument/Seeed-NPi-STM32MP157C/raw/master/IMG/front.png)
 
  ![](https://github.com/SeeedDocument/Seeed-NPi-STM32MP157C/raw/master/IMG/back.png)
 
-- **1.Seeed Som-stm32mp157c Slot :** Install the Seeed som-stm32mp157c area, if the user wants to remove the core board, slowly tilt the core board up and then remove, never remove by hand.
+- **1.Seeed Som-stm32mp157c Slot :** Install the Seeed SoM-stm32mp157c area, if the user wants to remove the core board, slowly tilt the core board up and then remove, never remove by hand.
 
 - **2.DC Power Input Port :** 12V~24V/2A (12V/2A power input is recommended).
 
@@ -115,12 +115,11 @@ Seeed NPi-STM32MP157C hardware details follow:
 
 ![](https://github.com/SeeedDocument/Seeed-NPi-STM32MP157C/raw/master/IMG/GPIO.png)
 
-Seeed NPi-STM32MP157C's 40-pin is fully compatible with Raspberry Pi's 40PIN, including GPIO, IIC, UART, SPI, IIS and PWM pins, as described below.
+ODYSSEY – STM32MP157C's 40-pin is fully compatible with Raspberry Pi's 40PIN, including GPIO, IIC, UART, SPI, IIS and PWM pins, as described below.
 
 ## Introduction To Software
 
 ### Preparatory Work
-
 
 **Materials Required**
 
@@ -199,7 +198,7 @@ Now your ODYSSEY – STM32MP157C is up, you may want to access your Linux system
 
 - **Step 3.** Use your favorite serial debugging tool to connect to serial ports: 115200 baud rate, 8 bits, no parity bits, a stop bit 1, no flow control. Here are some examples:
 
-    - Windows : Use [PUTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), select ```Serial``` protocol, fill in the COM port corresponding to Seeed NPi-STM32MP157C,```115200``` baud rate, 8 bit, no parity bits, a stop bit 1, no flow control.
+    - Windows : Use [PUTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), select ```Serial``` protocol, fill in the COM port corresponding to ODYSSEY – STM32MP157C,```115200``` baud rate, 8 bit, no parity bits, a stop bit 1, no flow control.
     - Linux : Depending on the USB To TTL Adapter, should be ```screen /dev/ttyACM0(,1, and so on) 115200``` or ```screen /dev/ttyUSB0(,1, and so on) 115200```.
     - Mac : Depending on the USB To TTL Adapter, should be ```screen /dev/cu.usbserial1412(,1422, and so on) 115200``` or ```screen /dev/cu.usbmodem1412(,1422, and so on) 115200```.
 
@@ -208,18 +207,18 @@ Now your ODYSSEY – STM32MP157C is up, you may want to access your Linux system
 
 **B. Connect via UART port**
 
-In this section, we'll walk you through the use of the USB to TTL adapter, which connects to the ODYSSEY – STM32MP157C's Uart port(Located at the upper right of ODYSSEY – STM32MP157C), to establish a connection between your computer and Seeed NPi-STM32MP157C.
+In this section, we'll walk you through the use of the USB to TTL adapter, which connects to the ODYSSEY – STM32MP157C's Uart port(Located at the upper right of ODYSSEY – STM32MP157C), to establish a connection between your computer and ODYSSEY – STM32MP157C.
 
 - **Step 1.** Connect Uart port To PC/Mac using USB To TTL Adapter. Note: The voltage of RX/TX is 3.3v. If you don't have USB To TTL Adapter, click [HERE](https://item.taobao.com/item.htm?id=550981934087) to buy.（RX->TX,TX->RX）
 
 - **Step 2.** Using the following serial debugging tools, the baud rate is 115200:
-    - Windows : Use [PUTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), select ```Serial``` protocol, fill in the COM port corresponding to Seeed NPi-STM32MP157C,```115200``` baud rate, 8 bit, no parity bits, a stop bit 1, no flow control.
+    - Windows : Use [PUTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), select ```Serial``` protocol, fill in the COM port corresponding to ODYSSEY – STM32MP157C,```115200``` baud rate, 8 bit, no parity bits, a stop bit 1, no flow control.
     - Linux : Depending on the USB To TTL Adapter, should be ```screen /dev/ttyACM0(,1, and so on) 115200``` or ```screen /dev/ttyUSB0(,1, and so on) 115200```.
     - Mac : Depending on the USB To TTL Adapter, should be ```screen /dev/cu.usbserial1412(,1422, and so on) 115200``` or ```screen /dev/cu.usbmodem1412(,1422, and so on) 115200```.
 
 - **Step 3.** The default user name is ```debian```, the password is ```temppwd```
 
-- **Step 4.** If you don't have USB to TTL Adapter, you can also use Arduino. If you use Arduino, connect one end of the jumper to the Arduino's RESET pin and the other end to the Arduino's GND pin. This will bypass your Arduino's ATMEGA MCU and turn your Arduino into a USB to TTL adapter. Please refer [HERE](https://www.youtube.com/watch?v=qqSLwK1DP8Q) Video tutorial. Now connect the GND pin of Arduino to the GND pin of Seeed NPi-STM32MP157C's Uart port. Connect Rx pins on Arduino to Rx pins on Seeed NPi-STM32MP157C's Uart port. Connect the Tx pin on the Arduino to the Tx pin on the Seeed NPi-STM32MP157C Uart port. Finally, connect the Arduino to the PC/Mac via the Arduino's USB cable. Now check to see if your PC/Mac has found your Arduino by typing the following command:
+- **Step 4.** If you don't have USB to TTL Adapter, you can also use Arduino. If you use Arduino, connect one end of the jumper to the Arduino's RESET pin and the other end to the Arduino's GND pin. This will bypass your Arduino's ATMEGA MCU and turn your Arduino into a USB to TTL adapter. Please refer [HERE](https://www.youtube.com/watch?v=qqSLwK1DP8Q) Video tutorial. Now connect the GND pin of Arduino to the GND pin of ODYSSEY – STM32MP157C's Uart port. Connect Rx pins on Arduino to Rx pins on ODYSSEY – STM32MP157C's Uart port. Connect the Tx pin on the Arduino to the Tx pin on the ODYSSEY – STM32MP157C Uart port. Finally, connect the Arduino to the PC/Mac via the Arduino's USB cable. Now check to see if your PC/Mac has found your Arduino by typing the following command:
 
 ```
 ls /dev/cu.usb* (Mac)
@@ -237,7 +236,7 @@ Now follow the steps above to connect to ODYSSEY – STM32MP157C via a serial co
 
 **A. Wi-Fi Settings**
 
-Configure the ODYSSEY – STM32MP157C network through the network management tool `connmanctl`, which has been installed on the Seeed NPi-STM32MP157C image. Follow these instructions to easily complete the configuration. 
+Configure the ODYSSEY – STM32MP157C network through the network management tool `connmanctl`, which has been installed on the ODYSSEY – STM32MP157C image. Follow these instructions to easily complete the configuration. 
 
 ```
 robot@ev3dev:~$ sudo connmanctl
@@ -277,7 +276,7 @@ You can connect to the network using an Ethernet cable. Just plug in the Etherne
 
 **A. SSH**
 
-SSH, short for Secure Shell, is formulated by the Network Working Group of IETF. SSH is a security protocol based on the application layer. SSH is a more reliable protocol that provides security for remote login sessions and other network services. There is no SSH protocol in the image provided by us, so we need to configure it through the serial port, so as to realize the communication between the device and the computer through SSH protocol. Enter the following command to install the SSH service in Seeed NPi-STM32MP157C.
+SSH, short for Secure Shell, is formulated by the Network Working Group of IETF. SSH is a security protocol based on the application layer. SSH is a more reliable protocol that provides security for remote login sessions and other network services. There is no SSH protocol in the image provided by us, so we need to configure it through the serial port, so as to realize the communication between the device and the computer through SSH protocol. Enter the following command to install the SSH service in ODYSSEY – STM32MP157C.
 
 ```bash
 sudo apt-get install ssh -y
@@ -387,7 +386,7 @@ export QT_QPA_PLATFORM=linuxfb:fb=/dev/fb0
 
 ### Run the Demo
 
-Run the following code on 'ODYSSEY - STM32MP157C'
+Run the following code on `ODYSSEY - STM32MP157C`
 
 ```bash
 cd ~

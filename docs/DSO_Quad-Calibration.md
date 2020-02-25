@@ -45,7 +45,7 @@ With this equipment you can connect the volt meter and the channel of the DSO st
 
 While the DC calibration is applied in the digital part of the DSO, the AC calibration is done by changing the values of some capacitors in the hardware. The divider ratio of the capacitors need to match the divider ration of the resistors.
 
-![](https://github.com/SeeedDocument/DSO_Quad-Calibration/raw/master/DSO203_AC-Cal_Circuit_Diagr.PNG).
+![](https://github.com/SeeedDocument/DSO_Quad-Calibration/raw/master/img/DSO203_AC-Cal_Circuit_Diagr.PNG).
 
 The calibration procedure for the Quad DSO it is already described, e.g. here: [[2]](http://neophob.com/2012/03/dso-quad-for-dummies/) It uses the build-in square wave output. For Ch_A first set the probe to x1 and adjust A1 (=C5A) in the 1V/div range. Then adjust A2 (C3A) in the 500mV/div range. Then check the A1 setting again, then the A2 again as each is influencing also the other a little. Finally set the probe to x10, select a siutable range and adjust A3.
 

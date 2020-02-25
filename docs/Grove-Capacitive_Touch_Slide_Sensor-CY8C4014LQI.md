@@ -151,7 +151,7 @@ This module is based on **CY8C4014LQI**, the input voltage of this chip range fr
     ![](https://github.com/SeeedDocument/Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI/raw/master/img/path.png)
     
     2. Open it in your computer by click the **basic_demo.ino** which you can find in the folder **XXXX\Arduino\libraries\Grove_touch_sensor_CY8C40XX-master\examples\basic_demo**, **XXXX** is the location you installed the Arduino IDE.
-    ![](https://github.com/SeeedDocument/Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI/raw/master/img/path_1.png)
+    ![](https://github.com/SeeedDocument/Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI/raw/master/img/path_1.jpg)
     
     3. Or, you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
