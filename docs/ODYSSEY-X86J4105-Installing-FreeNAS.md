@@ -8,7 +8,7 @@ sku: 102110399
 
 # Installing FreeNAS on ODYSSEY - X86J4105
 
-This tutorial demonstrates how to install the open source Storage operating system.  [FreeNAS](https://www.freenas.org/) is an operating system that can be installed on virtually any hardware platform to share data over a network. By installing FreeNAS on ODYSSEY - X86J4105 you have built yourself an personal cloud drive!
+This tutorial demonstrates how to install the open-source Storage operating system.  [FreeNAS](https://www.freenas.org/) is an operating system that can be installed on virtually any hardware platform to share data over a network. By installing FreeNAS on ODYSSEY - X86J4105 you have built yourself a personal cloud drive!
 
 ## Hardware Requirements
 
@@ -22,11 +22,13 @@ This tutorial demonstrates how to install the open source Storage operating syst
 
 ## Download the FreeNAS OS Image
 
-First, download the [FreeNAS OS Image](https://www.freenas.org/download-freenas-release/) into your drive. It should be an `.iso` file.
+First, download the [FreeNAS OS Image](https://www.freenas.org/download-freenas-release/) into your drive. It should be a `.iso` file.
 
 ![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/FreeNAS/FreeNAS-download.jpg)
 
-In this tutorial, FreeNAS 11.3 is used and the FreeNAS OS will be installed onto a USB Drive so 2 USB drives are needed, one used for the bootable USB (installer), and other one used for installing FreeNAS OS.
+In this tutorial, FreeNAS 11.3 is used. FreeNAS will need to install on a different drive. You can install the FreeNAS on an HDD or SSD Hard Drive.
+
+**Note:** In this tutorial, FreeNAS OS is installed onto a USB drive for convenience.
 
 ## Creating a Bootable USB
 
@@ -54,7 +56,7 @@ Select the downloaded Operating System Image, select the formatted USB Drive and
 
 ### Step 1 - Enabling CSM Mode in ODYSSEY - X86J4105
 
-Plug in your bootable USB, Monitor and keyboard to ODYSSEY - X86J4105, and power up. When booting up, keep pressing **`DEL`** key to enter the setup Screen. Navigate to **`Advanced`** -> **`CSM Support`** and press Enter to enable it.
+Plugin your bootable USB, Monitor and keyboard to ODYSSEY - X86J4105, and power up. When booting up, keep pressing **`DEL`** key to enter the setup screen. Navigate to **`Advanced`** -> **`CSM Support`** and press Enter to enable it.
 
 <div align=center><img src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/OpenWRT/biosSetting.jpg"/></div>
 
@@ -74,7 +76,7 @@ A boot screen like above should appear. Press `Enter` to select the Boot FreeNAS
 
 ![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/FreeNAS/FreeNAS-option.jpg)
 
-Once entered into the installer, an option menu should appear as follow, choose **Install/Select** and press `Enter`. 
+Once entered into the installer, an options menu should appear as follow, select **Install/Select** and press `Enter`. 
 
 ![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/FreeNAS/FreeNAS-drive.jpg)
 
@@ -102,7 +104,7 @@ Plug in the Ethernet cable for internet and can be accessed to the Web interface
 
 Reboot the ODYSSEY - X86J4105 and press `F7` again to enter Boot Manager Screen, and choose the USB drive that just installed the FreeNAS.
 
-**Note:** Can also change it in the set-up by pressing `DEL` and set the USB drive as the first boot up option.
+**Note:** Can also change it in the set-up by pressing `DEL` and set the USB drive as the first boot-up option.
 
 Once booted into the FreeNAS, you should see the Web interface address:
 
@@ -125,6 +127,9 @@ If you able see this screen then you have successfully installed the FreeNAS and
 ## Resources
 
 Other usefull applications:
+
+- [Getting Started With FreeNAS 11 Install, Configure, Setup Users, Setup Shares & How Snapshots Work](https://www.youtube.com/watch?v=sMZ-s8wHkHw&list=PLMeX7dgR89SvzGW0eumZuP_LAeBGEDnBb&index=11)
+
 
 - [How to set up a home file server using FreeNAS](https://www.windowscentral.com/how-to-set-up-freenas-home-file-server)
 
