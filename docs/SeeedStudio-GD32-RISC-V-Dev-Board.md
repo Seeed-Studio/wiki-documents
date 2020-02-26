@@ -20,10 +20,6 @@ SeeedStudio GD32 RISC-V Dev Board is based on GD32VF103VBT6 MCU which can run at
 We break out all the I/O Pins(80 GPIOs in total) of GD32VF103, which will meet your diverse development needs. With the onboard 8MB flash and 256Byte EEPROM, you can implement more complex applications. Moreover, we provide a wealth of peripheral resources on the development board, including an LCD, a type c USB port, a TF card slot, two user buttons, and three user LEDs. 
 
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/SeeedStudio-GD32-RISC-V-Dev-Board-p-4302.html" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
-
-
-
 ## Features
 
 + GD32VF103VBT6 RISC-V MCU @108MHz
@@ -51,7 +47,7 @@ We break out all the I/O Pins(80 GPIOs in total) of GD32VF103, which will meet y
 ## Getting Started
 
 
-### Use PlatformIO for a Test Demo
+### Use platformIO IDE for a Test Demo
 
 
 #### Hardware
@@ -77,7 +73,7 @@ Now you finish the hardware config.
 
 #### Software
 !!!Note
-    According to that GD32 board can support the Arduino framework, but not be perfectly compatible with the Arduino IDE, here we use platformIO IDE to create a easy demo. The Arduino IDE version will be updated soon after. 
+	According to that GD32 board can support the Arduino framework, but not be perfectly compatible with the Arduino IDE, here we use platformIO IDE to create a easy demo. The Arduino IDE version will be updated soon after. 
 
 - **Step1**
 Set up the platformIO IDE, platformIO IDE is based on Visual Studio Code.
@@ -94,28 +90,19 @@ Type "platformIO" in the search engine to install it.
 ![](https://github.com/SeeedDocument/GD32VF103/raw/master/img/wiki2.png)
 
 - **Step2**
-Click the "Open Project" and find your project file. 
-
-Download the **TFT_GD32 Project** here
-
-
-
-<div align="center">
-<figure>
-  <a href="https://github.com/Seeed-Studio/Seeed_Arduino_LCD/archive/TFT_GD32.zip" target="_blank"><img src="https://github.com/SeeedDocument/GD32VF103/raw/master/img/TFT_GD32-Project.png" />
-  </a>
-</figure>
-</div>
-
-
+Click the "Open Project" and find your project file. Here use ["TFT_GD32"](https://github.com/Seeed-Studio/Seeed_Arduino_LCD/archive/TFT_GD32.zip) as an example.
 
 
 ![](https://github.com/SeeedDocument/GD32VF103/raw/master/img/wiki3.png)
 
 
 Choose the Arduino frame work and GD32 board.
+
+
 - **Step3**
-Add the ["LCD" library](https://github.com/Seeed-Studio/Seeed_Arduino_LCD/archive/master.zip) in the platformIO IDE. Usually the library file is at /C:/user/admin/.platformio/lib/, compress the "LCD" library and add it to the target path.
+Add the ["LCD" library](https://github.com/Seeed-Studio/Seeed_Arduino_LCD/archive/master.zip) in the platformIO IDE. Usually the library file is at /C:/user/admin/.platformio/lib/, compress the "LCD" library and add it to the target path. Git clone [Arduino framework](https://github.com/LynnL4/framework-arduino-gd32v), and add it to /.platformio/packages/... .
+
+
 - **Step4**
 You can see that the working column is placed on the left side.
 
@@ -152,15 +139,11 @@ Choose the Index 4 and click "ok" to download the code to the board, after downl
 
 ##Resources
 
-
-- **[PDF]** [SeeedStudio GD32 RISC-V Board Shecmatic File](https://github.com/SeeedDocument/GD32VF103/raw/master/res/GD32VF103VBT6-dev-board.pdf)
 - **[PDF]** [GD32VF103_Datasheet_Rev1.0](https://github.com/SeeedDocument/Bazaar_Document/raw/master/GD32VF103_Datasheet_Rev1.0.pdf)
 - **[PDF]** [GD32VF103_User_Manual_EN_V1.0](https://github.com/SeeedDocument/Bazaar_Document/raw/master/GD32VF103_User_Manual_EN_V1.0.pdf)
 - **[Zip]** ["LCD" library](https://github.com/Seeed-Studio/Seeed_Arduino_LCD/archive/master.zip)
-- **[Zip]** [Project file "TFT_GD32"](https://github.com/Seeed-Studio/Seeed_Arduino_LCD/archive/TFT_GD32.zip)
+- **[Zip]** Project file["TFT_GD32"](https://github.com/Seeed-Studio/Seeed_Arduino_LCD/archive/TFT_GD32.zip)
 - **[Zip]** [DFU Tool](https://github.com/SeeedDocument/GD32VF103/raw/master/res/GD32_MCU_Dfu_Tool_V3.8.1.5784_1.rar)
-
-
 
 ## Tech Support
 Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).
