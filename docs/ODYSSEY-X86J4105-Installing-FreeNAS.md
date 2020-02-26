@@ -1,0 +1,126 @@
+# Installing FreeNAS on ODYSSEY - X86J4105
+
+This tutorial demonstrates how to install the open source Storage operating system.  [FreeNAS](https://www.freenas.org/) is an operating system that can be installed on virtually any hardware platform to share data over a network. By installing FreeNAS on ODYSSEY - X86J4105 you have built yourself an personal cloud drive!
+
+## Hardware Requirements
+
+- A Working Computer
+
+- USB Drive x 2 (<8GB is recommended)
+
+- A Monitor
+
+- Keyboard
+
+## Download the FreeNAS OS Image
+
+First, download the [FreeNAS OS Image](https://www.freenas.org/download-freenas-release/) into your drive. It should be an `.iso` file.
+
+![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/FreeNAS/FreeNAS-download.jpg)
+
+In this tutorial, FreeNAS 11.3 is used and the FreeNAS OS will be installed onto a USB Drive so 2 USB drives are needed, one used for the bootable USB (installer), and other one used for installing FreeNAS OS.
+
+## Creating a Bootable USB
+
+### Step 1 - Prepare your Bootable USB
+
+Format one of the USB drive. If you are a Windows user, you can format the USB drive by right-clicking the USB Drive and select `Format`.  
+
+**Note:** Choose `FAT32` for the File System.
+
+<div align=center><img width=450 src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/InstallingOS/formatUSB.png"/></div>
+
+### Step 2 - Download Flash Burner
+
+Download the Open Source Flash burner [balenaEtcher](https://www.balena.io/etcher/). Download the version according to your operating system(Windows/macOS/Linux).
+
+<div align=center><img width=500 src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/InstallingOS/etcher.jpg"/></div>
+
+### Step 3 - Writing the OS Image into USB
+
+Select the downloaded Operating System Image, select the formatted USB Drive and Flash! Now, the bootable USB is all set to go.
+
+<div align=center><img width=500 src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/InstallingOS/etcherDone.png"/></div>
+
+## Installing FreeNAS OS
+
+### Step 1 - Enabling CSM Mode in ODYSSEY - X86J4105
+
+Plug in your bootable USB, Monitor and keyboard to ODYSSEY - X86J4105, and power up. When booting up, keep pressing **`DEL`** key to enter the setup Screen. Navigate to **`Advanced`** -> **`CSM Support`** and press Enter to enable it.
+
+<div align=center><img src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/OpenWRT/biosSetting.jpg"/></div>
+
+### Step 2 - Install the OS
+
+Reboot your ODYSSEY - X86J4105 and keep pressing **`F7`** to enter the boot manager screen. Select the bootable USB (Installer) and press Enter.
+
+**Note:** Remember to choose the one that has the FreeNAS iso image on it.
+
+<div align=center><img width = 400 src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/OpenWRT/biosSetup.jpg"/></div>
+
+### Step 3 - Installing process
+
+![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/FreeNAS/FreeNAS-boot.jpg)
+
+A boot screen like above should appear. Press `Enter` to select the Boot FreeNAS Installer.
+
+![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/FreeNAS/FreeNAS-option.jpg)
+
+Once entered into the installer, an option menu should appear as follow, choose **Install/Select** and press `Enter`. 
+
+![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/FreeNAS/FreeNAS-drive.jpg)
+
+Select a drive to install the FreeNAS image. Here we should be able to see the other USB drive.
+
+**Note:** Use `spacebar` to select the USB drive.
+
+![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/FreeNAS/FreeNAS-warning.jpg)
+
+A warning will appear stating that everything in the chosen drive will be wiped, simply press Yes.
+
+<div align=center><img src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/FreeNAS/FreeNAS-pw.jpg"/></div>
+
+Create your root password for logging into the FreeNAS from Web interface later.
+
+![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/FreeNAS/FreeNAS-complete.jpg)
+
+The installing process will take place, and wait until the installing is finished. When it's done, it should like above.
+
+The installing process is all done, you can reboot the ODYSSEY - X86J4105 and unplug the bootable USB(Installer). 
+
+Plug in the Ethernet cable for internet and can be accessed to the Web interface.
+
+## Configurations
+
+Reboot the ODYSSEY - X86J4105 and press `F7` again to enter Boot Manager Screen, and choose the USB drive that just installed the FreeNAS.
+
+**Note:** Can also change it in the set-up by pressing `DEL` and set the USB drive as the first boot up option.
+
+Once booted into the FreeNAS, you should see the Web interface address:
+
+<div align=center><img src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/FreeNAS/FreeNAS-bootcomplete.jpg"/></div>
+
+**Note:** If states Web interface cannot be accessed, please check your internet connection.
+
+Use another computer using the same internet i.e. your laptop to type the address into the web browser:
+
+![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/FreeNAS/FreeNAS-web1.jpg)
+
+The user name is `root` and the password is the one set during installation.
+
+![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/FreeNAS/FreeNAS-web2.jpg)
+
+If you able see this screen then you have successfully installed the FreeNAS and feel free to add more storage to the ODYSSEY - X86J4105 and have fun with personal cloud drive!
+
+*For further development, you can visit the [FreeNAS official Forum](https://www.ixsystems.com/community/?__hstc=54333623.367bb0a280861850367fe7c0081ee5de.1582628751612.1582693495900.1582699340011.3&__hssc=54333623.1.1582699340011&__hsfp=3609375136) and find out more about plugins and features*
+
+## Resources
+
+Other usefull applications:
+
+- [How to set up a home file server using FreeNAS](https://www.windowscentral.com/how-to-set-up-freenas-home-file-server)
+
+- [Backing Up FreeNAS and TrueNAS to Backblaze B2](https://www.backblaze.com/blog/how-to-setup-freenas-cloud-storage/)
+
+## Tech Support
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>
