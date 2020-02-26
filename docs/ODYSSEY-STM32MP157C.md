@@ -133,7 +133,7 @@ ODYSSEY - STM32MP157C's 40-pin is fully compatible with Raspberry Pi's 40PIN, in
 
 <div class="admonition warning">
 <p class="admonition-title">Caution</p>
-Please plug the USB cable gently, otherwise you may damage the interface.Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click <a href="https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html"><B>here</B></a> to buy
+Please plug the USB cable gently, otherwise you may damage the interface.Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click <a href="https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html"><B>here</B></a> to buy
 </div>
 
 **Mirror Installation**
@@ -171,9 +171,12 @@ they mean to start up failed if the USER LED does not blink.Please check the boo
 sudo echo cmdline=init=/opt/scripts/tools/eMMC/init-eMMC-flasher-v3-stm32mp1.sh >> /boot/uEnv.txt
 sudo reboot
 ```
+
 - **Step 3.** Wait for the USER LED bright continuously.that indicate the eMMC boot successfully if the USER LED bright continuously.
 
-- **Step 4.** Set the slide switch to EMMC and restart.
+- **Step 4.** Power off and unplug the SD card.
+
+- **Step 5.** Set the slide switch to EMMC and restart.
 
 **Serial Console**
 
