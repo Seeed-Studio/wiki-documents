@@ -1,11 +1,9 @@
 ---
 name: ODYSSEY - X86J4105
-category: 
-bzurl: 
-oldwikiname: 
-prodimagename: 
-surveyurl: 
-sku: 102110397
+category: ODYSSEY
+bzurl: https://www.seeedstudio.com/ODYSSEY-X86J4105800-p-4445.html
+wikiurl: http://wiki.seeedstudio.com/ODYSSEY-X86J4105/
+sku: 102110399
 ---
 
 ![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/ODYSSEY-X86J4105-side.png)

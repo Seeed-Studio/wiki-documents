@@ -1,3 +1,11 @@
+---
+name: ODYSSEY - X86J4105
+category: ODYSSEY
+bzurl: https://www.seeedstudio.com/ODYSSEY-X86J4105800-p-4445.html
+wikiurl: http://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-OS/
+sku: 102110399
+---
+
 # Creating Bootable USB and Installing OS (Ubuntu Desktop 18.04)
 
 This tutorial demonstrates how to create a bootable USB drive and install Linux OS(Ubuntu Desktop 18.04) onto the ODYSSEY - X86J4105.

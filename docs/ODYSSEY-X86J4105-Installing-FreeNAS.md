@@ -1,3 +1,11 @@
+---
+name: ODYSSEY - X86J4105
+category: ODYSSEY
+bzurl: https://www.seeedstudio.com/ODYSSEY-X86J4105800-p-4445.html
+wikiurl: http://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-FreeNAS/
+sku: 102110399
+---
+
 # Installing FreeNAS on ODYSSEY - X86J4105
 
 This tutorial demonstrates how to install the open source Storage operating system.  [FreeNAS](https://www.freenas.org/) is an operating system that can be installed on virtually any hardware platform to share data over a network. By installing FreeNAS on ODYSSEY - X86J4105 you have built yourself an personal cloud drive!
