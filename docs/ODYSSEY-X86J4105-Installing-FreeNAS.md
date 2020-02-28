@@ -124,6 +124,24 @@ If you able see this screen then you have successfully installed the FreeNAS and
 
 *For further development, you can visit the [FreeNAS official Forum](https://www.ixsystems.com/community/?__hstc=54333623.367bb0a280861850367fe7c0081ee5de.1582628751612.1582693495900.1582699340011.3&__hssc=54333623.1.1582699340011&__hsfp=3609375136) and find out more about plugins and features*
 
+## Acrylic Case
+
+We have also designed an Acrylic Case for building your own NAS into a enclosure! Here provides two versions of enclosure depending on the size of your hard drive:
+
+1. For [**2.5 inches of SATA HDD**](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/Documents/J4105-2.5.dwg) Hard Drive.
+
+2. For [**3.5 inches of SATA HDD**](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/Documents/J4105-3.5.dwg) Hard Drive.
+
+**Materials Required:**
+
+- 3mm Acrylics sheets
+
+- M3 x 20mm Hexagon Female-Female Threaded Pillar x 4
+
+- M3 x 40mm Hexagon Female-Female Threaded Pillar x 4 (or use M3 x 20mm to stack up to 40mm)
+
+- M3 Screws
+
 ## Resources
 
 Other usefull applications:
