@@ -1,3 +1,11 @@
+---
+name: ODYSSEY - X86J4105
+category: ODYSSEY
+bzurl: https://www.seeedstudio.com/ODYSSEY-X86J4105800-p-4445.html
+wikiurl: http://wiki.seeedstudio.com/ODYSSEY-X86J4105-AzureIOT/
+sku: 102110399
+---
+
 # Edge IoT - Sending Sensor Data to Cloud
 
 This tutorial demonstrate how to read sensor values connnected to the ODYSSEY - X86J4105 and sends the data to **Microsoft Azure IoT Hub**, where this data can be displayed or  processed for further IoT applications.

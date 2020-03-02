@@ -1,3 +1,11 @@
+---
+name: ODYSSEY - X86J4105
+category: ODYSSEY
+bzurl: https://www.seeedstudio.com/ODYSSEY-X86J4105800-p-4445.html
+wikiurl: http://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-openwrt/
+sku: 102110399
+---
+
 # Installing OpenWrt on ODYSSEY - X86J4105
 
 This tutorial demonstrates how to install the open source OS for router network. With the help of OpenWrt, your ODYSSEY - X86J4105 can turn into a router and take care of your home network!
