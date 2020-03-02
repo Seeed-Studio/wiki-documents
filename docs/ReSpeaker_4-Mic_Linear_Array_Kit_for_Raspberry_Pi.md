@@ -85,7 +85,7 @@ channel are dummy.
 
 **System Diagram**
 
-<a href="https://github.com/SeeedDocument/ReSpeaker_4-Mics_Linear_Array_Kit/raw/master/img/voice_hat_acc.png" target="_blank"><img src="https://github.com/SeeedDocument/ReSpeaker_4-Mics_Linear_Array_Kit/raw/master/img/voice_hat_acc.png"/></a>
+<a href="https://github.com/SeeedDocument/ReSpeaker_4-Mics_Linear_Array_Kit/raw/master/img/voice_hat_acc-correct.png" target="_blank"><img src="https://github.com/SeeedDocument/ReSpeaker_4-Mics_Linear_Array_Kit/raw/master/img/voice_hat_acc-correct.png"/></a>
 
 **Interface**
 
