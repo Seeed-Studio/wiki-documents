@@ -455,6 +455,7 @@ pages:
           - Grove - CO2 & Temperature & Humidity Sensor (SCD30): Grove-CO2_Temperature_Humidity_Sensor-SCD30.md
           - Grove - Chest Strap Heart Rate Sensor: Grove-Chest_Strap_Heart_Rate_Sensor.md
           - Grove - Collision Sensor: Grove-Collision_Sensor.md
+          - Grove - Capacitive Fingerprint Scanner/Sensor: Grove-Capacitive-Fingerprint-Sensor.md
           - Grove - Capacitive Moisture Sensor (Corrosion-Resistant): Grove-Capacitive_Moisture_Sensor-Corrosion-Resistant.md
           - Grove - Differential Amplifier v1.0: Grove-Differential_Amplifier_v1.0.md
           - Grove - Digital Infrared Temperature Sensor: Grove-Digital_Infrared_Temperature_Sensor.md
