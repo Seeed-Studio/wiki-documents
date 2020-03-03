@@ -59,40 +59,6 @@ The Seeed IoT Button For AWS is a Wi-Fi based, programmable button that is easy 
 
 ## Getting Started
 
-### Setting up Wi-Fi on the Button
-
-1. Download the latest AWS IoT 1-Click App from Apple App Store or Google Play Store
-
-2. Launch the AWS IoT 1-Click App
-
-3. Press the Wi-Fi Configuration button
-
-4. Press Configure Wi-Fi in the App
-
-<div align=center><img width = 250 src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/04.png"/></div>
-
-5. Press the Scan button, then scan the DSN of a button, then press the Stop Scanning button
-
-<div align=center><img src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/05.png"/></div>
-
-6. Press Configure
-
-7. Press your AWS IoT Enterprise button for 6 seconds until the blue light flashes
-
-<div align=center><img width = 250 src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/07.png"/></div>
-
-8. Select a Wi-Fi network from the list of networks. This is the Wi-Fi network you want your buttons to use
-
-<div align=center><img width=250 src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/08.png"/></div>
-
-9. Input the password (if any) for the Wi-Fi network and Continue
-
-<div align=center><img width=250 src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/09.png"/></div>
-
-10. Wait until the device turn off and the configuration is done
-
-<div align=center><img width = 500 src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/10.png"/></div>
-
 ### Device Activation
 
 When first time using the device, you must put the battery inside the button, and connect the device to a computer or a power adapter through USB Type-C. When the power indication LED is green, it indicates that it's activated(The power status LED is near the USB Type-C port).
@@ -100,19 +66,35 @@ When first time using the device, you must put the battery inside the button, an
 !!!Note
         When the Power Status LED is red, it indicates that the battery is reversed!
 
-### Device Configuration
+### Setting up Wi-Fi on the Button
 
-#### Network Configuration
+1. Download the latest AWS IoT 1-Click App from Apple App Store or Google Play Store
 
-- Long press (over 7s): Enter BLE network configuration mode
+2. Launch the **AWS IoT 1-Click App** and sign up with an Amazon AWS account
 
-- Configure Network via mobile App (temporarily lacking, need to provide by AWS)
+3. Press **Claim with Device ID** in the App. Press **Scan** in the app and Scan the **DSN** from the bottom of Seeed IoT Button for AWS.
 
-#### Equipment Declaration
+<div align=center><img src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/05.png"/></div>
 
-(temporarily lacking, need to provide by AWS)
+4. Press **Configure**
 
-- https://aws.amazon.com/cn/iot-1-click/ 
+5. Press your **Seeed IoT Button for AWS** for 7 seconds until the blue light flashes
+
+<div align=center><img width = 250 src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/07-1.png"/></div>
+
+6. Select a Wi-Fi network from the list of networks. This is the Wi-Fi network you want your buttons to use
+
+<div align=center><img width=250 src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/08.png"/></div>
+
+7. Input the password (if any) for the Wi-Fi network and Continue
+
+<div align=center><img width=250 src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/09.png"/></div>
+
+8.   Wait until configuration succeeded is appeared in the App and press **Finish**. The configuration is done
+
+<div align=center><img width = 500 src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/10.png"/></div>
+
+Now you can start playing with your AWS 1-Click service!
 
 ### Operating Instructions
 
