@@ -68,29 +68,29 @@ When first time using the device, you must put the battery inside the button, an
 
 ### Setting up Wi-Fi on the Button
 
-1. Download the latest AWS IoT 1-Click App from Apple App Store or Google Play Store
+1.Download the latest AWS IoT 1-Click App from Apple App Store or Google Play Store
 
-2. Launch the **AWS IoT 1-Click App** and sign up with an Amazon AWS account
+2.Launch the **AWS IoT 1-Click App** and sign up with an Amazon AWS account
 
-3. Press **Claim with Device ID** in the App. Press **Scan** in the app and Scan the **DSN** from the bottom of Seeed IoT Button for AWS.
+3.Press **Claim with Device ID** in the App. Press **Scan** in the app and Scan the **DSN** from the bottom of Seeed IoT Button for AWS.
 
 <div align=center><img src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/05.png"/></div>
 
-4. Press **Configure**
+4.Press **Configure**
 
-5. Press your **Seeed IoT Button for AWS** for 7 seconds until the blue light flashes
+5.Press your **Seeed IoT Button for AWS** for 7 seconds until the blue light flashes
 
 <div align=center><img width = 250 src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/07-1.png"/></div>
 
-6. Select a Wi-Fi network from the list of networks. This is the Wi-Fi network you want your buttons to use
+6.Select a Wi-Fi network from the list of networks. This is the Wi-Fi network you want your buttons to use
 
 <div align=center><img width=250 src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/08.png"/></div>
 
-7. Input the password (if any) for the Wi-Fi network and Continue
+7.Input the password (if any) for the Wi-Fi network and Continue
 
 <div align=center><img width=250 src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/09.png"/></div>
 
-8.   Wait until configuration succeeded is appeared in the App and press **Finish**. The configuration is done
+8.Wait until configuration succeeded is appeared in the App and press **Finish**. The configuration is done
 
 <div align=center><img width = 500 src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/10.png"/></div>
 
