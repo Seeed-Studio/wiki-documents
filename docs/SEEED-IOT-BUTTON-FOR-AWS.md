@@ -53,21 +53,49 @@ The Seeed IoT Button For AWS is a Wi-Fi based, programmable button that is easy 
 </figure>
 </div>
 
-### Power Status LED Indication
+### LED Status Indications
 
-The Power Status LED is near the USB Type-C Port.
-
-|Power LED Status|Indication|
-|---|---|
-|Battery reversed|Red|
-|Battery Charging|Green ON|
-|Battery Finished Charging|Green OFF|
+![](https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/AWS%20Button%20LED.jpg)
 
 ## Getting Started
 
+### Setting up Wi-Fi on the Button
+
+1. Download the latest AWS IoT 1-Click App from Apple App Store or Google Play Store
+
+2. Launch the AWS IoT 1-Click App
+
+3. Press the Wi-Fi Configuration button
+
+4. Press Configure Wi-Fi in the App
+
+<div align=center><img width = 250 src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/04.png"/></div>
+
+5. Press the Scan button, then scan the DSN of a button, then press the Stop Scanning button
+
+<div align=center><img src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/05.png"/></div>
+
+6. Press Configure
+
+7. Press your AWS IoT Enterprise button for 6 seconds until the blue light flashes
+
+<div align=center><img width = 250 src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/07.png"/></div>
+
+8. Select a Wi-Fi network from the list of networks. This is the Wi-Fi network you want your buttons to use
+
+<div align=center><img width=250 src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/08.png"/></div>
+
+9. Input the password (if any) for the Wi-Fi network and Continue
+
+<div align=center><img width=250 src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/09.png"/></div>
+
+10. Wait until the device turn off and the configuration is done
+
+<div align=center><img width = 500 src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/10.png"/></div>
+
 ### Device Activation
 
-When first time using the device, you must connect the device to a computer or a power adapter through USB Type-C. When the power indication LED is green, it indicates that it's activated(The power status LED is near the USB Type-C port).
+When first time using the device, you must put the battery inside the button, and connect the device to a computer or a power adapter through USB Type-C. When the power indication LED is green, it indicates that it's activated(The power status LED is near the USB Type-C port).
 
 !!!Note
         When the Power Status LED is red, it indicates that the battery is reversed!
@@ -95,28 +123,6 @@ When first time using the device, you must connect the device to a computer or a
 - **Long Press(2s~5s):** Send long press event
   
 - **Long Press(>7s):** Enter BLE network configuration mode. In this mode, other events are blocked. If you need to manually exit the BLE distribution mode, you can press and hold it for more than 7s again, and it will exit automatically in two minutes.
-
-### Event Status LED Indications
-
-The Event Status LED is near the button(Above the button).
-
-![](https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/Seeed_IOT_Button_Overview.gif)
-
-| LED Status   | Indication                      |
-| :----------------------- | :----------------------------------------- |
-| Red Always|The certificate has not been flashed or the certificate is invalid|
-| White flashes -> Green|Event sent successfully|
-| White flashes -> Red| Event sent failed|
-| White flashes -> Orange|Wi-Fi connection failed, please check router or change network configuration|
-|White flashes -> Purple|The server connection failed, please check the network environment|
-
-### Wi-Fi Configuration LED Indications
-
-The Wi-Fi Configuration LED is near the button(Below the button).
-
-| LED Status   | Indication                      |
-| :----------------------- | :----------------------------------------- |
-| Blue flashing|BLE network configuring|
 
 ## Tech Support
 
