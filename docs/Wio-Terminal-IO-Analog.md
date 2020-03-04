@@ -16,7 +16,7 @@ To use the **Grove configurable A/D Port** as Analog port, simply define it as f
 
 ```cpp
 void setup() {
-    pinMode(RPI_A0, INPUT); 
+    pinMode(A0, INPUT);
 }
 ```
 
@@ -29,7 +29,7 @@ In this example, a Grove Loudness sensor is used to demonstrate:
 ```cpp
 void setup() {
     Serial.begin(115200);
-    pinMode(RPI_A0, INPUT);
+    pinMode(A0, INPUT);
 }
 void loop() {
     int loudness = analogRead(RPI_A0);

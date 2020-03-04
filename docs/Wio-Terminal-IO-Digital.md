@@ -16,7 +16,7 @@ To use the **Grove configurable A/D Port** as Digital port, simply define it as 
 
 ```cpp
 void setup() {
-    pinMode(RPI_DO, INPUT); //Configure UART TX as Digital port
+    pinMode(D0, INPUT); //Configure UART TX as Digital port
 }
 ```
 
@@ -38,7 +38,7 @@ Now, connect your Grove sensor to the physical Grove Port!
 In this example, a Grove Button and Grove LED are used to demonstrate:
 
 ```cpp
-#define BUTTON RPI_DO //Button to Grove UART Port
+#define BUTTON D0 //Button to Grove UART Port
 #define LED PIN_WIRE_SCL //LED to Grove I2C Port
 
 void setup() {
@@ -73,7 +73,7 @@ Servo myservo;
 int pos = 0;
 
 void setup() {
-  myservo.attach(RPI_DO); //Connect servo to Grove UART Port
+  myservo.attach(D0); //Connect servo to Grove Digital Port
 }
 
 void loop() {
