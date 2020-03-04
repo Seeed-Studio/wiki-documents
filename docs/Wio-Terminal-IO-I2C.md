@@ -1,10 +1,10 @@
-# Using the Grove I2C Port on Rescreen
+# Using the Grove I2C Port on Wio Terminal
 
-This repo demonstrates how to use the Grove I2C Port on Rescreen, you can simply use this plug and play functionality with the Grove Ecosystem!
+This repo demonstrates how to use the Grove I2C Port on Wio Terminal, you can simply use this plug and play functionality with the Grove Ecosystem!
 
 ## Port Configurations
 
-To use the Grove I2C port on ReScreen, Simply connect your Grove sensor that uses I2C to the physical I2C port on ReScreen.
+To use the Grove I2C port on Wio Terminal, Simply connect your Grove sensor that uses I2C to the physical I2C port on Wio Terminal.
 
 **Note:** Remember to include the Sensor libraries in Arduino IDE. Refer to this [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/) for more information.
 

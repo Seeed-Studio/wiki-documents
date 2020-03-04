@@ -1,8 +1,8 @@
 # IMU Overview
 
-This repo introduce how to install the built-in 3-Axis Digital Acclerometer(LIS3DHTR) library used on Rescreen. This allows you to access the IMU information of the Rescreen as well as using it for motion control and etc.
+This repo introduce how to install the built-in 3-Axis Digital Acclerometer(LIS3DHTR) library used on Wio Terminal. This allows you to access the IMU information of the Wio Terminal as well as using it for motion control and etc.
 
-## Installing the 3-Axis Digital Acclerometer(LIS3DHTR) Library For Rescreen
+## Installing the 3-Axis Digital Accelerometer(LIS3DHTR) Library For Wio Terminal
 
 1. Visit the [Seeed_Arduino_LIS3DHTR](https://github.com/Seeed-Studio/Seeed_Arduino_LIS3DHTR/tree/beta) repositories and download the entire repo to your local drive.
 

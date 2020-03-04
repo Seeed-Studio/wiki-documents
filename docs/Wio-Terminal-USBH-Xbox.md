@@ -1,29 +1,29 @@
-# Using Xbox ONE Controller on ReScreen
+# Using Xbox ONE Controller on Wio Terminal
 
-This repo introduces how to use a Xbox ONE Controller on ReScreen. With this example, you can implement to use a Xbox Controller to play games using the ReScreen!
+This repo introduces how to use a Xbox ONE Controller on Wio Terminal. With this example, you can implement to use a Xbox Controller to play games using the Wio Terminal!
 
 <div align=center><img width = 500 src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/20200109132336.gif"/></div>
 
 ## Requirements
 
-To work with this example, you will need a **USB OTG Adaptor** and a **USB to Serial Module**, where the OTG adaptor is used to connect with Xbox controller and the USB to Serial module to read the outputs from ReScreen.
+To work with this example, you will need a **USB OTG Adaptor** and a **USB to Serial Module**, where the OTG adaptor is used to connect with Xbox controller and the USB to Serial module to read the outputs from Wio Terminal.
 
 **Note:** Xbox ONE Controller is used in this example. If using Xbox 360 controller or clone ones, please check `XBOXOLD.ino` in the example.
 
 ## Procedures
 
-1. Upload the code to ReScreen using `Arduino IDE`.
+1. Upload the code to Wio Terminal using `Arduino IDE`.
 
-2. Unplug the USB type-C cable from ReScreen that used to upload the code.
+2. Unplug the USB type-C cable from Wio Terminal that used to upload the code.
 
-3. Connect your **Xbox ONE Controller** to the **OTG adaptor** then to the USB-C port of ReScreen.
-   - **`Xbox ONE Controller`** -> **`OTG Adaptor`** -> **`ReScreen(Type-C Port)`**
+3. Connect your **Xbox ONE Controller** to the **OTG adaptor** then to the USB-C port of Wio Terminal.
+   - **`Xbox ONE Controller`** -> **`OTG Adaptor`** -> **`Wio Terminal(Type-C Port)`**
 
-4. Connect the **USB to Serial Module** to the ReScreen as follow:
-   - **`TXD(USB to Serial Module)`** -> **`RXD(Pin 10 on ReScreen)`**
-   - **`RXD(USB to Serial Module)`** -> **`TXD(Pin 8 on ReScreen)`**
-   - **`3.3V(USB to Serial Module)`** -> **`3.3V(Pin 1 on ReScreen)`**
-   - **`GND(USB to Serial Module)`** -> **`GND(Pin 6 on ReScreen)`**
+4. Connect the **USB to Serial Module** to the Wio Terminal as follow:
+   - **`TXD(USB to Serial Module)`** -> **`RXD(Pin 10 on Wio Terminal)`**
+   - **`RXD(USB to Serial Module)`** -> **`TXD(Pin 8 on Wio Terminal)`**
+   - **`3.3V(USB to Serial Module)`** -> **`3.3V(Pin 1 on Wio Terminal)`**
+   - **`GND(USB to Serial Module)`** -> **`GND(Pin 6 on Wio Terminal)`**
 
 5. Connect the USB to Serial Module to your computer. Depending on what USB to Serial Module used, **download the USB driver** for the module so that your computer can recognize it.
 
@@ -33,9 +33,9 @@ To work with this example, you will need a **USB OTG Adaptor** and a **USB to Se
 7. To view data from Serial:
    - **Windows:** Download and install [PuTTY](https://www.putty.org/). Select `Serial` and change the `COM` in Serial line to the COM that appeared in the Device Manager, also change the Speed. to `115200` and press Open. A Terminal should appear. Now, if you start pressing buttons on Xbox ONE controller, you should see the serial output!
 
-   - **Mac:** Open terminal and install `screen` using `brew install screen`. Once installed, use the command **`screen /dev/cu.usbserial 115200`** where `/dev/cu.usbserial` should match from above. You should be see serial output from ReScreen!
+   - **Mac:** Open terminal and install `screen` using `brew install screen`. Once installed, use the command **`screen /dev/cu.usbserial 115200`** where `/dev/cu.usbserial` should match from above. You should be see serial output from Wio Terminal!
 
-**Important Note:** Because the USB port of ReScreen is being used for USB, to upload another program to ReScreen require entering Bootloader mode by pressing the power button twice(the LED will dim), then you should be able see the port again.
+**Important Note:** Because the USB port of Wio Terminal is being used for USB, to upload another program to Wio Terminal require entering Bootloader mode by pressing the power button twice(the LED will dim), then you should be able see the port again.
 
 ## Complete Code
 

@@ -1,27 +1,27 @@
-# Using USB Keyboard on ReScreen
+# Using USB Keyboard on Wio Terminal
 
-This repo introduces how to use a USB keyboard on ReScreen. You can implement this example to input data from a Keyboard to ReScreen!
+This repo introduces how to use a USB keyboard on Wio Terminal. You can implement this example to input data from a Keyboard to Wio Terminal!
 
 <div align=center><img width = 500 src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/20200108143407.gif"/></div>
 
 ## Requirements
 
-To work with this example, you will need a **USB OTG Adaptor** and a **USB to Serial Module**, where the OTG adaptor is used to connect with keyboard and the USB to Serial module to read the outputs from ReScreen.
+To work with this example, you will need a **USB OTG Adaptor** and a **USB to Serial Module**, where the OTG adaptor is used to connect with keyboard and the USB to Serial module to read the outputs from Wio Terminal.
 
 ## Procedures
 
-1. Upload the code to ReScreen using `Arduino IDE`.
+1. Upload the code to Wio Terminal using `Arduino IDE`.
 
-2. Unplug the USB type-C cable from ReScreen that used to upload the code.
+2. Unplug the USB type-C cable from Wio Terminal that used to upload the code.
 
-3. Connect your **keyboard** to the **OTG adaptor** then to the USB-C port of ReScreen.
-   - **`Keyboard`** -> **`OTG Adaptor`** -> **`ReScreen(Type-C Port)`**
+3. Connect your **keyboard** to the **OTG adaptor** then to the USB-C port of Wio Terminal.
+   - **`Keyboard`** -> **`OTG Adaptor`** -> **`Wio Terminal(Type-C Port)`**
 
-4. Connect the **USB to Serial Module** to the ReScreen as follow:
-   - **`TXD(USB to Serial Module)`** -> **`RXD(Pin 10 on ReScreen)`**
-   - **`RXD(USB to Serial Module)`** -> **`TXD(Pin 8 on ReScreen)`**
-   - **`3.3V(USB to Serial Module)`** -> **`3.3V(Pin 1 on ReScreen)`**
-   - **`GND(USB to Serial Module)`** -> **`GND(Pin 6 on ReScreen)`**
+4. Connect the **USB to Serial Module** to the Wio Terminal as follow:
+   - **`TXD(USB to Serial Module)`** -> **`RXD(Pin 10 on Wio Terminal)`**
+   - **`RXD(USB to Serial Module)`** -> **`TXD(Pin 8 on Wio Terminal)`**
+   - **`3.3V(USB to Serial Module)`** -> **`3.3V(Pin 1 on Wio Terminal)`**
+   - **`GND(USB to Serial Module)`** -> **`GND(Pin 6 on Wio Terminal)`**
 
 5. Connect the USB to Serial Module to your computer. Depending on what USB to Serial Module used, **download the USB driver** for the module so that your computer can recognize it.
 
@@ -31,9 +31,9 @@ To work with this example, you will need a **USB OTG Adaptor** and a **USB to Se
 7. To view data from Serial:
    - **Windows:** Download and install [PuTTY](https://www.putty.org/). Select `Serial` and change the `COM` in Serial line to the COM that appeared in the Device Manager, also change the Speed. to `115200` and press Open. A Terminal should appear. Now, if you start typing on the connected keyboard, you should see the serial output!
 
-   - **Mac:** Open terminal and install `screen` using `brew install screen`. Once installed, use the command **`screen /dev/cu.usbserial 115200`** where `/dev/cu.usbserial` should match from above. You should be see serial output from ReScreen!
+   - **Mac:** Open terminal and install `screen` using `brew install screen`. Once installed, use the command **`screen /dev/cu.usbserial 115200`** where `/dev/cu.usbserial` should match from above. You should be see serial output from Wio Terminal!
 
-**Important Note:** Because the USB port of ReScreen is being used for USB, to upload another program to ReScreen require entering Bootloader mode by pressing the power button twice(the LED will dim), then you should be able see the port again.
+**Important Note:** Because the USB port of Wio Terminal is being used for USB, to upload another program to Wio Terminal require entering Bootloader mode by pressing the power button twice(the LED will dim), then you should be able see the port again.
 
 ## Complete Code
 

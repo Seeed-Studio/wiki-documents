@@ -1,10 +1,10 @@
 # Getting Started with Buzzer
 
-This repo demonstartes how to use the built-in piezo buzzer as a component in Rescreen. The piezo can be connected to an analog pulse-width modulation(PWM) output to generate various tones and effects!
+This repo demonstartes how to use the built-in piezo buzzer as a component in Wio Terminal. The piezo can be connected to an analog pulse-width modulation(PWM) output to generate various tones and effects!
 
 ## Basics
 
-The built-in buzzer of Rescreen is a passive buzzer, meaning that it requires a AC signal(PWM) to trigger and output a sound, so you can generate an output following this:
+The built-in buzzer of Wio Terminal is a passive buzzer, meaning that it requires a AC signal(PWM) to trigger and output a sound, so you can generate an output following this:
 
 **Note:** **`BUZZER_CTR`** is the built-in Buzzer Pin.
 

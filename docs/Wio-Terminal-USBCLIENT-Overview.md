@@ -1,8 +1,8 @@
 # Overview
 
-This repo introduce how to use the ReScreen as USB-Client, inlcuding using it for Human Interface Device(HID) such as keyboard, mouse and etc. It also supports Musical Instrument Digital Interface(MIDI).
+This repo introduce how to use the Wio Terminal as USB-Client, inlcuding using it for Human Interface Device(HID) such as keyboard, mouse and etc. It also supports Musical Instrument Digital Interface(MIDI).
 
-This functionality is dependent on [Adafruit TinyUSB Library for Arduino](https://github.com/adafruit/Adafruit_TinyUSB_Arduino). The library has been tested with ReScreen(SAMD51) and working properly.
+This functionality is dependent on [Adafruit TinyUSB Library for Arduino](https://github.com/adafruit/Adafruit_TinyUSB_Arduino). The library has been tested with Wio Terminal(SAMD51) and working properly.
 
 ## Installing the Adafruit TinyUSB Library for Arduino
 

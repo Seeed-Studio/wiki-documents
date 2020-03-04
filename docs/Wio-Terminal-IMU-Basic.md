@@ -1,12 +1,12 @@
 # Getting Started with IMU
 
-This repo demonstrates how to read IMU values from Rescreen.
+This repo demonstrates how to read IMU values from Wio Terminal.
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/2019-12-09%2015-42-57.2019-12-09%2015_43_28.gif"/></div>
 
-## 3-Axis Digital Acclerator Initialisation
+## 3-Axis Digital Accelerator Initialization
 
-To initilise the acclerator on Rescreen:
+To initialize the accelerator on Wio Terminal:
 
 - Setting output data rate: `lis.setOutputDataRate()`, 5Hz up to 5kHz.
 
@@ -27,7 +27,7 @@ void setup() {
 
 ## Reading IMU Values
 
-To read IMU values of each axis on Rescreen, simply follow this:
+To read IMU values of each axis on Wio Terminal, simply follow this:
 
 ```cpp
 void loop() {

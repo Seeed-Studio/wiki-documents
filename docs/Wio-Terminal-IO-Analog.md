@@ -1,8 +1,8 @@
-# Using the Grove Analog Port on Rescreen
+# Using the Grove Analog Port on Wio Terminal
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/2019-12-12%2011-36-22.2019-12-12%2011_37_02.gif"/></div>
 
-This repo demonstrates how to use Analog as inputs on ReScreen. To use analog pins on ReScreen, you must use RPI pins.
+This repo demonstrates how to use Analog as inputs on Wio Terminal. To use analog pins on Wio Terminal, you must use RPI pins.
 
 ## RPI Analog Pins
 

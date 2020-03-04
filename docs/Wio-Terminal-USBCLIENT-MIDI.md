@@ -1,6 +1,6 @@
-# Using ReScreen as a USB MIDI Device
+# Using Wio Terminal as a USB MIDI Device
 
-This repo introduce how to use the ReScreen as a USB MIDI (Musical Instrument Digital Interface) Device, where it can be used to control musical instruments!
+This repo introduce how to use the Wio Terminal as a USB MIDI (Musical Instrument Digital Interface) Device, where it can be used to control musical instruments!
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/20200110105918.gif"/></div>
 
@@ -16,7 +16,7 @@ This example also requires an additional Arduino MIDI libraries:
 
 ## Obtaining Results
 
-In this case, ReScreen is connected to my Macbook and use `Audio MIDI Setup` app that comes along with macOS to test. You can also see the serial data from the serial monitor in `Arduino IDE`. If you have a MIDI Device available, then use that instead for more realistic scenario!
+In this case, Wio Terminal is connected to my Macbook and use `Audio MIDI Setup` app that comes along with macOS to test. You can also see the serial data from the serial monitor in `Arduino IDE`. If you have a MIDI Device available, then use that instead for more realistic scenario!
 
 ## Complete Code
 

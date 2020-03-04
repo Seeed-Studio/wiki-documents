@@ -1,6 +1,6 @@
-# Using ReScreen as a Keyboard
+# Using Wio Terminal as a Keyboard
 
-This repo introduces how to use the ReScreen as one of the USB device and in this exmaple, Rescreen is used as a simple keybaord. It has assigned 3 keys `s`, `e`, `d` to the 3 buttons of ReScreeen. This can be easily implemented into your design for more challenging tasks.
+This repo introduces how to use the Wio Terminal as one of the USB device and in this example, Wio Terminal is used as a simple keyboard. It has assigned 3 keys `s`, `e`, `d` to the 3 buttons of Wio Terminal. This can be easily implemented into your design for more challenging tasks.
 
 *For more reference, please refer to TinyUSB librarries.*
 

@@ -4,9 +4,9 @@
 
 This repo describes how to Read/Write from or to the SD Card. With this, you are able to load data from the SD Card, a simple demonstration will be storing sensor reading to the SD Card.
 
-## Initialising the SD Card on ResScreen
+## Initializing the SD Card on ResScreen
 
-Include the`Seeed_FS` libraries as follow. And intialising the SD Card using: `SD.begin(SDCARD_SS_PIN, SDCARD_SPI)`, where SPI is used to communicate in ReScreen for SD Card.
+Include the`Seeed_FS` libraries as follow. And initializing the SD Card using: `SD.begin(SDCARD_SS_PIN, SDCARD_SPI)`, where SPI is used to communicate in Wio Terminal for SD Card.
 
 ```cpp
 #include <SPI.h>
@@ -44,7 +44,7 @@ To open the file, the `open` File Class member function is used and takes 2 para
 open(const char *filepath, uint8_t mode = FILE_READ) //default mode is READ
 ```
 
-In this case, open a txt file name `test.txt` and `FILE_WRITE` is used. To write inside a txt file can use `println` function(File Classs):
+In this case, open a txt file name `test.txt` and `FILE_WRITE` is used. To write inside a txt file can use `println` function(File Class):
 
 ```cpp
   // open the file. note that only one file can be open at a time,

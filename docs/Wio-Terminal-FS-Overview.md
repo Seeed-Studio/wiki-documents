@@ -1,8 +1,8 @@
 # Overview
 
-This repo introduce how to install the File System library used on Rescreen. It provides basic functionalitu of File operating with the SD card, allowing to Read/Write in or from the SD card using SPI interface.
+This repo introduce how to install the File System library used on Wio Terminal. It provides basic functionality of File operating with the SD card, allowing to Read/Write in or from the SD card using SPI interface.
 
-## Installing the File System Library For Rescreen
+## Installing the File System Library For Wio Terminal
 
 1. Visit the [Seeed_Arduino_FS](https://github.com/Seeed-Studio/Seeed_Arduino_FS/tree/beta) repositories and download the entire repo to your local drive.
 

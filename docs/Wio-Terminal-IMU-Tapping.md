@@ -1,12 +1,12 @@
-# Rescreen Sensing Tapping Motion Demo
+# Wio Terminal Sensing Tapping Motion Demo
 
-This repo demonstrates how Rescreen used the built-in acclerator to sense the Single-click tapping or Double-click tapping motion!
+This repo demonstrates how Wio Terminal used the built-in acclerator to sense the Single-click tapping or Double-click tapping motion!
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/2019-12-10%2010-33-58.2019-12-10%2010_35_11.gif"/></div>
 
-## 3-Axis Accelerator Initialisation
+## 3-Axis Accelerator Initialization
 
-To initilise the acclerator on Rescreen, please visit [Getting Started with IMU](http://wiki.seeedstudio.com/Wio-Terminal-IMU-Basic/) for more information.
+To initialize the accelerator on Wio Terminal, please visit [Getting Started with IMU](http://wiki.seeedstudio.com/Wio-Terminal-IMU-Basic/) for more information.
 
 ## Tapping Sensitivity Configurations
 
@@ -37,7 +37,7 @@ void setup() {
 #include"LIS3DHTR.h"
 LIS3DHTR<TwoWire> lis;
 
-//Adjust this threhold value for sensitivity of clicking
+//Adjust this threshold value for sensitivity of clicking
 #define THRESHOLD 40
 uint8_t cnt=0;
 

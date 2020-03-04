@@ -1,8 +1,8 @@
-# Using the Grove Digital Port on Rescreen
+# Using the Grove Digital Port on Wio Terminal
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/2019-12-12%2014-55-44.2019-12-12%2014_56_10.gif"/></div>
 
-This repo demonstrates how to use the Grove Ports on ReScreen as Digital Ports. You can simply use this functionality to play with the Grove Ecosystem!
+This repo demonstrates how to use the Grove Ports on Wio Terminal as Digital Ports. You can simply use this functionality to play with the Grove Ecosystem!
 
 ## RPI Digital Pins
 
@@ -22,7 +22,7 @@ void setup() {
 
 ### Using the Grove I2C Port as Digital Port
 
-The **Grove I2C port** can also be used as Digital Port on Rescreen:
+The **Grove I2C port** can also be used as Digital Port on Wio Terminal:
 
 ```cpp
 void setup() {
@@ -89,10 +89,10 @@ void loop() {
 }
 ```
 
-**Note:** To use the Servo library with ReScreen, please include [Adafruit's version](https://github.com/PaintYourDragon/Servo) for SAMD51 capability.
+**Note:** To use the Servo library with Wio Terminal, please include [Adafruit's version](https://github.com/PaintYourDragon/Servo) for SAMD51 capability.
 
 ## UART Serial
 
-- The USB Serial in ReScreen: `Serial`
+- The USB Serial in Wio Terminal: `Serial`
 
 - The broken out UART port: `Serial1`

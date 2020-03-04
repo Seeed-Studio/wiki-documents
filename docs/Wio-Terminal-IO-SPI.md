@@ -1,6 +1,6 @@
-# Using SPI on ReScreen
+# Using SPI on Wio Terminal
 
-This Repo will demonstrate how to use SPI on Rescreen. You can use this to control other deivces!
+This Repo will demonstrate how to use SPI on Wio Terminal. You can use this to control other devices!
 
 ## Port Configurations
 
