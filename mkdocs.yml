@@ -199,10 +199,35 @@ pages:
           - ODYSSEY X86J4105 Installing FreeNAS: ODYSSEY-X86J4105-Installing-FreeNAS.md
 
       - Wio Terminal:
+          - IO:
+            - Overview: Wio-Terminal-IO-Overview.md
+            - Analog: Wio-Terminal-IO-Analog.md
+            - Digital: Wio-Terminal-IO-Digital.md
+            - I2C: Wio-Terminal-IO-I2C.md
+            - SPI: Wio-Terminal-IO-SPI.md
           - IMU:
-            - IMU Overview: Wio-Terminal-IMU-Overview.md
-            - IMU Getting Started: Wio-Terminal-IMU-Basic.md
-            - IMU Tapping: Wio-Terminal-IMU-Tapping.md
+            - Overview: Wio-Terminal-IMU-Overview.md
+            - Getting Started: Wio-Terminal-IMU-Basic.md
+            - Tapping: Wio-Terminal-IMU-Tapping.md
+          - Buzzer:
+            - Overview: Wio-Terminal-Buzzer.md
+          - File System:
+            - Overview: Wio-Terminal-FS-Overview.md
+            - Read and Write: Wio-Terminal-FS-ReadWrite.md
+          - USB Host:
+            - Overview: Wio-Terminal-USBH-Overview.md
+            - Keyboard: Wio-Terminal-USBH-Keyboard.md
+            - Mouse: Wio-Terminal-USBH-Mouse.md
+            - Xbox: Wio-Terminal-USBH-Xbox.md
+          - USB Client:
+            - Overview: Wio-Terminal-USBCLIENT-Overview.md
+            - Keyboard: Wio-Terminal-USBCLIENT-Keyboard.md
+            - Mouse: Wio-Terminal-USBCLIENT-Mouse.md
+            - Xbox: Wio-Terminal-USBCLIENT-MIDI.md
+          - TensorFlow Lite:
+            - Overview: Wio-Terminal-TensonFlow.md
+          - Grove:
+            - Overview: Wio-Terminal-Grove.md
 
       - ReSpeaker:
           - ReSpeaker Introduction: ReSpeaker.md
