@@ -4,7 +4,7 @@ This repo introduce how to use the Grove IOs on the Wio Terminal. This allows yo
 
 ## Hardware Schematics
 
-### RsScreen RPI Pinout
+### Wio Terminal RPI Pinout
 
 <div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Xnip2020-03-03_12-28-09.jpg"/></div>
 
