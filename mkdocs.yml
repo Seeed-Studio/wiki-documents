@@ -197,6 +197,12 @@ pages:
           - ODYSSEY X86J4105 Installing OpenWrt: ODYSSEY-X86J4105-Installing-openwrt.md
           - ODYSSEY X86J4105 Azure IoT: ODYSSEY-X86J4105-AzureIOT.md
           - ODYSSEY X86J4105 Installing FreeNAS: ODYSSEY-X86J4105-Installing-FreeNAS.md
+
+      - Wio Terminal:
+          - Wio Terminal IMU Overview: Wio-Terminal-IMU-Overview.md
+          - Wio Terminal IMU Getting Started: Wio-Terminal-IMU-Basic.md
+          - Wio Terminal IMU Tapping: Wio-Terminal-IMU-Tapping.md
+
       - ReSpeaker:
           - ReSpeaker Introduction: ReSpeaker.md
           - ReSpeaker Solutions: ReSpeaker_Solutions.md
