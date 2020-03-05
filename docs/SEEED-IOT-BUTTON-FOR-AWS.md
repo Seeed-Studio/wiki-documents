@@ -11,7 +11,7 @@ sku: 102991334
 
 ![](https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/Side.png)
 
-The Seeed IoT Button For AWS is a Wi-Fi based, programmable button that is easy to configure and simple to use. You can use the Seeed IoT Button For AWS to capture quick customer feedback without burdening customers with time-consuming questionnaires. It is designed for enterprises and developers to easily integrate with existing business workflows and systems using the AWS IoT 1-Click service. And this IoT Button is fully compatible with official AWS IoT 1-Click iOS app and Android app. The battery for this device is NCR18650B chargeable Li-ion battery. Please kindly know that no battery in the package, while the battery is available in regular convenience store and customer need to prepare themselves. And what we propose is Panasonic NCR18650B 3.6V 3400mAh.There is a bracket for this IoT Button. Customer can stick it on the wall or other surface and easy to put the IoT Button  in and get out from the bracket. The Seeed IoT Button for AWS supports three types of clicks: single, double, and long press, and 3 LEDs for different indications.
+The Seeed IoT Button For AWS is a Wi-Fi based, programmable button that is easy to configure and simple to use. You can use the Seeed IoT Button For AWS to capture quick customer feedback without burdening customers with time-consuming questionnaires. It is designed for enterprises and developers to easily integrate with existing business workflows and systems using the [AWS IoT 1-Click service](https://docs.aws.amazon.com/iot-1-click/latest/developerguide/what-is-1click.html). And this IoT Button is fully compatible with official AWS IoT 1-Click iOS app and Android app. The battery for this device is NCR18650B chargeable Li-ion battery. Please kindly know that no battery in the package, while the battery is available in regular convenience store and customer need to prepare themselves. And what we propose is Panasonic NCR18650B 3.6V 3400mAh.There is a bracket for this IoT Button. Customer can stick it on the wall or other surface and easy to put the IoT Button  in and get out from the bracket. The Seeed IoT Button for AWS supports three types of clicks: single, double, and long press, and 3 LEDs for different indications.
 
 <p style=":center"><a href="" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
@@ -53,38 +53,48 @@ The Seeed IoT Button For AWS is a Wi-Fi based, programmable button that is easy 
 </figure>
 </div>
 
-### Power Status LED Indication
+### LED Status Indications
 
-The Power Status LED is near the USB Type-C Port.
-
-|Power LED Status|Indication|
-|---|---|
-|Battery reversed|Red|
-|Battery Charging|Green ON|
-|Battery Finished Charging|Green OFF|
+<table style="border-collapse:collapse;border-spacing:0" class="tg"><tr><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:inherit;background-color:#9b9b9b;color:#ffffff;text-align:center;vertical-align:top">Power LED Status</th><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:inherit;background-color:#9b9b9b;color:#ffffff;text-align:center;vertical-align:top">Indication</th></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:inherit;text-align:left;vertical-align:top">Battery Reversed</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:inherit;text-align:left;vertical-align:top">Red</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:inherit;text-align:left;vertical-align:top">Battery Charging</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:inherit;text-align:left;vertical-align:top">Green ON</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:inherit;text-align:left;vertical-align:top">Battery Finished Charging</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:inherit;text-align:left;vertical-align:top">Green OFF</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#9b9b9b;color:#ffffff;text-align:center;vertical-align:top">Event LED Status</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#9b9b9b;color:#ffffff;text-align:center;vertical-align:top">Indication</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;text-align:left;vertical-align:top">Red Always</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;text-align:left;vertical-align:top">The certificate has not been flashed or the certificate is invalid</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;text-align:left;vertical-align:top">White flashes -&gt; Green</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;text-align:left;vertical-align:top">Event sent successfully</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;text-align:left;vertical-align:top">White flashes -&gt; Red</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;text-align:left;vertical-align:top">Event sent failed</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;text-align:left;vertical-align:top">White flashes -&gt; Orange</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;text-align:left;vertical-align:top">Wi-Fi connection failed, please check router or change network configuration</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;text-align:left;vertical-align:top">White flashes -&gt; Purple</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;text-align:left;vertical-align:top">The server connection failed, please check the network environment</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#9b9b9b;color:#ffffff;text-align:center;vertical-align:top">Wi-Fi Configuration LED Status</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#9b9b9b;color:#ffffff;text-align:center;vertical-align:top">Indication</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;text-align:left;vertical-align:top">Blue flashing</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;text-align:left;vertical-align:top">BLE network configuring</td></tr></table>
 
 ## Getting Started
 
 ### Device Activation
 
-When first time using the device, you must connect the device to a computer or a power adapter through USB Type-C. When the power indication LED is green, it indicates that it's activated(The power status LED is near the USB Type-C port).
+When first time using the device, you must put the battery inside the button, and connect the device to a computer or a power adapter through USB Type-C. When the power indication LED is green, it indicates that it's activated(The power status LED is near the USB Type-C port).
 
 !!!Note
         When the Power Status LED is red, it indicates that the battery is reversed!
 
-### Device Configuration
+### Setting up Wi-Fi on the Button
 
-#### Network Configuration
+1.Download the latest AWS IoT 1-Click App from Apple App Store or Google Play Store
 
-- Long press (over 7s): Enter BLE network configuration mode
+2.Launch the **AWS IoT 1-Click App** and sign up with an Amazon AWS account
 
-- Configure Network via mobile App (temporarily lacking, need to provide by AWS)
+3.Press **Claim with Device ID** in the App. Press **Scan** in the app and Scan the **DSN** from the bottom of Seeed IoT Button for AWS.
 
-#### Equipment Declaration
+<div align=center><img src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/05.png"/></div>
 
-(temporarily lacking, need to provide by AWS)
+4.Press **Configure**
 
-- https://aws.amazon.com/cn/iot-1-click/ 
+5.Press your **Seeed IoT Button for AWS** for 7 seconds until the blue light flashes
+
+<div align=center><img width = 250 src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/07-1.png"/></div>
+
+6.Select a Wi-Fi network from the list of networks. This is the Wi-Fi network you want your buttons to use
+
+<div align=center><img width=250 src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/08.png"/></div>
+
+7.Input the password (if any) for the Wi-Fi network and Continue
+
+<div align=center><img width=250 src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/09.png"/></div>
+
+8.Wait until configuration succeeded is appeared in the App and press **Finish**. The configuration is done
+
+<div align=center><img width = 500 src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/10.png"/></div>
+
+Now you can start playing with your AWS 1-Click service!
 
 ### Operating Instructions
 
@@ -95,28 +105,6 @@ When first time using the device, you must connect the device to a computer or a
 - **Long Press(2s~5s):** Send long press event
   
 - **Long Press(>7s):** Enter BLE network configuration mode. In this mode, other events are blocked. If you need to manually exit the BLE distribution mode, you can press and hold it for more than 7s again, and it will exit automatically in two minutes.
-
-### Event Status LED Indications
-
-The Event Status LED is near the button(Above the button).
-
-![](https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/Seeed_IOT_Button_Overview.gif)
-
-| LED Status   | Indication                      |
-| :----------------------- | :----------------------------------------- |
-| Red Always|The certificate has not been flashed or the certificate is invalid|
-| White flashes -> Green|Event sent successfully|
-| White flashes -> Red| Event sent failed|
-| White flashes -> Orange|Wi-Fi connection failed, please check router or change network configuration|
-|White flashes -> Purple|The server connection failed, please check the network environment|
-
-### Wi-Fi Configuration LED Indications
-
-The Wi-Fi Configuration LED is near the button(Below the button).
-
-| LED Status   | Indication                      |
-| :----------------------- | :----------------------------------------- |
-| Blue flashing|BLE network configuring|
 
 ## Tech Support
 
