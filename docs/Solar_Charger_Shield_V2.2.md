@@ -15,7 +15,6 @@ The solar charger is a stackable shield to Arduino compatible platforms, enables
 
 ##   Features
 ---
-*   Output Disconnect
 
 *   Short circuit protection
 
