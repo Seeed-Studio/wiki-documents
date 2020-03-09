@@ -1,16 +1,18 @@
 # Overview
 
-This repo introduce how to use the Grove IOs on the Wio Terminal. This allows you to enjoy the plug and play functionality of the Grove Ecosystem!
+This repo introduce how to use the Grove IOs on the Wio Terminal. This allows you to enjoy the plug and play functionality of the Grove Ecosystem as well as using the 40 pin Raspberry pi compatible GPIO!
 
 ## Hardware Schematics
 
 ### Wio Terminal RPI Pinout
 
-<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Xnip2020-03-03_12-28-09.jpg"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/WioT-Pinout.png"/></div>
 
-Wio Terminal has 40 GPIOs breaking out from the SAMD51, which has the same breakout as the Raspberry Pi!
+Wio Terminal has 40 pin GPIO breaking out from the SAMD51, which has the same breakout as the Raspberry Pi!
 
-#### *To reference defined pinout names, please check `variant.h`*
+To use them, simply use the defined pin names as above! Some pins are multifunctional so can be referenced by different ways.
+
+#### *For more information, please check `variant.h` for more information*
 
 ### Wio Terminal Grove Port Pinout
 
