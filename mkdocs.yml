@@ -219,6 +219,12 @@ pages:
             - Overview: Wio-Terminal-IMU-Overview.md
             - Getting Started: Wio-Terminal-IMU-Basic.md
             - Tapping: Wio-Terminal-IMU-Tapping.md
+          - Configurable Buttons:
+            - Overview: Wio-Terminal-Buttons.md
+          - 5 Way Switch:
+            - Overview: Wio-Terminal-Switch.md
+          - Light Sensor:
+            - Overview: Wio-Terminal-Light.md
           - Buzzer:
             - Overview: Wio-Terminal-Buzzer.md
           - File System:

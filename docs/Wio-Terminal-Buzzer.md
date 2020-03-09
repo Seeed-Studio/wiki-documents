@@ -1,35 +1,35 @@
 # Getting Started with Buzzer
 
-This repo demonstartes how to use the built-in piezo buzzer as a component in Wio Terminal. The piezo can be connected to an analog pulse-width modulation(PWM) output to generate various tones and effects!
+This repo demonstrates how to use the built-in piezo buzzer as a component in Wio Terminal. The piezo can be connected to an analog pulse-width modulation(PWM) output to generate various tones and effects!
 
 ## Basics
 
 The built-in buzzer of Wio Terminal is a passive buzzer, meaning that it requires a AC signal(PWM) to trigger and output a sound, so you can generate an output following this:
 
-**Note:** **`BUZZER_CTR`** is the built-in Buzzer Pin.
+**Note:** **`WIO_BUZZER`** is the built-in Buzzer Pin.
 
 ```cpp
-void setup() {
-    pinMode(BUZZER_CTR, OUTPUT);
-}
+    void setup() {
+        pinMode(WIO_BUZZER, OUTPUT);
+    }
 
-void loop() {
-    analogWrite(BUZZER_CTR, 128);
-    delay(1000);
-    analogWrite(BUZZER_CTR, 0);
-    delay(1000);
-}
+    void loop() {
+        analogWrite(WIO_BUZZER, 128);
+        delay(1000);
+        analogWrite(WIO_BUZZER, 0);
+        delay(1000);
+    }
 ```
 
-**Note:** To generate a default buzzer sound, it is recommneded to drive the buzzer using a lower voltage.
+**Note:** To generate a default buzzer sound, it is recommended to drive the buzzer using a lower voltage.
 
-## Exmaple code
+## Example code
 
 This example use a buzzer to play melodies. It sends a square wave of the appropriate frequency to the buzzer, generating the corresponding tone.
 
 ```cpp
 /* Macro Define */
-#define BUZZER_PIN BUZZER_CTR /* sig pin of the buzzer */
+#define BUZZER_PIN WIO_BUZZER /* sig pin of the buzzer */
 
 int length = 15;         /* the number of notes */
 char notes[] = "ccggaagffeeddc ";
