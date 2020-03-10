@@ -8,7 +8,7 @@ surveyurl:
 sku: 102991299
 ---
 
-# Get Started With Wio Terminal
+# Get Started with Wio Terminal
 
 ![](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-Wiki.jpg)
 
@@ -19,25 +19,25 @@ The **Wio Terminal** is a SAMD51-based microcontroller with Wireless Connectivit
 ## Feature
 
 - **Highly Integrated Design**
-  - MCU, LCD, WIFI, BT, IMU, Microphone, Speaker, microSD Card, Light Sensor, 5-Way Switch, Infrared Emitter (IR 940nm), Crypto-authentication Ready
+    - MCU, LCD, WIFI, BT, IMU, Microphone, Speaker, microSD Card, Light Sensor, 5-Way Switch, Infrared Emitter (IR 940nm), Crypto-authentication Ready
 - Powered by **Microchip ATSAMD51P19**
-  - ARM Cortex-M4F core running at **120MHz**(Boost up to 200MHz)
-  - **4 MB** External Flash, **192 KB** RAM
+    - ARM Cortex-M4F core running at **120MHz**(Boost up to 200MHz)
+    - **4 MB** External Flash, **192 KB** RAM
 - Comprehensive Protocol Support
-  - SPI, I2C, I2S, ADC, DAC, PWM, UART(Serial)
+    - SPI, I2C, I2S, ADC, DAC, PWM, UART(Serial)
 - Powerful **Wireless Connectivity**
-  - Powered by **Realtek RTL8720DN**
-  - Dual Band 2.4Ghz / 5Ghz Wi-Fi (802.11 a/b/g/n)
-  - BLE / BLE 5.0
+    - Powered by **Realtek RTL8720DN**
+    - Dual Band 2.4Ghz / 5Ghz Wi-Fi (802.11 a/b/g/n)
+    - BLE / BLE 5.0
 - **USB OTG Support**
-  - USB Host
-  - USB Client
+    - USB Host
+    - USB Client
 - [**Grove Ecosystem**](https://www.seeedstudio.com/grove.html)
 - **Software Support**
-  - Arduino
-  - MicroPython
-  - ArduPy
-  - AT Firmware
+    - Arduino
+    - MicroPython
+    - ArduPy
+    - AT Firmware
 
 ## Specification
 

@@ -17,23 +17,23 @@ To work with this example, you will need a **USB OTG Adaptor** and a **USB to Se
 2. Unplug the USB type-C cable from Wio Terminal that used to upload the code.
 
 3. Connect your **Xbox ONE Controller** to the **OTG adaptor** then to the USB-C port of Wio Terminal.
-   - **`Xbox ONE Controller`** -> **`OTG Adaptor`** -> **`Wio Terminal(Type-C Port)`**
+      - **`Xbox ONE Controller`** -> **`OTG Adaptor`** -> **`Wio Terminal(Type-C Port)`**
 
 4. Connect the **USB to Serial Module** to the Wio Terminal as follow:
-   - **`TXD(USB to Serial Module)`** -> **`RXD(Pin 10 on Wio Terminal)`**
-   - **`RXD(USB to Serial Module)`** -> **`TXD(Pin 8 on Wio Terminal)`**
-   - **`3.3V(USB to Serial Module)`** -> **`3.3V(Pin 1 on Wio Terminal)`**
-   - **`GND(USB to Serial Module)`** -> **`GND(Pin 6 on Wio Terminal)`**
+      - **`TXD(USB to Serial Module)`** -> **`RXD(Pin 10 on Wio Terminal)`**
+      - **`RXD(USB to Serial Module)`** -> **`TXD(Pin 8 on Wio Terminal)`**
+      - **`3.3V(USB to Serial Module)`** -> **`3.3V(Pin 1 on Wio Terminal)`**
+      - **`GND(USB to Serial Module)`** -> **`GND(Pin 6 on Wio Terminal)`**
 
 5. Connect the USB to Serial Module to your computer. Depending on what USB to Serial Module used, **download the USB driver** for the module so that your computer can recognize it.
 
 6. For Windows User, you can open Device Manager to check if it's recognized. A new `COM` should appear.
-   - For Mac user, use `ls /dev/cu.*` in terminal to check the module availability.
+      - For Mac user, use `ls /dev/cu.*` in terminal to check the module availability.
 
 7. To view data from Serial:
-   - **Windows:** Download and install [PuTTY](https://www.putty.org/). Select `Serial` and change the `COM` in Serial line to the COM that appeared in the Device Manager, also change the Speed. to `115200` and press Open. A Terminal should appear. Now, if you start pressing buttons on Xbox ONE controller, you should see the serial output!
+      - **Windows:** Download and install [PuTTY](https://www.putty.org/). Select `Serial` and change the `COM` in Serial line to the COM that appeared in the Device Manager, also change the Speed. to `115200` and press Open. A Terminal should appear. Now, if you start pressing buttons on Xbox ONE controller, you should see the serial output!
 
-   - **Mac:** Open terminal and install `screen` using `brew install screen`. Once installed, use the command **`screen /dev/cu.usbserial 115200`** where `/dev/cu.usbserial` should match from above. You should be see serial output from Wio Terminal!
+      - **Mac:** Open terminal and install `screen` using `brew install screen`. Once installed, use the command **`screen /dev/cu.usbserial 115200`** where `/dev/cu.usbserial` should match from above. You should be see serial output from Wio Terminal!
 
 **Important Note:** Because the USB port of Wio Terminal is being used for USB, to upload another program to Wio Terminal require entering Bootloader mode by pressing the power button twice(the LED will dim), then you should be able see the port again.
 

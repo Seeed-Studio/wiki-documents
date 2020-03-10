@@ -199,7 +199,7 @@ pages:
           - ODYSSEY X86J4105 Installing FreeNAS: ODYSSEY-X86J4105-Installing-FreeNAS.md
 
       - Wio Terminal:
-          - Get Started With Wio Terminal: Wio-Terminal-Getting-Started.md
+          - Get Started with Wio Terminal: Wio-Terminal-Getting-Started.md
           - LCD:
             - Overview: Wio-Terminal-LCD-Overview.md
             - Basic of LCD: Wio-Terminal-LCD-Basic.md
@@ -240,7 +240,7 @@ pages:
             - Overview: Wio-Terminal-USBCLIENT-Overview.md
             - Keyboard: Wio-Terminal-USBCLIENT-Keyboard.md
             - Mouse: Wio-Terminal-USBCLIENT-Mouse.md
-            - Xbox: Wio-Terminal-USBCLIENT-MIDI.md
+            - MIDI: Wio-Terminal-USBCLIENT-MIDI.md
           - TensorFlow Lite:
             - Overview: Wio-Terminal-TensonFlow.md
           - Grove:
