@@ -8,6 +8,7 @@ surveyurl:
 sku: 102991299
 ---
 
+# Get Started With Wio Terminal
 
 ![](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-Wiki.jpg)
 
