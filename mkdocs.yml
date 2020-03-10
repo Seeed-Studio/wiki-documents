@@ -199,6 +199,7 @@ pages:
           - ODYSSEY X86J4105 Installing FreeNAS: ODYSSEY-X86J4105-Installing-FreeNAS.md
 
       - Wio Terminal:
+          - Get Started: Wio-Terminal-Getting-Started.md
           - LCD:
             - Overview: Wio-Terminal-LCD-Overview.md
             - Basic of LCD: Wio-Terminal-LCD-Basic.md
