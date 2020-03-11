@@ -223,6 +223,8 @@ pages:
             - Overview: Wio-Terminal-Switch.md
           - Light Sensor:
             - Overview: Wio-Terminal-Light.md
+          - Infrared Emitter:
+            - Overview: Wio-Terminal-Infrared-Emitter.md
           - Buzzer:
             - Overview: Wio-Terminal-Buzzer.md
           - File System:
