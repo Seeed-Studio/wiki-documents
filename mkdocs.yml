@@ -168,8 +168,6 @@ pages:
           - 2 Channel CAN BUS FD Shield for Raspberry Pi: 2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi.md
 
 
-         
-
       - BeagleBone:
           - BeagleBone Introduction: BeagleBone.md
           - BeagleBone Solutions: Beaglebone_Solutions.md
@@ -187,7 +185,6 @@ pages:
           - Seeed Studio BeagleBone Green LCD Cape with Resistive Touch: Seeed-Studio-BeagleBone-Green-LCD-Cape-with-Resistive-Touch.md
       - NPi-i:
           - NPi i.MX6ULL Dev Board Linux SBC: NPi-i.MX6ULL-Dev-Board-Linux-SBC.md
-      
       - SenseCap:
           - Sensecap LoRaWAN Gateway and Wireless Sensor User Guide: Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide.md
       - ODYSSEY:
@@ -199,6 +196,17 @@ pages:
           - ODYSSEY X86J4105 Installing FreeNAS: ODYSSEY-X86J4105-Installing-FreeNAS.md
 
       - Wio Terminal:
+          - Get Started with Wio Terminal: Wio-Terminal-Getting-Started.md
+          - LCD:
+            - Overview: Wio-Terminal-LCD-Overview.md
+            - Basic of LCD: Wio-Terminal-LCD-Basic.md
+            - Graphics: Wio-Terminal-LCD-Graphics.md
+            - Fonts: Wio-Terminal-LCD-Fonts.md
+            - Smooth Fonts: Wio-Terminal-LCD-Anti-aliased-Fonts.md
+            - Loading Image: Wio-Terminal-LCD-Loading-Image.md
+            - Line Charts: Wio-Terminal-LCD-Linecharts.md
+            - Histogram: Wio-Terminal-LCD-Histogram.md
+            - LCD API Examples: Wio-Terminal-LCD-APIs.md
           - IO:
             - Overview: Wio-Terminal-IO-Overview.md
             - Analog: Wio-Terminal-IO-Analog.md
@@ -209,6 +217,12 @@ pages:
             - Overview: Wio-Terminal-IMU-Overview.md
             - Getting Started: Wio-Terminal-IMU-Basic.md
             - Tapping: Wio-Terminal-IMU-Tapping.md
+          - Configurable Buttons:
+            - Overview: Wio-Terminal-Buttons.md
+          - 5 Way Switch:
+            - Overview: Wio-Terminal-Switch.md
+          - Light Sensor:
+            - Overview: Wio-Terminal-Light.md
           - Buzzer:
             - Overview: Wio-Terminal-Buzzer.md
           - File System:
@@ -228,6 +242,11 @@ pages:
             - Overview: Wio-Terminal-TensonFlow.md
           - Grove:
             - Overview: Wio-Terminal-Grove.md
+          - Demo:
+            - Wio Terminal Displaying Gyro: Wio-Terminal-Displaying-Gyro.md
+            - Wio Terminal Storing Data: Wio-Terminal-Storting-Analog-Data.md
+            - Wio Terminal Displaying Photos: Wio-Terminal-Displaying-Photos.md
+            - Wio Terminal Interactive Faces Demo: Wio-Terminal-Interactive-Face.md
 
       - ReSpeaker:
           - ReSpeaker Introduction: ReSpeaker.md
