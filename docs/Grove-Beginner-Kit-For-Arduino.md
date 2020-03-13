@@ -38,6 +38,18 @@ Grove Beginner Kit for Arduino is one of the best Arduino Beginner Kit for begin
 |Air Pressure Sensor|I2C|I2C, 0x77(default) / 0x76(optional)|
 |3-Axis Accelerator|I2C|I2C, 0x63(default)|
 
+### Breakout Instruction
+
+If you prefer to use the modules in else where then you can simply follow the procedures to break the moudules out!
+
+**Step 1**
+
+Use a knife or a sharp object to cut at the stamp holes that connects the sensors toghther
+
+**Step 2**
+
+Shake the modules up and down and it should come out quite easily!
+
 ## Part List
 
 |Modules|Quantity|
@@ -1639,6 +1651,33 @@ If the surrounding sound is loud enough or light intensity is low, the LED modul
 - **Breakout Guide**
 
 Connect the Grove LED to Seeeduino Lotus's digital signal interface **D4**, Connect the Light Sensor to Seeeduino Lotus's analog signal interface **A1**. Connect the Sound Sensor to Seeeduino Lotus's analog signal interface **A2** using a Grove cable.
+
+## Make Your Own Modules & Boards
+
+After this period of study, you already have a systematic understanding of Arduino and open-source hardware, so why not go further and try to make your own module or development board?
+
+### EDA
+
+To design your own board, you will need to design your own module's schematics, which requires an EDA tool to do so. Here recommends an open-source EDA software.
+
+- **KiCAD**
+
+[KiCad](https://www.kicad-pcb.org/) is a free software suite for electronic design automation. It facilitates the design of schematics for electronic circuits and their conversion to PCB designs. It features an integrated environment for schematic capture and PCB layout design. The programs handle Schematic Capture and PCB Layout with Gerber output. The suite runs on Windows, Linux, and macOS and is licensed under GNU GPL v3.
+
+- **Geppetto**
+
+If you don’t want to work on schematic or layout yourself, but you want to convert your prototype based on Seeed’s modules into an integrated product, we highly recommend you to try Geppetto.
+
+[Geppetto](www.seeedstudio.com/geppetto) is, by far, the easiest and least expensive way to produce production-quality electronics. You don’t need to know about resistors, capacitors, inductors, routing paths or anything EE to design your own module. Geppetto is drag & drop simple... anyone can create professional IoT devices. To make it more convenient for you, Geppeto has a library for Seeed, so you can design your own Grove modules with ease!
+
+### PCB Services
+
+
+After you’re done with your design, check out the [Seeed Fusion PCBA service](https://www.seeedstudio.com/fusion_pcb.html), which can help translate your designs into an actual functioning device.
+
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Fusion.png)
+
+Seeed Studio has its very own [Open Parts Library (OPL)](https://www.seeedstudio.com/opl.html) which is a collection of over 10,000 commonly used components specifically sourced for the Seeed Fusion PCBA Service. To speed up the process of PCB design, Seeed is building the component libraries for KiCad and Eagle. When all components are sourced from Seeed’s PCBA OPL and used with the [Seeed Fusion PCB Assembly (PCBA) service](https://www.seeedstudio.com/fusion_pcb.html), the entire PCBA production time can be reduced from 20 working days to a mere 7 days.
 
 ## Resources
 
