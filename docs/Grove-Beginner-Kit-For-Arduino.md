@@ -40,7 +40,11 @@ Grove Beginner Kit for Arduino is one of the best Arduino Beginner Kit for begin
 
 ### Breakout Instruction
 
-If you prefer to use the modules in else where then you can simply follow the procedures to break the moudules out!
+!!!attention
+    Please be careful not to cut your hands when using a knife
+
+
+If you prefer to use the modules in else where then you can simply follow the procedures to break the modules  out!
 
 **Step 1**
 
