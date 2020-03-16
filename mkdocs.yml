@@ -339,7 +339,7 @@ pages:
           - Grove-Shield-for-Wio-Lite: Grove-Shield-for-Wio-Lite.md
           - Wio Lite W600: Wio-Lite-W600.md
           - Wio Lite MG126: Wio-Lite-MG126.md
-
+          - Wio Lite RISC V GD32VF103 with ESP8266: Wio_Lite_RISC_V_GD32VF103_with_ESP8266.md
       
       - Air Serial:
           - Air602 WiFi Development Board: Air602_WiFi_Development_Board.md
