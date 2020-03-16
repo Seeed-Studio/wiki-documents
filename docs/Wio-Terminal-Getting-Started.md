@@ -97,7 +97,7 @@ Open the LED blink example sketch: **File > Examples >01.Basics > Blink**.
 
 - **Step 3. Add the Wio Terminal Board Library**
 
-1. Open your Arduino IDE, click on **File** > **Preferences**, and copy below url to **Additional Boards Manager URLs**:
+1.Open your Arduino IDE, click on **File** > **Preferences**, and copy below url to **Additional Boards Manager URLs**:
 
 ```sh
 https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
@@ -105,7 +105,7 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 ![](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Boardurl.png)
 
-2. Click on **Tools** > **Board** > **Board Manager** and Search **Wio Terminal** in the Boards Manager.
+2.Click on **Tools** > **Board** > **Board Manager** and Search **Wio Terminal** in the Boards Manager.
 
 **Note:** Please follow the [Seeed Board Intallation Guide](http://wiki.seeedstudio.com/Seeed_Arduino_Boards/) for more information.
 
