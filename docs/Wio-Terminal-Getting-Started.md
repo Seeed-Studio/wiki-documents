@@ -107,8 +107,6 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 2.Click on **Tools** > **Board** > **Board Manager** and Search **Wio Terminal** in the Boards Manager.
 
-**Note:** Please follow the [Seeed Board Intallation Guide](http://wiki.seeedstudio.com/Seeed_Arduino_Boards/) for more information.
-
 <div align="center">
 <figure>
   <img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/addBoard.png"/>
