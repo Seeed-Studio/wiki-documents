@@ -93,7 +93,7 @@ When you are moving, you can find that the level of Led Bar will change.
 </div>
 
 # Grove-EMG Sensor v1.1
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-EMG_Detector/master/res/Grove-EMG_Sensor_v1.1_Eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-EMG_Detector/res/202000023+PCBA-Grove+EMG+Detector+v1.1.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
@@ -101,8 +101,7 @@ Resources
 --------
 
 -   [Grove-EMG Sensor v1.0 Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-EMG_Detector/master/res/Grove-EMG_Sensor_v1.0.zip)
--   [Grove-EMG Sensor v1.1 Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-EMG_Detector/master/res/Grove-EMG_Sensor_v1.1_Eagle.zip)
--   [Grove-EMG Sensor v1.1 schematic PDF](https://raw.githubusercontent.com/SeeedDocument/Grove-EMG_Detector/master/res/Grove-EMG_Sensor_v1.1_SCH.pdf)
+-   [Grove-EMG Sensor v1.1 Eagle File](https://files.seeedstudio.com/wiki/Grove-EMG_Detector/res/202000023+PCBA-Grove+EMG+Detector+v1.1.zip)
 -   [Demo Code](https://github.com/Seeed-Studio/Grove_EMG_detector_demo_code)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_EMG_Detector -->
