@@ -277,10 +277,10 @@ Open the LED blink example sketch: **File > Examples >01.Basics > Blink**.
 - **Step 3. Add Seeeduino to your Arduino IDE**
 
 Click on **File > Preference**, and fill Additional Boards Manager URLs with the url below:
-    *https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_seeeduino_boards_index.json*
+    *https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json*
 
 
-![](https://github.com/SeeedDocument/Seeeduino-Femto/raw/master/.img/wiki2.png)
+![](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Boardurl.png)
 
 
 Click **Tools-> Board-> Boards Manager...**, print  keyword "**Seeeduino XIAO**" in the searching blank. Here comes the "Seeed SAMD Boards". Install it.
