@@ -54,7 +54,7 @@ The **Wio Terminal** is a SAMD51-based microcontroller with Wireless Connectivit
 
 ## Pinout Diagram
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/WioT-Pinout.png"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/WioT-Pinout.jpg"/></div>
 
 ## Getting Started
 
