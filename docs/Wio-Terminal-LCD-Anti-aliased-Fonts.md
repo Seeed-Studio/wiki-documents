@@ -1,6 +1,6 @@
 # Displaying Anti-aliased Fonts
 
-This repo demonstrates how to use Anti-aliased fonts in Wio Terminal (i.e. Displaying Japanese characters,Greek characters and other UCS-2 glyphs! Further, smooth fonts can also be used to display Normal English characters with your favorite font in your computer.
+This repo demonstrates how to use Anti-aliased fonts in Wio Terminal (**i.e. Displaying Japanese characters, Greek characters and other UCS-2 glyphs**)! Further, smooth fonts can also be used to display Normal English characters with your favorite font in your computer.
 
 <div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/20200117131650.gif"/></div>
 
@@ -42,7 +42,7 @@ A **Create Font** Window will appear. You are able to choose the font available 
 
 ### Step 4
 
-A **Character Selector** window will appear, and you are able to choose the specific language Unicode Characters Blocks(i.e Basic Latin in this case). Click `OK` to save font settings.
+A **Character Selector** window will appear, and you are able to choose the specific language Unicode Characters Blocks(i.e Basic Latin in this case). ***For Asian characters, CJK Compatibility or CJK category unicode Blocks are recommended to use.*** Click `OK` to save font settings.
 
 <div align=center><img width = 500 src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/20200117104728.jpg"/></div>
 
@@ -57,6 +57,17 @@ Navigate to `File` -> `Save` and save the sketch file into your local drive in y
 Once generated the vlw font file, you can find the vlw file inside **`data`** folder inside the sketch file you saved in the previous step.
 
 Now, copy the vlw font file into the SD card and put the SD card back in Wio Terminal.
+
+## Configuring the LCD Library
+
+By default, the smooth font option for LCD Library is **turned off** to save resources on Wio Terminal. **So it needs to be configured to enable smooth font in Wio Terminal.**
+
+Navigate to the Arduino Library folders(**libraries**) -> **Seeed_Arduino_LCD** and open **`User_Setup.h`** with editor. Search **`#define SMOOTH_FONT`** and uncomment the line as followed:
+
+<div align=center><img width = 500 src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/smoothFont.png"/></div>
+
+
+Now you have enabled smooth font in Wio Terminal, you can display any fonts or characters that you like!
 
 ## Displaying
 
@@ -86,6 +97,8 @@ To display characters in screen, you can use the functions just like in the tft 
 **Note**: Please check the `User_Setup.h` in the LCD library and make sure that `#define SMOOTH_FONT` is uncommented.
 
 ## Complete Code
+
+Please download the complete code and the example vlw files [here](https://files.seeedstudio.com/wiki/Wio-Terminal/res/JanpaneseFonts.zip).
 
 ```cpp
 #include<SPI.h>
