@@ -30,7 +30,7 @@ To display bmp images on our embedded system, we need to get rid of some informa
 
 - Create a folder name  `bmp` and save your Windows `.bmp` format images inside this folder.
 
-- Download the Python script `bmp_converter.py` inside `src` from this repo, and save it in the same directory with the `bmp folder`.
+- Download the Python script [`bmp_converter.py`](https://files.seeedstudio.com/wiki/Wio-Terminal/res/bmp_converter.py) , and save it in the same directory with the `bmp folder`.
 
 - Open `cmd` or `terminal` to run the Python script. First, `cd` to the directory that saved the `bmp_converter.py` and `bmp folder`, then run the Python script.
 
