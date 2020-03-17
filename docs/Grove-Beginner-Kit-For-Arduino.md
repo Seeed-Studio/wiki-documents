@@ -90,7 +90,7 @@ Shake the modules up and down and it should come out quite easily!
 
 The Grove Beginner Kit has a plug and plays unboxing demo, where you first plug in the power to the board, you get the chance to experience all the sensors in one go! Use the button and rotary potentiometer to experience each sensor demo!
 
-![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Demo.jpg)
+![](https://s3-us-west-2.amazonaws.com/files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Firmware.jpg)
 
 - **Scroll** -> Rotating Rotary Potentiometer
 - **Select** -> Short Press Button
@@ -1766,9 +1766,9 @@ Seeed Studio has its very own [Open Parts Library (OPL)](https://www.seeedstudio
       - [Air Pressure Sensor](https://github.com/Seeed-Studio/Grove_BMP280)
       - [3-Axis Accelerator](https://github.com/Seeed-Studio/Seeed_Arduino_LIS3DHTR)
 
-4. [**Sensor Datasheet**](https://github.com/SeeedDocument/Grove-Beginner-Kit-For-Arduino/raw/master/res/Grove-beginner-kit-for-arduino-datasheet.zip)
+4. [**Sensor Datasheet**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/Grove-beginner-kit-for-arduino-datasheet.zip)
 
-5. [**Initial Arduino Firmware Demo**](https://github.com/SeeedDocument/Grove-Beginner-Kit-For-Arduino/raw/master/res/GroveBeginnerKitFirmware.zip)
+5. [**Initial Arduino Firmware Demo**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/GroveBeginnerKitFirmwareFINAL.zip)
 
 
 
