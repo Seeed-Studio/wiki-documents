@@ -445,5 +445,6 @@ Run [CanBus_SendForArduino.ino](https://github.com/SeeedDocument/ODYSSEY-STM32MP
 - **[3Dfile]** [ODYSSEY-STM32MP157C](https://github.com/SeeedDocument/ODYSSEY-STM32MP157C/raw/master/Hardware/st.skp)
 - **[OrCAD]** [ODYSSEY-STM32MP157C](https://github.com/SeeedDocument/ODYSSEY-STM32MP157C/raw/master/Hardware/Seeed%20NPi%20-%20STM32MP157C%20v1.0_SCH%20%26%20PCB.zip)
 - **[OrCAD]** [Seeed SoM - STM32MP157C](https://github.com/SeeedDocument/ODYSSEY-STM32MP157C/raw/master/Hardware/Seeed%20SoM%20-%20STM32MP157C%20v1.0_SCH%20%26%20PCB%20.zip)
+- **[PDF]** [ODYSSEY-STM32MP157C 2d file](http://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/STM32-2d-file.pdf)
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>
