@@ -10,7 +10,7 @@ sku: 102991306(NANO)
 
 # NPi i.MX6ULL Dev Board - Linux SBC
 
- ![](https://raw.githubusercontent.com/Hansen0314/NPi-i.MX6ULL-Dev-Board/master/IMG/preview_3.jpg)
+ ![](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/preview_3.jpg)
 
 The NPi i.MX6ULL Dev Board is a low power consumption Linux single board computer built around the powerful i.MX6ULL. You would love the onboard 512MB DDR3L and 512MB NAND, not to mention the rich interfaces and I/O resources.
 
@@ -73,7 +73,7 @@ The operating temperature here refers specifically to the Core module, and the t
 
 ### Interface
 
- ![](https://raw.githubusercontent.com/Hansen0314/NPi-i.MX6ULL-Dev-Board/master/IMG/NAND-over.jpg)
+ ![](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/NAND-over.jpg)
 
 **100M Ethernet Interface with LEDs**: 2 x 100M Ethernet interfaces
 
@@ -109,7 +109,7 @@ The operating temperature here refers specifically to the Core module, and the t
  
 ### Pin Function
 
-![](https://raw.githubusercontent.com/Hansen0314/NPi-i.MX6ULL-Dev-Board/master/IMG/eMMC-c.jpg)
+![](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/eMMC-c.jpg)
 
 The more informtion you can go to [PinMap](https://docs.google.com/spreadsheets/d/1CRQrkBshc_2KFwC0NHmuwaJ_SedR24Oc1Ia9RGR3Us0/edit#gid=1256668665) to view.
 
@@ -137,7 +137,7 @@ you need to install the NPi i.MX6ULL Dev Board - Linux SBC image from your SD ca
 
 **A.Boot from SD card**
 
-- **Step 1.** Select the latest [firmware](https://files.seeedstudio.com/linux/NPi+i.MX6ULL/imx6ull-debian-buster-console-armhf-latest-2gb.img.xz)
+- **Step 1.** Select the latest [firmware](https://files.seeedstudio.com/wiki/linux/NPi+i.MX6ULL/imx6ull-debian-buster-console-armhf-latest-2gb.img.xz)
 
 - **Step 2.** Connect an SD card to a PC or MAC with an SD card reader, an SD card with more than 4G memory is required.
 
@@ -145,7 +145,7 @@ you need to install the NPi i.MX6ULL Dev Board - Linux SBC image from your SD ca
 <br>
 <br>Click the plus icon to add the newly downloaded image file and the software will automatically select the SD card you inserted. Then click Flash! writing. It takes about 10 minutes to finish.</font>
 
-![](https://raw.githubusercontent.com/Hansen0314/NPi-i.MX6ULL-Dev-Board/master/IMG/etcher.png)
+![](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/etcher.png)
 
 - **Step 4.** After writing the image to the SD card, insert the SD card into NPi i.MX6ULL Dev Board - Linux SBC.Set the 8-digit DIP switch to 2-5-8 mode to enable boot from SD.
 
@@ -166,7 +166,7 @@ if Heartbeat LED cannot flash, it means starting failed. Please check the image 
 sudo fire-config
 ```
 
-![](https://raw.githubusercontent.com/Hansen0314/NPi-i.MX6ULL-Dev-Board/master/IMG/flasher.png)
+![](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/flasher.png)
 
 - **Step 3.** Wait for the LED  on the NPI i.MX6ULL Dev Board flash continuously. that indicate the eMMC(or NAND) buring successfully if the LED flash continuously.
 
@@ -226,6 +226,7 @@ You should get back something like:
 /dev/cu.usbmodem14XX where XX will vary depending on which USB port you used (on Mac)
 /dev/ttyACMX where X will vary depending on which USB port you used  (on Linux)
 ```
+
 Now follow step 2 above to connect to your NPi i.MX6ULL Dev Board over this serial connection. 
 
 ### Pin Control
@@ -347,7 +348,8 @@ In this section, we will explain the basic use of serial port and terminal equip
 ```
 fire-config
 ```
-![](https://raw.githubusercontent.com/Hansen0314/NPi-i.MX6ULL-Dev-Board/master/IMG/fire-config-uart3-enable.png)
+
+![](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/fire-config-uart3-enable.png)
 
 You will get cmd as follow if enabled successfully.
 
@@ -358,7 +360,7 @@ root@npi:~# ls /dev/ttymxc2
 
 - **step 2.** Config uart3 by using stty
 
- ```
+```
 stty -F /dev/ttymxc2 ispeed 115200 ospeed 115200
 ```
 
@@ -376,9 +378,10 @@ stty -F /dev/ttymxc2 ispeed 115200 ospeed 115200
 ```
 echo seeedstduio > /dev/ttymxc2
 ```
+
 finally,we will get 'seeedstduio' string in the putty if connect successfully.
 
-![](https://raw.githubusercontent.com/Hansen0314/NPi-i.MX6ULL-Dev-Board/master/IMG/putty_recive.png)
+![](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/putty_recive.png)
 
 #### I2C
 
@@ -417,6 +420,7 @@ root@npi:~# i2cdetect -y 0
 60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 70: -- -- -- -- -- -- -- 77
 ```
+
 Now,we can find the 2C's address of Grove - BME280 is 0x77.
 
 **step 5.** Get Grove - BME280's ID by using i2cget
@@ -445,7 +449,8 @@ In this section, we will explain the control principle of the Linux ADC driver-r
 ```
 fire-config
 ```
-![](https://raw.githubusercontent.com/Hansen0314/NPi-i.MX6ULL-Dev-Board/master/IMG/enable-adc.png)
+
+![](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/enable-adc.png)
 
 You will get cmd as follow if enabled successfully.
 
@@ -461,7 +466,7 @@ in_voltage2_raw     power
 
 - **step 2.** Visit the [PinMap](https://docs.google.com/spreadsheets/d/1CRQrkBshc_2KFwC0NHmuwaJ_SedR24Oc1Ia9RGR3Us0/edit#gid=1256668665) to find ADC1's pin number of NPi i.MX6ULL Dev Board.You can find the GPIO number as follow picture.
 
-![](https://raw.githubusercontent.com/Hansen0314/NPi-i.MX6ULL-Dev-Board/master/IMG/adc-pin-map.png)
+![](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/adc-pin-map.png)
 
 **step 3.** Connect Grove - Rotary Angle Sensor to ADC1 on NPi i.MX6ULL Dev Board with Grove - 4 pin Female Jumper to Grove 4 pin Conversion Cable.
 
@@ -493,7 +498,7 @@ In this section, we will explain the control principle of the Linux SPI program.
 fire-config
 ```
 
-![](https://raw.githubusercontent.com/Hansen0314/NPi-i.MX6ULL-Dev-Board/master/IMG/ExpandSDCard.png)
+![](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/ExpandSDCard.png)
 
 - **Step 3.** Install dependencies about seeed-linux-dtoverlays
 
@@ -588,10 +593,10 @@ The more information about the ReSpeaker 2-Mics Pi HAT you can visit [wiki](http
 ## Resourses
 -----
 
-- **[PDF]** [i.MX 6ULL datasheet](https://github.com/Hansen0314/NPi-i.MX6ULL-Dev-Board/raw/master/REG/IMX6ULLCEC.pdf)
-- **[PDF]** [NPi i.MX6ULL Dev Board - Linux SBC Mechanical_Dimensions](https://github.com/Hansen0314/NPi-i.MX6ULL-Dev-Board/raw/master/REG/Mechanical_Dimensions.pdf)
-- **[PDF]** [NPi i.MX6ULL Dev Board - Linux SBC Breakout Board](https://github.com/Hansen0314/NPi-i.MX6ULL-Dev-Board/raw/master/REG/NPi-i.MX6ULL-Breakout-Board-Schematic-V1.0.pdf)
-- **[PDF]** [NPi i.MX6ULL Dev Board - Linux SBC Core Module](https://github.com/Hansen0314/NPi-i.MX6ULL-Dev-Board/raw/master/REG/NPi-i.MX6ULL-Core-Module-Schematic-V1.0.pdf)
+- **[PDF]** [i.MX 6ULL datasheet](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/REG/IMX6ULLCEC.pdf)
+- **[PDF]** [NPi i.MX6ULL Dev Board - Linux SBC Mechanical_Dimensions](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/REG/Mechanical_Dimensions.pdf)
+- **[PDF]** [NPi i.MX6ULL Dev Board - Linux SBC Breakout Board](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/REG/NPi-i.MX6ULL-Breakout-Board-Schematic-V1.0.pdf)
+- **[PDF]** [NPi i.MX6ULL Dev Board - Linux SBC Core Module](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/REG/NPi-i.MX6ULL-Core-Module-Schematic-V1.0.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>
