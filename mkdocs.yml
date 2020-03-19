@@ -189,12 +189,13 @@ pages:
           - Sensecap LoRaWAN Gateway and Wireless Sensor User Guide: Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide.md
       - ODYSSEY:
           - ODYSSEY STM32MP157C: ODYSSEY-STM32MP157C.md
+          - SEEED SOM STM32MP157C: SEEED-SOM-STM32MP157C.md
           - ODYSSEY X86J4105 Getting Started: ODYSSEY-X86J4105.md
           - ODYSSEY X86J4105 Installing OS: ODYSSEY-X86J4105-Installing-OS.md
           - ODYSSEY X86J4105 Installing OpenWrt: ODYSSEY-X86J4105-Installing-openwrt.md
           - ODYSSEY X86J4105 Azure IoT: ODYSSEY-X86J4105-AzureIOT.md
           - ODYSSEY X86J4105 Installing FreeNAS: ODYSSEY-X86J4105-Installing-FreeNAS.md
-
+          
       - Wio Terminal:
           - Get Started with Wio Terminal: Wio-Terminal-Getting-Started.md
           - LCD:
