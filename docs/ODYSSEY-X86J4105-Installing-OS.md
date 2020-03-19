@@ -14,7 +14,7 @@ This tutorial demonstrates how to create a bootable USB drive and install Linux 
 
 - A Working Computer
 
-- A USB Drive(<8GB is recommended)
+- A USB Drive(>= 8GB is recommended)
 
 - A Monitor
 

@@ -14,7 +14,7 @@ This tutorial demonstrates how to install the open source OS for router network.
 
 - A Working Computer
 
-- A USB Drive(<8GB is recommended)
+- A USB Drive(>= 8GB is recommended)
 
 - A Monitor
 
@@ -82,7 +82,7 @@ Now your OpenWrt is installed and ready to be used!
 Now, let's configure to access to the OpenWrt system from a web interface from another PC. Enter the following in the shell in OpenWrt:
 
 ```sh
-vi /etc/configure/network
+vi /etc/config/network
 ```
 
 And change the settings to as follow:

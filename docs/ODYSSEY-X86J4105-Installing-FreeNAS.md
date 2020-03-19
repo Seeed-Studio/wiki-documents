@@ -14,7 +14,7 @@ This tutorial demonstrates how to install the open-source Storage operating syst
 
 - A Working Computer
 
-- USB Drive x 2 (<8GB is recommended)
+- USB Drive x 2 (>= 8GB is recommended)
 
 - A Monitor
 
