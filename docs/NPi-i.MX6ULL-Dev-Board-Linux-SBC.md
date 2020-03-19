@@ -516,7 +516,7 @@ make all_imx6ull && make install_imx6ull
 
 <div class="admonition note" >
 <p class="admonition-title">Note</p>
-You can use `mkdir -p /lib/modules/$(uname -r)/extra/seeed` to create files if you find some error during the making.
+You can use mkdir -p /lib/modules/$(uname -r)/extra/seeed to create files if you find some error during the making.
 </div>
 
 - **Step 5.** add dtbo package in `/boot/uEnv.txt` to make it become effective after reboot.
