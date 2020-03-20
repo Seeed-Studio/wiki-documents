@@ -137,7 +137,7 @@ you need to install the NPi i.MX6ULL Dev Board - Linux SBC image from your SD ca
 
 **A.Boot from SD card**
 
-- **Step 1.** Select the latest [firmware](https://files.seeedstudio.com/wiki/linux/NPi+i.MX6ULL/imx6ull-debian-buster-console-armhf-latest-2gb.img.xz)
+- **Step 1.** Select the latest [firmware](https://files.seeedstudio.com/linux/NPi+i.MX6ULL/imx6ull-debian-buster-console-armhf-latest-2gb.img.xz)
 
 - **Step 2.** Connect an SD card to a PC or MAC with an SD card reader, an SD card with more than 4G memory is required.
 
