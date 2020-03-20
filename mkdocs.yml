@@ -195,6 +195,8 @@ pages:
           - ODYSSEY X86J4105 Installing OpenWrt: ODYSSEY-X86J4105-Installing-openwrt.md
           - ODYSSEY X86J4105 Azure IoT: ODYSSEY-X86J4105-AzureIOT.md
           - ODYSSEY X86J4105 Installing FreeNAS: ODYSSEY-X86J4105-Installing-FreeNAS.md
+          - ODYSSEY X86J4105 Using Intel Toolkit: ODYSSEY-X86J4105-Intel-OpenVINO.md
+          - ODYSSEY X86J4105 with Intel Neural Compute Stick 2: ODYSSEY-X86J4105-NCS2.md
           
       - Wio Terminal:
           - Get Started with Wio Terminal: Wio-Terminal-Getting-Started.md
