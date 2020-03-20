@@ -11,3 +11,14 @@ This functionality is dependent on [USB Host Library SAMD](https://github.com/gd
 2. Now, the  library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_LCD` file that you've have just downloaded.
 
 ![InstallLibrary](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Xnip2019-11-21_15-50-13.jpg)
+
+## USB Host Configurations
+
+To enable USB Host on Wio Terminal, you must configure two pins. Need to set `PIN_USB_HOST_ENABLE` to **LOW** and `OUTPUT_CTR_5V` to **HIGH**.
+
+You can do this simply by adding the following code in the `void setup()`:
+
+```cpp
+digitalWrite(PIN_USB_HOST_ENABLE, LOW);
+digitalWrite(OUTPUT_CTR_5V, HIGH);
+```

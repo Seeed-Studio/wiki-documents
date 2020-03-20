@@ -37,6 +37,17 @@ To work with this example, you will need a **USB OTG Adaptor** and a **USB to Se
 
 **Important Note:** Because the USB port of Wio Terminal is being used for USB, to upload another program to Wio Terminal require entering Bootloader mode by pressing the power button twice(the LED will dim), then you should be able see the port again.
 
+## USB Host Configurations
+
+To enable USB Host on Wio Terminal, you must configure two pins. Need to set `PIN_USB_HOST_ENABLE` to **LOW** and `OUTPUT_CTR_5V` to **HIGH**.
+
+You can do this simply by adding the following code in the `void setup()`:
+
+```cpp
+digitalWrite(PIN_USB_HOST_ENABLE, LOW);
+digitalWrite(OUTPUT_CTR_5V, HIGH);
+```
+
 ## Complete Code
 
 ```cpp
@@ -53,6 +64,11 @@ void setup() {
     while (1); //halt
   }
   SerialDebug.print(F("\r\nXBOX USB Library Started"));
+
+  //Coqnfigure pins to enable USB Host on Wio Terminal
+  digitalWrite(PIN_USB_HOST_ENABLE, LOW);
+  digitalWrite(OUTPUT_CTR_5V, HIGH);
+
 }
 void loop() {
   UsbH.Task();
