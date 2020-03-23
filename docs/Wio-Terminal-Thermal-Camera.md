@@ -16,7 +16,7 @@ This demo is inspired by [Kris Kasprzak's video](https://www.youtube.com/watch?v
 
 - [Wio Terminal Battery Chassis](https://www.seeedstudio.com/Wio-Terminal-Chassis-Battery-p-4516.html)
 
-### Features
+## Features
 
 - Indicating the exact temperature at crosshair
 
