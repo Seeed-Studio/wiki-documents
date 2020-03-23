@@ -16,7 +16,7 @@ Wio Lite W600 is a cost-effective Arduino compatible board with the W600 WiFi mo
 
 It broken out the SAM D21 pins, the I/O level of this board is 3.3V. There are 6 analog pins and 14 digital pins, and also one UART, one I2C, one ICSP port is available. You can power this board with 5V USB Type C and 3.5V~4.2V Lipo battery.
 
-As for the WiFi core, it's our old friend - W600 Module. We've already released the W600 Module and [Grove -  W600](https://www.seeedstudio.com/W600-Module-p-4020.html), Wio Lite W600 is a new member of  the [W600 family](https://www.seeedstudio.com/tag/W600-WIFI.html). W600 Module features ARM Cortex-M3 with 1MB on-chip flash and freeRTOS kernel. It is CE/FCC certificated and supports 802.11 b/g/n. We also provide a full Arduino W600 library including demos for Ap/Station/Ap-Station/Transparent Transmission/TCP, etc.
+As for the WiFi core, it's our old friend - W600 Module. We've already released the W600 Module and [Grove -  W600](https://www.seeedstudio.com/W600-Module-p-4020.html), Wio Lite W600 is a new member of  the [W600 family](https://www.seeedstudio.com/tag/W600-WIFI.html). W600 Module features ARM Cortex-M3 with 1MB on-chip flash and freeRTOS kernel. It is CE/FCC certificated and supports 802.11 b/g/n.
 
 
 On top of that, we've released the [Grove Shield for Wio Lite](https://www.seeedstudio.com/Grove-Shield-for-Wio-Lite-p-4156.html) at the same time. With this shield, we bring over 200 Grove sensors, actuators and displays to Wio Lite series and the Feather community.  
