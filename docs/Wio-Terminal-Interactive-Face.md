@@ -18,7 +18,7 @@ This example demonstrates how to display multiple images (eyes) onto the LCD scr
 
 ## Arduino libraries needed
 
-- Install the LCD screen library `Seeed_Arduino_LCD`, please visit [Wio Terminal Overview](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/) for more information.
+- Install the LCD screen library `Seeed_Arduino_LCD`, please visit [Wio Terminal LCD](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/) for more information.
 
 - Install the SD Card library `Seeed_Arduino_FS`, Please visit [Seeed-Arduino-FS](https://github.com/Seeed-Studio/Seeed_Arduino_FS/tree/beta) for more information.
 
