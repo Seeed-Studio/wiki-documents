@@ -49,17 +49,6 @@ The Relay Shield features four high quality relays and provides NO/NC interfaces
     1. Please place 2 layers of electrical tape on the top of the Arduino's usb connector. This will prevent the relay shield from making contact.
     2. Do not operate voltage more than 35V DC.
 
-## Compatibility
-
-We have produced a lot of extension board that can make your platform board more powerful, however not every extension board is compatible with all the platform board, here we use a table to illustrate how are those boards compatible with platform board.
-
-!!!note
-        Please note that "Not recommended" means that it might have chance to work with the platform board however requires extra work such as jump wires or rewriting the code. If you are interested in digging more, welcome to contact with techsupport@seeed.cc.
-
-**Click to see full picture**
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/Shield%20Compatibility.png)](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/Shield%20Compatibility.png)
-
-
 ## Shield Interface Description
 ---
 

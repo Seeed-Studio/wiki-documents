@@ -23,16 +23,6 @@ Camera Shield is the first shield board that support photograph, it is based on 
 
 *   Power Supply: 5 V
 
-## Compatibility
-
-We have produced a lot of extension board that can make your platform board more powerful, however not every extension board is compatible with all the platform board, here we use a table to illustrate how are those boards compatible with platform board.
-
-!!!note
-    Please note that "Not recommended" means that it might have chance to work with the platform board however requires extra work such as jump wires or rewriting the code. If you are interested in digging more, welcome to contact with techsupport@seeed.cc.
-
-**Click to see full picture**
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/Shield%20Compatibility.png)](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/Shield%20Compatibility.png)
-
 
 ##  Hardware Interface
 ---

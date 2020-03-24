@@ -32,16 +32,6 @@ The W5500 Ethernet Shield v1.0 can provide your projects with internet connectiv
 -   Micro-SD card socket
 -   Grove connectors for I2C and UART
 
-## Compatibility
-
-We have produced a lot of extension boards that can make your platform board more powerful, however not every extension board is compatible with all the platform boards, here we use a table to illustrate the compatibilities between extension boards and platform boards.
-
-!!!note
-    Please note that "Not recommended" means that it might have chance to work with the platform board however requires extra work such as jump wires or rewriting the code. If you are interested in digging more, welcome to contact with techsupport@seeed.cc.
-
-**Click to see full picture**
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/Shield%20Compatibility.png)](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/Shield%20Compatibility.png)
-
 ## Hardware Overview
 -----------------
 ![](https://github.com/SeeedDocument/W5500_Ethernet_Shield_v1.0/raw/master/img/W5500_Interface.jpg)

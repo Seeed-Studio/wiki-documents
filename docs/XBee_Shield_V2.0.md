@@ -22,17 +22,6 @@ The new version of XBee Shield is a standardized and stackable shield compatible
 -  Enlarged space for your own development
 -  LED indicators
 
-## Compatibility
----
-
-We have produced a lot of extension boards that can make your platform board more powerful, however not every extension board is compatible with all the platform board, here we use a table to illustrate how are those boards compatible with platform boards.
-
-!!!note
-    Please note that "Not recommended" means that it might have chance to work with the platform board however requires extra work such as jump wires or rewriting the code. If you are interested in digging more, welcome to contact with techsupport@seeed.cc.
-
-**Click to see full picture**
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/Shield%20Compatibility.png)](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/Shield%20Compatibility.png)
-
 
 ## Hardware Overview
 ---
