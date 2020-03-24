@@ -105,7 +105,7 @@ Connect bootable USB drive into one of the USB ports on ODYSSEY - X86J4105.
 
 #### Step 2
 
-Press the power button and keep pressing the F7 key on the keyboard until the Boot Manager screen appears.
+Press the power button and keep pressing the **F7** key on the keyboard until the Boot Manager screen appears.
 
 ![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/F7.jpg)
 
@@ -119,7 +119,7 @@ Select the connected USB Drive as the 1st boot drive and press Enter.
 
 Follow the instructions on the installation to complete installing the operating system.
 
-**Note:** To access the BIOS setup, keep pressing F7 key when booting up.
+**Note:** To access the BIOS setup, keep pressing **DEL** key when booting up.
 
 ### Connecting Antennas
 
@@ -275,7 +275,7 @@ Press the Power Button and keep pressing DEL key until you see the BIOS Setup.
 
 ### Arduino IDE doesn't recognize the onboard microcontroller
 
-Add a jumoer wire between pin 3 and pin 4 of UART pins on the 28-pin header to reset the AMSAMDG21
+Add a jumper wire between **TXD Pin** and **RXD Pin** of UART pins (to the left of SAMD21's 28 pins) to reset the AMSAMDG21.
 
 ### I cannot connect Wi-Fi and Bluetooth
 
