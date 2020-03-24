@@ -30,7 +30,7 @@ This demo is inspired by [Kris Kasprzak's video](https://www.youtube.com/watch?v
 
 - Visit the [Seeed_AMG8833](https://github.com/Seeed-Studio/Seeed_AMG8833) repositories and download the entire repo to your local drive.
 
-    - Now, the TFT LCD library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_AMG8833` file that you've have just downloaded.
+    - Now, the Seeed_AMG8833 library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_AMG8833` file that you've have just downloaded.
 
 ## Arduino Instructions
 
@@ -42,7 +42,7 @@ This demo is inspired by [Kris Kasprzak's video](https://www.youtube.com/watch?v
 
 ## Complete Code
 
-**Note:** To boost up performance and frame rateof this IR Thermal Imaging Camera, you can boost the Wio Terminal CPU Speed to 200MHz. Select `Tools` -> `CPU Speed` -> `200MHz(Overclock)`
+**Note:** To boost up performance and frame rate of this IR Thermal Imaging Camera, you can boost the Wio Terminal CPU Speed to 200MHz. Select `Tools` -> `CPU Speed` -> `200MHz(Overclock)`
 
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/CPUboost.png"/></div>
 
