@@ -1,22 +1,21 @@
-## How to use Seeeduino XIAO to log in to your Raspberry PI
-
+# How to use Seeeduino XIAO to log in to your Raspberry PI
 
 Sometimes when we use Raspberry Pi, these situations can be very disturbing to us: no extra HDMI displays around, mouse and keyboard are not easy to connect, choose to log in to the raspberry pie with the USB to Serial adapter, but it's too expensive. Now, with Seeeduino XIAO, all problems are readily solved.
 
-### Hardware
+## Hardware
 
-**Materials required**
+## Materials required
 
-- [Seeeduino XIAO x1](http://www.seeedstudio.com/.html)
+- [Seeeduino XIAO x1](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
-- Raspberry PI Zero x1
+- [Raspberry PI Zero x1](https://www.seeedstudio.com/Raspberry-Pi-Zero-W-p-4257.html)
 
-- Dupont cable x3
+- [Jumper cable x3](https://www.seeedstudio.com/Breadboard-Jumper-Wire-Pack-200mm-100m-p-1032.html)
 
-- Type-C cable x1
+- [Type-C cable x1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A.html)
 
 
-**Hardware Connection**
+### Hardware Connection
 
 - **Step 1.** Raspberry PI's **TX** is connected to Seeeduino XIAO's **RX**
 
@@ -31,14 +30,15 @@ Sometimes when we use Raspberry Pi, these situations can be very disturbing to u
 ![](http://files.seeedstudio.com/products/102010328/img/pin-with-marks.png)
 
 
-### Software
+## Software
 
 Find the config.txt file on the TF card where the Raspberry Pi official system is installed, and add a sentence at the end:
 
 ```c
 enable_uart=1
 ```
-**Configuring Seeeduino XIAO**
+
+### Configuring Seeeduino XIAO
 
 - **Step 1.** Open [Arduino IDE](https://www.arduino.cc/en/Main/Software) and add Seeeduino XIAO by following the link [here.](https://github.com/SeeedDocument/Seeeduino-XIAO)
 
@@ -79,7 +79,7 @@ void loop() {
 }
 ```
 
-**Configuring Putty**
+### Configuring Putty
 
 - **Step 1.** Download and install Putty by following this [link](https://www.putty.org/)
 
