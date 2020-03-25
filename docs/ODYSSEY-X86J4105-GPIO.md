@@ -1,6 +1,6 @@
 # Accessing and Controlling ODYSSEY - X86J4105 40-Pin GPIO
 
-This tutorial demonstrates how to access and control the 40-pin GPIO of ODYSSEY - X86J4105 under Linux (Ubuntu). With this, you can can start to build your IoT projects using ODYSSEY - X86J4105 with ease!
+This tutorial demonstrates how to access and control the 40-pin GPIO of ODYSSEY - X86J4105 under Linux (Ubuntu). With this, you can start to build your IoT projects using ODYSSEY - X86J4105 with ease!
 
 ## 40-Pin GPIO Pinout Diagram
 
