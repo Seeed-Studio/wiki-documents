@@ -8,7 +8,7 @@ surveyurl:
 sku: 107990055
 ---
 
-![enter image description here](https://github.com/SeeedDocument/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/raw/master/img/IMG_6051.jpg)
+![enter image description here](https://files.seeedstudio.com/products/107990055/01.png)
 
 
 Seeed’s ReSpeaker 6-Mic Circular Array Kit
@@ -101,8 +101,6 @@ dummy.
 ![](https://github.com/SeeedDocument/Bazaar_file/raw/master/107990055/img/ab.png)
 
 <p style=":center"><img src="https://github.com/SeeedDocument/Bazaar_file/raw/master/107990055/img/6-mic_array_assemble.gif" /></p>
-
-
 
 
 ## Getting Started
