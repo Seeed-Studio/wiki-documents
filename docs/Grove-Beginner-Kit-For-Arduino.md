@@ -1880,7 +1880,11 @@ After you’re done with your design, check out the [Seeed Fusion PCBA service](
 Seeed Studio has its very own [Open Parts Library (OPL)](https://www.seeedstudio.com/opl.html) which is a collection of over 10,000 commonly used components specifically sourced for the Seeed Fusion PCBA Service. To speed up the process of PCB design, Seeed is building the component libraries for KiCad and Eagle. When all components are sourced from Seeed’s PCBA OPL and used with the [Seeed Fusion PCB Assembly (PCBA) service](https://www.seeedstudio.com/fusion_pcb.html), the entire PCBA production time can be reduced from 20 working days to a mere 7 days.
 
 
+## Schematic Online Viewer
 
+
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/Grove-Beginner-Kit-for-Arduino-SCH-PCB.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
 
 
 ## Resources
