@@ -52,9 +52,13 @@ This is a 3-5V passive buzzer. You can change the PMW frequency to award differe
 
 The Grove interface on the breadboard and on the Grove Passive Buzzer are connected by the Grove cable.
 
-### Code example1 - simply get the beep sound
+### Software
 
-```
+- **Step1** Copy the code below to the Arduino IDE and upload. If you do not know how to update the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+
+#### Code example1 - simply get the beep sound
+
+```c++
 int buzzer = 5; // Buzzer connect with Pin 5
 int frequency = 2700; //reach the Resonant Frequency
 int cycle = 1000000/frequency;  
@@ -72,9 +76,10 @@ void loop()
   delayMicroseconds(cycle/2);  // run the PMW cycle
 }
 ```
+- **Step2** After uploading the code tp the board, you will hear thr buzzer beep.
 
 ### Code example2 - Use buzzer to play music
-```
+```c++
  //set the corresponding notes with frequency
  #define NOTE_D0 0
  #define NOTE_D1 294
@@ -182,6 +187,12 @@ void loop()
     delay(5000);//after playing the whole song, delay for 5 sec
  }    
 ```
+- **Step3** After uploading the code to the board, you can hear a music from the buzzer.
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/products/107020109/document/Grove_Passive_Buzzer_eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
 
  ## Resource
 

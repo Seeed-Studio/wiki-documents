@@ -60,8 +60,9 @@ With the Grove interface, the Grove digital PIR Sensor is easy to be plugged and
 
 The Grove interface on the breadboard and on the Grove digital PIR Sensor are connected by the Grove cable.
 
-### Code
-```
+### Softwawre
+- **Step1** Copy the code below to the Arduino IDE and upload. If you do not know how to update the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+```c++
 #define digital_pir_sensor 5 // connect to Pin 5
 
 void setup()
@@ -79,6 +80,13 @@ void loop()
   Serial.println("Nothing Happened");  // Far from PIR sensor
 }
 ```
+- **Step2** Open the Serial port and you will see the value changing when you take a motion around the PIR sensor.
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/products/101020793/document/Grove_Digital_PIR_Motion_Sensor_eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
 
 ## Resource
 
