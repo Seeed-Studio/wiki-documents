@@ -483,6 +483,7 @@ pages:
           - Sensor - Distance: Sensor_distance.md
           - Sensor - Others: Sensor_Others.md
           - Grove - 2 Channel Inductive Sensor (LDC1612): Grove-2_Channel_Inductive_Sensor-LDC1612.md
+          - Grove - Digital PIR Sensor: Grove_digital_pir_sensor.md
           - Grove - 2.5A DC Current Sensor(ACS70331): Grove-2.5A-DC-Current-Sensor-ACS70331.md
           - Grove - ±5A DC/AC Current Sensor (ACS70331): Grove-5A_DC_AC_Current_Sensor-ACS70331.md
           - Grove - 10A DC Current Sensor (ACS725): Grove-10A_DC_Current_Sensor-ACS725.md
@@ -633,6 +634,7 @@ pages:
           - Atom Node: Atom_Node.md
           - Grove - 2-Coil Latching Relay: Grove-2-Coil_Latching_Relay.md
           - Grove - Buzzer: Grove-Buzzer.md
+          - Grove - Passive Buzzer: Grove_passive_Buzzer.md
           - Grove - Chainable RGB LED: Grove-Chainable_RGB_LED.md
           - Grove - Dry-Reed Relay: Grove-Dry-Reed_Relay.md
           - Grove - EL Driver: Grove-EL_Driver.md
