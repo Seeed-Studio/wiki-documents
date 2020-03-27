@@ -439,7 +439,7 @@ Run [CanBus_SendForArduino.ino](https://github.com/SeeedDocument/ODYSSEY-STM32MP
 
 ## Resourses
 -----
-- **[PDF]** [STM32MP157C Datasheet](https://github.com/SeeedDocument/ODYSSEY-STM32MP157C/raw/master/Hardware/STM32MP157C.pdf)
+- **[PDF]** [STM32MP157C Datasheet](https://github.com/SeeedDocument/ODYSSEY-STM32MP157C/raw/master/Hardware/stm32mp157c.pdf)
 - **[SCH]** [Seeed SoM - STM32MP157C](https://github.com/SeeedDocument/ODYSSEY-STM32MP157C/raw/master/Hardware/Seeed%20SoM%20-%20STM32MP157C%20v1.0_191212.pdf)
 - **[SCH]** [ODYSSEY-STM32MP157C](https://github.com/SeeedDocument/ODYSSEY-STM32MP157C/raw/master/Hardware/Seeed%20NPi%20-%20STM32MP157C%20v1.0_191212.pdf)
 - **[3Dfile]** [ODYSSEY-STM32MP157C](https://github.com/SeeedDocument/ODYSSEY-STM32MP157C/raw/master/Hardware/st.skp)
