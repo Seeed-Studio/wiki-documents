@@ -55,7 +55,7 @@ With the Grove interface, the Grove digital PIR Sensor is easy to be plugged and
 
 |Seeeduino XIAO|Grove Breadboard|Grove Digital PIR Motion Sensor|
 |--------|-----------------------|-------------------------------------------------------------|
-|![](http://me.omgoooo.com:2022/SeeedDocument/Seeeduino-XIAO/-/raw/master/img/seeeduino-xiao-preview210x157.jpg)|![](http://me.omgoooo.com:2022/SeeedDocument/Grove-Breadboard/-/raw/master/img/103020232-integrate-preview210x157.jpg)|![](https://files.seeedstudio.com/products/101020793/img/101020793(2)wiki210x157.jpg)|
+|![](http://me.omgoooo.com:2022/SeeedDocument/Seeeduino-XIAO/-/raw/master/img/seeeduino-xiao-preview210x157.jpg)|![](http://me.omgoooo.com:2022/SeeedDocument/Grove-Breadboard/-/raw/master/img/103020232-integrate-preview210x157.jpg)|![](https://files.seeedstudio.com/products/101020793/img/101020793wiki210x157.jpg)|
 |[Get one now](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|[Get one now](https://www.seeedstudio.com/Grove-Breadboard-p-4034.html)|[Get one now](https://www.seeedstudio.com/Grove-Digital-PIR-Motion-Sensor-p-4524.html)|
 
 #### Hardware Connection
@@ -93,7 +93,7 @@ void loop()
 
 |Raspberry Pi 4B(4GB)|Grove Base Hat for Raspberry Pi|Grove Digital PIR Motion Sensor|
 |--------|-----------------------|-------------------------------------------------------------|
-|![](http://me.omgoooo.com:2022/SeeedDocument/Raspberry-Pi-4/-/raw/master/img/pi-4-2220x157.jpg?inline=false)|![](http://me.omgoooo.com:2022/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/-/raw/master/img/main210x159.jpg)|![](https://files.seeedstudio.com/products/101020793/img/101020793(2)wiki210x157.jpg)|
+|![](http://me.omgoooo.com:2022/SeeedDocument/Raspberry-Pi-4/-/raw/master/img/pi-4-2220x157.jpg?inline=false)|![](http://me.omgoooo.com:2022/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/-/raw/master/img/main210x159.jpg)|![](https://files.seeedstudio.com/products/101020793/img/101020793wiki210x157.jpg)|
 |[Get one now](https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-4GB-p-4077.html)|[Get one now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|[Get one now](https://www.seeedstudio.com/Grove-Digital-PIR-Motion-Sensor-p-4524.html)|
 
 #### Hardware Connection
