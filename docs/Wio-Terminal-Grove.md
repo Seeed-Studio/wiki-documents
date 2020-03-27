@@ -12,7 +12,7 @@ This section introduces how to use [Grove - TDS Sensor](http://wiki.seeedstudio.
 
 1. Install the [LCD](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/) library.
 
-2. Install the [Linechart](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Histogram/) library.
+2. Install the [Linechart](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Linecharts/) library.
 
 ### Complete Code
 
@@ -20,26 +20,28 @@ Connect the Grove TDS sensor to the Grove D/A Pin of Wio Terminal, upload the co
 
 ```cpp
 #include"seeed_line_chart.h" //include the library
-
 TFT_eSPI tft;
+
+#define max_size 50 //maximum size of data
+doubles data; //Initilising a doubles type to store data
+TFT_eSprite spr = TFT_eSprite(&tft);  // Sprite 
+
 #define sensorPin A0 //Analog pin
 
 int sensorValue = 0;
 float tdsValue = 0;
 float Voltage = 0;
 
-#define max_size 20 //maximum size of data
-doubles data; //Initilising a doubles type to store data
-
-uint16_t buffer[TFT_WIDTH * TFT_HEIGHT];
-
 void setup() {
+    pinMode(sensorPin, INPUT);
     tft.begin();
     tft.setRotation(3);
-    Serial.begin(115200);
+    spr.createSprite(TFT_HEIGHT,TFT_WIDTH);
 }
 
 void loop() {
+    spr.fillSprite(TFT_WHITE);
+
     sensorValue = analogRead(sensorPin);
     Voltage = sensorValue*5/1024.0; //Convert analog reading to Voltage
     tdsValue=(133.42*Voltage*Voltage*Voltage - 255.86*Voltage*Voltage + 857.39*Voltage)*0.5; //Convert voltage value to TDS value
@@ -47,7 +49,7 @@ void loop() {
     if (data.size() == max_size) {
         data.pop();//this is used to remove the first read variable
     }
-    data.push(tdsValue); //read TDS values and store in data
+    data.push(tdsValue); //read variables and store in data
 
     //Settings for the line graph title
     auto header =  text(0, 0)
@@ -56,9 +58,6 @@ void loop() {
                 .valign(vcenter)
                 .width(tft.width())
                 .thickness(3);
-
-    tft.drawToBuffer(buffer); //write to buffer first
-    tft.fillScreen(TFT_WHITE); //white background
 
     header.height(header.font_height() * 2);
     header.draw(); //Header height is the twice the height of the font
@@ -74,8 +73,7 @@ void loop() {
                 .color(TFT_RED) //Setting the color for the line
                 .draw();
 
-    tft.drawToTFT();
-    tft.pushImage(0,0, tft.width(), tft.height(), buffer);
+    spr.pushSprite(0, 0);
     delay(50);
 }
 ```
@@ -204,27 +202,25 @@ Connect the Grove Temperature sensor to the Grove D/A Pin of Wio Terminal, uploa
 #include <math.h>
 
 TFT_eSPI tft;
-#define sensorPin A0 //Analog pin
 
+#define max_size 50 //maximum size of data
+doubles data; //Initilising a doubles type to store data
+TFT_eSprite spr = TFT_eSprite(&tft);  // Sprite 
 
 const int B = 4275;               // B value of the thermistor
 const int R0 = 100000;            // R0 = 100k
 const int pinTempSensor = A0;     // Grove - Temperature Sensor connect to A0
 
-
-#define max_size 20 //maximum size of data
-doubles data; //Initilising a doubles type to store data
-
-uint16_t buffer[TFT_WIDTH * TFT_HEIGHT];
-
 void setup() {
+    pinMode(pinTempSensor, INPUT);
     tft.begin();
     tft.setRotation(3);
-    Serial.begin(115200);
-    tft.setTextColor(TFT_WHITE);
+    spr.createSprite(TFT_HEIGHT,TFT_WIDTH);
 }
 
 void loop() {
+    spr.fillSprite(TFT_DARKCYAN);
+
     int a = analogRead(pinTempSensor);
     float R = 1023.0/a-1.0;
     R = R0*R;
@@ -234,7 +230,7 @@ void loop() {
     if (data.size() == max_size) {
         data.pop();//this is used to remove the first read variable
     }
-    data.push(temperature); //read Temperature values and store in data
+    data.push(temperature); //read variables and store in data
 
     //Settings for the line graph title
     auto header =  text(0, 0)
@@ -244,9 +240,6 @@ void loop() {
                 .valign(vcenter)
                 .width(tft.width())
                 .thickness(2);
-
-    tft.drawToBuffer(buffer); //write to buffer first
-    tft.fillScreen(TFT_DARKGREY); //white background
 
     header.height(header.font_height() * 2);
     header.draw(); //Header height is the twice the height of the font
@@ -264,9 +257,8 @@ void loop() {
                 .color(TFT_RED) //Setting the color for the line
                 .draw();
 
-    tft.drawToTFT();
-    tft.pushImage(0,0, tft.width(), tft.height(), buffer);
-    delay(100);
+    spr.pushSprite(0, 0);
+    delay(50);
 }
 ```
 
