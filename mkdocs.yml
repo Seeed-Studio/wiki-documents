@@ -257,8 +257,8 @@ pages:
             - Wio Terminal Storing Data: Wio-Terminal-Storting-Analog-Data.md
             - Wio Terminal Displaying Photos: Wio-Terminal-Displaying-Photos.md
             - Wio Terminal Interactive Faces Demo: Wio-Terminal-Interactive-Face.md
-            - Wio Terminal Interactive Faces Demo: Wio-Terminal-Interactive-Face.md
             - Build a IR Thermal Imaging Camera using Wio Terminal: Wio-Terminal-Thermal-Camera.md
+            - Reading Raspberry Pi's Info using Wio Terminal: Wio-Terminal-Reading-Raspberry-Pi.md
 
       - ReSpeaker:
           - ReSpeaker Introduction: ReSpeaker.md

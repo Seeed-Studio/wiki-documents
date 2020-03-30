@@ -21,9 +21,6 @@ Grove Beginner Kit for Arduino is one of the best Arduino Beginner Kit for begin
 11. **[Seeeduino Lotus](http://wiki.seeedstudio.com/Seeeduino_Lotus/):** Arduino Compatible Board with Grove Ports
 
 
-
-
-
 **Note:**
         By default, Grove modules are connected to Seeeduino via PCB stamp holes. This means you don't need to use Grove cables to connect if not broken out. The default pins are as follow:
 
@@ -59,13 +56,10 @@ Use a knife or a sharp object to cut at the stamp holes that connect the sensors
 Shake the modules up and down and it should come out quite easily!
 
 
-
-
-
 ## Part List
 
 |Modules|Quantity|
-|||
+|---|---|
 |**Sensors**||
 |Temperature & Humidity Sensors|x1|
 |3-Axis Accelerometers|x1|
@@ -82,7 +76,6 @@ Shake the modules up and down and it should come out quite easily!
 |OLED Display|x1|
 |**Grove Cables**|x6|
 |**Micro USB Cable**|x1|
-
 
 
 ## Learning Objectives
@@ -105,9 +98,6 @@ The Grove Beginner Kit has a plug and plays unboxing demo, where you first plug 
 Buzzer and LED module are used for key prompt.
 
 
-
-
-
 ## How to Get Started With Arduino
 
 ### Install the Arduino IDE
@@ -125,26 +115,25 @@ Buzzer and LED module are used for key prompt.
 
   - Download the [CP2102 USB Driver](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers). **Note:** Download according to your OS.
   - After the driver installation is completed, connect Arduino to the USB port of PC with a USB cable. 
-    - **For Windows users:** You can see it in `My Computer` -> `Properties` -> `Hardware` -> `Device Management`. A `COM` will appear.
-    - **For Mac OS users:** You can navigate to `` on the top left corner, and choose `About this Mac` -> `System Report...` -> `USB`. A CP2102 USB Driver should appear.
+      - **For Windows users:** You can see it in `My Computer` -> `Properties` -> `Hardware` -> `Device Management`. A `COM` will appear.
+      - **For Mac OS users:** You can navigate to `` on the top left corner, and choose `About this Mac` -> `System Report...` -> `USB`. A CP2102 USB Driver should appear.
   - If the driver is not installed, or if the driver is installed incorrectly (not matching the chip model), it will appear as an "unknown device" in the device manager. At this point, the driver should be reinstalled.
 
 
 
 ### Start the Arduino IDE
 
-1. Open the **Arduino IDE** on your PC.
-2. Click on `Tools` -> `Board` to select the correct Development Board Model. Select **Arduino/Genuino Uno** as Board.
+1.Open the **Arduino IDE** on your PC.
+2.Click on `Tools` -> `Board` to select the correct Development Board Model. Select **Arduino/Genuino Uno** as Board.
 
 ![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/board.png)
 
-3. Click `Tools` -> `Port` to select the correct Port (the Serial Port showed in Device Manager in the previous step). In this case, `COM6` is selected. **For Mac OS users**, it should be `/dev/cu.SLAB_USBtoUART`.
+3.Click `Tools` -> `Port` to select the correct Port (the Serial Port showed in Device Manager in the previous step). In this case, `COM6` is selected. **For Mac OS users**, it should be `/dev/cu.SLAB_USBtoUART`.
 
 ![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/port.png)
 
 
-
-1. Create a new Arduino file and name it `Hello.ino`, then copy the following code into it:
+4.Create a new Arduino file and name it `Hello.ino`, then copy the following code into it:
 
 ```Cpp
 void setup() {
@@ -156,11 +145,11 @@ void loop() {
 }
 ```
 
-5. In the upper left corner of the Arduino IDE, there are two buttons, **Verify and Upload**. First, press the Verify button(✓) to compile. After the compilation is successful, press the upload button(→).
+5.In the upper left corner of the Arduino IDE, there are two buttons, **Verify and Upload**. First, press the Verify button(✓) to compile. After the compilation is successful, press the upload button(→).
 
 ![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/func.png)
 
-6. Navigate to `Tools` -> `Serial Monitor`, or click the **Serial Monitor** in the upper right corner(Magnifier Symbol), you can see the program running results:
+6.Navigate to `Tools` -> `Serial Monitor`, or click the **Serial Monitor** in the upper right corner(Magnifier Symbol), you can see the program running results:
 
 ![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/print.png)
 
@@ -170,9 +159,6 @@ void loop() {
 
 **Note:**
         All modules are pre-wired on a single circuit board, so no cables and soldering are needed. However, if you break out the modules and want to connect them with Grove  cables, please kindly check the Breakout Guide.
-
-
-
 
 
 ## Lesson Guide
@@ -192,24 +178,22 @@ We have completed the output "Hello world" program. Now let's learn how to light
 
 
 - <font size=5;font color=#314B9F >Components Involved</font>
-  1. Seeeduino Lotus
-  2. Grove LED
-  3. Grove Cable(If Broken out)
+    1. Seeeduino Lotus
+    2. Grove LED
+    3. Grove Cable(If Broken out)
 
 ![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/LED.png)
 
 
-
 - <font size=5;font color=#314B9F >Hardware connection</font>
-  - **Module connection**
-    - Default connection by PCB stamp hole.
-  - Connect the Seeeduino to the computer through the USB cable.
+    - **Module connection**
+        - Default connection by PCB stamp hole.
+    - Connect the Seeeduino to the computer through the USB cable.
 
 
-  
 - <font size=5;font color=#314B9F >Software Code</font>
-  - Open Arduino IDE.
-  - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
+    - Open Arduino IDE.
+    - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
 
 ```Cpp
 //LED Blink
@@ -338,6 +322,13 @@ Delay the program by 1000ms(1s).
 
 The LED module will be 1 second on and 1 second off.
 
+**LED Brightness Adjustment:**
+
+<div align=center><img width = 300 src="https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/LED-res.jpeg"/></div>
+</br>
+
+On the Grove LED module, there is a **variable resistor that can be adjusted using a screw driver.** Twist it to make the LED light up brighter!
+
 - <font size=5;font color=#314B9F >Breakout Guide</font>
 
 If modules are broken out from the board. Use a Grove cable to connect the **Grove LED** to Seeeduino Lotus's digital interface **D4**.  
@@ -352,9 +343,8 @@ The first thing we need to know is that the input of the button is a digital sig
 
 - **Practice:** Use button to turn ON and OFF the LED module
 
-
-
 - <font size=5;font color=#314B9F >Components Involved</font>
+
     1. Seeeduino Lotus
     2. Grove LED
     3. Grove Button
@@ -362,25 +352,21 @@ The first thing we need to know is that the input of the button is a digital sig
 
 ![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Button.png)
 
-
-
 - <font size=5;font color=#314B9F >Hardware connection</font>
-  - **Module connection:**
-    - Default connection by PCB stamp hole.
-  - The Seeeduino is then connected to the computer via a USB cable.
+    - **Module connection:**
+        - Default connection by PCB stamp hole.
+    - The Seeeduino is then connected to the computer via a USB cable.
 
 - **Hardware analysis**:
-  - Input: Button
-  - Control: Seeeduino
-  - Output: LED module
+    - Input: Button
+    - Control: Seeeduino
+    - Output: LED module
 
 Both the sensor and the LED use digital signals, so they should be connected to digital interfaces.
 
-
-
 - **Software code**:
-  - Open Arduino IDE.
-  - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
+    - Open Arduino IDE.
+    - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
 
 ```Cpp
 //Button to turn ON/OFF LED
@@ -496,7 +482,7 @@ Use a Grove cable to connect the Grove LED to Seeeduino Lotus's digital interfac
 
 
 
-### Lesson 3: Controlling the Speed of the Blink
+### Lesson 3: Controlling the Frequency of the Blink
 
 In the last section, we studied that button only has two states, ON/OFF state corresponding 0V and 5V, but in practice, we often counter the need for many states, not just 0V and 5V. Then you need to use Analog Signal! Rotary Potentiometer is a classic example that uses an analog signal.
 
@@ -511,35 +497,32 @@ In the last section, we studied that button only has two states, ON/OFF state co
 
 
 - <font size=5;font color=#314B9F >Components Involved</font>
-  1. Seeeduino Lotus
-  2. Grove LED
-  3. Grove Rotary Switch
-  4. Grove Cables(If broken out)
+    1. Seeeduino Lotus
+    2. Grove LED
+    3. Grove Rotary Switch
+    4. Grove Cables(If broken out)
 
 ![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/rotary.png)
 
 
 
 - <font size=5;font color=#314B9F >Hardware connection</font>
-  - **Module connection:**
-    - Default connection by PCB stamp hole.
-  - The Seeeduino is then connected to the computer via a USB cable.
+    - **Module connection:**
+        - Default connection by PCB stamp hole.
+    - The Seeeduino is then connected to the computer via a USB cable.
 
 - **Hardware analysis:**
 
-  - Input: Rotary Potentiometer
-  - Control: Seeeduino Lotus
-  - Output: LED module
+    - Input: Rotary Potentiometer
+    - Control: Seeeduino Lotus
+    - Output: LED module
 
 The input is an analog signal, so it is connected to the analog signal interface, the LED module is connected to the digital signal interface.
 
 
-
-
-
 - <font size=5;font color=#314B9F >Software Code</font>
-  - Open Arduino IDE.
-  - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
+    - Open Arduino IDE.
+    - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
 
 ```Cpp
 //Rotary controls LED
@@ -550,6 +533,7 @@ int rotaryValue = 0;  // variable to store the value coming from the rotary
 void setup() {
   // declare the ledPin as an OUTPUT:
   pinMode(ledPin, OUTPUT);
+  pinMode(rotaryPin, INPUT);
 }
 
 void loop() {
@@ -569,6 +553,18 @@ void loop() {
 
 
 - <font size=5;font color=#314B9F >Code Analysis</font>
+
+```cpp
+int rotaryPin = A0;    // select the input pin for the rotary
+int ledPin = 4;      // select the pin for the LED
+```
+**Description:**
+
+You may find that we define rotatePin and ledPin in different ways. This is because Rotary Potentiometer generates an analog signal, and the LED is controlled by a digital signal.
+
+To **define for Analog Pin**, use A + the number of the Pin (For Example here `A0`).
+
+To **define for Digital Pin**, use just the number of the pin (For Example here `4`).
 
 ```cpp
 rotaryValue = analogRead(rotaryPin);
@@ -605,9 +601,6 @@ Turning the Potentiometer will change the frequency of LED flickering.
 Use a Grove cable to connect LED to Seeeduino Lotus's digital interface **D4**, and a Grove cable to connect the Grove Rotary Switch to analog signal interface **A0**.
 
 
-
-
-
 ### Lesson 4: Making the Buzzer go BEEP
 
 Just like the LED module, Buzzer is also an output module, instead of lighting up it produces a beep sound. This can be used for many situations for indication purposes.  We studied the use of potentiometer in the last section, so how do we use the potentiometer to control the volume of the buzzer? This requires the used of PWM control!
@@ -627,26 +620,22 @@ There are six digital pins on your Seeeduino that are marked with the symbol “
 
 
 - <font size=5;font color=#314B9F >Components Involved</font>
-  1. Seeeduino Lotus
-  2. Grove Buzzer
-  3. Grove Cable(If Broken out)
+    1. Seeeduino Lotus
+    2. Grove Buzzer
+    3. Grove Cable(If Broken out)
 
 ![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Buzzer.png)
 
 
 
 - <font size=5;font color=#314B9F >Hardware connection</font>
-  - **Module connection**
-    - Default connection by PCB stamp hole.
-  - Connect the Seeeduino to the computer through the USB cable.
-
-
-
-
+    - **Module connection**
+        - Default connection by PCB stamp hole.
+    - Connect the Seeeduino to the computer through the USB cable.
 
 - <font size=5;font color=#314B9F >Software Code</font>
-  - Open Arduino IDE.
-  - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
+    - Open Arduino IDE.
+    - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
 
 ```Cpp
 int BuzzerPin = 5;
@@ -654,6 +643,7 @@ int Potentiometer = A0;
 
 void setup() {
   pinMode(BuzzerPin, OUTPUT);
+  pinMode(Potentiometer, INPUT);
 }
 
 void loop() {
@@ -664,9 +654,47 @@ void loop() {
 }
 ```
 
-
-
 - <font size=5;font color=#314B9F >Code Analysis</font>
+
+```cpp
+Value = map(potentioValue, 0, 1023, 0, 255);
+```
+
+**Description:**
+
+Re-maps a number from one range to another. That is, a value of **fromLow** would get mapped to **toLow**, a value of **fromHigh** to **toHigh**, values in-between to values in-between, etc.
+
+Does not constrain values to within the range, because out-of-range values are sometimes intended and useful. The `constrain()` function may be used either before or after this function, if limits to the ranges are desired.
+
+Note that the "lower bounds" of either range may be larger or smaller than the "upper bounds" so the `map()` function may be used to reverse a range of numbers, for example
+
+**y = map(x, 1, 50, 50, 1);**
+
+The function also handles negative numbers well, so that this example
+
+**y = map(x, 1, 50, 50, -100);**
+
+is also valid and works well.
+
+The map() function uses integer math so will not generate fractions, when the math might indicate that it should do so. Fractional remainders are truncated and are not rounded or averaged.
+
+**Syntax:**
+
+map(**value, fromLow, fromHigh, toLow, toHigh**)
+
+**Parameters:**
+
+**value**: the number to map.
+
+**fromLow**: the lower bound of the value’s current range.
+
+**fromHigh**: the upper bound of the value’s current range.
+
+**toLow**: the lower bound of the value’s target range.
+
+**toHigh**: the upper bound of the value’s target range.
+
+Mapping Potentiometer sensor analog signal(0 to 1023)to the loudness of Buzzer(0 to 255).
 
 ```cpp
 analogWrite(BuzzerPin, Value);
@@ -690,24 +718,27 @@ Writes an analog value (PWM wave) to the Buzzer.
 
 **Demo Effect and Serial Print Result:**
 
-The buzzer beeps 3 times fast at startup, waits a second then beeps continuously
- at a slower pace.
+Adjust the potentiometer to adjust the volume of the buzzer beeps.
 
 - <font size=5;font color=#314B9F >Breakout Guide</font>
 
 Use a Grove cable to connect the Grove Buzzer to Seeeduino Lotus's digital interface **D5**.
 
+-----
 
+- <font size=5;font color=#314B9F >PWM Usage</font>
 
+Now that we have learned the use of PWM, in addition to using PWM to control the buzzer's sound level, we can also use PWM to control the speed of the motor and the brightness of the LED lights and etc.
 
+However, the LED Module on the Grove Beginner Kit cannot be directly controlled by PWM, because the LED module is connected to D4, and as mentioned above, the PWM pins are 3, 5, 6, 9, 10, 11, and pin 4 is not a PWM pin. If you want to control the LED with PWM, you need to pull it down and use the Grove cable to connect to the Grove port with PWM function.
+
+All in all, when you want to use the PWM function, make sure to select those pins with a "~" symbol in front of their names.
 
 ### Lesson 5:  Making an Light Induct LED
 
-The light sensor contains a photosensitive resistor to measure the intensity of light. The resistance of the photosensitive resistor decreases with the increase of light intensity. The output signal is the analog value, the brighter the light source, the larger the analog value. Based on this property, you can use it to make a light switch.
+The light sensor contains a photosensitive resistor to measure the intensity of light. The resistance of the photosensitive resistor decreases with the increase of light intensity. The LED will light up if the surrounding is dark, and stays off if the surrounding is bright.
 
 In the following sections, we will use Serial Monitor to observe results from our sensors so here comes the brief introduction!
-
-
 
 <font size=5;font color=#314B9F >Background Information:</font>
 
@@ -717,42 +748,35 @@ Serial Monitor is a useful tool to observe results on Arduino, it can be very us
 
 ![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Serial.jpg)
 
-You can open the Serial Plotter by clicking **Tools** -> **Serial Monitor**.
+You can open the Serial Monitor by clicking **Tools** -> **Serial Monitor**.
 
 ![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/20200217144001.jpg)
 
-- **Exercise:** As the environment slowly brightens, the LED lights will lighten. As the light slowly dimmed, the LED dimmed. The LED will go from dark to light or from light to dark. To achieve this, we will use pulse width modulation(PWM).
-
-
   
 - <font size=5;font color=#314B9F >Components Involved</font>
-  1. Seeeduino Lotus
-  2. Grove LED
-  3. Grove Light Sensor
-  4. Grove Cable(If broken out)
+    1. Seeeduino Lotus
+    2. Grove LED
+    3. Grove Light Sensor
+    4. Grove Cable(If broken out)
 
 ![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Light.png)
 
 
 
 - <font size=5;font color=#314B9F >Hardware connection</font>
-  - **Module connection:**
-    - Default connection by PCB stamp hole.
-  - The Seeeduino is then connected to the computer via a USB cable.
+    - **Module connection:**
+        - Default connection by PCB stamp hole.
+    - The Seeeduino is then connected to the computer via a USB cable.
 
 - **Hardware analysis:**
 
-  - Input: Light Sensor
-  - Control: Seeeduino Lotus
-  - Output: LED module
-
-
-
-
+    - Input: Light Sensor
+    - Control: Seeeduino Lotus
+    - Output: LED module
 
 - <font size=5;font color=#314B9F >Software Code</font>
-  - Open Arduino IDE.
-  - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
+    - Open Arduino IDE.
+    - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
 
 ```Cpp
 // Light Switch
@@ -763,24 +787,28 @@ int outputValue = 0;        // value output to the PWM (analog out)
 
 void setup() {
   pinMode(ledPin,OUTPUT);
+  pinMode(sensorpin, INPUT);
   Serial.begin(9600);
 }
 
 void loop() {
   // read the analog in value:
   sensorValue = analogRead(sensorpin);
-  // map it to the range of the analog out:
-  outputValue = map(sensorValue, 0, 1023, 0, 255);
+
   Serial.println(sensorValue);
-  // change the analog out value:
-  analogWrite(ledPin, outputValue);
-  delay(30);
+
+  if (sensorValue < 200) {
+    digitalWrite(ledPin, LOW);
+  }
+  else {
+    digitalWrite(ledPin, HIGH);
+  }
+
+  delay(200);
 }
 ```
 
 You can also see the light intensity readings from the **Serial Monitor**, navigate to **Tools** -> **Serial Monitor**.
-
-
 
 - <font size=5;font color=#314B9F >Code Analysis</font>
 
@@ -824,73 +852,20 @@ Serial.println(**val**) or Serial.println(**val**, **format**)
 
 **format**: specifies the number base (for integral data types) or the number of decimal places (for floating point types).
 
-Serial port print the Light sensor’s value.  So you open the **serial monitor** on the IED interface, and you see the value of the output sensor.
-
-```cpp
-outputValue = map(sensorValue, 0, 1023, 0, 255);
-```
-
-**Description:**
-
-Re-maps a number from one range to another. That is, a value of **fromLow** would get mapped to **toLow**, a value of **fromHigh** to **toHigh**, values in-between to values in-between, etc.
-
-Does not constrain values to within the range, because out-of-range values are sometimes intended and useful. The `constrain()` function may be used either before or after this function, if limits to the ranges are desired.
-
-Note that the "lower bounds" of either range may be larger or smaller than the "upper bounds" so the `map()` function may be used to reverse a range of numbers, for example
-
-**y = map(x, 1, 50, 50, 1);**
-
-The function also handles negative numbers well, so that this example
-
-**y = map(x, 1, 50, 50, -100);**
-
-is also valid and works well.
-
-The map() function uses integer math so will not generate fractions, when the math might indicate that it should do so. Fractional remainders are truncated and are not rounded or averaged.
-
-**Syntax:**
-
-map(**value, fromLow, fromHigh, toLow, toHigh**)
-
-**Parameters:**
-
-**value**: the number to map.
-
-**fromLow**: the lower bound of the value’s current range.
-
-**fromHigh**: the upper bound of the value’s current range.
-
-**toLow**: the lower bound of the value’s target range.
-
-**toHigh**: the upper bound of the value’s target range.
-
-Mapping light sensor analog signal(0 to 1023)to the brightness value of LED(0 to 255).
-
-Keep equal and potentiometer after mapping the value of the time. The Map has five parameters, which in turn is: to map the original value, the original value of the minimum value, original value maximum, minimum value after the mapping, mapping the maximum. In this way, the data returned by the sensor can be mapped from its original value of 0-1023 to 0-255.
-
-```cpp
-analogWrite(ledPin,255-outputvalue);
-```
-
-The function is used to write an analog value between 0 - 255 a PWM pin. analogWrite() can only be used for PWM pins. The new mapping data in the previous statement can be output to ledPin to lighten/dim the LED.
+Serial port print the Light sensor’s value.  So you open the **serial monitor** on the IDE interface, and you see the value of the output sensor.
 
 **Demo Effect and Serial Print Result:**
 
-The LED module will change its intensity according to the light intensity of the surrounding. The darker the surrounding, the lighter it gets.
+The LED module will light up if it's dark and stay off if it's bright.
 
 - <font size=5;font color=#314B9F >Breakout Guide</font>
 
-Use Grove Cable to connect the Grove LED to Seeeduino Lotus's digital signal interface **D4**,connect the Grove Light Sensor to Seeeduino Lotus's analog signal interface **A1**.
-
-
-
+Use Grove Cable to connect the Grove LED to Seeeduino Lotus's digital signal interface **D4**,connect the Grove Light Sensor to Seeeduino Lotus's analog signal interface **A6**.
 
 
 ### Lesson 6: Sound Sensitive LED Light
 
 The sound sensor can detect the sound intensity of the environment, and its output is also simulated. I'm sure you've all been exposed to the sound control lights, but now we can do one ourselves, and with the basics, this experiment will be easy for you. Here used Serial Plotter to visualize results.
-
-
 
 <font size=5;font color=#314B9F >Background Information:</font>
 
@@ -909,27 +884,24 @@ You can open the Serial Plotter by clicking **Tools** -> **Serial Plotter**.
 - **Practice:** The LED lights light up when the sound is made. When there is no sound and it is very quiet, the LED lights go off.
 
 - <font size=5;font color=#314B9F >Components Involved</font>
-  1. Seeeduino Lotus
-  2. Grove LED
-  3. Grove Sound Sensor
-  4. Grove cable(If broken out)
+    1. Seeeduino Lotus
+    2. Grove LED
+    3. Grove Sound Sensor
+    4. Grove cable(If broken out)
 
 ![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Sound.png)
 
 
 
 - <font size=5;font color=#314B9F >Hardware connection</font>
-  - **Module connection:**
-    - Default connection by PCB stamp hole.
-  - The Seeeduino is then connected to the computer via a USB cable.
-
-
-
+    - **Module connection:**
+        - Default connection by PCB stamp hole.
+    - The Seeeduino is then connected to the computer via a USB cable.
 
 
 - <font size=5;font color=#314B9F >Software Code</font>
-  - Open Arduino IDE.
-  - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
+    - Open Arduino IDE.
+    - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
 
 ```Cpp
 //Sound Control Light
@@ -937,14 +909,15 @@ int soundPin = A2; // Analog sound sensor is to be attached to analog
 int ledPin = 4; // Digital LED is to be attached to digital
 void setup() {
   pinMode(ledPin, OUTPUT);
+  pinMode(soundPin, INPUT);
   Serial.begin(9600);
 }
 void loop(){
   int soundState = analogRead(soundPin); // Read sound sensor’s value
   Serial.println(soundState);
-  // if the sound sensor’s value is greater than 200, the light will be on for 5 seconds.
+  // if the sound sensor’s value is greater than 400, the light will be on for 5 seconds.
   //Otherwise, the light will be turned off
-  if (soundState > 200) {
+  if (soundState > 400) {
     digitalWrite(ledPin, HIGH);
     delay(100);
   }else{
@@ -953,7 +926,9 @@ void loop(){
 }
 ```
 
-You can also see the light intensity readings from the **Serial Monitor**, navigate to **Tools** -> **Serial Plotter**.
+You can also see the light intensity readings from the **Serial Plotter**, navigate to **Tools** -> **Serial Plotter**.
+
+**Note: You can also adjust the value according to your surrounding light intensity.**
 
 
 
@@ -983,7 +958,7 @@ This statement is similar to the one above, except that **serial.println** has a
 Serial.println(soundState);
 ```
 
-Serial port print the sound sensor’s value.  So you open the **serial monitor** on the IED interface, and you see the value of the output sensor.
+Serial port print the sound sensor’s value.  So you open the **serial monitor** on the IDE interface, and you see the value of the output sensor.
 
 **Demo Effect and Serial Print Result:**
 
@@ -992,9 +967,6 @@ The LED module will light up if the surrounding is loud enough.
 - <font size=5;font color=#314B9F >Breakout Guide</font>
 
 Use Grove cables to connect the Grove LED to Seeeduino Lotus's digital signal interface **D4**, Connect the Grove Sound Sensor to Seeeduino Lotus's analog signal interface **A2**.
-
-
-
 
 
 ### Lesson 7: Displaying Data on OLED
@@ -1014,25 +986,25 @@ For more information, please also visit [How to install Arduino Libraries](http:
 
 
 - <font size=5;font color=#314B9F >Components Involved</font>
-  1. Seeeduino Lotus
-  2. Grove OLED
-  3. Grove cable(If broken out)
+    1. Seeeduino Lotus
+    2. Grove OLED
+    3. Grove cable(If broken out)
 
 ![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/OLED.png)
 
 - <font size=5;font color=#314B9F >Hardware connection</font>
-  - **Module connection:**
-    - Default connection by PCB stamp hole.
-  - The Seeeduino is then connected to the computer via a USB cable.
+    - **Module connection:**
+        - Default connection by PCB stamp hole.
+    - The Seeeduino is then connected to the computer via a USB cable.
 
 
 
 
 
 - <font size=5;font color=#314B9F >Software Code</font>
-  - Open Arduino IDE.
-  - Install the **U8g2 library**: Navigate to **Sketch** -> **Include Library** -> **Manage Libraries...** and Search for the keyword "**U8g2**" in the **Library Manager**, then install.
-  - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
+    - Open Arduino IDE.
+    - Install the **U8g2 library**: Navigate to **Sketch** -> **Include Library** -> **Manage Libraries...** and Search for the keyword "**U8g2**" in the **Library Manager**. It's the **u8g2 library by oliver**, and click then install.
+    - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
 
 ```cpp
 #include <Arduino.h>
@@ -1066,21 +1038,17 @@ void loop(void) {
 
 Note that `#include`, similar to `#define`, has no semicolon terminator, and the compiler will yield cryptic error messages if you add one.
 
-**#include** is an instruction that introduces a header file. Here we use the DHT.h, <Arduino.h>, <U8g2lib.h>, <SPI.h>, <Wire.h> library, these library are included in Arduino IDE.
-
 ```cpp
-#define
+#include <U8x8lib.h>
 ```
 
-**Description:**
-
-`#define` is a useful C++ component that allows the programmer to give a name to a constant value before the program is compiled. Defined constants in Arduino don’t take up any program memory space on the chip. The compiler will replace references to these constants with the defined value at compile time.
-
-Force a variable to be the value you want.
+**#include** is an instruction that introduces a header file. Here we use the U8x8lib.h library.
 
 ```cpp
 U8X8_SSD1306_128X64_ALT0_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);
 ```
+
+**Description:**
 
 Once the object is declared, you can use functions from the library.
 
@@ -1144,7 +1112,7 @@ Define a u8x8 font for the glyph and string drawing functions.
 
 **Syntax:**
 
-u8x8.setFont(***font_8x8**)
+u8x8.setFont(**font_8x8**)
 
 Set the font for display.
 
@@ -1174,38 +1142,43 @@ Have you ever wondered about the temperature and humidity of your surroundings? 
 
 - **What is Protocol Signal (I2C)**
 
-**Protocol signal:** the protocol signal we use is I2C, so here is a brief introduction to I2C. I2C bus just needs two wires in the transmission of information connection between the devices: the SDA (Serial Data Line) and SCL (Serial Clock Line). These two lines are bidirectional I/O lines, the main component used to start the bus transfer data, and generate the clock to open transmission device, any devices that are addressing at this time is considered from the device. The relationship between master and slave, sender and receiver on the bus is not constant but depends on the direction of data transmission. If the host wants to send data to the slave device, the host first addresses the slave device, then actively sends data to the slave device, and finally terminates the data transmission by the host. If the host is to receive data from the slave, the slave is first addressed by the master. The host then receives the data sent from the device, and the host terminates the receiving process. In this case. The host is responsible for generating the timing clock and terminating the data transfer.
+**Protocol signal:** the protocol signal we use is I2C, so here is a brief introduction to I2C. I2C bus just needs two wires in the transmission of information connection between the devices: the SDA (Serial Data Line) and SCL (Serial Clock Line).
+
+These two lines are bidirectional I/O lines, the main component used to start the bus transfer data, and generate the clock to open transmission device, any devices that are addressing at this time is considered from the device.
+
+The relationship between master and slave(sender and receiver) on the bus is not constant but depends on the direction of data transmission. If the host wants to send data to the slave device, the host first addresses the slave device, then actively sends data to the slave device, and finally terminates the data transmission by the host. If the host is to receive data from the slave, the slave is first addressed by the master.
+
+The host then receives the data sent from the device, and the host terminates the receiving process. In this case. The host is responsible for generating the timing clock and terminating the data transfer.
 
 
 
 - **Practice:** Let your OLED Display display the current ambient temperature and humidity.
 
 - <font size=5;font color=#314B9F >Components Involved</font>
-  1. Seeeduino Lotus
-  2. Grove OLED
-  3. Grove Temperature and Temperature Sensor
-  4. Grove cable(If broken out)
+    1. Seeeduino Lotus
+    2. Grove OLED
+    3. Grove Temperature and Temperature Sensor
+    4. Grove cable(If broken out)
 
 ![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Temp.png)
 
 
 
 - <font size=5;font color=#314B9F >Hardware connection</font>
-  - **Module connection:**
-    - Default connection by PCB stamp hole.
-  - The Seeeduino is then connected to the computer via a USB cable.
+    - **Module connection:**
+        - Default connection by PCB stamp hole.
+    - The Seeeduino is then connected to the computer via a USB cable.
 
 
 
 
 
 - <font size=5;font color=#314B9F >Software Code</font>
-  - Open Arduino IDE.
-  - Install the **Grove Temperature and Humidity Sensor(DHT11) library**: Navigate to **Sketch** -> **Include Library** -> **Manage Libraries...** and Search for the keyword "**Grove Temperature and Humidity Sensor(DHT11)**" in the **Library Manager**, then install.
-  - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
+    - Open Arduino IDE.
+    - Install the **Grove Temperature and Humidity Sensor(DHT11) library**: Navigate to **Sketch** -> **Include Library** -> **Manage Libraries...** and Search for the keyword "**Grove Temperature and Humidity Sensor(DHT11)**" in the **Library Manager**, then install.
+    - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
 
 ```Cpp
-//Temperature and Humidity Sensor
 //Temperature and Humidity Sensor
 #include "DHT.h"
 #include <Arduino.h>
@@ -1290,28 +1263,28 @@ Grove Air Pressure Sensor(BMP280) is a breakout board for Bosch BMP280 high-prec
 
 
 - <font size=5;font color=#314B9F >Components Involved</font>
-  1. Seeeduino Lotus
-  2. Grove Air Pressure Sensor
-  3. Grove cable(if broken out)
+    1. Seeeduino Lotus
+    2. Grove Air Pressure Sensor
+    3. Grove cable(if broken out)
 
 ![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/AirPressure.png)
 
 
 
 - <font size=5;font color=#314B9F >Hardware connection</font>
-  - **Module connection:**
-    - Default connection by PCB stamp hole.
-  - The Seeeduino is then connected to the computer via a USB cable.
+    - **Module connection:**
+        - Default connection by PCB stamp hole.
+    - The Seeeduino is then connected to the computer via a USB cable.
 
 
 
 
 
 - <font size=5;font color=#314B9F >Software Code</font>
-  - Open Arduino IDE.
-  - Install the **Grove Barometer Sensor library**: Navigate to **Sketch** -> **Include Library** -> **Manage Libraries...** and Search for the keyword "**Grove BMP280**" in the **Library Manager**, then install.
-  - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
-  - In this program, acceleration information is sent from the sensor to Seeeduino via I2C bus and then Seeeduino printed them onto the serial monitor. Open the **serial monitor** to check the result.
+    - Open Arduino IDE.
+    - Install the **Grove Barometer Sensor library**: Navigate to **Sketch** -> **Include Library** -> **Manage Libraries...** and Search for the keyword "**Grove BMP280**" in the **Library Manager**, then install.
+    - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
+    - In this program, Barometer sensor information is sent from the sensor to Seeeduino via I2C bus and then Seeeduino printed them onto the serial monitor. Open the **serial monitor** to check the result.
 
 ```Cpp
 //Air pressure detection
@@ -1376,7 +1349,7 @@ if (!bmp280.init()) {
 
 **Description:**
 
-Initialize the air pressure sensor.
+To initialize the air pressure sensor using bmp280.init(). Further, using if condition to check if it started properly then skips the message. If having trouble to initiate then prints the message as ! means NOT in programming.
 
 **Syntax:**
 
@@ -1436,7 +1409,7 @@ The Air pressure readings are display on the Serial Monitor.
 
 - <font size=5;font color=#314B9F >Breakout Guide</font>
 
-Use Grove cable to connect Grove 3-axis Accelerometer to Seeeduino Lotus's **I2C** interface using a Grove cable (note: I2C default address is 0x77 or 0x76).
+Use Grove cable to connect Grove Air Pressure Sensor to Seeeduino Lotus's **I2C** interface using a Grove cable (note: I2C default address is 0x77 or 0x76).
 
 
 
@@ -1451,28 +1424,28 @@ This is the last sensor, the triaxial accelerometer, and with this module, you c
 
 
 - <font size=5;font color=#314B9F >Components Involved</font>
-  1. Seeeduino Lotus
-  2. Grove 3-axis Accelerometer
-  3. Grove cable(if broken out)
+    1. Seeeduino Lotus
+    2. Grove 3-axis Accelerometer
+    3. Grove cable(if broken out)
 
 ![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Gyro.png)
 
 
 
 - <font size=5;font color=#314B9F >Hardware connection</font>
-  - **Module connection:**
-    - Default connection by PCB stamp hole.
-  - The Seeeduino is then connected to the computer via a USB cable.
+    - **Module connection:**
+        - Default connection by PCB stamp hole.
+    - The Seeeduino is then connected to the computer via a USB cable.
 
 
 
 
 
 - <font size=5;font color=#314B9F >Software Code</font>
-  - Open Arduino IDE.
-  - Download the [3-Axis Digital Accelerometer( ±2g to 16g)](https://github.com/Seeed-Studio/Seeed_Arduino_LIS3DHTR)  from Github. Click on **Sketch** > **Include library** > **Add .ZIP library**, import the library into the IED.
-  - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
-  - In this program, acceleration information is sent from the sensor to Seeeduino via I2C bus and then Seeeduino printed them onto the serial monitor. Open the **serial monitor** to check the result.
+    - Open Arduino IDE.
+    - Download the [3-Axis Digital Accelerometer( ±2g to 16g)](https://github.com/Seeed-Studio/Seeed_Arduino_LIS3DHTR)  from Github. Click on **Sketch** > **Include library** > **Add .ZIP library**, import the library into the IDE.
+    - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
+    - In this program, acceleration information is sent from the sensor to Seeeduino via I2C bus and then Seeeduino printed them onto the serial monitor. Open the **serial monitor** to check the result.
 
 ```Cpp
 //Gravity Acceleration
@@ -1589,7 +1562,7 @@ The 3-axis accelerator readings are displayed on the Serial Monitor.
 
 - <font size=5;font color=#314B9F >Breakout Guide</font>
 
-Use Grove cable to connect Grove 3-axis Accelerometer to Seeeduino Lotus's **I2C** interface using a Grove cable (note: I2C default address is 0x4c).
+Use Grove cable to connect Grove 3-axis Accelerometer to Seeeduino Lotus's **I2C** interface using a Grove cable (note: I2C default address is 0x63).
 
 
 
@@ -1604,27 +1577,27 @@ Use Grove cable to connect Grove 3-axis Accelerometer to Seeeduino Lotus's **I2C
 
 
 - <font size=5;font color=#314B9F >Components Involved</font>
-  1. Seeeduino Lotus
-  2. Grove LED
-  3. Buzzer
-  4. Grove Cables(if broken out)
+    1. Seeeduino Lotus
+    2. Grove LED
+    3. Buzzer
+    4. Grove Cables(if broken out)
 
 ![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/project1.png)
 
 
 
 - <font size=5;font color=#314B9F >Hardware connection</font>
-  - **Module connection:**
-    - Default connection by PCB stamp hole.
-  - The Seeeduino is then connected to the computer via a USB cable.
+    - **Module connection:**
+        - Default connection by PCB stamp hole.
+    - The Seeeduino is then connected to the computer via a USB cable.
 
 
 
 
 
 - <font size=5;font color=#314B9F >Software Code</font>
-  - Open Arduino IDE.
-  - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
+    - Open Arduino IDE.
+    - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
 
 ```cpp
 //Music Dynamic Rhythm Lamp
@@ -1783,26 +1756,23 @@ Connect Grove LED to Seeeduino Lotus's digital signal interface **D4**, connect 
 
 
 - <font size=5;font color=#314B9F >Components Involved</font>
-  1. Seeeduino Lotus
-  2. Grove LED
-  3. Light Sensor
-  4. Sound Sensor
-  5. Grove cable(If broken out)
+    1. Seeeduino Lotus
+    2. Grove LED
+    3. Light Sensor
+    4. Sound Sensor
+    5. Grove cable(If broken out)
 
 ![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/project2.png)
 
 - <font size=5;font color=#314B9F >Hardware connection</font>
-  - **Module connection:**
-    - Default connection by PCB stamp hole.
-  - The Seeeduino is then connected to the computer via a USB cable.
-
-
-
+    - **Module connection:**
+        - Default connection by PCB stamp hole.
+    - The Seeeduino is then connected to the computer via a USB cable.
 
 
 - <font size=5;font color=#314B9F >Software Code</font>
-  - Open Arduino IDE.
-  - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
+    - Open Arduino IDE.
+    - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
 
 ```Cpp
 //light Induction Desk Lamp
@@ -1812,13 +1782,16 @@ int ledPin = 4; // Digital LED is to be attached to digital
 
 void setup() {
   pinMode(ledPin, OUTPUT);
+  pinMode(lightPin, INPUT);
+  pinMode(soundPin, INPUT);
 }
+
 void loop(){
   int soundState = analogRead(soundPin); // Read sound sensor’s value
   int lightState = analogRead(lightPin); // Read light sensor’s value
-  // if the sound sensor's value is greater than 50 or the sound sensor's is less than 10, the light will be on.
+  // if the sound sensor's value is greater than 400 or the sound sensor's is less than 200, the light will be on.
   //Otherwise, the light will be turned off
-if (soundState > 50 || lightState < 10) {
+if (soundState > 400 || lightState < 200) {
   digitalWrite(ledPin, HIGH);
   //delay(5000); //You can delete the "//" to make the LED on for five seconds
 }else{
@@ -1830,7 +1803,7 @@ if (soundState > 50 || lightState < 10) {
 - <font size=5;font color=#314B9F >Code Analysis</font>
 
 ```cpp
-if (soundState > 50 || lightState < 10) {
+if (soundState > 400 || lightState < 200) {
   ...
 }
 ```
