@@ -637,7 +637,7 @@ pages:
           - Atom Node: Atom_Node.md
           - Grove - 2-Coil Latching Relay: Grove-2-Coil_Latching_Relay.md
           - Grove - Buzzer: Grove-Buzzer.md
-          - Grove - Passive Buzzer: Grove_passive_Buzzer.md
+          - Grove - Passive Buzzer: Grove-Passive-Buzzer.md
           - Grove - Chainable RGB LED: Grove-Chainable_RGB_LED.md
           - Grove - Dry-Reed Relay: Grove-Dry-Reed_Relay.md
           - Grove - EL Driver: Grove-EL_Driver.md
