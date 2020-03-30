@@ -22,7 +22,7 @@ Grove - Dual Button is a general input button designed to control the independen
 
 - Compact modular design and less wire connection with two buttons in one grove module
 - Different color keycaps provided, freely adjust the color combination as needed.
-- 3.3/5V voltage compatibility
+- 3/5V voltage compatibility
 
 ## Specification
 
