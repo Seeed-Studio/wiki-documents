@@ -8,7 +8,7 @@ sku: 102110399
 
 ![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/ODYSSEY-X86J4105-side.png)
 
-The ODYSSEY - X86J4105, is based on Intel Celeron J4105, a Quad-Core 1.5GHz CPU that bursts up to 2.5GHz. It has all the great features that a standard Computer needs, including an 8GB LPDDR4 RAM, 64GB eMMC Storage(optional), onboard Wi-Fi/BLE, Dual Gigabyte Ethernet Ports, Audio Input and Output, USB Ports, HDMI, SATA Connectors, PCIe, etc.
+The ODYSSEY - X86J4105, is based on Intel Celeron J4105, a Quad-Core 1.5GHz CPU that bursts up to 2.5GHz. It has all the great features that a standard Computer needs, including an 8GB LPDDR4 RAM, 64GB eMMC Storage(optional), onboard Wi-Fi/BLE, Dual Gigabit Ethernet Ports, Audio Input and Output, USB Ports, HDMI, SATA Connectors, PCIe, etc.
 
 ## Key Features:
 
