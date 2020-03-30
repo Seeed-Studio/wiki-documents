@@ -1112,7 +1112,7 @@ Define a u8x8 font for the glyph and string drawing functions.
 
 **Syntax:**
 
-u8x8.setFont(***font_8x8**)
+u8x8.setFont(**font_8x8**)
 
 Set the font for display.
 
