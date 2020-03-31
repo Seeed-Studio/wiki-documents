@@ -21,8 +21,8 @@
 # Project information
 site_name: Seeed Wiki
 site_description: Seeed Product Document
-site_author: Bill
-site_url: http://wiki.seeedstudio.com
+site_author: Baozhu Zuo
+#site_url: http://wiki.seeedstudio.com
 
 # Repository
 repo_name: All Products
@@ -31,44 +31,49 @@ repo_url: https://github.com/SeeedDocument/wiki_english
 edit_uri: blob/master/docs/
 
 # Copyright
-copyright: 'Seeedstudio 2018'
+copyright: 'Seeedstudio 2020'
 
 # Theme directory
-theme_dir: material
+theme:
+  name: material
+  custom_dir: material
 
+static_templates:
+  - 404.html
+docs_dir: docs
 # Icon
 # site_favicon: 'images/favicon.ico'
 #site_favicon: https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/favicon.ico
 
 # Options
-extra:
-  feature:
-    tabs: false
-  palette:
-    primary: light green
-    accent: indigo
-  social:
-    - type: facebook
-      link: https://www.facebook.com/seeedstudiosz/
-    - type: github-alt
-      link: https://github.com/SeeedDocument
-  logo: 'images/favicon.ico'
-  search:
-    language: 'en'
-    tokenizer: '[\s\-\.]+'
+# extra:
+#   feature:
+#     tabs: false
+#   palette:
+#     primary: light green
+#     accent: indigo
+#   social:
+#     - type: facebook
+#       link: https://www.facebook.com/seeedstudiosz/
+#     - type: github-alt
+#       link: https://github.com/SeeedDocument
+#   logo: 'images/favicon.ico'
+#   search:
+#     language: 'en'
+#     tokenizer: '[\s\-\.]+'
 
 
 # Extensions
 markdown_extensions:
-  - codehilite
+  - toc:
+      permalink: true
+  - pymdownx.betterem:
+      smart_enable: all
   - markdown.extensions.admonition
-  - markdown.extensions.codehilite(guess_lang=false)
   - markdown.extensions.def_list
   - markdown.extensions.footnotes
   - markdown.extensions.meta
-  - markdown.extensions.toc(permalink=true)
   - pymdownx.arithmatex
-  - pymdownx.betterem(smart_enable=all)
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.emoji:
@@ -78,11 +83,13 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.superfences
-  - pymdownx.tasklist(custom_checkbox=true)
   - pymdownx.tilde
   - pymdownx.keys
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - codehilite:
       linenums: true
+      guess_lang: true
 
 extra_css:
   - 'stylesheets/extra.css'
@@ -90,11 +97,11 @@ extra_css:
 
 extra_javascript:
   - 'javascripts/extra.js'
-  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js'
 
 
 # Page tree
-pages:
+nav:
   - Seeed Wiki: 'index.md'
 
   - Platform:

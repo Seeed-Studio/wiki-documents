@@ -178,7 +178,7 @@ git push origin master
 
 协议
 -------
-Copyright (c) 2018-2017 Seeed Inc. (https://www.seeedstudio.com)
+Copyright (c) 2008-2020 Seeed Inc. (https://www.seeedstudio.com)
 
 文档及图片
 ---
