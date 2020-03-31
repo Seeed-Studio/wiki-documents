@@ -35,7 +35,7 @@ Grove Beginner Kit for Arduino is one of the best Arduino Beginner Kit for begin
 |Sound|Analog|A2|
 |Temperature & Humidity Sensor|Digital|D3|
 |Air Pressure Sensor|I2C|I2C, 0x77(default) / 0x76(optional)|
-|3-Axis Accelerator|I2C|I2C, 0x63(default)|
+|3-Axis Accelerator|I2C|I2C, 0x19(default)|
  
 
 
@@ -324,7 +324,7 @@ The LED module will be 1 second on and 1 second off.
 
 **LED Brightness Adjustment:**
 
-<div align=center><img width = 300 src="https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/LED-res.jpeg"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/LED-res.jpeg"/></div>
 </br>
 
 On the Grove LED module, there is a **variable resistor that can be adjusted using a screw driver.** Twist it to make the LED light up brighter!
@@ -915,7 +915,7 @@ void setup() {
 void loop(){
   int soundState = analogRead(soundPin); // Read sound sensor’s value
   Serial.println(soundState);
-  // if the sound sensor’s value is greater than 400, the light will be on for 5 seconds.
+  // if the sound sensor’s value is greater than 400, the light will be on.
   //Otherwise, the light will be turned off
   if (soundState > 400) {
     digitalWrite(ledPin, HIGH);
@@ -1004,7 +1004,10 @@ For more information, please also visit [How to install Arduino Libraries](http:
 - <font size=5;font color=#314B9F >Software Code</font>
     - Open Arduino IDE.
     - Install the **U8g2 library**: Navigate to **Sketch** -> **Include Library** -> **Manage Libraries...** and Search for the keyword "**U8g2**" in the **Library Manager**. It's the **u8g2 library by oliver**, and click then install.
-    - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
+
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/U8g2-lib.png)
+
+  - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
 
 ```cpp
 #include <Arduino.h>
@@ -1176,7 +1179,10 @@ The host then receives the data sent from the device, and the host terminates th
 - <font size=5;font color=#314B9F >Software Code</font>
     - Open Arduino IDE.
     - Install the **Grove Temperature and Humidity Sensor(DHT11) library**: Navigate to **Sketch** -> **Include Library** -> **Manage Libraries...** and Search for the keyword "**Grove Temperature and Humidity Sensor(DHT11)**" in the **Library Manager**, then install.
-    - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
+
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Temp-lib.png)
+
+  - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
 
 ```Cpp
 //Temperature and Humidity Sensor
@@ -1283,8 +1289,11 @@ Grove Air Pressure Sensor(BMP280) is a breakout board for Bosch BMP280 high-prec
 - <font size=5;font color=#314B9F >Software Code</font>
     - Open Arduino IDE.
     - Install the **Grove Barometer Sensor library**: Navigate to **Sketch** -> **Include Library** -> **Manage Libraries...** and Search for the keyword "**Grove BMP280**" in the **Library Manager**, then install.
-    - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
-    - In this program, Barometer sensor information is sent from the sensor to Seeeduino via I2C bus and then Seeeduino printed them onto the serial monitor. Open the **serial monitor** to check the result.
+
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/BMP-lib.png)
+
+  - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
+  - In this program, Barometer sensor information is sent from the sensor to Seeeduino via I2C bus and then Seeeduino printed them onto the serial monitor. Open the **serial monitor** to check the result.
 
 ```Cpp
 //Air pressure detection
@@ -1453,18 +1462,18 @@ This is the last sensor, the triaxial accelerometer, and with this module, you c
 #ifdef SOFTWAREWIRE
     #include <SoftwareWire.h>
     SoftwareWire myWire(3, 2);
-    LIS3DHTR<SoftwareWire> LIS(I2C_MODE);//IIC
+    LIS3DHTR<SoftwareWire> LIS;       //Software I2C
     #define WIRE myWire
 #else
     #include <Wire.h>
-    LIS3DHTR<TwoWire> LIS(I2C_MODE);//IIC
+    LIS3DHTR<TwoWire> LIS;           //Hardware I2C
     #define WIRE Wire
 #endif
 
 void setup() {
     Serial.begin(9600);
     while (!Serial) {};
-    LIS.begin(WIRE); //IIC init
+    LIS.begin(WIRE, 0x19); //IIC init
     delay(100);
     LIS.setOutputDataRate(LIS3DHTR_DATARATE_50HZ);
 }
@@ -1492,11 +1501,11 @@ void loop() {
 #ifdef SOFTWAREWIRE
     #include <SoftwareWire.h>
     SoftwareWire myWire(3, 2);
-    LIS3DHTR<SoftwareWire> LIS(I2C_MODE);//IIC
+    LIS3DHTR<SoftwareWire> LIS;   //Software I2C
     #define WIRE myWire
 #else
     #include <Wire.h>
-    LIS3DHTR<TwoWire> LIS(I2C_MODE);//IIC
+    LIS3DHTR<TwoWire> LIS;        //Hardware I2C
     #define WIRE Wire
 #endif
 ```
@@ -1510,13 +1519,13 @@ while (!Serial) {};
 Code stops here if don't open the serial monitor, so open serial monitor.
 
 ```cpp
-LIS.begin(WIRE);
+LIS.begin(WIRE, 0x19);
 LIS.setOutputDataRate(LIS3DHTR_DATARATE_50HZ);
 ```
 
 **Description:** Initialize the accelerator.
 
-**Syntax:** `LIS.begin(Wire)`.
+**Syntax:** `LIS.begin(Wire, address)`.
 
 **Description:** Sets the output data rate of the accelerator.
 
@@ -1549,7 +1558,7 @@ Functions to be used to read Y-axis value from the sensor.
 **Description:** 
 
 Functions to be used to read Z-axis value from the sensor.
-
+ 
 **Syntax:**
 
 **LIS.getAccelerationZ()**. Return type: float.
@@ -1562,7 +1571,7 @@ The 3-axis accelerator readings are displayed on the Serial Monitor.
 
 - <font size=5;font color=#314B9F >Breakout Guide</font>
 
-Use Grove cable to connect Grove 3-axis Accelerometer to Seeeduino Lotus's **I2C** interface using a Grove cable (note: I2C default address is 0x63).
+Use Grove cable to connect Grove 3-axis Accelerometer to Seeeduino Lotus's **I2C** interface using a Grove cable (note: I2C default address is 0x19).
 
 
 
@@ -1751,7 +1760,7 @@ Connect Grove LED to Seeeduino Lotus's digital signal interface **D4**, connect 
 
 ### Project 2: Make an intelligent sound-light induction desk lamp
 
-- **Project description:** as the name implies, this project is to make a small lamp controlled by Sound and Light. We need to use the LED module. Of course, Light Sensor and Sound Sensor are also indispensable. In this way, you can achieve the function of the smart desk lamp: when the sound, the lamp will light up; If the environment turns dark, the lamp will automatically turn brighter.
+- **Project description:** as the name implies, this project is to make a small lamp controlled by Sound and Light. We need to use the LED module as output. Light sensor and sound sensor are used for input signals. In this way, you can achieve the function of the smart desk lamp: if the surrounding sound level is above certain pre-set value, then the LED light up, or if the surrounding light intensity is below certain value, the LED module also light up.
 
 
 
@@ -1789,11 +1798,11 @@ void setup() {
 void loop(){
   int soundState = analogRead(soundPin); // Read sound sensor’s value
   int lightState = analogRead(lightPin); // Read light sensor’s value
-  // if the sound sensor's value is greater than 400 or the sound sensor's is less than 200, the light will be on.
+  // if the sound sensor's value is greater than 500 or the sound sensor's is less than 200, the light will be on.
   //Otherwise, the light will be turned off
-if (soundState > 400 || lightState < 200) {
+if (soundState > 500 || lightState < 200) {
   digitalWrite(ledPin, HIGH);
-  //delay(5000); //You can delete the "//" to make the LED on for five seconds
+  delay(500); //You can add the "//" to remove the delay
 }else{
   digitalWrite(ledPin, LOW);
 }
@@ -1803,7 +1812,7 @@ if (soundState > 400 || lightState < 200) {
 - <font size=5;font color=#314B9F >Code Analysis</font>
 
 ```cpp
-if (soundState > 400 || lightState < 200) {
+if (soundState > 500 || lightState < 200) {
   ...
 }
 ```
