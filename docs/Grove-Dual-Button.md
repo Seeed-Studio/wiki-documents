@@ -13,7 +13,7 @@ tags:
 
 Grove - Dual Button includes 2 buttons, enables you control two signal channel with one grove module.  With 4 different color keycaps provided, you can freely adjust the color combination as needed.
 
-Grove - Dual Button is a general input button designed to control the independent two different systems. The button is simply driven by the GPIO Digital Pins. When the button is pressed, the Pins can reach a LOW signal from the button; on the other hand, when it is in the loosen state, Pins will always gain a HIGH signal until it is pressed. 
+The button is simply driven by the GPIO Digital Pins. When the button is pressed, the Pins can reach a LOW signal from the button; on the other hand, when it is in the loosen state, Pins will always gain a HIGH signal until it is pressed. 
 
 <p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Dual-Button-p-4529.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p> 
 
