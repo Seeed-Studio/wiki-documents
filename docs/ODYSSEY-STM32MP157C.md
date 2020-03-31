@@ -168,7 +168,7 @@ they mean to start up failed if the USER LED does not blink.Please check the boo
 - **Step 2.** Edit /boot/uEnv.txt to start eMMC boot then reboot.
 
 ```bash
-sudo echo cmdline=init=/opt/scripts/tools/eMMC/init-eMMC-flasher-v3-stm32mp1.sh >> /boot/uEnv.txt
+sudo sh -c "echo cmdline=init=/opt/scripts/tools/eMMC/init-eMMC-flasher-v3-stm32mp1.sh >> /boot/uEnv.txt"
 sudo reboot
 ```
 
@@ -376,8 +376,8 @@ make all_stm32mp1 && sudo make install_stm32mp1
 - **Step 3.** add dtbo package in `/boot/uEnv.txt` to make it become effective after reboot.
 
 ```bash
-sudo echo uboot_overlay_addr0=/lib/firmware/stm32mp1-seeed-lcd-01-overlay.dtbo >> /boot/uEnv.txt
-sudo echo uboot_overlay_addr1=/lib/firmware/stm32mp1-MCP2517FD-can0-overlay.dtbo >> /boot/uEnv.txt
+sudo sh -c "echo uboot_overlay_addr0=/lib/firmware/stm32mp1-seeed-lcd-01-overlay.dtbo >> /boot/uEnv.txt"
+sudo sh -c "echo uboot_overlay_addr1=/lib/firmware/stm32mp1-MCP2517FD-can0-overlay.dtbo >> /boot/uEnv.txt"
 sudo reboot
 ```
 
