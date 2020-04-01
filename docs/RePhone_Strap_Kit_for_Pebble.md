@@ -301,7 +301,7 @@ This app is only for demonstration of partial attribute call, please feel free t
 
 The adapter is built with LPC11U35 and running mbed software inside. The initial firmware is located at mbed.org. Please take a look at [https://developer.mbed.org/teams/Seeed/code/xadow_smartstrap_for_pebble/](https://developer.mbed.org/teams/Seeed/code/xadow_smartstrap_for_pebble/)
 
-The eagle schematic of the adapter can be downloaded here: [http://www.seeedstudio.com/wiki/images/f/f8/Xadow_Pebble_Time_Adapter.rar](res/Xadow_Pebble_Time_Adapter.rar)
+The eagle schematic of the adapter can be downloaded here: [http://www.seeedstudio.com/wiki/images/f/f8/Xadow_Pebble_Time_Adapter.rar](https://files.seeedstudio.com//wiki/RePhone_Strap_Kit_for_Pebble/res/Xadow_Pebble_Time_Adapter.rar)
 
 After building the firmware binary, you can follow the steps below to flash the binary into the adapter.
 
@@ -336,7 +336,7 @@ Some frequently asked questions in RePhone Community are collected and answered 
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="res/Xadow_Pebble_Time_Adapter.rar" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com//wiki/RePhone_Strap_Kit_for_Pebble/res/Xadow_Pebble_Time_Adapter.rar" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
@@ -344,7 +344,7 @@ Some frequently asked questions in RePhone Community are collected and answered 
 ---
 The schematic diagram of Xadow Pebble Time Adapter is provided in the following link:
 
-*   [_Xadow Pebble Time Adapter eagle files_](res/Xadow_Pebble_Time_Adapter.rar)
+*   [_Xadow Pebble Time Adapter eagle files_](https://files.seeedstudio.com//wiki/RePhone_Strap_Kit_for_Pebble/res/Xadow_Pebble_Time_Adapter.rar)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

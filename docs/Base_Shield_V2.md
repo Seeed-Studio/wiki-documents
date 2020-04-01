@@ -48,7 +48,7 @@ The Base Shield is tested and fully compatible with following boards:
 - Linkit One
 
 !!!Note
-    The boards are not listed above mean that it might have chance to work with the platform board however requires extra work such as jump wires or rewriting the code. If you are interested in digging more, welcome to contact techsupport@seeed.cc.
+    The boards are not listed above mean that it might have chance to work with the platform board however requires extra work such as jump wires or rewriting the code. If you are interested in digging more, welcome to contact us via [forum](http://forum.seeedstudio.com/).
 
 
 ## Hardware Overview

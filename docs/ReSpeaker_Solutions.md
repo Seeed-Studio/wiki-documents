@@ -57,7 +57,7 @@ Is our voice solution missing a feature or component? Make it your own solution 
 - Peripheral Drivers
 - Base Firmware
 
-If you have questions please reach us at [iot@seeed.cc](iot@seeed.cc).
+If you have questions please reach us at iot@seeed.cc.
 
 
 ##**Manufacture Your Voice Solution**
@@ -70,7 +70,7 @@ We can also manufacture your customized ReSpeaker as well as any other items you
 - Supply Chain Management
 - Global Dropshipping
 
-If you have questions please reach us at [iot@seeed.cc](iot@seeed.cc).
+If you have questions please reach us at iot@seeed.cc.
 
 
 ##**What's New?**

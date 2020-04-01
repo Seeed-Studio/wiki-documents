@@ -872,9 +872,6 @@ The list belew is the Grove modules that work well with Beaglebone_Blue.
 
 Please click **[here](http://support.seeedstudio.com/knowledgebase/articles/1826437-seeeduino-v4-2-sku-102010026)** to see all Beaglebone_Blue FAQs.
 
-## Tech Support
-Please do not hesitate to contact **techsupport@seeed.cc** if you require further information.
-
 
 ## Schematic Online Viewer
 

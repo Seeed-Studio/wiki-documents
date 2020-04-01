@@ -229,7 +229,7 @@ Note: Memory block 0 is readonly and contains manufacturer data. Do not write to
 
 3.Bring a Mifare Card near the NFC Antenna..  
 4.Open the serial monitor, you can see the score as show below:
-![](img/Score_1.jpg)
+![](https://files.seeedstudio.com/wiki/NFC_Shield_V1.0/img/Score_1.jpg)
 
 **Demo 3: Peer to Peer communication**
 

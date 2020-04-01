@@ -373,7 +373,7 @@ From each node (IE Switch pod that controls your windows or electric door locks)
 
 **Q3. Where can I find technical support if I have some other issues.**
 
-* You can post a question to [Seeed Forum](https://community.seeedstudio.com/discover.html?t=Arduino) or send an email to **techsupport@seeed.cc**.
+* You can post a question to [Seeed Forum](http://forum.seeedstudio.com/).
 
 
 

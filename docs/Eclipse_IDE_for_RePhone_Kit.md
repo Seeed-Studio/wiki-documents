@@ -260,9 +260,9 @@ Together we seek answers, make interesting stuff, care about each other, and sha
 ---
 As RePhone is mostly developed with the LinkIt Assist SDK, and Mediatek has made a very detailed developer guide for the developers, to find more info you can refer to :
 
-[![](https://github.com/SeeedDocument/Eclipse_IDE_for_RePhone_Kit/raw/master/img/Developer_guide_en-06.png)](res/MediaTek_LinkIt_Assist_2502_Developers_Guide_v1_1.pdf)
+[![](https://files.seeedstudio.com/wiki/Eclipse_IDE_for_RePhone_Kit/img/Developer_guide_en-06.png)](https://files.seeedstudio.com/wiki/Eclipse_IDE_for_RePhone_Kit/res/MediaTek_LinkIt_Assist_2502_Developers_Guide_v1_1.pdf)
 
-[![](https://github.com/SeeedDocument/Eclipse_IDE_for_RePhone_Kit/raw/master/img/Developer_guide_cn-07_1.png)](res/MediaTek_LinkIt_Assist_2502_cn_v1_1.pdf)
+[![](https://files.seeedstudio.com/wiki/Eclipse_IDE_for_RePhone_Kit/img/Developer_guide_cn-07_1.png)](https://files.seeedstudio.com/wiki/Eclipse_IDE_for_RePhone_Kit/res/MediaTek_LinkIt_Assist_2502_cn_v1_1.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

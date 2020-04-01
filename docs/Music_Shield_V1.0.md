@@ -171,7 +171,7 @@ This demo will use the SD library coming with Arduino 1.0.
 
 - Demo 2: Use Fat16 library
 
-This demo will use an open source library [Music_Shield_Demo_2_Library](res/Music_Shield_Demo_2_Library.zip). There are two sketches in this demo: Using MusicPlayRandomly sketch, you can make the music play randomly.And using MusicPlayWithName, you can specify which song to be played by name.(Note: The demo can't co-exist with demo 1 in the libraries)
+This demo will use an open source library [Music_Shield_Demo_2_Library](https://files.seeedstudio.com/wiki/Music_Shield_V1.0/res/Music_Shield_Demo_2_Library.zip). There are two sketches in this demo: Using MusicPlayRandomly sketch, you can make the music play randomly.And using MusicPlayWithName, you can specify which song to be played by name.(Note: The demo can't co-exist with demo 1 in the libraries)
 
 1.Make sure there are songs in the micro sd card.
 

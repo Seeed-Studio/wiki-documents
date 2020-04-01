@@ -435,7 +435,7 @@ void loop() {
 
 ![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison09.png)
 
-5. Now a beautiful watch case is available. You can download the [3D model files](res/Edison_Pedometer_3D_models.zip) and print them using a 3D Printer.
+5. Now a beautiful watch case is available. You can download the [3D model files](https://file.seeedstudi.com/wiki/Xadow_Wearable_Kit_For_Edison/res/Edison_Pedometer_3D_models.zip) and print them using a 3D Printer.
 
 Here is what it looks like with the watch case:
 
@@ -453,7 +453,7 @@ Here is what it looks like with the watch case:
 
 *   [source code on github](https://github.com/Seeed-Studio/Xadow_Edison_Demos)
 
-*   [Edison Pedometer 3D models](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/res/Edison_Pedometer_3D_models.zip)
+*   [Edison Pedometer 3D models](https://file.seeedstudi.com/wiki/Xadow_Wearable_Kit_For_Edison/res/Edison_Pedometer_3D_models.zipp)
 
 *   [Intel® Edison official site](http://www.intel.com/content/www/us/en/do-it-yourself/edison.html)
 

@@ -409,11 +409,8 @@ pi@raspberrypi:~/GrovePi/Software/Python $ python grove_ultrasonic.py
 - A2:Grove_Ultrasonic_Ranger’s trig and echo signal share 1 SIG pin through MCU.  
 
 
-**Q3: Where can I find technical support if I have some other issue?**
 
-- A3: Please send an email to techsupport@seeed.cc
-
-**Q4: Can we connect mulitule ultrasonic to one arduino?**
+**Q3: Can we connect mulitule ultrasonic to one arduino?**
 
 - A4: Yes, Here is the example, one sensor is connected to D2 and other to D3. 
 

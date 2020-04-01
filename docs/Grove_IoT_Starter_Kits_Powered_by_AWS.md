@@ -42,7 +42,7 @@ _**NOTE:**_ AWS IoT and Development boards that comes with the kit has lots of f
 For _**User Manual**_, please go to:
 [Seeeduino Cloud and Grove IoT Starter Kit Powered by AWS](/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS) wiki page
 
-[![](../common/Get_One_Now_Banner.png)](http://www.amazon.com/dp/B01669BB60)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.amazon.com/dp/B01669BB60)
 
 **Parts List:**
 
@@ -141,7 +141,7 @@ _Main articles: [Intel Edison](https://software.intel.com/en-us/iot/library/edis
 
 Designed for expert makers, entrepreneurs, and industrial IoT companies, the **Intel Edison** module provides easier prototyping with a fully open source hardware and software development environment. It supports Wi-Fi and BLE 4.0 connectivity. This kit contains eleven, selected Grove sensors and actuators. It can be used to track indoor environment as well as to create smart-home applications.
 
-[![](../common/Get_One_Now_Banner.png)](http://www.amazon.com/dp/B0168KU5FK)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.amazon.com/dp/B0168KU5FK)
 
 For _**User Manual**_, please go to: [Intel® Edison and Grove IoT Starter Kit Powered by AWS](/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS) wiki page
 
@@ -237,7 +237,7 @@ _Main article: [BeagleBone Green](/BeagleBone_Green "BeagleBone Green")_
 
 **[BeagleBone Green](/BeagleBone_Green "BeagleBone Green")** (BBG) is a joint effort by BeagleBoard.org and Seeed Studio. It is involved from the open source hardware design of [BeagleBone Black](http://beagleboard.org/BLACK) and has added two Grove connectors. The kit contains the new BBG, 10 Grove modules as well as step-by-step tutorials to hook them up quickly.
 
-[![](../common/Get_One_Now_Banner.png)](http://www.amazon.com/dp/B0168L6B0C)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.amazon.com/dp/B0168L6B0C)
 
 For _**User Manual**_, please go to:
 [Beagle Bone Green and Grove IoT Starter Kit Powered by AWS](/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS) wiki page.
@@ -319,7 +319,7 @@ _Main article: [LinkIt ONE](/LinkIt_ONE "LinkIt ONE")_
 
 **[LinkIt ONE](/LinkIt_ONE "LinkIt ONE")** development board is an open source, high-performance development board for prototyping wearable and IoT devices. It is based on MT2502 (ARM7EJ-S™ MCU) and integrates GSM, GPRS, Wi-Fi, Bluetooth BR/EDR/BLE, GPS, Audio codec, and SD card connector on a single development board. The kit enables you to build up cloud computing connected projects that involve communications for smart cities, transportation and logistics.
 
-[![](../common/Get_One_Now_Banner.png)](http://www.amazon.com/dp/B0168LBYWC)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.amazon.com/dp/B0168LBYWC)
 
 For _**User Manual**_, please go to:
 [Wiki for LinkIT One and Grove IoT Starter Kit Powered by AWS](/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS) wiki page

@@ -27,7 +27,7 @@ The BeagleBone is a SBC development board designed for quick prototyping.  There
 Designed as a development board, the BeagleBone does not feature industrial connectors, or many other features that are suitable for deployment. Our customization service is the solution. We can add components, change connectors, and more.
 
 ###ODM Cost
-Our ODM costs are starting prices. More features or having to bring in specialist engineers for a project can cause the NRE and hourly rates to increase change. This does not include manufacturing costs. To discuss how we calculate costs, or any other questions please email us at [iot@seeed.cc](iot@seeed.cc).
+Our ODM costs are starting prices. More features or having to bring in specialist engineers for a project can cause the NRE and hourly rates to increase change. This does not include manufacturing costs. To discuss how we calculate costs, or any other questions please email us at iot@seeed.cc.
 
 |                           | NRE Fee | Hourly | Min Order Quantity | CE & FCC Certification |
 |---------------------------|---------|--------|--------------------|------------------------|
@@ -108,5 +108,5 @@ If you have additional certification needs please contact us at iot@
 We have completed numerous customized BeagleBone projects. You can view some of them [here](https://community.seeedstudio.com/portfolio).
 
 
-If you have additional questions or customization needs please contact us at [iot@seeed.cc](iot@seeed.cc).
+If you have additional questions or customization needs please contact us at iot@seeed.cc.
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

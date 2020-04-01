@@ -400,7 +400,7 @@ temp = 22.90 C humidity =42.30%
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/Momy93/foton-the-connected-lightsaber-a6c159/embed' width='350'></iframe>
 
 ## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue. Or submit the issue into our [forum](https://forum.seeedstudio.com/).
+If you have any technical issue.  submit the issue into our [forum](https://forum.seeedstudio.com/).
 
 
 

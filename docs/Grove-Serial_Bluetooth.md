@@ -185,10 +185,10 @@ When **+INQ=1** command is successful, the  **red**  and **green** LEDS blink al
 
 ##  Resources ##
 
-- [Serial Bluetooth Library](res/Bluetooth_demo_code.zip)
-- [Serial Bluetooth Eagle File](res/Grove-Serial_Bluetooth_eagle_file.zip)
-- [Bluetooth Software instruction](res/Bluetooth_Software_Instruction.pdf)
-- [Bluetooth - module Datasheet](res/Bluetooth_module.pdf)
+- [Serial Bluetooth Library](https://files.seeedstudio.com/wiki/Grove-Serial_Bluetooth/res/Bluetooth_demo_code.zip)
+- [Serial Bluetooth Eagle File](https://files.seeedstudio.com/wiki/Grove-Serial_Bluetooth/res/Grove-Serial_Bluetooth_eagle_file.zip)
+- [Bluetooth Software instruction](https://files.seeedstudio.com/wiki/Grove-Serial_Bluetooth/res/Bluetooth_Software_Instruction.pdf)
+- [Bluetooth - module Datasheet](https://files.seeedstudio.com/wiki/Grove-Serial_Bluetooth/res/Bluetooth_module.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

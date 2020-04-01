@@ -157,5 +157,5 @@ Download the [Grove-LCD RGB Backlight Library](https://github.com/Seeed-Studio/G
 
 ## Tech Support
 
-Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/) or drop mail to [techsupport@seeed.cc](techsupport@seeed.cc).
+Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).
     <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

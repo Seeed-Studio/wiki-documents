@@ -31,7 +31,7 @@ Designed for working with [Buglabs BUG platform](http://www.buglabs.net/).
 
 ##   Schematic
 
-1.  [File:BUGduinoSchematicPDF.pdf](res/BUGduinoSchematicPDF.pdf "File:BUGduinoSchematicPDF.pdf")
+1.  [File:BUGduinoSchematicPDF.pdf](https://files.seeedstudio.com/wiki/Bugduino/res/BUGduinoSchematicPDF.pdf)
 <div class="center"><div class="floatnone"><div class="MediaTransformError" style="width: 800px; height: 513px; display:inline-block;">Error creating thumbnail: Invalid thumbnail parameters</div></div></div>
 
 ##   Specifications

@@ -103,11 +103,11 @@ Note that you should select the correct board type and COM port.
 
 ##  Resource
 ---
-- [USB To Uart 5V v1.0 Eagle File](res/USB_To_Uart_5V_Eagle.zip)
+- [USB To Uart 5V v1.0 Eagle File](https://files.seeedstudio.com/wiki/USB_To_Uart_3V3/res/USB_To_Uart_5V_Eagle.zip)
 
-- [Schematic in pdf](res/USB_To_Uart_5V_v1.0_SCH.pdf)
+- [Schematic in pdf](https://files.seeedstudio.com/wiki/USB_To_Uart_3V3/res/USB_To_Uart_5V_v1.0_SCH.pdf)
 
-- [Datasheet of CH340](res/CH340DS1_EN.PDF)
+- [Datasheet of CH340](https://files.seeedstudio.com/wiki/USB_To_Uart_3V3/res/CH340DS1_EN.PDF)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

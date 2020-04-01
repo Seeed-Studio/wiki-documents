@@ -280,7 +280,7 @@ four channels' value are :
 
 ## Tech Support
 
-Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/) or drop mail to [techsupport@seeed.cc](techsupport@seeed.cc).
+Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/) .
 
 
 

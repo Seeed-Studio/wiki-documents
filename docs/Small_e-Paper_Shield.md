@@ -273,7 +273,7 @@ _This function can be used to display float number. The display float data is ro
 
 <u>7. int drawUnicode(unsigned int uniCode, int x, int y);</u>
 
-_This function can be used to display a Character or a Chinese using unicode. See the page 18 to 24 of the [GT20L16P1Y datasheet](res/GT20L16P1Y_Datasheet.pdf) to find the Char unicode, the characters include Latin、Hebrew、 Thai、Greek、 Kirill and Arabic. The Chinese unicode  can see [GB2312 (Simplified Chinese) character code table](res/Character_code_table.pdf). _
+_This function can be used to display a Character or a Chinese using unicode. See the page 18 to 24 of the [GT20L16P1Y datasheet](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/res/GT20L16P1Y_Datasheet.pdf) to find the Char unicode, the characters include Latin、Hebrew、 Thai、Greek、 Kirill and Arabic. The Chinese unicode  can see [GB2312 (Simplified Chinese) character code table](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/res/Character_code_table.pdf). _
 
 *   uniCode:the machine code according to a character or a chinese.
 

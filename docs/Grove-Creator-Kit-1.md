@@ -165,7 +165,7 @@ You can have access to the Grove Creator Kit through our country distributors.
 
 ##  Tech Support 
 
-Please submit any technical issue into our <a href="http://forum.seeedstudio.com/">forum</a> or drop an email to techsupport@seeed.cc
+Please submit any technical issue into our <a href="http://forum.seeedstudio.com/">forum</a> .
 
 
 

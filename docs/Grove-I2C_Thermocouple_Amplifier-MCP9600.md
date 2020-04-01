@@ -41,7 +41,7 @@ Again, this module can't work alone, it must work with a k-type thermocouple, if
 
 
 !!!Note
-        The  Grove - I2C Thermocouple Amplifier (MCP9600) do support Type K, J, T, N, S, E, B and R on hardware, however, at present, our library do not support any other kind of thermocouple except K type. If you have any needs in this regard, please contact our email: [techsupport@seeed.cc](techsupport@seeed.cc).
+        The  Grove - I2C Thermocouple Amplifier (MCP9600) do support Type K, J, T, N, S, E, B and R on hardware, however, at present, our library do not support any other kind of thermocouple except K type.
 
 
 

@@ -28,7 +28,7 @@ And this Grove - Grove Cape for BeagleBone Series is an expansion board for Beag
 ##  Interface
 ---
 <center>
-![](img/Grove_Cape_for_BeagleBone_Series.jpg)</center>
+![](https://files.seeedstudio.com/wiki/Grove_Cape_for_BeagleBone_Series/img/Grove_Cape_for_BeagleBone_Series.jpg)</center>
 
 **J1,J5:** can be used for I2C.
 

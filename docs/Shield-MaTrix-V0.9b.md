@@ -179,7 +179,7 @@ On the left side of the board are:
 
 ![](https://github.com/SeeedDocument/Shield-MaTrix-V0.9b/raw/master/img/MLeft.JPG)
 
-[Schematic of the device](res/SM09b_scheme.jpg)
+[Schematic of the device](https://files.seeedstudio.com/wiki/Shield-MaTrix-V0.9b/res/SM09b_scheme.jpg)
 
 ##   Necessary libraries
 

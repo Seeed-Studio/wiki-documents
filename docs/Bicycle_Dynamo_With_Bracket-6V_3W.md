@@ -30,7 +30,7 @@ This product provide clean and green energy, it produce electric without any fue
 
 1. The max dia of the dynamo body is:40.5mm, the longest length of the main body is:94.5mm。
 
-![](img/Bicycle-spec.JPG)
+![](https://files.seeedstudio.com/wiki/Bicycle_Dynamo_With_Bracket-6V_3W/img/Bicycle-spec.JPG)
 
 
 1.  friction roller
@@ -202,7 +202,7 @@ Don't assume that people wont use it on bikes, given the fact its a bike dynamo,
 
 ##   Resources
 ---
-*   [File:Spec.doc](res/Spec.doc "File:Spec.doc")
+*   [File:Spec.doc](https://files.seeedstudio.com/wiki/Bicycle_Dynamo_With_Bracket-6V_3W/res/Spec.doc)
 
 
 ##   External Links
