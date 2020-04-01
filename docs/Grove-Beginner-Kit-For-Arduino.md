@@ -105,7 +105,7 @@ Buzzer and LED module are used for key prompt.
 - **Arduino IDE** is an integrated development environment for Arduino, which is used for single-chip microcomputer software programming, downloading, testing and so on.
 - Download and Install [Arduino IDE](https://www.arduino.cc/en/Main/Software) for your desired operating system here.
 
-![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/ArduinoDownload.jpg)
+![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Stalker_V3_1/master/images/Download_IDE.png)
 
 
 
@@ -1129,6 +1129,10 @@ Draw the content on the OLED.
 
 Prints Hello World onto the OLED Display.
 
+**U8g2 Library Reference**
+
+If you want to more information about U8g2 library, please refer to [here](https://github.com/olikraus/u8g2/wiki/u8g2reference).
+
 - <font size=5;font color=#314B9F >Breakout Guide</font>
 
 Use Grove cable to connect the OLED to Seeeduino Lotus's **I2C** interface (Note: I2C's default address is 0x78).
@@ -1885,9 +1889,7 @@ Seeed Studio has its very own [Open Parts Library (OPL)](https://www.seeedstudio
 
 5. [**Initial Arduino Firmware Demo**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/GroveBeginnerKitFirmwareFINAL.zip)
 
-
-
-
+6. [**Grove Beginner Kit For Arduino Resources in one(20200401)[7z]**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/Grove-Beginner-Kit-For-Arduino-Resources-in-one(20200401).7z)
 
 ## More Learning
 
