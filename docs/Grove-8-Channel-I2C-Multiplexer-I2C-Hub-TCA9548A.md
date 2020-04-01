@@ -137,8 +137,13 @@ void loop()
   delay(1000); 
 }
 ```
+
 - **Step 1** Download the library from the resource and add the "zip" library to your Arduino IDE. Please refer to [How to install an Arduino Library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
+
+
 - **Step 2** Find the example code and upload it to your board. Please refer to [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+
+
 - **Step 3** After uploading the code, you will see the I2C adress of each device from the serial monitor. The adress 0x70 is the I2C adress of I2C Hub.
 ![](http://me.omgoooo.com:2022/SeeedDocument/Grove-8-Channel-I2C-Hub-TCA9548A-/-/raw/master/img/Grove-8-channel-I2C-Hub-test-result.png)
 
