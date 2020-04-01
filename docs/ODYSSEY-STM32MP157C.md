@@ -142,7 +142,7 @@ Like Raspberry Pi, you need to install the ODYSSEY – STM32MP157C image from yo
 
 **A. Boot from SD card**
 
-- **Step 1.** Select the [firmware](https://github.com/Seeed-Studio/seeed-linux-images) you want to download:
+- **Step 1.** Select the [firmware](https://files.seeedstudio.com/linux/ODYSSEY%E2%80%93STM32MP157C/stm32mp1-debian-buster-console-armhf-latest-2gb.img.xz) you want to download:
 
 - **Step 2.** Connect an SD card to a PC or MAC with an SD card reader, an SD card with more than 4G memory is required.
 
