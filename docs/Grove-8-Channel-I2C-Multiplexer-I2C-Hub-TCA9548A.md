@@ -1,0 +1,159 @@
+---
+name: Grove - 8 Channel I2C Multiplexer/I2C Hub (TCA9548A)
+category: Grove sensor
+bzurl: 
+oldwikiname: 
+prodimagename:
+surveyurl: 
+sku: 103020293
+tags:
+---
+
+
+![](http://me.omgoooo.com:2022/SeeedDocument/Grove-8-Channel-I2C-Hub-TCA9548A-/-/raw/master/img/Grove-8-Channel-I2C-Hub-TCA9548A-wiki.jpg)
+
+
+We've already released the [Grove - I2C Hub (4 Port)](https://www.seeedstudio.com/Grove-I2C-Hub.html) and the [Grove - I2C Hub (6 Port)](https://www.seeedstudio.com/Grove-I2C-Hub-6-Port-p-4349.html). Wait, still not enough? Well well, we know you are seeking more. Here you are, we present you the Grove - 8 Channel I2C Hub. 
+
+More importantly, this is more than just a superposition of port quantities. As we all know, I2C devices must use different addresses in the same bus system, even use the Grove I2C Hub (4 or 6 port), the rule is still the rule. However, with the help of  Grove - 8 Channel I2C Hub, you can plug up to 8 same-address I2C devices to the same Grove I2C system. All thanks to the TCA9548A I2C Multiplexer Chip. It adopts time-division multiplexing technology so that the same controller can control 8 I2C devices with the same address. No more worrying about address conflicts. 
+
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-8-Channel-I2C-Hub-TCA9548A-p-4398.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p> 
+
+## Features
+
+- 8 Grove I2C Port 
+- Support multiple devices with the same I2C address
+- Support 3.3V/5V System
+
+## Platform Supported
+| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
+|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/bbg_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/wio_logo_n.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/linkit_logo_n.jpg) |
+
+## Getting Started
+
+### Read the I2C address of devices connecting on the Grove - 8 Channel I2C Hub
+
+#### Materials Required
+
+|Seeeduino XIAO|Grove Breadboard|Grove - 8 Channel I2C Multiplexer/I2C Hub (TCA9548A)|
+|--------|-----------------------|------------|
+|![](http://me.omgoooo.com:2022/SeeedDocument/Seeeduino-XIAO/-/raw/master/img/seeeduino-xiao-preview210x157.jpg)|![](http://me.omgoooo.com:2022/SeeedDocument/Grove-Breadboard/-/raw/master/img/103020232-integrate-preview210x157.jpg)|![](http://me.omgoooo.com:2022/SeeedDocument/Grove-8-Channel-I2C-Hub-TCA9548A-/-/raw/master/img/Grove-8-Channel-I2C-Hub-TCA9548A-thumbnail.jpg)|
+|[Get one now](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|[Get one now](https://www.seeedstudio.com/Grove-Breadboard-p-4034.html)|[Get one now](https://www.seeedstudio.com/Grove-8-Channel-I2C-Hub-TCA9548A-p-4398.html)|
+
+We also require up to 8 I2C devices, please click [here](https://www.seeedstudio.com/catalogsearch/result/?q=i2c) to find the Grove I2C devices you like.
+At these example, we use three I2C devices.
+
+#### Hardware connection
+
+![](http://me.omgoooo.com:2022/SeeedDocument/Grove-8-Channel-I2C-Hub-TCA9548A-/-/raw/master/img/Grove-8-Channel-I2C-Hub-example.jpg)
+
+Connect the I2C Hub with Seeeduino XIAO's I2C interface, and connect each I2C device with each hub.
+
+#### Software code 
+```C++
+#include "TCA9548A.h"
+
+// if you use the software I2C to drive, you can uncommnet the define SOFTWAREWIRE which in TCA9548A.h. 
+#ifdef SOFTWAREWIRE
+  #include <SoftwareWIRE.h>
+  SoftwareWire myWIRE(3, 2);
+  TCA9548A<SoftwareWire> TCA;
+  #define WIRE myWIRE
+#else   
+  #include <Wire.h>
+  TCA9548A<TwoWire> TCA;
+  #define WIRE Wire
+#endif
+
+#define SERIAL Serial
+
+void setup()
+{
+  SERIAL.begin(115200);
+  while(!SERIAL){};
+
+  //WIRE.begin();
+  TCA.begin(WIRE);
+  //defaut all channel was closed
+  //TCA.openAll();
+  //TCA.closeAll();
+
+  // Select the channels you want to open. You can open as many channels as you want
+  TCA.openChannel(TCA_CHANNEL_0);   //TCA.closeChannel(TCA_CHANNEL_0);
+  TCA.openChannel(TCA_CHANNEL_1); //TCA.closeChannel(TCA_CHANNEL_1);
+  TCA.openChannel(TCA_CHANNEL_2); //TCA.closeChannel(TCA_CHANNEL_2);
+  TCA.openChannel(TCA_CHANNEL_3); //TCA.closeChannel(TCA_CHANNEL_3);
+  TCA.openChannel(TCA_CHANNEL_4); //TCA.closeChannel(TCA_CHANNEL_4);
+  TCA.openChannel(TCA_CHANNEL_5); //TCA.closeChannel(TCA_CHANNEL_5);
+  TCA.openChannel(TCA_CHANNEL_6); //TCA.closeChannel(TCA_CHANNEL_6);
+  TCA.openChannel(TCA_CHANNEL_7); //TCA.closeChannel(TCA_CHANNEL_7); 
+
+}
+
+void loop()
+{
+
+  uint8_t error, i2cAddress, devCount, unCount;
+
+  SERIAL.println("Scanning...");
+
+  devCount = 0;
+  unCount = 0;
+  for(i2cAddress = 1; i2cAddress < 127; i2cAddress++ )
+  {
+    WIRE.beginTransmission(i2cAddress);
+    error = WIRE.endTransmission();
+
+    if (error == 0)
+    {
+      SERIAL.print("I2C device found at 0x");
+      if (i2cAddress<16) SERIAL.print("0");
+      SERIAL.println(i2cAddress,HEX);
+      devCount++;
+    }
+    else if (error==4)
+    {
+      SERIAL.print("Unknow error at 0x");
+      if (i2cAddress<16) SERIAL.print("0");
+      SERIAL.println(i2cAddress,HEX);
+      unCount++;
+    }    
+  }
+
+  if (devCount + unCount == 0)
+    SERIAL.println("No I2C devices found\n");
+  else {
+    SERIAL.print(devCount);
+    SERIAL.print(" device(s) found");
+    if (unCount > 0) {
+      SERIAL.print(", and unknown error in ");
+      SERIAL.print(unCount);
+      SERIAL.print(" address");
+    }
+    SERIAL.println();
+  }
+  SERIAL.println();
+  delay(1000); 
+}
+```
+- **Step 1** Download the library from the resource and add the "zip" library to your Arduino IDE. Please refer to [How to install an Arduino Library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
+- **Step 2** Find the example code and upload it to your board. Please refer to [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 3** After uploading the code, you will see the I2C adress of each device from the serial monitor. The adress 0x70 is the I2C adress of I2C Hub.
+![](http://me.omgoooo.com:2022/SeeedDocument/Grove-8-Channel-I2C-Hub-TCA9548A-/-/raw/master/img/Grove-8-channel-I2C-Hub-test-result.png)
+
+## Schematic Online Viewer
+
+<div class="altium-ecad-viewer" data-project-src="http://me.omgoooo.com:2022/SeeedDocument/Grove-8-Channel-I2C-Hub-TCA9548A-/-/raw/master/document/Grove-8-Channel-I2C-Hub-Hardware-Schematic.zip?inline=false" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+## Resource
+
+ - **[PDF]** [TCA9548A_DATASHEET](http://me.omgoooo.com:2022/SeeedDocument/Grove-8-Channel-I2C-Hub-TCA9548A-/-/raw/master/document/TCA9548A_datasheet.pdf)
+ - **[PDF]** [Hardware schematic](http://me.omgoooo.com:2022/SeeedDocument/Grove-8-Channel-I2C-Hub-TCA9548A-/-/raw/master/document/Grove-8-Channel-I2C-Hub-TCA9548A_v1.0_SCH_190814.pdf)
+ - **[ZiP]** [Grove 8 Channel I2C Hub Library](http://me.omgoooo.com:2022/SeeedDocument/Grove-8-Channel-I2C-Hub-TCA9548A-/-/raw/master/document/Grove_8Channel_I2C_Hub_test_library.zip)
+
+
+
+## Tech Support
+Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>
