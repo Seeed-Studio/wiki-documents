@@ -177,7 +177,7 @@ nav:
 
       - BeagleBone:
           - BeagleBone Introduction: BeagleBone.md
-          - BeagleBone Solutions: Beaglebone_Solutions.md
+          - BeagleBone Solutions: BeagleBone_Solutions.md
           - BeagleBone Blue: BeagleBone_Blue.md
           - BeagleBone Case: Beaglebone_Case.md
           - Seeed Studio BeagleBone Green: BeagleBone_Green.md
