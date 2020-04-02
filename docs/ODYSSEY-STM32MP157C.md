@@ -435,16 +435,16 @@ cd ~/ODYSSEY-STM32MP157C/examples
 python3 QtViewerForStm32p1.py
 ```
 
-Run [CanBus_SendForArduino.ino](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/examples/CanBus_SendForArduino.ino) on `Seeeduino V4.2`.
+Run [CanBus_SendForArduino.ino](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/examples/CanBus_SendForArduino.ino) on `Seeeduino V4.2`.
 
 ## Resourses
 -----
-- **[PDF]** [STM32MP157C Datasheet](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/Hardware/stm32mp157c.pdf)
-- **[SCH]** [Seeed SoM - STM32MP157C](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/Hardware/Seeed%20SoM%20-%20STM32MP157C%20v1.0_191212.pdf)
-- **[SCH]** [ODYSSEY-STM32MP157C](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/Hardware/Seeed%20NPi%20-%20STM32MP157C%20v1.0_191212.pdf)
-- **[3Dfile]** [ODYSSEY-STM32MP157C](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/Hardware/st.skp)
-- **[OrCAD]** [ODYSSEY-STM32MP157C](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/Hardware/Seeed%20NPi%20-%20STM32MP157C%20v1.0_SCH%20%26%20PCB.zip)
-- **[OrCAD]** [Seeed SoM - STM32MP157C](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/Hardware/Seeed%20SoM%20-%20STM32MP157C%20v1.0_SCH%20%26%20PCB%20.zip)
-- **[PDF]** [ODYSSEY-STM32MP157C 2d file](http://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/STM32-2d-file.pdf)
+- **[PDF]** [STM32MP157C Datasheet](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/Hardware/stm32mp157c.pdf)
+- **[SCH]** [Seeed SoM - STM32MP157C](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/Hardware/Seeed%20SoM%20-%20STM32MP157C%20v1.0_191212.pdf)
+- **[SCH]** [ODYSSEY-STM32MP157C](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/Hardware/Seeed%20NPi%20-%20STM32MP157C%20v1.0_191212.pdf)
+- **[3Dfile]** [ODYSSEY-STM32MP157C](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/Hardware/st.skp)
+- **[OrCAD]** [ODYSSEY-STM32MP157C](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/Hardware/Seeed%20NPi%20-%20STM32MP157C%20v1.0_SCH%20%26%20PCB.zip)
+- **[OrCAD]** [Seeed SoM - STM32MP157C](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/Hardware/Seeed%20SoM%20-%20STM32MP157C%20v1.0_SCH%20%26%20PCB%20.zip)
+- **[PDF]** [ODYSSEY-STM32MP157C 2d file](http://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/STM32-2d-file.pdf)
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

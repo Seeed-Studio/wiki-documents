@@ -15,7 +15,7 @@ The Grove - AS5600 is a programmable 12-bit high-resolution contactless magnetic
 
 Compared with the traditional potentiometer/encoder, the Grove - AS5600 has significant advantages: high precision, non-contact, no rotation angle limitation. All those advantages making it suitable for non-contact angle measurement applications, such as the robot arm, tripod head, motor closed-loop control, machine tool axis positioning.
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600-p-4192.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600-p-4192.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 ## Feature
 

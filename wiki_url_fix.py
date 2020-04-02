@@ -145,6 +145,11 @@ def main():
                              "https://files.seeedstudio.com/wiki/common")
                     line = new_line
 
+                if line.find("https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>") != -1:
+                    new_line = line.replace(
+                        "https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>", \
+                             "https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png\" /></a></p>")
+                    line = new_line
                 fin.append(line)
 
 

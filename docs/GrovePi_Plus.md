@@ -15,7 +15,7 @@ There are three mounting holes can perfect match all version of Raspberry Pi. Ca
 It also improves the voltage level converting sub circuits.
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/GrovePi-p-2241.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/GrovePi-p-2241.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 ##   Features

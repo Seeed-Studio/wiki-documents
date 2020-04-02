@@ -17,16 +17,16 @@ Not lone afte that, we released another BeagleBone named BeagleBone Green Wirele
 ---
 Here is the list of the BeagleBone Boards you can find in the Seeed WiKi. The list will be constantly updated.
 
-- [Beagle Bone Green and Grove IoT Starter Kit Powered by AWS](/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS/)
-- [BeagleBone Blue](/BeagleBone_Blue/)
-- [BeagleBone Case](/Beaglebone_Case/)
-- [BeagleBone Green](/BeagleBone_Green/)
-- [BeagleBone Green HDMI Cape](/BeagleBone_Green_HDMI_Cape/)
-- [BeagleBone Green Wireless](/BeagleBone_Green_Wireless/)
-- [Grove Base Cape for BeagleBone v2](/Grove_Base_Cape_for_BeagleBone_v2/)
-- [Grove Cape for BeagleBone Series](/Grove_Cape_for_BeagleBone_Series/)
-- [Grove Starter Kit for BeagleBone Green](/Grove_Starter_Kit_for_BeagleBone_Green/)
-- [Motor Bridge Cape v1.0](/Motor_Bridge_Cape_v1.0/)
-- [Skeleton box for Beaglebone](/Skeleton_box_for_Beaglebone/)
+- [Beagle Bone Green and Grove IoT Starter Kit Powered by AWS](http://wiki.seeedstudio.com/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS/)
+- [BeagleBone Blue](http://wiki.seeedstudio.com/BeagleBone_Blue/)
+- [BeagleBone Case](http://wiki.seeedstudio.com/Beaglebone_Case/)
+- [BeagleBone Green](http://wiki.seeedstudio.com/BeagleBone_Green/)
+- [BeagleBone Green HDMI Cape](http://wiki.seeedstudio.com/BeagleBone_Green_HDMI_Cape/)
+- [BeagleBone Green Wireless](http://wiki.seeedstudio.com/BeagleBone_Green_Wireless/)
+- [Grove Base Cape for BeagleBone v2](http://wiki.seeedstudio.com/Grove_Base_Cape_for_BeagleBone_v2/)
+- [Grove Cape for BeagleBone Series](http://wiki.seeedstudio.com/Grove_Cape_for_BeagleBone_Series/)
+- [Grove Starter Kit for BeagleBone Green](http://wiki.seeedstudio.com/Grove_Starter_Kit_for_BeagleBone_Green/)
+- [Motor Bridge Cape v1.0](http://wiki.seeedstudio.com/Motor_Bridge_Cape_v1.0/)
+- [Skeleton box for Beaglebone](http://wiki.seeedstudio.com/Skeleton_box_for_Beaglebone/)
 
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

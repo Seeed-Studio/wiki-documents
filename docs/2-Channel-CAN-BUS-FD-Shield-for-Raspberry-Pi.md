@@ -17,7 +17,7 @@ This is a CAN BUS shield for Raspberry Pi(hereinafter referred to as 2 channel p
 Also it have two On-board 120Ω terminating resistors which are controlled by the switches.
 
  
-<p style="text-align:center"><a href="https://www.seeedstudio.com/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi-p-4072.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
+<p style="text-align:center"><a href="https://www.seeedstudio.com/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi-p-4072.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 

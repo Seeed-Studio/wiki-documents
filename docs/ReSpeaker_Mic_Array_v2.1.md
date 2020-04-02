@@ -22,7 +22,7 @@ The ReSpeaker Mic Array v2.1 is a great solution for those who wish to add voice
 The ReSpeaker Mic Array v2.1 has 2 kinds of firmware versions available, one including speech algorithms and a second for raw voice data.
 
 
-<p style=":center"><a href="" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
+<p style=":center"><a href="" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 

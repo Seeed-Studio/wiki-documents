@@ -34,7 +34,7 @@ Basic Fastener Kit contains many standard components, including Screws,nuts,rive
 </td>
 <td> White nylon
 </td>
-<td> ![](https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Rivet.jpg)
+<td> <img src="https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Rivet.jpg" />
 </td>
 <td> 20
 </td></tr>
@@ -43,21 +43,21 @@ Basic Fastener Kit contains many standard components, including Screws,nuts,rive
 </td>
 <td rowspan="3"> Black nylon
 </td>
-<td> ![](https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Rivet.jpg)
+<td> <img src="https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Rivet.jpg" />
 </td>
 <td> 20
 </td></tr>
 <tr>
 <td scope="row"> R3075
 </td>
-<td> ![](https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Rivet.jpg)
+<td> <img src="https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Rivet.jpg" />
 </td>
 <td> 20
 </td></tr>
 <tr>
 <td scope="row"> R3100
 </td>
-<td> ![](https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Rivet.jpg)
+<td> <img src="https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Rivet.jpg" />
 </td>
 <td> 20
 </td></tr>
@@ -68,35 +68,35 @@ Basic Fastener Kit contains many standard components, including Screws,nuts,rive
 </td>
 <td rowspan="5"> Hardware &amp; Cross head
 </td>
-<td> ![](https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Screw1.jpg)
+<td> <img src="https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Screw1.jpg" />
 </td>
 <td> 40
 </td></tr>
 <tr>
 <td scope="row"> M3X6
 </td>
-<td> ![](https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Screw2.jpg)
+<td><img src="https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Screw2.jpg" />
 </td>
 <td> 20
 </td></tr>
 <tr>
 <td scope="row"> M3X8
 </td>
-<td> ![](https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Screw3.jpg)
+<td> <img src="https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Screw3.jpg" />
 </td>
 <td> 20
 </td></tr>
 <tr>
 <td scope="row"> M3X12
 </td>
-<td> ![](https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Screw4.jpg)
+<td> <img src="https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Screw4.jpg" />
 </td>
 <td> 20
 </td></tr>
 <tr>
 <td scope="row"> M3X16
 </td>
-<td> ![](https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Screw5.jpg)
+<td> <img src="https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Screw5.jpg" />
 </td>
 <td> 20
 </td></tr>
@@ -107,14 +107,14 @@ Basic Fastener Kit contains many standard components, including Screws,nuts,rive
 </td>
 <td rowspan="2"> Hardware &amp;
 </td>
-<td> ![](https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Nut1.jpg)
+<td> <img src="https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Nut1.jpg" />
 </td>
 <td> 40
 </td></tr>
 <tr>
 <td scope="row"> M3X2.5
 </td>
-<td> ![](https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Nut2.jpg)
+<td> <img src="https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Nut2.jpg" />
 </td>
 <td> 50
 </td></tr>
@@ -125,7 +125,7 @@ Basic Fastener Kit contains many standard components, including Screws,nuts,rive
 </td>
 <td> single head
 </td>
-<td> ![](https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Copper_Column1.jpg)
+<td> <img src="https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Copper_Column1.jpg" />
 </td>
 <td> 12
 </td></tr>
@@ -134,14 +134,14 @@ Basic Fastener Kit contains many standard components, including Screws,nuts,rive
 </td>
 <td rowspan="2"> Double pass
 </td>
-<td> ![](https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Copper_Column2.jpg)
+<td> <img src="https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Copper_Column2.jpg" />
 </td>
 <td> 12
 </td></tr>
 <tr>
 <td scope="row"> M3X20+6
 </td>
-<td> ![](https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Copper_Column3.jpg)
+<td> <img src="https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Copper_Column3.jpg" />
 </td>
 <td> 12
 </td></tr>
@@ -152,21 +152,21 @@ Basic Fastener Kit contains many standard components, including Screws,nuts,rive
 </td>
 <td rowspan="3"> ABS
 </td>
-<td> ![](https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Hollow_Column1.jpg)
+<td> <img src="https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Hollow_Column1.jpg" />
 </td>
 <td> 12
 </td></tr>
 <tr>
 <td scope="row"> ø3X8
 </td>
-<td> ![](https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Hollow_Column2.jpg)
+<td> <img src="https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Hollow_Column2.jpg" />
 </td>
 <td> 12
 </td></tr>
 <tr>
 <td scope="row"> ø4X12
 </td>
-<td> ![](https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Hollow_Column3.jpg)
+<td> <img src="https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Hollow_Column3.jpg" />
 </td>
 <td> 12
 </td></tr>
@@ -177,14 +177,14 @@ Basic Fastener Kit contains many standard components, including Screws,nuts,rive
 </td>
 <td rowspan="2"> Nylon (A single head)
 </td>
-<td> ![](https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Plastic_Column1.jpg)
+<td> <img src="https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Plastic_Column1.jpg" />
 </td>
 <td> 12
 </td></tr>
 <tr>
 <td scope="row"> M3X20+6
 </td>
-<td> ![](https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Plastic_Column2.jpg)
+<td> <img src="https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Plastic_Column2.jpg" />
 </td>
 <td> 12
 </td></tr>
@@ -195,7 +195,7 @@ Basic Fastener Kit contains many standard components, including Screws,nuts,rive
 </td>
 <td> Nylon
 </td>
-<td> ![](https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Cable_Tie.jpg)
+<td> <img src="https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Cable_Tie.jpg" />
 </td>
 <td> 20
 </td></tr>
@@ -206,7 +206,7 @@ Basic Fastener Kit contains many standard components, including Screws,nuts,rive
 </td>
 <td> Nylon
 </td>
-<td> ![](https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Shim.jpg)
+<td> <img src="https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Shim.jpg" />
 </td>
 <td> 50
 </td></tr>
@@ -217,7 +217,7 @@ Basic Fastener Kit contains many standard components, including Screws,nuts,rive
 </td>
 <td> Transparent silicone
 </td>
-<td> ![](https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Rubber_Pad.jpg)
+<td> ><img src="https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Rubber_Pad.jpg" />
 </td>
 <td> 20
 </td></tr></table>

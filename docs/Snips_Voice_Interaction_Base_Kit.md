@@ -21,7 +21,7 @@ The Voice Interaction Base Kit allows you to run the entire Snips AI Voice Platf
 But that's not all! The [Voice Interaction Satellite Kit](https://www.seeedstudio.com/Snips_Voice_Interaction_Satellite_Kit.html) will extend your base station to reach each room of your house and allow you to interact with the hardware based on where you issue your commands!
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Snips_Voice_Interaction_Base_Kit.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Snips_Voice_Interaction_Base_Kit.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 ## Feature 

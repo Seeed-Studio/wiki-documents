@@ -13,7 +13,7 @@ tags:
 
 The Grove - 6-Axis Accelerometer&Gyroscope(BMI088) is a 6 DoF(degrees of freedom) High-performance Inertial Measurement Unit(IMU) .This sensor is based on BOSCH BMI088, which is a high-performance IMU with high vibration suppression. The 6-axis sensor combines a 16 bit triaxial gyroscope and a 16 bit triaxial accelerometer. Specialy, you can use this sensor on the drone and robotics application in demanding environments. 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-6-Axis-Accelerometer%26Gyroscope-(BMI088)-p-3188.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-6-Axis-Accelerometer%26Gyroscope-(BMI088)-p-3188.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 ## Features

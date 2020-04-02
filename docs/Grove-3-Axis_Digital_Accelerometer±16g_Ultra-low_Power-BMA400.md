@@ -14,7 +14,7 @@ tags:
 The Grove - 3-Axis Digital Accelerometer ±16g Ultra-low Power (BMA400) sensor is a 12 bit, digital, triaxial acceleration sensor with smart on-chip motion and position-triggered interrupt features. It can detect your movement posture, such as Walking, Running, Standing still.
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-%C2%B116g-Ultra-low-Power-(BMA400)-p-3201.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-%C2%B116g-Ultra-low-Power-(BMA400)-p-3201.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 ## Version

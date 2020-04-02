@@ -15,7 +15,7 @@ The Grove Water Level Sensor is a very accurate sensor that can be helpful in wa
 
 We used capacitive pads on the PCB of the module and did conformal coating over the PCB to make the sensor protect against moisture, dust, chemicals and high temperatures. We believe that this technique will allow you to make accurate water level measurements (±5mm accuracy) easily.
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-Water-Level-Sensor-10CM-p-4443.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-Water-Level-Sensor-10CM-p-4443.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 ## Feature
 

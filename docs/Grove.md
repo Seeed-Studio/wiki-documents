@@ -8,11 +8,11 @@ nointro:
 
 Learn more about Grove System [here](/Grove_System/). The following category of Grove modules are available:
 
-- [Grove - Sensor](/Sensor/)
-- [Grove - Actuator](/Actuator/)
-- [Grove - Display](/Display/)
-- [Grove - Communication](/Communication/)
-- [Grove - Others](/Others/)
+- [Grove - Sensor](http://wiki.seeedstudio.com/Sensor/)
+- [Grove - Actuator](http://wiki.seeedstudio.com/Actuator/)
+- [Grove - Display](http://wiki.seeedstudio.com/Display/)
+- [Grove - Communication](http://wiki.seeedstudio.com/Communication/)
+- [Grove - Others](http://wiki.seeedstudio.com/Others/)
 
 
 

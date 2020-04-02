@@ -32,7 +32,7 @@ According to different application scenarios, we have prepared a series of solid
 
 
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-4-Channel-Solid-State-Relay-p-3130.html
-" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
+" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 ## Features

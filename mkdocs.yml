@@ -640,7 +640,7 @@ nav:
           
           
       - Actuator:
-          - Actuator Introduction: Actuator.md
+          # - Actuator Introduction: Actuator.md
           - Atom Node: Atom_Node.md
           - Grove - 2-Coil Latching Relay: Grove-2-Coil_Latching_Relay.md
           - Grove - Buzzer: Grove-Buzzer.md
@@ -679,7 +679,7 @@ nav:
           - Grove - I2C Motor Driver (TB6612FNG): Grove-I2C_Motor_Driver-TB6612FNG.md
 
       - Display:
-          - Display Introduction: Display.md
+          # - Display Introduction: Display.md
           - Grove - 4-Digit Display: Grove-4-Digit_Display.md
           - Grove - 0.54 inch Red Dual Alphanumeric Display: Grove-0.54_inch_Red_Dual_Alphanumeric_Display.md
           - Grove - 0.54 inch Red Quad Alphanumeric Display: Grove-0.54_inch_Red_Quad_Alphanumeric_Display.md
@@ -706,7 +706,7 @@ nav:
 
 
       - Communication:
-          - Communication Introduction: Communication.md
+          # - Communication Introduction: Communication.md
           - Grove - 125KHz RFID Reader: Grove-125KHz_RFID_Reader.md
           - Grove - 315MHz RF Kit: Grove-315MHz_RF_Kit.md
           - Grove - 433MHz Simple RF Link Kit: Grove-433MHz_Simple_RF_Link_Kit.md
@@ -731,7 +731,7 @@ nav:
           - Grove BLE v1: Grove-BLE_v1.md
 
       - Others:
-          - Others Introduction: Others.md
+          # - Others Introduction: Others.md
           - Grove - AND: Grove-AND.md
           - Grove - DC Jack Power: Grove-DC_Jack_Power.md
           - Grove - Differential Amplifier v1.2: Grove-Differential_Amplifier_v1.2.md
@@ -765,7 +765,7 @@ nav:
 
 
   - IoT:
-          - IoT Introduction: IoT.md
+          # - IoT Introduction: IoT.md
           - Seeeduino Cloud and Grove IoT Starter Kit Powered by AWS: Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS.md
           - IoT Fast Prototyping Kit S5D9: IoT_Fast_Prototyping_Kit S5D9.md
           - Grove Starter Kit for IoT based on Raspberry Pi: Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi.md
@@ -775,7 +775,7 @@ nav:
           - SEEED IOT BUTTON FOR AWS: SEEED-IOT-BUTTON-FOR-AWS.md
 
   - MakerPro:
-          - MakerPro Introduction: MakerPro.md
+          # - MakerPro Introduction: MakerPro.md
           - 0.5w Solar Panel 55*70: 0.5w_Solar_Panel_55x70.md
           - 1.5W Solar Panel 81*137: 1.5W_Solar_Panel_81x137.md
           - 125Khz RFID module - UART: 125Khz_RFID_module-UART.md
@@ -855,7 +855,7 @@ nav:
 
 
   - Tutorial:
-          - Tutorial Introduction: Tutorial.md
+          # - Tutorial Introduction: Tutorial.md
           - A Comparison of Different Grove Temperature Sensors: A_Comparison_of_Different_Grove_Temperature_Sensors.md
           - A Handy Serial Library: A_Handy_Serial_Library.md
           - Atmel AVRISP STK500 USB ISP Programmer: Atmel_AVRISP_STK500_USB_ISP_Programmer.md
@@ -939,7 +939,7 @@ nav:
 
 
   - Discontinued:
-          - Discontinued Introduction: Discontinued.md
+          # - Discontinued Introduction: Discontinued.md
           - 2.8inch TFT Touch Shield V1.0: 2.8inch-TFT_Touch_Shield_V1.0.md
           - 5V-3.3V Breadboard Power Supply v1.1: 5V-3.3V_Breadboard_Power_Supply_v1.1.md
           - 5V/3.3V Breadboard Power Supply‏‎: 5V-3.3V_Breadboard_Power_Supply.md
@@ -1014,9 +1014,9 @@ nav:
 
   - License: license.md
 
-# Google Analytics
-google_analytics:
-#  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
-  - UA-115878881-1
-#  - UA-84917600-1
-  - auto
+# # Google Analytics
+# google_analytics:
+# #  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+#   - UA-115878881-1
+# #  - UA-84917600-1
+#   - auto
