@@ -16,7 +16,7 @@ The LinkIt ONE development platform is an open source, high performance board fo
 LinkIt One is an all-in-one prototyping board for IoT/wearables devices. Integrating GSM, GPRS, Wi-Fi, GPS, Bluetooth features into a basic Arduino form factor.LinkIt ONE is a co-design product by [Seeed Studio](https://www.seeedstudio.com/) and [ MediaTek](http://www.mediatek.com/). It brings together both parties' technology in open hardware and industrial leading reference designs for Wearables and IoT devices to create a powerful development board.
 
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now.png)](https://www.seeedstudio.com/item_detail.html?p_id=2017)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/item_detail.html?p_id=2017)
 
 
 !!!Note
@@ -213,7 +213,7 @@ LinkIt ONE SDK comes with many examples / sample code to use peripherals like GS
 
 The Sidekick Basic Kit for LinkIt ONE is designed to be used with your LinkIt ONE board. This kit will help you quickly get along well with the platform of LinkIt. It includes many of the most popular accessories for DIY projects : like Breadboard, Jumper wires, Color LEDs, Resistors, Buzzer, etc. All these come in a handy box, which is easy to transport and mimimises clutter. The kit includes a complete guide that will familiarize you with a wide range of electronic components while you create small, simple, and easy-to-assemble circuits. There are 10 different courses outlined that will offer a best way for beginner to get familiar with LinkIt ONE.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now.png)](https://www.seeedstudio.com/item_detail.html?p_id=2027)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/item_detail.html?p_id=2027)
 
 - [The Basics](http://wiki.seeedstudio.com/LinkIt_ONE_Tutorial-The_Basics/)
 - [Hello World](http://wiki.seeedstudio.com/LinkIt_ONE_Tutorial-Hello_World/)

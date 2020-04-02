@@ -12,7 +12,7 @@ sku: 102010016
 
 Seeeduino GPRS is a IoT panel, you can connect to the internet through GPRS wireless network with it. Making/answering voice calls and sending/receiving SMS messages are also supported. Meanwhile, Seeeduino GPRS supports FM radio function and bluetooth communication. Seeeduino GPRS is base on Atmage32U4 and SIM800H. Atmage32U4 is a microcontroller and it is compatible with Arduino. SIM800H support Quad-band 850/900/1800/1900MHz, it can transmit Voice, SMS and data information with low power consumption. SIM800H also brings some extra features like for example Bluetooth and FM radio. It is designed with power saving technique so that the current consumption is as low as 0.1mA in sleep mode.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now.png)](https://www.seeedstudio.com/Seeeduino-GPRS-p-1909.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/Seeeduino-GPRS-p-1909.html)
 
 
 ## Application Ideas

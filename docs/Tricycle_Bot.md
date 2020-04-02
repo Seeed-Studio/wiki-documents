@@ -8,13 +8,13 @@ surveyurl: https://www.research.net/r/65Y9KB8
 sku: 110070028
 ---
 
-![](https://github.com/SeeedDocument/Tricycle_Bot/blob/master/img/3.jpg?raw=true)
+![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/3.jpg?raw=true)
 
 The Tricycle Bot is a easy-to-assemble and Grove_Compatible DIY Robot platform for education. It includes the eletronic materials and structure materials which could be assembled easily via the guideline. The Tricycle Bot has three floors and five shores between the 2nd and 3th floor, the 3th floor can be fixed many modules via screws and nuts.
 
 Further more, you can fix the Arduino board and breadboard as the heart of the robot in the 2nd floor and each shore can be fixed 1-2 plug-n-play Grove modules as the wings of the robot to strengthen the functions accordingly, such as RGB LEd and ultrasonic Grove module. The supply voltage of Tricycle Bot is provided by a 12V battery holder.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now.png)](https://www.seeedstudio.com/Seeeduino-Lotus-ATMega328-Board-with-Grove-Interface-p-1942.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/master/docs/images/get_one_now.png)](https://www.seeedstudio.com/Seeeduino-Lotus-ATMega328-Board-with-Grove-Interface-p-1942.html)
 
 
 !!!Warning
@@ -29,7 +29,7 @@ Further more, you can fix the Arduino board and breadboard as the heart of the r
 
 ##Part List
 
-![](https://github.com/SeeedDocument/Tricycle_Bot/blob/master/img/4.jpg?raw=true)
+![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/4.jpg?raw=true)
 
 |Parts name|Specification|Quantity|
 |:---------|:-----------:|:------:|
@@ -61,9 +61,9 @@ Further more, you can fix the Arduino board and breadboard as the heart of the r
 
 ##Assembly Introdutions
 
-![](https://github.com/SeeedDocument/Tricycle_Bot/blob/master/img/1.png?raw=true)
+![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/1.png?raw=true)
 
-![](https://github.com/SeeedDocument/Tricycle_Bot/blob/master/img/2.png?raw=true)
+![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/2.png?raw=true)
 
 
 You could fix any boards you like on Tricycle Bot to drive this Robot Platform, such as Arduino, Raspberry Pi and BeagleBone. And to drive the DC motors and Grove modules, motor cape and Grove cape are good helper for you.
@@ -79,7 +79,7 @@ Arduino is the most famous open-source prototyping platform as its easy-to-use h
 Seeeduino v4 is an Open Source, Arduino-compatible ATmega328 MCU development board. We think Seeeduino v4 is one of the best Arduino derivatives/compatibles available. Seeeduino v4 is feature rich, much more stable, easy-to-use and even good looking.
 
 <div class="text-center">
-<img src="https://raw.githubusercontent.com/SeeedDocument/SeeeduinoV4/master/images/cover.JPG?raw=true" width="50%" height="50%">
+<img src="https://files.seeedstudio.com/wiki/SeeeduinoV4/master/images/cover.JPG?raw=true" width="50%" height="50%">
 </div>
 
 
@@ -87,7 +87,7 @@ Seeeduino v4 is an Open Source, Arduino-compatible ATmega328 MCU development boa
 The Motor Shield is a driver module for motors that allows you to use Arduino to control the working speed and direction of the motor.
 
 <div class="text-center">
-<img src="https://github.com/SeeedDocument/Motor_Shield_V2.0/blob/master/image/500px-Motorshield_01.jpg?raw=true" width="50%" height="50%">
+<img src="https://github.com/SeeedDocument/Motor_Shield_V2.0/image/500px-Motorshield_01.jpg?raw=true" width="50%" height="50%">
 </div>
 
 
@@ -96,7 +96,7 @@ The Motor Shield is a driver module for motors that allows you to use Arduino to
 As an expansion board, Base Shield v2 has many Grove connectors, making it convenient for you to use Grove module together. And It is compatible with a series of Arduino products.
 
 <div class="text-center">
-<img src="https://raw.githubusercontent.com/SeeedDocument/Base_Shield_V2/master/img/Base_Shield_v2-1.png" width="50%" height="50%">
+<img src="https://files.seeedstudio.com/wiki/Base_Shield_V2/img/Base_Shield_v2-1.png" width="50%" height="50%">
 </div>
 
 
@@ -104,12 +104,12 @@ As an expansion board, Base Shield v2 has many Grove connectors, making it conve
 
 |W2812B LED Strip|Ultrasonic Sensor|Line Finder|
 |----------------|-----------------|-----------|
-|![](https://raw.githubusercontent.com/SeeedDocument/Tricycle_Bot/master/img/grove_arduino/1.jpg)|![](https://raw.githubusercontent.com/SeeedDocument/Tricycle_Bot/master/img/grove_arduino/2.jpg)|![](https://raw.githubusercontent.com/SeeedDocument/Tricycle_Bot/master/img/grove_arduino/3.jpg)|
+|![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/grove_arduino/1.jpg)|![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/grove_arduino/2.jpg)|![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/grove_arduino/3.jpg)|
 |[GET ONE NOW!](https://www.seeedstudio.com/Digital-RGB-LED-Flexi-Strip-60-LED-1-Meter-p-1666.html)|[GET ONE NOW!](https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html)|[GET ONE NOW!](https://www.seeedstudio.com/Grove-Line-Finder-p-825.html)|
 
 |Buzzer|Serial RF|Serial Bluetooth|
 |----------------|-----------------|-----------|
-|![](https://raw.githubusercontent.com/SeeedDocument/Tricycle_Bot/master/img/grove_arduino/4.jpg)|![](https://raw.githubusercontent.com/SeeedDocument/Tricycle_Bot/master/img/grove_arduino/5.jpg)|![](https://raw.githubusercontent.com/SeeedDocument/Tricycle_Bot/master/img/grove_arduino/6.jpg)|
+|![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/grove_arduino/4.jpg)|![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/grove_arduino/5.jpg)|![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/grove_arduino/6.jpg)|
 |[GET ONE NOW!](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|[GET ONE NOW!](https://www.seeedstudio.com/Grove-Serial-RF-Pro-p-794.html)|[GET ONE NOW!](https://www.seeedstudio.com/Grove-Serial-Bluetooth-v3.0-p-2475.html)|
 
 !!!Tip
@@ -149,7 +149,7 @@ GrovePi+ is a system that brings Grove Modules to the Raspberry Pi. It adds supp
 
 |USB Webcam|OLED Dispaly|GPS Module|
 |----------------|-----------------|-----------|
-|![](https://raw.githubusercontent.com/SeeedDocument/Tricycle_Bot/master/img/grove_pi/1.jpg)|![](https://raw.githubusercontent.com/SeeedDocument/Tricycle_Bot/master/img/grove_pi/2.jpg)|![](https://raw.githubusercontent.com/SeeedDocument/Tricycle_Bot/master/img/grove_pi/3.jpg)|
+|![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/grove_pi/1.jpg)|![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/grove_pi/2.jpg)|![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/grove_pi/3.jpg)|
 |[GET ONE NOW!](https://www.seeedstudio.com/300K-Pixel-USB-2.0-Mini-Webcam-p-1499.html)|[GET ONE NOW!](http://www.seeedstudio.com/Grove-OLED-Display-1.12%22-p-824.html)|[GET ONE NOW!](http://www.seeedstudio.com/depot/grove-gps-p-959.html)|
 
 !!!Tip
@@ -170,7 +170,7 @@ SeeedStudio BeagleBone Green Wireless is based on the open-source hardware desig
 The Motor Bridge Cape can control two stepper motors or four brushed DC motors with 6~15V DC power and about 1A current draw per motor. It also has six servo control interfaces and six expand I\O, which means that you could expand one more robot arm on your robot car.  
 
 <div class="text-center">
-<img src="https://raw.githubusercontent.com/SeeedDocument/Motor_Bridge_Cape_v1.0/master/img/Motor_bridge_driver.jpg" width="50%" height="50%">
+<img src="https://files.seeedstudio.com/wiki/Motor_Bridge_Cape_v1.0/master/img/Motor_bridge_driver.jpg" width="50%" height="50%">
 </div>
 
 
@@ -186,12 +186,12 @@ Grove Base Cape for BeagleBone v2 is a Grove system expansion board for BeagleBo
 
 |USB WEBCAM|W2812B LED STRIP|IMU 9DOF|
 |----------------|-----------------|-----------|
-|![](https://raw.githubusercontent.com/SeeedDocument/Tricycle_Bot/master/img/grove_bb/1.jpg)|![](https://raw.githubusercontent.com/SeeedDocument/Tricycle_Bot/master/img/grove_bb/2.jpg)|![](https://raw.githubusercontent.com/SeeedDocument/Tricycle_Bot/master/img/grove_bb/3.JPG)|
+|![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/grove_bb/1.jpg)|![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/grove_bb/2.jpg)|![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/grove_bb/3.JPG)|
 |[GET ONE NOW!](https://www.seeedstudio.com/300K-Pixel-USB-2.0-Mini-Webcam-p-1499.html)|[GET ONE NOW!](https://www.seeedstudio.com/Digital-RGB-LED-Flexi-Strip-60-LED-1-Meter-p-1666.html)|[GET ONE NOW!](http://www.seeedstudio.com/Grove-IMU-9DOF-v2.0-p-2400.html)|
 
 |OLED DISPLAY|DIGITAL LIGHT SENSOR|GPS MODULE|
 |----------------|-----------------|-----------|
-|![](https://raw.githubusercontent.com/SeeedDocument/Tricycle_Bot/master/img/grove_bb/4.jpg)|![](https://raw.githubusercontent.com/SeeedDocument/Tricycle_Bot/master/img/grove_bb/5.jpg)|![](https://raw.githubusercontent.com/SeeedDocument/Tricycle_Bot/master/img/grove_bb/6.jpg)|
+|![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/grove_bb/4.jpg)|![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/grove_bb/5.jpg)|![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/grove_bb/6.jpg)|
 |[GET ONE NOW!](http://www.seeedstudio.com/Grove-OLED-Display-1.12%22-p-824.html)|[GET ONE NOW!](http://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|[GET ONE NOW!](http://www.seeedstudio.com/depot/grove-gps-p-959.html)|
 
 !!!Tip
@@ -203,7 +203,7 @@ Here is a simple example of making a Tricycle Bot with Arduino UNO.
 
 ###Things we need
 
-![](https://github.com/SeeedDocument/Tricycle_Bot/blob/master/img/7.png?raw=true)
+![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/7.png?raw=true)
 
 - [Arduino UNO](https://www.arduino.cc/en/Main/ArduinoBoardUno) *1
 - [Motor Shield V2.0](https://www.seeedstudio.com/Motor-Shield-V2.0-p-1377.html) *1
@@ -216,16 +216,16 @@ Here is a simple example of making a Tricycle Bot with Arduino UNO.
 ###Assemble
 
 <div class="text-center">
-<img src="https://github.com/SeeedDocument/Tricycle_Bot/blob/master/img/5.jpg?raw=true" width="50%" height="50%">
+<img src="https://files.seeedstudio.com/wiki/Tricycle_Bot/img/5.jpg?raw=true" width="50%" height="50%">
 </div>
 
-1. [Assemble the Tricycle Bot.](https://github.com/SeeedDocument/Tricycle_Bot/blob/master/Tricycle_Bot.md#assembly-introdutions)
+1. [Assemble the Tricycle Bot.](https://files.seeedstudio.com/wiki/Tricycle_Bot/Tricycle_Bot.md#assembly-introdutions)
 2. Fix the Grove modules on the shores and top plate.
 3. Connect Grove Buzzer to **D4**, Grove Ultrasonic Ranger to **D5** and LED strip to **D6** of the Base Shield.
 4. Finish it!
 
 <div class="text-center">
-<img src="https://github.com/SeeedDocument/Tricycle_Bot/blob/master/img/6.jpg?raw=true" width="50%" height="50%">
+<img src="https://files.seeedstudio.com/wiki/Tricycle_Bot/img/6.jpg?raw=true" width="50%" height="50%">
 </div>
 
 ###Show
@@ -366,7 +366,7 @@ void beep() {
 
 ##Attachments
 
-* [Tricycle Bot Assembly Instructions(pdf)](https://github.com/SeeedDocument/Tricycle_Bot/blob/master/res/Tricycle%20Bot%20Assembly%20Instructions.pdf)
+* [Tricycle Bot Assembly Instructions(pdf)](https://files.seeedstudio.com/wiki/Tricycle_Bot/res/Tricycle%20Bot%20Assembly%20Instructions.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

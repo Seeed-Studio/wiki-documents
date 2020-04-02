@@ -16,7 +16,7 @@ This board is only a part of MediaTek LinkIt Smart 7688 platform which includes 
 !!!Note
     * This page only guides you to get started with this development board. For a complete guide, please refer to [Resources](http://labs.mediatek.com/en/platform/linkit-smart-7688#HDK).
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now.png)](https://www.seeedstudio.com/LinkIt-Smart-7688-p-2573.html)  
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/LinkIt-Smart-7688-p-2573.html)  
 
 ## Features
 ---

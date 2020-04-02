@@ -19,7 +19,7 @@ Please note this kit DOES NOT include the Raspberry Pi board. Please visit [here
 !!!Note
     GrovePi+ and some of the code was designed by [Dexter Industry](http://www.dexterindustries.com/).  Click to get more information about Dexter.
 
-[![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now.png)](http://www.seeedstudio.com/Microsoft-IoT-Grove-Kit-(Azure-Certified)-p-2694.html)
+[![enter image description here](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](http://www.seeedstudio.com/Microsoft-IoT-Grove-Kit-(Azure-Certified)-p-2694.html)
 
 ## Features
 * Easy-to-use GrovePi+ that is compatible with Raspberry Pi B/B+/A+/2/3

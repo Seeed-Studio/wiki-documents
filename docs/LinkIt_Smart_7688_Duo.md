@@ -19,7 +19,7 @@ LinkItTM Smart 7688 Duo(a compact controller board) is an open development board
     * This board is only a part of MediaTek LinkItTM Smart 7688 platform which includes other development boards.
 
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now.png)](https://www.seeedstudio.com/LinkIt-Smart-7688-Duo-p-2574.html)  
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/LinkIt-Smart-7688-Duo-p-2574.html)  
 
 ## Features
 

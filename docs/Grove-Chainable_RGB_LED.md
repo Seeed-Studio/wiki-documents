@@ -20,8 +20,8 @@ Version
 ---
 | Revision | Descriptions                                              | Release      |How to Buy|
 |----------|-----------------------------------------------------------|--------------|--------------|
-| v1    | Initial public release (beta)                             | May 5, 2011  |[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Grove-Chainable-RGB-LED-p-850.html)|
-| v2    | Replace P9813S16 with P9813S14  and change Grove connector from Vertical to horizontal | Apr 19, 2016  |[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Grove-%E2%80%93-Chainable-RGB-Led-V2.0-p-2903.html)|
+| v1    | Initial public release (beta)                             | May 5, 2011  |[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Grove-Chainable-RGB-LED-p-850.html)|
+| v2    | Replace P9813S16 with P9813S14  and change Grove connector from Vertical to horizontal | Apr 19, 2016  |[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Grove-%E2%80%93-Chainable-RGB-Led-V2.0-p-2903.html)|
 
 Specifications
 -------------

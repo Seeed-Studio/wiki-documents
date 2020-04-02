@@ -11,7 +11,7 @@ tags: io_3v3, io_5v, plat_duino
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Atmel_AVRISP_STK500_USB_ISP_Programmer/master/img/Avrisp_stk500_usb.jpg)
 
-<p style=":center"><a href="http://www.seeedstudio.com/depot/atmel-avrisp-stk500-usb-isp-programmer-p-207.html?cPath=132_135" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
+<p style=":center"><a href="http://www.seeedstudio.com/depot/atmel-avrisp-stk500-usb-isp-programmer-p-207.html?cPath=132_135" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
 
 ## Features
 - It can supports a wide range of ATMEL AVR microcontrollor.

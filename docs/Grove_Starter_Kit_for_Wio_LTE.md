@@ -15,7 +15,7 @@ The Grove Starter Kit for Wio LTE is a simple and cost effective choice for you 
 
 The kit includes seven well selected Grove modules by us. There are light sensor and temp&humi sensor that can monitor ambient light, temperature and humidity, digital accelerometer sensor that can detect motion data, actuators like relay, and digital input&output like button and buzzer. They are simple, but with all rounded functions for learning and rapid prototypying.
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-Starter-Kit-for-Wio-LTE-p-3030.html" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-Starter-Kit-for-Wio-LTE-p-3030.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>
 
 
 

@@ -13,7 +13,7 @@ sku: 110060576
 This is the breakout kit specially designed for ESP32, it contains a breakout board and pin headers. The dimension is 53mmx38mmx1.2mm. The breakout board with 2.54mm-gap female headers allows you to connect the pin of ESP32 to it easily. We also provided 2 grove connectors in this kit to enrich the expansibility of ESP32.
 
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now.png)](https://www.seeedstudio.com/ESP32-Breakout-Kit-p-2783.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/ESP32-Breakout-Kit-p-2783.html)
 
 ## Part List
 

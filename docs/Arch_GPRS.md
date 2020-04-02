@@ -19,7 +19,7 @@ The cellular networking module on the Arch GPRS is based on the EG-10 [GPRS](htt
 
 Arch GPRS has a standard **Arduino** interface as well as [Grove](/Grove)  connectors on board. It’s convenient to connect existing Shields and **Grove** products to Arch GPRS. You can even connect a solar panel directly to the board to allow for the battery to charge from it. A low-power design guarantees easy charging and long hour operations when outdoors.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now.png) ](http://www.seeedstudio.com/depot/Arch-GPRS-p-1657.html?cPath=73)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png) ](http://www.seeedstudio.com/depot/Arch-GPRS-p-1657.html?cPath=73)
 
 ##  Features ##
 

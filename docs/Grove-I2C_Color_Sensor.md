@@ -23,8 +23,8 @@ Version
 ---
 | Revision | Descriptions                                              | Release      |How to buy|
 |----------|-----------------------------------------------------------|--------------|--------------|
-| v1.2    | Initial public release (beta)                             | Jan 17, 2013  |[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png)](http://www.seeedstudio.com/depot/grove-i2c-color-sensor-p-854.html)|
-| v2.0    | Replace TCS3472(EOL) with TCS34725FN and optimize PCB Layout |Apr 27,2017   |[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Grove-I2C-Color-Sensor-V2-p-2890.html)|
+| v1.2    | Initial public release (beta)                             | Jan 17, 2013  |[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png)](http://www.seeedstudio.com/depot/grove-i2c-color-sensor-p-854.html)|
+| v2.0    | Replace TCS3472(EOL) with TCS34725FN and optimize PCB Layout |Apr 27,2017   |[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Grove-I2C-Color-Sensor-V2-p-2890.html)|
 
 Features
 --------

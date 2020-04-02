@@ -7,7 +7,7 @@ prodimagename: Xadow_OLED.jpg
 surveyurl: https://www.research.net/r/Xadow_Q_Touch_Sensor
 sku:  101040001
 ---
-![](https://github.com/SeeedDocument/Xadow_Q_Touch_Sensor/raw/master/img/Xadow%20Q%20touch%20sensor.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Q_Touch_Sensor/img/Xadow%20Q%20touch%20sensor.jpg)
 
 The Q Touch Sensor is a high sensitivity and high noise immunity touch input device.It is based on Atmel AT42QT1070.
 
@@ -25,7 +25,7 @@ The AT42QT1070 modulates its bursts in a spread-spectrum fashion in order to hea
 
 ## Interface Function
 ---
-![](https://github.com/SeeedDocument/Xadow_Q_Touch_Sensor/raw/master/img/Xadow-Q_Touch.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Q_Touch_Sensor/img/Xadow-Q_Touch.png)
 
 *   ①：Touch key3 , key4 break out
 *   ②：Touch key5 , key6 break out
@@ -59,12 +59,12 @@ When you touch the key pad on the board  ,you will see the message from a serial
 
 You can see :
 
-![](https://github.com/SeeedDocument/Xadow_Q_Touch_Sensor/raw/master/img/Q_Touch_Demo_output.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Q_Touch_Sensor/img/Q_Touch_Demo_output.jpg)
 
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Xadow_Q_Touch_Sensor/raw/master/res/Xadow-Q_Touch_Sensor_v1.0_sch_pcb.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Xadow_Q_Touch_Sensor/res/Xadow-Q_Touch_Sensor_v1.0_sch_pcb.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
@@ -72,11 +72,11 @@ You can see :
 ---
 *   [Q Touch Library](https://github.com/Seeed-Studio/Seeed_QTouch)
 
-*   [Schematic pdf](https://github.com/SeeedDocument/Xadow_Q_Touch_Sensor/raw/master/res/Xadow-Q_Touch_Sensor_v1.0.pdf)
+*   [Schematic pdf](https://files.seeedstudio.com/wiki/Xadow_Q_Touch_Sensor/res/Xadow-Q_Touch_Sensor_v1.0.pdf)
 
-*   [Eagle file](https://github.com/SeeedDocument/Xadow_Q_Touch_Sensor/raw/master/res/Xadow-Q_Touch_Sensor_v1.0_sch_pcb.zip)
+*   [Eagle file](https://files.seeedstudio.com/wiki/Xadow_Q_Touch_Sensor/res/Xadow-Q_Touch_Sensor_v1.0_sch_pcb.zip)
 
-*   [AT42QT107 datasheet](https://github.com/SeeedDocument/Xadow_Q_Touch_Sensor/raw/master/res/AT42QT1070-MMH.pdf)
+*   [AT42QT107 datasheet](https://files.seeedstudio.com/wiki/Xadow_Q_Touch_Sensor/res/AT42QT1070-MMH.pdf)
 
 *   [How to detect finger touch?](/How_to_detect_finger_touch)
 

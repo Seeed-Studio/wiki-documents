@@ -33,7 +33,7 @@ The battery power detector can detect the input voltage range of 3–4.2 volts. 
 |---|---|---|---|
 | Battery kit-3.7V 520 mAh(first version)|  May 2016 | Supported | None|
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now.png) ](http://www.seeedstudio.com/depot/Battery-kit37V-520mAh-p-2646.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png) ](http://www.seeedstudio.com/depot/Battery-kit37V-520mAh-p-2646.html)
 
 ##  Features ##
 

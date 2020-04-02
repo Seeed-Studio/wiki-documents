@@ -21,7 +21,7 @@ This OLED uses the SSD1327(V1.0) or SH1107G(V2.1) driver chip, which manages the
 * Supports Continuous Horizontal Scrolling.
 * Grove compatible Interface
 
-  [![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now.png)](https://www.seeedstudio.com/Grove-OLED-Display-1.12%27%27-V2-p-3031.html)
+  [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/Grove-OLED-Display-1.12%27%27-V2-p-3031.html)
 
 ## Version
   ---

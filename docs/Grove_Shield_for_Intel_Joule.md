@@ -16,7 +16,7 @@ At the 2016 Intel Developer Forum, Intel announced the availability of the Joule
 By simply plugging it on your Joule board, it will own 8 solid and easy-to-use Grove connectors which includes interfaces like I2C, UART, digital I/Os and analog inputs right away. In addition to rich Grove connectors, the shield also keeps 2x20 pin headers in case you want more GPIOs for the project. An integrated switch on the board allows you to select the working voltage at either 5V or 3.3V.
 
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now.png)](https://www.seeedstudio.com/Grove-Shield-for-Intel-Joule-p-2782.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/Grove-Shield-for-Intel-Joule-p-2782.html)
 
 ## Features
 

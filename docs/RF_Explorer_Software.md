@@ -19,7 +19,7 @@ Below are software applications you might be interested in — they run on multi
 | Product Name                           | Where to Buy                                                                       |
 |----------------------------------------|------------------------------------------------------------------------------------|
 | RF Explorer WiFi Combo                 |[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/RF-Explorer-WiFi-Combo-p-2321.html)                      |
-| RF Explorer Signal Generator (RFE6GEN) | [![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/RF-Explorer-Signal-Generator-%28RFE6GEN%29-p-2074.html) |
+| RF Explorer Signal Generator (RFE6GEN) | [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/RF-Explorer-Signal-Generator-%28RFE6GEN%29-p-2074.html) |
 | RF Explorer 6G model                   | [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/RF-Explorer-6G-model-p-2198.html)                       |
 | RF Explorer 6G Combo                   | [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/RF-Explorer-6G-Combo-p-2197.html )                      |
 | RF Explorer - 3G Combo                 | [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/RF-Explorer---3G-Combo-p-1266.html)                     |

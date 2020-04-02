@@ -17,7 +17,7 @@ Microsoft Azure Sphere is a solution for creating highly-secured, connected, MCU
 !!!Warning
     Please note that Azure Sphere MT3620 Development kit is required but not included in this Starter kit.  You can purchase it [here](https://www.seeedstudio.com/s/Azure%20Sphere%20MT3620.html). 
  
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-Starter-Kit-for-Azure-Sphere-MT3620-Development-Kit-p-3150.html" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-Starter-Kit-for-Azure-Sphere-MT3620-Development-Kit-p-3150.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
 
 ## Features
 

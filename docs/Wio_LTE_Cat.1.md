@@ -26,10 +26,10 @@ The Wio LTE is well suited for outdoor projects where the device can connect to 
 
 |Product Name | How to Buy|
 |----------------|-----------|
-|Wio LTE JP Version|[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Wio-LTE-JP-Version-4G%2C-Cat.1%2C-Espruino-Compatible-p-3018.html)|
-|Wio LTE AU Version|[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Wio-LTE-AU-Version--4G%2C-Cat.1%2C-GNSS%2C-Espruino-Compatible-p-2999.html)|
-|Wio LTE EU Version|[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Wio-LTE-EU-Version-4G%2C-Cat.1%2C-GNSS%2C-Espruino-Compatible-p-2998.html)|
-|Wio LTE US Version|[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Wio-LTE-US-Version-4G%2C-Cat.1%2C-GNSS%2C-JavaScript%28Espruino%29-Compatible-p-2957.html)|
+|Wio LTE JP Version|[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Wio-LTE-JP-Version-4G%2C-Cat.1%2C-Espruino-Compatible-p-3018.html)|
+|Wio LTE AU Version|[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Wio-LTE-AU-Version--4G%2C-Cat.1%2C-GNSS%2C-Espruino-Compatible-p-2999.html)|
+|Wio LTE EU Version|[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Wio-LTE-EU-Version-4G%2C-Cat.1%2C-GNSS%2C-Espruino-Compatible-p-2998.html)|
+|Wio LTE US Version|[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Wio-LTE-US-Version-4G%2C-Cat.1%2C-GNSS%2C-JavaScript%28Espruino%29-Compatible-p-2957.html)|
 
 ## Version
 | Product Version | Changes                                  | Released Date |

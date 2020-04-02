@@ -27,7 +27,7 @@ Seeeduino Stalker v3.0 is a feature rich Arduino compatible **Wireless Sensor Ne
 | Seeeduino Stalker v3(v3.0, older version) | Oct 2015     | Oct 2015       | None  |
 | Seeeduino Stalker v3(v3.1, older version) | July 2016    | Supported      | None  |
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now.png)](https://www.seeedstudio.com/Seeeduino-Stalker-v3-p-1882.html)  
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/Seeeduino-Stalker-v3-p-1882.html)  
 ##   Features
 
 *   Compatible with Seeeduino (I/O ports use 3.3V Logic). Can be programmed with Arduino Processing language.

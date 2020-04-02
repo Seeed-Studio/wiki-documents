@@ -124,7 +124,7 @@ For more case resources, please visit [this Github page.](https://github.com/sea
 
 <div align="center">
 <figure>
-  <a href="https://raw.githubusercontent.com/SeeedDocument/Spartan-Edge-Accelerator-Board/master/img/Spartan-Edge-Accelerater-Board-v1.0-pin.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/Spartan-Edge-Accelerater-Board-v1.0-pin.jpg" alt="Hardware Overview of SEA Board" title="Hardware Overview of SEA Board" />
+  <a href="https://raw.githubusercontent.com/SeeedDocument/Spartan-Edge-Accelerator-Board/master/img/Spartan-Edge-Accelerater-Board-v1.0-pin.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/Spartan-Edge-Accelerater-Board-v1.0-pin.jpg" alt="Hardware Overview of SEA Board" title="Hardware Overview of SEA Board" />
   <figcaption><b>Figure 1</b>. <i>Hardware Overview of SEA Board</i></figcaption></a>
 </figure>
 </div>
@@ -205,7 +205,7 @@ In this wiki, we use Seeeduino V4.2, you can also use Arduino UNO, they are full
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/Spartan-Edge-Accelerater-Board-v1.0-combine-2.jpg" alt="Spartan Edge Accelerator Board Work with Arduino" title="Spartan Edge Accelerator Board Work with Arduino" />
+  <img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/Spartan-Edge-Accelerater-Board-v1.0-combine-2.jpg" alt="Spartan Edge Accelerator Board Work with Arduino" title="Spartan Edge Accelerator Board Work with Arduino" />
   <figcaption><b>Figure 2</b>. <i>SEA board Work with Arduino</i></figcaption>
 </figure>
 </div>
@@ -257,7 +257,7 @@ If you want more details, you can click the [link](https://github.com/espressif/
 
 <div align="center">
 <figure>
-  <a href="https://github.com/sea-s7/spartan-edge-esp32-boot/archive/master.zip" target="_blank"><img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/SD-boot/download-library-boot.png" />
+  <a href="https://github.com/sea-s7/spartan-edge-esp32-boot/archive/master.zip" target="_blank"><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/SD-boot/download-library-boot.png" />
   </a>
 </figure>
 </div>
@@ -334,7 +334,7 @@ Then, the following tutorial will show you how to control the GPIO/ADC/DAC/RGB-L
 
 <div align="center">
 <figure>
-  <a href="https://github.com/sea-s7/spartan-edge-ioex/archive/master.zip" target="_blank"><img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/SD-boot/download-library-IO.png" />
+  <a href="https://github.com/sea-s7/spartan-edge-ioex/archive/master.zip" target="_blank"><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/SD-boot/download-library-IO.png" />
   </a>
 </figure>
 </div>
@@ -385,7 +385,7 @@ First of all, you should download the vivado tutorial library, we will need some
 
 <div align="center">
 <figure>
-  <a href="https://github.com/swjtu-mxb/vivado-tutorial/archive/master.zip" target="_blank"><img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/SD-boot/Vivado-Tutorial-Library.png" />
+  <a href="https://github.com/swjtu-mxb/vivado-tutorial/archive/master.zip" target="_blank"><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/SD-boot/Vivado-Tutorial-Library.png" />
   </a>
 </figure>
 </div>
@@ -418,7 +418,7 @@ First of all, you should download the vivado tutorial library, we will need some
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/1.png"/>
+  <img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/1.png"/>
     <div class="text"><b>Figure 1.</b></div>
 </figure>
 </div>
@@ -430,7 +430,7 @@ The Vivado IDE opens project_tutorial in the default layout, as shown in figure 
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/2.png"/>
+  <img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/2.png"/>
   <div class="text"><b>Figure 2.</b></div>
 </div>
 
@@ -460,7 +460,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/3.png"/>
+  <img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/3.png"/>
   <div class="text"><b>Figure 3.</b></div>
 </figure>
 </div>
@@ -473,7 +473,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/4.png"/>
+  <img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/4.png"/>
   <div class="text"><b>Figure 4.</b></div>
 </figure>
 </div>
@@ -491,7 +491,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
     <div align="center">
     <figure>
-      <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/5.png"/>
+      <img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/5.png"/>
       <div class="text"><b>Figure 5.</b></div>
     </figure>
     </div>
@@ -506,7 +506,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
      <div align="center">
      <figure>
-       <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/6.png"/>
+       <img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/6.png"/>
        <div class="text"><b>Figure 6.</b></div>
      </figure>
      </div>
@@ -519,7 +519,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/7.png"/>
+  <img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/7.png"/>
    <div class="text"><b>Figure 7.</b></div>
 </figure>
 </div>
@@ -549,7 +549,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/8.png"/>
+  <img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/8.png"/>
    <div class="text"><b>Figure 8.</b></div>
 </figure>
 </div>
@@ -590,7 +590,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/9.png"/>
+  <img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/9.png"/>
   <div class="text"><b>Figure 9.</b></div>
 </figure>
 </div>
@@ -607,7 +607,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/10.png"/>
+  <img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/10.png"/>
   <div class="text"><b>Figure 10.</b></div>
 </figure>
 </div>
@@ -618,14 +618,14 @@ The **running status** of vivado is displayed in the upper right corner.
 
    <div align="center">
    <figure>
-     <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/11.png"/>
+     <img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/11.png"/>
      <div class="text"><b>Figure 11.</b></div>
    </figure>
    </div>
 
    <div align="center">
    <figure>
-     <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/12.png"/>
+     <img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/12.png"/>
      <div class="text"><b>Figure 12.</b></div>
    </figure>
    </div>
@@ -634,7 +634,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
    <div align="center">
    <figure>
-     <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/13.png"/>
+     <img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/13.png"/>
      <div class="text"><b>Figure 13.</b></div>
    </figure>
    </div>
@@ -666,7 +666,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/14.png"/>
+  <img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/14.png"/>
   <div class="text"><b>Figure 14.</b></div>
 </figure>
 </div>
@@ -679,7 +679,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/15.png"/>
+  <img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/15.png"/>
   <div class="text"><b>Figure 15.</b></div>
 </figure>
 </div>
@@ -692,7 +692,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/16.png"/>
+  <img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/16.png"/>
   <div class="text"><b>Figure 16.</b></div>
 </figure>
 </div>
@@ -705,7 +705,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/17.png"/>
+  <img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/17.png"/>
   <div class="text"><b>Figure 17.</b></div>
 </figure>
 </div>
@@ -724,7 +724,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/18.png"/>
+  <img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/18.png"/>
   <div class="text"><b>Figure 18.</b></div>
 </figure>
 </div>
@@ -745,7 +745,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/19.png"/>
+  <img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/19.png"/>
   <div class="text"><b>Figure 19.</b></div>
 </figure>
 </div>
@@ -764,7 +764,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/20.png"/>
+  <img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/20.png"/>
   <div class="text"><b>Figure 20.</b></div>
 </figure>
 </div>

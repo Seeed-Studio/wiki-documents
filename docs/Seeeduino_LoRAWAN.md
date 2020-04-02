@@ -20,8 +20,8 @@ If you want to build an IoT application quickly, Seeeduino LoRaWAN is your best 
 
 |Product Version|Released Date | How to Buy|
 |-------|-------------|----------|
-|Seeeduino LoRaWAN |Dec 20, 2016|[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Seeeduino-LoRaWAN-p-2780.html)|
-|Seeeduino LoRaWAN W/GPS |Dec 20, 2016|[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Seeeduino-LoRaWAN-W%2FGPS-p-2781.html)|
+|Seeeduino LoRaWAN |Dec 20, 2016|[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Seeeduino-LoRaWAN-p-2780.html)|
+|Seeeduino LoRaWAN W/GPS |Dec 20, 2016|[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Seeeduino-LoRaWAN-W%2FGPS-p-2781.html)|
 
 !!!Warning
     Please update the firmware when the first time to use it. Please always plug 3.7V Lipo battery in case USB power supply is not sufficient.

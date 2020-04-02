@@ -15,7 +15,7 @@ Whether making and receiving telephone calls over a radio link using external sp
 As the heart of RePhone kit Create, the Xadow GSM+BLE is built around the powerful System-On-Chip (SOC) MT2502, offering a rich range of communication protocols - GSM, GPRS and Bluetooth (v4.0 and 2.1 dual mode). It supports quad-band 850/900/1800/1900MHz that covers any GSM network in the world. Just insert a 2G Nano SIM card, and then you can enchant things with cellular connectivity.
 
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeed-WiKi/master/docs/images/get_one_now.png)](http://www.seeedstudio.com/depot/Xadow-GSM-BLE-p-2560.html?cPath=84_120)  
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](http://www.seeedstudio.com/depot/Xadow-GSM-BLE-p-2560.html?cPath=84_120)  
 
 
 ##Features  
