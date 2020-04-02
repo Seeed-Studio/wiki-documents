@@ -56,4 +56,4 @@ The purpose of the base shield is to allow easy connection of any microprocessor
 - [Grove Base Shield for NodeMCU v1.0.pdf](https://files.seeedstudio.com/wiki/Grove_Base_Shield_for_NodeMCU_V1.0/res/Grove_Base_Shield_for_NodeMCU_pdf_v1.0.rar)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

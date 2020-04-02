@@ -143,4 +143,4 @@ A6: SIM900 used in GPRS Shield supports 850/900/1800/1900MHz GSM bands.
 - **[Tools]** [SIM900 firmware and tool(firmware:1137B13SIM900M64_ST)](https://github.com/SeeedDocument/GPRS_Shield_V3.0/raw/master/res/1137B13SIM900M64_ST.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

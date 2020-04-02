@@ -28,4 +28,4 @@ You can refer to [Seeed Gas Sensor Selection Guide](http://wiki.seeedstudio.com/
 
 - [Grove - HCHO Sensor](http://wiki.seeedstudio.com/Grove-HCHO_Sensor/)
 
-- [Grove - Multichannel Gas Sensor](http://wiki.seeedstudio.com/Grove-Multichannel_Gas_Sensor/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>
+- [Grove - Multichannel Gas Sensor](http://wiki.seeedstudio.com/Grove-Multichannel_Gas_Sensor/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

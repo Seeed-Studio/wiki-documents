@@ -25,4 +25,4 @@ Here is the list of the Seeeduino Boards you can find in the Seeed WiKi. The lis
 - [RFbee V1.1 - Wireless Arduino compatible node](/RFbee_V1.1-Wireless_Arduino_compatible_node/)
 - [Wifi Bee v2.0](/Wifi_Bee_v2.0/)
 
-<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>
+<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
