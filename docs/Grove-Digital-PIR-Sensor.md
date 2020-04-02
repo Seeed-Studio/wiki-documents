@@ -17,7 +17,7 @@ PIR sensor is an IR sensor to detect human motions. This Grove Digital PIR Senso
 
 With the Grove interface, the Grove digital PIR Sensor is easy to be plugged and played. And it doesn't need any Arduino Library. 
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Digital-PIR-Motion-Sensor-p-4524.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p> 
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Digital-PIR-Motion-Sensor-p-4524.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p> 
 
 
 ## Features

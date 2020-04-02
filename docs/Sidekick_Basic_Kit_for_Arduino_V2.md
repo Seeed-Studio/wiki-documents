@@ -12,7 +12,7 @@ sku:  110060025
 The Arduino Sidekick Basic Kit is designed to be used with your Arduino / Seeeduino / Seeeduino ADK / Maple Lilypad or any MCU board. It contains everything needed for a first-time user to connect his/her computer to an Arduino. It includes many of the most popular accessories for DIY projects : like Breadboard, Jumper wires, Color LEDs, Resistors, Buzzer, etc.
 All of these coming with its own handy box are easy transport and minimal clutter.
 
-<p style=":center"><a href="https://www.seeedstudio.com/Sidekick-Basic-Kit-for-Arduino-V2-p-1858.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Sidekick-Basic-Kit-for-Arduino-V2-p-1858.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>
 
 ##   Kit Contents
 

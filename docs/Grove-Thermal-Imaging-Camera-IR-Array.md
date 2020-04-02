@@ -22,10 +22,10 @@ The IR thermal camera carries a 32x24 array of thermal sensors (MLX90640), it ca
 This module connects the MCU with the I2C interface. However, it needs an MCU which has over 20000 bytes of RAM to drive the camera. As a matter of fact, Dev board like Arduino Uno can not be used with this Sensor camera due to its lower ability of calculation. We recommend you to choose Arch Mix as an MCU to control the camera because it really has a good performance to process the complex data from the IR sensor camera.
 
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Thermal-Imaging-Camera-IR-Array-MLX90640-110-degree-p-4334.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p> 
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Thermal-Imaging-Camera-IR-Array-MLX90640-110-degree-p-4334.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p> 
 Grove - Thermal Imaging Camera / IR Array MLX90640 110 degree
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Thermal-Imaging-Camera-IR-Array-MLX90640-55-degree-p-4335.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p> 
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Thermal-Imaging-Camera-IR-Array-MLX90640-55-degree-p-4335.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p> 
 Grove - Thermal Imaging Camera / IR Array MLX90640 55 degree
 
 !!! Note

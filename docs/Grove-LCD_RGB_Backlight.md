@@ -18,7 +18,7 @@ a love heart or some other foreign characters? Just take advantage of this featu
 This product is a replacement of Grove - Serial LCD. If you are looking for primitive 16x2 LCD modules, we
 have green yellow backlight version and blue backlight version on sale also.
 
-<p style=":center"><a href="http://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>
+<p style=":center"><a href="http://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>
 
 
 !!!Note

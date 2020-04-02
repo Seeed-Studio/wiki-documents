@@ -20,7 +20,7 @@ Previously we have made two versions of CAN-BUS Shield, the V1.0 and V1.2. They 
 <p style=":center"><a href="https://www.seeedstudio.com/CAN-BUS-Shield-V2-p-2921.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
 
 
-<p style=":center"><a href="https://www.amazon.com/dp/B076DSQFXH" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/amaon.png"  width="300" height="48"  border=0/></a></p>
+<p style=":center"><a href="https://www.amazon.com/dp/B076DSQFXH" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/amaon.png"  width="300" height="48"  border=0/></a></p>
 
 
 

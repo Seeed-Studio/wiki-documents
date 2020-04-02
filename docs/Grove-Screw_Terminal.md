@@ -13,7 +13,7 @@ sku:  103020007
 Grove - Screw Terminal with four 3.5mm pitch pins rate up to 125V @ 6A. Terminal can accept 30 to 20AWG wire. It is the most common pitch screw terminal. This grove has four ports, including GND, VCC
 and two other undefined ports. Screw terminals are commonly used to connect a chassis ground, such as on a record player or a surge protector. Most public address systems in buildings also use them for speakers, and sometimes for other outputs and inputs.
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-Screw-Terminal-p-996.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-Screw-Terminal-p-996.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>
 
 ## Version
 

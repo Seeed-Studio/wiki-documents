@@ -13,7 +13,7 @@ nointro:
 <div>
 <div class="method1" style="width:33%">
   <span class="tiptop"></span>
-  <img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_icon/Gas.png" width="110" height="110" border=0/>
+  <img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grove_icon/Gas.png" width="110" height="110" border=0/>
   
   <p class="links"> 
   <a href="http://wiki.seeedstudio.com/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/">VOC and eCO2 Gas Sensor</a>
@@ -35,7 +35,7 @@ nointro:
 
 <div class="method1" style="width:33%">
   <span class="tiptop"></span>
-  <img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_icon/Barometer.png" width="110" height="110" border=0/>
+  <img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grove_icon/Barometer.png" width="110" height="110" border=0/>
   
   <p class="links">
   <a href="http://wiki.seeedstudio.com/Grove-Barometer_Sensor-BMP180/">Barometer Sensor (BMP180)</a>
@@ -57,7 +57,7 @@ nointro:
 
 <div class="method1" style="width:33%">
   <span class="tiptop"></span>
-  <img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_icon/Accelerometer.png" width="110" height="110" border=0/>
+  <img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grove_icon/Accelerometer.png" width="110" height="110" border=0/>
   
   <p class="links">
   <a href="http://wiki.seeedstudio.com/Grove-6-Axis_AccelerometerAndCompass_V2.0/">6-Axis Accelerometer&Compass V2.0</a>
@@ -91,7 +91,7 @@ nointro:
 <div>
 <div class="method1" style="width:33%">
   <span class="tiptop"></span>
-  <img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_icon/Temperature.png" width="110" height="110" border=0/>
+  <img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grove_icon/Temperature.png" width="110" height="110" border=0/>
   
   <p class="links"> 
   <a href="http://wiki.seeedstudio.com/Grove-Digital_Infrared_Temperature_Sensor/">Digital Infrared Temperature Sensor</a>
@@ -113,7 +113,7 @@ nointro:
 
 <div class="method1" style="width:33%">
   <span class="tiptop"></span>
-  <img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_icon/Light.png" width="110" height="110" border=0/>
+  <img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grove_icon/Light.png" width="110" height="110" border=0/>
   
   <p class="links">
   <a href="http://wiki.seeedstudio.com/Grove-Digital_Light_Sensor/">Digital Light Sensor</a>
@@ -135,7 +135,7 @@ nointro:
 
 <div class="method1" style="width:33%">
   <span class="tiptop"></span>
-  <img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_icon/Health.png" width="110" height="110" border=0/>
+  <img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grove_icon/Health.png" width="110" height="110" border=0/>
   
   <p class="links">
   <a href="http://wiki.seeedstudio.com/Grove-Ear-clip_Heart_Rate_Sensor/">Ear-clip Heart Rate Sensor</a>
@@ -169,7 +169,7 @@ nointro:
 <div>
 <div class="method1" style="width:33%">
   <span class="tiptop"></span>
-  <img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_icon/Sound.png" width="110" height="110" border=0/>
+  <img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grove_icon/Sound.png" width="110" height="110" border=0/>
   
   <p class="links">
   <a href="http://wiki.seeedstudio.com/Grove-Speech_Recognizer/">Speech Recognizer</a>
@@ -191,7 +191,7 @@ nointro:
 
 <div class="method1" style="width:33%">
   <span class="tiptop"></span>
-  <img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_icon/Distance.png" width="110" height="110" border=0/>
+  <img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grove_icon/Distance.png" width="110" height="110" border=0/>
   
   <p class="links">
   <a href="https://www.seeedstudio.com/Grove-Time-of-Flight-Distance-Sensor(VL53L0X)-p-3086.html">Time of Flight Distance Sensor</a>
@@ -213,7 +213,7 @@ nointro:
 
 <div class="method1" style="width:33%">
   <span class="tiptop"></span>
-  <img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grove_icon/Others.png" width="110" height="110" border=0/>
+  <img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grove_icon/Others.png" width="110" height="110" border=0/>
   
   <p class="links">
   <a href="http://wiki.seeedstudio.com/Grove-Electricity_Sensor/">Electricity Sensor</a>

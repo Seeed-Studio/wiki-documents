@@ -30,7 +30,7 @@ Onboard ESP8266 WiFi core and Lipo charging circuit make it a perfect IoT contro
 Meanwhile, as a Wio Lite Board, Wio Lite RISC-V definitely can work with the [Grove Shield for Wio Lite](https://www.seeedstudio.com/Grove-Shield-for-Wio-Lite-p-4156.html). With this shield, [over 200 Grove sensors, actuators and displays](https://www.seeedstudio.com/grove.html) are all yours. For instance, you can choose whatever [grove OLED](https://www.seeedstudio.com/catalogsearch/result/?cat=&q=grove+OLED) you like to make it a visual development board.
 
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/Wio-Lite-RISC-V-GD32VF103-p-4293.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p> 
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Wio-Lite-RISC-V-GD32VF103-p-4293.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p> 
 
 
 ## Features
