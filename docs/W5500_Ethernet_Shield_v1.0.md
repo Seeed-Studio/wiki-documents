@@ -13,7 +13,7 @@ sku: 103030021
 
 The W5500 Ethernet Shield v1.0 can provide your projects with internet connectivity. W5500 enables users to have the Internet connectivity in their applications by using the single chip, in which TCP/IP stack, 10 / 100 Ethernet MAC and PHY embedded. The shield also has two Grove connectors and a microSD card socket to support projects which require storing large amounts of data from Grove sensor. The RJ45 port (where the Ethernet cable is connected to) is low enough to allow you to stack more shields on top of this one if needed.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](https://www.seeedstudio.com/W5500-Ethernet-Shield-p-2433.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/W5500-Ethernet-Shield-p-2433.html)
 
 ## Features
 --------

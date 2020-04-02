@@ -16,7 +16,7 @@ Grove - LED Matrix Driver v1.0 is UART (Serial) to dot matrix LED driver that in
 
 Each dot(i.e pixel) support dual color LEDs. It can produce three colors totally: red (primary color), green(primary color) and yellow (mixed color). The input current for all LEDs can be set at a time.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-LED-Matrix-Driver-v1.0-p-2645.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-LED-Matrix-Driver-v1.0-p-2645.html)
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>

@@ -19,7 +19,7 @@ The RePhone Core 2G-AtmelSAMD21 v1.0 is a new Arduino compatible RePhone core 2G
     Please connect a battery to the board if you want to use the GSM or GPRS function in case the power form USB is not enough and fail to communicate.
 
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](https://www.seeedstudio.com/RePhone-core-2G-AtmelSAMD21-p-2775.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/RePhone-core-2G-AtmelSAMD21-p-2775.html)
 
 !!!Warning
     This product **DOESN'T** include a lopo-battery, and there's no lipo-battery sold at our Bazaar as well, any 3.7V lipo-battery will work.

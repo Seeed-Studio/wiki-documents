@@ -14,7 +14,7 @@ sku: 103030030
 Raspberry Pi Breakout Board for Raspberry Pi is a prototype board that you can combine your raspberry pi with other components, modules.
 As a prototype board, it also provides power, state indicator light, button and universal transistor,such as NPN, PNP, N-MOS, P-MOS.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Raspberry-Pi-Breakout-Board-v1.0-p-2410.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Raspberry-Pi-Breakout-Board-v1.0-p-2410.html)
 
 Features
 --------

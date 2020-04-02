@@ -16,7 +16,7 @@ Grove - Collision Sensor can detect whether any collision movement or vibration 
 
 Its working voltage is 5V which makes it compatible with standard Arduino/Seeeduino 5V system.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Collision-Sensor-p-1132.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Collision-Sensor-p-1132.html)
 
 ## Specifications
 

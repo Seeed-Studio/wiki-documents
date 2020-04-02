@@ -15,7 +15,7 @@ The Rainbowduino board is an Arduino compatible controller board with profession
 
 **Rainbowduino v3.0** is flashed with Arduino boot-loader and this makes it easy to program sketches using Arduino IDE. Unlike other LED drivers, this comes with a USB to UART (FT232RL) inbuilt for programming the sketches.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Rainbowduino-LED-driver-platform-Atmega-328-p-371.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Rainbowduino-LED-driver-platform-Atmega-328-p-371.html)
 
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Rainbowduino_v3.0/master/img/Rainbowduino_V3.0b_board_bottom.png)

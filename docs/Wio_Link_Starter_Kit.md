@@ -13,7 +13,7 @@ sku: 110020051
 
 This kit is aimed at novices wanting to become a maker. The functional modules included in this kit are selected especially for a beginner which all are frequently required modules, and it is cost-effective. The most amazing part of this kit is the Wio Link development board which can be utilized for various devices: without a bit programming skill required. All the actions you want your modules performed and the flashing-code operation to Wio Link could be completed with taps in a mobile app. And you can send instructions to your devices over Internet at anywhere. So Wio Link will be a perfect utility to making things around smarter for everyone. Now let's enjoy being a maker.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Wio-Link-Starter-Kit-p-2614.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Wio-Link-Starter-Kit-p-2614.html)
 
 !!!Warning
      The Wio IFTTT function is EOL. But Wio APP is available. You can use the API from Wio APP to read sensor status and control the actuator. 

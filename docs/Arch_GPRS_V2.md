@@ -14,7 +14,7 @@ sku: 113010001
 **Arch GPRS V2** is the new and improved version of the Arch GPRS development board from [Seeed Studio](http://www.seeedstudio.com). Like the original Arch GPRS, it is also an [mbed](http://mbed.org/handbook/mbed-SDK) enabled development board that houses a cellular networking module along with a microcontroller. Arch GPRS V2 uses the LPC11U37 Microcontroller instead of the LPC11U24 used in the Arch GPRS. You can use the mbed C/C++ SDK, libraries and optimizing online development tools to rapidly build your Arch GPRS V2 based prototype. The cellular networking module on the Arch GPRS is based on the SIM900 Quad-band GSM/GRPS engine from SIMCom. With this, data collection functions can be performed easily using the 2G GSM/GPRS based cellular network.
 Arch GPRS V2 has a standard Arduino interface as well as [Grove](/Grove_System "Grove") connectors on board. It is convenient to connect existing Shields and [Grove](/Grove_System "Grove") products to Arch GPRS V2. You can even connect a solar panel directly to the board to allow the battery to charge from it. A low-power design guarantees easy charging and long hour operations when outdoors!
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Arch-GPRS-V2-p-2026.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Arch-GPRS-V2-p-2026.html)
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>

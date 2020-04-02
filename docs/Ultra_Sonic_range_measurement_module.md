@@ -13,7 +13,7 @@ Seeed ultrasonic sensor is non-contact distance measurement module, which is als
 It’s designed for easy modular project
 usage with industrial performance.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](https://www.seeedstudio.com/ultra-sonic-range-measurement-module-p-626.html?cPath=144_149)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/ultra-sonic-range-measurement-module-p-626.html?cPath=144_149)
 
 ##   Features
 

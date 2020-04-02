@@ -13,7 +13,7 @@ sku: 110060039
 
 Grove - Starter Kit for LinkIt ONE is a toolkit for building your applications quicker and easier with LinkIt ONE development platform. With this kit, you can concentrate just on design process for your projects which will save you lots for time or expenses. It consist of the most popular modules for build IoT (Internet of Things) applications such as [Base Shield](/Base_Shield_V2).
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Grove-Starter-Kit-for-LinkIt-ONE-p-2028.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Grove-Starter-Kit-for-LinkIt-ONE-p-2028.html)
 
 Features
 --------

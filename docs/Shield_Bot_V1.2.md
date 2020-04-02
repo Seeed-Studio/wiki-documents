@@ -19,7 +19,7 @@ Compared to the previous version, the Shield Bot V1.2 has not changed much.
 Compatible Arduino Board is not included, get a Seeeduino or Arduino.
 </div>
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Shield-Bot-p-1380.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Shield-Bot-p-1380.html)
 
 Features
 --------

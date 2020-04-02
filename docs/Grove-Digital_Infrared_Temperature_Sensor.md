@@ -19,7 +19,7 @@ tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit
 
 The Digital Infrared temperature sensor is a non-contact temperature measurement module which bases on MLX90615. Both the IR sensitive thermopile detector chip and the signal conditioning chip are integrated in the same package. This module communicates with Arduino using SMBus, up to 127 sensors can be read via common 2 wires. Thanks to the module's low noise amplifier, 16-bit ADC and powerful DSP unit, it can achieved a high accuracy of 1℃ over wide temperature rage and a high measurement resolution of 0.02℃.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Digital-Infrared-Temperature-Sensor-p-2385.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Digital-Infrared-Temperature-Sensor-p-2385.html)
 
 Specifications
 -------------

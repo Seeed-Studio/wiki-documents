@@ -26,7 +26,7 @@ The NFC Shield features a transceiver module, PN532, which handles wireless comm
 
 For this new version of the shield we have created a separate, independent, PCB antenna area which allows you to more easily stretch the NFC interface outside of your main circuit enclosure.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](https://www.seeedstudio.com/NFC-Shield-V2.0-p-1370.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/NFC-Shield-V2.0-p-1370.html)
 
 
 Application Ideas

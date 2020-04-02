@@ -14,7 +14,7 @@ sku: 103030034
 
 **BeagleBone Green HDMI Cape** is a general integrated HDMI connector for expanding your BeagleBone to a rich variety of peripherals such as computer monitor, video projector, digital television, or digital audio device. This board features a standard HDMI receptacle that can be connected to a monitor with a standard HDMI-to-HDMI cable. All HD signals are supported, and the output resolution is 1280×720. It also can be used to transmit audio information. This product will make your applications based on BeagleBone board more versatile for different circumstances.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/BeagleBone-Green-HDMI-Cape-p-2570.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/BeagleBone-Green-HDMI-Cape-p-2570.html)
 
 Features
 --------

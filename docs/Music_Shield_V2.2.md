@@ -19,7 +19,7 @@ The recording function works with Seeeduino Mega and Arduino Mega only. And the 
 </div>
 
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Music-Shield-V20-p-1372.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Music-Shield-V20-p-1372.html)
 
 
 Hardware Overview

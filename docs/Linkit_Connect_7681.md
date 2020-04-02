@@ -13,7 +13,7 @@ sku: 113990100
 
 The LinkIt Connect 7681 development board provides easy access to the five GPIO pins and one UART port — each with an LED — of the MT7681, to quickly connect peripheral controllers and electronic circuits. The MT7681 is provided on the LinkIt Connect 7681 module, which was co-designed with AcSiP. This module, which is only 15 x 18mm, will also be available separately for direct integration into your product’s PCB.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/LinkIt-Connect-7681-Wi-Fi-HDK-for-IoT-p-2262.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/LinkIt-Connect-7681-Wi-Fi-HDK-for-IoT-p-2262.html)
 
 Key Features
 ------------

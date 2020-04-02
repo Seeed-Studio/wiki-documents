@@ -13,7 +13,7 @@ This work (product documents, tutorials and associated images) are licensed unde
 ## Software Library
 
 
-All demo software, code examples embedded in the document and any software libraray provided with the product document are licensed under [MIT License](https://raw.githubusercontent.com/SeeedDocument/common/master/MIT_LICENSE "MIT LICENSE") unless otherwise specified.
+All demo software, code examples embedded in the document and any software libraray provided with the product document are licensed under [MIT License](https://files.seeedstudio.com/wiki/common/MIT_LICENSE "MIT LICENSE") unless otherwise specified.
 
 ## Thirdparty content
 
@@ -24,7 +24,7 @@ All trademarks and logos are the property of their respective owners.
 
 ## To Contact
 
-Write to us at <img class="img-left" src="https://raw.githubusercontent.com/SeeedDocument/common/master/contact-us.png" /> with subject line "Wiki". Thanks.
+Write to us at <img class="img-left" src="https://files.seeedstudio.com/wiki/common/contact-us.png" /> with subject line "Wiki". Thanks.
 
 Credits
 -------

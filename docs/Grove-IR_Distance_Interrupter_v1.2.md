@@ -18,7 +18,7 @@ When the reflected light is detected, it produces **Digital HIGH** (or Binary **
 
 With this sensor, you can build the following (but not limited to) applications: **line following robots, optical encoders** and **object counting applications**.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-IR-Distance-Interrupter-p-1278.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-IR-Distance-Interrupter-p-1278.html)
 
 
 <div class="admonition note">

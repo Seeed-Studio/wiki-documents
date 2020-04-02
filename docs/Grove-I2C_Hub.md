@@ -15,7 +15,7 @@ tags: grove_i2c, io_3v3, io_5v,
 I2C Hub Grove is an extension Grove module for connecting multiply I2C devices to Grove Base Shield. It can use with [Universal 4 Pin to X2 4 Pin cable](http://www.seeedstudio.com/depot/universal-4-pin-to-x2-4-pin-cable-5-pcs-pack-p-847.html?cPath=178_179) and connects up to 3 I2C devices which may cover most developing purpose.
 
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-I2C-Hub-p-851.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-I2C-Hub-p-851.html)
 
 Features
 --------

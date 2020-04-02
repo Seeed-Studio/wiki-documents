@@ -16,7 +16,7 @@ Grove - Luminance Sensor detects the intensity of the ambient light on a surface
 
 This Luminance Sensor can be used in application which requires automatic light adjustment in residential or commercial lighting.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Luminance-Sensor-p-1941.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Luminance-Sensor-p-1941.html)
 
 
 Specifications

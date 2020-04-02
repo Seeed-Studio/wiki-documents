@@ -11,7 +11,7 @@ sku:   103030002
 
 The Mbed Shield is the Mbed application board based on Mbed LPC1768 Prototyping Board. Just try to imagine controlling Ethernet devices by using environmental data from sensors. It integrates a series of external interfaces,such as CAN, Ethernet, USB and 4 standard Grove sockets, all together on a single board.The Mbed Shield is also compatible with other standard Arduino Shields, providing you an even more powerful extension for your Mbed.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](https://www.seeedstudio.com/mbed-shield-p-1390.html?cPath=132_134)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/mbed-shield-p-1390.html?cPath=132_134)
 
 ##   Feature
 ---

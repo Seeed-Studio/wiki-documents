@@ -15,7 +15,7 @@ Grove Starter kit for LinkIt Smart7688 Duo is a starter kit which contains funda
 
 About LinkIt<sup>TM</sup> Smart 7688 Duo, LinkIt<sup>TM</sup> Smart 7688 Duo(a compact controller board) is an open development board, based on the OpenWrt Linux distribution, MT7688 and ATmega32u4. The board is designed especially to enable the prototyping of Rich Application IoT devices for smart house.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Grove-Starter-Kit-for-LinkIt-7688-Duo-p-2551.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Grove-Starter-Kit-for-LinkIt-7688-Duo-p-2551.html)
 
 Features
 --------

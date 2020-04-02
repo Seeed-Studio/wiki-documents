@@ -17,7 +17,7 @@ GSR stands for galvanic skin response, is a method of measuring the electrical c
 !!!Warning
     Grove-GSR Sensor measures the resistance of the people, NOT Conductivity!
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-GSR-sensor-p-1614.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-GSR-sensor-p-1614.html)
 
 ## Version
 

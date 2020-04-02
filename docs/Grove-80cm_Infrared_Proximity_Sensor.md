@@ -14,7 +14,7 @@ tags: grove_analog, io_3v3, io_5v, plat_duino，plat_pi
 
 The 80cm Infrared Proximity Sensor is a General Purpose Type Distance Measuring Sensor. This sensor SharpGP2Y0A21YK, boasts a small package and very low current consumption, takes a continuous distance reading and returns a corresponding analog voltage with a range of 10cm (4") to 80cm (30"). Can be used in TVs, personal computers, cars and so on.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-80cm-Infrared-Proximity-Sensor-p-788.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-80cm-Infrared-Proximity-Sensor-p-788.html)
 
 
 Features

@@ -14,7 +14,7 @@ sku: 113050002
 The RFBee is a RF module providing easy and flexible wireless data transmission between devices. It is based on a AVR ATmega168 working as a fully functional **Arduino** connected via SPI to a TI CC1101 RF transceiver.
 
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/rfbee-v11-wireless-arduino-compatible-node-p-614.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/rfbee-v11-wireless-arduino-compatible-node-p-614.html)
 
 Version Tracker
 ---------------

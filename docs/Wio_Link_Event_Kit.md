@@ -13,7 +13,7 @@ sku: 110020048
 
 Wio Link Event Kit is a event-monitoring kit which include some typical event-triggered [Grove](/Grove_System) functional modules to build smart IoT devices. The most amazing part of this kit is the Wio Link development board which can be utilized for various devices: without a bit programming skill required. All the actions you want your modules performed and the flashing code operation to Wio Link could be completed with taps in a mobile app. And you can send instructions to your devices over the internet at anywhere. So Wio Link will be a perfect utility to making things around smarter for everyone. Now let's get familiar with some event-triggered modules included in this Kit.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Wio-Link-Event-Kit-p-2611.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Wio-Link-Event-Kit-p-2611.html)
 
 
 !!!Warning

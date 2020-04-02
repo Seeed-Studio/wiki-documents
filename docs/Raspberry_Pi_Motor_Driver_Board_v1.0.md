@@ -15,7 +15,7 @@ Raspberry Pi Motor Driver Board v1.0 is based on the Freescale MC33932 dual H-Br
 
 Raspberry Pi Motor Driver Board v1.0 support a very wide range of input voltage from 6V~28V. otherwise ,the on board DC/DC converter support a very wide range of input voltage, and can provide a 5V power supply for the Raspberry Pi with 1000mA maximum current. So, you just need one power supply to drive the motors and power up the Raspberry Pi.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Raspberry-Pi-Motor-Board-v1.0-p-2411.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Raspberry-Pi-Motor-Board-v1.0-p-2411.html)
 
 Features
 --------

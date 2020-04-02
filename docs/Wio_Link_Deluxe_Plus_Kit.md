@@ -13,7 +13,7 @@ sku: 110020053
 
 This kit is same as **Wio Link Deluxe Kit** except that this kit additionally contains two display modules, which can add visual interfaces for the user. You can use this kit to run some real projects or do prototyping. It contains sensors(mainly), switching-function modules, servo motors, LED strip and a speaker. The most amazing part of this kit is the Wio Link development board which can be utilized for various devices: without a bit programming skill required. All the actions you want your modules performed and the flashing-code operation to Wio Link could be completed with taps in a mobile app. And you can send instructions to your devices over internet at anywhere. So Wio Link will be a perfect utility to making things around smarter for everyone. Now let us do something real!
 
-[![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Wio-Link-Deluxe-Plus-Kit-p-2616.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Wio-Link-Deluxe-Plus-Kit-p-2616.html)
 
 !!!Warning
      The Wio IFTTT function is EOL. But Wio APP is available. You can use the API from Wio APP to read sensor status and control the actuator. 
