@@ -22,7 +22,7 @@ Product|Advantage|Disadvantage
 [Grove - Capacitive Fingerprint Scanner / Sensor](https://www.seeedstudio.com/Grove-Capacitive-Fingerprint-Scanner-p-4363.html)|Can identify biological characteristics, only identify living body, high safety, small size, low power consumption, high accuracy|Poor abrasion resistance, easily susceptible to sweat, stains, finger wear, etc.
 [Grove - Optical Fingerprint Sensor](https://www.seeedstudio.com/Grove-Fingerprint-Sensor.html)|Strong abrasion resistance, good environmental adaptability, and good stability|Large size, high power consumption, and relatively low accuracy, can't identify the living body, low security 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-Capacitive-Fingerprint-Scanner-p-4363.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-Capacitive-Fingerprint-Scanner-p-4363.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
 
 ## Features
 

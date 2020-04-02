@@ -16,7 +16,7 @@ The Gear Stepper Motor Driver Pack includes a stepper motor and a motor drive bo
 You can use this pack for position control.
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Gear-Stepper-Motor-Driver-Pack-p-3200.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Gear-Stepper-Motor-Driver-Pack-p-3200.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
 
 
 ## Features

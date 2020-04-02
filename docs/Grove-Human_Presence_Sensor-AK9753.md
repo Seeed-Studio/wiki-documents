@@ -16,7 +16,7 @@ The Grove - Human Presence Sensor can be used to detect the presence of the huma
 You can find a lot of infrared sensors on our website, this one will be one of the most interesting. With a certain algorithm, it can even achieve gesture recognition. We hope you enjoy it.
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-Human-Presence-Sensor-%28AK9753%29-p-3224.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-Human-Presence-Sensor-%28AK9753%29-p-3224.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
 
 
 ## Feature

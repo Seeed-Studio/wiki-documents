@@ -15,7 +15,7 @@ tags:
 The Grove - 2-Channel Inductive Sensor is based on Texas Instruments(TI) LDC1612, a 28-bit inductance to digital converter(LDC) for inductive sensing solutions. With multiple channels and support for remote sensing, the LDC1612 enables the performance and reliability benefits of inductive sensing to be realized at minimal cost and power. Inductance is an effect caused by the magnetic field of a current-carrying conductor acting back on the conductor. So by sensing the inductance, this sensor can detect the proximity of conductors especially metal nearby.
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-2-Channel-Inductive-Sensor-%28LDC1612%29-p-3223.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-2-Channel-Inductive-Sensor-%28LDC1612%29-p-3223.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
 
 ## Feature
 

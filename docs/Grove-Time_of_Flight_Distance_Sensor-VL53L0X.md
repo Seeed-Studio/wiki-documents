@@ -23,7 +23,7 @@ The VL53L0X’s 940 nm VCSEL emitter (VerticalCavity Surface-Emitting Laser), is
 
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
 
 ## Features
 

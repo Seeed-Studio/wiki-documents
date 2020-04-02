@@ -17,7 +17,7 @@ The Grove - Step Counter(BMA456) is based on BMA456, which is an exetremely smal
 Relaiable, cost-effective, on top of that, it's very easy to use, you can easily add this plug and play module on your wearable devices. 
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-Step-Counter-(BMA456)-p-3189.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-Step-Counter-(BMA456)-p-3189.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
 
 
 ## Version

@@ -40,7 +40,7 @@ In case you just need a dual digit alphanumeric display, you can check the
 [Grove - 0.54" Red Dual Alphanumeric Display](http://seeedstudio.com/Grove-0-54-Red-Dual-Alphanumeric-Display-p-4031.html).
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-0-54-Red-Quad-Alphanumeric-Display-p-4032.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-0-54-Red-Quad-Alphanumeric-Display-p-4032.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
 
 
 

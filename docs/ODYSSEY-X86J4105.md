@@ -22,7 +22,7 @@ The ODYSSEY - X86J4105, is based on Intel Celeron J4105, a Quad-Core 1.5GHz CPU 
 - Pre-installed with Windows 10 Enterprise
 - Compatible with Grove Ecosystem
 
-<p style=":center"><a href="https://www.seeedstudio.com/ODYSSEY-X86J4105800-p-4445.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/ODYSSEY-X86J4105800-p-4445.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
 
 ## Hardware Specifications
 

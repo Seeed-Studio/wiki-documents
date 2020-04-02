@@ -19,7 +19,7 @@ The Grove Base Hat for Raspberry Pi provide Digital/Analog/I2C/PWM/UART port to 
 Frankly speaking, it's about 60 Grove modules support the Grove Base Hat for Raspberry Pi now. However, we will continue to add new compatible modules, the more you use, the more grove added.
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-Zero-p-3187.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-Zero-p-3187.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
 
 
 ## Features

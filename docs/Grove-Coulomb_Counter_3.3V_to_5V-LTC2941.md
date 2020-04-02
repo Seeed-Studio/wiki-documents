@@ -16,7 +16,7 @@ The coulomb (symbol: C) is the International System of Units (SI) unit of electr
 The Grove - Coulomb Counter 3.3V to 5V (LTC2941) is based on LTC2941, its operating range is perfectly suited for single-cell Li-Ion batteries. A precision coulomb counter integrates current through a sense resistor between the battery’s positive terminal and the load or charger. This module measures the amount of amp-hours have been used, if you use a fully charged battery, you can test the amount of battery you have used, the remaining percentage, just like the remaining battery shown in your phone. Vice versa, if you are changring a battery, you can use this module to monitor the charging process.
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-Coulomb-Counter-3.3V-to-5V-(LTC2941)-p-3215.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-Coulomb-Counter-3.3V-to-5V-(LTC2941)-p-3215.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
 
 
 

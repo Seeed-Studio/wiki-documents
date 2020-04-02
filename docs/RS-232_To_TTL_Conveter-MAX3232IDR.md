@@ -17,7 +17,7 @@ Most of the MCUs use TTL levels, and the computer serial port generally uses 232
 This module is based on Max3232, it supports multiple baud rate communication and theoretically supports communication up to 230400bps baud. 
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/RS-232-To-TTL-Conveter-MAX3232IDR-p-2851.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/RS-232-To-TTL-Conveter-MAX3232IDR-p-2851.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
 
 ## Version
 

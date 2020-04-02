@@ -15,7 +15,7 @@ The Grove - OLED Display 0.96" (SSD1315) is a monochrome(white) 128×64 pixels p
 
 Thanks to the new SSD1315 chip, it can work with 3.3V, so that we removed the expensive DC-DC boost circuit. And with the onboard level shift circuit, the new Grove - OLED Display 0.96" can work with 3.3V and 5V platform. That is to say, you can use it easily as an Arduino OLED display, Raspberry Pi OLED display, etc.
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-OLED-Display-0-96-SSD1315-p-4294.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-OLED-Display-0-96-SSD1315-p-4294.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
 
 ## Feature
 

@@ -15,7 +15,7 @@ The Grove - MP3 is a 20x40mm super mini Music module based on WT2003S-20SS audio
 
 As the name indicates, the Grove - MP3 V3 is the upgraded version of Grove - MP3 V2. Compared with Grove MP3 V2, the V3 added a JST2.0 speaker port, so that you can output the audio via speaker and 3.5mm earphone at the same time.
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-MP3-V3-p-4297.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-MP3-V3-p-4297.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
 
 ## Feature
 
