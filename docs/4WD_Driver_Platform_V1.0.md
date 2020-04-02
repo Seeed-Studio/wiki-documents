@@ -8,11 +8,11 @@ surveyurl: https://www.research.net/r/4WD_Driver_Platform_V1
 sku:  105090001
 ---
 
-![](https://github.com/SeeedDocument/4WD_Driver_Platform_V1.0/raw/master/img/4WD_Driver_Platform_V1.0_1200.jpg)
+![](https://files.seeedstudio.com/wiki/4WD_Driver_Platform_V1.0/img/4WD_Driver_Platform_V1.0_1200.jpg)
 
 4WD Driver Platform V1.0 (No Intel Edison chip included) is a motor driver board which support 4-wheel driving with bidirectional and full control to each motor. The most important features of this drive board is it expandability achieved by grove interfaces which can enable your project more versatile. It also get detailed and simple SDK (software development kit) which will make you development process quicker and easier. With Edison installed, you can build a powerful system to satisfy your different needs.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/4WD-Driver-Platform-V1.0-p-2536.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/4WD-Driver-Platform-V1.0-p-2536.html)
 
 ##  Features
 ---
@@ -102,7 +102,7 @@ sku:  105090001
 ##  Hardware Overview
 ---
 
-![](https://github.com/SeeedDocument/4WD_Driver_Platform_V1.0/raw/master/img/4WD_Driver_Platform_V1.0_3400_Modules.jpg)
+![](https://files.seeedstudio.com/wiki/4WD_Driver_Platform_V1.0/img/4WD_Driver_Platform_V1.0_3400_Modules.jpg)
 
 **<span style="font-size:1em; color:#FF0000;">Note that only 3.3 V voltage is valid to apply on ALL motor interfaces and grove modules.</span>**
 
@@ -146,11 +146,11 @@ Rule of thumb: We recommend you only select drivers and flash tool to be install
 
 3.Startup putty to and configure it as follow figure shows(marked with red rectangle)
 
-![](https://github.com/SeeedDocument/4WD_Driver_Platform_V1.0/raw/master/img/Putty_config.jpg)putty configurations
+![](https://files.seeedstudio.com/wiki/4WD_Driver_Platform_V1.0/img/Putty_config.jpg)putty configurations
 
 4.Click Open to enter serial terminal
 
-![](https://github.com/SeeedDocument/4WD_Driver_Platform_V1.0/raw/master/img/Putty_login.png)
+![](https://files.seeedstudio.com/wiki/4WD_Driver_Platform_V1.0/img/Putty_login.png)
 
 putty login
 
@@ -182,7 +182,7 @@ You can refer to [Edison 4WD Auto Robotic Platform 2.0](http://wiki.seeedstudio.
 
 ##  Resources
 ---
-*   [Schematic files](https://github.com/SeeedDocument/4WD_Driver_Platform_V1.0/raw/master/res/4WD_Auto_Robotic_Platform_V1.0_SCHAndPCB.zip)
+*   [Schematic files](https://files.seeedstudio.com/wiki/4WD_Driver_Platform_V1.0/res/4WD_Auto_Robotic_Platform_V1.0_SCHAndPCB.zip)
 
 *   [Git library(SDK) files](https://github.com/Pillar1989/webrobot/blob/master/motor.py)
 

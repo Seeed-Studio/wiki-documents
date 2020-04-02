@@ -74,7 +74,7 @@ This sample simply reads from the GPS by using software serial and sends it back
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-GPS/raw/master/img/with_ardu.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-GPS/img/with_ardu.jpg)
 
 !!!Note
 	If we don't have Grove Base Shield, We also can directly connect Grove - GPS to Seeeduino as below.
@@ -165,7 +165,7 @@ void clearBufferArray()                     // function to clear buffer array
 
 | Raspberry pi | GrovePi_Plus | Grove - GPS |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-GPS/raw/master/img/45d_small.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-GPS/img/45d_small.jpg)|
 |[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](http://www.seeedstudio.com/depot/grove-gps-p-959.html)|
 
 
@@ -173,7 +173,7 @@ void clearBufferArray()                     // function to clear buffer array
 - **Step 3.** Plug the sensor to grovepi+ socket **RPISER** by using a grove cable.
 - **Step 4.** Connect the Raspberry to PC through USB cable.
 
-![](https://github.com/SeeedDocument/Grove-GPS/raw/master/img/witu_rpi.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-GPS/img/witu_rpi.jpg)
 
 #### Software
 

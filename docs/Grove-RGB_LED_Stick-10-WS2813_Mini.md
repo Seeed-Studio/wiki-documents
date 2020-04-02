@@ -9,7 +9,7 @@ sku: 104020131
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-RGB_LED_Stick-10-WS2813_Mini/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Stick-10-WS2813_Mini/img/main.jpg)
 
 We integrated 10 full-color RGB LEDs on this stick, with only one signal pin you can control all 10 LEDs easily. All the LEDs are WS2813 Mini, which is an intelligent control and high cost-effective LED.
 What's more, the WS2813 support signal break-point continuous transmission, which means you can continue to use other leds with one led be broken. 
@@ -37,7 +37,7 @@ You can use this little stick create hundreds of thausands light effect, we hope
 
 ### Signal break-point continuous transmission
 
-![](https://github.com/SeeedDocument/Outsourcing/raw/master/104020108/img/LED_RFBP.jpg)
+![](https://files.seeedstudio.com/wiki/Outsourcing/104020108/img/LED_RFBP.jpg)
 
 As long as not two or more adjacent LEDs are broken, the remaining LEDs will be able to work normally.
 
@@ -69,7 +69,7 @@ As long as not two or more adjacent LEDs are broken, the remaining LEDs will be 
 
 ### Pin Out
 
-![](https://github.com/SeeedDocument/Grove-RGB_LED_Stick-10-WS2813_Mini/raw/master/img/pin_out.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Stick-10-WS2813_Mini/img/pin_out.jpg)
 
 
 
@@ -119,7 +119,7 @@ As long as not two or more adjacent LEDs are broken, the remaining LEDs will be 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-RGB_LED_Stick-10-WS2813_Mini/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Stick-10-WS2813_Mini/img/connect.jpg)
 
 !!!Note
         If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
@@ -146,12 +146,12 @@ As long as not two or more adjacent LEDs are broken, the remaining LEDs will be 
 
 - **Step 3.** Restart the Arduino IDE. Open the example, you can open it in the following three ways：
     1. Open it directly in the Arduino IDE via the path: **File --> Examples --> Adafruit_Neopixel --> simple**. 
-    ![](https://github.com/SeeedDocument/Grove-RGB_LED_Stick-10-WS2813_Mini/raw/master/img/path1.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Stick-10-WS2813_Mini/img/path1.jpg)
     
     2. Open it in your computer by click the **simple.ino** which you can find in the folder **XXXX\Arduino\libraries\Seeed_Led_Strip-master\examples\simple**, **XXXX** is the location you installed the Arduino IDE.
-    ![](https://github.com/SeeedDocument/Grove-RGB_LED_Stick-10-WS2813_Mini/raw/master/img/path2.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Stick-10-WS2813_Mini/img/path2.jpg)
     
-    3. Or, you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+    3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 
 ```C++
@@ -216,7 +216,7 @@ void loop() {
         If every thing goes well, now you can see the LED strip shining:
 
 
-![](https://github.com/SeeedDocument/Grove-RGB_LED_Stick-10-WS2813_Mini/raw/master/img/test20181210_162208.gif)
+![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Stick-10-WS2813_Mini/img/test20181210_162208.gif)
 
 
 ## Schematic Online Viewer
@@ -232,7 +232,7 @@ void loop() {
 
 - **[Zip]** [Led_Strip Library](https://github.com/Seeed-Studio/Seeed_Led_Strip/archive/master.zip)
 
-- **[PDF]** [Datasheet WS2813-Mini](https://github.com/SeeedDocument/Grove-RGB_LED_Stick-10-WS2813_Mini/raw/master/res/WS2813-Mini.pdf)
+- **[PDF]** [Datasheet WS2813-Mini](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Stick-10-WS2813_Mini/res/WS2813-Mini.pdf)
 
 
 

@@ -9,13 +9,13 @@ sku:
 tags:
 
 ---
-![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_82.JPG)
+![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_82.JPG)
 
 Edison 4WD Auto Robotic Platform 2.0 is fundamental development platform which is based on Intel Edison and features powerful scalability. It can helps inventors, entrepreneurs, and consumer product designers develop more practical and various robots easily. Right in this page, we will show you a simple and cool application.
 
 ##   Parts List Check
 
-For your sake, please do [parts list](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/res/Parts_List_for_Intel_Edison.pdf) checking.
+For your sake, please do [parts list](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/res/Parts_List_for_Intel_Edison.pdf) checking.
 
 
 ##   Product Assembly Guide
@@ -26,7 +26,7 @@ Completed view:
 <dl><dd>
 </dd></dl>
 
-![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_82.JPG)
+![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_82.JPG)
 
 <dl><dd>
 </dd></dl>
@@ -34,32 +34,32 @@ Completed view:
 Main steps required required to complete assembly.
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:29px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/Aluminium_frame.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:29px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/Aluminium_frame.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:35px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_11.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:35px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_11.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:26.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_22.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:26.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_22.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:29.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_32.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:29.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_32.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:23.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_42.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:23.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_42.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:28.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_59.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:28.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_59.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -69,7 +69,7 @@ Main steps required required to complete assembly.
 *   Completed aluminum frame like following figure shows.
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:29px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/Aluminium_frame.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:29px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/Aluminium_frame.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -77,27 +77,27 @@ Main steps required required to complete assembly.
 *   Parts required for this step: Bracket*4, long aluminum bar*2, short aluminum bar*2, M4 flat head socket cap screw*16, hex key *1
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:15px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_02.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:15px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_02.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:35px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_03.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:35px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_03.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:35px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_04.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:35px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_04.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:15px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_05.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:15px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_05.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:15px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_06.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:15px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_06.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -110,7 +110,7 @@ Pick a bracket, a short aluminum bar and join them.
 </dd></dl>
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:35px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_07.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:35px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_07.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -128,7 +128,7 @@ After joining, put screw into screw hole from outer side to inner side and fixed
 </dd></dl>
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:35px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_08.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:35px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_08.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -141,7 +141,7 @@ Pick a long aluminum bar and make grooved side of bracket close to it.
 </dd></dl>
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:35px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_09.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:35px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_09.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -154,7 +154,7 @@ After joining, put screw into screw hole from outer side to inner side and fixed
 </dd></dl>
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:35px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_10.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:35px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_10.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -170,7 +170,7 @@ Repeat last two steps for another aluminum bar to complete aluminum frame instal
 </dd></dl>
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:35px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_11.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:35px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_11.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -178,22 +178,22 @@ Repeat last two steps for another aluminum bar to complete aluminum frame instal
 *   Parts required for this step: PMMA fixing board*1, cross recessed pan washer head screw*1, cross recessed flat head screw*4, hexagon nut*4, bottom board*4, plate spanner*1
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:15px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_12.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:15px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_12.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:33.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_13.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:33.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_13.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:23.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_14.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:23.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_14.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:26.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_15.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:26.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_15.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -208,7 +208,7 @@ Place PMMA fixing bar on the side with more screw hole, then align fixing board 
 </dd></dl>
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:19.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_16.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:19.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_16.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -218,12 +218,12 @@ Place PMMA fixing bar on the side with more screw hole, then align fixing board 
 Place nylon hinge on the side with more screw hole of bottom board and align them. Then use hexagon nut, plate spanner and cross recessed flat head screw to fix nylon hinge.
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:35px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_17.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:35px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_17.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:42.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_18.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:42.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_18.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -234,7 +234,7 @@ Place nylon hinge on PMMA fixing bar and align screw hole for both item. Then pu
 </dd></dl>
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:43px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_19.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:43px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_19.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -252,7 +252,7 @@ Fix nylon hinge to fixing bar with cross recessed flat head screw.
 </dd></dl>
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:27px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_20.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:27px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_20.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -265,7 +265,7 @@ Fix bottom board with three thumb screws.
 </dd></dl>
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:29.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_21.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:29.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_21.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -275,7 +275,7 @@ Fix bottom board with three thumb screws.
 *   Results show as follows after completion of this step:
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:26.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_22.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:26.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_22.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -283,17 +283,17 @@ Fix bottom board with three thumb screws.
 *   Parts required：Motor*4, m3 cross recessed pan head screw*12, shaft coupling*.
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:37.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_23.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:37.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_23.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:52px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_24.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:52px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_24.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:15px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_25.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:15px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_25.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -305,22 +305,22 @@ Fix bottom board with three thumb screws.
 Place motor's axle up and through bigger hole on long aluminum bar. Then fix motor with M3 cross recessed pan head screw from outer side to inner side.
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:32.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_26.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:32.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_26.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:29px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_27.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:29px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_27.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:26.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_28.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:26.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_28.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:35.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_29.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:35.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_29.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -332,7 +332,7 @@ Place M3 cross recessed pan head screws into shaft couplings' hole but don't mak
 </dd></dl>
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:40px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_30.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:40px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_30.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -345,7 +345,7 @@ Put shaft coupling(screw installed) onto motors' axles and align screw to the ho
 </dd></dl>
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:34.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_31.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:34.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_31.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -359,7 +359,7 @@ Put shaft coupling(screw installed) onto motors' axles and align screw to the ho
 *   Results show as follows after completion of this step:
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:29.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_32.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:29.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_32.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -367,12 +367,12 @@ Put shaft coupling(screw installed) onto motors' axles and align screw to the ho
 *   Parts required：wheel*4,M3 cross recessed pan head screw*4, screw cap washer*4，switch(connected with power cable)
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:22.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_33.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:22.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_33.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:31.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_34.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:31.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_34.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -385,7 +385,7 @@ Put on screw cap washers on M3 cross recessed pan head screw.
 </dd></dl>
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:30px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_35.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:30px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_35.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -398,7 +398,7 @@ Place and push wheel into shaft coupling (from both side of wheel will be okay).
 </dd></dl>
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:23.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_36.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:23.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_36.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -411,7 +411,7 @@ Loose screw cap washer as following figure shows.
 </dd></dl>
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:33px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_37.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:33px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_37.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -424,12 +424,12 @@ Lead switch through centered two hole on long aluminum bar(left), which have mor
 </dd></dl>
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:18px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_38.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:18px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_38.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:30px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_39.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:30px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_39.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -439,17 +439,17 @@ Lead switch through centered two hole on long aluminum bar(left), which have mor
 Fix switch as order showed by following figure with plate spanner.
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:30px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_39.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:30px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_39.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:30px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_40.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:30px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_40.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:27.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_41.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:27.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_41.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -459,7 +459,7 @@ Fix switch as order showed by following figure with plate spanner.
 *   Results show as follows after completion of this step:
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:23.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_42.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:23.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_42.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -467,37 +467,37 @@ Fix switch as order showed by following figure with plate spanner.
 *   Parts required：PMMA upper board*1, M3 hexagon nut*4, long distance spacer*4, short distance spacer*4, cross recessed pan washer head screw*4, heat sink*4.
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:37px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_43.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:37px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_43.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:24px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_44.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:24px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_44.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:27px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_45.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:27px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_45.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:20.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_46.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:20.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_46.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:27px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_47.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:27px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_47.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:29px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_48.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:29px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_48.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:28px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_49.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:28px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_49.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -507,7 +507,7 @@ Fix switch as order showed by following figure with plate spanner.
 *   Place distance spacer into the holes which is marked by red circle on PMMA board.
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:27.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_50.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:27.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_50.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -515,12 +515,12 @@ Fix switch as order showed by following figure with plate spanner.
 *   Fixed long distance spacers with M3 hexagon nut.
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:30px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_51.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:30px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_51.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:39px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_52.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:39px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_52.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -528,7 +528,7 @@ Fix switch as order showed by following figure with plate spanner.
 *   Assemble heat sink on PCB Assembly board and the location of heat sink is marked with white rectangle mark.
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:15.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_53.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:15.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_53.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -536,7 +536,7 @@ Fix switch as order showed by following figure with plate spanner.
 *   Tear off light blue film on heat sink and stick it on PCB Assembly board.
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:35px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_54.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:35px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_54.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -544,12 +544,12 @@ Fix switch as order showed by following figure with plate spanner.
 *   Put micro nut in red circle marked on PCB Assembly board and fix short distance spacer which is locate on other side.
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:24.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_55.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:24.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_55.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:22.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_56.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:22.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_56.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -557,7 +557,7 @@ Fix switch as order showed by following figure with plate spanner.
 *   Place PCB Assembly board assembled before on PMMA upper board and align short distance spacer into red circle marked.
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:27.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_57.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:27.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_57.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -565,7 +565,7 @@ Fix switch as order showed by following figure with plate spanner.
 *   Use M3 cross recessed pan washer head screw to fix PCA board on PMMA upper board.
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:29.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_58.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:29.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_58.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -575,7 +575,7 @@ Fix switch as order showed by following figure with plate spanner.
 *   Results show as follows after completion of this step:
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:28.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_59.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:28.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_59.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -585,17 +585,17 @@ Fix switch as order showed by following figure with plate spanner.
 </dd></dl>
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:29px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_60.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:29px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_60.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:45.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_61.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:45.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_61.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:16px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_62.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:16px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_62.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -608,7 +608,7 @@ Take power cable out of aluminum frame.
 </dd></dl>
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:33px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_63.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:33px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_63.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -626,12 +626,12 @@ Note power connector should be place on the same side with switch.
 </dd></dl>
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:38px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_64.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:38px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_64.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:40px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_65.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:40px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_65.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -641,12 +641,12 @@ Note power connector should be place on the same side with switch.
 *   Fix four screw into screw hole marked as follows.
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:31px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_66.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:31px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_66.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:30.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_67.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:30.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_67.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -654,12 +654,12 @@ Note power connector should be place on the same side with switch.
 *   Detach thumb screw on PMMA bottom board and lead groove wire through holes marked.
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:32.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_68.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:32.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_68.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:29px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_69.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:29px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_69.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -669,17 +669,17 @@ Note power connector should be place on the same side with switch.
 *   Assemble Velcro tape like following figure shows.
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:22.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_70.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:22.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_70.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:36.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_71.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:36.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_71.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:30px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_72.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:30px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_72.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -689,17 +689,17 @@ Note power connector should be place on the same side with switch.
 *   Lead motor-connecting wire out of aluminum frame through hole marked.
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:15px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_73.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:15px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_73.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:30.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_74.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:30.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_74.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:28px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_75.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:28px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_75.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -707,7 +707,7 @@ Note power connector should be place on the same side with switch.
 *   Re-fix thumb screw on PMMA bottom board.
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:32.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_76.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:32.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_76.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -715,7 +715,7 @@ Note power connector should be place on the same side with switch.
 *   Install aluminum upper board. Place aluminum upper board on long distance spacer, and fix it with cross recessed pan washer head screw according to arrow indicates. Now your get robotic platform.
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:31px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_77.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:31px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_77.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -771,7 +771,7 @@ Insert your SD card to Arduino expansion board. Note you need to format your SD 
 </dd></dl>
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:40.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_78.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:40.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_78.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -810,7 +810,7 @@ Detach Intel Edison from Arduino expansion board and then install Intel Edison o
 </dd></dl>
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:24.5px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_79.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:24.5px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_79.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -840,7 +840,7 @@ Launch a browser on your phone and input _edison.local_ in address bar.
 Now you can control you robot movement by virtual joystick on your phone.
 
 *   <div style="width: 155px">
-<div class="thumb" style="width: 150px;"><div style="margin:15px auto;">![](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/img/4WD_Edison_80.jpg)</div></div>
+<div class="thumb" style="width: 150px;"><div style="margin:15px auto;">![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/img/4WD_Edison_80.jpg)</div></div>
 <div class="gallerytext">
 </div>
 </div>
@@ -849,9 +849,9 @@ Now you can control you robot movement by virtual joystick on your phone.
 
 ##   More development sources
 
-- [Pin mappings](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/res/Pin_mappings.pdf)
+- [Pin mappings](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/res/Pin_mappings.pdf)
 
-- [Module Interfaces](https://github.com/SeeedDocument/Edison_4WD_Auto_Robotic_Platform_2.0/raw/master/res/4WD_Driver_Platform_V1.0_3400_Modules.jpg)
+- [Module Interfaces](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/res/4WD_Driver_Platform_V1.0_3400_Modules.jpg)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

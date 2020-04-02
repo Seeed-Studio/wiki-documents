@@ -11,11 +11,11 @@ tags:
 
 ---
 
-![](https://github.com/SeeedDocument/Grove-Single_Axis_Analog_Gyro/raw/master/img/Axis_Analog_Gyro_01.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Single_Axis_Analog_Gyro/img/Axis_Analog_Gyro_01.jpg)
 
 The Grove – Signal Axis Analog Gyro is based on an angular velocity sensor (Murata-ENC-03R) that uses the phenomenon of Coriolis force. It can only measure the X-axis angular velocity, which is different from other 3-Axis gyro, but with a higher speed. It can be used for the position control and attitude control like the self-balanced 2WD.
 
-Model:[SEN05091P](https://github.com/SeeedDocument/Grove-Base_Shield_for_IOIO-OTG/raw/master/res/Grove-Base_Shield_for_IOIO-OTG_Eagle_File.zip)
+Model:[SEN05091P](https://files.seeedstudio.com/wiki/Grove-Base_Shield_for_IOIO-OTG/res/Grove-Base_Shield_for_IOIO-OTG_Eagle_File.zip)
 
 ## Feature
 
@@ -90,11 +90,11 @@ and then the average of these data will be treated as the reference value.
 
  4.Now, it is time to the calibration.<font color=#DC143C face="">Put the sensor on your desk horizontally</font>， and then press the Reset button on the Seeeduino, and then Open the serial tool:
 
-![](https://github.com/SeeedDocument/Grove-Single_Axis_Analog_Gyro/raw/master/img/Gyro_Result.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Single_Axis_Analog_Gyro/img/Gyro_Result.jpg)
 
 5.As you see the "Now you can begin your test", that means the calibration done. You can use the sensor now. Rotating direction can reference the following picture:
 
-![](https://github.com/SeeedDocument/Grove-Single_Axis_Analog_Gyro/raw/master/img/Rotate_direction.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Single_Axis_Analog_Gyro/img/Rotate_direction.jpg)
 
 ### With [Raspberry Pi](https://seeeddoc.github.io/GrovePiPlus/)
 
@@ -184,13 +184,13 @@ and then the average of these data will be treated as the reference value.
 
 ## Resource
 
-**[Eagle]**  [Grove - Signal Axis Analog Gyro Eagle](https://github.com/SeeedDocument/Grove-Single_Axis_Analog_Gyro/raw/master/res/Grove-Signal_Axis_Analog_Gyro_Eagle_File.zip)
+**[Eagle]**  [Grove - Signal Axis Analog Gyro Eagle](https://files.seeedstudio.com/wiki/Grove-Single_Axis_Analog_Gyro/res/Grove-Signal_Axis_Analog_Gyro_Eagle_File.zip)
 
-**[PDF]**  [Grove - Signal Axis Analog Gyro Sch](https://github.com/SeeedDocument/Grove-Single_Axis_Analog_Gyro/raw/master/res/Grove%20-%20Single%20Axis%20Analog%20Gyro%20v1.0%20Sch.pdf)
+**[PDF]**  [Grove - Signal Axis Analog Gyro Sch](https://files.seeedstudio.com/wiki/Grove-Single_Axis_Analog_Gyro/res/Grove%20-%20Single%20Axis%20Analog%20Gyro%20v1.0%20Sch.pdf)
 
-**[PDF]**  [Grove - Signal Axis Analog Gyro PCB](https://github.com/SeeedDocument/Grove-Single_Axis_Analog_Gyro/raw/master/res/Grove%20-%20Single%20Axis%20Analog%20Gyro%20v1.0%20PCB.pdf)
+**[PDF]**  [Grove - Signal Axis Analog Gyro PCB](https://files.seeedstudio.com/wiki/Grove-Single_Axis_Analog_Gyro/res/Grove%20-%20Single%20Axis%20Analog%20Gyro%20v1.0%20PCB.pdf)
 
-**[Datasheet]** [File Signal Axis Analog Gyro datasheet](https://github.com/SeeedDocument/Grove-Single_Axis_Analog_Gyro/raw/master/res/Analog_Gyro_datasheet.pdf)
+**[Datasheet]** [File Signal Axis Analog Gyro datasheet](https://files.seeedstudio.com/wiki/Grove-Single_Axis_Analog_Gyro/res/Analog_Gyro_datasheet.pdf)
 
 **[Code]** [Demo code on github](https://github.com/Seeed-Studio/Grove_Single_Axis_Analog_Gyro)
 

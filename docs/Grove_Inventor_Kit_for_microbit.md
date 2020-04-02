@@ -7,7 +7,7 @@ prodimagename: https://statics3.seeedstudio.com/seeed/file/2017-06/bazaar492598_
 surveyurl: https://www.research.net/r/Grove_Inventor_Kit_for_microbit
 sku:    110060762
 ---
-![](https://github.com/SeeedDocument/Grove_kit_for_microbit/raw/master/img/zoro_im_kitbox.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/zoro_im_kitbox.jpg)
 
 The BBC micro:bit is a pocket-sized computer that can easily realize your creativity without much electrical and coding knowledge. There are numerous possibility of creation you can dig out by micro:bit, from robots to musical instruments. However if you want to create more things, just 1 micro:bit is barely not enough, That’s why we introduce the Grove Inventor Kit for micro:bit to you.
 
@@ -23,7 +23,7 @@ We have already prepared 8 grove modules to let you get started with micro:bit. 
 
 
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Inventor-Kit-for-micro%3Abit-p-2891.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Inventor-Kit-for-micro%3Abit-p-2891.html)
 
 ##  Features
 
@@ -35,7 +35,7 @@ We have already prepared 8 grove modules to let you get started with micro:bit. 
 ##  Hardware Overview
 
 
-![](https://github.com/SeeedDocument/Grove_kit_for_microbit/raw/master/img/first_im.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/first_im.jpg)
 
 ###  **Parts list**
 | Part name | Quantity |
@@ -73,15 +73,15 @@ Please click to open the **[JavaScript Block Editor](https://makecode.microbit.o
 ####  Step2.Add Grove Package
   - Click the gear in the top right corner > select **Add Package**
 
-  ![](https://github.com/SeeedDocument/Grove_kit_for_microbit/raw/master/img/0-1.png)
+  ![](https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/0-1.png)
 
   - Enter project URL: **github.com/seeed-studio/pxt-grove**
 
-  ![](https://github.com/SeeedDocument/Grove_kit_for_microbit/raw/master/img/0-2.png)
+  ![](https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/0-2.png)
 
   - Now you can find **Grove**  in the toolbar.
 
-  ![](https://github.com/SeeedDocument/Grove_kit_for_microbit/raw/master/img/0-3.png)
+  ![](https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/0-3.png)
 
 ### Demo 1. Gesture Recognition
 
@@ -110,7 +110,7 @@ gesture name on micro:bit.
       -please make sure the LED Array is faced up when you plug the micro:bit, or you may damage the board.
 
 
-![](https://github.com/SeeedDocument/Grove_kit_for_microbit/raw/master/img/Gesture%20Recognition.png)
+![](https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/Gesture%20Recognition.png)
 
 
 #### Software
@@ -118,32 +118,32 @@ gesture name on micro:bit.
 
   Add On Gesture Block
 
-  ![](https://github.com/SeeedDocument/Grove_kit_for_microbit/raw/master/img/1-1.png)
+  ![](https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/1-1.png)
 
   - Step2:
 
   Select Right, so that the sensor can recognize when you move your hand from right to the left.
 
-  ![](https://github.com/SeeedDocument/Grove_kit_for_microbit/raw/master/img/1-2.png)
+  ![](https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/1-2.png)
 
   - Step3:
 
   Add Basic block **show string** and embed it into the Gesture block.Then double click "Hello!", change it to "Right".
 
-  ![](https://github.com/SeeedDocument/Grove_kit_for_microbit/raw/master/img/1-3.png)
+  ![](https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/1-3.png)
 
   - Step4:
 
   Add "Left" and "Clockwise" the same way, and embed **show icon** into "Clockwise".
 
-  ![](https://github.com/SeeedDocument/Grove_kit_for_microbit/raw/master/img/1-4.png)
+  ![](https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/1-4.png)
 
   - Step5:
 
   When you finish all this above, rename the project "gesture". Then you can download the project to your board. Click **Download** in the Bottom left corner, download the file **microbit-gesture.hex** into the flash of MICROBIT.
 
 
-  ![](https://github.com/SeeedDocument/Grove_kit_for_microbit/raw/master/img/1-5.png)
+  ![](https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/1-5.png)
 
   Now enjoy your project.
 
@@ -176,7 +176,7 @@ display.
   - Connect the Grove-4-Digit Display to **P1/P15** Port of micro:bit via a Grove Universal 4 pin cable.
   - Connect micro:bit to PC via a Micro-USB cable.
 
-  ![](https://github.com/SeeedDocument/Grove_kit_for_microbit/raw/master/img/Ultrasonic_Meter.png)
+  ![](https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/Ultrasonic_Meter.png)
 
 #### software
 
@@ -184,9 +184,9 @@ display.
 
   Add basic block **on start**, then add variable blocks **set item to 0**, rename ‘items’ to ‘Display’. If you have successfully added the Grove package, replace “0”with Grove block 4-Digit Display at P1 and P15.
 
-  ![](https://github.com/SeeedDocument/Grove_kit_for_microbit/raw/master/img/2-1.png)
+  ![](https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/2-1.png)
 
-  ![](https://github.com/SeeedDocument/Grove_kit_for_microbit/raw/master/img/2-2.png)
+  ![](https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/2-2.png)
 
   - Step2:
 
@@ -196,7 +196,7 @@ display.
 
   Add basic block pause (ms) (100).
 
-  ![](https://github.com/SeeedDocument/Grove_kit_for_microbit/raw/master/img/2-3.png)
+  ![](https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/2-3.png)
 
   - Step4:
 

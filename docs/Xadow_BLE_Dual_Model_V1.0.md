@@ -356,7 +356,7 @@ This section shows how to configure Bluetooth with PC, some basic methods of set
 
 Open a serial terminal and set Baud Rate:115200, Databits: 8, Stopbits: 1 and No Flow Control. Send “AT” to Bluetooth with the serial terminal and “OK” will be return if all goes well. The
 Bluetooth only respond AT commands when no connection was set up, or all commands were seen as string and sent out. You can distinguish the status through LED indicates.
-![](https://github.com/SeeedDocument/Xadow_BLE_Dual_Model_V1.0/raw/master/img/HM-13-AT.png)
+![](https://files.seeedstudio.com/wiki/Xadow_BLE_Dual_Model_V1.0/img/HM-13-AT.png)
 
 Then some useful configurations could be sent. Here’s are some samples of commands and response.
 
@@ -387,8 +387,8 @@ This kind of Bluetooth module has two protocol: Bluetooth EDR(Enhanced Data Rate
 
 Power the Bluetooth and configure it as Peripheral role. Search LightBlue in Apple Store and install it. Launch the app, you may find “HM-13-BLE” which we just renamed. Touch it to connect, then touch “Properties” to control it. The key “Hex” on the top right is for change data format, maybe String is easy to see. Hit “Listen for notifications” to enable data receiving. Then we can send data to PC through BLE, hit “Write new value” and write some words. Also PC can transfer data to iPhone with serial terminal.
 
-![](https://github.com/SeeedDocument/Xadow_BLE_Dual_Model_V1.0/raw/master/img/HM-13-080911.png)
-![](https://github.com/SeeedDocument/Xadow_BLE_Dual_Model_V1.0/raw/master/img/HM-13-14AT.png)
+![](https://files.seeedstudio.com/wiki/Xadow_BLE_Dual_Model_V1.0/img/HM-13-080911.png)
+![](https://files.seeedstudio.com/wiki/Xadow_BLE_Dual_Model_V1.0/img/HM-13-14AT.png)
 
 **Data transmission between Two Arduinos**
 
@@ -398,7 +398,7 @@ The program of Central and Peripheral use the same code, the only difference is 
 
 The initialization program flow please refer to the following flow chart. First of all we need to distinguish the presetting baud rate of the Bluetooth. After this, send commands to restore factory settings, and change baud rate from 115200 to 9600 since software serial will not working well at high baud rate. Then other parameters were configured to the Bluetooth with Reset command in the final.
 
-![](https://github.com/SeeedDocument/Xadow_BLE_Dual_Model_V1.0/raw/master/img/HM-13-Init-flowchat.png)
+![](https://files.seeedstudio.com/wiki/Xadow_BLE_Dual_Model_V1.0/img/HM-13-Init-flowchat.png)
 
 After the initialization, the Central and Peripheral will do different things, the Central will send message to Peripheral interval and print what received from Peripheral while the Peripheral only responds the Central.
 
@@ -406,12 +406,12 @@ Click [here](https://github.com/Seeed-Studio/HM-13_SW) to download the test code
 
 After downloading program, open two serial terminal windows, the LEDs on Bluetooth will flash, several seconds later, they stop to flash and keep on, this indicates that they connected to each other. According to the program is written, the Central sends message to the Peripheral continually and get feedback every time.
 
-![](https://github.com/SeeedDocument/Xadow_BLE_Dual_Model_V1.0/raw/master/img/HM-13-Debug_Output_Master.png)
-![](https://github.com/SeeedDocument/Xadow_BLE_Dual_Model_V1.0/raw/master/img/HM-13-Debug_Output_Slave.png)
+![](https://files.seeedstudio.com/wiki/Xadow_BLE_Dual_Model_V1.0/img/HM-13-Debug_Output_Master.png)
+![](https://files.seeedstudio.com/wiki/Xadow_BLE_Dual_Model_V1.0/img/HM-13-Debug_Output_Slave.png)
 
 ## Resources
 ---
-- [HM-13 Bluetooth Datasheet](https://github.com/SeeedDocument/Xadow_BLE_Dual_Model_V1.0/raw/master/res/Bluetooth_HM-13_en.pdf)
+- [HM-13 Bluetooth Datasheet](https://files.seeedstudio.com/wiki/Xadow_BLE_Dual_Model_V1.0/res/Bluetooth_HM-13_en.pdf)
 - [Arduino code](https://github.com/Seeed-Studio/HM-13_SW)
 - <a href="https://github.com/SeeedDocument/Xadow_BLE_Dual_Model_V1.0/raw/master/res/Xadow-BLE_(dual_model)_v1.0_sch_pcb.zip">Eagle_Xadow-BLE_(dual_model)_v1.0_sch_pcb]</a>
 - <a href="https://github.com/SeeedDocument/Xadow_BLE_Dual_Model_V1.0/raw/master/res/Xadow-BLE_(dual_model)_v1.0.pdf"> PDF_Xadow-BLE_(dual_model)_v1.0</a>

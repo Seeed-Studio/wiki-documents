@@ -10,7 +10,7 @@ tags:
 
 ---
 
-![](https://github.com/SeeedDocument/USB_To_Uart_3V3/raw/master/img/Photo_USB_To_Uart_5V_3V3.JPG)
+![](https://files.seeedstudio.com/wiki/USB_To_Uart_3V3/img/Photo_USB_To_Uart_5V_3V3.JPG)
 
 USB To Uart 3V3 is a USB to serial adapter, which is based on CH340, a USB bus convert chip. It can realize the convert of USB to serial interface/IrDA infrared/printer interface. This module can be used for uploading code or communicating with MCUs.   
 
@@ -34,7 +34,7 @@ USB To Uart 3V3 is a USB to serial adapter, which is based on CH340, a USB bus c
 
 ##  Interface Function
 
-![](https://github.com/SeeedDocument/USB_To_Uart_3V3/raw/master/img/USB_To_Uart_3V3_Interface.jpg)
+![](https://files.seeedstudio.com/wiki/USB_To_Uart_3V3/img/USB_To_Uart_3V3_Interface.jpg)
 
 *   ①：Power Indicator
 *   ②：Micro USB
@@ -60,7 +60,7 @@ Totally compatible with serial application program in computer endpoint Windows 
 
 *   3)If you can not find the port,please download Driver from [Here](http://wch-ic.com/download/list.asp?id=127)
 
-![](https://github.com/SeeedDocument/USB_To_Uart_3V3/raw/master/img/CH340_Driver.jpg)
+![](https://files.seeedstudio.com/wiki/USB_To_Uart_3V3/img/CH340_Driver.jpg)
 
 #####   Mac OS
 
@@ -82,7 +82,7 @@ If you want restore your Mac’s setting,You can exit developer mode by redefini
 
 ####   Hardware
 
-![](https://github.com/SeeedDocument/USB_To_Uart_3V3/raw/master/img/USB_To_Uart_Download.jpg)
+![](https://files.seeedstudio.com/wiki/USB_To_Uart_3V3/img/USB_To_Uart_Download.jpg)
 
 You should like this connect your circuit.
 
@@ -90,7 +90,7 @@ You should like this connect your circuit.
 
 We can download code to Seeeduino Ethernet by USB To Uart 3V3.
 
-![](https://github.com/SeeedDocument/USB_To_Uart_3V3/raw/master/img/USB_To_Uart_5V_3v3_Usage.jpg)
+![](https://files.seeedstudio.com/wiki/USB_To_Uart_3V3/img/USB_To_Uart_5V_3v3_Usage.jpg)
 
 Note that you should select the correct board type and COM port.
 
@@ -103,15 +103,15 @@ Note that you should select the correct board type and COM port.
 
 ##  Resource
 
-- **[Eagle]**[USB To Uart 3V3 v1.0 Eagle File](https://github.com/SeeedDocument/USB_To_Uart_3V3/raw/master/res/USB_To_Uart_3V3_Eagle.zip)
+- **[Eagle]**[USB To Uart 3V3 v1.0 Eagle File](https://files.seeedstudio.com/wiki/USB_To_Uart_3V3/res/USB_To_Uart_3V3_Eagle.zip)
 
-- **[PDF]**[USB To Uart_3V3 pdf](https://github.com/SeeedDocument/USB_To_Uart_3V3/raw/master/res/USB%20To%20Uart_3V3_Eagle/USB%20To%20Uart_3V3.pdf)
+- **[PDF]**[USB To Uart_3V3 pdf](https://files.seeedstudio.com/wiki/USB_To_Uart_3V3/res/USB%20To%20Uart_3V3_Eagle/USB%20To%20Uart_3V3.pdf)
 
-- **[EAGLE]**[USB To Uart_3V3 sch](https://github.com/SeeedDocument/USB_To_Uart_3V3/raw/master/res/USB%20To%20Uart_3V3_Eagle/USB%20To%20Uart_3V3.sch)
+- **[EAGLE]**[USB To Uart_3V3 sch](https://files.seeedstudio.com/wiki/USB_To_Uart_3V3/res/USB%20To%20Uart_3V3_Eagle/USB%20To%20Uart_3V3.sch)
 
-- **[PDF]**[Schematic in pdf](https://github.com/SeeedDocument/USB_To_Uart_3V3/raw/master/res/USB_To_Uart_3V3_SCH.pdf)
+- **[PDF]**[Schematic in pdf](https://files.seeedstudio.com/wiki/USB_To_Uart_3V3/res/USB_To_Uart_3V3_SCH.pdf)
 
-- **[Datasheet]**[Datasheet of CH340](https://github.com/SeeedDocument/USB_To_Uart_3V3/raw/master/res/CH340DS1_EN.PDF)
+- **[Datasheet]**[Datasheet of CH340](https://files.seeedstudio.com/wiki/USB_To_Uart_3V3/res/CH340DS1_EN.PDF)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

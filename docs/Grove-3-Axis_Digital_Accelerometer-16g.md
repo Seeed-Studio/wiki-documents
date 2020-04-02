@@ -9,7 +9,7 @@ sku: 101020054
 ---
 
 ---
-![](https://github.com/SeeedDocument/Grove_3_Axis_Digital_Accelerometer_Plus_Minus_16g/raw/master/images/Grove-3-Axis_16g_v1.3.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_3_Axis_Digital_Accelerometer_Plus_Minus_16g/images/Grove-3-Axis_16g_v1.3.jpg)
 
 
 3-Axis Digital Accelerometer is the key part in projects like orientation detection, gesture detection and Motion detection. This 3-Axis Digital Accelerometer(±16g) is based on low power consumption IC ADXL345. It features up to 10,000g high shock survivability and configurable Samples per Second rate. For generous applications that don't require too large measurement range, this is a great choice because it's durable, energy saving and cost-efficient.
@@ -38,7 +38,7 @@ sku: 101020054
 Every accelerometer has been individually tested before shipping to you. But in rare cases, you might need to reset the zero-offset by yourself.
 Here below we show you how to read the raw data and obtain data in the unit of g, AKA g-force, from this accelerometer.
 
-![](https://github.com/SeeedDocument/Grove_3_Axis_Digital_Accelerometer_Plus_Minus_16g/raw/master/images/Grove_-_3-Axis_Digital_Accelerometer_ADXL345_connect_photo.JPG)
+![](https://files.seeedstudio.com/wiki/Grove_3_Axis_Digital_Accelerometer_Plus_Minus_16g/images/Grove_-_3-Axis_Digital_Accelerometer_ADXL345_connect_photo.JPG)
 
 - **Step1:** Plug it onto the I2C port of your Grove - Base Shield.
 - **Step2:** Download the [Digital Accelerometer(±16g) Library](https://github.com/Seeed-Studio/Accelerometer_ADXL345) .zip and unpack it into arduino-1.0\libraries in your Arduino installation folder. If you don't know how to install library for Arduino, please follow the toturial [How to install an Arduino library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/)
@@ -47,7 +47,7 @@ Here below we show you how to read the raw data and obtain data in the unit of g
 - **Step4：** Upload the code and open the serial monitor(usually it is on the right up corner). Please refer to the toturial [Upload code](http://wiki.seeedstudio.com/Upload_Code/) if you do not know how to upload.
 - **Step5：** The result will be showed as the format in below image, shake the grove and you will find the number changing.
 
-![](https://github.com/SeeedDocument/Grove_3_Axis_Digital_Accelerometer_Plus_Minus_16g/raw/master/images/Digital_Accelerometer.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_3_Axis_Digital_Accelerometer_Plus_Minus_16g/images/Digital_Accelerometer.jpg)
 
 The outputs of this sensor consist of two parts: raw data and 3-axis acceleration info converted into the unit of gravity, "g".
 
@@ -81,9 +81,9 @@ Upload the program to your Arduino/Seeeduino.
 
 - **Step2:** You should have completed configuring the development enviroment, otherwise follow [here](http://wiki.seeedstudio.com/GrovePi_Plus/#Introducing_the_GrovePi.2B).
 
-![](https://github.com/SeeedDocument/Grove_3_Axis_Digital_Accelerometer_Plus_Minus_16g/raw/master/images/C9-create-tab.png)
+![](https://files.seeedstudio.com/wiki/Grove_3_Axis_Digital_Accelerometer_Plus_Minus_16g/images/C9-create-tab.png)
 
-![](https://github.com/SeeedDocument/Grove_3_Axis_Digital_Accelerometer_Plus_Minus_16g/raw/master/images/C9_newfile.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_3_Axis_Digital_Accelerometer_Plus_Minus_16g/images/C9_newfile.jpg)
 
 - **Step3:** Connection
    - Plug the sensor to grovepi socket i2c-x(1~3) by using a grove cable.
@@ -346,9 +346,9 @@ if __name__ == "__main__":
 
 ## Resources
 ---
-- [Eagle file.zip](https://github.com/SeeedDocument/Grove_3_Axis_Digital_Accelerometer_Plus_Minus_16g/raw/master/resources/202000067_PCBA-Grove%203%20Axis%20Digital%20Accelerometer%C2%B116g%20v1.2.zip)
+- [Eagle file.zip](https://files.seeedstudio.com/wiki/Grove_3_Axis_Digital_Accelerometer_Plus_Minus_16g/resources/202000067_PCBA-Grove%203%20Axis%20Digital%20Accelerometer%C2%B116g%20v1.2.zip)
 - [Suli-compatible Library](https://github.com/Seeed-Studio/ACC_Adxl345_Suli)
-- [ADXL345 datasheet.pdf](https://github.com/SeeedDocument/Grove_3_Axis_Digital_Accelerometer_Plus_Minus_16g/raw/master/res/ADXL345_datasheet.pdf)
+- [ADXL345 datasheet.pdf](https://files.seeedstudio.com/wiki/Grove_3_Axis_Digital_Accelerometer_Plus_Minus_16g/res/ADXL345_datasheet.pdf)
 - [github repository for 3-Axis Digital Accelerometer(±16g)](https://github.com/Seeed-Studio/Accelerometer_ADXL345)
 - [Grove - 3-Axis Digital Accelerometer(±16g)](https://github.com/SeeedDocument/Grove_3_Axis_Digital_Accelerometer_Plus_Minus_16g/raw/master/resources/DigitalAccelerometer_ADXL345.zip)
 - [Codecraft CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove_3_Axis_Digital_Accelerometer_Plus_Minus_16g/master/res/Grove_3_Axis_Digital_Acceleromete_CDC_File.zip)

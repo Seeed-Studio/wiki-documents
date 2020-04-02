@@ -9,7 +9,7 @@ sku: 101020023
 tags: io_3v3, io_5v, plat_duino, plat_linkit, plat_bbg, plat_wio, plat_pi, plat_linkit
 ---
 
-![](https://github.com/SeeedDocument/Grove_Sound_Sensor/raw/master/img/page_small_1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Sound_Sensor/img/page_small_1.jpg)
 
 Grove - Sound Sensor can detect the sound intensity of the environment. The main component of the module is a simple microphone, which is based on the LM386 amplifier and an electret microphone. This module's output is analog and can be easily sampled and tested by a Seeeduino.
 
@@ -67,14 +67,14 @@ Grove - Sound Sensor can detect the sound intensity of the environment. The main
 
 |Seeeduino V4.2| Base Shield|Grove-Sound Sensor|
 |--------------|------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Sound_Sensor/raw/master/img/page_small_1.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Sound_Sensor/img/page_small_1.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/Grove-Sound-Sensor-p-752.html)|
 
 - **Step 2.** Connect Grove-Sound Sensor to port **A0** of Grove-Base Shield.
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
 - **Step 4.** Connect Seeeduino to PC via a USB cable.    
 
-![](https://github.com/SeeedDocument/Grove_Sound_Sensor/raw/master/img/1_connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Sound_Sensor/img/1_connect.jpg)
 
 !!!Note
 	If we don't have Grove Base Shield, We also can directly connect Grove-Sound Sensor to Seeeduino as below.
@@ -156,7 +156,7 @@ Upload the program to your Arduino/Seeeduino.
 
 | Raspberry pi | Grove Base Hat for RasPi| Grove - Sound Sensor|
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Sound_Sensor/raw/master/img/page_small_1.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Sound_Sensor/img/page_small_1.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](http://www.seeedstudio.com/Grove-Sound-Sensor-p-752.html)|
 
 
@@ -166,7 +166,7 @@ Upload the program to your Arduino/Seeeduino.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove_Sound_Sensor/raw/master/img/Sound_Hat.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Sound_Sensor/img/Sound_Hat.jpg)
 
 
 !!! Note
@@ -277,7 +277,7 @@ You can quit this program by simply press ++ctrl+c++.
 
 | Raspberry pi | GrovePi_Plus|Grove-Sound Sensor|Grove-Blue LED|
 |--------------|-------------|-----------------|----------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Sound_Sensor/master/images/gs_1.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Sound_Sensor/raw/master/img/groveblue%20led.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Sound_Sensor/master/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Sound_Sensor/img/groveblue%20led.jpg)|
 |[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](http://www.seeedstudio.com/Grove-Sound-Sensor-p-752.html)|[Get One Now](https://www.seeedstudio.com/Grove---Blue-LED-p-1139.html)|
 
 - **Step 2.** Plug the GrovePi_Plus into Raspberry.
@@ -286,7 +286,7 @@ You can quit this program by simply press ++ctrl+c++.
 
 - **Step 4.** Connect the Raspberry to PC through USB cable.
 
-![](https://github.com/SeeedDocument/Grove_Sound_Sensor/raw/master/img/2_connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Sound_Sensor/img/2_connect.jpg)
 
 **Software**
 
@@ -405,10 +405,10 @@ sudo python grove_sound_sensor.py
 
 ## Resources
 
-- [**Eagle**][Schematic and PCB in Eagle format](https://github.com/SeeedDocument/Grove_Sound_Sensor/raw/master/resources/Grove%20-%20Sound%20Sensor.zip)
-- [**PDF**][Schematic in PDF format](https://github.com/SeeedDocument/Grove_Sound_Sensor/raw/master/res/Grove%20-%20Sound%20Sensor%20v1.6%20Schematic.pdf)
-- [**PDF**][PCB in PDF format](https://github.com/SeeedDocument/Grove_Sound_Sensor/raw/master/res/Grove%20-%20Sound%20Sensor%20v1.6%20PCB.pdf)
-- [**Datasheet**][LM386.PDF](https://github.com/SeeedDocument/Grove_Sound_Sensor/raw/master/res/LM386.pdf)
+- [**Eagle**][Schematic and PCB in Eagle format](https://files.seeedstudio.com/wiki/Grove_Sound_Sensor/resources/Grove%20-%20Sound%20Sensor.zip)
+- [**PDF**][Schematic in PDF format](https://files.seeedstudio.com/wiki/Grove_Sound_Sensor/res/Grove%20-%20Sound%20Sensor%20v1.6%20Schematic.pdf)
+- [**PDF**][PCB in PDF format](https://files.seeedstudio.com/wiki/Grove_Sound_Sensor/res/Grove%20-%20Sound%20Sensor%20v1.6%20PCB.pdf)
+- [**Datasheet**][LM386.PDF](https://files.seeedstudio.com/wiki/Grove_Sound_Sensor/res/LM386.pdf)
 - [**Codecraft**][CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove_Sound_Sensor/master/res/Grove_Sound_Sensor_CDC_File.zip)
 
 ## Projects

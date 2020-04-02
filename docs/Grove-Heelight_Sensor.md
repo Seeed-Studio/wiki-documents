@@ -6,11 +6,11 @@ prodimagename: 350px-Ultrasonic_Ranger.jpg
 surveyurl: https://www.research.net/r/Grove-Heelight-Sensor
 sku: 101020312
 ---
-![](https://github.com/SeeedDocument/Grove_Heelight_Sensor/raw/master/img/Heelight%20Sensor%20plus%20coin.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Heelight_Sensor/img/Heelight%20Sensor%20plus%20coin.jpg)
 
 Grove – Heelight Sensor is a smart voice sensor that can recognize up tp 500 digital voice commands. It was originally used on the Heelight – a smart colorful bulb that can be controlled by digital sound waves. Now we introduce this sensor into the small and neat Grove modules, allow you to realize smart control in your Arduino – based projects.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Heelight-Sensor-p-2867.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Heelight-Sensor-p-2867.html)
 
 ## Features
 
@@ -43,7 +43,7 @@ Grove – Heelight Sensor is a smart voice sensor that can recognize up tp 500 d
 ### Hardware Connection
 - Plug the Base Shield V2 on the Seeeduino V4.2
 - Connect the Grove - Heelight Sensor to D6 port of Base Shield V2.
-![](https://github.com/SeeedDocument/Grove_Heelight_Sensor/raw/master/img/hardware%20connection.JPG)
+![](https://files.seeedstudio.com/wiki/Grove_Heelight_Sensor/img/hardware%20connection.JPG)
 
 ### Upload the code
 Before uploading the code, please make sure you have already selected the right board and COM port. For Seeeduino V4.2, we can choose Arduino/Genuino Uno.
@@ -116,8 +116,8 @@ void loop() // run over and over
 }
 ```
 ### Results
-Open the serial monitor, set baud rate to be 57600, then play the sound. We have prepared 511 different [digital sounds](https://github.com/SeeedDocument/Grove_Heelight_Sensor/raw/master/res/audio.zip) for you. Every time one sound is played, the heelight sensor will output a hex value correspond to the sound, and the last 2 characters of the hex value is the same as the sounds value.
-![](https://github.com/SeeedDocument/Grove_Heelight_Sensor/raw/master/img/heelight%20sensor%20output.png)
+Open the serial monitor, set baud rate to be 57600, then play the sound. We have prepared 511 different [digital sounds](https://files.seeedstudio.com/wiki/Grove_Heelight_Sensor/res/audio.zip) for you. Every time one sound is played, the heelight sensor will output a hex value correspond to the sound, and the last 2 characters of the hex value is the same as the sounds value.
+![](https://files.seeedstudio.com/wiki/Grove_Heelight_Sensor/img/heelight%20sensor%20output.png)
 
 !!!Note
     If this sensor doesn't work well when you play the specific sounds we provided via PC or other speakers, please set the volume in a low level. We recommend 10/100 in windows PC.
@@ -125,7 +125,7 @@ Open the serial monitor, set baud rate to be 57600, then play the sound. We have
 
 ## Resources
 - [Website of Heelight](http://www.heelight.com/)
-- [500+ digital voice audio](https://github.com/SeeedDocument/Grove_Heelight_Sensor/raw/master/res/audio.zip)
+- [500+ digital voice audio](https://files.seeedstudio.com/wiki/Grove_Heelight_Sensor/res/audio.zip)
 - [Example Code](https://github.com/SeeedDocument/Grove_Heelight_Sensor/tree/master/res/Grove_-_Heelight_Sensor_example)
 
 ## Tech Support

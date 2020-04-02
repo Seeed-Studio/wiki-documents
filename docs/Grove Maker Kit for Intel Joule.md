@@ -7,7 +7,7 @@ surveyurl: https://www.research.net/r/Grove_Maker_Kit_for_Intel_Joule
 sku:    110060577
 ---
 
-![](https://github.com/SeeedDocument/Grove_Maker_Kit_for_Intel_Joule/raw/master/img/wuVn2N00lFDeHDqruNo2IO3v.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Maker_Kit_for_Intel_Joule/img/wuVn2N00lFDeHDqruNo2IO3v.jpg)
 
 Several weeks ago we published the Grove Shield for Intel Joule, This time, let’s introduce the incredible kit that can help you get started with Intel Joule easy and fast, the Grove maker kit for Intel Joule.
 
@@ -15,7 +15,7 @@ Joule is the most amazing board that Intel published for IoT project in 2016. Wi
 
 The Grove maker kit for Intel Joule is the best kit for fast building prototype based on Joule. The kit contains a grove bash shield for Joule, with which you can easily add the 13 grove modules that we specifically selected for Joule. If you have the Intel Joule on hand and plan to build a prototype fast, please don’t hesitate to choose the Grove maker kit for Intel Joule.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Maker-Kit-for-Intel-Joule-p-2796.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Maker-Kit-for-Intel-Joule-p-2796.html)
 
 ## Features
 
@@ -23,7 +23,7 @@ The Grove maker kit for Intel Joule is the best kit for fast building prototype 
 ## Part Introduction
 
 ### [Grove Shield for Intel Joule](https://www.seeedstudio.com/Grove-Shield-for-Intel-Joule-p-2782.html)
-![](https://github.com/SeeedDocument/Grove_Maker_Kit_for_Intel_Joule/raw/master/img/grove%20shield%20for%20intel%20joule.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Maker_Kit_for_Intel_Joule/img/grove%20shield%20for%20intel%20joule.jpg)
 
 The Grove Shield for Intel Joule is the key to bridge the Intel Joule to the family of Grove modules. by simplely plugging it onto your Joule board, you can have 8 solid and easy-to-use Grove connectors which includes interfaces like I2C, UART, digital I/Os and analog inputs right away. It also keeps the 2x20 pin headers in case you want more GPIOs for the project. A switch is integrated on board for selecting the working voltage at either 5V or 3.3 V.
 
@@ -59,8 +59,8 @@ The Grove Shield for Intel Joule is the key to bridge the Intel Joule to the fam
 
 
 ## Resources
-- [Grove Shield for Intel Joule v1.0.pdf](https://github.com/SeeedDocument/Grove_Maker_Kit_for_Intel_Joule/raw/master/res/Grove%20Shield%20for%20Intel%20Joule%20v1.0.pdf)
-- [Grove Shield for Intel Joule_eagle.zip](https://github.com/SeeedDocument/Grove_Maker_Kit_for_Intel_Joule/raw/master/res/Grove%20Shield%20for%20Intel%20Joule_eagle.zip)
+- [Grove Shield for Intel Joule v1.0.pdf](https://files.seeedstudio.com/wiki/Grove_Maker_Kit_for_Intel_Joule/res/Grove%20Shield%20for%20Intel%20Joule%20v1.0.pdf)
+- [Grove Shield for Intel Joule_eagle.zip](https://files.seeedstudio.com/wiki/Grove_Maker_Kit_for_Intel_Joule/res/Grove%20Shield%20for%20Intel%20Joule_eagle.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

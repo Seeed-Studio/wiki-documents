@@ -7,13 +7,13 @@ prodimagename: Intel_Edison_for_Arduino_Microsoft-Azure-Edition_cover.jpg
 surveyurl: https://www.research.net/r/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition
 sku:    110060422
 ---
-![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Intel_Edison_for_Arduino_Microsoft-Azure-Edition_cover.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Intel_Edison_for_Arduino_Microsoft-Azure-Edition_cover.jpg)
 
 Grove IoT Developer Kit – Microsoft Azure Edition contains an **Intel® Edison module**, an **Intel® Edison for Arduino board**, a **Grove Base Shield**, a set of **Grove sensors** and **actuators** with build-in Grove ports for rapid prototyping. Simply plug in the modules and you are ready to create.
 
 ##  Intel® Edison For Arduino
 
-![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Intel_Edison_for_Arduino_Microsoft_Azure_Edition_1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Intel_Edison_for_Arduino_Microsoft_Azure_Edition_1.jpg)
 
 The Intel® Edison compute module is designed for expert makers, entrepreneurs, and some industrial IoT applications, it provides ease-of-development for a range of prototyping projects or commercial ventures when performance matters. With an expansion board interfaces with a wide range of Arduino shields, Intel® Edison for Arduino allows quick and easy prototyping with open source hardware and a software development environment.
 
@@ -33,12 +33,12 @@ The Intel® Edison compute module is designed for expert makers, entrepreneurs, 
 
 ###   Inter Edison For Arduino
 
-[![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Intel_Edison_Compute_module.jpg)](http://www.seeedstudio.com/depot/Intel-Edison-p-2603.html)
+[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Intel_Edison_Compute_module.jpg)](http://www.seeedstudio.com/depot/Intel-Edison-p-2603.html)
 
 Intel Edison Compute module
 
 
-[![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Intel_Edison_for_Arduino.jpg)](http://www.seeedstudio.com/depot/Intel-Edison-for-Arduino-p-2149.html)
+[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Intel_Edison_for_Arduino.jpg)](http://www.seeedstudio.com/depot/Intel-Edison-for-Arduino-p-2149.html)
 
 Inter Edison For Arduino
 
@@ -47,7 +47,7 @@ Inter Edison For Arduino
 
 ###   Base Shield V2
 
-[![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Base_Shield_v2-1.png)](http://www.seeedstudio.com/depot/Base-Shield-V2-p-1378.html)
+[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Base_Shield_v2-1.png)](http://www.seeedstudio.com/depot/Base-Shield-V2-p-1378.html)
 
 Base Shield V2[(to Wiki)](/Base_Shield_V2)
 
@@ -66,35 +66,35 @@ Base Shield V2[(to Wiki)](/Base_Shield_V2)
     <th class="tg-yw4l">Wiki</th>
   </tr>
   <tr>
-    <td class="tg-yw4l">[![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Button.jpg)](http://www.seeedstudio.com/depot/Grove-Button-p-766.html)</td>
+    <td class="tg-yw4l">[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Button.jpg)](http://www.seeedstudio.com/depot/Grove-Button-p-766.html)</td>
     <td class="tg-yw4l">Grove - Button[(to Wiki)](/Grove-Button)</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">[![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Wiki_soundsensor.jpg)](http://www.seeedstudio.com/depot/Grove-Sound-Sensor-p-752.html)</td>
+    <td class="tg-yw4l">[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Wiki_soundsensor.jpg)](http://www.seeedstudio.com/depot/Grove-Sound-Sensor-p-752.html)</td>
     <td class="tg-yw4l">Grove - Sound Sensor[(to Wiki)](/Grove-Sound_Sensor)</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">[![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/3_aix_acc.jpg)](http://www.seeedstudio.com/depot/Grove-3Axis-Digital-Accelerometer15g-p-765.html)</td>
+    <td class="tg-yw4l">[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/3_aix_acc.jpg)](http://www.seeedstudio.com/depot/Grove-3Axis-Digital-Accelerometer15g-p-765.html)</td>
     <td class="tg-yw4l">Grove - 3-Axis Digital Accelerometer(±1.5g)[[(to Wiki)](/Grove-3-Axis_Digital_Accelerometer-1.5g)</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">[![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Touch_sensor.jpg)](http://www.seeedstudio.com/depot/Grove-Touch-Sensor-p-747.html)</td>
+    <td class="tg-yw4l">[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Touch_sensor.jpg)](http://www.seeedstudio.com/depot/Grove-Touch-Sensor-p-747.html)</td>
     <td class="tg-yw4l">Grove - Touch Sensor[(to Wiki)](/Grove-Touch_Sensor)</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">[![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Grove-Light_Sensor_v1.2_product_view_700_.jpg)](/Grove-Light_Sensor_v1.2)</td>
+    <td class="tg-yw4l">[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Grove-Light_Sensor_v1.2_product_view_700_.jpg)](/Grove-Light_Sensor_v1.2)</td>
     <td class="tg-yw4l">Grove - Light Sensor v1.2[(to Wiki)](/Grove-Light_Sensor_v1.2)</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">[![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Grove_Temperature_Sensor_View.jpg)](http://www.seeedstudio.com/depot/Grove-Temperature-Sensor-p-774.html)</td>
+    <td class="tg-yw4l">[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Grove_Temperature_Sensor_View.jpg)](http://www.seeedstudio.com/depot/Grove-Temperature-Sensor-p-774.html)</td>
     <td class="tg-yw4l">Grove - Temperature Sensor[(to Wiki)](/Grove-Temperature_Sensor_V1.2)</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">[![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Potentiometer1.jpg)](http://www.seeedstudio.com/depot/Grove-Rotary-Angle-SensorP-p-1242.html)</td>
+    <td class="tg-yw4l">[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Potentiometer1.jpg)](http://www.seeedstudio.com/depot/Grove-Rotary-Angle-SensorP-p-1242.html)</td>
     <td class="tg-yw4l">Grove - Rotary Angle Sensor(P)[(to Wiki)](/Grove-Rotary_Angle_Sensor)</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">[![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Piezo_Vibration_Sensor_01.jpg)](http://www.seeedstudio.com/depot/Grove-Piezo-Vibration-Sensor-p-1411.html)</td>
+    <td class="tg-yw4l">[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Piezo_Vibration_Sensor_01.jpg)](http://www.seeedstudio.com/depot/Grove-Piezo-Vibration-Sensor-p-1411.html)</td>
     <td class="tg-yw4l">Grove - Piezo Vibration Sensor[(to Wiki)](/Grove-Piezo_Vibration_Sensor)</td>
   </tr>
 </table>
@@ -102,37 +102,37 @@ Base Shield V2[(to Wiki)](/Base_Shield_V2)
 
 ###   Actuators
 
-*   [![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Serial_LEC_RGB_Backlight_Lcd.jpg)](http://www.seeedstudio.com/depot/Grove-LCD-RGB-Backlight-p-1643.html)
+*   [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Serial_LEC_RGB_Backlight_Lcd.jpg)](http://www.seeedstudio.com/depot/Grove-LCD-RGB-Backlight-p-1643.html)
 
 Grove - LCD RGB Backlight[(to Wiki)](/Grove-LCD_RGB_Backlight)
 
 
 
-*   [![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Buzzer1.jpg)](http://www.seeedstudio.com/depot/Grove-Buzzer-p-768.html)
+*   [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Buzzer1.jpg)](http://www.seeedstudio.com/depot/Grove-Buzzer-p-768.html)
 
 Grove - Buzzer[(to Wiki)](/Grove-Buzzer)
 
 
 
-*   [![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Red_LED.jpg)](http://www.seeedstudio.com/depot/Grove-Red-LED-p-1142.html)
+*   [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Red_LED.jpg)](http://www.seeedstudio.com/depot/Grove-Red-LED-p-1142.html)
 
 Grove - Red LED[(to Wiki)](/Grove-Red_LED)
 
 
 
-*   [![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Green_LED.jpg)](http://www.seeedstudio.com/depot/Grove-Green-LED-p-1144.html)
+*   [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Green_LED.jpg)](http://www.seeedstudio.com/depot/Grove-Green-LED-p-1144.html)
 
 Grove - Green LED
 
 
 
-*   [![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Blue_LED.jpg)](http://www.seeedstudio.com/depot/Grove-Green-LED-p-1144.html)
+*   [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Blue_LED.jpg)](http://www.seeedstudio.com/depot/Grove-Green-LED-p-1144.html)
 
 Grove - Blue LED
 
 
 
-*   [![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Stepper_Motor_with_Driver.jpg)](http://www.seeedstudio.com/depot/Gear-Stepper-Motor-with-Driver-p-1685.html)
+*   [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Stepper_Motor_with_Driver.jpg)](http://www.seeedstudio.com/depot/Gear-Stepper-Motor-with-Driver-p-1685.html)
 
 Gear Stepper Motor with Driver [(to Arduino Tutorial)](http://arduino.cc/en/Tutorial/MotorKnob)
 
@@ -147,7 +147,7 @@ Before we work on any Grove modules, let's firstly get started with Intel® Edis
 
 Install the compute module, attach the legs, and plug in your cables.
 
-![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Intel_edison_assemble.png)
+![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Intel_edison_assemble.png)
 
 ###  Step 2: Choose Your Operating System
 
@@ -196,13 +196,13 @@ How can you build an IoT device without the "I"? Let's [**connect your board to 
 
 As we've already installed the development environment including Arduino IDE in Step 2 (if not, you can download the latest Arduino IDE **[here](https://www.arduino.cc/en/Main/Software)**. ) now as your very first practice, let's try to [**blink an LED on Intel Edison Board with Ardunio IDE**](https://software.intel.com/en-us/get-started-arduino-blink).
 
-![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/BLINK.gif)
+![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/BLINK.gif)
 
 ##  Getting Started with the Grove System
 
 Connect the Grove - Base Shield to Intel Edison for Arduino via the pin connectors.
 
-![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Inteledison_baseshiled.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Inteledison_baseshiled.jpg)
 
 Using 26AWG Grove Cable making the following connections:
 
@@ -268,31 +268,31 @@ Using 26AWG Grove Cable making the following connections:
 <td width="100px"> D4
 </td></tr></table>
 
-![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Edison_Indoor_Wire_Figure.png)
+![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Edison_Indoor_Wire_Figure.png)
 
 ##   Running Example
 
 1. Open the web site: [Grove_Indoor_Environment_Demo](https://github.com/Seeed-Studio/Grove_Indoor_Environment_Demo) to download the whole project.
 
-![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Indoor_Kit_Github_Demo.png)
+![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Indoor_Kit_Github_Demo.png)
 
 2. Click **Tools &gt; Serial Port** and select the Com # that the Intel Edison is connected to
 
-![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Import_Indoor_Kit_Demo.png)
+![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Import_Indoor_Kit_Demo.png)
 
 3. Click Sketch&gt;Import Library…&gt;Add Library and import the library downloaded at **step 1**
 
 4. Click **File&gt;Examples&gt; Grove_Indoor_Environment_Demo** and select the demo Click **upload** icon
 
-![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Upload_Indoor_Kit_Demo.png)
+![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Upload_Indoor_Kit_Demo.png)
 
 5. Open **Serial Monitor**, it will print the sensors’ information:
 
-![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Indoor_Kit_Serial_Monitor.png)
+![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Indoor_Kit_Serial_Monitor.png)
 
 6. Rotate the Encoder to check the sensor value on the LCD.
 
-![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Indoor_Kit_Rotate_Encoder.png)
+![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Indoor_Kit_Rotate_Encoder.png)
 
 7. In the **“Send TextBox”**, you can enter the following command to operate the sensors and actuators:
 
@@ -351,17 +351,17 @@ Note:
 
 *   A actuator can only be controlled by a sensor. If A sensor wants to control a actuator(has be controlled by B sensor), B sensor should be set sleep.
 
-![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Indoor_Kit_command.png)
+![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Indoor_Kit_command.png)
 
 8. WiFi connection. open the Serial Monitor, and set your ssid and password(as below). Check the local IP on the LCD or Serial Monitor. On a device connected on the same network, open a web browser, and go to the IP address above, you can see the sensor value.
 
 _**Note: When visiting the web server, a port number(88)should be added,such as: 172.20.10.2:88.**_
 
-![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Indoor_Kit_SSID_PSW.png)
+![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Indoor_Kit_SSID_PSW.png)
 
-![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Indoor_Kit_Local_IP.png)
+![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Indoor_Kit_Local_IP.png)
 
-![](https://github.com/SeeedDocument/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/raw/master/img/Indoor_Kit_Web_Server.png)
+![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Indoor_Kit_Web_Server.png)
 
 ##   Resource
 

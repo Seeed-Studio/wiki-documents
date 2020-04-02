@@ -9,7 +9,7 @@ sku: 101020635
 ---
 
 
-![](https://github.com/SeeedDocument/Grove-Water-Level-Sensor/raw/master/img/Grove-Water-Level-Sensor-10CM-wiki.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Water-Level-Sensor/img/Grove-Water-Level-Sensor-10CM-wiki.jpg)
 
 The Grove Water Level Sensor is a very accurate sensor that can be helpful in water level sensing applications. It is completely waterproof and uses capacitive pads to detect water levels up to 10cm.
 
@@ -70,7 +70,7 @@ We used capacitive pads on the PCB of the module and did conformal coating over 
 
 | Seeeduino V4.2 | Base Shield | Grove - Water Level Sensor|
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Water-Level-Sensor/raw/master/img/Grove-Water-Level-Sensor-10CM-thumbnail.jpg)
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Water-Level-Sensor/img/Grove-Water-Level-Sensor-10CM-thumbnail.jpg)
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Water-Level-Sensor-10CM-p-4443.html)|
 
 >In addition, you can consider our new [Seeeduino Lotus M0+](https://www.seeedstudio.com/Seeeduino-Lotus-Cortex-M0-p-2896.html), which is equivalent to the combination of Seeeduino V4.2 and Baseshield.
@@ -83,7 +83,7 @@ We used capacitive pads on the PCB of the module and did conformal coating over 
 
 - **Step 3.** Connect Seeeduino to a PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-Water-Level-Sensor/raw/master/img/Connection.png)
+![](https://files.seeedstudio.com/wiki/Grove-Water-Level-Sensor/img/Connection.png)
 
 #### Software
 
@@ -249,7 +249,7 @@ void loop()
 ## Resources
 
 - **[ZIP]** [Grove - Water Level Sensor (10CM) Schematic file](https://github.com/SeeedDocument/Grove-Water-Level-Sensor/raw/master/res/Grove%20-%20Water%20Level%20Sensor%20(10CM)_SCH%26PCB.zip)
-- **[PDF]** [ATtiny1616-1617-Automotive-Data-Sheet](https://github.com/SeeedDocument/Grove-Water-Level-Sensor/raw/master/res/ATtiny1616-1617-Automotive-Data-Sheet.pdf)
+- **[PDF]** [ATtiny1616-1617-Automotive-Data-Sheet](https://files.seeedstudio.com/wiki/Grove-Water-Level-Sensor/res/ATtiny1616-1617-Automotive-Data-Sheet.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

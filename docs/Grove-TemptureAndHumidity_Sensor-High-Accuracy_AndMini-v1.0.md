@@ -10,7 +10,7 @@ sku: 101020074
 tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit
 ---
 
-![](https://github.com/SeeedDocument/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0/img/main.jpg)
 
 This is a multifunctional sensor that gives you temperature and relative humidity information at the same time. It utilizes a TH02 sensor that can meet measurement needs of general purposes. It provides reliable readings when environment humidity condition in between 0-80% RH, and temperature condition in between 0-70°C, covering needs in most home and daily applications that don't contain extreme conditions.
 
@@ -80,7 +80,7 @@ Specifications
 
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0/raw/master/img/arduino_connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0/img/arduino_connect.jpg)
 
 
 
@@ -105,7 +105,7 @@ Specifications
 
 - **Step 3.** Restart the Arduino IDE. Open “ TH02_demo” example via the path: **File --> Examples --> Grove Temper Humidity_TH02 --> TH02_demo**. Through this demo, we can read the temperature and relative humidity information of the environment.
 
-![](https://github.com/SeeedDocument/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0/raw/master/img/path.png)
+![](https://files.seeedstudio.com/wiki/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0/img/path.png)
 
 
 
@@ -118,7 +118,7 @@ This demo is going to show you how to read temperature and humidity information 
 
 The result should be like:
 
-![](https://github.com/SeeedDocument/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0/raw/master/img/result_arduino.png)
+![](https://files.seeedstudio.com/wiki/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0/img/result_arduino.png)
 
 
 

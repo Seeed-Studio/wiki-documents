@@ -7,7 +7,7 @@ prodimagename:
 surveyurl: https://www.research.net/r/Grove_IoT_Starter_Kits_Powered_by_AWS
 sku:
 ---
-![](https://github.com/SeeedDocument/Grove_IoT_Starter_Kits_Powered_by_AWS/raw/master/img/Aws_logo.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_IoT_Starter_Kits_Powered_by_AWS/img/Aws_logo.jpg)
 
 **Grove IoT Starter Kits Powered by Amazon Web Service (AWS)** are four different kits that are designed for _AWS_ to make IoT easier. Each kit consist of a Development Platform(main board) that can be connected to the cloud and a set of Grove modules. These Grove modules provide essential sensors and actuators for anyone interested in AWS IoT.
 
@@ -35,7 +35,7 @@ _**NOTE:**_ AWS IoT and Development boards that comes with the kit has lots of f
 
 ##  Seeeduino Cloud and Grove IoT Starter Kit Powered by AWS
 
-![](https://github.com/SeeedDocument/Grove_IoT_Starter_Kits_Powered_by_AWS/raw/master/img/Aws_kit_seeeduino_cloud.JPG) 
+![](https://files.seeedstudio.com/wiki/Grove_IoT_Starter_Kits_Powered_by_AWS/img/Aws_kit_seeeduino_cloud.JPG) 
 
 **[Seeeduino Cloud](/Seeeduino_Cloud "Seeeduino Cloud")** is a microcontroller board based on Dragino WiFi IoT module [HE](http://www.dragino.com/products/linux-module/item/87-he.html) and ATmega32u4. **HE** is a high performance, low cost 150M, 2.4G WiFi module which with an Open Source OpenWrt system inside. Seeeduino Cloud is also an [Arduino Yun](https://www.arduino.cc/en/Main/ArduinoBoardYun) compatible board. The Grove IoT Starter Kit includes most frequently used sensors and actuators to turn your ideas into tangible applications with AWS Cloud computing.
 
@@ -137,7 +137,7 @@ For _**User Manual**_, please go to:
 
 _Main articles: [Intel Edison](https://software.intel.com/en-us/iot/library/edison-getting-started)_
 
-![](https://github.com/SeeedDocument/Grove_IoT_Starter_Kits_Powered_by_AWS/raw/master/img/Aws_kit_edison.JPG) 
+![](https://files.seeedstudio.com/wiki/Grove_IoT_Starter_Kits_Powered_by_AWS/img/Aws_kit_edison.JPG) 
 
 Designed for expert makers, entrepreneurs, and industrial IoT companies, the **Intel Edison** module provides easier prototyping with a fully open source hardware and software development environment. It supports Wi-Fi and BLE 4.0 connectivity. This kit contains eleven, selected Grove sensors and actuators. It can be used to track indoor environment as well as to create smart-home applications.
 
@@ -231,7 +231,7 @@ For _**User Manual**_, please go to: [Intel® Edison and Grove IoT Starter Kit P
 
 ##  Beagle Bone Green and Grove IoT Starter Kit Powered by AWS
 
-![](https://github.com/SeeedDocument/Grove_IoT_Starter_Kits_Powered_by_AWS/raw/master/img/Aws_kit_bbg.JPG) 
+![](https://files.seeedstudio.com/wiki/Grove_IoT_Starter_Kits_Powered_by_AWS/img/Aws_kit_bbg.JPG) 
 
 _Main article: [BeagleBone Green](/BeagleBone_Green "BeagleBone Green")_
 
@@ -313,7 +313,7 @@ For _**User Manual**_, please go to:
 
 ##  LinkIt One and Grove IoT Starter Kit Powered by AWS
 
-![](https://github.com/SeeedDocument/Grove_IoT_Starter_Kits_Powered_by_AWS/raw/master/img/Aws_kit_linkit.JPG) 
+![](https://files.seeedstudio.com/wiki/Grove_IoT_Starter_Kits_Powered_by_AWS/img/Aws_kit_linkit.JPG) 
 
 _Main article: [LinkIt ONE](/LinkIt_ONE "LinkIt ONE")_
 

@@ -7,7 +7,7 @@ prodimagename:  GrovePi_Wiki_1.JPG
 surveyurl: https://www.research.net/r/GrovePi_plus
 sku:     103010002
 ---
-![](https://github.com/SeeedDocument/GrovePi_Plus/raw/master/img/110060049%2010_02.jpg)
+![](https://files.seeedstudio.com/wiki/GrovePi_Plus/img/110060049%2010_02.jpg)
 
 [GrovePi](http://www.dexterindustries.com/GrovePi/) is an add-on board that brings [Grove Sensors](/Grove_System "Grove System") to the [Raspberry Pi](http://www.seeedstudio.com/depot/s/Raspberry%2520Pi.html?search_in_description=0). As a new version of [GrovePi](http://www.seeedstudio.com/depot/GrovePi-p-1672.html).
 It adds support for the newly RaspberryPi Model B+ and Model A+.
@@ -65,9 +65,9 @@ If you want to know more about how it works, you can find all the design files i
 
 First, mount your GrovePi on the Raspberry Pi.  The GrovePi slides over top of the Raspberry Pi as shown in the picture below.
 
-![](https://github.com/SeeedDocument/GrovePi_Plus/raw/master/img/GrovePiPlus_wiki_3.jpg)
+![](https://files.seeedstudio.com/wiki/GrovePi_Plus/img/GrovePiPlus_wiki_3.jpg)
 
-![](https://github.com/SeeedDocument/GrovePi_Plus/raw/master/img/GrovePi_Wiki_1.JPG)
+![](https://files.seeedstudio.com/wiki/GrovePi_Plus/img/GrovePi_Wiki_1.JPG)
 
 
 Ensure that the pins are properly aligned when stacking the GrovePi.
@@ -146,10 +146,10 @@ We have developed three simple projects to illustrate how the GrovePi works.
 
 ##   Resources
 ---
--   **[Eagle]** [GrovePi_Plus V3.0 eagle file](https://github.com/SeeedDocument/GrovePi_Plus/raw/master/res/GrovePi%2BEagle%20FIle.zip)
--   **[PDF]** [GrovePi_Plus V3.0 schematics pdf file](https://github.com/SeeedDocument/GrovePi_Plus/raw/master/res/GrovePi%2B%20v3.0%20Sch.pdf)
--   **[PDF]** [GrovePi_Plus V3.0 PCB pdf file](https://github.com/SeeedDocument/GrovePi_Plus/raw/master/res/GrovePi%2B%20v3.0%20PCB.pdf)
--   **[Document]** [Setting_Up_Software_for_GrovePi](https://github.com/SeeedDocument/GrovePi_Plus/raw/master/res/Setting_Up_Software_for_GrovePi.pdf)
+-   **[Eagle]** [GrovePi_Plus V3.0 eagle file](https://files.seeedstudio.com/wiki/GrovePi_Plus/res/GrovePi%2BEagle%20FIle.zip)
+-   **[PDF]** [GrovePi_Plus V3.0 schematics pdf file](https://files.seeedstudio.com/wiki/GrovePi_Plus/res/GrovePi%2B%20v3.0%20Sch.pdf)
+-   **[PDF]** [GrovePi_Plus V3.0 PCB pdf file](https://files.seeedstudio.com/wiki/GrovePi_Plus/res/GrovePi%2B%20v3.0%20PCB.pdf)
+-   **[Document]** [Setting_Up_Software_for_GrovePi](https://files.seeedstudio.com/wiki/GrovePi_Plus/res/Setting_Up_Software_for_GrovePi.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

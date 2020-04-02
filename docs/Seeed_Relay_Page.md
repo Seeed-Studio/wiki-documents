@@ -1,4 +1,4 @@
-![](https://github.com/SeeedDocument/Seeed_Relay_Page/raw/master/img/back.jpg)
+![](https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/back.jpg)
 
 We have released various types of relays on our website. You may find it difficult to make a choice. We feel you pain, let's talk about what's the difference between all those relays, and what's the advantage or disadvantage among them. 
 
@@ -287,11 +287,11 @@ A wireless relay is a codec-adaptive RF receiver with single channel relay.
 
 ## Resource
 
-- **[PDF]** [Seeed Relay Page PDF Version](https://github.com/SeeedDocument/Seeed_Relay_Page/raw/master/Datasheet/Seeed_Relay_Page.pdf)
+- **[PDF]** [Seeed Relay Page PDF Version](https://files.seeedstudio.com/wiki/Seeed_Relay_Page/Datasheet/Seeed_Relay_Page.pdf)
 
-- **[ZIP]** [Seeed Relay Module Datasheet](https://github.com/SeeedDocument/Seeed_Relay_Page/raw/master/Datasheet/Seeed_Relay_Module_Datasheet.zip)
+- **[ZIP]** [Seeed Relay Module Datasheet](https://files.seeedstudio.com/wiki/Seeed_Relay_Page/Datasheet/Seeed_Relay_Module_Datasheet.zip)
 
-- **[ZIP]** [Seeed Relay Quick Selection Table&Diagram](https://github.com/SeeedDocument/Seeed_Relay_Page/raw/master/res/Seeed_relay_select.zip)
+- **[ZIP]** [Seeed Relay Quick Selection Table&Diagram](https://files.seeedstudio.com/wiki/Seeed_Relay_Page/res/Seeed_relay_select.zip)
 
 
 

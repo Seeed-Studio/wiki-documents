@@ -7,11 +7,11 @@ prodimagename:  carkey_LRG.jpg
 surveyurl: https://www.research.net/r/315Mhz_Wireless_car_key_fob_with_key_chain
 sku:  113990038
 ---
-![](https://github.com/SeeedDocument/315Mhz_Wireless_car_key_fob_with_key_chain/raw/master/img/carkey_LRG.jpg)
+![](https://files.seeedstudio.com/wiki/315Mhz_Wireless_car_key_fob_with_key_chain/img/carkey_LRG.jpg)
 
 This is a Wireless car key FOB with 4 buttons: Lock,unlock,mute and alarm on.  A blue led will light on when any button were pressed. Use this FOB to communicate with [Codec-Adaptive Wireless](http://www.seeedstudio.com/depot/codecadaptive-wireless-relay-p-550.html) Relay for your remote control project.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](http://www.seeedstudio.com/depot/315mhz-wireless-car-key-fob-with-key-chain-battery-included-p-557.html?cPath=139_140)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](http://www.seeedstudio.com/depot/315mhz-wireless-car-key-fob-with-key-chain-battery-included-p-557.html?cPath=139_140)
 
 ##   Features
 ---

@@ -21,7 +21,7 @@ The output of Light Sensor is analog signal, so we connect it to A0 of Seeeduino
 
 LED Bar needs 10 IOs, about the connection, please refer to [LED Bar](http://arduino.cc/en/Tutorial/BarGraph).
 
-![](https://github.com/SeeedDocument/Light_Sensor_and_LED_Bar/raw/master/img/Sidekick_33_1.png)
+![](https://files.seeedstudio.com/wiki/Light_Sensor_and_LED_Bar/img/Sidekick_33_1.png)
 
 **Code:**
 

@@ -38,7 +38,7 @@ By simply plugging it on your Joule board, it will own 8 solid and easy-to-use G
 
 ## Hardware Overview
 
-![](https://github.com/SeeedDocument/Grove_Shield_for_Intel_Joule/raw/master/img/Grove%20Shield%20for%20intel%20Joule%20Pin.png)
+![](https://files.seeedstudio.com/wiki/Grove_Shield_for_Intel_Joule/img/Grove%20Shield%20for%20intel%20Joule%20Pin.png)
 
 - Grove Analog Port: ⑥/⑨
 

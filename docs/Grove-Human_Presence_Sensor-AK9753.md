@@ -9,7 +9,7 @@ sku: 101020554
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-Human_Presence_Sensor-AK9753/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Human_Presence_Sensor-AK9753/img/main.jpg)
 
 The Grove - Human Presence Sensor can be used to detect the presence of the human body or any other infrared objects. Moreover, it is composed of four quantum IR sensors and an integrated circuit (IC) for characteristic compensation, so it can be used to detect the motion of the IR object and the relative position where the IR object moves. An integral analog-to-digital converter provides 16-bits data outputs. This module is suitable for several feet human detector.
 
@@ -51,11 +51,11 @@ You can find a lot of infrared sensors on our website, this one will be one of t
 
 ### Pin Out
 
-![](https://github.com/SeeedDocument/Grove-Human_Presence_Sensor-AK9753/raw/master/img/pinout.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Human_Presence_Sensor-AK9753/img/pinout.jpg)
 
-![](https://github.com/SeeedDocument/Grove-Human_Presence_Sensor-AK9753/raw/master/img/pinout1.png)
+![](https://files.seeedstudio.com/wiki/Grove-Human_Presence_Sensor-AK9753/img/pinout1.png)
 
-![](https://github.com/SeeedDocument/Grove-Human_Presence_Sensor-AK9753/raw/master/img/pinout_back.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Human_Presence_Sensor-AK9753/img/pinout_back.jpg)
 
 
 
@@ -64,15 +64,15 @@ You can find a lot of infrared sensors on our website, this one will be one of t
 
 **Power**
 
-![](https://github.com/SeeedDocument/Grove-Human_Presence_Sensor-AK9753/raw/master/img/schematic.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Human_Presence_Sensor-AK9753/img/schematic.jpg)
 
-The AK9763 works with a low oprating voltage--1.71~3.63V, so we use the [XC6206P332MR](https://github.com/SeeedDocument/Grove-Infrared_Temperature_Sensor_Array-AMG8833/raw/master/res/XC6206.pdf) chip to provide a stable 3.3V. The input of XC6206P33 ranges from 1.8V to 6.0V, so you can use this module with your Arduino both in 3.3V and 5V.
+The AK9763 works with a low oprating voltage--1.71~3.63V, so we use the [XC6206P332MR](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor_Array-AMG8833/res/XC6206.pdf) chip to provide a stable 3.3V. The input of XC6206P33 ranges from 1.8V to 6.0V, so you can use this module with your Arduino both in 3.3V and 5V.
 
 **Bi-directional level shifter circuit**
 
-![](https://github.com/SeeedDocument/Grove-Human_Presence_Sensor-AK9753/raw/master/img/schematic1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Human_Presence_Sensor-AK9753/img/schematic1.jpg)
 
-This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of this sensor use 3.3V, if the I<sup>2</sup>C bus of the Arduino use 5V, this circuit will be needed. In the schematic above, **Q1** and **Q2** are N-Channel MOSFET [2N7002A](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/AN10441.pdf)
+This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of this sensor use 3.3V, if the I<sup>2</sup>C bus of the Arduino use 5V, this circuit will be needed. In the schematic above, **Q1** and **Q2** are N-Channel MOSFET [2N7002A](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/AN10441.pdf)
 
 
 
@@ -117,7 +117,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-Human_Presence_Sensor-AK9753/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Human_Presence_Sensor-AK9753/img/connect.jpg)
 
 
 !!!Note
@@ -144,7 +144,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 - **Step 3.** Now you can find four demo in the Arduino IDE by click **File --> Examples --> Grove Human Presence Sensor Library**
 
-![](https://github.com/SeeedDocument/Grove-Human_Presence_Sensor-AK9753/raw/master/img/path1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Human_Presence_Sensor-AK9753/img/path1.jpg)
 
 >**Example1-BasicReading**: This example reads the raw (uint16_t) data of four IR sensors, and print these raw data in the serial.  
 >**Example2-PlotDiff**: Read the raw data and plot in the serial plotter.  
@@ -153,7 +153,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 Or, find them on your computer in the folder **C:XXXX\Arduino\libraries\Grove_Human_Presence_Sensor-master\examples**, **XXXX** is the location you installed the Arduino IDE.
 
-![](https://github.com/SeeedDocument/Grove-Human_Presence_Sensor-AK9753/raw/master/img/path2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Human_Presence_Sensor-AK9753/img/path2.jpg)
 
 - **Step 4.** Choose one demo, upload the code. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
@@ -206,7 +206,7 @@ When you upload the example2 code, Open the **Serial Plotter** of Arduino IDE by
 You can see the following results：
 
 
-![](https://github.com/SeeedDocument/Grove-Human_Presence_Sensor-AK9753/raw/master/img/result1.png)
+![](https://files.seeedstudio.com/wiki/Grove-Human_Presence_Sensor-AK9753/img/result1.png)
 
 
 This example reads the data of four IR sensors and converts them into current (pA), then plot **diff13** and **diff24** into the Arduino IDE Serial Plotter.
@@ -259,7 +259,7 @@ When you upload the example4 code, Open the **Serial Plotter** of Arduino IDE by
 You can see the following results：
 
 
-![](https://github.com/SeeedDocument/Grove-Human_Presence_Sensor-AK9753/raw/master/img/result2.png)
+![](https://files.seeedstudio.com/wiki/Grove-Human_Presence_Sensor-AK9753/img/result2.png)
 
 
 The detection is based on the derivative of the difference value of IR1_IR3 or IR2_IR4. The derivative of IR1_IR3 or IR2_IR4 is calculated by the following formula:
@@ -294,9 +294,9 @@ The meaning of each curve in the figure is:: (in order)
 
 - **[Zip]** [Seeed Human Presence Sensor Library](https://github.com/Seeed-Studio/Grove_Human_Presence_Sensor/archive/master.zip)
 
-- **[PDF]** [Datasheet AK9753](https://github.com/SeeedDocument/Grove-Human_Presence_Sensor-AK9753/raw/master/res/AK9753.pdf)
+- **[PDF]** [Datasheet AK9753](https://files.seeedstudio.com/wiki/Grove-Human_Presence_Sensor-AK9753/res/AK9753.pdf)
 
-- **[PDF]** [XC6206 DATASHEET](https://github.com/SeeedDocument/Grove-Infrared_Temperature_Sensor_Array-AMG8833/raw/master/res/XC6206.pdf)
+- **[PDF]** [XC6206 DATASHEET](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor_Array-AMG8833/res/XC6206.pdf)
 
 
 

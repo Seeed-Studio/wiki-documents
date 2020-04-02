@@ -159,7 +159,7 @@ We provide an example here to show you how to use this sensor to measure the tem
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-Digital_Infrared_Temperature_Sensor/raw/master/img/connection.JPG)
+![](https://files.seeedstudio.com/wiki/Grove-Digital_Infrared_Temperature_Sensor/img/connection.JPG)
 
 
 !!!Note

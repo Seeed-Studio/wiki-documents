@@ -7,11 +7,11 @@ prodimagename:  3wsp.JPG
 surveyurl: https://www.research.net/r/G3_4_Water_Flow_sensor
 sku:   314150003
 ---
-![](https://github.com/SeeedDocument/G3-4_Water_Flow_sensor/raw/master/img/P21408651.jpg)
+![](https://files.seeedstudio.com/wiki/G3-4_Water_Flow_sensor/img/P21408651.jpg)
 
 Water flow sensor consists of a plastic valve body, a water rotor, and a hall-effect sensor. When water flows through the rotor, rotor rolls. Its speed changes with different rate of flow. The hall-effect sensor outputs the corresponding pulse Signal.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)]( https://www.seeedstudio.com/g34-water-flow-sensor-p-1083.html?cPath=144_151)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)]( https://www.seeedstudio.com/g34-water-flow-sensor-p-1083.html?cPath=144_151)
 
 ##   Specification
 ---
@@ -229,7 +229,7 @@ The yellow wire will need to be connected to a 10k pull up resistor.and then to 
 
 Here is a fritzing diagram I made to show you how to wire it all up.
 
-![](https://github.com/SeeedDocument/G3-4_Water_Flow_sensor/raw/master/img/Reading_liquid_flow_rate_with_an_Arduino.jpg)
+![](https://files.seeedstudio.com/wiki/G3-4_Water_Flow_sensor/img/Reading_liquid_flow_rate_with_an_Arduino.jpg)
 
 Once you have it wired up you will need to upload the following code to your Seeeduino. Once it is uploaded and you have some fluid flowing through the Water Flow Sensor, you can open the serial monitor and it will display the flow rate, refreshing every second.
 
@@ -279,7 +279,7 @@ You can refer our forum for more details about [Reading Water Flow rate with Wat
 ---
 The external diameter of thread the connections use is 1.4mm.
 
-![](https://github.com/SeeedDocument/G3-4_Water_Flow_sensor/raw/master/img/Wfs-wiring.jpg)
+![](https://files.seeedstudio.com/wiki/G3-4_Water_Flow_sensor/img/Wfs-wiring.jpg)
 
 ##   Output Table
 ---
@@ -307,7 +307,7 @@ Pulse frequency (Hz) in Horizontal Test= 5.5Q, Q is flow rate in L/min. (Results
 <td>40%～60%
 </td></tr></table>
 
-![](https://github.com/SeeedDocument/G3-4_Water_Flow_sensor/raw/master/img/G34_Flow_rate_to_frequency.jpg)
+![](https://files.seeedstudio.com/wiki/G3-4_Water_Flow_sensor/img/G34_Flow_rate_to_frequency.jpg)
 
 ##   FAQ
 ---
@@ -341,7 +341,7 @@ Here we introduce some projects about [Grove-Water Sensor](http://www.seeedstudi
 
 ###  What is Grove - Water Sensor
 
-![](https://github.com/SeeedDocument/G3-4_Water_Flow_sensor/raw/master/img/Twig-Water_Sensor.jpg)
+![](https://files.seeedstudio.com/wiki/G3-4_Water_Flow_sensor/img/Twig-Water_Sensor.jpg)
 
 This water sensor module is part of the Twig system.You can use it with the analog pins to detect the amount of water induced contact between the grounded and sensor traces.
 
@@ -353,7 +353,7 @@ This circuit will work with the digital I/O pins of your Arduino.
 
 ###   Arduino Plant Warden
 
-![](https://github.com/SeeedDocument/G3-4_Water_Flow_sensor/raw/master/img/552c2c4f2e5a8.jpg)
+![](https://files.seeedstudio.com/wiki/G3-4_Water_Flow_sensor/img/552c2c4f2e5a8.jpg)
 
 This project uses Grove - Water Sensor to create a simple but effective solution to watering plants.
 

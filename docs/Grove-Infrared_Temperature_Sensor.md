@@ -10,7 +10,7 @@ sku: 101020062
 tags: grove_analog, io_3v3, io_5v, plat_duino
 ---
 
-![](https://github.com/SeeedDocument/Grove-Infrared_Temperature_Sensor/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor/img/main.jpg)
 
 The Infrared temperature sensor is a non-contact temperature measure model. It is composed of 116 elements of thermocouple in series on a floating micro-membrane, the black Surface of the sensor is good to absorb the incident thermal infrared radiation, which might trigger a voltage response at output. This sensor outputs an analog voltage (0~1.1V) according to target temperature.
 
@@ -82,7 +82,7 @@ The following sketch demonstrates a simple application of measure the measure th
 
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-Infrared_Temperature_Sensor/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor/img/connect.jpg)
 
 !!!Note
 	If we don't have Grove Base Shield, We also can directly connect Grove - Temperature and Humidity Sensor Pro to Seeeduino as below.
@@ -142,7 +142,7 @@ Now we can measure the surrounding temperature around the sensor. The sensor is 
 
 The result should be like:
 
-![](https://github.com/SeeedDocument/Grove-Infrared_Temperature_Sensor/raw/master/img/result_arduino.png)
+![](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor/img/result_arduino.png)
 
 # Grove-Infrared Temperature Sensor V1.0
 <div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Temperature_Sensor/master/res/Infrared_Temperature_Sensor_V1.0_egale_file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
@@ -155,7 +155,7 @@ The result should be like:
 ## Resources
 
 
-- **[Zip]** [Grove-Infrared Temperature Sensor V1.2 Eagle File](https://github.com/SeeedDocument/Grove-Infrared_Temperature_Sensor/raw/master/res/Grove-Infrared_Temperature_Sensor_v1.2.zip)
+- **[Zip]** [Grove-Infrared Temperature Sensor V1.2 Eagle File](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor/res/Grove-Infrared_Temperature_Sensor_v1.2.zip)
 - **[Zip]** [Grove-Infrared Temperature Sensor V1.0 Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Temperature_Sensor/master/res/Infrared_Temperature_Sensor_V1.0_egale_file.zip)
 - **[Zip]** [OTP-538U Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Temperature_Sensor/master/res/OTP-538Udatasheet.zip)
 - **[Zip]** [Demo Code](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Temperature_Sensor/master/res/MeasureTemperature.zip)

@@ -9,7 +9,7 @@ sku: 103030296
 
 ---
 
-![enter image description here](https://github.com/SeeedDocument/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/raw/master/img/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi-wiki.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi-wiki.jpg)
 
 
 This is a CAN BUS shield for Raspberry Pi(hereinafter referred to as 2 channel pi hat), 2 channel CAN BUS I/O, support [CAN FD](https://en.wikipedia.org/wiki/CAN_FD). CAN FD support much faster transmission speed(up to 8Mbps)
@@ -83,8 +83,8 @@ Also it have two On-board 120Ω terminating resistors which are controlled by th
 |Parameter|Value|
 |---|---|
 |Power Input|12V~24V DC<br>Raspberry Pi GPIO 5V|
-|CAN FD Controller| [MCP2517FD](https://github.com/SeeedDocument/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/raw/master/res/MCP2517-datasheet.pdf) |
-|CAN FD Transceiver|[MCP2557FD](https://github.com/SeeedDocument/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/raw/master/res/MCP2557-datasheet.pdf)|
+|CAN FD Controller| [MCP2517FD](https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/res/MCP2517-datasheet.pdf) |
+|CAN FD Transceiver|[MCP2557FD](https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/res/MCP2557-datasheet.pdf)|
 |CAN FD Channel|2|
 |Transfer Rate|8Mbps@10m 20AWG shielded cable <br> 1Mbps@40m 20AWG shielded cable|
 |Communication Interface with Pi|SPI|
@@ -115,7 +115,7 @@ Also it have two On-board 120Ω terminating resistors which are controlled by th
 
 | Raspberry pi | 2-Channel CAN-BUS(FD) Shield| Arduino Board |CAN-BUS Shield V2 |
 |--------------|-------------|-----------------|-----|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/raw/master/img/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi-thumbnail.png)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![](https://github.com/SeeedDocument/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/raw/master/img/CAN_BUS_Shield_V2.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi-thumbnail.png)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![](https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/CAN_BUS_Shield_V2.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi-p-4072.html)|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4-2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/CAN-BUS-Shield-V2.html)|
 
 
@@ -547,8 +547,8 @@ Thank you!
 ## Resources
 
 - **[ZIP]** [2-Channel CAN-BUS(FD) Shield for Raspberry Pi Schematic file](https://github.com/SeeedDocument/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/raw/master/res/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi.zip)
-- **[PDF]** [MCP2517 Datasheet](https://github.com/SeeedDocument/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/raw/master/res/MCP2517-datasheet.pdf)
-- **[PDF]** [MCP2557 Datasheet](https://github.com/SeeedDocument/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/raw/master/res/MCP2557-datasheet.pdf)
+- **[PDF]** [MCP2517 Datasheet](https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/res/MCP2517-datasheet.pdf)
+- **[PDF]** [MCP2557 Datasheet](https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/res/MCP2557-datasheet.pdf)
 
 
 

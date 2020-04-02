@@ -56,14 +56,14 @@ An electromagnet is a type of magnet in which the magnetic field is produced by 
 
 | Seeeduino V4.2 | Base Shield|Grove-Electromagnet|
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Electromagnet/raw/master/img/Grove_Electromagnet_02%20-%20%E5%89%AF%E6%9C%AC.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Electromagnet/img/Grove_Electromagnet_02%20-%20%E5%89%AF%E6%9C%AC.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/Grove-Electromagnet-p-1820.html)|
 
 - **Step 2.** Connect Grove-Electromagnet to port **D2** of Grove-Base Shield.
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-Electromagnet/raw/master/img/2-connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Electromagnet/img/2-connect.jpg)
 
 !!!Note
     If we don't have Grove Base Shield, We also can directly connect Grove-Electromagnet to Seeeduino as below.
@@ -109,7 +109,7 @@ void loop() {
 
 - **Step 2.** Grove-Electromagnet worked.
 
-![](https://github.com/SeeedDocument/Grove-Electromagnet/raw/master/img/Grove_Electromagnet-3.png)
+![](https://files.seeedstudio.com/wiki/Grove-Electromagnet/img/Grove_Electromagnet-3.png)
 
 ### Play with Codecraft
 
@@ -145,7 +145,7 @@ Upload the program to your Arduino/Seeeduino.
 
 | Raspberry pi | GrovePi_Plus | Grove-Electromagnet |
 |--------------|--------------|---------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Electromagnet/raw/master/img/Grove_Electromagnet_02%20-%20%E5%89%AF%E6%9C%AC.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Electromagnet/img/Grove_Electromagnet_02%20-%20%E5%89%AF%E6%9C%AC.jpg)|
 |[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](http://www.seeedstudio.com/Grove-Electromagnet-p-1820.html)|
 
 - **Step 2.** Plug the GrovePi_Plus into Raspberry.
@@ -154,7 +154,7 @@ Upload the program to your Arduino/Seeeduino.
 
 - **Step 4.** Connect the Raspberry to PC through USB cable.
 
-![](https://github.com/SeeedDocument/Grove-Electromagnet/raw/master/img/1_pi_connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Electromagnet/img/1_pi_connect.jpg)
 
 **Software**
 
@@ -235,7 +235,7 @@ Resources
 --------
 
 - [**Eagle**][Grove Electromagnet v1.0 SCH PCB.zip](https://raw.githubusercontent.com/SeeedDocument/Grove-Electromagnet/master/res/Grove_Electromagnet_v1.0_SCH_PCB.zip)
-- [**Datasheet**][Datasheet ZYE1-P20-15 PDF](https://github.com/SeeedDocument/Bazaar_file/raw/master/101020073/ZYE1-P%20electro%20holding%20magnets.pdf)
+- [**Datasheet**][Datasheet ZYE1-P20-15 PDF](https://files.seeedstudio.com/wiki/Bazaar_file/101020073/ZYE1-P%20electro%20holding%20magnets.pdf)
 - [**Codecraft**][CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove-Electromagnet/master/res/Grove_Electromagnet_CDC_File.zip)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Electromagnet -->

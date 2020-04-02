@@ -41,7 +41,7 @@ This board is powered by Micro-USB port, communicate with the Wio LTE via I2C po
   </div>
 
 
-![](https://github.com/SeeedDocument/Wio_Extension-RTC/raw/master/img/rtc_diagram.png)
+![](https://files.seeedstudio.com/wiki/Wio_Extension-RTC/img/rtc_diagram.png)
 
 
 ## Platforms Supported

@@ -10,7 +10,7 @@ sku:
 tags:
 
 ---
-![](https://github.com/SeeedDocument/UartSB_Frame/raw/master/img/Seeeduino_Frame_UarSBs_Top.jpg)
+![](https://files.seeedstudio.com/wiki/UartSB_Frame/img/Seeeduino_Frame_UarSBs_Top.jpg)
 
 **UartSB Frame** is a USB based programming adapter for **Seeeduino Film** equipped with a FPC socket. The integrated USB UART IC **FT232RL** can be used for programming or communicating with MCUs with 3.3V logic. It also doubles as a "FT232RL" Low Voltage(3.3V) Breakout board. **UartSB Frame** provides breakouts for the bit-bang mode pins of **FT232RL** as well.This Bit-bang mode pins (8 I/O pins) can be used as a replacement for applications involving PC parallel port which is scares now a days.
 
@@ -50,9 +50,9 @@ tags:
 
 ##   Schematic  
 
-![](https://github.com/SeeedDocument/UartSB_Frame/raw/master/img/UartSB_Frame_Schematic_1.png)
+![](https://files.seeedstudio.com/wiki/UartSB_Frame/img/UartSB_Frame_Schematic_1.png)
 
-![](https://github.com/SeeedDocument/UartSB_Frame/raw/master/img/UartSB_Frame_Scehmatic_2.png)
+![](https://files.seeedstudio.com/wiki/UartSB_Frame/img/UartSB_Frame_Scehmatic_2.png)
 
 ##   Specifications  
 
@@ -150,7 +150,7 @@ tags:
 
 ##   Pin definition and Rating  
 
-![](https://github.com/SeeedDocument/UartSB_Frame/raw/master/img/UartSB_Frame_Outline_35mmx20mm.png)
+![](https://files.seeedstudio.com/wiki/UartSB_Frame/img/UartSB_Frame_Outline_35mmx20mm.png)
 
 <table >
 <tr>
@@ -220,11 +220,11 @@ tags:
 
 *   Connect the Seeeduino Film to UartSB Frame as shown below :
 
-![](https://github.com/SeeedDocument/UartSB_Frame/raw/master/img/Seeeduino_Film_with_UartSB_Frame.jpg)
+![](https://files.seeedstudio.com/wiki/UartSB_Frame/img/Seeeduino_Film_with_UartSB_Frame.jpg)
 
 *   Set the board type to Arduino Pro or Pro Mini (3.3V, 8MHz) w/ATMega168 in Arduino IDE
 
-![](https://github.com/SeeedDocument/UartSB_Frame/raw/master/img/SeeeduinoFilm_Arduino_Board_Selection.jpg)
+![](https://files.seeedstudio.com/wiki/UartSB_Frame/img/SeeeduinoFilm_Arduino_Board_Selection.jpg)
 
 *   Upload the sketch.
 
@@ -232,7 +232,7 @@ tags:
 
 *   In Windows OS, the first time you plug in the device, you might be asked for the driver.
 
-![](https://github.com/SeeedDocument/UartSB_Frame/raw/master/img/UartSbee_Detected_Windows.JPG)
+![](https://files.seeedstudio.com/wiki/UartSB_Frame/img/UartSbee_Detected_Windows.JPG)
 
 Download and install the **Virtual COM port** driver from FTDI website :
 
@@ -240,25 +240,25 @@ Download and install the **Virtual COM port** driver from FTDI website :
 
 *   A wizard opens for installing the driver. Choose "Install from a list or specific location"
 
-![](https://github.com/SeeedDocument/UartSB_Frame/raw/master/img/UartSbee_Driver_install_1.JPG)
+![](https://files.seeedstudio.com/wiki/UartSB_Frame/img/UartSbee_Driver_install_1.JPG)
 
 *   Choose the downloaded driver path
 
-![](https://github.com/SeeedDocument/UartSB_Frame/raw/master/img/UartSbee_Driver_install_2.JPG)
+![](https://files.seeedstudio.com/wiki/UartSB_Frame/img/UartSbee_Driver_install_2.JPG)
 
 *   If you have downloaded unsigned driver, the following Window appears. Just click "Continue Anyway"
 
-![](https://github.com/SeeedDocument/UartSB_Frame/raw/master/img/UartSbee_Driver_install_2.1.JPG)
+![](https://files.seeedstudio.com/wiki/UartSB_Frame/img/UartSbee_Driver_install_2.1.JPG)
 
 *   **UartSB Frame** driver is successfully installed. Windows assigns a **COM** port name to **FT232RL** like **COM10**, **COM11** etc... Please check the exact name in Device Manager.  In this case "**COM16**" is assigned for UartSB Frame
 
-![](https://github.com/SeeedDocument/UartSB_Frame/raw/master/img/UartSbee_Driver_install_3.JPG)
+![](https://files.seeedstudio.com/wiki/UartSB_Frame/img/UartSbee_Driver_install_3.JPG)
 
 ####   Configuring UartSB Frame in **GNU/Linux**
 
 All modern **GNU/Linux OS** comes with FT232RL drivers. To check if UartSB Frame is detected, Issue a **lsusb** command. An output similar to below should appear.
 
-![](https://github.com/SeeedDocument/UartSB_Frame/raw/master/img/Lsub.png)
+![](https://files.seeedstudio.com/wiki/UartSB_Frame/img/Lsub.png)
 
 **GNU/Linux** assigns **/dev/ttyUSB0**, **/dev/ttyUSB1** etc... as device name.  
 
@@ -266,11 +266,11 @@ To verify the working of serial port connect **TxD** and **RxD** pins of UartSB 
 
 **Baudrate**:9600, **Data bits**:8, **Stop bits**:None and no Handshake
 
-![](https://github.com/SeeedDocument/UartSB_Frame/raw/master/img/UartSB_Frame_Txd_Rxd_connected.jpg)
+![](https://files.seeedstudio.com/wiki/UartSB_Frame/img/UartSB_Frame_Txd_Rxd_connected.jpg)
 
 Any character typed in terminal would be echoed back as shown.
 
-![](https://github.com/SeeedDocument/UartSB_Frame/raw/master/img/UartsBee-CuteCom.png)
+![](https://files.seeedstudio.com/wiki/UartSB_Frame/img/UartsBee-CuteCom.png)
 
 The same functionality can be verified in **Windows** - **Hyperterminal** as well.
 
@@ -286,7 +286,7 @@ The USB 5v supply available in **UartSB Frame** breakout can be used to charge t
 
 *   Power on the USB.
 
-![](https://github.com/SeeedDocument/UartSB_Frame/raw/master/img/SeeeduinoFilm_Battery_Charging_with_UartSBFrame.jpg)
+![](https://files.seeedstudio.com/wiki/UartSB_Frame/img/SeeeduinoFilm_Battery_Charging_with_UartSBFrame.jpg)
 
 ###   BitBang Mode  
 
@@ -363,13 +363,13 @@ A simple Asynchronous Bit-Bang mode operation is demonstrated in the below bread
 
 **LED Blinky Circuit**
 
-![](https://github.com/SeeedDocument/UartSB_Frame/raw/master/img/UartSB_Frame_BitBang_demo.jpg)
+![](https://files.seeedstudio.com/wiki/UartSB_Frame/img/UartSB_Frame_BitBang_demo.jpg)
 
 This above image is made with Fritzing.org
 
 **Bit Bang I/O Pins (ISP header) shown at Bottom Layer**
 
-![](https://github.com/SeeedDocument/UartSB_Frame/raw/master/img/Seeeduino_Frame_UarSBs_Bottom.jpg)
+![](https://files.seeedstudio.com/wiki/UartSB_Frame/img/Seeeduino_Frame_UarSBs_Bottom.jpg)
 
 Bit-Bang mode requires special FTDI direct driver called [D2XX](http://www.ftdichip.com/Drivers/D2XX.htm). This driver needs to be installed after removing the Virtual COM Port driver of FT232RL chip. In GNU/Linux this driver runs in kernel mode. As an alternative to D2XX an Free Open Source driver [libFTDI](http://www.intra2net.com/en/developer/libftdi/) is available. This works in Windows, GNU/Linux and Mac OS. It runs in user mode in GNU/Linux. Hence no need to remove the existing FT232RL driver.
 
@@ -447,7 +447,7 @@ FT232RL Bit-Bang mode can be used to construct AVR ISP, JTAG, SPI and I2C Ports.
 
 <table  cellpadding="1" cellspacing="1" width="200">
 <tr>
-<td><div class="thumb tleft"><div class="thumbinner" style="width:402px;">![](https://github.com/SeeedDocument/UartSB_Frame/raw/master/img/UartSBFrame_SeeeduinoFilm_Programming.jpg) <div class="thumbcaption">UartSB Frame Programming Seeeduino Film (Do not connect Battery)</div></div></div>
+<td><div class="thumb tleft"><div class="thumbinner" style="width:402px;">![](https://files.seeedstudio.com/wiki/UartSB_Frame/img/UartSBFrame_SeeeduinoFilm_Programming.jpg) <div class="thumbcaption">UartSB Frame Programming Seeeduino Film (Do not connect Battery)</div></div></div>
 </td></tr></table>
 
 ##   FAQ  

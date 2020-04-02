@@ -7,11 +7,11 @@ prodimagename: Mini_Fan%20head.jpg
 surveyurl: https://www.research.net/r/grove_mini_fan
 sku:  105020004
 ---
-![](https://github.com/SeeedDocument/Grove-Mini_Fan/raw/master/img/Mini_Fan%20head.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Mini_Fan/img/Mini_Fan%20head.jpg)
 
 The **Grove - Mini Fan** module is a DC motor driver based on the AVR Atmega168 microcontroller. The module also provides a breakout through which you can change the microcontroller code. For example, the code can be changed so that the module can be used to drive a [servomotor](https://en.wikipedia.org/wiki/Servomotor). By default, the module is set up to run the DC motor that is included in your mixer pack. The soft-leaved fan also included in the pack can be attached to the motor to make a fun project with kids. Being soft-leaved, the fan is completely safe and there is no chance of any injury even if it is moving at a high speed.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Mini-Fan-p-1819.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Mini-Fan-p-1819.html)
 
 
 ##  Features
@@ -28,7 +28,7 @@ The **Grove - Mini Fan** module is a DC motor driver based on the AVR Atmega168 
 
 ##  Interface Function
 ---
-![](https://github.com/SeeedDocument/Grove-Mini_Fan/raw/master/img/Mini_fan.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Mini_Fan/img/Mini_fan.jpg)
 
 <dl><dt>① UartSBee Interface: Use this interface to change the microcontroller code. Use a [UartSBee](/UartSBee_V4) module to connect to the microcontroller using the Uart interface.
 </dt><dt>② JST 2.0 Interface: Used to connect to a 3.3 volts DC motor(only 3.3 volts)
@@ -56,7 +56,7 @@ Follow these steps to build a sample circuit using this module:
 
 - If using with a [Grove - Light Sensor](/Grove-Light_Sensor "Grove - Light Sensor") connected directly to the input side of the circuit, you should see that the motor runs in bright light and stops in the dark:
 
-![](https://github.com/SeeedDocument/Grove-Mini_Fan/raw/master/img/Light_Sensitive_Fan.gif)
+![](https://files.seeedstudio.com/wiki/Grove-Mini_Fan/img/Light_Sensitive_Fan.gif)
 
 - If you want the motor to run only in the dark, add a [Grove - NOT](/Grove-NOT "Grove - NOT") module between the light sensor and the power module.
 - If using with a [Grove - Sound Sensor](/Grove-Sound_Sensor "Grove - Sound Sensor"), you should see that the motor runs on detecting sound. Again, if you want to reverse the function, or in other words, if you want that the motor should be ON at all times except when there is a sound, add a [Grove - NOT](/Grove-NOT "Grove - NOT") module between the sound sensor and the power module.

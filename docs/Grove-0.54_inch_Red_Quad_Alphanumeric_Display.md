@@ -9,19 +9,19 @@ sku: 104020133
 ---
 
 
-![](https://github.com/SeeedDocument/Grove-0.54-Red-Quad-Alphanumeric-Display/raw/master/img/104020133-front.png)
+![](https://files.seeedstudio.com/wiki/Grove-0.54-Red-Quad-Alphanumeric-Display/img/104020133-front.png)
 
 
 This module is a 4 digit alphanumeric display with high brightness and red backlight, each digit is consists of a 14-segment digital tube. The commonly used 7-segment display, such as our [Grove - 4-Digit Display](https://www.seeedstudio.com/Grove-4-Digit-Display.html) can only display the numbers 0-9 and a limited number of letters. In contrast, the 14-segment digital display does not have this limitation, it can display all the characters, that's why we call it alphanumeric display.
  
-![](https://github.com/SeeedDocument/Grove-0.54-Red-Dual-Alphanumeric-Display/raw/master/img/seve-seg-compare-14-seg.png)
+![](https://files.seeedstudio.com/wiki/Grove-0.54-Red-Dual-Alphanumeric-Display/img/seve-seg-compare-14-seg.png)
 
 <div align="center"><b>7-segment display vs 14-segment display</b><i> </i></div>
 
 
 The digit height is 0.54 inch and the red LED used in this module has super high brightness, so you can see it a few meters away. 
  
-![](https://github.com/SeeedDocument/Grove-0.54-Red-Dual-Alphanumeric-Display/raw/master/img/digit-height.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-0.54-Red-Dual-Alphanumeric-Display/img/digit-height.jpg)
 
 <div align="center"><b>0.54 inch Alphanumeric Display Height</b><i> </i></div>
 
@@ -29,7 +29,7 @@ The digit height is 0.54 inch and the red LED used in this module has super high
  
 Usually, the 14-segment display needs to use 17 or more wires to control the display, which means that a large amount of IO of your main control board (such as Arduino) will be occupied. With the help of on-board HT16K33 chip and Grove connector, we made it an i2c display, only four wires are enough. No troublesome soldering and no complicated wiring, if you are using [seeeduino](https://www.seeedstudio.com/seeeduino-boards-c-987.html), it is really plug and play, easy peasy.
 
-![](https://github.com/SeeedDocument/Grove-0.54-Red-Dual-Alphanumeric-Display/raw/master/img/pins-compare.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-0.54-Red-Dual-Alphanumeric-Display/img/pins-compare.jpg)
 
 
 <div align="center"><b>18 pins vs 4 pins</b><i> </i></div>
@@ -80,7 +80,7 @@ In case you just need a dual digit alphanumeric display, you can check the
 
 ## Pinout
 
-![](https://github.com/SeeedDocument/Grove-0.54-Red-Quad-Alphanumeric-Display/raw/master/img/pinout.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-0.54-Red-Quad-Alphanumeric-Display/img/pinout.jpg)
 
 Here is the table about the I2C addresses. 
 
@@ -117,7 +117,7 @@ Here is the table about the I2C addresses.
 
 | Seeeduino V4.2 | Base Shield |Grove - 0.54" Red Quad Alphanumeric Display|
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-0.54-Red-Quad-Alphanumeric-Display/raw/master/img/104020133-front-s.png)
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-0.54-Red-Quad-Alphanumeric-Display/img/104020133-front-s.png)
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-0-54-Red-Quad-Alphanumeric-Display-p-4032.html)|
 
 
@@ -141,7 +141,7 @@ Here is the table about the I2C addresses.
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-0.54-Red-Quad-Alphanumeric-Display/raw/master/img/wiki_connect.png)
+![](https://files.seeedstudio.com/wiki/Grove-0.54-Red-Quad-Alphanumeric-Display/img/wiki_connect.png)
 
 
 !!!Note
@@ -237,10 +237,10 @@ tube2.setTubeType(TYPE_4,I2C_ADDR_DEFAULT_FOUR);
 
 ## Resources
 
-- **[ZIP]** [Grove - 0.54" Quad Dual Alphanumeric Display Schematic file](https://github.com/SeeedDocument/Grove-0.54-Red-Quad-Alphanumeric-Display/raw/master/res/Grove-0.54-Red-Quad-Alphanumeric-Display.zip)
-- **[PDF]** [LED Module Datasheet](https://github.com/SeeedDocument/Grove-0.54-Red-Quad-Alphanumeric-Display/raw/master/res/DIP-LED-4.pdf)
-- **[PDF]** [HT16K33 Datasheet](https://github.com/SeeedDocument/Grove-0.54-Red-Dual-Alphanumeric-Display/raw/master/res/HT16K33.pdf)
-- **[PDF]** [MPS MP2155 Datasheet](https://github.com/SeeedDocument/Grove-0.54-Red-Dual-Alphanumeric-Display/raw/master/res/MPS_MP2155%20datasheetpdf.pdf)
+- **[ZIP]** [Grove - 0.54" Quad Dual Alphanumeric Display Schematic file](https://files.seeedstudio.com/wiki/Grove-0.54-Red-Quad-Alphanumeric-Display/res/Grove-0.54-Red-Quad-Alphanumeric-Display.zip)
+- **[PDF]** [LED Module Datasheet](https://files.seeedstudio.com/wiki/Grove-0.54-Red-Quad-Alphanumeric-Display/res/DIP-LED-4.pdf)
+- **[PDF]** [HT16K33 Datasheet](https://files.seeedstudio.com/wiki/Grove-0.54-Red-Dual-Alphanumeric-Display/res/HT16K33.pdf)
+- **[PDF]** [MPS MP2155 Datasheet](https://files.seeedstudio.com/wiki/Grove-0.54-Red-Dual-Alphanumeric-Display/res/MPS_MP2155%20datasheetpdf.pdf)
 - **[Library]** [Grove - 0.54" Qual Dual Alphanumeric Display Library](https://github.com/Seeed-Studio/Seeed_Alphanumeric_Display_HT16K33)
 
 

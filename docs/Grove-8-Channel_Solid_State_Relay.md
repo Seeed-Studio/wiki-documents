@@ -9,13 +9,13 @@ sku: 103020136
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-8-Channel_Solid_State_Relay/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-8-Channel_Solid_State_Relay/img/main.jpg)
 
 
 Instead of using coil, packaged solid-state relays(SSR) use power semiconductor devices such as thyristors and transistors, which provide a much faster switching speed than the mechanical relays. The **Grove - 8-Channel Solid State Relay** is based on the high-quality **G3MC202P** module, which allows you to use a 5VDC to control MAX. 240VAC. With the help of Grove interface, it becomes very convenient to use the SSR with your arduino.
 
 
-We use an on-board [STM32F030F4P6](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/res/STM32F030F4P6.pdf) to control the channels separately. The command from Arduino or other boards is transmit via the I2C interface, the on-board STM32F030F4P6 will parse the command, so that you can control the switch you want. 
+We use an on-board [STM32F030F4P6](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/res/STM32F030F4P6.pdf) to control the channels separately. The command from Arduino or other boards is transmit via the I2C interface, the on-board STM32F030F4P6 will parse the command, so that you can control the switch you want. 
 
 
 According to different application scenarios, we have prepared a series of solid state relays for you.
@@ -98,9 +98,9 @@ According to different application scenarios, we have prepared a series of solid
 
 ### Pin Map
 
-![](https://github.com/SeeedDocument/Grove-8-Channel_Solid_State_Relay/raw/master/img/pin_map.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-8-Channel_Solid_State_Relay/img/pin_map.jpg)
 
-![](https://github.com/SeeedDocument/Grove-8-Channel_Solid_State_Relay/raw/master/img/pin_map_back.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-8-Channel_Solid_State_Relay/img/pin_map_back.jpg)
 
 
 !!!Note
@@ -114,7 +114,7 @@ According to different application scenarios, we have prepared a series of solid
 **Relay control**
 
 
-![](https://github.com/SeeedDocument/Grove-Solid_State_Relay_V2/raw/master/img/schematic_.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay_V2/img/schematic_.jpg)
 
 **K1** is the Relay module, When a  5V voltage is applied between the **INT+** and **INT-**, the relay will be turned on. Then the **LOAD1** will connect to the **LOAD2**.We use a NPN transistors **Q1**(BC817-40) to control the voltage between the **INT+** and **INT-**.
 
@@ -124,10 +124,10 @@ The **CTR** is the control signal from the Arduino or other board. It is pulled 
 
 
 **Bi-directional level shifter circuit**
-![](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/img/schematic_1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/schematic_1.jpg)
 
 
-This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of this sensor use 3.3V, if the I<sup>2</sup>C bus of the Arduino use 5V, this circuit will be needed. In the schematic above, **Q17** and **Q18** are N-Channel MOSFET [2N7002A](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/AN10441.pdf)
+This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of this sensor use 3.3V, if the I<sup>2</sup>C bus of the Arduino use 5V, this circuit will be needed. In the schematic above, **Q17** and **Q18** are N-Channel MOSFET [2N7002A](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/AN10441.pdf)
 
 
 !!!NOTE
@@ -176,7 +176,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-8-Channel_Solid_State_Relay/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-8-Channel_Solid_State_Relay/img/connect.jpg)
 
 
 !!!Note
@@ -208,10 +208,10 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 - **Step 3.** Restart the Arduino IDE. Open example via the path: **File --> Examples --> Multi Channel Relay Arduino Library --> eight_channel_relay_control**. 
 
-![](https://github.com/SeeedDocument/Grove-8-Channel_Solid_State_Relay/raw/master/img/path.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-8-Channel_Solid_State_Relay/img/path.jpg)
 
 
-Or, you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 ```c++
 #include <multi_channel_relay.h>
@@ -359,7 +359,7 @@ Channel 2 on
 ```
 
 
-![](https://github.com/SeeedDocument/Grove-8-Channel_Solid_State_Relay/raw/master/img/gif.gif)
+![](https://files.seeedstudio.com/wiki/Grove-8-Channel_Solid_State_Relay/img/gif.gif)
 
 
 
@@ -450,14 +450,14 @@ void setup()
 
 You can download the firmware here:
 
-[Factory firmware](https://github.com/SeeedDocument/Grove-8-Channel_Solid_State_Relay/raw/master/res/Grove-8-Channel-Solid-Relay-Firmware.bin)
+[Factory firmware](https://files.seeedstudio.com/wiki/Grove-8-Channel_Solid_State_Relay/res/Grove-8-Channel-Solid-Relay-Firmware.bin)
 
 We recommed you use the J-flash for the software:
 
 [J-flash](https://www.segger.com/downloads/jlink#J-LinkSoftwareAndDocumentationPack)
 
 
-![](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/img/J-flash.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/J-flash.jpg)
 
 
 ## Schematic Online Viewer
@@ -470,11 +470,11 @@ We recommed you use the J-flash for the software:
 
 ## Resources
 
-- **[Zip]** [Grove-8-Channel SPDT Relay eagle files](https://github.com/SeeedDocument/Grove-8-Channel_Solid_State_Relay/raw/master/res/Grove%20-%208-Channel%20Solid%20State%20Relay.zip)
+- **[Zip]** [Grove-8-Channel SPDT Relay eagle files](https://files.seeedstudio.com/wiki/Grove-8-Channel_Solid_State_Relay/res/Grove%20-%208-Channel%20Solid%20State%20Relay.zip)
 - **[Zip]** [Multi Channel Relay Arduino Library](https://github.com/Seeed-Studio/Multi_Channel_Relay_Arduino_Library/archive/master.zip)
-- **[Bin]** [Factory firmware](https://github.com/SeeedDocument/Grove-8-Channel_Solid_State_Relay/raw/master/res/Grove-8-Channel-Solid-Relay-Firmware.bin)
-- **[PDF]** [Datasheet of G3MC202P](https://github.com/SeeedDocument/Grove-Solid_State_Relay_V2/raw/master/res/G3MC202p.pdf)
-- **[PDF]** [Datasheet of STM32](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/res/STM32F030F4P6.pdf)
+- **[Bin]** [Factory firmware](https://files.seeedstudio.com/wiki/Grove-8-Channel_Solid_State_Relay/res/Grove-8-Channel-Solid-Relay-Firmware.bin)
+- **[PDF]** [Datasheet of G3MC202P](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay_V2/res/G3MC202p.pdf)
+- **[PDF]** [Datasheet of STM32](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/res/STM32F030F4P6.pdf)
 
 
 ## Project

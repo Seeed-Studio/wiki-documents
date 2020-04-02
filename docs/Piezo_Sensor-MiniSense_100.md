@@ -11,7 +11,7 @@ sku:    314070000
 
 The MiniSense 100 is a low cost cantilever-type vibration sensor loaded by a mass to offer high sensitivity at low frequencies. Pins are designed for easy installation and are solderable. Horizontal and vertical mounting options are offered. The active sensor area is shielded for improved RFI/EMI rejection. Rugged, flexible PVDF sensing element withstands high shock overload. Sensor has excellent linearity and dynamic range, and may be used for detecting either continuous vibration or impacts. The mass may be modified to obtain alternative frequency response and sensitivity selection (consult factory). The MiniSense 100 acts as a cantilever-beam accelerometer. When the beam is mounted horizontally, acceleration in the vertical plane creates bending in the beam, due to the inertia of the mass at the tip of the beam. Strain in the beam creates a piezoelectric response, which may be detected as a charge or voltage output across the electrodes of the sensor. The sensor may be used to detect either continuous or impulsive vibration or impacts. For excitation frequencies below the resonant frequency of the sensor, the device produces a linear output governed by the "baseline" sensitivity. The sensitivity at resonance is significantly higher. Impacts containing high frequency components will excite the resonance fre-quency, as shown in the plot above (response of MiniSense 100 to a single half-sine impulse at 100 Hz, of amplitude 0.9 g). The ability of the sensor to detect low frequency motion is strongly influenced by the external electrical circuit.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Piezo-Sensor-MiniSense-100-p-426.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Piezo-Sensor-MiniSense-100-p-426.html)
 
 
 ##   Features
@@ -146,7 +146,7 @@ The MiniSense 100 is a low cost cantilever-type vibration sensor loaded by a mas
 
 ##   Resource
 
-*   [MiniSense 100 datasheet](https://github.com/SeeedDocument/Piezo-Sensor---MiniSense-100/raw/master/res/MiniSense_100.pdf)
+*   [MiniSense 100 datasheet](https://files.seeedstudio.com/wiki/Piezo-Sensor---MiniSense-100/res/MiniSense_100.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

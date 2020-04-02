@@ -10,15 +10,15 @@ sku:      103990012
 
 The Create USB Interface is an open source microcontroller board that can be programmed in C, BASIC, or Arduino languages. This latest version is called the CUI32Stem, which is designed to work ‘hand-in-hand’ with the [GROVE prototyping system](/Grove_System) including a wide range of sensors and actuators. It utilizes a high-performance Microchip® PIC32 microcontroller, allowing programmable interaction with all sorts of user inventions, no soldering required! :)
 
-![](https://github.com/SeeedDocument/CUI32Stem/raw/master/img/CUI32StemFrontSmall.png)
+![](https://files.seeedstudio.com/wiki/CUI32Stem/img/CUI32StemFrontSmall.png)
 
-High-resolution versions of these images are available here ([Front Side](https://github.com/SeeedDocument/CUI32Stem/raw/master/res/CUI32StemFront.jpg)) and here ([Back Side](https://github.com/SeeedDocument/CUI32Stem/raw/master/res/CUI32StemBack.jpg)).
+High-resolution versions of these images are available here ([Front Side](https://files.seeedstudio.com/wiki/CUI32Stem/res/CUI32StemFront.jpg)) and here ([Back Side](https://files.seeedstudio.com/wiki/CUI32Stem/res/CUI32StemBack.jpg)).
 
-![](https://github.com/SeeedDocument/CUI32Stem/raw/master/img/CUI32StemBackSmall.png)
+![](https://files.seeedstudio.com/wiki/CUI32Stem/img/CUI32StemBackSmall.png)
 
 The CUI32Stem can run Arduino code (compiled via the multiplatform [ChipKIT MPIDE](http://themakersworkbench.com/node/422) version of the Arduino IDE), and it also ships with a free Real-Time Operating System called [StickOS](http://www.cpustick.com/) pre-installed for the quickest path to programming the board (BASIC in a terminal window, no need to install any software on your computer).  Both of these features make it very easy to get started if you are new to the world of Microcontroller Units (MCUs). For advanced users wishing to take full advantage of the powerful 32-bit microcontroller on the CUI32Stem*, C-language programs can of course be developed directly in Microchip [MPLAB X](http://www.microchip.com/mplabx/), which is available for Windows, Mac OS X, and Linux.
 
-![](https://github.com/SeeedDocument/CUI32Stem/raw/master/img/CUI32Stem_Grove_Dash_Kit-2.jpg)
+![](https://files.seeedstudio.com/wiki/CUI32Stem/img/CUI32Stem_Grove_Dash_Kit-2.jpg)
 
 [CUI32Stem Dash Kit]
 
@@ -32,7 +32,7 @@ Arduino code can be compiled and run on the CUI32Stem using [MPIDE](https://gith
 
 * For those interested in benchmarks, a standard Arduino has a Coremark of 18, while the CUI32Stem’s Coremark is 203 - this is with native C-code compiled with full optimization on both. While this performance will obviously not be seen while running BASIC code in StickOS, the tradeoff there is for ease of use. Arduino code will clearly get a bit closer to native C-code performance-wise.  An example project that will show the performance of the CUI32Stem (written in Arduino language with MPIDE), is Philip Burgess’ open source project to build a self-contained [polyphonic synthesizer](http://hackaday.com/2011/06/08/chipkit-sketch-mini-polyphonic-sampling-synth/) using a PIC32. With piezo sensors as inputs, it implements a sample-playback polyphonic synthesizer including real-time audio effects. This project would not be possible on a standard Arduino, due to lack of sufficient internal memory – and adding a ‘wave-shield’ or similar to an Arduino in order to access external memory would make it difficult (if not impossible) to achieve the polyphony (overlapping musical notes/sounds), as demonstrated by Burgess.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/cui32stem-p-1100.html?cPath=132_208)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/cui32stem-p-1100.html?cPath=132_208)
 
 ##   Features
 ---

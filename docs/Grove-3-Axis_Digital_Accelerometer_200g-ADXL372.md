@@ -52,9 +52,9 @@ Product|Measurement Range|Output Port|Power Consumption
 
 ## Pinout
 
-![](https://github.com/SeeedDocument/Grove-3-Axis_Digital_Accelerometer-200g-ADXL372/raw/master/img/pinout1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-200g-ADXL372/img/pinout1.jpg)
 
-![](https://github.com/SeeedDocument/Grove-3-Axis_Digital_Accelerometer-200g-ADXL372/raw/master/img/pinout2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-200g-ADXL372/img/pinout2.jpg)
 
 ## Specification
 
@@ -88,7 +88,7 @@ Product|Measurement Range|Output Port|Power Consumption
 
 | Seeeduino V4.2 | Base Shield |Grove 3-aixs Accelermeter ADXL372|
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-3-Axis_Digital_Accelerometer-200g-ADXL372/master/img/thumbnail.jpg)
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-3-Axis_Digital_Accelerometer-200g-ADXL372/master/img/thumbnail.jpg)
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-200g-ADXL372-p-4003.html)|
 
 

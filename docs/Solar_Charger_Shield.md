@@ -11,7 +11,7 @@ tags:
 
 ---
 
-![](https://github.com/SeeedDocument/Solar_Charger_Shield/raw/master/img/Solar-charger-shield.jpg)
+![](https://files.seeedstudio.com/wiki/Solar_Charger_Shield/img/Solar-charger-shield.jpg)
 
 The solar charger is a stackable shield to Arduino compatible platforms, enables adaptive battery power and act as energy harvester for in-field charging. You may use various batteries just to shift up for 5V output, or put on Li-ion battery and solar panel to form an autonomous sensor unit.
 
@@ -205,7 +205,7 @@ The warnings and wrong operations possible cause dangerous.
 
 ###   Charging curve
 
-![](https://github.com/SeeedDocument/Solar_Charger_Shield/raw/master/img/Changing-curve.jpg)
+![](https://files.seeedstudio.com/wiki/Solar_Charger_Shield/img/Changing-curve.jpg)
 
 ##   Pin definition and Rating  
 
@@ -215,17 +215,17 @@ The warnings and wrong operations possible cause dangerous.
 
 ###   Hardware Installation  
 
-![](https://github.com/SeeedDocument/Solar_Charger_Shield/raw/master/img/Solarchange-hardware.jpg)
+![](https://files.seeedstudio.com/wiki/Solar_Charger_Shield/img/Solarchange-hardware.jpg)
 
 1.Stacked setup, put battery between the pin headers, please note the polarity while connecting the wires to the battery jac.
 
 (Red to +, black to -).
 
-![](https://github.com/SeeedDocument/Solar_Charger_Shield/raw/master/img/Solarchange-hardware-step1.jpg)
+![](https://files.seeedstudio.com/wiki/Solar_Charger_Shield/img/Solarchange-hardware-step1.jpg)
 
 2.Solar panel or other energy sources should be connected to PWR1, solar panel Jack.
 
-![](https://github.com/SeeedDocument/Solar_Charger_Shield/raw/master/img/Solarchange-hardware-step2.jpg)
+![](https://files.seeedstudio.com/wiki/Solar_Charger_Shield/img/Solarchange-hardware-step2.jpg)
 
 **Energy Source: (4V To 6V output)**
 

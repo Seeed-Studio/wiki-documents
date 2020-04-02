@@ -10,7 +10,7 @@ sku: 103030003
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Relay-Shield_V2.0/raw/master/img/Relayshield_01.jpg)
+![](https://files.seeedstudio.com/wiki/Relay-Shield_V2.0/img/Relayshield_01.jpg)
 
 The Relay Shield provides a solution for controlling high current devices that cannot be controlled by the Arduino's Digital I/O pins due to their current and voltage limits.
 
@@ -57,7 +57,7 @@ The Relay Shield features four high quality relays and provides NO/NC interfaces
 
 ##  Shield Interface Description ##
 
-![](https://github.com/SeeedDocument/Relay-Shield_V2.0/raw/master/img/Relays-Shield-PCB-Explained-real.png)
+![](https://files.seeedstudio.com/wiki/Relay-Shield_V2.0/img/Relays-Shield-PCB-Explained-real.png)
 
 Relay Shield V2.0 terminal connections description
 
@@ -90,10 +90,10 @@ Some practical relay applications include: control of high voltage using low vol
 
 A motor control application with one relay and one motor is shown below:
 
-![](https://github.com/SeeedDocument/Relay-Shield_V2.0/raw/master/img/Low_Level_Control4.jpg)
+![](https://files.seeedstudio.com/wiki/Relay-Shield_V2.0/img/Low_Level_Control4.jpg)
 The motor is not currently running since there is no connection from the power supply to the motor. The control circuit is not energizing the relay, so the COM terminal is not attracted to the NO terminal
 
-![](https://github.com/SeeedDocument/Relay-Shield_V2.0/raw/master/img/High_Level_Control3.jpg)
+![](https://files.seeedstudio.com/wiki/Relay-Shield_V2.0/img/High_Level_Control3.jpg)
 The motor is running since it is contact with the power supply's + and - terminals. The control circuit is energizing the relay and its magnetic force has attracted the COM terminal to the NO terminal.
 
 In the case of the Relay Shield, the two “Control Circuit” terminals for each of the four relays are controlled by only one Arduino Digital I/O pin. Pins 4, 5, 6, and 7 control relays 4, 3, 2, and 1 respectively.
@@ -110,10 +110,10 @@ Now that you know how a relay works internally, let us show you how to use the R
 
 3.We will use RELAY3 to control the DC motor. Connect the DC motor and Relay Shield as shown in the schematic and figure below:
 
-![](https://github.com/SeeedDocument/Relay-Shield_V2.0/raw/master/img/Motor-shield-schematic-drawing.png)
+![](https://files.seeedstudio.com/wiki/Relay-Shield_V2.0/img/Motor-shield-schematic-drawing.png)
 Motor and Relay Shield schematic
 
-![](https://github.com/SeeedDocument/Relay-Shield_V2.0/raw/master/img/Relay_Shield_Connector.jpg)
+![](https://files.seeedstudio.com/wiki/Relay-Shield_V2.0/img/Relay_Shield_Connector.jpg)
 Arduino board with Relay Shield, and a motor connected to the Relay Shield
 
 **Note:** The external power supply in the figure above can be a battery or power supply. The external supply must be able to provide enough current and be set to the correct voltage for the motor. In our testing, we used a lithium battery as the external power supply for the motor.
@@ -148,7 +148,7 @@ Because the Relay Shield uses digital pins on the Arduino to control each the re
 
 2.Connect another Relay Shield (let’s call this one Relay Shield #2) using jumper cables/wires to Relay Shield #1 as shown in the figure below:
 
-![](https://github.com/SeeedDocument/Relay-Shield_V2.0/raw/master/img/Two-relay-shields-one-arduino.png)
+![](https://files.seeedstudio.com/wiki/Relay-Shield_V2.0/img/Two-relay-shields-one-arduino.png)
 Double Relay Shield with only one Arduino board schematic.
 
 -  Relay Shield #1 GND pins are connected to Relay Shield #2 GND pins
@@ -184,9 +184,9 @@ delay(1000); // wait 1000 milliseconds (1 second)}
 
 ##  Resources  ##
 
-- **[EAGLE]**[Relay Shield EagleCAD Files](https://github.com/SeeedDocument/Relay-Shield_V2.0/raw/master/res/Relay_Shield_eagle.zip)
-- **[PDF]**[Relay shield PCB](https://github.com/SeeedDocument/Relay-Shield_V2.0/raw/master/res/Relay%20shield%20PCB.pdf)
-- **[PDF]**[Relay shield sch](https://github.com/SeeedDocument/Relay-Shield_V2.0/raw/master/res/Relay%20shield%20sch.pdf)
+- **[EAGLE]**[Relay Shield EagleCAD Files](https://files.seeedstudio.com/wiki/Relay-Shield_V2.0/res/Relay_Shield_eagle.zip)
+- **[PDF]**[Relay shield PCB](https://files.seeedstudio.com/wiki/Relay-Shield_V2.0/res/Relay%20shield%20PCB.pdf)
+- **[PDF]**[Relay shield sch](https://files.seeedstudio.com/wiki/Relay-Shield_V2.0/res/Relay%20shield%20sch.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

@@ -40,7 +40,7 @@ This is the breakout kit specially designed for ESP32, it contains a breakout bo
 ## Getting Started
 
 - First, you need to purchase [ESP-32S Wifi Bluetooth Combo Module](https://www.seeedstudio.com/ESP-32S-Wifi-Bluetooth-Combo-Module-p-2706.html).
-![](https://github.com/SeeedDocument/ESP32_Breakout_Kit/raw/master/img/ESP32.jpg)
+![](https://files.seeedstudio.com/wiki/ESP32_Breakout_Kit/img/ESP32.jpg)
 - Second,Solder the ESP32 module onto breakout kit.
 - The assembled kit will provide ultra high performance and ultra low-power consumption Wi-Fi and Bluetooth combo wireless solution.
 
@@ -53,9 +53,9 @@ This is the breakout kit specially designed for ESP32, it contains a breakout bo
 
 ## Resources
 
-* [ESP32 Breakout Kit Schematics and PCB in EAGLE format](https://github.com/SeeedDocument/ESP32_Breakout_Kit/raw/master/res/319011771_ESP32%20Extension%20Board%20v1.0_%E5%8E%9F%E7%90%86%E5%9B%BE.zip)
-* [ESP32 Breakout Kit Schematics in PDF format](https://github.com/SeeedDocument/ESP32_Breakout_Kit/raw/master/res/ESP32%20Extension%20Board%20v1.0.pdf)
-* [ESP32 Breakout Kit PCB in PDF format](https://github.com/SeeedDocument/ESP32_Breakout_Kit/raw/master/res/ESP32%20Extension%20Board%20v1.0%20PCB.pdf)
+* [ESP32 Breakout Kit Schematics and PCB in EAGLE format](https://files.seeedstudio.com/wiki/ESP32_Breakout_Kit/res/319011771_ESP32%20Extension%20Board%20v1.0_%E5%8E%9F%E7%90%86%E5%9B%BE.zip)
+* [ESP32 Breakout Kit Schematics in PDF format](https://files.seeedstudio.com/wiki/ESP32_Breakout_Kit/res/ESP32%20Extension%20Board%20v1.0.pdf)
+* [ESP32 Breakout Kit PCB in PDF format](https://files.seeedstudio.com/wiki/ESP32_Breakout_Kit/res/ESP32%20Extension%20Board%20v1.0%20PCB.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

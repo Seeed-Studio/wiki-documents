@@ -9,7 +9,7 @@ sku: 107020069
 ---
 
 
-![](https://github.com/SeeedDocument/Grove-MP3-V3/raw/master/img/Grove-MP3-V3-preview.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-MP3-V3/img/Grove-MP3-V3-preview.jpg)
 
 The Grove - MP3 is a 20x40mm super mini Music module based on WT2003S-20SS audio decoder. It supports high-quality MP3 format audio files with a sampling rate of 8~48KHz and a bit rate of 8~320Kbps. In order to expand the storage capacity, we added a TF card slot on the back of the module. TF card adopts DIO interface mode, supports up to 32GB, supports FAT16, FAT32 file system. Now with this little music module, you can carry hundreds and thousands of music in your pocket.
 
@@ -63,7 +63,7 @@ As the name indicates, the Grove - MP3 V3 is the upgraded version of Grove - MP3
 
 | Seeeduino V4.2 | Base Shield | Grove - MP3 V3 -Music Player|
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-MP3-V3/raw/master/img/Grove-MP3-V3-thumbnail.jpg)
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-MP3-V3/img/Grove-MP3-V3-thumbnail.jpg)
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-MP3-V3-p-4297.html)|
 
 >In addition, you can consider our new [Seeeduino Lotus M0+](https://www.seeedstudio.com/Seeeduino-Lotus-Cortex-M0-p-2896.html), which is equivalent to the combination of Seeeduino V4.2 and Baseshield.
@@ -351,8 +351,8 @@ void printMenu(void) {
 
 ## Resources
 
-- **[ZIP]** [Grove - MP3 V3 Schematic](https://github.com/SeeedDocument/Grove-MP3-V3/raw/master/res/Grove-MP3.zip)
-- **[PDF]** [WT2003S Datasheet](https://github.com/SeeedDocument/Grove-MP3-V3/raw/master/res/Grove-MP3.zip)
+- **[ZIP]** [Grove - MP3 V3 Schematic](https://files.seeedstudio.com/wiki/Grove-MP3-V3/res/Grove-MP3.zip)
+- **[PDF]** [WT2003S Datasheet](https://files.seeedstudio.com/wiki/Grove-MP3-V3/res/Grove-MP3.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

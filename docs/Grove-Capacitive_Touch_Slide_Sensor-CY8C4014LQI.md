@@ -9,7 +9,7 @@ sku: 101020552
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI/img/main.jpg)
 
 The Grove - Capacitive Touch Slide Sensor(CY8C4014LQI) is a multifunctional touch sensor. You can touch the two buttons or slide on the 5-segment slider, each touch pad has a corresponding LED to indicate the touch status. Also we provide a default high interrupt pin, once you touch the button or slide the slider, it will comes to low. 
 
@@ -67,9 +67,9 @@ It will be a lot fun to use this module as a game controler or apply it to other
 
 ### Pin Out
 
-![](https://github.com/SeeedDocument/Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI/raw/master/img/pin_out.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI/img/pin_out.jpg)
 
-![](https://github.com/SeeedDocument/Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI/raw/master/img/pin_out_back.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI/img/pin_out_back.jpg)
 
 
 
@@ -121,7 +121,7 @@ This module is based on **CY8C4014LQI**, the input voltage of this chip range fr
 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI/img/connect.jpg)
 
 
 !!!Note
@@ -148,12 +148,12 @@ This module is based on **CY8C4014LQI**, the input voltage of this chip range fr
 
 - **Step 3.** Restart the Arduino IDE. Open the example, you can open it in the following three ways：
     1. Open it directly in the Arduino IDE via the path: **File --> Examples --> Grove_touch_sensor_CY8C40XX --> basic_demo**. 
-    ![](https://github.com/SeeedDocument/Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI/raw/master/img/path.png)
+    ![](https://files.seeedstudio.com/wiki/Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI/img/path.png)
     
     2. Open it in your computer by click the **basic_demo.ino** which you can find in the folder **XXXX\Arduino\libraries\Grove_touch_sensor_CY8C40XX-master\examples\basic_demo**, **XXXX** is the location you installed the Arduino IDE.
-    ![](https://github.com/SeeedDocument/Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI/raw/master/img/path_1.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI/img/path_1.jpg)
     
-    3. Or, you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+    3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 ```C++
 
@@ -219,7 +219,7 @@ button 2 is pressed
 slider value is9
 ```
 
-![](https://github.com/SeeedDocument/Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI/raw/master/img/result.gif)
+![](https://files.seeedstudio.com/wiki/Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI/img/result.gif)
 
 
 ## Schematic Online Viewer
@@ -235,7 +235,7 @@ slider value is9
 
 - **[Zip]** [Grove touch sensor CY8C40XX Library](https://github.com/Seeed-Studio/Grove_touch_sensor_CY8C40XX/archive/master.zip)
 
-- **[PDF]** [Datasheet of CY8C4014LQI](https://github.com/SeeedDocument/Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI/raw/master/res/CY8C4014LQI_Datasheet.pdf)
+- **[PDF]** [Datasheet of CY8C4014LQI](https://files.seeedstudio.com/wiki/Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI/res/CY8C4014LQI_Datasheet.pdf)
 
 
 ## Tech Support

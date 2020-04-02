@@ -7,11 +7,11 @@ prodimagename: WiFi%20Serial%20Transceiver%20Module.jpg
 surveyurl: https://www.research.net/r/WiFi_Serial_Transceiver_Module
 sku: 114990085
 ---
-![](https://github.com/SeeedDocument/WiFi_Serial_Transceiver_Module/raw/master/img/WiFi%20Serial%20Transceiver%20Module.jpg)
+![](https://files.seeedstudio.com/wiki/WiFi_Serial_Transceiver_Module/img/WiFi%20Serial%20Transceiver%20Module.jpg)
 
 In this tutorial, we'll use a seeeduino to control the ESP8266 WiFi module to request a static page from the internet. This is a basic use of TCP socket, for other usage, please refer to the AT command guide of the module.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/WiFi-Serial-Transceiver-Module-w-ESP8266-p-1994.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/WiFi-Serial-Transceiver-Module-w-ESP8266-p-1994.html)
 
 **Material list:**
 
@@ -26,7 +26,7 @@ In this tutorial, we'll use a seeeduino to control the ESP8266 WiFi module to re
 ---
 - **Step 1**: connect module as the following picture
 
-![](https://github.com/SeeedDocument/WiFi_Serial_Transceiver_Module/raw/master/img/Wifi_connection.jpg)
+![](https://files.seeedstudio.com/wiki/WiFi_Serial_Transceiver_Module/img/Wifi_connection.jpg)
 
 - **Step 2**: Programe the seeeduino board.
 
@@ -145,7 +145,7 @@ At last, Happy Hakcing! :)
 
 **WiFi Scanner -Know the WiFi Signal around you**
 
-![](https://github.com/SeeedDocument/WiFi_Serial_Transceiver_Module/raw/master/img/Recipe-WiFi_Scanner-Know_the_WiFi_Signal_around_you.jpg)
+![](https://files.seeedstudio.com/wiki/WiFi_Serial_Transceiver_Module/img/Recipe-WiFi_Scanner-Know_the_WiFi_Signal_around_you.jpg)
 
 Build your own Wifi Scanner with few simple steps, all you need to do is prepare:
 
@@ -159,7 +159,7 @@ Build your own Wifi Scanner with few simple steps, all you need to do is prepare
 
 **Primary IoT Make with NodeMcu >ESP8266<**
 
-![](https://github.com/SeeedDocument/WiFi_Serial_Transceiver_Module/raw/master/img/Recipe-Primary_IoT_Make_with_NodeMcu--ESP8266--.jpg)
+![](https://files.seeedstudio.com/wiki/WiFi_Serial_Transceiver_Module/img/Recipe-Primary_IoT_Make_with_NodeMcu--ESP8266--.jpg)
 
 An online Temperature&Humidity Monitor made with:
 

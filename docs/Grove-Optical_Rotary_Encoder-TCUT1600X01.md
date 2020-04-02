@@ -9,7 +9,7 @@ sku: 101020587
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-Optical_Rotary_Encoder-TCUT1600X01/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Optical_Rotary_Encoder-TCUT1600X01/img/main.jpg)
 
 The Grove - Optical Rotary Encoder(TCUT1600X01) is a transmissive sensor that includes an infrared emitter and two phototransistor detectors. Usually, the infrared emitter emits infrared rays, the phototransistor detectors receives the infrared rays, then the phototransistor is turned on, both of the output is High, the on-board LED indicators light up. When there is an obstacle blocking, the phototransistor can not receive the infrared rays, so the phototransistor will be turned off and both of the output will be Low, the on-board LED indicators fade away.
 
@@ -49,29 +49,29 @@ You can use this sensor as a rotary encoder to detect the speed or rotation, and
 
 ### Pin Map
 
-![](https://github.com/SeeedDocument/Grove-Optical_Rotary_Encoder-TCUT1600X01/raw/master/img/pin_map.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Optical_Rotary_Encoder-TCUT1600X01/img/pin_map.jpg)
 
 
 ### Schemaitc
 
 **Power**
-![](https://github.com/SeeedDocument/Grove-Optical_Rotary_Encoder-TCUT1600X01/raw/master/img/schematic.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Optical_Rotary_Encoder-TCUT1600X01/img/schematic.jpg)
 
-The typical voltage of TCUT1600X01 is 5V, so we use the [MP3120](https://github.com/SeeedDocument/Grove-Optical_Rotary_Encoder-TCUT1600X01/raw/master/res/MP3120.pdf) current mode step-up converter to provide a stable 5V. The input of MP3120 ranges from 0.8V to 5V, so you can use this module with your Arduino both
+The typical voltage of TCUT1600X01 is 5V, so we use the [MP3120](https://files.seeedstudio.com/wiki/Grove-Optical_Rotary_Encoder-TCUT1600X01/res/MP3120.pdf) current mode step-up converter to provide a stable 5V. The input of MP3120 ranges from 0.8V to 5V, so you can use this module with your Arduino both
 in 3.3V and 5V. 
 
-![](https://github.com/SeeedDocument/Grove-Optical_Rotary_Encoder-TCUT1600X01/raw/master/img/schematic_1.jpg) 
+![](https://files.seeedstudio.com/wiki/Grove-Optical_Rotary_Encoder-TCUT1600X01/img/schematic_1.jpg) 
 
 When the phototransistor detectors receive the infrared signal, the output should be High, and when the obstacle blocks the infrared, the OUT1 and OUIT2 should be Low. However due to the leakage current, it won't be 0V. The leakage voltage varies with the input voltage.
 
 ### Mechanical Drawing
 
-![](https://github.com/SeeedDocument/Grove-Optical_Rotary_Encoder-TCUT1600X01/raw/master/img/Mechanical.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Optical_Rotary_Encoder-TCUT1600X01/img/Mechanical.jpg)
 
 
 ### Directional Detection
 
-![](https://github.com/SeeedDocument/Grove-Optical_Rotary_Encoder-TCUT1600X01/raw/master/img/principle.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Optical_Rotary_Encoder-TCUT1600X01/img/principle.jpg)
 
 !!!Tip
     Thanks to the two phototransistor detectors, we can detect the moving direction. If the obstacle moves from the left to right, The output states change should be **11 --> 01 --> 00 --> 10**; in the same way, if the obstacle moves from the right to left, it should be **11 --> 10 --> 00 -->01**.
@@ -122,7 +122,7 @@ When the phototransistor detectors receive the infrared signal, the output shoul
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-Optical_Rotary_Encoder-TCUT1600X01/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Optical_Rotary_Encoder-TCUT1600X01/img/connect.jpg)
 
 !!!Note
         If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
@@ -146,27 +146,27 @@ When the phototransistor detectors receive the infrared signal, the output shoul
 
 - **Step 1.** Install the **Encoder Library** in the Arduino IDE. You can find this library by the following path: **Sketch-->Include Library-->Manage Libraries**
 
-![](https://github.com/SeeedDocument/Grove-Optical_Rotary_Encoder-TCUT1600X01/raw/master/img/path.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Optical_Rotary_Encoder-TCUT1600X01/img/path.jpg)
 
 Then search for the **encoder** in the pop-up window. Find the **Encoder by Paul Stoffregen**, choose the **Version1.4.1**, then click **Install**.
 
-![](https://github.com/SeeedDocument/Grove-Optical_Rotary_Encoder-TCUT1600X01/raw/master/img/path_1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Optical_Rotary_Encoder-TCUT1600X01/img/path_1.jpg)
 
 When the library is installed you will see <font style="font-weight:bold;color:#00C3CE">INSTALLED</font>, click **Close** then.
 
-![](https://github.com/SeeedDocument/Grove-Optical_Rotary_Encoder-TCUT1600X01/raw/master/img/path_2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Optical_Rotary_Encoder-TCUT1600X01/img/path_2.jpg)
 
 
 >Thanks for Paul for his splendid library.
 
 - **Step 2.** Restart the Arduino IDE. Open the example, you can open it in the following three ways：
     1. Open it directly in the Arduino IDE via the path: **File --> Examples --> Encoder --> Basic**. 
-    ![](https://github.com/SeeedDocument/Grove-Optical_Rotary_Encoder-TCUT1600X01/raw/master/img/path_3.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-Optical_Rotary_Encoder-TCUT1600X01/img/path_3.jpg)
 
     2. Open it in your computer by click the **Basic.pde** which you can find in the **xxxx\Arduino\libraries\Encoder\examples\Basic**, **XXXX** is the location you installed the Arduino IDE.
-    ![](https://github.com/SeeedDocument/Grove-Optical_Rotary_Encoder-TCUT1600X01/raw/master/img/path_4.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-Optical_Rotary_Encoder-TCUT1600X01/img/path_4.jpg)
 
-    3. Or, you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+    3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 ```C++
 /* Encoder Library - Basic Example
@@ -240,11 +240,11 @@ Basic Encoder Test:
 
 ## Resources
 
-- **[Zip]** [Grove - Optical Rotary Encoder eagle files](https://github.com/SeeedDocument/Grove-Optical_Rotary_Encoder-TCUT1600X01/raw/master/res/Grove-Optical_Rotary_Encoder-TCUT1600X01.zip)
+- **[Zip]** [Grove - Optical Rotary Encoder eagle files](https://files.seeedstudio.com/wiki/Grove-Optical_Rotary_Encoder-TCUT1600X01/res/Grove-Optical_Rotary_Encoder-TCUT1600X01.zip)
 
-- **[PDF]** [Datasheet of TCUT1600X01](https://github.com/SeeedDocument/Grove-Optical_Rotary_Encoder-TCUT1600X01/raw/master/res/Optical_Sensor.pdf)
+- **[PDF]** [Datasheet of TCUT1600X01](https://files.seeedstudio.com/wiki/Grove-Optical_Rotary_Encoder-TCUT1600X01/res/Optical_Sensor.pdf)
 
-- **[PDF]** [Datasheet of MP3120](https://github.com/SeeedDocument/Grove-Optical_Rotary_Encoder-TCUT1600X01/raw/master/res/MP3120.pdf)
+- **[PDF]** [Datasheet of MP3120](https://files.seeedstudio.com/wiki/Grove-Optical_Rotary_Encoder-TCUT1600X01/res/MP3120.pdf)
 
 
 ## Project

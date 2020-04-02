@@ -13,7 +13,7 @@ sku: 102010007
 Seeeduino Mega is a powerful micro-controller derived from Arduino Mega. It features ATmega2560 processor which brings a large number of I/O pins, as much as 70 digital I/O, 16 analog inputs, 14 PWM, and 4 hardware serial ports. Compared to Arduino Mega, we shrunk the volume of Arduino Mega by at least 30% and made it 100% compatible with [Seeed Shield products](https://www.seeedstudio.com/s/shield.html). And as a member of Seeeduino series, Seeeduino Mega inherits deliberate details from Seeeduino, like selectable operating voltage(3.3V/5V), right angle reset button, and so on.
 
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Seeeduino-Mega-p-717.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Seeeduino-Mega-p-717.html)
 
 
 ## Application Ideas

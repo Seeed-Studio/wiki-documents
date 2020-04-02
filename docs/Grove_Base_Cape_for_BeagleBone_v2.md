@@ -8,13 +8,13 @@ surveyurl: https://www.research.net/r/Grove_Base_Cape_for_BeagleBone_v2
 sku:  103030035
 ---
 
-![](https://github.com/SeeedDocument/Grove_Base_Cape_for_BeagleBone_v2/raw/master/img/Grove_Base_Cape_for_BeagleBone_v2_product_view_1200.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Base_Cape_for_BeagleBone_v2/img/Grove_Base_Cape_for_BeagleBone_v2_product_view_1200.jpg)
 
 **Grove Base Cape for BeagleBone** v2 is a [Grove system](/Grove_System) expansion board for BeagleBone platform. This cape makes it convenient to connect many transducers (sensors and actuators) available as Grove modules with BeagleBone platform. The boards also includes a 256kb Serial EEPROM. It will save a lot effort for you in product development process with soldering-free design and compact plug-and-play ports.
 
 The cape provides 12 easy-to-use Grove connectors to do plug-and-play with the big family of Grove modules. The connectors include 2x UART, 2x ADC, 4x Digital I/O and 4x I2C that interface to the pins on your Beaglebone board, offering almost everything you need. There are two switches used to reset the I2C address in case of address conflicts. The board also integrates a switch for voltage transition - from a normal 5V to 3.3V and vice versa.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Base-Cape-for-Beaglebone-v2.0-p-2644.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Base-Cape-for-Beaglebone-v2.0-p-2644.html)
 
 
 ##  Features
@@ -73,7 +73,7 @@ The cape provides 12 easy-to-use Grove connectors to do plug-and-play with the b
 
 ##  Hardware overview
 ---
-![](https://github.com/SeeedDocument/Grove_Base_Cape_for_BeagleBone_v2/raw/master/img/Grove_Base_Cape_for_BeagleBone_v2_hardware_overview_1200.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Base_Cape_for_BeagleBone_v2/img/Grove_Base_Cape_for_BeagleBone_v2_hardware_overview_1200.jpg)
 
 **Output voltage switch**, is a switch to control output voltage to Grove ports.
 
@@ -120,7 +120,7 @@ In this section, we will show you a basic example to use this board. You can fin
 1.Connect BeagleBone Green to Your PC or MAC by USB cable. Click [http://192.168.7.2:3000/ide.html](http://192.168.7.2:3000/ide.html) to Open Cloud9 IDE.
 </dd></dl>
 2.Connect Grove - Button(P) to Grove Base Cape for BeagleBone v2 with Grove cable. Plug Grove cable to GPIO pin 51.
-![](https://github.com/SeeedDocument/Grove_Base_Cape_for_BeagleBone_v2/raw/master/img/Grove_Base_Cape_for_BeagleBone_v2_wiki_demo_1200.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Base_Cape_for_BeagleBone_v2/img/Grove_Base_Cape_for_BeagleBone_v2_wiki_demo_1200.jpg)
 </dd></dl>
 3.Copy following code to Cloud9, save it to a **.js** file.
 
@@ -151,7 +151,7 @@ function checkButton(x) {
 5.Wait for about 10 seconds to view the output at the bottom of Cloud9 IDE. The output probably looks like the following screen-shot:
 
 
-![](https://github.com/SeeedDocument/Grove_Base_Cape_for_BeagleBone_v2/raw/master/img/Grove_Base_Cape_for_BeagleBone_v2_wiki_demo_result_600_s.png)
+![](https://files.seeedstudio.com/wiki/Grove_Base_Cape_for_BeagleBone_v2/img/Grove_Base_Cape_for_BeagleBone_v2_wiki_demo_result_600_s.png)
 
 
 ## Schematic Online Viewer
@@ -162,7 +162,7 @@ function checkButton(x) {
 
 ##  Resources
 ---
-*   [EAGLE Schematic &amp; PCB files and PDF format Schematic](https://github.com/SeeedDocument/Grove_Base_Cape_for_BeagleBone_v2/raw/master/res/Grove_Base_Cape_for_BeagleBone_v2.0_Schematics.zip)
+*   [EAGLE Schematic &amp; PCB files and PDF format Schematic](https://files.seeedstudio.com/wiki/Grove_Base_Cape_for_BeagleBone_v2/res/Grove_Base_Cape_for_BeagleBone_v2.0_Schematics.zip)
 
 *   [BeagleBone Green](/BeagleBone_Green)
 

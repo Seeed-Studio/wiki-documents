@@ -7,11 +7,11 @@ prodimagename:  Unibody_box_for_Galileo_Gen2.jpg
 surveyurl: https://www.research.net/r/Unibody_box_for_Galileo_Gen2
 sku:    110070018
 ---
-![](https://github.com/SeeedDocument/Unibody_box_for_Galileo_Gen2/raw/master/img/Unibody_box_for_Galileo_Gen2.jpg)
+![](https://files.seeedstudio.com/wiki/Unibody_box_for_Galileo_Gen2/img/Unibody_box_for_Galileo_Gen2.jpg)
 
 Unibody box for Galileo Gen2 is a protective casing for Intel Galileo board. It is durable and simple to assemble which will save you lot thoughts while you trying to keep you applications safe. The interface holes allow for expansion connections. With it, just like an external hard disk driver casing does for us, you will give your favorable portability. In addition, it is designed with minimalism style and look attractive.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Unibody-Box-for-Galileo-Gen2-p-2605.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Unibody-Box-for-Galileo-Gen2-p-2605.html)
 
 ##  Features
 ---
@@ -25,7 +25,7 @@ Unibody box for Galileo Gen2 is a protective casing for Intel Galileo board. It 
 
 ##  Applications
 ---
-![](https://github.com/SeeedDocument/Unibody_box_for_Galileo_Gen2/raw/master/img/Unibody_box_for_Galileo_Gen2_with_Galileo_.jpg)
+![](https://files.seeedstudio.com/wiki/Unibody_box_for_Galileo_Gen2/img/Unibody_box_for_Galileo_Gen2_with_Galileo_.jpg)
 
 ##  Specification
 ---
@@ -70,7 +70,7 @@ It is quite necessary to read this guide before assembling you Galileo board int
 2.  Please put a screw right into one hole and fix it slowly.
 
 3.  Push stopper close horizontally and gently with thumb and index finger before press the lid to avoid breaking stopper.
-![](https://github.com/SeeedDocument/Unibody_box_for_Galileo_Gen2/raw/master/img/800px-Galileogen2case_Assembly_Guide.jpg)
+![](https://files.seeedstudio.com/wiki/Unibody_box_for_Galileo_Gen2/img/800px-Galileogen2case_Assembly_Guide.jpg)
 
 </dd><dd>4. Push stopper close horizontally and gently first as you want to take out the lid.
 </dd></dl>
@@ -85,7 +85,7 @@ It is quite necessary to read this guide before assembling you Galileo board int
 
 ##  Resources
 ---
-- [CNC files](https://github.com/SeeedDocument/Unibody_box_for_Galileo_Gen2/raw/master/res/CNC_files.zip)
+- [CNC files](https://files.seeedstudio.com/wiki/Unibody_box_for_Galileo_Gen2/res/CNC_files.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

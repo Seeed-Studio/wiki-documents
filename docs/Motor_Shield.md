@@ -13,7 +13,7 @@ tags:
 The Motor Shield is a driver module for motors that allows you to use Arduino to control the working speed and direction of the motor
 
 
-|![](https://github.com/SeeedDocument/Motor_Shield/raw/master/img/Smotoshield2.jpg)|![](https://github.com/SeeedDocument/Motor_Shield/raw/master/img/Motorshield_01.jpg)|
+|![](https://files.seeedstudio.com/wiki/Motor_Shield/img/Smotoshield2.jpg)|![](https://files.seeedstudio.com/wiki/Motor_Shield/img/Motorshield_01.jpg)|
 |---|---|
 |[Motor Shield V1.0](https://seeeddoc.github.io/Motor_Shield_V1.0/)|[Motor Shield V2.0](https://seeeddoc.github.io/Motor_Shield_V2.0/)|
 

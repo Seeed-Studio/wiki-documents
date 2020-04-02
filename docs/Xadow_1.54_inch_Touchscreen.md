@@ -13,7 +13,7 @@ If you have used or heard about Rephone, the world's first open source and modul
 
 This TFT Display contains 240 x 240 pixels that can be controlled individually to display up to 262K colors. Above the display is a layer of a capacitive touchscreen, offering 29.4mm x 29.4mm active area at the center of the display. As a single touch screen, it can detect finger presses anywhere within the active area during normal operations. The TFT driver gets the ST7789S IC Driver inside with 2-bit data and 4-bit control serial interface while the capacitive touchscreen controller uses I2C.
 
-![](https://github.com/SeeedDocument/Xadow_1.54_Inch_Touchscreen/raw/master/images/Xadow_1.54%E2%80%99%E2%80%99_Touchscreen.JPG)
+![](https://files.seeedstudio.com/wiki/Xadow_1.54_Inch_Touchscreen/images/Xadow_1.54%E2%80%99%E2%80%99_Touchscreen.JPG)
 
 !!!Note
     We have few modifications to library of Xadow 1.54" Touchscreen. Please refer to the **Notice** section for detail information.
@@ -25,7 +25,7 @@ This TFT Display contains 240 x 240 pixels that can be controlled individually t
 |Xadow 1.54" Touchscreen|(v1.0, older version)|	Oct 2015	|Supported	|None|
 |Xadow 1.54" Touchscreen|(v1.1, latest version)|	June 2016	|Supported|	None|
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/get_one_now.png)](https://www.seeedstudio.com/Xadow-1.54-inch-Touchscreen-p-2553.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/Xadow-1.54-inch-Touchscreen-p-2553.html)
 
 ## Features
 ---
@@ -59,7 +59,7 @@ This TFT Display contains 240 x 240 pixels that can be controlled individually t
 
 ## Hardware Overview
 ---
-![](https://github.com/SeeedDocument/Xadow_1.54_Inch_Touchscreen/raw/master/images/Xadow_1.54%E2%80%99%E2%80%99_Touchscreen.png)
+![](https://files.seeedstudio.com/wiki/Xadow_1.54_Inch_Touchscreen/images/Xadow_1.54%E2%80%99%E2%80%99_Touchscreen.png)
 
 !!!Warning
     Please insert controller, such as Xadow GSM+BLE to the **RIGHT** port, and insert the Audio module to the **LEFT** port.
@@ -80,7 +80,7 @@ This TFT Display contains 240 x 240 pixels that can be controlled individually t
 
 ## Rephone Community
 ---
-[![](https://github.com/SeeedDocument/Xadow_1.54_Inch_Touchscreen/raw/master/images/300px-RePhone_Community-2.png)](https://community.seeedstudio.com/discover.html?t=RePhone)
+[![](https://files.seeedstudio.com/wiki/Xadow_1.54_Inch_Touchscreen/images/300px-RePhone_Community-2.png)](https://community.seeedstudio.com/discover.html?t=RePhone)
 
 We’ve been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the [RePhone Community](https://community.seeedstudio.com/discover.html?t=RePhone).
 
@@ -97,12 +97,12 @@ Now join us in the [RePhone Community](https://community.seeedstudio.com/discove
 ---
 The schematic diagram of Xadow 1.54” Touchscreen is provided in the following link:
 
-- [Xadow 1.54”Touchscreen schematic files](https://github.com/SeeedDocument/Xadow_1.54_Inch_Touchscreen/raw/master/resources/202000724_PCBA%3BXadow%201.54''Touchscreen%20v1.0%20schematic%20files.zip)
+- [Xadow 1.54”Touchscreen schematic files](https://files.seeedstudio.com/wiki/Xadow_1.54_Inch_Touchscreen/resources/202000724_PCBA%3BXadow%201.54''Touchscreen%20v1.0%20schematic%20files.zip)
 
 Check more info about the TFT Display and the Capacitive Touchscreen:
 
-- [Datasheet of the TFT display](https://github.com/SeeedDocument/Xadow_1.54_Inch_Touchscreen/raw/master/res/Datasheet-Capacitive_touchscreen.pdf)
-- [Datasheet of the capacitive touchscreen](https://github.com/SeeedDocument/Xadow_1.54_Inch_Touchscreen/raw/master/res/TFT_Display.rar)
+- [Datasheet of the TFT display](https://files.seeedstudio.com/wiki/Xadow_1.54_Inch_Touchscreen/res/Datasheet-Capacitive_touchscreen.pdf)
+- [Datasheet of the capacitive touchscreen](https://files.seeedstudio.com/wiki/Xadow_1.54_Inch_Touchscreen/res/TFT_Display.rar)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

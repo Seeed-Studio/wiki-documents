@@ -12,7 +12,7 @@ tags:
 ##  1.Product Introduction
 
 
-![](https://github.com/SeeedDocument/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide/raw/master/img/1-1.jpg)
+![](https://files.seeedstudio.com/wiki/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide/img/1-1.jpg)
 
 
 SenseCAP is an industrial wireless sensor network that integrates easy-to-deploy hardware and data API services, enabling low-power, long-distance environmental data collection. SenseCAP includes several versions, such as LoRaWAN, NB-IoT, etc.  
@@ -35,7 +35,7 @@ SenseCAP provides an easy-to-use cloud platform. Users can scan the QR code with
 
 **LoRaWAN Gateway:**
 
-![](https://github.com/SeeedDocument/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide/raw/master/img/1-2.png)
+![](https://files.seeedstudio.com/wiki/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide/img/1-2.png)
 
 
 At the bottom of the gateway are Ethernet port and power connector, all of which meet the waterproof requirements. LED indicator light indicates the networking status. The top of the gateway is the connector for installing 4G/LoRa antenna, and the other connectors are reserved.
@@ -44,24 +44,24 @@ At the bottom of the gateway are Ethernet port and power connector, all of which
 **LoRaWAN Sensor Node:**
 
 
-![](https://github.com/SeeedDocument/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide/raw/master/img/1-3.png)
+![](https://files.seeedstudio.com/wiki/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide/img/1-3.png)
 
 
 Snap to open the device and you will see two parts. The Sensor Node Controller’s circuit shows a power switch, a RESET button, and an indicator LED as well as a mode button and serial ports, which will be used for firmware upgrading. The two parts connect and communicate via two spring connectors. 
 
 
-![](https://github.com/SeeedDocument/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide/raw/master/img/1-4.png)
+![](https://files.seeedstudio.com/wiki/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide/img/1-4.png)
 
 Each Sensor Node comes with a bracket for easy installation on a pole or wall. 
 
-![](https://github.com/SeeedDocument/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide/raw/master/img/1-11.jpg)
+![](https://files.seeedstudio.com/wiki/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide/img/1-11.jpg)
 
 
 **SenseCAP Portal：**
 
 SenseCAP Portal provides multiple services, including web-based management portal and API for calling data. Users can further develop system integration with the API, without worrying about embedded hardware technologies, hence shorten the development cycle. 
 
-![](https://github.com/SeeedDocument/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide/raw/master/img/1-7.png)
+![](https://files.seeedstudio.com/wiki/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide/img/1-7.png)
 
 
 

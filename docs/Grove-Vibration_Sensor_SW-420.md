@@ -9,7 +9,7 @@ sku: 101020586
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-Vibration_Sensor-SW-420/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Vibration_Sensor-SW-420/img/main.jpg)
 
 The Grove - Vibration Sensor (SW-420) is a high sensitivity non-directional vibration sensor. When the module is stable, the circuit is turned on and the output is high. When the movement or vibration occurs, the circuit will be briefly disconnected and output low. At the same time, you can also adjust the sensitivity according to your own needs.
 
@@ -55,12 +55,12 @@ All in all, this is a perfect module for vibration or tilt sensor.
 
 ### Pin Map
 
-![](https://github.com/SeeedDocument/Grove-Vibration_Sensor-SW-420/raw/master/img/pin_map.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Vibration_Sensor-SW-420/img/pin_map.jpg)
 
 
 ### Schemaitc
 
-![](https://github.com/SeeedDocument/Grove-Vibration_Sensor-SW-420/raw/master/img/Schematic.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Vibration_Sensor-SW-420/img/Schematic.jpg)
 
 
 First, let's begin with the **SW1** which at the lower left corner. Actually, the **SW1** is the vibration module **SW-420**. When the module is in a stable state, the module is turned on. **Pin2** of **U1A** is connected to the **GND** though **SW1**.
@@ -147,7 +147,7 @@ Now you can set the **V+** to adjust the sensitivity, just remember: the lower t
 
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-Vibration_Sensor-SW-420/raw/master/img/connect.JPG)
+![](https://files.seeedstudio.com/wiki/Grove-Vibration_Sensor-SW-420/img/connect.JPG)
 
 !!!Note
         If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
@@ -179,7 +179,7 @@ Now you can set the **V+** to adjust the sensitivity, just remember: the lower t
 
 - **Step 1.** Open your Arduino IDE, start a new sketch.
 
-- **Step 2.** Copy all the code below, or you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into the new sketch.
+- **Step 2.** Copy all the code below, or you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into the new sketch.
 
 ```C++
 // constants won't change. They're used here to set pin numbers:

@@ -10,7 +10,7 @@ sku:
 tags:
 
 ---
- ![](https://github.com/SeeedDocument/XBee-Shield/raw/master/img/Xbshieldn2.jpg) ![](https://github.com/SeeedDocument/XBee-Shield/raw/master/img/Xbshield_bottom.jpg)
+ ![](https://files.seeedstudio.com/wiki/XBee-Shield/img/Xbshieldn2.jpg) ![](https://files.seeedstudio.com/wiki/XBee-Shield/img/Xbshield_bottom.jpg)
 
 A **Xbee shield** allows an **Arduino** or [Seeeduino](https://seeeddoc.github.io/Seeeduino_V2.2/) board to communicate wirelessly using **Bee compatible modules** (like Zigbee or BlueTooth Bee). It is designed to be used with **Xbee module from MaxStream**. It can be used as a **Serial Port** / **USB replacement. ** It is used to connect two **Seeeduinos** using **Zigbee** / **Bluetooth Bee** or connect a **Seeeduino** with PC Wirelessly. Two toggle switches decides how **Rxd** and **Txd** pins of Bee modules be connected to **Seeeduino** pins. These two switches provides options to connect **RxD** and **TxD** lines of Bee Modules to **Seeduino Hardware Serial Port** or **Digital pins** **11** and **12** or **FTDI** **RxD** and **Txd** Pins.
 
@@ -63,7 +63,7 @@ void loop()
 
 ##   Schematic  
 
-![](https://github.com/SeeedDocument/XBee-Shield/raw/master/img/Xbee_Shield_Schematic.jpg)
+![](https://files.seeedstudio.com/wiki/XBee-Shield/img/Xbee_Shield_Schematic.jpg)
 
 ##   Specification  
 
@@ -79,11 +79,11 @@ A **Bee module** is connected to Arduino / Seeeduino via the XBee Shield. In cas
 
 ###   Hardware Installation  
 
-![](https://github.com/SeeedDocument/XBee-Shield/raw/master/img/Seeeduino_XBeeShield_XBeePro.jpg) ![](https://github.com/SeeedDocument/XBee-Shield/raw/master/img/Seeeduino_BluetoothBee_Xbee_Shield.JPG)
+![](https://files.seeedstudio.com/wiki/XBee-Shield/img/Seeeduino_XBeeShield_XBeePro.jpg) ![](https://files.seeedstudio.com/wiki/XBee-Shield/img/Seeeduino_BluetoothBee_Xbee_Shield.JPG)
 
 ####   Xbee Shield Outline and Toggle Switch Position  
 
-![](https://github.com/SeeedDocument/XBee-Shield/raw/master/img/XBee_Shield_Outline.jpg)
+![](https://files.seeedstudio.com/wiki/XBee-Shield/img/XBee_Shield_Outline.jpg)
 
 <table>
 <caption> Arduino
@@ -424,16 +424,16 @@ Links to external webpages which provide more application ideas, documents/datas
 
 - **[Arduino]**    [Arduino Xbee Shield Page](http://www.arduino.cc/en/Main/ArduinoXbeeShield)
 
-- **[Eagle]**    [eagle for Xbee_Shield_v1.0](https://github.com/SeeedDocument/XBee-Shield/raw/master/res/Eagle_XBee_Shield_v1.0.zip)
+- **[Eagle]**    [eagle for Xbee_Shield_v1.0](https://files.seeedstudio.com/wiki/XBee-Shield/res/Eagle_XBee_Shield_v1.0.zip)
 
-- **[PDF]**[XBee_Shield pdf](https://github.com/SeeedDocument/XBee-Shield/raw/master/res/XBee_Shield.pdf)
+- **[PDF]**[XBee_Shield pdf](https://files.seeedstudio.com/wiki/XBee-Shield/res/XBee_Shield.pdf)
 
-- **[Eagle]**[XBee_Shield sch](https://github.com/SeeedDocument/XBee-Shield/raw/master/res/XBee_Shield.sch)
+- **[Eagle]**[XBee_Shield sch](https://files.seeedstudio.com/wiki/XBee-Shield/res/XBee_Shield.sch)
 
-- **[Eagle]**    [eagle for Xbee_Shield_v1.1](https://github.com/SeeedDocument/XBee-Shield/raw/master/res/Elage_xbee_shield_v1.1.zip)
-- **[PDF]**[Xbee_shield_v1.1 pdf](https://github.com/SeeedDocument/XBee-Shield/raw/master/res/Xbee_shield_v1.11.pdf)
+- **[Eagle]**    [eagle for Xbee_Shield_v1.1](https://files.seeedstudio.com/wiki/XBee-Shield/res/Elage_xbee_shield_v1.1.zip)
+- **[PDF]**[Xbee_shield_v1.1 pdf](https://files.seeedstudio.com/wiki/XBee-Shield/res/Xbee_shield_v1.11.pdf)
 
-- **[EAGLE]**[Xbee_shield_v1.1 sch](https://github.com/SeeedDocument/XBee-Shield/raw/master/res/Xbee_shield_v1.11.sch)
+- **[EAGLE]**[Xbee_shield_v1.1 sch](https://files.seeedstudio.com/wiki/XBee-Shield/res/Xbee_shield_v1.11.sch)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

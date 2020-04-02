@@ -65,9 +65,9 @@ Product|Measurement Range|Output Port|Power Consumption
 
 ## Pinout
 
-![](https://github.com/SeeedDocument/Grove-3-Axis_Analog_Accelerometer-40g-ADXL356C/raw/master/img/pinout1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Analog_Accelerometer-40g-ADXL356C/img/pinout1.jpg)
 
-![](https://github.com/SeeedDocument/Grove-3-Axis_Analog_Accelerometer-40g-ADXL356C/raw/master/img/pinout2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Analog_Accelerometer-40g-ADXL356C/img/pinout2.jpg)
 
 
 
@@ -90,7 +90,7 @@ Product|Measurement Range|Output Port|Power Consumption
 
 | Seeeduino V4.2 | Base Shield |Grove 3-aixs Accelermeter ADXL356C|
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here]( https://raw.githubusercontent.com/SeeedDocument/Grove-3-Axis_Analog_Accelerometer-40g-ADXL356C/master/img/thumbnail.jpg)
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here]( https://raw.githubusercontent.com/SeeedDocument/Grove-3-Axis_Analog_Accelerometer-40g-ADXL356C/master/img/thumbnail.jpg)
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-3-Axis-Analog-Accelerometer-40g-ADXL356C-p-4006.html)|
 
 
@@ -317,7 +317,7 @@ $$
 ## Resources
 
 - **[ZIP]** [Grove - 3-Axis Analog Accelerometer ±20g (ADXL356C) Schematic file](https://github.com/SeeedDocument/Grove-3-Axis_Analog_Accelerometer-40g-ADXL356C/blob/master/res/Grove%20-%203-Axis%20Analog%20Accelerometer%20%C2%B140g%20(ADXL356C).zip)
-- **[PDF]** [ADXL 356 Datasheet](https://github.com/SeeedDocument/Grove-3-Axis_Analog_Accelerometer-20g-ADXL356B/raw/master/res/ADXL356B.pdf)
+- **[PDF]** [ADXL 356 Datasheet](https://files.seeedstudio.com/wiki/Grove-3-Axis_Analog_Accelerometer-20g-ADXL356B/res/ADXL356B.pdf)
 
 
 

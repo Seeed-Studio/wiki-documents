@@ -7,11 +7,11 @@ prodimagename: Voltage_Divider_01.jpg
 surveyurl: https://www.research.net/r/Grove_Voltage_Divider
 sku: 104020000
 ---
-![](https://github.com/SeeedDocument/Grove-Voltage_Divider/raw/master/img/Voltage_Divider_01.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Voltage_Divider/img/Voltage_Divider_01.jpg)
 
 The Grove – Voltage Divider provides an interface for measuring external voltage, eliminating the need to connect a resistance to input interface. Besides, the voltage gain can select by dial switch. They are easy to use.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Voltage-Divider-p-1472.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Voltage-Divider-p-1472.html)
 
 
 ## Feature
@@ -51,7 +51,7 @@ When measuring the external voltage, connect the external voltage to J1 and then
 
 In order to test the precision of this module, I tested some voltage inputs and get the following data:
 
-![](https://github.com/SeeedDocument/Grove-Voltage_Divider/raw/master/img/Voltage_Divider_Test_Score.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Voltage_Divider/img/Voltage_Divider_Test_Score.jpg)
 
 - As you can see, when the inputs were in the measuring range, the voltage divider has a high accuracy(<1%, that i marked an "OK"). But as the inputs were not in the range, the accuracy gets low(i marked a "NO") Please see [Specification](http://wiki.seeedstudio.com/Grove-Voltage_Divider/#specification) about the specific measurement range.
 
@@ -122,8 +122,8 @@ Upload the program to your Arduino/Seeeduino.
 
 ## Resource
 ---
-- [Grove - Voltage Divider Eagle File](https://github.com/SeeedDocument/Grove-Voltage_Divider/raw/master/res/Grove-Voltage_Divider_Eagle_File.zip)
-- [LMV358ID Datasheet](https://github.com/SeeedDocument/Grove-Voltage_Divider/raw/master/res/LMV358ID_Datasheet.pdf)
+- [Grove - Voltage Divider Eagle File](https://files.seeedstudio.com/wiki/Grove-Voltage_Divider/res/Grove-Voltage_Divider_Eagle_File.zip)
+- [LMV358ID Datasheet](https://files.seeedstudio.com/wiki/Grove-Voltage_Divider/res/LMV358ID_Datasheet.pdf)
 - [Codecraft CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove-Voltage_Divider/master/res/Grove_Voltage_Divider_CDC_File.zip)
 
 ## Tech Support

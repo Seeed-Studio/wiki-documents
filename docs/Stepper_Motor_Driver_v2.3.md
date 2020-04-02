@@ -10,7 +10,7 @@ tags:
 
 ---
 
-![](https://github.com/SeeedDocument/Stepper_Motor_Driver_v2.3/raw/master/img/Steperdriver.jpg)
+![](https://files.seeedstudio.com/wiki/Stepper_Motor_Driver_v2.3/img/Steperdriver.jpg)
 
 This board allows you to control one stepper motor, as well as receive input from two limit switches. It is based around the Allegro A3982 Stepper Motor Driver with Translator. The A3982 is capable of driving up to 2A per coil. This board was designed to improve upon and replace the v1.x series of stepper drivers which are based upon the venerable L297/L298 stepper drivers. The A3982 offers a number of improvements:
 

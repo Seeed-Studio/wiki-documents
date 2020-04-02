@@ -7,7 +7,7 @@ prodimagename:  113990107%200.jpg
 surveyurl: https://www.research.net/r/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout
 sku:  113990107
 ---
-![](https://github.com/SeeedDocument/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/raw/master/img/113990107%200.jpg)
+![](https://files.seeedstudio.com/wiki/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/img/113990107%200.jpg)
 
 This board based on the latest SIMCOM SIM808 GSM/GPS module, it offers cellular GSM and GPRS data along with GPS technology for satellite navigation.
 
@@ -17,7 +17,7 @@ The GPS receiver is incredibly sensitive with 22 tracking and 66 acquisition cha
 
 The board uses the 2G (not 3G or LTE) GSM networks.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/LoNet-808-Mini-GSM%26GPRS-%2B-GPS-Breakout-p-2493.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/LoNet-808-Mini-GSM%26GPRS-%2B-GPS-Breakout-p-2493.html)
 
 ##   Features
 ---
@@ -71,7 +71,7 @@ The board uses the 2G (not 3G or LTE) GSM networks.
 
 ##   Interfaces
 ---
-![](https://github.com/SeeedDocument/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/raw/master/img/Mappings-01.png)
+![](https://files.seeedstudio.com/wiki/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/img/Mappings-01.png)
 
 ① Power Button: this is the hard power switch for the module. When the module is power up, you can turn on or turn off the module by pressing the button for 2s.
 
@@ -248,28 +248,28 @@ Besides the antenna, you may need the following accessories using with LoNet 808
 
 <table>
 <tr>
-<td> <div class="center"><div class="floatnone">![](https://github.com/SeeedDocument/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/raw/master/img/Simcard.jpg)</div></div>
+<td> <div class="center"><div class="floatnone">![](https://files.seeedstudio.com/wiki/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/img/Simcard.jpg)</div></div>
 <div style=": center;">SIM-Card
  for GSM/GPRS Communication </div>
 </td>
-<td> <div class="center"><div class="floatnone">[![](https://github.com/SeeedDocument/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/raw/master/img/Battery_2200ma.jpg)](http://www.seeedstudio.com/depot/Polymer-Lithium-Ion-Battery-2200mAh-37V-p-1709.html?cPath=1_3)</div></div>
+<td> <div class="center"><div class="floatnone">[![](https://files.seeedstudio.com/wiki/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/img/Battery_2200ma.jpg)](http://www.seeedstudio.com/depot/Polymer-Lithium-Ion-Battery-2200mAh-37V-p-1709.html?cPath=1_3)</div></div>
 <div style=": center;"> 3.7V Li-ion Battery
  for power supply</div>
 </td>
-<td> <div class="center"><div class="floatnone">[![](https://github.com/SeeedDocument/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/raw/master/img/Power_Converter.jpg)](http://www.seeedstudio.com/depot/Adjustable-DCDC-Power-Converter-125V-35V3A-p-1534.html?cPath=1_4)</div></div>
+<td> <div class="center"><div class="floatnone">[![](https://files.seeedstudio.com/wiki/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/img/Power_Converter.jpg)](http://www.seeedstudio.com/depot/Adjustable-DCDC-Power-Converter-125V-35V3A-p-1534.html?cPath=1_4)</div></div>
 <div style=": center;">DC/DC Voltage Regulator
  for power supply</div>
 </td></tr>
 <tr>
-<td> <div class="center"><div class="floatnone">[![](https://github.com/SeeedDocument/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/raw/master/img/100cmUSBc.jpg)](http://www.seeedstudio.com/depot/USB-To-Uart-5V3V3-p-1832.html)</div></div>
+<td> <div class="center"><div class="floatnone">[![](https://files.seeedstudio.com/wiki/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/img/100cmUSBc.jpg)](http://www.seeedstudio.com/depot/USB-To-Uart-5V3V3-p-1832.html)</div></div>
 <div style=": center;"> MicroUSB Cable
 for charging battery</div>
 </td>
-<td> <div class="center"><div class="floatnone">[![](https://github.com/SeeedDocument/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/raw/master/img/USB_To_Uart_5V3V3.jpg)](http://www.seeedstudio.com/depot/USB-To-Uart-5V3V3-p-1832.html)</div></div>
+<td> <div class="center"><div class="floatnone">[![](https://files.seeedstudio.com/wiki/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/img/USB_To_Uart_5V3V3.jpg)](http://www.seeedstudio.com/depot/USB-To-Uart-5V3V3-p-1832.html)</div></div>
 <div style=": center;"> USB to UART Tool
 for testing ATcommand on PC</div>
 </td>
-<td> <div class="center"><div class="floatnone">[![](https://github.com/SeeedDocument/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/raw/master/img/3wsp.JPG)](http://www.seeedstudio.com/depot/3W-Solar-Panel-138X160-p-954.html?cPath=1_118)</div></div>
+<td> <div class="center"><div class="floatnone">[![](https://files.seeedstudio.com/wiki/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/img/3wsp.JPG)](http://www.seeedstudio.com/depot/3W-Solar-Panel-138X160-p-954.html?cPath=1_118)</div></div>
 <div style=": center;"> Solder Panel
 for charging battery </div>
 </td></tr>
@@ -281,11 +281,11 @@ for charging battery </div>
 
 **&gt; Connect to MCU **
 
-![](https://github.com/SeeedDocument/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/raw/master/img/C1-01.png)
+![](https://files.seeedstudio.com/wiki/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/img/C1-01.png)
 
 **&gt; Connect to PC **
 
-![](https://github.com/SeeedDocument/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/raw/master/img/C2-01.png)
+![](https://files.seeedstudio.com/wiki/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/img/C2-01.png)
 
 ###   Getting Started with AT Command
 
@@ -444,13 +444,13 @@ $GPRMC,043326.000,A,
 
 ##   Downloads
 ---
-*   [LoNet_808_Schematic](https://github.com/SeeedDocument/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/raw/master/res/LoNet_808_Schematic.pdf)
+*   [LoNet_808_Schematic](https://files.seeedstudio.com/wiki/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/res/LoNet_808_Schematic.pdf)
 
-*   [SIM800_ATCommand_Manual](https://github.com/SeeedDocument/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/raw/master/res/SIM800_ATCommand_Manual_V1.02.pdf)
+*   [SIM800_ATCommand_Manual](https://files.seeedstudio.com/wiki/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/res/SIM800_ATCommand_Manual_V1.02.pdf)
 
-*   [SIM808_HardwareDesign_Manual](https://github.com/SeeedDocument/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/raw/master/res/SIM808_Hardware_Design_V1.00.pdf)
+*   [SIM808_HardwareDesign_Manual](https://files.seeedstudio.com/wiki/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/res/SIM808_Hardware_Design_V1.00.pdf)
 
-*   [SIM808_GPSApplication_Note](https://github.com/SeeedDocument/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/raw/master/res/SIM808_GPS_Application_Note_V1.00.pdf)
+*   [SIM808_GPSApplication_Note](https://files.seeedstudio.com/wiki/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/res/SIM808_GPS_Application_Note_V1.00.pdf)
 
 ##   Resources
 ---

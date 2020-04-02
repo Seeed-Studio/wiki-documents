@@ -8,11 +8,11 @@ surveyurl: https://www.research.net/r/Xadow_Barometer_BMP180
 sku: 101040003
 ---
 
-![](https://github.com/SeeedDocument/Xadow_Barometer_BMP180/raw/master/img/Xadow-bmp180.JPG)
+![](https://files.seeedstudio.com/wiki/Xadow_Barometer_BMP180/img/Xadow-bmp180.JPG)
 
 The module can measure the air pressure and temperature of the current environment, and then you can convert this signal to information of altitude. The BMP180 is the function compatible successor of the BMP085, a new generation of high precision digital pressure sensors for consumer applications. The ultra-low power, low voltage electronics, superior performance of the BMP180 is optimized for use in wearable device, mobile phones, PDAs, GPS navigation devices and outdoor equipment. The I2C interface allows for easy system integration with a microcontroller.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-Barometer-BMP180-v1.0-p-2412.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-Barometer-BMP180-v1.0-p-2412.html)
 
 
 ## Specification
@@ -31,7 +31,7 @@ Dimensions: 25.43mm x 20.35mm
 
 The demo will show you how to get the air pressure and temperature of the current environment.
 
-![](https://github.com/SeeedDocument/Xadow_Barometer_BMP180/raw/master/img/IMG_2379.JPG)
+![](https://files.seeedstudio.com/wiki/Xadow_Barometer_BMP180/img/IMG_2379.JPG)
 
 !!!Note
     When connecting Xadow - Barometer BMP180 to Xadow - Main Board, you should concern about the connection direction. The connection method is that the unfilled corner of one Xadow module need to connect to the right angle of another module(see four corners of each Xadow module).
@@ -88,11 +88,11 @@ void loop()
 
 - Open the serial monitor to receive the sensor's data including temperature, barometric pressure value, relative atmosphere pressure and altitude.
 
-![](https://github.com/SeeedDocument/Xadow_Barometer_BMP180/raw/master/img/Barometer_Sensor.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Barometer_BMP180/img/Barometer_Sensor.jpg)
 
 - The following is a reference graph plotting out the relationship between altitude above sea level and barometric pressure.
 
-![](https://github.com/SeeedDocument/Xadow_Barometer_BMP180/raw/master/img/Pressure_and_Altitude.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Barometer_BMP180/img/Pressure_and_Altitude.jpg)
 
 
 ## Schematic Online Viewer
@@ -103,9 +103,9 @@ void loop()
 
 ## Resources
 ---
-- [Xadow - Barometer BMP180 Eagle File](https://github.com/SeeedDocument/Xadow_Barometer_BMP180/raw/master/res/Xadow_-_Barometer_BMP180_v1.0_sch_pcb.zip)
+- [Xadow - Barometer BMP180 Eagle File](https://files.seeedstudio.com/wiki/Xadow_Barometer_BMP180/res/Xadow_-_Barometer_BMP180_v1.0_sch_pcb.zip)
 - [Barometer_Sensor Library](https://github.com/Seeed-Studio/Grove_Barometer_Sensor)
-- [BMP180 datasheet](https://github.com/SeeedDocument/Xadow_Barometer_BMP180/raw/master/res/BMP180.pdf)
+- [BMP180 datasheet](https://files.seeedstudio.com/wiki/Xadow_Barometer_BMP180/res/BMP180.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

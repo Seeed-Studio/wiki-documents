@@ -8,7 +8,7 @@ surveyurl: https://www.surveymonkey.com/r/grove-gesture-v1
 sku: 101020083
 ---
 
-![](https://github.com/SeeedDocument/Grove_Gesture_V_1.0/raw/master/img/400px-Gesture_sensor_3.png)
+![](https://files.seeedstudio.com/wiki/Grove_Gesture_V_1.0/img/400px-Gesture_sensor_3.png)
 
 The sensor on Grove - Gesture is PAJ7620U2 that integrates gesture recognition function with general I2C interface into a single chip. It can recognize 9 basic gestures, and these gestures information can be simply accessed via the I2C bus.
 
@@ -65,7 +65,7 @@ Application: You can use Gesture as an input device to control another grove, or
 
 | Seeeduino V4.2 | Base Shield| Grove-Gesture v1.0 |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Gesture_V_1.0/raw/master/img/45d_small.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Gesture_V_1.0/img/45d_small.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Gesture-p-2463.html)|
 
 - **Step 2.** Connect Grove-Gesture_v1.0 to port I2C of Grove-Base Shield.
@@ -87,11 +87,11 @@ INT：Gesture detection interrupt flag mask. You can connect INT pad to digit 2 
 
 Below image shows how to plug Grove - Gesture onto the I2C port of Base shield
 
-![](https://github.com/SeeedDocument/Grove_Gesture_V_1.0/raw/master/img/700px-Gesture_install_1.png)
+![](https://files.seeedstudio.com/wiki/Grove_Gesture_V_1.0/img/700px-Gesture_install_1.png)
 
 Then plug Base shield onto Seeeduino
 
-![](https://github.com/SeeedDocument/Grove_Gesture_V_1.0/raw/master/img/seeeduino_connection.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Gesture_V_1.0/img/seeeduino_connection.jpg)
 
 #### Software
 
@@ -130,7 +130,7 @@ void loop()
 - **Step 6.** Select Seeeduino V4 in board manager and COM port.
 - **Step 7.** Click upload and put the hand over the Gesture sensor up and down. You will see the led on and off as below.
 
-![](https://github.com/SeeedDocument/Grove_Gesture_V_1.0/raw/master/img/IMG_0029.gif)
+![](https://files.seeedstudio.com/wiki/Grove_Gesture_V_1.0/img/IMG_0029.gif)
 
 - **Step 8.** Let's try the 9 gestures by select **File->Example->Gesture_PAJ7620->paj7620_9gestures**, then select Seeeduino v4 as board manager and correct COM port. 
 
@@ -339,7 +339,7 @@ Upload the program to your Arduino/Seeeduino.
 
 | Raspberry pi | Grove Base Hat for RasPi| Grove - Gesture Sensor |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Gesture_V_1.0/raw/master/img/45d_small.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Gesture_V_1.0/img/45d_small.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Gesture-p-2463.html)|
 
 
@@ -349,7 +349,7 @@ Upload the program to your Arduino/Seeeduino.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove_Gesture_V_1.0/raw/master/img/Gesture_Hat.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Gesture_V_1.0/img/Gesture_Hat.jpg)
 
 
 
@@ -934,14 +934,14 @@ You can quit this program by simply press ++ctrl+c++.
 
 | Raspberry pi | GrovePi_Plus |Grove-Gesture_v1.0|
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Gesture_V_1.0/raw/master/img/45d_small.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Gesture_V_1.0/img/45d_small.jpg)|
 |[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/Grove-Gesture-p-2463.html)|
 
 - **Step 2.** Plug the GrovePi_Plus into Raspberry.
 - **Step 3.** Connect Grove-Gesture_v1.0 to **I2C** port of GrovePi_Plus.
 - **Step 4.** Connect the Raspberry to PC through USB cable.
 
-![enter image description here](https://github.com/SeeedDocument/Grove_Gesture_V_1.0/raw/master/img/rasp_connection.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove_Gesture_V_1.0/img/rasp_connection.jpg)
 
 #### Software
 
@@ -1087,8 +1087,8 @@ We define some register data of gesture, refer to the following table.
 
 ## Resources
 
-- **[ZIP]** [Grove - Gesture_v1.0 sch pcb.zip](https://github.com/SeeedDocument/Grove_Gesture_V_1.0/raw/master/res/Grove_-_Gesture_v1.0_sch_pcb.zip)
-- **[Datasheet]** [PAJ7620U2_Datasheet_V0.8_20140611.pdf](https://github.com/SeeedDocument/Grove_Gesture_V_1.0/raw/master/res/PAJ7620U2_Datasheet_V0.8_20140611.pdf)
+- **[ZIP]** [Grove - Gesture_v1.0 sch pcb.zip](https://files.seeedstudio.com/wiki/Grove_Gesture_V_1.0/res/Grove_-_Gesture_v1.0_sch_pcb.zip)
+- **[Datasheet]** [PAJ7620U2_Datasheet_V0.8_20140611.pdf](https://files.seeedstudio.com/wiki/Grove_Gesture_V_1.0/res/PAJ7620U2_Datasheet_V0.8_20140611.pdf)
 - **[Library]** [Library Grove - Guesture](https://github.com/Seeed-Studio/Gesture_PAJ7620)
 - **[Codecraft]** [CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove_Gesture_V_1.0/master/res/Grove_Gesture_CDC_File.zip)
 
@@ -1096,7 +1096,7 @@ We define some register data of gesture, refer to the following table.
 
 **Upcycling Workshop at Seeed x.factory [Episode 1]**: Last weekend, we had an amazing upcycling hacking workshop with 20 makers, designers, and engineers from the community gathering at x.factory (I even listed it as my favorite workshop!). 
 
-[![](https://github.com/SeeedDocument/Grove_Gesture_V_1.0/raw/master/img/hacker.io.gif)](https://blog.hackster.io/upcycling-workshop-at-seeed-x-factory-episode-1-4f2d5a61f5ad)
+[![](https://files.seeedstudio.com/wiki/Grove_Gesture_V_1.0/img/hacker.io.gif)](https://blog.hackster.io/upcycling-workshop-at-seeed-x-factory-episode-1-4f2d5a61f5ad)
 
 **Jesty - Control your PC with Gestures**: Control a PC with a gesture sensor, associating a key or a mouse click to each gesture.
 

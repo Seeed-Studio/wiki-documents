@@ -62,7 +62,7 @@ The Electricity sensor module is a member of Grove. It is based on the TA12-200 
 
 ## Hardware Overview
 
-![](https://github.com/SeeedDocument/Grove-Electricity_Sensor/raw/master/img/dimensions.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Electricity_Sensor/img/dimensions.jpg)
 
 ## Platforms Supported
 
@@ -87,7 +87,7 @@ The following sketch demonstrates a simple application of measuring the amplitud
 
 | Seeeduino V4.2 | Base Shield| Grove-Electricity_Sensor |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Electricity_Sensor/raw/master/img/45d_small.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Electricity_Sensor/img/45d_small.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/Grove-Electricity-Sensor-p-777.html)|
 
 - **Step 2.** Connect  Grove-Electricity_Sensor to port **A0** of Grove-Base Shield.
@@ -95,7 +95,7 @@ The following sketch demonstrates a simple application of measuring the amplitud
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
 <!--link-->
-![with_ardu](https://github.com/SeeedDocument/Grove-Electricity_Sensor/raw/master/img/with_ardu.jpg)
+![with_ardu](https://files.seeedstudio.com/wiki/Grove-Electricity_Sensor/img/with_ardu.jpg)
 
 !!!Note
 	If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
@@ -191,7 +191,7 @@ The minimum effective current that can be sensed by the code can be calculated u
 
 | Raspberry pi | GrovePi_Plus | Grove-Electricity_Sensor |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Electricity_Sensor/raw/master/img/45d_small.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Electricity_Sensor/img/45d_small.jpg)|
 |[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](http://www.seeedstudio.com/Grove-Electricity-Sensor-p-777.html)|
 
 

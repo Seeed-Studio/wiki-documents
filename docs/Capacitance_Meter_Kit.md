@@ -18,7 +18,7 @@ This is a simple but very useful capacitance meter. New version fixed design err
 *   Polarity marked out.
 *   Smaller size.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Capacitance-Meter-Kit-p-268.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Capacitance-Meter-Kit-p-268.html)
 
 ##   Features
 

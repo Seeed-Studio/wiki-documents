@@ -9,7 +9,7 @@ sku: 104020128
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-RGB_LED_Ring-20-WS2813Mini/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Ring-20-WS2813Mini/img/main.jpg)
 
 
 The Grove - RGB LED Ring (20 - WS2813 Mini) is a mini version of [WS2813 Digital RGB LED Ring](https://www.seeedstudio.com/WS2813-Digital-RGB-LED-Ring-p-2871.html). The RGB LED Ring are 3535-sized LEDs with an embedded microcontroller inside the LED. The WS2813s are each addressable as the driver chip is located inside the LED. 
@@ -33,7 +33,7 @@ Each LED has a constrant current drive so the color will be very consistent even
 
 ### Signal break-point continuous transmission
 
-![](https://github.com/SeeedDocument/Outsourcing/raw/master/104020108/img/LED_RFBP.jpg)
+![](https://files.seeedstudio.com/wiki/Outsourcing/104020108/img/LED_RFBP.jpg)
 
 As long as not two or more adjacent LEDs are broken, the remaining LEDs will be able to work normally.
 
@@ -62,7 +62,7 @@ As long as not two or more adjacent LEDs are broken, the remaining LEDs will be 
 
 ### Pin Out
 
-![](https://github.com/SeeedDocument/Grove-RGB_LED_Ring-20-WS2813Mini/raw/master/img/pinout.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Ring-20-WS2813Mini/img/pinout.jpg)
 
 
 ### Hardware Detail
@@ -92,7 +92,7 @@ WS2813-Mini is an intelligent control LED light source that the control circuit 
 
 | Seeeduino V4.2 | Base Shield| Grove - RGB LED Ring| Grove - Button|
 |--------------|-------------|-----------------|---------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-RGB_LED_Ring-20-WS2813Mini/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Button/raw/master/img/button_s.jpg)
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Ring-20-WS2813Mini/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Button/img/button_s.jpg)
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-RGB-LED-Ring-20-WS2813-Min-p-3227.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Button-p-766.html)
 
 
@@ -118,7 +118,7 @@ WS2813-Mini is an intelligent control LED light source that the control circuit 
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-RGB_LED_Ring-20-WS2813Mini/raw/master/img/with_ard.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Ring-20-WS2813Mini/img/with_ard.jpg)
 
 
 
@@ -140,12 +140,12 @@ Now, we will demonstrate you how to run the code 'buttoncycler'. This is a demon
 
 - **Step 3.** Restart the Arduino IDE. Open the example, you can open it in the following three ways：
     1. Open it directly in the Arduino IDE via the path: **File --> Examples -->Adafruit NeoPixel-->buttoncycler**. 
-    ![](https://github.com/SeeedDocument/Grove-RGB_LED_Ring-20-WS2813Mini/raw/master/img/ard1.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Ring-20-WS2813Mini/img/ard1.jpg)
     
     2. Open it in your computer by click the **basic_demo.ino** which you can find in the folder **XXXX\Arduino\libraries\Seeed_LED_Ring\examples\⁨buttoncycler⁩\⁨buttoncycler⁩.ino**, **XXXX** is the location you installed the Arduino IDE.
-    ![](https://github.com/SeeedDocument/Grove-RGB_LED_Ring-20-WS2813Mini/raw/master/img/ard2.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Ring-20-WS2813Mini/img/ard2.jpg)
     
-    3. Or, you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+    3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 
 !!!Notice
@@ -863,7 +863,7 @@ uint32_t Wheel(byte WheelPos) {
 
 - **[Zip]** [Grove - RGB LED Ring(20 WS2813 Mini) Software Library](https://github.com/Seeed-Studio/Seeed_LED_Ring/archive/master.zip)
 
-- **[PDF]** [Datasheet WS2813- Mini](https://github.com/SeeedDocument/Grove-RGB_LED_Ring-20-WS2813Mini/raw/master/res/WS2813-Mini.pdf)
+- **[PDF]** [Datasheet WS2813- Mini](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Ring-20-WS2813Mini/res/WS2813-Mini.pdf)
 
 
 

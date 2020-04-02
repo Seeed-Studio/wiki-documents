@@ -7,7 +7,7 @@ prodimagename:
 surveyurl: https://www.research.net/r/Grove-DC_Jack_Power
 sku:    110060026
 ---
-![](https://github.com/SeeedDocument/Grove-DC_Jack_Power/raw/master/img/Power_photo1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-DC_Jack_Power/img/Power_photo1.jpg)
 
 This is a [Grove](/Grove "Grove") Power module meant for [Grove kits](/Grove_System/#grove-starter-kit "GROVE System") such as the [Grove Mixer Pack V2](/Grove-Mixer_Pack_V2 "GROVE MIXER PACK V2"). It is the source of power or energy for all the circuits with which it is used. It can plug in a range of power sources such as a 9V battery as shown in the picture, or any battery pack or wall power adapter that supplies power in the range of 5.5V-20V. Grove - DC Jack Power module is based on the TD1410 DC-DC step down converter chip and achieves 2A continuous output current over a wide input supply range with excellent load and line regulation.
 

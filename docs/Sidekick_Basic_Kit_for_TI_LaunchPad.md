@@ -7,14 +7,14 @@ prodimagename:  Sidekick_Basic_Kit_for_TI_LaunchPad_product_view_1200_s.jpg
 surveyurl: https://www.research.net/r/Sidekick_Basic_Kit_for_TI_LaunchPad
 sku:    106060002
 ---
-![](https://github.com/SeeedDocument/Sidekick_Basic_Kit_for_TI_LaunchPad/raw/master/img/Sidekick_Basic_Kit_for_TI_LaunchPad_product_view_1200_s.jpg)
+![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_TI_LaunchPad/img/Sidekick_Basic_Kit_for_TI_LaunchPad_product_view_1200_s.jpg)
 
 The Seeedstudio Sidekick Basic Kit for TI LaunchPad™ is a great starting point for learning electronics and building basic circuits using discrete components, a breadboard, and a LaunchPad. Using Energia can greatly simplify the software creation so more focus can be placed on rapid prototyping and modifying circuits to fit our project ideas.  This is an excellent starter kit for new electronics engineers and makers!
 Sidekick includes loose components, wires, and a breadboard to compliment your LaunchPad development kit. The manual includes 10 different example circuits but many more are possible by gathering additional components or using creativity.  This is a must have item for any LaunchPad developer!
 
 *   Download the sample code folder [here](http://www.energia.nu/sidekickcode).
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Sidekick-Basic-Kit-for-TI-LaunchPad-p-2571.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Sidekick-Basic-Kit-for-TI-LaunchPad-p-2571.html)
 
 ##  Hardware Overview
 

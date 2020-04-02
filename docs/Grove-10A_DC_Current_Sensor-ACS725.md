@@ -9,7 +9,7 @@ sku: 101020652
 ---
 
 
-![](https://github.com/SeeedDocument/Grove-10A_Current_Sensor-ACS725/raw/master/img/preview.png)
+![](https://files.seeedstudio.com/wiki/Grove-10A_Current_Sensor-ACS725/img/preview.png)
 
 
 The Grove - 10A DC Current Sensor (ACS725) is a high precision DC current sensor based on ACS725. The Allegro™ ACS725 current sensor IC is an economical and precise solution DC current sensing in industrial, automotive, commercial, and communications systems. 
@@ -115,7 +115,7 @@ The Grove - 10A DC Current Sensor (ACS725) is based on the Hall priciple, differ
 
 | Seeeduino V4.2 | Base Shield | 10A DC Current Sensor (ACS725)|
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-10A_Current_Sensor-ACS725/raw/master/img/thumbnail.jpg)
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-10A_Current_Sensor-ACS725/img/thumbnail.jpg)
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-10A-DC-Current-Sensor-ACS725-p-2927.html)|
 
 
@@ -307,7 +307,7 @@ If you want to know the calculation formula of the result, please refer to the [
 
 | Raspberry pi | Grove Base Hat for RasPi| 10A DC Current Sensor |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-2.5A_DC_Current_Sensor-ACS70331/raw/master/img/thumbnail.jpg)
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-2.5A_DC_Current_Sensor-ACS70331/img/thumbnail.jpg)
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-10A-DC-Current-Sensor-ACS725-p-2927.html)|
 
 
@@ -748,7 +748,7 @@ So, in the figure 6, when we set the **Vref** to 346.68, the **Ip** turns to 0mA
 ## Resources
 
 - **[ZIP]** [Grove - 10A DC Current Sensor (ACS725) Schematic file](https://github.com/SeeedDocument/Grove-10A_Current_Sensor-ACS725/raw/master/res/10A%20Current%20Sensor%20(ACS725).zip)
-- **[PDF]** [ACS725 Datasheet](https://github.com/SeeedDocument/Grove-10A_Current_Sensor-ACS725/raw/master/res/ACS725.pdf)
+- **[PDF]** [ACS725 Datasheet](https://files.seeedstudio.com/wiki/Grove-10A_Current_Sensor-ACS725/res/ACS725.pdf)
 
 
 

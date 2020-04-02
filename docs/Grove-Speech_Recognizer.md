@@ -239,8 +239,8 @@ Upload the program to your Arduino/Seeeduino.
 
 ## Resources
 
-* [Schematics in Eagle](https://github.com/SeeedDocument/Grove_Speech_Recognizer/raw/master/res/eagle.zip)
-* [Schematics in PDF](https://github.com/SeeedDocument/Grove_Speech_Recognizer/raw/master/res/Grove%20-%20Speech%20Recognizer%20v1.0.pdf)
+* [Schematics in Eagle](https://files.seeedstudio.com/wiki/Grove_Speech_Recognizer/res/eagle.zip)
+* [Schematics in PDF](https://files.seeedstudio.com/wiki/Grove_Speech_Recognizer/res/Grove%20-%20Speech%20Recognizer%20v1.0.pdf)
 * [Codecraft CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove_Speech_Recognizer/master/res/Grove_Speech_Recognizer_CDC_File.zip)
 
 ## Tech Support

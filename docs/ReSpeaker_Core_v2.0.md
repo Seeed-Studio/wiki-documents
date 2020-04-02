@@ -8,7 +8,7 @@ surveyurl:  https://www.research.net/r/Respeaker_Core
 sku: 102990883
 ---
 
-![enter image description here](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/ReSpeaker_V2_front.JPG)
+![enter image description here](https://files.seeedstudio.com/wiki/Respeaker_V2/img/ReSpeaker_V2_front.JPG)
 
 
 Seeed’s ReSpeaker Core v2.0 is designed for voice interface applications. It is based on the Rockchip RK3229, a quad-core ARM Cortex A7, running up to 1.5GHz, with 1GB RAM. The board features a six microphone array with speech algorithms including DoA (Direction of Arrival), BF (Beam-Forming), AEC (Acoustic Echo Cancellation), etc.
@@ -21,7 +21,7 @@ ReSpeaker Core v2.0 is designed as a feature rich development board for business
 
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/ReSpeaker-Core-V2.0-p-3039.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/ReSpeaker-Core-V2.0-p-3039.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 <p style=":center"><a href="https://www.amazon.com/dp/B07DN43Q7L" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/amaon.png"  width="300" height="48"  border=0/></a></p>
 
@@ -131,13 +131,13 @@ ReSpeaker Core v2.0 is designed as a feature rich development board for business
 </table>
 
 !!!Note
-​    This table only lists the basic specification of ReSpeakser Core v2.0, for more professional parameters please refer to [Acoustic & Electrical Specification of ReSpeaker Core v2.0](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Acoustic%26Electrical_Specification_of_ReSpeaker_Core_v2.0.pdf).
+​    This table only lists the basic specification of ReSpeakser Core v2.0, for more professional parameters please refer to [Acoustic & Electrical Specification of ReSpeaker Core v2.0](https://files.seeedstudio.com/wiki/Respeaker_V2/res/Acoustic%26Electrical_Specification_of_ReSpeaker_Core_v2.0.pdf).
 
 ## Hardware Overview
 
 **Interface and storage**
 
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/hardware_overview.png)
+![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/hardware_overview.png)
 
 
 - <font face="" size=3 font color="ff0000">①</font> **3.5mm Headphone jack:**
@@ -193,7 +193,7 @@ You can click it to view the original image
 
 | 8 pins header | Grove Socket |
 |--------------|-------------|
-| ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/GPIO.png)|![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/socketBLACK.png)|
+| ![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/GPIO.png)|![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/socketBLACK.png)|
 
 **GPIO Pins**
 
@@ -222,9 +222,9 @@ MRAA|	HEADER PIN INDEX |	SYSFS PIN	|RK3229 PIN
 
 **Dimensions**
 
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Dimension_2.png)
+![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/Dimension_2.png)
 
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Dimension_1.png)
+![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/Dimension_1.png)
 
 
 
@@ -307,7 +307,7 @@ Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2.0 image f
 <br>
 <br>Click the Plus icon to add the image you just download, the software will automatically select the SD card you plug.Then click Flash! to start burning. It will take about 10 minutes to finish. </font>
 
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/v2-flash-sd.png)
+![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/v2-flash-sd.png)
 
 
 - **Step 4.** After writing the image to the SD card, insert the SD card in your ReSpeaker Core v2.0. Power the board using the PWR_IN micro usb port and DO NOT remove the SD card after powering on. ReSpeaker Core v2.0 will boot from the SD card, and you can see USER1 and USER2 LEDs light up. USER1 is typically configured at boot to blink in a heartbeat pattern and USER2 is typically configured at boot to light during SD card accesses. Now, you should go to the next part: Serial Console.
@@ -341,7 +341,7 @@ Now your ReSpeaker Core v2.0 can boot, you might want to get access to the Linux
 
 - **Step 1.** Find a micro USB cable, and please make sure it's a data cable (not just a power cable), plug the micro USB end to the ReSpeaker's **OTG** micro USB port (There're two micro USB ports on the ReSpeaker board, which are labeled with different silk-screen, one is **PWR_IN** and another is **OTG**), then plug another end of this cable into your computer.
 
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/lianjiediannan.jpg)
+![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/lianjiediannan.jpg)
 
 - **Step 2.** Check at your computer if the serial port has risen:
 
@@ -399,11 +399,11 @@ sudo nmtui              # respeaker user needs sudo
 ```
 Then you will see a config page like this, select ```Activate a connection``` and press ```Enter``` key.
 
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/nmtui1-1.png)
+![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/nmtui1-1.png)
 
 Select your Wi-Fi for ReSpeaker v2.0, press ```Enter``` key and type your Wi-Fi password and press ```Enter``` key again. When you see a ```*``` mark, it means that your ReSpeaker has successfully connected to your Wi-Fi network. Tap ```Esc``` key twice to leave the network manager config tool.
 
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/nmtui1-2.png)
+![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/nmtui1-2.png)
 
 Now find the IP address of your ReSpeaker by using the command below.
 
@@ -522,7 +522,7 @@ When the ReSpeaker Core v2.0 restart, open the bluetooth of your phone or comput
 Choose and connect to it. Plug a speaker or headset into the ReSpeaker Core v2.0 then play music and enjoy your bluetooth speaker.
 
 
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Bluetooth_connect.png)
+![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/Bluetooth_connect.png)
 
 **Using the ReSpeaker Core v2.0 as a Bluetooth Player-Master Device**
 
@@ -709,7 +709,7 @@ When prompt, type in the sudo password for user respeaker: respeaker. Wait the s
 
 Connect to the board via [VNC](https://github.com/respeaker/get_started_with_respeaker/blob/master/docs/ReSpeaker_Core_V2/getting_started.md#ssh--vnc). In the VNC desktop, open the Internet Browser, and tap `127.0.0.1:3000` at the URL input field . The web browser will display a login page. Sign in with your Amazon account:
 
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/aus-1.png)
+![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/aus-1.png)
 
 After succeed you will see:
 
@@ -738,7 +738,7 @@ One more thing, do you see the colorful LEDs on the back of ReSpeaker Core v2.0?
 
 
 
-[![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/alango.jpg)](http://www.alango.com)
+[![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/alango.jpg)](http://www.alango.com)
 
 
 The close source solution utilizes two algorithms provided by Alango: Beam-forming (BF) and Acoustic Echo Cancellation (AEC).
@@ -953,7 +953,7 @@ Tap the command below to test the AVS configuration.
 ```
 If everything goes well, you will see the **Sample APP**. Now you are able to make conversations with Alexa, but all user experiences are done through the command line messages.
 
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/SDK_app.png)
+![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/SDK_app.png)
 
 
 
@@ -1028,7 +1028,7 @@ Connect to the board via [VNC](https://github.com/respeaker/get_started_with_res
 ```
 This script will open the web browser automatically, the web browser will display a login page. Sign in with your Amazon account:
 
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/aus-1.png)
+![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/aus-1.png)
 
 After succeed you will see:
 
@@ -1108,7 +1108,7 @@ Then you can get the authorization from Baidu by tapping the following command:
 ```
 ~/.local/bin/dueros-auth
 ```
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/dueros.jpg)
+![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/dueros.jpg)
 
 
 
@@ -1151,11 +1151,11 @@ sudo python setup.py install
 
 - **Step 3. Get Bing key from [Azure](https://www.microsoft.com/cognitive-services/en-us/speech-api).**
 
-- **Step 4. Download the [Bing_STT.py](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Bing_STT.py)**
+- **Step 4. Download the [Bing_STT.py](https://files.seeedstudio.com/wiki/Respeaker_V2/res/Bing_STT.py)**
 
 ```
 cd ~
-wget https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Bing_STT.py
+wget https://files.seeedstudio.com/wiki/Respeaker_V2/res/Bing_STT.py
 python Bing_STT.py  
 ```
 
@@ -1182,11 +1182,11 @@ pip install baidu-aip
 
 - **Step 2. Get Baidu key from [Here](https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index).**
 
-- **Step 3. Download the [Baidu_STT.py](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Baidu_STT.py)**
+- **Step 3. Download the [Baidu_STT.py](https://files.seeedstudio.com/wiki/Respeaker_V2/res/Baidu_STT.py)**
 
 ```
 cd ~
-wget https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Baidu_STT.py
+wget https://files.seeedstudio.com/wiki/Respeaker_V2/res/Baidu_STT.py
 python Baidu_STT.py  
 ```
 
@@ -1261,7 +1261,7 @@ Materials
 
 | ReSpeaker Core v2.0 |  Grove - Buzzer |
 |--------------|-------------|
-|![enter image description here](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/ReSpeaker_V2_back_little.jpg)|![enter image description here](https://github.com/SeeedDocument/Base_Shield_V2/raw/master/img/Buzzer.png)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Respeaker_V2/img/ReSpeaker_V2_back_little.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Base_Shield_V2/img/Buzzer.png)|
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|
 
 Connect the Grove PIR sensor's **SIG** pin to the ReSpeaker Core v2.0's header pin **0** with jumper. Don't forget to wire the VCC and GND at the same time. Then tap the code below into your console
@@ -1291,7 +1291,7 @@ Materials
 
 | ReSpeaker Core v2.0 |  Grove -  PIR Motion Sensor |
 |--------------|-------------|
-|![enter image description here](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/ReSpeaker_V2_back_little.jpg)|![enter image description here](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Grove%20-%20PIR%20Motion%20Sensor.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Respeaker_V2/img/ReSpeaker_V2_back_little.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Respeaker_V2/img/Grove%20-%20PIR%20Motion%20Sensor.jpg)|
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-PIR-Motion-Sensor-p-802.html)|
 
 
@@ -1348,7 +1348,7 @@ Materials
 
 | ReSpeaker Core v2 |  Grove - Digital Light Sensor |
 |--------------|-------------|
-|![enter image description here](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/ReSpeaker_V2_back_little.jpg)|![enter image description here](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Digital_Light_Sensor.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Respeaker_V2/img/ReSpeaker_V2_back_little.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Respeaker_V2/img/Digital_Light_Sensor.jpg)|
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|
 
 This is an example for the Grove Digital Light Sensor, which is copied from the UPM github repo.
@@ -1685,7 +1685,7 @@ ls
 
 ```
 
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Q2.png)
+![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/Q2.png)
 
 
 Step 4. Choose the hot word by modifying the congfig file.
@@ -1736,7 +1736,7 @@ Tip!!!
 
   When you opened the Audacity, please click the little black arrow to choose the record and play device and set as the picture below.
 
-  ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/audacity.png)
+  ![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/audacity.png)
 
   You should choose Seeed-8mic-voicecard for both record and play device. And you can choose 1/2/4/6/8 channels to record and play. As you can see,
   there are 8 channels in the picture, however there are no data in channel 7 and 8. That is because this two channels are the playback channel.
@@ -1746,14 +1746,14 @@ Tip!!!
   - Step 2. Click the **Stop** button, then you will see channel 7 and 8 are empty.
   - Step 3. Click **Record** button again, this time you will find Channel 8 changed.
 
-  ![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/audacity_playback.png)
+  ![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/audacity_playback.png)
 
 **Q4: How to access the AP of ReSpeaker Core v2.0?**
 
 **A4:** You can use two wires cable to power the ReSpeaker Core v2.0. When the system is running, the Respeaker Core v2.0 can act as an AP. You can use your computer to
 access this AP. As the picture show. You can follow the steps to configure the WiFi of ReSpeaker Core v2.0.
 
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Ap.png)
+![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/Ap.png)
 
 - **Step 1.** Tap the command below to activate the Ap of ReSpeaker Core v2.0.
 
@@ -1769,7 +1769,7 @@ sudo reboot -f
 - **Step 3.** Now you can use Putty, SSH mode to get into the Serial Console. The ip of the Wlan1 is **192.168.42.1**, you need to use this ip to setup connection.
 And the user name of ReSpeaker Core v2.0 is **respeaker**, the password is **respeaker**.
 
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/AP2.png)
+![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/AP2.png)
 
 - **Step 3.** When you get into the Serial Console， you can [setup the WiFi](http://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#a-wi-fi-setting-up)
 
@@ -1787,7 +1787,7 @@ alsamixer
 - **Step 3.** You will find the interface as the picture below. You can choose the playback voice or record channel by pressing **Right** or **Left** key.
 And you can adjust the value by pressing the **Up** or **Down** key.
 
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/Alexamixer.png)
+![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/Alexamixer.png)
 
 **Q6: How to use the user button?**
 **A6:** As you can see, there is an user button at the back of ReSpeaker Core v2.0. Here we provide a python demo to show how to use it.
@@ -1817,11 +1817,11 @@ sudo python usrer_button.py
 
 Then you will see the result is something like that:
 
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/userbutton.png)
+![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/userbutton.png)
 
 **Q7: The computer can not recognize the ReSpeaker Core v2.0, driver problem?**
 
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/CDC_Driver.png)
+![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/CDC_Driver.png)
 
 **A7:** This may happen when you connect the ReSpeaker Core v2.0 with you computer via OTG or UART.
 This is because the CDC Serial driver has a conflict with other OTG driver. Please uninstall the conflicted driver
@@ -1836,7 +1836,7 @@ on the new pads, as shown below：
 - First you need to remove the resistance in the orange box.
 - Then please solder it on the green box.
 
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/ant.png)
+![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/ant.png)
 
 
 **Q9: How to build my owner flasher firmware? So I can burn my owner firmware to rest of ReSpeaker Core v2.0.**
@@ -1867,14 +1867,14 @@ The root cause is that the old SD cards do not work with linux system. Please ch
 - **[Alexa/DuerOS]** [Alexa Voice Service & DuerOS Python SDK](https://github.com/respeaker/avs)
 - **[Microsoft]** [Microsoft Speech Translation Demo](https://github.com/respeaker/Python-Speech-Translate)
 - **[Pixel]** [RGB LEDs library](https://github.com/respeaker/pixel_ring)
-- **[PDF]** [Download PDF of This Wiki](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/ReSpeaker_Core_v2.pdf)
-- **[PDF]** [Rockchip RK3229 Datasheet V1.1](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Rockchip%20RK3229%20Datasheet%20V1.1%2020151209.pdf)
-- **[PDF]** [Dimensions for Board](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/ReSpeaker_Core_v2_Demensions.pdf)
-- **[ZIP]** [3d Models For ReSpeaker Core v2.0](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Respeaker_Core_v2_3D_SKP.zip)
-- **[ZIP]** [ReSpeaker Core v2.0 Case](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/RESPEAKER_CORE_V2_Box.zip)
+- **[PDF]** [Download PDF of This Wiki](https://files.seeedstudio.com/wiki/Respeaker_V2/res/ReSpeaker_Core_v2.pdf)
+- **[PDF]** [Rockchip RK3229 Datasheet V1.1](https://files.seeedstudio.com/wiki/Respeaker_V2/res/Rockchip%20RK3229%20Datasheet%20V1.1%2020151209.pdf)
+- **[PDF]** [Dimensions for Board](https://files.seeedstudio.com/wiki/Respeaker_V2/res/ReSpeaker_Core_v2_Demensions.pdf)
+- **[ZIP]** [3d Models For ReSpeaker Core v2.0](https://files.seeedstudio.com/wiki/Respeaker_V2/res/Respeaker_Core_v2_3D_SKP.zip)
+- **[ZIP]** [ReSpeaker Core v2.0 Case](https://files.seeedstudio.com/wiki/Respeaker_V2/res/RESPEAKER_CORE_V2_Box.zip)
 - **[DXF]** [ReSpeaker Core v2.0 Stand](https://github.com/respeaker/get_started_with_respeaker/raw/8111196e821fec10c65b00d96cf011dc90111546/files/RESPEAKER_CORE_V2_CASE.dxf)
-- **[PDF]** [ReSpeaker Core v2.0 Stand Assembly drawing](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/ReSpeaker_Core_v2.0_case_Assembly.pdf)
-- **[PDF]** [Acoustic & Electrical Specification of ReSpeaker Core v2.0](https://github.com/SeeedDocument/Respeaker_V2/raw/master/res/Acoustic%26Electrical_Specification_of_ReSpeaker_Core_v2.0.pdf)
+- **[PDF]** [ReSpeaker Core v2.0 Stand Assembly drawing](https://files.seeedstudio.com/wiki/Respeaker_V2/res/ReSpeaker_Core_v2.0_case_Assembly.pdf)
+- **[PDF]** [Acoustic & Electrical Specification of ReSpeaker Core v2.0](https://files.seeedstudio.com/wiki/Respeaker_V2/res/Acoustic%26Electrical_Specification_of_ReSpeaker_Core_v2.0.pdf)
 - **[MoreReading]** [Mraa Python documents page](http://iotdk.intel.com/docs/master/mraa/python/)
 - **[MoreReading]** [Intel Mraa SDK](https://software.intel.com/en-us/mraa-sdk/documentation )
 - **[MoreReading]** [Snips SDK](https://snips.gitbook.io/documentation/installing-snips/respeaker-core-2.0)

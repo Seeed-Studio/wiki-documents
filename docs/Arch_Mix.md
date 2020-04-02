@@ -9,7 +9,7 @@ sku: 102080027
 ---
 
 
-![](https://github.com/SeeedDocument/Arch_Mix/raw/master/img/main1.jpg)
+![](https://files.seeedstudio.com/wiki/Arch_Mix/img/main1.jpg)
 
 
 Arch Mix is a thin, lightweight development board based on NXP i.MX RT1052 processor(3020 CoreMark/1284 DMIPS @ 600 MHz). This development board comes pre-installed RT-Thread real-time operating system and built-in micro-python. Which makes it suitable for industrial control, especially for scenes with large code and high real-time application requirements.
@@ -20,7 +20,7 @@ The RT-Thread is an open source IoT operating system for embedded devices. The k
 
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Arch-Mix-p-2901.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Arch-Mix-p-2901.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 
@@ -171,7 +171,7 @@ As you can see, there is a 50 pin LCD Interface on this board, it Support up to 
 !!!Tip
     Most of the pins of NXP i.MX RT1050 processor have multiplexing function, you can click the attachment below to view the detailed pin multiplexing.
 
- [Arch Mix Pin Definition Table](https://github.com/SeeedDocument/Arch_Mix/raw/master/res/Arch%20Mix_v1.0_Pin.xlsx)
+ [Arch Mix Pin Definition Table](https://files.seeedstudio.com/wiki/Arch_Mix/res/Arch%20Mix_v1.0_Pin.xlsx)
 
 
 ### Blcok Diagram
@@ -426,8 +426,8 @@ This Arch Mix comes pre-installed RT-Thread real-time operating system(RTOS) and
 
 
 
-[Arch Mix Firmware Guide](https://github.com/SeeedDocument/Arch_Mix/raw/master/res/micropython_firmware.pdf)  
-[Tools](https://github.com/SeeedDocument/GM6020/raw/master/res/Firmware_and_Tools.zip)
+[Arch Mix Firmware Guide](https://files.seeedstudio.com/wiki/Arch_Mix/res/micropython_firmware.pdf)  
+[Tools](https://files.seeedstudio.com/wiki/GM6020/res/Firmware_and_Tools.zip)
 
 
 ## Schematic Online Viewer
@@ -438,12 +438,12 @@ This Arch Mix comes pre-installed RT-Thread real-time operating system(RTOS) and
 
 ## Resources
 
-- **[ZIP]** [Schematic](https://github.com/SeeedDocument/Arch_Mix/raw/master/res/202001930_PCBA_Arch%20Mix_v1.0_SCH%20%26%20PCB.zip)
+- **[ZIP]** [Schematic](https://files.seeedstudio.com/wiki/Arch_Mix/res/202001930_PCBA_Arch%20Mix_v1.0_SCH%20%26%20PCB.zip)
 - **[ZIP]** [Firmware and Tools]()
-- **[PDF]** [PDF Format Wiki](https://github.com/SeeedDocument/Arch_Mix/raw/master/res/Arch_Mix.pdf)
-- **[PDF]** [i.MX RT1050 Datasheet](https://github.com/SeeedDocument/Arch_Mix/raw/master/res/i.MX%20RT1050.pdf)
-- **[PDF]** [Dimension Diagram](https://github.com/SeeedDocument/Arch_Mix/raw/master/res/ARCH%20MIX_V1.0_Dimension.pdf)
-- **[xlsx]** [Arch Mix_v1.0_Pin Function](https://github.com/SeeedDocument/Arch_Mix/raw/master/res/Arch%20Mix_v1.0_Pin.xlsx)
+- **[PDF]** [PDF Format Wiki](https://files.seeedstudio.com/wiki/Arch_Mix/res/Arch_Mix.pdf)
+- **[PDF]** [i.MX RT1050 Datasheet](https://files.seeedstudio.com/wiki/Arch_Mix/res/i.MX%20RT1050.pdf)
+- **[PDF]** [Dimension Diagram](https://files.seeedstudio.com/wiki/Arch_Mix/res/ARCH%20MIX_V1.0_Dimension.pdf)
+- **[xlsx]** [Arch Mix_v1.0_Pin Function](https://files.seeedstudio.com/wiki/Arch_Mix/res/Arch%20Mix_v1.0_Pin.xlsx)
 
 
 

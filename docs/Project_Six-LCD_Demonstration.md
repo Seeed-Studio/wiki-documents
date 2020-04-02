@@ -13,7 +13,7 @@ Now it is time to demonstrate the LCD module and matching Grove units. With the 
 
 *   bottom-right to D5/6;
 
-![](https://github.com/SeeedDocument/Project_Six-LCD_Demonstration/raw/master/img/Conn-six.jpg)
+![](https://files.seeedstudio.com/wiki/Project_Six-LCD_Demonstration/img/Conn-six.jpg)
 
 _**Now upload the following Arduino sketch:**_
 

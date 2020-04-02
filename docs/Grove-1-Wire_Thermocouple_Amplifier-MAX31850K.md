@@ -9,7 +9,7 @@ sku: 101020555
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/raw/master/img/main.JPG)
+![](https://files.seeedstudio.com/wiki/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/img/main.JPG)
 
 The Grove - 1-Wire Thermocouple Amplifier (MAX31850K) is a thermocouple-to-digital converters with 14-bit resolution and cold-junction compensation. This module is designed to be used in conjunction with a k-type thermocouple. The thermocouples have a much larger measurement range than thermistors. For example, this [k-type thermocouple](https://www.seeedstudio.com/Thermocouple-Temperature-Sensor-K-Type-1M-p-3132.html) on our website has a measurement range of -50℃ to +600℃.
 
@@ -73,16 +73,16 @@ Again, this module can't work alone, it must work with a k-type thermocouple, if
 
 ### Pin Map
 
-![](https://github.com/SeeedDocument/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/raw/master/img/pin_map.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/img/pin_map.jpg)
 
-![](https://github.com/SeeedDocument/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/raw/master/img/pin_map_back.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/img/pin_map_back.jpg)
 
 
 ### Schematic
 
 **Input Jack**
 
-![](https://github.com/SeeedDocument/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/raw/master/img/schematic_1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/img/schematic_1.jpg)
 
 Because of the small signal levels involved, we take a lot measures to filter the noise.
 
@@ -95,10 +95,10 @@ Because of the small signal levels involved, we take a lot measures to filter th
 
 **Bi-directional level shifter circuit**
 
-![](https://github.com/SeeedDocument/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/raw/master/img/schematic_2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/img/schematic_2.jpg)
 
 
-This is a typical Bi-directional level shifter circuit to connect two different voltage section. The left part, **DQ** pin of the MAX31850K use 3.3V, if the Arduino use 5V, this circuit will be needed. In the schematic above, **Q6** is N-Channel MOSFET [2N7002](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/AN10441.pdf).
+This is a typical Bi-directional level shifter circuit to connect two different voltage section. The left part, **DQ** pin of the MAX31850K use 3.3V, if the Arduino use 5V, this circuit will be needed. In the schematic above, **Q6** is N-Channel MOSFET [2N7002](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/AN10441.pdf).
 
 
 !!!Note
@@ -107,7 +107,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 ### Assembling Drawing
 
-![](https://github.com/SeeedDocument/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/raw/master/img/Assembling.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/img/Assembling.jpg)
 
 !!!Tip
         Please insert the <font style="font-weight:bold;color:#AE0000">Red</font> wire of thermocouple into the **T+** port of the Grove - 1-Wire Themrocouple Amplifier (MAX31850K) , and the <font style="font-weight:bold;color:#FFFFFF">White</font> wire into **T-** port. If you do not use the k-type thermocouple from our bazaar, the color may be different, please make sure the **+ -** with the seller. 
@@ -143,7 +143,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 |k-type thermocouple x 2|Grove - I2C Hub|
 |----|---|
-|![](https://github.com/SeeedDocument/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/raw/master/img/thermocouple.jpg)|![](https://github.com/SeeedDocument/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/raw/master/img/12C%20hub.jpg)|
+|![](https://files.seeedstudio.com/wiki/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/img/thermocouple.jpg)|![](https://files.seeedstudio.com/wiki/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/img/12C%20hub.jpg)|
 |<a href="https://www.seeedstudio.com/Thermocouple-Temperature-Sensor-K-Type-1M-p-3132.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-I2C-Hub-p-851.html" target="_blank">Get One Now</a>|
 
 
@@ -164,7 +164,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 - **Step 5.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/img/connect.jpg)
 
 
 !!!Note
@@ -200,7 +200,7 @@ This folder **\Arduino\libraries\Seeed_MAX31850K-master\examples** contains two 
 >Multiple.ino--multiple mode(one host and multiple slaves,base on rom addressing-one wire search algorithm)
 
 
-Or, you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 ```C++
 #include <OneWire.h>
@@ -361,9 +361,9 @@ Device Address: 3B2321180000005C Temp C: 25.25 Temp F: 77.45
 
 ## Resources
 
-- **[Zip]** [Grove - 1-Wire Thermocouple Amplifier eagle files](https://github.com/SeeedDocument/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/raw/master/res/Grove-1-Wire_Themocouple_Amplifier-MAX31850K.zip)
+- **[Zip]** [Grove - 1-Wire Thermocouple Amplifier eagle files](https://files.seeedstudio.com/wiki/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/res/Grove-1-Wire_Themocouple_Amplifier-MAX31850K.zip)
 - **[Zip]** [Seeed_MAX31850K Library](https://github.com/Seeed-Studio/Seeed_MAX31850K/archive/master.zip)
-- **[PDF]** [Datasheet of MAX31850](https://github.com/SeeedDocument/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/raw/master/res/Max31850.pdf)
+- **[PDF]** [Datasheet of MAX31850](https://files.seeedstudio.com/wiki/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/res/Max31850.pdf)
 
 
 ## Tech Support

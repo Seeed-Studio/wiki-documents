@@ -7,7 +7,7 @@ surveyurl: https://www.research.net/r/wio-gps-board
 sku: 102990824
 ---
 
-![](https://github.com/SeeedDocument/Wio_GPS_Board/raw/master/images/Wio_GPS_Antanna.jpg)
+![](https://files.seeedstudio.com/wiki/Wio_GPS_Board/images/Wio_GPS_Antanna.jpg)
 
 What is Wio Tracker? Wio Tracker is an Arduino compatible development board that helps you to track any moving things on the planet. By integrating GSM&GPRS as well as GPS&BeiDou in one board, it provides an all-in-one solution for your out-door IoT project.
 
@@ -22,7 +22,7 @@ We have prepared everything, the last thing we need is your creative projects, s
 !!!Warning
     Please always plug 3.7V Lipo battery in case USB power supply is not sufficient.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Wio-Tracker-GPS%2C-BT3.0%2C-GSM%2C-Arduino-Compatible-p-2831.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Wio-Tracker-GPS%2C-BT3.0%2C-GSM%2C-Arduino-Compatible-p-2831.html)
 
 ## Features
 
@@ -161,7 +161,7 @@ First you need to install the latest Arduino IDE, and [ADD Seeeduino SAMD to you
 
 ### Install the Driver (For Windows)
 
-When the first time to insert the board, you should get a USB COM device name Wio Tracker that need to install a driver. Click [here](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/driver.zip) to download driver for the board.
+When the first time to insert the board, you should get a USB COM device name Wio Tracker that need to install a driver. Click [here](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/driver.zip) to download driver for the board.
 
 
 
@@ -320,9 +320,9 @@ And we have installed a well written library for the Wio GPS, for simple applica
 
 The following example shows how to read longitude and latitude and print them out in Serial Monitor. Please note that Wio Tracker should be placed outdoor to get GPS signal. And this example needs a SIM card in Wio Tracker, the following pictures show how to install/uninstall a SIM card:
 
-![](https://github.com/SeeedDocument/Wio_GPS_Board/raw/master/images/insertsim.jpg)
+![](https://files.seeedstudio.com/wiki/Wio_GPS_Board/images/insertsim.jpg)
 
-![](https://github.com/SeeedDocument/Wio_GPS_Board/raw/master/images/pullsim.jpg)
+![](https://files.seeedstudio.com/wiki/Wio_GPS_Board/images/pullsim.jpg)
 
 Open your Arduino IDE and click on **File > Examples > MC20\_GPS\_Traker > MC20\_GNSS > GNSS\_Show\_Coordinate** to open the sketch or copy the blow code:
 

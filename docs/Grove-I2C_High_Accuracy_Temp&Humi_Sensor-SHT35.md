@@ -9,7 +9,7 @@ sku: 101020592
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/img/main.jpg)
 
 
 Grove - I2C High Accuracy Temp&Humi Sensor(SHT35) is based on SHT3x-DIS, which is the next generation of Sensirion’s temperature and humidity sensors. It builds on a new CMOSens® sensor chip that is at the heart of Sensirion’s new humidity and temperature platform. The SHT3x-DIS has increased intelligence, reliability and improved accuracy specifications compared to its predecessor. Its functionality includes enhanced signal processing, two distinctive and user selectable I2C addresses and communication speeds of up to 1 MHz.
@@ -59,8 +59,8 @@ Grove - I2C High Accuracy Temp&Humi Sensor(SHT35) is based on SHT3x-DIS, which i
 
 ### Pin Out
 
-![](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/raw/master/img/pin_out.jpg)
-![](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/raw/master/img/pin_out_back.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/img/pin_out.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/img/pin_out_back.jpg)
 
 
 
@@ -113,7 +113,7 @@ This module is based on **SHT35**, the input voltage of this chip range from 2.1
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/img/connect.jpg)
 
 
 
@@ -143,12 +143,12 @@ This module is based on **SHT35**, the input voltage of this chip range from 2.1
 
 - **Step 3.** Restart the Arduino IDE. Open the example, you can open it in the following three ways：
     1. Open it directly in the Arduino IDE via the path: **File --> Examples --> Grove Temperature sensor SHT35 --> basic_demo**. 
-    ![](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/raw/master/img/path.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/img/path.jpg)
     
     2. Open it in your computer by click the **basic_demo.ino** which you can find in the folder **XXXX\Arduino\libraries\Seeed_SHT35-master\examples\basic_demo**, **XXXX** is the location you installed the Arduino IDE.
-    ![](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/raw/master/img/path_1.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/img/path_1.jpg)
     
-    3. Or, you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+    3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 ```C++
 #include "Seeed_SHT35.h"
@@ -257,7 +257,7 @@ humidity =51.09
 
 | Raspberry pi | Grove Base Hat for RasPi| Grove - SHT35 Sensor |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/raw/master/img/thumbnail.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/img/thumbnail.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temp%26Humi-Sensor%28SHT35%29-p-3182.html)|
 
 - **Step 2**. Plug the Grove Base Hat into Raspberry.
@@ -265,7 +265,7 @@ humidity =51.09
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/raw/master/img/With_Hat.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/img/With_Hat.jpg)
 
 
 
@@ -393,7 +393,7 @@ You can quit this program by simply press ++ctrl+c++.
 
 - **[Zip]** [Seeed SHT35 Library](https://github.com/Seeed-Studio/Seeed_SHT35/archive/master.zip)
 
-- **[PDF]** [Datasheet SHT3x-DIS](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/raw/master/res/Datasheet%20SHT3x-DIS.pdf)
+- **[PDF]** [Datasheet SHT3x-DIS](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/res/Datasheet%20SHT3x-DIS.pdf)
 
 
 ## Projects

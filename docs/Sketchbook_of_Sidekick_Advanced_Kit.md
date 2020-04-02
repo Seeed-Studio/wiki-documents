@@ -15,13 +15,13 @@ When you had downloaded the code, extract it to F: folder, or anywhere you prefe
 
 Then open Arduino IDE, click File -&gt; Preferences:
 
-![](https://github.com/SeeedDocument/Sketchbook_of_Sidekick_Advanced_Kit/raw/master/img/Sidekick_40_1.png)
+![](https://files.seeedstudio.com/wiki/Sketchbook_of_Sidekick_Advanced_Kit/img/Sidekick_40_1.png)
 
 Put Sketchbook location to the code you had downloaded, click OK to finish it. Reopen Arduino IDE.
 
 Click File -&gt; Sketchbook, then you can fine some project now, that's the demo code of this chapter.
 
-![](https://github.com/SeeedDocument/Sketchbook_of_Sidekick_Advanced_Kit/raw/master/img/Sidekick_40_2.png)
+![](https://files.seeedstudio.com/wiki/Sketchbook_of_Sidekick_Advanced_Kit/img/Sidekick_40_2.png)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

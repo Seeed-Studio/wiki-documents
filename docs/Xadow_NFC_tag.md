@@ -8,11 +8,11 @@ surveyurl: https://www.research.net/r/xadow_NFC_Tag
 sku:  113040004
 ---
 
-![](https://github.com/SeeedDocument/Xadow_NFC_tag/raw/master/img/Xadow%20NFC%20Tag.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_NFC_tag/img/Xadow%20NFC%20Tag.jpg)
 
 Xadow - NFC Tag is a highly integrated Near Field Communication Tag module, this module is I2C interface, which base on M24LR64E-R,M24LR64E-R have a 64-bit unique identifier and 64 -Kbit EEPROM.Xadow - NFC Tag attach an independent PCB antenna which can easily stretch out of any enclosure you use, leaving more room for you to design the exterior of your project.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-NFC-Tag-p-1881.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-NFC-Tag-p-1881.html)
 
 ##  Specification
 ---
@@ -34,14 +34,14 @@ Xadow - NFC Tag is a highly integrated Near Field Communication Tag module, this
 
 2.  We can Read/Write it by Mobile
 
-![](https://github.com/SeeedDocument/Xadow_NFC_tag/raw/master/img/Xadow-NFC_Tag_photo1.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_NFC_tag/img/Xadow-NFC_Tag_photo1.jpg)
 
 3.Place your phone close to a tag.
 
-|![](https://github.com/SeeedDocument/Xadow_NFC_tag/raw/master/img/NFC_Tag_1.png)|![](https://github.com/SeeedDocument/Xadow_NFC_tag/raw/master/img/NFC_Tag_2.jpg)|
+|![](https://files.seeedstudio.com/wiki/Xadow_NFC_tag/img/NFC_Tag_1.png)|![](https://files.seeedstudio.com/wiki/Xadow_NFC_tag/img/NFC_Tag_2.jpg)|
 |---|---|
 
-|![](https://github.com/SeeedDocument/Xadow_NFC_tag/raw/master/img/NFC_Tag_3.jpg)|![](https://github.com/SeeedDocument/Xadow_NFC_tag/raw/master/img/NFC_Tag_4.png)
+|![](https://files.seeedstudio.com/wiki/Xadow_NFC_tag/img/NFC_Tag_3.jpg)|![](https://files.seeedstudio.com/wiki/Xadow_NFC_tag/img/NFC_Tag_4.png)
 |---|---|
 ##  Control LED
 ---
@@ -94,11 +94,11 @@ void loop(){
 
 ##  Resources
 ---
-*   [Xadow - NFC Tag.PDF](https://github.com/SeeedDocument/Xadow_NFC_tag/raw/master/res/Xadow-NFC_Tag_v1.0.pdf)
+*   [Xadow - NFC Tag.PDF](https://files.seeedstudio.com/wiki/Xadow_NFC_tag/res/Xadow-NFC_Tag_v1.0.pdf)
 
-*   [Xadow - NFC Tag Eagle](https://github.com/SeeedDocument/Xadow_NFC_tag/raw/master/res/Xadow-NFC_Tag_v1.0.zip)
+*   [Xadow - NFC Tag Eagle](https://files.seeedstudio.com/wiki/Xadow_NFC_tag/res/Xadow-NFC_Tag_v1.0.zip)
 
-*   [M24LR64E-R datasheet.pdf](https://github.com/SeeedDocument/Xadow_NFC_tag/raw/master/res/M24LR64E-R.pdf)
+*   [M24LR64E-R datasheet.pdf](https://files.seeedstudio.com/wiki/Xadow_NFC_tag/res/M24LR64E-R.pdf)
 
 *   [NfcV-reader for Android](https://github.com/Seeed-Studio/NFC_Tag_M24LR6E/blob/master/Resources/NfcVreader.apk)
 

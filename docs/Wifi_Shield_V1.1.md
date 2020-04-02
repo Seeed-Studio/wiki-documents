@@ -34,7 +34,7 @@ This Wifi Shield utilizes a RN171 wifi module to provide your Arduino/Seeeduino 
 
 - Built-in networking applications：DHCP client, DNS client, ARP, ICMP ping, FTP, TELNET, HTTP, UDP, TCP
 
-![](https://github.com/SeeedDocument/Wifi_Shield_V1.1/raw/master/img/WIFI_Shield_Interface_Function.jpg)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V1.1/img/WIFI_Shield_Interface_Function.jpg)
 
 - **RN-171：**WIFLY GSX 802.11 b/g Wireless LAN Module.
 
@@ -119,7 +119,7 @@ void loop() {
 
 1.Connect D2(RX) and D3(TX) of software serial port with TX and RX of WiFi shield.
 
-![](https://github.com/SeeedDocument/Wifi_Shield_V1.1/raw/master/img/WIFI_Shield_UART.jpg)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V1.1/img/WIFI_Shield_UART.jpg)
 
 2.Change the code to update your access point info
 
@@ -140,10 +140,10 @@ void loop() {
 
  **ping** seeedstudio.com - ping seeed!
 
-  For more command, please refer to [WiFi Module User Manual](https://github.com/SeeedDocument/Wifi_Shield_V1.1/raw/master/res/WiFly-RN-UM.pdf)
+  For more command, please refer to [WiFi Module User Manual](https://files.seeedstudio.com/wiki/Wifi_Shield_V1.1/res/WiFly-RN-UM.pdf)
 
 
-  ![](https://github.com/SeeedDocument/Wifi_Shield_V1.1/raw/master/img/Wi-Fi_Info.png)
+  ![](https://files.seeedstudio.com/wiki/Wifi_Shield_V1.1/img/Wi-Fi_Info.png)
 
 4.For further usage, please try other examples of the WiFi shield library.
 
@@ -162,12 +162,12 @@ If the Wifi Shield doesn't response any commands, try to do factory reset follow
 
 ##  Resource ##
 
-- **[Eagle]** [WiFi Shield Eagle Files](https://github.com/SeeedDocument/Wifi_Shield_V1.1/raw/master/res/WIFI_Shield_Eagle_Files.zip)
-- **[PDF]**[wifi Shield V1.1 PCB](https://github.com/SeeedDocument/Wifi_Shield_V1.1/raw/master/res/wifi%20Shield%20V1.1.pdf)
-- **[PDF]**[wifi Shield V1.1 SCH](https://github.com/SeeedDocument/Wifi_Shield_V1.1/raw/master/res/wifi%20Shield%20V1.1%20SCH.pdf)
-- **[Datasheet]**[RN-171 Datasheet](https://github.com/SeeedDocument/Wifi_Shield_V1.1/raw/master/res/WiFly-RN-171.pdf)
+- **[Eagle]** [WiFi Shield Eagle Files](https://files.seeedstudio.com/wiki/Wifi_Shield_V1.1/res/WIFI_Shield_Eagle_Files.zip)
+- **[PDF]**[wifi Shield V1.1 PCB](https://files.seeedstudio.com/wiki/Wifi_Shield_V1.1/res/wifi%20Shield%20V1.1.pdf)
+- **[PDF]**[wifi Shield V1.1 SCH](https://files.seeedstudio.com/wiki/Wifi_Shield_V1.1/res/wifi%20Shield%20V1.1%20SCH.pdf)
+- **[Datasheet]**[RN-171 Datasheet](https://files.seeedstudio.com/wiki/Wifi_Shield_V1.1/res/WiFly-RN-171.pdf)
 - **[Library]**[Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield)
-- **[Manual]**[WiFi Module User Manual](https://github.com/SeeedDocument/Wifi_Shield_V1.1/raw/master/res/WiFly-RN-UM.pdf)
+- **[Manual]**[WiFi Module User Manual](https://files.seeedstudio.com/wiki/Wifi_Shield_V1.1/res/WiFly-RN-UM.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

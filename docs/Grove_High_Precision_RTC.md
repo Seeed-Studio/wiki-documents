@@ -16,7 +16,7 @@ Grove - High Precision RTC based on the clock chip PCF85063TP which is a CMOS Re
 Compared to [Grove - RTC](https://www.seeedstudio.com/Grove-RTC-p-758.html), this module can provide a more accurate result. And provide a programmable clock output for peripheral devices as well as minute and half minute interrupt.
 
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-High-Precision-RTC-p-2741.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-High-Precision-RTC-p-2741.html)
 
 ##  Features
 ---

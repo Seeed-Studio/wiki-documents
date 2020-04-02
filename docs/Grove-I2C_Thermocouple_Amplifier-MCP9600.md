@@ -9,7 +9,7 @@ sku: 101020594
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-I2C_Thermocouple_Amplifier-MCP9600/raw/master/img/Main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Thermocouple_Amplifier-MCP9600/img/Main.jpg)
 
 
 The Grove - I2C Thermocouple Amplifier (MCP9600) is a thermocouple-to-digital converter with integrated cold-junction and I2C communication protocol. This module is designed to be used in conjunction with a k-type thermocouple. The thermocouples have a much larger measurement range than thermistors. For example, this [k-type thermocouple](https://www.seeedstudio.com/Thermocouple-Temperature-Sensor-K-Type-1M-p-3132.html) on our website has a measurement range of -50℃ to +600℃.
@@ -19,7 +19,7 @@ We also provide the alert function for this module, you can use the progarammabl
 Again, this module can't work alone, it must work with a k-type thermocouple, if you do not have one, you can consider [Thermocouple Temperature Sensor K Type-1M](https://www.seeedstudio.com/Thermocouple-Temperature-Sensor-K-Type-1M-p-3132.html) in our bazaar.
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-I2C-Thermocouple-Amplifier-%28MCP9600%29-p-3199.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-I2C-Thermocouple-Amplifier-%28MCP9600%29-p-3199.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 ## Version
 
@@ -78,23 +78,23 @@ Again, this module can't work alone, it must work with a k-type thermocouple, if
 ### Pin Map
 
 
-![](https://github.com/SeeedDocument/Grove-I2C_Thermocouple_Amplifier-MCP9600/raw/master/img/Pin_map.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Thermocouple_Amplifier-MCP9600/img/Pin_map.jpg)
 
-![](https://github.com/SeeedDocument/Grove-I2C_Thermocouple_Amplifier-MCP9600/raw/master/img/Pin_map_back.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Thermocouple_Amplifier-MCP9600/img/Pin_map_back.jpg)
 
 
 ### Schematic
 
 **Power**
 
-![](https://github.com/SeeedDocument/Grove-I2C_Thermocouple_Amplifier-MCP9600/raw/master/img/schematic_1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Thermocouple_Amplifier-MCP9600/img/schematic_1.jpg)
 
 The operating voltage range of MCP9600 is 2.7V ~ 5.5V, we use a power conversion chip *XC6206P332MR-G* to provide a stable 3.3V for the MCP9600.
 
 
 **Input Jack**
 
-![](https://github.com/SeeedDocument/Grove-I2C_Thermocouple_Amplifier-MCP9600/raw/master/img/schematic.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Thermocouple_Amplifier-MCP9600/img/schematic.jpg)
 
 Because of the small signal levels involved, we take a lot measures to filter the noise.
 
@@ -107,9 +107,9 @@ Because of the small signal levels involved, we take a lot measures to filter th
 
 **Bi-directional level shifter circuit**
 
-![](https://github.com/SeeedDocument/Grove-I2C_Thermocouple_Amplifier-MCP9600/raw/master/img/schematic_2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Thermocouple_Amplifier-MCP9600/img/schematic_2.jpg)
 
-This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of this sensor use 3.3V, if the I<sup>2</sup>C bus of the Arduino use 5V, this circuit will be needed. In the schematic above, **Q1** and **Q5** are N-Channel MOSFET [2N7002A](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/AN10441.pdf)
+This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of this sensor use 3.3V, if the I<sup>2</sup>C bus of the Arduino use 5V, this circuit will be needed. In the schematic above, **Q1** and **Q5** are N-Channel MOSFET [2N7002A](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/AN10441.pdf)
 
 
 
@@ -154,7 +154,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-I2C_Thermocouple_Amplifier-MCP9600/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Thermocouple_Amplifier-MCP9600/img/connect.jpg)
 
 
 !!!Note
@@ -181,12 +181,12 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 - **Step 3.** Restart the Arduino IDE. Open the example, you can open it in the following three ways：
     1. Open it directly in the Arduino IDE via the path: **File --> Examples --> Grove Temperature sensor MCP9600 --> MCP9600_4channel_INT_demo**. 
-    ![](https://github.com/SeeedDocument/Grove-I2C_Thermocouple_Amplifier-MCP9600/raw/master/img/Path.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-I2C_Thermocouple_Amplifier-MCP9600/img/Path.jpg)
     
     2. Open it in your computer by click the **MCP9600_4channel_INT_demo.ino** which you can find in the folder **XXXX\Arduino\libraries\Seeed_MCP9600-master\examples\MCP9600_4channel_INT_demo**, **XXXX** is the location you installed the Arduino IDE.
-    ![](https://github.com/SeeedDocument/Grove-I2C_Thermocouple_Amplifier-MCP9600/raw/master/img/Path_1.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-I2C_Thermocouple_Amplifier-MCP9600/img/Path_1.jpg)
     
-    3. Or, you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+    3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 ```C++
 #include "Seeed_MCP9600.h"
@@ -367,7 +367,7 @@ channel 0generate interruption!!!
 
 #### Alert Function
 
-![](https://github.com/SeeedDocument/Grove-I2C_Thermocouple_Amplifier-MCP9600/raw/master/img/Function_ep.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Thermocouple_Amplifier-MCP9600/img/Function_ep.jpg)
 
 
 As you can see, there is a hysteresis when the temperature rises and the temperature drops trigger an interrupt. e.g., when the temperature rises, when it reaches 28℃, the alert pin0 will trigger, and when the temperature drops, the limit point becomes 26℃. Only when the temperature become lower than 26 ℃, the alert pin0 will release. 
@@ -407,7 +407,7 @@ The parameter **2** is the hysteresis value.
 
 - **[Zip]** [Seeed MCP9600 Library](https://github.com/Seeed-Studio/Seeed_MCP9600/archive/master.zip)
 
-- **[PDF]** [Datasheet of MCP9600](https://github.com/SeeedDocument/Grove-I2C_Thermocouple_Amplifier-MCP9600/raw/master/res/MCP9600.pdf)
+- **[PDF]** [Datasheet of MCP9600](https://files.seeedstudio.com/wiki/Grove-I2C_Thermocouple_Amplifier-MCP9600/res/MCP9600.pdf)
 
 
 

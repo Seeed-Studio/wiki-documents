@@ -7,11 +7,11 @@ prodimagename:
 surveyurl: https://www.research.net/r/Grove-AND
 sku:    110060026
 ---
-![](https://github.com/SeeedDocument/Grove-AND/raw/master/img/AND_photo1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-AND/img/AND_photo1.jpg)
 
 This module provides the function of a [logical AND gate](https://en.wikipedia.org/wiki/AND_gate). It is based on the 74HC1G08 chip, which is a high-speed Si-gate CMOS device that provides a 2-input AND function. The Grove - AND module therefore has two inputs on the left and one output on the right. The output is HIGH only when all the input signals are HIGH.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Mixer-Pack-V2-(Electronic-blocks%2Cwithout-Arduino%2Cplug-and-play-system)-p-1867.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Mixer-Pack-V2-(Electronic-blocks%2Cwithout-Arduino%2Cplug-and-play-system)-p-1867.html)
 
 ##  Features
 Grove-Mixer_Pack
@@ -48,7 +48,7 @@ Note that this Grove - AND module is sold only as part of the above mentioned pa
 
 ##  Resources
 
-*   [Grove - AND v2.0 Source Files](https://github.com/SeeedDocument/Grove-AND/raw/master/res/Grove-AND_v2.0_Eagle.zip)
+*   [Grove - AND v2.0 Source Files](https://files.seeedstudio.com/wiki/Grove-AND/res/Grove-AND_v2.0_Eagle.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

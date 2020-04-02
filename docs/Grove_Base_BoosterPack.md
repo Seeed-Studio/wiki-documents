@@ -7,17 +7,17 @@ prodimagename: 110020004%205.jpg
 surveyurl: https://www.research.net/r/Grove_Base_BoosterPack
 sku:  103020019
 ---
-![](https://github.com/SeeedDocument/Grove_Base_BoosterPack/raw/master/img/110020004%205.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Base_BoosterPack/img/110020004%205.jpg)
 
 BoosterPacks are plug-in modules that can stack on top of the various LaunchPad kits to add additional functionality, such as sensors, displays, wireless modules &amp; more. The Grove Base BoosterPack is a welcome addition to the LaunchPad/BoosterPack ecosystem, enabling any LaunchPad to interface with the growing offering of Grove modules from Seeed Studio. The Grove Base BoosterPack offers a convenient and easy way for rapid prototypers to use more than one hundred Grove modules with standardized connectors, including sensors, actuators, displays, lights, motors and more.
 
-![](https://github.com/SeeedDocument/Grove_Base_BoosterPack/raw/master/img/Grove_Web_idea.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Base_BoosterPack/img/Grove_Web_idea.jpg)
 
 **What is Grove？**
 
 Grove is a modular, ready-to-use tool set that takes a building block approach to assembling electronics. The Grove system consists of a base shield and a large selection of modules that feature standardized connectors. The base shield allows for easy connection of any microcontroller to interface with the various Grove modules. Each Grove module addresses a unique function &amp; the overall collection of modules expand a wide range of functionality - from a simple push-button to a complex heart rate sensor. Each one comes with clear documentation and demo code to help you get started quickly.
 
-![](https://github.com/SeeedDocument/Grove_Base_BoosterPack/raw/master/img/IMG_GROVE.JPG)
+![](https://files.seeedstudio.com/wiki/Grove_Base_BoosterPack/img/IMG_GROVE.JPG)
 
 **What is LaunchPad？**
 
@@ -32,7 +32,7 @@ The LaunchPad is a set of Evaluation Kits from Texas Instruments. To introduce n
 
 *   There is a RED LED on the Grove BoosterPack. It will indicate the power supply.
 
-![](https://github.com/SeeedDocument/Grove_Base_BoosterPack/raw/master/img/BoosterpackpinMapping.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Base_BoosterPack/img/BoosterpackpinMapping.jpg)
 
 ##   Using the Grove Base BoosterPack
 ---
@@ -200,9 +200,9 @@ With the help of these pin diagrams, you know which pin has the function you nee
 
 ##   Resources
 ---
-- [Hardware eagle files](https://github.com/SeeedDocument/Grove_Base_BoosterPack/raw/master/res/Grove_Base_BoosterPack_v1.0.zip)
+- [Hardware eagle files](https://files.seeedstudio.com/wiki/Grove_Base_BoosterPack/res/Grove_Base_BoosterPack_v1.0.zip)
 
-- [Grove Starter Kit For LaunchPad User's Manual](https://github.com/SeeedDocument/Grove_Base_BoosterPack/raw/master/res/Grove%20Starter%20Kit%20Manual.pdf)
+- [Grove Starter Kit For LaunchPad User's Manual](https://files.seeedstudio.com/wiki/Grove_Base_BoosterPack/res/Grove%20Starter%20Kit%20Manual.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

@@ -11,7 +11,7 @@ sku:      314020030
 
 The OS25B10 is a high performance standard type photo interrupter, which combines high output GaAlAs infrared light emitting diode and high sensitive phototransistor.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/photo-interrupter-os25b10-p-541.html?cPath=144_148)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/photo-interrupter-os25b10-p-541.html?cPath=144_148)
 
 
 ##   Features
@@ -311,14 +311,14 @@ The OS25B10 is a high performance standard type photo interrupter, which combine
 
 ##   Mechanic Dimensions
 
-![](https://github.com/SeeedDocument/Photo_interrupter_OS25B10/raw/master/img/Photo-dimen.JPG)
+![](https://files.seeedstudio.com/wiki/Photo_interrupter_OS25B10/img/Photo-dimen.JPG)
 
 
 ##   Resources
 
 The resources need to be downloaded, like Eagle file, Demo code, project or other datasheet.
 
-![](https://github.com/SeeedDocument/Photo_interrupter_OS25B10/raw/master/img/OS25B10.jpg)
+![](https://files.seeedstudio.com/wiki/Photo_interrupter_OS25B10/img/OS25B10.jpg)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

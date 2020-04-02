@@ -10,7 +10,7 @@ sku:
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Wifi_Bee/raw/master/img/Seeedstudio_Wifibee_MRF24WB0MA.jpg) ![](https://github.com/SeeedDocument/Wifi_Bee/raw/master/img/SeeedStudio_Wifibee_ATMega328.jpg)
+![](https://files.seeedstudio.com/wiki/Wifi_Bee/img/Seeedstudio_Wifibee_MRF24WB0MA.jpg) ![](https://files.seeedstudio.com/wiki/Wifi_Bee/img/SeeedStudio_Wifibee_ATMega328.jpg)
 
 **Wifi Bee** is a xBee Pro socket compatible standalone MCU node useful for Wireless Sensor Network. It integrates Microchip IEEE 802.11 Wi-Fi transceiver module [MRF24WB0MA](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en548014) and a 8bit AVR MCU [ATMega328P](http://www.atmel.com/dyn/products/product_card.asp?part_id=4198). The smart and xBee Pro Socket compatible outlook makes it very easy to integrate in your product. The **ATMega328P** could be directly programmed under the open source Arduino IDE when you plug it on to the [UartSBee](https://seeeddoc.github.io/UartSBee/)  or [Grove - XBee Carrier](https://seeeddoc.github.io/Grove-XBee_Carrier/) . The SPI pins on MCU are connected to the corresponding pins of MRF24WB0MA to communicate with each other, while some of the other pins (DIO, AD,PWM etc.) are brought out to the 20 pins of 2.0 mm male pin headers. Please note there is no dedicated firmware for Wifi Bee yet now, but you may use the firmware of [WiShield](https://github.com/asynclabs/WiShield) from AsyncLabs. Please make sure you can use it before you buy.
 
@@ -46,7 +46,7 @@ Model: [WLS48188P](http://www.seeedstudio.com/depot/wifi-bee-p-823.html?cPath=13
 
 ##   Schematic   ##
 
-![](https://github.com/SeeedDocument/Wifi_Bee/raw/master/img/Wifi_Bee_v0.91b.png)
+![](https://files.seeedstudio.com/wiki/Wifi_Bee/img/Wifi_Bee_v0.91b.png)
 
 [Click here to open schematic in PDF format](http://wiki.seeedstudio.com/images/9/9f/WifiBee_v0.91b.pdf)
 
@@ -63,11 +63,11 @@ Model: [WLS48188P](http://www.seeedstudio.com/depot/wifi-bee-p-823.html?cPath=13
 
 Wifi Bee is of 27.2mm x 35.7mm size.
 
-![](https://github.com/SeeedDocument/Wifi_Bee/raw/master/img/Wifi_Bee_v0.91b_pcb.png)
+![](https://files.seeedstudio.com/wiki/Wifi_Bee/img/Wifi_Bee_v0.91b_pcb.png)
 
 ##   Hardware  ##
 
-![](https://github.com/SeeedDocument/Wifi_Bee/raw/master/img/Seeedstudio_WifiBee_Parts.png)
+![](https://files.seeedstudio.com/wiki/Wifi_Bee/img/Seeedstudio_WifiBee_Parts.png)
 **Wifi Bee** - Parts
 
 ###   Pin definition & Rating   ###
@@ -101,7 +101,7 @@ Wifi Bee is of 27.2mm x 35.7mm size.
 
 - The best way to use Wifi Bee is to connect it to [Grove - XBee Carrier](https://seeeddoc.github.io/Grove-XBee_Carrier/) . [Grove - XBee Carrier](https://seeeddoc.github.io/Grove-XBee_Carrier/)  provides USB-UART connectivity for programming and Power Supply with its built-in 3.3V LDO regulator.
 
-![](https://github.com/SeeedDocument/Wifi_Bee/raw/master/img/Bee_Stem_Connected_to_Wifi_BEE_and_A_Twig.jpg)
+![](https://files.seeedstudio.com/wiki/Wifi_Bee/img/Bee_Stem_Connected_to_Wifi_BEE_and_A_Twig.jpg)
 Grove - XBee Carrier - Connected to **Wifi Bee** and  Powered By USB
 
 ###   Programming   ###
@@ -110,7 +110,7 @@ Grove - XBee Carrier - Connected to **Wifi Bee** and  Powered By USB
 
 This section gives a brief overview on setting up a Home Network with a WiFi router suitable for **Wifi Bee**.
 
-![](https://github.com/SeeedDocument/Wifi_Bee/raw/master/img/WifiBee_Network_Architecture.jpg)
+![](https://files.seeedstudio.com/wiki/Wifi_Bee/img/WifiBee_Network_Architecture.jpg)
 Wireless Sensor Network - Sample Architecture with Wifi Bee Nodes
 
 1.Login to web configuration interface of WiFi router using a web browser. Normally a default IP address like 192.168.0.1 and a Login id:admin and Password:password is provided by the router manufacturer. Use this.
@@ -526,9 +526,9 @@ If you have questions or other better design ideas, you can go to our [forum](ht
 
 ##   Resources   ##
 
-- **[Eagle]**[WifiBee v1.0 Eagle Files.zip](https://github.com/SeeedDocument/Wifi_Bee/raw/master/res/WifiBee_v1.0_Eagle_Files.zip)
-- **[PDF]**[WifiBee v1.0 PCB](https://github.com/SeeedDocument/Wifi_Bee/raw/master/res/WifiBee%20v1.0%20PCB.pdf)
-- **[PDF]**[WifiBee v1.0 SCH](https://github.com/SeeedDocument/Wifi_Bee/raw/master/res/WifiBee%20v1.0%20Sch.pdf)
+- **[Eagle]**[WifiBee v1.0 Eagle Files.zip](https://files.seeedstudio.com/wiki/Wifi_Bee/res/WifiBee_v1.0_Eagle_Files.zip)
+- **[PDF]**[WifiBee v1.0 PCB](https://files.seeedstudio.com/wiki/Wifi_Bee/res/WifiBee%20v1.0%20PCB.pdf)
+- **[PDF]**[WifiBee v1.0 SCH](https://files.seeedstudio.com/wiki/Wifi_Bee/res/WifiBee%20v1.0%20Sch.pdf)
 - **[PDF]**[WifiBee v0.91b schematics in pdf format](http://wiki.seeedstudio.com/images/9/9f/WifiBee_v0.91b.pdf)
 - **[EAGLE]**[Wifi Bee v0.91b design files in Eagle format](http://wiki.seeedstudio.com/images/f/ff/Wifi_Bee_v0.91b_eagle.zip)
 - **[Library]**[WiShield Library](https://github.com/asynclabs/WiShield)

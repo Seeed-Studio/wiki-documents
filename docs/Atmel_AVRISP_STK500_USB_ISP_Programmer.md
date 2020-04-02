@@ -63,7 +63,7 @@ tags: io_3v3, io_5v, plat_duino
     - Step 1. Open AVR STUDIO4.19
     - Step 2. Connect to STK500
 
-        ![](https://github.com/SeeedDocument/Atmel_AVRISP_STK500_USB_ISP_Programmer/raw/master/img/AVRISP0.jpg)
+        ![](https://files.seeedstudio.com/wiki/Atmel_AVRISP_STK500_USB_ISP_Programmer/img/AVRISP0.jpg)
 
     - Step 3. Select Platform
 
@@ -81,6 +81,6 @@ tags: io_3v3, io_5v, plat_duino
 ## Resources
 
 - [USB Driver](https://github.com/SeeedDocument/Atmel_AVRISP_STK500_USB_ISP_Programmer/tree/master/USB%20Driver)
-- [aStudio4b528](https://github.com/SeeedDocument/Atmel_AVRISP_STK500_USB_ISP_Programmer/raw/master/aStudio4b528/aStudio413b528.exe)
+- [aStudio4b528](https://files.seeedstudio.com/wiki/Atmel_AVRISP_STK500_USB_ISP_Programmer/aStudio4b528/aStudio413b528.exe)
 - [AVRISP User's Guide](https://raw.githubusercontent.com/SeeedDocument/Atmel_AVRISP_STK500_USB_ISP_Programmer/master/res/AVRISP.chm)
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

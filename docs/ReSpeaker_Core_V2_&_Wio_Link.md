@@ -27,35 +27,35 @@ Follow [Wio Link Get Starting](http://wiki.seeedstudio.com/Wio_Link/#get-started
 - Step 3. Select **New Applet**
 - Step 4. Click  **+this**
 
-![](https://github.com/SeeedDocument/ReSpeaker_Core_V2_-_Wio_Link/raw/master/this.png)
+![](https://files.seeedstudio.com/wiki/ReSpeaker_Core_V2_-_Wio_Link/this.png)
 
 - Step 5. Select **amazon alexa** and login in the same amazon account as ReSpeaker Core v2.0. 
 
-![](https://github.com/SeeedDocument/ReSpeaker_Core_V2_-_Wio_Link/raw/master/alexa.png)
+![](https://files.seeedstudio.com/wiki/ReSpeaker_Core_V2_-_Wio_Link/alexa.png)
 
 - Step 6. Select  **Say a specific phrase**
 
-![](https://github.com/SeeedDocument/ReSpeaker_Core_V2_-_Wio_Link/raw/master/say_a_specific_phase.png)
+![](https://files.seeedstudio.com/wiki/ReSpeaker_Core_V2_-_Wio_Link/say_a_specific_phase.png)
 
 - Step 7. Enter lower-case characters keyword **on** and then click **Create Trigger**
 
-![](https://github.com/SeeedDocument/ReSpeaker_Core_V2_-_Wio_Link/raw/master/key_word.png)
+![](https://files.seeedstudio.com/wiki/ReSpeaker_Core_V2_-_Wio_Link/key_word.png)
 
 - Step 8. Click **+that**
 
-![](https://github.com/SeeedDocument/ReSpeaker_Core_V2_-_Wio_Link/raw/master/that.png)
+![](https://files.seeedstudio.com/wiki/ReSpeaker_Core_V2_-_Wio_Link/that.png)
 
 - Step 9. Choose **Seeed Wio** as action service.
 
-![](https://github.com/SeeedDocument/ReSpeaker_Core_V2_-_Wio_Link/raw/master/wio.png)
+![](https://files.seeedstudio.com/wiki/ReSpeaker_Core_V2_-_Wio_Link/wio.png)
 
 - Step 10. Select **on, off or trigger Grove**
 
-![](https://github.com/SeeedDocument/ReSpeaker_Core_V2_-_Wio_Link/raw/master/choose_action.png)
+![](https://files.seeedstudio.com/wiki/ReSpeaker_Core_V2_-_Wio_Link/choose_action.png)
 
 - Step 11. Select correct online Grove module and **on** as **do**.
 
-![](https://github.com/SeeedDocument/ReSpeaker_Core_V2_-_Wio_Link/raw/master/on.png)
+![](https://files.seeedstudio.com/wiki/ReSpeaker_Core_V2_-_Wio_Link/on.png)
 
 - Step 12. Follow Step 3 ~ Step 11 to add the **off** function. 
 

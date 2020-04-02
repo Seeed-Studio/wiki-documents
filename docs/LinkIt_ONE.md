@@ -288,7 +288,7 @@ A8: The LinkitONE IDE comes with examples to use the GPRS to connect to web. Jus
 
 **Schematic / Design Files:**
 
-- [LinkIt ONE V1.0 Eagle File](https://github.com/SeeedDocument/Linkit_ONE/raw/master/resource/202000437_PCBA%20Linkit%20ONE_PDF.zip)
+- [LinkIt ONE V1.0 Eagle File](https://files.seeedstudio.com/wiki/Linkit_ONE/resource/202000437_PCBA%20Linkit%20ONE_PDF.zip)
 - [LinkIt ONE V1.0 Schematic in PDF](https://github.com/SeeedDocument/Linkit_ONE/raw/master/resource/%5B202000437%5DLinkIt%20ONE-V1_Eagle.zip)
 
 **Software:**

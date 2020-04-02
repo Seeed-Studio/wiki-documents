@@ -75,7 +75,7 @@ Grove - AS5600 is based on the Hall Effect, the build-in Hall sensor can detect 
 
 | Seeeduino V4.2 | Base Shield | Grove - 12-bit Magnetic Rotary Position Sensor / Encoder (AS5600)|
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600/master/img/Grove-12-bit-Magnetic-Rotary-Sensor-AS5600-thumbnail.jpg)
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600/master/img/Grove-12-bit-Magnetic-Rotary-Sensor-AS5600-thumbnail.jpg)
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600-p-4192.html)|
 
 >In addition, you can consider our new [Seeeduino Lotus M0+](https://www.seeedstudio.com/Seeeduino-Lotus-Cortex-M0-p-2896.html), which is equivalent to the combination of Seeeduino V4.2 and Baseshield.
@@ -190,7 +190,7 @@ The [AS5600](https://github.com/Seeed-Studio/Seeed_Arduino_AS5600) library also 
 ## Resources
 
 - **[ZIP]** [Grove - 12-bit Magnetic Rotary Position Sensor / Encoder (AS5600) Schematic file](https://github.com/SeeedDocument/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600/raw/master/res/Grove%20-%2012-bit%20Magnetic%20Rotary%20Position%20Sensor%20(AS5600).zip)
-- **[PDF]** [AS5600 Datasheet](https://github.com/SeeedDocument/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600/raw/master/res/Magnetic%20Rotary%20Position%20Sensor%20AS5600%20Datasheet.pdf)
+- **[PDF]** [AS5600 Datasheet](https://files.seeedstudio.com/wiki/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600/res/Magnetic%20Rotary%20Position%20Sensor%20AS5600%20Datasheet.pdf)
 - **[DWG]** [Grove - 12 bit Magnetic Rotary Position Sensor(AS5600) Calibrator](https://github.com/SeeedDocument/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600/raw/master/res/Grove%20-%2012%20bit%20Magnetic%20Rotary%20Position%20Sensor(AS5600)%20Calibrator.dwg)
 
 ## Tech Support

@@ -7,11 +7,11 @@ prodimagename:  Pic_2100.bmp
 surveyurl: https://www.research.net/r/Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit
 sku:   110070008
 ---
-![](https://github.com/SeeedDocument/Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit/raw/master/img/Pic_2100.bmp)
+![](https://files.seeedstudio.com/wiki/Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit/img/Pic_2100.bmp)
 
 Looking for a shell for your electronic prototypes? The skeleton box is a handy solution. It is constructed from military grade aluminum and hardwearing acrylic, with good-looking and providing the ultimate protection from physical and corrosion! The enclosures are easy to assemble. The skeleton box is stackable in all three dimensions, allowing for limitless expansion possibilities. And this is a specially designed for Raspberry Pi Compute Module Development Kit.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Skeleton-Box-for-Raspberry-Pi-Compute-Module-p-2078.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Skeleton-Box-for-Raspberry-Pi-Compute-Module-p-2078.html)
 
 
 ##  Feature
@@ -26,19 +26,19 @@ Looking for a shell for your electronic prototypes? The skeleton box is a handy 
 ---
 Assembly diagram is as follows:
 
-![](https://github.com/SeeedDocument/Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit/raw/master/img/21011.bmp)
+![](https://files.seeedstudio.com/wiki/Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit/img/21011.bmp)
 
 * * *
 
-![](https://github.com/SeeedDocument/Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit/raw/master/img/Pic_2102.bmp)
+![](https://files.seeedstudio.com/wiki/Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit/img/Pic_2102.bmp)
 
 * * *
 
-![](https://github.com/SeeedDocument/Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit/raw/master/img/21031.bmp)
+![](https://files.seeedstudio.com/wiki/Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit/img/21031.bmp)
 
 * * *
 
-![](https://github.com/SeeedDocument/Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit/raw/master/img/Pic_2104.bmp)
+![](https://files.seeedstudio.com/wiki/Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit/img/Pic_2104.bmp)
 
 <table  cellspacing="0" width="80%">
 <tr>

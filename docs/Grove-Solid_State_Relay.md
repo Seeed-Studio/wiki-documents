@@ -7,7 +7,7 @@ prodimagename: Grove_Solid_State_Relay_1.jpg
 surveyurl: https://www.research.net/r/Grove_Solid_State_Relay
 sku: 103020004
 ---
-![](https://github.com/SeeedDocument/Grove-Solid_State_Relay/raw/master/img/Grove_Solid_State_Relay_1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay/img/Grove_Solid_State_Relay_1.jpg)
 
 Grove – Solid State Relay is a non-contact electronic switch module that has relay features. Based on S208T02, it has a maximum output of 250VAC/4A, with a switching speed less than 10ms. This module is equipped with acrylic base and a 3D-printed protection insulation shield, for user’s safety. The featured LED indicates that the relay is on. It can be widely used in various areas such as computer peripheral interfaces, temperature/speed/light adjustment, servo control, petrochemical, medical instrumentations, financial devices, coal, meters, traffic signals, etc.
 
@@ -56,7 +56,7 @@ Grove – Solid State Relay is a non-contact electronic switch module that has r
 
 ## Interface Function
 
-![](https://github.com/SeeedDocument/Grove-Solid_State_Relay/raw/master/img/Ssr_interface.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay/img/Ssr_interface.jpg)
 
 !!!Cautions
         **1.**	If the output voltage is higher than 36V, you need to ensure the module is in the off state before you operate with the screws.
@@ -118,7 +118,7 @@ Grove – Solid State Relay is a non-contact electronic switch module that has r
 | SIG         | D3      |Yellow|
 
 
-![](https://github.com/SeeedDocument/Grove-Solid_State_Relay/raw/master/img/Arduino_relay.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay/img/Arduino_relay.jpg)
 
 #### Software
 
@@ -160,7 +160,7 @@ Done uploading, then you will see the bulb turn on 5s and then turn off 5s conti
 
 | Raspberry pi | GrovePi_Plus|  Grove-Relay|
 |--------------|-------------|------|
-|![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/Grovepi%2B.jpg)|![](https://github.com/SeeedDocument/Grove-Solid_State_Relay/raw/master/img/thumbnail.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/Grovepi%2B.jpg)|![](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay/img/thumbnail.jpg)|
 |<a href="https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/GrovePi%2B-p-2241.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Solid-State-Relay-p-1359.html" target="_blank">Get One Now</a>|
 
 
@@ -174,7 +174,7 @@ Done uploading, then you will see the bulb turn on 5s and then turn off 5s conti
 - **Step 4.** Connect the Raspberry to PC via USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-Solid_State_Relay/raw/master/img/PI_RELAY.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay/img/PI_RELAY.jpg)
 
 
 #### Software
@@ -293,13 +293,13 @@ By recording SSR chip temperature at different current and different time points
 
 Figure 1 is screenshot from S208T02 datasheet, we can see that at different heat sink and different temperature, SSR’s current is different.
 
-![](https://github.com/SeeedDocument/Grove-Solid_State_Relay/raw/master/img/Figure_1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay/img/Figure_1.jpg)
 
 There needs a temperature sensor to get the temperature of the chip. I use DS18B20 whose detection range is -25-125℃ to meet the requirements.
 
 Figure 2 shows the experimental equipment and installation plans, the temperature sensor is tied to the right side of the heat sink, to make the temperature that 18b20 detects as close as possible to the heat sink temperature, smear between the sensor and the heat sink thermal plastic. Between the heat sink and SSR coated thermal plastic. Therefore， the temperature of the 18b20 is equal to the temperature of SSR.
 
-![](https://github.com/SeeedDocument/Grove-Solid_State_Relay/raw/master/img/Grove-ssr-report-image2.JPG)
+![](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay/img/Grove-ssr-report-image2.JPG)
 
 **3.Experimental data**
 
@@ -322,7 +322,7 @@ Figure 2 shows the experimental equipment and installation plans, the temperatur
 
   Cuz I hadn’t a larger heat sink on hand, so I installed a fan (which I take for my PC’s CPU) above the SSR. As shown in Figure 3.
 
-![](https://github.com/SeeedDocument/Grove-Solid_State_Relay/raw/master/img/Grove-ssr-report-image3.JPG)
+![](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay/img/Grove-ssr-report-image3.JPG)
 
 I just test the stable time of different operating current, as shown in Table 2.
 
@@ -351,11 +351,11 @@ From the above experimental results, the following conclusions can be drawn:
 
 ## Resources
 
-- **[Zip]** [Grove - Solid State Relay Eagle File](https://github.com/SeeedDocument/Grove-Solid_State_Relay/raw/master/res/Ssr_eaglefile.zip)
-- **[RAR]** [Grove - Solid State Relay Demo Code](https://github.com/SeeedDocument/Grove-Solid_State_Relay/raw/master/res/SSR_Demo_Code.rar)
-- **[PDF]** [S208T02 Datasheet](https://github.com/SeeedDocument/Grove-Solid_State_Relay/raw/master/res/S208t02_datasheet.pdf)
-- **[PDF]** [Grove - Solid State Relay in PDF](https://github.com/SeeedDocument/Grove-Solid_State_Relay/raw/master/res/SSR_v0.9b.pdf)
-- **[PDF]** [Grove - Solid State Relay Test Report](https://github.com/SeeedDocument/Grove-Solid_State_Relay/raw/master/res/Grove-SSR_Test_Report_V0.3.pdf)
+- **[Zip]** [Grove - Solid State Relay Eagle File](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay/res/Ssr_eaglefile.zip)
+- **[RAR]** [Grove - Solid State Relay Demo Code](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay/res/SSR_Demo_Code.rar)
+- **[PDF]** [S208T02 Datasheet](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay/res/S208t02_datasheet.pdf)
+- **[PDF]** [Grove - Solid State Relay in PDF](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay/res/SSR_v0.9b.pdf)
+- **[PDF]** [Grove - Solid State Relay Test Report](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay/res/Grove-SSR_Test_Report_V0.3.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

@@ -9,7 +9,7 @@ sku: 105020073
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-RGB_LED_Matrix_w-Driver/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Matrix_w-Driver/img/main.jpg)
 
 8x8 RGB LED Matrix is awesome for simple image display, 64 pixel leds and 255 colors for each pixel means almost infinite possibilities. However, the complicated wiring of the matrix is daunting. Now we present the Grove - RGB LED Matrix w/Driver for you, leave all the complex and variable wireing and soldering behind, just one single grove connector to control the RGB 8x8 LED matrix easily. Amazing? Try it yourself and you will love it.
 
@@ -57,9 +57,9 @@ tags:
 
 ### Pin Out
 
-![](https://github.com/SeeedDocument/Grove-RGB_LED_Matrix_w-Driver/raw/master/img/pin-out/Pin_out.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Matrix_w-Driver/img/pin-out/Pin_out.jpg)
 
-![](https://github.com/SeeedDocument/Grove-RGB_LED_Matrix_w-Driver/raw/master/img/pin-out/Pin_out_led.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Matrix_w-Driver/img/pin-out/Pin_out_led.jpg)
 
 
 ---
@@ -72,7 +72,7 @@ We use I2C interface to control the LED matrix:
 >SDA: I2C serial data  
 >SCL: I2C serial clock
 
-![](https://github.com/SeeedDocument/Grove-RGB_LED_Matrix_w-Driver/raw/master/img/pin-out/1-3.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Matrix_w-Driver/img/pin-out/1-3.jpg)
 
 ---
 
@@ -80,7 +80,7 @@ We use I2C interface to control the LED matrix:
 
 We use MP-2155 to provide a stable 3.3V for the the MCU and the LED driver chip.
 
-![](https://github.com/SeeedDocument/Grove-RGB_LED_Matrix_w-Driver/raw/master/img/pin-out/1-2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Matrix_w-Driver/img/pin-out/1-2.jpg)
 
 ---
 
@@ -88,20 +88,20 @@ We use MP-2155 to provide a stable 3.3V for the the MCU and the LED driver chip.
 
 Connect to the SDA and SCL pin, works as the UART when download the firmware.
 
-![](https://github.com/SeeedDocument/Grove-RGB_LED_Matrix_w-Driver/raw/master/img/pin-out/1-1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Matrix_w-Driver/img/pin-out/1-1.jpg)
 
 
 ---
 
 **LED Driver**
 
-The [MY9221](https://github.com/SeeedDocument/Grove-RGB_LED_Matrix_w-Driver/raw/master/res/MY9221.pdf)  is a 12-channels (R/G/B x 4) constant current APDM (Adaptive Pulse Density modulation) LED driver. Since this mudule is 8x8 matrics,
+The [MY9221](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Matrix_w-Driver/res/MY9221.pdf)  is a 12-channels (R/G/B x 4) constant current APDM (Adaptive Pulse Density modulation) LED driver. Since this mudule is 8x8 matrics,
 so we need **<font color="red">R</font><font color="green">G</font><font color="blue">B</font>** X8 output channels, therefor, we use two MY9221.
 
 
-![](https://github.com/SeeedDocument/Grove-RGB_LED_Matrix_w-Driver/raw/master/img/pin-out/2-2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Matrix_w-Driver/img/pin-out/2-2.jpg)
 
-![](https://github.com/SeeedDocument/Grove-RGB_LED_Matrix_w-Driver/raw/master/img/schematic4.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Matrix_w-Driver/img/schematic4.jpg)
 
 
 ---
@@ -110,7 +110,7 @@ so we need **<font color="red">R</font><font color="green">G</font><font color="
 
 We use 64 KTR-3528RGB LEDs to form an 8x8 matrix LED
 
-![](https://github.com/SeeedDocument/Grove-RGB_LED_Matrix_w-Driver/raw/master/img/RGB.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Matrix_w-Driver/img/RGB.jpg)
 
 
 We use the V signal for column selection and the RGB signal for row selection.  
@@ -194,12 +194,12 @@ e.g.
 
 - **Step 3.** Restart the Arduino IDE. Open the example, you can open it in the following three ways：
     1. Open it directly in the Arduino IDE via the path: **File --> Examples --> Seeed_RGB_Led_Matrix --> display_emoji**. 
-    ![](https://github.com/SeeedDocument/Grove-RGB_LED_Matrix_w-Driver/raw/master/img/path1.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Matrix_w-Driver/img/path1.jpg)
     
     2. Open it in your computer by click the **display_emoji.ino** which you can find in the folder **XXXX\Arduino\libraries\Seeed_RGB_LED_Matrix-master\examples\display_emoji**, **XXXX** is the location you installed the Arduino IDE.
-    ![](https://github.com/SeeedDocument/Grove-RGB_LED_Matrix_w-Driver/raw/master/img/path2.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Matrix_w-Driver/img/path2.jpg)
     
-    3. Or, you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+    3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 
 ```C++
@@ -261,7 +261,7 @@ void loop()
         If every thing goes well, now you can see the LED matrix show:
 
 
-![](https://github.com/SeeedDocument/Grove-RGB_LED_Matrix_w-Driver/raw/master/img/emoji_wiki.gif)
+![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Matrix_w-Driver/img/emoji_wiki.gif)
 
 
 
@@ -305,11 +305,11 @@ into
 
 Let's begin DIY.
 
-- **Step 1.** Download the [image editor](https://github.com/SeeedDocument/Grove-RGB_LED_Matrix_w-Driver/raw/master/res/docs.zip), it's a zip file, unzip it.
+- **Step 1.** Download the [image editor](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Matrix_w-Driver/res/docs.zip), it's a zip file, unzip it.
 
 - **Step 2.** Find the **index.html** in the folder **doc-->doc**, double click to open it.
 
-![](https://github.com/SeeedDocument/Grove-RGB_LED_Matrix_w-Driver/raw/master/img/DIY.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Matrix_w-Driver/img/DIY.jpg)
 
 - **Step 3.** Creat your own images, when you finish one, click **Insert** in the control panel, the you can edit anothor one, when you finish all the image sequence you can copy the code in the code zone.
 
@@ -391,7 +391,7 @@ void loop()
         If every thing goes well, now you can see the LED matrix show:
 
 
-![](https://github.com/SeeedDocument/Grove-RGB_LED_Matrix_w-Driver/raw/master/img/emoji_smile.gif)
+![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Matrix_w-Driver/img/emoji_smile.gif)
 
 
 ## Schematic Online Viewer
@@ -403,15 +403,15 @@ void loop()
 
 ## Resources
 
-- **[Zip]** [Grove - RGB LED Matrix Driver Eagle Files](https://github.com/SeeedDocument/Grove-RGB_LED_Matrix_w-Driver/raw/master/res/Grove%20-%20RGB%20LED%20Matrix%20w%20Driver.zip)
+- **[Zip]** [Grove - RGB LED Matrix Driver Eagle Files](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Matrix_w-Driver/res/Grove%20-%20RGB%20LED%20Matrix%20w%20Driver.zip)
 
-- **[Zip]** [RGB LED Matrix 8x8 Eagle Files](https://github.com/SeeedDocument/Grove-RGB_LED_Matrix_w-Driver/raw/master/res/RGB%20LED%20Matrix%208x8.zip)
+- **[Zip]** [RGB LED Matrix 8x8 Eagle Files](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Matrix_w-Driver/res/RGB%20LED%20Matrix%208x8.zip)
 
 - **[Zip]** [Seeed_RGB_LED_Matrix Library](https://github.com/Seeed-Studio/Seeed_RGB_LED_Matrix/archive/master.zip)
 
-- **[PDF]** [Datasheet MY9221](https://github.com/SeeedDocument/Grove-RGB_LED_Matrix_w-Driver/raw/master/res/MY9221.pdf)
+- **[PDF]** [Datasheet MY9221](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Matrix_w-Driver/res/MY9221.pdf)
 
-- **[PDF]** [Datasheet MP2155](https://github.com/SeeedDocument/Grove-RGB_LED_Matrix_w-Driver/raw/master/res/MP2155.pdf)
+- **[PDF]** [Datasheet MP2155](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Matrix_w-Driver/res/MP2155.pdf)
 
 
 

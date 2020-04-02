@@ -15,7 +15,7 @@ Connect the Potentiometer module to the Analog A0/A1 input jack.
 
 The Potentiometer module produces an analog voltage on its SIG output, which is connected to Arduino A0 analog input on the A0/A1 input jack.
 
-![](https://github.com/SeeedDocument/Project_Three-Analog_Input_v1b/raw/master/img/Analog_Input_v1.0b.jpg)
+![](https://files.seeedstudio.com/wiki/Project_Three-Analog_Input_v1b/img/Analog_Input_v1.0b.jpg)
 
 _**Now upload the following Arduino sketch:**_
 

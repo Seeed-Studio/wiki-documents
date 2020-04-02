@@ -11,7 +11,7 @@ Next on our Grove journey is the temperature sensor . It is an analog form of in
 Connect the Temperature Sensor to the Analog A0/A1 input jack.
 The Grove unit produces an analog voltage on its D1 output, which is connected to Arduino A0 analog input on the A0/A1 input jack.
 
-![](https://github.com/SeeedDocument/Project_Seven-Temperature/raw/master/img/Conn-seven.jpg)
+![](https://files.seeedstudio.com/wiki/Project_Seven-Temperature/img/Conn-seven.jpg)
 
 _**Now upload the following Arduino sketch:**_
 
@@ -49,7 +49,7 @@ You can copy and paste the lines above to add temperature capability to your own
 
 After you have uploaded the sketch, open the serial monitor window in the Arduino IDE, and you should be presented with a box similar to this:
 
-![](https://github.com/SeeedDocument/Project_Seven-Temperature/raw/master/img/Aq0PYQjuq.png)
+![](https://files.seeedstudio.com/wiki/Project_Seven-Temperature/img/Aq0PYQjuq.png)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

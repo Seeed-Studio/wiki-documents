@@ -12,14 +12,14 @@ AT Command Tester can be used with [2G Modules](http://m2msupport.net/m2msupport
 
 First select 'Find Ports' to search for avaialble ports. Then select the modem port and press 'Connect'. Once connected to the module, you can send AT commands from the 'Command Mode' tab
 
-![](https://github.com/SeeedDocument/AT_Command_Tester_Application/raw/master/img/M2m_img1.PNG)
+![](https://files.seeedstudio.com/wiki/AT_Command_Tester_Application/img/M2m_img1.PNG)
 
  In script mode, you can send multiple AT commands at a same time as shown below. You can create your own script and save it on the local machine.Then load the script and execute.
 
-![](https://github.com/SeeedDocument/AT_Command_Tester_Application/raw/master/img/Script_mode.PNG)
+![](https://files.seeedstudio.com/wiki/AT_Command_Tester_Application/img/Script_mode.PNG)
 
  To perform basic diagnostics on the SIM900 module, choose the 'Diagnostics' tab,
-![](https://github.com/SeeedDocument/AT_Command_Tester_Application/raw/master/img/Diagnistics_mode.PNG)
+![](https://files.seeedstudio.com/wiki/AT_Command_Tester_Application/img/Diagnistics_mode.PNG)
  The diagnostics commands and the results are shown an below, AT+CGMI SIMCOM_Ltd OK
 Manufacturer : SIMCOM_Ltd
 [AT+CGMM](http://m2msupport.net/m2msupport/atcgmm-request-model-identificaiton/)
@@ -73,7 +73,7 @@ Device is currently on "T-Mobile" network.
 SIM is ready.
 
  Voice Call with SIM900 Select the 'Voice Call' tab to test outgoing and incoming voice calls. The 'AT Command Tester' will check whether the device is registered before dialing the call,
- ![](https://github.com/SeeedDocument/AT_Command_Tester_Application/raw/master/img/Voicecall.PNG)
+ ![](https://files.seeedstudio.com/wiki/AT_Command_Tester_Application/img/Voicecall.PNG)
 
  The AT command sequence for outgoing call is shown below, Checking registration status... AT+CREG? +CREG: 0,1 OK
 The device is registered in home network. Dialing number 858xxxxxxx
@@ -96,7 +96,7 @@ Call sucessfully dis-connected..
 
 To setup GPRS call with the SIM900 modem, select the 'Data Call' tab. Here you can get all the PDP context stored on the device. The PDP context has carrier APN and other information that are required to set up a GPRS call.
 
-![](https://github.com/SeeedDocument/AT_Command_Tester_Application/raw/master/img/Datacall.PNG)
+![](https://files.seeedstudio.com/wiki/AT_Command_Tester_Application/img/Datacall.PNG)
  Here is the sequence of AT commands to set up data call
 
 [AT+CGDCONT?](http://m2msupport.net/m2msupport/atcgdcont-define-pdp-context/)
@@ -141,7 +141,7 @@ Connect Sucessful
 
  SMS with SIM900 Select the 'SMS' to send SMS messages. You can also read and delete SMS messages stored on the SIM.
 
-![](https://github.com/SeeedDocument/AT_Command_Tester_Application/raw/master/img/Sms.PNG)
+![](https://files.seeedstudio.com/wiki/AT_Command_Tester_Application/img/Sms.PNG)
  Here is the sequence of AT commands to send SMS message,
 
 Checking registration status...
@@ -163,7 +163,7 @@ OK
 SMS Send successful
 
 Network Selection Network selection enables the user to select the network that is available. Use the 'Network Selection' tab for this feature,
- ![](https://github.com/SeeedDocument/AT_Command_Tester_Application/raw/master/img/Network_selection.PNG)
+ ![](https://files.seeedstudio.com/wiki/AT_Command_Tester_Application/img/Network_selection.PNG)
 
 Here are the commands for Network Selection,
 
@@ -180,7 +180,7 @@ Phonebook
 
 With the 'Phone Book' tab, you can add/delete/read phone book entries stored on the SIM,
 
-![](https://github.com/SeeedDocument/AT_Command_Tester_Application/raw/master/img/Phone_book.PNG)
+![](https://files.seeedstudio.com/wiki/AT_Command_Tester_Application/img/Phone_book.PNG)
 
 Getting phonebook entries..
 
@@ -198,7 +198,7 @@ SIM900 HTTP
 
 With the 'HTTP' tab, you can read the bearer profiles and test HTTP GET and HTTP POST,
 
-![](https://github.com/SeeedDocument/AT_Command_Tester_Application/raw/master/img/Http.PNG)
+![](https://files.seeedstudio.com/wiki/AT_Command_Tester_Application/img/Http.PNG)
 
 Getting Bearer profiles..
 
@@ -292,7 +292,7 @@ SIM900 FTP
 
 FTP Get and Put with SIM900 module can be tested as shown below,
 
-![](https://github.com/SeeedDocument/AT_Command_Tester_Application/raw/master/img/Ftp.PNG)
+![](https://files.seeedstudio.com/wiki/AT_Command_Tester_Application/img/Ftp.PNG)
 
 Checking registration status...
 

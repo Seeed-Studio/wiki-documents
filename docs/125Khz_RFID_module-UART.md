@@ -7,11 +7,11 @@ prodimagename:  P1240147.jpg
 surveyurl: https://www.research.net/r/125Khz_RFID_module-UART
 sku:      113990014
 ---
-![http://www.seeedstudio.com/depot/images/product/P1240147.jpg](https://github.com/SeeedDocument/125Khz_RFID_module-UART/raw/master/img/125khz20uart.jpg)
+![http://www.seeedstudio.com/depot/images/product/P1240147.jpg](https://files.seeedstudio.com/wiki/125Khz_RFID_module-UART/img/125khz20uart.jpg)
 
 RDM 125KHz card mini-module is designed for reading code from 125KHz card compatible read-only tags and read/write card . It can be applied in office/home security, personal identification, access control, anti-forgery, interactive toy and production control systems etc.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/125Khz-RFID-module-UART-p-171.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/125Khz-RFID-module-UART-p-171.html)
 
 **Note:** Module will notify whenever 125khz tag approaches, tag serial number will be send via TX pin. Easy way for a RFID module on MCU projects or PC connnection via UartSB.
 
@@ -115,7 +115,7 @@ Look the image below(Mechanic Dimensions), and check the pin definition list her
 
 ##   Mechanic Dimensions
 
-![](https://github.com/SeeedDocument/125Khz_RFID_module-UART/raw/master/img/RFID-wiegand-dimen.JPG)
+![](https://files.seeedstudio.com/wiki/125Khz_RFID_module-UART/img/RFID-wiegand-dimen.JPG)
 
 ##   Usage
 
@@ -141,11 +141,11 @@ Example: card number: 62E3086CED
 
 ####   Time sequence chart
 
-![](https://github.com/SeeedDocument/125Khz_RFID_module-UART/raw/master/img/RFID-wiegand-time-seq.JPG)
+![](https://files.seeedstudio.com/wiki/125Khz_RFID_module-UART/img/RFID-wiegand-time-seq.JPG)
 
 ###   Exampel
 
-![](https://github.com/SeeedDocument/125Khz_RFID_module-UART/raw/master/img/125k_RFID_uasge.JPG)
+![](https://files.seeedstudio.com/wiki/125Khz_RFID_module-UART/img/125k_RFID_uasge.JPG)
 
 Output date(HEX): 02 | 30 31 30 30 30 37 33 34 45 30 | 44 32 | 03
 -&gt;Change to Decimal
@@ -176,7 +176,7 @@ void loop()
 
 ##   Resources
 
-*   Datasheet: [RDM630-Spec.pdf](https://github.com/SeeedDocument/125Khz_RFID_module-UART/raw/master/res/RDM630-Spec.pdf)
+*   Datasheet: [RDM630-Spec.pdf](https://files.seeedstudio.com/wiki/125Khz_RFID_module-UART/res/RDM630-Spec.pdf)
 
 *   [How to connect Arduino and RFID](http://www.instructables.com/id/Arduino-and-RFID-from-seeedstudio/)
 

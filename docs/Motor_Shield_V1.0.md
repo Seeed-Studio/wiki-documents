@@ -15,7 +15,7 @@ The Motor Shield is a perfect platform for robotics and mechanical applications.
 
 Model: [SLD80256P](http://www.seeedstudio.com/depot/grove-base-shield-p-754.html?cPath=132_134)
 
-![](https://github.com/SeeedDocument/Motor-Shield_V1.0/raw/master/img/Smotoshield2.jpg)
+![](https://files.seeedstudio.com/wiki/Motor-Shield_V1.0/img/Smotoshield2.jpg)
 
 ##   Features   ##
 
@@ -52,7 +52,7 @@ The Driver IC and Heat sink may become very hot when working with current more t
 
 ##  Interface Function ##
 
-![](https://github.com/SeeedDocument/Motor-Shield_V1.0/raw/master/img/Motor_shield-hard3.jpg)
+![](https://files.seeedstudio.com/wiki/Motor-Shield_V1.0/img/Motor_shield-hard3.jpg)
 **External Power Jack:** External Power supply for Motor Shield.
 
 **Motor Interface:** Out 1 and Out 2(Out 3 and Out 4) can connect Motor A(B) for DC Motor.
@@ -94,14 +94,14 @@ The following table describes Motor A/B indicator LEDs.
 
 Connect DC motor to the motor shield Output Pins M1+& M1-(M2+& M2-), if using a 4-wire stepper motor, make sure the 4 Pins are correctly connected. Connect the drive voltage (The required voltage depends upon the motor used. Refer to the motor datasheet) to the Power supply terminals.
 
-![](https://github.com/SeeedDocument/Motor-Shield_V1.0/raw/master/img/Motor-basic.jpg)
+![](https://files.seeedstudio.com/wiki/Motor-Shield_V1.0/img/Motor-basic.jpg)
 
 With the jumper J4 inserted, Arduino can be powered by the drive voltage via an on-board voltage regulator, which regulates the drive voltage to 5v.
 
 ###  Software ###
 
-Download the [Motor shield Demo code](https://github.com/SeeedDocument/Motor-Shield_V1.0/raw/master/res/Grobe-Motor_Shield_Demo_Code.zip) and open the **Motor_shield_demo_code** sketch. Select the corresponding Arduino board in **tools-boards** and serial port in **tools-serial port**.
-![](https://github.com/SeeedDocument/Motor-Shield_V1.0/raw/master/img/Motor_shield.png)
+Download the [Motor shield Demo code](https://files.seeedstudio.com/wiki/Motor-Shield_V1.0/res/Grobe-Motor_Shield_Demo_Code.zip) and open the **Motor_shield_demo_code** sketch. Select the corresponding Arduino board in **tools-boards** and serial port in **tools-serial port**.
+![](https://files.seeedstudio.com/wiki/Motor-Shield_V1.0/img/Motor_shield.png)
 Upload the sketch to your arduino board, then you would found the 2 motors begin to work. If you power the motor shield via the power terminal and the power jumper J4 was inserted, you can remove the USB cable now.
 
 Speed control is achieved through conventional PWM which can be obtained from Arduino's PWM output D9(EA) and D10(EB). Using the function **analogWrite()** to generate the drive PWM:
@@ -211,7 +211,7 @@ step one revolution in the other direction:
 
 ###  Motor Shield V2.0 Demo ###
 
-![](https://github.com/SeeedDocument/Motor-Shield_V1.0/raw/master/img/Seeed-Recipe-Motor_Shield_V2.0_.png)
+![](https://files.seeedstudio.com/wiki/Motor-Shield_V1.0/img/Seeed-Recipe-Motor_Shield_V2.0_.png)
 
 This is a recipe about how to control motors individually with the Seeedstudio 2.0 motor shield.
 
@@ -227,10 +227,10 @@ This is a recipe about how to control motors individually with the Seeedstudio 2
 ##   Resources   ##
 
 - **[Datasheet]** [L298datasheet](http://wiki.seeedstudio.com/images/5/5e/L298datasheet.pdf)
-- **[EAGLE]**  [Motor Shield eagle files](https://github.com/SeeedDocument/Motor-Shield_V1.0/raw/master/res/Motorshield09gerber.zip)
-- **[PDF]**[Motor Driver pcb](https://github.com/SeeedDocument/Motor-Shield_V1.0/raw/master/res/Motor%20Driver.pdf)
-- **[PDF]**[Motor Driver sch](https://github.com/SeeedDocument/Motor-Shield_V1.0/raw/master/res/Motor%20Driver%20SCH.pdf)
-- **[Code]**  [Motor shield Demo code](https://github.com/SeeedDocument/Motor-Shield_V1.0/raw/master/res/Grobe-Motor_Shield_Demo_Code.zip)
+- **[EAGLE]**  [Motor Shield eagle files](https://files.seeedstudio.com/wiki/Motor-Shield_V1.0/res/Motorshield09gerber.zip)
+- **[PDF]**[Motor Driver pcb](https://files.seeedstudio.com/wiki/Motor-Shield_V1.0/res/Motor%20Driver.pdf)
+- **[PDF]**[Motor Driver sch](https://files.seeedstudio.com/wiki/Motor-Shield_V1.0/res/Motor%20Driver%20SCH.pdf)
+- **[Code]**  [Motor shield Demo code](https://files.seeedstudio.com/wiki/Motor-Shield_V1.0/res/Grobe-Motor_Shield_Demo_Code.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

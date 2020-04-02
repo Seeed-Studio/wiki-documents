@@ -116,7 +116,7 @@ We've already released the [Grove - Barometer Sensor (BMP280)](http://wiki.seeed
 
 | Seeeduino V4.2 |Base Shield| High Precision Barometric Pressure Sensor |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-High-Precision-Barometer-Sensor-DPS310/master/img/Grove-High-Precision-Barometer-Sensor-DPS310-thumbnail.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-High-Precision-Barometer-Sensor-DPS310/master/img/Grove-High-Precision-Barometer-Sensor-DPS310-thumbnail.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-High-Precision-Barometer-Sensor-DPS310-p-4397.html)|
 
 
@@ -242,7 +242,7 @@ void loop()
 ## Resources
 
 - **[Library]** [DPS310-Pressure-Sensor](https://github.com/Seeed-Studio/Seeed_Arduino_DPS310.git)
-- **[Datasheet]** [DPS310-Datasheet](https://github.com/SeeedDocument/Grove-High-Precision-Barometer-Sensor-DPS310/raw/master/res/DPS310-datasheet.pdf)
+- **[Datasheet]** [DPS310-Datasheet](https://files.seeedstudio.com/wiki/Grove-High-Precision-Barometer-Sensor-DPS310/res/DPS310-datasheet.pdf)
 - **[Zip]** [Grove-High-Precision-Barometer-Sensor-(DPS310)](https://github.com/SeeedDocument/Grove-High-Precision-Barometer-Sensor-DPS310/raw/master/res/Grove%20-%20High%20Precision%20Barometer%20Sensor%20(DPS310)_v1.0.zip)
 
 

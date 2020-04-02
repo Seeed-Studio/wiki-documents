@@ -7,11 +7,11 @@ prodimagename:
 surveyurl: https://www.research.net/r/Grove-NOT
 sku:    110060026
 ---
-![](https://github.com/SeeedDocument/Grove-NOT/raw/master/img/NOT_photo1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-NOT/img/NOT_photo1.jpg)
 
 This [Grove](/Grove "Grove") module provides the function of a [logical NOT gate](https://en.wikipedia.org/wiki/Inverter_%28logic_gate%29). It is based on the 74HC1G04GW chip. The 74HC1G04GW is a high-speed Si-gate CMOS device that provides the inverting buffer. The NOT module has one input on the left and one output on the right. When the input signal is HIGH, output signal is LOW. When the input signal is LOW, output signal is HIGH.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Mixer-Pack-V2-(Electronic-blocks%2Cwithout-Arduino%2Cplug-and-play-system)-p-1867.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Mixer-Pack-V2-(Electronic-blocks%2Cwithout-Arduino%2Cplug-and-play-system)-p-1867.html)
 
 ##  Features
 

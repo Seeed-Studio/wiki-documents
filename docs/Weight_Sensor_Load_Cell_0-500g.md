@@ -7,12 +7,12 @@ prodimagename:  loadcell500.jpg
 surveyurl: https://www.research.net/r/Weight_Sensor-Load-Cell-0-500g
 sku:      314990000
 ---
-![](https://github.com/SeeedDocument/Weight_Sensor_Load_Cell_0-500g/raw/master/img/loadcell500.jpg)
+![](https://files.seeedstudio.com/wiki/Weight_Sensor_Load_Cell_0-500g/img/loadcell500.jpg)
 
 
 Applicable to electronic scale, price computering scale, electronic platform scale, digital scale; parcel post scale, electronic balance and all varieties of commercial scales by single load cell.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/weight-sensor-load-cell-0500g-p-525.html?cPath=144_150)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/weight-sensor-load-cell-0500g-p-525.html?cPath=144_150)
 
 ##   Specification
 ---
@@ -50,7 +50,7 @@ Applicable to electronic scale, price computering scale, electronic platform sca
 ---
 ###  **Hardware install**
 
-![](https://github.com/SeeedDocument/Weight_Sensor_Load_Cell_0-500g/raw/master/img/Weight_Sensor.png)
+![](https://files.seeedstudio.com/wiki/Weight_Sensor_Load_Cell_0-500g/img/Weight_Sensor.png)
 
 **Note**: Weight sensor output 0V when the load less than 150g,so we can not directly measure the load .My method is using a 200g local avoid measure blind spot.Read the analog data of 200g weight as no-load(0g),read the analog data of 700g weight as full load(500g).
 
@@ -75,7 +75,7 @@ void loop()
 
 ##   Sourse
 ---
-- [INA125 datasheet](https://github.com/SeeedDocument/Weight_Sensor_Load_Cell_0-500g/raw/master/res/INA125.pdf)
+- [INA125 datasheet](https://files.seeedstudio.com/wiki/Weight_Sensor_Load_Cell_0-500g/res/INA125.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

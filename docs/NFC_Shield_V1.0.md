@@ -11,7 +11,7 @@ tags:
 
 ---
 
-![](https://github.com/SeeedDocument/NFC_Shield_V1.0/raw/master/img/NFC_Shield1.bmp)
+![](https://files.seeedstudio.com/wiki/NFC_Shield_V1.0/img/NFC_Shield1.bmp)
 
 [NFC Shield](https://seeeddoc.github.io/NFC_Shield/)  is a **Near Field Communication** interface for  **Arduino**  build around the popular  NXP PN532  integrated circuit.  NFC  is a short-distance radio technology that enables communication between devices that are held close together.**NFC** traces its roots in  **RFID**  technology and is an open platform technology standardized in ECMA-340 and ISO/IEC 18092.
 
@@ -70,27 +70,27 @@ Model: [SLD80453P](http://www.seeedstudio.com/depot/nfc-shield-p-916.html?cPath=
 
 - Compile and upload the example sketch provided.
 
-![](https://github.com/SeeedDocument/NFC_Shield_V1.0/raw/master/img/NFC_Shield_Connected_to_Seeeduino1.jpg)
+![](https://files.seeedstudio.com/wiki/NFC_Shield_V1.0/img/NFC_Shield_Connected_to_Seeeduino1.jpg)
 **NFC Shield - Connected to Seeeduino**
 
 - Hold the **MIFARE Card** near the antenna. The NFC Shield will read the passive id data.
 
-![](https://github.com/SeeedDocument/NFC_Shield_V1.0/raw/master/img/MifareCard_near_NFC_Shield1.jpg)
+![](https://files.seeedstudio.com/wiki/NFC_Shield_V1.0/img/MifareCard_near_NFC_Shield1.jpg)
 **Mifare Card held near NFC Shield Antenna**
 
 - Hold the MIFARE Tag near the antenna. The NFC Shield will read the passive id data.
 
-![](https://github.com/SeeedDocument/NFC_Shield_V1.0/raw/master/img/MifareTag_near_NFC_Shield1.jpg)
+![](https://files.seeedstudio.com/wiki/NFC_Shield_V1.0/img/MifareTag_near_NFC_Shield1.jpg)
 **Mifare Tag held near NFC Shield Antenna**
 
 - Use the following setup for establishing peer to peer communication between two Seeeduinos using NFC Shields.
 
-![](https://github.com/SeeedDocument/NFC_Shield_V1.0/raw/master/img/NFC_Shield_Peer_to_Peer_Communication_SetupWithSeeeduino.jpg)
+![](https://files.seeedstudio.com/wiki/NFC_Shield_V1.0/img/NFC_Shield_Peer_to_Peer_Communication_SetupWithSeeeduino.jpg)
 **NFC Peer to Peer Communication Setup**
 
 ###   Programming ###
 
-Donwload the [PN532_SPI Library For NFC Shield](https://github.com/SeeedDocument/NFC_Shield_V1.0/raw/master/res/PN532_SPI_V2.zip) and install it to \arduino\libraries. you can either copy the folling codes into Arduino IDE or open Open the examples in the library to start.
+Donwload the [PN532_SPI Library For NFC Shield](https://files.seeedstudio.com/wiki/NFC_Shield_V1.0/res/PN532_SPI_V2.zip) and install it to \arduino\libraries. you can either copy the folling codes into Arduino IDE or open Open the examples in the library to start.
 
 **Demo 1：Read the complete memory of a MIFARE card**
 
@@ -215,7 +215,7 @@ void loop(void) {
 
 2.Bring a Mifare Card near the NFC Antenna. Open the serial monitor, you can see the score as show below:
 
-![](https://github.com/SeeedDocument/NFC_Shield_V1.0/raw/master/img/Score_2.jpg)
+![](https://files.seeedstudio.com/wiki/NFC_Shield_V1.0/img/Score_2.jpg)
 
 **Note:** Blocks are classified as Manufacturer Block(read-only), Data Block (user/application writable area), and Sector Trailer(authentication and access bits for that sector)
 
@@ -244,10 +244,10 @@ An experimental NFC Peer to Peer communication is implemented in the latest NFC 
 **Output Score:**
 
 P2P Initiator:
-![](https://github.com/SeeedDocument/NFC_Shield_V1.0/raw/master/img/NFC_Shield_PtoPInitiator.jpg)
+![](https://files.seeedstudio.com/wiki/NFC_Shield_V1.0/img/NFC_Shield_PtoPInitiator.jpg)
 
 P2P Target:
-![](https://github.com/SeeedDocument/NFC_Shield_V1.0/raw/master/img/NFC_Shield_PtoPTarget.jpg)
+![](https://files.seeedstudio.com/wiki/NFC_Shield_V1.0/img/NFC_Shield_PtoPTarget.jpg)
 
 ##   Reference code   ##
 
@@ -432,7 +432,7 @@ This method is used to transmit and receive data to and from initiator. This cod
 
 ##   Resources   ##
 
-- **[Library]**[PN532_SPI Library For NFC Shield](https://github.com/SeeedDocument/NFC_Shield_V1.0/raw/master/res/PN532_SPI_V2.zip)
+- **[Library]**[PN532_SPI Library For NFC Shield](https://files.seeedstudio.com/wiki/NFC_Shield_V1.0/res/PN532_SPI_V2.zip)
 - **[Eagle]**[NFC Shield - Schematic and Board Files in Eagle Format](http://wiki.seeedstudio.com/images/8/81/NFC_Shield_V0.9b_Schematic_Board_Files.zip)
 - **[PDF]**[NFC Shield - Schematic in PDF format](http://wiki.seeedstudio.com/images/4/48/NFC_Shield_V0.9b.pdf)
 - **[PDF]**[NXP PN532 - User Manual](http://www.nxp.com/documents/user_manual/141520.pdf)

@@ -14,7 +14,7 @@ sku: 113040010
 
 The Xadow NFC v2 features the most popular NFC chipset on the market - a highly integrated transceiver module PN532\. This chipset is very powerful and can be found in most of the smart phones and NFC devices. It can be used to read and write to tags and cards, acting like NFC tags. Currently, we have developed Arduino libraries to support reading and writing to MIFARE Class and MIFARE Ultralight Card. The board also adopts the new 11 PIN Xadow connector to improve the flexibility of module connections.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-NFC-v2-p-2562.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-NFC-v2-p-2562.html)
 
 ## Features
 
@@ -77,15 +77,15 @@ We will be keep updating the source code on our github page:
 
 The schematic diagram of Xadow NFC v2 is provided in the following link:
 
-*   [_Xadow NFC v2 Schematic Files_](https://github.com/SeeedDocument/Xadow_NFC/raw/master/res/Xadow_NFC_v2.0.zip)
+*   [_Xadow NFC v2 Schematic Files_](https://files.seeedstudio.com/wiki/Xadow_NFC/res/Xadow_NFC_v2.0.zip)
 
 Check more info about the datasheet of PN532:
 
-*   [_Datasheet of PN532_](https://github.com/SeeedDocument/Xadow_NFC/raw/master/resources/PN532.pdf)
+*   [_Datasheet of PN532_](https://files.seeedstudio.com/wiki/Xadow_NFC/resources/PN532.pdf)
 
 And the MCU Kinetis KL02:
 
-*   [_Datasheet of Kinetis KL02_](https://github.com/SeeedDocument/Xadow_NFC/raw/master/res/KL02P32M48SF0.pdf)
+*   [_Datasheet of Kinetis KL02_](https://files.seeedstudio.com/wiki/Xadow_NFC/res/KL02P32M48SF0.pdf)
 
 Copyright (c) 2008-2016 Seeed Development Limited ([www.seeedstudio.com](http://www.seeedstudio.com) / [community.seeedstudio.com/](https://community.seeedstudio.com/))
 

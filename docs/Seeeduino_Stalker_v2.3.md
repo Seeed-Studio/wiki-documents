@@ -11,7 +11,7 @@ tags:
 ---
 
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/img/Seeduino_Stalker_v2.2.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Seeduino_Stalker_v2.2.jpg)
 
 Seeeduino Stalker is a feature rich Arduino compatible **Wireless Sensor Network node**. Its modular structure and onboard peripherals makes it convenient to log time stamped sensor data on a periodic basis. Seeeduino Stalker comes with a Temperature sensor, RTC with backup power, SD Card Socket, Bee Socket and Solar LiPoimer Ion Battery Charger. The Seeeduino Stalker is a good candidate for all your tracking, monitoring and control projects.
 Revision of 2.3 is almost the same as revision of 2.2, the reason we upgrade it is to fix the bug by adding a rectifier diode between LI_BAT and USB5V.
@@ -43,7 +43,7 @@ Model: [ARD104D2P](http://www.seeedstudio.com/depot/seeeduino-stalker-v2-p-727.h
 
 - As a simple standalone Arduino compatible physical computing platform ([UartSBee](https://seeeddoc.github.io/UartSBee/)  must be bought seperately for programming)
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/img/Stalker_v2.1_and_the_Bees.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Stalker_v2.1_and_the_Bees.jpg)
 
 **NOTE:**
 
@@ -55,7 +55,7 @@ Model: [ARD104D2P](http://www.seeedstudio.com/depot/seeeduino-stalker-v2-p-727.h
 
 ##   Specifications   ##
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/img/Stalker_v2.2_diagram.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Stalker_v2.2_diagram.jpg)
 
 - Microcontroller: ATmega328P
 
@@ -97,10 +97,10 @@ The following steps will help you assemble the hardware and software resources t
 
 You will require the following hardware for running your first program.
 
-|![](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/img/Seeduino_Stalker_v2.2.jpg)|![](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/img/Uartsb40.jpg)|
+|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Seeduino_Stalker_v2.2.jpg)|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Uartsb40.jpg)|
 |---|---|
 |**Seeeduino Stalker v2.e**|**UartsBee v4.0**    Required for programming the Seeeduino Stalker.[Buy Here](http://www.seeedstudio.com/depot/uartsbee-v31-p-688.html)|
-|![](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/img/Miniusb.jpg)|![](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/img/JumperWire100n.jpg)|
+|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Miniusb.jpg)|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/JumperWire100n.jpg)|
 |**Mini USB Cable**      You would probably have this one lying around,or if not, buy one[here](http://www.seeedstudio.com/depot/mini-usb-cable-110cm-p-252.html). We would use this to connect the UartsBee to one of theUSB ports on your computer.|**1 pin dual-female jumper wire** Required for connecting the UartsBee to Seeeduino Stalker.You might already have few lying around your workspace. If not, you can buy a colourful one [here](http://www.seeedstudio.com/depot/1-pin-dualfemale-jumper-wire-100mm-50pcs-pack-p-260.html?cPath=175_187).|
 
 ####   Step 2: Installing the drivers and plugging in the hardware   ####
@@ -121,7 +121,7 @@ You will require the following hardware for running your first program.
 
 5.Next connect the Mini USB cable from UartSBee to your computer. If you are using a Windows based PC, the "Found New Hardware" balloon will popup and within a few moments the drivers for FT232RL (i.e. UartSBee) will be installed.
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/img/Seeeduino_Stalker_v2.1_Uartsbee_3.1_Connection.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Seeeduino_Stalker_v2.1_Uartsbee_3.1_Connection.jpg)
 
  Jumper Wire connections
 
@@ -148,7 +148,7 @@ You will require the following hardware for running your first program.
 
 ###   Jumpers and Connectors   ###
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/img/Stalker_v2.3_bottom.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Stalker_v2.3_bottom.jpg)
 
 ####   microSD Card (TransFlash Card) Related   ####
 
@@ -214,7 +214,7 @@ You must set your board type to **Arduino Pro or Pro Mini (3.3V, 8MHz) w/ ATmega
 
 - compile and upload to Stalker.
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/img/Seeeduino_Stalker_v2.1_adjust.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Seeeduino_Stalker_v2.1_adjust.png)
 
 
 ####   Get Current Date/Time   ####
@@ -230,7 +230,7 @@ You must set your board type to **Arduino Pro or Pro Mini (3.3V, 8MHz) w/ ATmega
 
 - compile and upload to Stalker.
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/img/Seeeduino_Stalker_v2.1_now.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Seeeduino_Stalker_v2.1_now.png)
 
 
 ####   DS3231 Read Temperature   ####
@@ -257,7 +257,7 @@ Serial.println("deg C");
 
 - compile and upload to Stalker.
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/img/Seeeduino_Stalker_v2.1_temp.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Seeeduino_Stalker_v2.1_temp.png)
 
 
 ####   DS3231 Interrupts   ####
@@ -274,7 +274,7 @@ This example is a demonstration of interrupt detection from DS3231 INT output. T
 
 - compile and upload to Stalker.
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/img/Seeeduino_Stalker_v2.1_interrupts.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Seeeduino_Stalker_v2.1_interrupts.png)
 
 ###   Reading Charging Status   ###
 
@@ -409,7 +409,7 @@ void loop(){
 
 The principal application of Stalker is data-logging of sensor signal like temperature along with the time-stamp. We have provided 3 sketches along with the DS3231 library demonstrating 3 different implementation. These sketches puts the MCU in sleep mode when not performing data sampling / logging operation. The complete implementation is documented very well in the code. The following section gives an overview :
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/img/Seeeduino_Stalker_v2.1_SolarPanel.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Seeeduino_Stalker_v2.1_SolarPanel.png)
 Seeeduino Stalker v2.1 SolarPanel.png
 
 1.StalkerV21_DataLogger_Periodic.pde
@@ -427,7 +427,7 @@ Seeeduino Stalker v2.1 SolarPanel.png
   - This is similar to previous sketch with different data-log interval. All Serial Port related code is commented to reduce power consumption.
   - There is no significant reduction in power consumption by removing Serial Port related code.
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/img/Stalker_v2.1_datalogger_flowchart.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Stalker_v2.1_datalogger_flowchart.png)
 
 #####   A note on power consumption   #####
 
@@ -437,7 +437,7 @@ It seems that just the RTC has a Standby Supply Current of 110µA. [Here](http:/
 
 But don't be sad now, even if you get down to an average draw of 1mA, you get 980 mAh/1 mA = 980h = **40.8** Dayswithout charging
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/img/Seeeduino_Stalker_v2.1_datalogger_15S_Current_Measurement.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Seeeduino_Stalker_v2.1_datalogger_15S_Current_Measurement.png)
 
 - We see active mode peaks every 15 Seconds. In active mode the MCU samples the temperature and stores it into SD card.
 
@@ -455,12 +455,12 @@ But don't be sad now, even if you get down to an average draw of 1mA, you get 98
 
 ###  Accessories ###
 
-|![](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/img/StalkerEnclosure600.jpg) |![](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/img/Microsdcard2gb.jpg)|![](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/img/Smartcable_04_LRG.jpg) |
+|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/StalkerEnclosure600.jpg) |![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Microsdcard2gb.jpg)|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Smartcable_04_LRG.jpg) |
 |---|---|---|
 |[Water-proof Enclosurefor Seeeduino Stalker v2.0](http://www.seeedstudio.com/depot/seeeduino-stalker-v2-enclosure-p-734.html?cPath=178_184) | [SanDisk 2GB microSD Card](http://www.seeedstudio.com/depot/sandisk-microsd-card-2gb-p-546.html?cPath=178_182)|[microSD Card Reader(in a capsule)](http://www.seeedstudio.com/depot/sd-card-reading-miniusb-cable-in-a-capsule-p-575.html?cPath=190)|
-|![](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/img/Miniusbcable.jpg) |![](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/img/JumperWire100n.jpg)|
+|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Miniusbcable.jpg) |![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/JumperWire100n.jpg)|
 |[Mini USB cable for use with UartSBee while programming](http://www.seeedstudio.com/depot/mini-usb-cable-100cm-p-252.html?cPath=178_179)|[Single wire - Jumper Wires](http://www.seeedstudio.com/depot/6-pin-dualfemale-jumper-wire-100mm-5-pcs-pack-p-129.html?cPath=175_187)|
-|![](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/img/Lithium-lon-polymer-batteries2A.jpg) |![](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/img/Solar-panel55.jpg) |
+|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Lithium-lon-polymer-batteries2A.jpg) |![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Solar-panel55.jpg) |
 |[Lithium Polymer (LiPo) Battery](http://www.seeedstudio.com/depot/index.php?main_page=advanced_search_result&amp;search_in_description=0&amp;keyword=Lithium+Ion+polymer+Battery&amp;x=51&amp;y=12)|[Solar Panel for charging LiPo Battery via Stalker](http://www.seeedstudio.com/depot/index.php?main_page=advanced_search_result&amp;search_in_description=0&amp;keyword=solar+panel&amp;x=0&amp;y=0)|
 
 
@@ -524,13 +524,13 @@ This documentation is licensed under the Creative Commons [Attribution-ShareAlik
 
 - **[Software]** [SeeeduinoStalker_BatteryLibrary_V0.3](https://drive.google.com/file/d/0B_woEJs7VW-hc2dBcUJfOVlDTk0/edit?usp=sharing)
 
-- **[Eagle]**[Stalker v2.3 Eagle Files.zip](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/res/Stalker_v2.3_Eagle_Files.zip)
+- **[Eagle]**[Stalker v2.3 Eagle Files.zip](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/res/Stalker_v2.3_Eagle_Files.zip)
 
-- **[PDF]**[Stalker v2.3 PCB](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/res/Stalker%20v2.3.pdf)
+- **[PDF]**[Stalker v2.3 PCB](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/res/Stalker%20v2.3.pdf)
 
-- **[PDF]**[Stalker v2.3 SCH](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/res/Stalker%20v2.3%20SCH.pdf)
+- **[PDF]**[Stalker v2.3 SCH](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/res/Stalker%20v2.3%20SCH.pdf)
 
-- **[Eagle]**[Stalker v2.2 Eagle Files.zip](https://github.com/SeeedDocument/Seeeduino_Stalker_v2.3/raw/master/res/Stalker_v2.2_eagle.zip)
+- **[Eagle]**[Stalker v2.2 Eagle Files.zip](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/res/Stalker_v2.2_eagle.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

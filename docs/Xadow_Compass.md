@@ -7,11 +7,11 @@ prodimagename: X_compass_01.jpg
 surveyurl: https://www.research.net/r/xadow_compass
 sku: 103040000
 ---
-![](https://github.com/SeeedDocument/Xadow_Compass/raw/master/img/X_compass_01.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Compass/img/X_compass_01.jpg)
 
 Xadow Compass is a 3-Axis Digital Compass which is a member of Xadow family. The module is based on a low field magnetic sensor HMC5883. It features 1° to 2° compass heading accuracy, and it is using I2C serial bus to communicate with your microcontroller. Xadow Compass is a useful tool for helping you to get the direction information.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-Compass-p-1669.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-Compass-p-1669.html)
 
 ## Specification
 ---
@@ -43,11 +43,11 @@ Firstly, before any action you are going to take, you need to prepare a paramete
 - Download the library file: [Digital Compass Library](https://github.com/Seeed-Studio/Grove_3Axis_Digital_Compass), and install it to your Arduino Library. See [How to install Arduino Library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to learn the install method.
 - Open the demo by the path:File -> Example -> Digital Compass -> HMC5883L_Example. Replace the value of variable "declinationAngle" with the one you've figured out already.
 
-![](https://github.com/SeeedDocument/Xadow_Compass/raw/master/img/Xadow_Compass_Code.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Compass/img/Xadow_Compass_Code.jpg)
 
 - Upload the Code. Check the output result by opening the serial monitor.
 
-![](https://github.com/SeeedDocument/Xadow_Compass/raw/master/img/Digital_Compass2.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Compass/img/Digital_Compass2.jpg)
 
 
 ## Schematic Online Viewer
@@ -58,8 +58,8 @@ Firstly, before any action you are going to take, you need to prepare a paramete
 
 ## Resources
 ---
-- [3-Axis Digital Compass HMC5883 Datasheet](https://github.com/SeeedDocument/Xadow_Compass/raw/master/res/HMC5883.pdf)
-- [Xadow Compass Eagle File](https://github.com/SeeedDocument/Xadow_Compass/raw/master/res/Xadow_Compass_Eagle_File.zip)
+- [3-Axis Digital Compass HMC5883 Datasheet](https://files.seeedstudio.com/wiki/Xadow_Compass/res/HMC5883.pdf)
+- [Xadow Compass Eagle File](https://files.seeedstudio.com/wiki/Xadow_Compass/res/Xadow_Compass_Eagle_File.zip)
 - [Xadow Compass Library File](https://github.com/Seeed-Studio/Grove_3Axis_Digital_Compass)
 
 ## Tech Support

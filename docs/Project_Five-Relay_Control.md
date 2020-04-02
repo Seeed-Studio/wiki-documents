@@ -18,7 +18,7 @@ Connect the Relay to the D6/D7 input jack.
 
 The Arduino's D6 pin sends a signal to the Relay on the D1 connector.  The Relay Grove's red light indicates whether the relay is on or off, and the relay makes a clicking sound when it switches.
 
-![](https://github.com/SeeedDocument/Project_Five-Relay_Control/raw/master/img/Conn-five.jpg)
+![](https://files.seeedstudio.com/wiki/Project_Five-Relay_Control/img/Conn-five.jpg)
 
 _**Now upload the following Arduino sketch:**_
 

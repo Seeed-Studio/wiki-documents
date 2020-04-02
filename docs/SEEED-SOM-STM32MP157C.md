@@ -34,7 +34,7 @@ SOM - STM32MP157C is the SOM based on STM32MP157C, STM32MP157C is a dual-core ar
 
 Here are the hardware details for Seeed SoM - STM32MP157C:
 
-![](https://github.com/SeeedDocument/Seeed-NPi-STM32MP157C/raw/master/IMG/SOM-overview.png)
+![](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/IMG/SOM-overview.png)
 
 - **1.STM32MP157C:** Development board main control chip(Dual architecture processor: Arm® Cortex®-A7 and Cortex®-M4 )
 
@@ -273,8 +273,8 @@ Here are the hardware details for Seeed SoM - STM32MP157C:
 
 ## Resourses
 -----
-- **[PDF]** [STM32MP157C Datasheet](https://github.com/SeeedDocument/Seeed-NPi-STM32MP157C/raw/master/Hardware/stm32mp157c.pdf)
-- **[SCH]** [Seeed STM32MP157C SOM](https://github.com/SeeedDocument/Seeed-NPi-STM32MP157C/raw/master/Hardware/Seeed%20SoM%20-%20STM32MP157C%20v1.0_191212.pdf)
+- **[PDF]** [STM32MP157C Datasheet](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/Hardware/stm32mp157c.pdf)
+- **[SCH]** [Seeed STM32MP157C SOM](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/Hardware/Seeed%20SoM%20-%20STM32MP157C%20v1.0_191212.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

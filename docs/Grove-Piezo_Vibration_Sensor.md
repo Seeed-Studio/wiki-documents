@@ -73,7 +73,7 @@ The Grove - Piezo Vibration Sensor outputs a logic HIGH when vibration was detec
 - Step 3. Plug the Basic Shield into Arduino.
 - Step 4. Connect Arduino to PC by using a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-Piezo_Vibration_Sensor/raw/master/img/piezo%20vibration%20connection.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Piezo_Vibration_Sensor/img/piezo%20vibration%20connection.jpg)
 
 !!!note
     It may output low level even though originally output high level when you increase the threshold voltage by clockwise adjusting the potentiometer.
@@ -116,7 +116,7 @@ void loop() {
 
 | Raspberry pi | Grove Base Hat for RasPi| Grove - Piezo Vibration|
 |----------------|--------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Piezo_Vibration_Sensor/raw/master/img/Piezo%20vibration%20sensor_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Piezo_Vibration_Sensor/img/Piezo%20vibration%20sensor_s.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Piezo-Vibration-Sensor-p-1411.html)|
 
 
@@ -125,7 +125,7 @@ void loop() {
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-Piezo_Vibration_Sensor/raw/master/img/Piezo_Hat.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Piezo_Vibration_Sensor/img/Piezo_Hat.jpg)
 
 
 !!! Note
@@ -247,14 +247,14 @@ You can quit this program by simply press ++ctrl+c++.
 
 | Raspberry pi | GrovePi_Plus | Grove - Piezo Vibration |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Piezo_Vibration_Sensor/raw/master/img/Piezo%20vibration%20sensor_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Piezo_Vibration_Sensor/img/Piezo%20vibration%20sensor_s.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Piezo-Vibration-Sensor-p-1411.html)|
 
 - Step 2. Plug the GrovePi_Plus into Raspberry.
 - Step 3. Connect Grove-Piezo Vibration to A0 port of GrovePi_Plus.
 - Step 4. Connect the Raspberry to PC through USB cable.
 
-![](https://github.com/SeeedDocument/Grove-Piezo_Vibration_Sensor/raw/master/img/grove%20connection.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Piezo_Vibration_Sensor/img/grove%20connection.jpg)
 
 #### Software
 
@@ -331,7 +331,7 @@ A1: It is digital output, Low or High.
 - **[PDF]** [Download Wiki PDF](https://github.com/SeeedDocument//Grove-Piezo_Vibration_Sensor/raw/master/res//Grove-Piezo_Vibration_Sensor_wiki.pdf)
 - **[Eagle]** [Grove - Piezo Vibration Sensor Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-Piezo_Vibration_Sensor/master/res/Eagle.zip)
 - **[PDF]** [Grove - Piezo Vibration Sensor Schematic PDF File](https://raw.githubusercontent.com/SeeedDocument/Grove-Piezo_Vibration_Sensor/master/res/Gvove-Piezo_Vibration_Sensor.pdf)
-- **[PDF]** [Grove - Piezo Vibration Sensor PCB PDF File](https://github.com/SeeedDocument/Grove-Piezo_Vibration_Sensor/raw/master/res/Gvove%20-%20Piezo%20Vibration%20Sensor%20v1.1%20PCB.pdf)
+- **[PDF]** [Grove - Piezo Vibration Sensor PCB PDF File](https://files.seeedstudio.com/wiki/Grove-Piezo_Vibration_Sensor/res/Gvove%20-%20Piezo%20Vibration%20Sensor%20v1.1%20PCB.pdf)
 - **[Datasheet]** [Piezo Vibration Sensor Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Piezo_Vibration_Sensor/master/res/Piezo_Vibration_Sensor.pdf)
 
 

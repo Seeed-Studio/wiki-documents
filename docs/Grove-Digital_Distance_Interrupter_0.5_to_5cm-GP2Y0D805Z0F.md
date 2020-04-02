@@ -10,7 +10,7 @@ tags:
 ---
 
 
-![](https://github.com/SeeedDocument/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F/raw/master/img/main.JPG)
+![](https://files.seeedstudio.com/wiki/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F/img/main.JPG)
 
 
 Grove - Digital Distance Interrupter 0.5 to 5cm is an infrared distance sensing module based on GP2Y0D805Z0F. Normaly the output of this sensor is 1(High), when the object enters the measurement range of the sensor, it will be triggered and output a 0(LOW).At the same time the on-board LED will light up. As the name suggests, the measurement range is from 0.5cm to 5cm.
@@ -21,7 +21,7 @@ There are two types of  Grove - Digital Distance Interrupter 0.5 to 5cm: Grove -
 GP2Y0D805Z0F is a distance measuring sensor unit, composed of an integrated combination of PD(photo diode) , IRED (infrared emitting diode) and signal processing circuit. The variety of the reflectivity of the object, the environmental temperature and the operating duration are not influenced easily to the distance detection because of adopting the triangulation method. 
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-Digital-Distance-Interrupter-0.5-to-5cm%28GP2Y0D805Z0F%29-p-3084.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-Digital-Distance-Interrupter-0.5-to-5cm%28GP2Y0D805Z0F%29-p-3084.html" target="_blank"><img src=https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 ## Features
@@ -92,7 +92,7 @@ GP2Y0D805Z0F is a distance measuring sensor unit, composed of an integrated comb
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F/img/connect.jpg)
 
 
 
@@ -206,8 +206,8 @@ Normaly the output of this sensor is 1(High), when the object enters the measure
 
 ## Resources
 
-- **[Zip]** [Grove - Digital Distance Interrupter 0.5 to 5cm eagle file](https://github.com/SeeedDocument/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F/raw/master/res/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F.zip)
-- **[PDF]** [GP2Y0D805Z0F Datasheet](https://github.com/SeeedDocument/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F/raw/master/res/GP2Y0D805Z0F.pdf)
+- **[Zip]** [Grove - Digital Distance Interrupter 0.5 to 5cm eagle file](https://files.seeedstudio.com/wiki/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F/res/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F.zip)
+- **[PDF]** [GP2Y0D805Z0F Datasheet](https://files.seeedstudio.com/wiki/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F/res/GP2Y0D805Z0F.pdf)
 
 
 

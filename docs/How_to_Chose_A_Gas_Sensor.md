@@ -12,11 +12,11 @@ There are about 10 kind of gas sensor for sale. They have similar name, it’s l
 
 It’s obvious that different sensor can detect the same gas. Such as MQ-2, MQ-3, MQ-5 Alcohol Sensor, Grove – HCHO Sensor can detect Alcohol. So if you want an alcohol sensor, then which on should you chosen? Although most of the above sensors are able to detect Alcohol, but you should know that they have different range to Alcohol.
 
-![](https://github.com/SeeedDocument/How_to_Chose_A_Gas_Sensor/raw/master/img/Gas_line_1.png)
+![](https://files.seeedstudio.com/wiki/How_to_Chose_A_Gas_Sensor/img/Gas_line_1.png)
 
 And sometimes, we want to test many gases in one sensor, so how should we choose it ?
 
-![](https://github.com/SeeedDocument/How_to_Chose_A_Gas_Sensor/raw/master/img/Gas_line_2.png)
+![](https://files.seeedstudio.com/wiki/How_to_Chose_A_Gas_Sensor/img/Gas_line_2.png)
 
 Following is the link of all gases to Bazaar, choose the one you needed!
 

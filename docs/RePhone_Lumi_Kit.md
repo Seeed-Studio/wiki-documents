@@ -7,11 +7,11 @@ prodimagename:  RAINBOW-Rainbowduino_LRG.jpg
 surveyurl: https://www.research.net/r/RePhone_Lumi_Kit
 sku:  113060002
 ---
-![](https://github.com/SeeedDocument/RePhone_Lumi_Kit/raw/master/img/RePhone_Lumi_Kit_wiki_2.jpg)
+![](https://files.seeedstudio.com/wiki/RePhone_Lumi_Kit/img/RePhone_Lumi_Kit_wiki_2.jpg)
 
 RePhone Lumi Kit is specially designed for LED lovers - embedding the Xadow GSM+BLE module into your awesome lighting device and control the light via SMS or Bluetooth!
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/RePhone-Lumi-Kit-p-2623.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/RePhone-Lumi-Kit-p-2623.html)
 
 ##   Specification
 ---
@@ -136,7 +136,7 @@ I2C (7-bit address 0x23)
 ---
 The Xadow GSM+BLE integrates a Xadow 36 Pin connector and a Xadow 11 Pin connector. As the image shows here, you can connect the Xadow GSM+BLE to Xadow GSM breakout with a Xadow 36 Pin cable, but do bear in mind that the cable has to be inserted **firmly** and **flat**, and most importantly, **keep the 'TOP' side upwards**. The Xadow 11 Pin connector have much more flexible design, you can connect the Xadow Duino and the mainboard with a Xadow 11 Pin ribbon cable in whatever way you want, again just make sure cable is firmly inserted.
 
-![](https://github.com/SeeedDocument/RePhone_Lumi_Kit/raw/master/img/RePhone_Lumi_Kit_wiki_2.jpg)
+![](https://files.seeedstudio.com/wiki/RePhone_Lumi_Kit/img/RePhone_Lumi_Kit_wiki_2.jpg)
 
 ##  Control the Light with SMS!
 ---
@@ -252,7 +252,7 @@ In this code we set the SMS command as:
 
 So if we send  **"R100G0B0"** to the RePhone, the LEDs will become red as showing below:
 
-![](https://github.com/SeeedDocument/RePhone_Lumi_Kit/raw/master/img/TESTR100.jpg)
+![](https://files.seeedstudio.com/wiki/RePhone_Lumi_Kit/img/TESTR100.jpg)
 
 ##  More Example Code
 ---
@@ -260,17 +260,17 @@ Playing with some example code would a good start if you are heading into some e
 
 1. Simply setup your **sketchbook location** in the **preference** as where you install the Arduino IDE for RePhone, then you'll be able to see the example codes.
 
-![](https://github.com/SeeedDocument/RePhone_Lumi_Kit/raw/master/img/Arduino_Sketchlocation.png)
+![](https://files.seeedstudio.com/wiki/RePhone_Lumi_Kit/img/Arduino_Sketchlocation.png)
 
 2. You may find the Arduino example coded manually for all the RePhone modules in the following path:
 
 _**Arduino_IDE_for_RePhone-master\hardware\arduino\mtk\libraries**_
 
-![](https://github.com/SeeedDocument/RePhone_Lumi_Kit/raw/master/img/Example_code_Arduino_IDE.png)
+![](https://files.seeedstudio.com/wiki/RePhone_Lumi_Kit/img/Example_code_Arduino_IDE.png)
 
 ##  RePhone Community
 ---
-[![](https://github.com/SeeedDocument/RePhone_Lumi_Kit/raw/master/img/RePhone_Community-2.png)](http://forum.seeedstudio.com/viewforum.php?f=71&amp;sid=b70f8138c89becf7701260bb41faf9f4)
+[![](https://files.seeedstudio.com/wiki/RePhone_Lumi_Kit/img/RePhone_Community-2.png)](http://forum.seeedstudio.com/viewforum.php?f=71&amp;sid=b70f8138c89becf7701260bb41faf9f4)
 
 We’ve been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the RePhone Community.
 

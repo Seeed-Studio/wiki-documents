@@ -9,7 +9,7 @@ sku: 102991186
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Wio-Lite-MG126/raw/master/img/Wio-Lite-MG126-wiki.jpg)
+![](https://files.seeedstudio.com/wiki/Wio-Lite-MG126/img/Wio-Lite-MG126-wiki.jpg)
 
 
 
@@ -73,7 +73,7 @@ Now, let's talk about the Bluetooth Core, the MG126. MG126 is a 2.4GHz BLE RF tr
 
 ## Hardware Overview
 
-![](https://github.com/SeeedDocument/Wio-Lite-MG126/raw/master/img/Hardware-overview.jpg)
+![](https://files.seeedstudio.com/wiki/Wio-Lite-MG126/img/Hardware-overview.jpg)
 
 
 !!!Tip
@@ -137,7 +137,7 @@ https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_see
 
 Click on **Toos > Board > Board Manager**. Search the board by name, just search the key word `Seeeduino_Wio_Lite_MG126` and install the corresponding board.
 
-![](https://github.com/SeeedDocument/Wio-Lite-MG126/raw/master/img/IDE-2.jpg)
+![](https://files.seeedstudio.com/wiki/Wio-Lite-MG126/img/IDE-2.jpg)
 
 
 
@@ -147,7 +147,7 @@ You'll need to select the entry in the **Tools > Board** menu that corresponds t
 Selecting the **Wio Lite MG126**.
 
 
-![](https://github.com/SeeedDocument/Wio-Lite-MG126/raw/master/img/IDE-4.jpg)
+![](https://files.seeedstudio.com/wiki/Wio-Lite-MG126/img/IDE-4.jpg)
 
 
 Select the serial device of the Arduino board from the Tools | Serial Port menu. This is likely to be COM3 or higher (**COM1** and **COM2** are usually reserved for hardware serial ports). To find out, you can disconnect your Arduino board and re-open the menu; the entry that disappears should be the Arduino board. Reconnect the board and select that serial port.
@@ -165,7 +165,7 @@ Select the serial device of the Arduino board from the Tools | Serial Port menu.
 
 Click on **File > Examples > Examples for Seeeduino Wio Lite MG126 > wio_lite_ble >example >analog_output**.
 
-![](https://github.com/SeeedDocument/Wio-Lite-MG126/raw/master/img/IDE-5.jpg)
+![](https://files.seeedstudio.com/wiki/Wio-Lite-MG126/img/IDE-5.jpg)
 
 
 
@@ -198,7 +198,7 @@ recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}"  "-L{build.path}"
 
 You can find 7 demos in this folder. The `button`/`get_bat_vol` demos do not use the bluetooth library, and the rest do.
 
-![](https://github.com/SeeedDocument/Wio-Lite-MG126/raw/master/img/IDE-6.jpg)
+![](https://files.seeedstudio.com/wiki/Wio-Lite-MG126/img/IDE-6.jpg)
 
 
 
@@ -242,7 +242,7 @@ So, please choose the `Wio_BLE_Analog` in the bluetooth device list. Tap **CONNE
 
 
 
-![](https://github.com/SeeedDocument/Wio-Lite-MG126/raw/master/img/ana-0.jpg)
+![](https://files.seeedstudio.com/wiki/Wio-Lite-MG126/img/ana-0.jpg)
 
 
 
@@ -294,9 +294,9 @@ Only some common interfaces are listed here, and other interfaces can view examp
 
 
 
-- **[ZIP]** [Wio lite MG126 schematic files](https://github.com/SeeedDocument/Wio-Lite-MG126/raw/master/res/Wio%20Lite%20MG126.zip)
+- **[ZIP]** [Wio lite MG126 schematic files](https://files.seeedstudio.com/wiki/Wio-Lite-MG126/res/Wio%20Lite%20MG126.zip)
 
-- **[PDF]** [DS-MG126-BLE-Datasheet](https://github.com/SeeedDocument/Wio-Lite-MG126/raw/master/res/DS-MG126-BLE.pdf)
+- **[PDF]** [DS-MG126-BLE-Datasheet](https://files.seeedstudio.com/wiki/Wio-Lite-MG126/res/DS-MG126-BLE.pdf)
 
 
 

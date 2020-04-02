@@ -8,14 +8,14 @@ surveyurl:
 sku: 102010268
 ---
 
-![](https://github.com/SeeedDocument/Seeeduino-Nano/raw/master/img/seeeduino-Nano-wiki.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-Nano/img/seeeduino-Nano-wiki.jpg)
 
 The Seeeduino Nano is a compact board similar to the [Seeeduino V4.2](https://www.seeedstudio.com/Seeeduino-V4-2-p-2517.html)/Arduino UNO, and it is fully compatible with [Arduino Nano](https://store.arduino.cc/usa/arduino-nano) on pinout and sizes.
 
 
 The same as Seeedunio V4.2, Seeeduino Nano is built around Atmega328P -- 8-bit AVR microcontroller. So you can use the same program code on both boards. However, the dimensions of the two are significantly different. Less than a quarter of the size, but with almost the same features, Seeeduino Nano will save more space for your project, more suitable for space-constrained scenes.
 
-![](https://github.com/SeeedDocument/Seeeduino-Nano/raw/master/img/seeeduino-Nano-compare-2.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-Nano/img/seeeduino-Nano-compare-2.jpg)
 
 
 The Seeeduino Nano offers the same features and high-quality experience as the Arduino Nano in less than half the price. On the other hand, the Seeeduino Nano has also made the following improvements compared to the Arduino Nano. 1-Change the Mini-USB into Type-C, which is symmetrical and reversible. 2- Add one Grove I2C connector, with the help Grove system, you can play with hundreds of sensors and actuators simply by plugging.
@@ -64,7 +64,7 @@ One more thing, we know that only one on-board Grove connector may not be enough
 ## Hardware Overview
 
 
-![](https://github.com/SeeedDocument/Seeeduino-Nano/raw/master/img/pinout-1.jpg) 
+![](https://files.seeedstudio.com/wiki/Seeeduino-Nano/img/pinout-1.jpg) 
  
 ![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino-Nano/master/img/pinout-2.png)
 
@@ -77,7 +77,7 @@ One more thing, we know that only one on-board Grove connector may not be enough
 
 Instead of supply power by the **Type C** port, you can also use the **VIN** and **GND** pins to power Seeeduino Nano. Then input range of VIN is 7V ~ 12 V.
 
-![](https://github.com/SeeedDocument/Seeeduino-Nano/raw/master/img/Power-1.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-Nano/img/Power-1.jpg)
 
 
 
@@ -208,8 +208,8 @@ A few seconds after the upload finishes, you should see the pin 13 (L) LED on th
 
 ## Resources
 
-- **[ZIP]** [Seeeduino nano Eagle file](https://github.com/SeeedDocument/Seeeduino-Nano/raw/master/res/Seeeduino%20nano.zip)
-- **[PDF]** [ATmega328-datasheet](https://github.com/SeeedDocument/Seeeduino-Nano/raw/master/res/ATmega328-datasheet.pdf)
+- **[ZIP]** [Seeeduino nano Eagle file](https://files.seeedstudio.com/wiki/Seeeduino-Nano/res/Seeeduino%20nano.zip)
+- **[PDF]** [ATmega328-datasheet](https://files.seeedstudio.com/wiki/Seeeduino-Nano/res/ATmega328-datasheet.pdf)
 
 
 

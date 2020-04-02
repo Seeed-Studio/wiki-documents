@@ -7,7 +7,7 @@ prodimagename: Bee_Stem.jpg
 surveyurl: https://www.research.net/r/Grove-XBee_Carrier
 sku:  113020004
 ---
-![](https://github.com/SeeedDocument/Grove-XBee_Carrier/raw/master/img/Bee_Stem.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-XBee_Carrier/img/Bee_Stem.jpg)
 
 The Grove - XBee Carrier is a Wireless Sensor Network (WSN) base board designed for Bee series and Grove units. It is primarily suitable for standalone Bee Nodes like RFBee, Wifi Bee which have ATMega328 onboard and XBee (Zigbee) modules. It is compatible with [RFBee](/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee V1.1 - Wireless Arduino compatible node"), [Wifi Bee](/Wifi_Bee "Wifi Bee"), [XBee](http://garden.seeedstudio.com/index.php?title=Bee_series#ZigBee "Bee_series#ZigBee") and [Bluetooth Bee](/Bluetooth_Bee "Bluetooth Bee"). Besides a Bee receptacle, there are also two Grove connectors. The board can be powered by a lithium battery or through USB cable. You can use a Wireless charger, Solar Panel or the USB cable to charge the battery. The FT232RL chip onboard helps in downloading the program to Bee Module directly.
 
@@ -15,7 +15,7 @@ Bees which do not have ATMega328 like Bluetooth Bee can only be configured by us
 
 The on-board FT232RL can be used like any other 3.3V USB to UART interface when not connected to any Bee Modules. This is useful for programming a 3.3V MCU through Serial Port.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/grove-xbee-carrier-p-905.html?cPath=132_134)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/grove-xbee-carrier-p-905.html?cPath=132_134)
 
 ##  Features
 ---
@@ -101,7 +101,7 @@ The on-board FT232RL can be used like any other 3.3V USB to UART interface when 
 
 ##  Interface Function
 ---
-![](https://github.com/SeeedDocument/Grove-XBee_Carrier/raw/master/img/Xbee_Carrier_Interface.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-XBee_Carrier/img/Xbee_Carrier_Interface.jpg)
 
 **U2:** RT9167A_33PB IC, 3.3V LDO Lownoise Micropower Regulator
 **U3:** CN3083 IC, Charger controller for Lithium batteries (charging using solar panel)
@@ -131,7 +131,7 @@ Now you can choose a suitable battery for your application from **SeeedStudio** 
 
 *   The Battery will be continuous charged. The end of charging would be indicated by LED marked 'OK'.
 
-![](https://github.com/SeeedDocument/Grove-XBee_Carrier/raw/master/img/Bee_Stem_with_LiPOBattery_Being_Charged_By_SolarCell.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-XBee_Carrier/img/Bee_Stem_with_LiPOBattery_Being_Charged_By_SolarCell.jpg)
 
 ####  Working with Standalone Bee Nodes
 
@@ -143,13 +143,13 @@ Bee Nodes are standalone Arduino Compatible Wireless Nodes. **SeeedStudio** has 
 
 *   The programming of WiFi Bee's onboard **AtMega328P** is carried by connecting to PC through USB port. (FT232RL is used)
 
-![](https://github.com/SeeedDocument/Grove-XBee_Carrier/raw/master/img/Bee_Stem_Connected_to_Wifi_BEE_and_A_Grove.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-XBee_Carrier/img/Bee_Stem_Connected_to_Wifi_BEE_and_A_Grove.jpg)
 
 Bee Stem Connected to Wifi BEE and A Twig.jpg
 
 *   Refer [Wifi Bee usage documentation for programming examples](http://garden.seeedstudio.com/index.php?title=Wifi_Bee#Usage "Wifi_Bee#Usage")
 
-![](https://github.com/SeeedDocument/Grove-XBee_Carrier/raw/master/img/Bee_Stem_Connected_To_RFBee_And_TwoTwigs.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-XBee_Carrier/img/Bee_Stem_Connected_To_RFBee_And_TwoTwigs.jpg)
 
 Bee Stem Connected To RFBee And TwoTwigs.jpg
 
@@ -159,7 +159,7 @@ This section is about those Bee modules which do not have a MCU pre-programmed w
 
 *   In the below example [Bluetooth Bee](/Bluetooth_Bee "Bluetooth Bee") is connected to **Grove - XBee Carrier** and configured using USB-UART
 
-![](https://github.com/SeeedDocument/Grove-XBee_Carrier/raw/master/img/Stem_XBee_Carrier_Connected_to_BluetoothBee.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-XBee_Carrier/img/Stem_XBee_Carrier_Connected_to_BluetoothBee.jpg)
 
 *   The communication of Bluetooth Bee and PC is captured with a serial port terminal application.
 
@@ -167,7 +167,7 @@ This section is about those Bee modules which do not have a MCU pre-programmed w
 
 *   The Bluetooth Bee was put into INQ mode and it even has detected a Bluetooth device in the vicinity.
 
-![](https://github.com/SeeedDocument/Grove-XBee_Carrier/raw/master/img/Stem_XBee_Carrier_BluetoothBee_Commands.png)
+![](https://files.seeedstudio.com/wiki/Grove-XBee_Carrier/img/Stem_XBee_Carrier_BluetoothBee_Commands.png)
 
 *   For more information on using [Bluetooth Bee](/Bluetooth_Bee "Bluetooth Bee"), consult the [Bluetooth Bee Commands documentation](/Bluetooth_Bee#Commands_to_change_default_configuration "Bluetooth Bee").
 
@@ -224,9 +224,9 @@ void loop() {
 
 ##  Resources
 ---
-*   [Grove - XBee Carrier  Eagle Files](https://github.com/SeeedDocument/Grove-XBee_Carrier/raw/master/res/PCBA-Grove%20XBee%20Carrier_Eagle.rar)
+*   [Grove - XBee Carrier  Eagle Files](https://files.seeedstudio.com/wiki/Grove-XBee_Carrier/res/PCBA-Grove%20XBee%20Carrier_Eagle.rar)
 
-*   [Grove - XBee Carrier PDF schematics file](https://github.com/SeeedDocument/Grove-XBee_Carrier/raw/master/res/Bee_Stem_v0.9b.pdf)
+*   [Grove - XBee Carrier PDF schematics file](https://files.seeedstudio.com/wiki/Grove-XBee_Carrier/res/Bee_Stem_v0.9b.pdf)
 
 *   [CN3063](http://www.consonance-elec.com/pdf/%E6%8A%80%E6%9C%AF%E8%AF%B4%E6%98%8E%E4%B9%A6/DSC-CN3063.pdf)
 

@@ -6,7 +6,7 @@ wikiurl: http://wiki.seeedstudio.com/ODYSSEY-X86J4105/
 sku: 102110399
 ---
 
-![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/ODYSSEY-X86J4105-side.png)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/ODYSSEY-X86J4105-side.png)
 
 The ODYSSEY - X86J4105, is based on Intel Celeron J4105, a Quad-Core 1.5GHz CPU that bursts up to 2.5GHz. It has all the great features that a standard Computer needs, including an 8GB LPDDR4 RAM, 64GB eMMC Storage(optional), onboard Wi-Fi/BLE, Dual Gigabyte Ethernet Ports, Audio Input and Output, USB Ports, HDMI, SATA Connectors, PCIe, etc.
 
@@ -53,11 +53,11 @@ The ODYSSEY - X86J4105, is based on Intel Celeron J4105, a Quad-Core 1.5GHz CPU 
 
 ## Pinout Diagram
 
-![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/X86-Pinout.png)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/X86-Pinout.png)
 
 ## Quick Start with ODYSSEY - X86J4105
 
-![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/Connected.png)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/Connected.png)
 
 ### Hardware Required
 
@@ -85,7 +85,7 @@ There are 4 methods of adding storage for ODYSSEY - X86J4105, but only 3 methods
 
 - **Method 4 - Micro SD Card Slot**
 
-![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/Storage.png)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/Storage.png)
 
 ### Installing the Operating System
 
@@ -99,7 +99,7 @@ ODYSSEY - X86J4105 supports both Windows and Linux operating system.
 
 Connect bootable USB drive into one of the USB ports on ODYSSEY - X86J4105.
 
-![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/USB.png)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/USB.png)
 
 **Note:** please visit Creating Bootable USB and Installing OS for more information about creating a bootable USB Drive.
 
@@ -107,13 +107,13 @@ Connect bootable USB drive into one of the USB ports on ODYSSEY - X86J4105.
 
 Press the power button and keep pressing the **F7** key on the keyboard until the Boot Manager screen appears.
 
-![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/F7.jpg)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/F7.jpg)
 
 #### Step 3
 
 Select the connected USB Drive as the 1st boot drive and press Enter.
 
-![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/boot.png)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/boot.png)
 
 #### Step 4
 
@@ -125,7 +125,7 @@ Follow the instructions on the installation to complete installing the operating
 
 Connect two antennas into the two sockets on the board.
 
-![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/WiFi.png)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/WiFi.png)
 
 Note: One Antenna is for Wi-Fi and Bluetooth, and the other is for strong 5G Connectivity.
 
@@ -133,11 +133,11 @@ Note: One Antenna is for Wi-Fi and Bluetooth, and the other is for strong 5G Con
 
 For 4G Cellular connectivity, insert a standard SIM card into the SIM card slot of the board.
 
-![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/Sim.png)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/Sim.png)
 
 #### Insert a PCIE 4G Module
 
-![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/4g.png)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/4g.png)
 
 **Note:** This module is a must have if you want to use the connected SIM Card.
 
@@ -147,17 +147,17 @@ There are 2 methods for display:
 
 #### Method 1 - HDMI Port
 
-![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/hdmi.png)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/hdmi.png)
 
 #### Method 2 - DP over USB-C Port
 
-![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/typec.png)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/typec.png)
 
 ### Connecting to Keyboard and Mouse
 
 Connect Keyboard and Mouse through USB ports
 
-![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/keyboard.png)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/keyboard.png)
 
 ## Powering up
 
@@ -167,35 +167,35 @@ There are two ways to power up the ODYSSEY - X86J4105:
 
 The simplest way is to use the 12V/2A power adaptor included in the package, and connect to the DC jack of ODYSSEY - X86J4105.
 
-![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/power.png)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/power.png)
 
 ### Method 2
 
 You can also power the ODYSSEY - X86J4105 through the USB-C port with 12V input. Furthermore, if your Monitor supports USB-PD, you are able to power and display ODYSSEY - X86J4105 using only 1 cable!
 
-![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/typec.png)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/typec.png)
 
 ## Performance Stats
 
-![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/CPU.png)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/CPU.png)
 
 ### Wi-Fi Connecitivity
 
-![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/Stats.png)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/Stats.png)
 
 ### Bluetooth Connecitivity
 
-![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/Bluetooth.png)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/Bluetooth.png)
 
 ## Operating as Computer
 
 - Browsing and watch videos on Youtube
 
-![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/YouTube%20-%20Google%20Chrome%202019-12-04%2017-05-19.2019-12-05%2009_33_09.gif)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/YouTube%20-%20Google%20Chrome%202019-12-04%2017-05-19.2019-12-05%2009_33_09.gif)
 
 - Playing Google T-Rex!
 
- ![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/T-Rex%20Run!%20-%20Chrome%20Dinosaur%20Game%20-%20Google%20Chrome%202019-12-04%2017-01-42.2019-12-05%2009_38_40.gif)
+ ![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/T-Rex%20Run!%20-%20Chrome%20Dinosaur%20Game%20-%20Google%20Chrome%202019-12-04%2017-01-42.2019-12-05%2009_38_40.gif)
 
 ## Using the Arduino Core (ATSAMD21G18) in Windows
 
@@ -205,7 +205,7 @@ The ODYSSEY - X86J4105 is built with Arduino Core(ATSAMD21G18) which provides mo
 
 2. Click `Tools`->`Board:`->`Boards Manager...`, and Boards Manager will appear. Search and install the **`Seeeduino SAMD Zero`** board library.
 
-![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/SAMD.jpg)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/SAMD.jpg)
 
 3. Select the right Port and Board before uploading. 
 
@@ -213,7 +213,7 @@ The ODYSSEY - X86J4105 is built with Arduino Core(ATSAMD21G18) which provides mo
 
 - `Board` -> `Seeeduino Cortex M0+`
 
-![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/Arduino%20IDE.png)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/Arduino%20IDE.png)
 
 1. Feel free to explore your creativity with ODYSSEY - X86J4105!
 
@@ -259,7 +259,7 @@ cd /opt/arduino-1.8.10 && ./arduino-linux-setup.sh
 
 2. Click `Tools`->`Board:`->`Boards Manager...`, and Boards Manager will appear. Search and install the **`Seeeduino SAMD Zero`** board library.
 
-![](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/Linux.png)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/Linux.png)
 
 3. Select the right Port and Board before uploading.
 
@@ -305,7 +305,7 @@ For the instrucitons of upgrading BIOS, please check the Installing OS section.
 
 ## Resources
 
-- **[PDF]** [Atmel-SAMD21-datasheet](https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/Documents/Atmel-SAMD21-datasheet.pdf)
+- **[PDF]** [Atmel-SAMD21-datasheet](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/Atmel-SAMD21-datasheet.pdf)
 
 
 ## Tech Support

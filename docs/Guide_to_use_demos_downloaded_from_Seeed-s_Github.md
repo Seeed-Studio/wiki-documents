@@ -27,7 +27,7 @@ So we want to show you a scheduled procedure to run the demos quickly.
 
 7.  Add ZIP library by the downloaded ZIP file(with "-master" removed first).
 
-![](https://github.com/SeeedDocument/Guide_to_use_demos_downloaded_from_Seeed-s_Github/raw/master/img/Add_ZIP_library.png)
+![](https://files.seeedstudio.com/wiki/Guide_to_use_demos_downloaded_from_Seeed-s_Github/img/Add_ZIP_library.png)
 
 8. Open _**.ino**_ file in the sub directory _**example**_
 9. Compile or Upload demos into your main controller board.

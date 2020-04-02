@@ -10,7 +10,7 @@ sku: 101020252
 tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit, plat_bbg
 ---
 
-![](https://github.com/SeeedDocument/Grove-IMU_10DOF_v2.0/raw/master/img/Grove-imu-10dof-v2.0.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF_v2.0/img/Grove-imu-10dof-v2.0.jpg)
 
 Grove-IMU 10DOF v2.0 is a upgrade version of Grove-IMU-10DOF， which replace BMP180 with BMP280. As the successor to the widely adopted BMP180, the BMP280 delivers high performance in all applications that require precise pressure measurement. This module is base on MPU-9250 and BMP280, the MPU-9250 is a 9-axis MotionTracking device that combines a 3-axis gyroscope, 3-axis accelerometer, 3-axis magnetometer and a Digital Motion Processor(DMP), and BMP280 is a high precision, ultra-low power digital pressure sensors for consumer applications. This module is very suitable for the application of smartphones, tablets and wearable devices.
 
@@ -57,7 +57,7 @@ Grove-IMU 10DOF v2.0 is a upgrade version of Grove-IMU-10DOF， which replace BM
 
 ## Hardware Overview
 
-![](https://github.com/SeeedDocument/Grove-IMU_10DOF_v2.0/raw/master/img/dimensions.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF_v2.0/img/dimensions.jpg)
 
 
 -  MPU-9250 I2C address select Pad, default connected **a** and **b** address is 0x68, if connect **b** and **c** address is 0x69
@@ -80,7 +80,7 @@ The diagram below shows the orientation of the axes of sensitivity and the polar
 
 | Seeeduino V4.2 | Base Shield| Base Shield |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-IMU_10DOF_v2.0/raw/master/img/Grove-imu-10dof-v2.0_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF_v2.0/img/Grove-imu-10dof-v2.0_s.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-IMU-10DOF-v2.0-p-2691.html)|
 
 - **Step 2.** Connect Grove - IMU 10DOF v2.0 to **I2C** port of base shield.
@@ -88,7 +88,7 @@ The diagram below shows the orientation of the axes of sensitivity and the polar
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
 <!--link-->
-![with_ardu](https://github.com/SeeedDocument/Grove-IMU_10DOF_v2.0/raw/master/img/with_ardu.jpg)
+![with_ardu](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF_v2.0/img/with_ardu.jpg)
 
 
 
@@ -98,11 +98,11 @@ The diagram below shows the orientation of the axes of sensitivity and the polar
 - **Step 2.** Please follow [how to install an arduino library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install library.
 - **Step 3.** Restart the Arduino IDE. Open “ IMM_10DOF_Test example via the path: **File -> Example ->GROVE_IMU_10DOF_V2-master-> IMU_10DOF_V2_Test**.
 
-![](https://github.com/SeeedDocument/Grove-IMU_10DOF_v2.0/raw/master/img/library%20example.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF_v2.0/img/library%20example.jpg)
 - **Step 4.** Upload the code. Note that we should select the correct board type and COM port.
 We can see:
 
-![](https://github.com/SeeedDocument/Grove-IMU_10DOF_v2.0/raw/master/img/ardu_result.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF_v2.0/img/ardu_result.jpg)
 
 
 <div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-IMU_10DOF_v2.0/raw/master/res/Grove%20-%20IMU%2010DOF%20v2.0.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
@@ -112,9 +112,9 @@ We can see:
 ## Resources
 
 
--   **[Eagle]** [Grove - IMU 10DOF v2 eagle file](https://github.com/SeeedDocument/Grove-IMU_10DOF_v2.0/raw/master/res/Grove%20-%20IMU%2010DOF%20v2.0.zip)
+-   **[Eagle]** [Grove - IMU 10DOF v2 eagle file](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF_v2.0/res/Grove%20-%20IMU%2010DOF%20v2.0.zip)
 -   **[Library]** [Get library from github](https://github.com/Seeed-Studio/Grove_IMU_10DOF_v2.0/archive/master.zip)
--   **[Dtasheet]** [BMP280 datasheet](https://github.com/SeeedDocument/Grove-IMU_10DOF_v2.0/raw/master/res/BMP280-Datasheet.pdf)
+-   **[Dtasheet]** [BMP280 datasheet](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF_v2.0/res/BMP280-Datasheet.pdf)
 -   **[Dtasheet]** [MPU-9250 datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-IMU_10DOF/master/res/MPU-9250A_Product_Specification.pdf)
 
 

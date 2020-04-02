@@ -78,7 +78,7 @@ tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_bbg, plat_pi, plat_wio, plat_li
 
 #### Demonstration
 
-The OLED128*64 uses all the pins of SSD1308 chip, the default original point is on the top left corner. You can also change the original point by adjusting the program and in order to display your desired patterns. For more details, please refer [SSD1308_1.0.pdf](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/resource/SSD1308_1.0.pdf) and [LY190-128064.pdf](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/resource/LY190-128064.pdf).
+The OLED128*64 uses all the pins of SSD1308 chip, the default original point is on the top left corner. You can also change the original point by adjusting the program and in order to display your desired patterns. For more details, please refer [SSD1308_1.0.pdf](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/resource/SSD1308_1.0.pdf) and [LY190-128064.pdf](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/resource/LY190-128064.pdf).
 
 #### Hardware
 
@@ -93,7 +93,7 @@ The OLED128*64 uses all the pins of SSD1308 chip, the default original point is 
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/images/with_ardu.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/with_ardu.jpg)
 
 !!!Note
 	If we don't have Grove Base Shield, We also can directly connect Grove - OLED Display 0.96 inch to Seeeduino as below.
@@ -145,13 +145,13 @@ void loop()
 
 | Raspberry pi | Grove Base Hat for RasPi| Grove - OLED Display 0.96 inch |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/images/grove%20oled%200.96_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/grove%20oled%200.96_s.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-OLED-Display-0.96%26quot%3B-p-781.html)|
 
 - **Step 2**. Plug the Grove Base Hat into Raspberry.
 - **Step 3**. Connect the OLED display to the **I^2^C** port of the Base Hat.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
-![](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/connect4.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/connect4.jpg)
 
 
 #### Software
@@ -417,14 +417,14 @@ The python script for BeagleBone Green below also works for Raspberry Pi, But th
 
 | Raspberry pi | GrovePi_Plus | Grove - OLED Display 0.96 inch  |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/images/grove%20oled%200.96_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/grove%20oled%200.96_s.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-OLED-Display-0.96%26quot%3B-p-781.html)|
 
 - **Step 2.** Plug the GrovePi_Plus into Raspberry.
 - **Step 3.** Connect Grove - OLED Display 0.96 inch ranger to **I2C-2** port of GrovePi_Plus.
 - **Step 4.** Connect the Raspberry to PC through USB cable.
 
-![](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/images/with_rpi.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/with_rpi.jpg)
 
 #### Software
 
@@ -928,19 +928,19 @@ sudo python3 Grove-OLED_Display_0.96inch.py
 
 ## Resources
 
-- **[PDF]** [Grove-OLED128x64 Schematic](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/resource/OLED%20128x64%20SCH.pdf)
+- **[PDF]** [Grove-OLED128x64 Schematic](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/resource/OLED%20128x64%20SCH.pdf)
 
-- **[PDF]** [Grove-OLED128x64 PCB](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/resource/OLED%20128x64%20PCB.pdf)
+- **[PDF]** [Grove-OLED128x64 PCB](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/resource/OLED%20128x64%20PCB.pdf)
 
 - **[Wiki]** [Beaglebone Green Wiki](http://wiki.seeedstudio.com/BeagleBone_Green/)
 
-- **[Eagle]** [Grove-OLED128x64](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/resource/OLED%20128x64.zip)
+- **[Eagle]** [Grove-OLED128x64](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/resource/OLED%20128x64.zip)
 
 - **[Library]** [GitHub Library for OLED](https://github.com/Seeed-Studio/OLED_Display_128X64/archive/master.zip)
 
-- **[Datasheet]** [Resources of SSD1308_1.0.pdf](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/resource/SSD1308_1.0.pdf)
+- **[Datasheet]** [Resources of SSD1308_1.0.pdf](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/resource/SSD1308_1.0.pdf)
 
-- **[Datasheet]** [Resources of LY190-128064.pdf](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/resource/LY190-128064.pdf)
+- **[Datasheet]** [Resources of LY190-128064.pdf](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/resource/LY190-128064.pdf)
 
 
 ## Tech Support

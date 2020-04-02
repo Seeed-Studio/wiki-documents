@@ -10,7 +10,7 @@ tags:
 
 ---
 
-![](https://github.com/SeeedDocument/Techbox_Tricks/raw/master/img/110020006_p1.jpg)
+![](https://files.seeedstudio.com/wiki/Techbox_Tricks/img/110020006_p1.jpg)
 
 TechBox is a series of electronics modular kits for DIY enthusiasts, electronic beginners and educators.
 With the plug and make feature, the entry level TechBox Tricks sets you to a good start on a journey of creation without any requirement of programming knowledge.
@@ -27,7 +27,7 @@ With the plug and make feature, the entry level TechBox Tricks sets you to a goo
 
 ##   Part list
 
-![](https://github.com/SeeedDocument/Techbox_Tricks/raw/master/img/110020006_p2.jpg)
+![](https://files.seeedstudio.com/wiki/Techbox_Tricks/img/110020006_p2.jpg)
 
 *   Logic DC Jack (Main board) *1
 
@@ -61,7 +61,7 @@ With the plug and make feature, the entry level TechBox Tricks sets you to a goo
 
 Get 4 input modules and 2 output ones with Grove tricks.
 
-![](https://github.com/SeeedDocument/Techbox_Tricks/raw/master/img/Grove_tricks_depart.jpg)
+![](https://files.seeedstudio.com/wiki/Techbox_Tricks/img/Grove_tricks_depart.jpg)
 
 ###  Step 2: Basic principles
 
@@ -79,25 +79,25 @@ There are two sockets of the Mainboard（Logic DC Jack）. Have one input module
 
 ####  Project 1
 
-![](https://github.com/SeeedDocument/Techbox_Tricks/raw/master/img/Application_1.jpg)
+![](https://files.seeedstudio.com/wiki/Techbox_Tricks/img/Application_1.jpg)
 
 Only if the switch is on "AND" and the Touch Switch is pressed, the Buzzer will sound.
 
 ####  Project 2
 
-![](https://github.com/SeeedDocument/Techbox_Tricks/raw/master/img/Application_2.jpg)
+![](https://files.seeedstudio.com/wiki/Techbox_Tricks/img/Application_2.jpg)
 
 Only if the switch is on "AND" and the Touch Switch is pressed, the Buzzer will sound and the led will light up.
 
 ####  Project 3
 
-![](https://github.com/SeeedDocument/Techbox_Tricks/raw/master/img/Application_3.jpg)
+![](https://files.seeedstudio.com/wiki/Techbox_Tricks/img/Application_3.jpg)
 
 Only if the switch is on "AND" and the Touch Switch is pressed and the Light Switch is well lit at the same time, the Buzzer will sound.
 
 ####  Project 4
 
-![](https://github.com/SeeedDocument/Techbox_Tricks/raw/master/img/Application_4.jpg)
+![](https://files.seeedstudio.com/wiki/Techbox_Tricks/img/Application_4.jpg)
 
 Only if the switch is on "AND" and the Touch Switch is pressed and the Light Switch is well lit at the same time, the output modules start up.
 
@@ -114,14 +114,14 @@ Feel free to add your project to the list!
 
 ##  Resources
 
-- **[PDF]**   [Grove - Tricks v1.0 位号.pdf](https://github.com/SeeedDocument/Techbox_Tricks/raw/master/res/Grove-Tricks_v1.0_%E4%BD%8D%E5%8F%B7.pdf)
+- **[PDF]**   [Grove - Tricks v1.0 位号.pdf](https://files.seeedstudio.com/wiki/Techbox_Tricks/res/Grove-Tricks_v1.0_%E4%BD%8D%E5%8F%B7.pdf)
 
-- **[PDF]**  [Grove - Tricks v1.0_sch.pdf](https://github.com/SeeedDocument/Techbox_Tricks/raw/master/res/Grove-Tricks_v1.0_sch.pdf)
+- **[PDF]**  [Grove - Tricks v1.0_sch.pdf](https://files.seeedstudio.com/wiki/Techbox_Tricks/res/Grove-Tricks_v1.0_sch.pdf)
 
-- **[Eagle]**   [File:Grove - Tricks v1.0 EAGLE.zip](https://github.com/SeeedDocument/Techbox_Tricks/raw/master/res/Grove-Tricks_v1.0_EAGLE.zip)
-- **[PDF]**[Grove - Tricks v1.0 sch](https://github.com/SeeedDocument/Techbox_Tricks/raw/master/res/Grove%20-%20Tricks%20v1.0.pdf)
+- **[Eagle]**   [File:Grove - Tricks v1.0 EAGLE.zip](https://files.seeedstudio.com/wiki/Techbox_Tricks/res/Grove-Tricks_v1.0_EAGLE.zip)
+- **[PDF]**[Grove - Tricks v1.0 sch](https://files.seeedstudio.com/wiki/Techbox_Tricks/res/Grove%20-%20Tricks%20v1.0.pdf)
 
-- **[EAGLE]**[Grove - Tricks v1.0 pdf](https://github.com/SeeedDocument/Techbox_Tricks/raw/master/res/Grove%20-%20Tricks%20v1.0.sch)
+- **[EAGLE]**[Grove - Tricks v1.0 pdf](https://files.seeedstudio.com/wiki/Techbox_Tricks/res/Grove%20-%20Tricks%20v1.0.sch)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

@@ -51,4 +51,4 @@ If the desktop displays in vertical, just rotate it according to the guide below
 
 
 ### Using with Raspberry Pi 3/3b+  
-Here is the [Raspberry Pi 3 User Guide](https://docs.google.com/viewer?url=https://github.com/SeeedDocument/Pi_screen/raw/master/Instructions_for_use.pdf) .
+Here is the [Raspberry Pi 3 User Guide](https://docs.google.com/viewer?url=https://files.seeedstudio.com/wiki/Pi_screen/Instructions_for_use.pdf) .

@@ -149,7 +149,7 @@ void motorAcceleration()
 
 | Raspberry pi | GrovePi_Plus | Grove - MOSFET |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-MOSFET/master/img/Mosfet_small.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-MOSFET/master/img/Mosfet_small.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/Grove-MOSFET-p-1594.html)|
 
 - **Step 2.** Plug the GrovePi_Plus into Raspberry.
@@ -226,7 +226,7 @@ sudo python grove_mosfet.py
 ## Resources
 
 - **[Eagle]** [Grove - MOSFET Schematic file](https://raw.githubusercontent.com/SeeedDocument/Grove-MOSFET/master/res/Grove-MOSFET_Eagle_File.zip)
-- **[PDF]** [Grove - MOSFET Schematic PDF](https://github.com/SeeedDocument/Grove-MOSFET/raw/master/res/Grove%20-%20MOSFET%20.pdf)
+- **[PDF]** [Grove - MOSFET Schematic PDF](https://files.seeedstudio.com/wiki/Grove-MOSFET/res/Grove%20-%20MOSFET%20.pdf)
 - **[Datasheet]** [CJQ4435 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-MOSFET/master/res/CJQ4435.pdf)
 - **[WIKI]** [MOSFET Wikipedia](https://en.wikipedia.org/wiki/MOSFET)
 

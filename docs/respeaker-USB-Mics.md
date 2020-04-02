@@ -8,7 +8,7 @@ surveyurl:
 sku: 107990193
 ---
 
-![](https://github.com/SeeedDocument/ReSpeaker-USB-Mics/raw/master/img/Bazaar/ReSpeaker-USB-Mics-box-preview.jpg)
+![](https://files.seeedstudio.com/wiki/ReSpeaker-USB-Mics/img/Bazaar/ReSpeaker-USB-Mics-box-preview.jpg)
 
 
 An out-of-the-box voice pick-up device is the voice of the customer. 
@@ -67,7 +67,7 @@ The difference between the PCBA inside ReSpeaker USB Mic Array and Respeaker Mic
 
 ## Hardware Overview
 
-![](https://github.com/SeeedDocument/ReSpeaker-Mic-Array-v2.1/raw/master/img/hardware_overview.jpg)
+![](https://files.seeedstudio.com/wiki/ReSpeaker-Mic-Array-v2.1/img/hardware_overview.jpg)
 
 - <font face="" size=3 font color="ff0000">①</font> **XMOS XVF-3000:**
 It integrates advanced DSP algorithms that include Acoustic Echo Cancellation (AEC), beamforming, dereverberation, noise suppression and gain control.
@@ -88,7 +88,7 @@ Output audio, We can plug active speakers or Headphones into this port.
 The WM8960 is a low power stereo codec featuring Class D speaker drivers to provide 1 W per channel into 8 W loads.
 
 **System Diagram**
-![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/system_diag.png)
+![](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/img/system_diag.png)
 
 
 
@@ -144,7 +144,7 @@ sudo python dfu.py --download 1_channel_firmware.bin
 
 ```
 Here is the firmware downloading result.
-![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/Download_firmware.png)
+![](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/img/Download_firmware.png)
 
 **For Windows/Mac:** We do not suggest use Windows/Mac and Linux vitual machine to update the firmware. 
 
@@ -154,14 +154,14 @@ Here is the Acoustic Echo Cancellation example with 6 channels firmware.
 
 - Step 1. Connect the USB cable to PC and audio jack to speaker. 
 
-![](https://github.com/SeeedDocument/ReSpeaker-USB-Mics/raw/master/img/Bazaar/_DAS5930.jpg)
+![](https://files.seeedstudio.com/wiki/ReSpeaker-USB-Mics/img/Bazaar/_DAS5930.jpg)
 
 - Step 2. Select the mic array v2.1 as output device in PC side.
 - Step 3. Start the audacity to record.
 - Step 4. Play music at PC side first and then we talk.
 - Step 5. We will see the audacity screen as below, Please click **Solo** to hear each channel audio. 
 
-![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/Audacity.png)
+![](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/img/Audacity.png)
 
 Channel0 Audio(processed by algorithms):
 
@@ -193,7 +193,7 @@ Here is the video about the DOA and AEC.
 
 - **Windows:** Audio recording and playback works well by default. Libusb-win32 driver is only required to control LEDs an DSP parameters on Windows. We use [a handy tool - Zadig](http://zadig.akeo.ie/) to install the libusb-win32 driver for both `SEEED DFU` and `SEEED Control` (ReSpeaker Mic Array has 2 devices on Windows Device Manager).
 
-![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/img/usb_4mic_array_driver.png)
+![](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/img/usb_4mic_array_driver.png)
 
 !!!Warning
     Please make sure that libusb-win32 is selected, not WinUSB or libusbK.
@@ -301,7 +301,7 @@ git clone https://github.com/respeaker/pixel_ring.git
 cd pixel_ring/pixel_ring
 ```
 
-- Step 2. Create a [led_control.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/led_control.py) with below code and run 'python led_control.py'
+- Step 2. Create a [led_control.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/led_control.py) with below code and run 'python led_control.py'
 
 ```Python
 from usb_pixel_ring_v2 import PixelRing
@@ -346,7 +346,7 @@ git clone https://github.com/respeaker/usb_4_mic_array.git
 cd usb_4_mic_array
 ```
 
-- Step 2. Create a [DOA.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/DOA.py) with below code under usb_4_mic_array folder and run 'sudo python DOA.py'
+- Step 2. Create a [DOA.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/DOA.py) with below code under usb_4_mic_array folder and run 'sudo python DOA.py'
 
 ```
 from tuning import Tuning
@@ -391,7 +391,7 @@ git clone https://github.com/respeaker/usb_4_mic_array.git
 cd usb_4_mic_array
 ```
 
-- Step 2. Create a [VAD.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/VAD.py) with below code under usb_4_mic_array folder and run 'sudo python VAD.py'
+- Step 2. Create a [VAD.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/VAD.py) with below code under usb_4_mic_array folder and run 'sudo python VAD.py'
 
 ```
 from tuning import Tuning
@@ -450,7 +450,7 @@ cd ~
 nano get_index.py
 ```
 
-- Step 2, copy below code and paste on [get_index.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/get_index.py).
+- Step 2, copy below code and paste on [get_index.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/get_index.py).
 
 ```Python
 import pyaudio
@@ -472,7 +472,7 @@ for i in range(0, numdevices):
 Input Device id  2  -  ReSpeaker 4 Mic Array (UAC1.0): USB Audio (hw:1,0)
 ```
 
-- Step 5, change `RESPEAKER_INDEX = 2` to index number. Run python script [record.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/record.py) to record a speech.
+- Step 5, change `RESPEAKER_INDEX = 2` to index number. Run python script [record.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/record.py) to record a speech.
 
 ```Python
 import pyaudio
@@ -576,7 +576,7 @@ wf.close()
  pip install pyaudio
 ```
 
-- Step 2. Use [get_index.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/get_index.py) to get device index.
+- Step 2. Use [get_index.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/get_index.py) to get device index.
 
 ```
 C:\Users\XXX\Desktop>python get_index.py
@@ -585,7 +585,7 @@ Input Device id  1  -  ReSpeaker 4 Mic Array (UAC1.0)
 Input Device id  2  -  Internal Microphone (Conexant I)
 ```
 
-- Step 3. Modify the device index and channels of [record.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/record.py) and then extract voice.
+- Step 3. Modify the device index and channels of [record.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/record.py) and then extract voice.
 
 ```
 C:\Users\XXX\Desktop>python record.py
@@ -604,7 +604,7 @@ C:\Users\XXX\Desktop>python record.py
  pip install pyaudio
 ```
 
-- Step 2. Use [get_index.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/get_index.py) to get device index.
+- Step 2. Use [get_index.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/get_index.py) to get device index.
 
 ```
 MacBook-Air:Desktop XXX$ python get_index.py 
@@ -612,7 +612,7 @@ Input Device id  0  -  Built-in Microphone
 Input Device id  2  -  ReSpeaker 4 Mic Array (UAC1.0)
 ```
 
-- Step 3. Modify the device index and channels of [record.py](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/record.py) and then extract voice.
+- Step 3. Modify the device index and channels of [record.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/record.py) and then extract voice.
 
 ```
 MacBook-Air:Desktop XXX$ python record.py 
@@ -784,7 +784,7 @@ A4: Yes, thanks for Yuki sharing the package for integrating [ReSpeaker USB Mic 
 
 **Q5: How to enable 3.5mm audio port to receive the signal as well as usb port?**
 
-A5: Please download the [new firmware](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/i2s_i1o2.bin) and burn the XMOS by following [How to update firmware](http://wiki.seeedstudio.com/ReSpeaker_Mic_Array_v2.0/#update-firmware).
+A5: Please download the [new firmware](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/i2s_i1o2.bin) and burn the XMOS by following [How to update firmware](http://wiki.seeedstudio.com/ReSpeaker_Mic_Array_v2.0/#update-firmware).
 
 **Q6: #include "portaudio.h" Error when run "sudo pip install pyaudio".**
 
@@ -796,10 +796,10 @@ sudo apt-get install portaudio19-dev
 
 
 ## Resource
-- **[PDF]** [ReSpeaker USB Mic Array Dimension](https://github.com/SeeedDocument/ReSpeaker-USB-Mics/raw/master/res/dimension.pdf)
-- **[DWG]** [ReSpeaker USB Mic Array Case 3D Model](https://github.com/SeeedDocument/ReSpeaker-USB-Mics/raw/master/res/case.dwg)
-- **[PDF]** [XVF3000 Product Brief](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/XVF3000-3100-product-brief_1.4.pdf)
-- **[PDF]** [XVF3000 Datasheet](https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/XVF3000-3100-TQ128-Datasheet_1.0.pdf)
+- **[PDF]** [ReSpeaker USB Mic Array Dimension](https://files.seeedstudio.com/wiki/ReSpeaker-USB-Mics/res/dimension.pdf)
+- **[DWG]** [ReSpeaker USB Mic Array Case 3D Model](https://files.seeedstudio.com/wiki/ReSpeaker-USB-Mics/res/case.dwg)
+- **[PDF]** [XVF3000 Product Brief](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/XVF3000-3100-product-brief_1.4.pdf)
+- **[PDF]** [XVF3000 Datasheet](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/XVF3000-3100-TQ128-Datasheet_1.0.pdf)
 
 
 

@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/Seeeduino_Stalker_v1-0
 sku:
 tags:
 ---
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v1.0/raw/master/img/Seeeduino-stalker-168.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v1.0/img/Seeeduino-stalker-168.jpg)
 
 **This is not the latest version of Seeeduino Stalker and has been discontinued.
 The latest version can be found here: [Seeeduino Stalker v2.1](https://seeeddoc.github.io/Seeeduino_Stalker_v2.1/)
@@ -62,7 +62,7 @@ Seeeduino Stalker is a feature rich Arduino compatible Wireless Sensor Network n
 
 ##   Block Diagram   ##
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v1.0/raw/master/img/Stalker-V1-Block.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v1.0/img/Stalker-V1-Block.jpg)
 
 ##   Schematics   ##
 
@@ -97,11 +97,11 @@ Seeeduino Stalker is a feature rich Arduino compatible Wireless Sensor Network n
 
 ###   Application Notes  ###
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v1.0/raw/master/img/Stalker-V1-applications.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v1.0/img/Stalker-V1-applications.jpg)
 
 ###   Connection Notes  ###
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v1.0/raw/master/img/Stalker-V1-hardware.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v1.0/img/Stalker-V1-hardware.jpg)
 
 - **Bee series** socket - 2*10 pin 2.0mm pitch (which will mate with - one at a time - any of the **wireless modules**: **XBee**, [BluetoothBee](https://seeeddoc.github.io/Bluetooth_Bee/) , **GPSBee**or [RFBee](https://seeeddoc.github.io/RFbee_V1.1-Wireless_Arduino_compatible_node/) .) Communication with these modules are done through UART.
 

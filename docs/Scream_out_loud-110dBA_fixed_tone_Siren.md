@@ -11,7 +11,7 @@ sku:   107100000
 
 This Passive Piezoelectric Type Buzzer is made of plastic, very eye catching colors. It can generate sound over 110DBA(!), so Do not make it close to your ears when you test the buzzer. Includes build-in signal generator, just power on 6-12V and it will scream out loud.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/scream-out-loud-110dBA-fixed-tone-Siren-p-301.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/scream-out-loud-110dBA-fixed-tone-Siren-p-301.html)
 
 ##   Cautions
 

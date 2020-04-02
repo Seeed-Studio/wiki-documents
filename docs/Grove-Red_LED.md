@@ -8,7 +8,7 @@ surveyurl: https://www.research.net/r/Grove_Red_LedLED
 sku:  104030005
 ---
 
-![](https://github.com/SeeedDocument/Raspi_wiki/raw/master/img/red_led.jpg)
+![](https://files.seeedstudio.com/wiki/Raspi_wiki/img/red_led.jpg)
 
 Grove - Red LED is similar to the Grove - LED module which houses an LED light source. In addition, it also has a potentiometer on-board to manage the power requirements of the LED. The PCB of this module has mounting holes which can be mounted on the required surface of your prototype. For example, it can be used as a pilot lamp for indicating power or signal presence.
 
@@ -51,14 +51,14 @@ Grove - Red LED is similar to the Grove - LED module which houses an LED light s
 
 | Seeeduino V4.2 | Base Shield|  Grove - Red LED |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Red_LED/raw/master/img/Red%20LED_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Red_LED/img/Red%20LED_s.jpg)|
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/s/Grove-Red-LED-p-1142.html)|
 
 - Step 2. Connect Grove-Red LED to port D2 of Grove-Base Shield.
 - Step 3. Plug Grove - Base Shield into Seeeduino.
 - Step 4. Connect Seeeduino to PC through a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-Red_LED/raw/master/img/seeedstudio_red_led.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Red_LED/img/seeedstudio_red_led.jpg)
 
 !!!Note
 	If we don't have Grove Base Shield, We also can directly connect Grove-Red_Led to Seeeduino as below.
@@ -125,13 +125,13 @@ Upload the program to your Arduino/Seeeduino.
 
 | Raspberry pi | Grove Base Hat for RasPi| Grove - Red LED |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Red_LED/raw/master/img/Red%20LED_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Red_LED/img/Red%20LED_s.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/s/Grove-Red-LED-p-1142.html)|
 
 - **Step 2**. Plug the Grove Base Hat into Raspberry.
 - **Step 3**. Connect the Red LED to port 12 of the Base Hat.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
-![](https://github.com/SeeedDocument/Grove-Red_LED/raw/master/img/BaseHat_LED.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Red_LED/img/BaseHat_LED.jpg)
 !!! Please note
     For step 3 you are able to connect the Red LED to **any GPIO Port** but make sure you change the command with the corresponding port number.
 
@@ -216,14 +216,14 @@ if __name__ == '__main__':
 
 | Raspberry pi | GrovePi_Plus | Grove - Red Led |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Red_LED/raw/master/img/Red%20LED_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Red_LED/img/Red%20LED_s.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get ONE Now](https://www.seeedstudio.com/s/Grove-Red-LED-p-1142.html)|
 
 - Step 2. Plug the GrovePi_Plus into Raspberry.
 - Step 3. Connect Grove-Red Led to D4 port of GrovePi_Plus.
 - Step 4. Connect the Raspberry to PC through USB cable.
 
-![](https://github.com/SeeedDocument/Grove-Red_LED/raw/master/img/rasp_red_led.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Red_LED/img/rasp_red_led.jpg)
 
 #### Software
 
@@ -296,7 +296,7 @@ LED OFF!
 
 ##  Resources
 
-* **[PDF]** [Grove-Red LED Schematic](https://github.com/SeeedDocument/Grove-Red_LED/raw/master/res/Grove-LED_v1.3.pdf)
+* **[PDF]** [Grove-Red LED Schematic](https://files.seeedstudio.com/wiki/Grove-Red_LED/res/Grove-LED_v1.3.pdf)
 * **[Codecraft]** [CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove-Red_LED/master/res/Grove_Red_LED_CDC_File.zip)
 
 ## Projects

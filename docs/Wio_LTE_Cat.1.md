@@ -7,7 +7,7 @@ surveyurl: https://www.research.net/r/Wio_LTE_4G_Cat_1_GNSS_Espruino_Compatible
 sku: 102990837
 ---
 
-![](https://github.com/SeeedDocument/Wio_LTE/raw/master/img/wio_lte_v1.3.jpg)
+![](https://files.seeedstudio.com/wiki/Wio_LTE/img/wio_lte_v1.3.jpg)
 
 
 Wio Tracker (Wireless Input Output) is an open source gateway which enable faster IoT GPS solutions. It is Arduino and Grove compatible development boards that helps you track nearly any moving thing on the planet and then upload that data wirelessly. The Wio LTE is the LTE version of Wio Tracker, so now we’ve got 2 versions of Wio Tracker and the LTE (4G) version will make some differences.
@@ -53,8 +53,8 @@ As you can see in the pictures below.
 
                       v1.3                                  v1.0
 
-![](https://github.com/SeeedDocument/Wio_LTE/raw/master/img/wio_ver1.jpg)
-![](https://github.com/SeeedDocument/Wio_LTE/raw/master/img/wio_ver2.jpg)
+![](https://files.seeedstudio.com/wiki/Wio_LTE/img/wio_ver1.jpg)
+![](https://files.seeedstudio.com/wiki/Wio_LTE/img/wio_ver2.jpg)
 
 As the power circuit changes, the logic of the power indicator has also changed.
 
@@ -344,15 +344,15 @@ And **EC21-A** is what we are using in WIO Tracker - LTE, which supports AT&T an
 
 - Step 1. Press and hold BOOT button and connect to computer you will see **STM32 Device in DFU Mode** at device manager as below.
 
-![](https://github.com/SeeedDocument/Wio_LTE/raw/master/img/before_driver_installation.png)
+![](https://files.seeedstudio.com/wiki/Wio_LTE/img/before_driver_installation.png)
 
-- Step 2. This says that you need to use [zadig_xx.exe](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/zadig_2.1.2.exe) to change DFU driver from **STTub30** to **WinUSB** as below. If we can't see any info on the Zadig, please click Options--> List All Devices, then select STM32 Virtual COM Ports.
+- Step 2. This says that you need to use [zadig_xx.exe](https://files.seeedstudio.com/wiki/Wio_LTE/res/zadig_2.1.2.exe) to change DFU driver from **STTub30** to **WinUSB** as below. If we can't see any info on the Zadig, please click Options--> List All Devices, then select STM32 Virtual COM Ports.
 
-![](https://github.com/SeeedDocument/Wio_LTE/raw/master/img/zadig.png)
+![](https://files.seeedstudio.com/wiki/Wio_LTE/img/zadig.png)
 
 - Step 3. You will see the "STMicroelectronics Virtual COM Port" on device manager as below.
 
-![](https://github.com/SeeedDocument/Wio_LTE/raw/master/img/after_driver_installation.png)
+![](https://files.seeedstudio.com/wiki/Wio_LTE/img/after_driver_installation.png)
 
 
 ### Update Firmware
@@ -2117,19 +2117,19 @@ A8: Here is https://github.com/Seeed-Studio/Wio_LTE_JavaScript_Demo .
 
 ## Resource
 
-- **[Eagle&PDF]** [Wio LTE AU Version v1.3b](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/Wio%20LTE%20AU%20Version%20v1.3b-%204G%2C%20Cat.1%2C%20GNSS%2C%20Espruino%20Compatible.zip)
+- **[Eagle&PDF]** [Wio LTE AU Version v1.3b](https://files.seeedstudio.com/wiki/Wio_LTE/res/Wio%20LTE%20AU%20Version%20v1.3b-%204G%2C%20Cat.1%2C%20GNSS%2C%20Espruino%20Compatible.zip)
 
-- **[Eagle&PDF]** [Wio LTE EU Version v1.3b](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/Wio%20LTE%20EU%20Version%20v1.3b-%204G%2C%20Cat.1%2C%20GNSS%2C%20Espruino%20Compatible.zip)
+- **[Eagle&PDF]** [Wio LTE EU Version v1.3b](https://files.seeedstudio.com/wiki/Wio_LTE/res/Wio%20LTE%20EU%20Version%20v1.3b-%204G%2C%20Cat.1%2C%20GNSS%2C%20Espruino%20Compatible.zip)
 
-- **[Eagle&PDF]** [Wio LTE JP Version v1.3b](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/Wio%20LTE%20JP%20Version%20v1.3b-%204G%2C%20Cat.1%2C%20Espruino%20Compatible.zip)
+- **[Eagle&PDF]** [Wio LTE JP Version v1.3b](https://files.seeedstudio.com/wiki/Wio_LTE/res/Wio%20LTE%20JP%20Version%20v1.3b-%204G%2C%20Cat.1%2C%20Espruino%20Compatible.zip)
 
-- **[Eagle&PDF]** [Wio LTE US Version v1.3b](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/Wio%20LTE%20US%20Version%20v1.3b%20-%204G%2C%20Cat.1%2C%20GNSS%2C%20Espruino%20Compatible.zip)
+- **[Eagle&PDF]** [Wio LTE US Version v1.3b](https://files.seeedstudio.com/wiki/Wio_LTE/res/Wio%20LTE%20US%20Version%20v1.3b%20-%204G%2C%20Cat.1%2C%20GNSS%2C%20Espruino%20Compatible.zip)
 
 - **[Library]** [Wio_LTE_Arduino_Library](https://github.com/Seeed-Studio/Wio_LTE_Arduino_Library)
 
 - **[Library]** [Wio_LTE_JavaScript_Demo](https://github.com/Seeed-Studio/Wio_LTE_JavaScript_Demo)
 
-- **[Datasheet]** [AT Command](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/AT_Command.zip)
+- **[Datasheet]** [AT Command](https://files.seeedstudio.com/wiki/Wio_LTE/res/AT_Command.zip)
 
 ## Projects
 

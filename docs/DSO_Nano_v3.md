@@ -7,11 +7,11 @@ prodimagename:  Nano_v3.jpg
 surveyurl: https://www.research.net/r/DSO_Nano_v3
 sku:     109990013
 ---
-![](https://github.com/SeeedDocument/DSO_Nano_v3/raw/master/img/Nano_v3.jpg)
+![](https://files.seeedstudio.com/wiki/DSO_Nano_v3/img/Nano_v3.jpg)
 
 DSO Nano v3 is a portable digital storage oscilloscope. Based on a 32-bit ARM Cortex-M3 microcontroller, it is equipped with 320*240 color display, USB port and recharging function. It is compact, simple to operate; meets the basic demands of school labs, electrical repairs and engineering. The version 3 of DSO Nano differs from version 2 in that it does not use a white plastic case. Instead, it uses a black metal case which is more durable and strong.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/DSO-Nano-v3-p-1358.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/DSO-Nano-v3-p-1358.html)
 
 ##   Features
 ---
@@ -162,7 +162,7 @@ To ensure your safety &amp; avoid any damages to the product/connected devices, 
 
 ###   Structure
 
-![](https://github.com/SeeedDocument/DSO_Nano_v3/raw/master/img/DSO_Nano_v3_Structure.jpg)
+![](https://files.seeedstudio.com/wiki/DSO_Nano_v3/img/DSO_Nano_v3_Structure.jpg)
 
 Note: My device (Serial E1C5A0C1) does NOT have the indicated "TF card slot".  There is no slot in the metal case and even if you open the case, there is no connector on the board (nor even a place to have put a connector).
 
@@ -176,7 +176,7 @@ Pressing **A (Run/Stop) Button** once will freeze the current display. Press 'A'
 
 Throughout this text, adjustable items will be labeled in <span style="color:red;">red</span>.
 
-![](https://github.com/SeeedDocument/DSO_Nano_v3/raw/master/img/Dsonanov2-user-interface-1.jpg)
+![](https://files.seeedstudio.com/wiki/DSO_Nano_v3/img/Dsonanov2-user-interface-1.jpg)
 
 ###   User Interface Overview
 
@@ -288,7 +288,7 @@ This could prevent mistaken triggering caused by noise, especially while measuri
 
 ###   Measurement
 
-![](https://github.com/SeeedDocument/DSO_Nano_v3/raw/master/img/Dsonanov2measurement.jpg)
+![](https://files.seeedstudio.com/wiki/DSO_Nano_v3/img/Dsonanov2measurement.jpg)
 
 Auto measurement is useful for quickly exploring signal characteristics. Measurement options include frequency, cycle time, duty cycle, peak voltage, RMS voltage, average voltage and DC voltage. Please note that frequency, cycle time and duty cycle can only be measured while triggering.
 
@@ -313,7 +313,7 @@ The 3.5mm audio jack under the mini USB port is used for the signal generator. I
 
 The DSO Nano can be powered by the internal 500mAh LiPo battery or by the external mini-USB port. Charging takes about 2 hours 20 minutes to reach 4.12V. A brand-new unit can only run about 1 hour by battery, but the battery life will be extended after the LiPo battery is fully charged.
 
-![](https://github.com/SeeedDocument/DSO_Nano_v3/raw/master/img/Dsonanov2-charging.JPG)
+![](https://files.seeedstudio.com/wiki/DSO_Nano_v3/img/Dsonanov2-charging.JPG)
 
 ###   Firmware Upgrades
 
@@ -336,9 +336,9 @@ To upgrade firmware, please perform following steps:
 
 Under windows you will see the "drive" disappear after you copy each hex file and reappear with the rdy file.
 
-![](https://github.com/SeeedDocument/DSO_Nano_v3/raw/master/img/DSO_Nano_v3_Firmware_Upgrades1.png)
+![](https://files.seeedstudio.com/wiki/DSO_Nano_v3/img/DSO_Nano_v3_Firmware_Upgrades1.png)
 
- ![](https://github.com/SeeedDocument/DSO_Nano_v3/raw/master/img/DSO_Nano_v3_Firmware_Upgrades2.png)
+ ![](https://files.seeedstudio.com/wiki/DSO_Nano_v3/img/DSO_Nano_v3_Firmware_Upgrades2.png)
 
 ##   FAQ
 ---
@@ -352,29 +352,29 @@ Under windows you will see the "drive" disappear after you copy each hex file an
 
 ##   Resources
 ---
-*   [DSO_Nano_V3_User_Manual v4.22.pdf](https://github.com/SeeedDocument/DSO_Nano_v3/raw/master/res/DS201V_4.22%20User%20Manual%EF%BC%88Increase%20the%20alignment%20and%20hidden%20reference%20line%EF%BC%89.pdf)
-*   [DSO Nano Official Firmware V4.32](https://github.com/SeeedDocument/DSO_Nano_v3/raw/master/res/DS201.V4.32.zip)
-*   [DSO Nano Official Firmware App2.6](https://github.com/SeeedDocument/DSO_Nano_v3/raw/master/res/DSO_Nano_2.6_firmware.zip)
+*   [DSO_Nano_V3_User_Manual v4.22.pdf](https://files.seeedstudio.com/wiki/DSO_Nano_v3/res/DS201V_4.22%20User%20Manual%EF%BC%88Increase%20the%20alignment%20and%20hidden%20reference%20line%EF%BC%89.pdf)
+*   [DSO Nano Official Firmware V4.32](https://files.seeedstudio.com/wiki/DSO_Nano_v3/res/DS201.V4.32.zip)
+*   [DSO Nano Official Firmware App2.6](https://files.seeedstudio.com/wiki/DSO_Nano_v3/res/DSO_Nano_2.6_firmware.zip)
 
-*   [BenF Firmware v3.64](https://github.com/SeeedDocument/DSO_Nano_v3/raw/master/res/BenF364_LIB353.zip)    Thank **Benf **for sharing this great firmware and **Alf **arranging it to work with DFU Ver3.22. Note that the BenF firmware v3.64 **WILL NOT SAVE** to the internal memory of the V3.  If your V3 does not have an external card slot then you will not be able to save images or data.
+*   [BenF Firmware v3.64](https://files.seeedstudio.com/wiki/DSO_Nano_v3/res/BenF364_LIB353.zip)    Thank **Benf **for sharing this great firmware and **Alf **arranging it to work with DFU Ver3.22. Note that the BenF firmware v3.64 **WILL NOT SAVE** to the internal memory of the V3.  If your V3 does not have an external card slot then you will not be able to save images or data.
 
-*   [DSO Nano Hardware v2.6 Layout.pdf](https://github.com/SeeedDocument/DSO_Nano_v3/raw/master/res/DSO_Nano_V2.6_VCT_PCB_Layout.pdf)
+*   [DSO Nano Hardware v2.6 Layout.pdf](https://files.seeedstudio.com/wiki/DSO_Nano_v3/res/DSO_Nano_V2.6_VCT_PCB_Layout.pdf)
 
-*   [DSO Nano Hardware v2.6 Shcematic.pdf](https://github.com/SeeedDocument/DSO_Nano_v3/raw/master/res/DSO_Nano_V2.6_VCT_Schematic.pdf)
+*   [DSO Nano Hardware v2.6 Shcematic.pdf](https://files.seeedstudio.com/wiki/DSO_Nano_v3/res/DSO_Nano_V2.6_VCT_Schematic.pdf)
 
-*   [DSO_Nano_V3_User_Manual.pdf](https://github.com/SeeedDocument/DSO_Nano_v3/raw/master/res/DSO_Nano_V3_User_Manual.pdf)
+*   [DSO_Nano_V3_User_Manual.pdf](https://files.seeedstudio.com/wiki/DSO_Nano_v3/res/DSO_Nano_V3_User_Manual.pdf)
 
 ###   DFU Hex/Binaries
 
 Can be used when your DSO's bricked.
 
-*   [DFU_D329_VB_2M_SEEED_for_nano_v3.hex.zip](https://github.com/SeeedDocument/DSO_Nano_v3/raw/master/res/DFU_D329_VB_2M_SEEED_for_nano_v3.hex.zip)
+*   [DFU_D329_VB_2M_SEEED_for_nano_v3.hex.zip](https://files.seeedstudio.com/wiki/DSO_Nano_v3/res/DFU_D329_VB_2M_SEEED_for_nano_v3.hex.zip)
 
-*   [DFU_A322_for_nano_v3.hex.zip](https://github.com/SeeedDocument/DSO_Nano_v3/raw/master/res/DFU_A322_for_nano_v3.hex.zip)
+*   [DFU_A322_for_nano_v3.hex.zip](https://files.seeedstudio.com/wiki/DSO_Nano_v3/res/DFU_A322_for_nano_v3.hex.zip)
 
-*   [Bootloader_for_nano_v2.bin.zip](https://github.com/SeeedDocument/DSO_Nano_v3/raw/master/res/Bootloader_for_nano_v2.bin.zip)
+*   [Bootloader_for_nano_v2.bin.zip](https://files.seeedstudio.com/wiki/DSO_Nano_v3/res/Bootloader_for_nano_v2.bin.zip)
 
-*   [DFU_D326_SD_MINI_for_hw1.7.hex.zip](https://github.com/SeeedDocument/DSO_Nano_v3/raw/master/res/DFU_D326_SD_MINI_for_hw1.7.hex.zip)
+*   [DFU_D326_SD_MINI_for_hw1.7.hex.zip](https://files.seeedstudio.com/wiki/DSO_Nano_v3/res/DFU_D326_SD_MINI_for_hw1.7.hex.zip)
 
 ##   External Links
 

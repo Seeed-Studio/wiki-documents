@@ -21,7 +21,7 @@ The output of sound sensor is analog signal, we connect it to A0 of Seeeduino.
 
 LED Bar needs 10 IOs, about the connection, please refer to [LED Bar](http://arduino.cc/en/Tutorial/BarGraph).
 
-![](https://github.com/SeeedDocument/Sound_Sensor_And_LED_Bar/raw/master/img/Sidekick_35_1.png)
+![](https://files.seeedstudio.com/wiki/Sound_Sensor_And_LED_Bar/img/Sidekick_35_1.png)
 
 **Code:**
 

@@ -7,11 +7,11 @@ prodimagename:  HM-11%20BLE%20Module.jpg
 surveyurl: https://www.research.net/r/Bluetooth_V4_HM_11_BLE_Module
 sku:     317030001
 ---
-![](https://github.com/SeeedDocument/Bluetooth_V4.0_HM_11_BLE_Module/raw/master/img/HM-11%20BLE%20Module.jpg)
+![](https://files.seeedstudio.com/wiki/Bluetooth_V4.0_HM_11_BLE_Module/img/HM-11%20BLE%20Module.jpg)
 
 This is a SMD BLE module used in our BLE Bee and Xadow BLE. It is based on TI CC2541 chip, enables robust network nodes to be built with low total bill-of-material costs and highly suited for ultralow power consumption systems. The module is small and easy to use, with the preprogrammed firmware of manufacturer, you could quickly build BLE communications via its AT command. Supporting BLE communications with iphone, ipad and Android 4.3.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Bluetooth-V4.0-HM-11-BLE-Module-p-1803.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Bluetooth-V4.0-HM-11-BLE-Module-p-1803.html)
 
 ##     Features
 ---
@@ -172,7 +172,7 @@ This is a SMD BLE module used in our BLE Bee and Xadow BLE. It is based on TI CC
 
 ##     Pin definition
 ---
-![](https://github.com/SeeedDocument/Bluetooth_V4.0_HM_11_BLE_Module/raw/master/img/HM-11_Pinout.jpg)
+![](https://files.seeedstudio.com/wiki/Bluetooth_V4.0_HM_11_BLE_Module/img/HM-11_Pinout.jpg)
 
 <table >
 <tr>
@@ -508,7 +508,7 @@ void loop() // run over and over
 ---
 ###  What is Grove-Serial Bluetooth
 
-![](https://github.com/SeeedDocument/Bluetooth_V4.0_HM_11_BLE_Module/raw/master/img/7be197fcaee35992babbffd47462bbc0.image.530x397.jpg)
+![](https://files.seeedstudio.com/wiki/Bluetooth_V4.0_HM_11_BLE_Module/img/7be197fcaee35992babbffd47462bbc0.image.530x397.jpg)
 
 Serial Bluetooth is designed for transparent wireless serial connection setup.
 
@@ -518,7 +518,7 @@ It uses CSR Bluecore 04-External single chip Bluetooth system with CMOS technolo
 
 ###   IR Remote
 
-![](https://github.com/SeeedDocument/Bluetooth_V4.0_HM_11_BLE_Module/raw/master/img/Seeed-recipe-66-20140625115150.jpg)
+![](https://files.seeedstudio.com/wiki/Bluetooth_V4.0_HM_11_BLE_Module/img/Seeed-recipe-66-20140625115150.jpg)
 
 This project uses Grove - Water Sensor to create a simple but effective solution to watering plants.
 

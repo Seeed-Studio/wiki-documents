@@ -9,7 +9,7 @@ sku: 101020613
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-Laser_PM2.5_Sensor-HM3301/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Laser_PM2.5_Sensor-HM3301/img/main.jpg)
 
 The Grove - Laser PM2.5 Sensor (HM3301) is a new generation of laser dust detection sensor, which is used for continuous and real-time detection of dust in the air.
 
@@ -64,7 +64,7 @@ This module is suitable for dust detectors, intelligent air purifiers, intellige
 
 ### Pin Out
 
-![](https://github.com/SeeedDocument/Grove-Laser_PM2.5_Sensor-HM3301/raw/master/img/pin_out.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Laser_PM2.5_Sensor-HM3301/img/pin_out.jpg)
 
 
 ## Working Principle
@@ -119,7 +119,7 @@ The HM-3301 dust sensor is composed of main components such as a fan, an infrare
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-Laser_PM2.5_Sensor-HM3301/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Laser_PM2.5_Sensor-HM3301/img/connect.jpg)
 
 
 !!!Note
@@ -147,12 +147,12 @@ The HM-3301 dust sensor is composed of main components such as a fan, an infrare
 
 - **Step 3.** Restart the Arduino IDE. Open the example, you can open it in the following three ways：
     1. Open it directly in the Arduino IDE via the path: **File --> Examples --> PM2.5 sensor --> basic_demo**. 
-    ![](https://github.com/SeeedDocument/Grove-Laser_PM2.5_Sensor-HM3301/raw/master/img/path1.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-Laser_PM2.5_Sensor-HM3301/img/path1.jpg)
     
     2. Open it in your computer by click the **basic_demo.ino** which you can find in the folder **XXXX\Arduino\libraries\Seeed_PM2_5_sensor_HM3301-master\examples\basic_demo**, **XXXX** is the location you installed the Arduino IDE.
-    ![](https://github.com/SeeedDocument/Grove-Laser_PM2.5_Sensor-HM3301/raw/master/img/path2.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-Laser_PM2.5_Sensor-HM3301/img/path2.jpg)
     
-    3. Or, you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+    3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 ```C++
 
@@ -312,7 +312,7 @@ PM10 concentration(Atmospheric environment,unit:ug/m3): 59
 
 - **[Zip]** [Seeed_PM2_5_sensor_HM3301 Software Library](https://github.com/Seeed-Studio/Seeed_PM2_5_sensor_HM3301/archive/master.zip)
 
-- **[PDF]** [Datasheet HM3301](https://github.com/SeeedDocument/Grove-Laser_PM2.5_Sensor-HM3301/raw/master/res/HM-3300%263600_V2.1.pdf)
+- **[PDF]** [Datasheet HM3301](https://files.seeedstudio.com/wiki/Grove-Laser_PM2.5_Sensor-HM3301/res/HM-3300%263600_V2.1.pdf)
 
 
 ## Projects

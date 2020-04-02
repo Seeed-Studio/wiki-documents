@@ -9,7 +9,7 @@ sku: 103030277
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Pi_RTC-DS1307/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Pi_RTC-DS1307/img/main.jpg)
 
 The Pi RTC is based on the clock chip DS1307, it can provide a real-time clock(RTC) for raspberry pi via the I2C interface. Real-time clock of this module counts seconds,minutes, hours, date of the month,month, day of the week, and year with leap-year compensation valid up to 2100. The clock operates in either the 24-hour or 12-hour format with AM/PM indicator. If you want to keep this module timing when the Raspberry Pi is powered off, you need to put a 3-Volt CR1225 lithium cell in the battery-holder.  
 
@@ -47,7 +47,7 @@ Any applications need Real Time on Raspberry.
 
 ## Pin Out
 
-![](https://github.com/SeeedDocument/Pi_RTC-DS1307/raw/master/img/pin_out.jpg)
+![](https://files.seeedstudio.com/wiki/Pi_RTC-DS1307/img/pin_out.jpg)
 
 
 !!!Note
@@ -58,10 +58,10 @@ Any applications need Real Time on Raspberry.
 
 **Bi-directional level shifter circuit**
 
-![](https://github.com/SeeedDocument/Pi_RTC-DS1307/raw/master/img/schematic.jpg)
+![](https://files.seeedstudio.com/wiki/Pi_RTC-DS1307/img/schematic.jpg)
 
 
-This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of Raspberry Pi uses 3.3V, however the chip DS1307 works at 5V, so this circuit will be needed. In the schematic above, **Q1** and **Q2** are N-Channel MOSFET [2N7002A](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/AN10441.pdf)
+This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of Raspberry Pi uses 3.3V, however the chip DS1307 works at 5V, so this circuit will be needed. In the schematic above, **Q1** and **Q2** are N-Channel MOSFET [2N7002A](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/AN10441.pdf)
 
 
 
@@ -79,7 +79,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 |Raspberry Pi|Pi RTC(DS1307)|
 |---|---|
-|![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![](https://github.com/SeeedDocument/Pi_RTC-DS1307/raw/master/img/thumbnail.jpg)|
+|![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![](https://files.seeedstudio.com/wiki/Pi_RTC-DS1307/img/thumbnail.jpg)|
 |<a href="https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html" target="_blank">Get One Now</a>|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|
 
 
@@ -118,7 +118,7 @@ sudo shutdown -h now
 
 - **Step 3. Insert the HAT to Raspberry Pi**
 
-![](https://github.com/SeeedDocument/Pi_RTC-DS1307/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Pi_RTC-DS1307/img/connect.jpg)
 
 
 Please make sure plug the pin 1 of this hat into the pin 1 of raspberry GPIO, just like the picture above.
@@ -183,7 +183,7 @@ hwclock --help
 
 - **[http]** [Seeed Pi RTC Library](https://github.com/Seeed-Studio/pi-hats)
 
-- **[PDF]** [Datasheet DS1307](https://github.com/SeeedDocument/Pi_RTC-DS1307/raw/master/res/DS1307.pdf)
+- **[PDF]** [Datasheet DS1307](https://files.seeedstudio.com/wiki/Pi_RTC-DS1307/res/DS1307.pdf)
 
 
 ## Project

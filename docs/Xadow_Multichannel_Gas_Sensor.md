@@ -7,11 +7,11 @@ prodimagename: Xadow_-_Multichannel_Gas_Sensor_photo.jpg
 surveyurl: https://www.research.net/r/Xadow_Multichannel_Gas_Sensor
 sku:  101020085
 ---
-![](https://github.com/SeeedDocument/Xadow_Multichannel_Gas_Sensor/raw/master/img/Xadow_-_Multichannel_Gas_Sensor_photo.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Multichannel_Gas_Sensor/img/Xadow_-_Multichannel_Gas_Sensor_photo.jpg)
 
 Xadow – Multichannel Gas sensor is a very small sensor board with a compact MOS sensor, MiCS-6814.The MiCS-6814 is a robust MEMS sensor for the detection of pollution from automobile exhausts and foragricultural/industrial odors. This sensor board has two standard Xadow interfaces. It is very easy to use with [Xadow - Main Board.](http://wiki.seeedstudio.com/Xadow_Main_Board)
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-Multichannel-Gas-Sensor-p-2459.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-Multichannel-Gas-Sensor-p-2459.html)
 
 ## Feature
 ---
@@ -23,7 +23,7 @@ Xadow – Multichannel Gas sensor is a very small sensor board with a compact MO
 
 ## Block Diagram
 
-![](https://github.com/SeeedDocument/Xadow_Multichannel_Gas_Sensor/raw/master/img/Xadow_-_Multichannel_Gas_Sensor_block_diagram.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Multichannel_Gas_Sensor/img/Xadow_-_Multichannel_Gas_Sensor_block_diagram.jpg)
 
 ## Electrical Characteristics
 ---
@@ -47,7 +47,7 @@ Xadow – Multichannel Gas sensor is a very small sensor board with a compact MO
 |Typical CO detection range	|FS|	-	|1|	1000|	ppm|
 |Sensitivity factor	|SR|	-|	1.2|	50|	-|
 
-![](https://github.com/SeeedDocument/Xadow_Multichannel_Gas_Sensor/raw/master/img/Red_sensor.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Multichannel_Gas_Sensor/img/Red_sensor.jpg)
 
 **Performance OX sensor**
 |Characteristic OX sensor	|Symbol|	Typ	|Min	|Max	|Unit|
@@ -56,7 +56,7 @@ Xadow – Multichannel Gas sensor is a very small sensor board with a compact MO
 |Typical NO2 detection range|	FS|	-	|0.05|	10|	ppm|
 |Sensitivity factor	|SR	|-|	2	|-	|-|
 
-![](https://github.com/SeeedDocument/Xadow_Multichannel_Gas_Sensor/raw/master/img/OX_sensor.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Multichannel_Gas_Sensor/img/OX_sensor.jpg)
 
 **Performance NH3 sensor**
 |Characteristic NH3 sensor|	Symbol	|Typ|	Min|	Max|	Unit|
@@ -65,11 +65,11 @@ Xadow – Multichannel Gas sensor is a very small sensor board with a compact MO
 |Typical NH3 detection range|	FS	|-	|1	|300|	ppm|
 |Sensitivity factor|	SR|-	|1.5|	15|	-|
 
-![](https://github.com/SeeedDocument/Xadow_Multichannel_Gas_Sensor/raw/master/img/NH3_sensor.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Multichannel_Gas_Sensor/img/NH3_sensor.jpg)
 
 ## Pin Definition
 ---
-![](https://github.com/SeeedDocument/Xadow_Multichannel_Gas_Sensor/raw/master/img/Xadow_Pins.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Multichannel_Gas_Sensor/img/Xadow_Pins.jpg)
 
 ## Demonstration
 
@@ -77,7 +77,7 @@ You can get start with [Xadow - Main Board](http://wiki.seeedstudio.com/Xadow_Ma
 
 **Hardware Installation: **
 
-![](https://github.com/SeeedDocument/Xadow_Multichannel_Gas_Sensor/raw/master/img/Xadow_-_Mutichannel_Gas_Sensor_connect_to_Xadow.JPG)
+![](https://files.seeedstudio.com/wiki/Xadow_Multichannel_Gas_Sensor/img/Xadow_-_Mutichannel_Gas_Sensor_connect_to_Xadow.JPG)
 
 1) Connect Xadow - Multichannel Gas Sensor to [Xadow - Main Board](http://wiki.seeedstudio.com/Xadow_Main_Board). Do not forget to install Xadow
 Driver. Note: when connect Xadow - Multichannel Gas Sensor to [Xadow - Main Board](http://wiki.seeedstudio.com/Xadow_Main_Board), you should concern aboutthe connection direction. The connection method is that the unfilled corner of one xadow moduleneed to connect to the right angle of another module(see four corners of each xadow module).
@@ -167,7 +167,7 @@ Arduino environment, and select the correct serial port [Xadow - Main Board](htt
 
 By opening the serial monitor, you can see the raw data read from sensor.
 
-![](https://github.com/SeeedDocument/Xadow_Multichannel_Gas_Sensor/raw/master/img/Mutichannel_Gas_Sensor_XadowPrint.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Multichannel_Gas_Sensor/img/Mutichannel_Gas_Sensor_XadowPrint.jpg)
 
 
 ## Schematic Online Viewer
@@ -178,9 +178,9 @@ By opening the serial monitor, you can see the raw data read from sensor.
 
 ## Resources
 ---
-- [Xadow - Multichannel Gas Sensor v1.0 sch](https://github.com/SeeedDocument/Xadow_Multichannel_Gas_Sensor/raw/master/res/Xadow_-_Multichannel_Gas_Sensor_v1.0_sch.pdf)
-- [Xadow - Multichannel Gas Sensor eagle files](https://github.com/SeeedDocument/Xadow_Multichannel_Gas_Sensor/raw/master/res/Xadow_-_Multichannel_Gas_Sensor_eagle_files.zip)
-- [MiCS-6814 Datasheet](https://github.com/SeeedDocument/Xadow_Multichannel_Gas_Sensor/raw/master/res/MiCS-6814_Datasheet.pdf)
+- [Xadow - Multichannel Gas Sensor v1.0 sch](https://files.seeedstudio.com/wiki/Xadow_Multichannel_Gas_Sensor/res/Xadow_-_Multichannel_Gas_Sensor_v1.0_sch.pdf)
+- [Xadow - Multichannel Gas Sensor eagle files](https://files.seeedstudio.com/wiki/Xadow_Multichannel_Gas_Sensor/res/Xadow_-_Multichannel_Gas_Sensor_eagle_files.zip)
+- [MiCS-6814 Datasheet](https://files.seeedstudio.com/wiki/Xadow_Multichannel_Gas_Sensor/res/MiCS-6814_Datasheet.pdf)
 - [Arduino Library & Grove/Xadow firmware](https://github.com/Seeed-Studio/Mutichannel_Gas_Sensor)
 
 ## Tech Support

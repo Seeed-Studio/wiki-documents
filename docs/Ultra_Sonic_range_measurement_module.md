@@ -7,7 +7,7 @@ prodimagename:  Mini_Soldering_Iron_product_view.jpg
 surveyurl: https://www.research.net/r/Ultra_Sonic_range_measurement_module
 sku:     101990004
 ---
-![](https://github.com/SeeedDocument/Ultra_Sonic_range_measurement_module/raw/master/img/front.jpg)
+![](https://files.seeedstudio.com/wiki/Ultra_Sonic_range_measurement_module/img/front.jpg)
 
 Seeed ultrasonic sensor is non-contact distance measurement module, which is also compatible with electronic brick.
 It’s designed for easy modular project
@@ -82,7 +82,7 @@ A short ultrasonic pulse is transmitted at the time 0, reflected by an object. T
 
 | Seeeduino V4.2 | Base Shield| Ultra_Sonic_range_measurement_module |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Ultra_Sonic_range_measurement_module/raw/master/img/45d_small.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Ultra_Sonic_range_measurement_module/img/45d_small.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/ultra-sonic-range-measurement-module-p-626.html?cPath=144_149)|
 
 - **Step 2.** Connect  Ultra_Sonic_range_measurement_module to port **D2** of Grove-Base Shield.

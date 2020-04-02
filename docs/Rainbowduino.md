@@ -24,14 +24,14 @@ The Rainbowduino series is an Arduino compatible controller board with professio
 
 ##   Rainbowduino platform
 
-|[![](https://github.com/SeeedDocument/Rainbowduino/raw/master/img/RAINBOW-Rainbowduino_LRG.jpg)](/Rainbowduino_LED_driver_platform-ATmega328 "Rainbowduino LED driver platform - Atmega 328")|[![](https://github.com/SeeedDocument/Rainbowduino/raw/master/img/Rainbowduino_V3.0.jpg)](/Rainbowduino_v3.0 "Rainbowduino v3.0")|![](https://github.com/SeeedDocument/Rainbowduino/raw/master/img/Rainbowshield.jpg)|
+|[![](https://files.seeedstudio.com/wiki/Rainbowduino/img/RAINBOW-Rainbowduino_LRG.jpg)](/Rainbowduino_LED_driver_platform-ATmega328 "Rainbowduino LED driver platform - Atmega 328")|[![](https://files.seeedstudio.com/wiki/Rainbowduino/img/Rainbowduino_V3.0.jpg)](/Rainbowduino_v3.0 "Rainbowduino v3.0")|![](https://files.seeedstudio.com/wiki/Rainbowduino/img/Rainbowshield.jpg)|
 |:---:|:---:|:---:|
 |[Rainbowduino LED driver platform - Atmega 328](/Rainbowduino_LED_driver_platform-ATmega328 "Rainbowduino_LED_driver_platform-ATmega328")<br><font color="red">Not available now</font>| [Rainbowduino v3.0](/Rainbowduino_v3.0 "Rainbowduino v3.0")| [Rainbowduino Extension Board v0.9b](/Rainbowduino_Extension_Board_v0.9b "Rainbowduino Extension Board v0.9b")|
 
 
 ##   Rainbow Cube
 
-|[![](https://github.com/SeeedDocument/Rainbowduino/raw/master/img/Rainbowcuben.jpg)](/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible "Rainbow Cube kit - RGB 4*4*4 (Rainbowduino Compatible)")|[![](https://github.com/SeeedDocument/Rainbowduino/raw/master/img/Rainbow_Cube_Assembled.jpg)](/Rainbow_Cube_Kit_Acrylic_Harness "Rainbow Cube Kit Acrylic Harness")|![](https://github.com/SeeedDocument/Rainbowduino/raw/master/img/acrycubebox.jpg)|
+|[![](https://files.seeedstudio.com/wiki/Rainbowduino/img/Rainbowcuben.jpg)](/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible "Rainbow Cube kit - RGB 4*4*4 (Rainbowduino Compatible)")|[![](https://files.seeedstudio.com/wiki/Rainbowduino/img/Rainbow_Cube_Assembled.jpg)](/Rainbow_Cube_Kit_Acrylic_Harness "Rainbow Cube Kit Acrylic Harness")|![](https://files.seeedstudio.com/wiki/Rainbowduino/img/acrycubebox.jpg)|
 |:---:|:---:|:---:|
 |[Rainbow Cube kit - RGB 4*4*4 (Rainbowduino Compatible)](/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible "Rainbow Cube kit - RGB 4*4*4 (Rainbowduino Compatible)")|[Rainbow_Cube_Kit_Acrylic_Harness](/Rainbow_Cube_Kit_Acrylic_Harness "Rainbow_Cube_Kit_Acrylic_Harness")|[Rainbow Cube Kit Acrylic Harness](/Rainbow_Cube_Kit_Acrylic_Harness "Rainbow Cube Kit Acrylic Harness")</font>
 

@@ -7,13 +7,13 @@ prodimagename:  G18_Water_Flow_Sensor.jpg
 surveyurl: https://www.research.net/r/G1-8_Water_Flow_Sensor
 sku:    314150001
 ---
-[![](https://github.com/SeeedDocument/G1-8_Water_Flow_Sensor/raw/master/img/G18_Water_Flow_Sensor.jpg)](http://www.seeedstudio.com/depot/G18-Water-Flow-Sensor-p-1346.html?cPath=25_32)
+[![](https://files.seeedstudio.com/wiki/G1-8_Water_Flow_Sensor/img/G18_Water_Flow_Sensor.jpg)](http://www.seeedstudio.com/depot/G18-Water-Flow-Sensor-p-1346.html?cPath=25_32)
 
 Water flow sensor consists of a plastic valve body, a water rotor, and a hall-effect sensor. When water flows through the rotor, rotor rolls. Its speed changes with different rate of flow. The hall-effect sensor outputs the corresponding pulse signal. This one is suitable to detect flow in water dispenser or coffee machine.
 
 We have a comprehensive line of water flow sensors in different diameters. Check them out to find the one that meets your need most.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/G1-8-Water-Flow-Sensor-p-1346.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/G1-8-Water-Flow-Sensor-p-1346.html)
 
 ##  Features
 
@@ -103,7 +103,7 @@ The yellow wire will need to be connected to a 10k pull up resistor.and then to 
 
 Here is a fritzing diagram I made to show you how to wire it all up.
 
-![](https://github.com/SeeedDocument/G1-8_Water_Flow_Sensor/raw/master/img/Reading_liquid_flow_rate_with_an_Arduino.jpg)
+![](https://files.seeedstudio.com/wiki/G1-8_Water_Flow_Sensor/img/Reading_liquid_flow_rate_with_an_Arduino.jpg)
 
 Once you have it wired up you will need to upload the following code to your Seeeduino. Once it is uploaded and you have some fluid flowing through the Water Flow Sensor, you can open the serial monitor and it will display the flow rate, refreshing every second.
 
@@ -154,7 +154,7 @@ You can refer our forum for more details about [Reading Water Flow rate with Wat
 
 The external diameter of thread the connections use is 1.4mm.
 
-![](https://github.com/SeeedDocument/G1-8_Water_Flow_Sensor/raw/master/img/Wfs-wiring.jpg)
+![](https://files.seeedstudio.com/wiki/G1-8_Water_Flow_Sensor/img/Wfs-wiring.jpg)
 
 ##  Output Table
 
@@ -184,7 +184,7 @@ Pulse frequency (Hz) in Horizontal Test= 7.5Q, Q is flow rate in L/min. (Results
 
 ##  Resource
 
-*   [Water flow sensor datasheet.pdf](https://github.com/SeeedDocument/G1-8_Water_Flow_Sensor/raw/master/res/Water_flow_sensor_datasheet.pdf)
+*   [Water flow sensor datasheet.pdf](https://files.seeedstudio.com/wiki/G1-8_Water_Flow_Sensor/res/Water_flow_sensor_datasheet.pdf)
 
 *   [Reading Water Flow rate with Water Flow Sensor](http://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632)
 

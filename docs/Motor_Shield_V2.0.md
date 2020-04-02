@@ -150,7 +150,7 @@ Here we will show you how this Motor Shield works via a simple demo. First of al
 - Plug Motor Shield into Arduino.
 - Connect Arduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Motor_Shield_V2.0/raw/master/image/DC%20connection.jpg)
+![](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/image/DC%20connection.jpg)
 
 #### Software
 
@@ -374,14 +374,14 @@ A3: Here is the connection.
 
 ## Resources
 -------------------
-- **[Eagle]** [ Motor Shield V2.0 Eagle File ](https://github.com/SeeedDocument/Motor_Shield_V2.0/raw/master/resource/Motor_Shield_Eagle_File.zip)
-- **[Eagle]** [Motor shield V2.1 Eagle File ](https://github.com/SeeedDocument/Motor_Shield_V2.0/raw/master/resource/Motor_shield_2.1.rar)
-- **[PDF]** [Motor Shield 2.0 schematics](https://github.com/SeeedDocument/Motor_Shield_V2.0/raw/master/resource/Motor_shield_2.0.pdf)
-- **[PDF]** [Motor Shield 2.1 schematics](https://github.com/SeeedDocument/Motor_Shield_V2.0/raw/master/resource/Motor_shield_2.1.pdf)
-- **[PDF]** [Motor Shield 2.2 schematics](https://github.com/SeeedDocument/Motor_Shield_V2.0/raw/master/resource/Motor%20Shield%20v2.2.pdf)
+- **[Eagle]** [ Motor Shield V2.0 Eagle File ](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/resource/Motor_Shield_Eagle_File.zip)
+- **[Eagle]** [Motor shield V2.1 Eagle File ](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/resource/Motor_shield_2.1.rar)
+- **[PDF]** [Motor Shield 2.0 schematics](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/resource/Motor_shield_2.0.pdf)
+- **[PDF]** [Motor Shield 2.1 schematics](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/resource/Motor_shield_2.1.pdf)
+- **[PDF]** [Motor Shield 2.2 schematics](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/resource/Motor%20Shield%20v2.2.pdf)
 - **[Library]** [Motor Shield Library](https://github.com/Seeed-Studio/SeeedMotorShieldV2/archive/master.zip)
-- **[Datasheet]** [L298 Datasheet](https://github.com/SeeedDocument/Motor_Shield_V2.0/raw/master/resource/L298.pdf)
-- **[Datasheet]** [78M05 Datasheet](https://github.com/SeeedDocument/Motor_Shield_V2.0/raw/master/resource/78M05_datasheet.pdf)
+- **[Datasheet]** [L298 Datasheet](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/resource/L298.pdf)
+- **[Datasheet]** [78M05 Datasheet](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/resource/78M05_datasheet.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

@@ -7,11 +7,11 @@ prodimagename: Xadowm0.jpg
 surveyurl: https://www.research.net/r/xadow_m0
 sku:  102040001
 ---
-![](https://github.com/SeeedDocument/Xadow_M0/raw/master/img/Xadowm0.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_M0/img/Xadowm0.jpg)
 
 Xadow - M0 is an mbed enabled development board with [Xadow]() form factor. [Xadow]() is a series of flexible electronic modules including sensors, displays and etc. Several Xadow modules can be cascaded to create interactive objects.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-M0-mbed-enabled-ARM-Cortex-M0-board-for-Rapid-Prototyping-p-1880.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-M0-mbed-enabled-ARM-Cortex-M0-board-for-Rapid-Prototyping-p-1880.html)
 
 ## Features
 ---
@@ -41,17 +41,17 @@ Xadow - M0 is an mbed enabled development board with [Xadow]() form factor. [Xad
 
 ## Pinout
 ---
-![](https://github.com/SeeedDocument/Xadow_M0/raw/master/img/Xadow_M0_Pinout.png)
+![](https://files.seeedstudio.com/wiki/Xadow_M0/img/Xadow_M0_Pinout.png)
 
 ## Get Started
 ---
 1.Click this link to signup or login mbed, then import xadow_m0_blinky program into mbed online compiler.
 
-![](https://github.com/SeeedDocument/Xadow_M0/raw/master/img/Import_xadow_m0_blinky.png)
+![](https://files.seeedstudio.com/wiki/Xadow_M0/img/Import_xadow_m0_blinky.png)
 
 2.On mbed online IDE, click "Compile" (or use CTRL + D) to compile the code and download a binary file.
 
-![](https://github.com/SeeedDocument/Xadow_M0/raw/master/img/Compile_mbed_program.png)
+![](https://files.seeedstudio.com/wiki/Xadow_M0/img/Compile_mbed_program.png)
 
 3.Connect the board to the computer and **long press the button**, a USB drive named **CRP DISABLD** will show up.
 
@@ -118,7 +118,7 @@ Which should handle spaces in the file path and only uses the first file supplie
 
 ## Resource
 ---
-- [File:Xadow M0 Schematic.zip](https://github.com/SeeedDocument/Xadow_M0/raw/master/res/Xadow_M0_Schematic.zip)
+- [File:Xadow M0 Schematic.zip](https://files.seeedstudio.com/wiki/Xadow_M0/res/Xadow_M0_Schematic.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

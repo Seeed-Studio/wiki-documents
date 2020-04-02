@@ -7,13 +7,13 @@ prodimagename: I2CMotorDriver-2.jpg
 surveyurl: https://www.research.net/r/Grove-I2C_Motor_Driver_V1-2
 sku:  105020001
 ---
-![](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.2/raw/master/img/I2CMotorDriver-2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/img/I2CMotorDriver-2.jpg)
 
 The Grove I2C motor driver is a new addition to the Grove series with the same easy-to-use interface. Its heart is a dual channel H-bridge driver chip（L298N）that can handle current up to 2A per channel, controlled by an Atmel ATmega8L which handles the I2C communication with for example an Arduino. Both motors can be driven simultaneously while set to a different speed and direction. It can power two brushed DC motors or one 4-wire two-phase stepper motor. It requires a 6V to 15V power supply to power the motor and has an onboard 5V voltage regulator which can power the I2C bus and the Arduino(selectable by jumper). All driver lines are diode protected from back EMF.
 
 The easy software interface is not the only easy-to-use feature because the Grove I2C motor driver is designed to get you up and running in no time. It features a LED for power and four LED's to indicate if and to which direction each motor is running. Screw terminals facilitate motor and power connections, and the Grove system plug and I2C interface enables you to daisy-chain the driver with many other devices.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/twig-i2c-motor-driver-p-907.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/twig-i2c-motor-driver-p-907.html)
 
 ##   Version Tracker
 ---
@@ -108,7 +108,7 @@ The easy software interface is not the only easy-to-use feature because the Grov
 
 ##  Interface Function
 ---
-![](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.2/raw/master/img/I2CMotorDriver-1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/img/I2CMotorDriver-1.jpg)
 
 **78M05 IC:** 5v voltage regulator
 
@@ -139,7 +139,7 @@ Now, let's use the I2C Motor Driver to control two DC motors or a stepper rotati
 
 *   Set the address by dial switch as a new function added to the new I2C Motor Driver.
 
-![](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.2/raw/master/img/I2CMotorDriver-9.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/img/I2CMotorDriver-9.jpg)
 
 *   Then keep the address setup in the program is same to the address setup on the I2C motor driver. The default address setup in the program is 0x0f.
 ```
@@ -148,7 +148,7 @@ Now, let's use the I2C Motor Driver to control two DC motors or a stepper rotati
 ###
 How to drive 2 DC motors
 
-![](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.2/raw/master/img/I2CMotorDriver-4.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/img/I2CMotorDriver-4.jpg)
 
 <span style="color:red">**Note:**
 
@@ -226,7 +226,7 @@ void loop()  {
 
 This connected 4-wire stepper will rotate, you can adjust the rotate speed or step number in your Arduino program. You can also use some other stepper libraries to control it, you can download all the demo code in the [Resource](/Grove-I2C_Motor_Driver_V1.2#Resources).
 
-![](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.2/raw/master/img/2.gif)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/img/2.gif)
 
 ##  Function Reference
 ---
@@ -278,15 +278,15 @@ _Description: Adjust the direction and speed together of Motors._
 
 ##   Resources
 ---
-*   [Grove - I2C Motor Driver Eagle File](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.2/raw/master/res/Grove-I2C_Motor_Driver_Source_File.zip)
+*   [Grove - I2C Motor Driver Eagle File](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/res/Grove-I2C_Motor_Driver_Source_File.zip)
 
-*   [I2C Motor DriverV1.2 Demo Code](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.2/raw/master/res/I2CMotorDriver12Demo.zip)
+*   [I2C Motor DriverV1.2 Demo Code](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/res/I2CMotorDriver12Demo.zip)
 
-*   [L298 Datasheet ](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.2/raw/master/res/L298datasheet.pdf)
+*   [L298 Datasheet ](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/res/L298datasheet.pdf)
 
-*   [78M05 Datssheet ](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.2/raw/master/res/ST_78M05DataSheet.pdf)
+*   [78M05 Datssheet ](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/res/ST_78M05DataSheet.pdf)
 
-*   [File:Burn Firmware for Atmega8 using ISP](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.2/raw/master/res/Burn_firmware_for_Atmega8_using_ISP.zip)
+*   [File:Burn Firmware for Atmega8 using ISP](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/res/Burn_firmware_for_Atmega8_using_ISP.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

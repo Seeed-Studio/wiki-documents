@@ -116,7 +116,7 @@ Due to the influence of the capacitance, the module can only output the bass sig
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
-![](https://github.com/SeeedDocument/Grove-Speaker/raw/master/img/Speaker.png)
+![](https://files.seeedstudio.com/wiki/Grove-Speaker/img/Speaker.png)
 
 Upload the program to your Arduino/Seeeduino.
 
@@ -138,7 +138,7 @@ Resources
 -   [Grove\_-\_Speaker\_v1.0\_brd.pdf](https://raw.githubusercontent.com/SeeedDocument/Grove-Speaker/master/res/Grove-Speaker_v1.0_brd.pdf)
 -   [Grove\_-\_Speaker\_v1.0\_sch.pdf](https://raw.githubusercontent.com/SeeedDocument/Grove-Speaker/master/res/Grove-Speaker_v1.0_sch.pdf)
 -   [LM386 Low Voltage Audio Power Amplifier Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Speaker/master/res/LM386_Low_Voltage_Audio_Power_Amplifier_Datasheet.pdf)
--   [CodeCraft Code](https://github.com/SeeedDocument/Grove-Speaker/raw/master/res/Speaker.zip)
+-   [CodeCraft Code](https://files.seeedstudio.com/wiki/Grove-Speaker/res/Speaker.zip)
 
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Speaker -->

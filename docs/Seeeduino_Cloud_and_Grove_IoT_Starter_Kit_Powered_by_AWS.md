@@ -58,39 +58,39 @@ In this section, we will show how to config the AWS IoT Service:
 
 - Step 3. After you load the IoT console, click on “Get Started”.
 
-![](https://github.com/SeeedDocument/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/Get%20started.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/Get%20started.png)
 
 - Step 4. Click on “Manage” on the left side menu.and Click on “Register a thing”.
 - Step 5. Enter a name, whatever you like, in the original tutorial it was called temperature, then click "create" ("Register a thing" image).
 
-![](https://github.com/SeeedDocument/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/Register%20a%20thing.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/Register%20a%20thing.png)
 
 - Step 6. Click on the thing that you create.
 - Step 7. Click on Security on the left menu and click on Create certificate.
 
-![](https://github.com/SeeedDocument/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/Thing%20-%20Security.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/Thing%20-%20Security.png)
 
 - Step 8. It will show three download links which are correspond to different key files or certificate. Download these file, we need them later. Also make sure to download the root CA (above the "Activate" button"). Click on Activate and then click on Attach a policy and then on Create a policy.
 
-![](https://github.com/SeeedDocument/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/Certificate%20created.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/Certificate%20created.png)
 
 - Step 9. Name your policy however you want, we named our policy1. To start, you can use iot:* as the Action and *as the Resource ARN. Check mark Allow and click create.
 For future reference, the * for actions and resource ARN allows you to do all actions on all devices. The best practice for production policies is to make them more specific.
 
-![](https://github.com/SeeedDocument/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/Create%20a%20policy.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/Create%20a%20policy.png)
 
 - Step 10. Now that the policy has been created, click on Certificates on the left side.
 Click on the certificate we previously created.
 
-![](https://github.com/SeeedDocument/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/Certificates.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/Certificates.png)
 
 - Step 11. Click on the Actions button and pick Attach policy from the menu.
 
-![](https://github.com/SeeedDocument/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/Certificate%20Actions.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/Certificate%20Actions.png)
 
 - Step 12. Pick the policy we previously created and click Attach.
 
-![](https://github.com/SeeedDocument/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/Attach%20policy.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/Attach%20policy.png)
 
 ## Set up your Seeeduino Cloud (Arduino Yun)
 -----------------------------------------

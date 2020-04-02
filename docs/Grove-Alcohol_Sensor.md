@@ -180,7 +180,7 @@ According to the figure, we can see that the minimum concentration we can test i
 
 - [Grove-Alcohol Sensor Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-Alcohol_Sensor/master/res/Twig_-_Alcohol_Sensor_Eagle_Files.zip)
 - [Grove-Alcohol Sensor v1.2 Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-Alcohol_Sensor/master/res/Grove-Alcohol_Sensor_sch_pcbv1.2.zip)
-- [Schematics in PDF Format](https://github.com/SeeedDocument/Grove-Alcohol_Sensor/raw/master/res/Grove%20-%20Alcohol%20Sensor%20v1.2.pdf)
+- [Schematics in PDF Format](https://files.seeedstudio.com/wiki/Grove-Alcohol_Sensor/res/Grove%20-%20Alcohol%20Sensor%20v1.2.pdf)
 - [How to Choose A Gas Sensor](/How_to_Chose_A_Gas_Sensor)
 - [MQ303A](https://raw.githubusercontent.com/SeeedDocument/Grove-Alcohol_Sensor/master/res/MQ303A.pdf)
 

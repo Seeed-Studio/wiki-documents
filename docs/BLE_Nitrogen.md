@@ -22,7 +22,7 @@ The [Nordic Semiconductor Infocenter](http://infocenter.nordicsemi.com/) contain
 
 It is strongly recommended that you update your development environment with the latest [SDK](https://www.zephyrproject.org/downloads/tools) since new functionality is tested against the latest releases.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/BLE-Nitrogen-p-2711.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/BLE-Nitrogen-p-2711.html)
 
 
 ##Features

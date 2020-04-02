@@ -7,11 +7,11 @@ prodimagename:  Solar_Charger_Shield_v2.2.jpg
 surveyurl: https://www.research.net/r/Solar_Charger_Shield_V2-2
 sku: 106990020
 ---
-![](https://github.com/SeeedDocument/Solar_Charger_Shield_V2.2/raw/master/img/Solar_Charger_Shield_v2.2.jpg)
+![](https://files.seeedstudio.com/wiki/Solar_Charger_Shield_V2.2/img/Solar_Charger_Shield_v2.2.jpg)
 
 The solar charger is a stackable shield to Arduino compatible platforms, enables adaptive battery power and act as energy harvester for in-field charging. You may use various batteries that has the voltage of 3.0V-4.2V to shift up for 5V output, or put on Li-ion battery and solar panel to form an autonomous sensor unit. The maximum current provided by the board can get up to 600mA. An usb connector is also useful to charge the battery.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Solar-Charger-Shield-v2.2-p-2391.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Solar-Charger-Shield-v2.2-p-2391.html)
 
 ##   Features
 ---
@@ -70,7 +70,7 @@ The solar charger is a stackable shield to Arduino compatible platforms, enables
 ---
 1) Connect the Solar panel and the Li-Pol battery in their designated places as shown in the figure below:
 
-![](https://github.com/SeeedDocument/Solar_Charger_Shield_V2.2/raw/master/img/Solar_Charger_Shield_v2.2_inputs.jpg)
+![](https://files.seeedstudio.com/wiki/Solar_Charger_Shield_V2.2/img/Solar_Charger_Shield_v2.2_inputs.jpg)
 
 Solar_Charger_Shield_v2.2_inputs.jpg
 
@@ -78,13 +78,13 @@ Solar_Charger_Shield_v2.2_inputs.jpg
 
 3) Ensure that the charging (Red) light glows as shown in the figure below:
 
-![](https://github.com/SeeedDocument/Solar_Charger_Shield_V2.2/raw/master/img/Solar_Charger_Shield_v2.2_charging.jpg)
+![](https://files.seeedstudio.com/wiki/Solar_Charger_Shield_V2.2/img/Solar_Charger_Shield_v2.2_charging.jpg)
 
 4) When the battery is fully charged, the green light glows.
 
 5) Then you can mount the shield on to the arduino. As you power up the solar charger shield, it should power up the arduino as shown in the figure below:
 
-![](https://github.com/SeeedDocument/Solar_Charger_Shield_V2.2/raw/master/img/Solar-Charger-Shield-v2.2_power-arduino.jpg)
+![](https://files.seeedstudio.com/wiki/Solar_Charger_Shield_V2.2/img/Solar-Charger-Shield-v2.2_power-arduino.jpg)
 
 ##   Testing the solar shield with a simple arduino program
 ---
@@ -92,7 +92,7 @@ This section will teach you how to measure the voltage of Lipo Battery.
 
 In order to connect the VBAT pin to Analog pin A0, so that we can read the data from A0 pin, we need to  Short R7 using a 0ohm resistor as shown in the figure
 
-![](https://github.com/SeeedDocument/Solar_Charger_Shield_V2.2/raw/master/img/Solar_Charger_Shield_v2.2_shortR7.jpg)
+![](https://files.seeedstudio.com/wiki/Solar_Charger_Shield_V2.2/img/Solar_Charger_Shield_v2.2_shortR7.jpg)
 
 ###   Programming Example
 
@@ -148,12 +148,12 @@ void loop() {
 
 ##  Resources
 ---
-- [Solar Charger Shield v2.2 sch&amp;pcb](https://github.com/SeeedDocument/Solar_Charger_Shield_V2.2/raw/master/res/Solar_Charger_Shield_v2.2_sch_pcb.zip)
+- [Solar Charger Shield v2.2 sch&amp;pcb](https://files.seeedstudio.com/wiki/Solar_Charger_Shield_V2.2/res/Solar_Charger_Shield_v2.2_sch_pcb.zip)
 
-- [Solar Charger Shield v2.2.pdf](https://github.com/SeeedDocument/Solar_Charger_Shield_V2.2/raw/master/res/Solar%20Charger%20Shield%20v2.2.pdf)
-- [DSE-CN3065.pdf](https://github.com/SeeedDocument/Solar_Charger_Shield_V2.2/raw/master/res/DSE-CN3065.pdf)
+- [Solar Charger Shield v2.2.pdf](https://files.seeedstudio.com/wiki/Solar_Charger_Shield_V2.2/res/Solar%20Charger%20Shield%20v2.2.pdf)
+- [DSE-CN3065.pdf](https://files.seeedstudio.com/wiki/Solar_Charger_Shield_V2.2/res/DSE-CN3065.pdf)
 
-- [ETA1036.pdf](https://github.com/SeeedDocument/Solar_Charger_Shield_V2.2/raw/master/res/ETA1036.pdf)
+- [ETA1036.pdf](https://files.seeedstudio.com/wiki/Solar_Charger_Shield_V2.2/res/ETA1036.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

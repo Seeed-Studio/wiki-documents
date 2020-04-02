@@ -15,7 +15,7 @@ Seeeduino is an Arduino compatible board. It is 100% compatible with the Arduino
 
 On the hardware part, remarkable changes are taken to improve the flexibility and user experience.  
 
-|![](https://github.com/SeeedDocument/Seeeduino/raw/master/img/Seeeduinov2211_02.jpg)|![](https://github.com/SeeedDocument/Seeeduino/raw/master/img/Seeeduino_V3.0_Atmega_328P_01.jpg) |![](https://github.com/SeeedDocument/Seeeduino/raw/master/img/Seeeduino_v4_photo.jpg)|![](https://github.com/SeeedDocument/Seeeduino/raw/master/img/Seeeduino_v4_2_photo.jpg)|
+|![](https://files.seeedstudio.com/wiki/Seeeduino/img/Seeeduinov2211_02.jpg)|![](https://files.seeedstudio.com/wiki/Seeeduino/img/Seeeduino_V3.0_Atmega_328P_01.jpg) |![](https://files.seeedstudio.com/wiki/Seeeduino/img/Seeeduino_v4_photo.jpg)|![](https://files.seeedstudio.com/wiki/Seeeduino/img/Seeeduino_v4_2_photo.jpg)|
 |---|---|---|---|
 |Seeeduino_v2.21 |Seeeduino v3.0 |Seeeduino_v4.0 |Seeeduino_v4.2)|
 

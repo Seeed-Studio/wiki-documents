@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/Seeeduino_V2-2
 sku:
 tags:
 ---
-![](https://github.com/SeeedDocument/Seeeduino_V2.2/raw/master/img/Seeeduino-168p.jpg) ![](https://github.com/SeeedDocument/Seeeduino_V2.2/raw/master/img/Seeeduino_fritzing.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_V2.2/img/Seeeduino-168p.jpg) ![](https://files.seeedstudio.com/wiki/Seeeduino_V2.2/img/Seeeduino_fritzing.png)
 
 Here is the wiki page for Both Seeeduino V2.2 Atmega 168P and Seeeduino V2.2 Atmega 328P.
 

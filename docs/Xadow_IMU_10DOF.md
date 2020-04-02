@@ -8,11 +8,11 @@ surveyurl: https://www.research.net/r/xadow_IMU_10DOF
 sku:  101040004
 ---
 
-![](https://github.com/SeeedDocument/Xadow_IMU_10DOF/raw/master/img/Xadow-imu-10dof-shao.JPG)
+![](https://files.seeedstudio.com/wiki/Xadow_IMU_10DOF/img/Xadow-imu-10dof-shao.JPG)
 
 Xadow - IMU 10DOF is a combination of [Xadow - IMU 9DOF](http://wiki.seeedstudio.com/Xadow_IMU_9DOF) and [Xadow - Barometer BMP180](http://wiki.seeedstudio.com/Xadow_Barometer_BMP180).This module is base on MPU-9250 and BMP180, the MPU-9250 is a 9-axis MotionTracking device that combines a 3-axis gyroscope, 3-axis accelerometer, 3-axis magnetometer and a Digital Motion Processor(DMP), and BMP180 is a high precision,ultra-low power digital pressure sensors for consumer applications.This module is very suitable for the application of smartphones, tablets and wearable devices
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-IMU-10DOF-p-2446.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-IMU-10DOF-p-2446.html)
 
 ## Specifications
 ---
@@ -28,7 +28,7 @@ Xadow - IMU 10DOF is a combination of [Xadow - IMU 9DOF](http://wiki.seeedstudio
 
 ## Interface Function
 ---
-![](https://github.com/SeeedDocument/Xadow_IMU_10DOF/raw/master/img/Xadow-IMU_10DOF_Interface.png)
+![](https://files.seeedstudio.com/wiki/Xadow_IMU_10DOF/img/Xadow-IMU_10DOF_Interface.png)
 
 - ①：MPU-9250 I2C address select Pad(default 0x68)
 - ②：12P FPC bottom contact
@@ -39,7 +39,7 @@ We will provide an example here to show you how to use this sensor.
 
 **Hardware Installation**
 
-![](https://github.com/SeeedDocument/Xadow_IMU_10DOF/raw/master/img/Xadow-IMU_10DOF_installation.png)
+![](https://files.seeedstudio.com/wiki/Xadow_IMU_10DOF/img/Xadow-IMU_10DOF_installation.png)
 
 !!!Note
     When connecting Xadow - IMU 10DOF to Xadow - Main Board, you should concern about the connection direction. The connection method is that the unfilled corner of one Xadow module need to connect to the right angle of another module(see four corners of each Xadow module).
@@ -52,13 +52,13 @@ We will provide an example here to show you how to use this sensor.
 
 You can see :
 
-![](https://github.com/SeeedDocument/Xadow_IMU_10DOF/raw/master/img/Imu-10dof-test.png)
+![](https://files.seeedstudio.com/wiki/Xadow_IMU_10DOF/img/Imu-10dof-test.png)
 
 **Orientation of Axes**
 
 The diagram below shows the orientation of the axes of sensitivity and the polarity of rotation.
 
-![](https://github.com/SeeedDocument/Xadow_IMU_10DOF/raw/master/img/Imu-10dof-dir-axes.png)
+![](https://files.seeedstudio.com/wiki/Xadow_IMU_10DOF/img/Imu-10dof-dir-axes.png)
 
 
 ## Schematic Online Viewer
@@ -69,10 +69,10 @@ The diagram below shows the orientation of the axes of sensitivity and the polar
 
 ## Resource
 ---
-- [Xadow - IMU 10DOF v1.0 eagle file](https://github.com/SeeedDocument/Xadow_IMU_10DOF/raw/master/res/Xadow_-_IMU_10DOF_v1.0_sch_pcb.zip)
-- [IMU 10DOF library](https://github.com/SeeedDocument/Xadow_IMU_10DOF/raw/master/res/IMU_10DOF_Library.zip)
-- [BMP180 datasheet](https://github.com/SeeedDocument/Xadow_IMU_10DOF/raw/master/res/BMP180.pdf)
-- [MPU-9250 datasheet](https://github.com/SeeedDocument/Xadow_IMU_10DOF/raw/master/res/MPU-9250A_Product_Specification.pdf)
+- [Xadow - IMU 10DOF v1.0 eagle file](https://files.seeedstudio.com/wiki/Xadow_IMU_10DOF/res/Xadow_-_IMU_10DOF_v1.0_sch_pcb.zip)
+- [IMU 10DOF library](https://files.seeedstudio.com/wiki/Xadow_IMU_10DOF/res/IMU_10DOF_Library.zip)
+- [BMP180 datasheet](https://files.seeedstudio.com/wiki/Xadow_IMU_10DOF/res/BMP180.pdf)
+- [MPU-9250 datasheet](https://files.seeedstudio.com/wiki/Xadow_IMU_10DOF/res/MPU-9250A_Product_Specification.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

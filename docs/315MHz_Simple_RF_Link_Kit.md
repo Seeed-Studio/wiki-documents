@@ -7,11 +7,11 @@ prodimagename:  315M_433M.jpg
 surveyurl: https://www.research.net/r/315MHz_Simple_RF_Link_Kit
 sku:      113020001
 ---
-![](https://github.com/SeeedDocument/315MHz_Simple_RF_Link_Kit/raw/master/img/315M_433M.jpg)
+![](https://files.seeedstudio.com/wiki/315MHz_Simple_RF_Link_Kit/img/315M_433M.jpg)
 
 This kit is used for one way wireless communication at a frequency of 315MHz and includes a transmitter module and a receiver module. The Grove configuration of this kit allows for around 40 meters of transmitting distance indoors, or around 100 meters outside.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/grove-315mhz-simple-rf-link-kit-p-1061.html?cPath=139_140)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/grove-315mhz-simple-rf-link-kit-p-1061.html?cPath=139_140)
 
 ##   Features
 ---
@@ -144,7 +144,7 @@ Grove-433MHz_Simple_RF_Link_Kit
 
 **Note:** The hardware installation can refer to [the usage of the module Grove - 433MHz Simple RF Link Kit](/Grove-433MHz_Simple_RF_Link_Kit "Grove-433MHz_Simple_RF_Link_Kit").
 
-*   Download the [File: VirtualWire library](https://github.com/SeeedDocument/315MHz_Simple_RF_Link_Kit/raw/master/res/VirtualWire_Library.zip) and unzip it into the libraries file of Arduino IDE by the path: ..\arduino-1.0\libraries. Please reference [here](http://www.pjrc.com/teensy/td_libs_VirtualWire.html).
+*   Download the [File: VirtualWire library](https://files.seeedstudio.com/wiki/315MHz_Simple_RF_Link_Kit/res/VirtualWire_Library.zip) and unzip it into the libraries file of Arduino IDE by the path: ..\arduino-1.0\libraries. Please reference [here](http://www.pjrc.com/teensy/td_libs_VirtualWire.html).
 *   Upload the below code for transmitter module:
 ```
 #include <VirtualWire.h>
@@ -211,7 +211,7 @@ void loop()
 
 *   Open the serial monitor of receiver module to see the result.
 
-![](https://github.com/SeeedDocument/315MHz_Simple_RF_Link_Kit/raw/master/img/Receive_Data.jpg)
+![](https://files.seeedstudio.com/wiki/315MHz_Simple_RF_Link_Kit/img/Receive_Data.jpg)
 
 This is just a simple transmitter and receiver instance as a reference.
 
@@ -235,9 +235,9 @@ This is just a simple transmitter and receiver instance as a reference.
 
 ##   Resources
 
-*   [File:VirtualWire Library.zip](https://github.com/SeeedDocument/315MHz_Simple_RF_Link_Kit/raw/master/res/VirtualWire_Library.zip)
+*   [File:VirtualWire Library.zip](https://files.seeedstudio.com/wiki/315MHz_Simple_RF_Link_Kit/res/VirtualWire_Library.zip)
 
-*   [File:315MHz_demo.zip](https://github.com/SeeedDocument/315MHz_Simple_RF_Link_Kit/raw/master/res/315MHz_Demo.zip)
+*   [File:315MHz_demo.zip](https://files.seeedstudio.com/wiki/315MHz_Simple_RF_Link_Kit/res/315MHz_Demo.zip)
 
 *   [VirtualWire Documentation](http://www.open.com.au/mikem/arduino/VirtualWire.pdf)
 

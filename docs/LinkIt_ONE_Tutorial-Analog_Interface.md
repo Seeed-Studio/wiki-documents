@@ -26,17 +26,17 @@ In the previous sections, we learned how to control the circuit's input and outp
 
 **Schematic**
 
-![](https://github.com/SeeedDocument/LinkIt_ONE_Tutorial-Analog_Interface/raw/master/img/LinkItONE_Kit_6_1.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIt_ONE_Tutorial-Analog_Interface/img/LinkItONE_Kit_6_1.jpg)
 
 **Connection**
 
-![](https://github.com/SeeedDocument/LinkIt_ONE_Tutorial-Analog_Interface/raw/master/img/LinkItONE_Kit_6_2.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIt_ONE_Tutorial-Analog_Interface/img/LinkItONE_Kit_6_2.jpg)
 
 **Code**
 
 Please click on the button below to download the code for the kit:
 
-[![](https://github.com/SeeedDocument/LinkIt_ONE_Tutorial-Analog_Interface/raw/master/img/Code_sidekick_linkit.png)](https://github.com/Seeed-Studio/Sidekick_Basic_Kit_for_LinkIt)
+[![](https://files.seeedstudio.com/wiki/LinkIt_ONE_Tutorial-Analog_Interface/img/Code_sidekick_linkit.png)](https://github.com/Seeed-Studio/Sidekick_Basic_Kit_for_LinkIt)
 
 You can unzip the file to the **Examples** folder of your Arduino IDE.
 

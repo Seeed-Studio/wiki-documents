@@ -9,7 +9,7 @@ sku: 103020193
 ---
 
 
-![](https://github.com/SeeedDocument/Grove-RS485/raw/master/img/preview.png)
+![](https://files.seeedstudio.com/wiki/Grove-RS485/img/preview.png)
 
 
 The Grove RS-485 allows your Arduino connect with RS-485 device easily, you just need to plug and play. This module is highly stable and supports error-free transmission of 500k bps.  
@@ -73,8 +73,8 @@ RS485 is cost-effective solution in serial communication, it can be used to data
 
 ## Resources
 
-- **[ZIP]** [Grove - RS485 Schematic file](https://github.com/SeeedDocument/Grove-RS485/raw/master/res/Grove%20-%20RS485.zip)
-- **[PDF]** [Max13478E Datasheet](https://github.com/SeeedDocument/Grove-RS485/raw/master/res/Max13478.pdf)
+- **[ZIP]** [Grove - RS485 Schematic file](https://files.seeedstudio.com/wiki/Grove-RS485/res/Grove%20-%20RS485.zip)
+- **[PDF]** [Max13478E Datasheet](https://files.seeedstudio.com/wiki/Grove-RS485/res/Max13478.pdf)
 
 
 

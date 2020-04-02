@@ -7,13 +7,13 @@ prodimagename: Grove_Smart_Plant_Care_Kit_530x397.jpg
 surveyurl: https://www.research.net/r/Grove_Smart_Plant_Care_Kit
 sku:  110060130
 ---
-![]( https://github.com/SeeedDocument/Grove_Smart_Plant_Care_Kit/raw/master/img/Grove_Smart_Plant_Care_Kit_530x397.jpg)
+![]( https://files.seeedstudio.com/wiki/Grove_Smart_Plant_Care_Kit/img/Grove_Smart_Plant_Care_Kit_530x397.jpg)
 
 Grove Smart Plant Care Kit is a ease-to-use and advanced tool kit for you to develop a smart system for plants.
 It favors  extensibility to achieve more applications with just a few adjustments.
 The kit implements two functions. One is to detect environment factors affecting plant growth such as soil moisture, illumination intensity, temperature and air humidity, all the data detected can be read on OLED display. Another one is to water plants automatically through the environment monitoring.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Smart-Plant-Care-Kit-for-Arduino-p-2528.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Smart-Plant-Care-Kit-for-Arduino-p-2528.html)
 
 ##  Features
 ---
@@ -59,43 +59,43 @@ Please refer to each modules' specifications:
 ---
 This kit include these modules:
 
-![]( https://github.com/SeeedDocument/Grove_Smart_Plant_Care_Kit/raw/master/img/Grove_Encoder_530x397.jpg)
+![]( https://files.seeedstudio.com/wiki/Grove_Smart_Plant_Care_Kit/img/Grove_Encoder_530x397.jpg)
 
 - Grove Encoder
 
-![]( https://github.com/SeeedDocument/Grove_Smart_Plant_Care_Kit/raw/master/img/Grove_water_flow_sensor_530x397.jpg)
+![]( https://files.seeedstudio.com/wiki/Grove_Smart_Plant_Care_Kit/img/Grove_water_flow_sensor_530x397.jpg)
 
 - Grove water flow sensor
 
-![]( https://github.com/SeeedDocument/Grove_Smart_Plant_Care_Kit/raw/master/img/Grove_relay_530x397.jpg)
+![]( https://files.seeedstudio.com/wiki/Grove_Smart_Plant_Care_Kit/img/Grove_relay_530x397.jpg)
 
 - Grove relay
 
-![]( https://github.com/SeeedDocument/Grove_Smart_Plant_Care_Kit/raw/master/img/Temp_And_Humidity_Sensor.jpg)
+![]( https://files.seeedstudio.com/wiki/Grove_Smart_Plant_Care_Kit/img/Temp_And_Humidity_Sensor.jpg)
 
 - Temp &amp; Humidity Sensor
 
-![]( https://github.com/SeeedDocument/Grove_Smart_Plant_Care_Kit/raw/master/img/Grove_OLED_Display_1.12_image.530x432.jpg)
+![]( https://files.seeedstudio.com/wiki/Grove_Smart_Plant_Care_Kit/img/Grove_OLED_Display_1.12_image.530x432.jpg)
 
 - Grove OLED Display 1.12
 
-![]( https://github.com/SeeedDocument/Grove_Smart_Plant_Care_Kit/raw/master/img/Grove_button.530x397.jpg)
+![]( https://files.seeedstudio.com/wiki/Grove_Smart_Plant_Care_Kit/img/Grove_button.530x397.jpg)
 
 - Grove button
 
-![]( https://github.com/SeeedDocument/Grove_Smart_Plant_Care_Kit/raw/master/img/Moisture_Sensor_530x397.jpg)
+![]( https://files.seeedstudio.com/wiki/Grove_Smart_Plant_Care_Kit/img/Moisture_Sensor_530x397.jpg)
 
 - Moisture Sensor
 
-![]( https://github.com/SeeedDocument/Grove_Smart_Plant_Care_Kit/raw/master/img/Water_Pump_530x397.jpg)
+![]( https://files.seeedstudio.com/wiki/Grove_Smart_Plant_Care_Kit/img/Water_Pump_530x397.jpg)
 
 - Water Pump
 
-![]( https://github.com/SeeedDocument/Grove_Smart_Plant_Care_Kit/raw/master/img/Base_Shield_V2_image.530x397.jpg)
+![]( https://files.seeedstudio.com/wiki/Grove_Smart_Plant_Care_Kit/img/Base_Shield_V2_image.530x397.jpg)
 
 - Base Shield V2
 
-![]( https://github.com/SeeedDocument/Grove_Smart_Plant_Care_Kit/raw/master/img/Power_connector_600x600.jpg)
+![]( https://files.seeedstudio.com/wiki/Grove_Smart_Plant_Care_Kit/img/Power_connector_600x600.jpg)
 
 **Note that there are lack of two other images which will be added soon**
 
@@ -120,7 +120,7 @@ This kit include these modules:
 
 ##  Parts list
 
-Part list in [PDF format](https://github.com/SeeedDocument/Grove_Smart_Plant_Care_Kit/raw/master/res/Part_list_grove_smart_plant_care_kit_processed.pdf).
+Part list in [PDF format](https://files.seeedstudio.com/wiki/Grove_Smart_Plant_Care_Kit/res/Part_list_grove_smart_plant_care_kit_processed.pdf).
 
 ##  Getting Started
 
@@ -136,7 +136,7 @@ Part list in [PDF format](https://github.com/SeeedDocument/Grove_Smart_Plant_Car
 
 **Note** that this section will show you a demo which implemented some realistic functions.
 
-- [Manual to build a Grove Smart Plant Care Kit.](https://github.com/SeeedDocument/Grove_Smart_Plant_Care_Kit/raw/master/res/Grove_Smart_Plant_Care_Kit_Manual_Final_S.pdf)
+- [Manual to build a Grove Smart Plant Care Kit.](https://files.seeedstudio.com/wiki/Grove_Smart_Plant_Care_Kit/res/Grove_Smart_Plant_Care_Kit_Manual_Final_S.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

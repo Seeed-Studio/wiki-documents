@@ -7,11 +7,11 @@ prodimagename: Editing_BLE-dual-Bee_v1.0_PhotoBottom.jpg
 surveyurl: https://www.research.net/r/BLE_dual_Bee_v1
 sku:  113050013
 ---
-![](https://github.com/SeeedDocument/BLE_dual_Bee_v1.0/raw/master/img/Editing_BLE-dual-Bee_v1.0_PhotoBottom.jpg)
+![](https://files.seeedstudio.com/wiki/BLE_dual_Bee_v1.0/img/Editing_BLE-dual-Bee_v1.0_PhotoBottom.jpg)
 
 BLE (dual) Bee v1.0 uses CSR dual mode Bluetooth chip,with the ARM architecture single chip which supports AT instructions, Users can develop flexibly according to the serial baud rate, equipment name, pairing password.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/BLE(dual-model)-Bee-p-2406.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/BLE(dual-model)-Bee-p-2406.html)
 
 ##   Features
 ---
@@ -49,7 +49,7 @@ BLE (dual) Bee v1.0 uses CSR dual mode Bluetooth chip,with the ARM architecture 
 
 ##   Specification
 ---
-![](https://github.com/SeeedDocument/BLE_dual_Bee_v1.0/raw/master/img/BLE-dual-Bee_v1.0.png)
+![](https://files.seeedstudio.com/wiki/BLE_dual_Bee_v1.0/img/BLE-dual-Bee_v1.0.png)
 
 - **U1**:U1 is the wireless module,It includes automatic power on reset circuit.
 
@@ -68,7 +68,7 @@ The supply voltage of this module is 2.5V ~ 3.7V, higher than this may cause per
 
 The Bluetooth provides a standard XBee socket. In here we use a [UartSBee V5](/UartSBee_v5) to connect Bluetooth and PC, ensure the supply voltage was selected as 3.3V by slider.
 
-|![](https://github.com/SeeedDocument/BLE_dual_Bee_v1.0/raw/master/img/Editing_BLE-dual-Bee_v1.0_ConnectToPC.jpg)|![](https://github.com/SeeedDocument/BLE_dual_Bee_v1.0/raw/master/img/Editing_BLE-dual-Bee_v1.0_ConnectToPCSet.jpg)
+|![](https://files.seeedstudio.com/wiki/BLE_dual_Bee_v1.0/img/Editing_BLE-dual-Bee_v1.0_ConnectToPC.jpg)|![](https://files.seeedstudio.com/wiki/BLE_dual_Bee_v1.0/img/Editing_BLE-dual-Bee_v1.0_ConnectToPCSet.jpg)
 |---|---|
 
 ###   Connecting Bluetooth to Arduino
@@ -77,7 +77,7 @@ Here we use [XBee Shield](/XBee_Shield_V2.0) as a bridge between Bluetooth and [
 
 Since the hardware UART of Seeedino was used as debug with PC, We choose D2 and D3 to simulate software UART to communicate with Bluetooth. please refer to the jumper setting on below picture
 
-|![](https://github.com/SeeedDocument/BLE_dual_Bee_v1.0/raw/master/img/Editing_BLE-dual-Bee_v1.0_ConnectToArduino.jpg)|![](https://github.com/SeeedDocument/BLE_dual_Bee_v1.0/raw/master/img/Editing_BLE-dual-Bee_v1.0_ConnectToArduinoSet.jpg)
+|![](https://files.seeedstudio.com/wiki/BLE_dual_Bee_v1.0/img/Editing_BLE-dual-Bee_v1.0_ConnectToArduino.jpg)|![](https://files.seeedstudio.com/wiki/BLE_dual_Bee_v1.0/img/Editing_BLE-dual-Bee_v1.0_ConnectToArduinoSet.jpg)
 |---|---|
 
 ##   Software Instruction
@@ -1016,7 +1016,7 @@ Set up hardware connection refer to “Hardware Installation” section. You wil
 
 Open a serial terminal and set Baud Rate:115200, Databits: 8, Stopbits: 1 and No Flow Control. Send “AT” to Bluetooth with the serial terminal and “OK” will be return if all goes well. The Bluetooth only respond AT commands when no connection was set up, or all commands were seen as string and sent out. You can distinguish the status through LED indicates.
 
-![](https://github.com/SeeedDocument/BLE_dual_Bee_v1.0/raw/master/img/HM-13-AT.png)
+![](https://files.seeedstudio.com/wiki/BLE_dual_Bee_v1.0/img/HM-13-AT.png)
 
 Then some useful configurations could be sent. Here’s are some samples of commands and response.
 
@@ -1064,11 +1064,11 @@ This kind of Bluetooth module has two protocol: Bluetooth EDR(Enhanced Data Rate
 
 Power the Bluetooth and configure it as Peripheral role. Search LightBlue in Apple Store and install it. Launch the app, you may find “HM-13-BLE” which we just renamed. Touch it to connect, then touch “Properties” to control it. The key “Hex” on the top right is for change data format, maybe String is easy to see. Hit “Listen for notifications” to enable data receiving. Then we can send data to PC through BLE, hit “Write new value” and write some words. Also PC can transfer data to iPhone with serial terminal.
 
-|![](https://github.com/SeeedDocument/BLE_dual_Bee_v1.0/raw/master/img/HM-13-IMG_0108.PNG)|![](https://github.com/SeeedDocument/BLE_dual_Bee_v1.0/raw/master/img/HM-13-IMG_0109.PNG)|
+|![](https://files.seeedstudio.com/wiki/BLE_dual_Bee_v1.0/img/HM-13-IMG_0108.PNG)|![](https://files.seeedstudio.com/wiki/BLE_dual_Bee_v1.0/img/HM-13-IMG_0109.PNG)|
 |---|---|
-|![](https://github.com/SeeedDocument/BLE_dual_Bee_v1.0/raw/master/img/HM-13-IMG_0111.PNG)|![](https://github.com/SeeedDocument/BLE_dual_Bee_v1.0/raw/master/img/HM-13-IMG_0114.PNG)|
+|![](https://files.seeedstudio.com/wiki/BLE_dual_Bee_v1.0/img/HM-13-IMG_0111.PNG)|![](https://files.seeedstudio.com/wiki/BLE_dual_Bee_v1.0/img/HM-13-IMG_0114.PNG)|
 
-![](https://github.com/SeeedDocument/BLE_dual_Bee_v1.0/raw/master/img/HM-13-DialogWithIOS.png)
+![](https://files.seeedstudio.com/wiki/BLE_dual_Bee_v1.0/img/HM-13-DialogWithIOS.png)
 
 ###   Data transmission between Two Arduinos
 
@@ -1079,7 +1079,7 @@ The program of Central and Peripheral use the same code, the only difference is 
 
 The initialization program flow please refer to the following flow chart. First of all we need to distinguish the presetting baud rate of the Bluetooth. After this, send commands to restore factory settings, and change baud rate from 115200 to 9600 since software serial will not working well at high baud rate. Then other parameters were configured to the Bluetooth with Reset command in the final.
 
-![](https://github.com/SeeedDocument/BLE_dual_Bee_v1.0/raw/master/img/HM-13-Init-flowchat.png)
+![](https://files.seeedstudio.com/wiki/BLE_dual_Bee_v1.0/img/HM-13-Init-flowchat.png)
 
 After the initialization, the Central and Peripheral will do different things, the Central will send message to Peripheral interval and print what received from Peripheral while the Peripheral only responds the Central.
 
@@ -1087,8 +1087,8 @@ Click [here](https://github.com/Seeed-Studio/HM-13_SW) to download the test code
 
 After downloading program, open two serial terminal windows, the LEDs on Bluetooth will flash, several seconds later, they stop to flash and keep on, this indicates that they connected to each other. According to the program is written, the Central sends message to the Peripheral continually and get feedback every time.
 
-![](https://github.com/SeeedDocument/BLE_dual_Bee_v1.0/raw/master/img/HM-13-Debug_Output_Master.png)
-![](https://github.com/SeeedDocument/BLE_dual_Bee_v1.0/raw/master/img/HM-13-Debug_Output_Slave.png)
+![](https://files.seeedstudio.com/wiki/BLE_dual_Bee_v1.0/img/HM-13-Debug_Output_Master.png)
+![](https://files.seeedstudio.com/wiki/BLE_dual_Bee_v1.0/img/HM-13-Debug_Output_Slave.png)
 
 
 ## Schematic Online Viewer
@@ -1099,7 +1099,7 @@ After downloading program, open two serial terminal windows, the LEDs on Bluetoo
 
 ##   Resources
 ---
-*   [HM-13 Bluetooth Datasheet](https://github.com/SeeedDocument/BLE_dual_Bee_v1.0/raw/master/res/Bluetooth_HM-13_en.pdf)
+*   [HM-13 Bluetooth Datasheet](https://files.seeedstudio.com/wiki/BLE_dual_Bee_v1.0/res/Bluetooth_HM-13_en.pdf)
 
 *   [Arduino code](https://github.com/Seeed-Studio/HM-13_SW)
 

@@ -20,17 +20,17 @@ LinkIt One with Wi-Fi communication function. We have collected some data throug
 
 **Schematic**
 
-![](https://github.com/SeeedDocument/LinkIt_ONE_Tutorial-Get_temperature_with_Webpage/raw/master/img/LinkItONE_Kit_10_1.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIt_ONE_Tutorial-Get_temperature_with_Webpage/img/LinkItONE_Kit_10_1.jpg)
 
 **Connection**
 
-![](https://github.com/SeeedDocument/LinkIt_ONE_Tutorial-Get_temperature_with_Webpage/raw/master/img/LinkItONE_Kit_10_2.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIt_ONE_Tutorial-Get_temperature_with_Webpage/img/LinkItONE_Kit_10_2.jpg)
 
 **Code**
 
 Please click on the button below to download the code for the kit:
 
-[![](https://github.com/SeeedDocument/LinkIt_ONE_Tutorial-Get_temperature_with_Webpage/raw/master/img/Code_sidekick_linkit.png)](https://github.com/Seeed-Studio/Sidekick_Basic_Kit_for_LinkIt)
+[![](https://files.seeedstudio.com/wiki/LinkIt_ONE_Tutorial-Get_temperature_with_Webpage/img/Code_sidekick_linkit.png)](https://github.com/Seeed-Studio/Sidekick_Basic_Kit_for_LinkIt)
 
 You can unzip the file to the **Examples** folder of your Arduino IDE.
 

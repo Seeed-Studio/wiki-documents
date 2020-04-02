@@ -7,13 +7,13 @@ prodimagename:  Mini_Soldering_Iron_product_view.jpg
 surveyurl: https://www.research.net/r/Mini_Soldering_Iron
 sku:  110060182
 ---
-![](https://github.com/SeeedDocument/Mini_Soldering_Iron/raw/master/img/Mini_Soldering_Iron_product_view.jpg)
+![](https://files.seeedstudio.com/wiki/Mini_Soldering_Iron/img/Mini_Soldering_Iron_product_view.jpg)
 
 Mini Soldering Iron is a slender, lightweight, accurate temperature-control and rapid-heating(ambient temperature to 300℃ in 10 seconds) soldering iron with an OLED display, which will be an essential tool in your development kit. It also features its sleeping mode and over-heating notification. In addition, it is easy to assemble and ESD safe (through grounding clamp). The temperature range of this iron is 100 ~ 400 ℃(212 ~ 752 ℉), and It contain two integrated(with heater) and compact soldering tips for different circumstances. You can configuration your setting by USB micro type-B interface.<sup>[1]</sup>
 
 <sup>[1]</sup>This page only show a quicker way and main information to get started. For detailed information, please refer to the manual included.
 
-|[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Mini%C2%A0Soldering%C2%A0Iron%C2%A0Deluxe%C2%A0Kit%C2%A0Europe-Standard-p-2592.html?ref=newInBazaar)|[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Mini%C2%A0Soldering%C2%A0Iron%C2%A0Deluxe%C2%A0Kit%C2%A0US%C2%A0Standard-p-2593.html?ref=newInBazaar)|
+|[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Mini%C2%A0Soldering%C2%A0Iron%C2%A0Deluxe%C2%A0Kit%C2%A0Europe-Standard-p-2592.html?ref=newInBazaar)|[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Mini%C2%A0Soldering%C2%A0Iron%C2%A0Deluxe%C2%A0Kit%C2%A0US%C2%A0Standard-p-2593.html?ref=newInBazaar)|
 |:---:|:---:|
 |For EU Edision|For US Edision|
 
@@ -132,7 +132,7 @@ This section shows you how to basic operations with this soldering iron. For mor
 
 ###  Exploded view
 
-<div style="margin:0px 0px; display: inline-block;"><div class="floatnone">![](https://github.com/SeeedDocument/Mini_Soldering_Iron/raw/master/img/Mini_Soldering_Iron_exploded_view_s.jpg)</div></div>
+<div style="margin:0px 0px; display: inline-block;"><div class="floatnone">![](https://files.seeedstudio.com/wiki/Mini_Soldering_Iron/img/Mini_Soldering_Iron_exploded_view_s.jpg)</div></div>
 <dl><dd> ①. Solder iron tip fixing screw
 </dd><dd> ②. Button A
 </dd><dd> ③. Button B
@@ -147,7 +147,7 @@ This section shows you how to basic operations with this soldering iron. For mor
 
 ###  Assemble the soldering iron
 
-<div style="margin:0px 0px; display: inline-block;"><div class="floatnone">![](https://github.com/SeeedDocument/Mini_Soldering_Iron/raw/master/img/Mini_Soldering_Iron_installation_guide.jpg)</div></div>
+<div style="margin:0px 0px; display: inline-block;"><div class="floatnone">![](https://files.seeedstudio.com/wiki/Mini_Soldering_Iron/img/Mini_Soldering_Iron_installation_guide.jpg)</div></div>
 
 1.  Unscrew the tip setscrew, insert the solder tip into the connection port, and then tighten screw.
 
@@ -168,17 +168,17 @@ Press button A to enable temperatures-increasing, press button B to enable tempe
 <dl><dd> 1. Press button B in standby mode (no-heating state) to enter thermometer mode.
 
 </dd></dl>
-![](https://github.com/SeeedDocument/Mini_Soldering_Iron/raw/master/img/Mini_Soldering_Iron_calibration_step_1.jpg)</div></div>
+![](https://files.seeedstudio.com/wiki/Mini_Soldering_Iron/img/Mini_Soldering_Iron_calibration_step_1.jpg)</div></div>
 
 <dl><dd> 2. Press button B and button A simultaneously to enter thermometer mode. It will execute calibration operation automatically, no manual operation required.
 </dd></dl>
 
-![](https://github.com/SeeedDocument/Mini_Soldering_Iron/raw/master/img/Mini_Soldering_Iron_calibration_step_2.jpg)</div></div>
+![](https://files.seeedstudio.com/wiki/Mini_Soldering_Iron/img/Mini_Soldering_Iron_calibration_step_2.jpg)</div></div>
 
 <dl><dd> 3. After around 30 seconds, press and hold either button to exit calibration mode.
 </dd></dl>
 
-![](https://github.com/SeeedDocument/Mini_Soldering_Iron/raw/master/img/Mini_Soldering_Iron_calibration_step_3.jpg)</div></div>
+![](https://files.seeedstudio.com/wiki/Mini_Soldering_Iron/img/Mini_Soldering_Iron_calibration_step_3.jpg)</div></div>
 
 <dl><dd> 4 .The left figure shows that auto-calibration succeeds and right figure shows that auto-calibration fails. If auto-calibration fails, repeat previous steps again.
 </dd></dl>
@@ -191,11 +191,11 @@ You can take a quiz for soldering some LEDs and resistors on a leaf-like PCB boa
 </dd><dd> 2.  Soldering all four LEDs and four resistors on PCB board.
 </dd></dl>
 
-![](https://github.com/SeeedDocument/Mini_Soldering_Iron/raw/master/img/Mini_solderin_iron_practice_s.JPG)
+![](https://files.seeedstudio.com/wiki/Mini_Soldering_Iron/img/Mini_solderin_iron_practice_s.JPG)
 
 _**Note**_ that you have align LEDs in right direction since LEDs is a bipolar components:
 
-![](https://github.com/SeeedDocument/Mini_Soldering_Iron/raw/master/img/Mini_solderin_iron_practice-directions-s.jpg)
+![](https://files.seeedstudio.com/wiki/Mini_Soldering_Iron/img/Mini_solderin_iron_practice-directions-s.jpg)
 
 _**Note**_ that you need to soldering a electronic component with following basic and fundamental steps:
 

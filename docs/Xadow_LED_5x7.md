@@ -9,10 +9,10 @@ sku: 104040004
 ---
 
 ---
-![](https://github.com/SeeedDocument/Xadow_LED_5x7/raw/master/images/Xadow_LED_5x7.JPG)
+![](https://files.seeedstudio.com/wiki/Xadow_LED_5x7/images/Xadow_LED_5x7.JPG)
 The Xadow LED 5x7 consists of a 5x7 monochrome LED matrix and a LED controller. You can sending command to the LED controller through I2C interface (address 0x21) to display numbers, letters or even pixel images. This could come handy sometime in your project.
 
-[![](https://github.com/SeeedDocument/Xadow_LED_5x7/raw/master/images/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Xadow-LED-5-x-7-p-2561.html)
+[![](https://files.seeedstudio.com/wiki/Xadow_LED_5x7/images/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Xadow-LED-5-x-7-p-2561.html)
 
 ## Features
 ---
@@ -39,7 +39,7 @@ The Xadow LED 5x7 consists of a 5x7 monochrome LED matrix and a LED controller. 
 
 ## Hardware Overview
 ---
-![](https://github.com/SeeedDocument/Xadow_LED_5x7/raw/master/images/800px-Xadow_LED_5x7.png)
+![](https://files.seeedstudio.com/wiki/Xadow_LED_5x7/images/800px-Xadow_LED_5x7.png)
 
 ## Use it with RePhone Kit Create
 ---
@@ -54,7 +54,7 @@ The Xadow LED 5x7 consists of a 5x7 monochrome LED matrix and a LED controller. 
 
 ## Rephone Community
 ---
-[![](https://github.com/SeeedDocument/Xadow_LED_5x7/raw/master/images/300px-RePhone_Community-2.png)](https://community.seeedstudio.com/discover.html?t=RePhone)
+[![](https://files.seeedstudio.com/wiki/Xadow_LED_5x7/images/300px-RePhone_Community-2.png)](https://community.seeedstudio.com/discover.html?t=RePhone)
 
  We’ve been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the [RePhone Community](https://community.seeedstudio.com/discover.html?t=RePhone).
 
@@ -79,7 +79,7 @@ We will be keep updating the source code on our github page:
 
 The schematic diagram of Xadow LED 5x7 is provided in the following link:
 
-- [Xadow LED 5×7 v1.0_schemic files.zip](https://github.com/SeeedDocument/Xadow_LED_5x7/raw/master/res/202000746_PCBA%3BXadow%20LED%205%C3%977%20v1.0_schemic%20files.zip)
+- [Xadow LED 5×7 v1.0_schemic files.zip](https://files.seeedstudio.com/wiki/Xadow_LED_5x7/res/202000746_PCBA%3BXadow%20LED%205%C3%977%20v1.0_schemic%20files.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

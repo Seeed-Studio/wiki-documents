@@ -8,9 +8,9 @@ surveyurl:
 sku: 
 ---
 
-![enter image description here](https://github.com/SeeedDocument/MT3620_Grove_Breakout/raw/master/img/MT3620-Grove-Breakout-front.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Grove_Breakout/img/MT3620-Grove-Breakout-front.jpg)
 
-![](https://github.com/SeeedDocument/MT3620_Grove_Breakout/raw/master/img/MT3620-Grove-Breakout-back.jpg)
+![](https://files.seeedstudio.com/wiki/MT3620_Grove_Breakout/img/MT3620-Grove-Breakout-back.jpg)
 
 [Azure Sphere MT3620 Development Kit](https://www.seeedstudio.com/Azure-Sphere-MT3620-Development-Kit-US-Version-p-3052.html) and [MT3620 Mini Dev Board](https://www.seeedstudio.com/MT3620-Mini-Dev-Board-p-2919.html) are both enabled by [Microsoft Azure Sphere](https://azure.microsoft.com/en-us/services/azure-sphere/) technology, MT3620 Grove breakout is an expansion breakout board designed for the brand new MT3620 Mini Dev Board.
 MT3620 Grove breakout enable users to quickly apply sensors modules -[SeeedStudio Groves](https://www.seeedstudio.com/grove.html) into rapid prototyping application which is built based on MT3620 Mini Dev Board.
@@ -35,7 +35,7 @@ Since [Azure Sphere SDK](http://aka.ms/AzureSphereSDK) has not yet supported ADC
 
 **Interface**
 
-![](https://github.com/SeeedDocument/MT3620_Grove_Breakout/raw/master/img/103100123_hardware_overview.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Grove_Breakout/img/103100123_hardware_overview.png)
 
 - <font face="" size=3 font color="ff0000">①</font> **Extention Header 1:**
 24 pins, please refer to board pin map for the detail pin defination. 
@@ -43,35 +43,35 @@ Since [Azure Sphere SDK](http://aka.ms/AzureSphereSDK) has not yet supported ADC
 - <font face="" size=3 font color="ff0000">②</font> **Analog:**
 2 Grove Analog ports, the input signal voltage must less than 3.3v. 
 
-![](https://github.com/SeeedDocument/MT3620_Grove_Breakout/raw/master/img/Analog.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Grove_Breakout/img/Analog.png)
 
 - <font face="" size=3 font color="ff0000">③</font> **I2C:**
 2 Grove I2C ports, the I2C port shares the same pin with UART1, so you only can choose I2C or UART1 at one time. 
 
-![](https://github.com/SeeedDocument/MT3620_Grove_Breakout/raw/master/img/I2C.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Grove_Breakout/img/I2C.png)
 
 - <font face="" size=3 font color="ff0000">④</font> **UART:**
 2 Grove UART ports, the I2C port shares the same pin as UART1, so you only can choose I2C or UART1 at one time. The SPI0 port shares the same pin with UART0,so you only can choose SPI0 or UART0 at one time.
 
-![](https://github.com/SeeedDocument/MT3620_Grove_Breakout/raw/master/img/UART.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Grove_Breakout/img/UART.png)
 
 - <font face="" size=3 font color="ff0000">⑤</font> **Digital:**
 4 digital GPIO ports, the working voltage is 3.3v.
 
-![](https://github.com/SeeedDocument/MT3620_Grove_Breakout/raw/master/img/GPIO.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Grove_Breakout/img/GPIO.png)
 
 - <font face="" size=3 font color="ff0000">⑥</font> **Extention Header 2:**
 It is duplication of Extention Header 1. You can solder wires to header. There are 2 pins not connecting with Extention Header 1. Pin1 of J5 is connected to 3.3v directly and Pin6 of J5 is not connected. 
 
-![](https://github.com/SeeedDocument/MT3620_Grove_Breakout/raw/master/img/extention_header_1.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Grove_Breakout/img/extention_header_1.png)
 
 - <font face="" size=3 font color="ff0000">⑦</font> **SPI:** The SPI0 port shares the same pin with UART0,so you only can choose SPI0 or UART0 at one time.
 
-![](https://github.com/SeeedDocument/MT3620_Grove_Breakout/raw/master/img/SPI.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Grove_Breakout/img/SPI.png)
 
-- <font face="" size=3 font color="ff0000">⑧</font> **AD7992BRMZ-1:** MT3620 Mini Dev Board supports SPI, UART, I2C, Digital functions, but does not support the ADC function. So the MT3620 Grove Breakout includes [AD7992](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/res/AD7992.pdf) chip, which is a 12-bit, low power, successive approximation ADC with an I2C-compatible interface. Then connect to I2C interface of MT3620 Mini Dev Board. 
+- <font face="" size=3 font color="ff0000">⑧</font> **AD7992BRMZ-1:** MT3620 Mini Dev Board supports SPI, UART, I2C, Digital functions, but does not support the ADC function. So the MT3620 Grove Breakout includes [AD7992](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/res/AD7992.pdf) chip, which is a 12-bit, low power, successive approximation ADC with an I2C-compatible interface. Then connect to I2C interface of MT3620 Mini Dev Board. 
 
-![](https://github.com/SeeedDocument/MT3620_Grove_Breakout/raw/master/img/I2C_ADC.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Grove_Breakout/img/I2C_ADC.png)
 
 - <font face="" size=3 font color="ff0000">⑨</font> **I2C Address Select:**
 As is logic Input. Address select input that selects one of three I2C addresses for the AD7992, If it is connect to GND, the I2C address is 0x23. If it is connected to 3.3v, the I2C address is 0x24.
@@ -120,12 +120,12 @@ We build there demoes which combine MT3620 Mini Dev Board and [Seeed Grove syste
 
 | MT3620 Mini Dev Board | MT3620 Grove Breakout |  Grove - Button |USB To Uart 5V&3V3 |
 |--------------|-------------|-----------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/product_s.png)|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/breakout_s.jpg)|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/button_s.jpg)|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/usb_2_ttl_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/product_s.png)|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/breakout_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/button_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/usb_2_ttl_s.jpg)|
 |[Get One Now](https://www.seeedstudio.com/MT3620-Mini-Dev-Board-p-2919.html)|[Get One Now](https://www.seeedstudio.com/MT3620-Grove-Breakout-p-4043.html)|[Get One Now](https://www.seeedstudio.com/Grove-Button-p-766.html)|[Get One Now](https://www.seeedstudio.com/USB-To-Uart-5V-3V3-p-1832.html)|
 
 **Hardware Connection**
 
-![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/demo1_connection.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/demo1_connection.png)
 
 !!!warning
     Please make sure the plug the MT3620 Mini Dev Board into MT3620 Grove Breakout in the correct way. There is USB silk screen on the MT3620 Grove Breakout and make sure it at the same side as USB port of MT3620 Mini Dev Board. 
@@ -170,12 +170,12 @@ UART received 2 bytes: '
 
 | MT3620 Mini Dev Board | MT3620 Grove Breakout |  Grove-Light Sensor |Grove - Rotary Angle Sensor|
 |--------------|-------------|-----------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/product_s.png)|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/breakout_s.jpg)|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/light_sensor_s.jpg)|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/Rotary_Angle_Sensor_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/product_s.png)|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/breakout_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/light_sensor_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/Rotary_Angle_Sensor_s.jpg)|
 |[Get One Now](https://www.seeedstudio.com/MT3620-Mini-Dev-Board-p-2919.html)|[Get One Now](https://www.seeedstudio.com/MT3620-Grove-Breakout-p-4043.html)|[Get One Now](https://www.seeedstudio.com/Grove-Light-Sensor-v1-2.html)|[Get One Now](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html)|
 
 **Hardware Connection**
 
-![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/demo2_connection.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/demo2_connection.png)
 
 !!!warning
     Please make sure the plug the MT3620 Mini Dev Board into MT3620 Grove Breakout in the correct way. There is USB silk screen on the MT3620 Grove Breakout and make sure it at the same side as USB port of MT3620 Mini Dev Board. 
@@ -221,12 +221,12 @@ A0: 2057 A1: 2647
 
 | MT3620 Mini Dev Board | MT3620 Grove Breakout |  Grove-OLED Display 1.12'' V2 |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/product_s.png)|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/breakout_s.jpg)|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/oled_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/product_s.png)|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/breakout_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/oled_s.jpg)|
 |[Get One Now](https://www.seeedstudio.com/MT3620-Mini-Dev-Board-p-2919.html)|[Get One Now](https://www.seeedstudio.com/MT3620-Grove-Breakout-p-4043.html)|[Get One Now](https://www.seeedstudio.com/Grove-Light-Sensor-v1-2.html)|[Get One Now](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html)|
 
 **Hardware Connection**
 
-![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/demo3_connection.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/demo3_connection.png)
 
 !!!warning
     Please make sure the plug the MT3620 Mini Dev Board into MT3620 Grove Breakout in the correct way. There is USB silk screen on the MT3620 Grove Breakout and make sure it at the same side as USB port of MT3620 Mini Dev Board. 
@@ -263,10 +263,10 @@ Seeed oled 96*96 demo.
 
 - **[Product]** [Welcome to Azure Sphere](https://docs.microsoft.com/en-us/azure-sphere/)
 - **[Library]** [Azure Sphere Demo Library](https://github.com/Seeed-Studio/Azure_Sphere_Demo)
-- **[Eagle]** [MT3620 Grove Breakout Schematic](https://github.com/SeeedDocument/MT3620_Grove_Breakout/raw/master/res/MT3620%20grove%20breakout%20v1.0.sch.zip)
-- **[PDF]** [MT3620 Grove Breakout Schematic](https://github.com/SeeedDocument/MT3620_Grove_Breakout/raw/master/res/MT3620%20grove%20breakout%20v1.0.pdf)
-- **[DataSheet]** [WF-M620 RSC1 datasheet](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/res/WF-M620-RSC1_datasheet_20190314.pdf)
-- **[DataSheet]** [AD7992 datasheet](https://github.com/SeeedDocument/MT3620_Grove_Breakout/raw/master/res/AD7992.pdf)
+- **[Eagle]** [MT3620 Grove Breakout Schematic](https://files.seeedstudio.com/wiki/MT3620_Grove_Breakout/res/MT3620%20grove%20breakout%20v1.0.sch.zip)
+- **[PDF]** [MT3620 Grove Breakout Schematic](https://files.seeedstudio.com/wiki/MT3620_Grove_Breakout/res/MT3620%20grove%20breakout%20v1.0.pdf)
+- **[DataSheet]** [WF-M620 RSC1 datasheet](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/res/WF-M620-RSC1_datasheet_20190314.pdf)
+- **[DataSheet]** [AD7992 datasheet](https://files.seeedstudio.com/wiki/MT3620_Grove_Breakout/res/AD7992.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).

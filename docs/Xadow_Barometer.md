@@ -8,11 +8,11 @@ surveyurl: https://www.research.net/r/xadow_barometer
 sku: 103040001
 ---
 
-![](https://github.com/SeeedDocument/Xadow_Barometer/raw/master/img/Baro_Meter_01.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Barometer/img/Baro_Meter_01.jpg)
 
 The module can measure the air pressure and temperature of the current environment, and then you can convert this signal to information of altitude. If you are planning to use Xadow to do a wearable device and measure the altitude when you climb the mountain, then the module will be your perfect choice.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-Barometer-p-1522.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-Barometer-p-1522.html)
 
 ## Specification
 ---
@@ -30,7 +30,7 @@ The demo will show you how to get the air pressure and temperature of the curren
 
 **Hardware Installation**
 
-![](https://github.com/SeeedDocument/Xadow_Barometer/raw/master/img/XadowBarometerUsage.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Barometer/img/XadowBarometerUsage.jpg)
 
 !!!Note
     When connect Xadow Barometer to Xadow Main Board, you should concern about the connection direction. The connection method is that the unfilled corner of one Xadow module need to connect to the right angle of another module(see four corners of each Xadow module).
@@ -87,11 +87,11 @@ void loop()
 
 - Open the serial monitor to receive the sensor's data including temperature, barometric pressure value, relative atmosphere pressure and altitude.
 
-![](https://github.com/SeeedDocument/Xadow_Barometer/raw/master/img/Xadow_Baremeter_Result.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Barometer/img/Xadow_Baremeter_Result.jpg)
 
 - Here is a reference graph plotting out the relationship between altitude above sea level and barometric pressure.
 
-![](https://github.com/SeeedDocument/Xadow_Barometer/raw/master/img/Pressure_and_Altitude.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Barometer/img/Pressure_and_Altitude.jpg)
 
 
 ## Schematic Online Viewer
@@ -102,9 +102,9 @@ void loop()
 
 ## Resources
 ---
-- [Xadow Barometer Eagle File](https://github.com/SeeedDocument/Xadow_Barometer/raw/master/res/Xadow_Barometer.zip)
-- [Xadow Barometer Library](https://github.com/SeeedDocument/Xadow_Barometer/raw/master/res/Xadow_Barometer_Library.zip)
-- [BST-BMP085-DS000-06](https://github.com/SeeedDocument/Xadow_Barometer/raw/master/res/BST-BMP085-DS000-06.pdf)
+- [Xadow Barometer Eagle File](https://files.seeedstudio.com/wiki/Xadow_Barometer/res/Xadow_Barometer.zip)
+- [Xadow Barometer Library](https://files.seeedstudio.com/wiki/Xadow_Barometer/res/Xadow_Barometer_Library.zip)
+- [BST-BMP085-DS000-06](https://files.seeedstudio.com/wiki/Xadow_Barometer/res/BST-BMP085-DS000-06.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

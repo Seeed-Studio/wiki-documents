@@ -7,11 +7,11 @@ prodimagename: ProtoShield.jpg
 surveyurl: https://www.research.net/r/Protoshield_Kit_for_Arduino
 sku: 103060000
 ---
-![](https://github.com/SeeedDocument/Protoshield_Kit_for_Arduino/raw/master/img/ProtoShield.jpg)
+![](https://files.seeedstudio.com/wiki/Protoshield_Kit_for_Arduino/img/ProtoShield.jpg)
 
 Build your own Arduino shield using the compact and flexible Proto Shield kit. Solder together a limitless range of circuits and reuse it in all your Arduino projects. A standard 0.1" prototyping grid accepts commonly used through-hole parts and chips. Basic components (resistors, potentiometer, LEDs, switches) are included to help you get started with your custom shield.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Protoshield-Kit-for-Arduino-p-318.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Protoshield-Kit-for-Arduino-p-318.html)
 
 ##   Features
 ---
@@ -74,29 +74,29 @@ Build your own Arduino shield using the compact and flexible Proto Shield kit. S
 
 ##  Board trace schematic
 ---
-![](https://github.com/SeeedDocument/Protoshield_Kit_for_Arduino/raw/master/img/ProtoShield_Kit.png)
+![](https://files.seeedstudio.com/wiki/Protoshield_Kit_for_Arduino/img/ProtoShield_Kit.png)
 
 ##  Assembly
 
 **Step 1:** Solder the Red LED to the holes in the Power Socket outline. Be sure to match the flat side of the LED with the outline on the board. Solder the green LED to the holes in the pin13 outline on the board, again, matching the flat side of the LED to the board outline. Solder two 1K resistors to R1 and R2. Solder Reset button and ISP header per the picture below. Note: The reset button is easier to install if you insert it before inserting the ISP header.
 
-![](https://github.com/SeeedDocument/Protoshield_Kit_for_Arduino/raw/master/img/Step1.jpg)
+![](https://files.seeedstudio.com/wiki/Protoshield_Kit_for_Arduino/img/Step1.jpg)
 
 **Step 2:** Solder the female and male connectors. Note: solder ADC6 and ADC7 **ONLY** if your are using a [Seeeduino](http://www.seeedstudio.com/depot/index.php?main_page=advanced_search_result&amp;search_in_description=0&amp;zenid=15c0e10e2d81d5481f863ae4eaaf7ca1&amp;keyword=seeeduino&amp;x=0&amp;y=0). When using an Arduino, do **NOT** solder ADC6 and ADC7.
 
-![](https://github.com/SeeedDocument/Protoshield_Kit_for_Arduino/raw/master/img/Step2.jpg)
-![](https://github.com/SeeedDocument/Protoshield_Kit_for_Arduino/raw/master/img/Step22.jpg)
+![](https://files.seeedstudio.com/wiki/Protoshield_Kit_for_Arduino/img/Step2.jpg)
+![](https://files.seeedstudio.com/wiki/Protoshield_Kit_for_Arduino/img/Step22.jpg)
 
 **Step 3:** Solder the USB connector to the USB port, and the potentiometer in the 80 mil holes. Solder the bottom left Power pins to suit your project.
 
-![](https://github.com/SeeedDocument/Protoshield_Kit_for_Arduino/raw/master/img/Step3.jpg)
+![](https://files.seeedstudio.com/wiki/Protoshield_Kit_for_Arduino/img/Step3.jpg)
 
 Your finished kit should look similar to the picture above.
 
 
 ##   Resources
 ---
-*   [Sources file](https://github.com/SeeedDocument/Protoshield_Kit_for_Arduino/raw/master/res/ProtoShield.brd)
+*   [Sources file](https://files.seeedstudio.com/wiki/Protoshield_Kit_for_Arduino/res/ProtoShield.brd)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

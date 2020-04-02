@@ -7,11 +7,11 @@ prodimagename:  Skeleton_box_01.jpg
 surveyurl: https://www.research.net/r/Skeleton_Box
 sku:   110060006
 ---
-![](https://github.com/SeeedDocument/Skeleton_Box/raw/master/img/Skeleton_box_01.jpg)
+![](https://files.seeedstudio.com/wiki/Skeleton_Box/img/Skeleton_box_01.jpg)
 
 Looking for a shell for your electronic prototypes? The Skeleton Box is a handy solution. It consists of three parts - a hollow mounting rack, a mounting board for installation of your own circuit board and a back plate that shelters the circuit board. The highly simplified structure enables you to quickly build a hard cover for your invention which is both good-looking and protective. Now get a Skeleton Box and test your design anywhere you like, while other engineers are still suffering from the headache of making their own shell.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Skeleton-Box-p-1407.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Skeleton-Box-p-1407.html)
 
 ##  Features
 ---
@@ -55,33 +55,33 @@ Looking for a shell for your electronic prototypes? The Skeleton Box is a handy 
 
 ##   Usage
 
-![](https://github.com/SeeedDocument/Skeleton_Box/raw/master/img/View_01.jpg)
+![](https://files.seeedstudio.com/wiki/Skeleton_Box/img/View_01.jpg)
 A schematic representation of  the dismantling structure
 
-![](https://github.com/SeeedDocument/Skeleton_Box/raw/master/img/View_3.jpg)
+![](https://files.seeedstudio.com/wiki/Skeleton_Box/img/View_3.jpg)
 A schematic representation of  the composite structure
 
-![](https://github.com/SeeedDocument/Skeleton_Box/raw/master/img/View_02.jpg)
+![](https://files.seeedstudio.com/wiki/Skeleton_Box/img/View_02.jpg)
 A schematic representation of  the dismantling structure of a application instance
 
-![](https://github.com/SeeedDocument/Skeleton_Box/raw/master/img/View_4.jpg)
+![](https://files.seeedstudio.com/wiki/Skeleton_Box/img/View_4.jpg)
 A schematic representation of  the composite structure of a application instance
 
 
-![](https://github.com/SeeedDocument/Skeleton_Box/raw/master/img/View_5.jpg)
+![](https://files.seeedstudio.com/wiki/Skeleton_Box/img/View_5.jpg)
 A schematic representation of  the composite structure of comprehensive application instance
 
 
 
 ##  Expand Usage
 ---
-![](https://github.com/SeeedDocument/Skeleton_Box/raw/master/img/Skeleton_Box_1.jpg)
+![](https://files.seeedstudio.com/wiki/Skeleton_Box/img/Skeleton_Box_1.jpg)
 
-![](https://github.com/SeeedDocument/Skeleton_Box/raw/master/img/Skeleton_Box_2.jpg)
+![](https://files.seeedstudio.com/wiki/Skeleton_Box/img/Skeleton_Box_2.jpg)
 
-![](https://github.com/SeeedDocument/Skeleton_Box/raw/master/img/Skeleton_Box_3.jpg)
+![](https://files.seeedstudio.com/wiki/Skeleton_Box/img/Skeleton_Box_3.jpg)
 
-![](https://github.com/SeeedDocument/Skeleton_Box/raw/master/img/Skeleton_Box_4.jpg)
+![](https://files.seeedstudio.com/wiki/Skeleton_Box/img/Skeleton_Box_4.jpg)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

@@ -8,11 +8,11 @@ surveyurl: https://www.research.net/r/XBee_Shield_V2
 sku:   103030004
 ---
 
-![](https://github.com/SeeedDocument/XBee_Shield_V2.0/raw/master/img/Xbeeshield_01.jpg)
+![](https://files.seeedstudio.com/wiki/XBee_Shield_V2.0/img/Xbeeshield_01.jpg)
 
 The new version of XBee Shield is a standardized and stackable shield compatible with Arduino. You can easily stack any modules from the Bee series onto it, and build a wireless network for your project. In spite of that, it is also equipped with function of level conversion, which enables a double-way conversion between high&amp; low IO levels. The reserved digital pins facilitate users to select TX/RX port using jumper caps.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/XBee-Shield-V2.0-p-1375.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/XBee-Shield-V2.0-p-1375.html)
 
 ##   Feature
 ---
@@ -25,10 +25,10 @@ The new version of XBee Shield is a standardized and stackable shield compatible
 
 ## Hardware Overview
 ---
-![](https://github.com/SeeedDocument/XBee_Shield_V2.0/raw/master/img/XBee_Shield_Interface%202.jpg)
+![](https://files.seeedstudio.com/wiki/XBee_Shield_V2.0/img/XBee_Shield_Interface%202.jpg)
 
-- U2：[CJT1117 IC](https://github.com/SeeedDocument/XBee_Shield_V2.0/raw/master/res/CJT1117_datasheet.pdf), provides 3.3V voltage for XBee modules.
-- U3：[SN74LVC1G125 IC](https://github.com/SeeedDocument/XBee_Shield_V2.0/raw/master/res/SN74LVC1G125DCKR.pdf), achieves Logic-level translator function.
+- U2：[CJT1117 IC](https://files.seeedstudio.com/wiki/XBee_Shield_V2.0/res/CJT1117_datasheet.pdf), provides 3.3V voltage for XBee modules.
+- U3：[SN74LVC1G125 IC](https://files.seeedstudio.com/wiki/XBee_Shield_V2.0/res/SN74LVC1G125DCKR.pdf), achieves Logic-level translator function.
 
 ##   Getting Started
 ---
@@ -37,12 +37,12 @@ Here we will show you how this XBee Shield V2.0 works with RF Bee. We also can u
 
 | XBee Shield V2.0 | RF Bee |
 |----------------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/XBee_Shield_V2.0/raw/master/img/XBee%20Shield%20V2.0_s.jpg)|![enter image description here](https://github.com/SeeedDocument/XBee_Shield_V2.0/raw/master/img/rfbee1_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/XBee_Shield_V2.0/img/XBee%20Shield%20V2.0_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/XBee_Shield_V2.0/img/rfbee1_s.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/XBee-Shield-V2.0-p-1375.html)|[Get ONE Now](https://www.seeedstudio.com/RFbee-V1.1-Wireless-arduino-compatible-node-p-614.html)|
 
 - Plug RF Bee into Xbee Sheild V2.0.
 
- ![](https://github.com/SeeedDocument/XBee_Shield_V2.0/raw/master/img/XBee_Shield_connect_RF_XBee.jpg)
+ ![](https://files.seeedstudio.com/wiki/XBee_Shield_V2.0/img/XBee_Shield_connect_RF_XBee.jpg)
 
 - Use a jumper cap to **connect XB_TX and Digital 4**. Also, Use a jumper cap to connect **XB_RX and Digital 5**. Of course you can change the digital port as you like. But don’t forget to change the port number in the definition of the demo code at the same time.
 
@@ -63,11 +63,11 @@ If you need further information about how to communicate, please refer to WIKI p
 
 ##   Resource
 ---
-- **[Eagle]** [XBee Shield V2.0 Eagle File](https://github.com/SeeedDocument/XBee_Shield_V2.0/raw/master/res/XBee_Shield_Eagle_file.zip)
-- **[PDF]** [XBee Shield V2.0b Schematics File](https://github.com/SeeedDocument/XBee_Shield_V2.0/raw/master/res/XBee_Shield_v2.0b.pdf)
-- **[PDF]** [XBee Shield V2.0b PCB File](https://github.com/SeeedDocument/XBee_Shield_V2.0/raw/master/res/XBee%20Shield%20v2.0b%20PCB.pdf)
-- **[Datasheet]**[CJT1117 Datasheet](https://github.com/SeeedDocument/XBee_Shield_V2.0/raw/master/res/CJT1117_datasheet.pdf)
-- **[Datasheet]**[SN74LVC1G125 Datasheet](https://github.com/SeeedDocument/XBee_Shield_V2.0/raw/master/res/SN74LVC1G125DCKR.pdf)
+- **[Eagle]** [XBee Shield V2.0 Eagle File](https://files.seeedstudio.com/wiki/XBee_Shield_V2.0/res/XBee_Shield_Eagle_file.zip)
+- **[PDF]** [XBee Shield V2.0b Schematics File](https://files.seeedstudio.com/wiki/XBee_Shield_V2.0/res/XBee_Shield_v2.0b.pdf)
+- **[PDF]** [XBee Shield V2.0b PCB File](https://files.seeedstudio.com/wiki/XBee_Shield_V2.0/res/XBee%20Shield%20v2.0b%20PCB.pdf)
+- **[Datasheet]**[CJT1117 Datasheet](https://files.seeedstudio.com/wiki/XBee_Shield_V2.0/res/CJT1117_datasheet.pdf)
+- **[Datasheet]**[SN74LVC1G125 Datasheet](https://files.seeedstudio.com/wiki/XBee_Shield_V2.0/res/SN74LVC1G125DCKR.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

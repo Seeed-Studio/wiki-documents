@@ -7,11 +7,11 @@ prodimagename:
 surveyurl: https://www.research.net/r/Grove-OR
 sku:    110060026
 ---
-![](https://github.com/SeeedDocument/Grove-OR/raw/master/img/Mixer_v2.0_OR.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-OR/img/Mixer_v2.0_OR.jpg)
 
 This module provides the function of a [logical OR gate](https://en.wikipedia.org/wiki/OR_gate). It is base on the 74HC1G32GW chip. The 74HC1G32GW is a high-speed Si-gate CMOS device that provides a 2-input OR function. The Grove - OR module therefore has two inputs on the left and one output on the right. The output of this logical OR gate module is HIGH when it gets a HIGH signal on any of the two inputs.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14)
 
 ##  Features
 

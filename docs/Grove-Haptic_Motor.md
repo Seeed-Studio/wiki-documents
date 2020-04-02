@@ -10,7 +10,7 @@ sku: 105020011
 tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit
 ---
 
-![](https://github.com/SeeedDocument/Grove-Haptic_Motor/raw/master/img/bazaar884534_1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Haptic_Motor/img/bazaar884534_1.jpg)
 
 Grove - Haptic motor is a grove module integrated with [DRV2605L](http://www.ti.com/product/DRV2605L) which will give your project more feelings. This motor is specially designed for various effects, such as ramping the vibration level up and down, for wearables and other IoT devices. Right now we have developed an easy-to-use library which simulate 123 kinds in total of vibrating modes and this will make your prototyping quicker. Also, you can develop more advanced functions with driver DRV2605L which will improve actuator performance in terms of acceleration consistency, start time, and break time and is accessible through a shared I2C compatible bus or PWM input signal.
 
@@ -63,7 +63,7 @@ Grove - Haptic motor is a grove module integrated with [DRV2605L](http://www.ti.
 
 
 **Front view:**
-![](https://github.com/SeeedDocument/Grove-Haptic_Motor/raw/master/img/bazaar884534_1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Haptic_Motor/img/bazaar884534_1.jpg)
 
 **Rear view:**
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Haptic_Motor/master/img/Grove_Haptic_Motor_back.jpg)

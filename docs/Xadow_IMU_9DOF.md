@@ -8,10 +8,10 @@ surveyurl: https://www.research.net/r/xadow_imu_9dof
 sku:  100040000
 ---
 
-![](https://github.com/SeeedDocument/Xadow_IMU_9DOF/raw/master/img/Xadow_9dof.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_IMU_9DOF/img/Xadow_9dof.jpg)
 Xadow - IMU 9DOF is a high performance 9-axis motion tracking module,which is base on MPU-9150.The MPU-9150 is the world's first integrated 9-axis motion tracking device designed for the low power, low cost, and high performance requirements of consumer electronics equipment including smartphones, tablets and wearable sensors .MPU-9150 features three 16-bit ADC for digitizing the gyroscope outputs and three 16-bit ADCs for digitizing the accelerometer outputs and three 13-bit ADCs for digitizing the magnetometer outputs.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-IMU-9DOF-p-1776.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-IMU-9DOF-p-1776.html)
 
 ## Specification
 ---
@@ -25,7 +25,7 @@ Xadow - IMU 9DOF is a high performance 9-axis motion tracking module,which is ba
 
 ## Interface Function
 ---
-![](https://github.com/SeeedDocument/Xadow_IMU_9DOF/raw/master/img/Xadow_-_IMU_9DOF.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_IMU_9DOF/img/Xadow_-_IMU_9DOF.jpg)
 
 - ①：12P FPC bottom contact
 - ②：Address select resistor：R4,R5（default address is 0x68）
@@ -38,7 +38,7 @@ Based on library,we can display value of Accle&Gyro&Magnet on serial monitor.Now
 
 **Hardware Installation**
 
-![](https://github.com/SeeedDocument/Xadow_IMU_9DOF/raw/master/img/IMU_9DOF.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_IMU_9DOF/img/IMU_9DOF.jpg)
 
 Hardware instration is very easy,It can connect to Xadow - Main Board by FPC cable.
 
@@ -50,7 +50,7 @@ Hardware instration is very easy,It can connect to Xadow - Main Board by FPC cab
 5. Upload the code. Note that you should select the correct board type and COM port.
 6. You can see :
 
-![](https://github.com/SeeedDocument/Xadow_IMU_9DOF/raw/master/img/9DOF_Serial_Monitor.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_IMU_9DOF/img/9DOF_Serial_Monitor.jpg)
 
 In static state，the z-Axis output value is about 0.98g，so you can refer to this to test if your sensor can work normally.
 
@@ -58,7 +58,7 @@ In static state，the z-Axis output value is about 0.98g，so you can refer to t
 
 The diagram below shows the orientation of the axes of sensitivity and the polarity of rotation.
 
-![](https://github.com/SeeedDocument/Xadow_IMU_9DOF/raw/master/img/MPU9150.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_IMU_9DOF/img/MPU9150.jpg)
 
 
 ## Schematic Online Viewer
@@ -69,9 +69,9 @@ The diagram below shows the orientation of the axes of sensitivity and the polar
 
 ## Resource
 ---
-- [Xadow_IMU_9DOF_Eagle_File.zip](https://github.com/SeeedDocument/Xadow_IMU_9DOF/raw/master/res/Xadow-IMU_9DOF_v1.0.zip)
-- [Xadow_IMU_9DOF_Sch_PDF File](https://github.com/SeeedDocument/Xadow_IMU_9DOF/raw/master/res/Sch_Of_Xadow-IMU_9DOF_v1.0.pdf)
-- [MPU_9150_Datasheet.pdf](https://github.com/SeeedDocument/Xadow_IMU_9DOF/raw/master/res/MPU-9150.pdf)
+- [Xadow_IMU_9DOF_Eagle_File.zip](https://files.seeedstudio.com/wiki/Xadow_IMU_9DOF/res/Xadow-IMU_9DOF_v1.0.zip)
+- [Xadow_IMU_9DOF_Sch_PDF File](https://files.seeedstudio.com/wiki/Xadow_IMU_9DOF/res/Sch_Of_Xadow-IMU_9DOF_v1.0.pdf)
+- [MPU_9150_Datasheet.pdf](https://files.seeedstudio.com/wiki/Xadow_IMU_9DOF/res/MPU-9150.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

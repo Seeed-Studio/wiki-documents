@@ -10,7 +10,7 @@ tags:
 ---
 
 
-![](https://github.com/SeeedDocument/Grove-Temperature-Humidity-Pressure-Gas-Sensor_BME680/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Pressure-Gas-Sensor_BME680/img/main.jpg)
 
 
 
@@ -61,8 +61,8 @@ The Grove-Temperature&Humidity&Pressure&Gas Sensor(BME680) is a multiple functio
 
 ### Pin Map
 
-![](https://github.com/SeeedDocument/Grove-Temperature-Humidity-Pressure-Gas-Sensor_BME680/raw/master/img/pin_map.jpg)
-![](https://github.com/SeeedDocument/Grove-Temperature-Humidity-Pressure-Gas-Sensor_BME680/raw/master/img/pin_map_back.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Pressure-Gas-Sensor_BME680/img/pin_map.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Pressure-Gas-Sensor_BME680/img/pin_map_back.jpg)
 
 
 
@@ -113,7 +113,7 @@ The Grove-Temperature&Humidity&Pressure&Gas Sensor(BME680) is a multiple functio
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-Temperature-Humidity-Pressure-Gas-Sensor_BME680/raw/master/img/7.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Pressure-Gas-Sensor_BME680/img/7.jpg)
 
 
 !!!Note
@@ -145,7 +145,7 @@ The Grove-Temperature&Humidity&Pressure&Gas Sensor(BME680) is a multiple functio
 - **Step 3.** Restart the Arduino IDE. Open “BME680” example via the path: **File --> Examples --> Seeed BME680 --> seeed_bme680_test**. 
 
 
-![](https://github.com/SeeedDocument/Grove-Temperature-Humidity-Pressure-Gas-Sensor_BME680/raw/master/img/demo_path.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Pressure-Gas-Sensor_BME680/img/demo_path.jpg)
 
 - **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
@@ -202,9 +202,9 @@ gas ===>> 101.76 Kohms
 
 ## Resources
 
-- **[Zip]** [Grove-BME680 Eagle file](https://github.com/SeeedDocument/Grove-Temperature-Humidity-Pressure-Gas-Sensor_BME680/raw/master/res/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor_BME680.zip)
+- **[Zip]** [Grove-BME680 Eagle file](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Pressure-Gas-Sensor_BME680/res/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor_BME680.zip)
 - **[Library]** [Seeed BME680 Library](https://github.com/Seeed-Studio/Seeed_BME680)
-- **[PDF]** [Datasheet of BME680](https://github.com/SeeedDocument/Grove-Temperature-Humidity-Pressure-Gas-Sensor_BME680/raw/master/res/BME680.pdf)
+- **[PDF]** [Datasheet of BME680](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Pressure-Gas-Sensor_BME680/res/BME680.pdf)
 
 
 

@@ -19,7 +19,7 @@ The purpose of this project is to demonstrate two forms of digital input – usi
 
 6.  The Twin Button Grove's red button uses the D1 connector to send a signal to the Arduino's D7 digital input, and the green button uses the D2 connector to send a signal to the Arduino's D8 digital input.
 7.
-![](https://github.com/SeeedDocument/Project_Two-Digital_Input/raw/master/img/Conn-two.jpg)
+![](https://files.seeedstudio.com/wiki/Project_Two-Digital_Input/img/Conn-two.jpg)
 
 _**Now upload the following Arduino sketch:**_
 

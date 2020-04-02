@@ -7,7 +7,7 @@ oldwikiname:  Download Arduino and install Arduino driver
 surveyurl: https://www.research.net/r/Download_Arduino_and_install_Arduino_driver
 ---
 
-![](https://github.com/SeeedDocument/Download_Arduino_and_install_Arduino_driver/raw/master/img/Arduino_quickstart.jpg)
+![](https://files.seeedstudio.com/wiki/Download_Arduino_and_install_Arduino_driver/img/Arduino_quickstart.jpg)
 
 ## Download the Arduino Environment
 
@@ -57,21 +57,21 @@ Connect the Seeeduino board to your computer using the USB cable. The green powe
 *   Look under Ports (COM &amp; LPT). You should see an open port named "USB Serial Port" Right click on the "USB Serial Port" and choose the "Update Driver Software" option.
 </dd></dl>
 
-![](https://github.com/SeeedDocument/Download_Arduino_and_install_Arduino_driver/raw/master/img/Driver1.jpg)
+![](https://files.seeedstudio.com/wiki/Download_Arduino_and_install_Arduino_driver/img/Driver1.jpg)
 
 <dl><dd>
 
 *   Next, choose the "Browse my computer for Driver software" option.
 </dd></dl>
 
-![](https://github.com/SeeedDocument/Download_Arduino_and_install_Arduino_driver/raw/master/img/Driver2.jpg)
+![](https://files.seeedstudio.com/wiki/Download_Arduino_and_install_Arduino_driver/img/Driver2.jpg)
 
 <dl><dd>
 
 *   Finally, select the driver file named "FTDI USB Drivers", located in the "Drivers" folder of the Arduino Software download.
 </dd></dl>
 
-![](https://github.com/SeeedDocument/Download_Arduino_and_install_Arduino_driver/raw/master/img/Driver3.jpg)
+![](https://files.seeedstudio.com/wiki/Download_Arduino_and_install_Arduino_driver/img/Driver3.jpg)
 
 <font color="red">**Note:** the FTDI USB Drivers are from Arduino. But when you install drivers for other Controllers, such as Xadow Main Board, Seeeduino Clio, Seeeduino Lite,
 
@@ -82,21 +82,21 @@ you need to download corresponding driver file and save it. And select the drive
 *   The below dialog boxes automatically appears if you have installed driver successfully.
 </dd></dl>
 
-![](https://github.com/SeeedDocument/Download_Arduino_and_install_Arduino_driver/raw/master/img/Driver4.jpg)
+![](https://files.seeedstudio.com/wiki/Download_Arduino_and_install_Arduino_driver/img/Driver4.jpg)
 
 <dl><dd>
 
 *   You can check that the drivers have been installed by opening the Windows Device Manager. Look for a "USB Serial Port" in the Ports section.
 </dd></dl>
 
-![](https://github.com/SeeedDocument/Download_Arduino_and_install_Arduino_driver/raw/master/img/Driver5.jpg)
+![](https://files.seeedstudio.com/wiki/Download_Arduino_and_install_Arduino_driver/img/Driver5.jpg)
 
 <dl><dd>
 
 *   You can also see the serial port in Arduino environment.
 </dd></dl>
 
-![](https://github.com/SeeedDocument/Download_Arduino_and_install_Arduino_driver/raw/master/img/Driver6.jpg)
+![](https://files.seeedstudio.com/wiki/Download_Arduino_and_install_Arduino_driver/img/Driver6.jpg)
 
 ###   Installing drivers for the Seeeduino with window8
 
@@ -138,42 +138,42 @@ You should save these files which you are editing before installing driver with 
 *   Download Driver for the Mac OS X version, named 2.2.18 (32bit)
 </dd></dl>
 
-![](https://github.com/SeeedDocument/Download_Arduino_and_install_Arduino_driver/raw/master/img/Driver7.png)
+![](https://files.seeedstudio.com/wiki/Download_Arduino_and_install_Arduino_driver/img/Driver7.png)
 
 <dl><dd>
 
 *   Open the driver file which you just download, and double click FTDIUSBSerialDriver_10_4_10_5_10_6_10_7.mpkg
 </dd></dl>
 
-![](https://github.com/SeeedDocument/Download_Arduino_and_install_Arduino_driver/raw/master/img/Driver8.png)
+![](https://files.seeedstudio.com/wiki/Download_Arduino_and_install_Arduino_driver/img/Driver8.png)
 
 <dl><dd>
 
 *   After double click, you will see an installer window.
 </dd></dl>
 
-![](https://github.com/SeeedDocument/Download_Arduino_and_install_Arduino_driver/raw/master/img/Driver9.png)
+![](https://files.seeedstudio.com/wiki/Download_Arduino_and_install_Arduino_driver/img/Driver9.png)
 
 <dl><dd>
 
 *   Click “Continue”.
 </dd></dl>
 
-![](https://github.com/SeeedDocument/Download_Arduino_and_install_Arduino_driver/raw/master/img/Driver10.png)
+![](https://files.seeedstudio.com/wiki/Download_Arduino_and_install_Arduino_driver/img/Driver10.png)
 
 <dl><dd>
 
 *   You can see the below dialog boxes if you have installed driver successfully.
 </dd></dl>
 
-![](https://github.com/SeeedDocument/Download_Arduino_and_install_Arduino_driver/raw/master/img/Driver11.png)
+![](https://files.seeedstudio.com/wiki/Download_Arduino_and_install_Arduino_driver/img/Driver11.png)
 
 <dl><dd>
 
 *   Test it with Seeeduino
 </dd></dl>
 
-![](https://github.com/SeeedDocument/Download_Arduino_and_install_Arduino_driver/raw/master/img/Driver12.png)
+![](https://files.seeedstudio.com/wiki/Download_Arduino_and_install_Arduino_driver/img/Driver12.png)
 
 -----------------------------
 # add

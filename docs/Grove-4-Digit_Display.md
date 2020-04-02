@@ -140,14 +140,14 @@ g
 
 | Seeeduino V4.2 | Base Shield|  Grove-4-Digit Display |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_4_Digit_Display/raw/master/image/500px-Grove_-_4_digit_display_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_4_Digit_Display/image/500px-Grove_-_4_digit_display_s.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/grove-4digital-display-p-1198.html)|
 
 - **Step 2.** Connect Grove-4-Digit Display to **D2** port of Grove-Base Shield.
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove_4_Digit_Display/raw/master/image/seeeduino_digital_led.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_4_Digit_Display/image/seeeduino_digital_led.jpg)
 
 !!!Note
 	If we don't have Grove Base Shield, We also can directly connect Grove-4-Digit Display to Seeeduino as below. We also can plug Grove-4-Digit Display to other Grove digital port.
@@ -171,7 +171,7 @@ g
     - Number Flow
     - Stop Watch
 
-![](https://github.com/SeeedDocument/Grove_4_Digit_Display/raw/master/image/arduino_example.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_4_Digit_Display/image/arduino_example.jpg)
 
 - **Step 4.** We will see the Grove-4-Digit Display being turned on.
 
@@ -194,7 +194,7 @@ g
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
-![](https://github.com/SeeedDocument/Grove_4_Digit_Display/raw/master/image/4-Digit_Display.png)
+![](https://files.seeedstudio.com/wiki/Grove_4_Digit_Display/image/4-Digit_Display.png)
 
 Upload the program to your Arduino/Seeeduino.
 
@@ -210,7 +210,7 @@ Upload the program to your Arduino/Seeeduino.
 
 | Raspberry pi | Grove Base Hat for RasPi| Grove - 4 Digit Display |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_4_Digit_Display/raw/master/image/500px-Grove_-_4_digit_display_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_4_Digit_Display/image/500px-Grove_-_4_digit_display_s.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/grove-4digital-display-p-1198.html)|
 
 - **Step 2**. Plug the Grove Base Hat into Raspberry Pi.
@@ -218,7 +218,7 @@ Upload the program to your Arduino/Seeeduino.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove_4_Digit_Display/raw/master/image/Digit_Hat.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_4_Digit_Display/image/Digit_Hat.jpg)
 
 
 !!! Note
@@ -488,7 +488,7 @@ You can quit this program by simply press ++ctrl+c++.
 
 | Raspberry pi | GrovePi_Plus | Grove-4-Digit Display |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_4_Digit_Display/raw/master/image/500px-Grove_-_4_digit_display_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_4_Digit_Display/image/500px-Grove_-_4_digit_display_s.jpg)|
 |[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/grove-4digital-display-p-1198.html)|
 
 
@@ -496,7 +496,7 @@ You can quit this program by simply press ++ctrl+c++.
 - **Step 3.** Connect Grove-4-Digit Display to **D5** port of GrovePi_Plus.
 - **Step 4.** Connect the Raspberry to PC through USB cable.
 
-![](https://github.com/SeeedDocument/Grove_4_Digit_Display/raw/master/image/rpi_digital_led.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_4_Digit_Display/image/rpi_digital_led.jpg)
 
 **Software**
 
@@ -722,11 +722,11 @@ void loop()
 
 ## Resources
 
-- **[Eagle&PDF]** [Grove-4-Digit Display V1.0 Schematic](https://github.com/SeeedDocument/Grove_4_Digit_Display/raw/master/resource/Grove%20-%204-Digit%20Display%20V1.0%20eagle%20files.zip)
+- **[Eagle&PDF]** [Grove-4-Digit Display V1.0 Schematic](https://files.seeedstudio.com/wiki/Grove_4_Digit_Display/resource/Grove%20-%204-Digit%20Display%20V1.0%20eagle%20files.zip)
 - **[Library]** [4-Digit Display library](https://github.com/Seeed-Studio/Grove_4Digital_Display)
 - **[Library]** [TimerOne library](https://code.google.com/p/arduino-timerone/downloads/detail?name=TimerOne-v9.zip&can=2&q=)
 - **[Library]** [Four-Digit Display Suli Library](https://github.com/Seeed-Studio/Four_Digit_Display_Suli)
-- **[Library]** [CodeCraft Code](https://github.com/SeeedDocument/Grove_4_Digit_Display/raw/master/resource/4-Digit%20Display.zip)
+- **[Library]** [CodeCraft Code](https://files.seeedstudio.com/wiki/Grove_4_Digit_Display/resource/4-Digit%20Display.zip)
 - **[Datasheet]** [TM1637 datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-4-Digit_Display/master/res/TM1637_datasheet.pdf)
 - **[More Reading]** [The Wooden Laser Gun](http://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)
 

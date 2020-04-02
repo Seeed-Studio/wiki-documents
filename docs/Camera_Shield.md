@@ -7,7 +7,7 @@ prodimagename: CameraShield.jpg
 surveyurl: https://www.research.net/r/Camera_Shield
 sku:  103990057
 ---
-![](https://github.com/SeeedDocument/Camera_Shield/raw/master/img/CameraShield.jpg)
+![](https://files.seeedstudio.com/wiki/Camera_Shield/img/CameraShield.jpg)
 
 Camera Shield is the first shield board that support photograph, it is based on the solution of **VC0706 + OV7725**, the former is a high performance camera processor with enhanced image processing functions and it embedded the hard-wired JPEG codec, and the latter is a high-performance 1/4 inch, single-chip VGA camera and image processor in a small footprint package. We have written our library to control the Camera Shield via UART/SPI, which makes it possible to take picture easily by your Arduino board. Come on and use it to take a photo!
 
@@ -28,9 +28,9 @@ Camera Shield is the first shield board that support photograph, it is based on 
 ---
 Camera Shield can be controlled via SPI or UART interface.
 
-![](https://github.com/SeeedDocument/Camera_Shield/raw/master/img/CameraShield_Interface.png)
+![](https://files.seeedstudio.com/wiki/Camera_Shield/img/CameraShield_Interface.png)
 
-![](https://github.com/SeeedDocument/Camera_Shield/raw/master/img/CameraShield_Interface2.png)
+![](https://files.seeedstudio.com/wiki/Camera_Shield/img/CameraShield_Interface2.png)
 
 ##  Getting Started
 ---
@@ -214,7 +214,7 @@ to use the UART mode.
 
 *   [Camera Shield Library on gitHub](https://github.com/Seeed-Studio/Camera_Shield_VC0706)
 
-*   [Schematic of Camera Shield](https://github.com/SeeedDocument/Camera_Shield/raw/master/res/CameraShield-Schematic.zip)
+*   [Schematic of Camera Shield](https://files.seeedstudio.com/wiki/Camera_Shield/res/CameraShield-Schematic.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

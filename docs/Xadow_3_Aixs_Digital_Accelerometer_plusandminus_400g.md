@@ -7,7 +7,7 @@ prodimagename: Xadow_3Axis_Accelerometer400g.jpg
 surveyurl: https://www.research.net/r/Xadow_3_Axis_Digital_Accelerometer_plusandmiuse_400g
 sku: 101040002
 ---
-![](https://github.com/SeeedDocument/Xadow_3_Aixs_Digital_Accelerometer_plusandminus_400g/raw/master/img/Xadow_3Axis_Accelerometer400g.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_3_Aixs_Digital_Accelerometer_plusandminus_400g/img/Xadow_3Axis_Accelerometer400g.jpg)
 
 The H3LIS331DL is a low power high performance 3-axis linear accelerometer belonging to the “nano” family, with digital I2C serial interface standard output. The device features ultra low power operational modes that allow advanced power saving and smart sleep to wake-up functions. The H3LIS331DL has dynamically user selectable full scales of ±100g/±200 g/±400 g and it is capable of measuring accelerations with output data rates from 0.5 Hz to 1 kHz.
 
@@ -36,14 +36,14 @@ Like other Xadow modules, you need to connect Xadow 3-Axis Accelerometer to Xado
 
 The hardware Installation:
 
-![](https://github.com/SeeedDocument/Xadow_3_Aixs_Digital_Accelerometer_plusandminus_400g/raw/master/img/Xadow-3-Axis_Digital_Accelerometer_Connection.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_3_Aixs_Digital_Accelerometer_plusandminus_400g/img/Xadow-3-Axis_Digital_Accelerometer_Connection.jpg)
 
 !!!Note
     When connect Xadow 3-Axis Accelerometer to Xadow Main Board, you should concern about the connection direction. The connection method is that the unfilled corner of one xadow module need to connect to the right angle of another module(see four corners of each xadow module).
 
 After uploading code, open the serial monitor to obverse the test result. The outputs of this sensor are 3-axis acceleration info which is converted into the unit of gravity, "g".
 
-![](https://github.com/SeeedDocument/Xadow_3_Aixs_Digital_Accelerometer_plusandminus_400g/raw/master/img/Raw_data_of_H3LIS331DL.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_3_Aixs_Digital_Accelerometer_plusandminus_400g/img/Raw_data_of_H3LIS331DL.jpg)
 
 
 ## Schematic Online Viewer

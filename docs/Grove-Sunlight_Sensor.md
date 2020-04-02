@@ -8,7 +8,7 @@ surveyurl: https://www.research.net/r/grove_sunlight_sensor
 sku: 101020089
 ---
 
-![](https://github.com/SeeedDocument/Grove-Sunlight_Sensor/raw/master/img/Grove_sunlight_sensor_view.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/Grove_sunlight_sensor_view.jpg)
 
 Grove - Sunlight Sensor is a multi-channel digital light sensor, which has the ability to detect UV-light, visible light and infrared light.
 
@@ -16,7 +16,7 @@ This device is based on SI1145, a new sensor from SiLabs. The Si1145 is a low-po
 
 Grove - Sunlight Sensor include an on-bard Grove connector, which help you to connect it your Arduino easily. You can use this device for making some project which need to detect the light, such as a simple UV detector.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Sunlight-Sensor-p-2530.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Sunlight-Sensor-p-2530.html)
 
 ## Features
 ---
@@ -42,7 +42,7 @@ Grove - Sunlight Sensor include an on-bard Grove connector, which help you to co
 
 ## Hardware Overview
 ---
-![](https://github.com/SeeedDocument/Grove-Sunlight_Sensor/raw/master/img/Hardware_overview.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/Hardware_overview.jpg)
 
 - Grove Connector - a 4pin interface, contain VCC, GND, SDA and SCL
 - LED - LED Driver pin
@@ -70,20 +70,20 @@ Just connect Grove - Sunlight Sensor into I2C connector of [Seeeduino v4.2](http
 
 As shown below:
 
-![](https://github.com/SeeedDocument/Grove-Sunlight_Sensor/raw/master/img/Grove_sunlight_hardware_connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/Grove_sunlight_hardware_connect.jpg)
 
 !!!Note
     If you need a plug more modules on main control board, you may need a [Grove base shield](http://wiki.seeedstudio.com/Base_Shield_V2/) which will make your work easy.
 
 **Download**
 
-Click [here](https://github.com/SeeedDocument/Grove-Sunlight_Sensor/raw/master/res/Grove_Sunlight_Sensor-master.zip) to download the library and decompress it to any libraries folders of Arduino.
+Click [here](https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/res/Grove_Sunlight_Sensor-master.zip) to download the library and decompress it to any libraries folders of Arduino.
 
 You will notice there's "-master" in the end of the library name, just remove it.
 
 Launch Arduino IDE and click **File>Examples>Grove_Sunlight_Sensor>SI1145DEMO** to open the test code.
 
-![](https://github.com/SeeedDocument/Grove-Sunlight_Sensor/raw/master/img/Grove_sunlight_sensor_arduino.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/Grove_sunlight_sensor_arduino.jpg)
 
 Click Tools>Board to choose Arduino UNO and select respective serial port.
 
@@ -93,7 +93,7 @@ Now click Upload(CTRL+U) to burn testing code. Please refer to [**here**](http:/
 
 After upload completed, Open Serial Monitor of your Arduino IDE, you can get the data:
 
-![](https://github.com/SeeedDocument/Grove-Sunlight_Sensor/raw/master/img/Grove_sunlight_sensor_arduino_result.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/Grove_sunlight_sensor_arduino_result.jpg)
 
 !!!Note
     Vis - visible light, unit in lm
@@ -115,7 +115,7 @@ Spectrum has since been applied by analogy to topics outside of optics. Thus, on
 
 In most modern usages of spectrum there is a unifying theme between extremes at either end. Some older usages of the word did not have a unifying theme, but they led to modern ones through a sequence of events set out below. Modern usages in mathematics did evolve from a unifying theme, but this may be difficult to recognize.
 
-![](https://github.com/SeeedDocument/Grove-Sunlight_Sensor/raw/master/img/Grove_sunlight_spectrum.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/Grove_sunlight_spectrum.jpg)
 
 **Lumen**
 
@@ -146,7 +146,7 @@ The purpose of the UV Index is to help people effectively protect themselves fro
 
 When the day's predicted UV Index is within various numerical ranges, the recommendations for protection are as follows:
 
-![](https://github.com/SeeedDocument/Grove-Sunlight_Sensor/raw/master/img/uv%20index.png)
+![](https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/uv%20index.png)
 
 **Cautionary notes**
 
@@ -167,9 +167,9 @@ UV intensity can nearly double with reflection from snow or other bright surface
 
 ## Resources
 ---
-- [Schematic in PDF](https://github.com/SeeedDocument/Grove-Sunlight_Sensor/raw/master/res/Grove_-_Sunlight_Sensor_v1.0.pdf)
-- [Schematic in Eagle File](https://github.com/SeeedDocument/Grove-Sunlight_Sensor/raw/master/res/Grove_-_Sunlight_Sensor_v1.0_SCH%26PCB%26PDF.zip)
-- [Si1145 datasheet](https://github.com/SeeedDocument/Grove-Sunlight_Sensor/raw/master/res/Si1145-46-47.pdf)
+- [Schematic in PDF](https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/res/Grove_-_Sunlight_Sensor_v1.0.pdf)
+- [Schematic in Eagle File](https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/res/Grove_-_Sunlight_Sensor_v1.0_SCH%26PCB%26PDF.zip)
+- [Si1145 datasheet](https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/res/Si1145-46-47.pdf)
 - [Github Repositoriy for Grove - Sunlight Sensor](https://github.com/Seeed-Studio/Grove_Sunlight_Sensor)
 - [Spectrum](https://en.wikipedia.org/wiki/Spectrum)
 - [Lumen (unit)](https://en.wikipedia.org/wiki/Lumen_(unit))

@@ -9,7 +9,7 @@ sku: 101020637
 ---
 
 
-![](https://github.com/SeeedDocument/Grove-3-Axis_Analog_Accelerometer-20g-ADXL356B/raw/master/img/101020637-preview.png)
+![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Analog_Accelerometer-20g-ADXL356B/img/101020637-preview.png)
 
 
 You can find a variety of [3-axis accelerometers](https://www.seeedstudio.com/tag/accelerometer.html) on our website that can meet different scenarios and needs. This time, we bring you the industrial grade, high stability, high precision and low power ADI ADXL series three-axis accelerometers.  
@@ -69,9 +69,9 @@ Product|Measurement Range|Output Port|Power Consumption
 
 ## Pinout
 
-![](https://github.com/SeeedDocument/Grove-3-Axis_Analog_Accelerometer-20g-ADXL356B/raw/master/img/pinout1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Analog_Accelerometer-20g-ADXL356B/img/pinout1.jpg)
 
-![](https://github.com/SeeedDocument/Grove-3-Axis_Analog_Accelerometer-20g-ADXL356B/raw/master/img/pinout2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Analog_Accelerometer-20g-ADXL356B/img/pinout2.jpg)
 
 
 
@@ -96,7 +96,7 @@ Product|Measurement Range|Output Port|Power Consumption
 
 | Seeeduino V4.2 | Base Shield |Grove 3-aixs Accelermeter ADXL356B|
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-3-Axis_Analog_Accelerometer-20g-ADXL356B/raw/master/img/thumbnail.jpg)
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-3-Axis_Analog_Accelerometer-20g-ADXL356B/img/thumbnail.jpg)
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-3-Axis-Analog-Accelerometer-20g-ADXL356B-p-4004.html)|
 
 
@@ -120,7 +120,7 @@ Product|Measurement Range|Output Port|Power Consumption
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-3-Axis_Analog_Accelerometer-20g-ADXL356B/raw/master/img/_DAS3070.png)
+![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Analog_Accelerometer-20g-ADXL356B/img/_DAS3070.png)
 
 
 #### Software
@@ -322,7 +322,7 @@ $$
 ## Resources
 
 - **[ZIP]** [Grove - 3-Axis Analog Accelerometer ±20g (ADXL356B) Schematic file](https://github.com/SeeedDocument/Grove-3-Axis_Analog_Accelerometer-20g-ADXL356B/raw/master/res/Grove%20-%203-Axis%20Analog%20Accelerometer%20%C2%B120g%20(ADXL356B).zip)
-- **[PDF]** [ADXL 356B Datasheet](https://github.com/SeeedDocument/Grove-3-Axis_Analog_Accelerometer-20g-ADXL356B/raw/master/res/ADXL356B.pdf)
+- **[PDF]** [ADXL 356B Datasheet](https://files.seeedstudio.com/wiki/Grove-3-Axis_Analog_Accelerometer-20g-ADXL356B/res/ADXL356B.pdf)
 
 
 

@@ -11,7 +11,7 @@ sku:     314150004
 
 Water flow sensor consists of a plastic valve body, a water rotor, and a hall-effect sensor. When water flows through the rotor, rotor rolls. Its speed changes with different rate of flow. The hall-effect sensor outputs the corresponding pulse Signal.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/g114-water-flow-sensor-p-1082.html?cPath=144_151)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/g114-water-flow-sensor-p-1082.html?cPath=144_151)
 
 ##   Specification
 ---
@@ -229,7 +229,7 @@ The yellow wire will need to be connected to a 10k pull up resistor.and then to 
 
 Here is a fritzing diagram I made to show you how to wire it all up.
 
-![](https://github.com/SeeedDocument/G1-1-4_Water_Flow_sensor/raw/master/img/Reading_liquid_flow_rate_with_an_Arduino.jpg)
+![](https://files.seeedstudio.com/wiki/G1-1-4_Water_Flow_sensor/img/Reading_liquid_flow_rate_with_an_Arduino.jpg)
 
 Once you have it wired up you will need to upload the following code to your Seeeduino. Once it is uploaded and you have some fluid flowing through the Water Flow Sensor, you can open the serial monitor and it will display the flow rate, refreshing every second.
 
@@ -280,7 +280,7 @@ You can refer our forum for more details about [Reading Water Flow rate with Wat
 ---
 The external diameter of thread the connections use is 1.4mm.
 
-![](https://github.com/SeeedDocument/G1-1-4_Water_Flow_sensor/raw/master/img/Wfs-wiring.jpg)
+![](https://files.seeedstudio.com/wiki/G1-1-4_Water_Flow_sensor/img/Wfs-wiring.jpg)
 
 ##   Output Table
 ---
@@ -308,7 +308,7 @@ Pulse frequency (Hz) in Horizontal Test= 4.5Q, Q is flow rate in L/min. (Results
 <td>40%～60%
 </td></tr></table>
 
-![](https://github.com/SeeedDocument/G1-1-4_Water_Flow_sensor/raw/master/img/G54_Flow_rate_to_frequency.png.png)
+![](https://files.seeedstudio.com/wiki/G1-1-4_Water_Flow_sensor/img/G54_Flow_rate_to_frequency.png.png)
 
 ##   FAQ
 ---

@@ -10,11 +10,11 @@ sku: 102110037
 
 What's the toughest part of building IoT applications? Someone says the jump wires usually make him frustrated, while the other guy says he hates soldering the most. There are even some people who don't like breadboard. Maybe you are not one of them, but the knowledge of electronic engineering, micro-controller programming, network programming, IoT protocols handling are still great burden between you and a successful IoT project.
 
-![](https://github.com/SeeedDocument/Wio_Link/raw/master/image/WioLink.png)
+![](https://files.seeedstudio.com/wiki/Wio_Link/image/WioLink.png)
 
 In order to simplify all these steps, at the end of 2015, Seeed Studio initiated Wio Link on [KickStarter](https://www.kickstarter.com/projects/seeed/wio-link-3-steps-5-minutes-build-your-iot-applicat?ref=nav_search), defined a new way of developing IoT applications. Wio Link is an ESP8266 SoC based open-source Wi-Fi development board, the best part of it is the associated platform that allows users to create IoT applications by virtualizing plug-n-play modules to RESTful APIs with mobile Apps. It means that there will be no hardware programming, no breadboard, no jumper wires, and no soldering, just by installing an App on your mobile phone, you are able to build a simple IoT project in 5 minutes.
 
-[![](https://github.com/SeeedDocument/Wio_Link/raw/master/image/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Wio-Link-p-2604.html)
+[![](https://files.seeedstudio.com/wiki/Wio_Link/image/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Wio-Link-p-2604.html)
 
 
 !!!Warning
@@ -32,7 +32,7 @@ In order to simplify all these steps, at the end of 2015, Seeed Studio initiated
 - Android & iOS Apps to manage Wio Link.
 - IFTTT supported by Seeed's Channel
 
-![](https://github.com/SeeedDocument/Wio_Link/raw/master/image/Wio_Link_Banner.gif)
+![](https://files.seeedstudio.com/wiki/Wio_Link/image/Wio_Link_Banner.gif)
 
 ## Specification
 ----
@@ -62,7 +62,7 @@ In fact, we have already designed many projects in our [**recipe**](https://comm
 
 |Irrigation control system |The internet of led wall | Dog feeding machine|
 |---|---|---|
-|![](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/2.png)|![](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/1.png)|![](https://raw.githubusercontent.com/SeeedDocument/Wio_Node/master/pictures/3.png)|
+|![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/2.png)|![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/1.png)|![](https://raw.githubusercontent.com/SeeedDocument/Wio_Node/master/pictures/3.png)|
 |[MAKE IT NOW](https://community.seeedstudio.com/project_detail.html?id=1274)    |[MAKE IT NOW](https://community.seeedstudio.com/project_detail.html?id=1594) |[MAKE IT NOW](https://community.seeedstudio.com/project_detail.html?id=1066)|
 
 |Kickstarter Monitor|MIssing Call Monitor|Boss Key|
@@ -76,7 +76,7 @@ In fact, we have already designed many projects in our [**recipe**](https://comm
 ## Hardware Overview
 ---
 
-![](https://github.com/SeeedDocument/Wio_Link/raw/master/image/Hardware%20overview.jpg)
+![](https://files.seeedstudio.com/wiki/Wio_Link/image/Hardware%20overview.jpg)
 
 |Part|Function|
 |---|---|
@@ -111,7 +111,7 @@ The RED led is another status led which indicates the power status of Grove modu
 ### Bonus!
 Wio Link has an inbuilt LiPo battery charger, so you can charge 3.7v LiPo battery through JST 2.0 Port when USB is connecting.
 
-![](https://github.com/SeeedDocument/Wio_Link/raw/master/image/500px-Wio_Link_Battery.jpg)
+![](https://files.seeedstudio.com/wiki/Wio_Link/image/500px-Wio_Link_Battery.jpg)
 
 !!!Note
      * Battery needs to be bought separately. Please visit [Bazzar](https://www.seeedstudio.com/s/Battery.html) where we arranged many choices for you.
@@ -123,7 +123,7 @@ Let us build a very basic LED application with Wio Link, in this application you
 
 |Wio Link|Grove - LED|Micro USB Cable|
 |:--------:|:-----------:|:---------------:|
-|![](https://github.com/SeeedDocument/Wio_Link/raw/master/image/Wio%20link%20small%20image.jpg)|![](https://github.com/SeeedDocument/Wio_Link/raw/master/image/Red%20LED.jpg)|![](https://github.com/SeeedDocument/Wio_Link/raw/master/image/48cmUSBc.jpg)|
+|![](https://files.seeedstudio.com/wiki/Wio_Link/image/Wio%20link%20small%20image.jpg)|![](https://files.seeedstudio.com/wiki/Wio_Link/image/Red%20LED.jpg)|![](https://files.seeedstudio.com/wiki/Wio_Link/image/48cmUSBc.jpg)|
 |[GET ONE NOW](https://www.seeedstudio.com/Wio-Link-p-2604.html)|[GET ONE NOW](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|[GET ONE NOW](http://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|
 
 !!!NOTE
@@ -135,7 +135,7 @@ You need to install the Wio Link App to manage and configure your Wio Link devic
 
 Download the Android or iOS App and install. Or you can go to App Store of Apple or Google Market and search "Wio Link", you will find it.
 
-|[![](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/Android%20Robot%20new.jpg)](https://play.google.com/store/apps/details?id=cc.seeed.iot.ap)|[![](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/Apple%20new.jpg)](https://itunes.apple.com/us/app/wio-link/id1054893491?mt=8)|
+|[![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Android%20Robot%20new.jpg)](https://play.google.com/store/apps/details?id=cc.seeed.iot.ap)|[![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Apple%20new.jpg)](https://itunes.apple.com/us/app/wio-link/id1054893491?mt=8)|
 |:---:|:---:|
 |[Get Android App](https://play.google.com/store/apps/details?id=cc.seeed.iot.ap)|[Get iOS App](https://itunes.apple.com/us/app/wio-link/id1054893491?mt=8)|
 
@@ -149,29 +149,29 @@ Download the Android or iOS App and install. Or you can go to App Store of Apple
 !!!Note
     * Please pay attention to the server location, because wrong server location will lead to failure when connecting to Wio Link.
 
-[![](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/Wio%20App/sign%20in%2Blog%20in%2Bchoose%20server.png)](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/Wio%20App/sign%20in%2Blog%20in%2Bchoose%20server.png)
+[![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/sign%20in%2Blog%20in%2Bchoose%20server.png)](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/sign%20in%2Blog%20in%2Bchoose%20server.png)
 
 ### **STEP 3**: Connect Wio Link Wi-Fi AP
 - Push and hold the CONFIG button until the blue LED turns into breathing mode (i.e. blinking with fade in & fade out effect). It means that Wio Link has turned to configuration mode successfully and can be detected by the Wio App.
 
-![](https://github.com/SeeedDocument/Wio_Link/raw/master/image/WioLink_Configure-middle.png)
+![](https://files.seeedstudio.com/wiki/Wio_Link/image/WioLink_Configure-middle.png)
 
 - Push "Add your first Device".
 - Choose Wio Link
 - "Go to Wi-Fi list" will lead you to the Wi-Fi setting interface of your smartphone.
 
-![](https://github.com/SeeedDocument/Wio_Link/raw/master/image/Step3-1new.png)
+![](https://files.seeedstudio.com/wiki/Wio_Link/image/Step3-1new.png)
 
 - If you have successfully made the blue LED turn into breathing mode, you will find the Wio Link in the Wi-Fi list, connect to it!(Usually it is not called Wio Link in the Wi-Fi list, in the example, mine is Wio_8B2F12, you may find one named wio_xxxxxx in your list.)
 - Once connected, you will receive a notice, then you can go back to the app
 - Next step is connecting to the Wi-Fi of your home or company
 
-![](https://github.com/SeeedDocument/Wio_Link/raw/master/image/Step3-2.png)
+![](https://files.seeedstudio.com/wiki/Wio_Link/image/Step3-2.png)
 
 - If there is password pf the Wi-Fi you want to connect, it may require you to enter the password
 - Consider that you may need to connect more than 1 Wio device in the future, a special name will make you distinguish them from each other easily.
 
-![](https://github.com/SeeedDocument/Wio_Link/raw/master/image/Step3-3.png)
+![](https://files.seeedstudio.com/wiki/Wio_Link/image/Step3-3.png)
 
 ### **STEP 4:** Virtually interconnect modules with Wio Link and update firmware
 - Click the Wio Link and you will be in the main interface.
@@ -180,17 +180,17 @@ Download the Android or iOS App and install. Or you can go to App Store of Apple
 - Find the icon that looks like a bulb, choose it.
 - Then you will find the bottom rectangle button becomes red and "View API" becomes "Update Firmware". Choose "Update Firmware"
 
-![](https://github.com/SeeedDocument/Wio_Link/raw/master/image/Step4.png)
+![](https://files.seeedstudio.com/wiki/Wio_Link/image/Step4.png)
 
 - Since you selected the Digital 0 port to connect with LED in the APP, you need to connect the real Grove-LED to Digital 0 port of Wio Link too.
 
-![](https://github.com/SeeedDocument/Wio_Link/raw/master/image/Wio_Link_Grove_LED%20middle.JPG)
+![](https://files.seeedstudio.com/wiki/Wio_Link/image/Wio_Link_Grove_LED%20middle.JPG)
 
 ### **STEP 5**: Test application using APIs
 - Now that  you have successfully connect the LED to Wio Link, click "View API" to check the API of Wio Link
 - Input "1" or "0" in the "Test Request" area, and click "Post" button and see what will happen.
 
-![](https://github.com/SeeedDocument/Wio_Link/raw/master/image/Step5.png)
+![](https://files.seeedstudio.com/wiki/Wio_Link/image/Step5.png)
 
 
 
@@ -200,12 +200,12 @@ Dont't know how to code? Don't worry, with the help of [IFTTT](https://en.wikipe
 
 IFTTT is an abbreviation of "If This Then That", it is a free web-based service that allows users to create chains of simple conditional statements, called "recipes", which are triggered based on changes to other web services such as Gmail, Facebook, Instagram. How does IFTTT work with Wio Link? As you can see in below pictures, Seeed provided cloud service at wio.seeed.io, which can interchange data and send instructions to IFTTT and Wio Link. So by creating some simple recipe, you are able to hack things without coding.
 
-![](https://github.com/SeeedDocument/Wio_Link/raw/master/image/IFTTT.png)
+![](https://files.seeedstudio.com/wiki/Wio_Link/image/IFTTT.png)
 
 If you don't have an IFTTT account, click [here](https://ifttt.com/join) to sign up.
 
 If you already have an IFTTT account,click [here](https://ifttt.com/recipes/search?q=seeed) to connect with Seeed, or search Seeed at IFTTT website. There you will find 9 recipes by Seeed to teach you how to us e IFTTT.
-![](https://github.com/SeeedDocument/Wio_Link/raw/master/image/IFTTT%20recipes.png)
+![](https://files.seeedstudio.com/wiki/Wio_Link/image/IFTTT%20recipes.png)
 
 What is DoButton? DoButton is one of IFTTT's application that empowers you to create your own personalized button with just a tap, it is very suitable for building IoT projects and control it through your smartphone, here are two examples to show you how to use IFTTT&DoButton to make useful applications.
 
@@ -237,41 +237,41 @@ Before you start, please check if you have below devices on hand.
 
 |RGB Led strip|Grove-Temperature and Humidity Sensor|
 |:---:|:---:|
-|![](https://github.com/SeeedDocument/Wio_Link/raw/master/image/RGB%20LED%20Strip.jpg)|![](https://github.com/SeeedDocument/Wio_Link/raw/master/image/grove-T%26H%20sensor.jpg)|
+|![](https://files.seeedstudio.com/wiki/Wio_Link/image/RGB%20LED%20Strip.jpg)|![](https://files.seeedstudio.com/wiki/Wio_Link/image/grove-T%26H%20sensor.jpg)|
 |[Get One Now](https://www.seeedstudio.com/s/led%20strip.html)|[Get One Now](https://www.seeedstudio.com/Grove-Temp%26Humi-Sensor-p-745.html)|
 
 
 - Step1: Remove the Grove LED from the grove connector, plug the Led strip to Wio Link and drag the same module to Wio Link in the App.
 - Update the firmware.
 
-![](https://github.com/SeeedDocument/Wio_Link/raw/master/image/advance%20tutorial%20video.png)
+![](https://files.seeedstudio.com/wiki/Wio_Link/image/advance%20tutorial%20video.png)
 
 - Step2：Plug the Grove-Temperature and Humidity Sensor to Wio Link and drag the same module to Wio Link in the App.
 - Update the firmware.
 
-![](https://github.com/SeeedDocument/Wio_Link/raw/master/image/advance%20tutorial%20video%202.png)
+![](https://files.seeedstudio.com/wiki/Wio_Link/image/advance%20tutorial%20video%202.png)
 
 - Step3: View the APIs and read the temperature & humidity in your house. Below image shows the temperature change before and after holding the grove in hand. I increased the temperature by 1 Celsius. Try and see how you can change the temperature and humidity in your house.
 
-![](https://github.com/SeeedDocument/Wio_Link/raw/master/image/Celsuis%202%20pics.png)
+![](https://files.seeedstudio.com/wiki/Wio_Link/image/Celsuis%202%20pics.png)
 
 - Step4: Control the light of Led strip by changing RGB value.
 
 Because the Wio Link App read hex RGB value, RGB value need to be converted to hex value. Here I would like to recommend the website [RGB t0 Hex](http://www.rgbtohex.net/). Just by inputting RGB value for the 3 RGB elements (Red, Green, Blue), the website will converts the RGB value to hex very easily. Here is some example.
 - Input 255, 0, 0
 
-![](https://github.com/SeeedDocument/Wio_Link/raw/master/image/RGB%20255%200%200.png)
+![](https://files.seeedstudio.com/wiki/Wio_Link/image/RGB%20255%200%200.png)
 
 - Convert it, then you will get the hex value as FF0000, the color is Red.
 
-![](https://github.com/SeeedDocument/Wio_Link/raw/master/image/FF0000.png)
+![](https://files.seeedstudio.com/wiki/Wio_Link/image/FF0000.png)
 
 !!!Note
     * The RGB value you input should be any nature number between 0 and 255 (Including 0 and 255)
 
 Then input how many Leds you want to lighten and the hex value in the app, here my Led strip has 30 Leds, so I lighten all of them.
 
-![](https://github.com/SeeedDocument/Wio_Link/raw/master/image/Wio%20link%20control%20led%20strip.png)
+![](https://files.seeedstudio.com/wiki/Wio_Link/image/Wio%20link%20control%20led%20strip.png)
 
 You can also specific which part of the strip be lighted and give a special color to it, or even make like blink in rainbow mode. A lot of amazing functions are waiting for your exploration!
 
@@ -281,8 +281,8 @@ You can also specific which part of the strip be lighted and give a special colo
 
 Hardware
 
-- [EAGLE Schematic files](https://github.com/SeeedDocument/Wio_Link/raw/master/resource/Wio_Link_SCH_v1.0.rar)
-- [EAGLE PCB file](https://github.com/SeeedDocument/Wio_Link/raw/master/resource/202000877%20Wio%20Link%20v1.0%20sch%20pcb.zip)
+- [EAGLE Schematic files](https://files.seeedstudio.com/wiki/Wio_Link/resource/Wio_Link_SCH_v1.0.rar)
+- [EAGLE PCB file](https://files.seeedstudio.com/wiki/Wio_Link/resource/202000877%20Wio%20Link%20v1.0%20sch%20pcb.zip)
 - [Schematic files(pdf)](https://github.com/SeeedDocument/Wio_Link/raw/master/resource/Wio%20Link%20v1.0%20sch.pdf)
 
 Software

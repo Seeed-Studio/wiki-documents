@@ -9,7 +9,7 @@ sku: 101020636
 
 ---
 
-![enter image description here](https://github.com/SeeedDocument/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/raw/master/img/wiki.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/img/wiki.jpg)
 
 
 The Grove 12 button Capacitive Touch Keypad is built around the ATtiny1616, an AVR® 8-bit processor running at up to 16 MHz. ATtiny1616 is a low-power, high-performance chip integrated QTouch® peripheral touch controller which supports capacitive touch interfaces with proximity sensing and driven shield. With this module, you can easily create an arduino password keypad or a DIY phone keypad.  
@@ -90,7 +90,7 @@ All in all, the Grove 12 button Capacitive Touch Keypad is an easy-to-use module
 
 | Seeeduino V4.2 | Base Shield |Grove 12 button Capacitive Touch Keypad|
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/raw/master/img/Grove---12-Channel-Capacitive-Touch-Keypad-ATtiny1616-thumbnail.png)
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/img/Grove---12-Channel-Capacitive-Touch-Keypad-ATtiny1616-thumbnail.png)
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616-p-4068.html)|
 
 
@@ -124,7 +124,7 @@ All in all, the Grove 12 button Capacitive Touch Keypad is an easy-to-use module
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/raw/master/img/wiki-connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/img/wiki-connect.jpg)
 
 
 #### Software
@@ -244,7 +244,7 @@ void printData() {
 
 | Raspberry pi | Grove Base Hat for RasPi| Grove 12 button Capacitive Touch Keypad |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/raw/master/img/Grove---12-Channel-Capacitive-Touch-Keypad-ATtiny1616-thumbnail.png)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/img/Grove---12-Channel-Capacitive-Touch-Keypad-ATtiny1616-thumbnail.png)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616-p-4068.html)|
 
 
@@ -255,7 +255,7 @@ void printData() {
 - **Step 3**. Power on the Raspberry Pi.
 
 
-![](https://github.com/SeeedDocument/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/raw/master/img/pii-connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/img/pii-connect.jpg)
 
 
 
@@ -355,7 +355,7 @@ python grove_12_channel_touch_keypad.py
     Then touch the keycap, the terminal will output the corresponding key.
 
 
-![](https://github.com/SeeedDocument/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/raw/master/img/grove-py-result.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/img/grove-py-result.jpg)
 
 
 
@@ -369,7 +369,7 @@ python grove_12_channel_touch_keypad.py
 ## Resources
 
 - **[ZIP]** [Grove 12 Channel Capacitive Touch Keypad (ATtiny1616) Schematic file](https://github.com/SeeedDocument/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/raw/master/res/Grove%20-%2012-Channel%20Capacitive%20Touch%20Keypad%20(ATtiny1616).zip)
-- **[PDF]** [ATtiny1616 Datasheet](https://github.com/SeeedDocument/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/raw/master/res/ATtiny1616-1617_Datasheet.pdf)
+- **[PDF]** [ATtiny1616 Datasheet](https://files.seeedstudio.com/wiki/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/res/ATtiny1616-1617_Datasheet.pdf)
 
 
 

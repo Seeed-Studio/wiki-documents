@@ -69,7 +69,7 @@ The Grove - Serial MP3 Play can be controlled by Arduino/Seeeduino. And there is
 - **Step 3.** You can select **Seeed_Serial_MP3_Player/examples/WT2003S_Terminal_Player** example and upload to arduino. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 - **Step 4.** We will see the info at COM terminal as below.
 
-![](https://github.com/SeeedDocument/Grove-MP3_v2.0/raw/master/img/COM.png)
+![](https://files.seeedstudio.com/wiki/Grove-MP3_v2.0/img/COM.png)
 
 
 - **Step 5.** Please key in the related command to play the music.

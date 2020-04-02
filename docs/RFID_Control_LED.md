@@ -22,7 +22,7 @@ This demo will show you how to Read data from RFID tag, and control a LED.
 
 RFID Reader connect to D2, D3.
 
-![](https://github.com/SeeedDocument/RFID_Control_LED/raw/master/img/Sidekick_39_1.png)
+![](https://files.seeedstudio.com/wiki/RFID_Control_LED/img/Sidekick_39_1.png)
 
 **Code:**
 

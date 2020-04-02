@@ -7,13 +7,13 @@ prodimagename:  Seeeduino_ethernet-2.jpg
 surveyurl: https://www.research.net/r/Seeeduino_Ethernet
 sku:   102010000
 ---
-![](https://github.com/SeeedDocument/Seeeduino_Ethernet/raw/master/img/Seeeduino_ethernet-2.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Ethernet/img/Seeeduino_ethernet-2.jpg)
 
 Seeeduino Ethernet is a compact and multifunctional development platform, which merges data logging and processing, device control and Ethernet communication together into one. It's armed with a MEGA328P chip and a Wiz5100: the former provides an Arduino controlling style and the latter provides TCP and UDP Ethernet communication ability. Plus integrated SD card module, it's convenient and neat for remote data logging, processing or transferring via network.
 
 In this version, we lowered the height of RJ45 to balance it with the headers. Besides, with an I2C and a UART Grove port populated,it's convenient to connect corresponding Grove modules to this board.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Seeeduino-Ethernet-p-1231.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Seeeduino-Ethernet-p-1231.html)
 
 ##   Specification
 ---
@@ -32,7 +32,7 @@ In this version, we lowered the height of RJ45 to balance it with the headers. B
 ##   Demonstration
 ---
 We will test the Seeeduino Ethernet functions of writing or reading information from the SD Card and sending out A/D data to network.
-![](https://github.com/SeeedDocument/Seeeduino_Ethernet/raw/master/img/Seeeduino_ethernet-1.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Ethernet/img/Seeeduino_ethernet-1.jpg)
 
 ###   Step 1: Install the Hardware
 
@@ -40,11 +40,11 @@ Firstly, install the hardware. We have two alternatives to plug in the power.
 
 **Method 1**: You can use one [Passive PoE Cable Set](http://www.seeedstudio.com/depot/passive-poe-cable-set-p-1175.html?cPath=207) to provide power and Ethernet connection at the same time like the picture below.
 
-![](https://github.com/SeeedDocument/Seeeduino_Ethernet/raw/master/img/Seeeduino_ethernet-3.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Ethernet/img/Seeeduino_ethernet-3.jpg)
 
 **Method 2**:  Use separate power cable and Ethernet cable.
 
-![](https://github.com/SeeedDocument/Seeeduino_Ethernet/raw/master/img/Seeeduino_ethernet-4.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Ethernet/img/Seeeduino_ethernet-4.jpg)
 
 ###   Step 2: Programing
 
@@ -238,9 +238,9 @@ Because there is no USB connector on the board. Seeeduino Ethernet requires a [U
 
 Connect the UartSBee to Seeeduino Ethernet as below:
 
-![](https://github.com/SeeedDocument/Seeeduino_Ethernet/raw/master/img/Seeeduinoethernet-11.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Ethernet/img/Seeeduinoethernet-11.jpg)
 
- ![](https://github.com/SeeedDocument/Seeeduino_Ethernet/raw/master/img/Seeeduino_ethernet-5.jpg)
+ ![](https://files.seeedstudio.com/wiki/Seeeduino_Ethernet/img/Seeeduino_ethernet-5.jpg)
 
 !!!Warning
     Please select Seeeduino V3.0 as board in tool menu to download the program.
@@ -251,11 +251,11 @@ Connect the UartSBee to Seeeduino Ethernet as below:
 <font color="red">NOTICE:</font> Make sure the Seeeduino Ethernet and your computer are in the same local area network.
 After the program was downloaded, open the Serial Monitor. You will check the status of the board.
 
-![](https://github.com/SeeedDocument/Seeeduino_Ethernet/raw/master/img/Seeeduinoethernet-9.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Ethernet/img/Seeeduinoethernet-9.jpg)
 
 Open a web browser and enter the web address:192.168.1.177, then you can check the data sent out by Seeeduino Ethernet:
 
-![](https://github.com/SeeedDocument/Seeeduino_Ethernet/raw/master/img/Ethernet_shield2.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Ethernet/img/Ethernet_shield2.jpg)
 
 
 ## Schematic Online Viewer
@@ -266,9 +266,9 @@ Open a web browser and enter the web address:192.168.1.177, then you can check t
 
 ##   Resources
 
-*   [Seeeduino Ethernet Eagle Files](https://github.com/SeeedDocument/Seeeduino_Ethernet/raw/master/res/Seeed_Ethernet_Source_Files.zip)
+*   [Seeeduino Ethernet Eagle Files](https://files.seeedstudio.com/wiki/Seeeduino_Ethernet/res/Seeed_Ethernet_Source_Files.zip)
 
-*   [Seeeduino Ethernet Schematic.pdf](https://github.com/SeeedDocument/Seeeduino_Ethernet/raw/master/res/Seeeduino_Ethernet_.pdf)
+*   [Seeeduino Ethernet Schematic.pdf](https://files.seeedstudio.com/wiki/Seeeduino_Ethernet/res/Seeeduino_Ethernet_.pdf)
 
 *   This documentation is licensed under the Creative Commons [Attribution-ShareAlike License 3.0](http://creativecommons.org/licenses/by-sa/3.0/). Source code and libraries are licensed under [GPL/LGPL](http://www.gnu.org/licenses/gpl.html), see source code files for details.
 

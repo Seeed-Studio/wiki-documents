@@ -19,7 +19,7 @@ This guide will show you how to connect the LightView 201k digital display with 
 
 2. Connection
 
-![](https://github.com/SeeedDocument/LightView_201k_Digital_display_module/raw/master/img/Lightviewdisplay.png)
+![](https://files.seeedstudio.com/wiki/LightView_201k_Digital_display_module/img/Lightviewdisplay.png)
 
 1 – Brightness+
 2 – Brightness-
@@ -41,7 +41,7 @@ You need to connect only 4 lines.
 
 The final assembly looks like:
 
-![](https://github.com/SeeedDocument/LightView_201k_Digital_display_module/raw/master/img/图片2.jpg)
+![](https://files.seeedstudio.com/wiki/LightView_201k_Digital_display_module/img/图片2.jpg)
 
 3. How it works
 The display only needs an AV input. The camera shield is used to generate the AV signal. You need not uploading any code into the Seeeduino. Seeeduino only did one thing: power the camera shield. Outputing AV signal is the build-in functionality of the VC0706 chipset used at Camera Shield. In another words, you may not need the Seeeduino+Camera Shield. What you need is an AV signal. You can connect the display to any kind of TV box which can output the AV signal. You can also connect the display to GoPro’s AV output. That’s it.

@@ -25,7 +25,7 @@ We can use IR module to control those appliances also.
 
 IR Emitter connect to D3 and IR Receiver connect to A4.
 
-![](https://github.com/SeeedDocument/IR_Remote/raw/master/img/Sidekick_36_1.png)
+![](https://files.seeedstudio.com/wiki/IR_Remote/img/Sidekick_36_1.png)
 
 **Code:**
 
@@ -35,7 +35,7 @@ Get Value of Remote：
 
 Open revTest of IRSendRev Library, open Serial Monitor. Take your Remote, press a button, then you can find a series of number had been printed.
 
-![](https://github.com/SeeedDocument/IR_Remote/raw/master/img/Sidekick_36_2.png)
+![](https://files.seeedstudio.com/wiki/IR_Remote/img/Sidekick_36_2.png)
 
 This series of number is what we need, note it, we'll use if later.
 

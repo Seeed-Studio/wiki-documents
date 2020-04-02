@@ -10,7 +10,7 @@ sku:
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-Serial_Bluetooth/raw/master/img/Twigbt00.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Serial_Bluetooth/img/Twigbt00.jpg)
 
 Grove - Serial Bluetooth is an easy to use module compatible with the existing Grove Base Shield, and designed for transparent wireless serial connection setup. The serial port Bluetooth module is fully qualified Bluetooth V2.0+EDR(Enhanced Data Rate) 2Mbps Modulation with complete 2.4GHz radio transceiver and baseband. It uses CSR Bluecore 04-External single chip Bluetooth system with CMOS technology and with AFH(Adaptive Frequency Hopping Feature). It has the smallest footprint of 12.7mm x 27mm. Hope it will simplify your overall design/development cycle.
 
@@ -36,10 +36,10 @@ Model:[WLS31746P](http://www.seeedstudio.com/depot/grove-serial-bluetooth-p-795.
 
 In this library we packed are two demos for your project to work in Master mode and Slave mode.
 Two Bluetooth modules work as shown below:
-![](https://github.com/SeeedDocument/Grove-Serial_Bluetooth/raw/master/img/Bluetooth-1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Serial_Bluetooth/img/Bluetooth-1.jpg)
 
 Connect the module to D6 Port of [Grove - Base Shield](https://seeeddoc.github.io/Grove-Base_Shield/) :
-![](https://github.com/SeeedDocument/Grove-Serial_Bluetooth/raw/master/img/Grove-Serial-Bluetooth.JPG)
+![](https://files.seeedstudio.com/wiki/Grove-Serial_Bluetooth/img/Grove-Serial-Bluetooth.JPG)
 
 Install the library in the "Resources" section. If you want to run the project in Master mode, find the demo by the path: File - Examples - Bluetooth_demo_code - Master. And you can find the demo for Slave mode in the same path.
 
@@ -50,7 +50,7 @@ When the Grove - Serial Bluetooth module is in pairing status, the green and red
 
 ####  Flowchat ####
 
-![](https://github.com/SeeedDocument/Grove-Serial_Bluetooth/raw/master/img/Bluetooth-2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Serial_Bluetooth/img/Bluetooth-2.jpg)
 
 ###  Commands to change default configuration ###
 

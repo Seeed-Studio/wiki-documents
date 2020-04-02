@@ -8,11 +8,11 @@ surveyurl: https://www.research.net/r/Breakout_for_LinkIt_Smart_7688
 sku:   103100002
 ---
 
-![](https://github.com/SeeedDocument/Breakout_for_LinkIt_Smart_7688/raw/master/img/Breakout_for_LinkIt_Smart_7688_product_view_1200.jpg)
+![](https://files.seeedstudio.com/wiki/Breakout_for_LinkIt_Smart_7688/img/Breakout_for_LinkIt_Smart_7688_product_view_1200.jpg)
 
 **Breakout for LinkIt Smart 7688** is a Grove port integrated expansion board for LinkItTM Smart 7688 development board. This breakout board will save a lot of work and makes prototyping easier through simplified wiring. It will assist a beginner to get started fast. It supports serial buses like  I2C, UART. It comes with USB, Ethernet and 3.5mm Audio ports.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Breakout-for-LinkIt-Smart-7688-p-2590.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Breakout-for-LinkIt-Smart-7688-p-2590.html)
 
 ##  Features
 ---
@@ -53,7 +53,7 @@ sku:   103100002
 
 ##  Hardware Overview
 ---
-![](https://github.com/SeeedDocument/Breakout_for_LinkIt_Smart_7688/raw/master/img/Breakout_for_LinkIt_Smart_7688_components_1200_s.jpg)
+![](https://files.seeedstudio.com/wiki/Breakout_for_LinkIt_Smart_7688/img/Breakout_for_LinkIt_Smart_7688_components_1200_s.jpg)
 
 **Grove interface**
 
@@ -68,7 +68,7 @@ This section will show those senior customers how to add recording funtion to th
 1.Download the schematic file at bottom of this page. Open the file named **Breakout for LinkIt Smart7688 v1.0 brd.pdf**, and find the section **MIC Input**. Remove following components inductor L6 and capacitor C21. This will added recording function to this board. **Note** this way only works as you use LinkIt Smart 7688 firmware version 0.9.3 and above.
 
 
-![](https://github.com/SeeedDocument/Breakout_for_LinkIt_Smart_7688/raw/master/img/To_use_recording_function_on_version_1.0.png)
+![](https://files.seeedstudio.com/wiki/Breakout_for_LinkIt_Smart_7688/img/To_use_recording_function_on_version_1.0.png)
 
 
 
@@ -117,7 +117,7 @@ This section will show those senior customers how to add recording funtion to th
 3.Connect all parts like follows:
 
 
-![](https://github.com/SeeedDocument/Breakout_for_LinkIt_Smart_7688/raw/master/img/Breakout_for_LinkIt_Smart_7688_demo_connection_1200.jpg)
+![](https://files.seeedstudio.com/wiki/Breakout_for_LinkIt_Smart_7688/img/Breakout_for_LinkIt_Smart_7688_demo_connection_1200.jpg)
 
 4.Enter folder of USB by type **cd /Media/USB-A1** in console.
 
@@ -135,7 +135,7 @@ This section will show those senior customers how to add recording funtion to th
 
 ##  Resources
 
-*   [Schematic files](https://github.com/SeeedDocument/Breakout_for_LinkIt_Smart_7688/raw/master/res/Breakout_for_LinkIt_Smart_7688_v2.0_schematic_files.zip)
+*   [Schematic files](https://files.seeedstudio.com/wiki/Breakout_for_LinkIt_Smart_7688/res/Breakout_for_LinkIt_Smart_7688_v2.0_schematic_files.zip)
 
 *   [LinkIt smart 7688](/LinkIt_Smart_7688)
 

@@ -7,13 +7,13 @@ prodimagename:  Seeeduino_Stalker_V3-Waterproof_Solar_Kit.JPG
 surveyurl: https://www.research.net/r/Seeeduino_Stalker_V3_Waterproof_Solar_Kit
 sku:   110010003
 ---
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/raw/master/img/Seeeduino_Stalker_V3-Waterproof_Solar_Kit.JPG)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/img/Seeeduino_Stalker_V3-Waterproof_Solar_Kit.JPG)
 
 Stalker Kit is a [Seeeduino-Stalker v3](/Seeeduino-Stalker_v3 "Seeeduino-Stalker v3") based **Wireless Sensor Network** node **data-logger**. Seeeduino Stalker v3 is a feature rich Arduino compatible Wireless Sensor Network node. It's modular structure and onboard peripherals like RTC, SDCard interface makes it convenient to log sensor values with accurate time stamp periodically. The Seeeduino Stalker is a candidate for all your tracking, monitoring and control projects.
 
 The Stalker Kit includes all necessary components to work with Seeeduino Stalker v3.0. Stalker Kit can be used outdoors as it comes with a plastic, waterproof enclosure. Hence, you can even put it in the water if you have some special idea. The kit comes with a Solar Panel and a LiPo Battery. They might be used in remote areas like  desert or jungle by working just with the solar energy harvested and stored in the LiPo Battery.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Seeeduino-Stalker-V3-Waterproof-Solar-Kit-p-2441.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Seeeduino-Stalker-V3-Waterproof-Solar-Kit-p-2441.html)
 
 ##  Stalker Kit Contents
 ---
@@ -93,15 +93,15 @@ The Stalker Kit includes all necessary components to work with Seeeduino Stalker
 ---
 *   Since Seeeduino Stalker is designed for use as a Wireless Sensor Network node, it would be incomplete without an accompanying weather-proof enclosure. Keeping that in mind, while redesigning the newer version of Seeeduino Stalker (revision from v1.0 to v2.0) we adjusted the PCB outline and the location of the screws such that it could fit in this enclosure. The enclosure is tough and has a water proof seal.
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/raw/master/img/Waterproof_enclosure.jpg).
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/img/Waterproof_enclosure.jpg).
 
 *   The top lid of the enclosure is kept transparent to mount a solar panel inside it.For more stability, the solar panel is stucked under the top lid of the enclosure as shown:
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/raw/master/img/Stalker_kit_v3.0_1.jpg).
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/img/Stalker_kit_v3.0_1.jpg).
 
 *   The 1050mAh lithium polymer battery can be put into the enclosure under the Seeeduino Stalker. You can fix it by using screws and plastic pillars.
 
-|![](https://github.com/SeeedDocument/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/raw/master/img/Stalker_kit_battery.jpg) |![](https://github.com/SeeedDocument/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/raw/master/img/Stalker_v3_with_battery.jpg)
+|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/img/Stalker_kit_battery.jpg) |![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/img/Stalker_v3_with_battery.jpg)
 |---|---|
 
 ## Application Ideas
@@ -116,7 +116,7 @@ The Stalker Kit includes all necessary components to work with Seeeduino Stalker
 
 *   As a simple standalone Arduino compatible physical computing platform ([UartSBee_V4](/UartSBee_V4 "UartSBee_V4") must be bought separately for programming)
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/raw/master/img/700px-Stalker_v3.0_and_the_Bees.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/img/700px-Stalker_v3.0_and_the_Bees.jpg)
 
 poly 441 45 508 17 567 79 505 120 [UartSBee_V4](/UartSBee_V4 "UartSBee_V4")
 
@@ -160,11 +160,11 @@ The following steps will help you assemble the hardware and software resources t
 
 You will require the following hardware for running your first program.
 
-|![](https://github.com/SeeedDocument/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/raw/master/img/Seeed_Stalker_v3-6.png)|![](https://github.com/SeeedDocument/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/raw/master/img/Uartsb40.jpg)|
+|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/img/Seeed_Stalker_v3-6.png)|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/img/Uartsb40.jpg)|
 |:---:|:---:|
 |**Seeeduino Stalker v3**<br>[Buy Here](http://www.seeedstudio.com/depot/Seeeduino-Stalker-v3-p-1882.html)|**UartsBee v4.0**<br>Required for programming the Seeeduino Stalker.<br>[Buy Here](http://www.seeedstudio.com/depot/uartsbee-v31-p-688.html)|
 
-|![](https://github.com/SeeedDocument/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/raw/master/img/Miniusb.jpg)|![](https://github.com/SeeedDocument/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/raw/master/img/Seeeduino_Stalker_V3-Waterproof_Solar_Kit_5pin_cable.jpg)|
+|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/img/Miniusb.jpg)|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/img/Seeeduino_Stalker_V3-Waterproof_Solar_Kit_5pin_cable.jpg)|
 |---|---|
 |**Mini USB Cable**<br>You would probably have this one lying around,or if not, buy one [here](http://www.seeedstudio.com/depot/mini-usb-cable-110cm-p-252.html). We would use this to connect the UartSBee_V4 to one of the USB ports on your computer.|**6 pin dual-female jumper wire**<br>Required for connecting the UartSBee_V4 to Seeeduino Stalker.You might already have few lying around your workspace. If not, you can buy a colourful one [here](http://www.seeedstudio.com/depot/6-pin-dualfemale-jumper-wire-100mm-5-PCs-pack-p-129.html).</div>
 </td></tr></table>
@@ -184,7 +184,7 @@ You will require the following hardware for running your first program.
 
 5.  Next connect the Mini USB cable from UartSBee_V4 to your computer. If you are using a Windows based PC, the "Found New Hardware" balloon will pop up and within a few moments the drivers for FT232RL (i.e. UartSBee_V4) will be installed.
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/raw/master/img/Seeeduino_Stalker_v3_Uartsbee_4.0_Connection.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/img/Seeeduino_Stalker_v3_Uartsbee_4.0_Connection.jpg)
 
 Seeeduino Stalker v3 &lt;---&gt; UartSBee v4.0 connection
 
@@ -256,7 +256,7 @@ Seeeduino Stalker v3 &lt;---&gt; UartSBee v4.0 connection
 
 *   compile and upload to [Seeeduino-Stalker v3](/Seeeduino-Stalker_v3 "Seeeduino-Stalker v3")
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/raw/master/img/Seeeduino_Stalker_v3_adjust.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/img/Seeeduino_Stalker_v3_adjust.png)
 
 **adjust.ino output**
 
@@ -274,7 +274,7 @@ Seeeduino Stalker v3 &lt;---&gt; UartSBee v4.0 connection
 
 *   compile and upload to [Seeeduino-Stalker v3](/Seeeduino-Stalker_v3 "Seeeduino-Stalker v3")
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/raw/master/img/Seeeduino_Stalker_v3_now.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/img/Seeeduino_Stalker_v3_now.png)
 
 **now.ino output**
 
@@ -292,7 +292,7 @@ This example is a demonstration of interrupt detection from DS1337 <span style="
 
 *   compile and upload to [Seeeduino-Stalker v3](/Seeeduino-Stalker_v3 "Seeeduino-Stalker v3")
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/raw/master/img/Seeeduino_Stalker_v3_interrupt.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/img/Seeeduino_Stalker_v3_interrupt.png)
 **interrupts.ino output**
 
 <big>Data Logger Example</big>
@@ -301,7 +301,7 @@ This example is a demonstration of interrupt detection from DS1337 <span style="
 
 The principal application of Seeeduino Stalker v3.0 is data-logging of sensor signal like battery voltage, etc along with the time-stamp. These sketch puts the MCU in sleep mode when not performing data sampling / logging operation. The complete implementation is documented very well in the code. The following section gives an overview :
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/raw/master/img/Seeeduino_Stalker_v3_SolarPanel.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/img/Seeeduino_Stalker_v3_SolarPanel.jpg)
 
 **Data Logger examples hardware setup**
 
@@ -314,7 +314,7 @@ The principal application of Seeeduino Stalker v3.0 is data-logging of sensor si
 
         *   This sketch also produces verbose output i.e the various events happening inside MCU are displayed in serial terminal.
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/raw/master/img/Stalker_v3.0_datalogger_flowchart.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/img/Stalker_v3.0_datalogger_flowchart.png)
 
 **Overview of Data-logger implementation**
 

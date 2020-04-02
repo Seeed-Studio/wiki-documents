@@ -85,7 +85,7 @@ Model:[WLS125E1P](http://www.seeedstudio.com/depot/bluetooth-bee-p-598.html?cPat
 ##   Pin definition and Rating   ##
 
 Bottom-view:
-![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/Bluetooth-pin.jpg)
+![](https://files.seeedstudio.com/wiki/Bluetooth-Bee/img/Bluetooth-pin.jpg)
 
 | Pin   | #  | Pad Type   | Description                    |
 |-------|----|----------------------------------------------------|--------------------------------|
@@ -133,13 +133,13 @@ Bluetooth Bee board is of 12.7mm x 27mm size.
 
 Use a [XBee® Shield](https://seeeddoc.github.io/XBee-Shield/)  to connect **Bluetooth Bee** to Seeeduino / Arduino. Refer the [XBee® Shield](https://seeeddoc.github.io/XBee-Shield/)  documentation on how to set the toggle switches to correct positions.
 
-![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/Seeeduino_BluetoothBee_Xbee_Shield.JPG)
+![](https://files.seeedstudio.com/wiki/Bluetooth-Bee/img/Seeeduino_BluetoothBee_Xbee_Shield.JPG)
 
 ####   Connecting to PC with UartSbee  ####
 
 Use an UartSBee to connect **Bluetooth Bee** to PC. Set the power selection toggle switch to 3.3V before connecting BlueTooth Bee.
 
-![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/BluetoothBee_with_UartSBee.JPG)
+![](https://files.seeedstudio.com/wiki/Bluetooth-Bee/img/BluetoothBee_with_UartSBee.JPG)
 
 ###   Software Instruction   ###
 
@@ -147,13 +147,13 @@ Use an UartSBee to connect **Bluetooth Bee** to PC. Set the power selection togg
 
 The following sketch presents an overview of **Bluetooth Bee** operation in master and slave mode.
 
-![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/Bluetooth-1.jpg)
+![](https://files.seeedstudio.com/wiki/Bluetooth-Bee/img/Bluetooth-1.jpg)
 
 ####   Flowchart   ####
 
 The following flowchart gives a quick start guide to **Bluetooth Bee** programming.
 
-![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/Bluetooth-2.jpg)
+![](https://files.seeedstudio.com/wiki/Bluetooth-Bee/img/Bluetooth-2.jpg)
 
 ####   Commands to change default configuration ####
 
@@ -505,35 +505,35 @@ sudo apt-get install gnome-bluetooth
 
 - Open bluetooth-properties application from shell
 
-![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/Bluetooth_linux_config0.png)
+![](https://files.seeedstudio.com/wiki/Bluetooth-Bee/img/Bluetooth_linux_config0.png)
 
 - Click Set up new device
 
-![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/Bluetooth_linux_config1.png)
+![](https://files.seeedstudio.com/wiki/Bluetooth-Bee/img/Bluetooth_linux_config1.png)
 
 and click Forward
 
-![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/Bluetooth_linux_config2.png)
+![](https://files.seeedstudio.com/wiki/Bluetooth-Bee/img/Bluetooth_linux_config2.png)
 
 - Open PIN options...
 
-![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/Bluetooth_linux_config2.1.png)
+![](https://files.seeedstudio.com/wiki/Bluetooth-Bee/img/Bluetooth_linux_config2.1.png)
 
 - Set Fixed PIN 0000. 0000 is the default pin used in the above sketch.
 
-![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/Bluetooth_linux_config3.png)
+![](https://files.seeedstudio.com/wiki/Bluetooth-Bee/img/Bluetooth_linux_config3.png)
 
 - Device Setup Window opens
 
-![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/Bluetooth_linux_config4.png)
+![](https://files.seeedstudio.com/wiki/Bluetooth-Bee/img/Bluetooth_linux_config4.png)
 
 - and Setup Completed dialog opens. Click Close.
 
-![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/Bluetooth_linux_config5.png)
+![](https://files.seeedstudio.com/wiki/Bluetooth-Bee/img/Bluetooth_linux_config5.png)
 
 - The address of the **Bluetooth Bee**00:13:EF:00:00:24 is displayed in shell.
 
-![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/Bluetooth_linux_config6.png)
+![](https://files.seeedstudio.com/wiki/Bluetooth-Bee/img/Bluetooth_linux_config6.png)
 
 - Bind the **Bluetooth Bee** to rfcomm port. Here the address of **Bluetooth Bee** is bound to a serial port device /dev/rfcomm0
 
@@ -550,41 +550,41 @@ user@user-desktop:~$ ls /dev/rfcomm*
 
 - Seeeduino + Bluetooth Bee will reply with **"You are connected to Bluetooth Bee"**
 
-![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/Bluetooth_linux_config8.png)
+![](https://files.seeedstudio.com/wiki/Bluetooth-Bee/img/Bluetooth_linux_config8.png)
 
 ####   Connecting Bluetooth Bee to PC (via Bluetooth Dongle) under Windows  ####
 
 - Install the Microsoft Bluetooth default drivers. Open Control Panel -> Bluetooth Devices
 
-![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/Bluetooth_windows0.jpg)
+![](https://files.seeedstudio.com/wiki/Bluetooth-Bee/img/Bluetooth_windows0.jpg)
 
 - Click Add button.
 
-![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/Bluetooth_windows1.jpg)
+![](https://files.seeedstudio.com/wiki/Bluetooth-Bee/img/Bluetooth_windows1.jpg)
 
 - Check My devices is set up  and ready to be found and click Next button
 
-![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/Bluetooth_windows2.jpg)
+![](https://files.seeedstudio.com/wiki/Bluetooth-Bee/img/Bluetooth_windows2.jpg)
 
 - Select the "SeeedBlueToothBee" device and click Next.
 
-![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/Bluetooth_windows3.jpg)
+![](https://files.seeedstudio.com/wiki/Bluetooth-Bee/img/Bluetooth_windows3.jpg)
 
 - Select Use the passkey found in the documentation and enter 0000
 
-![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/Bluetooth_windows4.jpg)
+![](https://files.seeedstudio.com/wiki/Bluetooth-Bee/img/Bluetooth_windows4.jpg)
 
 - Passkeys are exchanged and an outgoing serial port COM5 is assigned for our communication.
 
-![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/Bluetooth_windows5.jpg)
+![](https://files.seeedstudio.com/wiki/Bluetooth-Bee/img/Bluetooth_windows5.jpg)
 
 -  A task-bar balloon shows that a new Bluetooth Serial Port link is added.
 
-![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/Bluetooth_windows6.jpg)
+![](https://files.seeedstudio.com/wiki/Bluetooth-Bee/img/Bluetooth_windows6.jpg)
 
 - COM5 is assigned for communication. This port should be used to communicate PC with Bluetooth Bee.
 
-![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/Bluetooth_windows7.jpg)
+![](https://files.seeedstudio.com/wiki/Bluetooth-Bee/img/Bluetooth_windows7.jpg)
 
 - This COM5  serial port can be accessed by any Serial Port terminal.
 
@@ -593,7 +593,7 @@ user@user-desktop:~$ ls /dev/rfcomm*
 
 - Seeeduino + Bluetooth Bee will reply with "You are connected to Bluetooth Bee"
 
-![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/Bluetooth_windows8.jpg)
+![](https://files.seeedstudio.com/wiki/Bluetooth-Bee/img/Bluetooth_windows8.jpg)
 
 ####   Connecting Bluetooth Bee to PC using UartsBee in Master Mode  ####
 
@@ -603,15 +603,15 @@ This demo uses hardware arrangement described in [Hardware Installation - UartSB
 
 - Send \r\n+STWMOD=1\r\n command. This configures the **Bluetooth Bee** in master mode.
 
-![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/BTBee_Master1.png)
+![](https://files.seeedstudio.com/wiki/Bluetooth-Bee/img/BTBee_Master1.png)
 
 - Send \r\n+INQ=1\r\n command. **Bluetooth Bee** searches available Bluetooth devices in neighborhood and list the address of the devices. In this case with +RTINQ=0,19,86,0,19,1E;desktop, where desktop is a PC with Bluetooth interface. While inquiring the red and green led blinks alternatively.
 
-![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/BTBee_Master2.png)
+![](https://files.seeedstudio.com/wiki/Bluetooth-Bee/img/BTBee_Master2.png)
 
 - Send \r\n+CONN=0,19,86,0,19,1E\r\n where 0,19,86,0,19,1E is the address of desktop.
 
-![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/BTBee_Master3.png)
+![](https://files.seeedstudio.com/wiki/Bluetooth-Bee/img/BTBee_Master3.png)
 
 - Enter the pin 0000 at PC side and complete the connection.
 
@@ -662,7 +662,7 @@ If you want to make some awesome projects by Bluetooth Bee, here's some projects
 
 ###  Seeed Pet ###
 
-![](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/img/Seeed_pet.jpg)
+![](https://files.seeedstudio.com/wiki/Bluetooth-Bee/img/Seeed_pet.jpg)
 
 This is an interesting demo made by seeduino and [Grove](https://seeeddoc.github.io/Grove_System/) (title=undefined).
 SEEED PET is kind of an electronic pet in our studio. It is a platform for the newbie engineers to be familiar with our company’s products and practice. Every newbie engineer will be added some new ideas or elements on the SEEED PET.
@@ -708,9 +708,9 @@ Now share you awesome projects on with us on [Recipe](https://community.seeedstu
 
 - **[Information]** [PC connecting Bluetooth Bee in Seeedstudio Forum](http://forum.seeedstudio.com/viewtopic.php?f=18&amp;t=1436&amp;p=5637#p5637)
 
-- **[Datasheet]**  [Bluetooth Bee datasheet](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/res/Bluetooth_Bee_datasheet.pdf)
+- **[Datasheet]**  [Bluetooth Bee datasheet](https://files.seeedstudio.com/wiki/Bluetooth-Bee/res/Bluetooth_Bee_datasheet.pdf)
 
-- **[Datasheet]**[HM－01_Datasheet](https://github.com/SeeedDocument/Bluetooth-Bee/raw/master/res/HM%EF%BC%8D01_Datasheet.pdf)
+- **[Datasheet]**[HM－01_Datasheet](https://files.seeedstudio.com/wiki/Bluetooth-Bee/res/HM%EF%BC%8D01_Datasheet.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

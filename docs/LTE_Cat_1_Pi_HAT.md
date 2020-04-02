@@ -11,7 +11,7 @@ tags: grove_analog, io_3v3, io_5v, plat_duino
 ---
 
 
-![](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/Img/overview.JPG)
+![](https://files.seeedstudio.com/wiki/LTE_Cat_1_Pi_HAT/Img/overview.JPG)
 
 Seeed’s LTE CAT.1 Pi HAT is an open sourcecellular extension modem for Raspberry Pi,
 based on u-blox LARA-R2xx series. Itcompatible with Raspberry Pi 1 Model B+ and later versions.
@@ -80,9 +80,9 @@ connector
 
 **Interfaces**
 
-![](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/Img/interfaces1.png)
+![](https://files.seeedstudio.com/wiki/LTE_Cat_1_Pi_HAT/Img/interfaces1.png)
 
-![](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/Img/interfaces2.png)
+![](https://files.seeedstudio.com/wiki/LTE_Cat_1_Pi_HAT/Img/interfaces2.png)
 
 
 - **LTE CAT.1**: U-blox LARA-R2xx series LTE CAT.1
@@ -102,7 +102,7 @@ module, please refer to [u-blox LARA-R2 series product page](https://www.u-blox.
 
 **Pinout**
 
-![](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/Img/pinout.jpg)
+![](https://files.seeedstudio.com/wiki/LTE_Cat_1_Pi_HAT/Img/pinout.jpg)
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -366,7 +366,7 @@ module, please refer to [u-blox LARA-R2 series product page](https://www.u-blox.
 
 **Dimensions**
 
-![](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/Img/Hard01.png)
+![](https://files.seeedstudio.com/wiki/LTE_Cat_1_Pi_HAT/Img/Hard01.png)
 
 
 <iframe src="https://3dwarehouse.sketchup.com/embed.html?mid=eeee1715-69fe-4e5e-a643-15a3c1f3510d" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="800" height="450" allowfullscreen></iframe>
@@ -392,7 +392,7 @@ Now we have made three versions of the LTE Cat 1 Pi HAT. In addition to supporti
 
 - Step 1. Stack LTE Cat 1 Pi HAT on top of Raspberrry and connect the 2 antennas. 
 
-![](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/Img/Rasp_Pi_HAT.jpg)
+![](https://files.seeedstudio.com/wiki/LTE_Cat_1_Pi_HAT/Img/Rasp_Pi_HAT.jpg)
 
 - Step 2. Connect the mouse, keyboard and monitor as well.
 - Step 3. Power the Raspberry Pi.
@@ -469,7 +469,7 @@ A1: Yes, there are 2 ways. One is USB and other is UART port.
 - For USB, Please use the USB cable to connect the Pi HAT with PC directly. Then download and install the [u-blox Cellular USB_Windows Driver, v2.0](https://www.u-blox.com/sites/default/files/ubloxCell_usbcdc_windows_3264_v2.0.0.0.exe.zip). The COM3 and COM4 are used for AT command in device manager. We can use any Serial COM monitor tool to run AT commands or use 
 evaluation software [m-center for Windows, version 1.11.0](https://www.u-blox.com/sites/default/files/products/tools/m-center-01.11.00.exe) for windows. 
 
-![](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/Img/device_manager.png)
+![](https://files.seeedstudio.com/wiki/LTE_Cat_1_Pi_HAT/Img/device_manager.png)
 
 - For the UART port,　Please use the [usb to serial adaptor](https://www.seeedstudio.com/UartSBee-V5-p-1752.html), follow below connection and use the baudrate as 115200. We can use any Serial COM monitor tool to run AT commands.
 
@@ -480,7 +480,7 @@ evaluation software [m-center for Windows, version 1.11.0](https://www.u-blox.co
 | RX                    | Pin10-RX_RPI                 |
 | NA                    | Pin11-RTS_RPI Connect to Pin9-GND |
 
-![](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/Img/UART.png)
+![](https://files.seeedstudio.com/wiki/LTE_Cat_1_Pi_HAT/Img/UART.png)
 
 !!!Warning
     Please do connect the RTS_RPI to GND as marked as red at above picture if we use the UART port for communication.
@@ -532,7 +532,7 @@ AT+UPING="www.google.com"
 
 ## Resource
 
-- **[PDF]** [LTE Cat.1 Pi HAT Schematic](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/res/LTE%20CAT.1%20Pi%20HAT%20v1.0.pdf)
+- **[PDF]** [LTE Cat.1 Pi HAT Schematic](https://files.seeedstudio.com/wiki/LTE_Cat_1_Pi_HAT/res/LTE%20CAT.1%20Pi%20HAT%20v1.0.pdf)
 - **[PDF]** [u-blox-CEL_ATCommands](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/res/u-blox-CEL_ATCommands_(UBX-13002752).pdf)
 - **[PDF]** [LARA-R2_DataSheet](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/res/LARA-R2_DataSheet_(UBX-16005783).pdf)
 - **[PDF]** [LARA-R2_SysIntegrManual](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/res/LARA-R2_SysIntegrManual_(UBX-16010573).pdf)

@@ -7,7 +7,7 @@ prodimagename:  respeaker_core.jpg
 surveyurl:  https://www.research.net/r/Respeaker_Core
 sku:     102010088
 ---
-![](https://github.com/SeeedDocument/Respeaker_Core/raw/master/img/respeaker_core.jpg)
+![](https://files.seeedstudio.com/wiki/Respeaker_Core/img/respeaker_core.jpg)
 
 ReSpeaker is an open modular voice interface to hack things around you. Let you interact with your home appliances, your plant, your office, your internet-equipped devices or any other things in your daily life, all by your voice.
 
@@ -24,11 +24,11 @@ ReSpeaker is an open modular voice interface to hack things around you. Let you 
   Rather than the on board MT7688 Wi-Fi module which runs the Linux based OpenWrt, ReSpeaker is also powered by the ATmega32u4 chip and absolutely Arduino compatible, which means, we can use ReSpeaker as a powerful Arduino board and do many ‘Arduino’ things. It’s for learning, it’s for practicing, and it’s for fun.
 
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/ReSpeaker-Core-Based-On-MT7688-and-OpenWRT-p-2716.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/ReSpeaker-Core-Based-On-MT7688-and-OpenWRT-p-2716.html)
 
 ##   Features
 ---
-![](https://github.com/SeeedDocument/Respeaker_Core/raw/master/img/respeaker_core_futures.jpg)
+![](https://files.seeedstudio.com/wiki/Respeaker_Core/img/respeaker_core_futures.jpg)
 
 - Set Your Hands Free: Speech recognition with or without the Internet
 - Wireless Streaming: stream music via Airplay/DLNA
@@ -39,7 +39,7 @@ ReSpeaker is an open modular voice interface to hack things around you. Let you 
 
 ##   Specifications
 ---
-![](https://github.com/SeeedDocument/Respeaker_Core/raw/master/img/respeaker_core_hardware%20overview.jpg)
+![](https://files.seeedstudio.com/wiki/Respeaker_Core/img/respeaker_core_hardware%20overview.jpg)
 
 **Technology Specs**
 
@@ -76,7 +76,7 @@ ReSpeaker is an open modular voice interface to hack things around you. Let you 
 
 **Pin-out Diagram**
 
-![](https://github.com/SeeedDocument/Respeaker_Core/raw/master/img/respeaker_core_pinmap.png)
+![](https://files.seeedstudio.com/wiki/Respeaker_Core/img/respeaker_core_pinmap.png)
 
 - GPIO0/I2S_ADC: Drive external encoder/decoder, ADC signal
 - GPIO1/I2S_DAC: Drive external encoder/decoder, DAC signal
@@ -106,15 +106,15 @@ ReSpeaker is an open modular voice interface to hack things around you. Let you 
 
     - Connect ReSpeaker to your PC via USB, check "Device Manager" for COM port. Here my ReSpeaker COM port is COM31.
 
-    ![](https://github.com/SeeedDocument/Respeaker_Core/raw/master/img/putty1.png)
+    ![](https://files.seeedstudio.com/wiki/Respeaker_Core/img/putty1.png)
 
     - Select Serial under Connection type. In the Serial line field, enter the COM port for your ReSpeaker. In the Speed field, type 57600.
 
-    ![](https://github.com/SeeedDocument/Respeaker_Core/raw/master/img/putty2.png)
+    ![](https://files.seeedstudio.com/wiki/Respeaker_Core/img/putty2.png)
 
     - Click Open. When you see a blank screen, press the Enter key.
 
-    ![](https://github.com/SeeedDocument/Respeaker_Core/raw/master/img/putty3.png)
+    ![](https://files.seeedstudio.com/wiki/Respeaker_Core/img/putty3.png)
 
 - For Linux/Mac
 
@@ -134,7 +134,7 @@ ReSpeaker is set to Repeater Mode as default, and you have to connect it to an e
 
 When you first power on ReSpeaker, it will create a Wi-Fi network called "ReSpeakerXXXXXX". Here "XXXXXX" is the last 6 of your ReSpeaker MAC address, which is marked on the board. Connect your computer to this network.
 
-![](https://github.com/SeeedDocument/Respeaker_Core/raw/master/img/wifi1.png)
+![](https://files.seeedstudio.com/wiki/Respeaker_Core/img/wifi1.png)
 
 !!!Note
     If "ReSpeakerXXXXXX" does not appear, but "LinkIt_Smart_7688_XXXXXX" is found. Please click [here](http://wiki.seeed.cc/ReSpeaker_Core/#q20-system-recovery-by-factory-image).
@@ -142,7 +142,7 @@ When you first power on ReSpeaker, it will create a Wi-Fi network called "ReSpea
 
 Once you've obtained an IP address, open a web browser, and enter 192.168.100.1 in the address bar. After a few seconds, a web page will appear asking for ssid and password of an existing Wi-Fi network.
 
-![](https://github.com/SeeedDocument/Respeaker_Core/raw/master/img/wifi2.png)
+![](https://files.seeedstudio.com/wiki/Respeaker_Core/img/wifi2.png)
 
 Select the Wi-Fi you wish to connect to and enter the password. When you press the OK button, ReSpeaker will join the specified network.
 
@@ -319,7 +319,7 @@ To use Bing Speech API, first you have to get a key of Microsoft Cognitive Servi
 python playmusic.py
 ```
 
-![](https://github.com/SeeedDocument/Respeaker_Core/raw/master/img/getbingapi.png)
+![](https://files.seeedstudio.com/wiki/Respeaker_Core/img/getbingapi.png)
 
 ```
 import logging
@@ -374,7 +374,7 @@ if __name__ == '__main__':
 
 After "INFO:mic:Start Detecting" coming out, try to say "ReSpeaker" to wake up the program, and say "play music" to let it play music. Then ReSpeaker will play "Tchaikovsky\_Concerto\_No.1p.mp3" in the current path with **madplay** tool.
 
-![](https://github.com/SeeedDocument/Respeaker_Core/raw/master/img/bingplaymusic.png)
+![](https://files.seeedstudio.com/wiki/Respeaker_Core/img/bingplaymusic.png)
 
 If you see below error code, the mopidy is running in background and is using the USB device. So try to run /etc/init.d/mopidy stop mopidy and run your command again.
 
@@ -393,12 +393,12 @@ File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
 
 ### Fruit piano
 
-![](https://github.com/SeeedDocument/Respeaker_Core/raw/master/img/fruitpiano.PNG)
+![](https://files.seeedstudio.com/wiki/Respeaker_Core/img/fruitpiano.PNG)
 
 Rather than the on board MT7688 Wi-FI module which runs the Linux based OpenWrt, ReSpeaker is also powered by the ATmega32u4 chip and it’s absolutely Arduino compatible, which means, we can use ReSpeaker as a powerful Arduino board and do many ‘Arduino’ things. It’s for learning, it’s for practicing, and it’s for fun.
 
 For example, you can program it with Arduino IDE to have a special DIY piano that is built on 8 cherry tomatoes connecting to the 8 touch sensors of ReSpeaker.
-![](https://github.com/SeeedDocument/Respeaker_Core/raw/master/img/fruitpiano2.PNG)
+![](https://files.seeedstudio.com/wiki/Respeaker_Core/img/fruitpiano2.PNG)
 
 1. git clone https://github.com/respeaker/piano.git  On ReSpeaker, download the repository
 2. Download [ReSpeaker Arduino Library](https://github.com/respeaker/respeaker_arduino_library) in your computer
@@ -408,7 +408,7 @@ For example, you can program it with Arduino IDE to have a special DIY piano tha
 
 ### Weather Cloud
 
-![](https://github.com/SeeedDocument/Respeaker_Core/raw/master/img/weathercloud.jpg)
+![](https://files.seeedstudio.com/wiki/Respeaker_Core/img/weathercloud.jpg)
 
 Weather Cloud is an awesome project for ReSpeaker. This cool build turns a ReSpeaker into a Weather Cloud, which is able to show you the whether with vivid light and sounds.
 
@@ -587,7 +587,7 @@ sysupgrade -n -F ramips-openwrt-latest-LinkIt7688-squashfs-sysupgrade.bin
 ```
 It will cost about 3 minutes for ReSpeaker to install the firmware and reboot, please **don't turn off** ReSpeaker when updating.
 
-![](https://github.com/SeeedDocument/Respeaker_Core/raw/master/img/systemupdate2.png)
+![](https://files.seeedstudio.com/wiki/Respeaker_Core/img/systemupdate2.png)
 
 
 
@@ -600,13 +600,13 @@ It will cost about 3 minutes for ReSpeaker to install the firmware and reboot, p
 ## Resources
 ----
 
-- **[Eagle]**[ReSpeaker Core v1.0 SCH](https://github.com/SeeedDocument/Respeaker_Core/raw/master/res/RespeakerCorev1.0_SCH.sch.zip)
-- **[Eagle]**[ReSpeaker Core v1.0 BRD](https://github.com/SeeedDocument/Respeaker_Core/raw/master/res/RespeakerCorev1.0_BRD.brd.zip)
+- **[Eagle]**[ReSpeaker Core v1.0 SCH](https://files.seeedstudio.com/wiki/Respeaker_Core/res/RespeakerCorev1.0_SCH.sch.zip)
+- **[Eagle]**[ReSpeaker Core v1.0 BRD](https://files.seeedstudio.com/wiki/Respeaker_Core/res/RespeakerCorev1.0_BRD.brd.zip)
 - **[PDF]**[ReSpeaker Core v1.0 Schematic(pdf)](https://github.com/respeaker/get_started_with_respeaker/blob/master/files/RespeakerCorev1.0_Schematic.pdf)
 - **[PDF]**[ReSpeaker Core v1.0 PCB bottom(pdf)](https://github.com/respeaker/get_started_with_respeaker/blob/master/files/RespeakerCorev1.0_PCB_bottom.pdf)
 - **[PDF]**[ReSpeaker Core v1.0 PCB top(pdf)](https://github.com/respeaker/get_started_with_respeaker/blob/master/files/RespeakerCorev1.0_PCB_top.pdf)
 - **[Document]**[ReSpeaker_Detail](https://github.com/respeaker/get_started_with_respeaker/blob/master/docs/ReSpeaker/README.md)
-- **[PDF]** [AI7688 Datasheet](https://github.com/SeeedDocument/Bazaar_file/raw/master/AI7688.pdf)
+- **[PDF]** [AI7688 Datasheet](https://files.seeedstudio.com/wiki/Bazaar_file/AI7688.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

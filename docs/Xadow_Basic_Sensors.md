@@ -9,14 +9,14 @@ sku: 101040006
 ---
 
 ---
-![](https://github.com/SeeedDocument/Xadow_Basic_Sensors/raw/master/images/Xadow_Basic_Sensors.JPG)
+![](https://files.seeedstudio.com/wiki/Xadow_Basic_Sensors/images/Xadow_Basic_Sensors.JPG)
 
 Xadow Basic Sensors integrates three different sensors on one single board:
 - 3-Axis Accelerometer for motion detection, activity monitoring and speed tracking
 - Dual diode Digital Light Sensor that can separately measure infrared, full-spectrum or human-visible light
 - Temperature Sensor for temperature monitoring.
 
-[![](https://github.com/SeeedDocument/Xadow_Basic_Sensors/raw/master/images/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Xadow-Basic-Sensors-p-2555.html)
+[![](https://files.seeedstudio.com/wiki/Xadow_Basic_Sensors/images/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Xadow-Basic-Sensors-p-2555.html)
 
 ## Features
 ---
@@ -66,23 +66,23 @@ Xadow Basic Sensors integrates three different sensors on one single board:
 
 ## Hardware Overview
 ---
-![](https://github.com/SeeedDocument/Xadow_Basic_Sensors/raw/master/images/Xadow_Basic_Sensors.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Basic_Sensors/images/Xadow_Basic_Sensors.png)
 
 ## Use it with RePhone Kit Create
 ---
 **Obtain the Sensor Data**
 
 Without any programming, you can connect it to the Core Module (Xadow GSM+BLE) of your ‘RePhone Kit Create' to read all the data from the sensors.
-![](https://github.com/SeeedDocument/Xadow_Basic_Sensors/raw/master/images/Xadow_Basic_Sensors_Sensor_Value.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Basic_Sensors/images/Xadow_Basic_Sensors_Sensor_Value.png)
 
 **Set 'If This Then That**
 
 You can also set the sensor data as a condition to trigger a series of actuators like audio, LED matrix and LED strip, or trigger actions like making a call and sending a message.
-![](https://github.com/SeeedDocument/Xadow_Basic_Sensors/raw/master/images/Xadow_Basic_Sensors_Set_Sensor_Condition.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Basic_Sensors/images/Xadow_Basic_Sensors_Set_Sensor_Condition.png)
 
 ## RePhone Community
 ---
-[![](https://github.com/SeeedDocument/Xadow_Basic_Sensors/raw/master/images/300px-RePhone_Community-2.png)](https://community.seeedstudio.com/discover.html?t=RePhone)
+[![](https://files.seeedstudio.com/wiki/Xadow_Basic_Sensors/images/300px-RePhone_Community-2.png)](https://community.seeedstudio.com/discover.html?t=RePhone)
 
 We’ve been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the [RePhone Community](https://community.seeedstudio.com/discover.html?t=RePhone).
 
@@ -105,15 +105,15 @@ We will be keep updating the source code on our github page:
 - [Source Code for Xadow Basic Sensors](https://github.com/WayenWeng/Xadow_Basic_Sensors/)
 
 The schematic diagram of Xadow Basic Sensors is provided in the following link:
-- [Xadow Duino Schematic Files](https://github.com/SeeedDocument/Xadow_Basic_Sensors/raw/master/resources/202000745_PCBA%3BXadow%20Basic%20Sensors%20v1.0_schemic%20file.zip)
+- [Xadow Duino Schematic Files](https://files.seeedstudio.com/wiki/Xadow_Basic_Sensors/resources/202000745_PCBA%3BXadow%20Basic%20Sensors%20v1.0_schemic%20file.zip)
 
 Check more info about the datasheet for each sensors:
-- [ADXL345 - 3_Axis Acceserometer](https://github.com/SeeedDocument/Xadow_Basic_Sensors/raw/master/res/ADXL345-3_Axis_Acceserometer.pdf)
-- [LM75A NXP - Temperature Sensor](https://github.com/SeeedDocument/Xadow_Basic_Sensors/raw/master/res/LM75A_NXP-Temperature_Sensor_.pdf)
-- [TSL2561 - Light Sensor](https://github.com/SeeedDocument/Xadow_Basic_Sensors/raw/master/res/TSL2561-Light_Sensor_.pdf)
+- [ADXL345 - 3_Axis Acceserometer](https://files.seeedstudio.com/wiki/Xadow_Basic_Sensors/res/ADXL345-3_Axis_Acceserometer.pdf)
+- [LM75A NXP - Temperature Sensor](https://files.seeedstudio.com/wiki/Xadow_Basic_Sensors/res/LM75A_NXP-Temperature_Sensor_.pdf)
+- [TSL2561 - Light Sensor](https://files.seeedstudio.com/wiki/Xadow_Basic_Sensors/res/TSL2561-Light_Sensor_.pdf)
 
 And the MCU STM32F030F4:
-- [STM32F030F4](https://github.com/SeeedDocument/Xadow_Basic_Sensors/raw/master/res/STM32F030F4.pdf)
+- [STM32F030F4](https://files.seeedstudio.com/wiki/Xadow_Basic_Sensors/res/STM32F030F4.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

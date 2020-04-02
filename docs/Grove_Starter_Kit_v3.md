@@ -10,7 +10,7 @@ sku:  110060024
 
 Grove is a modular electronics platform for convenient and rapid prototyping. Many configurations can be assembled without the need for   soldering or breadboarding. Simply cable the Grove modules to the Grove shield and leverage the example code provided for each Grove module. The Grove Starter Kit contains a multitude of sensors and actuators, including support for audio, light, motion, tactile, and other interaction modes.  So, you can start messing around at once with a wide variety of projects.
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Grove-Starter_Kit_v2_Photo.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Grove-Starter_Kit_v2_Photo.jpg)
 
 ##  Preface
 
@@ -63,7 +63,7 @@ You are now ready to explore the Grove ecosystem.
 
 Let's start with the Grove base shield board. "Grove - Base Shield" is the new version of the "Electronic Brick Shield". The Base Shield is compatible with Seeeduino v3.0 (168p and 328p), as well as Arduino UNO and Duemilanove. There are 16 Grove ports on the base shield, divided into four functional areas: analog(4), digital(7), I2C(4), and UART(1).
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Base_Shield_IO.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Base_Shield_IO.jpg)
 
 *   Digital Ports
 
@@ -81,7 +81,7 @@ For detailed information on how to use your Grove – Base Shield, go to [Base S
 
 ####  Grove - LCD RGB Backlight
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Serial_LEC_RGB_Backlight_Lcd.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Serial_LEC_RGB_Backlight_Lcd.jpg)
 
 The Grove - LCD RGB Backlight supports text display, using user-defined characters. It enables you to set the backlight color, using the simple and concise Grove interface. It uses I2C as the communication method with your Arduino. So, the number of pins required for data exchange and backlight control shrinks from ~10 to 2, leaving more I/O capability for other challenging tasks.
 
@@ -91,7 +91,7 @@ The example shows you how to print text on the screen and change the color of ba
 
 File -&gt; Sketchbook -&gt; Grove_RGB_Backlight_LCD -&gt; HelloWorld
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/RGBbacklight.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/RGBbacklight.jpg)
 
 **Tips**
 
@@ -101,7 +101,7 @@ This is a 16x2 LCD screen. It is capable of displaying two rows of sixteen-chara
 
 ####  Grove – Relay
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Twig-Relay.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Twig-Relay.jpg)
 
 The Relay is a useful tool to magnify your Arduino’s control ability! Feed the control signal through the Grove interface and the relay open or close the external circuit that is connected to the screw terminals. The voltage of the external circuit can run up to 220V! So grab this relay and start some really tough projects!
 
@@ -109,7 +109,7 @@ The Relay is a useful tool to magnify your Arduino’s control ability! Feed the
 
 The example shows you how to control relay by a button: File -&gt; Sketchbook -&gt; Grove_Relay.
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Grove-Relay_Ex.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Grove-Relay_Ex.jpg)
 
 **Tips**
 
@@ -123,7 +123,7 @@ For detailed information on how to use your Grove – Relay, you can go to [Grov
 
 ####  Grove – Buzzer
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Buzzer1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Buzzer1.jpg)
 
 The Buzzer is a simple yet enjoyable Grove to use. It is piezoelectric speaker, coupled with a simple control circuit.  If it is connected to a digital output, it will emit a tone when the output is high. Alternatively, it can be connected to an analog (really, pulse-width modulated digital) output to generate various tones and effects.
 
@@ -133,7 +133,7 @@ You can use the code for Grove – Button to make the buzzer beep when you press
 
 Find the example via the path below: File -&gt; Sketchbook -&gt; Grove_Buzzer
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Grove-Buzzer_Ex.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Grove-Buzzer_Ex.jpg)
 
 ** Tips**
 
@@ -151,7 +151,7 @@ The code for the Grove – Sound Sensor can be used to control an LED light whos
 
 File -&gt; Sketchbook -&gt; Grove_Sound_Sensor
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Grove-Sound_Sensor_Ex.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Grove-Sound_Sensor_Ex.jpg)
 
 **Tips**
 
@@ -161,7 +161,7 @@ For a detailed information on how to use your Grove - Sound Sensor, go to [Grove
 
 ####   Grove - Touch Sensor
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Grove-touch_sensor_Photo.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Grove-touch_sensor_Photo.jpg)
 
 The Grove - Touch Sensor enables you to replace pressure on a button with contact on a detecting surface. It can detect the change in capacitance when a finger is nearby. So, whether your finger touches the pad directly or just stays close to it, the Grove - Touch Sensor would output HIGH.
 
@@ -169,7 +169,7 @@ The Grove - Touch Sensor enables you to replace pressure on a button with contac
 
 The code of Grove – Button works with this module. Find the example via the path below: File -&gt; Sketchbook -&gt; Grove_Buzzer
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Grove-Touch_Sensor_Ex.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Grove-Touch_Sensor_Ex.jpg)
 
 **Tips**
 
@@ -179,7 +179,7 @@ For detailed information on how to use your Grove - Touch Sensor, go to [Grove -
 
 ####   Grove - Rotary Angle Sensor
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Potentiometer1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Potentiometer1.jpg)
 
 The Grove potentiometer produces analog output between 0 and VCC (3.3 or 5 VDC). The angular range is 300 degrees, with a linear change in value. The resistance value is 10k ohms, perfect for Arduino use. This may also be known as a “rotary angle sensor”.
 
@@ -189,7 +189,7 @@ The example shows you how to read the value of a rotary angle sensor:
 
 File -&gt; Sketchbook -&gt; Grove_Rotary_Angle_Sensor
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Grove-Rotary_Angle_Sensor_Ex.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Grove-Rotary_Angle_Sensor_Ex.jpg)
 
 **Tips**
 
@@ -199,7 +199,7 @@ For a detailed information on how to use your Grove - Rotary Angle Sensor,you ca
 
 ####   Grove – Temperature Sensor
 
-![400px](https://github.com/SeeedDocument/Grove-Temperature_Sensor/raw/master/img/Tempreture_Sensor_Connector.jpg)
+![400px](https://files.seeedstudio.com/wiki/Grove-Temperature_Sensor/img/Tempreture_Sensor_Connector.jpg)
 
 Grove - Temperature Sensor uses a thermistor which returns the ambient temperature. Our board then converts this voltage value measured by an analog input pin to a temperature. The operating range is -40 to 125 degrees Celsius.
 
@@ -209,7 +209,7 @@ The example shows you how to convert the raw output of the sensor onto temperatu
 
 File -&gt; Sketchbook -&gt; Grove_Temperature_Sensor.
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Grove-Temperature_Sensor_Ex.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Grove-Temperature_Sensor_Ex.jpg)
 
 **Tips**
 
@@ -219,7 +219,7 @@ For a detailed information on how to use your Grove - Temperature Sensor,you can
 
 ####   Grove - LED
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Grove-LED_Photo.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Grove-LED_Photo.jpg)
 
 Grove - LED is designed for the beginners of Arduino/Seeeduino to monitor controls from digital ports. It can be mounted to the surface of your box or desk easily and used as pilot lamp for power or signal.
 
@@ -229,7 +229,7 @@ This example we make an LED light with breathing effects:
 
 File -&gt; Sketchbook -&gt; Grove_LED
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Grove-LED_Ex.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Grove-LED_Ex.jpg)
 
 **Tips**
 
@@ -239,7 +239,7 @@ For a detailed information on how to use your Grove - LED,you can go to [Grove -
 
 ####   Grove - Light Sensor
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Grove-Light_Sensor_photo.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Grove-Light_Sensor_photo.jpg)
 
 The light sensor, also known as the light dependent resistor (LDR). Typically, the resistance of the light sensor will decrease when the ambient light intensity increases.
 
@@ -249,7 +249,7 @@ This example will turn on an LED when the light intensity falls below the preset
 
 File -&gt; Sketchbook -&gt; Grove_Light_Sensor
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Grove-Light_Sensor_Ex.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Grove-Light_Sensor_Ex.jpg)
 
 **Tips**
 
@@ -259,7 +259,7 @@ For a detailed information on how to use your Grove - Light Sensor,you can go to
 
 ####   Grove – Button
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Button1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Button1.jpg)
 
 This new version of button Grove module contains one independent button, which are configured with pull-down resistor – ready for use with our microcontrollers as digital input.  The button signals the SIG wire,NC is not used on this Grove module.
 
@@ -269,7 +269,7 @@ This example shows you how to turn on or off an LED by this button.
 
 File -&gt; Sketchbook -&gt; Grove_Button
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Grove-Button_Ex.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Grove-Button_Ex.jpg)
 
 **Tips**
 
@@ -277,7 +277,7 @@ File -&gt; Sketchbook -&gt; Grove_Button
 
 ####  Grove -  Servo
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Grove-Servo_Photo.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Grove-Servo_Photo.jpg)
 
 This is an actuator whose position can be precisely controlled.
 
@@ -287,7 +287,7 @@ We prepared an example of how we use a potentiometer to control the position of 
 
 File --&gt; Sktechbook --&gt; Servo
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Grove-Starter_Kit_Servo.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Grove-Starter_Kit_Servo.jpg)
 
 **Tips**
 
@@ -297,7 +297,7 @@ Grove – Servo has mounting hardware options for different purposes: you can us
 ---
 ###  1. A Cup Of Flowers
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/A_Cup_of_Flower.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/A_Cup_of_Flower.jpg)
 
 **Description**
 
@@ -320,7 +320,7 @@ Would you like a cup of flowers to ease your exhausted heart? This project is ma
 
 **1. Fold The Buds **
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Fold_the_buds.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Fold_the_buds.jpg)
 
 Choose one flower pattern you like and follow its steps to create some of them. One Google search may help a lot in finding one. There are so many origami hobbyists and artists over the Internet who’d like to share their handcrafts.
 
@@ -331,7 +331,7 @@ When folding the bud, you need to leave a small hole on its button for the Grove
 **2. Set Up**
 
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Set_up.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Set_up.jpg)
 
 
 Connect the buds and the touch sensor onto the Grove – Base Shield with the 10cm Grove cable. And then upload the code to your controller.
@@ -374,14 +374,14 @@ void loop()
 **3. Power Up &amp; Settle Down**
 
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Battery.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Battery.jpg)
 
 
 Use a portable 9V battery to provide power to the flowers and settle it down in the cup. Finished! Enjoy your cup of flowers!
 
 ###   2. How You Doing!
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/How_you_doing.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/How_you_doing.jpg)
 
 (downloaded form think.bigchief.it)
 
@@ -405,7 +405,7 @@ How do you say hello to a friend? Big Chief would say “what’s better than a 
 
 **1. Print It Out! **
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Print_it_out.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Print_it_out.jpg)
 
 Choose one pattern you like over the Internet. Make sure there is enough room for a magnet or a magnetic switch plus a vibrator. Same as the origami flower above, you can find tons of them on the Internet.
 
@@ -414,21 +414,21 @@ Choose one pattern you like over the Internet. Make sure there is enough room fo
 Focus when cutting the paper toys. Only in that way you can get a neat one. After that, time to fill some organs to them.
 I pasted a magnet on the back of Big Cihef A(let’s call it this name!). I stuck it there with double-sided adhesive tape.
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Stuck1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Stuck1.jpg)
 
 And for Big Chief B, I pasted a magnetic switch on his back, the same position as A, and a vibrator on his foots.
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Stuck2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Stuck2.jpg)
 
 **3. Glue Them Up **
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Stuck3.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Stuck3.jpg)
 
 Carefully follow the instruction on the printed sheet. Plug the Grove cables into two Grove Modules we used in Big Chief B. Then you will get two cute paper toys like above.
 
 **4. Upload Program **
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/img/Stuck4.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Stuck4.jpg)
 
 Upload the code below to your Arduino. By doing this, you bring life to them.
 ```
@@ -474,25 +474,25 @@ A2: Please check whether the powering switch(3.3V/5V) is on 5V side.
 
 ##   Resources
 ---
-*   [Sch pdf](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/res/Grove-Starter_Kit_v3_sch_pdf.zip)
+*   [Sch pdf](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/res/Grove-Starter_Kit_v3_sch_pdf.zip)
 
-*   [Sch Eagle](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/res/Grove-Starter_Kit_Eagle.zip)
+*   [Sch Eagle](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/res/Grove-Starter_Kit_Eagle.zip)
 
-*   [Grove - Button Source File](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/res/Grove-Button_v1.0_Source_File.zip)
+*   [Grove - Button Source File](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/res/Grove-Button_v1.0_Source_File.zip)
 
-*   [Grove - LED Source File](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/res/Grove-LED_v1.0_Source_File.zip)
+*   [Grove - LED Source File](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/res/Grove-LED_v1.0_Source_File.zip)
 
-*   [Grove - Buzzer Source File](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/res/Grove-Buzzer_v1.0_Source_File.zip)
+*   [Grove - Buzzer Source File](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/res/Grove-Buzzer_v1.0_Source_File.zip)
 
-*   [Grove - Rotary Angle Sensor Source File](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/res/Grove-Rotary_Angle_Sensor_v1.2.zip)
+*   [Grove - Rotary Angle Sensor Source File](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/res/Grove-Rotary_Angle_Sensor_v1.2.zip)
 
-*   [Grove -  Relay Source File](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/res/Grove-Relay_v1.2_Eagle.zip)
+*   [Grove -  Relay Source File](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/res/Grove-Relay_v1.2_Eagle.zip)
 
-*   [Base Shield Source File](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/res/Base_Shield_v2.zip)
+*   [Base Shield Source File](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/res/Base_Shield_v2.zip)
 
-*   [Grove - Sound Sensor Source File](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/res/Grove-Sound_Sensor_v1.3_eagle.zip)
+*   [Grove - Sound Sensor Source File](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/res/Grove-Sound_Sensor_v1.3_eagle.zip)
 
-*   [Grove - Buzzer Source File](https://github.com/SeeedDocument/Grove_Starter_Kit_v3/raw/master/res/Grove-Buzzer_V1.1_eagle.zip)
+*   [Grove - Buzzer Source File](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/res/Grove-Buzzer_V1.1_eagle.zip)
 
 We have this part available in [geppetto](https://geppetto.seeedstudio.com/), easy modular electronic design with Seeed and Geppeto. Build it Now. [geppetto.seeedstudio.com](https://geppetto.seeedstudio.com/)
 

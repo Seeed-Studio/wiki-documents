@@ -10,14 +10,14 @@ tags:
 
 ---
 
-![](https://github.com/SeeedDocument/Sidekick_Advanced_Kit/raw/master/img/SKP-0.jpg)
+![](https://files.seeedstudio.com/wiki/Sidekick_Advanced_Kit/img/SKP-0.jpg)
 
 Welcome to the world of electronic creation! Sidekick Advanced Kit is an Arduino electronics kit that can lead you to world of electronic. It contains the most common electronic components such as resistors, Leds etc. Also contains a large number of rich expansion functional modules, such as temperature and humity sensors, 16x2 LCD display, servo, stepper and so on. This tutorial content of the discussion from the official Arduino tutorials with Seeed resource. This kit contains 39 examples, which can help to start your Arduino development quickly.
 
 ##   Basics
 
 
-![](https://github.com/SeeedDocument/Sidekick_Advanced_Kit/raw/master/img/SKP-1.jpg)
+![](https://files.seeedstudio.com/wiki/Sidekick_Advanced_Kit/img/SKP-1.jpg)
 
 
 *   [1. Blink](http://arduino.cc/en/Tutorial/Blink)
@@ -33,7 +33,7 @@ Welcome to the world of electronic creation! Sidekick Advanced Kit is an Arduino
 ##   Digital
 
 
-![](https://github.com/SeeedDocument/Sidekick_Advanced_Kit/raw/master/img/SKP-2.jpg)
+![](https://files.seeedstudio.com/wiki/Sidekick_Advanced_Kit/img/SKP-2.jpg)
 
 *   [6. BlinkWithoutDelay](http://arduino.cc/en/Tutorial/BlinkWithoutDelay)
 
@@ -53,7 +53,7 @@ Welcome to the world of electronic creation! Sidekick Advanced Kit is an Arduino
 
 ##   Analog
 
-![](https://github.com/SeeedDocument/Sidekick_Advanced_Kit/raw/master/img/SKP-3.jpg)
+![](https://files.seeedstudio.com/wiki/Sidekick_Advanced_Kit/img/SKP-3.jpg)
 
 *   [14. AnalogInOutSerial](http://arduino.cc/en/Tutorial/AnalogInOutSerial)
 
@@ -67,7 +67,7 @@ Welcome to the world of electronic creation! Sidekick Advanced Kit is an Arduino
 
 ##   Display
 
-![](https://github.com/SeeedDocument/Sidekick_Advanced_Kit/raw/master/img/SKP-4.jpg)
+![](https://files.seeedstudio.com/wiki/Sidekick_Advanced_Kit/img/SKP-4.jpg)
 
 
 *   [19. LED Bar](http://arduino.cc/en/Tutorial/BarGraph)
@@ -76,7 +76,7 @@ Welcome to the world of electronic creation! Sidekick Advanced Kit is an Arduino
 
 ##   LiquidCrystal
 
-![](https://github.com/SeeedDocument/Sidekick_Advanced_Kit/raw/master/img/SKP-5.jpg)
+![](https://files.seeedstudio.com/wiki/Sidekick_Advanced_Kit/img/SKP-5.jpg)
 
 
 *   [21. Hello World!](http://arduino.cc/en/Tutorial/LiquidCrystal)
@@ -99,7 +99,7 @@ Welcome to the world of electronic creation! Sidekick Advanced Kit is an Arduino
 
 ##   Motor
 
-![](https://github.com/SeeedDocument/Sidekick_Advanced_Kit/raw/master/img/SKP-6.jpg)
+![](https://files.seeedstudio.com/wiki/Sidekick_Advanced_Kit/img/SKP-6.jpg)
 
 
 *   [30. Servo Knob](http://arduino.cc/en/Tutorial/Knob)
@@ -110,7 +110,7 @@ Welcome to the world of electronic creation! Sidekick Advanced Kit is an Arduino
 
 ##   Sensor
 
-![](https://github.com/SeeedDocument/Sidekick_Advanced_Kit/raw/master/img/SKP-7.jpg)
+![](https://files.seeedstudio.com/wiki/Sidekick_Advanced_Kit/img/SKP-7.jpg)
 
 
 *   [33. Light Sensor and LED Bar](https://seeeddoc.github.io/Light_Sensor_and_LED_Bar/)

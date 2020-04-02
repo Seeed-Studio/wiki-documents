@@ -9,14 +9,14 @@ sku:    110060038
 ---
 
 
-![](https://github.com/SeeedDocument/Sidekick_Basic_Kit_for_LinkIt_ONE/raw/master/img/SKP-0.jpg)
+![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_LinkIt_ONE/img/SKP-0.jpg)
 
 
 ##   Quick Star to LinkIt ONE
 
 Here we will talk about how to use LinkIt ONE
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Sidekick-Basic-Kit-for-LinkIt-ONE-p-2027.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Sidekick-Basic-Kit-for-LinkIt-ONE-p-2027.html)
 
 ##   The Basics
 

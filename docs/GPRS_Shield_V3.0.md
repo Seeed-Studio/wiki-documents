@@ -8,7 +8,7 @@ surveyurl: https://www.research.net/r/GPRS_Shield_V3
 sku:  113030009
 ---
 
-![](https://github.com/SeeedDocument/GPRS_Shield_V3.0/raw/master/img/GPRS_Shield_V3.0_p1.jpg)
+![](https://files.seeedstudio.com/wiki/GPRS_Shield_V3.0/img/GPRS_Shield_V3.0_p1.jpg)
 
 This is version 3.0 of GPRS Shield.
 Hook your Arduino up to GSM/GPRS cell phone network with GPRS shield! You can use your Arduino/Seeeduino or other main boards to dial a phone number or send a text to your friend via easy to use AT commands now.
@@ -16,7 +16,7 @@ GPRS Shield features a quad-band low power consumption GSM/GPRS module SIM900 as
 And there’re two choices for you to communicate GPRS shield with the main board -- UART or SoftwareSerial.
 
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/GPRS-Shield-V3.0-p-2333.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/GPRS-Shield-V3.0-p-2333.html)
 
 ##  Version
 ---
@@ -39,7 +39,7 @@ And there’re two choices for you to communicate GPRS shield with the main boar
 
 ##  Hardware Overview
 ---
-![](https://github.com/SeeedDocument/GPRS_Shield_V3.0/raw/master/img/Gprs_shield_v3_layout1.png)
+![](https://files.seeedstudio.com/wiki/GPRS_Shield_V3.0/img/Gprs_shield_v3_layout1.png)
 
 Please link to the documentation of [GPRS Shield V2.0](http://wiki.seeed.cc/GPRS_Shield_V2.0/) for specifications and application guide.
 
@@ -129,16 +129,16 @@ A6: SIM900 used in GPRS Shield supports 850/900/1800/1900MHz GSM bands.
 
 ##  Resources
 
-- **[Eagle]** [GPRS Shield v3.0 Schematic and PCB in eagle format](https://github.com/SeeedDocument/GPRS_Shield_V3.0/raw/master/res/GPRS_Shield_V3.0_sch_pcb.zip)
-- **[PDF]** [GPRS Shield v3.0 Schematic in PDF format](https://github.com/SeeedDocument/GPRS_Shield_V3.0/raw/master/res/GPRS_Shield_v3.0%20sch.pdf)
-- **[PDF]** [GPRS Shield v3.0 PCB in PDF format](https://github.com/SeeedDocument/GPRS_Shield_V3.0/raw/master/res/GPRS%20Shield%20v3.0%20PCB.pdf)
+- **[Eagle]** [GPRS Shield v3.0 Schematic and PCB in eagle format](https://files.seeedstudio.com/wiki/GPRS_Shield_V3.0/res/GPRS_Shield_V3.0_sch_pcb.zip)
+- **[PDF]** [GPRS Shield v3.0 Schematic in PDF format](https://files.seeedstudio.com/wiki/GPRS_Shield_V3.0/res/GPRS_Shield_v3.0%20sch.pdf)
+- **[PDF]** [GPRS Shield v3.0 PCB in PDF format](https://files.seeedstudio.com/wiki/GPRS_Shield_V3.0/res/GPRS%20Shield%20v3.0%20PCB.pdf)
 - **[Library]** [GPRS_Shield library on gitHub - based on Suli](https://github.com/Seeed-Studio/GPRS_Shield_Suli)
 - **[Library]** [GPRS_SIM900 library on gitHub - Non Suli ](https://github.com/Seeed-Studio/GPRS_SIM900)
-- **[Document]** [AT Commands v1.11](https://github.com/SeeedDocument/GPRS_Shield_V3.0/raw/master/res/AT_Commands_v1.11.pdf)
-- **[Document]** [SIM900 Hardware Design](https://github.com/SeeedDocument/GPRS_Shield_V3.0/raw/master/res/SIM900_HD_V1.05.pdf)
+- **[Document]** [AT Commands v1.11](https://files.seeedstudio.com/wiki/GPRS_Shield_V3.0/res/AT_Commands_v1.11.pdf)
+- **[Document]** [SIM900 Hardware Design](https://files.seeedstudio.com/wiki/GPRS_Shield_V3.0/res/SIM900_HD_V1.05.pdf)
 - **[Datasheet]** [Si5902BDC](http://www.vishay.com/docs/70415/si5902bd.pdf)
-- **[Datasheet]** [SIM900 Datasheeet](https://github.com/SeeedDocument/GPRS_Shield_V3.0/raw/master/res/SIM900datasheeet.zip)
-- **[Datasheet]** [SIM_900_AGPS_instructions](https://github.com/SeeedDocument/GPRS_Shield_V3.0/raw/master/res/SIM_900_AGPS_instructions.zip)
+- **[Datasheet]** [SIM900 Datasheeet](https://files.seeedstudio.com/wiki/GPRS_Shield_V3.0/res/SIM900datasheeet.zip)
+- **[Datasheet]** [SIM_900_AGPS_instructions](https://files.seeedstudio.com/wiki/GPRS_Shield_V3.0/res/SIM_900_AGPS_instructions.zip)
 - **[Tools]** [SIM900 firmware and tool(firmware:1137B08SIM900M64_ST)](https://github.com/SeeedDocument/GPRS_Shield_V3.0/raw/master/res/1137B08SIM900M64_ST.zip)
 - **[Tools]** [SIM900 firmware and tool(firmware:1137B13SIM900M64_ST)](https://github.com/SeeedDocument/GPRS_Shield_V3.0/raw/master/res/1137B13SIM900M64_ST.zip)
 

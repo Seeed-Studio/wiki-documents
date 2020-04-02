@@ -10,7 +10,7 @@ tags:
 ---
 
 
-![](https://github.com/SeeedDocument/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/img/main.jpg)
 
 ADC is a common accessory for Raspberry Pi. Nowadays many cheap MCUs has built-in ADC, so we make this 8-channel ADC based on STM32F030, which is a cost-effective, low-power ARM Cortex M0 MCU. We breakout 8 channels ADC from the MCU, and integrated 4 analog Grove connector so that you can also use analog Grove modules with it.
 
@@ -67,14 +67,14 @@ ADC is a common accessory for Raspberry Pi. Nowadays many cheap MCUs has built-i
 
 **Overview**
 
-![](https://github.com/SeeedDocument/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/raw/master/img/280-pin.jpg)
+![](https://files.seeedstudio.com/wiki/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/img/280-pin.jpg)
 
 
 **GPIO**
 
 The same pin out as the Raspberry Pi.
 
-![](https://github.com/SeeedDocument/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/raw/master/img/280-pin-5.jpg)
+![](https://files.seeedstudio.com/wiki/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/img/280-pin-5.jpg)
 
 
 **SWD**
@@ -82,7 +82,7 @@ The same pin out as the Raspberry Pi.
 
 We use SWD port to burn the firmware to this board. In addition, you can see pin 9/pin 10/pin 11 in this section. Those three pins do not used by any Grove port, you are free to use them without worrying about pin conflicts.
 
-![](https://github.com/SeeedDocument/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/raw/master/img/280-pin-1.jpg)
+![](https://files.seeedstudio.com/wiki/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/img/280-pin-1.jpg)
 
 
 
@@ -94,7 +94,7 @@ There are 4 grove analog sockets on this board such this ADC board can directly 
 
 The analog sensor inputs the analog voltage into the 12-bit ADC. After the ADC converts the analog data to digital data, it inputs the digital data to the Raspberry Pi through the I2C interface.
 
-![](https://github.com/SeeedDocument/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/raw/master/img/280-pin-4.jpg)
+![](https://files.seeedstudio.com/wiki/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/img/280-pin-4.jpg)
 
 
 
@@ -104,14 +104,14 @@ Same as Grove analog port but this part instead of using [Grove - Universal 4 Pi
 
 8 analog junction ports, A0 ~ A7.
 
-![](https://github.com/SeeedDocument/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/raw/master/img/280-pin-3.jpg)
+![](https://files.seeedstudio.com/wiki/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/img/280-pin-3.jpg)
 
 
 **Screw terminal**
 
 Same as above but with different connection method. This group of pin connectors include analog pin A0 ~ A7, Vcc and GND.
 
-![](https://github.com/SeeedDocument/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/raw/master/img/280-pin-2.jpg)
+![](https://files.seeedstudio.com/wiki/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/img/280-pin-2.jpg)
 
 ## Platforms Supported
 
@@ -130,14 +130,14 @@ Same as above but with different connection method. This group of pin connectors
 
 |Raspberry pi|8-Channel 12-Bit ADC for Raspberry Pi(STM32F030)|
 |------------|-------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/raw/master/img/thumbnail.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/img/thumbnail.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/8-Channel-12-Bit-ADC-for-Raspberry-Pi(STM32F030).html)|
 
 
 - **Step 1**. Insert the 8-Channel 12-Bit ADC for Raspberry Pi into Raspberry Pi.
 - **Step 2**. Connect the Raspberry Pi to PC through USB cable.
 
-![](https://github.com/SeeedDocument/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/raw/master/img/connection1.jpg)
+![](https://files.seeedstudio.com/wiki/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/img/connection1.jpg)
 
 
 
@@ -295,7 +295,7 @@ Hardware connection
 
 Hardware connection diagram
 
-![](https://github.com/SeeedDocument/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/raw/master/img/connection2.jpg)
+![](https://files.seeedstudio.com/wiki/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/img/connection2.jpg)
 
 Tap the following command ++python grove_sound_sensor.py 0++ in the command line interface.
 
@@ -338,7 +338,7 @@ You can quit this program by simply press ++ctrl+c++.
 
 - **[Zip]** [8-Channel 12-Bit ADC for Raspberry Pi (STM32F030) Software Library](https://github.com/Seeed-Studio/grove.py)
 
-- **[PDF]** [Datasheet STM32F030](https://github.com/SeeedDocument/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/raw/master/res/STM32.pdf)
+- **[PDF]** [Datasheet STM32F030](https://files.seeedstudio.com/wiki/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/res/STM32.pdf)
 
 
 

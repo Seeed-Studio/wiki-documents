@@ -23,7 +23,7 @@ Relay is mainly used for weak power control strong power. For example, use your 
 
 Connect Relay to D2 of Arduino.
 
-![](https://github.com/SeeedDocument/Relay_Control_LED/raw/master/img/Sidekick_37_1.png)
+![](https://files.seeedstudio.com/wiki/Relay_Control_LED/img/Sidekick_37_1.png)
 
 **Code:**
 

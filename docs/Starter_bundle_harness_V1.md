@@ -7,18 +7,18 @@ prodimagename:  grharn1.jpg
 surveyurl: https://www.research.net/r/Starter_bundle_harness_V1
 sku:    110060009
 ---
-![](https://github.com/SeeedDocument/Starter_bundle_harness_V1/raw/master/img/grharn1.jpg)
+![](https://files.seeedstudio.com/wiki/Starter_bundle_harness_V1/img/grharn1.jpg)
 
 Starter bundle harness is a board  keeping the component of grove-starter bundle from collision.With a high quality, stuffs in the box can be really fastened.
 
 **NOTE**:Before install the harness, Please get rid of the paper on it which protect the harness damaged.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Starter-Bundle-Harness-p-906.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Starter-Bundle-Harness-p-906.html)
 
 ##   Assemble Instruction
 
-![](https://github.com/SeeedDocument/Starter_bundle_harness_V1/raw/master/img/Starter_bundle_assemble_instruction.jpg)
-![](https://github.com/SeeedDocument/Starter_bundle_harness_V1/raw/master/img/Starter_bundle_assemble_instruction_2.jpg)
+![](https://files.seeedstudio.com/wiki/Starter_bundle_harness_V1/img/Starter_bundle_assemble_instruction.jpg)
+![](https://files.seeedstudio.com/wiki/Starter_bundle_harness_V1/img/Starter_bundle_assemble_instruction_2.jpg)
 
 ##   Features
 
@@ -30,7 +30,7 @@ Starter bundle harness is a board  keeping the component of grove-starter bundle
 
 ##   Mechanic Dimensions
 
-![](https://github.com/SeeedDocument/Starter_bundle_harness_V1/raw/master/img/Starterbh_mech.jpg)
+![](https://files.seeedstudio.com/wiki/Starter_bundle_harness_V1/img/Starterbh_mech.jpg)
 
 ##   Bill of Materials (BOM) /parts list
 

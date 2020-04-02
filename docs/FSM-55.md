@@ -7,7 +7,7 @@ prodimagename:
 surveyurl: https://www.research.net/r/FSM-55
 sku:  114990088
 ---
-![](https://github.com/SeeedDocument/FSM-55/raw/master/img/FSM-55_board.jpg)
+![](https://files.seeedstudio.com/wiki/FSM-55/img/FSM-55_board.jpg)
 
 FSM-55 (Flying Stone Mini 55) is a small board to play 5x5 LED matrix
 display.  It was named after its LED matrix.

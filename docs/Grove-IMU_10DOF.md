@@ -10,7 +10,7 @@ sku: 101020079
 tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit, plat_bbg
 ---
 
-![](https://github.com/SeeedDocument/Grove-IMU_10DOF/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF/img/main.jpg)
 
 Grove - IMU 10DOF is a combination of Grove - IMU 9DOF and [Grove - Barometer Sensor (BMP180)](/Grove-Barometer_Sensor-BMP180 "Grove - Barometer Sensor (BMP180)"). This module is base on MPU-9250 and BMP180, the MPU-9250 is a 9-axis MotionTracking device that combines a 3-axis gyroscope, 3-axis accelerometer, 3-axis magnetometer and a Digital Motion Processor(DMP), and BMP180 is a high precision, ultra-low power digital pressure sensors for consumer applications. This module is very suitable for the application of smartphones, tablets and wearable devices.
 
@@ -50,7 +50,7 @@ Specifications
 
 ## Hardware Overview
 
-![](https://github.com/SeeedDocument/Grove-IMU_10DOF/raw/master/img/dimensions.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF/img/dimensions.jpg)
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-IMU_10DOF/master/img/Grove-imu10dof-layout.jpg)
 
@@ -71,14 +71,14 @@ We will provide an example here to show you how to use this sensor.
 
 | Seeeduino V4.2 | Base Shield| Grove-IMU_10DOF |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-IMU_10DOF/raw/master/img/45d_small.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF/img/45d_small.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/Grove-IMU-10DOF-p-2386.html)|
 
 - **Step 2.** Connect Grove-IMU_10DOF to port **I2C** of Grove-Base Shield.
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-IMU_10DOF/raw/master/img/with_ardu.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF/img/with_ardu.jpg)
 
 
 !!!Note
@@ -227,7 +227,7 @@ The diagram below shows the orientation of the axes of sensitivity and the polar
 -  **[ZIP]** [Grove - IMU 10DOF v1.0 eagle file](https://raw.githubusercontent.com/SeeedDocument/Grove-IMU_10DOF/master/res/Grove-IMU_10DOF_v1.0_sch_pcb.zip)
 -  **[Eagle]** [Grove - IMU 10DOF v1.1 eagle file](https://raw.githubusercontent.com/SeeedDocument/Grove-IMU_10DOF/master/res/Grove-IMU_10DOF_V1.1_Eagle_file.zip)
 -  **[PDF]** [Grove - IMU 10DOF v1.0 schematics pdf file](https://raw.githubusercontent.com/SeeedDocument/Grove-IMU_10DOF/master/res/Grove-IMU_10DOF_v1.0.pdf)
--  **[PDF]** [Grove - IMU 10DOF v1.1 schematics pdf file](https://github.com/SeeedDocument/Grove-IMU_10DOF/raw/master/res/Grove%20-%20IMU%2010DOF%20v1.1.pdf)
+-  **[PDF]** [Grove - IMU 10DOF v1.1 schematics pdf file](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF/res/Grove%20-%20IMU%2010DOF%20v1.1.pdf)
 -  **[Library]** [Grove-IMU_10DOF Library](https://github.com/Seeed-Studio/IMU_10DOF)
 -  **[PDF]** [BMP180 datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-IMU_10DOF/master/res/BMP180.pdf)
 -  **[PDF]** [MPU-9250 datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-IMU_10DOF/master/res/MPU-9250A_Product_Specification.pdf)

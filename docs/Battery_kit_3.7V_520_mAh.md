@@ -11,7 +11,7 @@ tags:
 
 ---
 
-![](https://github.com/SeeedDocument/Battery-kit-3.7V_520-mAh/raw/master/img/Battery_kit-3.7V_520mAh_Product_View_960.jpg)
+![](https://files.seeedstudio.com/wiki/Battery-kit-3.7V_520-mAh/img/Battery_kit-3.7V_520mAh_Product_View_960.jpg)
 
 Battery kit-3.7V 520mAh contains two items: a 520mAh lithium-ion battery and a battery power detector to measure the power remain in a li-ion battery.
 
@@ -74,7 +74,7 @@ The battery power detector can detect the input voltage range of 3–4.2 volts. 
  |Indication manner   |Four LEDs(we will detail it later)|
 |Sockets   |Three sockets for different battery connector and two battery-soldering pads(we will detail it later)|
  |Dimensions |  30(width)×25(depth) mm|
- |CN1185| [Datasheet](https://github.com/SeeedDocument/Battery-kit-3.7V_520-mAh/raw/master/res/CN1185_Datasheet.pdf)|
+ |CN1185| [Datasheet](https://files.seeedstudio.com/wiki/Battery-kit-3.7V_520-mAh/res/CN1185_Datasheet.pdf)|
 |  Weight | 3.2 g|
  |Notes | Only connect a single battery to this module; The input voltage to this module should less than 9 volts, or that will damage this module.|
 
@@ -91,7 +91,7 @@ The battery power detector can detect the input voltage range of 3–4.2 volts. 
 
 This section shows descriptions for components on batter power detector.
 
-![](https://github.com/SeeedDocument/Battery-kit-3.7V_520-mAh/raw/master/img/Battery_kit-3.7V_520mAh_Battery_power_detector_components_description_1200_s.jpg)
+![](https://files.seeedstudio.com/wiki/Battery-kit-3.7V_520-mAh/img/Battery_kit-3.7V_520mAh_Battery_power_detector_components_description_1200_s.jpg)
 
 - **CN1185**, a voltage monitoring circuit.
 
@@ -109,7 +109,7 @@ This section shows descriptions for components on batter power detector.
 
 Connect battery and battery power detector as following image. You can see LEDs are on indicates actual power remains.
 
-![](https://github.com/SeeedDocument/Battery-kit-3.7V_520-mAh/raw/master/img/Battery_kit-3.7V_520mAh_Battery_power_demo_1200_s.jpg)
+![](https://files.seeedstudio.com/wiki/Battery-kit-3.7V_520-mAh/img/Battery_kit-3.7V_520mAh_Battery_power_demo_1200_s.jpg)
 
 
 ## Schematic Online Viewer
@@ -121,10 +121,10 @@ Connect battery and battery power detector as following image. You can see LEDs 
 ##  Resources ##
 
 - **[Eagle]**[Schematic(Eagle) file](https://github.com/SeeedDocument/Battery-kit-3.7V_520-mAh/raw/master/res/Battery_kit-3.7V_520mAh_Schematics.zip)
-- **[PDF]**[Battery Detector v1.0 pcb](https://github.com/SeeedDocument/Battery-kit-3.7V_520-mAh/raw/master/res/Battery%20Detector%20v1.0pcb.pdf)
+- **[PDF]**[Battery Detector v1.0 pcb](https://files.seeedstudio.com/wiki/Battery-kit-3.7V_520-mAh/res/Battery%20Detector%20v1.0pcb.pdf)
 - **[PDF]**[Battery Detector v1.0 sch](https://github.com/SeeedDocument/Battery-kit-3.7V_520-mAh/raw/master/res/Battery%20Detector%20v1.0.pdf)
-- **[Datasheet]**[CN1185 Datasheet](https://github.com/SeeedDocument/Battery-kit-3.7V_520-mAh/raw/master/res/CN1185_Datasheet.pdf)
-- **[Datasheet]**[Battery Datasheet](https://github.com/SeeedDocument/Battery-kit-3.7V_520-mAh/raw/master/res/Lithium-ion_Battery_3.7V-520mAH_Datasheet.pdf)
+- **[Datasheet]**[CN1185 Datasheet](https://files.seeedstudio.com/wiki/Battery-kit-3.7V_520-mAh/res/CN1185_Datasheet.pdf)
+- **[Datasheet]**[Battery Datasheet](https://files.seeedstudio.com/wiki/Battery-kit-3.7V_520-mAh/res/Lithium-ion_Battery_3.7V-520mAH_Datasheet.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

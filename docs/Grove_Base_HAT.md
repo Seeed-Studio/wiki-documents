@@ -8,7 +8,7 @@ surveyurl:
 sku:     
 ---
 
-![](https://github.com/SeeedDocument/Grove_Base_HAT/raw/master/img/Grove%20Base%20HAT.JPG)
+![](https://files.seeedstudio.com/wiki/Grove_Base_HAT/img/Grove%20Base%20HAT.JPG)
 
 Grove Base HAT is an add-on board that brings Grove Sensors to the Raspberry Pi. It supports Raspberry Pi 2 Model B, Raspberry Pi 3 Model B and Raspberry Pi B+. There are four mounting holes, matching well with normal size Raspberry Pi. It also keeps the space for Camera cables.
 
@@ -49,7 +49,7 @@ Grove Base HAT is an add-on board that brings Grove Sensors to the Raspberry Pi.
 
 The images below show an overview of Grove Base HAT hardware features. The pin-out and alternate functions of various pins of Grove Base HAT are shown in the pin-out diagram. This could be used as a quick reference.
 
-![](https://github.com/SeeedDocument/Grove_Base_HAT/raw/master/img/Hardware_overview.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Base_HAT/img/Hardware_overview.jpg)
 
 - <font face="" size=5 font color="00b0f0">❶</font> **Digital Port:**
 2 digital Grove ports are used to connect Grove digital sensors.
@@ -83,7 +83,7 @@ The FREE pins are not used by Grove Base HAT.
 
 | Raspberry pi | Grove base HAT |
 |--------------|-------------|
-|![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_HAT/raw/master/img/Grove%20Base%20HAT_s.JPG)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_HAT/img/Grove%20Base%20HAT_s.JPG)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now]()|
 
 - Step 2. Plug the Grove Base HAT into Raspberry.
@@ -93,24 +93,24 @@ The FREE pins are not used by Grove Base HAT.
 
 - Step 1. Configure I2C, I2C is not turned on by default. We can use raspi-config to enable it. Run "sudo raspi-config".
 - Step 2. Arrow down to 5 interfacing Options and press "enter" to select.
-![](https://github.com/SeeedDocument/Grove_Base_HAT/raw/master/img/enable_i2C.1.png)
+![](https://files.seeedstudio.com/wiki/Grove_Base_HAT/img/enable_i2C.1.png)
 
 - Step 3. Arrow down to P5 I2C and press "enter" to select.
-![](https://github.com/SeeedDocument/Grove_Base_HAT/raw/master/img/enable_i2C.2.png)
+![](https://files.seeedstudio.com/wiki/Grove_Base_HAT/img/enable_i2C.2.png)
 
 - Step 4. Select "Yes" to enable it.
-![](https://github.com/SeeedDocument/Grove_Base_HAT/raw/master/img/enable_i2C.3.png)
+![](https://files.seeedstudio.com/wiki/Grove_Base_HAT/img/enable_i2C.3.png)
 
 - Step 5. Select "Ok".
-![](https://github.com/SeeedDocument/Grove_Base_HAT/raw/master/img/enable_i2C.4.png)
+![](https://files.seeedstudio.com/wiki/Grove_Base_HAT/img/enable_i2C.4.png)
 
 - Step 6. Select "Finish" to save the changes.
-![](https://github.com/SeeedDocument/Grove_Base_HAT/raw/master/img/enable_i2C.5.png)
+![](https://files.seeedstudio.com/wiki/Grove_Base_HAT/img/enable_i2C.5.png)
 
-- Step 7. Download [ADS1X15_Driver](https://github.com/SeeedDocument/Grove_Base_HAT/raw/master/res/ADS1X15_Driver.zip) to Raspberry /home/pi folder and unzip.
+- Step 7. Download [ADS1X15_Driver](https://files.seeedstudio.com/wiki/Grove_Base_HAT/res/ADS1X15_Driver.zip) to Raspberry /home/pi folder and unzip.
 
 ```
-wget https://github.com/SeeedDocument/Grove_Base_HAT/raw/master/res/ADS1X15_Driver.zip
+wget https://files.seeedstudio.com/wiki/Grove_Base_HAT/res/ADS1X15_Driver.zip
 unzip ADS1X15_Driver.zip
 ```
 - Step 8. Go to singleended folder and make. We will see the Singleended file highlighted in Green.
@@ -151,11 +151,11 @@ Please click **[here](http://support.seeedstudio.com/knowledgebase/articles/1831
 
 ## Resources
 
-- **[PDF]** [Download Wiki PDF](https://github.com/SeeedDocument/Grove_Base_HAT/raw/master/res/Grove_Base_HAT.pdf)
-- **[Eagle]** [Grove Base HAT Schematic file](https://github.com/SeeedDocument/Grove_Base_HAT/raw/master/res/Raspberry%20Pi%20Grove%20Base%20HAT.zip)
-- **[Datasheet]** [ADS1015](https://github.com/SeeedDocument/Grove_Base_HAT/raw/master/res/ads1015.pdf)
-- **[Datasheet]** [TXS0108](https://github.com/SeeedDocument/Grove_Base_HAT/raw/master/res/txs0108e.pdf)
-- **[PDF]** [Grove Base HAT Mechanical](https://github.com/SeeedDocument/Grove_Base_HAT/raw/master/res/hat-board-mechanical.pdf)
+- **[PDF]** [Download Wiki PDF](https://files.seeedstudio.com/wiki/Grove_Base_HAT/res/Grove_Base_HAT.pdf)
+- **[Eagle]** [Grove Base HAT Schematic file](https://files.seeedstudio.com/wiki/Grove_Base_HAT/res/Raspberry%20Pi%20Grove%20Base%20HAT.zip)
+- **[Datasheet]** [ADS1015](https://files.seeedstudio.com/wiki/Grove_Base_HAT/res/ads1015.pdf)
+- **[Datasheet]** [TXS0108](https://files.seeedstudio.com/wiki/Grove_Base_HAT/res/txs0108e.pdf)
+- **[PDF]** [Grove Base HAT Mechanical](https://files.seeedstudio.com/wiki/Grove_Base_HAT/res/hat-board-mechanical.pdf)
 - **[Github]** [HAT](https://github.com/raspberrypi/hats)
 
 ## Tech Support

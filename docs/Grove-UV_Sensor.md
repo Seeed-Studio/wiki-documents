@@ -11,7 +11,7 @@ tags: grove_analog, io_3v3, io_5v, plat_duino, plat_linkit
 ---
 
 
-![](https://github.com/SeeedDocument/Grove-UV_Sensor/raw/master/img/UV_Sensor_01.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-UV_Sensor/img/UV_Sensor_01.jpg)
 
 The Grove – UV Sensor is used for detecting the intensity of incident ultraviolet(UV) radiation. This form of electromagnetic radiation has shorter wavelengths than visible radiation. The Grove - UV Sensor is based on the sensor GUVA-S12D which has a wide spectral range of 200nm-400nm. The module outputs electrical signal which varies with the UV intensity, which gives your suggestion if it is a good idea to beach today.
 
@@ -61,7 +61,7 @@ Application Ideas
 
 The theory of UV sensor is: In sunlight, the UV index and Photocurrent are a linear relationship.
 
-![](https://github.com/SeeedDocument/Grove-UV_Sensor/raw/master/img/The%20theory%20of%20UV%20sensor.png)
+![](https://files.seeedstudio.com/wiki/Grove-UV_Sensor/img/The%20theory%20of%20UV%20sensor.png)
 
 About our Grove - UV Sensor, we have converted Photocurrent to corresponding voltage value collected by Arduino/Seeeduino. The output voltage and the UV index is linear:
 
@@ -99,7 +99,7 @@ We will show you how this Grove - UV Sensor works through a simple demo. First o
 -   Plug the Grove - Base Shield into Arduino/Seeeduino and connect them to PC by using a USB cable.
 -   The demo code is shown below.
 
-![enter image description here](https://github.com/SeeedDocument/Grove-UV_Sensor/raw/master/img/connection.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove-UV_Sensor/img/connection.jpg)
 
   **Upload the sketch to Arduino and open the serial port to monitor the data**
 

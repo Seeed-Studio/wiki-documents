@@ -7,7 +7,7 @@ prodimagename: Grove_Starter_kit_for_Arduino_101product_view_1024_s.jpg
 surveyurl: https://www.research.net/r/Grove_Starter_kit_for_Arduino_101
 sku:    110060873
 ---
-![](https://github.com/SeeedDocument/Bazaar_doc/raw/master/110060873/bazaar683634_img_4745.JPG)
+![](https://files.seeedstudio.com/wiki/Bazaar_doc/110060873/bazaar683634_img_4745.JPG)
 
 The Grove Starter Kit for Wio LTE is a simple and cost effective choice for you to get a quick start with the Wio LTE board. Grove is open source ready-to-use tool set optimized for simplisity and rapid protptyping. We have integrated 6 Grove intefaces on the [Wio LTE board](https://www.seeedstudio.com/s/wio%20lte.html), which means that you don't need an expansion board this time, just plug the module and play with it. There are more than 150+ different Groves currently, if you are not familiar with Grove, this kit is definitly a perfect choice.
 
@@ -35,7 +35,7 @@ The kit includes seven well selected Grove modules by us. There are light sensor
 
 This section lists all parts in this kit and links to get more information for each functional modules.
 
-![](https://github.com/SeeedDocument/Bazaar_doc/raw/master/110060873/hardwareover.JPG)
+![](https://files.seeedstudio.com/wiki/Bazaar_doc/110060873/hardwareover.JPG)
 
 ### Parts list
 

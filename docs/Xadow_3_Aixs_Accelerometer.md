@@ -8,11 +8,11 @@ surveyurl: https://www.research.net/r/Xadow_3_Axis_Accelerometer
 sku: 103040005
 ---
 
-![](https://github.com/SeeedDocument/Xadow_3_Aixs_Accelerometer/raw/master/img/Xadow_Accelerometer_01.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_3_Aixs_Accelerometer/img/Xadow_Accelerometer_01.jpg)
 
 This is a high resolution digital accelerometer with large ±16g measurement range through I2C interface, suit for monitor the motion state. With this module, you can easily add monitoring movements function in your design. Such as arms, legs shaking. If you want to switch your iPhone songs through arm shake, then this module is just for you.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-3-Axis-Accelerometer-p-1521.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-3-Axis-Accelerometer-p-1521.html)
 
 ## Specification
 ---
@@ -28,7 +28,7 @@ Like other Xadow modules, you need to connect Xadow 3-Axis Accelerometer to Xado
 
 The hardware Installation:
 
-![](https://github.com/SeeedDocument/Xadow_3_Aixs_Accelerometer/raw/master/img/Xadow3AxisAcce.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_3_Aixs_Accelerometer/img/Xadow3AxisAcce.jpg)
 
 !!!Note
     When connect Xadow 3-Axis Accelerometer to Xadow Main Board, you should concern about the connection direction. The connection method is that the unfilled corner of one Xadow module need to connect to the right angle of another module(see four corners of each Xadow module).
@@ -128,18 +128,18 @@ void getAcceleration()
 
 After uploading code, open the serial monitor to obverse the test result. The outputs of this sensor are 3-axis acceleration info which is converted into the unit of gravity, "g".
 
-![](https://github.com/SeeedDocument/Xadow_3_Aixs_Accelerometer/raw/master/img/Xadow_3-Axis_Accelemeter_Result.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_3_Aixs_Accelerometer/img/Xadow_3-Axis_Accelemeter_Result.jpg)
 
 ## Reference
 ---
 Below are two figures that can help you understand the physical meaning of the results.
 The first figure is about the direction of each axis:
 
-![](https://github.com/SeeedDocument/Xadow_3_Aixs_Accelerometer/raw/master/img/ADXL345_Axes_of_Acceleration_Sensivity.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_3_Aixs_Accelerometer/img/ADXL345_Axes_of_Acceleration_Sensivity.jpg)
 
 The second figure gives some examples:
 
-![](https://github.com/SeeedDocument/Xadow_3_Aixs_Accelerometer/raw/master/img/Sensing_Diraction_2.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_3_Aixs_Accelerometer/img/Sensing_Diraction_2.jpg)
 
 
 ## Schematic Online Viewer
@@ -150,8 +150,8 @@ The second figure gives some examples:
 
 ## Resources
 ---
-- [Xadow 3-Axial accelerometere Eagle File](https://github.com/SeeedDocument/Xadow_3_Aixs_Accelerometer/raw/master/res/3-Axis_Accelerometer_Eagle_File.zip)
-- [ADXL345 Datasheet](https://github.com/SeeedDocument/Xadow_3_Aixs_Accelerometer/raw/master/res/ADXL345_datasheet.pdf)
+- [Xadow 3-Axial accelerometere Eagle File](https://files.seeedstudio.com/wiki/Xadow_3_Aixs_Accelerometer/res/3-Axis_Accelerometer_Eagle_File.zip)
+- [ADXL345 Datasheet](https://files.seeedstudio.com/wiki/Xadow_3_Aixs_Accelerometer/res/ADXL345_datasheet.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

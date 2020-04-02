@@ -9,7 +9,7 @@ sku: 101020583
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-Step_Counter-BMA456/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Step_Counter-BMA456/img/main.jpg)
 
 The Grove - Step Counter(BMA456) is based on BMA456, which is an exetremely small, triaxial, low-g high performance accelerations module. Thanks to the special algorithm of BOSCH, we made this module a portable pedometer.
 
@@ -68,9 +68,9 @@ Relaiable, cost-effective, on top of that, it's very easy to use, you can easily
 
 ### Pin Out
 
-![](https://github.com/SeeedDocument/Grove-Step_Counter-BMA456/raw/master/img/pin_out.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Step_Counter-BMA456/img/pin_out.jpg)
 
-![](https://github.com/SeeedDocument/Grove-Step_Counter-BMA456/raw/master/img/pin_out_back.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Step_Counter-BMA456/img/pin_out_back.jpg)
 
 
 
@@ -78,15 +78,15 @@ Relaiable, cost-effective, on top of that, it's very easy to use, you can easily
 
 **Power**
 
-![](https://github.com/SeeedDocument/Grove-Step_Counter-BMA456/raw/master/img/schematic_1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Step_Counter-BMA456/img/schematic_1.jpg)
 
-The typical voltage of BMA456 is 1.8V, so we use the [XC6206P182MR](https://github.com/SeeedDocument/Grove-Infrared_Temperature_Sensor_Array-AMG8833/raw/master/res/XC6206.pdf) chip to provide a stable 1.8V. The input of XC6206P33 ranges from 1.8V to 6.0V, so you can use this module with your Arduino both in 3.3V and 5V.
+The typical voltage of BMA456 is 1.8V, so we use the [XC6206P182MR](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor_Array-AMG8833/res/XC6206.pdf) chip to provide a stable 1.8V. The input of XC6206P33 ranges from 1.8V to 6.0V, so you can use this module with your Arduino both in 3.3V and 5V.
 
 **Bi-directional level shifter circuit**
 
-![](https://github.com/SeeedDocument/Grove-Step_Counter-BMA456/raw/master/img/schematic_2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Step_Counter-BMA456/img/schematic_2.jpg)
 
-This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of this sensor use 3.3V, if the I<sup>2</sup>C bus of the Arduino use 5V, this circuit will be needed. In the schematic above, **Q6** and **Q5** are N-Channel MOSFET [2N7002A](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/AN10441.pdf)
+This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of this sensor use 3.3V, if the I<sup>2</sup>C bus of the Arduino use 5V, this circuit will be needed. In the schematic above, **Q6** and **Q5** are N-Channel MOSFET [2N7002A](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/AN10441.pdf)
 
 
 
@@ -130,7 +130,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-Step_Counter-BMA456/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Step_Counter-BMA456/img/connect.jpg)
 
 !!!Note
         If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
@@ -157,12 +157,12 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 - **Step 3.** Restart the Arduino IDE. Open the example, you can open it in the following three ways：
     1. Open it directly in the Arduino IDE via the path: **File --> Examples --> Grove -Step Counter(BMA456) --> step_counter**. 
-    ![](https://github.com/SeeedDocument/Grove-Step_Counter-BMA456/raw/master/img/path_1.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-Step_Counter-BMA456/img/path_1.jpg)
     
     2. Open it in your computer by click the **step_counter.ino** which you can find in the folder **XXXX\Arduino\libraries\Seeed_BMA456-master\examples\step_counter**, **XXXX** is the location you installed the Arduino IDE.
-    ![](https://github.com/SeeedDocument/Grove-Step_Counter-BMA456/raw/master/img/path_2.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-Step_Counter-BMA456/img/path_2.jpg)
     
-    3. Or, you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+    3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 
 ```C++
@@ -238,9 +238,9 @@ Step: 38
 
 - **[Zip]** [Seeed BMA456 Library](https://github.com/Seeed-Studio/Seeed_BMA456/archive/master.zip)
 
-- **[PDF]** [Datasheet BMA456](https://github.com/SeeedDocument/Grove-Step_Counter-BMA456/raw/master/res/BMA456.pdf)
+- **[PDF]** [Datasheet BMA456](https://files.seeedstudio.com/wiki/Grove-Step_Counter-BMA456/res/BMA456.pdf)
 
-- **[PDF]** [XC6206 DATASHEET](https://github.com/SeeedDocument/Grove-Infrared_Temperature_Sensor_Array-AMG8833/raw/master/res/XC6206.pdf)
+- **[PDF]** [XC6206 DATASHEET](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor_Array-AMG8833/res/XC6206.pdf)
 
 
 

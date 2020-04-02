@@ -8,12 +8,12 @@ surveyurl: https://www.research.net/r/Seeeduino_Stalker_v3_enclosure
 sku:   110070015
 ---
 
-|![](https://github.com/SeeedDocument/Seeeduino_Stalker_v3_enclosure/raw/master/img/IMG_0738.JPG)|![](https://github.com/SeeedDocument/Seeeduino_Stalker_v3_enclosure/raw/master/img/IMG_0741.JPG)
+|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v3_enclosure/img/IMG_0738.JPG)|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v3_enclosure/img/IMG_0741.JPG)
 |---|---|
 
 Seeeduino Stalker V3 enclosure is used for Arch GPRS V3, It's waterproof and enough strength, Can carry Arch GPRS V3 environmental testing and data collection very well.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Seeeduino-Stalker-v3-enclosure-p-2419.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Seeeduino-Stalker-v3-enclosure-p-2419.html)
 
 ##  Feature
 ---
@@ -30,26 +30,26 @@ It's very easy to use, You only use the PVC mounting plate can fixed it.
 
 We should mounting the screw column and nylon screw.
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v3_enclosure/raw/master/img/IMG_0762.JPG)
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v3_enclosure/raw/master/img/IMG_0757.JPG)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v3_enclosure/img/IMG_0762.JPG)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v3_enclosure/img/IMG_0757.JPG)
 
 **The second——Place the sponge cushion.**
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v3_enclosure/raw/master/img/IMG_0749.JPG)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v3_enclosure/img/IMG_0749.JPG)
 
 **The third——Place the battery.**
 
 It's worth noting that we should place the battery separator piece in order to prevent battery contacting components.
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v3_enclosure/raw/master/img/IMG_0766.JPG)
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v3_enclosure/raw/master/img/IMG_0750.JPG)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v3_enclosure/img/IMG_0766.JPG)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v3_enclosure/img/IMG_0750.JPG)
 
 **The fourth——Fix the PCBA and solar battery**
 
 Bending the pvc plate and fix the PCBA with a snap.
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v3_enclosure/raw/master/img/IMG_0752.JPG)
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v3_enclosure/raw/master/img/IMG_0756.JPG)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v3_enclosure/img/IMG_0752.JPG)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v3_enclosure/img/IMG_0756.JPG)
 
 ##  Application scenarios
 
@@ -57,20 +57,20 @@ As we mentioned before, The enclosure is used to carry Arch GPRS V3 environmenta
 
 Grove series sensors can easily mounting to the PVC plate by rivet.
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v3_enclosure/raw/master/img/IMG_0764.JPG)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v3_enclosure/img/IMG_0764.JPG)
 
 **The stalker enclosure carry the Arch GPRS in the wild **.
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v3_enclosure/raw/master/img/P50130-115633.jpg)
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v3_enclosure/raw/master/img/P50130-115712.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v3_enclosure/img/P50130-115633.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v3_enclosure/img/P50130-115712.jpg)
 
 **It's hanging on the tree **.
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v3_enclosure/raw/master/img/P50130-120105.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v3_enclosure/img/P50130-120105.jpg)
 
 **If you mounting the iron block，You can throw it in the water，Solar battery always up **.
 
-![](https://github.com/SeeedDocument/Seeeduino_Stalker_v3_enclosure/raw/master/img/P50130-120542.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v3_enclosure/img/P50130-120542.jpg)
 
 ==**Part list**==
 

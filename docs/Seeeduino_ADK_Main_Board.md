@@ -10,7 +10,7 @@ sku: 102010009
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Seeeduino-ADK_Main_Board/raw/master/img/Seeeduino_ADK_Main_Board.jpeg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-ADK_Main_Board/img/Seeeduino_ADK_Main_Board.jpeg)
 
 The Android 3.1 platform (also backported to Android 2.3.4) introduces Android Open Accessory support, which allows external USB hardware (an Android USB accessory) to interact with an Android-powered device in a special "accessory" mode. Based on the Google’s ADK reference design, we merged advantages of Seeeduino into our Seeeduino ADK Main Board.
 
@@ -50,7 +50,7 @@ Now connect Seeeduino ADK Main Board to your Android mobile device and get start
 
 ##   Interface  ##
 
-![](https://github.com/SeeedDocument/Seeeduino-ADK_Main_Board/raw/master/img/Seeeduino_ADK_Parts.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-ADK_Main_Board/img/Seeeduino_ADK_Parts.jpg)
 Seeeduino ADK Salient Features
 
 Seeeduino ADK Hardware blocks are listed below:
@@ -68,10 +68,10 @@ I: breakouts pins of FT232RL
 
 The following image illustrates an application example of **Seeeduino ADK Main Board** with an Android Mobile. It runs the demo application based on MicroBridge provided illustrated this page. All basic electronic components are taken from [Arduino Sidekick Basic Kit](https://seeeddoc.github.io/Arduino_Sidekick_Basic_Kit/) .
 
-![](https://github.com/SeeedDocument/Seeeduino-ADK_Main_Board/raw/master/img/SeeeduinoADK_Setup.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-ADK_Main_Board/img/SeeeduinoADK_Setup.jpg)
 Seeeduino ADK Main Board and Android Mobile Connection
 
-![](https://github.com/SeeedDocument/Seeeduino-ADK_Main_Board/raw/master/img/ADK_Demo.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-ADK_Main_Board/img/ADK_Demo.jpg)
 
 - Uploading Firmware
 - Set the VCC slide switch to 5V.
@@ -357,10 +357,10 @@ Visit **Android ADK Developer page** for complete documentation on how to use Ac
 
 Seeeduino ADK Main Board can be used as Seeeduino Mega 2560. It also works well with GROVE System. The Grove - Base Shield can be used to connect the numerous Grove modules available.
 
-![](https://github.com/SeeedDocument/Seeeduino-ADK_Main_Board/raw/master/img/Seeeduino_ADK_MainBoard_With_Stem_Base_Shield.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-ADK_Main_Board/img/Seeeduino_ADK_MainBoard_With_Stem_Base_Shield.jpg)
 
 And following is a demo showing 2.8%27%27 TFT Touch Shield working with Seeeduino ADK Main Board.
-![](https://github.com/SeeedDocument/Seeeduino-ADK_Main_Board/raw/master/img/ADKMainBoard_TFTTouchShield_PhotoframeDemo.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-ADK_Main_Board/img/ADKMainBoard_TFTTouchShield_PhotoframeDemo.jpg)
 
 - Connect Seeeduino ADK Main Board to 2.8%27%27 TFT Touch Shield
 
@@ -371,7 +371,7 @@ And following is a demo showing 2.8%27%27 TFT Touch Shield working with Seeeduin
 - Copy few 24-bit Bitmap Images (.bmp) files of 240 x 320 size to SD Card. Few samples are present in [bmp demo application archive](http://seeedstudio.com/wiki/images/1/11/Tftbmp_demo.zip)
 - Connect the SD card / microSD Card Adapter (with a microSD card) as shown in the illustration to **Seeeduino ADK Main Board**
 
-![](https://github.com/SeeedDocument/Seeeduino-ADK_Main_Board/raw/master/img/TFT_Touch_Shield_photoframe.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino-ADK_Main_Board/img/TFT_Touch_Shield_photoframe.png)
 
 - Download and install [TFT Touch Library](http://seeedstudio.com/wiki/images/6/6e/Tft_touch_libraries.zip)
 - Download [SD Card](https://github.com/adafruit/SD) library and install it to Arduino folder.
@@ -379,7 +379,7 @@ And following is a demo showing 2.8%27%27 TFT Touch Shield working with Seeeduin
 - Compile and upload [this](http://seeedstudio.com/wiki/images/1/11/Tftbmp_demo.zip) sketch.
 
 Output:
-![](https://github.com/SeeedDocument/Seeeduino-ADK_Main_Board/raw/master/img/TFT_Touch_Shield_PhotoframeDemo.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-ADK_Main_Board/img/TFT_Touch_Shield_PhotoframeDemo.jpg)
 
 - Refer **2.8'' TFT Touch Shield** for more information.
 
@@ -395,7 +395,7 @@ Output:
 ##   Resources   ##
 
 - **[Library]** [Modified MicroBridge Arduino Library](http://wiki.seeedstudio.com/images/1/19/MicroBridge-ModifiedForSeeeduinoADK.zip)
-- **[Library]** [Modified MicroBridge Arduino Library for Arduino1.0](https://github.com/SeeedDocument/Seeeduino-ADK_Main_Board/raw/master/res/Adb_for_Arduino1.0.zip)
+- **[Library]** [Modified MicroBridge Arduino Library for Arduino1.0](https://files.seeedstudio.com/wiki/Seeeduino-ADK_Main_Board/res/Adb_for_Arduino1.0.zip)
 - **[Demo]**[Seeeduino Demo - Android App](http://wiki.seeedstudio.com/images/1/1b/SeeeduinoADKDemo-App.zip)
 - **[PDF]**[Seeeduino ADK Eagle Schematic PDF](http://wiki.seeedstudio.com/images/6/67/Seeeduino_ADK_0.9b_final_Scehmatic.pdf)
 - **[Eagle]** [Seeeduino ADK Eagle Schematic and Board Files](http://wiki.seeedstudio.com/images/1/1a/Seeeduino_ADK_0.9b_final_Eagle_files.zip)

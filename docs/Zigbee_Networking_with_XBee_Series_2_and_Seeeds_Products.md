@@ -17,7 +17,7 @@ surveyurl: https://www.research.net/r/Zigbee_Networking_with_XBee_Series_2_and_S
 
 **Zigbee** is a standard for low-power, short range wireless devices based on an **IEEE 802** standard for personal area networks(**PAN**). Zigbee modules work in unlicensed ISM(Industrial Scientific Medical) band. Zigbee devices are capable of peer-to-peer, point-to-multipoint and mesh communication. They offer convenient low power wireless solutions for embedded systems where power consumption is a critical factor. A Zigbee network consist of three different types of ZigBee devices: **coordinator**, **router**, **end-device**. Each network has a 16bit **PAN ID**. All devices in a Zigbee network is assigned a single PAN ID.
 
-![](https://github.com/SeeedDocument/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/raw/master/img/Zigbee_Network_Topology.jpg)
+![](https://files.seeedstudio.com/wiki/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/img/Zigbee_Network_Topology.jpg)
 
 ###  Device Types
 
@@ -55,7 +55,7 @@ In this tutorial we are going to use **XBee ZB firmware** on a **XBee Znet 2.5 M
 
 *   Pins of XBee ZB module are shown below.
 
-![](https://github.com/SeeedDocument/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/raw/master/img/XBee_PinOut.jpeg)
+![](https://files.seeedstudio.com/wiki/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/img/XBee_PinOut.jpeg)
 
 ##  Upgrading XBee firmware with UartSBee_V3.1 or Grove - XBee Carrier
 
@@ -72,9 +72,9 @@ The XBee modules have to be configured with a 3.3V logic UART. Both [UartSBee_V3
 <th> **XBee ZB** connected to [Grove - XBee Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier") for configuration
 </th></tr>
 <tr>
-<td> ![](https://github.com/SeeedDocument/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/raw/master/img/XBee_UartSBee.jpg)
+<td> ![](https://files.seeedstudio.com/wiki/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/img/XBee_UartSBee.jpg)
 </td>
-<td> ![](https://github.com/SeeedDocument/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/raw/master/img/XBee_Stem-XBee-Carrier.jpg)
+<td> ![](https://files.seeedstudio.com/wiki/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/img/XBee_Stem-XBee-Carrier.jpg)
 </td></tr></table>
 
 *   Install the necessary driver for **FT232RL** chip by following the below steps :
@@ -83,7 +83,7 @@ The XBee modules have to be configured with a 3.3V logic UART. Both [UartSBee_V3
 
 *   In Windows OS, the first time you plug in the device (UartSBee or Grove -XBee Carrier), you might be asked for the driver.
 
-![](https://github.com/SeeedDocument/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/raw/master/img/UartSbee_Detected_Windows.JPG)
+![](https://files.seeedstudio.com/wiki/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/img/UartSbee_Detected_Windows.JPG)
 
 Download and install the **Virtual COM port** driver from FTDI website :
 
@@ -91,25 +91,25 @@ Download and install the **Virtual COM port** driver from FTDI website :
 
 *   A wizard opens for installing the driver. Choose "Install from a list or specific location"
 
-![](https://github.com/SeeedDocument/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/raw/master/img/UartSbee_Driver_install_1.JPG)
+![](https://files.seeedstudio.com/wiki/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/img/UartSbee_Driver_install_1.JPG)
 
 *   Choose the downloaded driver path
 
-![](https://github.com/SeeedDocument/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/raw/master/img/UartSbee_Driver_install_2.JPG)
+![](https://files.seeedstudio.com/wiki/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/img/UartSbee_Driver_install_2.JPG)
 
 *   If you have downloaded unsigned driver, the following Window appears. Just click "Continue Anyway"
 
-![](https://github.com/SeeedDocument/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/raw/master/img/UartSbee_Driver_install_2.1.JPG)
+![](https://files.seeedstudio.com/wiki/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/img/UartSbee_Driver_install_2.1.JPG)
 
 *   **UartSBee** driver is successfully installed. Windows assigns a **COM** port name to **FT232RL** like **COM10**, **COM11** etc... Please check the exact name in Device Manager.  In this case "**COM16**" is assigned for UartSBee
 
-![](https://github.com/SeeedDocument/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/raw/master/img/UartSbee_Driver_install_3.JPG)
+![](https://files.seeedstudio.com/wiki/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/img/UartSbee_Driver_install_3.JPG)
 
 #####  **GNU/Linux**
 
 All modern **GNU/Linux OS** comes with FT232RL drivers. To check if UartSBee or Grove -XBee Carrier is detected, Issue a **lsusb** command. An output similar to below should appear.
 
-![](https://github.com/SeeedDocument/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/raw/master/img/Lsub.png)
+![](https://files.seeedstudio.com/wiki/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/img/Lsub.png)
 
 **GNU/Linux** assigns **/dev/ttyUSB0**, **/dev/ttyUSB1** etc... as device name.
 
@@ -127,7 +127,7 @@ All modern **GNU/Linux OS** comes with FT232RL drivers. To check if UartSBee or 
 
 *   Click Test / Query Button
 
-![](https://github.com/SeeedDocument/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/raw/master/img/X-CTU1.jpeg)
+![](https://files.seeedstudio.com/wiki/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/img/X-CTU1.jpeg)
 
 *   A dialog box shows the **Modem Type**, **Modem firmware Version** and **Serial Number**.
 
@@ -137,23 +137,23 @@ All modern **GNU/Linux OS** comes with FT232RL drivers. To check if UartSBee or 
 
 *   Click Download New Versions button.
 
-![](https://github.com/SeeedDocument/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/raw/master/img/X-CTU_Update_Firmware.jpeg)
+![](https://files.seeedstudio.com/wiki/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/img/X-CTU_Update_Firmware.jpeg)
 
 *   This opens the following dialog box :
 
-![](https://github.com/SeeedDocument/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/raw/master/img/X-CTU-Update_Sources.jpeg)
+![](https://files.seeedstudio.com/wiki/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/img/X-CTU-Update_Sources.jpeg)
 
 *   Click Web button. This downloads all devices firmware from digi's server.
 
 *   Once, latest firmwares are downloaded an update summary is displayed. This indicates that update happened without any issue. If you do not get this dialog box, repeat the above steps.
 
-![](https://github.com/SeeedDocument/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/raw/master/img/X-CTU-Update_Summary.jpeg)
+![](https://files.seeedstudio.com/wiki/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/img/X-CTU-Update_Summary.jpeg)
 
 *   Open Modem Configuration Tab.
 
 *   Click Modem Parameters and Firmware --&gt; Read button.
 
-![](https://github.com/SeeedDocument/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/raw/master/img/X-CTU_ZNet2.5_firmware_detected.jpeg)
+![](https://files.seeedstudio.com/wiki/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/img/X-CTU_ZNet2.5_firmware_detected.jpeg)
 
 *   XBee ZNet 2.5 firmware XB24-B is detected and all its configured parameters are shown.
 
@@ -172,7 +172,7 @@ All modern **GNU/Linux OS** comes with FT232RL drivers. To check if UartSBee or 
 
 *   Click Write button. This permanently writes the firmware to XBee module.
 
-![](https://github.com/SeeedDocument/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/raw/master/img/X-CTU_ZB_Firmware_Upgrade.jpeg)
+![](https://files.seeedstudio.com/wiki/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/img/X-CTU_ZB_Firmware_Upgrade.jpeg)
 
 ##  Wireless UART demo using XBee ZB modules and PC
 
@@ -184,7 +184,7 @@ This demo configures two XBee modules to connect to each other automatically upo
 
 *   Open X-CTU, select the USB-Serial Ports of the device as shown below :
 
-![](https://github.com/SeeedDocument/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/raw/master/img/XBee_ZB_Wireless-Serial-Port_1.png)
+![](https://files.seeedstudio.com/wiki/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/img/XBee_ZB_Wireless-Serial-Port_1.png)
 
 *   Program one module with **COORDINATOR AT** function-set firmware and another module with **ROUTER AT** function-set firmware. Always use the latest version of firmware. See the above section on how-to program firmware.
 
@@ -201,13 +201,13 @@ This demo configures two XBee modules to connect to each other automatically upo
 
 *   PAN ID was not modified during parameters configuration. It was left to 0, as there is only one Zigbee network in the vicinity. You might want to change these PAN IDs (of both the modules) to a 16bit number.
 
-![](https://github.com/SeeedDocument/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/raw/master/img/XBee_ZB_Wireless-Serial-Port_2.png)
+![](https://files.seeedstudio.com/wiki/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/img/XBee_ZB_Wireless-Serial-Port_2.png)
 
 *   Open the Terminal Tabs for both the modules and click the Show Hex buttons.
 
 *   Type a message in COORDINATOR terminal and it will be sent to ROUTER via wireless. Similarly, any text typed in ROUTER terminal is sent to COORDINATOR terminal.
 
-![](https://github.com/SeeedDocument/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/raw/master/img/XBee_ZB_Wireless-Serial-Port_3.png)
+![](https://files.seeedstudio.com/wiki/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/img/XBee_ZB_Wireless-Serial-Port_3.png)
 
 ##  Wireless UART demo using XBee ZB modules and Arduinos
 
@@ -229,7 +229,7 @@ If you want to make some awesome projects by XBee, here's some projects for refe
 
 ###  Hummingbird
 
-![](https://github.com/SeeedDocument/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/raw/master/img/Xbee_iot.JPG)
+![](https://files.seeedstudio.com/wiki/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/img/Xbee_iot.JPG)
 
 This is an interesting demo made by XBee and [Grove](/Grove_System "Grove System").
 
@@ -239,7 +239,7 @@ This project uses a zigbee mesh and GPRS SIM900 card to communicate to a server.
 
 ###  Hot Water Solar Boiler Project
 
-![](https://github.com/SeeedDocument/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/raw/master/img/Xbee_iot1.JPG)
+![](https://files.seeedstudio.com/wiki/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/img/Xbee_iot1.JPG)
 
 This is an IoT demo made by XBee and [Grove](/Grove_System "Grove System").
 

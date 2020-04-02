@@ -8,11 +8,11 @@ surveyurl: https://www.research.net/r/Grove_Temperature_Sensor
 sku:  101020015
 ---
 
-![](https://github.com/SeeedDocument/Grove-Temperature_Sensor/raw/master/img/Temperature1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Temperature_Sensor/img/Temperature1.jpg)
 
 The Grove - Temperature Sensor uses a [Thermistor](http://www.legacydistribution.co.uk/downloads/NTC-thermistors/TTC03.pdf) to detect the ambient temperature. The resistance of a thermistor will increase when the ambient temperature decreases. It's this characteristic that we use to calculate the ambient temperature. The detectable range of this sensor is -40 - 125ºC, and the accuracy is ±1.5ºC.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Temperature-Sensor-p-774.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Temperature-Sensor-p-774.html)
 
 ##  Specifications
 ---
@@ -35,7 +35,7 @@ Here is an example to show you how to read temperature information from the sens
 2. Plug the Grove - Basic Shield into Arduino.
 3. Connect Arduino to PC by using a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-Temperature_Sensor/raw/master/img/Tempreture_Sensor_Connector.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Temperature_Sensor/img/Tempreture_Sensor_Connector.jpg)
 
 4. Upload Code below. Please click [here](/Upload_Code) if you do not know how to upload.
 
@@ -71,11 +71,11 @@ void loop()
 
 5. You can check the readings via the Serial Monitor. The default unit is Celsius degree.
 
-![](https://github.com/SeeedDocument/Grove-Temperature_Sensor/raw/master/img/Temperature_Sensor_Score.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Temperature_Sensor/img/Temperature_Sensor_Score.jpg)
 
 As a reference, the following is the resistance curve of TTC3A103*39H, the thermistor we used on this sensor. The higher the temperature goes, the smaller the resistance becomes.
 
-![](https://github.com/SeeedDocument/Grove-Temperature_Sensor/raw/master/img/Twig-Temperature-Sensor-value.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Temperature_Sensor/img/Twig-Temperature-Sensor-value.jpg)
 
 ###   With [Raspberry Pi](/GrovePi_Plus "GrovePi+")
 
@@ -133,9 +133,9 @@ If this is your first time to use Cloud9 IDE, please follow this [**link**](/Bea
 
 **Step1:** Click the "+" in the top-right to create a new file.
 
-![](https://github.com/SeeedDocument/Grove-Temperature_Sensor/raw/master/img/C9-create-tab.png)
+![](https://files.seeedstudio.com/wiki/Grove-Temperature_Sensor/img/C9-create-tab.png)
 
-![](https://github.com/SeeedDocument/Grove-Temperature_Sensor/raw/master/img/C9_newfile.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Temperature_Sensor/img/C9_newfile.jpg)
 
 **Step2:** Copy and paste the following code into the new tab
 ```
@@ -253,7 +253,7 @@ You'll find that the terminal outputs Temperature value every 2 seconds.
 
 ##  Resource
 ---
-*   [Grove - Temperature Sensor v1.0 Eagle File](https://github.com/SeeedDocument/Grove-Temperature_Sensor/raw/master/res/Grove-Temperature_Sensor-Analog-v1.0_Source_File.zip)
+*   [Grove - Temperature Sensor v1.0 Eagle File](https://files.seeedstudio.com/wiki/Grove-Temperature_Sensor/res/Grove-Temperature_Sensor-Analog-v1.0_Source_File.zip)
 
 *   [Demo code on github](https://github.com/Seeed-Studio/Grove_Temperature_Sensor)
 

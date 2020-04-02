@@ -9,7 +9,7 @@ The purpose of this project is to demonstrate a simple digital-out display using
 Connect the LED Grove to the D1/D2 Digital I/O jack on the Grove Shield.
 Arduino Pin D1 powers the Red LED on the Grove's D1 connector, and Arduino Pin D2 powers the Green LED on the Grove's D2 connector.
 
-![](https://github.com/SeeedDocument/Project_One-Double_Blink/raw/master/img/Conn-one.jpg)
+![](https://files.seeedstudio.com/wiki/Project_One-Double_Blink/img/Conn-one.jpg)
 
 _**Now upload the following Arduino sketch:**_
 

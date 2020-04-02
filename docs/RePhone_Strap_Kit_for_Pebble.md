@@ -7,11 +7,11 @@ prodimagename:  Pebble3-04.png
 surveyurl: https://www.research.net/r/RePhone_Strap_Kit_for_Pebble
 sku:   113060005
 ---
-![](https://github.com/SeeedDocument/RePhone_Strap_Kit_for_Pebble/raw/master/img/Pebble3-04.png)
+![](https://files.seeedstudio.com/wiki/RePhone_Strap_Kit_for_Pebble/img/Pebble3-04.png)
 
 The introduction of RePhone (Xadow) modules makes your smart watch even smarter. Based on the [new smart accessory port on the back of Pebble Time](http://developer.getpebble.com/guides/hardware/), we integrate the slim and small Rephone modules – Xadow GPS v2 and Xadow NFC v2, into Pebble’s existing ecosystem, to help improve its capability from the perspective of built-in electronics. Xadow Pebble Time Adapter enables the RePhone(Xadow) modules to talk to the Pebble Time via the Smartstrap interface using One-wire serial protocol.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/RePhone-Strap-Kit-for-Pebble-Time-p-2633.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/RePhone-Strap-Kit-for-Pebble-Time-p-2633.html)
 
 ##  Specification
 ---
@@ -19,7 +19,7 @@ The introduction of RePhone (Xadow) modules makes your smart watch even smarter.
 
 The ‘GND’ and ‘PWR’on the back frame means you can charge your Pebble Time without taking the shell off.
 
-![](https://github.com/SeeedDocument/RePhone_Strap_Kit_for_Pebble/raw/master/img/Pebble_base_2.png)
+![](https://files.seeedstudio.com/wiki/RePhone_Strap_Kit_for_Pebble/img/Pebble_base_2.png)
 
 ###   Xadow GPS v2
 ---
@@ -181,7 +181,7 @@ In daily use the modules are evenly placed at each side of the watch, and interc
 
 A schematic drawing of the assembling process of the RePhone Strap Kit for Pebble Time is given below
 
-![](https://github.com/SeeedDocument/RePhone_Strap_Kit_for_Pebble/raw/master/img/Xadow_Pebble_Time_Adapter_assembly3.png)
+![](https://files.seeedstudio.com/wiki/RePhone_Strap_Kit_for_Pebble/img/Xadow_Pebble_Time_Adapter_assembly3.png)
 
 ##  Download the Xadow APP for Pebble Time
 ---
@@ -189,7 +189,7 @@ You can follow the instructions to download the Xadow APP for Pebble Time, acces
 
 The Demo App can be downloaded from [https://github.com/Seeed-Studio/Xadow_Strap/raw/master/build/pebbleapp_jack.pbw](https://github.com/Seeed-Studio/Xadow_Strap/raw/master/build/pebbleapp_jack.pbw). You can download it from your smart phone or send it from your PC to smart phone. Then select to open it with "Pebble Time" App in your phone. You will have an option to install the demo App into your Pebble Time.
 
-![](https://github.com/SeeedDocument/RePhone_Strap_Kit_for_Pebble/raw/master/img/Xadow_Pebble_Time_Adapter_APP_UI.png)
+![](https://files.seeedstudio.com/wiki/RePhone_Strap_Kit_for_Pebble/img/Xadow_Pebble_Time_Adapter_APP_UI.png)
 
 ##  Programming Guide
 ---
@@ -307,13 +307,13 @@ After building the firmware binary, you can follow the steps below to flash the 
 
 1) Hacking a USB Cable and solder the wires to the soldering pads accordingly
 
-![](https://github.com/SeeedDocument/RePhone_Strap_Kit_for_Pebble/raw/master/img/Hack_USB_cable-03.png)
+![](https://files.seeedstudio.com/wiki/RePhone_Strap_Kit_for_Pebble/img/Hack_USB_cable-03.png)
 
 2) Make sure the battery disconnected and plug the USB into PC.
 
 3) Short the "ISP" and "GND" pins.
 
-![](https://github.com/SeeedDocument/RePhone_Strap_Kit_for_Pebble/raw/master/img/ShortISP_GND.PNG)
+![](https://files.seeedstudio.com/wiki/RePhone_Strap_Kit_for_Pebble/img/ShortISP_GND.PNG)
 
 4) Plug the battery on to power on the adapter
 
@@ -323,7 +323,7 @@ After building the firmware binary, you can follow the steps below to flash the 
 
 ##  RePhone Community
 ---
-[![](https://github.com/SeeedDocument/RePhone_Strap_Kit_for_Pebble/raw/master/img/RePhone_Community-2.png)](http://forum.seeedstudio.com/viewforum.php?f=71&amp;sid=b70f8138c89becf7701260bb41faf9f4)
+[![](https://files.seeedstudio.com/wiki/RePhone_Strap_Kit_for_Pebble/img/RePhone_Community-2.png)](http://forum.seeedstudio.com/viewforum.php?f=71&amp;sid=b70f8138c89becf7701260bb41faf9f4)
 
 We’ve been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the RePhone Community.
 

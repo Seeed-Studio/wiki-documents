@@ -8,11 +8,11 @@ surveyurl: https://www.research.net/r/xadow_led_5x7_v1
 sku:  104040000
 ---
 
-![](https://github.com/SeeedDocument/Xadow_LED_5_multiply_7_v1.0/raw/master/img/Xadow_LED_01.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_LED_5_multiply_7_v1.0/img/Xadow_LED_01.jpg)
 
 The Xadow LED 5x7 contains two parts: an LED panel and an LED controller. The LED panel is a 5x7 Monochrome matrix. The LED controller is a control module for controlling the LED panel using 12 I/O pins of the Atmega168PV. You can send command to LED controller through I2C interface. Then let the led controller to control the LED display. For example, display alphabet and number, or enter sleep mode to reduce the consumption.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](http://www.seeedstudio.com/depot/xadow-led-p-1518.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](http://www.seeedstudio.com/depot/xadow-led-p-1518.html)
 
 ##  Specification
 ---
@@ -27,7 +27,7 @@ As described in the introduction, the LED  can display alphabet and number. Next
 
 The Hardware installation as shown below:
 
-![](https://github.com/SeeedDocument/Xadow_LED_5_multiply_7_v1.0/raw/master/img/XadowLED5X7.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_LED_5_multiply_7_v1.0/img/XadowLED5X7.jpg)
 
 Note: when connect Xadow LED 5X7 to Xadow Main Board, you should concern about the connection direction. The connection method is that the unfilled corner of one Xadow module need to connect to the right angle of another module(see four corners of each Xadow module).
 The test code for displaying string or charring:
@@ -172,7 +172,7 @@ void TESTIO(void)
 ```
 You can see the belowing scene after uploading the code to Xadow Main Board.
 
-![](https://github.com/SeeedDocument/Xadow_LED_5_multiply_7_v1.0/raw/master/img/LED_Effect_Diagram_.JPG)
+![](https://files.seeedstudio.com/wiki/Xadow_LED_5_multiply_7_v1.0/img/LED_Effect_Diagram_.JPG)
 
 
 ## Schematic Online Viewer
@@ -183,9 +183,9 @@ You can see the belowing scene after uploading the code to Xadow Main Board.
 
 ##  Resources
 ---
-*   [Xadow LED 5X7 Eagle File](https://github.com/SeeedDocument/Xadow_LED_5_multiply_7_v1.0/raw/master/res/Xadow_LED_5X7_eagle_file.zip)
+*   [Xadow LED 5X7 Eagle File](https://files.seeedstudio.com/wiki/Xadow_LED_5_multiply_7_v1.0/res/Xadow_LED_5X7_eagle_file.zip)
 
-*   [Xadow LED Firmware](https://github.com/SeeedDocument/Xadow_LED_5_multiply_7_v1.0/raw/master/res/Xadow_LED_Firmware.zip)
+*   [Xadow LED Firmware](https://files.seeedstudio.com/wiki/Xadow_LED_5_multiply_7_v1.0/res/Xadow_LED_Firmware.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

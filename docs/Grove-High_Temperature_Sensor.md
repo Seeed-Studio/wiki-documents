@@ -73,7 +73,7 @@ Thermocouples are very sensitive devices. It requires a good amplifier with cold
 - Step 3. Plug the base Shield into Seeeduino-V4.2.
 - Step 4. Connect Seeeduino-V4.2 to PC by using a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-High_Temperature_Sensor/raw/master/img/arduino_connection.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-High_Temperature_Sensor/img/arduino_connection.jpg)
 
 !!!Note
     If we don't have a Base Shield, don't worry, the sensor can be connected to your Arduino directly. Please follow below tables to connect with Arduino.
@@ -122,14 +122,14 @@ void loop()
 
 | Raspberry pi | GrovePi_Plus | Grove - Ultrasonic Ranger |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-High_Temperature_Sensor/raw/master/img/High_Temperature_Sensor_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-High_Temperature_Sensor/img/High_Temperature_Sensor_s.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get ONE Now](https://seeedstudio.com/Grove-High-Temperature-Sensor-p-1810.html)|
 
 - Step 2. Plug the GrovePi_Plus into Raspberry.
 - Step 3. Connect Grove-Ultrasonic ranger to **A0** port of GrovePi_Plus.
 - Step 4. Connect the Raspberry to PC through USB cable.
 
-![](https://github.com/SeeedDocument/Grove-High_Temperature_Sensor/raw/master/img/raspberry_connection.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-High_Temperature_Sensor/img/raspberry_connection.jpg)
 
 #### Software
 
@@ -230,7 +230,7 @@ pi@raspberrypi:~/GrovePi/Software/Python/grove_hightemperature_sensor $ python h
 
 **Q1: How to do Grove-High temperature sensor calibration?**
 
-**A1:**  Please download the [libray](https://github.com/SeeedDocument/Grove_High_Temperature_Sensor/raw/master/resource/Grove_HighTemp_Sensor-master_cal.zip) and then follow below instructions.  
+**A1:**  Please download the [libray](https://files.seeedstudio.com/wiki/Grove_High_Temperature_Sensor/resource/Grove_HighTemp_Sensor-master_cal.zip) and then follow below instructions.  
 
 - Step 1. run the getTemperature-calibration-measurement.ino to get below info. 
 
@@ -252,7 +252,7 @@ pi@raspberrypi:~/GrovePi/Software/Python/grove_hightemperature_sensor $ python h
 ## Resources
 
 - **[PDF]** [Download Wiki PDF](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/res/Grove-High_Temperature_Sensor.pdf)
-- **[Eagle]** [Grove - High Temperature Sensor Eagle file](https://github.com/SeeedDocument/Grove-High_Temperature_Sensor/raw/master/res/Grove%20-%20High%20Temperature%20Sensor%20v1.0.zip)
+- **[Eagle]** [Grove - High Temperature Sensor Eagle file](https://files.seeedstudio.com/wiki/Grove-High_Temperature_Sensor/res/Grove%20-%20High%20Temperature%20Sensor%20v1.0.zip)
 - **[Library]** [High Temperature Sensor Library](https://github.com/Seeed-Studio/Grove_HighTemp_Sensor)
 - **[Datasheet]** [OPA333 PDF](http://www.ti.com/lit/ds/symlink/opa333.pdf)
 - **[Datasheet]** [LMV358 PDF](https://raw.githubusercontent.com/SeeedDocument/Grove-High_Temperature_Sensor/master/res/Lmv358.pdf)

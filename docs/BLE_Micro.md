@@ -7,11 +7,11 @@ prodimagename: BLE%20Micro_03.jpg
 surveyurl: https://www.research.net/r/BLE_Micro
 sku:  113050012
 ---
-![](https://github.com/SeeedDocument/BLE_Micro/raw/master/img/BLE%20Micro_03.jpg)
+![](https://files.seeedstudio.com/wiki/BLE_Micro/img/BLE%20Micro_03.jpg)
 
 The BLE Mcicro is a low cost ARM cortex-m0 based module for Bluetooth® Smart designs with the nRF51822 SoC. The module gives access to at most 23 GPIO pins via pin pads and incorporates an on board PCB antenna to minimize material cost but also with a good performance.The application engineers can easily apply the module for theirs application without worrying about the specific impedance matching or soldering fine pitch related radio designing issues.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Seeed-Micro-BLE-Module-w%26-Cortex-M0-Based-nRF51822-SoC-p-1975.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Seeed-Micro-BLE-Module-w%26-Cortex-M0-Based-nRF51822-SoC-p-1975.html)
 
 ## Features
 ---
@@ -53,7 +53,7 @@ Peripherals|10-bit ADC/Temperature sensor/RTC/RNG
 
 Bottom view of BLE Micro:
 
-![](https://github.com/SeeedDocument/BLE_Micro/raw/master/img/BLE_Micro_Pinout.png)
+![](https://files.seeedstudio.com/wiki/BLE_Micro/img/BLE_Micro_Pinout.png)
 
 Note: the pin SWDIO is also nRESET.
 
@@ -61,7 +61,7 @@ Note: the pin SWDIO is also nRESET.
 ## Dimension
 ---
 
-![](https://github.com/SeeedDocument/BLE_Micro/raw/master/img/BLE_Micro_Dimension.jpeg)
+![](https://files.seeedstudio.com/wiki/BLE_Micro/img/BLE_Micro_Dimension.jpeg)
 
 ## Over-The-Air
 ---
@@ -76,13 +76,13 @@ The BLE Micro has a pre-flashed OTA bootloader. To enter OTA mode:
 
 4.  use [nRF Master Control Panel](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp) to upgrade the BLE app
 
-![](https://github.com/SeeedDocument/BLE_Micro/raw/master/img/Ota-ui.png)
+![](https://files.seeedstudio.com/wiki/BLE_Micro/img/Ota-ui.png)
 
 ## Download &amp; Debug through SWD interface
 ---
 We can download and debug new application of BLE Micro with an [Arch BLE](http://www.seeedstudio.com/depot/Arch-BLE-p-1998.html) or a J-Link through SWD interface. The Arch BLE is a BLE Micro + a CMSIS DAP interface which provides features like drag-n-drop programming, debug and USB virtual serial port communication.
 
-![](https://github.com/SeeedDocument/BLE_Micro/raw/master/img/Using_arch_ble_to_flash_ble_micro.png)
+![](https://files.seeedstudio.com/wiki/BLE_Micro/img/Using_arch_ble_to_flash_ble_micro.png)
 
 ## Develop Applications
 ---
@@ -117,13 +117,13 @@ By default, the BLE Micro is acted as a BLE to UART device. It can be connected 
 
 ## Resources
 ---
-*   [Schematic pdf](https://github.com/SeeedDocument/BLE_Micro/raw/master/res/BLE_Micro.pdf)
+*   [Schematic pdf](https://files.seeedstudio.com/wiki/BLE_Micro/res/BLE_Micro.pdf)
 
-*   [Eagle file](https://github.com/SeeedDocument/BLE_Micro/raw/master/res/BLE_Micro_v1.0.zip)
+*   [Eagle file](https://files.seeedstudio.com/wiki/BLE_Micro/res/BLE_Micro_v1.0.zip)
 
-*   [Eagle Library](https://github.com/SeeedDocument/BLE_Micro/raw/master/res/BLE_Micro_Eagle_Library.zip)
+*   [Eagle Library](https://files.seeedstudio.com/wiki/BLE_Micro/res/BLE_Micro_Eagle_Library.zip)
 
-*   [Firmware](https://github.com/SeeedDocument/BLE_Micro/raw/master/res/Ble_micro_firmware.zip)
+*   [Firmware](https://files.seeedstudio.com/wiki/BLE_Micro/res/Ble_micro_firmware.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

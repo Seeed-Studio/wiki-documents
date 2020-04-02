@@ -8,7 +8,7 @@ surveyurl: https://www.research.net/r/Bluetooth_Bee_v2
 sku:  113050014
 ---
 
-![](https://github.com/SeeedDocument/Bluetooth_Bee_v2.0/raw/master/img/113050014%201_02.jpg)
+![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/113050014%201_02.jpg)
 
 Bluetooth Bee is an easy to use Bluetooth SPP module compatible with existing Xbee sockets, designed for transparent wireless serial connection setup.
 
@@ -16,7 +16,7 @@ Serial port Bluetooth module is fully qualified Bluetooth V2.0+EDR(Enhanced Data
 
 It uses CSR Bluecore 04-External single chip Bluetooth system with CMOS technology and with AFH(Adaptive Frequency Hopping Feature).It even has the smallest footprint  as small as 12.7mmx27mm. Hope it will simplify your overall design/development cycle.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Bluetooth-Bee-v2.0-p-2373.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Bluetooth-Bee-v2.0-p-2373.html)
 
 ##   Features
 ---
@@ -69,7 +69,7 @@ It uses CSR Bluecore 04-External single chip Bluetooth system with CMOS technolo
 
 The Bluetooth provides a standard XBee socket. In here we use a [UartSBee V5](/UartSBee_v5) to connect Bluetooth and PC, ensure the supply voltage was selected as 3.3V by slider.
 
-|![](https://github.com/SeeedDocument/Bluetooth_Bee_v2.0/raw/master/img/Bluetooth_Bee_v2.0_ConnectToPC.jpg)|![](https://github.com/SeeedDocument/Bluetooth_Bee_v2.0/raw/master/img/Bluetooth_Bee_v2.0_ConnectToPCSet.jpg)
+|![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/Bluetooth_Bee_v2.0_ConnectToPC.jpg)|![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/Bluetooth_Bee_v2.0_ConnectToPCSet.jpg)
 |---|---|
 ###   Connecting Bluetooth to Arduino
 
@@ -77,7 +77,7 @@ Here we use [XBee Shield](/XBee_Shield_V2.0) as a bridge between Bluetooth and [
 
 Since the hardware UART of Seeedino was used as debug with PC, We choose D2 and D3 to simulate software UART to communicate with Bluetooth. please refer to the jumper setting on below picture
 
-|![](https://github.com/SeeedDocument/Bluetooth_Bee_v2.0/raw/master/img/Bluetooth_Bee_v2.0_ConnectToArduino.jpg)|![](https://github.com/SeeedDocument/Bluetooth_Bee_v2.0/raw/master/img/Bluetooth_Bee_v2.0_ConnectToArduinoSet.jpg)
+|![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/Bluetooth_Bee_v2.0_ConnectToArduino.jpg)|![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/Bluetooth_Bee_v2.0_ConnectToArduinoSet.jpg)
 |---|---|
 
 ##   Software Instruction
@@ -1040,7 +1040,7 @@ Set up hardware connection refer to “Hardware Installation” section. You wil
 
 Open a serial terminal and set Baud Rate:9600, Databits: 8, Stopbits: 1 and No Flow Control. Send “AT” to Bluetooth with the serial terminal and “OK” will be return if all goes well. The Bluetooth only respond AT commands when no connection was set up, or all commands were seen as string and sent out. You can distinguish the status through LED indicates.
 
-![](https://github.com/SeeedDocument/Bluetooth_Bee_v2.0/raw/master/img/HM-01-AT.png)
+![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/HM-01-AT.png)
 
 Then some useful configurations could be sent. Here’s are some samples of commands and response.
 
@@ -1078,11 +1078,11 @@ This kind of Bluetooth module is compatible with Bluetooth Specification V2.1+ED
 
 Power the module and configure it as Slave role(send “AT+ROLES” to module). Search and install an APP called “Bluetooth SPP pro” in Android phone. Launch the app, it will scan all Bluetooth device automatically. Select “HMSoft” and touch “Connect” button, and then “Byte stream mode”. Then we can send data to PC, write some words in the text field at the bottom of the Phone and hit send button. Also PC can transfer data to phone with serial terminal.
 
-|![](https://github.com/SeeedDocument/Bluetooth_Bee_v2.0/raw/master/img/HM-01-Screenshot_2015-01-09-14-37-42.png)|![](https://github.com/SeeedDocument/Bluetooth_Bee_v2.0/raw/master/img/HM-01-Screenshot_2015-01-09-14-38-43.png)
+|![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/HM-01-Screenshot_2015-01-09-14-37-42.png)|![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/HM-01-Screenshot_2015-01-09-14-38-43.png)
 |---|---|
-|![](https://github.com/SeeedDocument/Bluetooth_Bee_v2.0/raw/master/img/HM-01-Screenshot_2015-01-09-14-38-48.png)|![](https://github.com/SeeedDocument/Bluetooth_Bee_v2.0/raw/master/img/HM-01-Screenshot_2015-01-09-14-39-52.png)|
+|![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/HM-01-Screenshot_2015-01-09-14-38-48.png)|![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/HM-01-Screenshot_2015-01-09-14-39-52.png)|
 
-![](https://github.com/SeeedDocument/Bluetooth_Bee_v2.0/raw/master/img/HM-01-Dialog_with_Android.png)
+![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/HM-01-Dialog_with_Android.png)
 
 ###   Data transmission between Two Arduinos
 
@@ -1092,7 +1092,7 @@ The program of Central and Peripheral use the same code, the only difference is 
 
 The initialization program flow please refer to the following flow chart. First of all we need to distinguish the presetting baud rate of the Bluetooth. After this, send commands to restore factory settings, and change baud rate from 115200 to 9600 since software serial will not working well at high baud rate. Then other parameters were configured to the Bluetooth with Reset command in the final.
 
-![](https://github.com/SeeedDocument/Bluetooth_Bee_v2.0/raw/master/img/HM-01-Init-flowchat.png)
+![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/HM-01-Init-flowchat.png)
 
 After the initialization, the Central and Peripheral will do different things, the Central will send message to Peripheral interval and print what received from Peripheral while the Peripheral only responds the Central.
 
@@ -1100,8 +1100,8 @@ Click [here](https://github.com/Seeed-Studio/HM-13_SW) to download the test code
 
 After downloading program, open two serial terminal windows, the LEDs on Bluetooth will flash, several seconds later, they stop to flash and keep on, this indicates that they connected to each other. According to the program is written, the Central sends message to the Peripheral continually and get feedback every time.
 
-![](https://github.com/SeeedDocument/Bluetooth_Bee_v2.0/raw/master/img/HM-01-Debug_Output_Master.png)
-![](https://github.com/SeeedDocument/Bluetooth_Bee_v2.0/raw/master/img/HM-01-Debug_Output_Slave.png)
+![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/HM-01-Debug_Output_Master.png)
+![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/HM-01-Debug_Output_Slave.png)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

@@ -7,11 +7,11 @@ prodimagename:  P10308912-1024x684.jpg
 surveyurl: https://www.research.net/r/DSO_Quad
 sku:   109990016
 ---
-![](https://github.com/SeeedDocument/DSO_Quad/raw/master/img/P10308912-1024x684.jpg)
+![](https://files.seeedstudio.com/wiki/DSO_Quad/img/P10308912-1024x684.jpg)
 
 DSO Quad also known as DSO203 is a pocket size 4 channel digital oscilloscope for common electronic engineering tasks. It's based on ARM cortex M3 (STM32F103VCT6), providing 72MS/s sampling rate with integrated FPGA and high speed ADC. An internal 2MB USB disk can be used to store waveform captures, user applications and to upgrade firmware.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/DSO-Quad-Aluminium-Alloy-Silver-p-1033.html?cPath=63_65)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/DSO-Quad-Aluminium-Alloy-Silver-p-1033.html?cPath=63_65)
 
 ##   Features
 ---
@@ -253,7 +253,7 @@ Please note that this procedure currently only works under Windows. [Instruction
 
 ###   Where to find firmware
 
-Here is the [latest firmware](https://github.com/SeeedDocument/DSO_Quad/raw/master/res/PA1_V113.zip).
+Here is the [latest firmware](https://files.seeedstudio.com/wiki/DSO_Quad/res/PA1_V113.zip).
 
 You could also [build the firmware from source](/DSO_Quad-Building_Firmware "DSO Quad:Building Firmware").
 
@@ -309,7 +309,7 @@ More details and Linux instructions here: [DSO_Quad:Upgrading_Firmware](/DSO_Qua
 
 ###   Memory layout
 
-![](https://github.com/SeeedDocument/DSO_Quad/raw/master/img/DSOQuad-bug-2.jpg)
+![](https://files.seeedstudio.com/wiki/DSO_Quad/img/DSOQuad-bug-2.jpg)
 
 <table  cellpadding="1" cellspacing="1">
 <tr>
@@ -419,9 +419,9 @@ More details and Linux instructions here: [DSO_Quad:Upgrading_Firmware](/DSO_Qua
 
 - [Discussion board with resouces for HW2.6](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1929)
 
-- [DS203_yijian_app_user_manual.rar‎](https://github.com/SeeedDocument/DSO_Quad/raw/master/res/DS203_yijian_app_user_manual.rar)
+- [DS203_yijian_app_user_manual.rar‎](https://files.seeedstudio.com/wiki/DSO_Quad/res/DS203_yijian_app_user_manual.rar)
 
-- [DSO Quad Manual](https://github.com/SeeedDocument/DSO_Quad/raw/master/res/DSO203_user_Guide_2.pdf)
+- [DSO Quad Manual](https://files.seeedstudio.com/wiki/DSO_Quad/res/DSO203_user_Guide_2.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).

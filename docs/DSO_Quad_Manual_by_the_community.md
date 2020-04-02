@@ -7,7 +7,7 @@ prodimagename:  P10308912-1024x684.jpg
 surveyurl: https://www.research.net/r/DSO_Quad_Manual_by_the_community
 sku:
 ---
-![](https://github.com/SeeedDocument/DSO_Quad_Manual_by_the_community/raw/master/img/P10308912-1024x684.jpg)
+![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/P10308912-1024x684.jpg)
 
 The DSO Quad is a pocket oscilloscope. It has lots of great features in a small package:
 
@@ -61,33 +61,33 @@ I felt like this all belongs in one place -- a manual -- and I just kept working
 
 When you receive the DSO Quad, you should have something like this:
 
-![](https://github.com/SeeedDocument/DSO_Quad_Manual_by_the_community/raw/master/img/Dso_quad_plastic_cover.jpg)
-![](https://github.com/SeeedDocument/DSO_Quad_Manual_by_the_community/raw/master/img/Dso_quad_usb_cable.jpg)
-![](https://github.com/SeeedDocument/DSO_Quad_Manual_by_the_community/raw/master/img/Dso_quad_pouch.jpg)
-![](https://github.com/SeeedDocument/DSO_Quad_Manual_by_the_community/raw/master/img/Dso_quad_probes.jpg)
-![](https://github.com/SeeedDocument/DSO_Quad_Manual_by_the_community/raw/master/img/Dso_quad_battery.jpg) (This is the Lithium-Polymer battery, still in its static bag)
+![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Dso_quad_plastic_cover.jpg)
+![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Dso_quad_usb_cable.jpg)
+![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Dso_quad_pouch.jpg)
+![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Dso_quad_probes.jpg)
+![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Dso_quad_battery.jpg) (This is the Lithium-Polymer battery, still in its static bag)
 
 ###  Install the Battery
 
 1.  First, be sure the DSO Quad on/off switch is **off**:
-![](https://github.com/SeeedDocument/DSO_Quad_Manual_by_the_community/raw/master/img/Turn_off.jpg)
+![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Turn_off.jpg)
 </dd></dl>
 
 2.  Hold the DSO Quad so that you are looking at the text on the back face, right-side up as shown:
-![](https://github.com/SeeedDocument/DSO_Quad_Manual_by_the_community/raw/master/img/Back_right_side_up.jpg)
+![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Back_right_side_up.jpg)
 </dd></dl>
 
 3.  Slide the back face to the left:
-![](https://github.com/SeeedDocument/DSO_Quad_Manual_by_the_community/raw/master/img/Back_slide_to_left.jpg)
+![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Back_slide_to_left.jpg)
 </dd></dl>
 
 4.  The back face should then fall off easily, revealing the empty battery cavity:
-![](https://github.com/SeeedDocument/DSO_Quad_Manual_by_the_community/raw/master/img/Dso_quad_back_removed.jpg)
+![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Dso_quad_back_removed.jpg)
 </dd><dd> **Note:** There are [reports of reverse-polarity batteries.](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1911) _**This will destroy your charging circuit if not corrected.**_ Please carefully check for the proper alignment of red and black wires.
 </dd></dl>
 
 5.  Check that the red wire is closest to the outside of the DSO Quad. The black wire is on the inside.
-![](https://github.com/SeeedDocument/DSO_Quad_Manual_by_the_community/raw/master/img/Dso_quad_observe_polarity.jpg)
+![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Dso_quad_observe_polarity.jpg)
 </dd></dl>
 
 6.  If your battery was connected incorrectly, _**do not plug it in!**_ Go to [this forum thread](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1911) for help.
@@ -98,7 +98,7 @@ When you receive the DSO Quad, you should have something like this:
 Hold the left side tightly while sliding the cover to the right. See [http://www.flickr.com/photos/seeedstudio/5807556545/in/photostream/](http://www.flickr.com/photos/seeedstudio/5807556545/in/photostream/) for a demonstration.
 </dd></dl>
 
-9.  <div class="thumb tright"><div class="thumbinner" style="width:202px;">![](https://github.com/SeeedDocument/DSO_Quad_Manual_by_the_community/raw/master/img/Dso_quad_red_charging_led.jpg) <div class="thumbcaption">Red "charging" LED</div></div></div> Turn the DSO Quad upright and connect the USB cable. You should see the red "charging" LED. Please charge your DSO Quad for at least 1 hour the first time before using it.
+9.  <div class="thumb tright"><div class="thumbinner" style="width:202px;">![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Dso_quad_red_charging_led.jpg) <div class="thumbcaption">Red "charging" LED</div></div></div> Turn the DSO Quad upright and connect the USB cable. You should see the red "charging" LED. Please charge your DSO Quad for at least 1 hour the first time before using it.
 
 10.  Please [update your firmware](#Firmware_Updates) to the latest version.
 
@@ -269,7 +269,7 @@ This firmware has a much better GUI!
 
 (Also, the factory firmware on 2.7 freezed a lot, so this firmware is highly recommended)
 
-![](https://github.com/SeeedDocument/DSO_Quad_Manual_by_the_community/raw/master/img/Dso_quad_hw_ver_26.jpg)
+![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Dso_quad_hw_ver_26.jpg)
 </td>
 <td> 2.6
 </td>
@@ -286,7 +286,7 @@ FPGA 2.61
 
 Seeed Studio shipped this version
 
- ![](https://github.com/SeeedDocument/DSO_Quad_Manual_by_the_community/raw/master/img/Dso_quad_hw_ver_22.jpg)
+ ![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Dso_quad_hw_ver_22.jpg)
 
  2.2
  APP

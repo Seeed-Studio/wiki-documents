@@ -1,8 +1,8 @@
 
 
-![](https://github.com/SeeedDocument/3D-Gesture-Tracking-Shield-for-Raspberry-Pi-MGC3130/raw/master/img/preview-wiki.jpg)
+![](https://files.seeedstudio.com/wiki/3D-Gesture-Tracking-Shield-for-Raspberry-Pi-MGC3130/img/preview-wiki.jpg)
 
-This shield is based on Microchip [MGC3130](https://github.com/SeeedDocument/3D-Gesture-Tracking-Shield-for-Raspberry-Pi-MGC3130/raw/master/res/MGC3030-3130-datasheet.pdf) chip, which enables the Raspberry Pi with 3D gesture recognition and motion tracking function. It can capture x y z position information, can also do proximity sensing and touch sensing, support tap and double click.
+This shield is based on Microchip [MGC3130](https://files.seeedstudio.com/wiki/3D-Gesture-Tracking-Shield-for-Raspberry-Pi-MGC3130/res/MGC3030-3130-datasheet.pdf) chip, which enables the Raspberry Pi with 3D gesture recognition and motion tracking function. It can capture x y z position information, can also do proximity sensing and touch sensing, support tap and double click.
 
 As shown in the figure below, the recognition area is divided into two parts: the strip area distributed around and a central panel.
 
@@ -179,7 +179,7 @@ make clean && make
 
 - **[Zip]** [3D Gesture Tracking Shield for Raspberry Pi MGC3130 Eagle Files](https://github.com/SeeedDocument/3D-Gesture-Tracking-Shield-for-Raspberry-Pi-MGC3130/raw/master/res/3D%20Gesture%20%26%20Tracking%20Shield%20for%20Raspberry%20Pi%20(MGC3130)%20v1.0.zip)
 
-- **[PDF]** [MGC3030-3130 Datasheet](https://github.com/SeeedDocument/3D-Gesture-Tracking-Shield-for-Raspberry-Pi-MGC3130/raw/master/res/MGC3030-3130-datasheet.pdf)
+- **[PDF]** [MGC3030-3130 Datasheet](https://files.seeedstudio.com/wiki/3D-Gesture-Tracking-Shield-for-Raspberry-Pi-MGC3130/res/MGC3030-3130-datasheet.pdf)
 
 - **[Library]** [Seeed_mgc3x30 Library](https://github.com/Seeed-Studio/Seeed_mgc3x30)
 

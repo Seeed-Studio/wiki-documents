@@ -7,13 +7,13 @@ prodimagename: Grove_Base_Shield_for_Photon_product_view_1200_s.jpg
 surveyurl: https://www.research.net/r/Grove_Cape_for_BeagleBone_Series
 sku:  103020015
 ---
-![](https://github.com/SeeedDocument/Grove_Cape_for_BeagleBone_Series/raw/master/img/Grove%20Cape%20for%20BeagleBone.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Cape_for_BeagleBone_Series/img/Grove%20Cape%20for%20BeagleBone.jpg)
 
 A true open hardware ,BeagleBone Series is credit-card-sized Linux computer that connects to the Internet and runs software such as Android 4.0 and Ubuntu. With plenty of I/O and processing power for real-time analysis provided by an AM335x 720MHz ARM® processor, BeagleBone can be complemented with cape plug-in boards to augment functionality.
 
 And this Grove - Grove Cape for BeagleBone Series is an expansion board for BeagleBone Series to work with abundant Grove resources. There are 6 ready Grove sockets on the board covering functions like UART, I2C and ADC. And in this way, all Grove Modules are accessible for the BeagleBone board. Wanna make some projects with BeagleBone and need some sensors or display? This Grove - Grove Cape for BeagleBone Series can bring you this convenience.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Cape-for-BeagleBone-Series-p-1718.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Cape-for-BeagleBone-Series-p-1718.html)
 
 ##   Specification
 ---
@@ -234,7 +234,7 @@ The pins decribe mapping to the Grove Cape for BeagleBone Series board as show b
 
 ##  Resources
 
-- [Grove Cape for BeagleBone Series Eagle File](https://github.com/SeeedDocument/Grove_Cape_for_BeagleBone_Series/raw/master/res/Grove_Cape_for_BeagleBone_Series_V1.0.zip)
+- [Grove Cape for BeagleBone Series Eagle File](https://files.seeedstudio.com/wiki/Grove_Cape_for_BeagleBone_Series/res/Grove_Cape_for_BeagleBone_Series_V1.0.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

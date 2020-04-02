@@ -7,13 +7,13 @@ prodimagename: Grove_Starter_kit_for_Arduino_101product_view_1024_s.jpg
 surveyurl: https://www.research.net/r/Grove_Starter_kit_for_Arduino_101
 sku:    110020109
 ---
-![](https://github.com/SeeedDocument/Grove_Starter_kit_for_Arduino_101/raw/master/img/Grove_Starter_kit_for_Arduino_101product_view_1024_s.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_kit_for_Arduino_101/img/Grove_Starter_kit_for_Arduino_101product_view_1024_s.jpg)
 
 Grove system is designed to connect a processor to the real world through different transducers (such as sensors and motors), expansion boards and Grove wires which look like a ribbon cable. With Grove system, you will not bother to handle excessive and complicated connections as you used to do. No soldering tool, breadboard and jumper wire were required. You just need to plug plenty of transducers to development board with base shield expansion boards and Grove cables. Grove system is very helpful for accelerate your project development process, especially for a novice.
 
 **Note** that all content herein also applies to Genuino 101.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Starter-kit-for-Arduino%26Genuino-101-p-2664.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Starter-kit-for-Arduino%26Genuino-101-p-2664.html)
 
 
 ###  Version Tracker
@@ -62,7 +62,7 @@ Grove system is designed to connect a processor to the real world through differ
 
 This section lists main parts in this kit and links to get more information for each functional modules.
 
-![](https://github.com/SeeedDocument/Grove_Starter_kit_for_Arduino_101/raw/master/img/Grove_Starter_kit_for_Arduino_101_parts_s.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_kit_for_Arduino_101/img/Grove_Starter_kit_for_Arduino_101_parts_s.jpg)
 
 ###  **Parts list**
 
@@ -135,7 +135,7 @@ This section lists main parts in this kit and links to get more information for 
 <tr>
 <td>User Manual (printed copy) </td>
 <td> 1 piece</td>
-<td> [http://www.seeedstudio.com/wiki/images/2/2e/Grove_Starter_Kit_arduino_101_manual%28printed_version%29_s.pdf](https://github.com/SeeedDocument/Grove_Starter_kit_for_Arduino_101/raw/master/res/Grove_Starter_Kit_arduino_101_manual-printed_version-s.pdf)
+<td> [http://www.seeedstudio.com/wiki/images/2/2e/Grove_Starter_Kit_arduino_101_manual%28printed_version%29_s.pdf](https://files.seeedstudio.com/wiki/Grove_Starter_kit_for_Arduino_101/res/Grove_Starter_Kit_arduino_101_manual-printed_version-s.pdf)
 </td></tr></table>
 
 ##  Getting Started

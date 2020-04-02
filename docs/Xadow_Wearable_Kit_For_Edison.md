@@ -8,13 +8,13 @@ surveyurl: https://www.research.net/r/Xadow_Wearable_Kit_For_Edison
 sku:  110060065
 ---
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison02.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison02.png)
 
 The Xadow Wearable Kit For Edison is a perfect kit making wearable devices
 with Intel Edison.It includes an Edison expansion board named Xadow-Edison and
 8 extremely small modules, these modules are sensors, actuators, UI conmmunication modules. Connecting with flexible FFC you can quickly make some interesting and cool wearable devices. Attention that, you have to get an Intel Edison and two USB cables by your own.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-Wearable-Kit-For-Intel%C2%AE-Edison-p-2428.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-Wearable-Kit-For-Intel%C2%AE-Edison-p-2428.html)
 
 ##   Part list
 
@@ -94,20 +94,20 @@ Pay attention to the unfilled corner, all the modules’ unfilled corner point t
 
 - Inset Intel Edison onto Xadow-Edison through the rectangular connectors.
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison03.png)
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison08.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison03.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison08.png)
 
 - Connect the Edison-Programmer board with a FFC and plug two USB cables,the litlle switch on Edison-Programmer board should be turned to the Device side.
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison04.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison04.png)
 
 - Connect Xadow modules with FFC.
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison07.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison07.png)
 
 - After uploading program into it, unplug the USB cables and the programmer, plug the Li-Po battery so that the kit can be moveable.
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison09.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison09.png)
 
 ###   Development Environment
 
@@ -117,12 +117,12 @@ Pay attention to the unfilled corner, all the modules’ unfilled corner point t
 
 1) Click [here](https://github.com/Seeed-Studio/Xadow_Edison_Demos) to download source code from github.
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison12.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison12.png)
 
 2) Extract the demos from the zip file.
  Open arduino IDE click “file” --&gt; “preferences”, see sketchbook location item that should be as “C:\Users\xxx\Documents\Arduino”, navigate to this folder and extract the project to the subfolder ”libraries”.
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison16.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison16.png)
 
 
 3. IDE Setting
@@ -131,15 +131,15 @@ Pay attention to the unfilled corner, all the modules’ unfilled corner point t
 
 2) Open computer "Device Manager" to find out "Intel Edison Virtual Port(COMx)", Click “Tools” --&gt; “Serial Port” choose COMx.
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison17.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison17.png)
 
 
 4. Upload Sketch
 
 Click “File” --&gt; “Examples” choose demos download before
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison18.png)
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison19.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison18.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison19.png)
 
 
 ###   The Examples
@@ -148,14 +148,14 @@ Click “File” --&gt; “Examples” choose demos download before
 
 The LED strip has 3 pins, to connect the strip and the breakout board you can do a simple welding. Connect the VCC pins GND pins, and the signal pin to breakout board’s MISO pin.
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison20.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison20.png)
 
 **Prepare NFC tags **
 
 The NFC demo use three NFC tags as keys to open the led strip, but first you have got the NFC tags they were recorded nothing in. So you have to make them useful tags.
 
 **Step 1**.Use the demo FormatTag to format the tags at the first time using them.
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison21.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison21.png)
 
 !!!Note
     Upload the sketch and open the serial moitor when you see **Place an unformatted Mifare Classic tag on the reader.**, then put one tag on the antenna board. Wait for a while, you’ll see **Success, tag formatted as NDEF.** for successfully formating or **Format failed.** for maybe the tag has been formated yet.
@@ -164,15 +164,15 @@ The NFC demo use three NFC tags as keys to open the led strip, but first you hav
 
 **WRITE_TAG_MESSAGE**.
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison22.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison22.png)
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison23.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison23.png)
 
 **Step 3**.Compile and upload the shetch.
 
 **Step 4**.Run a serial monitor, put a NFC tag close to the antenna, after the serial monitor shows **Success. Try reading this tag with your phone .** a usefull tag just been made. Repeat the steps Change **WRITE_TAG_MESSAGE** to write other tags.
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison24.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison24.png)
 
 **Example-01: Cool_Light **
 
@@ -180,15 +180,15 @@ The NFC demo use three NFC tags as keys to open the led strip, but first you hav
 
 In this example, we use an NFC module and a QTouch module to control a RGB LED strip, QTouch module have 3 buttons, by touch different button you'll see different light performance.
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison27.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison27.jpg)
 
 ** Upload Sketch **
 
 **Click File&gt;Examples&gt;Cool_Light.**
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison22.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison22.png)
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison26.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison26.png)
 
 ** Code Detail **
 
@@ -231,15 +231,15 @@ void loop() {
 
 1. Put one of the the NFC tags onto the antenna to show cool light, in this example you’ll see leds shine in three modes they are single color loop, flowcolor and rainbowCycle. The three tags have different messages in them, put on defferent tag to show each mode.
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison28.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison28.jpg)
 
 2. As to QTouch, by touching one of the buttons the led strip shows a single color red green or blue.
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison30.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison30.jpg)
 
 3. Now you can disconnect the Edison-Programmer and use the Li-Po battery to suport power.
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison33.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison33.png)
 
 **Example-02: GlowingThermometer **
 
@@ -248,7 +248,7 @@ void loop() {
 In this example we use a barometer module to monitor the atmosphere about temperature air pressure and altitude, these messages show on the OLED module. We setup a secure temperature beteen 20 ℃ ~ 30 ℃, when the temperature is out of the secure range the vibrator will shock and showing warning picture on OLED when temperature over 30 ℃ or less than 20 ℃.
 Now open the demo GlowingThermometer compile and upload the sketch.
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison31.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison31.jpg)
 
 **Upload Sketch**
 
@@ -312,11 +312,11 @@ void loop()
 
 1.Defualt OLED display
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison34.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison34.png)
 
 2.High temperatrue warning display.
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison32.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison32.jpg)
 
 !!!TIPS
     You’ll need to warm the Xadow-Barometer module to see what happen when the temperature is out of the secure range.
@@ -333,15 +333,15 @@ This example shows how to make a pedometer that counts a person’s steps. It us
 
 1.Click File&gt;Examples&gt;Edison_Pedometer_with_OLED and select the demo
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison18.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison18.png)
 
 2.Change the char ssid[] = STEST with your network name and the char pass[] = 876543210 with your network password.
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison36.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison36.png)
 
 3.Click upload icon.
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison37.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison37.png)
 
 **Code Detail **
 
@@ -421,25 +421,25 @@ void loop() {
 
 1. Shake Xadow-3-Axis Accelerometer ,you will see the pedometer counts.
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison38.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison38.png)
 
 2. When the pedometer connects WiFi network, the local IP will display on the OLED screen:
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison39.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison39.png)
 
 3. On a device connected on the same network, open a web browser, and go to the IP address displayed on the OLED or Serial Monitor, you can see the step counts.
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison40.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison40.png)
 
 4. You can also apply a LiPo Battery to Xadow-Edison(as follows).
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison09.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison09.png)
 
 5. Now a beautiful watch case is available. You can download the [3D model files](https://file.seeedstudi.com/wiki/Xadow_Wearable_Kit_For_Edison/res/Edison_Pedometer_3D_models.zip) and print them using a 3D Printer.
 
 Here is what it looks like with the watch case:
 
-![](https://github.com/SeeedDocument/Xadow_Wearable_Kit_For_Edison/raw/master/img/Xadow_Wearable_Kit_For_Edison42.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison42.jpg)
 
 **TIPS**
 

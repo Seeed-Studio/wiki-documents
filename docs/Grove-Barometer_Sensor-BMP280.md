@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/Grove-Barometer_Sensor-BMP280
 sku: 101020192
 ---
 
-![](https://github.com/SeeedDocument/Grove-Barometer_Sensor-BMP280/raw/master/img/BMP280.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BMP280/img/BMP280.jpg)
 
 **Grove - Barometer Sensor (BMP280)** is a breakout board for Bosch BMP280 high-precision and low-power digital barometer. This module can be used to measure **temperature** and **atmospheric pressure** accurately. As the atmospheric pressure changes with altitude, it can also measure approximate **altitude** of a place. It can be connected to a microcontroller with I<sup>2</sup>C (integrated with Grove socket) or through SPI bus. We have also provided highly abstracted library to make this product easier to use.
 
@@ -68,7 +68,7 @@ Typical applications: Enhancement of GPS navigation, outdoor/indoor navigation, 
 
 ## Hardware Overview
 
-![](https://github.com/SeeedDocument/Grove-Barometer_Sensor-BMP280/raw/master/img/dimensions.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BMP280/img/dimensions.jpg)
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer_Sensor-BMP280/master/img/Grove-Barometer_Sensor-BMP280-Components_1200_s.jpg)
 
@@ -105,14 +105,14 @@ Do not touch or shake or let this product in vibration when it works. This will 
 
 | Seeeduino V4.2 | Base Shield| Grove-Barometer_Sensor-BMP280 |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Barometer_Sensor-BMP280/raw/master/img/45d_small.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BMP280/img/45d_small.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/depot/Grove-Barometer-Sensor-BMP280-p-2652.html)|
 
 - **Step 2.** Connect Grove-Barometer_Sensor-BMP280 to port **I2C** of Grove-Base Shield.
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
-![with_ardu](https://github.com/SeeedDocument/Grove-Barometer_Sensor-BMP280/raw/master/img/with_ardu.jpg)
+![with_ardu](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BMP280/img/with_ardu.jpg)
 
 
 !!!Note
@@ -221,7 +221,7 @@ void loop()
 
 ## Resources
 
-- **[Eagle]** [Grove-Barometer Sensor BMP280 Schematic](https://github.com/SeeedDocument/Grove-Barometer_Sensor-BMP280/raw/master/res/Grove%20-%20Barometer%20Sensor_BMP280_Schematic.zip)
+- **[Eagle]** [Grove-Barometer Sensor BMP280 Schematic](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BMP280/res/Grove%20-%20Barometer%20Sensor_BMP280_Schematic.zip)
 - **[Datasheet]** [BMP280 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer_Sensor-BMP280/master/res/Grove-Barometer_Sensor-BMP280-BMP280-DS001-12_Datasheet.pdf)
 - **[Library]** [Grove_BMP280 Library](https://github.com/Seeed-Studio/Grove_BMP280) on GitHub
 - **[References]**  [I<sup>2</sup>C how-to for Arduino](https://www.arduino.cc/en/Reference/Wire)

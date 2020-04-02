@@ -7,11 +7,11 @@ prodimagename: Grove_Base_Shield_for_Photon_product_view_1200_s.jpg
 surveyurl: https://www.research.net/r/Grove_Base_Shield_for_Photon
 sku:  103020031
 ---
-![](https://github.com/SeeedDocument/Grove_Base_Shield_for_Photon/raw/master/img/Grove_Base_Shield_for_Photon_product_view_1200_s.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Base_Shield_for_Photon/img/Grove_Base_Shield_for_Photon_product_view_1200_s.jpg)
 
 **Grove Base Shield for Photon** is an expansion shield board which incorporate [Grove](/Grove_System) port on which you can build more powerful and intelligent applications with much richer and cost-effective Grove functional modules. It gets three digital ports, two analog ports, two I<sup>2</sup>C ports and one UART port. It a kind of plug-and-play board which will accelerate your prototyping process dramatically.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Particle-Photon-Base-Shield-p-2598.html?cPath=98_106_57)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Particle-Photon-Base-Shield-p-2598.html?cPath=98_106_57)
 
 ##  Features
 ---
@@ -50,7 +50,7 @@ sku:  103020031
 
 ##  Hardware Overview
 ---
-![](https://github.com/SeeedDocument/Grove_Base_Shield_for_Photon/raw/master/img/Grove_Base_Shield_for_Photon_component_diagram_annotated_1200_s.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Base_Shield_for_Photon/img/Grove_Base_Shield_for_Photon_component_diagram_annotated_1200_s.jpg)
 
 ###  **Parts list**
 
@@ -97,7 +97,7 @@ sku:  103020031
 <dl><dd> 3. Connect them like following:
 </dd></dl>
 
-![](https://github.com/SeeedDocument/Grove_Base_Shield_for_Photon/raw/master/img/Grove_Base_Shield_for_Photon_demo_conneciton_1200_S.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Base_Shield_for_Photon/img/Grove_Base_Shield_for_Photon_demo_conneciton_1200_S.jpg)
 
 <dl><dd> 4. Now you can copy following code to Web IDE and flash them to Photo by clicking a lighting-like icon (the 1st icon on left column).
 </dd></dl>
@@ -142,7 +142,7 @@ void loop() {
 
 ##  Resources
 ---
-*   [Schematic files](https://github.com/SeeedDocument/Grove_Base_Shield_for_Photon/raw/master/res/Schematic_files_for_Grove_Base_Shield_for_Photon.zip)
+*   [Schematic files](https://files.seeedstudio.com/wiki/Grove_Base_Shield_for_Photon/res/Schematic_files_for_Grove_Base_Shield_for_Photon.zip)
 
 *   [Grove_System](/Grove_System)
 

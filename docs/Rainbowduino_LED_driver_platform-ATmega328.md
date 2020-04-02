@@ -7,7 +7,7 @@ prodimagename:  RAINBOW-Rainbowduino_LRG.jpg
 surveyurl: https://www.research.net/r/Rainbowduino_LED_driver_platform_ATmega328
 sku:  102010006
 ---
-|![](https://github.com/SeeedDocument/Rainbowduino_LED_driver_platform-ATmega328/raw/master/img/RAINBOW-Rainbowduino_LRG.jpg) |![](https://github.com/SeeedDocument/Rainbowduino_LED_driver_platform-ATmega328/raw/master/img/RAINBOW-Rainbowduino_01_LRG.jpg)
+|![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-Rainbowduino_LRG.jpg) |![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-Rainbowduino_01_LRG.jpg)
 |---|---|
 
 The Rainbowduino board is an Arduino compatible controller board with professional LED driving capacity. It will drive an 8x8 RGB Led Matrix (Common Anode).
@@ -28,7 +28,7 @@ The Rainbowduino board is an Arduino compatible controller board with profession
 
 *   Small form and light weight
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Rainbowduino-LED-driver-platform-Atmega-328-p-371.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Rainbowduino-LED-driver-platform-Atmega-328-p-371.html)
 
 ##   Standalone Mode (plug and shine)
 ---
@@ -82,7 +82,7 @@ Use Case:
 
 PC or Arduino generated frames displayed on **multiple** Led Matrices
 
-![](https://github.com/SeeedDocument/Rainbowduino_LED_driver_platform-ATmega328/raw/master/img/RAINBOW-i2c-cabling.png)
+![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-i2c-cabling.png)
 
 ##   I2C Cascading
 ---
@@ -90,11 +90,11 @@ Rainbowduino is designed for easy casacading. After physically connected, power 
 
 Prepare the power connection:
 
-![](https://github.com/SeeedDocument/Rainbowduino_LED_driver_platform-ATmega328/raw/master/img/RAINBOW-chain-prepare.png)
+![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-chain-prepare.png)
 
 Rainbowduino cascaded:
 
-![](https://github.com/SeeedDocument/Rainbowduino_LED_driver_platform-ATmega328/raw/master/img/RAINBOW-chained.png)
+![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-chained.png)
 
 ##   Specification
 ---
@@ -144,7 +144,7 @@ Rainbowduino cascaded:
 ---
 Before direct plug into the female pin-headers, please verify if the RGB dot matrix are proven compatible. The concern is mainly on the pin out, where same color LEDs are in cluster, here we attach the scheme and photo demonstration. The color sequence might change, since the controlling logic are open source and easily reprogrammable.
 
-![](https://github.com/SeeedDocument/Rainbowduino_LED_driver_platform-ATmega328/raw/master/img/RAINBOW-ledmatrix-schema.png)
+![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-ledmatrix-schema.png)
 
 The power of Rainbowduino is well beyond driving a RGB dot-matrix. With 192 output count, and up to 120mA constant current capacity, you may easily populate massive LED setups.
 
@@ -152,7 +152,7 @@ The output current of each channel (IOUT) is set by an external resistor, Rext. 
 
 This means you can build your own LED matrix without any additional resistors.
 
-![](https://github.com/SeeedDocument/Rainbowduino_LED_driver_platform-ATmega328/raw/master/img/RAINBOW-ledmatrix-voltage.png)
+![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-ledmatrix-voltage.png)
 
 ##   Demonstration
 ---
@@ -164,7 +164,7 @@ This means you can build your own LED matrix without any additional resistors.
 
 *   An Arduino board (Optional)
 
-![](https://github.com/SeeedDocument/Rainbowduino_LED_driver_platform-ATmega328/raw/master/img/RAINBOW-connected-matrix.png)
+![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-connected-matrix.png)
 
 <big>Prepare Rainbowduino Hardware </big>
 
@@ -185,7 +185,7 @@ void loop() {}
 
 Open the Rainbowduino firmware, **select the correct board** (Tools--&gt;board--&gt; Arduino Duemilanove or Nano w/ ATmega328) and upload the Firmware. At least that’s the theory ;)
  For your viewing pleasure, here is the connection scheme:
-![](https://github.com/SeeedDocument/Rainbowduino_LED_driver_platform-ATmega328/raw/master/img/RAINBOW-fritz-uploadfw.png)
+![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-fritz-uploadfw.png)
 
 We use an external power source, however you could also use the 5V from the Arduino.
 
@@ -226,7 +226,7 @@ We use an external power source, however you could also use the 5V from the Ardu
 
 Those screenshot's shows how to connect the UartSBee to the Rainbowduino:
 
-| ![](https://github.com/SeeedDocument/Rainbowduino_LED_driver_platform-ATmega328/raw/master/img/RAINBOW-beeONE.jpg)|![](https://github.com/SeeedDocument/Rainbowduino_LED_driver_platform-ATmega328/raw/master/img/RAINBOW-beeTWO.jpg)
+| ![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-beeONE.jpg)|![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-beeTWO.jpg)
 |---|---|
 
 If you connect the UartSBee to the USB bus, it should register a new serial port. Now simply upload your firmware using the new serial port.
@@ -527,7 +527,7 @@ Disconnect the RX/TX lines between Rainbowduino and Arduino. Upload the Arduino 
 This chapter will show you a **simple way to communicate** with your Rainbowduino. You need an Arduino (working as a serial to I2C gateway) and a Rainbowduino with an I2C address of 0x06.
 
 The connection between the Rainbowduino and Arduino should look like this:
-![](https://github.com/SeeedDocument/Rainbowduino_LED_driver_platform-ATmega328/raw/master/img/RAINBOW-neorainbow.png)
+![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-neorainbow.png)
 
 We use an external power source, however you could also use the 5V from the Arduino.
 
@@ -564,7 +564,7 @@ After you installed the Processing Software, you'll need to install the neorainb
 
 When you start Processing you should able to import the neorainbowduino library):
 
-![](https://github.com/SeeedDocument/Rainbowduino_LED_driver_platform-ATmega328/raw/master/img/RAINBOW-processing-lib.png)
+![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-processing-lib.png)
 
 **Simple Example**
 
@@ -619,8 +619,8 @@ The image will be resized using an Area Averaging Filter. So its important to kn
 
 |Good example (aligned)|Bad example (not aligned)
 |---|---|
-|![](https://github.com/SeeedDocument/Rainbowduino_LED_driver_platform-ATmega328/raw/master/img/RAINBOW-resize-good-src.png)|![](https://github.com/SeeedDocument/Rainbowduino_LED_driver_platform-ATmega328/raw/master/img/RAINBOW-resize-bad-src.png)
-| ![](https://github.com/SeeedDocument/Rainbowduino_LED_driver_platform-ATmega328/raw/master/img/RAINBOW-resize-good-dst.png)|![](https://github.com/SeeedDocument/Rainbowduino_LED_driver_platform-ATmega328/raw/master/img/RAINBOW-resize-bad-dst.png)
+|![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-resize-good-src.png)|![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-resize-bad-src.png)
+| ![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-resize-good-dst.png)|![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-resize-bad-dst.png)
 
 
 ##  mtXcontrol Firmware
@@ -683,7 +683,7 @@ Can easily be changed to use I2C; only one file (RainbowDash.pde) needs to be ch
 
 <big>Microprocessor - Atmega 168/328</big>
 
-![](https://github.com/SeeedDocument/Rainbowduino_LED_driver_platform-ATmega328/raw/master/img/RAINBOW-Schema.png)
+![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-Schema.png)
 
 <table >
 <tr>
@@ -760,7 +760,7 @@ Can easily be changed to use I2C; only one file (RainbowDash.pde) needs to be ch
 
 This driver uses the MBI5168. The MBI5168 is a 8bit [shift register](https://en.wikipedia.org/wiki/Shift_register). It converts the serial data to parallel data. All 3 MBI5168 share the LE,CLK and OE input.
 
-![](https://github.com/SeeedDocument/Rainbowduino_LED_driver_platform-ATmega328/raw/master/img/RAINBOW-Mbi-schema.png)
+![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-Mbi-schema.png)
 
 <table >
 <tr>
@@ -801,14 +801,14 @@ This driver uses the MBI5168. The MBI5168 is a 8bit [shift register](https://en.
 
 <big>Super Source Driver</big>
 
-![](https://github.com/SeeedDocument/Rainbowduino_LED_driver_platform-ATmega328/raw/master/img/RAINBOW-schema-M5456.png)
+![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-schema-M5456.png)
 
 <big>Shift out data</big>
 
 To display a full frame on the LED Matrix, the Rainbowduino interrupt method needs to be called 128 times. There are 8 lines and 16 brightness levels. Each time the displayNextLine() method gets called, one line gets updated by the current brightness level. After all 8 lines are updated the brightness level gets updated. That’s why this function needs 128 cycles until a full frame is populated on the LED Matrix.
 
 Below you see the LED Matrix display after 32, 64, 96 and 128 cycles. You notice how the brightness is increased.
-![](https://github.com/SeeedDocument/Rainbowduino_LED_driver_platform-ATmega328/raw/master/img/RAINBOW-fw.1.png)
+![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-fw.1.png)
 
 <big>Support more than 4096 colors (12bit)</big>
 

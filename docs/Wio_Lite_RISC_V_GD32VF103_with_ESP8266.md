@@ -10,7 +10,7 @@ tags:
 ---
 
 
-！[](https://github.com/SeeedDocument/Wio-Lite-RISC-V-GD32VF103/raw/master/img/%E4%BA%A7%E5%93%81%E6%8B%8D%E6%91%84%E6%A8%A1%E6%9D%BF_perspective-09.png)
+！[](https://files.seeedstudio.com/wiki/Wio-Lite-RISC-V-GD32VF103/img/%E4%BA%A7%E5%93%81%E6%8B%8D%E6%91%84%E6%A8%A1%E6%9D%BF_perspective-09.png)
 
 
 
@@ -43,7 +43,7 @@ Meanwhile, as a Wio Lite Board, Wio Lite RISC-V definitely can work with the [Gr
 + USB Type C
 
 ## Hardware Overview
-![](https://github.com/SeeedDocument/Wio-Lite-RISC-V-GD32VF103/raw/master/img/hardware.png)
+![](https://files.seeedstudio.com/wiki/Wio-Lite-RISC-V-GD32VF103/img/hardware.png)
 
 ### Platform Supported
 
@@ -79,13 +79,13 @@ Download the [Visual Studio Code](https://code.visualstudio.com/).
 Click the "Extensions" icon, you can find it on the left side of the Visual Studio Code.
 
 
-![](https://github.com/SeeedDocument/GD32VF103/raw/master/img/wiki1.png)
+![](https://files.seeedstudio.com/wiki/GD32VF103/img/wiki1.png)
 
 
 Type "platformIO" in the search engine to install it. 
 
 
-![](https://github.com/SeeedDocument/GD32VF103/raw/master/img/wiki2.png)
+![](https://files.seeedstudio.com/wiki/GD32VF103/img/wiki2.png)
 
 - **Step 2**
 
@@ -96,19 +96,19 @@ Open PlatformIO IDE and click "New project" to creat the project. Type the proje
 Edit your code of Arduino framework, click compile botton at the bottom of the Visual Studio  Code.
 
 
-![](https://github.com/SeeedDocument/GD32VF103/raw/master/img/wiki5.png)
+![](https://files.seeedstudio.com/wiki/GD32VF103/img/wiki5.png)
 
 
 - **Step 4**
 
-The code is compiled to a binary file. You can use [DFU tool](https://github.com/SeeedDocument/GD32VF103/raw/master/res/GD32_MCU_Dfu_Tool_V3.8.1.5784_1.rar) to download the binary file to the board. Besides you need to install the DFU firmware to let the board download the code in the way of DFU. The DFU firmware is in the same document of the [DFU tool](https://github.com/SeeedDocument/GD32VF103/raw/master/res/GD32_MCU_Dfu_Tool_V3.8.1.5784_1.rar).
+The code is compiled to a binary file. You can use [DFU tool](https://files.seeedstudio.com/wiki/GD32VF103/res/GD32_MCU_Dfu_Tool_V3.8.1.5784_1.rar) to download the binary file to the board. Besides you need to install the DFU firmware to let the board download the code in the way of DFU. The DFU firmware is in the same document of the [DFU tool](https://files.seeedstudio.com/wiki/GD32VF103/res/GD32_MCU_Dfu_Tool_V3.8.1.5784_1.rar).
 
 - **Step 5**
 
 Press reset botton on the Wio Lite with boot switch on the left and DFU tool will recognise your board after you install the DFU tool frameware.
 
 
-![](https://github.com/SeeedDocument/GD32VF103/raw/master/img/wiki6.png)
+![](https://files.seeedstudio.com/wiki/GD32VF103/img/wiki6.png)
 
 
 Now turn the boot swich on the right, find your compiled binary file and downlard it to the flash of the board. click "Leave DFU" to let the board disconnect the DFU tool, and your code is correctly burned into your board. 
@@ -404,9 +404,9 @@ void loop()
 
 ## Resourse
 
-- **[PDF]** [GD32VF103_Datasheet_Rev1.0](https://github.com/SeeedDocument/Bazaar_Document/raw/master/GD32VF103_Datasheet_Rev1.0.pdf)
-- **[PDF]** [GD32VF103_User_Manual_EN_V1.0](https://github.com/SeeedDocument/Bazaar_Document/raw/master/GD32VF103_User_Manual_EN_V1.0.pdf)
-- **[Zip]** [DFU Tool](https://github.com/SeeedDocument/GD32VF103/raw/master/res/GD32_MCU_Dfu_Tool_V3.8.1.5784_1.rar)
+- **[PDF]** [GD32VF103_Datasheet_Rev1.0](https://files.seeedstudio.com/wiki/Bazaar_Document/GD32VF103_Datasheet_Rev1.0.pdf)
+- **[PDF]** [GD32VF103_User_Manual_EN_V1.0](https://files.seeedstudio.com/wiki/Bazaar_Document/GD32VF103_User_Manual_EN_V1.0.pdf)
+- **[Zip]** [DFU Tool](https://files.seeedstudio.com/wiki/GD32VF103/res/GD32_MCU_Dfu_Tool_V3.8.1.5784_1.rar)
 
 
 ## Tech Support

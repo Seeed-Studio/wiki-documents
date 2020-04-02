@@ -412,13 +412,13 @@ void loop() {
 
 * **Schematic**
 
-    [Seeeduino GPRS Eagle file](https://github.com/SeeedDocument/Seeeduino_GPRS/raw/master/res/Seeeduino_GPRS_v1.0_Eagle.zip)
+    [Seeeduino GPRS Eagle file](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/res/Seeeduino_GPRS_v1.0_Eagle.zip)
 
-    [Seeeduino GPRS PDF file](https://github.com/SeeedDocument/Seeeduino_GPRS/raw/master/res/Seeeduino_GPRS_v1.0_Schematic.pdf)
+    [Seeeduino GPRS PDF file](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/res/Seeeduino_GPRS_v1.0_Schematic.pdf)
 
 * **Firmware**     
 
-    [Seeeduino GPRS Firmware & Update Guide](https://github.com/SeeedDocument/Seeeduino_GPRS/raw/master/res/Firmware_update_for_Seeeduino_GPRS_v1.0.zip)
+    [Seeeduino GPRS Firmware & Update Guide](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/res/Firmware_update_for_Seeeduino_GPRS_v1.0.zip)
 
 * **SIM800 AT Command**    
 

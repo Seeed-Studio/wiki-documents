@@ -9,11 +9,11 @@ sku:     104990017
 ---
 ![](http://bz.seeedstudio.com/depot/images/product/lcd821n.jpg)
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/lcd-82-characters-blue-back-light-p-120.html?cPath=163_164)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/lcd-82-characters-blue-back-light-p-120.html?cPath=163_164)
 
 ##   Schematic
 ---
-![](https://github.com/SeeedDocument/LCD_8-2_Characters-Blue_back_light/raw/master/img/LCD-bbl-block.JPG)
+![](https://files.seeedstudio.com/wiki/LCD_8-2_Characters-Blue_back_light/img/LCD-bbl-block.JPG)
 
 ##   Specification
 ---
@@ -437,7 +437,7 @@ L:Write
 
 ##   Mechanic Dimensions
 
-![](https://github.com/SeeedDocument/LCD_8-2_Characters-Blue_back_light/raw/master/img/LCD-bbl-dimen.JPG)
+![](https://files.seeedstudio.com/wiki/LCD_8-2_Characters-Blue_back_light/img/LCD-bbl-dimen.JPG)
 
 ##   Resources
 

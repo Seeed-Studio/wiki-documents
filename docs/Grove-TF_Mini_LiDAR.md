@@ -9,13 +9,13 @@ sku: 114991434
 tags: io_5v, plat_duino
 
 ---
-![](https://github.com/SeeedDocument/Grove-TF_Mini_LiDAR/raw/master/img/Grove-TF-Mini-LiDAR.JPG)
+![](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/Grove-TF-Mini-LiDAR.JPG)
 
 This product is based on ToF (Time of Flight) principle and integrated with unique optical and electrical designs, so as to achieve stable, precise, high sensitivity and high-speed distance detection.
 
 ToF is the abbreviation of Time of Flight technology, and its operating principle is as follows: a modulated near-infrared light is sent from the sensor and reflected by an object; the distance to the object to be shot can be converted with the sensor by calculating the time difference or phase difference between the light sending and the light reflection, so as to produce the depth information.
 
-[![Get one now](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/image/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Seeedstudio-Grove-TF-Mini-LiDAR-p-2996.html)
+[![Get one now](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/image/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Seeedstudio-Grove-TF-Mini-LiDAR-p-2996.html)
 
 !!!Warning
     Prevent dust or any other foreign matter from entering the lens; otherwise it may affect the light transmission.
@@ -75,13 +75,13 @@ Platforms Supported
 
 | Seeeduino Lite |  Grove-TF-Mini-LiDAR |
 |--------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/Grove-TF_Mini_LiDAR/raw/master/img/Seeed%20lite_S.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-TF_Mini_LiDAR/raw/master/img/Grove-TF-Mini-LiDAR_S.JPG)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/Seeed%20lite_S.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/Grove-TF-Mini-LiDAR_S.JPG)|
 |[Get ONE Now](https://www.seeedstudio.com/Seeeduino-Lite-p-1487.html)|[Get ONE Now](https://www.seeedstudio.com/Seeedstudio-Grove-TF-Mini-LiDAR-p-2996.html)|
 
 - Step 2. Connect Grove-TF-Mini-LiDAR to UART port of Seeeduino Lite.
 - Step 3. Connect Seeeduino to PC through a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-TF_Mini_LiDAR/raw/master/img/Seeeduino.JPG)
+![](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/Seeeduino.JPG)
 
 !!!Note
     The Grove-TF Mini LiDAR's UART baud rate is 115200 and the SoftwareI2C can't support it. So if we use 1 hardware UART to hook up the sensor and other hardware UART for Serial Port display, we need at least 2 hardware UART platforms, such as arduino mega, seeeduino lite and so on.  If we only have 1 UART platform(ie. seeeduino v4.2, arduino uno), we can use the I2C LCD as display.
@@ -147,17 +147,17 @@ void loop()
 ```
 - Step 3. We will see the distance display on terminal. The blue curve is the distance and the red is Strength. 
 
-![](https://github.com/SeeedDocument/Grove-TF_Mini_LiDAR/raw/master/img/curve.png)
+![](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/curve.png)
 
 - Step 4. We also can connect the sensor to PC USB port directly through Serial to USB convertor. We can use the [Grove-TF-Mini-LiDAR Master Computer Software
-](https://github.com/SeeedDocument/Grove-TF_Mini_LiDAR/raw/master/res/Grove-TF-Mini-LiDAR%20Master%20Computer%20Software.zip) to monitor the distance and strength.  
+](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/res/Grove-TF-Mini-LiDAR%20Master%20Computer%20Software.zip) to monitor the distance and strength.  
 
 ## Resources
 ---
 - **[Datasheet]** [Grove-TF-Mini-LiDAR
-](https://github.com/SeeedDocument/Grove-TF_Mini_LiDAR/raw/master/res/DE-LiDAR%20TFmini%20Datasheet-V1.7-EN.pdf)
+](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/res/DE-LiDAR%20TFmini%20Datasheet-V1.7-EN.pdf)
 - **[Software]** [Grove-TF-Mini-LiDAR Master Computer Software
-](https://github.com/SeeedDocument/Grove-TF_Mini_LiDAR/raw/master/res/Grove-TF-Mini-LiDAR%20Master%20Computer%20Software.zip)
+](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/res/Grove-TF-Mini-LiDAR%20Master%20Computer%20Software.zip)
 - **[Library]** [TFmini Examples on Arduino](https://github.com/TFmini/TFmini-Arduino)
 - **[Library]** [TFmini Examples on RaspberryPi](https://github.com/TFmini/TFmini-RaspberryPi)
 - **[Library]** [TFmini Examples on TFmini-STM32](https://github.com/TFmini/TFmini-STM32)

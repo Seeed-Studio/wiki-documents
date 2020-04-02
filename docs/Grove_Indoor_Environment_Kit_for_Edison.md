@@ -7,11 +7,11 @@ prodimagename: Grove_Indoor_Environment_Kit_for_Edison_with_case.JPG
 surveyurl: https://www.research.net/r/Grove_Indoor_Environment_Kit_for_Edison
 sku:  110060064
 ---
-![](https://github.com/SeeedDocument/Grove_Indoor_Environment_Kit_for_Edison/raw/master/img/Grove_Indoor_Environment_Kit_for_Edison_with_case.JPG)
+![](https://files.seeedstudio.com/wiki/Grove_Indoor_Environment_Kit_for_Edison/img/Grove_Indoor_Environment_Kit_for_Edison_with_case.JPG)
 
 Grove Indoor Environment Kit for Edison makes it easy to create complete indoor environment applications with Intel Edison and Arduino Breakout Board. With the Base Shield V2, developer can plug up to 11 different Grove sensors &amp; actuators quickly. We provide cool demo code which will be constantly updated, and it will be very easy to operate these sensors &amp; actuators without any programming experience.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Indoor-Environment-Kit-for-Intel%C2%AE-Edison-p-2427.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Indoor-Environment-Kit-for-Intel%C2%AE-Edison-p-2427.html)
 
 ##   What's included in the kit?
 ---
@@ -45,7 +45,7 @@ Grove Indoor Environment Kit for Edison makes it easy to create complete indoor 
 
 *   USB Cable  x1
 
-![](https://github.com/SeeedDocument/Grove_Indoor_Environment_Kit_for_Edison/raw/master/img/Grove-Indoor-Environment-Kit-for-Edison.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Indoor_Environment_Kit_for_Edison/img/Grove-Indoor-Environment-Kit-for-Edison.jpg)
 
 ##   Installing Edison Arduino IDE
 ---
@@ -57,11 +57,11 @@ Refer to Intel Edison offical site: [Edison Getting Started Guide](https://commu
 
 3.Right click on the .7z file,highlight “7-zip”, and select “Extract to “arduino-…”
 
-![](https://github.com/SeeedDocument/Grove_Indoor_Environment_Kit_for_Edison/raw/master/img/IndoorKit_Extract_7z.png)
+![](https://files.seeedstudio.com/wiki/Grove_Indoor_Environment_Kit_for_Edison/img/IndoorKit_Extract_7z.png)
 
 4.Click through the folder that was created until you see the IDE “arduino.exe” file.Double-click this file and this window should open.
 
-![](https://github.com/SeeedDocument/Grove_Indoor_Environment_Kit_for_Edison/raw/master/img/IndoorKit_ArduinoIDE.png)
+![](https://files.seeedstudio.com/wiki/Grove_Indoor_Environment_Kit_for_Edison/img/IndoorKit_ArduinoIDE.png)
 
 ##   Install required drivers
 ---
@@ -69,23 +69,23 @@ Refer to Intel Edison offical site: [Edison Getting Started Guide](https://commu
 
 2.Right-click the .exe file you downloaded, which should be called “CDM…” and select “Run as administrator”.
 
-![](https://github.com/SeeedDocument/Grove_Indoor_Environment_Kit_for_Edison/raw/master/img/Edison_FTDI_Driver.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Indoor_Environment_Kit_for_Edison/img/Edison_FTDI_Driver.jpg)
 
 3.Click “Extract”.
 
-![](https://github.com/SeeedDocument/Grove_Indoor_Environment_Kit_for_Edison/raw/master/img/Edison_FTDI_Driver_Install.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Indoor_Environment_Kit_for_Edison/img/Edison_FTDI_Driver_Install.jpg)
 
 4.Click “Next”.
 
 5.Click “Finish” when you see this screen.
 
-![](https://github.com/SeeedDocument/Grove_Indoor_Environment_Kit_for_Edison/raw/master/img/Edison_FTDI_Driver_Install_ok.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Indoor_Environment_Kit_for_Edison/img/Edison_FTDI_Driver_Install_ok.jpg)
 
 6.Download [Intel Edison Drivers](https://communities.intel.com/docs/DOC-23242) to install the required RNDIS, CDC, and DFU drivers.
 
 7.Double-click the .exe file to begin the install.
 
-![](https://github.com/SeeedDocument/Grove_Indoor_Environment_Kit_for_Edison/raw/master/img/Intel_Edison_Driver.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Indoor_Environment_Kit_for_Edison/img/Intel_Edison_Driver.jpg)
 
 ##   Hardware connection
 ---
@@ -153,31 +153,31 @@ Using 26AWG Grove Cable making the following connections:
 <td width="100px"> D4
 </td></tr></table>
 
-![](https://github.com/SeeedDocument/Grove_Indoor_Environment_Kit_for_Edison/raw/master/img/Edison_Indoor_Wire_Figure.png)
+![](https://files.seeedstudio.com/wiki/Grove_Indoor_Environment_Kit_for_Edison/img/Edison_Indoor_Wire_Figure.png)
 
 ##   Running Example
 ---
 1.Open the web site: [Grove_Indoor_Environment_Demo](https://github.com/Seeed-Studio/Grove_Indoor_Environment_Demo) to download the whole project.
 
-![](https://github.com/SeeedDocument/Grove_Indoor_Environment_Kit_for_Edison/raw/master/img/Indoor_Kit_Github_Demo.png)
+![](https://files.seeedstudio.com/wiki/Grove_Indoor_Environment_Kit_for_Edison/img/Indoor_Kit_Github_Demo.png)
 
 2.Click **Tools &gt; Serial Port** and select the Com # that the Intel Edison is connected to
 
-![](https://github.com/SeeedDocument/Grove_Indoor_Environment_Kit_for_Edison/raw/master/img/Import_Indoor_Kit_Demo.png)
+![](https://files.seeedstudio.com/wiki/Grove_Indoor_Environment_Kit_for_Edison/img/Import_Indoor_Kit_Demo.png)
 
 3.Click Sketch&gt;Import Library…&gt;Add Library and import the library downloaded at **step 1**
 
 4.Click **File&gt;Examples&gt; Grove_Indoor_Environment_Demo** and select the demo Click **upload** icon
 
-![](https://github.com/SeeedDocument/Grove_Indoor_Environment_Kit_for_Edison/raw/master/img/Upload_Indoor_Kit_Demo.png)
+![](https://files.seeedstudio.com/wiki/Grove_Indoor_Environment_Kit_for_Edison/img/Upload_Indoor_Kit_Demo.png)
 
 5.Open **Serial Monitor**, it will print the sensors’ information:
 
-![](https://github.com/SeeedDocument/Grove_Indoor_Environment_Kit_for_Edison/raw/master/img/Indoor_Kit_Serial_Monitor.png)
+![](https://files.seeedstudio.com/wiki/Grove_Indoor_Environment_Kit_for_Edison/img/Indoor_Kit_Serial_Monitor.png)
 
 6.Rotate the Encoder to check the sensor value on the LCD.
 
-![](https://github.com/SeeedDocument/Grove_Indoor_Environment_Kit_for_Edison/raw/master/img/Indoor_Kit_Rotate_Encoder.png)
+![](https://files.seeedstudio.com/wiki/Grove_Indoor_Environment_Kit_for_Edison/img/Indoor_Kit_Rotate_Encoder.png)
 
 7.In the **“Send TextBox”**, you can enter the following command to operate the sensors and actuators:
 
@@ -236,17 +236,17 @@ Note:
 
 *   A actuator can only be controlled by a sensor. If A sensor wants to control a actuator(has be controlled by B sensor), B sensor should be set sleep.
 
-![](https://github.com/SeeedDocument/Grove_Indoor_Environment_Kit_for_Edison/raw/master/img/Indoor_Kit_command.png)
+![](https://files.seeedstudio.com/wiki/Grove_Indoor_Environment_Kit_for_Edison/img/Indoor_Kit_command.png)
 
 8.WiFi connection. open the Serial Monitor, and set your ssid and password(as below). Check the local IP on the LCD or Serial Monitor. On a device connected on the same network, open a web browser, and go to the IP address above, you can see the sensor value.
 
 _**Note: When visiting the web server, a port number(88)should be added,such as: 172.20.10.2:88.**_
 
-![](https://github.com/SeeedDocument/Grove_Indoor_Environment_Kit_for_Edison/raw/master/img/Indoor_Kit_SSID_PSW.png)
+![](https://files.seeedstudio.com/wiki/Grove_Indoor_Environment_Kit_for_Edison/img/Indoor_Kit_SSID_PSW.png)
 
-![](https://github.com/SeeedDocument/Grove_Indoor_Environment_Kit_for_Edison/raw/master/img/Indoor_Kit_Local_IP.png)
+![](https://files.seeedstudio.com/wiki/Grove_Indoor_Environment_Kit_for_Edison/img/Indoor_Kit_Local_IP.png)
 
-![](https://github.com/SeeedDocument/Grove_Indoor_Environment_Kit_for_Edison/raw/master/img/Indoor_Kit_Web_Server.png)
+![](https://files.seeedstudio.com/wiki/Grove_Indoor_Environment_Kit_for_Edison/img/Indoor_Kit_Web_Server.png)
 
 ##   Resource
 ---

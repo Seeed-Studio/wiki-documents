@@ -31,7 +31,7 @@ Grove Toy Kit includes:
 
 *   2 x Super strong metal core Servo MG-995
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Toy-Kit-p-995.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Toy-Kit-p-995.html)
 
 ##  Version Tracker
 
@@ -61,7 +61,7 @@ How about make your toy say "hello" when you get close to it? With the PIR senso
 
 <center>
 
-[![](https://github.com/SeeedDocument/Grove-Toy_Kit/raw/master/img/PIR_motion_sensor.jpg)](/Grove-PIR_Motion_Sensor "Grove - PIR Motion Sensor")
+[![](https://files.seeedstudio.com/wiki/Grove-Toy_Kit/img/PIR_motion_sensor.jpg)](/Grove-PIR_Motion_Sensor "Grove - PIR Motion Sensor")
 
 </center>
 
@@ -71,7 +71,7 @@ With the Sound sensor, your toy can be sensitive to the environment noise. Grove
 
 <center>
 
-[![](https://github.com/SeeedDocument/Grove-Toy_Kit/raw/master/img/Sound_sensor.jpg)](/Grove-Sound_Sensor "Grove - Sound Sensor")
+[![](https://files.seeedstudio.com/wiki/Grove-Toy_Kit/img/Sound_sensor.jpg)](/Grove-Sound_Sensor "Grove - Sound Sensor")
 
 </center>
 
@@ -81,7 +81,7 @@ With the I2C 3-axis Accelerometer, your toy can now detect its acceleration; tha
 
 <center>
 
-![](https://github.com/SeeedDocument/Grove-Toy_Kit/raw/master/img/Accelerometer.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Toy_Kit/img/Accelerometer.jpg)
 
 </center>
 
@@ -91,7 +91,7 @@ An I2C Touch Sensor has been used to make your toy (ie Winnie The Pooh) sensitiv
 
 <center>
 
-[![](https://github.com/SeeedDocument/Grove-Toy_Kit/raw/master/img/I2C_Touch_Sensor.jpg)](/Grove-I2C_Touch_Sensor "Grove - I2C Touch Sensor")
+[![](https://files.seeedstudio.com/wiki/Grove-Toy_Kit/img/I2C_Touch_Sensor.jpg)](/Grove-I2C_Touch_Sensor "Grove - I2C Touch Sensor")
 
 </center>
 
@@ -105,7 +105,7 @@ This very cool OLED Display with Grove 4pin I2C Interface, is high brightness, s
 
 <center>
 
-[![](https://github.com/SeeedDocument/Grove-Toy_Kit/raw/master/img/Twig-OLED_Display_128x64.jpg)](/Grove-OLED_Display_0.96inch "/Grove-OLED_Display_0.96inch/")
+[![](https://files.seeedstudio.com/wiki/Grove-Toy_Kit/img/Twig-OLED_Display_128x64.jpg)](/Grove-OLED_Display_0.96inch "/Grove-OLED_Display_0.96inch/")
 
 </center>
 
@@ -115,7 +115,7 @@ This Variable Color LED is consist of one 8mm RGB LED and 3 potentiometers. You 
 
 <center>
 
-[![](https://github.com/SeeedDocument/Grove-Toy_Kit/raw/master/img/Variable_Color_LED.jpg)](/Grove-Variable_Color_LED "Grove - Variable Color LED")
+[![](https://files.seeedstudio.com/wiki/Grove-Toy_Kit/img/Variable_Color_LED.jpg)](/Grove-Variable_Color_LED "Grove - Variable Color LED")
 
 </center>
 
@@ -127,7 +127,7 @@ The sound recorder can be used to record voice and then replay them. It is possi
 
 <center>
 
-[![](https://github.com/SeeedDocument/Grove-Toy_Kit/raw/master/img/Sound_Recorder.jpg)](/Grove-Sound_Recorder "Grove - Sound Recorder")
+[![](https://files.seeedstudio.com/wiki/Grove-Toy_Kit/img/Sound_Recorder.jpg)](/Grove-Sound_Recorder "Grove - Sound Recorder")
 
 </center>
 
@@ -137,7 +137,7 @@ This Piezo_Buzzer can be connected to an analog pulse-width modulation output to
 
 <center>
 
-[![](https://github.com/SeeedDocument/Grove-Toy_Kit/raw/master/img/Piezo_Buzzer_Twig.jpg)](http://garden.seeedstudio.com/index.php?title=GROVE_-_Starter_Kit_V1.0b#Piezo_Buzzer "GROVE_-_Starter_Kit_V1.0b#Piezo_Buzzer")
+[![](https://files.seeedstudio.com/wiki/Grove-Toy_Kit/img/Piezo_Buzzer_Twig.jpg)](http://garden.seeedstudio.com/index.php?title=GROVE_-_Starter_Kit_V1.0b#Piezo_Buzzer "GROVE_-_Starter_Kit_V1.0b#Piezo_Buzzer")
 
 </center>
 
@@ -151,7 +151,7 @@ Here are some Application Examples designed by Seeed customers.
 
 This project is about an automated railway system. The basic idea is to use the Grove Toy Kit to determine the time, to play the corresponding sound when a train reaches the station, and to know when the train reaches the crossover.
 
-![](https://github.com/SeeedDocument/Grove-Toy_Kit/raw/master/img/Toy_Kit_Project_1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Toy_Kit/img/Toy_Kit_Project_1.jpg)
 
 If you want to go for this project, you may still need to have:
 
@@ -169,7 +169,7 @@ If you want to go for this project, you may still need to have:
 
 The Barking Desk Guard Dog will bark at anyone who will try to move the object in front of it. You can place it on your desktop when you are not around and when someone comes near your place (maybe in your work) then it will alert all your colleagues when that someone tries to take something from your desk.
 
-![](https://github.com/SeeedDocument/Grove-Toy_Kit/raw/master/img/Barking_Desk_Guard_Dog.png)
+![](https://files.seeedstudio.com/wiki/Grove-Toy_Kit/img/Barking_Desk_Guard_Dog.png)
 
 If you want to go for this project, you may still need to have:
 
@@ -205,7 +205,7 @@ If you want to go for this project, you may still need to have:
 
 When walking through Shanghai, there is one thing you will see in many shops, restaurants and other places: the Maneki Neko, also known as the beckoning cat. Most of them have a mechanism, which lets one of their arms (usually the left one) move back and forth endlessly. This project basically is to modify its moving arm with Grove components.
 
-![](https://github.com/SeeedDocument/Grove-Toy_Kit/raw/master/img/Beckoing_cat_hack.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Toy_Kit/img/Beckoing_cat_hack.jpg)
 
 If you want to go for this project, you may still need to have:
 
@@ -221,7 +221,7 @@ If you want to go for this project, you may still need to have:
 
 This project is to re-purpose a remote control car that you can easily find in a thrift store into an Arduino-controlled robot using Seeed Studio's Grove Toy kit.
 
-![](https://github.com/SeeedDocument/Grove-Toy_Kit/raw/master/img/GRover_Robotics_Platform.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Toy_Kit/img/GRover_Robotics_Platform.jpg)
 
 If you want to go for this project, you may still need to have:
 
@@ -249,7 +249,7 @@ If you want to go for this project, you may still need to have:
 
 The Eyeclop is a project that demonstrates the use of touch sensors to change the shape of the eye as well as blink an RGB LED, play sound melody, and vibrate itself. The Eyeclop is a sensitive one-eye Cyclop, and is shown on a monochrome OLED 128x64 pixel screen. The touch sensors, the RGB LED, and other electronic components are all part of the Grove Toy Kit that is created by Seeed Studio.
 
-![](https://github.com/SeeedDocument/Grove-Toy_Kit/raw/master/img/Eyeclop.png)
+![](https://files.seeedstudio.com/wiki/Grove-Toy_Kit/img/Eyeclop.png)
 
 If you want to go for this project, you may still need to have:
 

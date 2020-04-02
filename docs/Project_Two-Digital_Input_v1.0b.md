@@ -21,7 +21,7 @@ The purpose of this project is to demonstrate two forms of digital input – usi
 5.  Connect the Button Module to the D7/D8 input jack (on the second row.)
 
 6.  The Button Grove uses the SIG connector to send a signal to the Arduino's D7 digital input.
-![](https://github.com/SeeedDocument/Project_Two-Digital_Input_v1.0b/raw/master/img/Digitalv1.0b.jpg)
+![](https://files.seeedstudio.com/wiki/Project_Two-Digital_Input_v1.0b/img/Digitalv1.0b.jpg)
 
 _**Now upload the following Arduino sketch:**_
 ```

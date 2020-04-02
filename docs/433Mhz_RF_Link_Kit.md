@@ -8,11 +8,11 @@ surveyurl: https://www.research.net/r/433Mhz_RF_Link_Kit
 sku: 113990010
 ---
 
-![](https://github.com/SeeedDocument/433Mhz_RF_Link_Kit/raw/master/img/113990010%201.jpg)
+![](https://files.seeedstudio.com/wiki/433Mhz_RF_Link_Kit/img/113990010%201.jpg)
 
 The kit is consisted of transmitter and receiver, popular used for remote control.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](http://www.seeedstudio.com/depot/433mhz-rf-link-kit-p-127.html?cPath=139_140)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](http://www.seeedstudio.com/depot/433mhz-rf-link-kit-p-127.html?cPath=139_140)
 
 ## Specification
 ---
@@ -38,10 +38,10 @@ If you have questions or other better design ideas, you can go to our [forum](ht
 
 ## Resources
 
-- [Demo Scheme](https://github.com/SeeedDocument/433Mhz_RF_Link_Kit/raw/master/res/315MRFlink.pdf)
-- [VirtualWire 1.3](https://github.com/SeeedDocument/433Mhz_RF_Link_Kit/raw/master/res/VirtualWire.rar)
-- [Documentation For 1.3](https://github.com/SeeedDocument/433Mhz_RF_Link_Kit/raw/master/res/VirtualWire.pdf)
-- [example from sparkfun](https://github.com/SeeedDocument/433Mhz_RF_Link_Kit/raw/master/res/KLP_Walkthrough.pdf)
+- [Demo Scheme](https://files.seeedstudio.com/wiki/433Mhz_RF_Link_Kit/res/315MRFlink.pdf)
+- [VirtualWire 1.3](https://files.seeedstudio.com/wiki/433Mhz_RF_Link_Kit/res/VirtualWire.rar)
+- [Documentation For 1.3](https://files.seeedstudio.com/wiki/433Mhz_RF_Link_Kit/res/VirtualWire.pdf)
+- [example from sparkfun](https://files.seeedstudio.com/wiki/433Mhz_RF_Link_Kit/res/KLP_Walkthrough.pdf)
 - [example running rf modules](http://winavr.scienceprog.com/example-avr-projects/running-tx433-and-rx433-rf-modules-with-avr-microcontrollers.html)
 
 

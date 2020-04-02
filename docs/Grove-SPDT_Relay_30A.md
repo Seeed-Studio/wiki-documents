@@ -8,7 +8,7 @@ surveyurl: https://www.research.net/r/Grove_SPDT_Relay_30A
 sku: 103020012
 ---
 
-![](https://github.com/SeeedDocument/Grove-SPDT_Relay_30A/raw/master/img/SPDT_Relay_01.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-SPDT_Relay_30A/img/SPDT_Relay_01.jpg)
 
 The SPDT Relay(30A) is a high quality Single Pole Double Throw Relay(SPDT).The Relay consists of a coil, 1 common terminal, 1 normally closed terminal, and one normally open terminal. When the coil of the relay is at rest (not energized), the common terminal and the normally closed terminal have continuity. When the coil is energized, the common terminal and the normally open terminal have continuity. This relay's coil is rated up to 5V and the contact is rated up to 30A (@250VAC, 30VDC).You can use it to control high current devices.
 
@@ -42,7 +42,7 @@ Why do we want to use a relay and do we really need to? Anytime you want to swit
 
 The SPDT Relay internal structure:
 
-![](https://github.com/SeeedDocument/Grove-SPDT_Relay_30A/raw/master/img/Relay_Struction.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-SPDT_Relay_30A/img/Relay_Struction.jpg)
 
 You may see that the common terminal and the normally closed terminal have continuity When the coil of the relay is at rest.
 
@@ -50,7 +50,7 @@ But when the coil is energized, the common terminal and the normally open termin
 
 Hardware Installation can refer to the following picture:
 
-![](https://github.com/SeeedDocument/Grove-SPDT_Relay_30A/raw/master/img/SPDT_Relay.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-SPDT_Relay_30A/img/SPDT_Relay.jpg)
 
 The coding to control this relay is the same as the [Grove - Relay](http://wiki.seeedstudio.com/Grove-Relay/)
 
@@ -117,7 +117,7 @@ while True:
 ## Resource
 ---
 - [Grove - SPDT Relay(30A) Eagle File](https://github.com/SeeedDocument/Grove-SPDT_Relay_30A/raw/master/res/Grove_-_SPDT_Relay(30A)_Eagle_File.zip)
-- [SLA-05VDC-SL-C Datasheet](https://github.com/SeeedDocument/Grove-SPDT_Relay_30A/raw/master/res/SLA-05VDC-SL-C_Datasheet.pdf)
+- [SLA-05VDC-SL-C Datasheet](https://files.seeedstudio.com/wiki/Grove-SPDT_Relay_30A/res/SLA-05VDC-SL-C_Datasheet.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

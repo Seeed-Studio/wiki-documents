@@ -8,7 +8,7 @@ surveyurl: https://www.research.net/r/LinkIt_Smart_7688
 sku: 102110018
 ---
 
-![enter image description here](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/img/Linkit_Smart_product.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/img/Linkit_Smart_product.jpg)
 
 LinkIt Smart 7688 (a compact controller board) is an open development board, based on the OpenWrt Linux distribution and MT7688 ([datasheet](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/res/MT7688_datasheet.pdf)). The board is designed especially for the prototyping of Rich Application IoT devices for Smart-Home. The board offers sufficient memory and storage to enable robust video processing. The platform also offers options to create device applications in Python, Node.js and C programming languages.
 This board is only a part of MediaTek LinkIt Smart 7688 platform which includes other development boards.
@@ -232,9 +232,9 @@ SDXC
 
 ## Hardware Overview
 ----
-![enter image description here](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/img/Component_intro_with_text_1200.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/img/Component_intro_with_text_1200.jpg)
 
-![enter image description here](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/img/Back_hardware_view_with_text_1200_s.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/img/Back_hardware_view_with_text_1200_s.jpg)
 
 
 !!!Note
@@ -290,14 +290,14 @@ SDXC
 | Pin TX	| Pin 9 |
 | Pin GND |	Pin GND |
 
-![enter image description here](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/img/LinkIt_Smart_7688_demo_connection_1200_s.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/img/LinkIt_Smart_7688_demo_connection_1200_s.jpg)
 
 **5.** After connecting the Serial to USB cable, open the device manager and notice the COM port number as shown below. This number may vary on different computers.
 
-![enter image description here](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/img/COM_port.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/img/COM_port.jpg)
 
 **6.** Launch the PuTTY terminal and enter the COM port number of the USB device found in the device manager, click on the Serial radio button, type 57600 in Speed box and click Open, as shown below.
-![enter image description here](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/img/Putty_configuration.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/img/Putty_configuration.jpg)
 
 **7.** Now you will see printing text as those in a Linux console.
 
@@ -371,7 +371,7 @@ $sudo screen /dev/ttyUSB0 57600
 #### Get Blink RUN
 
 **1.** Power up your board with a micro-USB cable (only connect the USB Power interface, rather than the USB Host interface).
-![enter image description here](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/img/Power_up.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/img/Power_up.jpg)
 
 **2.** Launch PuTTy and connect to system with USB to Serial adapter as shown in previous sections.
 
@@ -392,21 +392,21 @@ There are two kind of Wi-Fi modes: AP mode and Station mode. Refer [this](https:
 
 **2.** Open the Wi-Fi connection utility on your computer and connect to the access point named LinkIt_Smart_7688_XXXXXX. XXXXXX is a kind of hardware identifier which varies from board to board.
 
-![enter image description here](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/img/Connect_wifi.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/img/Connect_wifi.jpg)
 
 **3.** Open a browser with URL mylinkit.local/ or 192.168.100.1, set the password for root and sign in. Click Network on the upper right.
 
-![enter image description here](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/img/Network_conf.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/img/Network_conf.jpg)
 
 **4.** Select the Station mode and click Refresh or downward arrow on the right to find the AP to connect to. After you have selected the AP, enter password if required. Click Configure & Restart to finish as shown below. Then wait for around 30 seconds to switch mode.
 
-![enter image description here](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/img/Station_mode.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/img/Station_mode.jpg)
 
 **5.** Launch PuTTy and connect to the system with USB to Serial adapter as shown in the previous section.
 
 **6.** Type ifconfig and find the IP address of inet addr as shown below:
 
-![enter image description here](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/img/IFCONFIG.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/img/IFCONFIG.jpg)
 
 !!!Note
     It will still enter the Station mode after rebooting the system. Press wi-fi button at least 5 seconds to switch back to AP mode. Note: It will be needed to reboot the embeded OS by using reboot command.
@@ -415,7 +415,7 @@ There are two kind of Wi-Fi modes: AP mode and Station mode. Refer [this](https:
 
 **8.** Now both the host computer and LinkIt Smart 7688 are connected to internet. Type ping **www.mediatek.com** in console and you will get:
 
-![enter image description here](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/img/Ping_result.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/img/Ping_result.jpg)
 
 **9.** Now you can use internet to configure your system on development board.
 
@@ -464,14 +464,14 @@ print "Hello World!"
 
 ## Resources
 ----
-* **[Eagle]** [LinkIt_Smart_7688](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/res/Hardware_Schematics.zip)
+* **[Eagle]** [LinkIt_Smart_7688](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/res/Hardware_Schematics.zip)
 * **[PDF]** [LinkIt_Smart_7688 PCB](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/res/LinkIt%20Smart%207688%20Layout.pdf)
 * **[PDF]** [LinkIt_Smart_7688 Schematic](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/res/LinkIt%20Smart%207688.pdf)
-* **[Document]** [Manual](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/res/Manual.zip)
+* **[Document]** [Manual](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/res/Manual.zip)
 * **[Document]** [OpenWrt](http://wiki.openwrt.org/doc/howto/user.beginner)
 * **[Document]** [MediaTek LinkIt? Smart 7688 Resources:](http://labs.mediatek.com/site/global/developer_tools/mediatek_linkit_smart_7688/hdk_intro/index.gsp)
-* **[Document]** [Firmware_upgrade_Instruction](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/res/LinkIt_Smart_7688_Firmware_upgrade.zip)
-* **[Document]** [Certificates](https://github.com/SeeedDocument/LinkIt_Smart_7688/raw/master/res/LinkIt_Smart_7688-Certificate.zip)
+* **[Document]** [Firmware_upgrade_Instruction](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/res/LinkIt_Smart_7688_Firmware_upgrade.zip)
+* **[Document]** [Certificates](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/res/LinkIt_Smart_7688-Certificate.zip)
 * **[Document]** [Mediatek](https://labs.mediatek.com/en/platform/linkit-smart-7688)
 
 ## Projects

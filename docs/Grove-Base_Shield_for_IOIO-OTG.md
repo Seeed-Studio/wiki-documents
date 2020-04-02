@@ -7,15 +7,15 @@ prodimagename:  Grove-Base_Shield_for_IOIO-OTG.md.jpg
 surveyurl: https://www.research.net/r/Grove-Base_Shield_for_IOIO-OTG
 sku:       103020001
 ---
-![](https://github.com/SeeedDocument/Grove-Base_Shield_for_IOIO-OTG/raw/master/img/Grove-Base_Shield_for_IOIO-OTG.md.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Base_Shield_for_IOIO-OTG/img/Grove-Base_Shield_for_IOIO-OTG.md.jpg)
 
 IOIO is a board specially designed to work with your Android device. And this Grove - Base Shield for IOIO is an expansion board for IOIO to work with abundant Grove resources. There are 6 ready Grove sockets on the board covering functions like ADC and I2C. And in this way, all Grove Modules are accessible for the IOIO board. Wanna make some projects with IOIO and need some sensors or display? This Grove - Base Shield for IOIO can bring you this convenience.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Base-Shield-for-IOIO-OTG-p-1613.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Base-Shield-for-IOIO-OTG-p-1613.html)
 
 ##  Interface
 
-![](https://github.com/SeeedDocument/Grove-Base_Shield_for_IOIO-OTG/raw/master/img/Base_Shield_for_IOIO_Interface_Function.jpg)</center>
+![](https://files.seeedstudio.com/wiki/Grove-Base_Shield_for_IOIO-OTG/img/Base_Shield_for_IOIO_Interface_Function.jpg)</center>
 
 **J1,J2:** can be used for TWI.
 
@@ -245,7 +245,7 @@ The pins describe mapping to the Grove - Base Shield for IOIO-OTG board as show 
 
 ##  Resources
 
-- [Grove - Base Shield for IOIO-OTG Eagle File](https://github.com/SeeedDocument/Grove-Base_Shield_for_IOIO-OTG/raw/master/res/Grove-Base_Shield_for_IOIO-OTG_Eagle_File.zip)
+- [Grove - Base Shield for IOIO-OTG Eagle File](https://files.seeedstudio.com/wiki/Grove-Base_Shield_for_IOIO-OTG/res/Grove-Base_Shield_for_IOIO-OTG_Eagle_File.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

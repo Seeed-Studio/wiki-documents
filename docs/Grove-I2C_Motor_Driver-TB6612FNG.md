@@ -9,7 +9,7 @@ sku: 108020103
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver-TB6612FNG/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/main.jpg)
 
 The Grove - I2C Motor Driver (TB6612FNG) can drive two DC motors up to 12V/1.2A or drive one stepper motor up to 12V/1.2A. With the on-board MCU, it can work with Arduino easily via the Grove I2C interface.
 
@@ -59,9 +59,9 @@ This diver board is based on TB6612FNG, which is a driver IC for DC motor and st
 
 ### Pin Out
 
-![](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver-TB6612FNG/raw/master/img/pin-out/pin_out.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/pin-out/pin_out.jpg)
 
-![](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver-TB6612FNG/raw/master/img/pin-out/pin_out_back.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/pin-out/pin_out_back.jpg)
 
 
 ### Hardware Detail
@@ -76,7 +76,7 @@ This board uses the I2C interface to allow the on-board MCU to communicate with 
 >SCL: I2C serial clock
 
 
-![](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver-TB6612FNG/raw/master/img/pin-out/I2C.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/pin-out/I2C.jpg)
 
 ___
 **Power In**
@@ -85,7 +85,7 @@ Provide DC power to the motors, input range 2.5V ~ 13.5V.
 >GND: Connect to the system GND, plug the power "-"  
 >VM: Plug the power "+", supply power for the motor.
 
-![](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver-TB6612FNG/raw/master/img/pin-out/huise1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/pin-out/huise1.jpg)
 
 ___
 **DC Motor Output**
@@ -96,7 +96,7 @@ This board has two channel DC Motor Output, it can output 12V/1.2A per channel. 
 >B1: Channel B output 1  
 >B2: Channel B output 2
 
-![](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver-TB6612FNG/raw/master/img/pin-out/huise2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/pin-out/huise2.jpg)
 
 ___
 **Steperp Motor Output**
@@ -107,7 +107,7 @@ You can use this board to control the 4-wire stepper motor as well, it can outpu
 >OUT3: Connected to one input of the stepper motor coil 2.  
 >OUT4: Connected to the other input of the stepper motor coil 2. 
 
-![](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver-TB6612FNG/raw/master/img/pin-out/huise2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/pin-out/huise2.jpg)
 
 !!!Note
         Actually the DC port and the stepper port are physically connected together. The connection diagram is as follows:
@@ -168,7 +168,7 @@ You can use this board to control the 4-wire stepper motor as well, it can outpu
 
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver-TB6612FNG/raw/master/img/connect1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/connect1.jpg)
 
 
 *Stepper Motor Demo*
@@ -191,7 +191,7 @@ You can use this board to control the 4-wire stepper motor as well, it can outpu
 |OUT3|one end of coil 2|Pink|
 |OUT4|the other end of coil 2|Yellow|
 
-![](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver-TB6612FNG/raw/master/img/pin-out/p%2Blogo/coil.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/pin-out/p%2Blogo/coil.jpg)
 
 
 - **Step 2.** Connect the Grove - I2C Motor Driver (TB6612FNG) to port **I^2^C** of Grove-Base Shield.
@@ -200,12 +200,12 @@ You can use this board to control the 4-wire stepper motor as well, it can outpu
 
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver-TB6612FNG/raw/master/img/connect2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/connect2.jpg)
 
 !!!Note
         Since the DC port and the stepper port are physically connected together, you can also use the two DC port to control your stepper motor. The connection diagram is as follows:
 
-![](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver-TB6612FNG/raw/master/img/connect3.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/connect3.jpg)
 
 
 !!!Note
@@ -239,9 +239,9 @@ You can use this board to control the 4-wire stepper motor as well, it can outpu
 
 You can open them in the following two ways(take the dc_motor for example)：  
     1. Open it directly in the Arduino IDE via the path: **File --> Examples --> Grove - Motor Driver(TB6612FNG) --> dc_motor**. 
-    ![](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver-TB6612FNG/raw/master/img/path1.jpg)  
+    ![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/path1.jpg)  
     2. Open it in your computer by click the **dc_motor.ino** which you can find in the folder **XXXX\Arduino\libraries\Grove_Motor_Driver_TB6612FNG-master\examples\dc_motor**, **XXXX** is the location you installed the Arduino IDE.
-    ![](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver-TB6612FNG/raw/master/img/path2.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/path2.jpg)
 
 
 - **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
@@ -264,7 +264,7 @@ You can open them in the following two ways(take the dc_motor for example)：
 
 - **[Zip]** [Grove_Motor_Driver_TB6612FNG Software Library](https://github.com/Seeed-Studio/Grove_Motor_Driver_TB6612FNG/archive/master.zip)
 
-- **[PDF]** [Datasheet TB6612FNG](https://github.com/SeeedDocument/Grove-I2C_Motor_Driver-TB6612FNG/raw/master/res/TB6612FNG.pdf)
+- **[PDF]** [Datasheet TB6612FNG](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/res/TB6612FNG.pdf)
 
 
 

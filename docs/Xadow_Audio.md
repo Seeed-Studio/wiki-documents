@@ -9,10 +9,10 @@ sku: 107040001
 ---
 
 ---
-![](https://github.com/SeeedDocument/Xadow_Audio/raw/master/images/Xadow_Audio.JPG)
+![](https://files.seeedstudio.com/wiki/Xadow_Audio/images/Xadow_Audio.JPG)
 The Xadow Audio integrates a speaker box and a microphone on one single board. The speaker unit is rated at 0.7Watt with an impedance of 8 ohm. Unlike the regular cone type speakers, the loudspeaker driver used on the Xadow Audio has a flat surface and is mounted in a rectangular enclosure, which enables it to reproduce sounds at an amazing effect.
 
-[![](https://github.com/SeeedDocument/Xadow_Audio/raw/master/images/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Xadow-Audio-p-2554.html)
+[![](https://files.seeedstudio.com/wiki/Xadow_Audio/images/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Xadow-Audio-p-2554.html)
 
 ## Features
 ---
@@ -53,7 +53,7 @@ The Xadow Audio integrates a speaker box and a microphone on one single board. T
 
 ## Hardware Overview
 ---
-![](https://github.com/SeeedDocument/Xadow_Audio/raw/master/images/Xadow_Audio.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Audio/images/Xadow_Audio.png)
 
 ## Make it now
 ---
@@ -62,17 +62,17 @@ A Traceable [Dog Collar](https://community.seeedstudio.com/RePhone-Traceable-Dog
 
 5 steps to make a traceable [Dog collar](https://community.seeedstudio.com/RePhone-Traceable-Dog-Collar-p-425.html) for your lovely puppy.
 
-[![](https://github.com/SeeedDocument/Xadow_Audio/raw/master/images/450px-Dog_Collar.png.jpeg)](https://community.seeedstudio.com/RePhone-Traceable-Dog-Collar-p-425.html)
+[![](https://files.seeedstudio.com/wiki/Xadow_Audio/images/450px-Dog_Collar.png.jpeg)](https://community.seeedstudio.com/RePhone-Traceable-Dog-Collar-p-425.html)
 
 ## Module Connection
 ---
 Connect the Modules as instructed, please bear in mind that the unfilled corner should be facing the other side:
 
-![](https://github.com/SeeedDocument/Xadow_Audio/raw/master/images/Xadow_Audio_connection.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Audio/images/Xadow_Audio_connection.png)
 
 ## RePhone Community
 ---
-[![](https://github.com/SeeedDocument/Xadow_Audio/raw/master/images/300px-RePhone_Community-2.png)](https://community.seeedstudio.com/discover.html?t=RePhone)
+[![](https://files.seeedstudio.com/wiki/Xadow_Audio/images/300px-RePhone_Community-2.png)](https://community.seeedstudio.com/discover.html?t=RePhone)
 
 We’ve been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the [RePhone Community](https://community.seeedstudio.com/discover.html?t=RePhone).
 
@@ -93,11 +93,11 @@ Some frequently asked questions in [RePhone Community](https://community.seeedst
 ---
 The schematic diagram of Xadow Audio is provide in the following link:
 
-- [Xadow Audio Schematic Files](https://github.com/SeeedDocument/Xadow_Audio/raw/master/resources/202000723_PCBA%3BXadow%20Audio%20v1.0_schemic%20file.zip)
+- [Xadow Audio Schematic Files](https://files.seeedstudio.com/wiki/Xadow_Audio/resources/202000723_PCBA%3BXadow%20Audio%20v1.0_schemic%20file.zip)
 
 Check more info about the Speaker box and the Microphone:
 
-- [Datasheet for speaker box and microphone](https://github.com/SeeedDocument/Xadow_Audio/raw/master/res/SpeakerAndMicrophone.rar)
+- [Datasheet for speaker box and microphone](https://files.seeedstudio.com/wiki/Xadow_Audio/res/SpeakerAndMicrophone.rar)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

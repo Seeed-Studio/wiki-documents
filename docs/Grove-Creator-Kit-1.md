@@ -35,16 +35,16 @@ This kit comes in three different flavors, namely, α, β and γ which includes 
 
 ### Grove Creator Kit - α
 
-![](https://github.com/SeeedDocument/Bazaar_Document/raw/master/alpha-2.jpg)
+![](https://files.seeedstudio.com/wiki/Bazaar_Document/alpha-2.jpg)
 
 ### Grove Creator Kit - β
 
-![](https://github.com/SeeedDocument/Bazaar_Document/raw/master/beta-2.jpg)
+![](https://files.seeedstudio.com/wiki/Bazaar_Document/beta-2.jpg)
 
 
 ### Grove Creator Kit - γ
 
-![](https://github.com/SeeedDocument/Bazaar_Document/raw/master/gamma-2.jpg)
+![](https://files.seeedstudio.com/wiki/Bazaar_Document/gamma-2.jpg)
 
 
 

@@ -11,7 +11,7 @@ tags:
 
 ---
 
-![](https://github.com/SeeedDocument/Serial_port_bluetooth_module_Master-Slave/raw/master/img/newblue_LRG.jpg)
+![](https://files.seeedstudio.com/wiki/Serial_port_bluetooth_module_Master-Slave/img/newblue_LRG.jpg)
 
 This module is an easy to use Bluetooth SPP (Serial Port Protocol) module, designed for transparent wireless serial connections.
 
@@ -67,7 +67,7 @@ and blue led blinks 1time/2s in interval. While disconnected only blue led blink
 
 ##   Specification  
 
-![](https://github.com/SeeedDocument/Serial_port_bluetooth_module_Master-Slave/raw/master/img/Bluetooth-module-pin.JPG)
+![](https://files.seeedstudio.com/wiki/Serial_port_bluetooth_module_Master-Slave/img/Bluetooth-module-pin.JPG)
 
 <table >
 <tr>
@@ -363,11 +363,11 @@ and blue led blinks 1time/2s in interval. While disconnected only blue led blink
 
 ####   Working Sketch Map  
 
-![](https://github.com/SeeedDocument/Serial_port_bluetooth_module_Master-Slave/raw/master/img/Bluetooth-1.jpg)
+![](https://files.seeedstudio.com/wiki/Serial_port_bluetooth_module_Master-Slave/img/Bluetooth-1.jpg)
 
 ####   Flowchat  
 
-![](https://github.com/SeeedDocument/Serial_port_bluetooth_module_Master-Slave/raw/master/img/Bluetooth-2.jpg)
+![](https://files.seeedstudio.com/wiki/Serial_port_bluetooth_module_Master-Slave/img/Bluetooth-2.jpg)
 
 ####   Commands to change default configuration  
 
@@ -566,9 +566,9 @@ When **+INQ=1** command is successful, the <span style="color:red"> red </span> 
 
 ##   Resources  
 
-- **[Software]**   [Software instruction](https://github.com/SeeedDocument/Serial_port_bluetooth_module_Master-Slave/raw/master/res/Bluetooth_Software_Instruction.pdf)
+- **[Software]**   [Software instruction](https://files.seeedstudio.com/wiki/Serial_port_bluetooth_module_Master-Slave/res/Bluetooth_Software_Instruction.pdf)
 
-- **[Datasheet]**  [Bluetooth module Datasheet](https://github.com/SeeedDocument/Serial_port_bluetooth_module_Master-Slave/raw/master/res/Bluetooth_module.pdf)
+- **[Datasheet]**  [Bluetooth module Datasheet](https://files.seeedstudio.com/wiki/Serial_port_bluetooth_module_Master-Slave/res/Bluetooth_module.pdf)
 
 ##   Support  
 
@@ -602,7 +602,7 @@ If you want to make some awesome projects by Serial port bluetooth module, here'
 
 ###  Control Multiple servo Motor From android app
 
-![](https://github.com/SeeedDocument/Serial_port_bluetooth_module_Master-Slave/raw/master/img/Control_Multiple_servo_Motor_From_android_app.jpg)
+![](https://files.seeedstudio.com/wiki/Serial_port_bluetooth_module_Master-Slave/img/Control_Multiple_servo_Motor_From_android_app.jpg)
 
 This is an interesting demo make by Arduino and [Grove](https://seeeddoc.github.io/Grove_System/).
 This is a complete tutorial about how to control multiple servo motors from android app.

@@ -15,13 +15,13 @@ Building IoT projects is exciting, as you can connect almost everything around y
 It is so simple, it is fast building, however it is not ideal for all conditions.
 What if we only need 2 grove connectors? What if there is limited space in the application but Wio Link is over sized? What if we want to cost down? So right after we released Wio Link, a micro and economic solution was put on schedule, for months Seeeder has redesigned and optimized the Wi-Fi board and here it is, the new member of Wio family---**Wio Node**.
 
-[![](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/Front%26Back.png)](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/Front%26Back.png)
+[![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Front%26Back.png)](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Front%26Back.png)
 
 Just like the meaning of its name, Wio Node is truly a Wi-Fi node that connect things in IoT project. If Wio Link is big brother, Wio Node must be the little brother in the Wio family coz this cute little guy is only quarter size of Wio link while integrates all the basic features of Wio Link.
 
 The ecosystem of Wio Node also consists of Open Hardware **Wio Node board**, **Open Source Wio Link Mobile App** and **Open Source IoT Server implementation**. So the software platform for Wio Link is also available for Wio Node.
 
-[![Get one now](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Wio-Node-p-2637.html)
+[![Get one now](https://files.seeedstudio.com/wiki/Wio_Node/pictures/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Wio-Node-p-2637.html)
 
 
 !!!Warning
@@ -66,7 +66,7 @@ In fact, there're many projects in our [**recipe**](https://community.seeedstudi
 
 |Irrigation control system |The internet of led wall | Dog feeding machine|
 |---|---|---|
-|![](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/2.png)|![](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/1.png)|![](https://raw.githubusercontent.com/SeeedDocument/Wio_Node/master/pictures/3.png)|
+|![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/2.png)|![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/1.png)|![](https://raw.githubusercontent.com/SeeedDocument/Wio_Node/master/pictures/3.png)|
 |[MAKE IT NOW](https://community.seeedstudio.com/project_detail.html?id=1274)    |[MAKE IT NOW](https://community.seeedstudio.com/project_detail.html?id=1594) |[MAKE IT NOW](https://community.seeedstudio.com/project_detail.html?id=1066)|
 
 |Kickstarter Monitor|MIssing Call Monitor|Boss Key|
@@ -125,7 +125,7 @@ Let us build a very basic LED application with Wio Node, in this application you
 
 |Wio Node|Grove - LED|Micro USB Cable|
 |--------|-----------|---------------|
-|![](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/Wio%20Node2.png)|![](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/Red%20LED.jpg)|![](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/48cmUSBc.jpg)|
+|![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20Node2.png)|![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Red%20LED.jpg)|![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/48cmUSBc.jpg)|
 |[GET ONE NOW](https://www.seeedstudio.com/Wio-Node-p-2637.html)|[GET ONE NOW](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|[GET ONE NOW](http://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|
 
 
@@ -137,7 +137,7 @@ You need to install the Wio Link App to manage and configure your Wio Node devic
 
 Download the Android or iOS App and install. Or you can go to app store of Apple or Google market and search "Wio Link", you will find it.
 
-|[![](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/Android%20Robot%20new.jpg)](https://play.google.com/store/apps/details?id=cc.seeed.iot.ap)|[![](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/Apple%20new.jpg)](https://itunes.apple.com/us/app/wio-link/id1054893491?mt=8)|
+|[![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Android%20Robot%20new.jpg)](https://play.google.com/store/apps/details?id=cc.seeed.iot.ap)|[![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Apple%20new.jpg)](https://itunes.apple.com/us/app/wio-link/id1054893491?mt=8)|
 |:---:|:---:|
 |[Get Android App](https://play.google.com/store/apps/details?id=cc.seeed.iot.ap)|[Get iOS App](https://itunes.apple.com/us/app/wio-link/id1054893491?mt=8)|
 
@@ -152,27 +152,27 @@ Download the Android or iOS App and install. Or you can go to app store of Apple
 !!!Note
     Please pay attention to the server location, because wrong server location will lead to failure when connecting to Wio Node.
 
-[![](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/Wio%20App/sign%20in%2Blog%20in%2Bchoose%20server.png)](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/Wio%20App/sign%20in%2Blog%20in%2Bchoose%20server.png)
+[![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/sign%20in%2Blog%20in%2Bchoose%20server.png)](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/sign%20in%2Blog%20in%2Bchoose%20server.png)
 
 ### **STEP 3**: Connect Wio Node to Internet
 - Push and hold the CONFIG button until the blue LED turns into breathing mode (i.e. blinking with fade in & fade out effect). It means that Wio Node has turned to configuration mode successfully and can be detected by the Wio App.
-[![](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/Wio%20App/Confiture%20button.png)](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/Wio%20App/Confiture%20button.png)
+[![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/Confiture%20button.png)](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/Confiture%20button.png)
 - Push "Add your first Device".
 - Choose Wio Node
 - "Go to Wi-Fi list" will lead you to the Wi-Fi setting interface of your smartphone.
 
-[![](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/Wio%20App/Connect%20to%20Wio%20node%201.png)](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/Wio%20App/Connect%20to%20Wio%20node%201.png)
+[![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/Connect%20to%20Wio%20node%201.png)](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/Connect%20to%20Wio%20node%201.png)
 
 - If you have successfully made the blue LED turn into breathing mode, you will find the Wio Node in the Wi-Fi list, connect to it!(Usually it is not called Wio Node in the Wi-Fi list, in the example, mine is Wio_091016, you may find one named wio_xxxxxx in your list.)
 - Once connected, you will receive a notice, then you can go back to the app
 - Next step is connecting to the Wi-Fi of your home or company
 
-[![](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/Wio%20App/Connect%20to%20Wio%20node2.png)](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/Wio%20App/Connect%20to%20Wio%20node2.png)
+[![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/Connect%20to%20Wio%20node2.png)](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/Connect%20to%20Wio%20node2.png)
 
 - If there is password pf the Wi-Fi you want to connect, it may require you to enter the password
 - Consider that you may need to connect more than 1 Wio Node in the future, a special name will make you distinguish them from each other easily.
 
-[![](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/Wio%20App/Connect%20to%20Wio%20node3.png)](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/Wio%20App/Connect%20to%20Wio%20node3.png)
+[![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/Connect%20to%20Wio%20node3.png)](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/Connect%20to%20Wio%20node3.png)
 ### **STEP 4:** Virtually interconnect modules with Wio Node and update firmware
 - Click the Wio Node and you will be in the main interface.
 - There are 2 grove connectors, select the left one (D0).
@@ -180,17 +180,17 @@ Download the Android or iOS App and install. Or you can go to app store of Apple
 - Find the icon that looks like a bulb, choose it.
 - Then you will find the bottom rectangle button becomes red and "View API" becomes "Update Firmware". Choose "Update Firmware"
 
-[![](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/Wio%20App/Connect%20modules%20with%20Wio%20node.png)](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/Wio%20App/Connect%20modules%20with%20Wio%20node.png)
+[![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/Connect%20modules%20with%20Wio%20node.png)](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/Connect%20modules%20with%20Wio%20node.png)
 
 - Since you selected the D0 port to connect with LED in the APP, you need to connect the real Grove-LED to D0 port of Wio Node too.
 
-[![](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/Wio%20App/Wio_Node_Grove_LED.JPG)](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/Wio%20App/Wio_Node_Grove_LED.JPG)
+[![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/Wio_Node_Grove_LED.JPG)](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/Wio_Node_Grove_LED.JPG)
 
 ### **STEP 5**: Test application using APIs
 - Now that  you have successfully connect the LED to Wio Node, click "View API" to check the API of Wio Node
 - Input "1" or "0" in the "Test Request" area, and click "Post" button and see what will happen.
 
-[![](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/change%20the%20valure%20to%20see%20what%20will%20happen.png)](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/change%20the%20valure%20to%20see%20what%20will%20happen.png)
+[![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/change%20the%20valure%20to%20see%20what%20will%20happen.png)](https://files.seeedstudio.com/wiki/Wio_Node/pictures/change%20the%20valure%20to%20see%20what%20will%20happen.png)
 
 
 ## Get started with IFTTT & DoButton
@@ -199,12 +199,12 @@ Dont't know how to code? Don't worry, with the help of [IFTTT](https://en.wikipe
 
 IFTTT is an abbreviation of "If This Then That", it is a free web-based service that allows users to create chains of simple conditional statements, called "recipes", which are triggered based on changes to other web services such as Gmail, Facebook, Instagram. How does IFTTT work with Wio Node？ As you can see in below pictures, seeed provided cloud service at wio.seeed.io, which can interchange data and send instructions to IFTTT and Wio Node. So by creating some simple recipe, you are able to hack things without coding.
 
-![](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/WioLink-Workshop.png)
+![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/WioLink-Workshop.png)
 
 If you don't have an IFTTT account, click [here](https://ifttt.com/join) to sign up.
 
 If you already have an IFTTT account,click [here](https://ifttt.com/recipes/search?q=seeed) to connect with Seeed, or search Seeed at IFTTT website. There you will find 9 recipes by Seeed to teach you how to us e IFTTT.
-[![](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/IFTTT%20recipes.png)](https://github.com/SeeedDocument/Wio_Node/raw/master/pictures/IFTTT%20recipes.png)
+[![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/IFTTT%20recipes.png)](https://files.seeedstudio.com/wiki/Wio_Node/pictures/IFTTT%20recipes.png)
 What is DoButton? DoButton is one of IFTTT's application that empowers you to create your own personalized button with just a tap, it is very suitable for building IoT projects and control it through your smartphone, here are two examples to show you how to use IFTTT&DoButton to make useful applications.
 ### Example:
 
@@ -353,8 +353,8 @@ Here are some questions that we usually received from new users. If you have any
 - **Software**
     - [Sourcecode on **Github**](https://github.com/Seeed-Studio/Wio_Link)
 - **Hardware**
-    - [Schematic File in **PDF**](https://github.com/SeeedDocument/Wio_Node/raw/master/Recources/Wio%20Node%20v1.0.pdf)
-    - [Schematic File in **Eagle**](https://github.com/SeeedDocument/Wio_Node/raw/master/Recources/Wio_Node_Schematics.zip)
+    - [Schematic File in **PDF**](https://files.seeedstudio.com/wiki/Wio_Node/Recources/Wio%20Node%20v1.0.pdf)
+    - [Schematic File in **Eagle**](https://files.seeedstudio.com/wiki/Wio_Node/Recources/Wio_Node_Schematics.zip)
 - **Certificate**
     - [CE/FCC/TELEC Certified(only) for core module ESP-WROOM-02](https://github.com/SeeedDocument/Wio_Node/raw/master/Recources/CE-FCC-TELEC_Certified(only)_for_core_module_ESP-WROOM-02.zip)
 

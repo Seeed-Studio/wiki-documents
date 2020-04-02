@@ -66,7 +66,7 @@ GSR stands for galvanic skin response, is a method of measuring the electrical c
 - Step 3. Plug the base Shield into Seeeduino-V4.2.
 - Step 4. Connect Seeeduino-V4.2 to PC by using a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-GSR_Sensor/raw/master/img/Hardware_connection.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/img/Hardware_connection.jpg)
 
 !!!Note
     If we don't have a Base Shield, don't worry, the sensor can be connected to your Arduino directly. Please follow below tables to connect with Arduino.
@@ -111,7 +111,7 @@ void loop(){
 - Step 5. Wear the GSR sensor.
 - Step 6. We will see the below graph. Please deep breath and see the trends.  
 
-![](https://github.com/SeeedDocument/Grove-GSR_Sensor/raw/master/img/Grove-GSR_Result.png)
+![](https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/img/Grove-GSR_Result.png)
 
 **Human Resistance** = ((1024+2*Serial_Port_Reading)*10000)/(512-Serial_Port_Reading), unit is ohm, Serial_Port_Reading is the value display on Serial Port(between 0~1023)
 
@@ -126,14 +126,14 @@ void loop(){
 
 | Raspberry pi | Grove Base Hat for RasPi| Grove - GSR Sensor|
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-GSR_Sensor/raw/master/img/Grove-GSR_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/img/Grove-GSR_s.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-GSR-sensor-p-1614.html)|
 
 - **Step 2**. Plug the Grove Base Hat into Raspberry Pi.
 - **Step 3**. Connect the Grove - GSR Sensor to to the A0 port of the Base Hat.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 
-![](https://github.com/SeeedDocument/Grove-GSR_Sensor/raw/master/img/With_Hat.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/img/With_Hat.jpg)
 
 !!! Note
     For step 3 you are able to connect the Grove - GSR sensor to **any Analog Port** but make sure you change the command with the corresponding port number.
@@ -269,9 +269,9 @@ A1:  We measure the signal by voltage and print to COM port as (0~1023).
 ## Resources
 
 
-- **[PDF]** [Download Wiki PDF](https://github.com/SeeedDocument/Grove-GSR_Sensor/raw/master/res/Grove-GSR_Sensor_WiKi.pdf)
-- **[Eagle]** [Grove - GSR v1.0 Eagle File](https://github.com/SeeedDocument/Grove-GSR_Sensor/raw/master/res/Grove-GSR_Eagle_File_V1.0.zip)
-- **[Eagle]** [Grove - GSR v1.2 Eagle File](https://github.com/SeeedDocument/Grove-GSR_Sensor/raw/master/res/Grove-GSR_Eagle_File_V1.2.zip)
+- **[PDF]** [Download Wiki PDF](https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/res/Grove-GSR_Sensor_WiKi.pdf)
+- **[Eagle]** [Grove - GSR v1.0 Eagle File](https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/res/Grove-GSR_Eagle_File_V1.0.zip)
+- **[Eagle]** [Grove - GSR v1.2 Eagle File](https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/res/Grove-GSR_Eagle_File_V1.2.zip)
 - **[Datasheet]** [LM324 datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-GSR_Sensor/master/res/Lm324.pdf)
 
 

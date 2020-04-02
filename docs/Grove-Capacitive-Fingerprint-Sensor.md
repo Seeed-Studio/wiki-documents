@@ -7,7 +7,7 @@ sku: 101020713
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-Capacitive-Fingerprint-Scanner/raw/master/img/Grove-Capacitive-Fingerprint-connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Capacitive-Fingerprint-Scanner/img/Grove-Capacitive-Fingerprint-connect.jpg)
 
 The Grove - Capacitive Fingerprint Scanner / Sensor is based on the KCT203 Semiconductor fingerprint recognition module, including a high-performance MCU, a vertical RF push-type fingerprint sensor, and a touch sensing device. This module features many advantages such as small size, small fingerprint template, low power consumption, high reliability, fast fingerprint recognition, etc. In addition, it is worth mentioning that there is a lovely RGB light around this module to indicate whether the fingerprint recognition is successful.
 
@@ -58,7 +58,7 @@ Product|Advantage|Disadvantage
 
 ## Pin Out
 
-![](https://github.com/SeeedDocument/Grove-Capacitive-Fingerprint-Scanner/raw/master/img/Grove-Capacitive-Fingerprint-pin.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Capacitive-Fingerprint-Scanner/img/Grove-Capacitive-Fingerprint-pin.jpg)
 
 
 ## Platforms Supported
@@ -119,7 +119,7 @@ Product|Advantage|Disadvantage
     1. Open it directly in the Arduino IDE via the path: **File --> Examples --> Seeed_Arduino_KCT202 --> full_process**. 
     ![](https://github.com/SeeedDocument/Grove-Capacitive-Fingerprint-Scanner/raw/master/img/path.jpg)
     
-    2. Or, you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+    2. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 ```C++
 

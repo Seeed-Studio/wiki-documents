@@ -11,7 +11,7 @@ tags:
 
 ---
 
-![](https://github.com/SeeedDocument/Music_Shield_V1.0/raw/master/img/Musicshieldnew500.jpg)
+![](https://files.seeedstudio.com/wiki/Music_Shield_V1.0/img/Musicshieldnew500.jpg)
 
 The Music Shield is a professional audio codec.It can work with Arduino, Seeeduino, Seeeduino Mega and Arduino Mega. It is based on VS1053b IC, and can play a variety of music formats stored on MicroSD cards with Seeed the provided Arduino Library.
 
@@ -58,7 +58,7 @@ Note:Recording is only supported on Seeeduino Mega and Arduino Mega for now.
 
 ##   Interface Function   ##
 
-![](https://github.com/SeeedDocument/Music_Shield_V1.0/raw/master/img/MusicShield-hard.jpg)
+![](https://files.seeedstudio.com/wiki/Music_Shield_V1.0/img/MusicShield-hard.jpg)
 
 **Multifunction button:** Turn left to play previous song, and right to next song, while pressing it down to pause and resume.
 
@@ -122,7 +122,7 @@ Note:Recording is only supported on Seeeduino Mega and Arduino Mega for now.
 
 ###   Hardware Installation   ###
 
-Insert the Micro SD card and the earphone; Plug the Music Shield onto the Arduino/Seeeduino; Connect the board to PC using USB cable. ![](https://github.com/SeeedDocument/Music_Shield_V1.0/raw/master/img/MusicInstall.jpg)
+Insert the Micro SD card and the earphone; Plug the Music Shield onto the Arduino/Seeeduino; Connect the board to PC using USB cable. ![](https://files.seeedstudio.com/wiki/Music_Shield_V1.0/img/MusicInstall.jpg)
 
 ###   Software Installation   ###
 
@@ -130,7 +130,7 @@ Play music:
 
 1.Make sure there are songs in the micro sd card.
 
-2.Download [File:Music v1 14.zip](https://github.com/SeeedDocument/Music_Shield_V1.0/raw/master/res/Music_v1_14.zip)  and [File:NewSoftSerial.zip](https://github.com/SeeedDocument/Music_Shield_V1.0/raw/master/res/NewSoftSerial.zip)  for music shield.
+2.Download [File:Music v1 14.zip](https://files.seeedstudio.com/wiki/Music_Shield_V1.0/res/Music_v1_14.zip)  and [File:NewSoftSerial.zip](https://files.seeedstudio.com/wiki/Music_Shield_V1.0/res/NewSoftSerial.zip)  for music shield.
 
 3.Uncompress these two packages and put them in Arduino-0022 program: ..\arduino-0022\libraries
 
@@ -159,7 +159,7 @@ This demo will use the SD library coming with Arduino 1.0.
 
 1.Make sure there are songs in the micro sd card.
 
-2.Download [File:MusicPlayer v1 7.zip](https://github.com/SeeedDocument/Music_Shield_V1.0/raw/master/res/MusicPlayer_v1_7.zip)  and [Fat16](https://github.com/SeeedDocument/Music_Shield_V1.0/raw/master/res/Demo1_Fat16.zip)for music shield.
+2.Download [File:MusicPlayer v1 7.zip](https://files.seeedstudio.com/wiki/Music_Shield_V1.0/res/MusicPlayer_v1_7.zip)  and [Fat16](https://files.seeedstudio.com/wiki/Music_Shield_V1.0/res/Demo1_Fat16.zip)for music shield.
 
 3.Uncompress the package and put it in Arduino-1.0 program: ..\arduino-1.0\libraries
 
@@ -175,7 +175,7 @@ This demo will use an open source library [Music_Shield_Demo_2_Library](https://
 
 1.Make sure there are songs in the micro sd card.
 
-2.Download  [Music_Shield_Demo_2_Library](https://github.com/SeeedDocument/Music_Shield_V1.0/raw/master/res/Music_Shield_Demo_2_Library.zip)for music shield.
+2.Download  [Music_Shield_Demo_2_Library](https://files.seeedstudio.com/wiki/Music_Shield_V1.0/res/Music_Shield_Demo_2_Library.zip)for music shield.
 
 3.[Under Linux] Copy libraries/Fat16/Fat16util.h to libraries/Fat16/Fat16Util.h (note util vs Util). The includes have the wrong case and this is easiest workaround.
 
@@ -198,11 +198,11 @@ Note: About the specific methods of some functions in the library, You can refer
 
 ##   Resources   ##
 
-- **[Eagle]**[Music Shield Eagle Files](https://github.com/SeeedDocument/Music_Shield_V1.0/raw/master/res/MusicShielEagleFiles.zip)
-- **[PDF]**[Music Shield pdf](https://github.com/SeeedDocument/Music_Shield_V1.0/raw/master/res/Music%20Shield.pdf)
-- **[Eagle]**[Music Shield sch](https://github.com/SeeedDocument/Music_Shield_V1.0/raw/master/res/Music%20Shield.sch)
-- **[PDF]**[Music Shield Schematic pdf](https://github.com/SeeedDocument/Music_Shield_V1.0/raw/master/res/Music_Shield.pdf)
-- **[Library]**[Music Shield Source code file for Arduino 0022](https://github.com/SeeedDocument/Music_Shield_V1.0/raw/master/res/Music_v1_14.zip)
+- **[Eagle]**[Music Shield Eagle Files](https://files.seeedstudio.com/wiki/Music_Shield_V1.0/res/MusicShielEagleFiles.zip)
+- **[PDF]**[Music Shield pdf](https://files.seeedstudio.com/wiki/Music_Shield_V1.0/res/Music%20Shield.pdf)
+- **[Eagle]**[Music Shield sch](https://files.seeedstudio.com/wiki/Music_Shield_V1.0/res/Music%20Shield.sch)
+- **[PDF]**[Music Shield Schematic pdf](https://files.seeedstudio.com/wiki/Music_Shield_V1.0/res/Music_Shield.pdf)
+- **[Library]**[Music Shield Source code file for Arduino 0022](https://files.seeedstudio.com/wiki/Music_Shield_V1.0/res/Music_v1_14.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

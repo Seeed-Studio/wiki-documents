@@ -16,7 +16,7 @@ Please note that the current (and also the latest) version of is Seeeduino-Stalk
 
 Clicking on the images below will take you to the documentation for the corresponding version.
 
-|![](https://github.com/SeeedDocument/Seeeduino_Stalker/raw/master/img/Seeeduino-stalker-168.jpg)   |![](https://github.com/SeeedDocument/Seeeduino_Stalker/raw/master/img/Stalkerv21.jpg)   |![](https://github.com/SeeedDocument/Seeeduino_Stalker/raw/master/img/Seeduino_Stalker_v2.1.jpg)   |![](https://github.com/SeeedDocument/Seeeduino_Stalker/raw/master/img/Seeduino_Stalker_v2.2.jpg)   | ![](https://github.com/SeeedDocument/Seeeduino_Stalker/raw/master/img/Seeduino_Stalker_v2.2.jpg)| ![](https://github.com/SeeedDocument/Seeeduino_Stalker/raw/master/img/Seeed_Stalker_v3-6.png)|
+|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker/img/Seeeduino-stalker-168.jpg)   |![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker/img/Stalkerv21.jpg)   |![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker/img/Seeduino_Stalker_v2.1.jpg)   |![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker/img/Seeduino_Stalker_v2.2.jpg)   | ![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker/img/Seeduino_Stalker_v2.2.jpg)| ![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker/img/Seeed_Stalker_v3-6.png)|
 |---|---|---|---|---|---|
 | Seeeduino Stalker v1.0  |Seeeduino Stalker v2.0   |Seeeduino Stalker v2.1   |Seeeduino Stalker v2.2   | Seeeduino Stalker v2.3  | Seeeduino-Stalker v3  |
 

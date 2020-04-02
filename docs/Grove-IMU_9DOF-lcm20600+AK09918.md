@@ -9,7 +9,7 @@ sku: 101020585
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-IMU_9DOF-lcm20600_AK09918/raw/master/img/Main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-IMU_9DOF-lcm20600_AK09918/img/Main.jpg)
 
 
  The Grove - IMU 9DOF (lcm20600+AK09918) is a 9 Degrees of Freedom [IMU](https://en.wikipedia.org/wiki/Inertial_measurement_unit) (Inertial measurement unit) which combines gyroscope, accelerometer and electronic compass. We use two chips LCM20600+AK09918 to implement those 3 functions.
@@ -68,9 +68,9 @@ tags:
 
 ### Pin Out
 
-![](https://github.com/SeeedDocument/Grove-IMU_9DOF-lcm20600_AK09918/raw/master/img/pin_map.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-IMU_9DOF-lcm20600_AK09918/img/pin_map.jpg)
 
-![](https://github.com/SeeedDocument/Grove-IMU_9DOF-lcm20600_AK09918/raw/master/img/pin_map_back.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-IMU_9DOF-lcm20600_AK09918/img/pin_map_back.jpg)
 
 
 !!!Danger
@@ -81,15 +81,15 @@ tags:
 
 **Power**
 
-![](https://github.com/SeeedDocument/Grove-IMU_9DOF-lcm20600_AK09918/raw/master/img/schematic.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-IMU_9DOF-lcm20600_AK09918/img/schematic.jpg)
 
 Since the operating voltage range of LCM20600 is 1.71V to 3.45V, and the operating voltage range of AK09918 is 1.65V to 1.95V, we use a power conversion chip **XC6206P182MR** to provide a stable 1.8V for both chips.
 
 **Bi-directional level shifter circuit**
 
-![](https://github.com/SeeedDocument/Grove-IMU_9DOF-lcm20600_AK09918/raw/master/img/schematic_1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-IMU_9DOF-lcm20600_AK09918/img/schematic_1.jpg)
 
-This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of two chips use 1.8V, if the I<sup>2</sup>C bus of the Arduino use 5V or 3.3V, this circuit will be needed. In the schematic above, **Q1** and **Q2** are N-Channel MOSFET [CJ2102](https://github.com/SeeedDocument/Grove-IMU_9DOF-lcm20600_AK09918/raw/master/res/CJ2102.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/AN10441.pdf)
+This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of two chips use 1.8V, if the I<sup>2</sup>C bus of the Arduino use 5V or 3.3V, this circuit will be needed. In the schematic above, **Q1** and **Q2** are N-Channel MOSFET [CJ2102](https://files.seeedstudio.com/wiki/Grove-IMU_9DOF-lcm20600_AK09918/res/CJ2102.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/AN10441.pdf)
 
 
 
@@ -138,7 +138,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-IMU_9DOF-lcm20600_AK09918/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-IMU_9DOF-lcm20600_AK09918/img/connect.jpg)
 
 
 !!!Note
@@ -166,12 +166,12 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 - **Step 3.** Restart the Arduino IDE. Open the example, you can open it in the following three ways：
     1. Open it directly in the Arduino IDE via the path: **File --> Examples --> Grove IMU 9DOF ICM20600 AK09918 --> compass**. 
-    ![](https://github.com/SeeedDocument/Grove-IMU_9DOF-lcm20600_AK09918/raw/master/img/path.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-IMU_9DOF-lcm20600_AK09918/img/path.jpg)
     
     2. Open it in your computer by click the **compass.ino** which you can find in the folder **XXXX\Arduino\libraries\Seeed_ICM20600_AK09918-master\examples\compass**, **XXXX** is the location you installed the Arduino IDE.
-    ![](https://github.com/SeeedDocument/Grove-IMU_9DOF-lcm20600_AK09918/raw/master/img/path_1.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-IMU_9DOF-lcm20600_AK09918/img/path_1.jpg)
     
-    3. Or, you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+    3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 
 ```C++
@@ -441,11 +441,11 @@ Heading: 21.76
 
 - **[Zip]** [Seeed ICM20600+AK09918 Library](https://github.com/Seeed-Studio/Seeed_ICM20600_AK09918/archive/master.zip)
 
-- **[PDF]** [Datasheet of ICM-20600](https://github.com/SeeedDocument/Grove-IMU_9DOF-lcm20600_AK09918/raw/master/res/ICM-20600.pdf)
+- **[PDF]** [Datasheet of ICM-20600](https://files.seeedstudio.com/wiki/Grove-IMU_9DOF-lcm20600_AK09918/res/ICM-20600.pdf)
 
-- **[PDF]** [Datasheet of AK09918](https://github.com/SeeedDocument/Grove-IMU_9DOF-lcm20600_AK09918/raw/master/res/AK09918.pdf)
+- **[PDF]** [Datasheet of AK09918](https://files.seeedstudio.com/wiki/Grove-IMU_9DOF-lcm20600_AK09918/res/AK09918.pdf)
 
-- **[PDF]** [Datasheet of CJ2102](https://github.com/SeeedDocument/Grove-IMU_9DOF-lcm20600_AK09918/raw/master/res/CJ2102.pdf)
+- **[PDF]** [Datasheet of CJ2102](https://files.seeedstudio.com/wiki/Grove-IMU_9DOF-lcm20600_AK09918/res/CJ2102.pdf)
 
 
 

@@ -97,7 +97,7 @@ Grove - MP3 v2.0 is a tiny-sized and compact audio module. It supports various a
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-MP3_v2.0/raw/master/img/seeeduino_mp3.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-MP3_v2.0/img/seeeduino_mp3.jpg)
 
 !!!Note
 	If we don't have Grove Base Shield, We also can directly connect Grove-MP3 v2.0 to Seeeduino as below.
@@ -116,7 +116,7 @@ Grove - MP3 v2.0 is a tiny-sized and compact audio module. It supports various a
 - **Step 3.** You can select **Seeed_Serial_MP3_Player/examples/KT403A_Terminal_player** example and upload to arduino. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 - **Step 4.** We will see the info at COM terminal as below.
 
-![](https://github.com/SeeedDocument/Grove-MP3_v2.0/raw/master/img/COM.png)
+![](https://files.seeedstudio.com/wiki/Grove-MP3_v2.0/img/COM.png)
 
 !!!Note
     For advanced programming, you can [download](https://raw.githubusercontent.com/SeeedDocument/Grove-MP3_v2.0/master/res/Grove-MP3_v2.0_KT403A_datasheet_V1.3_EN-Recompiled_by_Seeed-.pdf) datasheet of chip KT403A.

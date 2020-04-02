@@ -9,7 +9,7 @@ sku: 101020600
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-I2C_UV_Sensor-VEML6070/raw/master/img/perspective.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_UV_Sensor-VEML6070/img/perspective.jpg)
 
 The Grove - I2C UV Sensor(VEML6070) is an advanced ultraviolet (UV) light sensor with I2C protocol interface. Ultraviolet (UV) is electromagnetic radiation with a wavelength from 10 nm to 400 nm, shorter than that of visible light but longer than X-rays, this sensor detects 320-410nm light most effectively, and will converts solar UV light intensity to digital data.
 
@@ -61,9 +61,9 @@ What's more the active acknowledge (ACK) feature with threshold windows setting 
 ### Pin Out
 
 
-![](https://github.com/SeeedDocument/Grove-I2C_UV_Sensor-VEML6070/raw/master/img/pin_out.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_UV_Sensor-VEML6070/img/pin_out.jpg)
 
-![](https://github.com/SeeedDocument/Grove-I2C_UV_Sensor-VEML6070/raw/master/img/pin_out_back.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_UV_Sensor-VEML6070/img/pin_out_back.jpg)
 
 
 
@@ -107,7 +107,7 @@ What's more the active acknowledge (ACK) feature with threshold windows setting 
 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-I2C_UV_Sensor-VEML6070/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_UV_Sensor-VEML6070/img/connect.jpg)
 
 
 !!!Note
@@ -134,12 +134,12 @@ What's more the active acknowledge (ACK) feature with threshold windows setting 
 
 - **Step 3.** Restart the Arduino IDE. Open the example, you can open it in the following three ways：
     1. Open it directly in the Arduino IDE via the path: **File --> Examples --> Seeed_VEML6070 --> INT_mode**. 
-    ![](https://github.com/SeeedDocument/Grove-I2C_UV_Sensor-VEML6070/raw/master/img/path_1.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-I2C_UV_Sensor-VEML6070/img/path_1.jpg)
     
     2. Open it in your computer by click the **INT_mode.ino** which you can find in the folder **XXXX\Arduino\libraries\Seeed_VEML6070-master\examples\INT_mode**, **XXXX** is the location you installed the Arduino IDE.
-    ![](https://github.com/SeeedDocument/Grove-I2C_UV_Sensor-VEML6070/raw/master/img/path_2.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-I2C_UV_Sensor-VEML6070/img/path_2.jpg)
     
-    3. Or, you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+    3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 
 ```C++
@@ -274,7 +274,7 @@ sensor.set_interrupt(INT_102_STEP,ENABLE);
 
 | Raspberry pi | Grove Base Hat for RasPi| Grove - I2C UV Sensor (VEML6070)|
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-I2C_UV_Sensor-VEML6070/raw/master/img/thumbnail.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-I2C_UV_Sensor-VEML6070/img/thumbnail.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-I2C-UV-Sensor-(VEML6070)-p-3195.html)|
 
 - **Step 2**. Plug the Grove Base Hat into Raspberry.
@@ -282,7 +282,7 @@ sensor.set_interrupt(INT_102_STEP,ENABLE);
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-I2C_UV_Sensor-VEML6070/raw/master/img/UV_Hat.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_UV_Sensor-VEML6070/img/UV_Hat.jpg)
 
 
 
@@ -376,7 +376,7 @@ You can quit this program by simply press ++ctrl+c++.
 
 - **[Zip]** [Seeed VEML6070 Library](https://github.com/Seeed-Studio/Seeed_VEML6070/archive/master.zip)
 
-- **[PDF]** [Datasheet VEML6070](https://github.com/SeeedDocument/Grove-I2C_UV_Sensor-VEML6070/raw/master/res/VEML6070.pdf)
+- **[PDF]** [Datasheet VEML6070](https://files.seeedstudio.com/wiki/Grove-I2C_UV_Sensor-VEML6070/res/VEML6070.pdf)
 
 - **[PDF]** [VEML6070 Application Note](https://github.com/Seeed-Studio/Seeed_VEML6070/raw/master/doc/designingveml6070.pdf)
 

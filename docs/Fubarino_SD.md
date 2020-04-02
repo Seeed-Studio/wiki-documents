@@ -7,11 +7,11 @@ prodimagename:  Fubarinosd.jpg
 surveyurl: https://www.research.net/r/Fubarino_SD
 sku:     102990019
 ---
-![](https://github.com/SeeedDocument/Fubarino_SD/raw/master/img/Fubarinosd.jpg)
+![](https://files.seeedstudio.com/wiki/Fubarino_SD/img/Fubarinosd.jpg)
 
 Fubarino SD is a small, easily breadboardable microcontroller board. It is chipKIT and MPIDE compatible, which means you can write sketches for it in MPIDE, which is the Arduino IDE fork for chipKIT compatible boards. The microcontroller on the board is a Microchip PIC32MX440F256H.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Fubarino-SD-p-1265.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Fubarino-SD-p-1265.html)
 
 ##   Features
 ---

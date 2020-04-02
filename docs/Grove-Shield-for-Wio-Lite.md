@@ -8,7 +8,7 @@ surveyurl:
 sku: 103020252
 ---
 
-![enter image description here](https://github.com/SeeedDocument/Grove-Shield-for-Wio-Lite/raw/master/img/Grove-Shield-for-Wio-Lite-V1.0-wiki.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove-Shield-for-Wio-Lite/img/Grove-Shield-for-Wio-Lite-V1.0-wiki.jpg)
 
 The Grove Shield for Wio Lite is made for Seeed Studio Wio Lite Series. Now the Wio Lite W600 is available, we will release more Wio boards soon. Also, this Grove Shield can work with Adafruit Feather Boards. It brings 200+ Grove modules to Wio Lite and Feather community. 
 
@@ -52,7 +52,7 @@ And this board is also form factor compatible with the other Adafruit Feather Bo
 
 
 
-![](https://github.com/SeeedDocument/Grove-Shield-for-Wio-Lite/raw/master/img/Grove-Shield-for-Wio-Lite-V1.0.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Shield-for-Wio-Lite/img/Grove-Shield-for-Wio-Lite-V1.0.jpg)
 
 
 
@@ -91,7 +91,7 @@ And this board is also form factor compatible with the other Adafruit Feather Bo
 
 For the pinout, please refer to the silkscreen on the backside of this shield.
 
-![](https://github.com/SeeedDocument/Grove-Shield-for-Wio-Lite/raw/master/img/wiki-pinout.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Shield-for-Wio-Lite/img/wiki-pinout.jpg)
 
 
 ## Schematic Online Viewer
@@ -102,7 +102,7 @@ For the pinout, please refer to the silkscreen on the backside of this shield.
 
 ## Resources
 
-- **[ZIP]** [Grove Shield for Wio Lite Schematic File](https://github.com/SeeedDocument/Grove-Shield-for-Wio-Lite/raw/master/res/Grove%20Shield%20for%20Wio%20Lite_v1.0_190716.zip)
+- **[ZIP]** [Grove Shield for Wio Lite Schematic File](https://files.seeedstudio.com/wiki/Grove-Shield-for-Wio-Lite/res/Grove%20Shield%20for%20Wio%20Lite_v1.0_190716.zip)
 
 
 

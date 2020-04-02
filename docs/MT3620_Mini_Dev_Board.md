@@ -8,7 +8,7 @@ surveyurl:
 sku: 
 ---
 
-![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/product.png)
+![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/product.png)
 
 MT3620 Mini Dev Board is a lite version of Seeed previous [Azure Sphere MT3620 Development Kit](https://www.seeedstudio.com/Azure-Sphere-MT3620-Development-Kit-US-Version-p-3052.html). For an introduction to Azure sphere, please refer to this link [Azure Sphere](https://azure.microsoft.com/en-us/services/azure-sphere/). 
 
@@ -23,7 +23,7 @@ We developed this board to meet the needs of developers who need smaller sizes, 
 
 The figure shows the full-feature dev board and new mini dev board size comparison: 
 
-![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/compare.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/compare.png)
 
 The Azure Sphere operating system is pre-installed on the MT3620 and is designed to work with the Azure Sphere Security Service to create a secured IoT platform. Together the Azure Sphere OS and security service deliver: 
 
@@ -199,7 +199,7 @@ We build there demoes which combine MT3620 Mini Dev Board and [Seeed Grove syste
 
 **Demo#3**: MT3620 Mini Dev Board performs as an MCU, which connects with Grove - OLED Display 1.12". Then you connect MT3620 Mini Dev Board to PC usb ports.  After you downloading the code, you press Grove-Button and enter "Hello World!" from USB to TTL adapter, you can receive "Hello World!" from Visual Studio Output window. 
 
-**MT3620 Grove Breakout**：MT3620 Mini Dev Board supports SPI, UART, I2C, Digital functions, but does not support the ADC function. So the MT3620 Grove Breakout includes [AD7992](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/res/AD7992.pdf) chip, which is a 12-bit, low power, successive approximation ADC with an I2C-compatible interface. Then connect to I2C interface of MT3620 Mini Dev Board. 
+**MT3620 Grove Breakout**：MT3620 Mini Dev Board supports SPI, UART, I2C, Digital functions, but does not support the ADC function. So the MT3620 Grove Breakout includes [AD7992](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/res/AD7992.pdf) chip, which is a 12-bit, low power, successive approximation ADC with an I2C-compatible interface. Then connect to I2C interface of MT3620 Mini Dev Board. 
 
 ![](https://raw.githubusercontent.com/SeeedDocument/MT3620_Mini_Dev_Board/master/img/adc_i2c.png)
 
@@ -211,12 +211,12 @@ We build there demoes which combine MT3620 Mini Dev Board and [Seeed Grove syste
 
 | MT3620 Mini Dev Board | MT3620 Grove Breakout |  Grove - Button |USB To Uart 5V&3V3 |
 |--------------|-------------|-----------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/product_s.png)|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/breakout_s.jpg)|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/button_s.jpg)|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/usb_2_ttl_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/product_s.png)|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/breakout_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/button_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/usb_2_ttl_s.jpg)|
 |[Get One Now](https://www.seeedstudio.com/MT3620-Mini-Dev-Board-p-2919.html)|[Get One Now](https://www.seeedstudio.com/MT3620-Grove-Breakout-p-4043.html)|[Get One Now](https://www.seeedstudio.com/Grove-Button-p-766.html)|[Get One Now](https://www.seeedstudio.com/USB-To-Uart-5V-3V3-p-1832.html)|
 
 **Hardware Connection**
 
-![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/demo1_connection.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/demo1_connection.png)
 
 - Step 1. Connect Grove-Button to D1 of MT3620 Grove Breakout.
 - Step 2. Connect USB To Uart adapter to UART0 of MT3620 Grove Breakout through [Grove-Cable](https://www.seeedstudio.com/Grove-4-pin-Female-Jumper-to-Grove-4-pin-Conversion-Cable-5-PCs-per-PAck.html). 
@@ -258,12 +258,12 @@ UART received 2 bytes: '
 
 | MT3620 Mini Dev Board | MT3620 Grove Breakout |  Grove-Light Sensor |Grove - Rotary Angle Sensor|
 |--------------|-------------|-----------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/product_s.png)|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/breakout_s.jpg)|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/light_sensor_s.jpg)|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/Rotary_Angle_Sensor_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/product_s.png)|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/breakout_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/light_sensor_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/Rotary_Angle_Sensor_s.jpg)|
 |[Get One Now](https://www.seeedstudio.com/MT3620-Mini-Dev-Board-p-2919.html)|[Get One Now](https://www.seeedstudio.com/MT3620-Grove-Breakout-p-4043.html)|[Get One Now](https://www.seeedstudio.com/Grove-Light-Sensor-v1-2.html)|[Get One Now](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html)|
 
 **Hardware Connection**
 
-![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/demo2_connection.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/demo2_connection.png)
 
 - Step 1. Connect Grove-Rotary Angle Sensor to A0 of MT3620 Grove Breakout.
 - Step 2. Connect Grove-Light Sensor to A1 of MT3620 Grove Breakout. 
@@ -306,12 +306,12 @@ A0: 2057 A1: 2647
 
 | MT3620 Mini Dev Board | MT3620 Grove Breakout |  Grove-OLED Display 1.12'' V2 |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/product_s.png)|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/breakout_s.jpg)|![enter image description here](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/oled_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/product_s.png)|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/breakout_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/oled_s.jpg)|
 |[Get One Now](https://www.seeedstudio.com/MT3620-Mini-Dev-Board-p-2919.html)|[Get One Now](https://www.seeedstudio.com/MT3620-Grove-Breakout-p-4043.html)|[Get One Now](https://www.seeedstudio.com/Grove-Light-Sensor-v1-2.html)|[Get One Now](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html)|
 
 **Hardware Connection**
 
-![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/demo3_connection.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/demo3_connection.png)
 
 - Step 1. Connect Grove-OLED Display 1.12'' V2 to I2C of MT3620 Grove Breakout.
 - Step 2. Plug MT3620 Grove Breakout to MT3620 Mini Dev Board.
@@ -337,7 +337,7 @@ Seeed oled 96*96 demo.
 
 This is the Azure Sphere Secure Lock Demo. We build this Box with the new MT3620 Mini Dev Board and its Grove Breakout board. The MT3620 works as a device micro-controller and provides secure access to the cloud. 
 
-![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/Azure_Sphere_Demo_Secure_Lock.jpg)
+![](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/Azure_Sphere_Demo_Secure_Lock.jpg)
 
 <div align="center">Secure Lock Diagram<b></b><i></i></div>
 
@@ -346,15 +346,15 @@ This is the Azure Sphere Secure Lock Demo. We build this Box with the new MT3620
 
 On top of the box , there is a warning light ,which will flash when the door is open. The MT3620 reads the micro switch status and knows the door is open or not. The door is locked by an electromagnet switch. There are two relays, they are both driven by MT3620‘s GPIOs. One relay controls the electromagnet power source, by opening the relay, the electromagnet will be opened. The other relay controls the warning light. 
 
-![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/Azure%20Sphere%20Mini%20Dev%20Board%20Demo4.jpg)
+![](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/Azure%20Sphere%20Mini%20Dev%20Board%20Demo4.jpg)
 
 <div align="center"><b>Front View</b><i></i></div>
 
-![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/Azure%20Sphere%20Mini%20Dev%20Board%20Demo2.jpg)
+![](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/Azure%20Sphere%20Mini%20Dev%20Board%20Demo2.jpg)
 
 <div align="center"><b>Top View</b><i></i></div>
 
-![](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/Azure%20Sphere%20Mini%20Dev%20Board%20Demo5.jpg)
+![](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/Azure%20Sphere%20Mini%20Dev%20Board%20Demo5.jpg)
 
 <div align="center"><b>Side View</b><i></i></div>
 
@@ -377,9 +377,9 @@ On top of the box , there is a warning light ,which will flash when the door is 
 - **[Product]** [MT3620 Mini Dev Board Product Brief](https://github.com/SeeedDocument/MT3620-Mini-Dev-Board/blob/master/res/MT3620%20Mini%20Dev%20Board%20Product%20Brief-2019-06-18.pdf)
 - **[Product]** [Welcome to Azure Sphere](https://docs.microsoft.com/en-us/azure-sphere/)
 - **[Library]** [Azure Sphere Demo Library](https://github.com/Seeed-Studio/Azure_Sphere_Demo)
-- **[PDF]** [MT3620 Mini Dev Board Schematic](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/res/MT3620%20Dev%20Board%20V2.pdf)
-- **[DataSheet]** [MediaTek MT3620 Product Brief](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/res/MediaTek%20MT3620%20Product%20Brief.pdf)
-- **[DataSheet]** [WF-M620 RSC1 datasheet](https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/res/WF-M620-RSC1_datasheet_20190314.pdf)
+- **[PDF]** [MT3620 Mini Dev Board Schematic](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/res/MT3620%20Dev%20Board%20V2.pdf)
+- **[DataSheet]** [MediaTek MT3620 Product Brief](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/res/MediaTek%20MT3620%20Product%20Brief.pdf)
+- **[DataSheet]** [WF-M620 RSC1 datasheet](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/res/WF-M620-RSC1_datasheet_20190314.pdf)
 - **[FAQ Web]** [Azure Sphere Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=azuresphere)
 - **[FAQ Web]** [Azure Sphere Github issues](https://github.com/MicrosoftDocs/azure-sphere-issues/issues?utf8=%E2%9C%93&q=is%3Aissue)
 

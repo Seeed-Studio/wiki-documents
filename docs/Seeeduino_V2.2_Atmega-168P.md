@@ -10,7 +10,7 @@ sku:
 tags:
 
 ---
-![](https://github.com/SeeedDocument/Seeeduino_V2.2_Atmega-168P/raw/master/img/Seeeduino-168p.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_V2.2_Atmega-168P/img/Seeeduino-168p.jpg)
 
 Seeeduino is Arduino compatible board. Its design is based on Diecimila scheme, 100% compatible to its existing program, shield and IDEs. On the hardware part, remarkable changes are taken to improve the flexibility and user experience.
 

@@ -7,21 +7,21 @@ prodimagename:  4WD_Robot_Car_Body.jpg
 surveyurl: https://www.research.net/r/Skeleton_Bot-4WD_hercules_mobile_robotic_platform
 sku:   110010000
 ---
-![](https://github.com/SeeedDocument/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/raw/master/img/4WD_Robot_Car_Body.jpg)
+![](https://files.seeedstudio.com/wiki/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/img/4WD_Robot_Car_Body.jpg)
 
 
 4WD Hercules Mobile Robotic Platform adheres to the spirit with strong power and complete function, and it is a companion for you to enter into the robot world where you can make your own robot mobile platform. Hercules, the Titan in Greek mythology, is widely known for his strength and spirit of adventure.
 
-|![](https://github.com/SeeedDocument/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/raw/master/img/Hercules_02.jpg)|![](https://github.com/SeeedDocument/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/raw/master/img/Hercules_01.jpg)
+|![](https://files.seeedstudio.com/wiki/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/img/Hercules_02.jpg)|![](https://files.seeedstudio.com/wiki/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/img/Hercules_01.jpg)
 |---|---|
 
 It consists of the component of Hercules motor controller, Hercules skeleton, gear motor etc. The Hercules motor controller can consistently support the current up to 15A and driving voltage in the range of 6V-20V, thus, it can supply strong motive power to the whole platform. The Hercules skeleton is made up of aluminium alloy plate with firm but pliable texture which can carry, display and connect sorts of accessories in your project. Its 4 powerful gear motors, especially a couple of them from Seeed’s original encipheror can monitor the running speed of your platform and amend the process parameter by the shaped closed-loop control. This provides a possibility to control precise process. Besides, other accessories such as wheels, cooper cylinder and acrylic guard plate that make the platform to be a completely mobile platform.
 
-![](https://github.com/SeeedDocument/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/raw/master/img/Hercules_03.jpg)
+![](https://files.seeedstudio.com/wiki/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/img/Hercules_03.jpg)
 
 Hercules is a suite of open-platform. It is convenient for users to install all kinds of components through the hole sites on the board. In addition, the Grove connector reserved on the board can help the inventor input several sorts of sensor data into system. What’s more, Hercules controller is Arduino compatible, so you can freely alter the device drives and programs.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Skeleton-Bot-4WD-Hercules-Mobile-Robotic-Platform-p-1504.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Skeleton-Bot-4WD-Hercules-Mobile-Robotic-Platform-p-1504.html)
 
 ##  Features
 ---
@@ -37,7 +37,7 @@ Hercules is a suite of open-platform. It is convenient for users to install all 
 
 ##  Parts List
 ---
-![](https://github.com/SeeedDocument/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/raw/master/img/Parts_lists.jpg)
+![](https://files.seeedstudio.com/wiki/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/img/Parts_lists.jpg)
 
 <table  cellspacing="0" width="80%">
 <tr>
@@ -400,19 +400,19 @@ Hercules is a suite of open-platform. It is convenient for users to install all 
 
 ##  Assemble diagrams
 ---
-![](https://github.com/SeeedDocument/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/raw/master/img/Assemble_Step2.jpg)
+![](https://files.seeedstudio.com/wiki/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/img/Assemble_Step2.jpg)
 
-![](https://github.com/SeeedDocument/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/raw/master/img/Assemble_Step3.jpg)
+![](https://files.seeedstudio.com/wiki/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/img/Assemble_Step3.jpg)
 
-![](https://github.com/SeeedDocument/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/raw/master/img/Assemble_Step4.jpg)
+![](https://files.seeedstudio.com/wiki/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/img/Assemble_Step4.jpg)
 
-![](https://github.com/SeeedDocument/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/raw/master/img/Assemble_Step5.jpg)
+![](https://files.seeedstudio.com/wiki/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/img/Assemble_Step5.jpg)
 
-![](https://github.com/SeeedDocument/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/raw/master/img/Step7.jpg)
+![](https://files.seeedstudio.com/wiki/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/img/Step7.jpg)
 
 **Firuge:**
 
-![](https://github.com/SeeedDocument/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/raw/master/img/4WD_Robot_Car_Body.jpg)
+![](https://files.seeedstudio.com/wiki/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/img/4WD_Robot_Car_Body.jpg)
 
 About the usage of the kit, please click [here](http://seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller#Expand_Usage).
 Here is a video, Showing the hercules strong: [http://www.youtube.com/watch?v=uc4-Dqgwrq8](http://www.youtube.com/watch?v=uc4-Dqgwrq8).
@@ -426,9 +426,9 @@ Here is a video, Showing the hercules strong: [http://www.youtube.com/watch?v=uc
 
 ##  Resources
 ---
-- [4WD Robot Controller Eagle File](https://github.com/SeeedDocument/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/raw/master/res/Source_file.zip)
+- [4WD Robot Controller Eagle File](https://files.seeedstudio.com/wiki/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/res/Source_file.zip)
 
-- [Specification for Motor](https://github.com/SeeedDocument/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/raw/master/res/Specifications_for_Motor.pdf)
+- [Specification for Motor](https://files.seeedstudio.com/wiki/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/res/Specifications_for_Motor.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

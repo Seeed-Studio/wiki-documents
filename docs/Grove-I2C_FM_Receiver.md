@@ -89,7 +89,7 @@ Grove - I2C FM Receiver v1.1  | Change some components to make the board more st
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-I2C_FM_Receiver_v1.1/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_FM_Receiver_v1.1/img/connect.jpg)
 
 
 
@@ -795,7 +795,7 @@ Have fun~
 ## Resources
 
 - **[Zip]** [Grove - I2C FM Receiver v1.0 Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_FM_Receiver/master/res/Grove_I2C_FM_Receiver_v1.0.zip)
-- **[PDF]** [RDA5807 Datasheet](https://github.com/SeeedDocument/Grove-I2C_FM_Receiver_v1.1/raw/master/res/RDA5807%20Datasheet.pdf)
+- **[PDF]** [RDA5807 Datasheet](https://files.seeedstudio.com/wiki/Grove-I2C_FM_Receiver_v1.1/res/RDA5807%20Datasheet.pdf)
 
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_I2C_FM_Receiver -->

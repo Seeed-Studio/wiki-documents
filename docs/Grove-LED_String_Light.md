@@ -8,11 +8,11 @@ surveyurl: https://www.research.net/r/Grove_LED_String_Light
 sku:  104020005
 ---
 
-![](https://github.com/SeeedDocument/Grove-LED_String_Light/raw/master/img/Grove-led-string-light.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-LED_String_Light/img/Grove-led-string-light.jpg)
 
 The Grove - LED String Light module is essentially an LED driver for the LED string lights included in the pack. Working voltage of the module is 3.3V/5V. However, the LED string lights require a working voltage of 12V. Therefore, this module uses a AIC1896 current mode step up DC-DC Converter to provide the requisite voltage to the LED string lights. The LED string light is 5 meters in length and has 50 RGB LEDs on it connected equidistant to one another. You can use these to dress a Christmas tree, light your party or to decorate your room.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-LED-String-Light-p-2324.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-LED-String-Light-p-2324.html)
 
 ##  Features
 ---
@@ -28,7 +28,7 @@ The Grove - LED String Light module is essentially an LED driver for the LED str
 
 ##  Interface Function
 ---
-![](https://github.com/SeeedDocument/Grove-LED_String_Light/raw/master/img/LED_String_Light.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-LED_String_Light/img/LED_String_Light.jpg)
 
 <dl><dt>① JST 2.0 interface: Used to connect to LED String Lights
 
@@ -61,7 +61,7 @@ Follow these steps to build a sample circuit using this module:
 
 Below is an illustration of a Grove circuit built using the [Grove - USB Power](/Grove-Mixer_Pack_V2 "Grove - Mixer Pack") power module:
 
-![](https://github.com/SeeedDocument/Grove-LED_String_Light/raw/master/img/LED_String_Light_Photo.gif)
+![](https://files.seeedstudio.com/wiki/Grove-LED_String_Light/img/LED_String_Light_Photo.gif)
 
 If you do not have the Grove - USB Power module, use the [Grove - DC Jack Power](/Grove-DC_Jack_Power "Grove - DC Jack Power") module instead to turn ON the LED string lights.
 
@@ -82,9 +82,9 @@ Alternatively, it can be bought stand-alone at the [Seeed Studio Bazaar](http://
 
 ##  Resources
 ---
-*   [[Schematic PDF](https://github.com/SeeedDocument/Grove-LED_String_Light/raw/master/res/Grove-LED_String_Light.pdf)]
+*   [[Schematic PDF](https://files.seeedstudio.com/wiki/Grove-LED_String_Light/res/Grove-LED_String_Light.pdf)]
 
-*   [[Eagle File](https://github.com/SeeedDocument/Grove-LED_String_Light/raw/master/res/Grove-LED_String_Light.zip)]
+*   [[Eagle File](https://files.seeedstudio.com/wiki/Grove-LED_String_Light/res/Grove-LED_String_Light.zip)]
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

@@ -8,11 +8,11 @@ surveyurl: https://www.research.net/r/Xadow_Storage
 sku:  103040002
 ---
 
-![](https://github.com/SeeedDocument/Xadow_RTC/raw/master/img/Xadow_RTC_01.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_RTC/img/Xadow_RTC_01.jpg)
 
 Sometimes, you always want to know what time it is. Whether I have missed the dating or not, or if it is the mealtime for my three months child. The RTC module can provide you a real-time clock. You can make the controller ask the module: hi,buddy, what time it is. At the same time, do not forget to install a small coin cell which can serve you for more than six mouths.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-RTC-p-1523.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-RTC-p-1523.html)
 
 ##  Specification
 ---
@@ -30,7 +30,7 @@ The following sketch demonstrates a simple application of setting the time and r
 
 **Hardware Installation:**
 
-![](https://github.com/SeeedDocument/Xadow_RTC/raw/master/img/XadwoRTC.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_RTC/img/XadwoRTC.jpg)
 
 Note: when connect Xadow RTC to Xadow Main Board, you should concern about the connection direction. The connection method is that the unfilled corner of one Xadow module need to connect to the right angle of another module(see four corners of each Xadow module).
 
@@ -172,7 +172,7 @@ fillWeek(1);//Monday
 ```
 *   The output result:
 
-![](https://github.com/SeeedDocument/Xadow_RTC/raw/master/img/Xadow-RTC_Result.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_RTC/img/Xadow-RTC_Result.jpg)
 
 The output time is changing like the clock. Once you set a time, RTC will update the clock time data constantly. Then you need to comment out the code as show below and re-upload. A Real-Time Clock appears .
 ```
@@ -188,9 +188,9 @@ The output time is changing like the clock. Once you set a time, RTC will update
 
 ##   Resources
 ---
-*   [Xadow RTC Eagle File](https://github.com/SeeedDocument/Xadow_RTC/raw/master/res/Xadow_RTC.zip)
+*   [Xadow RTC Eagle File](https://files.seeedstudio.com/wiki/Xadow_RTC/res/Xadow_RTC.zip)
 
-*   [RTC DS1307 Datasheet](https://github.com/SeeedDocument/Xadow_RTC/raw/master/res/DS1307.pdf)
+*   [RTC DS1307 Datasheet](https://files.seeedstudio.com/wiki/Xadow_RTC/res/DS1307.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

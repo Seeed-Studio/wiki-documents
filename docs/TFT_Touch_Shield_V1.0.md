@@ -11,7 +11,7 @@ tags:
 
 ---
 
-![](https://github.com/SeeedDocument/TFT_Touch_Shield_V1.0/raw/master/img/Tft.jpg)
+![](https://files.seeedstudio.com/wiki/TFT_Touch_Shield_V1.0/img/Tft.jpg)
 
 2.8" TFT Touch Shield is an Arduino / Arduino Mega compatible multicolored TFT display with a 4-wire resistive touch screen. It includes an Arduino shield compatible footprint for attachment. The TFT driver is based on professional Driver IC and with 8 bit data and 4 bit control interface.
 
@@ -53,7 +53,7 @@ tags:
 
 ###   Pins usage on Arduino   ###
 
-![](https://github.com/SeeedDocument/TFT_Touch_Shield_V1.0/raw/master/img/2.8_Inch_TFT_Touch_Shield_Block_Diagram.jpg) (width=undefined)
+![](https://files.seeedstudio.com/wiki/TFT_Touch_Shield_V1.0/img/2.8_Inch_TFT_Touch_Shield_Block_Diagram.jpg) (width=undefined)
 
 **D0** - Unused.
 
@@ -101,7 +101,7 @@ tags:
 
 - Insert the TFT Touch Shield to Seeeduino as shown below.
 
-![](https://github.com/SeeedDocument/TFT_Touch_Shield_V1.0/raw/master/img/TFT_Touch_Shield_with_Seeeduino.jpg)
+![](https://files.seeedstudio.com/wiki/TFT_Touch_Shield_V1.0/img/TFT_Touch_Shield_with_Seeeduino.jpg)
 
 ##   TFT Programming   ##
 
@@ -362,7 +362,7 @@ void loop()
 
 - Insert the TFT Touch Shield to Seeeduino as shown below.
 
-![](https://github.com/SeeedDocument/TFT_Touch_Shield_V1.0/raw/master/img/DemoShow.JPG)
+![](https://files.seeedstudio.com/wiki/TFT_Touch_Shield_V1.0/img/DemoShow.JPG)
 TFT Touch Shield connected to Seeeduino
 
 ##   Version Tracker   ##
@@ -393,7 +393,7 @@ TFT Touch Shield connected to Seeeduino
 ##   Resources   ##
 
 - **[Libraries]**[TFT & TouchScreen Libraries](http://seeedstudio.com/wiki/images/2/29/Tft_touch_libraries_11252011.zip)
-- **[Library]**[TFT & TouchScreen Libraries for Arduino 1.0 20120628](https://github.com/SeeedDocument/TFT_Touch_Shield_V1.0/raw/master/res/TFT_TouchScreen_for_Arduino_1.0.zip)
+- **[Library]**[TFT & TouchScreen Libraries for Arduino 1.0 20120628](https://files.seeedstudio.com/wiki/TFT_Touch_Shield_V1.0/res/TFT_TouchScreen_for_Arduino_1.0.zip)
 - **[Demo]**[TFT BMP demo](http://seeedstudio.com/wiki/images/1/11/Tftbmp_demo.zip).
 - **[Eagle]**[TFT Touch Shield v1.0 Schematic and Board Files - Eagle Format](http://seeedstudio.com/wiki/images/c/c5/2.8_TFT_Touch_Shield_v1.0_EagleFiles.zip)
 - **[Eagle]**[TFT Touch Shield v0.9b Schematic and Board Files - Eagle Format](http://wiki.seeedstudio.com/images/1/17/2.8_TFT_Touch_Shield_v0.9b_EagleFiles.zip)
@@ -427,7 +427,7 @@ Post your awesome project about TFT Touch Shield V1.0 to win $100 Coupon! Please
 
 Here we introduce some projects about [3Dpad touchless gesture controller Arduino shield](http://www.seeedstudio.com/depot/3Dpad-touchless-gesture-controller-Arduino-shield-p-2332.html)
 
-![](https://github.com/SeeedDocument/TFT_Touch_Shield_V1.0/raw/master/img/Seeed-recipe-3Dpad_inchAir_controlinch_MIDI_controller.jpg)
+![](https://files.seeedstudio.com/wiki/TFT_Touch_Shield_V1.0/img/Seeed-recipe-3Dpad_inchAir_controlinch_MIDI_controller.jpg)
 
 This demo is a 3Dpad "Air control" MIDI controller make by Dpad touchless gesture controller Arduino shield.
 

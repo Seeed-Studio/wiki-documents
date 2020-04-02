@@ -10,7 +10,7 @@ sku:
 tags:
 ---
 
-![](https://github.com/SeeedDocument/BLE_Bee/raw/master/img/Ble_bee.jpg)
+![](https://files.seeedstudio.com/wiki/BLE_Bee/img/Ble_bee.jpg)
 
 The BLE Bee is a Bluetooth Smart enabled XBEE form factor module based on HM-11 module. The BLE Bee can be used in hardware setups, where normally an XBEE module is used. Using a BLE Bee an XBee socket enabled embedded system can communicate with desktop computers, smartphones, table computers and even other embedded systems providing Bluetooth Smart aka Bluetooth Low Energy (BLE).
 
@@ -68,13 +68,13 @@ The BLE Bee is a Bluetooth Smart enabled XBEE form factor module based on HM-11 
 
 ##     Pin definition  ##
 
-![](https://github.com/SeeedDocument/BLE_Bee/raw/master/img/BLE_BEE11.jpg)
+![](https://files.seeedstudio.com/wiki/BLE_Bee/img/BLE_BEE11.jpg)
 
 Note: Only important alternate functions are listed, may have more, please refer to datasheet.
 
 ##     Usage  ##
 
-![](https://github.com/SeeedDocument/BLE_Bee/raw/master/img/Ble_bee_user.jpg)
+![](https://files.seeedstudio.com/wiki/BLE_Bee/img/Ble_bee_user.jpg)
 
 -   Plug Seeed BLE Shield onto the Arduino/Seeeduino directly. **Please pay attention to the position of jumpers on the XBee Shield.**
 
@@ -313,7 +313,7 @@ void loop()
 
 Then, send an "AT+ROLE0" command to BLE Shield; it will return an "OK+Set:0", which means now the BLE Shield is ready to act as a slave.
 
-![](https://github.com/SeeedDocument/BLE_Bee/raw/master/img/Seeed_BLE-3.png)
+![](https://files.seeedstudio.com/wiki/BLE_Bee/img/Seeed_BLE-3.png)
 
 
 ## Schematic Online Viewer
@@ -324,15 +324,15 @@ Then, send an "AT+ROLE0" command to BLE Shield; it will return an "OK+Set:0", wh
 
 ##   Resource  ##
 
- - **[Schematic]**[Schematic of BLE_Bee_v1.0](https://github.com/SeeedDocument/BLE_Bee/raw/master/res/BLE_Bee_v1.0.zip)
+ - **[Schematic]**[Schematic of BLE_Bee_v1.0](https://files.seeedstudio.com/wiki/BLE_Bee/res/BLE_Bee_v1.0.zip)
 
- - **[PDF]**[BLE Bee v1.0 PCB](https://github.com/SeeedDocument/BLE_Bee/raw/master/res/BLE%20Bee%20v1.0%20PCB.pdf)
+ - **[PDF]**[BLE Bee v1.0 PCB](https://files.seeedstudio.com/wiki/BLE_Bee/res/BLE%20Bee%20v1.0%20PCB.pdf)
 
- - **[PDF]**[BLE Bee v1.0 sch](https://github.com/SeeedDocument/BLE_Bee/raw/master/res/BLE%20Bee%20v1.0%20sch.pdf)
+ - **[PDF]**[BLE Bee v1.0 sch](https://files.seeedstudio.com/wiki/BLE_Bee/res/BLE%20Bee%20v1.0%20sch.pdf)
 
- - **[APK]**[BLE_apk_for_Android](https://github.com/SeeedDocument/BLE_Bee/raw/master/res/HMBLEComAssistant.rar)
+ - **[APK]**[BLE_apk_for_Android](https://files.seeedstudio.com/wiki/BLE_Bee/res/HMBLEComAssistant.rar)
 
-- **[DataSheet]**[DataSheet of BLE module](https://github.com/SeeedDocument/BLE_Bee/raw/master/res/Bluetooth40_en.pdf)
+- **[DataSheet]**[DataSheet of BLE module](https://files.seeedstudio.com/wiki/BLE_Bee/res/Bluetooth40_en.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

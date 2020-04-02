@@ -8,7 +8,7 @@ surveyurl:
 sku: 104020130
 ---
 
-![](https://github.com/SeeedDocument/Grove-Triple_Color_E-Ink_Display_2.13/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Triple_Color_E-Ink_Display_2.13/img/main.jpg)
 
 
 
@@ -92,7 +92,7 @@ Due to the advantages like ultra low power consumption, wide viewing angle, clea
 
 | Seeeduino V4.2 | Base Shield | Grove - Triple Color E-Ink Display 2.13''|
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Triple_Color_E-Ink_Display_2.13/raw/master/img/thumbnail.jpg)
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Triple_Color_E-Ink_Display_2.13/img/thumbnail.jpg)
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Triple-Color-E-Ink-Display-2-13-p-2889.html)|
 
 
@@ -294,9 +294,9 @@ This display is 104 x 212, so there are 104x212=22048 pixels, each pixel is cont
 
 ## Resources
 
-- **[Zip]** [Grove - Triple Color E-Ink Display 2.13'' Eagle Files](https://github.com/SeeedDocument/Grove-Triple_Color_E-Ink_Display_2.13/raw/master/res/Triple_Color_E-Ink_Display_2_13.zip)
+- **[Zip]** [Grove - Triple Color E-Ink Display 2.13'' Eagle Files](https://files.seeedstudio.com/wiki/Grove-Triple_Color_E-Ink_Display_2.13/res/Triple_Color_E-Ink_Display_2_13.zip)
 
-- **[PDF]** [E-paper 2.13inch Datasheet](https://github.com/SeeedDocument/Grove-Triple_Color_E-Ink_Display_2.13/raw/master/res/E-paper_2.13_inch.pdf)
+- **[PDF]** [E-paper 2.13inch Datasheet](https://files.seeedstudio.com/wiki/Grove-Triple_Color_E-Ink_Display_2.13/res/E-paper_2.13_inch.pdf)
 
 
 

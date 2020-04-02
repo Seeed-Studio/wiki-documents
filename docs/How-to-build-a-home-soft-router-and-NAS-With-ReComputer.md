@@ -11,11 +11,11 @@
 - **Grove - OLED Display 0.96":** There's a micro controller for Arduino on ReComputer motherboard. Why not do something interesting with it?
 - **Some cables,** such as SATA data cables, SSD cables, fan cables, Grove cables, etc. Some of them may need to be re-wired but it's not difficult.  
 
- ![](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/10.jpg)
+ ![](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/10.jpg)
 
- ![](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/11.jpg)
+ ![](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/11.jpg)
 
- ![](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/12.jpg)
+ ![](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/12.jpg)
 
 **Enclosure**  
 
@@ -27,7 +27,7 @@ Support pillars: 25mm x 4 and 27mm x 4.
 
 Please note the definition of HDD_PWR pin when making cables because cooling fan can be powered by 12V power supply in HDD_PWR pin.  
 
-![](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/13.jpg)
+![](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/13.jpg)
 
 
 
@@ -37,47 +37,47 @@ Please note the definition of HDD_PWR pin when making cables because cooling fan
 
 Step 1: Installing Grove - OLED Display 0.96" onto the enclosure.  
 
-![](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/20.jpg)
+![](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/20.jpg)
 
-![](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/21.jpg)
+![](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/21.jpg)
 
 Step 2: Installing the cooling fan onto the enclosure.  
 
-![](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/22.jpg)
+![](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/22.jpg)
 
 Step 3: Installing 2.5" SSD onto the enclosure.  
 
-![](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/23.jpg)
+![](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/23.jpg)
 
-![](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/24.jpg)
+![](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/24.jpg)
 
 Step 4: Wiring.  
 
 As the pinout diagram of the 4-pin cooling fan shows, it has a tach-detect pin `TACH` and a tach-control pin `PWM` connected with 12 pin and 13 pin of micro controller for Arduino (Actually it depends on the definition in the program).  
 
-![](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/25fan_pinout.png)
+![](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/25fan_pinout.png)
 
-![](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/25.jpg)
+![](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/25.jpg)
 
 Connect Grove - OLED Display 0.96" with I2C as well as PWR and GND.  
 
-![](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/26.jpg)
+![](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/26.jpg)
 
 Connect serial port of SAMD21 with serial port of Intel CPU.  
 
-![](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/25uart.jpg)
+![](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/25uart.jpg)
 
 Step 5: Install front and rear lids and tighten the screws.  
 
-![](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/27.jpg)
+![](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/27.jpg)
 
-![](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/28.jpg)
+![](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/28.jpg)
 
 **Heat removal**  
 
 Cold wind provided by the fan flows through CPU cooling fins and SSD, thus removing heat effectively.  
 
-![](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/29.jpg)
+![](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/29.jpg)
 
 
 
@@ -96,7 +96,7 @@ Installation of PVE is very simple but NOTE that:
 
 That's because PVE team believes that eMMC doesn't have a life longer than SSD and it's not allowed to install PVE into eMMC.  
 
-![](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/pve-grub-menu.png)
+![](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/pve-grub-menu.png)
 
 (Picture was downloaded from PVE website. My PVE is 6.0 ver.)  
 
@@ -126,9 +126,9 @@ Really simple, isn't it? Here's the [Arduino program](https://github.com/Killing
 
 What we do first is to open the program in Arduino IDE. Select `Seeeduino Cortex-M0+` and find the bin file with compilation log.  
 
-![image-20191112210126228](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/401.png)
+![image-20191112210126228](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/401.png)
 
-![image-20191112210342437](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/402.png)
+![image-20191112210342437](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/402.png)
 
 
 
@@ -154,7 +154,7 @@ chmod a+x /usr/bin/bossac
 
 Make Arduino enter bootloader mode by short-circuiting Reset and Gnd twice.  
 
-![image-20191113230804316](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/resetArduino.png)
+![image-20191113230804316](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/resetArduino.png)
 
 Flash Arduino program with the flash tool.  
 ```
@@ -163,7 +163,7 @@ bossac -i -d --port=/dev/ttyACM0 -U true -e -w -v ReComputer.ino.bin -R
 
 You will see this displayed on the screen:  
 
-![](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/oled_gui.jpg)  
+![](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/oled_gui.jpg)  
 
 CPU temperature and fan tach are displayed on the screen. The fan will stop working if temperature is lower than 45℃.  
 
@@ -185,7 +185,7 @@ I choosed `lede(OpenWrt)` system common in the community and not difficult to us
 
 Here is the network topology diagram:  
 
-![image-20191116233322566](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/500networkArch.png)
+![image-20191116233322566](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/500networkArch.png)
 
 Step 1: Download and install the image from [here](https://drive.google.com/file/d/1-R5mJOu43bKWHv8ViK2V1dtE4zBLDYyU/view?usp=sharing).  
 
@@ -205,13 +205,13 @@ Step 3: Create a virtual machine and import the image.
 
 Create a WAN network port and reboot PVE to enable the added WAN.  
 
-![image-20191117161646454](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/503createWanBridge.png)
+![image-20191117161646454](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/503createWanBridge.png)
 
-![image-20191117164131776](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/503wanActive.png)
+![image-20191117164131776](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/503wanActive.png)
 
 Create a virtual machine and configure it as below (After the wizard, add the 2nd network card manually and delete the hard disk) .  
 
-![image-20191117161819910](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/504ledeSummary.png)
+![image-20191117161819910](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/504ledeSummary.png)
 
 Import lede disk image.  
 ```
@@ -240,31 +240,31 @@ Note that 100 is the id number of the created virtual machine. It can be modifie
 
 Then we can see the disk we imported just now in `local-lvm`.  
 
-![image-20191117163326117](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/505diskImported.png)
+![image-20191117163326117](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/505diskImported.png)
 
 The disk is shown in the hardware list of the virtual machine simultaneously.  
 
-![image-20191117163523743](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/506diskImported2.png)
+![image-20191117163523743](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/506diskImported2.png)
 
 Double click to add it.  
 
-![image-20191117163625885](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/507addDisk.png)
+![image-20191117163625885](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/507addDisk.png)
 
 The disk list should be like this:  
 
-![image-20191117163718793](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/508finalHardwareSummary.png)
+![image-20191117163718793](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/508finalHardwareSummary.png)
 
 Boot the virtual machine, open Console and check Kernel log. When `random: crng init done` is printed, click Enter. Seeing `shell` means booting successfully.  
 
-![image-20191117164609593](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/509ledeBootup.png)
+![image-20191117164609593](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/509ledeBootup.png)
 
 The intranet IP of lede is `192.168.1.1` . We need our computer connected to LAN network port of ReComputer to access this IP by setting IP address to static IP 192.168.1.x .  
 
-![image-20191117165532300](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/510configLaptopNetwork.png)
+![image-20191117165532300](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/510configLaptopNetwork.png)
 
 Enter `192.168.1.1` in the browser to access OpenWrt login interface. User name is `root` and password is `password` by default.  
 
-![image-20191117165632253](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/20191220134207.png)
+![image-20191117165632253](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/20191220134207.png)
 
 How to play with OpenWrt is beyond the scope of this artical. Just study and enjoy!  
 
@@ -280,31 +280,31 @@ Step 1: Download and install the image from [here](https://sourceforge.net/proje
 
 Step 2: Upload the image to PVE.  
 
-![image-20191114152513579](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/602uploadInstaller.png)
+![image-20191114152513579](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/602uploadInstaller.png)
 
 Step 3: Create a virtual machine and configure it as below:  
 
-![image-20191117110324189](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/603omvConfig.png)
+![image-20191117110324189](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/603omvConfig.png)
 
 Step 4: Boot the virtual machine created just now and install openmediavault. Click `Continue` or `OK` until installation is completed.  
 
-![image-20191117110717036](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/604installOMV.png)
+![image-20191117110717036](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/604installOMV.png)
 
-![image-20191117111323934](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/605installOMVDone.png)
+![image-20191117111323934](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/605installOMVDone.png)
 
 After installation is finished, the window above will be displayed on your screen. Now the ISO image in the virtual machine should be removed.  
 
-![image-20191117111506366](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/606removeCDROM.png)
+![image-20191117111506366](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/606removeCDROM.png)
 
 Go back to Console and click Enter to reboot your virtual machine.  
 
-![image-20191117111854853](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/607omvFirstBoot.png)
+![image-20191117111854853](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/607omvFirstBoot.png)
 
 Copy the IP address shown on the screen and enter it in the browser to access OpenWrt login interface. User name is `admin` and password is `openmediavault` by default.  
 
-![image-20191117112155601](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/608loginOMV.png)
+![image-20191117112155601](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/608loginOMV.png)
 
-![image-20191117112400979](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/609omvWebUIFirstView.png)
+![image-20191117112400979](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/609omvWebUIFirstView.png)
 
 Installation of openmediavault system has been completed already. What we should do next is passing through the SSD to improve read and write efficiency of the OMV system.  
 
@@ -389,12 +389,12 @@ root@pve-home:~# lspci -nn
 
 Go back to Web UI in PVE. Select `Hardware -> Add PCI Device` in OMV virtual machine.  
 
-![image-20191117114829217](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/610pciPassthrough.png)
+![image-20191117114829217](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/610pciPassthrough.png)
 
-![image-20191117155102090](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/611selectPCI.png)
+![image-20191117155102090](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/611selectPCI.png)
 
 After that, reboot the virtual machine and we will find hard disk been identified in OMV.  
 
-![image-20191117155433087](https://github.com/SeeedDocument/How-to-build-a-home-soft-router-and-NAS/raw/master/612seeTheNewDisk.png)
+![image-20191117155433087](https://files.seeedstudio.com/wiki/How-to-build-a-home-soft-router-and-NAS/612seeTheNewDisk.png)
 
 Check openmediavault docunment for more details and enjoy it!

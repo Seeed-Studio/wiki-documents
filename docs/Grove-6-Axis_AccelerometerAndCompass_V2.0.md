@@ -69,7 +69,7 @@ The MCU can collect 6D sensor data directly through the I2C interface.OK, let's 
 
 | Seeeduino V4.2 | Base Shield| Grove-6-Axis_AccelerometerAndCompass_V2.0 |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-6-Axis_AccelerometerAndCompass_V2.0/raw/master/img/45d_small.JPG)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/img/45d_small.JPG)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-6-Axis-Accelerometer%26Compass-v2.0-p-2476.html)|
 
 - **Step 2.** Connect Grove-6-Axis_AccelerometerAndCompass_V2 to port **I2C** of Grove-Base Shield.
@@ -78,7 +78,7 @@ The MCU can collect 6D sensor data directly through the I2C interface.OK, let's 
 
 <!--link-->
 
-![with_ardu](https://github.com/SeeedDocument/Grove-6-Axis_AccelerometerAndCompass_V2.0/raw/master/img/with_ardu.jpg)
+![with_ardu](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/img/with_ardu.jpg)
 
 !!!Note
 	If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
@@ -254,7 +254,7 @@ And also the the angle between the magnetic north and the projection of positive
 
 | Raspberry pi | GrovePi_Plus | Grove-6-Axis_AccelerometerAndCompass_V2.0 |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-6-Axis_AccelerometerAndCompass_V2.0/raw/master/img/45d_small.JPG)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/img/45d_small.JPG)|
 |[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/Grove-6-Axis-Accelerometer%26Compass-v2.0-p-2476.html)|
 
 
@@ -347,7 +347,7 @@ except IOError:
 ```
 Here is the result:
 
-![](https://github.com/SeeedDocument/Grove-6-Axis_AccelerometerAndCompass_V2.0/raw/master/img/rpi_result.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/img/rpi_result.jpg)
 
 ## References
 

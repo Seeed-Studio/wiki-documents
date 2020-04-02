@@ -7,13 +7,13 @@ prodimagename:
 surveyurl: https://www.research.net/r/DC_framework_miniature_solenoid_VL-0063
 sku:  104030021
 ---
-![](https://github.com/SeeedDocument/Shield-MaTrix-V0.9b/raw/master/img/Shield_matrix.jpg)
+![](https://files.seeedstudio.com/wiki/Shield-MaTrix-V0.9b/img/Shield_matrix.jpg)
 
 Shield MaTrix is a stackable Shield for Arduino, which makes it possible to learn programming using the most simple sensors on board.
 
-![](https://github.com/SeeedDocument/Shield-MaTrix-V0.9b/raw/master/img/MFull.JPG)
+![](https://files.seeedstudio.com/wiki/Shield-MaTrix-V0.9b/img/MFull.JPG)
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](http://www.seeedstudio.com/depot/Shield-Matrix-p-1773.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](http://www.seeedstudio.com/depot/Shield-Matrix-p-1773.html)
 
 ##   Feature
 
@@ -169,7 +169,7 @@ The right side of the board (when viewed from the matrix) are:
 
 *   I2C - Interface
 
-![](https://github.com/SeeedDocument/Shield-MaTrix-V0.9b/raw/master/img/MRight.JPG)
+![](https://files.seeedstudio.com/wiki/Shield-MaTrix-V0.9b/img/MRight.JPG)
 
 On the left side of the board are:
 
@@ -177,7 +177,7 @@ On the left side of the board are:
 
 *   Piezo buzzer (beeper)
 
-![](https://github.com/SeeedDocument/Shield-MaTrix-V0.9b/raw/master/img/MLeft.JPG)
+![](https://files.seeedstudio.com/wiki/Shield-MaTrix-V0.9b/img/MLeft.JPG)
 
 [Schematic of the device](https://files.seeedstudio.com/wiki/Shield-MaTrix-V0.9b/res/SM09b_scheme.jpg)
 
@@ -193,7 +193,7 @@ Displays information on the matrix - MaTrix - [MaTrix](https://github.com/stepan
 
 *   nRF24L01 + - iBoardRF24 - [iBoardRF24](https://github.com/andykarpov/iBoardRF24/archive/master.zip) ([DevDuino Sensor Node 2.4G nRF24L01+](http://www.seeedstudio.com/depot/DevDuino-Sensor-Node-V13-ATmega-328-RC2032-battery-holder-p-1774.html?cPath=19_22) remote control library)
 
-![](https://github.com/SeeedDocument/Shield-MaTrix-V0.9b/raw/master/img/Shield-matrix_nRF24L01Plus.jpg)
+![](https://files.seeedstudio.com/wiki/Shield-MaTrix-V0.9b/img/Shield-matrix_nRF24L01Plus.jpg)
 
 Additionally required libraries that are used during operation of libraries:
 

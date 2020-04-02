@@ -8,12 +8,12 @@ surveyurl: https://www.research.net/r/Galileo_Case
 sku:  110990417
 ---
 
-![](https://github.com/SeeedDocument/Galileo_Case/raw/master/img/Galileo_Case07.jpg)
+![](https://files.seeedstudio.com/wiki/Galileo_Case/img/Galileo_Case07.jpg)
 
 When you have a Galileo PCB, do you want to select a suitable case  for improving whole felling and protecting it?  There is a case that we customize for the PCB.
 The Case is used to wrap the Galileo PCB, It's constructed from military grade alminum and hardwearing acrylic, Providing the ultimate protection from physical and corrosion!Because we use blue acrylic, So it looks very neatly and beautiful
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Galileo-Case-p-1826.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Galileo-Case-p-1826.html)
 
 ##  Feature
 ---
@@ -27,23 +27,23 @@ The Case is used to wrap the Galileo PCB, It's constructed from military grade a
 ---
 Assembly diagram is as follows:
 
-![](https://github.com/SeeedDocument/Galileo_Case/raw/master/img/Galileo_Case_02-1.jpg)
+![](https://files.seeedstudio.com/wiki/Galileo_Case/img/Galileo_Case_02-1.jpg)
 
 * * *
 
-![](https://github.com/SeeedDocument/Galileo_Case/raw/master/img/Galileo_Case_03.jpg)
+![](https://files.seeedstudio.com/wiki/Galileo_Case/img/Galileo_Case_03.jpg)
 
 * * *
 
-![](https://github.com/SeeedDocument/Galileo_Case/raw/master/img/Galileo_Case_04.jpg)
+![](https://files.seeedstudio.com/wiki/Galileo_Case/img/Galileo_Case_04.jpg)
 
 * * *
 
-![](https://github.com/SeeedDocument/Galileo_Case/raw/master/img/Galileo_Case_05.jpg)
+![](https://files.seeedstudio.com/wiki/Galileo_Case/img/Galileo_Case_05.jpg)
 
 * * *
 
-![](https://github.com/SeeedDocument/Galileo_Case/raw/master/img/Galileo_Case_06.jpg)
+![](https://files.seeedstudio.com/wiki/Galileo_Case/img/Galileo_Case_06.jpg)
 
 <table  cellspacing="0" width="80%">
 <tr>

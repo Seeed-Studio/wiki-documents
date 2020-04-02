@@ -7,10 +7,10 @@ prodimagename: Circular_LED.jpg
 surveyurl: https://www.research.net/r/Grove_Circular_LED
 sku:  104030013
 ---
-![](https://github.com/SeeedDocument/Grove-Circular_LED/raw/master/img/Circular_LED.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Circular_LED/img/Circular_LED.jpg)
 This is a unique ring– it has a florid body with 24 controllable LEDs. Maybe it will drive the inspiration out of you to make a glowing magic ring! There is a 1*1 square hollow-out in the middle of this module, where you can place a Grove Encoder in and make it a rotary visual encoder!
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Circular-LED-p-1353.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Circular-LED-p-1353.html)
 
 ##   Features
 ---
@@ -21,7 +21,7 @@ This is a unique ring– it has a florid body with 24 controllable LEDs. Maybe i
 
 ##   Schematic
 ---
-![](https://github.com/SeeedDocument/Grove-Circular_LED/raw/master/img/Circular_LED_schmatic.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Circular_LED/img/Circular_LED_schmatic.jpg)
 
 ##   Specification
 ---
@@ -76,7 +76,7 @@ This is a unique ring– it has a florid body with 24 controllable LEDs. Maybe i
 
 ##   Interface
 ---
-![](https://github.com/SeeedDocument/Grove-Circular_LED/raw/master/img/Circular_LED_Interface.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Circular_LED/img/Circular_LED_Interface.jpg)
 
 ##   Getting Started
 
@@ -85,7 +85,7 @@ This is a unique ring– it has a florid body with 24 controllable LEDs. Maybe i
 
 | Seeeduino V4.2 | Base Shield |Grove - Circular LED|
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Circular_LED/raw/master/img/Circular_LED_S.jpg)
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Circular_LED/img/Circular_LED_S.jpg)
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Circular-LED-p-1353.html)|
 
 
@@ -178,9 +178,9 @@ Upload the program to your Arduino/Seeeduino.
 ---
 - [CircularLED Library](https://github.com/Seeed-Studio/Grove_LED_Bar)
 
-- [Grove Circular LED schematics PDF File](https://github.com/SeeedDocument/Grove-Circular_LED/raw/master/res/Circular_LED_v0.9b.pdf)
+- [Grove Circular LED schematics PDF File](https://files.seeedstudio.com/wiki/Grove-Circular_LED/res/Circular_LED_v0.9b.pdf)
 
-- [Grove-circular LED eagle files](https://github.com/SeeedDocument/Grove-Circular_LED/raw/master/res/Grove-circular_LED_eagle_files.zip)
+- [Grove-circular LED eagle files](https://files.seeedstudio.com/wiki/Grove-Circular_LED/res/Grove-circular_LED_eagle_files.zip)
 
 - [Codecraft CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove-Circular_LED/master/res/Grove_Circular_LED_CDC_File.zip)
 

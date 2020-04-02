@@ -8,11 +8,11 @@ surveyurl: https://www.research.net/r/xadow_BLE
 sku: 113040002
 ---
 
-![](https://github.com/SeeedDocument/Xadow_BLE/raw/master/img/813004001xadow_ble.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_BLE/img/813004001xadow_ble.jpg)
 
 The Xadow - BLE is a Bluetooth Smart enabled Xadow form factor module based on HM-11 module. The Xadow - BLE can be used in hardware setups, where normally an Xadow module is used. Using a Xadow - BLE an Xadow enabled embedded system can communicate with desktop computers, smartphones, table computers and even other embedded systems providing Bluetooth Smart aka Bluetooth Low Energy (BLE).
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-BLE-p-1727.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-BLE-p-1727.html)
 
 
 ## Features
@@ -60,7 +60,7 @@ The Xadow - BLE is a Bluetooth Smart enabled Xadow form factor module based on H
 
 ## Pin definition
 ---
-![](https://github.com/SeeedDocument/Xadow_BLE/raw/master/img/Xadow_ble_pin.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_BLE/img/Xadow_ble_pin.jpg)
 
 !!!Note
     Only important alternate functions are listed, may have more, please refer to datasheet.
@@ -236,24 +236,24 @@ void loop()
 ## Android BLE Communication
 ---
 Here we show you how to make Xadow - BLE communicate with your Android mobile phone（Note: your android system version should be up than 4.3).
-1. Download the android APP [here](https://github.com/SeeedDocument/Xadow_BLE/raw/master/res/HMBLEComAssistant.rar) ,and install it to your android mobile phone.
+1. Download the android APP [here](https://files.seeedstudio.com/wiki/Xadow_BLE/res/HMBLEComAssistant.rar) ,and install it to your android mobile phone.
 2. Connect your xadow BLE with Xadow mainboard, and then copy the Xadow BLE Slave device demo code above, compile and upload it to the Xadow MainBoard.
 3. Open an Serial Tool(e.g. SSCOM32), and open the Serial Port of Xadow MainBoard.
 4. Open the BLE Example APK that you installed in the first step, it will be as follow:
 
-![](https://github.com/SeeedDocument/Xadow_BLE/raw/master/img/Ble_start.png)
+![](https://files.seeedstudio.com/wiki/Xadow_BLE/img/Ble_start.png)
 
 5. click the start button in the center of UI, it will start to scan for BLE slave devices.The Scan result will be shown in the dialog list.
 
-![](https://github.com/SeeedDocument/Xadow_BLE/raw/master/img/Ble_scanResult.png)
+![](https://files.seeedstudio.com/wiki/Xadow_BLE/img/Ble_scanResult.png)
 
 6. Select the Seeed BLE, it will try to connect the Xadow BLE automatically.
 7. After you connect the ble slave device successfully,You will find that the UUID is null and you need to pick up one from the list of Characteristics UUID List, Here we choose the UUID:0000ffe1-0000-1000-8000-00805f9b34fb
 
-![](https://github.com/SeeedDocument/Xadow_BLE/raw/master/img/Ble_UUIDSelected.png)
+![](https://files.seeedstudio.com/wiki/Xadow_BLE/img/Ble_UUIDSelected.png)
 
 8. OK, the exciting moment has come! Input the command(data) to the textbox, and then click the Send button, the message will be send to the specified ble devices. and the recv textbox will show the message from the slave devices, just as follow. Have fun!
-![](https://github.com/SeeedDocument/Xadow_BLE/raw/master/img/Ble_sendData.png)![](https://github.com/SeeedDocument/Xadow_BLE/raw/master/img/Ble_recvData.png)
+![](https://files.seeedstudio.com/wiki/Xadow_BLE/img/Ble_sendData.png)![](https://files.seeedstudio.com/wiki/Xadow_BLE/img/Ble_recvData.png)
 
 
 ## Schematic Online Viewer
@@ -264,11 +264,11 @@ Here we show you how to make Xadow - BLE communicate with your Android mobile ph
 
 ## Resources
 ---
-- [Xadow-BLE_v1.0 Eagle File](https://github.com/SeeedDocument/Xadow_BLE/raw/master/res/Xadow-BLE_v1.0_20131224.zip)
-- [BLE_apk_for_Android](https://github.com/SeeedDocument/Xadow_BLE/raw/master/res/HMBLEComAssistant.rar)
-- [DataSheet of BLE module](https://github.com/SeeedDocument/Xadow_BLE/raw/master/res/Bluetooth4_en.pdf)
+- [Xadow-BLE_v1.0 Eagle File](https://files.seeedstudio.com/wiki/Xadow_BLE/res/Xadow-BLE_v1.0_20131224.zip)
+- [BLE_apk_for_Android](https://files.seeedstudio.com/wiki/Xadow_BLE/res/HMBLEComAssistant.rar)
+- [DataSheet of BLE module](https://files.seeedstudio.com/wiki/Xadow_BLE/res/Bluetooth4_en.pdf)
 - [BLE Android Source Code On GitHub](https://github.com/Seeed-Studio/BLE_Example)
-- [4.0 BLE IOS6 Source Code](https://github.com/SeeedDocument/Xadow_BLE/raw/master/res/HMSoft_ios6.zip)
+- [4.0 BLE IOS6 Source Code](https://files.seeedstudio.com/wiki/Xadow_BLE/res/HMSoft_ios6.zip)
 - [4.0 BLE IOS7 Source Code](https://github.com/SeeedDocument/Xadow_BLE/blob/master/res/File-HMSoft_ios7.zip)
 - [4.0 BLE Android Source Code](https://github.com/SeeedDocument/Xadow_BLE/blob/master/res/File-BluetoothLeGatt.rar)
 - [More Documents URL](http://www.huamaosoft.com/index_en.asp?page=2&ID=1)

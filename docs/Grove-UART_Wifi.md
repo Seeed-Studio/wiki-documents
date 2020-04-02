@@ -9,7 +9,7 @@ sku: 113020010
 ---
 
 
-![enter image description here](https://github.com/SeeedDocument/Grove-Uart_Wifi/raw/master/img/main.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/img/main.jpg)
 
 Grove - UART WiFi is a serial transceiver module featuring the ubiquitous ESP8266 IoT SoC. With integrated TCP/IP protocol stack, this module lets your micro-controller interact with WiFi networks with only a few lines of code. Each ESP8266 module comes pre-programmed with an AT command set firmware, meaning you can send simple text commands to control the device. The SoC features integrated WEP, WPA/WPA2, TKIP, AES, and WAPI engines, can act as an access point with DHCP, can join existing WiFi networks and has configurable MAC and IP addresses.
 
@@ -29,7 +29,7 @@ Grove - UART WiFi is a serial transceiver module featuring the ubiquitous ESP826
 |Button|1 Button: <br>Short press to **Reset** <br>Long press to enter **UART boot mode**</br>|2 Buttons for those two functions|
 
 
-![](https://github.com/SeeedDocument/Grove-Uart_Wifi/raw/master/img/Version_tracker.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/img/Version_tracker.jpg)
 
 
 
@@ -155,7 +155,7 @@ After this section, you can make Grove - UART WiFi run with only few steps.
 
 | Seeeduino Lite | Grove-OLED |Grove-UART Wifi|
 |--------------|-----------------|-----|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/lite.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/images/grove%20oled%200.96_s.jpg)|![](https://github.com/SeeedDocument/Grove-Uart_Wifi/raw/master/img/thumbnail.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/lite.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/grove%20oled%200.96_s.jpg)|![](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/img/thumbnail.jpg)|
 |<a href="https://www.seeedstudio.com/Seeeduino-Lite-p-1487.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove---OLED-Display-0.96%22-p-781.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Uart-Wifi-p-2495.html" target="_blank">Get One Now</a>|
 
 
@@ -176,7 +176,7 @@ After this section, you can make Grove - UART WiFi run with only few steps.
 - **Step 3.** Connect Seeeduino Lite to PC via a Micro-USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-Uart_Wifi/raw/master/img/Arduino_connect_1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/img/Arduino_connect_1.jpg)
 
 
 
@@ -361,7 +361,7 @@ Our module board got a firmware burned into it for factory settings, you can bur
 
 
 
-![](https://github.com/SeeedDocument/Grove-Uart_Wifi/raw/master/img/UART_v1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/img/UART_v1.jpg)
 
 
 **Step 2.** Then connecting cables like following figure:
@@ -375,8 +375,8 @@ Our module board got a firmware burned into it for factory settings, you can bur
 
 **Step 1.** Download burning tool and firmware
 
-* [FLASH DOWNLOAD TOOLS](https://github.com/SeeedDocument/Grove-Uart_Wifi/raw/master/res/FLASH_DOWNLOAD_TOOLS_v1.2_150512.zip)
-* [Bin files of firmware](https://github.com/SeeedDocument/Grove-Uart_Wifi/raw/master/res/Grove-uart-wifi-firmware-bin.zip)
+* [FLASH DOWNLOAD TOOLS](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/res/FLASH_DOWNLOAD_TOOLS_v1.2_150512.zip)
+* [Bin files of firmware](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/res/Grove-uart-wifi-firmware-bin.zip)
 
 
 
@@ -428,7 +428,7 @@ You can use any serial Tools you like, we use Arduino here. And please make sure
 
 **Step 1.** Open the Arduino IDE, Click **Tools** choose the corresponding **Port**.
 
-![](https://github.com/SeeedDocument/Grove-Uart_Wifi/raw/master/img/1.png)
+![](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/img/1.png)
 
 
 **Step 2.** Then click the <embed src="https://github.com/SeeedDocument/Grove-Uart_Wifi/raw/master/img/COM.png"> button on the upper right corner to open the **Serial Monitor** of Arduino.
@@ -436,7 +436,7 @@ You can use any serial Tools you like, we use Arduino here. And please make sure
 **Step 3.** Set the Serial Monitor as the following picture. Particularly :2- Select **Both NL & CR**, 3-Set the **baud rate** to 115200
 
 
-![](https://github.com/SeeedDocument/Grove-Uart_Wifi/raw/master/img/result.png)
+![](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/img/result.png)
 
 **Step 3.** Tap the AT command you need in the command line then click the **Send** button. You will see the return information as the picture above.
 

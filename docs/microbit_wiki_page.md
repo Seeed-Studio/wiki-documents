@@ -9,7 +9,7 @@ sku:
 tags:
 ---
 
-![](https://github.com/SeeedDocument/All_bazaar_image/raw/master/Microbit.jpg)
+![](https://files.seeedstudio.com/wiki/All_bazaar_image/Microbit.jpg)
 
 ## Micro:bit Introduction
 
@@ -65,7 +65,7 @@ Please refer to the github page
 
 Please download the ppt file
 
-[Use microbit to control WS2812 LEDs](https://github.com/SeeedDocument/Micro-bit_start/raw/master/Use%20microbit%20to%20control%20WS2812%20LEDs.pptx)
+[Use microbit to control WS2812 LEDs](https://files.seeedstudio.com/wiki/Micro-bit_start/Use%20microbit%20to%20control%20WS2812%20LEDs.pptx)
 
 
 

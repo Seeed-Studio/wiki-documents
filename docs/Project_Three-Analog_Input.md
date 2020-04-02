@@ -18,7 +18,7 @@ The purpose of this sketch is to demonstrate a form of analog input using the po
 3.  Connect the Potentiometer to the Analog A0/A1 input jack.
 
 4.  The Potentiometer produces an analog voltage on its D1 output, which is connected to Arduino A0 analog input on the A0/A1 input jack.
-![](https://github.com/SeeedDocument/Project_Three-Analog_Input/raw/master/img/Conn-three.jpg)
+![](https://files.seeedstudio.com/wiki/Project_Three-Analog_Input/img/Conn-three.jpg)
 
 _**Now upload the following Arduino sketch:**_
 ```

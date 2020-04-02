@@ -11,7 +11,7 @@ sku:      105990002
 
 SDLogger is a simple serial logger based on [SparkFun](http://www.sparkfun.com/)/[Nathan Seidle's OpenLog](https://github.com/sparkfun/OpenLog/wiki/). It is using an ATmega644P processor running at 14.7456MHz and logs to full-size SD cards. It supports both standard SD cards (FAT16) and SDHC cards (FAT32). SDLogger ships with OpenLog firmware 1.61 installed (compiled with SDHC/FAT32 support and large 2048 character input buffer) together with an Arduino-compatible bootloader for easy program update.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/sdlogger-open-hardware-data-logger-p-723.html?cPath=132_136)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/sdlogger-open-hardware-data-logger-p-723.html?cPath=132_136)
 
 
 ##   Features

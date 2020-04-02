@@ -9,7 +9,7 @@ sku: 103030275
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/main.jpg)
 
 Today, the grove series of sensors, actuators, and displays have grown into a large family. More and more grove modules will join the whole Grove ecosystem in the future. We see the Grove helps makers, engineers, teachers, students and even artists to build, to make, to create...We always feel it is our responsibility to make the Grove module compatible with more platforms. Now we bring you the Grove Base Hat for Raspberry Pi and [Grove Base Hat for Raspberry Pi Zero](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-Zero-p-3187.html), in another word, we bring the Raspberry Pi the whole Grove System.
 
@@ -54,7 +54,7 @@ Frankly speaking, it's about 60 Grove modules support the Grove Base Hat for Ras
 
 **Overview**
 
-![](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/pin-out/overview.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/pin-out/overview.jpg)
 
         
 
@@ -62,7 +62,7 @@ Frankly speaking, it's about 60 Grove modules support the Grove Base Hat for Ras
 
 The same pin out as the raspberry pi.
 
-![](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/pin-out/1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/pin-out/1.jpg)
 
 **PWM(pulse-width modulation)**
 
@@ -78,20 +78,20 @@ The Grove PWM Port connect to GPIO/BCM pin12(PWM0) and GPIO/BCM pin13(PWM1), whi
         3- The audio jack output also uses PWM 0 and PWM 1, so you can't have audio output on that socket and use the PWMs at the same time.
 
 
-![](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/pin-out/3.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/pin-out/3.jpg)
 
 **UART**
 
 The Grove UART port connect to the GPIO14(UART0 TX) and GPIO15(UART0 RX). UART is commonly used on the Pi as a convenient way to control it over the GPIO, or access the kernel boot messages from the serial console (enabled by default).It can also be used as a way to interface an Arduino, bootloaded ATmega, ESP8266, etc with your Pi.
 
-![](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/pin-out/2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/pin-out/2.jpg)
 
 
 **Digital**
 
 There are 6 digital Grove sockets in this board, normally the yellow wire(which connect to the top pin of the 4 pins Grove socket as) of Grove cable is the signal wire, so we name the digital Grove port **D5/D16/D18/D22/D24/D26**. 
 
-![](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/pin-out/4.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/pin-out/4.jpg)
 
 
 **Analog**
@@ -100,21 +100,21 @@ As we know, there is no ADC in the Raspberry Pi, so it can not work with analog 
 
 The analog sensor inputs the analog voltage into the 12-bit ADC. After the ADC convert the analog data to digital data, it input the digital data to the Raspberry Pi through the I2C interface.
 
-![](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/pin-out/5.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/pin-out/5.jpg)
 
 
 **I2C**
 
 There are three I2C port available in this board, they all connect to the I2C pin of the raspberry directly. You can consider this part as an I2C hub. Most of seeed's new grove modules have I2C interface,  you may find those three port is extremely useful.
 
-![](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/pin-out/7.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/pin-out/7.jpg)
 
 
 **SWD**
 
 We use SWD port to burn the firmware to this hat. In addition, you can see 3 GPIO pins in this section, i.e., **pin 9/pin 10/pin 11**. Those three pins do not used by any Grove port, you are free to use them without worrying about pin conflicts.
 
-![](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/pin-out/6.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/pin-out/6.jpg)
 
 
 **Grove Base Hat for Raspberry Pi Vs. GrovePi+**
@@ -238,7 +238,7 @@ We will take the [Grove - buzzer](https://www.seeedstudio.com/Grove-Buzzer-p-768
 
 *Hardware connection diagram*
 
-![](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/connect1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/connect1.jpg)
 
 
 Tap the following command `sudo grove_pwm_buzzer` in the command line interface.
@@ -267,7 +267,7 @@ We will take the [Grove - Ultrasonic Ranger](https://www.seeedstudio.com/Grove-U
 
 *Hardware connection diagram*
 
-![](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/connect2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/connect2.jpg)
 
 Tap the following command `grove_ultrasonic_ranger 5 6` in the command line interface.
 
@@ -306,7 +306,7 @@ We will take the [Grove - Air quality sensor v1.3](https://www.seeedstudio.com/G
 
 *Hardware connection diagram*
 
-![](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/connect3.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/connect3.jpg)
 
 Tap the following command `grove_air_quality_sensor_v1_3 0 1` in the command line interface.
 
@@ -349,7 +349,7 @@ We will take the [Grove - OLED Display 128x64](https://www.seeedstudio.com/Grove
 
 *Hardware connection diagram*
 
-![](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/connect4.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/connect4.jpg)
 
 Tap the following command `grove_oled_display_128x64` in the command line interface.
 
@@ -373,13 +373,13 @@ It seems nothing happened, however you can find the most famous sentence in the 
 
 ## Resources
 
-- **[Zip]** [Grove Base Hat for Raspberry Pi Eagle Files](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/res/Raspberry%20Pi%20Grove%20Base%20HAT%20v1.0.zip)
+- **[Zip]** [Grove Base Hat for Raspberry Pi Eagle Files](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/res/Raspberry%20Pi%20Grove%20Base%20HAT%20v1.0.zip)
 
 - **[Zip]** [Seeed Grove.py Library](https://github.com/Seeed-Studio/grove.py/archive/master.zip)
 
-- **[Zip]** [Firmware](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/res/grove_rpi_base_hat-v0.2-20180905-02.zip)
+- **[Zip]** [Firmware](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/res/grove_rpi_base_hat-v0.2-20180905-02.zip)
 
-- **[PDF]** [STM32 Datasheet](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/res/STM32.pdf)
+- **[PDF]** [STM32 Datasheet](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/res/STM32.pdf)
 
 
 

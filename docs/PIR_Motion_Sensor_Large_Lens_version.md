@@ -7,11 +7,11 @@ prodimagename:  Pir_motion_sensor_v1.0.jpg
 surveyurl: https://www.research.net/r/PIR_Motion_sensor_module
 sku:   113990020
 ---
-![](https://github.com/SeeedDocument/PIR_Motion_sensor_module/raw/master/img/Pir_motion_sensor_v1.0.jpg)
+![](https://files.seeedstudio.com/wiki/PIR_Motion_sensor_module/img/Pir_motion_sensor_v1.0.jpg)
 
 PIR（Passive Infrared Detection）are used to detect motion of human movement. This version has a large lens which can support long range and wide angle. 2.54mm standard connector is easy to fix it anywhere.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/pir-motion-sensor-module-p-74.html?cPath=84_88&zenid=020999c566d2f31841dc54602b7d02ef)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/pir-motion-sensor-module-p-74.html?cPath=84_88&zenid=020999c566d2f31841dc54602b7d02ef)
 
 ##   Features
 ---
@@ -42,7 +42,7 @@ PIR（Passive Infrared Detection）are used to detect motion of human movement. 
 ---
 The following sketch demonstrates a simple application of sensing montion. When someone moves in its detecting range, it will output High through its SIG pin and the LED will light. Otherwise, it will output LOW. Then you can use it to detect the motion of people.
 
-![](https://github.com/SeeedDocument/PIR_Motion_sensor_module/raw/master/img/PIR_motion_sensor_module_connection.JPG)
+![](https://files.seeedstudio.com/wiki/PIR_Motion_sensor_module/img/PIR_motion_sensor_module_connection.JPG)
 
 ###   Programming
 
@@ -105,7 +105,7 @@ boolean isPeopleDetected()
 
 ##   Resources
 ---
-- [PIR Motion sensor Eagle file](https://github.com/SeeedDocument/PIR_Motion_sensor_module/raw/master/res/PIR_sensor_v1.0.zip)
+- [PIR Motion sensor Eagle file](https://files.seeedstudio.com/wiki/PIR_Motion_sensor_module/res/PIR_sensor_v1.0.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

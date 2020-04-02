@@ -102,7 +102,7 @@ void loop() {
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
-![](https://github.com/SeeedDocument/Grove-EL_Driver/raw/master/img/EL_Driver.png)
+![](https://files.seeedstudio.com/wiki/Grove-EL_Driver/img/EL_Driver.png)
 
 Upload the program to your Arduino/Seeeduino.
 
@@ -120,7 +120,7 @@ Resources
 
 -   [sch_pcb_eagle](https://raw.githubusercontent.com/SeeedDocument/Grove-EL_Driver/master/res/Grove-EL_Driver_v1.0.zip)
 -   [sch_pdf](https://raw.githubusercontent.com/SeeedDocument/Grove-EL_Driver/master/res/Grove-EL_Driver_v1.0.pdf)
--   [CodeCraft Library](https://github.com/SeeedDocument/Grove-EL_Driver/raw/master/res/EL%20Driver.zip)
+-   [CodeCraft Library](https://files.seeedstudio.com/wiki/Grove-EL_Driver/res/EL%20Driver.zip)
 
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_EL_Driver -->

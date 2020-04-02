@@ -8,7 +8,7 @@ surveyurl:  https://www.research.net/r/ReSpeaker_Drive_Unit
 sku:     
 ---
 
-![](https://github.com/SeeedDocument/ReSpeaker_Drive_Unit/raw/master/img/Meow_King_Drive_Unit.jpg)
+![](https://files.seeedstudio.com/wiki/ReSpeaker_Drive_Unit/img/Meow_King_Drive_Unit.jpg)
 
 ReSpeaker Drive Unit is specially designed for ReSpeaker Core, as a separate speaker drive unit.
 

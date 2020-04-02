@@ -130,7 +130,7 @@ Download the [library](https://github.com/Seeed-Studio/Accelerometer_And_Gyrosco
 # Resources
 ---------
 
-- **[Eagle]** [Grove - 6-Axis Accelerometer&Gyroscopev 1.0 Eagle file](https://github.com/SeeedDocument/Grove-6-Axis_AccelerometerAndGyroscope/raw/master/res/Grove%20-%206-Axis%20Accelerometer%26Gyroscope%20v1.0.zip)
+- **[Eagle]** [Grove - 6-Axis Accelerometer&Gyroscopev 1.0 Eagle file](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndGyroscope/res/Grove%20-%206-Axis%20Accelerometer%26Gyroscope%20v1.0.zip)
 -  **[Library]** [Grove-6-Axis_AccelerometerAndGyroscope](https://github.com/Seeed-Studio/Accelerometer_And_Gyroscope_LSM6DS3)
 -  **[Datasheet]** [Datasheet of LSM6DS3](https://raw.githubusercontent.com/SeeedDocument/Grove-6-Axis_AccelerometerAndGyroscope/master/res/LSM6DS3TR.pdf)
 

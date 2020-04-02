@@ -7,7 +7,7 @@ prodimagename:  BasicKit.jpg
 surveyurl: https://www.research.net/r/Sidekick_Basic_Kit_for_Arduino_V2
 sku:  110060025
 ---
-![](https://github.com/SeeedDocument/Sidekick_Basic_Kit_for_Arduino_V2/raw/master/img/BasicKit.jpg)
+![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/BasicKit.jpg)
 
 The Arduino Sidekick Basic Kit is designed to be used with your Arduino / Seeeduino / Seeeduino ADK / Maple Lilypad or any MCU board. It contains everything needed for a first-time user to connect his/her computer to an Arduino. It includes many of the most popular accessories for DIY projects : like Breadboard, Jumper wires, Color LEDs, Resistors, Buzzer, etc.
 All of these coming with its own handy box are easy transport and minimal clutter.
@@ -16,7 +16,7 @@ All of these coming with its own handy box are easy transport and minimal clutte
 
 ##   Kit Contents
 
-![](https://github.com/SeeedDocument/Sidekick_Basic_Kit_for_Arduino_V2/raw/master/img/Sidekick_Basic_Kit_for_Arduino_Photo_11.jpg)
+![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Sidekick_Basic_Kit_for_Arduino_Photo_11.jpg)
 
 | Item                    | Quantity                       |
 |-------------------------|--------------------------------|
@@ -66,17 +66,17 @@ Resistors are obstacles of the flowing current in a conductor. They are used to 
 The relations among Current, Voltage and Resistance are governed by Ohm's Law - which states that "The current through a conductor (I Amperes) between two points is directly proportional to the potential difference or voltage across the two points (V Volts), and inversely proportional to the resistance between them (R Ohms)"
 i.e I = V / R. Hence V = IR or R = V / I. The following Ohm's Law triangle can be used to remember the relationship between V, I and R. The vertical line indicates multiplication operation and horizontal line indicates division operation.
 
-![](https://github.com/SeeedDocument/Sidekick_Basic_Kit_for_Arduino_V2/raw/master/img/Ohm-s_law_triange.jpg)
+![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Ohm-s_law_triange.jpg)
 
 eg: Hence to know current I, we divide V by R.
 
 **Breadboard**
 
-![](https://github.com/SeeedDocument/Sidekick_Basic_Kit_for_Arduino_V2/raw/master/img/Breadboard_.jpg)
+![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Breadboard_.jpg)
 
 **Breadboard** is a prototyping device for electronic circuits. It is very useful to connect electronic components and to make a circuit without soldering. Breadboard consists of rows and columns of holes with metal contacts to insert components. The breadboard supplied with Arduino Sidekick Basic Kit is arranged of **2 X 30 five-hole** columns and **4 X twenty five-hole** rows. These holes are connected internally in a manner as illustrated below.
 
-![](https://github.com/SeeedDocument/Sidekick_Basic_Kit_for_Arduino_V2/raw/master/img/Arduino_Sidekick_Breadboard_Internal_Connections.jpg)
+![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Arduino_Sidekick_Breadboard_Internal_Connections.jpg)
 
 **Fixed Resistors**
 
@@ -94,25 +94,25 @@ The resistors supplied with Basic Kit are made of carbon and have fixed value ty
 
 POT is a variable resistor whose resistance can be changed by rotating the knob. It has three terminals - the terminals on the ambilateral sides of the resistor are connected to ends of conductor which is made of resistive material. The middle terminal is connected to a slider which moves over the resistive material. The value of resistance changes proportionally to the position of the knob.
 
-![](https://github.com/SeeedDocument/Sidekick_Basic_Kit_for_Arduino_V2/raw/master/img/Sidekick_POT.png)
+![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Sidekick_POT.png)
 
 **Thermistors**
 
 Thermistors are special resistors whose resistance will be changed with the temperature around it. They provide very useful and convenient way to sense the temperature difference.
 
-![](https://github.com/SeeedDocument/Sidekick_Basic_Kit_for_Arduino_V2/raw/master/img/Sidekick_Thermistor.JPG)
+![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Sidekick_Thermistor.JPG)
 
 **Light Dependent Resistors (LDR)**
 
 LDR will change the resistance when the intensity of light falling on them changes. They are also called photocell. It offers maximum resistance when there is no light falling on it and gives minimum resistance when exposed to bright light. It is made up of photo sensitive material like Cadmium Sulphide and can be connected to the circuit. It can be used as a light sensing element.
 
-![](https://github.com/SeeedDocument/Sidekick_Basic_Kit_for_Arduino_V2/raw/master/img/Sidekick_LDR.JPG)
+![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Sidekick_LDR.JPG)
 
 **Light Emitting Diodes**
 
 LEDs emit will light up when it is forward biased. They are encapsulated in a transparent casing and come in various colors like red, green and blue. LEDs are made of gallium arsenide phosphide, and by altering the proportions of arsenic and phosphorus, different colors can be obtained. Monocolor LEDs have two leads Anode( +ve ) and Cathode (-ve).  Tricolor LEDs have 4 Leads - one anode and 3 cathodes for each color.The LEDs can be used in display boards.
 
-![](https://github.com/SeeedDocument/Sidekick_Basic_Kit_for_Arduino_V2/raw/master/img/Sidekick_RGB_LED_.JPG)
+![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Sidekick_RGB_LED_.JPG)
 
 **Switch**
 
@@ -122,13 +122,13 @@ The switches are used to close or open the circuit. The switches supplied with B
 
     The circuit will be closed as long as you press the push button switch.
 
-![](https://github.com/SeeedDocument/Sidekick_Basic_Kit_for_Arduino_V2/raw/master/img/Sidekick_Push_Button_Switch_.JPG)
+![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Sidekick_Push_Button_Switch_.JPG)
 
 - **Slide Switch**
 
     Slide switch is a simple two positions switch. It can be used to open or close a circuit by setting it to appropriate position.
 
-![](https://github.com/SeeedDocument/Sidekick_Basic_Kit_for_Arduino_V2/raw/master/img/Sidekick_Slide_Switch_.JPG)
+![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Sidekick_Slide_Switch_.JPG)
 
 - **Tilt Switch**
 
@@ -138,7 +138,7 @@ The switches are used to close or open the circuit. The switches supplied with B
 
 Capacitors are used to store electric charge. They are classified into two different types: Electrolytic and Ceramic disc Capacitor. Capacitors are expressed in terms of micro Farads (uF).
 
-![](https://github.com/SeeedDocument/Sidekick_Basic_Kit_for_Arduino_V2/raw/master/img/Sidekick_Capacitor.JPG)
+![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Sidekick_Capacitor.JPG)
 
 - **Connecting the Capacitor**
 
@@ -165,7 +165,7 @@ Capacitors are used to store electric charge. They are classified into two diffe
 
 A buzzer is an audio signaling device, which may be mechanical, electromechanical, or Piezoelectric. It produces various audio signal based on the oscillation of the material used in it. They are commonly used in alarms and timers.
 
-![](https://github.com/SeeedDocument/Sidekick_Basic_Kit_for_Arduino_V2/raw/master/img/Sidekick_Buzzer.png)
+![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Sidekick_Buzzer.png)
 
 Connect the long pin to the positive voltage, and the short pin to ground.
 
@@ -179,13 +179,13 @@ A diode is a semi conducting material that conducts current only in one directio
 
     Applying voltage to a diode is called biasing a diode.The diode gets **forward biased** when a **positive supply** voltage is applied across the terminals and starts conducting above _0.7v for a silicon diode_ and _0.3v for a germanium diode_.When a **negative voltage** is applied across the terminals of a diode, it is said to be** _reverse biased_**. The diode gets damaged when the reverse biasing voltage exceeds breakdown voltage_._
 
-![](https://github.com/SeeedDocument/Sidekick_Basic_Kit_for_Arduino_V2/raw/master/img/Sidekick_Diode.JPG)
+![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Sidekick_Diode.JPG)
 
 **Mini Servo**
 
 Servos are DC motors with gearing and feedback system.They are used in driving mechanism of robots.
 
-![](https://github.com/SeeedDocument/Sidekick_Basic_Kit_for_Arduino_V2/raw/master/img/Mini_Servo_Photo.jpg)
+![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Mini_Servo_Photo.jpg)
 
 ## Lessons
 
@@ -193,7 +193,7 @@ Servos are DC motors with gearing and feedback system.They are used in driving m
 
 - **Hardware**
     - Connect an LED to Digital Pin 8 as shown below. The 330 Ohm resistor limits the current flowing to the LED.
-![](https://github.com/SeeedDocument/Sidekick_Basic_Kit_for_Arduino_V2/raw/master/img/Arduino_Sidekick_1LED_Blink.jpg)
+![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Arduino_Sidekick_1LED_Blink.jpg)
 
 - **Software**
 
@@ -221,7 +221,7 @@ void loop()
 - **Hardware**
 
     - Connect 3 LEDs to Digital Pins 9, 10 and 11 via a 330 Ohms resistor each.
-![](https://github.com/SeeedDocument/Sidekick_Basic_Kit_for_Arduino_V2/raw/master/img/Arduino_Sidekick_3LEDs_Display.jpg)
+![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Arduino_Sidekick_3LEDs_Display.jpg)
 
 - **Software**
 
@@ -267,7 +267,7 @@ void loop()
 
     *   Connect other end of Push button to +5V.
 
-![](https://github.com/SeeedDocument/Sidekick_Basic_Kit_for_Arduino_V2/raw/master/img/Arduino_Sidekick_Pushbutton_LED.jpg)
+![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Arduino_Sidekick_Pushbutton_LED.jpg)
 
 - **Software**
 
@@ -340,7 +340,7 @@ void loop()
     *   Connect the middle leg of the Pot to any of the Analog input pins(0-5).
 
     *   Connect left leg of the Pot to  the Ground Terminal.
-![](https://github.com/SeeedDocument/Sidekick_Basic_Kit_for_Arduino_V2/raw/master/img/Arduino_Sidekick_potled1.jpg)
+![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Arduino_Sidekick_potled1.jpg)
 
 - **Software**
 
@@ -373,7 +373,7 @@ void loop()
 
     - Connect RGB cathodes LEDs to Digital Pins 9, 10 and 11 via a 330 Ohms resistor each.
     - Connect Anode to +5v
-![](https://github.com/SeeedDocument/Sidekick_Basic_Kit_for_Arduino_V2/raw/master/img/Arduino_Sidekick_RGB_LED_Display.jpg)
+![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Arduino_Sidekick_RGB_LED_Display.jpg)
 
 **Software**
 
@@ -412,7 +412,7 @@ void loop()  {
     *   Connect buzzer anode to Digital Pins 11.
 
     *   Connect buzzer negative to GND
-![](https://github.com/SeeedDocument/Sidekick_Basic_Kit_for_Arduino_V2/raw/master/img/Arduino_Sidekick_Music.jpg)
+![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Arduino_Sidekick_Music.jpg)
 
 - **Software**
 
@@ -491,7 +491,7 @@ void loop()
     *   Connect the middle leg of the Pot to any of the Analog input pins(0-5).
 
     *   Connect the left leg of the Pot to the Ground Terminal.
-![](https://github.com/SeeedDocument/Sidekick_Basic_Kit_for_Arduino_V2/raw/master/img/Arduino_Sidekick_Mini_Servo.jpg)
+![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Arduino_Sidekick_Mini_Servo.jpg)
 
 - **Software**
 

@@ -20,17 +20,17 @@ Servo motor (servo) is commonly used in small robots and other machines to contr
 
 **Schematic**
 
-![](https://github.com/SeeedDocument/LinkIt-ONE-Tutorial---Mini-Servo/raw/master/img/LinkItONE_Kit_7_1.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIt-ONE-Tutorial---Mini-Servo/img/LinkItONE_Kit_7_1.jpg)
 
 **Connection**
 
-![](https://github.com/SeeedDocument/LinkIt-ONE-Tutorial---Mini-Servo/raw/master/img/LinkItONE_Kit_7_2.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIt-ONE-Tutorial---Mini-Servo/img/LinkItONE_Kit_7_2.jpg)
 
 **Code**
 
 Please click on the button below to download the code for the kit:
 
-[![](https://github.com/SeeedDocument/LinkIt-ONE-Tutorial---Mini-Servo/raw/master/img/Code_sidekick_linkit.png)](https://github.com/Seeed-Studio/Sidekick_Basic_Kit_for_LinkIt)
+[![](https://files.seeedstudio.com/wiki/LinkIt-ONE-Tutorial---Mini-Servo/img/Code_sidekick_linkit.png)](https://github.com/Seeed-Studio/Sidekick_Basic_Kit_for_LinkIt)
 
 You can unzip the file to the **Examples** folder of your Arduino IDE.
 

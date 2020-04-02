@@ -8,11 +8,11 @@ surveyurl: https://www.research.net/r/Bluetooth_Bee-Standalone
 sku:  113050004
 ---
 
-![](https://github.com/SeeedDocument/Bluetooth_Bee_Standalone/raw/master/img/P3302883_02.jpg)
+![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_Standalone/img/P3302883_02.jpg)
 
 Save that extra Arduino you have lying around for another project, this two-for-one device has the Arduino built-in. Bluetooth Bee with Arduino is an enhanced version of the Bluetooth Bee. We added an onboard ATMEGA168 to it to make it a full-featured Arduino while maintaining the same footprint and instruction set as the Bluetooth Bee. Plus, it still allows you to stack it on XBee Carrier, XBee® Shield, and UartSBee for expansion or reprogramming.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Bluetooth-Bee-Standalone-p-1157.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Bluetooth-Bee-Standalone-p-1157.html)
 
 ##   Features
 ---
@@ -59,7 +59,7 @@ Save that extra Arduino you have lying around for another project, this two-for-
 ##   Pin definition and Rating
 ---
 Bottom-view:
- ![](https://github.com/SeeedDocument/Bluetooth_Bee_Standalone/raw/master/img/Bluetooth-standalone_pin.jpg)
+ ![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_Standalone/img/Bluetooth-standalone_pin.jpg)
 
 - PD4 - PD7 = Arduino IDE digital pins 4 - 7  (5,6 PWM)
 
@@ -76,7 +76,7 @@ Example : Use Bluetooth Bee-Standalone to control a [Grove-Red_LED](/Grove-Red_L
 
 Connect Grove-Red_LED and Bluetooth Bee-Standalone module to XBee carrier like this.
 
-![](https://github.com/SeeedDocument/Bluetooth_Bee_Standalone/raw/master/img/Bluetooth_Bee-Standalone3.jpg)
+![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_Standalone/img/Bluetooth_Bee-Standalone3.jpg)
 
 - Step 2
 
@@ -207,13 +207,13 @@ Connect the XBee carrier to computer with USB-cable and uploading the program to
 
 Remove the USB-cable form XBee carrier and connect the 3.7-Voltage battery to XBee carrier like this.
 
-![](https://github.com/SeeedDocument/Bluetooth_Bee_Standalone/raw/master/img/Bluetooth_Bee-Standalone2.jpg)
+![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_Standalone/img/Bluetooth_Bee-Standalone2.jpg)
 
 - Step 5
 
 Use another Bluetooth Bee connect to the Bluetooth Bee-Standalone.How to connect? You can refer to [Bluetooth Bee](/Bluetooth_Bee).When you are connected,you can control the LED by another Bluetooth Bee.The LED will work when you send "ON" to Bluetooth Bee-Standalone and it will be off when you send "SH"(short for SHUT).
 
-![](https://github.com/SeeedDocument/Bluetooth_Bee_Standalone/raw/master/img/Bluetooth_Bee-Standalone1.jpg)
+![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_Standalone/img/Bluetooth_Bee-Standalone1.jpg)
 
 ##   Additional ideas
 ---
@@ -228,7 +228,7 @@ Use another Bluetooth Bee connect to the Bluetooth Bee-Standalone.How to connect
 
 ##   Resources
 ---
-*   [BlueTooth bee-Standalone Eagle files](https://github.com/SeeedDocument/Bluetooth_Bee_Standalone/raw/master/res/Bluetooth_Bee-Standalone_schematic.zip).
+*   [BlueTooth bee-Standalone Eagle files](https://files.seeedstudio.com/wiki/Bluetooth_Bee_Standalone/res/Bluetooth_Bee-Standalone_schematic.zip).
 
 *   [NewSoftLibrary](http://arduiniana.org/NewSoftSerial/NewSoftSerial10c.zip)
 

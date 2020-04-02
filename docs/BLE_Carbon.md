@@ -18,7 +18,7 @@ BLE Carbon is the kind of boards that uses software platform from 96Boards while
 
 The Carbon comes pre-installed with Zephyr. When future OS become available, you may refer to the download page for more OS and applications.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/BLE-Carbon-p-2710.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/BLE-Carbon-p-2710.html)
 
 ##Features
 
@@ -187,8 +187,8 @@ For more details, please refer to [Running a serialized application](http://info
 
 ##Resources
 
-* [Schematics in Eagle](https://github.com/SeeedDocument/BLE-Carbon/raw/master/res/eagle.zip)
-* [Schematics in PDF](https://github.com/SeeedDocument/BLE-Carbon/raw/master/res/BLE%20Carbon%20v1.0_SCH.pdf)
+* [Schematics in Eagle](https://files.seeedstudio.com/wiki/BLE-Carbon/res/eagle.zip)
+* [Schematics in PDF](https://files.seeedstudio.com/wiki/BLE-Carbon/res/BLE%20Carbon%20v1.0_SCH.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

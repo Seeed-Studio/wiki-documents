@@ -9,7 +9,7 @@ sku: 103020137
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-Solid_State_Relay_V2/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay_V2/img/main.jpg)
 
 Instead of using coil, packaged solid-state relays(SSR) use power semiconductor devices such as thyristors and transistors, which provide a much faster switching speed than the mechanical relays. The **Grove - Solid State Relay V2** is based on the high-quality **G3MC202P** module, which allows you to use a 5VDC to control MAX. 240VAC. With the help of Grove interface, it becomes very convenient to use the SSR with your arduino.
 
@@ -95,11 +95,11 @@ Grove - Solid State Relay V2
 
 ### Pin MAP
 
-![](https://github.com/SeeedDocument/Grove-Solid_State_Relay_V2/raw/master/img/PIN_map_.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay_V2/img/PIN_map_.jpg)
 
 ### Schematic
 
-![](https://github.com/SeeedDocument/Grove-Solid_State_Relay_V2/raw/master/img/schematic_.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay_V2/img/schematic_.jpg)
 
 **K1** is the Relay module, When a  5V voltage is applied between the **INT+** and **INT-**, the relay will be turned on. Then the **LOAD1** will connect to the **LOAD2**.We use a NPN transistors **Q1**(BC817-40) to control the voltage between the **INT+** and **INT-**.
 
@@ -156,7 +156,7 @@ The **CTR** is the control signal from the Arduino or other board. It is pulled 
 - **Step 5.** Connect Seeeduino to PC via a Micro-USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-Solid_State_Relay_V2/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay_V2/img/connect.jpg)
 
 
 #### Software
@@ -165,7 +165,7 @@ The **CTR** is the control signal from the Arduino or other board. It is pulled 
         If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
 
-- **Step 1.** Open the Arduino IDE and create a new file, you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+- **Step 1.** Open the Arduino IDE and create a new file, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 ```c++
 #include <Arduino.h>
@@ -198,8 +198,8 @@ void loop() {
 
 ## Resources
 
-- **[Zip]** [Grove - Solid State Relay V2 eagle files](https://github.com/SeeedDocument/Grove-Solid_State_Relay_V2/raw/master/res/Grove-Solid_State_Relay_V2_Eagle.zip)
-- **[PDF]** [Datasheet of G3MC202P](https://github.com/SeeedDocument/Grove-Solid_State_Relay_V2/raw/master/res/G3MC202p.pdf)
+- **[Zip]** [Grove - Solid State Relay V2 eagle files](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay_V2/res/Grove-Solid_State_Relay_V2_Eagle.zip)
+- **[PDF]** [Datasheet of G3MC202P](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay_V2/res/G3MC202p.pdf)
 
 
 ## Project

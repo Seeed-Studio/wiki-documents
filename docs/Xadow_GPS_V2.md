@@ -9,11 +9,11 @@ sku: 113040009
 ---
 
 ---
-![](https://github.com/SeeedDocument/Xadow_GPS_V2/raw/master/images/Xadow_GPS_v2.JPG)
+![](https://files.seeedstudio.com/wiki/Xadow_GPS_V2/images/Xadow_GPS_v2.JPG)
 
 Based on the GPS L70 module from Quectel®, the Xadow GPS v2 combines the advanced AGPS technology EASYTM (Embedded Assist System) and the AlwaysLocateTM technology to achieve high performance, ultra-low power consumption and fast positioning even at indoor signal levels. With an excellent high-sensibility receiver (-163dBm tracking) and a built-in chip antenna, the module can track up to 22 satellites on 66 channels, making it a perfect choice for navigation projects. The board also adopts the new 11 PIN Xadow connector to improve the flexibility of module connections.
 
-[![](https://github.com/SeeedDocument/Xadow_GPS_V2/raw/master/images/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Xadow-GPS-v2-p-2557.html)
+[![](https://files.seeedstudio.com/wiki/Xadow_GPS_V2/images/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Xadow-GPS-v2-p-2557.html)
 
 ## Features
 ---
@@ -58,7 +58,7 @@ Based on the GPS L70 module from Quectel®, the Xadow GPS v2 combines the advanc
 
 ## Hardware Overview
 ---
-![](https://github.com/SeeedDocument/Xadow_GPS_V2/raw/master/images/Xadow_GPS_v2.png)
+![](https://files.seeedstudio.com/wiki/Xadow_GPS_V2/images/Xadow_GPS_v2.png)
 
 ## About Global Positioning System (GPS)
 ---
@@ -66,7 +66,7 @@ The Global Positioning System (GPS) is a space-based navigation system that prov
 
 ## Rephone Community
 ---
-[![](https://github.com/SeeedDocument/Xadow_GPS_V2/raw/master/images/300px-RePhone_Community-2.png)](https://community.seeedstudio.com/discover.html?t=RePhone)
+[![](https://files.seeedstudio.com/wiki/Xadow_GPS_V2/images/300px-RePhone_Community-2.png)](https://community.seeedstudio.com/discover.html?t=RePhone)
 
 We’ve been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the [RePhone Community](https://community.seeedstudio.com/discover.html?t=RePhone).
 
@@ -92,15 +92,15 @@ We will be keep updating the source code on our github page:
 
 The schematic diagram of Xadow GPS v2 is provided in the following link:
 
-- [Xadow GPS v2 Schematic Files](https://github.com/SeeedDocument/Xadow_GPS_V2/raw/master/resources/202000729_PCBA%3BXadow%20GPS%20v2.1_schemic%20file.zip)
+- [Xadow GPS v2 Schematic Files](https://files.seeedstudio.com/wiki/Xadow_GPS_V2/resources/202000729_PCBA%3BXadow%20GPS%20v2.1_schemic%20file.zip)
 
 When you find the GPS values are a bit far from your actual location, you might need to burn new firmware to Xadow GPS V2:
 
-- [Learn how to burn new firmware with a mbed board](https://github.com/SeeedDocument/Xadow_GPS_V2/raw/master/resources/Burn_to_Xadow_modules.zip)
+- [Learn how to burn new firmware with a mbed board](https://files.seeedstudio.com/wiki/Xadow_GPS_V2/resources/Burn_to_Xadow_modules.zip)
 
 Check more info about the GPS L70 and the chip antenna:
 
-- [Specification for GPS L70 and the chip antenna](https://github.com/SeeedDocument/Xadow_GPS_V2/raw/master/resources/GPS_L70_%26_Chip_Antenna.rar)
+- [Specification for GPS L70 and the chip antenna](https://files.seeedstudio.com/wiki/Xadow_GPS_V2/resources/GPS_L70_%26_Chip_Antenna.rar)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

@@ -47,12 +47,12 @@ Seeeduino XIAO has 14 GPIO PINs, which can be used for 11 digital interfaces, 11
 ## Hardware Overview
 
 
-![](https://github.com/SeeedDocument/Seeeduino-XIAO/raw/master/img/Seeeduino-XIAO-pinout.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-pinout.jpg)
 
 
-![](https://github.com/SeeedDocument/Seeeduino-XIAO/raw/master/img/Seeeduino%20XIAO%20pinout%202.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino%20XIAO%20pinout%202.png)
 
-![](https://github.com/SeeedDocument/Seeeduino-XIAO/raw/master/img/regulator_to_3.3v.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/regulator_to_3.3v.png)
 
 
 !!!Note
@@ -78,7 +78,7 @@ Sometimes the Seeeduino XIAO port may disappear when user programming process fa
 At this point, the chip enters Bootloader mode and the burn port appears again. Because the samd21 chip has two partitions, one is the Bootloader and the other is the user program. The product will burn a bootloader code in the system memory when it leaves the factory. We can switch modes with a quick reset.
 
 
-![](https://github.com/SeeedDocument/Seeeduino-XIAO/raw/master/img/XIAO-reset.gif)
+![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-reset.gif)
 
 
 ### Interrupt
@@ -286,7 +286,7 @@ Click on **File > Preference**, and fill Additional Boards Manager URLs with the
 Click **Tools-> Board-> Boards Manager...**, print  keyword "**Seeeduino XIAO**" in the searching blank. Here comes the "Seeed SAMD Boards". Install it.
 
 
-![](https://github.com/SeeedDocument/Seeeduino-XIAO/raw/master/img/XIAO-board.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-board.png)
 
 
 - **Step 4. Select your board and port** 
@@ -332,9 +332,9 @@ Now, simply click the "Upload" button in the environment. Wait a few seconds and
 
 ## Resourses
 
-- **[PDF]** [Seeeduino XIAO](https://github.com/SeeedDocument/Seeeduino-XIAO/raw/master/res/Seeeduino-XIAO-v1.0-SCH-191112.pdf)
+- **[PDF]** [Seeeduino XIAO](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-v1.0-SCH-191112.pdf)
 
-- **[PDF]** [ATSAMD218A-MU datasheet](https://github.com/SeeedDocument/Seeeduino-XIAO/raw/master/res/ATSAMD21G18A-MU-Datasheet.pdf)
+- **[PDF]** [ATSAMD218A-MU datasheet](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/ATSAMD21G18A-MU-Datasheet.pdf)
 
 
 

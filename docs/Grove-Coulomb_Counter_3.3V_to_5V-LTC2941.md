@@ -9,7 +9,7 @@ sku: 101020593
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/img/main.jpg)
 
 The coulomb (symbol: C) is the International System of Units (SI) unit of electric charge.It is the charge (symbol: Q or q) transported by a constant current of one ampere in one second:1C=1A•1s. A Coulomb Counter is a device to measure the current that your devices or sensors is using. 
 
@@ -56,7 +56,7 @@ The Grove - Coulomb Counter 3.3V to 5V (LTC2941) is based on LTC2941, its operat
 
 **Overview**
 
-![](https://github.com/SeeedDocument/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/raw/master/img/pin-out/pin-out_0.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/img/pin-out/pin-out_0.jpg)
 
 !!!Danger
         Both 3 and 4 are power input interfaces, please selecte one as the power input, do not use two at the same time, and the voltage can not exceed 5V, otherwise the module may be damaged.
@@ -70,7 +70,7 @@ This module communicate with the control board via I2C interface:
 >SDA: Signal pin, I2C serial data  
 >SCL: Signal pin, I2C serial clock
 
-![](https://github.com/SeeedDocument/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/raw/master/img/pin-out/pin-out1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/img/pin-out/pin-out1.jpg)
 
 ___
 **OUT**
@@ -83,7 +83,7 @@ Power output, connect to the load or the charger.
 !!!Attention
         Do not connect directly to inductive loads, such as motors or servos, or the chip may be damaged due to ripple caused by inductive loads.
 
-![](https://github.com/SeeedDocument/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/raw/master/img/pin-out/pin-out2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/img/pin-out/pin-out2.jpg)
 
 ___
 **IN**
@@ -93,7 +93,7 @@ Power input, power supply for the **OUT**
 >+: Power input Positive electrode  
 >-: Power input negative electrode
 
-![](https://github.com/SeeedDocument/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/raw/master/img/pin-out/pin-out3.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/img/pin-out/pin-out3.jpg)
 
 !!!warning
     If you use the [I2C Scanner](https://playground.arduino.cc/Main/I2cScanner/) to scan the device I2C ID, you have to supply 3.3v/5v to IN terminal. 
@@ -106,7 +106,7 @@ Battery Input, support 3.7-4.2v Li-PO battery, Jst2.0(2 pin-2.0mm), power supply
 >+: Battery input Positive electrode  
 >-: Battery input negative electrode
 
-![](https://github.com/SeeedDocument/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/raw/master/img/pin-out/pin-out4.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/img/pin-out/pin-out4.jpg)
 
 
 ___
@@ -114,7 +114,7 @@ ___
 
 Connect to the AL/CC pin of LTC2941, alert output or charge complete input. The LTC2941 do support alert function, and we reserved the relevant hardware pins for you, however the software we provide do not support this function. So, you need to work with the software part yourself if you need this part.
 
-![](https://github.com/SeeedDocument/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/raw/master/img/pin-out/pin-out5.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/img/pin-out/pin-out5.jpg)
 
 
 
@@ -162,7 +162,7 @@ Connect to the AL/CC pin of LTC2941, alert output or charge complete input. The 
 
 - **Step 5.** Connect Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/img/connect.jpg)
 
 !!!Note
         If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
@@ -192,12 +192,12 @@ Connect to the AL/CC pin of LTC2941, alert output or charge complete input. The 
     >**battery_power:** This demo will show you the electric charge data in the unit **C** and **mAh**, 1mAh=3.6C, as well as the remaining battery in percentage.  
     >**current_expend:** This demo will show you how much power you are consuming. 
 
-    ![](https://github.com/SeeedDocument/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/raw/master/img/path_1.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/img/path_1.jpg)
     
     2. Open it in your computer by click the **battery_power.ino** which you can find in the folder **XXXX\Arduino\libraries\Seeed_LTC2941-master\examples\battery_power**, **XXXX** is the location you installed the Arduino IDE.
-    ![](https://github.com/SeeedDocument/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/raw/master/img/path_2.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/img/path_2.jpg)
     
-    3. Or, you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+    3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 
 ```C++
@@ -289,7 +289,7 @@ What's more, every time you re-open the serial port, or re-power the control boa
 
 - **[Zip]** [Seeed LTC2941 Library](https://github.com/Seeed-Studio/Seeed_LTC2941/archive/master.zip)
 
-- **[PDF]** [Datasheet LTC2941](https://github.com/SeeedDocument/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/raw/master/res/datasheet.pdf)
+- **[PDF]** [Datasheet LTC2941](https://files.seeedstudio.com/wiki/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/res/datasheet.pdf)
 
 
 

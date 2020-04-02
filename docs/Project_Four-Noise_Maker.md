@@ -12,7 +12,7 @@ The picture is incorrect - you need to Connect the Potentiometer to the Analog A
 The Potentiometer produces an analog voltage on its D1 output, which is connected to Arduino A0 analog input on the A0/A1 input jack.
 Connect the Buzzer to the D6/D7 Digital I/O Jack.  The sketch uses Arduino Pin D6 to send power to the Buzzer on its D1 input.
 
-![](https://github.com/SeeedDocument/Project_Four-Noise_Maker/raw/master/img/Conn-four.jpg)
+![](https://files.seeedstudio.com/wiki/Project_Four-Noise_Maker/img/Conn-four.jpg)
 
 _**Now upload the following Arduino sketch:**_
 

@@ -15,7 +15,7 @@ A wireless relay is a codec-adaptive RF receiver with single channel relay. It h
 
 *   Adaption of most popular RF remote controller, except rolling code
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/codecadaptive-wireless-relay-p-550.html?cPath=139_140)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/codecadaptive-wireless-relay-p-550.html?cPath=139_140)
 
 ##   Application Ideas
 ---

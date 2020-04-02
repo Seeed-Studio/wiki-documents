@@ -7,12 +7,12 @@ prodimagename: X_Storage_01.jpg
 surveyurl: https://www.research.net/r/Xadow_Storage
 sku:  112040000
 ---
-![](https://github.com/SeeedDocument/Xadow_Storage/raw/master/img/X_Storage_01.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Storage/img/X_Storage_01.jpg)
 
 Most AVRs have a small EEPROM which can be used to save variables, configuration setting etc. Like Chip Atmega32u4 Xadow Main Board used has 1K Bytes Internal EEPROM.
 If you want more storage for your Xadow project, this module is designed for you! This module supplies two extra 32K byte for your project. The Xadow Storage can be powered by 3.3V. And it is compatible with Xadow system.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-Storage-p-1625.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-Storage-p-1625.html)
 
 ##  Specification
 ---
@@ -124,7 +124,7 @@ Using the Xadow Storage, we can permanently store data even if the power is turn
 
 **Hardware Installation:**
 
-![](https://github.com/SeeedDocument/Xadow_Storage/raw/master/img/XadowStorage.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Storage/img/XadowStorage.jpg)
 
 Note: when connect Xadow Storage to Xadow Main Board, you should concern about the connection direction. The connection method is that the unfilled corner of one Xadow module need to connect to the right angle of another module(see four corners of each Xadow module).
 

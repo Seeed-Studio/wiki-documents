@@ -9,7 +9,7 @@ sku: 101020614
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-Capacitive_Moisture_Sensor_Corrosion_Resistant/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Capacitive_Moisture_Sensor_Corrosion_Resistant/img/main.jpg)
 
 The Grove - Capacitive Moisture Sensor (Corrosion Resistant) is a soil moisture sensor based on capacitance changes. Compared with resistive sensors, capacitive sensors do not require direct exposure of the metal electrodes, which can significantly reduce the erosion of the electrodes. Hence, we call it **Corrosion Resistant**.
 
@@ -58,7 +58,7 @@ It is important to note that this sensor can only qualitatively test the humidit
 
 ### Pin Out
 
-![](https://github.com/SeeedDocument/Grove-Capacitive_Moisture_Sensor_Corrosion_Resistant/raw/master/img/pin_out.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Capacitive_Moisture_Sensor_Corrosion_Resistant/img/pin_out.jpg)
 
 
 !!!Attention
@@ -116,13 +116,13 @@ It is important to note that this sensor can only qualitatively test the humidit
 !!!Attention
         The part of the sensor inserted into the soil cannot exceed this white line.
 
-![](https://github.com/SeeedDocument/Grove-Capacitive_Moisture_Sensor_Corrosion_Resistant/raw/master/img/line.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Capacitive_Moisture_Sensor_Corrosion_Resistant/img/line.jpg)
 
 
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-Capacitive_Moisture_Sensor_Corrosion_Resistant/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Capacitive_Moisture_Sensor_Corrosion_Resistant/img/connect.jpg)
 
 
 
@@ -234,7 +234,7 @@ And you can find the demo in the wiki of those hats.
 
 - **[Zip]** [Grove - Capacitive Moisture Sensor (Corrosion Resistant) Eagle Files](https://github.com/SeeedDocument/Grove-Capacitive_Moisture_Sensor_Corrosion_Resistant/raw/master/res/Grove-Capacitive%20Moisture%20Sensor%20(Corrosion%20Resistant).zip)
 
-- **[PDF]** [NE555DR Datasheet](https://github.com/SeeedDocument/Grove-Capacitive_Moisture_Sensor_Corrosion_Resistant/raw/master/res/NE555DR.pdf)
+- **[PDF]** [NE555DR Datasheet](https://files.seeedstudio.com/wiki/Grove-Capacitive_Moisture_Sensor_Corrosion_Resistant/res/NE555DR.pdf)
 
 - **[PDF]** [PDF Format Wiki](https://github.com/SeeedDocument/Grove-Capacitive_Moisture_Sensor_Corrosion_Resistant/raw/master/res/Grove-Capacitive_Moisture_Sensor-Corrosion-Resistant.pdf)
 

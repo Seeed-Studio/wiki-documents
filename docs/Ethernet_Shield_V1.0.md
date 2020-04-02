@@ -10,7 +10,7 @@ sku:
 tags:
 
 ---
-![](https://github.com/SeeedDocument/Ethernet_Shield_V1.0/raw/master/img/Ethernet_Shield_Pic.jpg)
+![](https://files.seeedstudio.com/wiki/Ethernet_Shield_V1.0/img/Ethernet_Shield_Pic.jpg)
 
 Ethernet Shield instantly enables internet connectivity for Arduino projects. An on-board Wiz5100 ethernet controller handles up to four TCP and UDP connections, just stack it onto an Arduino to create your own networked devices. Easily check connection status with on board indicator lights. Extend your design further with two extra rows of pin header that connect to shields and prototyping boards.
 
@@ -46,7 +46,7 @@ Ethernet Shield instantly enables internet connectivity for Arduino projects. An
 
 ##   Interface Function   ##
 
-![](https://github.com/SeeedDocument/Ethernet_Shield_V1.0/raw/master/img/Ethernet-hard1.png)
+![](https://files.seeedstudio.com/wiki/Ethernet_Shield_V1.0/img/Ethernet-hard1.png)
 **RJ45** - Ethernet Port
 
 **Power LED** - Power
@@ -114,19 +114,19 @@ Ethernet Shield instantly enables internet connectivity for Arduino projects. An
 ###   Hardware Installation  ###
 
 Connect the ethernet shield with internet via RJ45 connector, and Arduino with PC via USB cable. Insert ethernet shield onto Arduion board:
-![](https://github.com/SeeedDocument/Ethernet_Shield_V1.0/raw/master/img/Ethernet_shield_hard.jpg)
+![](https://files.seeedstudio.com/wiki/Ethernet_Shield_V1.0/img/Ethernet_shield_hard.jpg)
 
 ###   Software  ###
 
 - Open the Arduino IDE(1.0), open the **WebServer** example in the Ethernet library:
 
-![](https://github.com/SeeedDocument/Ethernet_Shield_V1.0/raw/master/img/Ethernet_shield1.jpg) ![](https://github.com/SeeedDocument/Ethernet_Shield_V1.0/raw/master/img/Ethernet_shield3.jpg)
+![](https://files.seeedstudio.com/wiki/Ethernet_Shield_V1.0/img/Ethernet_shield1.jpg) ![](https://files.seeedstudio.com/wiki/Ethernet_Shield_V1.0/img/Ethernet_shield3.jpg)
 
 - Select the corresponding Arduino board, like Arduino UNO or Duemilanove or others, in: **Tools- Board**; Select COM port you are using in: **Tools- Serial port**.
 
 - Open your web browser and input the web address:192.168.1.177, you will see the operation result of the arduino board as web server:
 
-![](https://github.com/SeeedDocument/Ethernet_Shield_V1.0/raw/master/img/Ethernet_shield2.jpg)
+![](https://files.seeedstudio.com/wiki/Ethernet_Shield_V1.0/img/Ethernet_shield2.jpg)
 
 ##   Version Tracker   ##
 
@@ -143,9 +143,9 @@ Connect the ethernet shield with internet via RJ45 connector, and Arduino with P
 ##   Resources   ##
 
 - **[Getting started]**[Ethernet Shield Getting started](http://arduino.cc/en/Guide/ArduinoEthernetShield)
-- **[Eagle]**[Ethernet Shield Eagle Files](https://github.com/SeeedDocument/Ethernet_Shield_V1.0/raw/master/res/Ethernet_Shield.zip)
-- **[PDF]**[W5100_ethernet_shield PCB](https://github.com/SeeedDocument/Ethernet_Shield_V1.0/raw/master/res/W5100_ethernet_shield.pdf)
-- **[PDF]**[W5100_ethernet_shield SCH](https://github.com/SeeedDocument/Ethernet_Shield_V1.0/raw/master/res/W5100_ethernet_shield%20SCH.pdf)
+- **[Eagle]**[Ethernet Shield Eagle Files](https://files.seeedstudio.com/wiki/Ethernet_Shield_V1.0/res/Ethernet_Shield.zip)
+- **[PDF]**[W5100_ethernet_shield PCB](https://files.seeedstudio.com/wiki/Ethernet_Shield_V1.0/res/W5100_ethernet_shield.pdf)
+- **[PDF]**[W5100_ethernet_shield SCH](https://files.seeedstudio.com/wiki/Ethernet_Shield_V1.0/res/W5100_ethernet_shield%20SCH.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

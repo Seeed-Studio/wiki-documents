@@ -8,11 +8,11 @@ surveyurl: https://www.research.net/r/Grove-Recorder
 sku:  103020018
 ---
 
-![](https://github.com/SeeedDocument/Grove_Recorder/raw/master/img/Grove-Recoder.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Recorder/img/Grove-Recoder.jpg)
 
 Grove - Recorder is based on the ISD1820P chip, and can record 8-20 secs of audio. It offers true single-chip voice recording and provides non-volatile storage. The recording time can be varied by changing the sampling resistor (R6) on the module's PCB. By default, the resistor on-board has a value of 100KΩ and thus the module offers a default recording time of 10 secs. The audio recording can be directly controlled by the on-board push button or by a micro-controller such as a [Seeeduino](/Seeeduino "Seeeduino").
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Recorder-p-1825.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Recorder-p-1825.html)
 
 ##  Features
 ---
@@ -31,8 +31,8 @@ Grove - Recorder is based on the ISD1820P chip, and can record 8-20 secs of audi
 
 ##  Interface Function
 ---
-![](https://github.com/SeeedDocument/Grove_Recorder/raw/master/img/Recorder_Bottom1.jpg)
-![](https://github.com/SeeedDocument/Grove_Recorder/raw/master/img/Recorder_Top1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Recorder/img/Recorder_Bottom1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Recorder/img/Recorder_Top1.jpg)
 
 <dl><dt>① LED Indicator
 </dt><dd>Modes:
@@ -128,9 +128,9 @@ Follow these steps to build a sample circuit using the **Grove - Recorder** modu
 
 Below is an illustration of a Grove circuit built using the [Grove - USB Power](/Grove-Mixer_Pack_V2 "Grove - Mixer Pack") power module:
 
-![](https://github.com/SeeedDocument/Grove_Recorder/raw/master/img/REC_Grove-Recoder.JPG)
+![](https://files.seeedstudio.com/wiki/Grove_Recorder/img/REC_Grove-Recoder.JPG)
 
-![](https://github.com/SeeedDocument/Grove_Recorder/raw/master/img/Play_Grove-Recoder.JPG)
+![](https://files.seeedstudio.com/wiki/Grove_Recorder/img/Play_Grove-Recoder.JPG)
 
 If you do not have the Grove - USB Power module, use the [Grove - DC Jack Power](/Grove-DC_Jack_Power "Grove - DC Jack Power") module instead.
 

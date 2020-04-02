@@ -9,7 +9,7 @@ sku: 104020111,104020112,104020113
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-16x2_LCD_Series/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/main.jpg)
 
 
 The [Grove - LCD RGB Backlight](http://wiki.seeedstudio.com/Grove-LCD_RGB_Backlight/) has been well received since its inception. Based on customer feedback, now, we bring more cost-effective monochrome backlight derivative for you, i.e., 
@@ -67,13 +67,13 @@ The first version of Grove - 16 x 2 LCD series does not have a built-in pull-up 
  If you have an older version on your hand, you can solder a 10kΩ DIP resistor yourself on the back pad of the Grove connector. Please follow the picture below, solder a 10kΩ DIP resistor between **VCC** and **SCL** pins and a 10kΩ DIP resistor between **VCC** and **SDA** pins.
 
 
-![](https://github.com/SeeedDocument/Grove-16x2_LCD_Series/raw/master/img/I2C-R.jpg) 
+![](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/I2C-R.jpg) 
 
 
 
 ### Outline
 
-![](https://github.com/SeeedDocument/Grove-16x2_LCD_Series/raw/master/img/outline.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/outline.jpg)
 
 
 ## Platforms Supported
@@ -101,7 +101,7 @@ The first version of Grove - 16 x 2 LCD series does not have a built-in pull-up 
 
 | Seeeduino V4.2 | Base Shield|  Grove - 16 x 2 LCD |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-16x2_LCD_Series/raw/master/img/perspective.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/perspective.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-16-x-2-LCD-%28Black-on-Yellow%29-p-3198.html)|
 
 
@@ -118,7 +118,7 @@ The first version of Grove - 16 x 2 LCD series does not have a built-in pull-up 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-16x2_LCD_Series/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/connect.jpg)
 
 
 !!!Note
@@ -150,12 +150,12 @@ The first version of Grove - 16 x 2 LCD series does not have a built-in pull-up 
 
 - **Step 3.** Restart the Arduino IDE. Open the example, you can open it in the following three ways：
     1. Open it directly in the Arduino IDE via the path: **File --> Examples --> Grove - LCD RGB Backlight --> HelloWorld**. 
-    ![](https://github.com/SeeedDocument/Grove-16x2_LCD_Series/raw/master/img/path_1.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/path_1.jpg)
     
     2. Open it in your computer by click the **HelloWorld.ino** which you can find in the folder **XXXX\Arduino\libraries\Grove_LCD_RGB_Backlight-master\examples\HelloWorld**, **XXXX** is the location you installed the Arduino IDE.
-    ![](https://github.com/SeeedDocument/Grove-16x2_LCD_Series/raw/master/img/path_2.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/path_2.jpg)
     
-    3. Or, you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+    3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 
 ```C++
@@ -216,7 +216,7 @@ void loop()
 
 - **[Zip]** [Grove-LCD RGB Backlight Library](https://github.com/Seeed-Studio/Grove_LCD_RGB_Backlight/archive/master.zip)
 
-- **[PDF]** [JDH_1804_Datasheet](https://github.com/SeeedDocument/Grove-16x2_LCD_Series/raw/master/res/JDH_1804_Datasheet.pdf)
+- **[PDF]** [JDH_1804_Datasheet](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/res/JDH_1804_Datasheet.pdf)
 
 
 

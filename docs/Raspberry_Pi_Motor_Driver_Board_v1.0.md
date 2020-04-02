@@ -210,7 +210,7 @@ Connect to network and power.
 
 ### Software Part
 
-1. Download [Motor_Driver.py](https://github.com/SeeedDocument/Raspberry_Pi_Motor_Driver_Board_v1.0/raw/master/res/Motor_Driver.py) and [PiSoftPwn.py](https://github.com/SeeedDocument/Raspberry_Pi_Motor_Driver_Board_v1.0/raw/master/res/PiSoftPwm.py) into same folder. Here is the code of Motor_Driver.py.
+1. Download [Motor_Driver.py](https://files.seeedstudio.com/wiki/Raspberry_Pi_Motor_Driver_Board_v1.0/res/Motor_Driver.py) and [PiSoftPwn.py](https://files.seeedstudio.com/wiki/Raspberry_Pi_Motor_Driver_Board_v1.0/res/PiSoftPwm.py) into same folder. Here is the code of Motor_Driver.py.
 
 ```
 #!/usr/bin/python

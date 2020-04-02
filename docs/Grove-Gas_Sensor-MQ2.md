@@ -86,7 +86,7 @@ The output voltage from the Gas sensor increases when the concentration of gas i
 
 | Seeeduino V4.2 | Base Shield| Grove-Gas Sensor-MQ2 |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Gas_Sensor-MQ2/raw/master/img/45d_small.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ2/img/45d_small.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Gas-Sensor(MQ2)-p-937.html)|
 
 - **Step 2.** Connect Grove-Gas_Sensor-MQ2 to port A0 of Grove-Base Shield.
@@ -233,7 +233,7 @@ According to the graph, we can see that the minimum concentration we can test is
 
 | Raspberry pi | Grove Base Hat for RasPi| Grove-Gas_Sensor-MQ2 |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Gas_Sensor-MQ2/raw/master/img/45d_small.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ2/img/45d_small.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Gas-Sensor(MQ2)-p-937.html)|
 
 - **Step 2**. Plug the Grove Base Hat into Raspberry.
@@ -241,7 +241,7 @@ According to the graph, we can see that the minimum concentration we can test is
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove_Gas_Sensor_MQ2/raw/master/image/With_Hat.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_MQ2/image/With_Hat.jpg)
 
 !!! Note
     For step 3 you are able to connect the Grove-Gas Sensor MQ2 to **any Analog Port** but make sure you change the command with the corresponding port number.
@@ -372,7 +372,7 @@ You can quit this program by simply press ++ctrl+c++.
 
 | Raspberry pi | GrovePi_Plus | Grove-Gas_Sensor-MQ2 |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Gas_Sensor-MQ2/raw/master/img/45d_small.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ2/img/45d_small.jpg)|
 |[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/Grove-Gas-Sensor(MQ2)-p-937.html)|
 
 
@@ -380,7 +380,7 @@ You can quit this program by simply press ++ctrl+c++.
 - **Step 3.** Connect Grove-Gas_Sensor-MQ2  to **A0** port of GrovePi_Plus.
 - **Step 4.** Connect the Raspberry to PC through USB cable.
 <!--wrong link-->
-![with_rpi](https://github.com/SeeedDocument/Grove-Gas_Sensor-MQ2/raw/master/img/with_rpi.jpg)
+![with_rpi](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ2/img/with_rpi.jpg)
 
 
 

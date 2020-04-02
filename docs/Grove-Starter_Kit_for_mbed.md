@@ -7,7 +7,7 @@ prodimagename: Grove%20Starter%20Kit%20for%20mbed%201.jpg
 surveyurl: https://www.research.net/r/Starter_Kit_for_mbed
 sku: 110990421
 ---
-![](https://github.com/SeeedDocument/Grove-Starter_Kit_for_mbed/raw/master/img/Grove%20Starter%20Kit%20for%20mbed%201.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Starter_Kit_for_mbed/img/Grove%20Starter%20Kit%20for%20mbed%201.jpg)
 
 **About mbed and Grove**
 
@@ -36,11 +36,11 @@ All the things to get started are:
 
 2.Import the program and open main.cpp, you will see the code.
 
-![](https://github.com/SeeedDocument/Grove-Starter_Kit_for_mbed/raw/master/img/Import_arch_gpio_ex1.png)
+![](https://files.seeedstudio.com/wiki/Grove-Starter_Kit_for_mbed/img/Import_arch_gpio_ex1.png)
 
 3.On mbed online IDE, click "Compile" of the top toolbar (or use CTRL + D) to compile the code and the binary file - Arch_GPIO_Ex1_LPC11U24.bin.
 
-![](https://github.com/SeeedDocument/Grove-Starter_Kit_for_mbed/raw/master/img/Compile_mbed_program.png)
+![](https://files.seeedstudio.com/wiki/Grove-Starter_Kit_for_mbed/img/Compile_mbed_program.png)
 
 4.Connect the Arch board to the computer and **long press** the button, a USB drive named CRP DISABLD will pop up.
 
@@ -76,8 +76,8 @@ A piano built with a basket of fruit, a microcontroller and a computer.
 
 The idea is from [Makey Makey](http://makeymakey.com/), but uses different hardware and software. An mbed enabled microcontroller with USB is used.
 
-![](https://github.com/SeeedDocument/Grove-Starter_Kit_for_mbed/raw/master/img/Piano.png)
-![](https://github.com/SeeedDocument/Grove-Starter_Kit_for_mbed/raw/master/img/Fruit_Piano_Hardware.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Starter_Kit_for_mbed/img/Piano.png)
+![](https://files.seeedstudio.com/wiki/Grove-Starter_Kit_for_mbed/img/Fruit_Piano_Hardware.jpg)
 
 **Hardware**
 - An Arch board

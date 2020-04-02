@@ -10,7 +10,7 @@ tags:
 ---
 
 
-![](https://github.com/SeeedDocument/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/img/main.jpg)
 
 The analog-to-digital converter(ADC) is a common accessory for Raspberry Pi. This is a 4-channel ADC based on Texas Instrument's ADS1115, which is a precision, low-power, 16-bit ADC chip. We make this ADC into a compact Raspberry Pi Zero form factor and integrated an analog Grove connector so that you can also use analog Grove modules with it.
 
@@ -59,7 +59,7 @@ The analog-to-digital converter(ADC) is a common accessory for Raspberry Pi. Thi
 
 There are 4 possible I2C addresses of this grove, from 0x48 to 0x4B. The default I^2^C address is 0x48. You can change the I2C address by doing some soldering.
 
-![](https://github.com/SeeedDocument/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/raw/master/img/pinout1.png)
+![](https://files.seeedstudio.com/wiki/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/img/pinout1.png)
 
 
 !!! Note
@@ -80,7 +80,7 @@ There are 4 possible I2C addresses of this grove, from 0x48 to 0x4B. The default
 
 ### Pin Out
 
-![](https://github.com/SeeedDocument/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/raw/master/img/pinout.png)
+![](https://files.seeedstudio.com/wiki/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/img/pinout.png)
 
 
 
@@ -99,7 +99,7 @@ There are 4 possible I2C addresses of this grove, from 0x48 to 0x4B. The default
 
 |Raspberry pi|4-Channel 16-Bit ADC for Raspberry Pi(ADS1115)|
 |------------|-------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/raw/master/img/thumbnail.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/img/thumbnail.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/4-Channel-16-Bit-ADC-for-Raspberry-Pi-ADS1115.html)|
 
 
@@ -121,23 +121,23 @@ sudo raspi-config
 
 - **Step 3**. Arrow down to 5 interfacing Options and press "enter" to select. 
 
-![](https://github.com/SeeedDocument/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/raw/master/img/rasp1.png)
+![](https://files.seeedstudio.com/wiki/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/img/rasp1.png)
 
 - **Step 4**. Arrow down to P5 I2C and press "enter" to select. 
 
-![](https://github.com/SeeedDocument/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/raw/master/img/rasp2.png)
+![](https://files.seeedstudio.com/wiki/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/img/rasp2.png)
 
 - **Step 4**. Select "Yes" to enable it. 
 
-![](https://github.com/SeeedDocument/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/raw/master/img/rasp3.png)
+![](https://files.seeedstudio.com/wiki/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/img/rasp3.png)
 
 - **Step 5**. Select "Ok". 
 
-![](https://github.com/SeeedDocument/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/raw/master/img/rasp4.png)
+![](https://files.seeedstudio.com/wiki/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/img/rasp4.png)
 
 - **Step 6**. Select "Finish" to save the changes.
 
-![](https://github.com/SeeedDocument/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/raw/master/img/rasp5.png) 
+![](https://files.seeedstudio.com/wiki/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/img/rasp5.png) 
 
 **Installation**
 
@@ -191,7 +191,7 @@ sudo ./install.sh -u
 
 ## ADC Guide
 
-![](https://github.com/SeeedDocument/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/raw/master/img/configuration.png) 
+![](https://files.seeedstudio.com/wiki/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/img/configuration.png) 
 
 channels 0-3 is differntial voltage, full scale range -2.048V - +2.048V 
 
@@ -216,7 +216,7 @@ Read all channels the same time.
 
 Take [Grove - Sound Sensor](http://wiki.seeedstudio.com/Grove-Sound_Sensor/) as an example, if you use the grove cable to connect sound sensor with the ADC hat as shown below, it means you are using A0(channel four). Now, run the command ++./ads1115.s++ inside the terminal, you will be able to see the following result if it is reading data from the sound sensor.
 
-![](https://github.com/SeeedDocument/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/raw/master/img/connection.jpg) 
+![](https://files.seeedstudio.com/wiki/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/img/connection.jpg) 
 
 ```bash
 pi@raspberrypi:~/pi-hats $ ./ads1115.sh
@@ -275,7 +275,7 @@ four channels' value are :
 
 - **[Zip]** [4-Channel 16-Bit ADC for Raspberry Pi (ADS1115) Software Library](https://github.com/Seeed-Studio/pi-hats/archive/master.zip)
 
-- **[PDF]** [Datasheet ADS1115](https://github.com/SeeedDocument/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/raw/master/res/ADS1115.pdf)
+- **[PDF]** [Datasheet ADS1115](https://files.seeedstudio.com/wiki/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/res/ADS1115.pdf)
 
 
 ## Tech Support

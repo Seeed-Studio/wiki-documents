@@ -7,11 +7,11 @@ prodimagename: RGB_OLED_MainPicture.jpg
 surveyurl: https://www.research.net/r/Xadow_Grove_Adaptor
 sku:  103040006
 ---
-![](https://github.com/SeeedDocument/Xadow_Grove_Adaptor/raw/master/img/X_adaptor_01.jpg) 
+![](https://files.seeedstudio.com/wiki/Xadow_Grove_Adaptor/img/X_adaptor_01.jpg) 
 
 Xadow Grove Adaptor is a device that converts Grove interface to Xadow Interface to compatible with Xadow System. It can achieve this function: analog signal from two analog Grove interface will output by Xadow I2C bus through ADC. The signal from Grove I2C Interface will directly lead to Xadow I2C bus without conversion. The A/D conversion based on ADCC121C021, a 12-bit precision ADC, create high precision.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-Adaptor-p-1624.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-Adaptor-p-1624.html)
 
 ##  Specification
 ---
@@ -35,7 +35,7 @@ If measure analog signal Grove module outputs, you need to connect Grove module 
 
 **The Hardware Installation should be:**
 
-![](https://github.com/SeeedDocument/Xadow_Grove_Adaptor/raw/master/img/XadowAdaptor2.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Grove_Adaptor/img/XadowAdaptor2.jpg)
 
 Here Grove - Gas sensor outputs analog signal is connected to AO, so the I2C Address applied to the test code is 0x58(default). In other words, the I2C Address should be 0x59 when Grove - Gas Sensor connect to A1 interface.
 
@@ -104,7 +104,7 @@ void loop()
 ```
 Upload code to Xadow Main Board, then open the serial monitor to observe output value：
 
-![](https://github.com/SeeedDocument/Xadow_Grove_Adaptor/raw/master/img/Xadow_Grove_Adaptor_Result.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Grove_Adaptor/img/Xadow_Grove_Adaptor_Result.png)
 
 **Measure I2C Signal**
 
@@ -113,7 +113,7 @@ Taking Grove - Digital Light Sensor as example, let's learn its usage.
 
 **Hardware Installation：**
 
-![](https://github.com/SeeedDocument/Xadow_Grove_Adaptor/raw/master/img/XadowAdaptor1.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Grove_Adaptor/img/XadowAdaptor1.jpg)
 
 
 **Download the code：**
@@ -150,7 +150,7 @@ void loop()
 *   Open the serial monitor to observe the LUX value. Artificially change the light intensity of surrounding environment, you will see the obvious change of the output value.
 
 
-![](https://github.com/SeeedDocument/Xadow_Grove_Adaptor/raw/master/img/Digital_Light_Sensor_Score_Picture.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Grove_Adaptor/img/Digital_Light_Sensor_Score_Picture.jpg)
 
 The ADC IC ADC121C021 used in  Xadow Grove Adaptor have been adopter on  Grove - I2C ADC. Of course, the way to change I2C Address are same. Please refer to [Reference part](/Grove-I2C_ADC#Reference) of Grove - I2C ADC about the varying method. In addition,"0" and "1" on board are the address varying area of A0 interface,"2" and "3" are the address varying area of A1 interface.
 
@@ -163,9 +163,9 @@ The ADC IC ADC121C021 used in  Xadow Grove Adaptor have been adopter on  Grove -
 
 ##  Resources
 ---
-*   [Xadow Grove Adaptor Eagle File](https://github.com/SeeedDocument/Xadow_Grove_Adaptor/raw/master/res/Xadow_Grove_Adaptor_Eagle_File.zip)
+*   [Xadow Grove Adaptor Eagle File](https://files.seeedstudio.com/wiki/Xadow_Grove_Adaptor/res/Xadow_Grove_Adaptor_Eagle_File.zip)
 
-*   [A/DC IC ADC121C021 datasheet](https://github.com/SeeedDocument/Xadow_Grove_Adaptor/raw/master/res/Xadow_Grove_Adaptor_Eagle_File.zip)
+*   [A/DC IC ADC121C021 datasheet](https://files.seeedstudio.com/wiki/Xadow_Grove_Adaptor/res/Xadow_Grove_Adaptor_Eagle_File.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

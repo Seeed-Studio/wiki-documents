@@ -10,7 +10,7 @@ The purpose of this project is to demonstrate a simple digital-out display using
 Connect the LED Twig to the D1/D2 Digital I/O jack on the Grove Shield.
 Arduino Pin D1 powers the Green LED on the Twig's SIG connector.
 
-![](https://github.com/SeeedDocument/Project_One-Blink/raw/master/img/Blinkv1.0.jpg)
+![](https://files.seeedstudio.com/wiki/Project_One-Blink/img/Blinkv1.0.jpg)
 
 _**Now upload the following Arduino sketch:**_
 

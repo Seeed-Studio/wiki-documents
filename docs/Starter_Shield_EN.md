@@ -9,7 +9,7 @@ sku:
 tags:
 
 ---
-![](https://github.com/SeeedDocument/Starter_Shield_EN/raw/master/img/Tickshield_02.jpg)
+![](https://files.seeedstudio.com/wiki/Starter_Shield_EN/img/Tickshield_02.jpg)
 
 Starter Shield is a perfect start for beginners of Arduino world. You can learn basic soldering tricks and practice programming principles when learning this kit. Have prepared a detailed soldering guide and a fully supported library of programming examples from easy to difficult. , so electronic could be fun even if you have bare technical knowledge, Hope you have fun and gain some knowledge with this kit!   
 
@@ -75,7 +75,7 @@ Model: [SLD90400P](http://www.seeedstudio.com/depot/tick-tock-shield-p-1371.html
 
 ##   Specification  
 
-![](https://github.com/SeeedDocument/Starter_Shield_EN/raw/master/img/Tick_Shield_Interface_Function.jpg)
+![](https://files.seeedstudio.com/wiki/Starter_Shield_EN/img/Tick_Shield_Interface_Function.jpg)
 
 **Hardware Resources**
 
@@ -139,13 +139,13 @@ Here we start to present you 7 demos from easy to difficult. They involve usage 
 Each demo caontains detailed comments in the .ino file. To figure out how every line affects the turnout, you have to study the sketch and comments carefully.
 
 OK, let's check out what the Tick Tock Shield is capable of.
-![](https://github.com/SeeedDocument/Starter_Shield_EN/raw/master/img/Complete_Tick_Shield.JPG)
+![](https://files.seeedstudio.com/wiki/Starter_Shield_EN/img/Complete_Tick_Shield.JPG)
 
 ###   Preparation: Install the Hardware and Software  
 
 1. Plug Tick Tock Shield onto Arduino board. Connect Arduino to PC via USB cable as show below.
 
-![](https://github.com/SeeedDocument/Starter_Shield_EN/raw/master/img/Connect_Tick_Shield.jpg)
+![](https://files.seeedstudio.com/wiki/Starter_Shield_EN/img/Connect_Tick_Shield.jpg)
 
 2. Download [Starter Shield Library](https://github.com/Seeed-Studio/Starter_Shield_Libraries)
 
@@ -182,7 +182,7 @@ From easy to difficult, we prepared a series of demos for you to explore what yo
 
 </dd><dd>2. Restart the Arduino IDE. Open the example "RunLED" via the path: File --&gt; Examples --&gt; TickTockShield--&gt; RunLED.
 
-![](https://github.com/SeeedDocument/Starter_Shield_EN/raw/master/img/Open_RunLED_Code.jpg)
+![](https://files.seeedstudio.com/wiki/Starter_Shield_EN/img/Open_RunLED_Code.jpg)
 
 </dd><dd>3. This demo can sweep 4 LEDs with a settable speed. You can change the sweep speed by changing the parameter of the function "runLED(speed)". Find further illutration of the funtion in its comment.
 
@@ -219,7 +219,7 @@ Get started with sensors. First we have here is the temperature sensor. Try to r
 2. The 7-segment Display will display current temperature read from temperature sensor as shown below.
 3. If you find in the picture below, the contrast is not strong enough, try a lower view angle. This principle also apply to following demos which contain usage of 7-segment display.
 
-![](https://github.com/SeeedDocument/Starter_Shield_EN/raw/master/img/Measure_Temperature.jpg)
+![](https://files.seeedstudio.com/wiki/Starter_Shield_EN/img/Measure_Temperature.jpg)
 
 
 **Demo 5: Make A Light Sensor Controlled LED**
@@ -230,9 +230,9 @@ Is it convenient if the brightness of display can auto adjust itself according t
 
 2. This example can change the brightness of BRIGHT_ADJUST Indicator according to the ambient light intensity. The darker the environment is, the lighter the LED turns. Picture on the right is the turnout.
 
-![](https://github.com/SeeedDocument/Starter_Shield_EN/raw/master/img/Connect_Tick_Shield.jpg)
+![](https://files.seeedstudio.com/wiki/Starter_Shield_EN/img/Connect_Tick_Shield.jpg)
 
-![](https://github.com/SeeedDocument/Starter_Shield_EN/raw/master/img/Control_Light.jpg)
+![](https://files.seeedstudio.com/wiki/Starter_Shield_EN/img/Control_Light.jpg)
 
 **Demo 6: Display Numerical Characters**
 
@@ -242,7 +242,7 @@ This demo shows you how to control the content of 7 segment display.
 
 2. This example can run numeric characters 0, 1, 2, 3, 4, 5, 6, 7, 8 ,9, A, b, C, d, E, F from right to left. 
 
-![](https://github.com/SeeedDocument/Starter_Shield_EN/raw/master/img/Flow_Character.jpg)
+![](https://files.seeedstudio.com/wiki/Starter_Shield_EN/img/Flow_Character.jpg)
 
 **Demo 7: Real Time Clock**
 
@@ -252,7 +252,7 @@ This is a final demo that involves all hardware resources we mentioned above and
 
 2. The 7-segment Display will alternately display current time and temperature.
 
-![](https://github.com/SeeedDocument/Starter_Shield_EN/raw/master/img/Display_RTC_.jpg)
+![](https://files.seeedstudio.com/wiki/Starter_Shield_EN/img/Display_RTC_.jpg)
 
 3. Method to adjust the time and set the alarm clock:
 
@@ -289,16 +289,16 @@ This is a final demo that involves all hardware resources we mentioned above and
 
 - **[Library]**[Starter Shield library](https://github.com/Seeed-Studio/Starter_Shield)
 
-- **[Eagle]**[Starter Shield eagle file](https://github.com/SeeedDocument/Starter_Shield_EN/raw/master/res/Starter_Shield_v1.1.zip)
-- **[PDF]**[BLE Bee v1.0 pdf](https://github.com/SeeedDocument/Starter_Shield_EN/raw/master/res/Starter_Shield_v1.1.pdf)
+- **[Eagle]**[Starter Shield eagle file](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Starter_Shield_v1.1.zip)
+- **[PDF]**[BLE Bee v1.0 pdf](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Starter_Shield_v1.1.pdf)
 
-- **[EAGLE]**[BLE Bee v1.0 sch](https://github.com/SeeedDocument/Starter_Shield_EN/raw/master/res/Starter%20Shield%20v1.1.sch)
+- **[EAGLE]**[BLE Bee v1.0 sch](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Starter%20Shield%20v1.1.sch)
 
-- **[Schematic]**[Starter Shield pdf Schematic](https://github.com/SeeedDocument/Starter_Shield_EN/raw/master/res/Starter_Shield_v1.1.pdf)
+- **[Schematic]**[Starter Shield pdf Schematic](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Starter_Shield_v1.1.pdf)
 
-- **[Datasheet]**[TM1636 datasheet](https://github.com/SeeedDocument/Starter_Shield_EN/raw/master/res/Tm1636.pdf)
+- **[Datasheet]**[TM1636 datasheet](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Tm1636.pdf)
 
-- **[Datasheet]**[VS1307 datasheet](https://github.com/SeeedDocument/Starter_Shield_EN/raw/master/res/Vs1307.pdf)
+- **[Datasheet]**[VS1307 datasheet](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Vs1307.pdf)
 
 ##   Reference
 

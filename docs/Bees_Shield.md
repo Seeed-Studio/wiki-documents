@@ -9,7 +9,7 @@ sku: 103030001
 tags: plat_duino
 ---
 
-![enter image description here](https://github.com/SeeedDocument/Bees_Shield/raw/master/img/bees%20shield.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Bees_Shield/img/bees%20shield.jpg)
 
 Bees_Shield will make interfacing multiple Bee-style (XBee, GPRS Bee, Bluetooth Bee and etc) easier than ever before. Aside from two Bee-style 20p 2.0 pitch sockets, it also has a large prototyping area, and a customizable software serial port for easier prototyping.
 
@@ -36,7 +36,7 @@ Bees_Shield will make interfacing multiple Bee-style (XBee, GPRS Bee, Bluetooth 
 
 ## Hardware Overview
 
-![](https://github.com/SeeedDocument/Bees_Shield/raw/master/img/Bees%20Shield%20Hardware.jpg)
+![](https://files.seeedstudio.com/wiki/Bees_Shield/img/Bees%20Shield%20Hardware.jpg)
 
 ## Platforms Supported
 -------------------
@@ -112,7 +112,7 @@ void loop() {}
 - Plug Bees Shield into Arduino.
 
 #### Software
-- Download [Xbee setting profile](https://github.com/SeeedDocument/Bees_Shield/raw/master/res/Xbee%20setting%20profiles.zip) to transmitter Xbee by using X-CTU.
+- Download [Xbee setting profile](https://files.seeedstudio.com/wiki/Bees_Shield/res/Xbee%20setting%20profiles.zip) to transmitter Xbee by using X-CTU.
 - Let's use the wireless programming.
 
 #### Expansion function
@@ -120,7 +120,7 @@ void loop() {}
 - First we have to solder two 8-pin female headers and two 6-pin female headers on the Bees shield.
 - After the expansion we can insert small shield like music shield on the Bees shield and we can control it wirelessly.
 
-![](https://github.com/SeeedDocument/Bees_Shield/raw/master/img/Bees-Shield-expan2.jpg)
+![](https://files.seeedstudio.com/wiki/Bees_Shield/img/Bees-Shield-expan2.jpg)
 
 
 ## Schematic Online Viewer
@@ -131,10 +131,10 @@ void loop() {}
 
 ## Resources
 -------------------
-- **[Eagle]** [Bees_Shield Eagle File ](https://github.com/SeeedDocument/Bees_Shield/raw/master/res/Bees_Shield_V2.12_Eagle_files.zip)
-- **[PDF]** [Bees_Shield schematics](https://github.com/SeeedDocument/Bees_Shield/raw/master/res/Bees_Shield%20Sch.pdf)
-- **[PDF]** [Bees_Shield PCB](https://github.com/SeeedDocument/Bees_Shield/raw/master/res/Bees_Shield%20PCB.pdf)
-- **[Tools]** [Xbee setting profiles](https://github.com/SeeedDocument/Bees_Shield/raw/master/res/Xbee%20setting%20profiles.zip)
+- **[Eagle]** [Bees_Shield Eagle File ](https://files.seeedstudio.com/wiki/Bees_Shield/res/Bees_Shield_V2.12_Eagle_files.zip)
+- **[PDF]** [Bees_Shield schematics](https://files.seeedstudio.com/wiki/Bees_Shield/res/Bees_Shield%20Sch.pdf)
+- **[PDF]** [Bees_Shield PCB](https://files.seeedstudio.com/wiki/Bees_Shield/res/Bees_Shield%20PCB.pdf)
+- **[Tools]** [Xbee setting profiles](https://files.seeedstudio.com/wiki/Bees_Shield/res/Xbee%20setting%20profiles.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

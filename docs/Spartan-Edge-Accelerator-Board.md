@@ -9,7 +9,7 @@ sku: 102030005
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/Spartan-Edge-Accelerater-Board-v1.0-wiki.jpg)
+![](https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/Spartan-Edge-Accelerater-Board-v1.0-wiki.jpg)
 
 
 
@@ -273,7 +273,7 @@ If you don't know how to install the library, please kindly check:
 
  You can find two example folders in this library
 
-![](https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/SD-boot/example.jpg)
+![](https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/SD-boot/example.jpg)
 
 
 
@@ -290,7 +290,7 @@ If you don't know how to install the library, please kindly check:
 - **2.Prepare SDCard**  
   2.1 Format the SDCard with FAT16/FAT32 filesystem.  
 
-![](https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/SD-boot/format.jpg)
+![](https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/SD-boot/format.jpg)
 
   2.2 Create a top level subfolder named __overlay__ in the SDCard.  
   2.3 Put your bitstream or [sample bitstream](https://github.com/sea-s7/AlphaTest_V1.0/tree/master/spi2gpio) files (must have a extend name .bit) into the folder __overlay__.  
@@ -300,7 +300,7 @@ If you don't know how to install the library, please kindly check:
 
   2.4 If you run example 01LoadDefaultBitstream, rename the bitstream file in __overlay__ to __default.bit__.  
 
-![](https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/SD-boot/folder.jpg)
+![](https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/SD-boot/folder.jpg)
 
   2.5 If you run example 02LoadConfigBitstream, put [**board_config.ini**](https://github.com/sea-s7/spartan-edge-esp32-boot/blob/master/extras/board_config.ini) into SDCard root folder.  
   2.6 Insert the SDCard to the Spartan (Edge Accelerator) Board.  
@@ -455,7 +455,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 2. Select **Add or create design sources** and click Next.
 
-3. Click the button ![img](https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/icon-plus.png) and select options or click the options directly to add or create files, as shown in figure 3.
+3. Click the button ![img](https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/icon-plus.png) and select options or click the options directly to add or create files, as shown in figure 3.
 
 
 <div align="center">
@@ -656,7 +656,7 @@ The **running status** of vivado is displayed in the upper right corner.
 - **Step 7: Synthesizing and Implementing the Design**
 
 
-  After configuring the synthesis and implementation run options, you can **run synthesis** and **run implementation** in the **Design Runs** or click the button ![img](https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/img/stand-alone/68747470733a2f2f692e73637265656e73686f742e6e65742f6c6c6f34307367.png)  or click corresponding buttons in the **Flow Navigator** to do this. The **running status** of vivado is displayed in the upper right corner while Synthesizing and Implementing.
+  After configuring the synthesis and implementation run options, you can **run synthesis** and **run implementation** in the **Design Runs** or click the button ![img](https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/68747470733a2f2f692e73637265656e73686f742e6e65742f6c6c6f34307367.png)  or click corresponding buttons in the **Flow Navigator** to do this. The **running status** of vivado is displayed in the upper right corner while Synthesizing and Implementing.
 
  
 
@@ -783,8 +783,8 @@ The **running status** of vivado is displayed in the upper right corner.
 ## Resources
 
 
-- **[PDF]** [Spartan-7 FPGAs Datasheet](https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/res/Spartan-7%20FPGAs%20Data%20Sheet.pdf)
-- **[PDF]** [ESP32 Datasheet](https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/raw/master/res/ESP32-datasheet.pdf)
+- **[PDF]** [Spartan-7 FPGAs Datasheet](https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/res/Spartan-7%20FPGAs%20Data%20Sheet.pdf)
+- **[PDF]** [ESP32 Datasheet](https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/res/ESP32-datasheet.pdf)
 - **[PDF]** [Spartan-Edge-Accelerator-Board Eagle File](https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/tree/master/res/Spartan%20Edge%20Accelerator%20Board%20v1.0/202002626_Spartan%20Edge%20Accelerator%20Board%20v1.0_SCH%20%26%20PCB)
 
 

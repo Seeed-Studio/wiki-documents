@@ -24,17 +24,17 @@ In the previous section we've got an insight about how to control an LED with el
 
 **Schematic**
 
-![](https://github.com/SeeedDocument/LinkIt_ONE_Tutorial-Hello_World/raw/master/img/LinkItONE_Kit_1_1.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIt_ONE_Tutorial-Hello_World/img/LinkItONE_Kit_1_1.jpg)
 
 **Connection**
 
-![](https://github.com/SeeedDocument/LinkIt_ONE_Tutorial-Hello_World/raw/master/img/LinkItONE_Kit_1_2.png)
+![](https://files.seeedstudio.com/wiki/LinkIt_ONE_Tutorial-Hello_World/img/LinkItONE_Kit_1_2.png)
 
 **Code**
 
 Please click on the button below to download the code for the kit:
 
-[![](https://github.com/SeeedDocument/LinkIt_ONE_Tutorial-Hello_World/raw/master/img/Code_sidekick_linkit.png)](https://github.com/Seeed-Studio/Sidekick_Basic_Kit_for_LinkIt)
+[![](https://files.seeedstudio.com/wiki/LinkIt_ONE_Tutorial-Hello_World/img/Code_sidekick_linkit.png)](https://github.com/Seeed-Studio/Sidekick_Basic_Kit_for_LinkIt)
 
 You can unzip the file to the **Examples** folder of your Arduino IDE.
 
@@ -68,7 +68,7 @@ void loop()
 
     *   This occurs when your code is running in an infinite loop so in order to terminate the process  disconnect the power supply from the board.
 
-![](https://github.com/SeeedDocument/LinkIt_ONE_Tutorial-Hello_World/raw/master/img/LinkItONE_Kit_2_3.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIt_ONE_Tutorial-Hello_World/img/LinkItONE_Kit_2_3.jpg)
 
 **Making it better**
 

@@ -10,7 +10,7 @@ sku:
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Ethernet_Shield_V2.0/raw/master/img/IMG_0042.jpg)
+![](https://files.seeedstudio.com/wiki/Ethernet_Shield_V2.0/img/IMG_0042.jpg)
 
 Your Ethernet Shield gets a total renewal now! This shield provides you instant Internet connectivity with a high spec Ethernet controller, W5200, with twice the buffer size of v1.0 and support for up to eight simultaneous TCP/UDP connections. An included SD slot enables applications that require storing large amounts of data, like IoT data logging. Thanks to a lowered RJ45 pot, you can flexibly add most of shields on top of this Ethernet Shield.
 
@@ -36,7 +36,7 @@ Model:[SLD91000P](http://www.seeedstudio.com/depot/w5200-ethernet-shield-p-1577.
 
 ##   Interface   ##
 
-![](https://github.com/SeeedDocument/Ethernet_Shield_V2.0/raw/master/img/Ethernet_Interface.jpg)
+![](https://files.seeedstudio.com/wiki/Ethernet_Shield_V2.0/img/Ethernet_Interface.jpg)
 
 **Hardware Configuration**
 
@@ -84,12 +84,12 @@ We are going to build a simple web server that answer request from a client and 
 
 4. Insert an SD card to the SD card slot.
 
-![](https://github.com/SeeedDocument/Ethernet_Shield_V2.0/raw/master/img/IMG_0039.jpg)
+![](https://files.seeedstudio.com/wiki/Ethernet_Shield_V2.0/img/IMG_0039.jpg)
 
 **Step 2: Upload the program**
 
 1.Download the library：[Ethernet Shield V2.0 Library](https://github.com/Seeed-Studio/Ethernet_Shield_W5200)  
-Note: Depreciated/Old Library for 1.0.x IDE: [Link](https://github.com/SeeedDocument/Ethernet_Shield_V2.0/raw/master/res/W5200_Ethernet_Shield_Library.zip).
+Note: Depreciated/Old Library for 1.0.x IDE: [Link](https://files.seeedstudio.com/wiki/Ethernet_Shield_V2.0/res/W5200_Ethernet_Shield_Library.zip).
 
 2.Unzip and put it in the libraries file of Arduino IDE by the path: ..\arduino-1.0.1\libraries.
 
@@ -103,7 +103,7 @@ This new library covers all functions included in the build-in Ethernet library 
 
 5.Upload the program to Arduino. If you do not know how to upload code, please click here.
 
-![](https://github.com/SeeedDocument/Ethernet_Shield_V2.0/raw/master/img/Open_WebSeverWithSD_code.jpg)
+![](https://files.seeedstudio.com/wiki/Ethernet_Shield_V2.0/img/Open_WebSeverWithSD_code.jpg)
 
 In this code ,we have defined pin 4 as SD card  chip select port and pin 10 as W5200 chip select port.
 
@@ -115,11 +115,11 @@ Finally you can view each analog pin by opening SD Card file.
 
 Open a web browser and enter the IP address of your controller. It's dependent on your local network but used to be 192.168.168.178. Then you should find the readings of A0 through A5 popping up as shown below.
 
-![](https://github.com/SeeedDocument/Ethernet_Shield_V2.0/raw/master/img/Ethernet_Score.jpg)
+![](https://files.seeedstudio.com/wiki/Ethernet_Shield_V2.0/img/Ethernet_Score.jpg)
 
 To check what's going on to the SD card, open the serial monitor. You can use the built-in serial monitor of Arduino IDE or a serial monitor tool as us. After opening a serial monitor, you can read the content of file "test.txt" which we created to store the readings of analog pins.
 
-![](https://github.com/SeeedDocument/Ethernet_Shield_V2.0/raw/master/img/WebServerWithSD_Result.jpg)
+![](https://files.seeedstudio.com/wiki/Ethernet_Shield_V2.0/img/WebServerWithSD_Result.jpg)
 
 **Notice:**
 
@@ -138,7 +138,7 @@ Here we introduce some projects about [LinkIt ONE](http://www.seeedstudio.com/de
 
 ###  What is LinkIt ONE ###
 
-![](https://github.com/SeeedDocument/Ethernet_Shield_V2.0/raw/master/img/Linkit-one-page.jpg)
+![](https://files.seeedstudio.com/wiki/Ethernet_Shield_V2.0/img/Linkit-one-page.jpg)
 
 The LinkIt ONE development board is an open source, high performance board for prototyping Wearables and IoT devices.
 
@@ -150,7 +150,7 @@ It also provides similar pin-out features to Arduino boards, making it easy for 
 
 ###  LinkIt ONE IoT Demo ###
 
-![](https://github.com/SeeedDocument/Ethernet_Shield_V2.0/raw/master/img/Seeed-recipe-77-20141020151546.jpg)
+![](https://files.seeedstudio.com/wiki/Ethernet_Shield_V2.0/img/Seeed-recipe-77-20141020151546.jpg)
 
 This is an IoT demo make by LinkIt ONE.
 
@@ -170,7 +170,7 @@ With this demo, we can:
 
 ###  Pringles Can antenna with a LinkIt ONE ###
 
-![](https://github.com/SeeedDocument/Ethernet_Shield_V2.0/raw/master/img/5515ae26588ec.jpg)
+![](https://files.seeedstudio.com/wiki/Ethernet_Shield_V2.0/img/5515ae26588ec.jpg)
 
 Make a focused antenna with a pringles can.
 
@@ -206,11 +206,11 @@ Get more information about Core User please email to:[recipe@seeed.cc](mailto:re
 ##   Resource   ##
 
 - **[Library]**[Ethernet Shield V2.0 Library](https://github.com/Seeed-Studio/Ethernet_Shield_W5200)
-- **[Library]**[Depreciated/Old Version of Ethernet Shield V2.0 Library](https://github.com/SeeedDocument/Ethernet_Shield_V2.0/raw/master/res/W5200_Ethernet_Shield_Library.zip)
-- **[Eagle]**[Ethernet Shield V2.0 eagle files](https://github.com/SeeedDocument/Ethernet_Shield_V2.0/raw/master/res/W5200_Ethernet_Shield_eagle_files.zip)
-- **[PDF]**[Ethernet Shield v2.0 PCB](https://github.com/SeeedDocument/Ethernet_Shield_V2.0/raw/master/res/Ethernet%20Shield%20v2.0.pdf)
-- **[PDF]**[Ethernet Shield v2.0 SCH](https://github.com/SeeedDocument/Ethernet_Shield_V2.0/raw/master/res/Ethernet%20Shield%20v2.0%20sch.pdf)
-- **[Datasheet]**[W5200 Datasheet.pdf](https://github.com/SeeedDocument/Ethernet_Shield_V2.0/raw/master/res/W5200_Datasheet.pdf)
+- **[Library]**[Depreciated/Old Version of Ethernet Shield V2.0 Library](https://files.seeedstudio.com/wiki/Ethernet_Shield_V2.0/res/W5200_Ethernet_Shield_Library.zip)
+- **[Eagle]**[Ethernet Shield V2.0 eagle files](https://files.seeedstudio.com/wiki/Ethernet_Shield_V2.0/res/W5200_Ethernet_Shield_eagle_files.zip)
+- **[PDF]**[Ethernet Shield v2.0 PCB](https://files.seeedstudio.com/wiki/Ethernet_Shield_V2.0/res/Ethernet%20Shield%20v2.0.pdf)
+- **[PDF]**[Ethernet Shield v2.0 SCH](https://files.seeedstudio.com/wiki/Ethernet_Shield_V2.0/res/Ethernet%20Shield%20v2.0%20sch.pdf)
+- **[Datasheet]**[W5200 Datasheet.pdf](https://files.seeedstudio.com/wiki/Ethernet_Shield_V2.0/res/W5200_Datasheet.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

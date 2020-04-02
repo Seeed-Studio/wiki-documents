@@ -7,7 +7,7 @@ prodimagename:
 surveyurl: https://www.research.net/r/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS
 sku:
 ---
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/Aws_linkit_cover.JPG)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/Aws_linkit_cover.JPG)
 
 _Primary reference: [Grove IoT Starter Kits Powered by AWS](/Grove_IoT_Starter_Kits_Powered_by_AWS "Grove IoT Starter Kits Powered by AWS") , [LinkIt ONE](/LinkIt_ONE "LinkIt ONE"), [MediaTek AWS IoT Guide](http://labs.mediatek.com/site/global/developer_tools/mediatek_linkit/hdk_intro/aws_kit/index.gsp)_
 
@@ -17,11 +17,11 @@ You can use AWS IoT to accomplish two key tasks: secured data and flexible tele-
 
 With MediaTek LinkIt™ ONE and Grove IoT Starter Kit Powered by AWS, you can create powerful Wearables, bleeding edge IoT devices, send your device data to Amazon Web Services. The kit includes a collection of Grove sensors for gathering data and peripherals to acquire visual interface on your device. And by adopting the AWS Cloud, your business will benefit from its flexibility, scalability and pay on-your-demand.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.amazon.com/dp/B0168LBYWC)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.amazon.com/dp/B0168LBYWC)
 
 ##  Included in the Box
 
-<div class="thumb tright"><div class="thumbinner" style="width:502px;">![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/Aws_kit_linkit.JPG) <div class="thumbcaption"></div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:502px;">![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/Aws_kit_linkit.JPG) <div class="thumbcaption"></div></div></div>
 <table>
 <tr>
 <th> Board/Part </th>
@@ -109,50 +109,50 @@ At the very beginning, we need to get an AWS IoT service account, and do some co
 </dd><dd>
 </dd></dl>
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_click_service.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_click_service.jpg)
 
 <dl><dd>
 </dd></dl>
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_click_iot.png)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_click_iot.png)
 
 <dl><dd> 2. Click **Get started** button.
 </dd><dd>
 </dd></dl>
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_click_get_started.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_click_get_started.jpg)
 
 <dl><dd> 3. Click on **Create a Resource** and then click **Creat a thing**.
 </dd></dl>
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_click_create_a_thing.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_click_create_a_thing.jpg)
 
 <dl><dd>
 </dd></dl>
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_view_a_thing.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_view_a_thing.jpg)
 
 <dl><dd>
 </dd></dl>
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_name_a_thing.png)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_name_a_thing.png)
 
 <dl><dd> 4. Click on **Connect a device**.
 </dd></dl>
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_click_connect_a_thing.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_click_connect_a_thing.jpg)
 
 <dl><dd> 5. Select **Embedded C** and Click on **Generate certificate** and policy. Click links to download keys and certificate which will be used later.
 </dd></dl>
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_select_SDK.png)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_select_SDK.png)
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_confirm_connecting_and_download_keys.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_confirm_connecting_and_download_keys.jpg)
 
 <dl><dd> 6. Then we will get some code as shown at below. Copy the code into an empty document. We will use these code later. Then click on Return to Thing Detail.
 </dd></dl>
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_pasting_code.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_pasting_code.jpg)
 
 ###  Setup your LinkIt ONE development environment
 
@@ -176,7 +176,7 @@ AWS IoT Services support for the LinkIt ONE development board enables secure com
 
 *   Download sketch [here](https://github.com/loovee/aws_mbedtls_mqtt)
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_download_sketch_github.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_download_sketch_github.jpg)
 
 *   Then click **Download ZIP** to download the code. The code you downloaded is not an Arduino library, it's a sketchbook, which had included all the library the project need.
 
@@ -187,12 +187,12 @@ Unzip the file you had downloaded from Github, you will get a folder named aws_m
 <dl><dd> 1. Open your Arduino IDE(1.5.7), click File &gt; Preferences &gt; Sketchbook Location, browse to the folder we had mentioned above - ArduinoPhone-master. Then click OK to save it.
 </dd></dl>
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_configure_arduino_IDE.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_configure_arduino_IDE.jpg)
 
 <dl><dd> 2. Close and relaunch Arduino IDE, click File &gt; Sketchbook &gt; aws_paho_shadow, then the code will be loaded.
 </dd></dl>
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_load_sketch.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_load_sketch.jpg)
 
 ###  Put key file into Storage of LinkIt ONE
 
@@ -201,18 +201,18 @@ Unzip the file you had downloaded from Github, you will get a folder named aws_m
 
 Switch it into Mass Storage mode, as shown below. You need to disconnect power if no new-plugged-driver exists on your desktop OS.
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_connections.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_connections.jpg)
 
 <dl><dd> 2. Navigate to Computer, then Devices and Removable Storage. Open the removable disk drive corresponding to the LinkIt ONE development board.
 </dd></dl>
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_find_linkitone_storage.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_find_linkitone_storage.jpg)
 
 <dl><dd> 3. Copy the keys and certificates files we download from AWS IoT into the disk.
 </dd></dl>
 
 And in the code we had downloaded, there's file named VeriSign-Class 3-Public-Primary-Certification-Authority-G5 (1).pem in \aws_mbedtls_mqtt\root_cert in, copy it to the Remove Disk as well, and rename it to root-CA.crt
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_find_keys_file.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_find_keys_file.jpg)
 
 Then switch to UART mode( corner-most section of LinkIt ONE board).
 
@@ -223,19 +223,19 @@ Click File&gt;Sketchbook&gt;aws_paho_shadow to open the code.
 <dl><dd> 1. Find the code below at aws_paho_shadow.h.
 </dd></dl>
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_paste_code.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_paste_code.jpg)
 
 <dl><dd> 2. Recall to when we create a thing at AWS IoT:
 </dd></dl>
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_pasting_code.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_pasting_code.jpg)
 
 Copy the code and replace it in **aws_paho_shadow.h**.
 
 <dl><dd> 3. Configure your Wi-Fi AP:
 </dd></dl>
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_configure_WIFI_access_info.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_configure_WIFI_access_info.jpg)
 
 <dl><dd> 4. Run win+R, enter cmd, and **ping** the address of AWS_IOT_MQTT_HOST
 </dd></dl>
@@ -243,19 +243,19 @@ Copy the code and replace it in **aws_paho_shadow.h**.
 
 **Note** that You need to replace the _A2DWFZYZMAZJGZ.iot.us-east-1.amazonaws.com_ with the constant **AWS_IOT_MQTT_HOST '**s value, which can find in the previously copied code.
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_pasting_code.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_pasting_code.jpg)
 
 You will get:
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_get_AWS_addr.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_get_AWS_addr.jpg)
 
 And modify IP_ADDRESS(line 40) to this line of numbers. (Here is 54.164.100.76)
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_modify_IP_addr.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_modify_IP_addr.jpg)
 
 ###  Hardware connection
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_demo_connection.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_demo_connection.jpg)
 
 Material required:
 
@@ -273,13 +273,13 @@ Connect you LinkIt ONE to PC, and remember to insert the Wi-Fi antenna first. Op
 <dl><dd>
 </dd></dl>
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_find_COM_port.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_find_COM_port.jpg)
 
 Click **Tools&gt;Board** and choose LinkIt ONE. Click Tool&gt;Ports and choost the number of MTK USB Debug Port. Finally, click Upload button to Upload the code.
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_flash_code_to_linkitone.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_flash_code_to_linkitone.jpg)
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_upload_code_down.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_upload_code_down.jpg)
 
 ###  Check the output
 
@@ -288,27 +288,27 @@ Click **Tools&gt;Board** and choose LinkIt ONE. Click Tool&gt;Ports and choost t
 <dl><dd> 1. Change Arduino IDE Ports to MTK USB Moden Port, and open the Serial Monitor and set baud rate to 9600.
 </dd></dl>
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_open_serial_port.png)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_open_serial_port.png)
 
 <dl><dd> 2. When you got _**...X.509 certificazte... ok**_, it means your device had connected to AWS successful. If there's something wrong, please re-power LinkIt ONE and try again.
 </dd></dl>
 
 Then let's open AWS IoT website, sign in to your account. And click the thing you created minutes ago:
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_return_to_AWS.png)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_return_to_AWS.png)
 
 You will find a control panel on the right side.
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_create_rule_in_AWS_console.png)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_create_rule_in_AWS_console.png)
 
 You can check the status of Touch Sensor now. Try press the Touch Sensor, and update it.
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_change_state.png)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_change_state.png)
 
 <dl><dd> 3. You will find the status of Touch had changed. Then let's try to control the LED Bar. Click Update shadow.
 </dd></dl>
 
-![](https://github.com/SeeedDocument/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_update_shadow.png)
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_update_shadow.png)
 
 <dl><dd> 4. And replace the code with below code(replace all existing code):
 </dd></dl>

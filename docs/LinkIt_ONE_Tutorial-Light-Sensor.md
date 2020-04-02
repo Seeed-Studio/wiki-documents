@@ -26,17 +26,17 @@ It's time to know about new sensors that could make our projects even more inter
 
 **Schematic**
 
-![](https://github.com/SeeedDocument/LinkIt_ONE_Tutorial-Light-Sensor/raw/master/img/LinkItONE_Kit_8_1.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIt_ONE_Tutorial-Light-Sensor/img/LinkItONE_Kit_8_1.jpg)
 
 **Connection**
 
-![](https://github.com/SeeedDocument/LinkIt_ONE_Tutorial-Light-Sensor/raw/master/img/LinkItONE_Kit_8_2.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIt_ONE_Tutorial-Light-Sensor/img/LinkItONE_Kit_8_2.jpg)
 
 **Code**
 
 Please click on the button below to download the code for the kit:
 
-[![](https://github.com/SeeedDocument/LinkIt_ONE_Tutorial-Light-Sensor/raw/master/img/Code_sidekick_linkit.png)](https://github.com/Seeed-Studio/Sidekick_Basic_Kit_for_LinkIt)
+[![](https://files.seeedstudio.com/wiki/LinkIt_ONE_Tutorial-Light-Sensor/img/Code_sidekick_linkit.png)](https://github.com/Seeed-Studio/Sidekick_Basic_Kit_for_LinkIt)
 
 You can unzip the file to the **Examples** folder of your Arduino IDE.
 

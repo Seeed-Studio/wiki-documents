@@ -49,29 +49,29 @@ Grove-Gas Sensor (O2) is a kind of sensor to test the oxygen concentration in ai
 
 **Voltage Convertor**
 
-![](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2/raw/master/images/Converter.png)
+![](https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_O2/images/Converter.png)
 
 The XC6206332MR converts 3.3v/5v input to 3.3v.
 
 **ME2-O2 current source**
 
-![](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2/raw/master/images/ME2-O2.png)
+![](https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_O2/images/ME2-O2.png)
 
 The ME2-O2 is current source. The voltage of the label #3 point is R7 * Current(ME2-O2).
 
 
 **Amplifer**
 
-![](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2/raw/master/images/Amplifer.png)
+![](https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_O2/images/Amplifer.png)
 
 The gain of the amplifer is 121, SIGA voltage is 121 times of label #3 point voltage. 
 
-![](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2/raw/master/images/concentration_current.png)
+![](https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_O2/images/concentration_current.png)
 
 Here is the correlation between ME2-O2 output current and concentration of O2. The current of 20% concentration O2 is around 120uA. So the Grove SIGA voltage @ 20% concentration = R7 * Current(ME2-O2) * 121 = 100 * 120uA * 121 = 1.452V. 
 
 !!!warning
-    The current ranage of ME2-O2 is 80uA~160uA due to individual difference. So the sensor ouput voltage also will different. Please explosure the sensor to fresh air and get reading of output voltage as reference at beginning. You can refer to [this example](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2/raw/master/resources/Read_O2_value.zip) to get the calibration at beginning and then read the sensor values.   
+    The current ranage of ME2-O2 is 80uA~160uA due to individual difference. So the sensor ouput voltage also will different. Please explosure the sensor to fresh air and get reading of output voltage as reference at beginning. You can refer to [this example](https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_O2/resources/Read_O2_value.zip) to get the calibration at beginning and then read the sensor values.   
 
 ## Platforms Supported
 
@@ -193,7 +193,7 @@ Open serial monitor of your Arduino IDE, and you will get the data now.
 ## Resources
 
 * [ME2-O2 Datasheet](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2/raw/master/resources/ME2-O2-D20%200-25%25%20Manual%20%28ver1.2%29.pdf)
-* [Schematic in Eagle File](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2/raw/master/resources/Schematics_O2.zip)
+* [Schematic in Eagle File](https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_O2/resources/Schematics_O2.zip)
 * [Github Repository of this Document](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2)
 
 

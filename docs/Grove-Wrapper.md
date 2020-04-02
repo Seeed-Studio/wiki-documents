@@ -7,7 +7,7 @@ prodimagename: Grove-Mouser_Encorder_product_view.jpg
 surveyurl: https://www.research.net/r/Grove_Wrapper
 ---
 
-![](https://github.com/SeeedDocument/Grove-Wrapper/raw/master/img/Grove-Mouser_Encorder_product_view.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Wrapper/img/Grove-Mouser_Encorder_product_view.jpg)
 
 **Grove - Wrapper** is a kind of wrapper to fix and protect Grove modules. It will save you a lot of work on aligning your modules, and it will easy for you to show your project. For example, it will simpler to take pictures for showing your product on the Internet, and it will give a clear and clean scene if you use Grove - Wrapper to demo your project. What is more, it is expandable for Lego, mechanical parts, and so on, this will introduce more flavor into your works and make your project adapt to various circumstances. The design of Grove - Wrapper also make it easy to assemble and disassemble modules.
 
@@ -15,7 +15,7 @@ surveyurl: https://www.research.net/r/Grove_Wrapper
 - Around 85% of all Grove modules is supported by Grove - Wrapper.
 - Grove - Wrapper series have two size of wrappers, each gets four colors, and there are totally eight SKUs that are listed at [Specifications](/Grove-Wrapper#Parts_list) section.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/s/Grove%20-%20Wrapper.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/s/Grove%20-%20Wrapper.html)
 
 ##  Features
 ---
@@ -35,7 +35,7 @@ surveyurl: https://www.research.net/r/Grove_Wrapper
 
 ##  Applications
 ---
-![](https://github.com/SeeedDocument/Grove-Wrapper/raw/master/img/Grove-Mouser_Encorder_application_view.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Wrapper/img/Grove-Mouser_Encorder_application_view.jpg)
 
 ##  Specification
 ---
@@ -103,21 +103,21 @@ surveyurl: https://www.research.net/r/Grove_Wrapper
 
 **Fastener**
 
-![](https://github.com/SeeedDocument/Grove-Wrapper/raw/master/img/Grove-Wrapper_fastener_location.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Wrapper/img/Grove-Wrapper_fastener_location.jpg)
 
 **Screw holes**
 
 Note you can also use rivet to replace screw to fasten it on other blocks.
 
-![](https://github.com/SeeedDocument/Grove-Wrapper/raw/master/img/Grove-Wrapper_screw_hole_loacation.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Wrapper/img/Grove-Wrapper_screw_hole_loacation.jpg)
 
 ###   How to connect Grove - Wrapper
 
-![](https://github.com/SeeedDocument/Grove-Wrapper/raw/master/img/Grove-Wrapper_connection_manner.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Wrapper/img/Grove-Wrapper_connection_manner.jpg)
 
 ###  How to install Grove modules on Grove - Wrapper
 
-![](https://github.com/SeeedDocument/Grove-Wrapper/raw/master/img/Grove-Wrapper_steps_to_install_Grove_modules_.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Wrapper/img/Grove-Wrapper_steps_to_install_Grove_modules_.jpg)
 
 ###  **Parts list**
 
@@ -143,19 +143,19 @@ Nut(Silver) M2.0*H1.5mm
 
 ##  Demos
 
-This section([Assembly guide](https://github.com/SeeedDocument/Grove-Wrapper/raw/master/res/Assembly_guide.pdf)) will show some tips on assembling a grove modules skillfully.
+This section([Assembly guide](https://files.seeedstudio.com/wiki/Grove-Wrapper/res/Assembly_guide.pdf)) will show some tips on assembling a grove modules skillfully.
 
 ###   Wrapper Connections
 
-![](https://github.com/SeeedDocument/Grove-Wrapper/raw/master/img/Grove-Wrapper_connect_each_other.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Wrapper/img/Grove-Wrapper_connect_each_other.jpg)
 
 ###   Install Grove - Wrapper on Lego blocks
 
-![](https://github.com/SeeedDocument/Grove-Wrapper/raw/master/img/Grove-Wrapper_installed_on_Lego.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Wrapper/img/Grove-Wrapper_installed_on_Lego.jpg)
 
 ###   Install Grove - Wrapper on Makeblock
 
-![](https://github.com/SeeedDocument/Grove-Wrapper/raw/master/img/Grove-Wrapper_installed_on_Makeblock.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Wrapper/img/Grove-Wrapper_installed_on_Makeblock.jpg)
 
 ###  Notes
 
@@ -163,7 +163,7 @@ For a novice, it may find a little hard to assemble them. Do not be frustrated. 
 
 ##  Resources
 ---
-[Mechanical Files](https://github.com/SeeedDocument/Grove-Wrapper/raw/master/res/Mechanical_Diagram.zip)
+[Mechanical Files](https://files.seeedstudio.com/wiki/Grove-Wrapper/res/Mechanical_Diagram.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

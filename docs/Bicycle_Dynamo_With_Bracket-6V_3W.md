@@ -11,7 +11,7 @@ sku:   108990013
 
 This product provide clean and green energy, it produce electric without any fuel. it works safty and silence. It's fashion, users can make a contribution for protect the world by low carbon life.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/bicycle-dynamo-with-bracket-6v-3w-p-798.html?cPath=155)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/bicycle-dynamo-with-bracket-6v-3w-p-798.html?cPath=155)
 
 ##   Features
 ---

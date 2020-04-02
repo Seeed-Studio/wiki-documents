@@ -9,7 +9,7 @@ sku:     104990001
 ---
 ![](http://bz.seeedstudio.com/depot/images/product/lcd1621n.jpg)
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/lcd-162-characters-green-yellow-back-light-p-62.html?cPath=163_164)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/lcd-162-characters-green-yellow-back-light-p-62.html?cPath=163_164)
 
 ##   Cautions
 ---
@@ -53,7 +53,7 @@ sku:     104990001
 ---
 ###   Block Diagram
 
-![](https://github.com/SeeedDocument/LCD_16-2_Characters-Green_Yellow_back_light/raw/master/img/LCD-wbl-block-162.JPG)
+![](https://files.seeedstudio.com/wiki/LCD_16-2_Characters-Green_Yellow_back_light/img/LCD-wbl-block-162.JPG)
 
 ##   Specification
 ---
@@ -249,9 +249,9 @@ V<sub>ss</sub>=0V,V<sub>DD</sub>=5V,T<sub>OP</sub>=25℃
 </td></tr></table>
 <table >
 <tr>
-<td>![](https://github.com/SeeedDocument/LCD_16-2_Characters-Green_Yellow_back_light/raw/master/img/LCD-module-WTiming.jpg)
+<td>![](https://files.seeedstudio.com/wiki/LCD_16-2_Characters-Green_Yellow_back_light/img/LCD-module-WTiming.jpg)
 </td>
-<td>![](https://github.com/SeeedDocument/LCD_16-2_Characters-Green_Yellow_back_light/raw/master/img/LCD-module-RTiming.jpg)
+<td>![](https://files.seeedstudio.com/wiki/LCD_16-2_Characters-Green_Yellow_back_light/img/LCD-module-RTiming.jpg)
 </td></tr>
 <tr>
 <td>**Host Writing Timing Diagram**
@@ -495,7 +495,7 @@ To drive the LCD module correctly and provide normally display, please use the f
 
 A Variable-Resistor must be connected to the LCD module for providing a reference to V0. Adjusting the VR will result the change of LCD display contrast. The recommended value of VR is 25k to 50k.
 
-![](https://github.com/SeeedDocument/LCD_16-2_Characters-Green_Yellow_back_light/raw/master/img/VFD-lcd-module-162.JPG)
+![](https://files.seeedstudio.com/wiki/LCD_16-2_Characters-Green_Yellow_back_light/img/VFD-lcd-module-162.JPG)
 
 **Resetting the LCD module**
 
@@ -550,7 +550,7 @@ While /RST is low, no instruction can be accepted except status read. Therefore,
 <td>ns
 </td></tr></table>
 
-![](https://github.com/SeeedDocument/LCD_16-2_Characters-Green_Yellow_back_light/raw/master/img/VFD-lcd-module-trtx.jpg)
+![](https://files.seeedstudio.com/wiki/LCD_16-2_Characters-Green_Yellow_back_light/img/VFD-lcd-module-trtx.jpg)
 
 
 ##   Resources

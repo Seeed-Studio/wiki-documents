@@ -25,11 +25,11 @@ Let's build a simple circuit using a transistor, LED and a toggle switch. Light 
 
 **Schematic**
 
-![](https://github.com/SeeedDocument/LinkIt_ONE_Tutorial-The_Basics/raw/master/img/LinkItONE_Kit_0_1.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIt_ONE_Tutorial-The_Basics/img/LinkItONE_Kit_0_1.jpg)
 
 **Connection**
 
-![](https://github.com/SeeedDocument/LinkIt_ONE_Tutorial-The_Basics/raw/master/img/LinkItONE_Kit_0_2.jpg)
+![](https://files.seeedstudio.com/wiki/LinkIt_ONE_Tutorial-The_Basics/img/LinkItONE_Kit_0_2.jpg)
 
 **Troubleshooting**
 

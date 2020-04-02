@@ -7,12 +7,12 @@ prodimagename:  USB_To_Uart_5V_photo.jpg
 surveyurl: https://www.research.net/r/USB_To_Uart_5V
 sku:  103990051
 ---
-![](https://github.com/SeeedDocument/USB_To_Uart_5V/raw/master/img/USB_To_Uart_5V_photo.jpg)
+![](https://files.seeedstudio.com/wiki/USB_To_Uart_5V/img/USB_To_Uart_5V_photo.jpg)
 
 USB To Uart 5V  is a USB to serial adapter,Which is base on CH340,CH340 is a USB bus convert chip and it can realize USB convert to serial interface, USB convert to
 IrDA infrared or USB convert to printer interface. this module can used for upload code or communicating with MCUs.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/USB-To-Uart-5V-p-1833.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/USB-To-Uart-5V-p-1833.html)
 
 ##  Features
 ---
@@ -34,7 +34,7 @@ IrDA infrared or USB convert to printer interface. this module can used for uplo
 
 ##  Interface Function
 ---
-![](https://github.com/SeeedDocument/USB_To_Uart_5V/raw/master/img/USB_To_Uart_5v_interface.jpg)
+![](https://files.seeedstudio.com/wiki/USB_To_Uart_5V/img/USB_To_Uart_5v_interface.jpg)
 
 *   ①：Power Indicator
 *   ②：Micro USB
@@ -60,7 +60,7 @@ Totally compatible with serial application program in computer endpoint Windows 
 
 *   3)If you can not find the port,please download Driver from [Here](http://wch-ic.com/download/list.asp?id=127)
 
-![](https://github.com/SeeedDocument/USB_To_Uart_5V/raw/master/img/CH340_Driver.jpg)
+![](https://files.seeedstudio.com/wiki/USB_To_Uart_5V/img/CH340_Driver.jpg)
 
 **Mac OS**
 
@@ -82,7 +82,7 @@ If you want restore your Mac’s setting,You can exit developer mode by redefini
 
 **Hardware**
 
-![](https://github.com/SeeedDocument/USB_To_Uart_5V/raw/master/img/USB_To_Uart_Download.jpg)
+![](https://files.seeedstudio.com/wiki/USB_To_Uart_5V/img/USB_To_Uart_Download.jpg)
 
 You should like this connect your circuit.
 
@@ -90,7 +90,7 @@ You should like this connect your circuit.
 
 We can download code to Seeeduino Ethernet by USB To Uart 5V.
 
-![](https://github.com/SeeedDocument/USB_To_Uart_5V/raw/master/img/USB_To_Uart_5V_Usage.jpg)
+![](https://files.seeedstudio.com/wiki/USB_To_Uart_5V/img/USB_To_Uart_5V_Usage.jpg)
 
 Note that you should select the correct board type and COM port.
 

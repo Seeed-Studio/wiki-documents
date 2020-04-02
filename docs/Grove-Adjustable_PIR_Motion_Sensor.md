@@ -9,7 +9,7 @@ sku: 101020617
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-Adjustable_PIR_Motion_Sensor/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Adjustable_PIR_Motion_Sensor/img/main.jpg)
 
 Grove - Adjustable PIR Motion Sensor is an easy to use Passive Infrared motion sensor, which can detect infrared object motion up to 3 meters. Any infrared object moves in its detecting range, the sensor outputs HIGH on its SIG pin. And you can adjust the SIG HIGH time up to 130s via the  potentiometer, moreover, you can adjust the detect range via the other potentiometer.
 
@@ -65,9 +65,9 @@ Grove - Adjustable PIR Motion Sensor is an easy to use Passive Infrared motion s
 
 ### Pin Out
 
-![](https://github.com/SeeedDocument/Grove-Adjustable_PIR_Motion_Sensor/raw/master/img/pinout.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Adjustable_PIR_Motion_Sensor/img/pinout.jpg)
 
-![](https://github.com/SeeedDocument/Grove-Adjustable_PIR_Motion_Sensor/raw/master/img/pinout_back.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Adjustable_PIR_Motion_Sensor/img/pinout_back.jpg)
 
 
 
@@ -79,9 +79,9 @@ Grove - Adjustable PIR Motion Sensor is an easy to use Passive Infrared motion s
 
 **Power**
 
-![](https://github.com/SeeedDocument/Grove-Adjustable_PIR_Motion_Sensor/raw/master/img/11.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Adjustable_PIR_Motion_Sensor/img/11.jpg)
 
-The typical voltage of L221D is 3.3V, so we use the [XC6206P332MR](https://github.com/SeeedDocument/Grove-Infrared_Temperature_Sensor_Array-AMG8833/raw/master/res/XC6206.pdf) chip to provide a stable 3.3V. The input of XC6206P33 ranges from 1.8V to 6.0V, so you can use this module with your Arduino both in 3.3V and 5V.
+The typical voltage of L221D is 3.3V, so we use the [XC6206P332MR](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor_Array-AMG8833/res/XC6206.pdf) chip to provide a stable 3.3V. The input of XC6206P33 ranges from 1.8V to 6.0V, so you can use this module with your Arduino both in 3.3V and 5V.
 
 
 ## Platforms Supported
@@ -126,7 +126,7 @@ The typical voltage of L221D is 3.3V, so we use the [XC6206P332MR](https://githu
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-Adjustable_PIR_Motion_Sensor/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Adjustable_PIR_Motion_Sensor/img/connect.jpg)
 
 !!!Note
         If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
@@ -155,7 +155,7 @@ The typical voltage of L221D is 3.3V, so we use the [XC6206P332MR](https://githu
         If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
 
-- **Step 1.** Just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+- **Step 1.** Just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 
 ```C++
@@ -223,9 +223,9 @@ boolean isPeopleDetected()
 
 ## Resources
 
-- **[Zip]** [Grove - Adjustable PIR Motion Sensor Eagle Files](https://github.com/SeeedDocument/Grove-Adjustable_PIR_Motion_Sensor/raw/master/res/Grove%20-%20Adjustable%20PIR%20Motion%20Sensor.zip)
+- **[Zip]** [Grove - Adjustable PIR Motion Sensor Eagle Files](https://files.seeedstudio.com/wiki/Grove-Adjustable_PIR_Motion_Sensor/res/Grove%20-%20Adjustable%20PIR%20Motion%20Sensor.zip)
 
-- **[PDF]** [Datasheet L221D](https://github.com/SeeedDocument/Grove-Adjustable_PIR_Motion_Sensor/raw/master/res/Mini%20SMD%20Digital%20Pyroelectric%20Infrared%20Sensors.pdf)
+- **[PDF]** [Datasheet L221D](https://files.seeedstudio.com/wiki/Grove-Adjustable_PIR_Motion_Sensor/res/Mini%20SMD%20Digital%20Pyroelectric%20Infrared%20Sensors.pdf)
 
 
 ## Tech Support

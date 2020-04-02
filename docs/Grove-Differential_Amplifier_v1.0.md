@@ -7,11 +7,11 @@ prodimagename:  Amplifier_V2.jpg
 surveyurl: https://www.research.net/r/Grove-Differential_Amplifier_v1
 sku:    103020016
 ---
-![](https://github.com/SeeedDocument/Grove-Differential_Amplifier_v1.0/raw/master/img/Amplifier_V2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Differential_Amplifier_v1.0/img/Amplifier_V2.jpg)
 
 Have you found that setting up an amplifier IC on the breadboard is a troublesome and totally no-need-to-repeat job? This Grove module can save you clutter to settle up such an IC by integrating the whole operating circuit. It's designed for precise differential-input amplification. Input the differential signals of your sensor to this module through the male pins, then your Arduino will get a precisely amplified output from the Grove interface. The gain scale factor is selectable. You can get a 304 times or 971 times amplification via a switch on the board.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Differential-Amplifier-p-1284.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Differential-Amplifier-p-1284.html)
 
 ##  Feature
 ---
@@ -106,7 +106,7 @@ Have you found that setting up an amplifier IC on the breadboard is a troublesom
 
 ##  Interface Function
 ---
-![](https://github.com/SeeedDocument/Grove-Differential_Amplifier_v1.0/raw/master/img/Amplifier_Interface3.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Differential_Amplifier_v1.0/img/Amplifier_Interface3.jpg)
 
 **J2：**Signal Source Interface
 
@@ -128,13 +128,13 @@ The amplifier can turn signals in mA scale up to A scale. Before using it, make 
 
 To pair the weight sensor up with the male pins on the amplifier, female connectors need to be soldered on its wires.
 
-![](https://github.com/SeeedDocument/Grove-Differential_Amplifier_v1.0/raw/master/img/Solder.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Differential_Amplifier_v1.0/img/Solder.jpg)
 
 **3. Hardware Hookup**
 
 Connect the weight sensor to the amplifier as the picture depicts below.
 
-![](https://github.com/SeeedDocument/Grove-Differential_Amplifier_v1.0/raw/master/img/Connect5.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Differential_Amplifier_v1.0/img/Connect5.jpg)
 
 **4. Measurement**
 
@@ -173,9 +173,9 @@ Next is a test to find out the precision of amplifier. We collected 100 groups o
 
 We gradually added the load of weight sensor by adding water drop by drop into a bottle tied to it.
 
-![](https://github.com/SeeedDocument/Grove-Differential_Amplifier_v1.0/raw/master/img/TEST_Score1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Differential_Amplifier_v1.0/img/TEST_Score1.jpg)
 
-![](https://github.com/SeeedDocument/Grove-Differential_Amplifier_v1.0/raw/master/img/Test_Score_Picture2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Differential_Amplifier_v1.0/img/Test_Score_Picture2.jpg)
 
 The horizontal axis represents the input voltage and the vertical axis represents the output voltage. With the weight increase of the bottle, the input signal turns up linearly. The actual gain of the first graph is 300.1 which has 1.3% deviation from theoretical gain, 304. And the actual gain of the second graph is 971. The deviation is 0.8% compared to 964.2.
 
@@ -190,11 +190,11 @@ The measurement range is determined by power supply voltage VCC , the maximum ou
 
 ##  Resource
 ---
-- [Amplifier 1.0 Eagle File](https://github.com/SeeedDocument/Grove-Differential_Amplifier_v1.0/raw/master/res/Amplifier_eagle_file.zip)
+- [Amplifier 1.0 Eagle File](https://files.seeedstudio.com/wiki/Grove-Differential_Amplifier_v1.0/res/Amplifier_eagle_file.zip)
 
-- [Amplifier1.0 Schematic](https://github.com/SeeedDocument/Grove-Differential_Amplifier_v1.0/raw/master/res/Amplifier.pdf)
+- [Amplifier1.0 Schematic](https://files.seeedstudio.com/wiki/Grove-Differential_Amplifier_v1.0/res/Amplifier.pdf)
 
-- [INA125 Datasheet](https://github.com/SeeedDocument/Grove-Differential_Amplifier_v1.0/raw/master/res/INA125.pdf)
+- [INA125 Datasheet](https://files.seeedstudio.com/wiki/Grove-Differential_Amplifier_v1.0/res/INA125.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

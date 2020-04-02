@@ -10,7 +10,7 @@ sku:
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Wifi_Shield_v1.0/raw/master/img/Wifishield.jpg)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_v1.0/img/Wifishield.jpg)
 
 This Wifi Shield utilizes a RN171 wifi module to provide your Arduino/Seeeduino with serial Ethernet's function. It only takes two pins to hook your device up to 802.11b/g wireless networks with this shield. It features an independent antenna which can cover a wider range and transmit stronger signals. With supports for common TCP, UDP and FTP communication protocols, this Wifi Shield can meet needs of most wireless network projects, like smart home networks, robot controls or personal weather stations,etc. We prepared an easy and convenient command set for this shield so that you can use neat and concise code to run the function.
 
@@ -106,7 +106,7 @@ This Wifi Shield utilizes a RN171 wifi module to provide your Arduino/Seeeduino 
 
 #   Interface Function
 
-![](https://github.com/SeeedDocument/Wifi_Shield_v1.0/raw/master/img/Wifishield009.jpg)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_v1.0/img/Wifishield009.jpg)
 
 #   Usage   #
 
@@ -116,15 +116,15 @@ The example we provided here is to show you how to connect this Wifi Shield to t
 
 The package you receive should contain these parts: a Wifi Shield, an antenna and an antenna connector.
 
-![](https://github.com/SeeedDocument/Wifi_Shield_v1.0/raw/master/img/Wifishield001.jpg)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_v1.0/img/Wifishield001.jpg)
 
 Assemble these parts together like the picture below.
 
-![](https://github.com/SeeedDocument/Wifi_Shield_v1.0/raw/master/img/Wifishield002.jpg)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_v1.0/img/Wifishield002.jpg)
 
 Mount the shield onto your Arduino/Seeeduino
 
-![](https://github.com/SeeedDocument/Wifi_Shield_v1.0/raw/master/img/Wifishield003.jpg)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_v1.0/img/Wifishield003.jpg)
 
 Ok, time to write some code.
 
@@ -132,7 +132,7 @@ Ok, time to write some code.
 
 First you have to make sure that Arduino1.0 has already been installed on your computer.
 
-![](https://github.com/SeeedDocument/Wifi_Shield_v1.0/raw/master/img/Tb2.jpg)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_v1.0/img/Tb2.jpg)
 Download the wifishield library here [Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield) and unzip it into the libraries file of Arduino via this path: ..\arduino-1.0\libraries
 Open a new sketch in Arduino-1.0, then copy the following code to your sketch.
 
@@ -175,7 +175,7 @@ WiflyClass Wifly(2,3);
 
 The parameters 2 and 3 here represent RX and TX respectively for the software serial port. Based on this, pins of D2 and D3 should be shorted as the picture below. You can change the pin number as you like, just make sure corresponding changes on the shorted pins.
 
-![](https://github.com/SeeedDocument/Wifi_Shield_v1.0/raw/master/img/Wifishield004.jpg)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_v1.0/img/Wifishield004.jpg)
 
 2.Fill in wireless network information
 
@@ -205,11 +205,11 @@ while(!Wifly.connect("192.168.1.164","90"));//connect the remote service
 
 In the upper line, "192.168.1.164" is the remote IP address of the virtual server, and "90" is the port information.
 
-We provide a TCP Client software  [YFTCPServer.zip](https://github.com/SeeedDocument/Wifi_Shield_v1.0/raw/master/res/YFTCPServer.zip) and serial port software [SCCOM](https://github.com/SeeedDocument/Wifi_Shield_v1.0/raw/master/res/Sscom32E.zip) for testing purpose.
+We provide a TCP Client software  [YFTCPServer.zip](https://files.seeedstudio.com/wiki/Wifi_Shield_v1.0/res/YFTCPServer.zip) and serial port software [SCCOM](https://files.seeedstudio.com/wiki/Wifi_Shield_v1.0/res/Sscom32E.zip) for testing purpose.
 
 Open the TCP Client software you will see:
 
-![](https://github.com/SeeedDocument/Wifi_Shield_v1.0/raw/master/img/Wifishield005.jpg)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_v1.0/img/Wifishield005.jpg)
 
 Change your lines according to the information you get from this software.
 
@@ -221,13 +221,13 @@ Upload the sketch.
 
 Now run the TCP Client software first, then the serial port software, click the "OpenCom" button, wait until a message "<--Connected!" is printed on the screen of the virtual software.
 
-![](https://github.com/SeeedDocument/Wifi_Shield_v1.0/raw/master/img/Wifishield006.jpg)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_v1.0/img/Wifishield006.jpg)
 
-![](https://github.com/SeeedDocument/Wifi_Shield_v1.0/raw/master/img/Wifishield007.jpg)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_v1.0/img/Wifishield007.jpg)
 
 Now you can communicate with the Wifi Shield via this serial port software.
 
-For more detailed information about RN171, you can download the datasheet here [RN171 Datasheet](https://github.com/SeeedDocument/Wifi_Shield_v1.0/raw/master/res/WiFly-RN-UM.pdf)
+For more detailed information about RN171, you can download the datasheet here [RN171 Datasheet](https://files.seeedstudio.com/wiki/Wifi_Shield_v1.0/res/WiFly-RN-UM.pdf)
 
 
 ## Schematic Online Viewer
@@ -238,10 +238,10 @@ For more detailed information about RN171, you can download the datasheet here [
 
 #   Resources   #
 
-- **[Eagle]**[Wifi Shield Eagle File](https://github.com/SeeedDocument/Wifi_Shield_v1.0/raw/master/res/Wifi_Shield_Eagle.zip)
-- **[PDF]**[wifi Shield V1.0 PCB](https://github.com/SeeedDocument/Wifi_Shield_v1.0/raw/master/res/wifi%20Shield%20V1.0.pdf)
-- **[PDF]**[wifi Shield V1.0 SCH](https://github.com/SeeedDocument/Wifi_Shield_v1.0/raw/master/res/wifi%20Shield%20V1.0%20SCH.pdf)
-- **[Datasheet]**[RN171 Datasheet](https://github.com/SeeedDocument/Wifi_Shield_v1.0/raw/master/res/WiFly-RN-UM.pdf)
+- **[Eagle]**[Wifi Shield Eagle File](https://files.seeedstudio.com/wiki/Wifi_Shield_v1.0/res/Wifi_Shield_Eagle.zip)
+- **[PDF]**[wifi Shield V1.0 PCB](https://files.seeedstudio.com/wiki/Wifi_Shield_v1.0/res/wifi%20Shield%20V1.0.pdf)
+- **[PDF]**[wifi Shield V1.0 SCH](https://files.seeedstudio.com/wiki/Wifi_Shield_v1.0/res/wifi%20Shield%20V1.0%20SCH.pdf)
+- **[Datasheet]**[RN171 Datasheet](https://files.seeedstudio.com/wiki/Wifi_Shield_v1.0/res/WiFly-RN-UM.pdf)
 - **[Library]**[Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield)
 
 ## Tech Support

@@ -7,11 +7,11 @@ prodimagename: PS221_sensor.jpg
 surveyurl: https://www.research.net/r/Grove_PS-2_Adapter
 sku:  103020003
 ---
- ![](https://github.com/SeeedDocument/Grove-PS_2_Adapter/raw/master/img/PS221_sensor.jpg)
+ ![](https://files.seeedstudio.com/wiki/Grove-PS_2_Adapter/img/PS221_sensor.jpg)
 
 The PS/2 Adapter enables you to connect a PS2 device to the Arduino/Seeeduino mainboards. With the help of PS2Keyboard/PS2MouseNlibrary, you can create the bridge between these PS2 device and Arduino/Seeeduino.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-PS%262-Adapter-p-966.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-PS%262-Adapter-p-966.html)
 
 ##   Features
 ---
@@ -80,7 +80,7 @@ The PS/2 connector is a 6-pin Mini-DIN connector used for connecting keyboard an
 
 A PS/2 connector has 6 pins as you can see from the following diagram. Pin 1 and pin 6 are not connected. Pin 3 is for ground, and pin 4 is for power. The other 2 pins are for clock and data.
 
- ![](https://github.com/SeeedDocument/Grove-PS_2_Adapter/raw/master/img/MiniDIN-6_Connector.svg.png)
+ ![](https://files.seeedstudio.com/wiki/Grove-PS_2_Adapter/img/MiniDIN-6_Connector.svg.png)
 
 <table  cellspacing="0" width="702">
 <tr>
@@ -154,9 +154,9 @@ A PS/2 connector has 6 pins as you can see from the following diagram. Pin 1 and
 
  2.Plug the Base Shield into Arduino/Seeeduino and connect Arduino/Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-PS_2_Adapter/raw/master/img/PS2_sensorss.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-PS_2_Adapter/img/PS2_sensorss.jpg)
 
-3.Download [PS2 Adapter library](https://github.com/SeeedDocument/Grove-PS_2_Adapter/raw/master/res/PS2_Adapter_Library.zip), Unzip and put them in the libraries file of Arduino IDE by the path: ..\arduino-1.0\libraries.
+3.Download [PS2 Adapter library](https://files.seeedstudio.com/wiki/Grove-PS_2_Adapter/res/PS2_Adapter_Library.zip), Unzip and put them in the libraries file of Arduino IDE by the path: ..\arduino-1.0\libraries.
 
 4.Restart the Arduino IDE, open one of the demo codes, for example ps2_mouse directly by the path:File -&gt; Example -&gt;PS2_Adapter-&gt;ps2_kbd.
 ```
@@ -210,7 +210,7 @@ void loop()
 Please click [here](http://www.seeedstudio.com/wiki/Upload_Code) if you do not know how to upload.
  After uploading the firmware to the MCU,you can check the status via a Serial Monitor(9600 baudrate):
 
- ![](https://github.com/SeeedDocument/Grove-PS_2_Adapter/raw/master/img/Result.jpg)
+ ![](https://files.seeedstudio.com/wiki/Grove-PS_2_Adapter/img/Result.jpg)
 
  X ,Y output value changes correspondingly while the mouse move around.
 
@@ -224,9 +224,9 @@ Please click [here](http://www.seeedstudio.com/wiki/Upload_Code) if you do not k
 
 ##   Resources
 ---
-*   [Grove - PS/2 Adapter Eagle File](https://github.com/SeeedDocument/Grove-PS_2_Adapter/raw/master/res/Grove-PS2_Adapter_eagle_file.zip)
+*   [Grove - PS/2 Adapter Eagle File](https://files.seeedstudio.com/wiki/Grove-PS_2_Adapter/res/Grove-PS2_Adapter_eagle_file.zip)
 
-*   [PS2 Adapter Library](https://github.com/SeeedDocument/Grove-PS_2_Adapter/raw/master/res/PS2_Adapter_Library.zip)
+*   [PS2 Adapter Library](https://files.seeedstudio.com/wiki/Grove-PS_2_Adapter/res/PS2_Adapter_Library.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

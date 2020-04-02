@@ -9,15 +9,15 @@ sku:      102990135
 ---
 
 
-![](https://github.com/SeeedDocument/Matrix_Clock/raw/master/img/MatrixClock-ProductImagePlain.jpg)
+![](https://files.seeedstudio.com/wiki/Matrix_Clock/img/MatrixClock-ProductImagePlain.jpg)
 
 The Matrix clock is a single board, highly compact, Arduino compatible clock that displays the time on an LED matrix display. The display and rich firmware library allow for animated transitions between minutes.
 
-![](https://github.com/SeeedDocument/Matrix_Clock/raw/master/img/MatrixClockRear.jpg)![](https://github.com/SeeedDocument/Matrix_Clock/raw/master/img/MC-Buttons.jpg)
+![](https://files.seeedstudio.com/wiki/Matrix_Clock/img/MatrixClockRear.jpg)![](https://files.seeedstudio.com/wiki/Matrix_Clock/img/MC-Buttons.jpg)
 
 Based on the Arduino Leonardo, the Matrix Clock is fully compatible with the Arduino IDE and can be easily updated or customised with new sketches, uploaded via a USB Micro cable. A coin cell powered Real Time Clock Calendar keeps track of the time and date when the unit is not powered. The Matrix Clock can also play musical alarms that can be easily reprogrammed with different tunes. Due to its compact form factor the Matrix clock could be fitted in any number of housings - even a pocket watch style housing. If portability is desirable then the unit can be battery powered and a sleep function is available (by taking one of the expansion pins to ground) in order to extend battery life.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Matrix-Clock-p-1824.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Matrix-Clock-p-1824.html)
 
 
 
@@ -36,7 +36,7 @@ Based on the Arduino Leonardo, the Matrix Clock is fully compatible with the Ard
 ##  Instructions
 ---
 
-![](https://github.com/SeeedDocument/Matrix_Clock/raw/master/img/MC-Mode.jpg)
+![](https://files.seeedstudio.com/wiki/Matrix_Clock/img/MC-Mode.jpg)
 
 ##  Specifications
 
@@ -88,7 +88,7 @@ Based on the Arduino Leonardo, the Matrix Clock is fully compatible with the Ard
 
 ##  PCB
 ---
-![](https://github.com/SeeedDocument/Matrix_Clock/raw/master/img/MatrixClock-PCB.jpg)
+![](https://files.seeedstudio.com/wiki/Matrix_Clock/img/MatrixClock-PCB.jpg)
 
 ##  Licensing
 

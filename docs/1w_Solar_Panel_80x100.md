@@ -11,7 +11,7 @@ sku:    313070005
 
 This is a custom solar panel, which mates directly with many of our development boards and has a high efficiency at 15.5%. Unit has a clear epoxy coating with hard-board backing. Robust sealing for out door applications!
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/1w-solar-panel-75x100-p-633.html?cPath=155)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/1w-solar-panel-75x100-p-633.html?cPath=155)
 
 
 ##   Key Specification

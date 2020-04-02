@@ -148,7 +148,7 @@ Resources
 ---------
 
 -   [Grove - HCHO Sensor Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-HCHO_Sensor/master/res/Grove-HCHO_Sensor_Eagle_File.zip)
--   [Grove - HCHO Sensor Schematic in PDF](https://github.com/SeeedDocument/Grove-HCHO_Sensor/raw/master/res/Grove%20-%20HCHO%20Sensor.pdf)
+-   [Grove - HCHO Sensor Schematic in PDF](https://files.seeedstudio.com/wiki/Grove-HCHO_Sensor/res/Grove%20-%20HCHO%20Sensor.pdf)
 -   [WSP2110 Datasheet (Chinese)](https://raw.githubusercontent.com/SeeedDocument/Grove-HCHO_Sensor/master/res/WSP2110.pdf)
 -   [WSP2110 Datasheet (English)](https://raw.githubusercontent.com/SeeedDocument/Grove-HCHO_Sensor/master/res/Wsp2110-1-.pdf)
 

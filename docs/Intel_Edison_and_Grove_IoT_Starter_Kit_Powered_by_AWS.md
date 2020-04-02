@@ -7,17 +7,17 @@ prodimagename:
 surveyurl: https://www.research.net/r/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS
 sku:
 ---
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/Aws_kit_wiki_cover.JPG)
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/Aws_kit_wiki_cover.JPG)
 
 _Main articles: Start here [Grove IoT Starter Kits Powered by AWS](/Grove_IoT_Starter_Kits_Powered_by_AWS "Grove IoT Starter Kits Powered by AWS") , [Intel Edison](https://software.intel.com/en-us/iot/library/edison-getting-started)_
 
 Designed for expert makers, entrepreneurs, and industrial IoT companies, the Intel Edison module provides easier prototyping with a fully open source hardware and software development environment. It supports Wi-Fi and BLE 4.0 connectivity. This kit contains eleven selective Grove sensors and actuators for you to track indoor environment as well as to create smart-house applications.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.amazon.com/dp/B0168KU5FK)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.amazon.com/dp/B0168KU5FK)
 
 ##  Included in the Box
 
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/Aws_kit_edison.JPG) 
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/Aws_kit_edison.JPG) 
 
 | Parts                                                                                                                                                                      | Wiki                                                                                                                                     |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
@@ -54,45 +54,45 @@ Visit amazone  [AWS console](http://console.aws.amazon.com), register and logon 
 1. Goto the dashboard, click Service --&gt; AWS IoT
 
 
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_click_iot.png)
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_click_iot.png)
 
 2. Click Get started
 
 
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_click_get_started.jpg)
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_click_get_started.jpg)
 
 3. Create a new user
 
 
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_create_a_new_user.png)
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_create_a_new_user.png)
 
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_create_a_new_user2.png)
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_create_a_new_user2.png)
 
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_LinkIt_starter_kit_create_a_new_user3.png)
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_create_a_new_user3.png)
 
 4. Save user name and download Security Credentials
 
 
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_Edison_starter_kit_get_Security_Credentials1.png)
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_get_Security_Credentials1.png)
 
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_Edison_starter_kit_get_Security_Credentials2.png)
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_get_Security_Credentials2.png)
 
 
 5. Seeting Attach Policy with AdministratorAccess
 
 
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_Edison_starter_kit_get_Security_Credentials3.png)
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_get_Security_Credentials3.png)
 
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_Edison_starter_kit_get_Security_Credentials4.png)
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_get_Security_Credentials4.png)
 
 6. Create a thing
 
 
 At this section you can also refer to the [Beagle Bone wiki](/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS) for another way to create a thing and finish the left tasks. The difference is Beagle Bone didn’t use AWS CLI tool to Get Certifications.
 
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_Edison_starter_kit_create_a_thing1.png)
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_create_a_thing1.png)
 
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_Edison_starter_kit_create_a_thing2.png)
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_create_a_thing2.png)
 
 ###   Setting up AW IoT device SDK on the intel edison board
 
@@ -166,8 +166,8 @@ At this point, you should have AWS CLI installed. And the Access ID and Key you 
 aws configure
 </pre>
 
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_Edison_starter_kit_get_aws_cli1.png)
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_Edison_starter_kit_get_aws_cli2.png)
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_get_aws_cli1.png)
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_get_aws_cli2.png)
 
 1.First create a folder to store your certificates in:
 
@@ -185,7 +185,7 @@ openssl req -new -key privateKey.pem -out cert.csr
 
 3.Fill out the fields with your info.
 
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_Edison_starter_kit_get_aws_cli3.png)
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_get_aws_cli3.png)
 
 4.Run the following to activate the certificate:
 
@@ -199,7 +199,7 @@ aws iot create-certificate-from-csr --certificate-signing-request file://cert.cs
 aws iot describe-certificate --certificate-id &lt;certificate ID&gt; --output text --query certificateDescription.certificatePem  &gt; cert.pem
 </pre>
 
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_Edison_starter_kit_get_aws_cli4.png)
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_get_aws_cli4.png)
 
 NOTE: Replace &lt;certificate ID&gt; with the ID stored in the "certificateId" field in certOutput.txt. To view the file enter: more certOutput.txt
 
@@ -220,7 +220,7 @@ NOTE: Replace &lt;certificate ID&gt; with the ID stored in the "certificateId" f
 *   Enter vi policy.doc hit a and right click to paste the text
 *   Hit escape and type in :wq to save and quit
 
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_Edison_starter_kit_get_aws_cli5.png)
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_get_aws_cli5.png)
 
 7.First enter:
 
@@ -230,11 +230,11 @@ NOTE: Replace &lt;certificate ID&gt; with the ID stored in the "certificateId" f
 
 Notice:The policy name can be anything.
 
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_Edison_starter_kit_get_aws_cli6.png)
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_get_aws_cli6.png)
 
 8.After that a policy and a certificate can be shown on your AWS console.
 
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_Edison_starter_kit_get_aws_cli7.png)
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_get_aws_cli7.png)
 
 9.Then attach the policy to the certificate with:
 
@@ -244,11 +244,11 @@ aws iot attach-principal-policy --principal &lt;principal arn&gt; --policy-name 
 
 NOTE: replace &lt;principal arn&gt; with the  value stored in "certifcateArn" in the outputCert.txt file.
 
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_Edison_starter_kit_get_aws_cli8.png)
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_get_aws_cli8.png)
 
 10.You should see your certificate has attach to your policy.
 
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_Edison_starter_kit_get_aws_cli9.png)
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_get_aws_cli9.png)
 
 **Use MQTT to subscribe and publish to AWS**
 
@@ -258,7 +258,7 @@ NOTE: replace &lt;principal arn&gt; with the  value stored in "certifcateArn" in
 curl https://www.symantec.com/content/en/us/enterprise/verisign/roots/VeriSign-Class%203-Public-Primary-Certification-Authority-G5.pem &gt; rootCA.pem
 </pre>
 
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_Edison_starter_kit_get_aws_cli10.png)
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_get_aws_cli10.png)
 
 ###   Coding your application with nodejs
 
@@ -272,7 +272,7 @@ npm install --save aws-iot-device-sdk
 touch main.js
 </pre>
 
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_Edison_starter_kit_coding1.png)
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_coding1.png)
 
 2.Copy and save demo code to main.js
 
@@ -398,21 +398,21 @@ thingShadows.<span class="me1">on</span><span class="br0">(</span><span class="s
 
 *   Temperature sensor - i2c port
 
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_Edison_starter_kit_coding5.png)
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_coding5.png)
 
 <pre>
   node main.js
 </pre>
 
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_Edison_starter_kit_coding2.png)
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_coding2.png)
 
 4.Watch data on AWS console
 
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_Edison_starter_kit_coding3.png)
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_coding3.png)
 
 5.Update shadow to change relay state
 
-![](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/img/AWS_Edison_starter_kit_coding4.png)
+![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_coding4.png)
 
 6.If uploading succeed Grove - Relay will turn on.
 
@@ -428,7 +428,7 @@ thingShadows.<span class="me1">on</span><span class="br0">(</span><span class="s
 
 *   [AWS IoT MQTT update topic formate](http://docs.aws.amazon.com/iot/latest/developerguide/thing-shadow-mqtt.html#update-pub-sub-message)
 
-*   [【PDF】AWS IoT Developer Guide](https://github.com/SeeedDocument/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/raw/master/res/AWS_IoT_Developer_Guide.pdf)
+*   [【PDF】AWS IoT Developer Guide](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/res/AWS_IoT_Developer_Guide.pdf)
 
 *   [【Wiki】Main Page for Grove IoT Starter Kits Powered by AWS](/Grove_IoT_Starter_Kits_Powered_by_AWS)
 

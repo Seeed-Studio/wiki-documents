@@ -11,7 +11,7 @@ sku:  103990023
 
 **UartSBee v4.0** is FTDI cable compatible **USB to Serial** adapter equipped with BEE socket(20pin 2.0mm). The integrated **FT232RL** can be used for programming or communicating with MCUs.On the other hand, you might connect your PC to various wireless applications via a **Bee** compatible module. UartSBee provides breakouts for the bit-bang mode pins of **FT232RL** as well.This Bit-bang mode pins (8 I/O pins) can be used as a replacement for applications involving PC parallel port which is scares now a day.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/UartSBee-V4-p-688.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/UartSBee-V4-p-688.html)
 
 ##   Hardware Version Tracker
 
@@ -421,7 +421,7 @@ FT232RL Bit-Bang mode can be used to construct AVR ISP, JTAG, SPI and I2C Ports.
 
 ##   Resources
 
-[Schematic and Board Files](https://github.com/SeeedDocument/UartSBee_V4/raw/master/res/UartSBee_v4.0_Source_file.zip);
+[Schematic and Board Files](https://files.seeedstudio.com/wiki/UartSBee_V4/res/UartSBee_v4.0_Source_file.zip);
 
 ##   External Links
 

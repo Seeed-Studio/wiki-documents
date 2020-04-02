@@ -12,7 +12,7 @@ tags:
 
 The Relay Shield is an Arduino compatible smart module with 4 mechanical relays providing an easy way to control high voltage. The max switching power is 35VDC 70W for each channel. It can be directly controlled by Arduino/Seeeduino through digital IOs with external 9V DC supply. With the XBee form socket and 315/433MHz RF module interface, the Relay shield can be remotely controlled, making it easy to use in robotics, industry control, smart houses etc.
 **Note:** Take care the pins on the Shield should not be touched with USB connector of Arduino UNO when they are connected .
-![](https://github.com/SeeedDocument/Relay-Shield_V1.0/raw/master/img/RelayShield.jpg)
+![](https://files.seeedstudio.com/wiki/Relay-Shield_V1.0/img/RelayShield.jpg)
 
 ##   Features   ##
 
@@ -56,7 +56,7 @@ Do not operate voltage more than 35V DC.
 
 ##   Interface Function  ##
 
-![](https://github.com/SeeedDocument/Relay-Shield_V1.0/raw/master/img/Relayshield_schematic.jpg)
+![](https://files.seeedstudio.com/wiki/Relay-Shield_V1.0/img/Relayshield_schematic.jpg)
 
 **4 groups of channels for High voltage connection**
 
@@ -96,11 +96,11 @@ As the RFBee has 12 DIO ports, 2 more Relay Shield (8 more relays) could be cont
 
 Relay Shield could be directly controlled by **Arduino**
 
-![](https://github.com/SeeedDocument/Relay-Shield_V1.0/raw/master/img/WithArduino.jpg)
+![](https://files.seeedstudio.com/wiki/Relay-Shield_V1.0/img/WithArduino.jpg)
 
 Step1. Plug Relay Shield onto **Arduino**  Duemilanove (or compatible) board;
 Step2. Supply 9v DC power to **Arduino** ;
-Step3. Download the [example code](https://github.com/SeeedDocument/Relay-Shield_V1.0/raw/master/res/RelayShieldDemoCode.zip) and run in [Arduino IDE](http://arduino.cc/en/Main/Software).
+Step3. Download the [example code](https://files.seeedstudio.com/wiki/Relay-Shield_V1.0/res/RelayShieldDemoCode.zip) and run in [Arduino IDE](http://arduino.cc/en/Main/Software).
 
 If using Arduino via its USB connection for power, you must also provide 9v DC power to the Relay Shield or the relays won't switch.
 
@@ -112,9 +112,9 @@ Use COMx and either NCx (normally closed) or NOx (normally opened) connections t
 
 ####   One RFBee controls one [Relay Shield](https://seeeddoc.github.io/Relay_Shield/)  ####
 
-![](https://github.com/SeeedDocument/Relay-Shield_V1.0/raw/master/img/RelayShield.jpg)
+![](https://files.seeedstudio.com/wiki/Relay-Shield_V1.0/img/RelayShield.jpg)
 
-Step1. Download [Arduino code](https://github.com/SeeedDocument/Relay-Shield_V1.0/raw/master/res/RFBee_v1_1_for_RelayShield.zip) for the slave and master RFBee.
+Step1. Download [Arduino code](https://files.seeedstudio.com/wiki/Relay-Shield_V1.0/res/RFBee_v1_1_for_RelayShield.zip) for the slave and master RFBee.
 
 Step2. Plug the slave RFBee to the Relay Shield.
 
@@ -124,9 +124,9 @@ Step4. Power the master RFBee with 3.3V by [UartSBee](https://seeeddoc.github.io
 
 ####   One RFBee controls 3 Relay Shields   ####
 
-![](https://github.com/SeeedDocument/Relay-Shield_V1.0/raw/master/img/MutiRelay.jpg)
+![](https://files.seeedstudio.com/wiki/Relay-Shield_V1.0/img/MutiRelay.jpg)
 
-Step1. Download [Arduino code](https://github.com/SeeedDocument/Relay-Shield_V1.0/raw/master/res/RFBee_v1_1_for_RelayShield.zip) for the slave and master RFBee.
+Step1. Download [Arduino code](https://files.seeedstudio.com/wiki/Relay-Shield_V1.0/res/RFBee_v1_1_for_RelayShield.zip) for the slave and master RFBee.
 
 Step2. Plug the slave RFBee onto the Relay Shield.
 
@@ -138,7 +138,7 @@ Step5. Power the master RFBee with 3.3V by [UartSBee](https://seeeddoc.github.io
 
 ###    With [315/433MHz RF Module](http://www.seeedstudio.com/depot/315mhz-rf-link-kits-with-encoder-and-decoder-p-151.html?cPath=139_140) ###
 
-![](https://github.com/SeeedDocument/Relay-Shield_V1.0/raw/master/img/WithRF.jpg)
+![](https://files.seeedstudio.com/wiki/Relay-Shield_V1.0/img/WithRF.jpg)
 
 Step1. Plug and solder the Receiver onto the Relay Shield.
 
@@ -203,15 +203,15 @@ Step3: [Control the Transmitter](https://seeeddoc.github.io/315Mhz_RF_link_kits-
 
 ##   Resources  ##
 
-- **[EAGLE]**  [Relay Shield Eagle Files](https://github.com/SeeedDocument/Relay-Shield_V1.0/raw/master/res/RelayShieldEagleFiles.zip)
+- **[EAGLE]**  [Relay Shield Eagle Files](https://files.seeedstudio.com/wiki/Relay-Shield_V1.0/res/RelayShieldEagleFiles.zip)
 
-- **[PDF]**  [Relay_shield Schematic](https://github.com/SeeedDocument/Relay-Shield_V1.0/raw/master/res/Relay_shield_Schematic.pdf)
-
-
-- **[PDF]**[Relay shield PCB ](https://github.com/SeeedDocument/Relay-Shield_V1.0/raw/master/res/Relay%20shield.pdf)
+- **[PDF]**  [Relay_shield Schematic](https://files.seeedstudio.com/wiki/Relay-Shield_V1.0/res/Relay_shield_Schematic.pdf)
 
 
-- **[CODE]**  [Relay Shield demo code for Arduino](https://github.com/SeeedDocument/Relay-Shield_V1.0/raw/master/res/RelayShieldDemoCode.zip)
+- **[PDF]**[Relay shield PCB ](https://files.seeedstudio.com/wiki/Relay-Shield_V1.0/res/Relay%20shield.pdf)
+
+
+- **[CODE]**  [Relay Shield demo code for Arduino](https://files.seeedstudio.com/wiki/Relay-Shield_V1.0/res/RelayShieldDemoCode.zip)
 
 - **[CODE]**  [Arduino Code for RFBee control RelayShield](https://github.com/SeeedDocument/Relay-Shield_V1.0/blob/master/res/RFBee_v1_1_for_RelayShield.zip)
 

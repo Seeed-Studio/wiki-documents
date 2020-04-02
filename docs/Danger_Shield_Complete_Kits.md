@@ -11,7 +11,7 @@ sku:      103990021
 
 The Danger Shield is an add-on for the Arduino micro controller board. It contains a variety of fun and useful electronic circuits that you can use to do fun and useful things. It is a fully self-contained shield. You plug it into your Arduino, and you can immediately start using it. No extra things to hook up, no external components. Just a really rad board ready to rock.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Danger-Shield-Complete-kits-p-141.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Danger-Shield-Complete-kits-p-141.html)
 
 ##   Version Tracker
 

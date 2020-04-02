@@ -185,12 +185,12 @@ A few seconds after the upload finishes, you should see the pin 13 (L) LED on th
 ## Resources
 
 * **Schematic**
-    * [Seeeduino Lotus Eagle file V1.0](https://github.com/SeeedDocument/Seeeduino_Lotus/raw/master/res/Seeeduino_Lotus_v1.0_Sch.zip)
-    * [Seeeduino Lotus Eagle file V1.1](https://github.com/SeeedDocument/Seeeduino_Lotus/raw/master/res/Seeeduino_Lotus_v1.1.zip)
-    * [Seeeduino Lotus SCH PDF file V1.0](https://github.com/SeeedDocument/Seeeduino_Lotus/raw/master/res/Seeeduino_Lotus_v1.0_SCH.pdf)
-    * [Seeeduino Lotus SCH PDF file V1.1](https://github.com/SeeedDocument/Seeeduino_Lotus/raw/master/res/Seeeduino%20Lotus%20v1.1%20SCH.pdf)
-    * [Seeeduino Lotus PCB PDF file V1.0](https://github.com/SeeedDocument/Seeeduino_Lotus/raw/master/res/Seeeduino_Lotus_v1.0_PCB.pdf)
-    * [Seeeduino Lotus PCB PDF file V1.1](https://github.com/SeeedDocument/Seeeduino_Lotus/raw/master/res/Seeeduino%20Lotus%20v1.1%20PCB.pdf)
+    * [Seeeduino Lotus Eagle file V1.0](https://files.seeedstudio.com/wiki/Seeeduino_Lotus/res/Seeeduino_Lotus_v1.0_Sch.zip)
+    * [Seeeduino Lotus Eagle file V1.1](https://files.seeedstudio.com/wiki/Seeeduino_Lotus/res/Seeeduino_Lotus_v1.1.zip)
+    * [Seeeduino Lotus SCH PDF file V1.0](https://files.seeedstudio.com/wiki/Seeeduino_Lotus/res/Seeeduino_Lotus_v1.0_SCH.pdf)
+    * [Seeeduino Lotus SCH PDF file V1.1](https://files.seeedstudio.com/wiki/Seeeduino_Lotus/res/Seeeduino%20Lotus%20v1.1%20SCH.pdf)
+    * [Seeeduino Lotus PCB PDF file V1.0](https://files.seeedstudio.com/wiki/Seeeduino_Lotus/res/Seeeduino_Lotus_v1.0_PCB.pdf)
+    * [Seeeduino Lotus PCB PDF file V1.1](https://files.seeedstudio.com/wiki/Seeeduino_Lotus/res/Seeeduino%20Lotus%20v1.1%20PCB.pdf)
 
 * **Datasheet**
     * [ATmega328P](https://github.com/SeeedDocument/SeeeduinoV4/raw/master/res/ATmega328.pdf)

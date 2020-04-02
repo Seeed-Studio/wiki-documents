@@ -26,7 +26,7 @@ sku: 103100022
 * For 3.5 mm phone connector (audio jack), it supports the protocol OMTP and CTIA. You can use either protocol by toggling a switch. About how to switch protocol, we will please sroll down the page to  read **How to switch phone connector protocol between OMTP and CTIA**
 
 
-[![enter image description here](https://github.com/SeeedDocument/Breakout_for_LinkIt_Smart_7688_v2_0/raw/master/image/300px-Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Breakout-for-LinkIt-Smart-7688-v20-p-2641.html)
+[![enter image description here](https://files.seeedstudio.com/wiki/Breakout_for_LinkIt_Smart_7688_v2_0/image/300px-Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Breakout-for-LinkIt-Smart-7688-v20-p-2641.html)
 
 ## Features
 ---
@@ -73,14 +73,14 @@ If you ever used Seeed's [Grove](http://www.seeedstudio.com/wiki/Grove_System) p
 
 ### How to switch phone connector protocol between OMTP and CTIA
 
-![](https://github.com/SeeedDocument/Breakout_for_LinkIt_Smart_7688_v2_0/raw/master/image/Breakout_for_LinkIt_Smart_7688_v2.0_switch_procotol_1200_.jpg)
+![](https://files.seeedstudio.com/wiki/Breakout_for_LinkIt_Smart_7688_v2_0/image/Breakout_for_LinkIt_Smart_7688_v2.0_switch_procotol_1200_.jpg)
 
 
 If you compare V1.0 and V2.0, you can notice that there are six pins and two jumper caps on bottom-right corner. These pins are used to switch phone connector protocol. As you set tiny jumper(both) to left-four pin, protocol OMTP is used. As you set tiny jumper(both) to right-four pin (as preceded figure shows), protocol CTIA is used. As following figures show:
 Breakout for LinkIt Smart 7688 v2.0 CTIA OMTP Switch Manner.JPG
 Note that to use the recording functionality, you need to update on-board firmware to Breakout for LinkIt Smart 7688 firmware(above version v0.9.2).
 
-![](https://github.com/SeeedDocument/Breakout_for_LinkIt_Smart_7688_v2_0/raw/master/image/Breakout_for_LinkIt_Smart_7688_v2.0_CTIA_OMTP_Switch_Manner.JPG)
+![](https://files.seeedstudio.com/wiki/Breakout_for_LinkIt_Smart_7688_v2_0/image/Breakout_for_LinkIt_Smart_7688_v2.0_CTIA_OMTP_Switch_Manner.JPG)
 
 !!!note
 	* Because the Write/Read speed of on-board flash memory is limited， We recommend you to use external storage device.
@@ -95,7 +95,7 @@ Except Breakout for Linkit Smart 7688 V2.0, here are other materials that is nee
 
 |LinkIt Smart 7688 × 1|USB cable (type A to micro type-B) × 2|UARTBee × 1|Jumper wires × 3
 |:---:|:---:|:---:|:---:|
-|![](https://github.com/SeeedDocument/Breakout_for_LinkIt_Smart_7688_v2_0/raw/master/image/linkit%20smart%207688.jpg)|![](https://github.com/SeeedDocument/Breakout_for_LinkIt_Smart_7688_v2_0/raw/master/image/48cmUSBc.jpg)|![](https://github.com/SeeedDocument/Breakout_for_LinkIt_Smart_7688_v2_0/raw/master/image/UartSBee%20V5_01.jpg)|![](https://github.com/SeeedDocument/Breakout_for_LinkIt_Smart_7688_v2_0/raw/master/image/jw100n.jpg)
+|![](https://files.seeedstudio.com/wiki/Breakout_for_LinkIt_Smart_7688_v2_0/image/linkit%20smart%207688.jpg)|![](https://files.seeedstudio.com/wiki/Breakout_for_LinkIt_Smart_7688_v2_0/image/48cmUSBc.jpg)|![](https://files.seeedstudio.com/wiki/Breakout_for_LinkIt_Smart_7688_v2_0/image/UartSBee%20V5_01.jpg)|![](https://files.seeedstudio.com/wiki/Breakout_for_LinkIt_Smart_7688_v2_0/image/jw100n.jpg)
 |[Get One Now](https://www.seeedstudio.com/Breakout-for-LinkIt-Smart-7688-v2.0-p-2641.html)|[Get One Now](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|[Get One Now](https://www.seeedstudio.com/UartSBee-V5-p-1752.html)|[Get One Now](https://www.seeedstudio.com/1-pin-dual-female-jumper-wire-100mm-50pcs-pack-p-260.html)|
 
 For below 2, I think you surely have them.
@@ -115,7 +115,7 @@ For below 2, I think you surely have them.
 
 **Step3:** Connect all parts like follows:
 
-![](https://github.com/SeeedDocument/Breakout_for_LinkIt_Smart_7688_v2_0/raw/master/image/Breakout_for_LinkIt_Smart_7688_demo_connection_New.jpg)
+![](https://files.seeedstudio.com/wiki/Breakout_for_LinkIt_Smart_7688_v2_0/image/Breakout_for_LinkIt_Smart_7688_demo_connection_New.jpg)
 
 !!!note
     This is a figure of Breakout for LinkIt Smart 7688(v1.0).

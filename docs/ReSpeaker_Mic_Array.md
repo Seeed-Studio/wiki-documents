@@ -9,7 +9,7 @@ sku: 107010001
 ---
 
 
-![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array/raw/master/img/respeaker_mic_array.jpeg)
+![](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array/img/respeaker_mic_array.jpeg)
 
 ## Description
 
@@ -26,7 +26,7 @@ The ReSpeaker Mic Array can be stacked (connected) right onto the top of ReSpeak
 
 ## Technology Specs
 
-![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array/raw/master/img/respeaker_mic_array.jpeg)
+![](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array/img/respeaker_mic_array.jpeg)
 
 - XVSM-2000 with 16 cores inside:
     - 16 real-time logical cores on 2 xCore tiles.
@@ -249,7 +249,7 @@ if __name__ == '__main__':
   Please select Windows WASA, here is the picture. If you want to switch firmware version from 0x032 to 0x082, before you do that, please uninstall your device in
 devices managment first. after uninstalling, update the firmware via DFU and reinstall the device.
 
-![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array/raw/master/img/audacity.png)
+![](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array/img/audacity.png)
 
 ### Q3: How does Mic array communicate with Respeaker Core?
 
@@ -257,7 +257,7 @@ devices managment first. after uninstalling, update the firmware via DFU and rei
 
 ### Q4: What does [ReSpeaker-Microphone-Array-HID-tool ](https://github.com/Fuhua-Chen/ReSpeaker-Microphone-Array-HID-tool) VAD stand for?
 
-  ![](https://github.com/SeeedDocument/ReSpeaker_Mic_Array/raw/master/img/VAD.png)
+  ![](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array/img/VAD.png)
 
   | Data  | Degree |
   |-------|--------|
@@ -276,10 +276,10 @@ devices managment first. after uninstalling, update the firmware via DFU and rei
 
 ## Resources
 
-- **[Eagle]**[ReSpeaker Microphone Array SCH](https://github.com/SeeedDocument/ReSpeaker_Mic_Array/raw/master/res/Respeaker%20Microphone%20Array%20v1.0.sch.zip)
-- **[Eagle]**[ReSpeaker Microphone Array BRD](https://github.com/SeeedDocument/ReSpeaker_Mic_Array/raw/master/res/Respeaker%20Microphone%20Array%20v1.0.brd.zip)
-- **[PDF]** [ReSpeaker Microphone Array SCH](https://github.com/SeeedDocument/ReSpeaker_Mic_Array/raw/master/res/Respeaker%20Microphone%20Array%20v1.0%20Sch.pdf)
-- **[PDF]** [ReSpeaker Microphone Array PCB](https://github.com/SeeedDocument/ReSpeaker_Mic_Array/raw/master/res/Respeaker%20Microphone%20Array%20v1.0%20PCB.pdf)
+- **[Eagle]**[ReSpeaker Microphone Array SCH](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array/res/Respeaker%20Microphone%20Array%20v1.0.sch.zip)
+- **[Eagle]**[ReSpeaker Microphone Array BRD](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array/res/Respeaker%20Microphone%20Array%20v1.0.brd.zip)
+- **[PDF]** [ReSpeaker Microphone Array SCH](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array/res/Respeaker%20Microphone%20Array%20v1.0%20Sch.pdf)
+- **[PDF]** [ReSpeaker Microphone Array PCB](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array/res/Respeaker%20Microphone%20Array%20v1.0%20PCB.pdf)
 
 ## Project 
 

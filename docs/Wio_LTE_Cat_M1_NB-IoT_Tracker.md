@@ -11,7 +11,7 @@ tags: grove_digital, io_3v3, io_5v, plat_duino, plat_pi, plat_wio
 ---
 
 
-![](https://github.com/SeeedDocument/Wio_LTE_Cat_M1_NB-IoT_Tracker/raw/master/img/NBIOT1.JPG)
+![](https://files.seeedstudio.com/wiki/Wio_LTE_Cat_M1_NB-IoT_Tracker/img/NBIOT1.JPG)
 
 Seeed’s Wio LTE CAT M1/NB-IoT is designed for Low-Power Wide-Area Network (LPWAN) with CAT M1(eMTC) and NB-IoT combo module. Besides, It has an ARM Cortex-M4 MCU and GNSS module.
 
@@ -97,14 +97,14 @@ running up to 168MHZ
 ## Hardware Overview
 
 
-![](https://github.com/SeeedDocument/Wio_LTE_Cat_M1_NB-IoT_Tracker/raw/master/img/front.png)
+![](https://files.seeedstudio.com/wiki/Wio_LTE_Cat_M1_NB-IoT_Tracker/img/front.png)
 
-![](https://github.com/SeeedDocument/Wio_LTE_Cat_M1_NB-IoT_Tracker/raw/master/img/back.png)
+![](https://files.seeedstudio.com/wiki/Wio_LTE_Cat_M1_NB-IoT_Tracker/img/back.png)
 
 !!!Tip
     If you want to use the on-board Grove connector, please use digitalWrite(B10, HIGH) to open 3V3_B. except D38 power on by default. Otherwise you can't provide power to Grove modules.
 
-![](https://github.com/SeeedDocument/Wio_LTE_Cat_M1_NB-IoT_Tracker/raw/master/img/h3.png)
+![](https://files.seeedstudio.com/wiki/Wio_LTE_Cat_M1_NB-IoT_Tracker/img/h3.png)
 
 
 ## Getting Started
@@ -127,15 +127,15 @@ running up to 168MHZ
 
 - Step 1. Press and hold BOOT button and connect to computer you will see **STM32 Device in DFU Mode** at device manager as below.
 
-![](https://github.com/SeeedDocument/Wio_LTE/raw/master/img/before_driver_installation.png)
+![](https://files.seeedstudio.com/wiki/Wio_LTE/img/before_driver_installation.png)
 
-- Step 2. This says that you need to use [zadig_xx.exe](https://github.com/SeeedDocument/Wio_LTE/raw/master/res/zadig_2.1.2.exe) to change DFU driver from **STTub30** to **WinUSB** as below. If we can't see any info on the Zadig, please click Options--> List All Devices, then select STM32 Virtual COM Ports.
+- Step 2. This says that you need to use [zadig_xx.exe](https://files.seeedstudio.com/wiki/Wio_LTE/res/zadig_2.1.2.exe) to change DFU driver from **STTub30** to **WinUSB** as below. If we can't see any info on the Zadig, please click Options--> List All Devices, then select STM32 Virtual COM Ports.
 
-![](https://github.com/SeeedDocument/Wio_LTE/raw/master/img/zadig.png)
+![](https://files.seeedstudio.com/wiki/Wio_LTE/img/zadig.png)
 
 - Step 3. You will see the "STMicroelectronics Virtual COM Port" on device manager as below.
 
-![](https://github.com/SeeedDocument/Wio_LTE/raw/master/img/after_driver_installation.png)
+![](https://files.seeedstudio.com/wiki/Wio_LTE/img/after_driver_installation.png)
 
 
 ### Play with Arduino
@@ -1142,7 +1142,7 @@ For more info, please refer to [Wio_LTE_Module](http://www.espruino.com/modules/
 
 ## Resource
 
-- **[Eagle&PDF]** [WioLTE_Cat_NB1](https://github.com/SeeedDocument/Wio_LTE_Cat_M1_NB-IoT_Tracker/raw/master/res/WioLTE_Cat_NB1_Eagle-master.zip)
+- **[Eagle&PDF]** [WioLTE_Cat_NB1](https://files.seeedstudio.com/wiki/Wio_LTE_Cat_M1_NB-IoT_Tracker/res/WioLTE_Cat_NB1_Eagle-master.zip)
 
 - **[Library]** [WioLTE_Cat_NB1_Arduino_Library](https://github.com/Seeed-Studio/WioLTE_Cat_NB1_Arduino_Library)
 

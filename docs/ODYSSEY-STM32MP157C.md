@@ -150,7 +150,7 @@ Like Raspberry Pi, you need to install the ODYSSEY – STM32MP157C image from yo
 <br>
 <br>Click the plus icon to add the newly downloaded image file and the software will automatically select the SD card you inserted. Then click Flash! writing. It takes about 10 minutes to finish.</font>
 
-![](https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/v2-flash-sd.png)
+![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/v2-flash-sd.png)
 
 
 - **Step 4.** After writing the image to the SD card, insert the SD card into ODYSSEY – STM32MP157C. Use USB type-c port to power the Carrier board. Do not take out the SD card during writing. ODYSSEY – STM32MP157C will boot from the SD card, you can see the PWR and USER LED lighting on SOM. Now, go to the next section: the serial console.

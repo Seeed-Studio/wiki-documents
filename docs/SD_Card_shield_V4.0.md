@@ -391,7 +391,7 @@ Resources
 
 - [SD Card Shield v4.0 Schematic](https://raw.githubusercontent.com/SeeedDocument/SD_Card_shield_V4.0/master/res/SD_Card_Shiled_v4.0.pdf)
 
-- [SD Card Shield v4.0 Eagle File.zip](https://github.com/SeeedDocument/SD_Card_shield_V4.0/raw/master/res/PCBA-SD%20Card%20shield%20V4.0.zip)
+- [SD Card Shield v4.0 Eagle File.zip](https://files.seeedstudio.com/wiki/SD_Card_shield_V4.0/res/PCBA-SD%20Card%20shield%20V4.0.zip)
 
 - [SD Card Shield v4.0a Eagle File.zip](https://raw.githubusercontent.com/SeeedDocument/SD_Card_shield_V4.0/master/res/SD_Card_Shield_v4.0a.zip)
 

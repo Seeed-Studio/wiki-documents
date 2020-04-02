@@ -8,11 +8,11 @@ surveyurl: https://www.research.net/r/Xadow_Vibrator_Motor
 sku:  105040000
 ---
 
-![](https://github.com/SeeedDocument/Xadow_Vibrator_Motor/raw/master/img/Vibration_Motor_01.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Vibrator_Motor/img/Vibration_Motor_01.jpg)
 
 This small vibrator motor can vibrate like your phone. When using it, you only need to power for the module and then send "Vibration" command. In fact, the "Vibration" command is setting control pins to high level, then it will work. I like this module because it can create a short-term shock to prompt me whether one operation was successful, such as shaking my arm to switch my iPhone songs, which sounds terrible, but it does not like the buzzer.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-Vibration-Motor-p-1517.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-Vibration-Motor-p-1517.html)
 
 
 ##  Specification
@@ -31,7 +31,7 @@ Here is a Demo Code showing how to turn on the vibration motor.
 
 **Hardware Installation: **
 
-![](https://github.com/SeeedDocument/Xadow_Vibrator_Motor/raw/master/img/XadowVibration.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Vibrator_Motor/img/XadowVibration.jpg)
 
 Note: when connect Xadow Vibrator Motor to Xadow Main Board, you should concern about the connection direction. The connection method is that the unfilled corner of one Xadow module need to connect to the right angle of another module(see four corners of each Xadow module).
 Demo code like this:

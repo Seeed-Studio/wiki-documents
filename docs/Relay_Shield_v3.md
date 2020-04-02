@@ -9,13 +9,13 @@ sku: 103030009
 ---
 
 ---
-![](https://github.com/SeeedDocument/Relay_Shield_v3.0/raw/master/img/Relay_Shield_L_v3.0.jpg)
+![](https://files.seeedstudio.com/wiki/Relay_Shield_v3.0/img/Relay_Shield_L_v3.0.jpg)
 
 The Relay Shield provides a solution for controlling high current devices that cannot be controlled by Arduino’s Digital I/O pins due to current and voltage limits.
 
 The Relay Shield features four high quality relays and provides NO/NC interfaces, four dynamic LED indicators to show the on/off state of each relay, and the standardized shield form factor to provide a smooth connection to the Arduino/Seeeduino board or other Arduino compatible boards.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Relay-Shield-v3.0-p-2440.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Relay-Shield-v3.0-p-2440.html)
 
 
 ## Features
@@ -52,7 +52,7 @@ The Relay Shield features four high quality relays and provides NO/NC interfaces
 ## Shield Interface Description
 ---
 
-![](https://github.com/SeeedDocument/Relay_Shield_v3.0/raw/master/img/Relay_Shield_v3.0.png)
+![](https://files.seeedstudio.com/wiki/Relay_Shield_v3.0/img/Relay_Shield_v3.0.png)
 
 - Digital 4 – controls RELAY4’s COM4 pin (located in J4)
 - Digital 5 – controls RELAY3’s COM3 pin (located in J3)
@@ -79,9 +79,9 @@ Relays are basically electromagnetic switches: when the relay is energized by th
 Some practical relay applications include: control of high voltage using low voltage, motor control, remote control, anti-hearing alarm, automatic temperature alarm, incubators and son on.
 
 A motor control application with one relay and one motor is shown below:
-![](https://github.com/SeeedDocument/Relay_Shield_v3.0/raw/master/img/Low_Level_Control4.jpg)
+![](https://files.seeedstudio.com/wiki/Relay_Shield_v3.0/img/Low_Level_Control4.jpg)
 
-![](https://github.com/SeeedDocument/Relay_Shield_v3.0/raw/master/img/High_Level_Control3.jpg)
+![](https://files.seeedstudio.com/wiki/Relay_Shield_v3.0/img/High_Level_Control3.jpg)
 
 In the case of the Relay Shield, the two “Control Circuit” terminals for each of the four relays are controlled by only one Arduino Digital I/O pin. Pins 4, 5, 6, and 7 control relays 4, 3, 2, and 1 respectively.
 
@@ -97,9 +97,9 @@ Now that you know how a relay works internally, let us show you how to use the R
 
 3.We will use RELAY3 to control the DC motor. Connect the DC motor and Relay Shield as shown in the schematic and figure below:
 
-![](https://github.com/SeeedDocument/Relay_Shield_v3.0/raw/master/img/Motor-shield-schematic-drawing.png)
+![](https://files.seeedstudio.com/wiki/Relay_Shield_v3.0/img/Motor-shield-schematic-drawing.png)
 
-![](https://github.com/SeeedDocument/Relay_Shield_v3.0/raw/master/img/Relay_Shield_Connector.jpg)
+![](https://files.seeedstudio.com/wiki/Relay_Shield_v3.0/img/Relay_Shield_Connector.jpg)
 
 !!!Note
     The external power supply in the figure above can be a battery or power supply. The external supply must be able to provide enough current and be set to the correct voltage for the motor. In our testing, we used a lithium battery as the external power supply for the motor.
@@ -133,7 +133,7 @@ Because the Relay Shield uses digital pins on the Arduino to control each the re
 
 2.Connect another Relay Shield (let’s call this one Relay Shield #2) using jumper cables/wires to Relay Shield #1 as shown in the figure below:
 
-![](https://github.com/SeeedDocument/Relay_Shield_v3.0/raw/master/img/Two-relay-shields-one-arduino.png)
+![](https://files.seeedstudio.com/wiki/Relay_Shield_v3.0/img/Two-relay-shields-one-arduino.png)
 
 - Relay Shield #1 GND pin is connected to Relay Shield #2 GND pin
 - Relay Shield #1 5V pin is connected to Relay Shield #2 5V pin
@@ -173,7 +173,7 @@ void loop()  {
 
 ## Resource
 ---
-- [Relay Shield v3.0](https://github.com/SeeedDocument/Relay_Shield_v3.0/raw/master/res/Relay_Shield_v3.0.zip)
+- [Relay Shield v3.0](https://files.seeedstudio.com/wiki/Relay_Shield_v3.0/res/Relay_Shield_v3.0.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

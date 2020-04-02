@@ -128,11 +128,11 @@ It's based on a STM32F407VET6 microcontroller with an ARM Cortex-M4F core runnin
 
 ##   Pin definition
 
-![](https://github.com/SeeedDocument/Arch_Max/raw/master/img/Arch_Max_Pinout.png)
+![](https://files.seeedstudio.com/wiki/Arch_Max/img/Arch_Max_Pinout.png)
 
 ##   Usage
 
-![](https://github.com/SeeedDocument/Arch_Max/raw/master/img/Get_started_with_mbed.png)
+![](https://files.seeedstudio.com/wiki/Arch_Max/img/Get_started_with_mbed.png)
 
 1.  Click [this link](https://developer.mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-MAX) to **login or signup to mbed**
 
@@ -204,10 +204,10 @@ The latest firmware version for the Arch Max is v0203 built at Oct 8  2014. To c
 
 ##   Resources
 
-- **[Eagle]**  [Schematics Eagle file for ARCH Max](https://github.com/SeeedDocument/Arch_Max/raw/master/res/ARCH_Max.zip)
-- **[PDF]**[Arch Max PCB](https://github.com/SeeedDocument/Arch_Max/raw/master/res/Arch%20Max.pdf)
-- **[EAGLE]**[Arch Max sch](https://github.com/SeeedDocument/Arch_Max/raw/master/res/Arch%20Max.sch)
-- **[Datasheet]**  [STM32F407 datasheet](https://github.com/SeeedDocument/Arch_Max/raw/master/res/STM32F407.pdf)
+- **[Eagle]**  [Schematics Eagle file for ARCH Max](https://files.seeedstudio.com/wiki/Arch_Max/res/ARCH_Max.zip)
+- **[PDF]**[Arch Max PCB](https://files.seeedstudio.com/wiki/Arch_Max/res/Arch%20Max.pdf)
+- **[EAGLE]**[Arch Max sch](https://files.seeedstudio.com/wiki/Arch_Max/res/Arch%20Max.sch)
+- **[Datasheet]**  [STM32F407 datasheet](https://files.seeedstudio.com/wiki/Arch_Max/res/STM32F407.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

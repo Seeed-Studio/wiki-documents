@@ -7,7 +7,7 @@ prodimagename:  Wireless_Sensor_Node-Solar_Kit.jpg
 surveyurl: https://www.research.net/r/Wireless_Sensor_Node-Solar_Kit
 sku:   110060005
 ---
-![](https://github.com/SeeedDocument/Wireless_Sensor_Node-Solar_Kit/raw/master/img/Wireless_Sensor_Node-Solar_Kit.jpg)
+![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit.jpg)
 
 **Wireless Sensor Node - Solar Kit** is an easy to use bundle created for experimenting with XBee and **XBee** compatible standalone wireless modules like RFBee and [Wifi Bee](/Wifi_Bee "Wifi Bee"). Every **maker** is confronted with the question of selection the right set of components to build **Wireless Sensor Node**. **Wireless Sensor Node - Solar Kit** fills this place very appropriately. The [Grove - XBee Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier") provides LDO power supply, charger for LiPo Battery and programming port for **XBee** compatible modules. The **Solar Panel** provides the required charging voltage in remote areas. The **500 mAH LiPo Battery** provides the backup when the Sun is away. A properly designed and configured wireless module could provide very long hours of usage. For this, put the node to sleep when not transmitting the sensor value. This kit comes with a perfectly made **Transparent Box** , sets of **Screws** and **Plastic Rivets**.
 
@@ -15,7 +15,7 @@ sku:   110060005
 
 *   [Bees Shield](/Bees_Shield "Bees Shield") along with **Seeeduino** and **Wifi Bee** can act as Wireless internet Gateway for these nodes.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Wireless-Sensor-Node-Solar-Kit-p-919.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Wireless-Sensor-Node-Solar-Kit-p-919.html)
 
 ##   Contents of the Kit
 ---
@@ -32,7 +32,7 @@ sku:   110060005
 <tr>
 <td> **Grove - XBee Carrier v0.9b**
 </td>
-<td> ![](https://github.com/SeeedDocument/Wireless_Sensor_Node-Solar_Kit/raw/master/img/Bee_Stem.jpg)
+<td> ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Bee_Stem.jpg)
 </td>
 <td> Base board for XBee nodes
 </td>
@@ -41,7 +41,7 @@ sku:   110060005
 <tr>
 <td> **Transparent Box**
 </td>
-<td> ![](https://github.com/SeeedDocument/Wireless_Sensor_Node-Solar_Kit/raw/master/img/Wireless_Sensor_Node-Solar_Kit_4_Box.jpg)
+<td> ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_4_Box.jpg)
 </td>
 <td> Enclosure for Node Components
 </td>
@@ -50,7 +50,7 @@ sku:   110060005
 <tr>
 <td> **0.5 W - 55x70 mm Solar Panel**
 </td>
-<td> ![](https://github.com/SeeedDocument/Wireless_Sensor_Node-Solar_Kit/raw/master/img/Wireless_Sensor_Node-Solar_Kit_Solar_Panel.jpg)
+<td> ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_Solar_Panel.jpg)
 </td>
 <td> Charging Power Supply
 </td>
@@ -59,7 +59,7 @@ sku:   110060005
 <tr>
 <td> **5 cm Grove Wire**
 </td>
-<td> ![](https://github.com/SeeedDocument/Wireless_Sensor_Node-Solar_Kit/raw/master/img/Wireless_Sensor_Node-Solar_Kit_5cm_Twig_Wires.jpg)
+<td> ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_5cm_Twig_Wires.jpg)
 </td>
 <td> 4 Wire Cable to attach Grove modules to Grove - XBee Carrier
 </td>
@@ -68,7 +68,7 @@ sku:   110060005
 <tr>
 <td> **Mini USB Cable**
 </td>
-<td> ![](https://github.com/SeeedDocument/Wireless_Sensor_Node-Solar_Kit/raw/master/img/Wireless_Sensor_Node-Solar_Kit_Mini_USB_Cable.jpg)
+<td> ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_Mini_USB_Cable.jpg)
 </td>
 <td> Programming Cable
 </td>
@@ -77,7 +77,7 @@ sku:   110060005
 <tr>
 <td> **XK 353545 500mAH LiPo Battery**
 </td>
-<td> ![](https://github.com/SeeedDocument/Wireless_Sensor_Node-Solar_Kit/raw/master/img/Wireless_Sensor_Node-LiPo_Battery.jpg)
+<td> ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-LiPo_Battery.jpg)
 </td>
 <td> Lithium Ion Battery
 </td>
@@ -86,7 +86,7 @@ sku:   110060005
 <tr>
 <td> **KA 2*6 Screws**
 </td>
-<td> ![](https://github.com/SeeedDocument/Wireless_Sensor_Node-Solar_Kit/raw/master/img/Wireless_Sensor_Node-Solar_Kit_4_Screws.jpg)
+<td> ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_4_Screws.jpg)
 </td>
 <td> Metal Screws for fixing Grove - XBee Carrier to Box
 </td>
@@ -95,7 +95,7 @@ sku:   110060005
 <tr>
 <td> **2064 Rivets**
 </td>
-<td> ![](https://github.com/SeeedDocument/Wireless_Sensor_Node-Solar_Kit/raw/master/img/Wireless_Sensor_Node-Solar_Kit_8_Plastic_Rivets.jpg)
+<td> ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_8_Plastic_Rivets.jpg)
 </td>
 <td> Plastic rivets for attaching Grove modules to Grove - XBee Carrier
 </td>
@@ -144,7 +144,7 @@ sku:   110060005
 
 ##   Usage
 ---
-<div class="thumb tnone"><div class="thumbinner" style="width:302px;">![](https://github.com/SeeedDocument/Wireless_Sensor_Node-Solar_Kit/raw/master/img/Wireless_Sensor_Node-Solar_Kit_Demo_Arrangement.jpg) <div class="thumbcaption">**Wireless Sensor Node Field Use - Charged by Solar Panel"**</div></div></div>
+<div class="thumb tnone"><div class="thumbinner" style="width:302px;">![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_Demo_Arrangement.jpg) <div class="thumbcaption">**Wireless Sensor Node Field Use - Charged by Solar Panel"**</div></div></div>
 
 ###   Quick Start Guide
 
@@ -152,17 +152,17 @@ This section provides a Step-by-Step construction of a Wireless Sensor Node. Ima
 
 | Step | Procedure                                                                                                        | Illustration                                                                                                                                 |
 |------|------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| 1    | Open the box as shown                                                                                            | ![](https://github.com/SeeedDocument/Wireless_Sensor_Node-Solar_Kit/raw/master/img/Wireless_Sensor_Node-Solar_Kit_Top_PlaceForOpening.jpg)   |
-| 1.1  | Place the LiPo Battery inside the Box                                                                            | ![](https://github.com/SeeedDocument/Wireless_Sensor_Node-Solar_Kit/raw/master/img/Wireless_Sensor_Node-Solar_Kit_Placing_Battery.jpg)       |
-| 1.2  | Insert the Solar Panel Connector                                                                                 | ![](https://github.com/SeeedDocument/Wireless_Sensor_Node-Solar_Kit/raw/master/img/Wireless_Sensor_Node-Solar_Kit_Construction1.jpg)         |
-| 1.3  | Open the plastic rivet                                                                                           | ![](https://github.com/SeeedDocument/Wireless_Sensor_Node-Solar_Kit/raw/master/img/Wireless_Sensor_Node-Solar_Kit_Box_Plastic_Rivet1.jpg)    |
-| 1.4  | An opened rivet looks like this                                                                                  | ![](https://github.com/SeeedDocument/Wireless_Sensor_Node-Solar_Kit/raw/master/img/Wireless_Sensor_Node-Solar_Kit_Box_Plastic_Rivet2.jpg)    |
-| 1.5  | Attach a Grove module with the help of Rivets. Keep the Grove - Bee Carrier as shown inside the transparent box. | ![](https://github.com/SeeedDocument/Wireless_Sensor_Node-Solar_Kit/raw/master/img/Wireless_Sensor_Node-Solar_Kit_Construction2.jpg)         |
-| 2.3  | A fully closed rivet looks like this                                                                             | ![](https://github.com/SeeedDocument/Wireless_Sensor_Node-Solar_Kit/raw/master/img/Wireless_Sensor_Node-Solar_Kit_Rivet_Bottom.jpg)          |
-| 3.0  | Attach the 4-Wire Grove Cable, Battery and Solar Panel Connectors to Grove - XBee Carrier                        | ![](https://github.com/SeeedDocument/Wireless_Sensor_Node-Solar_Kit/raw/master/img/Wireless_Sensor_Node-Solar_Kit_TwigConnection.jpg)        |
-| 4.0  | Insert XBee module. Fix the Screw at four corners                                                                | ![](https://github.com/SeeedDocument/Wireless_Sensor_Node-Solar_Kit/raw/master/img/Wireless_Sensor_Node-Solar_Kit_Fix_Screw.jpg)             |
-| 5.0  | Close the lid. USB socket and Power Switch are accessible from the side                                          | ![](https://github.com/SeeedDocument/Wireless_Sensor_Node-Solar_Kit/raw/master/img/Wireless_Sensor_Node-Solar_Kit_Wires_Switch_USB_Side.jpg) |
-| 6.0  | Connect the USB cable and program the XBee                                                                       | ![](https://github.com/SeeedDocument/Wireless_Sensor_Node-Solar_Kit/raw/master/img/Wireless_Sensor_Node-Solar_Kit_USBProgramming.jpg)        |
+| 1    | Open the box as shown                                                                                            | ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_Top_PlaceForOpening.jpg)   |
+| 1.1  | Place the LiPo Battery inside the Box                                                                            | ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_Placing_Battery.jpg)       |
+| 1.2  | Insert the Solar Panel Connector                                                                                 | ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_Construction1.jpg)         |
+| 1.3  | Open the plastic rivet                                                                                           | ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_Box_Plastic_Rivet1.jpg)    |
+| 1.4  | An opened rivet looks like this                                                                                  | ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_Box_Plastic_Rivet2.jpg)    |
+| 1.5  | Attach a Grove module with the help of Rivets. Keep the Grove - Bee Carrier as shown inside the transparent box. | ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_Construction2.jpg)         |
+| 2.3  | A fully closed rivet looks like this                                                                             | ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_Rivet_Bottom.jpg)          |
+| 3.0  | Attach the 4-Wire Grove Cable, Battery and Solar Panel Connectors to Grove - XBee Carrier                        | ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_TwigConnection.jpg)        |
+| 4.0  | Insert XBee module. Fix the Screw at four corners                                                                | ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_Fix_Screw.jpg)             |
+| 5.0  | Close the lid. USB socket and Power Switch are accessible from the side                                          | ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_Wires_Switch_USB_Side.jpg) |
+| 6.0  | Connect the USB cable and program the XBee                                                                       | ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_USBProgramming.jpg)        |
 
 ###  Programming with various Bee Modules
 
@@ -174,7 +174,7 @@ Information on how to setup / program Bee Modules are available in
 
 ##  Image Gallery
 ---
-![](https://github.com/SeeedDocument/Wireless_Sensor_Node-Solar_Kit/raw/master/img/Bee_Stem_with_LiPOBattery_Being_Charged_By_SolarCell.jpg)
+![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Bee_Stem_with_LiPOBattery_Being_Charged_By_SolarCell.jpg)
 
 **LiPo Being Charged by Solar Panel"**
 

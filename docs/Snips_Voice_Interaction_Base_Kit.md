@@ -9,7 +9,7 @@ sku: 105020074
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Snips_Voice_Interaction_Base_Kit/raw/master/img/Base_Kit.jpg)
+![](https://files.seeedstudio.com/wiki/Snips_Voice_Interaction_Base_Kit/img/Base_Kit.jpg)
 
 
 The Snips Voice Interaction Development Kits empowers users to jump start their development of voice interfaces and easily integrate the Snips AI Voice Platform with hardware. Snips runs on device, meaning all of your voice commands and data are processed locally rather than being sent to the cloud. This on-device processing results in a completely secure offline voice assistant that keeps your personal data private, as it should be.
@@ -70,46 +70,46 @@ This guide shows the basic steps to build the out-of-the-box application. For mo
 
 The following picture is the overview of the assembly parts.
 
-![](https://github.com/SeeedDocument/Snips_Voice_Interaction_Base_Kit/raw/master/img/s1.jpg)
+![](https://files.seeedstudio.com/wiki/Snips_Voice_Interaction_Base_Kit/img/s1.jpg)
 
 ---
 Here the assembly parts are mounted on the base panel.
 
 
-![](https://github.com/SeeedDocument/Snips_Voice_Interaction_Base_Kit/raw/master/img/s2.jpg)
+![](https://files.seeedstudio.com/wiki/Snips_Voice_Interaction_Base_Kit/img/s2.jpg)
 
 ---
 
 Then, all the electronic parts are mounted on the board.
 
-![](https://github.com/SeeedDocument/Snips_Voice_Interaction_Base_Kit/raw/master/img/s3.jpg)
+![](https://files.seeedstudio.com/wiki/Snips_Voice_Interaction_Base_Kit/img/s3.jpg)
 
 ---
 
 After that mount the Acrylic Protective cover on top of the Grove -Relay.
 
 
-![](https://github.com/SeeedDocument/Snips_Voice_Interaction_Base_Kit/raw/master/img/s4.jpg)
+![](https://files.seeedstudio.com/wiki/Snips_Voice_Interaction_Base_Kit/img/s4.jpg)
 
 ---
 
 These 2 parts are used to make the Kit into a table stand.
 
-![](https://github.com/SeeedDocument/Snips_Voice_Interaction_Base_Kit/raw/master/img/s5.jpg)
+![](https://files.seeedstudio.com/wiki/Snips_Voice_Interaction_Base_Kit/img/s5.jpg)
 
 
 ---
 
 This is how it looks when the above 2 parts are connected to the base panel.
 
-![](https://github.com/SeeedDocument/Snips_Voice_Interaction_Base_Kit/raw/master/img/s6.jpg)
+![](https://files.seeedstudio.com/wiki/Snips_Voice_Interaction_Base_Kit/img/s6.jpg)
 
 
 ---
 
 Finally, you are ready to play with Snips.
 
-![](https://github.com/SeeedDocument/Snips_Voice_Interaction_Base_Kit/raw/master/img/s7.jpg)
+![](https://files.seeedstudio.com/wiki/Snips_Voice_Interaction_Base_Kit/img/s7.jpg)
 
 
 
@@ -136,6 +136,6 @@ Turn the relay off.	| The relay opens and the red LED turns off.
 
 ## Resource
 
-- **[PDF]** [User manual](https://github.com/SeeedDocument/Snips_Voice_Interaction_Base_Kit/raw/master/res/User%20manual.pdf)
+- **[PDF]** [User manual](https://files.seeedstudio.com/wiki/Snips_Voice_Interaction_Base_Kit/res/User%20manual.pdf)
 
 - **[Web]** [Snips AI Quick Start](https://docs.snips.ai/the-maker-kit/dev-kit)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

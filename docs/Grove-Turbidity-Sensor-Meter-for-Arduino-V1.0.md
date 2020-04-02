@@ -59,7 +59,7 @@ The output mode can be selected by adjusting the switch on the board. Supports a
 ## Hardware Overview
 
 
-![](https://github.com/SeeedDocument/Grove-Turbidity-Sensor/raw/master/img/Grove-Turbidity-Sensor-pin.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Turbidity-Sensor/img/Grove-Turbidity-Sensor-pin.jpg)
 
 - **Digital to Analog Switch**
 
@@ -258,11 +258,11 @@ void loop(){
 ## Resources
 
 
-- **[ZIP]** [Schematic Diagram](https://github.com/SeeedDocument/Grove-Turbidity-Sensor/raw/master/res/Grove-Turbidity-Sensor-v1.0.zip)
+- **[ZIP]** [Schematic Diagram](https://files.seeedstudio.com/wiki/Grove-Turbidity-Sensor/res/Grove-Turbidity-Sensor-v1.0.zip)
 
-- **[PDF]** [LMV358 Datasheet](https://github.com/SeeedDocument/Grove-Turbidity-Sensor/raw/master/res/LMV358-Datasheet.pdf)
+- **[PDF]** [LMV358 Datasheet](https://files.seeedstudio.com/wiki/Grove-Turbidity-Sensor/res/LMV358-Datasheet.pdf)
 
-- **[PDF]** [MPX5700AP Datasheet](https://github.com/SeeedDocument/Grove-Turbidity-Sensor/raw/master/res/Turbidity-Sensor-Datasheet.pdf)
+- **[PDF]** [MPX5700AP Datasheet](https://files.seeedstudio.com/wiki/Grove-Turbidity-Sensor/res/Turbidity-Sensor-Datasheet.pdf)
 
 
 

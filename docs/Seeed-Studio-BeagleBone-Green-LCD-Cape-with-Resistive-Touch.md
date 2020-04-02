@@ -108,15 +108,15 @@ BeagleBone Green board and Green LCD Cape with Resistive Touch both need to be U
 
 1. Check what COM port BeagleBone Green board is using in Device Manager
 
-![](https://github.com/SeeedDocument/BBG-LCD-Cape-with-Resistive-Touch/raw/master/img/com-show.png)
+![](https://files.seeedstudio.com/wiki/BBG-LCD-Cape-with-Resistive-Touch/img/com-show.png)
 
 2. Access BeagleBone Green board system using putty with the COM port.
 
-![](https://github.com/SeeedDocument/BBG-LCD-Cape-with-Resistive-Touch/raw/master/img/putty-config.png)
+![](https://files.seeedstudio.com/wiki/BBG-LCD-Cape-with-Resistive-Touch/img/putty-config.png)
 
 account: debian, password: temppwd
 
-![](https://github.com/SeeedDocument/BBG-LCD-Cape-with-Resistive-Touch/raw/master/img/BBG-start.png)
+![](https://files.seeedstudio.com/wiki/BBG-LCD-Cape-with-Resistive-Touch/img/BBG-start.png)
 
 3. Modify configurations in `/boot/uEnv.txt `
 
@@ -126,15 +126,15 @@ sudo nano /boot/uEnv.txt
 
 For 7-inch screen:
 
-![](https://github.com/SeeedDocument/BBG-LCD-Cape-with-Resistive-Touch/raw/master/img/7-inch-config.png)
+![](https://files.seeedstudio.com/wiki/BBG-LCD-Cape-with-Resistive-Touch/img/7-inch-config.png)
 
 For 5-inch screen:
 
-![](https://github.com/SeeedDocument/BBG-LCD-Cape-with-Resistive-Touch/raw/master/img/5-inch-config.png)
+![](https://files.seeedstudio.com/wiki/BBG-LCD-Cape-with-Resistive-Touch/img/5-inch-config.png)
 
 For display devices using beaglebone HDMI, uncomment `disable_uboot_overlay_video=1`
 
-![](https://github.com/SeeedDocument/BBG-LCD-Cape-with-Resistive-Touch/raw/master/img/HDMI-config.png)
+![](https://files.seeedstudio.com/wiki/BBG-LCD-Cape-with-Resistive-Touch/img/HDMI-config.png)
 
 4. Reboot system. LED is blinking and you will see this window
 

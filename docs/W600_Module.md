@@ -9,7 +9,7 @@ sku: 113990614
 tags:
 ---
 
-![](https://github.com/SeeedDocument/W600_Module/raw/master/img/113020031-preview.png)
+![](https://files.seeedstudio.com/wiki/W600_Module/img/113020031-preview.png)
 
 
 
@@ -20,7 +20,7 @@ The W600 Module is a cost-effective 2.4GHz WiFi module support 802.11b/g/n. Seee
 We take the pins of the W600 chip out and put them on the back of the board, including I2S/I2C/SPI/GPIO/PWM/UART/SDIO. In addition, this module has an on-board PCB Antenna, no need to design the antenna separately, so you can quickly deploy the module to your own board. We also have made CE/FCC certification for this module and you can use it directly for business projects.
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/W600-Module-p-4020.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/W600-Module-p-4020.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 
@@ -144,11 +144,11 @@ To use the **W600 Module**, you need to use [USB-to-Serial Tools](https://www.se
         For mac, we found that some version of mac system can not recognize the on-board USB-to-Serial chip CH330N, please check here for solution [Mac os driver issue](https://forum.seeedstudio.com/viewtopic.php?f=106&t=8299&sid=aa548f2de0fb26380f50e0b328a49a80)
 
 
-We use the serial port tool **sscom** to send the AT command. You can use your favorite serial port tool, in case you want to use **sscom**, you can download it [Here](https://github.com/SeeedDocument/Grove-6-Axis_Accelerometer-Gyroscope-BMI088/raw/master/res/sscom51.zip). 
+We use the serial port tool **sscom** to send the AT command. You can use your favorite serial port tool, in case you want to use **sscom**, you can download it [Here](https://files.seeedstudio.com/wiki/Grove-6-Axis_Accelerometer-Gyroscope-BMI088/res/sscom51.zip). 
 
 What ever, please make sure you have checked the option **AddCrLf**, and set the baud rate to **115200**
 
-![](https://github.com/SeeedDocument/Air602_WiFi_Module/raw/master/img/AT_2.jpg)
+![](https://files.seeedstudio.com/wiki/Air602_WiFi_Module/img/AT_2.jpg)
 
 
 Tap **AT+** then click **SEND** or press ++enter++ key to to check if the connection was successfully established.
@@ -237,7 +237,7 @@ Wireless network card scanning AP's AT command is ：
 AT+WSCAN
 ```
 
-![](https://github.com/SeeedDocument/Air602_WiFi_Module/raw/master/img/AT_3.jpg)
+![](https://files.seeedstudio.com/wiki/Air602_WiFi_Module/img/AT_3.jpg)
 
 The last paremeter is the signal strength,  unit db
 
@@ -286,7 +286,7 @@ AT+PMTF
 AT+WJOIN
 ```
 
-![](https://github.com/SeeedDocument/Air602_WiFi_Module/raw/master/img/AT_4.jpg)
+![](https://files.seeedstudio.com/wiki/Air602_WiFi_Module/img/AT_4.jpg)
 
 
 ### Create an APSTA process
@@ -414,9 +414,9 @@ AT+APLKSTT
 
 - **[PDF]** [WM_W60X_Firmware Generation Guide_V1.1.pdf](https://github.com/SeeedDocument/W600_Module/blob/master/res/WM_W60X_Firmware%20Generation%20Guide_V1.1.pdf)
 
-- **[ZIP]** [W600 Module schematic files](https://github.com/SeeedDocument/W600_Module/raw/master/res/W600%20Module%20schemaic.zip)
+- **[ZIP]** [W600 Module schematic files](https://files.seeedstudio.com/wiki/W600_Module/res/W600%20Module%20schemaic.zip)
 
-- **[ZIP]** [sscom](https://github.com/SeeedDocument/Grove-6-Axis_Accelerometer-Gyroscope-BMI088/raw/master/res/sscom51.zip)
+- **[ZIP]** [sscom](https://files.seeedstudio.com/wiki/Grove-6-Axis_Accelerometer-Gyroscope-BMI088/res/sscom51.zip)
 
 
 ## Tech Support

@@ -7,13 +7,13 @@ prodimagename:  Bugduino-V2r0-Front.jpg
 surveyurl: https://www.research.net/r/Bugduino
 sku:      102990021
 ---
-![](https://github.com/SeeedDocument/Bugduino/raw/master/img/Bugduino-V2r0-Front.jpg)
+![](https://files.seeedstudio.com/wiki/Bugduino/img/Bugduino-V2r0-Front.jpg)
 
 Bugduino is an Arduino compatible module.
 
 Designed for working with [Buglabs BUG platform](http://www.buglabs.net/).
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Bugduino-V2.0-p-863.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Bugduino-V2.0-p-863.html)
 
 ##   Features
 ---

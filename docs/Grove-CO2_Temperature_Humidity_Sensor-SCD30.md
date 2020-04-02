@@ -9,7 +9,7 @@ sku: 101020634
 ---
 
 
-![](https://github.com/SeeedDocument/Grove-CO2-Temperature-Humidity-Sensor-SCD30/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/img/main.jpg)
 
 
 The Grove - CO2 & Temperature & Humidity Sensor (SCD30) is a high precision carbon dioxide sensor, which is based on Sensirion SCD30. The measuring range of this sensor is 0 ppm-40'000 ppm, and the measurement accuracy can reach to ±(30 ppm + 3%) between 400ppm to 10'000ppm.  
@@ -152,7 +152,7 @@ In addition to the Non-Dispersive Infrared(NDIR) measurement technology for CO2 
 
 | Seeeduino V4.2 | Base Shield | Grove-CO2 & T&H SCD30|
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-CO2-Temperature-Humidity-Sensor-SCD30/raw/master/img/thumbnial.png)
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/img/thumbnial.png)
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD30-p-2911.html)|
 
 
@@ -179,7 +179,7 @@ In addition to the Non-Dispersive Infrared(NDIR) measurement technology for CO2 
 
 
 
-![](https://github.com/SeeedDocument/Grove-CO2-Temperature-Humidity-Sensor-SCD30/raw/master/img/connect.png)
+![](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/img/connect.png)
 
 
 
@@ -198,13 +198,13 @@ In addition to the Non-Dispersive Infrared(NDIR) measurement technology for CO2 
 - **Step 3.** Restart the Arduino IDE. Open the example, you can open it in the following three ways：
     a. Open it directly in the Arduino IDE via the path: **File --> Examples -->Grove_scd30_co2_sensor-->SCD30_Example**. 
 
-    ![](https://github.com/SeeedDocument/Grove-CO2-Temperature-Humidity-Sensor-SCD30/raw/master/img/c1.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/img/c1.jpg)
     
     b. Open it in your computer by click the **SCD30_Example.ino** which you can find in the folder **XXXX\Arduino\libraries\Seeed_SCD30-master\examples\SCD30_Example**, **XXXX** is the location you installed the Arduino IDE.
     
-    ![](https://github.com/SeeedDocument/Grove-CO2-Temperature-Humidity-Sensor-SCD30/raw/master/img/c3.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/img/c3.jpg)
     
-    c. Or, you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+    c. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 
 
@@ -279,7 +279,7 @@ void loop()
 !!!Success
 		If everything goes well, the raw data of the Grove - CO2 & Temperature & Humidity Sensor (SCD30) should be able to read from Serial Monitor.
 
-![](https://github.com/SeeedDocument/Grove-CO2-Temperature-Humidity-Sensor-SCD30/raw/master/img/c2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/img/c2.jpg)
 
 
 
@@ -292,13 +292,13 @@ In order to get more accurate results in a practical scenario, you need to pay a
 
 ### Placement
  
-Please refer to the [SCD30 Design-In Guidelines](https://github.com/SeeedDocument/Grove-CO2-Temperature-Humidity-Sensor-SCD30/raw/master/res/CD_AN_SCD30_Design-In_Guidelines_D2.pdf) for the correct placement.
+Please refer to the [SCD30 Design-In Guidelines](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/CD_AN_SCD30_Design-In_Guidelines_D2.pdf) for the correct placement.
 
 
 ### Calibration
 
 
-When activated for the first time a period of minimum 7 days is needed so that the algorithm can find its initial parameter set for ASC. The sensor has to be exposed to fresh air for at least 1 hour every day. Also during that period, the sensor may not be disconnected from the power supply, otherwise the procedure to find calibration parameters is aborted and has to be restarted from the beginning. The successfully calculated parameters are stored in non-volatile memory of the SCD30 having the effect that after a restart the previously found parameters for ASC are still present. For more detail about the calibration, please refer to the [Interface Description Sensirion SCD30 Sensor Module](https://github.com/SeeedDocument/Grove-CO2-Temperature-Humidity-Sensor-SCD30/raw/master/res/Sensirion_CO2_Sensors_SCD30_Interface_Description.pdf)
+When activated for the first time a period of minimum 7 days is needed so that the algorithm can find its initial parameter set for ASC. The sensor has to be exposed to fresh air for at least 1 hour every day. Also during that period, the sensor may not be disconnected from the power supply, otherwise the procedure to find calibration parameters is aborted and has to be restarted from the beginning. The successfully calculated parameters are stored in non-volatile memory of the SCD30 having the effect that after a restart the previously found parameters for ASC are still present. For more detail about the calibration, please refer to the [Interface Description Sensirion SCD30 Sensor Module](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/Sensirion_CO2_Sensors_SCD30_Interface_Description.pdf)
 
 
 There are two ino sample in the SCD30 library foldor, you can run the `SCD30_auto_calibration.ino` to start the calibration.
@@ -318,9 +318,9 @@ There are two ino sample in the SCD30 library foldor, you can run the `SCD30_aut
 ## Resources
 
 - **[ZIP]** [Grove - CO2 & Temperature & Humidity Sensor (SCD30) Schematic file](https://github.com/SeeedDocument/Grove-CO2-Temperature-Humidity-Sensor-SCD30/raw/master/res/Grove-CO2_Temperature_Humidity_Sensor-SCD30.zip)
-- **[PDF]** [SCD30 Design-In Guideline](https://github.com/SeeedDocument/Grove-CO2-Temperature-Humidity-Sensor-SCD30/raw/master/res/CD_AN_SCD30_Design-In_Guidelines_D2.pdf)
-- **[PDF]** [SCD30 Datasheet](https://github.com/SeeedDocument/Grove-CO2-Temperature-Humidity-Sensor-SCD30/raw/master/res/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf)
-- **[PDF]** [SCD30 Interface Description](https://github.com/SeeedDocument/Grove-CO2-Temperature-Humidity-Sensor-SCD30/raw/master/res/Sensirion_CO2_Sensors_SCD30_Interface_Description.pdf)
+- **[PDF]** [SCD30 Design-In Guideline](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/CD_AN_SCD30_Design-In_Guidelines_D2.pdf)
+- **[PDF]** [SCD30 Datasheet](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf)
+- **[PDF]** [SCD30 Interface Description](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/Sensirion_CO2_Sensors_SCD30_Interface_Description.pdf)
 
 
 

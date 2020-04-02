@@ -8,7 +8,7 @@ surveyurl: https://www.research.net/r/xadow_motor_driver
 sku:  108040000
 ---
 
-![](https://github.com/SeeedDocument/Xadow_Motor_Driver/raw/master/img/x%20motor.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Motor_Driver/img/x%20motor.jpg)
 
 Xadow Motor can be used to control DC Motors. Its heart is a low-saturation two-channel bidirectional motor drive chip LB1836M, controlled by ATmega168 which handles the I2C communication with Xadow Main Board. Xadow Motor features a changeable I2C address. And it needs a separate low power to drive motors.
 
@@ -24,7 +24,7 @@ Xadow Motor can be used to control DC Motors. Its heart is a low-saturation two-
 
 ## Product View
 ---
-![](https://github.com/SeeedDocument/Xadow_Motor_Driver/raw/master/img/Xadow_Motor_Black_View.png)
+![](https://files.seeedstudio.com/wiki/Xadow_Motor_Driver/img/Xadow_Motor_Black_View.png)
 
 - ①: LB1836 IC, a low-saturation two-channel bidirectional motor driver.
 - ②： Motors Power Supply Connection.
@@ -137,10 +137,10 @@ The Xadow Motor has four I2C address which is decided by A0 pin and A1 pin. A0 a
 
 ## Resources
 ---
-- [Xadow Motor Eagle File](https://github.com/SeeedDocument/Xadow_Motor_Driver/raw/master/res/Xadow_Motor_Eagle_File.zip)
-- [Xadow Motor Schematic in PDF](https://github.com/SeeedDocument/Xadow_Motor_Driver/raw/master/res/Xadow_Motor_Schematic_in_PDF.pdf)
+- [Xadow Motor Eagle File](https://files.seeedstudio.com/wiki/Xadow_Motor_Driver/res/Xadow_Motor_Eagle_File.zip)
+- [Xadow Motor Schematic in PDF](https://files.seeedstudio.com/wiki/Xadow_Motor_Driver/res/Xadow_Motor_Schematic_in_PDF.pdf)
 - [Xadow Motor library](https://github.com/Seeed-Studio/Xadow_Motor_Driver)
-- [LB1836 datasheet](https://github.com/SeeedDocument/Xadow_Motor_Driver/raw/master/res/LB1836M.PDF)
+- [LB1836 datasheet](https://files.seeedstudio.com/wiki/Xadow_Motor_Driver/res/LB1836M.PDF)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

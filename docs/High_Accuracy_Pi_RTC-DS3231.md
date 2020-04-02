@@ -9,7 +9,7 @@ sku: 103030278
 tags:
 ---
 
-![](https://github.com/SeeedDocument/High_Accuracy_Pi_RTC-DS3231/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/High_Accuracy_Pi_RTC-DS3231/img/main.jpg)
 
 
 The High Accuracy Pi RTC is based on the clock chip DS3231, the DS3231 is a low-cost, extremely accurate I2C realtime clock (RTC). It can provide a real-time clock(RTC) for raspberry pi via the UART interface. With the clock source from the TCXO(temperaturecompensated crystal oscillator), the RTC provides seconds, minutes, hours, day, date, month, and year information. The date at the end of the month is automatically adjusted for months with fewer than 31 days, including corrections for leap year.The clock operates in either the 24-hour or 12-hour format with an AM/PM indicator.
@@ -66,7 +66,7 @@ Any applications need Real Time on Raspberry.
 
 ## Pin Out
 
-![](https://github.com/SeeedDocument/High_Accuracy_Pi_RTC-DS3231/raw/master/img/pin_out.jpg)
+![](https://files.seeedstudio.com/wiki/High_Accuracy_Pi_RTC-DS3231/img/pin_out.jpg)
 
 
 !!!Note
@@ -88,7 +88,7 @@ Any applications need Real Time on Raspberry.
 
 |Raspberry Pi|High Accuracy Pi RTC(DS3231)|
 |---|---|
-|![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![](https://github.com/SeeedDocument/High_Accuracy_Pi_RTC-DS3231/raw/master/img/thumbnail.jpg)|
+|![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![](https://files.seeedstudio.com/wiki/High_Accuracy_Pi_RTC-DS3231/img/thumbnail.jpg)|
 |<a href="https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html" target="_blank">Get One Now</a>|<a href="hhttps://www.seeedstudio.com/High-Accuracy-Pi-RTC-%28DS3231%29-p-3214.html" target="_blank">Get One Now</a>|
 
 
@@ -129,7 +129,7 @@ sudo shutdown -h now
 
 - **Step 3. Insert the HAT to Raspberry Pi**
 
-![](https://github.com/SeeedDocument/High_Accuracy_Pi_RTC-DS3231/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/High_Accuracy_Pi_RTC-DS3231/img/connect.jpg)
 
 
 Please make sure plug the pin 1 of this hat into the pin 1 of raspberry GPIO, just like the picture above.
@@ -193,7 +193,7 @@ hwclock --help
 
 - **[http]** [Seeed Pi RTC Library](https://github.com/Seeed-Studio/pi-hats)
 
-- **[PDF]** [Datasheet DS3231](https://github.com/SeeedDocument/High_Accuracy_Pi_RTC-DS3231/raw/master/res/datasheet.pdf)
+- **[PDF]** [Datasheet DS3231](https://files.seeedstudio.com/wiki/High_Accuracy_Pi_RTC-DS3231/res/datasheet.pdf)
 
 
 ## Project

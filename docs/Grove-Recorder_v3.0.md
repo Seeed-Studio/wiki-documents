@@ -202,8 +202,8 @@ Upload the program to your Arduino/Seeeduino.
 
 ## Resources
 
-* [Schematics in PDF](https://github.com/SeeedDocument/Grove_Recorder_V3/raw/master/res/Grove%20-%20Recorder%20v3.0a.pdf)
-* [Schematics in Eagle](https://github.com/SeeedDocument/Grove_Recorder_V3/raw/master/res/eagle.zip)
+* [Schematics in PDF](https://files.seeedstudio.com/wiki/Grove_Recorder_V3/res/Grove%20-%20Recorder%20v3.0a.pdf)
+* [Schematics in Eagle](https://files.seeedstudio.com/wiki/Grove_Recorder_V3/res/eagle.zip)
 *	[Codecraft CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove_Recorder/master/res/Grove_Recorder_CDC_File.zip)
 
 ## Tech Support

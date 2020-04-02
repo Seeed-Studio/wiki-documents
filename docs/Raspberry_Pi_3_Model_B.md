@@ -10,11 +10,11 @@ sku:     114990584
 
 **Raspberry Pi®** is an **ARM** based credit card sized **SBC**(Single Board Computer) created by [Raspberry Pi Foundation](http://www.raspberrypi.org). Raspberry Pi runs Debian based **GNU/Linux** operating system [Raspbian](https://www.raspberrypi.org/downloads/raspbian/) and ports of many other OSes exist for this SBC.
 
-![](https://github.com/SeeedDocument/Raspberry_Pi_3_Model_B/raw/master/img/Raspberry_Pi3_What_is_New.png)
+![](https://files.seeedstudio.com/wiki/Raspberry_Pi_3_Model_B/img/Raspberry_Pi3_What_is_New.png)
 
 Raspberry Pi Foundation has announced a new version **Raspberry Pi 3**. Read announcement [here](https://www.raspberrypi.org/blog/raspberry-pi-3-on-sale/). With on-board **WiFi** / **Bluetooth** support and an 64bit improved Processor, **Raspberry Pi v3** will be an exciting board for Makers, Engineers and Students.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)
 
 ##  What is new in Raspberry Pi 3
 ---
@@ -118,9 +118,9 @@ Raspberry Pi Foundation has announced a new version **Raspberry Pi 3**. Read ann
 
 *   There is slight change in component placement to allow addition of WiFi / Bluetooth SoC &amp; Chip antenna in Pi 3.
 
-![](https://github.com/SeeedDocument/Raspberry_Pi_3_Model_B/raw/master/img/RaspberryPi_2_Vs_RaspberryPi_3_Top.JPG)
+![](https://files.seeedstudio.com/wiki/Raspberry_Pi_3_Model_B/img/RaspberryPi_2_Vs_RaspberryPi_3_Top.JPG)
 
-![](https://github.com/SeeedDocument/Raspberry_Pi_3_Model_B/raw/master/img/RaspberryPi_2_Vs_RaspberryPi_3_Bottom.JPG)
+![](https://files.seeedstudio.com/wiki/Raspberry_Pi_3_Model_B/img/RaspberryPi_2_Vs_RaspberryPi_3_Bottom.JPG)
 
 ##  System on Chip (SoC)
 ---
@@ -141,31 +141,31 @@ Raspberry Pi Foundation has announced a new version **Raspberry Pi 3**. Read ann
     *   400 MHz
     *   Videocore IV Multimedia Co-Processor
 
-![](https://github.com/SeeedDocument/Raspberry_Pi_3_Model_B/raw/master/img/RaspberryPi_3_BCM2837_ARM_Cortex_A53-64Bit_ARM_V8-VideoCore_IV_Multimedia.jpg)
+![](https://files.seeedstudio.com/wiki/Raspberry_Pi_3_Model_B/img/RaspberryPi_3_BCM2837_ARM_Cortex_A53-64Bit_ARM_V8-VideoCore_IV_Multimedia.jpg)
 
 ##  Chip Antenna
 ---
 A ceramic chip antenna is used by WiFi and Bluetooth 4.1 SoC BCM43438. The chip antenna moves the indicator LEDs that were present in Pi 2 to the lower side of PCB.
 
-![](https://github.com/SeeedDocument/Raspberry_Pi_3_Model_B/raw/master/img/RaspberryPi_3_Chip_Antenna.jpg)
+![](https://files.seeedstudio.com/wiki/Raspberry_Pi_3_Model_B/img/RaspberryPi_3_Chip_Antenna.jpg)
 
 ##  Repositioned LEDs
 ---
 The ACT and PWR LEDs are repositioned as shown below in Raspberry Pi 3 when compared to Pi 2.
 
-![](https://github.com/SeeedDocument/Raspberry_Pi_3_Model_B/raw/master/img/RaspberryPi_3_LEDs_Position.jpg)
+![](https://files.seeedstudio.com/wiki/Raspberry_Pi_3_Model_B/img/RaspberryPi_3_LEDs_Position.jpg)
 
 ##  Repositioned RUN pin-header
 ---
 The RUN pin-header is also repositioned
 
-![](https://github.com/SeeedDocument/Raspberry_Pi_3_Model_B/raw/master/img/RaspberryPi_3_LEDs_RUN_PinHeader.jpg)
+![](https://files.seeedstudio.com/wiki/Raspberry_Pi_3_Model_B/img/RaspberryPi_3_LEDs_RUN_PinHeader.jpg)
 
 ##  WiFi / Bluetooth SoC BCM43438
 ---
 WiFi and Bluetooth 4.1 (Classic and LE) are provided by Broadcom BCM43438 chip
 
-![](https://github.com/SeeedDocument/Raspberry_Pi_3_Model_B/raw/master/img/Raspberry_Pi_3_WiFi_Bluetooth_SoC_BCM43438.jpg)
+![](https://files.seeedstudio.com/wiki/Raspberry_Pi_3_Model_B/img/Raspberry_Pi_3_WiFi_Bluetooth_SoC_BCM43438.jpg)
 
 Buy:
 

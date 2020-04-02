@@ -7,14 +7,14 @@ prodimagename: Phsensor.jpg
 surveyurl: https://www.research.net/r/Grove_PH_Sensor
 sku:  101020065
 ---
-![](https://github.com/SeeedDocument/Grove-PH_Sensor/raw/master/img/Phsensor.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-PH_Sensor/img/Phsensor.jpg)
 
 Do you need to measure aqueous solution pH? Here, the Grove - PH sensor can help you do it. This sensor can output signal which corresponding to the hydrogen ion concentration that measured by PH electrode. Because it can be directly connected to controller,and then you can observe the PH value at any time. This device can be used for PH measurements, such as waste water, sewage and other occasions.
 
 !!!Note
     Only domestic order will be valid. Do not place an order if your address isn't in China.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-PH-Sensor-p-1564.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-PH-Sensor-p-1564.html)
 
 
 ##  Feature
@@ -87,7 +87,7 @@ Do you need to measure aqueous solution pH? Here, the Grove - PH sensor can help
 
 ##  Schematic
 ---
-![](https://github.com/SeeedDocument/Grove-PH_Sensor/raw/master/img/PH_Sensor_Schematic.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-PH_Sensor/img/PH_Sensor_Schematic.jpg)
 
 ##  Usage
 ---
@@ -97,7 +97,7 @@ The pH sensor can help you to detect pH value. The success or failure of pH meas
 
 *   Before using, you need using pure water or deionized water to wash it and then sop up the water with paper(the paper is without hemp). Remember,you'd better not wipe it because wiping PH electrode will cause errors. Here is a picture for reference:
 *
-![](https://github.com/SeeedDocument/Grove-PH_Sensor/raw/master/img/PH_Sensor_Usage.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-PH_Sensor/img/PH_Sensor_Usage.jpg)
 
 In this picture, PH 9.18 [buffer solution](http://www.chemguide.co.uk/physical/acidbaseeqia/buffers.html) is used as a reference solution, which helps us to know whether the measured value is accurate.
 Now let's look at what is the measured value.
@@ -130,7 +130,7 @@ void loop()
 ```
 *   Open the serial monitor for see the result:
 
-![](https://github.com/SeeedDocument/Grove-PH_Sensor/raw/master/img/PH_Sensor_result.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-PH_Sensor/img/PH_Sensor_result.jpg)
 
 *   Look at the result, you can see the test result is consistent with the actual value. So you can begin to measure aqueous solution pH. If there were errors between reference liquid PH and measured PH value, you had better soak the PH electrode for several hours and then recalibrate. [Here](http://www.ehow.com/how_4796148_calibrate-ph-meter.html) is a guide about how to calibrate for reference.
 
@@ -158,9 +158,9 @@ Hope this helps!
 
 ##  Resource
 ---
-- [Grove - PH Sensor Eagle File](https://github.com/SeeedDocument/Grove-PH_Sensor/raw/master/res/Grove-PH_Sensor_Eagle_File.zip)
+- [Grove - PH Sensor Eagle File](https://files.seeedstudio.com/wiki/Grove-PH_Sensor/res/Grove-PH_Sensor_Eagle_File.zip)
 
-- [Grove - PH Sensor Schematic in PDF](https://github.com/SeeedDocument/Grove-PH_Sensor/raw/master/res/Grove-PH_Sensor_v1.0.pdf)
+- [Grove - PH Sensor Schematic in PDF](https://files.seeedstudio.com/wiki/Grove-PH_Sensor/res/Grove-PH_Sensor_v1.0.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

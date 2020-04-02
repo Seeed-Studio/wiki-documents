@@ -70,27 +70,27 @@ Here are the dimensions.
 
 - Grove 20X20 DIP: 
 
-![](https://github.com/SeeedDocument/GroveSystem/raw/master/images/20_20dip.png)
+![](https://files.seeedstudio.com/wiki/GroveSystem/images/20_20dip.png)
 
 - Grove 20X20 SMD Horizontal: 
 
-![](https://github.com/SeeedDocument/GroveSystem/raw/master/images/20_20smd_horizontal.png)
+![](https://files.seeedstudio.com/wiki/GroveSystem/images/20_20smd_horizontal.png)
 
 - Grove 20X20 SMD Vertical: 
 
-![](https://github.com/SeeedDocument/GroveSystem/raw/master/images/20_20smd_vertical.png)
+![](https://files.seeedstudio.com/wiki/GroveSystem/images/20_20smd_vertical.png)
 
 - Grove 20X40 DIP: 
 
-![](https://github.com/SeeedDocument/GroveSystem/raw/master/images/40_40dip.png)
+![](https://files.seeedstudio.com/wiki/GroveSystem/images/40_40dip.png)
 
 - Grove 20X40 SMD Horizontal: 
 
-![](https://github.com/SeeedDocument/GroveSystem/raw/master/images/40_40smd_horizontal.png)
+![](https://files.seeedstudio.com/wiki/GroveSystem/images/40_40smd_horizontal.png)
 
 - Grove 20X40 SMD Vertical: 
 
-![](https://github.com/SeeedDocument/GroveSystem/raw/master/images/40_40smd_vertical.png)
+![](https://files.seeedstudio.com/wiki/GroveSystem/images/40_40smd_vertical.png)
 
 For the detail mechnical drawing, please refer to [Grove Mechnical Drawing](https://github.com/SeeedDocument/GroveSystem/tree/master/res).
 

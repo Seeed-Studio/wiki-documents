@@ -81,7 +81,7 @@ The RePhone Core 2G-AtmelSAMD21 v1.0 is a new Arduino compatible RePhone core 2G
     * blink - no battery insert
     * on - charging
     * off - charge done
-* **9- **IC - ETA6003([datasheet](https://github.com/SeeedDocument/RePhone-core-2G-AtmelSAMD21/raw/master/res/ETA6003.pdf))
+* **9- **IC - ETA6003([datasheet](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/res/ETA6003.pdf))
 * **A- **SWD Debug port
 * **B- **Antenna Connector
 * **C- **I/O PIN pad
@@ -281,11 +281,11 @@ There are several chainable add-on modules to extend the features and functional
 
 ## Resources
 ---
-- [Schematics in PDF](https://github.com/SeeedDocument/RePhone-core-2G-AtmelSAMD21/raw/master/res/pdf_sch_rephone_2g.pdf)
-- [Schematics in EAGLE](https://github.com/SeeedDocument/RePhone-core-2G-AtmelSAMD21/raw/master/res/eagle.zip)
-- [Driver](https://github.com/SeeedDocument/RePhone-core-2G-AtmelSAMD21/raw/master/res/driver.zip)
-- [Datasheet of ETA6003](https://github.com/SeeedDocument/RePhone-core-2G-AtmelSAMD21/raw/master/res/ETA6003.pdf)
-- [AT Command of SIM800H](https://github.com/SeeedDocument/RePhone-core-2G-AtmelSAMD21/raw/master/res/SIM800_AT.pdf)
+- [Schematics in PDF](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/res/pdf_sch_rephone_2g.pdf)
+- [Schematics in EAGLE](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/res/eagle.zip)
+- [Driver](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/res/driver.zip)
+- [Datasheet of ETA6003](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/res/ETA6003.pdf)
+- [AT Command of SIM800H](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/res/SIM800_AT.pdf)
 - [Download ALL Above](https://github.com/SeeedDocument/RePhone-core-2G-AtmelSAMD21/archive/master.zip)
 
 ## Tech Support

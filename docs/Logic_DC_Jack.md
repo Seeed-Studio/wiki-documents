@@ -11,7 +11,7 @@ tags:
 
 ---
 
-<div class="thumb tright"><div class="thumbinner" style="width:502px;">![](https://github.com/SeeedDocument/Logic_DC_Jack/raw/master/img/Logic_dc_jack_fengmian.JPG) <div class="thumbcaption"></div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:502px;">![](https://files.seeedstudio.com/wiki/Logic_DC_Jack/img/Logic_dc_jack_fengmian.JPG) <div class="thumbcaption"></div></div></div>
 
 This is an easy-to-use logic controller which implement logic AND and logic negation.
 It is designed with H Bridge which get certain drive function to drive motor and other applications, now your application will not just limited on LED applications.
@@ -43,7 +43,7 @@ If you are a novice to programming and inclined to make a simple application, th
 
 Here is block diagram of Logic_DC_Jack module which consists of following parts.
 
-![](https://github.com/SeeedDocument/Logic_DC_Jack/raw/master/img/Logic_dc_jack_hardware_overview1.JPG)
+![](https://files.seeedstudio.com/wiki/Logic_DC_Jack/img/Logic_dc_jack_hardware_overview1.JPG)
 
 *   **Input** - Logic input
 
@@ -99,13 +99,13 @@ This module includes two type of cables and you will use one of it while pluggin
 </dd><dd> If the input is only one module, the Logic DC Jack can realize the logic function of AND and NOT. Following is the figure of logic function:
 </dd></dl>
 
-<div class="center"><div class="floatnone">![](https://github.com/SeeedDocument/Logic_DC_Jack/raw/master/img/Logic_DC_Jack_3.png)</div></div>
+<div class="center"><div class="floatnone">![](https://files.seeedstudio.com/wiki/Logic_DC_Jack/img/Logic_DC_Jack_3.png)</div></div>
 
 <dl><dd> Situation 2 – Two inputs
 </dd><dd> If the inputs are two modules, this Logic DC Jack can only realize the logic function of AND. Following is the figure of logic function:
 </dd></dl>
 
-<div class="center"><div class="floatnone">![](https://github.com/SeeedDocument/Logic_DC_Jack/raw/master/img/Logic_DC_Jack_4.png)</div></div>
+<div class="center"><div class="floatnone">![](https://files.seeedstudio.com/wiki/Logic_DC_Jack/img/Logic_DC_Jack_4.png)</div></div>
 
 Choose the number of input first and then adjust the switch to a right position, the needed logic function is confirmed.
 
@@ -113,7 +113,7 @@ Choose the number of input first and then adjust the switch to a right position,
 
 There're two arrow seals on the shell, you can distinguish the input and output easily.
 
-<div class="center"><div class="floatnone">![](https://github.com/SeeedDocument/Logic_DC_Jack/raw/master/img/Logic_dc_jack_fengmian_2.JPG)</div></div>
+<div class="center"><div class="floatnone">![](https://files.seeedstudio.com/wiki/Logic_DC_Jack/img/Logic_dc_jack_fengmian_2.JPG)</div></div>
 
 ###   How to know the default input level ?
 
@@ -137,7 +137,7 @@ Switch to **NOT** gate.
 
 As shown below:
 
-![](https://github.com/SeeedDocument/Logic_DC_Jack/raw/master/img/Logic_dc_jack_hardware_setting_stared_not.JPG)
+![](https://files.seeedstudio.com/wiki/Logic_DC_Jack/img/Logic_dc_jack_hardware_setting_stared_not.JPG)
 
 ####  Review Results
 
@@ -149,11 +149,11 @@ If you want to use two inputs, you need the Grove Branch Cable.
 
 With this cable, you can connect 2 Grove to the INPUT. One connect to Input1 and the other to Input2.
 
-![](https://github.com/SeeedDocument/Logic_DC_Jack/raw/master/img/Logic_dc_jack_cable.JPG)
+![](https://files.seeedstudio.com/wiki/Logic_DC_Jack/img/Logic_dc_jack_cable.JPG)
 
 Here is an example, 2 Buttons INPUT and a LED OUTPUT:
 
-![](https://github.com/SeeedDocument/Logic_DC_Jack/raw/master/img/Logic_dc_jack_and.jpg)
+![](https://files.seeedstudio.com/wiki/Logic_DC_Jack/img/Logic_dc_jack_and.jpg)
 
 The led will on only when 2 buttons pressed.
 
@@ -167,7 +167,7 @@ About the Grove Base that compatible with Lego, it's coming soon.
 
 Here is a demo:
 
-![](https://github.com/SeeedDocument/Logic_DC_Jack/raw/master/img/Logic_dc_jack_with_lego.jpg)
+![](https://files.seeedstudio.com/wiki/Logic_DC_Jack/img/Logic_dc_jack_with_lego.jpg)
 
 ##   Compatible Groves for Logic DC Jack
 
@@ -231,10 +231,10 @@ Below Groves can work with Logic DC Jack well:
 
 ##   Resources
 
-- **[PDF]**   [Schematic in PDF](https://github.com/SeeedDocument/Logic_DC_Jack/raw/master/res/Logic_DC_Jack_v1.0_SCH.pdf)
-- **[Eagle]**    [Schematic in Eagle](https://github.com/SeeedDocument/Logic_DC_Jack/raw/master/res/Logic_DC_Jack_v1.0_SCH_PCB.zip)
-- **[PDF]**[Logic DC Jack v1.0 pdf](https://github.com/SeeedDocument/Logic_DC_Jack/raw/master/res/Logic%20DC%20Jack%20v1.0.pdf)
-- **[EAGLE]**[Logic DC Jack v1.0 sch](https://github.com/SeeedDocument/Logic_DC_Jack/raw/master/res/Logic%20DC%20Jack%20v1.0.sch)
+- **[PDF]**   [Schematic in PDF](https://files.seeedstudio.com/wiki/Logic_DC_Jack/res/Logic_DC_Jack_v1.0_SCH.pdf)
+- **[Eagle]**    [Schematic in Eagle](https://files.seeedstudio.com/wiki/Logic_DC_Jack/res/Logic_DC_Jack_v1.0_SCH_PCB.zip)
+- **[PDF]**[Logic DC Jack v1.0 pdf](https://files.seeedstudio.com/wiki/Logic_DC_Jack/res/Logic%20DC%20Jack%20v1.0.pdf)
+- **[EAGLE]**[Logic DC Jack v1.0 sch](https://files.seeedstudio.com/wiki/Logic_DC_Jack/res/Logic%20DC%20Jack%20v1.0.sch)
 -  **[Wik]**   [Wiki page of NOT Gate](https://en.wikipedia.org/wiki/Inverter_(logic_gate))
 - **[Wik]**    [Wiki page of AND Gate](https://en.wikipedia.org/wiki/AND_gate)
 

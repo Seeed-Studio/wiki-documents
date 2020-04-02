@@ -8,16 +8,16 @@ surveyurl: https://www.research.net/r/Tiny_BLE
 sku: 102080005
 ---
 
-![](https://github.com/SeeedDocument/Tiny_BLE/raw/master/img/BLE_Smurfs_Photo.png)
+![](https://files.seeedstudio.com/wiki/Tiny_BLE/img/BLE_Smurfs_Photo.png)
 
 The Tiny BLE is a Bluetooth Low Energy development board designed with low energy consumption and small size in mind. It's integrated with current measurement feature to provide real time energy consumption data, which is essential for developers to optimize software to design long battery life devices. It supports ARM mbed cloud-based IDE with an handy C/C++ SDK and a large number of open source libraries, which makes prototyping and development extremely easy.
 
-|![](https://github.com/SeeedDocument/Tiny_BLE/raw/master/img/Ble_smurfs_interface.png) |![](https://github.com/SeeedDocument/Tiny_BLE/raw/master/img/Ble_smurfs_ble.png)
+|![](https://files.seeedstudio.com/wiki/Tiny_BLE/img/Ble_smurfs_interface.png) |![](https://files.seeedstudio.com/wiki/Tiny_BLE/img/Ble_smurfs_ble.png)
 |---|---|
 
 With its modular design, we can divide it into two parts - CMSIS DAP interface part and BLE part. The CMSIS DAP interface part is like the Swiss army knife. It provides drag-n-drop programming, CMSIS DAP debug, USB virtual serial port, current measurement and battery charging. The BLE part is built on the Nordic nRF51822 with Bluetooth Low Energy 2.4GHz multiprotocol radio and a 32 bit ARM Cortex-M0 core running 16MHz. MPU6050, a 6 DOF with 3D accelerometer and 3D gyroscope, is integrated to provide motion detect feature.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Seeed-Tiny-BLE-BLE-%2B-6DOF-Mbed-Platform-p-2268.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Seeed-Tiny-BLE-BLE-%2B-6DOF-Mbed-Platform-p-2268.html)
 
 ##    Features
 ---
@@ -65,7 +65,7 @@ With its modular design, we can divide it into two parts - CMSIS DAP interface p
 
 ##   Get Started
 ---
-![](https://github.com/SeeedDocument/Tiny_BLE/raw/master/img/Get_started_with_mbed.png)
+![](https://files.seeedstudio.com/wiki/Tiny_BLE/img/Get_started_with_mbed.png)
 
 1.  Click [this link](https://developer.mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Tiny-BLE) to **login or signup to mbed**
 
@@ -106,7 +106,7 @@ Changing the baud rate of the USB virtual serial port to 4000000+ will trigger c
 
 *   [Tiny BLE MONITOR for Linux/Mac OS](https://github.com/Seeed-Studio/Tiny_BLE/tree/master/utils), additional requirement: pyqtgraph
 
-![](https://github.com/SeeedDocument/Tiny_BLE/raw/master/img/Ble_smurfs_monitor_preview.png)
+![](https://files.seeedstudio.com/wiki/Tiny_BLE/img/Ble_smurfs_monitor_preview.png)
 
 ###   Update or Restore Firmware
 
@@ -133,9 +133,9 @@ We customized a DFU bootloader for you to update your application through Over-T
 
 ##  Resource
 ---
-*   [Tiny BLE V1.0 eagle file](https://github.com/SeeedDocument/Tiny_BLE/raw/master/res/BLE_Smurfs_v1.0.zip)
+*   [Tiny BLE V1.0 eagle file](https://files.seeedstudio.com/wiki/Tiny_BLE/res/BLE_Smurfs_v1.0.zip)
 
-*   [Tiny BLE V1.0.pdf](https://github.com/SeeedDocument/Tiny_BLE/raw/master/res/BLE_Smurfs_v1.0_PDF.pdf)
+*   [Tiny BLE V1.0.pdf](https://files.seeedstudio.com/wiki/Tiny_BLE/res/BLE_Smurfs_v1.0_PDF.pdf)
 
 *   [Resources on github](https://github.com/Seeed-Studio/Tiny_BLE)
 

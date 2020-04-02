@@ -18,7 +18,7 @@ The final project in our series may seem complex, but is quite simple. We use th
 
 5.  The Arduino's D2 pin sends a signal to the Relay on the D1 connector. The Relay's red light indicates whether the relay is on or off, and the relay makes a clicking sound when it switches.
 
- ![](https://github.com/SeeedDocument/Project_Eight-Thermostat/raw/master/img/Conn-eight.jpg)
+ ![](https://files.seeedstudio.com/wiki/Project_Eight-Thermostat/img/Conn-eight.jpg)
 
  _**Now upload the following Arduino sketch:**_
 

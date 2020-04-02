@@ -9,7 +9,7 @@ sku: 111020048
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-5-Way_Switch/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-5-Way_Switch/img/main.jpg)
 
 
 The Grove - 5-Way Switch can be used to detect the switch position and event like single click/double click/long press, etc. It can detect left/right/up/down/center 5 directions.
@@ -19,7 +19,7 @@ With only one small switch to meet all your needs for switch control!
 
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-5-Way-Switch-p-3136.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-5-Way-Switch-p-3136.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 ## Version
 
@@ -58,8 +58,8 @@ With only one small switch to meet all your needs for switch control!
 
 ### Pin Map
 
-![](https://github.com/SeeedDocument/Grove-5-Way_Switch/raw/master/img/pin_map.jpg)
-![](https://github.com/SeeedDocument/Grove-5-Way_Switch/raw/master/img/pin_map_back.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-5-Way_Switch/img/pin_map.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-5-Way_Switch/img/pin_map_back.jpg)
 
 
 
@@ -106,7 +106,7 @@ With only one small switch to meet all your needs for switch control!
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-5-Way_Switch/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-5-Way_Switch/img/connect.jpg)
 
 
 !!!Note
@@ -136,10 +136,10 @@ With only one small switch to meet all your needs for switch control!
 - **Step 3.** Restart the Arduino IDE. Open example via the path: **File --> Examples --> Grove Multi Switch Library --> Grove_Switch_Events**. 
 
 
-![](https://github.com/SeeedDocument/Grove-5-Way_Switch/raw/master/img/path.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-5-Way_Switch/img/path.jpg)
 
 
-Or, you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 ```C++
 #include "Grove_Multi_Switch.h"
@@ -318,7 +318,7 @@ KEY E: RAW - HIGH RELEASED
 
 ## Resources
 
-- **[Zip]** [Grove - 5-Way Switch eagle files](https://github.com/SeeedDocument/Grove-5-Way_Switch/raw/master/res/Grove-5-Way_Switch.zip)
+- **[Zip]** [Grove - 5-Way Switch eagle files](https://files.seeedstudio.com/wiki/Grove-5-Way_Switch/res/Grove-5-Way_Switch.zip)
 - **[Zip]** [Grove Multi Switch Library](https://github.com/Seeed-Studio/Grove_Multi_Switch/archive/master.zip)
 
 

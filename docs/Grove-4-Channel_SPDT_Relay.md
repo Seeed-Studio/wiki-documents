@@ -9,7 +9,7 @@ sku: 103020133
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/main.jpg)
 
 
 The Grove - 4-Channel SPDT Relay has four single pole - double throw (SPDT) switches. It only requires low-voltage and low current signals to
@@ -74,9 +74,9 @@ We use an on-board STM32F030F4P6 to control the channels separately. The command
 
 ### Pin Map
 
-![](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/img/pin_map_front.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/pin_map_front.jpg)
 
-![](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/img/pin_map_back.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/pin_map_back.jpg)
 
 
 !!!Note
@@ -90,7 +90,7 @@ We use an on-board STM32F030F4P6 to control the channels separately. The command
 
 **Relay control**
 
-![](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/img/schematic.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/schematic.jpg)
 
 
 **K2** is the Relay module, there is a coil between **pin1** and **pin3** of K1. Defaultly, the **COM2** will connect to **NC2**.If the pin3 of K1 connected to the grand, then this coil will be 'closed', so the **COM2** will connect to **NO2**.
@@ -105,10 +105,10 @@ The **PA7** is pulled down by the 10k R2, if there is no signal, the 'Gate' of *
 
 
 **Bi-directional level shifter circuit**
-![](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/img/schematic_1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/schematic_1.jpg)
 
 
-This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of this sensor use 3.3V, if the I<sup>2</sup>C bus of the Arduino use 5V, this circuit will be needed. In the schematic above, **Q17** and **Q18** are N-Channel MOSFET [2N7002A](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/AN10441.pdf)
+This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of this sensor use 3.3V, if the I<sup>2</sup>C bus of the Arduino use 5V, this circuit will be needed. In the schematic above, **Q17** and **Q18** are N-Channel MOSFET [2N7002A](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/AN10441.pdf)
 
 
 !!!NOTE
@@ -157,7 +157,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/img/8.22%E8%BF%9E%E6%8E%A51.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/8.22%E8%BF%9E%E6%8E%A51.jpg)
 
 
 !!!Note
@@ -189,10 +189,10 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 - **Step 3.** Restart the Arduino IDE. Open example via the path: **File --> Examples --> Multi Channel Relay Arduino Library --> four_channel_relay_control**. 
 
-![](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/img/path.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/path.jpg)
 
 
-Or, you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 ```c++
 #include <multi_channel_relay.h>
@@ -311,7 +311,7 @@ Channel 2 on
 ```
 
 
-![](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/img/_DAS5552.MOV_20180822_104218.gif)
+![](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/_DAS5552.MOV_20180822_104218.gif)
 
 
 
@@ -401,14 +401,14 @@ void setup()
 
 You can download the firmware here:
 
-[Factory firmware](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/res/Grove-4-Channel-SPDT-Relay-Firmware.bin)
+[Factory firmware](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/res/Grove-4-Channel-SPDT-Relay-Firmware.bin)
 
 We recommed you use the J-flash for the software:
 
 [J-flash](https://www.segger.com/downloads/jlink#J-LinkSoftwareAndDocumentationPack)
 
 
-![](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/img/J-flash.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/J-flash.jpg)
 
 
 ## Schematic Online Viewer
@@ -421,12 +421,12 @@ We recommed you use the J-flash for the software:
 
 ## Resources
 
-- **[Zip]** [Grove-4-Channel SPDT Relay eagle files](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/res/Grove-4-Channel_SPDT_Relay.zip)
+- **[Zip]** [Grove-4-Channel SPDT Relay eagle files](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/res/Grove-4-Channel_SPDT_Relay.zip)
 - **[Zip]** [Multi Channel Relay Arduino Library](https://github.com/Seeed-Studio/Multi_Channel_Relay_Arduino_Library/archive/master.zip)
-- **[Bin]** [Factory firmware](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/res/Grove-4-Channel-SPDT-Relay-Firmware.bin)
-- **[PDF]** [Datasheet of SRD 05VDC-SL-C Relay](https://github.com/SeeedDocument/Grove-2-Channel_SPDT_Relay/raw/master/res/SRD_05VDC-SL-C.pdf)
-- **[PDF]** [Datasheet of S9013](https://github.com/SeeedDocument/Grove-2-Channel_SPDT_Relay/raw/master/res/Transistors_NPN_25V-500mA.pdf)
-- **[PDF]** [Datasheet of STM32](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/res/STM32F030F4P6.pdf)
+- **[Bin]** [Factory firmware](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/res/Grove-4-Channel-SPDT-Relay-Firmware.bin)
+- **[PDF]** [Datasheet of SRD 05VDC-SL-C Relay](https://files.seeedstudio.com/wiki/Grove-2-Channel_SPDT_Relay/res/SRD_05VDC-SL-C.pdf)
+- **[PDF]** [Datasheet of S9013](https://files.seeedstudio.com/wiki/Grove-2-Channel_SPDT_Relay/res/Transistors_NPN_25V-500mA.pdf)
+- **[PDF]** [Datasheet of STM32](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/res/STM32F030F4P6.pdf)
 
 
 ## Project

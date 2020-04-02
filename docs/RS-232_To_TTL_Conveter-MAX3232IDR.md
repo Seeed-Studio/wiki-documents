@@ -9,7 +9,7 @@ sku: 103990363
 tags:
 ---
 
-![](https://github.com/SeeedDocument/RS-232_To_TTL_Conveter-MAX3232IDR/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/RS-232_To_TTL_Conveter-MAX3232IDR/img/main.jpg)
 
 Most of the MCUs use TTL levels, and the computer serial port generally uses 232 levels. If we want the computer to communicate with the MCU, we need this **RS-232 To TTL Conveter (MAX3232IDR)**.
 
@@ -71,7 +71,7 @@ This module is based on Max3232, it supports multiple baud rate communication an
 
 ### Pin Out
 
-![](https://github.com/SeeedDocument/RS-232_To_TTL_Conveter-MAX3232IDR/raw/master/img/pinout.jpg)
+![](https://files.seeedstudio.com/wiki/RS-232_To_TTL_Conveter-MAX3232IDR/img/pinout.jpg)
 
 
 ## Getting Started
@@ -79,7 +79,7 @@ This module is based on Max3232, it supports multiple baud rate communication an
 This is a simple module that only needs to connect the corresponding interface to the corresponding device to transfer data using the serial port tool. You should note that when connecting a TTL device, the RX pin of the module needs to be connected to the TX pin of the device, and vice versa, the TX pin of the module needs to be connected to the RX pin of the device.
 
 
-![](https://github.com/SeeedDocument/RS-232_To_TTL_Conveter-MAX3232IDR/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/RS-232_To_TTL_Conveter-MAX3232IDR/img/connect.jpg)
 
 
 
@@ -93,9 +93,9 @@ This is a simple module that only needs to connect the corresponding interface t
 
 - **[Zip]** [RS-232 To TTL Conveter (MAX3232IDR) Eagle Files](https://github.com/SeeedDocument/RS-232_To_TTL_Conveter-MAX3232IDR/raw/master/res/RS232%20to%20TTL%20Converter%20(MAX3232IDR).zip)
 
-- **[PDF]** [MAX3232 Datasheet](https://github.com/SeeedDocument/RS-232_To_TTL_Conveter-MAX3232IDR/raw/master/res/Max3232.pdf)
+- **[PDF]** [MAX3232 Datasheet](https://files.seeedstudio.com/wiki/RS-232_To_TTL_Conveter-MAX3232IDR/res/Max3232.pdf)
 
-- **[PDF]** [PDF Format Wiki](https://github.com/SeeedDocument/RS-232_To_TTL_Conveter-MAX3232IDR/raw/master/res/RS-232_To_TTL_Conveter-MAX3232IDR.pdf)
+- **[PDF]** [PDF Format Wiki](https://files.seeedstudio.com/wiki/RS-232_To_TTL_Conveter-MAX3232IDR/res/RS-232_To_TTL_Conveter-MAX3232IDR.pdf)
 
 
 

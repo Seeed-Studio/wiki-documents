@@ -9,13 +9,13 @@ sku:  316010005
 tags: grove_i2c, io_5v, plat_duino, plat_linkit
 
 ---
-![](https://github.com/SeeedDocument/Grove-Servo/raw/master/img/Grove—Servo.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Servo/img/Grove—Servo.jpg)
 
 Grove - Servo is DC motor with gearing and feedback system. It is used in driving mechanism of robots. The module is a bonus product for Grove lovers. We regulated the three-wire servo into a Grove standard connector. You can plug and play it as a typical Grove module now, without jumper wires clutter.
 
 But if you feel more like a proto servo, check out EMAX 9g ES08A High Sensitive Mini Servo. They are the same model, both of good quality and burden-free price.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Servo-p-1241.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Servo-p-1241.html)
 
 Feature
 ---
@@ -111,7 +111,7 @@ The Servo has three wires: power, ground, and signal. The power wire is typicall
 - Let's sweep the shaft of a servo back and forth across 180 degrees by using [Adruino Servo Library](http://arduino.cc/en/Reference/Servo).
 - Open the code directly by the path: **File -> Examples ->Servo->Sweep**.
 
-  ![](https://github.com/SeeedDocument/Grove-Servo/raw/master/img/library%20example.jpg)
+  ![](https://files.seeedstudio.com/wiki/Grove-Servo/img/library%20example.jpg)
 
 ```
 /* Sweep
@@ -168,7 +168,7 @@ void loop() {
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
-![servo](https://github.com/SeeedDocument/Grove-Servo/raw/master/img/Servo.png)
+![servo](https://files.seeedstudio.com/wiki/Grove-Servo/img/Servo.png)
 
 Upload the program to your Arduino/Seeeduino.
 
@@ -184,7 +184,7 @@ Upload the program to your Arduino/Seeeduino.
 
 | Raspberry pi | Grove Base Hat for RasPi| Grove - Servo|
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Servo/raw/master/img/Grove%20Servo_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Servo/img/Grove%20Servo_s.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Servo-p-1241.html)|
 
 - **Step 2**. Plug the Grove Base Hat into Raspberry.
@@ -192,7 +192,7 @@ Upload the program to your Arduino/Seeeduino.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-Servo/raw/master/img/Servo_Hat.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Servo/img/Servo_Hat.jpg)
 
 !!! Note
     For step 3 you are able to connect the servo module to **any GPIO Port** but make sure you change the command with the corresponding port number.
@@ -320,7 +320,7 @@ You can quit this program by simply press ++ctrl+c++.
 
 - **[Document]** [Understanding RC Servos](http://www.rchelicopterfun.com/rc-servos.html)
 - **[Library]**[Arduino Tutorial - Servo Library](https://www.arduino.cc/en/Reference/Servo)
-- **[Library]** [CodeCraft Code](https://github.com/SeeedDocument/Grove-Servo/raw/master/res/Servo.zip)
+- **[Library]** [CodeCraft Code](https://files.seeedstudio.com/wiki/Grove-Servo/res/Servo.zip)
 - **[Demo]** [Digital/Analog Clock - Arduino + PaperCraft](http://www.instructables.com/id/DigitalAnalog-Clock-Arduino-PaperCraft/?ALLSTEPS)
 - **[Demo]** [Low Cost Hobby Servo XY Table](http://www.instructables.com/id/Low-Cost-Hobby-Servo-XY-Table/?ALLSTEPS)
 

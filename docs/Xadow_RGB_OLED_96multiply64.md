@@ -7,11 +7,11 @@ prodimagename: RGB_OLED_MainPicture.jpg
 surveyurl: https://www.research.net/r/Xadow_RGB_OLED_96multiply64
 sku: 104040001
 ---
-![](https://github.com/SeeedDocument/Xadow_RGB_OLED_96multiply64/raw/master/img/RGB_OLED_MainPicture.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_RGB_OLED_96multiply64/img/RGB_OLED_MainPicture.jpg)
 
 RBG OLED is a 16 bit 96*64 dot matrix OLED display module with RGB color. It is based on SSD1331 module which is a single chip CMOS OLED/PLED driver with 288 segments and 64 common output, supporting up to 96 RGB * 64 dot matrix display. It use SPI for communication.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-RGB-OLED-96x64-p-2125.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-RGB-OLED-96x64-p-2125.html)
 
 
 ##  Specifications
@@ -24,7 +24,7 @@ RBG OLED is a 16 bit 96*64 dot matrix OLED display module with RGB color. It is 
 
 ##  Pin Definition
 ---
-![](https://github.com/SeeedDocument/Xadow_RGB_OLED_96multiply64/raw/master/img/RGB_OLED_HardwareInterface.png)
+![](https://files.seeedstudio.com/wiki/Xadow_RGB_OLED_96multiply64/img/RGB_OLED_HardwareInterface.png)
 
 We only need CS, DC, MOSI, SCLK 4 pins for communication. and
 
@@ -45,7 +45,7 @@ RGB OLED can display all kinds of graphics and characters. We offered lots of ex
 
 **The hardware installation**
 
-![](https://github.com/SeeedDocument/Xadow_RGB_OLED_96multiply64/raw/master/img/RGB_OLED_Connection.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_RGB_OLED_96multiply64/img/RGB_OLED_Connection.jpg)
 
 Note: When connecting Xadow RGB OLED to Xadow Main Board, you should concern about the connection direction. The connection method is that the unfilled corner of one Xadow module need to connect to the right angle of another module(see four corners of each Xadow module).
 
@@ -98,8 +98,8 @@ void loop(){
 
 Select the correct port number and the board type should be Seeeduino Xadow, then upload the code, you can see four line with different color will be drew on the screen of RGB OLED just as follow.
 
-![](https://github.com/SeeedDocument/Xadow_RGB_OLED_96multiply64/raw/master/img/RGB_OLED_Line.jpg)
-![](https://github.com/SeeedDocument/Xadow_RGB_OLED_96multiply64/raw/master/img/RGB_OLED_Line.gif)
+![](https://files.seeedstudio.com/wiki/Xadow_RGB_OLED_96multiply64/img/RGB_OLED_Line.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_RGB_OLED_96multiply64/img/RGB_OLED_Line.gif)
 
 **Draw Circle**
 
@@ -157,7 +157,7 @@ void loop(){
 ```
 It is used to draw concentric circles with different color. Select the correct port number and the board type should be Seeeduino Xadow, then upload the code, you can see many circles with different colors will be drew on the screen of RGB OLED just as follow.
 
-![](https://github.com/SeeedDocument/Xadow_RGB_OLED_96multiply64/raw/master/img/RGB_OLED_Circle.gif)
+![](https://files.seeedstudio.com/wiki/Xadow_RGB_OLED_96multiply64/img/RGB_OLED_Circle.gif)
 
 **Draw Rectangle**
 
@@ -209,7 +209,7 @@ void loop(){
 ```
 Select the correct port number and the board type should be Seeeduino Xadow, then upload the code, you can see many rectangle will be drew on the screen of RGB OLED just as follow.
 
-![](https://github.com/SeeedDocument/Xadow_RGB_OLED_96multiply64/raw/master/img/RGB_OLED_Rectangle.gif)
+![](https://files.seeedstudio.com/wiki/Xadow_RGB_OLED_96multiply64/img/RGB_OLED_Rectangle.gif)
 
 **Draw Triangle**
 
@@ -262,7 +262,7 @@ void loop(){
 ```
 Upload the code, you can see triangles with random location and shape will be drew on the screen of RGB OLED just as follow.
 
-![](https://github.com/SeeedDocument/Xadow_RGB_OLED_96multiply64/raw/master/img/RGB_OLED_Triangle.gif)
+![](https://files.seeedstudio.com/wiki/Xadow_RGB_OLED_96multiply64/img/RGB_OLED_Triangle.gif)
 
 **Draw String**
 
@@ -310,7 +310,7 @@ void loop(){
 ```
 Upload the code, you can see the string "seeed" will be drew on the screen of RGB OLED just as follow.
 
-![](https://github.com/SeeedDocument/Xadow_RGB_OLED_96multiply64/raw/master/img/RGB_OLED_String.gif)
+![](https://files.seeedstudio.com/wiki/Xadow_RGB_OLED_96multiply64/img/RGB_OLED_String.gif)
 
 **Draw BitMap**
 
@@ -408,7 +408,7 @@ void loop(){
 ```
 Upload the code, you can see Seeed's logo with yellow color will be drew on the screen of RGB OLED just as follow.
 
-![](https://github.com/SeeedDocument/Xadow_RGB_OLED_96multiply64/raw/master/img/RGB_OLED_BitMap.gif)
+![](https://files.seeedstudio.com/wiki/Xadow_RGB_OLED_96multiply64/img/RGB_OLED_BitMap.gif)
 
 
 ## Schematic Online Viewer
@@ -419,7 +419,7 @@ Upload the code, you can see Seeed's logo with yellow color will be drew on the 
 
 ##  Resources
 ---
-- [Xadow RGB OLED Eagle File](https://github.com/SeeedDocument/Xadow_RGB_OLED_96multiply64/raw/master/res/Xadow_OLED.zip)
+- [Xadow RGB OLED Eagle File](https://files.seeedstudio.com/wiki/Xadow_RGB_OLED_96multiply64/res/Xadow_OLED.zip)
 
 - [Xadow RGB OLED Library](https://github.com/Seeed-Studio/RGB_OLED_SSD1331)
 

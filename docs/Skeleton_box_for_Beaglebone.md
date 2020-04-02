@@ -7,11 +7,11 @@ prodimagename:  Skeleton_box_for_Beaglebone_01.bmp
 surveyurl: https://www.research.net/r/Skeleton_box_for_Beaglebone
 sku:   111070001
 ---
-![](https://github.com/SeeedDocument/Skeleton_box_for_Beaglebone/raw/master/img/Skeleton_box_for_Beaglebone_01.bmp)
+![](https://files.seeedstudio.com/wiki/Skeleton_box_for_Beaglebone/img/Skeleton_box_for_Beaglebone_01.bmp)
 
 This enclosure is constructed from military grade aluminum and hardwearing acrylic, Providing the ultimate protection from physical and corrosion! The skeleton box allows clearance for any standard Arduino, and the enclosures are stackable in all three dimensions, allowing for limitless expansion possibilities. The skeleton is easy to use, and provides the best protection for your Arduino that money can buy! And this is a simply case, specially designed for Beaglebone.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Skeleton-Box-For-Beaglebone-p-1952.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Skeleton-Box-For-Beaglebone-p-1952.html)
 
 ##  Feature
 ---
@@ -25,19 +25,19 @@ This enclosure is constructed from military grade aluminum and hardwearing acryl
 ---
 Assembly diagram is as follows:
 
-![](https://github.com/SeeedDocument/Skeleton_box_for_Beaglebone/raw/master/img/Skeleton_box_for_Beaglebone_12.bmp)
+![](https://files.seeedstudio.com/wiki/Skeleton_box_for_Beaglebone/img/Skeleton_box_for_Beaglebone_12.bmp)
 
 * * *
 
-![](https://github.com/SeeedDocument/Skeleton_box_for_Beaglebone/raw/master/img/Skeleton_box_for_Beaglebone_13.bmp)
+![](https://files.seeedstudio.com/wiki/Skeleton_box_for_Beaglebone/img/Skeleton_box_for_Beaglebone_13.bmp)
 
 * * *
 
-![](https://github.com/SeeedDocument/Skeleton_box_for_Beaglebone/raw/master/img/Skeleton_box_for_Beaglebone_14.bmp)
+![](https://files.seeedstudio.com/wiki/Skeleton_box_for_Beaglebone/img/Skeleton_box_for_Beaglebone_14.bmp)
 
 * * *
 
-![](https://github.com/SeeedDocument/Skeleton_box_for_Beaglebone/raw/master/img/Skeleton_box_for_Beaglebone_15.bmp)
+![](https://files.seeedstudio.com/wiki/Skeleton_box_for_Beaglebone/img/Skeleton_box_for_Beaglebone_15.bmp)
 
 <table  cellspacing="0" width="80%">
 <tr>

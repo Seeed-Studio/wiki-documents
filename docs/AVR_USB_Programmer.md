@@ -7,9 +7,9 @@ prodimagename:  jyeprogrammer.jpg
 surveyurl: https://www.research.net/r/AVR_USB_Programmer
 sku:    105990001
 ---
-![](https://github.com/SeeedDocument/AVR_USB_Programmer/raw/master/img/jyeprogrammer.jpg)
+![](https://files.seeedstudio.com/wiki/AVR_USB_Programmer/img/jyeprogrammer.jpg)
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/AVR-USB-Programmer-p-696.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/AVR-USB-Programmer-p-696.html)
 
 ##   Features
 

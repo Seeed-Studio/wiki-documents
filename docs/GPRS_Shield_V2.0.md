@@ -8,11 +8,11 @@ surveyurl: https://www.research.net/r/GPRS_Shield_V2
 sku:  113030000
 ---
 
-![](https://github.com/SeeedDocument/GPRS_Shield_V2.0/raw/master/img/GRPS_SLD.jpg)
+![](https://files.seeedstudio.com/wiki/GPRS_Shield_V2.0/img/GRPS_SLD.jpg)
 
 Hook your Arduino up to GSM/GPRS cell phone network with GPRS shield! You can use your Arduino/Seeeduino or other main boards to dial a phone number or send a text to your friend via easy to use AT commands now. This new version features a quad-band low power consumption GSM/GPRS module SIM900 as well as a compact PCB antenna. Meanwhile, improvements on interfaces and basic circuit have been taken to make it more concise and reliable. And there’re two choices for you to communicate GPRS shield with the main board -- UART or [SoftwareSerial](http://arduino.cc/en/Reference/SoftwareSerial).
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/GPRS-Shield-V2.0-p-1379.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/GPRS-Shield-V2.0-p-1379.html)
 
 ##  Version
 ---
@@ -35,12 +35,12 @@ Hook your Arduino up to GSM/GPRS cell phone network with GPRS shield! You can us
 - Power Circuitry Change
 
     - Replace the original LDO circuitry with DC-DC circuitry. Heat dissipation gets lower and efficiency gets higher up to 80%+. Meanwhile, the EXT_PWR jack on V1.0 was removed. V2.0 can draw current directly from Arduino now without additional 5V adapter.
-  ![](https://github.com/SeeedDocument/GPRS_Shield_V2.0/raw/master/img/GPRS_Power_circuit.jpg)
+  ![](https://files.seeedstudio.com/wiki/GPRS_Shield_V2.0/img/GPRS_Power_circuit.jpg)
 
 - Soft Start Circuitry
 
     -  Soft start circuitry is added in the new version to smooth out the power shock at the moment the shield turns on, preventing the shield from unexpected reset issue.
-  ![](https://github.com/SeeedDocument/GPRS_Shield_V2.0/raw/master/img/Soft-start_circuit.jpg)
+  ![](https://files.seeedstudio.com/wiki/GPRS_Shield_V2.0/img/Soft-start_circuit.jpg)
 
 - Antenna Revision
 
@@ -67,20 +67,20 @@ Hook your Arduino up to GSM/GPRS cell phone network with GPRS shield! You can us
 
 ##  Hardware Overview
 ---
-![](https://github.com/SeeedDocument/GPRS_Shield_V2.0/raw/master/img/GPRS_Shild_V2_hardware_overview.jpg)
+![](https://files.seeedstudio.com/wiki/GPRS_Shield_V2.0/img/GPRS_Shild_V2_hardware_overview.jpg)
 
 *   The factory default setting for the GPRS Shield UART is 19200 bps 8-N-1. (Can be changed using AT commands).
 *   Serial port select
     * There’re two choices for you to communicate GPRS shield with the main board while plugging the two jumpers on to the SWserial or HWserial positions. If using SWserial, D7 and D8 will be used by SIM900 of GPRS Shield; if using HWserial, D0 (RX) and D1 (TX) will be used.
 
-    ![](https://github.com/SeeedDocument/GPRS_Shield_V2.0/raw/master/img/GPRS_serial_port.png)
+    ![](https://files.seeedstudio.com/wiki/GPRS_Shield_V2.0/img/GPRS_serial_port.png)
 
 * Power on/off by D9
     * Unsolder pad JP default. Solder it if you wanna use software to power on/off the GPRS shield. Set the D9 to a high level, it means the button is pressing. The pad of JP besides the ISP port.
 * Breakout of SIM900
     * Some pins of SIM900 are break out beside the ISP port, there're LINEIN_R, LINEIN_L, ADC, PWM1, PWM2, GPIO1~GPIO6, GND, FW_update (DISP_CLK, DISP_DATA, DISP_D/C, DISP_CS), RI, DCD, DSR, CTS, VDD_EXT, LDTR, LRTS. And those pins are pointed from SIM900 without any setting.
 
-  ![](https://github.com/SeeedDocument/GPRS_Shield_V2.0/raw/master/img/GPRS_Break.png)
+  ![](https://files.seeedstudio.com/wiki/GPRS_Shield_V2.0/img/GPRS_Break.png)
 
 * RTC battery holder
     * It can provide 3v volts to VRTC of SIM900 from CR1220 battery.
@@ -167,22 +167,22 @@ AT Commands are simple textual commands sent to the GPRS modem over its serial i
 
 *   **Insert an activated SIM card into SIM Card Holder** - 6 Pin Holder for SIM Cards. Both 1.8 volts and 3.0 volts SIM Cards are supported by SIM900 - voltage type of the SIM card  is automatically detected.
       * Insert the SIM Card into the holder
-![](https://github.com/SeeedDocument/GPRS_Shield_V2.0/raw/master/img/GPRS_SIM.JPG)
+![](https://files.seeedstudio.com/wiki/GPRS_Shield_V2.0/img/GPRS_SIM.JPG)
       * Lock the SIM Card Holder
-![](https://github.com/SeeedDocument/GPRS_Shield_V2.0/raw/master/img/GPRS_SIM2.JPG)
+![](https://files.seeedstudio.com/wiki/GPRS_Shield_V2.0/img/GPRS_SIM2.JPG)
 
 *   **Make sure the antenna pad buckled properly**
 
-  ![](https://github.com/SeeedDocument/GPRS_Shield_V2.0/raw/master/img/GPRSANT.JPG)
+  ![](https://files.seeedstudio.com/wiki/GPRS_Shield_V2.0/img/GPRSANT.JPG)
 
 *   **Communication port configuration**
 The GPRS shield can be controlled via hardware serial port or software serial port of Arduino. Here we use the software serial port as default. Choose it by inserting jumper caps as below.
-  ![](https://github.com/SeeedDocument/GPRS_Shield_V2.0/raw/master/img/GPRSserial.JPG)
+  ![](https://files.seeedstudio.com/wiki/GPRS_Shield_V2.0/img/GPRSserial.JPG)
 
 *   **Plug into Arduino** - The GPRS Shield, like any other well designed shield, is stackable.
 
 *   **Power up Arduino** - Power up Arduino by USB cable or DC Jack. The Power-on indicator LED should light up once connected.
-  ![](https://github.com/SeeedDocument/GPRS_Shield_V2.0/raw/master/img/GPRSshieldV2.png)
+  ![](https://files.seeedstudio.com/wiki/GPRS_Shield_V2.0/img/GPRSshieldV2.png)
 
 ####   Software
 Let's have a fun to control the GPRS shield with AT commands.
@@ -201,7 +201,7 @@ To do experiment with AT commands, you would require a way to power up and commu
 *   Connect the Arduino Duemilanove (or Seeeduino) to your computer by a USB cable.
 *   The ATmega328P microcontroller on Duemilanove board has only one UART which is used for communicating with the PC. What we need is an Arduino Sketch running inside the ATmega328P that would emulate a second serial port (UART) by using software serial on the digital pins D8 and D7. All the communication will go through the software serial port and the actual hardware serial port. By doing this, all the data coming from the computer (connected to the actual hardware UART) would be routed to the GPRS Shield (connected to software UART). Then we would be able to issue AT commands to control the GPRS Shield. The block diagram outlining this scheme is shown below.
 
-![](https://github.com/SeeedDocument/GPRS_Shield_V2.0/raw/master/img/GPRS_aurduino_uart.jpg)
+![](https://files.seeedstudio.com/wiki/GPRS_Shield_V2.0/img/GPRS_aurduino_uart.jpg)
 
 For developing such a program, we need to use the SoftwareSerial library. Here is the demo code.
 ```
@@ -248,7 +248,7 @@ void clearBufferArray()              // function to clear buffer array
 }
 ```
 *   Upload the sketch to the Arduino board.  If you do not know how to upload the code, please follow the [instruction](http://wiki.seeed.cc/Upload_Code/).
-*   Download and fire up [serial tool](https://github.com/SeeedDocument/GPRS_Shield_V2.0/raw/master/res/Sscom32E.zip) if you don't have one. Choose the correct COM port for Arduino, and set it to operate at **19200** 8-N-1 and then click "Open COM". You can also use AT Command Tester to send AT commands. Please click [here](http://wiki.seeed.cc/AT_Command_Tester_Application/) if you are interesting in it.
+*   Download and fire up [serial tool](https://files.seeedstudio.com/wiki/GPRS_Shield_V2.0/res/Sscom32E.zip) if you don't have one. Choose the correct COM port for Arduino, and set it to operate at **19200** 8-N-1 and then click "Open COM". You can also use AT Command Tester to send AT commands. Please click [here](http://wiki.seeed.cc/AT_Command_Tester_Application/) if you are interesting in it.
 *   Power up the SIM900 by pressing the power button in about 2 seconds. The red LED will be on. The green one beside it will blink. If the shield join the network sucessfully, the green LED will blink every 3 seconds.
 * You should find the message on the serial monitor as below which is sent by the SIM900 to inform you it has joined the network.
 
@@ -264,7 +264,7 @@ Call Ready
 ```
 If you can not see the messages in the serial monitor, you should click the "send new" option that will add carriage return at the end of AT command and then send AT command "AT+IPR=19200" to set the baud rate of the SIM900.
 
-![](https://github.com/SeeedDocument/GPRS_Shield_V2.0/raw/master/img/GPRS_set_baud_rate.jpg)
+![](https://files.seeedstudio.com/wiki/GPRS_Shield_V2.0/img/GPRS_set_baud_rate.jpg)
 
 
 
@@ -279,7 +279,7 @@ Now that our test setup is ready, let's play around with some AT Commands manual
 
 *   Start to type your message, after finishing the typing, click "send hex" option and then send a hex: **1A**. The modem will accept the message and respond with an **OK**. A few moments later, the message should be received on the handset whose number you had specified. I sent "How are you ?". You can check the history by clicking "EXT". The commands history is listed below "Set Multi Char".
 
-![](https://github.com/SeeedDocument/GPRS_Shield_V2.0/raw/master/img/Send_a_text_message.jpg)
+![](https://files.seeedstudio.com/wiki/GPRS_Shield_V2.0/img/Send_a_text_message.jpg)
 
 !!!note:
     If, in spite of following the steps as specified above, you're unable to receive the message on the target handset, you might need to set the SMS Message Center number. Send the following command between the AT+CMGF and AT+CMGS commands:AT+CSCA="+18888888888". Replace the phone number specified with the SMS Center number of your GSM Service Provider. The message center number is specific to each service provider. You can get the message center number by calling up the customer care center of the GSM Service Provider and asking them for it.
@@ -294,7 +294,7 @@ Now that you have gotten a taste of how the AT Commands work, you can try out ot
 
 This involves to create a sketch for sending out these same sequence of AT Commands (on your behalf) out the serial port to the GPRS Shield to perform the same task of sending and SMS, making a call or sending data over a GPRS connection.
 
-You can go through the [AT Commands reference manual](https://github.com/SeeedDocument/GPRS_Shield_V2.0/raw/master/res/AT_Commands_v1.11.pdf) to figure out the sequence of commands. If you develop an Arduino sketch, you find that the GPRS Shield doesn't act as what you expect, then you will need to check your AT Commands and their sequence. To do this, reload the serial relay sketch attached above in the getting started section into ATmega328P and type out the AT Commands manually and check the output. The responses sent back by the GPRS Shield will help you debug the AT Command sequence.
+You can go through the [AT Commands reference manual](https://files.seeedstudio.com/wiki/GPRS_Shield_V2.0/res/AT_Commands_v1.11.pdf) to figure out the sequence of commands. If you develop an Arduino sketch, you find that the GPRS Shield doesn't act as what you expect, then you will need to check your AT Commands and their sequence. To do this, reload the serial relay sketch attached above in the getting started section into ATmega328P and type out the AT Commands manually and check the output. The responses sent back by the GPRS Shield will help you debug the AT Command sequence.
 
 !!!note:
     A C program to perform the same task has also been developed and attached: [Softuart relay atmega328p.zip](https://github.com/SeeedDocument/GPRS_Shield_v1.0/raw/master/res/Softuart_relay_atmega328p.zip "File:Softuart relay atmega328p.zip").
@@ -427,19 +427,19 @@ Here is the GPRS Shield FAQ that list the frequently asked questions, please rea
 
 ##  Related Projects
 ---
-![](https://github.com/SeeedDocument/GPRS_Shield_v1.0/raw/master/img/Recipe-arduinophone.png)
+![](https://files.seeedstudio.com/wiki/GPRS_Shield_v1.0/img/Recipe-arduinophone.png)
 
 This is a demo made by GPRS Shield V2.0.
 
 With this demo, we make a mobile phone named Arduino Phone by  Arduino, GPRS Shield shield and other modules.
 
-[![](https://github.com/SeeedDocument/GPRS_Shield_v1.0/raw/master/img/Wiki_makeitnow_logo.png)](http://www.instructables.com/id/ArduinoPhone/)
+[![](https://files.seeedstudio.com/wiki/GPRS_Shield_v1.0/img/Wiki_makeitnow_logo.png)](http://www.instructables.com/id/ArduinoPhone/)
 
-![](https://github.com/SeeedDocument/GPRS_Shield_V2.0/raw/master/img/GPRS_gas.jpg)
+![](https://files.seeedstudio.com/wiki/GPRS_Shield_V2.0/img/GPRS_gas.jpg)
 This is a demo made by GPRS Shield V2.0.
 
 With this demo,  we can receive SMS When Gas Leakage at Home.
-[![](https://github.com/SeeedDocument/GPRS_Shield_v1.0/raw/master/img/Wiki_makeitnow_logo.png)](https://community.seeedstudio.com/project_detail.html?id=242)
+[![](https://files.seeedstudio.com/wiki/GPRS_Shield_v1.0/img/Wiki_makeitnow_logo.png)](https://community.seeedstudio.com/project_detail.html?id=242)
 
 
 
@@ -451,12 +451,12 @@ With this demo,  we can receive SMS When Gas Leakage at Home.
 
 ##  Resources
 
-- **[Eagle]** [GPRS Shield v2.0 Schematic and PCB in eagle format](https://github.com/SeeedDocument/GPRS_Shield_V2.0/raw/master/res/GPRS_Shield_eagle_file.zip)
-- **[PDF]** [GPRS Shield v2.0 Schematic in PDF format](https://github.com/SeeedDocument/GPRS_Shield_V2.0/raw/master/res/GPRS_Shield_V2_Schematic.pdf)
-- **[PDF]** [GPRS Shield v2.0 PCB in PDF format](https://github.com/SeeedDocument/GPRS_Shield_V2.0/raw/master/res/GPRSshield%20V2%20PCB.pdf)
+- **[Eagle]** [GPRS Shield v2.0 Schematic and PCB in eagle format](https://files.seeedstudio.com/wiki/GPRS_Shield_V2.0/res/GPRS_Shield_eagle_file.zip)
+- **[PDF]** [GPRS Shield v2.0 Schematic in PDF format](https://files.seeedstudio.com/wiki/GPRS_Shield_V2.0/res/GPRS_Shield_V2_Schematic.pdf)
+- **[PDF]** [GPRS Shield v2.0 PCB in PDF format](https://files.seeedstudio.com/wiki/GPRS_Shield_V2.0/res/GPRSshield%20V2%20PCB.pdf)
 - **[Library]** [GPRS_Shield library on gitHub - based on Suli](https://github.com/Seeed-Studio/GPRS_Shield_Suli)
 - **[Library]** [GPRS_SIM900 library on gitHub - Non Suli ](https://github.com/Seeed-Studio/GPRS_SIM900)
-- **[Document]** [AT Commands v1.11](https://github.com/SeeedDocument/GPRS_Shield_V2.0/raw/master/res/AT_Commands_v1.11.pdf)
+- **[Document]** [AT Commands v1.11](https://files.seeedstudio.com/wiki/GPRS_Shield_V2.0/res/AT_Commands_v1.11.pdf)
 - **[Document]** [SIM900 Hardware Design](http://wiki.seeedstudio.com/images/e/e3/SIM900_HD_V1.05.pdf)
 - **[Datasheet]** [Si5902BDC](http://www.vishay.com/docs/70415/si5902bd.pdf)
 - **[Datasheet]** [SIM900 Datasheeet](http://www.seeedstudio.com/document/SIM900datasheeet.zip)

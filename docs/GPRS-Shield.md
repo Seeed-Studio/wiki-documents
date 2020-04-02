@@ -24,7 +24,7 @@ The GPRS Shield provides you a way to use the GSM cell phone network to receive 
 
 There are two versions for you to choose:
 
-|![](https://github.com/SeeedDocument/GPRS-Shield/raw/master/img/GPRS_shield_v1.4.jpg)|![](https://github.com/SeeedDocument/GPRS-Shield/raw/master/img/GPRSshield_01.jpg)|
+|![](https://files.seeedstudio.com/wiki/GPRS-Shield/img/GPRS_shield_v1.4.jpg)|![](https://files.seeedstudio.com/wiki/GPRS-Shield/img/GPRSshield_01.jpg)|
 |---|---|
 |GPRS Shield V1.0|GPRS Shield V2.0|
 

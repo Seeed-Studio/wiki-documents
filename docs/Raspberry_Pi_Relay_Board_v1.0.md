@@ -205,7 +205,7 @@ Mounting the board is easy, it comes with the appropriate female headers you nee
 
 We recommend you putting some electrical tape on top of the Raspberry Pi Ethernet port before mounting the board. If you mount the board without using standoffs (as I’ve done in the example figure below), there’s a chance the board will make contact with the Ethernet port housing and cause a problem.
 
-![](https://github.com/SeeedDocument/Raspberry_Pi_Relay_Board_v1.0/raw/master/img2/seed-figure-01.png)
+![](https://files.seeedstudio.com/wiki/Raspberry_Pi_Relay_Board_v1.0/img2/seed-figure-01.png)
 **Figure 1**
 
 For a production project, We’d definitely recommend using standoffs to hold the two boards in place.
@@ -216,12 +216,12 @@ The relay board is configured for an older Raspberry Pi with a 26 pin header, so
 ### Enabling I2C
 The relay board communicates with the Raspberry Pi through an I2C interface [https://en.wikipedia.org/wiki/I%C2%B2C](https://en.wikipedia.org/wiki/I%C2%B2C). This interface is disabled by default in the Pi’s Raspbian OS, so you’ll have to turn it on before you can use the board. Power up the Pi and let it boot to the graphical interface. When it’s up and running, open the Pi menu, select Preferences, then Raspberry Pi Configuration as shown in the following figure:
 
-![](https://github.com/SeeedDocument/Raspberry_Pi_Relay_Board_v1.0/raw/master/img2/seed-figure-02.png)
+![](https://files.seeedstudio.com/wiki/Raspberry_Pi_Relay_Board_v1.0/img2/seed-figure-02.png)
 **Figure 2**
 
 In the window that opens, select the Interfaces tab as shown in the following figure. Enable the option next to I2C as shown in the figure and click the OK button to continue. When you reboot the PC, the Pi should see the relay board. In the next section, we’ll verify that the Pi sees the relay board.
 
-![](https://github.com/SeeedDocument/Raspberry_Pi_Relay_Board_v1.0/raw/master/img2/seed-figure-03.png)
+![](https://files.seeedstudio.com/wiki/Raspberry_Pi_Relay_Board_v1.0/img2/seed-figure-03.png)
 **Figure 3**
 
 ### Validating the Raspberry Pi Sees the Relay Board
@@ -232,7 +232,7 @@ i2cdetect -y -r 1
 ```
 The application will display a dump of the recognized I2C devices as shown in the following figure. In this example, there’s only one I2C board on the system, the relay board configured at an address of 20. You’ll see how this value is important later in this article.
 
-![](https://github.com/SeeedDocument/Raspberry_Pi_Relay_Board_v1.0/raw/master/img2/seed-figure-04.png)
+![](https://files.seeedstudio.com/wiki/Raspberry_Pi_Relay_Board_v1.0/img2/seed-figure-04.png)
 **Figure 4**
 
 You’re supposed to be able to use switches on the relay board to set the I2C address, there are 4 DIP switches on the board, let’s see what happens when you change them.
@@ -257,7 +257,7 @@ To run the test application, open a terminal window, navigate to where you’ve 
 ```
 python ./seeed_relay_test.py
 ```
-![](https://github.com/SeeedDocument/Raspberry_Pi_Relay_Board_v1.0/raw/master/img2/seed-figure-05.png)
+![](https://files.seeedstudio.com/wiki/Raspberry_Pi_Relay_Board_v1.0/img2/seed-figure-05.png)
 **Figure 4**
 
 When prompted for input, you’ll type commands to turn the relays on and off:
@@ -299,7 +299,7 @@ The application will:
 
 The module will write indicators to the console as it performs each step as shown in the following figure:
 
-![](https://github.com/SeeedDocument/Raspberry_Pi_Relay_Board_v1.0/raw/master/img2/seed-figure-06.png)
+![](https://files.seeedstudio.com/wiki/Raspberry_Pi_Relay_Board_v1.0/img2/seed-figure-06.png)
 **Figure 6**
 
 LEDs on the relay board (one for each relay) will illuminate when the relays come one. On my board, they weren't in sequence, so don't expect them to light in order.
@@ -336,7 +336,7 @@ That’s it, that’s all there is to it. Enjoy.
 Resources
 ---------
 - [Raspberry_Pi_Relay_Board_v1.0_sch_pcb](https://raw.githubusercontent.com/SeeedDocument/Raspberry_Pi_Relay_Board_v1.0/master/res/Raspberry_Pi_Relay_Board_v1.0_sch_pcb.zip)
-- [Raspberry_Pi_Relay_Board_v1.0_PDF](https://github.com/SeeedDocument/Raspberry_Pi_Relay_Board_v1.0/raw/master/res/Raspberry%20Pi%20Relay%20Board%20v1.0.pdf)
+- [Raspberry_Pi_Relay_Board_v1.0_PDF](https://files.seeedstudio.com/wiki/Raspberry_Pi_Relay_Board_v1.0/res/Raspberry%20Pi%20Relay%20Board%20v1.0.pdf)
 - [HLS8L Datasheet](https://raw.githubusercontent.com/SeeedDocument/Raspberry_Pi_Relay_Board_v1.0/master/res/HLS8L.pdf)
 - [PCAL9535A Datasheet](https://raw.githubusercontent.com/SeeedDocument/Raspberry_Pi_Relay_Board_v1.0/master/res/PCAL9535A.pdf)
 -  [Python Test Code](https://github.com/johnwargo/Seed-Studio-Relay-Board)

@@ -9,7 +9,7 @@ sku: 108020102
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-16-Channel_PWM_Driver-PCA9685/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-16-Channel_PWM_Driver-PCA9685/img/main.jpg)
 
 The  Grove - 16-Channel PWM Driver is based on NXP PCA9685, which is a 16-Channel, 12 bit I2C PWM driver. This board can drive up to 16 servos with the external power supply. You can control this board with Arduino easily via the I2C Grove interface. In addition, you can use this board as a LED controller.
 
@@ -60,7 +60,7 @@ The  Grove - 16-Channel PWM Driver is based on NXP PCA9685, which is a 16-Channe
 
 ### Pin Out
 
-![](https://github.com/SeeedDocument/Grove-16-Channel_PWM_Driver-PCA9685/raw/master/img/pin-out/pin_out.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-16-Channel_PWM_Driver-PCA9685/img/pin-out/pin_out.jpg)
 
 !!!Warning
     Hot swap is not supported, you may want to disconnect arduino from the power source before any replacement or change.
@@ -76,20 +76,20 @@ This board uses the I2C interface to allow the on-board MCU to communicate with 
 >SDA: I2C serial data  
 >SCL: I2C serial clock
 
-![](https://github.com/SeeedDocument/Grove-16-Channel_PWM_Driver-PCA9685/raw/master/img/pin-out/pin-out-1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-16-Channel_PWM_Driver-PCA9685/img/pin-out/pin-out-1.jpg)
 
 ___
 **Power In**
 
 Provide 5V DC power for the servo.
 
-![](https://github.com/SeeedDocument/Grove-16-Channel_PWM_Driver-PCA9685/raw/master/img/pin-out/pin-out-2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-16-Channel_PWM_Driver-PCA9685/img/pin-out/pin-out-2.jpg)
 
 ___
 **PWM Out**
 
 There are 16 groups of Pins(1 - 16) on this board, each group of pins contains one PWM signal pin, one 5V power supply pin and one pin for ground. 
-![](https://github.com/SeeedDocument/Grove-16-Channel_PWM_Driver-PCA9685/raw/master/img/pin-out/pin-out-0.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-16-Channel_PWM_Driver-PCA9685/img/pin-out/pin-out-0.jpg)
 
 
 ---
@@ -99,12 +99,12 @@ There are 16 groups of Pins(1 - 16) on this board, each group of pins contains o
 
 The 6 selectable pads on the back of this board, all have 64 optional I2C addresses.
 
-[![](https://github.com/SeeedDocument/Grove-16-Channel_PWM_Driver-PCA9685/raw/master/img/i2c_ad.jpg)](https://raw.githubusercontent.com/SeeedDocument/Grove-16-Channel_PWM_Driver-PCA9685/master/img/i2c_ad.jpg)
+[![](https://files.seeedstudio.com/wiki/Grove-16-Channel_PWM_Driver-PCA9685/img/i2c_ad.jpg)](https://raw.githubusercontent.com/SeeedDocument/Grove-16-Channel_PWM_Driver-PCA9685/master/img/i2c_ad.jpg)
 
 
 As shown in the figure above, all address pads are connected to the high level by default. The address rules are as shown below:
 
-![](https://github.com/SeeedDocument/Grove-16-Channel_PWM_Driver-PCA9685/raw/master/img/i2c_ad_1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-16-Channel_PWM_Driver-PCA9685/img/i2c_ad_1.jpg)
 
 
 The address consists of 7 bits and the highest bit is fixed at 1. When we are converting the address to a hexadecimal number, we need to add a 0 to the left of the highest bit.
@@ -138,7 +138,7 @@ And if we connect all the address pads to the ground, it turns to be **100 0000*
 
 | Seeeduino V4.2 | Base Shield| Grove - 16-Channel PWM Driver| LED|
 |--------------|-------------|-----------------|---------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-16-Channel_PWM_Driver-PCA9685/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-16-Channel_PWM_Driver-PCA9685/raw/master/img/red_led.jpg)
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-16-Channel_PWM_Driver-PCA9685/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-16-Channel_PWM_Driver-PCA9685/img/red_led.jpg)
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-16-Channel-PWM-Driver-PCA968-p-3221.html)|[Get ONE Now](https://www.seeedstudio.com/3mm-LED-Red-25-PCs-p-1588.html)
 
 !!!note
@@ -157,7 +157,7 @@ And if we connect all the address pads to the ground, it turns to be **100 0000*
 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-16-Channel_PWM_Driver-PCA9685/raw/master/img/connect1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-16-Channel_PWM_Driver-PCA9685/img/connect1.jpg)
 
 
 !!!Note
@@ -165,7 +165,7 @@ And if we connect all the address pads to the ground, it turns to be **100 0000*
 
 If you want to use servo, you can connect as shown below:
 
-![](https://github.com/SeeedDocument/Grove-16-Channel_PWM_Driver-PCA9685/raw/master/img/connect2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-16-Channel_PWM_Driver-PCA9685/img/connect2.jpg)
 
 
 #### Software
@@ -181,12 +181,12 @@ If you want to use servo, you can connect as shown below:
 
 - **Step 3.** Restart the Arduino IDE. Open the example, you can open it in the following three ways：
     1. Open it directly in the Arduino IDE via the path: **File --> Examples -->Seeed_PCA9685 --> led**. 
-    ![](https://github.com/SeeedDocument/Grove-16-Channel_PWM_Driver-PCA9685/raw/master/img/ard1.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-16-Channel_PWM_Driver-PCA9685/img/ard1.jpg)
     
     2. Open it in your computer by click the **basic_demo.ino** which you can find in the folder **XXXX\Arduino\libraries\Seeed_PCA9685\examples\led\led.ino**, **XXXX** is the location you installed the Arduino IDE.
-    ![](https://github.com/SeeedDocument/Grove-16-Channel_PWM_Driver-PCA9685/raw/master/img/ard2.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-16-Channel_PWM_Driver-PCA9685/img/ard2.jpg)
     
-    3. Or, you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+    3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 
 ```C++
@@ -238,7 +238,7 @@ void loop()
 
 - **[Zip]** [Seeed_PCA9685 Software Library](https://github.com/Seeed-Studio/Seeed_PCA9685/archive/master.zip)
 
-- **[PDF]** [Datasheet PCA9685](https://github.com/SeeedDocument/Grove-16-Channel_PWM_Driver-PCA9685/raw/master/res/PCA9685.pdf)
+- **[PDF]** [Datasheet PCA9685](https://files.seeedstudio.com/wiki/Grove-16-Channel_PWM_Driver-PCA9685/res/PCA9685.pdf)
 
 
 

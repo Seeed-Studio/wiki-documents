@@ -22,7 +22,7 @@ This demo will show you how to use joystick, and we need a Rgb Led else, when jo
 
 Joystick connect to A0, A1, RGB LED connect to D3, D9 and D10.
 
-![](https://github.com/SeeedDocument/Joystick_Control_RGB_Led/raw/master/img/Sidekick_38_1.png)
+![](https://files.seeedstudio.com/wiki/Joystick_Control_RGB_Led/img/Sidekick_38_1.png)
 
 **Code:**
 

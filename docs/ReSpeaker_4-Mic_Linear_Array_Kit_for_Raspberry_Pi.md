@@ -8,7 +8,7 @@ surveyurl:
 sku: 107990056
 ---
 
-![enter image description here](https://github.com/SeeedDocument/ReSpeaker_4-Mics_Linear_Array_Kit/raw/master/img/main_wiki.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/ReSpeaker_4-Mics_Linear_Array_Kit/img/main_wiki.jpg)
 
 
 Seeed’s ReSpeaker 4-Mic Linear Array Kit is
@@ -89,7 +89,7 @@ channel are dummy.
 
 **Interface**
 
-![](https://github.com/SeeedDocument/ReSpeaker_4-Mics_Linear_Array_Kit/raw/master/img/Hardware.jpg)
+![](https://files.seeedstudio.com/wiki/ReSpeaker_4-Mics_Linear_Array_Kit/img/Hardware.jpg)
 
 !!!Note
     
@@ -98,7 +98,7 @@ channel are dummy.
     
 ## Assembly drawing  
 
-![](https://github.com/SeeedDocument/Bazaar_file/raw/master/107990055/img/ab.png)
+![](https://files.seeedstudio.com/wiki/Bazaar_file/107990055/img/ab.png)
 
 
 ## Getting Started
@@ -135,7 +135,7 @@ Earphone or Speaker                 x1
 **Step 4.**  Connect the *Raspberry Pi* with the *PC* via the micro-USB cable
 
 
-![Pics here](https://github.com/SeeedDocument/ReSpeaker_4-Mics_Linear_Array_Kit/raw/master/img/4-mic.jpg)
+![Pics here](https://files.seeedstudio.com/wiki/ReSpeaker_4-Mics_Linear_Array_Kit/img/4-mic.jpg)
 
 
 ### Software
@@ -156,7 +156,7 @@ You need to use *Putty* or other *ssh* tools to connect with your raspberry pi. 
 
 4- Use the ip address to connect the raspberry pi with your PC via putty ssh serve.
 
-![pic](https://github.com/SeeedDocument/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/raw/master/img/putty.png)
+![pic](https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/img/putty.png)
 
 Then please tap the host name and the password. the default ID is `pi` and the password is `raspberry`.
 
@@ -340,7 +340,7 @@ $ audacity                      // run audacity
 ```
 
 
-![](https://github.com/SeeedDocument/ReSpeaker_4-Mics_Linear_Array_Kit/raw/master/img/audacity.png)
+![](https://files.seeedstudio.com/wiki/ReSpeaker_4-Mics_Linear_Array_Kit/img/audacity.png)
 
 
 
@@ -384,7 +384,7 @@ pi@raspberrypi:~ $ source ~/env/bin/activate
 (env) pi@raspberrypi:~ $ alexa-auth
 ```
 
-![](https://github.com/SeeedDocument/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/raw/master/img/auth.png)
+![](https://files.seeedstudio.com/wiki/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/img/auth.png)
 
 
 
@@ -602,13 +602,13 @@ A2: Please click raspberry -> Preferences -> Raspberry Pi Configuration, then se
 
 ## Resources
 
-- **[PDF]** [AC101 Datasheet](https://github.com/SeeedDocument/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/raw/master/reg/AC101_User_Manual_v1.1.pdf)
-- **[PDF]** [AC108 Datesheet](https://github.com/SeeedDocument/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/raw/master/reg/AC108_Datasheet_V1.2.pdf)
+- **[PDF]** [AC101 Datasheet](https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/reg/AC101_User_Manual_v1.1.pdf)
+- **[PDF]** [AC108 Datesheet](https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/reg/AC108_Datasheet_V1.2.pdf)
 - **[Driver]** [Seeed-Voice Driver](https://github.com/respeaker/seeed-voicecard)
 - **[Algorithms]** [Algorithms includes DOA, VAD, NS](https://github.com/respeaker/mic_array)
 - **[Voice Engine** [Voice Engine project, provides building blocks to create voice enabled objects](https://github.com/voice-engine/voice-engine)
 - **[Algorithms]** [AEC](https://github.com/voice-engine/ec)
-- **[Mechanical Drawing]** [2D Drawing](https://github.com/SeeedDocument/ReSpeaker_4-Mics_Linear_Array_Kit/raw/master/res/2d.zip)
+- **[Mechanical Drawing]** [2D Drawing](https://files.seeedstudio.com/wiki/ReSpeaker_4-Mics_Linear_Array_Kit/res/2d.zip)
 
 ## Projects
 

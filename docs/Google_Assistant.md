@@ -10,7 +10,7 @@ sku:
 tags: 
 ---
 
-![](https://github.com/SeeedDocument/Google-Assitant/raw/master/img/Front.jpg)
+![](https://files.seeedstudio.com/wiki/Google-Assitant/img/Front.jpg)
 
 
 This wiki is for ReSpeaker Core v2.0, we recommend you to read the [Wiki of ReSpeaker Core v2.0](http://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#preparation) first.
@@ -49,12 +49,12 @@ Note!!!
 
 Click `Add/Import project`
 
-![](https://github.com/SeeedDocument/Google-Assitant/raw/master/img/Google_0.png)
+![](https://files.seeedstudio.com/wiki/Google-Assitant/img/Google_0.png)
 
 
 Then tap your `Project name` and pick the `Country/region`. Then click `CREATE PROJECT` to continue.
 
-![](https://github.com/SeeedDocument/Google-Assitant/raw/master/img/Google_1.png)
+![](https://files.seeedstudio.com/wiki/Google-Assitant/img/Google_1.png)
 
 
 - **Step 2.Register Model** 
@@ -62,37 +62,37 @@ Then tap your `Project name` and pick the `Country/region`. Then click `CREATE P
 
 Click `Connected properties ->DEVICE MODELS ->REGISTER MODEL` as the picture below.
 
-![](https://github.com/SeeedDocument/Google-Assitant/raw/master/img/Google_2.png)
+![](https://files.seeedstudio.com/wiki/Google-Assitant/img/Google_2.png)
 
 
 
 Fill in your product info. then click `REGISTER MODEL` to continue.
 
-![](https://github.com/SeeedDocument/Google-Assitant/raw/master/img/Google_3.png)
+![](https://files.seeedstudio.com/wiki/Google-Assitant/img/Google_3.png)
 
 
 
 Just click `NEXT`
 
-![](https://github.com/SeeedDocument/Google-Assitant/raw/master/img/Google_4.png)
+![](https://files.seeedstudio.com/wiki/Google-Assitant/img/Google_4.png)
 
 
 
 Please make sure you have selected this option `ALL 7 traits`, so that you can turn on all the permissiions. Then click `SAVE TRAITS`.
 
-![](https://github.com/SeeedDocument/Google-Assitant/raw/master/img/Google_5.png)
+![](https://files.seeedstudio.com/wiki/Google-Assitant/img/Google_5.png)
 
 
 
 Now please click the Project Name you have just created. For this demo, as you can see, we use `ReSpeaker Core v2.0`.
 
-![](https://github.com/SeeedDocument/Google-Assitant/raw/master/img/Google_6.png)
+![](https://files.seeedstudio.com/wiki/Google-Assitant/img/Google_6.png)
 
 
 
 You will see some info. as the following picture shown.
 
-![](https://github.com/SeeedDocument/Google-Assitant/raw/master/img/Google_7.png)
+![](https://files.seeedstudio.com/wiki/Google-Assitant/img/Google_7.png)
 
 
 Please mark down the `Model Id` which is `respeaker-xxxx-respeaker-core-v2.0-xxxxx` in this demo, it is important and you will use it later.
@@ -101,15 +101,15 @@ Please mark down the `Model Id` which is `respeaker-xxxx-respeaker-core-v2.0-xxx
 
 Now let's download the json file. Click the button in the upper right corner, then click `Download credentials.json` to download the json file into your computer.
 
-![](https://github.com/SeeedDocument/Google-Assitant/raw/master/img/Google_8.png)
+![](https://files.seeedstudio.com/wiki/Google-Assitant/img/Google_8.png)
 
 Then use the [WinCP](https://winscp.net/eng/docs/lang:chs) or other transmission tools to copy the json file to your ReSpeaker Core v2.0. 
 For example, we copy it to the path `/home/respeaker`.
 
 
 Next, please click the gear in the upper left conner, click `Project settings`, remember the `Project ID` which is `` in this demo.
-![](https://github.com/SeeedDocument/Google-Assitant/raw/master/img/Google_9.png)
-![](https://github.com/SeeedDocument/Google-Assitant/raw/master/img/Google_10.png)
+![](https://files.seeedstudio.com/wiki/Google-Assitant/img/Google_9.png)
+![](https://files.seeedstudio.com/wiki/Google-Assitant/img/Google_10.png)
 
 
 Ok, let's check again, in this section you will get two IDs. 
@@ -208,28 +208,28 @@ Note!!!
 
 Then you will get the code, please copy the code after the note `Please visit this URL to authorize this application:`.
 
-![](https://github.com/SeeedDocument/Google-Assitant/raw/master/img/code0.png)
+![](https://files.seeedstudio.com/wiki/Google-Assitant/img/code0.png)
 
 
 Paste the code into your Internet browser, then tap the `Enter` key.
 
-![](https://github.com/SeeedDocument/Google-Assitant/raw/master/img/code1.png)
+![](https://files.seeedstudio.com/wiki/Google-Assitant/img/code1.png)
 
 
 If everything goes well, the following window will pops up. Choose your Google account and select `ALLOW`
 
-![](https://github.com/SeeedDocument/Google-Assitant/raw/master/img/code2.png)
-![](https://github.com/SeeedDocument/Google-Assitant/raw/master/img/code3.png)
+![](https://files.seeedstudio.com/wiki/Google-Assitant/img/code2.png)
+![](https://files.seeedstudio.com/wiki/Google-Assitant/img/code3.png)
 
 
 Ok, then, you will get the authorize code as the following picture shown.
 
 
-![](https://github.com/SeeedDocument/Google-Assitant/raw/master/img/code4.png)
+![](https://files.seeedstudio.com/wiki/Google-Assitant/img/code4.png)
 
 
 Cope this code into your console
-![](https://github.com/SeeedDocument/Google-Assitant/raw/master/img/code5.png)
+![](https://files.seeedstudio.com/wiki/Google-Assitant/img/code5.png)
 
 
 Then you will see the notice `credentials saved: /path/to/.config/google-oauthlib-tool/credentials.json`. That means everything goes well so far.
@@ -271,4 +271,4 @@ googlesamples-assistant-respeakerd --project-id respeaker-440eb --device-model-i
 
 Now, cheers!!!
 
-![](https://github.com/SeeedDocument/Google-Assitant/raw/master/img/codel.png)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>
+![](https://files.seeedstudio.com/wiki/Google-Assitant/img/codel.png)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

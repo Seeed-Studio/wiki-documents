@@ -7,13 +7,13 @@ prodimagename:  WLG_h.jpg
 surveyurl: https://www.research.net/r/WireLess_Gate_Shield_V1
 sku:      113990088
 ---
-![](https://github.com/SeeedDocument/WireLess_Gate_Shield_V1.0/raw/master/img/WLG_h.jpg)
+![](https://files.seeedstudio.com/wiki/WireLess_Gate_Shield_V1.0/img/WLG_h.jpg)
 
 WireLess Gate Shield is an Arduino-compatible expansion card designed to build a system of receiving / transmitting and broadcasting various wireless commands and data. For maximum coverage possible wireless communication interfaces on the board has an IR receiver interface for connecting popular  transceiver nRF24L01 + and RFM69HW. Additionally, the board has a real time clock module DS1307.
 
-![](https://github.com/SeeedDocument/WireLess_Gate_Shield_V1.0/raw/master/img/WLG_intro.jpg)
+![](https://files.seeedstudio.com/wiki/WireLess_Gate_Shield_V1.0/img/WLG_intro.jpg)
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/WireLess-Gate-Shield-p-2117.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/WireLess-Gate-Shield-p-2117.html)
 
 ##   Features
 ---
@@ -31,7 +31,7 @@ WireLess Gate Shield is an Arduino-compatible expansion card designed to build a
 
 ##   Layout and schematics
 ---
-![](https://github.com/SeeedDocument/WireLess_Gate_Shield_V1.0/raw/master/img/Wl-top.png)
+![](https://files.seeedstudio.com/wiki/WireLess_Gate_Shield_V1.0/img/Wl-top.png)
 
 On the left side WireLess Gate Shield are interfaces to wireless modules:
 
@@ -53,7 +53,7 @@ On the right side is (top-down):
 *   LED LED3 - user
 *   Clock button S1
 
-![](https://github.com/SeeedDocument/WireLess_Gate_Shield_V1.0/raw/master/img/Wl-Scheme.PNG)
+![](https://files.seeedstudio.com/wiki/WireLess_Gate_Shield_V1.0/img/Wl-Scheme.PNG)
 
 ##   Basic functionality
 ---

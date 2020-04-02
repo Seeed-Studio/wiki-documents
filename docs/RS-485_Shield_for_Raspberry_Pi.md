@@ -9,7 +9,7 @@ sku: 103030295
 tags:
 ---
 
-![](https://github.com/SeeedDocument/RS-485_Shield_for_Raspberry_Pi/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/RS-485_Shield_for_Raspberry_Pi/img/main.jpg)
 
 RS-485 is a cost-effective solution in serial communication networks. It can be used up to data rates at 10 Mbit/s or distances up to 1200m at lower speeds. This RS-485 Shield is a standard add-on board for Raspberry Pi. It is integrated with simple screw terminal as well as DB9 interface. 
 
@@ -70,7 +70,7 @@ RS-485 is a cost-effective solution in serial communication networks. It can be 
 
 **Overview**
 
-![Pin_map](https://github.com/SeeedDocument/RS-485_Shield_for_Raspberry_Pi/raw/master/img/Pin_map.jpg)
+![Pin_map](https://files.seeedstudio.com/wiki/RS-485_Shield_for_Raspberry_Pi/img/Pin_map.jpg)
 
 
 
@@ -81,7 +81,7 @@ RS-485 is a cost-effective solution in serial communication networks. It can be 
 **RS-485 DB9 Interface & RS-485 Screw Interface**
 
 
-![](https://github.com/SeeedDocument/RS-485_Shield_for_Raspberry_Pi/raw/master/img/pin_out/8.jpg)
+![](https://files.seeedstudio.com/wiki/RS-485_Shield_for_Raspberry_Pi/img/pin_out/8.jpg)
 
 The 485 interface uses differential signal transmission. Please make sure the port A connect to the port A of the 485 device, and port B connect to the port B of the 485 device. 
 
@@ -100,17 +100,17 @@ As you can see, GPIO14 and GPIO15 are applied for data transmission, and we use 
 
 For the definition of logic signals, please refer to the table below.
 
-![](https://github.com/SeeedDocument/RS-485_Shield_for_Raspberry_Pi/raw/master/img/function_table.jpg)
+![](https://files.seeedstudio.com/wiki/RS-485_Shield_for_Raspberry_Pi/img/function_table.jpg)
 
 
 ---
 **Female Headers to Raspberry**
 
-![](https://github.com/SeeedDocument/RS-485_Shield_for_Raspberry_Pi/raw/master/img/pin_out/5.jpg)
+![](https://files.seeedstudio.com/wiki/RS-485_Shield_for_Raspberry_Pi/img/pin_out/5.jpg)
 
 We use a 2X13 Female Header to plug this module into the Raspberry Pi, please make sure the pins are aligned. 
 
-![](https://github.com/SeeedDocument/RS-485_Shield_for_Raspberry_Pi/raw/master/img/Pin_map_2.jpg)
+![](https://files.seeedstudio.com/wiki/RS-485_Shield_for_Raspberry_Pi/img/Pin_map_2.jpg)
 
 
 
@@ -118,7 +118,7 @@ We use a 2X13 Female Header to plug this module into the Raspberry Pi, please ma
 ---
 **Extension Female Headers**
 
-![](https://github.com/SeeedDocument/RS-485_Shield_for_Raspberry_Pi/raw/master/img/pin_out/6.jpg)
+![](https://files.seeedstudio.com/wiki/RS-485_Shield_for_Raspberry_Pi/img/pin_out/6.jpg)
 
 This RS-485 Shield occupies 26 Raspberry Pi pins, and only 5 GPIO pins are actually used. We take these 26 pins out in case you need those pins for other purposes.
 
@@ -136,7 +136,7 @@ GPIO18|Connect to the pin **RE** & **DE** of Max485 chip, work as the enable sig
 ---
 **Grove I2C Port**
 
-![](https://github.com/SeeedDocument/RS-485_Shield_for_Raspberry_Pi/raw/master/img/pin_out/3.jpg)
+![](https://files.seeedstudio.com/wiki/RS-485_Shield_for_Raspberry_Pi/img/pin_out/3.jpg)
 
 We have reserved the I2C interface so that you can easily use it with I2C devices. It should be noted that the VCC of this port is 5V, you need to confirm that whether the module is compatible with 5V voltage.
 
@@ -151,10 +151,10 @@ We have reserved the I2C interface so that you can easily use it with I2C device
 ---
 **Max485 Chip**
 
-![](https://github.com/SeeedDocument/RS-485_Shield_for_Raspberry_Pi/raw/master/img/pin_out/7.jpg)
+![](https://files.seeedstudio.com/wiki/RS-485_Shield_for_Raspberry_Pi/img/pin_out/7.jpg)
 
 
-We use the MAX485ESA IC for this shield, for more detail about this IC, please check the [MAX485 Datasheet](https://github.com/SeeedDocument/RS-485_Shield_for_Raspberry_Pi/raw/master/res/RS-485.pdf)
+We use the MAX485ESA IC for this shield, for more detail about this IC, please check the [MAX485 Datasheet](https://files.seeedstudio.com/wiki/RS-485_Shield_for_Raspberry_Pi/res/RS-485.pdf)
 
 
 
@@ -179,7 +179,7 @@ We use the MAX485ESA IC for this shield, for more detail about this IC, please c
 
 |Raspberry pi|RS-485 Shield for Raspberry Pi|
 |------------|-------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/RS-485_Shield_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/RS-485_Shield_for_Raspberry_Pi/img/thumbnail.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com)|
 
 
@@ -279,13 +279,13 @@ You need two shield and two raspberry to test the code above, or you can use the
 
 ## Resources
 
-- **[Zip]** [RS-485 Shield for Raspberry Pi Eagle Files](https://github.com/SeeedDocument/RS-485_Shield_for_Raspberry_Pi/raw/master/res/RS485%20Shield%20for%20Raspberry%20Pi.zip)
+- **[Zip]** [RS-485 Shield for Raspberry Pi Eagle Files](https://files.seeedstudio.com/wiki/RS-485_Shield_for_Raspberry_Pi/res/RS485%20Shield%20for%20Raspberry%20Pi.zip)
 
-- **[Zip]** [Python Test Code](https://github.com/SeeedDocument/RS-485_Shield_for_Raspberry_Pi/raw/master/res/Python_test.zip)
+- **[Zip]** [Python Test Code](https://files.seeedstudio.com/wiki/RS-485_Shield_for_Raspberry_Pi/res/Python_test.zip)
 
-- **[PDF]** [MAX485 Datasheet](https://github.com/SeeedDocument/RS-485_Shield_for_Raspberry_Pi/raw/master/res/RS-485.pdf)
+- **[PDF]** [MAX485 Datasheet](https://files.seeedstudio.com/wiki/RS-485_Shield_for_Raspberry_Pi/res/RS-485.pdf)
 
-- **[PDF]** [PDF Format Wiki](https://github.com/SeeedDocument/RS-485_Shield_for_Raspberry_Pi/raw/master/res/RS-485_Shield_for_Raspberry_Pi.pdf)
+- **[PDF]** [PDF Format Wiki](https://files.seeedstudio.com/wiki/RS-485_Shield_for_Raspberry_Pi/res/RS-485_Shield_for_Raspberry_Pi.pdf)
 
 
 

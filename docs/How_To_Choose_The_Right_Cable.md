@@ -12,7 +12,7 @@ Here we will introduce a variety of cables that Seeed offers. When you make a de
 We had to admit that jumping a wire is necessary, then why not choose some right cable, to make our  demo more neatly.
 The following image shows a bad example of jumping lines.
 
-![](https://github.com/SeeedDocument/How_To_Choose_The_Right_Cable/raw/master/img/How_to_choose_cable_1.jpg)
+![](https://files.seeedstudio.com/wiki/How_To_Choose_The_Right_Cable/img/How_to_choose_cable_1.jpg)
 
 Do you feel just a mess?
 
@@ -50,7 +50,7 @@ These latches (or buckles) improve connections, and are especially handy in high
 
 Use extra care if connecting multiple devices using the Grove Branch Cable. Be aware that the analog or digital pin on the Grove Shield will be shared by both Grove devices. Such configurations may be inappropriate for two analog devices. Using a Grove Branch Cable to connect an analog and a digital Grove device may not work at all.
 
-![](https://github.com/SeeedDocument/How_To_Choose_The_Right_Cable/raw/master/img/Grove-Branch_Cable-5PCs_pack-.jpg)
+![](https://files.seeedstudio.com/wiki/How_To_Choose_The_Right_Cable/img/Grove-Branch_Cable-5PCs_pack-.jpg)
 
 Sample applications include:
 
@@ -70,7 +70,7 @@ Note that the Arduino UNO supports PWM on pins 3, 5, 6, 9, 10, and 11. On the Ar
 
 Here's a link to some of our [Servos](http://www.seeedstudio.com/depot/index.php?main_page=advanced_search_result&amp;search_in_description=0&amp;keyword=servo&amp;x=-1297&amp;y=-60).
 
-![](https://github.com/SeeedDocument/How_To_Choose_The_Right_Cable/raw/master/img/4pinto2x3pin500.jpg)
+![](https://files.seeedstudio.com/wiki/How_To_Choose_The_Right_Cable/img/4pinto2x3pin500.jpg)
 
 ##   Grove to 4pin Female Jumper
 
@@ -80,7 +80,7 @@ You can use it for:
 
 *   Use Base Shield to control some non-grove device
 
-![](https://github.com/SeeedDocument/How_To_Choose_The_Right_Cable/raw/master/img/4p254.jpg)
+![](https://files.seeedstudio.com/wiki/How_To_Choose_The_Right_Cable/img/4p254.jpg)
 
 
 ##   Some Other Cables

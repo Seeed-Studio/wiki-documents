@@ -10,9 +10,9 @@ tags:
 
 ---
 
-![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeed_Stalker_v3-6.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/img/Seeed_Stalker_v3-6.png)
 
-![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeed_Stalker_v3-7.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/img/Seeed_Stalker_v3-7.png)
 
 Seeeduino Stalker v3.0 is a feature rich Arduino compatible **Wireless Sensor Network node** especially useful for outdoor **data-logging** applications .  It has a X-Bee carrier board for using with X-Bee modules, such as GPS Bee, Bluetooth Bee and Wifi Bee, etc. Its modular structure and onboard peripherals makes it convenient to log time stamped sensor data on a periodic basis. Seeeduino Stalker comes with a RTC with backup power, SD Card Socket, Bee Socket and Solar based Li-Ion Battery Charger_. The Seeeduino Stalker is a good candidate for all your tracking, monitoring and control projects._
 
@@ -134,7 +134,7 @@ Seeeduino Stalker v3.0 is a feature rich Arduino compatible **Wireless Sensor Ne
 
 <dl><dd> 1. We add a switch to select between hardware serial ports (through D0, D1) and software serial port (that is, virtual serial port; through D5, D6). The switch is marked in blue rectangle like follows.
 
-![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3.1_serial_port_switch_1200_s.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/img/Seeeduino_Stalker_v3.1_serial_port_switch_1200_s.jpg)
 
 </dd><dd> 2. For RTC circuitry, there only one power supply (from lithium battery) now. And the applicable lithium polymer battery model is CR1120.
 
@@ -144,7 +144,7 @@ Seeeduino Stalker v3.0 is a feature rich Arduino compatible **Wireless Sensor Ne
 </dd><dd> 5. In sleep mode (for all module), the working current will as low as 100 μA.
 </dd></dl>
 
-![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeed_Stalker_v3.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/img/Seeed_Stalker_v3.png)
 
 *   **RST for Bee:** Press this button to reset the Bee module. However, this reset button does not affect the state of the main board(ATmega328).
 
@@ -179,8 +179,8 @@ The bottom side of Seeeduino Stalker V3 has many PCB jumper pads optionally chan
 
 | Jumper Pads Name | Application                                                                                                                                                                                                                                                                                                                                                 | Circuit                                                                                                             |
 |------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| P1               | Soldering these jumper enables Digital pin D5 to ON or OFF power-supply of Bee Socket                                                                                                                                                                                                                                                                       | ![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_Jumper_Pad_P1.jpg)       |
-| P2               | Soldering these jumper pads enables Digital pin D4 to switch ON or OFF power supply of SD.                                                                                                                                                                                                                                                                  | ![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_Jumper_Pad_P2.jpg)       |
+| P1               | Soldering these jumper enables Digital pin D5 to ON or OFF power-supply of Bee Socket                                                                                                                                                                                                                                                                       | ![](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/img/Seeeduino_Stalker_Jumper_Pad_P1.jpg)       |
+| P2               | Soldering these jumper pads enables Digital pin D4 to switch ON or OFF power supply of SD.                                                                                                                                                                                                                                                                  | ![](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/img/Seeeduino_Stalker_Jumper_Pad_P2.jpg)       |
 | P3               | Soldering these jumper pads connects RTC /INTA pin to Digital Pin **D2(INT0)**.                                                                                                                                                                                                                                                                             | ![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_Jumper_Pad_P3.jpg)       |
 | P4               | Soldering these jumper pads connects RTC /INTB to Digital pin **D3(INT1)**.                                                                                                                                                                                                                                                                                 | ![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_Jumper_Pad_P4.jpg)       |
 | P5               | This jumper by default connects BEE_TXD to Digital pin D0 (H/W UART TXD). By cutting the existing PCB connection and soldering to adjacent pad, BEE_TXD can be connected to Digital pin **D7** for S/W Serial. **Note**: There is a known hardware bug. Please read [here](https://seeeddoc.github.io/Seeeduino-Stalker_v3/#Known_Issue) for a work-around. | ![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_Jumper_Pads_P5andP6.jpg) |
@@ -199,7 +199,7 @@ The following steps will help you assemble the hardware and software resources t
 
 ####   Step 1. Acquiring the hardware
 
-![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeed_Stalker_v3-1.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/img/Seeed_Stalker_v3-1.png)
 
 The picture above shows the hardware and components required for Seeeduino Stalker v3 to communicate with PC. The Stalker does not have USB to Serial functionality. Hence, **UartSBee** is necessary for programming Stalker via PC. Other USB to Serial converter board can be used to replace UartSBee v4.
 
@@ -316,7 +316,7 @@ Download and install the DS1337 library and sketches available in the resources 
 
 *   compile and upload to **Seeeduino-Stalker v3**
 
-![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3_adjust.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/img/Seeeduino_Stalker_v3_adjust.png)
 
 ####   Get Current Date/Time
 
@@ -332,7 +332,7 @@ Download and install the DS1337 library and sketches available in the resources 
 
 *   compile and upload to **Seeeduino-Stalker v3**
 
-![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3_now.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/img/Seeeduino_Stalker_v3_now.png)
 
 ####   DS1337 Interrupts Example
 
@@ -350,7 +350,7 @@ This example is a demonstration of interrupt detection from DS1337 <span style="
 
 *   compile and upload to **Seeeduino-Stalker v3**
 
-![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3_interrupt.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/img/Seeeduino_Stalker_v3_interrupt.png)
 
 ####   Data Logger Example
 
@@ -367,7 +367,7 @@ The principal application of Seeeduino Stalker v3.0 is data-logging of sensor si
 
         *   This sketch also produces verbose output i.e the various events happening inside MCU are displayed in serial terminal.
 
-![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Stalker_v3.0_datalogger_flowchart.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/img/Stalker_v3.0_datalogger_flowchart.png)
 
 ###   Read the charging status
 
@@ -489,11 +489,11 @@ digitalWrite(5,HIGH);
 
 1. On the top layer cut the routing from PD1/TXD signal to R16 resistor as shown in the following pictures. Please use a sharp knife and gentle cut the connection:
 
-![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/StalkerV3.0_P6Issue_1.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/img/StalkerV3.0_P6Issue_1.jpg)
 
 Before modification
 
-![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/StalkerV3.0_P6Issue_Workaround.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/img/StalkerV3.0_P6Issue_Workaround.jpg)
 
 After modification
 
@@ -503,23 +503,23 @@ After modification
 
 The Images are taken from the EAGLE Files
 
-![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3.0_Board.PNG)
+![](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/img/Seeeduino_Stalker_v3.0_Board.PNG)
 
 Seeeduino_Stalker_v3.0_Board
 
-![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3.0_Sceme_1.PNG)
+![](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/img/Seeeduino_Stalker_v3.0_Sceme_1.PNG)
 
 Power
 
-![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3.0_Sceme_2.PNG)
+![](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/img/Seeeduino_Stalker_v3.0_Sceme_2.PNG)
 
 Arduino
 
-![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3.0_Sceme_3.PNG)
+![](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/img/Seeeduino_Stalker_v3.0_Sceme_3.PNG)
 
 BEE TF
 
-![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_v3.0_Sceme_4.PNG)
+![](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/img/Seeeduino_Stalker_v3.0_Sceme_4.PNG)
 
 RTC I2C
 
@@ -534,31 +534,31 @@ RTC I2C
 
 *   Software:
 
-    *   [Seeeduino Stalker V3 - DS1337 RTC library](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/res/DS1337.zip)
+    *   [Seeeduino Stalker V3 - DS1337 RTC library](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/res/DS1337.zip)
 
-    *   [Seeeduino Stalker V3.0 - Datalogger Example](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/res/StalkerV30_DataLogger_10Sec.zip)
+    *   [Seeeduino Stalker V3.0 - Datalogger Example](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/res/StalkerV30_DataLogger_10Sec.zip)
 
 *   Design:
 
-    *   [Seeeduino Stalker v3.0 - PDF Schematic &amp; EAGLE files](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/res/Seeeduino_Stalker_v3.0.zip)
+    *   [Seeeduino Stalker v3.0 - PDF Schematic &amp; EAGLE files](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/res/Seeeduino_Stalker_v3.0.zip)
 
-    - [Seeeduino Stalker v3.0 pdf](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/res/Seeeduino%20Stalker%20v3.0.pdf)
+    - [Seeeduino Stalker v3.0 pdf](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/res/Seeeduino%20Stalker%20v3.0.pdf)
 
-   - [Seeeduino Stalker v3.0 sch](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/res/Seeeduino%20Stalker%20v3.0.sch)
+   - [Seeeduino Stalker v3.0 sch](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/res/Seeeduino%20Stalker%20v3.0.sch)
 *   Datasheets:
 
-    *   [Datasheet of DS1337S](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/res/DS1337-DS1337C-99519.pdf)
+    *   [Datasheet of DS1337S](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/res/DS1337-DS1337C-99519.pdf)
 
     *   [Datasheet of CN3065)](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/res/CN3065.pdf)
     *   [Datasheet of CN3065 (English)](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/res/DSE-CN3065.pdf)
 
-    *   [Datasheet of TD6810](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/res/TD6810.pdf)
+    *   [Datasheet of TD6810](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/res/TD6810.pdf)
 
 *   Others:
 
-    *   [Bootloader via AVRISP MKII](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/res/ATmegaBOOT_168_atmega328_pro_8MHz.hex.zip)
+    *   [Bootloader via AVRISP MKII](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/res/ATmegaBOOT_168_atmega328_pro_8MHz.hex.zip)
 
-    *   [Completed file via Offline-AVRISP](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/res/Stalker_V2_Final.Prjt.zip)
+    *   [Completed file via Offline-AVRISP](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/res/Stalker_V2_Final.Prjt.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

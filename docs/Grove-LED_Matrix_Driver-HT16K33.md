@@ -11,7 +11,7 @@ tags:
 
 
 
-![](https://github.com/SeeedDocument/Grove-LED_Matrix_Driver-HT16K33/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/main.jpg)
 
 LED Matrix is low cost and usually used to display simple numbers and images. The Grove - LED Matrix Driver is the I^2^C based product which allows you to control the LED matrix with our prepared and easy-to-use libraries, or you can create your own library to control it to satisfy your need. The 8*8 LED Matrix can be assembled and unassembled from the driver board easily, so it is convenient to change different color LED matrix display based on your need.
 
@@ -65,7 +65,7 @@ There are 8 possible I2C address of this grove, from 0x70 to 0x77. The defult I^
 
 For example, if I want to change the address to 0x73, I need to connect pad A1,A0 and disconnect pad A2. Then I will get address 0b01110011, that is 0x73.
 
-![](https://github.com/SeeedDocument/Grove-LED_Matrix_Driver-HT16K33/raw/master/img/0x73.png)
+![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/0x73.png)
 
 
 ## Typical applications
@@ -83,7 +83,7 @@ For example, if I want to change the address to 0x73, I need to connect pad A1,A
 
 ### Pin Out
 
-![](https://github.com/SeeedDocument/Grove-LED_Matrix_Driver-HT16K33/raw/master/img/pinout.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/pinout.jpg)
 
 
 
@@ -115,7 +115,7 @@ For example, if I want to change the address to 0x73, I need to connect pad A1,A
 
 | Seeeduino V4.2 | Base Shield|Grove-LED Matrix Driver| matrix LED - Red|
 |--------------|-------------|-----------------|---------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-LED_Matrix_Driver-HT16K33/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-LED_Matrix_Driver-HT16K33/raw/master/img/LED_matrix.jpg)
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/LED_matrix.jpg)
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-LED-Matrix-Driver-HT16K33.html)|[Get ONE Now](https://www.seeedstudio.com/20mm-8-8-square-matrix-LED-Red-p-36.html)
 
 
@@ -133,7 +133,7 @@ For example, if I want to change the address to 0x73, I need to connect pad A1,A
 
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-LED_Matrix_Driver-HT16K33/raw/master/img/with_ard.jpeg)
+![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/with_ard.jpeg)
 
 
 #### Software
@@ -149,12 +149,12 @@ For example, if I want to change the address to 0x73, I need to connect pad A1,A
 
 - **Step 3.** Restart the Arduino IDE. Open the example, you can open it in the following three ways：
     1. Open it directly in the Arduino IDE via the path: **File --> Examples -->Grove - LED Matrix Driver(HT16K33 with 8*8 LED Matrix) --> display_bars**. 
-    ![](https://github.com/SeeedDocument/Grove-LED_Matrix_Driver-HT16K33/raw/master/img/ard1.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/ard1.jpg)
     
     2. Open it in your computer by click the **basic_demo.ino** which you can find in the folder **XXXX\Arduino\libraries\Grove_LED_Matrix_Driver_HT16K33⁩\examples\display_bars⁩\display_bars⁩.ino**, **XXXX** is the location you installed the Arduino IDE.
-    ![](https://github.com/SeeedDocument/Grove-LED_Matrix_Driver-HT16K33/raw/master/img/ard2.png)
+    ![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/ard2.png)
     
-    3. Or, you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+    3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 
 
@@ -214,7 +214,7 @@ Are you willing to let the LED matrix to display the emoji? Now, it is your turn
     - copy the hex value in the hex box at the bottom left corner.
     - copy the corresponding code in the Arduino/C code section.
 
-![](https://github.com/SeeedDocument/Grove-LED_Matrix_Driver-HT16K33/raw/master/img/emoji.png)
+![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/emoji.png)
 
 
 - **Step 5.** Create the new '.ino' file under the same folder with other LED Matrix examples and copy below code.
@@ -288,7 +288,7 @@ void loop() {
 
 If everything goes well, your LED Matrix will display as below.
 
-![](https://github.com/SeeedDocument/Grove-LED_Matrix_Driver-HT16K33/raw/master/img/display.gif)
+![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/display.gif)
 
 
 ## Schematic Online Viewer
@@ -304,7 +304,7 @@ If everything goes well, your LED Matrix will display as below.
 
 - **[Zip]** [Grove_LED_Matrix_Driver_HT16K33 Software Library](https://github.com/Seeed-Studio/Grove_LED_Matrix_Driver_HT16K33/archive/master.zip)
 
-- **[PDF]** [Datasheet HT16K33](https://github.com/SeeedDocument/Grove-LED_Matrix_Driver-HT16K33/raw/master/res/310040349%2C%20SMD%20IC%20Driver%3BSOP-28-物料规格书-1.pdf)
+- **[PDF]** [Datasheet HT16K33](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/res/310040349%2C%20SMD%20IC%20Driver%3BSOP-28-物料规格书-1.pdf)
 
 
 

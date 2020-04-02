@@ -53,7 +53,7 @@ The Base Shield is tested and fully compatible with following boards:
 
 ## Hardware Overview
 
-![](https://github.com/SeeedDocument/Base_Shield_V2/raw/master/img/hardware_overview.jpg)
+![](https://files.seeedstudio.com/wiki/Base_Shield_V2/img/hardware_overview.jpg)
 
 - **1-Analog Ports**: include 4 anlog ports, A0, A1, A2 and A3.
 - **2-Digital Ports**: include 7 digital ports, D2, D3, D4, D5, D6, D7 and D8.
@@ -116,11 +116,11 @@ Please click [here](http://support.seeedstudio.com/knowledgebase/articles/182644
 
 ## Resources
 
-- **[PDF]** [Download Wiki PDF](https://github.com/SeeedDocument/Base_Shield_V2/raw/master/res/Base_Shield_V2_WiKi.pdf)
-- **[Eagle]** [Base Shiled V2 SCH](https://github.com/SeeedDocument/Base_Shield_V2/raw/master/res/Base%20Shield%20v2_SCH.zip)
-- **[Eagle]** [Base Shiled V2 PCB](https://github.com/SeeedDocument/Base_Shield_V2/raw/master/res/Base%20Shield%20v2_PCB.zip)
-- **[PDF]** [Base Shiled V2 SCH](https://github.com/SeeedDocument/Base_Shield_V2/raw/master/res/Base%20Shield%20v2_SCH.pdf)
-- **[PDF]** [Base Shiled V2 PCB](https://github.com/SeeedDocument/Base_Shield_V2/raw/master/res/Base%20Shield%20v2_PCB.pdf)
+- **[PDF]** [Download Wiki PDF](https://files.seeedstudio.com/wiki/Base_Shield_V2/res/Base_Shield_V2_WiKi.pdf)
+- **[Eagle]** [Base Shiled V2 SCH](https://files.seeedstudio.com/wiki/Base_Shield_V2/res/Base%20Shield%20v2_SCH.zip)
+- **[Eagle]** [Base Shiled V2 PCB](https://files.seeedstudio.com/wiki/Base_Shield_V2/res/Base%20Shield%20v2_PCB.zip)
+- **[PDF]** [Base Shiled V2 SCH](https://files.seeedstudio.com/wiki/Base_Shield_V2/res/Base%20Shield%20v2_SCH.pdf)
+- **[PDF]** [Base Shiled V2 PCB](https://files.seeedstudio.com/wiki/Base_Shield_V2/res/Base%20Shield%20v2_PCB.pdf)
 
 ## Project
 

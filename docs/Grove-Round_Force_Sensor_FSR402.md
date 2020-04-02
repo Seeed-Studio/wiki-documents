@@ -10,12 +10,12 @@ tags:
 ---
 
 
-![](https://github.com/SeeedDocument/Grove-Round_Force_Sensor_FSR402/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Round_Force_Sensor_FSR402/img/main.jpg)
 
 
 The Grove-Round Force Sensor(FSR402) is a force sensitive module. At the end of the sensor there is a round force sensitive resistor, the resistance of which depends on pressure applied to this resistor.
 Simply say, the greater the pressure, the smaller the resistance. However, the output of this sensor is not strictly linear, so we do not recommend it for accurate measurements. For more detail about the pressure-resistance diagram, please check the 
-[FSR402 Datasheet](https://github.com/SeeedDocument/Grove-Round_Force_Sensor_FSR402/raw/master/res/FSR402.pdf)
+[FSR402 Datasheet](https://files.seeedstudio.com/wiki/Grove-Round_Force_Sensor_FSR402/res/FSR402.pdf)
 
 As the you can see, this module is based on FSR402,Interlink Electronics FSR® 400 Series is part of the single zone Force Sensing Resistor® family. Force Sensing Resistors, or FSR's, are robust polymer thick film (PTF) devices that exhibit a decrease in resistance with increase in force applied to the surface of the sensor. This force sensitivity is optimized for use in human machine interface devices including automotive electronics, medical systems, industrial controls and robotics.
 
@@ -73,7 +73,7 @@ As the you can see, this module is based on FSR402,Interlink Electronics FSR® 4
 ### Pin Map
 
 
-![](https://github.com/SeeedDocument/Grove-Round_Force_Sensor_FSR402/raw/master/img/pin_map.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Round_Force_Sensor_FSR402/img/pin_map.jpg)
 
 
 
@@ -82,7 +82,7 @@ As the you can see, this module is based on FSR402,Interlink Electronics FSR® 4
 
 
 
-![](https://github.com/SeeedDocument/Grove-Round_Force_Sensor_FSR402/raw/master/img/hardware.png)
+![](https://files.seeedstudio.com/wiki/Grove-Round_Force_Sensor_FSR402/img/hardware.png)
 
 
 
@@ -112,9 +112,9 @@ So, the output is:
 ### Mechanical Drawing
 
 
-![](https://github.com/SeeedDocument/Grove-Round_Force_Sensor_FSR402/raw/master/img/Mechanical_A.jpg)
-![](https://github.com/SeeedDocument/Grove-Round_Force_Sensor_FSR402/raw/master/img/Mechanical_B.jpg)
-![](https://github.com/SeeedDocument/Grove-Round_Force_Sensor_FSR402/raw/master/img/Exploded_View.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Round_Force_Sensor_FSR402/img/Mechanical_A.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Round_Force_Sensor_FSR402/img/Mechanical_B.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Round_Force_Sensor_FSR402/img/Exploded_View.jpg)
 
 
 
@@ -166,7 +166,7 @@ So, the output is:
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-Round_Force_Sensor_FSR402/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Round_Force_Sensor_FSR402/img/connect.jpg)
 
 
 
@@ -247,8 +247,8 @@ void loop(){
 ## Resources
 
 - **[Zip]** [Grove-Round Force Sensor(FSR402) eagle file](https://github.com/SeeedDocument/Grove-Round_Force_Sensor_FSR402/raw/master/res/Grove-Round_Force_Sensor_FSR402.zip)
-- **[Zip]** [Adafruit_NeoPixel-master](https://github.com/SeeedDocument/Grove-Mech_Keycap/raw/master/res/Adafruit_NeoPixel-master.zip)
-- **[PDF]** [Datasheet of FSR402](https://github.com/SeeedDocument/Grove-Round_Force_Sensor_FSR402/raw/master/res/FSR402.pdf)
+- **[Zip]** [Adafruit_NeoPixel-master](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/res/Adafruit_NeoPixel-master.zip)
+- **[PDF]** [Datasheet of FSR402](https://files.seeedstudio.com/wiki/Grove-Round_Force_Sensor_FSR402/res/FSR402.pdf)
 
 
 ## Project

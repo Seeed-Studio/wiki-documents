@@ -34,7 +34,7 @@ Here we will show you how this works via a simple demo. First of all, you need t
 
 This is an easy-to-use module, what you need to do is connect the module to **D2 port** of a Base Shield.
 
-![enter image description here](https://github.com/SeeedDocument/Arduino_Software_I2C_user_guide/raw/master/img/One_OLED.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Arduino_Software_I2C_user_guide/img/One_OLED.jpg)
 
 If you don't have the base shield, please follow below connection.
 
@@ -47,7 +47,7 @@ If you don't have the base shield, please follow below connection.
 
 ### Software
 - Open the code directly by the path: **File -> Example ->Arduino_Software_I2C-master->SoftwareI2C_Scan**.
-![](https://github.com/SeeedDocument/Arduino_Software_I2C_user_guide/raw/master/img/I2C_Scan.jpg)
+![](https://files.seeedstudio.com/wiki/Arduino_Software_I2C_user_guide/img/I2C_Scan.jpg)
 
 ```
 #include "SoftwareI2C.h"
@@ -100,7 +100,7 @@ Here we will show you how this works via a simple demo. First of all, you need t
 
 - Connect one Grove - OLED Display 1.12 to **D2 port** and other to **D4 port**.
 
-![enter image description here](https://github.com/SeeedDocument/Arduino_Software_I2C_user_guide/raw/master/img/Two_OLED.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Arduino_Software_I2C_user_guide/img/Two_OLED.jpg)
 
 ### Software
 
@@ -161,7 +161,7 @@ SoftwareI2C *Wire;
 ```
 
 - Open the code directly by the path: **File -> Example ->Arduino_Software_I2C-master->OLED_Display**.
-![](https://github.com/SeeedDocument/Arduino_Software_I2C_user_guide/raw/master/img/OLED_Display.jpg)
+![](https://files.seeedstudio.com/wiki/Arduino_Software_I2C_user_guide/img/OLED_Display.jpg)
 
 - We have to define SoftwareI2C objects as well as SeeedGrayOLED objects.
 

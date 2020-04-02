@@ -12,7 +12,7 @@ tags:
 
 These are SD card shield. It provides a storage space for your Arduino. Users can read/write SD card via Arduino’s built-in SD library. It supports SD, SDHC and Micro SD cards.
 
-|![](https://github.com/SeeedDocument/SD_Card_Shield/raw/master/img/Sdcardshield_01.jpg) |![](https://github.com/SeeedDocument/SD_Card_Shield/raw/master/img/Sdcardshield_01.jpg)|
+|![](https://files.seeedstudio.com/wiki/SD_Card_Shield/img/Sdcardshield_01.jpg) |![](https://files.seeedstudio.com/wiki/SD_Card_Shield/img/Sdcardshield_01.jpg)|
 |---|---|
 |[SD Card Shield V3.0](https://seeeddoc.github.io/SD_Card_Shield_V3.0/) |[SD Card shield V4.0](https://seeeddoc.github.io/SD_Card_shield_V4.0/) |
 

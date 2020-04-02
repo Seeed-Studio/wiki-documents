@@ -12,7 +12,7 @@ tags: grove_digital, io_3v3, io_5v, plat_duino
 
 
 
-![](https://github.com/SeeedDocument/Grove-Infrared_Receiver/raw/master/img/Grove-Infrared_Receiver.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Infrared_Receiver/img/Grove-Infrared_Receiver.jpg)
 
 The Infrared Receiver is used to receive infrared signals and also used for remote control detection. There is an IR detector on the Infrared Receiver which is used to get the infrared light emitted by the Infrared Emitter. The IR detector have a demodulator inside that looks for modulated IR at 38 KHz. The Infrared Receiver can receive signals well within 10 meters. If more than 10 meters , the receiver may not get the signals. We often use the two Groves-the Infrared Receiver and the [Grove - Infrared Emitter](http://wiki.seeedstudio.com/Grove-Infrared_Emitter) to work together.
 
@@ -69,7 +69,7 @@ The Grove - Infrared Emitter can send data while Grove - Infrared Receiver will 
 
 | Seeeduino V4.2 | Base Shield| Grove - Infrared Emitter | Grove - Infrared Receiver
 |--------------|-------------|-----------------|-----|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduinoX2.png)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/baseshiledX2.png)|![enter image description here](https://github.com/SeeedDocument/Grove-Infrared_Emitter/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Infrared_Receiver/raw/master/img/little.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduinoX2.png)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/baseshiledX2.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Infrared_Emitter/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Infrared_Receiver/img/little.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Infrared-Emitter-p-993.html)|[Get One Now](https://www.seeedstudio.com/Grove-Infrared-Receiver-p-994.html)|
 
 - **Step 2.** Connect Grove - Infrared Emitter to port **D3** of one Grove-Base Shield.
@@ -81,7 +81,7 @@ The Grove - Infrared Emitter can send data while Grove - Infrared Receiver will 
 - **Step 5.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-Infrared_Emitter/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Infrared_Emitter/img/connect.jpg)
 
 
 !!!Note
@@ -114,7 +114,7 @@ The Grove - Infrared Emitter can send data while Grove - Infrared Receiver will 
 
 - **Step 3.** Restart the Arduino IDE. Open `recv` example via the path: **File->Examples->Grove - Infrared Receiver  And Emitter->recv**. 
 
-![](https://github.com/SeeedDocument/Grove-Infrared_Receiver/raw/master/img/path.png)
+![](https://files.seeedstudio.com/wiki/Grove-Infrared_Receiver/img/path.png)
 
 
 Or you can open a new sketch and copy the belowing code into your Arduino IDE.
@@ -249,7 +249,7 @@ void loop()
 If every thing goes well, The result should be like:
 
 
-![](https://github.com/SeeedDocument/Grove-Infrared_Emitter/raw/master/img/results.png)
+![](https://files.seeedstudio.com/wiki/Grove-Infrared_Emitter/img/results.png)
 
 
 ## Schematic Online Viewer

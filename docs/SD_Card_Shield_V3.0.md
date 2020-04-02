@@ -7,7 +7,7 @@ prodimagename:
 surveyurl: https://www.research.net/r/SD_Card_Shield_V3-0
 sku:   
 ---
- ![](https://github.com/SeeedDocument/SD_Card_Shield_V3.0/raw/master/img/SD_card_shield.jpg)
+ ![](https://files.seeedstudio.com/wiki/SD_Card_Shield_V3.0/img/SD_card_shield.jpg)
 
 The SD card v3.0 shield adds storage to your Arduino project. It supports SD, SDHC, or MicroSD TF cards. Use the on-board toggle switch to select the SD card type. The card supports use of one and only one format of SD card, either SD/SDHC, or MicroSD. Before using an SD or MicroSD card, please set the shields "SELECT" switch to the proper setting: toward the SD/SDHC slot, or the MicroSD slot.
 
@@ -89,7 +89,7 @@ These next lines were user added: This shield works fine for the Arduino Mega 25
 
 ##   Interface Function  
 
-![](https://github.com/SeeedDocument/SD_Card_Shield_V3.0/raw/master/img/SD_Card_interface.png)
+![](https://files.seeedstudio.com/wiki/SD_Card_Shield_V3.0/img/SD_Card_interface.png)
  **D10** – Used for CS of SPI
  **D11** – Used for MOSI of SPI
  **D12** – Used for MISO of SPI
@@ -102,13 +102,13 @@ These next lines were user added: This shield works fine for the Arduino Mega 25
 
 Plug the SD Card Shield onto the Arduino; Insert your SD card into the socket and make sure the card selector pointing to the right way (Standard card or micro).And then connect the Arduino to PC with USB cable.
  <font color="red">**Warning:** Don't insert SD card and microSD card into the shield at the same time.</font>
- ![](https://github.com/SeeedDocument/SD_Card_Shield_V3.0/raw/master/img/SD_shield_hardware.jpg)
+ ![](https://files.seeedstudio.com/wiki/SD_Card_Shield_V3.0/img/SD_shield_hardware.jpg)
 
 ###   Software  
 
 First you have to get an [SD card or micro SD card](http://www.seeedstudio.com/depot/sandisk-microsd%C3%82%E2%84%A2-card-2gb-p-546.html?cPath=178_182), and then format the SD card as FAT16 or FAT32 if it is necessary.
 Format the SD card as the screenshots below:
- ![](https://github.com/SeeedDocument/SD_Card_Shield_V3.0/raw/master/img/Format.jpg) ![](https://github.com/SeeedDocument/SD_Card_Shield_V3.0/raw/master/img/Format2.jpg)
+ ![](https://files.seeedstudio.com/wiki/SD_Card_Shield_V3.0/img/Format.jpg) ![](https://files.seeedstudio.com/wiki/SD_Card_Shield_V3.0/img/Format2.jpg)
 
 1.  Download the latest version of **SdFat for Arduino**.
 
@@ -117,7 +117,7 @@ Format the SD card as the screenshots below:
 3.  Select the corresponding Arduino board, like Arduino UNO or Duemilanove or others, and the COM port you are using.
 
 4.  Upload the sketch _**Sdinfo**_.The following image is the result from the serial monitor. Of course you can upload other sketches.
-![](https://github.com/SeeedDocument/SD_Card_Shield_V3.0/raw/master/img/SD_card_software.jpg)
+![](https://files.seeedstudio.com/wiki/SD_Card_Shield_V3.0/img/SD_card_software.jpg)
 5.  If an error occurs, please recheck all the steps, and make sure the SD card is working. If none of that fixes the problem, try replacing the SD card.
 With that done, you can take a look at the other library examples for reading, writing, and sample logging with a GPS or real time clock. Enjoy!
 
@@ -166,11 +166,11 @@ With that done, you can take a look at the other library examples for reading, w
 
 ##   Resources  
 
-- **[Eagle]**  [Eagle file of SD Card Shield v3.1](https://github.com/SeeedDocument/SD_Card_Shield_V3.0/raw/master/res/Eagle_file_for_SD_card_shiled.zip)
+- **[Eagle]**  [Eagle file of SD Card Shield v3.1](https://files.seeedstudio.com/wiki/SD_Card_Shield_V3.0/res/Eagle_file_for_SD_card_shiled.zip)
 
-- **[PDF]**[SD Card Shield pdf](https://github.com/SeeedDocument/SD_Card_Shield_V3.0/raw/master/res/SD%20Card%20Shield.pdf)
+- **[PDF]**[SD Card Shield pdf](https://files.seeedstudio.com/wiki/SD_Card_Shield_V3.0/res/SD%20Card%20Shield.pdf)
 
-- **[PDF]**   [PDF file of SD Card Sheild v3.1](https://github.com/SeeedDocument/SD_Card_Shield_V3.0/raw/master/res/SD_Card_Shield.pdf)
+- **[PDF]**   [PDF file of SD Card Sheild v3.1](https://files.seeedstudio.com/wiki/SD_Card_Shield_V3.0/res/SD_Card_Shield.pdf)
 
 - **[Eagle]**   [Eagle file of SD Card Shield v3.0](http://wiki.seeedstudio.com/images/0/09/Eagle_file_of_SD_Card_Shield_v3.0.ZIP).
 

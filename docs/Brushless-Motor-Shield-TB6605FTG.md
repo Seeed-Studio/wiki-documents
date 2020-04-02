@@ -8,7 +8,7 @@ surveyurl:
 sku: 105030027
 ---
 
-![](https://github.com/SeeedDocument/BLDC-Motor-Shield-TB6605/raw/master/img/105030027-preview-wiki.jpg)
+![](https://files.seeedstudio.com/wiki/BLDC-Motor-Shield-TB6605/img/105030027-preview-wiki.jpg)
 
 The Brushless Motor Shield (TB6605FTG) is a brushless motor driver for Arduino compatible system. It supports 9V ~ 24V DC input and can continuously and continuously output large current to drive the brushless motor. With the onboard potentiometer, you can adjust the motor speed easily. This shield offers a variety of modes to choose from, you can use the four onboard switches to switch functions.  
   
@@ -150,7 +150,7 @@ Download the [Grove-LCD RGB Backlight Library](https://github.com/Seeed-Studio/G
 
 - **[Zip]** [BLDC Motor Shield (TB6605) Eagle Files](https://github.com/SeeedDocument/BLDC-Motor-Shield-TB6605/raw/master/res/Brushless%20Motor%20Shield%20(TB6605FTG)%20v1.01.zip)
 
-- **[PDF]** [42BLF01 Brushless Motor-Specification](https://github.com/SeeedDocument/BLDC-Motor-Shield-TB6605/raw/master/res/42BLF01-Specification.pdf)
+- **[PDF]** [42BLF01 Brushless Motor-Specification](https://files.seeedstudio.com/wiki/BLDC-Motor-Shield-TB6605/res/42BLF01-Specification.pdf)
 
 
 

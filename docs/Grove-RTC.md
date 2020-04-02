@@ -10,7 +10,7 @@ sku: 101020013
 tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_pi
 ---
 
-![](https://github.com/SeeedDocument/Grove-RTC/raw/master/img/45d.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-RTC/img/45d.jpg)
 
 The RTC module is based on the clock chip DS1307, which supports the I2C protocol. It utilizes a Lithium cell battery (CR1225). The clock/calendar provides seconds, minutes, hours, day, date, month, and year. The end of the month date is automatically adjusted for months with fewer than 31 days, including corrections for leap years. The clock operates in either the 24-hour or 12-hour format with AM/PM indicator. And it is valid up to 2100. In order to gain a robust performance, you must put a 3-Volt CR1225 lithium cell in the battery-holder. If you use the primary power only, the module may not work normally, because the crystal may not oscillate.
 
@@ -56,7 +56,7 @@ The battery is not included.
 
 | Seeeduino V4.2 | Base Shield| Grove-RTC |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-RTC/raw/master/img/45d_small.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-RTC/img/45d_small.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-RTC-p-758.html)|
 
 - **Step 2.** Connect Grove-RTC to port **I2C** of Grove-Base Shield.
@@ -69,7 +69,7 @@ The battery is not included.
  In order to gain a robust performance, you must put a 3-Volt CR1225 lithium cell in the battery-holder. If you use the primary power only, the module may not work normally, because the crystal may not oscillate.
 </div>
 
-![](https://github.com/SeeedDocument/Grove-RTC/raw/master/img/arduino_connection.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-RTC/img/arduino_connection.jpg)
 
 !!!Note
     If we don't have the base shield, we also can directly connect the Grove-RTC to Arduino board. Please follow below connection.
@@ -91,7 +91,7 @@ The battery is not included.
 
 **Step 3.** Create a new Arduino sketch and paste the codes below to it or open the code directly by the path: **File -> Example ->RTC->SetTimeAndDisplay**.
 
-  ![](https://github.com/SeeedDocument/Grove-RTC/raw/master/img/library%20example.jpg)
+  ![](https://files.seeedstudio.com/wiki/Grove-RTC/img/library%20example.jpg)
 
 
 ```c++     
@@ -167,7 +167,7 @@ clock.fillDayOfWeek(SAT);//Saturday
 ```
 
 **Step 5.** Upload the code and open the serial monitor to receive the sensor's data
-![](https://github.com/SeeedDocument/Grove-RTC/raw/master/img/arduino%20result.png)
+![](https://files.seeedstudio.com/wiki/Grove-RTC/img/arduino%20result.png)
 
 
 
@@ -180,7 +180,7 @@ clock.fillDayOfWeek(SAT);//Saturday
 
 | Raspberry pi | GrovePi_Plus | Grove-RTC |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-RTC/raw/master/img/45d_small.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-RTC/img/45d_small.jpg)|
 |[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/Grove-RTC-p-758.html)|
 
 
@@ -189,7 +189,7 @@ clock.fillDayOfWeek(SAT);//Saturday
 - **Step 3.** Connect Grove-RTC  to **I2C** port of GrovePi_Plus.
 - **Step 4.** Connect the Raspberry to PC through USB cable.
 
-![](https://github.com/SeeedDocument/Grove-RTC/raw/master/img/rasp_connection.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-RTC/img/rasp_connection.jpg)
 
 #### Software
 
@@ -261,7 +261,7 @@ while True:
 
 -	**Step 4.** Here is the result.
 
-  ![](https://github.com/SeeedDocument/Grove-RTC/raw/master/img/rpi_display.jpg)
+  ![](https://files.seeedstudio.com/wiki/Grove-RTC/img/rpi_display.jpg)
 
 **Demo 2: Grove_rtc**
 
@@ -409,7 +409,7 @@ class DS1307():
 
 Here is the result.
 
-![](https://github.com/SeeedDocument/Grove-RTC/raw/master/img/rpi_display2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-RTC/img/rpi_display2.jpg)
 
 
 ## Schematic Online Viewer
@@ -422,8 +422,8 @@ Here is the result.
 
 
 - **[Eagle]** [Grove-RTC in Eagle format](https://raw.githubusercontent.com/SeeedDocument/Grove-RTC/master/res/Real_Time_Clock.zip)
-- **[PDF]** [Grove-RTC Schematic in PDF format](https://github.com/SeeedDocument/Grove-RTC/raw/master/res/Grove%20-%20RTC%20v1.1%20Sch.pdf)
-- **[PDF]** [Grove-RTC PCB in PDF format](https://github.com/SeeedDocument/Grove-RTC/raw/master/res/Grove%20-%20RTC%20v1.1%20PCB.pdf)
+- **[PDF]** [Grove-RTC Schematic in PDF format](https://files.seeedstudio.com/wiki/Grove-RTC/res/Grove%20-%20RTC%20v1.1%20Sch.pdf)
+- **[PDF]** [Grove-RTC PCB in PDF format](https://files.seeedstudio.com/wiki/Grove-RTC/res/Grove%20-%20RTC%20v1.1%20PCB.pdf)
 - **[Library]**[Github repository for RTC](https://github.com/Seeed-Studio/RTC_DS1307/archive/master.zip)
 - **[Datasheet]** [DS1307 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-RTC/master/res/DS1307.pdf)
 

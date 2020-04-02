@@ -10,7 +10,7 @@ sku: 101020029
 tags: grove_digital, io_3v3, io_5v, plat_duino, plat_linkit, plat_wio
 ---
 
-![](https://github.com/SeeedDocument/Grove-Infrared_Reflective_Sensor/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/img/main.jpg)
 
 Grove - Infrared Reflective Sensor is used to detect the presence of an object within a specific range. The sensor consists of an IR LED and a photosensor (phototransistor) pair. The light emitted by the IR LED gets reflected by any object placed in front of the sensor and this reflection is detected by the photosensor(phototransistor). Any white (or lighter) colored surface reflects more than black (or darker) colored surface.
 
@@ -153,7 +153,7 @@ Let us implement simple optical encoder to detect the speed of a motor
 
 - **Step 2.** Connect the Infrared Reflective Sensor to the **D2** port of Grove - Base Shield and connect the motor to the **D6** (In fact, you can just connct VCC and GND to power the motor).
 
-![](https://github.com/SeeedDocument/Grove-Infrared_Reflective_Sensor/raw/master/img/connect_arduino.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/img/connect_arduino.jpg)
 
 - **Step 3.** Attach a round, white paper plate (with a black line marked on it) to the motor. Place the sensor near this rotatory encoder. Run the motor.
 
@@ -220,7 +220,7 @@ void loop()
 
 | Raspberry pi | GrovePi_Plus | Grove - Infrared Reflective Sensor |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Infrared_Reflective_Sensor/raw/master/img/thumbnail.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/img/thumbnail.jpg)|
 |[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/Grove-Infrared-Reflective-Sensor-v1.2-p-2791.html)|
 
 
@@ -233,7 +233,7 @@ void loop()
 
 
 
-![](https://github.com/SeeedDocument/Grove-Infrared_Reflective_Sensor/raw/master/img/connect_pi.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/img/connect_pi.jpg)
 
 
 
@@ -335,7 +335,7 @@ black surface detected
 ## Resources
 
 
-- **[Zip]**  [Grove-Infrared Reflective Sensor v1.2 Eagle Files](https://github.com/SeeedDocument/Grove-Infrared_Reflective_Sensor/raw/master/res/Grove%20-%20Infrared%20Reflective%20Sensor%20v1.2_eaglefile.zip)
+- **[Zip]**  [Grove-Infrared Reflective Sensor v1.2 Eagle Files](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/res/Grove%20-%20Infrared%20Reflective%20Sensor%20v1.2_eaglefile.zip)
 - **[Zip]**  [Arduino Timer1 Library](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Reflective_Sensor/master/res/TimerOne-ArduinoLib.zip)
 - **[Pdf]**  [RPR220 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Reflective_Sensor/master/res/RPR220_datasheet.pdf)
 - **[Pdf]** [Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Reflective_Sensor/master/res/LMV358_datasheet.pdf)

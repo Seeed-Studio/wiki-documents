@@ -11,7 +11,7 @@ sku: 113990017
 
 The kit is consisted of transmitter and receiver, popular used for remote control.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/315mhz-rf-link-kit-p-76.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/315mhz-rf-link-kit-p-76.html)
 
 ##   Specification
 ---
@@ -33,7 +33,7 @@ Excuse for the documentation, we will work on them. Before that, please consult 
 
 More over, we will make more RF modules ourselves with different frequency and capacity. The next one in plan is based on cc1100 Please suggest us about your need :)
 
-![](https://github.com/SeeedDocument/315Mhz_RF_link_kit/raw/master/img/315433RF.jpg)
+![](https://files.seeedstudio.com/wiki/315Mhz_RF_link_kit/img/315433RF.jpg)
 
 ##   Resources
 ---

@@ -38,7 +38,7 @@ Please contact a Renesas Electronics sales office if you have any questions rega
 
 ## Quick Start Guide
 
-![](https://github.com/SeeedDocument/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/raw/master/img/Quick%20Start%20Guide.jpeg)
+![](https://files.seeedstudio.com/wiki/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/img/Quick%20Start%20Guide.jpeg)
 
 - The link of Step4: [www.renesas.com/iotsandbox/S5D9/tutorial](http://www.renesas.com/iotsandbox/S5D9/tutorial)
 
@@ -71,7 +71,7 @@ The S5D9 MCU Board is the heart of the IoT Fast Prototyping Kit. It enables the 
 
 The board includes 24V tolerant digital inputs with overvoltage protection suitable for use in noisy industrial environments. The board can also control two digital loads such as solenoids powered with 24V and drawing up to 1A current. The included MOSFET drivers have built-in overcurrent and over temperature protection that ensure robust operation.
 
-![](https://github.com/SeeedDocument/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/raw/master/img/S5D9_MCU_Board.png)
+![](https://files.seeedstudio.com/wiki/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/img/S5D9_MCU_Board.png)
 
 The S5D9 board incorporates a Renesas Synergy Microcontroller with a 640K KB RAM and a 2 MB flash memory. In addition, the board has a 16 MB external flash memory connected through a QSPI interface.
 
@@ -91,7 +91,7 @@ The S5D9 Fast Prototyping Kit specifications are listed in Table 2.1.
 
 Table 2.1 Electrical Specifications
 
-![](https://github.com/SeeedDocument/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/raw/master/img/Table%202.1%20Electrical%20Specifications.png)
+![](https://files.seeedstudio.com/wiki/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/img/Table%202.1%20Electrical%20Specifications.png)
 
 ### 2.2.2 Connection Diagram
 
@@ -99,7 +99,7 @@ The IoT Fast Prototyping kit is intended to enable quick prototyping of various 
 
 Figure 2.1 Connection Diagram
 
-![](https://github.com/SeeedDocument/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/raw/master/img/Connection%20Diagram.png)
+![](https://files.seeedstudio.com/wiki/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/img/Connection%20Diagram.png)
 
 ## 3. S5D9 MCU Board Description
 
@@ -107,7 +107,7 @@ Figure 2.1 Connection Diagram
 
 The main functional blocks of the S5D9 board are presented in Figure 3.1.
 
-![](https://github.com/SeeedDocument/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/raw/master/img/Figure%203.1.png)
+![](https://files.seeedstudio.com/wiki/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/img/Figure%203.1.png)
 
 Figure 3.1 S5D9 board main functional blocks
 
@@ -126,7 +126,7 @@ The various modules are as follows:
 
 The following figure calls out the main components of the S5D9 MCU board.
 
-![](https://github.com/SeeedDocument/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/raw/master/img/Block%20Diagram.png)
+![](https://files.seeedstudio.com/wiki/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/img/Block%20Diagram.png)
 
 **Figure 3.2  S5D9 MCU board main components**
 
@@ -152,7 +152,7 @@ Table 4.1 USB Device Connector (J9)
 
 Figure 4.1 LDO regulator used in the MCU board.
 
-![](https://github.com/SeeedDocument/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/raw/master/img/LDO%20regulators%20and%20boost%20converter%20in%20MCU%20board.jpeg)
+![](https://files.seeedstudio.com/wiki/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/img/LDO%20regulators%20and%20boost%20converter%20in%20MCU%20board.jpeg)
 
 Figure 4.1 LDO regulators and boost converter in MCU board
 
@@ -204,11 +204,11 @@ The pin-mapping of the connectors is described in Table 5.3.
 
 Figure 5.1 and Figure 5.2 show schematics for the PMOD and Grove connectors, respectively.
 
-![](https://github.com/SeeedDocument/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/raw/master/img/PMOD%20schematic.jpeg)
+![](https://files.seeedstudio.com/wiki/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/img/PMOD%20schematic.jpeg)
 
 Figure 5.1 PMOD schematic
 
-![](https://github.com/SeeedDocument/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/raw/master/img/Grove%20connector%20schematic.jpeg)
+![](https://files.seeedstudio.com/wiki/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/img/Grove%20connector%20schematic.jpeg)
 
 Figure 5.2 Grove connector schematic
 
@@ -218,11 +218,11 @@ The S5D9 IoT Fast Prototyping kit provides USB device interface only. The wiring
 
 Table 6.1 USB Micro B Type Receptacle - Device Mode (J9)
 
-![](https://github.com/SeeedDocument/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/raw/master/img/Table%206.1%20USB%20Micro%20B%20Type%20Receptacle%20-%20Device%20Mode.png)
+![](https://files.seeedstudio.com/wiki/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/img/Table%206.1%20USB%20Micro%20B%20Type%20Receptacle%20-%20Device%20Mode.png)
 
 Figure 6.1 describes the USB interface implementation:
 
-![](https://github.com/SeeedDocument/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/raw/master/img/USB%20interface%20implementation.jpeg)
+![](https://files.seeedstudio.com/wiki/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/img/USB%20interface%20implementation.jpeg)
 
 Figure 6.1 USB interface implementation
 
@@ -236,7 +236,7 @@ Figure 7.1 Digital Inputs and Outputs
 
 The table below shows the mapping between the digital inputs, outputs and the matching MCU pins used for interfacing to them.
 
-![](https://github.com/SeeedDocument/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/raw/master/img/Digital%20Inputs%20and%20Outputs.jpeg)
+![](https://files.seeedstudio.com/wiki/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/img/Digital%20Inputs%20and%20Outputs.jpeg)
 
 Table 7.1 24V Tolerant Digital Inputs and Outputs Mapping
 
@@ -270,7 +270,7 @@ Table 7.2 User Defined LED Mapping
 | 1 | Yellow | LED2 | P1\_3 |
 | 2 | Red | LED3 | P1\_13 |
 
-![](https://github.com/SeeedDocument/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/raw/master/img/Mapping%20between%20LEDs%2C%20ports.png)
+![](https://files.seeedstudio.com/wiki/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/img/Mapping%20between%20LEDs%2C%20ports.png)
 
 Figure 7.2 Mapping between LEDs, ports
 
@@ -291,7 +291,7 @@ Table 8.1 Dual RS232 Interface
 | 7 | RX2 | P6\_14/RXD7 |
 | 8 | Ground |   |
 
-![](https://github.com/SeeedDocument/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/raw/master/img/Dual%20RS232%20Ports.png)
+![](https://files.seeedstudio.com/wiki/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/img/Dual%20RS232%20Ports.png)
 
 Figure 8.1 Dual RS232 Ports
 
@@ -310,7 +310,7 @@ Table 9.1 JTAG Probe Interface - Connector J2
 | 9 |   | GND | 10 | Input | RESET |
 
 
-![](https://github.com/SeeedDocument/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/raw/master/img/JTAG%20probe%20interface%20connections.png)
+![](https://files.seeedstudio.com/wiki/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/img/JTAG%20probe%20interface%20connections.png)
 
 Figure 9.1 JTAG probe interface connections
 

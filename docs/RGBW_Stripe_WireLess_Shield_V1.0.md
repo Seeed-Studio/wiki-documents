@@ -8,7 +8,7 @@ surveyurl: https://www.research.net/r/RGBW_Stripe_WireLess_Shield_V1
 sku:  105990030
 ---
 
-![](https://github.com/SeeedDocument/RGBW_Stripe_WireLess_Shield_V1.0/raw/master/img/RGBW_rev1_face.jpg)
+![](https://files.seeedstudio.com/wiki/RGBW_Stripe_WireLess_Shield_V1.0/img/RGBW_rev1_face.jpg)
 
 RGBW Stripe WireLess Shield has 4 PWM output to connect RGBW LED Strip.
 Anyone can handle a load of 1.5 A with a voltage of 5 to 24 V.
@@ -17,10 +17,10 @@ Self-renewing fuse protects LED Strip overcurrent.
 For remote control RGB tape used popular transceiver nRF24L01+.
 The most interesting is that the board has a memory, and you can now update the firmware of your Arduino through the air!
 
-![](https://github.com/SeeedDocument/RGBW_Stripe_WireLess_Shield_V1.0/raw/master/img/RGBW_top.jpg)
-![](https://github.com/SeeedDocument/RGBW_Stripe_WireLess_Shield_V1.0/raw/master/img/RGBW_.jpg)
+![](https://files.seeedstudio.com/wiki/RGBW_Stripe_WireLess_Shield_V1.0/img/RGBW_top.jpg)
+![](https://files.seeedstudio.com/wiki/RGBW_Stripe_WireLess_Shield_V1.0/img/RGBW_.jpg)
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](http://www.seeedstudio.com/depot/RGBW-Strip-WireLess-Shield-V10-p-2629.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](http://www.seeedstudio.com/depot/RGBW-Strip-WireLess-Shield-V10-p-2629.html)
 
 ##   Feature
 
@@ -44,11 +44,11 @@ The most interesting is that the board has a memory, and you can now update the 
 
 ##   Layout and schematics
 
-![](https://github.com/SeeedDocument/RGBW_Stripe_WireLess_Shield_V1.0/raw/master/img/RGBW-top.png)
+![](https://files.seeedstudio.com/wiki/RGBW_Stripe_WireLess_Shield_V1.0/img/RGBW-top.png)
 
-![](https://github.com/SeeedDocument/RGBW_Stripe_WireLess_Shield_V1.0/raw/master/img/RGBW-bottom.png)
+![](https://files.seeedstudio.com/wiki/RGBW_Stripe_WireLess_Shield_V1.0/img/RGBW-bottom.png)
 
-![](https://github.com/SeeedDocument/RGBW_Stripe_WireLess_Shield_V1.0/raw/master/img/Scheme_RGBW.PNG)
+![](https://files.seeedstudio.com/wiki/RGBW_Stripe_WireLess_Shield_V1.0/img/Scheme_RGBW.PNG)
 
 
 ##   Libraries

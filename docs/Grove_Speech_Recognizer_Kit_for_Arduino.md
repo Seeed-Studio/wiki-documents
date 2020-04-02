@@ -7,11 +7,11 @@ prodimagename: LFUUlWtcc3wNmrxDp3yjPy7I.jpg
 surveyurl: https://www.research.net/r/Grove_Speech_Recognizer_Kit_for_Arduino
 sku:  110020108
 ---
-![](https://github.com/SeeedDocument/Grove_Speech_Recognizer_Kit_for_Arduino/raw/master/img/LFUUlWtcc3wNmrxDp3yjPy7I.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Speech_Recognizer_Kit_for_Arduino/img/LFUUlWtcc3wNmrxDp3yjPy7I.jpg)
 
 The Grove Speech Recognizer Kit for Arduino is designed for prototype of Smart Home which includes some basic home elements such as Speech Recognizer, Infrared Emitter. You can learn the functions and applications of Speech Recognizer quickly via this kit, the guideline shows some common demos, let's say you can play music via your speak command 'Play music', or turn on the light according to the corresponding command.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Speech-Recognizer-kit-for-Arduino-p-2726.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Speech-Recognizer-kit-for-Arduino-p-2726.html)
 
 
 ##    Part List
@@ -68,7 +68,7 @@ Also you can change another port while modifying the definement of pin.
 
 Press a button of any Infrared Remote Controller, you'll get the detailed information code of the button, see following:
 
-![](https://github.com/SeeedDocument/Grove_Speech_Recognizer_Kit_for_Arduino/raw/master/img/IR_Receiver_IR_controller.png)
+![](https://files.seeedstudio.com/wiki/Grove_Speech_Recognizer_Kit_for_Arduino/img/IR_Receiver_IR_controller.png)
 
 Write down the detailed information of the button you want to press. Following are the information of a button:
 ```
@@ -456,7 +456,7 @@ SelectPlayerDevice(0x02);
 <dl><dd>Pay attention to the name of songs, you can set a name like following type:
 </dd></dl>
 
-![](https://github.com/SeeedDocument/Grove_Speech_Recognizer_Kit_for_Arduino/raw/master/img/Type_of_songs.png)
+![](https://files.seeedstudio.com/wiki/Grove_Speech_Recognizer_Kit_for_Arduino/img/Type_of_songs.png)
 
 <dl><dd>So we can play the song "005" by this function:
 </dd></dl>
@@ -467,7 +467,7 @@ SpecifyMusicPlay(5);
 <dl><dd>Furthermore, sometimes we may play music in a new folder, the previous function comes in handy.
 </dd></dl>
 
-![](https://github.com/SeeedDocument/Grove_Speech_Recognizer_Kit_for_Arduino/raw/master/img/Form_of_folder.png)
+![](https://files.seeedstudio.com/wiki/Grove_Speech_Recognizer_Kit_for_Arduino/img/Form_of_folder.png)
 
 !!!Note
     The folder index range is 01-99, so the folders’ name will only be any number 01 between 99. Pay attention to the number between 1-9, the name of folder should be added to 01-09.
@@ -595,7 +595,7 @@ As all we known, it has 60 numbers while broadcasting time (0 ~ 59), and we can 
 
 *   The sequence of playing is depended on the sequence of song addition in SD Card. _so if we want to play some songs in order, we need to add those songs in SD Card in order._
 
-By the way, we have ranked 61 sound files in a folder, you can [download it](https://github.com/SeeedDocument/Grove_Speech_Recognizer_Kit_for_Arduino/raw/master/res/Sound_file.zip) and copy it to your SD Card. Of course you may need to format SD Card first.
+By the way, we have ranked 61 sound files in a folder, you can [download it](https://files.seeedstudio.com/wiki/Grove_Speech_Recognizer_Kit_for_Arduino/res/Sound_file.zip) and copy it to your SD Card. Of course you may need to format SD Card first.
 
 <center>
 <table>
@@ -701,7 +701,7 @@ void loop ()
 
 - [Github: RTC](https://github.com/Seeed-Studio/RTC_DS1307)
 
-- [Sound files of broadcast](https://github.com/SeeedDocument/Grove_Speech_Recognizer_Kit_for_Arduino/raw/master/res/Sound_file.zip)
+- [Sound files of broadcast](https://files.seeedstudio.com/wiki/Grove_Speech_Recognizer_Kit_for_Arduino/res/Sound_file.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

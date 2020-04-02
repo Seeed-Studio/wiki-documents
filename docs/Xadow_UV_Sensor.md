@@ -7,11 +7,11 @@ prodimagename: xadow%20uv.jpg
 surveyurl: https://www.research.net/r/Xadow_UV_Sensor
 sku:  103040003
 ---
-![](https://github.com/SeeedDocument/Xadow_UV_Sensor/raw/master/img/xadow%20uv.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_UV_Sensor/img/xadow%20uv.jpg)
 
 Xadow UV Sensor is suitable for measuring the UV radiation in sunlight. It can detect the UV wavelength of 290 ~ 400 nm. The UV Sensor is outputting digital voltage value corresponding to UV light intensity. With the diagram of output voltage and UV, we can easy to know the current UV index. The Xadow UV Sensor can be powered by 3.3V. And it is compatible with Xadow system.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-UV-Sensor-p-1694.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-UV-Sensor-p-1694.html)
 
 ##  Specification
 ---
@@ -37,7 +37,7 @@ Required Xadow module: [Xadow - Main Board](/Xadow_Main_Board/), [Xadow - OLED 1
 
 **Download Code**
 
-*   Firstly, you should make sure there are [the library:OLED_Display12864](https://github.com/SeeedDocument/Xadow_UV_Sensor/raw/master/res/OLED_Display12864.zip) in your Arduino Library. If not, please click [here](https://github.com/Seeed-Studio/Grove_OLED_Display_128X64) to download and add it to Arduino Library. Refer to [How to install Arduino Library](/How_to_install_Arduino_Library/) in wiki page, you will familiar with the operation.
+*   Firstly, you should make sure there are [the library:OLED_Display12864](https://files.seeedstudio.com/wiki/Xadow_UV_Sensor/res/OLED_Display12864.zip) in your Arduino Library. If not, please click [here](https://github.com/Seeed-Studio/Grove_OLED_Display_128X64) to download and add it to Arduino Library. Refer to [How to install Arduino Library](/How_to_install_Arduino_Library/) in wiki page, you will familiar with the operation.
 
 *   Now you can upload it to Xadow Main Board by copying and pasting them into Arduino IDE.
 ```
@@ -125,7 +125,7 @@ void readVoltage()     //unsigned int *data
 
 *   Figuring out the UV index is not a different matter by referring to the below diagram.
 
-![](https://github.com/SeeedDocument/Xadow_UV_Sensor/raw/master/img/Voltage_and_UVI.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_UV_Sensor/img/Voltage_and_UVI.jpg)
 
 About the Xadow UV Sensor, we use a resistance which resistance value is 3M, so you need refer to this line for RL=3M.
 
@@ -216,7 +216,7 @@ In default mode, ADR0 and ADR1 are connected to "H"(see the Xadow UV Sensor)
 
 ###  spectral response curve of UV Sensor
 
-![](https://github.com/SeeedDocument/Xadow_UV_Sensor/raw/master/img/Responsivity.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_UV_Sensor/img/Responsivity.jpg)
 
 
 ## Schematic Online Viewer
@@ -227,7 +227,7 @@ In default mode, ADR0 and ADR1 are connected to "H"(see the Xadow UV Sensor)
 
 ##  Resources
 ---
-[Xadow UV Sensor Eagle File](https://github.com/SeeedDocument/Xadow_UV_Sensor/raw/master/res/Xadow_UV_Sensor_Eagle_File.zip)
+[Xadow UV Sensor Eagle File](https://files.seeedstudio.com/wiki/Xadow_UV_Sensor/res/Xadow_UV_Sensor_Eagle_File.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

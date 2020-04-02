@@ -9,7 +9,7 @@ sku: 101020012
 tags: plat_duino
 ---
 
-![](https://github.com/SeeedDocument/Grove_Dust_Sensor/raw/master/img/Dust1.JPG)
+![](https://files.seeedstudio.com/wiki/Grove_Dust_Sensor/img/Dust1.JPG)
 
 This Dust Sensor gives a good indication of the air quality in an environment by measuring the dust concentration. The Particulate Matter level (PM level) in the air is measured by counting the Low Pulse Occupancy time (LPO time) in given time unit. LPO time is proportional to PM concentration. This sensor can provide reliable data for air purifier systems; it is responsive to PM of diameter 1μm.
 
@@ -95,14 +95,14 @@ This Dust Sensor gives a good indication of the air quality in an environment by
 
 | Seeeduino V4.2 | Base Shield|  Grove-Dust Sensor |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Dust_Sensor/raw/master/img/Dust_sensor%20-_s.JPG)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Dust_Sensor/img/Dust_sensor%20-_s.JPG)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Dust-Sensor-p-1050.html)|
 
 - **Step 2.** Connect Grove-Dust Sensor to **D8** port of Grove-Base Shield.
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove_Dust_Sensor/raw/master/img/seeeduino_dust.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Dust_Sensor/img/seeeduino_dust.jpg)
 
 !!!Note
 	If we don't have Grove Base Shield, We also can directly connect Grove-Dust Sensor to Seeeduino as below.
@@ -158,7 +158,7 @@ void loop()
 
 - **Step 2.** In this program, the Seeeduino samples the total duration of "logic low" in 30s, and this duration illustrates the dust density of environment. Open Serial Monitor, we can get air quality's value detected by sensor from PC's serial port.
 
-![](https://github.com/SeeedDocument/Grove_Dust_Sensor/raw/master/img/Serial.png)
+![](https://files.seeedstudio.com/wiki/Grove_Dust_Sensor/img/Serial.png)
 
 **Terminology：**
 
@@ -185,7 +185,7 @@ We can see the concentration of dust is very low in the evening, but it is highe
 
 | Raspberry pi | GrovePi_Plus | Grove-Dust Sensor |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Dust_Sensor/raw/master/img/Dust_sensor%20-_s.JPG)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Dust_Sensor/img/Dust_sensor%20-_s.JPG)|
 |[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/Grove-Dust-Sensor-p-1050.html)|
 
 
@@ -193,7 +193,7 @@ We can see the concentration of dust is very low in the evening, but it is highe
 - **Step 3.** Connect Grove-Dust Sensor to **D2** port of GrovePi_Plus.
 - **Step 4.** Connect the Raspberry to PC through USB cable.
 
-![](https://github.com/SeeedDocument/Grove_Dust_Sensor/raw/master/img/rpi_dust.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Dust_Sensor/img/rpi_dust.jpg)
 
 **Software**
 
@@ -273,8 +273,8 @@ A1: The output signal from Dust Sensor needs to be scaled down to 3.3V logic to 
 
 ## Resources
 
-- **[Datasheet]** [Grove-Dust_sensor datasheet](https://github.com/SeeedDocument/Grove_Dust_Sensor/raw/master/resource/Grove_-_Dust_sensor.pdf)
-- **[Datasheet]** [De-construction of the Shinyei PPD42NS dust sensor Made by Tracy Allen](https://github.com/SeeedDocument/Grove_Dust_Sensor/raw/master/resource/ShinyeiPPD42NS_Deconstruction_TracyAllen.pdf)
+- **[Datasheet]** [Grove-Dust_sensor datasheet](https://files.seeedstudio.com/wiki/Grove_Dust_Sensor/resource/Grove_-_Dust_sensor.pdf)
+- **[Datasheet]** [De-construction of the Shinyei PPD42NS dust sensor Made by Tracy Allen](https://files.seeedstudio.com/wiki/Grove_Dust_Sensor/resource/ShinyeiPPD42NS_Deconstruction_TracyAllen.pdf)
 - **[Demo]**[Building a low-cost networked PM2.5 monitor](https://indiaairquality.com/2014/12/14/building-pickle-jr-the-low-cost-networked-pm2-5-monitor-part-2/) -- Made by A.J.
 - **[Demo]** [Measuring the Pickle Jr. – a modified PPD42 with an attached fan.](https://indiaairquality.com/2014/12/14/measuring-the-pickle-jr-a-modified-ppd42-with-an-attached-fan/) -- Made by A.J.
 - **[Demo]** [Testing the Shinyei PPD42NS](http://irq5.io/2013/07/24/testing-the-shinyei-ppd42ns/) -- Made by darell tan

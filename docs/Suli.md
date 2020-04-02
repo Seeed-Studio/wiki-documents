@@ -22,7 +22,7 @@ And we have been thinking what if there’s a way to make our libraries fit all 
 
 Have a look at the following image,
 
-![](https://github.com/SeeedDocument/Suli/raw/master/img/Suli_layer2.jpg)
+![](https://files.seeedstudio.com/wiki/Suli/img/Suli_layer2.jpg)
 
 We can find that there are four circles and the innermost is HW(hardware). Suli will call resources from HW, such as GPIO, I2C, Timer and UART; then Suli-compatible Library, and then User Application. All of our Libraries will call Suli function only. Thus, for different platforms, we can just port Suli, then the Library can be used. That means different platforms have their Suli, Suli for Arudino, Suli for Mbed, Suli for….
 

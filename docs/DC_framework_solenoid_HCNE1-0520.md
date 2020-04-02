@@ -9,7 +9,7 @@ sku: 311070000
 ---
 This 12-Volt DC framework solenoid is great for projects! These types of solenoid are often used for automatic door locks,vending machines,robot etc. However, they work great for almost any project requiring a DC solenoid.
 
-![](https://github.com/SeeedDocument/DC_framework_solenoid_HCNE1-0520/raw/master/img/Caution.jpg)
+![](https://files.seeedstudio.com/wiki/DC_framework_solenoid_HCNE1-0520/img/Caution.jpg)
 
 <font color="Red">**The solenoid operating temperature should not exceed 80 ℃, or continuous working time less than 1 minute. ** </font>
 
@@ -30,7 +30,7 @@ This 12-Volt DC framework solenoid is great for projects! These types of solenoi
 
 ##   Application Ideas
 
-<div class="center"><div class="floatnone">![](https://github.com/SeeedDocument/DC_framework_solenoid_HCNE1-0520/raw/master/img/HCNE1-0520-2-.jpg)</div></div>
+<div class="center"><div class="floatnone">![](https://files.seeedstudio.com/wiki/DC_framework_solenoid_HCNE1-0520/img/HCNE1-0520-2-.jpg)</div></div>
 
 *   Vending machines, ticket vending machines,money exchange machine
 *   Office equipment: fax machines, punch card machines, copiers, typewriters, cash registers, plotters
@@ -40,7 +40,7 @@ This 12-Volt DC framework solenoid is great for projects! These types of solenoi
 
 ##   Specifications
 
-<div class="center"><div class="floatnone">![](https://github.com/SeeedDocument/DC_framework_solenoid_HCNE1-0520/raw/master/img/HCNE1-0520.jpg)</div></div>
+<div class="center"><div class="floatnone">![](https://files.seeedstudio.com/wiki/DC_framework_solenoid_HCNE1-0520/img/HCNE1-0520.jpg)</div></div>
 
 Operating conditions:
 
@@ -58,7 +58,7 @@ Performance to show:
 
 *   Maximum working temperature shall not exceed 80 ℃.
 
-![](https://github.com/SeeedDocument/DC_framework_solenoid_HCNE1-0520/raw/master/img/HCNE1-0520-3-.jpg)
+![](https://files.seeedstudio.com/wiki/DC_framework_solenoid_HCNE1-0520/img/HCNE1-0520-3-.jpg)
 
 <table >
 <tr>
@@ -102,7 +102,7 @@ Performance to show:
 <td width="150">  Conduit
 </td></tr></table>
 
-![](https://github.com/SeeedDocument/DC_framework_solenoid_HCNE1-0520/raw/master/img/HCNE1-0520-4-.jpg)
+![](https://files.seeedstudio.com/wiki/DC_framework_solenoid_HCNE1-0520/img/HCNE1-0520-4-.jpg)
 
 ##   Test temperature
 
@@ -116,7 +116,7 @@ Performance to show:
 
 *   Insulation strengththe strength should be 600VAC/1 min DC standard product table.
 
-![](https://github.com/SeeedDocument/DC_framework_solenoid_HCNE1-0520/raw/master/img/HCNE1-0520-5-.jpg)
+![](https://files.seeedstudio.com/wiki/DC_framework_solenoid_HCNE1-0520/img/HCNE1-0520-5-.jpg)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

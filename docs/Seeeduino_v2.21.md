@@ -10,7 +10,7 @@ sku:
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Seeeduino_v2.21/raw/master/img/Seeeduino-168p.jpg) ![](https://github.com/SeeedDocument/Seeeduino_v2.21/raw/master/img/Seeeduino_fritzing.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_v2.21/img/Seeeduino-168p.jpg) ![](https://files.seeedstudio.com/wiki/Seeeduino_v2.21/img/Seeeduino_fritzing.png)
 
 Here is the wiki page for Both Seeeduino V2.21 Atmega 168P and Seeeduino V2.21 Atmega 328P.
 
@@ -84,7 +84,7 @@ This documentation is licensed under the Creative Commons [Attribution-ShareAlik
 
 ##   Resources   ##
 
-- **[PDF]** [Schematic in pdf](https://github.com/SeeedDocument/Seeeduino_v2.21/raw/master/res/Seeeduino_v2.21.pdf)
+- **[PDF]** [Schematic in pdf](https://files.seeedstudio.com/wiki/Seeeduino_v2.21/res/Seeeduino_v2.21.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

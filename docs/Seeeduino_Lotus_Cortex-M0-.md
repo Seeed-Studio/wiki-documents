@@ -8,7 +8,7 @@ surveyurl: https://www.surveymonkey.com/r/Seeeduino_Lotus
 sku: 102010228
 ---
 
-![](https://github.com/SeeedDocument/Seeeduino_Lotus_Cortex-M0-/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/img/main.jpg)
 
 Seeeduino Lotus Cortex-M0+ is an ATMEGA SAM D21 Microcontroller development board. The Atmel® | SMART™ SAM D21 is a series of low-power microcontrollers using the 32-bit ARM® Cortex®-M0+ processor with 256KB Flash and 32KB of SRAM. you can consider the Seeeduino Lotus Cortex-M0+ as a combination of Seeeduino and Base Shield. 
 
@@ -313,8 +313,8 @@ A few seconds after the upload finishes, you should see the pin 13 (L) LED on th
 
 ## Resources
 
-- **[ZIP]** [Seeeduino Lotus Cortex-M0+ Eagle file](https://github.com/SeeedDocument/Seeeduino_Lotus_Cortex-M0-/raw/master/res/Seeeduino_Lotus_Cortex-M0%2B.zip)
-- **[PDF]** [SAM D21 DATASHEET](https://github.com/SeeedDocument/Seeeduino_Lotus_Cortex-M0-/raw/master/res/SAM_D21.pdf)
+- **[ZIP]** [Seeeduino Lotus Cortex-M0+ Eagle file](https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/res/Seeeduino_Lotus_Cortex-M0%2B.zip)
+- **[PDF]** [SAM D21 DATASHEET](https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/res/SAM_D21.pdf)
 
 
 

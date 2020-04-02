@@ -178,11 +178,11 @@ A few seconds after the upload finishes, you should see the pin 13 (L) LED on th
 
 - **Data Sheet**
 
-   [ATECC608A-MAHDA-S Datasheet](https://github.com/SeeedDocument/Seeeduino-Crypto-ATmega4809-ECC608-/raw/master/res/ATECC608A-MAHDA-S-datasheet.pdf)
+   [ATECC608A-MAHDA-S Datasheet](https://files.seeedstudio.com/wiki/Seeeduino-Crypto-ATmega4809-ECC608-/res/ATECC608A-MAHDA-S-datasheet.pdf)
 
-   [ATMEGA32U4-MU Datasheet](https://github.com/SeeedDocument/Seeeduino-Crypto-ATmega4809-ECC608-/raw/master/res/ATMEGA32U4-MU-datasheet.pdf)
+   [ATMEGA32U4-MU Datasheet](https://files.seeedstudio.com/wiki/Seeeduino-Crypto-ATmega4809-ECC608-/res/ATMEGA32U4-MU-datasheet.pdf)
 
-   [ATMEGA4809-AFR Datasheet](https://github.com/SeeedDocument/Seeeduino-Crypto-ATmega4809-ECC608-/raw/master/res/ATMEGA4809-AFR-datasheet.pdf)  
+   [ATMEGA4809-AFR Datasheet](https://files.seeedstudio.com/wiki/Seeeduino-Crypto-ATmega4809-ECC608-/res/ATMEGA4809-AFR-datasheet.pdf)  
 
 - **References**
 

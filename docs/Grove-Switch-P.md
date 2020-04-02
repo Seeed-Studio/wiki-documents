@@ -10,7 +10,7 @@ sku: 101020004
 tags: grove_digital, io_3v3, io_5v, plat_duino, plat_linkit, plat_pi, plat_bbg
 ---
 
-![](https://github.com/SeeedDocument/Grove-Switch-P/raw/master/img/switch_p.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Switch-P/img/switch_p.jpg)
 
 This Grove – Switch is a mini SPDT slide, great for “ON/OFF” situations. It is a reliable switch of great build quality that we adopt it on many of our boards. You should stock some for your Grove prototyping system.
 
@@ -69,7 +69,7 @@ What does “P” mean? “P” stands for “panel mount” in this product.
 
 | Seeeduino V4.2 | Base Shield|  Grove-Switch(P) |Grove - Purple LED (3mm)|
 |--------------|-------------|-----------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Switch-P/raw/master/img/SwitchP_s.jpg)|![](https://github.com/SeeedDocument/Grove-Switch-P/raw/master/img/grove_led_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Switch-P/img/SwitchP_s.jpg)|![](https://files.seeedstudio.com/wiki/Grove-Switch-P/img/grove_led_s.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/Grove-Switch(P)-p-1252.html)|[Get One Now](https://www.seeedstudio.com/Grove-Purple-LED-%283mm%29-p-1143.html)|
 
 - **Step 2.** Connect Grove-Switch(P) to **D2** port of Grove-Base Shield.
@@ -77,7 +77,7 @@ What does “P” mean? “P” stands for “panel mount” in this product.
 - **Step 4.** Plug Grove - Base Shield into Seeeduino.
 - **Step 5.** Connect Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-Switch-P/raw/master/img/seeeduino_switch_led.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Switch-P/img/seeeduino_switch_led.jpg)
 
 !!!Note
 	If we don't have Grove Base Shield, We also can directly connect Grove-Switch(P) and Grove - Purple LED (3mm) to Seeeduino as below.
@@ -142,7 +142,7 @@ switch high!
 
 | Raspberry pi | Grove Base Hat for RasPi| Grove - Switch P |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Switch-P/raw/master/img/SwitchP_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Switch-P/img/SwitchP_s.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](http://www.seeedstudio.com/Grove-Switch(P)-p-1252.html)|
 
 
@@ -151,7 +151,7 @@ switch high!
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-Switch-P/raw/master/img/Switch_Hat.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Switch-P/img/Switch_Hat.jpg)
 
 
 !!! Note
@@ -258,7 +258,7 @@ You can quit this program by simply press ++ctrl+c++.
 
 | Raspberry pi | GrovePi_Plus | Grove-Switch(P) |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Switch-P/raw/master/img/SwitchP_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Switch-P/img/SwitchP_s.jpg)|
 |[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](http://www.seeedstudio.com/Grove-Switch(P)-p-1252.html)|
 
 
@@ -266,7 +266,7 @@ You can quit this program by simply press ++ctrl+c++.
 - **Step 3.** Connect Grove-Switch(P) to **D3** port of GrovePi_Plus.
 - **Step 4.** Connect the Raspberry to PC through USB cable.
 
-![](https://github.com/SeeedDocument/Grove-Switch-P/raw/master/img/rpi_switch.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Switch-P/img/rpi_switch.jpg)
 
 **Software**
 

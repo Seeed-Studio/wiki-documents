@@ -10,7 +10,7 @@ tags:
 ---
 
 
-![](https://github.com/SeeedDocument/Grove-6-Position_DIP_Switch/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-6-Position_DIP_Switch/img/main.jpg)
 
 
 The Grove - 6-Position DIP Switch has 6 individual switch positions, which use I^2^C to transmit date. It works great as a multi-channel control switches.
@@ -54,8 +54,8 @@ The Grove - 6-Position DIP Switch has 6 individual switch positions, which use I
 
 ### Pin Map
 
-![](https://github.com/SeeedDocument/Grove-6-Position_DIP_Switch/raw/master/img/pin_map.jpg)
-![](https://github.com/SeeedDocument/Grove-6-Position_DIP_Switch/raw/master/img/pin_map_back.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-6-Position_DIP_Switch/img/pin_map.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-6-Position_DIP_Switch/img/pin_map_back.jpg)
 
 
 
@@ -101,7 +101,7 @@ The Grove - 6-Position DIP Switch has 6 individual switch positions, which use I
 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-6-Position_DIP_Switch/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-6-Position_DIP_Switch/img/connect.jpg)
 
 
 !!!Note
@@ -129,10 +129,10 @@ The Grove - 6-Position DIP Switch has 6 individual switch positions, which use I
 - **Step 3.** Restart the Arduino IDE. Open example via the path: **File --> Examples --> Grove Multi Switch Library --> Grove_Switch_Events**. 
 
 
-![](https://github.com/SeeedDocument/Grove-5-Way_Switch/raw/master/img/path.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-5-Way_Switch/img/path.jpg)
 
 
-Or, you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 
 ```C++
@@ -300,8 +300,8 @@ POS 6: RAW - LOW ON
 
 ## Resources
 
-- **[Zip]** [Grove - 6-Position DIP Switch eagle files](https://github.com/SeeedDocument/Grove-5-Way_Switch/raw/master/res/Grove-5-Way_Switch.zip)
-- **[Zip]** [Grove Multi Switch Library](https://github.com/SeeedDocument/Grove-6-Position_DIP_Switch/raw/master/res/Grove-6-Position_DIP_Switch.zip)
+- **[Zip]** [Grove - 6-Position DIP Switch eagle files](https://files.seeedstudio.com/wiki/Grove-5-Way_Switch/res/Grove-5-Way_Switch.zip)
+- **[Zip]** [Grove Multi Switch Library](https://files.seeedstudio.com/wiki/Grove-6-Position_DIP_Switch/res/Grove-6-Position_DIP_Switch.zip)
 
 
 ## Project

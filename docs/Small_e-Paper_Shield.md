@@ -10,7 +10,7 @@ sku:
 tags:
 ---
 
-<center>![](https://github.com/SeeedDocument/Small_e-Paper_Shield/raw/master/img/E_shield_01.jpg) ![](https://github.com/SeeedDocument/Small_e-Paper_Shield/raw/master/img/E_shield_02.jpg)</center>
+<center>![](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/img/E_shield_01.jpg) ![](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/img/E_shield_02.jpg)</center>
 
 e-Paper might be the most comfortable material to read. It reflects light instead of emitting light to mimic the experience of conventional paper reading. And in this way much less power is consumed. The Small e-paper shield is a driver shield for e-paper of small sizes. It's capable of driving e-papers of 1.44 inch, 2.0 inch and 2.7 inch and supports more than 170 languages. The upper surface of this shield is left flat and clean to give great support to the e-paper attached to it. If you are considering a lightweight and comfortable to read display, e-paper would be a good choice.
 
@@ -24,13 +24,13 @@ e-Paper might be the most comfortable material to read. It reflects light instea
 
 In order to choose the correct library you should know the version of your panel.
 
-![](https://github.com/SeeedDocument/Small_e-Paper_Shield/raw/master/img/Definition_of_Model_Labels.jpg)
+![](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/img/Definition_of_Model_Labels.jpg)
 
 **Pay attention to your panel's label**:
 
 *   if the model name is 'EG020AS012' or 'EM027AS011',then you should choose the old library, please click here [Small e-Paper Library](https://github.com/Seeed-Studio/Small_ePaper_Shield).
 
-*   if the model name is 'EG020BS011' or 'EM027BS013',then you should choose the new library,please click here [New Panel Library【EPD_V230】](https://github.com/SeeedDocument/Small_e-Paper_Shield/raw/master/res/EPDV230.zip).
+*   if the model name is 'EG020BS011' or 'EM027BS013',then you should choose the new library,please click here [New Panel Library【EPD_V230】](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/res/EPDV230.zip).
 
 ##  Specifications
 
@@ -143,7 +143,7 @@ Small e-Paper Shield can display image, a variety of graphics and texts. There a
 *   Connect e-Paper to the FFC interface of Small e-Paper Shield.
 *   Plug Small e-Paper Shield to Arduino/Seeeduino and connect it to PC using a USB cable.
 
-![](https://github.com/SeeedDocument/Small_e-Paper_Shield/raw/master/img/E-Paper_Screen.jpg)
+![](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/img/E-Paper_Screen.jpg)
 
 Now it is time to show demos using the library which needs download from [here](https://github.com/Seeed-Studio/ePaper). After downloading, you need put it into the library file of Arduino IDE by the path:...\arduino-1.0.1\libraries.
 
@@ -155,7 +155,7 @@ Here we select the 2.0 inch screen as an example to show its display functions.
 
 *   Open the code: File -&gt; Examples -&gt; ePaper -&gt; text as show below:
 
-![](https://github.com/SeeedDocument/Small_e-Paper_Shield/raw/master/img/Text_Code.jpg)
+![](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/img/Text_Code.jpg)
 
 <dl><dd><font color="red">We need to re-emphasize this note:</font>
 </dd></dl>
@@ -170,7 +170,7 @@ Here we select the 2.0 inch screen as an example to show its display functions.
 
 *   Now you can see this:
 
-![](https://github.com/SeeedDocument/Small_e-Paper_Shield/raw/master/img/Display_text.jpg)
+![](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/img/Display_text.jpg)
 
 *   Try to change the display text and display location. You may learn every function usage.
 
@@ -180,7 +180,7 @@ The example: _draw_ will be a good example to display a variety of graphics. You
 
 After completing modifications and uploading the code, a beautiful pattern will display on the screen:
 
-![](https://github.com/SeeedDocument/Small_e-Paper_Shield/raw/master/img/Display_graphic.jpg)
+![](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/img/Display_graphic.jpg)
 
 The picture is created by calling the draw graphic functions. You can make your pattern and try it on the screen. Every draw function has a specific description in the reference.
 
@@ -192,7 +192,7 @@ Now you need to open the image example: File -&gt; Examples -&gt; ePaper -&gt; i
 
 You need to upload the code to see the result.
 
-![](https://github.com/SeeedDocument/Small_e-Paper_Shield/raw/master/img/Dispaly_image.jpg)
+![](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/img/Dispaly_image.jpg)
 
 **Note：As you can see, the default screen size in this "image" sketch is set as 2.7 inch. Please modify the screen size setting in case of improper display.**
 
@@ -207,9 +207,9 @@ You need to copy the code for a lattice data of a 200x96 pixel to ‘’’stati
 
 Thanks to a contribution by Muchiri John, we got a very useful and easy-to-use tool. With this tool, displaying an image is no longer difficult.
 
-You can download the tool [here](https://github.com/SeeedDocument/Small_e-Paper_Shield/raw/master/res/EpdImageKit.zip)
+You can download the tool [here](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/res/EpdImageKit.zip)
 
-![](https://github.com/SeeedDocument/Small_e-Paper_Shield/raw/master/img/Snapshot_epaper_shied_tools.jpg)
+![](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/img/Snapshot_epaper_shied_tools.jpg)
 
 ##  Reference
 
@@ -398,13 +398,13 @@ _This function can be used to draw a triangle. It is formed by three points._
 
 ##  Resources
 
-- **[Eagle]** [Small e-Paper Shield Eagle File](https://github.com/SeeedDocument/Small_e-Paper_Shield/raw/master/res/Small_e-Paper_Shield_V2.1.zip)
-- **[PDF]**[Small e-PaperShield v2.1 pdf](https://github.com/SeeedDocument/Small_e-Paper_Shield/raw/master/res/Small%20e-PaperShield%20v2.1.pdf)
-- **[EAGLE]**[Small e-PaperShield v2.1 SCH](https://github.com/SeeedDocument/Small_e-Paper_Shield/raw/master/res/Small%20e-PaperShield%20v2.1.sch)
+- **[Eagle]** [Small e-Paper Shield Eagle File](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/res/Small_e-Paper_Shield_V2.1.zip)
+- **[PDF]**[Small e-PaperShield v2.1 pdf](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/res/Small%20e-PaperShield%20v2.1.pdf)
+- **[EAGLE]**[Small e-PaperShield v2.1 SCH](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/res/Small%20e-PaperShield%20v2.1.sch)
 - **[Library]**  [Small e-Paper Library](https://github.com/Seeed-Studio/Small_ePaper_Shield)
--  **[Datasheet]** [e-Paper panels Datasheet](https://github.com/SeeedDocument/Small_e-Paper_Shield/raw/master/res/4P008-00_02_COG_Driver_Interface_Timing_for_smallPlussize.pdf)
--  **[Tool]** [epdImageKit Tool](https://github.com/SeeedDocument/Small_e-Paper_Shield/raw/master/res/EpdImageKit.zip)
--  **[Library]** [New Panel Library【EPD_V230】](https://github.com/SeeedDocument/Small_e-Paper_Shield/raw/master/res/EPDV230.zip)
+-  **[Datasheet]** [e-Paper panels Datasheet](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/res/4P008-00_02_COG_Driver_Interface_Timing_for_smallPlussize.pdf)
+-  **[Tool]** [epdImageKit Tool](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/res/EpdImageKit.zip)
+-  **[Library]** [New Panel Library【EPD_V230】](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/res/EPDV230.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

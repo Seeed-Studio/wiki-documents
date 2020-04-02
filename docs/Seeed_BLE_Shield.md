@@ -7,11 +7,11 @@ prodimagename:  Seeed_BLE-4.png
 surveyurl: https://www.research.net/r/Seeed_BLE_Shield_v1
 sku:  113030013
 ---
-![](https://github.com/SeeedDocument/Seeed_BLE_Shield/raw/master/img/Seeed_BLE-4.png)
+![](https://files.seeedstudio.com/wiki/Seeed_BLE_Shield/img/Seeed_BLE-4.png)
 
 This Seeed BLE Shield utilizes an [HM-11](/Bluetooth_V4.0_HM_11_BLE_Module) module to provide your Arduino/Seeeduino with serial BLE function. It only takes two pins of the micro controller to communicate your device with this shield. With support for a BLE ComAssistant APK, this BLE Shield can talk to your mobile phone more easily without pairing. You can use it in many conditions, like robot controls or remote control equipment ,etc. We prepared an easy and convenient command set for this shield so that you can use neat and concise code to run the function.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Seeed-BLE-Shield-p-1859.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Seeed-BLE-Shield-p-1859.html)
 
 ##   Specifications
 ---
@@ -99,7 +99,7 @@ This Seeed BLE Shield utilizes an [HM-11](/Bluetooth_V4.0_HM_11_BLE_Module) modu
 
 ## Hardwarw Overview
 
-![](https://github.com/SeeedDocument/Seeed_BLE_Shield/raw/master/img/BLE_Shield.png)
+![](https://files.seeedstudio.com/wiki/Seeed_BLE_Shield/img/BLE_Shield.png)
 
 *   HM-11: The basic module is HM-11, more information you can refer to this wiki of [HM-11](/Bluetooth_V4.0_HM_11_BLE_Module).
 
@@ -117,7 +117,7 @@ This Seeed BLE Shield utilizes an [HM-11](/Bluetooth_V4.0_HM_11_BLE_Module) modu
 ---
 ###   Hardware Connection
 
-![](https://github.com/SeeedDocument/Seeed_BLE_Shield/raw/master/img/Seeed_BLE-2.png)
+![](https://files.seeedstudio.com/wiki/Seeed_BLE_Shield/img/Seeed_BLE-2.png)
 
 Plug Seeed BLE Shield onto the Arduino/Seeeduino directly. **Please pay attention to the position of jumpers on the BLE Shield.**
 
@@ -235,7 +235,7 @@ void loop()
 
 Then, send an "AT+ROLE0" command to BLE Shield; it will return an "OK+Set:0", which means now the BLE Shield is ready to act as a slave.
 
-![](https://github.com/SeeedDocument/Seeed_BLE_Shield/raw/master/img/Seeed_BLE-3.png)
+![](https://files.seeedstudio.com/wiki/Seeed_BLE_Shield/img/Seeed_BLE-3.png)
 
 ###   AT Commands
 
@@ -254,11 +254,11 @@ More information about the AT Commands please refer to the data sheet of BLE mod
 
 ##   Resource
 
-[Schematic of Seeed BLE Shield](https://github.com/SeeedDocument/Seeed_BLE_Shield/raw/master/res/BLE_Shield_v1.0.zip)
+[Schematic of Seeed BLE Shield](https://files.seeedstudio.com/wiki/Seeed_BLE_Shield/res/BLE_Shield_v1.0.zip)
 
-[BLE_apk_for_Android](https://github.com/SeeedDocument/Seeed_BLE_Shield/raw/master/res/HMBLEComAssistant.rar)
+[BLE_apk_for_Android](https://files.seeedstudio.com/wiki/Seeed_BLE_Shield/res/HMBLEComAssistant.rar)
 
-[DataSheet of BLE module](https://github.com/SeeedDocument/Seeed_BLE_Shield/raw/master/res/Bluetooth4_en.pdf)
+[DataSheet of BLE module](https://files.seeedstudio.com/wiki/Seeed_BLE_Shield/res/Bluetooth4_en.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

@@ -10,7 +10,7 @@ tags: io_3v3, io_5v, plat_duino, plat_pi
 
 ---
 
-![](https://github.com/SeeedDocument/Grove-Time_of_Flight_Distance_Sensor-VL53L0X-/raw/master/img/main.JPG)
+![](https://files.seeedstudio.com/wiki/Grove-Time_of_Flight_Distance_Sensor-VL53L0X-/img/main.JPG)
 
 
 Grove - Time of Flight Distance Sensor-VL53L0X is a high speed, high accurary and long range distance sensor based on VL53L0X.
@@ -118,7 +118,7 @@ IIC Address|0x29
 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-Time_of_Flight_Distance_Sensor-VL53L0X-/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Time_of_Flight_Distance_Sensor-VL53L0X-/img/connect.jpg)
 
 
 
@@ -144,12 +144,12 @@ IIC Address|0x29
 		For example, I download this library into `D:\Software\WorkWork\arduino-1.8.5\libraries`,so only need to extract the zip file here. All in all, please make sure the `Grove-Ranging-sensor-VL53L0X-master` folder is in your Arduino library folder, like the picture below.
 
 
-![](https://github.com/SeeedDocument/Grove-Time_of_Flight_Distance_Sensor-VL53L0X-/raw/master/img/folder.png) 
+![](https://files.seeedstudio.com/wiki/Grove-Time_of_Flight_Distance_Sensor-VL53L0X-/img/folder.png) 
 
 
 - **Step 3.** Open the `Grove-Ranging-sensor-VL53L0X-master\examples` folder you've just extracted, you will see five subfolders:
 
-![](https://github.com/SeeedDocument/Grove-Time_of_Flight_Distance_Sensor-VL53L0X-/raw/master/img/examples.png)
+![](https://files.seeedstudio.com/wiki/Grove-Time_of_Flight_Distance_Sensor-VL53L0X-/img/examples.png)
 
 
 Choose different example according to your own needs. Then double click the `xxx.ino` file to open the Arduino IDE.
@@ -200,8 +200,8 @@ Measured distance:152 mm
 
 
 - **[ZIP]** [Grove-Time of Flight Distance Sensor VL53L0X Eagle files](https://github.com/SeeedDocument/Grove-Time_of_Flight_Distance_Sensor-VL53L0X-/raw/master/res/Grove%20-%20Time%20of%20Flight%20Distance%20Sensor%20(VL53L0X).zip)
-- **[PDF]** [VL53L0X User Manual](https://github.com/SeeedDocument/Grove-Time_of_Flight_Distance_Sensor-VL53L0X-/raw/master/res/software-flow.pdf)
-- **[PDF]** [VL53L0X Datasheet](https://github.com/SeeedDocument/Grove-Time_of_Flight_Distance_Sensor-VL53L0X-/raw/master/res/vl53l0x-datasheet.pdf)
+- **[PDF]** [VL53L0X User Manual](https://files.seeedstudio.com/wiki/Grove-Time_of_Flight_Distance_Sensor-VL53L0X-/res/software-flow.pdf)
+- **[PDF]** [VL53L0X Datasheet](https://files.seeedstudio.com/wiki/Grove-Time_of_Flight_Distance_Sensor-VL53L0X-/res/vl53l0x-datasheet.pdf)
 
 
 ## Tech Support

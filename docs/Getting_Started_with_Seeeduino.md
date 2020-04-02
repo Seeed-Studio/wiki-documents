@@ -5,7 +5,7 @@ oldwikiname:  Getting Started with Seeeduino
 prodimagename:  Hello_world.jpg
 surveyurl: https://www.research.net/r/Getting_Started_with_Seeeduino
 ---
-![](https://github.com/SeeedDocument/Getting_Started_with_Seeeduino/raw/master/img/Hello_world.jpg)
+![](https://files.seeedstudio.com/wiki/Getting_Started_with_Seeeduino/img/Hello_world.jpg)
 
 ###  **0. Hello world**
 
@@ -21,25 +21,25 @@ Connect the Seeeduino board to your computer using the USB cable. The green powe
 
 Open the LED blink example sketch: **File&gt;Examples&gt;01.Basics&gt;Blink**.
 
-![](https://github.com/SeeedDocument/Getting_Started_with_Seeeduino/raw/master/img/Getting_Started1.png)
+![](https://files.seeedstudio.com/wiki/Getting_Started_with_Seeeduino/img/Getting_Started1.png)
 
 ###   3. Select your board
 
 You'll need to select the entry in the Tools &gt; Board menu that corresponds to your Arduino. 在Here we need to select ATmega328.
 
-![](https://github.com/SeeedDocument/Getting_Started_with_Seeeduino/raw/master/img/Getting_Started2.png)
+![](https://files.seeedstudio.com/wiki/Getting_Started_with_Seeeduino/img/Getting_Started2.png)
 
 ###   4. Select your Serial Port
 
 Select the serial device of the Arduino board from the Tools | Serial Port menu.
 
-![](https://github.com/SeeedDocument/Getting_Started_with_Seeeduino/raw/master/img/Getting_Started3.png)
+![](https://files.seeedstudio.com/wiki/Getting_Started_with_Seeeduino/img/Getting_Started3.png)
 
 ###   5. Upload the program
 
 Now, simply click the "Upload" button in the environment. Wait a few seconds - you should see the RX and TX leds on the board flashing. If the upload is successful, the message "Done uploading." will appear in the status bar.
 
-![](https://github.com/SeeedDocument/Getting_Started_with_Seeeduino/raw/master/img/Getting_Started4.png)
+![](https://files.seeedstudio.com/wiki/Getting_Started_with_Seeeduino/img/Getting_Started4.png)
 
 ###   6. Result
 

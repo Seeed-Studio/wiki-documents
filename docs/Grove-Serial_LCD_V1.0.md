@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/Grove-Serial_LCD_V1-0
 sku:
 tags:
 ---
-![](https://github.com/SeeedDocument/Grove-Serial_LCD_V1.0/raw/master/img/Lcdnew1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Serial_LCD_V1.0/img/Lcdnew1.jpg)
 
 Grove - Serial LCD V1.0 is the new version of our serial LCDs. Attached on a single board is a 16x2 LCD and an embedded circuit based around a PIC HD44780. The on-board PIC takes a TTL serial input and prints the characters it receives onto the LCD. The library also allows for a number of special commands so you can clear the screen, adjust the backlight brightness, turn the display on/off, and more.
 
@@ -66,7 +66,7 @@ This LCD makes for a great gift, because it can be used for so many different pr
 
 - Press Reset Switch after uploading the firmware to Seeeduino.
 
-![](https://github.com/SeeedDocument/Grove-Serial_LCD_V1.0/raw/master/img/SerialLCD010.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Serial_LCD_V1.0/img/SerialLCD010.jpg)
 
 ###   Programming   ###
 
@@ -74,7 +74,7 @@ Serial LCD library provides a rich set of APIs to interact with Serial LCD Modul
 
 ###   Demonstration  Applications  ###
 
-Download the [SerialLCD Library](https://github.com/SeeedDocument/Grove-Serial_LCD_V1.0/raw/master/res/SerialLCD_Library.zip) and Unzip it into the libraries file of Arduino IDE by the path: ..\arduino-1.0.1\libraries, then you can play with your own display system.
+Download the [SerialLCD Library](https://files.seeedstudio.com/wiki/Grove-Serial_LCD_V1.0/res/SerialLCD_Library.zip) and Unzip it into the libraries file of Arduino IDE by the path: ..\arduino-1.0.1\libraries, then you can play with your own display system.
 
 If you have Arduino 1.0 or later, NewSoftSerial is included in the Arduino core (named SoftwareSerial).
 Note：When you have connected Serial LCD to Grove and downloaded the example to the Seeeduino/arduino, make sure you reset the Seeeduino/arduino first.
@@ -113,7 +113,7 @@ void loop() {
 
 OUTPUT:
 
-![](https://github.com/SeeedDocument/Grove-Serial_LCD_V1.0/raw/master/img/SerialLCD_twig_helloworld_example.gif)
+![](https://files.seeedstudio.com/wiki/Grove-Serial_LCD_V1.0/img/SerialLCD_twig_helloworld_example.gif)
 
 Demo 2: Intermittently display
 
@@ -148,7 +148,7 @@ void loop() {
 ```
 
 OUTPUT:
-![](https://github.com/SeeedDocument/Grove-Serial_LCD_V1.0/raw/master/img/SerialLCD_twig_display_example.gif)
+![](https://files.seeedstudio.com/wiki/Grove-Serial_LCD_V1.0/img/SerialLCD_twig_display_example.gif)
 
 Demo 3:  Blink
 
@@ -182,7 +182,7 @@ void loop() {
 ```
 
 OUTPUT:
-![](https://github.com/SeeedDocument/Grove-Serial_LCD_V1.0/raw/master/img/SerialLCD_twig_blink_example.gif)
+![](https://files.seeedstudio.com/wiki/Grove-Serial_LCD_V1.0/img/SerialLCD_twig_blink_example.gif)
 
 Demo 4: Cursor Display
 
@@ -217,7 +217,7 @@ void loop() {
 ```
 
 OUTPUT:
-![](https://github.com/SeeedDocument/Grove-Serial_LCD_V1.0/raw/master/img/SerialLCD_twig_cursor_example.gif)
+![](https://files.seeedstudio.com/wiki/Grove-Serial_LCD_V1.0/img/SerialLCD_twig_cursor_example.gif)
 
 Demo 5: Display Text Flow Direction and Cursor Position
 
@@ -260,7 +260,7 @@ void loop() {
 ```
 
 OUTPUT:
-![](https://github.com/SeeedDocument/Grove-Serial_LCD_V1.0/raw/master/img/SerialLCD_twig_textflow_setcursor_example.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Serial_LCD_V1.0/img/SerialLCD_twig_textflow_setcursor_example.jpg)
 
 ##  Reference  ##
 
@@ -542,8 +542,8 @@ slcd.backlight();  // Turn on the backlight
 
 ##   Resources   ##
 
-- **[Eagle]** [Schematic and Board Files](https://github.com/SeeedDocument/Grove-Serial_LCD_V1.0/raw/master/res/202000309_PCBA-Grove-Serial%20LCD_%E5%8E%9F%E7%90%86%E5%9B%BE.zip)
-- **[Library]** [SerialLCD Library for v1.0b and v1.1b](https://github.com/SeeedDocument/Grove-Serial_LCD_V1.0/raw/master/res/New_SerialLCD_Library_.zip)
+- **[Eagle]** [Schematic and Board Files](https://files.seeedstudio.com/wiki/Grove-Serial_LCD_V1.0/res/202000309_PCBA-Grove-Serial%20LCD_%E5%8E%9F%E7%90%86%E5%9B%BE.zip)
+- **[Library]** [SerialLCD Library for v1.0b and v1.1b](https://files.seeedstudio.com/wiki/Grove-Serial_LCD_V1.0/res/New_SerialLCD_Library_.zip)
 - **[repository]** [github repository for SerialLCD](https://github.com/Seeed-Studio/Grove_SerialLCD)
 - **[Library]**  [NewSoftLibrary](http://arduiniana.org/NewSoftSerial/NewSoftSerial10c.zip)
 - **[Library]** [a small fix to v1.0b-Library](https://github.com/ydirson/Wiring/commit/60e58003e8c1dc9be81d0f58b1d0f3ef9fad1446) for begin() not following the correct protocol

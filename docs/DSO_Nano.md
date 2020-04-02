@@ -14,7 +14,7 @@ Being a new and dynamic open-hardware and open-source project, the information t
 
 Click the image to get to different version of DSO Nano.
 
-|[![](https://github.com/SeeedDocument/DSO_Nano/raw/master/img/Dsonanointro.jpg)](https://www.seeedstudio.com/DSO-nano-Pocket-size-digital-storage-oscilloscope-p-512.html)|[![](https://github.com/SeeedDocument/DSO_Nano/raw/master/img/Dsonanov2intro.jpg)](https://www.seeedstudio.com/DSO-Nano-v2-p-681.html)|[![](https://github.com/SeeedDocument/DSO_Nano/raw/master/img/Nano_v3.jpg)](https://www.seeedstudio.com/DSO-Nano-v3-p-1358.html)|
+|[![](https://files.seeedstudio.com/wiki/DSO_Nano/img/Dsonanointro.jpg)](https://www.seeedstudio.com/DSO-nano-Pocket-size-digital-storage-oscilloscope-p-512.html)|[![](https://files.seeedstudio.com/wiki/DSO_Nano/img/Dsonanov2intro.jpg)](https://www.seeedstudio.com/DSO-Nano-v2-p-681.html)|[![](https://files.seeedstudio.com/wiki/DSO_Nano/img/Nano_v3.jpg)](https://www.seeedstudio.com/DSO-Nano-v3-p-1358.html)|
 |:---:|:---:|:---:|
 |[DSO Nano v1](https://www.seeedstudio.com/DSO-nano-Pocket-size-digital-storage-oscilloscope-p-512.html)<br>**(Discontinued)**|[DSO Nano v2](https://www.seeedstudio.com/DSO-Nano-v2-p-681.html)<br>**(Discontinued)**|[DSO Nano v3](https://www.seeedstudio.com/DSO-Nano-v3-p-1358.html)
 
@@ -84,7 +84,7 @@ The newest firmware from BenF is available from the [Tech Support](http://forum.
 
 To upgrade the firmware to the latest version, you have a few options:
 
-*   If you work with Windows, follow the instructions contained in the official [v2 User Manual](https://github.com/SeeedDocument/DSO_Nano/raw/master/res/DSO%20Nano%20v2%20Manual.pdf) (pages 8-10). The required utility DfuSeDemo.exe is also available [here](http://dsonano.googlecode.com/files/um0412.zip).
+*   If you work with Windows, follow the instructions contained in the official [v2 User Manual](https://files.seeedstudio.com/wiki/DSO_Nano/res/DSO%20Nano%20v2%20Manual.pdf) (pages 8-10). The required utility DfuSeDemo.exe is also available [here](http://dsonano.googlecode.com/files/um0412.zip).
 *   On Linux and Mac OS X you can use [Dfu-util](http://wiki.seeedstudio.com/Dfu-util) (0.5 or newer).
 
 ##   Capabilities
@@ -213,7 +213,7 @@ To upgrade the firmware to the latest version, you have a few options:
 
 *   [Community firmware source git tree](http://gitorious.org/dsonano/dso-firmware) (for gcc and IAR)
 
-*   [MOD your DSO nano UI](https://github.com/SeeedDocument/DSO_Nano/raw/master/res/DSOUI.pdf)
+*   [MOD your DSO nano UI](https://files.seeedstudio.com/wiki/DSO_Nano/res/DSOUI.pdf)
 
 *   [Sewa Mobil Jakarta](http://www.awanirentcar.com), [Aksesoris mobil](http://kiosauto.com)
 

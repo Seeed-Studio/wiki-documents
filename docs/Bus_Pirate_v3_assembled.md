@@ -7,13 +7,13 @@ prodimagename:  Bus%20Pirate%20v3.6interface.jpg
 surveyurl: https://www.research.net/r/Bus_Pirate_v3_assembled
 sku:      102990038
 ---
-![](https://github.com/SeeedDocument/Bus_Pirate_v3_assembled/raw/master/img/Bus%20Pirate%20v3.6interface.jpg)
+![](https://files.seeedstudio.com/wiki/Bus_Pirate_v3_assembled/img/Bus%20Pirate%20v3.6interface.jpg)
 
 The BusPirate v3 is a universal bus interface that talks to electronics from a PC serial terminal, eliminating a ton of early prototyping effort when working with new or unknown chips.
 
 **Protocols:** 1-Wire, I2C, SPI, JTAG, asynchronous serial (UART), MIDI, PC keyboard, HD44780 LCDs, and generic 2- and 3-wire libraries for custom protocols.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/bus-pirate-v3-assembled-p-609.html?cPath=174)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/bus-pirate-v3-assembled-p-609.html?cPath=174)
 
 ##   Features
 ---

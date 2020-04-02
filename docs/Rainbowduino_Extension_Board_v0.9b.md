@@ -11,7 +11,7 @@ tags:
 
 ---
 
-![](https://github.com/SeeedDocument/Rainbowduino_Extension_Board_v0.9b/raw/master/img/Rainbowshield.jpg)
+![](https://files.seeedstudio.com/wiki/Rainbowduino_Extension_Board_v0.9b/img/Rainbowshield.jpg)
 
 Rainbowduino Extension Shield is a breakout board of Rainbowduino’s 192 separate LED driving channels. The channels are divided into three 8*8 arrays: red, green and blue for easier controlling, it is designed to ease customized LED projects based on Rainbowduino.
 
@@ -76,7 +76,7 @@ void _main(void)
 ```
 The effect is:
 
-![](https://github.com/SeeedDocument/Rainbowduino_Extension_Board_v0.9b/raw/master/img/Rainbowduino-extension-exam1.jpg)
+![](https://files.seeedstudio.com/wiki/Rainbowduino_Extension_Board_v0.9b/img/Rainbowduino-extension-exam1.jpg)
 
 Actually 1 byte is used to control two LEDs, the theory for details is as follows:
 ```
@@ -120,7 +120,7 @@ unsigned char dots_color[3][8][4]=
 
 Another effect picture displayed as the character RGB here, and the code for details is linked on the depot page.
 
-![](https://github.com/SeeedDocument/Rainbowduino_Extension_Board_v0.9b/raw/master/img/Rainbowduino-extension-exam2.jpg)
+![](https://files.seeedstudio.com/wiki/Rainbowduino_Extension_Board_v0.9b/img/Rainbowduino-extension-exam2.jpg)
 
 ##   Resources  
 

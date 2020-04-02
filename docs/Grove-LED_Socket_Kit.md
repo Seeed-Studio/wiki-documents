@@ -7,7 +7,7 @@ prodimagename: Grove-White-LED-p-2016.jpeg
 surveyurl: https://www.research.net/r/Grove_LED_Socket_Kit
 sku:  104030009
 ---
-![](https://github.com/SeeedDocument/Grove-LED_Socket_Kit/raw/master/img/Grove-White-LED-p-2016.jpeg)
+![](https://files.seeedstudio.com/wiki/Grove-LED_Socket_Kit/img/Grove-White-LED-p-2016.jpeg)
 
 Grove - LED is designed for the beginners of Arduino/Seeeduino to monitor controls from digital ports. It can be mounted to the surface of your box or desk easily and used as pilot lamp for power or signal. Its brightness can be adjust by potentiometer.
 
@@ -54,7 +54,7 @@ Here we show how to use Arduino to control the state of the LED.
 
 2.Plug it onto the Arduino/Seeeduino. Connect the board to PC using USB cable.
 
-![](https://github.com/SeeedDocument/Grove-LED_Socket_Kit/raw/master/img/Grove-LED.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-LED_Socket_Kit/img/Grove-LED.jpg)
 
 3.Copy the demo code to your sketch, then upload to Arduino or Seeeduino board. Please click [here](http://www.seeedstudio.com/wiki/Upload_Code) if you do not know how to upload.
 
@@ -138,9 +138,9 @@ sudo python grove_led_blink.py
 
 *   [Grove - LED Source files (Eagle and pdf)](https://github.com/SeeedDocument/Grove-LED_Socket_Kit/raw/master/res/Grove-LED_v1.0_Source_File.zip)
 
-*   [GroveLEDDemoCode](https://github.com/SeeedDocument/Grove-LED_Socket_Kit/raw/master/res/GroveLEDDemoCode.zip)
+*   [GroveLEDDemoCode](https://files.seeedstudio.com/wiki/Grove-LED_Socket_Kit/res/GroveLEDDemoCode.zip)
 
-*   [Grove-LED Socket Kit](https://github.com/SeeedDocument/Grove-LED_Socket_Kit/raw/master/res/Grove-LED_Socket_Eagle_File.zip)
+*   [Grove-LED Socket Kit](https://files.seeedstudio.com/wiki/Grove-LED_Socket_Kit/res/Grove-LED_Socket_Eagle_File.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

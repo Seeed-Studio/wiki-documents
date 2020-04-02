@@ -8,7 +8,7 @@ surveyurl:
 sku: 
 ---
 
-![enter image description here](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/img/product_picture.png)
+![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Ethernet_Shield_v1.0/img/product_picture.png)
 
 [Azure Sphere MT3620 Development kit](https://www.seeedstudio.com/Azure-Sphere-MT3620-Development-Kit-US-Version-p-3052.html) comes with four 2.54mm headers for hardware resources extension from MT3620. MT3620 Ethernet Shield is an add-on breakout board designed for MT3620 development kit. The Azure Sphere ethernet shield enables support for private LAN connection only. Please see [here](https://docs.microsoft.com/en-us/azure-sphere/network/connect-private-network) for more details.
 
@@ -37,59 +37,59 @@ Microsoft Azure Sphere is a solution for creating highly-secured, connected, MCU
 
 ## Hardware Overview
 
-![](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/img/hardware_overview.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Ethernet_Shield_v1.0/img/hardware_overview.png)
 
 - <font face="" size=3 font color="ff0000">①</font> **J1**: RJ45 interface, It is connected to ENC28J60. 
 
-![](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/img/J1.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Ethernet_Shield_v1.0/img/J1.png)
 
 - <font face="" size=3 font color="ff0000">②</font> **LED1**: 3.3V Power Red LED, when you power the board, the led will be turned on. 
 
-![](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/img/led.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Ethernet_Shield_v1.0/img/led.png)
 
 
 - <font face="" size=3 font color="ff0000">③</font> **U1**: ENC28J60, Stand-Alone Ethernet Controller with SPI Interface, which converts SPI to Ethernet interface. 
 
-![](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/img/U1.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Ethernet_Shield_v1.0/img/U1.png)
 
 
 - <font face="" size=3 font color="ff0000">④</font> **H4**: Azure Sphere(MT3620 Development Board) , Extention Header , H4
 
-![](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/img/H4.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Ethernet_Shield_v1.0/img/H4.png)
 
 - <font face="" size=3 font color="ff0000">⑤</font> **H3**: Azure Sphere(MT3620 Development Board) , Extention Header , H3
 
-![](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/img/H3.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Ethernet_Shield_v1.0/img/H3.png)
 
 - <font face="" size=3 font color="ff0000">⑥</font> **H2**: Azure Sphere(MT3620 Development Board) , Extention Header , H2
 
-![](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/img/H2.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Ethernet_Shield_v1.0/img/H2.png)
 
 
 - <font face="" size=3 font color="ff0000">⑦</font> **H1**: Azure Sphere(MT3620 Development Board) , Extention Header , H1
 
-![](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/img/H1.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Ethernet_Shield_v1.0/img/H1.png)
 
 - <font face="" size=3 font color="ff0000">⑧</font> **J2**: UART3 Pin Header, It is connected to MT3620 GPIO66~GPIO69. 
 
-![](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/img/J2.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Ethernet_Shield_v1.0/img/J2.png)
 
 
 **Pin Out**
 
 - The H1/H2/H3/H4 are the same as Azure Sphere board pin out.
 
-![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/H1_2.png)
+![](https://files.seeedstudio.com/wiki/Azure_Sphere_MT3620_Development_Kit/img/H1_2.png)
 
-![](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/raw/master/img/H3_4.png)
+![](https://files.seeedstudio.com/wiki/Azure_Sphere_MT3620_Development_Kit/img/H3_4.png)
 
 **Dimensions**
 
-![](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/img/drawing1.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Ethernet_Shield_v1.0/img/drawing1.png)
 
-![](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/img/drawing2.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Ethernet_Shield_v1.0/img/drawing2.png)
 
-![](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/img/drawing3.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Ethernet_Shield_v1.0/img/drawing3.png)
 
 
 ## Application Ideas
@@ -135,7 +135,7 @@ The sample uses the following Azure Sphere libraries and includes [beta APIs](ht
 
 | MT3620 development kits | MT3620 Ethernet Shield | 
 |--------------|-------------|
-|![enter image description here](https://github.com/SeeedDocument/Grove_Starter_Kit_for_Azure_Sphere_MT3620_Development_Kit/raw/master/img/azure_s.jpg)|![enter image description here](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/img/ethernet_s.png)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_for_Azure_Sphere_MT3620_Development_Kit/img/azure_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Ethernet_Shield_v1.0/img/ethernet_s.png)|
 |[Get One Now](https://www.seeedstudio.com/Azure-Sphere-MT3620-Development-Kit-p-3052.html)|[Get One Now](https://www.seeedstudio.com/MT3620-Ethernet-Shield-v1-0-p-2917.html)|
 
 
@@ -143,7 +143,7 @@ The sample uses the following Azure Sphere libraries and includes [beta APIs](ht
 - Step 2. Plug the USB cable to Azure Sphere MT3620 Development board and PC.
 - Step 3. Connect the network cable between MT3620 Ethernet board and PC.
 
-![](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/img/stack_with_azuresphere.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Ethernet_Shield_v1.0/img/stack_with_azuresphere.png)
 
 
 **To build and run the sample**
@@ -277,11 +277,11 @@ If you no longer require Ethernet, for example because you wish to use your boar
 
 ## Resource
 
-- **[PDF]** [MT3620 Ethernet Shield v1.0](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/res/MT3620%20Ethernet%20Shield_v1.0_SCH_181220.pdf)
-- **[Eagle]** [MT3620 Ethernet Shield v1.0](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/res/202002332_MT3620%20Ethernet%20Shield_v1.0_SCH%20%26%20PCB.zip)
-- **[Mechanical Drawing]** [MT3620 Ethernet Shield Mechanical Drawing](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/res/103990403%2C%20MT3620%20Ethernet%20Shield%20v1.0.pdf)
+- **[PDF]** [MT3620 Ethernet Shield v1.0](https://files.seeedstudio.com/wiki/MT3620_Ethernet_Shield_v1.0/res/MT3620%20Ethernet%20Shield_v1.0_SCH_181220.pdf)
+- **[Eagle]** [MT3620 Ethernet Shield v1.0](https://files.seeedstudio.com/wiki/MT3620_Ethernet_Shield_v1.0/res/202002332_MT3620%20Ethernet%20Shield_v1.0_SCH%20%26%20PCB.zip)
+- **[Mechanical Drawing]** [MT3620 Ethernet Shield Mechanical Drawing](https://files.seeedstudio.com/wiki/MT3620_Ethernet_Shield_v1.0/res/103990403%2C%20MT3620%20Ethernet%20Shield%20v1.0.pdf)
 - **[Library]** [MT3620 Ethernet Shield Library](https://github.com/Azure/azure-sphere-samples/tree/master/Samples/PrivateEthernet)
-- **[DataSheet]** [ENC28J60 Datasheet](https://github.com/SeeedDocument/MT3620_Ethernet_Shield_v1.0/raw/master/res/ENC28J60.pdf)
+- **[DataSheet]** [ENC28J60 Datasheet](https://files.seeedstudio.com/wiki/MT3620_Ethernet_Shield_v1.0/res/ENC28J60.pdf)
 - **[FAQ Web]** [Azure Sphere Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=azuresphere)
 - **[FAQ Web]** [Azure Sphere Github issues](https://github.com/MicrosoftDocs/azure-sphere-issues/issues?utf8=%E2%9C%93&q=is%3Aissue)
 

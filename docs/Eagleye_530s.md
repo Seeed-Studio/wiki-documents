@@ -8,7 +8,7 @@ surveyurl:
 sku: 114991433
 ---
 
-![enter image description here](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/eagleye_530s.JPG)
+![enter image description here](https://files.seeedstudio.com/wiki/Eagleye_530s/img/eagleye_530s.JPG)
 
 
 Seeed is an experienced designer of development kits for IoT technology platforms. Our latest development kit—the Eagleye 530s,--is designed to help you get started developing products and services for the [Samsung ARTIK™ IoT platform](https://www.artik.io/).
@@ -70,15 +70,15 @@ Since the Eagleye 530s is pin-compatible with many “maker” hardware accessor
 
 **Block Diagram**
 
-![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/block_digram.png)
+![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/block_digram.png)
 
 **Interfaces**
 
 Below figures show the overall preview of the Eagleye 530s' TOP and BOTTOM.
 
-![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/eagleye_530s_front.JPG)
+![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/eagleye_530s_front.JPG)
 
-![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/eagleye_530s_back.JPG)
+![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/eagleye_530s_back.JPG)
 
 - <font face="" size=5 font color="ff0000">ⓐ</font> **DC Power:** 5V DC power supply.
 
@@ -142,10 +142,10 @@ When the jumpers JP1 are in the 1-2 position, the power is provided from the usb
 
 **Mechanical Drawing**
 
-![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/MECHANICAL1.png)
-![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/MECHANICAL2.png)
-![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/MECHANICAL5.png)
-![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/MECHANICAL4.png)
+![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/MECHANICAL1.png)
+![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/MECHANICAL2.png)
+![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/MECHANICAL5.png)
+![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/MECHANICAL4.png)
 
 !!!note
     Mechanical Drawing all dimensions are in [mm].
@@ -168,7 +168,7 @@ This section will describe how to start working with your Eagleye 530s Developme
 - Step 2. Connect USB cable from PC to USB UART(named as number 8 on hardware overview).
 - Step 3. Press the Power button for more than 1 second and we will see the Green/Red LEDs(refer to Number 10/11 on hardware overview) are turned on.
 
-  ![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/usb_connection.jpg)
+  ![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/usb_connection.jpg)
 
 **Software**
 
@@ -178,7 +178,7 @@ Setting up a connection with the Eagleye 530s Module can be done in a wired or w
 - Step 2. When using a PC install the USB to Serial driver. The driver can be found at the following location: (http://www.ftdichip.com/Drivers/CDM/CDM21218_Setup.zip). For other drivers please visit (http://www.ftdichip.com/Drivers/D2XX.htm).
 - Step 3. Check the COM port number on your PC when you connect the USB serial cable. In our case the COM port allocated is COM9.
 
-![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/Com.png)
+![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/Com.png)
 
 - Step 4. Set the PuTTY configuration as follows:
     - Set the “Serial line” as the COM port number found in step 3.
@@ -187,18 +187,18 @@ Setting up a connection with the Eagleye 530s Module can be done in a wired or w
     - Save the session under Eagleye 530s.
 - Step 5. Select your saved session and click the “Open” button.
 
-![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/Putty_setup.png)
+![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/Putty_setup.png)
 
 - Step 6. The username and password are root.
 - Step 7. We will see the terminal as below.
 
-![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/Putty_normal_boot.png)
+![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/Putty_normal_boot.png)
 
 **Play with onboard LEDs**
 
-![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/leds_buttons.jpg)
+![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/leds_buttons.jpg)
 
-- Step 1. Download [blink_led.py](https://github.com/SeeedDocument/Eagleye_530s/raw/master/res/blink_led.py) or copy below code and paste to blink_led.py.
+- Step 1. Download [blink_led.py](https://files.seeedstudio.com/wiki/Eagleye_530s/res/blink_led.py) or copy below code and paste to blink_led.py.
 
 ```python
 #!/usr/bin/python
@@ -259,7 +259,7 @@ while True:
 
 **Play with onboard Buttons**
 
-- Step 1. Download [read_button.py](https://github.com/SeeedDocument/Eagleye_530s/raw/master/res/read_button.py) or copy below code to read_button.py.
+- Step 1. Download [read_button.py](https://files.seeedstudio.com/wiki/Eagleye_530s/res/read_button.py) or copy below code to read_button.py.
 
 ```python
 #!/usr/bin/python
@@ -372,7 +372,7 @@ connmanctl> quit
 - Step 6. Press the Power button for more than 1 second and we will see the Green/Red/Blue LEDs(refer to Number 10/11/12 on hardware overview) are turned on.
 - Step 7. We will see below message and the firmware is downloaded successfuly.
 
-![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/Putty_firmware.png)
+![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/Putty_firmware.png)
 
 - Step 8. Please shutdown the board, remove SD card and switch boot switch Pin4 back to off.
 
@@ -391,7 +391,7 @@ Eagleye boards provide many programmable signal pins. Some of these are General-
 
 Here is pinout of the connectors with its meaning.
 
-![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/pin_map.png)
+![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/pin_map.png)
 
 
 | Description | Pin Name   | Pin Number | Pin Number | Pin Name  | Description |
@@ -424,7 +424,7 @@ Here is pinout of the connectors with its meaning.
 
 For example, pin 11 is GPIO and can be used as digital input or output. To use a particular GPIO, we would first set its direction (mode) as either input or output, and then read from or write to it as needed.
 
-The [Play with onboard LEDs](https://github.com/SeeedDocument/Eagleye_530s/raw/master/res/blink_led.py) and [Play with onboard buttons](https://github.com/SeeedDocument/Eagleye_530s/raw/master/res/read_button.py)  tutorials provided examples of the necessary programming for digital I/O pins.
+The [Play with onboard LEDs](https://files.seeedstudio.com/wiki/Eagleye_530s/res/blink_led.py) and [Play with onboard buttons](https://files.seeedstudio.com/wiki/Eagleye_530s/res/read_button.py)  tutorials provided examples of the necessary programming for digital I/O pins.
 
 !!!warning
     Please change the specific GPIO pin number in the led/button python program.
@@ -549,7 +549,7 @@ hello ..
 
 **Hardware**
 
-![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/2_Mics.jpg)
+![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/2_Mics.jpg)
 
 **Install 2 Mics Driver**
 
@@ -644,7 +644,7 @@ aplay -Dplughw:1,0 /tmp/test.wav
 
 Here is the hardware setup. We can hear the playback from the 2 Mics audio jack.
 
-![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/2_Mics_Playback.jpg)
+![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/2_Mics_Playback.jpg)
 
 - Start recording using Python
 
@@ -654,7 +654,7 @@ Here is the hardware setup. We can hear the playback from the 2 Mics audio jack.
       apt install python-pyaudio
       ```
 
-    - Step 2. Use a text editor like vi to create this [recorder_2Mics.py](https://github.com/SeeedDocument/Eagleye_530s/raw/master/res/recorder_2Mics.py) code file, which records a 10-sec audio clip called test.wav.
+    - Step 2. Use a text editor like vi to create this [recorder_2Mics.py](https://files.seeedstudio.com/wiki/Eagleye_530s/res/recorder_2Mics.py) code file, which records a 10-sec audio clip called test.wav.
 
 ```python
 import pyaudio
@@ -700,7 +700,7 @@ waveFile.close()
 
 **Hardware**
 
-![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/4_Mics.jpg)
+![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/4_Mics.jpg)
 
 **Install 4 Mics Driver**
 
@@ -812,7 +812,7 @@ arecord -Dac108 -f S16_LE -r 48000  -c 4 /tmp/test.wav
       apt install python-pyaudio
       ```
 
-    - Step 2. Use a text editor like vi to create this [recorder_4Mics.py](https://github.com/SeeedDocument/Eagleye_530s/raw/master/res/recorder_4Mics.py) code file, which records a 10-sec audio clip called test.wav.
+    - Step 2. Use a text editor like vi to create this [recorder_4Mics.py](https://files.seeedstudio.com/wiki/Eagleye_530s/res/recorder_4Mics.py) code file, which records a 10-sec audio clip called test.wav.
 
 ```python
 import pyaudio
@@ -858,7 +858,7 @@ waveFile.close()
 
 **Hardware**
 
-![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/usb_4Mics.jpg)
+![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/usb_4Mics.jpg)
 
 **Capture Audio**
 
@@ -881,7 +881,7 @@ arecord -D plughw:1,0 -f cd |aplay -D plughw:1,0 -f cd # record and play at the 
     nano get_index.py
     ```
 
-    - Step 2, copy below code and paste on [get_index.py](https://github.com/SeeedDocument/Eagleye_530s/raw/master/res/get_index.py).
+    - Step 2, copy below code and paste on [get_index.py](https://files.seeedstudio.com/wiki/Eagleye_530s/res/get_index.py).
 
 ```Python
 import pyaudio
@@ -907,7 +907,7 @@ Input Device id  4  -  pulse
 Input Device id  8  -  default
 ```
 
-- Step 5, change `RESPEAKER_INDEX = 2` to index number. Run python script [record.py](https://github.com/SeeedDocument/Eagleye_530s/raw/master/res/record.py) to record a speech.
+- Step 5, change `RESPEAKER_INDEX = 2` to index number. Run python script [record.py](https://files.seeedstudio.com/wiki/Eagleye_530s/res/record.py) to record a speech.
 
 ```Python
 import pyaudio
@@ -1035,7 +1035,7 @@ cat /boot/overlays/s5p4418-artik533-compy-i2c1.dtbo > /sys/kernel/config/device-
 
 - Step 5. Please attach the Grove-Led and Grove-Rotary Angle Sensor to GrovePi as below.
 
-![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/GrovePi_Demo.jpg)
+![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/GrovePi_Demo.jpg)
 
 - Step 6. Run python grove_rotary_angle_sensor.py.
 
@@ -1121,7 +1121,7 @@ sensor_value = 387 voltage = 1.89 degrees = 113.4 brightness = 96
 
 **Hardware**
 
-![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/relay_shield.jpg)
+![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/relay_shield.jpg)
 
 **Software**
 
@@ -1176,7 +1176,7 @@ Turning relay 4 OFF
 
 **Hardware**
 
-![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/rs232_shield.jpg)
+![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/rs232_shield.jpg)
 
 - Step 1. Connect the USB cable to power source.
 - Step 2. Connect the RS232 cable between the RS232 sheild and PC.
@@ -1185,7 +1185,7 @@ Turning relay 4 OFF
 
 - Step 1. Open [putty](https://www.putty.org/) at PC side and config as below. The COM must be set as the device manager. In our case the COM port allocated is COM9.
 
-![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/Com.png)
+![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/Com.png)
 
 - Step 2. Set the PuTTY configuration as follows:
     - Set the “Serial line” as the COM port number found in step 3.
@@ -1194,12 +1194,12 @@ Turning relay 4 OFF
     - Save the session under Eagleye 530s.
 - Step 3. Select your saved session and click the “Open” button.
 
-![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/Putty_setup.png)
+![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/Putty_setup.png)
 
 - Step 4. The username and password are root.
 - Step 5. We will see the terminal as below.
 
-![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/Putty_normal_boot.png)
+![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/Putty_normal_boot.png)
 
 !!!warning
     For more information, please refer to [Raspberry Pi RS232 Board v1.0](http://wiki.seeedstudio.com/Raspberry_Pi_R232_Board_v1.0/).
@@ -1208,7 +1208,7 @@ Turning relay 4 OFF
 
 Raspberry Pi Breakout Board, it also provides power, state indicator light, button and universal transistor,such as NPN, PNP, N-MOS, P-MOS. It works well with Eagleye_530s. 
 
-![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/breakout_shield.jpg)
+![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/breakout_shield.jpg)
 
 !!!warning
     For more information, please refer to [Raspberry Pi Breakout Board v1.0](http://wiki.seeedstudio.com/Raspberry_Pi_Breakout_Board_v1.0/).
@@ -1232,18 +1232,18 @@ A1: Yes. Here are the compatiable list.
 
 A2: Find the D401 diode as below picture, remove D401 diode by soldering, short the D401's two pins by soldering a solder dot. 
 
-![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/Auto_boot_1.jpg)
+![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/Auto_boot_1.jpg)
 
-![](https://github.com/SeeedDocument/Eagleye_530s/raw/master/img/Auto_boot_2.jpg)
+![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/Auto_boot_2.jpg)
 
 
 ## Resources
 
 - **[PDF]** [ARTIK™ 530s SoM Module Datasheet](https://developer.artik.io/downloads/hw-datasheet-artik-530-v1-0-pdf/download)
-- **[Certification]** [CE Certificate&Report](https://github.com/SeeedDocument/Eagleye_530s/raw/master/res/CE%20Certificate%26Report.zip)
-- **[Certification]** [IC Certificate&Report](https://github.com/SeeedDocument/Eagleye_530s/raw/master/res/IC%20Certificate%26Report.zip)
-- **[Certification]** [FCC Certificate&Report](https://github.com/SeeedDocument/Eagleye_530s/raw/master/res/FCC%20Certificate%26Report.zip)
-- **[PDF]** [Eagleye 530s User Guide](https://github.com/SeeedDocument/Eagleye_530s/raw/master/res/Eagleye%20530s%20User%20Guide.pdf)
+- **[Certification]** [CE Certificate&Report](https://files.seeedstudio.com/wiki/Eagleye_530s/res/CE%20Certificate%26Report.zip)
+- **[Certification]** [IC Certificate&Report](https://files.seeedstudio.com/wiki/Eagleye_530s/res/IC%20Certificate%26Report.zip)
+- **[Certification]** [FCC Certificate&Report](https://files.seeedstudio.com/wiki/Eagleye_530s/res/FCC%20Certificate%26Report.zip)
+- **[PDF]** [Eagleye 530s User Guide](https://files.seeedstudio.com/wiki/Eagleye_530s/res/Eagleye%20530s%20User%20Guide.pdf)
 - **[More Reading]** [ARTIK™ 530s](https://www.artik.io/modules/artik-530/)
 - **[More Reading]** [Samsung ARTIK™ IoT platform](https://developer.artik.io/documentation/artik/getting-started/)
 - **[More Reading]** [Facial-Recog Project](https://developer.artik.io/documentation/artik/projects/facial-recog.html)

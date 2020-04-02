@@ -7,13 +7,13 @@ prodimagename: 4WD_Mecanum_Wheel_Robot_Kit-RF_Version-.PNG
 surveyurl: https://www.research.net/r/Shield_Bot_V1-1
 sku:  110060010
 ---
-![](https://github.com/SeeedDocument/Shield_Bot_V1.1/raw/master/img/shield%20bot.jpg)
+![](https://files.seeedstudio.com/wiki/Shield_Bot_V1.1/img/shield%20bot.jpg)
 
 Compared with the  previous version, The Shield Bot V1.1 can use the usb port of PC to charge battery. And the charging efficiency is greatly improved after we optimize the circuit. And you can use the Arduino/Seeeduino Vin pin to fast charge.
 
 Note: Compatible Arduino Board not included, try the [Seeeduino](/Seeeduino "Seeeduino").
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Shield-Bot-p-1380.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Shield-Bot-p-1380.html)
 
 ##  Features
 ---
@@ -91,7 +91,7 @@ Note: Compatible Arduino Board not included, try the [Seeeduino](/Seeeduino "See
 
 ##  Interface Function
 ---
-![](https://github.com/SeeedDocument/Shield_Bot_V1.1/raw/master/img/Shield_Bot_V1.2_Foto_1.JPG)
+![](https://files.seeedstudio.com/wiki/Shield_Bot_V1.1/img/Shield_Bot_V1.2_Foto_1.JPG)
 
 *   **Power Switch**: When ShieldBot is off, The shield bot can not run. But you can use the **USB Charge Port** to charge for battery.
 
@@ -114,7 +114,7 @@ Note: Compatible Arduino Board not included, try the [Seeeduino](/Seeeduino "See
 ---
 The Shield Bot has lots of LEDs to show you whats going on!
 
-![](https://github.com/SeeedDocument/Shield_Bot_V1.1/raw/master/img/Shield_bot_1.2_LEDs.JPG)
+![](https://files.seeedstudio.com/wiki/Shield_Bot_V1.1/img/Shield_bot_1.2_LEDs.JPG)
 
 <table>
 <tr>
@@ -155,11 +155,11 @@ The Shield Bot has lots of LEDs to show you whats going on!
 
 ##  Structure
 ---
-![](https://github.com/SeeedDocument/Shield_Bot_V1.1/raw/master/img/Position_for_seeeduino.jpg)
+![](https://files.seeedstudio.com/wiki/Shield_Bot_V1.1/img/Position_for_seeeduino.jpg)
 
 The Part 1,Part 2 and Part 3 are made by our 3D printer. The two hubs are the same. Print Diagram as show below. Very magical!
 
-![](https://github.com/SeeedDocument/Shield_Bot_V1.1/raw/master/img/Print_diagram_1.JPG) ![](https://github.com/SeeedDocument/Shield_Bot_V1.1/raw/master/img/P1018898.JPG)
+![](https://files.seeedstudio.com/wiki/Shield_Bot_V1.1/img/Print_diagram_1.JPG) ![](https://files.seeedstudio.com/wiki/Shield_Bot_V1.1/img/P1018898.JPG)
 
 ##  Getting Started
 ---
@@ -169,13 +169,13 @@ Getting the Shieldbot setup is quick and easy! Follow these steps to get your ro
 
 *   First you need plug Arduino into the buttom of Shield Bot and connect it to PC using a USB cable .
 
-![](https://github.com/SeeedDocument/Shield_Bot_V1.1/raw/master/img/ShieldBot_Programming2.JPG)
+![](https://files.seeedstudio.com/wiki/Shield_Bot_V1.1/img/ShieldBot_Programming2.JPG)
 
 *   You would better turn Enable Switch towards _OFF_ before upload the code. Otherwise, It runs when you are not attention and may scare you.
 
 We've built a nice library for the Shield Bot with useful functions to control your Shield Bot and a number of examples so you can get it up and running in no time!
 
-*   Download the library from [here](https://github.com/SeeedDocument/Shield_Bot_V1.1/raw/master/res/Shield_Bot_Library.zip) and Unzip. Please open the Note.txt file before using our Library.
+*   Download the library from [here](https://files.seeedstudio.com/wiki/Shield_Bot_V1.1/res/Shield_Bot_Library.zip) and Unzip. Please open the Note.txt file before using our Library.
 *   Put ShieldBot file  into the libraries file of Arduino IDE by the path: ..\arduino-1.0.1\libraries.
 
 ###  Install the battery
@@ -206,7 +206,7 @@ The Shield Bot can detect reflective surface based on the Line finder sensors (s
 
 *   After complete the upload. Put the Shield Bot in the Pre-build black runway. Then the fine screen will appear:
 
-![](https://github.com/SeeedDocument/Shield_Bot_V1.1/raw/master/img/Shield_Bot_Line_Finder.jpg)
+![](https://files.seeedstudio.com/wiki/Shield_Bot_V1.1/img/Shield_Bot_Line_Finder.jpg)
 
 *   You can adjust the IR Line Finder Potentiometer to change the Line Finders Sensitivity. When Clockwise adjustment, the Sensitivity increases, Counterclockwise adjustment,the Sensitivity decreases. Have a try!
 
@@ -216,20 +216,20 @@ The Shield Bot can detect reflective surface based on the Line finder sensors (s
 
 This is a  incredibly simple, working clock. The wheels turn one forward and one reverse, spinning the reflectance sensors around the wheel indicating the minutes. Upon the hour mark the bot drives forward and advances the linear slide to indicate hours. Extra credit for the free linear rails made out of laser cut scrap and cellophane tape!
 
-![](https://github.com/SeeedDocument/Shield_Bot_V1.1/raw/master/img/Team1_2.jpg)
+![](https://files.seeedstudio.com/wiki/Shield_Bot_V1.1/img/Team1_2.jpg)
 
 **2. Shot.Bot**
 
 It was a really gorgeous device that many people in the event remarked they'd like to buy. The line following robot would take orders then drive the track to the dispenser where it would use a servo to actuate an amount of either of 3 beverages, before driving back to the patron
 
-![](https://github.com/SeeedDocument/Shield_Bot_V1.1/raw/master/img/Team7_2.jpg)
+![](https://files.seeedstudio.com/wiki/Shield_Bot_V1.1/img/Team7_2.jpg)
 
 **3. Simon**
 
 There has a a beautifully designed, though not quite finished, 2 player heads up simon clone. The bot plays out a tune with lights and you use the laser cut puck, complete with braille so even the sight impaired could play, to mark the tones on the whiteboard. The Shieldbot then drives forward and uses the sensors to see if you've marked correctly. You want to get more right answers than your opponent so the bot drives towards their goal!
 
 
-![](https://github.com/SeeedDocument/Shield_Bot_V1.1/raw/master/img/Team6_2.jpg)
+![](https://files.seeedstudio.com/wiki/Shield_Bot_V1.1/img/Team6_2.jpg)
 
 
 
@@ -238,7 +238,7 @@ There has a a beautifully designed, though not quite finished, 2 player heads up
 The device is very close to knocking off the Der Kritzler 2d drawing machine which is a vertical x,y table with makerslide and had the ingenious idea of bolting the tires of the Shield bot down such that when it was put in reverse, it lifted the pen off the drawing surface :) They even worked with the designer to come up with a PC side user interface!
 
 
-![](https://github.com/SeeedDocument/Shield_Bot_V1.1/raw/master/img/Team8.jpg)
+![](https://files.seeedstudio.com/wiki/Shield_Bot_V1.1/img/Team8.jpg)
 
 
 
@@ -326,7 +326,7 @@ Shieldbot shieldbot = Shieldbot(); //decares a Shieldbot object
 </dd><dd>_Returns_: LOW if the surface reflects (ex. white) and HIGH if the surface doesn't reflect anything (ex BLACK)
 </dd></dl>
 
-![](https://github.com/SeeedDocument/Shield_Bot_V1.1/raw/master/img/ShieldBot_driveLibrary.png)
+![](https://files.seeedstudio.com/wiki/Shield_Bot_V1.1/img/ShieldBot_driveLibrary.png)
 
 
 ## Schematic Online Viewer
@@ -337,19 +337,19 @@ Shieldbot shieldbot = Shieldbot(); //decares a Shieldbot object
 
 ##  Resources
 ---
-*   [Shield Bot Library](https://github.com/SeeedDocument/Shield_Bot_V1.1/raw/master/res/Shield_Bot_Library.zip)
+*   [Shield Bot Library](https://files.seeedstudio.com/wiki/Shield_Bot_V1.1/res/Shield_Bot_Library.zip)
 
-*   [Shield Bot Eagle Files](https://github.com/SeeedDocument/Shield_Bot_V1.1/raw/master/res/Shield_Bot_Eagle_Files.zip)
+*   [Shield Bot Eagle Files](https://files.seeedstudio.com/wiki/Shield_Bot_V1.1/res/Shield_Bot_Eagle_Files.zip)
 
-*   [ShieldBot Schematic](https://github.com/SeeedDocument/Shield_Bot_V1.1/raw/master/res/ShieldBotv0.9b_Schematic.pdf)
+*   [ShieldBot Schematic](https://files.seeedstudio.com/wiki/Shield_Bot_V1.1/res/ShieldBotv0.9b_Schematic.pdf)
 
-*   [RPR-220 Datasheet](https://github.com/SeeedDocument/Shield_Bot_V1.1/raw/master/res/RPR-220.pdf) IR Reflectance Sensor
+*   [RPR-220 Datasheet](https://files.seeedstudio.com/wiki/Shield_Bot_V1.1/res/RPR-220.pdf) IR Reflectance Sensor
 
-*   [ISL97516 Datasheet](https://github.com/SeeedDocument/Shield_Bot_V1.1/raw/master/res/ISL97516.pdf) Step up regulator
+*   [ISL97516 Datasheet](https://files.seeedstudio.com/wiki/Shield_Bot_V1.1/res/ISL97516.pdf) Step up regulator
 
-*   [BQ2057 Datasheet](https://github.com/SeeedDocument/Shield_Bot_V1.1/raw/master/res/BQ2057.pdf) Li-ion charger
+*   [BQ2057 Datasheet](https://files.seeedstudio.com/wiki/Shield_Bot_V1.1/res/BQ2057.pdf) Li-ion charger
 
-*   [L298 Datasheet](https://github.com/SeeedDocument/Shield_Bot_V1.1/raw/master/res/L298.pdf) H-Bridge Motor Driver
+*   [L298 Datasheet](https://files.seeedstudio.com/wiki/Shield_Bot_V1.1/res/L298.pdf) H-Bridge Motor Driver
 
 *   [358 Datasheet](http://www.ti.com/product/lmv358) Op-Amp as a comparator for reflectance sensors
 

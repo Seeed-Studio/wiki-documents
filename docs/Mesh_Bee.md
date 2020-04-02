@@ -17,11 +17,11 @@ This is a community resource, intended to bring together documentation, demo, an
  3. MeshBee use cases and examples;
 
 
-![](https://github.com/SeeedDocument/Mesh_Bee/raw/master/img/Mesh_bee.jpg)
+![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/Mesh_bee.jpg)
 
 Mesh Bee is a 2.4GHz wireless transceiver from seeed studio. It's based on NXP's newly JN516x series wireless microcontroller chip and supports ZigBee Pro network stack. The factory firmware wraps the complicated ZigBee stack operation into a few easy to use serial commands, and drives Mesh Bee into a transparent serial communication node that can be part of a simple point-to-point connection or a complex mesh network. Moreover, Mesh Bee is totally open hardware and open sourced, which means that you can customize the firmware on your requirements. You can use JN516x's ARM core to control things and JenOS to simplify your development. The development environment and tools from NXP are all free. Mesh Bee will bring you lots of fun.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/s/Mesh%20Bee%20-%20Open%20Source%20Zigbee%20Pro%20Module%20with%20MCU%20(JN5168).html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/s/Mesh%20Bee%20-%20Open%20Source%20Zigbee%20Pro%20Module%20with%20MCU%20(JN5168).html)
 
 
 ##   2. Features
@@ -202,7 +202,7 @@ Note: Mesh Bee will not communicate with Xbee as the ZigBee stack versions they'
 
 ##   4. Pin definition
 
-![](https://github.com/SeeedDocument/Mesh_Bee/raw/master/img/Mesh_Bee_Pin.jpg)
+![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/Mesh_Bee_Pin.jpg)
 
 <table >
 <tr>
@@ -412,7 +412,7 @@ The default firmware pre-flashed in Mesh Bee is a co-ordinator firmware due to t
 
 JN516x has a specific firmware download interface with a UART and some other pins, so you need a **programmer** to flash it. We provide this with [UartSBee v5](/UartSBee_v5 "UartSBee v5"). UartSBee v5 has most of the features of v4 and in addition a programmer for Mesh Bee.
 
-![](https://github.com/SeeedDocument/Mesh_Bee/raw/master/img/UartSBee_V05.jpg)
+![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/UartSBee_V05.jpg)
 
 To update firmware, follow the steps:
 
@@ -426,7 +426,7 @@ To update firmware, follow the steps:
 
   - Connect the UartSBee v5 to PC, open FT_Prog and configure it like this:
 
-![](https://github.com/SeeedDocument/Mesh_Bee/raw/master/img/FT_Prog.jpg)
+![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/FT_Prog.jpg)
 
 - <big>Step 3: <span style="color:red">Switch the SW1 to "3V3" and SW3 to "Prog" position;</span></big>
 
@@ -450,9 +450,9 @@ Open "FlashGUI.exe" -&gt; browser to the firmware bin file
 
 -&gt; finish.
 
-![](https://github.com/SeeedDocument/Mesh_Bee/raw/master/img/Flash_programmer1.jpg)
+![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/Flash_programmer1.jpg)
 
-![](https://github.com/SeeedDocument/Mesh_Bee/raw/master/img/Flash_programmer3.png)
+![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/Flash_programmer3.png)
 
 ###   5.3 AT commands &amp; Configuration
 
@@ -486,7 +486,7 @@ Press the reset button of UartSBee v5 to reset Mesh Bee.
 
 Wait until the "ASSOC" led of UartSBee v5 light up. OK, the co-ordinator has finished the formation of ZigBee network. You can send "ATIF" command to view the network information.
 
-![](https://github.com/SeeedDocument/Mesh_Bee/raw/master/img/Configure_coo2.png)
+![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/Configure_coo2.png)
 
 Send "ATEX" command to exit AT mode and enter data transmit mode. Now the co-ordinator node is set up.
 
@@ -524,7 +524,7 @@ Mesh Bee supports updating firmware over-the-air. That is, once you finished the
 
 To achieve this step all you should do is very mush similar to [5.2 How to update firmware](/Mesh_Bee#5.2_How_to_update_firmware "Mesh Bee"), the only difference is choosing "External" for "Flash Select".
 
-![](https://github.com/SeeedDocument/Mesh_Bee/raw/master/img/Flash_External.jpg)
+![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/Flash_External.jpg)
 
 <big>Step 2: Make sure that the network is correctly configured and nodes can communicate with others.</big>
 
@@ -550,7 +550,7 @@ This is a simple example about remote control with 2 Mesh Bee nodes.
 
 <big>Step 1: Prepare the materials</big>
 
-![](https://github.com/SeeedDocument/Mesh_Bee/raw/master/img/Example0.jpg)
+![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/Example0.jpg)
 
 They are:
 
@@ -574,7 +574,7 @@ Refer to [5.3.2_Configuration](/Mesh_Bee#5.3.2_Configuration "Mesh Bee") to conf
 
 <big>Step 3: Assembly the Servo side (be controlled) </big>
 
-![](https://github.com/SeeedDocument/Mesh_Bee/raw/master/img/Example1.jpg)
+![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/Example1.jpg)
 
 Connect servo's signal line(yellow) to Digital 10, red line to VCC and black/brown line to GND
 
@@ -586,7 +586,7 @@ Connect servo's signal line(yellow) to Digital 10, red line to VCC and black/bro
 
 <big>Step 4: Assembly the control side</big>
 
-![](https://github.com/SeeedDocument/Mesh_Bee/raw/master/img/Example2.jpg)
+![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/Example2.jpg)
 
 Connect rotary angle's signal line(yellow) to A0, red line to VCC and black line to GND
 
@@ -763,7 +763,7 @@ boolean read_msg(unsigned char *cmd, unsigned int *msg)
 }
 ```
 
-![](https://github.com/SeeedDocument/Mesh_Bee/raw/master/img/Example3.gif)
+![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/Example3.gif)
 
 ###   5.6 Usage Note
 
@@ -845,7 +845,7 @@ You can develop a stand-alone application in AUPS. The user application consists
 
 We introduced Suli too. Suli means Seeed Unified Library Interface. We'll switch to Suli for our future module driver/library release. That means our suli-compatible library/driver will adapt all platforms that suli supporting. Please glance over [https://github.com/Seeed-Studio/Suli](https://github.com/Seeed-Studio/Suli) for more information.
 
-![](https://github.com/SeeedDocument/Mesh_Bee/raw/master/img/MeshBeeArchitecture0603.jpg)
+![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/MeshBeeArchitecture0603.jpg)
 
 ###   7.2 Development Environment
 
@@ -865,7 +865,7 @@ To create the development environment you should download:
 
 and then install them on a <span style="color:red">Windows</span> PC (install JN-SW-4064 after JN-SW-4041).
 
-To edit the .oscfgdiag file and .zpscfg file, you should install the eclipse plugins according to the guide in section 6.2.2 in &lt;[SDK Installation and User Guide.pdf](https://github.com/SeeedDocument/Mesh_Bee/raw/master/res/SDK_Installation_and_User_Guide.pdf)&gt;.
+To edit the .oscfgdiag file and .zpscfg file, you should install the eclipse plugins according to the guide in section 6.2.2 in &lt;[SDK Installation and User Guide.pdf](https://files.seeedstudio.com/wiki/Mesh_Bee/res/SDK_Installation_and_User_Guide.pdf)&gt;.
 
 Note2: The misfortune is only Windows toolchain is presented now. For linux and Mac users, a Windows VM may be your choice.
 
@@ -899,7 +899,7 @@ Download page: [http://www.nxp.com/techzones/wireless-connectivity/smart-energy.
 
 ###   7.4 Contribution
 
-[![](https://github.com/SeeedDocument/Mesh_Bee/raw/master/img/MeshBeeFirmwareProject.png)](http://seeed-studio.github.io/Mesh_Bee/)
+[![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/MeshBeeFirmwareProject.png)](http://seeed-studio.github.io/Mesh_Bee/)
 
 ##   8. Discussion Group
 
@@ -915,15 +915,15 @@ We created a google group for Mesh Bee's general discussion and development rela
 
 ##   9. Resources
 
-*   [Eagle file for Mesh Bee v1.0](https://github.com/SeeedDocument/Mesh_Bee/raw/master/res/Mesh_Bee_v1.0_eagle.zip)
+*   [Eagle file for Mesh Bee v1.0](https://files.seeedstudio.com/wiki/Mesh_Bee/res/Mesh_Bee_v1.0_eagle.zip)
 
-*   [AT command manual for Mesh Bee V1.0](https://github.com/SeeedDocument/Mesh_Bee/raw/master/res/AT_command_manual_for_Mesh_Bee_V1.0.pdf)
+*   [AT command manual for Mesh Bee V1.0](https://files.seeedstudio.com/wiki/Mesh_Bee/res/AT_command_manual_for_Mesh_Bee_V1.0.pdf)
 
-*   [JN5168 datasheet](https://github.com/SeeedDocument/Mesh_Bee/raw/master/res/JN516X.pdf)
+*   [JN5168 datasheet](https://files.seeedstudio.com/wiki/Mesh_Bee/res/JN516X.pdf)
 
-*   [Cook Book for v1004](https://github.com/SeeedDocument/Mesh_Bee/raw/master/res/MeshBee_Cook_Book.pdf)
+*   [Cook Book for v1004](https://files.seeedstudio.com/wiki/Mesh_Bee/res/MeshBee_Cook_Book.pdf)
 
-*   [User Manual for v1004](https://github.com/SeeedDocument/Mesh_Bee/raw/master/res/MeshBee_User_Manual_v0.3.pdf)
+*   [User Manual for v1004](https://files.seeedstudio.com/wiki/Mesh_Bee/res/MeshBee_User_Manual_v0.3.pdf)
 
 ###   9.1 Firmware Downloads
 

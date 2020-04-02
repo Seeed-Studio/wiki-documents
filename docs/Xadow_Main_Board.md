@@ -8,7 +8,7 @@ surveyurl: https://www.research.net/r/xadow_main_board
 sku:  102040000
 ---
 
-![](https://github.com/SeeedDocument/Xadow_Main_Board/raw/master/img/Xadow_Main_Board_00V1.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Main_Board/img/Xadow_Main_Board_00V1.jpg)
 
 The Xadow Main board module is based on the controller **ATmega32U4**. It features high performance and low power consumption, which makes your project small and portable, especially suitable for wearable projects.
 
@@ -16,7 +16,7 @@ The on-board controller **ATmega32U4** has 32K Flash and 2.5K SRAM and 1K EEPROM
 
 The first time you use this Xadow main board, please install the related driver and make little modification as Here.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-Main-Board-p-1524.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-Main-Board-p-1524.html)
 
 ## Specification
 ---
@@ -32,7 +32,7 @@ The first time you use this Xadow main board, please install the related driver 
 
 ## Interface Function
 ---
-![](https://github.com/SeeedDocument/Xadow_Main_Board/raw/master/img/XadowMainBoardScreen.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Main_Board/img/XadowMainBoardScreen.jpg)
 
 - J1: Micro USB. can be used for charging for Lithium battery and uploading code.
 - U2: ATmega32U4 IC, 8-bit AVR Microcontroller with 32K Bytes of ISP Flash and USB Controller.
@@ -46,7 +46,7 @@ The first time you use this Xadow main board, please install the related driver 
 ---
 Pins on both sides of Xadow modules are symmetrical, here are pins descriptions about J2 Interface from top to bottom.
 
-![](https://github.com/SeeedDocument/Xadow_Main_Board/raw/master/img/Xadow_Pins.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Main_Board/img/Xadow_Pins.jpg)
 
 |Xadow Pins	|Microcontroller Pins	|Function|
 |---|---|---|
@@ -65,7 +65,7 @@ Pins on both sides of Xadow modules are symmetrical, here are pins descriptions 
 
 ## Board Revisions and Changes
 ---
-![](https://github.com/SeeedDocument/Xadow_Main_Board/raw/master/img/Xadow_-_Main_board_v1.3.JPG)
+![](https://files.seeedstudio.com/wiki/Xadow_Main_Board/img/Xadow_-_Main_board_v1.3.JPG)
 
 **Revision 1.3**
 1. This version replaces the J2 and J3 FPC connector to a Flip type. It makes users more easier to connect or disconnect peripherals.
@@ -81,7 +81,7 @@ Similar to the Arduino, the Xadow Main Board uses only a single microcontroller 
 - Connect the other side of the Micro-USB connector to the computer's USB port.
 - Then install the Xadow Driver. You can refer to [Download Arduino and install Arduino driver](http://wiki.seeedstudio.com/Guide_to_use_demos_downloaded_from_Seeed-s_Github/) to learn how to install the Xadow driver.
 
-![](https://github.com/SeeedDocument/Xadow_Main_Board/raw/master/img/Xadow_Main_Board_Driver_step4.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Main_Board/img/Xadow_Main_Board_Driver_step4.jpg)
 
  Now, you can program and use the Xadow as you use other Arduino boards.
 
@@ -96,7 +96,7 @@ Similar to the Arduino, the Xadow Main Board uses only a single microcontroller 
 
 ## Resources
 ---
-- [Xadow Main Board eagle file.zip](https://github.com/SeeedDocument/Xadow_Main_Board/raw/master/res/Xadow_Main_Board.zip)
+- [Xadow Main Board eagle file.zip](https://files.seeedstudio.com/wiki/Xadow_Main_Board/res/Xadow_Main_Board.zip)
 - [Library of Xadow Main Board](https://github.com/Seeed-Studio/Xadow_MainBoard)
 
 ## Tech Support

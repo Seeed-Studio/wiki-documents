@@ -9,7 +9,7 @@ sku: 105990072
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Gear-Stepper-Motor-Driver-Pack/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Gear-Stepper-Motor-Driver-Pack/img/main.jpg)
 
 The Gear Stepper Motor Driver Pack includes a stepper motor and a motor drive board. It's a four-phase eight-stepping stepper motor, and you can easily control this stepper motor via the drive board.
 
@@ -53,9 +53,9 @@ You can use this pack for position control.
 
 ### Pin Out
 
-![](https://github.com/SeeedDocument/Gear-Stepper-Motor-Driver-Pack/raw/master/img/pin_out_1.jpg)
+![](https://files.seeedstudio.com/wiki/Gear-Stepper-Motor-Driver-Pack/img/pin_out_1.jpg)
 
-![](https://github.com/SeeedDocument/Gear-Stepper-Motor-Driver-Pack/raw/master/img/pin_out_2.jpg)
+![](https://files.seeedstudio.com/wiki/Gear-Stepper-Motor-Driver-Pack/img/pin_out_2.jpg)
 
 ### Mechanical drawing
 
@@ -121,7 +121,7 @@ you can click it to see the original picture.
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Gear-Stepper-Motor-Driver-Pack/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Gear-Stepper-Motor-Driver-Pack/img/connect.jpg)
 
 
 #### Software
@@ -131,7 +131,7 @@ you can click it to see the original picture.
 
 
 
-- **Step 1.** Click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+- **Step 1.** Click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 ```C++
 int pwm1=9;
@@ -327,15 +327,15 @@ void loop ()
      If every thing goes well, you can see the motor run:
 
 
-![](https://github.com/SeeedDocument/Gear-Stepper-Motor-Driver-Pack/raw/master/img/_DAS7726.MOV_20181115_134717.gif)
+![](https://files.seeedstudio.com/wiki/Gear-Stepper-Motor-Driver-Pack/img/_DAS7726.MOV_20181115_134717.gif)
 
 
 
 ## Resources
 
-- **[Zip]** [Gear Stepper Motor Driver Board Eagle Files](https://github.com/SeeedDocument/Gear-Stepper-Motor-Driver-Pack/raw/master/res/Stepper%20Motor%20Driver.rar)
+- **[Zip]** [Gear Stepper Motor Driver Board Eagle Files](https://files.seeedstudio.com/wiki/Gear-Stepper-Motor-Driver-Pack/res/Stepper%20Motor%20Driver.rar)
 
-- **[PDF]** [Datasheet CX28BYJ48 Motor](https://github.com/SeeedDocument/Gear-Stepper-Motor-Driver-Pack/raw/master/res/CX28BYJ48.pdf)
+- **[PDF]** [Datasheet CX28BYJ48 Motor](https://files.seeedstudio.com/wiki/Gear-Stepper-Motor-Driver-Pack/res/CX28BYJ48.pdf)
 
 
 ## Tech Support

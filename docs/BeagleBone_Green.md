@@ -153,9 +153,9 @@ Each digital I/O pin has 8 different modes that can be selected, including GPIO.
 
 ## Mechincal Drawing
 
-![](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/images/BBG_drawing_1.png)
+![](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/BBG_drawing_1.png)
 
-![](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/images/BBG_drawing_2.png)
+![](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/BBG_drawing_2.png)
 
 <iframe src="https://3dwarehouse.sketchup.com/embed.html?mid=26887ef4-fe20-4d82-b4dc-25f58774d64f" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="800" height="450" allowfullscreen></iframe>
 
@@ -356,13 +356,13 @@ You will need some expansion board when you start a project. There're many cape 
 
  We have updated the eMMC on Seeed Studio Beaglebone® Green in 2016. So the previous firmware for Seeed Studio BeagleBone® Green 1 is not workable on Seeed Studio BeagleBone® Green 2, but the new firmware is ok on Seeed Studio BeagleBone® Green 1 and Seeed Studio BeagleBone® Green 2.
 
-![](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/bbg12.png)
+![](https://files.seeedstudio.com/wiki/BeagleBone_Green/bbg12.png)
 
  **2. Sometimes the Seeed Studio BeagleBone® Green's network port does not work and must be restarted to resume work. Occasionally this happens.**
 
 Please replace a stable power supply and try again. Usually mobile phone USB power adapter is more stable than that computer USB. Or you can remove the capacitor C162.
 
- ![](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/images/Capatictor.png)
+ ![](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/Capatictor.png)
 
 
 **3: What is the operating temperature range of the Seeed Studio BeagleBone® Green?**
@@ -379,8 +379,8 @@ There're many references to help you to get more information about the board.
 * [Troubleshooting](http://beagleboard.org/getting-started#troubleshooting)
 * [Hardware documentation](http://beagleboard.org/getting-started#hardware)
 * [Projects of BeagleBoard](http://beagleboard.org/project)
-* [CE certification of Seeed Studio BeagleBone® Green](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/CE.zip)
-* [FCC certification of Seeed Studio BeagleBone® Green](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/FCC.zip)
+* [CE certification of Seeed Studio BeagleBone® Green](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/CE.zip)
+* [FCC certification of Seeed Studio BeagleBone® Green](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/FCC.zip)
 
 
 ## Schematic Online Viewer
@@ -398,9 +398,9 @@ There're many references to help you to get more information about the board.
 - **[Zip]** [Seeed Studio BeagleBone® Green Schematic(OrCAD) v1c](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/BeagleBone_Green_v1c.zip)
 - **[RAR]** [Seeed Studio BeagleBone® Green Schematic(OrCAD)](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/BEAGLEBONE_GREEN_V1_166%28sch%29.rar)
 - **[RAR]** [Seeed Studio BeagleBone® Green PCB(OrCAD)](https://github.com/SeeedDocument/BeagleBone_Green/blob/master/resources/BeagleBone_Green_v1.166%28board%29.rar)
-- **[Zip]** [AM335X Datasheet](https://github.com/SeeedDocument/Bazaar_file/raw/master/102010027/AM335x.pdf)
-- **[3D]** [Seeed Studio BeagleBone® Green 3D Model](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/BBG.zip)
-- **[PDF]** [Seeed Studio BeagleBone® Green Mechincal Drawing](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/BBG-PCBA.pdf)
+- **[Zip]** [AM335X Datasheet](https://files.seeedstudio.com/wiki/Bazaar_file/102010027/AM335x.pdf)
+- **[3D]** [Seeed Studio BeagleBone® Green 3D Model](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BBG.zip)
+- **[PDF]** [Seeed Studio BeagleBone® Green Mechincal Drawing](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BBG-PCBA.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).

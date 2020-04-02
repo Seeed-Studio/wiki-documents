@@ -9,7 +9,7 @@ sku: 101020599
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-2-Channel_Inductive_Sensor-LDC1612/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-2-Channel_Inductive_Sensor-LDC1612/img/main.jpg)
 
 
 The Grove - 2-Channel Inductive Sensor is based on Texas Instruments(TI) LDC1612, a 28-bit inductance to digital converter(LDC) for inductive sensing solutions. With multiple channels and support for remote sensing, the LDC1612 enables the performance and reliability benefits of inductive sensing to be realized at minimal cost and power. Inductance is an effect caused by the magnetic field of a current-carrying conductor acting back on the conductor. So by sensing the inductance, this sensor can detect the proximity of conductors especially metal nearby.
@@ -60,9 +60,9 @@ When the ADDR pin is set low, the LDC I2C address is 0x2A; when the ADDR pin is 
 
 ### Pin Out
 
-![](https://github.com/SeeedDocument/Grove-2-Channel_Inductive_Sensor-LDC1612/raw/master/img/pinout.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-2-Channel_Inductive_Sensor-LDC1612/img/pinout.jpg)
 
-![](https://github.com/SeeedDocument/Grove-2-Channel_Inductive_Sensor-LDC1612/raw/master/img/pinout_back.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-2-Channel_Inductive_Sensor-LDC1612/img/pinout_back.jpg)
 
 
 
@@ -103,7 +103,7 @@ LDC1612 is able to measure the amount of energy it needs to provide to maintain 
 
 | Seeeduino V4.2 | Base Shield| Grove - 2-Channel Inductive Sensor|
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-2-Channel_Inductive_Sensor-LDC1612/raw/master/img/thumbnail.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-2-Channel_Inductive_Sensor-LDC1612/img/thumbnail.jpg)|
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-2-Channel-Inductive-Sensor-%28LDC1612%29-p-3223.html)|
 
 !!!note
@@ -120,7 +120,7 @@ LDC1612 is able to measure the amount of energy it needs to provide to maintain 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-2-Channel_Inductive_Sensor-LDC1612/raw/master/img/With_ard.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-2-Channel_Inductive_Sensor-LDC1612/img/With_ard.jpg)
 
 
 
@@ -137,12 +137,12 @@ Now, we will demonstrate you how to run the code for coin distance detection, si
 
 - **Step 3.** Restart the Arduino IDE. Open the example, you can open it in the following three ways：
     1. Open it directly in the Arduino IDE via the path: **File --> Examples -->Seeed Inductive Sensor LDC1612--> coin_test_demo**. 
-    ![](https://github.com/SeeedDocument/Grove-2-Channel_Inductive_Sensor-LDC1612/raw/master/img/arduino1.png)
+    ![](https://files.seeedstudio.com/wiki/Grove-2-Channel_Inductive_Sensor-LDC1612/img/arduino1.png)
     
     2. Open it in your computer by click the **basic_demo.ino** which you can find in the folder **XXXX\Arduino\libraries\examples\coin_test_demo\coin_test_demo.ino**, **XXXX** is the location you installed the Arduino IDE.
-    ![](https://github.com/SeeedDocument/Grove-2-Channel_Inductive_Sensor-LDC1612/raw/master/img/arduino2.png)
+    ![](https://files.seeedstudio.com/wiki/Grove-2-Channel_Inductive_Sensor-LDC1612/img/arduino2.png)
     
-    3. Or, you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+    3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 
 
@@ -344,7 +344,7 @@ This example shows multiple channels measurement and note LDC1612 support two ch
 
 You may connect coil 1 as shown below:
 
-![](https://github.com/SeeedDocument/Grove-2-Channel_Inductive_Sensor-LDC1612/raw/master/img/link.png)
+![](https://files.seeedstudio.com/wiki/Grove-2-Channel_Inductive_Sensor-LDC1612/img/link.png)
 
 Code for muti_channel_demo.ino
 

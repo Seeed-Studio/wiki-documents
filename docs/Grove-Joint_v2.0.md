@@ -7,7 +7,7 @@ prodimagename:  Grove-Joint.jpg
 surveyurl: https://www.research.net/r/Grove-Joint_v2
 sku:
 ---
-![](https://github.com/SeeedDocument/Grove-Joint_v2.0/raw/master/img/Grove-Joint.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Joint_v2.0/img/Grove-Joint.jpg)
 
 Grove - Joint v2.0 shares many similarities with Seeeduino Lotus. It is a mini ATMEGA328 Microcontroller development board. It uses an Atmel ATMEGA328P-MU and CH340. ATMEGA328P-MU is a high performance, low power AVR 8-Bit Microcontroller. CH340 is a USB bus converter chip that can realize a USB to serial interface. Grove - Joint v2.0 has two Grove interfaces included I<sup>2</sup>C port and two digital I/Os. It else support battery powered. You can do some simple applications with it.
 
@@ -39,7 +39,7 @@ Grove - Joint v2.0 shares many similarities with Seeeduino Lotus. It is a mini A
 
 Here is block diagram of Grove - Joint module which consists of following parts.
 
-![](https://github.com/SeeedDocument/Grove-Joint_v2.0/raw/master/img/Grove-Joint_instruction1_.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Joint_v2.0/img/Grove-Joint_instruction1_.jpg)
 
 *   **Battery Interface** - This moudle can battery powered.
 *   **Light Sensor** - There's a light sensor on the board which is connected to **A0** pin.
@@ -83,7 +83,7 @@ Totally compatible with serial application program in computer endpoint Windows 
 
 *   3) If you do not find the port, please download the Driver from [Here](http://www.wch.cn/downloads.php?name=pro&amp;proid=5)
 
-![](https://github.com/SeeedDocument/Grove-Joint_v2.0/raw/master/img/CH340_Driver.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Joint_v2.0/img/CH340_Driver.jpg)
 
 #####   Mac OS
 
@@ -129,23 +129,23 @@ They are:
 
 As shown below:
 
-![](https://github.com/SeeedDocument/Grove-Joint_v2.0/raw/master/img/Grove-Joint_demo_.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Joint_v2.0/img/Grove-Joint_demo_.jpg)
 
 ###   Software Work
 
 Connect Grove - Joint to computer use a micro USB cable, if the status LED not blink , press the button .
 
-Click [here](https://github.com/SeeedDocument/Grove-Joint_v2.0/raw/master/res/Grove-Joint_demo.rar) to download testing code and decompress it to any folders(e.g. Drive D or desktop）
+Click [here](https://files.seeedstudio.com/wiki/Grove-Joint_v2.0/res/Grove-Joint_demo.rar) to download testing code and decompress it to any folders(e.g. Drive D or desktop）
 
 Now you need simple [configurations for Arduino](/How_To_Use_Sketchbook) sketchbook.
 
 Launch Arduino IDE and click File&gt;Preferences and add absolute location for downloaded testing code at Sketchbook location.
 
-![](https://github.com/SeeedDocument/Grove-Joint_v2.0/raw/master/img/Grove-Joint-Demo1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Joint_v2.0/img/Grove-Joint-Demo1.jpg)
 
 After configurations, please restart Arduino, click File&gt;Sketchbook and choose Grove- Joint demo after which testing code will show up.
 
-![](https://github.com/SeeedDocument/Grove-Joint_v2.0/raw/master/img/Grove-Joint-Demo2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Joint_v2.0/img/Grove-Joint-Demo2.jpg)
 
 Click Tools&gt;Board to choose Arduino Fio and select respective serial port.
 
@@ -201,9 +201,9 @@ void loop()
 
 ##   Resources
 
-*   [Schematic in Eagle](https://github.com/SeeedDocument/Grove-Joint_v2.0/raw/master/res/Grove-Joint_v2.0_PCB.rar)
+*   [Schematic in Eagle](https://files.seeedstudio.com/wiki/Grove-Joint_v2.0/res/Grove-Joint_v2.0_PCB.rar)
 
-*   [Schematic in PDF](https://github.com/SeeedDocument/Grove-Joint_v2.0/raw/master/res/Grove-Joint_v2.0_SCH.rar)
+*   [Schematic in PDF](https://files.seeedstudio.com/wiki/Grove-Joint_v2.0/res/Grove-Joint_v2.0_SCH.rar)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

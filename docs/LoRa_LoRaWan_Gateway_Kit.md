@@ -6,7 +6,7 @@ prodimagename:
 surveyurl: https://www.research.net/r/LoRa_LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3
 sku: 110060622
 ---
-![](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/img/LoraWan%20Getway%20868MHz.jpg)
+![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/LoraWan%20Getway%20868MHz.jpg)
 
 LoRa is a perfect long-range wireless solution to create low-power, wide area networks.So far we have released several “LoRa” boards such as Seeeduino LoRaWan and Grove LoRa Radio etc. However if you want to build you own LoRa network, there are 3 things   that you should prepare to get started: a Gateway, at least one Node and a local server where you can monitor all your devices.
 
@@ -54,7 +54,7 @@ Regarding the gateway module RHF0M301, it is a 10 channel(8 x Multi-SF + 1 x Sta
 ## Hardware Overview
 
 
-![](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/img/loragate_hardware.png)
+![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/loragate_hardware.png)
 
 ### Partlist
 <style type="text/css">
@@ -151,7 +151,7 @@ Regarding the gateway module RHF0M301, it is a 10 channel(8 x Multi-SF + 1 x Sta
 #### Interfaces overview
 
 Since there are many interfaces here, it is necessary to know the capabilities of these interfaces. Please refer to the following figure for details.
-![](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/img/Lora_interface.jpg)
+![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/Lora_interface.jpg)
 
 - <font face="" size=5 font color="ffc000">❶</font> **Micro-USB Input:**
 The whole system use this Micro-USB interface for power supply.
@@ -174,14 +174,14 @@ The whole system use this Micro-USB interface for power supply.
 - Step 3. Connect <font face="" size=5 font color="ffc000">❷</font> and <font face="" size=5 font color="ffc000">❸</font> via the 20cm Micro-USB cable.
 - Step 4. Connect the **USB to UART Adapter** to the GPIO of **Raspberry Pi 3**. Please connect them as the picture shown below.
 
-![](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/img/RX-TX.png)
+![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/RX-TX.png)
 
 - Step 5. Plug the **USB to UART Adapter** into your PC.
 - Step 6. Connect <font face="" size=5 font color="ffc000">❶</font> with 5V/2.1A Standard Adapter via 100cm Micro-USB cable.
 
 When you finished all the steps, the whole system should be like the picture below.
 
-![](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/img/connection.jpg)
+![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/connection.jpg)
 
 
 ## Software
@@ -209,7 +209,7 @@ b) Plug FT232 tool to PC (If COM port is not recognized correctly, please refer 
 c) Open **Device Manager** of your PC to get the right COM port. Like COM15 for example. Configure
 ExtraPuTTY according to below picture (Speed 115200, others use defaults), click **Open**. As the gateway is still not opened, so there is nothing in the terminal.
 
-![](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/img/putty_lora.png)
+![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/putty_lora.png)
 
 d) Power the gateway up. Booting log will be showed in the PuTTY terminal, in the end it will
 prompt you to input your log in name. Please note it takes 1 or 2 minutes to get the prompt
@@ -223,7 +223,7 @@ e)  Please use RHF2S001 default user name and password to log in. ( Username: **
 f)  Connect RHF2S001 with router through ethernet cable
 
 g)  Run **ifconfig** to check the ip address and mac address.
-![](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/img/Lora_getip.png)
+![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/Lora_getip.png)
 
 ##### IP is in the blue square, MAC address is in orange square (Format: b8:27:eb:xx:xx:xx)
 
@@ -241,7 +241,7 @@ g)  Run **ifconfig** to check the ip address and mac address.
 To login through SSH, you need to fill in the Hostname with the IP address you've just got.And use port 22,choose the SSH connection type. Just leave the other options by default. Then simply click **Open**.
 
 
-![](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/img/putty_lora.png)
+![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/putty_lora.png)
 
 #### Step 2. Expand SD Card File System
 
@@ -429,7 +429,7 @@ Frequency Plan for US915 HYBRID
 
  - Then choose the right serial port of Seeeduino Lora GPS, and choose the board **Tool->Board->Seeeduino_LoRAWAN**. After that you can click the upload button.If you can not find Seeeduino_LoRAWAN in the board list or do not know how to update the code,please click [here](http://wiki.seeed.cc/Seeeduino_LoRAWAN/#install-the-driver-for-windows) for more information.
 
-![](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/img/port_lora.png)
+![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/port_lora.png)
 
  - Now please open the serial monitor in the upper right corner ( or you can press Ctrl+Shift+M at the same time ).Choose **Newline** (This option will add "\r\n" at the end of each command.), set the baud rate 9600.Then tap the commands below and press **send**.
 
@@ -446,7 +446,7 @@ For US915
  AT+RXWIN2=923.3,DR8
 ```
 
- ![](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/img/At_send.png)
+ ![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/At_send.png)
 
 
  <div class="admonition warning" style="background:#f0b37e; color:#FFF">
@@ -462,7 +462,7 @@ Fill your browser with the IP address![]()(IP of your gateway) ,it Will jump to 
 
 
 
-![](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/img/Lora_webin.png)
+![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/Lora_webin.png)
 
 #### Step 4. Use Seeeduino LoRaWAN GPS(RHF76-052AM) access LoRaWAN server
 
@@ -477,11 +477,11 @@ In order to get the ID information of Seeeduino LoRaWAN, you need to tap the com
 at+id
 ```
 
-![](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/img/at%2Bid.png)
+![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/at%2Bid.png)
 
 c) Fill in the blank with the ID info. you just get. You can fill in the name and  owner as your wish (here we use Seeed and my nick name：), use the APPEui you've just got. Then click **Add** button.
 
-![](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/img/applicationpage.png)
+![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/applicationpage.png)
 
 Then you will jump into the configure page. In this page, we choose Personalised Motes. Fill in the **DevEUI** and **DevAddr** with ID info. of your Seeeduino LoRaWAN GPS. And set the **NWKSKEY** and **APPSKEY** by default. You can refer to the picture below.
 
@@ -492,7 +492,7 @@ Then you will jump into the configure page. In this page, we choose Personalised
 
 
 
-![](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/img/Add_info.png)
+![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/Add_info.png)
 
 d) To test whether you add the device successfully, you can use the serial monitor of Arduino IDE tap the command below.
 
@@ -503,12 +503,12 @@ AT+CMSGHEX="0a 0b 0c 0d 0e"
 ```
 It should like something below.
 
-![](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/img/test_send.png)
+![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/test_send.png)
 
 Then turn to the website, click **Application->Seeed(the name of the Application you just added)->View application data**, you will see the data you've
 just sent form the Seeeduino_LoRAWAN. congratulations! Job done!
 
-![](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/img/test.png)
+![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/test.png)
 
 ### Connect To Loriot Server
 
@@ -532,7 +532,7 @@ Gateway Location information.
 
 g)  Click “Register Raspberry Pi gateway” to finish the registration.
 
-![](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/img/add_gateway.png)
+![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/add_gateway.png)
 
 h)  Click the registered gateway to enter configuration page, switch “Frquency Plan” manually, your
 plan here is decided by the type of your RHF2S001 type, available plan are CN470，CN473，
@@ -550,7 +550,7 @@ chmod +x loriot-gw.bin
 
 j)  Finish gateway registration. You will see the gateway is Connected now. Next is to register node.
 
-![](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/img/service_done.png)
+![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/service_done.png)
 
 #### Step 2. Loriot Server Connect Node device
 
@@ -558,7 +558,7 @@ j)  Finish gateway registration. You will see the gateway is Connected now. Next
 
 Current gateway channels could be got from **Dashboard -> Gateway -> Your Gateway** , you can see the available channels as the picture below.
 
-![](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/img/radio_list.png)
+![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/radio_list.png)
 
 **b) Seeeduino LoRAWAN GPS(RHF3M076) Configuration**
 
@@ -589,12 +589,12 @@ need remove manually)
 - APPSKEY：Default value 2B7E151628AED2A6ABF7158809CF4F3C
 - EUI：DEVEUI, Seeeduino_LoRAWAN GPS get through "AT+ID" command
 
-![](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/img/add_apb.png)
+![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/add_apb.png)
 
 Click **Import Device** button to finish the device import.
 Now choose **Dashboard -> Applications -> SampleApp** , you will see the new ABP Node you've just added.
 
-![](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/img/inite_status_apb.png)
+![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/inite_status_apb.png)
 
 **d)  Send data from Seeeduino_LoRAWAN**
 
@@ -605,7 +605,7 @@ AT+CMSGHEX="0a 0b 0c 0d 0e"
 ```
 Then go to **Dashboard -> Applications -> SampleApp ->Device** , click the Node Device EUI or DevAddr, you will find the data you've just sent here.
 
-![](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/img/final.png).
+![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/final.png).
 
 
 ## FAQs
@@ -635,7 +635,7 @@ chmod +x loriot-gw
 
 ## Resources
 
-- **[PDF]** [Download Wiki PDF](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/res/LoRa_LoRaWan_Gateway_Kit.pdf)
+- **[PDF]** [Download Wiki PDF](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/res/LoRa_LoRaWan_Gateway_Kit.pdf)
 - **[Uer Manual]** [User Manual](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/res/%5BRHF-UM01649%5DIoT%20Discovery%20User%20Manual%20-%20v3.2.pdf).
 - **[More Reading]** [Wiki of Seeeduino LoRaWAN](/Seeeduino_LoRAWAN/)
 - **[More Reading]** [RisingHF Website](http://www.risinghf.com/product/risinghf-iot-dicovery/?lang=en)

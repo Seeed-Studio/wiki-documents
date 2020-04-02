@@ -7,12 +7,12 @@ prodimagename:  Arch_01.jpg
 surveyurl: https://www.research.net/r/Seeeduino_Arch_V1
 sku:    102080001
 ---
-![](https://github.com/SeeedDocument/Seeeduino_Arch_V1.0/raw/master/img/Arch_01.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Arch_V1.0/img/Arch_01.jpg)
 
 **Seeeduino Arch** is a [mbed](http://mbed.org/handbook/mbed-SDK) enabled development board which combines the advantages of mbed SDK and Arduino formfactor. With Seeeduino Arch, you can use mbed C/C++ SDK, libraries and optimizing online development tools to rapidly build a prototype.
 Seeeduino Arch has standard Arduino appearance and Grove connectors. It’s convenient to connect existing Shields and Grove products to Seeeduino Arch.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/seeeduino-arch-p-1561.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/seeeduino-arch-p-1561.html)
 
 ##  Feature
 
@@ -102,7 +102,7 @@ Seeeduino Arch has standard Arduino appearance and Grove connectors. It’s conv
 
 ##  Pinout
 ---
-![](https://github.com/SeeedDocument/Seeeduino_Arch_V1.0/raw/master/img/Arch_Pinout.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Arch_V1.0/img/Arch_Pinout.png)
 
 ##  Compare Seeeduino Arch  with Arduino
 ---
@@ -400,18 +400,18 @@ Here we show you an easy demo: **water lights** using Seeeduino Arch to get you 
 ###   Demo: Water Lights
 
 *   Click the "mbed Enabled" logo to register an account for Seeeduino Arch.
-<dl><dd><dl><dd>[![](https://github.com/SeeedDocument/Seeeduino_Arch_V1.0/raw/master/img/Mbedenabled.jpg)](https://mbed.org/account/login/?next=/start?auth=104000000000000000000002F7F0F640e640d504b45e111da24094a9d300da46&amp;firmware=999999)
+<dl><dd><dl><dd>[![](https://files.seeedstudio.com/wiki/Seeeduino_Arch_V1.0/img/Mbedenabled.jpg)](https://mbed.org/account/login/?next=/start?auth=104000000000000000000002F7F0F640e640d504b45e111da24094a9d300da46&amp;firmware=999999)
 </dd></dl>
 </dd></dl>
 
 *   Open [https://mbed.org/compiler/](https://mbed.org/compiler/) and you will get mbed online IDE. Before programming, you'd better read mbed Complier Getting started.
-<dl><dd><dl><dd>![](https://github.com/SeeedDocument/Seeeduino_Arch_V1.0/raw/master/img/Open_Compiler.jpg)
+<dl><dd><dl><dd>![](https://files.seeedstudio.com/wiki/Seeeduino_Arch_V1.0/img/Open_Compiler.jpg)
 
 </dd></dl>
 </dd></dl>
 
 *   Click "New" to creat new program and select the device "mbed NXP LPC11U24". I believe that this picture explains better.
-<dl><dd><dl><dd>![](https://github.com/SeeedDocument/Seeeduino_Arch_V1.0/raw/master/img/Compiler.jpg)
+<dl><dd><dl><dd>![](https://files.seeedstudio.com/wiki/Seeeduino_Arch_V1.0/img/Compiler.jpg)
 
 </dd></dl>
 </dd></dl>
@@ -443,7 +443,7 @@ int main() {
 *   Now you can compile the code. If the code has errors, it will prompt you and give you help. And you may find the helps are just what you need.
 
 
-![](https://github.com/SeeedDocument/Seeeduino_Arch_V1.0/raw/master/img/Error_prompt.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Arch_V1.0/img/Error_prompt.jpg)
 
 </dd></dl>
 </dd></dl>
@@ -452,7 +452,7 @@ int main() {
 
 *   Now you need long press the reset button, it will automatically appear as a USB driver named CRP DISABLD.
 
-![](https://github.com/SeeedDocument/Seeeduino_Arch_V1.0/raw/master/img/A_usb_device.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Arch_V1.0/img/A_usb_device.jpg)
 
 </dd></dl>
 </dd></dl>
@@ -480,9 +480,9 @@ The mbed C/C++ SDK provides the software platform and [libraries](http://mbed.or
 
 ##  Resource
 ---
-- [Seeeduino Arch Eagle files](https://github.com/SeeedDocument/Seeeduino_Arch_V1.0/raw/master/res/Seeeduino_Arch_Eagle_files.zip)
+- [Seeeduino Arch Eagle files](https://files.seeedstudio.com/wiki/Seeeduino_Arch_V1.0/res/Seeeduino_Arch_Eagle_files.zip)
 
-- [LPC11U2x datasheet](https://github.com/SeeedDocument/Seeeduino_Arch_V1.0/raw/master/res/LPC11U2x_datasheet.pdf)
+- [LPC11U2x datasheet](https://files.seeedstudio.com/wiki/Seeeduino_Arch_V1.0/res/LPC11U2x_datasheet.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

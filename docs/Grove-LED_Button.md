@@ -10,7 +10,7 @@ tags: 2-链接
 ---
 
 
-![](https://github.com/SeeedDocument/Grove-Red_LED_Button/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Red_LED_Button/img/main.jpg)
 
 
 The Grove - LED Button is composed of Grove - Yellow Button, Grove - Blue LED Button and Grove - Red LED Button. This button is stable and reliable with a 100 000 times long life.
@@ -76,12 +76,12 @@ With the build-in LED, you can apply it to many interesting projects, it is real
 ### Pin Map
 
 
-![](https://github.com/SeeedDocument/Grove-Red_LED_Button/raw/master/img/pin_map.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Red_LED_Button/img/pin_map.jpg)
 
 
 ### Schematic
 
-![](https://github.com/SeeedDocument/Grove-Red_LED_Button/raw/master/img/schematic.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Red_LED_Button/img/schematic.jpg)
 
 
 **SIG1** is the the LED control signal, the default value is low, so the N-Channel MOSFET is off , the LED is off too. When SIG1 becomes high, the N-Channel MOSFET trun on, and the LED light on.
@@ -127,7 +127,7 @@ With the build-in LED, you can apply it to many interesting projects, it is real
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-Red_LED_Button/raw/master/img/red%20LED.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Red_LED_Button/img/red%20LED.jpg)
 
 
 
@@ -261,14 +261,14 @@ It should be like:
 
 | Raspberry pi | Grove Base Hat for RasPi| Grove - Red LED Button|
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Red_LED_Button/raw/master/img/IMG_0068a.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Red_LED_Button/img/IMG_0068a.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Red-LED-Button-p-3096.html)|
 
 - **Step 2**. Plug the Grove Base Hat into Raspberry.
 - **Step 3**. Connect the red LED button to D5 port of the Base Hat.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 
-![](https://github.com/SeeedDocument/Grove-Red_LED_Button/raw/master/img/LED_Hat.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Red_LED_Button/img/LED_Hat.jpg)
 
 !!! Note
     For step 3 you are able to connect the LED button to **any GPIO Port** but make sure you change the command with the corresponding port number.
@@ -400,7 +400,7 @@ You can quit this program by simply press ++ctrl+c++.
 
 ## Resources
 
-- **[Zip]** [Grove-LED Button Eagle file](https://github.com/SeeedDocument/Grove-Red_LED_Button/raw/master/res/Grove-Red_LED_Button.zip)
+- **[Zip]** [Grove-LED Button Eagle file](https://files.seeedstudio.com/wiki/Grove-Red_LED_Button/res/Grove-Red_LED_Button.zip)
 
 
 ## Tech Support

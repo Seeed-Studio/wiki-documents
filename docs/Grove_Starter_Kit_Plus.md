@@ -8,7 +8,7 @@ surveyurl: https://www.research.net/r/Grove_Starter_Kit_Plus
 sku:  110020000
 ---
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Grove-Starter_Kit_Plus.jpeg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Grove-Starter_Kit_Plus.jpeg)
 
 Welcome to enter the world of Grove! Grove is a collection of various modular sensors and actuators that help you dive into and enjoy the electronic world without jitter. Before we discuss those Grove modules one by one, you need to seat yourself and finish some preparations.
 
@@ -22,7 +22,7 @@ Arduino is also the name of a programming IDE based on C/C++. After you get your
 
 [http://arduino.cc/en/Guide/HomePage](http://arduino.cc/en/Guide/HomePage)
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Arduino_1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Arduino_1.jpg)
 
 **3. Language Reference**
 
@@ -36,17 +36,17 @@ Now you have got yourself ready for the Grove exploration.
 
 The Grove base shield plugs into an Arduino and is the foundation of the Grove system. All I/O ports of the Arduino are exposed and adapted into 22 Grove connectors which include digital I/O, analog I/O, and specialized ports (I2C, SPI, UART).
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Grove-base_shield_v1.3.jpeg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Grove-base_shield_v1.3.jpeg)
 
 In the center, surrounded by the yellow lines, are 13 digital I/O ports. These can be used to read and control digital Grove modules, such as the light sensor and LEDs. Some of the digital I/O ports can also be used as PWM (pulse width modulation) outputs. By generating PWM waves, the Arduino can control the movement of a stepper motor or fade an LED. Within the green lines, on the left-hand side, are 5 analog input ports. Analog inputs are typically used to read analog sensors, like a potentiometer or a temperature sensor but these ports can also be used as digital I/O ports. Lastly, the specialized ports are outlined in red: two I2C ports, one SPI port, and one UART port. You’ll use these special ports with more sophisticated Grove modules, like the 3-axis accelerometer and the serial Bluetooth module.
 
 The Grove compatible sensors contained in this pack will use one of the following ports: a digital port, an analog port, or an I2C port. Refer to the wiring instructions and sample code below for each Grove sensor. Ten Grove cables are included in this pack. Simply plug the Grove cables into the sensors and base shield. This enables plug and play operations with no soldering.
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/GroveCable.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/GroveCable.jpg)
 
 ### 2. Grove – Button(P)**
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Bgpushb1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Bgpushb1.jpg)
 
 **Description**
 
@@ -54,7 +54,7 @@ Serving as a ubiquitous button, this one is a basic part for lazy hands. Just pl
 
 **Example**
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/ButtonPicture.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/ButtonPicture.jpg)
 
 This example shows you how to turn on or off an LED via this button.
 ```
@@ -82,14 +82,14 @@ This is a momentary button. That means it only outputs HIGH when pressed on. And
 
 ###  3. Grove – Switch(P)
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/SwitchP.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/SwitchP.jpg)
 
 **Description**
 
 This switch is a mini SPDT slide. You can switch the signal to LOW or HIGH through it. Different from the Grove – Button(P) above, this one outputs steady states.
 **Example**
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Switch1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Switch1.jpg)
 
 You can totally replace Grove – Button(P) with this switch without tweaking a line in its example.
 
@@ -99,7 +99,7 @@ You can totally replace Grove – Button(P) with this switch without tweaking a 
 
 ###  4. Grove – Touch Sensor
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/TouchSensor.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/TouchSensor.jpg)
 
 **Description**
 
@@ -107,7 +107,7 @@ This touch sensor is another substitute for a common button. When you touch the 
 
 **Example**
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Touch1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Touch1.jpg)
 
 You can totally replace Grove – Button(P) with this switch without tweaking a line in its example.
 
@@ -117,7 +117,7 @@ This touch sensor measures the capacitance change on its sensitive area to deter
 
 ###  5. Grove – Magnetic Switch
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Magnetic_Switch.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Magnetic_Switch.jpg)
 
 **Description**
 
@@ -125,7 +125,7 @@ The Grove magnetic switch detects the presence of a magnet. It uses a CT10, a si
 
 **Example**
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/MagneticSwitch1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/MagneticSwitch1.jpg)
 
 You can totally replace Grove – Button(P) with this switch without tweaking a line in its example.
 
@@ -135,7 +135,7 @@ In some applications, magnetic switches have replaced traditional mechanical swi
 
 ###  6. Grove – Red LED
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Grove-LED.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Grove-LED.jpg)
 
 **Description**
 
@@ -143,7 +143,7 @@ LED is the most familiar parts for beginners, no “one of”. We use them to in
 
 **Example**
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/LEDKit.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/LEDKit.jpg)
 
 We already used an LED as an indicator in examples above. And here let’s make some light effect beyond the plain on/off operation, to fade an LED.
 ```
@@ -183,7 +183,7 @@ This LED series has 6 colors to cater for different preference. They are all cap
 
 ###  7. Grove – Buzzer
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Grovebuzzer.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Grovebuzzer.jpg)
 
 **Description**
 
@@ -191,7 +191,7 @@ Buzzer, or Piezo speaker, is probably your first electronic component that utter
 
 **Example**
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/BuzzerKit1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/BuzzerKit1.jpg)
 
 This is a brief example from Oomlout.com, playing you a household nursery rhyme – “Twinkle Twinkle Little Star”.
 ```
@@ -277,7 +277,7 @@ How Piezo buzzer works? Usually there are two ceramic wafers in each Piezo buzze
 
 ###  8. Grove – Vibrator
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Gvib.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Gvib.jpg)
 
 **Description**
 
@@ -285,7 +285,7 @@ This is a miniature vibration motor suitable for non-audible indicators. When se
 
 **Example**
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Vibrator1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Vibrator1.jpg)
 
 You can totally use it as an LED, but also you can create some beats with it. Upload the buzzer’s example to this vibrator and check out the vibration version of “Twinkle Twinkle Little Star”.
 
@@ -295,7 +295,7 @@ The power of one unit is pretty limited. Want something bigger? Vibrator matrix 
 
 ###  9. Grove – Rotary Angle Sensor
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Grove-Rotary_Angle_Sensor.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Grove-Rotary_Angle_Sensor.jpg)
 
 **Description**
 
@@ -303,7 +303,7 @@ This is a 10Kohm linear rotary potentiometer. It has 300 degrees active range. A
 
 **Example**
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Rotaty1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Rotaty1.jpg)
 
 This example shows you how to read the rotary angle sensor.
 ```
@@ -331,7 +331,7 @@ You can also tell the difference on their exteriors. Rotary potentiometer has a 
 
 ###  10. Grove - Sound Sensor
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Sound_Sensor.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Sound_Sensor.jpg)
 
 **Description**
 
@@ -339,7 +339,7 @@ The Grove sound sensor is an electric microphone that enables your project to re
 
 **Example**
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Sound1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Sound1.jpg)
 
 This example sets a threshold to a LED. When the intensity of ambient sound reaches the preset threshold, the LED turns on.
 ```
@@ -366,7 +366,7 @@ The electric microphone collects sound intensity for all frequencies. And the po
 
 ###  11. Grove – Light Sensor (P)
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Grove-Light_SensorP1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Grove-Light_SensorP1.jpg)
 
 **Description**
 
@@ -374,7 +374,7 @@ The light sensor, also known as the light dependent resistor (LDR), is a commonl
 
 **Example**
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Light1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Light1.jpg)
 
 This example will turn on an LED when the light intensity falls below the preset threshold. The light sensor is attached to the Arduino analog pin 0 (the bottom left analog Grove connector) and the LED is attached to Grove digital connector 12 on the base shield.
 ```
@@ -477,7 +477,7 @@ The output of the analog light sensor ranges from 0 to 1023, but the output is n
 
 ###  12. Grove – Temperature Sensor
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Bgtemp1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Bgtemp1.jpg)
 
 **Description**
 
@@ -485,7 +485,7 @@ The Grove temperature sensor uses a thermistor to determine the ambient temperat
 
 **Example**
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/TemperatureKit1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/TemperatureKit1.jpg)
 
 This example shows how to convert the raw output of the sensor into the specific temperature value. You can see the output data in Celsius in the serial monitor.
 ```
@@ -517,7 +517,7 @@ All three parameters in the equation above can be described by one parameter: B.
 
 ###  13. Grove – Relay
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Twig-Relay1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Twig-Relay1.jpg)
 
 **Description**
 
@@ -525,7 +525,7 @@ Relay is a useful tool to magnify your Arduino’s control ability! Feed the con
 
 **Example**
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/RelayKit1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/RelayKit1.jpg)
 
 Following is an example of using a button to control the relay.
 ```
@@ -554,7 +554,7 @@ Relay is an electronically controlled mechanical switch. The size of one varies 
 
 ###  14. Grove – Screw Terminal
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Grove-screw_terminal.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Grove-screw_terminal.jpg)
 
 **Description**
 
@@ -562,7 +562,7 @@ This is a little tool in case you need to merge the quick prototyping Grove syst
 
 ###  15. Grove – Servo
 
-[[![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Servo.jpg)
+[[![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Servo.jpg)
 
 **Description**
 
@@ -570,7 +570,7 @@ Servo is absolutely a fun motion control device to play! Via a servo library bui
 
 **Example**
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Servo1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Servo1.jpg)
 
 Servo is a kind of analog actuators. However Arduino can’t output analog signal. To approximate the analog signal required by analog actuator, Arduino adopts PWM (Pulse Width Modulization) to cope with this. Not all Grove ports can be used as analog outputs. The available ports are D3, D5, D6, D9, D10 and D11. Here is an example how we use a potentiometer to control the position of the servo.
 ```
@@ -603,7 +603,7 @@ Inside the gearbox are a set of gears. When the servo is working, don’t rudely
 ---
 ###  1. A Cup Of Flowers
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/A_Cup_of_Flower.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/A_Cup_of_Flower.jpg)
 
 **Description**
 
@@ -626,7 +626,7 @@ Would you like a cup of flowers to ease your exhausted heart? This project is ma
 
 **1. Fold The Buds **
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Fold_the_buds.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Fold_the_buds.jpg)
 
 Choose one flower pattern you like and follow its steps to create some of them. One Google search may help a lot in finding one. There are so many origami hobbyists and artists over the Internet who’d like to share their handcrafts.
 
@@ -636,7 +636,7 @@ When folding the bud, you need to leave a small hole on its button for the Grove
 
 **2. Set Up**
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Set_up.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Set_up.jpg)
 
 Connect the buds and the touch sensor onto the Grove – Base Shield with the 10cm Grove cable. And then upload the code to your controller.
 ```
@@ -677,13 +677,13 @@ void loop()
 ```
 **3. Power Up &amp; Settle Down**
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Battery.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Battery.jpg)
 
 Use a portable 9V battery to provide power to the flowers and settle it down in the cup. Finished! Enjoy your cup of flowers!
 
 ###  2. How You Doing!
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/How_you_doing.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/How_you_doing.jpg)
 
 (downloaded form think.bigchief.it)
 
@@ -709,7 +709,7 @@ How do you say hello to a friend? Big Chief would say “what’s better than a 
 
 **1. Print It Out! **
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Print_it_out.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Print_it_out.jpg)
 
 Choose one pattern you like over the Internet. Make sure there is enough room for a magnet or a magnetic switch plus a vibrator. Same as the origami flower above, you can find tons of them on the Internet.
 
@@ -718,21 +718,21 @@ Choose one pattern you like over the Internet. Make sure there is enough room fo
 Focus when cutting the paper toys. Only in that way you can get a neat one. After that, time to fill some organs to them.
 I pasted a magnet on the back of Big Cihef A(let’s call it this name!). I stuck it there with double-sided adhesive tape.
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Stuck1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Stuck1.jpg)
 
 And for Big Chief B, I pasted a magnetic switch on his back, the same position as A, and a vibrator on his foots.
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Stuck2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Stuck2.jpg)
 
 **3. Glue Them Up **
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Stuck3.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Stuck3.jpg)
 
 Carefully follow the instruction on the printed sheet. Plug the Grove cables into two Grove Modules we used in Big Chief B. Then you will get two cute paper toys like above.
 
 **4. Upload Program **
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Stuck4.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Stuck4.jpg)
 
 Upload the code below to your Arduino. By doing this, you bring life to them.
 
@@ -761,7 +761,7 @@ We have this part available in [geppetto](https://geppetto.seeedstudio.com/), ea
 
 ###  Intel Edison Live Temperature Display
 
-![](https://github.com/SeeedDocument/Grove_Starter_Kit_Plus/raw/master/img/Intel_Edison_Live_Temperature_Display.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Intel_Edison_Live_Temperature_Display.jpg)
 
 This is an IoT demo make by Intel Edison and Grove - Starter Kit Plus.
 Intel have released an Intel IoT Developer kit that you can get to help developers and techies to get their hands on a simple piece of kit and start developing applications for use in the everyday world.

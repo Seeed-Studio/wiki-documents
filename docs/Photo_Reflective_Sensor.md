@@ -11,7 +11,7 @@ sku:    314020031
 
 This is a reflective sensor combines a GaA1As infrared light emitting diode with a high sensitive Darlington phototransistor in a mini package.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Photo-Reflective-Sensor-p-543.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Photo-Reflective-Sensor-p-543.html)
 
 ##   Features
 ---
@@ -315,7 +315,7 @@ This is a reflective sensor combines a GaA1As infrared light emitting diode with
 
 ##   Mechanic Dimensions
 
-![](https://github.com/SeeedDocument/Photo_Reflective_Sensor/raw/master/img/Photo-ref-dimen.JPG)
+![](https://files.seeedstudio.com/wiki/Photo_Reflective_Sensor/img/Photo-ref-dimen.JPG)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

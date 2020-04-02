@@ -12,7 +12,7 @@ tags:
 
 The Arduino Ethernet Shield allows an Arduino board to connect to the internet. It is based on the Wiznet W5100/W5200 ethernet chip providing a network (IP) stack capable of both TCP and UDP. Use the Ethernet library to write sketches which connect to the internet via a RJ45 Ethernet jack.
 
-|![](https://github.com/SeeedDocument/Ethernet_Shield/raw/master/img/Seeeduino_ethernet-2.jpg)|![](https://github.com/SeeedDocument/Ethernet_Shield/raw/master/img/Ethernet_01.jpg)|![](https://github.com/SeeedDocument/Ethernet_Shield/raw/master/img/W5200_Ethernet_Shield.jpg)|
+|![](https://files.seeedstudio.com/wiki/Ethernet_Shield/img/Seeeduino_ethernet-2.jpg)|![](https://files.seeedstudio.com/wiki/Ethernet_Shield/img/Ethernet_01.jpg)|![](https://files.seeedstudio.com/wiki/Ethernet_Shield/img/W5200_Ethernet_Shield.jpg)|
 |---|---|---|
 |[Seeeduino Ethernet](https://seeeddoc.github.io/Seeeduino_Ethernet/) |[Ethernet Shield V1.0](https://seeeddoc.github.io/Ethernet_Shield_V1.0/) |[Ethernet Shield V2.0](https://seeeddoc.github.io/Ethernet_Shield_V2.0/)|
 

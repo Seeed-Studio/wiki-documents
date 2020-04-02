@@ -72,7 +72,7 @@ The board uses the 2G (not 3G or LTE) GSM networks.
 
 ##   Functional Block  
 
-![](https://github.com/SeeedDocument/Mini-GSM-GPRS-GPS-Breakout-SIM808/raw/master/img/Lonet_pcb_top.jpg)
+![](https://files.seeedstudio.com/wiki/Mini-GSM-GPRS-GPS-Breakout-SIM808/img/Lonet_pcb_top.jpg)
 
 *   GPS Antenna: this is an uFL GPS antenna connector. You can connect either passive or active GPS antenna to it. Active GPS antenna runs at 2.8V voltage.
 
@@ -249,7 +249,7 @@ The module comes with a mini GPS and GSM antenna, but not includes Li-Po battery
 
 ###   Reference Circuit
 
-![](https://github.com/SeeedDocument/Mini-GSM-GPRS-GPS-Breakout-SIM808/raw/master/img/Rerfer_Circuit_SIM808.png)
+![](https://files.seeedstudio.com/wiki/Mini-GSM-GPRS-GPS-Breakout-SIM808/img/Rerfer_Circuit_SIM808.png)
 
 ###   Getting Started with AT Command
 
@@ -409,13 +409,13 @@ $GPRMC,043326.000,A,
 
 ##   Resource  
 
-- **[PDF]**   [LoNet_DesignSchematic](https://github.com/SeeedDocument/Mini-GSM-GPRS-GPS-Breakout-SIM808/raw/master/res/LoNet_DesignSchematic.pdf)
+- **[PDF]**   [LoNet_DesignSchematic](https://files.seeedstudio.com/wiki/Mini-GSM-GPRS-GPS-Breakout-SIM808/res/LoNet_DesignSchematic.pdf)
 
-- **[PDF]**    [SIM800_ATCommand_Manual](https://github.com/SeeedDocument/Mini-GSM-GPRS-GPS-Breakout-SIM808/raw/master/res/SIM800_ATCommand_Manual_V1.02.pdf)
+- **[PDF]**    [SIM800_ATCommand_Manual](https://files.seeedstudio.com/wiki/Mini-GSM-GPRS-GPS-Breakout-SIM808/res/SIM800_ATCommand_Manual_V1.02.pdf)
 
-- **[PDF]**   [SIM808_HardwareDesign_Manual](https://github.com/SeeedDocument/Mini-GSM-GPRS-GPS-Breakout-SIM808/raw/master/res/SIM808_Hardware_Design_V1.00.pdf)
+- **[PDF]**   [SIM808_HardwareDesign_Manual](https://files.seeedstudio.com/wiki/Mini-GSM-GPRS-GPS-Breakout-SIM808/res/SIM808_Hardware_Design_V1.00.pdf)
 
-- **[PDF]**   [SIM808_GPSApplication_Note](https://github.com/SeeedDocument/Mini-GSM-GPRS-GPS-Breakout-SIM808/raw/master/res/SIM808_GPS_Application_Note_V1.00.pdf)
+- **[PDF]**   [SIM808_GPSApplication_Note](https://files.seeedstudio.com/wiki/Mini-GSM-GPRS-GPS-Breakout-SIM808/res/SIM808_GPS_Application_Note_V1.00.pdf)
 
 - **[Library]**    [GPRS_Shield library on gitHub](https://github.com/Seeed-Studio/GPRS_Shield_Suli)
 
@@ -431,7 +431,7 @@ Here we introduce some projects about [GPRS Shield](http://www.seeedstudio.com/d
 
 ###  What is GPRS shield
 
-![](https://github.com/SeeedDocument/Mini-GSM-GPRS-GPS-Breakout-SIM808/raw/master/img/113030009_1.jpg)
+![](https://files.seeedstudio.com/wiki/Mini-GSM-GPRS-GPS-Breakout-SIM808/img/113030009_1.jpg)
 
 Features:
 
@@ -445,7 +445,7 @@ Features:
 
 ###   SMS Remote Control
 
-![](https://github.com/SeeedDocument/Mini-GSM-GPRS-GPS-Breakout-SIM808/raw/master/img/54c720959dae7.JPG)
+![](https://files.seeedstudio.com/wiki/Mini-GSM-GPRS-GPS-Breakout-SIM808/img/54c720959dae7.JPG)
 
 This project describes how to turn your hot water heater on and off via SMS and check if it is on or off.
 
@@ -463,7 +463,7 @@ It is reliable, secure, easy and flexible because of the reasons below:
 
 ###   Arduino Phone
 
-![](https://github.com/SeeedDocument/Mini-GSM-GPRS-GPS-Breakout-SIM808/raw/master/img/Recipe-arduinophone.png)
+![](https://files.seeedstudio.com/wiki/Mini-GSM-GPRS-GPS-Breakout-SIM808/img/Recipe-arduinophone.png)
 
 Arduino phone is a cell phone made by ourselves via combining Arduino and other shield modules.
 

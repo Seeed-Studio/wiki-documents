@@ -140,7 +140,7 @@ Finally, the three on-board Grove interfaces can make your board connect to Grov
 
 The images below show an overview of Seeeduino v4.2 hardware features. The pin-out and alternate functions of various pins of Seeeduino v4.2 are shown in the pin-out diagram. This could be used as a quick reference.
 
-![enter image description here](https://github.com/SeeedDocument/SeeeduinoV4/raw/master/images/hardware_seeed.png)
+![enter image description here](https://files.seeedstudio.com/wiki/SeeeduinoV4/images/hardware_seeed.png)
 
 - <font face="" size=5 font color="00b0f0">❶</font> **USB Input:**
 USB Port is used to connect the board to your PC for programming and for powering up.
@@ -177,7 +177,7 @@ The TX and RX LED indicators are connected to TX and RX of USB-to-UART chip. The
 - Step 2. Connect the Seeeduino V4.2 to your computer with the Micro-USB Cable.
 Then the green power LED (labeled PWR) should go on.
 
-![](https://github.com/SeeedDocument/SeeeduinoV4/raw/master/images/connect.jpg)
+![](https://files.seeedstudio.com/wiki/SeeeduinoV4/images/connect.jpg)
 
 
 
@@ -325,13 +325,13 @@ A3: Please follow below steps to solve the issue.
 
 
 ## Resources
-- **[PDF]** [Download Wiki PDF](https://github.com/SeeedDocument/SeeeduinoV4/raw/master/resources/Seeeduino_v4.2.pdf)
-- **[Eagle]** [Seeeduino V4.2 in EAGLE file](https://github.com/SeeedDocument/SeeeduinoV4/raw/master/resources/SeeeduinoV4.2.zip)
-- **[PDF]** [Seeeduino V4.2 in PDF](https://github.com/SeeedDocument/SeeeduinoV4/raw/master/resources/Seeeduino_v4.2_sch.pdf)
-- **[Eagle]** [Seeeduino V4.0 in EAGLE file](https://github.com/SeeedDocument/SeeeduinoV4/raw/master/resources/Seeeduino_v4.0_sch.pdf)
-- **[PDF]** [Seeeduino V4.0 in PDF](https://github.com/SeeedDocument/SeeeduinoV4/raw/master/resources/Seeeduino_v4.0_sch.pdf)
-- **[Datasheet]** [ATmega328P](https://github.com/SeeedDocument/SeeeduinoV4/raw/master/resources/ATmega328.pdf)
-- **[Datasheet]** [ATmega16U2](https://github.com/SeeedDocument/SeeeduinoV4/raw/master/resources/ATmega16u2.pdf)
+- **[PDF]** [Download Wiki PDF](https://files.seeedstudio.com/wiki/SeeeduinoV4/resources/Seeeduino_v4.2.pdf)
+- **[Eagle]** [Seeeduino V4.2 in EAGLE file](https://files.seeedstudio.com/wiki/SeeeduinoV4/resources/SeeeduinoV4.2.zip)
+- **[PDF]** [Seeeduino V4.2 in PDF](https://files.seeedstudio.com/wiki/SeeeduinoV4/resources/Seeeduino_v4.2_sch.pdf)
+- **[Eagle]** [Seeeduino V4.0 in EAGLE file](https://files.seeedstudio.com/wiki/SeeeduinoV4/resources/Seeeduino_v4.0_sch.pdf)
+- **[PDF]** [Seeeduino V4.0 in PDF](https://files.seeedstudio.com/wiki/SeeeduinoV4/resources/Seeeduino_v4.0_sch.pdf)
+- **[Datasheet]** [ATmega328P](https://files.seeedstudio.com/wiki/SeeeduinoV4/resources/ATmega328.pdf)
+- **[Datasheet]** [ATmega16U2](https://files.seeedstudio.com/wiki/SeeeduinoV4/resources/ATmega16u2.pdf)
 - **[MoreReading]** [Getting Started with Arduino](https://www.arduino.cc/en/Guide/HomePage)
 - **[MoreReading]** [Arduino Language Reference](https://www.arduino.cc/en/Reference/HomePage)
 - **[MoreReading]** [Download the Arduino Software(IDE)](https://www.arduino.cc/en/Main/Software)
@@ -339,7 +339,7 @@ A3: Please follow below steps to solve the issue.
 - **[MoreReading]** [Arduino Introduction](https://www.arduino.cc/en/guide/introduction)
 - **[MoreReading]** [Wikipedia page for Arduino](https://en.wikipedia.org/wiki/Arduino)
 - **[MoreReading]** [How to fit RF Explorer 3G+ IoT modules on Seeeduino](http://j3.rf-explorer.com/60-rfe/specifications/184-rf-explorer-3g-iot-for-seeeduino)
-- **[Firmware]** [How to burn the bootloader](https://github.com/SeeedDocument/forum_doc/raw/master/reg/seeeduino_boot.zip)
+- **[Firmware]** [How to burn the bootloader](https://files.seeedstudio.com/wiki/forum_doc/reg/seeeduino_boot.zip)
 
 ## Project
 

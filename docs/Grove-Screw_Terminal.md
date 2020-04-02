@@ -8,7 +8,7 @@ surveyurl: https://www.research.net/r/Grove_Screw_Terminal
 sku:  103020007
 ---
 
-![](https://github.com/SeeedDocument/Grove-Screw_Terminal/raw/master/img/Grove-screw_terminal.jpg).
+![](https://files.seeedstudio.com/wiki/Grove-Screw_Terminal/img/Grove-screw_terminal.jpg).
 
 Grove - Screw Terminal with four 3.5mm pitch pins rate up to 125V @ 6A. Terminal can accept 30 to 20AWG wire. It is the most common pitch screw terminal. This grove has four ports, including GND, VCC
 and two other undefined ports. Screw terminals are commonly used to connect a chassis ground, such as on a record player or a surge protector. Most public address systems in buildings also use them for speakers, and sometimes for other outputs and inputs.
@@ -44,9 +44,9 @@ and two other undefined ports. Screw terminals are commonly used to connect a ch
 
 ## Resources
 
-- **[Eagle&PDF]**[Grove-Screw Terminal.zip](https://github.com/SeeedDocument/Grove-Screw_Terminal/raw/master/res/Grove-Screw_Terminal_v1.0.zip)
+- **[Eagle&PDF]**[Grove-Screw Terminal.zip](https://files.seeedstudio.com/wiki/Grove-Screw_Terminal/res/Grove-Screw_Terminal_v1.0.zip)
 
-- **[PDF]**  [Screw-Terminal-3.5mm Dimension](https://github.com/SeeedDocument/Grove-Screw_Terminal/raw/master/res/Screw-Terminal-3.5mm.pdf)
+- **[PDF]**  [Screw-Terminal-3.5mm Dimension](https://files.seeedstudio.com/wiki/Grove-Screw_Terminal/res/Screw-Terminal-3.5mm.pdf)
 
 ## Projects
 

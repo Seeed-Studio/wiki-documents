@@ -344,7 +344,7 @@ After both of the sketch is well uploaded, open the serial monitor of the receiv
 - Step 1. Please refer to [LoRa/LoRaWAN Gateway Kit](http://wiki.seeedstudio.com/LoRa_LoRaWan_Gateway_Kit/) to setup gateway first.  
 - Step 2. Connect the [Grove-Temperature_and_Humidity_Sensor_Pro](http://wiki.seeedstudio.com/Grove-Temperature_and_Humidity_Sensor_Pro/) to D2 port of base shield. 
 - Step 3. Connect the base shield to Seeeduino Lorawan.
-- Step 4. Download [DHT Library](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/DHT.zip) and unzip to arduino library folder.
+- Step 4. Download [DHT Library](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/DHT.zip) and unzip to arduino library folder.
 - Step 5. Copy below code to arduino IDE and upload.
 
 
@@ -555,7 +555,7 @@ void loop()
 
 **4.2 Lat and Lng**
 
-Thanks for **Todd Krein** for sharing the example in Github. Please download the [TinyGPS++ library](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/TinyGPSPlus-master.zip) and then copy below code to Seeeduino Lorawan. 
+Thanks for **Todd Krein** for sharing the example in Github. Please download the [TinyGPS++ library](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/TinyGPSPlus-master.zip) and then copy below code to Seeeduino Lorawan. 
 
 ```c++
 #define USE_GPS 1
@@ -834,14 +834,14 @@ Click on **Files Transfer > Ymodem > Send**, and select the .bin file we had dow
 
 ## Resources
 
-* [Schematics in Eagle](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/202001246 Seeeduino LoRaWAN Eagle.zip)
+* [Schematics in Eagle](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/202001246 Seeeduino LoRaWAN Eagle.zip)
 * [Sketchup file(3D)](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/Seeeduino LoRaWAN.skp)
-* [CE certification of RHF 76-052](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/ce-rhf76-052.pdf)
-* [RHF76-052 Firmware V2.0.10](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/rhf76-052am-v2.0.10-20160923.ebin 2.bin)
-* [RHF76-052 Firmware V2.1.16](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/rhf76-052am-v2.1.16-20171203.ebin.bin)
-* [RHF76-052 Firmware V2.1.19](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/rhf76-052am-v2.1.19-20180525.ebin.bin)
-* [Datasheet of RHF76-052AM](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/rhf-ds01500_rhf76-052_datasheet_v03.pdf)
-* [Datasheet of GPS Chip L70B-M39 ](https://github.com/SeeedDocument/Seeeduino_LoRa/raw/master/res/L70B-M39.pdf)
+* [CE certification of RHF 76-052](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/ce-rhf76-052.pdf)
+* [RHF76-052 Firmware V2.0.10](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/rhf76-052am-v2.0.10-20160923.ebin 2.bin)
+* [RHF76-052 Firmware V2.1.16](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/rhf76-052am-v2.1.16-20171203.ebin.bin)
+* [RHF76-052 Firmware V2.1.19](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/rhf76-052am-v2.1.19-20180525.ebin.bin)
+* [Datasheet of RHF76-052AM](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/rhf-ds01500_rhf76-052_datasheet_v03.pdf)
+* [Datasheet of GPS Chip L70B-M39 ](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/L70B-M39.pdf)
 * [Azure IoT Edge LoRaWAN](https://github.com/Azure/iotedge-lorawan-starterkit/)
 
 ## Projects

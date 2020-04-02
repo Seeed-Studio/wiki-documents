@@ -10,7 +10,7 @@ sku:
 tags:
 
 ---
-![](https://github.com/SeeedDocument/Stepper_Motor_Driver/raw/master/img/Motorshield.jpg)
+![](https://files.seeedstudio.com/wiki/Stepper_Motor_Driver/img/Motorshield.jpg)
 
 **Model:[PCB117A4M](http://www.seeedstudio.com/depot/open-source-service-fusion-pcb-pool-c-64_33.html)**
 

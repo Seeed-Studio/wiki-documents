@@ -16,7 +16,7 @@ Well, we have a lot Seeeduino Boards to achieve all kinds of functions. But you 
 **Click the picture to see it more clearly.**
 
 
-[![](https://github.com/SeeedDocument/Seeeduino-Buying-Guide/raw/master/img/seeeduino_list_1.PNG)](https://github.com/SeeedDocument/Seeeduino-Buying-Guide/raw/master/img/seeeduino_list_1.PNG)
+[![](https://files.seeedstudio.com/wiki/Seeeduino-Buying-Guide/img/seeeduino_list_1.PNG)](https://files.seeedstudio.com/wiki/Seeeduino-Buying-Guide/img/seeeduino_list_1.PNG)
 
 
 

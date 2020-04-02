@@ -8,7 +8,7 @@ surveyurl:
 sku: 102010248
 ---
 
-![](https://github.com/SeeedDocument/Seeeduino-Cortex-M0-/raw/master/img/102010248-wiki.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-Cortex-M0-/img/102010248-wiki.jpg)
 
 The Seeeduino Cortex-M0+ features an Atmel SAMD21 MCU which is based on a 32-bit ARM® Cortex®-M0+ processor. With the help of this powerful core, SAMD21 is much more powerful than AVR and can achieve many functions and more complex calculations that cannot be implemented on AVR chips.
 
@@ -63,7 +63,7 @@ On top of that, Seeeduino Cortex-M0+ is the first Seeeduino development board wi
 ## Hardware Overview
 
 
-![](https://github.com/SeeedDocument/Seeeduino-Cortex-M0-/raw/master/img/hardware.png) 
+![](https://files.seeedstudio.com/wiki/Seeeduino-Cortex-M0-/img/hardware.png) 
 
 
 ### UART
@@ -90,14 +90,14 @@ Serial1
 for UART pins in the header
 
 
-![](https://github.com/SeeedDocument/Seeeduino-Cortex-M0-/raw/master/img/UART.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-Cortex-M0-/img/UART.jpg)
 
 
 
 
 ### Pinout
  
-![](https://github.com/SeeedDocument/Seeeduino-Cortex-M0-/raw/master/img/102010248-pinout.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-Cortex-M0-/img/102010248-pinout.jpg)
 
 
 
@@ -216,8 +216,8 @@ A few seconds after the upload finishes, you should see the pin 13 (L) LED on th
 
 ## Resources
 
-- **[ZIP]** [Seeeduino Cortex-M0+ v1.0 Eagle file](https://github.com/SeeedDocument/Seeeduino-Cortex-M0-/raw/master/res/Seeeduino%20Cortex-M0%2B%20v1.0.zip)
-- **[PDF]** [SAMD21-Datasheet](https://github.com/SeeedDocument/Seeeduino-Cortex-M0-/raw/master/res/SAM-D21-Datasheet.pdf)
+- **[ZIP]** [Seeeduino Cortex-M0+ v1.0 Eagle file](https://files.seeedstudio.com/wiki/Seeeduino-Cortex-M0-/res/Seeeduino%20Cortex-M0%2B%20v1.0.zip)
+- **[PDF]** [SAMD21-Datasheet](https://files.seeedstudio.com/wiki/Seeeduino-Cortex-M0-/res/SAM-D21-Datasheet.pdf)
 
 
 

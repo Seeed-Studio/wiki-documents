@@ -7,11 +7,11 @@ prodimagename: Imu_6dof_01.jpg
 surveyurl: https://www.research.net/r/xadow_IMU_6DOF
 sku:  103040004
 ---
-![](https://github.com/SeeedDocument/Xadow_IMU_6DOF/raw/master/img/Imu_6dof_01.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_IMU_6DOF/img/Imu_6dof_01.jpg)
 
 Xadow - IMU 6DOF is a motion tracking module. Its design is based on the sensor MPU6050 which is the world’s first integrated 6-axis MotionTracking device, that combines a 3-axis gyroscope, 3-axis accelerometer, and a Digital Motion Processor™ (DMP). MPU6050 features three 16-bit analog-to-digital converters (ADCs) for digitizing the gyroscope outputs and three 16-bit ADCs for digitizing the accelerometer outputs so Xadow - IMU 6DOF achieves a high converter accuracy. For precision tracking of both fast and slow motions, the parts feature a user-programmable gyroscope full-scale range and a user-programmable accelerometer full-scale range.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-IMU-6DOF-p-1670.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-IMU-6DOF-p-1670.html)
 
 ## Specification
 ---
@@ -28,7 +28,7 @@ Based on our available library，you can get accele and gyro value easily.Now le
 
 **Hardware Connection：**
 
-![](https://github.com/SeeedDocument/Xadow_IMU_6DOF/raw/master/img/Xadow-IMU_6DOF_installation.png)
+![](https://files.seeedstudio.com/wiki/Xadow_IMU_6DOF/img/Xadow-IMU_6DOF_installation.png)
 
 Note: when connect Xadow IMU 6DOF to Xadow Main Board, the connection direction should be cautious. The connection method is that the unfilled corner of one Xadow module connect to the right angle of another module(see four corners of each Xadow module).
 
@@ -101,14 +101,14 @@ void loop()
 
 - Upload code to Xadow Main Board. Remember to select 'Seeeduino Xadow'from Tools ->Board.Open serial monitor to observe the output value of MPU6050 Sensor.
 
-![](https://github.com/SeeedDocument/Xadow_IMU_6DOF/raw/master/img/Xadow_IMU_6DOF_result.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_IMU_6DOF/img/Xadow_IMU_6DOF_result.jpg)
 
 In static state，the z-Axis output value is about 0.98g，so you can refer to this to test if your sensor can work normally.
 
 **Orientation of Axes**
 The diagram below shows the orientation of the axes of sensitivity and the polarity of rotation.
 
-![](https://github.com/SeeedDocument/Xadow_IMU_6DOF/raw/master/img/MPU6050_%E8%BD%B4%E5%90%91%E5%AE%9A%E4%BD%8D.png)
+![](https://files.seeedstudio.com/wiki/Xadow_IMU_6DOF/img/MPU6050_%E8%BD%B4%E5%90%91%E5%AE%9A%E4%BD%8D.png)
 
 
 ## Schematic Online Viewer
@@ -119,8 +119,8 @@ The diagram below shows the orientation of the axes of sensitivity and the polar
 
 ## Resources
 ---
-- [Xadow - IMU 6DOF Eagle File](https://github.com/SeeedDocument/Xadow_IMU_6DOF/raw/master/res/Xadow_IMU_6DOF_Eagle_File.zip)
-- [MPU6050 datasheet](https://github.com/SeeedDocument/Xadow_IMU_6DOF/raw/master/res/MPU6050.pdf)
+- [Xadow - IMU 6DOF Eagle File](https://files.seeedstudio.com/wiki/Xadow_IMU_6DOF/res/Xadow_IMU_6DOF_Eagle_File.zip)
+- [MPU6050 datasheet](https://files.seeedstudio.com/wiki/Xadow_IMU_6DOF/res/MPU6050.pdf)
 - [Library File](https://github.com/Seeed-Studio/Xadow_IMU_6DOF)
 
 ## Tech Support

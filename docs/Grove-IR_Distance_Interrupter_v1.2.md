@@ -61,7 +61,7 @@ Specifications
 | Operating voltage(V)          | 3.3 or 5 Volts                                                                         |
 | Operating current(mA)         | Maximum: 20 mA                                                                         |
 | Effective detectable distance | 7.5–40 cm                                                                              |
-| Reflective photosensor        | [datasheet](https://github.com/SeeedDocument/Grove-IR_Distance_Interrupter_v1.2/raw/master/res/ITR9909_datasheet.pdf) |
+| Reflective photosensor        | [datasheet](https://files.seeedstudio.com/wiki/Grove-IR_Distance_Interrupter_v1.2/res/ITR9909_datasheet.pdf) |
 | Output operational amplifiers | [datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-IR_Distance_Interrupter_v1.2/master/res/LM393.pdf)                  |
 | Weight                        | 2.5 g(for the module), 8.5 g(for all single package)                                   |
 
@@ -80,7 +80,7 @@ Platforms Supported
 Hardware Overview
 -----------------
 
-![](https://github.com/SeeedDocument/Grove-IR_Distance_Interrupter_v1.2/raw/master/img/hardware_overview.png)
+![](https://files.seeedstudio.com/wiki/Grove-IR_Distance_Interrupter_v1.2/img/hardware_overview.png)
 
 -   **ITR9909 Reflective photosensor**, Highly sensitive reflective photosensor.
 -   **LM393 operational amplifier**, rail-to-rail operational amplifier.

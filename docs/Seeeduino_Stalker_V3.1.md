@@ -285,13 +285,13 @@ Open Arduino IDE, **File > Sketchbook > StalkerV30_DataLogger_10Sec** to open th
 ## Resources
 ---
 **Schematic**
-  * [Schematic in **Eagle**](https://github.com/SeeedDocument/Seeeduino_Stalker_V3_1/raw/master/resources/202000956_Seeeduino%20Stalker%20v3.1.zip)
-  * [Schematic in **PDF**](https://github.com/SeeedDocument/Seeeduino_Stalker_V3_1/raw/master/resources/Seeeduino%20Stalker%20v3.1.pdf)
+  * [Schematic in **Eagle**](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/resources/202000956_Seeeduino%20Stalker%20v3.1.zip)
+  * [Schematic in **PDF**](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/resources/Seeeduino%20Stalker%20v3.1.pdf)
 
 **Datasheet**
-  * [DS1307](https://github.com/SeeedDocument/Seeeduino_Stalker_V3_1/raw/master/resources/ds1307.pdf)
-  * [CN3065](https://github.com/SeeedDocument/Seeeduino_Stalker_V3_1/raw/master/resources/DSE-CN3065.pdf)
-  * [ETA3406](https://github.com/SeeedDocument/Seeeduino_Stalker_V3_1/raw/master/resources/eta3406.pdf)
+  * [DS1307](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/resources/ds1307.pdf)
+  * [CN3065](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/resources/DSE-CN3065.pdf)
+  * [ETA3406](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/resources/eta3406.pdf)
 * [Sketchbook](https://github.com/Seeed-Studio/Sketch_Stalker_V3_1)
 
 ## FAQ

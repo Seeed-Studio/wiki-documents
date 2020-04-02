@@ -10,7 +10,7 @@ sku:
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Lipo_Rider_V1.1/raw/master/img/Liporider-setup.jpg)
+![](https://files.seeedstudio.com/wiki/Lipo_Rider_V1.1/img/Liporider-setup.jpg)
 
 Power your favourite electronic kit with green energy! The Lipo Rider board allows you ride the solar wave to run your favourite 5V device. The Lipo Rider board is the ideal green power solution for your outdoor sensor design. Attach the Lipo Rider board to your sensor board and it can run on solar power forever!
 
@@ -64,7 +64,7 @@ Model:POW115D2P
 
 ###   Block Diagram  ###
 
-![](https://github.com/SeeedDocument/Lipo_Rider_V1.1/raw/master/img/Lipo-rider-blockdiagram.JPG)
+![](https://files.seeedstudio.com/wiki/Lipo_Rider_V1.1/img/Lipo-rider-blockdiagram.JPG)
 
 ##   Specification   ##
 
@@ -101,7 +101,7 @@ Model:POW115D2P
 
 The Lipo Rider works as a power module to supply a stable 5VDC power for **MCU**  projects. Here is an example to drive 300mA output wave for a power supply:
 
-![](https://github.com/SeeedDocument/Lipo_Rider_V1.1/raw/master/img/MAP001.jpg)
+![](https://files.seeedstudio.com/wiki/Lipo_Rider_V1.1/img/MAP001.jpg)
 
 ###   Hardware Setup   ###
 
@@ -155,18 +155,18 @@ Standalone Mode
 
 Solar Power charges lithium battery
 
-![](https://github.com/SeeedDocument/Lipo_Rider_V1.1/raw/master/img/Lipo-Rider-v1.2-standalone.JPG)
+![](https://files.seeedstudio.com/wiki/Lipo_Rider_V1.1/img/Lipo-Rider-v1.2-standalone.JPG)
 
 USB Mode
 
 Solar Power charges lithium battery. Lithium battery supplies destination USB device
 
-![](https://github.com/SeeedDocument/Lipo_Rider_V1.1/raw/master/img/Lipo-Rider-v1.2-usb.JPG)
+![](https://files.seeedstudio.com/wiki/Lipo_Rider_V1.1/img/Lipo-Rider-v1.2-usb.JPG)
 Program Mode
 
 Source USB will charge lithium battery and power destination USB device. Data connection will be enabled between source and destination USB devices
 
-![](https://github.com/SeeedDocument/Lipo_Rider_V1.1/raw/master/img/Lipo-Rider-v1.2-program.JPG)
+![](https://files.seeedstudio.com/wiki/Lipo_Rider_V1.1/img/Lipo-Rider-v1.2-program.JPG)
 
 ###   Example   ###
 
@@ -178,7 +178,7 @@ If a firmware reprogram for the outdoor sensor device is required, simple connec
 
 Larger/multiple batteries and/or solar panels can be used, but only with end-user modifications.
 
-![](https://github.com/SeeedDocument/Lipo_Rider_V1.1/raw/master/img/Lipo-Rider-v1.2-exam1.JPG)
+![](https://files.seeedstudio.com/wiki/Lipo_Rider_V1.1/img/Lipo-Rider-v1.2-exam1.JPG)
 
 Lipo Rider powering an Arduino Duemilanove (not strict an outdoor sensor in this case as I have not connected any sensor and it is not outdoor, but you get the point )
 

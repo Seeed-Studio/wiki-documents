@@ -8,7 +8,7 @@ surveyurl:
 sku: 102991187
 ---
 
-![](https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/Grove%20AI%20HAT%20for-Edge-Computing-wiki-front.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/Grove%20AI%20HAT%20for-Edge-Computing-wiki-front.jpg)
 
 The Grove AI HAT for Edge Computing(hereafter called 'Grove AI HAT') is built around Sipeed MAix M1 AI MODULE with Kendryte K210 processor inside. It's a low cost but powerful raspberry pi AI hat which assists raspberry pi run the AI at the edge, it also can work independently for edge computing applications.
 
@@ -557,9 +557,9 @@ Now you can use the camera to shoot faces, rotate the focus ring on the camera o
 
 ## Resources
 
-- **[PDF]** [Grove AI HAT for Edge Computing Schematic file](https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/res/Grove%20AI%20HAT%20for%20Edge%20Computing_v1.0_SCH_190426.pdf)
-- **[PDF]** [Accelerometers_Sensor_datasheet Datasheet](https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/res/Accelerometers_Sensor_datasheet.pdf)
-- **[PDF]** [ADS1115 Datasheet](https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/res/ADS1115.pdf)
+- **[PDF]** [Grove AI HAT for Edge Computing Schematic file](https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/res/Grove%20AI%20HAT%20for%20Edge%20Computing_v1.0_SCH_190426.pdf)
+- **[PDF]** [Accelerometers_Sensor_datasheet Datasheet](https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/res/Accelerometers_Sensor_datasheet.pdf)
+- **[PDF]** [ADS1115 Datasheet](https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/res/ADS1115.pdf)
 
 
 ## Tech Support

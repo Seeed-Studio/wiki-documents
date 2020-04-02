@@ -8,11 +8,11 @@ surveyurl: https://www.research.net/r/xadow_gesture_v1
 sku: 101040005
 ---
 
-![](https://github.com/SeeedDocument/Xadow_Gesture_v1.0/raw/master/img/Xadow_-_Gesture_3.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Gesture_v1.0/img/Xadow_-_Gesture_3.jpg)
 
 The sensor on Xadow - Gesture v1.0 is PAJ7620U2 that integrates gesture recognition function with general I2C interface into a single chip. It can recognize 13 gestures including move up, move down, move left, move right, move forward, move backward,circle-clockwise, circle-counter clockwise, up to down ,down to up,left to right ,right to left and wave. These gestures information can be simply accessed via the I2C bus.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-Gesture-v1.0-p-2460.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-Gesture-v1.0-p-2460.html)
 
 ## Features
 ---
@@ -34,7 +34,7 @@ The sensor on Xadow - Gesture v1.0 is PAJ7620U2 that integrates gesture recognit
 -
 ## Interface Function
 ---
-![](https://github.com/SeeedDocument/Xadow_Gesture_v1.0/raw/master/img/Xadow_-_Gesture_2.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Gesture_v1.0/img/Xadow_-_Gesture_2.jpg)
 
 - P1:Short-circuits,then interrupt signal will be connected with pin PF0/A5 .
 - U1:PAJ7620U2;Integrated Gesture Recognition Sensor.
@@ -47,7 +47,7 @@ When connect Xadow - Gesture to Xadow Main Board, the connection direction shoul
 ---
 Pins on both sides of Xadow modules are symmetrical, here are pins descriptions about Interface from top to bottom.
 
-![](https://github.com/SeeedDocument/Xadow_Gesture_v1.0/raw/master/img/Xadow_-_Gesture_5.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow_Gesture_v1.0/img/Xadow_-_Gesture_5.jpg)
 
 |Xadow Pins|	PAJ7620U2 Pins	|Function|
 |---|---|---|
@@ -73,8 +73,8 @@ Pins on both sides of Xadow modules are symmetrical, here are pins descriptions 
 
 ## Resources
 ---
-- [Xadow - Gesture v1.0 sch pcb.zip](https://github.com/SeeedDocument/Xadow_Gesture_v1.0/raw/master/res/Xadow-_Gesture_v1.0_sch_pcb.zip)
-- [PAJ7620U2_Datasheet_V0.8_20140611.pdf](https://github.com/SeeedDocument/Xadow_Gesture_v1.0/raw/master/res/PAJ7620U2_Datasheet_V0.8_20140611.pdf)
+- [Xadow - Gesture v1.0 sch pcb.zip](https://files.seeedstudio.com/wiki/Xadow_Gesture_v1.0/res/Xadow-_Gesture_v1.0_sch_pcb.zip)
+- [PAJ7620U2_Datasheet_V0.8_20140611.pdf](https://files.seeedstudio.com/wiki/Xadow_Gesture_v1.0/res/PAJ7620U2_Datasheet_V0.8_20140611.pdf)
 - [Library of Xadow - Guesture](https://github.com/Seeed-Studio/Grove_Guesture)
 
 ## Tech Support

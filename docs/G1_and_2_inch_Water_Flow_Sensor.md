@@ -7,7 +7,7 @@ prodimagename: 113990010%201.jpg
 surveyurl: https://www.research.net/r/G1_and_2_inch_Water_Flow_Sensor
 sku: 314150005
 ---
-![](https://github.com/SeeedDocument/G1_and_2_inch_Water_Flow_Sensor/raw/master/img/flowsensor_LRG.jpg)
+![](https://files.seeedstudio.com/wiki/G1_and_2_inch_Water_Flow_Sensor/img/flowsensor_LRG.jpg)
 
 Water flow sensor consists of a plastic valve body, a water rotor, and a hall-effect sensor. When water flows through the rotor, rotor rolls. Its speed changes with different rate of flow. The hall-effect sensor outputs the corresponding pulse Signal.
 
@@ -18,7 +18,7 @@ Water flow sensor consists of a plastic valve body, a water rotor, and a hall-ef
 |v1.0|	Initial public release	|May 31, 2010|
 |v2.0|	Public release 2.0|	Jul 05, 2010|
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/g12-water-flow-sensor-p-635.html?cPath=84_87&zenid=020999c566d2f31841dc54602b7d02ef)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/g12-water-flow-sensor-p-635.html?cPath=84_87&zenid=020999c566d2f31841dc54602b7d02ef)
 
 ## Specification
 ---
@@ -40,9 +40,9 @@ Water flow sensor consists of a plastic valve body, a water rotor, and a hall-ef
 ---
 Unit:mm
 
-![](https://github.com/SeeedDocument/G1_and_2_inch_Water_Flow_Sensor/raw/master/img/Dem1.png)
+![](https://files.seeedstudio.com/wiki/G1_and_2_inch_Water_Flow_Sensor/img/Dem1.png)
 
-![](https://github.com/SeeedDocument/G1_and_2_inch_Water_Flow_Sensor/raw/master/img/Dem2.png)
+![](https://files.seeedstudio.com/wiki/G1_and_2_inch_Water_Flow_Sensor/img/Dem2.png)
 
 ## Sensor Components
 ---
@@ -78,7 +78,7 @@ Wiring up the Water Flow Sensor is pretty simple. There are 3 wires: Black, Red,
 
 Here is a fritzing diagram I made to show you how to wire it all up.
 
-![](https://github.com/SeeedDocument/G1_and_2_inch_Water_Flow_Sensor/raw/master/img/Reading_liquid_flow_rate_with_an_Arduino.jpg)
+![](https://files.seeedstudio.com/wiki/G1_and_2_inch_Water_Flow_Sensor/img/Reading_liquid_flow_rate_with_an_Arduino.jpg)
 
 Once you have it wired up you will need to upload the following code to your Seeeduino. Once it is uploaded and you have some fluid flowing through the Water Flow Sensor, you can open the serial monitor and it will display the flow rate, refreshing every second.
 
@@ -131,7 +131,7 @@ You can refer our forum for more details about Reading Water Flow rate with Wate
 ---
 
 The external diameter of thread the connections use is 1.4mm.
-![](https://github.com/SeeedDocument/G1_and_2_inch_Water_Flow_Sensor/raw/master/img/Wfs-wiring.jpg)
+![](https://files.seeedstudio.com/wiki/G1_and_2_inch_Water_Flow_Sensor/img/Wfs-wiring.jpg)
 
 ## Output Table
 ---
@@ -153,7 +153,7 @@ Here we introduce some projects about [Grove-Water Sensor](http://www.seeedstudi
 
 **What is Grove - Water Sensor**
 
-![](https://github.com/SeeedDocument/G1_and_2_inch_Water_Flow_Sensor/raw/master/img/Twig_-_Water_Sensor.jpg)
+![](https://files.seeedstudio.com/wiki/G1_and_2_inch_Water_Flow_Sensor/img/Twig_-_Water_Sensor.jpg)
 
 This water sensor module is part of the Twig system.You can use it with the analog pins to detect the amount of water induced contact between the grounded and sensor traces.
 
@@ -166,7 +166,7 @@ This circuit will work with the digital I/O pins of your Arduino.
 
 **Arduino Plant Warden**
 
-![](https://github.com/SeeedDocument/G1_and_2_inch_Water_Flow_Sensor/raw/master/img/552c2c4f2e5a8.jpg)
+![](https://files.seeedstudio.com/wiki/G1_and_2_inch_Water_Flow_Sensor/img/552c2c4f2e5a8.jpg)
 
 This project uses Grove - Water Sensor to create a simple but effective solution to watering plants.
 How it works:
@@ -214,7 +214,7 @@ Here is the Sensors FAQ, people can go here to find questions and answers for th
 
 ## Resource
 ---
-- [Water flow sensor datasheet.pdf](https://github.com/SeeedDocument/G1_and_2_inch_Water_Flow_Sensor/raw/master/res/Water_flow_sensor_datasheet.pdf)
+- [Water flow sensor datasheet.pdf](https://files.seeedstudio.com/wiki/G1_and_2_inch_Water_Flow_Sensor/res/Water_flow_sensor_datasheet.pdf)
 - [Reading Water Flow rate with Water Flow Sensor](https://community.seeedstudio.com/topic_detail.html?id=575#p3632)
 - [Water Flow rate display on LCD](https://github.com/practicalarduino/WaterFlowGauge)
 - [datasheet for the material](http://garden.seeedstudio.com/images/4/4e/YEE70G30HSLNC..pdf)

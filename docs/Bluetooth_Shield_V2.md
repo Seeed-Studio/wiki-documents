@@ -8,7 +8,7 @@ surveyurl: https://www.research.net/r/Bluetooth_Shield_V2
 sku:  113030019
 ---
 
-![](https://github.com/SeeedDocument/Bluetooth_Shield_V2/raw/master/img/Bluetooth_Shiled_v2.JPG)
+![](https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/img/Bluetooth_Shiled_v2.JPG)
 
 The Bluetooth Shield integrates a Serial Bluetooth module. It can be easily used with Arduino/Seeedstudio for transparent wireless serial communication. You can choose two pins from Arduino D0 to D7 as Software Serial Ports to communicate with Bluetooth Shield (D0 and D1 is Hardware Serial Port). The shield also has two Grove connectors (one is Digital, the other is Analog) for you to install Grove modules.
 
@@ -26,7 +26,7 @@ The Bluetooth Shield integrates a Serial Bluetooth module. It can be easily used
 
 ##   Interface function
 ---
-![](https://github.com/SeeedDocument/Bluetooth_Shield_V2/raw/master/img/Bluetooth_Shield_V2.0_K.jpg)
+![](https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/img/Bluetooth_Shield_V2.0_K.jpg)
 
 <table >
 <tr>
@@ -70,11 +70,11 @@ One Bluetooth Shield as Master while the other as Slave.
 
 as folowing:
 
-![](https://github.com/SeeedDocument/Bluetooth_Shield_V2/raw/master/img/Bluetooth_shield_demo_image0.png)
+![](https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/img/Bluetooth_shield_demo_image0.png)
 
 make sure the right connection of the jumpers
 
-![](https://github.com/SeeedDocument/Bluetooth_Shield_V2/raw/master/img/Bluetooth_shield_demo_image4.jpg)
+![](https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/img/Bluetooth_shield_demo_image4.jpg)
 
 **Download Code and Upload **
 
@@ -87,7 +87,7 @@ make sure the right connection of the jumpers
 4.  Click Upload to Upload the code, if you have any problem about how to start Arduino, please click [here](/Getting_Started_with_Seeeduino) for some help.
 
 
-![](https://github.com/SeeedDocument/Bluetooth_Shield_V2/raw/master/img/Bluetooth_ide_1.jpg)
+![](https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/img/Bluetooth_ide_1.jpg)
 
 
 **Check The Result**
@@ -112,7 +112,7 @@ Via a Bluetooth SPP App
 
 **Hardware Installation**
 
-![](https://github.com/SeeedDocument/Bluetooth_Shield_V2/raw/master/img/Bluetooth_shield_demo_image1.png)
+![](https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/img/Bluetooth_shield_demo_image1.png)
 
 **Download Code and Upload**
 
@@ -122,14 +122,14 @@ Via a Bluetooth SPP App
 
 3.  Click Upload to Upload the code, if you have any problem about how to start Arduino, please click [here](/Getting_Started_with_Seeeduino) for some help.
 
-![](https://github.com/SeeedDocument/Bluetooth_Shield_V2/raw/master/img/Bluetooth_Shield_Demo2.jpg)
+![](https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/img/Bluetooth_Shield_Demo2.jpg)
 
 
 **Download a SSP App**
 
 Here we us an Ardriod Phone, Mine is a Xiaomi 2A, open Google Play, search bluetooth spp, you can find many results.
 
-![](https://github.com/SeeedDocument/Bluetooth_Shield_V2/raw/master/img/Bluetooth_Shield_Find_spp.png)
+![](https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/img/Bluetooth_Shield_Find_spp.png)
 
 Most of this app are useful, just choose one and have try.
 
@@ -137,16 +137,16 @@ Most of this app are useful, just choose one and have try.
 
 After installing an SPP app, try connecting it to SeeedBTSlave, pin code is: "0000"
 
-![](https://github.com/SeeedDocument/Bluetooth_Shield_V2/raw/master/img/Bluetooth_Shield_App_1.png)
+![](https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/img/Bluetooth_Shield_App_1.png)
 
 When connect is ok, send 't' to SeeedBTSlave, and you can get the temperature now:
 
-![](https://github.com/SeeedDocument/Bluetooth_Shield_V2/raw/master/img/Bluetooth_Shield_get_temp.png)
+![](https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/img/Bluetooth_Shield_get_temp.png)
 
 ##   Resources
-*   [Schematic and Layout in Eagle format](https://github.com/SeeedDocument/Bluetooth_Shield_V2/raw/master/res/Buletooth_Shield_v2.0_sch_pcb.zip)
+*   [Schematic and Layout in Eagle format](https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/res/Buletooth_Shield_v2.0_sch_pcb.zip)
 
-*   [module Datasheet](https://github.com/SeeedDocument/Bluetooth_Shield_V2/raw/master/res/Bluetooth_en.pdf)
+*   [module Datasheet](https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/res/Bluetooth_en.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

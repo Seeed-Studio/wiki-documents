@@ -10,7 +10,7 @@ tags:
 ---
 
 
-![](https://github.com/SeeedDocument/Grove-Mech_Keycap/raw/master/img/2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/2.jpg)
 
 
 The Grove-Mech keycap is a mechanical switch with a build-in LED. The 255 full color RGB LED makes it simple and easy to show the statues of your switch. This keycap is very reliable with 20,000,000 times press operating life. 
@@ -56,12 +56,12 @@ You will find that this is an interesting and stable module to make some really 
 ## Hardware
 ###   Pin Map
 
-![](https://github.com/SeeedDocument/Grove-Mech_Keycap/raw/master/img/pin_map.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/pin_map.jpg)
 
 
 ### Schematic
 
-![](https://github.com/SeeedDocument/Grove-Mech_Keycap/raw/master/img/schametic.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/schametic.jpg)
 
 
 The K1 is attached to the button, when the key is opened, the **SIG1** will be pulled-down by R2, then the output of **SIG1** should be low.
@@ -122,7 +122,7 @@ Once the button is pushed, the K1 will be closed and the **SIG1** will connected
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-Mech_Keycap/raw/master/img/light1400-1050%C2%B7.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/light1400-1050%C2%B7.jpg)
 
 
 
@@ -142,7 +142,7 @@ Once the button is pushed, the K1 will be closed and the **SIG1** will connected
 
 #### Software
 
-- **Step 1.** Download the [Adafruit_NeoPixel-master](https://github.com/SeeedDocument/Grove-Mech_Keycap/raw/master/res/Adafruit_NeoPixel-master.zip) library from Github.
+- **Step 1.** Download the [Adafruit_NeoPixel-master](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/res/Adafruit_NeoPixel-master.zip) library from Github.
 
 - **Step 2.** Refer to [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
@@ -269,7 +269,7 @@ uint32_t Wheel(byte WheelPos) {
 
 | Raspberry pi | Grove Base Hat for RasPi| Grove - Mech Keycap|
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Mech_Keycap/raw/master/img/thumbnail.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/thumbnail.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Mech-Keycap-p-3138.html)|
 
 - **Step 2**. Plug the Grove Base Hat into Raspberry.
@@ -288,7 +288,7 @@ uint32_t Wheel(byte WheelPos) {
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-Mech_Keycap/raw/master/img/Mech_Hat.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/Mech_Hat.jpg)
 
 
 
@@ -423,9 +423,9 @@ You can quit this program by simply press ++ctrl+c++.
 
 ## Resources
 
-- **[Zip]** [Grove-Mech Keycap eagle file](https://github.com/SeeedDocument/Grove-Mech_Keycap/raw/master/res/Grove-Mech_Keycap_eagle.zip)
-- **[Zip]** [Adafruit_NeoPixel-master](https://github.com/SeeedDocument/Grove-Mech_Keycap/raw/master/res/Adafruit_NeoPixel-master.zip)
-- **[PDF]** [Product brief of the swith](https://github.com/SeeedDocument/Grove-Mech_Keycap/raw/master/res/DIP_Mech_Key.pdf)
+- **[Zip]** [Grove-Mech Keycap eagle file](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/res/Grove-Mech_Keycap_eagle.zip)
+- **[Zip]** [Adafruit_NeoPixel-master](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/res/Adafruit_NeoPixel-master.zip)
+- **[PDF]** [Product brief of the swith](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/res/DIP_Mech_Key.pdf)
 
 
 

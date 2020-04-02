@@ -12,7 +12,7 @@ tags:
 
 The Relay Shield is an Arduino compatible smart module with 4 mechanical relays providing an easy way to control high voltage. The max switching power is 35VDC 70W for each channel. It can be directly controlled by Arduino/Seeeduino through digital IO.
 
-|![](https://github.com/SeeedDocument/Relay-Shield/raw/master/img/RelayShield.jpg)|![](https://github.com/SeeedDocument/Relay-Shield/raw/master/img/Relayshield_01.jpg)|![](https://github.com/SeeedDocument/Relay-Shield/raw/master/img/Relay_Shield_L_v3.0.jpg)|
+|![](https://files.seeedstudio.com/wiki/Relay-Shield/img/RelayShield.jpg)|![](https://files.seeedstudio.com/wiki/Relay-Shield/img/Relayshield_01.jpg)|![](https://files.seeedstudio.com/wiki/Relay-Shield/img/Relay_Shield_L_v3.0.jpg)|
 |-----------------|-----------------|-----------------|
 |Relay Shield V1.0|Relay Shield V2.0|Relay Shield V3.0|
 

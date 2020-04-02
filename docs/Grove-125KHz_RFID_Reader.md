@@ -300,9 +300,9 @@ A2: The RFID reader can read tags continuously without any setting. Keep the tag
 
 ## Resources
 
-- **[Demo]** [Grove - 125KHz RFID Reader Demo](https://github.com/SeeedDocument/Grove-125KHz_RFID_Reader/raw/master/res/RFID_Wiegand_INT.zip)
-- **[PDF]** [Declaration of conformity](https://github.com/SeeedDocument/Grove-125KHz_RFID_Reader/raw/master/res/CSTR140821808_Declaration%20of%20conformity.pdf)
-- **[PDF]** [Test Report](https://github.com/SeeedDocument/Grove-125KHz_RFID_Reader/raw/master/res/CSTR140821808_test%20report.pdf)
+- **[Demo]** [Grove - 125KHz RFID Reader Demo](https://files.seeedstudio.com/wiki/Grove-125KHz_RFID_Reader/res/RFID_Wiegand_INT.zip)
+- **[PDF]** [Declaration of conformity](https://files.seeedstudio.com/wiki/Grove-125KHz_RFID_Reader/res/CSTR140821808_Declaration%20of%20conformity.pdf)
+- **[PDF]** [Test Report](https://files.seeedstudio.com/wiki/Grove-125KHz_RFID_Reader/res/CSTR140821808_test%20report.pdf)
 
 ## Projects
 

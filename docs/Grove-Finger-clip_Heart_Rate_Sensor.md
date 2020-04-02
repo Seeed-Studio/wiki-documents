@@ -7,11 +7,11 @@ prodimagename: Grove-Finger-clip_Heart_Rate_Sensor.jpg
 surveyurl: https://www.research.net/r/Grove-Finger-clip_Heart_Rate_Sensor
 sku:  103020024
 ---
-![](https://github.com/SeeedDocument/Grove-Finger-clip_Heart_Rate_Sensor/raw/master/img/Grove-Finger-clip_Heart_Rate_Sensor.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Finger-clip_Heart_Rate_Sensor/img/Grove-Finger-clip_Heart_Rate_Sensor.jpg)
 
 Grove - Finger-clip Heart Rate Sensor is based on PAH8001EI-2G, a high performance and low power CMOS-process optical sensor with Green LED and DSP integrated serving as a Heart Rate Detection(HRD) sensor. This module is based on optical technology which measures the variation human blood movement in the vessel. Low power consumption and flexible power saving mode make it suitable for wearable device. Cause the heart rate sensor chip need high processing speed for the algorithm of heart rate data(), this module integrate a STM32, reserved SWD interface allow users to reprogram the STM32.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Finger-clip-Heart-Rate-Sensor-p-2425.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Finger-clip-Heart-Rate-Sensor-p-2425.html)
 
 ##  Specification
 ---
@@ -31,7 +31,7 @@ Grove - Finger-clip Heart Rate Sensor is based on PAH8001EI-2G, a high performan
 
 ##  Interface Function
 ---
-![](https://github.com/SeeedDocument/Grove-Finger-clip_Heart_Rate_Sensor/raw/master/img/Finger-clip_Heart_Rate_Sensor_TOP.jpg) ![](https://github.com/SeeedDocument/Grove-Finger-clip_Heart_Rate_Sensor/raw/master/img/Finger-clip_Heart_Rate_Sensor_Bottom.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Finger-clip_Heart_Rate_Sensor/img/Finger-clip_Heart_Rate_Sensor_TOP.jpg) ![](https://files.seeedstudio.com/wiki/Grove-Finger-clip_Heart_Rate_Sensor/img/Finger-clip_Heart_Rate_Sensor_Bottom.jpg)
 
 *   1: Grove Interface
 
@@ -47,7 +47,7 @@ Here, We will provide an example here to show you how to use this sensor.
 
 Link the Sensor to I2C port of Seeeduino with Grove Cable.
 
-![](https://github.com/SeeedDocument/Grove-Finger-clip_Heart_Rate_Sensor/raw/master/img/Finger-clip_Heart_Rate_Sensor_Connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Finger-clip_Heart_Rate_Sensor/img/Finger-clip_Heart_Rate_Sensor_Connect.jpg)
 
 ###  Software Part
 
@@ -133,7 +133,7 @@ We can upgrade the firmware of the heart rate sensor through its bootloader.
 ##### Hardware Connection
 
 
-![](https://github.com/SeeedDocument/Grove-Finger-clip_Heart_Rate_Sensor/raw/master/img/Firmware_Connection.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Finger-clip_Heart_Rate_Sensor/img/Firmware_Connection.jpg)
 
 *   [USB to serial adapter](https://www.seeedstudio.com/CH340G-USB-to-Serial-%28TTL%29-Module%26Adapter-p-2359.html) is required
 *   UART (the Grove connector supports I2C and UART),when upgrade the firmware, the Grove interface run in UART mode.
@@ -150,21 +150,21 @@ We can upgrade the firmware of the heart rate sensor through its bootloader.
 *   Download [Tera Term](https://ttssh2.osdn.jp/index.html.en) Software
 *   Set UART Baud Rate as 115200
 
-![](https://github.com/SeeedDocument/Grove-Finger-clip_Heart_Rate_Sensor/raw/master/img/BaudRate_Setting.png)
+![](https://files.seeedstudio.com/wiki/Grove-Finger-clip_Heart_Rate_Sensor/img/BaudRate_Setting.png)
 
 *   Download [firmware](ttps://github.com/SeeedDocument/Grove-Finger-clip_Heart_Rate_Sensor/raw/master/res/Grove-Finger-clip_Heart_Rate_Sensor_bin.zip)
 
 *   Select Grove - Finger-clip Heart Rate Sensor.bin
 
-![](https://github.com/SeeedDocument/Grove-Finger-clip_Heart_Rate_Sensor/raw/master/img/Select_firmware.png)
+![](https://files.seeedstudio.com/wiki/Grove-Finger-clip_Heart_Rate_Sensor/img/Select_firmware.png)
 
 *   Downloading the firmware to Grove-Finger-clip_Heart_Rate_Sensor
 
-![](https://github.com/SeeedDocument/Grove-Finger-clip_Heart_Rate_Sensor/raw/master/img/Firmware_download.png)
+![](https://files.seeedstudio.com/wiki/Grove-Finger-clip_Heart_Rate_Sensor/img/Firmware_download.png)
 
 *   Firmware download successfully
 
-![](https://github.com/SeeedDocument/Grove-Finger-clip_Heart_Rate_Sensor/raw/master/img/Finish_Downloading.png)
+![](https://files.seeedstudio.com/wiki/Grove-Finger-clip_Heart_Rate_Sensor/img/Finish_Downloading.png)
 
 
 !!!NOTE:
@@ -187,9 +187,9 @@ We can upgrade the firmware of the heart rate sensor through its bootloader.
 
 ##  Resource
 ---
-*   [Grove - Finger-clip Heart Rate Sensor eagle file](https://github.com/SeeedDocument/Grove-Finger-clip_Heart_Rate_Sensor/raw/master/res/Grove-Finger-clip_Heart_Rate_Sensor_v1.0_sch_pcb.zip)
+*   [Grove - Finger-clip Heart Rate Sensor eagle file](https://files.seeedstudio.com/wiki/Grove-Finger-clip_Heart_Rate_Sensor/res/Grove-Finger-clip_Heart_Rate_Sensor_v1.0_sch_pcb.zip)
 
-*   [Grove - Finger-clip Heart Rate Sensor bin file](https://github.com/SeeedDocument/Grove-Finger-clip_Heart_Rate_Sensor/raw/master/res/Grove-Finger-clip_Heart_Rate_Sensor_bin.zip)
+*   [Grove - Finger-clip Heart Rate Sensor bin file](https://files.seeedstudio.com/wiki/Grove-Finger-clip_Heart_Rate_Sensor/res/Grove-Finger-clip_Heart_Rate_Sensor_bin.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

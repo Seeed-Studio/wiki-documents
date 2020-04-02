@@ -6,7 +6,7 @@ nointro:
 
 ReSpeaker is an open modular voice interface to hack things around you. Let you interact with your home appliances, your plant, your office, your internet-equipped devices or any other things in your daily life, all by your voice. The ReSpeaker project provides hardware components and software libraries to build voice enabled device.
 
-![](https://github.com/SeeedDocument/ReSpeaker/raw/master/img/vui.png)
+![](https://files.seeedstudio.com/wiki/ReSpeaker/img/vui.png)
 
 ## Hardware
 
@@ -39,7 +39,7 @@ The hardware components include I2S microphone array for Raspberry Pi, USB micro
 
 Audio processing algorithms including VAD, DOA, Beamforming, NS, AEC and KWS are available and are evolving rapidly.
 
-![](https://github.com/SeeedDocument/ReSpeaker/raw/master/img/mic_array.png)
+![](https://files.seeedstudio.com/wiki/ReSpeaker/img/mic_array.png)
 
 
 ## Product  List

@@ -116,7 +116,7 @@ To make it vibrate is just as easy as to turn on an LED. Here is an example show
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-Vibration_Motor/raw/master/img/vibration_motor.png)
+![](https://files.seeedstudio.com/wiki/Grove-Vibration_Motor/img/vibration_motor.png)
 
 !!!Note
 	If we don't have Grove Base Shield, We also can directly connect Grove - Vibration Motor to Seeeduino as below.
@@ -171,7 +171,7 @@ void loop()  {
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
-![cc](https://github.com/SeeedDocument/Grove-Vibration_Motor/raw/master/img/cc_Vibration_Motor.png)
+![cc](https://files.seeedstudio.com/wiki/Grove-Vibration_Motor/img/cc_Vibration_Motor.png)
 
 Upload the program to your Arduino/Seeeduino.
 
@@ -186,7 +186,7 @@ Upload the program to your Arduino/Seeeduino.
 
 | Raspberry pi | GrovePi_Plus | Grove - Vibration Motor |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Vibration_Motor/master/img/Gvib_small.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Vibration_Motor/master/img/Gvib_small.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/Grove-Vibration-Motor-p-839.html)|
 
 - **Step 2.** Plug the GrovePi_Plus into Raspberry.

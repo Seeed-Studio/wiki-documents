@@ -9,7 +9,7 @@ sku: 101020582
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-3-Axis_Digital_Accelerometer-16g_Ultra-low_Power-BMA400/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-16g_Ultra-low_Power-BMA400/img/main.jpg)
 
 The Grove - 3-Axis Digital Accelerometer ±16g Ultra-low Power (BMA400) sensor is a 12 bit, digital, triaxial acceleration sensor with smart on-chip motion and position-triggered interrupt features. It can detect your movement posture, such as Walking, Running, Standing still.
 
@@ -73,9 +73,9 @@ The Grove - 3-Axis Digital Accelerometer ±16g Ultra-low Power (BMA400) sensor i
 
 ### Pin Out
 
-![](https://github.com/SeeedDocument/Grove-3-Axis_Digital_Accelerometer-16g_Ultra-low_Power-BMA400/raw/master/img/pin_out.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-16g_Ultra-low_Power-BMA400/img/pin_out.jpg)
 
-![](https://github.com/SeeedDocument/Grove-3-Axis_Digital_Accelerometer-16g_Ultra-low_Power-BMA400/raw/master/img/pin_out_back.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-16g_Ultra-low_Power-BMA400/img/pin_out_back.jpg)
 
 
 
@@ -83,15 +83,15 @@ The Grove - 3-Axis Digital Accelerometer ±16g Ultra-low Power (BMA400) sensor i
 
 **Power**
 
-![](https://github.com/SeeedDocument/Grove-3-Axis_Digital_Accelerometer-16g_Ultra-low_Power-BMA400/raw/master/img/shecmatic_2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-16g_Ultra-low_Power-BMA400/img/shecmatic_2.jpg)
 
-The typical voltage of BMA400 is 1.8V, so we use the [XC6206P182MR](https://github.com/SeeedDocument/Grove-Infrared_Temperature_Sensor_Array-AMG8833/raw/master/res/XC6206.pdf) chip to provide a stable 1.8V. The input of XC6206P33 ranges from 1.8V to 6.0V, so you can use this module with your Arduino both in 3.3V and 5V.
+The typical voltage of BMA400 is 1.8V, so we use the [XC6206P182MR](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor_Array-AMG8833/res/XC6206.pdf) chip to provide a stable 1.8V. The input of XC6206P33 ranges from 1.8V to 6.0V, so you can use this module with your Arduino both in 3.3V and 5V.
 
 **Bi-directional level shifter circuit**
 
-![](https://github.com/SeeedDocument/Grove-3-Axis_Digital_Accelerometer-16g_Ultra-low_Power-BMA400/raw/master/img/shecmatic_1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-16g_Ultra-low_Power-BMA400/img/shecmatic_1.jpg)
 
-This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of this sensor use 1.8V, if the I<sup>2</sup>C bus of the Arduino use 5V or 3.3v, this circuit will be needed. In the schematic above, **Q1** and **Q2** are N-Channel MOSFET [CJ2102](https://github.com/SeeedDocument/Grove-3-Axis_Digital_Accelerometer-16g_Ultra-low_Power-BMA400/raw/master/res/CJ2102.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://github.com/SeeedDocument/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/raw/master/res/AN10441.pdf)
+This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of this sensor use 1.8V, if the I<sup>2</sup>C bus of the Arduino use 5V or 3.3v, this circuit will be needed. In the schematic above, **Q1** and **Q2** are N-Channel MOSFET [CJ2102](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-16g_Ultra-low_Power-BMA400/res/CJ2102.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/AN10441.pdf)
 
 
 
@@ -137,7 +137,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-3-Axis_Digital_Accelerometer-16g_Ultra-low_Power-BMA400/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-16g_Ultra-low_Power-BMA400/img/connect.jpg)
 
 
 !!!Note
@@ -164,12 +164,12 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 - **Step 3.** Restart the Arduino IDE. Open the example, you can open it in the following three ways：
     1. Open it directly in the Arduino IDE via the path: **File --> Examples --> Grove 3-Axis Digital Accelerometer ±16g Ultra-low Power(BMA400) --> BMA400_Example**. 
-    ![](https://github.com/SeeedDocument/Grove-3-Axis_Digital_Accelerometer-16g_Ultra-low_Power-BMA400/raw/master/img/Path_1.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-16g_Ultra-low_Power-BMA400/img/Path_1.jpg)
     
     2. Open it in your computer by click the **BMA400_Example.ino** which you can find in the folder **XXXX\Arduino\libraries\Grove_3Axis_Digital_Accelerometer_BMA400-master\examples\BMA400_Example**, **XXXX** is the location you installed the Arduino IDE.
-    ![](https://github.com/SeeedDocument/Grove-3-Axis_Digital_Accelerometer-16g_Ultra-low_Power-BMA400/raw/master/img/Path_2.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-16g_Ultra-low_Power-BMA400/img/Path_2.jpg)
     
-    3. Or, you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+    3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 ```C++
 
@@ -264,9 +264,9 @@ X-axis/unit mg; Y-axis/unit mg; Z-axis/unit mg; temperature/unit ℃
 
 - **[Zip]** [Seeed BMA400 Library](https://github.com/Seeed-Studio/Grove_3Axis_Digital_Accelerometer_BMA400/archive/master.zip)
 
-- **[PDF]** [Datasheet BMA400](https://github.com/SeeedDocument/Grove-3-Axis_Digital_Accelerometer-16g_Ultra-low_Power-BMA400/raw/master/res/BMA400_datasheet.pdf)
+- **[PDF]** [Datasheet BMA400](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-16g_Ultra-low_Power-BMA400/res/BMA400_datasheet.pdf)
 
-- **[PDF]** [XC6206 DATASHEET](https://github.com/SeeedDocument/Grove-Infrared_Temperature_Sensor_Array-AMG8833/raw/master/res/XC6206.pdf)
+- **[PDF]** [XC6206 DATASHEET](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor_Array-AMG8833/res/XC6206.pdf)
 
 
 

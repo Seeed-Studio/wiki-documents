@@ -8,7 +8,7 @@ surveyurl:
 sku: 104020130
 ---
 
-![](https://github.com/SeeedDocument/Grove-Triple_Color_E-Ink_Display_1.54/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Triple_Color_E-Ink_Display_1.54/img/main.jpg)
 
 
 
@@ -92,7 +92,7 @@ Due to the advantages like ultra low power consumption, wide viewing angle, clea
 
 | Seeeduino V4.2 | Base Shield | Grove - Triple Color E-Ink Display 1.54''|
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Triple_Color_E-Ink_Display_1.54/raw/master/img/thumbnail.jpg)
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Triple_Color_E-Ink_Display_1.54/img/thumbnail.jpg)
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Triple-Color-E-Ink-Display-1-54-p-2890.html)|
 
 
@@ -293,9 +293,9 @@ This display is 152 x 152, so there are 152x152=23104 pixels, each pixel is cont
 
 ## Resources
 
-- **[Zip]** [Grove - Triple Color E-Ink Display 1.54'' Eagle Files](https://github.com/SeeedDocument/Grove-Triple_Color_E-Ink_Display_1.54/raw/master/res/Grove%20-%20Triple%20Color%20E-Ink%20Display%201.54.zip)
+- **[Zip]** [Grove - Triple Color E-Ink Display 1.54'' Eagle Files](https://files.seeedstudio.com/wiki/Grove-Triple_Color_E-Ink_Display_1.54/res/Grove%20-%20Triple%20Color%20E-Ink%20Display%201.54.zip)
 
-- **[PDF]** [E-paper 1.54inch Datasheet](https://github.com/SeeedDocument/Grove-Triple_Color_E-Ink_Display_1.54/raw/master/res/E-Ink%20152X152-Black%2CWhite%20and%20Red-1.54inch.pdf)
+- **[PDF]** [E-paper 1.54inch Datasheet](https://files.seeedstudio.com/wiki/Grove-Triple_Color_E-Ink_Display_1.54/res/E-Ink%20152X152-Black%2CWhite%20and%20Red-1.54inch.pdf)
 
 
 

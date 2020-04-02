@@ -85,7 +85,7 @@ This is an easy-to-use module, what you need to do is connect the module to I2C 
 
 **Grove - OLED Display 1.12``** is an **I2C** module, we connect it to **I2C** port at this demo.
 
-![enter image description here](https://github.com/SeeedDocument/Grove_OLED_1.12/raw/master/images/connection.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/images/connection.jpg)
 
 ### Software
 
@@ -117,7 +117,7 @@ There're many examples in this library, which is consist of
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_OLED_1.12/master/images/arduino.png)
 
 - If the code is uploaded correctly, you will see the hello world on the OLELD.
-  ![enter image description here](https://github.com/SeeedDocument/Grove_OLED_1.12/raw/master/images/hello_world.png)
+  ![enter image description here](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/images/hello_world.png)
 
 - Then please try the other examples to see what will happen.
 
@@ -261,14 +261,14 @@ Example:
 
 ## Resources
 ---------
-* **[Eagle]** [Grove-OLED Display 1.12inch in Eagle](https://github.com/SeeedDocument/Grove_OLED_1.12/raw/master/resources/OLED%20Display.zip)
-* **[PDF]** [Grove-OLED Display 1.12inch Sch](https://github.com/SeeedDocument/Grove_OLED_1.12/raw/master/resources/Grove%20-%2096x96%20OLED%20Display%20v2.1%20Sch.pdf)
-* **[PDF]** [Grove-OLED Display 1.12inch PCB](https://github.com/SeeedDocument/Grove_OLED_1.12/raw/master/resources/Grove%20-%2096x96%20OLED%20Display%20v2.1%20PCB.pdf)
+* **[Eagle]** [Grove-OLED Display 1.12inch in Eagle](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/OLED%20Display.zip)
+* **[PDF]** [Grove-OLED Display 1.12inch Sch](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/Grove%20-%2096x96%20OLED%20Display%20v2.1%20Sch.pdf)
+* **[PDF]** [Grove-OLED Display 1.12inch PCB](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/Grove%20-%2096x96%20OLED%20Display%20v2.1%20PCB.pdf)
 * **[Library]** [Github Repository of the Library](https://github.com/Seeed-Studio/OLED_Display_96X96)
-* **[Datasheet]** [SSD1327 Datasheet](https://github.com/SeeedDocument/Grove_OLED_1.12/raw/master/resources/SSD1327_datasheet.pdf)
-*  **[Datasheet]** [LY120 Datasheet](https://github.com/SeeedDocument/Grove_OLED_1.12/raw/master/resources/308010007_LCD-22P-0.7.pdf)
-* **[Datasheet]** [SH1107G_datasheet](https://github.com/SeeedDocument/Grove_OLED_1.12/raw/master/resources/SH1107G_datasheet.pdf)
-* **[Tool]** [Reference for Make a 96x96 Image](https://github.com/SeeedDocument/Grove_OLED_1.12/raw/master/resources/Make_A_96X96_Image1.zip)
+* **[Datasheet]** [SSD1327 Datasheet](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/SSD1327_datasheet.pdf)
+*  **[Datasheet]** [LY120 Datasheet](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/308010007_LCD-22P-0.7.pdf)
+* **[Datasheet]** [SH1107G_datasheet](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/SH1107G_datasheet.pdf)
+* **[Tool]** [Reference for Make a 96x96 Image](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/Make_A_96X96_Image1.zip)
 
 ## Project
 

@@ -93,7 +93,7 @@ Solder following connections:
 
 The default setting is UART, if you need to change it into I2C, then you should cut the UART connection and then solder the I2C pins as below.
 
-![](https://github.com/SeeedDocument/Grove-NFC/raw/master/img/v1.1%20hardware%20connection.png)
+![](https://files.seeedstudio.com/wiki/Grove-NFC/img/v1.1%20hardware%20connection.png)
 
 ## Getting Started
 
@@ -113,7 +113,7 @@ The Grove - NFC supports I2C and UART, [Seeed Arduino NFC Library](https://githu
 
 | Seeeduino Lite | Base Shield| Grove - NFC |  NFC Tags|
 |--------------|-------------|-----------------|---|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/lite.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-NFC/raw/master/img/thumbnail.jpg)|![](https://github.com/SeeedDocument/Grove-NFC/raw/master/img/NFC-for-Marketing-Header.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/lite.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-NFC/img/thumbnail.jpg)|![](https://files.seeedstudio.com/wiki/Grove-NFC/img/NFC-for-Marketing-Header.jpg)|
 |<a href="https://www.seeedstudio.com/Seeeduino-Lite-p-1487.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-NFC-p-1804.html" target="_blank">Get One Now</a>|Please Prepare yourself|
 
 

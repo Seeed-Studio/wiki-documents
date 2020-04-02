@@ -12,7 +12,7 @@ sku:     103990004
 
 This remote switch allows you to remotely control any 12 Volt DC device. Perfect for controlling any 12V devices such as Lights , Fans,Landscaping Lighting and more. This easy-to-wire kit is perfect for anybody with a basic knowledge of electrical wiring, and can easily be wired to many 12V applications. For PC Modders, the end of result of the Remote Control 12VDC kit are truly impressive and are sure to ooh and ah the crowds. For DIYers, the kit will give some magical effect to your projects.
 
-[![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Skeleton-Box-p-1407.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Skeleton-Box-p-1407.html)
 
 ##   Specification
 ---

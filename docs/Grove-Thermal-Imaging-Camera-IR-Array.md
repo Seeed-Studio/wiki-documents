@@ -10,7 +10,7 @@ tags:
 ---
 
 
-![](https://github.com/SeeedDocument/IR-thermal-imaging-sensor-MLX90640-/raw/master/114020142-previewbig.jpg)
+![](https://files.seeedstudio.com/wiki/IR-thermal-imaging-sensor-MLX90640-/114020142-previewbig.jpg)
 
 
 Grove - Thermal Imaging Camera is a thermal sensor which carries MLX90640 IR Array. The camera can present dynamic thermal images and detect the surrounding temperature from -40℃~300℃. The camera with narrow-angle/wide-angle has an FOV(Field of View) of 55°x35°/110°x75°.   
@@ -76,7 +76,7 @@ Grove - Thermal Imaging Camera / IR Array MLX90640 55 degree
 
 |Arch Mix|Arch Mix Grove Breakout|Grove - Thermal Imaging Camera / IR Array MLX90640 110 degree|
 |--------|-----------------------|-------------------------------------------------------------|
-|![](https://github.com/SeeedDocument/IR-thermal-imaging-sensor-MLX90640-/raw/master/main1.jpg)|![](https://github.com/SeeedDocument/IR-thermal-imaging-sensor-MLX90640-/raw/master/103030315-preview.jpg)|![](https://github.com/SeeedDocument/IR-thermal-imaging-sensor-MLX90640-/raw/master/114020142-preview.jpg)|
+|![](https://files.seeedstudio.com/wiki/IR-thermal-imaging-sensor-MLX90640-/main1.jpg)|![](https://files.seeedstudio.com/wiki/IR-thermal-imaging-sensor-MLX90640-/103030315-preview.jpg)|![](https://files.seeedstudio.com/wiki/IR-thermal-imaging-sensor-MLX90640-/114020142-preview.jpg)|
 |[Get one now](https://www.seeedstudio.com/Arch-Mix-p-2901.html)|[Get one now](https://www.seeedstudio.com/Arch-Mix-Grove-Breakout-p-4362.html)|[Get one now](https://www.seeedstudio.com/Grove-Thermal-Imaging-Camera-IR-Array-MLX90640-110-degree-p-4334.html)|
 
 
@@ -122,7 +122,7 @@ PortName is like COM1,COM2 in Windows system.
 
 
 
-![](https://github.com/SeeedDocument/IR-thermal-imaging-sensor-MLX90640-/raw/master/20191121_173909.gif)
+![](https://files.seeedstudio.com/wiki/IR-thermal-imaging-sensor-MLX90640-/20191121_173909.gif)
 
 ### Getting Started by Raspberry Pi 
 
@@ -132,7 +132,7 @@ PortName is like COM1,COM2 in Windows system.
 
 |Raspberry Pi 4|Grove Base Hat for Raspberry Pi|Grove - Thermal Imaging Camera / IR Array MLX90640 110 degree|
 |--------------|-------------------------------|-------------------------------------------------------------|
-|![](https://github.com/SeeedDocument/IR-thermal-imaging-sensor-MLX90640-/raw/master/raspberry-pi-preview_2.jpg)|![](https://github.com/SeeedDocument/IR-thermal-imaging-sensor-MLX90640-/raw/master/httpsstatics3.jpg)|![](https://github.com/SeeedDocument/IR-thermal-imaging-sensor-MLX90640-/raw/master/114020142-preview.jpg)|
+|![](https://files.seeedstudio.com/wiki/IR-thermal-imaging-sensor-MLX90640-/raspberry-pi-preview_2.jpg)|![](https://files.seeedstudio.com/wiki/IR-thermal-imaging-sensor-MLX90640-/httpsstatics3.jpg)|![](https://files.seeedstudio.com/wiki/IR-thermal-imaging-sensor-MLX90640-/114020142-preview.jpg)|
 |[Get one now](https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-4GB-p-4077.html)|[Get one now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|[Get one now](https://www.seeedstudio.com/Grove-Thermal-Imaging-Camera-IR-Array-MLX90640-110-degree-p-4334.html)|
 
 - **Step 1** Connect the Grove - Thermal Imaging Camera to one of the two I2C ports.
@@ -215,8 +215,8 @@ This will give you a framerate of - at most - 8FPS.
 
 ## Resourse
 
-- **[PDF]** [Datasheet of MLX90640](https://github.com/SeeedDocument/IR-thermal-imaging-sensor-MLX90640-/raw/master/MLX90640-Datasheet-Melexis.pdf)
-- **[PDF]** [Hardware Schematic](https://github.com/SeeedDocument/IR-thermal-imaging-sensor-MLX90640-/raw/master/MLX9064x.pdf)
+- **[PDF]** [Datasheet of MLX90640](https://files.seeedstudio.com/wiki/IR-thermal-imaging-sensor-MLX90640-/MLX90640-Datasheet-Melexis.pdf)
+- **[PDF]** [Hardware Schematic](https://files.seeedstudio.com/wiki/IR-thermal-imaging-sensor-MLX90640-/MLX9064x.pdf)
 
 
 ## Tech Support

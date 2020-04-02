@@ -1,4 +1,4 @@
-![](https://github.com/SeeedDocument/Seeed_Gas_Sensor_Selection_Guide/raw/master/img/Seeed_Gas_Sensor_Selection_Guide.jpg)
+![](https://files.seeedstudio.com/wiki/Seeed_Gas_Sensor_Selection_Guide/img/Seeed_Gas_Sensor_Selection_Guide.jpg)
 
 Gas sensor is a device which can detect the presence of various toxic and combustible gases present in the environment. 
 

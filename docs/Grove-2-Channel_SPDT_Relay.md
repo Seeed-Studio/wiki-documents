@@ -9,7 +9,7 @@ sku: 103020132
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Grove-2-Channel_SPDT_Relay/raw/master/img/mian.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-2-Channel_SPDT_Relay/img/mian.jpg)
 
 
 The Grove - 2-Channel SPDT Relay has two single pole - double throw (SPDT) switches. It only requires low-voltage and low current signals to
@@ -65,13 +65,13 @@ It is so convenient and reliable that it can be applied to massive products or p
 
 ### Pin Map
 
-![](https://github.com/SeeedDocument/Grove-2-Channel_SPDT_Relay/raw/master/img/pin_map.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-2-Channel_SPDT_Relay/img/pin_map.jpg)
 
 
 
 ### Schematic
 
-![](https://github.com/SeeedDocument/Grove-2-Channel_SPDT_Relay/raw/master/img/schematic.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-2-Channel_SPDT_Relay/img/schematic.jpg)
 
 
 **K1** is the Relay module, there is a coil between **pin1** and **pin3** of K1. Defaultly, the **COM1** will connect to **NC1**.If the pin3 of K1 connected to the grand, then this coil will be 'closed', so the **COM1** will connect to **NO1**.
@@ -140,7 +140,7 @@ The **SIG1** is pulled down by the 10k R2, if there is no signal, the 'Gate' of 
 - **Step 5.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://github.com/SeeedDocument/Grove-2-Channel_SPDT_Relay/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-2-Channel_SPDT_Relay/img/connect.jpg)
 
 
 
@@ -177,7 +177,7 @@ void loop() {
 !!!success
     You will see the on-board LEDs alternately lit and extinguished, the same with the two Grove - LEDs.
 
-![](https://github.com/SeeedDocument/Grove-2-Channel_SPDT_Relay/raw/master/img/test20180821_142634.gif)
+![](https://files.seeedstudio.com/wiki/Grove-2-Channel_SPDT_Relay/img/test20180821_142634.gif)
 
 
 
@@ -191,9 +191,9 @@ void loop() {
 
 ## Resources
 
-- **[Zip]** [Grove-2-Channel SPDT Relay eagle files](https://github.com/SeeedDocument/Grove-2-Channel_SPDT_Relay/raw/master/res/Grove-2-Channel_SPDT_Relay.zip)
-- **[PDF]** [Datasheet of SRD 05VDC-SL-C Relay](https://github.com/SeeedDocument/Grove-2-Channel_SPDT_Relay/raw/master/res/SRD_05VDC-SL-C.pdf)
-- **[PDF]** [Datasheet of S9013](https://github.com/SeeedDocument/Grove-2-Channel_SPDT_Relay/raw/master/res/Transistors_NPN_25V-500mA.pdf)
+- **[Zip]** [Grove-2-Channel SPDT Relay eagle files](https://files.seeedstudio.com/wiki/Grove-2-Channel_SPDT_Relay/res/Grove-2-Channel_SPDT_Relay.zip)
+- **[PDF]** [Datasheet of SRD 05VDC-SL-C Relay](https://files.seeedstudio.com/wiki/Grove-2-Channel_SPDT_Relay/res/SRD_05VDC-SL-C.pdf)
+- **[PDF]** [Datasheet of S9013](https://files.seeedstudio.com/wiki/Grove-2-Channel_SPDT_Relay/res/Transistors_NPN_25V-500mA.pdf)
 
 
 ## Project

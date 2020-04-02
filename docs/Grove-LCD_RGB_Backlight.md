@@ -101,14 +101,14 @@ Here are some projects for your reference.
 
 | Seeeduino V4.2 | Base Shield|  Grove-LCD RGB Backlight |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/base_shield.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_LCD_RGB_Backlight/raw/master/img/rgb.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_LCD_RGB_Backlight/img/rgb.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html)|
 
 - **Step 2.** Connect Grove-LCD RGB Backlight to **I2C** port of Grove-Base Shield.
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove_LCD_RGB_Backlight/raw/master/img/seeeduino_rgb.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_LCD_RGB_Backlight/img/seeeduino_rgb.jpg)
 
 !!!Note
 	If we don't have Grove Base Shield, We also can directly connect Grove-LCD RGB Backlight to Seeeduino as below.
@@ -141,7 +141,7 @@ Here are some projects for your reference.
 
 - **Step 4.** Please follow below picture to select example **HelloWorld** and upload the arduino. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
-![](https://github.com/SeeedDocument/Grove_LCD_RGB_Backlight/raw/master/img/example.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_LCD_RGB_Backlight/img/example.jpg)
 
 Here is the code of HelloWorld.ino.
 
@@ -214,7 +214,7 @@ Upload the program to your Arduino/Seeeduino.
 
 | Raspberry pi | GrovePi_Plus | Grove-LCD RGB Backlight |
 |--------------|-------------|-----------------|
-|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/rasp.jpg)|![enter image description here](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/Grovepi%2B.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove_LCD_RGB_Backlight/raw/master/img/rgb.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_LCD_RGB_Backlight/img/rgb.jpg)|
 |[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](http://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html)|
 
 
@@ -222,7 +222,7 @@ Upload the program to your Arduino/Seeeduino.
 - **Step 3.** Connect Grove-LCD RGB Backlight to **I2C** port of GrovePi_Plus.
 - **Step 4.** Connect the Raspberry to PC through USB cable.
 
-![](https://github.com/SeeedDocument/Grove_LCD_RGB_Backlight/raw/master/img/rpi_rgb.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_LCD_RGB_Backlight/img/rpi_rgb.jpg)
 
 **Software**
 
@@ -415,8 +415,8 @@ delay(500);
 - **[Library]** [Software Library](https://github.com/Seeed-Studio/Grove_LCD_RGB_Backlight/archive/master.zip)
 - **[Document]** [Github page for this document](https://github.com/SeeedDocument/Grove_LCD_RGB_Backlight)
 - **[Codecraft]** [CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove_LCD_RGB_Backlight/master/res/Grove_LCD_RGB_Backlight_CDC_File.zip)
-- **[Datasheet]** [PCA9633](https://github.com/SeeedDocument/Grove_LCD_RGB_Backlight/raw/master/res/PCA9633.pdf)
-- **[Datasheet]** [JHD1313](https://github.com/SeeedDocument/Grove_LCD_RGB_Backlight/raw/master/res/JHD1313%20FP-RGB-1%201.4.pdf)
+- **[Datasheet]** [PCA9633](https://files.seeedstudio.com/wiki/Grove_LCD_RGB_Backlight/res/PCA9633.pdf)
+- **[Datasheet]** [JHD1313](https://files.seeedstudio.com/wiki/Grove_LCD_RGB_Backlight/res/JHD1313%20FP-RGB-1%201.4.pdf)
 
 ## Projects
 

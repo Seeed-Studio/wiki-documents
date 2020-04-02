@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/UartSBee_V3-1
 sku:
 tags:
 ---
-![](https://github.com/SeeedDocument/UartSBee_V3.1/raw/master/img/Uartsb31.jpg)
+![](https://files.seeedstudio.com/wiki/UartSBee_V3.1/img/Uartsb31.jpg)
 
 UartSBee v3.1 is a fully loaded USB to Serial adapter equipped with BEE socket(20pin 2.0mm). The integrated FT232RL can be used for programming or communicating with MCUs.On the other hand, you might connect your PC to various wireless applications via a Bee compatible module. UartSBee provides breakouts for the bit-bang mode pins of FT232RL as well.This Bit-bang mode pins (8 I/O pins) can be used as a replacement for applications involving PC parallel port which is scares now a day.
 
@@ -50,7 +50,7 @@ Model:[INT110B2P](http://www.seeedstudio.com/depot/uartsbee-v31-p-688.html?cPath
 
 ##   Schematic   ##
 
-![](https://github.com/SeeedDocument/UartSBee_V3.1/raw/master/img/UartSbee_Schematic.png)
+![](https://files.seeedstudio.com/wiki/UartSBee_V3.1/img/UartSbee_Schematic.png)
 
 ##   Specifications   ##
 
@@ -78,7 +78,7 @@ Model:[INT110B2P](http://www.seeedstudio.com/depot/uartsbee-v31-p-688.html?cPath
 
 ##   System Block Digram   ##
 
-![](https://github.com/SeeedDocument/UartSBee_V3.1/raw/master/img/Uartsbee-block-diagram.jpg)
+![](https://files.seeedstudio.com/wiki/UartSBee_V3.1/img/Uartsbee-block-diagram.jpg)
 
 - A tiny reset switch is provided for reseting Bee compatible devices.
 
@@ -94,7 +94,7 @@ Model:[INT110B2P](http://www.seeedstudio.com/depot/uartsbee-v31-p-688.html?cPath
 
 - In Windows OS, the first time you plug in the device, you might be asked for the driver.
 
-![](https://github.com/SeeedDocument/UartSBee_V3.1/raw/master/img/UartSbee_Detected_Windows.JPG)
+![](https://files.seeedstudio.com/wiki/UartSBee_V3.1/img/UartSbee_Detected_Windows.JPG)
 
 Download and install the **Virtual COM port** driver from FTDI website :
 
@@ -102,25 +102,25 @@ Download and install the **Virtual COM port** driver from FTDI website :
 
 - A wizard opens for installing the driver. Choose "Install from a list or specific location"
 
-![](https://github.com/SeeedDocument/UartSBee_V3.1/raw/master/img/UartSbee_Driver_install_1.JPG)
+![](https://files.seeedstudio.com/wiki/UartSBee_V3.1/img/UartSbee_Driver_install_1.JPG)
 
 - Choose the downloaded driver path
 
-![](https://github.com/SeeedDocument/UartSBee_V3.1/raw/master/img/UartSbee_Driver_install_2.JPG)
+![](https://files.seeedstudio.com/wiki/UartSBee_V3.1/img/UartSbee_Driver_install_2.JPG)
 
 - If you have downloaded unsigned driver, the following Window appears. Just click "Continue Anyway"
 
-![](https://github.com/SeeedDocument/UartSBee_V3.1/raw/master/img/UartSbee_Driver_install_2.1.JPG)
+![](https://files.seeedstudio.com/wiki/UartSBee_V3.1/img/UartSbee_Driver_install_2.1.JPG)
 
 - **UartSBee driver** is successfully installed. Windows assigns a COM port name to FT232RL like COM10, COM11 etc... Please check the exact name in Device Manager.  In this case "COM16" is assigned for UartSBee
 
-![](https://github.com/SeeedDocument/UartSBee_V3.1/raw/master/img/UartSbee_Driver_install_3.JPG)
+![](https://files.seeedstudio.com/wiki/UartSBee_V3.1/img/UartSbee_Driver_install_3.JPG)
 
 #### GNU/Linux ####
 
 All modern **GNU/Linux OS** comes with FT232RL drivers. To check if UartSBee is detected, Issue a lsusb command. An output similar to below should appear.
 
-![](https://github.com/SeeedDocument/UartSBee_V3.1/raw/master/img/Lsub.png)
+![](https://files.seeedstudio.com/wiki/UartSBee_V3.1/img/Lsub.png)
 
 **GNU/Linux** assigns **/dev/ttyUSB0**, **/dev/ttyUSB1** etc... as device name.  
 
@@ -128,11 +128,11 @@ To verify the working of serial port connect **TxD** and **RxD** pins of UartSBe
 
 **Baudrate**:9600, **Data bits**:8, **Stop bits**:None and no Handshake
 
-![](https://github.com/SeeedDocument/UartSBee_V3.1/raw/master/img/Uartsbee-txd-rxd-connected.JPG)
+![](https://files.seeedstudio.com/wiki/UartSBee_V3.1/img/Uartsbee-txd-rxd-connected.JPG)
 
 Any character typed in terminal would be echoed back as shown.
 
-![](https://github.com/SeeedDocument/UartSBee_V3.1/raw/master/img/UartsBee-CuteCom.png)
+![](https://files.seeedstudio.com/wiki/UartSBee_V3.1/img/UartsBee-CuteCom.png)
 
 The same functionality can be checked in Windows - Hyperterminal as well.
 
@@ -142,10 +142,10 @@ Apart from 3.3V and 5V power outputs provided by UartSBee , the logic level of I
 
 **BreadBoard Prototyping: UartSBee v3.1** acting as as 3.3V power-supply and 3.3V UART flash programming port for LPC1343.
 
-![](https://github.com/SeeedDocument/UartSBee_V3.1/raw/master/img/UartSBee_as_uCPowerSupplyAndProgPort_BreadBoard.JPG)
+![](https://files.seeedstudio.com/wiki/UartSBee_V3.1/img/UartSBee_as_uCPowerSupplyAndProgPort_BreadBoard.JPG)
 Switch: 3.3V I/O Selected
 
-![](https://github.com/SeeedDocument/UartSBee_V3.1/raw/master/img/UarSBee-Switch_3.3V_selected.jpg)
+![](https://files.seeedstudio.com/wiki/UartSBee_V3.1/img/UarSBee-Switch_3.3V_selected.jpg)
 
 ###   Bee Module Interfacing for PC Wireless application   ###
 
@@ -162,8 +162,8 @@ Please refer the Bee module documentation for more information.
 - XBee Connected to UartSBee      
 - BluetoothBee Connected toUartSBee
 
-![](https://github.com/SeeedDocument/UartSBee_V3.1/raw/master/img/UartSBee-hardware.jpg)
-![](https://github.com/SeeedDocument/UartSBee_V3.1/raw/master/img/BluetoothBee_with_UartSBee.JPG)
+![](https://files.seeedstudio.com/wiki/UartSBee_V3.1/img/UartSBee-hardware.jpg)
+![](https://files.seeedstudio.com/wiki/UartSBee_V3.1/img/BluetoothBee_with_UartSBee.JPG)
 
 ###   BitBang Mode   ###
 
@@ -205,7 +205,7 @@ A simple Asynchronous Bit-Bang mode operation is demonstrated in the below bread
 **LED Blinky Circuit **   
                                                          **BitBang I/Os of UartSBee V3.1 - Bottom Side**
 
-![](https://github.com/SeeedDocument/UartSBee_V3.1/raw/master/img/UartSBee_bit-bang-DTR.jpg) ![](https://github.com/SeeedDocument/UartSBee_V3.1/raw/master/img/UartSBee_Bottom_Bit_Bang.png)
+![](https://files.seeedstudio.com/wiki/UartSBee_V3.1/img/UartSBee_bit-bang-DTR.jpg) ![](https://files.seeedstudio.com/wiki/UartSBee_V3.1/img/UartSBee_Bottom_Bit_Bang.png)
 
 Bit-Bang mode requires special FTDI direct driver called [D2XX](http://www.ftdichip.com/Drivers/D2XX.htm). This driver needs to be installed after removing the Virtual COM Port driver of FT232RL chip. In GNU/Linux this driver runs in kernel mode. As an alternative to D2XX an Free Open Source driver [libFTDI](http://www.intra2net.com/en/developer/libftdi/) is available. This works in Windows, GNU/Linux and Mac OS. It runs in user mode in GNU/Linux. Hence no need to remove the existing FT232RL driver.
 
@@ -283,7 +283,7 @@ FT232RL Bit-Bang mode can be used to construct AVR ISP, JTAG, SPI and I2C Ports
 
 AVR-ISP Connection Idea
 
-![](https://github.com/SeeedDocument/UartSBee_V3.1/raw/master/img/UartSbee_ISP_Connection_BitBang.jpg)
+![](https://files.seeedstudio.com/wiki/UartSBee_V3.1/img/UartSbee_ISP_Connection_BitBang.jpg)
 
 
 ##   Support   ##

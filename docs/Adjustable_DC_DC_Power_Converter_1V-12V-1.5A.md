@@ -8,7 +8,7 @@ surveyurl: https://www.research.net/r/Adjustable_DC_DC_Power_Converter_1V_12V_1p
 sku:  105030005
 ---
 
-![](https://github.com/SeeedDocument/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A/raw/master/img/Adjustable_04.jpg)
+![](https://files.seeedstudio.com/wiki/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A/img/Adjustable_04.jpg)
 
 This is a DC/DC step-down voltage regulator that converts input voltage between 4.5V and 16V into a smaller voltage between 1V and 12V, capable of driving a 1.5A load with excellent line and load regulation.
 
@@ -41,7 +41,7 @@ In some projects, you might need different voltages (1-12V) for your devices. Wi
 ---
 Connect the module with Bread Board like following picture. It can quickly select 3.3V ,5V or an adjustable voltage output,through the jumper cap .When select the adjustable, it can be adjusted by the R12, to adjust the output voltage(1-12V)range. At the same time, you can use Arduino to read the A0 output voltage，to obtain the precise voltage value.
 
-![](https://github.com/SeeedDocument/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A/raw/master/img/ADJ_USER.jpg)
+![](https://files.seeedstudio.com/wiki/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A/img/ADJ_USER.jpg)
 
 
 ## Schematic Online Viewer
@@ -54,7 +54,7 @@ Connect the module with Bread Board like following picture. It can quickly selec
 ---
 *   [Adjustable DC - DC Power Converter(1V - 12V1.5A) v1.0 sch pcb.zip](https://github.com/SeeedDocument/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A/raw/master/res/Adjustable_DC-DC_Power_Converter-1V-12V1.5A-v1.0_sch_pcb.zip)
 
-*   [MP1496 Datasheet](https://github.com/SeeedDocument/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A/raw/master/res/MP1496-277526.pdf)
+*   [MP1496 Datasheet](https://files.seeedstudio.com/wiki/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A/res/MP1496-277526.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

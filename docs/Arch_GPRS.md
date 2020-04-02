@@ -12,7 +12,7 @@ tags:
 ---
 
 
-[![](https://github.com/SeeedDocument/Arch_GPRS/raw/master/img/Arch_GPRS_03.jpg) ](http://www.seeedstudio.com/depot/Arch-GPRS-p-1657.html?cPath=73)
+[![](https://files.seeedstudio.com/wiki/Arch_GPRS/img/Arch_GPRS_03.jpg) ](http://www.seeedstudio.com/depot/Arch-GPRS-p-1657.html?cPath=73)
 
 Arch GPRS is an [mbed](http://mbed.org/handbook/mbed-SDK) enabled development board that houses a cellular networking module along with a microcontroller. It is similar to the [Seeeduino Arch](https://seeeddoc.github.io/Seeeduino_Arch/)  in that it also uses the LPC11U24 Microcontroller. With the Arch GPRS, you can use the mbed C/C++ SDK, libraries and optimizing online development tools to rapidly build your prototype.
 The cellular networking module on the Arch GPRS is based on the EG-10 [GPRS](https://en.wikipedia.org/wiki/General_Packet_Radio_Service) modem. With this, data collection functions can be performed easily using the 2G GSM based cellular network.
@@ -69,7 +69,7 @@ Arch GPRS has a standard **Arduino** interface as well as [Grove](/Grove)  conne
 
 ##  Interfaces ##
 
-![](https://github.com/SeeedDocument/Arch_GPRS/raw/master/img/Arch_GPRS_Interface_Function.jpg)
+![](https://files.seeedstudio.com/wiki/Arch_GPRS/img/Arch_GPRS_Interface_Function.jpg)
 
 Yellow Area is very similar in fashion to an Arduino board, and in fact it is used as such with our Shield board. Its pin destribution is almost the same as Seeeduino Arch(D11 and D13 are swaped), so you can click [here](https://seeeddoc.github.io/Seeeduino_Arch/#Pinout) to observe each pin.
 
@@ -88,11 +88,11 @@ Now let's get started.
 
 - Open the link: [https://mbed.org/users/lawliet/code/ARCH_GPRS_Test/](https://mbed.org/users/lawliet/code/ARCH_GPRS_Test/),  then click "Import this program" in the right corner while you can see the belowing picture. Now click "import" to complete the import of Arch GPRS program.
 
-![](https://github.com/SeeedDocument/Arch_GPRS/raw/master/img/Arch_GPRS_Test.png)
+![](https://files.seeedstudio.com/wiki/Arch_GPRS/img/Arch_GPRS_Test.png)
 
 - When the program has been imported into your account, you can see it in online development tool.
 
-![](https://github.com/SeeedDocument/Arch_GPRS/raw/master/img/Arch_GPRS_Test1.png)
+![](https://files.seeedstudio.com/wiki/Arch_GPRS/img/Arch_GPRS_Test1.png)
 
 **Step three** Edit code
 
@@ -102,15 +102,15 @@ Now let's get started.
 
 - Click ”No device selected” in the right top corner, then click ”Add a device” in buttom left after you see the below picture.
 
-![](https://github.com/SeeedDocument/Arch_GPRS/raw/master/img/%E9%80%89%E6%8B%A9%E8%AE%BE%E5%A4%87.jpg)
+![](https://files.seeedstudio.com/wiki/Arch_GPRS/img/%E9%80%89%E6%8B%A9%E8%AE%BE%E5%A4%87.jpg)
 
 - Pop up a page as shown below. Arch GPRS is compatible with mbed LPC11U24 and Seeeduino Arch, so you can  select either ”mbed LPC11U24” or Seeeduino Arch. Here we take selecting Seeeduino Arch for example.
 
-![](https://github.com/SeeedDocument/Arch_GPRS/raw/master/img/%E9%80%89%E6%8B%A9%E8%AE%BE%E5%A4%871.jpg)
+![](https://files.seeedstudio.com/wiki/Arch_GPRS/img/%E9%80%89%E6%8B%A9%E8%AE%BE%E5%A4%871.jpg)
 
 - Enter Seeeduino Arch page and  click ”Add to mbed Compiler”, Now you complete successfully adding Seeeduino Arch. Return to mbed compiler and click ”No device selected”. The belowing picture appears after you click Seeeduino Arch in buttom left corner：
 
-![](https://github.com/SeeedDocument/Arch_GPRS/raw/master/img/%E9%80%89%E6%8B%A9%E8%AE%BE%E5%A4%872.jpg)
+![](https://files.seeedstudio.com/wiki/Arch_GPRS/img/%E9%80%89%E6%8B%A9%E8%AE%BE%E5%A4%872.jpg)
 
 - You can see your selected  board in mbed online compiler after clicking ”Select Platform”.
 
@@ -122,7 +122,7 @@ Now let's get started.
 
 - Connect Arch GPRS's USB port to your computer using a USB Micro B cable and long press the botton, Arch GPRS will appear as a USB storage named CRP DISABLD.
 
-![](https://github.com/SeeedDocument/Arch_GPRS/raw/master/img/A_usb_device.jpg)
+![](https://files.seeedstudio.com/wiki/Arch_GPRS/img/A_usb_device.jpg)
 
 - Go to the CRP DISABLD. Now you need add the bin file you have gotten to CRP DISABLD device. If bin file has exists in USB device, you need to delect it and add the new bin file.
 
@@ -130,7 +130,7 @@ Quick press Arch GPRS's button and wait a moment, you will hear Arch GPRS callin
 
 ##  ARCH GPRS With Xively ##
 
-![](https://github.com/SeeedDocument/Arch_GPRS/raw/master/img/ARCH_GPRS_With_Xively.png)
+![](https://files.seeedstudio.com/wiki/Arch_GPRS/img/ARCH_GPRS_With_Xively.png)
 
 Xively is an on-line database service allowing developers to connect sensor-derived data (e.g. energy and environment data from objects, devices & buildings) to the Web and to build their own applications based on that data. By using ARCH GPRS we can easily realize this.
 
@@ -204,12 +204,12 @@ Arch GPRS doesn't come with [an mbed interface](https://mbed.org/handbook/mbed-H
 
 ##  Resources ##
 
-- **[Eagle]** [Arch GPRS Eagle File](https://github.com/SeeedDocument/Arch_GPRS/raw/master/res/Arch_GPRS_Eagle_File.zip)
-- **[PDF]**[Arch GPRS pdf](https://github.com/SeeedDocument/Arch_GPRS/raw/master/res/Arch%20GPRS.pdf)
-- **[EAGLE]**[Arch GPRS sch](https://github.com/SeeedDocument/Arch_GPRS/raw/master/res/Arch%20GPRS.sch)
-- **[PDF]**[Arch GPRS Schematic in PDF format](https://github.com/SeeedDocument/Arch_GPRS/raw/master/res/Arch_GPRS_Schematic.pdf)
-- **[Command]**[AT Command Reference](https://github.com/SeeedDocument/Arch_GPRS/raw/master/res/AT%E6%8C%87%E4%BB%A4%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C.pdf)
-- **[Datasheet]**[EG10 datasheet](https://github.com/SeeedDocument/Arch_GPRS/raw/master/res/EG10%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C.pdf)
+- **[Eagle]** [Arch GPRS Eagle File](https://files.seeedstudio.com/wiki/Arch_GPRS/res/Arch_GPRS_Eagle_File.zip)
+- **[PDF]**[Arch GPRS pdf](https://files.seeedstudio.com/wiki/Arch_GPRS/res/Arch%20GPRS.pdf)
+- **[EAGLE]**[Arch GPRS sch](https://files.seeedstudio.com/wiki/Arch_GPRS/res/Arch%20GPRS.sch)
+- **[PDF]**[Arch GPRS Schematic in PDF format](https://files.seeedstudio.com/wiki/Arch_GPRS/res/Arch_GPRS_Schematic.pdf)
+- **[Command]**[AT Command Reference](https://files.seeedstudio.com/wiki/Arch_GPRS/res/AT%E6%8C%87%E4%BB%A4%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C.pdf)
+- **[Datasheet]**[EG10 datasheet](https://files.seeedstudio.com/wiki/Arch_GPRS/res/EG10%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C.pdf)
 - **[Demo]**[demo](https://mbed.org/users/loovee/code/ARCH_GPRS_Demo/)
 
 ## Tech Support

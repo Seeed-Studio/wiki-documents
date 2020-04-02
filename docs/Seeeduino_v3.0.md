@@ -10,7 +10,7 @@ sku:
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Seeeduino-v3.0/raw/master/img/Seeeduino_v3.0_top.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-v3.0/img/Seeeduino_v3.0_top.jpg)
 
 ##   Overview  ##
 The Seeeduino v3 is a microcontroller board based on the ATmega328, and it's an Arduino compatible board. It has a FTDI USB-to-serial driver chip which can be regarded as a bridge, let your computer can communicate with the board. It has 14 digit pins (which include 6 PWM pins and UART port) and 8 analog pins, a 16 MHz ceramic resonator, a USB connection, a reset button, an ICSP header and a DC power jack. It has two toggle switches, one for input voltage change of ATmega328, the other is enable/disable pin of DTR, which you can use FTDI function alone without the influence of ATmega328. It also has two white Grove connectors, and make it convenient for using Grove products with the board.
@@ -39,11 +39,11 @@ The Seeeduino v3 is a microcontroller board based on the ATmega328, and it's an 
 
 The Seeeduino has a FTDI USB-to-serial driver chip onboard - FT232R which programmed as a USB-to-serial converter.
 
-![](https://github.com/SeeedDocument/Seeeduino-v3.0/raw/master/img/Seeeduino_FTDI.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino-v3.0/img/Seeeduino_FTDI.png)
 
 Ten pins of FT232R have been pointed out, it beside the ICSP port, make it convenient for you to use those pins if needed.
 
-![](https://github.com/SeeedDocument/Seeeduino-v3.0/raw/master/img/Seeeduino_FTDI_pinout.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino-v3.0/img/Seeeduino_FTDI_pinout.png)
 
 There's a toggle switch "M_RST_AUTO" onboard. This determines whether the DTR signal from the host is allowed to reset the ATmega328 micro controller.
 
@@ -57,7 +57,7 @@ More information about FTDI chip, you can refer to the [homepage of FTDI](http:/
 
 The Seeeduino is a main board based on ATmega328, and all useful pins are pointed out. There are power pins, 14 digital IO pins and 8 analog pins on Seeeduino, meantime, six of the digital IO pins can be used as PWM outputs. All the pins of Seeeduino are wired to 2.54mm spaced headers.
 
-![](https://github.com/SeeedDocument/Seeeduino-v3.0/raw/master/img/Seeeduino_pinout.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino-v3.0/img/Seeeduino_pinout.png)
 
 Each of the 14 digital pins on the board can be used as an input or output, using [pinMode()](http://arduino.cc/en/Reference/PinMode)[digitalWrite()](http://arduino.cc/en/Reference/DigitalWrite)[digitalRead()](http://arduino.cc/en/Reference/DigitalRead) functions. They operate at 5 volts or 3.3 volts while turning the toggle switch "3V3_VCC_5V" to two different positions. And each pin can provide or receive a maximum of 40 mA. And a [SoftwareSerial](http://arduino.cc/en/Reference/SoftwareSerial) library allows for serial communication on any of digital pins.
 
@@ -136,9 +136,9 @@ This documentation is licensed under the Creative Commons [Attribution-ShareAlik
 
 ##   Resources   ##
 
-- **[Source]**[Seeeduino v3.0_Source_files](https://github.com/SeeedDocument/Seeeduino-v3.0/raw/master/res/SeeeduinoV3.0_Source_File.zip)
-- **[PDF]**[Seeeduino v3.0 PCB](https://github.com/SeeedDocument/Seeeduino-v3.0/raw/master/res/Seeeduino%20v3.0%20PCB.pdf)
-- **[PDF]**[Seeeduino v3.0 SCH](https://github.com/SeeedDocument/Seeeduino-v3.0/raw/master/res/Seeeduino_v3.0%20SCH.pdf)
+- **[Source]**[Seeeduino v3.0_Source_files](https://files.seeedstudio.com/wiki/Seeeduino-v3.0/res/SeeeduinoV3.0_Source_File.zip)
+- **[PDF]**[Seeeduino v3.0 PCB](https://files.seeedstudio.com/wiki/Seeeduino-v3.0/res/Seeeduino%20v3.0%20PCB.pdf)
+- **[PDF]**[Seeeduino v3.0 SCH](https://files.seeedstudio.com/wiki/Seeeduino-v3.0/res/Seeeduino_v3.0%20SCH.pdf)
 - **[PDF]**[Schematic in pdf](https://github.com/SeeedDocument/Seeeduino-v3.0/raw/master/res/Seeeduino_v3.0.pdf)
 
 ## Tech Support

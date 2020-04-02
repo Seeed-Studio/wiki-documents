@@ -79,7 +79,7 @@ Connect Grove Node with a battery or a USB cable and then press its button, it w
 
 ###   Get Started with Pre-programmed Firmware
 
-![](https://github.com/SeeedDocument/Grove-Node/raw/master/img/Milcandy_IFTTT.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Node/img/Milcandy_IFTTT.jpg)
 
 First, we need an **Input** Grove module to sense the physical world. Pre-programmed firmware only supports an analog input sensor or 0/1 digital input sensor.
 The following Grove modules from Seeedstudio can be used as an **Input**:
@@ -163,7 +163,7 @@ The following Grove modules from Seeedstudio can be used as an **Input**:
 
 Other analog sensors which is not Grove-compatible need a little small adjustment. Just connect your signal output to pin4 of Grove connector and then the VCC and GND. _Note that only sensors that output an analog or digital 1/0 value can be used with the pre-programmed firmware_
 
-![](https://github.com/SeeedDocument/Grove-Node/raw/master/img/Mil_Grove_con.png)
+![](https://files.seeedstudio.com/wiki/Grove-Node/img/Mil_Grove_con.png)
 
 Second, we need an **output** Grove module as an actuator. The following Grove modules can be used:
 
@@ -218,7 +218,7 @@ The Grove Node has a pre-programmed OTA bootloader. To run into the bootloader:
 
 4.  use [nRF Master Control Panel](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp) to upgrade the BLE app
 
-![](https://github.com/SeeedDocument/Grove-Node/raw/master/img/Ota-ui.png)
+![](https://files.seeedstudio.com/wiki/Grove-Node/img/Ota-ui.png)
 
 More information can be found at [mbed.org](https://developer.mbed.org/teams/Bluetooth-Low-Energy/wiki/Firmware-Over-the-Air-FOTA-Updates).
 
@@ -235,9 +235,9 @@ See [ble on mbed.org](http://developer.mbed.org/teams/Bluetooth-Low-Energy/)
 
 ##   Resources
 
-*   [Grove - Node v1.0 schematic pdf file](https://github.com/SeeedDocument/Grove-Node/raw/master/res/Grove-Node_v1.0.pdf)
+*   [Grove - Node v1.0 schematic pdf file](https://files.seeedstudio.com/wiki/Grove-Node/res/Grove-Node_v1.0.pdf)
 
-*   [Grove - Node v1.0 eagle design file](https://github.com/SeeedDocument/Grove-Node/raw/master/res/Grove-Node_v1.0_eagle.zip)
+*   [Grove - Node v1.0 eagle design file](https://files.seeedstudio.com/wiki/Grove-Node/res/Grove-Node_v1.0_eagle.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

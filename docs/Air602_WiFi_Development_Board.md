@@ -9,7 +9,7 @@ sku: 113990577
 tags:
 ---
 
-![](https://github.com/SeeedDocument/Air602_WiFi_Module/raw/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Air602_WiFi_Module/img/main.jpg)
 
 
 This wiki works for both Air602 WiFi Development Board and Air602 WiFi Module.
@@ -97,9 +97,9 @@ The Air602 WiFi Development Board is based on Air602 Wi-Fi module and integrated
 ## Pin Out
 
 
-![](https://github.com/SeeedDocument/Bazaar_file/raw/master/113990576/PIN_MAP.jpg)
-![](https://github.com/SeeedDocument/Bazaar_file/raw/master/113990576/PIN_table.jpg)
-![](https://github.com/SeeedDocument/Bazaar_file/raw/master/113990576/PIN_MAP_B.jpg)
+![](https://files.seeedstudio.com/wiki/Bazaar_file/113990576/PIN_MAP.jpg)
+![](https://files.seeedstudio.com/wiki/Bazaar_file/113990576/PIN_table.jpg)
+![](https://files.seeedstudio.com/wiki/Bazaar_file/113990576/PIN_MAP_B.jpg)
 
 
 
@@ -112,11 +112,11 @@ For the **Air602 WiFi Module**, you need to use USB-to-Serial Tools to connect t
         For mac, we found that some version of mac system can not recognize the on-board USB-to-Serial chip CH330N, please check here for solution [Mac os driver issue](https://forum.seeedstudio.com/viewtopic.php?f=106&t=8299&sid=aa548f2de0fb26380f50e0b328a49a80)
 
 
-We use the serial port tool **sscom** to send the AT command. You can use your favorite serial port tool, in case you want to use **sscom**, you can download it [Here](https://github.com/SeeedDocument/Grove-6-Axis_Accelerometer-Gyroscope-BMI088/raw/master/res/sscom51.zip). 
+We use the serial port tool **sscom** to send the AT command. You can use your favorite serial port tool, in case you want to use **sscom**, you can download it [Here](https://files.seeedstudio.com/wiki/Grove-6-Axis_Accelerometer-Gyroscope-BMI088/res/sscom51.zip). 
 
 What ever, please make sure you have checked the option **AddCrLf**, and set the baud rate to **115200**
 
-![](https://github.com/SeeedDocument/Air602_WiFi_Module/raw/master/img/AT_2.jpg)
+![](https://files.seeedstudio.com/wiki/Air602_WiFi_Module/img/AT_2.jpg)
 
 
 Tap **AT+** then click **SEND** or press ++enter++ key to to check if the connection was successfully established.
@@ -205,7 +205,7 @@ Wireless network card scanning AP's AT command is ：
 AT+WSCAN
 ```
 
-![](https://github.com/SeeedDocument/Air602_WiFi_Module/raw/master/img/AT_3.jpg)
+![](https://files.seeedstudio.com/wiki/Air602_WiFi_Module/img/AT_3.jpg)
 
 The last paremeter is the signal strength,  unit db
 
@@ -254,7 +254,7 @@ AT+PMTF
 AT+WJOIN
 ```
 
-![](https://github.com/SeeedDocument/Air602_WiFi_Module/raw/master/img/AT_4.jpg)
+![](https://files.seeedstudio.com/wiki/Air602_WiFi_Module/img/AT_4.jpg)
 
 
 ### Create an APSTA process
@@ -370,13 +370,13 @@ AT+APLKSTT
 ## Resouce
 
 
-- **[PDF]** [Air602 AT Command User Manual](https://github.com/SeeedDocument/Air602_WiFi_Module/raw/master/res/Air602%20AT%20Command%20User%20Manual.pdf)
+- **[PDF]** [Air602 AT Command User Manual](https://files.seeedstudio.com/wiki/Air602_WiFi_Module/res/Air602%20AT%20Command%20User%20Manual.pdf)
 
-- **[PDF]** [Air602 Hardware Design Manual](https://github.com/SeeedDocument/Air602_WiFi_Module/raw/master/res/Air602%20Hardware%20Design%20Manual.pdf)
+- **[PDF]** [Air602 Hardware Design Manual](https://files.seeedstudio.com/wiki/Air602_WiFi_Module/res/Air602%20Hardware%20Design%20Manual.pdf)
 
-- **[ZIP]** [AIR602_lbr for eagle](https://github.com/SeeedDocument/Air602_WiFi_Module/raw/master/res/AIR602_lbr.zip)
+- **[ZIP]** [AIR602_lbr for eagle](https://files.seeedstudio.com/wiki/Air602_WiFi_Module/res/AIR602_lbr.zip)
 
-- **[ZIP]** [sscom](https://github.com/SeeedDocument/Grove-6-Axis_Accelerometer-Gyroscope-BMI088/raw/master/res/sscom51.zip)
+- **[ZIP]** [sscom](https://files.seeedstudio.com/wiki/Grove-6-Axis_Accelerometer-Gyroscope-BMI088/res/sscom51.zip)
 
 
 ## Tech Support

@@ -9,7 +9,7 @@ sku: 105040001
 ---
 
 ---
-![](https://github.com/SeeedDocument/Xadow-Duino/raw/master/images/Xadow_Duino.JPG)
+![](https://files.seeedstudio.com/wiki/Xadow-Duino/images/Xadow_Duino.JPG)
 
 The Xadow Duino is specially designed for building up awesome Lighting Devices with the most popular RGB LED WS2812B. Based on MCU ATmega32u4 and built-in micro USB, Xadow Duino allows you to either control the RGB LEDs directly from the software in "RePhone Kit Create" or program the board with Arduino IDE to make it work independently. Unlike other add-on modules, this board has its own battery socket (JST1.0 type), which allows you to power it in many ways:
 - Via 5V USB (if the battery is connected, it would also charge the battery simultaneously )
@@ -17,7 +17,7 @@ The Xadow Duino is specially designed for building up awesome Lighting Devices w
 - Via breakout pins
 - Via Xadow GSM+BLE
 
-[![](https://github.com/SeeedDocument/Xadow-Duino/raw/master/images/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Xadow-Duino-p-2556.html)
+[![](https://files.seeedstudio.com/wiki/Xadow-Duino/images/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Xadow-Duino-p-2556.html)
 
 ## Features
 ---
@@ -47,11 +47,11 @@ The Xadow Duino is specially designed for building up awesome Lighting Devices w
 
 ## Hardware Overview
 ---
-![](https://github.com/SeeedDocument/Xadow-Duino/raw/master/images/Xadow_Duino.png)
+![](https://files.seeedstudio.com/wiki/Xadow-Duino/images/Xadow_Duino.png)
 
 The image below illustrates the Pin Definitions of 11 Pin Xadow Connector, Solder-able Breakout Pins on the Xadow Duino.
 
-![](https://github.com/SeeedDocument/Xadow-Duino/raw/master/images/Xadow_Duino_Pin_definitions.png)
+![](https://files.seeedstudio.com/wiki/Xadow-Duino/images/Xadow_Duino_Pin_definitions.png)
 
 ## Light Things Up
 ---
@@ -63,7 +63,7 @@ The easiest way to control the WS2812B is to use the built-in software in 'RePho
  2. Marquee.
  3. Rainbow.
 
-![](https://github.com/SeeedDocument/Xadow-Duino/raw/master/images/Xadow_Duino_WS2812B.png)
+![](https://files.seeedstudio.com/wiki/Xadow-Duino/images/Xadow_Duino_WS2812B.png)
 
 **Set If This Then That**
 
@@ -82,7 +82,7 @@ To use Xadow Duino with Arduino IDE, there are few simple steps you would need t
 After you correctly installed the driver, Open **Device Manager** by clicking the **Start** button, clicking **Control Panel**, clicking **System and Security**, and then, under **System**, clicking **Device Manager**. If you're prompted for an administrator password or confirmation, type the password or provide confirmation. Now you should be able to see the **COM ports** on your **‘Device Manager’** as：
 - **Xadow Clip(COM20)** (The COM number might be different on your PC.)
 
-![](https://github.com/SeeedDocument/Xadow-Duino/raw/master/images/Xadow_Com_PORT.png)
+![](https://files.seeedstudio.com/wiki/Xadow-Duino/images/Xadow_Com_PORT.png)
 
 3.Now download the [Xadow File
 
@@ -91,11 +91,11 @@ After you correctly installed the driver, Open **Device Manager** by clicking th
 
 4.Now lets try to light up some LEDs, connect your Xadow Duino to computer with a micro USB, open Arduino IDE, select **Tools** ==> **Board** ==> **Seeeduino Xadow**:
 
-![](https://github.com/SeeedDocument/Xadow-Duino/raw/master/images/Xadow_Duino_Board.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow-Duino/images/Xadow_Duino_Board.jpg)
 
 then select the **Port** as **COM20(Seeeduino Xadow)** :
 
-![](https://github.com/SeeedDocument/Xadow-Duino/raw/master/images/Xadow_Duino_Port.jpg)
+![](https://files.seeedstudio.com/wiki/Xadow-Duino/images/Xadow_Duino_Port.jpg)
 
 5. Copy the following code, if you don't have the WS2812b libraries, download it here:
 
@@ -182,7 +182,7 @@ uint32_t Wheel(byte WheelPos) {
 
 ## RePhone Community
 ---
-[![](https://github.com/SeeedDocument/Xadow-Duino/raw/master/images/300px-RePhone_Community-2.png)](https://community.seeedstudio.com/discover.html?t=RePhone)
+[![](https://files.seeedstudio.com/wiki/Xadow-Duino/images/300px-RePhone_Community-2.png)](https://community.seeedstudio.com/discover.html?t=RePhone)
 
 We’ve been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the [RePhone Community](https://community.seeedstudio.com/discover.html?t=RePhone).
 
@@ -208,11 +208,11 @@ We will be keep updating the source code on our github page:
 
 The schematic diagram of Xadow Duino is provided in the following link:
 
-- [Xadow Duino Schematic Files](https://github.com/SeeedDocument/Xadow-Duino/raw/master/Resources/Xadow%20Duino%20v1.0_schemic_file.zip)
+- [Xadow Duino Schematic Files](https://files.seeedstudio.com/wiki/Xadow-Duino/Resources/Xadow%20Duino%20v1.0_schemic_file.zip)
 
 Check more info about the fascinating RGB LED WS2812B:
 
-- [WS2812B](https://github.com/SeeedDocument/Xadow-Duino/raw/master/Resources/WS2812B%20Datasheet.pdf)
+- [WS2812B](https://files.seeedstudio.com/wiki/Xadow-Duino/Resources/WS2812B%20Datasheet.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>
