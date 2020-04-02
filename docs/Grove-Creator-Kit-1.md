@@ -99,7 +99,7 @@ This kit comes in three different flavors, namely, α, β and γ which includes 
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | Micro:bit                                                                                     
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/raspberry_pi_logo.jpg) | ![](https://github.com/SeeedDocument/Bazaar_Document/raw/master/microbit-logo-stacked-2.png) | 
+| ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg) | ![](https://github.com/SeeedDocument/Bazaar_Document/raw/master/microbit-logo-stacked-2.png) | 
 
 
 ## Cables Included in these kits

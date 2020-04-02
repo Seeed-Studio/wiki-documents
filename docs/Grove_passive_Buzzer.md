@@ -43,7 +43,7 @@ This is a 3-5V passive buzzer. You can change the PMW frequency to award differe
 
 ### Platform Select
 
-![](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/arduino_logo.jpg)
+![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg)
 
 ### Hareware connection
 
