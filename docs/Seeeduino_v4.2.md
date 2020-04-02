@@ -8,7 +8,7 @@ surveyurl: https://www.research.net/r/Seeeduino
 sku: 102010026
 ---
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/SeeeduinoV4/master/images/cover.JPG)
+![enter image description here](https://files.seeedstudio.com/wiki/SeeeduinoV4/images/cover.JPG)
 
 Seeeduino v4.2 is an Open Source, Arduino-compatible ATmega328 MCU development board. We think Seeeduino v4.2 is one of the best Arduino derivatives/compatibles available. Seeeduino v4.2 is feature rich, much more stable, easy-to-use and even good looking.
 
@@ -200,7 +200,7 @@ For Windows
 
 This drive is available for Windows XP, Windows Vista, Windows 7, Windows 8/8.1 and Windows 10.
 
-[![enter image description here](https://raw.githubusercontent.com/SeeedDocument/SeeeduinoV4/master/images/download_driver.png)](https://github.com/Seeed-Studio/Signed_USB_Serial_Driver/archive/master.zip)
+[![enter image description here](https://files.seeedstudio.com/wiki/SeeeduinoV4/images/download_driver.png)](https://github.com/Seeed-Studio/Signed_USB_Serial_Driver/archive/master.zip)
 
 - Plug in your board and wait for Windows to begin its driver installation process. After a few moments, the process will fail, despite best efforts.
 - Click on the Start Menu, and open up the Control Panel.
@@ -230,7 +230,7 @@ Double-click the Arduino application (arduino.exe) you have previously installed
 
 Find the LED blink example sketch: **File > Examples >01.Basics > Blink**.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/SeeeduinoV4/master/images/blink.png)
+![enter image description here](https://files.seeedstudio.com/wiki/SeeeduinoV4/images/blink.png)
 
 
 
@@ -238,7 +238,7 @@ Find the LED blink example sketch: **File > Examples >01.Basics > Blink**.
 
 You'll need to select the entry in the **Tools > Board** menu that corresponds to your Arduino.Select the **Seeeduino v4.2**.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/SeeeduinoV4/master/images/select_board.png)
+![enter image description here](https://files.seeedstudio.com/wiki/SeeeduinoV4/images/select_board.png)
 
 
 
@@ -250,7 +250,7 @@ If you can not find the Seeeduino v4.2, please check [How to Add Seeed boards to
 
 Select the serial device of the Arduino board from the Tools | Serial Port menu. This is likely to be COM3 or higher (**COM1** and **COM2** are usually reserved for hardware serial ports). To find out, you can disconnect your Arduino board and re-open the menu; the entry that disappears should be the Arduino board. Reconnect the board and select that serial port.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/SeeeduinoV4/master/images/select_port.png)
+![enter image description here](https://files.seeedstudio.com/wiki/SeeeduinoV4/images/select_port.png)
 
 
 <div class="admonition note" style="background:#6ab0de; color:#FFF">
@@ -266,7 +266,7 @@ Now, simply click the "Upload" button in the environment. Wait a few seconds - y
 
 A few seconds after the upload finishes, you should see the pin 13 (L) LED on the board start to blink (in orange). If it does, congratulations! You've gotten Arduino up-and-running. If you have problems, please see the troubleshooting suggestions.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/SeeeduinoV4/master/images/Seeeduino_v4_2_L.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/SeeeduinoV4/images/Seeeduino_v4_2_L.jpg)
 
 
 ## Application Ideas
@@ -280,12 +280,12 @@ Here is some funny project for your reference.
 
 |Paper Man|Fingerprint Lock|Monitor Stand|
 |-------|-------|-------|
-|![](https://raw.githubusercontent.com/SeeedDocument/SeeeduinoV4/master/images/project1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/SeeeduinoV4/master/images/project2.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/SeeeduinoV4/master/images/project3.jpg)|
+|![](https://files.seeedstudio.com/wiki/SeeeduinoV4/images/project1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/SeeeduinoV4/images/project2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/SeeeduinoV4/images/project3.jpg)|
 | [Make it Now](http://www.instructables.com/id/Paper-Man-a-machine-created-by-Arduino-and-NFC/) | [Make it Now](http://www.instructables.com/id/Door-to-Open-Source-Hardware-A-fingerprint-lock-so/) | [Make it Now](http://www.instructables.com/id/DIY-a-Programmable-Acrylic-Monitor-Stand/)|
 
 |Desk Promo|Tiger Machine|Colorful Pyramid|
 |-------|-------|-------|
-|![](https://raw.githubusercontent.com/SeeedDocument/SeeeduinoV4/master/images/project4.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/SeeeduinoV4/master/images/project5.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/SeeeduinoV4/master/images/project6.jpg)|
+|![](https://files.seeedstudio.com/wiki/SeeeduinoV4/images/project4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/SeeeduinoV4/images/project5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/SeeeduinoV4/images/project6.jpg)|
 | [Make it Now](http://www.instructables.com/id/Desk-promo/) | [Make it Now](http://www.instructables.com/id/How-to-Make-Your-Tiny-Tiger-Machine/) | [Make it Now](http://www.instructables.com/id/DIY-a-colorful-pyramid/)|
 
 

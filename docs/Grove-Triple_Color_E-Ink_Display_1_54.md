@@ -269,8 +269,8 @@ As we mentioned above, there are two arrays, you may be cofused: which one to re
         *Make a 2888 0x00 or 0xFF array?*  
         *Don't worry, we feel you pain, you can just click the 0x00.c and 0xFF.c file and copy into your code.*
 
-[0x00.c](https://raw.githubusercontent.com/SeeedDocument/Grove-Triple_Color_E-Ink_Display_1.54/master/res/00.c)  
-[0xff.c](https://raw.githubusercontent.com/SeeedDocument/Grove-Triple_Color_E-Ink_Display_1.54/master/res/FF.c)
+[0x00.c](https://files.seeedstudio.com/wiki/Grove-Triple_Color_E-Ink_Display_1.54/res/00.c)  
+[0xff.c](https://files.seeedstudio.com/wiki/Grove-Triple_Color_E-Ink_Display_1.54/res/FF.c)
 
 
 

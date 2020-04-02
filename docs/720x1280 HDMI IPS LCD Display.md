@@ -46,7 +46,7 @@ framebuffer_height=1200
 After following the step above, you should see the desktop of Raspberry Pi displayed on your LCD Display.  
 
 If the desktop displays in vertical, just rotate it according to the guide below.  
-![](https://raw.githubusercontent.com/SeeedDocument/Raspberry-4-get-start/master/img/Screen-Config.jpg)  
+![](https://files.seeedstudio.com/wiki/Raspberry-4-get-start/img/Screen-Config.jpg)  
 
 
 

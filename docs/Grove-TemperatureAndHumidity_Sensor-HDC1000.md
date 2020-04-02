@@ -200,7 +200,7 @@ mm
 ## Hardware Overview
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor-HDC1000/master/img/Grove-TemperatureAndHumidity_Sensor-HDC1000-p3.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor-HDC1000/img/Grove-TemperatureAndHumidity_Sensor-HDC1000-p3.jpg)
 
 1.  Grove connector.
 2.  Ready：Ready for a conversion.
@@ -218,7 +218,7 @@ Here is how to use Grove - Temperature&Humidity Sensor (HDC1000) with Seeeduino 
 
 | Seeeduino V4.2 | Base Shield| Grove - Temperature&Humidity Sensor(HDC1000) |
 |--------------|-------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor-HDC1000/img/thumbnail.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor-HDC1000/img/thumbnail.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-TemperatureHumidity-Sensor-HDC1000-p-2535.html?cPath=25_125)|
 
 
@@ -454,11 +454,11 @@ sudo nano grove_hdc_1000_example.py
 
 #### Hardware connections
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor-HDC1000/master/img/Grove-TemperatureAndHumidity_Sensor-HDC1000-demo_connections-with_launchpad-2400_s.JPG)
+![](https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor-HDC1000/img/Grove-TemperatureAndHumidity_Sensor-HDC1000-demo_connections-with_launchpad-2400_s.JPG)
 
 #### Download code and flash it to Launchpad
 
-1. Download the [demo code](https://raw.githubusercontent.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor-HDC1000/master/res/HDC1000-HDC1000_energia.zip).
+1. Download the [demo code](https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor-HDC1000/res/HDC1000-HDC1000_energia.zip).
 
     <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -469,23 +469,23 @@ You have to copy the file <span style="font-style:italic">readTempHumi.ino</span
 
 3. Open *Serial Monitor* (**Tool**->**Serial Monitor**) to view data detected.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor-HDC1000/master/img/Grove-TemperatureAndHumidity_Sensor-HDC1000-demo_result-with_launchpad-600.png)
+![](https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor-HDC1000/img/Grove-TemperatureAndHumidity_Sensor-HDC1000-demo_result-with_launchpad-600.png)
 
 
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor-HDC1000/master/res/Grove-TemperatureAndHumidity_Sensor-HDC1000-v1.0_sch_pcb.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor-HDC1000/res/Grove-TemperatureAndHumidity_Sensor-HDC1000-v1.0_sch_pcb.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ## Resources
 
 
-- **[Zip]** [Grove - Temperature&Humidity Sensor(HDC1000) v1.0 sch pcb.zip](https://raw.githubusercontent.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor-HDC1000/master/res/Grove-TemperatureAndHumidity_Sensor-HDC1000-v1.0_sch_pcb.zip)
-- **[Pdf]** [Grove - Temperature&Humidity Sensor(HDC1000) v1.0 sch.pdf](https://raw.githubusercontent.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor-HDC1000/master/res/Grove-TemperatureAndHumidity_Sensor-HDC1000-v1.0_sch.pdf)
+- **[Zip]** [Grove - Temperature&Humidity Sensor(HDC1000) v1.0 sch pcb.zip](https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor-HDC1000/res/Grove-TemperatureAndHumidity_Sensor-HDC1000-v1.0_sch_pcb.zip)
+- **[Pdf]** [Grove - Temperature&Humidity Sensor(HDC1000) v1.0 sch.pdf](https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor-HDC1000/res/Grove-TemperatureAndHumidity_Sensor-HDC1000-v1.0_sch.pdf)
 - **[Library]** [Demo code](https://github.com/Seeed-Studio/HDC1000)
-- **[Datasheet]** [HDC1000\_DataSheet.pdf](https://raw.githubusercontent.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor-HDC1000/master/res/HDC1000.pdf)
+- **[Datasheet]** [HDC1000\_DataSheet.pdf](https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor-HDC1000/res/HDC1000.pdf)
 
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Temperature&Humidity_Sensor_(HDC1000) -->

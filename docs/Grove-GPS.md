@@ -10,7 +10,7 @@ sku: 113020003
 tags: grove_uart, io_3v3, io_5v, plat_duino, plat_bbg, plat_pi, plat_linkit,
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/img/Grove-GPS.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-GPS/img/Grove-GPS.jpg)
 
 This Grove - GPS module is a cost-efficient and field-programmable gadget armed with a SIM28 (u-blox 6 is the old version) and serial communication configuration. It features 22 tracking / 66 acquisition channels GPS receiver. The sensitivity of tracking and acquisition both reach up to -160dBm, making it a great choice for personal navigation projects and location services, as well as an outstanding one among products of the same price class.
 
@@ -67,7 +67,7 @@ This sample simply reads from the GPS by using software serial and sends it back
 
 | Seeeduino V4.2 | Base Shield|  Grove - GPS |
 |--------------|-------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-GPS/img/45d_small.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-GPS/img/45d_small.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-GPS-p-959.html)|
 
 - **Step 2.** Connect Grove - GPS to port **D2** of Grove-Base Shield.
@@ -142,7 +142,7 @@ void clearBufferArray()                     // function to clear buffer array
 
 - **Step 7.** Open the serial monitor,You can see as show below:
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/img/GPS_result.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-GPS/img/GPS_result.jpg)
 
 
 **We also can view data in Google Earth:**
@@ -352,32 +352,32 @@ GPS is better used outdoors. It is recommended to put your raspberry pi outside 
 ## SIM28 module Note:
 
 - **Step 1.** Grove-GPS  has change the module as SIM28 which the same footprint as origin version.
-- **Step 2.** We should use ["SIMCom GPS DEMO"](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/res/SIMCom_GPS_DEMO_V1.07.zip) tools to receive SIM28 module data.
+- **Step 2.** We should use ["SIMCom GPS DEMO"](https://files.seeedstudio.com/wiki/Grove-GPS/res/SIMCom_GPS_DEMO_V1.07.zip) tools to receive SIM28 module data.
 - **Step 3.** Open SIMCom_GPS_DEMO tools, go to Module->properties->module->select SIM28.
 - **Step 4.** SIMCom_GPS_DEMO_V1.07 is for Windows only.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/img/SIM28_module_select.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-GPS/img/SIM28_module_select.jpg)
 
 - **Step 5.** Open SIMCom_GPS_DEMO tools, go to Module->connect. Select the serial port which the GPS module used.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/img/SIM28_module_tools_pannel.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-GPS/img/SIM28_module_tools_pannel.jpg)
 
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/res/GPS.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-GPS/res/GPS.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ## Resources
 
-- **[Eagle]** [Grove-GPS Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/res/GPS.zip)
-- **[PDF]** [GPS Schematic(PDF)](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/res/GPS.pdf)
-- **[Datasheet]** [E-1612-UB Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/res/E-1612-UB_Datasheets_Sheet.pdf)
-- **[Datasheet]** [U-Blox6 Receiver Description Protocol Spec](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/res/U-blox-6-Receiver-Description-Including-Protocol-Specification.zip)
+- **[Eagle]** [Grove-GPS Eagle File](https://files.seeedstudio.com/wiki/Grove-GPS/res/GPS.zip)
+- **[PDF]** [GPS Schematic(PDF)](https://files.seeedstudio.com/wiki/Grove-GPS/res/GPS.pdf)
+- **[Datasheet]** [E-1612-UB Datasheet](https://files.seeedstudio.com/wiki/Grove-GPS/res/E-1612-UB_Datasheets_Sheet.pdf)
+- **[Datasheet]** [U-Blox6 Receiver Description Protocol Spec](https://files.seeedstudio.com/wiki/Grove-GPS/res/U-blox-6-Receiver-Description-Including-Protocol-Specification.zip)
 - **[Software]** [U-Blox u-center GPS evaluation software](https://www.u-blox.com/en/product/u-center-windows)
-- **[Document]**  [SIM28\_DATA\_File](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/res/SIM28_DATA_File.zip)
-- **[Document]** [SIMCom\_GPS\_DEMO\_V1.07](https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/res/SIMCom_GPS_DEMO_V1.07.zip)
+- **[Document]**  [SIM28\_DATA\_File](https://files.seeedstudio.com/wiki/Grove-GPS/res/SIM28_DATA_File.zip)
+- **[Document]** [SIMCom\_GPS\_DEMO\_V1.07](https://files.seeedstudio.com/wiki/Grove-GPS/res/SIMCom_GPS_DEMO_V1.07.zip)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_GPS -->
 

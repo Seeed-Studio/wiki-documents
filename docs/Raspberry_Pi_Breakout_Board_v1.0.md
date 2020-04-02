@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/Raspberry_Pi_Breakout_Board_v1_0
 sku: 103030030
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Raspberry_Pi_Breakout_Board_v1.0/master/img/Raspberry_Pi_Breakout_Board_v1.0_p6.jpg)
+![](https://files.seeedstudio.com/wiki/Raspberry_Pi_Breakout_Board_v1.0/img/Raspberry_Pi_Breakout_Board_v1.0_p6.jpg)
 
 Raspberry Pi Breakout Board for Raspberry Pi is a prototype board that you can combine your raspberry pi with other components, modules.
 As a prototype board, it also provides power, state indicator light, button and universal transistor,such as NPN, PNP, N-MOS, P-MOS.
@@ -27,27 +27,27 @@ Features
 Hardware Overview
 ---------------------
 
-![](https://raw.githubusercontent.com/SeeedDocument/Raspberry_Pi_Breakout_Board_v1.0/master/img/Raspberry_Pi_Breakout_Board_v1.0_p7.jpg)
+![](https://files.seeedstudio.com/wiki/Raspberry_Pi_Breakout_Board_v1.0/img/Raspberry_Pi_Breakout_Board_v1.0_p7.jpg)
 
 Assembly
 --------
 
 -   You can design circuit on the Raspberry Pi Breakout Board, then connect to raspberry pi as shown below.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Raspberry_Pi_Breakout_Board_v1.0/master/img/Raspberry_Pi_Breakout_Board_v1.0_p5.jpg)
+![](https://files.seeedstudio.com/wiki/Raspberry_Pi_Breakout_Board_v1.0/img/Raspberry_Pi_Breakout_Board_v1.0_p5.jpg)
 
 
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Raspberry_Pi_Breakout_Board_v1.0/master/res/Raspberry_Pi_Breakout_Board_v1.0_sch_pcb-.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Raspberry_Pi_Breakout_Board_v1.0/res/Raspberry_Pi_Breakout_Board_v1.0_sch_pcb-.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 Resources
 ---------
 
-- [Raspberry Pi Breakout Board v1.0 sch pcb-.zip](https://raw.githubusercontent.com/SeeedDocument/Raspberry_Pi_Breakout_Board_v1.0/master/res/Raspberry_Pi_Breakout_Board_v1.0_sch_pcb-.zip)
+- [Raspberry Pi Breakout Board v1.0 sch pcb-.zip](https://files.seeedstudio.com/wiki/Raspberry_Pi_Breakout_Board_v1.0/res/Raspberry_Pi_Breakout_Board_v1.0_sch_pcb-.zip)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Raspberry_Pi_Breakout_Board_v1.0 -->
 

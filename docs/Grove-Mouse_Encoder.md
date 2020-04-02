@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/Grove-Mouse_Encoder
 sku: 103020030
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Mouse_Encoder/master/img/Grove-Mouse_Encoder_product_view.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Mouse_Encoder/img/Grove-Mouse_Encoder_product_view.jpg)
 
 Grove - Mouse Encoder is a type of mechanical incremental rotary encoder with feedback data of rotary direction and rotary speed<sup>\[1\]</sup>. It features standard Grove interface that will save your lots of work in wiring and programming. Also, it is well adapted to heavy duty and a harsh environment. This product can be applied in toys, robots, and consumer input devices.
 
@@ -51,7 +51,7 @@ Specifications
 <div class="admonition note">
 <p class="admonition-title">Notes</p>
 <ol><li>There is no knob included in product list. Because we think it will make this encoder more versatile for different environments.</li>
-<li>You can find <a href="https://raw.githubusercontent.com/SeeedDocument/Grove-Mouse_Encoder/master/res/Grove-Mouse_Encoder_Dimensions.pdf">dimensions</a> file in PDF format, and you can customize a knob according to the dimensions.</li><ol>
+<li>You can find <a href="https://files.seeedstudio.com/wiki/Grove-Mouse_Encoder/res/Grove-Mouse_Encoder_Dimensions.pdf">dimensions</a> file in PDF format, and you can customize a knob according to the dimensions.</li><ol>
 </div>
 
 <div class="admonition tip">
@@ -62,7 +62,7 @@ You can just use a suitable hexagonal screwdriver bit if you only are building a
 Hardware Overview
 -----------------
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Mouse_Encoder/master/img/Grove-Mouse_Encoder.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Mouse_Encoder/img/Grove-Mouse_Encoder.jpg)
 
 **Grove interface**   
 Connect main control board such as **Seeeduino** board with driver board.
@@ -106,7 +106,7 @@ This demo shows how to detect position and detect direction.
 
 Connect materials as shown below:
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Mouse_Encoder/master/img/Grove-Mouse_Encoder_demo_connection.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Mouse_Encoder/img/Grove-Mouse_Encoder_demo_connection.jpg)
 
 #### Code
 
@@ -154,19 +154,19 @@ void loop() {
 
 The output:
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Mouse_Encoder/master/img/Grove_mouse_encoder_output_of_demo.png)
+![](https://files.seeedstudio.com/wiki/Grove-Mouse_Encoder/img/Grove_mouse_encoder_output_of_demo.png)
 
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-Mouse_Encoder/master/res/Grove_Mouse_Encoder_v1.0_Schematic_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Mouse_Encoder/res/Grove_Mouse_Encoder_v1.0_Schematic_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 Resources
 ---------
 
-- [Schematic files](https://raw.githubusercontent.com/SeeedDocument/Grove-Mouse_Encoder/master/res/Grove_Mouse_Encoder_v1.0_Schematic_File.zip)
+- [Schematic files](https://files.seeedstudio.com/wiki/Grove-Mouse_Encoder/res/Grove_Mouse_Encoder_v1.0_Schematic_File.zip)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Mouser_Encoder -->
 

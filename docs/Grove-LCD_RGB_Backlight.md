@@ -8,7 +8,7 @@ surveyurl: https://www.surveymonkey.com/r/LCD_Backlight
 sku: 104030001
 ---
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_LCD_RGB_Backlight/master/images/intro.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove_LCD_RGB_Backlight/images/intro.jpg)
 
 Done with tedious mono color backlight? This Grove enables you to set the color to whatever you like via
 the simple and concise Grove interface. It takes I2C as communication method with your microcontroller.
@@ -76,13 +76,13 @@ Here are some projects for your reference.
 
 |Edison Wi-Fi Address|WiFi Enabled Greenhouse|Grove Lucky Dumpling|
 |------------------------|-------------------|--------------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_LCD_RGB_Backlight/master/images/project1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_LCD_RGB_Backlight/master/images/project2.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_LCD_RGB_Backlight/master/images/project3.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_LCD_RGB_Backlight/images/project1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_LCD_RGB_Backlight/images/project2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_LCD_RGB_Backlight/images/project3.jpg)|
 |[Make it Now!](http://www.instructables.com/id/Show-the-Intel-Edison-WiFi-IP-Address-on-a-Grove-L/)|[Make it Now!](http://www.instructables.com/id/Arduino-Grove-Greenhouse/)|[Make it Now!](http://www.instructables.com/id/Grove-Lucky-Dumpling/)|
 
 
 |Toothbrushing Instructor|LinkIt ONE Pager|LinkIt ONE IoT Demo|
 |------------------------|-------------------|--------------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_LCD_RGB_Backlight/master/images/project4.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_LCD_RGB_Backlight/master/images/project5.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_LCD_RGB_Backlight/master/images/project6.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_LCD_RGB_Backlight/images/project4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_LCD_RGB_Backlight/images/project5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_LCD_RGB_Backlight/images/project6.jpg)|
 |[Make it Now!](http://www.instructables.com/id/Toothbrushing-Instructor/)|[Make it Now!](http://www.instructables.com/id/LinkIt-ONE-Pager/)|[Make it Now!](https://community.seeedstudio.com/project_detail.html?id=78)|
 
 
@@ -199,7 +199,7 @@ void loop()
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
-![cc](https://raw.githubusercontent.com/SeeedDocument/Grove_LCD_RGB_Backlight/master/img/cc_LCD_RGB_Backlight.png)
+![cc](https://files.seeedstudio.com/wiki/Grove_LCD_RGB_Backlight/img/cc_LCD_RGB_Backlight.png)
 
 Upload the program to your Arduino/Seeeduino.
 
@@ -414,7 +414,7 @@ delay(500);
 
 - **[Library]** [Software Library](https://github.com/Seeed-Studio/Grove_LCD_RGB_Backlight/archive/master.zip)
 - **[Document]** [Github page for this document](https://github.com/SeeedDocument/Grove_LCD_RGB_Backlight)
-- **[Codecraft]** [CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove_LCD_RGB_Backlight/master/res/Grove_LCD_RGB_Backlight_CDC_File.zip)
+- **[Codecraft]** [CDC File](https://files.seeedstudio.com/wiki/Grove_LCD_RGB_Backlight/res/Grove_LCD_RGB_Backlight_CDC_File.zip)
 - **[Datasheet]** [PCA9633](https://files.seeedstudio.com/wiki/Grove_LCD_RGB_Backlight/res/PCA9633.pdf)
 - **[Datasheet]** [JHD1313](https://files.seeedstudio.com/wiki/Grove_LCD_RGB_Backlight/res/JHD1313%20FP-RGB-1%201.4.pdf)
 

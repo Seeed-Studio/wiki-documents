@@ -11,7 +11,7 @@ sku: 110020169
 
 ## GROVE SYSTEM
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/groveSystem.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/groveSystem.png)
 
 Grove is a modular prototyping system consist of a base unit and various modules with standardized connector. The base unit is generally a microprocessor which allows for communicates, processes and controls the input or output from the Grove modules. Every single Grove module typically addresses a single function, range from a simple button to a more complex heart rate sensor. the standardised Grove connector allows user to assemble Grove units with building block approach, compared to the jumper or solder based system it is much easier to assemble or disassemble, which simplifies the learning system for  experimenting, building and prototyping.
 We also provide Grove to Pin Header Converter or Grove Base HAT available for variety developing platforms for those who wants to use grove sensor and actuator modules without Grove System Development Board.
@@ -20,7 +20,7 @@ Grove system users need to have at least some basic electronic knowledge backgro
 
 ## GROVE BASE KIT FOR RASPBERRY PI
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/kit.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/kit.jpg)
 
 
 Grove start kit contains one Grove Base Hat(for Raspberry Pi ) and 10 Grove modules. The detailed information is listed below.
@@ -31,7 +31,7 @@ Grove start kit contains one Grove Base Hat(for Raspberry Pi ) and 10 Grove modu
 
 **[Grove Base Hat for Raspberry Pi](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)**
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/BaseHat.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/BaseHat.jpg)
 
 
 Today, the grove series of sensors, actuators, and displays have grown into a large family. More and more grove modules will join the Grove ecosystem in the future. We see the Grove helps makers, engineers, teachers, students and even artists to build, to make, to create...We always feel it is our responsibility to make the Grove module compatible with more platforms. Now we bring you the Grove Base Hat for Raspberry Pi and Grove Base Hat for Raspberry Pi Zero, in another word, we bring the Raspberry Pi the Grove System.
@@ -50,7 +50,7 @@ The Grove Base Hat for Raspberry Pi provide Digital/Analog/I2C/PWM/UART port to 
 
 **Hardware Overview**
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/pi_pinout.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/pi_pinout.jpg)
 
 GPIO：The same pin out as the raspberry pi.
 
@@ -80,7 +80,7 @@ SWD： We use SWD port to burn the firmware to this hat. In addition, you can se
 
 **[Grove - Buzzer](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)**
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/buzzer.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/buzzer.jpg)
 
 This module uses piezo buzzer as the main component, it can produce high pitch tone while it is connected to digital output and logic level set to High, otherwise it can produce various tones according to the frequencies generated from the Analog PWM output that connected to it. (note: the frequency range that normal human ear can distinguish is between 20 Hz and 20kHz.)
 
@@ -89,58 +89,58 @@ This module uses piezo buzzer as the main component, it can produce high pitch t
 
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/LEDButton.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/LEDButton.jpg)
 
 The Grove - LED Button is composed of Grove - Yellow Button, Grove - Blue LED Button and Grove - Red LED Button. This button is stable and reliable with a 100 000 times long life. With the build-in LED, you can apply it to many interesting projects, it is really useful to use the LED to show the status of the button.
 
 **[Grove - Light Sensor](https://www.seeedstudio.com/Grove-Light-Sensor-v1-2-p-2727.html)**
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/lightsensor.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/lightsensor.jpg)
 
 The Grove - Light sensor integrates a photo-resistor(light dependent resistor) to detect the intensity of light. The resistance of photo-resistor decreases when the intensity of light increases. A dual OpAmp chip LM358 on board produces voltage corresponding to intensity of light(i.e. based on resistance value). The output signal is analog value, the brighter the light is, the larger the value.
 
 
 **[Grove - Moisture Sensor](https://www.seeedstudio.com/Grove-Moisture-Sensor-p-955.html)**
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/Moisture_sensor.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/Moisture_sensor.jpg)
 
 This Moisture Senor can be used for detecting the moisture of soil or judge if there is water around the sensor, let the plant in your garden able to reach out for human's help when they are thirsty. This sensor is very easy to use, you can just simply insert in into the soil and read the data. With this sensor, you can make a small project that can let the plant send a message to you like " I am thirsty now, please feed me some water."
 
 **[Grove - mini PIR motion sensor](https://www.seeedstudio.com/Grove-mini-PIR-motion-sensor-p-2930.html)**
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/miniPIR.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/miniPIR.jpg)
 
 Grove - mini PIR motion sensorallows you to sense motion, usually human movement in its range. Simply connect it to Grove - Base shield and program it, when anyone moves in its detecting range, the sensor will output HIGH on its SIG pin.
 
 **[Grove - Servo](https://www.seeedstudio.com/Grove-Servo-p-1241.html)**
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/Servo.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/Servo.jpg)
 
 Grove - Servo is DC motor with gearing and feedback system. It is used in driving mechanism of robots. The module is a bonus product for Grove lovers. We regulated the three-wire servo into a Grove standard connector. You can plug and play it as a typical Grove module now, without jumper wires clutter.
 
 **[Grove - Temperature & Humidity Sensor （DHT11）](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DHT1-p-745.html)**
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/DHT11.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/DHT11.jpg)
 
 This temperature & humidity sensor provides a pre-calibrated digital output. A unique capacitive sensor element measures relative humidity and the temperature is measured by a negative temperature coefficient (NTC) thermistor. It has excellent reliability and long term stability. Please note that this sensor will not work for temperatures below 0 degree.
 
 **[Grove - Relay](https://www.seeedstudio.com/Grove-Relay-p-769.html)**
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/Relay.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/Relay.jpg)
 
 The Grove-Relay module is a digital normally-open switch. Through it, you can control circuit of high voltage with low voltage, say 5V on the controller. There is an indicator LED on the board, which will light up when the controlled terminals get closed.
 
 **[Grove - Ultrasonic Ranger](https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html)**
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/Ultrasonic.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/Ultrasonic.jpg)
 
 This Grove - Ultrasonic ranger is a non-contact distance measurement module which works at 40KHz. When we provide a pulse trigger signal with more than 10uS through singal pin, the Grove_Ultrasonic_Ranger will issue 8 cycles of 40kHz cycle level and detect the echo. The pulse width of the echo signal is proportional to the measured distance. Here is the formula: Distance = echo signal high time * Sound speed (340M/S)/2. Grove_Ultrasonic_Ranger's trig and echo singal share 1 SIG pin.
 
 
 **[Grove - 16 x 2 LCD (White on Blue)](https://www.seeedstudio.com/Grove-16-x-2-LCD-White-on-Blu-p-3196.html)**
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/lcd.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/lcd.jpg)
 
 This Grove – 162 LCD module is a 16 Characters  2 Lines LCD display, it uses I2C bus interface to communicate with the development board, thus these will reduce the pin header from 10 to 2 which is very convenient for the Grove system. This LCD display module also supports customise characters, you can create and display heart symbol or stick-man on this LCD module through a simple coding configuration.
 
@@ -163,7 +163,7 @@ This Grove – 162 LCD module is a 16 Characters  2 Lines LCD display, it uses I
 
 Download [Raspbian Stretch](https://www.raspberrypi.org/downloads/raspbian/) from Raspberry Pi official website and select “with desktop and recommended software” version.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/ss0.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss0.png)
 
 **2. Win32 Disk Imager**
 
@@ -177,11 +177,11 @@ Download [Raspbian Stretch](https://www.raspberrypi.org/downloads/raspbian/) fro
 
 - Click 'Write' and wait for the write to complete.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/ss1.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss1.png)
 
 - Complete.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/ss2.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss2.png)
 
 - Exit the imager and eject the SD card.
 
@@ -214,24 +214,24 @@ priority=1
 
 **3.** Insert the SD Card with Raspbian into the Raspberry Pi
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/sd_card.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/sd_card.jpg)
 
 **4.** Connect the Raspberry Pi to the power source and power it up. 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/power.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/power.jpg)
 
 **5.** Open putty to connect PC to Raspberry Pi. 
 
 Download putty： [https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/ss3.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss3.png)
 
 
 **Raspberry Pi**
 Default username : pi
 Default password : raspberry
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/ss4.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss4.jpg)
 
 **VNC Configuration**
 
@@ -243,25 +243,25 @@ sudo raspi-config
 
 Arrow down to 5 interfacing Options and press "enter" to select.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/ss5.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss5.png)
 
 Arrow down to P3 VNC and press "enter" to select.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/ss6.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss6.png)
 
 Select "Yes" to enable it.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/ss7.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss7.png)
 
 Select "Ok".
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/ss8.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss8.png)
 
 **2. ** Install VNC Viewer
 
 Downloadr [VNC Viewe](https://www.realvnc.com/en/connect/download/viewer/)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/ss9.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss9.png)
 
 Open VNC Viewer and enter the IP address of Raspberry Pi. You can find the IP address by typing ++ifconfig++ command in the terminal of Raspberry Pi (or you can enter raspberrypi.local). 
 
@@ -272,11 +272,11 @@ Open VNC Viewer and enter the IP address of Raspberry Pi. You can find the IP ad
 Enter the default user name and password, and now you can enter the Raspberry Pi's remote desktop!
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/ss10.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss10.png)
 
 Success！
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/ss11.PNG)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss11.PNG)
 
 **Base Hat Configuration**
 
@@ -289,7 +289,7 @@ sudo shutdown -h now
 
 Plug the Grove Base Hat for Raspberry Pi into the Raspberry Pi.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/pi&hat.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/pi&hat.jpg)
 
 **2. **Power up the Raspberry Pi with micro-usb cable to enable I2C
 
@@ -301,23 +301,23 @@ sudo raspi-config
 
 Arrow down to 5 interfacing Options and press "enter" to select.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/ss5.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss5.png)
 
 Arrow down to P5 I2C and press "enter" to select.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/ss13.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss13.png)
 
 Select "Yes" to enable it.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/ss14.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss14.png)
 
 Select "Ok".
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/ss15.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss15.png)
 
 Select "Finish" to save the changes.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/ss16.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss16.png)
 
 **3.** One-click installation, quick start, what ever you call, with the single command below. 
 
@@ -325,7 +325,7 @@ Select "Finish" to save the changes.
 curl -sL https://github.com/Seeed-Studio/grove.py/raw/master/install.sh | sudo bash -s -
 ```
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/ss12.PNG)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss12.PNG)
 
 if everything goes well, you will see the following notice.
 
@@ -359,7 +359,7 @@ Step 2: Insert Base Hat into Raspberry Pi
 
 Step 3: Connect Raspberry Pi to the power source by a micro USB cable. 
 
-![](![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/LEDbutton.png)
+![](![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/LEDbutton.png)
 	
 **Upload Code**
 
@@ -454,7 +454,7 @@ To start on the Grove tutorial, you are required the fundamental knowledge of Ra
 
 ### Lesson 1: Buzzer
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/buzzer.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/buzzer.jpg)
 
 **Objective**	
 
@@ -483,7 +483,7 @@ Included in the kit
 
 **Step 2.** Connect Raspberry Pi to the power source by a micro USB cable. 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/buzzer&pi.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/buzzer&pi.jpg)
 
 **Software programming**	
 
@@ -538,7 +538,7 @@ If everything goes well, you should notice the buzzer is making “Do Re Mi Fa S
 
 ### Lesson 2: Red LED Button
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/LEDButton.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/LEDButton.jpg)
 
 
 **Objective**	
@@ -568,7 +568,7 @@ Included in the kit
 
 **Step 2.** Connect Raspberry Pi to the power source by a micro USB cable. 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/Buzzer&Button.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/Buzzer&Button.png)
 
 **Software programming**	
 
@@ -652,12 +652,12 @@ KeyboardInterrupt
 ^Cpi@raspberrypi:~/grove.py $ 
 ```
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/LED&Buz_demo.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/LED&Buz_demo.jpg)
 
 
 ### Lesson 3: Light Sensor
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/lightsensor.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/lightsensor.jpg)
 
 
 **Objective**	
@@ -687,7 +687,7 @@ Included in the kit
 
 **Step 3** Connect Raspberry Pi to the power source by a micro USB cable. 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/servo&light.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/servo&light.png)
 
 
 **Software programming**	
@@ -744,7 +744,7 @@ sudo ./lesson_3.py
 
 If everything goes well, the change of light intensity will result in different rotation angle of servo.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/light_on&off.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/light_on&off.jpg)
 
 
 
@@ -770,7 +770,7 @@ pi@raspberrypi:~/grove.py $
 
 ### Lesson 4: Motion Sensor & Relay
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/pir+relay.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/pir+relay.jpg)
 
 
 **Objective**	
@@ -802,7 +802,7 @@ Included in the kit
 **Step 3** Connect Raspberry Pi to the power source by a micro USB cable.
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/pir&relay.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/pir&relay.png)
 
 **Software programming**	
 
@@ -881,12 +881,12 @@ KeyboardInterrupt
 pi@raspberrypi:~/grove.py $ 
 ```
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/pir_light.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/pir_light.jpg)
 
 ### Lesson 5: Ultrasonic Sensor & Relay
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/ultra+relay.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ultra+relay.jpg)
 
 
 **Objective**	
@@ -918,7 +918,7 @@ Included in the kit
 
 **Step 3** Connect Raspberry Pi to the power source by a micro USB cable.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/ultra&relay.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ultra&relay.png)
 
 **Software programming**	
 
@@ -1003,14 +1003,14 @@ KeyboardInterrupt
 pi@raspberrypi:~/grove.py $ 
 ```
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/ultra_light.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ultra_light.jpg)
 
 Now, compare the result from lesson four and lesson five, are you able to list the advantages and disadvantages of Grove - mini PIR motion sensor and Grove Ultrasonic Ranger?
 
 
 ### Lesson 6:  LCD
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/lcd.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/lcd.jpg)
 
 
 **Objective**	
@@ -1040,7 +1040,7 @@ Included in the kit
 
 **Step 3** Connect Raspberry Pi to the power source by a micro USB cable. 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/LCD.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/LCD.png)
 
 **Software programming**	
 
@@ -1091,7 +1091,7 @@ sudo ./lesson_6.py
 You should see “hello, world!!!” displayed on the LCD screen.
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/helloworld.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/helloworld.jpg)
 
 
 If you want to use the Grove - 16*2 LCD screen to display some other charaters, you can simply change ++ lcd.write('hello, world!!!')++ in the code. 
@@ -1100,7 +1100,7 @@ If you want to use the Grove - 16*2 LCD screen to display some other charaters, 
 ### Lesson 7: LCD & Temperature and Humidity Sensor
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/lcd+dht11.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/lcd+dht11.jpg)
 
 
 **Objective**	
@@ -1131,7 +1131,7 @@ Included in the kit
 **Step 3** Connect Raspberry Pi to the power source by a micro USB cable. 
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/DHT11&LCD.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/DHT11&LCD.png)
 
 **Software programming**	
 
@@ -1205,12 +1205,12 @@ KeyboardInterrupt
 pi@raspberrypi:~/grove.py $
 ```
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/temp&humi_LCD.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/temp&humi_LCD.jpg)
 
 
 ### Lesson 8: LCD & Moisture Sensor & Buzzer
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/lcd+moisture+buzzer.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/lcd+moisture+buzzer.jpg)
 
 **Objective**	
 
@@ -1241,7 +1241,7 @@ Included in the kit
 
 **Step 3**  Use micro USB to connect Raspberry Pi with PC.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/lesson8.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/lesson8.png)
 
 **Software programming**	
 
@@ -1330,7 +1330,7 @@ KeyboardInterrupt
 pi@raspberrypi:~/grove.py $
 ```
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_RaspberryPi/master/img/lesson8.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/lesson8.png)
 
 ## TECH SUPPORT
 

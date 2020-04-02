@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/Grove-EL_Driver
 sku: 105020005
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-EL_Driver/master/img/Grove-EL_Driver.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-EL_Driver/img/Grove-EL_Driver.jpg)
 
 Grove - EL Driver is designed for driving EL Wires. It integrates a very small inverter to drive the EL Wire, so you can easily light up the EL Wire with just one single Grove cable.
 
@@ -80,7 +80,7 @@ void loop() {
 }
 ```
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-EL_Driver/master/img/Grove-EL_Driver_usage.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-EL_Driver/img/Grove-EL_Driver_usage.jpg)
 
 
 ### Play with Codecraft
@@ -112,14 +112,14 @@ Upload the program to your Arduino/Seeeduino.
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-EL_Driver/master/res/Grove-EL_Driver_v1.0.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-EL_Driver/res/Grove-EL_Driver_v1.0.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 Resources
 ---------
 
--   [sch_pcb_eagle](https://raw.githubusercontent.com/SeeedDocument/Grove-EL_Driver/master/res/Grove-EL_Driver_v1.0.zip)
--   [sch_pdf](https://raw.githubusercontent.com/SeeedDocument/Grove-EL_Driver/master/res/Grove-EL_Driver_v1.0.pdf)
+-   [sch_pcb_eagle](https://files.seeedstudio.com/wiki/Grove-EL_Driver/res/Grove-EL_Driver_v1.0.zip)
+-   [sch_pdf](https://files.seeedstudio.com/wiki/Grove-EL_Driver/res/Grove-EL_Driver_v1.0.pdf)
 -   [CodeCraft Library](https://files.seeedstudio.com/wiki/Grove-EL_Driver/res/EL%20Driver.zip)
 
 

@@ -13,7 +13,7 @@ sku:
 
 We have been cooking electronics kits for quite a while now and Grove Creator Kit is one of the very important kits that we have made so far. That is because we wanted to help developing countries by designing a kit that is very cost effective, fits the market needs and thereby allowing everyone with a passionate mind about electronics to get access to open-source electronics.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Bazaar_Document/master/Grove-Creator-Kit.jpg)
+![](https://files.seeedstudio.com/wiki/Bazaar_Document/Grove-Creator-Kit.jpg)
 
 
 The Grove - Creator Kit is one of the best kits for creators of any age, whether you are complete beginners or have prior experience in electronics. This kit will help you get rid of traditional soldering and complicated wiring and thereby opening doors into the Grove ecosystem. Learn more about Grove <a href="https://www.seeedstudio.com/grove.html">here!</a>.

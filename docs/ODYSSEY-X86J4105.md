@@ -49,7 +49,7 @@ The ODYSSEY - X86J4105, is based on Intel Celeron J4105, a Quad-Core 1.5GHz CPU 
 
 ## Hardware Overview
 
-![](https://raw.githubusercontent.com/SeeedDocument/ODYSSEY-X86J4105864/master/img/X86-Hardware-Overview-New.jpg)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/X86-Hardware-Overview-New.jpg)
 
 ## Pinout Diagram
 

@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/Hercules_Dual_15A_6-20V_Motor_Controller
 sku: 105010000
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Hercules_Dual_15A_6-20V_Motor_Controller/master/img/Hercules_03.jpg)
+![](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/img/Hercules_03.jpg)
 
 Hercules Dual 15A 6-20V Motor Controller is a high current motor drive control board. including micro controller processor, motor drive circuit, charging circuit and protection circuit. It features a complete solution to power supply, control and drive.
 
@@ -41,7 +41,7 @@ Specifications
 Hardware Overview
 -----------------
 
-![](https://raw.githubusercontent.com/SeeedDocument/Hercules_Dual_15A_6-20V_Motor_Controller/master/img/4WD_Robot_Controller_Interface_Function.jpg)
+![](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/img/4WD_Robot_Controller_Interface_Function.jpg)
 
 **A:** Encoder Connectors.
 
@@ -100,9 +100,9 @@ The controller must be powered from the Power screw J1, by batteries or a DC sup
 -   Connect a DC Motor to Channel 1 Screw Terminals.
 -   Connect the controller to your computer with UartSBee V4 and a USB cable.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Hercules_Dual_15A_6-20V_Motor_Controller/master/img/IMG_0204-1-.JPG)
+![](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/img/IMG_0204-1-.JPG)
 
--   Load the [Motor Controller Library](https://raw.githubusercontent.com/SeeedDocument/Hercules_Dual_15A_6-20V_Motor_Controller/master/res/Motor_Controller_Library.zip) and run the "motorDriverDemo" program.
+-   Load the [Motor Controller Library](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/res/Motor_Controller_Library.zip) and run the "motorDriverDemo" program.
 
 ```
     #include "motordriver_4wd.h"
@@ -182,12 +182,12 @@ You can connect to PC using USB cable to replace Battery.
 </div>
 
 -   Plug RFBee into Bee Socket of Grove - XBee Carrier.
--   Download the [RFBee Library](https://raw.githubusercontent.com/SeeedDocument/Hercules_Dual_15A_6-20V_Motor_Controller/master/res/RFBee_Library.zip) and Unzip it into the libraries file of Arduino IDE by the path: ..\arduino-1.0.1\libraries.
--   Download and Upload the demo: [Remote lvc](https://raw.githubusercontent.com/SeeedDocument/Hercules_Dual_15A_6-20V_Motor_Controller/master/res/Remote_lvc.zip) to one RFbee. Before uploading, you need to select Tools->Board->Arduino Pro or Pro Mini (3.3V, 8MHz) w/ ATmega168 and choose the correct serial port from the Tools menu.
+-   Download the [RFBee Library](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/res/RFBee_Library.zip) and Unzip it into the libraries file of Arduino IDE by the path: ..\arduino-1.0.1\libraries.
+-   Download and Upload the demo: [Remote lvc](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/res/Remote_lvc.zip) to one RFbee. Before uploading, you need to select Tools->Board->Arduino Pro or Pro Mini (3.3V, 8MHz) w/ ATmega168 and choose the correct serial port from the Tools menu.
 -   Connect Grove - Thumb Joystick to IIC Grove Connector of Grove - XBee Carrier.
 -   Connect battery into Battery Connector of Grove - XBee Carrier.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Hercules_Dual_15A_6-20V_Motor_Controller/master/img/Remote_Control.jpg)
+![](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/img/Remote_Control.jpg)
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -213,7 +213,7 @@ The 15A 6-20V Motor Controller: Drive Motor to rotate.
 -   Connect four motor to Motor1A/Motor1B(Motor2A/Motor2B).
 
 We use the **4WD hercules mobile robotic platform** for the motor controller as shown below:
-![](https://raw.githubusercontent.com/SeeedDocument/Hercules_Dual_15A_6-20V_Motor_Controller/master/img/4WD_Robot_Car_Body.jpg)
+![](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/img/4WD_Robot_Car_Body.jpg)
 
 -   Upload The code to another RFBee module.
 ```
@@ -274,27 +274,27 @@ We use the **4WD hercules mobile robotic platform** for the motor controller as 
     }
 ```
 
--   The Library [Motodriver 4wd.zip](https://raw.githubusercontent.com/SeeedDocument/Hercules_Dual_15A_6-20V_Motor_Controller/master/res/Motodriver_4wd.zip) for Motor Controller. Before uploading, you need to select Tools->Board->Arduino Duemilanove w/ ATmega328.
+-   The Library [Motodriver 4wd.zip](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/res/Motodriver_4wd.zip) for Motor Controller. Before uploading, you need to select Tools->Board->Arduino Duemilanove w/ ATmega328.
 
 ### Result
 
 The Remote Control Car based on the Hercules Dual 15A 6-20V Motor Controller and 4WD hercules mobile robotic platform can load a container of water whose capacity is 19L.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Hercules_Dual_15A_6-20V_Motor_Controller/master/img/4WD_Robot.jpg)
+![](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/img/4WD_Robot.jpg)
 
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Hercules_Dual_15A_6-20V_Motor_Controller/master/res/Source_file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/res/Source_file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 Resources
 ---------
 
-- [4WD Robot Controller Eagle File](https://raw.githubusercontent.com/SeeedDocument/Hercules_Dual_15A_6-20V_Motor_Controller/master/res/Source_file.zip)
-- [4WD Robot Controller Schematic.pdf](https://raw.githubusercontent.com/SeeedDocument/Hercules_Dual_15A_6-20V_Motor_Controller/master/res/4WD_Robot_Controller_Schematic.pdf)
-- [Motor Controller Library](https://raw.githubusercontent.com/SeeedDocument/Hercules_Dual_15A_6-20V_Motor_Controller/master/res/Motor_Controller_Library.zip)
+- [4WD Robot Controller Eagle File](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/res/Source_file.zip)
+- [4WD Robot Controller Schematic.pdf](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/res/4WD_Robot_Controller_Schematic.pdf)
+- [Motor Controller Library](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/res/Motor_Controller_Library.zip)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller -->
 

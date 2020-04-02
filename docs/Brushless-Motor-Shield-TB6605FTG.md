@@ -48,7 +48,7 @@ We also released the [TB6605 BLDC Motor Kit for Arduino](https://www.seeedstudio
 
 <div align="center">
 <figure>
-  <a href="https://raw.githubusercontent.com/SeeedDocument/BLDC-Motor-Shield-TB6605/master/img/pinout.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/BLDC-Motor-Shield-TB6605/img/pinout.jpg" alt="TB6605FTG Brushless Motor Shield pinout" title="Pinout diagram" />
+  <a href="https://files.seeedstudio.com/wiki/BLDC-Motor-Shield-TB6605/img/pinout.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/BLDC-Motor-Shield-TB6605/img/pinout.jpg" alt="TB6605FTG Brushless Motor Shield pinout" title="Pinout diagram" />
   <figcaption><b>Figure 1</b>. <i>Pinout diagram</i></figcaption></a>
 </figure>
 </div>
@@ -103,7 +103,7 @@ Or you can just use our [TB6605FTG Brushless Motor Kit for Arduino](https://www.
 
 <div align="center">
 <figure>
-  <a href="https://raw.githubusercontent.com/SeeedDocument/BLDC-Motor-Shield-TB6605/master/img/connect.png" target="_blank"><img src="https://files.seeedstudio.com/wiki/BLDC-Motor-Shield-TB6605/img/connect.png" alt="brushless dc motor wiring" title="Pinout diagram" />
+  <a href="https://files.seeedstudio.com/wiki/BLDC-Motor-Shield-TB6605/img/connect.png" target="_blank"><img src="https://files.seeedstudio.com/wiki/BLDC-Motor-Shield-TB6605/img/connect.png" alt="brushless dc motor wiring" title="Pinout diagram" />
   <figcaption><b>Figure 2</b>. <i>Hardware connection</i></figcaption></a>
 </figure>
 </div>

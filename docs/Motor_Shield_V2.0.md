@@ -9,7 +9,7 @@ sku: 105030001
 tags: io_5v, plat_duino
 ---
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Motor_Shield_V2.0/master/image/500px-Motorshield_01.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/image/500px-Motorshield_01.jpg)
 
 !!!Note
     This document works for Motor Shield V2.0/2.1/2.2.
@@ -56,7 +56,7 @@ Version
 ## Hardware Overview
 -------------------
 
-![](https://raw.githubusercontent.com/SeeedDocument/Motor_Shield_V2.0/master/image/700px-MotorShieldHardware.png)
+![](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/image/700px-MotorShieldHardware.png)
 
 **1**.Channel 1 indicator, include 3 leds
 
@@ -141,7 +141,7 @@ Here we will show you how this Motor Shield works via a simple demo. First of al
 
 | Seeeduino V4 | DC Motor | Motor Shield |
 |--------------|-------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/image/130%20DC%20Motor_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/image/motor%20shield_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/image/130%20DC%20Motor_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/image/motor%20shield_s.jpg)|
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/130-DC-Motor-p-2023.html)|[Get ONE Now](https://www.seeedstudio.com/Motor-Shield-V2.0-p-1377.html)|
 
 - Set **SEN_A** and **SEN_B**, connect the left 2 pins together with a jumper.
@@ -157,7 +157,7 @@ Here we will show you how this Motor Shield works via a simple demo. First of al
 - Click below button to download the motor shield library.
 - Please follow [how to install an arduino library](http://wiki.seeed.cc/How_to_install_Arduino_Library/) procedures to install the library.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Motor_Shield_V2.0/master/image/400px-Motor_shield_v2_library.png)](https://github.com/Seeed-Studio/SeeedMotorShieldV2/archive/master.zip)
+[![](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/image/400px-Motor_shield_v2_library.png)](https://github.com/Seeed-Studio/SeeedMotorShieldV2/archive/master.zip)
 
 - Upload the code to Seeeduino V4.
 
@@ -205,7 +205,7 @@ Here we will show you how this Motor Shield works via a simple demo.  First of a
 
 | Seeeduino V4 | Stepper Motor | Motor Shield |
 |--------------|-------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/image/Motor%2024BYJ48_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/image/motor%20shield_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/image/Motor%2024BYJ48_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/image/motor%20shield_s.jpg)|
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Small-Size-and-High-Torque-Stepper-Motor-24BYJ48-p-1922.html)|[Get ONE Now](https://www.seeedstudio.com/Motor-Shield-V2.0-p-1377.html)|
 
 

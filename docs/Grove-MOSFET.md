@@ -10,7 +10,7 @@ sku: 103020008
 tags: grove_digital, io_3v3, io_5v, plat_duino, plat_linkit, plat_pi, plat_bbg
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-MOSFET/master/img/Mosfet_01.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-MOSFET/img/Mosfet_01.jpg)
 
 Grove – MOSFET enables you to control higher voltage project, say 15V DC, with low voltage, say 5V, on microcontroller. MOSFET is also a kind of switch, but its switching frequency can reach up to 5MHz, much faster than normal mechanical relay. There are two screw terminals on the board. One for outer power source and the other for device you want to control. Grove – MOSFET will pass the power from one end to another when closed. But if outer power source is absent, your device can still draw power from microcontroller via the Grove interface.
 
@@ -60,14 +60,14 @@ Here we demonstrate how to use Grove - MOSFET to control a motor. We provide pow
 
 | Seeeduino V4.2 | Base Shield|  Grove - MOSFET |
 |--------------|-------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-MOSFET/master/img/Mosfet_small.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-MOSFET/img/Mosfet_small.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/Grove-MOSFET-p-1594.html)|
 
 - **Step 2.** Connect Grove - MOSFET to port D6 of Grove-Base Shield.
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-MOSFET/master/img/2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-MOSFET/img/2.jpg)
 
 !!!Note
 	If we don't have Grove Base Shield, We also can directly connect Grove_MOSFET to Seeeduino as below.
@@ -79,7 +79,7 @@ Here we demonstrate how to use Grove - MOSFET to control a motor. We provide pow
 | Not Conencted | White                   |
 | D6            | Yellow                  |
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-MOSFET/master/img/MOSFET_Interface_Function.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-MOSFET/img/MOSFET_Interface_Function.jpg)
 
 Vin: Accepts 5V ~ 15V power of which current is less than 2A.
 
@@ -138,7 +138,7 @@ void motorAcceleration()
 
 - **Step 2.** Observe the state of the motor
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-MOSFET/master/img/Static_image.gif)
+![](https://files.seeedstudio.com/wiki/Grove-MOSFET/img/Static_image.gif)
 
 
 ### Play With Raspberry Pi
@@ -149,14 +149,14 @@ void motorAcceleration()
 
 | Raspberry pi | GrovePi_Plus | Grove - MOSFET |
 |--------------|-------------|-----------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-MOSFET/master/img/Mosfet_small.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-MOSFET/img/Mosfet_small.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/Grove-MOSFET-p-1594.html)|
 
 - **Step 2.** Plug the GrovePi_Plus into Raspberry.
 - **Step 3.** Connect Grove-MOSFET ranger to **D6** port of GrovePi_Plus.
 - **Step 4.** Connect the Raspberry to PC through USB cable.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-MOSFET/master/img/1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-MOSFET/img/1.jpg)
 
 #### Software
 
@@ -216,18 +216,18 @@ sudo python grove_mosfet.py
 
 - **Step 4.** We will see the output display on terminal as below.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-MOSFET/master/img/pi_result.png)|
+![enter image description here](https://files.seeedstudio.com/wiki/Grove-MOSFET/img/pi_result.png)|
 
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-MOSFET/master/res/Grove-MOSFET_Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-MOSFET/res/Grove-MOSFET_Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ## Resources
 
-- **[Eagle]** [Grove - MOSFET Schematic file](https://raw.githubusercontent.com/SeeedDocument/Grove-MOSFET/master/res/Grove-MOSFET_Eagle_File.zip)
+- **[Eagle]** [Grove - MOSFET Schematic file](https://files.seeedstudio.com/wiki/Grove-MOSFET/res/Grove-MOSFET_Eagle_File.zip)
 - **[PDF]** [Grove - MOSFET Schematic PDF](https://files.seeedstudio.com/wiki/Grove-MOSFET/res/Grove%20-%20MOSFET%20.pdf)
-- **[Datasheet]** [CJQ4435 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-MOSFET/master/res/CJQ4435.pdf)
+- **[Datasheet]** [CJQ4435 Datasheet](https://files.seeedstudio.com/wiki/Grove-MOSFET/res/CJQ4435.pdf)
 - **[WIKI]** [MOSFET Wikipedia](https://en.wikipedia.org/wiki/MOSFET)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_MOSFET -->

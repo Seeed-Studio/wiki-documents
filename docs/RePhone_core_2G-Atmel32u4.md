@@ -8,7 +8,7 @@ surveyurl: https://www.research.net/r/S7PZCZH
 sku: 102040006
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/RePhone_core_2G-Atmel32u4/master/img/cover.jpg)
+![](https://files.seeedstudio.com/wiki/RePhone_core_2G-Atmel32u4/img/cover.jpg)
 
 RePhone is one of the most unique and interesting development board platform that created by Seeed Studio, with RePhone you can not only DIY a special phone for yourself, but also enchant things around you with cellular connectivity. The first edition of RePhone core is Xadow – GSM+BLE, this time we provided another 2 edition of RePhone core which with higher performance and lower power consumption, one of them is the RePhone core 2G Atmel32u4 v1.0.
 
@@ -63,7 +63,7 @@ We also provide an even more powerful version of new RePhone core 2G because its
 
 ## Hardware Overview
 
-![](https://raw.githubusercontent.com/SeeedDocument/RePhone_core_2G-Atmel32u4/master/img/hw.png)
+![](https://files.seeedstudio.com/wiki/RePhone_core_2G-Atmel32u4/img/hw.png)
 
 * **1- **11pin Xadow Connector
 * **2- **User Button(D3)
@@ -84,10 +84,10 @@ We also provide an even more powerful version of new RePhone core 2G because its
 
 ##Pin map
 
-[![](https://raw.githubusercontent.com/SeeedDocument/RePhone_core_2G-Atmel32u4/master/img/pinmap.png)](https://raw.githubusercontent.com/SeeedDocument/RePhone_core_2G-Atmel32u4/master/img/pinmap.png)
+[![](https://files.seeedstudio.com/wiki/RePhone_core_2G-Atmel32u4/img/pinmap.png)](https://files.seeedstudio.com/wiki/RePhone_core_2G-Atmel32u4/img/pinmap.png)
 
 !!!Tip
-    [Click](https://raw.githubusercontent.com/SeeedDocument/RePhone_core_2G-Atmel32u4/master/img/pinmap.png) to view larger image.
+    [Click](https://files.seeedstudio.com/wiki/RePhone_core_2G-Atmel32u4/img/pinmap.png) to view larger image.
 
 !!!Note
     * INT1 connect to D7
@@ -101,11 +101,11 @@ After you download and install the [latest Arduino IDE](https://www.arduino.cc/e
 
 When the first time to insert the board, you should get a USB COM device name RePhone 2G SAMD21 that need to install a driver. Click on the below button to download driver for the board.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/RePhone_core_2G-Atmel32u4/master/img/driver.png)](https://files.seeedstudio.com/wiki/RePhone_core_2G-Atmel32u4/res/driver.zip)
+[![](https://files.seeedstudio.com/wiki/RePhone_core_2G-Atmel32u4/img/driver.png)](https://files.seeedstudio.com/wiki/RePhone_core_2G-Atmel32u4/res/driver.zip)
 
 To make sure the driver was installed successful, open your Device Manager to see if **RePhone 2G 32U4** exists.
 
-![](https://raw.githubusercontent.com/SeeedDocument/RePhone_core_2G-Atmel32u4/master/img/device_manager.png)
+![](https://files.seeedstudio.com/wiki/RePhone_core_2G-Atmel32u4/img/device_manager.png)
 
 ###Hello World
 Now we can upload our first demo - Hello World to the board.
@@ -136,19 +136,19 @@ If you can not find the RePhone core 2G-Atmel32u4, please check [How to Add Seee
 
 * Click on **Tools > Port** to select a right port number. (*Don't choose COM1*)
 
-![](https://raw.githubusercontent.com/SeeedDocument/RePhone_core_2G-Atmel32u4/master/img/arduino_ide.png)
+![](https://files.seeedstudio.com/wiki/RePhone_core_2G-Atmel32u4/img/arduino_ide.png)
 
 Then click on the **Upload** button on the left-top of Arduino IDE, seconds later the sketch was uploaded successful.
 
-![](https://raw.githubusercontent.com/SeeedDocument/RePhone_core_2G-Atmel32u4/master/img/upload.png)
+![](https://files.seeedstudio.com/wiki/RePhone_core_2G-Atmel32u4/img/upload.png)
 
 If the uploading is success, you should the some info in red.
 
-![](https://raw.githubusercontent.com/SeeedDocument/RePhone_core_2G-Atmel32u4/master/img/upload_done.png)
+![](https://files.seeedstudio.com/wiki/RePhone_core_2G-Atmel32u4/img/upload_done.png)
 
 Open Serial Monitor of your Arduino IDE and you will get "Hello World" printed per seconds.
 
-![](https://raw.githubusercontent.com/SeeedDocument/RePhone_core_2G-Atmel32u4/master/img/hello_world.png)
+![](https://files.seeedstudio.com/wiki/RePhone_core_2G-Atmel32u4/img/hello_world.png)
 
 
 ##AT Command Mode
@@ -185,14 +185,14 @@ void loop()
 Open your Serial monitor and wait for ***GSM init ok.*** printed on the monitor, then you can input a command.
 Try to input an "AT" to get an "OK".
 
-![](https://raw.githubusercontent.com/SeeedDocument/RePhone_core_2G-Atmel32u4/master/img/cmd.png)
+![](https://files.seeedstudio.com/wiki/RePhone_core_2G-Atmel32u4/img/cmd.png)
 
 !!!Tip
     All command must be end with a new line(\r\n).
 
 Click on below button to get detailed AT command documentation.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/RePhone_core_2G-Atmel32u4/master/img/at_cmd.png)](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_GPRS/master/res/SIM800_Series_AT_Command_Manual_V1.01%20(2).pdf)
+[![](https://files.seeedstudio.com/wiki/RePhone_core_2G-Atmel32u4/img/at_cmd.png)](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/res/SIM800_Series_AT_Command_Manual_V1.01%20(2).pdf)
 
 
 ##Examples
@@ -240,12 +240,12 @@ There are several chainable add-on modules to extend the features and functional
 
 |GPS v2|Basic Sensors|NFC v2|
 |----------------|--------------|-------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/product1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/product2.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/product3.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Rephone/image/product1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Rephone/image/product2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Rephone/image/product3.jpg)|
 |[Get More Details](http://www.seeedstudio.com/Xadow-GPS-v2-p-2557.html)|[Get More Details](http://www.seeedstudio.com/Xadow-Basic-Sensors-p-2555.html)|[Get More Details](http://www.seeedstudio.com/Xadow-NFC-v2-p-2562.html)|
 
 |LED 5 x 7|Audio|Xadow GSM Breakout|
 |----------------|--------------|-------------|
-|![](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/product4.jpg)|![](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/product7.jpg)|![](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/product8.jpg)|
+|![](https://files.seeedstudio.com/wiki/Rephone/image/product4.jpg)|![](https://files.seeedstudio.com/wiki/Rephone/image/product7.jpg)|![](https://files.seeedstudio.com/wiki/Rephone/image/product8.jpg)|
 |[Get More Details](http://www.seeedstudio.com/Xadow-LED-5-x-7-p-2561.html)|[Get More Details](http://www.seeedstudio.com/Xadow-Audio-p-2554.html)|[Get More Details](http://www.seeedstudio.com/Xadow-GSM-Breakout-p-2559.html)|
 
 

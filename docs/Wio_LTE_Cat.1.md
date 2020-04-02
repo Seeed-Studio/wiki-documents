@@ -853,7 +853,7 @@ function GeoLoc() {
 wiolteStart();
 ```
 
-![](https://raw.githubusercontent.com/SeeedDocument/Wio_LTE/master/img/espruino_GPS.png)
+![](https://files.seeedstudio.com/wiki/Wio_LTE/img/espruino_GPS.png)
 
 **6.5.5 Play with Get Html Page**
 

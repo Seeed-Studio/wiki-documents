@@ -10,37 +10,47 @@ def main():
         if doc_md[-3:] == ".md":
             doc = open("docs/" + doc_md, "rt")
             for line in doc:
-                # if line.find("https://github.com/SeeedDocument") != -1 :
-                #     url = line[line.find("https://github.com/SeeedDocument")+33:]
-                #     if url[:url.find("/master/")][-3:] == "raw" :
-                #         name = url[:url.find("/master/") - 4]
-                #         ddd = "https://github.com/SeeedDocument/" +name + "/raw/master"
-                #     else:
-                #         name  = url[:url.find("/master/") - 5]
-                #         ddd = "https://github.com/SeeedDocument/" + name + "/blob/master"
-                #     print(line)
-                #     new_line = line.replace(ddd,"https://files.seeedstudio.com/wiki/"+name)
-                #     print(new_line)
-                #     line = new_line
-                #     # if len(new_line[a:b]) > 1:
-                #     #     print(new_line[a:b])
-                #     #     try:
-                #     #         response = requests.get(new_line[a:b])
-                #     #     except requests.RequestException as e:
-                #     #         print("Couldn't communicate with the server. If it's running, take a look at its output.")
-                #     #         fin.append(line)
-                #     #         response.close()
-                #     #         continue
+                if line.find("https://github.com/SeeedDocument") != -1 :
+                    url = line[line.find("https://github.com/SeeedDocument")+33:]
+                    if url[:url.find("/master/")][-3:] == "raw" :
+                        name = url[:url.find("/master/") - 4]
+                        ddd = "https://github.com/SeeedDocument/" +name + "/raw/master"
+                    else:
+                        name  = url[:url.find("/master/") - 5]
+                        ddd = "https://github.com/SeeedDocument/" + name + "/blob/master"
+                    print(line)
+                    new_line = line.replace(ddd,"https://files.seeedstudio.com/wiki/"+name)
+                    print(new_line)
+                    line = new_line
+                    # if len(new_line[a:b]) > 1:
+                    #     print(new_line[a:b])
+                    #     try:
+                    #         response = requests.get(new_line[a:b])
+                    #     except requests.RequestException as e:
+                    #         print("Couldn't communicate with the server. If it's running, take a look at its output.")
+                    #         fin.append(line)
+                    #         response.close()
+                    #         continue
 
-                #     #     if response.status_code == 404:
-                #     #         print("url is lost!!")
+                    #     if response.status_code == 404:
+                    #         print("url is lost!!")
 
-                #     #     else:
-                #     #         # print "url is reachable!"
-                #     #         print("status code: " + str(response.status_code))
-                #     #         print("GET request succeeded!")
-                #     #         response.close()
-                #     #         line = new_line
+                    #     else:
+                    #         # print "url is reachable!"
+                    #         print("status code: " + str(response.status_code))
+                    #         print("GET request succeeded!")
+                    #         response.close()
+                    #         line = new_line
+                if line.find("https://raw.githubusercontent.com/SeeedDocument") != -1:
+                    url = line[line.find("https://raw.githubusercontent.com/SeeedDocument")+48:]
+                    name = url[:url.find("/master")]
+
+                    #print(line)
+                    print("https://raw.githubusercontent.com/SeeedDocument/" + name + "/master")
+                    print("https://files.seeedstudio.com/wiki/" + name)
+                    new_line = line.replace("https://raw.githubusercontent.com/SeeedDocument/" + name + "/master","https://files.seeedstudio.com/wiki/" + name)
+                    line = new_line
+
                 if line.find("https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)\"") != -1:
                     new_line = line.replace(
                         "https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)\"", \

@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/Motor_Bridge_Cape_v1_0
 sku: 105030006
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Motor_Bridge_Cape_v1.0/master/img/Motor_bridge_driver.jpg)
+![](https://files.seeedstudio.com/wiki/Motor_Bridge_Cape_v1.0/img/Motor_bridge_driver.jpg)
 
 The Motor Bridge Cape features bi-directional motor control using two TB6612FNG integrated dual H-bridge, so it can control two stepper motors or four brushed DC motors with 6 ~15V DC  ower and about 1A current draw per motor. The cape provides 5V regulated power to BBG or BBB with a max input voltage of 15V. It also has six servo control interfaces and six expand I\O.  All the features are provided by the on board STM32F0 coprocessor. The MCU can communicate with BeagleBone by I<sup>2</sup>C or UART interface. 
 
@@ -41,7 +41,7 @@ Specifications
 Hardware Overview
 -----------------
 
-![](https://raw.githubusercontent.com/SeeedDocument/Motor_Bridge_Cape_v1.0/master/img/Motor_Bridge_Hardware_overview.jpg)
+![](https://files.seeedstudio.com/wiki/Motor_Bridge_Cape_v1.0/img/Motor_Bridge_Hardware_overview.jpg)
 
 -   **3A one time Fuse**: Over-current protection
 -   **Reset Button**: Reset the coprocessor
@@ -85,7 +85,7 @@ sudo pip install Adafruit-GPIO
 
 The Stepper Motor Interface of Motor Bridge Cape just as the picture below shows.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Motor_Bridge_Cape_v1.0/master/img/StepperMotor.jpg)
+![](https://files.seeedstudio.com/wiki/Motor_Bridge_Cape_v1.0/img/StepperMotor.jpg)
 
 #### The functions of Stepper Motor
 
@@ -150,7 +150,7 @@ if __name__=="__main__":
 
 The DC Motor Interface of Motor Bridge Cape just as the picture below shows.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Motor_Bridge_Cape_v1.0/master/img/DCMotorBBG.jpg)
+![](https://files.seeedstudio.com/wiki/Motor_Bridge_Cape_v1.0/img/DCMotorBBG.jpg)
 
 #### The functions of DC Motor
 
@@ -216,7 +216,7 @@ if __name__=="__main__":
 
 The Servo Interface of Motor Bridge Cape just as the picture below shows.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Motor_Bridge_Cape_v1.0/master/img/ServoBBG.jpg)
+![](https://files.seeedstudio.com/wiki/Motor_Bridge_Cape_v1.0/img/ServoBBG.jpg)
 
 #### The functions of Servo
 
@@ -271,7 +271,7 @@ If there is something wrong with your cape, try to upgrade it. This section show
 
 2.Let your BBG connect to the internet, and access it via SSH as the picture below shows.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Motor_Bridge_Cape_v1.0/master/img/BBG1.PNG)
+![](https://files.seeedstudio.com/wiki/Motor_Bridge_Cape_v1.0/img/BBG1.PNG)
 
 3.Download the code from Github by execute following commands
 
@@ -279,7 +279,7 @@ If there is something wrong with your cape, try to upgrade it. This section show
 git clone https://github.com/Seeed-Studio/MotorBridgeCapeFirmware
 ```
 
-![](https://raw.githubusercontent.com/SeeedDocument/Motor_Bridge_Cape_v1.0/master/img/BBG2.PNG)
+![](https://files.seeedstudio.com/wiki/Motor_Bridge_Cape_v1.0/img/BBG2.PNG)
 
 4.Navigate to "MotorBridgeCapeFirmware" and execute "make flash" command to flash the firmware.
 
@@ -295,7 +295,7 @@ After a few seconds, you can see "Verification OK" information from the terminal
 i2cdetect -y -r 1
 ```
 
-![](https://raw.githubusercontent.com/SeeedDocument/Motor_Bridge_Cape_v1.0/master/img/BBG3.PNG)
+![](https://files.seeedstudio.com/wiki/Motor_Bridge_Cape_v1.0/img/BBG3.PNG)
 
 If you find the I2C address 0x4b,it means you have already refreshed the firmware successfully.
 
@@ -352,9 +352,9 @@ We have this part available in [geppetto](https://geppetto.seeedstudio.com/), ea
 Resources
 ---------
 
--   [Schematic in PDF](https://raw.githubusercontent.com/SeeedDocument/Motor_Bridge_Cape_v1.0/master/res/Motor_Bridge_Cape_v1.0_sch.pdf)
--   [PCB in Eagle File](https://raw.githubusercontent.com/SeeedDocument/Motor_Bridge_Cape_v1.0/master/res/Motor_Bridge_Cape_v1.0brd.rar)
--   [Schematic in Eagle File](https://raw.githubusercontent.com/SeeedDocument/Motor_Bridge_Cape_v1.0/master/res/Motor_Bridge_Cape_v1.0sch.rar)
+-   [Schematic in PDF](https://files.seeedstudio.com/wiki/Motor_Bridge_Cape_v1.0/res/Motor_Bridge_Cape_v1.0_sch.pdf)
+-   [PCB in Eagle File](https://files.seeedstudio.com/wiki/Motor_Bridge_Cape_v1.0/res/Motor_Bridge_Cape_v1.0brd.rar)
+-   [Schematic in Eagle File](https://files.seeedstudio.com/wiki/Motor_Bridge_Cape_v1.0/res/Motor_Bridge_Cape_v1.0sch.rar)
 -   [Motor Bridge Cape Library](https://github.com/Seeed-Studio/MotorBridgeCapeforBBG_BBB)
 -   [Motor Bridge Cape Firmware Source Code](https://github.com/Lee-Kevin/MotorBridgeCapeFirmwareSourceCode)
 

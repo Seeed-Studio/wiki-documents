@@ -7,7 +7,7 @@ prodimagename: cover.png
 surveyurl: https://www.surveymonkey.com/r/Grove_Recorder_V3
 sku: 
 ---
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Recorder_V3/master/img/cover.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove_Recorder_V3/img/cover.jpg)
 
 This is the latest version of Grove-recorder, and also the best version. Comparing the previous one, there are some updates that we would like to mention.
 
@@ -56,7 +56,7 @@ Secondly, if you have ever used previous version, you would know that if you wan
 
 ##Hardware Overview
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Recorder_V3/master/img/hw.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove_Recorder_V3/img/hw.png)
 
 1.Speaker Connector - JST2.0
 
@@ -87,14 +87,14 @@ Here we will show you how this Grove - Recorder V3.0 works via a simple demo. Fi
 
 | Seeeduino V4 | Grove - Recorder | Base Shield |
 |--------------|----------------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Recorder_V3/master/img/stuff.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Recorder_V3/img/stuff.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](http://www.seeedstudio.com)|[Get ONE Now](http://www.seeedstudio.com/Grove-Universal-4-Pin-20cm-Unbuckled-Cable-%285-PCs-Pack%29-p-749.html)|
 
 
 ###Hardware Connection
 Thanks to the benefit of Grove series module, you don't need to make soldering or bread board, what you need to do is connect the modules to the right port of Base Shield. For this demo, we connect Grove - Recorder to D2.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Recorder_V3/master/img/connection.jpeg)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove_Recorder_V3/img/connection.jpeg)
 
 
 ###Standalone
@@ -186,7 +186,7 @@ You can enter some command in Serial monitor:
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
-![cc](https://raw.githubusercontent.com/SeeedDocument/Grove_Recorder/master/img/cc_Recorder.png)
+![cc](https://files.seeedstudio.com/wiki/Grove_Recorder/img/cc_Recorder.png)
 
 Upload the program to your Arduino/Seeeduino.
 
@@ -204,7 +204,7 @@ Upload the program to your Arduino/Seeeduino.
 
 * [Schematics in PDF](https://files.seeedstudio.com/wiki/Grove_Recorder_V3/res/Grove%20-%20Recorder%20v3.0a.pdf)
 * [Schematics in Eagle](https://files.seeedstudio.com/wiki/Grove_Recorder_V3/res/eagle.zip)
-*	[Codecraft CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove_Recorder/master/res/Grove_Recorder_CDC_File.zip)
+*	[Codecraft CDC File](https://files.seeedstudio.com/wiki/Grove_Recorder/res/Grove_Recorder_CDC_File.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

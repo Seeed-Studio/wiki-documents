@@ -45,13 +45,13 @@ If your project is space limited and also don't need other fuctions except CAN-B
 
 If you want to read data or control your car, there's an OBD>DB9 cable available for you, [this cable](https://www.seeedstudio.com/DB9-to-OBD2-Cable-With-Switch-p-2872.html) make easier to connect to OBD-connector and DB9-connector. This cable will also work with anything that has a OBD-connector. Add a power switch makes such a satisfying click.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/CAN_BUS_Shield/master/image/obd_cable.jpg)](https://www.seeedstudio.com/DB9-to-OBD2-Cable-With-Switch-p-2872.html)
+[![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/obd_cable.jpg)](https://www.seeedstudio.com/DB9-to-OBD2-Cable-With-Switch-p-2872.html)
 
 **USB-CAN Analyzer**
 
 If you want a CAN Bus Analyzer to debug your CAN Bus, this [USB-CAN Analyzer](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html) is recommended.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/CAN_BUS_Shield/master/image/usb_can.jpg)](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html)
+[![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/usb_can.jpg)](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html)
 
 
 
@@ -95,14 +95,14 @@ If you want a CAN Bus Analyzer to debug your CAN Bus, this [USB-CAN Analyzer](ht
 
 **Pin map**
 
-![](https://raw.githubusercontent.com/SeeedDocument/CAN_BUS_Shield/master/image/PINMAP.png)
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/PINMAP.png)
 
 !!!note
     The FREE pin is available for the other usages.
 
 **DB9&OBDii Interface**
 
-![](https://raw.githubusercontent.com/SeeedDocument/CAN_BUS_Shield/master/image/OBD.png)
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/OBD.png)
 
 **CS pin**
 
@@ -155,7 +155,7 @@ Here's a simple example to show you how CAN-BUS Shield works. In this example we
 
 Insert each CAN-BUS Shield into Seeeduino V4.2, and connect the 2 CAN-BUS Shield together via 2 jumper wires. Shown as below images.
 
-![](https://raw.githubusercontent.com/SeeedDocument/CAN_BUS_Shield/master/image/connection.png)
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/connection.png)
 
 !!!note
     CAN_H to CAN_H, CAN_L to CAN_L
@@ -167,7 +167,7 @@ Please follow [how to install an arduino library](http://wiki.seeed.cc/How_to_in
 
 Click on below button to download the library.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/CAN_BUS_Shield/master/image/download_library.png)](https://github.com/Seeed-Studio/CAN_BUS_Shield)
+[![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/download_library.png)](https://github.com/Seeed-Studio/CAN_BUS_Shield)
 
 Install the library to your Arduino IDE when it is downloaded.
 
@@ -185,7 +185,7 @@ Open the **receive_check** example (**File > Examples > CAN_BUS_Shield-master > 
 
 Open the Serial Monitor of Arduino IDE(**slaver**), you will get the data sent from the master.
 
-![](https://raw.githubusercontent.com/SeeedDocument/CAN_BUS_Shield/master/image/serial_monitor.png)
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/serial_monitor.png)
 
 ## APIs
 -----

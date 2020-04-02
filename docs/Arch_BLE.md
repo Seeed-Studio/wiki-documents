@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/Arch_BLE
 sku: 113010002
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Arch_BLE/master/img/Arch_BLE.jpg)
+![](https://files.seeedstudio.com/wiki/Arch_BLE/img/Arch_BLE.jpg)
 
 Arch BLE is an mbed enabled development board based on Nordic nRF51822. With Arduino form factor and Grove connectors, it is extremely easy to create a Bluetooth Low Energy(BLE) device.
 
@@ -38,12 +38,12 @@ Features
 Hardware Overview
 ------
 
-![](https://raw.githubusercontent.com/SeeedDocument/Arch_BLE/master/img/Arch_BLE_Pinout.png)
+![](https://files.seeedstudio.com/wiki/Arch_BLE/img/Arch_BLE_Pinout.png)
 
 Get Started
 -----------
 
-![](https://raw.githubusercontent.com/SeeedDocument/Arch_BLE/master/img/Get_started_with_mbed.png)
+![](https://files.seeedstudio.com/wiki/Arch_BLE/img/Get_started_with_mbed.png)
 
 1.  Click [this link](https://developer.mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-BLE) to **login or signup to mbed**
 2.  Import the mbed\_blinky program
@@ -81,8 +81,8 @@ Applications
         -  [Digital RGB LED Strip](http://www.seeedstudio.com/depot/Digital-RGB-LED-FlexiStrip-30-LED-1-Meter-p-1665.html)
         -  Android device with BLE
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Arch_BLE/master/img/Ble_color_pixels_bb.png)
-    ![](https://raw.githubusercontent.com/SeeedDocument/Arch_BLE/master/img/Color_pixels_app.png)
+    ![](https://files.seeedstudio.com/wiki/Arch_BLE/img/Ble_color_pixels_bb.png)
+    ![](https://files.seeedstudio.com/wiki/Arch_BLE/img/Color_pixels_app.png)
 
 
     *  Make it run
@@ -141,7 +141,7 @@ To flash a new firmware:
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Arch_BLE/master/res/Arch_BLE_v1.0_Eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Arch_BLE/res/Arch_BLE_v1.0_Eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
@@ -149,9 +149,9 @@ Resources
 ---------
 
 -   [Arch BLE mbed developer platform page](https://developer.mbed.org/platforms/Seeed-Arch-BLE/)
--   [Schematic in PDF format](https://raw.githubusercontent.com/SeeedDocument/Arch_BLE/master/res/Arch_BLE_v1.0_pdf.pdf)
--   [Schematic and board files in EAGLE format](https://raw.githubusercontent.com/SeeedDocument/Arch_BLE/master/res/Arch_BLE_v1.0_Eagle.zip)
--   [LPC11U35 Firmware](https://raw.githubusercontent.com/SeeedDocument/Arch_BLE/master/res/Lpc11u35_nrf51822_if_mbed.bin.zip)
+-   [Schematic in PDF format](https://files.seeedstudio.com/wiki/Arch_BLE/res/Arch_BLE_v1.0_pdf.pdf)
+-   [Schematic and board files in EAGLE format](https://files.seeedstudio.com/wiki/Arch_BLE/res/Arch_BLE_v1.0_Eagle.zip)
+-   [LPC11U35 Firmware](https://files.seeedstudio.com/wiki/Arch_BLE/res/Lpc11u35_nrf51822_if_mbed.bin.zip)
 -   [Seeed BLE Color Pixels App for Android](http://tangram.qiniudn.com/seeed_ble_color_pixels.apk)
 -   [Sources of BLE Color Pixels App](https://github.com/Seeed-Studio/ble_color_pixels)
 

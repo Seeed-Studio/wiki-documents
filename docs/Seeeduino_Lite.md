@@ -7,7 +7,7 @@ prodimagename:  Seeeduino_ethernet-2.jpg
 surveyurl: https://www.research.net/r/Seeeduino_Lite
 sku:   102010008
 ---
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Lite/master/image/400px-Lite_01.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Lite/image/400px-Lite_01.jpg)
 
 Seeeduino Lite is a microcontroller based on ATmega32U4. Just like Arduino Leonardo, it saves a secondary processor needed for USB to serial communication. And this allows Seeeduino Lite appear to computer as a USB device, like keyboard and mouse. Derived from Leonardo, we also merged custom details of Seeeduino series into Seeeduino Lite, like selectable operating voltage, onboard Grove connectors and so on. It has 20 digital I/Os (7 of which can output PWM),a micro USB connection, a power jack, an ICSP header, and a reset button. It contains everything needed to support the microcontroller; simply connect it to a computer with a USB cable or power it with a AC-to-DC adapter to get started.
 
@@ -32,7 +32,7 @@ Seeeduino Lite is a microcontroller based on ATmega32U4. Just like Arduino Leona
 
 ## Interface
 ---
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Lite/master/image/Seeeduino_Lite_Intrface_Function.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Lite/image/Seeeduino_Lite_Intrface_Function.jpg)
 
 **U1:** 78M05 IC, Three-terminal positive voltage regulator.
 
@@ -55,18 +55,18 @@ Connect Seeeduino Lite to your computer via a micro-USB wire.
 
 Wait for the new found hardware prompt.If the installer does not launch automatically, Navigate to the Windows Device Manager and find the Seeeduino Lite listing.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Lite/master/image/Unknow_Device.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Lite/image/Unknow_Device.jpg)
 
 Right click and choose Update driver. When asked to install automatically or from a specific location, select "Browse my computer for driver software".
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Lite/master/image/Update_Driver.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Lite/image/Update_Driver.jpg)
 
 Choose "Search for the best driver in these locations", and check the box "incude this location in the search". Click the Browse button and navigate to drive you have downloaded. Select the drivers folder an click OK.
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Lite/master/image/Browse_Driver_Location.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Lite/image/Browse_Driver_Location.jpg)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Lite/master/image/Successfully_Update_Driver.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Lite/image/Successfully_Update_Driver.jpg)
 
 Replace two file in the path of Arduino. Open up Arduino-1.0.1/hardware/arduino/cores/arduino directory, replace the file:USBCore.cpp with the new USBCore.cpp.And replace file：boards.txt with the new boards.txt in the path:Arduino-1.0.1/hardware/arduino. Now, you can program and use the seeeduino lite as you use other Arduino boards.
 

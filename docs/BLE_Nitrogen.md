@@ -8,7 +8,7 @@ surveyurl: https://www.surveymonkey.com/r/BLE_Nitrogen
 sku: 102990629
 ---
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BLE-Nitrogen/master/img/cover.png)
+![enter image description here](https://files.seeedstudio.com/wiki/BLE-Nitrogen/img/cover.png)
 
 Zephyr applications use the nrf52_nitrogen configuration to run on the nRF52 Nitrogen hardware. It provides support for the Nordic Semiconductor nRF52832 ARM Cortex-M4F CPU and the following devices:
 
@@ -74,7 +74,7 @@ It is strongly recommended that you update your development environment with the
 
 ##Hardware Overview
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BLE-Nitrogen/master/img/hardware_ov.png)
+![enter image description here](https://files.seeedstudio.com/wiki/BLE-Nitrogen/img/hardware_ov.png)
 
 1.**Micro USB** - for debug, programming, power and battery charge.
 
@@ -115,7 +115,7 @@ C.IC - **ETA6003**
 ##PinMap
 
 
-[![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BLE-Nitrogen/master/img/pin_map.png)](https://raw.githubusercontent.com/SeeedDocument/BLE-Nitrogen/master/img/pin_map.png)
+[![enter image description here](https://files.seeedstudio.com/wiki/BLE-Nitrogen/img/pin_map.png)](https://files.seeedstudio.com/wiki/BLE-Nitrogen/img/pin_map.png)
 
 !!!Note
     Click to view larger image.
@@ -128,11 +128,11 @@ Click to download the [driver for Mbed](https://developer.mbed.org/media/downloa
 
 Insert the board to PC via a micro USB cable, and double click mbedWinSerial_16466.exe to install it, then you will find a new device at your device manager.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BLE-Nitrogen/master/img/install_driver.png)
+![enter image description here](https://files.seeedstudio.com/wiki/BLE-Nitrogen/img/install_driver.png)
 
 ###Advanced Guide
 
-[![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BLE-Nitrogen/master/img/guide.png)](https://www.zephyrproject.org/)
+[![enter image description here](https://files.seeedstudio.com/wiki/BLE-Nitrogen/img/guide.png)](https://www.zephyrproject.org/)
 
 
 

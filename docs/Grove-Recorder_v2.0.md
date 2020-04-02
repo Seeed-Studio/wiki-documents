@@ -10,7 +10,7 @@ sku: 103020018
 tags: grove_digital, io_3v3, io_5v, plat_duino
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Recorder_v2.0/master/img/Grove-Recorder_V2.0.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Recorder_v2.0/img/Grove-Recorder_V2.0.jpg)
 
 Grove - CRecorder v2.0 is a upgraded recorder with enriched features. It can record 8-20 seconds<sup>\[1\]</sup> audio with high-quality and natural voice. In addition, it also gets sound volume control and playback functions. With MCU such as [Seeeduino](/Seeeduino_v4.2) or Arduino board, you can prototype various applications quickly with user-friendly interfaces.
 
@@ -53,7 +53,7 @@ Specifications
 | Recording duration(default) | 12 seconds(MAX value)<sup>\[2\]</sup>.                                                                        |
 | Playback duration(default)  | 12 seconds(MAX value).                                                                                        |
 | Sample rate                 | 53 kHz                                                                                                        |
-| Chip                        | ISD1820PY([Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Recorder_v2.0/master/res/ISD_1800_Specifications.pdf)), NS8002(Volume Amplifier) |
+| Chip                        | ISD1820PY([Datasheet](https://files.seeedstudio.com/wiki/Grove-Recorder_v2.0/res/ISD_1800_Specifications.pdf)), NS8002(Volume Amplifier) |
 
 Platforms Supported
 -------------------
@@ -68,7 +68,7 @@ Platforms Supported
 
 <sup>\[2\]</sup>You can replace the resistor shows as following to change recording duration.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Recorder_v2.0/master/img/Grove-Recorder_V2.0_back_view_600.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Recorder_v2.0/img/Grove-Recorder_V2.0_back_view_600.jpg)
 
 *Red rectangle marked area*
 
@@ -89,7 +89,7 @@ Playback duration will be same with Recording duration as it changes. Different 
 Hardware Overview
 -----------------
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Recorder_v2.0/master/img/Grove-Recorder_Hardware_View_wiki_s.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Recorder_v2.0/img/Grove-Recorder_Hardware_View_wiki_s.jpg)
 
 **Grove interface**
 
@@ -162,7 +162,7 @@ We have used Seeeduino in this case.
 
 ### **Hardware connections**
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Recorder_v2.0/master/img/Grove-Recorder_Hardware_connection_s.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Recorder_v2.0/img/Grove-Recorder_Hardware_connection_s.jpg)
 
 -   Connect all modules as above figure shows.
     -   Grove - Button > **D2**
@@ -209,15 +209,15 @@ void loop()
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-Recorder_v2.0/master/res/Grove-Recorder_v2.0_Schematic_Eagle_file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Recorder_v2.0/res/Grove-Recorder_v2.0_Schematic_Eagle_file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 Resources
 ---------
 
-- Schematic file in [Eagle](https://raw.githubusercontent.com/SeeedDocument/Grove-Recorder_v2.0/master/res/Grove-Recorder_v2.0_Schematic_Eagle_file.zip) format
-- Schematic file in [PDF](https://raw.githubusercontent.com/SeeedDocument/Grove-Recorder_v2.0/master/res/Grove-Recorder_v2.0_Schematic_PDF_file.zip) format
+- Schematic file in [Eagle](https://files.seeedstudio.com/wiki/Grove-Recorder_v2.0/res/Grove-Recorder_v2.0_Schematic_Eagle_file.zip) format
+- Schematic file in [PDF](https://files.seeedstudio.com/wiki/Grove-Recorder_v2.0/res/Grove-Recorder_v2.0_Schematic_PDF_file.zip) format
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Recorder_v2.0 -->
 

@@ -8,7 +8,7 @@ surveyurl: https://www.research.net/r/HL2XL5S
 sku: 110060576
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/ESP32_Breakout_Kit/master/img/cover.jpg)
+![](https://files.seeedstudio.com/wiki/ESP32_Breakout_Kit/img/cover.jpg)
 
 This is the breakout kit specially designed for ESP32, it contains a breakout board and pin headers. The dimension is 53mmx38mmx1.2mm. The breakout board with 2.54mm-gap female headers allows you to connect the pin of ESP32 to it easily. We also provided 2 grove connectors in this kit to enrich the expansibility of ESP32.
 
@@ -20,7 +20,7 @@ This is the breakout kit specially designed for ESP32, it contains a breakout bo
 !!!Note
     The parts of the kit is non-soldered.
 
-![](https://raw.githubusercontent.com/SeeedDocument/ESP32_Breakout_Kit/master/img/part_list.jpg)
+![](https://files.seeedstudio.com/wiki/ESP32_Breakout_Kit/img/part_list.jpg)
 
 |Part Name|Qty|
 |---------|---|
@@ -32,7 +32,7 @@ This is the breakout kit specially designed for ESP32, it contains a breakout bo
 
 ## Pin map
 
-[![](https://raw.githubusercontent.com/SeeedDocument/ESP32_Breakout_Kit/master/img/esp32_breakout_pin.png)](https://raw.githubusercontent.com/SeeedDocument/ESP32_Breakout_Kit/master/img/esp32_breakout_pin.png)
+[![](https://files.seeedstudio.com/wiki/ESP32_Breakout_Kit/img/esp32_breakout_pin.png)](https://files.seeedstudio.com/wiki/ESP32_Breakout_Kit/img/esp32_breakout_pin.png)
 
 !!!Tip
     Click to view larger image.

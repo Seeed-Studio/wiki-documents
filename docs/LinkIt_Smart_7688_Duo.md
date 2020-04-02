@@ -8,9 +8,9 @@ surveyurl: https://www.surveymonkey.com/r/LS_7688_Duo
 sku: 102110017
 ---
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/img/Linkit_7688_DUO_Product_view.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/Linkit_7688_DUO_Product_view.jpg)
 
-LinkItTM Smart 7688 Duo(a compact controller board) is an open development board based on MT7688([datasheet](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/res/MT7688_datasheet.pdf)) and ATmega32u4. The board is compatible with Arduino Yun sketches and is based on the OpenWrt Linux distribution. The board is designed especially to enable prototyping of Rich Application IoT devices for smart home or office[1]. As it is compatible well with Arduino, you can use different features from Arduino Yun and LinkIt Smart 7688 Duo[2]. This will help you build rich applications based on various, robust and compiled Arduino Yun sketches. The board offers you the memory and packet storage to enable robust video processing. The platform also offers options to create device applications in Python, Node.js and C programming languages.
+LinkItTM Smart 7688 Duo(a compact controller board) is an open development board based on MT7688([datasheet](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/res/MT7688_datasheet.pdf)) and ATmega32u4. The board is compatible with Arduino Yun sketches and is based on the OpenWrt Linux distribution. The board is designed especially to enable prototyping of Rich Application IoT devices for smart home or office[1]. As it is compatible well with Arduino, you can use different features from Arduino Yun and LinkIt Smart 7688 Duo[2]. This will help you build rich applications based on various, robust and compiled Arduino Yun sketches. The board offers you the memory and packet storage to enable robust video processing. The platform also offers options to create device applications in Python, Node.js and C programming languages.
 
 
 !!!Note
@@ -85,9 +85,9 @@ LinkItTM Smart 7688 Duo(a compact controller board) is an open development board
 
 ## Hardware Overview
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/img/Front_component_view_with_text_1200_s.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/Front_component_view_with_text_1200_s.jpg)
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/img/7688_duo_backview_with_text_1200.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/7688_duo_backview_with_text_1200.jpg)
 
 
 !!!Note
@@ -128,15 +128,15 @@ LinkItTM Smart 7688 Duo(a compact controller board) is an open development board
 | Pin TX	| Pin 9 |
 | Pin GND |	Pin GND |
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/img/7688_duo_demo_view_1200_s.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/7688_duo_demo_view_1200_s.jpg)
 
 **5.**After connecting the Serial to USB cable, open the device manager and notice the COM port number as shown in Figure 22. This number may vary on different computers.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/img/COM_port.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/COM_port.jpg)
 
 **6.**Launch the PuTTY terminal and enter the COM port number of the USB device found in the device manager, click on the Serial radio button, type 57600 in Speed box and click Open, as shown in Figure 23.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/img/Putty_configuration.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/Putty_configuration.jpg)
 
 **7.**To exit the system console, click the **close icon** on top right of the PuTTY windows.
 
@@ -214,7 +214,7 @@ $sudo screen /dev/ttyUSB0 57600
 
 **2.**Launch PuTTy and connect to system with USB to Serial adapter as shown in previous sections.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/img/Connect_to_computer.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/Connect_to_computer.jpg)
 
 **3.**Type **python /IoT/examples/blink-gpio44.py** and press **Enter** to run the Blink example.
 !!!note
@@ -232,21 +232,21 @@ There are two kind of Wi-Fi modes: AP mode and Station mode. Refer here for the 
 
 **2.**Open the Wi-Fi connection utility on your computer and connect to the access point named LinkIt_Smart_7688_XXXXXX. XXXXXX is a kind of hardware identifier which varies from board to board.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/img/Connect_wifi.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/Connect_wifi.jpg)
 
 **3.**Open a browser with URL mylinkit.local/ or 192.168.100.1, set the password for root and sign in. Click Network on the upper right.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/img/Network_conf.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/Network_conf.jpg)
 
 **4.**Select the Station mode and click Refresh or downward arrow on the right to find the AP to connect to. After you have selected the AP, enter password if required. Click Configure & Restart to finish as shown below. Then wait for around 30 seconds to switch mode.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/img/Station_mode.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/Station_mode.jpg)
 
 **5.**Launch PuTTy and connect to the system with USB to Serial adapter as shown in the previous section.
 
 **6.**Type ifconfig and find the IP address of inet addr as shown below:
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/img/IFCONFIG.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/IFCONFIG.jpg)
 
 !!!Note
     It will still enter the Station mode after rebooting the system. Press wi-fi button at least 5 seconds to switch back to AP mode. Note: It will be needed to reboot the embeded OS by using reboot command.
@@ -255,7 +255,7 @@ There are two kind of Wi-Fi modes: AP mode and Station mode. Refer here for the 
 
 **8.**Now both the host computer and LinkIt Smart 7688 are connected to internet. Type ping [www.mediatek.com](https://www.mediatek.com/) in console and you will get:
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/img/Ping_result.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/Ping_result.jpg)
 
 **9.**Now you can use internet to configure your system on development board.
 
@@ -282,17 +282,17 @@ http://download.labs.mediatek.com/package_mtk_linkit_smart_7688_test_index.json
 
  to the Additional Boards Manager URLs field:
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/img/Install_package.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/Install_package.jpg)
 
-**2.**Make sure your computer is connected to the internet. [Download](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/res/LinkIt.zip) **LinkIt**, decompress it and copy the files into the folder **packages** which gets same location with file **Preferences.txt**. Click following red rectangle marked section to open file location of **Preferences.txt**.
+**2.**Make sure your computer is connected to the internet. [Download](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/res/LinkIt.zip) **LinkIt**, decompress it and copy the files into the folder **packages** which gets same location with file **Preferences.txt**. Click following red rectangle marked section to open file location of **Preferences.txt**.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/img/7688_duo_demo_preferences.txt_location_s.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/7688_duo_demo_preferences.txt_location_s.jpg)
 
 **3.**In the Arduino **Tools** menu point to **Board**.
 
 **4.**There should now be a LinkIt Smart 7688 item appearing in the boards list on the Boards Manager and choose port with **COMxx** (**LinkIt Smart 7688 Duo**).
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/img/Install_SDK.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/Install_SDK.jpg)
 
 **5.**The installation is completed.
 
@@ -317,11 +317,11 @@ Next, you will need to install drivers depending on your operating system. The s
 
 You will find the Arduino preference location at **File -> Preferences**, see the **preference.txt path**.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/img/Preference_location.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/Preference_location.jpg)
 
 Right click on the linkit_smart_7688.inf and select install, a security windows appears and **click Install this driver software anyway**. This completes the driver installation.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/img/Driver_inst_alert.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/Driver_inst_alert.jpg)
 
 * For Ubuntu Linux, it should work without installing a driver. LinkIt Smart 7688 should be in /dev folder and mounted as ttyUSB0. The number 0 may be different on each Ubuntu machine.
 * For OS X, it is also not required to install a driver, LinkIt Smart 7688 Duo is mounted as a serial device under/dev/tty.usbmodem1413. The number 1413 may be different on each OS X machine.
@@ -382,7 +382,7 @@ void loop() {
 
 **3.**Upload the sketch to the board. Note the board is not blinking yet - you will need to write a program in the Linux side to make it blink, which is the next step.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/img/Blink_in_arduino.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/Blink_in_arduino.jpg)
 
 
 ####On development board(Linux side)
@@ -426,18 +426,18 @@ You can now extend the Arduino sketch to drive other devices such as PWM, I2C de
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/res/Hardware_Schematics.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/res/Hardware_Schematics.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ## Resources
 
-* [Hardware Schematic files](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/res/Hardware_Schematics.zip)
-* [Manual](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/res/Manual.zip)
+* [Hardware Schematic files](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/res/Hardware_Schematics.zip)
+* [Manual](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/res/Manual.zip)
 * [OpenWrt](http://wiki.openwrt.org/doc/howto/user.beginner)
 * [MediaTek LinkIt? Smart 7688 Resources:](http://labs.mediatek.com/site/global/developer_tools/mediatek_linkit_smart_7688/hdk_intro/index.gsp)
-* [How to flash the firmware via a USB drive](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/res/Linkit_Smart_7688_DUO_Firmware.pdf)
-* [Certificates](https://raw.githubusercontent.com/SeeedDocument/LinkIt_Smart_7688_Duo/master/res/LinkIt_Smart_7688_Duo-Certificate.zip)
+* [How to flash the firmware via a USB drive](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/res/Linkit_Smart_7688_DUO_Firmware.pdf)
+* [Certificates](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/res/LinkIt_Smart_7688_Duo-Certificate.zip)
 * [Document]** [Mediatek](https://labs.mediatek.com/en/platform/linkit-smart-7688)
 
 ## Project

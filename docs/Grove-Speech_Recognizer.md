@@ -8,7 +8,7 @@ surveyurl: https://www.surveymonkey.com/r/Grove_Voice_Recognizer
 sku: 101020232
 ---
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Speech_Recognizer/master/img/cover.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove_Speech_Recognizer/img/cover.jpg)
 
 Use voice to interact with things around you can always be one of the most interesting things of IoT application, we want to make something more different and cooler. Recently we just launched the voice control solution “Respeaker” on Kickstarter and it becomes the blockbuster. However not everybody needs a Respeaker to build voice control project, sometimes people only need a simple solution, here we would like to introduce the first generation of grove speech recognizer to realize your dream of smart home easily and fast.
 
@@ -76,7 +76,7 @@ When it recognizes the awaken word, LED turn red, then you can say the command w
 
 ## Hardware Overview
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Speech_Recognizer/master/img/hw.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove_Speech_Recognizer/img/hw.png)
 
 1. Grove Connector
 2. Red Led - lights when "HIcell" is recognized
@@ -118,7 +118,7 @@ Here we will show you how this Grove - Speech Recognizer works via a simple demo
 
 | Seeeduino V4 | Grove - Speech Recognizer | Base Shield |
 |--------------|----------------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Speech_Recognizer/master/img/stuff1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Speech_Recognizer/img/stuff1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](http://www.seeedstudio.com/Grove-Light-Sensor%28P%29-p-1253.html)|[Get ONE Now](http://www.seeedstudio.com/Grove-Universal-4-Pin-20cm-Unbuckled-Cable-%285-PCs-Pack%29-p-749.html)|
 
 
@@ -126,7 +126,7 @@ Here we will show you how this Grove - Speech Recognizer works via a simple demo
 
 Thanks to the benefit of Grove series module, you don't need to make soldering or bread board, what you need to do is connect the modules to the right port of Base Shield. For this demo, we connect Grove - Speech Recognizer to D2.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Speech_Recognizer/master/img/connect.jpeg)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove_Speech_Recognizer/img/connect.jpeg)
 
 
 **Software**
@@ -201,7 +201,7 @@ After the module is awake, you can speak out the command. Such as
     "Turn on the TV"
 If the blue led is light(last about 1s), that means the command was recognized correctly. Take a look at your Serial monitor, the command was printed on it.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Speech_Recognizer/master/img/monitor.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove_Speech_Recognizer/img/monitor.png)
 
 
 ### Play with Codecraft
@@ -223,7 +223,7 @@ If the blue led is light(last about 1s), that means the command was recognized c
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
-![cc](https://raw.githubusercontent.com/SeeedDocument/Grove_Speech_Recognizer/master/img/cc_Speech_Recognizer.PNG)
+![cc](https://files.seeedstudio.com/wiki/Grove_Speech_Recognizer/img/cc_Speech_Recognizer.PNG)
 
 Upload the program to your Arduino/Seeeduino.
 
@@ -241,7 +241,7 @@ Upload the program to your Arduino/Seeeduino.
 
 * [Schematics in Eagle](https://files.seeedstudio.com/wiki/Grove_Speech_Recognizer/res/eagle.zip)
 * [Schematics in PDF](https://files.seeedstudio.com/wiki/Grove_Speech_Recognizer/res/Grove%20-%20Speech%20Recognizer%20v1.0.pdf)
-* [Codecraft CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove_Speech_Recognizer/master/res/Grove_Speech_Recognizer_CDC_File.zip)
+* [Codecraft CDC File](https://files.seeedstudio.com/wiki/Grove_Speech_Recognizer/res/Grove_Speech_Recognizer_CDC_File.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

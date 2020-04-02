@@ -20,8 +20,8 @@ Grove-IMU 10DOF v2.0 is a upgrade version of Grove-IMU-10DOF， which replace BM
 
 |  Product Version       | Changes                                                                                                                                                                                                                                      | Released Date  |
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|
-| Grove - IMU 10DOF      | Built on [MPU-9250 ](https://raw.githubusercontent.com/SeeedDocument/Grove-IMU_10DOF/master/res/MPU-9250A_Product_Specification.pdf ) and [BMP180 ](https://raw.githubusercontent.com/SeeedDocument/Grove-IMU_10DOF/master/res/BMP180.pdf )  | March 2015     |
-| Grove - IMU 10DOF v2.0 | Upgrade BMP180 sensor to [BMP280 ](https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer_Sensor-BMP280/master/res/Grove-Barometer_Sensor-BMP280-BMP280-DS001-12_Datasheet.pdf ) from BOSCH                                         | September 2016 |
+| Grove - IMU 10DOF      | Built on [MPU-9250 ](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF/res/MPU-9250A_Product_Specification.pdf ) and [BMP180 ](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF/res/BMP180.pdf )  | March 2015     |
+| Grove - IMU 10DOF v2.0 | Upgrade BMP180 sensor to [BMP280 ](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BMP280/res/Grove-Barometer_Sensor-BMP280-BMP280-DS001-12_Datasheet.pdf ) from BOSCH                                         | September 2016 |
 
 
 ## Specifications
@@ -64,7 +64,7 @@ Grove-IMU 10DOF v2.0 is a upgrade version of Grove-IMU-10DOF， which replace BM
 -  MPU-9250 interrupt pin, the interrupt should be configured, available interrupt sources are: motion detection, fifo overflow, data ready, i2c master error
 - Orientation of Axes:
 The diagram below shows the orientation of the axes of sensitivity and the polarity of rotation.
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-IMU_10DOF/master/img/Imu-10dof-dir-axes.png)
+![](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF/img/Imu-10dof-dir-axes.png)
 - The BMP280 is an absolute barometric pressure sensor especially designed for mobile applications. The sensor module is housed in an extremely compact 8-pin metal-lid LGA package with a footprint of only 2.0 × 2.5 mm2 and 0.95 mm package height. Its small dimensions and its low power consumption of 2.7 μA @1Hz allow the implementation in battery driven devices such as mobile phones, GPS modules or watches.
 
 
@@ -115,7 +115,7 @@ We can see:
 -   **[Eagle]** [Grove - IMU 10DOF v2 eagle file](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF_v2.0/res/Grove%20-%20IMU%2010DOF%20v2.0.zip)
 -   **[Library]** [Get library from github](https://github.com/Seeed-Studio/Grove_IMU_10DOF_v2.0/archive/master.zip)
 -   **[Dtasheet]** [BMP280 datasheet](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF_v2.0/res/BMP280-Datasheet.pdf)
--   **[Dtasheet]** [MPU-9250 datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-IMU_10DOF/master/res/MPU-9250A_Product_Specification.pdf)
+-   **[Dtasheet]** [MPU-9250 datasheet](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF/res/MPU-9250A_Product_Specification.pdf)
 
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_IMU_10DOF -->

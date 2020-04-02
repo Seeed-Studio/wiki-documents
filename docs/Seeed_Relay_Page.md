@@ -12,7 +12,7 @@ Before the start, let's check the seeed relay quick selection diagram.
 
 <div align="center">
 <figure>
-  <a href="https://raw.githubusercontent.com/SeeedDocument/Seeed_Relay_Page/master/img/Relay_Select.png" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/Relay_Select.png" alt="Seeed relay quick selection diagram" title="Seeed relay quick selection diagram" />
+  <a href="https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/Relay_Select.png" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/Relay_Select.png" alt="Seeed relay quick selection diagram" title="Seeed relay quick selection diagram" />
   <figcaption><b>Figure 1</b>. <i>Seeed relay quick selection diagram, you can click the diagram to view the original file</i></figcaption></a>
 </figure>
 </div>

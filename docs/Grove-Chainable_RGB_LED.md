@@ -629,9 +629,9 @@ If this is your first time to use Cloud9 IDE, please follow this [**link**](/Bea
 
 **Step2:** Click the "+" in the top-right to create a new file.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Chainable_RGB_LED/master/img/C9-create-tab.png)
+![](https://files.seeedstudio.com/wiki/Grove-Chainable_RGB_LED/img/C9-create-tab.png)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Chainable_RGB_LED/master/img/C9_newfile.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Chainable_RGB_LED/img/C9_newfile.jpg)
 
 **Step3:** Copy and paste the following code into the new tab
 
@@ -776,7 +776,7 @@ if __name__ == "__main__":
 -   **[Library]** [CodeCraft Code](https://files.seeedstudio.com/wiki/Grove-Chainable_RGB_LED/res/Chainable%20RGB%20LED.zip)
 -   **[Eagle]**[Chainable RGB LED eagle file V1](https://files.seeedstudio.com/wiki/Grove-Chainable_RGB_LED/res/Chainable_RGB_LED_eagle_file%20V1.zip)
 -   **[Eagle]**[Chainable RGB LED eagle file V2](https://files.seeedstudio.com/wiki/Grove-Chainable_RGB_LED/res/Grove%20-%20Chainable%20RGB%20LED%20v2.0.zip)
--   **[Datasheet]**[P9813 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Chainable_RGB_LED/master/res/P9813_datasheet.pdf)
+-   **[Datasheet]**[P9813 Datasheet](https://files.seeedstudio.com/wiki/Grove-Chainable_RGB_LED/res/P9813_datasheet.pdf)
 
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Chainable_RGB_LED -->

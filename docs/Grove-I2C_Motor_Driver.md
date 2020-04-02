@@ -17,9 +17,9 @@ sku: 105020001
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><img src="https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Motor_Driver/master/img/Grove-I2C_Motor_Driver_V1.1.jpg" /></td>
-<td><img src="https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Motor_Driver/master/img/I2CMotorDriver-2.jpg" /></td>
-<td><img src="https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Motor_Driver/master/img/I2CMotorDriver_New.jpg" /></td>
+<td><img src="https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver/img/Grove-I2C_Motor_Driver_V1.1.jpg" /></td>
+<td><img src="https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver/img/I2CMotorDriver-2.jpg" /></td>
+<td><img src="https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver/img/I2CMotorDriver_New.jpg" /></td>
 </tr>
 <tr class="even">
 <td><div style=": center">

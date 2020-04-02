@@ -10,7 +10,7 @@ sku: 101020005
 tags: grove_digital, io_3v3, io_5v, plat_duino, plat_linkit, plat_pi, plat_bbg
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Collision_Sensor/master/img/Grove_–_Collision_Sensor_photo.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Collision_Sensor/img/Grove_–_Collision_Sensor_photo.jpg)
 
 Grove - Collision Sensor can detect whether any collision movement or vibration happens. It will output a low pulse signal when vibration is detected. To make the output signal more reliable and neat, we added a necessary exterior circuit to reduce the noise impact. So, normal shaking will not cause any output. The sensor has a high sensitivity. You can use it to apply to your project, such as automatic wake-up and power-down for battery management.
 
@@ -133,7 +133,7 @@ return false;
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
-![cc](https://raw.githubusercontent.com/SeeedDocument/Grove-Collision_Sensor/master/img/cc_Collision_Sensor.png)
+![cc](https://files.seeedstudio.com/wiki/Grove-Collision_Sensor/img/cc_Collision_Sensor.png)
 
 Upload the program to your Arduino/Seeeduino.
 
@@ -156,7 +156,7 @@ Upload the program to your Arduino/Seeeduino.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Collision_Sensor/master/img/with_hat.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Collision_Sensor/img/with_hat.jpg)
 
 !!! Note
     For step 3 you are able to connect the Grove - Collision Sensor to **any GPIO Port** but make sure you change the command with the corresponding port number.
@@ -342,7 +342,7 @@ sudo python grove_collision_sensor.py
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-Collision_Sensor/master/res/Grove-Collision_Sensor_eagle_file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Collision_Sensor/res/Grove-Collision_Sensor_eagle_file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
@@ -350,9 +350,9 @@ sudo python grove_collision_sensor.py
 ## Resources
 
 
--  **[Zip]** [Grove - Collision Sensor Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-Collision_Sensor/master/res/Grove-Collision_Sensor_eagle_file.zip)
--  **[PDF]** [MVS0608.02 datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Collision_Sensor/master/res/DataSheet-MVS0608_02-v2_1.pdf)
--  **[Codecraft]** [CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove-Collision_Sensor/master/res/Grove_Collision_Sensor_CDC_File.zip)
+-  **[Zip]** [Grove - Collision Sensor Eagle File](https://files.seeedstudio.com/wiki/Grove-Collision_Sensor/res/Grove-Collision_Sensor_eagle_file.zip)
+-  **[PDF]** [MVS0608.02 datasheet](https://files.seeedstudio.com/wiki/Grove-Collision_Sensor/res/DataSheet-MVS0608_02-v2_1.pdf)
+-  **[Codecraft]** [CDC File](https://files.seeedstudio.com/wiki/Grove-Collision_Sensor/res/Grove_Collision_Sensor_CDC_File.zip)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Collision_Sensor -->
 

@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/Grove-433MHz_Simple_RF_Link_Kit
 sku: 113060000
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-433MHz_Simple_RF_Link_Kit/master/img/433MHz_Simple_RF.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-433MHz_Simple_RF_Link_Kit/img/433MHz_Simple_RF.jpg)
 
 This kit is used for one way wireless communication at a frequency of 433MHz and includes a transmitter module and a receiver module. The twig configuration of this kit allows for around 40 meters of transmitting distance indoors, or around 100 meters outside.
 
@@ -171,7 +171,7 @@ Error creating thumbnail: Invalid thumbnail parameters
 
 Error creating thumbnail: Invalid thumbnail parameters
 
--   Download the [VirtualWire library](https://raw.githubusercontent.com/SeeedDocument/Grove-433MHz_Simple_RF_Link_Kit/master/res/VirtualWire_Library.zip) and unzip it into the libraries file of Arduino IDE by the path: ..\\arduino-1.0\\libraries. Please reference [here](http://www.pjrc.com/teensy/td_libs_VirtualWire.html).
+-   Download the [VirtualWire library](https://files.seeedstudio.com/wiki/Grove-433MHz_Simple_RF_Link_Kit/res/VirtualWire_Library.zip) and unzip it into the libraries file of Arduino IDE by the path: ..\\arduino-1.0\\libraries. Please reference [here](http://www.pjrc.com/teensy/td_libs_VirtualWire.html).
 -   Upload the code below for transmitter module:
 
 ```
@@ -240,18 +240,18 @@ Error creating thumbnail: Invalid thumbnail parameters
 
 -   Open the serial monitor of receiver module to see the result.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-433MHz_Simple_RF_Link_Kit/master/img/Receive_Data.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-433MHz_Simple_RF_Link_Kit/img/Receive_Data.jpg)
 
 This is just a simple transmitter and receiver instance as a reference.
 
 Resources
 ---------
 
--   [VirtualWire Library.zip](https://raw.githubusercontent.com/SeeedDocument/Grove-433MHz_Simple_RF_Link_Kit/master/res/VirtualWire_Library.zip)
--   [433MHz\_demo.zip](https://raw.githubusercontent.com/SeeedDocument/Grove-433MHz_Simple_RF_Link_Kit/master/res/315MHz_Demo.zip)
+-   [VirtualWire Library.zip](https://files.seeedstudio.com/wiki/Grove-433MHz_Simple_RF_Link_Kit/res/VirtualWire_Library.zip)
+-   [433MHz\_demo.zip](https://files.seeedstudio.com/wiki/Grove-433MHz_Simple_RF_Link_Kit/res/315MHz_Demo.zip)
 -   [VirtualWire Documentation](http://www.open.com.au/mikem/arduino/VirtualWire.pdf)
--   [TI:LM358PSR](https://raw.githubusercontent.com/SeeedDocument/Grove-433MHz_Simple_RF_Link_Kit/master/res/1110010P1.pdf)
--   [R433A Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-433MHz_Simple_RF_Link_Kit/master/res/ADI;ACTR433A.pdf)
+-   [TI:LM358PSR](https://files.seeedstudio.com/wiki/Grove-433MHz_Simple_RF_Link_Kit/res/1110010P1.pdf)
+-   [R433A Datasheet](https://files.seeedstudio.com/wiki/Grove-433MHz_Simple_RF_Link_Kit/res/ADI;ACTR433A.pdf)
 
 
 

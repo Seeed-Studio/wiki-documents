@@ -309,11 +309,11 @@ void display_ap()
 Then you will see the OLED show the wifi AP around you.
 
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/img/Grove_uart_wifi_result.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/img/Grove_uart_wifi_result.jpg)
 
 ## Firmware update
 
-Our module board got a firmware burned into it for factory settings, you can burn other firmware to it if you like. Click [here](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/res/Grove-Uart_Wifi_Firmware-code.zip) to download source code of factory setting firmware.
+Our module board got a firmware burned into it for factory settings, you can burn other firmware to it if you like. Click [here](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/res/Grove-Uart_Wifi_Firmware-code.zip) to download source code of factory setting firmware.
 
 
 
@@ -334,7 +334,7 @@ Our module board got a firmware burned into it for factory settings, you can bur
 
 **Step 2.** Then connecting cables like following figure:
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/img/Grove_uart_wifi_firmware_connect2.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/img/Grove_uart_wifi_firmware_connect2.jpg)
 
 
 
@@ -352,7 +352,7 @@ Our module board got a firmware burned into it for factory settings, you can bur
 
 **Step 3.** Start executable files in FLASH DOWNLOAD TOOLS files (double click) to make configurations like following steps:
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/img/Grove_uart_wifi_firmware_tools1.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/img/Grove_uart_wifi_firmware_tools1.jpg)
 
 **1.** Choose desired files from firmware bin file downloaded.
 
@@ -365,11 +365,11 @@ Our module board got a firmware burned into it for factory settings, you can bur
 
 * Progress bar will be displayed in firmware-burning process.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/img/Grove_uart_wifi_firmware_tools2.1.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/img/Grove_uart_wifi_firmware_tools2.1.jpg)
 
 * Finally, firmware-burning is done.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/img/Grove_uart_wifi_firmware_tools3.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/img/Grove_uart_wifi_firmware_tools3.jpg)
 
 
 

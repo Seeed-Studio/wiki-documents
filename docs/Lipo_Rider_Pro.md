@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/Lipo_Rider_Pro
 sku: 106990008
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Lipo_Rider_Pro/master/img/LiPo_Rider_Pro.jpg)
+![](https://files.seeedstudio.com/wiki/Lipo_Rider_Pro/img/LiPo_Rider_Pro.jpg)
 
 Power your favourite electronic kit with green energy! The LiPo Rider Pro is an enhancement of Lipo Rider. It supplies heavier load output(1A peak) than Lipo Rider. The LiPo Rider Pro board allows you ride the solar wave to run your favourite 5V device. The LiPo Rider Pro board is the ideal green power solution for your outdoor sensor design. Attach the LiPo Rider Pro board to your sensor board and it can run on solar power forever! It can also be used to charge mobile phone.
 
@@ -56,7 +56,7 @@ The LiPo Rider Pro can be purchased as a separate board or as a kit (LiPo Rider 
 
 The dimensions of LiPo Rider Pro is like the [6A Lithium Polymer Battery](http://www.seeedstudio.com/depot/lithium-ion-polymer-battery-pack-6a-p-602.html?cPath=178_183).
 
-![](https://raw.githubusercontent.com/SeeedDocument/Lipo_Rider_Pro/master/img/Liporiderprod.jpg)
+![](https://files.seeedstudio.com/wiki/Lipo_Rider_Pro/img/Liporiderprod.jpg)
 
 Specifications
 --------------
@@ -192,7 +192,7 @@ Pin definition and Rating
 **LED Battery Indicator**
 
 The LiPo Rider Pro has four LED battery indicators like the cell phone,and you can see the battery power by just pressing the button K2 like below:
-![](https://raw.githubusercontent.com/SeeedDocument/Lipo_Rider_Pro/master/img/Lipo3.jpg)
+![](https://files.seeedstudio.com/wiki/Lipo_Rider_Pro/img/Lipo3.jpg)
 
 **LED battery indicator parameter**
 
@@ -217,26 +217,26 @@ If a firmware reprogram for the outdoor sensor device is required, simple connec
 
 Larger/multiple batteries and/or solar panels can be used, but only with end-user modifications.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Lipo_Rider_Pro/master/img/Lipo-Rider-pro.JPG)
+![](https://files.seeedstudio.com/wiki/Lipo_Rider_Pro/img/Lipo-Rider-pro.JPG)
 
 **Charge Lithium Polymer Battery through solar power**
 
-![](https://raw.githubusercontent.com/SeeedDocument/Lipo_Rider_Pro/master/img/LiPo_Rider_Pro1.jpg)
+![](https://files.seeedstudio.com/wiki/Lipo_Rider_Pro/img/LiPo_Rider_Pro1.jpg)
 
 
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Lipo_Rider_Pro/master/res/Lipo_Rider_Pro_v0.9b.rar" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Lipo_Rider_Pro/res/Lipo_Rider_Pro_v0.9b.rar" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ## Resources
 ---
 
--   [CN3065 Datasheet in PDF](https://raw.githubusercontent.com/SeeedDocument/Lipo_Rider_Pro/master/res/DSE-CN3065.pdf)
--   [Schematic and Layout in Eagle format](https://raw.githubusercontent.com/SeeedDocument/Lipo_Rider_Pro/master/res/Lipo_Rider_Pro_v0.9b.rar)
--   [Schematic in pdf format](https://raw.githubusercontent.com/SeeedDocument/Lipo_Rider_Pro/master/res/LiPo_Rider_Pro_v0.9b.pdf)
+-   [CN3065 Datasheet in PDF](https://files.seeedstudio.com/wiki/Lipo_Rider_Pro/res/DSE-CN3065.pdf)
+-   [Schematic and Layout in Eagle format](https://files.seeedstudio.com/wiki/Lipo_Rider_Pro/res/Lipo_Rider_Pro_v0.9b.rar)
+-   [Schematic in pdf format](https://files.seeedstudio.com/wiki/Lipo_Rider_Pro/res/LiPo_Rider_Pro_v0.9b.pdf)
 -   [Get Lipo rider pro to charge Ipod or Iphone](http://forum.seeedstudio.com/viewtopic.php?f=4&t=3575)
 -   [Lithium Ion polymer Battery pack - 6A](https://www.seeedstudio.com/Lithium-Ion-polymer-Battery-pack-6A-p-602.html)
 

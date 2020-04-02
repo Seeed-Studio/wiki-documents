@@ -9,7 +9,7 @@ sku: 105990010
 tags: io_3v3, io_5v, plat_duino
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Atmel_AVRISP_STK500_USB_ISP_Programmer/master/img/Avrisp_stk500_usb.jpg)
+![](https://files.seeedstudio.com/wiki/Atmel_AVRISP_STK500_USB_ISP_Programmer/img/Avrisp_stk500_usb.jpg)
 
 <p style=":center"><a href="http://www.seeedstudio.com/depot/atmel-avrisp-stk500-usb-isp-programmer-p-207.html?cPath=132_135" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
 
@@ -46,8 +46,8 @@ tags: io_3v3, io_5v, plat_duino
 
 
 ## Hardware Connection
-<p style=":center"><a target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Atmel_AVRISP_STK500_USB_ISP_Programmer/master/img/AVRISP-1.JPG" border=0 /></a></p>
-<p style=":center"><a target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Atmel_AVRISP_STK500_USB_ISP_Programmer/master/img/AVRISP-2.jpg" border=0 /></a></p>
+<p style=":center"><a target="_blank"><img src="https://files.seeedstudio.com/wiki/Atmel_AVRISP_STK500_USB_ISP_Programmer/img/AVRISP-1.JPG" border=0 /></a></p>
+<p style=":center"><a target="_blank"><img src="https://files.seeedstudio.com/wiki/Atmel_AVRISP_STK500_USB_ISP_Programmer/img/AVRISP-2.jpg" border=0 /></a></p>
 
 ## Example: Burn Bootloader to Arduino UNO
 
@@ -67,13 +67,13 @@ tags: io_3v3, io_5v, plat_duino
 
     - Step 3. Select Platform
 
-        ![](https://raw.githubusercontent.com/SeeedDocument/Atmel_AVRISP_STK500_USB_ISP_Programmer/master/img/AVRISP-3.jpg)
+        ![](https://files.seeedstudio.com/wiki/Atmel_AVRISP_STK500_USB_ISP_Programmer/img/AVRISP-3.jpg)
 
     - Step 4. Select Device "ATmega328P"
-    ![](https://raw.githubusercontent.com/SeeedDocument/Atmel_AVRISP_STK500_USB_ISP_Programmer/master/img/AVRISP-4.jpg)
+    ![](https://files.seeedstudio.com/wiki/Atmel_AVRISP_STK500_USB_ISP_Programmer/img/AVRISP-4.jpg)
 
     - Step 5. Select Bootloader > Path:\arduino-1.0\hardware\arduino\bootloaders\optiboot\optiboot_atmega328.hex
-    ![](https://raw.githubusercontent.com/SeeedDocument/Atmel_AVRISP_STK500_USB_ISP_Programmer/master/img/AVRISP-5.png)
+    ![](https://files.seeedstudio.com/wiki/Atmel_AVRISP_STK500_USB_ISP_Programmer/img/AVRISP-5.png)
 
     - Step 6. Program
 
@@ -82,5 +82,5 @@ tags: io_3v3, io_5v, plat_duino
 
 - [USB Driver](https://github.com/SeeedDocument/Atmel_AVRISP_STK500_USB_ISP_Programmer/tree/master/USB%20Driver)
 - [aStudio4b528](https://files.seeedstudio.com/wiki/Atmel_AVRISP_STK500_USB_ISP_Programmer/aStudio4b528/aStudio413b528.exe)
-- [AVRISP User's Guide](https://raw.githubusercontent.com/SeeedDocument/Atmel_AVRISP_STK500_USB_ISP_Programmer/master/res/AVRISP.chm)
+- [AVRISP User's Guide](https://files.seeedstudio.com/wiki/Atmel_AVRISP_STK500_USB_ISP_Programmer/res/AVRISP.chm)
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

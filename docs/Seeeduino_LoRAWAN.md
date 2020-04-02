@@ -8,7 +8,7 @@ surveyurl: https://www.research.net/r/SeeeduinoLoRa
 sku: 102010026
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_LoRa/master/img/cover.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/img/cover.png)
 
 Seeeduino LoRaWAN is an Arduino development board with LoRaWan protocol embedded, through which you can get started quickly to experience LoRa's advantage in the field of IoT. Based on the communication module RHF76-052AM, Seeeduino LoRaWAN is compatible with LoRaWAN Class A/C and supports a variety of communication frequencies.
 
@@ -102,7 +102,7 @@ In brief, Groves is hundreds of sensor that in standard style, which is consist 
 
 ##Hardware Overview
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_LoRa/master/img/hw_LoRa.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/img/hw_LoRa.png)
 
 * **1.** Micro USB - Programming and supply power to the board
 * **2.** Grove connectors
@@ -168,11 +168,11 @@ First you need to install the latest Arduino IDE, and [ADD Seeeduino LoRa to you
 
 When the first time to insert the board, you should get a USB COM device name Seeeduino LoRaWAN that need to install a driver. Click on the below button to download driver for the board.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_LoRa/master/img/driver.png)](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/driver.zip)
+[![](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/img/driver.png)](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/driver.zip)
 
 To make sure the driver was installed successful, open your Device Manager to see if **Seeeduino LoRaWAN** exists.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_LoRa/master/img/device_manager.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/img/device_manager.png)
 
 **1. Blink**
 
@@ -208,15 +208,15 @@ If you can not find the Seeeduino LoRaWAN, please check [How to Add Seeed boards
 
 * Click on **Tools > Port** to select a right port number. (*Don't choose COM1*)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_LoRa/master/img/blink1.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/img/blink1.png)
 
 Then click on the **Upload** button on the left-top of Arduino IDE, seconds later the sketch was uploaded successful.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_LoRa/master/img/blink2.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/img/blink2.png)
 
 If the uploading is success, you should the some info in red and please the on-board LED, it's blinking.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_LoRa/master/img/blink3.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/img/blink3.png)
 
 **2. Battery**
 
@@ -337,7 +337,7 @@ void loop(void)
 
 After both of the sketch is well uploaded, open the serial monitor of the receiving board, check if you can get some data as below.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_LoRa/master/img/monitor_rx.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/img/monitor_rx.png)
 
 **3.3 ABP**
 
@@ -550,7 +550,7 @@ void loop()
 
 - Step 2. Open Serial Monitor then you will get data from GPS.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_LoRa/master/img/gps.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/img/gps.png)
 
 
 **4.2 Lat and Lng**
@@ -764,7 +764,7 @@ AT+VER
 ```
 Then you will get the version of your board.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_LoRa/master/img/VER.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/img/VER.png)
 
 The firmware version of is 2.0.10, if you want to update firmware, few steps need to follow.
 
@@ -798,11 +798,11 @@ void loop()
 
 - Step 3. Click to download the latest firmware, which is a .bin file.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_LoRa/master/img/firmware_bin.png)](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/rhf76-052am-v2.0.10-20160923.ebin%202.bin)
+[![](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/img/firmware_bin.png)](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/rhf76-052am-v2.0.10-20160923.ebin%202.bin)
 
 - Step 4. Open PuTTy and connect to the board
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_LoRa/master/img/firmware_1.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/img/firmware_1.png)
 
 !!!Tip
     You can find the latest PuTTy here: [http://www.extraputty.com/download.php](http://www.extraputty.com/download.php)
@@ -811,7 +811,7 @@ void loop()
 Click on **Files Transfer > Ymodem > Send**, and select the .bin file we had downloaded at Step4.
 
 - Step 6. Then the updating is started.
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_LoRa/master/img/firmware_4.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/img/firmware_4.png)
 
 
 ## FAQ

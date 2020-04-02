@@ -122,7 +122,7 @@ void loop() {
 
 | Raspberry Pi | Grove Base Hat for RasPi | Grove - TDS Sensor|
 |--------------|-------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/rasp.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/master/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-TDS-Sensor/img/Grove-TDS-Sensor-thumbnail.jpg)
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-TDS-Sensor/img/Grove-TDS-Sensor-thumbnail.jpg)
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-TDS-Sensor-p-4400.html)|
 
 - **Step 2.** Plug the Grove Base Hat into Raspberry Pi.

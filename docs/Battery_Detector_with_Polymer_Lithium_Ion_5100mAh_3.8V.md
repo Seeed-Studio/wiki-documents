@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/Battery_Detector_with_Polymer_Lithium_Ion_
 sku: 110060467
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V/master/img/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V_700_s.jpg)
+![](https://files.seeedstudio.com/wiki/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V/img/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V_700_s.jpg)
 
 Battery Detector with Polymer Lithium Ion 5100mAh 3.8V contains two items: a 1050 mAh lithium-ion battery and a battery power detector to measure the power remain in a li-ion battery.
 
@@ -74,7 +74,7 @@ Specifications
 | Indication manner | Four LEDs (we will detail it later)                                                                                                       |
 | Sockets           | Three sockets for different battery connector and two battery-soldering pads (we will detail it later)                                    |
 | Dimensions        | 30(width)×25(depth) mm                                                                                                                    |
-| CN1185            | [Datasheet](https://raw.githubusercontent.com/SeeedDocument/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V/master/res/CN1185_Datasheet.pdf)                                      |
+| CN1185            | [Datasheet](https://files.seeedstudio.com/wiki/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V/res/CN1185_Datasheet.pdf)                                      |
 | Weight            | 3.2 g                                                                                                                                     |
 | Notes             | Only connect a single battery to this module; The input voltage to this module should be less than 9 volts, or it will damage this module. |
 
@@ -128,7 +128,7 @@ If no version number is mentioned for a specific platform, it means this product
 Hardware Overview
 -----------------
 
-![](https://raw.githubusercontent.com/SeeedDocument/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V/master/img/Battery_kit-3.7V_520mAh_Battery_power_detector_components_description_1200_s.jpg)
+![](https://files.seeedstudio.com/wiki/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V/img/Battery_kit-3.7V_520mAh_Battery_power_detector_components_description_1200_s.jpg)
 
 -   **CN1185**, a voltage monitoring circuit.
 -   **Battery-soldering pads**, to solder battery's leads on.
@@ -145,24 +145,24 @@ Getting Started
 
 Connect battery and battery power detector as in the following image. You can see LEDs are *ON* indicates actual power remains.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V/master/img/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V_700_s.jpg)
+![](https://files.seeedstudio.com/wiki/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V/img/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V_700_s.jpg)
 
 <!-- \[\[|600px|none|Front view \]\] -->
 
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V/master/res/110060467_Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V_Battery_Power_Detector.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V/res/110060467_Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V_Battery_Power_Detector.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 Resources
 ---------
 
--   [Schematic(Eagle) file](https://raw.githubusercontent.com/SeeedDocument/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V/master/res/110060467_Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V_Battery_Power_Detector.zip)
--   [CN1185 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V/master/res/CN1185_Datasheet.pdf)
--   [Battery Datasheet](https://raw.githubusercontent.com/SeeedDocument/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V/master/res/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V_Battery_Datasheet.pdf)
--   [Certifications and Test Report for this Battery](https://raw.githubusercontent.com/SeeedDocument/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V/master/res/Certifications_and_Test_Report.zip)
+-   [Schematic(Eagle) file](https://files.seeedstudio.com/wiki/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V/res/110060467_Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V_Battery_Power_Detector.zip)
+-   [CN1185 Datasheet](https://files.seeedstudio.com/wiki/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V/res/CN1185_Datasheet.pdf)
+-   [Battery Datasheet](https://files.seeedstudio.com/wiki/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V/res/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V_Battery_Datasheet.pdf)
+-   [Certifications and Test Report for this Battery](https://files.seeedstudio.com/wiki/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V/res/Certifications_and_Test_Report.zip)
 
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V -->

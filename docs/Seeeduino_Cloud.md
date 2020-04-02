@@ -8,7 +8,7 @@ surveyurl: https://www.surveymonkey.com/r/Seeeduino_Cloud
 sku: 102010021
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/seeeduino_cloud_cover.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/seeeduino_cloud_cover.jpg)
 
 Seeeduino Cloud is a microcontroller board based on [Dragino WiFi IoT module HE](http://www.dragino.com/products/linux-module/item/87-he.html) and ATmega32u4. HE is a high performance, low cost 150M, 2.4G WiFi module which means “core” in Chinese and with an Open Source OpenWrt system inside. Seeeduino Cloud is also an Arduino compatible board, 100% compatible to Grove, shield and IDEs(Arduino IDE 1.5.3 and later). Except for the normal interface of Arduino, Seeeduino Cloud has built-in Ethernet and WiFi support, a USB-A port which makes it very suitable for those prototype design that need network connection and mass storage. It is also a good idea to make Seeeduino Cloud to be an IoT gateway.
 
@@ -25,7 +25,7 @@ Here are some funny projects for your reference.
 
 |Simple Wi-Fi Messager|Send data to Google Docs|Solar Panel Monitoring System|
 |--------|----------|---------|
-|![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/example_1.jpg)|![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/example_2.jpg)|![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/example_3.jpg)|
+|![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/example_1.jpg)|![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/example_2.jpg)|![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/example_3.jpg)|
 |[Make it Now](http://www.instructables.com/id/Arduino-Yun-Messager/)|[Make it Now](http://www.instructables.com/id/Google-Docs-and-the-Arduino-Y%C3%BAn/)|[Make it Now](http://www.instructables.com/id/Arduino-Yun-Solar-Panel-Monitoring-System/)|
 
 
@@ -74,7 +74,7 @@ Because Seeeduino Cloud has two processors, this section shows the characteristi
 
 The images below show an overview of Seeeduino Cloud hardware features. The pin-out and alternate functions of various pins of Seeeduino Cloud are shown in the pin-out diagram. This could be used as a quick reference.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/seeeduino_cloud_hardware.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/seeeduino_cloud_hardware.png)
 
 
 * **RJ45 Ethernet Port**
@@ -146,23 +146,23 @@ There is no need to install drivers for Ubuntu 10.0.4 and later, but make sure p
 
 Open the LED blink example sketch: File > Examples >01.Basics > Blink.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/UNO_Load_Blink.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/UNO_Load_Blink.jpg)
 
 **Select your board type and port**
 
 You'll need to select the entry in the Tools > Board menu that corresponds to your Arduino or Genuino board.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/YUN_SelBoard.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/YUN_SelBoard.jpg)
 
 Select the serial device of the board from the Tools | Serial Port menu. This is likely to be COM3 or higher (COM1 and COM2 are usually reserved for hardware serial ports). To find out, you can disconnect your board and re-open the menu; the entry that disappears should be the Arduino or Genuino board. Reconnect the board and select that serial port. When your board is properly configured on WiFi, you will find it in the Port list, as in our screenshot.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/YUN_SelPort.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/YUN_SelPort.jpg)
 
 **Upload the program**
 
 Now, simply click the "Upload" button in the environment. Wait a few seconds - you should see the RX and TX leds on the board flashing. If the upload is successful, the message "Done uploading." will appear in the status bar.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/UNO_Upload.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/UNO_Upload.png)
 
 A few seconds after the upload finishes, you should see the LED(D13) on the board start to blink (in green). If it does, congratulations! You’ve gotten Arduino up-and-running. If you have problems, please see the troubleshooting suggestions.
 
@@ -181,11 +181,11 @@ You can connect your computer to this network as shown below. Your computer will
 
 After connect SeeeduinoCloud-AXXXX, type 172.31.255.254 or 192.168.240.1 in browser search box and you will connect to Seeeduino Cloud with web UI. The default password is "seeeduino", then click LOG IN.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/seeeduino_cloud_login.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/seeeduino_cloud_login.png)
 
 Click "SYSTEM", select your Wi-Fi network, enter the password and click "CONFIGURE & RESTART".
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/seeeduino_cloud_sta.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/seeeduino_cloud_sta.png)
 
 **3. Onboard Ethernet**
 
@@ -197,25 +197,25 @@ Below is detailed by using Browser to upgrade new firmware.
 
 * Burn File -> Examples -> Birdge -> YunSerialTerminal.ino to Seeeduino Cloud
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/YunSerialTerminal.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/YunSerialTerminal.png)
 
 * Find ip of Seeeduino Cloud through type `ifconfig` on the putty that can communicate with Seeeduino Cloud
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/putty_configure.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/putty_configure.png)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/inet_addr.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/inet_addr.png)
 
 * Visit Seeeduino Cloud by typing ip of Seeeduino Cloud in the Browser. and the password is `seeeduino`
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/password.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/password.png)
 
 * Get [newest_Firmware](http://www.dragino.com/downloads/index.php?dir=motherboards/ms14/Firmware/Yun/Newest_Firmware/)
 
 * Upgrade through the upgrade button.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/upgrade.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/upgrade.png)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/upgrade_configure.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/upgrade_configure.png)
 
 ### Terminal
 
@@ -229,7 +229,7 @@ username: root
 password: seeeduino
 ```
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/seeeduino_cloud_terminal.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/seeeduino_cloud_terminal.png)
 
 
 ### Yun Bridge Library
@@ -351,7 +351,7 @@ String getTimeStamp() {
 
 ```
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Cloud/master/img/500px-SeeeduinoCloud_Sketch_USB.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/500px-SeeeduinoCloud_Sketch_USB.png)
 
 
 ## Schematic Online Viewer

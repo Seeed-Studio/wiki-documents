@@ -8,7 +8,7 @@ surveyurl: https://www.surveymonkey.com/r/base_shield_v2
 sku: 103030000
 ---
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Base_Shield_V2/master/img/Base_Shield_v2-1.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Base_Shield_V2/img/Base_Shield_v2-1.png)
 
 Arduino Uno is the most popular Arduino board so far, however it is sometimes frustrating when your project requires a lot of sensors or Leds and your jumper wires are in a mess. The purpose of creating the Base Shield is to help you get rid of bread board and jumper wires. With the rich grove connectors on the base board, you can add all the grove modules to the Arduino Uno conveniently! The pinout of Base Shield V2 is the same as Arduino Uno R3.
 
@@ -73,7 +73,7 @@ The Base Shield is tested and fully compatible with following boards:
 
 | Seeeduino V4.2 | Base Shield|  Grove - Buzzer |Grove - Button|
 |--------------|-------------|-----------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Base_Shield_V2/img/Buzzer.png)|![enter image description here](https://files.seeedstudio.com/wiki/Base_Shield_V2/img/button_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Base_Shield_V2/img/Buzzer.png)|![enter image description here](https://files.seeedstudio.com/wiki/Base_Shield_V2/img/button_s.jpg)|
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|[Get ONE Now](https://www.seeedstudio.com/category/Grove-Button-p-766.html)|
 
 - Step 2. Connect Grove - Buzzer to port D3 of Base Shield.
@@ -81,7 +81,7 @@ The Base Shield is tested and fully compatible with following boards:
 - Step 4. Plug Base Shield into Seeeduino.
 - Step 5. Connect Seeeduino to PC through a USB cable.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Base_Shield_V2/master/img/Base_Shield_v2-3.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Base_Shield_V2/img/Base_Shield_v2-3.png)
 
 ### Software
 

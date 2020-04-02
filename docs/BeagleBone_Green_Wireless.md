@@ -201,13 +201,13 @@ Using either Chrome or Firefox (Internet Explorer will NOT work), browse to the 
 Click [http://192.168.7.2](http://192.168.7.2) to launch to your Seeed Studio BeagleBone® Green Wireless.
 Older software images require you to EJECT the BeagleBone® drive to start the network. With the latest software image, that step is no longer required.
 
-[![Click to view larger image](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/launch.png)](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/launch.png)
+[![Click to view larger image](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/launch.png)](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/launch.png)
 
 ###STEP4. Cloud9 IDE
 
 To begin editing programs that live on your board, you can use the Cloud9 IDE by click
 
-[![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/cloud9.png)](http://192.168.7.2:3000/ide.html)
+[![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/cloud9.png)](http://192.168.7.2:3000/ide.html)
 
 ###STEP5. Connect your Seeed Studio BeagleBone® Green Wireless to Wi-Fi
 
@@ -261,7 +261,7 @@ You need to update the board to latest software to keep a better performance, he
 
 First of all, you have to download the suitable image here.
 
-[![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green_Wireless/master/images/download_the_lastest_image_of_bbgw.png)](http://beagleboard.org/latest-images?tdsourcetag=s_pcqq_aiomsg)
+[![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/download_the_lastest_image_of_bbgw.png)](http://beagleboard.org/latest-images?tdsourcetag=s_pcqq_aiomsg)
 
 !!!Note
     Due to sizing necessities, this download may take about 30 minutes or more.
@@ -285,11 +285,11 @@ Download and install [Image Writer for Windows](https://sourceforge.net/projects
 
 You need a SD adapter to connect your microSD card to your computer at the first. Then use the software Image Write for Windows to write the decompressed image to your SD card.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/win32_disk_image.png)
+![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/win32_disk_image.png)
 
 Click on **Write** button, then the process is started.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/win32_disk_image_process.png)
+![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/win32_disk_image_process.png)
 
 !!!Note
     * You may see a warning about damaging your device. This is fine to accept as long as you are pointing to your SD card for writing.
@@ -320,7 +320,7 @@ Change to:
 
 Then you will find the 4 user led light as below:
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/flashing.gif)
+![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/flashing.gif)
 
 !!!Note
     If you don't find the upper tracing light, please power down and power up the board.
@@ -471,12 +471,12 @@ You will need some expansion board when you start a project. There're many cape 
 
 |Grove Cape| Motor Bridge Cape|HDMI Cape|
 |------------|----------------|----------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/product1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/product2.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/product3.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product3.jpg)|
 |[GET ONE NOW!](http://www.seeedstudio.com/Grove-Cape-for-BeagleBone-Series-p-1718.html)|[GET ONE NOW!](http://www.seeedstudio.com/Motor-Bridge-Cape-p-2569.html)|[GET ONE NOW!](http://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-HDMI-Cape-p-2570.html)|
 
 |Grove Cape| 5 Inch LCD|7 Inch LCD|
 |------------|----------------|----------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/product4.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/product5.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/product6.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product6.jpg)|
 |[GET ONE NOW!](http://www.seeedstudio.com/Grove-Base-Cape-for-Beaglebone-v2.0-p-2644.html)|[GET ONE NOW!](http://www.seeedstudio.com/5-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2642.html)|[GET ONE NOW!](http://www.seeedstudio.com/7-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2643.html)|
 
 ## References 

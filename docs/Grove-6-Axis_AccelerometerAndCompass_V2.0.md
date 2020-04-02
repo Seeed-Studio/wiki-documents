@@ -10,7 +10,7 @@ sku: 101020081
 tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_bbg
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-6-Axis_AccelerometerAndCompass_V2.0/master/img/Accelerometer_And_Compass_v2.JPG)
+![](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/img/Accelerometer_And_Compass_v2.JPG)
 
 The Grove –6-Axis Accelerometer&Compass V2.0 is a 3-axis accelerometer combined with a 3-axis magnetic sensor. It is an upgraded version of Grove - 6-Axis Accelerometer&Compass V1.0 and based on the sensor module LSM303D which has a selectable linear acceleration full scale range of ±2g / ±4g / ±8g / ±16g and a selectable magnetic field full scale range of ±2 /±4 / ±8 / ±12 gauss. Both the magnetic parts and the accelerometer parts can be powered down separately to reduce the power consumption. The Arduino can get these data via the I2C interface with the given library for this module.
 
@@ -46,7 +46,7 @@ The Grove –6-Axis Accelerometer&Compass V2.0 is a 3-axis accelerometer combine
 ##Hardware Overview
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-6-Axis_AccelerometerAndCompass_V2.0/master/img/Grove-6-Axis_AccelerometerAndCompass_V2.0_inter.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/img/Grove-6-Axis_AccelerometerAndCompass_V2.0_inter.jpg)
 
 -   ①Grove interface, connect to I2C
 -   ②SPI Interface
@@ -233,7 +233,7 @@ void printValues()
 
  **Step 5.** Open the serial monitor, you will see the output result of Color Sensor as shown below:
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-6-Axis_AccelerometerAndCompass_V2.0/master/img/6-Axis_AccelerometerAndCompass_V2.0_demo.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/img/6-Axis_AccelerometerAndCompass_V2.0_demo.jpg)
 
 **Step 6.** You can see the acceleration values and the clockwise angle between the magnetic north and x-axis.
 
@@ -264,7 +264,7 @@ And also the the angle between the magnetic north and the projection of positive
 - **Step 4.** Connect the Raspberry to PC through USB cable.
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-6-Axis_AccelerometerAndCompass_V2.0/master/img/with_rpi.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/img/with_rpi.jpg)
 
 
 
@@ -351,11 +351,11 @@ Here is the result:
 
 ## References
 
-Click [here](https://raw.githubusercontent.com/SeeedDocument/Grove-6-Axis_AccelerometerAndCompass_V2.0/master/res/LSM303_application_note.pdf) to know more about this parameter.
+Click [here](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/res/LSM303_application_note.pdf) to know more about this parameter.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-6-Axis_AccelerometerAndCompass_V2.0/master/img/Airplane.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/img/Airplane.jpg)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-6-Axis_AccelerometerAndCompass_V2.0/master/img/Airplane_calculated.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/img/Airplane_calculated.jpg)
 
 <div class="admonition note">
 <p class="admonition-title">Notes</p>
@@ -363,7 +363,7 @@ Click [here](https://raw.githubusercontent.com/SeeedDocument/Grove-6-Axis_Accele
 <p>2.  When test The clockwise angle between the magnetic north and x-axis, you can align the device Xa axis to any direction, but do not make it face down. Refer to the below picture:</p>
 </div>
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-6-Axis_AccelerometerAndCompass_V2.0/master/img/Testing.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/img/Testing.jpg)
 
 
 
@@ -373,8 +373,8 @@ Click [here](https://raw.githubusercontent.com/SeeedDocument/Grove-6-Axis_Accele
 -  **[Library]** [6-Axis Accelerometer&Compass v2.0 Library for arduino](https://github.com/Seeed-Studio/6Axis_Accelerometer_And_Compass_v2)
 
 - **[Library]** [6-Axis Accelerometer&Compass v2.0 Library for raspberry pi](https://github.com/DexterInd/GrovePi/blob/master/Software/Python/grove_6axis_acc_compass)
--  **[Datasheet]** [LSM303D\_datashet](https://raw.githubusercontent.com/SeeedDocument/Grove-6-Axis_AccelerometerAndCompass_V2.0/master/res/LSM303D_datasheet.pdf)
--  **[Eagle]** [6-Axis Accelerometer&Compass v2.0 eagle file](https://raw.githubusercontent.com/SeeedDocument/Grove-6-Axis_AccelerometerAndCompass_V2.0/master/res/Grove-6-Axis_AccelerometerAndCompass_v2.0_sch_pcb.zip)
+-  **[Datasheet]** [LSM303D\_datashet](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/res/LSM303D_datasheet.pdf)
+-  **[Eagle]** [6-Axis Accelerometer&Compass v2.0 eagle file](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/res/Grove-6-Axis_AccelerometerAndCompass_v2.0_sch_pcb.zip)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_6-Axis_Accelerometer&Compass_V2.0 -->
 

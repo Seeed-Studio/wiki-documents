@@ -160,7 +160,7 @@ This is a unique ring– it has a florid body with 24 controllable LEDs. Maybe i
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
-![cc](https://raw.githubusercontent.com/SeeedDocument/Grove-Circular_LED/master/img/cc_Circular_LED.png)
+![cc](https://files.seeedstudio.com/wiki/Grove-Circular_LED/img/cc_Circular_LED.png)
 
 Upload the program to your Arduino/Seeeduino.
 
@@ -182,7 +182,7 @@ Upload the program to your Arduino/Seeeduino.
 
 - [Grove-circular LED eagle files](https://files.seeedstudio.com/wiki/Grove-Circular_LED/res/Grove-circular_LED_eagle_files.zip)
 
-- [Codecraft CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove-Circular_LED/master/res/Grove_Circular_LED_CDC_File.zip)
+- [Codecraft CDC File](https://files.seeedstudio.com/wiki/Grove-Circular_LED/res/Grove_Circular_LED_CDC_File.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

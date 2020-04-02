@@ -72,7 +72,7 @@ The following sketch demonstrates a simple application of measure the measure th
 
 | Seeeduino V4.2 | Base Shield| Grove - Infrared Temperature Sensor |
 |--------------|-------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor/img/JUH4jM8D85pxTHah3QXYxhe7.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor/img/JUH4jM8D85pxTHah3QXYxhe7.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Infrared-Temperature-Sensor-p-1058.html)|
 
 
@@ -100,7 +100,7 @@ The following sketch demonstrates a simple application of measure the measure th
 
 #### Software
 
-- **Step 1.** Download the [Demo Code](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Temperature_Sensor/master/res/MeasureTemperature.zip),then double click it to open the demo.
+- **Step 1.** Download the [Demo Code](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor/res/MeasureTemperature.zip),then double click it to open the demo.
 
 
 Before measuring temperature, you need simple setting. Following the instruction below before your test and you will gain a accurately result.
@@ -110,8 +110,8 @@ Before measuring temperature, you need simple setting. Following the instruction
 
 After uploading the demo program, make the sensor in normal environment more than 5 minutes that make the sensor temperature the same as surrounding temperature. Then open the serial monitor to check the voltage which the sensor output. Ideally, when the ambient temperature is equal to the temperature sensor, the infrared sensor (TP-538U) output is 0V.We should regulate the reference voltage which offset at 0.5V by hardware. As shown below, the sensor voltage is 0.014V, we just need to change the offset\_vol value as0.014 which you obtain from the serial monitor in program.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Temperature_Sensor/master/img/Infrared_Temperature_Sensor_code2.jpg) 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Temperature_Sensor/master/img/Serialmonitor.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor/img/Infrared_Temperature_Sensor_code2.jpg) 
+![](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor/img/Serialmonitor.jpg)
 
 
 - **Step 3.** Regulate the sensor detected distance
@@ -122,7 +122,7 @@ The specific method for measuring is fill with ice and water in a dark container
 
 Now we can measure the surrounding temperature around the sensor. The sensor is apply in a nominal distance, you can have a try in other distance, but the distance-temperature diagram neither sensor’s manufacturer nor we obtained, you can draw it follow the two instructions above. We reserve variable **"temperature_range"** in demo code. We assume that the target distance is 3 cm, the coefficient which you measured may be 5 more or less. Wish you have a fun try.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Temperature_Sensor/master/img/Infrared_Temperature_Sensor_Code_1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor/img/Infrared_Temperature_Sensor_Code_1.jpg)
 
 
 
@@ -132,7 +132,7 @@ Now we can measure the surrounding temperature around the sensor. The sensor is 
 <li>In order to gain a accurate measured, the distance(D) and target diament(S) rate D:S must less than 0.5.</li></ol>
 </div>
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Temperature_Sensor/master/img/Dsdiagram.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor/img/Dsdiagram.jpg)
 
 
 - **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
@@ -145,7 +145,7 @@ The result should be like:
 ![](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor/img/result_arduino.png)
 
 # Grove-Infrared Temperature Sensor V1.0
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Temperature_Sensor/master/res/Infrared_Temperature_Sensor_V1.0_egale_file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor/res/Infrared_Temperature_Sensor_V1.0_egale_file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 # Grove-Infrared Temperature Sensor V1.2
@@ -156,10 +156,10 @@ The result should be like:
 
 
 - **[Zip]** [Grove-Infrared Temperature Sensor V1.2 Eagle File](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor/res/Grove-Infrared_Temperature_Sensor_v1.2.zip)
-- **[Zip]** [Grove-Infrared Temperature Sensor V1.0 Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Temperature_Sensor/master/res/Infrared_Temperature_Sensor_V1.0_egale_file.zip)
-- **[Zip]** [OTP-538U Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Temperature_Sensor/master/res/OTP-538Udatasheet.zip)
-- **[Zip]** [Demo Code](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Temperature_Sensor/master/res/MeasureTemperature.zip)
-- **[Zip]** [Infrared Temperature Demo Code with SerialLCD](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Temperature_Sensor/master/res/Infrared_temperature_demo_code_with_serialLCD.zip)
+- **[Zip]** [Grove-Infrared Temperature Sensor V1.0 Eagle File](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor/res/Infrared_Temperature_Sensor_V1.0_egale_file.zip)
+- **[Zip]** [OTP-538U Datasheet](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor/res/OTP-538Udatasheet.zip)
+- **[Zip]** [Demo Code](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor/res/MeasureTemperature.zip)
+- **[Zip]** [Infrared Temperature Demo Code with SerialLCD](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor/res/Infrared_temperature_demo_code_with_serialLCD.zip)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Infrared_Temperature_Sensor -->
 

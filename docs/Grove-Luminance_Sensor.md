@@ -10,7 +10,7 @@ sku: 101020076
 tags: grove_analog, io_3v3, io_5v, plat_duino, plat_linkit
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Luminance_Sensor/master/img/Luminance.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Luminance_Sensor/img/Luminance.jpg)
 
 Grove - Luminance Sensor detects the intensity of the ambient light on a surface area. It uses **APDS-9002** analog output ambient light photo sensor. This has responsivity closer to human eye.
 
@@ -49,7 +49,7 @@ Demonstration
 
 1.Plug the Grove-Luminance sensor to the A0 port of Seeeduino Lotus with a Grove connector.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Luminance_Sensor/master/img/Interface_Grove-Luminance.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Luminance_Sensor/img/Interface_Grove-Luminance.jpg)
 
 2.Copy the following code in an arduino sketch.
 
@@ -146,24 +146,24 @@ float FmultiMap(float val, float * _in, float * _out, uint8_t size)
 
 5.Open the serial monitor.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Luminance_Sensor/master/img/LuminanceOutput.png)
+![](https://files.seeedstudio.com/wiki/Grove-Luminance_Sensor/img/LuminanceOutput.png)
 
 6.The Vout and Lux are displayed in the serial monitor.
 
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-Luminance_Sensor/master/res/Grove-Luminance_Sensor.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Luminance_Sensor/res/Grove-Luminance_Sensor.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 Resources
 --------
 
--   [Grove-Luminance Sensor Demo code](https://raw.githubusercontent.com/SeeedDocument/Grove-Luminance_Sensor/master/res/Grove-Luminance.zip)
--   [Grove-Luminance Sensor eagle file](https://raw.githubusercontent.com/SeeedDocument/Grove-Luminance_Sensor/master/res/Grove-Luminance_Sensor.zip)
--   [Grove-Luminance Sensor Schematic (PDF)](https://raw.githubusercontent.com/SeeedDocument/Grove-Luminance_Sensor/master/res/Grove-Luminance_Sensor_v1.0.pdf)
--   [APDS-900 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Luminance_Sensor/master/res/APDS-9002-.pdf)
+-   [Grove-Luminance Sensor Demo code](https://files.seeedstudio.com/wiki/Grove-Luminance_Sensor/res/Grove-Luminance.zip)
+-   [Grove-Luminance Sensor eagle file](https://files.seeedstudio.com/wiki/Grove-Luminance_Sensor/res/Grove-Luminance_Sensor.zip)
+-   [Grove-Luminance Sensor Schematic (PDF)](https://files.seeedstudio.com/wiki/Grove-Luminance_Sensor/res/Grove-Luminance_Sensor_v1.0.pdf)
+-   [APDS-900 Datasheet](https://files.seeedstudio.com/wiki/Grove-Luminance_Sensor/res/APDS-9002-.pdf)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Luminance_Sensor -->
 

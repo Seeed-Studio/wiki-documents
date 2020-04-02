@@ -10,7 +10,7 @@ sku: 101020090
 tags: grove_digital, io_5v, plat_duino
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Atomization/master/img/Water_Atomization_product_1200.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Water_Atomization/img/Water_Atomization_product_1200.jpg)
 
 Grove - Water Atomization is a fine Grove module for you to develop an atomizer or an atomizer module in your applications easily. With a few simple steps, you can prototype an atomizer. It has grove interface which make it easily applied to plenty of applications. A humidifier is a basic application it can be built with, you can develop more advanced and interesting objects with digital scent technology and any other situation in which atomization is required.
 
@@ -61,7 +61,7 @@ Platforms Supported
 Hardware Overview
 -----------------
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Atomization/master/img/Water_Atomization_hardware_overview_1200.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Water_Atomization/img/Water_Atomization_hardware_overview_1200.jpg)
 
 **Grove interface**   
 Connect main control board such as Seeeduino board with driver board.
@@ -106,7 +106,7 @@ We have chosen Seeeduino in this case.
 
 ### **Hardware connections**
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Atomization/master/img/Water_Atomization_hardware_connection.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Water_Atomization/img/Water_Atomization_hardware_connection.jpg)
 
 ### **A little demo**
 
@@ -157,14 +157,14 @@ The bottom side is the side with hollow which is supposed to face downside. Let 
 
 4.Now if you touch Grove touch sensor, you can see vapor produced.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Atomization/master/img/Water_Atomization_hardware_connection.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Water_Atomization/img/Water_Atomization_hardware_connection.jpg)
 
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
 Do not touch transducer interface pins directly because peak output voltage of Drier board can be 65V.
 </div>
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Atomization/master/img/High_voltage_warning_600.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Water_Atomization/img/High_voltage_warning_600.jpg)
 
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
@@ -190,7 +190,7 @@ The inductor <span style="font-weight:bold">L2</span> (marked in red rectangle a
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
-![cc](https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Atomization/master/img/cc_Water_Atomization.png)
+![cc](https://files.seeedstudio.com/wiki/Grove-Water_Atomization/img/cc_Water_Atomization.png)
 
 Upload the program to your Arduino/Seeeduino.
 
@@ -198,16 +198,16 @@ Upload the program to your Arduino/Seeeduino.
     When the code finishes uploaded, the water atomization starts atomize when you push the button.
 
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Atomization/master/res/Schematic_file_in_Eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Water_Atomization/res/Schematic_file_in_Eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 Resources
 ---------
 
-- [Schematic files in Eagle](https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Atomization/master/res/Schematic_file_in_Eagle.zip)
-- [Schematic files in PDF](https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Atomization/master/res/Schematic_file_in_PDF.zip)
-- [Codecraft CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Atomization/master/res/Grove_Water_Atomization_CDC_File.zip)
+- [Schematic files in Eagle](https://files.seeedstudio.com/wiki/Grove-Water_Atomization/res/Schematic_file_in_Eagle.zip)
+- [Schematic files in PDF](https://files.seeedstudio.com/wiki/Grove-Water_Atomization/res/Schematic_file_in_PDF.zip)
+- [Codecraft CDC File](https://files.seeedstudio.com/wiki/Grove-Water_Atomization/res/Grove_Water_Atomization_CDC_File.zip)
 
 
 ## Project

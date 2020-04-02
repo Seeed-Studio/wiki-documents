@@ -91,9 +91,9 @@ The WM8960 is a low power stereo codec featuring Class D speaker drivers to prov
 ![](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/img/system_diag.png)
 
 **Dimensions**
-![](https://raw.githubusercontent.com/SeeedDocument/ReSpeaker-Mic-Array-v2.1/master/img/drawing1.png)
+![](https://files.seeedstudio.com/wiki/ReSpeaker-Mic-Array-v2.1/img/drawing1.png)
 
-![](https://raw.githubusercontent.com/SeeedDocument/ReSpeaker-Mic-Array-v2.1/master/img/drawing2.png)
+![](https://files.seeedstudio.com/wiki/ReSpeaker-Mic-Array-v2.1/img/drawing2.png)
 
 ## Applications
 

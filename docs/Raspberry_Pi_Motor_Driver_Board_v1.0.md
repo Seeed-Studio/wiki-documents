@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/Raspberry_Pi_Motor_Driver_Board_v1_0
 sku: 103030031
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Raspberry_Pi_Motor_Driver_Board_v1.0/master/img/Raspberry_Pi_Motor_Board_v1.0.jpg) 
+![](https://files.seeedstudio.com/wiki/Raspberry_Pi_Motor_Driver_Board_v1.0/img/Raspberry_Pi_Motor_Board_v1.0.jpg) 
 
 Raspberry Pi Motor Driver Board v1.0 is based on the Freescale MC33932 dual H-Bridge Power IC, which can control inductive loads with currents up to 5.0A peak per single bridge. It lets you drive two DC motors with your Raspberry Pi B/B+/A+ and Pi 2 Model B, controlling the speed and direction of each one independently.
 
@@ -180,7 +180,7 @@ mm
 Hardware Overview
 -----------------
 
-![](https://raw.githubusercontent.com/SeeedDocument/Raspberry_Pi_Motor_Driver_Board_v1.0/master/img/Raspberry_Pi_Motor_Board_v1.0_p3.jpg)
+![](https://files.seeedstudio.com/wiki/Raspberry_Pi_Motor_Driver_Board_v1.0/img/Raspberry_Pi_Motor_Board_v1.0_p3.jpg)
 
 -   **J1**:DC Input connector.
 -   **J2**:Motor Driver output connector.
@@ -206,7 +206,7 @@ This demo is using Raspberry Pi B to show that Raspberry Pi Motor Driver Board v
 
 Connect to network and power.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Raspberry_Pi_Motor_Driver_Board_v1.0/master/img/Raspberry_Pi_Motor_Board_v1.0_p6.jpg)
+![](https://files.seeedstudio.com/wiki/Raspberry_Pi_Motor_Driver_Board_v1.0/img/Raspberry_Pi_Motor_Board_v1.0_p6.jpg)
 
 ### Software Part
 
@@ -339,27 +339,27 @@ It means Out 1 and Out 2 (Out 3 and Out 4) connect Motor A(B) forward and back.
 
 Serial console:
 
-![](https://raw.githubusercontent.com/SeeedDocument/Raspberry_Pi_Motor_Driver_Board_v1.0/master/img/Raspberry_Pi_Motor_Board_v1.0_p4.jpg)
+![](https://files.seeedstudio.com/wiki/Raspberry_Pi_Motor_Driver_Board_v1.0/img/Raspberry_Pi_Motor_Board_v1.0_p4.jpg)
 
 Raspberry Pi Motor Driver Board v1.0:
 Green LED and Blue LED alternately light up.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Raspberry_Pi_Motor_Driver_Board_v1.0/master/img/Raspberry_Pi_Motor_Board_v1.0_p5.jpg)
+![](https://files.seeedstudio.com/wiki/Raspberry_Pi_Motor_Driver_Board_v1.0/img/Raspberry_Pi_Motor_Board_v1.0_p5.jpg)
 
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Raspberry_Pi_Motor_Driver_Board_v1.0/master/res/Raspberry_Pi_Motor_Driver_Board_v1.0_sch_pcb_20150119.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Raspberry_Pi_Motor_Driver_Board_v1.0/res/Raspberry_Pi_Motor_Driver_Board_v1.0_sch_pcb_20150119.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 Resources
 ---------
 
--   [Eagle file Raspberry Pi Motor Driver Board v1.0](https://raw.githubusercontent.com/SeeedDocument/Raspberry_Pi_Motor_Driver_Board_v1.0/master/res/Raspberry_Pi_Motor_Driver_Board_v1.0_sch_pcb_20150119.zip)
--   [PDF Raspberry Pi Motor Driver Board v1.0](https://raw.githubusercontent.com/SeeedDocument/Raspberry_Pi_Motor_Driver_Board_v1.0/master/res/Raspberry_Pi_Motor_Driver_Board_v1.0.pdf)
--   [MC33932VW Datasheet](https://raw.githubusercontent.com/SeeedDocument/Raspberry_Pi_Motor_Driver_Board_v1.0/master/res/MC33932VW.pdf)
--   [TD1519A Datasheet](https://raw.githubusercontent.com/SeeedDocument/Raspberry_Pi_Motor_Driver_Board_v1.0/master/res/TD1519A.pdf)
+-   [Eagle file Raspberry Pi Motor Driver Board v1.0](https://files.seeedstudio.com/wiki/Raspberry_Pi_Motor_Driver_Board_v1.0/res/Raspberry_Pi_Motor_Driver_Board_v1.0_sch_pcb_20150119.zip)
+-   [PDF Raspberry Pi Motor Driver Board v1.0](https://files.seeedstudio.com/wiki/Raspberry_Pi_Motor_Driver_Board_v1.0/res/Raspberry_Pi_Motor_Driver_Board_v1.0.pdf)
+-   [MC33932VW Datasheet](https://files.seeedstudio.com/wiki/Raspberry_Pi_Motor_Driver_Board_v1.0/res/MC33932VW.pdf)
+-   [TD1519A Datasheet](https://files.seeedstudio.com/wiki/Raspberry_Pi_Motor_Driver_Board_v1.0/res/TD1519A.pdf)
 
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Raspberry_Pi_Motor_Driver_Board_v1.0 -->

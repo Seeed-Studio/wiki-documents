@@ -9,7 +9,7 @@ sku: 104030008
 tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_bbg, plat_pi, plat_wio, plat_linkit
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_OLED_Display_0.96/master/images/Grove-OLED-0.96.png)
+![](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/Grove-OLED-0.96.png)
 
 **Grove - OLED Display 0.96"** module is an OLED monochrome 128×64dot matrix display module with Grove 4pin I2C Interface.Comparing to LCD, OLED screens are more competitive, which has a number of advantages such as high brightness, self-emission, high contrast ratio, slim / thin outline, wide viewing angle, wide temperature range, and low power consumption. It has bigger screen so that it can display more contents than the OLED 96×96.
 
@@ -86,7 +86,7 @@ The OLED128*64 uses all the pins of SSD1308 chip, the default original point is 
 
 | Seeeduino V4 | Base Shield | Grove - OLED Display 0.96inch |
 |--------------|-------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/grove%20oled%200.96_s.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/grove%20oled%200.96_s.jpg)|
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-OLED-Display-0.96%26quot%3B-p-781.html)|
 
 - **Step 2.** Plug the Grove OLED Display 128*64 onto the I2C port on Grove Base Shield.
@@ -684,9 +684,9 @@ Here are the steps how to display "Hello World" on OLED.
 
 - **Step 1:** Click the "+" in the top-right to create a new file.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_OLED_Display_0.96/master/images/C9-create-tab.png)
+![](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/C9-create-tab.png)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_OLED_Display_0.96/master/images/C9_newfile.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/C9_newfile.jpg)
 
 - **Step 2:** Copy and paste the following code into the new tab
 

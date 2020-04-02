@@ -10,7 +10,7 @@ sku: 101020072
 tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit, plat_bbg, plat_wio, plat_pi
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer_Sensor-BMP180/master/img/Barometer-BMP180-.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BMP180/img/Barometer-BMP180-.jpg)
 
 This is a Grove module for the Bosch BMP180 high-precision, low-power digital barometer. The BMP180 offers a pressure measuring range of 300 to 1100 hPa with an accuracy down to 0.02 hPa in advanced resolution mode. It’s based on piezo-resistive technology for high accuracy, ruggedness and long term stability. The chip only accepts 1.8V to 3.6V input voltage. However, with outer circuit added, this module becomes compatible with 3.3V and 5V. Therefore, it can be used on Arduino/Seeeduino or Seeeduino Stalker without modification. It is designed to be connected directly to a micro-controller via the I2C bus.
 
@@ -244,7 +244,7 @@ Here is the code
 
  **Step 4.** Open the serial monitor to receive the sensor's data including temperature, barometric pressure value, relative atmosphere pressure and altitude.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer_Sensor-BMP180/master/img/Barometer_Sensor.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BMP180/img/Barometer_Sensor.jpg)
 
 
 ### Play With Raspberry Pi
@@ -337,23 +337,23 @@ while True :
 
 
 -	**Step 4.** Here is the result:
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer_Sensor-BMP180/master/img/Grovepi_barometer_sensor_00.png)
+![](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BMP180/img/Grovepi_barometer_sensor_00.png)
 
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer_Sensor-BMP180/master/res/Barometer_Sensor-BMP180-Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BMP180/res/Barometer_Sensor-BMP180-Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 ## Resources
 
 
-- **[Eagle]**  [Grove - Barometer Sensor(BMP180) Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer_Sensor-BMP180/master/res/Barometer_Sensor-BMP180-Eagle_File.zip)
+- **[Eagle]**  [Grove - Barometer Sensor(BMP180) Eagle File](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BMP180/res/Barometer_Sensor-BMP180-Eagle_File.zip)
 - **[Library]**  [Barometer\_Sensor Library](https://github.com/Seeed-Studio/Grove_Barometer_Sensor)
-- **[Datasheet]**  [BMP180 datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer_Sensor-BMP180/master/res/BMP180.pdf)
+- **[Datasheet]**  [BMP180 datasheet](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BMP180/res/BMP180.pdf)
 - **[Altitude Vs. Pressure]** The following is a reference graph plotting out the relationship between altitude above sea level and barometric pressure.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer_Sensor-BMP180/master/img/Pressure_and_Altitude.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BMP180/img/Pressure_and_Altitude.jpg)
 
 ## Projects
 

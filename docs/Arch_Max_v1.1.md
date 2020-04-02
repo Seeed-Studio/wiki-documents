@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/Arch_Max_v1_1
 sku: 102110014
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Arch_Max_v1.1/master/img/Arch_Max_v1.1_product_view.jpg)
+![](https://files.seeedstudio.com/wiki/Arch_Max_v1.1/img/Arch_Max_v1.1_product_view.jpg)
 
 The Arch Max is a mbed enabled development board for rapid prototyping. It is based on an STM32F407VET6 microcontroller with an ARM Cortex-M4F core running at 168MHz. It provides [Serial Wire Debug](https://en.wikipedia.org/wiki/Joint_Test_Action_Group#Serial_Wire_Debug)(SWD) debug, drag-and-drop programming and USB serial communication.
 
@@ -67,12 +67,12 @@ Specifications
 Hardware Overview
 --------------
 
-![](https://raw.githubusercontent.com/SeeedDocument/Arch_Max_v1.1/master/img/Arch_Max_Pinout.png)
+![](https://files.seeedstudio.com/wiki/Arch_Max_v1.1/img/Arch_Max_Pinout.png)
 
 Usage
 -----
 
-![](https://raw.githubusercontent.com/SeeedDocument/Arch_Max_v1.1/master/img/Get_started_with_mbed.png)
+![](https://files.seeedstudio.com/wiki/Arch_Max_v1.1/img/Get_started_with_mbed.png)
 
 1.  Click [here](<https://developer.mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-MAX>) to login or signup to mbed
 2.  Import the mbed\_blinky program
@@ -115,16 +115,16 @@ The latest firmware version for the Arch Max is v0203 built at Oct 8, 2014. To c
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Arch_Max_v1.1/master/res/ARCH_Max.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Arch_Max_v1.1/res/ARCH_Max.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 Resources
 ---------
 
--   [Schematics Eagle file for ARCH Max](https://raw.githubusercontent.com/SeeedDocument/Arch_Max_v1.1/master/res/ARCH_Max.zip)
--   [Schematics PDF file for ARCH Max](https://raw.githubusercontent.com/SeeedDocument/Arch_Max_v1.1/master/res/Arch_Max.pdf)
--   [STM32F407 datasheet](https://raw.githubusercontent.com/SeeedDocument/Arch_Max_v1.1/master/res/STM32F407.pdf)
+-   [Schematics Eagle file for ARCH Max](https://files.seeedstudio.com/wiki/Arch_Max_v1.1/res/ARCH_Max.zip)
+-   [Schematics PDF file for ARCH Max](https://files.seeedstudio.com/wiki/Arch_Max_v1.1/res/Arch_Max.pdf)
+-   [STM32F407 datasheet](https://files.seeedstudio.com/wiki/Arch_Max_v1.1/res/STM32F407.pdf)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Arch_Max_v1.1 -->
 

@@ -74,18 +74,18 @@ Here are some funny projects for your reference.
 
 |Home Center|Retro Lamp|Drive a Motor|
 |---------------|-----|--------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/project1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/project2.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/project3.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project3.jpg)|
 |[MAKE IT NOW!](http://www.instructables.com/id/Home-Control-Center-Using-BeagleBone-Green-Wireles/)|[MAKE IT NOW!](http://www.instructables.com/id/DIY-a-Retro-Wooden-Lamp-with-BBG/)|[MAKE IT NOW!](http://www.instructables.com/id/A-BeagleBone-Tutorial-Getting-Started-With-Motor-B/)|
 
 |Seeed Studio BeagleBone® Green Acrylic Case|GPIO Control|Smart Light|
 |---------------|-----|--------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/project4.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/project5.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/project6.png)|
+|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project6.png)|
 |[MAKE IT NOW!](http://www.instructables.com/id/5-Design-of-Laser-Cut-Cases-for-5-Popular-Platform/)|[MAKE IT NOW!](https://community.seeedstudio.com/How-to-use-the-Grove-UART-port-as-a-GPIO-on-BBG-p-365.html)|[MAKE IT NOW!](https://community.seeedstudio.com/Smart-Light-Demo-with-BBG-%26amp%3B-BBG-Start-Kit(HA)-p-366.html)|
 
 
 ## Hardware Overview
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/10201002703.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/10201002703.jpg)
 
 
 * **USB Host** - USB Host
@@ -111,21 +111,21 @@ Each digital I/O pin has 8 different modes that can be selected, including GPIO.
 !!!Note
     In GPIO mode, each digital I/O can produce interrupts.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/PINMAP_IO.png)
+![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_IO.png)
 
 **PWMs and Timers**
 
 !!!Note
     Up to 8 digital I/O pins can be configured with pulse-width modulators (PWM) to produce signals to control motors or create pseudo analog voltage levels, without taking up any extra CPU cycles.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/PINMAP_TIMER.png)
+![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_TIMER.png)
 
 **Analog Inputs**
 
 !!!Note
     Make sure you don't input more than 1.8V to the analog input pins. This is a single 12-bit analog-to-digital converter with 8 channels, 7 of which are made available on the headers.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/PINMAP_ANALOG.png)
+![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_ANALOG.png)
 
 
 **UART**
@@ -133,7 +133,7 @@ Each digital I/O pin has 8 different modes that can be selected, including GPIO.
 !!!Note
     There is a dedicated header for getting to the UART0 pins and connecting a debug cable. Five additional serial ports are brought to the expansion headers, but one of them only has a single direction brought to the headers.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/PINMAP_UART.png)
+![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_UART.png)
 
 
 **I2C**
@@ -141,14 +141,14 @@ Each digital I/O pin has 8 different modes that can be selected, including GPIO.
 !!!Note
     The first I2C bus is utilized for reading EEPROMS on cape add-on boards and can't be used for other digital I/O operations without interfering with that function, but you can still use it to add other I2C devices at available addresses. The second I2C bus is available for you to configure and use.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/PINMAP_I2C.png)
+![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_I2C.png)
 
 **SPI**
 
 !!!Note
     For shifting out data fast, you might consider using one of the SPI ports.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/PINMAP_SPI.png)
+![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_SPI.png)
 
 
 ## Mechincal Drawing
@@ -212,13 +212,13 @@ Using either Chrome or Firefox (Internet Explorer will NOT work), browse to the 
 Click [http://192.168.7.2](http://192.168.7.2) to launch to your Seeed Studio BeagleBone® Green.
 Older software images require you to EJECT the BeagleBone® drive to start the network. With the latest software image, that step is no longer required.
 
-[![Click to view larger image](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/launch.png)](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/launch.png)
+[![Click to view larger image](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/launch.png)](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/launch.png)
 
 **STEP4. Cloud9 IDE**
 
 To begin editing programs that live on your board, you can use the Cloud9 IDE by click
 
-[![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/cloud9.png)](http://192.168.7.2:3000/ide.html)
+[![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/cloud9.png)](http://192.168.7.2:3000/ide.html)
 
 
 
@@ -231,7 +231,7 @@ You need to update the board to latest software to keep a better performance, he
 
 First of all, you have to download the suitable image here.
 
-[![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/down_latest_image.png)](http://beagleboard.org/latest-images)
+[![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/down_latest_image.png)](http://beagleboard.org/latest-images)
 
 !!!Note
     Due to sizing necessities, this download may take about 30 minutes or more.
@@ -255,11 +255,11 @@ Download and install [Image Writer for Windows](https://sourceforge.net/projects
 
 You need a SD adapter to connect your microSD card to your computer at the first. Then use the software Image Write for Windows to write the decompressed image to your SD card.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/win32_disk_image.png)
+![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/win32_disk_image.png)
 
 Click on **Write** button, then the process is started.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/win32_disk_image_process.png)
+![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/win32_disk_image_process.png)
 
 !!!Note
     * You may see a warning about damaging your device. This is fine to accept as long as you are pointing to your SD card for writing.
@@ -287,7 +287,7 @@ Change to:
 
 Then you will find the 4 user led light as below
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/flashing.gif)
+![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/flashing.gif)
 
 !!!Note
     If you don't find the upper tracing light, please press the RESET button to reset the board.
@@ -342,12 +342,12 @@ You will need some expansion board when you start a project. There're many cape 
 
 |Grove Cape| Motor Bridge Cape|HDMI Cape|
 |------------|----------------|----------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/product1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/product2.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/product3.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product3.jpg)|
 |[GET ONE NOW!](http://www.seeedstudio.com/Grove-Cape-for-BeagleBone-Series-p-1718.html)|[GET ONE NOW!](http://www.seeedstudio.com/Motor-Bridge-Cape-p-2569.html)|[GET ONE NOW!](http://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-HDMI-Cape-p-2570.html)|
 
 |Grove Cape| 5 Inch LCD|7 Inch LCD|
 |------------|----------------|----------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/product4.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/product5.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green/master/images/product6.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product6.jpg)|
 |[GET ONE NOW!](http://www.seeedstudio.com/Grove-Base-Cape-for-Beaglebone-v2.0-p-2644.html)|[GET ONE NOW!](http://www.seeedstudio.com/5-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2642.html)|[GET ONE NOW!](http://www.seeedstudio.com/7-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2643.html)|
 
 ## FAQ

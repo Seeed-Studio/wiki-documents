@@ -8,7 +8,7 @@ surveyurl: https://www.surveymonkey.com/r/Seeeduino_GPRS
 sku: 102010016
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_GPRS/master/img/seeeduino_gprs_cover.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/seeeduino_gprs_cover.jpg)
 
 Seeeduino GPRS is a IoT panel, you can connect to the internet through GPRS wireless network with it. Making/answering voice calls and sending/receiving SMS messages are also supported. Meanwhile, Seeeduino GPRS supports FM radio function and bluetooth communication. Seeeduino GPRS is base on Atmage32U4 and SIM800H. Atmage32U4 is a microcontroller and it is compatible with Arduino. SIM800H support Quad-band 850/900/1800/1900MHz, it can transmit Voice, SMS and data information with low power consumption. SIM800H also brings some extra features like for example Bluetooth and FM radio. It is designed with power saving technique so that the current consumption is as low as 0.1mA in sleep mode.
 
@@ -27,7 +27,7 @@ Here is some funny project for your reference.
 
 |Arduino GPS/GSM Tracker|Arduino Phone 2.0|Arduino GPRS Weather Station|
 |----------|----------|---------|
-|![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_GPRS/master/img/example_1.jpg)|![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_GPRS/master/img/example_2.jpg)|![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_GPRS/master/img/example_3.jpg)|
+|![](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/example_1.jpg)|![](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/example_2.jpg)|![](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/example_3.jpg)|
 |[Make it Now](http://www.instructables.com/id/Arduino-GPSGSM-Tracker/)|[Make it Now](http://www.instructables.com/id/ArduinoPhone-20-an-Open-Source-Mobile-Phone-Based-/)|[Make it Now](http://www.instructables.com/id/Arduino-GPRS-Weather-Station-Part-1/)|
 
 ## Features
@@ -76,7 +76,7 @@ Here is some funny project for your reference.
 
 The images below show an overview of Seeeduino GPRS hardware features. The pin-out and alternate functions of various pins of Seeeduino GPRS are shown in the pin-out diagram. This could be used as a quick reference.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_GPRS/master/img/seeeduino_gprs_hardware2.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/seeeduino_gprs_hardware2.png)
 
 * **Power Switch**
 Slide switch used to change the logic level and power output of the board to either 5V or 3.3V.
@@ -126,7 +126,7 @@ Connect the Arduino board to your computer using the USB cable. The green power 
 !!!Note
     This drive is available for Windows XP, Windows Vista, Windows 7, Windows 8/8.1 and Windows 10.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Mega/master/img/download_driver.png)](https://github.com/Seeed-Studio/Signed_USB_Serial_Driver/archive/master.zip)
+[![](https://files.seeedstudio.com/wiki/Seeeduino_Mega/img/download_driver.png)](https://github.com/Seeed-Studio/Signed_USB_Serial_Driver/archive/master.zip)
 
 - Plug in your board and wait for Windows to begin its driver installation process. After a few moments, the process will fail, despite best efforts.
 - Click on the Start Menu, and open up the Control Panel.
@@ -150,7 +150,7 @@ You don't need to install any drivers.
 
 First of all, you need to Install an Arduino Software.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Stalker_V3_1/master/images/Download_IDE.png)](https://www.arduino.cc/en/Main/Software)
+[![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/Download_IDE.png)](https://www.arduino.cc/en/Main/Software)
 
 
 **Launch the Arduino application**
@@ -165,7 +165,7 @@ Double-click the Arduino application (arduino.exe) you have previously downloade
 
 Open the LED blink example sketch: **File > Examples >01.Basics > Blink**.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_GPRS/master/img/select_blink.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/select_blink.png)
 
 **Select your board**
 
@@ -173,13 +173,13 @@ You'll need to select the entry in the **Tools > Board** menu that corresponds t
 Selecting a **Arduino Leonardo**. If you can not find the Arduino Leonardo, please check [How to Add Seeed boards to Arduino IDE](http://wiki.seeedstudio.com/Seeed_Arduino_Boards/)
 
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_GPRS/master/img/seeeduino_gprs_select_board.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/seeeduino_gprs_select_board.png)
 
 **Select your serial port**
 
 Select the serial device of the Arduino board from the Tools | Serial Port menu. This is likely to be COM3 or higher (**COM1** and **COM2** are usually reserved for hardware serial ports). To find out, you can disconnect your Arduino board and re-open the menu; the entry that disappears should be the Arduino board. Reconnect the board and select that serial port.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_GPRS/master/img/seeeduino_gprs_select_com.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/seeeduino_gprs_select_com.png)
 
 !!!Note
     On the Mac, this should be something with **/dev/tty.USBmodem**.
@@ -188,7 +188,7 @@ Select the serial device of the Arduino board from the Tools | Serial Port menu.
 
 Now, simply click the "Upload" button in the environment. Wait a few seconds and if the upload is successful, the message "Done uploading." will appear in the status bar.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_GPRS/master/img/upload_image.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/upload_image.png)
 
 A few seconds after the upload finishes, you should see the pin 13 (LED Pin 13) LED on the board start to blink (in green). If it does, congratulations! You've gotten Arduino up-and-running. If you have problems, please see the troubleshooting suggestions.
 
@@ -202,9 +202,9 @@ Seeeduino GPRS offers the function of a mobile phone such as making/receiving vo
 
 To start to play with the Seeeduino GPRS, a headphone and a SIM card are required.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_GPRS/master/img/500px-Seeeduino_gprs_t.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/500px-Seeeduino_gprs_t.jpg)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_GPRS/master/img/500px-Seeeduino_gprs_b.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/500px-Seeeduino_gprs_b.jpg)
 
 **To make a call**
 

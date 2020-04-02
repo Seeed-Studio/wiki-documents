@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/Arch_Link
 sku: 102080006
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Arch_Link/master/img/1020800061.jpg)
+![](https://files.seeedstudio.com/wiki/Arch_Link/img/1020800061.jpg)
 
 **Arch Link** is an mbed enabled development board based on Nordic nRF51822 and WIZnet W5500 ethernet interface. With Arduino form factor, Grove connectors and micro SD interface, it is extremely easy to create a bluetooth low energy device.
 
@@ -46,12 +46,12 @@ Features
 Hardware Overview
 ------
 
-![](https://raw.githubusercontent.com/SeeedDocument/Arch_Link/master/img/Arch_link_pinout.png)
+![](https://files.seeedstudio.com/wiki/Arch_Link/img/Arch_link_pinout.png)
 
 Get Started
 -----------
 
-![](https://raw.githubusercontent.com/SeeedDocument/Arch_Link/master/img/Get_started_with_mbed.png)
+![](https://files.seeedstudio.com/wiki/Arch_Link/img/Get_started_with_mbed.png)
 
 1.  Click [this link](https://developer.mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-BLE) to **login or signup to mbed**
 2.  Import the mbed\_blinky program
@@ -89,9 +89,9 @@ Applications
         -   [Digital RGB LED Strip](http://www.seeedstudio.com/depot/Digital-RGB-LED-FlexiStrip-30-LED-1-Meter-p-1665.html)
         -   Android device with BLE
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Arch_Link/master/img/Ble_color_pixels_bb.png)
+    ![](https://files.seeedstudio.com/wiki/Arch_Link/img/Ble_color_pixels_bb.png)
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Arch_Link/master/img/Color_pixels_app.png)
+    ![](https://files.seeedstudio.com/wiki/Arch_Link/img/Color_pixels_app.png)
 
     -   Make it run
 
@@ -111,11 +111,11 @@ Applications
 
 2. You can use the Arch Link as a web dashboard.
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Arch_Link/master/img/Arch_link_application1.png)
+    ![](https://files.seeedstudio.com/wiki/Arch_Link/img/Arch_link_application1.png)
 
 3. You can also use the Arch Link as a Mobile APP dashboard.
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Arch_Link/master/img/Arch_link_application2.png)
+    ![](https://files.seeedstudio.com/wiki/Arch_Link/img/Arch_link_application2.png)
 
 Update or Restore Firmware
 --------------------------
@@ -139,7 +139,7 @@ To flash a new firmware:
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Arch_Link/master/res/Arch_Link_v1.0_Eagle.rar" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Arch_Link/res/Arch_Link_v1.0_Eagle.rar" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
@@ -147,9 +147,9 @@ Resources
 ---------
 
 -   [Arch Link mbed developer platform page](https://developer.mbed.org/platforms/Seeed-Arch-Link/)
--   [Schematic in PDF format](https://raw.githubusercontent.com/SeeedDocument/Arch_Link/master/res/Arch_Link_v1.0_sch.pdf)
--   [Schematic and board files in EAGLE format](https://raw.githubusercontent.com/SeeedDocument/Arch_Link/master/res/Arch_Link_v1.0_Eagle.rar)
--   [LPC11U35 Firmware](https://raw.githubusercontent.com/SeeedDocument/Arch_Link/master/res/Lpc11u35_nrf51822_if_mbed.bin.zip)
+-   [Schematic in PDF format](https://files.seeedstudio.com/wiki/Arch_Link/res/Arch_Link_v1.0_sch.pdf)
+-   [Schematic and board files in EAGLE format](https://files.seeedstudio.com/wiki/Arch_Link/res/Arch_Link_v1.0_Eagle.rar)
+-   [LPC11U35 Firmware](https://files.seeedstudio.com/wiki/Arch_Link/res/Lpc11u35_nrf51822_if_mbed.bin.zip)
 -   [Seeed BLE color pixels App for android](http://tangram.qiniudn.com/seeed_ble_color_pixels.apk)
 -   [Sources of BLE color pixels App](https://github.com/Seeed-Studio/ble_color_pixels)
 

@@ -9,7 +9,7 @@ sku: 102020083
 tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-High_Precision_RTC/master/img/Grove-High_Precision_RTC.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-High_Precision_RTC/img/Grove-High_Precision_RTC.jpg)
 
 Grove - High Precision RTC based on the clock chip PCF85063TP which is a CMOS Real-Time Clock (RTC) and calendar optimized for low power consumption. An offset register allows fine-tuning of the clock. All addresses and data are transferred serially via the I2C bus and the maximum bus speed is 400 kbit/s.
 
@@ -38,7 +38,7 @@ Compared to [Grove - RTC](https://www.seeedstudio.com/Grove-RTC-p-758.html), thi
 ##  Interface Function
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-High_Precision_RTC/master/img/Interface.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-High_Precision_RTC/img/Interface.jpg)
 
 1. Grove interface
 2. Programmable clock output interface
@@ -76,26 +76,26 @@ If this is your first time using Arduino, Please put hand on [here](http://ardui
 
 [Seeeduino Lotus](https://www.seeedstudio.com/Seeeduino-Lotus-ATMega328-Board-with-Grove-Interface-p-1942.html) is a combination of Seeeduino and Base Shield. We can connect the RTC module to the I2C socket directly as the below picture shows.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-High_Precision_RTC/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-High_Precision_RTC/img/connect.jpg)
 
 ###Download the library
 
 Click to download the library and install it ([How to install an Arduino Library](http://wiki.seeed.cc/How_to_install_Arduino_Library/)).
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Grove-High_Precision_RTC/master/img/library.png)](https://github.com/Seeed-Studio/Grove_High_Precision_RTC_PCF85063TP/archive/master.zip)
+[![](https://files.seeedstudio.com/wiki/Grove-High_Precision_RTC/img/library.png)](https://github.com/Seeed-Studio/Grove_High_Precision_RTC_PCF85063TP/archive/master.zip)
 
 
 ### Open the example
 
 After install the library, please restart Arduino, click File>Examples>SetTimeAndDisplay.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-High_Precision_RTC/master/img/demo2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-High_Precision_RTC/img/demo2.jpg)
 
 ###Review Results
 
 After upload completed, you can open the serial monitor to see the result.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-High_Precision_RTC/master/img/result.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-High_Precision_RTC/img/result.jpg)
 
 
 ## Schematic Online Viewer

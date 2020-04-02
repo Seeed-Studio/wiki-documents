@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/Grove_Starter_kit_for_LinkIt_Smart7688_Duo
 sku: 110020007
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Starter_kit_for_LinkIt_Smart7688_Duo/master/img/Grove_Starter_kit_for_LinkIt_Smart7688_Duo_Product_view_1200_s.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Starter_kit_for_LinkIt_Smart7688_Duo/img/Grove_Starter_kit_for_LinkIt_Smart7688_Duo_Product_view_1200_s.jpg)
 
 Grove Starter kit for LinkIt Smart7688 Duo is a starter kit which contains fundamental and essential functional modules, such as encoder and OLED display. This kit will save you a lot on expenses and you can build an experimental model for your product. All modules are interfaced with patented Grove interface of Seeed. With this kind of interface, you can accelerate your prototyping process. Also, a novice can get basic applications started with a step-by-step guide provided by Seeed.
 

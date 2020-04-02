@@ -201,7 +201,7 @@ We build there demoes which combine MT3620 Mini Dev Board and [Seeed Grove syste
 
 **MT3620 Grove Breakout**：MT3620 Mini Dev Board supports SPI, UART, I2C, Digital functions, but does not support the ADC function. So the MT3620 Grove Breakout includes [AD7992](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/res/AD7992.pdf) chip, which is a 12-bit, low power, successive approximation ADC with an I2C-compatible interface. Then connect to I2C interface of MT3620 Mini Dev Board. 
 
-![](https://raw.githubusercontent.com/SeeedDocument/MT3620_Mini_Dev_Board/master/img/adc_i2c.png)
+![](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/adc_i2c.png)
 
 
 ### Demo#1 Digital and UART

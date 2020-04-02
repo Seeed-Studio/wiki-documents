@@ -10,7 +10,7 @@ sku: 101020067
 tags: grove_uart, io_3v3, io_5v, plat_duino, plat_linkit
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-CO2_Sensor/master/img/Grove_CO2_Sensor.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-CO2_Sensor/img/Grove_CO2_Sensor.jpg)
 
 The Grove - CO2 Sensor module is infrared CO2 sensor high sensitivity and high resolution. Infrared CO2 sensor MH-Z16 Is a general-purpose, small sensors, the use of non-dispersive infrared (NDIR) Present in the principle of the air CO2 Detect, with good selectivity, oxygen- dependent, long life, built-in temperature sensor, temperature compensation, with UART output, easy to use. It can be widely used in HVAC and indoor air quality monitoring, industrial process monitoring and security, agriculture and livestock production process monitoring.
 
@@ -63,7 +63,7 @@ Connect the module with Grove Shield using like following picture and use the pr
 
 Please note that the best preheat time of the sensor is about 180s. For the detailed information about the sensor, please refer to the datasheet.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-CO2_Sensor/master/img/5.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-CO2_Sensor/img/5.jpg)
 
 ```
 /*
@@ -156,7 +156,7 @@ bool dataRecieve(void)
 }
 ```
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-CO2_Sensor/master/img/Uart_co2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-CO2_Sensor/img/Uart_co2.jpg)
 
 Calibration
 ------------
@@ -208,8 +208,8 @@ Reference
 Resources
 ---------
 
--   [MH-Z16\_CO2 datasheet\_ZH\_CN.pdf](https://raw.githubusercontent.com/SeeedDocument/Grove-CO2_Sensor/master/res/MH-Z16_CO2.pdf)
--   [MH-Z16\_CO2 datasheet\_EN.pdf](https://raw.githubusercontent.com/SeeedDocument/Grove-CO2_Sensor/master/res/MH-Z16_CO2_datasheet_EN.pdf)
+-   [MH-Z16\_CO2 datasheet\_ZH\_CN.pdf](https://files.seeedstudio.com/wiki/Grove-CO2_Sensor/res/MH-Z16_CO2.pdf)
+-   [MH-Z16\_CO2 datasheet\_EN.pdf](https://files.seeedstudio.com/wiki/Grove-CO2_Sensor/res/MH-Z16_CO2_datasheet_EN.pdf)
 -   [Health Risk Evaluation for Carbon Dioxide](http://www.blm.gov/style/medialib/blm/wy/information/NEPA/cfodocs/howell.Par.2800.File.dat/25apxC.pdf)
 
 

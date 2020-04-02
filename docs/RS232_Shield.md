@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/RS232_Shield
 sku: 113030016
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/RS232_Shield/master/img/RS232_Shield_Photo.jpg)
+![](https://files.seeedstudio.com/wiki/RS232_Shield/img/RS232_Shield_Photo.jpg)
 
 RS232 Shield is a standard communication port for industry equipment.This module is base on MAX232,which is a dual driver/receiver that includes a capacitive voltage generator to supply TIA/EIA-232-F voltage levels from a single 5-V supply. The shield integrates DB9 connectors (female) that provide connection to various devices with RS232 interface. Also the RS232 headers will facilitate your connections and commissioning. It provides the welding areas to make full use of extra space on it, which is highly convenient for prototyping.
 
@@ -38,7 +38,7 @@ First,we can test it by computer.
 1. Seeeduino v3.0,Mini usb Cable,RS232 Shield,RS232 to USB Cable.
 2. Make the connections as below. The jumper hats can be used to select the software serial port from the digital pins. You can set them to D7(232\_TX) and D6(232\_RX), and modify the code to "*SoftwareSerial mySerial(7, 6); // 232\_TX, 232\_RX*"
 
-![](https://raw.githubusercontent.com/SeeedDocument/RS232_Shield/master/img/RS232_Shield_usage.jpg)
+![](https://files.seeedstudio.com/wiki/RS232_Shield/img/RS232_Shield_usage.jpg)
 
 ### Software Part
 
@@ -79,21 +79,21 @@ void loop() // run over and over
 -   3) Open the Serial Monitor.
 
 You can see :
-![](https://raw.githubusercontent.com/SeeedDocument/RS232_Shield/master/img/RS232_Shield_usage1.jpg)
+![](https://files.seeedstudio.com/wiki/RS232_Shield/img/RS232_Shield_usage1.jpg)
 
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/RS232_Shield/master/res/RS232_Shield_v1.0_Eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/RS232_Shield/res/RS232_Shield_v1.0_Eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 Resources
 --------
 
--   [RS232 Shield eagle file](https://raw.githubusercontent.com/SeeedDocument/RS232_Shield/master/res/RS232_Shield_v1.0_Eagle.zip)
--   [RS232\_Shield\_v1.0.pdf](https://raw.githubusercontent.com/SeeedDocument/RS232_Shield/master/res/RS232_Shield_v1.pdf)
--   [Datasheet MAX232D.pdf](https://raw.githubusercontent.com/SeeedDocument/RS232_Shield/master/res/MAX232D.pdf)
+-   [RS232 Shield eagle file](https://files.seeedstudio.com/wiki/RS232_Shield/res/RS232_Shield_v1.0_Eagle.zip)
+-   [RS232\_Shield\_v1.0.pdf](https://files.seeedstudio.com/wiki/RS232_Shield/res/RS232_Shield_v1.pdf)
+-   [Datasheet MAX232D.pdf](https://files.seeedstudio.com/wiki/RS232_Shield/res/MAX232D.pdf)
 
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/RS232_Shield -->

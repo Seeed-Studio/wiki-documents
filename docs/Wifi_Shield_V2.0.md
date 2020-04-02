@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/Wifi_Shield_V2_0
 sku: 113030008
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/img/Wifi_Shield_v2.jpg)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi_Shield_v2.jpg)
 
 This WiFi shield features the RN171 TCP/IP module to allow your Arduino/Seeeduino to connect with up to 802.11b/g wireless networks.
 
@@ -17,7 +17,7 @@ The shield's default communication protocol with the Arduino is UART/Serial, and
 
 An on-board antenna allows the shield to cover a wider range and transmit stronger signals. The RN171 module supports TCP, UDP, FTP, and HTTP communication protocols to meet the needs of most wireless and Internet of Things (IoT) network projects e.g. smart home networks, robots control, personal weather stations.
 
-The shield is very well documented with our examples below and its [user manual](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/res/WiFly-RN-UM.pdf).
+The shield is very well documented with our examples below and its [user manual](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/res/WiFly-RN-UM.pdf).
 
 [![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Wifi-Shield-V20-p-2505.html)
 
@@ -31,7 +31,7 @@ Version Tracker
 | Communication Mode | Serial port                                                             | Serial port                                                            | Serial port                                                                               |
 | Standard Shield    | No                                                                      | Yes                                                                    | Yes                                                                                       |
 | Antenna Type       | mast antenna                                                            | PCB antenna                                                            | <font color="Red">onboard antenna</font>                                                  |
-| Library File       | [Wifi Shield Library V1.0](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/res/WifiShield.zip) | [New Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield) | [New Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield) *the same as v1.2* |
+| Library File       | [Wifi Shield Library V1.0](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/res/WifiShield.zip) | [New Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield) | [New Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield) *the same as v1.2* |
 
 Specifications
 --------------
@@ -57,7 +57,7 @@ Hardware Overview
 The WiFi shield is compatible with any Arduino/Seeeduino development board as it only requires two digital pins of your choice between D0-D7 for UART/serial communication. To install, simply stack the shield on the Arduino/Seeeduino board.
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/img/Wifi_shield_v2_breakout.png)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi_shield_v2_breakout.png)
 
 1.  **Serial Peripheral Interface (SPI) Connections (MOSI, SCK, MISO):** These pins are not connected to any of the Arduino's pins, they are independent and the logic level output/input of them is 3.3V. They can be used to communicate with the Arduino via SPI but a 3.3V logic converter between these pins and the Arduino's will be needed. The data rate in SPI mode can reach up to 2Mbps.
 
@@ -75,7 +75,7 @@ The WiFi shield uses any two digital pins of your choice between D0 and D7 to co
 
 In the example codes in this page we use D2 and D3 as RX and TX for the shield. In this case, the jumper hats should be connected as shown below:
 
-![](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/img/Wifi_shield_v1.1_pinout.png)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi_shield_v1.1_pinout.png)
 *D2 selected for WIFI_TX, D3 selected for WIFI_RX*
 
 ### RN171 WiFi Module
@@ -86,7 +86,7 @@ In the simplest configuration the hardware only requires four connections (PWR, 
 
 **Power:** The operating voltage of the RN-171 module is 3.3VDC typically, so a voltage regulator and logic level translator are designed on the WiFi shield. The LD1117 regulator on the shield converts to 3.3VDC, which supplies the RN171 module. However, due to the auto judgement schematic of power supply, the RN-171 can be powered via both 3V3 pin and 5V pin. But the supply power would be 5v if providing both 3.3v and 5v to the board. If using with an Arduino/Seeeduino board simply stack the WiFi shield on the board.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/img/Wifi_shield_v1.1_communicate.png)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi_shield_v1.1_communicate.png)
 *Diagram of how the RN171 module is interfaced to the Arduino*
 
 **GPIO_6 :** The GPIO6 pin of the RN171 WiFi module is by default only connected to the LED labeled D5 on the WiFi shield. This LED is used to display the status of the Access Point (AP) connection. If however, you would like to connect GPIO6 to digital pin 5 of the Arduino, simply solder the pad labeled "P6" on the WiFi shield.
@@ -207,7 +207,7 @@ void loop()
     The examples is based on Arduino UNO and we take D2/D3 as the SoftwareSerial pins. If you are using an Arduino Mega, D2 is not available anymore. More details please refer to [Arduino Software Serial](https://www.arduino.cc/en/Tutorial/SoftwareSerialExample)
     Here's an example.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/img/connect_mega.jpg)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/connect_mega.jpg)
 
 As for the code, you need to do some change as well:
 
@@ -270,7 +270,7 @@ WiFi Shield Examples/Applications
 
 ### Example 1: Send Commands to WiFi Shield and Receive Response Via The Arduino Serial Monitor Window
 
-The WiFi shield's RN-171 module is configured by sending it the commands found in [its datasheet](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/res/WiFly-RN-UM.pdf). You may write a sketch to send the commands automatically, but this is a great example that we recommend you go through because it will teach you exactly how the WiFi shield and RN-171 works.
+The WiFi shield's RN-171 module is configured by sending it the commands found in [its datasheet](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/res/WiFly-RN-UM.pdf). You may write a sketch to send the commands automatically, but this is a great example that we recommend you go through because it will teach you exactly how the WiFi shield and RN-171 works.
 
 To proceed follow the steps below, we have also created a video if you prefer to watch that
 
@@ -280,7 +280,7 @@ To proceed follow the steps below, we have also created a video if you prefer to
 
 Position the jumpers in the WiFi shield such that digital pin 2 (D2) is selected for WIFI_TX, and digital pin 3 (D3) is selected for WIFI_RX as shown in the photo below. These are the pins we will use to send and receive information from the RN-171.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/img/Wifi_shield_v1.1_front.png)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi_shield_v1.1_front.png)
 
 *Pins D2 for TX, and D3 for RX*
 
@@ -342,7 +342,7 @@ Let's go ahead and test some commands, do the following:
 | get ip   | This command displays the IP address and port number settings                                                                                                                                                               |
 
 
-For a complete list of configuration commands, please see the RN-171 [Reference Guide](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/res/WiFly-RN-UM.pdf) starting on page 11.
+For a complete list of configuration commands, please see the RN-171 [Reference Guide](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/res/WiFly-RN-UM.pdf) starting on page 11.
 
 ### Example 2: Connect to An Access Point / Internet Router
 
@@ -376,7 +376,7 @@ If your access point's security type is WEP use *key* instead of *phrase* in the
 </div>
 
     2.  The access point's (internet router) phrase is the password you use to connect to it from your PC. In Windows you can find it as shown in the animated image below:
-        ![](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/img/How_to_find_network_security_key_password.gif)
+        ![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/How_to_find_network_security_key_password.gif)
         How to find a networks' security key/password
 
 8. **Join the access point**
@@ -582,7 +582,7 @@ void loop()
 
 Open the serial monitor window and wait for the "Web server ready" message to display. The serial monitor will also display the WiFi shield's IP address:
 
-![](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/img/Wifi-shield-led-control-serial-comm-window.png)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi-shield-led-control-serial-comm-window.png)
 
 *Arduino program serial comm output. The IP address of the shield is highlighted.*
 
@@ -590,13 +590,13 @@ Open the serial monitor window and wait for the "Web server ready" message to di
 
 Now visit that IP address in your web browser. The webpage below should be displayed, it contains a link to Yahoo! and Google and a button that doesn't do anything (yet):
 
-![](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/img/Wifi-shield-simple-webserver-page.png)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi-shield-simple-webserver-page.png)
 
 *A simple webpage with two links and one button served from the WiFi shield.*
 
 When the webpage is visited the serial monitor window will also display a "New Browser Request!" string as shown below:
 
-![](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/img/Wifi-shield-simple-webserver-arduino-serial-window-response.png)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi-shield-simple-webserver-arduino-serial-window-response.png)
 
 *The Arduino serial comm window showing that it detected a new browser connection/request.*
 
@@ -618,7 +618,7 @@ For this tutorial follow the steps below. We have also created a video where we 
 
 Connect three LEDs and resistor to digital pins 11, 12, and 13 as shown in the schematic below:
 
-![](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/img/Wifi-shield-led-control-schematic.png)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi-shield-led-control-schematic.png)
 
 *Three LEDs and 1k resistors connected to pins 11, 12, and 13.*
 
@@ -809,7 +809,7 @@ void loop()
 
 Open the serial monitor window and wait for the "Web server ready" message to display. The serial monitor will also display the WiFi shield's IP address:
 
-![](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/img/Wifi-shield-led-control-serial-comm-window.png)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi-shield-led-control-serial-comm-window.png)
 
 *Arduino program serial comm output. The IP address of the shield is highlighted.*
 
@@ -817,25 +817,25 @@ Open the serial monitor window and wait for the "Web server ready" message to di
 
 Visit the IP address in a web browser. A webpage with three buttons, like the one below, should display. Click on the buttons to control the LEDs.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/img/Wifi-shield-led-control-webpage.png)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi-shield-led-control-webpage.png)
 
 *LED control webpage served from the WiFi shield.*
 
 The Arduino will also respond back to the web browser with the pin's state, the browser will display this in an alert window.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/img/Wifi-shield-led-control-arduino-response.png)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi-shield-led-control-arduino-response.png)
 
 *Alert dialog displaying the state of Pin12, The string Pin12 is ON was sent from the Arduino.*
 
 The serial monitor window will also show when a browser sends a request to either visit the webpage or control the LED pins.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/img/Wifi-shield-led-control-serial-comm-response.png)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi-shield-led-control-serial-comm-response.png)
 
 *Arduino serial comm output when an HTTP request is sent to the shield.*
 
 ### Example 6: WiFi Shield and Android App
 
-![](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/img/Androidapp-ethernet-shield-led-toggle.png)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Androidapp-ethernet-shield-led-toggle.png)
 
 *The Android app you can use to control the Arduino's pins through the WiFi or Ethernet Shield.*
 
@@ -847,7 +847,7 @@ We've created an Android app that can toggle the digital pins in the Arduino thr
 
 **Software**
 
-Download the Android Studio project/source form this [link:](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/res/WiFiShieldLEDControl.zip "WiFiShieldLEDControl.zip")
+Download the Android Studio project/source form this [link:](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/res/WiFiShieldLEDControl.zip "WiFiShieldLEDControl.zip")
 
 ### Example 7: Sending Data To and Retrieving Data From an External Server
 
@@ -879,7 +879,7 @@ Let us go ahead and retrieve the weather JSON string for San Francisco, US. The 
 
 **Step 2: The Arduino Code**
 
-Section 13 of the [WiFly manual](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/res/WiFly-RN-UM.pdf) teaches you different ways to connect to a web server, but in all cases we need to specify the name of the server (or IP address if the server does not have a domain name), and then the data we wish to send.
+Section 13 of the [WiFly manual](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/res/WiFly-RN-UM.pdf) teaches you different ways to connect to a web server, but in all cases we need to specify the name of the server (or IP address if the server does not have a domain name), and then the data we wish to send.
 
 The commands we need to send to the WiFi shield to receive the JSON string from the OpenWeatherMap server are the following:
 
@@ -967,7 +967,7 @@ void loop()
 
 Open the serial monitor window, you should be able to see the same JSON string you saw in the browser.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/img/Open-weather-api-json-string.png)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Open-weather-api-json-string.png)
 
 *JSON weather string shown in the Arduino serial monitor window.*
 
@@ -1178,7 +1178,7 @@ String getPinState(int pinNumber)
 
 Open the Arduino serial monitor window to obtain the WiFiShield's IP address and port number, highlighted in the image below.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/img/Tcp-arduino-serial-comm.png)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Tcp-arduino-serial-comm.png)
 
 *Arduino serial monitor window output from TCP example, the ip address and port number are highlighted.*
 
@@ -1190,13 +1190,13 @@ In the image above the IP Address and Port would be the following:
 
 Open RealTerm and in the "Display" tab enter "30" for "Rows" and select the "Scrollback" option:
 
-![](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/img/Realterm-display-tab.png)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Realterm-display-tab.png)
 
 *RealTerm window: rows = 30, and Scrollback option checked.*
 
 In the "Port" tab of the RealTerm program, type your shield's IP address and port e.g. 192.168.0.10:80, then click the "Open" button, the Arduino's hard coded main menu should display in the terminal.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/img/Realterm-port-tab.png)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Realterm-port-tab.png)
 
 *RealTerm window. Port field has WiFi shield's IP address and port number. The Arduino's menu is displayed*
 
@@ -1204,7 +1204,7 @@ In the "Send" tab select one of the options from the menu either "1" or "2", ent
 
 For example, to toggle pin 13 enter "2" and press "Send ASCII", then when prompted "Enter the pin number you wish you toggle" enter "13" and click "Send ASCII". The Arduino should reply "Pin Toggled!" and go back to the main menu, now enter "1" and press "Send ASCII" to see the present state of the pins.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/img/Realterm-send-tab.png)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Realterm-send-tab.png)
 
 *RealTerm window. The state of pin 13 was changed from OFF to ON as shown in the yellow text.*
 
@@ -1220,7 +1220,7 @@ The Relay Shield V2.0 uses pins 4, 5, 6, and 7 so it is fully compatible with th
 
 To use the shield in Adhoc mode, as an access point, simply connect pin IO9 from the shield to the 3.3V pin in the Arduino, as shown below, and reset the shield if it was on.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/img/Wifi-shield-adhoc-mode-hardware-connection.png)
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi-shield-adhoc-mode-hardware-connection.png)
 
 *Shield connection required for adhoc mode. Pin IO9 of the shield connected to 3.3V.*
 
@@ -1230,7 +1230,7 @@ To obtain the shield's SSID upload the code in Example 1 to your Arduino and ope
 
 You should now be able to connect to your WiFi shield as an access point, for example the SSID should be visible in your PC's list of WiFi networks available.
 
-To learn more about adhoc mode check out the [WiFly RN User Manual](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/res/WiFly-RN-UM.pdf) section 16 "Adhoc Networking Mode"
+To learn more about adhoc mode check out the [WiFly RN User Manual](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/res/WiFly-RN-UM.pdf) section 16 "Adhoc Networking Mode"
 
 
 ## FAQs
@@ -1254,17 +1254,17 @@ A3: Do not place plastic or any other dielectric material in touch with the ante
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/res/Wifi_Shield_v2.0.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/res/Wifi_Shield_v2.0.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ## Resources
 
--   [WiFi Shield V2.0 Eagle Files](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/res/Wifi_Shield_v2.0.zip)
--   [Schematic PDF](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/res/Wifi_shield_v2_schematic.pdf)
--   [RN-171 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/res/WiFly-RN-171.pdf)
+-   [WiFi Shield V2.0 Eagle Files](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/res/Wifi_Shield_v2.0.zip)
+-   [Schematic PDF](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/res/Wifi_shield_v2_schematic.pdf)
+-   [RN-171 Datasheet](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/res/WiFly-RN-171.pdf)
 -   [Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield)
--   [WiFi Module User Manual](https://raw.githubusercontent.com/SeeedDocument/Wifi_Shield_V2.0/master/res/WiFly-RN-UM.pdf) *-- This is where you'll find all the commands for the RN-171 module in the shield.*
+-   [WiFi Module User Manual](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/res/WiFly-RN-UM.pdf) *-- This is where you'll find all the commands for the RN-171 module in the shield.*
 -   [What is a Seeeduino](/Seeeduino_v4.2)
 -   [w3schools](http://www.w3schools.com/) Great website to learn HTML, Javascript, and JQuery
 

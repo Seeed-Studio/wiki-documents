@@ -8,7 +8,7 @@ tags:
 ---
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino-Crypto-ATmega4809-ECC608-/master/img/Seeed-Crypto-ATmega4809-ECC608-wiki.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-Crypto-ATmega4809-ECC608-/img/Seeed-Crypto-ATmega4809-ECC608-wiki.jpg)
 
 
 Seeeduino Crypto is made for encryption. It is based on the high performance ATmega4809 and microchip ECC608 encryption chip.With the help of ECC608 encryption chip, you can experience I2C encryption and other encrypted communication.
@@ -59,7 +59,7 @@ The control solution Seeeduino Crypto is the same as ARDUINO UNO WIFI REV2. The 
 ## Hardware Overview
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino-Crypto-ATmega4809-ECC608-/master/img/Hardware-figure.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-Crypto-ATmega4809-ECC608-/img/Hardware-figure.jpg)
 
 
 
@@ -102,7 +102,7 @@ The control solution Seeeduino Crypto is the same as ARDUINO UNO WIFI REV2. The 
 First of all, you need to Install an Arduino Software.
 
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Stalker_V3_1/master/images/Download_IDE.png)](https://www.arduino.cc/en/Main/Software)
+[![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/Download_IDE.png)](https://www.arduino.cc/en/Main/Software)
 
 
 **Launch the Arduino application**
@@ -122,7 +122,7 @@ Double-click the Arduino application (arduino.exe) you have previously downloade
 Open the LED blink example sketch: **File > Examples >01.Basics > Blink**.
 
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Seeeduino-Crypto-ATmega4809-ECC608-/master/img/select-blink.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino-Crypto-ATmega4809-ECC608-/img/select-blink.png)
 
 
 **Add Seeeduino to your Arduino IDE**
@@ -133,7 +133,7 @@ Click on **Tools > Board > Boards Manager**, you can tap the keyword 'MegaAVR' a
 
 
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Seeeduino-Crypto-ATmega4809-ECC608-/master/img/install.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino-Crypto-ATmega4809-ECC608-/img/install.png)
 
 
 
@@ -144,7 +144,7 @@ You'll need to select the entry in the **Tools > Board** menu that corresponds t
 Selecting a **Arduino Uon WIFI Rev2**.
 
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Seeeduino-Crypto-ATmega4809-ECC608-/master/img/board.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino-Crypto-ATmega4809-ECC608-/img/board.png)
 
 
 
@@ -153,7 +153,7 @@ Selecting a **Arduino Uon WIFI Rev2**.
 Select the serial device of the Arduino board from the Tools | Serial Port menu. This is likely to be COM3 or higher (**COM1** and **COM2** are usually reserved for hardware serial ports). To find out, you can disconnect your Arduino board and re-open the menu; the entry that disappears should be the Arduino board. Reconnect the board and select that serial port.
 
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Seeeduino-Crypto-ATmega4809-ECC608-/master/img/port.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino-Crypto-ATmega4809-ECC608-/img/port.png)
 
 
 **Upload the program**

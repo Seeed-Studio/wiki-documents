@@ -136,7 +136,7 @@ void loop(){
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
-![cc](https://raw.githubusercontent.com/SeeedDocument/Grove_Button/master/img/cc_Button.png)
+![cc](https://files.seeedstudio.com/wiki/Grove_Button/img/cc_Button.png)
 
 Upload the program to your Arduino/Seeeduino.
 
@@ -378,9 +378,9 @@ pi@raspberrypi:~/GrovePi/Software/Python $ python grove_button.py
 
 - **[More Reading]** [Wooden Laser Gun](http://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)
 
-- **[Codecraft]** [CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove_Button/master/res/Grove_Button_CDC_File.zip)
+- **[Codecraft]** [CDC File](https://files.seeedstudio.com/wiki/Grove_Button/res/Grove_Button_CDC_File.zip)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Button/master/img/gun.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Button/img/gun.jpg)
 
 Inspired by OVERWATCH, we have made a very cool Wooden Laser Gun toy for fun these day!
 

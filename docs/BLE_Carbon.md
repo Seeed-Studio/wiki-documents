@@ -8,7 +8,7 @@ surveyurl: https://www.surveymonkey.com/r/BLE_Carbon
 sku: 102990628
 ---
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BLE-Carbon/master/img/cover.png)
+![enter image description here](https://files.seeedstudio.com/wiki/BLE-Carbon/img/cover.png)
 
 The BLE Carbon is joint efforts by 96Boards and Seeed, aims to provide economic and compact  BLE solutions for IoT projects.
 
@@ -71,7 +71,7 @@ The Carbon comes pre-installed with Zephyr. When future OS become available, you
 
 ##Hardware Overview
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BLE-Carbon/master/img/hw.png)
+![enter image description here](https://files.seeedstudio.com/wiki/BLE-Carbon/img/hw.png)
 
 1.**OTG** - Can be used as USB OTG/HOST and USB device, also used for USB DFU.
 
@@ -105,7 +105,7 @@ B.**IC3** - nRF51822
 
 ##Pin Map
 
-[![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BLE-Carbon/master/img/pinout.png)](https://raw.githubusercontent.com/SeeedDocument/BLE-Carbon/master/img/pinout.png)
+[![enter image description here](https://files.seeedstudio.com/wiki/BLE-Carbon/img/pinout.png)](https://files.seeedstudio.com/wiki/BLE-Carbon/img/pinout.png)
 
 !!!Note
     Click to view larger image.
@@ -149,7 +149,7 @@ For more details, please refer to [Running a serialized application](http://info
 6.	Click the **Upgrade** button (Item 2 in following figure) to start upgrading file content to the memory.
 7.	Click the **Verify** button (Item 3 in following figure) to verify if the data was successfully downloaded.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BLE-Carbon/master/img/6_1.png)
+![enter image description here](https://files.seeedstudio.com/wiki/BLE-Carbon/img/6_1.png)
 
 ####How to generate DFU files from S19/Hex/Bin files
 1.	Run the **DFU File Manager** application (Start -> All Programs -> STMicroelectronics -> DFU File Manager).
@@ -167,15 +167,15 @@ For more details, please refer to [Running a serialized application](http://info
 2.	Run the **Demonstrator GUI** application (Start -> All Programs -> STMicroelectronics -> Demonstrator GUI).
 3.	Follow the steps below to download the firmware.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BLE-Carbon/master/img/6_2_1.png)
+![enter image description here](https://files.seeedstudio.com/wiki/BLE-Carbon/img/6_2_1.png)
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BLE-Carbon/master/img/6_2_2.png)
+![enter image description here](https://files.seeedstudio.com/wiki/BLE-Carbon/img/6_2_2.png)
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BLE-Carbon/master/img/6_2_3.png)
+![enter image description here](https://files.seeedstudio.com/wiki/BLE-Carbon/img/6_2_3.png)
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BLE-Carbon/master/img/6_2_4.png)
+![enter image description here](https://files.seeedstudio.com/wiki/BLE-Carbon/img/6_2_4.png)
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/BLE-Carbon/master/img/6_2_5.png)
+![enter image description here](https://files.seeedstudio.com/wiki/BLE-Carbon/img/6_2_5.png)
 
 
 

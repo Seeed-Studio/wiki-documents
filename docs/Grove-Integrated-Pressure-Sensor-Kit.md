@@ -8,7 +8,7 @@ tags:
 ---
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP/master/img/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP-wiki.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP/img/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP-wiki.jpg)
 
 
 Grove integrated pressure sensor suite (MPX5700AP), this module adopts advanced integrated silicon pressure sensor MPX5700AP, which has the advantages of high precision, good reliability and no calibration. It is very suitable for the construction of Arduino pressure measurement system, capable of measuring air pressure in the range of 15Kpa to 700Kpa.We included a syringe and a rubber tube in the kit.  
@@ -44,7 +44,7 @@ Grove integrated pressure sensor suite (MPX5700AP), this module adopts advanced 
 ## Hardware Overview
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP/master/img/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP-pin.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP/img/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP-pin.jpg)
 
 
 ## Platforms Supported
@@ -80,7 +80,7 @@ Grove integrated pressure sensor suite (MPX5700AP), this module adopts advanced 
 
 | Seeeduino V4.2 | Grove-Integrated-Pressure-Sensor-Kit | Base Shield |
 |--------------|----------------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP/master/img/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP-210-157.png)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP/img/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP-210-157.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP-p-4295.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
 
 
@@ -103,7 +103,7 @@ Grove integrated pressure sensor suite (MPX5700AP), this module adopts advanced 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP/master/img/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP-con.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP/img/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP-con.jpg)
 
 
 !!!Note   
@@ -164,13 +164,13 @@ void loop() {
 - **Step 2.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time. Set the baud rate to **9600**.
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP/master/img/result1.png)
+![](https://files.seeedstudio.com/wiki/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP/img/result1.png)
 
 
 - **Step 3.**  Now you can use this sensor, and the output will be like this:
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP/master/img/result2.png)
+![](https://files.seeedstudio.com/wiki/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP/img/result2.png)
 
 
 ## Schematic Online Viewer

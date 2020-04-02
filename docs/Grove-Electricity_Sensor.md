@@ -10,7 +10,7 @@ sku: 101020027
 tags: grove_analog, io_3v3, io_5v, plat_duino, plat_linkit, plat_bbg
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Electricity_Sensor/master/img/Twig-Electricity-Sensor.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Electricity_Sensor/img/Twig-Electricity-Sensor.jpg)
 
 The Electricity sensor module is a member of Grove. It is based on the TA12-200 current transformer which can transform the large AC into small amplitude. You can use it to test large alternating current up to 5A.
 
@@ -180,7 +180,7 @@ The minimum effective current that can be sensed by the code can be calculated u
 
 - **Step 2.**    Open the serial monitor, The results is as follows：
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Electricity_Sensor/master/img/ardu_result.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Electricity_Sensor/img/ardu_result.jpg)
 
 ### With Raspberry Pi
 
@@ -201,7 +201,7 @@ The minimum effective current that can be sensed by the code can be calculated u
 - **Step 4.** Connect the Raspberry to PC through USB cable.
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Electricity_Sensor/master/img/with_rpi.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Electricity_Sensor/img/with_rpi.jpg)
 
 #### Software
 
@@ -293,20 +293,20 @@ while True:
 ```
 Here is the result.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Electricity_Sensor/master/img/rpi_result.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Electricity_Sensor/img/rpi_result.jpg)
 
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-Electricity_Sensor/master/res/Electricity_sensor_v1.0_eagle_files.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Electricity_Sensor/res/Electricity_sensor_v1.0_eagle_files.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ## Resources
 
 
--  **[Eagle]** [Grove -Electricity Sensor Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-Electricity_Sensor/master/res/Electricity_sensor_v1.0_eagle_files.zip)
--  **[PDF]** [Schematic in PDF](https://raw.githubusercontent.com/SeeedDocument/Grove-Electricity_Sensor/master/res/Electricity_sensor_sch.pdf)
+-  **[Eagle]** [Grove -Electricity Sensor Eagle File](https://files.seeedstudio.com/wiki/Grove-Electricity_Sensor/res/Electricity_sensor_v1.0_eagle_files.zip)
+-  **[PDF]** [Schematic in PDF](https://files.seeedstudio.com/wiki/Grove-Electricity_Sensor/res/Electricity_sensor_sch.pdf)
 
 
 ## Tech Support

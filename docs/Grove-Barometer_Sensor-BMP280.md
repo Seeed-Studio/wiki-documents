@@ -43,7 +43,7 @@ Typical applications: Enhancement of GPS navigation, outdoor/indoor navigation, 
 | Effective pressure measurement range | 300 - 1100 hPa (1 hPa= one hundred Pa) with ±1.0 hPa accuracy                                                               |
 | Temperature measurement accuracy     | ±1.0°C                                                                                                                      |
 | Measurement modes                    | Piezo & Temperature, forced or periodic                                                                                     |
-| Chip                                 | BMP280 ([datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer_Sensor-BMP280/master/res/Grove-Barometer_Sensor-BMP280-BMP280-DS001-12_Datasheet.pdf)) |
+| Chip                                 | BMP280 ([datasheet](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BMP280/res/Grove-Barometer_Sensor-BMP280-BMP280-DS001-12_Datasheet.pdf)) |
 | Possible sampling rate               | 182 Hz (typical)                                                                                                            |
 | Interface Bus                        | SPI, I<sup>2</sup>C (use either one of them)                                                                                |
 | Weight                               | 3 g (for breakout board)                                                                                                    |
@@ -70,7 +70,7 @@ Typical applications: Enhancement of GPS navigation, outdoor/indoor navigation, 
 
 ![](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BMP280/img/dimensions.jpg)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer_Sensor-BMP280/master/img/Grove-Barometer_Sensor-BMP280-Components_1200_s.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BMP280/img/Grove-Barometer_Sensor-BMP280-Components_1200_s.jpg)
 
 -   **SPI soldering pads**, a voltage monitoring circuit.
 -   **Interface bus selection pads** , to select I<sup>2</sup>C bus, connect the two pads by soldering (this is connected by default); to select SPI bus, cut the two pads with a sharp knife or a soldering iron.
@@ -222,7 +222,7 @@ void loop()
 ## Resources
 
 - **[Eagle]** [Grove-Barometer Sensor BMP280 Schematic](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BMP280/res/Grove%20-%20Barometer%20Sensor_BMP280_Schematic.zip)
-- **[Datasheet]** [BMP280 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer_Sensor-BMP280/master/res/Grove-Barometer_Sensor-BMP280-BMP280-DS001-12_Datasheet.pdf)
+- **[Datasheet]** [BMP280 Datasheet](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BMP280/res/Grove-Barometer_Sensor-BMP280-BMP280-DS001-12_Datasheet.pdf)
 - **[Library]** [Grove_BMP280 Library](https://github.com/Seeed-Studio/Grove_BMP280) on GitHub
 - **[References]**  [I<sup>2</sup>C how-to for Arduino](https://www.arduino.cc/en/Reference/Wire)
 

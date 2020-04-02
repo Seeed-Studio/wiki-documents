@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/EL_Shield
 sku: 104030000
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/EL_Shield/master/img/EL_Shield_02.jpg)
+![](https://files.seeedstudio.com/wiki/EL_Shield/img/EL_Shield_02.jpg)
 
 This shield is used to control EL devices. It can control 4 EL devices simultaneously. The controlling method is as simple as controlling an LED. Driven by PWM, it can create a colorful and florid effect by controlling each EL wire with a simple program. Combined with our EL Inverter, it can drive an EL wire as long as 15m, which provides infinite possibility for your design. Besides, the Shield is covered by Acrylic board, which enhances user's safety.
 
@@ -26,7 +26,7 @@ Specifications
 Hardware Overview
 ---------
 
-![](https://raw.githubusercontent.com/SeeedDocument/EL_Shield/master/img/EL_Shield_interface.jpg)
+![](https://files.seeedstudio.com/wiki/EL_Shield/img/EL_Shield_interface.jpg)
 
 Demonstration
 -------------
@@ -34,7 +34,7 @@ Demonstration
 Here is a simple demo involving EL shield, 4 EL tapes and the custom invertor that accompanies EL shield.
 Hook all things up as in the picture below.
 
-![](https://raw.githubusercontent.com/SeeedDocument/EL_Shield/master/img/EL_Shield_Hardware_Installation.jpg)
+![](https://files.seeedstudio.com/wiki/EL_Shield/img/EL_Shield_Hardware_Installation.jpg)
 
 Upload the code below to your microcontroller.
 
@@ -71,17 +71,17 @@ void loop()
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/EL_Shield/master/res/EL_Shield_Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/EL_Shield/res/EL_Shield_Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 Resources
 ---------
 
--   [EL Shield eagle file](https://raw.githubusercontent.com/SeeedDocument/EL_Shield/master/res/EL_Shield_Eagle_File.zip)
--   [EL Shield Source code file for Arduino 1.0](https://raw.githubusercontent.com/SeeedDocument/EL_Shield/master/res/EL_Shield_Test_code.zip)
--   [BT134W-600D datasheet](https://raw.githubusercontent.com/SeeedDocument/EL_Shield/master/res/BT134W-600D.pdf)
--   [MOC 3063 datasheet](https://raw.githubusercontent.com/SeeedDocument/EL_Shield/master/res/MOC3063M.pdf)
+-   [EL Shield eagle file](https://files.seeedstudio.com/wiki/EL_Shield/res/EL_Shield_Eagle_File.zip)
+-   [EL Shield Source code file for Arduino 1.0](https://files.seeedstudio.com/wiki/EL_Shield/res/EL_Shield_Test_code.zip)
+-   [BT134W-600D datasheet](https://files.seeedstudio.com/wiki/EL_Shield/res/BT134W-600D.pdf)
+-   [MOC 3063 datasheet](https://files.seeedstudio.com/wiki/EL_Shield/res/MOC3063M.pdf)
 
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/EL_Shield -->

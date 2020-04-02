@@ -124,7 +124,7 @@ For more case resources, please visit [this Github page.](https://github.com/sea
 
 <div align="center">
 <figure>
-  <a href="https://raw.githubusercontent.com/SeeedDocument/Spartan-Edge-Accelerator-Board/master/img/Spartan-Edge-Accelerater-Board-v1.0-pin.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/Spartan-Edge-Accelerater-Board-v1.0-pin.jpg" alt="Hardware Overview of SEA Board" title="Hardware Overview of SEA Board" />
+  <a href="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/Spartan-Edge-Accelerater-Board-v1.0-pin.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/Spartan-Edge-Accelerater-Board-v1.0-pin.jpg" alt="Hardware Overview of SEA Board" title="Hardware Overview of SEA Board" />
   <figcaption><b>Figure 1</b>. <i>Hardware Overview of SEA Board</i></figcaption></a>
 </figure>
 </div>

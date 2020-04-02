@@ -167,11 +167,11 @@ void loop()
 - **"Ratio"** reflects on which level LPO Time takes up the whole sample time.
 
 - **"Concentration"** is a figure that has a physical meaning. It is calculated from the characteristic graph below by using the LPO time.
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Dust_Sensor/master/image/600px-Characteristics.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Dust_Sensor/image/600px-Characteristics.jpg)
 
 - Here is a graph of the dust concentration measured in office :
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Dust_Sensor/master/image/600px-Dust_sensor_4.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Dust_Sensor/image/600px-Dust_sensor_4.jpg)
 
 We can see the concentration of dust is very low in the evening, but it is higher in the afternoon. A threshold can be set when the concentration is above a value. Also, if you want to set the sensor more sensitive you can add a fan on the sensor, and add a 10kΩ resistor between the Pin5 and Ground. More information please visit the [blog of A.J](https://indiaairquality.com/2014/12/14/measuring-the-pickle-jr-a-modified-ppd42-with-an-attached-fan/).
 
@@ -256,13 +256,13 @@ If you want to make some awesome projects by Grove - Dust Sensor, here is a proj
 
 **Air Quality Box**
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Dust_Sensor/master/image/600px-Overview0.png)
+![](https://files.seeedstudio.com/wiki/Grove_Dust_Sensor/image/600px-Overview0.png)
 
 This section an IoT demo made by Seeeduino and [Grove](http://www.seeedstudio.com/wiki/Grove_System).
 
 More attention is being paid to the environmental air quality nowadays because the tiny particles in the air around can badly endanger people’s health. We always get the information of environment from our government department. But it’s the average value of the whole city/section. It can not reflect the environment around you accurately.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Grove_Dust_Sensor/master/image/200px-Wiki_makeitnow_logo.png)](http://www.instructables.com/id/Air-Quality-Test-Box/?ALLSTEPS)
+[![](https://files.seeedstudio.com/wiki/Grove_Dust_Sensor/image/200px-Wiki_makeitnow_logo.png)](http://www.instructables.com/id/Air-Quality-Test-Box/?ALLSTEPS)
 
 
 ## FAQs

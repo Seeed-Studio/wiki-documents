@@ -48,7 +48,7 @@ All in all, the Grove 12 button Capacitive Touch Keypad is an easy-to-use module
 
 <div align="center">
 <figure>
-  <a href="https://raw.githubusercontent.com/SeeedDocument/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/master/img/pinmap.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/img/pinmap.jpg" alt="Touch Keypad hardware" title="hardware overview" />
+  <a href="https://files.seeedstudio.com/wiki/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/img/pinmap.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/img/pinmap.jpg" alt="Touch Keypad hardware" title="hardware overview" />
   <figcaption><b>Figure 1</b>. <i>Hardware overview</i></figcaption></a>
 </figure>
 </div>

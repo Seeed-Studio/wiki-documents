@@ -41,7 +41,7 @@ As the name indicates, the Grove - MP3 V3 is the upgraded version of Grove - MP3
 
 <div align="center">
 <figure>
-  <p style=":center"><a href="https://raw.githubusercontent.com/SeeedDocument/Grove-MP3-V3/master/img/hardware.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Grove-MP3-V3/master/img/hardware.jpg" /></a></p>
+  <p style=":center"><a href="https://files.seeedstudio.com/wiki/Grove-MP3-V3/img/hardware.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/Grove-MP3-V3/img/hardware.jpg" /></a></p>
 </figure>
 </div>
 

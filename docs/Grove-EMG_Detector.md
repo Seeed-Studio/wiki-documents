@@ -10,7 +10,7 @@ sku: 101020058
 tags: grove_analog, io_3v3, io_5v, plat_duino, plat_linkit
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-EMG_Detector/master/img/Emg_product.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-EMG_Detector/img/Emg_product.jpg)
 
 EMG detector is a bridge connects human body and electrical, the sensor gathers small muscle signal then process with 2th amplify and filter, the output signal can be recognized by Arduino. You can add this signal into your control system. 
 
@@ -50,7 +50,7 @@ Platforms Supported
 Hardware Overview
 ------------------
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-EMG_Detector/master/img/Grove_EMG_detector.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-EMG_Detector/img/Grove_EMG_detector.jpg)
 
 -   J2: grove interface, connect to analog I/O;
 -   J1: EMG Disposable Surface Electrodes connector.
@@ -68,7 +68,7 @@ Plug Grove - Base Shield to Seeeduino, then connect Grove - LED Bar to D8, conne
 
 Finally, tack the three electrodes to your muscle, and keep a distance between each electrodes.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-EMG_Detector/master/img/Emg_connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-EMG_Detector/img/Emg_connect.jpg)
 
 ### Download Code and Upload
 
@@ -76,7 +76,7 @@ You can download the demo code in github, click [here](https://github.com/Seeed-
 
 Then upload the code to Seeeduino, if you have any problem about code uploading, please refer to [Getting Started With Seeeduino](/Getting_Started_with_Seeeduino)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-EMG_Detector/master/img/Emg_ide.png)
+![](https://files.seeedstudio.com/wiki/Grove-EMG_Detector/img/Emg_ide.png)
 
 ### Move
 
@@ -86,10 +86,10 @@ You can see that when initializing, the Led Bar will go form level 10 to level 0
 
 When you are moving, you can find that the level of Led Bar will change.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-EMG_Detector/master/img/Grove_emg_demo_2.gif)
+![](https://files.seeedstudio.com/wiki/Grove-EMG_Detector/img/Grove_emg_demo_2.gif)
 
 # Grove-EMG Sensor v1.0
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-EMG_Detector/master/res/Grove-EMG_Sensor_v1.0.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-EMG_Detector/res/Grove-EMG_Sensor_v1.0.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 # Grove-EMG Sensor v1.1
@@ -100,7 +100,7 @@ When you are moving, you can find that the level of Led Bar will change.
 Resources
 --------
 
--   [Grove-EMG Sensor v1.0 Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-EMG_Detector/master/res/Grove-EMG_Sensor_v1.0.zip)
+-   [Grove-EMG Sensor v1.0 Eagle File](https://files.seeedstudio.com/wiki/Grove-EMG_Detector/res/Grove-EMG_Sensor_v1.0.zip)
 -   [Grove-EMG Sensor v1.1 Eagle File](https://files.seeedstudio.com/wiki/Grove-EMG_Detector/res/202000023+PCBA-Grove+EMG+Detector+v1.1.zip)
 -   [Demo Code](https://github.com/Seeed-Studio/Grove_EMG_detector_demo_code)
 

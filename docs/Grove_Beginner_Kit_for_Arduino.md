@@ -11,12 +11,12 @@ sku: 110020171
 
 ## GROVE SYSTEM
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/pack.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/pack.jpg)
 
 Grove is a modular prototyping system consist of a base unit and various modules with standardized connector. the base unit is generally a microprocessor which allows for communicates, processes and controls the input or output from the Grove modules. Every single Grove module typically addresses a single function, range from a simple button to a more complex heart rate sensor. the standardised Grove connector allows user to assemble Grove units with building block approach, compared to the jumper or solder based system it is much easier to assemble or disassemble, which simplifies the learning system for  experimenting, building and prototyping.
 We also provide Grove to Pin Header Converter or Grove Base HAT available for variety developing platforms for those who wants to use grove sensor and actuator modules without Grove System Development Board.
 
-![Grove header](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/grove-wire.jpg)![Grove connector](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/connector.png)![Grove-jumper wire](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/jumperwire.png)
+![Grove header](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/grove-wire.jpg)![Grove connector](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/connector.png)![Grove-jumper wire](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/jumperwire.png)
 
 Grove system users need to have at least some basic electronic knowledge background, otherwise you need go through this basic tutorial to learn some basic operations on the Grove system, the first part of this tutorial consists list of basic information on the components included in the starter kit, followed by the basic setup of the Arduino IDE for Seeeduino Lotus. Then, the 11 tutorial sessions provide the basic operation on each individual components in the starter kit and the applications by combine multiple modules together, which gives learner some insight and basic knowledge on hooking up and coding with the Grove system.
 
@@ -47,7 +47,7 @@ Seeeduino Lotus is a development board with ATMEGA328 AVR microcontroller, it is
 
 **Hardware**
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/pinout.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/pinout.png)
 
 LED-D13: An LED is connected to D13 pin of the board. This can be used as an on-board LED indicator for programs/sketches.
 
@@ -81,47 +81,47 @@ USB 2 Uart: Pinout of USB-2-Uart. These pads can be used to interact with other 
 **[Grove - Buzzer](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)**
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/buzzer.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/buzzer.jpg)
 
 This module uses piezo buzzer as the main component, it can produce high pitch tone while it is connected to digital output and logic level set to High, otherwise it can produce various tones according to the frequencies generated from the Analog PWM output that connected to it. (note: the frequency range that normal human ear can distinguish is between 20 Hz and 20kHz.)
 
 **[Grove - Tilt Switch](https://www.seeedstudio.com/Grove-Tilt-Switch-p-771.html)**
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/Tilt.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/Tilt.jpg)
 
 Grove-Tilt Switch is the equivalent of a button, and is used as a digital input. Inside the tilt switch is a pair of balls that make contact with the pins when the case is upright. Tilt the case over and the balls don't touch, thus not making a connection. It is wired to the SIG line, NC is not used on this Grove module.
 
 **[Grove - Chainable RGB LED](https://www.seeedstudio.com/Grove-Chainable-RGB-Led-V2-0-p-2903.html)**
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/Grove-Chainable_RGB_LED_V2.0.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/Grove-Chainable_RGB_LED_V2.0.jpg)
 
 Grove - Chainable RGB LED is based on P9813 chip which is a full-color LED driver. It provides 3 constant-current drivers as well as modulated output of 256 shades of gray. It communicates with a MCU using 2-wire transmission (Data and Clock). This 2-wire transmission can be used to cascade additional Grove - Chainable RGB LED modules. The built-in clock regeneration enhances the transmission distance. This Grove module is suitable for any colorful LED based projects. 
 
 **[Grove - Light Sensor](https://www.seeedstudio.com/Grove-Light-Sensor-v1-2-p-2727.html)**
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/lightsensor.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/lightsensor.jpg)
 
 The Grove - Light sensor integrates a photo-resistor(light dependent resistor) to detect the intensity of light. The resistance of photo-resistor decreases when the intensity of light increases. A dual OpAmp chip LM358 on board produces voltage corresponding to intensity of light(i.e. based on resistance value). The output signal is analog value, the brighter the light is, the larger the value.
 
 **[Grove - Line Finder](https://www.seeedstudio.com/Grove-Line-Finder-v1-1-p-2712.html)**
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/linefinder.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/linefinder.jpg)
 
 Grove-Line finder is designed for line-following robot. It has an IR emitting LED and an IR sensitive phototransistor. It can output digital signal to a microcontroller so that the robot can follow a black line on white background, or vice versa. 
 
 **[Grove - LCD RGB Backlight](https://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html)**
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/LCD.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/LCD.jpg)
 
 This Grove - LCD RGB Backlight module is a 16 Characters  2 Lines LCD display, it uses I2C bus interface to communicate with the development board, thus these will reduce the pin header from 10 to 2 which is very convenient for the Grove system. This LCD display module also supports customise characters, you can create and display heart symbol or stick-man on this LCD module through a simple coding configuration.
 
 **[Grove - Temperature & Humidity Sensor(DHT11)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DHT1-p-745.html)**
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/DHT11.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/DHT11.jpg)
 
 This Temperature & Humidity sensor provides a pre-calibrated digital output. A unique capacitive sensor element measures relative humidity and the temperature is measured by a negative temperature coefficient (NTC) thermistor. It has excellent reliability and long term stability. Please note that this sensor will not work for temperatures below 0 degree. 
 
@@ -129,7 +129,7 @@ This Temperature & Humidity sensor provides a pre-calibrated digital output. A u
  
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/3_axis_cover.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/3_axis_cover.jpg)
 
 3-Axis Digital Accelerometer is the key part in projects like orientation detection, gesture detection and Motion detection. This 3-Axis Digital Accelerometer(±1.5g) is based on Freescale's low power consumption module, MMA7660FC. It features up to 10,000g high shock survivability and configurable Samples per Second rate. For generous applications that don't require too large measurement range, this is a great choice because it's durable, energy saving and cost-efficient. 
 
@@ -152,7 +152,7 @@ Download links:
 Official Website: [CP210x USB to UART Bridge VCP Drivers](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/logo.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/logo.jpg)
 
 **Install driver**
 
@@ -160,45 +160,45 @@ Windows:
 
 Extract/unzip the downloaded compressed driver file, open the extracted file and select install the relevant driver according to the bit of your operating system, in this case we selected 64bit, 32bits OS user should select _x86 file, follow the install wizard to install.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/win1.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/win1.png)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/win2.png)![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/win3.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/win2.png)![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/win3.png)
 
 Mac OS:
 
 Double click “Silicon Labs VCP Driver.pkg” file, and follow the setup wizard to install.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/mac1.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/mac1.png)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/mac2.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/mac2.png)
 
 **Step 2.** Download and Install [Arduino IDE](https://www.arduino.cc/en/Main/Software)
 
 Please download and install the Arduino IDE according to your operating system.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/ard.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/ard.png)
 
 <b id="step3">Step 3.</b> Add library for Seeeduino Lotus
 
 - Open Arduino | Preferences, from the preferences window under settings page find Additional Boards Manager URLS, copy & paste the Library URL into the text box, then press ok to take effect.
 Library URL:	https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_seeeduino_boards_index.json
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/ard1.png)![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/ard2.png)![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/ard3.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/ard1.png)![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/ard2.png)![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/ard3.png)
 
 - Open Tools | Board: | Boards Manager, search for Seeeduino AVR and click install to install the Seeeduino AVR library. if you cannot see the Seeeduino AVR listed in the Boards Manager window, please repeat the first step and make sure the URL you entered is correct.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/ard4.png)![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/ard5.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/ard4.png)![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/ard5.png)
 
 - Open Tools | Board: under the secondary list you should find Seeeduino AVR Boards section as shown, and please select the correct boards according to your development environment, in this tutorial we should select Seeeduino Lotus.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/ard6.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/ard6.png)
 	
 **Step 4.** Connect Seeeduino Lotus
 
 Please connect Seeeduino Lotus and computer through a Micro-USB cable, the green power LED on Seeeduino lotus should lit up.
 
 
-![with micro-USB](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/usb.jpg)
+![with micro-USB](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/usb.jpg)
 
 **Step 5.** Configure IDE for Seeeduino Lotus
 
@@ -206,14 +206,14 @@ Please follow the steps as shown before, select “Seeeduino Lotus” under the 
 
 Select the serial device of the Arduino board from the Tools | Serial Port menu. To find out the correct serial device, you can disconnect your Arduino board and re-open the menu; the entry that disappears should be the Arduino board. Reconnect the board and select that serial port. The entry you selected should contain “SLAB_USB”.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/ard07.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/ard07.png)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/ard7.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/ard7.png)
 
 
 Set “Tools | Programmer” as “AVR ISP”.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/ard8.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/ard8.png)
 
 
 ### Blink Demo
@@ -224,7 +224,7 @@ After all the basic set up of Arduino IDE, we can now test the blink demo code o
 
 Select File | Examples | 01 Basics | Blink from menu bar, the blink example code should appear in the new window. 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/ard9.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/ard9.png)
 
 
 **Upload code**
@@ -233,15 +233,15 @@ Please ensure the correct Board, Port and Programmer are selected under tools me
 Now we can upload the code into the Lotus dev board by press the right arrow icon on the top left corner of the IDE. 
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/ard10.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/ard10.png)
 
 Once the code uploaded successfully, the text “avrdude done. Thank you.” should appear in the log window of the IDE.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/ard11.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/ard11.png)
 
 Now you should see the built-in LED flashes in a one second interval.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/blink.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/blink.jpg)
 
 
 **Explanation of the blink code**
@@ -296,7 +296,7 @@ delay(1000);
 ## Grove Starter Kit 10 Sessions Tutorial
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/kit.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/kit.jpg)
 
 ### Goal
 This section consists of 10 tutorials, the tutorials can be divided into two parts, the first 8 sessions introduce the basic operation of each individual module from this starter kit, and the last 2 sessions uses example cases to show how the modules can be combined and applied in real life applications.
@@ -315,7 +315,7 @@ The fundamental knowledge on operate Seeeduino Lotus with Arduino IDE and the co
 ### Session 1: Grove - Buzzer
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/buzzer.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/buzzer.jpg)
 
 **Objective**	
 
@@ -349,7 +349,7 @@ Included in the kit
 
 **Step 1.** Please use the Grove cable to connect Grove - Buzzer module to D6 port of Seeeduino Lotus
 
-![D6 with seeeduino](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/buzzer_ard.jpg)
+![D6 with seeeduino](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/buzzer_ard.jpg)
 
 **Step 2.** Link Seeeduino Lotus with computer by a micro USB cable.
 
@@ -503,7 +503,7 @@ Please checkout Brett Hagman’s GitHub repo "[Tone](https://github.com/bhagman/
 
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/Tilt.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/Tilt.jpg)
 
 **Objective**	
 Use tilt switch module to turn on/off the built-in LED on the Seeeduino Lotus, and also use the tilt switch to make the buzzer module from previous session to buzz.
@@ -534,7 +534,7 @@ Included in the kit
 
 Step 1: Connect Grove – Tilt Switch to D5 port of Seeeduino Lotus.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/tilt_ard.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/tilt_ard.jpg)
 
 
 Step 2:  Link Seeeduino Lotus with computer by a micro USB cable 
@@ -575,16 +575,16 @@ Step 3: Open Serial Monitor
 
 to open serial monitor please select Tools | Serial Monitor from menu bar, or simply click the magnifier icon on the tool bar. Note: Please wait for the code finish uploaded before open serial monitor. 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/ard12.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/ard12.png)
 
 Step 4: Observe result
 
 Please tilt the tilt switch in both directions, you should see “1” or “0” displayed in serial monitor, now you can find the right orientation for tilt switch to turn on/off.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/tilt_off&on.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/tilt_off&on.jpg)
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/ard13.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/ard13.png)
 
 **Example 2**:Use tilt switch to turn on/off built-in LED
 
@@ -626,13 +626,13 @@ Step 3: Observe result
 !!!Success
 	Now you should be able to turn on/off the built-in LED on the Seeeduino Lotus by tilting the tilt switch in the right orientation.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/tilt_off&on.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/tilt_off&on.jpg)
 
 
 **Example 3**: Use tilt switch to pause and play ringtone from the buzzer
 Please connect Grove – Buzzer module to D6 port of Seeeduino Lotus
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/buzzer_tilt.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/buzzer_tilt.jpg)
 
 Step 1: copy & paste the following code into Arduino IDE
 
@@ -740,7 +740,7 @@ After this session, you can attach the tilt switch sensor module to your toolbox
 
 ### Session 3: Grove – Chainable RGB LED
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/Grove-Chainable_RGB_LED_V2.0.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/Grove-Chainable_RGB_LED_V2.0.jpg)
 
 **Objective**	
 
@@ -777,7 +777,7 @@ Included in the kit
 
 Step 1: Connect Grove – Chainable RGB LED to D7 port of Seeeduino Lotus, Note: please connect the G|V|DI|CI port from LED as shown below.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/rgb_ard.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/rgb_ard.jpg)
 
 Step 2: Link Seeeduino Lotus with computer by a micro USB cable.
 
@@ -796,21 +796,21 @@ Step 2: Select the “include Library | Add .ZIP Library..
 
 Please select open Sketch | Include Library | Add .ZIP Library…, in the new pop up window please select the zip file you have downloaded from last step, then click choose.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/ard14.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/ard14.png)
 
 
 Step 3: Test if the library added successfully
 
 Select and open File | Examples | ChainableLED-1.2 | CycleTroughColors
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/ard15.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/ard15.png)
 
 Upload Code: Click upload the code
 
 !!!Success
  	if the LED module is cycling trough different colors, then you know you have successfully load the Library.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/rgb_flash_8.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/rgb_flash_8.jpg)
 
 Conclusion: Adding library method allows user easily add third party sensor drivers and libraries made by sensor module venders, for example, in this tutorial session, we used setColorRGB(byte led, byte red, byte green, byte blue) function is one of the function implement by Seeed Studio, this reduces user’s development cost when they adapt new sensor module. You will need to add more libraries for the other grove modules later.
 
@@ -898,7 +898,7 @@ Step 3: Observe result
 
 You should see the color of LED is changing according to the value of hue, which is increasing by 0.025 increment and when the hue value reaches 1, the hue value should reduce by 0.025 decrement until the value become 0, and each color should lit for 50 millisecond.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/rgb_flash_8.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/rgb_flash_8.jpg)
 
 **Example 2**:Use setColorRGB function to change the color and brightness of LED
 
@@ -970,7 +970,7 @@ Step 3: Observe result
 
 you should see the red color LED increases the brightness in every 0.5s, because we only set the value for red variable in the setColorRGB(byte led, byte red, byte green ,byte blue) function.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/rgb_eg2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/rgb_eg2.jpg)
 
 If we change both red and green variables from this:
 
@@ -992,7 +992,7 @@ Connect Grove – Tilt Switch to D5 port of Seeeduino Lotus.
 
 Connect Grove – Buzzer module to D6 port of Seeeduino Lotus.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/rgb_buzzer_tilt.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/rgb_buzzer_tilt.jpg)
 
 Step 1: copy & paste the following code into Arduino IDE
 
@@ -1174,7 +1174,7 @@ Step 3: Observe result
 
 By tilting the tilt switch, you should see when the tilt switch is on, LED changes color along with the tone of buzzer changes, when the tilt switch is off, LED will cycle through Red, Green and Blue and the buzzer stops.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/rgb_eg3.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/rgb_eg3.jpg)
 
 
 
@@ -1184,7 +1184,7 @@ After this session, you can now combine the modules from the first three session
 
 ### Session 4: Grove - Light Sensor
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/lightsensor.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/lightsensor.jpg)
 
 **Objective**	
 
@@ -1220,7 +1220,7 @@ Step 2: Connect Grove – Chainable RGB LED to D7 port of Seeeduino Lotus
 
 Step 3:  Link Seeeduino Lotus with computer by a micro USB cable 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/light_rgb.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/light_rgb.jpg)
 
 **Software programming**
 
@@ -1279,7 +1279,7 @@ Step 3: Observe result
 
 Note if the ambient light is to bright, you can use you hand to cover the light sensor module, then the LED should turn on. when the ambient light makes the reading value of light sensor go higher than 150, the LED should turn off.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/light_eg1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/light_eg1.jpg)
 
 **Example 2**: Uses light sensor to control the brightness of the LED
 
@@ -1372,7 +1372,7 @@ Step 3: Observe result
 
 The brightness of the LED should decreases when the ambient brightness increases. When the ambient brightness decreases, the brightness of the LED should be increasing. as shown, the LED dims when there is a bright light shine on the light sensor, otherwise the LED is bright.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/light_eg2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/light_eg2.jpg)
 
 **Further Explore**
 
@@ -1381,7 +1381,7 @@ Now you can integrate this light sensor module into your corridor lighting syste
 
 ### Session 5: Grove - Line Finder
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/linefinder.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/linefinder.jpg)
 
 **Objective**	
 
@@ -1411,7 +1411,7 @@ Step 1: Connect Grove – Line Finder module to D3 port of Seeeduino Lotus
 
 Step 2:  Link Seeeduino Lotus with computer by a micro USB cable
 
- ![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/line_ard.jpg)
+ ![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/line_ard.jpg)
 
 **Software programming**
 
@@ -1447,7 +1447,7 @@ Step 3: Observe result
 
 Note you should keep at least 5cm away for the detecting object with the line finder, to test the line finder you should tape a strip of black tape onto a white paper or tiles (or uses black objects). Now aim the line finder to the black object, the Serial Monitor should display 0, and if you move away the line finder from black object, the Serial Monitor should display 1.
 
- ![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/line_eg1_1.jpg) 
+ ![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/line_eg1_1.jpg) 
 
 
 
@@ -1455,7 +1455,7 @@ Note you should keep at least 5cm away for the detecting object with the line fi
 
 Connect Grove – Chainable RGB LED to D7 port of Seeeduino Lotus
 
- ![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/line_rgb.jpg)
+ ![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/line_rgb.jpg)
 
 Step 1: copy & paste the following code into Arduino IDE
 
@@ -1512,7 +1512,7 @@ Step 3: Observe result
 
 You should see that if the line finder detects black line, the LED should turn off, otherwise the LED should lid up if the line finder cannot detects the black line.
 
- ![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/line_eg2.jpg)
+ ![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/line_eg2.jpg)
  
 
 **Example 3**:Uses line finder to control the LED to emit Red or Green
@@ -1573,7 +1573,7 @@ Step 3: Observe result
 You should notice when the line finder detects black line, the LED will emit Red light, otherwise, if the line finder cannot spot the black line, the LED should emit Green light.
 
 
- ![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/line_eg3.jpg)
+ ![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/line_eg3.jpg)
 
 
 **Further Explore**
@@ -1582,7 +1582,7 @@ Now you can build your own line tracking car by using this line finder module an
 
 ### Session 6: Grove - LCD RGB Backlight
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/LCD.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/LCD.jpg)
 
 **Objective**	
 
@@ -1595,7 +1595,7 @@ Uses Grove - LCD RGB Backlight screen to display “Hello World” and some cust
 - Scrolling text displayed on the LCD screen
 - Uses LCD built-in character code to display special characters, for example the degree sign “ ° ”
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/chartable.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/chartable.png)
 
 
 **Hardware requirement**	
@@ -1616,7 +1616,7 @@ Included in the kit
 
 Step 1: Connect Grove - LCD RGB Backlight module to I2C. port of Seeeduino Lotus note: it is the I2C port followed by one dot.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/lcd_ard.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/lcd_ard.jpg)
 
 
 Step 2:  Link Seeeduino Lotus with computer by a micro USB cable.
@@ -1670,7 +1670,7 @@ Step 3: Observe result
 
 You should see “Hello, World!” displayed in the first line and the a counting down timer in the second line.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/helloworld.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/helloworld.jpg)
 
 **Example 2**: Display Seeed Studio logo and uses built-in character code to display text
 
@@ -1850,7 +1850,7 @@ Step 3: Observe result
 
 You will see the Seeed Studio Logo displayed in the first 8 blocks, followed by the “I Love Grove” in the first line, and “Seeed Studio” in the second line.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/lcd_seeed.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/lcd_seeed.jpg)
 
 **Example 3**:Scrolling text on LCD display
 
@@ -2057,7 +2057,7 @@ Step 3: Observe result
 
 You should see the display scrolling text, firstly from right to left until all the text disappear at the end of the left side of screen, then the text will scroll back from left to right.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/lcd_scroll.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/lcd_scroll.jpg)
 
 **Further Explore**
 
@@ -2065,7 +2065,7 @@ This [website](https://maxpromer.github.io/LCD-Character-Creator/) helps you to 
 
 ### Session 7: Grove - Temperature & Humidity Sensor (DHT11)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/DHT11.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/DHT11.jpg)
 
 **Objective**
 
@@ -2096,7 +2096,7 @@ Included in the kit
 
 Step 1: Connect Grove – Temperature &Humidity Sensor(DHT11) module to D2 port of Seeeduino Lotus.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/DHT11_ard.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/DHT11_ard.jpg)
 
 Step 2: Link Seeeduino Lotus with computer by a micro USB cable
 
@@ -2177,13 +2177,13 @@ Step 4: Observe result
 
 You should see a similar text of temperature and humidity data display in serial monitor as shown below.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/result1.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/result1.png)
 
 **Example 2**: Uses LCD screen to display data from DHT11 sensor
 
 Firstly Connect Grove - LCD RGB Backlight module to I2C. port of Seeeduino Lotus note: it is the I2C port followed by one dot.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/DHT11_lcd.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/DHT11_lcd.png)
 
 Step 1: copy & paste the following code into Arduino IDE
 
@@ -2261,7 +2261,7 @@ Step 3: Observe result
 
 you can see the current room temperature and humidity display on the LCD screen.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/DHT11_result.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/DHT11_result.jpg)
 
 **Further Explore**
 
@@ -2269,7 +2269,7 @@ After this session, you can build your own weather station by using DHT11 sensor
 
 ### Session 8: Grove - 3-Axis Digital Accelerometer
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/3_axis_cover.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/3_axis_cover.jpg)
 
 **Objective**	
 
@@ -2302,7 +2302,7 @@ Included in the kit
 
 Step 1: Connect Grove – 3-Axis Digital Accelerometer to I2C.. port of Seeeduino Lotus note: it is the I2C port followed by two dots.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/3_axis_ard.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/3_axis_ard.jpg)
 
 Step 2: Link Seeeduino Lotus with computer by a micro USB cable.
 
@@ -2387,25 +2387,25 @@ Step 4: Observe result
 Please notice the data changes by positioning the 3-axis accelerometer according to pictures below.
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/result2.jpg)![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/result3.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/result2.jpg)![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/result3.png)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/result4.jpg)![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/result5.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/result4.jpg)![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/result5.png)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/result6.jpg)![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/result7.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/result6.jpg)![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/result7.png)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/result8.jpg)![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/result9.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/result8.jpg)![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/result9.png)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/result10.jpg)![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/result11.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/result10.jpg)![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/result11.png)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/result12.jpg)![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/result13.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/result12.jpg)![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/result13.png)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/result14.jpg)![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/result15.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/result14.jpg)![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/result15.png)
 
 **Example 2**:Uses data from 3-axis accelerometer to calculate the value of Pitch and Roll
 
 Background Knowledge:
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/aircraft.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/aircraft.png)
 
 as shown in above figure:
 
@@ -2479,7 +2479,7 @@ Step 3: Observe result
 
 Please place the 3-axis accelerometer on a levelled surface as shown below.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/3_axis.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/3_axis.jpg)
 
 
 Observe the Roll data
@@ -2488,15 +2488,15 @@ Please flip up/down the 3-axis accelerometer according to the green arrows in ab
 Observe the Pitch data
 Please tilt left/right the 3-axis accelerometer according to the red arrows in above figure, now the value of pitch should increase when you tilt right, decrease when tilt left, in addition, the value of pitch is positive when tilt right relative to origin(placed parallel to water levelled), negative when tilt left.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/result2.jpg)![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/result16.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/result2.jpg)![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/result16.png)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/result10.jpg)![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/result17.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/result10.jpg)![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/result17.png)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/result8.jpg)![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/result18.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/result8.jpg)![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/result18.png)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/result4.jpg)![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/result19.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/result4.jpg)![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/result19.png)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/result6.jpg)![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/result20.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/result6.jpg)![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/result20.png)
 
 Now we can use 3-axis accelerometer to control or correct the direction of air plane or cars, by covert the pitch and roll data to control signal to control the actuator, the same technology is applied to the auto screen adjustment on mobile phone when you tilt the phone from portrait to landscape.
 
@@ -2506,7 +2506,7 @@ Now we can use 3-axis accelerometer to control or correct the direction of air p
 
 Please connect Grove – Tilt Switch to D5 port of Seeeduino Lotus, and connect Grove - LCD RGB Backlight module to I2C. port of Seeeduino Lotus, NOTE: it is the I2C port followed by one dot.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/3_axis_lcd_tilt.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/3_axis_lcd_tilt.jpg)
 
 Here we use the tilt switch to flip the page on LCD screen to show different sets of data, when tilt switch is ON the LCD screen will display data of X, Y, Z Roll and Pitch, When tilt switch is at OFF position the LCD screen will display the acceleration data of aX, aY, aZ in each direction relatively.
 
@@ -2648,7 +2648,7 @@ Firstly, please test if the tilt switch is altering the page of the LCD screen. 
 
 Display the velocity, pitch and roll when tilt switch is on/off:
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/3_axis_tilt_on&off.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/3_axis_tilt_on&off.jpg)
 
 **Further Explore**
 
@@ -2659,7 +2659,7 @@ After play around with digital accelerometer module, you can imagine that accele
 ### Session 9: Smart Garden
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/smartgarden.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/smartgarden.png)
 
 **Objective**
 
@@ -2698,7 +2698,7 @@ Use tilt switch to reset warnings.
 
 **Flowchart**
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/flowchart.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/flowchart.png)
 
 **Hardware requirement**
 
@@ -2725,32 +2725,32 @@ Included in the kit
 Step 1:
 Connect Grove – Buzzer module to D6 port of Seeeduino Lotus 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/buzzer_ard.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/buzzer_ard.jpg)
 
 Connect Grove – Chainable RGB LED to D7 port of Seeeduino Lotus
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/connect1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/connect1.jpg)
 
 Connect Grove – Light Sensor module to A0 port of Seeeduino Lotus
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/connect2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/connect2.jpg)
 
 Connect Grove - LCD RGB Backlight module to I2C. port of Seeeduino Lotus note: it is the I2C port followed by one dot.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/connect3.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/connect3.jpg)
 
 Connect Grove – Temperature &Humidity Sensor(DHT11) module to D2 port of Seeeduino Lotus.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/connect4.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/connect4.jpg)
 
 Connect Grove – Tilt Switch to D5 port of Seeeduino Lotus.
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/connect5.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/connect5.jpg)
 
 Fix all the components together on the DIY Acrylic Frame
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/smartgarden1.png)![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/smartgarden2.png)![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/smartgarden3.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/smartgarden1.png)![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/smartgarden2.png)![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/smartgarden3.png)
 
 Step 2:  Link Seeeduino Lotus with computer by a micro USB cable.
 
@@ -2956,26 +2956,26 @@ Step 4: Observe result
 
 Under normal condition, the LED shines white light and the LCD screen shows temperature and humidity.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/garden.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/garden.png)
 
 4 warning states
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/garden1.png)![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/garden2.png)
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/garden3.png)![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/garden4.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/garden1.png)![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/garden2.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/garden3.png)![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/garden4.png)
 
 Red LED warning
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/garden5.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/garden5.png)
 
 Reset warnings by using tilt switch
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/garden6.png)![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/garden7.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/garden6.png)![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/garden7.png)
 
 
 
 ### Session 10: Smart Cup
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/smartcup.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/smartcup.png)
 
 **Objective**
 
@@ -3014,7 +3014,7 @@ Uses LCD screen display
 
 **Flowchart**
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/flowchart1.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/flowchart1.png)
 
 **Hardware requirement**
 
@@ -3038,25 +3038,25 @@ Step 1:
 Connect Grove - Buzzer module to D6 port of Seeeduino Lotus
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/buzzer_ard.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/buzzer_ard.jpg)
 
 Connect Grove – Chainable RGB LED to D7 port of Seeeduino Lotus
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/connect1.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/connect1.jpg)
 
 
 Connect Grove - LCD RGB Backlight module to I2C. port of Seeeduino Lotus note: it is the I2C port followed by one dot.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/connect6.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/connect6.jpg)
  
 
 Connect Grove – 3-Axis Digital Accelerometer to I2C port of Seeeduino Lotus note: it is the I2C port followed by two dots.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/connect7.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/connect7.jpg)
 
 Fix all the components together on a cup.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/smartcup.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/smartcup.png)
 
 **Software programming**
 
@@ -3444,10 +3444,10 @@ Step 3: Observe result
 
 The 4 states of the smart cup
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/cup1.png)![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/cup2.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/cup1.png)![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/cup2.png)
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/cup3.png)![](https://raw.githubusercontent.com/SeeedDocument/Grove_Beginner_Kit_for_Arduino/master/img/cup4.png)
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/cup3.png)![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/cup4.png)
 
 
 ## REFERENCE

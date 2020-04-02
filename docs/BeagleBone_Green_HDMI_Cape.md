@@ -10,7 +10,7 @@ tags: plat_bbg
 sku: 103030034
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green_HDMI_Cape/master/img/BeagleBone_Green_HDMI_Cape.jpg)
+![](https://files.seeedstudio.com/wiki/BeagleBone_Green_HDMI_Cape/img/BeagleBone_Green_HDMI_Cape.jpg)
 
 **BeagleBone Green HDMI Cape** is a general integrated HDMI connector for expanding your BeagleBone to a rich variety of peripherals such as computer monitor, video projector, digital television, or digital audio device. This board features a standard HDMI receptacle that can be connected to a monitor with a standard HDMI-to-HDMI cable. All HD signals are supported, and the output resolution is 1280×720. It also can be used to transmit audio information. This product will make your applications based on BeagleBone board more versatile for different circumstances.
 
@@ -33,7 +33,7 @@ Specifications
 | HDMI version             | Version 1.2                                                                                            |
 | Maxium Output resolution | 1280x720 @60Hz                                                                                         |
 | Audio transmission       | Available                                                                                              |
-| Chip                     | IT66121 HDMI Framer([Datasheet](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green_HDMI_Cape/master/res/IT66121FN_Datasheet_v1.02.pdf)) |
+| Chip                     | IT66121 HDMI Framer([Datasheet](https://files.seeedstudio.com/wiki/BeagleBone_Green_HDMI_Cape/res/IT66121FN_Datasheet_v1.02.pdf)) |
 
 Platforms Supported
 -------------------
@@ -46,7 +46,7 @@ You can expand your BeagleBone to more multimedia peripherals such computer moni
 Hardware Overview
 -----------------
 
-![](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green_HDMI_Cape/master/img/BeagleBone_Green_HDMI_Cape_Componentss.jpg)
+![](https://files.seeedstudio.com/wiki/BeagleBone_Green_HDMI_Cape/img/BeagleBone_Green_HDMI_Cape_Componentss.jpg)
 
 
 **IT66121 HDMI Framer**
@@ -84,7 +84,7 @@ Getting Started
 ### Hardware Connection
 
 - Step 1. Please follow below picture to connect the hardware.
-![](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green_HDMI_Cape/master/img/BeagleBone_Green_HDMI_Cape_Connection_1200_s.jpg)
+![](https://files.seeedstudio.com/wiki/BeagleBone_Green_HDMI_Cape/img/BeagleBone_Green_HDMI_Cape_Connection_1200_s.jpg)
 
 - Step 2. Plug USB cable(type C end) to your PC.
 
@@ -110,7 +110,7 @@ sudo apt-get install lxde lxde-core lxde-icon-theme
     - Press POWER button on BeagleBone Green board and then press it again.
 
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green_HDMI_Cape/master/img/Beaglebone-Green_s.jpg)
+    ![](https://files.seeedstudio.com/wiki/BeagleBone_Green_HDMI_Cape/img/Beaglebone-Green_s.jpg)
 
 2. The computer mouse does not work(not powered)?
     -   Press RESET button on BeagleBone Green board and wait it to launch.
@@ -145,14 +145,14 @@ This [video](https://www.youtube.com/watch?v=-xvbXSd_9TY&feature=youtu.be) shows
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green_HDMI_Cape/master/res/Schematic_Files.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/BeagleBone_Green_HDMI_Cape/res/Schematic_Files.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 Resources
 ---------
 
-- [Schematic files](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green_HDMI_Cape/master/res/Schematic_Files.zip)
+- [Schematic files](https://files.seeedstudio.com/wiki/BeagleBone_Green_HDMI_Cape/res/Schematic_Files.zip)
 - [HDMI Cape Beaglebone Image](https://drive.google.com/open?id=15wXOtG4pZMifNoldoSvdOX9sBrev733L)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/BeagleBone_Green_HDMI_Cape -->

@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/Grove-Mini_Camera
 sku: 101020007
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Mini_Camera/master/img/Grove_camera.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Mini_Camera/img/Grove_camera.jpg)
 
 If you are searching a small size camera, perhaps, Grove-Mini Camera would be your best choice. It’s a mini camera which can be controlled by Arduino. It has integrated image processing to generate 1280\*720 JPEG image. The captured pictures are stored in SD card and you can read SD card information via Mini 8Pin USB interface.
 
@@ -59,7 +59,7 @@ Let us start to make it:
 -   Connect Grove - Mini Camera to D2 port of **Grove - Base Shield**, and Grove - PIR Motion Sensor to D5 port.
 -   Plug Grove - Base Shield into Arduino/Seeeduino, then connect Arduino/Seeeduino to PC using a USB cable.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Mini_Camera/master/img/Connecting_Picture.JPG)
+![](https://files.seeedstudio.com/wiki/Grove-Mini_Camera/img/Connecting_Picture.JPG)
 
 -   Open Arduino IDE, copy and paste the code below to a new sketch:
 
@@ -147,14 +147,14 @@ Here is the state description of this mini camera. There are 5 working states.
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-Mini_Camera/master/res/Mini_Camera_Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Mini_Camera/res/Mini_Camera_Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 Resources
 ---------
 
-- [Mini Camera Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-Mini_Camera/master/res/Mini_Camera_Eagle_File.zip)
+- [Mini Camera Eagle File](https://files.seeedstudio.com/wiki/Grove-Mini_Camera/res/Mini_Camera_Eagle_File.zip)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Mini_Camera -->
 

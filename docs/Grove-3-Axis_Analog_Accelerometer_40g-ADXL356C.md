@@ -9,7 +9,7 @@ sku: 101020638
 
 ---
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-3-Axis_Analog_Accelerometer-40g-ADXL356C/master/img/101020638-preview.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove-3-Axis_Analog_Accelerometer-40g-ADXL356C/img/101020638-preview.png)
 
 You can find a variety of [3-axis accelerometers](https://www.seeedstudio.com/tag/accelerometer.html) on our website that can meet different scenarios and needs. This time, we bring you the industrial grade, high stability, high precision and low power ADI ADXL series three-axis accelerometers.  
 
@@ -90,7 +90,7 @@ Product|Measurement Range|Output Port|Power Consumption
 
 | Seeeduino V4.2 | Base Shield |Grove 3-aixs Accelermeter ADXL356C|
 |--------------|-------------|-----------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here]( https://raw.githubusercontent.com/SeeedDocument/Grove-3-Axis_Analog_Accelerometer-40g-ADXL356C/master/img/thumbnail.jpg)
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here]( https://files.seeedstudio.com/wiki/Grove-3-Axis_Analog_Accelerometer-40g-ADXL356C/img/thumbnail.jpg)
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-3-Axis-Analog-Accelerometer-40g-ADXL356C-p-4006.html)|
 
 
@@ -113,7 +113,7 @@ Product|Measurement Range|Output Port|Power Consumption
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-3-Axis_Analog_Accelerometer-40g-ADXL356C/master/img/_DAS3071.png)
+![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Analog_Accelerometer-40g-ADXL356C/img/_DAS3071.png)
 
 
 #### Software

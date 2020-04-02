@@ -8,7 +8,7 @@ surveyurl:
 sku: 101020580
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/master/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/img/main.jpg)
 
 The  Grove - Light & Gesture & Color & proximity sensor is TMG39931 based product, which features advanced Gesture detection, Proximity detection, Digital Ambient Light Sense(ALS), Color Sense(RGBC), and optical pattern generation/transmission for broadcast. This four-in-one sensor allows you to collect the data from ambient environment and transfers over the I2C bus.
 
@@ -89,7 +89,7 @@ The Color and ALS detection feature provides red, green, blue and clear light in
 
 | Seeeduino V4.2 | Base Shield | Grove - Light&Gesture&Color&Proximity Sensor(TMG39931)|
 |--------------|-------------|-----------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/master/img/thumbnail.jpg)
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/img/thumbnail.jpg)
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com)|
 
 
@@ -105,7 +105,7 @@ The Color and ALS detection feature provides red, green, blue and clear light in
 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/master/img/withard.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/img/withard.jpg)
 
 
 #### Software
@@ -130,11 +130,11 @@ The Color and ALS detection feature provides red, green, blue and clear light in
 - **Step 3.** Restart the Arduino IDE. Open the example, you can open it in the following three ways：
     1. Open it directly in the Arduino IDE via the path: **File --> Examples -->Seeed TMG3993(Grove - Light&Gesture&Color&Proximity Sensor)-->Example1-ProximityPullRaw**. 
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/master/img/ard1.png)
+    ![](https://files.seeedstudio.com/wiki/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/img/ard1.png)
     
     2. Open it in your computer by click the **basic_demo.ino** which you can find in the folder **XXXX\Arduino\libraries\Seeed_TMG3993-master⁩\⁨examples⁩\Example1-ProximityPullRaw⁩⁩\Example1-ProximityPullRaw.ino**, **XXXX** is the location you installed the Arduino IDE.
     
-    ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/master/img/ard2.png)
+    ![](https://files.seeedstudio.com/wiki/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/img/ard2.png)
     
     3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
@@ -186,7 +186,7 @@ void loop()
 !!!Success
 		If everything goes well, the raw (uint16_t) data of the proximity sensor should be able to read from Serial Monitor.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/master/img/eg1.png)
+![](https://files.seeedstudio.com/wiki/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/img/eg1.png)
 
 If you would like to run other examples, you may do similar processes.
 
@@ -267,7 +267,7 @@ void loop()
 
 You should see something like this in Serial Monitor after you upload the code to Seeeduino. 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/master/img/eg2.png)
+![](https://files.seeedstudio.com/wiki/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/img/eg2.png)
 
 
 
@@ -350,7 +350,7 @@ void loop()
 
 You should see something like this in Serial Monitor after you upload the code to Seeeduino. 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/master/img/eg3.png)
+![](https://files.seeedstudio.com/wiki/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/img/eg3.png)
 
 
 

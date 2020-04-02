@@ -8,7 +8,7 @@ surveyurl: https://www.research.net/r/RePhone_core_2G-AtmelSAMD21
 sku: 102040046
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/RePhone-core-2G-AtmelSAMD21/master/img/cover.jpg)
+![](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/img/cover.jpg)
 
 RePhone is one of the most unique and interesting development board platform that created by Seeed Studio, ever since its first show on the stage of KickStarter, it has received tons of attention and support from makers all over the world because with RePhone you can not only DIY a special phone for yourself, but also enchant things around you with cellular connectivity.
 
@@ -68,7 +68,7 @@ The RePhone Core 2G-AtmelSAMD21 v1.0 is a new Arduino compatible RePhone core 2G
 
 ## Hardware Overview
 ---
-![](https://raw.githubusercontent.com/SeeedDocument/RePhone-core-2G-AtmelSAMD21/master/img/hw.png)
+![](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/img/hw.png)
 
 * **1- **11pin Xadow Connector
 * **2- **User Button(D3)
@@ -89,10 +89,10 @@ The RePhone Core 2G-AtmelSAMD21 v1.0 is a new Arduino compatible RePhone core 2G
 
 ##Pin map
 
-[![](https://raw.githubusercontent.com/SeeedDocument/RePhone-core-2G-AtmelSAMD21/master/img/pinmap.png)](https://raw.githubusercontent.com/SeeedDocument/RePhone-core-2G-AtmelSAMD21/master/img/pinmap.png)
+[![](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/img/pinmap.png)](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/img/pinmap.png)
 
 !!!Tip
-    [Click](https://raw.githubusercontent.com/SeeedDocument/RePhone-core-2G-AtmelSAMD21/master/img/pinmap.png) to view larger image.
+    [Click](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/img/pinmap.png) to view larger image.
 
 !!!Note
     * INT1 connect to D7
@@ -108,27 +108,27 @@ Copy blow code to **Additional Boards Manager URLs**, and then **OK**
 https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_seeeduino_boards_index.json
 ```
 
-![](https://raw.githubusercontent.com/SeeedDocument/RePhone-core-2G-AtmelSAMD21/master/img/setting.png)
+![](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/img/setting.png)
 
 Then let's go to **Tools > Board > Boards Manager**
 
-![](https://raw.githubusercontent.com/SeeedDocument/RePhone-core-2G-AtmelSAMD21/master/img/boards_manager.png)
+![](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/img/boards_manager.png)
 
 Click on the **Install** button and wait for minutes before the board is installed.
 
 After the install is completed, you can find RePhone core 2G-AtmelSAMD21 at the bottom of **Tools > Board**.
 
-![](https://raw.githubusercontent.com/SeeedDocument/RePhone-core-2G-AtmelSAMD21/master/img/board_r2.png)
+![](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/img/board_r2.png)
 
 ### Install the Driver (For Windows)
 
 When the first time to insert the board, you should get a USB COM device name RePhone 2G SAMD21 that need to install a driver. Click on the below button to download driver for the board.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/RePhone-core-2G-AtmelSAMD21/master/img/driver.png)](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/res/driver.zip)
+[![](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/img/driver.png)](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/res/driver.zip)
 
 To make sure the driver was installed successful, open your Device Manager to see if **RePhone 2G SAMD21** exists.
 
-![](https://raw.githubusercontent.com/SeeedDocument/RePhone-core-2G-AtmelSAMD21/master/img/device_manager.png)
+![](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/img/device_manager.png)
 
 ###Hello World
 Now we can upload our first demo - Hello World to the board.
@@ -153,19 +153,19 @@ And Then,
 * Click on **Tools > Board > RePhone core 2G-AtmelSAMD21**
 * Click on **Tools > Port** to select a right port number. (*Don't choose COM1*)
 
-![](https://raw.githubusercontent.com/SeeedDocument/RePhone-core-2G-AtmelSAMD21/master/img/arduino_ide.png)
+![](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/img/arduino_ide.png)
 
 Then click on the **Upload** button on the left-top of Arduino IDE, seconds later the sketch was uploaded successful.
 
-![](https://raw.githubusercontent.com/SeeedDocument/RePhone-core-2G-AtmelSAMD21/master/img/upload.png)
+![](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/img/upload.png)
 
 If the uploading is success, you should the some info in red.
 
-![](https://raw.githubusercontent.com/SeeedDocument/RePhone-core-2G-AtmelSAMD21/master/img/upload_done.png)
+![](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/img/upload_done.png)
 
 Open Serial Monitor of your Arduino IDE and you will get "Hello World" printed per seconds.
 
-![](https://raw.githubusercontent.com/SeeedDocument/RePhone-core-2G-AtmelSAMD21/master/img/hello_world.png)
+![](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/img/hello_world.png)
 
 
 ## AT Command Mode
@@ -205,14 +205,14 @@ void loop()
 Open your Serial monitor and wait for ***GSM init ok.*** printed on the monitor, then you can input a command.
 Try to input an "AT" to get an "OK".
 
-![](https://raw.githubusercontent.com/SeeedDocument/RePhone-core-2G-AtmelSAMD21/master/img/cmd.png)
+![](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/img/cmd.png)
 
 !!!Tip
     All command must be end with a new line(\r\n).
 
 Click on below button to get detailed AT command documentation.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/RePhone-core-2G-AtmelSAMD21/master/img/at_cmd.png)](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_GPRS/master/res/SIM800_Series_AT_Command_Manual_V1.01%20(2).pdf)
+[![](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/img/at_cmd.png)](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/res/SIM800_Series_AT_Command_Manual_V1.01%20(2).pdf)
 
 
 ## Examples
@@ -262,12 +262,12 @@ There are several chainable add-on modules to extend the features and functional
 
 |GPS v2|Basic Sensors|NFC v2|
 |----------------|--------------|-------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/product1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/product2.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/product3.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Rephone/image/product1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Rephone/image/product2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Rephone/image/product3.jpg)|
 |[Get More Details](http://www.seeedstudio.com/Xadow-GPS-v2-p-2557.html)|[Get More Details](http://www.seeedstudio.com/Xadow-Basic-Sensors-p-2555.html)|[Get More Details](http://www.seeedstudio.com/Xadow-NFC-v2-p-2562.html)|
 
 |LED 5 x 7|Audio|Xadow GSM Breakout|
 |----------------|--------------|-------------|
-|![](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/product4.jpg)|![](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/product7.jpg)|![](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/product8.jpg)|
+|![](https://files.seeedstudio.com/wiki/Rephone/image/product4.jpg)|![](https://files.seeedstudio.com/wiki/Rephone/image/product7.jpg)|![](https://files.seeedstudio.com/wiki/Rephone/image/product8.jpg)|
 |[Get More Details](http://www.seeedstudio.com/Xadow-LED-5-x-7-p-2561.html)|[Get More Details](http://www.seeedstudio.com/Xadow-Audio-p-2554.html)|[Get More Details](http://www.seeedstudio.com/Xadow-GSM-Breakout-p-2559.html)|
 
 

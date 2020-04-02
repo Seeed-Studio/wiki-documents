@@ -6,7 +6,7 @@ prodimagename: cover.jpg
 sku: 110060482
 ---
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Microsoft_IoT_Grove_Kit/master/images/cover.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Microsoft_IoT_Grove_Kit/images/cover.jpg)
 
 Building an IoT project on your Raspberry Pi has never been an easy task for many developers. This is due to the messy hardware connections involved, and complicated software programming. Seeed and Microsoft have worked together to alleviate some of these challenges by introducing the Microsoft IoT Grove Kit.
 
@@ -52,7 +52,7 @@ Please note this kit DOES NOT include the Raspberry Pi board. Please visit [here
 First, mount your GrovePi+ on the Raspberry Pi. The GrovePi+ slides over top of the
 Raspberry Pi as shown in the picture below.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Microsoft_IoT_Grove_Kit/master/images/1_1_1.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Microsoft_IoT_Grove_Kit/images/1_1_1.png)
 
 Ensure that the pins are properly aligned when stacking the GrovePi+.
 
@@ -61,7 +61,7 @@ Ensure that the pins are properly aligned when stacking the GrovePi+.
 To power the GrovePi+ and the Raspberry Pi, you can use the micro USB power port on the Raspberry Pi.
 Remember to use a good power adapter capable of supplying 2A at 5V. If you want to run the GrovePi+ in a standalone configuration, then you might find a USB power bank.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Microsoft_IoT_Grove_Kit/master/images/1_2_1.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Microsoft_IoT_Grove_Kit/images/1_2_1.png)
 
 
 ## Install GrovePi C# library for Raspberry Pi
@@ -77,11 +77,11 @@ To install GrovePi for Windows IoT follow the following steps.
 
 From the Tools menu, select Library Package Manager and then click Package Manager Console.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Microsoft_IoT_Grove_Kit/master/images/2_1_1.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Microsoft_IoT_Grove_Kit/images/2_1_1.png)
 
 The **Package Manager Console window** is displayed.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Microsoft_IoT_Grove_Kit/master/images/2_1_2.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Microsoft_IoT_Grove_Kit/images/2_1_2.png)
 
 **STEP2.**
 
@@ -101,22 +101,22 @@ If you’re a senior programmer or you can’t install the GrovePi NuGet package
 Move the two C# library projects “GrovePi” and “Driver” to the folder where your project resides. And add them to your project in Solution Explorer.
 For example, right click the Solution “GrovePiExamples ”, Add | Existing Project, as below shows.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Microsoft_IoT_Grove_Kit/master/images/2_2_1.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Microsoft_IoT_Grove_Kit/images/2_2_1.png)
 
 Then add “GrovePi” and “Driver” to the Solution Explorer.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Microsoft_IoT_Grove_Kit/master/images/2_2_2.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Microsoft_IoT_Grove_Kit/images/2_2_2.png)
 
 
 **STEP2.**
 
 Set the C# library as the reference projects. Right click References and click Add References
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Microsoft_IoT_Grove_Kit/master/images/2_2_3.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Microsoft_IoT_Grove_Kit/images/2_2_3.png)
 
 Click Projects | Solution, and check box as shown in the red box below. Then click OK.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Microsoft_IoT_Grove_Kit/master/images/2_2_4.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Microsoft_IoT_Grove_Kit/images/2_2_4.png)
 
 Now, you have already install the GrovePi C# library successfully.
 
@@ -150,7 +150,7 @@ Here we have a list of example projects that show just how easy it is to start a
 You can click [here](https://github.com/Seeed-Studio/GrovePiExamples_win10) to download the GrovePi Example code for win10. You will need to press the green button “Clone or download” on the right and choose “Download ZIP”. Then you need to extract the ZIP in a location of your choice.
 Open the GrovePiExamples(win10).sln with your Visual Studio 2015, you can see there’re 12 projects in the Solution Explorer as the picture below shows.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Microsoft_IoT_Grove_Kit/master/images/3_0_1.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Microsoft_IoT_Grove_Kit/images/3_0_1.png)
 
 Before you get started, please build **GrovePi** project first. This is because the other projects depend on it.
 
@@ -163,7 +163,7 @@ This example is meant to be your first project with the GrovePi+. All the parts 
 
 Connect the RGB LCD to Port I2C-1 and power on the Raspberry Pi using the Grove wire connector.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Microsoft_IoT_Grove_Kit/master/images/3_1_1.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Microsoft_IoT_Grove_Kit/images/3_1_1.png)
 
 - **Step3:**  Deploy your app.
 
@@ -171,11 +171,11 @@ Connect the RGB LCD to Port I2C-1 and power on the Raspberry Pi using the Grove 
 
 2)	Next, in the Visual Studio toolbar, click on the Local Machine dropdown and select Remote Machine.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Microsoft_IoT_Grove_Kit/master/images/3_1_2.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Microsoft_IoT_Grove_Kit/images/3_1_2.png)
 
 3)	At this point, Visual Studio will present the Remote Connections dialog. If you previously used [PowerShell](http://ms-iot.github.io/content/en-US/win10/samples/PowerShell.htm) to set a unique name for your device, you can enter it here (in this example, we’re using my-device). Otherwise, use the IP address of your Windows IoT Core device. After entering the device name/IP select None for Windows Authentication, then click Select.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Microsoft_IoT_Grove_Kit/master/images/3_1_3.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Microsoft_IoT_Grove_Kit/images/3_1_3.png)
 
 4)	You can verify or modify these values by navigating to the project properties (select Properties in the Solution Explorer) and choosing the Debug tab on the left.
 

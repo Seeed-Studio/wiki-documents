@@ -24,7 +24,7 @@ There're few step to be followed.
 
 You need a Arduino IDE that after version 1.6.4, please download one if there's no Arduino IDE in your computer.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Stalker_V3_1/master/images/Download_IDE.png)](https://www.arduino.cc/en/Main/Software)
+[![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/Download_IDE.png)](https://www.arduino.cc/en/Main/Software)
 
 ##Step 2. Setting your Arduino IDE
 

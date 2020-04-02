@@ -68,7 +68,7 @@ Grove - UART WiFi is a serial transceiver module featuring the ubiquitous ESP826
 
 Here is block diagram of Grove - UART WiF module which consists of following parts.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/img/Grove_uart_wifi_wiki_hardware_overview.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/img/Grove_uart_wifi_wiki_hardware_overview.jpg)
 
 * Grove - Used to connect to a processor through socket on a base board such as a Seeeduino or Grove Base Shield.
 * WiFi antenna - Antenna for ESP8266(Module model)
@@ -334,7 +334,7 @@ void display_ap()
 Then you will see the OLED show the wifi AP around you.
 
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/img/Grove_uart_wifi_result.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/img/Grove_uart_wifi_result.jpg)
 
 
 
@@ -345,7 +345,7 @@ Then you will see the OLED show the wifi AP around you.
         This firmware only support V1, if you burn this firmware into the Grove UART WIFI V2, it will brick your module. 
 
 
-Our module board got a firmware burned into it for factory settings, you can burn other firmware to it if you like. Click [here](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/res/Grove-Uart_Wifi_Firmware-code.zip) to download source code of factory setting firmware.
+Our module board got a firmware burned into it for factory settings, you can burn other firmware to it if you like. Click [here](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/res/Grove-Uart_Wifi_Firmware-code.zip) to download source code of factory setting firmware.
 
 
 
@@ -366,7 +366,7 @@ Our module board got a firmware burned into it for factory settings, you can bur
 
 **Step 2.** Then connecting cables like following figure:
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/img/Grove_uart_wifi_firmware_connect2.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/img/Grove_uart_wifi_firmware_connect2.jpg)
 
 
 
@@ -385,7 +385,7 @@ Our module board got a firmware burned into it for factory settings, you can bur
 
 **Step 3.** Start executable files in FLASH DOWNLOAD TOOLS files (double click) to make configurations like following steps:
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/img/Grove_uart_wifi_firmware_tools1.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/img/Grove_uart_wifi_firmware_tools1.jpg)
 
 **1.** Choose desired files from firmware bin file downloaded.
 
@@ -398,11 +398,11 @@ Our module board got a firmware burned into it for factory settings, you can bur
 
 * Progress bar will be displayed in firmware-burning process.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/img/Grove_uart_wifi_firmware_tools2.1.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/img/Grove_uart_wifi_firmware_tools2.1.jpg)
 
 * Finally, firmware-burning is done.
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/img/Grove_uart_wifi_firmware_tools3.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/img/Grove_uart_wifi_firmware_tools3.jpg)
 
 
 
@@ -527,14 +527,14 @@ You can use any serial Tools you like, we use Arduino here. And please make sure
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/res/Grove-UART_WiFi_sch_pcb.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/res/Grove-UART_WiFi_sch_pcb.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ## Resources
 
-- **[PDF]** [Schematic in PDF](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/res/Grove-UART_WiFi_v1.0.pdf)
-* **[Zip]** [Schematic in Eagle](https://raw.githubusercontent.com/SeeedDocument/Grove-Uart_Wifi/master/res/Grove-UART_WiFi_sch_pcb.zip)
+- **[PDF]** [Schematic in PDF](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/res/Grove-UART_WiFi_v1.0.pdf)
+* **[Zip]** [Schematic in Eagle](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/res/Grove-UART_WiFi_sch_pcb.zip)
 * **[Datasheet]** [Espressif Systems ESP8266](http://espressif.com/en/products/esp8266/)
 * **[PDF]** [Espressif Systems ESP8266 AT Instruction Set - v0.24](http://bbs.espressif.com/download/file.php?id=450)
 * **[MoreReading]** [http://www.esp8266.com](http://www.esp8266.com)

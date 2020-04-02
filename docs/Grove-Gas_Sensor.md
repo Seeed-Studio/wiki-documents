@@ -6,7 +6,7 @@ prodimagename: Twig-Gas_Sensor.bmp
 surveyurl: https://www.research.net/r/Grove-Gas_Sensor
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Gas_Sensor/master/img/Twig-Gas_Sensor.bmp)
+![](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor/img/Twig-Gas_Sensor.bmp)
 
 The Grove - Gas Sensor module is useful for gas leakage detecting(in home and industry). It can detect LPG, i-butane, methane, alcohol, Hydrogen, smoke and so on. Measurements can be taken as soon as possible based on its fast response time. Also the sensitivity can be adjusted by the potentiometer.
 
@@ -35,15 +35,15 @@ Getting Started
 
 Connect the module with Grove Shield using A0 like following picture and use the program below to gain the voltage. The higher the concentration of the gas is, the bigger the output voltage of the SIG pin gets. Sensitivity can be regulated by rotating the potentiometer. Please note that the best preheat time of the sensor is about 24 hours. For the detailed information about the sensor, please refer to the datasheet.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Gas_Sensor/master/img/Read_Gas_Sensor_data.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor/img/Read_Gas_Sensor_data.jpg)
 
 Resources
 ---------
 
--   [MQ-2 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Gas_Sensor/master/res/MQ-2.pdf)
--   [MQ-3 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Gas_Sensor/master/res/MQ-3.pdf)
--   [MQ-5 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Gas_Sensor/master/res/MQ-5.pdf)
--   [MQ-9 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Gas_Sensor/master/res/MQ-9.pdf)
+-   [MQ-2 Datasheet](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor/res/MQ-2.pdf)
+-   [MQ-3 Datasheet](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor/res/MQ-3.pdf)
+-   [MQ-5 Datasheet](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor/res/MQ-5.pdf)
+-   [MQ-9 Datasheet](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor/res/MQ-9.pdf)
 -   [Demo code on github](https://github.com/Seeed-Studio/Grove_Gas_Sensor)
 
 

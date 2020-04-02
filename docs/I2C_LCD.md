@@ -23,8 +23,8 @@ I2C_LCD can provide you with a very convenient way of make. Enjoy yourself!
 
 | Version 	| How to buy	|
 |-----------|---------------|
-|I2C_LCD (With universal Grove cable)|[![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/I2C_LCD-(With-universal-Grove-cable)-p-2601.html)|
-|I2C_LCD (With conversion Grove cable)|[![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/I2C_LCD-(With-universal-Grove-cable)-p-2601.html)|
+|I2C_LCD (With universal Grove cable)|[![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/I2C_LCD-(With-universal-Grove-cable)-p-2601.html)|
+|I2C_LCD (With conversion Grove cable)|[![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/I2C_LCD-(With-universal-Grove-cable)-p-2601.html)|
 
 ##Features
 
@@ -96,7 +96,7 @@ Here is some funny project for your reference.
 
 **Step 1:** Install the latest version of Arduino IDE to your computer.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Stalker_V3_1/master/images/Download_IDE.png)](https://www.arduino.cc/en/Main/Software)
+[![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/Download_IDE.png)](https://www.arduino.cc/en/Main/Software)
 
 **Step 2:** Download and install the I2C_LCD library to Arduino IDE:
 

@@ -334,7 +334,7 @@ void loop()
 - **Step 4.** Connect the Raspberry to PC through USB cable.
 
 
-![with_rpi](https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer-High-Accuracy/master/img/with_rpi.jpg)
+![with_rpi](https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/img/with_rpi.jpg)
 
 
 #### Software
@@ -414,19 +414,19 @@ print("Temperature\t: %.2f C\nPressure\t: %.2f hPa\nAltitude\t: %.2f m" %(temp,p
 ## References
 The following is a reference graph plotting out the relationship between altitude above sea level and barometric pressure.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer-High-Accuracy/master/img/Pressure_and_Altitude.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/img/Pressure_and_Altitude.jpg)
 
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer-High-Accuracy/master/res/Grove_Barometer_High-Accuracy_v1.0_sch_pcb.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/res/Grove_Barometer_High-Accuracy_v1.0_sch_pcb.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ## Resources
 
--  **[Eagle]** [Grove_Barometer_High-Accuracy_v1.0_sch_pcb Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer-High-Accuracy/master/res/Grove_Barometer_High-Accuracy_v1.0_sch_pcb.zip)
--  **[Datasheet]** [HP206C Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer-High-Accuracy/master/res/HP206C_Datasheet.pdf)
+-  **[Eagle]** [Grove_Barometer_High-Accuracy_v1.0_sch_pcb Eagle File](https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/res/Grove_Barometer_High-Accuracy_v1.0_sch_pcb.zip)
+-  **[Datasheet]** [HP206C Datasheet](https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/res/HP206C_Datasheet.pdf)
 -  **[Library]** [Github repository for Grove\_Barometer\_HP20x with arduino](https://github.com/Seeed-Studio/Grove_Barometer_HP20x)
 
 ## Projects

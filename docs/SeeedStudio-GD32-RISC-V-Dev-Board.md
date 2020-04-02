@@ -31,11 +31,11 @@ We break out all the I/O Pins(80 GPIOs in total) of GD32VF103, which will meet y
 
 ## Hardware Overview
 
-![](https://raw.githubusercontent.com/SeeedDocument/GD32VF103/master/img/GD32VF-103VBT6-pin.jpg)
+![](https://files.seeedstudio.com/wiki/GD32VF103/img/GD32VF-103VBT6-pin.jpg)
 
 ### Pinout
 
-![](https://raw.githubusercontent.com/SeeedDocument/GD32VF103/master/img/GD32VF-103VBT6-c.jpg)
+![](https://files.seeedstudio.com/wiki/GD32VF103/img/GD32VF-103VBT6-c.jpg)
 
 
 ## Platforms Supported

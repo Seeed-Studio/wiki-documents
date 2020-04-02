@@ -1,7 +1,7 @@
 Grove - High Precision Barometric Pressure Sensor (DPS310)
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-High-Precision-Barometer-Sensor-DPS310/master/img/Grove-High-Precision-Barometer-Sensor-DPS310-wiki.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-High-Precision-Barometer-Sensor-DPS310/img/Grove-High-Precision-Barometer-Sensor-DPS310-wiki.jpg)
 
 
 Barometer detecting is very useful in enviromental sensing or altitude measuring. The Grove Barometer sensor is besed on infineon DPS310, a miniaturized digital barometer air pressure sensor with high accuracy. It can measure pressure range from 300 to 1200 hPa, with ±0.002hPa precision, which means you can detect altitude change within ±2cm at most.
@@ -72,7 +72,7 @@ We've already released the [Grove - Barometer Sensor (BMP280)](http://wiki.seeed
 
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-High-Precision-Barometer-Sensor-DPS310/master/img/Grove-High-Precision-Barometer-Sensor-DPS310-pin.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-High-Precision-Barometer-Sensor-DPS310/img/Grove-High-Precision-Barometer-Sensor-DPS310-pin.jpg)
 
 
 
@@ -116,7 +116,7 @@ We've already released the [Grove - Barometer Sensor (BMP280)](http://wiki.seeed
 
 | Seeeduino V4.2 |Base Shield| High Precision Barometric Pressure Sensor |
 |--------------|-------------|-----------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-High-Precision-Barometer-Sensor-DPS310/master/img/Grove-High-Precision-Barometer-Sensor-DPS310-thumbnail.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-High-Precision-Barometer-Sensor-DPS310/img/Grove-High-Precision-Barometer-Sensor-DPS310-thumbnail.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-High-Precision-Barometer-Sensor-DPS310-p-4397.html)|
 
 

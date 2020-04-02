@@ -120,7 +120,7 @@ void loop()
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
-![cc](https://raw.githubusercontent.com/SeeedDocument/Grove_Buzzer/master/img/cc_Buzzer.png)
+![cc](https://files.seeedstudio.com/wiki/Grove_Buzzer/img/cc_Buzzer.png)
 
 Upload the program to your Arduino/Seeeduino.
 
@@ -384,9 +384,9 @@ void playNote(char note, int duration) {
 - **[Eagle&PDF]** [Grove - Buzzer Schematic Files v1.0](https://files.seeedstudio.com/wiki/Grove_Buzzer/resources/Grove_-_Buzzer_v1.0_Source_File.zip)
 - **[DataSheet]** [S9013datasheet](https://files.seeedstudio.com/wiki/Grove_Buzzer/resources/S9013.pdf)
 - **[More Reading]** [Wooden Laser Gun](http://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)
-- **[Codecraft]** [CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove_Buzzer/master/res/Grove_Buzzer_CDC_File.zip)
+- **[Codecraft]** [CDC File](https://files.seeedstudio.com/wiki/Grove_Buzzer/res/Grove_Buzzer_CDC_File.zip)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove_Button/master/img/gun.jpg)
+![](https://files.seeedstudio.com/wiki/Grove_Button/img/gun.jpg)
 
 Inspired by OVERWATCH, we have made a very cool Wooden Laser Gun toy for fun these day!
 

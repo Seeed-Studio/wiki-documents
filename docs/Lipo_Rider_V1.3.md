@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/Lipo_Rider_V1_3
 sku: 106990022
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Lipo_Rider_V1.3/master/img/LiPo-Rider-v1.3.jpg)
+![](https://files.seeedstudio.com/wiki/Lipo_Rider_V1.3/img/LiPo-Rider-v1.3.jpg)
 
 Power your favourite electronic kit with green energy! The Lipo Rider board allows you ride the solar wave to run your favourite 5V device. The Lipo Rider board is the ideal green power solution for your outdoor sensor design. Attach the Lipo Rider board to your sensor board and it can run on solar power forever!
 
@@ -50,7 +50,7 @@ Application Ideas
 Hardware Overview
 -----------------
 
-![](https://raw.githubusercontent.com/SeeedDocument/Lipo_Rider_V1.3/master/img/Lipo-rider-blockdiagram.JPG)
+![](https://files.seeedstudio.com/wiki/Lipo_Rider_V1.3/img/Lipo-rider-blockdiagram.JPG)
 
 Specifications
 --------------
@@ -235,19 +235,19 @@ Due to the huge number of combinations, I have only included only the main scena
 
 Solar Power charges lithium battery.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Lipo_Rider_V1.3/master/img/Lipo-Rider-v1.2-standalone.JPG)
+![](https://files.seeedstudio.com/wiki/Lipo_Rider_V1.3/img/Lipo-Rider-v1.2-standalone.JPG)
 
 **USB Mode**
 
 Solar Power charges lithium battery. Lithium battery supplies destination USB device.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Lipo_Rider_V1.3/master/img/Lipo-Rider-v1.2-usb.JPG)
+![](https://files.seeedstudio.com/wiki/Lipo_Rider_V1.3/img/Lipo-Rider-v1.2-usb.JPG)
 
 **Program Mode**
 
 Source USB will charge lithium battery and power destination USB device. Data connection will be enabled between source and destination USB devices.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Lipo_Rider_V1.3/master/img/Lipo-Rider-v1.2-program.JPG)
+![](https://files.seeedstudio.com/wiki/Lipo_Rider_V1.3/img/Lipo-Rider-v1.2-program.JPG)
 
 ### Example
 
@@ -259,7 +259,7 @@ If a firmware reprogram for the outdoor sensor device is required, simple connec
 
 Larger/multiple batteries and/or solar panels can be used, but only with end-user modifications.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Lipo_Rider_V1.3/master/img/LiPo-Rider-v1.3_example.jpg)
+![](https://files.seeedstudio.com/wiki/Lipo_Rider_V1.3/img/LiPo-Rider-v1.3_example.jpg)
 
 **Lipo Rider powering an Arduino Duemilanove (not strictly an outdoor sensor in this case as I have not connected any sensor and it is not outdoor, but you get the point )**
 
@@ -267,14 +267,14 @@ Larger/multiple batteries and/or solar panels can be used, but only with end-use
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Lipo_Rider_V1.3/master/res/Li-Po_Rider_v1.3_sch_pcb.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Lipo_Rider_V1.3/res/Li-Po_Rider_v1.3_sch_pcb.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 Resources
 ---------
 
--   [Li-Po Rider v1.3 Schematic and Layout in Eagle format](https://raw.githubusercontent.com/SeeedDocument/Lipo_Rider_V1.3/master/res/Li-Po_Rider_v1.3_sch_pcb.zip)
+-   [Li-Po Rider v1.3 Schematic and Layout in Eagle format](https://files.seeedstudio.com/wiki/Lipo_Rider_V1.3/res/Li-Po_Rider_v1.3_sch_pcb.zip)
 
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Lipo_Rider_V1.3 -->

@@ -93,7 +93,7 @@ For building a circuit that controls a servomotor using a potentiometer, follow 
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
-![cc](https://raw.githubusercontent.com/SeeedDocument/Grove-Mini_Fan/master/img/cc_Mini_Fan.png)
+![cc](https://files.seeedstudio.com/wiki/Grove-Mini_Fan/img/cc_Mini_Fan.png)
 
 Upload the program to your Arduino/Seeeduino.
 
@@ -121,7 +121,7 @@ Alternatively, it can be bought stand-alone at the [Seeed Studio Bazaar](http://
 
 *   [Grove - Mini Fan v1.0 (pdf)](https://files.seeedstudio.com/wiki/Grove-Mini_Fan/res/Grove-Mini_Fan_v1.0.pdf)
 
-*	[Codecraft CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove-Mini_Fan/master/res/Grove_Mini_Fan_CDC_File.zip)
+*	[Codecraft CDC File](https://files.seeedstudio.com/wiki/Grove-Mini_Fan/res/Grove_Mini_Fan_CDC_File.zip)
 
 ## Projects
 

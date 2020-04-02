@@ -10,7 +10,7 @@ sku: 107020002
 tags: grove_uart, io_3v3, io_5v, plat_duino, plat_linkit
 ---
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Grove-Serial_MP3_Player/master/img/Mp3sensor_02.jpg)](http://www.seeedstudio.com/depot/grove-serial-mp3-player-p-1542.html)
+[![](https://files.seeedstudio.com/wiki/Grove-Serial_MP3_Player/img/Mp3sensor_02.jpg)](http://www.seeedstudio.com/depot/grove-serial-mp3-player-p-1542.html)
 
 Grove-Serial MP3 Player is a kind of simple MP3 player device whose design is based on a high-quality MP3 audio chip---WT5001. It can support 8KHZ~44.1kHZ sampling frequency MP3 and WAV file formats. This product has several peripheral ports: a standard UART Grove interface, a dual track headphone jack, an external interface and also a Micro SD card interface. You can control the MP3 playback state by sending commands to module via serial port tools, such as switch songs, change the volume and play mode and so on. It seems a simple module, but it owns such strong function. Want to know how the sound quality is? Please come and experience it!
 
@@ -43,7 +43,7 @@ Platforms Supported
 Hardware Overview
 -----------------
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Serial_MP3_Player/master/img/Mp3_interface.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Serial_MP3_Player/img/Mp3_interface.jpg)
 
 -   ①：Left Channel Grove Interface.
 -   ②：Headset Interface:3.5mm headphones
@@ -121,10 +121,10 @@ WT2003S<HardwareSerial> Mp3Player;
 -   Now you can hear songs stored in your SD card. And in the playing mode, the D1 indicator is on. If in the pause mode, the indicator will blink. More experience is waiting for you！
 
 There is another way to control MP3 play mode via serial tool.In this way, you need a [UartSBee](http://www.seeedstudio.com/depot/uartsbee-v4-p-688.html?cPath=63_66) to connect MP3 to PC. The hardware installation as shown below:
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Serial_MP3_Player/master/img/Using_UartSBee_to_Control_MP3.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Serial_MP3_Player/img/Using_UartSBee_to_Control_MP3.jpg)
 
 After the connection is completed, open the serial tool to send commands. About the specific commands, please see the reference part!
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Serial_MP3_Player/master/img/Serial_tool_to_send_commands.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Serial_MP3_Player/img/Serial_tool_to_send_commands.jpg)
 
 More experience is waiting for you！
 
@@ -231,17 +231,17 @@ XX=03 stands for random pattern.
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-Serial_MP3_Player/master/res/Grove-UART_MP3_Play_Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Serial_MP3_Player/res/Grove-UART_MP3_Play_Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 Resources
 ---------
 
-- [Grove - Serial MP3 Play Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-Serial_MP3_Player/master/res/Grove-UART_MP3_Play_Eagle_File.zip)
-- [Grove - Serial MP3 Play Schematic in PDF format](https://raw.githubusercontent.com/SeeedDocument/Grove-Serial_MP3_Player/master/res/Grove-Serial_MP3_Player.pdf)
+- [Grove - Serial MP3 Play Eagle File](https://files.seeedstudio.com/wiki/Grove-Serial_MP3_Player/res/Grove-UART_MP3_Play_Eagle_File.zip)
+- [Grove - Serial MP3 Play Schematic in PDF format](https://files.seeedstudio.com/wiki/Grove-Serial_MP3_Player/res/Grove-Serial_MP3_Player.pdf)
 - [Demo code on github](https://github.com/Seeed-Studio/Seeed_Serial_MP3_Player)
-- [WT5001 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Serial_MP3_Player/master/res/WT5001_datasheet_V1.5.pdf)
+- [WT5001 Datasheet](https://files.seeedstudio.com/wiki/Grove-Serial_MP3_Player/res/WT5001_datasheet_V1.5.pdf)
 
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Serial_MP3_Player -->

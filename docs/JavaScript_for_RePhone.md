@@ -6,7 +6,7 @@ prodimagename: Xadow_GSMPlusBLE_pingguo.JPG
 surveyurl: https://www.research.net/r/JavaScript_for_RePhone
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/JavaScript_for_RePhone/master/img/Xadow_GSMPlusBLE_pingguo.JPG)
+![](https://files.seeedstudio.com/wiki/JavaScript_for_RePhone/img/Xadow_GSMPlusBLE_pingguo.JPG)
 
 RePhone can be a learning tool for you to start interesting projects. Currently, RePhone supports various development environment and development languages, you can either built applications with C/C++ based on Eclipse IDE, Arduino IDE, or with Lua and JavaScript.
 
@@ -28,12 +28,12 @@ Download JavaScript for RePhone Application
 
 **Step 2.** Set your RePhone into storage mode by **plugging in the battery** and connect it to PC with a Micro USB cable.
 
-![](https://raw.githubusercontent.com/SeeedDocument/JavaScript_for_RePhone/master/img/Connect_Xadow_GSMPlusBLE_to_PC.png)
+![](https://files.seeedstudio.com/wiki/JavaScript_for_RePhone/img/Connect_Xadow_GSMPlusBLE_to_PC.png)
 
 **Step 3.** Unzip the ***js_for_rephone_xxx.zip*** file into the 5MB disk of RePhone, you can also put some music files (mp3 format) into the disk. Here I have put the 'music1.mp3' and 'music2.mp3' in it.
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/JavaScript_for_RePhone/master/img/Lua_1.png)
+![](https://files.seeedstudio.com/wiki/JavaScript_for_RePhone/img/Lua_1.png)
 
 Use JavaScript Shell
 --------------------
@@ -42,17 +42,17 @@ Use JavaScript Shell
 
 Open **Device Manager** by clicking the **Start** button, clicking **Control Panel**, clicking **System and Security**, and then, under **System**, clicking **Device Manager**. If you're prompted for an administrator password or confirmation, type the password or provide confirmation. See the following image:
 
-![](https://raw.githubusercontent.com/SeeedDocument/JavaScript_for_RePhone/master/img/Check_ports.png)
+![](https://files.seeedstudio.com/wiki/JavaScript_for_RePhone/img/Check_ports.png)
 
 **Step 2.** We use a serial terminal tool such as [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) to access the Lua shell running on the RePhone.
 
 If you use PuTTY, please remember to enable ***"implicit CR in every LF"*** option. Otherwise, line breaks will be weird. As Lua shell of RePhone use LF ('\n') as EOL, while PuTTY uses CR LF ("\r\n") as default EOL.
 
-![](https://raw.githubusercontent.com/SeeedDocument/JavaScript_for_RePhone/master/img/Putty_EOL.png)
+![](https://files.seeedstudio.com/wiki/JavaScript_for_RePhone/img/Putty_EOL.png)
 
 **Step 3.**Open the MTK USB Modem Port (its baudrate doesn't matter as it is a USB virtual serial port) and type "print('hello, world')", you will get your first Lua code running on the RePhone.
 
-![](https://raw.githubusercontent.com/SeeedDocument/JavaScript_for_RePhone/master/img/RePhone_Lua_Shell.png)
+![](https://files.seeedstudio.com/wiki/JavaScript_for_RePhone/img/RePhone_Lua_Shell.png)
 
 If you have some music files in the RePhone, type "audio.play('music.mp3')" to play it. If you have a SIM card inserted, type "gsm.call('phone_number')" to call someone or "gsm.text('phone_number', 'message from rephone')" to send a text message.
 
@@ -76,7 +76,7 @@ gsm.on_new_message(re)
 RePhone Community
 -----------------
 
-[![](https://raw.githubusercontent.com/SeeedDocument/JavaScript_for_RePhone/master/img/RePhone_Community-2.png)](https://community.seeedstudio.com/discover.html?t=RePhone)
+[![](https://files.seeedstudio.com/wiki/JavaScript_for_RePhone/img/RePhone_Community-2.png)](https://community.seeedstudio.com/discover.html?t=RePhone)
 
 We have been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the RePhone Community.
 

@@ -12,10 +12,10 @@ sku: 113030001
 <table>
     <tr>
         <td>
-            <img src="https://raw.githubusercontent.com/SeeedDocument/NFC_Shield_V2.0/master/img/NFC_front.png">
+            <img src="https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/img/NFC_front.png">
         </td>
         <td>
-            <img src="https://raw.githubusercontent.com/SeeedDocument/NFC_Shield_V2.0/master/img/NFC_back.png">
+            <img src="https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/img/NFC_back.png">
         </td>
     </tr>
 </table>
@@ -38,7 +38,7 @@ If you want to make some awesome projects by NFC Shield V2.0, here are some proj
 
 ***Paper Man, an interesting object to interact with Android***
 
-![](https://raw.githubusercontent.com/SeeedDocument/NFC_Shield_V2.0/master/img/Seeed-recipe-paper_man.jpg)
+![](https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/img/Seeed-recipe-paper_man.jpg)
 
 [Make it NOW!](http://www.seeedstudio.com/recipe/40-paper-man-an-interesting-object-to-interact-with-android.html)
 
@@ -61,7 +61,7 @@ Hardware Overview
 
 The NFC shield's pins and other terminals are described below.
 
-![](https://raw.githubusercontent.com/SeeedDocument/NFC_Shield_V2.0/master/img/Pn532-nfc-shield-pin-description.png)
+![](https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/img/Pn532-nfc-shield-pin-description.png)
 
 **NFC shield interface**
 
@@ -73,7 +73,7 @@ The NFC shield's pins and other terminals are described below.
 
 The NFC shield's antenna, included with the shield, is a separate PCB module that is attached to the shield via a cable. The antenna is the area used to receive and transmit information.
 
-![](https://raw.githubusercontent.com/SeeedDocument/NFC_Shield_V2.0/master/img/NFC_Antanna_28x30.5.jpg)
+![](https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/img/NFC_Antanna_28x30.5.jpg)
 
 **NFC antenna PCB attachment**
 
@@ -190,7 +190,7 @@ To test the code:
 3.  Hold an NFC tag over the NFC antenna area
 4.  The NFC shield will scan the tag and you should be able to see the NFC tag’s UID, tag type, and message (if available) in the serial monitor window. See the figure below.
 
-![](https://raw.githubusercontent.com/SeeedDocument/NFC_Shield_V2.0/master/img/Nfc-pn532-output-example-1.png)
+![](https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/img/Nfc-pn532-output-example-1.png)
 
 **Example #1 serial communication window output when scanning an NFC tag.**
 
@@ -201,11 +201,11 @@ This example will show you how to use an NFC tag as a key to unlock a door or a 
 1.  Do Example #1: NFC Tag Scan, above, to get your NFC tag's UID.
 2.  Optional Step - connect a green LED to pin 3 as shown in the figure/schematic below. We'll use this LED to signal a successful match in keys.
 3.  Optional Step – connect a red LED to pin 4 as shown in the figure/schematic below. We'll use this LED to signal a mismatched key.
-    ![](https://raw.githubusercontent.com/SeeedDocument/NFC_Shield_V2.0/master/img/Example-2-red-green-led-nfc-alarm.PNG)
+    ![](https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/img/Example-2-red-green-led-nfc-alarm.PNG)
 
     **NFC lock circuit**
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/NFC_Shield_V2.0/master/img/Example-2-red-green-led-nfc-alarm-real.png)
+    ![](https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/img/Example-2-red-green-led-nfc-alarm-real.png)
 
     **NFC lock circuit**
 
@@ -501,7 +501,7 @@ To test the code/application:
 
 The serial window from our test of this code is displayed below, yours should be similar.
 
-![](https://raw.githubusercontent.com/SeeedDocument/NFC_Shield_V2.0/master/img/Example-3-nfc-pn532-shield-interrupt-example.png)
+![](https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/img/Example-3-nfc-pn532-shield-interrupt-example.png)
 
 **Serial comm window output from example 3.**
 
@@ -579,7 +579,7 @@ To test the code above:
 2.  Hold the NFC tag over the NFC shield antenna's area and wait for the success or failure message to appear as shown in the figure below.
 3.  Remove the NFC tag form the antenna's area as soon as the success message is displayed to prevent a rewrite.
 
-![](https://raw.githubusercontent.com/SeeedDocument/NFC_Shield_V2.0/master/img/Example-4-write-ndef-message-to-tag.png)
+![](https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/img/Example-4-write-ndef-message-to-tag.png)
 
 **Serial comm window for NDEF message written to card example.**
 
@@ -651,7 +651,7 @@ To test/run the code:
 If your tag failed to get formatted, try again. If it fails your tag is not capable of getting formatted as NDEF.
 </div>
 
-![](https://raw.githubusercontent.com/SeeedDocument/NFC_Shield_V2.0/master/img/Example-5-format-nfc-tag-as-ndef.png)
+![](https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/img/Example-5-format-nfc-tag-as-ndef.png)
 
 **Serial comm window output when formatting an NFC tag to NDEF.**
 
@@ -726,7 +726,7 @@ To test code above:
 2.  Hold the an NFC tag with an NDEF message over the NFC shield antenna's area.
 3.  The NDEF message written on the tag should be displayed as shown in the figure below.
 
-![](https://raw.githubusercontent.com/SeeedDocument/NFC_Shield_V2.0/master/img/Example-6-read-ndef-message.png)
+![](https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/img/Example-6-read-ndef-message.png)
 
 **Serial comm window output for NDEF message read**
 
@@ -799,12 +799,12 @@ A2: NFC shield v2 is based on PN532 chip. Please note that the design only suppo
 
 ## NFC Shield v2.0 Eagle File Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/NFC_Shield_V2.0/master/res/NFC_Shield_V2.0b_Eagle_files.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/res/NFC_Shield_V2.0b_Eagle_files.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 ## NFC Shield v2.1 Eagle File Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/NFC_Shield_V2.0/master/res/NFC_Shield_v2.1_Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/res/NFC_Shield_v2.1_Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
@@ -812,11 +812,11 @@ A2: NFC shield v2 is based on PN532 chip. Please note that the design only suppo
 Resources
 ---------
 
-- [NFC Shield v2.0 Schematic](https://raw.githubusercontent.com/SeeedDocument/NFC_Shield_V2.0/master/res/NFC_Shield_Schematic.pdf)
-- [NFC Shield v2.0 Eagle File](https://raw.githubusercontent.com/SeeedDocument/NFC_Shield_V2.0/master/res/NFC_Shield_V2.0b_Eagle_files.zip)
-- [NFC Shield v2.1 Schematic](https://raw.githubusercontent.com/SeeedDocument/NFC_Shield_V2.0/master/res/NFC_Shield_v2.1.pdf)
-- [NFC Shield v2.1 Eagle File](https://raw.githubusercontent.com/SeeedDocument/NFC_Shield_V2.0/master/res/NFC_Shield_v2.1_Eagle_File.zip)
-- [PN532 Datasheet](https://raw.githubusercontent.com/SeeedDocument/NFC_Shield_V2.0/master/res/PN532.pdf)
+- [NFC Shield v2.0 Schematic](https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/res/NFC_Shield_Schematic.pdf)
+- [NFC Shield v2.0 Eagle File](https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/res/NFC_Shield_V2.0b_Eagle_files.zip)
+- [NFC Shield v2.1 Schematic](https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/res/NFC_Shield_v2.1.pdf)
+- [NFC Shield v2.1 Eagle File](https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/res/NFC_Shield_v2.1_Eagle_File.zip)
+- [PN532 Datasheet](https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/res/PN532.pdf)
 - [FAQ of NFC Shield](http://support.seeedstudio.com/knowledgebase/articles/462025-nfc-shield-sku-sld01097p)
 - [Seeed Arduino NFC Library](https://github.com/Seeed-Studio/Seeed_Arduino_NFC)
 - [PN532 Library](https://github.com/Seeed-Studio/PN532)

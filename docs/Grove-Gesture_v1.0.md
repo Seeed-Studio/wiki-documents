@@ -324,7 +324,7 @@ Left
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
-![cc](https://raw.githubusercontent.com/SeeedDocument/Grove_Gesture_V_1.0/master/img/cc_Gesture.png)
+![cc](https://files.seeedstudio.com/wiki/Grove_Gesture_V_1.0/img/cc_Gesture.png)
 
 Upload the program to your Arduino/Seeeduino.
 
@@ -1090,7 +1090,7 @@ We define some register data of gesture, refer to the following table.
 - **[ZIP]** [Grove - Gesture_v1.0 sch pcb.zip](https://files.seeedstudio.com/wiki/Grove_Gesture_V_1.0/res/Grove_-_Gesture_v1.0_sch_pcb.zip)
 - **[Datasheet]** [PAJ7620U2_Datasheet_V0.8_20140611.pdf](https://files.seeedstudio.com/wiki/Grove_Gesture_V_1.0/res/PAJ7620U2_Datasheet_V0.8_20140611.pdf)
 - **[Library]** [Library Grove - Guesture](https://github.com/Seeed-Studio/Gesture_PAJ7620)
-- **[Codecraft]** [CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove_Gesture_V_1.0/master/res/Grove_Gesture_CDC_File.zip)
+- **[Codecraft]** [CDC File](https://files.seeedstudio.com/wiki/Grove_Gesture_V_1.0/res/Grove_Gesture_CDC_File.zip)
 
 ## Project
 

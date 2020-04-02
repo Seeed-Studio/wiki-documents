@@ -99,7 +99,7 @@ There are 16 groups of Pins(1 - 16) on this board, each group of pins contains o
 
 The 6 selectable pads on the back of this board, all have 64 optional I2C addresses.
 
-[![](https://files.seeedstudio.com/wiki/Grove-16-Channel_PWM_Driver-PCA9685/img/i2c_ad.jpg)](https://raw.githubusercontent.com/SeeedDocument/Grove-16-Channel_PWM_Driver-PCA9685/master/img/i2c_ad.jpg)
+[![](https://files.seeedstudio.com/wiki/Grove-16-Channel_PWM_Driver-PCA9685/img/i2c_ad.jpg)](https://files.seeedstudio.com/wiki/Grove-16-Channel_PWM_Driver-PCA9685/img/i2c_ad.jpg)
 
 
 As shown in the figure above, all address pads are connected to the high level by default. The address rules are as shown below:

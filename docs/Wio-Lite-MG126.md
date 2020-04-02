@@ -113,7 +113,7 @@ Connect the Wio Lite MG126 to your computer via the USB cable.
 
 - **Step 1. You need to Install an Arduino Software.**
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Stalker_V3_1/master/images/Download_IDE.png)](https://www.arduino.cc/en/Main/Software)
+[![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/Download_IDE.png)](https://www.arduino.cc/en/Main/Software)
 
 
 **Launch the Arduino application**
@@ -225,7 +225,7 @@ Now, simply click the "Upload" button in the environment. Wait a few seconds and
 
 <div align="center">
 <figure>
-  <img src="https://raw.githubusercontent.com/SeeedDocument/Seeeduino_GPRS/master/img/upload_image.png"/>
+  <img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/upload_image.png"/>
 </figure>
 </div>
 

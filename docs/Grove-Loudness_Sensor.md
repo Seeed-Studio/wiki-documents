@@ -312,7 +312,7 @@ sensor_value = 131
 ## Resources
 
 - **[Eagle&PDF]** [Grove - Loudness Sensor Schematic](https://files.seeedstudio.com/wiki/Grove-Loudness_Sensor/res/Grove%20-%20Loudness%20Sensor%20Eagle%20File_v0.9b.zip)
-- **[Datasheet]** [LM2904DR Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Loudness_Sensor/master/res/LM2904DR.pdf)
+- **[Datasheet]** [LM2904DR Datasheet](https://files.seeedstudio.com/wiki/Grove-Loudness_Sensor/res/LM2904DR.pdf)
 
 ## Projects
 

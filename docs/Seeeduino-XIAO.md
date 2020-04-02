@@ -8,7 +8,7 @@ sku: 102010328
 tags:
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino-XIAO/master/img/Seeeduino-XIAO-preview-1.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-preview-1.jpg)
 
 The Seeeduino XIAO is the smallest member of the Seeeduino family. It carries the powerful ATSAMD21G18A-MU which is a low-power microcontrollers. On the other hand, this little board has good performance in processing but needs less power. As a matter of fact, it is designed in a tiny size and can be used for wearable devices and small projects.
 
@@ -253,7 +253,7 @@ void loop (void) {
 - **Step 1. You need to Install an Arduino Software.**
 
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Stalker_V3_1/master/images/Download_IDE.png)](https://www.arduino.cc/en/Main/Software)
+[![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/Download_IDE.png)](https://www.arduino.cc/en/Main/Software)
 
 
 **Launch the Arduino application**
@@ -271,7 +271,7 @@ Double-click the Arduino application (arduino.exe) you have previously downloade
 Open the LED blink example sketch: **File > Examples >01.Basics > Blink**.
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_GPRS/master/img/select_blink.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/select_blink.png)
 
 
 - **Step 3. Add Seeeduino to your Arduino IDE**
@@ -294,7 +294,7 @@ Click **Tools-> Board-> Boards Manager...**, print  keyword "**Seeeduino XIAO**"
 After installing the board, click **Tools-> Board**, find "**Seeeduino XIAO M0**" and select it. Now you have already set up the board of Seeeduino XIAO for Arduino IDE.
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino-XIAO/master/img/board.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/board.png)
 
 
 
@@ -302,7 +302,7 @@ After installing the board, click **Tools-> Board**, find "**Seeeduino XIAO M0**
 Select the serial device of the Arduino board from the Tools | Serial Port menu. This is likely to be COM3 or higher (**COM1** and **COM2** are usually reserved for hardware serial ports). To find out, you can disconnect your Arduino board and re-open the menu; the entry that disappears should be the Arduino board. Reconnect the board and select that serial port.
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino-XIAO/master/img/port.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/port.png)
 
 
 - **Step 5.Upload the program**  
@@ -311,7 +311,7 @@ Select the serial device of the Arduino board from the Tools | Serial Port menu.
 Now, simply click the "Upload" button in the environment. Wait a few seconds and if the upload is successful, the message "Done uploading." will appear in the status bar.
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_GPRS/master/img/upload_image.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/upload_image.png)
 
  
  A few seconds after the upload finishes, you should see the pin 13 (L) LED on the board start to blink (in orange). If it does, congratulations! You've gotten Arduino up-and-running. If you have problems, please see the troubleshooting suggestions.

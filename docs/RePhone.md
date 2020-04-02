@@ -24,49 +24,49 @@ The core of the RePhone is provided by Xadow GSM+BLE or by RePhone Core 3G Modul
 
 |Xadow GPS v2|Xadow Basic Sensors|Xadow NFC v2|
 |----------------|--------------|-------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/product1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/product2.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/product3.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Rephone/image/product1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Rephone/image/product2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Rephone/image/product3.jpg)|
 |[Get More Details](http://www.seeedstudio.com/Xadow-GPS-v2-p-2557.html)|[Get More Details](http://www.seeedstudio.com/Xadow-Basic-Sensors-p-2555.html)|[Get More Details](http://www.seeedstudio.com/Xadow-NFC-v2-p-2562.html)|
 
 |Xadow LED 5 x 7|Xadow GSM + BLE|Xadow 1.54 inch Touchscreen|
 |----------------|--------------|-------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/product4.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/product5.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/product6.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Rephone/image/product4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Rephone/image/product5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Rephone/image/product6.jpg)|
 |[Get More Details](http://www.seeedstudio.com/Xadow-LED-5-x-7-p-2561.html)|[Get More Details](http://www.seeedstudio.com/Xadow-GSM-%2B-BLE-p-2560.html)|[Get More Details](http://www.seeedstudio.com/Xadow-1.54-inch-Touchscreen-p-2553.html)|
 
 |Xadow Audio|Xadow GSM Breakout|Xadow Duino|
 |----------------|--------------|-------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/product7.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/product8.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/product9.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Rephone/image/product7.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Rephone/image/product8.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Rephone/image/product9.jpg)|
 |[Get More Details](http://www.seeedstudio.com/Xadow-Audio-p-2554.html)|[Get More Details](http://www.seeedstudio.com/Xadow-GSM-Breakout-p-2559.html)|[Get More Details](http://www.seeedstudio.com/Xadow-Duino-p-2556.html)|
 
 
 ###RePhone Kit Create
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/375px-IMG_2999.JPG)](https://www.seeedstudio.com/item_detail.html?p_id=2552)
+[![](https://files.seeedstudio.com/wiki/Rephone/image/375px-IMG_2999.JPG)](https://www.seeedstudio.com/item_detail.html?p_id=2552)
 
 
 ###RePhone Strap Kit for Pebble
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/450px-RePhone_strap_kit_for_pebble-20.png)](https://www.seeedstudio.com/RePhone-Strap-Kit-for-Pebble-Time-p-2633.html)
+[![](https://files.seeedstudio.com/wiki/Rephone/image/450px-RePhone_strap_kit_for_pebble-20.png)](https://www.seeedstudio.com/RePhone-Strap-Kit-for-Pebble-Time-p-2633.html)
 
 
 ###RePhone Geo Kit
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/450px-RePhone_Geo_Kit_wiki_2.jpg)](https://www.seeedstudio.com/RePhone-Geo-Kit-p-2624.html)
+[![](https://files.seeedstudio.com/wiki/Rephone/image/450px-RePhone_Geo_Kit_wiki_2.jpg)](https://www.seeedstudio.com/RePhone-Geo-Kit-p-2624.html)
 
 
 ###RePhone Lumi Kit
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/450px-RePhone_Lumi_Kit_wiki_2.jpg)](https://www.seeedstudio.com/RePhone-Lumi-Kit-p-2623.html)
+[![](https://files.seeedstudio.com/wiki/Rephone/image/450px-RePhone_Lumi_Kit_wiki_2.jpg)](https://www.seeedstudio.com/RePhone-Lumi-Kit-p-2623.html)
 
 
 ###RePhone Extension Pack
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/450px-RePhone_Extesion_Pack_wiki_2.jpg)](https://www.seeedstudio.com/RePhone-Extension-Pack-p-2630.html)
+[![](https://files.seeedstudio.com/wiki/Rephone/image/450px-RePhone_Extesion_Pack_wiki_2.jpg)](https://www.seeedstudio.com/RePhone-Extension-Pack-p-2630.html)
 
 
 ## Development Environment
 We have developed rich libraries hooking into Arduino IDE, Lua and JavaScript, with detailed example sketches to help entry-level programmers develop with RePhone modules easily and quickly. We also provide a full power SDK based on Eclipse IDE for C/C++ developers to work with high level applications.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Rephone/master/image/600px-IDE_LOGOs.png)
+![](https://files.seeedstudio.com/wiki/Rephone/image/600px-IDE_LOGOs.png)
 
 
 Check out:

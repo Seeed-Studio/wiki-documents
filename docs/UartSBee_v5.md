@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/UartSBee_v5
 sku: 103100001
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/UartSBee_v5/master/img/UartSBee_V5_New.jpg)
+![](https://files.seeedstudio.com/wiki/UartSBee_v5/img/UartSBee_V5_New.jpg)
 
 *UartSBee v5'* is FTDI cable compatible **USB to Serial** adapter equipped with BEE socket(20pin 2.0mm). The integrated **FT232RL** can be used for programming or communicating with MCUs. On the other hand, you might connect your PC to various wireless applications via a **Bee** compatible module. UartSBee provides breakouts for the bit-bang mode pins of **FT232RL** as well.This Bit-bang mode pins (8 I/O pins) can be used as a replacement for applications involving PC parallel port which is scares now a day.
 
@@ -30,19 +30,19 @@ Added Features
 Hardware Overview
 -------
 
-![](https://raw.githubusercontent.com/SeeedDocument/UartSBee_v5/master/img/UartSBeev5_diagram.png)
+![](https://files.seeedstudio.com/wiki/UartSBee_v5/img/UartSBeev5_diagram.png)
 
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/UartSBee_v5/master/res/UartSBee_v5_eagle_file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/UartSBee_v5/res/UartSBee_v5_eagle_file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 Resources
 ---------
 
--   [Eagle file for UartSBee v5](https://raw.githubusercontent.com/SeeedDocument/UartSBee_v5/master/res/UartSBee_v5_eagle_file.zip)
+-   [Eagle file for UartSBee v5](https://files.seeedstudio.com/wiki/UartSBee_v5/res/UartSBee_v5_eagle_file.zip)
 -   [How to program Mesh Bee](/Mesh_Bee "Mesh Bee")
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/UartSBee_v5 -->

@@ -10,7 +10,7 @@ sku: 101020055
 tags: grove_analog, io_5v, plat_duino
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Gas_Sensor-MQ2/master/img/Twig-Gas_Sensor.bmp)
+![](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ2/img/Twig-Gas_Sensor.bmp)
 
 The Grove - Gas Sensor(MQ2) module is useful for gas leakage detection (home and industry). It is suitable for detecting H2, LPG, CH4, CO, Alcohol, Smoke or Propane. Due to its high sensitivity and fast response time, measurement can be taken as soon as possible. The sensitivity of the sensor can be adjusted by potentiometer.
 
@@ -94,7 +94,7 @@ The output voltage from the Gas sensor increases when the concentration of gas i
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
 <!--connected with arduino-->
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Gas_Sensor-MQ2/master/img/with_ardu.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ2/img/with_ardu.jpg)
 Connect the Grove - Gas Sensor(MQ2) to A0 port as shown in the picture above.
 
 !!!Note
@@ -218,7 +218,7 @@ void loop() {
 
 Now, we can get the concentration of gas from the figure below.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Gas_Sensor-MQ2/master/img/Gas_sensor_1.png)
+![](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ2/img/Gas_sensor_1.png)
 
 According to the graph, we can see that the minimum concentration we can test is 100ppm and the maximum is 10000ppm, in a other word, we can get a concentration of gas between 0.01% and 1%. However, we can't provide a formula because the relation between ratio and concentration is nonlinear.
 
@@ -476,7 +476,7 @@ while True:
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-Gas_Sensor-MQ2/master/res/Gas_Sensor_Eagle_files.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ2/res/Gas_Sensor_Eagle_files.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
@@ -485,9 +485,9 @@ while True:
 
 -  **[Suggest Reading]** [How to choose a Gas Sensor](/How_to_Chose_A_Gas_Sensor)
 -  **[References]** [What's LEL](https://en.wikipedia.org/wiki/Flammability_limit)
--  **[Schematic]** [Grove Gas Sensor - EAGLE (Schematic and Board) files](https://raw.githubusercontent.com/SeeedDocument/Grove-Gas_Sensor-MQ2/master/res/Gas_Sensor_Eagle_files.zip)
--  **[Schematic]** [Grove Gas Sensor - PDF Schematic](https://raw.githubusercontent.com/SeeedDocument/Grove-Gas_Sensor-MQ2/master/res/Gas_Sensor_Schematic.pdf)
--  **[Datasheet]** [MQ-2 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Gas_Sensor-MQ2/master/res/MQ-2.pdf)
+-  **[Schematic]** [Grove Gas Sensor - EAGLE (Schematic and Board) files](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ2/res/Gas_Sensor_Eagle_files.zip)
+-  **[Schematic]** [Grove Gas Sensor - PDF Schematic](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ2/res/Gas_Sensor_Schematic.pdf)
+-  **[Datasheet]** [MQ-2 Datasheet](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ2/res/MQ-2.pdf)
 
 
 ## Projects

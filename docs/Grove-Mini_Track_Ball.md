@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/Grove-Mini_Track_Ball
 sku: 101020091
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Mini_Track_Ball/master/img/Grove-Mini_Track_ball.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Mini_Track_Ball/img/Grove-Mini_Track_ball.jpg)
 
 Grove - Mini Track ball will give an easy access to prototyping a practical motion-tracking function module for your applications. It has implanted 360° detection and click detection with high accuracy and quick response. With chips **STM32F103C8T6** and **AN48841B** inside, you can turn plenty of your ideas into tangible things. It is also standardized with Grove interface which will save you a lot of work in the prototyping process.
 
@@ -49,7 +49,7 @@ Grove - Mini Track ball will give an easy access to prototyping a practical moti
 ## Hardware Overview
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Mini_Track_Ball/master/img/Grove-Mini_Track_ball_Hardware_Overview.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Mini_Track_Ball/img/Grove-Mini_Track_ball_Hardware_Overview.jpg)
 
 - **Grove interface**   
 Connect main control board such as **Seeeduino** board with Grove - Mini Track Ball.
@@ -78,12 +78,12 @@ Interface to control motions.
 - **Step 2.** Connect Grove-Mini_Track_Ball to **I2C** port of Seeeduino.
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Mini_Track_Ball/master/img/with_ardu.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Mini_Track_Ball/img/with_ardu.jpg)
 
 
 #### Software
 
-**Step 1.** Download the [demo](https://raw.githubusercontent.com/SeeedDocument/Grove-Mini_Track_Ball/master/res/Grove-Mini_Track_ball_test.zip) from Github.
+**Step 1.** Download the [demo](https://files.seeedstudio.com/wiki/Grove-Mini_Track_Ball/res/Grove-Mini_Track_ball_test.zip) from Github.
 
 **Step 2.** Open the file **Grove - Mini Track ball test.ino**
 
@@ -385,8 +385,8 @@ void loop() {
 ## Resources
 
 - **[Eagle]** [Grove-Mini Track ball v1.0 schematic](https://files.seeedstudio.com/wiki/Grove-Mini_Track_Ball/res/Grove-Mini_Track_ball_v1.0_schematic_files_in_Eagle.zip)
-- **[PDF]** [Grove-Mini Track ball v1.0 schematic](https://raw.githubusercontent.com/SeeedDocument/Grove-Mini_Track_Ball/master/res/Grove-Mini_Track_ball_v1.0_schematic_files_in_PDF.zip)
-- **[Datasheet]** [STM32F103C8T6 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Mini_Track_Ball/master/res/STM32F03C8T6.pdf)
+- **[PDF]** [Grove-Mini Track ball v1.0 schematic](https://files.seeedstudio.com/wiki/Grove-Mini_Track_Ball/res/Grove-Mini_Track_ball_v1.0_schematic_files_in_PDF.zip)
+- **[Datasheet]** [STM32F103C8T6 Datasheet](https://files.seeedstudio.com/wiki/Grove-Mini_Track_Ball/res/STM32F03C8T6.pdf)
 - **[Datasheet]** [AN48841B Datasheet](http://www.semicon.panasonic.co.jp/ds4/AN48841B_E.pdf)
 - **[Library]** [Library file in Github](https://github.com/Seeed-Studio/Grove_Mini_Track_Ball)
 

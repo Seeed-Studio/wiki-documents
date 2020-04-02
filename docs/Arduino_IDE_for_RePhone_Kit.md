@@ -6,7 +6,7 @@ prodimagename: Xadow_GSMPlusBLE_pingguo.JPG
 surveyurl: https://www.research.net/r/Arduino_IDE_for_RePhone_Kit
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Arduino_IDE_for_RePhone_Kit/master/img/Xadow_GSMPlusBLE_pingguo.JPG)
+![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Xadow_GSMPlusBLE_pingguo.JPG)
 
 RePhone can be a learning tool for you to start interesting projects. Currently, RePhone supports various development environments and development languages, you can build applications either with C/C++ based on Eclipse IDE, Arduino IDE, or with Lua and JavaScript.
 
@@ -25,11 +25,11 @@ If you ever used the Arduino IDE before, then this should be just a piece of cak
 
 Now click on
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Arduino_IDE_for_RePhone_Kit/master/img/Download_Arduino_IDE_for_RePhone.png)](https://github.com/Seeed-Studio/Arduino_IDE_for_RePhone)
+[![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Download_Arduino_IDE_for_RePhone.png)](https://github.com/Seeed-Studio/Arduino_IDE_for_RePhone)
 
 On the Github page, click the **Download ZIP** to download the file as shown in the image below:
 
-![](https://raw.githubusercontent.com/SeeedDocument/Arduino_IDE_for_RePhone_Kit/master/img/Click_to_download_Arduino_IDE_for_RePhone.png)
+![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Click_to_download_Arduino_IDE_for_RePhone.png)
 
 When the download is complete, unzip the file to a proper location.
 
@@ -60,28 +60,28 @@ Now follow the instructions below to disable the 'Driver Signature Enforcement.'
 
 1. First, power up your RePhone by **plugging in the battery** or **power it with external power sources (3.3 ~ 4.2V(no SIM)/3.5 ~ 4.2V(with SIM)) **to the battery socket on the Xadow GSM+BLE, **press and hold the power key (PWR) for 2 seconds to** **turn it ON** (LED indicator shows **GREEN**), then connect your RePhone to PC with a Micro USB cable.
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Arduino_IDE_for_RePhone_Kit/master/img/Connect_Xadow_GSMPlusBLE_to_PC.png)
+    ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Connect_Xadow_GSMPlusBLE_to_PC.png)
 
 2. Open **Device Manager** by clicking the **Start** button, clicking **Control Panel**, clicking **System and Security**, and then, under **System**, clicking **Device Manager**. If you're prompted for an administrator password or confirmation, type the password or provide confirmation.
 In the **Device Manager**, you will be seeing unknown devices as shown below:
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Arduino_IDE_for_RePhone_Kit/master/img/Driver_Installation_Unknown_Devices.png)
+    ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Driver_Installation_Unknown_Devices.png)
 
 3. Right click on one of the unknown devices, choose **Update Driver Software**.
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Arduino_IDE_for_RePhone_Kit/master/img/Driver_Installation_Update_Driver_Software.png)
+    ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Driver_Installation_Update_Driver_Software.png)
 
 4. Choose **Browse my computer for driver software**.
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Arduino_IDE_for_RePhone_Kit/master/img/Driver_Installation_Browse_my_computer_for_driver_software.png)
+    ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Driver_Installation_Browse_my_computer_for_driver_software.png)
 
 5. Click **Browse** and the locate the folder which you've unzipped the Arduino IDE for RePhone .. \\Arduino\_IDE\_for\_RePhone\\drivers\\mtk . Click **Next** to start the driver installation.
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Arduino_IDE_for_RePhone_Kit/master/img/Driver_Installation_Locate_Driver.png)
+    ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Driver_Installation_Locate_Driver.png)
 
 6. When the driver software is successfully installed, you will be able to see the following **complete** page, click **Close** and **start over from step 1 to 6 to install the driver for another unknown device**.
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Arduino_IDE_for_RePhone_Kit/master/img/Driver_Installation_complete_page.png)
+    ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Driver_Installation_complete_page.png)
 
 ### Install the Driver Manually
 
@@ -103,7 +103,7 @@ You can also install the driver manually:
 
 LinkIt Assist 2502 SDK 2.0.46 also provides a driver installation program.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Arduino_IDE_for_RePhone_Kit/master/img/Linkit_assist_sdk_2.0.46-04.png)](http://download.labs.mediatek.com/MediaTek_LinkIt_Assist_2502_SDK_2_0_46.zip)
+[![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Linkit_assist_sdk_2.0.46-04.png)](http://download.labs.mediatek.com/MediaTek_LinkIt_Assist_2502_SDK_2_0_46.zip)
 
 Then find the driver installer in the path **"MediaTek\_LinkIt\_Assist\_2502\_SDK\_2\_0\_46\\LINKIT\_ASSIST\_SDK\\Driver\\InstallMTKUSBCOMPortDriver.exe"**
 
@@ -121,19 +121,19 @@ To make use of the Arduino IDE for RePhone, you have to update/flash the firmwar
 
 2. Open the **FirmwareUpdater.exe** under the path ***...Arduino\_IDE\_for\_RePhone\\hardware\\tools\\mtk\\FirmwareUpdater.exe***, be sure your platform on the Firmware Updater is "**RePhone**" as showing below, if not, click "**Others**" and locate to ***...Arduino\_IDE\_for\_RePhone\\hardware\\tools\\mtk\\firmware\\LinkIt\_Device\\RePhone\\W15.19.p2-uart\\SEEED02A\_DEMO\_BB.cfg***, then click **Download (The Green Button)**.
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Arduino_IDE_for_RePhone_Kit/master/img/Updatefirmware.png)
+    ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Updatefirmware.png)
 
 3. Now you will be asked to connect your RePhone to PC via USB cable, make sure your RePhone has been turned **OFF** and meantime a functional battery should be always connected ( Powered Up).
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Arduino_IDE_for_RePhone_Kit/master/img/Updatefirmware_pluginrephone.png)
+    ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Updatefirmware_pluginrephone.png)
 
 4. Wait until the downloading finishes. This might take about 1min, so it may remain stuck at 50% for quite a while, please **be patient**.
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Arduino_IDE_for_RePhone_Kit/master/img/Updatefirmware_downloading.png)
+    ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Updatefirmware_downloading.png)
 
 5. In the **Complete** page click **OK** to finish the firmware update.
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Arduino_IDE_for_RePhone_Kit/master/img/Updatefirmware_complete.png)
+    ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Updatefirmware_complete.png)
 
 Reset to default
 -----------------
@@ -149,7 +149,7 @@ To reset your RePhone to **DEFAULT**:
 
 2. Download the RePhone\_Create\_Kit\_VXP file
 
-    [![](https://raw.githubusercontent.com/SeeedDocument/Arduino_IDE_for_RePhone_Kit/master/img/RePhone_Kit_Create_VXP.png)](https://github.com/WayenWeng/RePhone_Create_Kit_VXP/)
+    [![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/RePhone_Kit_Create_VXP.png)](https://github.com/WayenWeng/RePhone_Create_Kit_VXP/)
 
 3. Enter the [RePhone Mass Storage Mode](/Xadow_GSMPlusBLE#Mass_Storage_Mode)
 
@@ -168,22 +168,22 @@ Let us start with a simple program **Hello World**
 
 2. Open the **Arduino\_IDE\_for\_RePhone.exe** in the folder where you unzipped the Arduino IDE for RePhone, the software interface is as follows:
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Arduino_IDE_for_RePhone_Kit/master/img/Arduino_IDE_for_RePhone_interface.png)
+    ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Arduino_IDE_for_RePhone_interface.png)
 
 3. Open **Device Manager** to check for the COM ports. There will be **two COM ports**:
 
     -   MTK USB Debug Port is used for uploading code
     -   MTK USB Modem Port is used for logs, like printing messages in the serial monitor with **Serial.println()**
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Arduino_IDE_for_RePhone_Kit/master/img/Arduino_IDE_for_RePhone_COM_Ports.png)
+    ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Arduino_IDE_for_RePhone_COM_Ports.png)
 
 4. On the Arduino IDE window, click **Tool => Port**, select **MTK USB Debug Port**, which is **COM20** in this case, the COM number might be different in your PC, just make sure it corresponds to the Debug Port.
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Arduino_IDE_for_RePhone_Kit/master/img/Arduino_IDE_for_RePhone_Debug_Port.png)
+    ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Arduino_IDE_for_RePhone_Debug_Port.png)
 
 5. On the Arduino IDE window, click **Tool => Board**, select **RePhone**
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Arduino_IDE_for_RePhone_Kit/master/img/Arduino_IDE_for_RePhone_Board.png)
+    ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Arduino_IDE_for_RePhone_Board.png)
 
 6. Now copy the following code to your Arduino IDE:
 
@@ -203,17 +203,17 @@ Let us start with a simple program **Hello World**
 
 7. Now press the **Upload** button to upload the code to your RePhone. You will see the **Done uploading** when the code is successfully uploaded.
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Arduino_IDE_for_RePhone_Kit/master/img/Arduino_IDE_for_RePhone_upload.png)
+    ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Arduino_IDE_for_RePhone_upload.png)
 
 8. As RePhone uses different COM ports for uploading software and logs, to read the logs, we need to switch the selected COM Port to **MTK USB Modem Port**. On the Arduino IDE window, click **Tool => Port**, select **MTK USB Modem Port**, which is **COM48** in this case.
 
     Then open the **Serial Monitor**.
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Arduino_IDE_for_RePhone_Kit/master/img/Arduino_IDE_for_RePhone_Serial_Monitor.png)
+    ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Arduino_IDE_for_RePhone_Serial_Monitor.png)
 
 9. Now we can see the **Hello World** we have printed with **Serial.println()** .
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Arduino_IDE_for_RePhone_Kit/master/img/Arduino_IDE_for_RePhone_Helloworld.png)
+    ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Arduino_IDE_for_RePhone_Helloworld.png)
 
 More Example Code
 -----------------
@@ -222,20 +222,20 @@ Playing with some example code would be a good start if you are heading into som
 
 1. Simply setup your **sketchbook location** in the **preference** as ***Arduino\_IDE\_for\_RePhone-master\\hardware\\arduino\\mtk*** (where you install the Arduino IDE for RePhone)
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Arduino_IDE_for_RePhone_Kit/master/img/Arduino_Sketchlocation_1.png)
+    ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Arduino_Sketchlocation_1.png)
 
     then restart the ***Arduino\_IDE\_for\_RePhone.exe***, you will be able to see the example codes.
-    ![](https://raw.githubusercontent.com/SeeedDocument/Arduino_IDE_for_RePhone_Kit/master/img/Arduino_Sketchlocation_2.png)
+    ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Arduino_Sketchlocation_2.png)
 
 2. You can also find the Arduino example coded manually for all the RePhone modules in the following path:
 ***Arduino\_IDE\_for\_RePhone-master\\hardware\\arduino\\mtk\\libraries***
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/Arduino_IDE_for_RePhone_Kit/master/img/Example_code_Arduino_IDE.png)
+    ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Example_code_Arduino_IDE.png)
 
 RePhone Community
 -----------------
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Arduino_IDE_for_RePhone_Kit/master/img/RePhone_Community-2.png)](https://community.seeedstudio.com/discover.html?t=RePhone)
+[![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/RePhone_Community-2.png)](https://community.seeedstudio.com/discover.html?t=RePhone)
 
 We have been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the RePhone Community.
 

@@ -90,7 +90,7 @@ The 485 interface uses differential signal transmission. Please make sure the po
 >GND: Connect to the Raspberry Pi GND.
 
 
-[![](https://raw.githubusercontent.com/SeeedDocument/RS-485_Shield_for_Raspberry_Pi/master/img/schematic_1.jpg)](https://raw.githubusercontent.com/SeeedDocument/RS-485_Shield_for_Raspberry_Pi/master/img/schematic_1.jpg)
+[![](https://files.seeedstudio.com/wiki/RS-485_Shield_for_Raspberry_Pi/img/schematic_1.jpg)](https://files.seeedstudio.com/wiki/RS-485_Shield_for_Raspberry_Pi/img/schematic_1.jpg)
 
 <p style=":center"><font color="green">You can click the picture to view the original file</font></p>
 

@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/RFbee_V1_1-Wireless_Arduino_compatible_nod
 sku: 113050002
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/RFbee_V1.1-Wireless_Arduino_compatible_node/master/img/rfbee1.jpg)
+![](https://files.seeedstudio.com/wiki/RFbee_V1.1-Wireless_Arduino_compatible_node/img/rfbee1.jpg)
 
 The RFBee is a RF module providing easy and flexible wireless data transmission between devices. It is based on a AVR ATmega168 working as a fully functional **Arduino** connected via SPI to a TI CC1101 RF transceiver.
 
@@ -80,7 +80,7 @@ Specifications
 Hardware Overview
 -----------------
 
-![](https://raw.githubusercontent.com/SeeedDocument/RFbee_V1.1-Wireless_Arduino_compatible_node/master/img/RFBee-pin.jpg)
+![](https://files.seeedstudio.com/wiki/RFbee_V1.1-Wireless_Arduino_compatible_node/img/RFBee-pin.jpg)
 
 | Pin     |  #  | Pad Type     | Description                        | Arduino Pin Number      |
 |---------|-----|--------------|------------------------------------|-------------------------|
@@ -123,15 +123,15 @@ The UartSBee device and the XbeeShield are sold separately.
 
 #### Figure 1: USB using UartSBee (The following picture's demonstrated with older version UartSBee)
 
-![](https://raw.githubusercontent.com/SeeedDocument/RFbee_V1.1-Wireless_Arduino_compatible_node/master/img/RFBee-figure1.jpg)
+![](https://files.seeedstudio.com/wiki/RFbee_V1.1-Wireless_Arduino_compatible_node/img/RFBee-figure1.jpg)
 
 #### Figure 2: Seeduino via XbeeShield (Version 1)
 
-![](https://raw.githubusercontent.com/SeeedDocument/RFbee_V1.1-Wireless_Arduino_compatible_node/master/img/RFBee-figure2.jpg)
+![](https://files.seeedstudio.com/wiki/RFbee_V1.1-Wireless_Arduino_compatible_node/img/RFBee-figure2.jpg)
 
 #### Any device using a Uart
 
-![](https://raw.githubusercontent.com/SeeedDocument/RFbee_V1.1-Wireless_Arduino_compatible_node/master/img/RFBee-figure3.jpg)
+![](https://files.seeedstudio.com/wiki/RFbee_V1.1-Wireless_Arduino_compatible_node/img/RFBee-figure3.jpg)
 
 ### Example
 
@@ -145,7 +145,7 @@ This example code is in the public domain and available [here](http://micro.aroc
 
 |                                                                              |                                                                              |                                                                              |
 |------------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| ![](https://raw.githubusercontent.com/SeeedDocument/RFbee_V1.1-Wireless_Arduino_compatible_node/master/img/RFBee-Exam1.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/RFbee_V1.1-Wireless_Arduino_compatible_node/master/img/RFBee-Exam2.jpg) | ![](https://raw.githubusercontent.com/SeeedDocument/RFbee_V1.1-Wireless_Arduino_compatible_node/master/img/RFBee-Exam3.jpg) |
+| ![](https://files.seeedstudio.com/wiki/RFbee_V1.1-Wireless_Arduino_compatible_node/img/RFBee-Exam1.jpg) | ![](https://files.seeedstudio.com/wiki/RFbee_V1.1-Wireless_Arduino_compatible_node/img/RFBee-Exam2.jpg) | ![](https://files.seeedstudio.com/wiki/RFbee_V1.1-Wireless_Arduino_compatible_node/img/RFBee-Exam3.jpg) |
 
 ##### Requirements
 
@@ -192,8 +192,8 @@ You can update the RFbee firmware using the Arduino IDE using the procedure belo
 Resources
 ---------
 
--   [RFBee User Manual](https://raw.githubusercontent.com/SeeedDocument/RFbee_V1.1-Wireless_Arduino_compatible_node/master/res/rfbee-manual.pdf)
--   [RFbee firmware for Arduino 1.0](https://raw.githubusercontent.com/SeeedDocument/RFbee_V1.1-Wireless_Arduino_compatible_node/master/res/RFbee_for_arduino1.0.zip)
+-   [RFBee User Manual](https://files.seeedstudio.com/wiki/RFbee_V1.1-Wireless_Arduino_compatible_node/res/rfbee-manual.pdf)
+-   [RFbee firmware for Arduino 1.0](https://files.seeedstudio.com/wiki/RFbee_V1.1-Wireless_Arduino_compatible_node/res/RFbee_for_arduino1.0.zip)
 -   [RFbee firmware 1.1 (latest)](https://github.com/Seeed-Studio/RFBee)
 -   [Schematic and layout in EAGLE file](http://www.seeedstudio.com/depot/datasheet/RFBee%20hardware%20v1.1.zip)
 -   [Forum](http://forum.seeedstudio.com/viewtopic.php?f=10&t=682&sid=7a9b1bed4f9fd10a9b1003ca1e48e756)

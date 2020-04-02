@@ -68,7 +68,7 @@ The outputs of this sensor consist of two parts: raw data and 3-axis acceleratio
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
-![cc](https://raw.githubusercontent.com/SeeedDocument/Grove_3_Axis_Digital_Accelerometer_Plus_Minus_16g/master/img/cc_3_Axis_Digital_Accelerometer.png)
+![cc](https://files.seeedstudio.com/wiki/Grove_3_Axis_Digital_Accelerometer_Plus_Minus_16g/img/cc_3_Axis_Digital_Accelerometer.png)
 
 Upload the program to your Arduino/Seeeduino.
 
@@ -351,7 +351,7 @@ if __name__ == "__main__":
 - [ADXL345 datasheet.pdf](https://files.seeedstudio.com/wiki/Grove_3_Axis_Digital_Accelerometer_Plus_Minus_16g/res/ADXL345_datasheet.pdf)
 - [github repository for 3-Axis Digital Accelerometer(±16g)](https://github.com/Seeed-Studio/Accelerometer_ADXL345)
 - [Grove - 3-Axis Digital Accelerometer(±16g)](https://files.seeedstudio.com/wiki/Grove_3_Axis_Digital_Accelerometer_Plus_Minus_16g/resources/DigitalAccelerometer_ADXL345.zip)
-- [Codecraft CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove_3_Axis_Digital_Accelerometer_Plus_Minus_16g/master/res/Grove_3_Axis_Digital_Acceleromete_CDC_File.zip)
+- [Codecraft CDC File](https://files.seeedstudio.com/wiki/Grove_3_Axis_Digital_Accelerometer_Plus_Minus_16g/res/Grove_3_Axis_Digital_Acceleromete_CDC_File.zip)
 
 ## Projects
 

@@ -6,7 +6,7 @@ This shield is based on Microchip [MGC3130](https://files.seeedstudio.com/wiki/3
 
 As shown in the figure below, the recognition area is divided into two parts: the strip area distributed around and a central panel.
 
-![](https://raw.githubusercontent.com/SeeedDocument/3D-Gesture-Tracking-Shield-for-Raspberry-Pi-MGC3130/master/img/detect-part.jpg)
+![](https://files.seeedstudio.com/wiki/3D-Gesture-Tracking-Shield-for-Raspberry-Pi-MGC3130/img/detect-part.jpg)
 
 <div align="center"><b>Figure 1.</b><i>sense area</i></div>
 
@@ -15,10 +15,10 @@ The strip areas can sense the orientation change, including the North, South, We
 
 Thanks to the Microchip’s patented GestIC® technology, this shield utilizes electrical near-field sensing to detect movements. The shield generates a magnetic field above the central panel when the hand approaches, it will interfere with the magnetic field, and the magnetic field receiver below the shield can detect the change.
 
-![](https://raw.githubusercontent.com/SeeedDocument/3D-Gesture-Tracking-Shield-for-Raspberry-Pi-MGC3130/master/img/MF1.jpg)
+![](https://files.seeedstudio.com/wiki/3D-Gesture-Tracking-Shield-for-Raspberry-Pi-MGC3130/img/MF1.jpg)
 <div align="center"><b>Figure 2.</b><i>Magnetic field without hand</i></div>
 
-![](https://raw.githubusercontent.com/SeeedDocument/3D-Gesture-Tracking-Shield-for-Raspberry-Pi-MGC3130/master/img/MF2.jpg)
+![](https://files.seeedstudio.com/wiki/3D-Gesture-Tracking-Shield-for-Raspberry-Pi-MGC3130/img/MF2.jpg)
 <div align="center"><b>Figure 3.</b><i>Magnetic field with a hand</i></div>
 
 This hat communicates with Raspberry Pi via the I2C interface, also we have reserved a Grove I2C connector in case you need to work with other modules. 
@@ -76,7 +76,7 @@ What an amazing module, with the help it, you can use gestures to control lights
 
 ### Pin Out
 
-![](https://raw.githubusercontent.com/SeeedDocument/3D-Gesture-Tracking-Shield-for-Raspberry-Pi-MGC3130/master/img/hardware-overview.png)
+![](https://files.seeedstudio.com/wiki/3D-Gesture-Tracking-Shield-for-Raspberry-Pi-MGC3130/img/hardware-overview.png)
 
 
 ## Play with Raspberry Pi

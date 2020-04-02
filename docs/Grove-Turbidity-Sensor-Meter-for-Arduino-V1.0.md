@@ -8,7 +8,7 @@ tags:
 ---
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Turbidity-Sensor/master/img/Grove-Turbidity-Sensor-wiki.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Turbidity-Sensor/img/Grove-Turbidity-Sensor-wiki.jpg)
 
 
 The Grove turbidity sensor can measure the turbidity of the water (the number of suspended particles).
@@ -102,7 +102,7 @@ The output mode can be selected by adjusting the switch on the board. Supports a
 
 | Seeeduino V4.2 | Grove - Turbidity Sensor | Base Shield |
 |--------------|----------------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove-Turbidity-Sensor/master/img/Grove-Turbidity-Sensor.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Turbidity-Sensor/img/Grove-Turbidity-Sensor.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Grove-Turbidity-Sensor-p-4399.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
 
 
@@ -129,7 +129,7 @@ The output mode can be selected by adjusting the switch on the board. Supports a
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Turbidity-Sensor/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Turbidity-Sensor/img/connect.jpg)
 
 
 !!!Note   
@@ -174,13 +174,13 @@ void loop() {
 - **Step 2.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor** or tap the **Ctrl+Shift+M** key at the same time. Set the baud rate to **9600**.
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Turbidity-Sensor/master/img/result.png)
+![](https://files.seeedstudio.com/wiki/Grove-Turbidity-Sensor/img/result.png)
 
 
 - **Step 3.**  Now you can use this sensor, and the output will be like this:
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Turbidity-Sensor/master/img/serial-port.png)
+![](https://files.seeedstudio.com/wiki/Grove-Turbidity-Sensor/img/serial-port.png)
 
 
 #### Digital Output

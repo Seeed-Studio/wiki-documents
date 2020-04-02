@@ -110,7 +110,7 @@ void loop() {
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
-![cc](https://raw.githubusercontent.com/SeeedDocument/Grove-Red_LED/master/img/cc_LED.png)
+![cc](https://files.seeedstudio.com/wiki/Grove-Red_LED/img/cc_LED.png)
 
 Upload the program to your Arduino/Seeeduino.
 
@@ -297,7 +297,7 @@ LED OFF!
 ##  Resources
 
 * **[PDF]** [Grove-Red LED Schematic](https://files.seeedstudio.com/wiki/Grove-Red_LED/res/Grove-LED_v1.3.pdf)
-* **[Codecraft]** [CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove-Red_LED/master/res/Grove_Red_LED_CDC_File.zip)
+* **[Codecraft]** [CDC File](https://files.seeedstudio.com/wiki/Grove-Red_LED/res/Grove_Red_LED_CDC_File.zip)
 
 ## Projects
 

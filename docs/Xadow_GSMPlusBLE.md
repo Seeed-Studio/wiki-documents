@@ -8,7 +8,7 @@ surveyurl: https://www.surveymonkey.com/r/Xadow_GSM_BLE
 sku: 102040005
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Xadow_GSM-BLE/master/image/Xadow_GSM%2BBLE_shangjiatu.JPG)
+![](https://files.seeedstudio.com/wiki/Xadow_GSM-BLE/image/Xadow_GSM%2BBLE_shangjiatu.JPG)
 
 Whether making and receiving telephone calls over a radio link using external speakers and microphone or exchanging data in short distances with Bluetooth, you can do it with Xadow GSM+BLE.
 
@@ -46,12 +46,12 @@ As the heart of RePhone kit Create, the Xadow GSM+BLE is built around the powerf
 |Dimensions       	|25.37mm × 20.30mm / 1” × 0.8”                                                           |  
 
 ##Hardware Overview  
-![](https://raw.githubusercontent.com/SeeedDocument/Xadow_GSM-BLE/master/image/Xadow_GSM%2BBLE_Overview.png) 
+![](https://files.seeedstudio.com/wiki/Xadow_GSM-BLE/image/Xadow_GSM%2BBLE_Overview.png) 
 
  
 The image below illustrates the Pin Definitions of 11 Pin Xadow Connector, Solder-able Breakout Pins and the 35 Pin Xadow Connector in a sequence from **Left to Right**.  
 
-![](https://raw.githubusercontent.com/SeeedDocument/Xadow_GSM-BLE/master/image/Xadow-connector-Pin-definitions-06.jpg)  
+![](https://files.seeedstudio.com/wiki/Xadow_GSM-BLE/image/Xadow-connector-Pin-definitions-06.jpg)  
 
 ##Power Up  
 Power up the RePhone/Xadow GSM+BLE with a battery of **3,5V ~ 4,2V** and **JST 1.0 male connector**, or power it up through the breakout **PIN 3(VCC)** and breakout **PIN 6(GND)** as illustrated in the Hardwareview above.  
@@ -61,11 +61,11 @@ Xadow GSM+BLE uses the [JST 1.0 female connector](http://www.seeedstudio.com/dep
 
 ##Operating Mode  
 The Xadow GSM+BLE has two operating mode when you power it up and connect it with PC - **press and hold to power key for 2 seconds** to turn the module **ON** or **OFF** to access the **Mass Storage Mode** or **Flash/Debug Mode.**  
-![](https://raw.githubusercontent.com/SeeedDocument/Xadow_GSM-BLE/master/image/Operating_mode.png)  
+![](https://files.seeedstudio.com/wiki/Xadow_GSM-BLE/image/Operating_mode.png)  
 
 ##Mass Storage Mode  
 When the Xadow GSM+BLE is **OFF**, connect the board (with battery connected) to PC via Micro USB cable, you can access the 5MB ‘Mass Storage Mode’ on PC. All the applications (vxp files) and system settings are stored in this 5MB disk.  
-![](https://raw.githubusercontent.com/SeeedDocument/Xadow_GSM-BLE/master/image/Mass_Storage_Mode.png)  
+![](https://files.seeedstudio.com/wiki/Xadow_GSM-BLE/image/Mass_Storage_Mode.png)  
 
 ##Flash/Debug Mode  
 When the Xadow GSM+BLE is **ON**, connect the board (with battery connected) to PC via Micro USB cable, you can find two **COM ports** on your **‘Device Manager’**： 
@@ -76,17 +76,17 @@ When the Xadow GSM+BLE is **ON**, connect the board (with battery connected) to 
 The COM number might be different on your PC. Each COM port has different function according to the development environment you use, please refer to the Getting Started section for more details.  
 
 Open **Device Manager** by clicking the **Start** button, clicking **Control Panel**, clicking **System and Security**, and then, under **System**, clicking **Device Manager**. If you're prompted for an administrator password or confirmation, type the password or provide confirmation. See the following image:  
-![](https://raw.githubusercontent.com/SeeedDocument/Xadow_GSM-BLE/master/image/Check_ports.png)  
+![](https://files.seeedstudio.com/wiki/Xadow_GSM-BLE/image/Check_ports.png)  
 
 
 ##Getting Started  
 We have developed rich libraries hooking into Arduino IDE, Lua and JavaScript, with detailed example sketches to help entry-level programmers develop with RePhone modules easily and quickly.
 
 We also provide a powerful SDK based on Eclipse IDE for C/C++ developers to work with more intelligent applications.  
-[![](https://raw.githubusercontent.com/SeeedDocument/Xadow_GSM-BLE/master/image/Arduino_IDE-17.png)  ](/RePhone/)
-[![](https://raw.githubusercontent.com/SeeedDocument/Xadow_GSM-BLE/master/image/Eclipse_IDE-13.png) ](http://www.seeedstudio.com/wiki/Eclipse_IDE_for_RePhone_Kit)   
-[![](https://raw.githubusercontent.com/SeeedDocument/Xadow_GSM-BLE/master/image/Lua-14.png)](http://www.seeedstudio.com/wiki/Lua_for_RePhone#Use_Lua_Shellt)  
-[![](https://raw.githubusercontent.com/SeeedDocument/Xadow_GSM-BLE/master/image/JS-15.png) ](http://www.seeedstudio.com/wiki/JavaScript_for_RePhone) 
+[![](https://files.seeedstudio.com/wiki/Xadow_GSM-BLE/image/Arduino_IDE-17.png)  ](/RePhone/)
+[![](https://files.seeedstudio.com/wiki/Xadow_GSM-BLE/image/Eclipse_IDE-13.png) ](http://www.seeedstudio.com/wiki/Eclipse_IDE_for_RePhone_Kit)   
+[![](https://files.seeedstudio.com/wiki/Xadow_GSM-BLE/image/Lua-14.png)](http://www.seeedstudio.com/wiki/Lua_for_RePhone#Use_Lua_Shellt)  
+[![](https://files.seeedstudio.com/wiki/Xadow_GSM-BLE/image/JS-15.png) ](http://www.seeedstudio.com/wiki/JavaScript_for_RePhone) 
 
 For more info you can refer to the RePhone Development Environment at RePhone Main Page:  
 
@@ -96,10 +96,10 @@ RePhone Development Environment](http://wiki.seeedstudio.com/RePhone/#developmen
 Check on awesome RePhone projects that has been achieved with RePhone.  
 **A Traceable Dog Collar**  
 5 steps to make a traceable dog collar for your lovely puppy.   
-[![](https://raw.githubusercontent.com/SeeedDocument/Xadow_GSM-BLE/master/image/450px-Dog_Collar.png.jpeg)  ](http://www.seeedstudio.com/recipe/424-rephone-traceable-dog-collar.html)
+[![](https://files.seeedstudio.com/wiki/Xadow_GSM-BLE/image/450px-Dog_Collar.png.jpeg)  ](http://www.seeedstudio.com/recipe/424-rephone-traceable-dog-collar.html)
 
 ##RePhone Community  
-[![](https://raw.githubusercontent.com/SeeedDocument/Xadow_GSM-BLE/master/image/300px-RePhone_Community-2.png) ](http://www.forum.seeedstudio.com/viewforum.php?f=71&sid=b70f8138c89becf7701260bb41faf9f4)   
+[![](https://files.seeedstudio.com/wiki/Xadow_GSM-BLE/image/300px-RePhone_Community-2.png) ](http://www.forum.seeedstudio.com/viewforum.php?f=71&sid=b70f8138c89becf7701260bb41faf9f4)   
 We’ve been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the RePhone Community.
 
 Now join us in the [RePhone Community](https://community.seeedstudio.com/discover.html?t=rephone)! Together we seek answers, make interesting stuff, care about each other, and share our experiences.

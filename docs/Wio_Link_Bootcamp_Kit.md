@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/Wio_Link_Bootcamp_Kit
 sku: 110020050
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Wio_Link_Bootcamp_Kit/master/img/Wio_Link_Bootcamp_Kit_product_view_1200_s.jpg)
+![](https://files.seeedstudio.com/wiki/Wio_Link_Bootcamp_Kit/img/Wio_Link_Bootcamp_Kit_product_view_1200_s.jpg)
 
 If you have no programming skills, and you want to build some cool gadgets for your life, this kit will be a perfect starter. It contains a relay, a recorder, a strip of LEDs, a buzzer and a servo motor which will perform basic actions required in daily life. The most amazing part of this kit is the Wio Link development board which can be utilized for various devices: without a bit programming skill required. All the actions you want your modules performed and the flashing code operation to Wio Link could be completed with taps in a mobile app. And you can send instructions to your devices over Internet at anywhere. So Wio Link will be a perfect utility to making things around smarter for everyone. Now let's get started to build some useful stuff.
 

@@ -10,7 +10,7 @@ sku: 101020042
 tags: grove_analog, io_3v3, io_5v, plat_duino，plat_pi
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-80cm_Infrared_Proximity_Sensor/master/img/Image_of_PSD.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-80cm_Infrared_Proximity_Sensor/img/Image_of_PSD.jpg)
 
 The 80cm Infrared Proximity Sensor is a General Purpose Type Distance Measuring Sensor. This sensor SharpGP2Y0A21YK, boasts a small package and very low current consumption, takes a continuous distance reading and returns a corresponding analog voltage with a range of 10cm (4") to 80cm (30"). Can be used in TVs, personal computers, cars and so on.
 
@@ -122,7 +122,7 @@ This sensor is quite small and use a tiny connector called the Japan Solderless 
 
 -   Connect Arduino/Seeeduino via a USB cable.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-80cm_Infrared_Proximity_Sensor/master/img/80cm_Infrared.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-80cm_Infrared_Proximity_Sensor/img/80cm_Infrared.jpg)
 
 -   Copy and paste code below to a new Arduino sketch.
 
@@ -172,7 +172,7 @@ This sensor is quite small and use a tiny connector called the Japan Solderless 
 -   Upload the code.
 -   Open the Serial Monitor, you can get the voltage. you can calculate or find the distance to the reflective object according to the below figures.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-80cm_Infrared_Proximity_Sensor/master/img/Infrared_Proximity.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-80cm_Infrared_Proximity_Sensor/img/Infrared_Proximity.jpg)
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -233,7 +233,7 @@ Reference
 
 This new rangers use triangulation and a small linear CCD array to compute the distance and/or presence of objects in the field of view. The basic idea is this: a pulse of IR light is emitted by the emitter. This light travels out in the field of view and either hits an object or just keeps on going. In the case of no object, the light is never reflected and the reading shows no object. If the light reflects off an object, it returns to the detector and creates a triangle between the point of reflection, the emitter, and the detector.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-80cm_Infrared_Proximity_Sensor/master/img/Theory_of_PSD.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-80cm_Infrared_Proximity_Sensor/img/Theory_of_PSD.jpg)
 
 The angles in this triangle vary based on the distance to the object. The receiver portion of these new detectors is actually a precision lens that transmits the reflected light onto various portions of the enclosed linear CCD array based on the angle of the triangle described above. The CCD array can then determine what angle the reflected light came back at and therefore, it can calculate the distance to the object.
 
@@ -243,7 +243,7 @@ This new method of ranging is almost immune to interference from ambient light a
 Resources
 ---------
 
-- [GP2Y0A21YK datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-80cm_Infrared_Proximity_Sensor/master/res/GP2Y0A21YK.pdf)
+- [GP2Y0A21YK datasheet](https://files.seeedstudio.com/wiki/Grove-80cm_Infrared_Proximity_Sensor/res/GP2Y0A21YK.pdf)
 
 
 ## Project

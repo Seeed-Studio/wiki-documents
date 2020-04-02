@@ -10,7 +10,7 @@ sku: 105020013
 tags: plat_duino, plat_pi, plat_bbg, plat_linkit
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-LED_Matrix_Driver_v1.0/master/img/Grove-LED_Matrix_Driver_v1.0_product_view_700_s.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver_v1.0/img/Grove-LED_Matrix_Driver_v1.0_product_view_700_s.jpg)
 
 Grove - LED Matrix Driver v1.0 is UART (Serial) to dot matrix LED driver that incorporates various graphics functions.It can only support 32×64 LED matrix. This product is a **Grove** compatible UART interface. It provides easy and rich APIs that abstract the complexity of the underlying LED driving hardware. All you need to is just call these APIs in code to implement different functionalities for your project.
 
@@ -66,7 +66,7 @@ Platforms Supported
 Hardware Overview
 -----------------
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-LED_Matrix_Driver_v1.0/master/img/Grove-LED_Matrix_Driver_v1.0_product_components_described_1200_s.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver_v1.0/img/Grove-LED_Matrix_Driver_v1.0_product_components_described_1200_s.jpg)
 
 -   **Grove socket**, to connect this product to main control board.
 -   **LED matrix port(DBSTAR\_HUB 08A )**, to connect LED matrix. If you can not find a connector like this, you can user jumper wires as an alternative.
@@ -100,9 +100,9 @@ Now let us run some basic examples with this module.
 
 Connect all parts as following:
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-LED_Matrix_Driver_v1.0/master/img/Grove-LED_Matrix_Driver_v1.0_wiki_demo_connections_front_3600.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver_v1.0/img/Grove-LED_Matrix_Driver_v1.0_wiki_demo_connections_front_3600.jpg)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-LED_Matrix_Driver_v1.0/master/img/Grove-LED_Matrix_Driver_v1.0_wiki_demo_connections_back_3600.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver_v1.0/img/Grove-LED_Matrix_Driver_v1.0_wiki_demo_connections_back_3600.jpg)
 
 #### Coding Work
 
@@ -115,20 +115,20 @@ You can find more demo sketch at <https://github.com/Seeed-Studio/Grove_LED_Matr
 
 2. Download and upload the code. If you do not know how to upload an Arduino sketch, please visit <https://www.arduino.cc/en/Guide/Windows> for Windows user or <https://www.arduino.cc/en/Guide/MacOSX> for Mac user. You can see the result as below.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-LED_Matrix_Driver_v1.0/master/img/Grove-LED_Matrix_Driver_v1.0_wiki_demo_result_view_s.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver_v1.0/img/Grove-LED_Matrix_Driver_v1.0_wiki_demo_result_view_s.jpg)
 
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-LED_Matrix_Driver_v1.0/master/res/Grove_LED_Matrix_Driver_v1.0_Schematics.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver_v1.0/res/Grove_LED_Matrix_Driver_v1.0_Schematics.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 Resources
 ---------
 
--   [Schematic file](https://raw.githubusercontent.com/SeeedDocument/Grove-LED_Matrix_Driver_v1.0/master/res/Grove_LED_Matrix_Driver_v1.0_Schematics.zip)
--   [STM32F103C8T6 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-LED_Matrix_Driver_v1.0/master/res/STM32F03C8T6.pdf)
+-   [Schematic file](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver_v1.0/res/Grove_LED_Matrix_Driver_v1.0_Schematics.zip)
+-   [STM32F103C8T6 Datasheet](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver_v1.0/res/STM32F03C8T6.pdf)
 -   [Library on Github](https://github.com/Seeed-Studio/Grove_LED_Matrix_Driver)
 -   [Firmware for this product](https://github.com/Seeed-Studio/Grove_LED_Matrix_Driver/tree/master/Firmware)
 

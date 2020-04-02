@@ -13,10 +13,10 @@ tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit, plat_wio
 <table>
     <tr>
         <td>
-            <img src="https://raw.githubusercontent.com/SeeedDocument/Grove-Multichannel_Gas_Sensor/master/img/Multi_sensor1.png">
+            <img src="https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Multi_sensor1.png">
         </td>
         <td>
-            <img src="https://raw.githubusercontent.com/SeeedDocument/Grove-Multichannel_Gas_Sensor/master/img/Multi_sensor2.png">
+            <img src="https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Multi_sensor2.png">
         </td>
     </tr>
 </table>
@@ -61,7 +61,7 @@ Hardware Overview
 -----------------
 
 <center>
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Multichannel_Gas_Sensor/master/img/Multi_sensor1.png)
+![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Multi_sensor1.png)
 </center>
 
 Four pins are pointed out from the figure above
@@ -95,7 +95,7 @@ Features
 Block Diagram
 -------------
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Multichannel_Gas_Sensor/master/img/Grove-Multichannel_Gas_Sensor_block_diagram.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_block_diagram.jpg)
 
 Platforms Supported
 -------------------
@@ -130,7 +130,7 @@ Electrical Characteristics
 | Typical CO detection range | FS     | -   | 1   | 1000 | ppm  |
 | Sensitivity factor         | SR     | -   | 1.2 | 50   | -    |
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Multichannel_Gas_Sensor/master/img/Red_sensor.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Red_sensor.jpg)
 
 ### Performance OX sensor
 
@@ -140,7 +140,7 @@ Electrical Characteristics
 | Typical NO2 detection range | FS     | -   | 0.05 | 10  | ppm  |
 | Sensitivity factor          | SR     | -   | 2    | -   | -    |
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Multichannel_Gas_Sensor/master/img/OX_sensor.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/OX_sensor.jpg)
 
 ### Performance NH3 sensor
 
@@ -150,7 +150,7 @@ Electrical Characteristics
 | Typical NH3 detection range | FS     | -   | 1   | 300  | ppm  |
 | Sensitivity factor          | SR     | -   | 1.5 | 15   | -    |
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Multichannel_Gas_Sensor/master/img/NH3_sensor.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/NH3_sensor.jpg)
 
 
 Getting Started
@@ -163,7 +163,7 @@ Getting Started
 
 1.Connect Grove - Multichannel Gas Sensor to Seeeduino.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Multichannel_Gas_Sensor/master/img/Grove-MultiChannelGasSensor.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-MultiChannelGasSensor.jpg)
 
 **Upload Code:**
 
@@ -248,7 +248,7 @@ void loop()
 
 By opening the serial monitor, you can see the raw data read from sensor.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Multichannel_Gas_Sensor/master/img/Mutichannel_Gas_Sensor_Grove_Print.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Mutichannel_Gas_Sensor_Grove_Print.jpg)
 
 !!!Tip
     More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
@@ -301,12 +301,12 @@ There's a ICSP pad on the back of the board, you need connect those pads to an A
 | MOSI   | D11     |
 | VCC    | 5V      |
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Multichannel_Gas_Sensor/master/img/firmware_connect.jpeg)
+![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/firmware_connect.jpeg)
 
 Then open the example **UpdateFrimware** to your Arduino, open Serial monitor and you will get some info printed.
 Input a 'g' to start.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Multichannel_Gas_Sensor/master/img/firmware_done.png)
+![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/firmware_done.png)
 
 
 calibration
@@ -321,17 +321,17 @@ Open the example **calibration** and upload to your Arduino, open Serial monitor
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-Multichannel_Gas_Sensor/master/res/Grove-Multichannel_Gas_Sensor_v1.0_eagle_files.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/res/Grove-Multichannel_Gas_Sensor_v1.0_eagle_files.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 Resources
 ---------
 
--   [Grove - Multichannel Gas Sensor v1.0 sch](https://raw.githubusercontent.com/SeeedDocument/Grove-Multichannel_Gas_Sensor/master/res/Grove-Multichannel_Gas_Sensor_v1.0_sch.pdf)
--   [Grove - Multichannel Gas Sensor eagle files](https://raw.githubusercontent.com/SeeedDocument/Grove-Multichannel_Gas_Sensor/master/res/Grove-Multichannel_Gas_Sensor_v1.0_eagle_files.zip)
+-   [Grove - Multichannel Gas Sensor v1.0 sch](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/res/Grove-Multichannel_Gas_Sensor_v1.0_sch.pdf)
+-   [Grove - Multichannel Gas Sensor eagle files](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/res/Grove-Multichannel_Gas_Sensor_v1.0_eagle_files.zip)
 -   [Arduino Library & Grove/Xadow firmware](https://github.com/Seeed-Studio/Mutichannel_Gas_Sensor)
--   [MiCS-6814 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Multichannel_Gas_Sensor/master/res/MiCS-6814_Datasheet.pdf)
+-   [MiCS-6814 Datasheet](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/res/MiCS-6814_Datasheet.pdf)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Multichannel_Gas_Sensor -->
 

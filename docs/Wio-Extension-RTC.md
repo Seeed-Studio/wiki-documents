@@ -37,7 +37,7 @@ This board is powered by Micro-USB port, communicate with the Wio LTE via I2C po
 
 <div align="center">
 <figure>
-  <p style=":center"><a href="https://raw.githubusercontent.com/SeeedDocument/Wio_Extension-RTC/master/img/pinout.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SeeedDocument/Wio_Extension-RTC/master/img/pinout.jpg" /></a></p> 
+  <p style=":center"><a href="https://files.seeedstudio.com/wiki/Wio_Extension-RTC/img/pinout.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wio_Extension-RTC/img/pinout.jpg" /></a></p> 
   </div>
 
 
@@ -146,14 +146,14 @@ Unzip the [sample sketch](https://github.com/Seeed-Studio/Wio_Extension_RTC/raw/
 1. Press and hold BOOT button at back side of the Wio LTE and plug the USB to PC.
 2. We will see STM BOOTLARDER in device manager.
 3. Select Tools→Boards→Wio_Tracker_LTE.
-![Alt text](https://raw.githubusercontent.com/SeeedDocument/Wio_Extension-RTC/master/img/Snipaste_2019-04-10_15-15-20.jpg)
+![Alt text](https://files.seeedstudio.com/wiki/Wio_Extension-RTC/img/Snipaste_2019-04-10_15-15-20.jpg)
 
 4. Select Sketch→Upload to upload the code to Wio_LTE.
 5. Press RST button to enable the COM port.
 **Tips**
 >When you download most Arduino bords, you need to choose a right COM port, but for this board, you must keep the COM configuration to be blank. 
 
->![Alt text](https://raw.githubusercontent.com/SeeedDocument/Wio_Extension-RTC/master/img/port.jpg)
+>![Alt text](https://files.seeedstudio.com/wiki/Wio_Extension-RTC/img/port.jpg)
 
 6. Use Serial monitor to print the serial message. 
 

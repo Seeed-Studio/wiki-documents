@@ -142,7 +142,7 @@ Moisture = 221
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
-![cc](https://raw.githubusercontent.com/SeeedDocument/Grove_Moisture_Sensor/master/img/cc_Moisture_Sensor.png)
+![cc](https://files.seeedstudio.com/wiki/Grove_Moisture_Sensor/img/cc_Moisture_Sensor.png)
 
 Upload the program to your Arduino/Seeeduino.
 
@@ -477,7 +477,7 @@ A1: The output is voltage values. When using analogRead(), 5V will be divided by
 ## Resources
 
 - [**Eagle&PDF**][Grove - Moisture Sensor v1.4 Schematic](https://files.seeedstudio.com/wiki/Grove_Moisture_Sensor/resources/Grove%20-%20Moisture%20Sensor%20v1.4.zip)
-- [**Codecraft**][CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove_Moisture_Sensor/master/res/Grove_Moisture_Sensor_CDC_File.zip)
+- [**Codecraft**][CDC File](https://files.seeedstudio.com/wiki/Grove_Moisture_Sensor/res/Grove_Moisture_Sensor_CDC_File.zip)
 
 
 ## Projects

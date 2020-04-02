@@ -111,7 +111,7 @@ Compared with Seeeduino Lotus V1.1, the Seeeduino Lotus Cortex-M0+ mainly upgrad
 
 <div align="center">
 <figure>
-  <p style=":center"><a href="https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Lotus_Cortex-M0-/master/img/Pin_out.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/img/Pin_out.jpg" /></a></p>
+  <p style=":center"><a href="https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/img/Pin_out.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/img/Pin_out.jpg" /></a></p>
   <figcaption><b>Figure 2</b>. <i>Pinout, you can ckick the image to view the original file</i></figcaption>
 </figure>
 </div>
@@ -231,7 +231,7 @@ Connect the Arduino board to your computer using the USB cable. The green power 
 
 - **Step 1. You need to Install an Arduino Software.**
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Stalker_V3_1/master/images/Download_IDE.png)](https://www.arduino.cc/en/Main/Software)
+[![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/Download_IDE.png)](https://www.arduino.cc/en/Main/Software)
 
 
 **Launch the Arduino application**
@@ -248,7 +248,7 @@ Open the LED blink example sketch: **File > Examples >01.Basics > Blink**.
 
 <div align="center">
 <figure>
-  <img src="https://raw.githubusercontent.com/SeeedDocument/Seeeduino_GPRS/master/img/select_blink.png"/>
+  <img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/select_blink.png"/>
   <figcaption><b>Figure 9</b>. <i>Blink Path</i></figcaption>
 </figure>
 </div>
@@ -296,7 +296,7 @@ Now, simply click the "Upload" button in the environment. Wait a few seconds and
 
 <div align="center">
 <figure>
-  <img src="https://raw.githubusercontent.com/SeeedDocument/Seeeduino_GPRS/master/img/upload_image.png"/>
+  <img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/upload_image.png"/>
   <figcaption><b>Figure 13</b>. <i>Upload the code</i></figcaption>
 </figure>
 </div>

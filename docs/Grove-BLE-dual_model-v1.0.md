@@ -10,7 +10,7 @@ sku: 113020009
 tags: grove_uart, io_3v3, io_5v, plat_duino, plat_linkit
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-BLE-dual_model-v1.0/master/img/Grove-BLE-dual_model-v1.0.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/img/Grove-BLE-dual_model-v1.0.jpg)
 
 Grove - BLE (dual model) v1.0 uses CSR dual mode Bluetooth chip. The chip is based on ARM architecture and supports AT instructions. Users can develop flexibly according to the serial baud rate, equipment name, pairing password.
 
@@ -53,7 +53,7 @@ Platforms Supported
 Hardware Overview
 -------------
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-BLE-dual_model-v1.0/master/img/Grove-BLE-dual_model-v1.0_PhotoTop.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/img/Grove-BLE-dual_model-v1.0_PhotoTop.jpg)
 
 **K2**: During connected status, it could be disconnected by pressing K2 button more than 100ms. During sleep mode, it could be restored through pressing K2 (factory settings) button.
 
@@ -74,13 +74,13 @@ Hardware Installation
 ### Connecting Bluetooth to PC through UART Bee
 
 The Bluetooth provides a serial port with standard Grove socket, most USB-UART converter can be used. Here we use a [UartSBee V5](/UartSBee_v5) to connect Bluetooth and PC.
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-BLE-dual_model-v1.0/master/img/Grove-BLE-dual_model-v1.0_ConnectToPC.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/img/Grove-BLE-dual_model-v1.0_ConnectToPC.jpg)
 
 ### Connecting Bluetooth to Arduino
 
 Since Arduino Uno have no Grove socket, we use [Seeeduino Lotus](/Seeeduino_Lotus) instead. You could use Arduino with **Grove Base Shield V2** as well.
 As an example, D2 and D3 are used as software UART. So, plug the Grove cable into "D2" socket
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-BLE-dual_model-v1.0/master/img/Grove-BLE-dual_model-v1.0_ConnectToArduino.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/img/Grove-BLE-dual_model-v1.0_ConnectToArduino.jpg)
 
 Software Instructions
 --------------------
@@ -1072,7 +1072,7 @@ This section shows how to configure Bluetooth with PC, some basic methods of set
 
 Open a serial terminal and set Baud Rate:115200, Databits: 8, Stopbits: 1 and No Flow Control. Send “AT” to Bluetooth with the serial terminal and “OK” will be return if all goes well. The Bluetooth only respond AT commands when no connection was set up, or all commands were seen as string and sent out. You can distinguish the status through LED indicates.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-BLE-dual_model-v1.0/master/img/HM-13-AT.png)
+![](https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/img/HM-13-AT.png)
 
 Then some useful configurations could be sent. Here are some samples of commands and responses.
 
@@ -1120,15 +1120,15 @@ This kind of Bluetooth module has two protocol: Bluetooth EDR(Enhanced Data Rate
 
 Power the Bluetooth and configure it as Peripheral role. Search LightBlue in Apple Store and install it. Launch the app, you may find “HM-13-BLE” which we just renamed. Touch it to connect, then touch “Properties” to control it. The key “Hex” on the top right is for change data format, maybe String is easy to see. Hit “Listen for notifications” to enable data receiving. Then we can send data to PC through BLE, hit “Write new value” and write some words. Also PC can transfer data to iPhone with serial terminal.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-BLE-dual_model-v1.0/master/img/HM-13-IMG_0108.PNG)
+![](https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/img/HM-13-IMG_0108.PNG)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-BLE-dual_model-v1.0/master/img/HM-13-IMG_0109.PNG)
+![](https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/img/HM-13-IMG_0109.PNG)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-BLE-dual_model-v1.0/master/img/HM-13-IMG_0111.PNG)
+![](https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/img/HM-13-IMG_0111.PNG)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-BLE-dual_model-v1.0/master/img/HM-13-IMG_0114.PNG) 
+![](https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/img/HM-13-IMG_0114.PNG) 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-BLE-dual_model-v1.0/master/img/HM-13-DialogWithIOS.png)
+![](https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/img/HM-13-DialogWithIOS.png)
 
 ### Data transmission between Two Arduinos
 
@@ -1138,7 +1138,7 @@ The program of Central and Peripheral use the same code, the only difference is 
 
 The initialisation program flow please refer to the following flow chart. First of all we need to distinguish the presetting baud rate of the Bluetooth. After this, send commands to restore factory settings, and change baud rate from 115200 to 9600 since software serial will not working well at high baud rate. Then other parameters were configured to the Bluetooth with Reset command in the final.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-BLE-dual_model-v1.0/master/img/HM-13-Init-flowchat.png)
+![](https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/img/HM-13-Init-flowchat.png)
 
 After the initialisation, the Central and Peripheral will do different things, the Central will send message to Peripheral interval and print what received from Peripheral while the Peripheral only responds the Central.
 
@@ -1147,24 +1147,24 @@ Click [here](https://github.com/Seeed-Studio/HM-13_SW) to download the test code
 After downloading program, open two serial terminal windows, the LEDs on Bluetooth will flash, several seconds later, they stop to flash and keep on, this indicates that they connected to each other. 
 According to the program is written, the Central sends message to the Peripheral continually and get feedback every time.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-BLE-dual_model-v1.0/master/img/HM-13-Debug_Output_Master.png)
+![](https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/img/HM-13-Debug_Output_Master.png)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-BLE-dual_model-v1.0/master/img/HM-13-Debug_Output_Slave.png)
+![](https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/img/HM-13-Debug_Output_Slave.png)
 
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-BLE-dual_model-v1.0/master/res/Eagle_Grove-BLE-dual_model-v1.0_sch_pcb.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/res/Eagle_Grove-BLE-dual_model-v1.0_sch_pcb.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 Resources
 ---------
 
--   [HM-13 Bluetooth Module Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-BLE-dual_model-v1.0/master/res/Bluetooth_HM-13_en.pdf)
+-   [HM-13 Bluetooth Module Datasheet](https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/res/Bluetooth_HM-13_en.pdf)
 -   [Arduino code](https://github.com/Seeed-Studio/HM-13_SW)
--   [EAGLE\_Grove-BLE\_(dual\_model)\_v1.0\_sch\_pcb](https://raw.githubusercontent.com/SeeedDocument/Grove-BLE-dual_model-v1.0/master/res/Eagle_Grove-BLE-dual_model-v1.0_sch_pcb.zip)
--   [PDF\_Grove-BLE\_(dual\_model)\_v1.0\_sch](https://raw.githubusercontent.com/SeeedDocument/Grove-BLE-dual_model-v1.0/master/res/Grove-BLE-dual_model-v1.0.pdf)
+-   [EAGLE\_Grove-BLE\_(dual\_model)\_v1.0\_sch\_pcb](https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/res/Eagle_Grove-BLE-dual_model-v1.0_sch_pcb.zip)
+-   [PDF\_Grove-BLE\_(dual\_model)\_v1.0\_sch](https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/res/Grove-BLE-dual_model-v1.0.pdf)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_BLE_(dual_model)_v1.0 -->
 

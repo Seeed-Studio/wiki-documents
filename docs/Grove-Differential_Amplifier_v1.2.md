@@ -10,7 +10,7 @@ sku: 103020016
 tags: grove_digital, io_3v3, io_5v, plat_duino, plat_linkit
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Differential_Amplifier_v1.2/master/img/Grove-Differential_Amplifier_v1.2.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Differential_Amplifier_v1.2/img/Grove-Differential_Amplifier_v1.2.jpg)
 
 This Grove is designed for precise differential-input amplification. Input the differential signals of your sensor to this module through the male pins, then your Arduino will get a precisely amplified output from the Grove interface. The gain scale factor is selectable. You can get a 35 times or 1085 times amplification via a switch on the board. 
 
@@ -165,13 +165,13 @@ The amplifier can turn signals in mA scale up to A scale. Before using it, make 
 
 To pair the weight sensor up with the male pins on the amplifier, female connectors need to be soldered on its wires.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Differential_Amplifier_v1.2/master/img/Solder.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Differential_Amplifier_v1.2/img/Solder.jpg)
 
 **3. Hardware Hookup**
 
 Connect the weight sensor to the amplifier as the picture depicts below.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Differential_Amplifier_v1.2/master/img/Connect5.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Differential_Amplifier_v1.2/img/Connect5.jpg)
 
 **4. Measurement**
 
@@ -209,16 +209,16 @@ You can view the amplified signals via serial monitor. For the value of the inpu
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-Differential_Amplifier_v1.2/master/res/Grove-Differential_Amplifier_v1.2_eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Differential_Amplifier_v1.2/res/Grove-Differential_Amplifier_v1.2_eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 Resources
 --------
 
-- [v1.2 Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-Differential_Amplifier_v1.2/master/res/Grove-Differential_Amplifier_v1.2_eagle.zip)
-- [v1.2 Schematic](https://raw.githubusercontent.com/SeeedDocument/Grove-Differential_Amplifier_v1.2/master/res/Grove-Differential_Amplifier_v1.2.pdf)
-- [INA132 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Differential_Amplifier_v1.2/master/res/Ina132.pdf)
+- [v1.2 Eagle File](https://files.seeedstudio.com/wiki/Grove-Differential_Amplifier_v1.2/res/Grove-Differential_Amplifier_v1.2_eagle.zip)
+- [v1.2 Schematic](https://files.seeedstudio.com/wiki/Grove-Differential_Amplifier_v1.2/res/Grove-Differential_Amplifier_v1.2.pdf)
+- [INA132 Datasheet](https://files.seeedstudio.com/wiki/Grove-Differential_Amplifier_v1.2/res/Ina132.pdf)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Differential_Amplifier_v1.2 -->
 

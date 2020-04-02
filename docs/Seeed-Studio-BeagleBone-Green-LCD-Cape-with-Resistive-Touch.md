@@ -138,7 +138,7 @@ For display devices using beaglebone HDMI, uncomment `disable_uboot_overlay_vide
 
 4. Reboot system. LED is blinking and you will see this window
 
-![](https://raw.githubusercontent.com/SeeedDocument/BeagleBone_Green_HDMI_Cape/master/img/Bbb_vnc.jpg)
+![](https://files.seeedstudio.com/wiki/BeagleBone_Green_HDMI_Cape/img/Bbb_vnc.jpg)
 
 ## Resources
 ---------

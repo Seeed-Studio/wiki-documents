@@ -49,7 +49,7 @@ Typical applications: Enhancement of GPS navigation, outdoor/indoor navigation, 
 | Temperature sensor measurement range          | -40 - 85 ℃, with ±1.0°C accuracy                                                                  |
 | Humidity sensor measurements range            | 0% - 100% relative humidity , with ±3% accuracy                                                   |
 | Measurement modes                             | Piezo & Temperature, forced or periodic                                                           |
-| Chip                                          | BME280([datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer_Sensor-BME280/master/res/Grove-Barometer_Sensor-BME280-.pdf)) |
+| Chip                                          | BME280([datasheet](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BME280/res/Grove-Barometer_Sensor-BME280-.pdf)) |
 | Interface Bus                                 | SPI, I<sup>2</sup>C (use either one of them)                                                      |
 | Weight                                        | 3.2 g (for breakout board), 9.3 g for whole package each piece                                    |
 | Dimensions                                    | 40 (length) × 20 (width) mm    | 
@@ -75,7 +75,7 @@ Typical applications: Enhancement of GPS navigation, outdoor/indoor navigation, 
 ## Hardware Overview
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer_Sensor-BME280/master/img/Grove-Barometer_Sensor-BME280-Components_1200_s.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BME280/img/Grove-Barometer_Sensor-BME280-Components_1200_s.jpg)
 
 -   **SPI soldering pads**, a voltage monitoring circuit.
 -   **Interface bus selection pads** , to select I<sup>2</sup>C bus, connect the two pads by soldering (it is connected by default); to select SPI bus, cut the two pads with a sharp knife or a soldering iron.
@@ -224,15 +224,15 @@ void loop()
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer_Sensor-BME280/master/res/Grove-Barometer_Sensor-BME280-v1.0_Schematics.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BME280/res/Grove-Barometer_Sensor-BME280-v1.0_Schematics.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ## Resources
 
 
--  **[Eagle]** [Grove-Barometer_Sensor-BME280-v1.0_Schematics](https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer_Sensor-BME280/master/res/Grove-Barometer_Sensor-BME280-v1.0_Schematics.zip)
--  **[Datasheet]** [BME280 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer_Sensor-BME280/master/res/Grove-Barometer_Sensor-BME280-.pdf)
+-  **[Eagle]** [Grove-Barometer_Sensor-BME280-v1.0_Schematics](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BME280/res/Grove-Barometer_Sensor-BME280-v1.0_Schematics.zip)
+-  **[Datasheet]** [BME280 Datasheet](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BME280/res/Grove-Barometer_Sensor-BME280-.pdf)
 -  **[Library]** [Grove_BME280 Library](https://github.com/Seeed-Studio/Grove_BME280) on GitHub
 -  **[Reference]** [I<sup>2</sup>C how-to for Arduino](https://www.arduino.cc/en/Reference/Wire)
 

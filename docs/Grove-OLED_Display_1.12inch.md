@@ -9,7 +9,7 @@ sku: 101020452
 tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_bbg, plat_pi, plat_wio, plat_linkit
 ---
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_OLED_1.12/master/images/main.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/images/main.jpg)
 
 Our new 1.12” OLED displays are perfect when you need a small display with 16 grayscale. The visible portion of the OLED measures 1.12” diagonal and contains 96x96(version 1.0) |  128x128(version 2.0) grayscale pixels. Because the display uses OLEDs, there is no backlight, and the contrast is very high.
 
@@ -71,7 +71,7 @@ Here we will show you how this Grove - OLED Display works via a simple demo. Fir
 
 | Seeeduino V4 | Grove - OLED Display 1.12`` | Base Shield |
 |--------------|----------------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_OLED_1.12/master/images/product.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/images/product.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-OLED-Display-1.12%27%27-V2-p-3031.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
 
 This is an easy-to-use module, what you need to do is connect the module to I2C port of a Base Shield. There're 4 pins, defined as below.
@@ -91,7 +91,7 @@ This is an easy-to-use module, what you need to do is connect the module to I2C 
 
 - Please follow [how to install an arduino library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install library.
 - We provide an Arduino Library for this Grove - OLED Display 1.12inch, click on the below button to download it.
-[![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_OLED_1.12/master/images/library.png)](https://github.com/Seeed-Studio/OLED_Display_96X96/archive/master.zip)
+[![enter image description here](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/images/library.png)](https://github.com/Seeed-Studio/OLED_Display_96X96/archive/master.zip)
 
 - Unzip the file and put to libraries folder of your Arduino IDE.
 There're many examples in this library, which is consist of
@@ -111,10 +111,10 @@ There're many examples in this library, which is consist of
 
 - Now let's try upload **OLED_Hello_World** to Seeeduino V4. Open your Arduino IDE, click on **File > Example > OLED_Display_96x96-master > OLED_Hello_World**
 
-  ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_OLED_1.12/master/images/example.png)
+  ![enter image description here](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/images/example.png)
 
 - When the code is open, select the right board and right COM Port, then click on Upload button which will take few seconds.
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_OLED_1.12/master/images/arduino.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/images/arduino.png)
 
 - If the code is uploaded correctly, you will see the hello world on the OLELD.
   ![enter image description here](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/images/hello_world.png)

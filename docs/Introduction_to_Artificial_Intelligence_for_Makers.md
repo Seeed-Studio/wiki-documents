@@ -31,7 +31,7 @@ According to Wikipedia:
 Some advertisements and ‘tutorals' will show you picture like the following one, which reminds you of neurons in our brains. But in fact,  neurons are just a graceful analogy. The term Neural Networks' in computer science is a totally mathematical problem. And if you do not comprehend the algorithm, this picture means **nothing.**
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Introduction_to_Artificial_Intelligence_for_Maker/master/1554974523222.png)
+![](https://files.seeedstudio.com/wiki/Introduction_to_Artificial_Intelligence_for_Maker/1554974523222.png)
 
 
 
@@ -51,21 +51,21 @@ Nvidia has built a lot of [Vision Demos](https://github.com/dusty-nv/jetson-infe
 ### Art
 
 **[Google Magenta](https://magenta.tensorflow.org/)** An open-source research project is exploring the role of machine learning as a tool in the creative process. This project group is known to the public because of AI-powered Doodle [Celebrating-Johann-Sebastian-Bach](https://www.google.com/doodles/celebrating-johann-sebastian-bach)
-![Alt text](https://raw.githubusercontent.com/SeeedDocument/Introduction_to_Artificial_Intelligence_for_Maker/master/1555056026898.png)
+![Alt text](https://files.seeedstudio.com/wiki/Introduction_to_Artificial_Intelligence_for_Maker/1555056026898.png)
 
 And here are some demo of the interaction:
 
 [Magic Sketchpad](https://magic-sketchpad.glitch.me/) Every time you start drawing a doodle, Sketch RNN tries to finish it and match the category you’ve selected.
 
-![Alt text](https://raw.githubusercontent.com/SeeedDocument/Introduction_to_Artificial_Intelligence_for_Maker/master/1555059163496.png)
+![Alt text](https://files.seeedstudio.com/wiki/Introduction_to_Artificial_Intelligence_for_Maker/1555059163496.png)
 
 [Piano Genie](http://piano-genie.glitch.me/) Have some fun pretending you’re a piano virtuoso using machine learning.
 
-![Alt text](https://raw.githubusercontent.com/SeeedDocument/Introduction_to_Artificial_Intelligence_for_Maker/master/1555059135929.png)
+![Alt text](https://files.seeedstudio.com/wiki/Introduction_to_Artificial_Intelligence_for_Maker/1555059135929.png)
 
 [Latent Loops](https://goo.gl/magenta/latent-loops) Sketch melodies on a matrix tuned to different scales, explore a palette of generated melodic loops, and sequence longer compositions using them. Built by Google’s Pie Shop using
 
-![Alt text](https://raw.githubusercontent.com/SeeedDocument/Introduction_to_Artificial_Intelligence_for_Maker/master/1555059104497.png)
+![Alt text](https://files.seeedstudio.com/wiki/Introduction_to_Artificial_Intelligence_for_Maker/1555059104497.png)
 
 
 
@@ -75,11 +75,11 @@ And here are some demo of the interaction:
 **Smart Parking** Parking a vehicle in dense traffic environments often leads to an excess time of driving in search of free space which leads to congestion and environmental pollution. Lack of guidance information to vacant parking spaces is one reason for inefficient parking behaviour. Smart parking sensors and technologies facilitate guidance of drivers to free parking spaces thereby improving parking efficiency. Currently, no such sensors or technologies are in use for the open parking lot. So there is still something to be done.
 [Deep Learning for Decentralized Parking Lot Occupancy](https://github.com/fabiocarrara/deep-parking)
 
-![Alt text](https://raw.githubusercontent.com/SeeedDocument/Introduction_to_Artificial_Intelligence_for_Maker/master/1555055835602.png)
+![Alt text](https://files.seeedstudio.com/wiki/Introduction_to_Artificial_Intelligence_for_Maker/1555055835602.png)
 
 [**LSTMs for Human Activity Recognition**](https://github.com/guillaume-chevalier/LSTM-Human-Activity-Recognition)Human Activity recognition (HAR) is an important area of research in ubiquitous computing and Human-Computer Interaction. To recognize activities using mobile or wearable sensor, data are collected using appropriate sensors, segmented, needed features extracted and activities categories using discriminative models (SVM, HMM, MLP etc.). In this project, the developers used LSTM and outstandingly, the final accuracy is of 91% with the peak to values such as 93.25%.
 
-![Alt text](https://raw.githubusercontent.com/SeeedDocument/Introduction_to_Artificial_Intelligence_for_Maker/master/1555057001717.png)
+![Alt text](https://files.seeedstudio.com/wiki/Introduction_to_Artificial_Intelligence_for_Maker/1555057001717.png)
 
 ### Natural Language Processing(NLP)
 
@@ -95,7 +95,7 @@ Currently, substantial efforts are developed for the enrichment of medical imagi
 
 [**Deep Learning Toolkit (DLTK) for Medical Imaging**](https://github.com/DLTK/DLTK)
 DLTK is a neural networks toolkit written in python, on top of TensorFlow. It is developed to enable fast prototyping with a low entry threshold and ensure reproducibility in image analysis applications, with a particular focus on medical imaging. Its goal is to provide the community with state of the art methods and models and to accelerate research in this exciting field.
-![Alt text](https://raw.githubusercontent.com/SeeedDocument/Introduction_to_Artificial_Intelligence_for_Maker/master/1555056241911.png)
+![Alt text](https://files.seeedstudio.com/wiki/Introduction_to_Artificial_Intelligence_for_Maker/1555056241911.png)
 
 
 #### Others
@@ -107,28 +107,28 @@ AI is pervasive today, from consumer to enterprise applications. Developers bega
 
 [**NVIDIA Jetson Nano**](https://www.seeedstudio.com/NVIDIA-Jetson-Nano-Development-Kit-p-2916.html)
 >The NVIDIA® Jetson Nano™ Developer Kit delivers the compute performance to run modern AI workloads at an unprecedented size, power, and cost. Developers, learners, and makers can now run AI frameworks and models for applications like image classification, object detection, segmentation, and speech processing.
->![Alt text](https://raw.githubusercontent.com/SeeedDocument/Introduction_to_Artificial_Intelligence_for_Maker/master/1555050651109.png)
+>![Alt text](https://files.seeedstudio.com/wiki/Introduction_to_Artificial_Intelligence_for_Maker/1555050651109.png)
 
 
 [**Google Coral Dev Board**](https://www.seeedstudio.com/Coral-Dev-Board-p-2900.html)
 >The Coral Dev Board is a single-board computer with a removable system-on-module (SOM) that contains eMMC, SOC, wireless radios, and Google’s Edge TPU. It’s perfect for IoT devices and other embedded systems that demand fast on-device ML inferencing.
->![Alt text](https://raw.githubusercontent.com/SeeedDocument/Introduction_to_Artificial_Intelligence_for_Maker/master/1555050567750.png)
+>![Alt text](https://files.seeedstudio.com/wiki/Introduction_to_Artificial_Intelligence_for_Maker/1555050567750.png)
 
 
 [**Sipeed MAix Go Suit for RISC-V AI+IoT**](https://www.seeedstudio.com/Sipeed-MAix-GO-Suit-for-RISC-V-AI-IoT-p-2874.html)
 >MAIX is Sipeed’s purpose-built module designed to run AI at the edge, we called it AIoT. It delivers high performance in a small physical and power footprint, enabling the deployment of high-accuracy AI at the edge, and the competitive price makes it possible embed to any IoT devices. As you see, Sipeed MAIX is quite like Google edge TPU, but it acts as the master controller, not an accelerator like edge TPU, so it is more low cost and low power than AP+edge TPU solution.!
->![Alt text](https://raw.githubusercontent.com/SeeedDocument/Introduction_to_Artificial_Intelligence_for_Maker/master/1555051060453.png)
+>![Alt text](https://files.seeedstudio.com/wiki/Introduction_to_Artificial_Intelligence_for_Maker/1555051060453.png)
 
 
 [**Intel Movidius MA245X AI Kit Compatible w/ Intel Movidius Stick**](https://www.seeedstudio.com/Intel-Movidius-MA245X-AI-Kit-Compatible-w-Intel-Movidius-Stick-p-3146.html)
 >With Plug and AI in mind, Horned Sungem (HS) is dedicated to being the simplest and wieldiest AI device to allow all developers, students, AI hobbyist and enthusiasts to create their own AI applications with ease. Without any dependency on deep learning frameworks or complex libraries, your device will be ready to see and understand the world after you plug Horned Sungem into the USB port and run a short installation script.
->![Alt text](https://raw.githubusercontent.com/SeeedDocument/Introduction_to_Artificial_Intelligence_for_Maker/master/1555050985486.png)
+>![Alt text](https://files.seeedstudio.com/wiki/Introduction_to_Artificial_Intelligence_for_Maker/1555050985486.png)
 
 
 
 [**HiKey 970 Development Board**](https://www.seeedstudio.com/HiKey-970-Development-Board.html)
 >Hikey970 is Super Edge AI Computing Platform Powered by Kirin970 SOC with 4 x Cortex A73,4 x Cortex A53. Hikey970 has 6GB LPDDR4 RAM, 64GB UFS storage, Gigabit Ethernet, GPS,PCIE Gen2 and CAN on board. As the world’s first dedicated NPU AI platform, Hikey970 integrates Huawei HiAI computing architecture and popular neural network frameworks which supports CPU, GPU AI and Neural Processing Unit dedicated to AI acceleration. Also, It also comes with Huawei’s HiAI SDK. Hikey 970 can be used in the most application in build Deep Learning, Robots, Automobile and Smart City.
->![Alt text](https://raw.githubusercontent.com/SeeedDocument/Introduction_to_Artificial_Intelligence_for_Maker/master/1555051309338.png)
+>![Alt text](https://files.seeedstudio.com/wiki/Introduction_to_Artificial_Intelligence_for_Maker/1555051309338.png)
 
 ## 4. Recommended books, courses and video tutorials
 

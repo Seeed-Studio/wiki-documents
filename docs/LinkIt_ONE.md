@@ -8,7 +8,7 @@ surveyurl: https://www.surveymonkey.com/r/LinkIt_ONE
 sku: 102030002
 ---
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Linkit_ONE/master/image/500px-Linkit-one-page.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Linkit_ONE/image/500px-Linkit-one-page.jpg)
 
 
 The LinkIt ONE development platform is an open source, high performance board for prototyping Wearables and IoT devices. It is based on the world's leading SoC for Wearables, MediaTek Aster (**MT2502**) combined with high performance Wi-Fi (**MT5931**) and GPS (**MT3332**) chipsets to provide you with access to all the features of MediaTek LinkIt. It also provides similar pin-out features to Arduino boards, making it easy to connect various sensors, peripherals, and Arduino shields.
@@ -64,25 +64,25 @@ Here are some projects for your reference. More awesome project at Recipe and [I
 
 |Facebook Like Monitor|Texting Door Alarm|Smart Bed Alarm|
 |--------------------------|-------------|---------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Linkit_ONE/master/image/project1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Linkit_ONE/master/image/project2.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Linkit_ONE/master/image/project3.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Linkit_ONE/image/project1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Linkit_ONE/image/project2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Linkit_ONE/image/project3.jpg)|
 |[Make it NOW!](http://www.instructables.com/id/Facebook-Like-Monitor/)|[Make it NOW!](http://www.instructables.com/id/LinkIt-One-Texting-Door-Alarm/)|[Make it NOW!](http://www.instructables.com/id/Smart-Bed-Alarm-with-LinkIT-ONE/)|
 
 
 |AWS IoT Tutorial|Instructables Indicator|DIY an Acrylic Case|
 |--------------------------|-------------|---------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Linkit_ONE/master/image/project4.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Linkit_ONE/master/image/project5.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Linkit_ONE/master/image/project6.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Linkit_ONE/image/project4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Linkit_ONE/image/project5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Linkit_ONE/image/project6.jpg)|
 |[Make it NOW!](http://www.instructables.com/id/An-AWS-IoT-Tutorial-With-LinkIt-ONE/)|[Make it NOW!](http://www.instructables.com/id/Make-a-Instructables-Indicator/)|[Make it NOW!](http://www.instructables.com/id/5-Design-of-Laser-Cut-Cases-for-5-Popular-Platform/)|
 
 
 
 ## Hardware Overview
 -------------------
-![](https://raw.githubusercontent.com/SeeedDocument/Linkit-ONE/master/image/1000px-LinkItONE_RESOURCE.png)
+![](https://files.seeedstudio.com/wiki/Linkit-ONE/image/1000px-LinkItONE_RESOURCE.png)
 
 ### Configuration Switches
 There are 3 slide switches on LinkIt ONE which are used to configure the function/working mode :
 
-![](https://raw.githubusercontent.com/SeeedDocument/Linkit-ONE/master/image/300px-LinkIt_ONE_Wiki_Button.jpg)
+![](https://files.seeedstudio.com/wiki/Linkit-ONE/image/300px-LinkIt_ONE_Wiki_Button.jpg)
 
 |Switch No.|	Functionality|	Position 1 - Functionality|	Position 2 - Functionality|
 |:------|:-----------------|:-----------------|:-----------------|
@@ -127,7 +127,7 @@ There are 3 slide switches on LinkIt ONE which are used to configure the functio
 - Open Device Manager, the following COM ports will be displayed.
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Linkit-ONE/master/image/LinkIt_ONE_Wiki_Temp1.jpg)
+![](https://files.seeedstudio.com/wiki/Linkit-ONE/image/LinkIt_ONE_Wiki_Temp1.jpg)
 
 
 - Install driver from ..\LinkIt_ONE_IDE\drivers\mtk folder.
@@ -137,7 +137,7 @@ There are 3 slide switches on LinkIt ONE which are used to configure the functio
 
   **MTK USB Modem Port** used for printing message, such as Serial.println()
 
-![](https://raw.githubusercontent.com/SeeedDocument/Linkit-ONE/master/image/LinkIt_ONE_Wiki_Temp2.jpg)  
+![](https://files.seeedstudio.com/wiki/Linkit-ONE/image/LinkIt_ONE_Wiki_Temp2.jpg)  
 
 !!!Note
     There is no official Windows 10 driver yet. Windows 10 users can manually select the Windows 7 driver files from **\LinkIt_ONE_IDE\drivers\mtk** from **Device Manager**. This is known to work on few PCs.
@@ -147,20 +147,20 @@ The firmware of LinkIt ONE board needs to be updated once in a while. Latest Lin
 
 - Before starting the firmware update, make sure the slide switches are in proper position ( **MS/UART** should be in **MS** position. **USB/BAT** in **USB** position):
 
-![](https://raw.githubusercontent.com/SeeedDocument/Linkit-ONE/master/image/LinkItONEUpdateFirmware2.jpg)  
+![](https://files.seeedstudio.com/wiki/Linkit-ONE/image/LinkItONEUpdateFirmware2.jpg)  
 
 - Run FirmwareUpdater.exe application from ..**\LinkIt_ONE_IDE\hardware\tools\mtk** folder.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Linkit-ONE/master/image/400px-LinkItONEUpdateFirmware.jpg)  
+![](https://files.seeedstudio.com/wiki/Linkit-ONE/image/400px-LinkItONEUpdateFirmware.jpg)  
 
 - Click the button and then connect LinkIt ONE to PC. Wait for 1 minutes for the update to complete successfully.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Linkit-ONE/master/image/400px-LinkItONEUpdateFirmware_ok.jpg)  
+![](https://files.seeedstudio.com/wiki/Linkit-ONE/image/400px-LinkItONEUpdateFirmware_ok.jpg)  
 ### Uploading Code (Blinky)
 
 - The slide switches should be configured for firmware upload (i.e Put MS/UART in UART position and Power switch in USB position).
 
-![](https://raw.githubusercontent.com/SeeedDocument/Linkit-ONE/master/image/LinkIt_ONE_Wiki_Temp3.jpg)
+![](https://files.seeedstudio.com/wiki/Linkit-ONE/image/LinkIt_ONE_Wiki_Temp3.jpg)
 
 - Open **File** -> **Examples** -> **Basics** -> **Blink** in LinkIt ONE IDE.
 - Select the COM Port number corresponding to **MTK USB Debug port** in **Tools** -> **Port**.
@@ -182,7 +182,7 @@ There are three antennae provided with LinkIt ONE. They are used for:
 
 Connect the antenna as the following image.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Linkit-ONE/master/image/400px-Linkit_one_antenna.jpg)
+![](https://files.seeedstudio.com/wiki/Linkit-ONE/image/400px-Linkit_one_antenna.jpg)
 
 !!!Note
     - While pulling the antenna from board, do it with care. Please Do not use brute force.
@@ -192,7 +192,7 @@ Connect the antenna as the following image.
 
 LinkIt ONE accepts standard size SIM Card and Micro SD Card. Insert them as per the following image:
 
-![](https://raw.githubusercontent.com/SeeedDocument/Linkit-ONE/master/image/LinkItONE_SIM_SDCard_Insert.jpg)
+![](https://files.seeedstudio.com/wiki/Linkit-ONE/image/LinkItONE_SIM_SDCard_Insert.jpg)
 
 ### Exploring LinkIt ONE SDK Examples
 LinkIt ONE SDK comes with many examples / sample code to use peripherals like GSM, GPRS, WiFi, BT, Audio, GPS etc. Explore them first and read about API documentation. API documentation are available in [  User Guide ](http://labs.mediatek.com/fileMedia/download/5fed7907-b2ba-4000-bcb2-016a332a49fd) and [  API References site ](https://labs.mediatek.com/site/znch/developer_tools/mediatek_linkit/api_references/Core_Digital.gsp)
@@ -205,11 +205,11 @@ LinkIt ONE SDK comes with many examples / sample code to use peripherals like GS
 - But, LinkIt ONE does not support all of them.
 - We prepared a list of compatible Groves and Shields:
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Linkit-ONE/master/image/400px-Compatible_Groves_and_Shields_for_LinkIt_ONE.png)](https://files.seeedstudio.com/wiki/Linkit_ONE/resource/LinkIt_ONE_Comparability_Test.xlsx)
+[![](https://files.seeedstudio.com/wiki/Linkit-ONE/image/400px-Compatible_Groves_and_Shields_for_LinkIt_ONE.png)](https://files.seeedstudio.com/wiki/Linkit_ONE/resource/LinkIt_ONE_Comparability_Test.xlsx)
 
 ## Tutorial of Sidekick Basic Kit for LinkIt ONE
 
-![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Linkit_ONE/master/image/350px-LinkitONESidebox.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Linkit_ONE/image/350px-LinkitONESidebox.jpg)
 
 The Sidekick Basic Kit for LinkIt ONE is designed to be used with your LinkIt ONE board. This kit will help you quickly get along well with the platform of LinkIt. It includes many of the most popular accessories for DIY projects : like Breadboard, Jumper wires, Color LEDs, Resistors, Buzzer, etc. All these come in a handy box, which is easy to transport and mimimises clutter. The kit includes a complete guide that will familiarize you with a wide range of electronic components while you create small, simple, and easy-to-assemble circuits. There are 10 different courses outlined that will offer a best way for beginner to get familiar with LinkIt ONE.
 

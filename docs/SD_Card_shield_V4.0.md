@@ -9,7 +9,7 @@ surveyurl: https://www.research.net/r/SD_Card_shield_V4_0
 sku: 103030005
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/SD_Card_shield_V4.0/master/img/SD_Card_Shield-v4.jpg)
+![](https://files.seeedstudio.com/wiki/SD_Card_shield_V4.0/img/SD_Card_Shield-v4.jpg)
 
 This is the newly released SD card V4.0 shield. It provides a storage space for your Arduino. Users can read/write SD card via Arduino’s built-in SD library. It supports SD, SDHC and Micro SD cards. It will only occupy the SPI port of your Arduino. Comparing to previous versions, it combines the standart SD slot and the Micro SD slot into a standard one, the included adaptor enables using of Micro SD cards . You can stack on other shields that work with the unused pins. Additionally, the preformed I2C and UART port facilitates your connection with Grove modules.
 
@@ -25,7 +25,7 @@ Here we introduce a project about [LinkIt ONE](http://www.seeedstudio.com/depot/
 
 ### Music Player with LinkIt One
 
-![](https://raw.githubusercontent.com/SeeedDocument/SD_Card_shield_V4.0/master/img/555a29dc85f7f.png)
+![](https://files.seeedstudio.com/wiki/SD_Card_shield_V4.0/img/555a29dc85f7f.png)
 
 This project uses Grove - Water Sensor to create a simple but effective solution to watering plants.
 
@@ -135,7 +135,7 @@ g
 Hardware Overview
 -----------------
 
-![](https://raw.githubusercontent.com/SeeedDocument/SD_Card_shield_V4.0/master/img/Interface_FunctionV2.0.png)
+![](https://files.seeedstudio.com/wiki/SD_Card_shield_V4.0/img/Interface_FunctionV2.0.png)
 
 **Pins usage on Arduino （with SD card）**
 
@@ -167,11 +167,11 @@ The following is the installation of the SD card shield.
 When you use a Micro SD card, please insert Micro SD card into the adopter, and then insert the Micro SD card Adopter into the socket as shown below.
 </div>
 
-![](https://raw.githubusercontent.com/SeeedDocument/SD_Card_shield_V4.0/master/img/SD_card_adopter.JPG)
+![](https://files.seeedstudio.com/wiki/SD_Card_shield_V4.0/img/SD_card_adopter.JPG)
 
 When you complete the hardware installation, it should look like this
 
-![](https://raw.githubusercontent.com/SeeedDocument/SD_Card_shield_V4.0/master/img/Hardware_connection.JPG)
+![](https://files.seeedstudio.com/wiki/SD_Card_shield_V4.0/img/Hardware_connection.JPG)
 
 ### Upload the program
 
@@ -181,7 +181,7 @@ When you complete the hardware installation, it should look like this
 
     You are not sure whether its working or not. There are also many other examples in this library, like “ReadWrite”. You can always try them out.
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/SD_Card_shield_V4.0/master/img/Open_SD_Card_code.jpg)
+    ![](https://files.seeedstudio.com/wiki/SD_Card_shield_V4.0/img/Open_SD_Card_code.jpg)
 
     There is a brief description to above code:
 
@@ -195,7 +195,7 @@ When you complete the hardware installation, it should look like this
 
 3. View Results. You can see the follow image after Click the serial monitor.
 
-    ![](https://raw.githubusercontent.com/SeeedDocument/SD_Card_shield_V4.0/master/img/SD_Card_Infor.jpg)
+    ![](https://files.seeedstudio.com/wiki/SD_Card_shield_V4.0/img/SD_Card_Infor.jpg)
 
 4. If an error occurs, please recheck all the previous steps, and make sure the SD card is working. If none of that fixes the problem, try replacing the SD card.
 
@@ -377,25 +377,25 @@ Arduino default code returns SD size incorrectly if your SD is card more than 4G
 
 ## SD Card Shield v4.0a Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/SD_Card_shield_V4.0/master/res/SD_Card_Shield_v4.0a.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/SD_Card_shield_V4.0/res/SD_Card_Shield_v4.0a.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 ## SD Card Shield v4.3 Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/SD_Card_shield_V4.0/master/res/SD_Card_Shield_v4.3_eagle_file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/SD_Card_shield_V4.0/res/SD_Card_Shield_v4.3_eagle_file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 Resources
 ---------
 
-- [SD Card Shield v4.0 Schematic](https://raw.githubusercontent.com/SeeedDocument/SD_Card_shield_V4.0/master/res/SD_Card_Shiled_v4.0.pdf)
+- [SD Card Shield v4.0 Schematic](https://files.seeedstudio.com/wiki/SD_Card_shield_V4.0/res/SD_Card_Shiled_v4.0.pdf)
 
 - [SD Card Shield v4.0 Eagle File.zip](https://files.seeedstudio.com/wiki/SD_Card_shield_V4.0/res/PCBA-SD%20Card%20shield%20V4.0.zip)
 
-- [SD Card Shield v4.0a Eagle File.zip](https://raw.githubusercontent.com/SeeedDocument/SD_Card_shield_V4.0/master/res/SD_Card_Shield_v4.0a.zip)
+- [SD Card Shield v4.0a Eagle File.zip](https://files.seeedstudio.com/wiki/SD_Card_shield_V4.0/res/SD_Card_Shield_v4.0a.zip)
 
-- [SD Card Shield v4.3 Eagle file.zip](https://raw.githubusercontent.com/SeeedDocument/SD_Card_shield_V4.0/master/res/SD_Card_Shield_v4.3_eagle_file.zip)
+- [SD Card Shield v4.3 Eagle file.zip](https://files.seeedstudio.com/wiki/SD_Card_shield_V4.0/res/SD_Card_Shield_v4.3_eagle_file.zip)
 
 
 

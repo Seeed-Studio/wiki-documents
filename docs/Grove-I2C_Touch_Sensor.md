@@ -10,7 +10,7 @@ sku: 101020047
 tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit
 ---
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Touch_Sensor/master/img/Grove-I2C-Touch-Sensor.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Touch_Sensor/img/Grove-I2C-Touch-Sensor.jpg)
 
 The I2C Touch Sensor is based on the Proximity Capacitive Touch Sensor Controller from FreeScale - MPR121. It detects the touch or proximity of human fingers. This sensor includes a Touch Sensor controller and 4 finger feelers. One can insert the connectors of feelers into base of Sensor controller, and start sensing the touch. 
 
@@ -44,7 +44,7 @@ Platforms Supported
 Hardware Overview
 -----------------
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Touch_Sensor/master/img/DSC_0030.png)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Touch_Sensor/img/DSC_0030.png)
 
 There are 12 electrodes CH0-CH11. CH0-CH3 are connected to 4 Touch feelers.
 
@@ -71,9 +71,9 @@ Since each electrode needs to be auto-configured by the MPR121 during power up a
 
 The feelers can also feel the human being fingers with something between, that's to say, you do not need to touch the feelers with your fingers indeed.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Touch_Sensor/master/img/DSC_0026.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Touch_Sensor/img/DSC_0026.jpg)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Touch_Sensor/master/img/DSC_0027.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Touch_Sensor/img/DSC_0027.jpg)
 
 With a paperboard about 3 mm thick, the feeler can feel the touch of fingers, makes it a good solution for many applications.
 
@@ -94,7 +94,7 @@ With a paperboard about 3 mm thick, the feeler can feel the touch of fingers, ma
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
-![cc](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Touch_Sensor/master/img/cc_I2C_Touch_Sensor.png)
+![cc](https://files.seeedstudio.com/wiki/Grove-I2C_Touch_Sensor/img/cc_I2C_Touch_Sensor.png)
 
 Upload the program to your Arduino/Seeeduino.
 
@@ -104,7 +104,7 @@ Upload the program to your Arduino/Seeeduino.
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Touch_Sensor/master/res/I2C_Touch_Sensor_eagle_files-v1.1-.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-I2C_Touch_Sensor/res/I2C_Touch_Sensor_eagle_files-v1.1-.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
@@ -112,11 +112,11 @@ Resources
 ---------
 
 -   [I2C Touch Sensor Library](https://github.com/Seeed-Studio/Grove_I2C_Touch_Sensor)
--   [I2C Touch Sensor eagle files(v1.1).zip](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Touch_Sensor/master/res/I2C_Touch_Sensor_eagle_files-v1.1-.zip)
--   [I2C Touch Sensor PDF](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Touch_Sensor/master/res/Grove-I2C_Color_sensor_v1.2.pdf)
+-   [I2C Touch Sensor eagle files(v1.1).zip](https://files.seeedstudio.com/wiki/Grove-I2C_Touch_Sensor/res/I2C_Touch_Sensor_eagle_files-v1.1-.zip)
+-   [I2C Touch Sensor PDF](https://files.seeedstudio.com/wiki/Grove-I2C_Touch_Sensor/res/Grove-I2C_Color_sensor_v1.2.pdf)
 -   [How to detect finger touch?](/How_to_detect_finger_touch?)
--   [I2C Touch Sensor Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Touch_Sensor/master/res/Freescale_Semiconductor;MPR121QR2.pdf)
--   [Codecraft CDC File](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Touch_Sensor/master/res/Grove_I2C_Touch_Sensor_CDC_File.zip)
+-   [I2C Touch Sensor Datasheet](https://files.seeedstudio.com/wiki/Grove-I2C_Touch_Sensor/res/Freescale_Semiconductor;MPR121QR2.pdf)
+-   [Codecraft CDC File](https://files.seeedstudio.com/wiki/Grove-I2C_Touch_Sensor/res/Grove_I2C_Touch_Sensor_CDC_File.zip)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_I2C_Touch_Sensor -->
 

@@ -63,8 +63,8 @@ This product is also mildly sensitive to non-IR radiations and hence any bright 
 | Response time                                | 10 μs                                                                          |
 | Phototransistor: Peak sensitivity wavelength | 800 nm                                                                         |
 | IR LED: Peak light emitting wavelength       | 940 nm                                                                         |
-| Reflective photosensor                       | [datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Reflective_Sensor/master/res/RPR-220.pdf)          |
-| Output operational amplifiers                | [datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Reflective_Sensor/master/res/LMV358_datasheet.pdf) |
+| Reflective photosensor                       | [datasheet](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/res/RPR-220.pdf)          |
+| Output operational amplifiers                | [datasheet](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/res/LMV358_datasheet.pdf) |
 | Weight                                       | 4 g                                                                            |
 
 
@@ -83,7 +83,7 @@ This product is also mildly sensitive to non-IR radiations and hence any bright 
 ## Hardware Overview
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Reflective_Sensor/master/img/Grove-Infrared_Reflective_Sensor_v1.2_hardware_overview_1200_z.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/img/Grove-Infrared_Reflective_Sensor_v1.2_hardware_overview_1200_z.jpg)
 
 -   **RPR220 Reflective photosensor** - Highly sensitive reflective photosensor.
 -   **LMV358** - rail-to-rail operational amplifier.
@@ -109,19 +109,19 @@ This sensor can be used to help a robotic car follow a black line.
 
 | Seeeduino V4.2 | Base Shield| Grove - Infrared Reflective Sensor | White paper and black pen|
 |--------------|-------------|-----------------|-------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/img/thumbnail.jpg)||
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/img/thumbnail.jpg)||
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Infrared-Reflective-Sensor-v1.2-p-2791.html)|   🙂   |
 
 - **Step 2.** Connect Grove - Infrared Reflective Sensor to any port of Grove-Base Shield via the Grove cable, we use **D2** in this demo.
 
 - **Step 3.** Place this sensor 12mm above the white(or other bright color) paper.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Reflective_Sensor/master/img/Infrared_Reflective_Sensor-4.JPG)
+![](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/img/Infrared_Reflective_Sensor-4.JPG)
 
 - **Step 4.** Adjust the potentiometer with a screwdriver to change the sensitivity of reflective photosensor, until the LED indicator glows. As your rotate clockwise, the reflective photosensor will be more sensitive to light.
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Reflective_Sensor/master/img/Infrared_Reflective_Sensor-5.JPG)
+![](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/img/Infrared_Reflective_Sensor-5.JPG)
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -131,9 +131,9 @@ Use a proper screw-driver to adjust the tiny potentiometer. Applying heavy press
 
 - **Step 5.** Maintain the vertical distance, move the sensor horizontally towards the black line. The indicator LED should go off over the black line. If it is still on, adjust the potentiometer until it is off.
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Reflective_Sensor/master/img/Infrared_Reflective_Sensor-6.JPG)
+![](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/img/Infrared_Reflective_Sensor-6.JPG)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Reflective_Sensor/master/img/Infrared_Reflective_Sensor-7.JPG)
+![](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/img/Infrared_Reflective_Sensor-7.JPG)
 
 #### Rotary Speed Detection
 
@@ -147,7 +147,7 @@ Let us implement simple optical encoder to detect the speed of a motor
 
 | Seeeduino V4.2 | Base Shield| Grove - Infrared Reflective Sensor | 3V/5V DC Motor|
 |--------------|-------------|-----------------|-------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/img/thumbnail.jpg)|![](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/img/N30%203V%20DC%2012000RPM%20DC%20Motor.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/img/thumbnail.jpg)|![](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/img/N30%203V%20DC%2012000RPM%20DC%20Motor.jpg)|
 |[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Infrared-Reflective-Sensor-v1.2-p-2791.html)|  [Get One Now](https://www.seeedstudio.com/N30-3V-DC-12000RPM-DC-Motor-p-1886.html)   |
 
 
@@ -158,14 +158,14 @@ Let us implement simple optical encoder to detect the speed of a motor
 - **Step 3.** Attach a round, white paper plate (with a black line marked on it) to the motor. Place the sensor near this rotatory encoder. Run the motor.
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Reflective_Sensor/master/img/Infrared_Reflective_Sensor-9.JPG)
+![](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/img/Infrared_Reflective_Sensor-9.JPG)
 
 
 
 ##### Software
 
 
-- **Step 1.** Download the library [Arduino timer1 *library*](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Reflective_Sensor/master/res/TimerOne-ArduinoLib.zip) and add it into the libraries file of Arduino IDE. A [guide](/Guide_to_use_demos_downloaded_from_Seeed-s_Github) about how to run our demo code.
+- **Step 1.** Download the library [Arduino timer1 *library*](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/res/TimerOne-ArduinoLib.zip) and add it into the libraries file of Arduino IDE. A [guide](/Guide_to_use_demos_downloaded_from_Seeed-s_Github) about how to run our demo code.
 
 - **Step 2.** Refer to [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
@@ -205,9 +205,9 @@ void loop()
 - **Step 5.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time. if every thing goes well, you will get the speed.
 
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Reflective_Sensor/master/img/Infrared_Reflective_Sensor-10.JPG)
+![](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/img/Infrared_Reflective_Sensor-10.JPG)
 
-![](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Reflective_Sensor/master/img/Infrared_Reflective_Sensor-12.JPG)
+![](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/img/Infrared_Reflective_Sensor-12.JPG)
 
 
 
@@ -336,9 +336,9 @@ black surface detected
 
 
 - **[Zip]**  [Grove-Infrared Reflective Sensor v1.2 Eagle Files](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/res/Grove%20-%20Infrared%20Reflective%20Sensor%20v1.2_eaglefile.zip)
-- **[Zip]**  [Arduino Timer1 Library](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Reflective_Sensor/master/res/TimerOne-ArduinoLib.zip)
-- **[Pdf]**  [RPR220 Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Reflective_Sensor/master/res/RPR220_datasheet.pdf)
-- **[Pdf]** [Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Infrared_Reflective_Sensor/master/res/LMV358_datasheet.pdf)
+- **[Zip]**  [Arduino Timer1 Library](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/res/TimerOne-ArduinoLib.zip)
+- **[Pdf]**  [RPR220 Datasheet](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/res/RPR220_datasheet.pdf)
+- **[Pdf]** [Datasheet](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/res/LMV358_datasheet.pdf)
 
 
 
