@@ -130,7 +130,7 @@ This Bluetooth Multimeter is a portable multimeter, a device that gathers the vo
 
 **Pair phone and Bluetooth Multimeter  **
 
-*   1) Download [the application program package:SmartMeter](https://github.com/SeeedDocument/Bluetooth_Multimeter/raw/master/res/SmartMeterWithUI_Installation_package.zip) and install it.
+*   1) Download [the application program package:SmartMeter](https://files.seeedstudio.com/wiki/Bluetooth_Multimeter/res/SmartMeterWithUI_Installation_package.zip) and install it.
 
 *   2) Then click the application icons of the SmartMeter to run, at the moment it will appear a Bluetooth permission request when you have not open phone bluetooth.  Click "YES" to open bluetooth .
 ![](https://files.seeedstudio.com/wiki/Bluetooth_Multimeter/img/BT_request.JPG)
@@ -201,7 +201,7 @@ We consistency agreed that the color of the previous two versions are not bright
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Bluetooth_Multimeter/raw/master/res/Bluetooth_Multimater_Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Bluetooth_Multimeter/res/Bluetooth_Multimater_Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 

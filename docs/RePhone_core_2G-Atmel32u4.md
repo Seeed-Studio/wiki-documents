@@ -101,7 +101,7 @@ After you download and install the [latest Arduino IDE](https://www.arduino.cc/e
 
 When the first time to insert the board, you should get a USB COM device name RePhone 2G SAMD21 that need to install a driver. Click on the below button to download driver for the board.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/RePhone_core_2G-Atmel32u4/master/img/driver.png)](https://github.com/SeeedDocument/RePhone_core_2G-Atmel32u4/raw/master/res/driver.zip)
+[![](https://raw.githubusercontent.com/SeeedDocument/RePhone_core_2G-Atmel32u4/master/img/driver.png)](https://files.seeedstudio.com/wiki/RePhone_core_2G-Atmel32u4/res/driver.zip)
 
 To make sure the driver was installed successful, open your Device Manager to see if **RePhone 2G 32U4** exists.
 
@@ -252,17 +252,17 @@ There are several chainable add-on modules to extend the features and functional
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/RePhone_core_2G-Atmel32u4/raw/master/res/102040006RePhone%20core%202G-Atmel32u4.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/RePhone_core_2G-Atmel32u4/res/102040006RePhone%20core%202G-Atmel32u4.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 #Resources
 
-- [Schematics in PDF](https://github.com/SeeedDocument/RePhone_core_2G-Atmel32u4/raw/master/res/102040006RePhone%20core%202G-Atmel32u4/RePhone%20core%202G-Atmel32u4%20v1.0.pdf)
-- [Schematics in EAGLE](https://github.com/SeeedDocument/RePhone_core_2G-Atmel32u4/raw/master/res/102040006RePhone%20core%202G-Atmel32u4.zip)
-- [Driver](https://github.com/SeeedDocument/RePhone_core_2G-Atmel32u4/raw/master/res/driver.zip)
-- [Datasheet of ETA6003](https://github.com/SeeedDocument/RePhone_core_2G-Atmel32u4/raw/master/res/ETA6003.pdf)
-- [AT Command of SIM800H](https://github.com/SeeedDocument/RePhone_core_2G-Atmel32u4/raw/master/res/SIM800_AT.pdf)
+- [Schematics in PDF](https://files.seeedstudio.com/wiki/RePhone_core_2G-Atmel32u4/res/102040006RePhone%20core%202G-Atmel32u4/RePhone%20core%202G-Atmel32u4%20v1.0.pdf)
+- [Schematics in EAGLE](https://files.seeedstudio.com/wiki/RePhone_core_2G-Atmel32u4/res/102040006RePhone%20core%202G-Atmel32u4.zip)
+- [Driver](https://files.seeedstudio.com/wiki/RePhone_core_2G-Atmel32u4/res/driver.zip)
+- [Datasheet of ETA6003](https://files.seeedstudio.com/wiki/RePhone_core_2G-Atmel32u4/res/ETA6003.pdf)
+- [AT Command of SIM800H](https://files.seeedstudio.com/wiki/RePhone_core_2G-Atmel32u4/res/SIM800_AT.pdf)
 - [Download ALL Above](https://github.com/SeeedDocument/RePhone_core_2G-Atmel32u4/archive/master.zip)
 
 ## Tech Support

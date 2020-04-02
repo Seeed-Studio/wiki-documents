@@ -422,7 +422,7 @@ To update firmware, follow the steps:
 
 - <big>Step 2: Configure the UartSBee v5 with FT_Prog;</big>
 
-  - Download FT_Prog: [File:FT Prog v2.8.2.0.zip](https://github.com/SeeedDocument/Mesh_Bee/raw/master/res/FT_Prog_v2.8.2.0.zip "File:FT Prog v2.8.2.0.zip") and install. (Windows only)
+  - Download FT_Prog: [File:FT Prog v2.8.2.0.zip](https://files.seeedstudio.com/wiki/Mesh_Bee/res/FT_Prog_v2.8.2.0.zip "File:FT Prog v2.8.2.0.zip") and install. (Windows only)
 
   - Connect the UartSBee v5 to PC, open FT_Prog and configure it like this:
 
@@ -434,7 +434,7 @@ To update firmware, follow the steps:
 
 - <big>Step 5: Flash firmware with "Jennic Flash Programmer";</big>
 
-Download Jennic Flash Programmer: [File:Jennic flash programmer.zip](https://github.com/SeeedDocument/Mesh_Bee/raw/master/res/Jennic_flash_programmer.zip "File:Jennic flash programmer.zip") and unzip. (Windows only)
+Download Jennic Flash Programmer: [File:Jennic flash programmer.zip](https://files.seeedstudio.com/wiki/Mesh_Bee/res/Jennic_flash_programmer.zip "File:Jennic flash programmer.zip") and unzip. (Windows only)
 
 Open "FlashGUI.exe" -&gt; browser to the firmware bin file
 
@@ -460,7 +460,7 @@ Open "FlashGUI.exe" -&gt; browser to the firmware bin file
 
 The Mesh Bee can be configured with AT commands by now. The binary API configuration method may be provided on your needs. So please post your requirements to the [discussion group](https://groups.google.com/forum/#!forum/seeedstudio-mesh-bee-discussion-group) if you need this feature. We'll make the developing decision based on your voices.
 
-**Download the AT command manual:** [File:AT command manual for Mesh Bee V1.0.pdf](https://github.com/SeeedDocument/Mesh_Bee/raw/master/res/AT_command_manual_for_Mesh_Bee_V1.0.pdf "File:AT command manual for Mesh Bee V1.0.pdf")
+**Download the AT command manual:** [File:AT command manual for Mesh Bee V1.0.pdf](https://files.seeedstudio.com/wiki/Mesh_Bee/res/AT_command_manual_for_Mesh_Bee_V1.0.pdf "File:AT command manual for Mesh Bee V1.0.pdf")
 
 ####   5.3.2 Configuration
 
@@ -909,7 +909,7 @@ We created a google group for Mesh Bee's general discussion and development rela
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Mesh_Bee/raw/master/res/Mesh_Bee_v1.0_eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Mesh_Bee/res/Mesh_Bee_v1.0_eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 

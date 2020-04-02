@@ -15,7 +15,7 @@ The Grove Water Level Sensor is a very accurate sensor that can be helpful in wa
 
 We used capacitive pads on the PCB of the module and did conformal coating over the PCB to make the sensor protect against moisture, dust, chemicals and high temperatures. We believe that this technique will allow you to make accurate water level measurements (±5mm accuracy) easily.
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-Water-Level-Sensor-10CM-p-4443.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-Water-Level-Sensor-10CM-p-4443.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
 
 ## Feature
 
@@ -42,13 +42,13 @@ We used capacitive pads on the PCB of the module and did conformal coating over 
 
 <div align="center">
 <figure>
-  <p style=":center"><a href="https://github.com/SeeedDocument/Grove-Water-Level-Sensor/raw/master/img/Grove-Water-Level-Sensor-pinout-1.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Grove-Water-Level-Sensor/raw/master/img/Grove-Water-Level-Sensor-pinout-1.jpg" /></a></p>
+  <p style=":center"><a href="https://files.seeedstudio.com/wiki/Grove-Water-Level-Sensor/img/Grove-Water-Level-Sensor-pinout-1.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/Grove-Water-Level-Sensor/img/Grove-Water-Level-Sensor-pinout-1.jpg" /></a></p>
 </figure>
 </div>
 
 <div align="center">
 <figure>
-  <p style=":center"><a href="https://github.com/SeeedDocument/Grove-Water-Level-Sensor/raw/master/img/Grove-Water-Level-Sensor-UPDI.png" target="_blank"><img src="https://github.com/SeeedDocument/Grove-Water-Level-Sensor/raw/master/img/Grove-Water-Level-Sensor-UPDI.png" /></a></p>
+  <p style=":center"><a href="https://files.seeedstudio.com/wiki/Grove-Water-Level-Sensor/img/Grove-Water-Level-Sensor-UPDI.png" target="_blank"><img src="https://files.seeedstudio.com/wiki/Grove-Water-Level-Sensor/img/Grove-Water-Level-Sensor-UPDI.png" /></a></p>
 </figure>
 </div>
 
@@ -230,25 +230,25 @@ void loop()
 
 - **Step 5.** The result should be like this when the sensor is in water:
 
-<div align=center><img src="https://github.com/SeeedDocument/Grove-Water-Level-Sensor/raw/master/img/Result.gif"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-Water-Level-Sensor/img/Result.gif"/></div>
 
 ### FAQ
 
 **Q1#** Useful Applications?
 
-**A1:** Here provides a simple application using the **Grove - Water Level Sensor** with **Buzzer** and **LED module** for water level detecting. Please check the [full code](https://github.com/SeeedDocument/Grove-Water-Level-Sensor/blob/master/water-level-sensor-demo.ino) here.
+**A1:** Here provides a simple application using the **Grove - Water Level Sensor** with **Buzzer** and **LED module** for water level detecting. Please check the [full code](https://files.seeedstudio.com/wiki/Grove-Water-Level-Sensor/water-level-sensor-demo.ino) here.
 
 ![](https://files.seeedstudio.com/products/101020635/img/water%20level.2020-01-17%2018_27_47.gif)
 
 ## Schematic Online Viewer
 
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-Water-Level-Sensor/raw/master/res/Grove%20-%20Water%20Level%20Sensor%20(10CM)_SCH%26PCB.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Water-Level-Sensor/res/Grove%20-%20Water%20Level%20Sensor%20(10CM)_SCH%26PCB.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 ## Resources
 
-- **[ZIP]** [Grove - Water Level Sensor (10CM) Schematic file](https://github.com/SeeedDocument/Grove-Water-Level-Sensor/raw/master/res/Grove%20-%20Water%20Level%20Sensor%20(10CM)_SCH%26PCB.zip)
+- **[ZIP]** [Grove - Water Level Sensor (10CM) Schematic file](https://files.seeedstudio.com/wiki/Grove-Water-Level-Sensor/res/Grove%20-%20Water%20Level%20Sensor%20(10CM)_SCH%26PCB.zip)
 - **[PDF]** [ATtiny1616-1617-Automotive-Data-Sheet](https://files.seeedstudio.com/wiki/Grove-Water-Level-Sensor/res/ATtiny1616-1617-Automotive-Data-Sheet.pdf)
 
 ## Tech Support

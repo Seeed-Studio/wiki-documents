@@ -40,7 +40,7 @@ It supports 3.3/5V input voltage and 0 ~ 2.3V Output Voltage making it easy to b
 
 <div align="center">
 <figure>
-  <p style=":center"><a href="https://github.com/SeeedDocument/Grove-TDS-Sensor/raw/master/img/Hardware-overview.jpeg" target="_blank"><img src="https://github.com/SeeedDocument/Grove-TDS-Sensor/raw/master/img/Hardware-overview.jpeg" /></a></p>
+  <p style=":center"><a href="https://files.seeedstudio.com/wiki/Grove-TDS-Sensor/img/Hardware-overview.jpeg" target="_blank"><img src="https://files.seeedstudio.com/wiki/Grove-TDS-Sensor/img/Hardware-overview.jpeg" /></a></p>
 </figure>
 </div>
 
@@ -113,7 +113,7 @@ void loop() {
 
 - **Step 5.** The result should be like this when the probe is in water:
 
-<div align=center><img src="https://github.com/SeeedDocument/Grove-TDS-Sensor/raw/master/img/Results.gif"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-TDS-Sensor/img/Results.gif"/></div>
 
 
 ### Play With Raspberry Pi
@@ -122,7 +122,7 @@ void loop() {
 
 | Raspberry Pi | Grove Base Hat for RasPi | Grove - TDS Sensor|
 |--------------|-------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/rasp.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/master/img/thumbnail.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-TDS-Sensor/raw/master/img/Grove-TDS-Sensor-thumbnail.jpg)
+|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/wiki_english/master/docs/images/rasp.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/master/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-TDS-Sensor/img/Grove-TDS-Sensor-thumbnail.jpg)
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-TDS-Sensor-p-4400.html)|
 
 - **Step 2.** Plug the Grove Base Hat into Raspberry Pi.
@@ -234,12 +234,12 @@ TDS Value: 30.9311414242
 ## Schematic Online Viewer
 
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-TDS-Sensor/raw/master/res/Grove-TDS-Sensor-v1.0.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-TDS-Sensor/res/Grove-TDS-Sensor-v1.0.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 ## Resources
 
-- **[ZIP]** [Grove - TDS Sensor/Meter For Water Quality (Total Dissolved Solids) Schematic file](https://github.com/SeeedDocument/Grove-TDS-Sensor/raw/master/res/Grove-TDS-Sensor-v1.0.zip)
+- **[ZIP]** [Grove - TDS Sensor/Meter For Water Quality (Total Dissolved Solids) Schematic file](https://files.seeedstudio.com/wiki/Grove-TDS-Sensor/res/Grove-TDS-Sensor-v1.0.zip)
 - **[PDF]** [LMV324 Datasheet](https://files.seeedstudio.com/wiki/Grove-TDS-Sensor/res/LMV324-Datasheet.pdf)
 - **[PDF]** [CD4060BM Datasheet](https://files.seeedstudio.com/wiki/Grove-TDS-Sensor/res/CD4060BM-Datasheet.pdf)
 

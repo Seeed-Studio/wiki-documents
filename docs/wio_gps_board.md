@@ -116,9 +116,9 @@ In brief, Groves is hundreds of sensor that in standard style, which is consist 
 
 ## Hardware Overview
 
-![](https://github.com/SeeedDocument/GPS_Tracker/blob/master/images/GPS_Tracker_v1.2_top.png?raw=true)
+![](https://files.seeedstudio.com/wiki/GPS_Tracker/images/GPS_Tracker_v1.2_top.png)
 
-![](https://github.com/SeeedDocument/GPS_Tracker/blob/master/images/GPS_Tracker_v1.2_bottom.png?raw=true)
+![](https://files.seeedstudio.com/wiki/GPS_Tracker/images/GPS_Tracker_v1.2_bottom.png)
 
 
 !!!Tip
@@ -551,18 +551,18 @@ void loop() {
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/GPS_Tracker/blob/master/resources/GPS_Tracker_Eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/GPS_Tracker/resources/GPS_Tracker_Eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ## Resources
 
-* [Schematics in Eagle](https://github.com/SeeedDocument/GPS_Tracker/blob/master/resources/GPS_Tracker_Eagle.zip)
-* [Sketchup file(3D)](https://github.com/SeeedDocument/GPS_Tracker/blob/master/resources/GPS_Tracker.skp)
-* [GSM Bluetooth Application Note](https://github.com/SeeedDocument/GPS_Tracker/blob/master/resources/Quectel_GSM_BT_Application_Note_V1.2(C).pdf)
-* [GSM File AT Commands Manual](https://github.com/SeeedDocument/GPS_Tracker/blob/master/resources/Quectel_GSM_FILE_AT_Commands_Manual_V1.5.pdf)
-* [MC20 AT Commands Manual](https://github.com/SeeedDocument/GPS_Tracker/blob/master/resources/Quectel_MC20_AT_Commands_Manual_V1.1.pdf)
-* [MC20 GNSS AGPS ApplicationGuide](https://github.com/SeeedDocument/GPS_Tracker/blob/master/resources/Quectel_MC20_GNSS_AGPS_ApplicationGuide_V1.1.pdf)
-* [MC20 GNSS AT Commands Manual](https://github.com/SeeedDocument/GPS_Tracker/blob/master/resources/Quectel_MC20_GNSS_AT_Commands_Manual_V1.1.pdf)
-* [MC20 GNSS Protocol Specification](https://github.com/SeeedDocument/GPS_Tracker/blob/master/resources/Quectel_MC20_GNSS_Protocol_Specification_V1.0.pdf)
+* [Schematics in Eagle](https://files.seeedstudio.com/wiki/GPS_Tracker/resources/GPS_Tracker_Eagle.zip)
+* [Sketchup file(3D)](https://files.seeedstudio.com/wiki/GPS_Tracker/resources/GPS_Tracker.skp)
+* [GSM Bluetooth Application Note](https://files.seeedstudio.com/wiki/GPS_Tracker/resources/Quectel_GSM_BT_Application_Note_V1.2(C).pdf)
+* [GSM File AT Commands Manual](https://files.seeedstudio.com/wiki/GPS_Tracker/resources/Quectel_GSM_FILE_AT_Commands_Manual_V1.5.pdf)
+* [MC20 AT Commands Manual](https://files.seeedstudio.com/wiki/GPS_Tracker/resources/Quectel_MC20_AT_Commands_Manual_V1.1.pdf)
+* [MC20 GNSS AGPS ApplicationGuide](https://files.seeedstudio.com/wiki/GPS_Tracker/resources/Quectel_MC20_GNSS_AGPS_ApplicationGuide_V1.1.pdf)
+* [MC20 GNSS AT Commands Manual](https://files.seeedstudio.com/wiki/GPS_Tracker/resources/Quectel_MC20_GNSS_AT_Commands_Manual_V1.1.pdf)
+* [MC20 GNSS Protocol Specification](https://files.seeedstudio.com/wiki/GPS_Tracker/resources/Quectel_MC20_GNSS_Protocol_Specification_V1.0.pdf)
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

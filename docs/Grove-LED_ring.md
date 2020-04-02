@@ -17,7 +17,7 @@ Each LED has a constrant current drive so the color will be very consistent even
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/zQj8RRJcZsk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-RGB-LED-Ring-20-WS2813-Min-p-3227.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-RGB-LED-Ring-20-WS2813-Min-p-3227.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
 
 
 ## Feature 
@@ -853,13 +853,13 @@ uint32_t Wheel(byte WheelPos) {
 ## Schematic Online Viewer
 
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-RGB_LED_Ring-20-WS2813Mini/raw/master/res/Grove%20-%20RGB%20LED%20Ring%20(20%20-%20WS2813%20Mini).zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-RGB_LED_Ring-20-WS2813Mini/res/Grove%20-%20RGB%20LED%20Ring%20(20%20-%20WS2813%20Mini).zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ## Resources
 
-- **[Zip]** [Grove - RGB LED Ring(20 WS2813 Mini) Eagle Files](https://github.com/SeeedDocument/Grove-RGB_LED_Ring-20-WS2813Mini/raw/master/res/Grove%20-%20RGB%20LED%20Ring%20(20%20-%20WS2813%20Mini).zip)
+- **[Zip]** [Grove - RGB LED Ring(20 WS2813 Mini) Eagle Files](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Ring-20-WS2813Mini/res/Grove%20-%20RGB%20LED%20Ring%20(20%20-%20WS2813%20Mini).zip)
 
 - **[Zip]** [Grove - RGB LED Ring(20 WS2813 Mini) Software Library](https://github.com/Seeed-Studio/Seeed_LED_Ring/archive/master.zip)
 

@@ -5,7 +5,7 @@ nointro:
 
 #**BeagleBone Solutions**
 ##**An Open-source Embedded Platform Powerful Enough for Developers, but Friendly Enough for Students**
-![Customization](https://github.com/SeeedDocument/BeagleBoneSolutions/blob/master/img/BBG_Customization.png?raw=true)
+![Customization](https://files.seeedstudio.com/wiki/BeagleBoneSolutions/img/BBG_Customization.png)
 
 The BeagleBone is a versatile platform capable of running a full Linux OS while also retaining real-time capability. Designed with industrial use in mind, and documentation designed for entry-level developers, the BeagleBone has numerous I/O and protocol support while being developer friendly.
 
@@ -18,7 +18,7 @@ You can view our customization portfolio [here](#portfolio).
 The BeagleBone is fully open source software and hardware. This allows developers to fully understand the development platform and quickly identify what can and cannot be supported. In addition there is an active community which can provide help provide answers that may not be clear or easy to find otherwise
 
 ##**Built for Prototyping**
-![prototyping](https://github.com/SeeedDocument/BeagleBoneSolutions/blob/master/img/Prototyping.gif?raw=true)
+![prototyping](https://files.seeedstudio.com/wiki/BeagleBoneSolutions/img/Prototyping.gif)
 
 The BeagleBone is a SBC development board designed for quick prototyping.  There are numerous capes which add additional functionality, allowing proof of concepts to be quickly built. Many of these capes are designed by the community and are fully open source as well. In addition we have created a Grove cape to allow many of our [Grove Modules](http://wiki.seeedstudio.com/Grove_System/) to be attached, allowing developers access to 200+ open source modules and their open source libraries.
 
@@ -38,9 +38,9 @@ Our ODM costs are starting prices. More features or having to bring in specialis
 
 
 ###Timeline
-![ODM timeline](https://github.com/SeeedDocument/BeagleBoneSolutions/blob/master/img/Timeline.png?raw=true)
+![ODM timeline](https://files.seeedstudio.com/wiki/BeagleBoneSolutions/img/Timeline.png)
 
-We know your projects are often time critical. To help you understand the process and time we have provided this simplified timeline. Each project is a unique case. Adding extensive functionality, or requiring numerous different certifications could greatly extend the project timeline. You can download a more detailed timeline [here](https://github.com/SeeedDocument/BeagleBoneSolutions/blob/master/res/ODM_Detailed_Timeline.pdf).
+We know your projects are often time critical. To help you understand the process and time we have provided this simplified timeline. Each project is a unique case. Adding extensive functionality, or requiring numerous different certifications could greatly extend the project timeline. You can download a more detailed timeline [here](https://files.seeedstudio.com/wiki/BeagleBoneSolutions/res/ODM_Detailed_Timeline.pdf).
 
 
 ###Hardware Customization
@@ -52,7 +52,7 @@ Many projects require significant hardware redesign. We can provide the followin
 - Sensor, Actuator, and Connector Integration
 - Creating BOMs and Sourcing
 
-![Hardware](https://github.com/SeeedDocument/BeagleBoneSolutions/blob/master/img/Hardware.png?raw=true)
+![Hardware](https://files.seeedstudio.com/wiki/BeagleBoneSolutions/img/Hardware.png)
 
 
 ###Software Customization
@@ -63,7 +63,7 @@ Many projects require a moderate amount of customized software to be developed. 
 - Linux Kernel Customization
 - Writing Peripheral Drivers
 
-![Software](https://github.com/SeeedDocument/BeagleBoneSolutions/blob/master/img/Software.png?raw=true)
+![Software](https://files.seeedstudio.com/wiki/BeagleBoneSolutions/img/Software.png)
 
 
 ###Enclosure Design

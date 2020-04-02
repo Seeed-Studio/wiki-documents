@@ -39,7 +39,7 @@ More over, we will make more RF modules ourselves with different frequency and c
 ---
 *   [Demo Scheme](http://www.seeedstudio.com/depot/datasheet/315MRFlink.pdf)
 
-*   [File:VirtualWire.zip](https://github.com/SeeedDocument/315Mhz_RF_link_kit/raw/master/res/VirtualWire.zip "File:VirtualWire.zip")
+*   [File:VirtualWire.zip](https://files.seeedstudio.com/wiki/315Mhz_RF_link_kit/res/VirtualWire.zip "File:VirtualWire.zip")
 
 *   [Documentation For 1.3](http://www.seeedstudio.com/depot/images/product/VirtualWire.pdf)
 

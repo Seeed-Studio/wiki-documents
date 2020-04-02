@@ -679,7 +679,7 @@ We would like to take the temperature sensor as an example to illustrate the use
 ![](https://files.seeedstudio.com/wiki/Atom_Node/img/Effect_diagram.jpg)
 
 **Preparatory work:**
-Using the device, you need at least an RFBee/Xbee (when using only one Atom Node, it is not necessary) and an Android device (the Atom Node does not include it). If you want the Atom Node to work, they are essential. And please make sure the baud rate of the RFBee/XBee is set at 57,600. If not, you need to modify the configuration, using your own method or upload the demo of [the Library file:RFBee](https://github.com/SeeedDocument/Atom_Node/raw/master/res/RFBee.zip) to RFBee. Then download [the application program package:BeaconUI](https://github.com/SeeedDocument/Atom_Node/raw/master/res/BeaconUI.zip) and install on an Android device.
+Using the device, you need at least an RFBee/Xbee (when using only one Atom Node, it is not necessary) and an Android device (the Atom Node does not include it). If you want the Atom Node to work, they are essential. And please make sure the baud rate of the RFBee/XBee is set at 57,600. If not, you need to modify the configuration, using your own method or upload the demo of [the Library file:RFBee](https://files.seeedstudio.com/wiki/Atom_Node/res/RFBee.zip) to RFBee. Then download [the application program package:BeaconUI](https://files.seeedstudio.com/wiki/Atom_Node/res/BeaconUI.zip) and install on an Android device.
 
 ###   Demo 1: Use one Atom Node
 
@@ -835,7 +835,7 @@ When configuring the actuator, set the actuator's name. Then choose the trigger 
 
 ###  Modify File: boards.txt and  USBCore.cpp
 
-*   Open up Arduino-1.0.1/hardware/arduino/cohttps://github.com/SeeedDocument/Atom_Node/raw/master/res/arduino directory, replace the file:USBCore.cpp with [the new USBCore.cpp](https://github.com/SeeedDocument/Atom_Node/raw/master/res/USBCore.zip).
+*   Open up Arduino-1.0.1/hardware/arduino/cohttps://files.seeedstudio.com/wiki/Atom_Node/res/arduino directory, replace the file:USBCore.cpp with [the new USBCore.cpp](https://files.seeedstudio.com/wiki/Atom_Node/res/USBCore.zip).
 
 *   And replace file：boards.txt with [the new boards.txt](https://files.seeedstudio.com/wiki/Atom_Node/res/Boards-Atom_Node-.txt) in the path:Arduino-1.0.1/hardware/arduino.
 
@@ -857,7 +857,7 @@ Now you have completed the firmware upgrade.
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Atom_Node/raw/master/res/Atom_Node_Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Atom_Node/res/Atom_Node_Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 

@@ -21,7 +21,7 @@ Due to the advantages like ultra low power consumption, wide viewing angle, clea
 
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-Triple-Color-E-Ink-Display-2-13-p-2889.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-Triple-Color-E-Ink-Display-2-13-p-2889.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
 
 ## Feature 
 
@@ -57,7 +57,7 @@ Due to the advantages like ultra low power consumption, wide viewing angle, clea
 
 <div align="center">
 <figure>
-<img src="https://github.com/SeeedDocument/Grove-Triple_Color_E-Ink_Display_2.13/raw/master/img/pinout.jpg" alt="Grove - Triple Color E-Ink Display 2.13'' pinout" title="Pinout" />
+<img src="https://files.seeedstudio.com/wiki/Grove-Triple_Color_E-Ink_Display_2.13/img/pinout.jpg" alt="Grove - Triple Color E-Ink Display 2.13'' pinout" title="Pinout" />
 <figcaption><b>Figure 1</b>. <i>pinout</i></figcaption>
 </figure>
 </div>
@@ -114,7 +114,7 @@ Due to the advantages like ultra low power consumption, wide viewing angle, clea
 
 <div align="center">
 <figure>
-<img src="https://github.com/SeeedDocument/Grove-Triple_Color_E-Ink_Display_2.13/raw/master/img/connect.jpg" alt="Grove - Triple Color E-Ink Display 2.13'' connect" title="connect" />
+<img src="https://files.seeedstudio.com/wiki/Grove-Triple_Color_E-Ink_Display_2.13/img/connect.jpg" alt="Grove - Triple Color E-Ink Display 2.13'' connect" title="connect" />
 <figcaption><b>Figure 2</b>. <i>connect</i></figcaption>
 </figure>
 </div>
@@ -157,7 +157,7 @@ Due to the advantages like ultra low power consumption, wide viewing angle, clea
 
 <div align="center">
 <figure>
-<img src="https://github.com/SeeedDocument/Grove-Triple_Color_E-Ink_Display_2.13/raw/master/img/demo.jpg" alt="Grove - Triple Color E-Ink Display 2.13'' DIY" title="DIY demo" />
+<img src="https://files.seeedstudio.com/wiki/Grove-Triple_Color_E-Ink_Display_2.13/img/demo.jpg" alt="Grove - Triple Color E-Ink Display 2.13'' DIY" title="DIY demo" />
 <figcaption><b>Figure 3</b>. <i>DIY demo</i></figcaption>
 </figure>
 </div>
@@ -216,7 +216,7 @@ Actually, to display your own image, you just need to replace those two image ar
 
 <div align="center">
 <figure>
-<img src="https://github.com/SeeedDocument/Grove-Triple_Color_E-Ink_Display_2.13/raw/master/img/image2LCD.png" alt="Grove - Triple Color E-Ink Display 2.13'' DIY" title="DIY demo" />
+<img src="https://files.seeedstudio.com/wiki/Grove-Triple_Color_E-Ink_Display_2.13/img/image2LCD.png" alt="Grove - Triple Color E-Ink Display 2.13'' DIY" title="DIY demo" />
 <figcaption><b>Figure 4</b>. <i>Image2LCD configuration</i></figcaption>
 </figure>
 </div>
@@ -236,7 +236,7 @@ Please check the corresponding option as shown above.
 
 <div align="center">
 <figure>
-<img src="https://github.com/SeeedDocument/Grove-Triple_Color_E-Ink_Display_2.13/raw/master/img/code.jpg" alt="Grove - Triple Color E-Ink Display 2.13'' DIY" title="" />
+<img src="https://files.seeedstudio.com/wiki/Grove-Triple_Color_E-Ink_Display_2.13/img/code.jpg" alt="Grove - Triple Color E-Ink Display 2.13'' DIY" title="" />
 <figcaption><b>Figure 5</b>. <i>Just replace the part selected with the red box, which means you should keep the array name</i></figcaption>
 </figure>
 </div>
@@ -288,7 +288,7 @@ This display is 104 x 212, so there are 104x212=22048 pixels, each pixel is cont
 ## Schematic Online Viewer
 
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-Triple_Color_E-Ink_Display_2.13/raw/master/res/Triple_Color_E-Ink_Display_2_13.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Triple_Color_E-Ink_Display_2.13/res/Triple_Color_E-Ink_Display_2_13.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 

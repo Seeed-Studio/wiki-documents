@@ -21,7 +21,7 @@ We use an on-board STM32F030F4P6 to control the channels separately. The command
 
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-4-Channel-SPDT-Relay-p-3119.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-4-Channel-SPDT-Relay-p-3119.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
 
 
 ## Features
@@ -95,7 +95,7 @@ We use an on-board STM32F030F4P6 to control the channels separately. The command
 
 **K2** is the Relay module, there is a coil between **pin1** and **pin3** of K1. Defaultly, the **COM2** will connect to **NC2**.If the pin3 of K1 connected to the grand, then this coil will be 'closed', so the **COM2** will connect to **NO2**.
 
-To open this coil, it requires about 90mA, however, normally the GPIO pin of Arduino only can afford 20mA(40mA max.). Therefor, we use a NPN transistors [S9013](https://github.com/SeeedDocument/Grove-2-Channel_SPDT_Relay/raw/master/res/Transistors_NPN_25V-500mA.pdf) which can proviede 500mA. 
+To open this coil, it requires about 90mA, however, normally the GPIO pin of Arduino only can afford 20mA(40mA max.). Therefor, we use a NPN transistors [S9013](https://files.seeedstudio.com/wiki/Grove-2-Channel_SPDT_Relay/res/Transistors_NPN_25V-500mA.pdf) which can proviede 500mA. 
 
 The **PA7** is pulled down by the 10k R2, if there is no signal, the 'Gate' of **Q2** will be 0v, and Q2 is turned off, so that the K2 will be 'opened'. If **PA7** becomes 5v, then the Q2 will be turned on.
 **Pin3** of k2 will be connected to the GND of the system, for the K2 there will be 5V between **pin3** and **pin1**, so the coil will be 'closed', and the **COM2** will connect to **NO2** 
@@ -139,7 +139,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 | Seeeduino V4.2 | Base Shield| Grove - 4-Channel SPDT Relay |
 |--------------|-------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/img/thumbnail.jpg)|
+|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/thumbnail.jpg)|
 |<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-4-Channel-SPDT-Relay-p-3119.html" target="_blank">Get One Now</a>|
 
 !!!note
@@ -414,7 +414,7 @@ We recommed you use the J-flash for the software:
 ## Schematic Online Viewer
 
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-4-Channel_SPDT_Relay/raw/master/res/Grove-4-Channel_SPDT_Relay.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/res/Grove-4-Channel_SPDT_Relay.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 

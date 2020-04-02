@@ -93,7 +93,7 @@ We take the pins of the W600 chip out and put them on the back of the board, inc
 
 
 !!!Note
-        For more detail about specifications, please check the W600 [Specification V1.0.0_EN.pdf](https://github.com/SeeedDocument/W600_Module/blob/master/res/W600%20Specification%20V1.0.0_EN.pdf) and [W600 HardwareDesignGuide_v1.0.1.pdf](https://github.com/SeeedDocument/W600_Module/blob/master/res/W600%20HardwareDesignGuide_v1.0.1.pdf)
+        For more detail about specifications, please check the W600 [Specification V1.0.0_EN.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/W600%20Specification%20V1.0.0_EN.pdf) and [W600 HardwareDesignGuide_v1.0.1.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/W600%20HardwareDesignGuide_v1.0.1.pdf)
  
 
 
@@ -116,7 +116,7 @@ We take the pins of the W600 chip out and put them on the back of the board, inc
 
 <div align="center">
 <figure>
-  <a href="https://raw.githubusercontent.com/SeeedDocument/W600_Module/master/img/block.png" target="_blank"><img src="https://github.com/SeeedDocument/W600_Module/raw/master/img/block.png" alt="block diagram of W600 Module" title="block diagram of W600 Module" />
+  <a href="https://raw.githubusercontent.com/SeeedDocument/W600_Module/master/img/block.png" target="_blank"><img src="https://files.seeedstudio.com/wiki/W600_Module/img/block.png" alt="block diagram of W600 Module" title="block diagram of W600 Module" />
   <figcaption><i>click to see the clearer original file</i></figcaption></a>
 </figure>
 </div>
@@ -127,7 +127,7 @@ We take the pins of the W600 chip out and put them on the back of the board, inc
 
 <div align="center">
 <figure>
-  <a href="https://raw.githubusercontent.com/SeeedDocument/W600_Module/master/img/pinout_w600_module.jpg" target="_blank"><img src="https://github.com/SeeedDocument/W600_Module/raw/master/img/pinout_w600_module.jpg" alt="pinout of W600 Module" title="pinout of W600 Module" />
+  <a href="https://raw.githubusercontent.com/SeeedDocument/W600_Module/master/img/pinout_w600_module.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/W600_Module/img/pinout_w600_module.jpg" alt="pinout of W600 Module" title="pinout of W600 Module" />
   <figcaption><i>click to see the clearer original file</i></figcaption></a>
 </figure>
 </div>
@@ -352,14 +352,14 @@ AT+WJOIN
 ```
 
 !!!Note
-        For more detail about AT command, please check the [WM_W60X_SDK_AT Command_V1.0.2.pdf](https://github.com/SeeedDocument/W600_Module/blob/master/res/WM_W60X_SDK_AT%20Command_V1.0.2.pdf)
+        For more detail about AT command, please check the [WM_W60X_SDK_AT Command_V1.0.2.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/WM_W60X_SDK_AT%20Command_V1.0.2.pdf)
 
 
 ## Firmware Programming
 
 For the firmware programming please check here：
 
-[WM_W60X_SDK_User Manual_V1.0.0.pdf](https://github.com/SeeedDocument/W600_Module/blob/master/res/WM_W60X_SDK_User%20Manual_V1.0.0.pdf) and [WM_W60X_Firmware Generation Guide_V1.1.pdf](https://github.com/SeeedDocument/W600_Module/blob/master/res/WM_W60X_Firmware%20Generation%20Guide_V1.1.pdf)
+[WM_W60X_SDK_User Manual_V1.0.0.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/WM_W60X_SDK_User%20Manual_V1.0.0.pdf) and [WM_W60X_Firmware Generation Guide_V1.1.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/WM_W60X_Firmware%20Generation%20Guide_V1.1.pdf)
 
 
 ## FAQ
@@ -399,20 +399,20 @@ AT+APLKSTT
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/W600_Module/raw/master/res/W600%20Module%20schemaic.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/W600_Module/res/W600%20Module%20schemaic.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ## Resouce
 
 
-- **[PDF]** [WM_W60X_SDK_AT Command_V1.0.2.pdf](https://github.com/SeeedDocument/W600_Module/blob/master/res/WM_W60X_SDK_AT%20Command_V1.0.2.pdf)
+- **[PDF]** [WM_W60X_SDK_AT Command_V1.0.2.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/WM_W60X_SDK_AT%20Command_V1.0.2.pdf)
 
-- **[PDF]** [W600 HardwareDesignGuide_v1.0.1.pdf](https://github.com/SeeedDocument/W600_Module/blob/master/res/W600%20HardwareDesignGuide_v1.0.1.pdf)
+- **[PDF]** [W600 HardwareDesignGuide_v1.0.1.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/W600%20HardwareDesignGuide_v1.0.1.pdf)
 
-- **[PDF]** [W60X_SDK_User Manual_V1.0.0.pdf](https://github.com/SeeedDocument/W600_Module/blob/master/res/WM_W60X_SDK_User%20Manual_V1.0.0.pdf) 
+- **[PDF]** [W60X_SDK_User Manual_V1.0.0.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/WM_W60X_SDK_User%20Manual_V1.0.0.pdf) 
 
-- **[PDF]** [WM_W60X_Firmware Generation Guide_V1.1.pdf](https://github.com/SeeedDocument/W600_Module/blob/master/res/WM_W60X_Firmware%20Generation%20Guide_V1.1.pdf)
+- **[PDF]** [WM_W60X_Firmware Generation Guide_V1.1.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/WM_W60X_Firmware%20Generation%20Guide_V1.1.pdf)
 
 - **[ZIP]** [W600 Module schematic files](https://files.seeedstudio.com/wiki/W600_Module/res/W600%20Module%20schemaic.zip)
 

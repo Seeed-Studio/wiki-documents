@@ -404,7 +404,7 @@ void loop() {
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Seeeduino_GPRS/raw/master/res/Seeeduino_GPRS_v1.0_Eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/res/Seeeduino_GPRS_v1.0_Eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
@@ -422,7 +422,7 @@ void loop() {
 
 * **SIM800 AT Command**    
 
-    [SIM800 Series AT Command PDF](https://github.com/SeeedDocument/Seeeduino_GPRS/raw/master/res/SIM800_Series_AT_Command_Manual_V1.01%20(2).pdf)
+    [SIM800 Series AT Command PDF](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/res/SIM800_Series_AT_Command_Manual_V1.01%20(2).pdf)
 
 * **Seeeduino GPRS Library**  
 

@@ -289,7 +289,7 @@ for charging battery </div>
 
 ###   Getting Started with AT Command
 
-The module is controlled by AT command via serial port, here we use Arduino as USB to serial tool. Upload the following code to Arduino and open the serial monitor. If you use other USB to serial tools, you can use [AT Command Tester](/AT_Command_Tester_Application) or [SSCOM32](https://github.com/SeeedDocument/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/raw/master/res/Sscom32E.zip) to test AT commands.
+The module is controlled by AT command via serial port, here we use Arduino as USB to serial tool. Upload the following code to Arduino and open the serial monitor. If you use other USB to serial tools, you can use [AT Command Tester](/AT_Command_Tester_Application) or [SSCOM32](https://files.seeedstudio.com/wiki/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/res/Sscom32E.zip) to test AT commands.
 ```
 // this sketch is used for testing LoNet with Arduino
 

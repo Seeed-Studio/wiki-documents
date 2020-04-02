@@ -8,7 +8,7 @@ surveyurl: https://www.research.net/r/Qi_Wireless_Charger_Transmitter
 sku:   113030020
 ---
 
-![](https://github.com/SeeedDocument/Qi_Wireless_Charger_Transmitter/raw/master/img//Qi_Wireless_Charger_Photo.jpg)
+![](https://files.seeedstudio.com/wiki/Qi_Wireless_Charger_Transmitter/img//Qi_Wireless_Charger_Photo.jpg)
 
 This module is designed for 5V Qi Wireless Charge Transmitter,which is base on BQ500211,BQ500211 is a second generation digital wireless power controller that integrates all functions required to control wireless power transfer to a single WPC compliant receiver.This module with FOD,it will automatically recognize when charging module is close. Qi Wireless Charger Transmitter is compatible with most wireless charging mobile phone on market such  Nexus 5.
 
@@ -30,7 +30,7 @@ This module is designed for 5V Qi Wireless Charge Transmitter,which is base on B
 ---
 we can used it to charge phone.
 
-![](https://github.com/SeeedDocument/Qi_Wireless_Charger_Transmitter/raw/master/img//Qi_wireless_charger_usage.jpg)
+![](https://files.seeedstudio.com/wiki/Qi_Wireless_Charger_Transmitter/img//Qi_wireless_charger_usage.jpg)
 
 Your phone will enter the charging mode when D1 is flashing and buzzer is turned on.
 
@@ -38,7 +38,7 @@ Your phone will enter the charging mode when D1 is flashing and buzzer is turned
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Qi_Wireless_Charger_Transmitter/raw/master/res/Qi_Wireless_Charger_Transmitter_v1.0_Eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Qi_Wireless_Charger_Transmitter/res/Qi_Wireless_Charger_Transmitter_v1.0_Eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 

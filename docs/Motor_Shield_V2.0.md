@@ -141,7 +141,7 @@ Here we will show you how this Motor Shield works via a simple demo. First of al
 
 | Seeeduino V4 | DC Motor | Motor Shield |
 |--------------|-------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://github.com/SeeedDocument/Motor_Shield_V2.0/raw/master/image/130%20DC%20Motor_s.jpg)|![enter image description here](https://github.com/SeeedDocument/Motor_Shield_V2.0/raw/master/image/motor%20shield_s.jpg)|
+|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/image/130%20DC%20Motor_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/image/motor%20shield_s.jpg)|
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/130-DC-Motor-p-2023.html)|[Get ONE Now](https://www.seeedstudio.com/Motor-Shield-V2.0-p-1377.html)|
 
 - Set **SEN_A** and **SEN_B**, connect the left 2 pins together with a jumper.
@@ -205,7 +205,7 @@ Here we will show you how this Motor Shield works via a simple demo.  First of a
 
 | Seeeduino V4 | Stepper Motor | Motor Shield |
 |--------------|-------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://github.com/SeeedDocument/Motor_Shield_V2.0/raw/master/image/Motor%2024BYJ48_s.jpg)|![enter image description here](https://github.com/SeeedDocument/Motor_Shield_V2.0/raw/master/image/motor%20shield_s.jpg)|
+|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/image/Motor%2024BYJ48_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/image/motor%20shield_s.jpg)|
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Small-Size-and-High-Torque-Stepper-Motor-24BYJ48-p-1922.html)|[Get ONE Now](https://www.seeedstudio.com/Motor-Shield-V2.0-p-1377.html)|
 
 
@@ -362,13 +362,13 @@ A3: Here is the connection.
 
 ## Motor Shield V2.0 Eagle File Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Motor_Shield_V2.0/raw/master/resource/Motor_Shield_Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/resource/Motor_Shield_Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ## Motor shield V2.1 Eagle File Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Motor_Shield_V2.0/raw/master/resource/Motor_shield_2.1.rar" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/resource/Motor_shield_2.1.rar" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 

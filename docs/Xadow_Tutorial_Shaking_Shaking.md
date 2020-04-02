@@ -17,7 +17,7 @@ For this demo, you need to use the:
 
 ![](https://files.seeedstudio.com/wiki/Xadow_Tutorial_Shaking_Shaking/img/Untitled.png)
 
-Connect them with FFC Cables, then you need to do some preparations that refer to the first Demo's steps. Differ from the demo1, you need to download [the library:Smile](https://github.com/SeeedDocument/Xadow_Tutorial_Shaking_Shaking/raw/master/https://github.com/SeeedDocument/Xadow_Tutorial_Shaking_Shaking/raw/master/res/SMILE.zip) and directly open SMILE INO file.
+Connect them with FFC Cables, then you need to do some preparations that refer to the first Demo's steps. Differ from the demo1, you need to download [the library:Smile](https://files.seeedstudio.com/wiki/Xadow_Tutorial_Shaking_Shaking/https://files.seeedstudio.com/wiki/Xadow_Tutorial_Shaking_Shaking/res/SMILE.zip) and directly open SMILE INO file.
 
 This demo functions: In normal circumstances, the OLED displays the current barometric pressure value. When you shake the Xadow Accelerometer, there will appear a smile face on the screen.
 

@@ -114,15 +114,15 @@ Connect battery and battery power detector as following image. You can see LEDs 
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Battery-kit-3.7V_520-mAh/raw/master/res/Battery_kit-3.7V_520mAh_Schematics.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Battery-kit-3.7V_520-mAh/res/Battery_kit-3.7V_520mAh_Schematics.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ##  Resources ##
 
-- **[Eagle]**[Schematic(Eagle) file](https://github.com/SeeedDocument/Battery-kit-3.7V_520-mAh/raw/master/res/Battery_kit-3.7V_520mAh_Schematics.zip)
+- **[Eagle]**[Schematic(Eagle) file](https://files.seeedstudio.com/wiki/Battery-kit-3.7V_520-mAh/res/Battery_kit-3.7V_520mAh_Schematics.zip)
 - **[PDF]**[Battery Detector v1.0 pcb](https://files.seeedstudio.com/wiki/Battery-kit-3.7V_520-mAh/res/Battery%20Detector%20v1.0pcb.pdf)
-- **[PDF]**[Battery Detector v1.0 sch](https://github.com/SeeedDocument/Battery-kit-3.7V_520-mAh/raw/master/res/Battery%20Detector%20v1.0.pdf)
+- **[PDF]**[Battery Detector v1.0 sch](https://files.seeedstudio.com/wiki/Battery-kit-3.7V_520-mAh/res/Battery%20Detector%20v1.0.pdf)
 - **[Datasheet]**[CN1185 Datasheet](https://files.seeedstudio.com/wiki/Battery-kit-3.7V_520-mAh/res/CN1185_Datasheet.pdf)
 - **[Datasheet]**[Battery Datasheet](https://files.seeedstudio.com/wiki/Battery-kit-3.7V_520-mAh/res/Lithium-ion_Battery_3.7V-520mAH_Datasheet.pdf)
 

@@ -181,10 +181,10 @@ The bottom side of Seeeduino Stalker V3 has many PCB jumper pads optionally chan
 |------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
 | P1               | Soldering these jumper enables Digital pin D5 to ON or OFF power-supply of Bee Socket                                                                                                                                                                                                                                                                       | ![](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/img/Seeeduino_Stalker_Jumper_Pad_P1.jpg)       |
 | P2               | Soldering these jumper pads enables Digital pin D4 to switch ON or OFF power supply of SD.                                                                                                                                                                                                                                                                  | ![](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/img/Seeeduino_Stalker_Jumper_Pad_P2.jpg)       |
-| P3               | Soldering these jumper pads connects RTC /INTA pin to Digital Pin **D2(INT0)**.                                                                                                                                                                                                                                                                             | ![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_Jumper_Pad_P3.jpg)       |
-| P4               | Soldering these jumper pads connects RTC /INTB to Digital pin **D3(INT1)**.                                                                                                                                                                                                                                                                                 | ![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_Jumper_Pad_P4.jpg)       |
-| P5               | This jumper by default connects BEE_TXD to Digital pin D0 (H/W UART TXD). By cutting the existing PCB connection and soldering to adjacent pad, BEE_TXD can be connected to Digital pin **D7** for S/W Serial. **Note**: There is a known hardware bug. Please read [here](https://seeeddoc.github.io/Seeeduino-Stalker_v3/#Known_Issue) for a work-around. | ![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_Jumper_Pads_P5andP6.jpg) |
-| P6               | This jumper by default connects BEE_RXD to Digital pin D0 (H/W UART RXD). By cutting the existing PCB connection and soldering to adjacent pad, BEE_RXD can be connected to Digital pin **D6** for S/W Serial.                                                                                                                                              | ![](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/img/Seeeduino_Stalker_Jumper_Pads_P5andP6.jpg) |
+| P3               | Soldering these jumper pads connects RTC /INTA pin to Digital Pin **D2(INT0)**.                                                                                                                                                                                                                                                                             | ![](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/img/Seeeduino_Stalker_Jumper_Pad_P3.jpg)       |
+| P4               | Soldering these jumper pads connects RTC /INTB to Digital pin **D3(INT1)**.                                                                                                                                                                                                                                                                                 | ![](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/img/Seeeduino_Stalker_Jumper_Pad_P4.jpg)       |
+| P5               | This jumper by default connects BEE_TXD to Digital pin D0 (H/W UART TXD). By cutting the existing PCB connection and soldering to adjacent pad, BEE_TXD can be connected to Digital pin **D7** for S/W Serial. **Note**: There is a known hardware bug. Please read [here](https://seeeddoc.github.io/Seeeduino-Stalker_v3/#Known_Issue) for a work-around. | ![](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/img/Seeeduino_Stalker_Jumper_Pads_P5andP6.jpg) |
+| P6               | This jumper by default connects BEE_RXD to Digital pin D0 (H/W UART RXD). By cutting the existing PCB connection and soldering to adjacent pad, BEE_RXD can be connected to Digital pin **D6** for S/W Serial.                                                                                                                                              | ![](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/img/Seeeduino_Stalker_Jumper_Pads_P5andP6.jpg) |
 
 
 
@@ -526,7 +526,7 @@ RTC I2C
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/res/Seeeduino_Stalker_v3.0.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/res/Seeeduino_Stalker_v3.0.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
@@ -549,8 +549,8 @@ RTC I2C
 
     *   [Datasheet of DS1337S](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/res/DS1337-DS1337C-99519.pdf)
 
-    *   [Datasheet of CN3065)](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/res/CN3065.pdf)
-    *   [Datasheet of CN3065 (English)](https://github.com/SeeedDocument/Seeeduino-Stalker_v3/raw/master/res/DSE-CN3065.pdf)
+    *   [Datasheet of CN3065)](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/res/CN3065.pdf)
+    *   [Datasheet of CN3065 (English)](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/res/DSE-CN3065.pdf)
 
     *   [Datasheet of TD6810](https://files.seeedstudio.com/wiki/Seeeduino-Stalker_v3/res/TD6810.pdf)
 

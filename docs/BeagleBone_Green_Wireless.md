@@ -8,14 +8,14 @@ surveyurl: https://www.surveymonkey.com/r/bbg_w
 sku: 102010048
 ---
 
-![](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/blob/master/images/BBGW_cover.png?raw=true)
+![](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/BBGW_cover.png)
 
 Seeed Studio BeagleBone® Green Wireless is a joint effort by [BeagleBoard.org](http://beagleboard.org) and Seeed Studio. It is based on the open-source hardware design of [BeagleBone® Black](http://beagleboard.org/black) and developed into this differentiated version. Seeed Studio BeagleBone® Green Wireless has included a high-performance flexible WiFi/Bluetooth interface and two Grove connectors, making it easier to connect to the large family of Grove sensors. The on-board HDMI and Ethernet are removed to make room for these wireless features and Grove connectors.
 
 <iframe width="1111" height="625" src="https://www.youtube.com/embed/tlA97rhKG10" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 
-[![](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/blob/master/images/get_one_now.png?raw=true)](http://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-Wireless-p-2650.html)
+[![](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/get_one_now.png)](http://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-Wireless-p-2650.html)
 
 ## Features
 ----
@@ -93,7 +93,7 @@ Here are some tutorials for the starters to use some Grove modules to realize th
 
 ## Hardware Overview
 
-![](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/blob/master/images/green_wireless_hardware_details.png?raw=true)
+![](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/green_wireless_hardware_details.png)
 
 ###Pin map
 
@@ -104,21 +104,21 @@ Each digital I/O pin has 8 different modes that can be selected, including GPIO.
 !!!Note
     In GPIO mode, each digital I/O can produce interrupts.
 
-![enter image description here](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/blob/master/images/BeagleBoneGreenWirelessPins.jpg?raw=true)
+![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/BeagleBoneGreenWirelessPins.jpg)
 
 ####PWMs and Timers
 
 !!!Note
     Up to 8 digital I/O pins can be configured with pulse-width modulators (PWM) to produce signals to control motors or create pseudo analog voltage levels, without taking up any extra CPU cycles.
 
-![](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/blob/master/images/cape-headers-pwm.png?raw=true)
+![](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/cape-headers-pwm.png)
 
 ####Analog Inputs
 
 !!!Note
     Make sure you don't input more than 1.8V to the analog input pins. This is a single 12-bit analog-to-digital converter with 8 channels, 7 of which are made available on the headers.
 
-![enter image description here](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/blob/master/images/cape-headers-analog.png?raw=true)
+![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/cape-headers-analog.png)
 
 
 ####UART
@@ -126,7 +126,7 @@ Each digital I/O pin has 8 different modes that can be selected, including GPIO.
 !!!Note
     There is a dedicated header for getting to the UART0 pins and connecting a debug cable. Five additional serial ports are brought to the expansion headers, but one of them only has a single direction brought to the headers.
 
-![enter image description here](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/blob/master/images/cape-headers-serial.png?raw=true)
+![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/cape-headers-serial.png)
 
 
 ####I2C
@@ -134,14 +134,14 @@ Each digital I/O pin has 8 different modes that can be selected, including GPIO.
 !!!Note
     The first I2C bus is utilized for reading EEPROMS on cape add-on boards and can't be used for other digital I/O operations without interfering with that function, but you can still use it to add other I2C devices at available addresses. The second I2C bus is available for you to configure and use.
 
-![enter image description here](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/blob/master/images/cape-headers-i2c.png?raw=true)
+![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/cape-headers-i2c.png)
 
 ####SPI
 
 !!!Note
     For shifting out data fast, you might consider using one of the SPI ports.
 
-![enter image description here](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/blob/master/images/cape-headers-spi.png?raw=true)
+![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/cape-headers-spi.png)
 
 
 ## Mechincal Drawing
@@ -213,15 +213,15 @@ To begin editing programs that live on your board, you can use the Cloud9 IDE by
 
 Using your smart phone or computer to scan local Wi-Fi network and connect to the AP named "BeagleBone® XXX"
 
-![](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/blob/master/images/wifi1.png?raw=true)
+![](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/wifi1.png)
 
 After connection succeeded, it will head to the login page automatically. Select the SSID of your Wi-Fi and enter the passwd, click OK.
 
-![](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/blob/master/images/wifi2.png?raw=true)
+![](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/wifi2.png)
 
 Now your Seeed Studio BeagleBone® Green Wireless is connected to Wi-Fi.
 
-![](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/blob/master/images/wifi3.png?raw=true)
+![](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/wifi3.png)
 
 ###STEP6. Connect your Seeed Studio BeagleBone® Green Wireless to your Bluetooth Device
 
@@ -233,11 +233,11 @@ bb-wl18xx-bluetooth
 bluetoothctl
 ```
 
-![](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/blob/master/images/bluetooth1.jpg?raw=true)
+![](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/bluetooth1.jpg)
 
 Type ``scan on`` to scan local bluetooth devices. My device named "jy" is found.
 
-![](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/blob/master/images/bluetooth2.jpg?raw=true)
+![](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/bluetooth2.jpg)
 
 Copy the device mac address, then contect to the device  with the command:
 
@@ -247,7 +247,7 @@ trust 0C:xx:xx:xx:xx:0B
 connect 0C:xx:xx:xx:xx:0B
 ```
 
-![](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/blob/master/images/bluetooth3.jpg?raw=true)
+![](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/bluetooth3.jpg)
 
 Now your Seeed Studio BeagleBone® Green Wireless is connected to your bluetooth device. Type ``quit`` back to the terminal.
 Play music on Seeed Studio BeagleBone® Green Wireless, then you will hear music on your bluetooth speaker device.
@@ -412,15 +412,15 @@ Grove - RTC v2.0
 
 ###Mraa Map for Seeed Studio BeagleBone® Green Wireless
 
-![GPIO](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/blob/master/images/BBGW_Mraa_Gpio.png?raw=true)
+![GPIO](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/BBGW_Mraa_Gpio.png)
 
-![I2C](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/blob/master/images/BBGW_Mraa_I2C.png?raw=true)
+![I2C](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/BBGW_Mraa_I2C.png)
 
-![PWM](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/blob/master/images/BBGW_Mraa_PWM.png?raw=true)
+![PWM](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/BBGW_Mraa_PWM.png)
 
-![ADC_IN](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/blob/master/images/BBGW_Mraa_ADC.png?raw=true)
+![ADC_IN](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/BBGW_Mraa_ADC.png)
 
-![UART](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/blob/master/images/BBGW_Mraa_UART.png?raw=true)
+![UART](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/BBGW_Mraa_UART.png)
 
 ## Grove for Seeed Studio BeagleBone® Green
 ------

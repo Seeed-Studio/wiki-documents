@@ -24,7 +24,7 @@ Seeeduino Lotus has 14 digital input/outputs (6 of which can output PWM) and 7 a
 
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Seeeduino-Lotus-Cortex-M0-p-2896.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Seeeduino-Lotus-Cortex-M0-p-2896.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
 
 
 
@@ -54,7 +54,7 @@ Compared with Seeeduino Lotus V1.1, the Seeeduino Lotus Cortex-M0+ mainly upgrad
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Seeeduino_Lotus_Cortex-M0-/raw/master/img/block/area_chart.jpg" />
+  <img src="https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/img/block/area_chart.jpg" />
   <figcaption><b>Figure 1</b>. <i>Comparison chart</i></figcaption>
 </figure>
 </div>
@@ -111,7 +111,7 @@ Compared with Seeeduino Lotus V1.1, the Seeeduino Lotus Cortex-M0+ mainly upgrad
 
 <div align="center">
 <figure>
-  <p style=":center"><a href="https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Lotus_Cortex-M0-/master/img/Pin_out.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Seeeduino_Lotus_Cortex-M0-/raw/master/img/Pin_out.jpg" /></a></p>
+  <p style=":center"><a href="https://raw.githubusercontent.com/SeeedDocument/Seeeduino_Lotus_Cortex-M0-/master/img/Pin_out.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/img/Pin_out.jpg" /></a></p>
   <figcaption><b>Figure 2</b>. <i>Pinout, you can ckick the image to view the original file</i></figcaption>
 </figure>
 </div>
@@ -129,7 +129,7 @@ The images below show an overview of Seeeduino Lotus hardware features. The pin-
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Seeeduino_Lotus_Cortex-M0-/raw/master/img/block/overview.jpg"/>
+  <img src="https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/img/block/overview.jpg"/>
   <figcaption><b>Figure 3</b>. <i>Hardware Overview</i></figcaption>
 </figure>
 </div>
@@ -151,7 +151,7 @@ You can find the silkscreen on the back of the board.
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Seeeduino_Lotus_Cortex-M0-/raw/master/img/block/4.jpg"/>
+  <img src="https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/img/block/4.jpg"/>
   <figcaption><b>Figure 4</b>. <i>Grove Digital Connectors</i></figcaption>
 </figure>
 </div>
@@ -163,7 +163,7 @@ There are three analog Grove connectors, the input voltage range from 0~3.3V. If
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Seeeduino_Lotus_Cortex-M0-/raw/master/img/block/5.jpg"/>
+  <img src="https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/img/block/5.jpg"/>
   <figcaption><b>Figure 5</b>. <i>Grove Analog Connectors</i></figcaption>
 </figure>
 </div>
@@ -177,7 +177,7 @@ So actually, only two hardware UART are available now.  **Serial** corresponds t
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Seeeduino_Lotus_Cortex-M0-/raw/master/img/block/3.jpg"/>
+  <img src="https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/img/block/3.jpg"/>
   <figcaption><b>Figure 6</b>. <i>Grove Hardware UART</i></figcaption>
 </figure>
 </div>
@@ -189,7 +189,7 @@ The Seeeduino Lotus Cortex-M0+ female header is fully compatible with Arduino UN
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Seeeduino_Lotus_Cortex-M0-/raw/master/img/block/2.jpg"/>
+  <img src="https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/img/block/2.jpg"/>
   <figcaption><b>Figure 7</b>. <i>Female Header</i></figcaption>
 </figure>
 </div>
@@ -202,7 +202,7 @@ You can use both USB and Li-Po battery supply for Seeeduino Lotus Cortex-M0+. Al
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Seeeduino_Lotus_Cortex-M0-/raw/master/img/block/7.jpg"/>
+  <img src="https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/img/block/7.jpg"/>
   <figcaption><b>Figure 8</b>. <i>JST2.0 Li-Po Header</i></figcaption>
 </figure>
 </div>
@@ -261,7 +261,7 @@ Please follow the [Seeed Board Intallation Guide](http://wiki.seeedstudio.com/Se
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Seeeduino_Lotus_Cortex-M0-/raw/master/img/add_board.jpg"/>
+  <img src="https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/img/add_board.jpg"/>
   <figcaption><b>Figure 10</b>. <i>The key word is Lotus M0</i></figcaption>
 </figure>
 </div>
@@ -275,7 +275,7 @@ Selecting a **Seeeduino Lotus Cortex-M0+**.
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Seeeduino_Lotus_Cortex-M0-/raw/master/img/add_board_1.jpg"/>
+  <img src="https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/img/add_board_1.jpg"/>
   <figcaption><b>Figure 11</b>. <i>Choose the right board</i></figcaption>
 </figure>
 </div>
@@ -285,7 +285,7 @@ Select the serial device of the Arduino board from the Tools | Serial Port menu.
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Seeeduino_Lotus_Cortex-M0-/raw/master/img/add_board_2.jpg"/>
+  <img src="https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/img/add_board_2.jpg"/>
   <figcaption><b>Figure 12</b>. <i>Choose the right port</i></figcaption>
 </figure>
 </div>
@@ -307,7 +307,7 @@ A few seconds after the upload finishes, you should see the pin 13 (L) LED on th
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Seeeduino_Lotus_Cortex-M0-/raw/master/res/Seeeduino_Lotus_Cortex-M0%2B.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/res/Seeeduino_Lotus_Cortex-M0%2B.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 

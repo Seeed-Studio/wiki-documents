@@ -18,7 +18,7 @@ MT3620 Grove breakout enable users to quickly apply sensors modules -[SeeedStudi
 Since [Azure Sphere SDK](http://aka.ms/AzureSphereSDK) has not yet supported ADC on MT3620, this breakout serves as an interface between MT3620 I2C port and external ADC, which provide a way to read the analog data from analog port. Besides the analog port , this breakout has UART,SPI,I2C,GPIO ports.
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/MT3620-Grove-Breakout-p-4043.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/MT3620-Grove-Breakout-p-4043.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
 
  
 
@@ -79,7 +79,7 @@ As is logic Input. Address select input that selects one of three I2C addresses 
 
 **Board Pinmap**
 
-<a href="https://github.com/SeeedDocument/MT3620_Grove_Breakout/raw/master/img/pinmap2.png" target="_blank"><img src="https://github.com/SeeedDocument/MT3620_Grove_Breakout/raw/master/img/pinmap2.png"/></a>
+<a href="https://files.seeedstudio.com/wiki/MT3620_Grove_Breakout/img/pinmap2.png" target="_blank"><img src="https://files.seeedstudio.com/wiki/MT3620_Grove_Breakout/img/pinmap2.png"/></a>
 
 **Board Dimensions**
 
@@ -254,7 +254,7 @@ Seeed oled 96*96 demo.
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/MT3620_Grove_Breakout/raw/master/res/MT3620%20grove%20breakout%20v1.0.sch.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/MT3620_Grove_Breakout/res/MT3620%20grove%20breakout%20v1.0.sch.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 

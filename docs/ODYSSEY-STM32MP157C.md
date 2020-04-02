@@ -8,7 +8,7 @@ sku: 102110319
 
 # ODYSSEY – STM32MP157C
 
- ![](https://github.com/SeeedDocument/ODYSSEY-STM32MP157C/raw/master/IMG/perspective-19.png)
+ ![](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/perspective-19.png)
 
 The ODYSSEY – STM32MP157C is a single board computer that based on STM32MP157C, a dual-core Arm-Cortex-A7 core processor operating at 650Mhz. The processor also integrates an Arm Cortex-M4 coprocessor, which makes it suitable for real-time task. The ODYSSEY – STM32MP157C is created in a form of SoM(system on module) plus a Carrier board. The SoM has consisted of the MPU, PMIC, RAM and the carrier board is in Raspberry Pi form factor. The carries board includes all the necessary peripherals including Gigabytes Ethernet, WiFi/BLE, DC Power，USB Hosts, USB-C, MIPI-DSI, DVP for camera, audio, etc. With this board, customers can fast evaluate the SoM and deploy the SoM on their own carrier board easily and quickly.
 
@@ -51,9 +51,9 @@ ODYSSEY – STM32MP157C consists of two parts: Carrier board and Seeed SoM - STM
 
 Carrier board hardware details follow:
 
- ![](https://github.com/SeeedDocument/ODYSSEY-STM32MP157C/raw/master/IMG/front.png)
+ ![](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/front.png)
 
- ![](https://github.com/SeeedDocument/ODYSSEY-STM32MP157C/raw/master/IMG/back.png)
+ ![](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/back.png)
 
 - **1.Carrier board :** Install the Seeed SoM-STM32MP157C area, if the user wants to remove the core board, slowly tilt the core board up and then remove, never remove by hand.
 
@@ -113,7 +113,7 @@ Carrier board hardware details follow:
 
 ### Pin Function
 
-![](https://github.com/SeeedDocument/ODYSSEY-STM32MP157C/raw/master/IMG/GPIO.png)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/GPIO.png)
 
 ODYSSEY - STM32MP157C's 40-pin is fully compatible with Raspberry Pi's 40PIN, including GPIO, IIC, UART, SPI, IIS and PWM pins.
 
@@ -435,16 +435,16 @@ cd ~/ODYSSEY-STM32MP157C/examples
 python3 QtViewerForStm32p1.py
 ```
 
-Run [CanBus_SendForArduino.ino](https://github.com/SeeedDocument/ODYSSEY-STM32MP157C/blob/master/examples/CanBus_SendForArduino.ino) on `Seeeduino V4.2`.
+Run [CanBus_SendForArduino.ino](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/examples/CanBus_SendForArduino.ino) on `Seeeduino V4.2`.
 
 ## Resourses
 -----
-- **[PDF]** [STM32MP157C Datasheet](https://github.com/SeeedDocument/ODYSSEY-STM32MP157C/raw/master/Hardware/stm32mp157c.pdf)
-- **[SCH]** [Seeed SoM - STM32MP157C](https://github.com/SeeedDocument/ODYSSEY-STM32MP157C/raw/master/Hardware/Seeed%20SoM%20-%20STM32MP157C%20v1.0_191212.pdf)
-- **[SCH]** [ODYSSEY-STM32MP157C](https://github.com/SeeedDocument/ODYSSEY-STM32MP157C/raw/master/Hardware/Seeed%20NPi%20-%20STM32MP157C%20v1.0_191212.pdf)
-- **[3Dfile]** [ODYSSEY-STM32MP157C](https://github.com/SeeedDocument/ODYSSEY-STM32MP157C/raw/master/Hardware/st.skp)
-- **[OrCAD]** [ODYSSEY-STM32MP157C](https://github.com/SeeedDocument/ODYSSEY-STM32MP157C/raw/master/Hardware/Seeed%20NPi%20-%20STM32MP157C%20v1.0_SCH%20%26%20PCB.zip)
-- **[OrCAD]** [Seeed SoM - STM32MP157C](https://github.com/SeeedDocument/ODYSSEY-STM32MP157C/raw/master/Hardware/Seeed%20SoM%20-%20STM32MP157C%20v1.0_SCH%20%26%20PCB%20.zip)
+- **[PDF]** [STM32MP157C Datasheet](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/Hardware/stm32mp157c.pdf)
+- **[SCH]** [Seeed SoM - STM32MP157C](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/Hardware/Seeed%20SoM%20-%20STM32MP157C%20v1.0_191212.pdf)
+- **[SCH]** [ODYSSEY-STM32MP157C](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/Hardware/Seeed%20NPi%20-%20STM32MP157C%20v1.0_191212.pdf)
+- **[3Dfile]** [ODYSSEY-STM32MP157C](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/Hardware/st.skp)
+- **[OrCAD]** [ODYSSEY-STM32MP157C](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/Hardware/Seeed%20NPi%20-%20STM32MP157C%20v1.0_SCH%20%26%20PCB.zip)
+- **[OrCAD]** [Seeed SoM - STM32MP157C](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/Hardware/Seeed%20SoM%20-%20STM32MP157C%20v1.0_SCH%20%26%20PCB%20.zip)
 - **[PDF]** [ODYSSEY-STM32MP157C 2d file](http://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/STM32-2d-file.pdf)
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

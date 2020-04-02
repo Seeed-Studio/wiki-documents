@@ -17,7 +17,7 @@ This is a CAN BUS shield for Raspberry Pi(hereinafter referred to as 2 channel p
 Also it have two On-board 120Ω terminating resistors which are controlled by the switches.
 
  
-<p style="text-align:center"><a href="https://www.seeedstudio.com/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi-p-4072.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
+<p style="text-align:center"><a href="https://www.seeedstudio.com/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi-p-4072.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
 
 
 
@@ -36,7 +36,7 @@ Also it have two On-board 120Ω terminating resistors which are controlled by th
 
 <div align="center">
 <figure>
-  <a href="https://raw.githubusercontent.com/SeeedDocument/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/master/img/block.jpg" target="_blank"><img src="https://github.com/SeeedDocument/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/raw/master/img/block.jpg" alt="Raspberry Pi CAN BUS shield" title="hardware overview" />
+  <a href="https://raw.githubusercontent.com/SeeedDocument/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/master/img/block.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/block.jpg" alt="Raspberry Pi CAN BUS shield" title="hardware overview" />
   <figcaption><b>Figure 1</b>. <i>Hardware overview A</i></figcaption></a>
 </figure>
 </div>
@@ -44,7 +44,7 @@ Also it have two On-board 120Ω terminating resistors which are controlled by th
 
 <div align="center">
 <figure>
-  <a href="https://raw.githubusercontent.com/SeeedDocument/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/master/img/block2.jpg" target="_blank"><img src="https://github.com/SeeedDocument/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/raw/master/img/block2.jpg" alt="Raspberry Pi CAN BUS shield" title="hardware overview" />
+  <a href="https://raw.githubusercontent.com/SeeedDocument/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/master/img/block2.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/block2.jpg" alt="Raspberry Pi CAN BUS shield" title="hardware overview" />
   <figcaption><b>Figure 2</b>. <i>Hardware overview B</i></figcaption></a>
 </figure>
 </div>
@@ -52,7 +52,7 @@ Also it have two On-board 120Ω terminating resistors which are controlled by th
 
 <div align="center">
 <figure>
-  <a href="https://raw.githubusercontent.com/SeeedDocument/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/master/img/block-diagram.jpg" target="_blank"><img src="https://github.com/SeeedDocument/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/raw/master/img/block-diagram.jpg" alt="Raspberry Pi CAN BUS shield" title="hardware overview" />
+  <a href="https://raw.githubusercontent.com/SeeedDocument/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/master/img/block-diagram.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/block-diagram.jpg" alt="Raspberry Pi CAN BUS shield" title="hardware overview" />
   <figcaption><b>Figure 3</b>. <i>Block Diagram</i></figcaption></a>
 </figure>
 </div>
@@ -66,7 +66,7 @@ Also it have two On-board 120Ω terminating resistors which are controlled by th
 
 <div align="center">
 <figure>
-  <a href="https://github.com/SeeedDocument/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/raw/master/img/setup.jpg" target="_blank"><img src="https://github.com/SeeedDocument/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/raw/master/img/setup.jpg" alt="Raspberry Pi CAN BUS shield" title="hardware overview" />
+  <a href="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/setup.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/setup.jpg" alt="Raspberry Pi CAN BUS shield" title="hardware overview" />
   <figcaption><b>Figure 4</b>. <i>Mounting Guide</i></figcaption></a>
 </figure>
 </div>
@@ -540,13 +540,13 @@ Thank you!
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/raw/master/res/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/res/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ## Resources
 
-- **[ZIP]** [2-Channel CAN-BUS(FD) Shield for Raspberry Pi Schematic file](https://github.com/SeeedDocument/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/raw/master/res/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi.zip)
+- **[ZIP]** [2-Channel CAN-BUS(FD) Shield for Raspberry Pi Schematic file](https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/res/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi.zip)
 - **[PDF]** [MCP2517 Datasheet](https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/res/MCP2517-datasheet.pdf)
 - **[PDF]** [MCP2557 Datasheet](https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/res/MCP2557-datasheet.pdf)
 

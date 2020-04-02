@@ -21,7 +21,7 @@ We break out the 3.3V I/O pins of SAM D21, SAM D21 chip has rich I / O resources
 Now, let's talk about the Bluetooth Core, the MG126. MG126 is a 2.4GHz BLE RF transceiver with software configurable registers, embedded packet handling engine. It can work with ultra-low power. The Bluetooth air data rate of MG126 is 1Mbps and MG126 can talks with Arduino core at the speed of 4Mbps via the SPI interface.
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Wio-Lite-MG126-p-4189.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Wio-Lite-MG126-p-4189.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
 
 
 
@@ -285,7 +285,7 @@ Only some common interfaces are listed here, and other interfaces can view examp
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Wio-Lite-MG126/raw/master/res/Wio%20Lite%20MG126.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Wio-Lite-MG126/res/Wio%20Lite%20MG126.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 

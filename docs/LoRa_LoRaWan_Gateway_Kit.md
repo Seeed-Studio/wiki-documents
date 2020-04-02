@@ -35,11 +35,11 @@ Regarding the gateway module RHF0M301, it is a 10 channel(8 x Multi-SF + 1 x Sta
 <table class="tg">
   <tr>
     <th class="tg-s6z2">868MHz Kit for Raspberry Pi 3</th>
-    <th class="tg-s6z2"><a href="https://www.seeedstudio.com/LoRa-LoRaWAN-Gateway-868MHz-Kit-with-Raspberry-Pi-3-p-2823.html" target="_blank"><img src="https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" width="200" height="30"  border=0 /></a></th>
+    <th class="tg-s6z2"><a href="https://www.seeedstudio.com/LoRa-LoRaWAN-Gateway-868MHz-Kit-with-Raspberry-Pi-3-p-2823.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" width="200" height="30"  border=0 /></a></th>
   </tr>
   <tr>
     <td class="tg-5hgy">915MHz Kit for Raspberry Pi 3</td>
-    <td class="tg-5hgy"><a href="https://www.seeedstudio.com/LoRa%2FLoRaWAN-Gateway-915MHz-for-Raspberry-Pi-3-p-2821.html" target="_blank"><img src="https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png" width="200" height="30" border=0 /></a></td>
+    <td class="tg-5hgy"><a href="https://www.seeedstudio.com/LoRa%2FLoRaWAN-Gateway-915MHz-for-Raspberry-Pi-3-p-2821.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" width="200" height="30" border=0 /></a></td>
   </tr>
 </table>
 
@@ -215,7 +215,7 @@ d) Power the gateway up. Booting log will be showed in the PuTTY terminal, in th
 prompt you to input your log in name. Please note it takes 1 or 2 minutes to get the prompt
 information.
 
-![](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/img/login_putty.png  )
+![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/login_putty.png  )
 
 e)  Please use RHF2S001 default user name and password to log in. ( Username: **rxhf**, Password:
 **risinghf** ). Note, when input the password, there is no any echo
@@ -467,7 +467,7 @@ Fill your browser with the IP address![]()(IP of your gateway) ,it Will jump to 
 #### Step 4. Use Seeeduino LoRaWAN GPS(RHF76-052AM) access LoRaWAN server
 
 
-There are two modes,in this wiki we only talk about the ABP Mode(This Mode is free for anyone),for more information about OTAA Mode(This model is commercial, you need to pay for it),you can click [here](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/res/%5BRHF-UM01649%5DIoT%20Discovery%20User%20Manual-seeed-v2.1.pdf).
+There are two modes,in this wiki we only talk about the ABP Mode(This Mode is free for anyone),for more information about OTAA Mode(This model is commercial, you need to pay for it),you can click [here](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/res/%5BRHF-UM01649%5DIoT%20Discovery%20User%20Manual-seeed-v2.1.pdf).
 
 a) Find the "Application" button in the upper right corner of the website above, click it and you will see a new page.
 
@@ -620,7 +620,7 @@ Then go to **Dashboard -> Applications -> SampleApp ->Device** , click the Node 
 
 - Step 1. Download the [latest raspberry image](https://www.raspberrypi.org/downloads/raspbian/)
 
-- Step 2. Download libssl1.0.0.deb to your Raspberry Pi by running `wget https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/res/libssl1.0.0.deb`, and run `sudo dpkg -i ./libssl1.0.0.deb` to install it in terminal.
+- Step 2. Download libssl1.0.0.deb to your Raspberry Pi by running `wget https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/res/libssl1.0.0.deb`, and run `sudo dpkg -i ./libssl1.0.0.deb` to install it in terminal.
 
 - Step 3.  Run `sudo raspi-config` in terminal, select _Interfacing Options_ -- _P4 SPI_ -- _YES_ to enable SPI, so that Raspberry Pi can communicate with RHF0M301.
 
@@ -636,7 +636,7 @@ chmod +x loriot-gw
 ## Resources
 
 - **[PDF]** [Download Wiki PDF](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/res/LoRa_LoRaWan_Gateway_Kit.pdf)
-- **[Uer Manual]** [User Manual](https://github.com/SeeedDocument/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/raw/master/res/%5BRHF-UM01649%5DIoT%20Discovery%20User%20Manual%20-%20v3.2.pdf).
+- **[Uer Manual]** [User Manual](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/res/%5BRHF-UM01649%5DIoT%20Discovery%20User%20Manual%20-%20v3.2.pdf).
 - **[More Reading]** [Wiki of Seeeduino LoRaWAN](/Seeeduino_LoRAWAN/)
 - **[More Reading]** [RisingHF Website](http://www.risinghf.com/product/risinghf-iot-dicovery/?lang=en)
 - **[Azure IoT Edge LoRaWAN]** [Azure IoT Edge LoRaWAN](https://github.com/Azure/iotedge-lorawan-starterkit/)

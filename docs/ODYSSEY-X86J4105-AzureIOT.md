@@ -12,11 +12,11 @@ This tutorial demonstrate how to read sensor values connnected to the ODYSSEY - 
 
 ## Receiving Raw Data
 
-<div align=center><img width = 600 src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/AzureIOT/receivingData.gif"/></div>
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/receivingData.gif"/></div>
 
 ## Visulization of Data
 
-<div align=center><img src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/AzureIOT/visulizeData.jpg"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/visulizeData.jpg"/></div>
 
 ## Introduction
 
@@ -32,7 +32,7 @@ This tutorial demonstrate how to read sensor values connnected to the ODYSSEY - 
 
 Once installed Azure CLI, open `cmd` or `Powershell` and run `az` command and you should see screen as below:
 
-<div align=center><img width = 500 src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/AzureIOT/AzureCLI.png"/></div>
+<div align=center><img width = 500 src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/AzureCLI.png"/></div>
 
 ## Azure CLI Pre-configurations
 
@@ -40,7 +40,7 @@ Once installed Azure CLI, open `cmd` or `Powershell` and run `az` command and yo
 
 Open `cmd` or `Powershell` and run the `az login` command. A browser window will appear and log in your Microsoft Azure account.
 
-<div align=center><img src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/AzureIOT/azAcc.png"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/azAcc.png"/></div>
 
 ### Adding Microsoft IoT Azure Extensions for Azure CLI
 
@@ -72,7 +72,7 @@ This part describes how to create an IoT Hub using Azure portal:
 
 **Important Note:** the IoT hub will be pubilicity discoverable as a DNS endpoint, so ensure to avoid any sensitive information while naming the IoT Hub.
 
-<div align=center><img src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/AzureIOT/iotHub.jpg"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/iotHub.jpg"/></div>
 
 1.Select **Next: Size and scale** to continue:
 
@@ -80,7 +80,7 @@ This part describes how to create an IoT Hub using Azure portal:
 
 2.Select **Review + create** tab to review settings and click **Create** to create your new IoT Hub. Creating the IoT might take few minutes.
 
-<div align=center><img width = 500 src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/AzureIOT/iotHubProcess.jpg"/></div>
+<div align=center><img width = 500 src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/iotHubProcess.jpg"/></div>
 
 ## Register a Device
 
@@ -110,7 +110,7 @@ Make a note of the device connection string, which looks like: `HostName={YourIo
 
 - Replace your `hub-name` and `device-id`, the same as above.
 
-<div align=center><img src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/AzureIOT/deviceID.png"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/deviceID.png"/></div>
 
 ## Collecting Data using Arduino Core
 
@@ -238,7 +238,7 @@ python3 SendingData.py
 
 The following screenshot shows the output of sending sensor data to Azure IoT Hub.
 
-<div align=center><img src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/AzureIOT/sendingData.png"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/sendingData.png"/></div>
 
 ## Reading Data from Azure IoT Hub
 
@@ -256,7 +256,7 @@ az iot hub monitor-events --hub-name iot-test-1 --device-id MyPythonDevice
 
 The following screenshot shows the messages sent from ODYSSEY - X86J4105 to the Iot Hub. This data can be processed or displayed.
 
-<div align=center><img src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/AzureIOT/recevingData.jpg"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/recevingData.jpg"/></div>
 
 ---
 
@@ -276,7 +276,7 @@ To add a consumer group:
 
 2.Open your IoT Hub, select **Built-in endpoints**, under **Consumer Groups** enter a name to create a new consumer group, and **Save**.
 
-<div align=center><img src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/AzureIOT/endpoint.jpg"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/endpoint.jpg"/></div>
 
 In my case, `lightsensor` is the new consumer group.
 
@@ -298,7 +298,7 @@ To create a Stream Analytic Job:
 
 - **Location:** Use the same location as your resource group.
 
-<div align=center><img src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/AzureIOT/analytic.jpg"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/analytic.jpg"/></div>
 
 ## Add an Input to the Stream Analytics job
 
@@ -316,7 +316,7 @@ To create a Stream Analytic Job:
 
 - **Consumer group**: Choose the one we just created.
 
-<div align=center><img width = 350 src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/AzureIOT/settings.jpg"/></div>
+<div align=center><img width = 350 src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/settings.jpg"/></div>
 
 1.Select **Save**.
 
@@ -336,7 +336,7 @@ To create a Stream Analytic Job:
 
 - **Authentication mode:** Choose User token.
 
-<div align=center><img width = 350 src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/AzureIOT/powerBI.jpg"/></div>
+<div align=center><img width = 350 src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/powerBI.jpg"/></div>
 
 7.Select **Save**.
 
@@ -348,13 +348,13 @@ To create a Stream Analytic Job:
 
 3.Replace `[YourOutputAlias]` with the output alias. In my case, it is `SensorOutput`.
 
-<div align=center><img src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/AzureIOT/PowerBIsettings.jpg"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/PowerBIsettings.jpg"/></div>
 
 ## Run the Stream Analytics job
 
 1.Under **Overview** click **Start** -> **Now** -> **Start**. The job status changes from **Stopped** to **Running**.
 
-<div align=center><img src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/AzureIOT/run.jpg"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/run.jpg"/></div>
 
 **Note: To start getting sensor readings, remember to run the Python script in ODYSSEY - X86J4105 to send data to cloud.**
 
@@ -366,7 +366,7 @@ To create a Stream Analytic Job:
 
 3.Under **Actions** select the **first icon(Create report)**
 
-<div align=center><img src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/AzureIOT/PowerBI1.jpg"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/PowerBI1.jpg"/></div>
 
 4.Create a line chart to show real-time light sensor value over time.
 
@@ -376,7 +376,7 @@ To create a Stream Analytic Job:
 
 - Under Fields select **Light**.
 
-<div align=center><img src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/AzureIOT/PowerBI2.jpg"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/PowerBI2.jpg"/></div>
 
 5.Click **Save** to save Report.
 
@@ -384,7 +384,7 @@ To create a Stream Analytic Job:
 
 Now you can view the sensor reading on a dashboard via Power BI!
 
-<div align=center><img src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/AzureIOT/PowerBI3.jpg"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/PowerBI3.jpg"/></div>
 
 Microsoft also offers the [Power BI mobile apps](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) for viewing and interacting with your Power BI dashboards and reports on your mobile device.
 

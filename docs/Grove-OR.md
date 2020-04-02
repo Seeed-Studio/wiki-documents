@@ -42,13 +42,13 @@ Note that this Grove - OR module is sold only as part of the above mentioned pac
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-OR/raw/master/res/Grove-OR_v2.0_Eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-OR/res/Grove-OR_v2.0_Eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ##  Resources
 
-*   [Grove - OR v2.0 Source (Eagle files)](https://github.com/SeeedDocument/Grove-OR/raw/master/res/Grove-OR_v2.0_Eagle.zip)
+*   [Grove - OR v2.0 Source (Eagle files)](https://files.seeedstudio.com/wiki/Grove-OR/res/Grove-OR_v2.0_Eagle.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

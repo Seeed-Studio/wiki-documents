@@ -37,7 +37,7 @@ MT3620 software development is supported using the powerful Microsoft Visual Stu
 
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/MT3620-Mini-Dev-Board-p-2919.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/MT3620-Mini-Dev-Board-p-2919.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
 
  
 !!!Warning
@@ -164,13 +164,13 @@ MT3620 software development is supported using the powerful Microsoft Visual Stu
 
 **Board Diagram**
 
-<a href="https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/Sys.jpg" target="_blank"><img src="https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/Sys.jpg"/></a>
+<a href="https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/Sys.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/Sys.jpg"/></a>
 
 
 
 **Board Pinmap**
 
-<a href="https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/pinout.jpg" target="_blank"><img src="https://github.com/SeeedDocument/MT3620_Mini_Dev_Board/raw/master/img/pinout.jpg"/></a>
+<a href="https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/pinout.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/pinout.jpg"/></a>
 
 ## Applications
 
@@ -374,7 +374,7 @@ On top of the box , there is a warning light ,which will flash when the door is 
 
 ## Resource
 
-- **[Product]** [MT3620 Mini Dev Board Product Brief](https://github.com/SeeedDocument/MT3620-Mini-Dev-Board/blob/master/res/MT3620%20Mini%20Dev%20Board%20Product%20Brief-2019-06-18.pdf)
+- **[Product]** [MT3620 Mini Dev Board Product Brief](https://files.seeedstudio.com/wiki/MT3620-Mini-Dev-Board/res/MT3620%20Mini%20Dev%20Board%20Product%20Brief-2019-06-18.pdf)
 - **[Product]** [Welcome to Azure Sphere](https://docs.microsoft.com/en-us/azure-sphere/)
 - **[Library]** [Azure Sphere Demo Library](https://github.com/Seeed-Studio/Azure_Sphere_Demo)
 - **[PDF]** [MT3620 Mini Dev Board Schematic](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/res/MT3620%20Dev%20Board%20V2.pdf)

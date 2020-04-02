@@ -487,7 +487,7 @@ evaluation software [m-center for Windows, version 1.11.0](https://www.u-blox.co
 
 **Q2: Do you have AT command list?**
 
-A2: Here is [u-blox-CEL_ATCommands](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/res/u-blox-CEL_ATCommands_(UBX-13002752).pdf).
+A2: Here is [u-blox-CEL_ATCommands](https://files.seeedstudio.com/wiki/LTE_Cat_1_Pi_HAT/res/u-blox-CEL_ATCommands_(UBX-13002752).pdf).
 
 **Q3: What is differences between the Lara-R203/204/211?**
 
@@ -533,10 +533,10 @@ AT+UPING="www.google.com"
 ## Resource
 
 - **[PDF]** [LTE Cat.1 Pi HAT Schematic](https://files.seeedstudio.com/wiki/LTE_Cat_1_Pi_HAT/res/LTE%20CAT.1%20Pi%20HAT%20v1.0.pdf)
-- **[PDF]** [u-blox-CEL_ATCommands](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/res/u-blox-CEL_ATCommands_(UBX-13002752).pdf)
-- **[PDF]** [LARA-R2_DataSheet](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/res/LARA-R2_DataSheet_(UBX-16005783).pdf)
-- **[PDF]** [LARA-R2_SysIntegrManual](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/res/LARA-R2_SysIntegrManual_(UBX-16010573).pdf)
-- **[PDF]** [AT-Commands Examples AppNote](https://github.com/SeeedDocument/LTE_Cat_1_Pi_HAT/raw/master/res/AT-CommandsExamples_AppNote_(UBX-13001820).pdf)
+- **[PDF]** [u-blox-CEL_ATCommands](https://files.seeedstudio.com/wiki/LTE_Cat_1_Pi_HAT/res/u-blox-CEL_ATCommands_(UBX-13002752).pdf)
+- **[PDF]** [LARA-R2_DataSheet](https://files.seeedstudio.com/wiki/LTE_Cat_1_Pi_HAT/res/LARA-R2_DataSheet_(UBX-16005783).pdf)
+- **[PDF]** [LARA-R2_SysIntegrManual](https://files.seeedstudio.com/wiki/LTE_Cat_1_Pi_HAT/res/LARA-R2_SysIntegrManual_(UBX-16010573).pdf)
+- **[PDF]** [AT-Commands Examples AppNote](https://files.seeedstudio.com/wiki/LTE_Cat_1_Pi_HAT/res/AT-CommandsExamples_AppNote_(UBX-13001820).pdf)
 
 We have this part available in [geppetto](https://geppetto.seeedstudio.com/), easy modular electronic design with Seeed and Geppeto. Build it Now. [geppetto.seeedstudio.com](https://geppetto.seeedstudio.com/)
 

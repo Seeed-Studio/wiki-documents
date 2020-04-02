@@ -27,7 +27,7 @@ The control solution Seeeduino Crypto is the same as ARDUINO UNO WIFI REV2. The 
 
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Seeeduino-Crypto-ATmega4809-ECC608-p-4369.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Seeeduino-Crypto-ATmega4809-ECC608-p-4369.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
 
 
 ## Features
@@ -162,7 +162,7 @@ Select the serial device of the Arduino board from the Tools | Serial Port menu.
 Now, simply click the "Upload" button in the environment. Wait a few seconds and if the upload is successful, the message "Done uploading." will appear in the status bar.
 
 
-![enter image description here](https://github.com/SeeedDocument/Seeeduino_GPRS/blob/master/img/upload_image.png?raw=true)
+![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/upload_image.png)
 
 
 A few seconds after the upload finishes, you should see the pin 13 (L) LED on the board start to blink (in orange). If it does, congratulations! You've gotten Arduino up-and-running. If you have problems, please see the troubleshooting suggestions.
@@ -174,7 +174,7 @@ A few seconds after the upload finishes, you should see the pin 13 (L) LED on th
 
 - **Schematic**    
 
-   [Seeeduino Crypto Schematic Diagram](https://github.com/SeeedDocument/Seeeduino-Crypto-ATmega4809-ECC608-/raw/master/res/Seeeduino-Crypto-(ATmega4809%26ECC608).zip)  
+   [Seeeduino Crypto Schematic Diagram](https://files.seeedstudio.com/wiki/Seeeduino-Crypto-ATmega4809-ECC608-/res/Seeeduino-Crypto-(ATmega4809%26ECC608).zip)  
 
 - **Data Sheet**
 

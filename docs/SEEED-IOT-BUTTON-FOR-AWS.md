@@ -9,11 +9,11 @@ sku: 102991334
 ---
 
 
-![](https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/Side.png)
+![](https://files.seeedstudio.com/wiki/Seeed-IOT-BUTTON-FOR-AWS/img/Side.png)
 
 The Seeed IoT Button For AWS is a Wi-Fi based, programmable button that is easy to configure and simple to use. You can use the Seeed IoT Button For AWS to capture quick customer feedback without burdening customers with time-consuming questionnaires. It is designed for enterprises and developers to easily integrate with existing business workflows and systems using the [AWS IoT 1-Click service](https://docs.aws.amazon.com/iot-1-click/latest/developerguide/what-is-1click.html). And this IoT Button is fully compatible with official AWS IoT 1-Click iOS app and Android app. The battery for this device is NCR18650B chargeable Li-ion battery. Please kindly know that no battery in the package, while the battery is available in regular convenience store and customer need to prepare themselves. And what we propose is Panasonic NCR18650B 3.6V 3400mAh.There is a bracket for this IoT Button. Customer can stick it on the wall or other surface and easy to put the IoT Button  in and get out from the bracket. The Seeed IoT Button for AWS supports three types of clicks: single, double, and long press, and 3 LEDs for different indications.
 
-<p style=":center"><a href="" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
+<p style=":center"><a href="" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
 
 ## Feature
 
@@ -49,7 +49,7 @@ The Seeed IoT Button For AWS is a Wi-Fi based, programmable button that is easy 
 
 <div align="center">
 <figure>
-  <p style=":center"><a href="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/Seeed_IOT_Button_HardwareOverview.png" target="_blank"><img src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/Seeed_IOT_Button_HardwareOverview.png" /></a></p>
+  <p style=":center"><a href="https://files.seeedstudio.com/wiki/Seeed-IOT-BUTTON-FOR-AWS/img/Seeed_IOT_Button_HardwareOverview.png" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-IOT-BUTTON-FOR-AWS/img/Seeed_IOT_Button_HardwareOverview.png" /></a></p>
 </figure>
 </div>
 
@@ -74,25 +74,25 @@ When first time using the device, you must put the battery inside the button, an
 
 3.Press **Claim with Device ID** in the App. Press **Scan** in the app and Scan the **DSN** from the bottom of Seeed IoT Button for AWS.
 
-<div align=center><img src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/05.png"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/Seeed-IOT-BUTTON-FOR-AWS/img/05.png"/></div>
 
 4.Press **Configure**
 
 5.Press your **Seeed IoT Button for AWS** for 7 seconds until the blue light flashes
 
-<div align=center><img width = 250 src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/07-1.png"/></div>
+<div align=center><img width = 250 src="https://files.seeedstudio.com/wiki/Seeed-IOT-BUTTON-FOR-AWS/img/07-1.png"/></div>
 
 6.Select a Wi-Fi network from the list of networks. This is the Wi-Fi network you want your buttons to use
 
-<div align=center><img width=250 src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/08.png"/></div>
+<div align=center><img width=250 src="https://files.seeedstudio.com/wiki/Seeed-IOT-BUTTON-FOR-AWS/img/08.png"/></div>
 
 7.Input the password (if any) for the Wi-Fi network and Continue
 
-<div align=center><img width=250 src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/09.png"/></div>
+<div align=center><img width=250 src="https://files.seeedstudio.com/wiki/Seeed-IOT-BUTTON-FOR-AWS/img/09.png"/></div>
 
 8.Wait until configuration succeeded is appeared in the App and press **Finish**. The configuration is done
 
-<div align=center><img width = 500 src="https://github.com/SeeedDocument/Seeed-IOT-BUTTON-FOR-AWS/raw/master/img/10.png"/></div>
+<div align=center><img width = 500 src="https://files.seeedstudio.com/wiki/Seeed-IOT-BUTTON-FOR-AWS/img/10.png"/></div>
 
 Now you can start playing with your AWS 1-Click service!
 

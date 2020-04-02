@@ -6,7 +6,7 @@ nointro:
 #**ReSpeaker**
 ##The Open Voice Ecosystem for Developers
 
-[![All ReSpeaker Dev Boards](https://github.com/SeeedDocument/ReSpeakerSolutions/blob/master/img/FullReSpeakerLine.png?raw=true)](http://www.seeedstudio.com/series/Respeaker-10.html)
+[![All ReSpeaker Dev Boards](https://files.seeedstudio.com/wiki/ReSpeakerSolutions/img/FullReSpeakerLine.png)](http://www.seeedstudio.com/series/Respeaker-10.html)
 ##**Enabling Voice Interface**
 
 The ReSpeaker series is a family of development boards designed to enable a future where voice interface is part of everyday human-device interaction. Designed to be easily integrated (and customized) into products, but also to allow other services and products to be easily integrated into it, ReSpeaker is constantly adding new features and integrations along with examples on how to implement them. Many of these features will be for more than just making smart speakers. We hope you can work with us to create better voice solutions for offices, buildings, retail, entertainment, conservation, and more.

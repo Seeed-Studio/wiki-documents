@@ -8,14 +8,14 @@ surveyurl: https://www.research.net/r/seeed_bbg
 sku: 102010027
 ---
 
-![enter image description here](https://github.com/SeeedDocument/BeagleBone_Green/blob/master/images/cover.jpg?raw=true)
+![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/cover.jpg)
 
 Seeed Studio BeagleBone® Green is a low cost, open-source, community supported development platform for developers and hobbyists. It is a joint effort by [BeagleBoard.org](http://beagleboard.org/) and Seeed Studio. It is based on the classical open-source hardware design of [BeagleBone® Black](http://beagleboard.org/black) and developed into this differentiated version. The Seeed Studio BeagleBone® Green includes two Grove connectors, making it easier to connect to the large family of Grove sensors. The on-board HDMI is removed to make room for these Grove connectors.
 
 Boot Linux in under 10 seconds and get started on development in less than 5 minutes with just a single USB cable.
 
 
-<p style=":center"><a href="http://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-p-2504.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
+<p style=":center"><a href="http://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-p-2504.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
 
 
 <p style=":center"><a href="https://www.amazon.com/dp/B01AIC5AP4" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/amaon.png"  width="300" height="48"  border=0/></a></p>
@@ -385,19 +385,19 @@ There're many references to help you to get more information about the board.
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/BeagleBone_Green_v1c.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BeagleBone_Green_v1c.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ## Resources
 
 
-- **[PDF]** [Seeed Studio BeagleBone® Green SRM(v1a)(pdf)](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/BBG_SRM_V1a_20151009.pdf)
-- **[PDF]** [Seeed Studio BeagleBone® Green SRM(v3)(pdf)](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/BBG_SRM_V3_20150804.pdf)
-- **[PDF]** [Seeed Studio BeagleBone® Green Schematic(pdf)](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/BEAGLEBONE_GREEN_V1.pdf)
-- **[Zip]** [Seeed Studio BeagleBone® Green Schematic(OrCAD) v1c](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/BeagleBone_Green_v1c.zip)
-- **[RAR]** [Seeed Studio BeagleBone® Green Schematic(OrCAD)](https://github.com/SeeedDocument/BeagleBone_Green/raw/master/resources/BEAGLEBONE_GREEN_V1_166%28sch%29.rar)
-- **[RAR]** [Seeed Studio BeagleBone® Green PCB(OrCAD)](https://github.com/SeeedDocument/BeagleBone_Green/blob/master/resources/BeagleBone_Green_v1.166%28board%29.rar)
+- **[PDF]** [Seeed Studio BeagleBone® Green SRM(v1a)(pdf)](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BBG_SRM_V1a_20151009.pdf)
+- **[PDF]** [Seeed Studio BeagleBone® Green SRM(v3)(pdf)](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BBG_SRM_V3_20150804.pdf)
+- **[PDF]** [Seeed Studio BeagleBone® Green Schematic(pdf)](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BEAGLEBONE_GREEN_V1.pdf)
+- **[Zip]** [Seeed Studio BeagleBone® Green Schematic(OrCAD) v1c](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BeagleBone_Green_v1c.zip)
+- **[RAR]** [Seeed Studio BeagleBone® Green Schematic(OrCAD)](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BEAGLEBONE_GREEN_V1_166%28sch%29.rar)
+- **[RAR]** [Seeed Studio BeagleBone® Green PCB(OrCAD)](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BeagleBone_Green_v1.166%28board%29.rar)
 - **[Zip]** [AM335X Datasheet](https://files.seeedstudio.com/wiki/Bazaar_file/102010027/AM335x.pdf)
 - **[3D]** [Seeed Studio BeagleBone® Green 3D Model](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BBG.zip)
 - **[PDF]** [Seeed Studio BeagleBone® Green Mechincal Drawing](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BBG-PCBA.pdf)

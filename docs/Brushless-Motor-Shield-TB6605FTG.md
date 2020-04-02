@@ -18,7 +18,7 @@ We also released the [TB6605 BLDC Motor Kit for Arduino](https://www.seeedstudio
 
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/BLDC-Motor-Shield-TB6605-p-4025.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/BLDC-Motor-Shield-TB6605-p-4025.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
 
 
 
@@ -48,7 +48,7 @@ We also released the [TB6605 BLDC Motor Kit for Arduino](https://www.seeedstudio
 
 <div align="center">
 <figure>
-  <a href="https://raw.githubusercontent.com/SeeedDocument/BLDC-Motor-Shield-TB6605/master/img/pinout.jpg" target="_blank"><img src="https://github.com/SeeedDocument/BLDC-Motor-Shield-TB6605/raw/master/img/pinout.jpg" alt="TB6605FTG Brushless Motor Shield pinout" title="Pinout diagram" />
+  <a href="https://raw.githubusercontent.com/SeeedDocument/BLDC-Motor-Shield-TB6605/master/img/pinout.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/BLDC-Motor-Shield-TB6605/img/pinout.jpg" alt="TB6605FTG Brushless Motor Shield pinout" title="Pinout diagram" />
   <figcaption><b>Figure 1</b>. <i>Pinout diagram</i></figcaption></a>
 </figure>
 </div>
@@ -103,7 +103,7 @@ Or you can just use our [TB6605FTG Brushless Motor Kit for Arduino](https://www.
 
 <div align="center">
 <figure>
-  <a href="https://raw.githubusercontent.com/SeeedDocument/BLDC-Motor-Shield-TB6605/master/img/connect.png" target="_blank"><img src="https://github.com/SeeedDocument/BLDC-Motor-Shield-TB6605/raw/master/img/connect.png" alt="brushless dc motor wiring" title="Pinout diagram" />
+  <a href="https://raw.githubusercontent.com/SeeedDocument/BLDC-Motor-Shield-TB6605/master/img/connect.png" target="_blank"><img src="https://files.seeedstudio.com/wiki/BLDC-Motor-Shield-TB6605/img/connect.png" alt="brushless dc motor wiring" title="Pinout diagram" />
   <figcaption><b>Figure 2</b>. <i>Hardware connection</i></figcaption></a>
 </figure>
 </div>
@@ -127,7 +127,7 @@ Download the [Grove-LCD RGB Backlight Library](https://github.com/Seeed-Studio/G
 
 <div align="center">
 <figure>
-  <a href="https://github.com/SeeedDocument/BLDC-Motor-Shield-TB6605/raw/master/img/ARDUINO.jpg" target="_blank"><img src="https://github.com/SeeedDocument/BLDC-Motor-Shield-TB6605/raw/master/img/ARDUINO.jpg" alt="brushless dc motor arduino" title="Pinout diagram" />
+  <a href="https://files.seeedstudio.com/wiki/BLDC-Motor-Shield-TB6605/img/ARDUINO.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/BLDC-Motor-Shield-TB6605/img/ARDUINO.jpg" alt="brushless dc motor arduino" title="Pinout diagram" />
   <figcaption><b>Figure 3</b>. <i>Demo Path</i></figcaption></a>
 </figure>
 </div>
@@ -142,13 +142,13 @@ Download the [Grove-LCD RGB Backlight Library](https://github.com/Seeed-Studio/G
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/BLDC-Motor-Shield-TB6605/raw/master/res/Brushless%20Motor%20Shield%20(TB6605FTG)%20v1.01.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/BLDC-Motor-Shield-TB6605/res/Brushless%20Motor%20Shield%20(TB6605FTG)%20v1.01.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ## Resources
 
-- **[Zip]** [BLDC Motor Shield (TB6605) Eagle Files](https://github.com/SeeedDocument/BLDC-Motor-Shield-TB6605/raw/master/res/Brushless%20Motor%20Shield%20(TB6605FTG)%20v1.01.zip)
+- **[Zip]** [BLDC Motor Shield (TB6605) Eagle Files](https://files.seeedstudio.com/wiki/BLDC-Motor-Shield-TB6605/res/Brushless%20Motor%20Shield%20(TB6605FTG)%20v1.01.zip)
 
 - **[PDF]** [42BLF01 Brushless Motor-Specification](https://files.seeedstudio.com/wiki/BLDC-Motor-Shield-TB6605/res/42BLF01-Specification.pdf)
 

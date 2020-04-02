@@ -13,7 +13,7 @@ sku: 101020580
 The  Grove - Light & Gesture & Color & proximity sensor is TMG39931 based product, which features advanced Gesture detection, Proximity detection, Digital Ambient Light Sense(ALS), Color Sense(RGBC), and optical pattern generation/transmission for broadcast. This four-in-one sensor allows you to collect the data from ambient environment and transfers over the I2C bus.
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-Light-Gesture-Color-Proximity-Sensor-TMG39931.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-Light-Gesture-Color-Proximity-Sensor-TMG39931.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
 
 ## Feature 
 
@@ -357,19 +357,19 @@ You should see something like this in Serial Monitor after you upload the code t
 ## Schematic Online Viewer
 
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/raw/master/res/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/res/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ## Resources
 
-- **[Zip]** [Grove - Light&Gesture&Color&Proximity Sensor(TMG39931) Eagle Files](https://github.com/SeeedDocument/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/raw/master/res/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931.zip)
+- **[Zip]** [Grove - Light&Gesture&Color&Proximity Sensor(TMG39931) Eagle Files](https://files.seeedstudio.com/wiki/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/res/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931.zip)
 
 - **[Zip]** [Grove - Light&Gesture&Color&Proximity Sensor(TMG39931) Library](https://github.com/Seeed-Studio/Seeed_TMG3993/archive/master.zip)
 
-- **[PDF]** [Datasheet TMG39931](https://github.com/SeeedDocument/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/blob/master/res/TMG3993.pdf)
+- **[PDF]** [Datasheet TMG39931](https://files.seeedstudio.com/wiki/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/res/TMG3993.pdf)
 
-- **[PDF]** [PDF version WIKI](https://github.com/SeeedDocument/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/blob/master/res/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931.pdf)
+- **[PDF]** [PDF version WIKI](https://files.seeedstudio.com/wiki/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/res/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931.pdf)
 
 
 

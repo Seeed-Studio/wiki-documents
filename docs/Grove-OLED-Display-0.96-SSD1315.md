@@ -15,7 +15,7 @@ The Grove - OLED Display 0.96" (SSD1315) is a monochrome(white) 128×64 pixels p
 
 Thanks to the new SSD1315 chip, it can work with 3.3V, so that we removed the expensive DC-DC boost circuit. And with the onboard level shift circuit, the new Grove - OLED Display 0.96" can work with 3.3V and 5V platform. That is to say, you can use it easily as an Arduino OLED display, Raspberry Pi OLED display, etc.
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-OLED-Display-0-96-SSD1315-p-4294.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-OLED-Display-0-96-SSD1315-p-4294.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
 
 ## Feature
 
@@ -76,7 +76,7 @@ Thanks to the new SSD1315 chip, it can work with 3.3V, so that we removed the ex
 
 - **Step 3.** Connect Seeeduino to a PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-OLED-Display-0.96-SSD1315-/raw/master/img/connection.png)
+![](https://files.seeedstudio.com/wiki/Grove-OLED-Display-0.96-SSD1315-/img/connection.png)
 
 #### Software
 
@@ -119,7 +119,7 @@ void loop(void) {
 
 - **Step 4.** The OLED Display should look like this:
 
-<div align=center><img src="https://github.com/SeeedDocument/Grove-OLED-Display-0.96-SSD1315-/raw/master/img/result.png"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-OLED-Display-0.96-SSD1315-/img/result.png"/></div>
 
 ## U8g2 Library Introduction
 
@@ -150,12 +150,12 @@ Here provides the [**U8g2 Library wiki**](https://github.com/olikraus/u8g2/wiki)
 ## Schematic Online Viewer
 
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-OLED-Display-0.96-SSD1315-/raw/master/res/Grove%20-%20OLED%20Display%200.96%20(SSD1315)_v1.0.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-OLED-Display-0.96-SSD1315-/res/Grove%20-%20OLED%20Display%200.96%20(SSD1315)_v1.0.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 ## Resources
 
-- **[ZIP]** [Grove - OLED Display 0.96" Schematic file](https://github.com/SeeedDocument/Grove-OLED-Display-0.96-SSD1315-/raw/master/res/Grove%20-%20OLED%20Display%200.96%20(SSD1315)_v1.0.zip)
+- **[ZIP]** [Grove - OLED Display 0.96" Schematic file](https://files.seeedstudio.com/wiki/Grove-OLED-Display-0.96-SSD1315-/res/Grove%20-%20OLED%20Display%200.96%20(SSD1315)_v1.0.zip)
 - **[PDF]** [OLED Module Datasheet](https://files.seeedstudio.com/wiki/Grove-OLED-Display-0.96-SSD1315-/res/OEL%20Display%20Module.pdf)
 
 ## Tech Support

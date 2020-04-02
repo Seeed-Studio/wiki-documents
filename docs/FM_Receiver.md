@@ -17,7 +17,7 @@ category: Tutorial
 
 Hardware linking is very easy, Grove - LCD RGB Backlight and Grove - I2C FM Receiver communicate over I2C, Grove - Button is a digital input, Grove - Rotary Angle Sensor is an analog input. So it can be linked as shown below.
 
-![](https://github.com/SeeedDocument/Seeeduino_Lotus/blob/master/img/Seeeduino_Lotus_usage.jpg?raw=true)
+![](https://files.seeedstudio.com/wiki/Seeeduino_Lotus/img/Seeeduino_Lotus_usage.jpg)
 
 ##Software Part
 

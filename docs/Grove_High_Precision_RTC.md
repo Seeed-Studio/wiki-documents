@@ -100,16 +100,16 @@ After upload completed, you can open the serial monitor to see the result.
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-High_Precision_RTC/blob/master/res/sch_eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-High_Precision_RTC/res/sch_eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ##  Resources
 ---
 *   [Grove - High Precision RTC Library and Examples](https://github.com/Seeed-Studio/Grove_High_Precision_RTC_PCF85063TP)
-*   [Grove - High Precision RTC Eagle file](https://github.com/SeeedDocument/Grove-High_Precision_RTC/blob/master/res/sch_eagle.zip)
-*   [Grove - High Precision RTC Schematic pdf file](https://github.com/SeeedDocument/Grove-High_Precision_RTC/blob/master/res/sch_pdf.pdf)
-*   [PCF85063TP Datasheet](https://github.com/SeeedDocument/Grove-High_Precision_RTC/blob/master/res/PCF85063TP.pdf)
+*   [Grove - High Precision RTC Eagle file](https://files.seeedstudio.com/wiki/Grove-High_Precision_RTC/res/sch_eagle.zip)
+*   [Grove - High Precision RTC Schematic pdf file](https://files.seeedstudio.com/wiki/Grove-High_Precision_RTC/res/sch_pdf.pdf)
+*   [PCF85063TP Datasheet](https://files.seeedstudio.com/wiki/Grove-High_Precision_RTC/res/PCF85063TP.pdf)
 *   [Grove - RTC](https://www.seeedstudio.com/Grove-RTC-p-758.html)
 
 

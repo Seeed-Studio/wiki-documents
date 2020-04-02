@@ -19,7 +19,7 @@ We have been cooking electronics kits for quite a while now and Grove Creator Ki
 The Grove - Creator Kit is one of the best kits for creators of any age, whether you are complete beginners or have prior experience in electronics. This kit will help you get rid of traditional soldering and complicated wiring and thereby opening doors into the Grove ecosystem. Learn more about Grove <a href="https://www.seeedstudio.com/grove.html">here!</a>.
 
 
-<a href="https://www.seeedstudio.com/grove.html"><img src="https://github.com/SeeedDocument/Bazaar_Document/raw/master/banner.jpg"></a>
+<a href="https://www.seeedstudio.com/grove.html"><img src="https://files.seeedstudio.com/wiki/Bazaar_Document/banner.jpg"></a>
 
 Here is an introductory video of the Grove Creator Kit!
 
@@ -99,7 +99,7 @@ This kit comes in three different flavors, namely, α, β and γ which includes 
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | Micro:bit                                                                                     
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg) | ![](https://github.com/SeeedDocument/Bazaar_Document/raw/master/microbit-logo-stacked-2.png) | 
+| ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg) | ![](https://files.seeedstudio.com/wiki/Bazaar_Document/microbit-logo-stacked-2.png) | 
 
 
 ## Cables Included in these kits
@@ -107,7 +107,7 @@ This kit comes in three different flavors, namely, α, β and γ which includes 
 We have provided four different cables in these kits for your own flexibilty when connecting these modules with your favourite development boards.
 
 <div style="display: flex; justify-content: center;">
-  <img src="https://github.com/SeeedDocument/Bazaar_Document/raw/master/Untitled-2.png" style="width: 550px; height: 400px;" />
+  <img src="https://files.seeedstudio.com/wiki/Bazaar_Document/Untitled-2.png" style="width: 550px; height: 400px;" />
 </div>
 
 
@@ -117,7 +117,7 @@ We have provided four different cables in these kits for your own flexibilty whe
 We have also provided a step-by-step tutorial book along with all these three kits to help you get started with the kits quickly and easily. You can follow along the book to build your next exciting electronics projects!
 
 
-<img src="https://github.com/SeeedDocument/Bazaar_Document/raw/master/book%20with%20contents.png" />
+<img src="https://files.seeedstudio.com/wiki/Bazaar_Document/book%20with%20contents.png" />
 
 
 If you want to have access to a PDF version of this book, please refer to <a href="https://www.youtube.com/redirect?v=QwY91NMWCK4&event=video_description&redir_token=h9KHwwW0l9Qj8n3ykMUp56Y8i2d8MTU3NTEwODI4NUAxNTc1MDIxODg1&q=https%3A%2F%2Fgithub.com%2FSeeed-Studio%2FSeeed_Learning_Space%2Fblob%2Fmaster%2FSeeed_Creator_Kit%2FGrove%2520Creator%2520Kit%2520Manual%2520Final%2520Edition%2520V1.0.pdf">this link.</a>
@@ -127,7 +127,7 @@ If you want to have access to a PDF version of this book, please refer to <a hre
 
 We have not limited the learning process only to a book. We have also provided a video series on YouTube that explains how to get started with these kits in an interactive way. 
 
-<a href="https://www.youtube.com/playlist?list=PLpH_4mf13-A1XN_EDUVUaLCr3i2P89dbf"><img src="https://github.com/SeeedDocument/Bazaar_Document/raw/master/Capture.PNG"></a>
+<a href="https://www.youtube.com/playlist?list=PLpH_4mf13-A1XN_EDUVUaLCr3i2P89dbf"><img src="https://files.seeedstudio.com/wiki/Bazaar_Document/Capture.PNG"></a>
 
 
 Feel free to have a look at the videos through <a href="https://www.youtube.com/playlist?list=PLpH_4mf13-A1XN_EDUVUaLCr3i2P89dbf">this link</a>
@@ -144,20 +144,20 @@ You can have access to the Grove Creator Kit through our country distributors.
 
 
 
-<img src="https://github.com/SeeedDocument/Bazaar_Document/raw/master/india.jpg" alt="India" width="500" height="599" usemap="#India">
+<img src="https://files.seeedstudio.com/wiki/Bazaar_Document/india.jpg" alt="India" width="500" height="599" usemap="#India">
 
 <map name="India">
   <area shape="rect" coords="20, 355, 131, 408" href="https://www.evelta.com/">
   <area shape="rect" coords="151, 297, 262, 354" href="https://www.robu.in">
   <area shape="rect" coords="15, 243, 165, 295" href="https://www.thingbits.net/t/brands/seeed-studio">
 
-<img src="https://github.com/SeeedDocument/Bazaar_Document/raw/master/Malaysia.jpg" alt="Malaysia" width="500" height="599" usemap="#Malaysia">
+<img src="https://files.seeedstudio.com/wiki/Bazaar_Document/Malaysia.jpg" alt="Malaysia" width="500" height="599" usemap="#Malaysia">
 
 <map name="Malaysia">
   <area shape="rect" coords="83, 258, 197, 312" href="https://my.cytron.io/grove-seeedstudio?">
 
 
-<img src="https://github.com/SeeedDocument/Bazaar_Document/raw/master/Philippines.jpg" alt="Philippines" width="500" height="599" usemap="#Philippines">
+<img src="https://files.seeedstudio.com/wiki/Bazaar_Document/Philippines.jpg" alt="Philippines" width="500" height="599" usemap="#Philippines">
 
 <map name="Philippines">
   <area shape="rect" coords="122, 178, 269, 232" href="http://www.makerlab-electronics.com">

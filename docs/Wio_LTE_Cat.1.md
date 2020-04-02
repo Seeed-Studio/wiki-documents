@@ -151,9 +151,9 @@ Hold the reset button for a short time(More than 10 seconds)| The hole board wil
 
 ## Hardware Overview
 
-![](https://github.com/SeeedDocument/Wio_Tracker_LTE/raw/master/img/wio_tracker_lte_v1._top.png)
+![](https://files.seeedstudio.com/wiki/Wio_Tracker_LTE/img/wio_tracker_lte_v1._top.png)
 
-![](https://github.com/SeeedDocument/Wio_Tracker_LTE/raw/master/img/wio_tracker_lte_v1_buttom.png)
+![](https://files.seeedstudio.com/wiki/Wio_Tracker_LTE/img/wio_tracker_lte_v1_buttom.png)
 
 !!!Tip
     If you want to use the on-board Grove connector, please use digitalWrite(B10, HIGH) to open 3V3_B. except D38 power on by default. Otherwise you can't provide power to Grove modules.
@@ -363,7 +363,7 @@ And **EC21-A** is what we are using in WIO Tracker - LTE, which supports AT&T an
 - Step 4: The Wio LTE board will access **DFU mode**.
 - Step 5: In **command line windows** type **dfu-util -d 0483:df11 -c 1 -i 0 -a 0 -s 0x08000000 -D xxx.bin**. For windows, Please enter the full path of the bin file.
 
-![dfu-flash](https://github.com/SeeedDocument/Wio_LTE/blob/master/img/wio_tracker_lte_v1_dfu-flash.png?raw=true)
+![dfu-flash](https://files.seeedstudio.com/wiki/Wio_LTE/img/wio_tracker_lte_v1_dfu-flash.png)
 
 
 
@@ -377,7 +377,7 @@ Thanks to G.Williams for providing Espruino the Javascript interpreter, so that 
 - Step 2: [Click here to get Espruino Web IDE](https://chrome.google.com/webstore/detail/espruino-web-ide/bleoifhkdalbjfbobjackfdifdneehpo)
 - Step 3: Run Espruino Web IDE from chrome's home screen or the App Launcher (type **chrome://apps*** at the address bar)
 
-![Espruino Web IDE](https://github.com/SeeedDocument/Wio_LTE/blob/master/img/wio_tracker_lte_v1_WebIDE.png?raw=true)
+![Espruino Web IDE](https://files.seeedstudio.com/wiki/Wio_LTE/img/wio_tracker_lte_v1_WebIDE.png)
 
 **2. How to use Espruino Web IDE**
 
@@ -385,11 +385,11 @@ Thanks to G.Williams for providing Espruino the Javascript interpreter, so that 
 
 - Step 2: On the Web IDE click the left top icon, choose Espruino board in the select box.
 
-![](https://github.com/SeeedDocument/Wio_LTE/blob/master/img/wio_tracker_lte_v1_connectWebIDE.png?raw=true)
+![](https://files.seeedstudio.com/wiki/Wio_LTE/img/wio_tracker_lte_v1_connectWebIDE.png)
 
 - Step 3: To learn more about the IDE, please click help and then tour as below.
 
-![](https://github.com/SeeedDocument/Wio_LTE/blob/master/img/wio_tracker_lte_v1_WebIDEGuide.png?raw=true)
+![](https://files.seeedstudio.com/wiki/Wio_LTE/img/wio_tracker_lte_v1_WebIDEGuide.png)
 
 
 **3. How to load modules**
@@ -436,7 +436,7 @@ For example using require("async"); will make the Web IDE loading the tar.gz fil
 
 If you are using a local project folder, the Web IDE will automatically create an empty modules folder inside. Put a module there and you can load it with require("myCustomModule");.
 
-![](https://github.com/SeeedDocument/Wio_LTE/blob/master/img/wio_tracker_lte_v1_projectFiles.png?raw=true)
+![](https://files.seeedstudio.com/wiki/Wio_LTE/img/wio_tracker_lte_v1_projectFiles.png)
 
 With default Web IDE configuration, it will look for modules following this order:
 
@@ -2096,22 +2096,22 @@ A8: Here is https://github.com/Seeed-Studio/Wio_LTE_JavaScript_Demo .
 
 ## Wio LTE AU Version v1.3b Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Wio_LTE/raw/master/res/Wio%20LTE%20AU%20Version%20v1.3b-%204G%2C%20Cat.1%2C%20GNSS%2C%20Espruino%20Compatible.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Wio_LTE/res/Wio%20LTE%20AU%20Version%20v1.3b-%204G%2C%20Cat.1%2C%20GNSS%2C%20Espruino%20Compatible.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 ## Wio LTE EU Version v1.3b Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Wio_LTE/raw/master/res/Wio%20LTE%20EU%20Version%20v1.3b-%204G%2C%20Cat.1%2C%20GNSS%2C%20Espruino%20Compatible.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Wio_LTE/res/Wio%20LTE%20EU%20Version%20v1.3b-%204G%2C%20Cat.1%2C%20GNSS%2C%20Espruino%20Compatible.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 ## Wio LTE JP Version v1.3b Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Wio_LTE/raw/master/res/Wio%20LTE%20JP%20Version%20v1.3b-%204G%2C%20Cat.1%2C%20Espruino%20Compatible.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Wio_LTE/res/Wio%20LTE%20JP%20Version%20v1.3b-%204G%2C%20Cat.1%2C%20Espruino%20Compatible.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 ## Wio LTE US Version v1.3b Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Wio_LTE/raw/master/res/Wio%20LTE%20US%20Version%20v1.3b%20-%204G%2C%20Cat.1%2C%20GNSS%2C%20Espruino%20Compatible.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Wio_LTE/res/Wio%20LTE%20US%20Version%20v1.3b%20-%204G%2C%20Cat.1%2C%20GNSS%2C%20Espruino%20Compatible.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 

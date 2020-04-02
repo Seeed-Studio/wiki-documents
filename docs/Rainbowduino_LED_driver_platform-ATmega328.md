@@ -851,11 +851,11 @@ To achieve 15 bit color resolution, the firmware needs two changes:
 
 *   [Generic Rainbowduino information](http://www.neophob.com/2010/07/rainbowduino-fun-aka-neorainbowduino/)
 
-*   [File:RAINBOW-MBI5168 Datasheet VA.02-English.pdf](https://github.com/SeeedDocument/Rainbowduino_LED_driver_platform-ATmega328/raw/master/res/RAINBOW-MBI5168_Datasheet_VA.02-English.pdf "File:RAINBOW-MBI5168 Datasheet VA.02-English.pdf")
+*   [File:RAINBOW-MBI5168 Datasheet VA.02-English.pdf](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/res/RAINBOW-MBI5168_Datasheet_VA.02-English.pdf "File:RAINBOW-MBI5168 Datasheet VA.02-English.pdf")
 
 *   [prod_documents](http://www.atmel.com/dyn/resources/prod_documents/doc2545.pdf)
 
-*   [File:RAINBOW-MBI5168 Datasheet VA.02-English.pdf](https://github.com/SeeedDocument/Rainbowduino_LED_driver_platform-ATmega328/raw/master/res/RAINBOW-MBI5168_Datasheet_VA.02-English.pdf "File:RAINBOW-MBI5168 Datasheet VA.02-English.pdf")
+*   [File:RAINBOW-MBI5168 Datasheet VA.02-English.pdf](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/res/RAINBOW-MBI5168_Datasheet_VA.02-English.pdf "File:RAINBOW-MBI5168 Datasheet VA.02-English.pdf")
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

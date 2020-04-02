@@ -107,9 +107,9 @@ Rainbow Cube Kit illuminated with random colors
 
 *   Click here to download Rainbow Cube Kit
 
-    *   [Complete schematic in PDF](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/res/Rainbow_Cube_Kit-RGB_4x4x4_LED_schematic_board.pdf)
+    *   [Complete schematic in PDF](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/res/Rainbow_Cube_Kit-RGB_4x4x4_LED_schematic_board.pdf)
 
-        *   [Eagle CAD files](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/res/RainbowCube_v1.1_Panel_v1.2_Eaglefiles.zip)
+        *   [Eagle CAD files](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/res/RainbowCube_v1.1_Panel_v1.2_Eaglefiles.zip)
 
 ##   Specification
 ---
@@ -410,16 +410,16 @@ Output
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/res/RainbowCube_v1.1_Panel_v1.2_Eaglefiles.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/res/RainbowCube_v1.1_Panel_v1.2_Eaglefiles.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ##   Resources
 ---
 *   Click here to download Rainbow Cube Kit -
-    *   [Complete schematic in PDF](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/res/Rainbow_Cube_Kit-RGB_4x4x4_LED_schematic_board.pdf)
+    *   [Complete schematic in PDF](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/res/Rainbow_Cube_Kit-RGB_4x4x4_LED_schematic_board.pdf)
 
-    *   [Eagle CAD files](https://github.com/SeeedDocument/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/raw/master/res/RainbowCube_v1.1_Panel_v1.2_Eaglefiles.zip)
+    *   [Eagle CAD files](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/res/RainbowCube_v1.1_Panel_v1.2_Eaglefiles.zip)
 
 *   Data-sheets
 

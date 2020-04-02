@@ -6,7 +6,7 @@ prodimagename:
 surveyurl: https://www.research.net/r/I2C_And_I2C_Address_of_Seeed_Product
 ---
 ##   What is I2C
-![](https://github.com/SeeedDocument/I2C_And_I2C_Address_of_Seeed_Product/raw/master/img//I2c_time.jpg)
+![](https://files.seeedstudio.com/wiki/I2C_And_I2C_Address_of_Seeed_Product/img//I2c_time.jpg)
 
 
 **I²C** (Inter-Integrated Circuit, referred to as I-squared-C, I-two-C, or IIC) is a multimaster serial single-ended computer bus invented by Philips used for attaching low-speed peripherals to a motherboard, embedded system, cellphone, or other electronic device. Not to be confused with the term Two Wire Interface which only describes a compatible hardware interface.

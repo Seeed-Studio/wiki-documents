@@ -130,7 +130,7 @@ Resources
 ---------
 
 -   [Serial Bluetooth Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-Serial_Bluetooth_v3.0/master/res/Grove-Serial_Bluetooth_eagle_file.zip)
--   [Bluetooth Software Instruction](https://github.com/SeeedDocument/Bluetooth_Shield_V2/blob/master/res/Bluetooth_en.pdf)
+-   [Bluetooth Software Instruction](https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/res/Bluetooth_en.pdf)
 -   [Bluetooth - Module Datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-Serial_Bluetooth_v3.0/master/res/Bluetooth_module.pdf)
 
 <!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Serial_Bluetooth_v3.0 -->

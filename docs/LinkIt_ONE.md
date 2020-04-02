@@ -205,7 +205,7 @@ LinkIt ONE SDK comes with many examples / sample code to use peripherals like GS
 - But, LinkIt ONE does not support all of them.
 - We prepared a list of compatible Groves and Shields:
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Linkit-ONE/master/image/400px-Compatible_Groves_and_Shields_for_LinkIt_ONE.png)](https://github.com/SeeedDocument/Linkit_ONE/raw/master/resource/LinkIt_ONE_Comparability_Test.xlsx)
+[![](https://raw.githubusercontent.com/SeeedDocument/Linkit-ONE/master/image/400px-Compatible_Groves_and_Shields_for_LinkIt_ONE.png)](https://files.seeedstudio.com/wiki/Linkit_ONE/resource/LinkIt_ONE_Comparability_Test.xlsx)
 
 ## Tutorial of Sidekick Basic Kit for LinkIt ONE
 
@@ -280,7 +280,7 @@ A8: The LinkitONE IDE comes with examples to use the GPRS to connect to web. Jus
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Linkit_ONE/raw/master/resource/%5B202000437%5DLinkIt%20ONE-V1_Eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Linkit_ONE/resource/%5B202000437%5DLinkIt%20ONE-V1_Eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
@@ -289,7 +289,7 @@ A8: The LinkitONE IDE comes with examples to use the GPRS to connect to web. Jus
 **Schematic / Design Files:**
 
 - [LinkIt ONE V1.0 Eagle File](https://files.seeedstudio.com/wiki/Linkit_ONE/resource/202000437_PCBA%20Linkit%20ONE_PDF.zip)
-- [LinkIt ONE V1.0 Schematic in PDF](https://github.com/SeeedDocument/Linkit_ONE/raw/master/resource/%5B202000437%5DLinkIt%20ONE-V1_Eagle.zip)
+- [LinkIt ONE V1.0 Schematic in PDF](https://files.seeedstudio.com/wiki/Linkit_ONE/resource/%5B202000437%5DLinkIt%20ONE-V1_Eagle.zip)
 
 **Software:**
 
@@ -298,11 +298,11 @@ A8: The LinkitONE IDE comes with examples to use the GPRS to connect to web. Jus
 **Datasheets and User Guides:**
 
 - [LinkIt_ONE_Hardware_Reference_Design_v1_0](http://labs.mediatek.com/site/znch/access_denied/access_denied.gsp)
-- [LinkIt ONE_Pinout Diagram_v1.0【PDF】](https://github.com/SeeedDocument/Linkit-ONE/blob/master/resource/LinkIt_ONE_Pinout_Diagram_v1_0.pdf)
-- [MediaTek_LinkIt_Developers_Guide_v1_0【PDF】](https://github.com/SeeedDocument/Linkit-ONE/blob/master/resource/MediaTek_LinkIt_ONE_Developers_Guide_v1_3.pdf)
-- [MediaTek_MT2502A_SOC_Data_Sheet_v1_0【PDF】](https://github.com/SeeedDocument/Linkit-ONE/blob/master/resource/MediaTek_MT2502A_SOC_Data_Sheet_v1_0.pdf)
-- [MediaTek_MT5931_Wi-Fi_Data_Sheet_v1_0【PDF】](https://github.com/SeeedDocument/Linkit-ONE/blob/master/resource/MediaTek_MT5931_Wi-Fi_Data_Sheet_v1_0.pdf)
-- [MediaTek_MT3332_GPS_Data_Sheet_v1_0【PDF】](https://github.com/SeeedDocument/Linkit-ONE/blob/master/resource/MediaTek_MT3332_GPS_Data_Sheet_v1_0.pdf)
+- [LinkIt ONE_Pinout Diagram_v1.0【PDF】](https://files.seeedstudio.com/wiki/Linkit-ONE/resource/LinkIt_ONE_Pinout_Diagram_v1_0.pdf)
+- [MediaTek_LinkIt_Developers_Guide_v1_0【PDF】](https://files.seeedstudio.com/wiki/Linkit-ONE/resource/MediaTek_LinkIt_ONE_Developers_Guide_v1_3.pdf)
+- [MediaTek_MT2502A_SOC_Data_Sheet_v1_0【PDF】](https://files.seeedstudio.com/wiki/Linkit-ONE/resource/MediaTek_MT2502A_SOC_Data_Sheet_v1_0.pdf)
+- [MediaTek_MT5931_Wi-Fi_Data_Sheet_v1_0【PDF】](https://files.seeedstudio.com/wiki/Linkit-ONE/resource/MediaTek_MT5931_Wi-Fi_Data_Sheet_v1_0.pdf)
+- [MediaTek_MT3332_GPS_Data_Sheet_v1_0【PDF】](https://files.seeedstudio.com/wiki/Linkit-ONE/resource/MediaTek_MT3332_GPS_Data_Sheet_v1_0.pdf)
 
 **Getting Help**
 

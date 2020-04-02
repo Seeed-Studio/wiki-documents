@@ -66,7 +66,7 @@ The Grove - Piezo Vibration Sensor outputs a logic HIGH when vibration was detec
 
 | Seeeduino V4 | Base Shield | Grove - Piezo Vibration |
 |--------------|----------------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Piezo_Vibration_Sensor/raw/master/img/Piezo%20vibration%20sensor_s.jpg)|
+|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Piezo_Vibration_Sensor/img/Piezo%20vibration%20sensor_s.jpg)|
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Piezo-Vibration-Sensor-p-1411.html)|
 
 - Step 2. Connect the module to the **D2** of base shield using the 4-pin grove cable, we use **digital pin13 on board LED** as output.
@@ -328,7 +328,7 @@ A1: It is digital output, Low or High.
 
 ## Resources
 
-- **[PDF]** [Download Wiki PDF](https://github.com/SeeedDocument//Grove-Piezo_Vibration_Sensor/raw/master/res//Grove-Piezo_Vibration_Sensor_wiki.pdf)
+- **[PDF]** [Download Wiki PDF](https://files.seeedstudio.com/wiki//Grove-Piezo_Vibration_Sensor/res//Grove-Piezo_Vibration_Sensor_wiki.pdf)
 - **[Eagle]** [Grove - Piezo Vibration Sensor Eagle File](https://raw.githubusercontent.com/SeeedDocument/Grove-Piezo_Vibration_Sensor/master/res/Eagle.zip)
 - **[PDF]** [Grove - Piezo Vibration Sensor Schematic PDF File](https://raw.githubusercontent.com/SeeedDocument/Grove-Piezo_Vibration_Sensor/master/res/Gvove-Piezo_Vibration_Sensor.pdf)
 - **[PDF]** [Grove - Piezo Vibration Sensor PCB PDF File](https://files.seeedstudio.com/wiki/Grove-Piezo_Vibration_Sensor/res/Gvove%20-%20Piezo%20Vibration%20Sensor%20v1.1%20PCB.pdf)

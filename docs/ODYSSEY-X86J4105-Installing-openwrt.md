@@ -28,7 +28,7 @@ First, download the [OpenWrt](https://downloads.openwrt.org/releases/) OS image.
 
 In this tutorial, 19.07 version is used and click [here](https://downloads.openwrt.org/releases/19.07.0/targets/x86/64/openwrt-19.07.0-x86-64-combined-ext4.img.gz) to download.
 
-<div align=center><img src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/OpenWRT/Openwrt.jpg"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/OpenWRT/Openwrt.jpg"/></div>
 
 ## Creating a Bootable USB
 
@@ -38,19 +38,19 @@ Format the USB drive. If you are a Windows user, you can format the USB drive by
 
 **Note:** Choose `FAT32` for the File System.
 
-<div align=center><img width=450 src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/InstallingOS/formatUSB.png"/></div>
+<div align=center><img width=450 src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/InstallingOS/formatUSB.png"/></div>
 
 ### Step 2 - Download Flash Burner
 
 Download the Open Source Flash burner [balenaEtcher](https://www.balena.io/etcher/). Download the version according to your operating system(Windows/macOS/Linux).
 
-<div align=center><img width=500 src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/InstallingOS/etcher.jpg"/></div>
+<div align=center><img width=500 src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/InstallingOS/etcher.jpg"/></div>
 
 ### Step 3 - Writing the OS Image into USB
 
 Select the downloaded Operating System Image, select the formatted USB Drive and Flash! Now, the bootable USB is all set to go.
 
-<div align=center><img width=500 src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/InstallingOS/etcherDone.png"/></div>
+<div align=center><img width=500 src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/InstallingOS/etcherDone.png"/></div>
 
 ## Installing OpenWrt
 
@@ -58,22 +58,22 @@ Select the downloaded Operating System Image, select the formatted USB Drive and
 
 Plug in your bootable USB, Monitor and keyboard to ODYSSEY - X86J4105, and power up. When booting up, keep pressing **`DEL`** key to enter the setup Screen. Navigate to **`Advanced`** -> **`CSM Support`** and press Enter to enable it.
 
-<div align=center><img src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/OpenWRT/biosSetting.jpg"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/OpenWRT/biosSetting.jpg"/></div>
 
 ### Step 2 - Install the OS
 
 Reboot your ODYSSEY - X86J4105 and keep pressing **`F7`** to enter the boot manager screen. Select the bootable USB and press Enter.
 
-<div align=center><img width = 400 src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/OpenWRT/biosSetup.jpg"/></div>
+<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/OpenWRT/biosSetup.jpg"/></div>
 
 ### Step 3 - Installing process
 
 Select the **`OpenWrt`** and press Enter. Follow through the installing instructions on the screen.
- <div align=center><img src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/OpenWRT/installingOpenwrt.jpg"/></div>
+ <div align=center><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/OpenWRT/installingOpenwrt.jpg"/></div>
 
 When it's done, press Enter and you should see the screen as follow:
 
-<div align=center><img src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/OpenWRT/OpenWrtShell.jpg"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/OpenWRT/OpenWrtShell.jpg"/></div>
 
 Now your OpenWrt is installed and ready to be used!
 
@@ -87,7 +87,7 @@ vi /etc/config/network
 
 And change the settings to as follow:
 
-<div align=center><img src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/OpenWRT/settings.jpg"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/OpenWRT/settings.jpg"/></div>
 
 Where you change the station IP address for LAN configurations so that you can use this IP to access to router. Here the IP is changed to `192.168.10.1`
 
@@ -99,7 +99,7 @@ Now, you can access the OpenWrt from another computer via LuCI web interface. Si
 
 Now, from your computer, type `192.168.10.1` (The IP address specified earlier) in the web browser and you should see the following screen:
 
-<div align=center><img src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/OpenWRT/ipAddress.jpg"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/OpenWRT/ipAddress.jpg"/></div>
 
 Now, you can access your OpenWrt from another PC!
 
@@ -107,11 +107,11 @@ Now, you can access your OpenWrt from another PC!
 
 Navigate to **`Network`** -> **`Interfaces`** and configure WAN settings for internet access:
 
-<div align=center><img width = 400 src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/OpenWRT/interface.jpg"/></div>
+<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/OpenWRT/interface.jpg"/></div>
 
  This shows the all the interfaces settings for OpenWrt. Here, simply make sure the the **WAN(eth1) port** is connected to the internet and is set to **DHCP client Protocol** as follow:
 
-  <div align=center><img src="https://github.com/SeeedDocument/ODYSSEY-X86J4105864/raw/master/img/OpenWRT/interface2.jpg"/></div>
+  <div align=center><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/OpenWRT/interface2.jpg"/></div>
 
   Now, your computer should access to the internet and your router is set to go!
 

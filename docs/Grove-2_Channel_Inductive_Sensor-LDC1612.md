@@ -15,7 +15,7 @@ tags:
 The Grove - 2-Channel Inductive Sensor is based on Texas Instruments(TI) LDC1612, a 28-bit inductance to digital converter(LDC) for inductive sensing solutions. With multiple channels and support for remote sensing, the LDC1612 enables the performance and reliability benefits of inductive sensing to be realized at minimal cost and power. Inductance is an effect caused by the magnetic field of a current-carrying conductor acting back on the conductor. So by sensing the inductance, this sensor can detect the proximity of conductors especially metal nearby.
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-2-Channel-Inductive-Sensor-%28LDC1612%29-p-3223.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-2-Channel-Inductive-Sensor-%28LDC1612%29-p-3223.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
 
 ## Feature
 
@@ -442,23 +442,23 @@ can't detect coil Coil Inductance!!!
 
 
 !!!Note
-        In basic_demo and muti_channel_demo examples, you may keep in mind that each output is corresponding to the intensity of inductance. There is the functional relationship between the output and the intensity of inductance, if you are interested in further information, you may want to refer to [Datasheet LDC1612](https://github.com/SeeedDocument/Grove-2-Channel_Inductive_Sensor-LDC1612/blob/master/res/LDC1612.pdf) provided by Texas Instrument(TI).
+        In basic_demo and muti_channel_demo examples, you may keep in mind that each output is corresponding to the intensity of inductance. There is the functional relationship between the output and the intensity of inductance, if you are interested in further information, you may want to refer to [Datasheet LDC1612](https://files.seeedstudio.com/wiki/Grove-2-Channel_Inductive_Sensor-LDC1612/res/LDC1612.pdf) provided by Texas Instrument(TI).
 
 
 ## Schematic Online Viewer
 
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-2-Channel_Inductive_Sensor-LDC1612/blob/master/res/Grove%20-%202-Channel%20Inductive%20Sensor%20(LDC1612).zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-2-Channel_Inductive_Sensor-LDC1612/res/Grove%20-%202-Channel%20Inductive%20Sensor%20(LDC1612).zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ## Resources
 
-- **[Zip]** [Grove - 2-Channel Inductive Sensor(LDC1612) Eagle Files](https://github.com/SeeedDocument/Grove-2-Channel_Inductive_Sensor-LDC1612/blob/master/res/Grove%20-%202-Channel%20Inductive%20Sensor%20(LDC1612).zip)
+- **[Zip]** [Grove - 2-Channel Inductive Sensor(LDC1612) Eagle Files](https://files.seeedstudio.com/wiki/Grove-2-Channel_Inductive_Sensor-LDC1612/res/Grove%20-%202-Channel%20Inductive%20Sensor%20(LDC1612).zip)
 
 - **[Zip]** [Grove - 2-Channel Inductive Sensor(LDC1612) Software Library](https://github.com/Seeed-Studio/Seeed_LDC1612/archive/master.zip)
 
-- **[PDF]** [Datasheet LDC1612](https://github.com/SeeedDocument/Grove-2-Channel_Inductive_Sensor-LDC1612/blob/master/res/LDC1612.pdf)
+- **[PDF]** [Datasheet LDC1612](https://files.seeedstudio.com/wiki/Grove-2-Channel_Inductive_Sensor-LDC1612/res/LDC1612.pdf)
 
 
 

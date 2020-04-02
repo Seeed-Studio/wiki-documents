@@ -22,8 +22,7 @@ tags:
 ### 0. 执行初始化操作 
 - 按照[mkdocs.org](http://www.mkdocs.org/)安装python, pip, mkdocs
 - 执行 pip install mkdocs-material
-- git clone https://github.com/SeeedDocument/wiki_chinese.git 到本地目录 （mkdocs源文件）
-- git clone https://github.com/SeeedDocument/SeeedDocument.github.io.git 到本地目录 （编译的html文件）
+
 
 ### 1. 新增新产品的md文件， 文件的前面部分必须参照下面格式
 

@@ -15,7 +15,7 @@ The Grove - MP3 is a 20x40mm super mini Music module based on WT2003S-20SS audio
 
 As the name indicates, the Grove - MP3 V3 is the upgraded version of Grove - MP3 V2. Compared with Grove MP3 V2, the V3 added a JST2.0 speaker port, so that you can output the audio via speaker and 3.5mm earphone at the same time.
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-MP3-V3-p-4297.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-MP3-V3-p-4297.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
 
 ## Feature
 
@@ -76,7 +76,7 @@ As the name indicates, the Grove - MP3 V3 is the upgraded version of Grove - MP3
 
 - **Step 3** Connect the Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-MP3-V3/raw/master/img/connect.png)
+![](https://files.seeedstudio.com/wiki/Grove-MP3-V3/img/connect.png)
 
 #### Software
 
@@ -342,7 +342,7 @@ void printMenu(void) {
 
 - **Step 5.** The result should look like below. Follow the command list to play music or use other useful features.
 
-![](https://github.com/SeeedDocument/Grove-MP3-V3/raw/master/img/result.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-MP3-V3/img/result.jpg)
 ## FAQ
 
 **Q1#** TF card cannot be recognized.

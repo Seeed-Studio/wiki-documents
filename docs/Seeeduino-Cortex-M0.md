@@ -23,7 +23,7 @@ On top of that, Seeeduino Cortex-M0+ is the first Seeeduino development board wi
 
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Seeeduino-Cortex-M0-p-4070.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Seeeduino-Cortex-M0-p-4070.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
 
 
 
@@ -158,7 +158,7 @@ Please follow the [Seeed Board Intallation Guide](http://wiki.seeedstudio.com/Se
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Seeeduino-Cortex-M0-/raw/master/img/Arduino-IDE-0.jpg"/>
+  <img src="https://files.seeedstudio.com/wiki/Seeeduino-Cortex-M0-/img/Arduino-IDE-0.jpg"/>
   <figcaption><i>The key word is <b>samd_zero</b> </i></figcaption>
 </figure>
 </div>
@@ -174,7 +174,7 @@ Selecting the **Seeeduino Cortex-M0+**.
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Seeeduino-Cortex-M0-/raw/master/img/Arduino-IDE-2.jpg"/>
+  <img src="https://files.seeedstudio.com/wiki/Seeeduino-Cortex-M0-/img/Arduino-IDE-2.jpg"/>
   <figcaption> <i>Choose the right board</i></figcaption>
 </figure>
 </div>
@@ -184,7 +184,7 @@ Select the serial device of the Arduino board from the Tools | Serial Port menu.
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Seeeduino-Cortex-M0-/raw/master/img/Arduino-IDE-1.jpg"/>
+  <img src="https://files.seeedstudio.com/wiki/Seeeduino-Cortex-M0-/img/Arduino-IDE-1.jpg"/>
   <figcaption><i>Choose the right port</i></figcaption>
 </figure>
 </div>
@@ -210,7 +210,7 @@ A few seconds after the upload finishes, you should see the pin 13 (L) LED on th
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Seeeduino-Cortex-M0-/raw/master/res/Seeeduino%20Cortex-M0%2B%20v1.0.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Seeeduino-Cortex-M0-/res/Seeeduino%20Cortex-M0%2B%20v1.0.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 

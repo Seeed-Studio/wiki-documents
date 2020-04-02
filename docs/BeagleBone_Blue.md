@@ -15,7 +15,7 @@ BeagleBone™ Blue is based on the extremely successful open-source hardware des
 BeagleBone™ Blue combines the high-performance flexible WiFi/Bluetooth WiLink™ interface of the BeagleBone™ Black Wireless and the robotics capabilities of the Robotics Cape from Strawson Design.  BeagleBone™ Blue has onboard 2 cell (2S) LiPo battery management with charger and battery level LEDs, 8 servo motor outputs, 4 DC motor drivers, 4 quadrature encoder inputs, a wide array of GPIO and serial protocol connectors including CAN, a 9 axis IMU and barometer, 4 ADC inputs, a PC USB interface, an USB 2.0 host port, a reset button, a power button, two user configurable buttons and six indicating LEDs.  Built on Octavo Systems’ System-In-Package that integrates a high-performance TI ARM processor and 512MB of DDR3, BeagleBone™ Blue boots Linux in around 10 seconds and gets you started developing through your web browser in less than 5 minutes with just a single USB cable.
 
 
-[![](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/blob/master/images/get_one_now.png?raw=true)](https://www.seeedstudio.com/BeagleBone-Blue-p-2809.html)
+[![](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/get_one_now.png)](https://www.seeedstudio.com/BeagleBone-Blue-p-2809.html)
 
 ## Features
 ----
@@ -450,7 +450,7 @@ Then you will get the light value as the picture below.
 </style>
 </head>
 <body>
-<div class="div1"><img src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/Digital_520.png" border=0 /></div>
+<div class="div1"><img src="https://files.seeedstudio.com/wiki/Beaglebone_Blue/img/Digital_520.png" border=0 /></div>
 </body>
 
 
@@ -875,7 +875,7 @@ Please click **[here](http://support.seeedstudio.com/knowledgebase/articles/1826
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/BeagleBone_Blue_eagle-file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Beaglebone_Blue/BeagleBone_Blue_eagle-file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 

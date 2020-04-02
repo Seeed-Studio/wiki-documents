@@ -14,7 +14,7 @@ sku: 113020011
 Grove - UART WiFi is a serial transceiver module featuring the ubiquitous ESP8285 IoT SoC. With integrated TCP/IP protocol stack, this module lets your micro-controller interact with WiFi networks with only a few lines of code. Each ESP8285 module comes pre-programmed with an AT command set firmware, meaning you can send simple text commands to control the device. The SoC features integrated WEP, WPA/WPA2, TKIP, AES, and WAPI engines, can act as an access point with DHCP, can join existing WiFi networks and has configurable MAC and IP addresses.
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-UART-WiFi-V2-%28ESP8285%29-p-3054.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-UART-WiFi-V2-%28ESP8285%29-p-3054.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
 
 
 
@@ -398,7 +398,7 @@ You can use any serial Tools you like, we use Arduino here. And please make sure
 ![](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/img/1.png)
 
 
-**Step 2.** Then click the <embed src="https://github.com/SeeedDocument/Grove-Uart_Wifi/raw/master/img/COM.png"> button on the upper right corner to open the **Serial Monitor** of Arduino.
+**Step 2.** Then click the <embed src="https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/img/COM.png"> button on the upper right corner to open the **Serial Monitor** of Arduino.
 
 **Step 3.** Set the Serial Monitor as the following picture. Particularly :<font color="17a1a5"><b>2-</b></font> Select **Both NL & CR**, <font color="17a1a5"><b>3-</b></font>Set the **baud rate** to 115200
 
@@ -487,7 +487,7 @@ You can use any serial Tools you like, we use Arduino here. And please make sure
 ## Schematic Online Viewer
 
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-Uart_Wifi/raw/master/res/Uart_Wifi_V2_Eagle_file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/res/Uart_Wifi_V2_Eagle_file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 

@@ -27,7 +27,7 @@ We hope this board may help you with your edge computing, AI vision, voice recog
 <iframe width="800" height="450" src="https://www.youtube.com/embed/5BF3ExL1HOQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-AI-HAT-for-Edge-Computing-p-4026.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-AI-HAT-for-Edge-Computing-p-4026.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
 
 
 
@@ -92,7 +92,7 @@ We hope this board may help you with your edge computing, AI vision, voice recog
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/pinout1.jpg" alt="Grove AI HAT for Edge Computing hardware overview" title="hardware overview" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/pinout1.jpg" alt="Grove AI HAT for Edge Computing hardware overview" title="hardware overview" />
   <figcaption><b>Figure 1</b>. <i>Grove AI HAT for Edge Computing hardware overview</i></figcaption>
 </figure>
 </div>
@@ -140,14 +140,14 @@ https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_see
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/wiki-Arduino-1.jpg" alt="Grove AI HAT Arduino config" title="Grove AI HAT Arduino config" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/wiki-Arduino-1.jpg" alt="Grove AI HAT Arduino config" title="Grove AI HAT Arduino config" />
   <figcaption><b>Figure 2</b>. <i>Arduino Board URL config</i></figcaption>
 </figure>
 </div>
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/wiki-Arduino-2.jpg" alt="Grove AI HAT Arduino config" title="Grove AI HAT Arduino config" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/wiki-Arduino-2.jpg" alt="Grove AI HAT Arduino config" title="Grove AI HAT Arduino config" />
   <figcaption><b>Figure 3</b>. <i>Arduino Board URL config</i></figcaption>
 </figure>
 </div>
@@ -160,14 +160,14 @@ Find the **Grove AI HAT for Edge Computing by Seeed Studio**, click Install butt
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/wiki-Arduino-3.jpg" alt="Grove AI HAT Arduino config" title="Grove AI HAT Arduino config" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/wiki-Arduino-3.jpg" alt="Grove AI HAT Arduino config" title="Grove AI HAT Arduino config" />
   <figcaption><b>Figure 4</b>. <i>Open Board Manager</i></figcaption>
 </figure>
 </div>
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/wiki-Arduino-4.jpg" alt="Grove AI HAT Arduino config" title="Grove AI HAT Arduino config" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/wiki-Arduino-4.jpg" alt="Grove AI HAT Arduino config" title="Grove AI HAT Arduino config" />
   <figcaption><b>Figure 5</b>. <i>Install the Grove AI HAT Board</i></figcaption>
 </figure>
 </div>
@@ -177,7 +177,7 @@ When the installation is complete, you can find the **Seeed K210 Pi** board in t
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/wiki-Arduino-5.jpg" alt="Grove AI HAT Arduino config" title="Grove AI HAT Arduino config" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/wiki-Arduino-5.jpg" alt="Grove AI HAT Arduino config" title="Grove AI HAT Arduino config" />
   <figcaption><b>Figure 6</b>. <i>Select Seeed K210 Pi</i></figcaption>
 </figure>
 </div>
@@ -186,7 +186,7 @@ Also, to use the Grove AI HAT in the Arduino IDE, you need to select the **K-fla
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/wiki-Arduino-6.jpg" alt="Grove AI HAT Arduino config" title="Grove AI HAT Arduino config" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/wiki-Arduino-6.jpg" alt="Grove AI HAT Arduino config" title="Grove AI HAT Arduino config" />
   <figcaption><b>Figure 7</b>. <i>Select K-flash Programmer</i></figcaption>
 </figure>
 </div>
@@ -211,7 +211,7 @@ Also, to use the Grove AI HAT in the Arduino IDE, you need to select the **K-fla
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/Grove-AI-HAT-for-Edge-Computing-connect.png" alt="Grove AI HAT Arduino demo" title="Grove AI HAT Arduino demo" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/Grove-AI-HAT-for-Edge-Computing-connect.png" alt="Grove AI HAT Arduino demo" title="Grove AI HAT Arduino demo" />
   <figcaption><b>Figure 8</b>. <i>Hardware connection</i></figcaption>
 </figure>
 </div>
@@ -260,7 +260,7 @@ After done uploading, the Grove - LED will flash.
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/Grove-AI-HAT-for-Edge-Computing-connect2(1).png" alt="Grove AI HAT Arduino demo" title="Grove AI HAT Arduino demo" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/Grove-AI-HAT-for-Edge-Computing-connect2(1).png" alt="Grove AI HAT Arduino demo" title="Grove AI HAT Arduino demo" />
   <figcaption><b>Figure 9</b>. <i>Hardware connection</i></figcaption>
 </figure>
 </div>
@@ -275,7 +275,7 @@ After done uploading, the Grove - LED will flash.
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/path-analog.jpg" alt="Grove AI HAT Arduino demo" title="Grove AI HAT Arduino demo" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/path-analog.jpg" alt="Grove AI HAT Arduino demo" title="Grove AI HAT Arduino demo" />
   <figcaption><b>Figure 10</b>. <i>ADC Demo Path</i></figcaption>
 </figure>
 </div>
@@ -290,7 +290,7 @@ Then, press the Grove -  Round Force Sensor, the A0 valnue will change.
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/result-analog.jpg" alt="Grove AI HAT Arduino demo" title="Grove AI HAT Arduino demo" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/result-analog.jpg" alt="Grove AI HAT Arduino demo" title="Grove AI HAT Arduino demo" />
   <figcaption><b>Figure 11</b>. <i>Output</i></figcaption>
 </figure>
 </div>
@@ -332,7 +332,7 @@ We will take the [face_detect](https://github.com/kendryte/kendryte-standalone-d
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/wiki-connect.jpg" alt="Grove AI HAT face detect demo-1" title="" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/wiki-connect.jpg" alt="Grove AI HAT face detect demo-1" title="" />
   <figcaption><b>Figure 12</b>. <i>Hardware connection of face detect demo</i></figcaption>
 </figure>
 </div>
@@ -348,7 +348,7 @@ We will take the [face_detect](https://github.com/kendryte/kendryte-standalone-d
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-01.jpg" alt="Grove AI HAT face detect demo-1" title="" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-01.jpg" alt="Grove AI HAT face detect demo-1" title="" />
   <figcaption><b>Figure 13</b>. <i>This folder contains the AI module of face detect</i></figcaption>
 </figure>
 </div>
@@ -358,21 +358,21 @@ We will take the [face_detect](https://github.com/kendryte/kendryte-standalone-d
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-02.jpg" alt="Grove AI HAT face detect demo-2" title="" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-02.jpg" alt="Grove AI HAT face detect demo-2" title="" />
   <figcaption><b>Figure 14</b>. <i>Open preferences windows</i></figcaption>
 </figure>
 </div>
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-03.jpg" alt="Grove AI HAT face detect demo-3" title="" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-03.jpg" alt="Grove AI HAT face detect demo-3" title="" />
   <figcaption><b>Figure 15</b>. <i>Click on the part marked in the red box</i></figcaption>
 </figure>
 </div>
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-04.jpg" alt="Grove AI HAT face detect demo-4" title="" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-04.jpg" alt="Grove AI HAT face detect demo-4" title="" />
   <figcaption><b>Figure 16</b>. <i>Click on the part marked in the red box</i></figcaption>
 </figure>
 </div>
@@ -384,7 +384,7 @@ We will take the [face_detect](https://github.com/kendryte/kendryte-standalone-d
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-05.jpg" alt="Grove AI HAT face detect demo-5" title="" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-05.jpg" alt="Grove AI HAT face detect demo-5" title="" />
   <figcaption><b>Figure 17</b>. <i>Copy the path of Kflash_py.exe</i></figcaption>
 </figure>
 </div>
@@ -395,7 +395,7 @@ We will take the [face_detect](https://github.com/kendryte/kendryte-standalone-d
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-06.jpg" alt="Grove AI HAT face detect demo-6" title="" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-06.jpg" alt="Grove AI HAT face detect demo-6" title="" />
   <figcaption><b>Figure 18</b>. <i>Open power shell</i></figcaption>
 </figure>
 </div>
@@ -403,7 +403,7 @@ We will take the [face_detect](https://github.com/kendryte/kendryte-standalone-d
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-07.jpg" alt="Grove AI HAT face detect demo-7" title="" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-07.jpg" alt="Grove AI HAT face detect demo-7" title="" />
   <figcaption><b>Figure 19</b>. <i>Open power shell</i></figcaption>
 </figure>
 </div>
@@ -433,7 +433,7 @@ Check your COM number in the Computer Device Manager
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-08.jpg" alt="Grove AI HAT face detect demo-8" title="" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-08.jpg" alt="Grove AI HAT face detect demo-8" title="" />
   <figcaption><b>Figure 20</b>. <i>Check the COM number</i></figcaption>
 </figure>
 </div>
@@ -448,7 +448,7 @@ C:/Users/seeed/AppData/Local/Arduino15/packages/Seeeduino/tools/kflash/1.1.0/kfl
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-09.jpg" alt="Grove AI HAT face detect demo-9" title="" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-09.jpg" alt="Grove AI HAT face detect demo-9" title="" />
   <figcaption><b>Figure 21</b>. <i>Replace the Path of kflash_py and the COM port number with your own path and COM port</i></figcaption>
 </figure>
 </div>
@@ -460,7 +460,7 @@ When the download is finish, you will see:
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-10.jpg" alt="Grove AI HAT face detect demo-10" title="" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-10.jpg" alt="Grove AI HAT face detect demo-10" title="" />
   <figcaption><b>Figure 22</b>. <i>Download Success</i></figcaption>
 </figure>
 </div>
@@ -481,7 +481,7 @@ Now you will see the LCD screen light on with full white. Let's move to next ste
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-1.jpg" alt="Grove AI HAT face detect download-1" title="" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-1.jpg" alt="Grove AI HAT face detect download-1" title="" />
   <figcaption><b>Figure 23</b>. <i>Great blank ino</i></figcaption>
 </figure>
 </div>
@@ -491,7 +491,7 @@ Now you will see the LCD screen light on with full white. Let's move to next ste
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-2.jpg" alt="Grove AI HAT face detect download-2" title="" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-2.jpg" alt="Grove AI HAT face detect download-2" title="" />
   <figcaption><b>Figure 24</b>. <i>Copy file into the ino folder</i></figcaption>
 </figure>
 </div>
@@ -501,7 +501,7 @@ Now you will see the LCD screen light on with full white. Let's move to next ste
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-3.jpg" alt="Grove AI HAT face detect download-3" title="" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-3.jpg" alt="Grove AI HAT face detect download-3" title="" />
   <figcaption><b>Figure 25</b>. <i>Open the .ino file with Arduino IDE</i></figcaption>
 </figure>
 </div>
@@ -513,7 +513,7 @@ The code for Grove AI Hat is `BOARD_LICHEEDAN`, so we need to config as below:
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-4.jpg" alt="Grove AI HAT face detect download-4" title="" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-4.jpg" alt="Grove AI HAT face detect download-4" title="" />
   <figcaption><b>Figure 26</b>. <i>Board Config</i></figcaption>
 </figure>
 </div>
@@ -525,7 +525,7 @@ K-flash/Seeed k210 Pi/
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-6.jpg" alt="Grove AI HAT face detect download-6" title="" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-6.jpg" alt="Grove AI HAT face detect download-6" title="" />
   <figcaption><b>Figure 27</b>. <i>Board Select</i></figcaption>
 </figure>
 </div>
@@ -533,7 +533,7 @@ K-flash/Seeed k210 Pi/
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-5.jpg" alt="Grove AI HAT face detect download-5" title="" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-5.jpg" alt="Grove AI HAT face detect download-5" title="" />
   <figcaption><b>Figure 28</b>. <i>Build the main.c</i></figcaption>
 </figure>
 </div>
@@ -544,7 +544,7 @@ K-flash/Seeed k210 Pi/
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Grove-AI-HAT-for-Edge-Computing/raw/master/img/face_detect_demo-7.jpg" alt="Grove AI HAT face detect download-7" title="" />
+  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-7.jpg" alt="Grove AI HAT face detect download-7" title="" />
   <figcaption><b>Figure 29</b>. <i>Success</i></figcaption>
 </figure>
 </div>

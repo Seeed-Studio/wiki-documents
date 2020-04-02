@@ -1,4 +1,4 @@
-<p style=":center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://github.com/SeeedDocument/Grove-2-Channel_SPDT_Relay/raw/master/img/20180823144904.jpg" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Grove-2-Channel_SPDT_Relay/img/20180823144904.jpg" /></a></p>
 
 
 

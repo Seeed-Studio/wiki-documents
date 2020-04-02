@@ -22,7 +22,7 @@ Product|Advantage|Disadvantage
 [Grove - Capacitive Fingerprint Scanner / Sensor](https://www.seeedstudio.com/Grove-Capacitive-Fingerprint-Scanner-p-4363.html)|Can identify biological characteristics, only identify living body, high safety, small size, low power consumption, high accuracy|Poor abrasion resistance, easily susceptible to sweat, stains, finger wear, etc.
 [Grove - Optical Fingerprint Sensor](https://www.seeedstudio.com/Grove-Fingerprint-Sensor.html)|Strong abrasion resistance, good environmental adaptability, and good stability|Large size, high power consumption, and relatively low accuracy, can't identify the living body, low security 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-Capacitive-Fingerprint-Scanner-p-4363.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-Capacitive-Fingerprint-Scanner-p-4363.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
 
 ## Features
 
@@ -80,7 +80,7 @@ Product|Advantage|Disadvantage
 
 | Seeeduino V4.2 | Base Shield | Grove - Capacitive Fingerprint Scanner/Sensor |
 |--------------|-------------|-----------------|
-|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://github.com/SeeedDocument/Grove-Capacitive-Fingerprint-Scanner/raw/master/img/Grove-Capacitive-Fingerprint-thumbnail.jpg)|
+|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_1.jpg)|![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Capacitive-Fingerprint-Scanner/img/Grove-Capacitive-Fingerprint-thumbnail.jpg)|
 |<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Capacitive-Fingerprint-Scanner-p-4363.html" target="_blank">Get One Now</a>|
 
 !!!note
@@ -94,7 +94,7 @@ Product|Advantage|Disadvantage
 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
-![](https://github.com/SeeedDocument/Grove-Capacitive-Fingerprint-Scanner/raw/master/img/connect.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Capacitive-Fingerprint-Scanner/img/connect.jpg)
 
 !!!Note
         If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
@@ -117,7 +117,7 @@ Product|Advantage|Disadvantage
 
 - **Step 3.** Restart the Arduino IDE. Open the example, you can open it in the following three ways：
     1. Open it directly in the Arduino IDE via the path: **File --> Examples --> Seeed_Arduino_KCT202 --> full_process**. 
-    ![](https://github.com/SeeedDocument/Grove-Capacitive-Fingerprint-Scanner/raw/master/img/path.jpg)
+    ![](https://files.seeedstudio.com/wiki/Grove-Capacitive-Fingerprint-Scanner/img/path.jpg)
     
     2. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
@@ -299,12 +299,12 @@ Delete ok!
 ## Schematic Online Viewer
 
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-Capacitive-Fingerprint-Scanner/raw/master/reg/Grove-Capacitive-Fingerprint-Scanner_SCH%26PCB.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Capacitive-Fingerprint-Scanner/reg/Grove-Capacitive-Fingerprint-Scanner_SCH%26PCB.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 ## Resources
 
-- **[Zip]** [Grove - Capacitive Fingerprint Scanner/Sensor eagle file](https://github.com/SeeedDocument/Grove-Capacitive-Fingerprint-Scanner/raw/master/res/Grove-Capacitive-Fingerprint-Scanner_SCH&PCB.zip)
+- **[Zip]** [Grove - Capacitive Fingerprint Scanner/Sensor eagle file](https://files.seeedstudio.com/wiki/Grove-Capacitive-Fingerprint-Scanner/res/Grove-Capacitive-Fingerprint-Scanner_SCH&PCB.zip)
 
 - **[Zip]** [Grove - Capacitive Fingerprint Scanner/Sensor code](https://github.com/Seeed-Studio/Seeed_Arduino_KCT202/archive/master.zip)
 

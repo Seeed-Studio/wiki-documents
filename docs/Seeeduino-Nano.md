@@ -25,7 +25,7 @@ One more thing, we know that only one on-board Grove connector may not be enough
 
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Seeeduino-Nano-p-4111.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Seeeduino-Nano-p-4111.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
 
 
 
@@ -149,7 +149,7 @@ Please follow the [Seeed Board Intallation Guide](http://wiki.seeedstudio.com/Se
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Seeeduino-Nano/raw/master/img/IDE-1.jpg"/>
+  <img src="https://files.seeedstudio.com/wiki/Seeeduino-Nano/img/IDE-1.jpg"/>
   <figcaption><b>Figure 10</b>. <i>The key word is **Seeeduino Nano**</i></figcaption>
 </figure>
 </div>
@@ -166,7 +166,7 @@ Selecting a **Seeeduino Nano**.
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Seeeduino-Nano/raw/master/img/IDE-2.jpg"/>
+  <img src="https://files.seeedstudio.com/wiki/Seeeduino-Nano/img/IDE-2.jpg"/>
   <figcaption><b>Figure 11</b>. <i>Choose the right board</i></figcaption>
 </figure>
 </div>
@@ -176,7 +176,7 @@ Select the serial device of the Arduino board from the Tools | Serial Port menu.
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Seeeduino-Nano/raw/master/img/IDE-3.jpg"/>
+  <img src="https://files.seeedstudio.com/wiki/Seeeduino-Nano/img/IDE-3.jpg"/>
   <figcaption><b>Figure 12</b>. <i>Choose the right port</i></figcaption>
 </figure>
 </div>
@@ -202,7 +202,7 @@ A few seconds after the upload finishes, you should see the pin 13 (L) LED on th
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Seeeduino-Nano/raw/master/res/Seeeduino%20nano.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Seeeduino-Nano/res/Seeeduino%20nano.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 

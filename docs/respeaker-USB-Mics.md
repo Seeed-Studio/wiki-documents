@@ -28,7 +28,7 @@ The difference between the PCBA inside ReSpeaker USB Mic Array and Respeaker Mic
 - Move the audio jack and micro USB port to the backside.
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/ReSpeaker-USB-Mic-Array-p-4247.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/ReSpeaker-USB-Mic-Array-p-4247.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
 
 
 
@@ -166,22 +166,22 @@ Here is the Acoustic Echo Cancellation example with 6 channels firmware.
 Channel0 Audio(processed by algorithms):
 
 <audio controls="controls">
-  <source type="audio/wav" src="https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/channel0_asr.wav"></source>
-  <source type="audio/ogg" src="https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/channel0_asr.ogg"></source>
+  <source type="audio/wav" src="https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/channel0_asr.wav"></source>
+  <source type="audio/ogg" src="https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/channel0_asr.ogg"></source>
 </audio>
 
 Channel1 Audio(Mic1 raw data):
 
 <audio controls="controls">
-  <source type="audio/wav" src="https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/channel1_raw.wav"></source>
-  <source type="audio/ogg" src="https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/channel1_raw.ogg"></source>
+  <source type="audio/wav" src="https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/channel1_raw.wav"></source>
+  <source type="audio/ogg" src="https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/channel1_raw.ogg"></source>
 </audio>
 
 Channel5 Audio(Playback data):
 
 <audio controls="controls">
-  <source type="audio/wav" src="https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/channel5_playback.wav"></source>
-  <source type="audio/ogg" src="https://github.com/SeeedDocument/ReSpeaker_Mic_Array_V2/raw/master/res/channel5_playback.ogg"></source>
+  <source type="audio/wav" src="https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/channel5_playback.wav"></source>
+  <source type="audio/ogg" src="https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/channel5_playback.ogg"></source>
 </audio>
 
 

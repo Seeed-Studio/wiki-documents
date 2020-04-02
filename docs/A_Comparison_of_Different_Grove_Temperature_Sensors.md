@@ -26,9 +26,9 @@ Temperature sensors like thermocouples have very wide measuring range and are ad
 
 |Temperature Sensor Name|Interface|Range|Accuracy|Sensitivity|Datasheet|
 |-----------------------|---------|----|---------|-----------|----|
-|[Temp&Humi Sensor](http://wiki.seeed.cc/Grove-TemperatureAndHumidity_Sensor/) | Digital | 0~50C|+-2C|1C|[DHT11](https://github.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor/raw/master/res/DHT11.pdf)|
-|[Temp&Humi Sensor Pro](http://wiki.seeed.cc/Grove-Temperature_and_Humidity_Sensor_Pro/) | Digital | -40~80C|+-0.5C|0.1C| [DHT22/AM2302](https://github.com/SeeedDocument/Grove-Temperature_and_Humidity_Sensor_Pro/raw/master/res/AM2302.pdf) |
-|[Temperature Sensor](http://wiki.seeed.cc/Grove-Temperature_Sensor_V1.2/) | Analog | -40~125C|+-1.5C|N/A|[NCP18WF104F03RC](https://github.com/SeeedDocument/Grove-Temperature_Sensor_V1.2/raw/master/res/NCP18WF104F03RC.pdf) |
+|[Temp&Humi Sensor](http://wiki.seeed.cc/Grove-TemperatureAndHumidity_Sensor/) | Digital | 0~50C|+-2C|1C|[DHT11](https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor/res/DHT11.pdf)|
+|[Temp&Humi Sensor Pro](http://wiki.seeed.cc/Grove-Temperature_and_Humidity_Sensor_Pro/) | Digital | -40~80C|+-0.5C|0.1C| [DHT22/AM2302](https://files.seeedstudio.com/wiki/Grove-Temperature_and_Humidity_Sensor_Pro/res/AM2302.pdf) |
+|[Temperature Sensor](http://wiki.seeed.cc/Grove-Temperature_Sensor_V1.2/) | Analog | -40~125C|+-1.5C|N/A|[NCP18WF104F03RC](https://files.seeedstudio.com/wiki/Grove-Temperature_Sensor_V1.2/res/NCP18WF104F03RC.pdf) |
 |[One Wire Temperature Sensor](http://datasheets.maxim-ic.com/en/ds/DS18B20.pdf) | One Wire | -55~125C|+-0.5C|0.5C|[DS18B20](http://datasheets.maxim-ic.com/en/ds/DS18B20.pdf) |
 |[High Temperature Sensor](http://wiki.seeed.cc/Grove-High_Temperature_Sensor/) |Analog|-50~600C|2%|N/A|K Type Thermocouple|
 |[Temperature&Humidity Sensor (High-Accuracy & Mini)](http://wiki.seeed.cc/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0/) |I2C|0~70C|+-0.5C|1C|[TH02](https://raw.githubusercontent.com/SeeedDocument/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0/master/res/TH02_SENSOR.pdf) |
@@ -42,7 +42,7 @@ Temperature sensors like thermocouples have very wide measuring range and are ad
 
 More details please download below list.
 
-[![](https://raw.githubusercontent.com/SeeedDocument/Tutorial_Temperature_Sensor/master/img/list.png)](https://github.com/SeeedDocument/Tutorial_Temperature_Sensor/raw/master/res/temperature%C2%A0sensor%20v2.xlsx)
+[![](https://raw.githubusercontent.com/SeeedDocument/Tutorial_Temperature_Sensor/master/img/list.png)](https://files.seeedstudio.com/wiki/Tutorial_Temperature_Sensor/res/temperature%C2%A0sensor%20v2.xlsx)
 
 #Groves
 

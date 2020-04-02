@@ -11,7 +11,7 @@ sku: 103100022
 ---
 **Breakout for LinkIt Smart 7688 v2.0** is a Grove port integrated expansion board for LinkItTM Smart 7688 development board. This breakout board will help beginners to get started fast because it can save a lot of work and make prototyping easier through simplified wiring. It comes with USB, Ethernet, and 3.5mm Audio ports and supports serial buses like I2C, UART.
 
-![](https://github.com/SeeedDocument/Breakout_for_LinkIt_Smart_7688_v2_0/blob/master/image/Breakout_for_LinkIt_Smart_7688_v2.0_product_view_700.jpg?raw=true)
+![](https://files.seeedstudio.com/wiki/Breakout_for_LinkIt_Smart_7688_v2_0/image/Breakout_for_LinkIt_Smart_7688_v2.0_product_view_700.jpg)
 
 **Version Tracker**
 
@@ -58,7 +58,7 @@ sku: 103100022
 
 ## Hardware Overview
 ---
-![](https://github.com/SeeedDocument/Breakout_for_LinkIt_Smart_7688_v2_0/blob/master/image/Breakout_for_LinkIt_Smart_7688_v2.0_hardware_connections_1200_s.jpg?raw=true)
+![](https://files.seeedstudio.com/wiki/Breakout_for_LinkIt_Smart_7688_v2_0/image/Breakout_for_LinkIt_Smart_7688_v2.0_hardware_connections_1200_s.jpg)
 
 |Hardware|Qty|Hardware|Qty|Hardware|Qty|
 |---|---|---|---|---|---|
@@ -129,14 +129,14 @@ For below 2, I think you surely have them.
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Breakout_for_LinkIt_Smart_7688_v2_0/blob/master/resource/Breakout_for_LinkIt_Smart_7688_v2.0_schematic_files.zip?raw=true" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Breakout_for_LinkIt_Smart_7688_v2_0/resource/Breakout_for_LinkIt_Smart_7688_v2.0_schematic_files.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ## Resources
 ---
 
-* [Schematic files](https://github.com/SeeedDocument/Breakout_for_LinkIt_Smart_7688_v2_0/blob/master/resource/Breakout_for_LinkIt_Smart_7688_v2.0_schematic_files.zip?raw=true)
+* [Schematic files](https://files.seeedstudio.com/wiki/Breakout_for_LinkIt_Smart_7688_v2_0/resource/Breakout_for_LinkIt_Smart_7688_v2.0_schematic_files.zip)
 * [LinkIt smart 7688](http://www.seeedstudio.com/wiki/LinkIt_Smart_7688)
 * [OpenWrt](http://wiki.openwrt.org/doc/howto/user.beginner)
 * [Link to buy a LinkIt Smart 7688](http://www.seeedstudio.com/depot/LinkIt-Smart-7688-p-2573.html?cPath=122_142)

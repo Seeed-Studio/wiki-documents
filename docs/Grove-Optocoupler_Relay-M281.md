@@ -18,7 +18,7 @@ Unlike the other TRIAC SSR in our website, this relay is based on MOSFET, so it 
 
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-Optocoupler-Relay-M281-p-2923.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-Optocoupler-Relay-M281-p-2923.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
 
 
 ## Version
@@ -76,7 +76,7 @@ Unlike the other TRIAC SSR in our website, this relay is based on MOSFET, so it 
 
 <div align="center">
 <figure>
-  <p style=":center"><a href="https://github.com/SeeedDocument/Grove-Optocoupler-Relay-M281/raw/master/img/pinout.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Grove-Optocoupler-Relay-M281/raw/master/img/pinout.jpg" /></a></p>
+  <p style=":center"><a href="https://files.seeedstudio.com/wiki/Grove-Optocoupler-Relay-M281/img/pinout.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/Grove-Optocoupler-Relay-M281/img/pinout.jpg" /></a></p>
   <figcaption><b>Figure 1</b>. <i>Pinout</i></figcaption>
 </figure>
 </div>
@@ -130,7 +130,7 @@ Unlike the other TRIAC SSR in our website, this relay is based on MOSFET, so it 
 
 <div align="center">
 <figure>
-  <p style=":center"><a href="https://github.com/SeeedDocument/Grove-Optocoupler-Relay-M281/raw/master/img/connect2.png" target="_blank"><img src="https://github.com/SeeedDocument/Grove-Optocoupler-Relay-M281/raw/master/img/connect2.png" /></a></p>
+  <p style=":center"><a href="https://files.seeedstudio.com/wiki/Grove-Optocoupler-Relay-M281/img/connect2.png" target="_blank"><img src="https://files.seeedstudio.com/wiki/Grove-Optocoupler-Relay-M281/img/connect2.png" /></a></p>
   <figcaption><b>Figure 2</b>. <i>Pinout, please make sure connect to the 3.3v pin, 5v will damage this LED.</i></figcaption>
 </figure>
 </div>
@@ -173,14 +173,14 @@ void loop() {
 ## Schematic Online Viewer
 
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove-Optocoupler-Relay-M281/raw/master/res/Grove-Optocoupler%20Relay%20(M281).zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Optocoupler-Relay-M281/res/Grove-Optocoupler%20Relay%20(M281).zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 
 ## Resources
 
-- **[ZIP]** [Grove - Optocoupler Relay (M281) Schematic file](https://github.com/SeeedDocument/Grove-Optocoupler-Relay-M281/raw/master/res/Grove-Optocoupler%20Relay%20(M281).zip)
+- **[ZIP]** [Grove - Optocoupler Relay (M281) Schematic file](https://files.seeedstudio.com/wiki/Grove-Optocoupler-Relay-M281/res/Grove-Optocoupler%20Relay%20(M281).zip)
 - **[PDF]** [M281 Datasheet](https://files.seeedstudio.com/wiki/Grove-Optocoupler-Relay-M281/res/M281_Datasheet.pdf)
 
 

@@ -67,4 +67,4 @@ SenseCAP Portal provides multiple services, including web-based management porta
 
 ## 2.Quick Start
 
-For thi quick start guide, please refer to the [SenseCAP Product User Guide(LoRaWAN Series)-V1.1](https://github.com/SeeedDocument/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide/raw/master/res/SenseCAP%20Product%20User%20Guide(LoRaWAN%20Series)-V1.1.docx)
+For thi quick start guide, please refer to the [SenseCAP Product User Guide(LoRaWAN Series)-V1.1](https://files.seeedstudio.com/wiki/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide/res/SenseCAP%20Product%20User%20Guide(LoRaWAN%20Series)-V1.1.docx)

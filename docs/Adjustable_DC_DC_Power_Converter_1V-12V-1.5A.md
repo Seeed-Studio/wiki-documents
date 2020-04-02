@@ -46,13 +46,13 @@ Connect the module with Bread Board like following picture. It can quickly selec
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A/raw/master/res/Adjustable_DC-DC_Power_Converter-1V-12V1.5A-v1.0_sch_pcb.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A/res/Adjustable_DC-DC_Power_Converter-1V-12V1.5A-v1.0_sch_pcb.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ##   Resources
 ---
-*   [Adjustable DC - DC Power Converter(1V - 12V1.5A) v1.0 sch pcb.zip](https://github.com/SeeedDocument/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A/raw/master/res/Adjustable_DC-DC_Power_Converter-1V-12V1.5A-v1.0_sch_pcb.zip)
+*   [Adjustable DC - DC Power Converter(1V - 12V1.5A) v1.0 sch pcb.zip](https://files.seeedstudio.com/wiki/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A/res/Adjustable_DC-DC_Power_Converter-1V-12V1.5A-v1.0_sch_pcb.zip)
 
 *   [MP1496 Datasheet](https://files.seeedstudio.com/wiki/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A/res/MP1496-277526.pdf)
 

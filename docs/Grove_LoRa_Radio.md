@@ -61,10 +61,10 @@ This is the 433MHz version, which can be used for 433MHz communication. You can 
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove_LoRa_Radio/master/img/hardware.png)
 
-1. ATMega168 MCU ([datasheet](https://github.com/SeeedDocument/Grove_LoRa_Radio/blob/master/res/Atmel-2545-8-bit-AVR-Microcontroller-ATmega48-88-168_Datasheet.pdf))
+1. ATMega168 MCU ([datasheet](https://files.seeedstudio.com/wiki/Grove_LoRa_Radio/res/Atmel-2545-8-bit-AVR-Microcontroller-ATmega48-88-168_Datasheet.pdf))
 2. MHF Connector
 3. Wire Antenna
-4. RFM95 Module ([datesheet](https://github.com/SeeedDocument/Grove_LoRa_Radio/blob/master/res/RFM95_96_97_98_DataSheet.pdf))
+4. RFM95 Module ([datesheet](https://files.seeedstudio.com/wiki/Grove_LoRa_Radio/res/RFM95_96_97_98_DataSheet.pdf))
 5. Grove Interface
 
 |PIN|NAME|FUNCTION|
@@ -221,11 +221,11 @@ The below chart shows the relationships between the band rate signal band width 
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_LoRa_Radio/master/img/DateRate.png)
 
 # 433MHz
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove_LoRa_Radio/blob/master/res/433_eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove_LoRa_Radio/res/433_eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 # 868MHz
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Grove_LoRa_Radio/blob/master/res/868_eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove_LoRa_Radio/res/868_eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
@@ -233,14 +233,14 @@ The below chart shows the relationships between the band rate signal band width 
 ---
 
 * ***Schematics***
-    *   [Grove - LoRa Radio 433MHz v1.0 Schematics (Eagle files)](https://github.com/SeeedDocument/Grove_LoRa_Radio/blob/master/res/433_eagle.zip)
-    *   [Grove - LoRa Radio 433MHz v1.0 Schematics (PDF files)](https://github.com/SeeedDocument/Grove_LoRa_Radio/blob/master/res/433_sch.pdf)
-    *   [Grove - LoRa Radio 868MHz v1.0 Schematics (Eagle files)](https://github.com/SeeedDocument/Grove_LoRa_Radio/blob/master/res/868_eagle.zip)
-    *   [Grove - LoRa Radio 868MHz v1.0 Schematics (PDF files)](https://github.com/SeeedDocument/Grove_LoRa_Radio/blob/master/res/868_sch.pdf)
+    *   [Grove - LoRa Radio 433MHz v1.0 Schematics (Eagle files)](https://files.seeedstudio.com/wiki/Grove_LoRa_Radio/res/433_eagle.zip)
+    *   [Grove - LoRa Radio 433MHz v1.0 Schematics (PDF files)](https://files.seeedstudio.com/wiki/Grove_LoRa_Radio/res/433_sch.pdf)
+    *   [Grove - LoRa Radio 868MHz v1.0 Schematics (Eagle files)](https://files.seeedstudio.com/wiki/Grove_LoRa_Radio/res/868_eagle.zip)
+    *   [Grove - LoRa Radio 868MHz v1.0 Schematics (PDF files)](https://files.seeedstudio.com/wiki/Grove_LoRa_Radio/res/868_sch.pdf)
 
 * ***Datasheet***
-    *   [RFM95/96/97 Datasheet](https://github.com/SeeedDocument/Grove_LoRa_Radio/blob/master/res/RFM95_96_97_98_DataSheet.pdf)
-    *   [Atmega168 Datasheet](https://github.com/SeeedDocument/Grove_LoRa_Radio/blob/master/res/Atmel-2545-8-bit-AVR-Microcontroller-ATmega48-88-168_Datasheet.pdf)
+    *   [RFM95/96/97 Datasheet](https://files.seeedstudio.com/wiki/Grove_LoRa_Radio/res/RFM95_96_97_98_DataSheet.pdf)
+    *   [Atmega168 Datasheet](https://files.seeedstudio.com/wiki/Grove_LoRa_Radio/res/Atmel-2545-8-bit-AVR-Microcontroller-ATmega48-88-168_Datasheet.pdf)
 
 * ***References***
     *   [LoRa Alliance](https://www.lora-alliance.org/)
@@ -249,7 +249,7 @@ The below chart shows the relationships between the band rate signal band width 
     *   [Grove - LoRa Radio Library and Examples](https://github.com/Seeed-Studio/Grove_LoRa_433MHz_and_915MHz_RF/)
     *   [LMIC Library](https://github.com/matthijskooijman/arduino-lmic)
 
-* [***Download ALL Above***](https://github.com/SeeedDocument/Grove_LoRa_Radio/blob/master/res/res.zip)
+* [***Download ALL Above***](https://files.seeedstudio.com/wiki/Grove_LoRa_Radio/res/res.zip)
 
 
 

@@ -8,7 +8,7 @@ surveyurl: https://www.research.net/r/65Y9KB8
 sku: 110070028
 ---
 
-![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/3.jpg?raw=true)
+![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/3.jpg)
 
 The Tricycle Bot is a easy-to-assemble and Grove_Compatible DIY Robot platform for education. It includes the eletronic materials and structure materials which could be assembled easily via the guideline. The Tricycle Bot has three floors and five shores between the 2nd and 3th floor, the 3th floor can be fixed many modules via screws and nuts.
 
@@ -29,7 +29,7 @@ Further more, you can fix the Arduino board and breadboard as the heart of the r
 
 ##Part List
 
-![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/4.jpg?raw=true)
+![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/4.jpg)
 
 |Parts name|Specification|Quantity|
 |:---------|:-----------:|:------:|
@@ -61,9 +61,9 @@ Further more, you can fix the Arduino board and breadboard as the heart of the r
 
 ##Assembly Introdutions
 
-![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/1.png?raw=true)
+![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/1.png)
 
-![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/2.png?raw=true)
+![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/2.png)
 
 
 You could fix any boards you like on Tricycle Bot to drive this Robot Platform, such as Arduino, Raspberry Pi and BeagleBone. And to drive the DC motors and Grove modules, motor cape and Grove cape are good helper for you.
@@ -79,7 +79,7 @@ Arduino is the most famous open-source prototyping platform as its easy-to-use h
 Seeeduino v4 is an Open Source, Arduino-compatible ATmega328 MCU development board. We think Seeeduino v4 is one of the best Arduino derivatives/compatibles available. Seeeduino v4 is feature rich, much more stable, easy-to-use and even good looking.
 
 <div class="text-center">
-<img src="https://files.seeedstudio.com/wiki/SeeeduinoV4/master/images/cover.JPG?raw=true" width="50%" height="50%">
+<img src="https://files.seeedstudio.com/wiki/SeeeduinoV4/master/images/cover.JPG" width="50%" height="50%">
 </div>
 
 
@@ -87,7 +87,7 @@ Seeeduino v4 is an Open Source, Arduino-compatible ATmega328 MCU development boa
 The Motor Shield is a driver module for motors that allows you to use Arduino to control the working speed and direction of the motor.
 
 <div class="text-center">
-<img src="https://github.com/SeeedDocument/Motor_Shield_V2.0/image/500px-Motorshield_01.jpg?raw=true" width="50%" height="50%">
+<img src="https://github.com/SeeedDocument/Motor_Shield_V2.0/image/500px-Motorshield_01.jpg" width="50%" height="50%">
 </div>
 
 
@@ -163,7 +163,7 @@ BeagleBone is also one of the most popular linux single-board computer. Compared
 SeeedStudio BeagleBone Green Wireless is based on the open-source hardware design of BeagleBone Black, but it has a high-performance flexible WiFi/Bluetooth interface, making it easier to develop remote controlled, such as [BBGW Wi-Fi Car](http://www.instructables.com/id/Super-Quickly-DIY-Web-RC-Car-With-Python-and-Beagl/).
 
 <div class="text-center">
-<img src="https://github.com/SeeedDocument/BeagleBone_Green_Wireless/raw/master/images/BBGW_cover.png?raw=true" width="50%" height="50%">
+<img src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/BBGW_cover.png" width="50%" height="50%">
 </div>
 
 ###[Motor Bridge Cape v1.0](https://www.seeedstudio.com/Motor-Bridge-Cape-p-2569.html)
@@ -178,7 +178,7 @@ The Motor Bridge Cape can control two stepper motors or four brushed DC motors w
 Grove Base Cape for BeagleBone v2 is a Grove system expansion board for BeagleBone platform. This cape makes it convenient to connect many transducers (sensors and actuators) available as Grove modules with BeagleBone platform.
 
 <div class="text-center">
-<img src="https://github.com/SeeedDocument/Grove_Base_Cape_for_BeagleBone_v2/raw/master/img/Grove_Base_Cape_for_BeagleBone_v2_product_view_1200.jpg" width="50%" height="50%">
+<img src="https://files.seeedstudio.com/wiki/Grove_Base_Cape_for_BeagleBone_v2/img/Grove_Base_Cape_for_BeagleBone_v2_product_view_1200.jpg" width="50%" height="50%">
 </div>
 
 
@@ -203,7 +203,7 @@ Here is a simple example of making a Tricycle Bot with Arduino UNO.
 
 ###Things we need
 
-![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/7.png?raw=true)
+![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/7.png)
 
 - [Arduino UNO](https://www.arduino.cc/en/Main/ArduinoBoardUno) *1
 - [Motor Shield V2.0](https://www.seeedstudio.com/Motor-Shield-V2.0-p-1377.html) *1
@@ -216,7 +216,7 @@ Here is a simple example of making a Tricycle Bot with Arduino UNO.
 ###Assemble
 
 <div class="text-center">
-<img src="https://files.seeedstudio.com/wiki/Tricycle_Bot/img/5.jpg?raw=true" width="50%" height="50%">
+<img src="https://files.seeedstudio.com/wiki/Tricycle_Bot/img/5.jpg" width="50%" height="50%">
 </div>
 
 1. [Assemble the Tricycle Bot.](https://files.seeedstudio.com/wiki/Tricycle_Bot/Tricycle_Bot.md#assembly-introdutions)
@@ -225,7 +225,7 @@ Here is a simple example of making a Tricycle Bot with Arduino UNO.
 4. Finish it!
 
 <div class="text-center">
-<img src="https://files.seeedstudio.com/wiki/Tricycle_Bot/img/6.jpg?raw=true" width="50%" height="50%">
+<img src="https://files.seeedstudio.com/wiki/Tricycle_Bot/img/6.jpg" width="50%" height="50%">
 </div>
 
 ###Show

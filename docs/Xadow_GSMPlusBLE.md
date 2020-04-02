@@ -109,10 +109,10 @@ Some frequently asked questions in RePhone Community are collected and answered 
 
 ##Resources  
 The schematic diagram of Xadow GSM+BLE is provided in the following link:  
-[- Xadow_GSM+BLE eagle files ](https://github.com/SeeedDocument/Xadow_GSM-BLE/blob/master/resource/Xadow_GSM%2BBLE.rar)  
+[- Xadow_GSM+BLE eagle files ](https://files.seeedstudio.com/wiki/Xadow_GSM-BLE/resource/Xadow_GSM%2BBLE.rar)  
 Check more info about the chipset MT2502:  
-[- Datasheet for eagle files](https://github.com/SeeedDocument/Xadow_GSM-BLE/blob/master/resource/Datasheet_for_MT2502.rar)  
+[- Datasheet for eagle files](https://files.seeedstudio.com/wiki/Xadow_GSM-BLE/resource/Datasheet_for_MT2502.rar)  
 Check out this excel for the compatibility with Xadow 1.0 modules:  
-[- Compatibility between GSM+BLE and Xadow 1.0 modules  ](https://github.com/SeeedDocument/Xadow_GSM-BLE/blob/master/resource/Compatibility_between_GSM%2BBLE_and_Xadow_1.0_modules.xlsx)
+[- Compatibility between GSM+BLE and Xadow 1.0 modules  ](https://files.seeedstudio.com/wiki/Xadow_GSM-BLE/resource/Compatibility_between_GSM%2BBLE_and_Xadow_1.0_modules.xlsx)
  
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

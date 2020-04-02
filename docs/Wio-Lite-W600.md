@@ -25,7 +25,7 @@ On top of that, we've released the [Grove Shield for Wio Lite](https://www.seeed
 
 <div align="center">
 <figure>
-  <a href="https://github.com/SeeedDocument/Grove-Shield-for-Wio-Lite/raw/master/img/Grove-Shield-for-Wio-Lite-V1.0-detail.jpg" target="_blank"><img src="https://github.com/SeeedDocument/Grove-Shield-for-Wio-Lite/raw/master/img/Grove-Shield-for-Wio-Lite-V1.0-detail.jpg" height="450" width="600" alt="Seeed relay quick selection diagram"  />
+  <a href="https://files.seeedstudio.com/wiki/Grove-Shield-for-Wio-Lite/img/Grove-Shield-for-Wio-Lite-V1.0-detail.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Wio-Lite/img/Grove-Shield-for-Wio-Lite-V1.0-detail.jpg" height="450" width="600" alt="Seeed relay quick selection diagram"  />
   </a>
 </figure>
 </div>
@@ -38,7 +38,7 @@ Goodbye, complex wiring with the breadboard and annoying welding with the solder
 Hello, [Grove](http://wiki.seeedstudio.com/Grove_System/)! 
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Wio-Lite-W600-p-4155.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Wio-Lite-W600-p-4155.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
 
 
 
@@ -138,7 +138,7 @@ Please follow the [Seeed Board Intallation Guide](http://wiki.seeedstudio.com/Se
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Wio-Lite-W600/raw/master/img/IDE-1.jpg"/>
+  <img src="https://files.seeedstudio.com/wiki/Wio-Lite-W600/img/IDE-1.jpg"/>
   <figcaption> <i>The key word is **seeeduino_samd_zero**</i> </figcaption>
 </figure>
 </div>
@@ -171,7 +171,7 @@ Selecting a **Seeeduino Wio Lite W600**.
 
 <div align="center">
 <figure>
-  <img src="https://github.com/SeeedDocument/Wio-Lite-W600/raw/master/img/IDE-2.jpg"/>
+  <img src="https://files.seeedstudio.com/wiki/Wio-Lite-W600/img/IDE-2.jpg"/>
   <figcaption><i>Choose the right board</i></figcaption>
 </figure>
 </div>
@@ -202,14 +202,14 @@ A few seconds after the upload finishes, then the Wio Lite W600 will access the 
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/Wio-Lite-W600/raw/master/res/Wio-Lite-W600.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Wio-Lite-W600/res/Wio-Lite-W600.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ## Resources
 
 - **[ZIP]** [Wio Lite W600 Eagle file](https://files.seeedstudio.com/wiki/Wio-Lite-W600/res/Wio-Lite-W600.zip)
-- **[PDF]** [W600-datasheet](https://github.com/SeeedDocument/W600_Module/blob/master/res/WM_W60X_SDK_User%20Manual_V1.0.0.pdf)
+- **[PDF]** [W600-datasheet](https://files.seeedstudio.com/wiki/W600_Module/res/WM_W60X_SDK_User%20Manual_V1.0.0.pdf)
 
 
 

@@ -17,7 +17,7 @@ Most of the MCUs use TTL levels, and the computer serial port generally uses 232
 This module is based on Max3232, it supports multiple baud rate communication and theoretically supports communication up to 230400bps baud. 
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/RS-232-To-TTL-Conveter-MAX3232IDR-p-2851.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/RS-232-To-TTL-Conveter-MAX3232IDR-p-2851.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png /></a></p>
 
 ## Version
 
@@ -85,13 +85,13 @@ This is a simple module that only needs to connect the corresponding interface t
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/RS-232_To_TTL_Conveter-MAX3232IDR/raw/master/res/RS232%20to%20TTL%20Converter%20(MAX3232IDR).zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/RS-232_To_TTL_Conveter-MAX3232IDR/res/RS232%20to%20TTL%20Converter%20(MAX3232IDR).zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ## Resources
 
-- **[Zip]** [RS-232 To TTL Conveter (MAX3232IDR) Eagle Files](https://github.com/SeeedDocument/RS-232_To_TTL_Conveter-MAX3232IDR/raw/master/res/RS232%20to%20TTL%20Converter%20(MAX3232IDR).zip)
+- **[Zip]** [RS-232 To TTL Conveter (MAX3232IDR) Eagle Files](https://files.seeedstudio.com/wiki/RS-232_To_TTL_Conveter-MAX3232IDR/res/RS232%20to%20TTL%20Converter%20(MAX3232IDR).zip)
 
 - **[PDF]** [MAX3232 Datasheet](https://files.seeedstudio.com/wiki/RS-232_To_TTL_Conveter-MAX3232IDR/res/Max3232.pdf)
 

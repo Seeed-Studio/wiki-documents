@@ -9,7 +9,7 @@ sku: 103030095
 ---
 
 
-![](https://github.com/SeeedDocument/Grove_Shield_for_Intel_Joule/blob/master/img/1.jpg?raw=true)
+![](https://files.seeedstudio.com/wiki/Grove_Shield_for_Intel_Joule/img/1.jpg)
 
 At the 2016 Intel Developer Forum, Intel announced the availability of the Joule Module, a Linux system on module that offers high computational power, RAM, and storage. This Grove shield introduces the family of Grove modules to the powerful Intel JouleTM, aims at helping inventors and IoT developers create there project more convenient and faster.
 

@@ -35,7 +35,7 @@ The board is developed based on WM8960, a low power stereo codec. There are 2 mi
 
 ## Hardware Overview
 
-![](https://github.com/SeeedDocument/MIC_HATv1.0_for_raspberrypi/blob/master/img/mic_hatv1.0.png?raw=true)
+![](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/mic_hatv1.0.png)
 
 - BUTTON: a User Button, connected to GPIO17
 - MIC_Land MIC_R: 2 Microphones on both sides of the board
@@ -123,7 +123,7 @@ arecord -f cd -Dhw:1 | aplay -Dhw:1
 pi@raspberrypi:~ $ alsamixer
 ```
 
-![](https://github.com/SeeedDocument/MIC_HATv1.0_for_raspberrypi/blob/master/img/alsamixer.png?raw=true)
+![](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/alsamixer.png)
 
 The Left and right arrow keys are used to select the channel or device and the Up and Down Arrows control the volume for the currently selected device. Quit the program with ALT+Q, or by hitting the Esc key. [More information](https://en.wikipedia.org/wiki/Alsamixer)
 
@@ -142,8 +142,8 @@ cd mic_hat
 python pixels.py
 ```
 <video width="512" height="384" controls preload>
-    <source src="https://github.com/SeeedDocument/MIC_HATv1.0_for_raspberrypi/raw/master/img/led.mp4"></source>
-    <source src="https://github.com/SeeedDocument/MIC_HATv1.0_for_raspberrypi/raw/master/img/led.webmhd.webm"></source>
+    <source src="https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/led.mp4"></source>
+    <source src="https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/led.webmhd.webm"></source>
 </video>
 
 
@@ -245,7 +245,7 @@ pi@raspberrypi:~ $ source env/bin/activate
 
 Say *Ok Google* or *Hey Google*, followed by your query. The Assistant should respond. If the Assistant does not respond, follow the [troubleshooting instructions](https://developers.google.com/assistant/sdk/prototype/getting-started-pi-python/troubleshooting#hotword).
 
-![run demo](https://github.com/SeeedDocument/MIC_HATv1.0_for_raspberrypi/blob/master/img/okgoogle.jpg?raw=true)
+![run demo](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/okgoogle.jpg)
 
 **7. Troubleshooting**
 
@@ -457,7 +457,7 @@ deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main non-
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://github.com/SeeedDocument/ReSpeaker_4-Mics_Linear_Array_Kit/raw/master/ReSpeaker%202-Mics%20Pi%20HAT%20Eagle%20File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/ReSpeaker_4-Mics_Linear_Array_Kit/ReSpeaker%202-Mics%20Pi%20HAT%20Eagle%20File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
