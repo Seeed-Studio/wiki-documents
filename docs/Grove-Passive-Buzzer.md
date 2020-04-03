@@ -83,7 +83,9 @@ void loop()
   delayMicroseconds(cycle/2);  // run the PMW cycle
 }
 ```
+
 - **Step2** After uploading the code tp the board, you will hear thr buzzer beep.
+
 
 #### Code example2 - Use buzzer to play music
 ```c++
@@ -194,6 +196,7 @@ void loop()
     delay(5000);//after playing the whole song, delay for 5 sec
  }    
 ```
+
 - **Step3** After uploading the code to the board, you can hear a music from the buzzer.
 
 ### Play with Raspberry Pi 
@@ -214,6 +217,7 @@ Connect the Buzzer with "PWM" on the Grove Base Hat.
 #### Software Code
 
 - **Step 1** Install Grove.py on your Raspberry.
+
 ```
 curl -sL https://github.com/Seeed-Studio/grove.py/raw/master/install.sh | sudo bash -s -
 ```
@@ -222,12 +226,16 @@ git clone https://github.com/Seeed-Studio/grove.py
 ```
 
 - **Step 2** Create a python file for the code.
+
+
 ```
 cd grove.py
 nano example.py
 ```
 
 - **Step 3** Copy the following code to the python file
+
+
 ```
 #!/usr/bin/env python
 import time
@@ -253,6 +261,8 @@ if __name__ == '__main__':
 ```
 
 - **Step 4** Run the program
+
+
 ```
 sudo chmod +x example.py
 sudo ./example.py
