@@ -164,6 +164,41 @@ This is very useful when Wio Terminal crashes or somehow USB serial is not showi
 
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-Bootloader.png"/></div>
 
+**Testing with SWD**
+
+There are two ways to use SWD to test and debug with Wio Terminal:
+
+From the back of the PCB testing ports.
+
+<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/SWD-1.png"/></div>
+
+On the left is the testing ports for ATSAMD51:
+
+- SWCLK
+- SWDIO
+- SWO
+- RST
+- GND
+- 3V3
+
+On the right is the testing ports for RTL8720DN:
+
+- CHIP
+- RXD
+- TXD
+- GND
+- 3V3
+
+If you have very frequent debugging needs, you can add SWD debugging to one of the Grove interfaces in the following ways:
+
+<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/SWD-2.png"/></div></br>
+
+The picture shows the two unmounted resistor positions. You can connect these two pads by soldering a 0 ohm resistor or shorting it. This will connect the SWD interface (SWDIO / SWCLK) of ATSMAD51 to Grove in parallel on the interface.
+
+After our test, the SWD interface is connected in parallel in this way. When powering on and resetting, you need to make sure that the Grove interface is not connected to any Grove module (the module may have pull-up / pull-down resistors, which will affect it), otherwise it will Enter SWD mode directly and cannot run in normal mode (that is, SWDCLK cannot be pulled low during power-on or reset)
+
+In addition to power-on and reset, when using SWD, Digital, Analog, Serial, I2C, there will be no interference, you can switch at any time, but in order to avoid possible problems, we still recommend removing this after completing the program debugging Connection of two pads.
+
 ## Resources
 
 - **[PDF]** [ATSAMD51N19A Datasheet](https://files.seeedstudio.com/wiki/Wio-Terminal/res/ATSAMD51.pdf)
