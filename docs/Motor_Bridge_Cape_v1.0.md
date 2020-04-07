@@ -1,6 +1,6 @@
 ---
 name: Motor Bridge Cape v1.0
-category: BeagleBone
+category: BeagleBone®
 bzurl: https://seeedstudio.com/Motor-Bridge-Cape-p-2569.html
 oldwikiname: Motor_Bridge_Cape_v1.0
 prodimagename: Motor_bridge_driver.jpg
@@ -11,7 +11,7 @@ sku: 105030006
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Motor_Bridge_Cape_v1.0/master/img/Motor_bridge_driver.jpg)
 
-The Motor Bridge Cape features bi-directional motor control using two TB6612FNG integrated dual H-bridge, so it can control two stepper motors or four brushed DC motors with 6 ~15V DC  ower and about 1A current draw per motor. The cape provides 5V regulated power to BBG or BBB with a max input voltage of 15V. It also has six servo control interfaces and six expand I\O.  All the features are provided by the on board STM32F0 coprocessor. The MCU can communicate with BeagleBone by I<sup>2</sup>C or UART interface. 
+The Motor Bridge Cape features bi-directional motor control using two TB6612FNG integrated dual H-bridge, so it can control two stepper motors or four brushed DC motors with 6 ~15V DC  ower and about 1A current draw per motor. The cape provides 5V regulated power to BBG or BBB with a max input voltage of 15V. It also has six servo control interfaces and six expand I\O.  All the features are provided by the on board STM32F0 coprocessor. The MCU can communicate with BeagleBone® by I<sup>2</sup>C or UART interface. 
 
 [![](https://raw.githubusercontent.com/SeeedDocument/common/master/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Motor-Bridge-Cape-p-2569.html)
 
@@ -265,7 +265,7 @@ if __name__=="__main__":
 Upgrade the Firmware
 --------------------
 
-If there is something wrong with your cape, try to upgrade it. This section show how to upgrade the Motor Bridge Cape Firmware using BeagleBone Green. It also works on BBGW and BBB.
+If there is something wrong with your cape, try to upgrade it. This section show how to upgrade the Motor Bridge Cape Firmware using BeagleBone® Green. It also works on BBGW and BBB.
 
 1.Insert the Motor Bridge Cape to BBG/BBGW/BBB, and connect BBG to your computer via USB cable.
 
