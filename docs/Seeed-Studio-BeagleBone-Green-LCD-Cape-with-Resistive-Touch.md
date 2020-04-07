@@ -1,6 +1,6 @@
 ---
 name:  Green LCD Cape with Resistive Touch
-category: BeagleBone
+category: BeagleBone®
 bzurl: https://www.seeedstudio.com/5-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2642.html
 oldwikiname: BeagleBone_Green_HDMI_Cape
 prodimagename: BeagleBone_Green_HDMI_Cape.jpg
@@ -55,7 +55,7 @@ sku: 104990262
 
 -----------------
 
-Use it with BeagleBone to display anything you want.
+Use it with BeagleBone® to display anything you want.
 
 ## Hardware
 -----------------
@@ -90,7 +90,7 @@ Use it with BeagleBone to display anything you want.
 
 ### Preparation
 
-- BeagleBone Green board or BeagleBone black board(with OS [installation](http://beagleboard.org/getting-started)) × 1.
+- BeagleBone® Green board or BeagleBone® black board(with OS [installation](http://beagleboard.org/getting-started)) × 1.
 - USB cables (type A to micro type B) × 2.
 
 ### Hardware Connection
@@ -100,17 +100,17 @@ Use it with BeagleBone to display anything you want.
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 
-BeagleBone Green board and Green LCD Cape with Resistive Touch both need to be USB-connected for sufficient driving.
+BeagleBone® Green board and Green LCD Cape with Resistive Touch both need to be USB-connected for sufficient driving.
 
 </div>
 
 ### Software Configuration
 
-1. Check what COM port BeagleBone Green board is using in Device Manager
+1. Check what COM port BeagleBone® Green board is using in Device Manager
 
 ![](https://github.com/SeeedDocument/BBG-LCD-Cape-with-Resistive-Touch/raw/master/img/com-show.png)
 
-2. Access BeagleBone Green board system using putty with the COM port.
+2. Access BeagleBone® Green board system using putty with the COM port.
 
 ![](https://github.com/SeeedDocument/BBG-LCD-Cape-with-Resistive-Touch/raw/master/img/putty-config.png)
 
@@ -132,7 +132,7 @@ For 5-inch screen:
 
 ![](https://github.com/SeeedDocument/BBG-LCD-Cape-with-Resistive-Touch/raw/master/img/5-inch-config.png)
 
-For display devices using beaglebone HDMI, uncomment `disable_uboot_overlay_video=1`
+For display devices using BeagleBone® HDMI, uncomment `disable_uboot_overlay_video=1`
 
 ![](https://github.com/SeeedDocument/BBG-LCD-Cape-with-Resistive-Touch/raw/master/img/HDMI-config.png)
 
