@@ -22,7 +22,6 @@ The button is simply driven by the GPIO Digital Pins. When the button is pressed
 
 - Compact modular design and less wire connection with two buttons in one grove module
 - Different color keycaps provided, freely adjust the color combination as needed.
-- 3/5V voltage compatibility
 
 ## Specification
 
