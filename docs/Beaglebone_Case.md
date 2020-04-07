@@ -1,6 +1,6 @@
 ---
-name: BeagleBone Case
-category: BeagleBone
+name: BeagleBone® Case
+category: BeagleBone®
 bzurl: https://www.seeedstudio.com/BeagleBone-Case-p-2285.html
 oldwikiname:  BeagleBone Case
 prodimagename: Fastener_Kit_01.jpg
@@ -13,7 +13,7 @@ sku:  113070001
 
 ![](https://github.com/SeeedDocument/Beaglebone_Case/raw/master/img/1130070001_4.jpg)
 
-The acrylic case is used for Beaglebone, like the Raspberry PI B+ case.It’s made of acrylic sheet. manufacture by laser cutting, CNC milling, and hot bending. almost all handmade, Looks very compact and beautiful, Only 4 pieces sheets in total, so easy to assembled. It's strong enought, not easy break like other 6 acrylic sheets case. In the box rounded corners and beveled edges  .you will feel very comfortable when you hold it.
+The acrylic case is used for BeagleBone®, like the Raspberry PI B+ case.It’s made of acrylic sheet. manufacture by laser cutting, CNC milling, and hot bending. almost all handmade, Looks very compact and beautiful, Only 4 pieces sheets in total, so easy to assembled. It's strong enought, not easy break like other 6 acrylic sheets case. In the box rounded corners and beveled edges  .you will feel very comfortable when you hold it.
 
 [![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/BeagleBone-Case-p-2285.html)
 
@@ -26,7 +26,7 @@ The acrylic case is used for Beaglebone, like the Raspberry PI B+ case.It’s ma
 
 ##  How to made the case about seeedstudio
 
-It's different from the others case just like 6-acrylic sheets laser cutting case and injection model. Although it's cheap and fast made, But maybe some people think it no personality. Now,there is a case for beaglebone is out of the common, it's designed by seeedstudio engineer. It's not made by large scale way just like injection model and simple laser cutting. Made the case requires 3 kinds of production process——laser cutting ,CNC milling and hot bending. all the processes are suitable for small scale project.
+It's different from the others case just like 6-acrylic sheets laser cutting case and injection model. Although it's cheap and fast made, But maybe some people think it no personality. Now,there is a case for BeagleBone® is out of the common, it's designed by seeedstudio engineer. It's not made by large scale way just like injection model and simple laser cutting. Made the case requires 3 kinds of production process——laser cutting ,CNC milling and hot bending. all the processes are suitable for small scale project.
 
 <big>**The first process——Laser Cutting**</big>
 
