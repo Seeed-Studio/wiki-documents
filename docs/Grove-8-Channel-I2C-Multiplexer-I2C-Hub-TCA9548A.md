@@ -10,7 +10,7 @@ tags:
 ---
 
 
-![](http://me.omgoooo.com:2022/SeeedDocument/Grove-8-Channel-I2C-Hub-TCA9548A-/-/raw/master/img/Grove-8-Channel-I2C-Hub-TCA9548A-wiki.jpg)
+![](https://files.seeedstudio.com/products/103020293/img/Grove-8-Channel-I2C-Hub-TCA9548A-wiki.jpg)
 
 
 We've already released the [Grove - I2C Hub (4 Port)](https://www.seeedstudio.com/Grove-I2C-Hub.html) and the [Grove - I2C Hub (6 Port)](https://www.seeedstudio.com/Grove-I2C-Hub-6-Port-p-4349.html). Wait, still not enough? Well well, we know you are seeking more. Here you are, we present you the Grove - 8 Channel I2C Hub. 
@@ -38,7 +38,7 @@ More importantly, this is more than just a superposition of port quantities. As 
 
 |Seeeduino XIAO|Grove Breadboard|Grove - 8 Channel I2C Multiplexer/I2C Hub (TCA9548A)|
 |--------|-----------------------|------------|
-|![](http://me.omgoooo.com:2022/SeeedDocument/Seeeduino-XIAO/-/raw/master/img/seeeduino-xiao-preview210x157.jpg)|![](http://me.omgoooo.com:2022/SeeedDocument/Grove-Breadboard/-/raw/master/img/103020232-integrate-preview210x157.jpg)|![](http://me.omgoooo.com:2022/SeeedDocument/Grove-8-Channel-I2C-Hub-TCA9548A-/-/raw/master/img/Grove-8-Channel-I2C-Hub-TCA9548A-thumbnail.jpg)|
+|![](https://files.seeedstudio.com/products/102010328/img/seeeduino-XIAO-thumbnail.jpg)|![](https://files.seeedstudio.com/products/103020232/img/103020232-thumbnail.png)|![](https://files.seeedstudio.com/products/103020293/img/Grove-8-Channel-I2C-Hub-TCA9548A-thumbnail.jpg)|
 |[Get one now](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|[Get one now](https://www.seeedstudio.com/Grove-Breadboard-p-4034.html)|[Get one now](https://www.seeedstudio.com/Grove-8-Channel-I2C-Hub-TCA9548A-p-4398.html)|
 
 We also require up to 8 I2C devices, please click [here](https://www.seeedstudio.com/catalogsearch/result/?q=i2c) to find the Grove I2C devices you like.
@@ -46,7 +46,7 @@ At these example, we use three I2C devices.
 
 #### Hardware connection
 
-![](http://me.omgoooo.com:2022/SeeedDocument/Grove-8-Channel-I2C-Hub-TCA9548A-/-/raw/master/img/Grove-8-Channel-I2C-Hub-example.jpg)
+![](https://files.seeedstudio.com/products/103020293/img/Grove-8-Channel-I2C-Hub-example.jpg)
 
 Connect the I2C Hub with Seeeduino XIAO's I2C interface, and connect each I2C device with each hub.
 
@@ -145,7 +145,7 @@ void loop()
 
 
 - **Step 3** After uploading the code, you will see the I2C adress of each device from the serial monitor. The adress 0x70 is the I2C adress of I2C Hub.
-![](http://me.omgoooo.com:2022/SeeedDocument/Grove-8-Channel-I2C-Hub-TCA9548A-/-/raw/master/img/Grove-8-channel-I2C-Hub-test-result.png)
+![](https://files.seeedstudio.com/products/103020293/img/Grove-8-channel-I2C-Hub-test-result.png)
 
 ## Schematic Online Viewer
 
@@ -154,9 +154,9 @@ void loop()
 
 ## Resource
 
- - **[PDF]** [TCA9548A_DATASHEET](http://me.omgoooo.com:2022/SeeedDocument/Grove-8-Channel-I2C-Hub-TCA9548A-/-/raw/master/document/TCA9548A_datasheet.pdf)
- - **[PDF]** [Hardware schematic](http://me.omgoooo.com:2022/SeeedDocument/Grove-8-Channel-I2C-Hub-TCA9548A-/-/raw/master/document/Grove-8-Channel-I2C-Hub-TCA9548A_v1.0_SCH_190814.pdf)
- - **[ZiP]** [Grove 8 Channel I2C Hub Library](http://me.omgoooo.com:2022/SeeedDocument/Grove-8-Channel-I2C-Hub-TCA9548A-/-/raw/master/document/Grove_8Channel_I2C_Hub_test_library.zip)
+ - **[PDF]** [TCA9548A_DATASHEET](https://files.seeedstudio.com/products/103020293/document/TCA9548A_datasheet.pdf)
+ - **[PDF]** [Hardware schematic](https://files.seeedstudio.com/products/103020293/document/Grove-8-Channel-I2C-Hub-TCA9548A_v1.0_SCH_190814.pdf)
+ - **[ZiP]** [Grove 8 Channel I2C Hub Library](https://files.seeedstudio.com/products/103020293/document/Grove_8Channel_I2C_Hub_test_library.zip)
 
 
 

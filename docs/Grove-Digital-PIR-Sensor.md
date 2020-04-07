@@ -55,7 +55,7 @@ With the Grove interface, the Grove digital PIR Sensor is easy to be plugged and
 
 |Seeeduino XIAO|Grove Breadboard|Grove Digital PIR Motion Sensor|
 |--------|-----------------------|-------------------------------------------------------------|
-|![](http://me.omgoooo.com:2022/SeeedDocument/Seeeduino-XIAO/-/raw/master/img/seeeduino-xiao-preview210x157.jpg)|![](http://me.omgoooo.com:2022/SeeedDocument/Grove-Breadboard/-/raw/master/img/103020232-integrate-preview210x157.jpg)|![](https://files.seeedstudio.com/products/101020793/img/101020793wiki210x157.jpg)|
+|![](https://files.seeedstudio.com/products/102010328/img/seeeduino-XIAO-thumbnail.jpg)|![](https://files.seeedstudio.com/products/103020232/img/103020232-thumbnail.png)|![](https://files.seeedstudio.com/products/101020793/img/101020793wiki210x157.jpg)|
 |[Get one now](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|[Get one now](https://www.seeedstudio.com/Grove-Breadboard-p-4034.html)|[Get one now](https://www.seeedstudio.com/Grove-Digital-PIR-Motion-Sensor-p-4524.html)|
 
 #### Hardware Connection
@@ -93,7 +93,7 @@ void loop()
 
 |Raspberry Pi 4B(4GB)|Grove Base Hat for Raspberry Pi|Grove Digital PIR Motion Sensor|
 |--------|-----------------------|-------------------------------------------------------------|
-|![](http://me.omgoooo.com:2022/SeeedDocument/Raspberry-Pi-4/-/raw/master/img/pi-4-2220x157.jpg?inline=false)|![](http://me.omgoooo.com:2022/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/-/raw/master/img/main210x159.jpg)|![](https://files.seeedstudio.com/products/101020793/img/101020793wiki210x157.jpg)|
+|![](https://files.seeedstudio.com/products/102110301/img/raspberry-pi-thumbnail.jpg)|![](https://files.seeedstudio.com/products/103030275/img/thumbnail.jpg)|![](https://files.seeedstudio.com/products/101020793/img/101020793wiki210x157.jpg)|
 |[Get one now](https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-4GB-p-4077.html)|[Get one now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|[Get one now](https://www.seeedstudio.com/Grove-Digital-PIR-Motion-Sensor-p-4524.html)|
 
 #### Hardware Connection
@@ -139,5 +139,5 @@ You can read the value from the PIR sensor, when there is a motion, the value is
 - **[PDF]** [Hardware schematic](https://files.seeedstudio.com/products/101020793/document/Hardware_Schematic_SCH.pdf)
 
 ## Tech Support
-Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).
+Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>
 

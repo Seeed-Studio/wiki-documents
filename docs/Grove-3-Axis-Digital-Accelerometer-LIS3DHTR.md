@@ -51,7 +51,7 @@ Grove - 3-Axis Digital Accelerometer(LIS3DHTR) is a low-cost 3 - Axis accelerome
 
 |Seeeduino XIAO|Grove Breadboard|Grove - 3-Axis Digital Accelerometer (LIS3DHTR)|
 |--------|-----------------------|------------|
-|![](http://me.omgoooo.com:2022/SeeedDocument/Seeeduino-XIAO/-/raw/master/img/seeeduino-xiao-preview210x157.jpg)|![](http://me.omgoooo.com:2022/SeeedDocument/Grove-Breadboard/-/raw/master/img/103020232-integrate-preview210x157.jpg)|![](https://files.seeedstudio.com/products/114020121/img/114020121wikithumbnail.jpg)|
+|![](https://files.seeedstudio.com/products/102010328/img/seeeduino-XIAO-thumbnail.jpg)|![](https://files.seeedstudio.com/products/103020232/img/103020232-thumbnail.png)|![](https://files.seeedstudio.com/products/114020121/img/114020121wikithumbnail.jpg)|
 |[Get one now](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|[Get one now](https://www.seeedstudio.com/Grove-Breadboard-p-4034.html)|[Get one now](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-LIS3DHTR-p-4533.html)|
 
 #### Hardware connection
