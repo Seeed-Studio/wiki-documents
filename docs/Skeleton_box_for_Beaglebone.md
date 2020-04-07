@@ -1,6 +1,6 @@
 ---
-name: Skeleton box for Beaglebone
-category: BeagleBone
+name: Skeleton box for BeagleBone®
+category: BeagleBone®
 bzurl: https://www.seeedstudio.com/Skeleton-Box-For-Beaglebone-p-1952.html
 oldwikiname:   Skeleton box for Beaglebone
 prodimagename:  Skeleton_box_for_Beaglebone_01.bmp
@@ -9,7 +9,7 @@ sku:   111070001
 ---
 ![](https://github.com/SeeedDocument/Skeleton_box_for_Beaglebone/raw/master/img/Skeleton_box_for_Beaglebone_01.bmp)
 
-This enclosure is constructed from military grade aluminum and hardwearing acrylic, Providing the ultimate protection from physical and corrosion! The skeleton box allows clearance for any standard Arduino, and the enclosures are stackable in all three dimensions, allowing for limitless expansion possibilities. The skeleton is easy to use, and provides the best protection for your Arduino that money can buy! And this is a simply case, specially designed for Beaglebone.
+This enclosure is constructed from military grade aluminum and hardwearing acrylic, Providing the ultimate protection from physical and corrosion! The skeleton box allows clearance for any standard Arduino, and the enclosures are stackable in all three dimensions, allowing for limitless expansion possibilities. The skeleton is easy to use, and provides the best protection for your Arduino that money can buy! And this is a simply case, specially designed for BeagleBone®.
 
 [![](https://github.com/SeeedDocument/Seeed-WiKi/raw/master/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Skeleton-Box-For-Beaglebone-p-1952.html)
 
