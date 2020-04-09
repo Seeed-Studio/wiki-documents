@@ -140,7 +140,7 @@ void loop()
 #### Hardware Connection
 
 
-![](https://files.seeedstudio.com/products/114020121/img/Hardware_connection_raspberry_pi.jpg)
+![](https://files.seeedstudio.com/products/114020121/img/Hardware_connection_raspberry_pi_demo.jpg)
 
 Connect the LIS3DHTR sensor to any I2C interface on the Grove Base Hat for Raspberry Pi.
 
