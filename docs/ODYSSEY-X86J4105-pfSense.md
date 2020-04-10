@@ -13,7 +13,7 @@ This tutorial demonstrates how to install the **[pfSense](https://www.pfsense.or
 
 **[pfSense](https://www.pfsense.org/)** is an open source firewall/router computer software distribution based on [FreeBSD](https://www.freebsd.org/). It is installed on a physical computer or a virtual machine to make a dedicated firewall/router for a network.
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/X86-04-n.png"/></div></br>
+<div align=center><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/X86-04-n.png"/></div>
 
 For more, you also visit the official [pfSense documents](https://docs.netgate.com/pfsense/en/latest/) to get more insight!
 
