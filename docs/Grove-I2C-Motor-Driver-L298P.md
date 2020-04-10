@@ -62,7 +62,9 @@ motor driver. This is a 2-channel motor driver, each channel can support up to 1
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-I2C_Motor_Driver_V1.3/master/img/I2CMotorDriver-4.jpg)
 
 - **Step 1** Connect Grove - I2C Motor Driver (L298P) to port I2C of Grove-Base Shield.
+
 - **Step 2** Plug Grove - Base Shield into Seeeduino.
+
 - **Step 3** Connect Seeeduino to PC via a USB cable.
 
 #### Software Code 1 - DC Motor
@@ -94,9 +96,13 @@ void loop() {
     delay(2000);
 }
 ```
-- **Step 1.** Download the  [ Grove_I2C_Motor_Driver_v1_3 Library](https://github.com/Seeed-Studio/Grove_I2C_Motor_Driver_v1_3/archive/master.zip) from Github.
-- **Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
-- **Step 3.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+
+
+- **Step 1** Download the  [ Grove_I2C_Motor_Driver_v1_3 Library](https://github.com/Seeed-Studio/Grove_I2C_Motor_Driver_v1_3/archive/master.zip) from Github.
+
+- **Step 2** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+
+- **Step 3** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
 With speed() function, you are able to drive one motor at the speed you want.
 
