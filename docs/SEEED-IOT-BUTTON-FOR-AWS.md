@@ -106,6 +106,10 @@ Now you can start playing with your AWS 1-Click service!
   
 - **Long Press(>7s):** Enter BLE network configuration mode. In this mode, other events are blocked. If you need to manually exit the BLE distribution mode, you can press and hold it for more than 7s again, and it will exit automatically in two minutes.
 
+## OTA
+
+To enter OTA to upgrade firmware, simply double click the IoT Button. This will search if OTA is available.
+
 ## Tech Support
 
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

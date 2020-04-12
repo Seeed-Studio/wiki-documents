@@ -194,6 +194,7 @@ pages:
             - ODYSSEY X86J4105 Installing OS: ODYSSEY-X86J4105-Installing-OS.md
             - ODYSSEY X86J4105 Adding Accessories: ODYSSEY-X86J4105-Accessories.md
             - ODYSSEY X86J4105 Installing OpenWrt: ODYSSEY-X86J4105-Installing-openwrt.md
+            - ODYSSEY X86J4105 Installing pfSense: ODYSSEY-X86J4105-pfSense.md
             - ODYSSEY X86J4105 Azure IoT: ODYSSEY-X86J4105-AzureIOT.md
             - ODYSSEY X86J4105 Installing FreeNAS: ODYSSEY-X86J4105-Installing-FreeNAS.md
             - ODYSSEY X86J4105 Using Intel OpenVINO Toolkit: ODYSSEY-X86J4105-Intel-OpenVINO.md
@@ -203,6 +204,7 @@ pages:
           
       - Wio Terminal:
           - Get Started with Wio Terminal: Wio-Terminal-Getting-Started.md
+          - ArduPy Get Started with Wio Terminal: Wio-Terminal-ArduPy.md
           - LCD:
             - Overview: Wio-Terminal-LCD-Overview.md
             - Basic of LCD: Wio-Terminal-LCD-Basic.md
@@ -647,6 +649,7 @@ pages:
           - Grove - I2C Motor Driver: Grove-I2C_Motor_Driver.md
           - Grove - I2C Motor Driver V1.2: Grove-I2C_Motor_Driver_V1.2.md
           - Grove - I2C Motor Driver V1.3: Grove-I2C_Motor_Driver_V1.3.md
+          - Grove - I2C Motor Driver (L298P): Grove-I2C-Motor-Driver-L298P.md
           - Grove - Infrared Emitter: Grove-Infrared_Emitter.md
           - Grove - LED Matrix Driver v1.0: Grove-LED_Matrix_Driver_v1.0.md
           - Grove - MP3 v2.0: Grove-MP3_v2.0.md

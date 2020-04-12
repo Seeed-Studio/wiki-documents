@@ -145,7 +145,7 @@ void loop() {
 }
 ```
 
-- Use pin 6 as the TX pin of UART(TX pin of UART is pin 7):
+- Use pin 6 as the TX pin of UART(RX pin of UART is pin 7):
 
 ```c
 
