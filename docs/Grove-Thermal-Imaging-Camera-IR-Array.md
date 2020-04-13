@@ -217,6 +217,7 @@ This will give you a framerate of - at most - 8FPS.
 
 - **[PDF]** [Datasheet of MLX90640](https://github.com/SeeedDocument/IR-thermal-imaging-sensor-MLX90640-/raw/master/MLX90640-Datasheet-Melexis.pdf)
 - **[PDF]** [Hardware Schematic](https://github.com/SeeedDocument/IR-thermal-imaging-sensor-MLX90640-/raw/master/MLX9064x.pdf)
+- **[Github]** [Grove - Thermal Imaging Camera IR Array MLX90640 Python Library](https://github.com/Seeed-Studio/Seeed_Python_MLX90640)
 
 
 ## Tech Support
