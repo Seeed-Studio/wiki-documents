@@ -90,28 +90,28 @@ To add files to the device using ArduPy, simply click the icon as shown above to
 
 To run a MicroPython script from boot up, simply name your project **`boot.py`** and load the files in the device as methods mentioned above.
 
-## Using aip to Include Other Arduino Libraries
+## Using aip to include Other ArduPy Libraries(From Arduino Libraries)
 
-Aip is one of the key feature of ArduPy, which can be used to convert Arduino Libraries to Python Interface to be used for ArduPy. Here we provide an example, how to include the library into ArduPy Firmware:
+Aip is one of the key feature of ArduPy, which can be used to convert Arduino Libraries to Python Interface to be used for ArduPy. Here we provide an example, how to include the ArduPy library into ArduPy Firmware:
 
 **Tip:** We provide few ArduPy library examples on the github page for now, and soon will release tutorials how to convert Arduino libraries to ArduPy Libraries very soon.
 
 !!!Note
         By default, the ArduPy initial firmware only includes **time, Pin, DAC, ADC, PWM and LCD**.
 
-1. Open Terminal/Powershell, and use the following to install specific ArduPy library:
+1.Open Terminal/Powershell, and use the following to install specific ArduPy library:
 
 ```sh
 aip install Seeed-Studio/seeed-ardupy-ultrasonic-sensor
 ```
 
-2. Build the firmware:
+2.Build the firmware:
 
 ```sh
 aip build
 ```
 
-3. Flash the "**NEW**" firmware into the board. Here aip will automatically look for the board connected to the PC and upload the firmware, and error will appear.
+3.Flash the "**NEW**" firmware into the board. Here aip will automatically look for the board connected to the PC and upload the firmware. If board not connected, an  error will appear.
 
 ```sh
 aip flash
