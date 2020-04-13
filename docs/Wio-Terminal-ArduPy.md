@@ -16,7 +16,7 @@ For more information, please see [ArduPy](https://github.com/Seeed-Studio/ArduPy
 
 Aip is a package manager for converting Arduino Libraries into Python interfaces, which is essential for ArduPy.
 
-1. Use **pip** to install the **`ardupy-aip`**. Run the following command:
+1.Use **pip** to install the **`ardupy-aip`**. Run the following command:
 
 ```sh
 pip3 install ardupy-aip
@@ -24,7 +24,7 @@ pip3 install ardupy-aip
 
 **Note:** For Windows user, use **Powershell**. For Linux or Mac OS users, use **Terminal**.
 
-2. Once the dependencies are installed, you can run `aip` in all directory to see help, and check if errors appeared.
+2.Once the dependencies are installed, you can run `aip` in all directory to see help, and check if errors appeared.
 
 ### 3. Install the ArduPy IDE
 
@@ -89,6 +89,35 @@ To add files to the device using ArduPy, simply click the icon as shown above to
 ### Boot Script
 
 To run a MicroPython script from boot up, simply name your project **`boot.py`** and load the files in the device as methods mentioned above.
+
+## Using aip to Include Other Arduino Libraries
+
+Aip is one of the key feature of ArduPy, which can be used to convert Arduino Libraries to Python Interface to be used for ArduPy. Here we provide an example, how to include the library into ArduPy Firmware:
+
+**Tip:** We provide few ArduPy library examples on the github page for now, and soon will release tutorials how to convert Arduino libraries to ArduPy Libraries very soon.
+
+!!!Note
+        By default, the ArduPy initial firmware only includes **time, Pin, DAC, ADC, PWM and LCD**.
+
+1. Open Terminal/Powershell, and use the following to install specific ArduPy library:
+
+```sh
+aip install Seeed-Studio/seeed-ardupy-ultrasonic-sensor
+```
+
+2. Build the firmware:
+
+```sh
+aip build
+```
+
+3. Flash the "**NEW**" firmware into the board. Here aip will automatically look for the board connected to the PC and upload the firmware, and error will appear.
+
+```sh
+aip flash
+```
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/aip-convert.gif"/></div>
 
 ## Time and Delay
 
