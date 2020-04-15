@@ -42,7 +42,7 @@ To use ArduPy, we need to use another IDE other than Arduino IDE to compile (and
 
 4. Click **Install** to install the IDE plug-in.
 
-![](https://files.seeedstudio.com/wiki/Wio-Terminal/img/ArduPy-IDE.png)
+<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/ArduPyIDE.gif"/></div>
 
 Once installed the Seeed ArduPy IDE plug-in in VS code, you can start playing with MicroPython!
 
@@ -82,7 +82,7 @@ Once connected, the device name should appear at the bottom of the IDE and you c
 
 ### Adding Files
 
-<div align=center><img width = 350 src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/IDE-open.png"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/AddingFiles.gif"/></div>
 
 To add files to the device using ArduPy, simply click the icon as shown above to choose files from your PC.
 
@@ -111,13 +111,35 @@ aip install Seeed-Studio/seeed-ardupy-ultrasonic-sensor
 aip build
 ```
 
-3.Flash the "**NEW**" firmware into the board. Here aip will automatically look for the board connected to the PC and upload the firmware. If board not connected, an  error will appear.
+**Note:** Usage of flashing firmware will appeared at the bottom of build.
+
+3.Flash the "**NEW**" firmware into the board **by copying the usage from end of build**. Here aip will automatically look for the board connected to the PC and upload the firmware. If board is not connected, an error will appear.
 
 ```sh
-aip flash
+aip flash # + ArduPy Bin PATH
 ```
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/aip-convert.gif"/></div>
+<div align=center><img src="https://s3-us-west-2.amazonaws.com/files.seeedstudio.com/wiki/Wio-Terminal/img/aip-convert.gif"/></div>
+
+!!!Note
+        You can also use `aip build clean` before `aip build` to remove any caches from before to avoid error.
+
+### Example Usage
+
+Once the library is included within the ArduPy firmware and flashed into the device, you can import and use the module as follow:
+
+<div align=center><img width = 500 src="https://s3-us-west-2.amazonaws.com/files.seeedstudio.com/wiki/Wio-Terminal/img/ur.gif"/></div>
+
+```py
+from arduino import grove_ultra_ranger
+import time
+
+ur = grove_ultra_ranger(0)
+
+while True:
+    print ("The distance to obstacles in front is:", ur.cm, 'centimeter')
+    time.sleep(1)
+```
 
 ## Time and Delay
 
