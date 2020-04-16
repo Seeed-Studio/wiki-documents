@@ -16,7 +16,7 @@ For more information, please see [ArduPy](https://github.com/Seeed-Studio/ArduPy
 
 Aip is a package manager for converting Arduino Libraries into Python interfaces, which is essential for ArduPy.
 
-1. Use **pip** to install the **`ardupy-aip`**. Run the following command:
+1.Use **pip** to install the **`ardupy-aip`**. Run the following command:
 
 ```sh
 pip3 install ardupy-aip
@@ -24,7 +24,7 @@ pip3 install ardupy-aip
 
 **Note:** For Windows user, use **Powershell**. For Linux or Mac OS users, use **Terminal**.
 
-2. Once the dependencies are installed, you can run `aip` in all directory to see help, and check if errors appeared.
+2.Once the dependencies are installed, you can run `aip` in all directory to see help, and check if errors appeared.
 
 ### 3. Install the ArduPy IDE
 
@@ -42,7 +42,7 @@ To use ArduPy, we need to use another IDE other than Arduino IDE to compile (and
 
 4. Click **Install** to install the IDE plug-in.
 
-![](https://files.seeedstudio.com/wiki/Wio-Terminal/img/ArduPy-IDE.png)
+<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/ArduPyIDE.gif"/></div>
 
 Once installed the Seeed ArduPy IDE plug-in in VS code, you can start playing with MicroPython!
 
@@ -82,13 +82,64 @@ Once connected, the device name should appear at the bottom of the IDE and you c
 
 ### Adding Files
 
-<div align=center><img width = 350 src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/IDE-open.png"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/AddingFiles.gif"/></div>
 
 To add files to the device using ArduPy, simply click the icon as shown above to choose files from your PC.
 
 ### Boot Script
 
 To run a MicroPython script from boot up, simply name your project **`boot.py`** and load the files in the device as methods mentioned above.
+
+## Using aip to include Other ArduPy Libraries(From Arduino Libraries)
+
+Aip is one of the key feature of ArduPy, which can be used to convert Arduino Libraries to Python Interface to be used for ArduPy. Here we provide an example, how to include the ArduPy library into ArduPy Firmware:
+
+**Tip:** We provide few ArduPy library examples on the github page for now, and soon will release tutorials how to convert Arduino libraries to ArduPy Libraries very soon.
+
+!!!Note
+        By default, the ArduPy initial firmware only includes **time, Pin, DAC, ADC, PWM and LCD**.
+
+1.Open Terminal/Powershell, and use the following to install specific ArduPy library:
+
+```sh
+aip install Seeed-Studio/seeed-ardupy-ultrasonic-sensor
+```
+
+2.Build the firmware:
+
+```sh
+aip build
+```
+
+**Note:** Usage of flashing firmware will appeared at the bottom of build.
+
+3.Flash the "**NEW**" firmware into the board **by copying the usage from end of build**. Here aip will automatically look for the board connected to the PC and upload the firmware. If board is not connected, an error will appear.
+
+```sh
+aip flash # + ArduPy Bin PATH
+```
+
+<div align=center><img src="https://s3-us-west-2.amazonaws.com/files.seeedstudio.com/wiki/Wio-Terminal/img/aip-convert.gif"/></div>
+
+!!!Note
+        You can also use `aip build clean` before `aip build` to remove any caches from before to avoid error.
+
+### Example Usage
+
+Once the library is included within the ArduPy firmware and flashed into the device, you can import and use the module as follow:
+
+<div align=center><img width = 500 src="https://s3-us-west-2.amazonaws.com/files.seeedstudio.com/wiki/Wio-Terminal/img/ur.gif"/></div>
+
+```py
+from arduino import grove_ultra_ranger
+import time
+
+ur = grove_ultra_ranger(0)
+
+while True:
+    print ("The distance to obstacles in front is:", ur.cm, 'centimeter')
+    time.sleep(1)
+```
 
 ## Time and Delay
 
