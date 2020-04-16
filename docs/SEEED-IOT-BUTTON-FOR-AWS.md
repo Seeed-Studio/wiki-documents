@@ -115,6 +115,12 @@ Now you can start playing with your AWS 1-Click service!
 
 To enter OTA to upgrade firmware, simply double click the IoT Button. This will search if OTA is available.
 
+## How To Take Out The Enclosure
+
+The following gif demonstrates how to take out the enclosure using the Triangle Plastic Pry Opening Tool provided in the package.
+
+<div align=center><img width = 250 src="https://files.seeedstudio.com/wiki/Seeed-IOT-BUTTON-FOR-AWS/img/takingApart.gif"/></div>
+
 ## Tech Support
 
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>
