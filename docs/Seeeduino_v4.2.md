@@ -198,7 +198,10 @@ Then the green power LED (labeled PWR) should go on.
 
 For Windows
 
-This drive is available for Windows XP, Windows Vista, Windows 7, Windows 8/8.1 and Windows 10.
+This drive is available for Windows XP, Windows Vista, Windows 7, Windows 8/8.1.
+
+!!!Note
+    The driver will install automatically when we install arduino IDE at windows 10.
 
 [![enter image description here](https://raw.githubusercontent.com/SeeedDocument/SeeeduinoV4/master/images/download_driver.png)](https://github.com/Seeed-Studio/Signed_USB_Serial_Driver/archive/master.zip)
 
