@@ -141,6 +141,10 @@ while True:
     time.sleep(1)
 ```
 
+### FAQ
+
+For more aip reference, please visit [ardupy-aip](https://github.com/Seeed-Studio/ardupy-aip) to find out more.
+
 ## Time and Delay
 
 - Importing time module and delaying:
