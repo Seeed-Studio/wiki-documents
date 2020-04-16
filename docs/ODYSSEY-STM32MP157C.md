@@ -302,7 +302,7 @@ If the performance experience degrades while using SSH, please switch to a more 
 
 The following is the process of CANBUS communication using [2 Channel CAN BUS FD Shield for Raspberry Pi](https://www.seeedstudio.com/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi-p-4072.html) based on ODYSSEY -- STM32MP157C, first use [Seeeduino V4.2](https://www.seeedstudio.com/Seeeduino-V4-2-p-2517.html) to collect the environment temperature and humidity, and then through the Seeeduino V4.2 [CAN - BUS shields V2](https://www.seeedstudio.com/CAN-BUS-Shield-V2.html) above and the ODYSSEY – STM32MP157C Channel 2 CAN BUS FD shields above for Raspberry Pi communication.
 
-###Preparation Work
+### Preparation Work
 
 **Materials Required**
 
@@ -436,6 +436,89 @@ python3 QtViewerForStm32p1.py
 ```
 
 Run [CanBus_SendForArduino.ino](https://github.com/SeeedDocument/ODYSSEY-STM32MP157C/blob/master/examples/CanBus_SendForArduino.ino) on `Seeeduino V4.2`.
+
+
+## Play with GPIO
+
+This part will introduce how to use **grove.py** to control GPIO and Grove Socket on ODYSSEY STM32MP157C.there exists two way to connect with the Grove Socket in this board. the one hand is using the Digital Grove Interface and  IIC Grove Interface, the other is using ODYSSEY - STM32MP157C's 40-pin. The description of the PIN defines for the ODYSSEY - STM32MP157C's 40-pin please refer to [Pin Function]().It is convenient for you to use this ODYSSEY - STM32MP157C's 40-pin.So,Let's go.
+
+###  Test Digital IO by using Grove.py
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| ReSpeaker Core v2.0 |  Grove - Buzzer | Grove Base Hat for Raspberry Pi |
+|--------------|-------------|----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/perspective-19-210X157.png)|![enter image description here](https://github.com/SeeedDocument/Base_Shield_V2/raw/master/img/Buzzer.png)|![image](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|
+|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|
+
+- **Step 2**. Plug the Grove Base Hat into ODYSSEY - STM32MP157C.
+
+- **Step 3**. Connect the Grove Buzzer to D5 port of the Base Hat.
+
+- **Step 4**. Connect the ODYSSEY - STM32MP157C to PC through USB cable.
+
+#### Software
+
+- **Step 1**. Install the Grove.py
+
+```bash
+pip install Seeed-grove.py
+```
+
+- **Step 2**. Download the source file by cloning the grove.py library.
+
+```bash
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+```
+
+- **Step 3**. Excute below command to run the code.
+
+```bash
+cd grove.py/grove
+python grove_gpio.py 5
+```
+
+###  Test IIC by using Grove.py
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| ReSpeaker Core v2.0 |  Grove - OLED Display 0.96 inch | Grove Base Hat for RasPi |
+|--------------|-------------|----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/perspective-19-210X157.png)|![enter image description here](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/images/grove%20oled%200.96_s.jpg)|![image](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Grove-OLED-Display-0.96%26quot%3B-p-781.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|
+
+- **Step 2**. Plug the Grove Base Hat into ODYSSEY - STM32MP157C.
+
+- **Step 3**. Connect the OLED display to I2C port of the Base Hat.
+
+- **Step 4**. Connect the ODYSSEY - STM32MP157C to PC through USB cable.
+
+#### Software
+
+- **Step 1**. Install the Grove.py
+
+```bash
+pip install Seeed-grove.py
+```
+
+- **Step 2**. Download the source file by cloning the grove.py library.
+
+```bash
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+```
+
+- **Step 3**. Excute below command to run the code.
+
+```bash
+cd grove.py/grove
+python grove_oled_display_128x64.py
+```
 
 ## Resourses
 -----
