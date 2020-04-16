@@ -235,7 +235,35 @@ Now follow the steps above to connect to ODYSSEY – STM32MP157C via a serial co
 
 **Network Settings**
 
-**A. Wi-Fi Settings**
+**A. Ethernet connection**
+
+You can connect to the network using an Ethernet cable. Just plug in the Ethernet cable to the Internet.
+
+**B. Wi-Fi Settings**
+
+- **Step 1.** Check the version of Linux kernel in the current environment and install the header file of kernel version.
+
+```bash
+dpkg -l | grep linux
+sudo apt install linux-headers-$(uname -r) -y
+```
+
+- **Step 2.** Make and install driver of stm32p1 from `seeed-linux-dtverlays` in the GitHub.
+
+```bash
+git clone https://github.com/Seeed-Studio/seeed-linux-dtverlays
+cd seeed-linux-dtverlays
+make all_stm32mp1 && sudo make install_stm32mp1
+```
+
+- **Step 3.** add dtbo package in `/boot/uEnv.txt` to make it become effective after reboot.
+
+```bash
+sudo sh -c "echo uboot_overlay_addr0=/lib/firmware/stm32mp1-seeed-ap6236-overlay.dtbo >> /boot/uEnv.txt"
+sudo reboot
+```
+
+- **Step 4.** Connect the wifi
 
 Configure the ODYSSEY – STM32MP157C network through the network management tool `connmanctl`, which has been installed on the ODYSSEY -STM32MP157C image. Follow these instructions to easily complete the configuration. 
 
@@ -269,10 +297,6 @@ Now use the following command to find ODYSSEY – STM32MP157C's IP address.
 ifconfig
 ```
 
-**B. Ethernet connection**
-
-You can connect to the network using an Ethernet cable. Just plug in the Ethernet cable to the Internet.
-
 **SSH connection**
 
 **A. SSH**
@@ -297,6 +321,105 @@ ssh debian@IP
 <p class="admonition-title">Note</p>
 If the performance experience degrades while using SSH, please switch to a more accessible WiFi network.
 </div>
+
+**Bluetooth Setting Up**
+
+- **Step 1.** Check the version of Linux kernel in the current environment and install the header file of kernel version.
+
+```bash
+dpkg -l | grep linux
+sudo apt install linux-headers-$(uname -r) -y
+```
+
+- **Step 2.** Make and install driver of stm32p1 from `seeed-linux-dtverlays` in the GitHub.
+
+```bash
+git clone https://github.com/Seeed-Studio/seeed-linux-dtverlays
+cd seeed-linux-dtverlays
+make all_stm32mp1 && sudo make install_stm32mp1
+```
+
+- **Step 3.** add dtbo package in `/boot/uEnv.txt` to make it become effective after reboot.
+
+```bash
+sudo sh -c "echo uboot_overlay_addr0=/lib/firmware/stm32mp1-seeed-ap6236-overlay.dtbo >> /boot/uEnv.txt"
+sudo reboot
+```
+
+**Activate the bluetooth**
+
+Then activate the bluetooth by the command:
+
+```
+sudo systemctl enable bt-auto-connect.service
+sudo reboot -f
+```
+
+**Connect the bluetooth**
+
+- **Step 1.** Scan the bluetooch by using bluetoothctl
+
+the bluetoothctl is a tool that controls the Bluetooth to connect the other Bluetooth.
+
+```
+respeaker@v2:~$ bluetoothctl
+[NEW] Controller 43:43:A0:12:1F:AC ReSpeaker-1FAC [default]
+Agent registered
+[bluetooth]# scan on
+Discovery started
+[CHG] Controller 43:43:A0:12:1F:AC Discovering: yes
+[NEW] Device C8:69:CD:BB:9B:B3 C8-69-CD-BB-9B-B3
+[NEW] Device E1:D9:68:0E:51:C0 MTKBTDEVICE
+[NEW] Device 62:15:9C:3F:40:AA 62-15-9C-3F-40-AA
+[NEW] Device 56:AF:DE:C0:34:25 56-AF-DE-C0-34-25
+[NEW] Device B8:86:87:99:FB:10 SOLARRAIN
+[CHG] Device B8:86:87:99:FB:10 Trusted: yes
+[NEW] Device 04:5D:4B:81:35:84 MDR-1000X
+[CHG] Device 04:5D:4B:81:35:84 Trusted: yes
+[CHG] Device 4C:04:59:38:D3:25 ManufacturerData Key: 0x004c
+[CHG] Device 4C:04:59:38:D3:25 ManufacturerData Value:
+  10 05 0b 10 99 18 0a                             .......
+[bluetooth]# scan off
+[CHG] Device 04:5D:4B:81:35:84 RSSI is nil
+[CHG] Device B8:86:87:99:FB:10 TxPower is nil
+[CHG] Device B8:86:87:99:FB:10 RSSI is nil
+[CHG] Device 4C:04:59:38:D3:25 RSSI is nil
+[CHG] Device 58:44:98:93:35:24 RSSI is nil
+Discovery stopped
+[bluetooth]#
+
+```
+
+- **Step 2.** Now using the command `pair + device ID` to match bluetooth device with the ODYSSEY – STM32MP157C.
+
+- **Step 3.** When you see the messega `Pairing successful`, tap `connect + device ID`.
+
+```
+[bluetooth]# pair 04:5D:4B:81:35:84
+Attempting to pair with 04:5D:4B:81:35:84
+[CHG] Device 04:5D:4B:81:35:84 Connected: yes
+[CHG] Device 04:5D:4B:81:35:84 UUIDs: 00001108-0000-1000-8000-00805f9b34fb
+[CHG] Device 04:5D:4B:81:35:84 UUIDs: 0000110b-0000-1000-8000-00805f9b34fb
+[CHG] Device 04:5D:4B:81:35:84 UUIDs: 0000110c-0000-1000-8000-00805f9b34fb
+[CHG] Device 04:5D:4B:81:35:84 UUIDs: 0000110e-0000-1000-8000-00805f9b34fb
+[CHG] Device 04:5D:4B:81:35:84 UUIDs: 0000111e-0000-1000-8000-00805f9b34fb
+[CHG] Device 04:5D:4B:81:35:84 ServicesResolved: yes
+[CHG] Device 04:5D:4B:81:35:84 Paired: yes
+Pairing successful
+[CHG] Controller 43:43:A0:12:1F:AC Discoverable: no
+[CHG] Device 04:5D:4B:81:35:84 ServicesResolved: no
+[CHG] Device 04:5D:4B:81:35:84 Connected: no
+[CHG] Controller 43:43:A0:12:1F:AC Discoverable: yes
+[bluetooth]# connect 04:5D:4B:81:35:84
+Attempting to connect to 04:5D:4B:81:35:84
+[CHG] Device 04:5D:4B:81:35:84 Connected: yes
+Connection successful
+[CHG] Device 04:5D:4B:81:35:84 ServicesResolved: yes
+[CHG] Controller 43:43:A0:12:1F:AC Discoverable: no
+[MDR-1000X]#
+```
+
+If `Connection successful` pops up, configuration!
 
 ## CANBUS Communication
 
@@ -376,8 +499,8 @@ make all_stm32mp1 && sudo make install_stm32mp1
 - **Step 3.** add dtbo package in `/boot/uEnv.txt` to make it become effective after reboot.
 
 ```bash
-sudo sh -c "echo uboot_overlay_addr0=/lib/firmware/stm32mp1-seeed-lcd-01-overlay.dtbo >> /boot/uEnv.txt"
-sudo sh -c "echo uboot_overlay_addr1=/lib/firmware/stm32mp1-MCP2517FD-can0-overlay.dtbo >> /boot/uEnv.txt"
+sudo sh -c "echo uboot_overlay_addr7=/lib/firmware/stm32mp1-seeed-lcd-01-overlay.dtbo >> /boot/uEnv.txt"
+sudo sh -c "echo uboot_overlay_addr8=/lib/firmware/stm32mp1-MCP2517FD-can0-overlay.dtbo >> /boot/uEnv.txt"
 sudo reboot
 ```
 
@@ -448,7 +571,7 @@ This part will introduce how to use **grove.py** to control GPIO and Grove Socke
 
 - **Step 1**. Things used in this project:
 
-| ReSpeaker Core v2.0 |  Grove - Buzzer | Grove Base Hat for Raspberry Pi |
+| ODYSSEY – STM32MP157C |  Grove - Buzzer | Grove Base Hat for Raspberry Pi |
 |--------------|-------------|----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/perspective-19-210X157.png)|![enter image description here](https://github.com/SeeedDocument/Base_Shield_V2/raw/master/img/Buzzer.png)|![image](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|
 |[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|
@@ -487,7 +610,7 @@ python grove_gpio.py 5
 
 - **Step 1**. Things used in this project:
 
-| ReSpeaker Core v2.0 |  Grove - OLED Display 0.96 inch | Grove Base Hat for RasPi |
+| ODYSSEY – STM32MP157C |  Grove - OLED Display 0.96 inch | Grove Base Hat for RasPi |
 |--------------|-------------|----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/perspective-19-210X157.png)|![enter image description here](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/images/grove%20oled%200.96_s.jpg)|![image](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Grove-OLED-Display-0.96%26quot%3B-p-781.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|
