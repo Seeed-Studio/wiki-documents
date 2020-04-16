@@ -734,6 +734,7 @@ pages:
           - Grove - DC Jack Power: Grove-DC_Jack_Power.md
           - Grove - Differential Amplifier v1.2: Grove-Differential_Amplifier_v1.2.md
           - Grove - I2C Hub: Grove-I2C_Hub.md
+          - Grove - Qwiic Hub: Grove-Qwiic-Hub.md
           - Grove - 8 Channel I2C Multiplexer/I2C Hub (TCA9548A): Grove-8-Channel-I2C-Multiplexer-I2C-Hub-TCA9548A.md
           - Grove - Joint v2.0: Grove-Joint_v2.0.md
           - Grove - MOSFET: Grove-MOSFET.md
