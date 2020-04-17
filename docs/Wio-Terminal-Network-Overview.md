@@ -5,9 +5,14 @@ This wiki introduce how to update the latest firmware for the Wireless Core Real
 ## Update the Wireless Core Firmware
 
 First, we need to update the firmware for the Realtek RTL8720 Wireless core on Wio Terminal. **This is essential and must update to the latest firmware before proceeding to examples.**
-
-!!!attention
-        PLEASE UPDATE THE WIRELESS CORE!
+        
+<div class="tips" style="display: table; table-layout: fixed; background-color: #ffdde3; height: auto;  width: 100%;">
+<div class="left-icon" style="display: table-cell; vertical-align: middle; background-color: #ff8da4; padding-top: 10px; box-sizing: border-box; height: auto; width: 38px; text-align: center;"><img style="width: 26px; vertical-align: middle;" src="https://s3-us-west-2.amazonaws.com/static.seeed.cc/seeed/icon/Danger.svg" alt="attention icon" /></div>
+<div class="right-desc" style="display: table-cell; vertical-align: middle; padding-left: 15px; box-sizing: border-box; width: calc(95% - 38px);">
+<p style="font-weight: bold; margin-top: 10px;">Attention</p>
+<p style="font-size: 14px;">Please update the Wi-Fi Core before usage!</p>
+</div>
+</div>
 
 ### Step 1 - Arduino Configuration
 
