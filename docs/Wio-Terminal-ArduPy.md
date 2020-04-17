@@ -1,5 +1,7 @@
 # ArduPy Getting Started
 
+![](https://files.seeedstudio.com/ardupy/ardupy_logo.png)
+
 ArduPy is a combination of **Arduino** and **MicroPython**. MicroPython uses the universal Arduino API to control the hardware so that it can be quickly compatible with new platforms.
 
 At the same time, we provide aip package manager. You can transform your favorite Arduino library into a MicroPython library. Through ArduPy, you can use Python to verify ideas quickly, learn python programming, and learn Open-Source hardware.
