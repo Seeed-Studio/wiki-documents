@@ -221,6 +221,9 @@ pages:
             - Digital: Wio-Terminal-IO-Digital.md
             - I2C: Wio-Terminal-IO-I2C.md
             - SPI: Wio-Terminal-IO-SPI.md
+          - Network:
+            - Overview: Wio-Terminal-Network-Overview.md
+            - Wi-Fi: Wio-Terminal-Wi-Fi.md
           - IMU:
             - Overview: Wio-Terminal-IMU-Overview.md
             - Getting Started: Wio-Terminal-IMU-Basic.md
