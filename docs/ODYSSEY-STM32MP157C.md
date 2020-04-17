@@ -565,7 +565,39 @@ Run [CanBus_SendForArduino.ino](https://github.com/SeeedDocument/ODYSSEY-STM32MP
 
 This part will introduce how to use **grove.py** to control GPIO and Grove Socket on ODYSSEY STM32MP157C.there exists two way to connect with the Grove Socket in this board. the one hand is using the Digital Grove Interface and  IIC Grove Interface, the other is using ODYSSEY - STM32MP157C's 40-pin. The description of the PIN defines for the ODYSSEY - STM32MP157C's 40-pin please refer to [Pin Function]().It is convenient for you to use this ODYSSEY - STM32MP157C's 40-pin.So,Let's go.
 
-###  Test Digital IO by using Grove.py
+### Set to the gpio mode
+
+- **Step 1.** Check the version of Linux kernel in the current environment and install the header file of kernel version.
+
+```bash
+dpkg -l | grep linux
+sudo apt install linux-headers-$(uname -r) -y
+```
+
+- **Step 2.** Make and install driver of stm32p1 from `seeed-linux-dtverlays` in the GitHub.
+
+```bash
+git clone https://github.com/Seeed-Studio/seeed-linux-dtverlays
+cd seeed-linux-dtverlays
+make all_stm32mp1 && sudo make install_stm32mp1
+```
+
+- **Step 3.** add dtbo package in `/boot/uEnv.txt` to make it become effective after reboot.
+
+```bash
+sudo sh -c "echo uboot_overlay_addr1=/lib/firmware/stm32mp1-seeed-spi5-overlay.dtbo >> /boot/uEnv.txt"
+sudo sh -c "echo uboot_overlay_addr2=/lib/firmware/stm32mp1-seeed-usart2-overlay.dtbo >> /boot/uEnv.txt"
+sudo sh -c "echo uboot_overlay_addr3=/lib/firmware/stm32mp1-seeed-i2c4-overlay.dtbo >> /boot/uEnv.txt"
+sudo reboot
+```
+
+- **Step 4.** Install the environment for `python3`.
+
+```bsah
+sudo apt install python3 python3-pip -y
+```
+
+###  Digital output on Basehat by using Grove.py
 
 #### Hardware
 
@@ -574,7 +606,7 @@ This part will introduce how to use **grove.py** to control GPIO and Grove Socke
 | ODYSSEY – STM32MP157C |  Grove - Buzzer | Grove Base Hat for Raspberry Pi |
 |--------------|-------------|----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/perspective-19-210X157.png)|![enter image description here](https://github.com/SeeedDocument/Base_Shield_V2/raw/master/img/Buzzer.png)|![image](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|
-|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|
+|[Get ONE Now](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|
 
 - **Step 2**. Plug the Grove Base Hat into ODYSSEY - STM32MP157C.
 
@@ -587,7 +619,7 @@ This part will introduce how to use **grove.py** to control GPIO and Grove Socke
 - **Step 1**. Install the Grove.py
 
 ```bash
-pip install Seeed-grove.py
+sudo pip3 install Seeed-grove.py
 ```
 
 - **Step 2**. Download the source file by cloning the grove.py library.
@@ -601,23 +633,23 @@ git clone https://github.com/Seeed-Studio/grove.py
 
 ```bash
 cd grove.py/grove
-python grove_gpio.py 5
+sudo python3 grove_button.py 5
 ```
 
-###  Test IIC by using Grove.py
+###  Digital Input on Basehat by using Grove.py
 
 #### Hardware
 
 - **Step 1**. Things used in this project:
 
-| ODYSSEY – STM32MP157C |  Grove - OLED Display 0.96 inch | Grove Base Hat for RasPi |
+| ODYSSEY – STM32MP157C |  Grove - Button | Grove Base Hat for Raspberry Pi |
 |--------------|-------------|----------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/perspective-19-210X157.png)|![enter image description here](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/images/grove%20oled%200.96_s.jpg)|![image](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|
-|[Get ONE Now](https://www.seeedstudio.com/Grove-OLED-Display-0.96%26quot%3B-p-781.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|
+|![enter image description here](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/perspective-19-210X157.png)|![enter image description here](https://github.com/SeeedDocument/Grove_Button/raw/master/img/button_s.jpg)|![image](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Button-P.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|
 
 - **Step 2**. Plug the Grove Base Hat into ODYSSEY - STM32MP157C.
 
-- **Step 3**. Connect the OLED display to I2C port of the Base Hat.
+- **Step 3**. Connect the Grove Button to D5 port of the Base Hat.
 
 - **Step 4**. Connect the ODYSSEY - STM32MP157C to PC through USB cable.
 
@@ -626,7 +658,7 @@ python grove_gpio.py 5
 - **Step 1**. Install the Grove.py
 
 ```bash
-pip install Seeed-grove.py
+sudo pip3 install Seeed-grove.py
 ```
 
 - **Step 2**. Download the source file by cloning the grove.py library.
@@ -640,7 +672,124 @@ git clone https://github.com/Seeed-Studio/grove.py
 
 ```bash
 cd grove.py/grove
-python grove_oled_display_128x64.py
+sudo python3 grove_gpio.py 5
+```
+
+###  IIC on Basehat by using Grove.py
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| ODYSSEY – STM32MP157C |  Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121) | Grove Base Hat for Raspberry Pi |
+|--------------|-------------|----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/perspective-19-210X157.png)|![enter image description here](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/images/grove%20oled%200.96_s.jpg)|![image](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V2-MPR121.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|
+
+- **Step 2**. Plug the Grove Base Hat into ODYSSEY - STM32MP157C.
+
+- **Step 3**. Connect the Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121) to I2C port of the Base Hat.
+
+- **Step 4**. Connect the ODYSSEY - STM32MP157C to PC through USB cable.
+
+#### Software
+
+- **Step 1**. Install the Grove.py
+
+```bash
+sudo pip3 install Seeed-grove.py
+```
+
+- **Step 2**. Download the source file by cloning the grove.py library.
+
+```bash
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+```
+
+- **Step 3**. Excute below command to run the code.
+
+```bash
+cd grove.py/grove
+sudo python3 grove_12_key_cap_i2c_touch_mpr121.py
+```
+
+###  ADC on Basehat by using Grove.py
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| ODYSSEY – STM32MP157C |  Grove - Temperature Sensor | Grove Base Hat for RasPi |
+|--------------|-------------|----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/perspective-19-210X157.png)|![enter image description here](https://github.com/SeeedDocument/Grove-Temperature_Sensor_V1.2/raw/master/img/Grove_Temperature_Sensor_View_little.jpg)|![image](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Temperature-Sensor-p-774.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|
+
+- **Step 2**. Plug the Grove Base Hat into ODYSSEY - STM32MP157C.
+
+- **Step 3**. Connect the temperature sensor to port A0 of the Base Hat.
+
+- **Step 4**. Connect the ODYSSEY - STM32MP157C to PC through USB cable.
+
+#### Software
+
+- **Step 1**. Install the Grove.py
+
+```bash
+sudo pip3 install Seeed-grove.py
+```
+
+- **Step 2**. Download the source file by cloning the grove.py library.
+
+```bash
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+```
+
+- **Step 3**. Excute below command to run the code.
+
+```bash
+cd grove.py/grove
+sudo python3 grove_temperature_sensor.py 0
+```
+
+###  UART by using Grove.py
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| ODYSSEY – STM32MP157C | Grove Base Hat for RasPi |
+|--------------|-------------|----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/perspective-19-210X157.png)|![image](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)||[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|
+
+- **Step 2**. Plug the Grove Base Hat into ODYSSEY - STM32MP157C.
+
+- **Step 3**. Connect RX To TX in Basehat using jumper
+
+- **Step 4**. Connect the ODYSSEY - STM32MP157C to PC through USB cable.
+
+#### Software
+
+- **Step 1**. Install the Grove.py
+
+```bash
+sudo pip3 install Seeed-grove.py
+```
+
+- **Step 2**. Download the source file by cloning the grove.py library.
+
+```bash
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+```
+
+- **Step 3**. Excute below command to run the code.
+
+```bash
+cd grove.py/grove
+python uart.py
 ```
 
 ## Resourses
