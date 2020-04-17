@@ -18,9 +18,8 @@ The Seeed IoT Button For AWS is a Wi-Fi based, programmable button that is easy 
 ## Feature
 
 - Single/Double/Long Press Click Events
-- Onboard Power Status LED
-- Onboard Event Status LED
-- Onboard Wi-Fi Configuration LED
+- Onboard Power/Event/Wi-Fi Configuration Status LED
+- Equipped with Realtek RTL8720DN, dual-band 2.4Ghz / 5Ghz Wi-Fi
 - Removable and Chargeable NCR18650B Battery
 - Battery polarity reversed protection and indication
 - USB Type-C Charging
@@ -32,7 +31,7 @@ The Seeed IoT Button For AWS is a Wi-Fi based, programmable button that is easy 
 |Parameter|Value|
 |---|---|
 |Size|92\*32\*25mm|
-|MCU|Dual core: 20MHz Cortex M0; 200MHz Cortex M4F|
+|MCU|Realteak, RTL8720DNL 20MHz Cortex M0; 200MHz Cortex M4F|
 |Flash|4MB |
 |Button| 100,000 Cycles|
 |LED|RGB|
