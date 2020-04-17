@@ -753,16 +753,16 @@ cd grove.py/grove
 sudo python3 grove_temperature_sensor.py 0
 ```
 
-###  UART by using Grove.py
+###  UART on Basehat by using Grove.py
 
 #### Hardware
 
 - **Step 1**. Things used in this project:
 
 | ODYSSEY – STM32MP157C | Grove Base Hat for RasPi |
-|--------------|-------------|----------------|
+|--------------|----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/perspective-19-210X157.png)|![image](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|
-|[Get ONE Now](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)||[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|
+|[Get ONE Now](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|
 
 - **Step 2**. Plug the Grove Base Hat into ODYSSEY - STM32MP157C.
 
