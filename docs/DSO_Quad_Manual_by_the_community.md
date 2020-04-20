@@ -1,4 +1,1048 @@
 ---
+name: DSO Quad
+category: MakerPro
+bzurl: https://www.seeedstudio.com/DSO-Quad-Aluminium-Alloy-Silver-p-1033.html?cPath=63_65
+oldwikiname:  DSO Quad
+prodimagename:  P10308912-1024x684.jpg
+surveyurl: https://www.research.net/r/DSO_Quad
+sku:   109990016
+---
+![](https://files.seeedstudio.com/wiki/DSO_Quad/img/P10308912-1024x684.jpg)
+
+DSO Quad also known as DSO203 is a pocket size 4 channel digital oscilloscope for common electronic engineering tasks. It's based on ARM cortex M3 (STM32F103VCT6), providing 72MS/s sampling rate with integrated FPGA and high speed ADC. An internal 2MB USB disk can be used to store waveform captures, user applications and to upgrade firmware.
+
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/DSO-Quad-Aluminium-Alloy-Silver-p-1033.html?cPath=63_65)
+
+##   Features
+---
+*   Pocket size and light weight
+*   Two 36MS/s analog channels, Upto 72MS/s if configured to single channel.**(Upgrade to Two 72MS/s analog channels, Upto 144MS/s if configured to single channel from .sys version v1.31)**
+*   Two digital channels
+*   Signal Generator
+*   Various Triggering Option
+*   Easy waveform storage
+*   Firmware upgrade
+*   User applications
+*   Open source
+
+**Source(s):** [Features support](http://www.downloadranking.com/privacypolicy.php)
+
+##   Application Ideas
+---
+###   User applications
+
+Ongoing projects:
+
+*   GCC port with FFT, spectrogram and various fixes [by pmos69 and marcosin](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2957)
+
+*   Alternative user interface [by gabonator1](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2362)
+
+*   GCC port of the default firmware [by tmbinc](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2274)
+
+*   Frequency response plotter [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2485)
+
+*   FFT example application [by gabonator1](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2098)
+
+*   Logic analyzer [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2861)
+
+*   Pawn programming environment and various applications [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=3239)
+
+*   Port of SYS to gcc: [[1]](https://github.com/neilstockbridge/dsoquad-BIOS)
+
+*   Tetris [by LinX](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2344)
+
+<big>Idea Collection </big>
+
+**Applications **
+
+*   "Simple Mode" - where only the most basic functions are available to help people without experience.
+*   ["Multimeter mode" - basic multimeter functions (AC/DC VOM, peak/rms/delta would be nice)](https://github.com/PetteriAimonen/QuadPawn/wiki/Advanced-Volt-Meter)
+
+    *   Detailed at [https://github.com/PetteriAimonen/QuadPawn/wiki/Advanced-Volt-Meter](https://github.com/PetteriAimonen/QuadPawn/wiki/Advanced-Volt-Meter)
+*   Protocol analysis/data capture - Serial, I2C, SPI, CAN
+*   LCR (uH, uF and R) measurement capability - The inbuilt signal generator makes this a natural. Three methods exist, all requiring an external component(s) [Example](http://www.edn.com/design/test-and-measurement/4363759/Circuit-measures-capacitance-or-inductance)
+*   Semiconductor Analyzer - Use the DAC to test and chart the voltage response of a diode / transistor (and simply identify components, such as transistor pinout and polarity)
+*   RF spectrum analyzer
+*   A 2D X-Y mode that plots the analog channels against each other on two axes with a digital channel optionally functioning as a "beam" enable/disable.
+    *   [Something](https://forum.seeedstudio.com/) seems to exist? Not in APP2.50 yet.
+
+*   A DMX Decoder/Analyser and generator (used in conjunction with an external RS485 IC) would make this a VERY useful gadget for theatre techs.
+
+*   Television mode (analog TV) : Display frame/field/line (select field A/B) or line number. Display vectorscope diagram. Display content (ie: the TV image).
+
+*   Synchronization with a second DSO Quad for a 4 channel analog/digital signal, perhaps similar USBscope50 [moved from HARDWARE]
+
+use 'wave out' to generate a pulse/step when master unit triggers, use C/D as trigger for slave(s)
+
+*   Create USB remote control software, such that if LCD breaks, you can still use it with PC software. [moved from HARDWARE]
+*   Stream data to PC - Use PC as storage buffer, with additional processing power. A PC could decode I2C words and other protocols where the Quad wouldn't. [moved from HARDWARE]
+
+*   White noise function - add to the functions generator
+
+**Enhancements**
+
+*   A spectrum analyzer displaying a view from a frequency/time perspective
+*   Fast Fourier Transform, would be nice and easy for viewing spectrum data of a single signal.
+
+**Hardware/Device-Oriented**
+
+*   SDR (Software defined radio) note we only have USB full speed (12Mb/s)
+
+*   Preamplifier 10x badly needed!!!
+*   Add bezel buttons for easier to access menus.
+*   Add 2 more analog channels, Perhaps via USB dongle.
+
+*   Add port for expansion devices, such that and add-on device can offer more capabilities, like RF generation, or a function generator that is capable of larger amplitudes. In particular a +5v and 3.3v output would be useful.
+
+**Other**
+
+*   Service application for technical support staff. Could split the screen and display instructions like "Check if port 3, pin 5 has a signal, if not xyz might be broken". There could be a next button and for each step the text, the right timescale, trigger values etc. are selected
+*   My phone is ARM based, perhaps make a USB version of this and an app for my phone, that allows my phone to be the display / insured touch screen display.
+*   Simple math functions on both analog channels and generated signal.
+
+*   Two totally ground separated input would enable measureing inputs, which are not the same ground referenced. (like in the Velleman two-channel personal scope)
+*   Input overvoltage protection diode should be added to protect device form HV spikes
+
+*   Oversampling and its software implementation could decrease noise, and increase effective bit depth
+*   Special technique equivalent time sampling, could increase bandwidth for repetitive signals
+
+*   Non-storage mode which constantly sweeps the visible area instead of storing into a huge offscreen buffer. I set the sample rate to 50ms in the current version (eg. to look at an audio signal) it only updates the screen once every few seconds, it should update continuously.
+
+*   _Please add more ideas..._
+
+See also information on application development for the DSO Quad
+
+##   Specifications
+---
+<table >
+<tr>
+<td> Analog channel * 2                </td>
+<td> [CH_A] [CH_B]
+</td></tr>
+<tr>
+<td> Digital channel * 2               </td>
+<td> [CH_C] [CH_D]
+</td></tr>
+<tr>
+<td> Vertical Scale                    </td>
+<td> 20mV-10V/div (1-2-5 step) on x1 probe / 200mV -100V/div (1-2-5 step) on x10 probe
+</td></tr>
+<tr>
+<td> Vertical resolution               </td>
+<td> 8 bit
+</td></tr>
+<tr>
+<td> Input coupling                    </td>
+<td> AC/DC
+</td></tr>
+<tr>
+<td> Max input voltage                 </td>
+<td> 80Vpp (x1 probe) / 400Vpp (x10 probe)
+</td></tr>
+<tr>
+<td> Storage                           </td>
+<td> 4K per channel / 8K on single channel
+</td></tr>
+<tr>
+<td> Software trigger type             </td>
+<td> edge, pulse, level (to be added)
+</td></tr>
+<tr>
+<td> Hardware trigger type             </td>
+<td> edge
+</td></tr>
+<tr>
+<td> Trigger source                    </td>
+<td> CH1/CH2/EXT
+</td></tr>
+<tr>
+<td> Trigger mode                      </td>
+<td> Auto, Normal, Single, SCAN, None
+</td></tr>
+<tr>
+<td> Test Signal generator             </td>
+<td> 10Hz to 8MHz 2.8Vpp Square Wave, duty cycle 10~90% adjustable / 10Hz to 20kHz 2.8Vpp Sine, Square, Sawtooth, Triangle wave
+</td></tr>
+<tr>
+<td> Storage                           </td>
+<td> internal 2MB USB disk, BMP, DAT file
+</td></tr>
+<tr>
+<td> Auto measure                      </td>
+<td> Vmax, Vmin, Vpp, Vavr, Vrms, Freq, Period, Pulse, Duty
+</td></tr>
+<tr>
+---
+name: DSO Quad
+category: MakerPro
+bzurl: https://www.seeedstudio.com/DSO-Quad-Aluminium-Alloy-Silver-p-1033.html?cPath=63_65
+oldwikiname:  DSO Quad
+prodimagename:  P10308912-1024x684.jpg
+surveyurl: https://www.research.net/r/DSO_Quad
+sku:   109990016
+---
+![](https://files.seeedstudio.com/wiki/DSO_Quad/img/P10308912-1024x684.jpg)
+
+DSO Quad also known as DSO203 is a pocket size 4 channel digital oscilloscope for common electronic engineering tasks. It's based on ARM cortex M3 (STM32F103VCT6), providing 72MS/s sampling rate with integrated FPGA and high speed ADC. An internal 2MB USB disk can be used to store waveform captures, user applications and to upgrade firmware.
+
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/DSO-Quad-Aluminium-Alloy-Silver-p-1033.html?cPath=63_65)
+
+##   Features
+---
+*   Pocket size and light weight
+*   Two 36MS/s analog channels, Upto 72MS/s if configured to single channel.**(Upgrade to Two 72MS/s analog channels, Upto 144MS/s if configured to single channel from .sys version v1.31)**
+*   Two digital channels
+*   Signal Generator
+*   Various Triggering Option
+*   Easy waveform storage
+*   Firmware upgrade
+*   User applications
+*   Open source
+
+**Source(s):** [Features support](http://www.downloadranking.com/privacypolicy.php)
+
+##   Application Ideas
+---
+###   User applications
+
+Ongoing projects:
+
+*   GCC port with FFT, spectrogram and various fixes [by pmos69 and marcosin](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2957)
+
+*   Alternative user interface [by gabonator1](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2362)
+
+*   GCC port of the default firmware [by tmbinc](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2274)
+
+*   Frequency response plotter [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2485)
+
+*   FFT example application [by gabonator1](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2098)
+
+*   Logic analyzer [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2861)
+
+*   Pawn programming environment and various applications [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=3239)
+
+*   Port of SYS to gcc: [[1]](https://github.com/neilstockbridge/dsoquad-BIOS)
+
+*   Tetris [by LinX](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2344)
+
+<big>Idea Collection </big>
+
+**Applications **
+
+*   "Simple Mode" - where only the most basic functions are available to help people without experience.
+*   ["Multimeter mode" - basic multimeter functions (AC/DC VOM, peak/rms/delta would be nice)](https://github.com/PetteriAimonen/QuadPawn/wiki/Advanced-Volt-Meter)
+
+    *   Detailed at [https://github.com/PetteriAimonen/QuadPawn/wiki/Advanced-Volt-Meter](https://github.com/PetteriAimonen/QuadPawn/wiki/Advanced-Volt-Meter)
+*   Protocol analysis/data capture - Serial, I2C, SPI, CAN
+*   LCR (uH, uF and R) measurement capability - The inbuilt signal generator makes this a natural. Three methods exist, all requiring an external component(s) [Example](http://www.edn.com/design/test-and-measurement/4363759/Circuit-measures-capacitance-or-inductance)
+*   Semiconductor Analyzer - Use the DAC to test and chart the voltage response of a diode / transistor (and simply identify components, such as transistor pinout and polarity)
+*   RF spectrum analyzer
+*   A 2D X-Y mode that plots the analog channels against each other on two axes with a digital channel optionally functioning as a "beam" enable/disable.
+    *   [Something](https://forum.seeedstudio.com/) seems to exist? Not in APP2.50 yet.
+
+*   A DMX Decoder/Analyser and generator (used in conjunction with an external RS485 IC) would make this a VERY useful gadget for theatre techs.
+
+*   Television mode (analog TV) : Display frame/field/line (select field A/B) or line number. Display vectorscope diagram. Display content (ie: the TV image).
+
+*   Synchronization with a second DSO Quad for a 4 channel analog/digital signal, perhaps similar USBscope50 [moved from HARDWARE]
+
+use 'wave out' to generate a pulse/step when master unit triggers, use C/D as trigger for slave(s)
+
+*   Create USB remote control software, such that if LCD breaks, you can still use it with PC software. [moved from HARDWARE]
+*   Stream data to PC - Use PC as storage buffer, with additional processing power. A PC could decode I2C words and other protocols where the Quad wouldn't. [moved from HARDWARE]
+
+*   White noise function - add to the functions generator
+
+**Enhancements**
+
+*   A spectrum analyzer displaying a view from a frequency/time perspective
+*   Fast Fourier Transform, would be nice and easy for viewing spectrum data of a single signal.
+
+**Hardware/Device-Oriented**
+
+*   SDR (Software defined radio) note we only have USB full speed (12Mb/s)
+
+*   Preamplifier 10x badly needed!!!
+*   Add bezel buttons for easier to access menus.
+*   Add 2 more analog channels, Perhaps via USB dongle.
+
+*   Add port for expansion devices, such that and add-on device can offer more capabilities, like RF generation, or a function generator that is capable of larger amplitudes. In particular a +5v and 3.3v output would be useful.
+
+**Other**
+
+*   Service application for technical support staff. Could split the screen and display instructions like "Check if port 3, pin 5 has a signal, if not xyz might be broken". There could be a next button and for each step the text, the right timescale, trigger values etc. are selected
+*   My phone is ARM based, perhaps make a USB version of this and an app for my phone, that allows my phone to be the display / insured touch screen display.
+*   Simple math functions on both analog channels and generated signal.
+
+*   Two totally ground separated input would enable measureing inputs, which are not the same ground referenced. (like in the Velleman two-channel personal scope)
+*   Input overvoltage protection diode should be added to protect device form HV spikes
+
+*   Oversampling and its software implementation could decrease noise, and increase effective bit depth
+*   Special technique equivalent time sampling, could increase bandwidth for repetitive signals
+
+*   Non-storage mode which constantly sweeps the visible area instead of storing into a huge offscreen buffer. I set the sample rate to 50ms in the current version (eg. to look at an audio signal) it only updates the screen once every few seconds, it should update continuously.
+
+*   _Please add more ideas..._
+
+See also information on application development for the DSO Quad
+
+##   Specifications
+---
+<table >
+<tr>
+<td> Analog channel * 2                </td>
+<td> [CH_A] [CH_B]
+</td></tr>
+<tr>
+<td> Digital channel * 2               </td>
+<td> [CH_C] [CH_D]
+</td></tr>
+<tr>
+<td> Vertical Scale                    </td>
+<td> 20mV-10V/div (1-2-5 step) on x1 probe / 200mV -100V/div (1-2-5 step) on x10 probe
+</td></tr>
+<tr>
+<td> Vertical resolution               </td>
+<td> 8 bit
+</td></tr>
+<tr>
+<td> Input coupling                    </td>
+<td> AC/DC
+</td></tr>
+<tr>
+<td> Max input voltage                 </td>
+<td> 80Vpp (x1 probe) / 400Vpp (x10 probe)
+</td></tr>
+<tr>
+<td> Storage                           </td>
+<td> 4K per channel / 8K on single channel
+</td></tr>
+<tr>
+<td> Software trigger type             </td>
+<td> edge, pulse, level (to be added)
+</td></tr>
+<tr>
+<td> Hardware trigger type             </td>
+<td> edge
+</td></tr>
+<tr>
+<td> Trigger source                    </td>
+<td> CH1/CH2/EXT
+</td></tr>
+<tr>
+<td> Trigger mode                      </td>
+<td> Auto, Normal, Single, SCAN, None
+</td></tr>
+<tr>
+<td> Test Signal generator             </td>
+<td> 10Hz to 8MHz 2.8Vpp Square Wave, duty cycle 10~90% adjustable / 10Hz to 20kHz 2.8Vpp Sine, Square, Sawtooth, Triangle wave
+</td></tr>
+<tr>
+<td> Storage                           </td>
+<td> internal 2MB USB disk, BMP, DAT file
+</td></tr>
+<tr>
+<td> Auto measure                      </td>
+<td> Vmax, Vmin, Vpp, Vavr, Vrms, Freq, Period, Pulse, Duty
+</td></tr>
+<tr>
+---
+name: DSO Quad
+category: MakerPro
+bzurl: https://www.seeedstudio.com/DSO-Quad-Aluminium-Alloy-Silver-p-1033.html?cPath=63_65
+oldwikiname:  DSO Quad
+prodimagename:  P10308912-1024x684.jpg
+surveyurl: https://www.research.net/r/DSO_Quad
+sku:   109990016
+---
+![](https://files.seeedstudio.com/wiki/DSO_Quad/img/P10308912-1024x684.jpg)
+
+DSO Quad also known as DSO203 is a pocket size 4 channel digital oscilloscope for common electronic engineering tasks. It's based on ARM cortex M3 (STM32F103VCT6), providing 72MS/s sampling rate with integrated FPGA and high speed ADC. An internal 2MB USB disk can be used to store waveform captures, user applications and to upgrade firmware.
+
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/DSO-Quad-Aluminium-Alloy-Silver-p-1033.html?cPath=63_65)
+
+##   Features
+---
+*   Pocket size and light weight
+*   Two 36MS/s analog channels, Upto 72MS/s if configured to single channel.**(Upgrade to Two 72MS/s analog channels, Upto 144MS/s if configured to single channel from .sys version v1.31)**
+*   Two digital channels
+*   Signal Generator
+*   Various Triggering Option
+*   Easy waveform storage
+*   Firmware upgrade
+*   User applications
+*   Open source
+
+**Source(s):** [Features support](http://www.downloadranking.com/privacypolicy.php)
+
+##   Application Ideas
+---
+###   User applications
+
+Ongoing projects:
+
+*   GCC port with FFT, spectrogram and various fixes [by pmos69 and marcosin](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2957)
+
+*   Alternative user interface [by gabonator1](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2362)
+
+*   GCC port of the default firmware [by tmbinc](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2274)
+
+*   Frequency response plotter [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2485)
+
+*   FFT example application [by gabonator1](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2098)
+
+*   Logic analyzer [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2861)
+
+*   Pawn programming environment and various applications [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=3239)
+
+*   Port of SYS to gcc: [[1]](https://github.com/neilstockbridge/dsoquad-BIOS)
+
+*   Tetris [by LinX](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2344)
+
+<big>Idea Collection </big>
+
+**Applications **
+
+*   "Simple Mode" - where only the most basic functions are available to help people without experience.
+*   ["Multimeter mode" - basic multimeter functions (AC/DC VOM, peak/rms/delta would be nice)](https://github.com/PetteriAimonen/QuadPawn/wiki/Advanced-Volt-Meter)
+
+    *   Detailed at [https://github.com/PetteriAimonen/QuadPawn/wiki/Advanced-Volt-Meter](https://github.com/PetteriAimonen/QuadPawn/wiki/Advanced-Volt-Meter)
+*   Protocol analysis/data capture - Serial, I2C, SPI, CAN
+*   LCR (uH, uF and R) measurement capability - The inbuilt signal generator makes this a natural. Three methods exist, all requiring an external component(s) [Example](http://www.edn.com/design/test-and-measurement/4363759/Circuit-measures-capacitance-or-inductance)
+*   Semiconductor Analyzer - Use the DAC to test and chart the voltage response of a diode / transistor (and simply identify components, such as transistor pinout and polarity)
+*   RF spectrum analyzer
+*   A 2D X-Y mode that plots the analog channels against each other on two axes with a digital channel optionally functioning as a "beam" enable/disable.
+    *   [Something](https://forum.seeedstudio.com/) seems to exist? Not in APP2.50 yet.
+
+*   A DMX Decoder/Analyser and generator (used in conjunction with an external RS485 IC) would make this a VERY useful gadget for theatre techs.
+
+*   Television mode (analog TV) : Display frame/field/line (select field A/B) or line number. Display vectorscope diagram. Display content (ie: the TV image).
+
+*   Synchronization with a second DSO Quad for a 4 channel analog/digital signal, perhaps similar USBscope50 [moved from HARDWARE]
+
+use 'wave out' to generate a pulse/step when master unit triggers, use C/D as trigger for slave(s)
+
+*   Create USB remote control software, such that if LCD breaks, you can still use it with PC software. [moved from HARDWARE]
+*   Stream data to PC - Use PC as storage buffer, with additional processing power. A PC could decode I2C words and other protocols where the Quad wouldn't. [moved from HARDWARE]
+
+*   White noise function - add to the functions generator
+
+**Enhancements**
+
+*   A spectrum analyzer displaying a view from a frequency/time perspective
+*   Fast Fourier Transform, would be nice and easy for viewing spectrum data of a single signal.
+
+**Hardware/Device-Oriented**
+
+*   SDR (Software defined radio) note we only have USB full speed (12Mb/s)
+
+*   Preamplifier 10x badly needed!!!
+*   Add bezel buttons for easier to access menus.
+*   Add 2 more analog channels, Perhaps via USB dongle.
+
+*   Add port for expansion devices, such that and add-on device can offer more capabilities, like RF generation, or a function generator that is capable of larger amplitudes. In particular a +5v and 3.3v output would be useful.
+
+**Other**
+
+*   Service application for technical support staff. Could split the screen and display instructions like "Check if port 3, pin 5 has a signal, if not xyz might be broken". There could be a next button and for each step the text, the right timescale, trigger values etc. are selected
+*   My phone is ARM based, perhaps make a USB version of this and an app for my phone, that allows my phone to be the display / insured touch screen display.
+*   Simple math functions on both analog channels and generated signal.
+
+*   Two totally ground separated input would enable measureing inputs, which are not the same ground referenced. (like in the Velleman two-channel personal scope)
+*   Input overvoltage protection diode should be added to protect device form HV spikes
+
+*   Oversampling and its software implementation could decrease noise, and increase effective bit depth
+*   Special technique equivalent time sampling, could increase bandwidth for repetitive signals
+
+*   Non-storage mode which constantly sweeps the visible area instead of storing into a huge offscreen buffer. I set the sample rate to 50ms in the current version (eg. to look at an audio signal) it only updates the screen once every few seconds, it should update continuously.
+
+*   _Please add more ideas..._
+
+See also information on application development for the DSO Quad
+
+##   Specifications
+---
+<table >
+<tr>
+<td> Analog channel * 2                </td>
+<td> [CH_A] [CH_B]
+</td></tr>
+<tr>
+<td> Digital channel * 2               </td>
+<td> [CH_C] [CH_D]
+</td></tr>
+<tr>
+<td> Vertical Scale                    </td>
+<td> 20mV-10V/div (1-2-5 step) on x1 probe / 200mV -100V/div (1-2-5 step) on x10 probe
+</td></tr>
+<tr>
+<td> Vertical resolution               </td>
+<td> 8 bit
+</td></tr>
+<tr>
+<td> Input coupling                    </td>
+<td> AC/DC
+</td></tr>
+<tr>
+<td> Max input voltage                 </td>
+<td> 80Vpp (x1 probe) / 400Vpp (x10 probe)
+</td></tr>
+<tr>
+<td> Storage                           </td>
+<td> 4K per channel / 8K on single channel
+</td></tr>
+<tr>
+<td> Software trigger type             </td>
+<td> edge, pulse, level (to be added)
+</td></tr>
+<tr>
+<td> Hardware trigger type             </td>
+<td> edge
+</td></tr>
+<tr>
+<td> Trigger source                    </td>
+<td> CH1/CH2/EXT
+</td></tr>
+<tr>
+<td> Trigger mode                      </td>
+<td> Auto, Normal, Single, SCAN, None
+</td></tr>
+<tr>
+<td> Test Signal generator             </td>
+<td> 10Hz to 8MHz 2.8Vpp Square Wave, duty cycle 10~90% adjustable / 10Hz to 20kHz 2.8Vpp Sine, Square, Sawtooth, Triangle wave
+</td></tr>
+<tr>
+<td> Storage                           </td>
+<td> internal 2MB USB disk, BMP, DAT file
+</td></tr>
+<tr>
+<td> Auto measure                      </td>
+<td> Vmax, Vmin, Vpp, Vavr, Vrms, Freq, Period, Pulse, Duty
+</td></tr>
+<tr>
+---
+name: DSO Quad
+category: MakerPro
+bzurl: https://www.seeedstudio.com/DSO-Quad-Aluminium-Alloy-Silver-p-1033.html?cPath=63_65
+oldwikiname:  DSO Quad
+prodimagename:  P10308912-1024x684.jpg
+surveyurl: https://www.research.net/r/DSO_Quad
+sku:   109990016
+---
+![](https://files.seeedstudio.com/wiki/DSO_Quad/img/P10308912-1024x684.jpg)
+
+DSO Quad also known as DSO203 is a pocket size 4 channel digital oscilloscope for common electronic engineering tasks. It's based on ARM cortex M3 (STM32F103VCT6), providing 72MS/s sampling rate with integrated FPGA and high speed ADC. An internal 2MB USB disk can be used to store waveform captures, user applications and to upgrade firmware.
+
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/DSO-Quad-Aluminium-Alloy-Silver-p-1033.html?cPath=63_65)
+
+##   Features
+---
+*   Pocket size and light weight
+*   Two 36MS/s analog channels, Upto 72MS/s if configured to single channel.**(Upgrade to Two 72MS/s analog channels, Upto 144MS/s if configured to single channel from .sys version v1.31)**
+*   Two digital channels
+*   Signal Generator
+*   Various Triggering Option
+*   Easy waveform storage
+*   Firmware upgrade
+*   User applications
+*   Open source
+
+**Source(s):** [Features support](http://www.downloadranking.com/privacypolicy.php)
+
+##   Application Ideas
+---
+###   User applications
+
+Ongoing projects:
+
+*   GCC port with FFT, spectrogram and various fixes [by pmos69 and marcosin](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2957)
+
+*   Alternative user interface [by gabonator1](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2362)
+
+*   GCC port of the default firmware [by tmbinc](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2274)
+
+*   Frequency response plotter [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2485)
+
+*   FFT example application [by gabonator1](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2098)
+
+*   Logic analyzer [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2861)
+
+*   Pawn programming environment and various applications [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=3239)
+
+*   Port of SYS to gcc: [[1]](https://github.com/neilstockbridge/dsoquad-BIOS)
+
+*   Tetris [by LinX](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2344)
+
+<big>Idea Collection </big>
+
+**Applications **
+
+*   "Simple Mode" - where only the most basic functions are available to help people without experience.
+*   ["Multimeter mode" - basic multimeter functions (AC/DC VOM, peak/rms/delta would be nice)](https://github.com/PetteriAimonen/QuadPawn/wiki/Advanced-Volt-Meter)
+
+    *   Detailed at [https://github.com/PetteriAimonen/QuadPawn/wiki/Advanced-Volt-Meter](https://github.com/PetteriAimonen/QuadPawn/wiki/Advanced-Volt-Meter)
+*   Protocol analysis/data capture - Serial, I2C, SPI, CAN
+*   LCR (uH, uF and R) measurement capability - The inbuilt signal generator makes this a natural. Three methods exist, all requiring an external component(s) [Example](http://www.edn.com/design/test-and-measurement/4363759/Circuit-measures-capacitance-or-inductance)
+*   Semiconductor Analyzer - Use the DAC to test and chart the voltage response of a diode / transistor (and simply identify components, such as transistor pinout and polarity)
+*   RF spectrum analyzer
+*   A 2D X-Y mode that plots the analog channels against each other on two axes with a digital channel optionally functioning as a "beam" enable/disable.
+    *   [Something](https://forum.seeedstudio.com/) seems to exist? Not in APP2.50 yet.
+
+*   A DMX Decoder/Analyser and generator (used in conjunction with an external RS485 IC) would make this a VERY useful gadget for theatre techs.
+
+*   Television mode (analog TV) : Display frame/field/line (select field A/B) or line number. Display vectorscope diagram. Display content (ie: the TV image).
+
+*   Synchronization with a second DSO Quad for a 4 channel analog/digital signal, perhaps similar USBscope50 [moved from HARDWARE]
+
+use 'wave out' to generate a pulse/step when master unit triggers, use C/D as trigger for slave(s)
+
+*   Create USB remote control software, such that if LCD breaks, you can still use it with PC software. [moved from HARDWARE]
+*   Stream data to PC - Use PC as storage buffer, with additional processing power. A PC could decode I2C words and other protocols where the Quad wouldn't. [moved from HARDWARE]
+
+*   White noise function - add to the functions generator
+
+**Enhancements**
+
+*   A spectrum analyzer displaying a view from a frequency/time perspective
+*   Fast Fourier Transform, would be nice and easy for viewing spectrum data of a single signal.
+
+**Hardware/Device-Oriented**
+
+*   SDR (Software defined radio) note we only have USB full speed (12Mb/s)
+
+*   Preamplifier 10x badly needed!!!
+*   Add bezel buttons for easier to access menus.
+*   Add 2 more analog channels, Perhaps via USB dongle.
+
+*   Add port for expansion devices, such that and add-on device can offer more capabilities, like RF generation, or a function generator that is capable of larger amplitudes. In particular a +5v and 3.3v output would be useful.
+
+**Other**
+
+*   Service application for technical support staff. Could split the screen and display instructions like "Check if port 3, pin 5 has a signal, if not xyz might be broken". There could be a next button and for each step the text, the right timescale, trigger values etc. are selected
+*   My phone is ARM based, perhaps make a USB version of this and an app for my phone, that allows my phone to be the display / insured touch screen display.
+*   Simple math functions on both analog channels and generated signal.
+
+*   Two totally ground separated input would enable measureing inputs, which are not the same ground referenced. (like in the Velleman two-channel personal scope)
+*   Input overvoltage protection diode should be added to protect device form HV spikes
+
+*   Oversampling and its software implementation could decrease noise, and increase effective bit depth
+*   Special technique equivalent time sampling, could increase bandwidth for repetitive signals
+
+*   Non-storage mode which constantly sweeps the visible area instead of storing into a huge offscreen buffer. I set the sample rate to 50ms in the current version (eg. to look at an audio signal) it only updates the screen once every few seconds, it should update continuously.
+
+*   _Please add more ideas..._
+
+See also information on application development for the DSO Quad
+
+##   Specifications
+---
+<table >
+<tr>
+<td> Analog channel * 2                </td>
+<td> [CH_A] [CH_B]
+</td></tr>
+<tr>
+<td> Digital channel * 2               </td>
+<td> [CH_C] [CH_D]
+</td></tr>
+<tr>
+<td> Vertical Scale                    </td>
+<td> 20mV-10V/div (1-2-5 step) on x1 probe / 200mV -100V/div (1-2-5 step) on x10 probe
+</td></tr>
+<tr>
+<td> Vertical resolution               </td>
+<td> 8 bit
+</td></tr>
+<tr>
+<td> Input coupling                    </td>
+<td> AC/DC
+</td></tr>
+<tr>
+<td> Max input voltage                 </td>
+<td> 80Vpp (x1 probe) / 400Vpp (x10 probe)
+</td></tr>
+<tr>
+<td> Storage                           </td>
+<td> 4K per channel / 8K on single channel
+</td></tr>
+<tr>
+<td> Software trigger type             </td>
+<td> edge, pulse, level (to be added)
+</td></tr>
+<tr>
+<td> Hardware trigger type             </td>
+<td> edge
+</td></tr>
+<tr>
+<td> Trigger source                    </td>
+<td> CH1/CH2/EXT
+</td></tr>
+<tr>
+<td> Trigger mode                      </td>
+<td> Auto, Normal, Single, SCAN, None
+</td></tr>
+<tr>
+<td> Test Signal generator             </td>
+<td> 10Hz to 8MHz 2.8Vpp Square Wave, duty cycle 10~90% adjustable / 10Hz to 20kHz 2.8Vpp Sine, Square, Sawtooth, Triangle wave
+</td></tr>
+<tr>
+<td> Storage                           </td>
+<td> internal 2MB USB disk, BMP, DAT file
+</td></tr>
+<tr>
+<td> Auto measure                      </td>
+<td> Vmax, Vmin, Vpp, Vavr, Vrms, Freq, Period, Pulse, Duty
+</td></tr>
+<tr>
+---
+name: DSO Quad
+category: MakerPro
+bzurl: https://www.seeedstudio.com/DSO-Quad-Aluminium-Alloy-Silver-p-1033.html?cPath=63_65
+oldwikiname:  DSO Quad
+prodimagename:  P10308912-1024x684.jpg
+surveyurl: https://www.research.net/r/DSO_Quad
+sku:   109990016
+---
+![](https://files.seeedstudio.com/wiki/DSO_Quad/img/P10308912-1024x684.jpg)
+
+DSO Quad also known as DSO203 is a pocket size 4 channel digital oscilloscope for common electronic engineering tasks. It's based on ARM cortex M3 (STM32F103VCT6), providing 72MS/s sampling rate with integrated FPGA and high speed ADC. An internal 2MB USB disk can be used to store waveform captures, user applications and to upgrade firmware.
+
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/DSO-Quad-Aluminium-Alloy-Silver-p-1033.html?cPath=63_65)
+
+##   Features
+---
+*   Pocket size and light weight
+*   Two 36MS/s analog channels, Upto 72MS/s if configured to single channel.**(Upgrade to Two 72MS/s analog channels, Upto 144MS/s if configured to single channel from .sys version v1.31)**
+*   Two digital channels
+*   Signal Generator
+*   Various Triggering Option
+*   Easy waveform storage
+*   Firmware upgrade
+*   User applications
+*   Open source
+
+**Source(s):** [Features support](http://www.downloadranking.com/privacypolicy.php)
+
+##   Application Ideas
+---
+###   User applications
+
+Ongoing projects:
+
+*   GCC port with FFT, spectrogram and various fixes [by pmos69 and marcosin](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2957)
+
+*   Alternative user interface [by gabonator1](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2362)
+
+*   GCC port of the default firmware [by tmbinc](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2274)
+
+*   Frequency response plotter [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2485)
+
+*   FFT example application [by gabonator1](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2098)
+
+*   Logic analyzer [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2861)
+
+*   Pawn programming environment and various applications [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=3239)
+
+*   Port of SYS to gcc: [[1]](https://github.com/neilstockbridge/dsoquad-BIOS)
+
+*   Tetris [by LinX](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2344)
+
+<big>Idea Collection </big>
+
+**Applications **
+
+*   "Simple Mode" - where only the most basic functions are available to help people without experience.
+*   ["Multimeter mode" - basic multimeter functions (AC/DC VOM, peak/rms/delta would be nice)](https://github.com/PetteriAimonen/QuadPawn/wiki/Advanced-Volt-Meter)
+
+    *   Detailed at [https://github.com/PetteriAimonen/QuadPawn/wiki/Advanced-Volt-Meter](https://github.com/PetteriAimonen/QuadPawn/wiki/Advanced-Volt-Meter)
+*   Protocol analysis/data capture - Serial, I2C, SPI, CAN
+*   LCR (uH, uF and R) measurement capability - The inbuilt signal generator makes this a natural. Three methods exist, all requiring an external component(s) [Example](http://www.edn.com/design/test-and-measurement/4363759/Circuit-measures-capacitance-or-inductance)
+*   Semiconductor Analyzer - Use the DAC to test and chart the voltage response of a diode / transistor (and simply identify components, such as transistor pinout and polarity)
+*   RF spectrum analyzer
+*   A 2D X-Y mode that plots the analog channels against each other on two axes with a digital channel optionally functioning as a "beam" enable/disable.
+    *   [Something](https://forum.seeedstudio.com/) seems to exist? Not in APP2.50 yet.
+
+*   A DMX Decoder/Analyser and generator (used in conjunction with an external RS485 IC) would make this a VERY useful gadget for theatre techs.
+
+*   Television mode (analog TV) : Display frame/field/line (select field A/B) or line number. Display vectorscope diagram. Display content (ie: the TV image).
+
+*   Synchronization with a second DSO Quad for a 4 channel analog/digital signal, perhaps similar USBscope50 [moved from HARDWARE]
+
+use 'wave out' to generate a pulse/step when master unit triggers, use C/D as trigger for slave(s)
+
+*   Create USB remote control software, such that if LCD breaks, you can still use it with PC software. [moved from HARDWARE]
+*   Stream data to PC - Use PC as storage buffer, with additional processing power. A PC could decode I2C words and other protocols where the Quad wouldn't. [moved from HARDWARE]
+
+*   White noise function - add to the functions generator
+
+**Enhancements**
+
+*   A spectrum analyzer displaying a view from a frequency/time perspective
+*   Fast Fourier Transform, would be nice and easy for viewing spectrum data of a single signal.
+
+**Hardware/Device-Oriented**
+
+*   SDR (Software defined radio) note we only have USB full speed (12Mb/s)
+
+*   Preamplifier 10x badly needed!!!
+*   Add bezel buttons for easier to access menus.
+*   Add 2 more analog channels, Perhaps via USB dongle.
+
+*   Add port for expansion devices, such that and add-on device can offer more capabilities, like RF generation, or a function generator that is capable of larger amplitudes. In particular a +5v and 3.3v output would be useful.
+
+**Other**
+
+*   Service application for technical support staff. Could split the screen and display instructions like "Check if port 3, pin 5 has a signal, if not xyz might be broken". There could be a next button and for each step the text, the right timescale, trigger values etc. are selected
+*   My phone is ARM based, perhaps make a USB version of this and an app for my phone, that allows my phone to be the display / insured touch screen display.
+*   Simple math functions on both analog channels and generated signal.
+
+*   Two totally ground separated input would enable measureing inputs, which are not the same ground referenced. (like in the Velleman two-channel personal scope)
+*   Input overvoltage protection diode should be added to protect device form HV spikes
+
+*   Oversampling and its software implementation could decrease noise, and increase effective bit depth
+*   Special technique equivalent time sampling, could increase bandwidth for repetitive signals
+
+*   Non-storage mode which constantly sweeps the visible area instead of storing into a huge offscreen buffer. I set the sample rate to 50ms in the current version (eg. to look at an audio signal) it only updates the screen once every few seconds, it should update continuously.
+
+*   _Please add more ideas..._
+
+See also information on application development for the DSO Quad
+
+##   Specifications
+---
+<table >
+<tr>
+<td> Analog channel * 2                </td>
+<td> [CH_A] [CH_B]
+</td></tr>
+<tr>
+<td> Digital channel * 2               </td>
+<td> [CH_C] [CH_D]
+</td></tr>
+<tr>
+<td> Vertical Scale                    </td>
+<td> 20mV-10V/div (1-2-5 step) on x1 probe / 200mV -100V/div (1-2-5 step) on x10 probe
+</td></tr>
+<tr>
+<td> Vertical resolution               </td>
+<td> 8 bit
+</td></tr>
+<tr>
+<td> Input coupling                    </td>
+<td> AC/DC
+</td></tr>
+<tr>
+<td> Max input voltage                 </td>
+<td> 80Vpp (x1 probe) / 400Vpp (x10 probe)
+</td></tr>
+<tr>
+<td> Storage                           </td>
+<td> 4K per channel / 8K on single channel
+</td></tr>
+<tr>
+<td> Software trigger type             </td>
+<td> edge, pulse, level (to be added)
+</td></tr>
+<tr>
+<td> Hardware trigger type             </td>
+<td> edge
+</td></tr>
+<tr>
+<td> Trigger source                    </td>
+<td> CH1/CH2/EXT
+</td></tr>
+<tr>
+<td> Trigger mode                      </td>
+<td> Auto, Normal, Single, SCAN, None
+</td></tr>
+<tr>
+<td> Test Signal generator             </td>
+<td> 10Hz to 8MHz 2.8Vpp Square Wave, duty cycle 10~90% adjustable / 10Hz to 20kHz 2.8Vpp Sine, Square, Sawtooth, Triangle wave
+</td></tr>
+<tr>
+<td> Storage                           </td>
+<td> internal 2MB USB disk, BMP, DAT file
+</td></tr>
+<tr>
+<td> Auto measure                      </td>
+<td> Vmax, Vmin, Vpp, Vavr, Vrms, Freq, Period, Pulse, Duty
+</td></tr>
+<tr>
+---
+name: DSO Quad
+category: MakerPro
+bzurl: https://www.seeedstudio.com/DSO-Quad-Aluminium-Alloy-Silver-p-1033.html?cPath=63_65
+oldwikiname:  DSO Quad
+prodimagename:  P10308912-1024x684.jpg
+surveyurl: https://www.research.net/r/DSO_Quad
+sku:   109990016
+---
+![](https://files.seeedstudio.com/wiki/DSO_Quad/img/P10308912-1024x684.jpg)
+
+DSO Quad also known as DSO203 is a pocket size 4 channel digital oscilloscope for common electronic engineering tasks. It's based on ARM cortex M3 (STM32F103VCT6), providing 72MS/s sampling rate with integrated FPGA and high speed ADC. An internal 2MB USB disk can be used to store waveform captures, user applications and to upgrade firmware.
+
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/DSO-Quad-Aluminium-Alloy-Silver-p-1033.html?cPath=63_65)
+
+##   Features
+---
+*   Pocket size and light weight
+*   Two 36MS/s analog channels, Upto 72MS/s if configured to single channel.**(Upgrade to Two 72MS/s analog channels, Upto 144MS/s if configured to single channel from .sys version v1.31)**
+*   Two digital channels
+*   Signal Generator
+*   Various Triggering Option
+*   Easy waveform storage
+*   Firmware upgrade
+*   User applications
+*   Open source
+
+**Source(s):** [Features support](http://www.downloadranking.com/privacypolicy.php)
+
+##   Application Ideas
+---
+###   User applications
+
+Ongoing projects:
+
+*   GCC port with FFT, spectrogram and various fixes [by pmos69 and marcosin](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2957)
+
+*   Alternative user interface [by gabonator1](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2362)
+
+*   GCC port of the default firmware [by tmbinc](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2274)
+
+*   Frequency response plotter [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2485)
+
+*   FFT example application [by gabonator1](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2098)
+
+*   Logic analyzer [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2861)
+
+*   Pawn programming environment and various applications [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=3239)
+
+*   Port of SYS to gcc: [[1]](https://github.com/neilstockbridge/dsoquad-BIOS)
+
+*   Tetris [by LinX](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2344)
+
+<big>Idea Collection </big>
+
+**Applications **
+
+*   "Simple Mode" - where only the most basic functions are available to help people without experience.
+*   ["Multimeter mode" - basic multimeter functions (AC/DC VOM, peak/rms/delta would be nice)](https://github.com/PetteriAimonen/QuadPawn/wiki/Advanced-Volt-Meter)
+
+    *   Detailed at [https://github.com/PetteriAimonen/QuadPawn/wiki/Advanced-Volt-Meter](https://github.com/PetteriAimonen/QuadPawn/wiki/Advanced-Volt-Meter)
+*   Protocol analysis/data capture - Serial, I2C, SPI, CAN
+*   LCR (uH, uF and R) measurement capability - The inbuilt signal generator makes this a natural. Three methods exist, all requiring an external component(s) [Example](http://www.edn.com/design/test-and-measurement/4363759/Circuit-measures-capacitance-or-inductance)
+*   Semiconductor Analyzer - Use the DAC to test and chart the voltage response of a diode / transistor (and simply identify components, such as transistor pinout and polarity)
+*   RF spectrum analyzer
+*   A 2D X-Y mode that plots the analog channels against each other on two axes with a digital channel optionally functioning as a "beam" enable/disable.
+    *   [Something](https://forum.seeedstudio.com/) seems to exist? Not in APP2.50 yet.
+
+*   A DMX Decoder/Analyser and generator (used in conjunction with an external RS485 IC) would make this a VERY useful gadget for theatre techs.
+
+*   Television mode (analog TV) : Display frame/field/line (select field A/B) or line number. Display vectorscope diagram. Display content (ie: the TV image).
+
+*   Synchronization with a second DSO Quad for a 4 channel analog/digital signal, perhaps similar USBscope50 [moved from HARDWARE]
+
+use 'wave out' to generate a pulse/step when master unit triggers, use C/D as trigger for slave(s)
+
+*   Create USB remote control software, such that if LCD breaks, you can still use it with PC software. [moved from HARDWARE]
+*   Stream data to PC - Use PC as storage buffer, with additional processing power. A PC could decode I2C words and other protocols where the Quad wouldn't. [moved from HARDWARE]
+
+*   White noise function - add to the functions generator
+
+**Enhancements**
+
+*   A spectrum analyzer displaying a view from a frequency/time perspective
+*   Fast Fourier Transform, would be nice and easy for viewing spectrum data of a single signal.
+
+**Hardware/Device-Oriented**
+
+*   SDR (Software defined radio) note we only have USB full speed (12Mb/s)
+
+*   Preamplifier 10x badly needed!!!
+*   Add bezel buttons for easier to access menus.
+*   Add 2 more analog channels, Perhaps via USB dongle.
+
+*   Add port for expansion devices, such that and add-on device can offer more capabilities, like RF generation, or a function generator that is capable of larger amplitudes. In particular a +5v and 3.3v output would be useful.
+
+**Other**
+
+*   Service application for technical support staff. Could split the screen and display instructions like "Check if port 3, pin 5 has a signal, if not xyz might be broken". There could be a next button and for each step the text, the right timescale, trigger values etc. are selected
+*   My phone is ARM based, perhaps make a USB version of this and an app for my phone, that allows my phone to be the display / insured touch screen display.
+*   Simple math functions on both analog channels and generated signal.
+
+*   Two totally ground separated input would enable measureing inputs, which are not the same ground referenced. (like in the Velleman two-channel personal scope)
+*   Input overvoltage protection diode should be added to protect device form HV spikes
+
+*   Oversampling and its software implementation could decrease noise, and increase effective bit depth
+*   Special technique equivalent time sampling, could increase bandwidth for repetitive signals
+
+*   Non-storage mode which constantly sweeps the visible area instead of storing into a huge offscreen buffer. I set the sample rate to 50ms in the current version (eg. to look at an audio signal) it only updates the screen once every few seconds, it should update continuously.
+
+*   _Please add more ideas..._
+
+See also information on application development for the DSO Quad
+
+##   Specifications
+---
+<table >
+<tr>
+<td> Analog channel * 2                </td>
+<td> [CH_A] [CH_B]
+</td></tr>
+<tr>
+<td> Digital channel * 2               </td>
+<td> [CH_C] [CH_D]
+</td></tr>
+<tr>
+<td> Vertical Scale                    </td>
+<td> 20mV-10V/div (1-2-5 step) on x1 probe / 200mV -100V/div (1-2-5 step) on x10 probe
+</td></tr>
+<tr>
+<td> Vertical resolution               </td>
+<td> 8 bit
+</td></tr>
+<tr>
+<td> Input coupling                    </td>
+<td> AC/DC
+</td></tr>
+<tr>
+<td> Max input voltage                 </td>
+<td> 80Vpp (x1 probe) / 400Vpp (x10 probe)
+</td></tr>
+<tr>
+<td> Storage                           </td>
+<td> 4K per channel / 8K on single channel
+</td></tr>
+<tr>
+<td> Software trigger type             </td>
+<td> edge, pulse, level (to be added)
+</td></tr>
+<tr>
+<td> Hardware trigger type             </td>
+<td> edge
+</td></tr>
+<tr>
+<td> Trigger source                    </td>
+<td> CH1/CH2/EXT
+</td></tr>
+<tr>
+<td> Trigger mode                      </td>
+<td> Auto, Normal, Single, SCAN, None
+</td></tr>
+<tr>
+<td> Test Signal generator             </td>
+<td> 10Hz to 8MHz 2.8Vpp Square Wave, duty cycle 10~90% adjustable / 10Hz to 20kHz 2.8Vpp Sine, Square, Sawtooth, Triangle wave
+</td></tr>
+<tr>
+<td> Storage                           </td>
+<td> internal 2MB USB disk, BMP, DAT file
+</td></tr>
+<tr>
+<td> Auto measure                      </td>
+<td> Vmax, Vmin, Vpp, Vavr, Vrms, Freq, Period, Pulse, Duty
+</td></tr>
+<tr>
+---
 name: DSO Quad Manual (by the community)
 category: MakerPro
 bzurl:

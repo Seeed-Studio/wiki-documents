@@ -1,4 +1,496 @@
 ---
+name: Wifi Shield V2.0
+category: Shield
+bzurl: https://seeedstudio.com/Wifi-Shield-V2.0-p-2505.html
+oldwikiname: Wifi_Shield_V2.0
+prodimagename: Wifi_Shield_v2.jpg
+bzprodimageurl: http://statics3.seeedstudio.com/images/product/113030008 1.jpg
+surveyurl: https://www.research.net/r/Wifi_Shield_V2_0
+sku: 113030008
+---
+
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi_Shield_v2.jpg)
+
+This WiFi shield features the RN171 TCP/IP module to allow your Arduino/Seeeduino to connect with up to 802.11b/g wireless networks.
+
+The shield's default communication protocol with the Arduino is UART/Serial, and you may select which digital pins (D0 to D7) to use for RX and TX with two jumper rows we've incorporated. The shield also has two on-board Grove connectors for I2C and Serial to allow the shield to be used with any of our Grove devices.
+
+An on-board antenna allows the shield to cover a wider range and transmit stronger signals. The RN171 module supports TCP, UDP, FTP, and HTTP communication protocols to meet the needs of most wireless and Internet of Things (IoT) network projects e.g. smart home networks, robots control, personal weather stations.
+
+The shield is very well documented with our examples below and its [user manual](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/res/WiFly-RN-UM.pdf).
+
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Wifi-Shield-V20-p-2505.html)
+
+Version Tracker
+---------------
+
+| Parameter          | Wifi Shield V1.0                                                        | Wifi Shield V1.1(v1.2)                                                 | Wifi Shield V2.0                                                                          |
+|--------------------|-------------------------------------------------------------------------|------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| Voltage            | +3.5V~+5V                                                               | +3.5V~+5V                                                              | +3.5V~+5V                                                                                 |
+| Standard Shield    | Yes                                                                     | Yes                                                                    | Yes                                                                                       |
+| Communication Mode | Serial port                                                             | Serial port                                                            | Serial port                                                                               |
+| Standard Shield    | No                                                                      | Yes                                                                    | Yes                                                                                       |
+| Antenna Type       | mast antenna                                                            | PCB antenna                                                            | <font color="Red">onboard antenna</font>                                                  |
+| Library File       | [Wifi Shield Library V1.0](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/res/WifiShield.zip) | [New Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield) | [New Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield) *the same as v1.2* |
+
+Specifications
+--------------
+
+| Parameter                        | Value                                                                |
+|----------------------------------|----------------------------------------------------------------------|
+| Operating voltage                | 3.3~5.5 V                                                            |
+| Compatible board directly        | Arduino Uno/Seeeduino                                                |
+| Current                          | 25~400mA                                                             |
+| Transmit power                   | 0-10 dBm                                                             |
+| Frequency                        | 2402~2480 MHz                                                        |
+| Channel                          | 0~13                                                                 |
+| Network rate                     | 1-11 Mbps for 802.11b/6-54Mbps for 802.11g                           |
+| Dimension                        | 60X56X19 mm                                                          |
+| Net Weight                       | 24±1 g                                                               |
+| Secure WiFi authentication       | WEP-128, WPA-PSK (TKIP), WPA2-PSK (AES)                              |
+| Built-in networking applications | DHCP client, DNS client, ARP, ICMP ping, FTP, TELNET, HTTP, UDP, TCP |
+| Certification                    | RN171: FCC, CE                                                      |
+
+Hardware Overview
+-----------------
+
+The WiFi shield is compatible with any Arduino/Seeeduino development board as it only requires two digital pins of your choice between D0-D7 for UART/serial communication. To install, simply stack the shield on the Arduino/Seeeduino board.
+
+
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi_shield_v2_breakout.png)
+
+1.  **Serial Peripheral Interface (SPI) Connections (MOSI, SCK, MISO):** These pins are not connected to any of the Arduino's pins, they are independent and the logic level output/input of them is 3.3V. They can be used to communicate with the Arduino via SPI but a 3.3V logic converter between these pins and the Arduino's will be needed. The data rate in SPI mode can reach up to 2Mbps.
+
+    **RES_Wifi:** The Wifi shield has an on-board "Rest Button" for the RN-171 module, you may also reset the RN-171 via software by sending the reset command. Additionally, if you would like to connect this pin to the Arduino's digital 6 pin, simply solder the pad labeled "P5" on the shield.
+
+2.  **RN171:** A super low power consumption wireless module with TCP/IP stack built in.
+3.  **Antenna:** I.PEX connector.
+4.  **RN171 breakout section:** The RN171 module has its own analog input and GPIO pins, which the shield provides access to via this breakout section. The GPIO pins (IO3, IO7, IO8, and IO9) are 3.3V tolerant while the analog input pins (S_0 and S_1) can read 0-400mV (Do not exceed 1.2V). The RN171 can be configured to use these pins by software or they may connected to other pins to use other RN171 functions such as adhoc mode. The voltage of VCC is dependent on the supply power of the WiFi shield.
+5.  **UART/Serial Select area:** Two jumper rows to let you select which RX and TX pins you want to use to communicate with the Arduino.
+6.  **Grove connectors:** Analog I2C Grove (if using Arduino UNO or Seeeduino) for pins A4&A5 and Digital Serial Grove for D8&D9. The voltage VCC is dependent on the power supply of the board.
+
+### Pins Used / Shield Compatibility
+
+The WiFi shield uses any two digital pins of your choice between D0 and D7 to communicate with the RN171 WiFi module, however keep in mind that D0 and D1 are used by the Arduino for programming and serial communication purposes and using them might interfere with these two functions.
+
+In the example codes in this page we use D2 and D3 as RX and TX for the shield. In this case, the jumper hats should be connected as shown below:
+
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi_shield_v1.1_pinout.png)
+*D2 selected for WIFI_TX, D3 selected for WIFI_RX*
+
+### RN171 WiFi Module
+
+---
+name: Wifi Shield V2.0
+category: Shield
+bzurl: https://seeedstudio.com/Wifi-Shield-V2.0-p-2505.html
+oldwikiname: Wifi_Shield_V2.0
+prodimagename: Wifi_Shield_v2.jpg
+bzprodimageurl: http://statics3.seeedstudio.com/images/product/113030008 1.jpg
+surveyurl: https://www.research.net/r/Wifi_Shield_V2_0
+sku: 113030008
+---
+
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi_Shield_v2.jpg)
+
+This WiFi shield features the RN171 TCP/IP module to allow your Arduino/Seeeduino to connect with up to 802.11b/g wireless networks.
+
+The shield's default communication protocol with the Arduino is UART/Serial, and you may select which digital pins (D0 to D7) to use for RX and TX with two jumper rows we've incorporated. The shield also has two on-board Grove connectors for I2C and Serial to allow the shield to be used with any of our Grove devices.
+
+An on-board antenna allows the shield to cover a wider range and transmit stronger signals. The RN171 module supports TCP, UDP, FTP, and HTTP communication protocols to meet the needs of most wireless and Internet of Things (IoT) network projects e.g. smart home networks, robots control, personal weather stations.
+
+The shield is very well documented with our examples below and its [user manual](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/res/WiFly-RN-UM.pdf).
+
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Wifi-Shield-V20-p-2505.html)
+
+Version Tracker
+---------------
+
+| Parameter          | Wifi Shield V1.0                                                        | Wifi Shield V1.1(v1.2)                                                 | Wifi Shield V2.0                                                                          |
+|--------------------|-------------------------------------------------------------------------|------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| Voltage            | +3.5V~+5V                                                               | +3.5V~+5V                                                              | +3.5V~+5V                                                                                 |
+| Standard Shield    | Yes                                                                     | Yes                                                                    | Yes                                                                                       |
+| Communication Mode | Serial port                                                             | Serial port                                                            | Serial port                                                                               |
+| Standard Shield    | No                                                                      | Yes                                                                    | Yes                                                                                       |
+| Antenna Type       | mast antenna                                                            | PCB antenna                                                            | <font color="Red">onboard antenna</font>                                                  |
+| Library File       | [Wifi Shield Library V1.0](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/res/WifiShield.zip) | [New Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield) | [New Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield) *the same as v1.2* |
+
+Specifications
+--------------
+
+| Parameter                        | Value                                                                |
+|----------------------------------|----------------------------------------------------------------------|
+| Operating voltage                | 3.3~5.5 V                                                            |
+| Compatible board directly        | Arduino Uno/Seeeduino                                                |
+| Current                          | 25~400mA                                                             |
+| Transmit power                   | 0-10 dBm                                                             |
+| Frequency                        | 2402~2480 MHz                                                        |
+| Channel                          | 0~13                                                                 |
+| Network rate                     | 1-11 Mbps for 802.11b/6-54Mbps for 802.11g                           |
+| Dimension                        | 60X56X19 mm                                                          |
+| Net Weight                       | 24±1 g                                                               |
+| Secure WiFi authentication       | WEP-128, WPA-PSK (TKIP), WPA2-PSK (AES)                              |
+| Built-in networking applications | DHCP client, DNS client, ARP, ICMP ping, FTP, TELNET, HTTP, UDP, TCP |
+| Certification                    | RN171: FCC, CE                                                      |
+
+Hardware Overview
+-----------------
+
+The WiFi shield is compatible with any Arduino/Seeeduino development board as it only requires two digital pins of your choice between D0-D7 for UART/serial communication. To install, simply stack the shield on the Arduino/Seeeduino board.
+
+
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi_shield_v2_breakout.png)
+
+1.  **Serial Peripheral Interface (SPI) Connections (MOSI, SCK, MISO):** These pins are not connected to any of the Arduino's pins, they are independent and the logic level output/input of them is 3.3V. They can be used to communicate with the Arduino via SPI but a 3.3V logic converter between these pins and the Arduino's will be needed. The data rate in SPI mode can reach up to 2Mbps.
+
+    **RES_Wifi:** The Wifi shield has an on-board "Rest Button" for the RN-171 module, you may also reset the RN-171 via software by sending the reset command. Additionally, if you would like to connect this pin to the Arduino's digital 6 pin, simply solder the pad labeled "P5" on the shield.
+
+2.  **RN171:** A super low power consumption wireless module with TCP/IP stack built in.
+3.  **Antenna:** I.PEX connector.
+4.  **RN171 breakout section:** The RN171 module has its own analog input and GPIO pins, which the shield provides access to via this breakout section. The GPIO pins (IO3, IO7, IO8, and IO9) are 3.3V tolerant while the analog input pins (S_0 and S_1) can read 0-400mV (Do not exceed 1.2V). The RN171 can be configured to use these pins by software or they may connected to other pins to use other RN171 functions such as adhoc mode. The voltage of VCC is dependent on the supply power of the WiFi shield.
+5.  **UART/Serial Select area:** Two jumper rows to let you select which RX and TX pins you want to use to communicate with the Arduino.
+6.  **Grove connectors:** Analog I2C Grove (if using Arduino UNO or Seeeduino) for pins A4&A5 and Digital Serial Grove for D8&D9. The voltage VCC is dependent on the power supply of the board.
+
+### Pins Used / Shield Compatibility
+
+The WiFi shield uses any two digital pins of your choice between D0 and D7 to communicate with the RN171 WiFi module, however keep in mind that D0 and D1 are used by the Arduino for programming and serial communication purposes and using them might interfere with these two functions.
+
+In the example codes in this page we use D2 and D3 as RX and TX for the shield. In this case, the jumper hats should be connected as shown below:
+
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi_shield_v1.1_pinout.png)
+*D2 selected for WIFI_TX, D3 selected for WIFI_RX*
+
+### RN171 WiFi Module
+
+---
+name: Wifi Shield V2.0
+category: Shield
+bzurl: https://seeedstudio.com/Wifi-Shield-V2.0-p-2505.html
+oldwikiname: Wifi_Shield_V2.0
+prodimagename: Wifi_Shield_v2.jpg
+bzprodimageurl: http://statics3.seeedstudio.com/images/product/113030008 1.jpg
+surveyurl: https://www.research.net/r/Wifi_Shield_V2_0
+sku: 113030008
+---
+
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi_Shield_v2.jpg)
+
+This WiFi shield features the RN171 TCP/IP module to allow your Arduino/Seeeduino to connect with up to 802.11b/g wireless networks.
+
+The shield's default communication protocol with the Arduino is UART/Serial, and you may select which digital pins (D0 to D7) to use for RX and TX with two jumper rows we've incorporated. The shield also has two on-board Grove connectors for I2C and Serial to allow the shield to be used with any of our Grove devices.
+
+An on-board antenna allows the shield to cover a wider range and transmit stronger signals. The RN171 module supports TCP, UDP, FTP, and HTTP communication protocols to meet the needs of most wireless and Internet of Things (IoT) network projects e.g. smart home networks, robots control, personal weather stations.
+
+The shield is very well documented with our examples below and its [user manual](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/res/WiFly-RN-UM.pdf).
+
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Wifi-Shield-V20-p-2505.html)
+
+Version Tracker
+---------------
+
+| Parameter          | Wifi Shield V1.0                                                        | Wifi Shield V1.1(v1.2)                                                 | Wifi Shield V2.0                                                                          |
+|--------------------|-------------------------------------------------------------------------|------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| Voltage            | +3.5V~+5V                                                               | +3.5V~+5V                                                              | +3.5V~+5V                                                                                 |
+| Standard Shield    | Yes                                                                     | Yes                                                                    | Yes                                                                                       |
+| Communication Mode | Serial port                                                             | Serial port                                                            | Serial port                                                                               |
+| Standard Shield    | No                                                                      | Yes                                                                    | Yes                                                                                       |
+| Antenna Type       | mast antenna                                                            | PCB antenna                                                            | <font color="Red">onboard antenna</font>                                                  |
+| Library File       | [Wifi Shield Library V1.0](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/res/WifiShield.zip) | [New Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield) | [New Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield) *the same as v1.2* |
+
+Specifications
+--------------
+
+| Parameter                        | Value                                                                |
+|----------------------------------|----------------------------------------------------------------------|
+| Operating voltage                | 3.3~5.5 V                                                            |
+| Compatible board directly        | Arduino Uno/Seeeduino                                                |
+| Current                          | 25~400mA                                                             |
+| Transmit power                   | 0-10 dBm                                                             |
+| Frequency                        | 2402~2480 MHz                                                        |
+| Channel                          | 0~13                                                                 |
+| Network rate                     | 1-11 Mbps for 802.11b/6-54Mbps for 802.11g                           |
+| Dimension                        | 60X56X19 mm                                                          |
+| Net Weight                       | 24±1 g                                                               |
+| Secure WiFi authentication       | WEP-128, WPA-PSK (TKIP), WPA2-PSK (AES)                              |
+| Built-in networking applications | DHCP client, DNS client, ARP, ICMP ping, FTP, TELNET, HTTP, UDP, TCP |
+| Certification                    | RN171: FCC, CE                                                      |
+
+Hardware Overview
+-----------------
+
+The WiFi shield is compatible with any Arduino/Seeeduino development board as it only requires two digital pins of your choice between D0-D7 for UART/serial communication. To install, simply stack the shield on the Arduino/Seeeduino board.
+
+
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi_shield_v2_breakout.png)
+
+1.  **Serial Peripheral Interface (SPI) Connections (MOSI, SCK, MISO):** These pins are not connected to any of the Arduino's pins, they are independent and the logic level output/input of them is 3.3V. They can be used to communicate with the Arduino via SPI but a 3.3V logic converter between these pins and the Arduino's will be needed. The data rate in SPI mode can reach up to 2Mbps.
+
+    **RES_Wifi:** The Wifi shield has an on-board "Rest Button" for the RN-171 module, you may also reset the RN-171 via software by sending the reset command. Additionally, if you would like to connect this pin to the Arduino's digital 6 pin, simply solder the pad labeled "P5" on the shield.
+
+2.  **RN171:** A super low power consumption wireless module with TCP/IP stack built in.
+3.  **Antenna:** I.PEX connector.
+4.  **RN171 breakout section:** The RN171 module has its own analog input and GPIO pins, which the shield provides access to via this breakout section. The GPIO pins (IO3, IO7, IO8, and IO9) are 3.3V tolerant while the analog input pins (S_0 and S_1) can read 0-400mV (Do not exceed 1.2V). The RN171 can be configured to use these pins by software or they may connected to other pins to use other RN171 functions such as adhoc mode. The voltage of VCC is dependent on the supply power of the WiFi shield.
+5.  **UART/Serial Select area:** Two jumper rows to let you select which RX and TX pins you want to use to communicate with the Arduino.
+6.  **Grove connectors:** Analog I2C Grove (if using Arduino UNO or Seeeduino) for pins A4&A5 and Digital Serial Grove for D8&D9. The voltage VCC is dependent on the power supply of the board.
+
+### Pins Used / Shield Compatibility
+
+The WiFi shield uses any two digital pins of your choice between D0 and D7 to communicate with the RN171 WiFi module, however keep in mind that D0 and D1 are used by the Arduino for programming and serial communication purposes and using them might interfere with these two functions.
+
+In the example codes in this page we use D2 and D3 as RX and TX for the shield. In this case, the jumper hats should be connected as shown below:
+
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi_shield_v1.1_pinout.png)
+*D2 selected for WIFI_TX, D3 selected for WIFI_RX*
+
+### RN171 WiFi Module
+
+---
+name: Wifi Shield V2.0
+category: Shield
+bzurl: https://seeedstudio.com/Wifi-Shield-V2.0-p-2505.html
+oldwikiname: Wifi_Shield_V2.0
+prodimagename: Wifi_Shield_v2.jpg
+bzprodimageurl: http://statics3.seeedstudio.com/images/product/113030008 1.jpg
+surveyurl: https://www.research.net/r/Wifi_Shield_V2_0
+sku: 113030008
+---
+
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi_Shield_v2.jpg)
+
+This WiFi shield features the RN171 TCP/IP module to allow your Arduino/Seeeduino to connect with up to 802.11b/g wireless networks.
+
+The shield's default communication protocol with the Arduino is UART/Serial, and you may select which digital pins (D0 to D7) to use for RX and TX with two jumper rows we've incorporated. The shield also has two on-board Grove connectors for I2C and Serial to allow the shield to be used with any of our Grove devices.
+
+An on-board antenna allows the shield to cover a wider range and transmit stronger signals. The RN171 module supports TCP, UDP, FTP, and HTTP communication protocols to meet the needs of most wireless and Internet of Things (IoT) network projects e.g. smart home networks, robots control, personal weather stations.
+
+The shield is very well documented with our examples below and its [user manual](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/res/WiFly-RN-UM.pdf).
+
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Wifi-Shield-V20-p-2505.html)
+
+Version Tracker
+---------------
+
+| Parameter          | Wifi Shield V1.0                                                        | Wifi Shield V1.1(v1.2)                                                 | Wifi Shield V2.0                                                                          |
+|--------------------|-------------------------------------------------------------------------|------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| Voltage            | +3.5V~+5V                                                               | +3.5V~+5V                                                              | +3.5V~+5V                                                                                 |
+| Standard Shield    | Yes                                                                     | Yes                                                                    | Yes                                                                                       |
+| Communication Mode | Serial port                                                             | Serial port                                                            | Serial port                                                                               |
+| Standard Shield    | No                                                                      | Yes                                                                    | Yes                                                                                       |
+| Antenna Type       | mast antenna                                                            | PCB antenna                                                            | <font color="Red">onboard antenna</font>                                                  |
+| Library File       | [Wifi Shield Library V1.0](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/res/WifiShield.zip) | [New Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield) | [New Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield) *the same as v1.2* |
+
+Specifications
+--------------
+
+| Parameter                        | Value                                                                |
+|----------------------------------|----------------------------------------------------------------------|
+| Operating voltage                | 3.3~5.5 V                                                            |
+| Compatible board directly        | Arduino Uno/Seeeduino                                                |
+| Current                          | 25~400mA                                                             |
+| Transmit power                   | 0-10 dBm                                                             |
+| Frequency                        | 2402~2480 MHz                                                        |
+| Channel                          | 0~13                                                                 |
+| Network rate                     | 1-11 Mbps for 802.11b/6-54Mbps for 802.11g                           |
+| Dimension                        | 60X56X19 mm                                                          |
+| Net Weight                       | 24±1 g                                                               |
+| Secure WiFi authentication       | WEP-128, WPA-PSK (TKIP), WPA2-PSK (AES)                              |
+| Built-in networking applications | DHCP client, DNS client, ARP, ICMP ping, FTP, TELNET, HTTP, UDP, TCP |
+| Certification                    | RN171: FCC, CE                                                      |
+
+Hardware Overview
+-----------------
+
+The WiFi shield is compatible with any Arduino/Seeeduino development board as it only requires two digital pins of your choice between D0-D7 for UART/serial communication. To install, simply stack the shield on the Arduino/Seeeduino board.
+
+
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi_shield_v2_breakout.png)
+
+1.  **Serial Peripheral Interface (SPI) Connections (MOSI, SCK, MISO):** These pins are not connected to any of the Arduino's pins, they are independent and the logic level output/input of them is 3.3V. They can be used to communicate with the Arduino via SPI but a 3.3V logic converter between these pins and the Arduino's will be needed. The data rate in SPI mode can reach up to 2Mbps.
+
+    **RES_Wifi:** The Wifi shield has an on-board "Rest Button" for the RN-171 module, you may also reset the RN-171 via software by sending the reset command. Additionally, if you would like to connect this pin to the Arduino's digital 6 pin, simply solder the pad labeled "P5" on the shield.
+
+2.  **RN171:** A super low power consumption wireless module with TCP/IP stack built in.
+3.  **Antenna:** I.PEX connector.
+4.  **RN171 breakout section:** The RN171 module has its own analog input and GPIO pins, which the shield provides access to via this breakout section. The GPIO pins (IO3, IO7, IO8, and IO9) are 3.3V tolerant while the analog input pins (S_0 and S_1) can read 0-400mV (Do not exceed 1.2V). The RN171 can be configured to use these pins by software or they may connected to other pins to use other RN171 functions such as adhoc mode. The voltage of VCC is dependent on the supply power of the WiFi shield.
+5.  **UART/Serial Select area:** Two jumper rows to let you select which RX and TX pins you want to use to communicate with the Arduino.
+6.  **Grove connectors:** Analog I2C Grove (if using Arduino UNO or Seeeduino) for pins A4&A5 and Digital Serial Grove for D8&D9. The voltage VCC is dependent on the power supply of the board.
+
+### Pins Used / Shield Compatibility
+
+The WiFi shield uses any two digital pins of your choice between D0 and D7 to communicate with the RN171 WiFi module, however keep in mind that D0 and D1 are used by the Arduino for programming and serial communication purposes and using them might interfere with these two functions.
+
+In the example codes in this page we use D2 and D3 as RX and TX for the shield. In this case, the jumper hats should be connected as shown below:
+
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi_shield_v1.1_pinout.png)
+*D2 selected for WIFI_TX, D3 selected for WIFI_RX*
+
+### RN171 WiFi Module
+
+---
+name: Wifi Shield V2.0
+category: Shield
+bzurl: https://seeedstudio.com/Wifi-Shield-V2.0-p-2505.html
+oldwikiname: Wifi_Shield_V2.0
+prodimagename: Wifi_Shield_v2.jpg
+bzprodimageurl: http://statics3.seeedstudio.com/images/product/113030008 1.jpg
+surveyurl: https://www.research.net/r/Wifi_Shield_V2_0
+sku: 113030008
+---
+
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi_Shield_v2.jpg)
+
+This WiFi shield features the RN171 TCP/IP module to allow your Arduino/Seeeduino to connect with up to 802.11b/g wireless networks.
+
+The shield's default communication protocol with the Arduino is UART/Serial, and you may select which digital pins (D0 to D7) to use for RX and TX with two jumper rows we've incorporated. The shield also has two on-board Grove connectors for I2C and Serial to allow the shield to be used with any of our Grove devices.
+
+An on-board antenna allows the shield to cover a wider range and transmit stronger signals. The RN171 module supports TCP, UDP, FTP, and HTTP communication protocols to meet the needs of most wireless and Internet of Things (IoT) network projects e.g. smart home networks, robots control, personal weather stations.
+
+The shield is very well documented with our examples below and its [user manual](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/res/WiFly-RN-UM.pdf).
+
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Wifi-Shield-V20-p-2505.html)
+
+Version Tracker
+---------------
+
+| Parameter          | Wifi Shield V1.0                                                        | Wifi Shield V1.1(v1.2)                                                 | Wifi Shield V2.0                                                                          |
+|--------------------|-------------------------------------------------------------------------|------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| Voltage            | +3.5V~+5V                                                               | +3.5V~+5V                                                              | +3.5V~+5V                                                                                 |
+| Standard Shield    | Yes                                                                     | Yes                                                                    | Yes                                                                                       |
+| Communication Mode | Serial port                                                             | Serial port                                                            | Serial port                                                                               |
+| Standard Shield    | No                                                                      | Yes                                                                    | Yes                                                                                       |
+| Antenna Type       | mast antenna                                                            | PCB antenna                                                            | <font color="Red">onboard antenna</font>                                                  |
+| Library File       | [Wifi Shield Library V1.0](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/res/WifiShield.zip) | [New Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield) | [New Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield) *the same as v1.2* |
+
+Specifications
+--------------
+
+| Parameter                        | Value                                                                |
+|----------------------------------|----------------------------------------------------------------------|
+| Operating voltage                | 3.3~5.5 V                                                            |
+| Compatible board directly        | Arduino Uno/Seeeduino                                                |
+| Current                          | 25~400mA                                                             |
+| Transmit power                   | 0-10 dBm                                                             |
+| Frequency                        | 2402~2480 MHz                                                        |
+| Channel                          | 0~13                                                                 |
+| Network rate                     | 1-11 Mbps for 802.11b/6-54Mbps for 802.11g                           |
+| Dimension                        | 60X56X19 mm                                                          |
+| Net Weight                       | 24±1 g                                                               |
+| Secure WiFi authentication       | WEP-128, WPA-PSK (TKIP), WPA2-PSK (AES)                              |
+| Built-in networking applications | DHCP client, DNS client, ARP, ICMP ping, FTP, TELNET, HTTP, UDP, TCP |
+| Certification                    | RN171: FCC, CE                                                      |
+
+Hardware Overview
+-----------------
+
+The WiFi shield is compatible with any Arduino/Seeeduino development board as it only requires two digital pins of your choice between D0-D7 for UART/serial communication. To install, simply stack the shield on the Arduino/Seeeduino board.
+
+
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi_shield_v2_breakout.png)
+
+1.  **Serial Peripheral Interface (SPI) Connections (MOSI, SCK, MISO):** These pins are not connected to any of the Arduino's pins, they are independent and the logic level output/input of them is 3.3V. They can be used to communicate with the Arduino via SPI but a 3.3V logic converter between these pins and the Arduino's will be needed. The data rate in SPI mode can reach up to 2Mbps.
+
+    **RES_Wifi:** The Wifi shield has an on-board "Rest Button" for the RN-171 module, you may also reset the RN-171 via software by sending the reset command. Additionally, if you would like to connect this pin to the Arduino's digital 6 pin, simply solder the pad labeled "P5" on the shield.
+
+2.  **RN171:** A super low power consumption wireless module with TCP/IP stack built in.
+3.  **Antenna:** I.PEX connector.
+4.  **RN171 breakout section:** The RN171 module has its own analog input and GPIO pins, which the shield provides access to via this breakout section. The GPIO pins (IO3, IO7, IO8, and IO9) are 3.3V tolerant while the analog input pins (S_0 and S_1) can read 0-400mV (Do not exceed 1.2V). The RN171 can be configured to use these pins by software or they may connected to other pins to use other RN171 functions such as adhoc mode. The voltage of VCC is dependent on the supply power of the WiFi shield.
+5.  **UART/Serial Select area:** Two jumper rows to let you select which RX and TX pins you want to use to communicate with the Arduino.
+6.  **Grove connectors:** Analog I2C Grove (if using Arduino UNO or Seeeduino) for pins A4&A5 and Digital Serial Grove for D8&D9. The voltage VCC is dependent on the power supply of the board.
+
+### Pins Used / Shield Compatibility
+
+The WiFi shield uses any two digital pins of your choice between D0 and D7 to communicate with the RN171 WiFi module, however keep in mind that D0 and D1 are used by the Arduino for programming and serial communication purposes and using them might interfere with these two functions.
+
+In the example codes in this page we use D2 and D3 as RX and TX for the shield. In this case, the jumper hats should be connected as shown below:
+
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi_shield_v1.1_pinout.png)
+*D2 selected for WIFI_TX, D3 selected for WIFI_RX*
+
+### RN171 WiFi Module
+
+---
+name: Wifi Shield V2.0
+category: Shield
+bzurl: https://seeedstudio.com/Wifi-Shield-V2.0-p-2505.html
+oldwikiname: Wifi_Shield_V2.0
+prodimagename: Wifi_Shield_v2.jpg
+bzprodimageurl: http://statics3.seeedstudio.com/images/product/113030008 1.jpg
+surveyurl: https://www.research.net/r/Wifi_Shield_V2_0
+sku: 113030008
+---
+
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi_Shield_v2.jpg)
+
+This WiFi shield features the RN171 TCP/IP module to allow your Arduino/Seeeduino to connect with up to 802.11b/g wireless networks.
+
+The shield's default communication protocol with the Arduino is UART/Serial, and you may select which digital pins (D0 to D7) to use for RX and TX with two jumper rows we've incorporated. The shield also has two on-board Grove connectors for I2C and Serial to allow the shield to be used with any of our Grove devices.
+
+An on-board antenna allows the shield to cover a wider range and transmit stronger signals. The RN171 module supports TCP, UDP, FTP, and HTTP communication protocols to meet the needs of most wireless and Internet of Things (IoT) network projects e.g. smart home networks, robots control, personal weather stations.
+
+The shield is very well documented with our examples below and its [user manual](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/res/WiFly-RN-UM.pdf).
+
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Wifi-Shield-V20-p-2505.html)
+
+Version Tracker
+---------------
+
+| Parameter          | Wifi Shield V1.0                                                        | Wifi Shield V1.1(v1.2)                                                 | Wifi Shield V2.0                                                                          |
+|--------------------|-------------------------------------------------------------------------|------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| Voltage            | +3.5V~+5V                                                               | +3.5V~+5V                                                              | +3.5V~+5V                                                                                 |
+| Standard Shield    | Yes                                                                     | Yes                                                                    | Yes                                                                                       |
+| Communication Mode | Serial port                                                             | Serial port                                                            | Serial port                                                                               |
+| Standard Shield    | No                                                                      | Yes                                                                    | Yes                                                                                       |
+| Antenna Type       | mast antenna                                                            | PCB antenna                                                            | <font color="Red">onboard antenna</font>                                                  |
+| Library File       | [Wifi Shield Library V1.0](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/res/WifiShield.zip) | [New Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield) | [New Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield) *the same as v1.2* |
+
+Specifications
+--------------
+
+| Parameter                        | Value                                                                |
+|----------------------------------|----------------------------------------------------------------------|
+| Operating voltage                | 3.3~5.5 V                                                            |
+| Compatible board directly        | Arduino Uno/Seeeduino                                                |
+| Current                          | 25~400mA                                                             |
+| Transmit power                   | 0-10 dBm                                                             |
+| Frequency                        | 2402~2480 MHz                                                        |
+| Channel                          | 0~13                                                                 |
+| Network rate                     | 1-11 Mbps for 802.11b/6-54Mbps for 802.11g                           |
+| Dimension                        | 60X56X19 mm                                                          |
+| Net Weight                       | 24±1 g                                                               |
+| Secure WiFi authentication       | WEP-128, WPA-PSK (TKIP), WPA2-PSK (AES)                              |
+| Built-in networking applications | DHCP client, DNS client, ARP, ICMP ping, FTP, TELNET, HTTP, UDP, TCP |
+| Certification                    | RN171: FCC, CE                                                      |
+
+Hardware Overview
+-----------------
+
+The WiFi shield is compatible with any Arduino/Seeeduino development board as it only requires two digital pins of your choice between D0-D7 for UART/serial communication. To install, simply stack the shield on the Arduino/Seeeduino board.
+
+
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi_shield_v2_breakout.png)
+
+1.  **Serial Peripheral Interface (SPI) Connections (MOSI, SCK, MISO):** These pins are not connected to any of the Arduino's pins, they are independent and the logic level output/input of them is 3.3V. They can be used to communicate with the Arduino via SPI but a 3.3V logic converter between these pins and the Arduino's will be needed. The data rate in SPI mode can reach up to 2Mbps.
+
+    **RES_Wifi:** The Wifi shield has an on-board "Rest Button" for the RN-171 module, you may also reset the RN-171 via software by sending the reset command. Additionally, if you would like to connect this pin to the Arduino's digital 6 pin, simply solder the pad labeled "P5" on the shield.
+
+2.  **RN171:** A super low power consumption wireless module with TCP/IP stack built in.
+3.  **Antenna:** I.PEX connector.
+4.  **RN171 breakout section:** The RN171 module has its own analog input and GPIO pins, which the shield provides access to via this breakout section. The GPIO pins (IO3, IO7, IO8, and IO9) are 3.3V tolerant while the analog input pins (S_0 and S_1) can read 0-400mV (Do not exceed 1.2V). The RN171 can be configured to use these pins by software or they may connected to other pins to use other RN171 functions such as adhoc mode. The voltage of VCC is dependent on the supply power of the WiFi shield.
+5.  **UART/Serial Select area:** Two jumper rows to let you select which RX and TX pins you want to use to communicate with the Arduino.
+6.  **Grove connectors:** Analog I2C Grove (if using Arduino UNO or Seeeduino) for pins A4&A5 and Digital Serial Grove for D8&D9. The voltage VCC is dependent on the power supply of the board.
+
+### Pins Used / Shield Compatibility
+
+The WiFi shield uses any two digital pins of your choice between D0 and D7 to communicate with the RN171 WiFi module, however keep in mind that D0 and D1 are used by the Arduino for programming and serial communication purposes and using them might interfere with these two functions.
+
+In the example codes in this page we use D2 and D3 as RX and TX for the shield. In this case, the jumper hats should be connected as shown below:
+
+![](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/img/Wifi_shield_v1.1_pinout.png)
+*D2 selected for WIFI_TX, D3 selected for WIFI_RX*
+
+### RN171 WiFi Module
+
+---
 name: Wio-Extension-RTC
 category: 
 bzurl: 

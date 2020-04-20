@@ -1,4 +1,850 @@
 ---
+name: Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121)
+category: Sensor
+bzurl: 
+oldwikiname: 
+prodimagename:
+surveyurl: 
+sku: 101020534
+tags:
+---
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/main.jpg)
+
+
+The **Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121)** is a multichannel proximity capacitive touch sensor. It's a 3-in-1 module with the following features: Capacitance Sensing, Touch Sensing, and Proximity Sensing.
+
+**Capacitance Sensing**: This module uses a constant DC current capacitance sensing scheme. It can measure capacitances ranging from 10 pF to over 2000 pF with a resolution up to 0.01 pF.
+
+**Touch Sensing**: Once the electrode capacitance data is acquired, the electrode touch/release status is determined comparing it to the capacitance baseline value.
+
+**Proximity Sensing**: One new feature of the MPR121 is the near proximity sensing system. This means that all of the system’s electrodes can be
+summed together to create a single large electrode.
+
+
+Based on Freescale MPR121, this sensor have 12 completely independent electrodes with build-in autoconfiguration. Thanks to I2C interface, you can detect all the 12 electrodes signals with only one Grove port, and the I2C address is hardware configurable, from 0X5B to 0X5D. This also makes it possible for multiple
+**Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121)** to be used together for channel expansions in a single system, you can build a touch system which contains max. 36 electrodes.
+
+This sensor is an upgrade version of [Grove - I2C Touch Sensor](https://www.seeedstudio.com/Grove-I2C-Touch-Sensor-p-840.html), to meet Matsuzawa.Takashi's(one of our customer) needs, we make the I^2^C address changeable, and even cheaper than the old version. So if you have any suggestions about all the Groves, please just shoot to us. We will always listen to your voice, it may make another upgrade, even a new grove. Please kindly write your suggestions in the [Grove 100+](https://www.seeedstudio.com/grove_100) page. 
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/CPq4VSAXBgI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V2-%28MPR121%29-p-3141.html
+" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+
+
+## Version Change
+
+|Item| Grove - 12 Key Capacitive I2C Touch Sensor V2 | Grove - I2C Touch Sensor |
+|---|---|---|
+|Main Chip|MPR121|MPR121|
+|I^2^C Address|changeable(0X5B ~ 0X5D)|unmodifiable(0X5A)|
+|Touch Sensor Feeler|x|√|
+|Input Interface|alligator interface|DIP 2Pin Female Header|
+|Cost Performance|High|Low|
+|Release Time|September 11-2018|October 31-2015|
+
+
+## Features
+
+- Internal 10-bit ADC
+- Integrated independent autocalibration for each electrode input
+- Completely independent electrodes with built-in autoconfiguration
+- I2C interface, with IRQ Interrupt output to advise electrode status changes
+- Hardware configurable I2C address
+- 12 electrodes/capacitance sensing inputs in which 8 are multifunctional for LED driving and GPIO
+- Autoconfiguration of charge current and charge time for each electrode input
+- Separate touch and release trip thresholds for each electrode, providing hysteresis and electrode independence
+
+
+## Specification
+
+|Item|Value|
+|---|---|
+|Operating voltage|3.3V / 5V|
+|Operating temperature|-40°C to +85°C|
+|Storage Temperature Range|-40°C to +125°C|
+|Capacitances ranging|10 pF to over 2000 pF|
+|Resolution|0.01 pF|
+|GPIO Source Current per Pin|12 mA|
+|GPIO Sink Current per Pin|1.2 mA|
+|Interface|I^2^C|
+|I^2^C addrss range|0x5B,0x5C,0x5D|
+|Default I^2^C address|0x5B|
+
+
+## Applications
+
+- PC Peripherals
+- MP3 Players
+- Remote Controls
+- Mobile Phones
+- Lighting Controls
+
+
+## Hardware Overview
+
+### Pin Map
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/pin_map.jpg)
+
+
+|Pin Number|Pin Name|Function|Pin multiplexing|
+|---|---|---|---|
+|8|CH0| Channel0, Electrode 0, input the capacitance valnue|-|
+|9|CH1| Channel1, Electrode 1, input the capacitance valnue|-|
+|10|CH2| Channel2, Electrode 2, input the capacitance valnue|-|
+|11|CH3| Channel3, Electrode 3, input the capacitance valnue|-|
+|12|CH4| Channel4, Electrode 4, input the capacitance valnue|GPIO or LED driver|
+|13|CH5| Channel5, Electrode 5, input the capacitance valnue|GPIO or LED driver|
+|14|CH6| Channel6, Electrode 6, input the capacitance valnue|GPIO or LED driver|
+|15|CH7| Channel7, Electrode 7, input the capacitance valnue|GPIO or LED driver|
+|16|CH8| Channel8, Electrode 8, input the capacitance valnue|GPIO or LED driver|
+|17|CH9| Channel9, Electrode 9, input the capacitance valnue|GPIO or LED driver|
+|18|CH10| Channel10, Electrode 10, input the capacitance valnue|GPIO or LED driver|
+|19|CH11| Channel11, Electrode 11, input the capacitance valnue|GPIO or LED driver|
+
+
+!!!Tip
+        For the CH0 ~ CH11, once the electrode capacitance data is acquired, the electrode touch/release status is determined comparing it to the capacitance baseline value. And you can set the baseline value for each channel separately. The Pin12 ~ Pin19 is multifunctional, which means you can configure them as GPIO or LED driver, for more detail, please refer to the freescale application note [AN3894](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/res/AN3894.pdf).
+
+
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/pin_map_back_1.jpg)
+
+
+!!!Danger
+        The central pad is connected to the address wire, you can change the I2C address by cutting the wire and re-welding it. For the safety of you and others, please be careful with knife or welding gun you may use.
+
+
+
+### Schemaitc
+
+**Power**
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/schematic.jpg)
+
+The operation voltage of Freescale MPR121 is 1.71V to 3.6V, however, the voltage of Arduino is 3.3V or 5V. In order to make it compaticable with 5V system, we use a voltage conversion chip to provide 3.3V for the Freescale MPR121. 
+
+**Bi-directional level shifter circuit**
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/schematic_1.jpg)
+
+This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of this sensor use 3.3V, if the I<sup>2</sup>C bus of the Arduino use 5V, this circuit will be needed. In the schematic above, **Q1** and **Q2** are N-Channel MOSFET [2N7002A](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/AN10441.pdf)
+
+
+
+
+## Platforms Supported
+
+
+| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
+---
+name: Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121)
+category: Sensor
+bzurl: 
+oldwikiname: 
+prodimagename:
+surveyurl: 
+sku: 101020534
+tags:
+---
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/main.jpg)
+
+
+The **Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121)** is a multichannel proximity capacitive touch sensor. It's a 3-in-1 module with the following features: Capacitance Sensing, Touch Sensing, and Proximity Sensing.
+
+**Capacitance Sensing**: This module uses a constant DC current capacitance sensing scheme. It can measure capacitances ranging from 10 pF to over 2000 pF with a resolution up to 0.01 pF.
+
+**Touch Sensing**: Once the electrode capacitance data is acquired, the electrode touch/release status is determined comparing it to the capacitance baseline value.
+
+**Proximity Sensing**: One new feature of the MPR121 is the near proximity sensing system. This means that all of the system’s electrodes can be
+summed together to create a single large electrode.
+
+
+Based on Freescale MPR121, this sensor have 12 completely independent electrodes with build-in autoconfiguration. Thanks to I2C interface, you can detect all the 12 electrodes signals with only one Grove port, and the I2C address is hardware configurable, from 0X5B to 0X5D. This also makes it possible for multiple
+**Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121)** to be used together for channel expansions in a single system, you can build a touch system which contains max. 36 electrodes.
+
+This sensor is an upgrade version of [Grove - I2C Touch Sensor](https://www.seeedstudio.com/Grove-I2C-Touch-Sensor-p-840.html), to meet Matsuzawa.Takashi's(one of our customer) needs, we make the I^2^C address changeable, and even cheaper than the old version. So if you have any suggestions about all the Groves, please just shoot to us. We will always listen to your voice, it may make another upgrade, even a new grove. Please kindly write your suggestions in the [Grove 100+](https://www.seeedstudio.com/grove_100) page. 
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/CPq4VSAXBgI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V2-%28MPR121%29-p-3141.html
+" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+
+
+## Version Change
+
+|Item| Grove - 12 Key Capacitive I2C Touch Sensor V2 | Grove - I2C Touch Sensor |
+|---|---|---|
+|Main Chip|MPR121|MPR121|
+|I^2^C Address|changeable(0X5B ~ 0X5D)|unmodifiable(0X5A)|
+|Touch Sensor Feeler|x|√|
+|Input Interface|alligator interface|DIP 2Pin Female Header|
+|Cost Performance|High|Low|
+|Release Time|September 11-2018|October 31-2015|
+
+
+## Features
+
+- Internal 10-bit ADC
+- Integrated independent autocalibration for each electrode input
+- Completely independent electrodes with built-in autoconfiguration
+- I2C interface, with IRQ Interrupt output to advise electrode status changes
+- Hardware configurable I2C address
+- 12 electrodes/capacitance sensing inputs in which 8 are multifunctional for LED driving and GPIO
+- Autoconfiguration of charge current and charge time for each electrode input
+- Separate touch and release trip thresholds for each electrode, providing hysteresis and electrode independence
+
+
+## Specification
+
+|Item|Value|
+|---|---|
+|Operating voltage|3.3V / 5V|
+|Operating temperature|-40°C to +85°C|
+|Storage Temperature Range|-40°C to +125°C|
+|Capacitances ranging|10 pF to over 2000 pF|
+|Resolution|0.01 pF|
+|GPIO Source Current per Pin|12 mA|
+|GPIO Sink Current per Pin|1.2 mA|
+|Interface|I^2^C|
+|I^2^C addrss range|0x5B,0x5C,0x5D|
+|Default I^2^C address|0x5B|
+
+
+## Applications
+
+- PC Peripherals
+- MP3 Players
+- Remote Controls
+- Mobile Phones
+- Lighting Controls
+
+
+## Hardware Overview
+
+### Pin Map
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/pin_map.jpg)
+
+
+|Pin Number|Pin Name|Function|Pin multiplexing|
+|---|---|---|---|
+|8|CH0| Channel0, Electrode 0, input the capacitance valnue|-|
+|9|CH1| Channel1, Electrode 1, input the capacitance valnue|-|
+|10|CH2| Channel2, Electrode 2, input the capacitance valnue|-|
+|11|CH3| Channel3, Electrode 3, input the capacitance valnue|-|
+|12|CH4| Channel4, Electrode 4, input the capacitance valnue|GPIO or LED driver|
+|13|CH5| Channel5, Electrode 5, input the capacitance valnue|GPIO or LED driver|
+|14|CH6| Channel6, Electrode 6, input the capacitance valnue|GPIO or LED driver|
+|15|CH7| Channel7, Electrode 7, input the capacitance valnue|GPIO or LED driver|
+|16|CH8| Channel8, Electrode 8, input the capacitance valnue|GPIO or LED driver|
+|17|CH9| Channel9, Electrode 9, input the capacitance valnue|GPIO or LED driver|
+|18|CH10| Channel10, Electrode 10, input the capacitance valnue|GPIO or LED driver|
+|19|CH11| Channel11, Electrode 11, input the capacitance valnue|GPIO or LED driver|
+
+
+!!!Tip
+        For the CH0 ~ CH11, once the electrode capacitance data is acquired, the electrode touch/release status is determined comparing it to the capacitance baseline value. And you can set the baseline value for each channel separately. The Pin12 ~ Pin19 is multifunctional, which means you can configure them as GPIO or LED driver, for more detail, please refer to the freescale application note [AN3894](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/res/AN3894.pdf).
+
+
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/pin_map_back_1.jpg)
+
+
+!!!Danger
+        The central pad is connected to the address wire, you can change the I2C address by cutting the wire and re-welding it. For the safety of you and others, please be careful with knife or welding gun you may use.
+
+
+
+### Schemaitc
+
+**Power**
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/schematic.jpg)
+
+The operation voltage of Freescale MPR121 is 1.71V to 3.6V, however, the voltage of Arduino is 3.3V or 5V. In order to make it compaticable with 5V system, we use a voltage conversion chip to provide 3.3V for the Freescale MPR121. 
+
+**Bi-directional level shifter circuit**
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/schematic_1.jpg)
+
+This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of this sensor use 3.3V, if the I<sup>2</sup>C bus of the Arduino use 5V, this circuit will be needed. In the schematic above, **Q1** and **Q2** are N-Channel MOSFET [2N7002A](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/AN10441.pdf)
+
+
+
+
+## Platforms Supported
+
+
+| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
+---
+name: Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121)
+category: Sensor
+bzurl: 
+oldwikiname: 
+prodimagename:
+surveyurl: 
+sku: 101020534
+tags:
+---
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/main.jpg)
+
+
+The **Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121)** is a multichannel proximity capacitive touch sensor. It's a 3-in-1 module with the following features: Capacitance Sensing, Touch Sensing, and Proximity Sensing.
+
+**Capacitance Sensing**: This module uses a constant DC current capacitance sensing scheme. It can measure capacitances ranging from 10 pF to over 2000 pF with a resolution up to 0.01 pF.
+
+**Touch Sensing**: Once the electrode capacitance data is acquired, the electrode touch/release status is determined comparing it to the capacitance baseline value.
+
+**Proximity Sensing**: One new feature of the MPR121 is the near proximity sensing system. This means that all of the system’s electrodes can be
+summed together to create a single large electrode.
+
+
+Based on Freescale MPR121, this sensor have 12 completely independent electrodes with build-in autoconfiguration. Thanks to I2C interface, you can detect all the 12 electrodes signals with only one Grove port, and the I2C address is hardware configurable, from 0X5B to 0X5D. This also makes it possible for multiple
+**Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121)** to be used together for channel expansions in a single system, you can build a touch system which contains max. 36 electrodes.
+
+This sensor is an upgrade version of [Grove - I2C Touch Sensor](https://www.seeedstudio.com/Grove-I2C-Touch-Sensor-p-840.html), to meet Matsuzawa.Takashi's(one of our customer) needs, we make the I^2^C address changeable, and even cheaper than the old version. So if you have any suggestions about all the Groves, please just shoot to us. We will always listen to your voice, it may make another upgrade, even a new grove. Please kindly write your suggestions in the [Grove 100+](https://www.seeedstudio.com/grove_100) page. 
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/CPq4VSAXBgI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V2-%28MPR121%29-p-3141.html
+" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+
+
+## Version Change
+
+|Item| Grove - 12 Key Capacitive I2C Touch Sensor V2 | Grove - I2C Touch Sensor |
+|---|---|---|
+|Main Chip|MPR121|MPR121|
+|I^2^C Address|changeable(0X5B ~ 0X5D)|unmodifiable(0X5A)|
+|Touch Sensor Feeler|x|√|
+|Input Interface|alligator interface|DIP 2Pin Female Header|
+|Cost Performance|High|Low|
+|Release Time|September 11-2018|October 31-2015|
+
+
+## Features
+
+- Internal 10-bit ADC
+- Integrated independent autocalibration for each electrode input
+- Completely independent electrodes with built-in autoconfiguration
+- I2C interface, with IRQ Interrupt output to advise electrode status changes
+- Hardware configurable I2C address
+- 12 electrodes/capacitance sensing inputs in which 8 are multifunctional for LED driving and GPIO
+- Autoconfiguration of charge current and charge time for each electrode input
+- Separate touch and release trip thresholds for each electrode, providing hysteresis and electrode independence
+
+
+## Specification
+
+|Item|Value|
+|---|---|
+|Operating voltage|3.3V / 5V|
+|Operating temperature|-40°C to +85°C|
+|Storage Temperature Range|-40°C to +125°C|
+|Capacitances ranging|10 pF to over 2000 pF|
+|Resolution|0.01 pF|
+|GPIO Source Current per Pin|12 mA|
+|GPIO Sink Current per Pin|1.2 mA|
+|Interface|I^2^C|
+|I^2^C addrss range|0x5B,0x5C,0x5D|
+|Default I^2^C address|0x5B|
+
+
+## Applications
+
+- PC Peripherals
+- MP3 Players
+- Remote Controls
+- Mobile Phones
+- Lighting Controls
+
+
+## Hardware Overview
+
+### Pin Map
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/pin_map.jpg)
+
+
+|Pin Number|Pin Name|Function|Pin multiplexing|
+|---|---|---|---|
+|8|CH0| Channel0, Electrode 0, input the capacitance valnue|-|
+|9|CH1| Channel1, Electrode 1, input the capacitance valnue|-|
+|10|CH2| Channel2, Electrode 2, input the capacitance valnue|-|
+|11|CH3| Channel3, Electrode 3, input the capacitance valnue|-|
+|12|CH4| Channel4, Electrode 4, input the capacitance valnue|GPIO or LED driver|
+|13|CH5| Channel5, Electrode 5, input the capacitance valnue|GPIO or LED driver|
+|14|CH6| Channel6, Electrode 6, input the capacitance valnue|GPIO or LED driver|
+|15|CH7| Channel7, Electrode 7, input the capacitance valnue|GPIO or LED driver|
+|16|CH8| Channel8, Electrode 8, input the capacitance valnue|GPIO or LED driver|
+|17|CH9| Channel9, Electrode 9, input the capacitance valnue|GPIO or LED driver|
+|18|CH10| Channel10, Electrode 10, input the capacitance valnue|GPIO or LED driver|
+|19|CH11| Channel11, Electrode 11, input the capacitance valnue|GPIO or LED driver|
+
+
+!!!Tip
+        For the CH0 ~ CH11, once the electrode capacitance data is acquired, the electrode touch/release status is determined comparing it to the capacitance baseline value. And you can set the baseline value for each channel separately. The Pin12 ~ Pin19 is multifunctional, which means you can configure them as GPIO or LED driver, for more detail, please refer to the freescale application note [AN3894](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/res/AN3894.pdf).
+
+
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/pin_map_back_1.jpg)
+
+
+!!!Danger
+        The central pad is connected to the address wire, you can change the I2C address by cutting the wire and re-welding it. For the safety of you and others, please be careful with knife or welding gun you may use.
+
+
+
+### Schemaitc
+
+**Power**
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/schematic.jpg)
+
+The operation voltage of Freescale MPR121 is 1.71V to 3.6V, however, the voltage of Arduino is 3.3V or 5V. In order to make it compaticable with 5V system, we use a voltage conversion chip to provide 3.3V for the Freescale MPR121. 
+
+**Bi-directional level shifter circuit**
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/schematic_1.jpg)
+
+This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of this sensor use 3.3V, if the I<sup>2</sup>C bus of the Arduino use 5V, this circuit will be needed. In the schematic above, **Q1** and **Q2** are N-Channel MOSFET [2N7002A](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/AN10441.pdf)
+
+
+
+
+## Platforms Supported
+
+
+| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
+---
+name: Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121)
+category: Sensor
+bzurl: 
+oldwikiname: 
+prodimagename:
+surveyurl: 
+sku: 101020534
+tags:
+---
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/main.jpg)
+
+
+The **Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121)** is a multichannel proximity capacitive touch sensor. It's a 3-in-1 module with the following features: Capacitance Sensing, Touch Sensing, and Proximity Sensing.
+
+**Capacitance Sensing**: This module uses a constant DC current capacitance sensing scheme. It can measure capacitances ranging from 10 pF to over 2000 pF with a resolution up to 0.01 pF.
+
+**Touch Sensing**: Once the electrode capacitance data is acquired, the electrode touch/release status is determined comparing it to the capacitance baseline value.
+
+**Proximity Sensing**: One new feature of the MPR121 is the near proximity sensing system. This means that all of the system’s electrodes can be
+summed together to create a single large electrode.
+
+
+Based on Freescale MPR121, this sensor have 12 completely independent electrodes with build-in autoconfiguration. Thanks to I2C interface, you can detect all the 12 electrodes signals with only one Grove port, and the I2C address is hardware configurable, from 0X5B to 0X5D. This also makes it possible for multiple
+**Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121)** to be used together for channel expansions in a single system, you can build a touch system which contains max. 36 electrodes.
+
+This sensor is an upgrade version of [Grove - I2C Touch Sensor](https://www.seeedstudio.com/Grove-I2C-Touch-Sensor-p-840.html), to meet Matsuzawa.Takashi's(one of our customer) needs, we make the I^2^C address changeable, and even cheaper than the old version. So if you have any suggestions about all the Groves, please just shoot to us. We will always listen to your voice, it may make another upgrade, even a new grove. Please kindly write your suggestions in the [Grove 100+](https://www.seeedstudio.com/grove_100) page. 
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/CPq4VSAXBgI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V2-%28MPR121%29-p-3141.html
+" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+
+
+## Version Change
+
+|Item| Grove - 12 Key Capacitive I2C Touch Sensor V2 | Grove - I2C Touch Sensor |
+|---|---|---|
+|Main Chip|MPR121|MPR121|
+|I^2^C Address|changeable(0X5B ~ 0X5D)|unmodifiable(0X5A)|
+|Touch Sensor Feeler|x|√|
+|Input Interface|alligator interface|DIP 2Pin Female Header|
+|Cost Performance|High|Low|
+|Release Time|September 11-2018|October 31-2015|
+
+
+## Features
+
+- Internal 10-bit ADC
+- Integrated independent autocalibration for each electrode input
+- Completely independent electrodes with built-in autoconfiguration
+- I2C interface, with IRQ Interrupt output to advise electrode status changes
+- Hardware configurable I2C address
+- 12 electrodes/capacitance sensing inputs in which 8 are multifunctional for LED driving and GPIO
+- Autoconfiguration of charge current and charge time for each electrode input
+- Separate touch and release trip thresholds for each electrode, providing hysteresis and electrode independence
+
+
+## Specification
+
+|Item|Value|
+|---|---|
+|Operating voltage|3.3V / 5V|
+|Operating temperature|-40°C to +85°C|
+|Storage Temperature Range|-40°C to +125°C|
+|Capacitances ranging|10 pF to over 2000 pF|
+|Resolution|0.01 pF|
+|GPIO Source Current per Pin|12 mA|
+|GPIO Sink Current per Pin|1.2 mA|
+|Interface|I^2^C|
+|I^2^C addrss range|0x5B,0x5C,0x5D|
+|Default I^2^C address|0x5B|
+
+
+## Applications
+
+- PC Peripherals
+- MP3 Players
+- Remote Controls
+- Mobile Phones
+- Lighting Controls
+
+
+## Hardware Overview
+
+### Pin Map
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/pin_map.jpg)
+
+
+|Pin Number|Pin Name|Function|Pin multiplexing|
+|---|---|---|---|
+|8|CH0| Channel0, Electrode 0, input the capacitance valnue|-|
+|9|CH1| Channel1, Electrode 1, input the capacitance valnue|-|
+|10|CH2| Channel2, Electrode 2, input the capacitance valnue|-|
+|11|CH3| Channel3, Electrode 3, input the capacitance valnue|-|
+|12|CH4| Channel4, Electrode 4, input the capacitance valnue|GPIO or LED driver|
+|13|CH5| Channel5, Electrode 5, input the capacitance valnue|GPIO or LED driver|
+|14|CH6| Channel6, Electrode 6, input the capacitance valnue|GPIO or LED driver|
+|15|CH7| Channel7, Electrode 7, input the capacitance valnue|GPIO or LED driver|
+|16|CH8| Channel8, Electrode 8, input the capacitance valnue|GPIO or LED driver|
+|17|CH9| Channel9, Electrode 9, input the capacitance valnue|GPIO or LED driver|
+|18|CH10| Channel10, Electrode 10, input the capacitance valnue|GPIO or LED driver|
+|19|CH11| Channel11, Electrode 11, input the capacitance valnue|GPIO or LED driver|
+
+
+!!!Tip
+        For the CH0 ~ CH11, once the electrode capacitance data is acquired, the electrode touch/release status is determined comparing it to the capacitance baseline value. And you can set the baseline value for each channel separately. The Pin12 ~ Pin19 is multifunctional, which means you can configure them as GPIO or LED driver, for more detail, please refer to the freescale application note [AN3894](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/res/AN3894.pdf).
+
+
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/pin_map_back_1.jpg)
+
+
+!!!Danger
+        The central pad is connected to the address wire, you can change the I2C address by cutting the wire and re-welding it. For the safety of you and others, please be careful with knife or welding gun you may use.
+
+
+
+### Schemaitc
+
+**Power**
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/schematic.jpg)
+
+The operation voltage of Freescale MPR121 is 1.71V to 3.6V, however, the voltage of Arduino is 3.3V or 5V. In order to make it compaticable with 5V system, we use a voltage conversion chip to provide 3.3V for the Freescale MPR121. 
+
+**Bi-directional level shifter circuit**
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/schematic_1.jpg)
+
+This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of this sensor use 3.3V, if the I<sup>2</sup>C bus of the Arduino use 5V, this circuit will be needed. In the schematic above, **Q1** and **Q2** are N-Channel MOSFET [2N7002A](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/AN10441.pdf)
+
+
+
+
+## Platforms Supported
+
+
+| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
+---
+name: Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121)
+category: Sensor
+bzurl: 
+oldwikiname: 
+prodimagename:
+surveyurl: 
+sku: 101020534
+tags:
+---
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/main.jpg)
+
+
+The **Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121)** is a multichannel proximity capacitive touch sensor. It's a 3-in-1 module with the following features: Capacitance Sensing, Touch Sensing, and Proximity Sensing.
+
+**Capacitance Sensing**: This module uses a constant DC current capacitance sensing scheme. It can measure capacitances ranging from 10 pF to over 2000 pF with a resolution up to 0.01 pF.
+
+**Touch Sensing**: Once the electrode capacitance data is acquired, the electrode touch/release status is determined comparing it to the capacitance baseline value.
+
+**Proximity Sensing**: One new feature of the MPR121 is the near proximity sensing system. This means that all of the system’s electrodes can be
+summed together to create a single large electrode.
+
+
+Based on Freescale MPR121, this sensor have 12 completely independent electrodes with build-in autoconfiguration. Thanks to I2C interface, you can detect all the 12 electrodes signals with only one Grove port, and the I2C address is hardware configurable, from 0X5B to 0X5D. This also makes it possible for multiple
+**Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121)** to be used together for channel expansions in a single system, you can build a touch system which contains max. 36 electrodes.
+
+This sensor is an upgrade version of [Grove - I2C Touch Sensor](https://www.seeedstudio.com/Grove-I2C-Touch-Sensor-p-840.html), to meet Matsuzawa.Takashi's(one of our customer) needs, we make the I^2^C address changeable, and even cheaper than the old version. So if you have any suggestions about all the Groves, please just shoot to us. We will always listen to your voice, it may make another upgrade, even a new grove. Please kindly write your suggestions in the [Grove 100+](https://www.seeedstudio.com/grove_100) page. 
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/CPq4VSAXBgI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V2-%28MPR121%29-p-3141.html
+" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+
+
+## Version Change
+
+|Item| Grove - 12 Key Capacitive I2C Touch Sensor V2 | Grove - I2C Touch Sensor |
+|---|---|---|
+|Main Chip|MPR121|MPR121|
+|I^2^C Address|changeable(0X5B ~ 0X5D)|unmodifiable(0X5A)|
+|Touch Sensor Feeler|x|√|
+|Input Interface|alligator interface|DIP 2Pin Female Header|
+|Cost Performance|High|Low|
+|Release Time|September 11-2018|October 31-2015|
+
+
+## Features
+
+- Internal 10-bit ADC
+- Integrated independent autocalibration for each electrode input
+- Completely independent electrodes with built-in autoconfiguration
+- I2C interface, with IRQ Interrupt output to advise electrode status changes
+- Hardware configurable I2C address
+- 12 electrodes/capacitance sensing inputs in which 8 are multifunctional for LED driving and GPIO
+- Autoconfiguration of charge current and charge time for each electrode input
+- Separate touch and release trip thresholds for each electrode, providing hysteresis and electrode independence
+
+
+## Specification
+
+|Item|Value|
+|---|---|
+|Operating voltage|3.3V / 5V|
+|Operating temperature|-40°C to +85°C|
+|Storage Temperature Range|-40°C to +125°C|
+|Capacitances ranging|10 pF to over 2000 pF|
+|Resolution|0.01 pF|
+|GPIO Source Current per Pin|12 mA|
+|GPIO Sink Current per Pin|1.2 mA|
+|Interface|I^2^C|
+|I^2^C addrss range|0x5B,0x5C,0x5D|
+|Default I^2^C address|0x5B|
+
+
+## Applications
+
+- PC Peripherals
+- MP3 Players
+- Remote Controls
+- Mobile Phones
+- Lighting Controls
+
+
+## Hardware Overview
+
+### Pin Map
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/pin_map.jpg)
+
+
+|Pin Number|Pin Name|Function|Pin multiplexing|
+|---|---|---|---|
+|8|CH0| Channel0, Electrode 0, input the capacitance valnue|-|
+|9|CH1| Channel1, Electrode 1, input the capacitance valnue|-|
+|10|CH2| Channel2, Electrode 2, input the capacitance valnue|-|
+|11|CH3| Channel3, Electrode 3, input the capacitance valnue|-|
+|12|CH4| Channel4, Electrode 4, input the capacitance valnue|GPIO or LED driver|
+|13|CH5| Channel5, Electrode 5, input the capacitance valnue|GPIO or LED driver|
+|14|CH6| Channel6, Electrode 6, input the capacitance valnue|GPIO or LED driver|
+|15|CH7| Channel7, Electrode 7, input the capacitance valnue|GPIO or LED driver|
+|16|CH8| Channel8, Electrode 8, input the capacitance valnue|GPIO or LED driver|
+|17|CH9| Channel9, Electrode 9, input the capacitance valnue|GPIO or LED driver|
+|18|CH10| Channel10, Electrode 10, input the capacitance valnue|GPIO or LED driver|
+|19|CH11| Channel11, Electrode 11, input the capacitance valnue|GPIO or LED driver|
+
+
+!!!Tip
+        For the CH0 ~ CH11, once the electrode capacitance data is acquired, the electrode touch/release status is determined comparing it to the capacitance baseline value. And you can set the baseline value for each channel separately. The Pin12 ~ Pin19 is multifunctional, which means you can configure them as GPIO or LED driver, for more detail, please refer to the freescale application note [AN3894](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/res/AN3894.pdf).
+
+
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/pin_map_back_1.jpg)
+
+
+!!!Danger
+        The central pad is connected to the address wire, you can change the I2C address by cutting the wire and re-welding it. For the safety of you and others, please be careful with knife or welding gun you may use.
+
+
+
+### Schemaitc
+
+**Power**
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/schematic.jpg)
+
+The operation voltage of Freescale MPR121 is 1.71V to 3.6V, however, the voltage of Arduino is 3.3V or 5V. In order to make it compaticable with 5V system, we use a voltage conversion chip to provide 3.3V for the Freescale MPR121. 
+
+**Bi-directional level shifter circuit**
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/schematic_1.jpg)
+
+This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of this sensor use 3.3V, if the I<sup>2</sup>C bus of the Arduino use 5V, this circuit will be needed. In the schematic above, **Q1** and **Q2** are N-Channel MOSFET [2N7002A](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/AN10441.pdf)
+
+
+
+
+## Platforms Supported
+
+
+| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
+---
+name: Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121)
+category: Sensor
+bzurl: 
+oldwikiname: 
+prodimagename:
+surveyurl: 
+sku: 101020534
+tags:
+---
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/main.jpg)
+
+
+The **Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121)** is a multichannel proximity capacitive touch sensor. It's a 3-in-1 module with the following features: Capacitance Sensing, Touch Sensing, and Proximity Sensing.
+
+**Capacitance Sensing**: This module uses a constant DC current capacitance sensing scheme. It can measure capacitances ranging from 10 pF to over 2000 pF with a resolution up to 0.01 pF.
+
+**Touch Sensing**: Once the electrode capacitance data is acquired, the electrode touch/release status is determined comparing it to the capacitance baseline value.
+
+**Proximity Sensing**: One new feature of the MPR121 is the near proximity sensing system. This means that all of the system’s electrodes can be
+summed together to create a single large electrode.
+
+
+Based on Freescale MPR121, this sensor have 12 completely independent electrodes with build-in autoconfiguration. Thanks to I2C interface, you can detect all the 12 electrodes signals with only one Grove port, and the I2C address is hardware configurable, from 0X5B to 0X5D. This also makes it possible for multiple
+**Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121)** to be used together for channel expansions in a single system, you can build a touch system which contains max. 36 electrodes.
+
+This sensor is an upgrade version of [Grove - I2C Touch Sensor](https://www.seeedstudio.com/Grove-I2C-Touch-Sensor-p-840.html), to meet Matsuzawa.Takashi's(one of our customer) needs, we make the I^2^C address changeable, and even cheaper than the old version. So if you have any suggestions about all the Groves, please just shoot to us. We will always listen to your voice, it may make another upgrade, even a new grove. Please kindly write your suggestions in the [Grove 100+](https://www.seeedstudio.com/grove_100) page. 
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/CPq4VSAXBgI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V2-%28MPR121%29-p-3141.html
+" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+
+
+## Version Change
+
+|Item| Grove - 12 Key Capacitive I2C Touch Sensor V2 | Grove - I2C Touch Sensor |
+|---|---|---|
+|Main Chip|MPR121|MPR121|
+|I^2^C Address|changeable(0X5B ~ 0X5D)|unmodifiable(0X5A)|
+|Touch Sensor Feeler|x|√|
+|Input Interface|alligator interface|DIP 2Pin Female Header|
+|Cost Performance|High|Low|
+|Release Time|September 11-2018|October 31-2015|
+
+
+## Features
+
+- Internal 10-bit ADC
+- Integrated independent autocalibration for each electrode input
+- Completely independent electrodes with built-in autoconfiguration
+- I2C interface, with IRQ Interrupt output to advise electrode status changes
+- Hardware configurable I2C address
+- 12 electrodes/capacitance sensing inputs in which 8 are multifunctional for LED driving and GPIO
+- Autoconfiguration of charge current and charge time for each electrode input
+- Separate touch and release trip thresholds for each electrode, providing hysteresis and electrode independence
+
+
+## Specification
+
+|Item|Value|
+|---|---|
+|Operating voltage|3.3V / 5V|
+|Operating temperature|-40°C to +85°C|
+|Storage Temperature Range|-40°C to +125°C|
+|Capacitances ranging|10 pF to over 2000 pF|
+|Resolution|0.01 pF|
+|GPIO Source Current per Pin|12 mA|
+|GPIO Sink Current per Pin|1.2 mA|
+|Interface|I^2^C|
+|I^2^C addrss range|0x5B,0x5C,0x5D|
+|Default I^2^C address|0x5B|
+
+
+## Applications
+
+- PC Peripherals
+- MP3 Players
+- Remote Controls
+- Mobile Phones
+- Lighting Controls
+
+
+## Hardware Overview
+
+### Pin Map
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/pin_map.jpg)
+
+
+|Pin Number|Pin Name|Function|Pin multiplexing|
+|---|---|---|---|
+|8|CH0| Channel0, Electrode 0, input the capacitance valnue|-|
+|9|CH1| Channel1, Electrode 1, input the capacitance valnue|-|
+|10|CH2| Channel2, Electrode 2, input the capacitance valnue|-|
+|11|CH3| Channel3, Electrode 3, input the capacitance valnue|-|
+|12|CH4| Channel4, Electrode 4, input the capacitance valnue|GPIO or LED driver|
+|13|CH5| Channel5, Electrode 5, input the capacitance valnue|GPIO or LED driver|
+|14|CH6| Channel6, Electrode 6, input the capacitance valnue|GPIO or LED driver|
+|15|CH7| Channel7, Electrode 7, input the capacitance valnue|GPIO or LED driver|
+|16|CH8| Channel8, Electrode 8, input the capacitance valnue|GPIO or LED driver|
+|17|CH9| Channel9, Electrode 9, input the capacitance valnue|GPIO or LED driver|
+|18|CH10| Channel10, Electrode 10, input the capacitance valnue|GPIO or LED driver|
+|19|CH11| Channel11, Electrode 11, input the capacitance valnue|GPIO or LED driver|
+
+
+!!!Tip
+        For the CH0 ~ CH11, once the electrode capacitance data is acquired, the electrode touch/release status is determined comparing it to the capacitance baseline value. And you can set the baseline value for each channel separately. The Pin12 ~ Pin19 is multifunctional, which means you can configure them as GPIO or LED driver, for more detail, please refer to the freescale application note [AN3894](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/res/AN3894.pdf).
+
+
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/pin_map_back_1.jpg)
+
+
+!!!Danger
+        The central pad is connected to the address wire, you can change the I2C address by cutting the wire and re-welding it. For the safety of you and others, please be careful with knife or welding gun you may use.
+
+
+
+### Schemaitc
+
+**Power**
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/schematic.jpg)
+
+The operation voltage of Freescale MPR121 is 1.71V to 3.6V, however, the voltage of Arduino is 3.3V or 5V. In order to make it compaticable with 5V system, we use a voltage conversion chip to provide 3.3V for the Freescale MPR121. 
+
+**Bi-directional level shifter circuit**
+
+![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/schematic_1.jpg)
+
+This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of this sensor use 3.3V, if the I<sup>2</sup>C bus of the Arduino use 5V, this circuit will be needed. In the schematic above, **Q1** and **Q2** are N-Channel MOSFET [2N7002A](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/AN10441.pdf)
+
+
+
+
+## Platforms Supported
+
+
+| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
+---
 name: Grove - 2-Channel Solid State Relay
 category: Sensor
 bzurl: 

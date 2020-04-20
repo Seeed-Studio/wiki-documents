@@ -1,4 +1,1258 @@
 ---
+name: ReSpeaker 2-Mics Pi HAT
+category: ReSpeaker
+bzurl: https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html
+prodimagename: 2mics-zero-high-res.jpg
+surveyurl: https://www.research.net/r/ReSpeaker_2-Mics_Pi_HAT
+sku: 107100001
+---
+
+![](https://files.seeedstudio.com/products/107100001/01.png)
+
+ReSpeaker 2-Mics Pi HAT is a dual-microphone expansion board for Raspberry Pi designed for AI and voice applications. This means that you can build a more powerful and flexible voice product that integrates Amazon Alexa Voice Service, Google Assistant, and so on.
+
+The board is developed based on WM8960, a low power stereo codec. There are 2 microphones on both sides of the board for collecting sounds and it also provides 3 APA102 RGB LEDs, 1 User Button and 2 on-board Grove interfaces for expanding your applications. What is more, 3.5mm Audio Jack or JST 2.0 Speaker Out are both available for audio output.
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/MwLEawbP0ZU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html)
+
+
+## Features
+
+* Raspberry Pi compatible(Support Raspberry Pi Zero and Zero W, Raspberry Pi B+, Raspberry Pi 2 B, Raspberry Pi 3 B, Raspberry Pi 3 B+, Raspberry Pi 3 A+ and Raspberry Pi 4)
+* 2 Microphones
+* 2 Grove Interfaces
+* 1 User Button
+* 3.5mm Audio Jack
+* JST2.0 Speaker Out
+* Max Sample Rate: 48Khz
+
+## Application Ideas
+
+* Voice Interaction Application
+* AI Assistant
+
+## Hardware Overview
+
+![](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/mic_hatv1.0.png)
+
+- BUTTON: a User Button, connected to GPIO17
+- MIC_Land MIC_R: 2 Microphones on both sides of the board
+- RGB LED: 3 APA102 RGB LEDs, connected to SPI interface
+- WM8960: a low power stereo codec
+- Raspberry Pi 40-Pin Headers: support Raspberry Pi Zero, Raspberry Pi 1 B+, Raspberry Pi 2 B , Raspberry Pi 3 B and Raspberry Pi 3 B+
+- POWER: Micro USB port for powering the ReSpeaker 2-Mics Pi HAT, please power the board for providing enough current when using the speaker.
+- I2C: Grove I2C port, connected to I2C-1
+- GPIO12: Grove digital port, connected to GPIO12 & GPIO13
+- JST 2.0 SPEAKER OUT: for connecting speaker with JST 2.0 connector
+- 3.5mm AUDIO JACK: for connecting headphone or speaker with 3.5mm Audio Plug
+
+## Getting Started
+
+**1. Connect ReSpeaker 2-Mics Pi HAT to Raspberry Pi**
+
+Mount ReSpeaker 2-Mics Pi HAT on your Raspberry Pi, make sure that the pins are properly aligned when stacking the ReSpeaker 2-Mics Pi HAT.
+
+Raspberry Pi Connection
+
+![connection picture1](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/pi.jpg)
+
+Raspberry Pi zero Connection
+
+![connection picture2](https://files.seeedstudio.com/products/107100001/01.png)
+
+**2. Setup the driver on Raspberry Pi**
+
+While the upstream wm8960 codec is not currently supported by current Pi kernel builds, upstream wm8960 has some bugs, we had fixed it. We must build it manually.
+
+Make sure that you are running [the lastest Raspbian Operating System(debian 9)](https://www.raspberrypi.org/downloads/raspbian/) on your Pi. *(updated at 2018.11.13)*
+
+- Step 1. Get the seeed voice card source code, install and reboot.
+
+```
+sudo apt-get update
+sudo apt-get upgrade
+git clone https://github.com/respeaker/seeed-voicecard.git
+cd seeed-voicecard
+sudo ./install.sh
+reboot
+```
+
+- Step 2. Check that the sound card name matches the source code seeed-voicecard by command aplay -l and arecord -l.
+
+```
+pi@raspberrypi:~/seeed-voicecard $ aplay -l
+**** List of PLAYBACK Hardware Devices ****
+card 0: ALSA [bcm2835 ALSA], device 0: bcm2835 ALSA [bcm2835 ALSA]
+  Subdevices: 8/8
+  Subdevice #0: subdevice #0
+  Subdevice #1: subdevice #1
+  Subdevice #2: subdevice #2
+  Subdevice #3: subdevice #3
+  Subdevice #4: subdevice #4
+  Subdevice #5: subdevice #5
+  Subdevice #6: subdevice #6
+  Subdevice #7: subdevice #7
+card 0: ALSA [bcm2835 ALSA], device 1: bcm2835 ALSA [bcm2835 IEC958/HDMI]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 1: seeed2micvoicec [seeed-2mic-voicecard], device 0: bcm2835-i2s-wm8960-hifi wm8960-hifi-0 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+pi@raspberrypi:~/seeed-voicecard $ arecord -l
+**** List of CAPTURE Hardware Devices ****
+card 1: seeed2micvoicec [seeed-2mic-voicecard], device 0: bcm2835-i2s-wm8960-hifi wm8960-hifi-0 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+pi@raspberrypi:~/seeed-voicecard $
+```
+
+- Step 3. Test, you will hear what you say to the microphones(don't forget to plug in an earphone or a speaker):
+
+```
+arecord -f cd -Dhw:1 | aplay -Dhw:1
+```
+
+**3. Configure sound settings and adjust the volume with alsamixer**
+
+**alsamixer** is a graphical mixer program for the Advanced Linux Sound Architecture (ALSA) that is used to configure sound settings and adjust the volume.
+
+```
+pi@raspberrypi:~ $ alsamixer
+```
+
+![](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/alsamixer.png)
+
+The Left and right arrow keys are used to select the channel or device and the Up and Down Arrows control the volume for the currently selected device. Quit the program with ALT+Q, or by hitting the Esc key. [More information](https://en.wikipedia.org/wiki/Alsamixer)
+
+!!!Warning
+    Please use the F6 to select seeed-2mic-voicecard device first.
+
+**4. Use the on-board APA102 LEDs**
+
+Each on-board APA102 LED has an additional driver chip. The driver chip takes care of receiving the desired color via its input lines, and then holding this color until a new command is received.
+
+```
+sudo pip install spidev
+cd ~/
+git clone https://github.com/respeaker/mic_hat.git
+cd mic_hat
+python pixels.py
+```
+<video width="512" height="384" controls preload>
+    <source src="https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/led.mp4"></source>
+    <source src="https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/led.webmhd.webm"></source>
+</video>
+
+
+**5. How to use User Button**
+
+There is an on-board User Button, which is connected to GPIO17. Now we will try to detect it with python and RPi.GPIO.
+
+```
+sudo pip install rpi.gpio    // install RPi.GPIO library
+nano button.py               // copy the following code in button.py
+```
+
+```
+import RPi.GPIO as GPIO
+import time
+
+BUTTON = 17
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(BUTTON, GPIO.IN)
+
+while True:
+    state = GPIO.input(BUTTON)
+    if state:
+        print("off")
+    else:
+        print("on")
+    time.sleep(1)
+```
+
+Save the code as button.py, then run it. It should display "on" when you press the button:
+
+```
+pi@raspberrypi:~ $ python button.py
+off
+off
+on
+on
+off
+```
+
+
+
+## Google Assistant SDK
+
+To get started with Google Assistant([what is  Google Assistant](https://assistant.google.com/)), the first is that you should integrate the Google Assistant Library into your raspberry pi system. Here is the link to [Google official guidance](https://developers.google.com/assistant/sdk/prototype/getting-started-pi-python/run-sample).
+
+And the following guide will also show you how to get started with Google Assistant.
+
+**1. Configure a Developer Project and get JSON file**
+
+Follow step 1. 2. 3. 4. in the  [guide](https://developers.google.com/assistant/sdk/prototype/getting-started-pi-python/config-dev-project-and-account#config-dev-project) to configure a project on Google Cloud Platform and create an OAuth Client ID JSON file. Don't forget to copy the JSON file to your Raspberry Pi.
+
+**2. Use a Python virtual environment to isolate the SDK and its dependencies from the system Python packages.**
+
+```
+sudo apt-get update
+sudo apt-get install python3-dev python3-venv # Use python3.4-venv if the package cannot be found.
+python3 -m venv env
+env/bin/python -m pip install --upgrade pip setuptools
+source env/bin/activate
+```
+
+---
+name: ReSpeaker 2-Mics Pi HAT
+category: ReSpeaker
+bzurl: https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html
+prodimagename: 2mics-zero-high-res.jpg
+surveyurl: https://www.research.net/r/ReSpeaker_2-Mics_Pi_HAT
+sku: 107100001
+---
+
+![](https://files.seeedstudio.com/products/107100001/01.png)
+
+ReSpeaker 2-Mics Pi HAT is a dual-microphone expansion board for Raspberry Pi designed for AI and voice applications. This means that you can build a more powerful and flexible voice product that integrates Amazon Alexa Voice Service, Google Assistant, and so on.
+
+The board is developed based on WM8960, a low power stereo codec. There are 2 microphones on both sides of the board for collecting sounds and it also provides 3 APA102 RGB LEDs, 1 User Button and 2 on-board Grove interfaces for expanding your applications. What is more, 3.5mm Audio Jack or JST 2.0 Speaker Out are both available for audio output.
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/MwLEawbP0ZU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html)
+
+
+## Features
+
+* Raspberry Pi compatible(Support Raspberry Pi Zero and Zero W, Raspberry Pi B+, Raspberry Pi 2 B, Raspberry Pi 3 B, Raspberry Pi 3 B+, Raspberry Pi 3 A+ and Raspberry Pi 4)
+* 2 Microphones
+* 2 Grove Interfaces
+* 1 User Button
+* 3.5mm Audio Jack
+* JST2.0 Speaker Out
+* Max Sample Rate: 48Khz
+
+## Application Ideas
+
+* Voice Interaction Application
+* AI Assistant
+
+## Hardware Overview
+
+![](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/mic_hatv1.0.png)
+
+- BUTTON: a User Button, connected to GPIO17
+- MIC_Land MIC_R: 2 Microphones on both sides of the board
+- RGB LED: 3 APA102 RGB LEDs, connected to SPI interface
+- WM8960: a low power stereo codec
+- Raspberry Pi 40-Pin Headers: support Raspberry Pi Zero, Raspberry Pi 1 B+, Raspberry Pi 2 B , Raspberry Pi 3 B and Raspberry Pi 3 B+
+- POWER: Micro USB port for powering the ReSpeaker 2-Mics Pi HAT, please power the board for providing enough current when using the speaker.
+- I2C: Grove I2C port, connected to I2C-1
+- GPIO12: Grove digital port, connected to GPIO12 & GPIO13
+- JST 2.0 SPEAKER OUT: for connecting speaker with JST 2.0 connector
+- 3.5mm AUDIO JACK: for connecting headphone or speaker with 3.5mm Audio Plug
+
+## Getting Started
+
+**1. Connect ReSpeaker 2-Mics Pi HAT to Raspberry Pi**
+
+Mount ReSpeaker 2-Mics Pi HAT on your Raspberry Pi, make sure that the pins are properly aligned when stacking the ReSpeaker 2-Mics Pi HAT.
+
+Raspberry Pi Connection
+
+![connection picture1](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/pi.jpg)
+
+Raspberry Pi zero Connection
+
+![connection picture2](https://files.seeedstudio.com/products/107100001/01.png)
+
+**2. Setup the driver on Raspberry Pi**
+
+While the upstream wm8960 codec is not currently supported by current Pi kernel builds, upstream wm8960 has some bugs, we had fixed it. We must build it manually.
+
+Make sure that you are running [the lastest Raspbian Operating System(debian 9)](https://www.raspberrypi.org/downloads/raspbian/) on your Pi. *(updated at 2018.11.13)*
+
+- Step 1. Get the seeed voice card source code, install and reboot.
+
+```
+sudo apt-get update
+sudo apt-get upgrade
+git clone https://github.com/respeaker/seeed-voicecard.git
+cd seeed-voicecard
+sudo ./install.sh
+reboot
+```
+
+- Step 2. Check that the sound card name matches the source code seeed-voicecard by command aplay -l and arecord -l.
+
+```
+pi@raspberrypi:~/seeed-voicecard $ aplay -l
+**** List of PLAYBACK Hardware Devices ****
+card 0: ALSA [bcm2835 ALSA], device 0: bcm2835 ALSA [bcm2835 ALSA]
+  Subdevices: 8/8
+  Subdevice #0: subdevice #0
+  Subdevice #1: subdevice #1
+  Subdevice #2: subdevice #2
+  Subdevice #3: subdevice #3
+  Subdevice #4: subdevice #4
+  Subdevice #5: subdevice #5
+  Subdevice #6: subdevice #6
+  Subdevice #7: subdevice #7
+card 0: ALSA [bcm2835 ALSA], device 1: bcm2835 ALSA [bcm2835 IEC958/HDMI]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 1: seeed2micvoicec [seeed-2mic-voicecard], device 0: bcm2835-i2s-wm8960-hifi wm8960-hifi-0 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+pi@raspberrypi:~/seeed-voicecard $ arecord -l
+**** List of CAPTURE Hardware Devices ****
+card 1: seeed2micvoicec [seeed-2mic-voicecard], device 0: bcm2835-i2s-wm8960-hifi wm8960-hifi-0 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+pi@raspberrypi:~/seeed-voicecard $
+```
+
+- Step 3. Test, you will hear what you say to the microphones(don't forget to plug in an earphone or a speaker):
+
+```
+arecord -f cd -Dhw:1 | aplay -Dhw:1
+```
+
+**3. Configure sound settings and adjust the volume with alsamixer**
+
+**alsamixer** is a graphical mixer program for the Advanced Linux Sound Architecture (ALSA) that is used to configure sound settings and adjust the volume.
+
+```
+pi@raspberrypi:~ $ alsamixer
+```
+
+![](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/alsamixer.png)
+
+The Left and right arrow keys are used to select the channel or device and the Up and Down Arrows control the volume for the currently selected device. Quit the program with ALT+Q, or by hitting the Esc key. [More information](https://en.wikipedia.org/wiki/Alsamixer)
+
+!!!Warning
+    Please use the F6 to select seeed-2mic-voicecard device first.
+
+**4. Use the on-board APA102 LEDs**
+
+Each on-board APA102 LED has an additional driver chip. The driver chip takes care of receiving the desired color via its input lines, and then holding this color until a new command is received.
+
+```
+sudo pip install spidev
+cd ~/
+git clone https://github.com/respeaker/mic_hat.git
+cd mic_hat
+python pixels.py
+```
+<video width="512" height="384" controls preload>
+    <source src="https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/led.mp4"></source>
+    <source src="https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/led.webmhd.webm"></source>
+</video>
+
+
+**5. How to use User Button**
+
+There is an on-board User Button, which is connected to GPIO17. Now we will try to detect it with python and RPi.GPIO.
+
+```
+sudo pip install rpi.gpio    // install RPi.GPIO library
+nano button.py               // copy the following code in button.py
+```
+
+```
+import RPi.GPIO as GPIO
+import time
+
+BUTTON = 17
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(BUTTON, GPIO.IN)
+
+while True:
+    state = GPIO.input(BUTTON)
+    if state:
+        print("off")
+    else:
+        print("on")
+    time.sleep(1)
+```
+
+Save the code as button.py, then run it. It should display "on" when you press the button:
+
+```
+pi@raspberrypi:~ $ python button.py
+off
+off
+on
+on
+off
+```
+
+
+
+## Google Assistant SDK
+
+To get started with Google Assistant([what is  Google Assistant](https://assistant.google.com/)), the first is that you should integrate the Google Assistant Library into your raspberry pi system. Here is the link to [Google official guidance](https://developers.google.com/assistant/sdk/prototype/getting-started-pi-python/run-sample).
+
+And the following guide will also show you how to get started with Google Assistant.
+
+**1. Configure a Developer Project and get JSON file**
+
+Follow step 1. 2. 3. 4. in the  [guide](https://developers.google.com/assistant/sdk/prototype/getting-started-pi-python/config-dev-project-and-account#config-dev-project) to configure a project on Google Cloud Platform and create an OAuth Client ID JSON file. Don't forget to copy the JSON file to your Raspberry Pi.
+
+**2. Use a Python virtual environment to isolate the SDK and its dependencies from the system Python packages.**
+
+```
+sudo apt-get update
+sudo apt-get install python3-dev python3-venv # Use python3.4-venv if the package cannot be found.
+python3 -m venv env
+env/bin/python -m pip install --upgrade pip setuptools
+source env/bin/activate
+```
+
+---
+name: ReSpeaker 2-Mics Pi HAT
+category: ReSpeaker
+bzurl: https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html
+prodimagename: 2mics-zero-high-res.jpg
+surveyurl: https://www.research.net/r/ReSpeaker_2-Mics_Pi_HAT
+sku: 107100001
+---
+
+![](https://files.seeedstudio.com/products/107100001/01.png)
+
+ReSpeaker 2-Mics Pi HAT is a dual-microphone expansion board for Raspberry Pi designed for AI and voice applications. This means that you can build a more powerful and flexible voice product that integrates Amazon Alexa Voice Service, Google Assistant, and so on.
+
+The board is developed based on WM8960, a low power stereo codec. There are 2 microphones on both sides of the board for collecting sounds and it also provides 3 APA102 RGB LEDs, 1 User Button and 2 on-board Grove interfaces for expanding your applications. What is more, 3.5mm Audio Jack or JST 2.0 Speaker Out are both available for audio output.
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/MwLEawbP0ZU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html)
+
+
+## Features
+
+* Raspberry Pi compatible(Support Raspberry Pi Zero and Zero W, Raspberry Pi B+, Raspberry Pi 2 B, Raspberry Pi 3 B, Raspberry Pi 3 B+, Raspberry Pi 3 A+ and Raspberry Pi 4)
+* 2 Microphones
+* 2 Grove Interfaces
+* 1 User Button
+* 3.5mm Audio Jack
+* JST2.0 Speaker Out
+* Max Sample Rate: 48Khz
+
+## Application Ideas
+
+* Voice Interaction Application
+* AI Assistant
+
+## Hardware Overview
+
+![](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/mic_hatv1.0.png)
+
+- BUTTON: a User Button, connected to GPIO17
+- MIC_Land MIC_R: 2 Microphones on both sides of the board
+- RGB LED: 3 APA102 RGB LEDs, connected to SPI interface
+- WM8960: a low power stereo codec
+- Raspberry Pi 40-Pin Headers: support Raspberry Pi Zero, Raspberry Pi 1 B+, Raspberry Pi 2 B , Raspberry Pi 3 B and Raspberry Pi 3 B+
+- POWER: Micro USB port for powering the ReSpeaker 2-Mics Pi HAT, please power the board for providing enough current when using the speaker.
+- I2C: Grove I2C port, connected to I2C-1
+- GPIO12: Grove digital port, connected to GPIO12 & GPIO13
+- JST 2.0 SPEAKER OUT: for connecting speaker with JST 2.0 connector
+- 3.5mm AUDIO JACK: for connecting headphone or speaker with 3.5mm Audio Plug
+
+## Getting Started
+
+**1. Connect ReSpeaker 2-Mics Pi HAT to Raspberry Pi**
+
+Mount ReSpeaker 2-Mics Pi HAT on your Raspberry Pi, make sure that the pins are properly aligned when stacking the ReSpeaker 2-Mics Pi HAT.
+
+Raspberry Pi Connection
+
+![connection picture1](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/pi.jpg)
+
+Raspberry Pi zero Connection
+
+![connection picture2](https://files.seeedstudio.com/products/107100001/01.png)
+
+**2. Setup the driver on Raspberry Pi**
+
+While the upstream wm8960 codec is not currently supported by current Pi kernel builds, upstream wm8960 has some bugs, we had fixed it. We must build it manually.
+
+Make sure that you are running [the lastest Raspbian Operating System(debian 9)](https://www.raspberrypi.org/downloads/raspbian/) on your Pi. *(updated at 2018.11.13)*
+
+- Step 1. Get the seeed voice card source code, install and reboot.
+
+```
+sudo apt-get update
+sudo apt-get upgrade
+git clone https://github.com/respeaker/seeed-voicecard.git
+cd seeed-voicecard
+sudo ./install.sh
+reboot
+```
+
+- Step 2. Check that the sound card name matches the source code seeed-voicecard by command aplay -l and arecord -l.
+
+```
+pi@raspberrypi:~/seeed-voicecard $ aplay -l
+**** List of PLAYBACK Hardware Devices ****
+card 0: ALSA [bcm2835 ALSA], device 0: bcm2835 ALSA [bcm2835 ALSA]
+  Subdevices: 8/8
+  Subdevice #0: subdevice #0
+  Subdevice #1: subdevice #1
+  Subdevice #2: subdevice #2
+  Subdevice #3: subdevice #3
+  Subdevice #4: subdevice #4
+  Subdevice #5: subdevice #5
+  Subdevice #6: subdevice #6
+  Subdevice #7: subdevice #7
+card 0: ALSA [bcm2835 ALSA], device 1: bcm2835 ALSA [bcm2835 IEC958/HDMI]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 1: seeed2micvoicec [seeed-2mic-voicecard], device 0: bcm2835-i2s-wm8960-hifi wm8960-hifi-0 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+pi@raspberrypi:~/seeed-voicecard $ arecord -l
+**** List of CAPTURE Hardware Devices ****
+card 1: seeed2micvoicec [seeed-2mic-voicecard], device 0: bcm2835-i2s-wm8960-hifi wm8960-hifi-0 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+pi@raspberrypi:~/seeed-voicecard $
+```
+
+- Step 3. Test, you will hear what you say to the microphones(don't forget to plug in an earphone or a speaker):
+
+```
+arecord -f cd -Dhw:1 | aplay -Dhw:1
+```
+
+**3. Configure sound settings and adjust the volume with alsamixer**
+
+**alsamixer** is a graphical mixer program for the Advanced Linux Sound Architecture (ALSA) that is used to configure sound settings and adjust the volume.
+
+```
+pi@raspberrypi:~ $ alsamixer
+```
+
+![](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/alsamixer.png)
+
+The Left and right arrow keys are used to select the channel or device and the Up and Down Arrows control the volume for the currently selected device. Quit the program with ALT+Q, or by hitting the Esc key. [More information](https://en.wikipedia.org/wiki/Alsamixer)
+
+!!!Warning
+    Please use the F6 to select seeed-2mic-voicecard device first.
+
+**4. Use the on-board APA102 LEDs**
+
+Each on-board APA102 LED has an additional driver chip. The driver chip takes care of receiving the desired color via its input lines, and then holding this color until a new command is received.
+
+```
+sudo pip install spidev
+cd ~/
+git clone https://github.com/respeaker/mic_hat.git
+cd mic_hat
+python pixels.py
+```
+<video width="512" height="384" controls preload>
+    <source src="https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/led.mp4"></source>
+    <source src="https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/led.webmhd.webm"></source>
+</video>
+
+
+**5. How to use User Button**
+
+There is an on-board User Button, which is connected to GPIO17. Now we will try to detect it with python and RPi.GPIO.
+
+```
+sudo pip install rpi.gpio    // install RPi.GPIO library
+nano button.py               // copy the following code in button.py
+```
+
+```
+import RPi.GPIO as GPIO
+import time
+
+BUTTON = 17
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(BUTTON, GPIO.IN)
+
+while True:
+    state = GPIO.input(BUTTON)
+    if state:
+        print("off")
+    else:
+        print("on")
+    time.sleep(1)
+```
+
+Save the code as button.py, then run it. It should display "on" when you press the button:
+
+```
+pi@raspberrypi:~ $ python button.py
+off
+off
+on
+on
+off
+```
+
+
+
+## Google Assistant SDK
+
+To get started with Google Assistant([what is  Google Assistant](https://assistant.google.com/)), the first is that you should integrate the Google Assistant Library into your raspberry pi system. Here is the link to [Google official guidance](https://developers.google.com/assistant/sdk/prototype/getting-started-pi-python/run-sample).
+
+And the following guide will also show you how to get started with Google Assistant.
+
+**1. Configure a Developer Project and get JSON file**
+
+Follow step 1. 2. 3. 4. in the  [guide](https://developers.google.com/assistant/sdk/prototype/getting-started-pi-python/config-dev-project-and-account#config-dev-project) to configure a project on Google Cloud Platform and create an OAuth Client ID JSON file. Don't forget to copy the JSON file to your Raspberry Pi.
+
+**2. Use a Python virtual environment to isolate the SDK and its dependencies from the system Python packages.**
+
+```
+sudo apt-get update
+sudo apt-get install python3-dev python3-venv # Use python3.4-venv if the package cannot be found.
+python3 -m venv env
+env/bin/python -m pip install --upgrade pip setuptools
+source env/bin/activate
+```
+
+---
+name: ReSpeaker 2-Mics Pi HAT
+category: ReSpeaker
+bzurl: https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html
+prodimagename: 2mics-zero-high-res.jpg
+surveyurl: https://www.research.net/r/ReSpeaker_2-Mics_Pi_HAT
+sku: 107100001
+---
+
+![](https://files.seeedstudio.com/products/107100001/01.png)
+
+ReSpeaker 2-Mics Pi HAT is a dual-microphone expansion board for Raspberry Pi designed for AI and voice applications. This means that you can build a more powerful and flexible voice product that integrates Amazon Alexa Voice Service, Google Assistant, and so on.
+
+The board is developed based on WM8960, a low power stereo codec. There are 2 microphones on both sides of the board for collecting sounds and it also provides 3 APA102 RGB LEDs, 1 User Button and 2 on-board Grove interfaces for expanding your applications. What is more, 3.5mm Audio Jack or JST 2.0 Speaker Out are both available for audio output.
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/MwLEawbP0ZU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html)
+
+
+## Features
+
+* Raspberry Pi compatible(Support Raspberry Pi Zero and Zero W, Raspberry Pi B+, Raspberry Pi 2 B, Raspberry Pi 3 B, Raspberry Pi 3 B+, Raspberry Pi 3 A+ and Raspberry Pi 4)
+* 2 Microphones
+* 2 Grove Interfaces
+* 1 User Button
+* 3.5mm Audio Jack
+* JST2.0 Speaker Out
+* Max Sample Rate: 48Khz
+
+## Application Ideas
+
+* Voice Interaction Application
+* AI Assistant
+
+## Hardware Overview
+
+![](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/mic_hatv1.0.png)
+
+- BUTTON: a User Button, connected to GPIO17
+- MIC_Land MIC_R: 2 Microphones on both sides of the board
+- RGB LED: 3 APA102 RGB LEDs, connected to SPI interface
+- WM8960: a low power stereo codec
+- Raspberry Pi 40-Pin Headers: support Raspberry Pi Zero, Raspberry Pi 1 B+, Raspberry Pi 2 B , Raspberry Pi 3 B and Raspberry Pi 3 B+
+- POWER: Micro USB port for powering the ReSpeaker 2-Mics Pi HAT, please power the board for providing enough current when using the speaker.
+- I2C: Grove I2C port, connected to I2C-1
+- GPIO12: Grove digital port, connected to GPIO12 & GPIO13
+- JST 2.0 SPEAKER OUT: for connecting speaker with JST 2.0 connector
+- 3.5mm AUDIO JACK: for connecting headphone or speaker with 3.5mm Audio Plug
+
+## Getting Started
+
+**1. Connect ReSpeaker 2-Mics Pi HAT to Raspberry Pi**
+
+Mount ReSpeaker 2-Mics Pi HAT on your Raspberry Pi, make sure that the pins are properly aligned when stacking the ReSpeaker 2-Mics Pi HAT.
+
+Raspberry Pi Connection
+
+![connection picture1](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/pi.jpg)
+
+Raspberry Pi zero Connection
+
+![connection picture2](https://files.seeedstudio.com/products/107100001/01.png)
+
+**2. Setup the driver on Raspberry Pi**
+
+While the upstream wm8960 codec is not currently supported by current Pi kernel builds, upstream wm8960 has some bugs, we had fixed it. We must build it manually.
+
+Make sure that you are running [the lastest Raspbian Operating System(debian 9)](https://www.raspberrypi.org/downloads/raspbian/) on your Pi. *(updated at 2018.11.13)*
+
+- Step 1. Get the seeed voice card source code, install and reboot.
+
+```
+sudo apt-get update
+sudo apt-get upgrade
+git clone https://github.com/respeaker/seeed-voicecard.git
+cd seeed-voicecard
+sudo ./install.sh
+reboot
+```
+
+- Step 2. Check that the sound card name matches the source code seeed-voicecard by command aplay -l and arecord -l.
+
+```
+pi@raspberrypi:~/seeed-voicecard $ aplay -l
+**** List of PLAYBACK Hardware Devices ****
+card 0: ALSA [bcm2835 ALSA], device 0: bcm2835 ALSA [bcm2835 ALSA]
+  Subdevices: 8/8
+  Subdevice #0: subdevice #0
+  Subdevice #1: subdevice #1
+  Subdevice #2: subdevice #2
+  Subdevice #3: subdevice #3
+  Subdevice #4: subdevice #4
+  Subdevice #5: subdevice #5
+  Subdevice #6: subdevice #6
+  Subdevice #7: subdevice #7
+card 0: ALSA [bcm2835 ALSA], device 1: bcm2835 ALSA [bcm2835 IEC958/HDMI]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 1: seeed2micvoicec [seeed-2mic-voicecard], device 0: bcm2835-i2s-wm8960-hifi wm8960-hifi-0 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+pi@raspberrypi:~/seeed-voicecard $ arecord -l
+**** List of CAPTURE Hardware Devices ****
+card 1: seeed2micvoicec [seeed-2mic-voicecard], device 0: bcm2835-i2s-wm8960-hifi wm8960-hifi-0 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+pi@raspberrypi:~/seeed-voicecard $
+```
+
+- Step 3. Test, you will hear what you say to the microphones(don't forget to plug in an earphone or a speaker):
+
+```
+arecord -f cd -Dhw:1 | aplay -Dhw:1
+```
+
+**3. Configure sound settings and adjust the volume with alsamixer**
+
+**alsamixer** is a graphical mixer program for the Advanced Linux Sound Architecture (ALSA) that is used to configure sound settings and adjust the volume.
+
+```
+pi@raspberrypi:~ $ alsamixer
+```
+
+![](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/alsamixer.png)
+
+The Left and right arrow keys are used to select the channel or device and the Up and Down Arrows control the volume for the currently selected device. Quit the program with ALT+Q, or by hitting the Esc key. [More information](https://en.wikipedia.org/wiki/Alsamixer)
+
+!!!Warning
+    Please use the F6 to select seeed-2mic-voicecard device first.
+
+**4. Use the on-board APA102 LEDs**
+
+Each on-board APA102 LED has an additional driver chip. The driver chip takes care of receiving the desired color via its input lines, and then holding this color until a new command is received.
+
+```
+sudo pip install spidev
+cd ~/
+git clone https://github.com/respeaker/mic_hat.git
+cd mic_hat
+python pixels.py
+```
+<video width="512" height="384" controls preload>
+    <source src="https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/led.mp4"></source>
+    <source src="https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/led.webmhd.webm"></source>
+</video>
+
+
+**5. How to use User Button**
+
+There is an on-board User Button, which is connected to GPIO17. Now we will try to detect it with python and RPi.GPIO.
+
+```
+sudo pip install rpi.gpio    // install RPi.GPIO library
+nano button.py               // copy the following code in button.py
+```
+
+```
+import RPi.GPIO as GPIO
+import time
+
+BUTTON = 17
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(BUTTON, GPIO.IN)
+
+while True:
+    state = GPIO.input(BUTTON)
+    if state:
+        print("off")
+    else:
+        print("on")
+    time.sleep(1)
+```
+
+Save the code as button.py, then run it. It should display "on" when you press the button:
+
+```
+pi@raspberrypi:~ $ python button.py
+off
+off
+on
+on
+off
+```
+
+
+
+## Google Assistant SDK
+
+To get started with Google Assistant([what is  Google Assistant](https://assistant.google.com/)), the first is that you should integrate the Google Assistant Library into your raspberry pi system. Here is the link to [Google official guidance](https://developers.google.com/assistant/sdk/prototype/getting-started-pi-python/run-sample).
+
+And the following guide will also show you how to get started with Google Assistant.
+
+**1. Configure a Developer Project and get JSON file**
+
+Follow step 1. 2. 3. 4. in the  [guide](https://developers.google.com/assistant/sdk/prototype/getting-started-pi-python/config-dev-project-and-account#config-dev-project) to configure a project on Google Cloud Platform and create an OAuth Client ID JSON file. Don't forget to copy the JSON file to your Raspberry Pi.
+
+**2. Use a Python virtual environment to isolate the SDK and its dependencies from the system Python packages.**
+
+```
+sudo apt-get update
+sudo apt-get install python3-dev python3-venv # Use python3.4-venv if the package cannot be found.
+python3 -m venv env
+env/bin/python -m pip install --upgrade pip setuptools
+source env/bin/activate
+```
+
+---
+name: ReSpeaker 2-Mics Pi HAT
+category: ReSpeaker
+bzurl: https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html
+prodimagename: 2mics-zero-high-res.jpg
+surveyurl: https://www.research.net/r/ReSpeaker_2-Mics_Pi_HAT
+sku: 107100001
+---
+
+![](https://files.seeedstudio.com/products/107100001/01.png)
+
+ReSpeaker 2-Mics Pi HAT is a dual-microphone expansion board for Raspberry Pi designed for AI and voice applications. This means that you can build a more powerful and flexible voice product that integrates Amazon Alexa Voice Service, Google Assistant, and so on.
+
+The board is developed based on WM8960, a low power stereo codec. There are 2 microphones on both sides of the board for collecting sounds and it also provides 3 APA102 RGB LEDs, 1 User Button and 2 on-board Grove interfaces for expanding your applications. What is more, 3.5mm Audio Jack or JST 2.0 Speaker Out are both available for audio output.
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/MwLEawbP0ZU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html)
+
+
+## Features
+
+* Raspberry Pi compatible(Support Raspberry Pi Zero and Zero W, Raspberry Pi B+, Raspberry Pi 2 B, Raspberry Pi 3 B, Raspberry Pi 3 B+, Raspberry Pi 3 A+ and Raspberry Pi 4)
+* 2 Microphones
+* 2 Grove Interfaces
+* 1 User Button
+* 3.5mm Audio Jack
+* JST2.0 Speaker Out
+* Max Sample Rate: 48Khz
+
+## Application Ideas
+
+* Voice Interaction Application
+* AI Assistant
+
+## Hardware Overview
+
+![](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/mic_hatv1.0.png)
+
+- BUTTON: a User Button, connected to GPIO17
+- MIC_Land MIC_R: 2 Microphones on both sides of the board
+- RGB LED: 3 APA102 RGB LEDs, connected to SPI interface
+- WM8960: a low power stereo codec
+- Raspberry Pi 40-Pin Headers: support Raspberry Pi Zero, Raspberry Pi 1 B+, Raspberry Pi 2 B , Raspberry Pi 3 B and Raspberry Pi 3 B+
+- POWER: Micro USB port for powering the ReSpeaker 2-Mics Pi HAT, please power the board for providing enough current when using the speaker.
+- I2C: Grove I2C port, connected to I2C-1
+- GPIO12: Grove digital port, connected to GPIO12 & GPIO13
+- JST 2.0 SPEAKER OUT: for connecting speaker with JST 2.0 connector
+- 3.5mm AUDIO JACK: for connecting headphone or speaker with 3.5mm Audio Plug
+
+## Getting Started
+
+**1. Connect ReSpeaker 2-Mics Pi HAT to Raspberry Pi**
+
+Mount ReSpeaker 2-Mics Pi HAT on your Raspberry Pi, make sure that the pins are properly aligned when stacking the ReSpeaker 2-Mics Pi HAT.
+
+Raspberry Pi Connection
+
+![connection picture1](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/pi.jpg)
+
+Raspberry Pi zero Connection
+
+![connection picture2](https://files.seeedstudio.com/products/107100001/01.png)
+
+**2. Setup the driver on Raspberry Pi**
+
+While the upstream wm8960 codec is not currently supported by current Pi kernel builds, upstream wm8960 has some bugs, we had fixed it. We must build it manually.
+
+Make sure that you are running [the lastest Raspbian Operating System(debian 9)](https://www.raspberrypi.org/downloads/raspbian/) on your Pi. *(updated at 2018.11.13)*
+
+- Step 1. Get the seeed voice card source code, install and reboot.
+
+```
+sudo apt-get update
+sudo apt-get upgrade
+git clone https://github.com/respeaker/seeed-voicecard.git
+cd seeed-voicecard
+sudo ./install.sh
+reboot
+```
+
+- Step 2. Check that the sound card name matches the source code seeed-voicecard by command aplay -l and arecord -l.
+
+```
+pi@raspberrypi:~/seeed-voicecard $ aplay -l
+**** List of PLAYBACK Hardware Devices ****
+card 0: ALSA [bcm2835 ALSA], device 0: bcm2835 ALSA [bcm2835 ALSA]
+  Subdevices: 8/8
+  Subdevice #0: subdevice #0
+  Subdevice #1: subdevice #1
+  Subdevice #2: subdevice #2
+  Subdevice #3: subdevice #3
+  Subdevice #4: subdevice #4
+  Subdevice #5: subdevice #5
+  Subdevice #6: subdevice #6
+  Subdevice #7: subdevice #7
+card 0: ALSA [bcm2835 ALSA], device 1: bcm2835 ALSA [bcm2835 IEC958/HDMI]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 1: seeed2micvoicec [seeed-2mic-voicecard], device 0: bcm2835-i2s-wm8960-hifi wm8960-hifi-0 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+pi@raspberrypi:~/seeed-voicecard $ arecord -l
+**** List of CAPTURE Hardware Devices ****
+card 1: seeed2micvoicec [seeed-2mic-voicecard], device 0: bcm2835-i2s-wm8960-hifi wm8960-hifi-0 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+pi@raspberrypi:~/seeed-voicecard $
+```
+
+- Step 3. Test, you will hear what you say to the microphones(don't forget to plug in an earphone or a speaker):
+
+```
+arecord -f cd -Dhw:1 | aplay -Dhw:1
+```
+
+**3. Configure sound settings and adjust the volume with alsamixer**
+
+**alsamixer** is a graphical mixer program for the Advanced Linux Sound Architecture (ALSA) that is used to configure sound settings and adjust the volume.
+
+```
+pi@raspberrypi:~ $ alsamixer
+```
+
+![](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/alsamixer.png)
+
+The Left and right arrow keys are used to select the channel or device and the Up and Down Arrows control the volume for the currently selected device. Quit the program with ALT+Q, or by hitting the Esc key. [More information](https://en.wikipedia.org/wiki/Alsamixer)
+
+!!!Warning
+    Please use the F6 to select seeed-2mic-voicecard device first.
+
+**4. Use the on-board APA102 LEDs**
+
+Each on-board APA102 LED has an additional driver chip. The driver chip takes care of receiving the desired color via its input lines, and then holding this color until a new command is received.
+
+```
+sudo pip install spidev
+cd ~/
+git clone https://github.com/respeaker/mic_hat.git
+cd mic_hat
+python pixels.py
+```
+<video width="512" height="384" controls preload>
+    <source src="https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/led.mp4"></source>
+    <source src="https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/led.webmhd.webm"></source>
+</video>
+
+
+**5. How to use User Button**
+
+There is an on-board User Button, which is connected to GPIO17. Now we will try to detect it with python and RPi.GPIO.
+
+```
+sudo pip install rpi.gpio    // install RPi.GPIO library
+nano button.py               // copy the following code in button.py
+```
+
+```
+import RPi.GPIO as GPIO
+import time
+
+BUTTON = 17
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(BUTTON, GPIO.IN)
+
+while True:
+    state = GPIO.input(BUTTON)
+    if state:
+        print("off")
+    else:
+        print("on")
+    time.sleep(1)
+```
+
+Save the code as button.py, then run it. It should display "on" when you press the button:
+
+```
+pi@raspberrypi:~ $ python button.py
+off
+off
+on
+on
+off
+```
+
+
+
+## Google Assistant SDK
+
+To get started with Google Assistant([what is  Google Assistant](https://assistant.google.com/)), the first is that you should integrate the Google Assistant Library into your raspberry pi system. Here is the link to [Google official guidance](https://developers.google.com/assistant/sdk/prototype/getting-started-pi-python/run-sample).
+
+And the following guide will also show you how to get started with Google Assistant.
+
+**1. Configure a Developer Project and get JSON file**
+
+Follow step 1. 2. 3. 4. in the  [guide](https://developers.google.com/assistant/sdk/prototype/getting-started-pi-python/config-dev-project-and-account#config-dev-project) to configure a project on Google Cloud Platform and create an OAuth Client ID JSON file. Don't forget to copy the JSON file to your Raspberry Pi.
+
+**2. Use a Python virtual environment to isolate the SDK and its dependencies from the system Python packages.**
+
+```
+sudo apt-get update
+sudo apt-get install python3-dev python3-venv # Use python3.4-venv if the package cannot be found.
+python3 -m venv env
+env/bin/python -m pip install --upgrade pip setuptools
+source env/bin/activate
+```
+
+---
+name: ReSpeaker 2-Mics Pi HAT
+category: ReSpeaker
+bzurl: https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html
+prodimagename: 2mics-zero-high-res.jpg
+surveyurl: https://www.research.net/r/ReSpeaker_2-Mics_Pi_HAT
+sku: 107100001
+---
+
+![](https://files.seeedstudio.com/products/107100001/01.png)
+
+ReSpeaker 2-Mics Pi HAT is a dual-microphone expansion board for Raspberry Pi designed for AI and voice applications. This means that you can build a more powerful and flexible voice product that integrates Amazon Alexa Voice Service, Google Assistant, and so on.
+
+The board is developed based on WM8960, a low power stereo codec. There are 2 microphones on both sides of the board for collecting sounds and it also provides 3 APA102 RGB LEDs, 1 User Button and 2 on-board Grove interfaces for expanding your applications. What is more, 3.5mm Audio Jack or JST 2.0 Speaker Out are both available for audio output.
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/MwLEawbP0ZU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html)
+
+
+## Features
+
+* Raspberry Pi compatible(Support Raspberry Pi Zero and Zero W, Raspberry Pi B+, Raspberry Pi 2 B, Raspberry Pi 3 B, Raspberry Pi 3 B+, Raspberry Pi 3 A+ and Raspberry Pi 4)
+* 2 Microphones
+* 2 Grove Interfaces
+* 1 User Button
+* 3.5mm Audio Jack
+* JST2.0 Speaker Out
+* Max Sample Rate: 48Khz
+
+## Application Ideas
+
+* Voice Interaction Application
+* AI Assistant
+
+## Hardware Overview
+
+![](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/mic_hatv1.0.png)
+
+- BUTTON: a User Button, connected to GPIO17
+- MIC_Land MIC_R: 2 Microphones on both sides of the board
+- RGB LED: 3 APA102 RGB LEDs, connected to SPI interface
+- WM8960: a low power stereo codec
+- Raspberry Pi 40-Pin Headers: support Raspberry Pi Zero, Raspberry Pi 1 B+, Raspberry Pi 2 B , Raspberry Pi 3 B and Raspberry Pi 3 B+
+- POWER: Micro USB port for powering the ReSpeaker 2-Mics Pi HAT, please power the board for providing enough current when using the speaker.
+- I2C: Grove I2C port, connected to I2C-1
+- GPIO12: Grove digital port, connected to GPIO12 & GPIO13
+- JST 2.0 SPEAKER OUT: for connecting speaker with JST 2.0 connector
+- 3.5mm AUDIO JACK: for connecting headphone or speaker with 3.5mm Audio Plug
+
+## Getting Started
+
+**1. Connect ReSpeaker 2-Mics Pi HAT to Raspberry Pi**
+
+Mount ReSpeaker 2-Mics Pi HAT on your Raspberry Pi, make sure that the pins are properly aligned when stacking the ReSpeaker 2-Mics Pi HAT.
+
+Raspberry Pi Connection
+
+![connection picture1](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/pi.jpg)
+
+Raspberry Pi zero Connection
+
+![connection picture2](https://files.seeedstudio.com/products/107100001/01.png)
+
+**2. Setup the driver on Raspberry Pi**
+
+While the upstream wm8960 codec is not currently supported by current Pi kernel builds, upstream wm8960 has some bugs, we had fixed it. We must build it manually.
+
+Make sure that you are running [the lastest Raspbian Operating System(debian 9)](https://www.raspberrypi.org/downloads/raspbian/) on your Pi. *(updated at 2018.11.13)*
+
+- Step 1. Get the seeed voice card source code, install and reboot.
+
+```
+sudo apt-get update
+sudo apt-get upgrade
+git clone https://github.com/respeaker/seeed-voicecard.git
+cd seeed-voicecard
+sudo ./install.sh
+reboot
+```
+
+- Step 2. Check that the sound card name matches the source code seeed-voicecard by command aplay -l and arecord -l.
+
+```
+pi@raspberrypi:~/seeed-voicecard $ aplay -l
+**** List of PLAYBACK Hardware Devices ****
+card 0: ALSA [bcm2835 ALSA], device 0: bcm2835 ALSA [bcm2835 ALSA]
+  Subdevices: 8/8
+  Subdevice #0: subdevice #0
+  Subdevice #1: subdevice #1
+  Subdevice #2: subdevice #2
+  Subdevice #3: subdevice #3
+  Subdevice #4: subdevice #4
+  Subdevice #5: subdevice #5
+  Subdevice #6: subdevice #6
+  Subdevice #7: subdevice #7
+card 0: ALSA [bcm2835 ALSA], device 1: bcm2835 ALSA [bcm2835 IEC958/HDMI]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 1: seeed2micvoicec [seeed-2mic-voicecard], device 0: bcm2835-i2s-wm8960-hifi wm8960-hifi-0 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+pi@raspberrypi:~/seeed-voicecard $ arecord -l
+**** List of CAPTURE Hardware Devices ****
+card 1: seeed2micvoicec [seeed-2mic-voicecard], device 0: bcm2835-i2s-wm8960-hifi wm8960-hifi-0 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+pi@raspberrypi:~/seeed-voicecard $
+```
+
+- Step 3. Test, you will hear what you say to the microphones(don't forget to plug in an earphone or a speaker):
+
+```
+arecord -f cd -Dhw:1 | aplay -Dhw:1
+```
+
+**3. Configure sound settings and adjust the volume with alsamixer**
+
+**alsamixer** is a graphical mixer program for the Advanced Linux Sound Architecture (ALSA) that is used to configure sound settings and adjust the volume.
+
+```
+pi@raspberrypi:~ $ alsamixer
+```
+
+![](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/alsamixer.png)
+
+The Left and right arrow keys are used to select the channel or device and the Up and Down Arrows control the volume for the currently selected device. Quit the program with ALT+Q, or by hitting the Esc key. [More information](https://en.wikipedia.org/wiki/Alsamixer)
+
+!!!Warning
+    Please use the F6 to select seeed-2mic-voicecard device first.
+
+**4. Use the on-board APA102 LEDs**
+
+Each on-board APA102 LED has an additional driver chip. The driver chip takes care of receiving the desired color via its input lines, and then holding this color until a new command is received.
+
+```
+sudo pip install spidev
+cd ~/
+git clone https://github.com/respeaker/mic_hat.git
+cd mic_hat
+python pixels.py
+```
+<video width="512" height="384" controls preload>
+    <source src="https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/led.mp4"></source>
+    <source src="https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/led.webmhd.webm"></source>
+</video>
+
+
+**5. How to use User Button**
+
+There is an on-board User Button, which is connected to GPIO17. Now we will try to detect it with python and RPi.GPIO.
+
+```
+sudo pip install rpi.gpio    // install RPi.GPIO library
+nano button.py               // copy the following code in button.py
+```
+
+```
+import RPi.GPIO as GPIO
+import time
+
+BUTTON = 17
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(BUTTON, GPIO.IN)
+
+while True:
+    state = GPIO.input(BUTTON)
+    if state:
+        print("off")
+    else:
+        print("on")
+    time.sleep(1)
+```
+
+Save the code as button.py, then run it. It should display "on" when you press the button:
+
+```
+pi@raspberrypi:~ $ python button.py
+off
+off
+on
+on
+off
+```
+
+
+
+## Google Assistant SDK
+
+To get started with Google Assistant([what is  Google Assistant](https://assistant.google.com/)), the first is that you should integrate the Google Assistant Library into your raspberry pi system. Here is the link to [Google official guidance](https://developers.google.com/assistant/sdk/prototype/getting-started-pi-python/run-sample).
+
+And the following guide will also show you how to get started with Google Assistant.
+
+**1. Configure a Developer Project and get JSON file**
+
+Follow step 1. 2. 3. 4. in the  [guide](https://developers.google.com/assistant/sdk/prototype/getting-started-pi-python/config-dev-project-and-account#config-dev-project) to configure a project on Google Cloud Platform and create an OAuth Client ID JSON file. Don't forget to copy the JSON file to your Raspberry Pi.
+
+**2. Use a Python virtual environment to isolate the SDK and its dependencies from the system Python packages.**
+
+```
+sudo apt-get update
+sudo apt-get install python3-dev python3-venv # Use python3.4-venv if the package cannot be found.
+python3 -m venv env
+env/bin/python -m pip install --upgrade pip setuptools
+source env/bin/activate
+```
+
+---
 name: ReSpeaker 4-Mic Linear Array Kit
 category: ReSpeaker
 bzurl:

@@ -1,4 +1,1084 @@
 ---
+name: CAN-BUS Shield V1.2
+category: Shield
+bzurl: https://www.seeedstudio.com/CAN-BUS-Shield-V1.2-p-2256.html
+oldwikiname: CAN-BUS_Shield_V1.2
+prodimagename: Can_bus_shield_all.jpg
+surveyurl: https://www.research.net/r/can_bus_shield
+sku: 113030021
+---
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/Can_bus_shield_all.jpg)
+
+**CAN-BUS** is a common industrial bus because of its long travel distance, medium communication speed and high reliability. It is commonly found on modern machine tools, such as an automotive diagnostic bus.
+
+This CAN-BUS Shield adopts **MCP2515** CAN Bus controller with SPI interface and **MCP2551** CAN transceiver to give your Arduino/Seeeduino CAN-BUS capability. With an **OBD-II** converter cable added on and the OBD-II library imported, you are ready to build an onboard diagnostic device or data logger.
+
+**Version**
+
+This document applies to the following version of products:
+
+|Version|Released Date|How to Buy|
+|--------|-----------|-----------|
+|CAN BUS Shield V1.0 |Oct 14, 2012|![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/EOL.png)|
+|CAN BUS Shield V1.1 |Aug 10, 2013|![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/EOL.png)|
+|CAN BUS Shield V1.2|Jan 5, 2015|![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/EOL.png)|
+| CAN BUS Shield V2.0 | Aug 01,2017    |<a href="https://www.seeedstudio.com/CAN-BUS-Shield-V2-p-2921.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a>|
+
+
+
+**What's new in CAN BUS Shield V1.2**
+
+
+- Pads on the backside of PCBA
+- Change terminal resistor to 120 Ohm
+
+
+**Alternative Choice**
+
+
+If your project is space limited and also don't need other fuctions except CAN-BUS, here is a Grove CAN-BUS module which is Arduino compatible, more compact and cost effective, please click [here](https://www.seeedstudio.com/Serial-CAN-BUS-Module-based-on-MCP2551-and-MCP2515-p-2924.html) to visit its page.
+
+[![](https://files.seeedstudio.com/wiki/CAN-BUS-Shield-V2.0/img/canbus_arduino.png)](https://www.seeedstudio.com/Serial-CAN-BUS-Module-based-on-MCP2551-and-MCP2515-p-2924.html)
+
+**What if I want to connect this shield to my car**
+
+If you want to read data or control your car, there's an OBD>DB9 cable available for you, [this cable](https://www.seeedstudio.com/DB9-to-OBD2-Cable-With-Switch-p-2872.html) make easier to connect to OBD-connector and DB9-connector. This cable will also work with anything that has a OBD-connector. Add a power switch makes such a satisfying click.
+
+[![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/obd_cable.jpg)](https://www.seeedstudio.com/DB9-to-OBD2-Cable-With-Switch-p-2872.html)
+
+**USB-CAN Analyzer**
+
+If you want a CAN Bus Analyzer to debug your CAN Bus, this [USB-CAN Analyzer](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html) is recommended.
+
+[![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/usb_can.jpg)](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html)
+
+
+
+## Features
+-----
+
+- Implements CAN V2.0B speed up to **1 Mb/s**
+- SPI Interface speed up to **10 MHz**
+- Standard (**11 bit**) and extended (**29 bit**) data and remote frames
+- Two receive buffers with prioritized message storage
+- Industrial standard DB-9 connector
+- LED indicators
+
+!!!Note
+    CAN BUS Shield Work well with Arduino UNO (ATmega328), Arduino Mega (ATmega1280/2560) as well as Arduino Leonardo (ATmega32U4).
+
+## Hardware Overview
+-----
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/hardware_overview_1.png)
+
+1. **DB9 Interface** - to connect to OBDII Interface via a DBG-OBD Cable.
+2. **V_OBD** - It gets power from OBDII Interface (from DB9)
+3. **Led Indicator**:
+    - **PWR**: power
+    - **TX**: blink when the data is sending
+    - **RX**: blink when there's data receiving
+    - **INT**: data interrupt
+4. **Terminal** - CAN_H and CAN_L
+5. **Arduino UNO pin out**
+6. **Serial Grove connector**
+7. **I2C Grove connector**
+8. **ICSP pins**
+9. **IC** - MCP2551, a high-speed CAN transceiver ([datasheet](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/resource/Mcp2551.pdf))
+10. **IC** - MCP2515, stand-alone CAN controller with SPI interface ([datasheet](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/resource/MCP2515.pdf))
+
+
+!!!warning
+    When you use more than two CAN Bus Shield in one net, you should take the impedance into consideration.
+    You should either cut P1 in the PCB with a knife, or just remove R3 on the PCB.
+
+**Pin map**
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/PINMAP.png)
+
+!!!note
+    The FREE pin is available for the other usages.
+
+**DB9&OBDii Interface**
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/OBD.png)
+
+**CS pin**
+
+SPI_CS pin of V1.2 is connected to **D9** by default. If you want to change to **D10**, please follow below instructions.
+
+- Step1: Take a look at the backside of the PCBA, you will find a pad named CS.
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/hardware_overview_pins_setting.png)
+
+ - Step2: Cut the wire between pad9 and the middle pad.
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/cut%20this%20wire%20with%20box%20cutter.png)
+
+ - Step3:Solder the middle pad and pad 10.
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/sodder%20the%20middle%20pad%20and%20pad%2010.png)
+
+
+!!!warning
+    Be careful with the box cutter, it's easy to hurt yourself or the PCBA.
+
+**SPI pins**
+
+The SPI pins (SCK, MISO, MOSI) are routed to the ICSP pins by default. But for some boards, the SPI pins are located at D11~D13. if this happens, you need make some change to the PCBA. Take a look at the backside of the PCBA, there're three pads, MOSI, MISO and SCK, they are connected to A by default. You can change them to B if needed.
+
+!!!note
+    For Arduino UNO, Arduino Mega, Arduino Leonardo and any others AVR based Arduino boards, it works well by default setting.
+
+!!!warning
+    Be careful when you are going to change SPI pins, it's easy to hurt yourself or the PCBA.
+
+
+## Getting Started
+-----
+Here's a simple example to show you how CAN-BUS Shield works. In this example we need 2 pieces of CAN-BUS Shields as well as Arduino or Seeeduino.
+
+!!!note
+    This example is built under [Arduino IDE version 1.6.9](https://www.arduino.cc/download_handler.php?f=/arduino-1.6.9-windows.zip).
+
+
+**STEP1: What do we need**
+
+|Name|Function|Qty|Link|
+|----|--------|---|----|
+|CAN-BUS Shield|CAN Bus communication | 2 | [link](http://www.seeedstudio.com/depot/CANBUS-Shield-V12-p-2256.html) |
+|Seeeduino V4.2|Controller|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=2517)|
+|Jumper Wire|connection|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=234)|
+
+**STEP2: Hardware Connection**
+
+Insert each CAN-BUS Shield into Seeeduino V4.2, and connect the 2 CAN-BUS Shield together via 2 jumper wires. Shown as below images.
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/connection.png)
+
+!!!note
+    CAN_H to CAN_H, CAN_L to CAN_L
+
+**STEP3: Software**
+
+Please follow [how to install an arduino library](http://wiki.seeed.cc/How_to_install_Arduino_Library/) procedures to install CAN BUS shield library.
+
+
+Click on below button to download the library.
+
+[![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/download_library.png)](https://github.com/Seeed-Studio/CAN_BUS_Shield)
+
+Install the library to your Arduino IDE when it is downloaded.
+
+One of the node (a node means Seeeduino + CAN_BUS Shield) acts as master, the other acts as slaver. The master will send data to slaver constantly.
+
+!!!note
+    Each node can act as master before the code being uploaded.
+
+Open the **send** example (**File > Examples > CAN_BUS_Shield-master > send**) and upload to the **master**.
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/send%20example.png)
+---
+name: CAN-BUS Shield V1.2
+category: Shield
+bzurl: https://www.seeedstudio.com/CAN-BUS-Shield-V1.2-p-2256.html
+oldwikiname: CAN-BUS_Shield_V1.2
+prodimagename: Can_bus_shield_all.jpg
+surveyurl: https://www.research.net/r/can_bus_shield
+sku: 113030021
+---
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/Can_bus_shield_all.jpg)
+
+**CAN-BUS** is a common industrial bus because of its long travel distance, medium communication speed and high reliability. It is commonly found on modern machine tools, such as an automotive diagnostic bus.
+
+This CAN-BUS Shield adopts **MCP2515** CAN Bus controller with SPI interface and **MCP2551** CAN transceiver to give your Arduino/Seeeduino CAN-BUS capability. With an **OBD-II** converter cable added on and the OBD-II library imported, you are ready to build an onboard diagnostic device or data logger.
+
+**Version**
+
+This document applies to the following version of products:
+
+|Version|Released Date|How to Buy|
+|--------|-----------|-----------|
+|CAN BUS Shield V1.0 |Oct 14, 2012|![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/EOL.png)|
+|CAN BUS Shield V1.1 |Aug 10, 2013|![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/EOL.png)|
+|CAN BUS Shield V1.2|Jan 5, 2015|![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/EOL.png)|
+| CAN BUS Shield V2.0 | Aug 01,2017    |<a href="https://www.seeedstudio.com/CAN-BUS-Shield-V2-p-2921.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a>|
+
+
+
+**What's new in CAN BUS Shield V1.2**
+
+
+- Pads on the backside of PCBA
+- Change terminal resistor to 120 Ohm
+
+
+**Alternative Choice**
+
+
+If your project is space limited and also don't need other fuctions except CAN-BUS, here is a Grove CAN-BUS module which is Arduino compatible, more compact and cost effective, please click [here](https://www.seeedstudio.com/Serial-CAN-BUS-Module-based-on-MCP2551-and-MCP2515-p-2924.html) to visit its page.
+
+[![](https://files.seeedstudio.com/wiki/CAN-BUS-Shield-V2.0/img/canbus_arduino.png)](https://www.seeedstudio.com/Serial-CAN-BUS-Module-based-on-MCP2551-and-MCP2515-p-2924.html)
+
+**What if I want to connect this shield to my car**
+
+If you want to read data or control your car, there's an OBD>DB9 cable available for you, [this cable](https://www.seeedstudio.com/DB9-to-OBD2-Cable-With-Switch-p-2872.html) make easier to connect to OBD-connector and DB9-connector. This cable will also work with anything that has a OBD-connector. Add a power switch makes such a satisfying click.
+
+[![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/obd_cable.jpg)](https://www.seeedstudio.com/DB9-to-OBD2-Cable-With-Switch-p-2872.html)
+
+**USB-CAN Analyzer**
+
+If you want a CAN Bus Analyzer to debug your CAN Bus, this [USB-CAN Analyzer](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html) is recommended.
+
+[![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/usb_can.jpg)](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html)
+
+
+
+## Features
+-----
+
+- Implements CAN V2.0B speed up to **1 Mb/s**
+- SPI Interface speed up to **10 MHz**
+- Standard (**11 bit**) and extended (**29 bit**) data and remote frames
+- Two receive buffers with prioritized message storage
+- Industrial standard DB-9 connector
+- LED indicators
+
+!!!Note
+    CAN BUS Shield Work well with Arduino UNO (ATmega328), Arduino Mega (ATmega1280/2560) as well as Arduino Leonardo (ATmega32U4).
+
+## Hardware Overview
+-----
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/hardware_overview_1.png)
+
+1. **DB9 Interface** - to connect to OBDII Interface via a DBG-OBD Cable.
+2. **V_OBD** - It gets power from OBDII Interface (from DB9)
+3. **Led Indicator**:
+    - **PWR**: power
+    - **TX**: blink when the data is sending
+    - **RX**: blink when there's data receiving
+    - **INT**: data interrupt
+4. **Terminal** - CAN_H and CAN_L
+5. **Arduino UNO pin out**
+6. **Serial Grove connector**
+7. **I2C Grove connector**
+8. **ICSP pins**
+9. **IC** - MCP2551, a high-speed CAN transceiver ([datasheet](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/resource/Mcp2551.pdf))
+10. **IC** - MCP2515, stand-alone CAN controller with SPI interface ([datasheet](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/resource/MCP2515.pdf))
+
+
+!!!warning
+    When you use more than two CAN Bus Shield in one net, you should take the impedance into consideration.
+    You should either cut P1 in the PCB with a knife, or just remove R3 on the PCB.
+
+**Pin map**
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/PINMAP.png)
+
+!!!note
+    The FREE pin is available for the other usages.
+
+**DB9&OBDii Interface**
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/OBD.png)
+
+**CS pin**
+
+SPI_CS pin of V1.2 is connected to **D9** by default. If you want to change to **D10**, please follow below instructions.
+
+- Step1: Take a look at the backside of the PCBA, you will find a pad named CS.
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/hardware_overview_pins_setting.png)
+
+ - Step2: Cut the wire between pad9 and the middle pad.
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/cut%20this%20wire%20with%20box%20cutter.png)
+
+ - Step3:Solder the middle pad and pad 10.
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/sodder%20the%20middle%20pad%20and%20pad%2010.png)
+
+
+!!!warning
+    Be careful with the box cutter, it's easy to hurt yourself or the PCBA.
+
+**SPI pins**
+
+The SPI pins (SCK, MISO, MOSI) are routed to the ICSP pins by default. But for some boards, the SPI pins are located at D11~D13. if this happens, you need make some change to the PCBA. Take a look at the backside of the PCBA, there're three pads, MOSI, MISO and SCK, they are connected to A by default. You can change them to B if needed.
+
+!!!note
+    For Arduino UNO, Arduino Mega, Arduino Leonardo and any others AVR based Arduino boards, it works well by default setting.
+
+!!!warning
+    Be careful when you are going to change SPI pins, it's easy to hurt yourself or the PCBA.
+
+
+## Getting Started
+-----
+Here's a simple example to show you how CAN-BUS Shield works. In this example we need 2 pieces of CAN-BUS Shields as well as Arduino or Seeeduino.
+
+!!!note
+    This example is built under [Arduino IDE version 1.6.9](https://www.arduino.cc/download_handler.php?f=/arduino-1.6.9-windows.zip).
+
+
+**STEP1: What do we need**
+
+|Name|Function|Qty|Link|
+|----|--------|---|----|
+|CAN-BUS Shield|CAN Bus communication | 2 | [link](http://www.seeedstudio.com/depot/CANBUS-Shield-V12-p-2256.html) |
+|Seeeduino V4.2|Controller|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=2517)|
+|Jumper Wire|connection|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=234)|
+
+**STEP2: Hardware Connection**
+
+Insert each CAN-BUS Shield into Seeeduino V4.2, and connect the 2 CAN-BUS Shield together via 2 jumper wires. Shown as below images.
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/connection.png)
+
+!!!note
+    CAN_H to CAN_H, CAN_L to CAN_L
+
+**STEP3: Software**
+
+Please follow [how to install an arduino library](http://wiki.seeed.cc/How_to_install_Arduino_Library/) procedures to install CAN BUS shield library.
+
+
+Click on below button to download the library.
+
+[![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/download_library.png)](https://github.com/Seeed-Studio/CAN_BUS_Shield)
+
+Install the library to your Arduino IDE when it is downloaded.
+
+One of the node (a node means Seeeduino + CAN_BUS Shield) acts as master, the other acts as slaver. The master will send data to slaver constantly.
+
+!!!note
+    Each node can act as master before the code being uploaded.
+
+Open the **send** example (**File > Examples > CAN_BUS_Shield-master > send**) and upload to the **master**.
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/send%20example.png)
+---
+name: CAN-BUS Shield V1.2
+category: Shield
+bzurl: https://www.seeedstudio.com/CAN-BUS-Shield-V1.2-p-2256.html
+oldwikiname: CAN-BUS_Shield_V1.2
+prodimagename: Can_bus_shield_all.jpg
+surveyurl: https://www.research.net/r/can_bus_shield
+sku: 113030021
+---
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/Can_bus_shield_all.jpg)
+
+**CAN-BUS** is a common industrial bus because of its long travel distance, medium communication speed and high reliability. It is commonly found on modern machine tools, such as an automotive diagnostic bus.
+
+This CAN-BUS Shield adopts **MCP2515** CAN Bus controller with SPI interface and **MCP2551** CAN transceiver to give your Arduino/Seeeduino CAN-BUS capability. With an **OBD-II** converter cable added on and the OBD-II library imported, you are ready to build an onboard diagnostic device or data logger.
+
+**Version**
+
+This document applies to the following version of products:
+
+|Version|Released Date|How to Buy|
+|--------|-----------|-----------|
+|CAN BUS Shield V1.0 |Oct 14, 2012|![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/EOL.png)|
+|CAN BUS Shield V1.1 |Aug 10, 2013|![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/EOL.png)|
+|CAN BUS Shield V1.2|Jan 5, 2015|![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/EOL.png)|
+| CAN BUS Shield V2.0 | Aug 01,2017    |<a href="https://www.seeedstudio.com/CAN-BUS-Shield-V2-p-2921.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a>|
+
+
+
+**What's new in CAN BUS Shield V1.2**
+
+
+- Pads on the backside of PCBA
+- Change terminal resistor to 120 Ohm
+
+
+**Alternative Choice**
+
+
+If your project is space limited and also don't need other fuctions except CAN-BUS, here is a Grove CAN-BUS module which is Arduino compatible, more compact and cost effective, please click [here](https://www.seeedstudio.com/Serial-CAN-BUS-Module-based-on-MCP2551-and-MCP2515-p-2924.html) to visit its page.
+
+[![](https://files.seeedstudio.com/wiki/CAN-BUS-Shield-V2.0/img/canbus_arduino.png)](https://www.seeedstudio.com/Serial-CAN-BUS-Module-based-on-MCP2551-and-MCP2515-p-2924.html)
+
+**What if I want to connect this shield to my car**
+
+If you want to read data or control your car, there's an OBD>DB9 cable available for you, [this cable](https://www.seeedstudio.com/DB9-to-OBD2-Cable-With-Switch-p-2872.html) make easier to connect to OBD-connector and DB9-connector. This cable will also work with anything that has a OBD-connector. Add a power switch makes such a satisfying click.
+
+[![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/obd_cable.jpg)](https://www.seeedstudio.com/DB9-to-OBD2-Cable-With-Switch-p-2872.html)
+
+**USB-CAN Analyzer**
+
+If you want a CAN Bus Analyzer to debug your CAN Bus, this [USB-CAN Analyzer](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html) is recommended.
+
+[![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/usb_can.jpg)](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html)
+
+
+
+## Features
+-----
+
+- Implements CAN V2.0B speed up to **1 Mb/s**
+- SPI Interface speed up to **10 MHz**
+- Standard (**11 bit**) and extended (**29 bit**) data and remote frames
+- Two receive buffers with prioritized message storage
+- Industrial standard DB-9 connector
+- LED indicators
+
+!!!Note
+    CAN BUS Shield Work well with Arduino UNO (ATmega328), Arduino Mega (ATmega1280/2560) as well as Arduino Leonardo (ATmega32U4).
+
+## Hardware Overview
+-----
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/hardware_overview_1.png)
+
+1. **DB9 Interface** - to connect to OBDII Interface via a DBG-OBD Cable.
+2. **V_OBD** - It gets power from OBDII Interface (from DB9)
+3. **Led Indicator**:
+    - **PWR**: power
+    - **TX**: blink when the data is sending
+    - **RX**: blink when there's data receiving
+    - **INT**: data interrupt
+4. **Terminal** - CAN_H and CAN_L
+5. **Arduino UNO pin out**
+6. **Serial Grove connector**
+7. **I2C Grove connector**
+8. **ICSP pins**
+9. **IC** - MCP2551, a high-speed CAN transceiver ([datasheet](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/resource/Mcp2551.pdf))
+10. **IC** - MCP2515, stand-alone CAN controller with SPI interface ([datasheet](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/resource/MCP2515.pdf))
+
+
+!!!warning
+    When you use more than two CAN Bus Shield in one net, you should take the impedance into consideration.
+    You should either cut P1 in the PCB with a knife, or just remove R3 on the PCB.
+
+**Pin map**
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/PINMAP.png)
+
+!!!note
+    The FREE pin is available for the other usages.
+
+**DB9&OBDii Interface**
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/OBD.png)
+
+**CS pin**
+
+SPI_CS pin of V1.2 is connected to **D9** by default. If you want to change to **D10**, please follow below instructions.
+
+- Step1: Take a look at the backside of the PCBA, you will find a pad named CS.
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/hardware_overview_pins_setting.png)
+
+ - Step2: Cut the wire between pad9 and the middle pad.
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/cut%20this%20wire%20with%20box%20cutter.png)
+
+ - Step3:Solder the middle pad and pad 10.
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/sodder%20the%20middle%20pad%20and%20pad%2010.png)
+
+
+!!!warning
+    Be careful with the box cutter, it's easy to hurt yourself or the PCBA.
+
+**SPI pins**
+
+The SPI pins (SCK, MISO, MOSI) are routed to the ICSP pins by default. But for some boards, the SPI pins are located at D11~D13. if this happens, you need make some change to the PCBA. Take a look at the backside of the PCBA, there're three pads, MOSI, MISO and SCK, they are connected to A by default. You can change them to B if needed.
+
+!!!note
+    For Arduino UNO, Arduino Mega, Arduino Leonardo and any others AVR based Arduino boards, it works well by default setting.
+
+!!!warning
+    Be careful when you are going to change SPI pins, it's easy to hurt yourself or the PCBA.
+
+
+## Getting Started
+-----
+Here's a simple example to show you how CAN-BUS Shield works. In this example we need 2 pieces of CAN-BUS Shields as well as Arduino or Seeeduino.
+
+!!!note
+    This example is built under [Arduino IDE version 1.6.9](https://www.arduino.cc/download_handler.php?f=/arduino-1.6.9-windows.zip).
+
+
+**STEP1: What do we need**
+
+|Name|Function|Qty|Link|
+|----|--------|---|----|
+|CAN-BUS Shield|CAN Bus communication | 2 | [link](http://www.seeedstudio.com/depot/CANBUS-Shield-V12-p-2256.html) |
+|Seeeduino V4.2|Controller|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=2517)|
+|Jumper Wire|connection|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=234)|
+
+**STEP2: Hardware Connection**
+
+Insert each CAN-BUS Shield into Seeeduino V4.2, and connect the 2 CAN-BUS Shield together via 2 jumper wires. Shown as below images.
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/connection.png)
+
+!!!note
+    CAN_H to CAN_H, CAN_L to CAN_L
+
+**STEP3: Software**
+
+Please follow [how to install an arduino library](http://wiki.seeed.cc/How_to_install_Arduino_Library/) procedures to install CAN BUS shield library.
+
+
+Click on below button to download the library.
+
+[![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/download_library.png)](https://github.com/Seeed-Studio/CAN_BUS_Shield)
+
+Install the library to your Arduino IDE when it is downloaded.
+
+One of the node (a node means Seeeduino + CAN_BUS Shield) acts as master, the other acts as slaver. The master will send data to slaver constantly.
+
+!!!note
+    Each node can act as master before the code being uploaded.
+
+Open the **send** example (**File > Examples > CAN_BUS_Shield-master > send**) and upload to the **master**.
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/send%20example.png)
+---
+name: CAN-BUS Shield V1.2
+category: Shield
+bzurl: https://www.seeedstudio.com/CAN-BUS-Shield-V1.2-p-2256.html
+oldwikiname: CAN-BUS_Shield_V1.2
+prodimagename: Can_bus_shield_all.jpg
+surveyurl: https://www.research.net/r/can_bus_shield
+sku: 113030021
+---
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/Can_bus_shield_all.jpg)
+
+**CAN-BUS** is a common industrial bus because of its long travel distance, medium communication speed and high reliability. It is commonly found on modern machine tools, such as an automotive diagnostic bus.
+
+This CAN-BUS Shield adopts **MCP2515** CAN Bus controller with SPI interface and **MCP2551** CAN transceiver to give your Arduino/Seeeduino CAN-BUS capability. With an **OBD-II** converter cable added on and the OBD-II library imported, you are ready to build an onboard diagnostic device or data logger.
+
+**Version**
+
+This document applies to the following version of products:
+
+|Version|Released Date|How to Buy|
+|--------|-----------|-----------|
+|CAN BUS Shield V1.0 |Oct 14, 2012|![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/EOL.png)|
+|CAN BUS Shield V1.1 |Aug 10, 2013|![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/EOL.png)|
+|CAN BUS Shield V1.2|Jan 5, 2015|![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/EOL.png)|
+| CAN BUS Shield V2.0 | Aug 01,2017    |<a href="https://www.seeedstudio.com/CAN-BUS-Shield-V2-p-2921.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a>|
+
+
+
+**What's new in CAN BUS Shield V1.2**
+
+
+- Pads on the backside of PCBA
+- Change terminal resistor to 120 Ohm
+
+
+**Alternative Choice**
+
+
+If your project is space limited and also don't need other fuctions except CAN-BUS, here is a Grove CAN-BUS module which is Arduino compatible, more compact and cost effective, please click [here](https://www.seeedstudio.com/Serial-CAN-BUS-Module-based-on-MCP2551-and-MCP2515-p-2924.html) to visit its page.
+
+[![](https://files.seeedstudio.com/wiki/CAN-BUS-Shield-V2.0/img/canbus_arduino.png)](https://www.seeedstudio.com/Serial-CAN-BUS-Module-based-on-MCP2551-and-MCP2515-p-2924.html)
+
+**What if I want to connect this shield to my car**
+
+If you want to read data or control your car, there's an OBD>DB9 cable available for you, [this cable](https://www.seeedstudio.com/DB9-to-OBD2-Cable-With-Switch-p-2872.html) make easier to connect to OBD-connector and DB9-connector. This cable will also work with anything that has a OBD-connector. Add a power switch makes such a satisfying click.
+
+[![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/obd_cable.jpg)](https://www.seeedstudio.com/DB9-to-OBD2-Cable-With-Switch-p-2872.html)
+
+**USB-CAN Analyzer**
+
+If you want a CAN Bus Analyzer to debug your CAN Bus, this [USB-CAN Analyzer](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html) is recommended.
+
+[![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/usb_can.jpg)](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html)
+
+
+
+## Features
+-----
+
+- Implements CAN V2.0B speed up to **1 Mb/s**
+- SPI Interface speed up to **10 MHz**
+- Standard (**11 bit**) and extended (**29 bit**) data and remote frames
+- Two receive buffers with prioritized message storage
+- Industrial standard DB-9 connector
+- LED indicators
+
+!!!Note
+    CAN BUS Shield Work well with Arduino UNO (ATmega328), Arduino Mega (ATmega1280/2560) as well as Arduino Leonardo (ATmega32U4).
+
+## Hardware Overview
+-----
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/hardware_overview_1.png)
+
+1. **DB9 Interface** - to connect to OBDII Interface via a DBG-OBD Cable.
+2. **V_OBD** - It gets power from OBDII Interface (from DB9)
+3. **Led Indicator**:
+    - **PWR**: power
+    - **TX**: blink when the data is sending
+    - **RX**: blink when there's data receiving
+    - **INT**: data interrupt
+4. **Terminal** - CAN_H and CAN_L
+5. **Arduino UNO pin out**
+6. **Serial Grove connector**
+7. **I2C Grove connector**
+8. **ICSP pins**
+9. **IC** - MCP2551, a high-speed CAN transceiver ([datasheet](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/resource/Mcp2551.pdf))
+10. **IC** - MCP2515, stand-alone CAN controller with SPI interface ([datasheet](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/resource/MCP2515.pdf))
+
+
+!!!warning
+    When you use more than two CAN Bus Shield in one net, you should take the impedance into consideration.
+    You should either cut P1 in the PCB with a knife, or just remove R3 on the PCB.
+
+**Pin map**
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/PINMAP.png)
+
+!!!note
+    The FREE pin is available for the other usages.
+
+**DB9&OBDii Interface**
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/OBD.png)
+
+**CS pin**
+
+SPI_CS pin of V1.2 is connected to **D9** by default. If you want to change to **D10**, please follow below instructions.
+
+- Step1: Take a look at the backside of the PCBA, you will find a pad named CS.
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/hardware_overview_pins_setting.png)
+
+ - Step2: Cut the wire between pad9 and the middle pad.
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/cut%20this%20wire%20with%20box%20cutter.png)
+
+ - Step3:Solder the middle pad and pad 10.
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/sodder%20the%20middle%20pad%20and%20pad%2010.png)
+
+
+!!!warning
+    Be careful with the box cutter, it's easy to hurt yourself or the PCBA.
+
+**SPI pins**
+
+The SPI pins (SCK, MISO, MOSI) are routed to the ICSP pins by default. But for some boards, the SPI pins are located at D11~D13. if this happens, you need make some change to the PCBA. Take a look at the backside of the PCBA, there're three pads, MOSI, MISO and SCK, they are connected to A by default. You can change them to B if needed.
+
+!!!note
+    For Arduino UNO, Arduino Mega, Arduino Leonardo and any others AVR based Arduino boards, it works well by default setting.
+
+!!!warning
+    Be careful when you are going to change SPI pins, it's easy to hurt yourself or the PCBA.
+
+
+## Getting Started
+-----
+Here's a simple example to show you how CAN-BUS Shield works. In this example we need 2 pieces of CAN-BUS Shields as well as Arduino or Seeeduino.
+
+!!!note
+    This example is built under [Arduino IDE version 1.6.9](https://www.arduino.cc/download_handler.php?f=/arduino-1.6.9-windows.zip).
+
+
+**STEP1: What do we need**
+
+|Name|Function|Qty|Link|
+|----|--------|---|----|
+|CAN-BUS Shield|CAN Bus communication | 2 | [link](http://www.seeedstudio.com/depot/CANBUS-Shield-V12-p-2256.html) |
+|Seeeduino V4.2|Controller|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=2517)|
+|Jumper Wire|connection|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=234)|
+
+**STEP2: Hardware Connection**
+
+Insert each CAN-BUS Shield into Seeeduino V4.2, and connect the 2 CAN-BUS Shield together via 2 jumper wires. Shown as below images.
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/connection.png)
+
+!!!note
+    CAN_H to CAN_H, CAN_L to CAN_L
+
+**STEP3: Software**
+
+Please follow [how to install an arduino library](http://wiki.seeed.cc/How_to_install_Arduino_Library/) procedures to install CAN BUS shield library.
+
+
+Click on below button to download the library.
+
+[![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/download_library.png)](https://github.com/Seeed-Studio/CAN_BUS_Shield)
+
+Install the library to your Arduino IDE when it is downloaded.
+
+One of the node (a node means Seeeduino + CAN_BUS Shield) acts as master, the other acts as slaver. The master will send data to slaver constantly.
+
+!!!note
+    Each node can act as master before the code being uploaded.
+
+Open the **send** example (**File > Examples > CAN_BUS_Shield-master > send**) and upload to the **master**.
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/send%20example.png)
+---
+name: CAN-BUS Shield V1.2
+category: Shield
+bzurl: https://www.seeedstudio.com/CAN-BUS-Shield-V1.2-p-2256.html
+oldwikiname: CAN-BUS_Shield_V1.2
+prodimagename: Can_bus_shield_all.jpg
+surveyurl: https://www.research.net/r/can_bus_shield
+sku: 113030021
+---
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/Can_bus_shield_all.jpg)
+
+**CAN-BUS** is a common industrial bus because of its long travel distance, medium communication speed and high reliability. It is commonly found on modern machine tools, such as an automotive diagnostic bus.
+
+This CAN-BUS Shield adopts **MCP2515** CAN Bus controller with SPI interface and **MCP2551** CAN transceiver to give your Arduino/Seeeduino CAN-BUS capability. With an **OBD-II** converter cable added on and the OBD-II library imported, you are ready to build an onboard diagnostic device or data logger.
+
+**Version**
+
+This document applies to the following version of products:
+
+|Version|Released Date|How to Buy|
+|--------|-----------|-----------|
+|CAN BUS Shield V1.0 |Oct 14, 2012|![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/EOL.png)|
+|CAN BUS Shield V1.1 |Aug 10, 2013|![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/EOL.png)|
+|CAN BUS Shield V1.2|Jan 5, 2015|![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/EOL.png)|
+| CAN BUS Shield V2.0 | Aug 01,2017    |<a href="https://www.seeedstudio.com/CAN-BUS-Shield-V2-p-2921.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a>|
+
+
+
+**What's new in CAN BUS Shield V1.2**
+
+
+- Pads on the backside of PCBA
+- Change terminal resistor to 120 Ohm
+
+
+**Alternative Choice**
+
+
+If your project is space limited and also don't need other fuctions except CAN-BUS, here is a Grove CAN-BUS module which is Arduino compatible, more compact and cost effective, please click [here](https://www.seeedstudio.com/Serial-CAN-BUS-Module-based-on-MCP2551-and-MCP2515-p-2924.html) to visit its page.
+
+[![](https://files.seeedstudio.com/wiki/CAN-BUS-Shield-V2.0/img/canbus_arduino.png)](https://www.seeedstudio.com/Serial-CAN-BUS-Module-based-on-MCP2551-and-MCP2515-p-2924.html)
+
+**What if I want to connect this shield to my car**
+
+If you want to read data or control your car, there's an OBD>DB9 cable available for you, [this cable](https://www.seeedstudio.com/DB9-to-OBD2-Cable-With-Switch-p-2872.html) make easier to connect to OBD-connector and DB9-connector. This cable will also work with anything that has a OBD-connector. Add a power switch makes such a satisfying click.
+
+[![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/obd_cable.jpg)](https://www.seeedstudio.com/DB9-to-OBD2-Cable-With-Switch-p-2872.html)
+
+**USB-CAN Analyzer**
+
+If you want a CAN Bus Analyzer to debug your CAN Bus, this [USB-CAN Analyzer](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html) is recommended.
+
+[![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/usb_can.jpg)](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html)
+
+
+
+## Features
+-----
+
+- Implements CAN V2.0B speed up to **1 Mb/s**
+- SPI Interface speed up to **10 MHz**
+- Standard (**11 bit**) and extended (**29 bit**) data and remote frames
+- Two receive buffers with prioritized message storage
+- Industrial standard DB-9 connector
+- LED indicators
+
+!!!Note
+    CAN BUS Shield Work well with Arduino UNO (ATmega328), Arduino Mega (ATmega1280/2560) as well as Arduino Leonardo (ATmega32U4).
+
+## Hardware Overview
+-----
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/hardware_overview_1.png)
+
+1. **DB9 Interface** - to connect to OBDII Interface via a DBG-OBD Cable.
+2. **V_OBD** - It gets power from OBDII Interface (from DB9)
+3. **Led Indicator**:
+    - **PWR**: power
+    - **TX**: blink when the data is sending
+    - **RX**: blink when there's data receiving
+    - **INT**: data interrupt
+4. **Terminal** - CAN_H and CAN_L
+5. **Arduino UNO pin out**
+6. **Serial Grove connector**
+7. **I2C Grove connector**
+8. **ICSP pins**
+9. **IC** - MCP2551, a high-speed CAN transceiver ([datasheet](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/resource/Mcp2551.pdf))
+10. **IC** - MCP2515, stand-alone CAN controller with SPI interface ([datasheet](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/resource/MCP2515.pdf))
+
+
+!!!warning
+    When you use more than two CAN Bus Shield in one net, you should take the impedance into consideration.
+    You should either cut P1 in the PCB with a knife, or just remove R3 on the PCB.
+
+**Pin map**
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/PINMAP.png)
+
+!!!note
+    The FREE pin is available for the other usages.
+
+**DB9&OBDii Interface**
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/OBD.png)
+
+**CS pin**
+
+SPI_CS pin of V1.2 is connected to **D9** by default. If you want to change to **D10**, please follow below instructions.
+
+- Step1: Take a look at the backside of the PCBA, you will find a pad named CS.
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/hardware_overview_pins_setting.png)
+
+ - Step2: Cut the wire between pad9 and the middle pad.
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/cut%20this%20wire%20with%20box%20cutter.png)
+
+ - Step3:Solder the middle pad and pad 10.
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/sodder%20the%20middle%20pad%20and%20pad%2010.png)
+
+
+!!!warning
+    Be careful with the box cutter, it's easy to hurt yourself or the PCBA.
+
+**SPI pins**
+
+The SPI pins (SCK, MISO, MOSI) are routed to the ICSP pins by default. But for some boards, the SPI pins are located at D11~D13. if this happens, you need make some change to the PCBA. Take a look at the backside of the PCBA, there're three pads, MOSI, MISO and SCK, they are connected to A by default. You can change them to B if needed.
+
+!!!note
+    For Arduino UNO, Arduino Mega, Arduino Leonardo and any others AVR based Arduino boards, it works well by default setting.
+
+!!!warning
+    Be careful when you are going to change SPI pins, it's easy to hurt yourself or the PCBA.
+
+
+## Getting Started
+-----
+Here's a simple example to show you how CAN-BUS Shield works. In this example we need 2 pieces of CAN-BUS Shields as well as Arduino or Seeeduino.
+
+!!!note
+    This example is built under [Arduino IDE version 1.6.9](https://www.arduino.cc/download_handler.php?f=/arduino-1.6.9-windows.zip).
+
+
+**STEP1: What do we need**
+
+|Name|Function|Qty|Link|
+|----|--------|---|----|
+|CAN-BUS Shield|CAN Bus communication | 2 | [link](http://www.seeedstudio.com/depot/CANBUS-Shield-V12-p-2256.html) |
+|Seeeduino V4.2|Controller|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=2517)|
+|Jumper Wire|connection|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=234)|
+
+**STEP2: Hardware Connection**
+
+Insert each CAN-BUS Shield into Seeeduino V4.2, and connect the 2 CAN-BUS Shield together via 2 jumper wires. Shown as below images.
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/connection.png)
+
+!!!note
+    CAN_H to CAN_H, CAN_L to CAN_L
+
+**STEP3: Software**
+
+Please follow [how to install an arduino library](http://wiki.seeed.cc/How_to_install_Arduino_Library/) procedures to install CAN BUS shield library.
+
+
+Click on below button to download the library.
+
+[![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/download_library.png)](https://github.com/Seeed-Studio/CAN_BUS_Shield)
+
+Install the library to your Arduino IDE when it is downloaded.
+
+One of the node (a node means Seeeduino + CAN_BUS Shield) acts as master, the other acts as slaver. The master will send data to slaver constantly.
+
+!!!note
+    Each node can act as master before the code being uploaded.
+
+Open the **send** example (**File > Examples > CAN_BUS_Shield-master > send**) and upload to the **master**.
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/send%20example.png)
+---
+name: CAN-BUS Shield V1.2
+category: Shield
+bzurl: https://www.seeedstudio.com/CAN-BUS-Shield-V1.2-p-2256.html
+oldwikiname: CAN-BUS_Shield_V1.2
+prodimagename: Can_bus_shield_all.jpg
+surveyurl: https://www.research.net/r/can_bus_shield
+sku: 113030021
+---
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/Can_bus_shield_all.jpg)
+
+**CAN-BUS** is a common industrial bus because of its long travel distance, medium communication speed and high reliability. It is commonly found on modern machine tools, such as an automotive diagnostic bus.
+
+This CAN-BUS Shield adopts **MCP2515** CAN Bus controller with SPI interface and **MCP2551** CAN transceiver to give your Arduino/Seeeduino CAN-BUS capability. With an **OBD-II** converter cable added on and the OBD-II library imported, you are ready to build an onboard diagnostic device or data logger.
+
+**Version**
+
+This document applies to the following version of products:
+
+|Version|Released Date|How to Buy|
+|--------|-----------|-----------|
+|CAN BUS Shield V1.0 |Oct 14, 2012|![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/EOL.png)|
+|CAN BUS Shield V1.1 |Aug 10, 2013|![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/EOL.png)|
+|CAN BUS Shield V1.2|Jan 5, 2015|![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/EOL.png)|
+| CAN BUS Shield V2.0 | Aug 01,2017    |<a href="https://www.seeedstudio.com/CAN-BUS-Shield-V2-p-2921.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a>|
+
+
+
+**What's new in CAN BUS Shield V1.2**
+
+
+- Pads on the backside of PCBA
+- Change terminal resistor to 120 Ohm
+
+
+**Alternative Choice**
+
+
+If your project is space limited and also don't need other fuctions except CAN-BUS, here is a Grove CAN-BUS module which is Arduino compatible, more compact and cost effective, please click [here](https://www.seeedstudio.com/Serial-CAN-BUS-Module-based-on-MCP2551-and-MCP2515-p-2924.html) to visit its page.
+
+[![](https://files.seeedstudio.com/wiki/CAN-BUS-Shield-V2.0/img/canbus_arduino.png)](https://www.seeedstudio.com/Serial-CAN-BUS-Module-based-on-MCP2551-and-MCP2515-p-2924.html)
+
+**What if I want to connect this shield to my car**
+
+If you want to read data or control your car, there's an OBD>DB9 cable available for you, [this cable](https://www.seeedstudio.com/DB9-to-OBD2-Cable-With-Switch-p-2872.html) make easier to connect to OBD-connector and DB9-connector. This cable will also work with anything that has a OBD-connector. Add a power switch makes such a satisfying click.
+
+[![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/obd_cable.jpg)](https://www.seeedstudio.com/DB9-to-OBD2-Cable-With-Switch-p-2872.html)
+
+**USB-CAN Analyzer**
+
+If you want a CAN Bus Analyzer to debug your CAN Bus, this [USB-CAN Analyzer](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html) is recommended.
+
+[![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/usb_can.jpg)](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html)
+
+
+
+## Features
+-----
+
+- Implements CAN V2.0B speed up to **1 Mb/s**
+- SPI Interface speed up to **10 MHz**
+- Standard (**11 bit**) and extended (**29 bit**) data and remote frames
+- Two receive buffers with prioritized message storage
+- Industrial standard DB-9 connector
+- LED indicators
+
+!!!Note
+    CAN BUS Shield Work well with Arduino UNO (ATmega328), Arduino Mega (ATmega1280/2560) as well as Arduino Leonardo (ATmega32U4).
+
+## Hardware Overview
+-----
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/hardware_overview_1.png)
+
+1. **DB9 Interface** - to connect to OBDII Interface via a DBG-OBD Cable.
+2. **V_OBD** - It gets power from OBDII Interface (from DB9)
+3. **Led Indicator**:
+    - **PWR**: power
+    - **TX**: blink when the data is sending
+    - **RX**: blink when there's data receiving
+    - **INT**: data interrupt
+4. **Terminal** - CAN_H and CAN_L
+5. **Arduino UNO pin out**
+6. **Serial Grove connector**
+7. **I2C Grove connector**
+8. **ICSP pins**
+9. **IC** - MCP2551, a high-speed CAN transceiver ([datasheet](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/resource/Mcp2551.pdf))
+10. **IC** - MCP2515, stand-alone CAN controller with SPI interface ([datasheet](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/resource/MCP2515.pdf))
+
+
+!!!warning
+    When you use more than two CAN Bus Shield in one net, you should take the impedance into consideration.
+    You should either cut P1 in the PCB with a knife, or just remove R3 on the PCB.
+
+**Pin map**
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/PINMAP.png)
+
+!!!note
+    The FREE pin is available for the other usages.
+
+**DB9&OBDii Interface**
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/OBD.png)
+
+**CS pin**
+
+SPI_CS pin of V1.2 is connected to **D9** by default. If you want to change to **D10**, please follow below instructions.
+
+- Step1: Take a look at the backside of the PCBA, you will find a pad named CS.
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/hardware_overview_pins_setting.png)
+
+ - Step2: Cut the wire between pad9 and the middle pad.
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/cut%20this%20wire%20with%20box%20cutter.png)
+
+ - Step3:Solder the middle pad and pad 10.
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/sodder%20the%20middle%20pad%20and%20pad%2010.png)
+
+
+!!!warning
+    Be careful with the box cutter, it's easy to hurt yourself or the PCBA.
+
+**SPI pins**
+
+The SPI pins (SCK, MISO, MOSI) are routed to the ICSP pins by default. But for some boards, the SPI pins are located at D11~D13. if this happens, you need make some change to the PCBA. Take a look at the backside of the PCBA, there're three pads, MOSI, MISO and SCK, they are connected to A by default. You can change them to B if needed.
+
+!!!note
+    For Arduino UNO, Arduino Mega, Arduino Leonardo and any others AVR based Arduino boards, it works well by default setting.
+
+!!!warning
+    Be careful when you are going to change SPI pins, it's easy to hurt yourself or the PCBA.
+
+
+## Getting Started
+-----
+Here's a simple example to show you how CAN-BUS Shield works. In this example we need 2 pieces of CAN-BUS Shields as well as Arduino or Seeeduino.
+
+!!!note
+    This example is built under [Arduino IDE version 1.6.9](https://www.arduino.cc/download_handler.php?f=/arduino-1.6.9-windows.zip).
+
+
+**STEP1: What do we need**
+
+|Name|Function|Qty|Link|
+|----|--------|---|----|
+|CAN-BUS Shield|CAN Bus communication | 2 | [link](http://www.seeedstudio.com/depot/CANBUS-Shield-V12-p-2256.html) |
+|Seeeduino V4.2|Controller|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=2517)|
+|Jumper Wire|connection|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=234)|
+
+**STEP2: Hardware Connection**
+
+Insert each CAN-BUS Shield into Seeeduino V4.2, and connect the 2 CAN-BUS Shield together via 2 jumper wires. Shown as below images.
+
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/connection.png)
+
+!!!note
+    CAN_H to CAN_H, CAN_L to CAN_L
+
+**STEP3: Software**
+
+Please follow [how to install an arduino library](http://wiki.seeed.cc/How_to_install_Arduino_Library/) procedures to install CAN BUS shield library.
+
+
+Click on below button to download the library.
+
+[![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/download_library.png)](https://github.com/Seeed-Studio/CAN_BUS_Shield)
+
+Install the library to your Arduino IDE when it is downloaded.
+
+One of the node (a node means Seeeduino + CAN_BUS Shield) acts as master, the other acts as slaver. The master will send data to slaver constantly.
+
+!!!note
+    Each node can act as master before the code being uploaded.
+
+Open the **send** example (**File > Examples > CAN_BUS_Shield-master > send**) and upload to the **master**.
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/send%20example.png)
+---
 name: CAN-BUS Shield V2.0
 category: Shield
 bzurl: https://www.seeedstudio.com/CAN-BUS-Shield-V2-p-2921.html
