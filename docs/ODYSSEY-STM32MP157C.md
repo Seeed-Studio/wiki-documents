@@ -351,6 +351,7 @@ sudo reboot
 Then activate the bluetooth by the command:
 
 ```
+sudo apt -y install bluetooth bluez bluez-tools rfkill
 systemctl is-enabled bluetooth.service
 ```
 
