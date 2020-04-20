@@ -4,7 +4,7 @@ This repo introduce how to install the built-in 3-Axis Digital Acclerometer(LIS3
 
 ## Installing the 3-Axis Digital Accelerometer(LIS3DHTR) Library For Wio Terminal
 
-1. Visit the [Seeed_Arduino_LIS3DHTR](https://github.com/Seeed-Studio/Seeed_Arduino_LIS3DHTR/tree/beta) repositories and download the entire repo to your local drive.
+1. Visit the [Seeed_Arduino_LIS3DHTR](https://github.com/Seeed-Studio/Seeed_Arduino_LIS3DHTR/tree/master) repositories and download the entire repo to your local drive.
 
 2. Now, the TFT LCD library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_LCD` file that you've have just downloaded.
 
