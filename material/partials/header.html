@@ -70,14 +70,14 @@
           </span>
           {% endfor %} {% endif %} {{ page.title | default(config.site_name, true) }} {% endblock %}
         </span>
-        <span class="language mLanguage">
-          <a href="javascript:;" class="en">EN</a>
+        <span class="language mLanguage" id="m-language-site-nav">
+          <!-- <a href="javascript:;" class="en">EN</a>
           <a href="javascript:;" class="cn">中文</a>
           <a href="javascript:;" class="jp">日本語</a>
-          <a href="javascript:;" class="vn">VN</a>
+          <a href="javascript:;" class="vn">VN</a> -->
         </span>
       </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
+      <div class="md-flex__cell md-flex__cell--shrink" >
         {% block search_box %}
         <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
         {% include "partials/search.html" %} {% endblock %}
@@ -85,12 +85,12 @@
       {% if config.repo_url %}
       <div class="md-flex__cell md-flex__cell--shrink">
         <div class="md-header-nav__source">
-          {% include "partials/source.html" %}
-          <span class="language">
-            <a href="javascript:;" class="en">EN</a>
+          <!-- {% include "partials/source.html" %} -->
+          <span class="language" id="language-site-nav">
+            <!-- <a href="javascript:;" class="en">EN</a>
             <a href="javascript:;" class="cn">中文</a>
             <a href="javascript:;" class="jp">日本語</a>
-            <a href="javascript:;" class="vn">VN</a>
+            <a href="javascript:;" class="vn">VN</a> -->
           </span>
         </div>
       </div>
