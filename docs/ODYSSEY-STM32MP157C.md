@@ -351,8 +351,7 @@ sudo reboot
 Then activate the bluetooth by the command:
 
 ```
-sudo systemctl enable bt-auto-connect.service
-sudo reboot -f
+systemctl is-enabled bluetooth.service
 ```
 
 **Connect the bluetooth**
@@ -362,7 +361,7 @@ sudo reboot -f
 the bluetoothctl is a tool that controls the Bluetooth to connect the other Bluetooth.
 
 ```
-respeaker@v2:~$ bluetoothctl
+debian@npi:~$ bluetoothctl
 [NEW] Controller 43:43:A0:12:1F:AC ReSpeaker-1FAC [default]
 Agent registered
 [bluetooth]# scan on
