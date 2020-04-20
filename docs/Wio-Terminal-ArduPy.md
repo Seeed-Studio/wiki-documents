@@ -95,7 +95,7 @@ Aip is one of the key feature of ArduPy, which can be used to convert Arduino Li
 ./aip install Seeed-Studio/seeed-ardupy-ultrasonic-sensor
 ```
 
-**Note:** For Mac OS, under the same location use `chmod + x aip_mac` to obtain permission and please use **`aip_mac`** instead. 
+**Note: Under the same location use `chmod + x aip` to obtain permission.** For **Mac Os**, please use **`aip_mac`** to replace `aip`.
 
 2.Build the firmware:
 
@@ -110,6 +110,8 @@ Aip is one of the key feature of ArduPy, which can be used to convert Arduino Li
 ```sh
 ./aip flash
 ```
+
+<div align=center><img width = 500 src="https://s3-us-west-2.amazonaws.com/files.seeedstudio.com/wiki/Wio-Terminal/img/aip-install-n.gif"/></div>
 
 !!!Note
         You can also use `aip build clean` before `aip build` to remove any caches from before to avoid error.
