@@ -319,23 +319,16 @@ Now, simply click the "Upload" button in the environment. Wait a few seconds and
 
 ## The sample application
 
+ - [How to use Seeeduino XIAO to log in to your Raspberry PI](http://wiki.seeedstudio.com/How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI)
 
- - [How to use Seeeduino XIAO to log in to your Raspberry PI](https://github.com/SeeedDocument/Seeeduino-XIAO/blob/master/How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI.md)
-
-
-
-- [SPI Communication Interface](https://github.com/SeeedDocument/Seeeduino-XIAO/blob/master/SPI-Communication-Interface.md)
-
-
-
+- [SPI Communication Interface](http://wiki.seeedstudio.com/XIAO-SPI-Communication-Interface)
 
 
 ## Resourses
 
-- **[PDF]** [Seeeduino XIAO](https://github.com/SeeedDocument/Seeeduino-XIAO/raw/master/res/Seeeduino-XIAO-v1.0-SCH-191112.pdf)
+- **[PDF]** [Seeeduino XIAO](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-v1.0-SCH-191112.pdf)
 
-- **[PDF]** [ATSAMD218A-MU datasheet](https://github.com/SeeedDocument/Seeeduino-XIAO/raw/master/res/ATSAMD21G18A-MU-Datasheet.pdf)
-
+- **[PDF]** [ATSAMD218A-MU datasheet](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/ATSAMD21G18A-MU-Datasheet.pdf)
 
 
 ## Tech Support
