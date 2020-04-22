@@ -370,22 +370,24 @@ ul {
   }
 }
 
+
 .language{
   top: 1rem;
   width: 5rem;
-  height: 3rem;
-  text-align: center;
+  height: auto;
+  max-height: 3rem;
   overflow: hidden;
+  text-align: center;
   border-radius: 3px;
-  transition: ease height .3s;
+  transition: ease-in max-height .3s;
   background: #5c8531;
   box-shadow: 0 2px 5px #8cbc59;
 }
 .language:hover{
-  height: 12rem;   
-
+  max-height: initial;   
 }
-.language .en,.language .cn,.language .jp,.language .vn,.language>a {
+
+.language>a:first-child {
   display: block!important;
   color: #fff;
   cursor: pointer;
@@ -393,7 +395,20 @@ ul {
   line-height: 3rem;
   box-sizing: border-box;
 }
-.language .en:hover,.language .cn:hover,.language .jp:hover,.language .vn:hover,.language>a:hover{
+.language>a:nth-child(n+2) {
+  display: block!important;
+  color: #fff;
+  cursor: pointer;
+  height: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: ease all .2s;
+}
+.language:hover>a{
+  height: 3rem;
+  line-height: 3rem;
+  opacity: 1;
+}
+.language>a:hover{
   background: #8cbc59;
-  opacity: 1!important;
 }

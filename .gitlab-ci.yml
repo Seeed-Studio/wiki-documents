@@ -2,7 +2,6 @@ build:
   tags:
     - nas
   script:
-    - mount -t cifs  -o username=seeed,password=migse666,vers=2.0,noauto,user  //192.168.5.153/web /mnt
-    - mkdocs build --clean
     - ls -l /mnt
-    - ls -l site/* 
+    - mkdocs build --clean
+    - cp -rf site/*  /mnt/b/wiki.seeedstudio.com
