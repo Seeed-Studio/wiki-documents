@@ -1,6 +1,6 @@
 ---
-name: Grove Starter Kit for BeagleBone Green
-category: BeagleBone
+name: Grove Starter Kit for BeagleBone® Green
+category: BeagleBone®
 bzurl: https://www.seeedstudio.com/Grove-Starter-Kit-for-SeeedStudio-BeagleBone-Green-p-2526.html
 oldwikiname: Grove_Starter_Kit_for_BeagleBone_Green
 prodimagename: Grove_bbg_start_kit.jpg
@@ -11,7 +11,7 @@ sku: 110060131
 
 ![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_for_BeagleBone_Green/img/Grove_bbg_start_kit.jpg)
 
-Grove Starter Kit for BeagleBone Green is an entry-level kit for beginners, which can help you explore BBG and create innovative projects. It's a best choice for novice to develop some cool projects and build prototype built in BBG. Here are a collection of sensors, actuators and shields that we have had success using with BeagleBone Green.
+Grove Starter Kit for BeagleBone® Green is an entry-level kit for beginners, which can help you explore BBG and create innovative projects. It's a best choice for novice to develop some cool projects and build prototype built in BBG. Here are a collection of sensors, actuators and shields that we have had success using with BeagleBone® Green.
 
 [![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Grove-Starter-Kit-for-SeeedStudio-BeagleBone-Green-p-2526.html)
 
@@ -19,7 +19,7 @@ Grove Starter Kit for BeagleBone Green is an entry-level kit for beginners, whic
 Application Ideas
 -----------------
 
-If you want to make some awesome projects with Beaglebone Green and Groves, here are some projects for your reference.
+If you want to make some awesome projects with BeagleBone® Green and Groves, here are some projects for your reference.
 
 | **Smart Light Demo with BBG & BBG Start Kit(HA)**                                                         | **An IoT Application with BBG & BBG Start Kit**                        |
 |-----------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------|
@@ -162,7 +162,7 @@ Examples
 --------
 
 To begin editing programs that live on your board, you can use the Cloud9 IDE.
-As a simple exercise to become familiar with Cloud9 IDE, creating a simple application to blink one of the 4 user programmable LEDs on the BeagleBone is a good start.
+As a simple exercise to become familiar with Cloud9 IDE, creating a simple application to blink one of the 4 user programmable LEDs on the BeagleBone® is a good start.
 
 If this is your first time to use Cloud9 IDE, please follow this [**link**](/BeagleBone_Green).
 
@@ -185,7 +185,7 @@ import time
 import Adafruit_BBIO.GPIO as GPIO
  
 # Note: Use P9_22(UART2_RXD) as GPIO.
-# Connect the Grove Button to UART Grove port of Beaglebone Green.
+# Connect the Grove Button to UART Grove port of BeagleBone® Green.
 Button = "P9_22"            # GPIO P9_22
 GPIO.setup(Button, GPIO.IN)
  

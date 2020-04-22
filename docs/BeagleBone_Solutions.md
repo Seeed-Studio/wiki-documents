@@ -1,15 +1,15 @@
 ---
-name: BeagleBone Introduction
+name: BeagleBone® Introduction
 nointro:
 ---
 
-#**BeagleBone Solutions**
+#**BeagleBone® Solutions**
 ##**An Open-source Embedded Platform Powerful Enough for Developers, but Friendly Enough for Students**
 ![Customization](https://files.seeedstudio.com/wiki/BeagleBoneSolutions/img/BBG_Customization.png)
 
-The BeagleBone is a versatile platform capable of running a full Linux OS while also retaining real-time capability. Designed with industrial use in mind, and documentation designed for entry-level developers, the BeagleBone has numerous I/O and protocol support while being developer friendly.
+The BeagleBone® is a versatile platform capable of running a full Linux OS while also retaining real-time capability. Designed with industrial use in mind, and documentation designed for entry-level developers, the BeagleBone® has numerous I/O and protocol support while being developer friendly.
 
-Seeed's [BeagleBone Green](http://wiki.seeedstudio.com/BeagleBone_Green/) and [BeagleBone Green Wireless](http://wiki.seeedstudio.com/BeagleBone_Green_Wireless/) are part of the BeagleBone family and are ready to be customized, manufactured, and deployed **now**.
+Seeed's [BeagleBone® Green](http://wiki.seeedstudio.com/BeagleBone_Green/) and [BeagleBone® Green Wireless](http://wiki.seeedstudio.com/BeagleBone_Green_Wireless/) are part of the BeagleBone® family and are ready to be customized, manufactured, and deployed **now**.
 
 You can view our customization portfolio [here](#portfolio).
 
@@ -20,7 +20,7 @@ The BeagleBone is fully open source software and hardware. This allows developer
 ##**Built for Prototyping**
 ![prototyping](https://files.seeedstudio.com/wiki/BeagleBoneSolutions/img/Prototyping.gif)
 
-The BeagleBone is a SBC development board designed for quick prototyping.  There are numerous capes which add additional functionality, allowing proof of concepts to be quickly built. Many of these capes are designed by the community and are fully open source as well. In addition we have created a Grove cape to allow many of our [Grove Modules](http://wiki.seeedstudio.com/Grove_System/) to be attached, allowing developers access to 200+ open source modules and their open source libraries.
+The BeagleBone® is a SBC development board designed for quick prototyping.  There are numerous capes which add additional functionality, allowing proof of concepts to be quickly built. Many of these capes are designed by the community and are fully open source as well. In addition we have created a Grove cape to allow many of our [Grove Modules](http://wiki.seeedstudio.com/Grove_System/) to be attached, allowing developers access to 200+ open source modules and their open source libraries.
 
 ##**Customization**
 
@@ -31,8 +31,8 @@ Our ODM costs are starting prices. More features or having to bring in specialis
 
 |                           | NRE Fee | Hourly | Min Order Quantity | CE & FCC Certification |
 |---------------------------|---------|--------|--------------------|------------------------|
-| BeagleBone Green          | $10,000 |   $40+ |                500 |                $3,000+ |
-| BeagleBone Green Wireless | $10,000 |   $40+ |                500 |                $3,000+ |
+| BeagleBone® Green          | $10,000 |   $40+ |                500 |                $3,000+ |
+| BeagleBone® Green Wireless | $10,000 |   $40+ |                500 |                $3,000+ |
 
 
 
@@ -105,7 +105,7 @@ If you have additional certification needs please contact us at iot@
 
 ##Portfolio
 
-We have completed numerous customized BeagleBone projects. You can view some of them [here](https://community.seeedstudio.com/portfolio).
+We have completed numerous customized BeagleBone® projects. You can view some of them [here](https://community.seeedstudio.com/portfolio).
 
 
 If you have additional questions or customization needs please contact us at iot@seeed.cc.

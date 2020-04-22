@@ -142,7 +142,7 @@ Like Raspberry Pi, you need to install the ODYSSEY – STM32MP157C image from yo
 
 **A. Boot from SD card**
 
-- **Step 1.** Select the [firmware](https://github.com/Seeed-Studio/seeed-linux-images) you want to download:
+- **Step 1.** Select the [firmware](https://files.seeedstudio.com/linux/ODYSSEY%E2%80%93STM32MP157C/stm32mp1-debian-buster-console-armhf-latest-2gb.img.xz) you want to download:
 
 - **Step 2.** Connect an SD card to a PC or MAC with an SD card reader, an SD card with more than 4G memory is required.
 
@@ -168,7 +168,7 @@ they mean to start up failed if the USER LED does not blink.Please check the boo
 - **Step 2.** Edit /boot/uEnv.txt to start eMMC boot then reboot.
 
 ```bash
-sudo echo cmdline=init=/opt/scripts/tools/eMMC/init-eMMC-flasher-v3-stm32mp1.sh >> /boot/uEnv.txt
+sudo sh -c "echo cmdline=init=/opt/scripts/tools/eMMC/init-eMMC-flasher-v3-stm32mp1.sh >> /boot/uEnv.txt"
 sudo reboot
 ```
 
@@ -376,8 +376,8 @@ make all_stm32mp1 && sudo make install_stm32mp1
 - **Step 3.** add dtbo package in `/boot/uEnv.txt` to make it become effective after reboot.
 
 ```bash
-sudo echo uboot_overlay_addr0=/lib/firmware/stm32mp1-seeed-lcd-01-overlay.dtbo >> /boot/uEnv.txt
-sudo echo uboot_overlay_addr1=/lib/firmware/stm32mp1-MCP2517FD-can0-overlay.dtbo >> /boot/uEnv.txt
+sudo sh -c "echo uboot_overlay_addr0=/lib/firmware/stm32mp1-seeed-lcd-01-overlay.dtbo >> /boot/uEnv.txt"
+sudo sh -c "echo uboot_overlay_addr1=/lib/firmware/stm32mp1-MCP2517FD-can0-overlay.dtbo >> /boot/uEnv.txt"
 sudo reboot
 ```
 
@@ -445,6 +445,7 @@ Run [CanBus_SendForArduino.ino](https://files.seeedstudio.com/wiki/Seeed-NPi-STM
 - **[3Dfile]** [ODYSSEY-STM32MP157C](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/Hardware/st.skp)
 - **[OrCAD]** [ODYSSEY-STM32MP157C](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/Hardware/Seeed%20NPi%20-%20STM32MP157C%20v1.0_SCH%20%26%20PCB.zip)
 - **[OrCAD]** [Seeed SoM - STM32MP157C](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/Hardware/Seeed%20SoM%20-%20STM32MP157C%20v1.0_SCH%20%26%20PCB%20.zip)
-- **[PDF]** [ODYSSEY-STM32MP157C 2d file](http://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/STM32-2d-file.pdf)
+- **[PDF]** [ODYSSEY-STM32MP157C 2d file](http://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/STM32-2d-file.pdf)
+- **[PDF]** [STM32 Reference Guide](http://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/STM32+Reference+Guide+V1.0.pdf)
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

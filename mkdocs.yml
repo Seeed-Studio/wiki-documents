@@ -175,21 +175,21 @@ nav:
           - 2 Channel CAN BUS FD Shield for Raspberry Pi: 2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi.md
 
 
-      - BeagleBone:
-          - BeagleBone Introduction: BeagleBone.md
-          - BeagleBone Solutions: BeagleBone_Solutions.md
-          - BeagleBone Blue: BeagleBone_Blue.md
-          - BeagleBone Case: Beaglebone_Case.md
-          - Seeed Studio BeagleBone Green: BeagleBone_Green.md
-          - Seeed Studio BeagleBone Green HDMI Cape: BeagleBone_Green_HDMI_Cape.md
-          - Seeed Studio BeagleBone Green Wireless: BeagleBone_Green_Wireless.md
-          - Grove Base Cape for Seeed Studio BeagleBone Green v2: Grove_Base_Cape_for_BeagleBone_v2.md
-          - Grove Cape for BeagleBone Series: Grove_Cape_for_BeagleBone_Series.md
-          - Grove Starter Kit for Seeed Studio BeagleBone Green: Grove_Starter_Kit_for_BeagleBone_Green.md
+      - BeagleBone®:
+          - BeagleBone® Introduction: BeagleBone.md
+          - BeagleBone® Solutions: Beaglebone_Solutions.md
+          - BeagleBone® Blue: BeagleBone_Blue.md
+          - BeagleBone® Case: Beaglebone_Case.md
+          - Seeed Studio BeagleBone® Green: BeagleBone_Green.md
+          - Seeed Studio BeagleBone® Green HDMI Cape: BeagleBone_Green_HDMI_Cape.md
+          - Seeed Studio BeagleBone® Green Wireless: BeagleBone_Green_Wireless.md
+          - Grove Base Cape for Seeed Studio BeagleBone® Green v2: Grove_Base_Cape_for_BeagleBone_v2.md
+          - Grove Cape for BeagleBone® Series: Grove_Cape_for_BeagleBone_Series.md
+          - Grove Starter Kit for Seeed Studio BeagleBone® Green: Grove_Starter_Kit_for_BeagleBone_Green.md
           - Motor Bridge Cape v1.0: Motor_Bridge_Cape_v1.0.md
-          - Skeleton box for Beaglebone: Skeleton_box_for_Beaglebone.md
-          - Seeed Studio BeagleBone Green Gateway Baseboard: BeagleBone_Green_Gateway_Baseboard.md
-          - Seeed Studio BeagleBone Green LCD Cape with Resistive Touch: Seeed-Studio-BeagleBone-Green-LCD-Cape-with-Resistive-Touch.md
+          - Skeleton box for Beaglebone®: Skeleton_box_for_Beaglebone.md
+          - Seeed Studio BeagleBone® Green Gateway Baseboard: BeagleBone_Green_Gateway_Baseboard.md
+          - Seeed Studio BeagleBone® Green LCD Cape with Resistive Touch: Seeed-Studio-BeagleBone-Green-LCD-Cape-with-Resistive-Touch.md
       - NPi-i:
           - NPi i.MX6ULL Dev Board Linux SBC: NPi-i.MX6ULL-Dev-Board-Linux-SBC.md
       - SenseCap:
@@ -201,6 +201,7 @@ nav:
             - ODYSSEY X86J4105 Installing OS: ODYSSEY-X86J4105-Installing-OS.md
             - ODYSSEY X86J4105 Adding Accessories: ODYSSEY-X86J4105-Accessories.md
             - ODYSSEY X86J4105 Installing OpenWrt: ODYSSEY-X86J4105-Installing-openwrt.md
+            - ODYSSEY X86J4105 Installing pfSense: ODYSSEY-X86J4105-pfSense.md
             - ODYSSEY X86J4105 Azure IoT: ODYSSEY-X86J4105-AzureIOT.md
             - ODYSSEY X86J4105 Installing FreeNAS: ODYSSEY-X86J4105-Installing-FreeNAS.md
             - ODYSSEY X86J4105 Using Intel OpenVINO Toolkit: ODYSSEY-X86J4105-Intel-OpenVINO.md
@@ -210,6 +211,7 @@ nav:
           
       - Wio Terminal:
           - Get Started with Wio Terminal: Wio-Terminal-Getting-Started.md
+          - ArduPy Get Started with Wio Terminal: Wio-Terminal-ArduPy.md
           - LCD:
             - Overview: Wio-Terminal-LCD-Overview.md
             - Basic of LCD: Wio-Terminal-LCD-Basic.md
@@ -264,8 +266,8 @@ nav:
             - Wio Terminal Storing Data: Wio-Terminal-Storting-Analog-Data.md
             - Wio Terminal Displaying Photos: Wio-Terminal-Displaying-Photos.md
             - Wio Terminal Interactive Faces Demo: Wio-Terminal-Interactive-Face.md
-            - Wio Terminal Interactive Faces Demo: Wio-Terminal-Interactive-Face.md
             - Build a IR Thermal Imaging Camera using Wio Terminal: Wio-Terminal-Thermal-Camera.md
+            - Reading Raspberry Pi's Info using Wio Terminal: Wio-Terminal-Reading-Raspberry-Pi.md
 
       - ReSpeaker:
           - ReSpeaker Introduction: ReSpeaker.md
@@ -504,6 +506,7 @@ nav:
           - Grove - 3-Axis Digital Accelerometer(±1.5g): Grove-3-Axis_Digital_Accelerometer-1.5g.md
           - Grove - 3-Axis Digital Accelerometer(±400g): Grove-3-Axis_Digital_Accelerometer-400g.md
           - Grove - 3-Axis Analog Accelerometer 20g (ADXL356B): Grove-3-Axis_Analog_Accelerometer_20g-ADXL356B.md
+          - Grove - 3-Axis Digital Accelerometer (LIS3DHTR): Grove-3-Axis-Digital-Accelerometer-LIS3DHTR.md
           - Grove - 3-Axis Analog Accelerometer 40g (ADXL356C): Grove-3-Axis_Analog_Accelerometer_40g-ADXL356C.md
           - Grove - 3-Axis Digital Accelerometer 40g (ADXL357): Grove-3-Axis_Digital_Accelerometer_40g-ADXL357.md
           - Grove - 3-Axis Digital Accelerometer 200g (ADXL372): Grove-3-Axis_Digital_Accelerometer_200g-ADXL372.md
@@ -521,6 +524,7 @@ nav:
           - Grove - Barometer Sensor(BME280): Grove-Barometer_Sensor-BME280.md
           - Grove - Temperature Humidity Pressure Gas Sensor(BME680): Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680.md
           - Grove - Button: Grove-Button.md
+          - Grove - Dual Button: Grove-Dual-Button.md
           - Grove - LED Button: Grove-LED_Button.md
           - Grove - CO2 Sensor: Grove-CO2_Sensor.md
           - Grove - CO2 & Temperature & Humidity Sensor (SCD30): Grove-CO2_Temperature_Humidity_Sensor-SCD30.md
@@ -644,7 +648,7 @@ nav:
           - Atom Node: Atom_Node.md
           - Grove - 2-Coil Latching Relay: Grove-2-Coil_Latching_Relay.md
           - Grove - Buzzer: Grove-Buzzer.md
-          - Grove - Passive Buzzer: Grove_passive_Buzzer.md
+          - Grove - Passive Buzzer: Grove-Passive-Buzzer.md
           - Grove - Chainable RGB LED: Grove-Chainable_RGB_LED.md
           - Grove - Dry-Reed Relay: Grove-Dry-Reed_Relay.md
           - Grove - EL Driver: Grove-EL_Driver.md
@@ -652,6 +656,7 @@ nav:
           - Grove - I2C Motor Driver: Grove-I2C_Motor_Driver.md
           - Grove - I2C Motor Driver V1.2: Grove-I2C_Motor_Driver_V1.2.md
           - Grove - I2C Motor Driver V1.3: Grove-I2C_Motor_Driver_V1.3.md
+          - Grove - I2C Motor Driver (L298P): Grove-I2C-Motor-Driver-L298P.md
           - Grove - Infrared Emitter: Grove-Infrared_Emitter.md
           - Grove - LED Matrix Driver v1.0: Grove-LED_Matrix_Driver_v1.0.md
           - Grove - MP3 v2.0: Grove-MP3_v2.0.md
@@ -736,6 +741,8 @@ nav:
           - Grove - DC Jack Power: Grove-DC_Jack_Power.md
           - Grove - Differential Amplifier v1.2: Grove-Differential_Amplifier_v1.2.md
           - Grove - I2C Hub: Grove-I2C_Hub.md
+          - Grove - Qwiic Hub: Grove-Qwiic-Hub.md
+          - Grove - 8 Channel I2C Multiplexer/I2C Hub (TCA9548A): Grove-8-Channel-I2C-Multiplexer-I2C-Hub-TCA9548A.md
           - Grove - Joint v2.0: Grove-Joint_v2.0.md
           - Grove - MOSFET: Grove-MOSFET.md
           - Grove - Mini Camera: Grove-Mini_Camera.md

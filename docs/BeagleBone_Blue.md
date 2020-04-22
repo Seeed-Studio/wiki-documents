@@ -1,6 +1,6 @@
 ---
-name: BeagleBone Blue
-category: BeagleBone
+name: BeagleBone® Blue
+category: BeagleBone®
 bzurl: https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-Wireless-p-2650.html
 oldwikiname:
 prodimagename: BBGW_cover.png
@@ -10,9 +10,9 @@ sku: 102990827
 
 ![](https://files.seeedstudio.com/wiki/Beaglebone_Blue/img/cover.jpg)
 
-BeagleBone™ Blue is based on the extremely successful open-source hardware design of BeagleBone™ Black, a high-expansion, maker-focused, community-supported open hardware computer, created by the BeagleBoard.Org Foundation.   
+BeagleBone® Blue is based on the extremely successful open-source hardware design of BeagleBone® Black, a high-expansion, maker-focused, community-supported open hardware computer, created by the BeagleBoard.Org Foundation.   
 
-BeagleBone™ Blue combines the high-performance flexible WiFi/Bluetooth WiLink™ interface of the BeagleBone™ Black Wireless and the robotics capabilities of the Robotics Cape from Strawson Design.  BeagleBone™ Blue has onboard 2 cell (2S) LiPo battery management with charger and battery level LEDs, 8 servo motor outputs, 4 DC motor drivers, 4 quadrature encoder inputs, a wide array of GPIO and serial protocol connectors including CAN, a 9 axis IMU and barometer, 4 ADC inputs, a PC USB interface, an USB 2.0 host port, a reset button, a power button, two user configurable buttons and six indicating LEDs.  Built on Octavo Systems’ System-In-Package that integrates a high-performance TI ARM processor and 512MB of DDR3, BeagleBone™ Blue boots Linux in around 10 seconds and gets you started developing through your web browser in less than 5 minutes with just a single USB cable.
+BeagleBone® Blue combines the high-performance flexible WiFi/Bluetooth WiLink™ interface of the BeagleBone® Black Wireless and the robotics capabilities of the Robotics Cape from Strawson Design.  BeagleBone® Blue has onboard 2 cell (2S) LiPo battery management with charger and battery level LEDs, 8 servo motor outputs, 4 DC motor drivers, 4 quadrature encoder inputs, a wide array of GPIO and serial protocol connectors including CAN, a 9 axis IMU and barometer, 4 ADC inputs, a PC USB interface, an USB 2.0 host port, a reset button, a power button, two user configurable buttons and six indicating LEDs.  Built on Octavo Systems’ System-In-Package that integrates a high-performance TI ARM processor and 512MB of DDR3, BeagleBone® Blue boots Linux in around 10 seconds and gets you started developing through your web browser in less than 5 minutes with just a single USB cable.
 
 
 [![](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/get_one_now.png)](https://www.seeedstudio.com/BeagleBone-Blue-p-2809.html)
@@ -192,7 +192,7 @@ BeagleBone™ Blue combines the high-performance flexible WiFi/Bluetooth WiLink�
 
 #### STEP1. Update the latest image
 
-When you receive a Beaglebone_Blue from seeed, the image is already burned into the on-board eMMC. Which means you can skip this step. However we highly recommend you update the latest image.
+When you receive a BeagleBone®Blue from seeed, the image is already burned into the on-board eMMC. Which means you can skip this step. However we highly recommend you update the latest image.
 
 i. Click and download the latest image from [beagleboard.org](https://beagleboard.org/latest-images).
 
@@ -216,18 +216,18 @@ Click the Plus icon to add the image you just download, the software will automa
 ![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/v2-flash-sd.png)
 
 
-Then reject the SD card and Insert it into your Beaglebone_Blue.
+Then reject the SD card and Insert it into your BeagleBone® Blue.
 
 #### STEP2. Power and boot
 
-Connect the BeagleBone_Blue to your computer with the Micro-USB Cable.
+Connect the BeagleBone® Blue to your computer with the Micro-USB Cable.
 
 
 ![](https://files.seeedstudio.com/wiki/Beaglebone_Blue/img/connect.jpg)
 
 <div class="admonition warning" style="background:#f0b37e; color:#FFF">
 <p class="admonition-title">Caution</p>
-<font face="Georgia" size=2 font color="white">Please plug the USB cable gently, otherwise you may damage the interface.Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click <a href="https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html"><B>here</B></a> to buy. If you want to use the Motor Control modules of Beaglebone_Blue, the power supply via USB Port is not sufficiant, you need to use DC-DC Port or 2S battery. </font>
+<font face="Georgia" size=2 font color="white">Please plug the USB cable gently, otherwise you may damage the interface.Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click <a href="https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html"><B>here</B></a> to buy. If you want to use the Motor Control modules of BeagleBone® Blue, the power supply via USB Port is not sufficiant, you need to use DC-DC Port or 2S battery. </font>
 </div>
 
 You'll see the power (PWR or ON) LED lit steadily. Within a minute or so, you should see the other LEDs blinking in their default configurations.
@@ -236,7 +236,7 @@ You'll see the power (PWR or ON) LED lit steadily. Within a minute or so, you sh
 * USR1 is typically configured at boot to light during SD (microSD) card accesses
 * USR2 is typically configured at boot to light during CPU activity
 * USR3 is typically configured at boot to light during eMMC accesses
-* WIFI LED is typically configured at boot to light with WiFi network association (BeagleBone Blue only)
+* WIFI LED is typically configured at boot to light with WiFi network association (BeagleBone® Blue only)
 
 
 
@@ -332,7 +332,7 @@ root@beaglebone:/var/lib/cloud9#
 When you tap ```ifconfig wlan0 ``` and the internet address is something like 192.168.199.145, congratulations, you have connected to wifi successfully.
 
 
-When the Beaglebone_Blue connect to the Internet, we highly recommend	you use the command below to update your Beaglebone_Blue.
+When the BeagleBone® Blue connect to the Internet, we highly recommend	you use the command below to update your BeagleBone® Blue.
 
 ```
 sudo apt-get update
@@ -371,12 +371,12 @@ Then you will see the USER2 LED blink.
 ### Demo.2 USE GPIO With Grove-LED
 step .1 Please prepare staff as the Partlist below.
 
-| Beaglebone_Blue | Grove - LED Socket Kit|Grove Adapter cable(6pin)|
+| BeagleBone® Blue | Grove - LED Socket Kit|Grove Adapter cable(6pin)|
 |--------------|-------------|-------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Beaglebone_Blue/img/cover_icon.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Beaglebone_Blue/img/Grove-White-LED-p-2016.jpeg)|![](https://files.seeedstudio.com/wiki/Beaglebone_Blue/img/Grove_4pin.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/BeagleBone-Blue-p-2809.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Green-LED-p-1144.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Universal-4-Pin-to-Beaglebone-Blue-6-Pin-Female-JST%2FSH-Conversion-Cable-%2810-pcs-pack%29-p-3027.html)|
 
-step .2 Connect the LED Socket Kit to the 6 pin **GPIO** interface of Beaglebone_Blue.
+step .2 Connect the LED Socket Kit to the 6 pin **GPIO** interface of BeagleBone® Blue.
 
 ![](https://files.seeedstudio.com/wiki/Beaglebone_Blue/img/LED.jpg)
 
@@ -400,12 +400,12 @@ Now you will see your LED light up in the heartbeat mode.
 
 step .1 Please prepare staff as the Partlist below.
 
-| Beaglebone_Blue | Grove - LED Socket Kit|Grove Adapter cable(4pin)|
+| BeagleBone® Blue | Grove - LED Socket Kit|Grove Adapter cable(4pin)|
 |--------------|-------------|-------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Beaglebone_Blue/img/cover_icon.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Beaglebone_Blue/img/Grove-GPS.jpg)|![](https://files.seeedstudio.com/wiki/Beaglebone_Blue/img/Grove_4pin.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/BeagleBone-Blue-p-2809.html)|[Get ONE Now](https://www.seeedstudio.com/grove-gps-p-959.html)|[Get ONE Now](https://www.seeedstudio.com/category/Grove-Universal-4-Pin-to-Beaglebone-Blue-4-Pin-Female-JST-SH-Conversion-Cable-(10-pcs-pack)-p-3026.html)|
 
-step .2 Connect the Grove-GPS sensor to the 4 pin **UART1** interface of Beaglebone_Blue.
+step .2 Connect the Grove-GPS sensor to the 4 pin **UART1** interface of BeagleBone® Blue.
 
 ![](https://files.seeedstudio.com/wiki/Beaglebone_Blue/img/GPS_hARD.jpg)
 
@@ -424,12 +424,12 @@ Then you will see the GPS information on the terminal as the picture shown below
 
 step .1 Please prepare staff as the Partlist below.
 
-| Beaglebone_Blue | Grove - LED Socket Kit|Grove Adapter cable(4pin)|
+| BeagleBone® Blue | Grove - LED Socket Kit|Grove Adapter cable(4pin)|
 |--------------|-------------|-------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Beaglebone_Blue/img/cover_icon.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Beaglebone_Blue/img/Digital_Light_Sensor.jpg)|![](https://files.seeedstudio.com/wiki/Beaglebone_Blue/img/Grove_4pin.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/BeagleBone-Blue-p-2809.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|[Get ONE Now](https://www.seeedstudio.com/category/Grove-Universal-4-Pin-to-Beaglebone-Blue-4-Pin-Female-JST-SH-Conversion-Cable-(10-pcs-pack)-p-3026.html)|
 
-step .2 Connect the Grove-Digital Light Sensor to the 4 pin **I2C** interface of Beaglebone_Blue.
+step .2 Connect the Grove-Digital Light Sensor to the 4 pin **I2C** interface of BeagleBone® Blue.
 
 ![](https://files.seeedstudio.com/wiki/Beaglebone_Blue/img/Digital_light.jpg)
 
@@ -459,7 +459,7 @@ Then you will get the light value as the picture below.
 
 Grove is a modular, standardized connecter prototyping system. Grove takes a building block approach to assembling electronics. Compared to the jumper or solder based system, it is easier to connect, experiment and build and simplifies the learning system, but not to the point where it becomes dumbed down.  Some of the other prototype systems out there takes the level down to building blocks.   Good stuff to be learned that way, but the Grove system allows you to build real systems.   It requires some learning and expertise to hook things up.
 
-The list belew is the Grove modules that work well with Beaglebone_Blue.
+The list belew is the Grove modules that work well with BeagleBone® Blue.
 
 
 <style type="text/css">
@@ -870,7 +870,7 @@ The list belew is the Grove modules that work well with Beaglebone_Blue.
 
 ## FAQs
 
-Please click **[here](http://support.seeedstudio.com/knowledgebase/articles/1826437-seeeduino-v4-2-sku-102010026)** to see all Beaglebone_Blue FAQs.
+Please click **[here](http://support.seeedstudio.com/knowledgebase/articles/1826437-seeeduino-v4-2-sku-102010026)** to see all BeagleBone® Blue FAQs.
 
 
 ## Schematic Online Viewer

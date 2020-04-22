@@ -193,7 +193,7 @@
         {
             "location": "/Actuator/",
             "text": "",
-            "title": "Actuator Introduction"
+            "title": "Actuator"
         },
         {
             "location": "/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A/",
@@ -353,32 +353,32 @@
         {
             "location": "/BeagleBone/",
             "text": "",
-            "title": "BeagleBone Introduction"
+            "title": "BeagleBone\u00ae Introduction"
         },
         {
             "location": "/BeagleBone_Blue/",
             "text": "",
-            "title": "BeagleBone Blue"
+            "title": "BeagleBone\u00ae Blue"
         },
         {
             "location": "/BeagleBone_Green/",
             "text": "",
-            "title": "Seeed Studio BeagleBone Green"
+            "title": "Seeed Studio BeagleBone\u00ae Green"
         },
         {
             "location": "/BeagleBone_Green_Gateway_Baseboard/",
             "text": "",
-            "title": "Seeed Studio BeagleBone Green Gateway Baseboard"
+            "title": "Seeed Studio BeagleBone\u00ae Green Gateway Baseboard"
         },
         {
             "location": "/BeagleBone_Green_HDMI_Cape/",
             "text": "",
-            "title": "Seeed Studio BeagleBone Green HDMI Cape"
+            "title": "Seeed Studio BeagleBone\u00ae Green HDMI Cape"
         },
         {
             "location": "/BeagleBone_Green_Wireless/",
             "text": "",
-            "title": "Seeed Studio BeagleBone Green Wireless"
+            "title": "Seeed Studio BeagleBone\u00ae Green Wireless"
         },
         {
             "location": "/BeagleBone_Solutions/",
@@ -393,7 +393,7 @@
         {
             "location": "/Beaglebone_Case/",
             "text": "",
-            "title": "BeagleBone Case"
+            "title": "BeagleBone\u00ae Case"
         },
         {
             "location": "/Bees_Shield/",
@@ -508,7 +508,7 @@
         {
             "location": "/Communication/",
             "text": "",
-            "title": "Communication Introduction"
+            "title": "Communication"
         },
         {
             "location": "/DC_framework_miniature_solenoid_VL-0063/",
@@ -593,12 +593,12 @@
         {
             "location": "/Discontinued/",
             "text": "",
-            "title": "Discontinued Introduction"
+            "title": "Discontinued"
         },
         {
             "location": "/Display/",
             "text": "",
-            "title": "Display Introduction"
+            "title": "Display"
         },
         {
             "location": "/Download_Arduino_and_install_Arduino_driver/",
@@ -851,6 +851,11 @@
             "title": "Grove - 2 Channel Inductive Sensor (LDC1612)"
         },
         {
+            "location": "/Grove-3-Axis-Digital-Accelerometer-LIS3DHTR/",
+            "text": "",
+            "title": "Grove - 3-Axis Digital Accelerometer (LIS3DHTR)"
+        },
+        {
             "location": "/Grove-3-Axis_Analog_Accelerometer/",
             "text": "",
             "title": "Grove - 3-Axis Analog Accelerometer"
@@ -964,6 +969,11 @@
             "location": "/Grove-6-Position_DIP_Switch/",
             "text": "",
             "title": "Grove - 6-Position DIP Switch"
+        },
+        {
+            "location": "/Grove-8-Channel-I2C-Multiplexer-I2C-Hub-TCA9548A/",
+            "text": "",
+            "title": "Grove - 8 Channel I2C Multiplexer/I2C Hub (TCA9548A)"
         },
         {
             "location": "/Grove-8-Channel_Solid_State_Relay/",
@@ -1166,6 +1176,11 @@
             "title": "Grove - Dry-Reed Relay"
         },
         {
+            "location": "/Grove-Dual-Button/",
+            "text": "",
+            "title": "Grove - Dual Button"
+        },
+        {
             "location": "/Grove-Dust_Sensor/",
             "text": "",
             "title": "Grove - Dust Sensor"
@@ -1304,6 +1319,11 @@
             "location": "/Grove-Human_Presence_Sensor-AK9753/",
             "text": "",
             "title": "Grove - Human Presence Sensor (AK9753)"
+        },
+        {
+            "location": "/Grove-I2C-Motor-Driver-L298P/",
+            "text": "",
+            "title": "Grove - I2C Motor Driver (L298P)"
         },
         {
             "location": "/Grove-I2C_ADC/",
@@ -1646,6 +1666,11 @@
             "title": "Grove - PS/2 Adapter"
         },
         {
+            "location": "/Grove-Passive-Buzzer/",
+            "text": "",
+            "title": "Grove - Passive Buzzer"
+        },
+        {
             "location": "/Grove-Piezo_Vibration_Sensor/",
             "text": "",
             "title": "Grove - Piezo Vibration Sensor"
@@ -1659,6 +1684,11 @@
             "location": "/Grove-Q_Touch_Sensor/",
             "text": "",
             "title": "Grove - Q Touch Sensor"
+        },
+        {
+            "location": "/Grove-Qwiic-Hub/",
+            "text": "",
+            "title": "Grove - Qwiic Hub"
         },
         {
             "location": "/Grove-RGB_LED_Matrix_w-Driver/",
@@ -2033,7 +2063,7 @@
         {
             "location": "/Grove_Base_Cape_for_BeagleBone_v2/",
             "text": "",
-            "title": "Grove Base Cape for Seeed Studio BeagleBone Green v2"
+            "title": "Grove Base Cape for Seeed Studio BeagleBone\u00ae Green v2"
         },
         {
             "location": "/Grove_Base_HAT/",
@@ -2078,7 +2108,7 @@
         {
             "location": "/Grove_Cape_for_BeagleBone_Series/",
             "text": "",
-            "title": "Grove Cape for BeagleBone Series"
+            "title": "Grove Cape for BeagleBone\u00ae Series"
         },
         {
             "location": "/Grove_High_Precision_RTC/",
@@ -2153,7 +2183,7 @@
         {
             "location": "/Grove_Starter_Kit_for_BeagleBone_Green/",
             "text": "",
-            "title": "Grove Starter Kit for Seeed Studio BeagleBone Green"
+            "title": "Grove Starter Kit for Seeed Studio BeagleBone\u00ae Green"
         },
         {
             "location": "/Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi/",
@@ -2188,7 +2218,7 @@
         {
             "location": "/Grove_passive_Buzzer/",
             "text": "",
-            "title": "Grove - Passive Buzzer"
+            "title": "Grove passive Buzzer"
         },
         {
             "location": "/Guide_for_Codecraft_using_Arduino/",
@@ -2298,7 +2328,7 @@
         {
             "location": "/IoT/",
             "text": "",
-            "title": "IoT Introduction"
+            "title": "IoT"
         },
         {
             "location": "/IoT_Fast_Prototyping_Kit%20S5D9/",
@@ -2483,7 +2513,7 @@
         {
             "location": "/MakerPro/",
             "text": "",
-            "title": "MakerPro Introduction"
+            "title": "MakerPro"
         },
         {
             "location": "/Matrix_Clock/",
@@ -2611,6 +2641,11 @@
             "title": "ODYSSEY X86J4105 with Intel Neural Compute Stick 2"
         },
         {
+            "location": "/ODYSSEY-X86J4105-pfSense/",
+            "text": "",
+            "title": "ODYSSEY X86J4105 Installing pfSense"
+        },
+        {
             "location": "/ODYSSEY-X86J4105/",
             "text": "",
             "title": "ODYSSEY X86J4105 Getting Started"
@@ -2618,7 +2653,7 @@
         {
             "location": "/Others/",
             "text": "",
-            "title": "Others Introduction"
+            "title": "Others"
         },
         {
             "location": "/PIR_Motion_Sensor_Large_Lens_version/",
@@ -3008,7 +3043,7 @@
         {
             "location": "/Seeed-Studio-BeagleBone-Green-LCD-Cape-with-Resistive-Touch/",
             "text": "",
-            "title": "Seeed Studio BeagleBone Green LCD Cape with Resistive Touch"
+            "title": "Seeed Studio BeagleBone\u00ae Green LCD Cape with Resistive Touch"
         },
         {
             "location": "/SeeedStudio-GD32-RISC-V-Dev-Board/",
@@ -3328,7 +3363,7 @@
         {
             "location": "/Skeleton_box_for_Beaglebone/",
             "text": "",
-            "title": "Skeleton box for Beaglebone"
+            "title": "Skeleton box for Beaglebone\u00ae"
         },
         {
             "location": "/Skeleton_box_for_Rasberry_Pi/",
@@ -3433,7 +3468,7 @@
         {
             "location": "/Tutorial/",
             "text": "",
-            "title": "Tutorial Introduction"
+            "title": "Tutorial"
         },
         {
             "location": "/USB_To_Uart_3V3/",
@@ -3569,6 +3604,11 @@
             "location": "/Wio-Lite-W600/",
             "text": "",
             "title": "Wio Lite W600"
+        },
+        {
+            "location": "/Wio-Terminal-ArduPy/",
+            "text": "",
+            "title": "ArduPy Get Started with Wio Terminal"
         },
         {
             "location": "/Wio-Terminal-Buttons/",
@@ -3714,6 +3754,11 @@
             "location": "/Wio-Terminal-Mic/",
             "text": "",
             "title": "Overview"
+        },
+        {
+            "location": "/Wio-Terminal-Reading-Raspberry-Pi/",
+            "text": "",
+            "title": "Reading Raspberry Pi's Info using Wio Terminal"
         },
         {
             "location": "/Wio-Terminal-Storting-Analog-Data/",
@@ -4109,21 +4154,6 @@
             "location": "/license/",
             "text": "",
             "title": "License"
-        },
-        {
-            "location": "/lua/",
-            "text": "",
-            "title": "Lua Syntax"
-        },
-        {
-            "location": "/lua_index/",
-            "text": "",
-            "title": "Overview"
-        },
-        {
-            "location": "/luatApi/",
-            "text": "",
-            "title": "Luat API interface"
         },
         {
             "location": "/mbed/",
