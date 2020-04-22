@@ -412,3 +412,4 @@ ul {
 .language>a:hover{
   background: #8cbc59;
 }
+.md-container .md-content a[title^='Edit']{display: none!important;}

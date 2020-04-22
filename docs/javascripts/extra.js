@@ -5,6 +5,18 @@ add mutiple language steps
 *****
 */
 
+// 本地 和 线上 环境的开关 
+// 线上环境 : true 
+// 本地环境 : false
+
+var _IsProduction = false ;
+
+// root URL 
+//  测试版本 :  "http://192.168.5.153/b/wiki.seeedstudio.com"
+//  线上版本 ： "http://wiki.seeedstudio.com"
+
+  var developUrl = "http://192.168.5.153/b/wiki.seeedstudio.com";
+  var productionUrl = "http://wiki.seeedstudio.com"
 
 //  add the language code & Title 
 _SiteData = {
@@ -16,6 +28,10 @@ _SiteData = {
     "cz" : "Czech"
 }
 
+
+
+var _RootURL = _IsProduction ?  productionUrl : developUrl ;
+var _SubRootPath = _IsProduction ? "" : "/b/wiki.seeedstudio.com";
 /* 
 *****
     Over 
@@ -23,23 +39,31 @@ _SiteData = {
 */
 
  var site = {    
-    rootURl : '',
+    isProduction : _IsProduction,
+    subRootPath : _SubRootPath ,
+    rootURl : _RootURL,
     siteData : _SiteData,
     setSiteMaps : function(){
-        // var rooturl = this.rootUrl;
         var obj = {};
         var sites = JSON.parse(JSON.stringify(this.siteData));
+        var subRootPath = this.subRootPath;
+        console.log(subRootPath)
         for(var siteCode in sites){
             var regs = Object.keys(sites).slice();
             var index = regs.indexOf(siteCode);
             if(index<0){continue}
             regs.splice(index,1);  
             var siteReg = new RegExp("\^\(\/" + regs.join("\|/") + "\)");
-            if(siteCode == "en"){
-                obj[siteCode] = this.rootURl + location.pathname.replace(siteReg,"");
-            }else{
-                obj[siteCode] = this.rootURl + "/" +siteCode + location.pathname.replace(siteReg,"");
-            } 
+            var newPathName = location.pathname.replace(subRootPath,"");
+                newPathName = newPathName.replace(siteReg,"")
+                if(newPathName.indexOf("/") != 0){newPathName = "/"+newPathName}
+                if(siteCode == "en"){
+                    obj[siteCode] = this.rootURl + newPathName
+                }else{
+                    obj[siteCode] = this.rootURl + "/" +siteCode + newPathName;
+                }  
+            
+           
         }
         console.log(obj)
         return obj  
@@ -56,7 +80,6 @@ _SiteData = {
             el.innerText = sites[siteCode];
             el.setAttribute("class",siteCode);
             el.setAttribute("data-lang",siteCode);
-            console.log(currentReg)
             if(currentReg.test(location.pathname)){
                 el.setAttribute("href","javascript:;");
                 activeEle = el;
