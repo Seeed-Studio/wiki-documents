@@ -235,7 +235,35 @@ Now follow the steps above to connect to ODYSSEY – STM32MP157C via a serial co
 
 **Network Settings**
 
-**A. Wi-Fi Settings**
+**A. Ethernet connection**
+
+You can connect to the network using an Ethernet cable. Just plug in the Ethernet cable to the Internet.
+
+**B. Wi-Fi Settings**
+
+- **Step 1.** Check the version of Linux kernel in the current environment and install the header file of kernel version.
+
+```bash
+dpkg -l | grep linux
+sudo apt install linux-headers-$(uname -r) -y
+```
+
+- **Step 2.** Make and install driver of stm32p1 from `seeed-linux-dtverlays` in the GitHub.
+
+```bash
+git clone https://github.com/Seeed-Studio/seeed-linux-dtverlays
+cd seeed-linux-dtverlays
+make all_stm32mp1 && sudo make install_stm32mp1
+```
+
+- **Step 3.** add dtbo package in `/boot/uEnv.txt` to make it become effective after reboot.
+
+```bash
+sudo sh -c "echo uboot_overlay_addr0=/lib/firmware/stm32mp1-seeed-ap6236-overlay.dtbo >> /boot/uEnv.txt"
+sudo reboot
+```
+
+- **Step 4.** Connect the wifi
 
 Configure the ODYSSEY – STM32MP157C network through the network management tool `connmanctl`, which has been installed on the ODYSSEY -STM32MP157C image. Follow these instructions to easily complete the configuration. 
 
@@ -269,10 +297,6 @@ Now use the following command to find ODYSSEY – STM32MP157C's IP address.
 ifconfig
 ```
 
-**B. Ethernet connection**
-
-You can connect to the network using an Ethernet cable. Just plug in the Ethernet cable to the Internet.
-
 **SSH connection**
 
 **A. SSH**
@@ -298,11 +322,110 @@ ssh debian@IP
 If the performance experience degrades while using SSH, please switch to a more accessible WiFi network.
 </div>
 
+**Bluetooth Setting Up**
+
+- **Step 1.** Check the version of Linux kernel in the current environment and install the header file of kernel version.
+
+```bash
+dpkg -l | grep linux
+sudo apt install linux-headers-$(uname -r) -y
+```
+
+- **Step 2.** Make and install driver of stm32p1 from `seeed-linux-dtverlays` in the GitHub.
+
+```bash
+git clone https://github.com/Seeed-Studio/seeed-linux-dtverlays
+cd seeed-linux-dtverlays
+make all_stm32mp1 && sudo make install_stm32mp1
+```
+
+- **Step 3.** add dtbo package in `/boot/uEnv.txt` to make it become effective after reboot.
+
+```bash
+sudo sh -c "echo uboot_overlay_addr0=/lib/firmware/stm32mp1-seeed-ap6236-overlay.dtbo >> /boot/uEnv.txt"
+sudo reboot
+```
+
+**Activate the bluetooth**
+
+Then activate the bluetooth by the command:
+
+```
+sudo apt -y install bluetooth bluez bluez-tools rfkill
+systemctl is-enabled bluetooth.service
+```
+
+**Connect the bluetooth**
+
+- **Step 1.** Scan the bluetooch by using bluetoothctl
+
+the bluetoothctl is a tool that controls the Bluetooth to connect the other Bluetooth.
+
+```
+debian@npi:~$ bluetoothctl
+[NEW] Controller 43:43:A0:12:1F:AC ReSpeaker-1FAC [default]
+Agent registered
+[bluetooth]# scan on
+Discovery started
+[CHG] Controller 43:43:A0:12:1F:AC Discovering: yes
+[NEW] Device C8:69:CD:BB:9B:B3 C8-69-CD-BB-9B-B3
+[NEW] Device E1:D9:68:0E:51:C0 MTKBTDEVICE
+[NEW] Device 62:15:9C:3F:40:AA 62-15-9C-3F-40-AA
+[NEW] Device 56:AF:DE:C0:34:25 56-AF-DE-C0-34-25
+[NEW] Device B8:86:87:99:FB:10 SOLARRAIN
+[CHG] Device B8:86:87:99:FB:10 Trusted: yes
+[NEW] Device 04:5D:4B:81:35:84 MDR-1000X
+[CHG] Device 04:5D:4B:81:35:84 Trusted: yes
+[CHG] Device 4C:04:59:38:D3:25 ManufacturerData Key: 0x004c
+[CHG] Device 4C:04:59:38:D3:25 ManufacturerData Value:
+  10 05 0b 10 99 18 0a                             .......
+[bluetooth]# scan off
+[CHG] Device 04:5D:4B:81:35:84 RSSI is nil
+[CHG] Device B8:86:87:99:FB:10 TxPower is nil
+[CHG] Device B8:86:87:99:FB:10 RSSI is nil
+[CHG] Device 4C:04:59:38:D3:25 RSSI is nil
+[CHG] Device 58:44:98:93:35:24 RSSI is nil
+Discovery stopped
+[bluetooth]#
+
+```
+
+- **Step 2.** Now using the command `pair + device ID` to match bluetooth device with the ODYSSEY – STM32MP157C.
+
+- **Step 3.** When you see the messega `Pairing successful`, tap `connect + device ID`.
+
+```
+[bluetooth]# pair 04:5D:4B:81:35:84
+Attempting to pair with 04:5D:4B:81:35:84
+[CHG] Device 04:5D:4B:81:35:84 Connected: yes
+[CHG] Device 04:5D:4B:81:35:84 UUIDs: 00001108-0000-1000-8000-00805f9b34fb
+[CHG] Device 04:5D:4B:81:35:84 UUIDs: 0000110b-0000-1000-8000-00805f9b34fb
+[CHG] Device 04:5D:4B:81:35:84 UUIDs: 0000110c-0000-1000-8000-00805f9b34fb
+[CHG] Device 04:5D:4B:81:35:84 UUIDs: 0000110e-0000-1000-8000-00805f9b34fb
+[CHG] Device 04:5D:4B:81:35:84 UUIDs: 0000111e-0000-1000-8000-00805f9b34fb
+[CHG] Device 04:5D:4B:81:35:84 ServicesResolved: yes
+[CHG] Device 04:5D:4B:81:35:84 Paired: yes
+Pairing successful
+[CHG] Controller 43:43:A0:12:1F:AC Discoverable: no
+[CHG] Device 04:5D:4B:81:35:84 ServicesResolved: no
+[CHG] Device 04:5D:4B:81:35:84 Connected: no
+[CHG] Controller 43:43:A0:12:1F:AC Discoverable: yes
+[bluetooth]# connect 04:5D:4B:81:35:84
+Attempting to connect to 04:5D:4B:81:35:84
+[CHG] Device 04:5D:4B:81:35:84 Connected: yes
+Connection successful
+[CHG] Device 04:5D:4B:81:35:84 ServicesResolved: yes
+[CHG] Controller 43:43:A0:12:1F:AC Discoverable: no
+[MDR-1000X]#
+```
+
+If `Connection successful` pops up, configuration!
+
 ## CANBUS Communication
 
 The following is the process of CANBUS communication using [2 Channel CAN BUS FD Shield for Raspberry Pi](https://www.seeedstudio.com/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi-p-4072.html) based on ODYSSEY -- STM32MP157C, first use [Seeeduino V4.2](https://www.seeedstudio.com/Seeeduino-V4-2-p-2517.html) to collect the environment temperature and humidity, and then through the Seeeduino V4.2 [CAN - BUS shields V2](https://www.seeedstudio.com/CAN-BUS-Shield-V2.html) above and the ODYSSEY – STM32MP157C Channel 2 CAN BUS FD shields above for Raspberry Pi communication.
 
-###Preparation Work
+### Preparation Work
 
 **Materials Required**
 
@@ -376,8 +499,8 @@ make all_stm32mp1 && sudo make install_stm32mp1
 - **Step 3.** add dtbo package in `/boot/uEnv.txt` to make it become effective after reboot.
 
 ```bash
-sudo sh -c "echo uboot_overlay_addr0=/lib/firmware/stm32mp1-seeed-lcd-01-overlay.dtbo >> /boot/uEnv.txt"
-sudo sh -c "echo uboot_overlay_addr1=/lib/firmware/stm32mp1-MCP2517FD-can0-overlay.dtbo >> /boot/uEnv.txt"
+sudo sh -c "echo uboot_overlay_addr7=/lib/firmware/stm32mp1-seeed-lcd-01-overlay.dtbo >> /boot/uEnv.txt"
+sudo sh -c "echo uboot_overlay_addr8=/lib/firmware/stm32mp1-MCP2517FD-can0-overlay.dtbo >> /boot/uEnv.txt"
 sudo reboot
 ```
 
@@ -436,6 +559,238 @@ python3 QtViewerForStm32p1.py
 ```
 
 Run [CanBus_SendForArduino.ino](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/examples/CanBus_SendForArduino.ino) on `Seeeduino V4.2`.
+
+
+## Play with GPIO
+
+This part will introduce how to use **grove.py** to control GPIO and Grove Socket on ODYSSEY STM32MP157C.there exists two way to connect with the Grove Socket in this board. the one hand is using the Digital Grove Interface and  IIC Grove Interface, the other is using ODYSSEY - STM32MP157C's 40-pin. The description of the PIN defines for the ODYSSEY - STM32MP157C's 40-pin please refer to [Pin Function]().It is convenient for you to use this ODYSSEY - STM32MP157C's 40-pin.So,Let's go.
+
+### Set to the gpio mode
+
+- **Step 1.** Check the version of Linux kernel in the current environment and install the header file of kernel version.
+
+```bash
+dpkg -l | grep linux
+sudo apt install linux-headers-$(uname -r) -y
+```
+
+- **Step 2.** Make and install driver of stm32p1 from `seeed-linux-dtverlays` in the GitHub.
+
+```bash
+git clone https://github.com/Seeed-Studio/seeed-linux-dtverlays
+cd seeed-linux-dtverlays
+make all_stm32mp1 && sudo make install_stm32mp1
+```
+
+- **Step 3.** add dtbo package in `/boot/uEnv.txt` to make it become effective after reboot.
+
+```bash
+sudo sh -c "echo uboot_overlay_addr1=/lib/firmware/stm32mp1-seeed-spi5-overlay.dtbo >> /boot/uEnv.txt"
+sudo sh -c "echo uboot_overlay_addr2=/lib/firmware/stm32mp1-seeed-usart2-overlay.dtbo >> /boot/uEnv.txt"
+sudo sh -c "echo uboot_overlay_addr3=/lib/firmware/stm32mp1-seeed-i2c4-overlay.dtbo >> /boot/uEnv.txt"
+sudo reboot
+```
+
+- **Step 4.** Install the environment for `python3`.
+
+```bsah
+sudo apt install python3 python3-pip -y
+```
+
+###  Digital output on Basehat by using Grove.py
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| ODYSSEY – STM32MP157C |  Grove - Buzzer | Grove Base Hat for Raspberry Pi |
+|--------------|-------------|----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/perspective-19-210X157.png)|![enter image description here](https://github.com/SeeedDocument/Base_Shield_V2/raw/master/img/Buzzer.png)|![image](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|
+
+- **Step 2**. Plug the Grove Base Hat into ODYSSEY - STM32MP157C.
+
+- **Step 3**. Connect the Grove Buzzer to D5 port of the Base Hat.
+
+- **Step 4**. Connect the ODYSSEY - STM32MP157C to PC through USB cable.
+
+#### Software
+
+- **Step 1**. Install the Grove.py
+
+```bash
+sudo pip3 install Seeed-grove.py
+```
+
+- **Step 2**. Download the source file by cloning the grove.py library.
+
+```bash
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+```
+
+- **Step 3**. Excute below command to run the code.
+
+```bash
+cd grove.py/grove
+sudo python3 grove_button.py 5
+```
+
+###  Digital Input on Basehat by using Grove.py
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| ODYSSEY – STM32MP157C |  Grove - Button | Grove Base Hat for Raspberry Pi |
+|--------------|-------------|----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/perspective-19-210X157.png)|![enter image description here](https://github.com/SeeedDocument/Grove_Button/raw/master/img/button_s.jpg)|![image](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Button-P.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|
+
+- **Step 2**. Plug the Grove Base Hat into ODYSSEY - STM32MP157C.
+
+- **Step 3**. Connect the Grove Button to D5 port of the Base Hat.
+
+- **Step 4**. Connect the ODYSSEY - STM32MP157C to PC through USB cable.
+
+#### Software
+
+- **Step 1**. Install the Grove.py
+
+```bash
+sudo pip3 install Seeed-grove.py
+```
+
+- **Step 2**. Download the source file by cloning the grove.py library.
+
+```bash
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+```
+
+- **Step 3**. Excute below command to run the code.
+
+```bash
+cd grove.py/grove
+sudo python3 grove_gpio.py 5
+```
+
+###  IIC on Basehat by using Grove.py
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| ODYSSEY – STM32MP157C |  Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121) | Grove Base Hat for Raspberry Pi |
+|--------------|-------------|----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/perspective-19-210X157.png)|![enter image description here](https://github.com/SeeedDocument/Grove_OLED_Display_0.96/raw/master/images/grove%20oled%200.96_s.jpg)|![image](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V2-MPR121.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|
+
+- **Step 2**. Plug the Grove Base Hat into ODYSSEY - STM32MP157C.
+
+- **Step 3**. Connect the Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121) to I2C port of the Base Hat.
+
+- **Step 4**. Connect the ODYSSEY - STM32MP157C to PC through USB cable.
+
+#### Software
+
+- **Step 1**. Install the Grove.py
+
+```bash
+sudo pip3 install Seeed-grove.py
+```
+
+- **Step 2**. Download the source file by cloning the grove.py library.
+
+```bash
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+```
+
+- **Step 3**. Excute below command to run the code.
+
+```bash
+cd grove.py/grove
+sudo python3 grove_12_key_cap_i2c_touch_mpr121.py
+```
+
+###  ADC on Basehat by using Grove.py
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| ODYSSEY – STM32MP157C |  Grove - Temperature Sensor | Grove Base Hat for RasPi |
+|--------------|-------------|----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/perspective-19-210X157.png)|![enter image description here](https://github.com/SeeedDocument/Grove-Temperature_Sensor_V1.2/raw/master/img/Grove_Temperature_Sensor_View_little.jpg)|![image](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Temperature-Sensor-p-774.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|
+
+- **Step 2**. Plug the Grove Base Hat into ODYSSEY - STM32MP157C.
+
+- **Step 3**. Connect the temperature sensor to port A0 of the Base Hat.
+
+- **Step 4**. Connect the ODYSSEY - STM32MP157C to PC through USB cable.
+
+#### Software
+
+- **Step 1**. Install the Grove.py
+
+```bash
+sudo pip3 install Seeed-grove.py
+```
+
+- **Step 2**. Download the source file by cloning the grove.py library.
+
+```bash
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+```
+
+- **Step 3**. Excute below command to run the code.
+
+```bash
+cd grove.py/grove
+sudo python3 grove_temperature_sensor.py 0
+```
+
+###  UART on Basehat by using Grove.py
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| ODYSSEY – STM32MP157C | Grove Base Hat for RasPi |
+|--------------|----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/perspective-19-210X157.png)|![image](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|
+
+- **Step 2**. Plug the Grove Base Hat into ODYSSEY - STM32MP157C.
+
+- **Step 3**. Connect RX To TX in Basehat using jumper
+
+- **Step 4**. Connect the ODYSSEY - STM32MP157C to PC through USB cable.
+
+#### Software
+
+- **Step 1**. Install the Grove.py
+
+```bash
+sudo pip3 install Seeed-grove.py
+```
+
+- **Step 2**. Download the source file by cloning the grove.py library.
+
+```bash
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+```
+
+- **Step 3**. Excute below command to run the code.
+
+```bash
+cd grove.py/grove
+python uart.py
+```
 
 ## Resourses
 -----

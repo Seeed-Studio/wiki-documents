@@ -1,5 +1,7 @@
 # ArduPy Getting Started
 
+![](https://files.seeedstudio.com/ardupy/ardupy_logo.png)
+
 ArduPy is a combination of **Arduino** and **MicroPython**. MicroPython uses the universal Arduino API to control the hardware so that it can be quickly compatible with new platforms.
 
 At the same time, we provide aip package manager. You can transform your favorite Arduino library into a MicroPython library. Through ArduPy, you can use Python to verify ideas quickly, learn python programming, and learn Open-Source hardware.
@@ -8,25 +10,7 @@ For more information, please see [ArduPy](https://github.com/Seeed-Studio/ArduPy
 
 ## Getting Started
 
-### 1. Dependency
-
-**Python 3** is required for the ArduPy, so please download and install [Python 3](https://www.python.org/downloads/) into your environment before the following.
-
-### 2. Install the Aip
-
-Aip is a package manager for converting Arduino Libraries into Python interfaces, which is essential for ArduPy.
-
-1.Use **pip** to install the **`ardupy-aip`**. Run the following command:
-
-```sh
-pip3 install ardupy-aip
-```
-
-**Note:** For Windows user, use **Powershell**. For Linux or Mac OS users, use **Terminal**.
-
-2.Once the dependencies are installed, you can run `aip` in all directory to see help, and check if errors appeared.
-
-### 3. Install the ArduPy IDE
+### 1. Install the ArduPy IDE
 
 To use ArduPy, we need to use another IDE other than Arduino IDE to compile (and upload) the MicroPython code into our device.
 
@@ -46,7 +30,7 @@ To use ArduPy, we need to use another IDE other than Arduino IDE to compile (and
 
 Once installed the Seeed ArduPy IDE plug-in in VS code, you can start playing with MicroPython!
 
-### 4. Connecting with the Device
+### 2. Connecting with the Device
 
 1. Connect the device to your PC via a USB cable. 
 
@@ -99,16 +83,24 @@ Aip is one of the key feature of ArduPy, which can be used to convert Arduino Li
 !!!Note
         By default, the ArduPy initial firmware only includes **time, Pin, DAC, ADC, PWM and LCD**.
 
-1.Open Terminal/Powershell, and use the following to install specific ArduPy library:
+1.**Download** the arduPy-aip tool:
+
+- For [**Windows**](http://files.seeedstudio.com/ardupy/tools/aip.exe).
+
+- For [**Mac Os**](http://files.seeedstudio.com/ardupy/tools/aip_mac).
+
+2.**Open Terminal/Powershell, change the path to the location where you downloaded the ardupy-aip tool**. Run the following to install ardupy libraries.
 
 ```sh
-aip install Seeed-Studio/seeed-ardupy-ultrasonic-sensor
+./aip install Seeed-Studio/seeed-ardupy-ultrasonic-sensor
 ```
+
+**Note: For Mac OS, please use `chmod +x aip_mac` to obtain permission. Also, use `aip_mac` to replace `aip`**
 
 2.Build the firmware:
 
 ```sh
-aip build
+./aip build
 ```
 
 **Note:** Usage of flashing firmware will appeared at the bottom of build.
@@ -116,10 +108,10 @@ aip build
 3.Flash the "**NEW**" firmware into the board **by copying the usage from end of build**. Here aip will automatically look for the board connected to the PC and upload the firmware. If board is not connected, an error will appear.
 
 ```sh
-aip flash # + ArduPy Bin PATH
+./aip flash
 ```
 
-<div align=center><img src="https://s3-us-west-2.amazonaws.com/files.seeedstudio.com/wiki/Wio-Terminal/img/aip-convert.gif"/></div>
+<div align=center><img width = 500 src="https://s3-us-west-2.amazonaws.com/files.seeedstudio.com/wiki/Wio-Terminal/img/aip-install-n.gif"/></div>
 
 !!!Note
         You can also use `aip build clean` before `aip build` to remove any caches from before to avoid error.
@@ -140,6 +132,10 @@ while True:
     print ("The distance to obstacles in front is:", ur.cm, 'centimeter')
     time.sleep(1)
 ```
+
+### FAQ
+
+For more aip reference, please visit [ardupy-aip](https://github.com/Seeed-Studio/ardupy-aip) to find out more.
 
 ## Time and Delay
 

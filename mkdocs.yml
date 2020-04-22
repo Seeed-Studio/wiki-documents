@@ -228,6 +228,9 @@ nav:
             - Digital: Wio-Terminal-IO-Digital.md
             - I2C: Wio-Terminal-IO-I2C.md
             - SPI: Wio-Terminal-IO-SPI.md
+          - Network:
+            - Overview: Wio-Terminal-Network-Overview.md
+            - Wi-Fi: Wio-Terminal-Wi-Fi.md
           - IMU:
             - Overview: Wio-Terminal-IMU-Overview.md
             - Getting Started: Wio-Terminal-IMU-Basic.md
@@ -892,6 +895,7 @@ nav:
           - How to use and write a library: How_to_use_and_write_a_library.md
           - How to build a home soft router and NAS With ReComputer: How-to-build-a-home-soft-router-and-NAS-With-ReComputer.md
           - How to use Seeeduino XIAO to log in to your Raspberry PI: How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI.md
+          - SPI Communication on Seeeduino XIAO: XIAO-SPI-Communication-Interface.md
           - I2C And I2C Address of Seeed Product: I2C_And_I2C_Address_of_Seeed_Product.md
           - Introduction to Artificial Intelligence for Makers: Introduction_to_Artificial_Intelligence_for_Makers.md
           - IR Remote: IR_Remote.md
