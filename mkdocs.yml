@@ -215,6 +215,7 @@ pages:
             - Line Charts: Wio-Terminal-LCD-Linecharts.md
             - Histogram: Wio-Terminal-LCD-Histogram.md
             - LCD API Examples: Wio-Terminal-LCD-APIs.md
+            - ArduPy LCD API Reference: ArduPy-LCD.md
           - IO:
             - Overview: Wio-Terminal-IO-Overview.md
             - Analog: Wio-Terminal-IO-Analog.md

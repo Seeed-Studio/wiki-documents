@@ -330,6 +330,10 @@ Now, simply click the "Upload" button in the environment. Wait a few seconds and
 
 - **[PDF]** [ATSAMD218A-MU datasheet](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/ATSAMD21G18A-MU-Datasheet.pdf)
 
+- **[ZIP]** [Seeeduino KiCAD 3D Model](http://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino%20XIAO%20KICAD.zip)
+
+- **[LBR]** [Seeeduino Eagle 3D Model](http://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino%20XIAO.lbr)
+
 
 ## Tech Support
 
