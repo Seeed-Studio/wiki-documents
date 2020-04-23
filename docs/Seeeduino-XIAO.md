@@ -326,7 +326,7 @@ Now, simply click the "Upload" button in the environment. Wait a few seconds and
 
 ## Resourses
 
-- **[PDF]** [Seeeduino XIAO](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-v1.0-SCH-191112.pdf)
+- **[PDF]** [Seeeduino XIAO Schematic](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-v1.0-SCH-191112.pdf)
 
 - **[PDF]** [ATSAMD218A-MU datasheet](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/ATSAMD21G18A-MU-Datasheet.pdf)
 
