@@ -543,6 +543,7 @@ nav:
           - Grove - Flame Sensor: Grove-Flame_Sensor.md
           - Grove - GSR Sensor: Grove-GSR_Sensor.md
           - Grove - Gas Sensor: Grove-Gas_Sensor.md
+          - Grove - Gas Sensor V2(Multichannel): Grove-Multichannel-Gas-Sensor-V2.md
           - Grove - Gas Sensor(MQ2): Grove-Gas_Sensor-MQ2.md
           - Grove - Gas Sensor(MQ3): Grove-Gas_Sensor-MQ3.md
           - Grove - Gas Sensor(MQ5): Grove-Gas_Sensor-MQ5.md

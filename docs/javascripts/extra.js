@@ -25,7 +25,8 @@ _SiteData = {
     "jp" : "日本語",
     "vn" : "VN",
     "id" : "IDN",
-    "cz" : "Czech"
+    "cz" : "Czech",
+    "ph" : "Filipino"
 }
 
 
