@@ -9,7 +9,7 @@ add mutiple language steps
 // 线上环境 : true 
 // 本地环境 : false
 
-var _IsProduction = false ;
+var _IsProduction = true ;
 
 // root URL 
 //  测试版本 :  "http://192.168.5.153/b/wiki.seeedstudio.com"

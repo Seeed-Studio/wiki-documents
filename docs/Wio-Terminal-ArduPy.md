@@ -253,7 +253,7 @@ dac2.write(128)         # Writing value to DAC, 128/255*3.3 = 1.65V
 
 ## LCD
 
-For Wio Terminal, the TFT LCD display can be used as followed. For more API reference, please visit [Seeed Arduino LCD](https://github.com/Seeed-Studio/Seeed_Arduino_LCD/blob/master/TFT_eSPI.h) for more information for now. The LCD Display for ArduPy will be released very soon.
+For Wio Terminal, the TFT LCD display can be used as followed. For more LCD reference, please visit [**ArduPy LCD API Reference**](http://wiki.seeedstudio.com/ArduPy-LCD/).
 
 
 - Using the LCD module:
