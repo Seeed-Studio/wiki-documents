@@ -2,6 +2,8 @@
 import time
 import json
 import re
+import sys
+import os
 
 def processJson(inputJsonFile, outputJsonFile):
     fin = open(inputJsonFile, 'r')
@@ -31,8 +33,8 @@ def processJson(inputJsonFile, outputJsonFile):
 
 
 if __name__ == "__main__":
-    processJson('search_index.json', 'search_index_new.json')
-    while True:
-        print("Hello")
-        time.sleep(1)
+    print(sys.argv)
+
+    processJson(sys.argv[1], '/tmp/search_index_new.json')
+    os.system('cp  /tmp/search_index_new.json ' + sys.argv[1])
 
