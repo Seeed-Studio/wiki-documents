@@ -1,0 +1,8 @@
+build:
+  tags:
+    - nas
+  script:
+    - ls -l /mnt
+    - mkdocs build --clean
+    - python3 create_search_index/search_index.py site/mkdocs/search_index.json
+    - rsync -az site/*  /mnt/b/wiki.seeedstudio.com

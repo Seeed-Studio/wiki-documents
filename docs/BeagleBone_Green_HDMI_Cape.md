@@ -1,6 +1,6 @@
 ---
-name: BeagleBone Green HDMI Cape
-category: BeagleBone
+name: BeagleBone® Green HDMI Cape
+category: BeagleBone®
 bzurl: https://seeedstudio.com/SeeedStudio-BeagleBone-Green-HDMI-Cape-p-2570.html
 oldwikiname: BeagleBone_Green_HDMI_Cape
 prodimagename: BeagleBone_Green_HDMI_Cape.jpg
@@ -12,7 +12,7 @@ sku: 103030034
 
 ![](https://files.seeedstudio.com/wiki/BeagleBone_Green_HDMI_Cape/img/BeagleBone_Green_HDMI_Cape.jpg)
 
-**BeagleBone Green HDMI Cape** is a general integrated HDMI connector for expanding your BeagleBone to a rich variety of peripherals such as computer monitor, video projector, digital television, or digital audio device. This board features a standard HDMI receptacle that can be connected to a monitor with a standard HDMI-to-HDMI cable. All HD signals are supported, and the output resolution is 1280×720. It also can be used to transmit audio information. This product will make your applications based on BeagleBone board more versatile for different circumstances.
+**BeagleBone® Green HDMI Cape** is a general integrated HDMI connector for expanding your BeagleBone® to a rich variety of peripherals such as computer monitor, video projector, digital television, or digital audio device. This board features a standard HDMI receptacle that can be connected to a monitor with a standard HDMI-to-HDMI cable. All HD signals are supported, and the output resolution is 1280×720. It also can be used to transmit audio information. This product will make your applications based on BeagleBone® board more versatile for different circumstances.
 
 [![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/BeagleBone-Green-HDMI-Cape-p-2570.html)
 
@@ -41,7 +41,7 @@ Platforms Supported
 Application ideas
 -----------------
 
-You can expand your BeagleBone to more multimedia peripherals such computer monitor, video projector, digital television, or digital audio device.
+You can expand your BeagleBone® to more multimedia peripherals such computer monitor, video projector, digital television, or digital audio device.
 
 Hardware Overview
 -----------------
@@ -68,7 +68,7 @@ Hardware Overview
 |                            |          |
 |----------------------------|----------|
 | **Parts name**             | Quantity |
-| BeagleBone Green HDMI Cape | 1        |
+| BeagleBone® Green HDMI Cape | 1        |
 
 Getting Started
 -----------
@@ -77,7 +77,7 @@ Getting Started
 
 ### Preparations
 
--   BeagleBone Green board × 1.
+-   BeagleBone® Green board × 1.
 -   USB cable (type A to micro type B) × 1.
 -   Standard HDMI cable(type A to type A) × 1.
 
@@ -103,19 +103,19 @@ sudo apt-get install lxde lxde-core lxde-icon-theme
 
 #### Trouble shooting
 
-1. No BeagleBone desktop operation system is shown on the computer monitor? Try one of following steps.
+1. No BeagleBone® desktop operation system is shown on the computer monitor? Try one of following steps.
 
     - Power down the monitor and restart it.
-    - Press RESET button on BeagleBone Green board.
-    - Press POWER button on BeagleBone Green board and then press it again.
+    - Press RESET button on BeagleBone® Green board.
+    - Press POWER button on BeagleBone® Green board and then press it again.
 
 
     ![](https://files.seeedstudio.com/wiki/BeagleBone_Green_HDMI_Cape/img/Beaglebone-Green_s.jpg)
 
 2. The computer mouse does not work(not powered)?
-    -   Press RESET button on BeagleBone Green board and wait it to launch.
+    -   Press RESET button on BeagleBone® Green board and wait it to launch.
 
-3. How disassemble BeagleBone Green HDMI Cape quickly?
+3. How disassemble BeagleBone® Green HDMI Cape quickly?
     -   Pull(with your hand) the end with HDMI receptacle out first, then pull the other end out. Repeat previous two steps again if it is necessary.
 
 
@@ -140,7 +140,7 @@ sudo apt-get install lxde lxde-core lxde-icon-theme
 Demo
 ----
 
-This [video](https://www.youtube.com/watch?v=-xvbXSd_9TY&feature=youtu.be) shows how to use BeagleBone Green HDMI Cape to surfing Internet and play audio.
+This [video](https://www.youtube.com/watch?v=-xvbXSd_9TY&feature=youtu.be) shows how to use BeagleBone® Green HDMI Cape to surfing Internet and play audio.
 
 
 ## Schematic Online Viewer

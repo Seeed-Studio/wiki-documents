@@ -2,7 +2,13 @@
 
 This repo introduce how to install the TFT LCD library used on Wio Terminal. It provides basic graphical functions to the Wio Terminal with minimum effort!
 
-## Installing the TFT LCD Library For Wio Terminal
+## TFT LCD Library Default Installation
+
+By default, the TFT LCD Library is **included inside the Wio Terminal Board Library**. Hence, there is no need to download the TFT LCD library again. Follow the next tutorials to get you started with the display!
+
+## Installing the TFT LCD Library Separately
+
+If you want to install the TFT LCD library separately, or updating just the TFT LCD library, follow the steps below:
 
 1. Visit the [Seeed_Arduino_LCD](https://github.com/Seeed-Studio/Seeed_Arduino_LCD) repositories and download the entire repo to your local drive.
 

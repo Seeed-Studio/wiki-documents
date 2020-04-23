@@ -8,7 +8,7 @@ sku: 102110399
 
 ![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/ODYSSEY-X86J4105-side.png)
 
-The ODYSSEY - X86J4105, is based on Intel Celeron J4105, a Quad-Core 1.5GHz CPU that bursts up to 2.5GHz. It has all the great features that a standard Computer needs, including an 8GB LPDDR4 RAM, 64GB eMMC Storage(optional), onboard Wi-Fi/BLE, Dual Gigabyte Ethernet Ports, Audio Input and Output, USB Ports, HDMI, SATA Connectors, PCIe, etc.
+The ODYSSEY - X86J4105, is based on Intel Celeron J4105, a Quad-Core 1.5GHz CPU that bursts up to 2.5GHz. It has all the great features that a standard Computer needs, including an 8GB LPDDR4 RAM, 64GB eMMC Storage(optional), onboard Wi-Fi/BLE, Dual Gigabit Ethernet Ports, Audio Input and Output, USB Ports, HDMI, SATA Connectors, PCIe, etc.
 
 ## Key Features:
 
@@ -283,7 +283,7 @@ Check BIOS settings and enable Wi-Fi and Bluetooth from BIOS
 
 ### ODYSSEY - X86J4105 doesn't power up
 
-Maker sure you use the 12V/2A power adapter provided in the bopx and check connection.
+Maker sure you use the 12V/2A power adapter provided in the box and check connection.
 
 ### Different status of Power button of ODYSSEY - X86J4105
 
@@ -302,6 +302,12 @@ Currently the fan is controlled by BIOS, and not controlled by user. The fan spe
 ### How to upgrade BIOS
 
 For the instrucitons of upgrading BIOS, please check the Installing OS section.
+
+### How to set the ODYSSEY - X86J4105 to auto power on when power plugged in
+
+This also need to be configured in the BIOS. Enter BIOS settings by pressing DEL key. Navigate to **Chipset** -> **Restore on AC Power Loss** and change settings to **Last State**.
+
+<div align=center><img width = 500 src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/Auto-power.png"/></div>
 
 ## Resources
 

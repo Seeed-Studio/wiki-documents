@@ -78,7 +78,7 @@ BIOS is also like an OS and can be upgraded to fix bugs and enhance performance 
 
 ### Step 1 - Download the newest version of BIOS
 
-Download the newest verison of BIOS from here.
+Download the latest version of BIOS from [**here**](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-BS-CJ41G-M-101-E.zip).
 
 ### Step 2 -  Prepare bootable USB
 

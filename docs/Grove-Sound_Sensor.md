@@ -31,7 +31,7 @@ Grove - Sound Sensor can detect the sound intensity of the environment. The main
 
 |Item|Value|
 |-----|------|
-|Operating Voltage Range| 3.3/5 V |
+|Operating Voltage Range| 5 V |
 |Operating Current(Vcc=5V)|4~5 mA|
 |Voltage Gain(V=6V, f=1kHz)|26 dB|
 |Microphone sensitivity(1kHz)|52-48 dB|
