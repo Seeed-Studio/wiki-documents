@@ -1,6 +1,6 @@
 # Reading Github Repository Stats from Wio Terminal
 
-![](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Github.gif)
+<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Github.gif"/></div>
 
 This wiki introduces how to use Wio Terminal to access to **HTTPS** server, which means you could use Wio Terminal to grab live data from the internet! Here, Wio Terminal is connected to a Wi-Fi and obtain data from the Github.
 
