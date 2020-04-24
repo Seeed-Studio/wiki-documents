@@ -147,7 +147,7 @@ Please follow the [Seeed Board Intallation Guide](http://wiki.seeedstudio.com/Se
 
 - **Step 3. Add the W600 Library into Your Arduino IDE**  
 
-Download the [W600 Library](https://github.com/Seeed-Studio/Grove_w600) from Seeed Github. Then Refer to [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+Download the [W600 Library](https://github.com/Seeed-Studio/Seeed_Arduino_W600) from Seeed Github. Then Refer to [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 
 - **Step 4.** Restart the Arduino IDE. Open the AP-Station example, you can open it in the Arduino IDE by the path: **File --> Examples -->seeed_W600_wifi-->ap_sta_mode**.
