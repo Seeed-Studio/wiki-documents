@@ -110,9 +110,18 @@ Now you can start playing with your AWS 1-Click service!
   
 - **Long Press(>7s):** Enter BLE network configuration mode. In this mode, other events are blocked. If you need to manually exit the BLE distribution mode, you can press and hold it for more than 7s again, and it will exit automatically in two minutes.
 
-## OTA
+## OTA Update
 
-To enter OTA to upgrade firmware, simply double click the IoT Button. This will search if OTA is available.
+Long Press **15s** to start searching for new version upgrades:
+
+1. **Long Press(>7s)**, the Wi-Fi Configuration LED starts to blink. If released now will enter network configuration mode.
+
+2. Continue to **press and hold >8s (total > 15s)**, Event Status LED starts to flash blue and enter OTA mode.
+
+**When it's the latest version**, the Event Status LED blinks from **Blue** to **Green**. For more information, please refer to the table below:
+
+
+<table style="border-collapse:collapse;border-spacing:0" class="tg"><tr><th style="background-color:#9b9b9b;border-color:#000000;border-style:solid;border-width:1px;color:#ffffff;font-family:Arial, sans-serif;font-size:14px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:middle;word-break:normal">Event LED Status</th><th style="background-color:#9b9b9b;border-color:#000000;border-style:solid;border-width:1px;color:#ffffff;font-family:Arial, sans-serif;font-size:14px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:middle;word-break:normal">Indication</th></tr><tr><td style="border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Blue flashes -&gt; Green</td><td style="border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Update sent successfully</td></tr><tr><td style="border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Blue flashes -&gt; Red</td><td style="border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Update sent failed</td></tr><tr><td style="border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Blue flashes -&gt; Orange</td><td style="border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Wi-Fi connection failed, please check router or change network configuration</td></tr><tr><td style="border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Blue flashes -&gt; Purple</td><td style="border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">The server connection failed, please check the network environment</td></tr></table>
 
 ## How To Take Out The Enclosure
 
