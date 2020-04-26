@@ -64,7 +64,7 @@ In addition to the Non-Dispersive Infrared(NDIR) measurement technology for CO2 
 |Sensor lifetime|15 years|
 |Interface|I2C|
 |I2C Address|0x61|
-|Size|L: 58mm W: 38mm H: 19mm|
+|Size|L: 61mm W: 42mm H: 19mm|
 |Weight|19.7g|
 |Package Size|L: 110mm W: 70mm H: 40mm|   
 |Gross weight| 27g|
