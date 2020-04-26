@@ -316,6 +316,190 @@ Now, simply click the "Upload" button in the environment. Wait a few seconds and
  
  A few seconds after the upload finishes, you should see the pin 13 (L) LED on the board start to blink (in orange). If it does, congratulations! You've gotten Arduino up-and-running. If you have problems, please see the troubleshooting suggestions.
 
+## Energy Saving
+
+### Hardware
+
+
+**Materials required**
+
+- Seeeduino XIAO x1 
+- Computer x1
+- USB typc cable x1
+
+!!!Tip
+
+    Some USB cables can only supply power and cannot transfer data. If you don't have a usb cable or don't know if your usb cable can transmit data, you can check [seeed USB type C support USB 3.1 ](https://www.seeedstudio.com/USB-Type-C-to-A-Cable-1Meter-p-4085.html).
+
+
+- Step 1. Prepare a Seeeduino XIAO and a Type-C cable.
+
+- Step 2. Connect the Seeeduino XIAO to your computer.Then the yellow power LED should go on.
+
+
+### Software
+
+
+!!!Note
+
+
+    If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](http://wiki.seeed.cc/Getting_Started_with_Arduino)
+
+
+
+- **Step 1. You need to Install an Arduino Software.**
+
+
+[![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/Download_IDE.png)](https://www.arduino.cc/en/Main/Software)
+
+
+**Launch the Arduino application**
+
+Double-click the Arduino application (arduino.exe) you have previously downloaded.
+
+
+!!!Note
+ 
+    If the Arduino Software loads in a different language, you can change it in the preferences dialog. See the [Arduino Software (IDE) page](https://www.arduino.cc/en/Guide/Environment#languages) for details.
+
+
+- **Step 2. Open the WakeUpOnExternalInterrupt example**  
+
+Open the LED blink example sketch: **File > Examples >Energy Saving > WakeUpOnExternalInterrupt**.
+
+- **Step 3. Add Seeeduino to your Arduino IDE**
+
+Click on **File > Preference**, and fill Additional Boards Manager URLs with the url below:
+    *https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json*
+
+
+![](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Boardurl.png)
+
+
+Click **Tools-> Board-> Boards Manager...**, print  keyword "**Seeeduino XIAO**" in the searching blank. Here comes the "Seeed SAMD Boards". Install it.
+
+
+![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-board.png)
+
+
+- **Step 4. Select your board and port** 
+
+After installing the board, click **Tools-> Board**, find "**Seeeduino XIAO M0**" and select it. Now you have already set up the board of Seeeduino XIAO for Arduino IDE.
+
+
+![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/board.png)
+
+
+Select the serial device of the Arduino board from the Tools | Serial Port menu. This is likely to be COM3 or higher (**COM1** and **COM2** are usually reserved for hardware serial ports). To find out, you can disconnect your Arduino board and re-open the menu; the entry that disappears should be the Arduino board. Reconnect the board and select that serial port.
+
+
+![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/port.png)
+
+
+- **Step 5.Upload the program**  
+
+Now, simply click the "Upload" button in the environment. Wait a few seconds and if the upload is successful, the message "Done uploading." will appear in the status bar.
+
+![](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/upload_image.png)
+
+ 
+ A few seconds after the upload finishes, you should see the pin 13 (L) LED on the board start to blink (in orange). If it does, congratulations! You've gotten Arduino up-and-running. If you have problems, please see the troubleshooting suggestions.
+ 
+ !!!Note
+ 
+    the current is 0.0145A at the normal mode, as the same the current will become to 0.0032A at the standby mode.
+
+## RWWEE
+
+### Hardware
+
+
+**Materials required**
+
+- Seeeduino XIAO x1 
+- Computer x1
+- USB typc cable x1
+
+!!!Tip
+
+    Some USB cables can only supply power and cannot transfer data. If you don't have a usb cable or don't know if your usb cable can transmit data, you can check [seeed USB type C support USB 3.1 ](https://www.seeedstudio.com/USB-Type-C-to-A-Cable-1Meter-p-4085.html).
+
+
+- Step 1. Prepare a Seeeduino XIAO and a Type-C cable.
+
+- Step 2. Connect the Seeeduino XIAO to your computer.Then the yellow power LED should go on.
+
+
+### Software
+
+
+!!!Note
+
+
+    If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](http://wiki.seeed.cc/Getting_Started_with_Arduino)
+
+
+
+- **Step 1. You need to Install an Arduino Software.**
+
+
+[![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/Download_IDE.png)](https://www.arduino.cc/en/Main/Software)
+
+
+**Launch the Arduino application**
+
+Double-click the Arduino application (arduino.exe) you have previously downloaded.
+
+
+!!!Note
+ 
+    If the Arduino Software loads in a different language, you can change it in the preferences dialog. See the [Arduino Software (IDE) page](https://www.arduino.cc/en/Guide/Environment#languages) for details.
+
+
+- **Step 2. Open the WakeUpOnExternalInterrupt example**  
+
+Open the LED blink example sketch: **File > Examples >FlashStorage > FlashStoreAndRetrieve**.
+
+- **Step 3. Add Seeeduino to your Arduino IDE**
+
+Click on **File > Preference**, and fill Additional Boards Manager URLs with the url below:
+    *https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json*
+
+
+![](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Boardurl.png)
+
+
+Click **Tools-> Board-> Boards Manager...**, print  keyword "**Seeeduino XIAO**" in the searching blank. Here comes the "Seeed SAMD Boards". Install it.
+
+
+![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-board.png)
+
+
+- **Step 4. Select your board and port** 
+
+After installing the board, click **Tools-> Board**, find "**Seeeduino XIAO M0**" and select it. Now you have already set up the board of Seeeduino XIAO for Arduino IDE.
+
+
+![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/board.png)
+
+
+Select the serial device of the Arduino board from the Tools | Serial Port menu. This is likely to be COM3 or higher (**COM1** and **COM2** are usually reserved for hardware serial ports). To find out, you can disconnect your Arduino board and re-open the menu; the entry that disappears should be the Arduino board. Reconnect the board and select that serial port.
+
+
+![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/port.png)
+
+
+- **Step 5.Upload the program**  
+
+Now, simply click the "Upload" button in the environment. Wait a few seconds and if the upload is successful, the message "Done uploading." will appear in the status bar.
+
+![](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/upload_image.png)
+
+!!!Note
+ 
+    the max size of flash is 8KB the more information at the ATSAMD218A-MU datasheet in resourses
+
+
 
 ## The sample application
 
