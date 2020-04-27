@@ -11,8 +11,9 @@ tags: grove_digital, io_3v3, io_5v, plat_duino
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-Recorder_v2.0/img/Grove-Recorder_V2.0.jpg)
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Recorder-v2-0-p-4552.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p>
 
-Grove - CRecorder v2.0 is a upgraded recorder with enriched features. It can record 8-20 seconds<sup>\[1\]</sup> audio with high-quality and natural voice. In addition, it also gets sound volume control and playback functions. With MCU such as [Seeeduino](/Seeeduino_v4.2) or Arduino board, you can prototype various applications quickly with user-friendly interfaces.
+Grove - Recorder v2.0 is a upgraded recorder with enriched features. It can record 8-20 seconds<sup>\[1\]</sup> audio with high-quality and natural voice. In addition, it also gets sound volume control and playback functions. With MCU such as [Seeeduino](/Seeeduino_v4.2) or Arduino board, you can prototype various applications quickly with user-friendly interfaces.
 
 <sup>\[1\]</sup> Recording time could be customized(if you require) by replacing different resistor the solution to do this will be described in later sections.
 
