@@ -128,7 +128,13 @@ There are few Arduino Libraries that are needed for the Wireless connectivity. F
 
 2. Now, the esp-at-lib library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `esp-at-lib` file that you've have just downloaded.
 
-### 5. Install the Seeed_Arduino_atWiFiClientSecure
+### 5. Install the Seeed_Arduino_mbedtls
+
+1. Visit the [Seeed_Arduino_mbedtls](https://github.com/Seeed-Studio/Seeed_Arduino_mbedtls) repositories and download the entire repo to your local drive.
+
+2. Now, the Seeed_Arduino_mbedtls library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_mbedtls` file that you've have just downloaded.
+
+### 6. Install the Seeed_Arduino_atWiFiClientSecure
 
 1. Visit the [Seeed_Arduino_atWiFiClientSecure](https://github.com/Seeed-Studio/Seeed_Arduino_atWiFiClientSecure.git) repositories and download the entire repo to your local drive.
 

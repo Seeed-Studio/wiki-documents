@@ -24,6 +24,8 @@ This example will configure itself as Wi-Fi STA mode, scan and print out all the
 
 void setup() {
     Serial.begin(115200);
+    while(!Serial); // Wait for Serial to be ready
+    delay(1000);
 
     // Set WiFi to station mode and disconnect from an AP if it was previously connected
     WiFi.mode(WIFI_STA);
@@ -75,6 +77,8 @@ const char* password =  "yourNetworkPassword";
 
 void setup() {
     Serial.begin(115200);
+    while(!Serial); // Wait for Serial to be ready
+    delay(1000);
 
     // Set WiFi to station mode and disconnect from an AP if it was previously connected
     WiFi.mode(WIFI_STA);
@@ -119,7 +123,8 @@ WiFiMulti wifiMulti;
 
 void setup() {
     Serial.begin(115200);
-    delay(10);
+    while(!Serial); // Wait for Serial to be ready
+    delay(1000);
 
     wifiMulti.addAP("ssid_from_AP_1", "your_password_for_AP_1");
     wifiMulti.addAP("ssid_from_AP_2", "your_password_for_AP_2");
@@ -188,6 +193,8 @@ const char* password =  "yourNetworkPassword";
 
 void setup() {
     Serial.begin(115200);
+    while(!Serial); // Wait for Serial to be ready
+    delay(1000);
 
     // Set WiFi to station mode and disconnect from an AP if it was previously connected
     WiFi.mode(WIFI_STA);
@@ -302,7 +309,8 @@ WiFiClientSecure client;
 void setup() {
     //Initialize serial and wait for port to open:
     Serial.begin(115200);
-    delay(100);
+    while(!Serial); // Wait for Serial to be ready
+    delay(1000);
 
     Serial.print("Attempting to connect to SSID: ");
     Serial.println(ssid);
@@ -359,13 +367,22 @@ void loop() {
 
 #### Obtaining Website's root CA
 
-To obtain the root CA for a website, you can run the following command in Terminal/Powershell:
+To obtain the root CA for a website, you can run the following command in Terminal (Linux Bash Shell):
 
 ```sh
 openssl s_client -showcerts -verify 5 -connect www.example.com:443 < /dev/null
 ```
 
-Repalce **`www.example.com`** with desired website's root url.
+Replace **`www.example.com`** with desired website's root url.
+
+**For Windows**, you can use the **Windows Subsystem for Linux (WSL)** to run the same Linux command.
+
+**Note:** Make sure you have the dependencies installed:
+
+```sh
+sudo apt update
+sudo apt install openssl
+```
 
 ## Configuring Wi-Fi as Access Point (AP) Mode
 
@@ -428,6 +445,8 @@ void setup() {
     pinMode(LED_BUILTIN, OUTPUT);
 
     Serial.begin(115200);
+    while(!Serial); // Wait for Serial to be ready
+    delay(1000);
     Serial.println();
     Serial.println("Configuring access point...");
 
