@@ -293,7 +293,7 @@ If you don't know how to install the library, please kindly check:
 ![](https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/SD-boot/format.jpg)
 
   2.2 Create a top level subfolder named __overlay__ in the SDCard.  
-  2.3 Put your bitstream or [sample bitstream](https://github.com/sea-s7/AlphaTest_V1.0/tree/master/spi2gpio) files (must have a extend name .bit) into the folder __overlay__.  
+  2.3 Put your bitstream or [sample bitstream](https://github.com/sea-s7/Demo_project/tree/master/spi2gpio) files (must have a extend name .bit) into the folder __overlay__.  
 
 !!!Tip
     The sample bitsteam : GPIO extension controlled by SPI interface, with support of ADC/DAC/RGB-LED, see [source code](https://github.com/sea-s7/Demo_project/tree/master/spi2gpio).
