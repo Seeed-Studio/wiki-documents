@@ -430,7 +430,8 @@ Grove - 10A DC Current Sensor (ACS725)     |DC          |10A
 
 <div align="center"><i>This series has three current sensors, the parameter list is as above</i></div>
 
-
+！！！Note
+        Please note that the DC current sensor of 10A will have a large error when measuring a small range, so it is recommended that you provide a current of more than 200mA for testing. In addition, the measurement environment will affect the accuracy, such as the supply voltage ripple to be as small as possible. 
 
 
 

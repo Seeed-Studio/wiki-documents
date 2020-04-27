@@ -159,7 +159,15 @@ MT3620 software development is supported using the powerful Microsoft Visual Stu
   </tr>
 </table>
 
+## Sopports
+It is now possible to program all of the followings if building a real-time app.
+- I2C
+- 2xARM Cortex-M4 with FPU
+- ADC
+- PWM
+- I2S （please refer to [M4 with FPU](https://d86o2zu8ugzlg.cloudfront.net/mediatek-craft/documents/MT3620-M4-User-Manual.pdf)）
 
+If building a high-level OS app,it is possible to use ADC and PWM.
 ## Hardware Overview
 
 **Board Diagram**

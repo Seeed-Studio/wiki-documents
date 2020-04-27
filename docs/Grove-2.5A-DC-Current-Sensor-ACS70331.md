@@ -447,7 +447,8 @@ Grove - 10A DC Current Sensor (ACS725)     |DC          |10A
 
 <div align="center"><i>This series has three current sensors, the parameter list is as above</i></div>
 
-
+！！！Note
+        Please note that the DC current sensor of 2.5A will have a large error when measuring a small range, so it is recommended that you provide a current of more than 200mA for testing. In addition, the measurement environment will affect the accuracy, such as the supply voltage ripple to be as small as possible. 
 - **Step 4 Calibration**.  
 
     When there is no current flowing, the sensor will still have a small output value. We call this value zero offset. As you can see, in the step 3, the zero offset of this board is 270mV, converted into current is 13mA.
