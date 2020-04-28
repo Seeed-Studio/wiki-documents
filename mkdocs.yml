@@ -208,7 +208,11 @@ nav:
             - ODYSSEY X86J4105 with Intel Neural Compute Stick 2: ODYSSEY-X86J4105-NCS2.md
           - ODYSSEY STM32MP157C: ODYSSEY-STM32MP157C.md
           - SEEED SOM STM32MP157C: SEEED-SOM-STM32MP157C.md
-          
+      
+      - ArduPy:
+          - ArduPy Wiki: ArduPy.md
+          - ArduPy LCD API Reference: ArduPy-LCD.md
+
       - Wio Terminal:
           - Get Started with Wio Terminal: Wio-Terminal-Getting-Started.md
           - ArduPy Get Started with Wio Terminal: Wio-Terminal-ArduPy.md
@@ -222,7 +226,6 @@ nav:
             - Line Charts: Wio-Terminal-LCD-Linecharts.md
             - Histogram: Wio-Terminal-LCD-Histogram.md
             - LCD API Examples: Wio-Terminal-LCD-APIs.md
-            - ArduPy LCD API Reference: ArduPy-LCD.md
           - IO:
             - Overview: Wio-Terminal-IO-Overview.md
             - Analog: Wio-Terminal-IO-Analog.md
