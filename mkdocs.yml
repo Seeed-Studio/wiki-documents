@@ -265,7 +265,7 @@ nav:
             - Mouse: Wio-Terminal-USBCLIENT-Mouse.md
             - MIDI: Wio-Terminal-USBCLIENT-MIDI.md
           - TensorFlow Lite:
-            - Overview: Wio-Terminal-TensonFlow.md
+            - Overview: Wio-Terminal-TensorFlow.md
           - Grove:
             - Overview: Wio-Terminal-Grove.md
           - Demo:
