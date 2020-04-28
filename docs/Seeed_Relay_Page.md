@@ -13,7 +13,7 @@ Before the start, let's check the seeed relay quick selection diagram.
 
 <div align="center">
 <figure>
-  <a href="https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/Relay_Select.png" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/Relay_Select.png" alt="Seeed relay quick selection diagram" title="Seeed relay quick selection diagram" />
+  <a href="https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/Relay.png" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/Relay.png" alt="Seeed relay quick selection diagram" title="Seeed relay quick selection diagram" />
   <figcaption><b>Figure 1</b>. <i>Seeed relay quick selection diagram, you can click the diagram to view the original file</i></figcaption></a>
 </figure>
 </div>
@@ -35,21 +35,13 @@ For more detail, please refer to the following table, perhaps, all you need is j
 |[Grove - 4-Channel Solid State Relay](https://www.seeedstudio.com/Grove-4-Channel-Solid-State-Relay-p-3130.html)|<img src="https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/ssr4.jpg" />|4V-6V||2A@100VAC to 240VAC||1000MΩ Min.@500VDC|1/2 of load power source cycle +1 ms max|1/2 of load power source cycle + 1 ms max|I2C|Solid State|[Buy Now](https://www.seeedstudio.com/Grove-4-Channel-Solid-State-Relay-p-3130.html)|
 |[Grove - 8-Channel Solid State Relay](https://www.seeedstudio.com/Grove-8-Channel-Solid-State-Relay-p-3131.html)|<img src="https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/ssr8.jpg" />|4V-6V||2A@100VAC to 240VAC||1000MΩ Min.@500VDC|1/2 of load power source cycle +1 ms max|1/2 of load power source cycle + 1 ms max|I2C|Solid State|[Buy Now](https://www.seeedstudio.com/Grove-8-Channel-Solid-State-Relay-p-3131.html)|
 |[Grove - 2-Coil Latching Relay](https://www.seeedstudio.com/Grove-2-Coil-Latching-Relay-p-1446.html)|<img src="https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/2coil.jpg" />|5V||1A@125VAV<br>3A@30VDC|50mΩ Max.|1000MΩ@500VDC|4.5ms Max.|3.5ms Max.|Digital|Electromechanical|[Buy Now](https://www.seeedstudio.com/Grove-2-Coil-Latching-Relay-p-1446.html)|
-|[Grove - Dry-Reed Relay](https://www.seeedstudio.com/Grove-Dry-Reed-Relay-p-1412.html)|<img src="https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/dry-reed.jpg" />|5V||0.1A@100VAC<br>0.5A@24VDC|150mΩ Max.|100MΩ @500VDC<br>1000MΩ @100VDC|1ms Max.|0.5ms Max.|Digital|Reed Relays|[Buy Now](https://www.seeedstudio.com/Grove-Dry-Reed-Relay-p-1412.html)|
+|[Grove - Dry-Reed Relay](https://www.seeedstudio.com/Grove-Dry-Reed-Relay-p-1412.html)|<img src="https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/dry-reed.jpg" />|5V||0.1A@100VAC<br>0.5A@24VDC|150mΩ Max.|100MΩ @500VDC<br>1000MΩ @100VDC|1ms Max.|0.5ms Max.|Digital|Reed Relays|[Buy Now](https://www.seeedstudio.com/Grove-Dry-Reed-Relay-p-1412.html)
+|[Grove - Optocoupler Relay (M281)](https://www.seeedstudio.com/Grove-Optocoupler-Relay-M281-p-2923.html)|<img src="https://files.seeedstudio.com/wiki/Grove-Optocoupler-Relay-M281/img/thumbnail.jpg" />|3.3-5V||1000mA| |100GΩ|1.4ms Max.|0.2ms Max.|Digital|Solid State|[Buy Now](https://www.seeedstudio.com/Grove-Optocoupler-Relay-M281-p-2923.html)
 
-<div align="center"><b>Table 1.</b><i>Seeed Relay Parameter</i></div>
-
-
-
-You can click the following button to download the zip file of both the diagram and the table:
+<div align="center"><b>Table 1.</b><i>Seeed Relay Parameter</i></div></br>
 
 
-<div align="center">
-<figure>
-  <a href="https://files.seeedstudio.com/wiki/Seeed_Relay_Page/res/Seeed_relay_select.zip" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/download.jpg" alt="Seeed relay quick selection diagram" title="Seeed relay quick selection diagram" />
-  </a>
-</figure>
-</div>
+You can click **[here](https://files.seeedstudio.com/wiki/Seeed_Relay_Page/res/Relay-Selection.html)** to view the full table in a separate tab.
 
 
 
