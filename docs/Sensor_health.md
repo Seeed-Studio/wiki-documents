@@ -1,6 +1,6 @@
 ![](https://files.seeedstudio.com/wiki/Grove-Health_Sensor/Grove-Health-Sensor.png)
 
-This article is mainly introducing sensors that are able to provide body health advice via measuring heart rate, GSR and EMG. We offer various types of sensors about humanbeings' body feature on our website and you will be clear about your choice after reading this illustrtation. 
+This article is mainly introducing sensors that are able to provide body health advice via measuring heart rate, fingerprint, GSR and EMG. We offer various types of sensors about humanbeings' body feature on our website and you will be clear about your choice after reading this illustration. 
 
 ## Achievement
 
