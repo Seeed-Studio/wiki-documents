@@ -139,48 +139,30 @@ In the Arduino IDE copy, paste, then upload the code below to your board.
 #### Code
 
 ```
-	#if 1 // use SPI
 	#include <SPI.h>
-	#include <PN532/PN532_SPI/PN532_SPI.h>
-	PN532_SPI pn532spi(SPI, 10);
-	NfcAdapter nfc = NfcAdapter(pn532spi);
-	#elif 0 // use hardware serial
+#include <Seeed_Arduino_NFC.h>
+#include  <NfcAdapter.h>
 
-	#include <PN532/PN532_HSU/PN532_HSU.h>
-	PN532_HSU pn532hsu(Serial1);
-	NfcAdapter nfc(pn532hsu);
-	#elif 0  // use software serial
+PN532_SPI pn532spi(SPI, 10);
+NfcAdapter nfc = NfcAdapter(pn532spi);
 
-	#include <PN532/PN532_SWHSU/PN532_SWHSU.h>
-	#include "SoftwareSerial.h"
-	SoftwareSerial SWSerial(2, 3);
-	PN532_SWHSU pn532swhsu(SWSerial);
-	NfcAdapter nfc(pn532swhsu);
-	#else //use I2C
 
-	#include <Wire.h>
-	#include <PN532/PN532_I2C/PN532_I2C.h>
+void setup(void) {
+    Serial.begin(115200); // begin serial communication
+    Serial.println("NDEF Reader");
+    nfc.begin(); // begin NFC communication
+}
 
-	PN532_I2C pn532_i2c(Wire);
-	NfcAdapter nfc = NfcAdapter(pn532_i2c);
-	#endif
+void loop(void) {
 
-    void setup(void) {
-        Serial.begin(115200); // begin serial communication
-        Serial.println("NDEF Reader");
-        nfc.begin(); // begin NFC communication
+    Serial.println("\nScan an NFC tag\n");
+    if (nfc.tagPresent()) // Do an NFC scan to see if an NFC tag is present
+    {
+        NfcTag tag = nfc.read(); // read the NFC tag into an object, nfc.read() returns an NfcTag object.
+        tag.print(); // prints the NFC tags type, UID, and NDEF message (if available)
     }
-
-    void loop(void) {
-
-        Serial.println("\nScan an NFC tag\n");
-        if (nfc.tagPresent()) // Do an NFC scan to see if an NFC tag is present
-        {
-            NfcTag tag = nfc.read(); // read the NFC tag into an object, nfc.read() returns an NfcTag object.
-            tag.print(); // prints the NFC tags type, UID, and NDEF message (if available)
-        }
-        delay(500); // wait half a second (500ms) before scanning again (you may increment or decrement the wait time)
-    }
+    delay(500); // wait half a second (500ms) before scanning again (you may increment or decrement the wait time)
+}
 ```
 
 To test the code:
