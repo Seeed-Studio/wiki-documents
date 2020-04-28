@@ -275,7 +275,7 @@ Press the Power Button and keep pressing DEL key until you see the BIOS Setup.
 
 ### Arduino IDE doesn't recognize the onboard microcontroller
 
-Add a jumper wire between **TXD Pin** and **RXD Pin** of UART pins (to the left of SAMD21's 28 pins) to reset the AMSAMDG21.
+Add a jumper wire between **RST Pin** and **GND Pin** on the 4-Pin header (to the left of SAMD21's 28 pins) to reset the AMSAMDG21.
 
 ### I cannot connect Wi-Fi and Bluetooth
 
