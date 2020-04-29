@@ -201,25 +201,25 @@ You can also power the ODYSSEY - X86J4105 through the USB-C port with 12V input.
 
 The ODYSSEY - X86J4105 is built with Arduino Core(ATSAMD21G18) which provides more functionality to the board, and to use it, simply download the [Arduino IDE](https://www.arduino.cc/en/main/software), and Install the Windows version.
 
-1. Click `File`->`Preferences`->`Additional Boards Manager URL:` and Copy the following link into it `https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_seeeduino_boards_index.json`.
+1. Click `File`->`Preferences`->`Additional Boards Manager URL:` and Copy the following link into it `https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json`.
 
-2. Click `Tools`->`Board:`->`Boards Manager...`, and Boards Manager will appear. Search and install the **`Seeeduino SAMD Zero`** board library.
+2. Click `Tools`->`Board:`->`Boards Manager...`, and Boards Manager will appear. Search and install the **`Seeeduino Zero`** board library.
 
-![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/SAMD.jpg)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/ArduinoBoard.png)
 
 3. Select the right Port and Board before uploading. 
 
-- `Port` -> `COM4(Seeeduno Cortex M0+)`
+- `Port` -> `COMxx(Seeeduno Zero)`
 
-- `Board` -> `Seeeduino Cortex M0+`
+- `Board` -> `Seeeduino Zero`
 
-![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/Arduino%20IDE.png)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/ArduinoPort.png)
 
-1. Feel free to explore your creativity with ODYSSEY - X86J4105!
+Feel free to explore your creativity with ODYSSEY - X86J4105!
 
 ## Using the Arduino Core (ATSAMD21G18) in Linux OS
 
-If you have installed Linux OS, Download the Linux verison of [Arduino IDE](https://www.arduino.cc/en/main/software) and install the IDE as follow:
+If you have installed Linux OS, Download the Linux version of [Arduino IDE](https://www.arduino.cc/en/main/software) and install the IDE as follow:
 
 ### Installing Arduino IDE
 
@@ -255,17 +255,17 @@ cd /opt/arduino-1.8.10 && ./arduino-linux-setup.sh
 
 ### Installing Board Libraries
 
-1. Click `File`->`Preferences`->`Additional Boards Manager URL:` and Copy the following link into it `https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_seeeduino_boards_index.json`.
+1. Click `File`->`Preferences`->`Additional Boards Manager URL:` and Copy the following link into it `https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json`.
 
-2. Click `Tools`->`Board:`->`Boards Manager...`, and Boards Manager will appear. Search and install the **`Seeeduino SAMD Zero`** board library.
+2. Click `Tools`->`Board:`->`Boards Manager...`, and Boards Manager will appear. Search and install the **`Seeeduino Zero`** board library.
 
-![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/Linux.png)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/LinuxBoard.png)
 
 3. Select the right Port and Board before uploading.
 
-- `Port` -> `ttyACM0(Seeeduno Cortex M0+)`
+- `Port` -> `ttyACM0(Seeeduno Zero)`
 
-- `Board` -> `Seeeduino Cortex M0+`
+- `Board` -> `Seeeduino Zero`
 
 ## FAQs
 
