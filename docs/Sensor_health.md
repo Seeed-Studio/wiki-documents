@@ -1,11 +1,11 @@
 ![](https://files.seeedstudio.com/wiki/Grove-Health_Sensor/Grove-Health-Sensor.png)
 
-This article is mainly introducing sensors that are able to provide body health advice via measuring heart rate, fingerprint, GSR and EMG. We offer various types of sensors about humanbeings' body feature on our website and you will be clear about your choice after reading this illustration. 
+This article is mainly introducing sensors that are able to provide body health advice via measuring heart rate, fingerprint, GSR and EMG. We offer various types of sensors about humanbeings' body feature on our website and reading this illustration may help you have an in-depth knowledge about our products.
 
-## Achievement
+## Principles
 
 
-| Category of Sensors        | Principles                                                                                                                                                                                                    |
+| Category of Sensors        | Content                                                                                                                                                                                                    |
 |-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |GSR             | GSR sensors help us measure sweat gland activity related to emotional agitation. We use the electrical properties of the skin to measure GSR. In other words, the skin resistance changes with sweat gland activity, which is, sweat gland activity occurs, the more sweating, the smaller the skin resistance. |
 | EMG                  | EMG detector is a bridge connects human body and electrical, the sensor gathers small muscle signal then process with 2th amplify and filter, the output signal can be recognized by Arduino. |
