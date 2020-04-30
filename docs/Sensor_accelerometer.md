@@ -13,7 +13,7 @@ For instance, recently a ninety-year-old American old lady said that after exper
 <div align=center><img src="https://files.seeedstudio.com/wiki/Sensor_accelerometer/IMG/Accelerometer.png"/><figcaption><b>Figure 1</b>. <i>Smart watch with a 3-axis accelerometer ( Image from Sensorexpert, 2015 )</i></figcaption></a>
 </figure></div>
 
-### How does an accelerometer works
+### How does an accelerometer work
 
 There exist two ways where an accelerometer works: Piezoelectric effect, and Change in Capacitance. Following is the illustration:
 
