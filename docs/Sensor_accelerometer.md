@@ -15,14 +15,27 @@ For instance, recently a ninety-year-old American old lady said that after exper
 
 ### How does an accelerometer works
 
-As shown in the model in the figure below, the two ends of a mass are fixed by springs. In the absence of acceleration, the spring will not deform and the mass is stationary. When acceleration occurs, the spring deforms and the position of the mass changes. The amount of deformation of the spring increases with the growing acceleration. Under the condition that the spring stiffness system k and the mass m of the mass are known, the acceleration of the system can be obtained as long as the deformation of the spring is measured.
+There exist two ways where an accelerometer works: Piezoelectric effect, and Change in Capacitance. Following is the illustration:
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Sensor_accelerometer/IMG/theory.png"/><figcaption><b>Figure 2</b>. <i>Working principle of an accelerometer ( Image from Jianshu, 2016 )</i></figcaption></a>
+#### Piezoelectric effect
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Sensor_accelerometer/IMG/Piezoelectric effect.png"/><figcaption><b>Figure 2</b>. <i>Working principle of Piezoelectric effect ( Image from explainthatstuff, 2019 )</i></figcaption></a>
 </figure></div>
 
-There are finger sets inside the accelerometer, which are used to measure the displacement of the mass when generating acceleration reading. Each finger set is equivalent to two capacitor plates. When there is an acceleration, the mass will produce relative motion, and the change in displacement will cause the change in differential capacitance.
-Of course, the specific differential capacitance detection and acceleration process are completed internally by G-sensor, we only need to directly read the converted value.
+As shown in the model in the figure above, accelerometers contain microscopic crystal structures, generating voltages when vibrations occur, and then voltage generated will create a reading of how much acceleration there is.
 
+#### Change in Capacitance
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Sensor_accelerometer/IMG/Change in Capacitance.png"/><figcaption><b>Figure 3</b>. <i>Working principle of Change in Capacitance ( Image from explainthatstuff, 2019 )</i></figcaption></a>
+</figure></div>
+
+This method plays with the formula in finding acceleration. Since we know that Force = Mass x Acceleration, to find acceleration, it’ll take the Force present / Mass of an object.
+
+This is how the capacitance effect in a MEMS accelerometer works:
+
+1. 2 capacitive plates are present.
+2. The mass of an object presses on one of the capacitor plates, changing the capacitance and allowing the force to be measured.
+3. With force and mass of object known, acceleration is eventually measured.
 
 
 ## Field of Applicaitons
@@ -39,7 +52,6 @@ There are a numerous use of these accelerometer sensors. Particularly, using the
 | Electronic compass tilt correction | The magnetic sensor determines the direction by measuring the magnitude of the magnetic flux. When the magnetic sensor is tilted, the geomagnetic flux passing through the magnetic sensor will change, resulting in an error in the direction. The principle that the acceleration sensor can measure the tilt angle can compensate for the tilt of the electronic compass.| 
 | Pedometer function| The acceleration sensor can detect the AC signal and the vibration of the object. When a person walks, it will generate a certain regular vibration, and the acceleration sensor can detect the zero crossing of the vibration, so as to calculate the number of steps taken by the person or the number of steps taken by the runner. Thereby calculating the displacement that the person moves. And using a certain formula can calculate the calorie consumption.|
 | Compensation for dead angle of GPS navigation system | The GPS system determines the position of the object by receiving three satellite signals distributed at 120 degrees. On some special occasions and landforms, such as tunnels, tall buildings, and jungle areas, the GPS signal will become weak or even completely lost. This is the so-called dead end. And by installing an acceleration sensor and the inertial navigation that we have used before, the dead zone of the system can be measured. Integrating the acceleration sensor once becomes the amount of speed change per unit time, thereby measuring the movement of objects in the dead zone.|
-| 
 
 ## Accelerometer Sensors at Seeed
 There're various accelerometers at Seeed and the following image illustrates a typical Grove - 3-Axis Digital Accelerometer ±16g Ultra-low Power (BMA400):
@@ -68,7 +80,6 @@ There're various accelerometers at Seeed and the following image illustrates a t
 |[Grove - IMU 9DOF v2.0](http://wiki.seeedstudio.com/Grove-IMU_9DOF_v2.0/)|<img src="https://files.seeedstudio.com/wiki/Grove-IMU_9DOF_v2.0/img/45d_small.jpg" />|3.3V-5V|±2,±4,±8,±16g|/|I2C,SPI|/|[Buy Now](https://www.seeedstudio.com/Grove-IMU-9DOF-v2-0.html)|
 |[Grove - IMU 10DOF ](http://wiki.seeedstudio.com/Grove-IMU_10DOF/)|<img src="https://files.seeedstudio.com/wiki/Grove-IMU_10DOF/img/45d_small.jpg" />|3.3V-5V|±2,±4,±8,±16g|/|I2C|/|[Buy Now](https://www.seeedstudio.com/Grove-IMU-10DOF-p-2386.html)|
 |[Grove - IMU 10DOF v2.0](http://wiki.seeedstudio.com/Grove-IMU_10DOF_v2.0/)|<img src="https://files.seeedstudio.com/wiki/Grove-IMU_10DOF_v2.0/img/Grove-imu-10dof-v2.0_s.jpg" />|3.3V-5V|±2g,±4g,±8g,±16g|/|I2C|2.7μA@1Hz|[Buy Now](https://www.seeedstudio.com/Grove-IMU-10DOF-v2-0.html)|
-|
 
 ### Warmly Notice
 
