@@ -1,6 +1,215 @@
 # ArduPy Get Started
 
-## Getting Started
+To get started with ArduPy, first need to install **aip - ArduPy Integrated Platform** is a utility to develop ArduPy and interact witch ArduPy board. It enables users to quickly get started with ardupy. **aip** is meant to be a simple command line tool. You can customize your own ardupy firmware through it, without needing to know more details about ArduPy.
+
+If you prefer using **IDE**, we have also prepared an IDE version and please scroll through to IDE session.
+
+## Install with macOS
+
+For macOS user, you can simply run the following in Terminal to install ArduPy-aip:
+
+```sh
+pip3 install ardupy-aip
+```
+
+**Note:** please make sure that you have installed **Python 3** on macOS. To install Python 3, you can use [**Homebrew**](https://brew.sh/) which is a software package manager for macOS. Once installed Homebrew, run the following to install python 3: **`brew install python3`**. You can also download and install [Python 3 from the official Python website](https://www.python.org/downloads/mac-osx/).
+
+
+## Install with Windows
+
+You can download the latest versions of ArduPy for windows in the below session. Once downloaded, extract the binary `aip` into a directory that is in your `PATH`.
+
+- [**For Windows 64 Bit**](https://files.seeedstudio.com/ardupy/tools/aip-0.5.0/aip.exe)
+
+Or if you have **Python 3** environment, you can also install using `pip3`:
+
+```sh
+pip3 install ardupy-aip
+```
+
+## Install with Linux
+
+For Linux user, you can simply run the following in Terminal to install ArduPy-aip:
+
+```sh
+pip3 install ardupy-aip
+```
+
+**Note:** please make sure you have **Python 3** installed and `pip3` is up to date.
+
+## ArduPy-aip CLI Getting Started
+
+`aip` is a command-line interface for ArduPy, you can use aip to install ArduPy libraries, build and flash ArduPy firmware to hardware with ease. Simply use `help` to get more information:
+
+```sh
+aip help
+```
+
+<div align=center><img src="https://s3-us-west-2.amazonaws.com/files.seeedstudio.com/wiki/Wio-Terminal/img/aip-help.png"/></div>
+
+- To get board information:
+
+```sh
+aip board
+```
+
+- To install Arduino libraries binding with ArduPy:
+
+```sh
+aip install <ArduPy Library Path> 
+# Example Usage: 
+# aip install Seeed-Studio/seeed-ardupy-ultrasonic-sensor
+```
+
+- To uninstall ArduPy libraries:
+
+```sh
+aip uninstall <ArduPy Library Path> 
+# Example Usage: 
+# aip uninstall Seeed-Studio/seeed-ardupy-ultrasonic-sensor
+```
+
+- To build ArduPy Firmware contains the libraries you installed and the basic ArduPy features:
+
+```sh
+aip build
+```
+
+- To list installed ArduPy Libraries
+
+```sh
+aip list
+```
+
+- To flash ArduPy Firmware into hardware:
+
+```sh
+aip flash
+```
+
+!!!Note
+        After commands, you use `-h` flags to see more usage for that command. For example, `aip flash -h`
+
+- To interact with the board (shell-based file explorer):
+
+```sh
+aip shell
+```
+
+**Note:** Once entered the ardupy-mpfshell, you can use `help` for more information and commands.
+
+- Entering **REPL** mode:
+
+```sh
+aip shell -c "repl"
+```
+
+<div align=center><img src="https://s3-us-west-2.amazonaws.com/files.seeedstudio.com/wiki/Wio-Terminal/img/aip-shell.png"/></div>
+
+- To run Python file:
+
+```sh
+aip shell -n -c "runfile <YourPythonFilePath> [Path]"
+# Example Usage:
+# aip shell -n -c "runfile /Users/ansonhe/Desktop/ur.py"
+```
+
+- To load files into the board using shell:
+
+```sh
+aip shell -n -c "put <YourPythonFilePath> [Path]"
+# Example Usage:
+# aip shell -n -c "put /Users/ansonhe/Desktop/ur.py"
+```
+
+### Boot Script
+
+To run a MicroPython script from boot up, simply name your project **`boot.py`** in the root location of the board.
+
+### Usage under ardupy-mpfshell
+
+Once entered ardupy-mpfshell, use `help` to check commands usage. Here listed some useful commands:
+
+- To list files on the deivces:
+
+```sh
+ls
+```
+
+- To remove a file (or a directory) on the device:
+
+```sh
+rm <File/Directory>
+```
+
+- To upload e.g. the local file `boot.py` to the device:
+
+```sh
+put <YourPythonFilePath> [Path]
+```
+
+- To execute the files i.e. `test.py` on the device:
+
+```sh
+execfile test.py
+```
+
+<div align=center><img src="https://s3-us-west-2.amazonaws.com/files.seeedstudio.com/wiki/Wio-Terminal/img/aip-mpfshell.png"/></div>
+
+## Using aip to include Other ArduPy Libraries(From Arduino Libraries) Example
+
+Aip is one of the key feature of ArduPy, which can be used to convert Arduino Libraries to Python Interface to be used for ArduPy. Here we provide an example, how to include the ArduPy library into ArduPy Firmware:
+
+**Tip:** We provide few ArduPy library examples on the github page for now, and soon will release tutorials how to convert Arduino libraries to ArduPy Libraries very soon.
+
+1.Open Terminal/Powershell or in VS code, run the following to install ardupy libraries.
+
+```sh
+aip install Seeed-Studio/seeed-ardupy-ultrasonic-sensor
+```
+
+2.Build the firmware:
+
+```sh
+aip build
+```
+
+**Note:** Usage of flashing firmware will appeared at the bottom of build.
+
+3.Flash the "**NEW**" firmware into the board **by copying the usage from end of build**. Here aip will automatically look for the board connected to the PC and upload the firmware. If board is not connected, an error will appear.
+
+```sh
+aip flash
+```
+
+<div align=center><img src="https://s3-us-west-2.amazonaws.com/files.seeedstudio.com/wiki/Wio-Terminal/img/aip-install-new.gif"/></div>
+
+!!!Note
+        You can also use `aip build clean` before `aip build` to remove any caches from before to avoid error.
+
+### Example Usage
+
+Once the library is included within the ArduPy firmware and flashed into the device, you can import and use the module as follow:
+
+<div align=center><img width = 500 src="https://s3-us-west-2.amazonaws.com/files.seeedstudio.com/wiki/Wio-Terminal/img/ur.gif"/></div>
+
+```py
+from arduino import grove_ultra_ranger
+import time
+
+ur = grove_ultra_ranger(0)
+
+while True:
+    print ("The distance to obstacles in front is:", ur.cm, 'centimeter')
+    time.sleep(1)
+```
+
+
+### FAQ
+
+For more aip reference, please visit [ardupy-aip](https://github.com/Seeed-Studio/ardupy-aip) to find out more.
+
+## IDE Getting Started
 
 ### 1. Install the ArduPy IDE
 
@@ -65,69 +274,6 @@ To add files to the device using ArduPy, simply click the icon as shown above to
 ### Boot Script
 
 To run a MicroPython script from boot up, simply name your project **`boot.py`** and load the files in the device as methods mentioned above.
-
-## Using aip to include Other ArduPy Libraries(From Arduino Libraries)
-
-Aip is one of the key feature of ArduPy, which can be used to convert Arduino Libraries to Python Interface to be used for ArduPy. Here we provide an example, how to include the ArduPy library into ArduPy Firmware:
-
-**Tip:** We provide few ArduPy library examples on the github page for now, and soon will release tutorials how to convert Arduino libraries to ArduPy Libraries very soon.
-
-!!!Note
-        By default, the ArduPy initial firmware only includes **time, Pin, DAC, ADC, PWM and LCD**.
-
-1.**Download** the arduPy-aip tool:
-
-- For [**Windows**](http://files.seeedstudio.com/ardupy/tools/aip.exe).
-
-- For [**Mac Os**](http://files.seeedstudio.com/ardupy/tools/aip_mac).
-
-2.**Open Terminal/Powershell, change the path to the location where you downloaded the ardupy-aip tool**. Run the following to install ardupy libraries.
-
-```sh
-./aip install Seeed-Studio/seeed-ardupy-ultrasonic-sensor
-```
-
-**Note: For Mac OS, please use `chmod +x aip_mac` to obtain permission. Also, use `aip_mac` to replace `aip`**
-
-2.Build the firmware:
-
-```sh
-./aip build
-```
-
-**Note:** Usage of flashing firmware will appeared at the bottom of build.
-
-3.Flash the "**NEW**" firmware into the board **by copying the usage from end of build**. Here aip will automatically look for the board connected to the PC and upload the firmware. If board is not connected, an error will appear.
-
-```sh
-./aip flash
-```
-
-<div align=center><img width = 500 src="https://s3-us-west-2.amazonaws.com/files.seeedstudio.com/wiki/Wio-Terminal/img/aip-install-n.gif"/></div>
-
-!!!Note
-        You can also use `aip build clean` before `aip build` to remove any caches from before to avoid error.
-
-### Example Usage
-
-Once the library is included within the ArduPy firmware and flashed into the device, you can import and use the module as follow:
-
-<div align=center><img width = 500 src="https://s3-us-west-2.amazonaws.com/files.seeedstudio.com/wiki/Wio-Terminal/img/ur.gif"/></div>
-
-```py
-from arduino import grove_ultra_ranger
-import time
-
-ur = grove_ultra_ranger(0)
-
-while True:
-    print ("The distance to obstacles in front is:", ur.cm, 'centimeter')
-    time.sleep(1)
-```
-
-### FAQ
-
-For more aip reference, please visit [ardupy-aip](https://github.com/Seeed-Studio/ardupy-aip) to find out more.
 
 ## Time and Delay
 
