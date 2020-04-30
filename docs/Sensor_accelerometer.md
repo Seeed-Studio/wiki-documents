@@ -91,7 +91,7 @@ For more detailed information of individuals, please visit their own pages via t
 
   - Reference
       - [Application history of 3-axis acceleration sensor in step counting of electronic products.](http://old.sensorexpert.com.cn/Article/qiantansanzhoujiasud_1.html)
-      - [Accelerometer overviews and arrangement of common-use chips.](https://www.jianshu.com/p/d471958189a0) 
+      - [Accelerometers](https://www.explainthatstuff.com/accelerometers.html) 
 
 ## Project
 
