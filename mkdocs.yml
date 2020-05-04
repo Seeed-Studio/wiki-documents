@@ -56,7 +56,7 @@ extra:
     - type: facebook
       link: https://www.facebook.com/seeedstudiosz/
     - type: github-alt
-      link: https://github.com/SeeedDocument
+      link: https://github.com/Seeed-studio
   logo: 'images/favicon.ico'
   search:
     language: 'en'
@@ -1034,8 +1034,8 @@ nav:
   - License: license.md
 
 # Google Analytics
-google_analytics:
-#  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
-  - UA-115878881-1
-#  - UA-84917600-1
-  - auto
+# google_analytics:
+# #  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+#   - UA-115878881-1
+# #  - UA-84917600-1
+#   - auto
