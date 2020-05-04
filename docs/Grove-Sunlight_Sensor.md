@@ -77,17 +77,43 @@ As shown below:
 
 **Download**
 
-Click [here](https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/res/Grove_Sunlight_Sensor-master.zip) to download the library and decompress it to any libraries folders of Arduino.
-
-You will notice there's "-master" in the end of the library name, just remove it.
+Click [here](https://github.com/Seeed-Studio/Grove_Sunlight_Sensor/archive/master.zip) to download the library and decompress it to any libraries folders of Arduino.
 
 Launch Arduino IDE and click **File>Examples>Grove_Sunlight_Sensor>SI1145DEMO** to open the test code.
 
-![](https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/Grove_sunlight_sensor_arduino.jpg)
+```c++
+#include <Wire.h>
+
+#include "Arduino.h"
+#include "SI114X.h"
+
+SI114X SI1145 = SI114X();
+
+void setup() {
+
+    Serial.begin(115200);
+    Serial.println("Beginning Si1145!");
+
+    while (!SI1145.Begin()) {
+        Serial.println("Si1145 is not ready!");
+        delay(1000);
+    }
+    Serial.println("Si1145 is ready!");
+}
+
+void loop() {
+    Serial.print("//--------------------------------------//\r\n");
+    Serial.print("Vis: "); Serial.println(SI1145.ReadVisible());
+    Serial.print("IR: "); Serial.println(SI1145.ReadIR());
+    //the real UV value must be div 100 from the reg value , datasheet for more information.
+    Serial.print("UV: ");  Serial.println((float)SI1145.ReadUV() / 100);
+    delay(1000);
+}
+```
 
 Click Tools>Board to choose Arduino UNO and select respective serial port.
 
-Now click Upload(CTRL+U) to burn testing code. Please refer to [**here**](http://wiki.seeedstudio.com/Arduino_Common_Error) for any error prompt and you can also add comment on [**forum**](community.seeedstudio.com/).
+Now click Upload(CTRL+U) to burn testing code. Please refer to [**here**](http://wiki.seeedstudio.com/Arduino_Common_Error) for any error prompt .
 
 **Review Results**
 
