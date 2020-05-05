@@ -62,6 +62,15 @@ extra:
     language: 'en'
     tokenizer: '[\s\-\.]+'
 
+plugins:
+  - search
+  - minify:
+      minify_html: true
+      minify_js: true
+      htmlmin_opts:
+          remove_comments: true
+
+
 
 # Extensions
 markdown_extensions:
@@ -177,8 +186,7 @@ nav:
 
       - BeagleBone®:
           - BeagleBone® Introduction: BeagleBone.md
-          - BeagleBone® Solutions: Beaglebone_Solutions.md
-          - BeagleBone® Blue: BeagleBone_Blue.md
+          - BeagleBone® Solutions: BeagleBone_Solutions.md
           - BeagleBone® Case: Beaglebone_Case.md
           - Seeed Studio BeagleBone® Green: BeagleBone_Green.md
           - Seeed Studio BeagleBone® Green HDMI Cape: BeagleBone_Green_HDMI_Cape.md
