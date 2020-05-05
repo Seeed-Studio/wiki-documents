@@ -171,7 +171,7 @@ putty login
     - This section will show you a demo which implemented some simple functions.
     - make sure you have built a development environment successful by former sections and we assume you have got basic knowledge for Arduino platform.
 
-You can refer to [Edison 4WD Auto Robotic Platform 2.0](http://wiki.seeedstudio.com/Edison_4WD_Auto_Robotic_Platform_2.0/) for a practical application with 4WD Driver Platform V1.0.
+You can refer to [Edison 4WD Auto Robotic Platform 2.0](https://wiki.seeedstudio.com/Edison_4WD_Auto_Robotic_Platform_2.0/) for a practical application with 4WD Driver Platform V1.0.
 
 
 ## Schematic Online Viewer
@@ -187,4 +187,4 @@ You can refer to [Edison 4WD Auto Robotic Platform 2.0](http://wiki.seeedstudio.
 *   [Git library(SDK) files](https://github.com/Pillar1989/webrobot/blob/master/motor.py)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

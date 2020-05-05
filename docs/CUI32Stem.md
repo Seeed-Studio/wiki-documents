@@ -126,7 +126,7 @@ After this, you may need to push the enter key again to get the CUI32Stem to sen
 
 To quit the screen app, type control-A, then control-\.
 
-Final note: This same procedure will also work when you have a [GROVE Serial Bluetooth](http://www.seeedstudio.com/depot/grove-serial-bluetooth-p-795.html) element connected to your CUI32Stem.
+Final note: This same procedure will also work when you have a [GROVE Serial Bluetooth](https://www.seeedstudio.com/depot/grove-serial-bluetooth-p-795.html) element connected to your CUI32Stem.
 The only difference is that the name will instead have 'bluetooth' in it somewhere, of course... if you're not sure, just try them all until you find the right one.
 
 ##   Application Ideas
@@ -283,7 +283,7 @@ int main(void)
 
 ##   Support
 
-[Ask questions on Seeed forum](http://www.seeedstudio.com/forum).
+[Ask questions on Seeed forum](https://www.seeedstudio.com/forum).
 
 
 
@@ -304,7 +304,7 @@ int main(void)
 Click here to buy from Seeedstudio Bazaar.
 
 The CUI32Stem board (no headers) alone:
-**Model: [http://www.seeedstudio.com/depot/cui32stem-p-1100.html?cPath=132_208](http://www.seeedstudio.com/depot/cui32stem-p-1100.html?cPath=132_208)**
+**Model: [https://www.seeedstudio.com/depot/cui32stem-p-1100.html?cPath=132_208](https://www.seeedstudio.com/depot/cui32stem-p-1100.html?cPath=132_208)**
 
 A "starter kit": (insert link to bazaar)
 Documentation wiki: CUI32Stem GROVE Dash Bundle, and
@@ -319,4 +319,4 @@ Documentation wiki: CUI32Stem GROVE Lab Buncle.
 *   [http://code.google.com/p/cui32/](http://code.google.com/p/cui32/)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

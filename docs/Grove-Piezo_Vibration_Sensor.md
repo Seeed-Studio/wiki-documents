@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-Piezo-Vibration-Sensor-p-1411.html
 oldwikiname: Grove_-_Piezo_Vibration_Sensor
 prodimagename: Grove-Piezo_Vibration_Sensor-1.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/seeed/img/2016-06/VGKGp4ZlaglN4DMgnVAhUzUz.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/seeed/img/2016-06/VGKGp4ZlaglN4DMgnVAhUzUz.jpg
 surveyurl: https://www.research.net/r/Grove-Piezo_Vibration_Sensor
 sku: 101020031
 tags: grove_analog, io_3v3, io_5v, plat_duino, plat_pi
@@ -32,7 +32,7 @@ Grove-Piezo Vibration Sensor is suitable for measurements of flexibility, vibrat
 -   High receptivity for strong impact
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 ## Platforms Supported
 
@@ -67,7 +67,7 @@ The Grove - Piezo Vibration Sensor outputs a logic HIGH when vibration was detec
 | Seeeduino V4 | Base Shield | Grove - Piezo Vibration |
 |--------------|----------------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Piezo_Vibration_Sensor/img/Piezo%20vibration%20sensor_s.jpg)|
-|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Piezo-Vibration-Sensor-p-1411.html)|
+|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Piezo-Vibration-Sensor-p-1411.html)|
 
 - Step 2. Connect the module to the **D2** of base shield using the 4-pin grove cable, we use **digital pin13 on board LED** as output.
 - Step 3. Plug the Basic Shield into Arduino.
@@ -134,7 +134,7 @@ void loop() {
 
 #### Software
 
-- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
 - **Step 2**. Download the source file by cloning the grove.py library. 
 
 ```
@@ -346,4 +346,4 @@ A1: It is digital output, Low or High.
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/momososo/seat-monitor-4288dc/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

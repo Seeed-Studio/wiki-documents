@@ -375,34 +375,34 @@ TFT Touch Shield connected to Seeeduino
 
 ##   Support   ##
 
-[Ask questions on Seeed forum](http://www.seeedstudio.com/forum).
+[Ask questions on Seeed forum](https://www.seeedstudio.com/forum).
 
 
 ## TFT Touch Shield v1.0 Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="http://seeedstudio.com/wiki/images/c/c5/2.8_TFT_Touch_Shield_v1.0_EagleFiles.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://www.seeedstudio.com/wiki/images/c/c5/2.8_TFT_Touch_Shield_v1.0_EagleFiles.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ## TFT Touch Shield v0.9b Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="http://wiki.seeedstudio.com/images/1/17/2.8_TFT_Touch_Shield_v0.9b_EagleFiles.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://wiki.seeedstudio.com/images/1/17/2.8_TFT_Touch_Shield_v0.9b_EagleFiles.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ##   Resources   ##
 
-- **[Libraries]**[TFT & TouchScreen Libraries](http://seeedstudio.com/wiki/images/2/29/Tft_touch_libraries_11252011.zip)
+- **[Libraries]**[TFT & TouchScreen Libraries](https://www.seeedstudio.com/wiki/images/2/29/Tft_touch_libraries_11252011.zip)
 - **[Library]**[TFT & TouchScreen Libraries for Arduino 1.0 20120628](https://files.seeedstudio.com/wiki/TFT_Touch_Shield_V1.0/res/TFT_TouchScreen_for_Arduino_1.0.zip)
-- **[Demo]**[TFT BMP demo](http://seeedstudio.com/wiki/images/1/11/Tftbmp_demo.zip).
-- **[Eagle]**[TFT Touch Shield v1.0 Schematic and Board Files - Eagle Format](http://seeedstudio.com/wiki/images/c/c5/2.8_TFT_Touch_Shield_v1.0_EagleFiles.zip)
-- **[Eagle]**[TFT Touch Shield v0.9b Schematic and Board Files - Eagle Format](http://wiki.seeedstudio.com/images/1/17/2.8_TFT_Touch_Shield_v0.9b_EagleFiles.zip)
-- **[Datasheet]**[FGD280E3715V1 - TFT Touch Screen Datasheet](http://wiki.seeedstudio.com/images/7/75/FGD280E3715V1_8bit.pdf)
-- **[Datasheet]**[ST7781R Datasheet ](http://wiki.seeedstudio.com/images/4/4e/ST7781R_datasheet.pdf)
+- **[Demo]**[TFT BMP demo](https://www.seeedstudio.com/wiki/images/1/11/Tftbmp_demo.zip).
+- **[Eagle]**[TFT Touch Shield v1.0 Schematic and Board Files - Eagle Format](https://www.seeedstudio.com/wiki/images/c/c5/2.8_TFT_Touch_Shield_v1.0_EagleFiles.zip)
+- **[Eagle]**[TFT Touch Shield v0.9b Schematic and Board Files - Eagle Format](https://wiki.seeedstudio.com/images/1/17/2.8_TFT_Touch_Shield_v0.9b_EagleFiles.zip)
+- **[Datasheet]**[FGD280E3715V1 - TFT Touch Screen Datasheet](https://wiki.seeedstudio.com/images/7/75/FGD280E3715V1_8bit.pdf)
+- **[Datasheet]**[ST7781R Datasheet ](https://wiki.seeedstudio.com/images/4/4e/ST7781R_datasheet.pdf)
 
 ##   How to buy   ##
 
-Click here to buy: [2.8 TFT Touch Shield](http://www.seeedstudio.com/depot/28-tft-touch-shield-p-864.html?cPath=132_134)
+Click here to buy: [2.8 TFT Touch Shield](https://www.seeedstudio.com/depot/28-tft-touch-shield-p-864.html?cPath=132_134)
 
 ##   See Also   ##
 
@@ -421,17 +421,17 @@ This documentation is licensed under the Creative Commons [Attribution-ShareAlik
 
 ##   Related Projects  ##
 
-It's a pity that we don't have any demo about TFT Touch Shield V1.0 in the [Recipe](http://www.seeedstudio.com/recipe/) yet.
+It's a pity that we don't have any demo about TFT Touch Shield V1.0 in the [Recipe](https://www.seeedstudio.com/recipe/) yet.
 
 Post your awesome project about TFT Touch Shield V1.0 to win $100 Coupon! Please feel free to contact us: **recipe@seeed.cc**
 
-Here we introduce some projects about [3Dpad touchless gesture controller Arduino shield](http://www.seeedstudio.com/depot/3Dpad-touchless-gesture-controller-Arduino-shield-p-2332.html)
+Here we introduce some projects about [3Dpad touchless gesture controller Arduino shield](https://www.seeedstudio.com/depot/3Dpad-touchless-gesture-controller-Arduino-shield-p-2332.html)
 
 ![](https://files.seeedstudio.com/wiki/TFT_Touch_Shield_V1.0/img/Seeed-recipe-3Dpad_inchAir_controlinch_MIDI_controller.jpg)
 
 This demo is a 3Dpad "Air control" MIDI controller make by Dpad touchless gesture controller Arduino shield.
 
-[I want to make it](http://www.seeedstudio.com/recipe/229-3dpad-quot-air-control-quot-midi-controller.html).
+[I want to make it](https://www.seeedstudio.com/recipe/229-3dpad-quot-air-control-quot-midi-controller.html).
 
 ###   Share Your Awesome Projects with Us  ###
 
@@ -443,7 +443,7 @@ It does not matter what you are and what you have made, hacker, maker, artist or
 
 As long as you start sharing your works with others, you are being part of the open source community and you are making your contributions.
 
-Now share your awesome projects with us on [Recipe](http://www.seeedstudio.com/recipe/), and win a chance to become the Core User of Seeed.
+Now share your awesome projects with us on [Recipe](https://www.seeedstudio.com/recipe/), and win a chance to become the Core User of Seeed.
 
 -  Core Users, are those who show high interests in Seeed products and make significant contributions on Recipe.
 
@@ -452,4 +452,4 @@ Now share your awesome projects with us on [Recipe](http://www.seeedstudio.com/r
 Get more information about Core User please email to:**recipe@seeed.cc**
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

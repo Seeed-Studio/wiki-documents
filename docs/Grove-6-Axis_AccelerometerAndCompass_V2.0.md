@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-6-Axis-Accelerometer&Compass-v2.0-p-2476.html
 oldwikiname: Grove_-_6-Axis_Accelerometer&Compass_V2.0
 prodimagename: Accelerometer_And_Compass_v2.JPG
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/101020081 1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/101020081 1.jpg
 surveyurl: https://www.research.net/r/Grove-6-Axis_AccelerometerAndCompass_V2_0
 sku: 101020081
 tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_bbg
@@ -14,7 +14,7 @@ tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_bbg
 
 The Grove –6-Axis Accelerometer&Compass V2.0 is a 3-axis accelerometer combined with a 3-axis magnetic sensor. It is an upgraded version of Grove - 6-Axis Accelerometer&Compass V1.0 and based on the sensor module LSM303D which has a selectable linear acceleration full scale range of ±2g / ±4g / ±8g / ±16g and a selectable magnetic field full scale range of ±2 /±4 / ±8 / ±12 gauss. Both the magnetic parts and the accelerometer parts can be powered down separately to reduce the power consumption. The Arduino can get these data via the I2C interface with the given library for this module.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-6-Axis-Accelerometer%26Compass-v2.0-p-2476.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-6-Axis-Accelerometer%26Compass-v2.0-p-2476.html)
 
 ## Specifications
 
@@ -28,10 +28,10 @@ The Grove –6-Axis Accelerometer&Compass V2.0 is a 3-axis accelerometer combine
 -   I2C Address  0x1E(default), or 0x1D
 
 !!!Note
-    If you want to use multiplue I2C devices, please refer to [Software I2C](http://wiki.seeedstudio.com/Arduino_Software_I2C_user_guide/).
+    If you want to use multiplue I2C devices, please refer to [Software I2C](https://wiki.seeedstudio.com/Arduino_Software_I2C_user_guide/).
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 ## Platforms Supported
 
@@ -70,7 +70,7 @@ The MCU can collect 6D sensor data directly through the I2C interface.OK, let's 
 | Seeeduino V4.2 | Base Shield| Grove-6-Axis_AccelerometerAndCompass_V2.0 |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/img/45d_small.JPG)|
-|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-6-Axis-Accelerometer%26Compass-v2.0-p-2476.html)|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-6-Axis-Accelerometer%26Compass-v2.0-p-2476.html)|
 
 - **Step 2.** Connect Grove-6-Axis_AccelerometerAndCompass_V2 to port **I2C** of Grove-Base Shield.
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
@@ -97,13 +97,13 @@ The MCU can collect 6D sensor data directly through the I2C interface.OK, let's 
 #### Software
 **Step 1.** Download the [library](https://github.com/Seeed-Studio/6Axis_Accelerometer_And_Compass_v2) from Github.
 
-**Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+**Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 
 
 **Step 3.** Create a new Arduino sketch and paste the codes below to it or open the code directly by the path:File -> Example ->Accelerometer_Compass->Accelerometer_Compass.
 
-**Step 4.** Upload the code. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+**Step 4.** Upload the code. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 Here is the code
 ```c
@@ -293,7 +293,7 @@ Here is the code of example:
 ```Python
 #!/usr/bin/env python
 #
-# GrovePi example for using the Grove - 6-Axis Accelerometer&Compass v2.0(http://www.seeedstudio.com/depot/Grove-6Axis-AccelerometerCompass-v20-p-2476.html)
+# GrovePi example for using the Grove - 6-Axis Accelerometer&Compass v2.0(https://www.seeedstudio.com/depot/Grove-6Axis-AccelerometerCompass-v20-p-2476.html)
 #
 # The GrovePi connects the Raspberry Pi and Grove sensors.  You can learn more about GrovePi here:  http://www.dexterindustries.com/GrovePi
 #
@@ -376,9 +376,9 @@ Click [here](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCom
 -  **[Datasheet]** [LSM303D\_datashet](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/res/LSM303D_datasheet.pdf)
 -  **[Eagle]** [6-Axis Accelerometer&Compass v2.0 eagle file](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/res/Grove-6-Axis_AccelerometerAndCompass_v2.0_sch_pcb.zip)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_6-Axis_Accelerometer&Compass_V2.0 -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_6-Axis_Accelerometer&Compass_V2.0 -->
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

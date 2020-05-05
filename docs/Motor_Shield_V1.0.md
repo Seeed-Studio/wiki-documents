@@ -13,7 +13,7 @@ tags:
 
 The Motor Shield is a perfect platform for robotics and mechanical applications.  It enables the Arduino to drive two brushed DC motors or one 4-wire two-phase stepper motor.  Based on the H-bridge driver Chip L298N motor driver integrated circuit, it requires a 6V to 15V power supply to power the motor and also includes an on-board 5V voltage regulator for powering the main Arduino board.  Additional plug and play Grove sensors can be connected to the 13 on-board Grove connectors.
 
-Model: [SLD80256P](http://www.seeedstudio.com/depot/grove-base-shield-p-754.html?cPath=132_134)
+Model: [SLD80256P](https://www.seeedstudio.com/depot/grove-base-shield-p-754.html?cPath=132_134)
 
 ![](https://files.seeedstudio.com/wiki/Motor-Shield_V1.0/img/Smotoshield2.jpg)
 
@@ -215,7 +215,7 @@ step one revolution in the other direction:
 
 This is a recipe about how to control motors individually with the Seeedstudio 2.0 motor shield.
 
-[I want to make it](http://www.seeedstudio.com/recipe/171-seeed-2-0-motor-shield-individual-control.html).
+[I want to make it](https://www.seeedstudio.com/recipe/171-seeed-2-0-motor-shield-individual-control.html).
 
 
 ## Schematic Online Viewer
@@ -226,11 +226,11 @@ This is a recipe about how to control motors individually with the Seeedstudio 2
 
 ##   Resources   ##
 
-- **[Datasheet]** [L298datasheet](http://wiki.seeedstudio.com/images/5/5e/L298datasheet.pdf)
+- **[Datasheet]** [L298datasheet](https://wiki.seeedstudio.com/images/5/5e/L298datasheet.pdf)
 - **[EAGLE]**  [Motor Shield eagle files](https://files.seeedstudio.com/wiki/Motor-Shield_V1.0/res/Motorshield09gerber.zip)
 - **[PDF]**[Motor Driver pcb](https://files.seeedstudio.com/wiki/Motor-Shield_V1.0/res/Motor%20Driver.pdf)
 - **[PDF]**[Motor Driver sch](https://files.seeedstudio.com/wiki/Motor-Shield_V1.0/res/Motor%20Driver%20SCH.pdf)
 - **[Code]**  [Motor shield Demo code](https://files.seeedstudio.com/wiki/Motor-Shield_V1.0/res/Grobe-Motor_Shield_Demo_Code.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

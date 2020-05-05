@@ -21,7 +21,7 @@ The Grove – Voltage Divider provides an interface for measuring external volta
 - Can adjust the gain
 
 !!!Tip
-    More details about Grove modules please refer [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer [Grove System](https://wiki.seeedstudio.com/Grove_System/)
     
 ## Specification
 ---
@@ -46,14 +46,14 @@ The Grove – Voltage Divider provides an interface for measuring external volta
 ## Getting Started
 ---
 When measuring the external voltage, connect the external voltage to J1 and then connect the on-board Grove connector to analog port of Arduino/Seeeduino:
-- Connect the module to A0 port of [Grove - Base Shield](http://wiki.seeedstudio.com/Base_Shield_V2) with a universal Grove Cable.
-- Connect [Grove - Base Shield](http://wiki.seeedstudio.com/Base_Shield_V2) to Arduino/Seeeduino.
+- Connect the module to A0 port of [Grove - Base Shield](https://wiki.seeedstudio.com/Base_Shield_V2) with a universal Grove Cable.
+- Connect [Grove - Base Shield](https://wiki.seeedstudio.com/Base_Shield_V2) to Arduino/Seeeduino.
 
 In order to test the precision of this module, I tested some voltage inputs and get the following data:
 
 ![](https://files.seeedstudio.com/wiki/Grove-Voltage_Divider/img/Voltage_Divider_Test_Score.jpg)
 
-- As you can see, when the inputs were in the measuring range, the voltage divider has a high accuracy(<1%, that i marked an "OK"). But as the inputs were not in the range, the accuracy gets low(i marked a "NO") Please see [Specification](http://wiki.seeedstudio.com/Grove-Voltage_Divider/#specification) about the specific measurement range.
+- As you can see, when the inputs were in the measuring range, the voltage divider has a high accuracy(<1%, that i marked an "OK"). But as the inputs were not in the range, the accuracy gets low(i marked a "NO") Please see [Specification](https://wiki.seeedstudio.com/Grove-Voltage_Divider/#specification) about the specific measurement range.
 
 And When voltage divider output voltage is higher than VCC (The Grove Operating Voltage and reference of analog read), an indicator will light up to show you the error.
 
@@ -102,7 +102,7 @@ void loop()
 **Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
 
 !!!Note
-    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](https://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
@@ -127,5 +127,5 @@ Upload the program to your Arduino/Seeeduino.
 - [Codecraft CDC File](https://files.seeedstudio.com/wiki/Grove-Voltage_Divider/res/Grove_Voltage_Divider_CDC_File.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

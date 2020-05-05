@@ -175,7 +175,7 @@ This section will describe how to start working with your Eagleye 530s Developme
 Setting up a connection with the Eagleye 530s Module can be done in a wired or wireless manner. Here we choose to install PuTTY a free serial console. The software can be downloaded from http://www.putty.org/. Once downloaded go through the following steps:
 
 - Step 1. Open the device manager on the control panel.
-- Step 2. When using a PC install the USB to Serial driver. The driver can be found at the following location: (http://www.ftdichip.com/Drivers/CDM/CDM21218_Setup.zip). For other drivers please visit (http://www.ftdichip.com/Drivers/D2XX.htm).
+- Step 2. When using a PC install the USB to Serial driver. The driver can be found at the following location: (https://www.ftdichip.com/Drivers/CDM/CDM21218_Setup.zip). For other drivers please visit (https://www.ftdichip.com/Drivers/D2XX.htm).
 - Step 3. Check the COM port number on your PC when you connect the USB serial cable. In our case the COM port allocated is COM9.
 
 ![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/Com.png)
@@ -694,7 +694,7 @@ waveFile.close()
 ```
 
 !!!warning
-    For more information, such as play with google assistant, please refer to [ReSpeaker 2-Mics Pi HAT](http://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/).
+    For more information, such as play with google assistant, please refer to [ReSpeaker 2-Mics Pi HAT](https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/).
 
 **Play with 4 Mics Pi HAT**
 
@@ -852,7 +852,7 @@ waveFile.close()
 ```
 
 !!!warning
-    For more information, such as play with Alexa/DuerOS, please refer to [ReSpeaker 4-Mic Array for Raspberry Pi](http://wiki.seeedstudio.com/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/).
+    For more information, such as play with Alexa/DuerOS, please refer to [ReSpeaker 4-Mic Array for Raspberry Pi](https://wiki.seeedstudio.com/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/).
 
 **Play with Mic Array v2.0**
 
@@ -954,7 +954,7 @@ wf.close()
 ```
 
 !!!warning
-    For more information, such as play with DOA/LEDs, please refer to [ReSpeaker Mic Array v2.0](http://wiki.seeedstudio.com/ReSpeaker_Mic_Array_v2.0/).
+    For more information, such as play with DOA/LEDs, please refer to [ReSpeaker Mic Array v2.0](https://wiki.seeedstudio.com/ReSpeaker_Mic_Array_v2.0/).
 
 ## Play with GrovePi+
 
@@ -1170,7 +1170,7 @@ Turning relay 4 OFF
 ```
 
 !!!warning
-    For more information, please refer to [Raspberry Pi Relay Board v1.0](http://wiki.seeedstudio.com/Raspberry_Pi_Relay_Board_v1.0/).
+    For more information, please refer to [Raspberry Pi Relay Board v1.0](https://wiki.seeedstudio.com/Raspberry_Pi_Relay_Board_v1.0/).
 
 **Play with RS232 Boards**
 
@@ -1202,7 +1202,7 @@ Turning relay 4 OFF
 ![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/Putty_normal_boot.png)
 
 !!!warning
-    For more information, please refer to [Raspberry Pi RS232 Board v1.0](http://wiki.seeedstudio.com/Raspberry_Pi_R232_Board_v1.0/).
+    For more information, please refer to [Raspberry Pi RS232 Board v1.0](https://wiki.seeedstudio.com/Raspberry_Pi_R232_Board_v1.0/).
 
 **Play with Breakout Board**
 
@@ -1211,7 +1211,7 @@ Raspberry Pi Breakout Board, it also provides power, state indicator light, butt
 ![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/breakout_shield.jpg)
 
 !!!warning
-    For more information, please refer to [Raspberry Pi Breakout Board v1.0](http://wiki.seeedstudio.com/Raspberry_Pi_Breakout_Board_v1.0/).
+    For more information, please refer to [Raspberry Pi Breakout Board v1.0](https://wiki.seeedstudio.com/Raspberry_Pi_Breakout_Board_v1.0/).
 
 
 ## FAQs
@@ -1249,5 +1249,5 @@ A2: Find the D401 diode as below picture, remove D401 diode by soldering, short 
 - **[More Reading]** [Facial-Recog Project](https://developer.artik.io/documentation/artik/projects/facial-recog.html)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

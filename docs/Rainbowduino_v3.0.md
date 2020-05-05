@@ -15,7 +15,7 @@ The Rainbowduino board is an Arduino compatible controller board with profession
 
 **Rainbowduino v3.0** is flashed with Arduino boot-loader and this makes it easy to program sketches using Arduino IDE. Unlike other LED drivers, this comes with a USB to UART (FT232RL) inbuilt for programming the sketches.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Rainbowduino-LED-driver-platform-Atmega-328-p-371.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/depot/Rainbowduino-LED-driver-platform-Atmega-328-p-371.html)
 
 
 ![](https://files.seeedstudio.com/wiki/Rainbowduino_v3.0/img/Rainbowduino_V3.0b_board_bottom.png)
@@ -87,7 +87,7 @@ A **Rainbowduino** properly connected to **Rainbow Cube kit**
 
 ------------------------------------------------------------------------
 
-![](http://www.seeedstudio.com/depot/images/cubeani.gif)
+![](https://www.seeedstudio.com/depot/images/cubeani.gif)
 Let us get started with a simple example with RGB LED Cube:
 
 -   Download Rainbowduino v3.0 Library from resources.
@@ -487,12 +487,12 @@ Resources
 
 **Other related products,resources and projects:**
 
--   [Rainbow Cube Kit (Assembled)](http://www.seeedstudio.com/depot/rainbow-cube-kit-assembled-p-998.html?cPath=138)
--   [Rainbow Cube kit- RGB 4X4X4](http://www.seeedstudio.com/depot/rainbow-cube-kit-rgb-4x4x4-rainbowduino-compatible-p-596.html?cPath=138)
--   [60mm square 8*8 LED Matrix - super bright RGB](http://www.seeedstudio.com/depot/60mm-square-88-led-matrix-super-bright-rgb-p-113.html?cPath=163_165)
+-   [Rainbow Cube Kit (Assembled)](https://www.seeedstudio.com/depot/rainbow-cube-kit-assembled-p-998.html?cPath=138)
+-   [Rainbow Cube kit- RGB 4X4X4](https://www.seeedstudio.com/depot/rainbow-cube-kit-rgb-4x4x4-rainbowduino-compatible-p-596.html?cPath=138)
+-   [60mm square 8*8 LED Matrix - super bright RGB](https://www.seeedstudio.com/depot/60mm-square-88-led-matrix-super-bright-rgb-p-113.html?cPath=163_165)
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Rainbowduino_v3.0 -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Rainbowduino_v3.0 -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

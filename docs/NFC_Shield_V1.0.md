@@ -23,7 +23,7 @@ NFC operate on unlicensed ISM(Industry Scientific Medical) band of **13.56 MHz**
 
 The communication between Arduino and [NFC Shield](https://seeeddoc.github.io/NFC_Shield/)  is via SPI.
 
-Model: [SLD80453P](http://www.seeedstudio.com/depot/nfc-shield-p-916.html?cPath=132_134)
+Model: [SLD80453P](https://www.seeedstudio.com/depot/nfc-shield-p-916.html?cPath=132_134)
 
 
 ##   Features   ##
@@ -426,17 +426,17 @@ This method is used to transmit and receive data to and from initiator. This cod
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="http://wiki.seeedstudio.com/images/8/81/NFC_Shield_V0.9b_Schematic_Board_Files.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://wiki.seeedstudio.com/images/8/81/NFC_Shield_V0.9b_Schematic_Board_Files.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ##   Resources   ##
 
 - **[Library]**[PN532_SPI Library For NFC Shield](https://files.seeedstudio.com/wiki/NFC_Shield_V1.0/res/PN532_SPI_V2.zip)
-- **[Eagle]**[NFC Shield - Schematic and Board Files in Eagle Format](http://wiki.seeedstudio.com/images/8/81/NFC_Shield_V0.9b_Schematic_Board_Files.zip)
-- **[PDF]**[NFC Shield - Schematic in PDF format](http://wiki.seeedstudio.com/images/4/48/NFC_Shield_V0.9b.pdf)
+- **[Eagle]**[NFC Shield - Schematic and Board Files in Eagle Format](https://wiki.seeedstudio.com/images/8/81/NFC_Shield_V0.9b_Schematic_Board_Files.zip)
+- **[PDF]**[NFC Shield - Schematic in PDF format](https://wiki.seeedstudio.com/images/4/48/NFC_Shield_V0.9b.pdf)
 - **[PDF]**[NXP PN532 - User Manual](http://www.nxp.com/documents/user_manual/141520.pdf)
 - **[Links]**[NFC Forum](http://www.nfc-forum.org)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

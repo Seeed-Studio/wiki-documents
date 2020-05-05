@@ -14,7 +14,7 @@ LinkIt Smart 7688 (a compact controller board) is an open development board, bas
 This board is only a part of MediaTek LinkIt Smart 7688 platform which includes other development boards.
 
 !!!Note
-    * This page only guides you to get started with this development board. For a complete guide, please refer to [Resources](http://labs.mediatek.com/en/platform/linkit-smart-7688#HDK).
+    * This page only guides you to get started with this development board. For a complete guide, please refer to [Resources](https://labs.mediatek.com/en/platform/linkit-smart-7688#HDK).
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/LinkIt-Smart-7688-p-2573.html)  
 
@@ -280,7 +280,7 @@ SDXC
 
 **2.** Install [Bonjour](https://support.apple.com/kb/DL999?viewlocale=en_US&locale=en_US) Print Service (For Windows 7, Windows 8, Windows 10).
 
-**3.** Install driver. If you are using a USB cable based on FTDI chip please download and install its driver from [here](http://www.ftdichip.com/Drivers/VCP.htm). If you are having problems with the latest driver, try installing an [older version](http://www.ftdichip.com/Support/Documents/InstallGuides.htm).
+**3.** Install driver. If you are using a USB cable based on FTDI chip please download and install its driver from [here](https://www.ftdichip.com/Drivers/VCP.htm). If you are having problems with the latest driver, try installing an [older version](https://www.ftdichip.com/Support/Documents/InstallGuides.htm).
 
 **4.** Next, you need to connect the Serial-to-USB cable to LinkIt Smart 7688's UART pins as shown in the following table:
 
@@ -469,7 +469,7 @@ print "Hello World!"
 * **[PDF]** [LinkIt_Smart_7688 Schematic](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/res/LinkIt%20Smart%207688.pdf)
 * **[Document]** [Manual](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/res/Manual.zip)
 * **[Document]** [OpenWrt](http://wiki.openwrt.org/doc/howto/user.beginner)
-* **[Document]** [MediaTek LinkIt? Smart 7688 Resources:](http://labs.mediatek.com/site/global/developer_tools/mediatek_linkit_smart_7688/hdk_intro/index.gsp)
+* **[Document]** [MediaTek LinkIt? Smart 7688 Resources:](https://labs.mediatek.com/site/global/developer_tools/mediatek_linkit_smart_7688/hdk_intro/index.gsp)
 * **[Document]** [Firmware_upgrade_Instruction](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/res/LinkIt_Smart_7688_Firmware_upgrade.zip)
 * **[Document]** [Certificates](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/res/LinkIt_Smart_7688-Certificate.zip)
 * **[Document]** [Mediatek](https://labs.mediatek.com/en/platform/linkit-smart-7688)
@@ -481,4 +481,4 @@ print "Hello World!"
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/smerkousdavid/myva-home-voice-controlled-home-automation-f4cfe3/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

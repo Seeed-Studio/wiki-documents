@@ -71,7 +71,7 @@ We will show you an example.This example can upload data to webpage and store yo
 |Name|Function|Qty|
 |----|--------|---|
 |[W5500 Ethernet Shield](https://www.seeedstudio.com/W5500-Ethernet-Shield-p-2433.html) |Provide Ethernet connectivity | 1 |
-|[Seeeduino V4.2](http://www.seeedstudio.com/item_detail.html?p_id=2517)|Controller|1|
+|[Seeeduino V4.2](https://www.seeedstudio.com/item_detail.html?p_id=2517)|Controller|1|
 |[Grove-Temp&Humi Sensor](https://www.seeedstudio.com/Grove-Temp%26Humi-Sensor-p-745.html)|Sensor|1|
 |[Base Shield V2](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|Base Shield|1|
 |Micro SD Card |Store data|1|
@@ -86,7 +86,7 @@ We will show you an example.This example can upload data to webpage and store yo
 
 ### Software
 
-- Please follow [how to install an arduino library](http://wiki.seeed.cc/How_to_install_Arduino_Library/) procedures to install library.
+- Please follow [how to install an arduino library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install library.
 - Click on below button to download W5500 Ethernet Shield libraries.
 [![](https://files.seeedstudio.com/wiki/W5500_Ethernet_Shield_v1.0/img/download%20W5500%20library.png)](https://files.seeedstudio.com/wiki/W5500_Ethernet_Shield_v1.0/res/WIZ_Ethernet_Library-IDE1.6.x-master.zip)
 
@@ -249,7 +249,7 @@ Isn't it very easy? You can begin your project.
 - [W5500 Ethernet Shield PCB in PDF format](https://files.seeedstudio.com/wiki/W5500_Ethernet_Shield_v1.0/res/W5500%20Ethernet%20Shield%20v1.0%20PCB.pdf)
 - [W5500 Ethernet Shield Library](https://github.com/embeddist/WIZ_Ethernet_Library-IDE1.6.x)
 - [W5500 Ethernet Shield Datasheet.pdf](https://files.seeedstudio.com/wiki/W5500_Ethernet_Shield_v1.0/res/W5500_datasheet_v1.0.2.pdf)
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/W5500_Ethernet_Shield_v1.0 -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/W5500_Ethernet_Shield_v1.0 -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

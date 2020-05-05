@@ -19,15 +19,15 @@ WireLess Gate Shield is an Arduino-compatible expansion card designed to build a
 ---
 *   Interface to connect the transceiver 315/433/868/915 MHz (depending on the version) [RFM69HW](http://devicter.ru/goods/RFM69HW-RF-transceiver)
 
-*   Interface to connect the transceiver at 2.4 GHz [nRF24L01 +](http://www.seeedstudio.com/depot/s/nRF24L01.html?search_in_description=0)
+*   Interface to connect the transceiver at 2.4 GHz [nRF24L01 +](https://www.seeedstudio.com/depot/s/nRF24L01.html?search_in_description=0)
 
 *   IR receiver
 *   Real-time clock module based on DS1307 with battery backup
 *   LED automatic activity radio modules
 *   LED for user
 *   Clock button to operate
-*   [GROVE](http://www.seeedstudio.com/depot/Grove-t-3.html?ref=top)-compatible connector: I2C
-*   Fully compatible with [Ethernet Shield](http://www.seeedstudio.com/depot/W5200-Ethernet-Shield-p-1577.html)
+*   [GROVE](https://www.seeedstudio.com/depot/Grove-t-3.html?ref=top)-compatible connector: I2C
+*   Fully compatible with [Ethernet Shield](https://www.seeedstudio.com/depot/W5200-Ethernet-Shield-p-1577.html)
 
 ##   Layout and schematics
 ---
@@ -69,7 +69,7 @@ Device Management can be organized using a button located on the Shield.
 ---
 Additionally WireLess Gate Shield can connect any i2c device using Grove-compatible connections (sensors, displays, etc.).
 
-WireLess Gate Shield was designed to be fully compatible with [Ethernet Shield](http://www.seeedstudio.com/depot/W5200-Ethernet-Shield-p-1577.html) - so you can use these two together Schild to create even more advanced wireless control device (logging on SD-card and presenting data on a web page, manage wireless devices via the web).
+WireLess Gate Shield was designed to be fully compatible with [Ethernet Shield](https://www.seeedstudio.com/depot/W5200-Ethernet-Shield-p-1577.html) - so you can use these two together Schild to create even more advanced wireless control device (logging on SD-card and presenting data on a web page, manage wireless devices via the web).
 
 ##  Interfaces
 ---
@@ -683,7 +683,7 @@ China (shipping worldwide)
 
 [Elecrow store](http://www.elecrow.com/wireless-gate-shield-p-1139.html)
 
-[Seeed store](http://www.seeedstudio.com/depot/wireless-gate-shield.html)
+[Seeed store](https://www.seeedstudio.com/depot/wireless-gate-shield.html)
 
 Russia
 
@@ -698,4 +698,4 @@ Russia
 *   [schematic of the device](http://wiki.devicter.ru/images/c/c7/Wl-Scheme.PNG)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

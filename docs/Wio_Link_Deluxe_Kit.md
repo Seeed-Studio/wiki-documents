@@ -4,7 +4,7 @@ category: Wio
 bzurl: https://seeedstudio.com/Wio-Link-Deluxe-Kit-p-2615.html
 oldwikiname: Wio_Link_Deluxe_Kit
 prodimagename: Wio_Link_Deluxe_Kit_product_view_1200_s.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/110020052-3.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/110020052-3.jpg
 surveyurl: https://www.research.net/r/Wio_Link_Deluxe_Kit
 sku: 110020052
 ---
@@ -33,23 +33,23 @@ Parts list
 | Parts name                                                                                                                   | Quantity |
 |------------------------------------------------------------------------------------------------------------------------------|----------|
 | [Grove - Button](/Grove-Button)                                                                                              | 1PC     |
-| [Grove - Relay](http://www.seeedstudio.com/depot/Grove-Relay-p-769.html)                                                     | 1PC     |
+| [Grove - Relay](https://www.seeedstudio.com/depot/Grove-Relay-p-769.html)                                                     | 1PC     |
 | [Grove - Moisture Sensor](/Grove-Moisture_Sensor)                                                                            | 1PC     |
-| [Grove - Temp&Humi Sensor](http://www.seeedstudio.com/depot/Grove-TempHumi-Sensor-p-745.html?cPath=25_125)                   | 1PC     |
-| [Grove - Digital Light Sensor](http://www.seeedstudio.com/depot/Grove-Digital-Light-Sensor-p-1281.html?cPath=25_128)         | 1PC     |
-| [Grove - Rotary Angle Sensor](http://www.seeedstudio.com/depot/Grove-Rotary-Angle-Sensor-p-770.html?cPath=85_52)             | 1PC     |
-| [Grove - Protoshield](http://www.seeedstudio.com/depot/Grove-Protoshield-p-772.html?cPath=44_46)                             | 1PC     |
-| [Grove - Magnetic Switch](http://www.seeedstudio.com/depot/Grove-Magnetic-Switch-p-744.html?cPath=25_33)                     | 1PC     |
+| [Grove - Temp&Humi Sensor](https://www.seeedstudio.com/depot/Grove-TempHumi-Sensor-p-745.html?cPath=25_125)                   | 1PC     |
+| [Grove - Digital Light Sensor](https://www.seeedstudio.com/depot/Grove-Digital-Light-Sensor-p-1281.html?cPath=25_128)         | 1PC     |
+| [Grove - Rotary Angle Sensor](https://www.seeedstudio.com/depot/Grove-Rotary-Angle-Sensor-p-770.html?cPath=85_52)             | 1PC     |
+| [Grove - Protoshield](https://www.seeedstudio.com/depot/Grove-Protoshield-p-772.html?cPath=44_46)                             | 1PC     |
+| [Grove - Magnetic Switch](https://www.seeedstudio.com/depot/Grove-Magnetic-Switch-p-744.html?cPath=25_33)                     | 1PC     |
 | [Grove - 3-Axis Digital Accelerometer(±1.5g)](/Grove-3-Axis_Digital_Accelerometer-1.5g)                                      | 1PC     |
 | [Grove - IR Distance Interrupt](/Grove-IR_Distance_Interrupter_v1.2)                                                         | 1PC     |
-| [Grove - Barometer Sensor (BMP180)](http://www.seeedstudio.com/depot/Grove-Barometer-Sensor-BMP180-p-1840.html?cPath=25_124) | 1PC     |
-| [Grove - Air quality sensor v1.3](http://www.seeedstudio.com/depot/Grove-Air-quality-sensor-v13-p-2439.html?cPath=25_127)    | 1PC     |
-| [Grove - Gesture](http://www.seeedstudio.com/depot/Grove-Gesture-p-2463.html?cPath=25_33)                                    | 1PC     |
-| [Grove - I2C Hub](http://www.seeedstudio.com/depot/Grove-I2C-Hub-p-851.html?cPath=98_16)                                     | 1PC     |
-| [Grove - Speaker](http://www.seeedstudio.com/depot/Grove-Speaker-p-1445.html)                                                | 1PC     |
+| [Grove - Barometer Sensor (BMP180)](https://www.seeedstudio.com/depot/Grove-Barometer-Sensor-BMP180-p-1840.html?cPath=25_124) | 1PC     |
+| [Grove - Air quality sensor v1.3](https://www.seeedstudio.com/depot/Grove-Air-quality-sensor-v13-p-2439.html?cPath=25_127)    | 1PC     |
+| [Grove - Gesture](https://www.seeedstudio.com/depot/Grove-Gesture-p-2463.html?cPath=25_33)                                    | 1PC     |
+| [Grove - I2C Hub](https://www.seeedstudio.com/depot/Grove-I2C-Hub-p-851.html?cPath=98_16)                                     | 1PC     |
+| [Grove - Speaker](https://www.seeedstudio.com/depot/Grove-Speaker-p-1445.html)                                                | 1PC     |
 | Grove - WS2812 Waterproof LED Strip - 30 LEDs 1 meter                                                                        | 1PC     |
-| [Micro USB Cable - 48cm](http://www.seeedstudio.com/depot/Micro-USB-Cable-48cm-p-1475.html?cPath=98_100)                     | 2PCS    |
-| [Grove - Servo](http://www.seeedstudio.com/depot/Grove-Servo-p-1241.html)                                                    | 1PC     |
+| [Micro USB Cable - 48cm](https://www.seeedstudio.com/depot/Micro-USB-Cable-48cm-p-1475.html?cPath=98_100)                     | 2PCS    |
+| [Grove - Servo](https://www.seeedstudio.com/depot/Grove-Servo-p-1241.html)                                                    | 1PC     |
 | [Wio Link](/Wio_Link)                                                                                                        | 2PCS    |
 
 A simple demo
@@ -66,7 +66,7 @@ This demo can be used as a compilation result-indicator.
 
 -   [Wio Link APP](https://www.kickstarter.com/projects/seeed/wio-link-3-steps-5-minutes-build-your-iot-applicat)
 -   [Wio Link](/Wio_Link)
--   [Grove Relay](http://www.seeedstudio.com/depot/Grove-Relay-p-769.html?cPath=39_42) × 3
+-   [Grove Relay](https://www.seeedstudio.com/depot/Grove-Relay-p-769.html?cPath=39_42) × 3
 -   A Travis CI Account
 -   A GitHub Account
 -   Traffic Light
@@ -75,10 +75,10 @@ This demo can be used as a compilation result-indicator.
 
 Please go to Recipe for the detailed manual:
 
-<http://www.seeedstudio.com/recipe/1068-traffic-light-indicates-travis-ci-compiled-results.html>
+<https://www.seeedstudio.com/recipe/1068-traffic-light-indicates-travis-ci-compiled-results.html>
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Wio_Link_Deluxe_Kit -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Wio_Link_Deluxe_Kit -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

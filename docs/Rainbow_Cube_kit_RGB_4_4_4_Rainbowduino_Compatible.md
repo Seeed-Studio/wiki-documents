@@ -155,7 +155,7 @@ All pins are accessible from the Panel board show below.
 Before starting to build your Cube, please read though all the instructions first. Building the Cube is not difficult, but it will take you about 90 minutes to finish
 it.
 
-*   [Download and read assembly instructions](http://www.seeedstudio.com/depot/docu/CUBE.pdf)
+*   [Download and read assembly instructions](https://www.seeedstudio.com/depot/docu/CUBE.pdf)
 
 ![](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow-1.jpg) <div class="thumbcaption">RGB Rainbow Cube Kit (assembled)
 
@@ -390,7 +390,7 @@ Output
 
         *   [http://konchatech.blogspot.ca/2012/05/4x4x4-iphone-controlled-rgb-led-cube.html](http://konchatech.blogspot.ca/2012/05/4x4x4-iphone-controlled-rgb-led-cube.html) (for sourcecode)
 
-        *   [http://www.youtube.com/watch?v=JXr-Jgzgigs](http://www.youtube.com/watch?v=JXr-Jgzgigs) [Video]
+        *   [https://www.youtube.com/watch?v=JXr-Jgzgigs](https://www.youtube.com/watch?v=JXr-Jgzgigs) [Video]
 
 [http://i.ytimg.com/vi/JXr-Jgzgigs/0.jpg](http://i.ytimg.com/vi/JXr-Jgzgigs/0.jpg)
 
@@ -400,9 +400,9 @@ Output
 
         *   [http://konchatech.blogspot.ca/2012/05/ambient-led-cube.html](http://konchatech.blogspot.ca/2012/05/ambient-led-cube.html) (for sourcecode)
 
-        *   [http://www.youtube.com/watch?v=cC_xqA5irLA](http://www.youtube.com/watch?v=cC_xqA5irLA) [Video 1]
+        *   [https://www.youtube.com/watch?v=cC_xqA5irLA](https://www.youtube.com/watch?v=cC_xqA5irLA) [Video 1]
 
-        *   [http://www.youtube.com/watch?v=ed9FURoNZ6M](http://www.youtube.com/watch?v=ed9FURoNZ6M) [Video 2]
+        *   [https://www.youtube.com/watch?v=ed9FURoNZ6M](https://www.youtube.com/watch?v=ed9FURoNZ6M) [Video 2]
 
 [http://0.gvt0.com/vi/cC_xqA5irLA/0.jpg](http://0.gvt0.com/vi/cC_xqA5irLA/0.jpg)
 
@@ -423,11 +423,11 @@ Output
 
 *   Data-sheets
 
-    *   [8mm RGB LED](http://www.seeedstudio.com/depot/datasheet/8mmLED.pdf)
+    *   [8mm RGB LED](https://www.seeedstudio.com/depot/datasheet/8mmLED.pdf)
 
     *   [Rainbowduino3.0 Library for Arduino 023](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/res/Rainbowduino3.0_Library.zip)
 
     *   [Rainbowduino3.0 Library for Arduino 1.0](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/res/Rainbowduino_for_Arduino1.0.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

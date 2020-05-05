@@ -35,7 +35,7 @@ On top of that, we've released the [Grove Shield for Wio Lite](https://www.seeed
 
 Goodbye, complex wiring with the breadboard and annoying welding with the soldering iron. 
 
-Hello, [Grove](http://wiki.seeedstudio.com/Grove_System/)! 
+Hello, [Grove](https://wiki.seeedstudio.com/Grove_System/)! 
 
 
 <p style=":center"><a href="https://www.seeedstudio.com/Wio-Lite-W600-p-4155.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
@@ -133,7 +133,7 @@ Double-click the Arduino application (arduino.exe) you have previously downloade
 
 - **Step 2. Add the Wio Lite W600 Board to Your Arduino IDE**   
 
-Please follow the [Seeed Board Intallation Guide](http://wiki.seeedstudio.com/Seeed_Arduino_Boards/) and serch the key word **seeeduino_samd_zero** to add the **Wio Lite W600** into your Arduino IDE. 
+Please follow the [Seeed Board Intallation Guide](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/) and serch the key word **seeeduino_samd_zero** to add the **Wio Lite W600** into your Arduino IDE. 
 
 
 <div align="center">
@@ -147,7 +147,7 @@ Please follow the [Seeed Board Intallation Guide](http://wiki.seeedstudio.com/Se
 
 - **Step 3. Add the W600 Library into Your Arduino IDE**  
 
-Download the [W600 Library](https://github.com/Seeed-Studio/Seeed_Arduino_W600) from Seeed Github. Then Refer to [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+Download the [W600 Library](https://github.com/Seeed-Studio/Seeed_Arduino_W600) from Seeed Github. Then Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 
 - **Step 4.** Restart the Arduino IDE. Open the AP-Station example, you can open it in the Arduino IDE by the path: **File --> Examples -->seeed_W600_wifi-->ap_sta_mode**.
@@ -214,5 +214,5 @@ A few seconds after the upload finishes, then the Wio Lite W600 will access the 
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

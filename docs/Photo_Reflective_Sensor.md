@@ -7,7 +7,7 @@ prodimagename:  rs081.jpg
 surveyurl: https://www.research.net/r/Photo_Reflective_Sensor
 sku:    314020031
 ---
-![http://www.seeedstudio.com/depot/images/product/rs081.jpg](http://bz.seeedstudio.com/depot/images/product/rs081.jpg)
+![https://www.seeedstudio.com/depot/images/product/rs081.jpg](http://bz.seeedstudio.com/depot/images/product/rs081.jpg)
 
 This is a reflective sensor combines a GaA1As infrared light emitting diode with a high sensitive Darlington phototransistor in a mini package.
 
@@ -318,4 +318,4 @@ This is a reflective sensor combines a GaA1As infrared light emitting diode with
 ![](https://files.seeedstudio.com/wiki/Photo_Reflective_Sensor/img/Photo-ref-dimen.JPG)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

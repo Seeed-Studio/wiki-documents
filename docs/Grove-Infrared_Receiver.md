@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-Infrared-Receiver-p-994.html
 oldwikiname: Grove_-_Infrared_Receiver
 prodimagename: Grove-Infrared_Receiver.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/101020016 1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/101020016 1.jpg
 surveyurl: https://www.research.net/r/Grove-Infrared_Receiver
 sku: 101020016
 tags: grove_digital, io_3v3, io_5v, plat_duino
@@ -14,9 +14,9 @@ tags: grove_digital, io_3v3, io_5v, plat_duino
 
 ![](https://files.seeedstudio.com/wiki/Grove-Infrared_Receiver/img/Grove-Infrared_Receiver.jpg)
 
-The Infrared Receiver is used to receive infrared signals and also used for remote control detection. There is an IR detector on the Infrared Receiver which is used to get the infrared light emitted by the Infrared Emitter. The IR detector have a demodulator inside that looks for modulated IR at 38 KHz. The Infrared Receiver can receive signals well within 10 meters. If more than 10 meters , the receiver may not get the signals. We often use the two Groves-the Infrared Receiver and the [Grove - Infrared Emitter](http://wiki.seeedstudio.com/Grove-Infrared_Emitter) to work together.
+The Infrared Receiver is used to receive infrared signals and also used for remote control detection. There is an IR detector on the Infrared Receiver which is used to get the infrared light emitted by the Infrared Emitter. The IR detector have a demodulator inside that looks for modulated IR at 38 KHz. The Infrared Receiver can receive signals well within 10 meters. If more than 10 meters , the receiver may not get the signals. We often use the two Groves-the Infrared Receiver and the [Grove - Infrared Emitter](https://wiki.seeedstudio.com/Grove-Infrared_Emitter) to work together.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Infrared-Receiver-p-994.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-Infrared-Receiver-p-994.html)
 
 
 
@@ -35,7 +35,7 @@ Grove - Infrared Receiver v1.1	| Change the Silkscreen  |	Jul. 24 2016
 -   Distance:10m
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
     
 
 
@@ -60,7 +60,7 @@ The Grove - Infrared Emitter can send data while Grove - Infrared Receiver will 
 ### Play With Arduino
 
 !!!Note
-    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
 
 #### Hardware
@@ -70,7 +70,7 @@ The Grove - Infrared Emitter can send data while Grove - Infrared Receiver will 
 | Seeeduino V4.2 | Base Shield| Grove - Infrared Emitter | Grove - Infrared Receiver
 |--------------|-------------|-----------------|-----|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduinoX2.png)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/baseshiledX2.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Infrared_Emitter/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Infrared_Receiver/img/little.jpg)|
-|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Infrared-Emitter-p-993.html)|[Get One Now](https://www.seeedstudio.com/Grove-Infrared-Receiver-p-994.html)|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Infrared-Emitter-p-993.html)|[Get One Now](https://www.seeedstudio.com/Grove-Infrared-Receiver-p-994.html)|
 
 - **Step 2.** Connect Grove - Infrared Emitter to port **D3** of one Grove-Base Shield.
               
@@ -110,7 +110,7 @@ The Grove - Infrared Emitter can send data while Grove - Infrared Receiver will 
 
 - **Step 1.** Download the  [IRSendRev-master library](https://github.com/Seeed-Studio/IRSendRev)  from Github.
 
-- **Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- **Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 - **Step 3.** Restart the Arduino IDE. Open `recv` example via the path: **File->Examples->Grove - Infrared Receiver  And Emitter->recv**. 
 
@@ -186,7 +186,7 @@ void loop()
 
 ```
 
-- **Step 4.** Upload the `recv` demo to the seeeduino with Grove - Infrared Receiver. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 4.** Upload the `recv` demo to the seeeduino with Grove - Infrared Receiver. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 - **Step 5.** Open `send` example via the path: **File->Examples->Grove - Infrared Receiver  And Emitter->send**. 
 
@@ -275,4 +275,4 @@ If every thing goes well, The result should be like:
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

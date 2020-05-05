@@ -4,7 +4,7 @@ category: Shield
 bzurl: https://seeedstudio.com/EL-Shield-p-1287.html
 oldwikiname: EL_Shield
 prodimagename: EL_Shield_02.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/104030000 1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/104030000 1.jpg
 surveyurl: https://www.research.net/r/EL_Shield
 sku: 104030000
 ---
@@ -13,7 +13,7 @@ sku: 104030000
 
 This shield is used to control EL devices. It can control 4 EL devices simultaneously. The controlling method is as simple as controlling an LED. Driven by PWM, it can create a colorful and florid effect by controlling each EL wire with a simple program. Combined with our EL Inverter, it can drive an EL wire as long as 15m, which provides infinite possibility for your design. Besides, the Shield is covered by Acrylic board, which enhances user's safety.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/el-shield-p-1287.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/el-shield-p-1287.html)
 
 Specifications
 --------------
@@ -84,7 +84,7 @@ Resources
 -   [MOC 3063 datasheet](https://files.seeedstudio.com/wiki/EL_Shield/res/MOC3063M.pdf)
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/EL_Shield -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/EL_Shield -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

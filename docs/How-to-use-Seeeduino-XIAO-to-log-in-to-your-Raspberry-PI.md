@@ -27,7 +27,7 @@ Sometimes when we use Raspberry Pi, these situations can be very disturbing to u
 
 - **Step 5.** The raspberry pie is connected to a power supply.
 
-![](http://files.seeedstudio.com/products/102010328/img/pin-with-marks.png)
+![](https://files.seeedstudio.com/products/102010328/img/pin-with-marks.png)
 
 
 ## Software
@@ -86,19 +86,19 @@ void loop() {
 - **Step 2.** Set the serial port baud rate to 115200 ( This is the default serial port baud rate. It can be communicated correctly if it is consistent with the serial port baud rate of the Raspberry Pi.)
 
 <p align="center">
-  <img src="http://files.seeedstudio.com/products/102010328/img/Putty%20config.png">
+  <img src="https://files.seeedstudio.com/products/102010328/img/Putty%20config.png">
 </p>
 
 - **Step 3.** Then you will see the startup information in the terminal window.
 
 <p align="center">
-  <img src="http://files.seeedstudio.com/products/102010328/img/Terminal.png">
+  <img src="https://files.seeedstudio.com/products/102010328/img/Terminal.png">
 </p>
 
 Now you have access to Raspberry Pi through Seeeduino XIAO!
 
 <p align="center">
-  <img src="http://files.seeedstudio.com/products/102010328/img/new%20pins.gif">
+  <img src="https://files.seeedstudio.com/products/102010328/img/new%20pins.gif">
 </p>
 
 

@@ -33,23 +33,23 @@ DSO Quad also known as DSO203 is a pocket size 4 channel digital oscilloscope fo
 
 Ongoing projects:
 
-*   GCC port with FFT, spectrogram and various fixes [by pmos69 and marcosin](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2957)
+*   GCC port with FFT, spectrogram and various fixes [by pmos69 and marcosin](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2957)
 
-*   Alternative user interface [by gabonator1](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2362)
+*   Alternative user interface [by gabonator1](https://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2362)
 
-*   GCC port of the default firmware [by tmbinc](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2274)
+*   GCC port of the default firmware [by tmbinc](https://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2274)
 
-*   Frequency response plotter [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2485)
+*   Frequency response plotter [by jpa](https://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2485)
 
-*   FFT example application [by gabonator1](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2098)
+*   FFT example application [by gabonator1](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2098)
 
-*   Logic analyzer [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2861)
+*   Logic analyzer [by jpa](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2861)
 
-*   Pawn programming environment and various applications [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=3239)
+*   Pawn programming environment and various applications [by jpa](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=3239)
 
 *   Port of SYS to gcc: [[1]](https://github.com/neilstockbridge/dsoquad-BIOS)
 
-*   Tetris [by LinX](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2344)
+*   Tetris [by LinX](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2344)
 
 <big>Idea Collection </big>
 
@@ -207,23 +207,23 @@ DSO Quad also known as DSO203 is a pocket size 4 channel digital oscilloscope fo
 
 Ongoing projects:
 
-*   GCC port with FFT, spectrogram and various fixes [by pmos69 and marcosin](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2957)
+*   GCC port with FFT, spectrogram and various fixes [by pmos69 and marcosin](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2957)
 
-*   Alternative user interface [by gabonator1](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2362)
+*   Alternative user interface [by gabonator1](https://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2362)
 
-*   GCC port of the default firmware [by tmbinc](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2274)
+*   GCC port of the default firmware [by tmbinc](https://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2274)
 
-*   Frequency response plotter [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2485)
+*   Frequency response plotter [by jpa](https://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2485)
 
-*   FFT example application [by gabonator1](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2098)
+*   FFT example application [by gabonator1](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2098)
 
-*   Logic analyzer [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2861)
+*   Logic analyzer [by jpa](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2861)
 
-*   Pawn programming environment and various applications [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=3239)
+*   Pawn programming environment and various applications [by jpa](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=3239)
 
 *   Port of SYS to gcc: [[1]](https://github.com/neilstockbridge/dsoquad-BIOS)
 
-*   Tetris [by LinX](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2344)
+*   Tetris [by LinX](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2344)
 
 <big>Idea Collection </big>
 
@@ -381,23 +381,23 @@ DSO Quad also known as DSO203 is a pocket size 4 channel digital oscilloscope fo
 
 Ongoing projects:
 
-*   GCC port with FFT, spectrogram and various fixes [by pmos69 and marcosin](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2957)
+*   GCC port with FFT, spectrogram and various fixes [by pmos69 and marcosin](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2957)
 
-*   Alternative user interface [by gabonator1](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2362)
+*   Alternative user interface [by gabonator1](https://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2362)
 
-*   GCC port of the default firmware [by tmbinc](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2274)
+*   GCC port of the default firmware [by tmbinc](https://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2274)
 
-*   Frequency response plotter [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2485)
+*   Frequency response plotter [by jpa](https://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2485)
 
-*   FFT example application [by gabonator1](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2098)
+*   FFT example application [by gabonator1](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2098)
 
-*   Logic analyzer [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2861)
+*   Logic analyzer [by jpa](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2861)
 
-*   Pawn programming environment and various applications [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=3239)
+*   Pawn programming environment and various applications [by jpa](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=3239)
 
 *   Port of SYS to gcc: [[1]](https://github.com/neilstockbridge/dsoquad-BIOS)
 
-*   Tetris [by LinX](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2344)
+*   Tetris [by LinX](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2344)
 
 <big>Idea Collection </big>
 
@@ -555,23 +555,23 @@ DSO Quad also known as DSO203 is a pocket size 4 channel digital oscilloscope fo
 
 Ongoing projects:
 
-*   GCC port with FFT, spectrogram and various fixes [by pmos69 and marcosin](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2957)
+*   GCC port with FFT, spectrogram and various fixes [by pmos69 and marcosin](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2957)
 
-*   Alternative user interface [by gabonator1](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2362)
+*   Alternative user interface [by gabonator1](https://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2362)
 
-*   GCC port of the default firmware [by tmbinc](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2274)
+*   GCC port of the default firmware [by tmbinc](https://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2274)
 
-*   Frequency response plotter [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2485)
+*   Frequency response plotter [by jpa](https://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2485)
 
-*   FFT example application [by gabonator1](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2098)
+*   FFT example application [by gabonator1](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2098)
 
-*   Logic analyzer [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2861)
+*   Logic analyzer [by jpa](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2861)
 
-*   Pawn programming environment and various applications [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=3239)
+*   Pawn programming environment and various applications [by jpa](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=3239)
 
 *   Port of SYS to gcc: [[1]](https://github.com/neilstockbridge/dsoquad-BIOS)
 
-*   Tetris [by LinX](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2344)
+*   Tetris [by LinX](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2344)
 
 <big>Idea Collection </big>
 
@@ -729,23 +729,23 @@ DSO Quad also known as DSO203 is a pocket size 4 channel digital oscilloscope fo
 
 Ongoing projects:
 
-*   GCC port with FFT, spectrogram and various fixes [by pmos69 and marcosin](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2957)
+*   GCC port with FFT, spectrogram and various fixes [by pmos69 and marcosin](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2957)
 
-*   Alternative user interface [by gabonator1](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2362)
+*   Alternative user interface [by gabonator1](https://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2362)
 
-*   GCC port of the default firmware [by tmbinc](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2274)
+*   GCC port of the default firmware [by tmbinc](https://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2274)
 
-*   Frequency response plotter [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2485)
+*   Frequency response plotter [by jpa](https://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2485)
 
-*   FFT example application [by gabonator1](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2098)
+*   FFT example application [by gabonator1](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2098)
 
-*   Logic analyzer [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2861)
+*   Logic analyzer [by jpa](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2861)
 
-*   Pawn programming environment and various applications [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=3239)
+*   Pawn programming environment and various applications [by jpa](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=3239)
 
 *   Port of SYS to gcc: [[1]](https://github.com/neilstockbridge/dsoquad-BIOS)
 
-*   Tetris [by LinX](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2344)
+*   Tetris [by LinX](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2344)
 
 <big>Idea Collection </big>
 
@@ -903,23 +903,23 @@ DSO Quad also known as DSO203 is a pocket size 4 channel digital oscilloscope fo
 
 Ongoing projects:
 
-*   GCC port with FFT, spectrogram and various fixes [by pmos69 and marcosin](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2957)
+*   GCC port with FFT, spectrogram and various fixes [by pmos69 and marcosin](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2957)
 
-*   Alternative user interface [by gabonator1](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2362)
+*   Alternative user interface [by gabonator1](https://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2362)
 
-*   GCC port of the default firmware [by tmbinc](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2274)
+*   GCC port of the default firmware [by tmbinc](https://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2274)
 
-*   Frequency response plotter [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2485)
+*   Frequency response plotter [by jpa](https://forum.seeedstudio.com/viewtopic.php?f=10&amp;t=2485)
 
-*   FFT example application [by gabonator1](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2098)
+*   FFT example application [by gabonator1](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2098)
 
-*   Logic analyzer [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2861)
+*   Logic analyzer [by jpa](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2861)
 
-*   Pawn programming environment and various applications [by jpa](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=3239)
+*   Pawn programming environment and various applications [by jpa](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=3239)
 
 *   Port of SYS to gcc: [[1]](https://github.com/neilstockbridge/dsoquad-BIOS)
 
-*   Tetris [by LinX](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2344)
+*   Tetris [by LinX](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2344)
 
 <big>Idea Collection </big>
 
@@ -1073,7 +1073,7 @@ _**Note: The DSO Quad is currently a BETA product. This means significant hardwa
 
 ##  Why Another Manual?
 
-Seeedstudio's official manual can be downloaded [here](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1929). I started this page as a project in my spare time to answer all the questions I had when I first got my DSO Quad.
+Seeedstudio's official manual can be downloaded [here](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1929). I started this page as a project in my spare time to answer all the questions I had when I first got my DSO Quad.
 
 This manual may help if you're wondering:
 
@@ -1099,7 +1099,7 @@ I felt like this all belongs in one place -- a manual -- and I just kept working
 
 *   [DSO Quad Building Firmware](/DSO_Quad-Building_Firmware "DSO Quad Building Firmware")
 
-*   [DSO Quad battery installation tutorial with video](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2074)
+*   [DSO Quad battery installation tutorial with video](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2074)
 
 ##  Getting Started
 
@@ -1127,14 +1127,14 @@ When you receive the DSO Quad, you should have something like this:
 
 4.  The back face should then fall off easily, revealing the empty battery cavity:
 ![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Dso_quad_back_removed.jpg)
-</dd><dd> **Note:** There are [reports of reverse-polarity batteries.](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1911) _**This will destroy your charging circuit if not corrected.**_ Please carefully check for the proper alignment of red and black wires.
+</dd><dd> **Note:** There are [reports of reverse-polarity batteries.](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1911) _**This will destroy your charging circuit if not corrected.**_ Please carefully check for the proper alignment of red and black wires.
 </dd></dl>
 
 5.  Check that the red wire is closest to the outside of the DSO Quad. The black wire is on the inside.
 ![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Dso_quad_observe_polarity.jpg)
 </dd></dl>
 
-6.  If your battery was connected incorrectly, _**do not plug it in!**_ Go to [this forum thread](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1911) for help.
+6.  If your battery was connected incorrectly, _**do not plug it in!**_ Go to [this forum thread](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1911) for help.
 
 7.  If your battery is connected correctly, thread the wires through the clips on the left side:
 
@@ -1148,7 +1148,7 @@ Hold the left side tightly while sliding the cover to the right. See [http://www
 
 ###  LED Indicators and Power Modes
 
-The DSO Quad is charged by connecting the USB cable. The LTC4054 battery controller [will not charge the battery](http://forum.seeedstudio.com/viewtopic.php?p=6922#p6922) while the power switch is on. This is best explained in a table:
+The DSO Quad is charged by connecting the USB cable. The LTC4054 battery controller [will not charge the battery](https://forum.seeedstudio.com/viewtopic.php?p=6922#p6922) while the power switch is on. This is best explained in a table:
 
 <table>
 <tr>
@@ -1215,7 +1215,7 @@ The DSO Quad is charged by connecting the USB cable. The LTC4054 battery control
 </td>
 <td> Red LED on, display on
 </td>
-<td> Powered on, [battery will not charge while on](http://forum.seeedstudio.com/viewtopic.php?p=6922#p6922)
+<td> Powered on, [battery will not charge while on](https://forum.seeedstudio.com/viewtopic.php?p=6922#p6922)
 </td></tr>
 <tr>
 <td> OFF
@@ -1338,15 +1338,15 @@ Seeed Studio shipped this version
 SYS 1.02
 
 </td>
-<td> [APP 2.34?](http://forum.seeedstudio.com/viewtopic.php?p=6760#p6760)
+<td> [APP 2.34?](https://forum.seeedstudio.com/viewtopic.php?p=6760#p6760)
 
-[SYS 1.32?](http://forum.seeedstudio.com/viewtopic.php?p=6760#p6760)
+[SYS 1.32?](https://forum.seeedstudio.com/viewtopic.php?p=6760#p6760)
 
 </td>
 <td> Ver 2.2 devices were only given to Beta testers, with a [free upgrade to 2.6](http://ourdev.cn/bbs/bbs_content_all.jsp?bbs_sn=4138839). This version will not receive any further software updates.
 </td></tr></table>
 
-You might find more info on [http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1929](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1929).
+You might find more info on [https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1929](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1929).
 
 The firmware source code is available [here](http://github.com/Seeed-Studio/DSOQuad_SourceCode). **Note:** Seeedstudio does not recommend you create your own FPGA firmware, because of the risk of damaging the hardware.
 
@@ -1501,7 +1501,7 @@ Vmax, Vmin, Vpp, Vdc (average V), Vrms (sqrt(average(V*V)))
 
 Sampling 0.1 usec - 1 sec
 
-Digital input bandwidth [This forum thread](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1978)
+Digital input bandwidth [This forum thread](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1978)
 
 ###  Definitions
 
@@ -1534,7 +1534,7 @@ Note that the values on screen are 1/10 of the input, so please multiply by 10 i
 
 The DSO Quad can be charged from any normal USB port. Please charge your DSO Quad for at least 1 hour before using it.
 
-The DSO Quad firmware does a rapid USB disconnect-reconnect to do a "live" firmware update. This method is incompatible with Mac OS X or Linux. Please see [this forum thread](http://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1934) for more information.  See [DSO Quad Building Firmware](/DSO_Quad-Building_Firmware "DSO Quad Building Firmware") for how to upgrade firmware from Linux.
+The DSO Quad firmware does a rapid USB disconnect-reconnect to do a "live" firmware update. This method is incompatible with Mac OS X or Linux. Please see [this forum thread](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1934) for more information.  See [DSO Quad Building Firmware](/DSO_Quad-Building_Firmware "DSO Quad Building Firmware") for how to upgrade firmware from Linux.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

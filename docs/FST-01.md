@@ -17,7 +17,7 @@ The concept is "Minimalist Design".    It is by free (as in freedom) hardware de
 
 Flying Stone Technology is a second source manufacturer of "Gnuk", which is copyrighted by the Non-Profit organization, Free Software Initiative of Japan.
 
-For those who want rich features, please consider [Maple Mini](http://www.seeedstudio.com/depot/maple-mini-p-861.html), instead.
+For those who want rich features, please consider [Maple Mini](https://www.seeedstudio.com/depot/maple-mini-p-861.html), instead.
 
 ```
                         SWD port
@@ -35,7 +35,7 @@ Please use [FST-01 Q&amp;A site](http://no-passwd.net/askbot/questions/) for you
 
 |FST-01 without enclosure|FST-01 with heat shrink tube|FST-01 with case (P1A-120704U)|
 |---|---|---|
-|[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](http://www.seeedstudio.com/depot/fst01-without-enclosure-p-1276.html)|[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](http://www.seeedstudio.com/depot/fst01-with-heat-shrink-tube-p-1277.html)|[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](http://www.seeedstudio.com/depot/fst01-with-white-enclosure-p-1279.html)|
+|[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/depot/fst01-without-enclosure-p-1276.html)|[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/depot/fst01-with-heat-shrink-tube-p-1277.html)|[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/depot/fst01-with-white-enclosure-p-1279.html)|
 
 It is also available at Flying Stone Technology (飛石技術), person to person.  See [Buy FST-01!](http://www.gniibe.org/shop/buy-fst-01) page at gniibe.org (in Japanese).
 
@@ -120,7 +120,7 @@ Although FST-01 PCB is designed following the recommendation of P1A-120704U spec
 
 *   2011-08-23: Fusion PCB order for prototype PCB: #33163
 
-*   2011-08-26: [Wish for FST-01](http://www.seeedstudio.com/wish/?p=783)
+*   2011-08-26: [Wish for FST-01](https://www.seeedstudio.com/wish/?p=783)
 
 *   2011-09-06: Fusion PCB order for prototype PCB: #34012
 
@@ -610,4 +610,4 @@ PCB Assembly was done by **User:Gniibe** by hand.  See [my article](http://www.g
             * blink LED (emits lights for 25ms,off 200ms).
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

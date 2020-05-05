@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-EMG-Detector-p-1737.html
 oldwikiname: Grove_-_EMG_Detector
 prodimagename: Emg_product.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/101020058 1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/101020058 1.jpg
 surveyurl: https://www.research.net/r/Grove-EMG_Detector
 sku: 101020058
 tags: grove_analog, io_3v3, io_5v, plat_duino, plat_linkit
@@ -21,7 +21,7 @@ The sensor cannot be used for medical purposes.
 
 In standby mode, the output voltage is 1.5V. When detect muscle active, the output signal rise up, the maximum voltage is 3.3V. You can use this sensor in 3.3V or 5V system.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-EMG-Detector-p-1737.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-EMG-Detector-p-1737.html)
 
 Features
 --------
@@ -34,7 +34,7 @@ Features
 -   No additional power supply
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
     
 Platforms Supported
 -------------------
@@ -60,7 +60,7 @@ Hardware Overview
 Demonstration
 -------------
 
-This demonstration will show you how to use Grove - LCD RGB Backlight, we need a [Seeeduino V3.0](http://www.seeedstudio.com/depot/seeeduino-v30-atmega-328p-p-669.html), a [Grove - LED Bar](/Grove-LED_Bar) and [Grove - Base Shield](/Base_Shield_V2).
+This demonstration will show you how to use Grove - LCD RGB Backlight, we need a [Seeeduino V3.0](https://www.seeedstudio.com/depot/seeeduino-v30-atmega-328p-p-669.html), a [Grove - LED Bar](/Grove-LED_Bar) and [Grove - Base Shield](/Base_Shield_V2).
 
 ### Hardware Installation
 
@@ -104,7 +104,7 @@ Resources
 -   [Grove-EMG Sensor v1.1 Eagle File](https://files.seeedstudio.com/wiki/Grove-EMG_Detector/res/202000023+PCBA-Grove+EMG+Detector+v1.1.zip)
 -   [Demo Code](https://github.com/Seeed-Studio/Grove_EMG_detector_demo_code)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_EMG_Detector -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_EMG_Detector -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

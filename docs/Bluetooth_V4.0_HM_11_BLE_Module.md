@@ -530,9 +530,9 @@ With this demo, we can:
 
 *   Remote control via IR
 
-[**I want to make it.**](http://www.seeedstudio.com/recipe/66-ir-remote.html)
+[**I want to make it.**](https://www.seeedstudio.com/recipe/66-ir-remote.html)
 
-[**More Awesome Projects by Bluetooth**](http://www.seeedstudio.com/recipe/index.php?query=bluetooth)
+[**More Awesome Projects by Bluetooth**](https://www.seeedstudio.com/recipe/index.php?query=bluetooth)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

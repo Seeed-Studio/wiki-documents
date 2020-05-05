@@ -777,7 +777,7 @@ Librespeaker is an audio processing library which can perform noise suppression,
   - Automatically adjust the volume of the microphone, maximize the pickup capability of microphone.
 
 
-And we provide several APIs which enable users to get indicated when hotword is said and the processed microphone data in PCM format, which then can be sent to cloud services like Alexa for further processing. You can click [APIs Docs](http://wiki.seeedstudio.com/librespeaker_doc/) to check.
+And we provide several APIs which enable users to get indicated when hotword is said and the processed microphone data in PCM format, which then can be sent to cloud services like Alexa for further processing. You can click [APIs Docs](https://wiki.seeedstudio.com/librespeaker_doc/) to check.
 
 
 ### Play with AVS
@@ -789,9 +789,9 @@ This guide will show you how to run the Amazon official AVS C++ SDK with respeak
 
 **Part 1. Preparation**
 
-If you've already passed the [Out of Box demo](http://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#out-of-box-demo), please move forward to next chapter.
+If you've already passed the [Out of Box demo](https://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#out-of-box-demo), please move forward to next chapter.
 
-If you just received the board and had done nothing on it, please learn the [Basic Operations](http://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#preparation) of this board:
+If you just received the board and had done nothing on it, please learn the [Basic Operations](https://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#preparation) of this board:
 
 - System image burning - this demo needs the lxqt version system image
 - Get serial console via OTG USB port
@@ -1097,7 +1097,7 @@ detected 1 at direction 237.455170747
 
 ### Play with Dueros
 
-The same as AVS, the only difference is that you need to delete one profile file. Before [get the authorization](http://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#step-2-authorize-alexa),
+The same as AVS, the only difference is that you need to delete one profile file. Before [get the authorization](https://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#step-2-authorize-alexa),
 you should tap the command below to delete the **avs.json**.
 
 ```
@@ -1112,7 +1112,7 @@ Then you can get the authorization from Baidu by tapping the following command:
 
 
 
-After login, the following step is the same as AVS, Please refer to [AVS Demos](http://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#step-3-have-fun-with-alexa-applications).
+After login, the following step is the same as AVS, Please refer to [AVS Demos](https://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#step-3-have-fun-with-alexa-applications).
 
 When you run the python program, you can say **Alexa** to wake up the Baidu voice assistance.
 
@@ -1121,7 +1121,7 @@ When you run the python program, you can say **Alexa** to wake up the Baidu voic
 ### Play with Google Assistant
 
 
-Please refer to our wiki [Google Assistant](http://wiki.seeedstudio.com/Google_Assistant). Follow the instruction step by step, then you will be able to use Google Assistant.
+Please refer to our wiki [Google Assistant](https://wiki.seeedstudio.com/Google_Assistant). Follow the instruction step by step, then you will be able to use Google Assistant.
 
 
 ## Play with online STT
@@ -1205,7 +1205,7 @@ Let's say **开灯** or **关灯** and monitor the screen output.
 
 ## Play with Wio Link
 
-Please follow [ReSpeaker Core V2 & Wio Link Tutorial](http://wiki.seeedstudio.com/ReSpeaker_Core_V2_&_Wio_Link/) to use the ReSpeaker Core V2 to control Wio Link through IFTTT.
+Please follow [ReSpeaker Core V2 & Wio Link Tutorial](https://wiki.seeedstudio.com/ReSpeaker_Core_V2_&_Wio_Link/) to use the ReSpeaker Core V2 to control Wio Link through IFTTT.
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/OJ0i6QrZCSM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
@@ -1262,7 +1262,7 @@ Materials
 | ReSpeaker Core v2.0 |  Grove - Buzzer |
 |--------------|-------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Respeaker_V2/img/ReSpeaker_V2_back_little.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Base_Shield_V2/img/Buzzer.png)|
-|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|
+|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|
 
 Connect the Grove PIR sensor's **SIG** pin to the ReSpeaker Core v2.0's header pin **0** with jumper. Don't forget to wire the VCC and GND at the same time. Then tap the code below into your console
 
@@ -1292,7 +1292,7 @@ Materials
 | ReSpeaker Core v2.0 |  Grove -  PIR Motion Sensor |
 |--------------|-------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Respeaker_V2/img/ReSpeaker_V2_back_little.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Respeaker_V2/img/Grove%20-%20PIR%20Motion%20Sensor.jpg)|
-|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-PIR-Motion-Sensor-p-802.html)|
+|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-PIR-Motion-Sensor-p-802.html)|
 
 
 In this example, we're gonna to listen on the trigger of the Grove PIR sensor, in Python code.
@@ -1349,7 +1349,7 @@ Materials
 | ReSpeaker Core v2 |  Grove - Digital Light Sensor |
 |--------------|-------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Respeaker_V2/img/ReSpeaker_V2_back_little.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Respeaker_V2/img/Digital_Light_Sensor.jpg)|
-|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|
+|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|
 
 This is an example for the Grove Digital Light Sensor, which is copied from the UPM github repo.
 
@@ -1426,7 +1426,7 @@ Light value is 31
 
 Librespeaker is an audio processing library which can perform noise suppression, direction of arrival calculation, beamforming, hotword searching. It reads the microphoone stream from linux sound server, e.g. PulseAudio.
 
-Here is the list of examples in [Librespeaker Documentation](http://wiki.seeedstudio.com/librespeaker_doc/examples.html). These examples will help you understand how to make different applications with librespeaker. 
+Here is the list of examples in [Librespeaker Documentation](https://wiki.seeedstudio.com/librespeaker_doc/examples.html). These examples will help you understand how to make different applications with librespeaker. 
 
 ### Install librespeaker
  
@@ -1470,7 +1470,7 @@ Cookie: 971b:7ffb
 
 - Step2. C++ Coding
 
-The example [pulse_snowboy_1b_test.cc](http://wiki.seeedstudio.com/librespeaker_doc/pulse_snowboy_1b_test_8cc-example.html) shows how to use the VepAecBeamformingNode node, the Snowboy1bDoaKwsNode node and the ReSpeaker supervisor, to make a simple snowboy KWS demo. This example supports keyword "alexa" and "snowboy", adjustable target gain level and wav log.
+The example [pulse_snowboy_1b_test.cc](https://wiki.seeedstudio.com/librespeaker_doc/pulse_snowboy_1b_test_8cc-example.html) shows how to use the VepAecBeamformingNode node, the Snowboy1bDoaKwsNode node and the ReSpeaker supervisor, to make a simple snowboy KWS demo. This example supports keyword "alexa" and "snowboy", adjustable target gain level and wav log.
 
 
 ```shell
@@ -1531,7 +1531,7 @@ pi        1355  0.0  0.0   4376   568 pts/0    S+   16:48   0:00 grep --color=au
     
 - Step2. C++ Coding
 
-The example [alsa_snips_1b_test.cc](http://wiki.seeedstudio.com/librespeaker_doc/alsa_snips_1b_test_8cc-example.html) shows how to use the AlsaCollectorNode node with VepAecBeamformingNode node and Snips1bDoaKwsNode node.
+The example [alsa_snips_1b_test.cc](https://wiki.seeedstudio.com/librespeaker_doc/alsa_snips_1b_test_8cc-example.html) shows how to use the AlsaCollectorNode node with VepAecBeamformingNode node and Snips1bDoaKwsNode node.
 
 
 ```shell
@@ -1564,7 +1564,7 @@ hotword_count = 3
 
 If you need to test the performance of KWS, ASR, NLP or something else, it is not a good way to test it with your mouth repeatly. It is recommanded to record a testing recording first, and just send the recording to your program to get the result.
 
-[file_1beam_test.cc](http://wiki.seeedstudio.com/librespeaker_doc/file_1beam_test_8cc-example.html) shows how to read a 8-channels 16K 16-bit wav file, send the recording stream to VepAecBeamformingNode node and detect hotword from the output beam. This example supports keyword "alexa", "snowboy" and "heysnips", adjustable target gain level and wav log.
+[file_1beam_test.cc](https://wiki.seeedstudio.com/librespeaker_doc/file_1beam_test_8cc-example.html) shows how to read a 8-channels 16K 16-bit wav file, send the recording stream to VepAecBeamformingNode node and detect hotword from the output beam. This example supports keyword "alexa", "snowboy" and "heysnips", adjustable target gain level and wav log.
 
 
 ```shell
@@ -1601,7 +1601,7 @@ hotword_count = 3
 
 AloopOutputNode is designed to redirect the processed audio stream into a specific Alsa device(Loopback PCM). In this way, some third-party voice assistants can get  real-time processed audio stream from a PCM device, which provides a convenient way to build your application.
 
-[alsa_aloop_test.cc](http://wiki.seeedstudio.com/librespeaker_doc/alsa_aloop_test_8cc-example.html) shows how to achieve it. To run this example, you have to run 'sudo modprobe snd-aloop' first. And make sure "pulseaudio" doesn't start, then, after runing this example, you can open another terminal and use `arecord -Dhw:Loopback,1,0 -c 1 -r 16000 -f S16_LE loop_test.wav` to arecord the processed audio stream. Further more, you can setup a third party voice assistant to capture voice from "hw:Loopback,1,0", to run the assistant directly. Check [respeaker::AloopOutputNode Class Reference](http://wiki.seeedstudio.com/librespeaker_doc/classrespeaker_1_1AloopOutputNode.html) for more details of this node.
+[alsa_aloop_test.cc](https://wiki.seeedstudio.com/librespeaker_doc/alsa_aloop_test_8cc-example.html) shows how to achieve it. To run this example, you have to run 'sudo modprobe snd-aloop' first. And make sure "pulseaudio" doesn't start, then, after runing this example, you can open another terminal and use `arecord -Dhw:Loopback,1,0 -c 1 -r 16000 -f S16_LE loop_test.wav` to arecord the processed audio stream. Further more, you can setup a third party voice assistant to capture voice from "hw:Loopback,1,0", to run the assistant directly. Check [respeaker::AloopOutputNode Class Reference](https://wiki.seeedstudio.com/librespeaker_doc/classrespeaker_1_1AloopOutputNode.html) for more details of this node.
 
 ```shell
 cd ~
@@ -1771,7 +1771,7 @@ And the user name of ReSpeaker Core v2.0 is **respeaker**, the password is **res
 
 ![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/AP2.png)
 
-- **Step 3.** When you get into the Serial Console， you can [setup the WiFi](http://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#a-wi-fi-setting-up)
+- **Step 3.** When you get into the Serial Console， you can [setup the WiFi](https://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#a-wi-fi-setting-up)
 
 **Q5: How to adjust the volume?**
 
@@ -1912,5 +1912,5 @@ The basic function of the reception service is to greet visitors, make them feel
 <iframe width="800" height="450" src="https://www.youtube.com/embed/-nTOa3LLpVo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -49,7 +49,7 @@ When you need to add a rotary knob to your project, for example a volume knob fo
 ## Getting Started
 
 !!!Note
-    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
 ### Play With Arduino
 
@@ -60,7 +60,7 @@ When you need to add a rotary knob to your project, for example a volume knob fo
 | Seeeduino V4.2 | Base Shield|  Grove - Circular LED | Grove - Encoder|
 |--------------|-------------|-----------------|----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Encoder/img/Grove%20Circular%20LED._Sjpg.jpg)|![](https://files.seeedstudio.com/wiki/Grove-Encoder/img/Grove%20Encoder.jpg)|
-|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Circular-LED-p-1353.html)|[Get One Now](https://www.seeedstudio.com/Grove-Encoder-p-1352.html)|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Circular-LED-p-1353.html)|[Get One Now](https://www.seeedstudio.com/Grove-Encoder-p-1352.html)|
 
 - **Step 2.** Connect Grove-Encoder to port D2 of Grove-Base Shield.
 - **Step 3.** Connect Grove-Circular LED to port D5 of Grove-Base Shield.
@@ -93,8 +93,8 @@ When you need to add a rotary knob to your project, for example a volume knob fo
 #### Software
 
 - **Step 1.** Download the  [Encoder Library](https://files.seeedstudio.com/wiki/Grove-Encoder/res/Encoder.zip), [CircularLED Library](https://files.seeedstudio.com/wiki/Grove-Encoder/res/CircularLED.zip), [TimerOne Library](https://files.seeedstudio.com/wiki/Grove-Encoder/res/TimerOne.zip) from Github.
-- **Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
-- **Step 3.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- **Step 3.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 ```c++
 #include <CircularLED.h>
@@ -165,9 +165,9 @@ void SenttocircularBar(int index)
 - **[Library]** [TimeOne Library](https://files.seeedstudio.com/wiki/Grove-Encoder/res/TimerOne.zip)
 - **[Library]** [Encoder Library](https://files.seeedstudio.com/wiki/Grove-Encoder/res/Encoder.zip)
 - **[Library]** [CircularLED Library](https://files.seeedstudio.com/wiki/Grove-Encoder/res/CircularLED.zip)
-- **[Demo]** [Demo in Arduino forum](http://www.arduino.cc/playground/Main/RotaryEncoders)
+- **[Demo]** [Demo in Arduino forum](https://arduino.cc/playground/Main/RotaryEncoders)
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

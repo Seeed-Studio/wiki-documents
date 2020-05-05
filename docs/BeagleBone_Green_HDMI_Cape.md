@@ -4,7 +4,7 @@ category: BeagleBone®
 bzurl: https://seeedstudio.com/SeeedStudio-BeagleBone-Green-HDMI-Cape-p-2570.html
 oldwikiname: BeagleBone_Green_HDMI_Cape
 prodimagename: BeagleBone_Green_HDMI_Cape.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/103030034 1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/103030034 1.jpg
 surveyurl: https://www.research.net/r/BeagleBone_Green_HDMI_Cape
 tags: plat_bbg
 sku: 103030034
@@ -14,7 +14,7 @@ sku: 103030034
 
 **BeagleBone® Green HDMI Cape** is a general integrated HDMI connector for expanding your BeagleBone® to a rich variety of peripherals such as computer monitor, video projector, digital television, or digital audio device. This board features a standard HDMI receptacle that can be connected to a monitor with a standard HDMI-to-HDMI cable. All HD signals are supported, and the output resolution is 1280×720. It also can be used to transmit audio information. This product will make your applications based on BeagleBone® board more versatile for different circumstances.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/BeagleBone-Green-HDMI-Cape-p-2570.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/depot/BeagleBone-Green-HDMI-Cape-p-2570.html)
 
 Features
 --------
@@ -155,7 +155,7 @@ Resources
 - [Schematic files](https://files.seeedstudio.com/wiki/BeagleBone_Green_HDMI_Cape/res/Schematic_Files.zip)
 - [HDMI Cape Beaglebone Image](https://drive.google.com/open?id=15wXOtG4pZMifNoldoSvdOX9sBrev733L)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/BeagleBone_Green_HDMI_Cape -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/BeagleBone_Green_HDMI_Cape -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

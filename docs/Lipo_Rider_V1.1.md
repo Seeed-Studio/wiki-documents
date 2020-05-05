@@ -18,7 +18,7 @@ The LipoRider is extremely affordable and easy to use. No programming is require
 
 In case solar power is not sufficient, the microUSB port allows you to charge your lithium battery through USB. It can also be used to program your kit without detaching the Lipo Rider board.
 
-The Lipo Rider can be purchased as a separate board or as a kit (Lipo Rider + Lithium Battery + Solar Panel) from [Seeed Studio](http://www.seeedstudio.com/depot/).
+The Lipo Rider can be purchased as a separate board or as a kit (Lipo Rider + Lithium Battery + Solar Panel) from [Seeed Studio](https://www.seeedstudio.com/depot/).
 
 Model:POW115D2P
 
@@ -184,7 +184,7 @@ Lipo Rider powering an Arduino Duemilanove (not strict an outdoor sensor in this
 
 ##   Support   ##
 
-If you have questions or other better design ideas, you can go to our [forum](http://www.seeedstudio.com/forum) or **wish** to discuss.
+If you have questions or other better design ideas, you can go to our [forum](https://www.seeedstudio.com/forum) or **wish** to discuss.
 
 ##   Version Tracker   ##
 
@@ -208,7 +208,7 @@ If you have questions or other better design ideas, you can go to our [forum](ht
 
 ##   How to buy   ##
 
-Click [here](http://www.seeedstudio.com/depot/lipo-rider-p-710.html?cPath=104_107) to buy [Lipo Rider](https://seeeddoc.github.io/Lipo_Rider/)  ,or other **products** you like.
+Click [here](https://www.seeedstudio.com/depot/lipo-rider-p-710.html?cPath=104_107) to buy [Lipo Rider](https://seeeddoc.github.io/Lipo_Rider/)  ,or other **products** you like.
 
 ##   See Also   ##
 
@@ -219,4 +219,4 @@ Click [here](http://www.seeedstudio.com/depot/lipo-rider-p-710.html?cPath=104_10
 This documentation is licensed under the Creative Commons [Attribution-ShareAlike License 3.0](http://creativecommons.org/licenses/by-sa/3.0/) Source code and libraries are licensed under [GPL/LGPL](http://www.gnu.org/licenses/gpl.html), see source code files for details.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

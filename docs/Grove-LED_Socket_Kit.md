@@ -56,7 +56,7 @@ Here we show how to use Arduino to control the state of the LED.
 
 ![](https://files.seeedstudio.com/wiki/Grove-LED_Socket_Kit/img/Grove-LED.jpg)
 
-3.Copy the demo code to your sketch, then upload to Arduino or Seeeduino board. Please click [here](http://www.seeedstudio.com/wiki/Upload_Code) if you do not know how to upload.
+3.Copy the demo code to your sketch, then upload to Arduino or Seeeduino board. Please click [here](https://www.seeedstudio.com/wiki/Upload_Code) if you do not know how to upload.
 
 You will see the LED  blink every second.
 ```
@@ -143,4 +143,4 @@ sudo python grove_led_blink.py
 *   [Grove-LED Socket Kit](https://files.seeedstudio.com/wiki/Grove-LED_Socket_Kit/res/Grove-LED_Socket_Eagle_File.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -115,7 +115,7 @@ It can drive an LED strip 1 to 2 meters long with 9 V, while 1 to 5 meters long 
 
 ![](https://files.seeedstudio.com/wiki/Grove-LED_Strip_Driver/img/LED_Strip_Driver_hardware_install_Step2.jpg)
 
-2.Connect the LED strip to the 4 pin terminal of Grove - LED Strip Driver. Make sure the wire marked **"+12v"** of the LED strip goes into the seat marked **"+"** of the terminal, and **"B"** into **"B"**,**"R"** into **"R"** and **"G"** into **"G"**.Most of the LED strips we are selling have 4 wires as the picture above except [White LED Flexi-Strip - 60 LED - 1m](http://www.seeedstudio.com/depot/white-led-flexistrip-60-led1m-p-1122.html?cPath=207). If this is the kind you are going to use, the connection steps can be a little different. Still plug the wire marked **"+12V"** into the seat marked **"+"**, but the other wire can go into whichever seat of **"B"**, **"R"** and **"G"**. And run the demo code named **"DemoForWhiteLEDStrip"** instead in the following software steps.
+2.Connect the LED strip to the 4 pin terminal of Grove - LED Strip Driver. Make sure the wire marked **"+12v"** of the LED strip goes into the seat marked **"+"** of the terminal, and **"B"** into **"B"**,**"R"** into **"R"** and **"G"** into **"G"**.Most of the LED strips we are selling have 4 wires as the picture above except [White LED Flexi-Strip - 60 LED - 1m](https://www.seeedstudio.com/depot/white-led-flexistrip-60-led1m-p-1122.html?cPath=207). If this is the kind you are going to use, the connection steps can be a little different. Still plug the wire marked **"+12V"** into the seat marked **"+"**, but the other wire can go into whichever seat of **"B"**, **"R"** and **"G"**. And run the demo code named **"DemoForWhiteLEDStrip"** instead in the following software steps.
 
 ![](https://files.seeedstudio.com/wiki/Grove-LED_Strip_Driver/img/LED_Strip_Driver_hardware_install_Step3.jpg)
 
@@ -163,4 +163,4 @@ It can drive an LED strip 1 to 2 meters long with 9 V, while 1 to 5 meters long 
 *   [Suli Library](https://github.com/Seeed-Studio/LED_Strip_Suli)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -37,7 +37,7 @@ Here is some funny project for your reference.
 |Car Controlled by Track Ball|FM Receiver|Make a Wooden Gun|
 |-------|-------|-------|
 |![](https://files.seeedstudio.com/wiki/Seeeduino_Lotus/img/example_1.png)|![](https://files.seeedstudio.com/wiki/Seeeduino_Lotus/img/Fm%20demo.jpg)|![](https://files.seeedstudio.com/wiki/Seeeduino_Lotus/img/gun.jpg)|
-|[Make it Now](https://community.seeedstudio.com/A-Car-Controlled-by-Track-Ball-p-1132.html)|[Make it Now](/FM_Receiver/)|[Make it Now](http://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)|
+|[Make it Now](https://community.seeedstudio.com/A-Car-Controlled-by-Track-Ball-p-1132.html)|[Make it Now](/FM_Receiver/)|[Make it Now](https://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)|
 
 
 ## Feature
@@ -102,7 +102,7 @@ First of all, you need to:
 
 * **Get a Micro-USB cable**
 You need a Micro-USB cable first; the data cable of an Android Phone will do fine.
-If you can't find one, you can buy one [here](http://www.seeedstudio.com/depot/Micro-USB-Cable-48cm-p-1475.html?cPath=98_100).
+If you can't find one, you can buy one [here](https://www.seeedstudio.com/depot/Micro-USB-Cable-48cm-p-1475.html?cPath=98_100).
 
 * **Connect the board**
 Connect the Arduino board to your computer using the USB cable. The green power LED (labelled **PWR**) should go on.
@@ -148,7 +148,7 @@ Open the LED blink example sketch: **File > Examples >01.Basics > Blink**.
 
 **Add Seeeduino Lite to your Arduino IDE**
 
-There is no *Seeeduino Lite* option in the boards of your Arduino IDE, click on [How to Add Seeed boards to Arduino IDE](http://wiki.seeed.cc/Seeed_Arduino_Boards/) for the instruction.
+There is no *Seeeduino Lite* option in the boards of your Arduino IDE, click on [How to Add Seeed boards to Arduino IDE](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/) for the instruction.
 
 **Select your board**
 You'll need to select the entry in the **Tools > Board** menu that corresponds to your Arduino.
@@ -224,7 +224,7 @@ Please check,
 
 **Q3. Where can I find technical support if I have some other issue.**
 
-You can post a question to [forum](http://forum.seeedstudio.com/) .
+You can post a question to [forum](https://forum.seeedstudio.com/) .
 
 
 ## Project
@@ -238,4 +238,4 @@ You can post a question to [forum](http://forum.seeedstudio.com/) .
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/100385/the-little-universe-a-gesture-controlled-floor-lamp-323503/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

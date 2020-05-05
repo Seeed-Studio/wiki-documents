@@ -26,7 +26,7 @@ sku: 103100022
 * For 3.5 mm phone connector (audio jack), it supports the protocol OMTP and CTIA. You can use either protocol by toggling a switch. About how to switch protocol, we will please sroll down the page to  read **How to switch phone connector protocol between OMTP and CTIA**
 
 
-[![enter image description here](https://files.seeedstudio.com/wiki/Breakout_for_LinkIt_Smart_7688_v2_0/image/300px-Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Breakout-for-LinkIt-Smart-7688-v20-p-2641.html)
+[![enter image description here](https://files.seeedstudio.com/wiki/Breakout_for_LinkIt_Smart_7688_v2_0/image/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/depot/Breakout-for-LinkIt-Smart-7688-v20-p-2641.html)
 
 ## Features
 ---
@@ -69,7 +69,7 @@ sku: 103100022
 
 ### About Grove interface
 
-If you ever used Seeed's [Grove](http://www.seeedstudio.com/wiki/Grove_System) products, you will fell in love with this kind of modules. With this kind of ports, you can say goodbye to  jumper wire and soldering work, and you can make more powerful applications with those functional modules.
+If you ever used Seeed's [Grove](https://www.seeedstudio.com/wiki/Grove_System) products, you will fell in love with this kind of modules. With this kind of ports, you can say goodbye to  jumper wire and soldering work, and you can make more powerful applications with those functional modules.
 
 ### How to switch phone connector protocol between OMTP and CTIA
 
@@ -102,7 +102,7 @@ For below 2, I think you surely have them.
 - Stereo Speaker(with 3.5 mm audio cable) × 1
 - USB flash disk (with audio file of MP3 format inside) × 1
 
-**Step1:** Refer [here](http://www.seeedstudio.com/wiki/LinkIt_Smart_7688#Getting_Started) to connect your LinkIt Smart 7688 to Internet.
+**Step1:** Refer [here](https://www.seeedstudio.com/wiki/LinkIt_Smart_7688#Getting_Started) to connect your LinkIt Smart 7688 to Internet.
 
 
 !!!note
@@ -137,9 +137,9 @@ For below 2, I think you surely have them.
 ---
 
 * [Schematic files](https://files.seeedstudio.com/wiki/Breakout_for_LinkIt_Smart_7688_v2_0/resource/Breakout_for_LinkIt_Smart_7688_v2.0_schematic_files.zip)
-* [LinkIt smart 7688](http://www.seeedstudio.com/wiki/LinkIt_Smart_7688)
+* [LinkIt smart 7688](https://www.seeedstudio.com/wiki/LinkIt_Smart_7688)
 * [OpenWrt](http://wiki.openwrt.org/doc/howto/user.beginner)
-* [Link to buy a LinkIt Smart 7688](http://www.seeedstudio.com/depot/LinkIt-Smart-7688-p-2573.html?cPath=122_142)
+* [Link to buy a LinkIt Smart 7688](https://www.seeedstudio.com/depot/LinkIt-Smart-7688-p-2573.html?cPath=122_142)
 
 ## Project
 
@@ -148,4 +148,4 @@ For below 2, I think you surely have them.
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/sainath-komakula/smart-vendy-cd197e/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

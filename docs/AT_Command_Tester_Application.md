@@ -6,9 +6,9 @@ prodimagename:
 surveyurl: https://www.research.net/r/AT_Command_Tester_Application
 ---
 
-[AT Command Tester](http://m2msupport.net/m2msupport/module-tester/) is an online tool for testing AT commands and other module functionalities such as [data call](http://m2msupport.net/m2msupport/data-call-at-commands-to-set-up-gprsedgeumtslte-data-call/), [voice call](http://m2msupport.net/m2msupport/voice-call-at-commands-to-set-up-voice-call/),[HTTP](http://m2msupport.net/m2msupport/at-command-for-http-functions-for-remote-server-data-access/), [network registration](http://m2msupport.net/m2msupport/network-registration/), [SMS](http://m2msupport.net/m2msupport/sms-at-commands/), [Phonebook](http://m2msupport.net/m2msupport/sim-phonebook-at-commands/), [signal quality](http://m2msupport.net/m2msupport/signal-quality/), [SIM interface](http://m2msupport.net/m2msupport/sim-at-commands-for-sim-presense-and-status/), [device info](http://m2msupport.net/m2msupport/at-commands-to-get-device-information/) etc.
+[AT Command Tester](https://m2msupport.net/m2msupport/module-tester/) is an online tool for testing AT commands and other module functionalities such as [data call](https://m2msupport.net/m2msupport/data-call-at-commands-to-set-up-gprsedgeumtslte-data-call/), [voice call](https://m2msupport.net/m2msupport/voice-call-at-commands-to-set-up-voice-call/),[HTTP](https://m2msupport.net/m2msupport/at-command-for-http-functions-for-remote-server-data-access/), [network registration](https://m2msupport.net/m2msupport/network-registration/), [SMS](https://m2msupport.net/m2msupport/sms-at-commands/), [Phonebook](https://m2msupport.net/m2msupport/sim-phonebook-at-commands/), [signal quality](https://m2msupport.net/m2msupport/signal-quality/), [SIM interface](https://m2msupport.net/m2msupport/sim-at-commands-for-sim-presense-and-status/), [device info](https://m2msupport.net/m2msupport/at-commands-to-get-device-information/) etc.
 
-AT Command Tester can be used with [2G Modules](http://m2msupport.net/m2msupport/category/devices/gprs-modem/) (GPRS/EDGE/1x) or [3G Modules](http://m2msupport.net/m2msupport/category/devices/3g-modules/) (HSDPA/HSPA/EVDO) or [4G modules](http://m2msupport.net/m2msupport/search-page/?Max!Download!Speed=100%20Mbps) (LTE)
+AT Command Tester can be used with [2G Modules](https://m2msupport.net/m2msupport/category/devices/gprs-modem/) (GPRS/EDGE/1x) or [3G Modules](https://m2msupport.net/m2msupport/category/devices/3g-modules/) (HSDPA/HSPA/EVDO) or [4G modules](https://m2msupport.net/m2msupport/search-page/?Max!Download!Speed=100%20Mbps) (LTE)
 
 First select 'Find Ports' to search for avaialble ports. Then select the modem port and press 'Connect'. Once connected to the module, you can send AT commands from the 'Command Mode' tab
 
@@ -22,35 +22,35 @@ First select 'Find Ports' to search for avaialble ports. Then select the modem p
 ![](https://files.seeedstudio.com/wiki/AT_Command_Tester_Application/img/Diagnistics_mode.PNG)
  The diagnostics commands and the results are shown an below, AT+CGMI SIMCOM_Ltd OK
 Manufacturer : SIMCOM_Ltd
-[AT+CGMM](http://m2msupport.net/m2msupport/atcgmm-request-model-identificaiton/)
+[AT+CGMM](https://m2msupport.net/m2msupport/atcgmm-request-model-identificaiton/)
 
 SIMCOM_SIM900
 
 OK
 Model Number : SIMCOM_SIM900
 
-[AT+CGMR](http://m2msupport.net/m2msupport/atcgmr-request-revision-identification/)
+[AT+CGMR](https://m2msupport.net/m2msupport/atcgmr-request-revision-identification/)
 
 Revision:1137B03SIM900M64_ST_MMS
 
 OK
 Revision : Revision:1137B03SIM900M64_ST_MMS
 
-[AT+CSQ](http://m2msupport.net/m2msupport/atcsq-signal-quality/)
+[AT+CSQ](https://m2msupport.net/m2msupport/atcsq-signal-quality/)
 
 +CSQ: 8,0
 
 OK
 Signal level is -97 dbm. Signal condition is marginal.The signal strength range is -53 dbm (Excellent) to -109 dbm (Marginal).
 
-[AT+CREG?](http://m2msupport.net/m2msupport/atcreg-network-registration/)
+[AT+CREG?](https://m2msupport.net/m2msupport/atcreg-network-registration/)
 
 +CREG: 0,1
 
 OK
 The device is registered in home network.
 
-[AT+CGACT?](http://m2msupport.net/m2msupport/atcgact-pdp-context-activate-or-deactivate/)
+[AT+CGACT?](https://m2msupport.net/m2msupport/atcgact-pdp-context-activate-or-deactivate/)
 
 +CGACT: 1,0
 +CGACT: 2,0
@@ -59,14 +59,14 @@ The device is registered in home network.
 OK
 Device is NOT connected.
 
-[AT+COPS?](http://m2msupport.net/m2msupport/atcops-plmn-selection/)
+[AT+COPS?](https://m2msupport.net/m2msupport/atcops-plmn-selection/)
 
 +COPS: 0,0,"T-Mobile"
 
 OK
 Device is currently on "T-Mobile" network.
 
-[AT+CPIN?](http://m2msupport.net/m2msupport/atcpin-enter-pin/)
+[AT+CPIN?](https://m2msupport.net/m2msupport/atcpin-enter-pin/)
 
 +CPIN: READY OK
 
@@ -78,7 +78,7 @@ SIM is ready.
  The AT command sequence for outgoing call is shown below, Checking registration status... AT+CREG? +CREG: 0,1 OK
 The device is registered in home network. Dialing number 858xxxxxxx
 
-[ATD](http://m2msupport.net/m2msupport/atd-dial-voice-call/)858XXXXXXX;
+[ATD](https://m2msupport.net/m2msupport/atd-dial-voice-call/)858XXXXXXX;
 
 OK
 Voice call successfull Hanging up the call..
@@ -88,7 +88,7 @@ ATH
 OK
 Call sucessfully dis-connected..
 
-[AT+CNUM](http://m2msupport.net/m2msupport/atcnum-subscriber-number/)
+[AT+CNUM](https://m2msupport.net/m2msupport/atcnum-subscriber-number/)
 
 +CNUM: "","1858XXXXXXX",129,7,4 OK
 
@@ -99,7 +99,7 @@ To setup GPRS call with the SIM900 modem, select the 'Data Call' tab. Here you c
 ![](https://files.seeedstudio.com/wiki/AT_Command_Tester_Application/img/Datacall.PNG)
  Here is the sequence of AT commands to set up data call
 
-[AT+CGDCONT?](http://m2msupport.net/m2msupport/atcgdcont-define-pdp-context/)
+[AT+CGDCONT?](https://m2msupport.net/m2msupport/atcgdcont-define-pdp-context/)
 
 +CGDCONT: 1,"IP","epc.tmobile.com","0.0.0.0",0,0
 +CGDCONT: 2,"IP","test5","0.0.0.0",0,0
@@ -108,7 +108,7 @@ To setup GPRS call with the SIM900 modem, select the 'Data Call' tab. Here you c
 OK
 Checking registration status...
 
-[AT+CREG?](http://m2msupport.net/m2msupport/atcreg-network-registration/)
+[AT+CREG?](https://m2msupport.net/m2msupport/atcreg-network-registration/)
 
 +CREG: 0,1
 
@@ -117,14 +117,14 @@ The device is registered in home network.
 
 Checking if device is already connected...
 
-[AT+CGACT?](http://m2msupport.net/m2msupport/atcgact-pdp-context-activate-or-deactivate/)
+[AT+CGACT?](https://m2msupport.net/m2msupport/atcgact-pdp-context-activate-or-deactivate/)
 
 +CGACT: 1,0
 +CGACT: 2,0
 +CGACT: 3,0
 
 OK
-[AT+CMEE=1](http://m2msupport.net/m2msupport/atcmee-report-mobile-termination-error/)
+[AT+CMEE=1](https://m2msupport.net/m2msupport/atcmee-report-mobile-termination-error/)
 
 OK
 Attaching to network...
@@ -134,7 +134,7 @@ OK
 
 Connecting...
 
-[AT+CGACT=1, 1](http://m2msupport.net/m2msupport/atcgact-pdp-context-activate-or-deactivate/)
+[AT+CGACT=1, 1](https://m2msupport.net/m2msupport/atcgact-pdp-context-activate-or-deactivate/)
 
 OK
 Connect Sucessful
@@ -146,7 +146,7 @@ Connect Sucessful
 
 Checking registration status...
 
-[AT+CREG?](http://m2msupport.net/m2msupport/atcreg-network-registration/)
+[AT+CREG?](https://m2msupport.net/m2msupport/atcreg-network-registration/)
 
 +CREG: 0,1
 
@@ -169,7 +169,7 @@ Here are the commands for Network Selection,
 
 Finding Networks. Please wait..
 
-[AT+COPS=?](http://m2msupport.net/m2msupport/atcops-plmn-selection/)
+[AT+COPS=?](https://m2msupport.net/m2msupport/atcops-plmn-selection/)
 
 +COPS: (2,"T-Mobile","T-Mobile","310260"),(1,"AT&amp;T","AT&amp;T","310410"),,(0,1,4),(0,1,2)
 
@@ -184,7 +184,7 @@ With the 'Phone Book' tab, you can add/delete/read phone book entries stored on 
 
 Getting phonebook entries..
 
-[AT+CPBR=1,99](http://m2msupport.net/m2msupport/atcpbr-read-phonebook-entries/)
+[AT+CPBR=1,99](https://m2msupport.net/m2msupport/atcpbr-read-phonebook-entries/)
 
 +CPBR: 1,"*233",129,"Refill Now"
 
@@ -238,7 +238,7 @@ OK
 
 Checking registration status...
 
-[AT+CREG?](http://m2msupport.net/m2msupport/atcreg-network-registration/)
+[AT+CREG?](https://m2msupport.net/m2msupport/atcreg-network-registration/)
 
 +CREG: 0,1
 
@@ -258,33 +258,33 @@ Bearer 1 is Connected.
 
 Initializing HTTP service...
 
-[AT+HTTPINIT](http://m2msupport.net/m2msupport/athttpinit-initialize-http-service/)
+[AT+HTTPINIT](https://m2msupport.net/m2msupport/athttpinit-initialize-http-service/)
 
 OK
 Error initializing HTTP service.
 
 Setting up HTTP parameters..
 
-[AT+HTTPPARA](http://m2msupport.net/m2msupport/athttppara-set-paramaters-for-http-connection/)="URL","[http://www.m2msupport.net/m2msupport/http_get_test.php](http://www.m2msupport.net/m2msupport/http_get_test.php)"
+[AT+HTTPPARA](https://m2msupport.net/m2msupport/athttppara-set-paramaters-for-http-connection/)="URL","[http://www.m2msupport.net/m2msupport/http_get_test.php](http://www.m2msupport.net/m2msupport/http_get_test.php)"
 
 OK
-[AT+HTTPPARA](http://m2msupport.net/m2msupport/athttppara-set-paramaters-for-http-connection/)="CID",1[[|]]
+[AT+HTTPPARA](https://m2msupport.net/m2msupport/athttppara-set-paramaters-for-http-connection/)="CID",1[[|]]
 
 OK
-[AT+HTTPACTION](http://m2msupport.net/m2msupport/athttpaction-perform-getposthead-http-action/)=0
+[AT+HTTPACTION](https://m2msupport.net/m2msupport/athttpaction-perform-getposthead-http-action/)=0
 
 OK
 
 HTTP GET is sucessful
 
-[AT+HTTPREAD](http://m2msupport.net/m2msupport/athttpread-get-response-from-http-server/)
+[AT+HTTPREAD](https://m2msupport.net/m2msupport/athttpread-get-response-from-http-server/)
 
 +HTTPREAD:58
 Sucessful HTTP GET test. Data received from m2msupport.net
 OK
 Terminating HTTP session..
 
-[AT+HTTPTERM](http://m2msupport.net/m2msupport/athttpterm-terminate-the-http-session/)
+[AT+HTTPTERM](https://m2msupport.net/m2msupport/athttpterm-terminate-the-http-session/)
 
 OK
 
@@ -316,33 +316,33 @@ Bearer 1 is Connected.
 
 Setting up FTP parameters..
 
-[AT+FTPCID](http://m2msupport.net/m2msupport/atftpcid-set-ftp-bearer-profile-identifier/)=1
+[AT+FTPCID](https://m2msupport.net/m2msupport/atftpcid-set-ftp-bearer-profile-identifier/)=1
 
 OK
 
-[AT+FTPSERV](http://m2msupport.net/m2msupport/atftpserv-set-up-ftp-server-address/)="ftp.m2msupport.net"
+[AT+FTPSERV](https://m2msupport.net/m2msupport/atftpserv-set-up-ftp-server-address/)="ftp.m2msupport.net"
 
 OK
-[AT+FTPUN](http://m2msupport.net/m2msupport/atftpun-set-up-ftp-user-name/)="xxxxxx"
+[AT+FTPUN](https://m2msupport.net/m2msupport/atftpun-set-up-ftp-user-name/)="xxxxxx"
 
 OK
-[AT+FTPPW](http://m2msupport.net/m2msupport/atftppw-sets-up-ftp-password/)="xxxxxxx"
+[AT+FTPPW](https://m2msupport.net/m2msupport/atftppw-sets-up-ftp-password/)="xxxxxxx"
 
 OK
-[AT+FTPGETNAME](http://m2msupport.net/m2msupport/atftpgetname-set-download-file-name/)="ftptest.txt"
+[AT+FTPGETNAME](https://m2msupport.net/m2msupport/atftpgetname-set-download-file-name/)="ftptest.txt"
 
 OK
-[AT+FTPGETPATH](http://m2msupport.net/m2msupport/atftpgetpath-set-the-ftp-download-file-path/)="/www/m2msupport/"
+[AT+FTPGETPATH](https://m2msupport.net/m2msupport/atftpgetpath-set-the-ftp-download-file-path/)="/www/m2msupport/"
 
 OK
-[AT+FTPGET](http://m2msupport.net/m2msupport/atftpget-set-download-file/)=1
+[AT+FTPGET](https://m2msupport.net/m2msupport/atftpget-set-download-file/)=1
 
 OK
 
 +FTPGET:1,1
 FTP session sucessfully started
 
-[AT+FTPGET](http://m2msupport.net/m2msupport/atftpget-set-download-file/)=2,1024
+[AT+FTPGET](https://m2msupport.net/m2msupport/atftpget-set-download-file/)=2,1024
 
 +FTPGET:2,784
 2-11-16 10:53:34.769 -----------------------------------------------
@@ -360,7 +360,7 @@ Command-line arguments: -os win32 -ws win32 -arch x86 -product org.eclipse.epp.p
 !MESSAGE Internal Error
 !STACK 1
 OK
-[AT+FTPGET](http://m2msupport.net/m2msupport/atftpget-set-download-file/)=2,1024
+[AT+FTPGET](https://m2msupport.net/m2msupport/atftpget-set-download-file/)=2,1024
 
 +FTPGET:2,0
 
@@ -371,4 +371,4 @@ FTP data transfer is complete
 FTP session end
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

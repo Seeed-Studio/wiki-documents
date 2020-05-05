@@ -24,9 +24,9 @@ This example is modified from the official demo of Arduino team together with Te
 
 ## Arduino Libraries Needed
 
-- Install the on-board accelerator library `Seeed_Arduino_LIS3DHTR`, Please visit [Wio Terminal IMU](http://wiki.seeedstudio.com/Wio-Terminal-IMU-Overview/) for more information.
+- Install the on-board accelerator library `Seeed_Arduino_LIS3DHTR`, Please visit [Wio Terminal IMU](https://wiki.seeedstudio.com/Wio-Terminal-IMU-Overview/) for more information.
 
-- Install the **Arduino TensorFlow Lite** Library, please visit [Wio Terminal TensorFlow Lite](http://wiki.seeedstudio.com/Wio-Terminal-TensonFlow/) for more information.
+- Install the **Arduino TensorFlow Lite** Library, please visit [Wio Terminal TensorFlow Lite](https://wiki.seeedstudio.com/Wio-Terminal-TensonFlow/) for more information.
 
 ## Training IMU data from the Wio Terminal
 

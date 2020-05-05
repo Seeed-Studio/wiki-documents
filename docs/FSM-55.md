@@ -75,9 +75,9 @@ Another reason for this board was I (gniibe) found that OpenOCD's SWD support is
 
 ##   Products available at Seeed Bazaar
 
-*   [FSM-55 LED Matrix Display Kit](http://www.seeedstudio.com/depot/FSM55-LED-Matrix-Display-p-2121.html) (October 2014)
+*   [FSM-55 LED Matrix Display Kit](https://www.seeedstudio.com/depot/FSM55-LED-Matrix-Display-p-2121.html) (October 2014)
 
-*   <s>[SWD Programmer (ST-Link/V2 clone)](http://www.seeedstudio.com/depot/STLink-V2-for-STM8-STM32-interface-programmer-p-2297.html)</s>(March 2015)
+*   <s>[SWD Programmer (ST-Link/V2 clone)](https://www.seeedstudio.com/depot/STLink-V2-for-STM8-STM32-interface-programmer-p-2297.html)</s>(March 2015)
 
 *   **NOTE**: I'm not sure if ST-Link/V2 clone works for FSM-55.  FSM-55 requires NRST pin connected to the programmer.  If clone's pin of #9 works as NRST, it will be OK.  But it seems that the NRST pin and SWIM_RST is different in the original ST-Link/V2.
 
@@ -126,4 +126,4 @@ Another reason for this board was I (gniibe) found that OpenOCD's SWD support is
 *   GCC ARM Embedded: [https://launchpad.net/gcc-arm-embedded](https://launchpad.net/gcc-arm-embedded)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

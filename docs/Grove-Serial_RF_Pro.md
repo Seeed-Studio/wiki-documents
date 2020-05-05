@@ -188,7 +188,7 @@ Set high for communication (Default is high).
 ---
 Here we show two RF Pro Grove units mutually transmitting/receiving data. You need two RF Pro Grove units and two Seeeduino to do the demo.
 
-*   Connect one Grove - Serial RF Pro to UART of [Grove - Base Shield](http://wiki.seeedstudio.com/Base_Shield_V2/) and plug Grove - Base Shield into Seeeduino.
+*   Connect one Grove - Serial RF Pro to UART of [Grove - Base Shield](https://wiki.seeedstudio.com/Base_Shield_V2/) and plug Grove - Base Shield into Seeeduino.
 
 ![](https://files.seeedstudio.com/wiki/Grove-Serial_RF_Pro/img/Rfdemo.jpg)
 
@@ -201,7 +201,7 @@ if the red and green LED keep lighting. Then you can Config &amp; inquiry on the
 
 *   Connect CON pin to LOW/GND to enter configure mode.
 
-*   Send command to modify and query the config of the module. Config &amp; Inquiry instruction description see [Reference](http://wiki.seeedstudio.com/Grove-Serial_RF_Pro/#reference).
+*   Send command to modify and query the config of the module. Config &amp; Inquiry instruction description see [Reference](https://wiki.seeedstudio.com/Grove-Serial_RF_Pro/#reference).
 
 The Config instruction format is as AA+FA+[instruction]+[parameter]. The instruction is 1 byte, the parameter is the HEX data of 0-4 bytes (in big-endian ordering, with the high byte before the low byte).
 
@@ -219,7 +219,7 @@ The Config instruction format is as AA+FA+[instruction]+[parameter]. The instruc
 
 ###  Communication Mode
 
-Upload the below code into Seeeduino, Please click [here](http://wiki.seeedstudio.com/Upload_Code) if you do not know how to upload.
+Upload the below code into Seeeduino, Please click [here](https://wiki.seeedstudio.com/Upload_Code) if you do not know how to upload.
 
 ```
 //send data routine
@@ -465,4 +465,4 @@ Note：
 *   **[Datasheet]** [HopeRF HM-TRP Series 100mW Transceiver modules V1.0 Datasheet](https://files.seeedstudio.com/wiki/Grove-Serial_RF_Pro/res/HM-TRP-RS232_enV1.0_20120604.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

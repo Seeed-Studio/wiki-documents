@@ -9,7 +9,7 @@ sku:  110060026
 ---
 ![](https://files.seeedstudio.com/wiki/Grove-Mixer_Pack_V2/img/U8GUZNb9TVZ14lLRW6ialXEV.jpg)
 
-The [Grove - Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) is a stand-alone, Lego-like electronics kit that consists of 13 select Grove modules from the [ Grove System](/Grove_System "GROVE System") developed by [Seeed Studio](http://www.seeedstudio.com/depot/). These mini-modules can be used as building blocks to create electronic circuits and prototypes quite rapidly without necessarily using a Microcontroller board such as a [Seeeduino](/Seeeduino "Seeeduino") or an [ Arduino](/Arduino "Main Page").
+The [Grove - Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) is a stand-alone, Lego-like electronics kit that consists of 13 select Grove modules from the [ Grove System](/Grove_System "GROVE System") developed by [Seeed Studio](https://www.seeedstudio.com/depot/). These mini-modules can be used as building blocks to create electronic circuits and prototypes quite rapidly without necessarily using a Microcontroller board such as a [Seeeduino](/Seeeduino "Seeeduino") or an [ Arduino](/Arduino "Main Page").
 
 The 13 Grove modules included are a combination of sensor modules, actuators, logic and power modules that are extremely easy to use and fun to work with. Within minutes, you can design new circuits and assemble functional prototypes.
 
@@ -17,7 +17,7 @@ By connecting different input and output modules, a variety of projects can be m
 
 These modules are small and colorful bits of electronics, and so much fun to play with for both children and adults alike.
 
-With the [Grove - Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14), you can easily learn the basic concepts of electronics, and also improve your practical ability to apply these concepts. This is the perfect way to let yourself into the wonderful world of electronics by working on your very own interactive projects.
+With the [Grove - Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14), you can easily learn the basic concepts of electronics, and also improve your practical ability to apply these concepts. This is the perfect way to let yourself into the wonderful world of electronics by working on your very own interactive projects.
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Mixer-Pack-V2-(Electronic-blocks%2Cwithout-Arduino%2Cplug-and-play-system)-p-1867.html)
 
@@ -77,16 +77,16 @@ Its pretty easy to build Grove circuits using the Grove modules in your Mixer Pa
 All circuits are built by combining the following four types of modules:
 
 <dl><dt>1. Power Modules
-</dt><dd> These supply power to the circuit. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) includes 1 Power Module - the [Grove - DC Jack Power](/Grove-DC_Jack_Power "Grove - DC Jack Power"). No matter what you are building, you will always need to use this one.
+</dt><dd> These supply power to the circuit. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) includes 1 Power Module - the [Grove - DC Jack Power](/Grove-DC_Jack_Power "Grove - DC Jack Power"). No matter what you are building, you will always need to use this one.
 
 </dd><dt>2. Input Modules
-</dt><dd> These are typically used to relay sensory inputs into the circuit. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 4 Input Modules - a light sensor, a sound sensor, a slide potentiometer and a momentary switch. Based on the inputs received from these modules from these modules, you can choose to trigger an action using an Output Module.
+</dt><dd> These are typically used to relay sensory inputs into the circuit. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 4 Input Modules - a light sensor, a sound sensor, a slide potentiometer and a momentary switch. Based on the inputs received from these modules from these modules, you can choose to trigger an action using an Output Module.
 
 </dd><dt>3. Output Modules
-</dt><dd> Triggers from the Input Modules can be translated to actions using Output Modules. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 5 Output Modules - an LED light, an LED String light, a sound recorder, a fan motor and a buzzer.
+</dt><dd> Triggers from the Input Modules can be translated to actions using Output Modules. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 5 Output Modules - an LED light, an LED String light, a sound recorder, a fan motor and a buzzer.
 
 </dd><dt>4. Logic Gates Modules
-</dt><dd> These are used in conjunction with Input Modules and can be used to enhance the logic for triggering a specific output. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 3 Logic Gates Modules - one each for AND, OR and NOT gate functions.
+</dt><dd> These are used in conjunction with Input Modules and can be used to enhance the logic for triggering a specific output. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 3 Logic Gates Modules - one each for AND, OR and NOT gate functions.
 </dd></dl>
 
 ### Building your first circuit
@@ -248,7 +248,7 @@ The [Grove - Slide Potentiometer](/Grove-Slide_Potentiometer "Grove - Slide Pote
 
 ![](https://files.seeedstudio.com/wiki/Grove-Mixer_Pack_V2/img/Button1.jpg)
 
-The [Grove - Button](/Grove-Button "Grove - Button") module included in this mixer pack is a newer version of the Grove - Button module from [Seeed Studio](http://www.seeedstudio.com). It contains one independent "momentary on/off" button. “Momentary” means that the button rebounds on its own after it is released. The button outputs a HIGH signal when pressed, and LOW when released. The button signals the SIG Pin of the Grove Interface while NC is not used at all.
+The [Grove - Button](/Grove-Button "Grove - Button") module included in this mixer pack is a newer version of the Grove - Button module from [Seeed Studio](https://www.seeedstudio.com). It contains one independent "momentary on/off" button. “Momentary” means that the button rebounds on its own after it is released. The button outputs a HIGH signal when pressed, and LOW when released. The button signals the SIG Pin of the Grove Interface while NC is not used at all.
 
 ## Sample projects
 
@@ -334,9 +334,9 @@ _Hint:_ This is pretty easy and should not require a hint ;) Save yourself from 
 
 ## Availability
 ---
-Available at the [SeeedStudio Bazaar](http://www.seeedstudio.com/depot/):
+Available at the [SeeedStudio Bazaar](https://www.seeedstudio.com/depot/):
 
-*   [Buy Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14)
+*   [Buy Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14)
 
 
 ## Schematic Online Viewer
@@ -352,4 +352,4 @@ Available at the [SeeedStudio Bazaar](http://www.seeedstudio.com/depot/):
 *   [Grove Mixer Pack V2 Grove - Modules Schematics (Eagle files zip)](https://files.seeedstudio.com/wiki/Grove-Mixer_Pack_V2/res/Mixer_Pack_v2_Eagle.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

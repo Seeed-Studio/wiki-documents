@@ -13,7 +13,7 @@ The acrylic case is used for raspberry pi B+, It’s made of acrylic sheet. manu
 
 ![](https://files.seeedstudio.com/wiki/Raspberry_PI_Bplus_Case/img/IMG_9852.jpg)
 
-[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](http://www.seeedstudio.com/depot/Rasbperry-Pi-Model-B-Case-p-2147.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/depot/Rasbperry-Pi-Model-B-Case-p-2147.html)
 
 
 ##  Feature
@@ -135,4 +135,4 @@ Assembly diagram is as follows:
 </td></tr></table>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

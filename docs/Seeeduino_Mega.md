@@ -30,7 +30,7 @@ Here are some funny projects for your reference.
 |8*8*8 LED Cube|Hexapod Robot|DIY Arduino 3D Printer|
 |-------|-------|--------
 |![](https://files.seeedstudio.com/wiki/Seeeduino_Mega/img/example_1.jpg)|![](https://files.seeedstudio.com/wiki/Seeeduino_Mega/img/example_2.jpg)|![](https://files.seeedstudio.com/wiki/Seeeduino_Mega/img/example_3.jpg)|
-|[Make it Now](http://www.instructables.com/id/Arduino-Mega-8x8x8-RGB-LED-Cube/)|[Make it Now](http://www.instructables.com/id/Arduino-Mega-Hexapod/)|[Make it Now](http://www.instructables.com/id/Arduino-Controlled-CNC-3D-Printer/)|
+|[Make it Now](https://www.instructables.com/id/Arduino-Mega-8x8x8-RGB-LED-Cube/)|[Make it Now](https://www.instructables.com/id/Arduino-Mega-Hexapod/)|[Make it Now](https://www.instructables.com/id/Arduino-Controlled-CNC-3D-Printer/)|
 
 ## Features
 
@@ -103,7 +103,7 @@ First of all, you need to:
 
 * **Get a Micro-USB cable**
 You need a Micro-USB cable first; the data cable of an Android Phone will do fine.
-If you can't find one, you can buy one [here](http://www.seeedstudio.com/depot/Micro-USB-Cable-48cm-p-1475.html?cPath=98_100).
+If you can't find one, you can buy one [here](https://www.seeedstudio.com/depot/Micro-USB-Cable-48cm-p-1475.html?cPath=98_100).
 
 * **Connect the board**
 Connect the Arduino board to your computer using the USB cable. The green power LED (labelled **PWR**) should go on.
@@ -234,4 +234,4 @@ Seeeduino Mega is a powerful microcontroller derived from Arduino Mega. And ther
 * Smaller size
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

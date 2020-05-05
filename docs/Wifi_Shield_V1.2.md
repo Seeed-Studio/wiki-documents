@@ -23,7 +23,7 @@ An on-board antenna allows the shield to cover a wider range and transmit strong
 
 The shield is very well documented with our examples below and its [user manual](https://files.seeedstudio.com/wiki/Wifi_shield_v1.2/res/WiFly-RN-UM.pdf).
 
-[Buy It Here: SKU: WLS06201P](http://www.seeedstudio.com/depot/Wifi-Shield-p-1220.html)
+[Buy It Here: SKU: WLS06201P](https://www.seeedstudio.com/depot/Wifi-Shield-p-1220.html)
 
 ## Specification
 
@@ -1213,7 +1213,7 @@ To learn more about adhoc mode check out the [WiFly RN User Manual](https://file
 
 ## Support
 
-*   [Forum](http://forum.seeedstudio.com/): _Please visit our forum and post your questions here if you have any problem about products._
+*   [Forum](https://forum.seeedstudio.com/): _Please visit our forum and post your questions here if you have any problem about products._
 *   [FAQ about Wifi Shield](http://support.seeedstudio.com/knowledgebase/articles/456737-wifi-shield)： _Click here to see if your questions have been solved._
 
 ## Licensing
@@ -1221,4 +1221,4 @@ To learn more about adhoc mode check out the [WiFly RN User Manual](https://file
 This documentation is licensed under the Creative Commons [Attribution-ShareAlike License 3.0](http://creativecommons.org/licenses/by-sa/3.0/) Source code and libraries are licensed under [GPL/LGPL](http://www.gnu.org/licenses/gpl.html), see source code files for details.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

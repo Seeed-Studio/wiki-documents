@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-3-Axis-Digital-Accelerometer(±400g)-p-1897.html
 oldwikiname: Grove_-_3-Axis_Digital_Accelerometer(±400g)
 prodimagename: Grove_3Axis_Accelerometer400g.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/grove 3Axis Accelerometer400g.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/grove 3Axis Accelerometer400g.jpg
 surveyurl: https://www.research.net/r/Grove-3-Axis_Digital_Accelerometer-400g
 sku: 101020071
 tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit, plat_bbg
@@ -30,7 +30,7 @@ Features
 -   ECOPACK®RoHS and “Green” compliant
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 Application Ideas
 -----------------
@@ -55,7 +55,7 @@ Usage
 
 Here below we show you how to read the raw data from this accelerometer.
 
-1. Plug it onto the I2C port of your [Grove - Base Shield](http://www.seeedstudio.com/depot/grove-base-shield-p-754.html?cPath=132_134).
+1. Plug it onto the I2C port of your [Grove - Base Shield](https://www.seeedstudio.com/depot/grove-base-shield-p-754.html?cPath=132_134).
 ![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-400g/img/Grove-3-Axis_Digital_Accelerometer_connect_BaseBoard.jpg)
 
 2. Download the [Digital Accelerometer(±400g) Library](https://github.com/Seeed-Studio/Grove_3Axis_Digital_Accelerometer_H3LIS331DL) and unpack it into arduino-1.0\\libraries in your Arduino installation folder.
@@ -88,7 +88,7 @@ Resources
 -   [H3LIS331DL Datasheet PDF](http://www.st.com/web/en/resource/technical/document/datasheet/DM00053090.pdf)
  
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_3-Axis_Digital_Accelerometer(±400g) -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_3-Axis_Digital_Accelerometer(±400g) -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

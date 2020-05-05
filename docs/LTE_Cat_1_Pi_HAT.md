@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-Infrared-Temperature-Sensor-p-1058.html
 oldwikiname: Grove_-_Infrared_Temperature_Sensor
 prodimagename: Grove-Infrared_Temperature_Sensor.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/101020062 1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/101020062 1.jpg
 surveyurl: https://www.research.net/r/Grove-Infrared_Temperature_Sensor
 sku: 101020062
 tags: grove_analog, io_3v3, io_5v, plat_duino
@@ -549,4 +549,4 @@ We have this part available in [geppetto](https://geppetto.seeedstudio.com/), ea
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/SeeedStudio/face-recognization-smart-lock-with-lte-pi-hat-abcec9/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

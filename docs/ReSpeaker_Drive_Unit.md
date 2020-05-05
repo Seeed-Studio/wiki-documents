@@ -42,7 +42,7 @@ ReSpeaker Core contains powerful exntension ability, we hopefully it can help yo
 
 To drive the Meow King drive unit, the firmware for ReSpeaker Core should be updated. To know the differences between the original stock firmware and this firmware, please refer to the change log [here](https://onedrive.live.com/?authkey=%21AKD3ZD6g0DE2M9E&cid=5219529519B9B6A1&id=5219529519B9B6A1%21720&parId=5219529519B9B6A1%21721&o=OneUp).
 
-Now let's update the firmware. Firstly, download `ramips-openwrt-v1.0.01-LinkIt7688-squashfs-sysupgrade.bin` from [OneDrive](https://1drv.ms/f/s!AqG2uRmVUhlShUyg92Q-oNAxNjPR). Copy the firmware to SD card and then plug the SD card into the ReSpeaker Core. Follow [the instruction here](http://wiki.seeed.cc/ReSpeaker_Core/#2-connect-to-serial-console) to get the serial console. Please note that, to get the USB serial working we need to restore [the default firmware](https://files.seeedstudio.com/wiki/ReSpeaker_Drive_Unit/res/respeaker_arduino_library/examples/pixels_pattern/pixels_pattern.ino) for the Arduino chip (ATMega32U4) if we have changed it. After we get the USB serial, type the following commands to update the firmware:
+Now let's update the firmware. Firstly, download `ramips-openwrt-v1.0.01-LinkIt7688-squashfs-sysupgrade.bin` from [OneDrive](https://1drv.ms/f/s!AqG2uRmVUhlShUyg92Q-oNAxNjPR). Copy the firmware to SD card and then plug the SD card into the ReSpeaker Core. Follow [the instruction here](https://wiki.seeedstudio.com/ReSpeaker_Core/#2-connect-to-serial-console) to get the serial console. Please note that, to get the USB serial working we need to restore [the default firmware](https://files.seeedstudio.com/wiki/ReSpeaker_Drive_Unit/res/respeaker_arduino_library/examples/pixels_pattern/pixels_pattern.ino) for the Arduino chip (ATMega32U4) if we have changed it. After we get the USB serial, type the following commands to update the firmware:
 
 ```shell
 mount /dev/mmcblk0p1 /mnt
@@ -107,4 +107,4 @@ Now wait a few seconds, find your smart phone and prepare to stream your music o
         An additional tip is that, try to tune the volume up of your player application if you hear no sound after the playing.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

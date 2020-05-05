@@ -113,7 +113,7 @@ As an expansion board, Base Shield v2 has many Grove connectors, making it conve
 |[GET ONE NOW!](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|[GET ONE NOW!](https://www.seeedstudio.com/Grove-Serial-RF-Pro-p-794.html)|[GET ONE NOW!](https://www.seeedstudio.com/Grove-Serial-Bluetooth-v3.0-p-2475.html)|
 
 !!!Tip
-    Click on [Grove System](http://wiki.seeed.cc/Grove_System/) to get more available modules.
+    Click on [Grove System](https://wiki.seeedstudio.com/Grove_System/) to get more available modules.
 
 ##Work with Raspberry Pi
 
@@ -150,17 +150,17 @@ GrovePi+ is a system that brings Grove Modules to the Raspberry Pi. It adds supp
 |USB Webcam|OLED Dispaly|GPS Module|
 |----------------|-----------------|-----------|
 |![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/grove_pi/1.jpg)|![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/grove_pi/2.jpg)|![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/grove_pi/3.jpg)|
-|[GET ONE NOW!](https://www.seeedstudio.com/300K-Pixel-USB-2.0-Mini-Webcam-p-1499.html)|[GET ONE NOW!](http://www.seeedstudio.com/Grove-OLED-Display-1.12%22-p-824.html)|[GET ONE NOW!](http://www.seeedstudio.com/depot/grove-gps-p-959.html)|
+|[GET ONE NOW!](https://www.seeedstudio.com/300K-Pixel-USB-2.0-Mini-Webcam-p-1499.html)|[GET ONE NOW!](https://www.seeedstudio.com/Grove-OLED-Display-1.12%22-p-824.html)|[GET ONE NOW!](https://www.seeedstudio.com/depot/grove-gps-p-959.html)|
 
 !!!Tip
-    Click on [Grove System](http://wiki.seeed.cc/Grove_System/) to get more available modules.
+    Click on [Grove System](https://wiki.seeedstudio.com/Grove_System/) to get more available modules.
 
 ##Work with BeagleBone Board
 
 BeagleBone is also one of the most popular linux single-board computer. Compared with Raspberry, BeagleBone has an advantage on programming Grove module, as its Mraa and UPM library.
 
-###[BeagleBone Green Wireless](http://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-Wireless-p-2650.html)
-SeeedStudio BeagleBone Green Wireless is based on the open-source hardware design of BeagleBone Black, but it has a high-performance flexible WiFi/Bluetooth interface, making it easier to develop remote controlled, such as [BBGW Wi-Fi Car](http://www.instructables.com/id/Super-Quickly-DIY-Web-RC-Car-With-Python-and-Beagl/).
+###[BeagleBone Green Wireless](https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-Wireless-p-2650.html)
+SeeedStudio BeagleBone Green Wireless is based on the open-source hardware design of BeagleBone Black, but it has a high-performance flexible WiFi/Bluetooth interface, making it easier to develop remote controlled, such as [BBGW Wi-Fi Car](https://www.instructables.com/id/Super-Quickly-DIY-Web-RC-Car-With-Python-and-Beagl/).
 
 <div class="text-center">
 <img src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/BBGW_cover.png" width="50%" height="50%">
@@ -187,15 +187,15 @@ Grove Base Cape for BeagleBone v2 is a Grove system expansion board for BeagleBo
 |USB WEBCAM|W2812B LED STRIP|IMU 9DOF|
 |----------------|-----------------|-----------|
 |![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/grove_bb/1.jpg)|![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/grove_bb/2.jpg)|![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/grove_bb/3.JPG)|
-|[GET ONE NOW!](https://www.seeedstudio.com/300K-Pixel-USB-2.0-Mini-Webcam-p-1499.html)|[GET ONE NOW!](https://www.seeedstudio.com/Digital-RGB-LED-Flexi-Strip-60-LED-1-Meter-p-1666.html)|[GET ONE NOW!](http://www.seeedstudio.com/Grove-IMU-9DOF-v2.0-p-2400.html)|
+|[GET ONE NOW!](https://www.seeedstudio.com/300K-Pixel-USB-2.0-Mini-Webcam-p-1499.html)|[GET ONE NOW!](https://www.seeedstudio.com/Digital-RGB-LED-Flexi-Strip-60-LED-1-Meter-p-1666.html)|[GET ONE NOW!](https://www.seeedstudio.com/Grove-IMU-9DOF-v2.0-p-2400.html)|
 
 |OLED DISPLAY|DIGITAL LIGHT SENSOR|GPS MODULE|
 |----------------|-----------------|-----------|
 |![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/grove_bb/4.jpg)|![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/grove_bb/5.jpg)|![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/grove_bb/6.jpg)|
-|[GET ONE NOW!](http://www.seeedstudio.com/Grove-OLED-Display-1.12%22-p-824.html)|[GET ONE NOW!](http://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|[GET ONE NOW!](http://www.seeedstudio.com/depot/grove-gps-p-959.html)|
+|[GET ONE NOW!](https://www.seeedstudio.com/Grove-OLED-Display-1.12%22-p-824.html)|[GET ONE NOW!](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|[GET ONE NOW!](https://www.seeedstudio.com/depot/grove-gps-p-959.html)|
 
 !!!Tip
-    Click on [Grove System](http://wiki.seeed.cc/Grove_System/) to get more available modules.
+    Click on [Grove System](https://wiki.seeedstudio.com/Grove_System/) to get more available modules.
 
 ##Simple Example
 
@@ -369,4 +369,4 @@ void beep() {
 * [Tricycle Bot Assembly Instructions(pdf)](https://files.seeedstudio.com/wiki/Tricycle_Bot/res/Tricycle%20Bot%20Assembly%20Instructions.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

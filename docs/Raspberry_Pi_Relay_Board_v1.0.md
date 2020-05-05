@@ -4,7 +4,7 @@ category: Raspberry Pi
 bzurl: https://seeedstudio.com/Raspberry-Pi-Relay-Board-v1.0-p-2409.html
 oldwikiname: Raspberry_Pi_Relay_Board_v1.0
 prodimagename: Raspberry_Pi_Relay_Board_v1.0.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/103030029 1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/103030029 1.jpg
 surveyurl: https://www.research.net/r/Raspberry_Pi_Relay_Board_v1_0
 sku: 103030029
 ---
@@ -343,7 +343,7 @@ Resources
 -  [C# Test Code](https://github.com/SeeedDocument/Raspberry_Pi_Relay_Board_v1.0/tree/master/res/RPiRelayBoard)
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Raspberry_Pi_Relay_Board_v1.0 -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Raspberry_Pi_Relay_Board_v1.0 -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

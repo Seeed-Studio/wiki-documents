@@ -28,7 +28,7 @@ Grove - Sunlight Sensor include an on-bard Grove connector, which help you to co
 - I2C Interface(7-bit)
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 ## Specification
 ---
@@ -57,15 +57,15 @@ After this section, you can make Grove - Sunlight Sensor run with only few steps
 
 Now we are making a simple demo to get data from Grove - Sunlight Sensor require following modules.
 
-- [Seeeduino v4.2](http://wiki.seeedstudio.com/Seeeduino_v4.2/)
+- [Seeeduino v4.2](https://wiki.seeedstudio.com/Seeeduino_v4.2/)
 
 Seeeduino V4.2 is fully compatible with Arduino.
 
-If this is your first time using Arduino, Please put hand on [here](http://wiki.seeedstudio.com/Getting_Started_with_Seeeduino) to start your Arduino journey.
+If this is your first time using Arduino, Please put hand on [here](https://wiki.seeedstudio.com/Getting_Started_with_Seeeduino) to start your Arduino journey.
 
 **Connecting hardware**
 
-Just connect Grove - Sunlight Sensor into I2C connector of [Seeeduino v4.2](http://wiki.seeedstudio.com/Seeeduino_v4.2/)
+Just connect Grove - Sunlight Sensor into I2C connector of [Seeeduino v4.2](https://wiki.seeedstudio.com/Seeeduino_v4.2/)
 
 
 As shown below:
@@ -73,7 +73,7 @@ As shown below:
 ![](https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/Grove_sunlight_hardware_connect.jpg)
 
 !!!Note
-    If you need a plug more modules on main control board, you may need a [Grove base shield](http://wiki.seeedstudio.com/Base_Shield_V2/) which will make your work easy.
+    If you need a plug more modules on main control board, you may need a [Grove base shield](https://wiki.seeedstudio.com/Base_Shield_V2/) which will make your work easy.
 
 **Download**
 
@@ -113,7 +113,7 @@ void loop() {
 
 Click Tools>Board to choose Arduino UNO and select respective serial port.
 
-Now click Upload(CTRL+U) to burn testing code. Please refer to [**here**](http://wiki.seeedstudio.com/Arduino_Common_Error) for any error prompt .
+Now click Upload(CTRL+U) to burn testing code. Please refer to [**here**](https://wiki.seeedstudio.com/Arduino_Common_Error) for any error prompt .
 
 **Review Results**
 
@@ -208,4 +208,4 @@ UV intensity can nearly double with reflection from snow or other bright surface
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/dhairya-parikh/the-environment-cube-know-the-land-beneath-you-b3c2dd/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

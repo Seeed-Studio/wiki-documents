@@ -246,7 +246,7 @@ void loop (void) {
 !!!Note
 
 
-    If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](http://wiki.seeed.cc/Getting_Started_with_Arduino)
+    If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino)
 
 
 
@@ -324,9 +324,9 @@ Now, simply click the "Upload" button in the environment. Wait a few seconds and
 
 ## The sample application
 
- - [How to use Seeeduino XIAO to log in to your Raspberry PI](http://wiki.seeedstudio.com/How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI)
+ - [How to use Seeeduino XIAO to log in to your Raspberry PI](https://wiki.seeedstudio.com/How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI)
 
-- [SPI Communication Interface](http://wiki.seeedstudio.com/XIAO-SPI-Communication-Interface)
+- [SPI Communication Interface](https://wiki.seeedstudio.com/XIAO-SPI-Communication-Interface)
 
 
 ## Resourses
@@ -335,9 +335,9 @@ Now, simply click the "Upload" button in the environment. Wait a few seconds and
 
 - **[PDF]** [ATSAMD218A-MU datasheet](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/ATSAMD21G18A-MU-Datasheet.pdf)
 
-- **[ZIP]** [Seeeduino KiCAD Libraries](http://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino%20XIAO%20KICAD.zip)
+- **[ZIP]** [Seeeduino KiCAD Libraries](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino%20XIAO%20KICAD.zip)
 
-- **[LBR]** [Seeeduino Eagle Libraries](http://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino%20XIAO.lbr)
+- **[LBR]** [Seeeduino Eagle Libraries](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino%20XIAO.lbr)
 
 
 ## Tech Support

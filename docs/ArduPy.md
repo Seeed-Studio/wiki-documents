@@ -391,7 +391,7 @@ dac2.write(128)         # Writing value to DAC, 128/255*3.3 = 1.65V
 
 ## LCD
 
-For Wio Terminal, the TFT LCD display can be used as followed. For more LCD reference, please visit [**ArduPy LCD API Reference**](http://wiki.seeedstudio.com/ArduPy-LCD/).
+For Wio Terminal, the TFT LCD display can be used as followed. For more LCD reference, please visit [**ArduPy LCD API Reference**](https://wiki.seeedstudio.com/ArduPy-LCD/).
 
 
 - Using the LCD module:
@@ -409,4 +409,4 @@ lcd.drawString("Hello World!", 0, 0)   # Printing Hello World at (0, 0)
 Note: Use **`tab`**  to see the available functions.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

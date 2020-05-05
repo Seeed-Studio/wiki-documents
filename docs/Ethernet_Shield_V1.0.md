@@ -14,7 +14,7 @@ tags:
 
 Ethernet Shield instantly enables internet connectivity for Arduino projects. An on-board Wiz5100 ethernet controller handles up to four TCP and UDP connections, just stack it onto an Arduino to create your own networked devices. Easily check connection status with on board indicator lights. Extend your design further with two extra rows of pin header that connect to shields and prototyping boards.
 
-**Model:** [ARD124B2P](http://www.seeedstudio.com/depot/wiznet-ethernet-shield-w5100-p-518.html?cPath=102)
+**Model:** [ARD124B2P](https://www.seeedstudio.com/depot/wiznet-ethernet-shield-w5100-p-518.html?cPath=102)
 
 ##   Features   ##
 
@@ -142,10 +142,10 @@ Connect the ethernet shield with internet via RJ45 connector, and Arduino with P
 
 ##   Resources   ##
 
-- **[Getting started]**[Ethernet Shield Getting started](http://arduino.cc/en/Guide/ArduinoEthernetShield)
+- **[Getting started]**[Ethernet Shield Getting started](https://arduino.cc/en/Guide/ArduinoEthernetShield)
 - **[Eagle]**[Ethernet Shield Eagle Files](https://files.seeedstudio.com/wiki/Ethernet_Shield_V1.0/res/Ethernet_Shield.zip)
 - **[PDF]**[W5100_ethernet_shield PCB](https://files.seeedstudio.com/wiki/Ethernet_Shield_V1.0/res/W5100_ethernet_shield.pdf)
 - **[PDF]**[W5100_ethernet_shield SCH](https://files.seeedstudio.com/wiki/Ethernet_Shield_V1.0/res/W5100_ethernet_shield%20SCH.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

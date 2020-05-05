@@ -111,7 +111,7 @@ We have prepared everything, the last thing we need is your creative projects, s
 !!!Tip
     Use Grove modules to expand your application
 
-There are 6 Grove connects on board. If this is your first time to hear about Grove, please put had on [Grove System](http://wiki.seeed.cc/Grove_System/) for more details.
+There are 6 Grove connects on board. If this is your first time to hear about Grove, please put had on [Grove System](https://wiki.seeedstudio.com/Grove_System/) for more details.
 In brief, Groves is hundreds of sensor that in standard style, which is consist of sensors, actuators, displays as well as communication.
 
 ## Hardware Overview
@@ -157,7 +157,7 @@ In brief, Groves is hundreds of sensor that in standard style, which is consist 
 !!!Note
     This chapter is based on Win10 and Arduino IDE v1.6.0
 
-First you need to install the latest Arduino IDE, and [ADD Seeeduino SAMD to your Arduino IDE](http://wiki.seeed.cc/Seeed_Arduino_Boards/).
+First you need to install the latest Arduino IDE, and [ADD Seeeduino SAMD to your Arduino IDE](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/).
 
 ### Install the Driver (For Windows)
 

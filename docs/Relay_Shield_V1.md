@@ -100,7 +100,7 @@ Relay Shield could be directly controlled by **Arduino**
 
 Step1. Plug Relay Shield onto **Arduino**  Duemilanove (or compatible) board;
 Step2. Supply 9v DC power to **Arduino** ;
-Step3. Download the [example code](https://files.seeedstudio.com/wiki/Relay-Shield_V1.0/res/RelayShieldDemoCode.zip) and run in [Arduino IDE](http://arduino.cc/en/Main/Software).
+Step3. Download the [example code](https://files.seeedstudio.com/wiki/Relay-Shield_V1.0/res/RelayShieldDemoCode.zip) and run in [Arduino IDE](https://arduino.cc/en/Main/Software).
 
 If using Arduino via its USB connection for power, you must also provide 9v DC power to the Relay Shield or the relays won't switch.
 
@@ -136,7 +136,7 @@ Step4. Supply the 9VDC power to the Relay Shield. (Note: the extended Relay Shie
 
 Step5. Power the master RFBee with 3.3V by [UartSBee](https://seeeddoc.github.io/UartSBee/)  or other adapter.
 
-###    With [315/433MHz RF Module](http://www.seeedstudio.com/depot/315mhz-rf-link-kits-with-encoder-and-decoder-p-151.html?cPath=139_140) ###
+###    With [315/433MHz RF Module](https://www.seeedstudio.com/depot/315mhz-rf-link-kits-with-encoder-and-decoder-p-151.html?cPath=139_140) ###
 
 ![](https://files.seeedstudio.com/wiki/Relay-Shield_V1.0/img/WithRF.jpg)
 
@@ -216,4 +216,4 @@ Step3: [Control the Transmitter](https://seeeddoc.github.io/315Mhz_RF_link_kits-
 - **[CODE]**  [Arduino Code for RFBee control RelayShield](https://files.seeedstudio.com/wiki/Relay-Shield_V1.0/res/RFBee_v1_1_for_RelayShield.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

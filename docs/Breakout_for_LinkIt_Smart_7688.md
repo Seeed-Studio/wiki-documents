@@ -2520,7 +2520,7 @@ This section will show those senior customers how to add recording funtion to th
 
 
 
-2.For beginner, we recommend that you buy Breakout for LinkIt Smart 7688 v2.0 at [bazaar](http://www.seeedstudio.com/depot/Breakout-for-LinkIt-Smart-7688-v20-p-2641.html?cPath=122_142).
+2.For beginner, we recommend that you buy Breakout for LinkIt Smart 7688 v2.0 at [bazaar](https://www.seeedstudio.com/depot/Breakout-for-LinkIt-Smart-7688-v20-p-2641.html?cPath=122_142).
 
 
 ###  **Parts list**
@@ -2589,7 +2589,7 @@ This section will show those senior customers how to add recording funtion to th
 
 *   [OpenWrt](http://wiki.openwrt.org/doc/howto/user.beginner)
 
-*   [Link](http://www.seeedstudio.com/depot/LinkIt-Smart-7688-p-2573.html?cPath=122_142) to buy a LinkIt Smart 7688.
+*   [Link](https://www.seeedstudio.com/depot/LinkIt-Smart-7688-p-2573.html?cPath=122_142) to buy a LinkIt Smart 7688.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

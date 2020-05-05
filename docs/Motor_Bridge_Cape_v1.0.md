@@ -4,7 +4,7 @@ category: BeagleBone®
 bzurl: https://seeedstudio.com/Motor-Bridge-Cape-p-2569.html
 oldwikiname: Motor_Bridge_Cape_v1.0
 prodimagename: Motor_bridge_driver.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/105030006 1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/105030006 1.jpg
 surveyurl: https://www.research.net/r/Motor_Bridge_Cape_v1_0
 sku: 105030006
 ---
@@ -359,7 +359,7 @@ Resources
 -   [Motor Bridge Cape Firmware Source Code](https://github.com/Lee-Kevin/MotorBridgeCapeFirmwareSourceCode)
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Motor_Bridge_Cape_v1.0 -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Motor_Bridge_Cape_v1.0 -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

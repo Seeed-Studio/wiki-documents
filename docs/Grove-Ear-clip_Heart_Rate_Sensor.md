@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-Ear-clip-Heart-Rate-Sensor-p-1116.html
 oldwikiname: Grove_-_Ear-clip_Heart_Rate_Sensor
 prodimagename: Heart_rate_ear_clip_kit.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/P3212438.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/P3212438.jpg
 surveyurl: https://www.research.net/r/Grove-Ear-clip_Heart_Rate_Sensor
 sku: 101020033
 tags: grove_digital, io_3v3, io_5v, plat_duino, plat_pi, plat_bbg
@@ -14,7 +14,7 @@ tags: grove_digital, io_3v3, io_5v, plat_duino, plat_pi, plat_bbg
 
 The Heart Rate Ear clip kit contains a ear clip and a receiver module. The heart rate measure kit can be used to monitor heart rate of patient and athlete. The result can be displayed on a screen via the serial port and can be saved for analysis. The entire system is a high sensitivity, low power consumption and portable.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Ear-clip-Heart-Rate-Sensor-p-1116.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-Ear-clip-Heart-Rate-Sensor-p-1116.html)
 
 Features
 --------
@@ -25,7 +25,7 @@ Features
 -   Fully RoHS compliant
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
     
 Specifications
 -------------
@@ -121,7 +121,7 @@ Usage
 
 The following sketch demonstrates a simple application of using the Ear-clip Heart Rate Sensor to measure heart rate.
 
--   Connect this module to the digital port D2 on [Grove-Base shield](http://www.seeedstudio.com/depot/grove-base-shield-p-754.html?cPath=132). And connect Grove-LED to Digital port 4.
+-   Connect this module to the digital port D2 on [Grove-Base shield](https://www.seeedstudio.com/depot/grove-base-shield-p-754.html?cPath=132). And connect Grove-LED to Digital port 4.
 -   Plug the Base Shield into Arduino/Seeeduino.
 
 ![](https://files.seeedstudio.com/wiki/Grove-Ear-clip_Heart_Rate_Sensor/img/with_ardu.jpg)
@@ -243,7 +243,7 @@ Resources
 - [Grove - Ear-clip Heart Rate Sensor Demo code](https://files.seeedstudio.com/wiki/Grove-Ear-clip_Heart_Rate_Sensor/res/Grove-Heart_rate_chest_belt_V1.0.zip)
 - [PPG Sensor System](https://files.seeedstudio.com/wiki/Grove-Ear-clip_Heart_Rate_Sensor/res/PPG%20Sensor%20System.pdf)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Ear-clip_Heart_Rate_Sensor -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Ear-clip_Heart_Rate_Sensor -->
 
 ## Projects
 
@@ -253,4 +253,4 @@ Resources
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

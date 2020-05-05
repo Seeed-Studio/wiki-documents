@@ -17,7 +17,7 @@ This module is an easy to use Bluetooth SPP (Serial Port Protocol) module, desig
 
 The Serial port Bluetooth module is fully qualified Bluetooth V2.0+EDR (Enhanced Data Rate) 3Mbps Modulation with complete 2.4GHz radio transceiver and baseband. It uses CSR Bluecore 04-External single chip Bluetooth system with CMOS technology and with AFH(Adaptive Frequency Hopping Feature). It has a footprint as small as 12.7mmx27mm. Hopefully it will simplify your overall design/development cycle.
 
-**Model: [WLS123A1M](http://www.seeedstudio.com/depot/serial-port-bluetooth-module-masterslave-p-572.html?cPath=139_142)**
+**Model: [WLS123A1M](https://www.seeedstudio.com/depot/serial-port-bluetooth-module-masterslave-p-572.html?cPath=139_142)**
 
 
 
@@ -560,9 +560,9 @@ When **+INQ=1** command is successful, the <span style="color:red"> red </span> 
 
 ##   Additional Idea  
 
-*   [How to set PC connect with Serial Bluetooth Grove](http://forum.seeedstudio.com/viewtopic.php?f=18&amp;t=1436&amp;p=5637#p5637)
+*   [How to set PC connect with Serial Bluetooth Grove](https://forum.seeedstudio.com/viewtopic.php?f=18&amp;t=1436&amp;p=5637#p5637)
 
-*   [Set up connections between two Bluetooth modules step by step](http://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=687)
+*   [Set up connections between two Bluetooth modules step by step](https://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=687)
 
 ##   Resources  
 
@@ -572,21 +572,21 @@ When **+INQ=1** command is successful, the <span style="color:red"> red </span> 
 
 ##   Support  
 
-If you have questions or other better design ideas, you can go to our [forum](http://www.seeedstudio.com/forum) or **wish** to discuss.
+If you have questions or other better design ideas, you can go to our [forum](https://www.seeedstudio.com/forum) or **wish** to discuss.
 
 ##   How to buy  
 
-Click here to buy: [Serial port bluetooth module (Master/Slave)](http://www.seeedstudio.com/depot/serial-port-bluetooth-module-masterslave-p-572.html?cPath=139_142)
+Click here to buy: [Serial port bluetooth module (Master/Slave)](https://www.seeedstudio.com/depot/serial-port-bluetooth-module-masterslave-p-572.html?cPath=139_142)
 
 ##   See Also  
 
-*   [Grove - Serial Bluetooth](http://www.seeedstudio.com/depot/grove-serial-bluetooth-p-795.html?cPath=139_142)
+*   [Grove - Serial Bluetooth](https://www.seeedstudio.com/depot/grove-serial-bluetooth-p-795.html?cPath=139_142)
 
-*   [Bluetooth Bee - Standalone](http://www.seeedstudio.com/depot/bluetooth-bee-standalone-p-1157.html?cPath=139_142)
+*   [Bluetooth Bee - Standalone](https://www.seeedstudio.com/depot/bluetooth-bee-standalone-p-1157.html?cPath=139_142)
 
-*   [Bluetooth Shield](http://www.seeedstudio.com/depot/bluetooth-shield-p-866.html?cPath=132_134)
+*   [Bluetooth Shield](https://www.seeedstudio.com/depot/bluetooth-shield-p-866.html?cPath=132_134)
 
-*   [Bluetooth Bee](http://www.seeedstudio.com/depot/bluetooth-bee-p-598.html?cPath=139_142)
+*   [Bluetooth Bee](https://www.seeedstudio.com/depot/bluetooth-bee-p-598.html?cPath=139_142)
 
 ##   Licensing  
 
@@ -607,7 +607,7 @@ If you want to make some awesome projects by Serial port bluetooth module, here'
 This is an interesting demo make by Arduino and [Grove](https://seeeddoc.github.io/Grove_System/).
 This is a complete tutorial about how to control multiple servo motors from android app.
 
-[<font color="#FF0000">**I want to make it.**</font>](http://www.seeedstudio.com/recipe/255-control-multiple-servo-motor-from-android-app.html)
+[<font color="#FF0000">**I want to make it.**</font>](https://www.seeedstudio.com/recipe/255-control-multiple-servo-motor-from-android-app.html)
 
 ###   Share Your Awesome Projects with Us
 
@@ -621,7 +621,7 @@ as long as you start sharing your works with others,
 
 you are being part of the open source community and you are making your contributions .
 
-Now share you awesome projects on with us on [Recipe](http://www.seeedstudio.com/recipe/), and win a chance to become the Core User of Seeed.
+Now share you awesome projects on with us on [Recipe](https://www.seeedstudio.com/recipe/), and win a chance to become the Core User of Seeed.
 
 *   Core Users, are those who showing high interests and significant contributions in Seeed products.
 *   We cooperate with our Core Users in the development of our new product, this, in another word, the Core Users will have the chance to experience any new products of Seeed before its official launch, and in return we expect valuable feedback from them to help us improving the product performance and user experience. And for most of cases if our Core Users have any good ideas for making things, we'll offer hardware pieces, PCBA services as well as technical support. Besides, further commercial cooperation with the Core Users is highly possible.
@@ -629,4 +629,4 @@ Now share you awesome projects on with us on [Recipe](http://www.seeedstudio.com
 <font color="#FF0000">Get more information about Core User please email to: recipe@seeed.cc</font>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

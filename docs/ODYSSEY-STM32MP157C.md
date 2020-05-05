@@ -2,7 +2,7 @@
 name: ODYSSEY – STM32MP157C 
 category: ODYSSEY
 bzurl: https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html
-wikiurl: http://wiki.seeedstudio.com/ODYSSEY-STM32MP157C/
+wikiurl: https://wiki.seeedstudio.com/ODYSSEY-STM32MP157C/
 sku: 102110319
 ---
 
@@ -445,7 +445,7 @@ The following is the process of CANBUS communication using [2 Channel CAN BUS FD
 
 **Hardware Connection**
 
-- **Step 1.** According to the [installation guide](http://wiki.seeedstudio.com/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/#mounting-guide) insert 2 Channel CAN BUS FD Shield for Raspberry Pi onto ODYSSEY - STM32MP157C.
+- **Step 1.** According to the [installation guide](https://wiki.seeedstudio.com/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/#mounting-guide) insert 2 Channel CAN BUS FD Shield for Raspberry Pi onto ODYSSEY - STM32MP157C.
 - **Step 2.** Insert CAN BUS Shield V2 into Seeeduino V4.2.
 - **Step 3.** Connect Channel CAN BUS FD Shield for Raspberry Pi to can-bus Shield V2 using dupont wire.
 
@@ -800,7 +800,7 @@ python uart.py
 - **[3Dfile]** [ODYSSEY-STM32MP157C](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/Hardware/st.skp)
 - **[OrCAD]** [ODYSSEY-STM32MP157C](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/Hardware/Seeed%20NPi%20-%20STM32MP157C%20v1.0_SCH%20%26%20PCB.zip)
 - **[OrCAD]** [Seeed SoM - STM32MP157C](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/Hardware/Seeed%20SoM%20-%20STM32MP157C%20v1.0_SCH%20%26%20PCB%20.zip)
-- **[PDF]** [ODYSSEY-STM32MP157C 2d file](http://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/STM32-2d-file.pdf)
-- **[PDF]** [STM32 Reference Guide](http://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/STM32+Reference+Guide+V1.0.pdf)
+- **[PDF]** [ODYSSEY-STM32MP157C 2d file](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/STM32-2d-file.pdf)
+- **[PDF]** [STM32 Reference Guide](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/STM32+Reference+Guide+V1.0.pdf)
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -53,7 +53,7 @@ void setup() {
 
 - **Reading Accelerator data and loading data**
 
-Please refer to [Line Charts](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Linecharts/) for more information.
+Please refer to [Line Charts](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Linecharts/) for more information.
 
 ```cpp
 void loop() {
@@ -78,7 +78,7 @@ void loop() {
 
 - **Title configurations**
 
-Please refer to [Line Charts](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Linecharts/) for more information.
+Please refer to [Line Charts](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Linecharts/) for more information.
 
 ```cpp
 auto header =  text(0, 0)

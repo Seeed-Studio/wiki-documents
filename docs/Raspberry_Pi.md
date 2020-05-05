@@ -16,15 +16,15 @@ At Seeed Studio, we provide not only different raspberry pi boards that mentione
 
 Here is the list of the Raspberry Pi Boards you can find in the Seeed WiKi. The list will be constantly updated.
 
-- [Grove Base HAT](http://wiki.seeedstudio.com/Grove_Base_HAT/)
-- [Grove Starter Kit for IoT based on Raspberry Pi](http://wiki.seeedstudio.com/Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi/)
-- [GrovePi&#43;](http://wiki.seeedstudio.com/GrovePi_Plus/)
-- [Raspberry Pi Breakout Board v1.0](http://wiki.seeedstudio.com/Raspberry_Pi_Breakout_Board_v1.0/)
-- [Raspberry Pi Motor Driver Board v1.0](http://wiki.seeedstudio.com/Raspberry_Pi_Motor_Driver_Board_v1.0/)
-- [Raspberry Pi RS232 Board v1.0](http://wiki.seeedstudio.com/Raspberry_Pi_R232_Board_v1.0/)
-- [Raspberry Pi Relay Board v1.0](http://wiki.seeedstudio.com/Raspberry_Pi_Relay_Board_v1.0/)
-- [Skeleton Box for Raspberry Pi Compute Module Development Kit](http://wiki.seeedstudio.com/Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit/)
-- [Skeleton box for Raspberry Pi](http://wiki.seeedstudio.com/Skeleton_box_for_Rasberry_Pi/)
+- [Grove Base HAT](https://wiki.seeedstudio.com/Grove_Base_HAT/)
+- [Grove Starter Kit for IoT based on Raspberry Pi](https://wiki.seeedstudio.com/Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi/)
+- [GrovePi&#43;](https://wiki.seeedstudio.com/GrovePi_Plus/)
+- [Raspberry Pi Breakout Board v1.0](https://wiki.seeedstudio.com/Raspberry_Pi_Breakout_Board_v1.0/)
+- [Raspberry Pi Motor Driver Board v1.0](https://wiki.seeedstudio.com/Raspberry_Pi_Motor_Driver_Board_v1.0/)
+- [Raspberry Pi RS232 Board v1.0](https://wiki.seeedstudio.com/Raspberry_Pi_R232_Board_v1.0/)
+- [Raspberry Pi Relay Board v1.0](https://wiki.seeedstudio.com/Raspberry_Pi_Relay_Board_v1.0/)
+- [Skeleton Box for Raspberry Pi Compute Module Development Kit](https://wiki.seeedstudio.com/Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit/)
+- [Skeleton box for Raspberry Pi](https://wiki.seeedstudio.com/Skeleton_box_for_Rasberry_Pi/)
 
 
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

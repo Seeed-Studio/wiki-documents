@@ -36,7 +36,7 @@ Grove - Serial Camera Kit includes one control board and two interchangeable len
 
 ##  Demonstration
 ---
-This demo will show you how to use Grove - Serial Camera Kit. We need a [Seeeduino](http://www.seeedstudio.com/depot/seeeduino-v30-atmega-328p-p-669.html?cPath=6_7), an [SD Card Shield](http://www.seeedstudio.com/depot/sd-card-shield-v40-p-1381.html?cPath=105) and a [Grove - Button](/Grove-Button/). When the button pressed, we take a photo and save it to SD Card.
+This demo will show you how to use Grove - Serial Camera Kit. We need a [Seeeduino](https://www.seeedstudio.com/depot/seeeduino-v30-atmega-328p-p-669.html?cPath=6_7), an [SD Card Shield](https://www.seeedstudio.com/depot/sd-card-shield-v40-p-1381.html?cPath=105) and a [Grove - Button](/Grove-Button/). When the button pressed, we take a photo and save it to SD Card.
 
 Follow the below steps step by step, you can easily run your Grove - Serial Camera Kit. Then let's go.
 
@@ -98,4 +98,4 @@ Lens screwed different depths represent different focal length, you can have a t
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/phpoc_man/grove-camera-phpoc-web-application-1dfd63/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

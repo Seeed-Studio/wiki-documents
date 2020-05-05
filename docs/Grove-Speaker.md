@@ -4,7 +4,7 @@ category: Actuator
 bzurl: https://seeedstudio.com/Grove-Speaker-p-1445.html
 oldwikiname: Grove_-_Speaker
 prodimagename: Grove_Speaker_01.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/Grove Speaker.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/Grove Speaker.jpg
 surveyurl: https://www.research.net/r/Grove-Speaker
 sku: 107020001
 tags: grove_digital, io_5v, plat_duino, plat_wio
@@ -14,7 +14,7 @@ tags: grove_digital, io_5v, plat_duino, plat_wio
 
 The Grove- Speaker is a module which consists of power amplification and voice outputs. The loudness can be adjusted by the on-board potentiometer. With different input frequencies, the loud-speaker generates different tones. Coding the music into arduino, DIY your own music box!
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Speaker-p-1445.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-Speaker-p-1445.html)
 
 Features
 -------
@@ -23,7 +23,7 @@ Features
 -   Grove Interface
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 
 Specifications
@@ -112,7 +112,7 @@ Due to the influence of the capacitance, the module can only output the bass sig
 **Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
 
 !!!Note
-    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](https://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
@@ -141,7 +141,7 @@ Resources
 -   [CodeCraft Code](https://files.seeedstudio.com/wiki/Grove-Speaker/res/Speaker.zip)
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Speaker -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Speaker -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

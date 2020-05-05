@@ -214,7 +214,7 @@ Read all channels the same time.
     ./ads1115.sh
 ```
 
-Take [Grove - Sound Sensor](http://wiki.seeedstudio.com/Grove-Sound_Sensor/) as an example, if you use the grove cable to connect sound sensor with the ADC hat as shown below, it means you are using A0(channel four). Now, run the command ++./ads1115.s++ inside the terminal, you will be able to see the following result if it is reading data from the sound sensor.
+Take [Grove - Sound Sensor](https://wiki.seeedstudio.com/Grove-Sound_Sensor/) as an example, if you use the grove cable to connect sound sensor with the ADC hat as shown below, it means you are using A0(channel four). Now, run the command ++./ads1115.s++ inside the terminal, you will be able to see the following result if it is reading data from the sound sensor.
 
 ![](https://files.seeedstudio.com/wiki/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/img/connection.jpg) 
 

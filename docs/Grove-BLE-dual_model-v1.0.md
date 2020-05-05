@@ -4,7 +4,7 @@ category: Communication
 bzurl: https://seeedstudio.com/Grove-BLE-(dual-model)-p-2407.html
 oldwikiname: Grove_-_BLE_(dual_model)_v1.0
 prodimagename: Grove-BLE-dual_model-v1.0.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/113020009 1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/113020009 1.jpg
 surveyurl: https://www.research.net/r/Grove-BLE-dual_model-v1_0
 sku: 113020009
 tags: grove_uart, io_3v3, io_5v, plat_duino, plat_linkit
@@ -37,7 +37,7 @@ Features
 - Working temperature: –5 ~ +65 Centigrade
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
     
 Platforms Supported
 -------------------
@@ -1166,7 +1166,7 @@ Resources
 -   [EAGLE\_Grove-BLE\_(dual\_model)\_v1.0\_sch\_pcb](https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/res/Eagle_Grove-BLE-dual_model-v1.0_sch_pcb.zip)
 -   [PDF\_Grove-BLE\_(dual\_model)\_v1.0\_sch](https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/res/Grove-BLE-dual_model-v1.0.pdf)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_BLE_(dual_model)_v1.0 -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_BLE_(dual_model)_v1.0 -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

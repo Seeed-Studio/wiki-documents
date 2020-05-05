@@ -87,7 +87,7 @@ With the I2C 3-axis Accelerometer, your toy can now detect its acceleration; tha
 
 ###  I2C Touch Sensor: Make your toy touch-sensitive.
 
-An I2C Touch Sensor has been used to make your toy (ie Winnie The Pooh) sensitive to your finger's touch. It includes a controller and 4 feelers, which enables your toy to feel the touch or proximity of human fingers with 4 channels. Besides, up to 4 additional channels can be added if you make or [buy the feelers from Seeed Studio](http://www.seeedstudio.com/depot/grove-i2c-touch-sensor-p-840.html?cPath=144_195).
+An I2C Touch Sensor has been used to make your toy (ie Winnie The Pooh) sensitive to your finger's touch. It includes a controller and 4 feelers, which enables your toy to feel the touch or proximity of human fingers with 4 channels. Besides, up to 4 additional channels can be added if you make or [buy the feelers from Seeed Studio](https://www.seeedstudio.com/depot/grove-i2c-touch-sensor-p-840.html?cPath=144_195).
 
 <center>
 
@@ -143,7 +143,7 @@ This Piezo_Buzzer can be connected to an analog pulse-width modulation output to
 
 ##  Usage
 
-The Toy kit work with the [Arduino](http://www.seeedstudio.com/depot/arduino-uno-p-694.html?cPath=132_133) or [Seeeduino](http://www.seeedstudio.com/depot/arduino-uno-p-694.html?cPath=132_133)board,and the [Grove Shield series](/Grove_System "Grove_System")
+The Toy kit work with the [Arduino](https://www.seeedstudio.com/depot/arduino-uno-p-694.html?cPath=132_133) or [Seeeduino](https://www.seeedstudio.com/depot/arduino-uno-p-694.html?cPath=132_133)board,and the [Grove Shield series](/Grove_System "Grove_System")
 
 Here are some Application Examples designed by Seeed customers.
 
@@ -161,7 +161,7 @@ If you want to go for this project, you may still need to have:
 
 **Resources:**
 
-*   A detailed step-by-step instruction [here](http://www.seeedstudio.com/document/Automated_train_station.ppt).
+*   A detailed step-by-step instruction [here](https://www.seeedstudio.com/document/Automated_train_station.ppt).
 
 *   More pictures [here](https://picasaweb.google.com/111286480499748956103/SeeedstudioProject?authuser=0&amp;feat=directlink)
 
@@ -179,9 +179,9 @@ If you want to go for this project, you may still need to have:
 
 **Resources:**
 
-*   A detailed step-by-step instruction [PDF](http://www.seeedstudio.com/document/Barking_Desk_Guard_Dog.pdf).
+*   A detailed step-by-step instruction [PDF](https://www.seeedstudio.com/document/Barking_Desk_Guard_Dog.pdf).
 
-*   A demo [video](http://www.youtube.com/watch?v=8BghIeelvtY) on YouTube.
+*   A demo [video](https://www.youtube.com/watch?v=8BghIeelvtY) on YouTube.
 
 ###  3. IKEA Robot lamp by Javier
 
@@ -197,9 +197,9 @@ If you want to go for this project, you may still need to have:
 
 *   Check out the project page [here](http://arduinoarts.com/2011/09/the-sm-1-project-part-7-the-first-working-version-of-the-ikea-robot-lamp-with-arduino/).
 
-*   A detailed step-by-step instruction [here](http://www.seeedstudio.com/blog/www.seeedstudio.com/document/seeedStudioAssemblyInstructions.docx).
+*   A detailed step-by-step instruction [here](https://www.seeedstudio.com/blog/www.seeedstudio.com/document/seeedStudioAssemblyInstructions.docx).
 
-*   Tutorial [videos](http://www.youtube.com/watch?v=hmSlk4zmhYo) on YouTube.
+*   Tutorial [videos](https://www.youtube.com/watch?v=hmSlk4zmhYo) on YouTube.
 
 ###  4. Beckoning cat hack by Severin (XinCheJian)
 
@@ -215,7 +215,7 @@ If you want to go for this project, you may still need to have:
 
 *   A detailed step-by-step instruction [here](http://wiki.xinchejian.com/docs/cat/).
 
-*   A demo [video](http://www.youtube.com/watch?edit=vd&amp;v=9i7DidiFYts) on YouTube.
+*   A demo [video](https://www.youtube.com/watch?edit=vd&amp;v=9i7DidiFYts) on YouTube.
 
 ###  5. gRover Robotics Platform by Matthew
 
@@ -241,7 +241,7 @@ If you want to go for this project, you may still need to have:
 
 **Resources:**
 
-*   The detailed step-by-step instruction [PDF](http://www.seeedstudio.com/document/gRover.pdf).
+*   The detailed step-by-step instruction [PDF](https://www.seeedstudio.com/document/gRover.pdf).
 
 *   More pictures [here](http://www.flickr.com/photos/matthewlange/sets/72157627614719221/with/6176558869/).
 
@@ -259,13 +259,13 @@ If you want to go for this project, you may still need to have:
 
 **Resources:**
 
-*   A detailed step-by-step instruction [PDF](http://www.seeedstudio.com/document/Eyeclop%20howto.pdf).
+*   A detailed step-by-step instruction [PDF](https://www.seeedstudio.com/document/Eyeclop%20howto.pdf).
 
-*   A demo [video](http://www.youtube.com/watch?v=AjtvoA2FFAs) on YouTube.
+*   A demo [video](https://www.youtube.com/watch?v=AjtvoA2FFAs) on YouTube.
 
 ##  Support
 
-If you have questions or other better design ideas, you can go to our [forum](http://forum.seeedstudio.com)
+If you have questions or other better design ideas, you can go to our [forum](https://forum.seeedstudio.com)
 
 
 ##  See Also
@@ -275,4 +275,4 @@ If you have questions or other better design ideas, you can go to our [forum](ht
 *   [Grove - ADK Dash Kit](https://www.seeedstudio.com/Grove-ADK-Dash-Kit-p-929.html)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -10,12 +10,12 @@ sku: 102010027
 
 ![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/cover.jpg)
 
-Seeed Studio BeagleBone® Green is a low cost, open-source, community supported development platform for developers and hobbyists. It is a joint effort by [BeagleBoard.org](http://beagleboard.org/) and Seeed Studio. It is based on the classical open-source hardware design of [BeagleBone® Black](http://beagleboard.org/black) and developed into this differentiated version. The Seeed Studio BeagleBone® Green includes two Grove connectors, making it easier to connect to the large family of Grove sensors. The on-board HDMI is removed to make room for these Grove connectors.
+Seeed Studio BeagleBone® Green is a low cost, open-source, community supported development platform for developers and hobbyists. It is a joint effort by [BeagleBoard.org](https://beagleboard.org/) and Seeed Studio. It is based on the classical open-source hardware design of [BeagleBone® Black](https://beagleboard.org/black) and developed into this differentiated version. The Seeed Studio BeagleBone® Green includes two Grove connectors, making it easier to connect to the large family of Grove sensors. The on-board HDMI is removed to make room for these Grove connectors.
 
 Boot Linux in under 10 seconds and get started on development in less than 5 minutes with just a single USB cable.
 
 
-<p style=":center"><a href="http://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-p-2504.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-p-2504.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 <p style=":center"><a href="https://www.amazon.com/dp/B01AIC5AP4" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/amaon.png"  width="300" height="48"  border=0/></a></p>
@@ -75,12 +75,12 @@ Here are some funny projects for your reference.
 |Home Center|Retro Lamp|Drive a Motor|
 |---------------|-----|--------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project3.jpg)|
-|[MAKE IT NOW!](http://www.instructables.com/id/Home-Control-Center-Using-BeagleBone-Green-Wireles/)|[MAKE IT NOW!](http://www.instructables.com/id/DIY-a-Retro-Wooden-Lamp-with-BBG/)|[MAKE IT NOW!](http://www.instructables.com/id/A-BeagleBone-Tutorial-Getting-Started-With-Motor-B/)|
+|[MAKE IT NOW!](https://www.instructables.com/id/Home-Control-Center-Using-BeagleBone-Green-Wireles/)|[MAKE IT NOW!](https://www.instructables.com/id/DIY-a-Retro-Wooden-Lamp-with-BBG/)|[MAKE IT NOW!](https://www.instructables.com/id/A-BeagleBone-Tutorial-Getting-Started-With-Motor-B/)|
 
 |Seeed Studio BeagleBone® Green Acrylic Case|GPIO Control|Smart Light|
 |---------------|-----|--------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project6.png)|
-|[MAKE IT NOW!](http://www.instructables.com/id/5-Design-of-Laser-Cut-Cases-for-5-Popular-Platform/)|[MAKE IT NOW!](https://community.seeedstudio.com/How-to-use-the-Grove-UART-port-as-a-GPIO-on-BBG-p-365.html)|[MAKE IT NOW!](https://community.seeedstudio.com/Smart-Light-Demo-with-BBG-%26amp%3B-BBG-Start-Kit(HA)-p-366.html)|
+|[MAKE IT NOW!](https://www.instructables.com/id/5-Design-of-Laser-Cut-Cases-for-5-Popular-Platform/)|[MAKE IT NOW!](https://community.seeedstudio.com/How-to-use-the-Grove-UART-port-as-a-GPIO-on-BBG-p-365.html)|[MAKE IT NOW!](https://community.seeedstudio.com/Smart-Light-Demo-with-BBG-%26amp%3B-BBG-Start-Kit(HA)-p-366.html)|
 
 
 ## Hardware Overview
@@ -184,10 +184,10 @@ Install the drivers for your operating system to give you network-over-USB acces
 
 |Operating System |	USB Drivers |	Comments |
 |---------------------|---------|------------|
-|Windows (64-bit) |	[64-bit installer](http://beagleboard.org/static/Drivers/Windows/BONE_D64.exe)	 | |
-|Windows (32-bit) |	[32-bit installer](http://beagleboard.org/static/Drivers/Windows/BONE_DRV.exe)||
-|Mac OS X|[Network](http://beagleboard.org/static/Drivers/MacOSX/RNDIS/HoRNDIS.pkg) [Serial](http://beagleboard.org/static/Drivers/MacOSX/FTDI/EnergiaFTDIDrivers2.2.18.pkg) | Install both sets of drivers.|
-|Linux|[mkudevrule.sh](http://beagleboard.org/static/Drivers/Linux/FTDI/mkudevrule.sh)|Driver installation isn't required, but you might find a few udev rules helpful.|
+|Windows (64-bit) |	[64-bit installer](https://beagleboard.org/static/Drivers/Windows/BONE_D64.exe)	 | |
+|Windows (32-bit) |	[32-bit installer](https://beagleboard.org/static/Drivers/Windows/BONE_DRV.exe)||
+|Mac OS X|[Network](https://beagleboard.org/static/Drivers/MacOSX/RNDIS/HoRNDIS.pkg) [Serial](https://beagleboard.org/static/Drivers/MacOSX/FTDI/EnergiaFTDIDrivers2.2.18.pkg) | Install both sets of drivers.|
+|Linux|[mkudevrule.sh](https://beagleboard.org/static/Drivers/Linux/FTDI/mkudevrule.sh)|Driver installation isn't required, but you might find a few udev rules helpful.|
 
 !!!Note
     For Windows system, please note that:
@@ -231,7 +231,7 @@ You need to update the board to latest software to keep a better performance, he
 
 First of all, you have to download the suitable image here.
 
-[![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/down_latest_image.png)](http://beagleboard.org/latest-images)
+[![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/down_latest_image.png)](https://beagleboard.org/latest-images)
 
 !!!Note
     Due to sizing necessities, this download may take about 30 minutes or more.
@@ -304,36 +304,36 @@ Below listed the Grove modules that work well with Seeed Studio BeagleBone® Gre
 
 |SKU        |Name|Interface|link|
 |-----------|-----|-----|----------|
-|101020054  |Grove - 3-Axis Digital Accelerometer(+16g)     |	I2C| [link](http://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer%28%C2%B116g%29-p-1156.html)|
-|101020071  |Grove - 3-Axis Digital Accelerometer(+400g)    |	I2C| [link](http://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer%28%C2%B1400g%29-p-1897.html)|
-|101020034  |Grove - 3-Axis Digital Compass                 |	I2C| [link](http://www.seeedstudio.com/Grove-3-Axis-Digital-Compass-p-759.html)|
-|101020050  |Grove - 3-Axis Digital Gyro                    |	Analog| [link](http://www.seeedstudio.com/Grove-3-Axis-Digital-Gyro-p-750.html)|
-|101020081	|Grove - 6-Axis Accelerometer&Compass v2.0      |	I2C| [link](http://www.seeedstudio.com/Grove-6-Axis-Accelerometer&Compass-v2.0-p-2476.html)|
-|101020072	|Grove - Barometer Sensor(BMP180)              |	I2C| [link](http://www.seeedstudio.com/Grove-Barometer-Sensor-%28BMP180%29-p-1840.html)|
-|104030010	|Grove - Blue LED                               |	I/O| [link](http://www.seeedstudio.com/Grove-Blue-LED-p-1139.html)|
-|101020003	|Grove - Button	                                |I/O| [link](http://www.seeedstudio.com/Grove-Button-p-766.html)|
-|111020000	|Grove - Button(P)	                            |I/O| [link](http://www.seeedstudio.com/Grove-Button%28P%29-p-1243.html)|
-|107020000	|Grove - Buzzer	                                |I/O| [link](http://www.seeedstudio.com/Grove-Buzzer-p-768.html)|
-|104030006	|Grove - Chainable RGB LED	                    |I2C| [link](http://www.seeedstudio.com/Grove-Chainable-RGB-LED-p-850.html)|
-|101020030	|Grove - Digital Light Sensor	                |I2C| [link](http://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|
-|103020024	|Grove - Finger-clip Heart Rate Sensor	        |I2C| [link](http://www.seeedstudio.com/Grove-Finger-clip-Heart-Rate-Sensor-p-2425.html)|
-|101020082	|Grove - Finger-clip Heart Rate Sensor with shell	|I2C|[link](http://www.seeedstudio.com/Grove-Finger-clip-Heart-Rate-Sensor-with-shell-p-2420.html)|
-|113020003	|Grove - GPS	                        |UART| [link](http://www.seeedstudio.com/Grove-GPS-p-959.html)|
-|104030007	|Grove - Green LED	|I/O| [link](http://www.seeedstudio.com/Grove-Green-LED-p-1144.html)|
-|103020013	|Grove - I2C ADC	|I2C| [link](http://wiki.seeedstudio.com/Grove-I2C_ADC/)|
-|103020006	|Grove - I2C Hub	|I2C| [link](http://www.seeedstudio.com/Grove-I2C-Hub-p-851.html)|
-|101020079	|Grove - IMU 10DOF	|I2C| [link](http://www.seeedstudio.com/Grove-IMU-10DOF-p-2386.html)|
-|101020080	|Grove - IMU 9DOF v2.0	|I2C| [link](http://www.seeedstudio.com/Grove-IMU-9DOF-v2.0-p-2400.html)|
-|101020040	|Grove - IR Distance Interrupter	|I/O| [link](http://www.seeedstudio.com/Grove-IR-Distance-Interrupter-p-1278.html)|
-|104030011	|Grove - OLED Display 0.96''	|I2C| [link](http://www.seeedstudio.com/Grove-OLED-Display-1.12%22-p-824.html)|
-|104030008	|Grove - OLED Display 1.12''	|I2C| [link](http://www.seeedstudio.com/Grove-OLED-Display-0.96%22-p-781.html)|
-|104030005	|Grove - Red LED	|I/O| [link](http://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|
-|103020005	|Grove - Relay	|I/O| [link](http://www.seeedstudio.com/Grove-Relay-p-769.html)|
-|316010005	|Grove - Servo	|I/O| [link](http://www.seeedstudio.com/Grove-Servo-p-1241.html)|
-|101020023	|Grove - Sound Sensor	|Analog| [link](http://www.seeedstudio.com/Grove-Sound-Sensor-p-752.html)|
-|101020004	|Grove - Switch(P)	|I/O| [link](http://www.seeedstudio.com/Grove-Switch%28P%29-p-1252.html)|
-|101020015	|Grove - Temperature Sensor	|Analog| [link](http://www.seeedstudio.com/Grove-Temperature-Sensor-p-774.html)|
-|101020019	|Grove - Temperature&Humidity Sensor Pro	|Analog| [link](http://www.seeedstudio.com/Grove-Temperature&Humidity-Sensor-Pro-p-838.html)|
+|101020054  |Grove - 3-Axis Digital Accelerometer(+16g)     |	I2C| [link](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer%28%C2%B116g%29-p-1156.html)|
+|101020071  |Grove - 3-Axis Digital Accelerometer(+400g)    |	I2C| [link](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer%28%C2%B1400g%29-p-1897.html)|
+|101020034  |Grove - 3-Axis Digital Compass                 |	I2C| [link](https://www.seeedstudio.com/Grove-3-Axis-Digital-Compass-p-759.html)|
+|101020050  |Grove - 3-Axis Digital Gyro                    |	Analog| [link](https://www.seeedstudio.com/Grove-3-Axis-Digital-Gyro-p-750.html)|
+|101020081	|Grove - 6-Axis Accelerometer&Compass v2.0      |	I2C| [link](https://www.seeedstudio.com/Grove-6-Axis-Accelerometer&Compass-v2.0-p-2476.html)|
+|101020072	|Grove - Barometer Sensor(BMP180)              |	I2C| [link](https://www.seeedstudio.com/Grove-Barometer-Sensor-%28BMP180%29-p-1840.html)|
+|104030010	|Grove - Blue LED                               |	I/O| [link](https://www.seeedstudio.com/Grove-Blue-LED-p-1139.html)|
+|101020003	|Grove - Button	                                |I/O| [link](https://www.seeedstudio.com/Grove-Button-p-766.html)|
+|111020000	|Grove - Button(P)	                            |I/O| [link](https://www.seeedstudio.com/Grove-Button%28P%29-p-1243.html)|
+|107020000	|Grove - Buzzer	                                |I/O| [link](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|
+|104030006	|Grove - Chainable RGB LED	                    |I2C| [link](https://www.seeedstudio.com/Grove-Chainable-RGB-LED-p-850.html)|
+|101020030	|Grove - Digital Light Sensor	                |I2C| [link](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|
+|103020024	|Grove - Finger-clip Heart Rate Sensor	        |I2C| [link](https://www.seeedstudio.com/Grove-Finger-clip-Heart-Rate-Sensor-p-2425.html)|
+|101020082	|Grove - Finger-clip Heart Rate Sensor with shell	|I2C|[link](https://www.seeedstudio.com/Grove-Finger-clip-Heart-Rate-Sensor-with-shell-p-2420.html)|
+|113020003	|Grove - GPS	                        |UART| [link](https://www.seeedstudio.com/Grove-GPS-p-959.html)|
+|104030007	|Grove - Green LED	|I/O| [link](https://www.seeedstudio.com/Grove-Green-LED-p-1144.html)|
+|103020013	|Grove - I2C ADC	|I2C| [link](https://wiki.seeedstudio.com/Grove-I2C_ADC/)|
+|103020006	|Grove - I2C Hub	|I2C| [link](https://www.seeedstudio.com/Grove-I2C-Hub-p-851.html)|
+|101020079	|Grove - IMU 10DOF	|I2C| [link](https://www.seeedstudio.com/Grove-IMU-10DOF-p-2386.html)|
+|101020080	|Grove - IMU 9DOF v2.0	|I2C| [link](https://www.seeedstudio.com/Grove-IMU-9DOF-v2.0-p-2400.html)|
+|101020040	|Grove - IR Distance Interrupter	|I/O| [link](https://www.seeedstudio.com/Grove-IR-Distance-Interrupter-p-1278.html)|
+|104030011	|Grove - OLED Display 0.96''	|I2C| [link](https://www.seeedstudio.com/Grove-OLED-Display-1.12%22-p-824.html)|
+|104030008	|Grove - OLED Display 1.12''	|I2C| [link](https://www.seeedstudio.com/Grove-OLED-Display-0.96%22-p-781.html)|
+|104030005	|Grove - Red LED	|I/O| [link](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|
+|103020005	|Grove - Relay	|I/O| [link](https://www.seeedstudio.com/Grove-Relay-p-769.html)|
+|316010005	|Grove - Servo	|I/O| [link](https://www.seeedstudio.com/Grove-Servo-p-1241.html)|
+|101020023	|Grove - Sound Sensor	|Analog| [link](https://www.seeedstudio.com/Grove-Sound-Sensor-p-752.html)|
+|101020004	|Grove - Switch(P)	|I/O| [link](https://www.seeedstudio.com/Grove-Switch%28P%29-p-1252.html)|
+|101020015	|Grove - Temperature Sensor	|Analog| [link](https://www.seeedstudio.com/Grove-Temperature-Sensor-p-774.html)|
+|101020019	|Grove - Temperature&Humidity Sensor Pro	|Analog| [link](https://www.seeedstudio.com/Grove-Temperature&Humidity-Sensor-Pro-p-838.html)|
 
 ## Cape for Seeed Studio BeagleBone® Green
 
@@ -343,12 +343,12 @@ You will need some expansion board when you start a project. There're many cape 
 |Grove Cape| Motor Bridge Cape|HDMI Cape|
 |------------|----------------|----------|
 |![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product3.jpg)|
-|[GET ONE NOW!](http://www.seeedstudio.com/Grove-Cape-for-BeagleBone-Series-p-1718.html)|[GET ONE NOW!](http://www.seeedstudio.com/Motor-Bridge-Cape-p-2569.html)|[GET ONE NOW!](http://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-HDMI-Cape-p-2570.html)|
+|[GET ONE NOW!](https://www.seeedstudio.com/Grove-Cape-for-BeagleBone-Series-p-1718.html)|[GET ONE NOW!](https://www.seeedstudio.com/Motor-Bridge-Cape-p-2569.html)|[GET ONE NOW!](https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-HDMI-Cape-p-2570.html)|
 
 |Grove Cape| 5 Inch LCD|7 Inch LCD|
 |------------|----------------|----------|
 |![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product6.jpg)|
-|[GET ONE NOW!](http://www.seeedstudio.com/Grove-Base-Cape-for-Beaglebone-v2.0-p-2644.html)|[GET ONE NOW!](http://www.seeedstudio.com/5-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2642.html)|[GET ONE NOW!](http://www.seeedstudio.com/7-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2643.html)|
+|[GET ONE NOW!](https://www.seeedstudio.com/Grove-Base-Cape-for-Beaglebone-v2.0-p-2644.html)|[GET ONE NOW!](https://www.seeedstudio.com/5-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2642.html)|[GET ONE NOW!](https://www.seeedstudio.com/7-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2643.html)|
 
 ## FAQ
 
@@ -373,12 +373,12 @@ BeagleBone® Green works in the temperature range of 0-75 Deg Celsius.
 
 There're many references to help you to get more information about the board.
 
-* [BeagleBoard Main Page](http://beagleboard.org/)
-* [Seeed Studio BeagleBone® Green info at BeagleBoard page](http://beagleboard.org/green)
-* [BeagleBoard Getting Started](http://beagleboard.org/getting-started)
-* [Troubleshooting](http://beagleboard.org/getting-started#troubleshooting)
-* [Hardware documentation](http://beagleboard.org/getting-started#hardware)
-* [Projects of BeagleBoard](http://beagleboard.org/project)
+* [BeagleBoard Main Page](https://beagleboard.org/)
+* [Seeed Studio BeagleBone® Green info at BeagleBoard page](https://beagleboard.org/green)
+* [BeagleBoard Getting Started](https://beagleboard.org/getting-started)
+* [Troubleshooting](https://beagleboard.org/getting-started#troubleshooting)
+* [Hardware documentation](https://beagleboard.org/getting-started#hardware)
+* [Projects of BeagleBoard](https://beagleboard.org/project)
 * [CE certification of Seeed Studio BeagleBone® Green](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/CE.zip)
 * [FCC certification of Seeed Studio BeagleBone® Green](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/FCC.zip)
 
@@ -403,5 +403,5 @@ There're many references to help you to get more information about the board.
 - **[PDF]** [Seeed Studio BeagleBone® Green Mechincal Drawing](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BBG-PCBA.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

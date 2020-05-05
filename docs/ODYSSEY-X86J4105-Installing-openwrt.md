@@ -2,7 +2,7 @@
 name: ODYSSEY - X86J4105
 category: ODYSSEY
 bzurl: https://www.seeedstudio.com/ODYSSEY-X86J4105800-p-4445.html
-wikiurl: http://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-openwrt/
+wikiurl: https://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-openwrt/
 sku: 102110399
 ---
 
@@ -118,4 +118,4 @@ Navigate to **`Network`** -> **`Interfaces`** and configure WAN settings for int
   *For further development, you can start downloading and deploying all sort of applications such as Ad block, port mirroring and etc! For more, please visit [OpenWrt](https://openwrt.org/).*
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

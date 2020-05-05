@@ -20,93 +20,93 @@ Welcome to the world of electronic creation! Sidekick Advanced Kit is an Arduino
 ![](https://files.seeedstudio.com/wiki/Sidekick_Advanced_Kit/img/SKP-1.jpg)
 
 
-*   [1. Blink](http://arduino.cc/en/Tutorial/Blink)
+*   [1. Blink](https://arduino.cc/en/Tutorial/Blink)
 
-*   [2. DigitalReadSerial](http://arduino.cc/en/Tutorial/DigitalReadSerial)
+*   [2. DigitalReadSerial](https://arduino.cc/en/Tutorial/DigitalReadSerial)
 
-*   [3. AnalogReadSerial](http://arduino.cc/en/Tutorial/AnalogReadSerial)
+*   [3. AnalogReadSerial](https://arduino.cc/en/Tutorial/AnalogReadSerial)
 
-*   [4. Fade](http://arduino.cc/en/Tutorial/Fade)
+*   [4. Fade](https://arduino.cc/en/Tutorial/Fade)
 
-*   [5. ReadAnalogVoltage](http://arduino.cc/en/Tutorial/ReadAnalogVoltage)
+*   [5. ReadAnalogVoltage](https://arduino.cc/en/Tutorial/ReadAnalogVoltage)
 
 ##   Digital
 
 
 ![](https://files.seeedstudio.com/wiki/Sidekick_Advanced_Kit/img/SKP-2.jpg)
 
-*   [6. BlinkWithoutDelay](http://arduino.cc/en/Tutorial/BlinkWithoutDelay)
+*   [6. BlinkWithoutDelay](https://arduino.cc/en/Tutorial/BlinkWithoutDelay)
 
-*   [7. Button](http://arduino.cc/en/Tutorial/Button)
+*   [7. Button](https://arduino.cc/en/Tutorial/Button)
 
-*   [8. Debounce](http://arduino.cc/en/Tutorial/Debounce)
+*   [8. Debounce](https://arduino.cc/en/Tutorial/Debounce)
 
-*   [9. ButtonStateChange](http://arduino.cc/en/Tutorial/ButtonStateChange)
+*   [9. ButtonStateChange](https://arduino.cc/en/Tutorial/ButtonStateChange)
 
-*   [10. Tone](http://arduino.cc/en/Tutorial/Tone)
+*   [10. Tone](https://arduino.cc/en/Tutorial/Tone)
 
-*   [11. Tone Pitch Follower](http://arduino.cc/en/Tutorial/Tone2)
+*   [11. Tone Pitch Follower](https://arduino.cc/en/Tutorial/Tone2)
 
-*   [12. Tone Keyboard](http://arduino.cc/en/Tutorial/Tone3)
+*   [12. Tone Keyboard](https://arduino.cc/en/Tutorial/Tone3)
 
-*   [13. Tone Multiple](http://arduino.cc/en/Tutorial/Tone4)
+*   [13. Tone Multiple](https://arduino.cc/en/Tutorial/Tone4)
 
 ##   Analog
 
 ![](https://files.seeedstudio.com/wiki/Sidekick_Advanced_Kit/img/SKP-3.jpg)
 
-*   [14. AnalogInOutSerial](http://arduino.cc/en/Tutorial/AnalogInOutSerial)
+*   [14. AnalogInOutSerial](https://arduino.cc/en/Tutorial/AnalogInOutSerial)
 
-*   [15. AnalogInput](http://arduino.cc/en/Tutorial/AnalogInput)
+*   [15. AnalogInput](https://arduino.cc/en/Tutorial/AnalogInput)
 
-*   [16. AnalogWriteMega](http://arduino.cc/en/Tutorial/AnalogWriteMega)
+*   [16. AnalogWriteMega](https://arduino.cc/en/Tutorial/AnalogWriteMega)
 
-*   [17. Calibration](http://arduino.cc/en/Tutorial/Calibration)
+*   [17. Calibration](https://arduino.cc/en/Tutorial/Calibration)
 
-*   [18. Smoothing](http://arduino.cc/en/Tutorial/Smoothing)
+*   [18. Smoothing](https://arduino.cc/en/Tutorial/Smoothing)
 
 ##   Display
 
 ![](https://files.seeedstudio.com/wiki/Sidekick_Advanced_Kit/img/SKP-4.jpg)
 
 
-*   [19. LED Bar](http://arduino.cc/en/Tutorial/BarGraph)
+*   [19. LED Bar](https://arduino.cc/en/Tutorial/BarGraph)
 
-*   [20. Row Column Scanning](http://arduino.cc/en/Tutorial/RowColumnScanning)
+*   [20. Row Column Scanning](https://arduino.cc/en/Tutorial/RowColumnScanning)
 
 ##   LiquidCrystal
 
 ![](https://files.seeedstudio.com/wiki/Sidekick_Advanced_Kit/img/SKP-5.jpg)
 
 
-*   [21. Hello World!](http://arduino.cc/en/Tutorial/LiquidCrystal)
+*   [21. Hello World!](https://arduino.cc/en/Tutorial/LiquidCrystal)
 
-*   [22. Blink](http://arduino.cc/en/Tutorial/LiquidCrystalBlink)
+*   [22. Blink](https://arduino.cc/en/Tutorial/LiquidCrystalBlink)
 
-*   [23. Cursor](http://arduino.cc/en/Tutorial/LiquidCrystalCursor)
+*   [23. Cursor](https://arduino.cc/en/Tutorial/LiquidCrystalCursor)
 
-*   [24. Display](http://arduino.cc/en/Tutorial/LiquidCrystalDisplay)
+*   [24. Display](https://arduino.cc/en/Tutorial/LiquidCrystalDisplay)
 
-*   [25. Text Direction](http://arduino.cc/en/Tutorial/LiquidCrystalTextDirection)
+*   [25. Text Direction](https://arduino.cc/en/Tutorial/LiquidCrystalTextDirection)
 
-*   [26. Scroll](http://arduino.cc/en/Tutorial/LiquidCrystalScroll)
+*   [26. Scroll](https://arduino.cc/en/Tutorial/LiquidCrystalScroll)
 
-*   [27. Serial Input](http://arduino.cc/en/Tutorial/LiquidCrystalSerial)
+*   [27. Serial Input](https://arduino.cc/en/Tutorial/LiquidCrystalSerial)
 
-*   [28. Set Cursor](http://arduino.cc/en/Tutorial/LiquidCrystalSetCursor)
+*   [28. Set Cursor](https://arduino.cc/en/Tutorial/LiquidCrystalSetCursor)
 
-*   [29. Autoscroll](http://arduino.cc/en/Tutorial/LiquidCrystalAutoscroll)
+*   [29. Autoscroll](https://arduino.cc/en/Tutorial/LiquidCrystalAutoscroll)
 
 ##   Motor
 
 ![](https://files.seeedstudio.com/wiki/Sidekick_Advanced_Kit/img/SKP-6.jpg)
 
 
-*   [30. Servo Knob](http://arduino.cc/en/Tutorial/Knob)
+*   [30. Servo Knob](https://arduino.cc/en/Tutorial/Knob)
 
-*   [31. Servo Sweep](http://arduino.cc/en/Tutorial/Sweep)
+*   [31. Servo Sweep](https://arduino.cc/en/Tutorial/Sweep)
 
-*   [32. Stepper Knob](http://arduino.cc/en/Tutorial/MotorKnob)
+*   [32. Stepper Knob](https://arduino.cc/en/Tutorial/MotorKnob)
 
 ##   Sensor
 
@@ -127,7 +127,7 @@ Welcome to the world of electronic creation! Sidekick Advanced Kit is an Arduino
 
 ##   Reference
 
-*   [Arduino Tutorial](http://arduino.cc/en/Tutorial/HomePage)
+*   [Arduino Tutorial](https://arduino.cc/en/Tutorial/HomePage)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

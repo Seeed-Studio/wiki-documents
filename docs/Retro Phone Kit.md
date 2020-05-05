@@ -34,7 +34,7 @@ The main board of this kit is Xadow-Key Board, which contains a screen and a pus
 
 **Rephone Core 2G-Atmel32u4**
 
-For more info about this module please check on [Rephone Core 2G-Atmel32u4](http://wiki.seeed.cc/RePhone_core_2G-Atmel32u4/)
+For more info about this module please check on [Rephone Core 2G-Atmel32u4](https://wiki.seeedstudio.com/RePhone_core_2G-Atmel32u4/)
 
 |Item|	Value|
 |---|---|
@@ -66,7 +66,7 @@ The Rephone Core 2G-Atmel32u4  integrates a Xadow 36 Pin connector and a Xadow 1
 
 **RePhone_Menu_GSM**
 
-Step1. Install the Rephone Core 2G-Atmel32u4, please click [here](http://wiki.seeed.cc/RePhone_core_2G-Atmel32u4/#arduino-ide) to see the full instruction .
+Step1. Install the Rephone Core 2G-Atmel32u4, please click [here](https://wiki.seeedstudio.com/RePhone_core_2G-Atmel32u4/#arduino-ide) to see the full instruction .
 
 Step2. Find the example and upload to your board
 
@@ -99,11 +99,11 @@ Then you wil receive a phone call from the Retro Phone.
 
 ##  RePhone Community
 ---
-[![](https://files.seeedstudio.com/wiki/RePhone_Lumi_Kit/img/RePhone_Community-2.png)](http://forum.seeedstudio.com/viewforum.php?f=71&amp;sid=b70f8138c89becf7701260bb41faf9f4)
+[![](https://files.seeedstudio.com/wiki/RePhone_Lumi_Kit/img/RePhone_Community-2.png)](https://forum.seeedstudio.com/viewforum.php?f=71&amp;sid=b70f8138c89becf7701260bb41faf9f4)
 
 We’ve been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the RePhone Community.
 
-Now join us in the [RePhone Community](http://forum.seeedstudio.com/viewforum.php?f=71&amp;sid=b70f8138c89becf7701260bb41faf9f4)! Together we seek answers, make interesting stuff, care about each other, and share our experiences.
+Now join us in the [RePhone Community](https://forum.seeedstudio.com/viewforum.php?f=71&amp;sid=b70f8138c89becf7701260bb41faf9f4)! Together we seek answers, make interesting stuff, care about each other, and share our experiences.
 
 
 ## RePhone core 2G Atmel32u4 Schematic Online Viewer
@@ -128,4 +128,4 @@ Now join us in the [RePhone Community](http://forum.seeedstudio.com/viewforum.ph
 - [AT Command of SIM800](https://files.seeedstudio.com/wiki/Retro_Phone_Kit/res/SIM800_AT.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

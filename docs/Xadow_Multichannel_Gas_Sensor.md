@@ -9,7 +9,7 @@ sku:  101020085
 ---
 ![](https://files.seeedstudio.com/wiki/Xadow_Multichannel_Gas_Sensor/img/Xadow_-_Multichannel_Gas_Sensor_photo.jpg)
 
-Xadow – Multichannel Gas sensor is a very small sensor board with a compact MOS sensor, MiCS-6814.The MiCS-6814 is a robust MEMS sensor for the detection of pollution from automobile exhausts and foragricultural/industrial odors. This sensor board has two standard Xadow interfaces. It is very easy to use with [Xadow - Main Board.](http://wiki.seeedstudio.com/Xadow_Main_Board)
+Xadow – Multichannel Gas sensor is a very small sensor board with a compact MOS sensor, MiCS-6814.The MiCS-6814 is a robust MEMS sensor for the detection of pollution from automobile exhausts and foragricultural/industrial odors. This sensor board has two standard Xadow interfaces. It is very easy to use with [Xadow - Main Board.](https://wiki.seeedstudio.com/Xadow_Main_Board)
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-Multichannel-Gas-Sensor-p-2459.html)
 
@@ -73,14 +73,14 @@ Xadow – Multichannel Gas sensor is a very small sensor board with a compact MO
 
 ## Demonstration
 
-You can get start with [Xadow - Main Board](http://wiki.seeedstudio.com/Xadow_Main_Board)
+You can get start with [Xadow - Main Board](https://wiki.seeedstudio.com/Xadow_Main_Board)
 
 **Hardware Installation: **
 
 ![](https://files.seeedstudio.com/wiki/Xadow_Multichannel_Gas_Sensor/img/Xadow_-_Mutichannel_Gas_Sensor_connect_to_Xadow.JPG)
 
-1) Connect Xadow - Multichannel Gas Sensor to [Xadow - Main Board](http://wiki.seeedstudio.com/Xadow_Main_Board). Do not forget to install Xadow
-Driver. Note: when connect Xadow - Multichannel Gas Sensor to [Xadow - Main Board](http://wiki.seeedstudio.com/Xadow_Main_Board), you should concern aboutthe connection direction. The connection method is that the unfilled corner of one xadow moduleneed to connect to the right angle of another module(see four corners of each xadow module).
+1) Connect Xadow - Multichannel Gas Sensor to [Xadow - Main Board](https://wiki.seeedstudio.com/Xadow_Main_Board). Do not forget to install Xadow
+Driver. Note: when connect Xadow - Multichannel Gas Sensor to [Xadow - Main Board](https://wiki.seeedstudio.com/Xadow_Main_Board), you should concern aboutthe connection direction. The connection method is that the unfilled corner of one xadow moduleneed to connect to the right angle of another module(see four corners of each xadow module).
 
 Upload Code:
 
@@ -163,7 +163,7 @@ void loop()
 ```
 
 4) Upload the code. Remeber to select Seeeduino Xadow from the Tools | Board menu of the
-Arduino environment, and select the correct serial port [Xadow - Main Board](http://wiki.seeedstudio.com/Xadow_Main_Board) is using. Or you could select Arduino Leonardo to instead of it.
+Arduino environment, and select the correct serial port [Xadow - Main Board](https://wiki.seeedstudio.com/Xadow_Main_Board) is using. Or you could select Arduino Leonardo to instead of it.
 
 By opening the serial monitor, you can see the raw data read from sensor.
 
@@ -184,4 +184,4 @@ By opening the serial monitor, you can see the raw data read from sensor.
 - [Arduino Library & Grove/Xadow firmware](https://github.com/Seeed-Studio/Mutichannel_Gas_Sensor)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

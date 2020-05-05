@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-Q-Touch-Sensor-p-1854.html
 oldwikiname: Grove_-_Q_Touch_Sensor
 prodimagename: Grove-Q_Touch_Sensor.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/Grove-Q Touch Sensor.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/Grove-Q Touch Sensor.jpg
 surveyurl: https://www.research.net/r/Grove-Q_Touch_Sensor
 sku: 101020069
 tags: grove_i2c, io_3v3, io_5v, plat_duino
@@ -14,7 +14,7 @@ tags: grove_i2c, io_3v3, io_5v, plat_duino
 
 The Q Touch Sensor is a high sensitivity and high noise immunity touch input device. It is based on Atmel AT42QT1070. The AT42QT1070 modulates its bursts in a spread-spectrum fashion in order to heavily suppress the effects of external noise, and to suppress RF emissions. The QT1070 uses a dual-pulse method of acquisition. This provides greater noise immunity and eliminates the need for external sampling capacitors, allowing touch sensing using a single pin.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Q-Touch-Sensor-p-1854.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-Q-Touch-Sensor-p-1854.html)
 
 Specifications
 --------------
@@ -26,7 +26,7 @@ Specifications
 -   I2C Address: 0x1B
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
     
 Platforms Supported
 -------------------
@@ -146,7 +146,7 @@ Resources
 -   [AT42QT107 datasheet](https://files.seeedstudio.com/wiki/Grove-Q_Touch_Sensor/res/AT42QT1070-MMH.pdf)
 -   [How to detect finger touch?](/How_to_detect_finger_touch?)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Q_Touch_Sensor -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Q_Touch_Sensor -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

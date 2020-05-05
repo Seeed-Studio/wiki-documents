@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-Sound-Recorder-p-904.html
 oldwikiname: Grove_-_Sound_Recorder
 prodimagename: Grove-Sound_Recorder.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/Sound Recorder.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/Sound Recorder.jpg
 surveyurl: https://www.research.net/r/Grove-Sound_Recorder
 sku: 107020004
 ---
@@ -27,7 +27,7 @@ Features
 -   Sample rate and duration changeable by replacing a single resistor.
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
     
 Application Ideas
@@ -316,7 +316,7 @@ Resources
 
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Sound_Recorder -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Sound_Recorder -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

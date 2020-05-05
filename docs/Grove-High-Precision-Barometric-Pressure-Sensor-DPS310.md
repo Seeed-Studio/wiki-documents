@@ -14,7 +14,7 @@ Barometer detecting is very useful in enviromental sensing or altitude measuring
 
 ## BMP280 vs. BME280 vs. DPS310
 
-We've already released the [Grove - Barometer Sensor (BMP280)](http://wiki.seeedstudio.com/Grove-Barometer_Sensor-BMP280/) and [Grove - Barometer Sensor(BME280)](http://wiki.seeedstudio.com/Grove-Barometer_Sensor-BME280/), let us show you how powerful Grove-DPS310 is through the comparison of the table below.
+We've already released the [Grove - Barometer Sensor (BMP280)](https://wiki.seeedstudio.com/Grove-Barometer_Sensor-BMP280/) and [Grove - Barometer Sensor(BME280)](https://wiki.seeedstudio.com/Grove-Barometer_Sensor-BME280/), let us show you how powerful Grove-DPS310 is through the comparison of the table below.
 
 
 | ITEM | Grove-BMP280 | Grove-BME280 | Grove-DPS310 |
@@ -64,7 +64,7 @@ We've already released the [Grove - Barometer Sensor (BMP280)](http://wiki.seeed
 
 !!!Tip
  
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 
 
@@ -100,7 +100,7 @@ We've already released the [Grove - Barometer Sensor (BMP280)](http://wiki.seeed
 
 !!!Note
 
-    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
 
 
@@ -117,7 +117,7 @@ We've already released the [Grove - Barometer Sensor (BMP280)](http://wiki.seeed
 | Seeeduino V4.2 |Base Shield| High Precision Barometric Pressure Sensor |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-High-Precision-Barometer-Sensor-DPS310/img/Grove-High-Precision-Barometer-Sensor-DPS310-thumbnail.jpg)|
-|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-High-Precision-Barometer-Sensor-DPS310-p-4397.html)|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-High-Precision-Barometer-Sensor-DPS310-p-4397.html)|
 
 
 
@@ -141,14 +141,14 @@ We've already released the [Grove - Barometer Sensor (BMP280)](http://wiki.seeed
 
 !!!Attention
 
-    If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+    If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
 
 
 - **Step 1.** Download the [DPS310-Pressure-Sensor](https://github.com/Infineon/DPS310-Pressure-Sensor.git) Library from Github.
 
 
-- **Step 2.** Refer to [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 
 - **Step 3.** Copy the code into Arduino IDE and upload.
@@ -232,7 +232,7 @@ void loop()
 *********************************************************************************************************/
 ```
 
-- **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 
 - **Step 5.** Open the serial monitor. If every thing goes well and if you simulate a fall, or drop it to the ground, it will tell you if you need help.

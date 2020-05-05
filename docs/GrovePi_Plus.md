@@ -9,7 +9,7 @@ sku:     103010002
 ---
 ![](https://files.seeedstudio.com/wiki/GrovePi_Plus/img/110060049%2010_02.jpg)
 
-[GrovePi](http://www.dexterindustries.com/GrovePi/) is an add-on board that brings [Grove Sensors](/Grove_System "Grove System") to the [Raspberry Pi](http://www.seeedstudio.com/depot/s/Raspberry%2520Pi.html?search_in_description=0). As a new version of [GrovePi](http://www.seeedstudio.com/depot/GrovePi-p-1672.html).
+[GrovePi](http://www.dexterindustries.com/GrovePi/) is an add-on board that brings [Grove Sensors](/Grove_System "Grove System") to the [Raspberry Pi](https://www.seeedstudio.com/depot/s/Raspberry%2520Pi.html?search_in_description=0). As a new version of [GrovePi](https://www.seeedstudio.com/depot/GrovePi-p-1672.html).
 It adds support for the newly RaspberryPi Model B+ and Model A+.
 There are three mounting holes can perfect match all version of Raspberry Pi. Camera cable outlet hole.
 It also improves the voltage level converting sub circuits.
@@ -42,7 +42,7 @@ If you want to know more about how it works, you can find all the design files i
 
 **Grove Base Hat for Raspberry Pi Vs. GrovePi+**
 
-| Parameter                   | [Grove Base Hat for Raspberry Pi](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/)                   | [GrovePi+](http://wiki.seeedstudio.com/GrovePi_Plus/)                                                                            |
+| Parameter                   | [Grove Base Hat for Raspberry Pi](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/)                   | [GrovePi+](https://wiki.seeedstudio.com/GrovePi_Plus/)                                                                            |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
 | Working Voltage             | 3.3V                                                                                                              | 5V                                                                                                                               |
 | MCU                         | STM32F030F4P6                                                                                                     | ATMEGA328P                                                                                                                       |
@@ -152,4 +152,4 @@ We have developed three simple projects to illustrate how the GrovePi works.
 -   **[Document]** [Setting_Up_Software_for_GrovePi](https://files.seeedstudio.com/wiki/GrovePi_Plus/res/Setting_Up_Software_for_GrovePi.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -102,7 +102,7 @@ Sidekick includes loose components, wires, and a breadboard to compliment your L
 <td> 1 PCS
 </td></tr>
 <tr>
-<td>7 Segment Single Digit Display (SA39-11SRWA – [datasheet](http://energia.nu/wordpress/wp-content/uploads/2015/07/SevenSegmentDS.pdf))</td>
+<td>7 Segment Single Digit Display (SA39-11SRWA – [datasheet](https://energia.nu/wordpress/wp-content/uploads/2015/07/SevenSegmentDS.pdf))</td>
 <td> 1 PCS
 </td></tr>
 <tr>
@@ -142,29 +142,29 @@ The code is also available on the example pages below for copy and paste into yo
 
 **Basic Examples**
 
-Example 00: [Blinking LED (Output)](http://energia.nu/guide/sidekick/sidekick_blink/)
+Example 00: [Blinking LED (Output)](https://energia.nu/guide/sidekick/sidekick_blink/)
 
-Example 01: [Fade RGB LED (PWM)](http://energia.nu/guide/sidekick/sidekick_fadergbled/)
+Example 01: [Fade RGB LED (PWM)](https://energia.nu/guide/sidekick/sidekick_fadergbled/)
 
-Example 02: [Push Button (Input)](http://energia.nu/guide/sidekick/sidekick_pushbutton/)
+Example 02: [Push Button (Input)](https://energia.nu/guide/sidekick/sidekick_pushbutton/)
 
-Example 03: [Multiple LED (Many Outputs)](http://energia.nu/guide/sidekick/sidekick_blinkmultiple/)
+Example 03: [Multiple LED (Many Outputs)](https://energia.nu/guide/sidekick/sidekick_blinkmultiple/)
 
-Example 04: [Shift Register (Integrated Circuit)](http://energia.nu/guide/sidekick/sidekick_shiftregister/)
+Example 04: [Shift Register (Integrated Circuit)](https://energia.nu/guide/sidekick/sidekick_shiftregister/)
 
-Example 05: [Piezo Buzzer (Sound)](http://energia.nu/guide/sidekick/sidekick_piezobuzzer/)
+Example 05: [Piezo Buzzer (Sound)](https://energia.nu/guide/sidekick/sidekick_piezobuzzer/)
 
-Example 06: [Potentiometer (Variable Resistor)](http://energia.nu/guide/sidekick/sidekick_potentiometer/)
+Example 06: [Potentiometer (Variable Resistor)](https://energia.nu/guide/sidekick/sidekick_potentiometer/)
 
-Example 07: [Photoresistor (Light Sensor)](http://energia.nu/guide/sidekick/sidekick_photoresistor/)
+Example 07: [Photoresistor (Light Sensor)](https://energia.nu/guide/sidekick/sidekick_photoresistor/)
 
-Example 08: [Spin the Motor (Transistor)](http://energia.nu/guide/sidekick/sidekick_spinmotor/)
+Example 08: [Spin the Motor (Transistor)](https://energia.nu/guide/sidekick/sidekick_spinmotor/)
 
-Example 08B: [Switching Voltage (Transistor)](http://energia.nu/guide/sidekick/sidekick_switchvoltage/)
+Example 08B: [Switching Voltage (Transistor)](https://energia.nu/guide/sidekick/sidekick_switchvoltage/)
 
-Example 09: [Temperature (Thermistor and Temp Sensor)](http://energia.nu/guide/sidekick/sidekick_temperature/)
+Example 09: [Temperature (Thermistor and Temp Sensor)](https://energia.nu/guide/sidekick/sidekick_temperature/)
 
-Example 10: [7 Segment Display (Digital Display)](http://energia.nu/guide/sidekick/sidekick_sevensegmentdisplay/)
+Example 10: [7 Segment Display (Digital Display)](https://energia.nu/guide/sidekick/sidekick_sevensegmentdisplay/)
 
 **Advanced Examples**
 
@@ -176,29 +176,29 @@ Example: Potentiometer Dial (Input and Display)
 
 Example: Photoresistor Fade (Input and Output)
 
-Example: [Shift Register 2 (IC and Display)](http://energia.nu/guide/sidekick/sidekick_shiftregister2/)
+Example: [Shift Register 2 (IC and Display)](https://energia.nu/guide/sidekick/sidekick_shiftregister2/)
 
-Example: [Shift Register 3 (IC)](http://energia.nu/guide/sidekick/sidekick_shiftregister3/)
+Example: [Shift Register 3 (IC)](https://energia.nu/guide/sidekick/sidekick_shiftregister3/)
 
-Example: [Shift Register 4 (Shift In IC)](http://energia.nu/guide/sidekick/sidekick_shiftregister4/)
+Example: [Shift Register 4 (Shift In IC)](https://energia.nu/guide/sidekick/sidekick_shiftregister4/)
 
-Example: [Spin the Motor 2 (Motor Driver)](http://energia.nu/guide/sidekick/sidekick_spinmotor2/)
+Example: [Spin the Motor 2 (Motor Driver)](https://energia.nu/guide/sidekick/sidekick_spinmotor2/)
 
-Example: [Spin the Servo (Servo)](http://energia.nu/guide/sidekick/sidekick_spinservo/)
+Example: [Spin the Servo (Servo)](https://energia.nu/guide/sidekick/sidekick_spinservo/)
 
-Example: [DAC (Digital to Analog IC)](http://energia.nu/guide/sidekick/sidekick_dac/)
+Example: [DAC (Digital to Analog IC)](https://energia.nu/guide/sidekick/sidekick_dac/)
 
-Example: [555 Timer (IC and Switch)](http://energia.nu/guide/sidekick/sidekick_555timer/)
+Example: [555 Timer (IC and Switch)](https://energia.nu/guide/sidekick/sidekick_555timer/)
 
 Example: IR Emitter and Receiver (Wireless)
 
 [Energia Core Tutorials](http://www.energia.nu/guide#tutorials)
 
-[Mix Sidekick with Grove Starter Kit for LaunchPad](http://energia.nu/guide/grove-starter-kit/)
+[Mix Sidekick with Grove Starter Kit for LaunchPad](https://energia.nu/guide/grove-starter-kit/)
 
-[**More examples**](http://energia.nu/guide/#tutorials)
+[**More examples**](https://energia.nu/guide/#tutorials)
 
 <sup>*</sup>For these examples, it may require additional hardware beyond Sidekick Basic Kit for TI LaunchPad™
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

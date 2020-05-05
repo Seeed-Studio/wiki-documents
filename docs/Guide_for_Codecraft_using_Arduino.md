@@ -44,7 +44,7 @@ Output Boolean Blocks are hexagonal shaped blocks that checks if a condition is 
 
 ### Compatible Grove
 
-Please refer to the [CodeCraft Grove Compatible List](http://wiki.seeedstudio.com/Codecraft_Grove_Compatible_List/) to confirm if your Grove is supported.
+Please refer to the [CodeCraft Grove Compatible List](https://wiki.seeedstudio.com/Codecraft_Grove_Compatible_List/) to confirm if your Grove is supported.
 
 ### Basic Tutorial
 

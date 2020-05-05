@@ -88,7 +88,7 @@ Once you have it wired up you will need to upload the following code to your See
 ```c
 // reading liquid flow rate using Seeeduino and Water Flow Sensor from Seeedstudio.com
 // Code adapted by Charles Gantt from PC Fan RPM code written by Crenn @thebestcasescenario.com
-// http:/themakersworkbench.com http://thebestcasescenario.com http://seeedstudio.com
+// http:/themakersworkbench.com http://thebestcasescenario.com https://www.seeedstudio.com
 
 volatile int NbTopsFan; //measuring the rising edges of the signal
 int Calc;
@@ -149,7 +149,7 @@ Pulse frequency (Hz) in Horizontal Test= 7.5Q, Q is flow rate in L/min. (Results
 
 It's a pity that we don't have any demo about G1/2 Water Flow Sensor in the [Recipe](https://community.seeedstudio.com/projects.html#recipe) yet.
 
-Here we introduce some projects about [Grove-Water Sensor](http://www.seeedstudio.com/depot/Grove-Water-Sensor-p-748.html).
+Here we introduce some projects about [Grove-Water Sensor](https://www.seeedstudio.com/depot/Grove-Water-Sensor-p-748.html).
 
 **What is Grove - Water Sensor**
 
@@ -177,7 +177,7 @@ How it works:
 
 [I want to make it.](https://community.seeedstudio.com/project_detail.html?id=103)
 
-[More Awesome Projects by Water Sensor](http://www.seeedstudio.com/recipe/index.php?query=water+sensor)
+[More Awesome Projects by Water Sensor](https://www.seeedstudio.com/recipe/index.php?query=water+sensor)
 
 **Share Your Awesome Projects with Us**
 
@@ -220,4 +220,4 @@ Here is the Sensors FAQ, people can go here to find questions and answers for th
 - [datasheet for the material](http://garden.seeedstudio.com/images/4/4e/YEE70G30HSLNC..pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

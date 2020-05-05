@@ -4,7 +4,7 @@ category: BeagleBone®
 bzurl: https://www.seeedstudio.com/5-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2642.html
 oldwikiname: BeagleBone_Green_HDMI_Cape
 prodimagename: BeagleBone_Green_HDMI_Cape.jpg
-wikiurl: http://wiki.seeedstudio.com/cn/BeagleBone_Green_HDMI_Cape
+wikiurl: https://wiki.seeedstudio.com/cn/BeagleBone_Green_HDMI_Cape
 tags: plat_bbg
 sku: 104990262
 ---
@@ -90,7 +90,7 @@ Use it with BeagleBone® to display anything you want.
 
 ### Preparation
 
-- BeagleBone® Green board or BeagleBone® black board(with OS [installation](http://beagleboard.org/getting-started)) × 1.
+- BeagleBone® Green board or BeagleBone® black board(with OS [installation](https://beagleboard.org/getting-started)) × 1.
 - USB cables (type A to micro type B) × 2.
 
 ### Hardware Connection
@@ -143,5 +143,5 @@ For display devices using BeagleBone® HDMI, uncomment `disable_uboot_overlay_vi
 ## Resources
 ---------
 
-- **[Schematic]** [Schematic files](http://statics3.seeedstudio.com/assets/file/bazaar/product/5INCH_BBG_00A2_SCH.pdf)
+- **[Schematic]** [Schematic files](https://statics3.seeedstudio.com/assets/file/bazaar/product/5INCH_BBG_00A2_SCH.pdf)
 

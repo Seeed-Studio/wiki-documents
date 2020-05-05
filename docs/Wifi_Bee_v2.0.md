@@ -41,7 +41,7 @@ Here's all the hardware needed.
 
 *   1) Wifi Bee
 
-*   2) An adaptor，such as [SBee](http://www.seeedstudio.com/depot/xbee-shield-v20-p-1375.html?cPath=98_16Uart),  [Grove -Xbee Carrier](http://www.seeedstudio.com/depot/grove-xbee-carrier-p-905.html?cPath=98_16)， [Xbee Shield](http://www.seeedstudio.com/depot/xbee-shield-v20-p-1375.html?cPath=98_16)
+*   2) An adaptor，such as [SBee](https://www.seeedstudio.com/depot/xbee-shield-v20-p-1375.html?cPath=98_16Uart),  [Grove -Xbee Carrier](https://www.seeedstudio.com/depot/grove-xbee-carrier-p-905.html?cPath=98_16)， [Xbee Shield](https://www.seeedstudio.com/depot/xbee-shield-v20-p-1375.html?cPath=98_16)
 
 *   3) Mini USB cable
 
@@ -148,4 +148,4 @@ Here we select [TCPUDPbg](https://files.seeedstudio.com/wiki/Wifi_Bee_v2.0/res/T
 *   [Antenna Datasheet](https://files.seeedstudio.com/wiki/Wifi_Bee_v2.0/res/Antenna_Datasheet.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -6,13 +6,13 @@ With the help of Grove, you are able prototype much quicker with simpler connect
 
 ## Wio Terminal With Grove - TDS Sensor
 
-This section introduces how to use [Grove - TDS Sensor](http://wiki.seeedstudio.com/Grove-TDS-Sensor/) with Wio Terminal to display real time TDS readings on a line chart!
+This section introduces how to use [Grove - TDS Sensor](https://wiki.seeedstudio.com/Grove-TDS-Sensor/) with Wio Terminal to display real time TDS readings on a line chart!
 
 ### Libraries Installation
 
-1. Install the [LCD](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/) library.
+1. Install the [LCD](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/) library.
 
-2. Install the [Linechart](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Linecharts/) library.
+2. Install the [Linechart](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Linecharts/) library.
 
 ### Complete Code
 
@@ -185,13 +185,13 @@ void loop() {
 
 ## Wio Terminal With Grove - Temperature Sensor
 
-This section introduces how to use [Grove - Temperature Sensor](http://wiki.seeedstudio.com/Grove-Temperature_Sensor_V1.2/) with Wio Terminal to display real-time surrounding temperature readings.
+This section introduces how to use [Grove - Temperature Sensor](https://wiki.seeedstudio.com/Grove-Temperature_Sensor_V1.2/) with Wio Terminal to display real-time surrounding temperature readings.
 
 ### Libraries Installation
 
-1. Install the [LCD](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/) library.
+1. Install the [LCD](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/) library.
 
-2. Install the [Linechart](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Histogram/) library.
+2. Install the [Linechart](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Histogram/) library.
 
 ### Complete Code
 

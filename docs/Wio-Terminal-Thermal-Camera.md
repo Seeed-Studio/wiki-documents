@@ -26,7 +26,7 @@ This demo is inspired by [Kris Kasprzak's video](https://www.youtube.com/watch?v
 
 ## Arduino libraries needed
 
-- Install the LCD screen Library `Seeed_Arduino_LCD`, please visit [Wio Terminal LCD](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/) for more information.
+- Install the LCD screen Library `Seeed_Arduino_LCD`, please visit [Wio Terminal LCD](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/) for more information.
 
 - Visit the [Seeed_AMG8833](https://github.com/Seeed-Studio/Seeed_AMG8833) repositories and download the entire repo to your local drive.
 

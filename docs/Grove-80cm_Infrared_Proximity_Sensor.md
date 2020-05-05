@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-80cm-Infrared-Proximity-Sensor-p-788.html
 oldwikiname: Grove_-_80cm_Infrared_Proximity_Sensor
 prodimagename: Image_of_PSD.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/Proximity.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/Proximity.jpg
 surveyurl: https://www.research.net/r/Grove-80cm_Infrared_Proximity_Sensor
 sku: 101020042
 tags: grove_analog, io_3v3, io_5v, plat_duino，plat_pi
@@ -14,7 +14,7 @@ tags: grove_analog, io_3v3, io_5v, plat_duino，plat_pi
 
 The 80cm Infrared Proximity Sensor is a General Purpose Type Distance Measuring Sensor. This sensor SharpGP2Y0A21YK, boasts a small package and very low current consumption, takes a continuous distance reading and returns a corresponding analog voltage with a range of 10cm (4") to 80cm (30"). Can be used in TVs, personal computers, cars and so on.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-80cm-Infrared-Proximity-Sensor-p-788.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-80cm-Infrared-Proximity-Sensor-p-788.html)
 
 
 Features
@@ -25,7 +25,7 @@ Features
 -   Grove Interface
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 Application Ideas
 -----------------
@@ -252,7 +252,7 @@ Resources
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/31926/arduino101-ble-autonomous-rover-2cb19f/embed' width='350'></iframe>
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_80cm_Infrared_Proximity_Sensor -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_80cm_Infrared_Proximity_Sensor -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

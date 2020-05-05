@@ -9,7 +9,7 @@ sku:  110060026
 ---
 ![](https://files.seeedstudio.com/wiki/Grove-Mixer_Pack_V2/img/U8GUZNb9TVZ14lLRW6ialXEV.jpg)
 
-The [Grove - Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) is a stand-alone, Lego-like electronics kit that consists of 13 select Grove modules from the [ Grove System](/Grove_System "GROVE System") developed by [Seeed Studio](http://www.seeedstudio.com/depot/). These mini-modules can be used as building blocks to create electronic circuits and prototypes quite rapidly without necessarily using a Microcontroller board such as a [Seeeduino](/Seeeduino "Seeeduino") or an [ Arduino](/Arduino "Main Page").
+The [Grove - Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) is a stand-alone, Lego-like electronics kit that consists of 13 select Grove modules from the [ Grove System](/Grove_System "GROVE System") developed by [Seeed Studio](https://www.seeedstudio.com/depot/). These mini-modules can be used as building blocks to create electronic circuits and prototypes quite rapidly without necessarily using a Microcontroller board such as a [Seeeduino](/Seeeduino "Seeeduino") or an [ Arduino](/Arduino "Main Page").
 
 The 13 Grove modules included are a combination of sensor modules, actuators, logic and power modules that are extremely easy to use and fun to work with. Within minutes, you can design new circuits and assemble functional prototypes.
 
@@ -17,7 +17,7 @@ By connecting different input and output modules, a variety of projects can be m
 
 These modules are small and colorful bits of electronics, and so much fun to play with for both children and adults alike.
 
-With the [Grove - Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14), you can easily learn the basic concepts of electronics, and also improve your practical ability to apply these concepts. This is the perfect way to let yourself into the wonderful world of electronics by working on your very own interactive projects.
+With the [Grove - Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14), you can easily learn the basic concepts of electronics, and also improve your practical ability to apply these concepts. This is the perfect way to let yourself into the wonderful world of electronics by working on your very own interactive projects.
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Mixer-Pack-V2-(Electronic-blocks%2Cwithout-Arduino%2Cplug-and-play-system)-p-1867.html)
 
@@ -77,16 +77,16 @@ Its pretty easy to build Grove circuits using the Grove modules in your Mixer Pa
 All circuits are built by combining the following four types of modules:
 
 <dl><dt>1. Power Modules
-</dt><dd> These supply power to the circuit. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) includes 1 Power Module - the [Grove - DC Jack Power](/Grove-DC_Jack_Power "Grove - DC Jack Power"). No matter what you are building, you will always need to use this one.
+</dt><dd> These supply power to the circuit. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) includes 1 Power Module - the [Grove - DC Jack Power](/Grove-DC_Jack_Power "Grove - DC Jack Power"). No matter what you are building, you will always need to use this one.
 
 </dd><dt>2. Input Modules
-</dt><dd> These are typically used to relay sensory inputs into the circuit. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 4 Input Modules - a light sensor, a sound sensor, a slide potentiometer and a momentary switch. Based on the inputs received from these modules from these modules, you can choose to trigger an action using an Output Module.
+</dt><dd> These are typically used to relay sensory inputs into the circuit. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 4 Input Modules - a light sensor, a sound sensor, a slide potentiometer and a momentary switch. Based on the inputs received from these modules from these modules, you can choose to trigger an action using an Output Module.
 
 </dd><dt>3. Output Modules
-</dt><dd> Triggers from the Input Modules can be translated to actions using Output Modules. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 5 Output Modules - an LED light, an LED String light, a sound recorder, a fan motor and a buzzer.
+</dt><dd> Triggers from the Input Modules can be translated to actions using Output Modules. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 5 Output Modules - an LED light, an LED String light, a sound recorder, a fan motor and a buzzer.
 
 </dd><dt>4. Logic Gates Modules
-</dt><dd> These are used in conjunction with Input Modules and can be used to enhance the logic for triggering a specific output. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 3 Logic Gates Modules - one each for AND, OR and NOT gate functions.
+</dt><dd> These are used in conjunction with Input Modules and can be used to enhance the logic for triggering a specific output. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 3 Logic Gates Modules - one each for AND, OR and NOT gate functions.
 </dd></dl>
 
 ### Building your first circuit
@@ -189,7 +189,7 @@ sku:  110060026
 ---
 ![](https://files.seeedstudio.com/wiki/Grove-Mixer_Pack_V2/img/U8GUZNb9TVZ14lLRW6ialXEV.jpg)
 
-The [Grove - Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) is a stand-alone, Lego-like electronics kit that consists of 13 select Grove modules from the [ Grove System](/Grove_System "GROVE System") developed by [Seeed Studio](http://www.seeedstudio.com/depot/). These mini-modules can be used as building blocks to create electronic circuits and prototypes quite rapidly without necessarily using a Microcontroller board such as a [Seeeduino](/Seeeduino "Seeeduino") or an [ Arduino](/Arduino "Main Page").
+The [Grove - Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) is a stand-alone, Lego-like electronics kit that consists of 13 select Grove modules from the [ Grove System](/Grove_System "GROVE System") developed by [Seeed Studio](https://www.seeedstudio.com/depot/). These mini-modules can be used as building blocks to create electronic circuits and prototypes quite rapidly without necessarily using a Microcontroller board such as a [Seeeduino](/Seeeduino "Seeeduino") or an [ Arduino](/Arduino "Main Page").
 
 The 13 Grove modules included are a combination of sensor modules, actuators, logic and power modules that are extremely easy to use and fun to work with. Within minutes, you can design new circuits and assemble functional prototypes.
 
@@ -197,7 +197,7 @@ By connecting different input and output modules, a variety of projects can be m
 
 These modules are small and colorful bits of electronics, and so much fun to play with for both children and adults alike.
 
-With the [Grove - Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14), you can easily learn the basic concepts of electronics, and also improve your practical ability to apply these concepts. This is the perfect way to let yourself into the wonderful world of electronics by working on your very own interactive projects.
+With the [Grove - Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14), you can easily learn the basic concepts of electronics, and also improve your practical ability to apply these concepts. This is the perfect way to let yourself into the wonderful world of electronics by working on your very own interactive projects.
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Mixer-Pack-V2-(Electronic-blocks%2Cwithout-Arduino%2Cplug-and-play-system)-p-1867.html)
 
@@ -257,16 +257,16 @@ Its pretty easy to build Grove circuits using the Grove modules in your Mixer Pa
 All circuits are built by combining the following four types of modules:
 
 <dl><dt>1. Power Modules
-</dt><dd> These supply power to the circuit. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) includes 1 Power Module - the [Grove - DC Jack Power](/Grove-DC_Jack_Power "Grove - DC Jack Power"). No matter what you are building, you will always need to use this one.
+</dt><dd> These supply power to the circuit. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) includes 1 Power Module - the [Grove - DC Jack Power](/Grove-DC_Jack_Power "Grove - DC Jack Power"). No matter what you are building, you will always need to use this one.
 
 </dd><dt>2. Input Modules
-</dt><dd> These are typically used to relay sensory inputs into the circuit. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 4 Input Modules - a light sensor, a sound sensor, a slide potentiometer and a momentary switch. Based on the inputs received from these modules from these modules, you can choose to trigger an action using an Output Module.
+</dt><dd> These are typically used to relay sensory inputs into the circuit. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 4 Input Modules - a light sensor, a sound sensor, a slide potentiometer and a momentary switch. Based on the inputs received from these modules from these modules, you can choose to trigger an action using an Output Module.
 
 </dd><dt>3. Output Modules
-</dt><dd> Triggers from the Input Modules can be translated to actions using Output Modules. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 5 Output Modules - an LED light, an LED String light, a sound recorder, a fan motor and a buzzer.
+</dt><dd> Triggers from the Input Modules can be translated to actions using Output Modules. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 5 Output Modules - an LED light, an LED String light, a sound recorder, a fan motor and a buzzer.
 
 </dd><dt>4. Logic Gates Modules
-</dt><dd> These are used in conjunction with Input Modules and can be used to enhance the logic for triggering a specific output. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 3 Logic Gates Modules - one each for AND, OR and NOT gate functions.
+</dt><dd> These are used in conjunction with Input Modules and can be used to enhance the logic for triggering a specific output. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 3 Logic Gates Modules - one each for AND, OR and NOT gate functions.
 </dd></dl>
 
 ### Building your first circuit
@@ -369,7 +369,7 @@ sku:  110060026
 ---
 ![](https://files.seeedstudio.com/wiki/Grove-Mixer_Pack_V2/img/U8GUZNb9TVZ14lLRW6ialXEV.jpg)
 
-The [Grove - Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) is a stand-alone, Lego-like electronics kit that consists of 13 select Grove modules from the [ Grove System](/Grove_System "GROVE System") developed by [Seeed Studio](http://www.seeedstudio.com/depot/). These mini-modules can be used as building blocks to create electronic circuits and prototypes quite rapidly without necessarily using a Microcontroller board such as a [Seeeduino](/Seeeduino "Seeeduino") or an [ Arduino](/Arduino "Main Page").
+The [Grove - Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) is a stand-alone, Lego-like electronics kit that consists of 13 select Grove modules from the [ Grove System](/Grove_System "GROVE System") developed by [Seeed Studio](https://www.seeedstudio.com/depot/). These mini-modules can be used as building blocks to create electronic circuits and prototypes quite rapidly without necessarily using a Microcontroller board such as a [Seeeduino](/Seeeduino "Seeeduino") or an [ Arduino](/Arduino "Main Page").
 
 The 13 Grove modules included are a combination of sensor modules, actuators, logic and power modules that are extremely easy to use and fun to work with. Within minutes, you can design new circuits and assemble functional prototypes.
 
@@ -377,7 +377,7 @@ By connecting different input and output modules, a variety of projects can be m
 
 These modules are small and colorful bits of electronics, and so much fun to play with for both children and adults alike.
 
-With the [Grove - Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14), you can easily learn the basic concepts of electronics, and also improve your practical ability to apply these concepts. This is the perfect way to let yourself into the wonderful world of electronics by working on your very own interactive projects.
+With the [Grove - Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14), you can easily learn the basic concepts of electronics, and also improve your practical ability to apply these concepts. This is the perfect way to let yourself into the wonderful world of electronics by working on your very own interactive projects.
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Mixer-Pack-V2-(Electronic-blocks%2Cwithout-Arduino%2Cplug-and-play-system)-p-1867.html)
 
@@ -437,16 +437,16 @@ Its pretty easy to build Grove circuits using the Grove modules in your Mixer Pa
 All circuits are built by combining the following four types of modules:
 
 <dl><dt>1. Power Modules
-</dt><dd> These supply power to the circuit. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) includes 1 Power Module - the [Grove - DC Jack Power](/Grove-DC_Jack_Power "Grove - DC Jack Power"). No matter what you are building, you will always need to use this one.
+</dt><dd> These supply power to the circuit. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) includes 1 Power Module - the [Grove - DC Jack Power](/Grove-DC_Jack_Power "Grove - DC Jack Power"). No matter what you are building, you will always need to use this one.
 
 </dd><dt>2. Input Modules
-</dt><dd> These are typically used to relay sensory inputs into the circuit. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 4 Input Modules - a light sensor, a sound sensor, a slide potentiometer and a momentary switch. Based on the inputs received from these modules from these modules, you can choose to trigger an action using an Output Module.
+</dt><dd> These are typically used to relay sensory inputs into the circuit. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 4 Input Modules - a light sensor, a sound sensor, a slide potentiometer and a momentary switch. Based on the inputs received from these modules from these modules, you can choose to trigger an action using an Output Module.
 
 </dd><dt>3. Output Modules
-</dt><dd> Triggers from the Input Modules can be translated to actions using Output Modules. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 5 Output Modules - an LED light, an LED String light, a sound recorder, a fan motor and a buzzer.
+</dt><dd> Triggers from the Input Modules can be translated to actions using Output Modules. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 5 Output Modules - an LED light, an LED String light, a sound recorder, a fan motor and a buzzer.
 
 </dd><dt>4. Logic Gates Modules
-</dt><dd> These are used in conjunction with Input Modules and can be used to enhance the logic for triggering a specific output. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 3 Logic Gates Modules - one each for AND, OR and NOT gate functions.
+</dt><dd> These are used in conjunction with Input Modules and can be used to enhance the logic for triggering a specific output. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 3 Logic Gates Modules - one each for AND, OR and NOT gate functions.
 </dd></dl>
 
 ### Building your first circuit
@@ -549,7 +549,7 @@ sku:  110060026
 ---
 ![](https://files.seeedstudio.com/wiki/Grove-Mixer_Pack_V2/img/U8GUZNb9TVZ14lLRW6ialXEV.jpg)
 
-The [Grove - Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) is a stand-alone, Lego-like electronics kit that consists of 13 select Grove modules from the [ Grove System](/Grove_System "GROVE System") developed by [Seeed Studio](http://www.seeedstudio.com/depot/). These mini-modules can be used as building blocks to create electronic circuits and prototypes quite rapidly without necessarily using a Microcontroller board such as a [Seeeduino](/Seeeduino "Seeeduino") or an [ Arduino](/Arduino "Main Page").
+The [Grove - Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) is a stand-alone, Lego-like electronics kit that consists of 13 select Grove modules from the [ Grove System](/Grove_System "GROVE System") developed by [Seeed Studio](https://www.seeedstudio.com/depot/). These mini-modules can be used as building blocks to create electronic circuits and prototypes quite rapidly without necessarily using a Microcontroller board such as a [Seeeduino](/Seeeduino "Seeeduino") or an [ Arduino](/Arduino "Main Page").
 
 The 13 Grove modules included are a combination of sensor modules, actuators, logic and power modules that are extremely easy to use and fun to work with. Within minutes, you can design new circuits and assemble functional prototypes.
 
@@ -557,7 +557,7 @@ By connecting different input and output modules, a variety of projects can be m
 
 These modules are small and colorful bits of electronics, and so much fun to play with for both children and adults alike.
 
-With the [Grove - Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14), you can easily learn the basic concepts of electronics, and also improve your practical ability to apply these concepts. This is the perfect way to let yourself into the wonderful world of electronics by working on your very own interactive projects.
+With the [Grove - Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14), you can easily learn the basic concepts of electronics, and also improve your practical ability to apply these concepts. This is the perfect way to let yourself into the wonderful world of electronics by working on your very own interactive projects.
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Mixer-Pack-V2-(Electronic-blocks%2Cwithout-Arduino%2Cplug-and-play-system)-p-1867.html)
 
@@ -617,16 +617,16 @@ Its pretty easy to build Grove circuits using the Grove modules in your Mixer Pa
 All circuits are built by combining the following four types of modules:
 
 <dl><dt>1. Power Modules
-</dt><dd> These supply power to the circuit. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) includes 1 Power Module - the [Grove - DC Jack Power](/Grove-DC_Jack_Power "Grove - DC Jack Power"). No matter what you are building, you will always need to use this one.
+</dt><dd> These supply power to the circuit. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) includes 1 Power Module - the [Grove - DC Jack Power](/Grove-DC_Jack_Power "Grove - DC Jack Power"). No matter what you are building, you will always need to use this one.
 
 </dd><dt>2. Input Modules
-</dt><dd> These are typically used to relay sensory inputs into the circuit. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 4 Input Modules - a light sensor, a sound sensor, a slide potentiometer and a momentary switch. Based on the inputs received from these modules from these modules, you can choose to trigger an action using an Output Module.
+</dt><dd> These are typically used to relay sensory inputs into the circuit. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 4 Input Modules - a light sensor, a sound sensor, a slide potentiometer and a momentary switch. Based on the inputs received from these modules from these modules, you can choose to trigger an action using an Output Module.
 
 </dd><dt>3. Output Modules
-</dt><dd> Triggers from the Input Modules can be translated to actions using Output Modules. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 5 Output Modules - an LED light, an LED String light, a sound recorder, a fan motor and a buzzer.
+</dt><dd> Triggers from the Input Modules can be translated to actions using Output Modules. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 5 Output Modules - an LED light, an LED String light, a sound recorder, a fan motor and a buzzer.
 
 </dd><dt>4. Logic Gates Modules
-</dt><dd> These are used in conjunction with Input Modules and can be used to enhance the logic for triggering a specific output. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 3 Logic Gates Modules - one each for AND, OR and NOT gate functions.
+</dt><dd> These are used in conjunction with Input Modules and can be used to enhance the logic for triggering a specific output. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 3 Logic Gates Modules - one each for AND, OR and NOT gate functions.
 </dd></dl>
 
 ### Building your first circuit
@@ -729,7 +729,7 @@ sku:  110060026
 ---
 ![](https://files.seeedstudio.com/wiki/Grove-Mixer_Pack_V2/img/U8GUZNb9TVZ14lLRW6ialXEV.jpg)
 
-The [Grove - Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) is a stand-alone, Lego-like electronics kit that consists of 13 select Grove modules from the [ Grove System](/Grove_System "GROVE System") developed by [Seeed Studio](http://www.seeedstudio.com/depot/). These mini-modules can be used as building blocks to create electronic circuits and prototypes quite rapidly without necessarily using a Microcontroller board such as a [Seeeduino](/Seeeduino "Seeeduino") or an [ Arduino](/Arduino "Main Page").
+The [Grove - Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) is a stand-alone, Lego-like electronics kit that consists of 13 select Grove modules from the [ Grove System](/Grove_System "GROVE System") developed by [Seeed Studio](https://www.seeedstudio.com/depot/). These mini-modules can be used as building blocks to create electronic circuits and prototypes quite rapidly without necessarily using a Microcontroller board such as a [Seeeduino](/Seeeduino "Seeeduino") or an [ Arduino](/Arduino "Main Page").
 
 The 13 Grove modules included are a combination of sensor modules, actuators, logic and power modules that are extremely easy to use and fun to work with. Within minutes, you can design new circuits and assemble functional prototypes.
 
@@ -737,7 +737,7 @@ By connecting different input and output modules, a variety of projects can be m
 
 These modules are small and colorful bits of electronics, and so much fun to play with for both children and adults alike.
 
-With the [Grove - Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14), you can easily learn the basic concepts of electronics, and also improve your practical ability to apply these concepts. This is the perfect way to let yourself into the wonderful world of electronics by working on your very own interactive projects.
+With the [Grove - Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14), you can easily learn the basic concepts of electronics, and also improve your practical ability to apply these concepts. This is the perfect way to let yourself into the wonderful world of electronics by working on your very own interactive projects.
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Mixer-Pack-V2-(Electronic-blocks%2Cwithout-Arduino%2Cplug-and-play-system)-p-1867.html)
 
@@ -797,16 +797,16 @@ Its pretty easy to build Grove circuits using the Grove modules in your Mixer Pa
 All circuits are built by combining the following four types of modules:
 
 <dl><dt>1. Power Modules
-</dt><dd> These supply power to the circuit. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) includes 1 Power Module - the [Grove - DC Jack Power](/Grove-DC_Jack_Power "Grove - DC Jack Power"). No matter what you are building, you will always need to use this one.
+</dt><dd> These supply power to the circuit. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) includes 1 Power Module - the [Grove - DC Jack Power](/Grove-DC_Jack_Power "Grove - DC Jack Power"). No matter what you are building, you will always need to use this one.
 
 </dd><dt>2. Input Modules
-</dt><dd> These are typically used to relay sensory inputs into the circuit. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 4 Input Modules - a light sensor, a sound sensor, a slide potentiometer and a momentary switch. Based on the inputs received from these modules from these modules, you can choose to trigger an action using an Output Module.
+</dt><dd> These are typically used to relay sensory inputs into the circuit. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 4 Input Modules - a light sensor, a sound sensor, a slide potentiometer and a momentary switch. Based on the inputs received from these modules from these modules, you can choose to trigger an action using an Output Module.
 
 </dd><dt>3. Output Modules
-</dt><dd> Triggers from the Input Modules can be translated to actions using Output Modules. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 5 Output Modules - an LED light, an LED String light, a sound recorder, a fan motor and a buzzer.
+</dt><dd> Triggers from the Input Modules can be translated to actions using Output Modules. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 5 Output Modules - an LED light, an LED String light, a sound recorder, a fan motor and a buzzer.
 
 </dd><dt>4. Logic Gates Modules
-</dt><dd> These are used in conjunction with Input Modules and can be used to enhance the logic for triggering a specific output. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 3 Logic Gates Modules - one each for AND, OR and NOT gate functions.
+</dt><dd> These are used in conjunction with Input Modules and can be used to enhance the logic for triggering a specific output. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 3 Logic Gates Modules - one each for AND, OR and NOT gate functions.
 </dd></dl>
 
 ### Building your first circuit
@@ -909,7 +909,7 @@ sku:  110060026
 ---
 ![](https://files.seeedstudio.com/wiki/Grove-Mixer_Pack_V2/img/U8GUZNb9TVZ14lLRW6ialXEV.jpg)
 
-The [Grove - Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) is a stand-alone, Lego-like electronics kit that consists of 13 select Grove modules from the [ Grove System](/Grove_System "GROVE System") developed by [Seeed Studio](http://www.seeedstudio.com/depot/). These mini-modules can be used as building blocks to create electronic circuits and prototypes quite rapidly without necessarily using a Microcontroller board such as a [Seeeduino](/Seeeduino "Seeeduino") or an [ Arduino](/Arduino "Main Page").
+The [Grove - Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) is a stand-alone, Lego-like electronics kit that consists of 13 select Grove modules from the [ Grove System](/Grove_System "GROVE System") developed by [Seeed Studio](https://www.seeedstudio.com/depot/). These mini-modules can be used as building blocks to create electronic circuits and prototypes quite rapidly without necessarily using a Microcontroller board such as a [Seeeduino](/Seeeduino "Seeeduino") or an [ Arduino](/Arduino "Main Page").
 
 The 13 Grove modules included are a combination of sensor modules, actuators, logic and power modules that are extremely easy to use and fun to work with. Within minutes, you can design new circuits and assemble functional prototypes.
 
@@ -917,7 +917,7 @@ By connecting different input and output modules, a variety of projects can be m
 
 These modules are small and colorful bits of electronics, and so much fun to play with for both children and adults alike.
 
-With the [Grove - Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14), you can easily learn the basic concepts of electronics, and also improve your practical ability to apply these concepts. This is the perfect way to let yourself into the wonderful world of electronics by working on your very own interactive projects.
+With the [Grove - Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14), you can easily learn the basic concepts of electronics, and also improve your practical ability to apply these concepts. This is the perfect way to let yourself into the wonderful world of electronics by working on your very own interactive projects.
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Mixer-Pack-V2-(Electronic-blocks%2Cwithout-Arduino%2Cplug-and-play-system)-p-1867.html)
 
@@ -977,16 +977,16 @@ Its pretty easy to build Grove circuits using the Grove modules in your Mixer Pa
 All circuits are built by combining the following four types of modules:
 
 <dl><dt>1. Power Modules
-</dt><dd> These supply power to the circuit. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) includes 1 Power Module - the [Grove - DC Jack Power](/Grove-DC_Jack_Power "Grove - DC Jack Power"). No matter what you are building, you will always need to use this one.
+</dt><dd> These supply power to the circuit. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) includes 1 Power Module - the [Grove - DC Jack Power](/Grove-DC_Jack_Power "Grove - DC Jack Power"). No matter what you are building, you will always need to use this one.
 
 </dd><dt>2. Input Modules
-</dt><dd> These are typically used to relay sensory inputs into the circuit. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 4 Input Modules - a light sensor, a sound sensor, a slide potentiometer and a momentary switch. Based on the inputs received from these modules from these modules, you can choose to trigger an action using an Output Module.
+</dt><dd> These are typically used to relay sensory inputs into the circuit. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 4 Input Modules - a light sensor, a sound sensor, a slide potentiometer and a momentary switch. Based on the inputs received from these modules from these modules, you can choose to trigger an action using an Output Module.
 
 </dd><dt>3. Output Modules
-</dt><dd> Triggers from the Input Modules can be translated to actions using Output Modules. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 5 Output Modules - an LED light, an LED String light, a sound recorder, a fan motor and a buzzer.
+</dt><dd> Triggers from the Input Modules can be translated to actions using Output Modules. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 5 Output Modules - an LED light, an LED String light, a sound recorder, a fan motor and a buzzer.
 
 </dd><dt>4. Logic Gates Modules
-</dt><dd> These are used in conjunction with Input Modules and can be used to enhance the logic for triggering a specific output. The [Grove Mixer Pack V2](http://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 3 Logic Gates Modules - one each for AND, OR and NOT gate functions.
+</dt><dd> These are used in conjunction with Input Modules and can be used to enhance the logic for triggering a specific output. The [Grove Mixer Pack V2](https://www.seeedstudio.com/depot/Mixer-Pack-V2Electronic-blockswithout-Arduinoplug-and-play-system-p-1867.html?cPath=14) has 3 Logic Gates Modules - one each for AND, OR and NOT gate functions.
 </dd></dl>
 
 ### Building your first circuit
@@ -1108,7 +1108,7 @@ This Moisture Senor can be used for detecting the moisture of soil or judge if t
 - 2.0 cm X 6.0 cm grove module
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 ## Specification
 
@@ -1138,7 +1138,7 @@ This Moisture Senor can be used for detecting the moisture of soil or judge if t
 ## Getting Started
 
 !!!Note
-    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
 
 ### Play With Arduino
@@ -1150,7 +1150,7 @@ This Moisture Senor can be used for detecting the moisture of soil or judge if t
 | Seeeduino V4.2 | Base Shield|  Grove-Moisture Sensor |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Moisture_Sensor/img/Moisture_sensor_S.jpg)|
-|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Moisture-Sensor-p-955.html)|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Moisture-Sensor-p-955.html)|
 
 - **Step 2.** Connect Grove-Moisture Sensor to port A0 of Grove-Base Shield.
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
@@ -1170,7 +1170,7 @@ This Moisture Senor can be used for detecting the moisture of soil or judge if t
 
 **Software**
 
-- **Step 1.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 1.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 ```c++
 int sensorPin = A0;
@@ -1218,7 +1218,7 @@ Moisture = 221
 **Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
 
 !!!Note
-    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](https://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
@@ -1248,7 +1248,7 @@ Upload the program to your Arduino/Seeeduino.
 
 #### Software
 
-- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
 - **Step 2**. Download the source file by cloning the grove.py library. 
 
 ```
@@ -1495,7 +1495,7 @@ The following sketch demonstrates a simple application of sensing the moisture i
     * LED cathode (short leg) attached to ground
   - NOTE:
     This example code is in the public domain.
-    http://seeedstudio.com/wiki/Grove_-_Moisture_Sensor
+    https://www.seeedstudio.com/wiki/Grove_-_Moisture_Sensor
 */
 #include "TM1637.h"
 /* Macro Define */
@@ -1569,5 +1569,5 @@ A1: The output is voltage values. When using analogRead(), 5V will be divided by
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

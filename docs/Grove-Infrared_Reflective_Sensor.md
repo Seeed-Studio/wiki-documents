@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-Infrared-Reflective-Sensor-p-1230.html
 oldwikiname: Grove_-_Infrared_Reflective_Sensor
 prodimagename: Infrared_Reflective_Sensor-1.JPG
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/GroveInfraredReflective.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/GroveInfraredReflective.jpg
 surveyurl: https://www.research.net/r/Grove-Infrared_Reflective_Sensor
 sku: 101020029
 tags: grove_digital, io_3v3, io_5v, plat_duino, plat_linkit, plat_wio
@@ -48,7 +48,7 @@ This product is also mildly sensitive to non-IR radiations and hence any bright 
 -   Adjustable sensitivity for different occasions
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 
 
@@ -110,7 +110,7 @@ This sensor can be used to help a robotic car follow a black line.
 | Seeeduino V4.2 | Base Shield| Grove - Infrared Reflective Sensor | White paper and black pen|
 |--------------|-------------|-----------------|-------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/img/thumbnail.jpg)||
-|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Infrared-Reflective-Sensor-v1.2-p-2791.html)|   🙂   |
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Infrared-Reflective-Sensor-v1.2-p-2791.html)|   🙂   |
 
 - **Step 2.** Connect Grove - Infrared Reflective Sensor to any port of Grove-Base Shield via the Grove cable, we use **D2** in this demo.
 
@@ -148,7 +148,7 @@ Let us implement simple optical encoder to detect the speed of a motor
 | Seeeduino V4.2 | Base Shield| Grove - Infrared Reflective Sensor | 3V/5V DC Motor|
 |--------------|-------------|-----------------|-------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/img/thumbnail.jpg)|![](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/img/N30%203V%20DC%2012000RPM%20DC%20Motor.jpg)|
-|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Infrared-Reflective-Sensor-v1.2-p-2791.html)|  [Get One Now](https://www.seeedstudio.com/N30-3V-DC-12000RPM-DC-Motor-p-1886.html)   |
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Infrared-Reflective-Sensor-v1.2-p-2791.html)|  [Get One Now](https://www.seeedstudio.com/N30-3V-DC-12000RPM-DC-Motor-p-1886.html)   |
 
 
 - **Step 2.** Connect the Infrared Reflective Sensor to the **D2** port of Grove - Base Shield and connect the motor to the **D6** (In fact, you can just connct VCC and GND to power the motor).
@@ -167,7 +167,7 @@ Let us implement simple optical encoder to detect the speed of a motor
 
 - **Step 1.** Download the library [Arduino timer1 *library*](https://files.seeedstudio.com/wiki/Grove-Infrared_Reflective_Sensor/res/TimerOne-ArduinoLib.zip) and add it into the libraries file of Arduino IDE. A [guide](/Guide_to_use_demos_downloaded_from_Seeed-s_Github) about how to run our demo code.
 
-- **Step 2.** Refer to [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 - **Step 3.** Open a new sketch, and copy the following code into the sketch.
 
@@ -200,7 +200,7 @@ void loop()
 }
 ```
 
-- **Step 4.** Upload the demo. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 4.** Upload the demo. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 - **Step 5.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time. if every thing goes well, you will get the speed.
 
@@ -342,7 +342,7 @@ black surface detected
 
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Infrared_Reflective_Sensor -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Infrared_Reflective_Sensor -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

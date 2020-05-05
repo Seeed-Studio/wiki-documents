@@ -20,7 +20,7 @@ Arduino is a flexible and easy-to-learn open source development platform that en
 
 Arduino is also the name of a programming IDE based on C/C++. After you get your Arduino, you should install the IDE. Depending on OS version, the specific installation varies. Thankfully Arduino team provides us a detailed installation guide for most OS systems:
 
-[http://arduino.cc/en/Guide/HomePage](http://arduino.cc/en/Guide/HomePage)
+[https://arduino.cc/en/Guide/HomePage](https://arduino.cc/en/Guide/HomePage)
 
 ![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_Plus/img/Arduino_1.jpg)
 
@@ -28,7 +28,7 @@ Arduino is also the name of a programming IDE based on C/C++. After you get your
 
 But what if you have bare idea what the programming language is about? Arduino team also provides a good and comprehensive website for you to learn:
 
-[http://arduino.cc/en/Reference/HomePage](http://arduino.cc/en/Reference/HomePage)
+[https://arduino.cc/en/Reference/HomePage](https://arduino.cc/en/Reference/HomePage)
 
 Now you have got yourself ready for the Grove exploration.
 
@@ -219,7 +219,7 @@ This is a brief example from Oomlout.com, playing you a household nursery rhyme 
  * b          493 Hz          2028 1014
  * C         523 Hz         1912  956
  *
- * http://www.arduino.cc/en/Tutorial/Melody
+ * https://arduino.cc/en/Tutorial/Melody
  */
 
 int speakerPin = 9;
@@ -766,7 +766,7 @@ We have this part available in [geppetto](https://geppetto.seeedstudio.com/), ea
 This is an IoT demo make by Intel Edison and Grove - Starter Kit Plus.
 Intel have released an Intel IoT Developer kit that you can get to help developers and techies to get their hands on a simple piece of kit and start developing applications for use in the everyday world.
 
-[<font color="#FF0000">**I want to make it.**</font>](http://www.seeedstudio.com/recipe/94-intel-edison-live-temperature-display.html)
+[<font color="#FF0000">**I want to make it.**</font>](https://www.seeedstudio.com/recipe/94-intel-edison-live-temperature-display.html)
 
 ###  Share Your Awesome Projects with Us
 
@@ -780,7 +780,7 @@ as long as you start sharing your works with others,
 
 you are being part of the open source community and you are making your contributions .
 
-Now share you awesome projects on with us on [Recipe](http://www.seeedstudio.com/recipe/), and win a chance to become the Core User of Seeed.
+Now share you awesome projects on with us on [Recipe](https://www.seeedstudio.com/recipe/), and win a chance to become the Core User of Seeed.
 
 *   Core Users, are those who showing high interests and significant contributions in Seeed products.
 *   We cooperate with our Core Users in the development of our new product, this, in another word, the Core Users will have the chance to experience any new products of Seeed before its official launch, and in return we expect valuable feedback from them to help us improving the product performance and user experience. And for most of cases if our Core Users have any good ideas for making things, we'll offer hardware pieces, PCBA services as well as technical support. Besides, further commercial cooperation with the Core Users is highly possible.
@@ -788,4 +788,4 @@ Now share you awesome projects on with us on [Recipe](http://www.seeedstudio.com
 <font color="#FF0000">Get more information about Core User please email to: recipe@seeed.cc</font>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

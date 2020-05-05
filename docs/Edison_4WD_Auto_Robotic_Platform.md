@@ -309,7 +309,7 @@ The 4WD Auto Robotic Platform is a powerful mobile unit with the Intel Edison Ar
 <tr>
 <th scope="row"> 26
 </th>
-<td> [Grove - I2C Motor Driver](http://www.seeedstudio.com/depot/Grove-I2C-Motor-Driver-p-907.html)
+<td> [Grove - I2C Motor Driver](https://www.seeedstudio.com/depot/Grove-I2C-Motor-Driver-p-907.html)
 </td>
 <td>
 </td>
@@ -320,7 +320,7 @@ The 4WD Auto Robotic Platform is a powerful mobile unit with the Intel Edison Ar
 <tr>
 <th scope="row"> 27
 </th>
-<td> [Base Shield V2](http://www.seeedstudio.com/depot/base-shield-v13-p-1378.html?cPath=132_134)
+<td> [Base Shield V2](https://www.seeedstudio.com/depot/base-shield-v13-p-1378.html?cPath=132_134)
 </td>
 <td>
 </td>
@@ -331,7 +331,7 @@ The 4WD Auto Robotic Platform is a powerful mobile unit with the Intel Edison Ar
 <tr>
 <th scope="row"> 28
 </th>
-<td> [Grove - Universal 4 Pin Buckled 20cm Cable](http://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-20cm-Cable-5-PCs-pack-p-936.html)
+<td> [Grove - Universal 4 Pin Buckled 20cm Cable](https://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-20cm-Cable-5-PCs-pack-p-936.html)
 </td>
 <td>
 </td>
@@ -554,7 +554,7 @@ See [Intel Edison official web site](https://communities.intel.com/docs/DOC-2319
 **1.Download customized image**
 
 <pre>
-&gt;&gt;wget http://www.seeedstudio.com/wiki/images/a/a6/Edison-image-rel1-maint-rel1-ww42-14-for-wificar.zip
+&gt;&gt;wget https://www.seeedstudio.com/wiki/images/a/a6/Edison-image-rel1-maint-rel1-ww42-14-for-wificar.zip
 &gt;&gt;unzip edison-image-rel1-maint-rel1-ww42-14-for-wificar.zip
 &gt;&gt;7z x edison-image-rel1-maint-rel1-ww42-14-for-wificar.7z
 </pre>
@@ -711,7 +711,7 @@ A:The i2c Motor Driver has a bug that if a complete byte of orders sending was i
 
 *   [github-Edison_WiFi_Car](https://github.com/Seeed-Studio/Edison_WiFi_Car)
 
-*   [The Intel Edsion official web site](http://www.intel.com/content/www/us/en/do-it-yourself/edison.html)
+*   [The Intel Edsion official web site](https://www.intel.com/content/www/us/en/do-it-yourself/edison.html)
 
 *   [Edison - Software Downloads](https://communities.intel.com/docs/DOC-23242)
 
@@ -728,4 +728,4 @@ A:The i2c Motor Driver has a bug that if a complete byte of orders sending was i
 *   [Edison 4WD Auto Robotic Platform DC Motor with Encoder Spec](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform/res/Edison_4WD_Auto_Robotic_Platform_DC_Motor_with_Encoder_Spec.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

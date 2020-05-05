@@ -84,7 +84,7 @@ Based on the Arduino Leonardo, the Matrix Clock is fully compatible with the Ard
 
 ##  Schematic
 ---
-- [MatrixClock-Schematic-MC201V1-Rev1.pdf](http://wiki.seeedstudio.com/images/c/c3/MatrixClock-Schematic-MC201V1-Rev1.pdf)
+- [MatrixClock-Schematic-MC201V1-Rev1.pdf](https://wiki.seeedstudio.com/images/c/c3/MatrixClock-Schematic-MC201V1-Rev1.pdf)
 
 ##  PCB
 ---
@@ -97,4 +97,4 @@ Based on the Arduino Leonardo, the Matrix Clock is fully compatible with the Ard
 Matrix Clock V1 by Dan Hamer  is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/deed.en_US)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

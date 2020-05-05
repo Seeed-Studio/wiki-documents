@@ -13,7 +13,7 @@ tags:
 
 这里你可以找到部分Seeed产品的[中文文档](http://seeed.wiki)，由于这个站点刚建立，所以只有部分已经翻译的文档。
 
-没有中文文档的产品，仍然需要到[英文站点](http://wiki.seeed.cc).
+没有中文文档的产品，仍然需要到[英文站点](https://wiki.seeedstudio.com).
 
 这个站点基于优秀的并且开源的文档系统[MkDocs](http://www.mkdocs.org/)以及主题[Material](http://squidfunk.github.io/mkdocs-material/).
 
@@ -187,4 +187,4 @@ Copyright (c) 2008-2020 Seeed Inc. (https://www.seeedstudio.com)
 的协议
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

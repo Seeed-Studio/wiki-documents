@@ -8,7 +8,7 @@ surveyurl: https://www.surveymonkey.com/r/wio_node
 sku: 102110057
 ---
 
-Building IoT projects is exciting, as you can connect almost everything around you and control them. However sometime it is not easy to build IoT applications since it requires a lot of hard works, such as hardware,  programming, jump wires and soldering etc. Even a well-trained user would spend hours to handle all the work, let alone beginners. In order to simplify the development of IoT project, Seeed launched **[Wio Link](http://www.seeedstudio.com/wiki/Wio_Link)** on **[kickstarter](https://www.kickstarter.com/projects/seeed/wio-link-3-steps-5-minutes-build-your-iot-applicat?ref=nav_search)** and it turn out a big success. The slogan on Kickstarter well defined the main feature of Wio link:
+Building IoT projects is exciting, as you can connect almost everything around you and control them. However sometime it is not easy to build IoT applications since it requires a lot of hard works, such as hardware,  programming, jump wires and soldering etc. Even a well-trained user would spend hours to handle all the work, let alone beginners. In order to simplify the development of IoT project, Seeed launched **[Wio Link](https://www.seeedstudio.com/wiki/Wio_Link)** on **[kickstarter](https://www.kickstarter.com/projects/seeed/wio-link-3-steps-5-minutes-build-your-iot-applicat?ref=nav_search)** and it turn out a big success. The slogan on Kickstarter well defined the main feature of Wio link:
 
 **3 steps. 5 minutes. Build your own IoT applications!**
 
@@ -126,7 +126,7 @@ Let us build a very basic LED application with Wio Node, in this application you
 |Wio Node|Grove - LED|Micro USB Cable|
 |--------|-----------|---------------|
 |![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20Node2.png)|![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Red%20LED.jpg)|![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/48cmUSBc.jpg)|
-|[GET ONE NOW](https://www.seeedstudio.com/Wio-Node-p-2637.html)|[GET ONE NOW](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|[GET ONE NOW](http://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|
+|[GET ONE NOW](https://www.seeedstudio.com/Wio-Node-p-2637.html)|[GET ONE NOW](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|[GET ONE NOW](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|
 
 
 !!!NOTE
@@ -140,7 +140,7 @@ surveyurl: https://www.surveymonkey.com/r/wio_node
 sku: 102110057
 ---
 
-Building IoT projects is exciting, as you can connect almost everything around you and control them. However sometime it is not easy to build IoT applications since it requires a lot of hard works, such as hardware,  programming, jump wires and soldering etc. Even a well-trained user would spend hours to handle all the work, let alone beginners. In order to simplify the development of IoT project, Seeed launched **[Wio Link](http://www.seeedstudio.com/wiki/Wio_Link)** on **[kickstarter](https://www.kickstarter.com/projects/seeed/wio-link-3-steps-5-minutes-build-your-iot-applicat?ref=nav_search)** and it turn out a big success. The slogan on Kickstarter well defined the main feature of Wio link:
+Building IoT projects is exciting, as you can connect almost everything around you and control them. However sometime it is not easy to build IoT applications since it requires a lot of hard works, such as hardware,  programming, jump wires and soldering etc. Even a well-trained user would spend hours to handle all the work, let alone beginners. In order to simplify the development of IoT project, Seeed launched **[Wio Link](https://www.seeedstudio.com/wiki/Wio_Link)** on **[kickstarter](https://www.kickstarter.com/projects/seeed/wio-link-3-steps-5-minutes-build-your-iot-applicat?ref=nav_search)** and it turn out a big success. The slogan on Kickstarter well defined the main feature of Wio link:
 
 **3 steps. 5 minutes. Build your own IoT applications!**
 
@@ -258,7 +258,7 @@ Let us build a very basic LED application with Wio Node, in this application you
 |Wio Node|Grove - LED|Micro USB Cable|
 |--------|-----------|---------------|
 |![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20Node2.png)|![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Red%20LED.jpg)|![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/48cmUSBc.jpg)|
-|[GET ONE NOW](https://www.seeedstudio.com/Wio-Node-p-2637.html)|[GET ONE NOW](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|[GET ONE NOW](http://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|
+|[GET ONE NOW](https://www.seeedstudio.com/Wio-Node-p-2637.html)|[GET ONE NOW](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|[GET ONE NOW](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|
 
 
 !!!NOTE
@@ -272,7 +272,7 @@ surveyurl: https://www.surveymonkey.com/r/wio_node
 sku: 102110057
 ---
 
-Building IoT projects is exciting, as you can connect almost everything around you and control them. However sometime it is not easy to build IoT applications since it requires a lot of hard works, such as hardware,  programming, jump wires and soldering etc. Even a well-trained user would spend hours to handle all the work, let alone beginners. In order to simplify the development of IoT project, Seeed launched **[Wio Link](http://www.seeedstudio.com/wiki/Wio_Link)** on **[kickstarter](https://www.kickstarter.com/projects/seeed/wio-link-3-steps-5-minutes-build-your-iot-applicat?ref=nav_search)** and it turn out a big success. The slogan on Kickstarter well defined the main feature of Wio link:
+Building IoT projects is exciting, as you can connect almost everything around you and control them. However sometime it is not easy to build IoT applications since it requires a lot of hard works, such as hardware,  programming, jump wires and soldering etc. Even a well-trained user would spend hours to handle all the work, let alone beginners. In order to simplify the development of IoT project, Seeed launched **[Wio Link](https://www.seeedstudio.com/wiki/Wio_Link)** on **[kickstarter](https://www.kickstarter.com/projects/seeed/wio-link-3-steps-5-minutes-build-your-iot-applicat?ref=nav_search)** and it turn out a big success. The slogan on Kickstarter well defined the main feature of Wio link:
 
 **3 steps. 5 minutes. Build your own IoT applications!**
 
@@ -390,7 +390,7 @@ Let us build a very basic LED application with Wio Node, in this application you
 |Wio Node|Grove - LED|Micro USB Cable|
 |--------|-----------|---------------|
 |![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20Node2.png)|![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Red%20LED.jpg)|![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/48cmUSBc.jpg)|
-|[GET ONE NOW](https://www.seeedstudio.com/Wio-Node-p-2637.html)|[GET ONE NOW](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|[GET ONE NOW](http://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|
+|[GET ONE NOW](https://www.seeedstudio.com/Wio-Node-p-2637.html)|[GET ONE NOW](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|[GET ONE NOW](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|
 
 
 !!!NOTE
@@ -404,7 +404,7 @@ surveyurl: https://www.surveymonkey.com/r/wio_node
 sku: 102110057
 ---
 
-Building IoT projects is exciting, as you can connect almost everything around you and control them. However sometime it is not easy to build IoT applications since it requires a lot of hard works, such as hardware,  programming, jump wires and soldering etc. Even a well-trained user would spend hours to handle all the work, let alone beginners. In order to simplify the development of IoT project, Seeed launched **[Wio Link](http://www.seeedstudio.com/wiki/Wio_Link)** on **[kickstarter](https://www.kickstarter.com/projects/seeed/wio-link-3-steps-5-minutes-build-your-iot-applicat?ref=nav_search)** and it turn out a big success. The slogan on Kickstarter well defined the main feature of Wio link:
+Building IoT projects is exciting, as you can connect almost everything around you and control them. However sometime it is not easy to build IoT applications since it requires a lot of hard works, such as hardware,  programming, jump wires and soldering etc. Even a well-trained user would spend hours to handle all the work, let alone beginners. In order to simplify the development of IoT project, Seeed launched **[Wio Link](https://www.seeedstudio.com/wiki/Wio_Link)** on **[kickstarter](https://www.kickstarter.com/projects/seeed/wio-link-3-steps-5-minutes-build-your-iot-applicat?ref=nav_search)** and it turn out a big success. The slogan on Kickstarter well defined the main feature of Wio link:
 
 **3 steps. 5 minutes. Build your own IoT applications!**
 
@@ -522,7 +522,7 @@ Let us build a very basic LED application with Wio Node, in this application you
 |Wio Node|Grove - LED|Micro USB Cable|
 |--------|-----------|---------------|
 |![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20Node2.png)|![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Red%20LED.jpg)|![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/48cmUSBc.jpg)|
-|[GET ONE NOW](https://www.seeedstudio.com/Wio-Node-p-2637.html)|[GET ONE NOW](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|[GET ONE NOW](http://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|
+|[GET ONE NOW](https://www.seeedstudio.com/Wio-Node-p-2637.html)|[GET ONE NOW](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|[GET ONE NOW](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|
 
 
 !!!NOTE
@@ -536,7 +536,7 @@ surveyurl: https://www.surveymonkey.com/r/wio_node
 sku: 102110057
 ---
 
-Building IoT projects is exciting, as you can connect almost everything around you and control them. However sometime it is not easy to build IoT applications since it requires a lot of hard works, such as hardware,  programming, jump wires and soldering etc. Even a well-trained user would spend hours to handle all the work, let alone beginners. In order to simplify the development of IoT project, Seeed launched **[Wio Link](http://www.seeedstudio.com/wiki/Wio_Link)** on **[kickstarter](https://www.kickstarter.com/projects/seeed/wio-link-3-steps-5-minutes-build-your-iot-applicat?ref=nav_search)** and it turn out a big success. The slogan on Kickstarter well defined the main feature of Wio link:
+Building IoT projects is exciting, as you can connect almost everything around you and control them. However sometime it is not easy to build IoT applications since it requires a lot of hard works, such as hardware,  programming, jump wires and soldering etc. Even a well-trained user would spend hours to handle all the work, let alone beginners. In order to simplify the development of IoT project, Seeed launched **[Wio Link](https://www.seeedstudio.com/wiki/Wio_Link)** on **[kickstarter](https://www.kickstarter.com/projects/seeed/wio-link-3-steps-5-minutes-build-your-iot-applicat?ref=nav_search)** and it turn out a big success. The slogan on Kickstarter well defined the main feature of Wio link:
 
 **3 steps. 5 minutes. Build your own IoT applications!**
 
@@ -654,7 +654,7 @@ Let us build a very basic LED application with Wio Node, in this application you
 |Wio Node|Grove - LED|Micro USB Cable|
 |--------|-----------|---------------|
 |![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20Node2.png)|![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Red%20LED.jpg)|![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/48cmUSBc.jpg)|
-|[GET ONE NOW](https://www.seeedstudio.com/Wio-Node-p-2637.html)|[GET ONE NOW](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|[GET ONE NOW](http://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|
+|[GET ONE NOW](https://www.seeedstudio.com/Wio-Node-p-2637.html)|[GET ONE NOW](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|[GET ONE NOW](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|
 
 
 !!!NOTE
@@ -668,7 +668,7 @@ surveyurl: https://www.surveymonkey.com/r/wio_node
 sku: 102110057
 ---
 
-Building IoT projects is exciting, as you can connect almost everything around you and control them. However sometime it is not easy to build IoT applications since it requires a lot of hard works, such as hardware,  programming, jump wires and soldering etc. Even a well-trained user would spend hours to handle all the work, let alone beginners. In order to simplify the development of IoT project, Seeed launched **[Wio Link](http://www.seeedstudio.com/wiki/Wio_Link)** on **[kickstarter](https://www.kickstarter.com/projects/seeed/wio-link-3-steps-5-minutes-build-your-iot-applicat?ref=nav_search)** and it turn out a big success. The slogan on Kickstarter well defined the main feature of Wio link:
+Building IoT projects is exciting, as you can connect almost everything around you and control them. However sometime it is not easy to build IoT applications since it requires a lot of hard works, such as hardware,  programming, jump wires and soldering etc. Even a well-trained user would spend hours to handle all the work, let alone beginners. In order to simplify the development of IoT project, Seeed launched **[Wio Link](https://www.seeedstudio.com/wiki/Wio_Link)** on **[kickstarter](https://www.kickstarter.com/projects/seeed/wio-link-3-steps-5-minutes-build-your-iot-applicat?ref=nav_search)** and it turn out a big success. The slogan on Kickstarter well defined the main feature of Wio link:
 
 **3 steps. 5 minutes. Build your own IoT applications!**
 
@@ -786,7 +786,7 @@ Let us build a very basic LED application with Wio Node, in this application you
 |Wio Node|Grove - LED|Micro USB Cable|
 |--------|-----------|---------------|
 |![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20Node2.png)|![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Red%20LED.jpg)|![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/48cmUSBc.jpg)|
-|[GET ONE NOW](https://www.seeedstudio.com/Wio-Node-p-2637.html)|[GET ONE NOW](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|[GET ONE NOW](http://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|
+|[GET ONE NOW](https://www.seeedstudio.com/Wio-Node-p-2637.html)|[GET ONE NOW](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|[GET ONE NOW](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|
 
 
 !!!NOTE
@@ -808,9 +808,9 @@ We have arranged many interesting projects tutorial for you to get started, by u
 
 Here is the list of the Wio_Tracker Boards you can find in the Seeed WiKi. The list will be constantly updated.
 
-- [Wio LTE Cat.1](http://wiki.seeedstudio.com/Wio_LTE_Cat.1/)
-- [Wio Tracker - GPS, BT3.0, GSM, Arduino Compatible](http://wiki.seeedstudio.com/wio_gps_board/)
+- [Wio LTE Cat.1](https://wiki.seeedstudio.com/Wio_LTE_Cat.1/)
+- [Wio Tracker - GPS, BT3.0, GSM, Arduino Compatible](https://wiki.seeedstudio.com/wio_gps_board/)
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

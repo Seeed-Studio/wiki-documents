@@ -17,7 +17,7 @@ The Relay Shield provides a solution for controlling high current devices that c
 The Relay Shield features four high quality relays and provides NO/NC interfaces, four dynamic LED indicators to show the on/off state of each relay, and the standardized shield form factor to provide a smooth connection to the Arduino/Seeeduino board or other Arduino compatible boards.
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)
-](http://www.seeedstudio.com/depot/relay-shield-v20-p-1376.html)
+](https://www.seeedstudio.com/depot/relay-shield-v20-p-1376.html)
 
 ##  Features ##
 
@@ -189,4 +189,4 @@ delay(1000); // wait 1000 milliseconds (1 second)}
 - **[PDF]**[Relay shield sch](https://files.seeedstudio.com/wiki/Relay-Shield_V2.0/res/Relay%20shield%20sch.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

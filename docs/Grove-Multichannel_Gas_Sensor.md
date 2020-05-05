@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-Multichannel-Gas-Sensor-p-2502.html
 oldwikiname: Grove_-_Multichannel_Gas_Sensor
 prodimagename: Multi_sensor1.png
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/101020088 1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/101020088 1.jpg
 surveyurl: https://www.research.net/r/Grove-Multichannel_Gas_Sensor
 sku: 101020088
 tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit, plat_wio
@@ -31,10 +31,10 @@ This sensor belongs to **Grove system**, and you can plug it onto the **Base shi
 The sensor value only reflects the approximated trend of gas concentration in a permissible error range, it DOES NOT represent the exact gas concentration. The detection of certain components in the air usually requires a more precise and costly instrument, which cannot be done with a single gas sensor. If your project is aimed at obtaining the gas concentration at a very precise level, then we do not recommend this gas sensor.
 </div>
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Multichannel-Gas-Sensor-p-2502.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-Multichannel-Gas-Sensor-p-2502.html)
 
 !!!Tip
-    We've released the [Seeed Gas Sensor Selection Guide](http://wiki.seeedstudio.com/Seeed_Gas_Sensor_Selection_Guide/), it will help you choose the gas sensor that best suits your needs.
+    We've released the [Seeed Gas Sensor Selection Guide](https://wiki.seeedstudio.com/Seeed_Gas_Sensor_Selection_Guide/), it will help you choose the gas sensor that best suits your needs.
 
 
 ## Before usage
@@ -53,8 +53,8 @@ After reading that you will know how to use Base shield with Grove products to w
 
 This tutorial will include some necessary products:
 
--   [Arduino UNO R3](http://www.seeedstudio.com/depot/Arduino-Uno-Rev3-p-694.html) or [Seeeduino v4](http://www.seeedstudio.com/depot/Seeeduino-V4-p-669.html)
--   [Base Shield](http://www.seeedstudio.com/depot/Base-Shield-V2-p-1378.html)
+-   [Arduino UNO R3](https://www.seeedstudio.com/depot/Arduino-Uno-Rev3-p-694.html) or [Seeeduino v4](https://www.seeedstudio.com/depot/Seeeduino-V4-p-669.html)
+-   [Base Shield](https://www.seeedstudio.com/depot/Base-Shield-V2-p-1378.html)
 -   Grove - Multichannel Gas Sensor
 
 Hardware Overview
@@ -167,7 +167,7 @@ Getting Started
 
 **Upload Code:**
 
-2.Download [Arduino Library & Grove/Xadow firmware](https://github.com/Seeed-Studio/Mutichannel_Gas_Sensor/archive/master.zip) and [install](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/) it to Arduino Library.
+2.Download [Arduino Library & Grove/Xadow firmware](https://github.com/Seeed-Studio/Mutichannel_Gas_Sensor/archive/master.zip) and [install](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) it to Arduino Library.
 
 3.Open the code directly by the path:File -> Example -> Mutichannel_Gas_Sensor-> ReadSensorValue_Grove.
 
@@ -251,7 +251,7 @@ By opening the serial monitor, you can see the raw data read from sensor.
 ![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Mutichannel_Gas_Sensor_Grove_Print.jpg)
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 Update Firmware
 -----------------
@@ -333,7 +333,7 @@ Resources
 -   [Arduino Library & Grove/Xadow firmware](https://github.com/Seeed-Studio/Mutichannel_Gas_Sensor)
 -   [MiCS-6814 Datasheet](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/res/MiCS-6814_Datasheet.pdf)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Multichannel_Gas_Sensor -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Multichannel_Gas_Sensor -->
 
 FAQ
 ---------
@@ -482,4 +482,4 @@ void loop()
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/gabogiraldo/smart-crops-implementing-iot-in-conventional-agriculture-3674a6/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

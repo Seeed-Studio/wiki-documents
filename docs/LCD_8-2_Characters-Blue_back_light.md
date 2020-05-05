@@ -441,9 +441,9 @@ L:Write
 
 ##   Resources
 
-*   [Demo code for Arduino](http://www.seeedstudio.com/depot/images/product/LCD0820.pde)
+*   [Demo code for Arduino](https://www.seeedstudio.com/depot/images/product/LCD0820.pde)
 
-*   [Datasheet](http://www.seeedstudio.com/depot/datasheet/LMB0820-info.pdf)
+*   [Datasheet](https://www.seeedstudio.com/depot/datasheet/LMB0820-info.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

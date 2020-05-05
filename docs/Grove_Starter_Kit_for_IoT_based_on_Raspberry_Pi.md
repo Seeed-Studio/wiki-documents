@@ -19,7 +19,7 @@ Please note this kit DOES NOT include the Raspberry Pi board. Please visit [here
 !!!Note
     GrovePi+ and some of the code was designed by [Dexter Industry](http://www.dexterindustries.com/).  Click to get more information about Dexter.
 
-[![enter image description here](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](http://www.seeedstudio.com/Microsoft-IoT-Grove-Kit-(Azure-Certified)-p-2694.html)
+[![enter image description here](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/Microsoft-IoT-Grove-Kit-(Azure-Certified)-p-2694.html)
 
 ## Features
 * Easy-to-use GrovePi+ that is compatible with Raspberry Pi B/B+/A+/2/3
@@ -38,7 +38,7 @@ Please note this kit DOES NOT include the Raspberry Pi board. Please visit [here
 |101020048| Grove - Rotary Angle Sensor(P)| 1 | [Get One Now](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor%28P%29-p-1242.html) |
 |107020000| Grove - Buzzer| 1 | [Get One Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html) |
 |101020023| Grove - Sound Sensor| 1 | [Get One Now](https://www.seeedstudio.com/Grove-Sound-Sensor-p-752.html) |
-|101020014 | Grove - Light Sensor v1.2 | 1 | [Get One Now](http://www.seeedstudio.com/Grove-%E2%80%93-Light-Sensor-%28P%29-v1.1-p-2693.html) |
+|101020014 | Grove - Light Sensor v1.2 | 1 | [Get One Now](https://www.seeedstudio.com/Grove-%E2%80%93-Light-Sensor-%28P%29-v1.1-p-2693.html) |
 |101020003| Grove - Button| 1 | [Get One Now](https://www.seeedstudio.com/Grove-Button-p-766.html) |
 |104030001| Grove - LCD RGB Backlight| 1 | [Get One Now](https://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html) |
 |109990056| HDMI Cable| 1 | [Get One Now](https://www.seeedstudio.com/Flat-HDMI-Male-to-Male-Cable-1M,Support-3D-For-HDTV-computer-&-tablets-cable-p-2142.html) |
@@ -315,4 +315,4 @@ You can see the Distance Sound Light value and relay state on the LCD Screen. Th
 * [Example Code](https://github.com/Seeed-Studio/GrovePiExamples_win10)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

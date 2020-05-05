@@ -42,13 +42,13 @@ See the [build instructions](http://dfu-util.gnumonks.org/build.html) at the dfu
 
 Original forum posts and discussion:
 
-*   [Linux procedure](http://forum.seeedstudio.com/viewtopic.php?f=12&amp;t=1353&amp;start=10)
+*   [Linux procedure](https://forum.seeedstudio.com/viewtopic.php?f=12&amp;t=1353&amp;start=10)
 
-*   [Mac OS X specific instructions](http://forum.seeedstudio.com/viewtopic.php?f=12&amp;t=1364)
+*   [Mac OS X specific instructions](https://forum.seeedstudio.com/viewtopic.php?f=12&amp;t=1364)
 
 Official home page
 
 *   [dfu-util homepage](http://dfu-util.gnumonks.org/)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -28,7 +28,7 @@ Here is some funny project for your reference.
 |Arduino GPS/GSM Tracker|Arduino Phone 2.0|Arduino GPRS Weather Station|
 |----------|----------|---------|
 |![](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/example_1.jpg)|![](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/example_2.jpg)|![](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/example_3.jpg)|
-|[Make it Now](http://www.instructables.com/id/Arduino-GPSGSM-Tracker/)|[Make it Now](http://www.instructables.com/id/ArduinoPhone-20-an-Open-Source-Mobile-Phone-Based-/)|[Make it Now](http://www.instructables.com/id/Arduino-GPRS-Weather-Station-Part-1/)|
+|[Make it Now](https://www.instructables.com/id/Arduino-GPSGSM-Tracker/)|[Make it Now](https://www.instructables.com/id/ArduinoPhone-20-an-Open-Source-Mobile-Phone-Based-/)|[Make it Now](https://www.instructables.com/id/Arduino-GPRS-Weather-Station-Part-1/)|
 
 ## Features
 
@@ -116,7 +116,7 @@ First of all, you need to:
 
 * **Get a Micro-USB cable**
 You need a Micro-USB cable first; the data cable of an Android Phone will do fine.
-If you can't find one, you can buy one [here](http://www.seeedstudio.com/depot/Micro-USB-Cable-48cm-p-1475.html?cPath=98_100).
+If you can't find one, you can buy one [here](https://www.seeedstudio.com/depot/Micro-USB-Cable-48cm-p-1475.html?cPath=98_100).
 
 * **Connect the board**
 Connect the Arduino board to your computer using the USB cable. The green power LED (labelled **PWR**) should go on.
@@ -145,7 +145,7 @@ You don't need to install any drivers.
 ## Getting Started
 
 !!!Note
-    If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](http://wiki.seeed.cc/Getting_Started_with_Arduino)
+    If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino)
 
 
 First of all, you need to Install an Arduino Software.
@@ -170,7 +170,7 @@ Open the LED blink example sketch: **File > Examples >01.Basics > Blink**.
 **Select your board**
 
 You'll need to select the entry in the **Tools > Board** menu that corresponds to your Arduino.
-Selecting a **Arduino Leonardo**. If you can not find the Arduino Leonardo, please check [How to Add Seeed boards to Arduino IDE](http://wiki.seeedstudio.com/Seeed_Arduino_Boards/)
+Selecting a **Arduino Leonardo**. If you can not find the Arduino Leonardo, please check [How to Add Seeed boards to Arduino IDE](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/)
 
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/seeeduino_gprs_select_board.png)
@@ -429,4 +429,4 @@ void loop() {
     [Seeeduino GPRS Library on GitHub](https://github.com/Seeed-Studio/Seeeduino_GPRS)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

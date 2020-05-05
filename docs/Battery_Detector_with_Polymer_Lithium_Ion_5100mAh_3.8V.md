@@ -4,7 +4,7 @@ category: Essentials
 bzurl: https://seeedstudio.com/Battery-Detector-with-Polymer-Lithium-Ion-5100mAh-3.8V-p-2647.html
 oldwikiname: Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V
 prodimagename: Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V_700_s.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/upload/img/20160516060632-adaa81.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/upload/img/20160516060632-adaa81.jpg
 surveyurl: https://www.research.net/r/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3_8V
 sku: 110060467
 ---
@@ -17,7 +17,7 @@ The li-ion battery is very slim, light and cost effective. It output 3.8 V volta
 
 The battery power detector can detect the input voltage range of 3–4.2 volts. There are three JST sockets (JST 1.0, JST 2.0 and JST 2.0) and two battery-soldering pads will adapt to those batteries with a different connector. As you connect a battery to this battery power detector, the on-board four LEDs will indicate remaining power in percentage (0–25%, 26–50%, 51–75%, 76–100%). Another LED will be on if you plug the connector of battery in the wrong way.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Battery-Detector-with-Polymer-Lithium-Ion-5100mAh-38V-p-2647.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Battery-Detector-with-Polymer-Lithium-Ion-5100mAh-38V-p-2647.html)
 
 <div class="admonition note">
 <p class="admonition-title">Notes</p>
@@ -165,7 +165,7 @@ Resources
 -   [Certifications and Test Report for this Battery](https://files.seeedstudio.com/wiki/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V/res/Certifications_and_Test_Report.zip)
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

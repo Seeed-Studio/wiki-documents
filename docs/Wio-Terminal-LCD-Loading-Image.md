@@ -16,7 +16,7 @@ This repo describes how to load and display images from the SD card to the TFT L
 
 ### Installing the TFT LCD Library For Wio Terminal
 
-- visit [TFT LCD Overview](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/)
+- visit [TFT LCD Overview](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/)
 
 ## Image Format configuration
 

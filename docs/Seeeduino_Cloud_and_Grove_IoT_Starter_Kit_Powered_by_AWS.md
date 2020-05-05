@@ -13,7 +13,7 @@ surveyurl: https://www.research.net/r/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_
 
 **[Seeeduino Cloud](/Seeeduino_Cloud "Seeeduino Cloud")** is a microcontroller board based on Dragino WiFi IoT module [HE](http://www.dragino.com/products/linux-module/item/87-he.html) and ATmega32u4. **HE** is a high performance, low-cost 150M, 2.4G WiFi module which with an Open Source OpenWrt system inside. Seeeduino Cloud is also an [Arduino Yun](https://www.arduino.cc/en/Main/ArduinoBoardYun) compatible board. This kit includes most frequently used sensors and actuators to turn your ideas into tangible applications with AWS Cloud computing.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.amazon.com/dp/B01669BB60)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://wwww.amazon.com/dp/B01669BB60)
 
 ## Features
 --------
@@ -29,18 +29,18 @@ surveyurl: https://www.research.net/r/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_
 
 | Board/Part                                                                                                                                            | Qty | Documentation                                                                 |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------|-----|-------------------------------------------------------------------------------|
-| [Seeeduino Cloud development board](http://www.seeedstudio.com/depot/Seeeduino-Cloud-Arduino-Yun-compatible-openWRT-controller-p-2123.html?cPath=6_7) | 1   | [Read Here](/Seeeduino_Cloud "Seeeduino Cloud")                               |
-| [Base Shield](http://www.seeedstudio.com/depot/Base-Shield-V2-p-1378.html?cPath=98_16)                                                                | 1   | [Read Here](/Base_Shield_V2 "Base shield v2")                                 |
-| [Grove - LCD RGB Backlight](http://www.seeedstudio.com/depot/Grove-LCD-RGB-Backlight-p-1643.html?cPath=34_36)                                         | 1   | [Read Here](/Grove-LCD_RGB_Backlight "Grove - LCD RGB Backlight")             |
-| [Grove - Relay](http://www.seeedstudio.com/depot/Grove-Relay-p-769.html?cPath=39_42)                                                                  | 1   | [Read Here](/Grove-Relay "Grove - Relay")                                     |
-| [Grove - Buzzer](http://www.seeedstudio.com/depot/Grove-Buzzer-p-768.html?cPath=38)                                                                   | 1   | [Read Here](/Grove-Buzzer "Grove - Buzzer")                                   |
-| [Grove - Sound Sensor](http://www.seeedstudio.com/depot/Grove-Sound-Sensor-p-752.html?cPath=25_128)                                                   | 1   | [Read Here](/Grove-Sound_Sensor "Grove - Sound Sensor")                       |
-| [Grove - Touch Sensor](http://www.seeedstudio.com/depot/Grove-Touch-Sensor-p-747.html?cPath=85_94)                                                    | 1   | [Read Here](/Grove-Touch_Sensor "Grove - Touch Sensor")                       |
-| [Grove - Rotary Angle Sensor](http://www.seeedstudio.com/depot/Grove-Rotary-Angle-Sensor-p-770.html?cPath=85_52)                                      | 1   | [Read Here](/Grove-Rotary_Angle_Sensor "Grove - Rotary Angle Sensor")         |
-| [Grove - Temperature Sensor](http://www.seeedstudio.com/depot/Grove-Temperature-Sensor-p-774.html?cPath=25_125)                                       | 1   | [Read Here](/Grove-Temperature_Sensor_V1.2 "Grove - Temperature Sensor V1.2") |
-| [Grove - LED](http://www.seeedstudio.com/depot/Grove-LED-p-767.html)                                                                                  | 1   | [Read Here](/Grove-Red_LED "Grove-Red_LED")                                         |
-| [Grove - Light Sensor](http://www.seeedstudio.com/depot/Grove-Light-Sensor-p-746.html?cPath=25_27)                                                    | 1   | [Read Here](/Grove-Light_Sensor "Grove - Light Sensor")                       |
-| [Grove – Button](http://www.seeedstudio.com/depot/Grove-Button-p-766.html?cPath=85_50)                                                                | 1   | [Read Here](/Grove-Button "Grove - Button")                                   |
+| [Seeeduino Cloud development board](https://www.seeedstudio.com/depot/Seeeduino-Cloud-Arduino-Yun-compatible-openWRT-controller-p-2123.html?cPath=6_7) | 1   | [Read Here](/Seeeduino_Cloud "Seeeduino Cloud")                               |
+| [Base Shield](https://www.seeedstudio.com/depot/Base-Shield-V2-p-1378.html?cPath=98_16)                                                                | 1   | [Read Here](/Base_Shield_V2 "Base shield v2")                                 |
+| [Grove - LCD RGB Backlight](https://www.seeedstudio.com/depot/Grove-LCD-RGB-Backlight-p-1643.html?cPath=34_36)                                         | 1   | [Read Here](/Grove-LCD_RGB_Backlight "Grove - LCD RGB Backlight")             |
+| [Grove - Relay](https://www.seeedstudio.com/depot/Grove-Relay-p-769.html?cPath=39_42)                                                                  | 1   | [Read Here](/Grove-Relay "Grove - Relay")                                     |
+| [Grove - Buzzer](https://www.seeedstudio.com/depot/Grove-Buzzer-p-768.html?cPath=38)                                                                   | 1   | [Read Here](/Grove-Buzzer "Grove - Buzzer")                                   |
+| [Grove - Sound Sensor](https://www.seeedstudio.com/depot/Grove-Sound-Sensor-p-752.html?cPath=25_128)                                                   | 1   | [Read Here](/Grove-Sound_Sensor "Grove - Sound Sensor")                       |
+| [Grove - Touch Sensor](https://www.seeedstudio.com/depot/Grove-Touch-Sensor-p-747.html?cPath=85_94)                                                    | 1   | [Read Here](/Grove-Touch_Sensor "Grove - Touch Sensor")                       |
+| [Grove - Rotary Angle Sensor](https://www.seeedstudio.com/depot/Grove-Rotary-Angle-Sensor-p-770.html?cPath=85_52)                                      | 1   | [Read Here](/Grove-Rotary_Angle_Sensor "Grove - Rotary Angle Sensor")         |
+| [Grove - Temperature Sensor](https://www.seeedstudio.com/depot/Grove-Temperature-Sensor-p-774.html?cPath=25_125)                                       | 1   | [Read Here](/Grove-Temperature_Sensor_V1.2 "Grove - Temperature Sensor V1.2") |
+| [Grove - LED](https://www.seeedstudio.com/depot/Grove-LED-p-767.html)                                                                                  | 1   | [Read Here](/Grove-Red_LED "Grove-Red_LED")                                         |
+| [Grove - Light Sensor](https://www.seeedstudio.com/depot/Grove-Light-Sensor-p-746.html?cPath=25_27)                                                    | 1   | [Read Here](/Grove-Light_Sensor "Grove - Light Sensor")                       |
+| [Grove – Button](https://www.seeedstudio.com/depot/Grove-Button-p-766.html?cPath=85_50)                                                                | 1   | [Read Here](/Grove-Button "Grove - Button")                                   |
 | DIP LED Blue-Blue                                                                                                                                     | 1   |                                                                               |
 | DIP LED Green-Green                                                                                                                                   | 1   |                                                                               |
 | DIP LED Red-Red                                                                                                                                       | 1   |                                                                               |
@@ -220,4 +220,4 @@ Run examples
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

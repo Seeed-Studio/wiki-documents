@@ -80,7 +80,7 @@ The BLE Micro has a pre-flashed OTA bootloader. To enter OTA mode:
 
 ## Download &amp; Debug through SWD interface
 ---
-We can download and debug new application of BLE Micro with an [Arch BLE](http://www.seeedstudio.com/depot/Arch-BLE-p-1998.html) or a J-Link through SWD interface. The Arch BLE is a BLE Micro + a CMSIS DAP interface which provides features like drag-n-drop programming, debug and USB virtual serial port communication.
+We can download and debug new application of BLE Micro with an [Arch BLE](https://www.seeedstudio.com/depot/Arch-BLE-p-1998.html) or a J-Link through SWD interface. The Arch BLE is a BLE Micro + a CMSIS DAP interface which provides features like drag-n-drop programming, debug and USB virtual serial port communication.
 
 ![](https://files.seeedstudio.com/wiki/BLE_Micro/img/Using_arch_ble_to_flash_ble_micro.png)
 
@@ -90,7 +90,7 @@ Go to [Seeedstudio mbed BLE project](https://github.com/Seeed-Studio/mbed_ble) (
 
 If you are familiar with the Docker, there is [a Docker container](https://registry.hub.docker.com/u/skyplabs/ble-micro/) created by Paul for you to setup toolchain quickly. You can use [the Dockerfile](https://github.com/SkypLabs/ble_micro_dockerfile) to get started.
 
-If you have an [Arch BLE](http://www.seeedstudio.com/depot/Arch-BLE-p-1998.html), you can also use [ARM mbed cloud-based IDE](https://developer.mbed.org/compiler/). See also [Arch BLE wiki](/Arch_BLE)
+If you have an [Arch BLE](https://www.seeedstudio.com/depot/Arch-BLE-p-1998.html), you can also use [ARM mbed cloud-based IDE](https://developer.mbed.org/compiler/). See also [Arch BLE wiki](/Arch_BLE)
 
 ## BLE UART
 ---
@@ -126,4 +126,4 @@ By default, the BLE Micro is acted as a BLE to UART device. It can be connected 
 *   [Firmware](https://files.seeedstudio.com/wiki/BLE_Micro/res/Ble_micro_firmware.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

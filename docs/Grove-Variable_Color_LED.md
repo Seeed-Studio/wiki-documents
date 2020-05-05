@@ -4,7 +4,7 @@ category: Actuator
 bzurl: https://seeedstudio.com/Grove-Variable-Color-LED-p-852.html
 oldwikiname: Grove_-_Variable_Color_LED
 prodimagename: Variable_Color_LED1.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/Variable Color LED.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/Variable Color LED.jpg
 surveyurl: https://www.research.net/r/Grove-Variable_Color_LED
 sku: 104020001
 tags: grove_digital, io_3v3, io_5v, plat_duino, plat_pi, plat_bbg
@@ -15,7 +15,7 @@ tags: grove_digital, io_3v3, io_5v, plat_duino, plat_pi, plat_bbg
 This Grove consists of one 8mm RGB LED. It operates at 5V DC. When SIG pin is logic HIGH, the RGB LED will light up. Perfect for use on Seeeduino digital outputs, or also can be controlled by pulse-width modulation. And it uses three adjustable resistor to change the color of the RGB LED.
 
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Variable-Color-LED-p-852.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-Variable-Color-LED-p-852.html)
 
 
 Features
@@ -25,7 +25,7 @@ Features
 -   Color adjustable
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
     
 Application Ideas
 -----------------
@@ -111,7 +111,7 @@ Resources
 -   [Variable Color LED eagle_file](https://files.seeedstudio.com/wiki/Grove-Variable_Color_LED/res/Variable_Color_LED_eagle_file.zip)
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Variable_Color_LED -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Variable_Color_LED -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

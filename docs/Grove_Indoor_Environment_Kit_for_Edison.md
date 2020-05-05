@@ -39,7 +39,7 @@ Grove Indoor Environment Kit for Edison makes it easy to create complete indoor 
 
 *   [Grove - Buzzer](/Grove-Buzzer)  x1
 
-*   [9V to Barrel Jack Adapter](http://www.seeedstudio.com/depot/9V-to-Barrel-Jack-Adapter-p-1481.html)  x1
+*   [9V to Barrel Jack Adapter](https://www.seeedstudio.com/depot/9V-to-Barrel-Jack-Adapter-p-1481.html)  x1
 
 *   26AWG Grove Cable  x10
 
@@ -65,7 +65,7 @@ Refer to Intel Edison offical site: [Edison Getting Started Guide](https://commu
 
 ##   Install required drivers
 ---
-1.Download [FTDI drivers](http://www.ftdichip.com/Drivers/CDM/CDM%20v2.10.00%20WHQL%20Certified.exe)
+1.Download [FTDI drivers](https://www.ftdichip.com/Drivers/CDM/CDM%20v2.10.00%20WHQL%20Certified.exe)
 
 2.Right-click the .exe file you downloaded, which should be called “CDM…” and select “Run as administrator”.
 
@@ -257,4 +257,4 @@ _**Note: When visiting the web server, a port number(88)should be added,such as:
 *   [Intel Edison Software &amp; Documentation](https://communities.intel.com/community/makers/edison/documentation)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -13,7 +13,7 @@ tags:
 ![](https://files.seeedstudio.com/wiki/Google-Assitant/img/Front.jpg)
 
 
-This wiki is for ReSpeaker Core v2.0, we recommend you to read the [Wiki of ReSpeaker Core v2.0](http://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#preparation) first.
+This wiki is for ReSpeaker Core v2.0, we recommend you to read the [Wiki of ReSpeaker Core v2.0](https://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#preparation) first.
 
 ## Before the start
 
@@ -25,7 +25,7 @@ You need to make the following preparations:
 - One Micro-USB cables
 - [PUTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
-We assume that you have read the [Preparetion](http://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#preparation) and set up the WiFi and Serial already. 
+We assume that you have read the [Preparetion](https://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#preparation) and set up the WiFi and Serial already. 
 
 Now let's play 😃
 

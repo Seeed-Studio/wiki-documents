@@ -10,7 +10,7 @@ sku: 102991306(NANO)
 
 # NPi i.MX6ULL Dev Board - Linux SBC
 
- ![](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/preview_3.jpg)
+ ![](https://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/preview_3.jpg)
 
 The NPi i.MX6ULL Dev Board is a low power consumption Linux single board computer built around the powerful i.MX6ULL. You would love the onboard 512MB DDR3L and 512MB NAND, not to mention the rich interfaces and I/O resources.
 
@@ -73,7 +73,7 @@ The operating temperature here refers specifically to the Core module, and the t
 
 ### Interface
 
- ![](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/NAND-over.jpg)
+ ![](https://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/NAND-over.jpg)
 
 **100M Ethernet Interface with LEDs**: 2 x 100M Ethernet interfaces
 
@@ -109,7 +109,7 @@ The operating temperature here refers specifically to the Core module, and the t
  
 ### Pin Function
 
-![](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/eMMC-c.jpg)
+![](https://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/eMMC-c.jpg)
 
 The more informtion you can go to [PinMap](https://docs.google.com/spreadsheets/d/1CRQrkBshc_2KFwC0NHmuwaJ_SedR24Oc1Ia9RGR3Us0/edit#gid=1256668665) to view.
 
@@ -145,7 +145,7 @@ you need to install the NPi i.MX6ULL Dev Board - Linux SBC image from your SD ca
 <br>
 <br>Click the plus icon to add the newly downloaded image file and the software will automatically select the SD card you inserted. Then click Flash! writing. It takes about 10 minutes to finish.</font>
 
-![](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/etcher.png)
+![](https://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/etcher.png)
 
 - **Step 4.** After writing the image to the SD card, insert the SD card into NPi i.MX6ULL Dev Board - Linux SBC.Set the 8-digit DIP switch to 2-5-8 mode to enable boot from SD.
 
@@ -166,7 +166,7 @@ if Heartbeat LED cannot flash, it means starting failed. Please check the image 
 sudo fire-config
 ```
 
-![](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/flasher.png)
+![](https://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/flasher.png)
 
 - **Step 3.** Wait for the LED  on the NPI i.MX6ULL Dev Board flash continuously. that indicate the eMMC(or NAND) buring successfully if the LED flash continuously.
 
@@ -349,7 +349,7 @@ In this section, we will explain the basic use of serial port and terminal equip
 fire-config
 ```
 
-![](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/fire-config-uart3-enable.png)
+![](https://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/fire-config-uart3-enable.png)
 
 You will get cmd as follow if enabled successfully.
 
@@ -381,7 +381,7 @@ echo seeedstduio > /dev/ttymxc2
 
 finally,we will get 'seeedstduio' string in the putty if connect successfully.
 
-![](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/putty_recive.png)
+![](https://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/putty_recive.png)
 
 #### I2C
 
@@ -430,7 +430,7 @@ root@npi:~# i2cget -y 0 0x77 0xD0
 0x58
 ```
 
-Finally, We can get 0x58 which is Grove - BME280's ID.and more infromation about Grove - BME280 you can visit [wiki](http://wiki.seeedstudio.com/Grove-Barometer_Sensor-BME280/) to learn.the usage of i2c-tool you can view [link](https://www.mankier.com/package/i2c-tools)
+Finally, We can get 0x58 which is Grove - BME280's ID.and more infromation about Grove - BME280 you can visit [wiki](https://wiki.seeedstudio.com/Grove-Barometer_Sensor-BME280/) to learn.the usage of i2c-tool you can view [link](https://www.mankier.com/package/i2c-tools)
 
 #### ADC
 
@@ -450,7 +450,7 @@ In this section, we will explain the control principle of the Linux ADC driver-r
 fire-config
 ```
 
-![](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/enable-adc.png)
+![](https://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/enable-adc.png)
 
 You will get cmd as follow if enabled successfully.
 
@@ -466,7 +466,7 @@ in_voltage2_raw     power
 
 - **step 2.** Visit the [PinMap](https://docs.google.com/spreadsheets/d/1CRQrkBshc_2KFwC0NHmuwaJ_SedR24Oc1Ia9RGR3Us0/edit#gid=1256668665) to find ADC1's pin number of NPi i.MX6ULL Dev Board.You can find the GPIO number as follow picture.
 
-![](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/adc-pin-map.png)
+![](https://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/adc-pin-map.png)
 
 **step 3.** Connect Grove - Rotary Angle Sensor to ADC1 on NPi i.MX6ULL Dev Board with Grove - 4 pin Female Jumper to Grove 4 pin Conversion Cable.
 
@@ -490,7 +490,7 @@ In this section, we will explain the control principle of the Linux SPI program.
 
 **Software**
 
-- **Step 1.** According to the [installation guide](http://wiki.seeedstudio.com/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/#mounting-guide) insert 2 Channel CAN BUS FD Shield for Raspberry Pi onto NPi i.MX6ULL Dev Board.
+- **Step 1.** According to the [installation guide](https://wiki.seeedstudio.com/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/#mounting-guide) insert 2 Channel CAN BUS FD Shield for Raspberry Pi onto NPi i.MX6ULL Dev Board.
 
 - **Step 2.** Select P23 in fire-config to expand Filesystem.
 
@@ -498,7 +498,7 @@ In this section, we will explain the control principle of the Linux SPI program.
 fire-config
 ```
 
-![](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/ExpandSDCard.png)
+![](https://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/ExpandSDCard.png)
 
 - **Step 3.** Install dependencies about seeed-linux-dtoverlays
 
@@ -544,7 +544,7 @@ can0: flags=128<NOARP>  mtu 16
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
 
-The more information about the 2-Channel CAN-BUS(FD) Shield you can visit [wiki](http://wiki.seeedstudio.com/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/#install-can-hat)
+The more information about the 2-Channel CAN-BUS(FD) Shield you can visit [wiki](https://wiki.seeedstudio.com/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/#install-can-hat)
 
 #### IIS
 
@@ -557,7 +557,7 @@ In this section, we will explain the control principle of the Linux IIS program.
 
 **Software**
 
-- **Step 1.** According to the [installation guide](http://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/#getting-started) insert ReSpeaker 2-Mics Pi HAT onto NPi i.MX6ULL Dev Board.
+- **Step 1.** According to the [installation guide](https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/#getting-started) insert ReSpeaker 2-Mics Pi HAT onto NPi i.MX6ULL Dev Board.
 
 - **Step 2.** Install alsa-utils by using `apt`
 
@@ -588,15 +588,15 @@ card 0: seeed2micvoicec [seeed-2mic-voicecard], device 0: bcm2835-i2s-wm8960-hif
   Subdevice #0: subdevice #0
 ```
 
-The more information about the ReSpeaker 2-Mics Pi HAT you can visit [wiki](http://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/)
+The more information about the ReSpeaker 2-Mics Pi HAT you can visit [wiki](https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/)
 
 ## Resourses
 -----
 
-- **[PDF]** [i.MX 6ULL datasheet](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/REG/IMX6ULLCEC.pdf)
-- **[PDF]** [NPi i.MX6ULL Dev Board - Linux SBC Mechanical_Dimensions](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/REG/Mechanical_Dimensions.pdf)
-- **[PDF]** [NPi i.MX6ULL Dev Board - Linux SBC Breakout Board](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/REG/NPi-i.MX6ULL-Breakout-Board-Schematic-V1.0.pdf)
-- **[PDF]** [NPi i.MX6ULL Dev Board - Linux SBC Core Module](http://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/REG/NPi-i.MX6ULL-Core-Module-Schematic-V1.0.pdf)
+- **[PDF]** [i.MX 6ULL datasheet](https://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/REG/IMX6ULLCEC.pdf)
+- **[PDF]** [NPi i.MX6ULL Dev Board - Linux SBC Mechanical_Dimensions](https://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/REG/Mechanical_Dimensions.pdf)
+- **[PDF]** [NPi i.MX6ULL Dev Board - Linux SBC Breakout Board](https://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/REG/NPi-i.MX6ULL-Breakout-Board-Schematic-V1.0.pdf)
+- **[PDF]** [NPi i.MX6ULL Dev Board - Linux SBC Core Module](https://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/REG/NPi-i.MX6ULL-Core-Module-Schematic-V1.0.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

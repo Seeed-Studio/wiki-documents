@@ -14,7 +14,7 @@ tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit
 
 This Grove - MIni I2C motor driver includes two DRV8830. The DRV8830 provides an integrated motor driver solution for battery-powered toys, printers, and other low-voltage or battery-powered motion control applications. The module has two H-bridge drivers, and can drive two DC motors or two winding of stepper motors, as well as other loads like solenoids.It requires an onboard 5V voltage regulator which can power the I2C bus. All driver lines are diode protected from back EMF.It features two LEDs for fault indicator and four LEDs to indicate which direction each motor is running. GROVE system plug and I2C interface enables you to daisy-chain the driver with many other devices.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove%C2%A0-%C2%A0I2C%C2%A0Mini%C2%A0Motor%C2%A0Driver-p-2508.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove%C2%A0-%C2%A0I2C%C2%A0Mini%C2%A0Motor%C2%A0Driver-p-2508.html)
 
 Features
 --------
@@ -29,7 +29,7 @@ Features
 -   Easy to use
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 Application Ideas
 -----------------
@@ -279,13 +279,13 @@ Now, let us begin to use the Grove - Mini I2C Motor Driver.
 Now we are making a demo for Grove - Mini I2C Motor Driver v1.0 which require following modules.
 
 -   2 * DC Motor 2V-6V
--   [Seeeduino Lite](http://www.seeedstudio.com/depot/Seeeduino-Lite-p-1487.html)
+-   [Seeeduino Lite](https://www.seeedstudio.com/depot/Seeeduino-Lite-p-1487.html)
 
 **Seeeduino Lite is compatible with Arduino.**
 
 If you are using an Arduino UNO or any others Arduino compatible boards that with out a Grove connect,
 
-You will need a [Grove Base Shield](http://www.seeedstudio.com/depot/base-shield-v13-p-1378.html?cPath=132_134) to connect the Grove easily.
+You will need a [Grove Base Shield](https://www.seeedstudio.com/depot/base-shield-v13-p-1378.html?cPath=132_134) to connect the Grove easily.
 
 If this is your first time using Arduino or Seeeduino, Please put hand on [here](/Getting_Started_with_Seeeduino) to start your Arduino journey.
 
@@ -441,7 +441,7 @@ Resources
 -   [Grove - Mini I2C Motor Driver Schematic Document](https://files.seeedstudio.com/wiki/Grove-Mini_I2C_Motor_Driver_v1.0/res/Grove-Mini_I2C_Motor_Driver_v1.0_SCH.pdf)
 -   [Grove - Mini I2C Motor Driver Source Library](https://github.com/Seeed-Studio/Drv8830_Motor_Driver)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Mini_I2C_Motor_Driver_v1.0 -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Mini_I2C_Motor_Driver_v1.0 -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -10,17 +10,17 @@ Grove Beginner Kit for Arduino is one of the best Arduino Beginner Kit for begin
 
 **Note:** Dimensions - 17.69 * 11.64 * 1.88cm
 
-1. **[Grove - LED](http://wiki.seeedstudio.com/Grove-Red_LED/):** Simple LED module
-2. **[Grove - Buzzer](http://wiki.seeedstudio.com/Grove-Buzzer/):** Piezo Buzzer
-3. **[Grove - OLED Display 0.96"](http://wiki.seeedstudio.com/Grove-OLED-Display-0.96-SSD1315/):** 128×64 dot resolution High brightness,self-emission and high contrast ratio Big screen on a compact design Low power consumption.
-4. **[Grove - Button](http://wiki.seeedstudio.com/Grove-Button/):** Momentary Push Button
-5. **[Grove - Rotary Potentiometer](http://wiki.seeedstudio.com/Grove-Rotary_Angle_Sensor/):** Adjustable Potentiometer
-6. **[Grove - Light](http://wiki.seeedstudio.com/Grove-Light_Sensor/):** Detects surrounding light intensity
-7. **[Grove - Sound](http://wiki.seeedstudio.com/Grove-Sound_Sensor/):** Detects surrounding sound intensity
-8. **[Grove - Temperature & Humidity Sensor](http://wiki.seeedstudio.com/Grove-TemperatureAndHumidity_Sensor/):** Detects surrounding temperature and humidity values
-9. **[Grove - Air Pressure Sensor](http://wiki.seeedstudio.com/Grove-Barometer_Sensor-BMP280/):** Detects surrounding atmospheric pressure
-10. **[Grove - 3-Axis Accelerator](http://wiki.seeedstudio.com/Grove-3-Axis_Digital_Accelerometer-1.5g/):** Detects object acceleration
-11. **[Seeeduino Lotus](http://wiki.seeedstudio.com/Seeeduino_Lotus/):** Arduino Compatible Board with Grove Ports
+1. **[Grove - LED](https://wiki.seeedstudio.com/Grove-Red_LED/):** Simple LED module
+2. **[Grove - Buzzer](https://wiki.seeedstudio.com/Grove-Buzzer/):** Piezo Buzzer
+3. **[Grove - OLED Display 0.96"](https://wiki.seeedstudio.com/Grove-OLED-Display-0.96-SSD1315/):** 128×64 dot resolution High brightness,self-emission and high contrast ratio Big screen on a compact design Low power consumption.
+4. **[Grove - Button](https://wiki.seeedstudio.com/Grove-Button/):** Momentary Push Button
+5. **[Grove - Rotary Potentiometer](https://wiki.seeedstudio.com/Grove-Rotary_Angle_Sensor/):** Adjustable Potentiometer
+6. **[Grove - Light](https://wiki.seeedstudio.com/Grove-Light_Sensor/):** Detects surrounding light intensity
+7. **[Grove - Sound](https://wiki.seeedstudio.com/Grove-Sound_Sensor/):** Detects surrounding sound intensity
+8. **[Grove - Temperature & Humidity Sensor](https://wiki.seeedstudio.com/Grove-TemperatureAndHumidity_Sensor/):** Detects surrounding temperature and humidity values
+9. **[Grove - Air Pressure Sensor](https://wiki.seeedstudio.com/Grove-Barometer_Sensor-BMP280/):** Detects surrounding atmospheric pressure
+10. **[Grove - 3-Axis Accelerator](https://wiki.seeedstudio.com/Grove-3-Axis_Digital_Accelerometer-1.5g/):** Detects object acceleration
+11. **[Seeeduino Lotus](https://wiki.seeedstudio.com/Seeeduino_Lotus/):** Arduino Compatible Board with Grove Ports
 
 
 **Note:**
@@ -128,11 +128,11 @@ Buzzer and LED module are used for key prompt.
 1.Open the **Arduino IDE** on your PC.
 2.Click on `Tools` -> `Board` to select the correct Development Board Model. Select **Arduino/Genuino Uno** as Board.
 
-![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/board.png)
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/board.png)
 
 3.Click `Tools` -> `Port` to select the correct Port (the Serial Port showed in Device Manager in the previous step). In this case, `COM6` is selected. **For Mac OS users**, it should be `/dev/cu.SLAB_USBtoUART`.
 
-![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/port.png)
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/port.png)
 
 
 4.Create a new Arduino file and name it `Hello.ino`, then copy the following code into it:
@@ -149,11 +149,11 @@ void loop() {
 
 5.In the upper left corner of the Arduino IDE, there are two buttons, **Verify and Upload**. First, press the Verify button(✓) to compile. After the compilation is successful, press the upload button(→).
 
-![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/func.png)
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/func.png)
 
 6.Navigate to `Tools` -> `Serial Monitor`, or click the **Serial Monitor** in the upper right corner(Magnifier Symbol), you can see the program running results:
 
-![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/print.png)
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/print.png)
 
 **Note:** If you installed the portable Arduino IDE from our USB Drive, you can find all the module demos in the **Files** -> **Sketch Book**, as well as all the module libraries, are pre-installed with Arduino IDE!
 
@@ -175,7 +175,7 @@ We have completed the output "Hello world" program. Now let's learn how to light
 
 **Digital signal:** Digital signal refers to the value of the amplitude is discrete, the amplitude is limited to a finite number of values. In our controller, the digital signal has two states: LOW(0V) for 0; HIGH(5V) for 1. So sending a HIGH signal to LED can light it up.
 
-![Alt text](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/digital.png)
+![Alt text](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/digital.png)
 
 
 
@@ -184,7 +184,7 @@ We have completed the output "Hello world" program. Now let's learn how to light
     2. Grove LED
     3. Grove Cable(If Broken out)
 
-![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/LED.png)
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/LED.png)
 
 
 - <font size=5;font color=#314B9F >Hardware connection</font>
@@ -352,7 +352,7 @@ The first thing we need to know is that the input of the button is a digital sig
     3. Grove Button
     4. Grove Cables(If broken out)
 
-![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Button.png)
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Button.png)
 
 - <font size=5;font color=#314B9F >Hardware connection</font>
     - **Module connection:**
@@ -494,7 +494,7 @@ In the last section, we studied that button only has two states, ON/OFF state co
 
 **Analog signals:** Signals vary continuously in time and value, and the amplitude, frequency, or phase of the signal changes continuously at any time, such as the current broadcast sound signal, or image signal, etc. The analog signal has sine wave and triangle wave and so on. The analog pins of your microcontroller can have between 0V and 5V is mapped to a range between 0 and 1023 where 1023 is mapped as 5V and 512 is mapped as 2.5v and etc.
 
-![Alt text](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/analog.png)
+![Alt text](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/analog.png)
 
 
 
@@ -504,7 +504,7 @@ In the last section, we studied that button only has two states, ON/OFF state co
     3. Grove Rotary Switch
     4. Grove Cables(If broken out)
 
-![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/rotary.png)
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/rotary.png)
 
 
 
@@ -615,7 +615,7 @@ Just like the LED module, Buzzer is also an output module, instead of lighting u
 
 As the diagram indicates below, use `analogWrite()` to generate PWM waves, the higher the percentage of Duty Cycle, the louder the buzzer.
 
-<div align=center><img src="http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/BuzzerPWM.jpg"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/BuzzerPWM.jpg"/></div>
 
 There are six digital pins on your Seeeduino that are marked with the symbol “~”, which means they can send out a PWM signal : 3,5,6,9,10,11. They are celled PWM pins.
 
@@ -626,7 +626,7 @@ There are six digital pins on your Seeeduino that are marked with the symbol “
     2. Grove Buzzer
     3. Grove Cable(If Broken out)
 
-![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Buzzer.png)
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Buzzer.png)
 
 
 
@@ -748,11 +748,11 @@ In the following sections, we will use Serial Monitor to observe results from ou
 
 Serial Monitor is a useful tool to observe results on Arduino, it can be very useful in terms of printing results from the sensors or debugging in general. You can also send data back to the controller via the serial monitor to do certain tasks! Note: Make sure the Serial data transfer match with the code.
 
-![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Serial.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Serial.jpg)
 
 You can open the Serial Monitor by clicking **Tools** -> **Serial Monitor**.
 
-![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/20200217144001.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/20200217144001.jpg)
 
   
 - <font size=5;font color=#314B9F >Components Involved</font>
@@ -761,7 +761,7 @@ You can open the Serial Monitor by clicking **Tools** -> **Serial Monitor**.
     3. Grove Light Sensor
     4. Grove Cable(If broken out)
 
-![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Light.png)
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Light.png)
 
 
 
@@ -875,11 +875,11 @@ The sound sensor can detect the sound intensity of the environment, and its outp
 
 Serial Plotter is similar to Serial Monitor, allowing you to natively graph serial data from your Arduino to your computer in real-time. This is very useful when data needs to be visualized.
 
-![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/SerialPlotter.png)
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/SerialPlotter.png)
 
 You can open the Serial Plotter by clicking **Tools** -> **Serial Plotter**.
 
-![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/serialplot.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/serialplot.jpg)
 
 
 
@@ -891,7 +891,7 @@ You can open the Serial Plotter by clicking **Tools** -> **Serial Plotter**.
     3. Grove Sound Sensor
     4. Grove cable(If broken out)
 
-![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Sound.png)
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Sound.png)
 
 
 
@@ -981,9 +981,9 @@ OLED Display can be used for many situations, where you could use it to visualiz
 
 The Arduino environment can be extended through the use of libraries, just like most other programming platforms. Libraries provide extra functionalities for use in sketches, i.e. working with specific hardware or manipulating data. To use a library in a sketch, select it from **Sketch** ->**Include Library**.
 
-![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/zip.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/zip.jpg)
 
-For more information, please also visit [How to install Arduino Libraries](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
+For more information, please also visit [How to install Arduino Libraries](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
 
 
 
@@ -992,7 +992,7 @@ For more information, please also visit [How to install Arduino Libraries](http:
     2. Grove OLED
     3. Grove cable(If broken out)
 
-![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/OLED.png)
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/OLED.png)
 
 - <font size=5;font color=#314B9F >Hardware connection</font>
     - **Module connection:**
@@ -1169,7 +1169,7 @@ The host then receives the data sent from the device, and the host terminates th
     3. Grove Temperature and Temperature Sensor
     4. Grove cable(If broken out)
 
-![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Temp.png)
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Temp.png)
 
 
 
@@ -1279,7 +1279,7 @@ Grove Air Pressure Sensor(BMP280) is a breakout board for Bosch BMP280 high-prec
     2. Grove Air Pressure Sensor
     3. Grove cable(if broken out)
 
-![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/AirPressure.png)
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/AirPressure.png)
 
 
 
@@ -1443,7 +1443,7 @@ This is the last sensor, the triaxial accelerometer, and with this module, you c
     2. Grove 3-axis Accelerometer
     3. Grove cable(if broken out)
 
-![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Gyro.png)
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Gyro.png)
 
 
 
@@ -1597,7 +1597,7 @@ Use Grove cable to connect Grove 3-axis Accelerometer to Seeeduino Lotus's **I2C
     3. Buzzer
     4. Grove Cables(if broken out)
 
-![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/project1.png)
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/project1.png)
 
 
 
@@ -1777,7 +1777,7 @@ Connect Grove LED to Seeeduino Lotus's digital signal interface **D4**, connect 
     4. Sound Sensor
     5. Grove cable(If broken out)
 
-![](http://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/project2.png)
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/project2.png)
 
 - <font size=5;font color=#314B9F >Hardware connection</font>
     - **Module connection:**
@@ -1901,4 +1901,4 @@ Seeed Studio has its very own [Open Parts Library (OPL)](https://www.seeedstudio
 
 ## Tech Support
 
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

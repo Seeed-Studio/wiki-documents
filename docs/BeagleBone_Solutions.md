@@ -9,7 +9,7 @@ nointro:
 
 The BeagleBone® is a versatile platform capable of running a full Linux OS while also retaining real-time capability. Designed with industrial use in mind, and documentation designed for entry-level developers, the BeagleBone® has numerous I/O and protocol support while being developer friendly.
 
-Seeed's [BeagleBone® Green](http://wiki.seeedstudio.com/BeagleBone_Green/) and [BeagleBone® Green Wireless](http://wiki.seeedstudio.com/BeagleBone_Green_Wireless/) are part of the BeagleBone® family and are ready to be customized, manufactured, and deployed **now**.
+Seeed's [BeagleBone® Green](https://wiki.seeedstudio.com/BeagleBone_Green/) and [BeagleBone® Green Wireless](https://wiki.seeedstudio.com/BeagleBone_Green_Wireless/) are part of the BeagleBone® family and are ready to be customized, manufactured, and deployed **now**.
 
 You can view our customization portfolio [here](#portfolio).
 
@@ -20,7 +20,7 @@ The BeagleBone is fully open source software and hardware. This allows developer
 ## **Built for Prototyping**
 ![prototyping](https://files.seeedstudio.com/wiki/BeagleBoneSolutions/img/Prototyping.gif)
 
-The BeagleBone® is a SBC development board designed for quick prototyping.  There are numerous capes which add additional functionality, allowing proof of concepts to be quickly built. Many of these capes are designed by the community and are fully open source as well. In addition we have created a Grove cape to allow many of our [Grove Modules](http://wiki.seeedstudio.com/Grove_System/) to be attached, allowing developers access to 200+ open source modules and their open source libraries.
+The BeagleBone® is a SBC development board designed for quick prototyping.  There are numerous capes which add additional functionality, allowing proof of concepts to be quickly built. Many of these capes are designed by the community and are fully open source as well. In addition we have created a Grove cape to allow many of our [Grove Modules](https://wiki.seeedstudio.com/Grove_System/) to be attached, allowing developers access to 200+ open source modules and their open source libraries.
 
 ## **Customization**
 

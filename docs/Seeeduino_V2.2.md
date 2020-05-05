@@ -17,7 +17,7 @@ And Now Seeeduino V2.2 Atmega 168P is out of stock.
 
 Seeeduino is Arduino compatible board. Its design is based on Diecimila scheme, 100% compatible to its existing program, shield and IDEs. On the hardware part, remarkable changes are taken to improve the flexibility and user experience.
 
-Seeeduino V2.2 Atmega 328 Model:[ARD128D2P](http://www.seeedstudio.com/depot/seeeduino-v22-atmega-328p-p-669.html?cPath=80)
+Seeeduino V2.2 Atmega 328 Model:[ARD128D2P](https://www.seeedstudio.com/depot/seeeduino-v22-atmega-328p-p-669.html?cPath=80)
 
 
 ##   Features  ##
@@ -55,7 +55,7 @@ May include key specification and other specifications.
 If you are using the Arduino Development Environment to program the board, select the Anduino Duemilanove board from the boards list.
 
 If the serial port does not show up when you connect the Seeeduino to the computer, you have to download the appropriate USB to serial drivers.
-The Windows, Linux, and Mac drivers can be downloaded here: [http://www.ftdichip.com/Drivers/VCP.htm](http://www.ftdichip.com/Drivers/VCP.htm)
+The Windows, Linux, and Mac drivers can be downloaded here: [https://www.ftdichip.com/Drivers/VCP.htm](https://www.ftdichip.com/Drivers/VCP.htm)
 
 ###   Hardware Installation   ###
 
@@ -87,7 +87,7 @@ Answer: Seeeduino  is a ...
 
 ##   Support   ##
 
-If you have questions or other better design ideas, you can go to our [forum](http://www.seeedstudio.com/forum) or **wish** to discuss.
+If you have questions or other better design ideas, you can go to our [forum](https://www.seeedstudio.com/forum) or **wish** to discuss.
 
 ##   Version Tracker   ##
 
@@ -110,11 +110,11 @@ The Additional Idea is the place to write your project ideas about this product,
 
 ##   Resources   ##
 
-- [Source file](http://www.seeedstudio.com/depot/source/seeeduinov22.zip)
+- [Source file](https://www.seeedstudio.com/depot/source/seeeduinov22.zip)
 
 ##   How to buy   ##
 
-Here to buy Seeeduino V2.2 [Atmega 168P](http://www.seeedstudio.com/depot/microcontrollers-seeeduino-c-79_80.html) and [Atmega 328P](http://www.seeedstudio.com/depot/seeeduino-v22-atmega-328p-p-669.html?cPath=79_80) on SEEED [Bazaar](http://www.seeedstudio.com/depot).
+Here to buy Seeeduino V2.2 [Atmega 168P](https://www.seeedstudio.com/depot/microcontrollers-seeeduino-c-79_80.html) and [Atmega 328P](https://www.seeedstudio.com/depot/seeeduino-v22-atmega-328p-p-669.html?cPath=79_80) on SEEED [Bazaar](https://www.seeedstudio.com/depot).
 
 ##   See Also   ##
 
@@ -125,4 +125,4 @@ Other related products and resources.
 This documentation is licensed under the Creative Commons [Attribution-ShareAlike License 3.0](http://creativecommons.org/licenses/by-sa/3.0/) Source code and libraries are licensed under [GPL/LGPL](http://www.gnu.org/licenses/gpl.html), see source code files for details.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

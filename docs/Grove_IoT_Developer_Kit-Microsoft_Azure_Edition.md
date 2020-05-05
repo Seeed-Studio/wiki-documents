@@ -33,12 +33,12 @@ The Intel® Edison compute module is designed for expert makers, entrepreneurs, 
 
 ###   Inter Edison For Arduino
 
-[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Intel_Edison_Compute_module.jpg)](http://www.seeedstudio.com/depot/Intel-Edison-p-2603.html)
+[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Intel_Edison_Compute_module.jpg)](https://www.seeedstudio.com/depot/Intel-Edison-p-2603.html)
 
 Intel Edison Compute module
 
 
-[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Intel_Edison_for_Arduino.jpg)](http://www.seeedstudio.com/depot/Intel-Edison-for-Arduino-p-2149.html)
+[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Intel_Edison_for_Arduino.jpg)](https://www.seeedstudio.com/depot/Intel-Edison-for-Arduino-p-2149.html)
 
 Inter Edison For Arduino
 
@@ -47,7 +47,7 @@ Inter Edison For Arduino
 
 ###   Base Shield V2
 
-[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Base_Shield_v2-1.png)](http://www.seeedstudio.com/depot/Base-Shield-V2-p-1378.html)
+[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Base_Shield_v2-1.png)](https://www.seeedstudio.com/depot/Base-Shield-V2-p-1378.html)
 
 Base Shield V2[(to Wiki)](/Base_Shield_V2)
 
@@ -66,19 +66,19 @@ Base Shield V2[(to Wiki)](/Base_Shield_V2)
     <th class="tg-yw4l">Wiki</th>
   </tr>
   <tr>
-    <td class="tg-yw4l">[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Button.jpg)](http://www.seeedstudio.com/depot/Grove-Button-p-766.html)</td>
+    <td class="tg-yw4l">[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Button.jpg)](https://www.seeedstudio.com/depot/Grove-Button-p-766.html)</td>
     <td class="tg-yw4l">Grove - Button[(to Wiki)](/Grove-Button)</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Wiki_soundsensor.jpg)](http://www.seeedstudio.com/depot/Grove-Sound-Sensor-p-752.html)</td>
+    <td class="tg-yw4l">[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Wiki_soundsensor.jpg)](https://www.seeedstudio.com/depot/Grove-Sound-Sensor-p-752.html)</td>
     <td class="tg-yw4l">Grove - Sound Sensor[(to Wiki)](/Grove-Sound_Sensor)</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/3_aix_acc.jpg)](http://www.seeedstudio.com/depot/Grove-3Axis-Digital-Accelerometer15g-p-765.html)</td>
+    <td class="tg-yw4l">[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/3_aix_acc.jpg)](https://www.seeedstudio.com/depot/Grove-3Axis-Digital-Accelerometer15g-p-765.html)</td>
     <td class="tg-yw4l">Grove - 3-Axis Digital Accelerometer(±1.5g)[[(to Wiki)](/Grove-3-Axis_Digital_Accelerometer-1.5g)</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Touch_sensor.jpg)](http://www.seeedstudio.com/depot/Grove-Touch-Sensor-p-747.html)</td>
+    <td class="tg-yw4l">[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Touch_sensor.jpg)](https://www.seeedstudio.com/depot/Grove-Touch-Sensor-p-747.html)</td>
     <td class="tg-yw4l">Grove - Touch Sensor[(to Wiki)](/Grove-Touch_Sensor)</td>
   </tr>
   <tr>
@@ -86,15 +86,15 @@ Base Shield V2[(to Wiki)](/Base_Shield_V2)
     <td class="tg-yw4l">Grove - Light Sensor v1.2[(to Wiki)](/Grove-Light_Sensor_v1.2)</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Grove_Temperature_Sensor_View.jpg)](http://www.seeedstudio.com/depot/Grove-Temperature-Sensor-p-774.html)</td>
+    <td class="tg-yw4l">[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Grove_Temperature_Sensor_View.jpg)](https://www.seeedstudio.com/depot/Grove-Temperature-Sensor-p-774.html)</td>
     <td class="tg-yw4l">Grove - Temperature Sensor[(to Wiki)](/Grove-Temperature_Sensor_V1.2)</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Potentiometer1.jpg)](http://www.seeedstudio.com/depot/Grove-Rotary-Angle-SensorP-p-1242.html)</td>
+    <td class="tg-yw4l">[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Potentiometer1.jpg)](https://www.seeedstudio.com/depot/Grove-Rotary-Angle-SensorP-p-1242.html)</td>
     <td class="tg-yw4l">Grove - Rotary Angle Sensor(P)[(to Wiki)](/Grove-Rotary_Angle_Sensor)</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Piezo_Vibration_Sensor_01.jpg)](http://www.seeedstudio.com/depot/Grove-Piezo-Vibration-Sensor-p-1411.html)</td>
+    <td class="tg-yw4l">[![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Piezo_Vibration_Sensor_01.jpg)](https://www.seeedstudio.com/depot/Grove-Piezo-Vibration-Sensor-p-1411.html)</td>
     <td class="tg-yw4l">Grove - Piezo Vibration Sensor[(to Wiki)](/Grove-Piezo_Vibration_Sensor)</td>
   </tr>
 </table>
@@ -102,39 +102,39 @@ Base Shield V2[(to Wiki)](/Base_Shield_V2)
 
 ###   Actuators
 
-*   [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Serial_LEC_RGB_Backlight_Lcd.jpg)](http://www.seeedstudio.com/depot/Grove-LCD-RGB-Backlight-p-1643.html)
+*   [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Serial_LEC_RGB_Backlight_Lcd.jpg)](https://www.seeedstudio.com/depot/Grove-LCD-RGB-Backlight-p-1643.html)
 
 Grove - LCD RGB Backlight[(to Wiki)](/Grove-LCD_RGB_Backlight)
 
 
 
-*   [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Buzzer1.jpg)](http://www.seeedstudio.com/depot/Grove-Buzzer-p-768.html)
+*   [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Buzzer1.jpg)](https://www.seeedstudio.com/depot/Grove-Buzzer-p-768.html)
 
 Grove - Buzzer[(to Wiki)](/Grove-Buzzer)
 
 
 
-*   [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Red_LED.jpg)](http://www.seeedstudio.com/depot/Grove-Red-LED-p-1142.html)
+*   [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Red_LED.jpg)](https://www.seeedstudio.com/depot/Grove-Red-LED-p-1142.html)
 
 Grove - Red LED[(to Wiki)](/Grove-Red_LED)
 
 
 
-*   [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Green_LED.jpg)](http://www.seeedstudio.com/depot/Grove-Green-LED-p-1144.html)
+*   [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Green_LED.jpg)](https://www.seeedstudio.com/depot/Grove-Green-LED-p-1144.html)
 
 Grove - Green LED
 
 
 
-*   [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Blue_LED.jpg)](http://www.seeedstudio.com/depot/Grove-Green-LED-p-1144.html)
+*   [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Blue_LED.jpg)](https://www.seeedstudio.com/depot/Grove-Green-LED-p-1144.html)
 
 Grove - Blue LED
 
 
 
-*   [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Stepper_Motor_with_Driver.jpg)](http://www.seeedstudio.com/depot/Gear-Stepper-Motor-with-Driver-p-1685.html)
+*   [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Stepper_Motor_with_Driver.jpg)](https://www.seeedstudio.com/depot/Gear-Stepper-Motor-with-Driver-p-1685.html)
 
-Gear Stepper Motor with Driver [(to Arduino Tutorial)](http://arduino.cc/en/Tutorial/MotorKnob)
+Gear Stepper Motor with Driver [(to Arduino Tutorial)](https://arduino.cc/en/Tutorial/MotorKnob)
 
 
 
@@ -370,4 +370,4 @@ _**Note: When visiting the web server, a port number(88)should be added,such as:
 *   [Intel Edison Software &amp; Documentation](https://communities.intel.com/community/makers/edison/documentation)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -4,7 +4,7 @@ category: Communication
 bzurl: https://seeedstudio.com/Grove-I2C-ADC-p-1580.html
 oldwikiname: Grove_-_I2C_ADC
 prodimagename: I2C_ADC_01.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/103020013 1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/103020013 1.jpg
 surveyurl: https://www.research.net/r/Grove-I2C_ADC
 sku: 103020013
 tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit, plat_pi, plat_bbg
@@ -14,7 +14,7 @@ tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit, plat_pi, plat_bbg
 
 Grove - I2C ADC is a 12-bit precision ADC module based on ADC121C021. It helps you increase the accuracy of value collected from analog sensor by providing a constant reference voltage. Because its address is changeable, you can use up to 9 I2C ADC at the same time at most. At the other hand, this module provides auto sleep function which lowers the power consumption considerably.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/grove-i2c-adc-p-1580.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/depot/grove-i2c-adc-p-1580.html)
 
 
 
@@ -36,7 +36,7 @@ Grove - I2C ADC is a 12-bit precision ADC module based on ADC121C021. It helps y
 -   Address changeable
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 ## Specifications
 -------------
@@ -165,7 +165,7 @@ As a simple exercise to become familiar with Cloud9 IDE, creating a simple appli
 
 If this is your first time to use Cloud9 IDE, please follow this [**link**](/BeagleBone_Green).
 
-**Step1:** Set the Grove - UART socket as a Grove - GPIO Socket, just follow this [**link**](http://www.seeedstudio.com/recipe/362-how-to-use-the-grove-uart-port-as-a-gpio-on-bbg.html).
+**Step1:** Set the Grove - UART socket as a Grove - GPIO Socket, just follow this [**link**](https://www.seeedstudio.com/recipe/362-how-to-use-the-grove-uart-port-as-a-gpio-on-bbg.html).
 
 **Step2:** Click the "+" in the top-right to create a new file.
 
@@ -363,7 +363,7 @@ We upload the code below to get the data.
      * 0~1, larger the output is, the denser the gas.
      * Connect the Sensor to A0 in this demo;
      * 
-     *  By: http://www.seeedstudio.com
+     *  By: https://www.seeedstudio.com
     */
     #define Vref 4.95
     void setup() {
@@ -415,7 +415,7 @@ In order to find out which result is more close to the actual condition, here we
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/LaurenceHR/beaglebone-green-temperature-monitor-on-artik-cloud-08ca3b/embed' width='350'></iframe>
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_I2C_ADC -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_I2C_ADC -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

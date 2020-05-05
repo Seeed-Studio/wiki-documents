@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-CO2-Sensor-p-1863.html
 oldwikiname: Grove_-_CO2_Sensor
 prodimagename: Grove_CO2_Sensor.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/Grove CO2 Sensor.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/Grove CO2 Sensor.jpg
 surveyurl: https://www.research.net/r/Grove-CO2_Sensor
 sku: 101020067
 tags: grove_uart, io_3v3, io_5v, plat_duino, plat_linkit
@@ -16,7 +16,7 @@ The Grove - CO2 Sensor module is infrared CO2 sensor high sensitivity and high r
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4df5kaaKa6I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-CO2-Sensor-p-1863.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-CO2-Sensor-p-1863.html)
 
 <div class="admonition warning">
 <p class="admonition-title">Caution</p>
@@ -25,7 +25,7 @@ Note that the sensor value only reflects the approximated trend of gas concentra
 
 
 !!!Tip
-    We've released the [Seeed Gas Sensor Selection Guide](http://wiki.seeedstudio.com/Seeed_Gas_Sensor_Selection_Guide/), it will help you choose the gas sensor that best suits your needs.
+    We've released the [Seeed Gas Sensor Selection Guide](https://wiki.seeedstudio.com/Seeed_Gas_Sensor_Selection_Guide/), it will help you choose the gas sensor that best suits your needs.
 
 Specifications
 -------------
@@ -43,7 +43,7 @@ Specifications
 -   Output mode UART
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 Platforms Supported
 -------------------
@@ -220,4 +220,4 @@ Resources
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/SeeedStudio/seeed-lora-iotea-solution-b5ee95/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

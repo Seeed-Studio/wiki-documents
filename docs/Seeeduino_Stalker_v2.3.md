@@ -16,7 +16,7 @@ tags:
 Seeeduino Stalker is a feature rich Arduino compatible **Wireless Sensor Network node**. Its modular structure and onboard peripherals makes it convenient to log time stamped sensor data on a periodic basis. Seeeduino Stalker comes with a Temperature sensor, RTC with backup power, SD Card Socket, Bee Socket and Solar LiPoimer Ion Battery Charger. The Seeeduino Stalker is a good candidate for all your tracking, monitoring and control projects.
 Revision of 2.3 is almost the same as revision of 2.2, the reason we upgrade it is to fix the bug by adding a rectifier diode between LI_BAT and USB5V.
 
-Model: [ARD104D2P](http://www.seeedstudio.com/depot/seeeduino-stalker-v2-p-727.html?cPath=80)
+Model: [ARD104D2P](https://www.seeedstudio.com/depot/seeeduino-stalker-v2-p-727.html?cPath=80)
 
 **Below are previous editions：**
 
@@ -83,7 +83,7 @@ Model: [ARD104D2P](http://www.seeedstudio.com/depot/seeeduino-stalker-v2-p-727.h
 
 - Solar JST Input voltage: 4.6-6V
 
-- Global Current Consumption: See [note ](http://wiki.seeedstudio.com/Seeeduino_Stalker_v2.3)
+- Global Current Consumption: See [note ](https://wiki.seeedstudio.com/Seeeduino_Stalker_v2.3)
 
 - UART Baud Rate (while programming): 115200 bps
 
@@ -99,9 +99,9 @@ You will require the following hardware for running your first program.
 
 |![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Seeduino_Stalker_v2.2.jpg)|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Uartsb40.jpg)|
 |---|---|
-|**Seeeduino Stalker v2.e**|**UartsBee v4.0**    Required for programming the Seeeduino Stalker.[Buy Here](http://www.seeedstudio.com/depot/uartsbee-v31-p-688.html)|
+|**Seeeduino Stalker v2.e**|**UartsBee v4.0**    Required for programming the Seeeduino Stalker.[Buy Here](https://www.seeedstudio.com/depot/uartsbee-v31-p-688.html)|
 |![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Miniusb.jpg)|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/JumperWire100n.jpg)|
-|**Mini USB Cable**      You would probably have this one lying around,or if not, buy one[here](http://www.seeedstudio.com/depot/mini-usb-cable-110cm-p-252.html). We would use this to connect the UartsBee to one of theUSB ports on your computer.|**1 pin dual-female jumper wire** Required for connecting the UartsBee to Seeeduino Stalker.You might already have few lying around your workspace. If not, you can buy a colourful one [here](http://www.seeedstudio.com/depot/1-pin-dualfemale-jumper-wire-100mm-50pcs-pack-p-260.html?cPath=175_187).|
+|**Mini USB Cable**      You would probably have this one lying around,or if not, buy one[here](https://www.seeedstudio.com/depot/mini-usb-cable-110cm-p-252.html). We would use this to connect the UartsBee to one of theUSB ports on your computer.|**1 pin dual-female jumper wire** Required for connecting the UartsBee to Seeeduino Stalker.You might already have few lying around your workspace. If not, you can buy a colourful one [here](https://www.seeedstudio.com/depot/1-pin-dualfemale-jumper-wire-100mm-50pcs-pack-p-260.html?cPath=175_187).|
 
 ####   Step 2: Installing the drivers and plugging in the hardware   ####
 
@@ -113,7 +113,7 @@ You will require the following hardware for running your first program.
 
 - Provide power (from USB power of your computer) to Seeeduino Stalker (including any peripherals connected to it).
 
-2.The first two functions of UartSBee (programming and communication) are achieved through an Integrated Circuit called FT232RL which is present on it. Before FT232RL can be used for these purposes, its drivers (certain freely available programs from FT232RL's manufacturer) must be installed on your windows/ubuntu based PC. So before proceeding further, download the driver setup file [from here](http://www.ftdichip.com/Drivers/VCP.htm) and install it on your Windows PC. (OS X Drivers also available and required for OS X)
+2.The first two functions of UartSBee (programming and communication) are achieved through an Integrated Circuit called FT232RL which is present on it. Before FT232RL can be used for these purposes, its drivers (certain freely available programs from FT232RL's manufacturer) must be installed on your windows/ubuntu based PC. So before proceeding further, download the driver setup file [from here](https://www.ftdichip.com/Drivers/VCP.htm) and install it on your Windows PC. (OS X Drivers also available and required for OS X)
 
 3.UartSBee has an onboard voltage regulator and a switch to allow you to select what voltage (5.0V or 3.3V) you would like to supply to the target circuit board. In our case the target circuit board is Seeeduino Stalker and so you would need to set this slide switch to 5.0 volts
 
@@ -432,7 +432,7 @@ Seeeduino Stalker v2.1 SolarPanel.png
 #####   A note on power consumption   #####
 
 The following screenshot shows the current consumption measurement of **Stalker** @ 3.3V input connected to LIPO_BAT. In actual application LIPO_BAT is connected to a 3.7V LiPo battery. Hence, consider the following measurement with a pinch of salt!!!
-Here in the [forum](http://forum.seeedstudio.com/viewtopic.php?f=16&amp;t=3911&amp;hilit=Stalker) are some discussions about power consumption.
+Here in the [forum](https://forum.seeedstudio.com/viewtopic.php?f=16&amp;t=3911&amp;hilit=Stalker) are some discussions about power consumption.
 It seems that just the RTC has a Standby Supply Current of 110µA. [Here](http://www.gammon.com.au/forum/?id=11497) are some infos on Low Power Consuption.
 
 But don't be sad now, even if you get down to an average draw of 1mA, you get 980 mAh/1 mA = 980h = **40.8** Dayswithout charging
@@ -457,11 +457,11 @@ But don't be sad now, even if you get down to an average draw of 1mA, you get 98
 
 |![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/StalkerEnclosure600.jpg) |![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Microsdcard2gb.jpg)|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Smartcable_04_LRG.jpg) |
 |---|---|---|
-|[Water-proof Enclosurefor Seeeduino Stalker v2.0](http://www.seeedstudio.com/depot/seeeduino-stalker-v2-enclosure-p-734.html?cPath=178_184) | [SanDisk 2GB microSD Card](http://www.seeedstudio.com/depot/sandisk-microsd-card-2gb-p-546.html?cPath=178_182)|[microSD Card Reader(in a capsule)](http://www.seeedstudio.com/depot/sd-card-reading-miniusb-cable-in-a-capsule-p-575.html?cPath=190)|
+|[Water-proof Enclosurefor Seeeduino Stalker v2.0](https://www.seeedstudio.com/depot/seeeduino-stalker-v2-enclosure-p-734.html?cPath=178_184) | [SanDisk 2GB microSD Card](https://www.seeedstudio.com/depot/sandisk-microsd-card-2gb-p-546.html?cPath=178_182)|[microSD Card Reader(in a capsule)](https://www.seeedstudio.com/depot/sd-card-reading-miniusb-cable-in-a-capsule-p-575.html?cPath=190)|
 |![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Miniusbcable.jpg) |![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/JumperWire100n.jpg)|
-|[Mini USB cable for use with UartSBee while programming](http://www.seeedstudio.com/depot/mini-usb-cable-100cm-p-252.html?cPath=178_179)|[Single wire - Jumper Wires](http://www.seeedstudio.com/depot/6-pin-dualfemale-jumper-wire-100mm-5-pcs-pack-p-129.html?cPath=175_187)|
+|[Mini USB cable for use with UartSBee while programming](https://www.seeedstudio.com/depot/mini-usb-cable-100cm-p-252.html?cPath=178_179)|[Single wire - Jumper Wires](https://www.seeedstudio.com/depot/6-pin-dualfemale-jumper-wire-100mm-5-pcs-pack-p-129.html?cPath=175_187)|
 |![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Lithium-lon-polymer-batteries2A.jpg) |![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Solar-panel55.jpg) |
-|[Lithium Polymer (LiPo) Battery](http://www.seeedstudio.com/depot/index.php?main_page=advanced_search_result&amp;search_in_description=0&amp;keyword=Lithium+Ion+polymer+Battery&amp;x=51&amp;y=12)|[Solar Panel for charging LiPo Battery via Stalker](http://www.seeedstudio.com/depot/index.php?main_page=advanced_search_result&amp;search_in_description=0&amp;keyword=solar+panel&amp;x=0&amp;y=0)|
+|[Lithium Polymer (LiPo) Battery](https://www.seeedstudio.com/depot/index.php?main_page=advanced_search_result&amp;search_in_description=0&amp;keyword=Lithium+Ion+polymer+Battery&amp;x=51&amp;y=12)|[Solar Panel for charging LiPo Battery via Stalker](https://www.seeedstudio.com/depot/index.php?main_page=advanced_search_result&amp;search_in_description=0&amp;keyword=solar+panel&amp;x=0&amp;y=0)|
 
 
 
@@ -533,4 +533,4 @@ This documentation is licensed under the Creative Commons [Attribution-ShareAlik
 - **[Eagle]**[Stalker v2.2 Eagle Files.zip](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/res/Stalker_v2.2_eagle.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -378,9 +378,9 @@ Can be used when your DSO's bricked.
 
 ##   External Links
 
-*   [DSO Nano On SeeedStudio Forum](http://forum.seeedstudio.com/viewforum.php?f=22)
+*   [DSO Nano On SeeedStudio Forum](https://forum.seeedstudio.com/viewforum.php?f=22)
 
 *   [Pocket Oscilloscope-DS0201 forum](http://www.minidso.com/bbs/thread.php?fid=6)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-UV-Sensor-p-1540.html
 oldwikiname: Grove_-_UV_Sensor
 prodimagename: UV_Sensor_01.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/101020043 1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/101020043 1.jpg
 surveyurl: https://www.research.net/r/Grove-UV_Sensor
 sku: 101020043
 tags: grove_analog, io_3v3, io_5v, plat_duino, plat_linkit
@@ -28,7 +28,7 @@ Features
 -   Grove Interface
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 Specifications
 --------------
@@ -89,7 +89,7 @@ We will show you how this Grove - UV Sensor works through a simple demo. First o
 | Seeeduino V4 | Grove - UV Sensor | Base Shield |
 |--------------|----------------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-UV_Sensor/img/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|
-|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-UV-Sensor-p-1540.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
+|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-UV-Sensor-p-1540.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
 
 
   **Connection**
@@ -146,7 +146,7 @@ Resources
 - [Grove - UV Sensor v1.0 schematics and datasheets(older version)](https://files.seeedstudio.com/wiki/Grove-UV_Sensor/res/Grove-UV_Sensor_v1.0_Datasheets.zip)
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_UV_Sensor -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_UV_Sensor -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

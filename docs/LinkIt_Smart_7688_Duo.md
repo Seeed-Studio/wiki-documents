@@ -117,7 +117,7 @@ LinkItTM Smart 7688 Duo(a compact controller board) is an open development board
 
 **2.**Install [Bonjour](https://support.apple.com/kb/DL999?viewlocale=en_US&locale=en_US) Print Service (For Windows 7, Windows 8, Windows 10).
 
-**3.**Install driver. If you are using a USB cable based on FTDI chip please download and install its driver from [here](http://www.ftdichip.com/Drivers/VCP.htm). If you are having problems with the latest driver, try installing an [older version](http://www.ftdichip.com/Support/Documents/InstallGuides.htm).
+**3.**Install driver. If you are using a USB cable based on FTDI chip please download and install its driver from [here](https://www.ftdichip.com/Drivers/VCP.htm). If you are having problems with the latest driver, try installing an [older version](https://www.ftdichip.com/Support/Documents/InstallGuides.htm).
 
 **4.**Next, you need to connect the Serial-to-USB cable to LinkIt Smart 7688's UART pins as shown in the following table:
 
@@ -435,7 +435,7 @@ You can now extend the Arduino sketch to drive other devices such as PWM, I2C de
 * [Hardware Schematic files](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/res/Hardware_Schematics.zip)
 * [Manual](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/res/Manual.zip)
 * [OpenWrt](http://wiki.openwrt.org/doc/howto/user.beginner)
-* [MediaTek LinkIt? Smart 7688 Resources:](http://labs.mediatek.com/site/global/developer_tools/mediatek_linkit_smart_7688/hdk_intro/index.gsp)
+* [MediaTek LinkIt? Smart 7688 Resources:](https://labs.mediatek.com/site/global/developer_tools/mediatek_linkit_smart_7688/hdk_intro/index.gsp)
 * [How to flash the firmware via a USB drive](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/res/Linkit_Smart_7688_DUO_Firmware.pdf)
 * [Certificates](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/res/LinkIt_Smart_7688_Duo-Certificate.zip)
 * [Document]** [Mediatek](https://labs.mediatek.com/en/platform/linkit-smart-7688)
@@ -463,4 +463,4 @@ You can now extend the Arduino sketch to drive other devices such as PWM, I2C de
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/phigax/smart-lighting-and-notifications-1c8a1b/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -137,7 +137,7 @@ When you first power on ReSpeaker, it will create a Wi-Fi network called "ReSpea
 ![](https://files.seeedstudio.com/wiki/Respeaker_Core/img/wifi1.png)
 
 !!!Note
-    If "ReSpeakerXXXXXX" does not appear, but "LinkIt_Smart_7688_XXXXXX" is found. Please click [here](http://wiki.seeed.cc/ReSpeaker_Core/#q20-system-recovery-by-factory-image).
+    If "ReSpeakerXXXXXX" does not appear, but "LinkIt_Smart_7688_XXXXXX" is found. Please click [here](https://wiki.seeedstudio.com/ReSpeaker_Core/#q20-system-recovery-by-factory-image).
 
 
 Once you've obtained an IP address, open a web browser, and enter 192.168.100.1 in the address bar. After a few seconds, a web page will appear asking for ssid and password of an existing Wi-Fi network.
@@ -421,7 +421,7 @@ In this project, Openwrt is in charge of getting realtime weather information fr
 5. Stop mopidy service on OpenWrt before using SPI bridge
 /etc/init.d/mopidy stop
 6. Run python main.py and say "ReSpeaker, what is the weather like?" to ReSpeaker.
-7. For more details about how to make a Weather Could, please click [here](http://www.instructables.com/id/How-to-DIY-an-in-House-Weather-telling-Cloud/).
+7. For more details about how to make a Weather Could, please click [here](https://www.instructables.com/id/How-to-DIY-an-in-House-Weather-telling-Cloud/).
 
 
 ##   ReSpeaker Mic Array
@@ -609,4 +609,4 @@ It will cost about 3 minutes for ReSpeaker to install the firmware and reboot, p
 - **[PDF]** [AI7688 Datasheet](https://files.seeedstudio.com/wiki/Bazaar_file/AI7688.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

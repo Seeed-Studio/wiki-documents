@@ -17,7 +17,7 @@ Designed for working with [Buglabs BUG platform](http://www.buglabs.net/).
 
 ##   Features
 ---
-*   [Arduino](http://arduino.cc) compatible, based on Seeeduino
+*   [Arduino](https://arduino.cc) compatible, based on Seeeduino
 *   BUG connector
 *   USB to Uart: FT232RL
 *   ATmega328 microcontroller
@@ -166,4 +166,4 @@ void loop()
 ```
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

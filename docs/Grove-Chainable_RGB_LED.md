@@ -4,7 +4,7 @@ category: Actuator
 bzurl: https://seeedstudio.com/Grove-Chainable-RGB-LED-p-850.html
 oldwikiname: Grove_-_Chainable_RGB_LED
 prodimagename: Chanbalelednb1.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/chanbalelednb1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/chanbalelednb1.jpg
 surveyurl: https://www.research.net/r/Grove-Chainable_RGB_LED
 sku: 104030006
 tags: grove_digital, io_3v3, io_5v, plat_duino, plat_linkit, plat_bbg
@@ -31,7 +31,7 @@ Specifications
 -   Communication Protocol: Serial
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 Platforms Supported
 -------------------
@@ -186,7 +186,7 @@ Based on [Chainable LED Library](https://github.com/pjpmarques/ChainableLED), we
 **Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
 
 !!!Note
-    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](https://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
@@ -625,7 +625,7 @@ As a simple exercise to become familiar with Cloud9 IDE, creating a simple appli
 
 If this is your first time to use Cloud9 IDE, please follow this [**link**](/BeagleBone_Green).
 
-**Step1:** Set the Grove - UART socket as a Grove - GPIO Socket, just follow this [**link**](http://www.seeedstudio.com/recipe/362-how-to-use-the-grove-uart-port-as-a-gpio-on-bbg.html).
+**Step1:** Set the Grove - UART socket as a Grove - GPIO Socket, just follow this [**link**](https://www.seeedstudio.com/recipe/362-how-to-use-the-grove-uart-port-as-a-gpio-on-bbg.html).
 
 **Step2:** Click the "+" in the top-right to create a new file.
 
@@ -779,7 +779,7 @@ if __name__ == "__main__":
 -   **[Datasheet]**[P9813 Datasheet](https://files.seeedstudio.com/wiki/Grove-Chainable_RGB_LED/res/P9813_datasheet.pdf)
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Chainable_RGB_LED -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Chainable_RGB_LED -->
 
 
 ## Projects
@@ -796,4 +796,4 @@ if __name__ == "__main__":
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/limanchen/security-access-using-seeeduino-lotus-7eb90f/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

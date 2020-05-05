@@ -49,7 +49,7 @@ Xadow - BLE (dual model) v1.0 uses CSR dual mode Bluetooth chip,with the ARM arc
 ---
 **Connecting Bluetooth to PC through Uart Bee**
 
-The Xadow - BLE has a standard Xadow interface with lead pitch, we use a [Xadow - Breakout](http://wiki.seeedstudio.com/Xadow_Breakout)to convert it to Grove socket.
+The Xadow - BLE has a standard Xadow interface with lead pitch, we use a [Xadow - Breakout](https://wiki.seeedstudio.com/Xadow_Breakout)to convert it to Grove socket.
 
 As Xadow interface is a axial symmetry port, so it's necessary to comply with the assembly direction, please refer to below picture.
 
@@ -59,7 +59,7 @@ As Xadow interface is a axial symmetry port, so it's necessary to comply with th
 
 **Connecting Bluetooth to Xadow - Main Board**
 
-Connect the Xadow BLE Slave to [Xadow - Main Board](http://wiki.seeedstudio.com/Xadow_Main_Board) and connect Main Board to PC with a USB cable.
+Connect the Xadow BLE Slave to [Xadow - Main Board](https://wiki.seeedstudio.com/Xadow_Main_Board) and connect Main Board to PC with a USB cable.
 
 Note: when connect Xadow - BLE to Xadow Main Board, you should concern about the connection direction. The connection method is that the unfilled corner of one xadow module need to connect to the right angle of another module(see four corners of each xadow module).
 
@@ -402,7 +402,7 @@ The initialization program flow please refer to the following flow chart. First 
 
 After the initialization, the Central and Peripheral will do different things, the Central will send message to Peripheral interval and print what received from Peripheral while the Peripheral only responds the Central.
 
-Click [here](https://github.com/Seeed-Studio/HM-13_SW) to download the test code and open HM-13_SW.ino with Arduino IDE, compile and download to Arduino Uno. Remember to configure the Bluetooth to different role by modify the macro at the beginning. If you have any problem about how to start Arduino, please click [here](http://www.seeedstudio.com/wiki/Getting_Started_with_Seeeduino) for some help.
+Click [here](https://github.com/Seeed-Studio/HM-13_SW) to download the test code and open HM-13_SW.ino with Arduino IDE, compile and download to Arduino Uno. Remember to configure the Bluetooth to different role by modify the macro at the beginning. If you have any problem about how to start Arduino, please click [here](https://www.seeedstudio.com/wiki/Getting_Started_with_Seeeduino) for some help.
 
 After downloading program, open two serial terminal windows, the LEDs on Bluetooth will flash, several seconds later, they stop to flash and keep on, this indicates that they connected to each other. According to the program is written, the Central sends message to the Peripheral continually and get feedback every time.
 
@@ -417,4 +417,4 @@ After downloading program, open two serial terminal windows, the LEDs on Bluetoo
 - <a href="https://files.seeedstudio.com/wiki/Xadow_BLE_Dual_Model_V1.0/res/Xadow-BLE_(dual_model)_v1.0.pdf"> PDF_Xadow-BLE_(dual_model)_v1.0</a>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -13,7 +13,7 @@ sku: 110060131
 
 Grove Starter Kit for BeagleBone® Green is an entry-level kit for beginners, which can help you explore BBG and create innovative projects. It's a best choice for novice to develop some cool projects and build prototype built in BBG. Here are a collection of sensors, actuators and shields that we have had success using with BeagleBone® Green.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Grove-Starter-Kit-for-SeeedStudio-BeagleBone-Green-p-2526.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/depot/Grove-Starter-Kit-for-SeeedStudio-BeagleBone-Green-p-2526.html)
 
 
 Application Ideas
@@ -24,7 +24,7 @@ If you want to make some awesome projects with BeagleBone® Green and Groves, he
 | **Smart Light Demo with BBG & BBG Start Kit(HA)**                                                         | **An IoT Application with BBG & BBG Start Kit**                        |
 |-----------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------|
 | ![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_for_BeagleBone_Green/img/BBG_starter_kit1.png)                              | ![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_for_BeagleBone_Green/img/图片1.png)  |
-| [Make it NOW!](http://www.seeedstudio.com/recipe/363-smart-light-demo-with-bbg-amp-bbg-start-kit-ha.html) | [Make it NOW!](http://www.seeedstudio.com/recipe/367-an-iot-application-with-bbg-amp-bbg-start-kit.html)        |
+| [Make it NOW!](https://www.seeedstudio.com/recipe/363-smart-light-demo-with-bbg-amp-bbg-start-kit-ha.html) | [Make it NOW!](https://www.seeedstudio.com/recipe/367-an-iot-application-with-bbg-amp-bbg-start-kit.html)        |
 
 Part List
 ---------
@@ -156,7 +156,7 @@ Comparing to LCD, OLED screens are more competitive, which has a number of advan
 If you want to know more info about this module please click [**here**](/Grove-OLED_Display_0.96inch).
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
     
 Examples
 --------
@@ -170,7 +170,7 @@ If this is your first time to use Cloud9 IDE, please follow this [**link**](/Bea
 
 ![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_for_BeagleBone_Green/img/Button_on_bbg.jpg)
 
-**Step1:** Set the Grove - UART socket as a Grove - GPIO Socket, just follow this [**link**](http://www.seeedstudio.com/recipe/362-how-to-use-the-grove-uart-port-as-a-gpio-on-bbg.html).
+**Step1:** Set the Grove - UART socket as a Grove - GPIO Socket, just follow this [**link**](https://www.seeedstudio.com/recipe/362-how-to-use-the-grove-uart-port-as-a-gpio-on-bbg.html).
 
 **Step2:** Click the "+" in the top-right to create a new file.
 
@@ -215,7 +215,7 @@ Resources
 -   [Grove Starter kit for BBG Sample Code](https://github.com/Seeed-Studio/Grove_Starter_Kit_for_BBG)
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_Starter_Kit_for_BeagleBone_Green -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_Starter_Kit_for_BeagleBone_Green -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

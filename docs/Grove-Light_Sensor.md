@@ -42,7 +42,7 @@ This module can be used to build a light controlled switch i.e. switch off light
 * Recognize wider spectrum
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 ### Platform Support
 
@@ -76,7 +76,7 @@ This module can be used to build a light controlled switch i.e. switch off light
 | Seeeduino V4 | Base Shield |Grove - Light Sensor | Grove - LED Bar |
 |--------------|----------------------|-----------------|---------------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/img/light_sensor_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_3.jpg)|
-|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](http://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Light-Sensor-v1.2-p-2727.html)|[Get One Now](http://www.seeedstudio.com/Grove-LED-Bar-v2.0-p-2474.html)|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Light-Sensor-v1.2-p-2727.html)|[Get One Now](https://www.seeedstudio.com/Grove-LED-Bar-v2.0-p-2474.html)|
 
 - Step 2. Connect Grove-Light Sensor to port A0 of Grove-Base Shield.
 - Step 3. Connect Grove-Led Bar to port D2 of Grove-Base Shield.
@@ -106,7 +106,7 @@ This module can be used to build a light controlled switch i.e. switch off light
 #### Software
 
 - Step 1. Download the  [ Grove-LED Bar Library](https://github.com/Seeed-Studio/Grove_LED_Bar/archive/master.zip) from Github.
-- Step 2. Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Seeeduino.
+- Step 2. Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Seeeduino.
 - Step 3. Copy the code into Seeeduino IDE and upload.
 
 ```c
@@ -150,7 +150,7 @@ void loop()
 **Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
 
 !!!Note
-    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](https://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
@@ -188,7 +188,7 @@ Upload the program to your Arduino/Seeeduino.
 
 #### Software
 
-- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
 - **Step 2**. Download the source file by cloning the grove.py library. 
 
 ```
@@ -403,7 +403,7 @@ Here we will show you a project made with Grove - Light Sensor - Secret Box. Fir
 
 Here we use LinkIt ONE as the controller, which is an Arduino compatible board and consist of rich function. And you need things below:
 
-* [LinkIt ONE](http://www.seeedstudio.com/LinkIt-ONE-p-2017.html)
+* [LinkIt ONE](https://www.seeedstudio.com/LinkIt-ONE-p-2017.html)
 * Grove - Light Sensor
 * Grove - Base Shield
 * A Sim Card
@@ -488,5 +488,5 @@ Have fun.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/GOROc2f5Xkg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

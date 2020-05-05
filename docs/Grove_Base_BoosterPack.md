@@ -163,7 +163,7 @@ Using the table below, developers should be able to read an analog value from a 
 If you are using a 20-pin LaunchPad, you can use jumpers or jumper wire to make the appropriate connections between a Grove connector &amp; the BoosterPack connector.
 
 Using your specific LaunchPad’s pin out diagram, you can physically/electrically connect the Grove module to the appropriate pin. Pinout diagrams for each LaunchPad are available here:
-[http://energia.nu/pin-maps/](http://energia.nu/pin-maps/)
+[https://energia.nu/pin-maps/](https://energia.nu/pin-maps/)
 
 With the help of these pin diagrams, you know which pin has the function you need. If you want to use Grove connector J5 for an analog Grove module (i.e. potentiometer knob), you can use the Energia pin maps to identify an analog-capable pin of the BoosterPack connector. Using a jumper of wire, you can connect pin number 22 with the analog-capable pin that is available. For example, if you are using an MSP-EXP430G2 LaunchPad, you can use a jumper or a cable to connect pin 22 with pin 2.
 
@@ -205,4 +205,4 @@ With the help of these pin diagrams, you know which pin has the function you nee
 - [Grove Starter Kit For LaunchPad User's Manual](https://files.seeedstudio.com/wiki/Grove_Base_BoosterPack/res/Grove%20Starter%20Kit%20Manual.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

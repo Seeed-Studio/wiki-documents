@@ -4,7 +4,7 @@ category: Shield
 bzurl: https://seeedstudio.com/RS232-Shield-p-1910.html
 oldwikiname: RS232_Shield
 prodimagename: RS232_Shield_Photo.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/RS232 Shield.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/RS232 Shield.jpg
 surveyurl: https://www.research.net/r/RS232_Shield
 sku: 113030016
 ---
@@ -13,7 +13,7 @@ sku: 113030016
 
 RS232 Shield is a standard communication port for industry equipment.This module is base on MAX232,which is a dual driver/receiver that includes a capacitive voltage generator to supply TIA/EIA-232-F voltage levels from a single 5-V supply. The shield integrates DB9 connectors (female) that provide connection to various devices with RS232 interface. Also the RS232 headers will facilitate your connections and commissioning. It provides the welding areas to make full use of extra space on it, which is highly convenient for prototyping.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/RS232-Shield-p-1910.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/RS232-Shield-p-1910.html)
 
 ## Specifications
 -------------
@@ -96,7 +96,7 @@ Resources
 -   [Datasheet MAX232D.pdf](https://files.seeedstudio.com/wiki/RS232_Shield/res/MAX232D.pdf)
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/RS232_Shield -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/RS232_Shield -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

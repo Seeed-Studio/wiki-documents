@@ -4,7 +4,7 @@ category: mbed
 bzurl: https://seeedstudio.com/Arch-Link-p-2511.html
 oldwikiname: Arch_Link
 prodimagename: 1020800061.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/1020800061.JPG
+bzprodimageurl: https://statics3.seeedstudio.com/images/1020800061.JPG
 surveyurl: https://www.research.net/r/Arch_Link
 sku: 102080006
 ---
@@ -86,7 +86,7 @@ Applications
 
     -   Hardware
         -   Arch Link
-        -   [Digital RGB LED Strip](http://www.seeedstudio.com/depot/Digital-RGB-LED-FlexiStrip-30-LED-1-Meter-p-1665.html)
+        -   [Digital RGB LED Strip](https://www.seeedstudio.com/depot/Digital-RGB-LED-FlexiStrip-30-LED-1-Meter-p-1665.html)
         -   Android device with BLE
 
     ![](https://files.seeedstudio.com/wiki/Arch_Link/img/Ble_color_pixels_bb.png)
@@ -159,7 +159,7 @@ See Also
 -   [Arch BLE](/Arch_BLE)
 -   [W5500 Ethernet Shield](/W5500_Ethernet_Shield_v1.0)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Arch_Link -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Arch_Link -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

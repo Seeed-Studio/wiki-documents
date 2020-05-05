@@ -12,11 +12,11 @@ This example demonstrates how to display images from SD card in loop.
 
 ## Arduino libraries needed
 
-- Install the LCD screen library `Seeed_Arduino_LCD`, please visit [Wio Terminal Overview](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/) for more information.
+- Install the LCD screen library `Seeed_Arduino_LCD`, please visit [Wio Terminal Overview](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/) for more information.
 
 - Install the SD Card library `Seeed_Arduino_FS`, Please visit [Seeed-Arduino-FS](https://github.com/Seeed-Studio/Seeed_Arduino_FS/tree/beta) for more information.
 
-- Install the `RawImage.h` library, Please visit [Loading Images](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Loading-Image/) for more information.
+- Install the `RawImage.h` library, Please visit [Loading Images](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Loading-Image/) for more information.
 
 ## Arduino Instructions
 
@@ -69,11 +69,11 @@ This example is similar to the above, but instead built-in buttons are used to c
 
 ### Arduino libraries needed
 
-- Install the LCD screen library `Seeed_Arduino_LCD`, please visit [Wio Terminal Overview](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/) for more information.
+- Install the LCD screen library `Seeed_Arduino_LCD`, please visit [Wio Terminal Overview](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/) for more information.
 
 - Install the SD Card library `Seeed_Arduino_FS`, Please visit [Seeed-Arduino-FS](https://github.com/Seeed-Studio/Seeed_Arduino_FS/tree/beta) for more information.
 
-- Install the `RawImage.h` library, Please visit [Loading Images](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Loading-Image/) for more information.
+- Install the `RawImage.h` library, Please visit [Loading Images](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Loading-Image/) for more information.
 
 ### Arduino Instructions
 

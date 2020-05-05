@@ -48,7 +48,7 @@ The Base Shield is tested and fully compatible with following boards:
 - Linkit One
 
 !!!Note
-    The boards are not listed above mean that it might have chance to work with the platform board however requires extra work such as jump wires or rewriting the code. If you are interested in digging more, welcome to contact us via [forum](http://forum.seeedstudio.com/).
+    The boards are not listed above mean that it might have chance to work with the platform board however requires extra work such as jump wires or rewriting the code. If you are interested in digging more, welcome to contact us via [forum](https://forum.seeedstudio.com/).
 
 
 ## Hardware Overview
@@ -74,7 +74,7 @@ The Base Shield is tested and fully compatible with following boards:
 | Seeeduino V4.2 | Base Shield|  Grove - Buzzer |Grove - Button|
 |--------------|-------------|-----------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Base_Shield_V2/img/Buzzer.png)|![enter image description here](https://files.seeedstudio.com/wiki/Base_Shield_V2/img/button_s.jpg)|
-|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|[Get ONE Now](https://www.seeedstudio.com/category/Grove-Button-p-766.html)|
+|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|[Get ONE Now](https://www.seeedstudio.com/category/Grove-Button-p-766.html)|
 
 - Step 2. Connect Grove - Buzzer to port D3 of Base Shield.
 - Step 3. Connect Grove - Button to port D2 of Base Shield.
@@ -134,4 +134,4 @@ Please click [here](http://support.seeedstudio.com/knowledgebase/articles/182644
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

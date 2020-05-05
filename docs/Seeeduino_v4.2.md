@@ -1,7 +1,7 @@
 ---
 name: Seeeduino v4.2
 category: Arduino
-bzurl: http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html
+bzurl: https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html
 oldwikiname: Seeeduino_v4.2
 prodimagename: cover.JPG
 surveyurl: https://www.research.net/r/Seeeduino
@@ -19,7 +19,7 @@ You can program the board via a micro-USB cable. Also, you can power the board v
 
 Finally, the three on-board Grove interfaces can make your board connect to Grove modules easily. Want to make something awesome, maybe just a Seeeduino v4.2 and some Groves is enough.
 
-[![enter image description here](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png)](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)
+[![enter image description here](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)
 
 
 ## Version
@@ -191,7 +191,7 @@ Then the green power LED (labeled PWR) should go on.
 ### Software
 
 !!!Note
-    If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](http://wiki.seeed.cc/Getting_Started_with_Arduino)
+    If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino)
 
 
 **Step 1. Install the Driver for Seeeduino V4.2.**
@@ -245,7 +245,7 @@ You'll need to select the entry in the **Tools > Board** menu that corresponds t
 
 
 
-If you can not find the Seeeduino v4.2, please check [How to Add Seeed boards to Arduino IDE](http://wiki.seeedstudio.com/Seeed_Arduino_Boards/)
+If you can not find the Seeeduino v4.2, please check [How to Add Seeed boards to Arduino IDE](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/)
 
 
 
@@ -284,12 +284,12 @@ Here is some funny project for your reference.
 |Paper Man|Fingerprint Lock|Monitor Stand|
 |-------|-------|-------|
 |![](https://files.seeedstudio.com/wiki/SeeeduinoV4/images/project1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/SeeeduinoV4/images/project2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/SeeeduinoV4/images/project3.jpg)|
-| [Make it Now](http://www.instructables.com/id/Paper-Man-a-machine-created-by-Arduino-and-NFC/) | [Make it Now](http://www.instructables.com/id/Door-to-Open-Source-Hardware-A-fingerprint-lock-so/) | [Make it Now](http://www.instructables.com/id/DIY-a-Programmable-Acrylic-Monitor-Stand/)|
+| [Make it Now](https://www.instructables.com/id/Paper-Man-a-machine-created-by-Arduino-and-NFC/) | [Make it Now](https://www.instructables.com/id/Door-to-Open-Source-Hardware-A-fingerprint-lock-so/) | [Make it Now](https://www.instructables.com/id/DIY-a-Programmable-Acrylic-Monitor-Stand/)|
 
 |Desk Promo|Tiger Machine|Colorful Pyramid|
 |-------|-------|-------|
 |![](https://files.seeedstudio.com/wiki/SeeeduinoV4/images/project4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/SeeeduinoV4/images/project5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/SeeeduinoV4/images/project6.jpg)|
-| [Make it Now](http://www.instructables.com/id/Desk-promo/) | [Make it Now](http://www.instructables.com/id/How-to-Make-Your-Tiny-Tiger-Machine/) | [Make it Now](http://www.instructables.com/id/DIY-a-colorful-pyramid/)|
+| [Make it Now](https://www.instructables.com/id/Desk-promo/) | [Make it Now](https://www.instructables.com/id/How-to-Make-Your-Tiny-Tiger-Machine/) | [Make it Now](https://www.instructables.com/id/DIY-a-colorful-pyramid/)|
 
 
 ## FAQs
@@ -355,4 +355,4 @@ A3: Please follow below steps to solve the issue.
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/78141/make-an-interactive-color-matrix-with-seeeduino-arduino-f9f3c0/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

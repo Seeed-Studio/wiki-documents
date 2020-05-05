@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-I2C-Touch-Sensor-p-840.html
 oldwikiname: Grove_-_I2C_Touch_Sensor
 prodimagename: Grove-I2C-Touch-Sensor.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/P3202380.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/P3202380.jpg
 surveyurl: https://www.research.net/r/Grove-I2C_Touch_Sensor
 sku: 101020047
 tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit
@@ -14,7 +14,7 @@ tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit
 
 The I2C Touch Sensor is based on the Proximity Capacitive Touch Sensor Controller from FreeScale - MPR121. It detects the touch or proximity of human fingers. This sensor includes a Touch Sensor controller and 4 finger feelers. One can insert the connectors of feelers into base of Sensor controller, and start sensing the touch. 
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Grove-I2C-Touch-Sensor-p-840.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/depot/Grove-I2C-Touch-Sensor-p-840.html)
 
 Specifications
 -------------
@@ -28,7 +28,7 @@ Specifications
 | I2C Address            | 0x5A                     |
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
     
 Platforms Supported
 -------------------
@@ -61,8 +61,8 @@ Getting Started
 
 Following documents help in getting the user started with Grove.
 
--   [Preface - Getting Started](http://www.seeedstudio.com/document/pdf/Preface.pdf)
--   [to Grove](http://www.seeedstudio.com/document/pdf/Introduction%20to%20Grove.pdf)
+-   [Preface - Getting Started](https://www.seeedstudio.com/document/pdf/Preface.pdf)
+-   [to Grove](https://www.seeedstudio.com/document/pdf/Introduction%20to%20Grove.pdf)
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -90,7 +90,7 @@ With a paperboard about 3 mm thick, the feeler can feel the touch of fingers, ma
 **Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
 
 !!!Note
-    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](https://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
@@ -118,7 +118,7 @@ Resources
 -   [I2C Touch Sensor Datasheet](https://files.seeedstudio.com/wiki/Grove-I2C_Touch_Sensor/res/Freescale_Semiconductor;MPR121QR2.pdf)
 -   [Codecraft CDC File](https://files.seeedstudio.com/wiki/Grove-I2C_Touch_Sensor/res/Grove_I2C_Touch_Sensor_CDC_File.zip)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_I2C_Touch_Sensor -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_I2C_Touch_Sensor -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -193,7 +193,7 @@ sku:  103990023
 
 Download and install the **Virtual COM port** driver from FTDI website :
 
-[http://www.ftdichip.com/Drivers/VCP.htm](http://www.ftdichip.com/Drivers/VCP.htm)
+[https://www.ftdichip.com/Drivers/VCP.htm](https://www.ftdichip.com/Drivers/VCP.htm)
 
 *   A wizard opens for installing the driver. Choose "Install from a list or specific location"
 
@@ -276,7 +276,7 @@ In this mode data is sent synchronously. An input is read before an output byte 
 
 This is a special mode which requires reprogramming of FT232RL EEPROM. This uses signals **C0 - C3**.
 
- **Bit-Bang Mode** of **FT232RL** is well documented in the application note[[1]](http://www.ftdichip.com/Support/Documents/AppNotes/AN_232R-01_Bit_Bang_Mode_Available_For_FT232R_and_Ft245R.pdf)
+ **Bit-Bang Mode** of **FT232RL** is well documented in the application note[[1]](https://www.ftdichip.com/Support/Documents/AppNotes/AN_232R-01_Bit_Bang_Mode_Available_For_FT232R_and_Ft245R.pdf)
 
 **Table: Bit-Bang I/O Mapping**
 
@@ -335,7 +335,7 @@ A simple Asynchronous Bit-Bang mode operation is demonstrated in the below bread
 
 ![](https://files.seeedstudio.com/wiki/UartSBee_V4/img/UartSBee_bit-bang-DTR.jpg)   ![](https://files.seeedstudio.com/wiki/UartSBee_V4/img/UartSBee_Bottom_Bit_Bang.png)
 
-Bit-Bang mode requires special FTDI direct driver called [D2XX](http://www.ftdichip.com/Drivers/D2XX.htm). This driver needs to be installed after removing the Virtual COM Port driver of FT232RL chip. In GNU/Linux this driver runs in kernel mode. As an alternative to D2XX an Free Open Source driver [libFTDI](http://www.intra2net.com/en/developer/libftdi/) is available. This works in Windows, GNU/Linux and Mac OS. It runs in user mode in GNU/Linux. Hence no need to remove the existing FT232RL driver.
+Bit-Bang mode requires special FTDI direct driver called [D2XX](https://www.ftdichip.com/Drivers/D2XX.htm). This driver needs to be installed after removing the Virtual COM Port driver of FT232RL chip. In GNU/Linux this driver runs in kernel mode. As an alternative to D2XX an Free Open Source driver [libFTDI](http://www.intra2net.com/en/developer/libftdi/) is available. This works in Windows, GNU/Linux and Mac OS. It runs in user mode in GNU/Linux. Hence no need to remove the existing FT232RL driver.
 
 **libFTDI**
 
@@ -425,12 +425,12 @@ FT232RL Bit-Bang mode can be used to construct AVR ISP, JTAG, SPI and I2C Ports.
 
 ##   External Links
 
-*   [FTDI FT232RL product Page](http://www.ftdichip.com/Products/ICs/FT232R.htm)
+*   [FTDI FT232RL product Page](https://www.ftdichip.com/Products/ICs/FT232R.htm)
 
-*   [FTDI Virtual COM Port (VCP) drivers](http://www.ftdichip.com/Drivers/VCP.htm)
-*   [FTDI D2XX drivers](http://www.ftdichip.com/Drivers/D2XX.htm)
+*   [FTDI Virtual COM Port (VCP) drivers](https://www.ftdichip.com/Drivers/VCP.htm)
+*   [FTDI D2XX drivers](https://www.ftdichip.com/Drivers/D2XX.htm)
 
-*   [FTDI Bit-Bang mode application note](http://www.ftdichip.com/Support/Documents/AppNotes/AN_232R-01_Bit_Bang_Mode_Available_For_FT232R_and_Ft245R.pdf)
+*   [FTDI Bit-Bang mode application note](https://www.ftdichip.com/Support/Documents/AppNotes/AN_232R-01_Bit_Bang_Mode_Available_For_FT232R_and_Ft245R.pdf)
 
 **Open Source Drivers**
 
@@ -449,4 +449,4 @@ FT232RL Bit-Bang mode can be used to construct AVR ISP, JTAG, SPI and I2C Ports.
 *   [Flashing Arduino with FT232R bitbang mode](http://www.geocities.co.jp/arduino_diecimila/bootloader/index_en.html)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -4,7 +4,7 @@ category: Shield
 bzurl: https://seeedstudio.com/SD-Card-Shield-V4-p-1381.html
 oldwikiname: SD_Card_shield_V4.0
 prodimagename: SD_Card_Shield-v4.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/sd card shield v4.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/sd card shield v4.jpg
 surveyurl: https://www.research.net/r/SD_Card_shield_V4_0
 sku: 103030005
 ---
@@ -21,7 +21,7 @@ This is the newly released SD card V4.0 shield. It provides a storage space for 
 
 If you want to make some awesome projects with SD Card Shield, here are some projects for your reference.
 
-Here we introduce a project about [LinkIt ONE](http://www.seeedstudio.com/depot/LinkIt-ONE-p-2017.html) using SD Card.
+Here we introduce a project about [LinkIt ONE](https://www.seeedstudio.com/depot/LinkIt-ONE-p-2017.html) using SD Card.
 
 ### Music Player with LinkIt One
 
@@ -29,9 +29,9 @@ Here we introduce a project about [LinkIt ONE](http://www.seeedstudio.com/depot/
 
 This project uses Grove - Water Sensor to create a simple but effective solution to watering plants.
 
-[Make it NOW!](http://www.seeedstudio.com/recipe/246-music-player-with-linkit-one.html)
+[Make it NOW!](https://www.seeedstudio.com/recipe/246-music-player-with-linkit-one.html)
 
-[***More Awesome Projects by SD Card***](http://www.seeedstudio.com/recipe/index.php?query=SD+Card)
+[***More Awesome Projects by SD Card***](https://www.seeedstudio.com/recipe/index.php?query=SD+Card)
 
 Features
 --------
@@ -399,7 +399,7 @@ Resources
 
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/SD_Card_shield_V4.0 -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/SD_Card_shield_V4.0 -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

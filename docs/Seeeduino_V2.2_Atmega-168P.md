@@ -78,7 +78,7 @@ This documentation is licensed under the Creative Commons Attribution-Noncommerc
 
 ##   Support  
 
-If you have questions or other better design ideas, you can go to our [forum](http://www.seeedstudio.com/forum) or **wish** to discuss.
+If you have questions or other better design ideas, you can go to our [forum](https://www.seeedstudio.com/forum) or **wish** to discuss.
 
 ##   Version Tracker  
 
@@ -129,7 +129,7 @@ The Additional Idea is the place to write your project ideas about this product,
 
 ##   How to buy  
 
-Here to buy Seeeduino V2.2 **Atmega 168P** and [Atmega 328P](http://www.seeedstudio.com/depot/seeeduino-v22-atmega-328p-p-669.html?cPath=79_80)
+Here to buy Seeeduino V2.2 **Atmega 168P** and [Atmega 328P](https://www.seeedstudio.com/depot/seeeduino-v22-atmega-328p-p-669.html?cPath=79_80)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

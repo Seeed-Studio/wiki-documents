@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-6-Axis-Accelerometer&Gyroscope-p-2606.html
 oldwikiname: Grove_-_6-Axis_Accelerometer&Gyroscope
 prodimagename: Grove-6-Axis_AccelerometerAndGyroscope_product_view_1200_s.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/105020012 3.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/105020012 3.jpg
 surveyurl: https://www.research.net/r/Grove-6-Axis_AccelerometerAndGyroscope
 sku: 105020012
 tags: plat_duino, plat_pi, plat_bbg, plat_linkit -->
@@ -35,7 +35,7 @@ Features
 -   8 kB data buffering.
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 Application ideas
 -----------------
@@ -140,7 +140,7 @@ Download the [library](https://github.com/Seeed-Studio/Accelerometer_And_Gyrosco
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/simon-werner/plug-n-play-remote-control-sailboat-b5724e/embed' width='350'></iframe>
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_6-Axis_Accelerometer&Gyroscope -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_6-Axis_Accelerometer&Gyroscope -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

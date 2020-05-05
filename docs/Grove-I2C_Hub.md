@@ -4,7 +4,7 @@ category: Others
 bzurl: https://seeedstudio.com/Grove-I2C-Hub-p-851.html
 oldwikiname: Grove_-_I2C_Hub
 prodimagename: I2C_hub.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/12C hub.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/12C hub.jpg
 surveyurl: https://www.research.net/r/Grove-I2C_Hub
 sku: 103020006
 tags: grove_i2c, io_3v3, io_5v,
@@ -12,10 +12,10 @@ tags: grove_i2c, io_3v3, io_5v,
 
 ![](https://files.seeedstudio.com/wiki/Grove-I2C_Hub/img/I2C_hub.jpg)
 
-I2C Hub Grove is an extension Grove module for connecting multiply I2C devices to Grove Base Shield. It can use with [Universal 4 Pin to X2 4 Pin cable](http://www.seeedstudio.com/depot/universal-4-pin-to-x2-4-pin-cable-5-pcs-pack-p-847.html?cPath=178_179) and connects up to 3 I2C devices which may cover most developing purpose.
+I2C Hub Grove is an extension Grove module for connecting multiply I2C devices to Grove Base Shield. It can use with [Universal 4 Pin to X2 4 Pin cable](https://www.seeedstudio.com/depot/universal-4-pin-to-x2-4-pin-cable-5-pcs-pack-p-847.html?cPath=178_179) and connects up to 3 I2C devices which may cover most developing purpose.
 
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-I2C-Hub-p-851.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-I2C-Hub-p-851.html)
 
 Features
 --------
@@ -57,7 +57,7 @@ It does not conflict if you use the same I2C Socket simultaneously because every
 Here we do not list a specific example.
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 
 ## Schematic Online Viewer
@@ -71,7 +71,7 @@ Resources
 
 [I2C Hub Eagle File](https://files.seeedstudio.com/wiki/Grove-I2C_Hub/res/I2C_Hub_Eagle_File.zip)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_I2C_Hub -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_I2C_Hub -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

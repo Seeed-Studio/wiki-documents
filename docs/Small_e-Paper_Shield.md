@@ -16,7 +16,7 @@ e-Paper might be the most comfortable material to read. It reflects light instea
 
 **Attention:** Since this driver board supports e-papers of different sizes. e-paper is not included in this product. We have e-paper of 2.0 inch and 2.7 inch on sale simultaneously. Go and add the most suitable one to your cart now!
 
-**Model:** [SLD00200P](http://www.seeedstudio.com/depot/small-epaper-shield-p-1597.html)
+**Model:** [SLD00200P](https://www.seeedstudio.com/depot/small-epaper-shield-p-1597.html)
 
 
 
@@ -407,4 +407,4 @@ _This function can be used to draw a triangle. It is formed by three points._
 -  **[Library]** [New Panel Library【EPD_V230】](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/res/EPDV230.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

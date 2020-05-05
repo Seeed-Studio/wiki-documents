@@ -117,10 +117,10 @@ void loop()
 }
 ```
 
-- **Step 1** Download the [library](https://github.com/Seeed-Studio/Seeed_Arduino_LIS3DHTR/archive/master.zip) from Github and add the "zip" library to your Arduino IDE. Please refer to [How to install an Arduino Library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
+- **Step 1** Download the [library](https://github.com/Seeed-Studio/Seeed_Arduino_LIS3DHTR/archive/master.zip) from Github and add the "zip" library to your Arduino IDE. Please refer to [How to install an Arduino Library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
 
 
-- **Step 2** Find the example code of "LIS3DHTR_IIC" and upload it to your board. Please refer to [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 2** Find the example code of "LIS3DHTR_IIC" and upload it to your board. Please refer to [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 
 - **Step 3** After uploading the code, you will see the accelerated velocity of each axis and temperature of surrounding from the serial monitor.

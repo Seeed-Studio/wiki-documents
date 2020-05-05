@@ -286,7 +286,7 @@ If you have an Azure Sphere development kit that has not yet been used, complete
 
 ## Azure Sphere Demo
 
-We build two demoes which combine Sphere dev kit and [Seeed Grove system](http://wiki.seeedstudio.com/Grove_System/). 
+We build two demoes which combine Sphere dev kit and [Seeed Grove system](https://wiki.seeedstudio.com/Grove_System/). 
 
 **Demo1**: MT3620 Dev Board performs as an MCU, which connects with temperature sensor(SHT31), relay, fan, display, analog device. Demo simulates a fan with IoT connectivity, people can measure the ambient temperature and setup a threshold value to turn on/off the fan from Azure Cloud. The temperature will display on the LED display. User can swap the resistor to change the fan’s speed level from 0,1,2,3(0 means switch off the fan).
 
@@ -311,7 +311,7 @@ We build two demoes which combine Sphere dev kit and [Seeed Grove system](http:/
 | MT3620 Grove Shield |Seeeduino V4.2  | Base Shield  |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Azure_Sphere_MT3620_Development_Kit/img/mt3620groveshieldb_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|
-|[Get One Now](https://www.seeedstudio.com/MT3620-Grove-Shield-p-3145.html)|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
+|[Get One Now](https://www.seeedstudio.com/MT3620-Grove-Shield-p-3145.html)|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
 
 **System Diagram**
 
@@ -381,7 +381,7 @@ The software include the smart fan simulation system and Azure Sphere MT3620 Dev
 - Step 5. Click upload to upload code the Arduino/Seeeduino. 
 
 !!!Note
-    If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+    If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 **Azure Sphere MT3620 Development System**
 
@@ -409,7 +409,7 @@ For detail operation, please refer to the video.
 - **[Certification]** [Azure Sphere MT3620 Development Kit-FCC](https://files.seeedstudio.com/wiki/Azure_Sphere_MT3620_Development_Kit/certification/Azure%20Sphere%20MT3620%20Development%20Kit-FCC-FCC.zip)
 - **[Certification]** [Azure Sphere MT3620 Development Kit-MIC](https://files.seeedstudio.com/wiki/Azure_Sphere_MT3620_Development_Kit/certification/Azure%20Sphere%20MT3620%20Development%20Kit-MIC.zip)
 - **[Library]** [MT3620 Grove Shield Library](https://github.com/Seeed-Studio/MT3620_Grove_Shield)
-- **[Wiki]** [MT3620 Grove Shield](http://wiki.seeedstudio.com/Grove_Starter_Kit_for_Azure_Sphere_MT3620_Development_Kit/) 
+- **[Wiki]** [MT3620 Grove Shield](https://wiki.seeedstudio.com/Grove_Starter_Kit_for_Azure_Sphere_MT3620_Development_Kit/) 
 - **[DataSheet]]** [MediaTek MT3620 Product Brief](https://files.seeedstudio.com/wiki/Azure_Sphere_MT3620_Development_Kit/datasheet/MediaTek%20MT3620%20Product%20Brief.pdf)
 - **[DataSheet]** [DS_FT4232H](https://files.seeedstudio.com/wiki/Azure_Sphere_MT3620_Development_Kit/datasheet/DS_FT4232H.pdf)
 - **[Mechanical]** [Azure Sphere MT3620 Development Board-2D-Drawing](https://github.com/SeeedDocument/Azure_Sphere_MT3620_Development_Kit/tree/master/mechanical)
@@ -417,5 +417,5 @@ For detail operation, please refer to the video.
 - **[FAQ Web]** [Azure Sphere Github issues](https://github.com/MicrosoftDocs/azure-sphere-issues/issues?utf8=%E2%9C%93&q=is%3Aissue)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

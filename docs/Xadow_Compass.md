@@ -40,7 +40,7 @@ Firstly, before any action you are going to take, you need to prepare a paramete
 - Complete the hardware installation:
 !!!Note
     When connect Xadow Compass to Xadow Main Board, you should concern about the connection direction. The connection method is that the unfilled corner of one Xadow module need to connect to the right angle of another module (see four corners of each Xadow module).
-- Download the library file: [Digital Compass Library](https://github.com/Seeed-Studio/Grove_3Axis_Digital_Compass), and install it to your Arduino Library. See [How to install Arduino Library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to learn the install method.
+- Download the library file: [Digital Compass Library](https://github.com/Seeed-Studio/Grove_3Axis_Digital_Compass), and install it to your Arduino Library. See [How to install Arduino Library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to learn the install method.
 - Open the demo by the path:File -> Example -> Digital Compass -> HMC5883L_Example. Replace the value of variable "declinationAngle" with the one you've figured out already.
 
 ![](https://files.seeedstudio.com/wiki/Xadow_Compass/img/Xadow_Compass_Code.jpg)
@@ -63,4 +63,4 @@ Firstly, before any action you are going to take, you need to prepare a paramete
 - [Xadow Compass Library File](https://github.com/Seeed-Studio/Grove_3Axis_Digital_Compass)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

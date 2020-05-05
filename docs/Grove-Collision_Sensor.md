@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-Collision-Sensor-p-1132.html
 oldwikiname: Grove_-_Collision_Sensor
 prodimagename: Grove_–_Collision_Sensor_photo.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/101020005 1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/101020005 1.jpg
 surveyurl: https://www.research.net/r/Grove-Collision_Sensor
 sku: 101020005
 tags: grove_digital, io_3v3, io_5v, plat_duino, plat_linkit, plat_pi, plat_bbg
@@ -16,7 +16,7 @@ Grove - Collision Sensor can detect whether any collision movement or vibration 
 
 Its working voltage is 5V which makes it compatible with standard Arduino/Seeeduino 5V system.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Collision-Sensor-p-1132.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-Collision-Sensor-p-1132.html)
 
 ## Specifications
 
@@ -24,7 +24,7 @@ Its working voltage is 5V which makes it compatible with standard Arduino/Seeedu
 -   Voltage: 3.3/5V
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
     
 ## Platforms Supported
 
@@ -129,7 +129,7 @@ return false;
 **Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
 
 !!!Note
-    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](https://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
@@ -164,7 +164,7 @@ Upload the program to your Arduino/Seeeduino.
 
 #### Software
 
-- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
 - **Step 2**. Download the source file by cloning the grove.py library. 
 
 ```
@@ -354,7 +354,7 @@ sudo python grove_collision_sensor.py
 -  **[PDF]** [MVS0608.02 datasheet](https://files.seeedstudio.com/wiki/Grove-Collision_Sensor/res/DataSheet-MVS0608_02-v2_1.pdf)
 -  **[Codecraft]** [CDC File](https://files.seeedstudio.com/wiki/Grove-Collision_Sensor/res/Grove_Collision_Sensor_CDC_File.zip)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Collision_Sensor -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Collision_Sensor -->
 
 ## Tech Support
 

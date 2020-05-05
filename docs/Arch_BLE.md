@@ -4,7 +4,7 @@ category: mbed
 bzurl: https://seeedstudio.com/Arch-BLE-p-1998.html
 oldwikiname: Arch_BLE
 prodimagename: Arch_BLE.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/arch ble.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/arch ble.jpg
 surveyurl: https://www.research.net/r/Arch_BLE
 sku: 113010002
 ---
@@ -77,8 +77,8 @@ Applications
 -  Color Pixels, a colorful LED strip, can be controlled by mobile phone.
 
     *  Hardware
-        -  [Arch BLE](http://www.seeedstudio.com/depot/Arch-BLE-p-1998.html?cPath=19_21)
-        -  [Digital RGB LED Strip](http://www.seeedstudio.com/depot/Digital-RGB-LED-FlexiStrip-30-LED-1-Meter-p-1665.html)
+        -  [Arch BLE](https://www.seeedstudio.com/depot/Arch-BLE-p-1998.html?cPath=19_21)
+        -  [Digital RGB LED Strip](https://www.seeedstudio.com/depot/Digital-RGB-LED-FlexiStrip-30-LED-1-Meter-p-1665.html)
         -  Android device with BLE
 
     ![](https://files.seeedstudio.com/wiki/Arch_BLE/img/Ble_color_pixels_bb.png)
@@ -104,8 +104,8 @@ If the BLE device is disconnecting frequently, we can improve the stability by c
 -  A Toy car controlled by mobile phone.
 
     *  Hardware
-        -  [Arch BLE](http://www.seeedstudio.com/depot/Arch-BLE-p-1998.html?cPath=19_21)
-        -  [Shield Bot](http://www.seeedstudio.com/Shield-Bot-p-1380.html)
+        -  [Arch BLE](https://www.seeedstudio.com/depot/Arch-BLE-p-1998.html?cPath=19_21)
+        -  [Shield Bot](https://www.seeedstudio.com/Shield-Bot-p-1380.html)
 
 
 Update or Restore Firmware
@@ -155,7 +155,7 @@ Resources
 -   [Seeed BLE Color Pixels App for Android](http://tangram.qiniudn.com/seeed_ble_color_pixels.apk)
 -   [Sources of BLE Color Pixels App](https://github.com/Seeed-Studio/ble_color_pixels)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Arch_BLE -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Arch_BLE -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

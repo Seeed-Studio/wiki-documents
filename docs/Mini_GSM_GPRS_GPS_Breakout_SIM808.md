@@ -423,11 +423,11 @@ $GPRMC,043326.000,A,
 
 ##   Related Projects
 
-It's a pity that we don't have any demo about LoNet-GSM/GPRS/GPS Breakout in the [Recipe](http://www.seeedstudio.com/recipe/) yet.
+It's a pity that we don't have any demo about LoNet-GSM/GPRS/GPS Breakout in the [Recipe](https://www.seeedstudio.com/recipe/) yet.
 
 Post your awesome project about LoNet-GSM/GPRS/GPS Breakout to <font color="#FF0000">win $100 Coupon!</font>. Please feel free to contact us: **recipe@seeed.cc**
 
-Here we introduce some projects about [GPRS Shield](http://www.seeedstudio.com/depot/GPRS-Shield-V30-p-2333.html) as a reference.
+Here we introduce some projects about [GPRS Shield](https://www.seeedstudio.com/depot/GPRS-Shield-V30-p-2333.html) as a reference.
 
 ###  What is GPRS shield
 
@@ -459,7 +459,7 @@ It is reliable, secure, easy and flexible because of the reasons below:
 
 *   All the pfod screens are available via SMS, like sub-menus, multi and single selection list, text input, data logging and plotting.
 
-[**I want to make it.**](http://www.seeedstudio.com/recipe/98-sms-remote-control.html)
+[**I want to make it.**](https://www.seeedstudio.com/recipe/98-sms-remote-control.html)
 
 ###   Arduino Phone
 
@@ -479,9 +479,9 @@ This Arduino Phone contains the following main functions.
 
 *   A convenient and concise UI
 
-[**I want to make it.**](http://www.seeedstudio.com/recipe/37-arduinophone.html)
+[**I want to make it.**](https://www.seeedstudio.com/recipe/37-arduinophone.html)
 
-[**More Awesome Projects by GPRS**](http://www.seeedstudio.com/recipe/index.php?query=GPRS)
+[**More Awesome Projects by GPRS**](https://www.seeedstudio.com/recipe/index.php?query=GPRS)
 
 ###   Share Your Awesome Projects with Us
 
@@ -493,7 +493,7 @@ It does not matter what you are and what you have made, hacker, maker, artist or
 
 As long as you start sharing your works with others, you are being part of the open source community and you are making your contributions.
 
-Now share your awesome projects with us on [Recipe](http://www.seeedstudio.com/recipe/), and win a chance to become the Core User of Seeed.
+Now share your awesome projects with us on [Recipe](https://www.seeedstudio.com/recipe/), and win a chance to become the Core User of Seeed.
 
 *   Core Users, are those who show high interests in Seeed products and make significant contributions on Recipe.
 *   We cooperate with our Core Users in the development of our new product, this, in another word, the Core Users will have the chance to experience any new products of Seeed before its official launch, and in return we expect valuable feedback from them to help us improve the product performance and user experience. And in most cases when our Core Users have some good ideas of making things, we'll offer hardware pieces, PCBA services as well as technical support. Besides, further commercial cooperation with the Core Users is highly possible.
@@ -505,4 +505,4 @@ Now share your awesome projects with us on [Recipe](http://www.seeedstudio.com/r
 Any tech support, please contact [_support@deegou.com_](http://www.deegou.com)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

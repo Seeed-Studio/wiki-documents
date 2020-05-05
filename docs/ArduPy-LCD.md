@@ -2,7 +2,7 @@
 
 This is the LCD API reference for ArduPy usage. This is currently only tested with LCD module on Wio Terminal.
 
-For more information, please visit [**ArduPy**](https://github.com/Seeed-Studio/ArduPyl). To get started with ArduPy, please follow [here](http://wiki.seeedstudio.com/Wio-Terminal-ArduPy/).
+For more information, please visit [**ArduPy**](https://github.com/Seeed-Studio/ArduPyl). To get started with ArduPy, please follow [here](https://wiki.seeedstudio.com/Wio-Terminal-ArduPy/).
 
 **Example Usage:**
 

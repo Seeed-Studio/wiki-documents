@@ -12,13 +12,13 @@ This example demonstrates using the line graph functions to display the Grove - 
 
 ## Arduino libraries needed
 
-- Install the Line Chart library `Seeed_Arduino_Linechart`, please visit [Line Charts](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Linecharts/) for more information.
+- Install the Line Chart library `Seeed_Arduino_Linechart`, please visit [Line Charts](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Linecharts/) for more information.
 
-- Install the SD Library, please visit [FS](http://wiki.seeedstudio.com/Wio-Terminal-FS-Overview/) for more information.
+- Install the SD Library, please visit [FS](https://wiki.seeedstudio.com/Wio-Terminal-FS-Overview/) for more information.
 
 ## Arduino Instructions
 
-1. It is highly recommended to read through [Line Charts](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Linecharts/) first and before trying out this example code.
+1. It is highly recommended to read through [Line Charts](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Linecharts/) first and before trying out this example code.
 
 2. Download the [`LightReadings.ino`](https://files.seeedstudio.com/wiki/Wio-Terminal/res/LightReadings.ino.zip) file and upload to your Wio Terminal through `Arduino IDE`. Make sure you installed all the libraries.
 
@@ -82,7 +82,7 @@ void loop() {
 
 - **Title configurations**
 
-Please refer to [Line Charts](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Linecharts/) for more information.
+Please refer to [Line Charts](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Linecharts/) for more information.
 
 ```cpp
 //Settings for the line graph title
@@ -99,7 +99,7 @@ header.draw(); //Header height is the twice the height of the font
 
 - **Line Chart configurations**
 
-Please refer to [Line Charts](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Linecharts/) for more information.
+Please refer to [Line Charts](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Linecharts/) for more information.
 
 ```cpp
 //Settings for the line graph
@@ -118,7 +118,7 @@ spr.pushSprite(0, 0);
 
 - **Writing Data to SD Card**
 
-Please refer to [Reading/Writing from the SD Card](http://wiki.seeedstudio.com/Wio-Terminal-FS-ReadWrite/) for more information.
+Please refer to [Reading/Writing from the SD Card](https://wiki.seeedstudio.com/Wio-Terminal-FS-ReadWrite/) for more information.
 
 ```cpp
 void saveData(){

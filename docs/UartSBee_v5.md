@@ -4,7 +4,7 @@ category: Arduino
 bzurl: https://seeedstudio.com/UartSBee-V5-p-1752.html
 oldwikiname: UartSBee_v5
 prodimagename: UartSBee_V5_New.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/UartSBee V5.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/UartSBee V5.jpg
 surveyurl: https://www.research.net/r/UartSBee_v5
 sku: 103100001
 ---
@@ -13,7 +13,7 @@ sku: 103100001
 
 *UartSBee v5'* is FTDI cable compatible **USB to Serial** adapter equipped with BEE socket(20pin 2.0mm). The integrated **FT232RL** can be used for programming or communicating with MCUs. On the other hand, you might connect your PC to various wireless applications via a **Bee** compatible module. UartSBee provides breakouts for the bit-bang mode pins of **FT232RL** as well.This Bit-bang mode pins (8 I/O pins) can be used as a replacement for applications involving PC parallel port which is scares now a day.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/UartSBee-V5-p-1752.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/UartSBee-V5-p-1752.html)
 
 
 **UartSBee v5 is the Mesh Bee programmer version based on UartSBee v4.**
@@ -45,7 +45,7 @@ Resources
 -   [Eagle file for UartSBee v5](https://files.seeedstudio.com/wiki/UartSBee_v5/res/UartSBee_v5_eagle_file.zip)
 -   [How to program Mesh Bee](/Mesh_Bee "Mesh Bee")
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/UartSBee_v5 -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/UartSBee_v5 -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
