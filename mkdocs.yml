@@ -889,6 +889,7 @@ nav:
           - Arduino Common Error: Arduino_Common_Error.md
           - Arduino IDE for RePhone Kit: Arduino_IDE_for_RePhone_Kit.md
           - Arduino Software I2C user guide: Arduino_Software_I2C_user_guide.md
+          - Download Arduino and install Arduino Driver: Download-Arduino-and-install-Arduino-Driver.md
           - Dfu-util: Dfu-util.md
           - Driver for Seeeduino: Driver_for_Seeeduino.md
           - Eclipse IDE for RePhone Kit: Eclipse_IDE_for_RePhone_Kit.md
@@ -1040,6 +1041,7 @@ nav:
           - XBee Shield: XBee_Shield.md
 
   - License: license.md
+  - About: About.md
 
 # Google Analytics
 # google_analytics:
