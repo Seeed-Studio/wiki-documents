@@ -86,7 +86,7 @@ void loop() {
 }
 ```
 
-### Turning Off The LCD Backlight
+## Turning Off The LCD Backlight
 
 To turn off the LCD backlight of Wio Terminal, simply define the LCD Backlight control pin `72Ul` and pull it `HIGH` to turn on and pull it `LOW` to turn off:
 
