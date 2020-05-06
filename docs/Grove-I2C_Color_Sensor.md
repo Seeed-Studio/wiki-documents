@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-I2C-Color-Sensor-p-854.html
 oldwikiname: Grove_-_I2C_Color_Sensor
 prodimagename: Grove-I2C-Color-Sensor.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/101020041 1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/101020041 1.jpg
 surveyurl: https://www.research.net/r/Grove-I2C_Color_Sensor
 sku: 101020041
 tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit
@@ -23,7 +23,7 @@ Version
 ---
 | Revision | Descriptions                                              | Release      |How to buy|
 |----------|-----------------------------------------------------------|--------------|--------------|
-| v1.2    | Initial public release (beta)                             | Jan 17, 2013  |[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png)](http://www.seeedstudio.com/depot/grove-i2c-color-sensor-p-854.html)|
+| v1.2    | Initial public release (beta)                             | Jan 17, 2013  |[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/depot/grove-i2c-color-sensor-p-854.html)|
 | v2.0    | Replace TCS3472(EOL) with TCS34725FN and optimize PCB Layout |Apr 27,2017   |[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Grove-I2C-Color-Sensor-V2-p-2890.html)|
 
 Features
@@ -37,7 +37,7 @@ Features
 -   RoHS Compliant
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 Specifications
 -------------
@@ -65,8 +65,8 @@ Getting Started
 
 Following documents help in getting the user started with Grove.
 
--   [Preface - Getting Started](http://www.seeedstudio.com/document/pdf/Preface.pdf)
--   [to Grove](http://www.seeedstudio.com/document/pdf/Introduction%20to%20Grove.pdf)
+-   [Preface - Getting Started](https://www.seeedstudio.com/document/pdf/Preface.pdf)
+-   [to Grove](https://www.seeedstudio.com/document/pdf/Introduction%20to%20Grove.pdf)
 
 ### Hardware Connections
 
@@ -248,7 +248,7 @@ For byte and block read, the command should be 0xC0+ADDRESS, REG_GREEN_LOW( 10h 
 
 </li>
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_I2C_Color_Sensor -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_I2C_Color_Sensor -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

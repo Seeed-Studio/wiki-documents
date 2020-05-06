@@ -119,7 +119,7 @@ We use SWD port to burn the firmware to this hat. In addition, you can see 3 GPI
 
 **Grove Base Hat for Raspberry Pi Vs. GrovePi+**
 
-| Parameter                   | [Grove Base Hat for Raspberry Pi](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/)                   | [GrovePi+](http://wiki.seeedstudio.com/GrovePi_Plus/)                                                                            |
+| Parameter                   | [Grove Base Hat for Raspberry Pi](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/)                   | [GrovePi+](https://wiki.seeedstudio.com/GrovePi_Plus/)                                                                            |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
 | Working Voltage             | 3.3V                                                                                                              | 5V                                                                                                                               |
 | MCU                         | STM32F030F4P6                                                                                                     | ATMEGA328P                                                                                                                       |

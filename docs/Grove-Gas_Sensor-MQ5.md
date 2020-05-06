@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-Gas-Sensor(MQ5)-p-938.html
 oldwikiname: Grove_-_Gas_Sensor(MQ5)
 prodimagename: Twig-Gas_Sensor.bmp
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/Gas Sensor MQ.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/Gas Sensor MQ.jpg
 surveyurl: https://www.research.net/r/Grove-Gas_Sensor-MQ5
 sku: 101020056
 tags: grove_analog, io_5v, plat_duino
@@ -27,7 +27,7 @@ The sensor value only reflects the approximated trend of gas concentration in a 
 |MQ9|Carbon Monoxide, Coal Gas, Liquefied Gas|[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Gas-Sensor-MQ-p-1419.html)|
 
 !!!Tip
-    We've released the [Seeed Gas Sensor Selection Guide](http://wiki.seeedstudio.com/Seeed_Gas_Sensor_Selection_Guide/), it will help you choose the gas sensor that best suits your needs.
+    We've released the [Seeed Gas Sensor Selection Guide](https://wiki.seeedstudio.com/Seeed_Gas_Sensor_Selection_Guide/), it will help you choose the gas sensor that best suits your needs.
 
 ## Features
 
@@ -90,7 +90,7 @@ The output voltage from the Gas sensor increases when the concentration of gas i
 | Seeeduino V4.2 | Base Shield | Grove - Gas Sensor(MQ5) |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ5/img/45d_small.jpg)|
-|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Gas-Sensor-MQ-p-938.html" target="_blank">Get One Now</a>|
+|<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Gas-Sensor-MQ-p-938.html" target="_blank">Get One Now</a>|
 
 
 
@@ -233,7 +233,7 @@ According to the figure, we can see that the minimum concentration we can test i
 
 #### Software
 
-- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
 - **Step 2**. Download the source file by cloning the grove.py library. 
 
 ```
@@ -348,7 +348,7 @@ You can quit this program by simply press ++ctrl+c++.
 
 -   [MQ-5 Datasheet](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ5/res/MQ-5.pdf)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Gas_Sensor(MQ5) -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Gas_Sensor(MQ5) -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

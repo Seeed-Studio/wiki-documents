@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-Barometer-Sensor-(BMP280)-p-2652.html
 oldwikiname: Grove_-_Barometer_Sensor_(BMP280)
 prodimagename: Grove-Barometer_Sensor-BMP280-700_s.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/seeed/img/2016-06/oVNA7LQwPYYFnB674KEPM9w7.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/seeed/img/2016-06/oVNA7LQwPYYFnB674KEPM9w7.jpg
 surveyurl: https://www.research.net/r/Grove-Barometer_Sensor-BMP280
 sku: 101020192
 ---
@@ -15,11 +15,11 @@ sku: 101020192
 
 The BMP280 is an upgraded version of BMP180. BMP280 gets dramatic improvements from BMP180. BMP280 comes with a smaller footprint, lower power consumption, lower noise measurements, higher resolutions for pressure and temperature, lower RMS noise, newly added interface SPI, more measuring modes, higher measuring rate and newly added filter against environmental interference. Since the atmosphere pressure reading is affected by altitude and temperature, we have added compensation features in the library. Hence, Grove - Barometer Sensor (BMP280) would be more reliable in providing precise temperature, atmospheric pressure values and approximate altitude data.
 
-Using the sensor is easy. For [Seeeduino](http://www.seeedstudio.com/depot/Seeeduino-V42-p-2517.html?cPath=6_7) (compliant with Arduino), just connect this breakout board using [Grove cable](http://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) to I2C Grove connector. Then, use the provided library and example code from GitHub. If you are using an Arduino either use Base Shield v2.0 or simply connect the VCC pin to the 5V voltage pin, GND to ground, SCL to I2C Clock (Analog 5) and SDA to I2C Data (Analog 4).
+Using the sensor is easy. For [Seeeduino](https://www.seeedstudio.com/depot/Seeeduino-V42-p-2517.html?cPath=6_7) (compliant with Arduino), just connect this breakout board using [Grove cable](https://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) to I2C Grove connector. Then, use the provided library and example code from GitHub. If you are using an Arduino either use Base Shield v2.0 or simply connect the VCC pin to the 5V voltage pin, GND to ground, SCL to I2C Clock (Analog 5) and SDA to I2C Data (Analog 4).
 
 Typical applications: Enhancement of GPS navigation, outdoor/indoor navigation, weather forecast, or any other project that requires an accurate atmospheric pressure reading.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Grove-Barometer-Sensor-BMP280-p-2652.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/depot/Grove-Barometer-Sensor-BMP280-p-2652.html)
 
 ## Features
 
@@ -29,7 +29,7 @@ Typical applications: Enhancement of GPS navigation, outdoor/indoor navigation, 
 -   Highly abstracted library for building projects quicker
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 ## Specifications
 
@@ -92,7 +92,7 @@ Do not touch or shake or let this product in vibration when it works. This will 
 | Parts name                                                                                                                    | Quantity |
 |-------------------------------------------------------------------------------------------------------------------------------|----------|
 | Grove - Barometer Sensor (BMP280)                                                                                             | 1 piece  |
-| [Grove cable](http://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) | 1 piece  |
+| [Grove cable](https://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) | 1 piece  |
 
 ## Getting Started
 
@@ -106,7 +106,7 @@ Do not touch or shake or let this product in vibration when it works. This will 
 | Seeeduino V4.2 | Base Shield| Grove-Barometer_Sensor-BMP280 |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BMP280/img/45d_small.jpg)|
-|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/depot/Grove-Barometer-Sensor-BMP280-p-2652.html)|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/depot/Grove-Barometer-Sensor-BMP280-p-2652.html)|
 
 - **Step 2.** Connect Grove-Barometer_Sensor-BMP280 to port **I2C** of Grove-Base Shield.
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
@@ -132,7 +132,7 @@ Do not touch or shake or let this product in vibration when it works. This will 
 
 **Step 1.** Download the [library](https://github.com/Seeed-Studio/Grove_BMP280) from Github.
 
-**Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+**Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 
 **Step 3.** Create a new Arduino sketch and paste the codes below to it or open the code directly by the path:File -> Example ->bmp280_example->bmp280_example
@@ -209,7 +209,7 @@ void loop()
 ```
 
 
-**Step 4.** Upload the code. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+**Step 4.** Upload the code. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 **Step 5.** Open the serial monitor to receive the sensor's data including temperature, barometric pressure value, and altitude.
 
@@ -239,5 +239,5 @@ void loop()
 
 ## Tech Support
 
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

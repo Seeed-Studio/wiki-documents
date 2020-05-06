@@ -140,7 +140,7 @@ This [Grove](/Grove "Grove") module is available as part of the following [Grove
 
 *   [Grove Mixer Pack V2](/Grove-Mixer_Pack_V2 "GROVE MIXER PACK V2")
 
-Alternatively, it can be bought stand-alone at the [Seeed Studio Bazaar](http://www.seeedstudio.com/depot/Grove-Recorder-p-1825.html).
+Alternatively, it can be bought stand-alone at the [Seeed Studio Bazaar](https://www.seeedstudio.com/depot/Grove-Recorder-p-1825.html).
 
 
 ## Schematic Online Viewer
@@ -158,4 +158,4 @@ Alternatively, it can be bought stand-alone at the [Seeed Studio Bazaar](http://
 *   [Datasheet ISD1820P.pdf (Chinese)](https://files.seeedstudio.com/wiki/Grove_Recorder/res/ISD1820P.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

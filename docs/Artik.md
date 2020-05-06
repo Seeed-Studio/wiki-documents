@@ -9,6 +9,6 @@ The Samsung ARTIK Smart IoT platform brings hardware modules and cloud services 
 
 Here is the list of the Artik Boards you can find in the Seeed WiKi. The list will constantly updated.
 
-- [Eagleye 530s](http://wiki.seeedstudio.com/Eagleye_530s/)
+- [Eagleye 530s](https://wiki.seeedstudio.com/Eagleye_530s/)
 
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

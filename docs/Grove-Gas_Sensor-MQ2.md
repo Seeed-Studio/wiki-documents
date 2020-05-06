@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-Gas-Sensor(MQ2)-p-937.html
 oldwikiname: Grove_-_Gas_Sensor(MQ2)
 prodimagename: Twig-Gas_Sensor.bmp
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/Gas Sensor MQ.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/Gas Sensor MQ.jpg
 surveyurl: https://www.research.net/r/Grove-Gas_Sensor-MQ2
 sku: 101020055
 tags: grove_analog, io_5v, plat_duino
@@ -22,14 +22,14 @@ There are 4 kinds of gas sensors, every can detect different type of gas, here w
 
 |Sensor|Gas Type|Get One Now|
 |:---:|---|---|
-|[MQ2](http://wiki.seeedstudio.com/Grove-Gas_Sensor-MQ2/)|Combustible Gas, Smoke|<a href="https://www.seeedstudio.com/Grove-Gas-Sensor(MQ2)-p-937.html">![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)</a>|
-|[MQ3](http://wiki.seeedstudio.com/Grove-Gas_Sensor-MQ3/)|Alcohol Vapor|<a href="https://www.seeedstudio.com/Grove-Gas-Sensor%28MQ3%29-p-1418.html">![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)</a>|
-|[MQ5](http://wiki.seeedstudio.com/Grove-Gas_Sensor-MQ5/)|LPG, Natural Gas, Town Gas|<a href="https://www.seeedstudio.com/Grove-Gas-Sensor%28MQ5%29-p-938.html">![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)</a>|
-|[MQ9](http://wiki.seeedstudio.com/Grove-Gas_Sensor-MQ9/)|Carbon Monoxide, Coal Gas, Liquefied Gas|<a href="https://www.seeedstudio.com/Grove-Gas-Sensor%28MQ9%29-p-1419.html">![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)</a>|
+|[MQ2](https://wiki.seeedstudio.com/Grove-Gas_Sensor-MQ2/)|Combustible Gas, Smoke|<a href="https://www.seeedstudio.com/Grove-Gas-Sensor(MQ2)-p-937.html">![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)</a>|
+|[MQ3](https://wiki.seeedstudio.com/Grove-Gas_Sensor-MQ3/)|Alcohol Vapor|<a href="https://www.seeedstudio.com/Grove-Gas-Sensor%28MQ3%29-p-1418.html">![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)</a>|
+|[MQ5](https://wiki.seeedstudio.com/Grove-Gas_Sensor-MQ5/)|LPG, Natural Gas, Town Gas|<a href="https://www.seeedstudio.com/Grove-Gas-Sensor%28MQ5%29-p-938.html">![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)</a>|
+|[MQ9](https://wiki.seeedstudio.com/Grove-Gas_Sensor-MQ9/)|Carbon Monoxide, Coal Gas, Liquefied Gas|<a href="https://www.seeedstudio.com/Grove-Gas-Sensor%28MQ9%29-p-1419.html">![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)</a>|
 
 
 !!!Tip
-    We've released the [Seeed Gas Sensor Selection Guide](http://wiki.seeedstudio.com/Seeed_Gas_Sensor_Selection_Guide/), it will help you choose the gas sensor that best suits your needs.
+    We've released the [Seeed Gas Sensor Selection Guide](https://wiki.seeedstudio.com/Seeed_Gas_Sensor_Selection_Guide/), it will help you choose the gas sensor that best suits your needs.
 
 ## Features
 
@@ -39,7 +39,7 @@ There are 4 kinds of gas sensors, every can detect different type of gas, here w
 -   Fast response and High sensitivity
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 ## Specification
 
@@ -87,7 +87,7 @@ The output voltage from the Gas sensor increases when the concentration of gas i
 | Seeeduino V4.2 | Base Shield| Grove-Gas Sensor-MQ2 |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ2/img/45d_small.jpg)|
-|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Gas-Sensor(MQ2)-p-937.html)|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Gas-Sensor(MQ2)-p-937.html)|
 
 - **Step 2.** Connect Grove-Gas_Sensor-MQ2 to port A0 of Grove-Base Shield.
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
@@ -110,7 +110,7 @@ Connect the Grove - Gas Sensor(MQ2) to A0 port as shown in the picture above.
 
 #### Software
 
-there are some examples  Please copy and paste code below to a new Arduino sketch, and upload them respectively, If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+there are some examples  Please copy and paste code below to a new Arduino sketch, and upload them respectively, If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 **Basic example:Gas Detection**
 
@@ -249,7 +249,7 @@ According to the graph, we can see that the minimum concentration we can test is
 
 #### Software
 
-- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
 - **Step 2**. Download the source file by cloning the grove.py library. 
 
 ```
@@ -443,9 +443,9 @@ THE SOFTWARE.
 # 02 - Oxygen
 # The sensitivity can be adjusted by the onboard potentiometer
 #
-# http://www.seeedstudio.com/wiki/Grove_-_Gas_Sensor
-# http://www.seeedstudio.com/wiki/Grove_-_Gas_Sensor(MQ5)
-# http://www.seeedstudio.com/wiki/Grove_-_Gas_Sensor(O%E2%82%82)
+# https://www.seeedstudio.com/wiki/Grove_-_Gas_Sensor
+# https://www.seeedstudio.com/wiki/Grove_-_Gas_Sensor(MQ5)
+# https://www.seeedstudio.com/wiki/Grove_-_Gas_Sensor(O%E2%82%82)
 
 import time
 import grovepi
@@ -509,4 +509,4 @@ while True:
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/sakshambhutani2001/octopod-smart-iot-home-automation-project-fa939b/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -15,9 +15,9 @@ tags:
 
 Rainbowduino Extension Shield is a breakout board of Rainbowduino’s 192 separate LED driving channels. The channels are divided into three 8*8 arrays: red, green and blue for easier controlling, it is designed to ease customized LED projects based on Rainbowduino.
 
-<font color="red" size="3">NOTE: To drive Rainbowduino Extension Board, you may also need a [Rainbowduino](http://www.seeedstudio.com/depot/rainbowduino-led-driver-platform-atmega-328-p-371.html?cPath=132_133) .</font>
+<font color="red" size="3">NOTE: To drive Rainbowduino Extension Board, you may also need a [Rainbowduino](https://www.seeedstudio.com/depot/rainbowduino-led-driver-platform-atmega-328-p-371.html?cPath=132_133) .</font>
 
-**Model: [INT111A4M](http://www.seeedstudio.com/depot/rainbowduino-extension-board-v09b-p-692.html?cPath=175_177)**
+**Model: [INT111A4M](https://www.seeedstudio.com/depot/rainbowduino-extension-board-v09b-p-692.html?cPath=175_177)**
 
 
 ##   Features  
@@ -124,11 +124,11 @@ Another effect picture displayed as the character RGB here, and the code for det
 
 ##   Resources  
 
-- **[Datasheet]** [Datasheet](http://www.seeedstudio.com/depot/datasheet/Rainbowduino_Extension_Shield_v0.9b.pdf)
+- **[Datasheet]** [Datasheet](https://www.seeedstudio.com/depot/datasheet/Rainbowduino_Extension_Shield_v0.9b.pdf)
 
 ##   Support  
 
-If you have questions or other better design ideas, you can go to our [forum](http://www.seeedstudio.com/forum) or **wish** to discuss.
+If you have questions or other better design ideas, you can go to our [forum](https://www.seeedstudio.com/forum) or **wish** to discuss.
 
 ##   Version Tracker  
 
@@ -154,15 +154,15 @@ The Additional Idea is the place to write your project ideas about this product,
 
 ##   How to buy  
 
-Click here to buy: [http://www.seeedstudio.com/depot/rainbowduino-extension-board-v09b-p-692.html?cPath=175_177](http://www.seeedstudio.com/depot/rainbowduino-extension-board-v09b-p-692.html?cPath=175_177).
+Click here to buy: [https://www.seeedstudio.com/depot/rainbowduino-extension-board-v09b-p-692.html?cPath=175_177](https://www.seeedstudio.com/depot/rainbowduino-extension-board-v09b-p-692.html?cPath=175_177).
 
 ##   See Also  
 
-LEDs for the extension board, please check out here: **http://www.seeedstudio.com/depot/optoelectronics-discrete-led-c-93_94.html**
+LEDs for the extension board, please check out here: **https://www.seeedstudio.com/depot/optoelectronics-discrete-led-c-93_94.html**
 
 ##   Licensing  
 
 This documentation is licensed under the Creative Commons [Attribution-ShareAlike License 3.0](http://creativecommons.org/licenses/by-sa/3.0/) Source code and libraries are licensed under [GPL/LGPL](http://www.gnu.org/licenses/gpl.html), see source code files for details.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -129,7 +129,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 
 !!!Tip
-        In this section we only show you part of the schematic, for the full document please refer to the [Resources](http://wiki.seeedstudio.com/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/#resources)
+        In this section we only show you part of the schematic, for the full document please refer to the [Resources](https://wiki.seeedstudio.com/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/#resources)
 
 
 ## Platforms Supported
@@ -308,7 +308,7 @@ You can use this board to control the 4-wire stepper motor as well, it can outpu
 | Seeeduino V4.2 | Base Shield | Grove - I2C Motor Driver (TB6612FNG) |DC Motor|
 |--------------|-------------|-----------------|----|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/thumbnail.jpg)|![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/DC_Motor_01.jpg)|
-|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-I2C-Motor-Driver-(TB6612FNG)-p-3220.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/130-DC-Motor-p-2023.html" target="_blank">Get One Now</a>|
+|<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-I2C-Motor-Driver-(TB6612FNG)-p-3220.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/130-DC-Motor-p-2023.html" target="_blank">Get One Now</a>|
 
 
 !!!note
@@ -458,7 +458,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 
 !!!Tip
-        In this section we only show you part of the schematic, for the full document please refer to the [Resources](http://wiki.seeedstudio.com/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/#resources)
+        In this section we only show you part of the schematic, for the full document please refer to the [Resources](https://wiki.seeedstudio.com/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/#resources)
 
 
 ## Platforms Supported
@@ -637,7 +637,7 @@ You can use this board to control the 4-wire stepper motor as well, it can outpu
 | Seeeduino V4.2 | Base Shield | Grove - I2C Motor Driver (TB6612FNG) |DC Motor|
 |--------------|-------------|-----------------|----|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/thumbnail.jpg)|![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/DC_Motor_01.jpg)|
-|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-I2C-Motor-Driver-(TB6612FNG)-p-3220.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/130-DC-Motor-p-2023.html" target="_blank">Get One Now</a>|
+|<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-I2C-Motor-Driver-(TB6612FNG)-p-3220.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/130-DC-Motor-p-2023.html" target="_blank">Get One Now</a>|
 
 
 !!!note
@@ -787,7 +787,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 
 !!!Tip
-        In this section we only show you part of the schematic, for the full document please refer to the [Resources](http://wiki.seeedstudio.com/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/#resources)
+        In this section we only show you part of the schematic, for the full document please refer to the [Resources](https://wiki.seeedstudio.com/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/#resources)
 
 
 ## Platforms Supported
@@ -966,7 +966,7 @@ You can use this board to control the 4-wire stepper motor as well, it can outpu
 | Seeeduino V4.2 | Base Shield | Grove - I2C Motor Driver (TB6612FNG) |DC Motor|
 |--------------|-------------|-----------------|----|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/thumbnail.jpg)|![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/DC_Motor_01.jpg)|
-|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-I2C-Motor-Driver-(TB6612FNG)-p-3220.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/130-DC-Motor-p-2023.html" target="_blank">Get One Now</a>|
+|<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-I2C-Motor-Driver-(TB6612FNG)-p-3220.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/130-DC-Motor-p-2023.html" target="_blank">Get One Now</a>|
 
 
 !!!note
@@ -1116,7 +1116,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 
 !!!Tip
-        In this section we only show you part of the schematic, for the full document please refer to the [Resources](http://wiki.seeedstudio.com/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/#resources)
+        In this section we only show you part of the schematic, for the full document please refer to the [Resources](https://wiki.seeedstudio.com/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/#resources)
 
 
 ## Platforms Supported
@@ -1295,7 +1295,7 @@ You can use this board to control the 4-wire stepper motor as well, it can outpu
 | Seeeduino V4.2 | Base Shield | Grove - I2C Motor Driver (TB6612FNG) |DC Motor|
 |--------------|-------------|-----------------|----|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/thumbnail.jpg)|![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/DC_Motor_01.jpg)|
-|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-I2C-Motor-Driver-(TB6612FNG)-p-3220.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/130-DC-Motor-p-2023.html" target="_blank">Get One Now</a>|
+|<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-I2C-Motor-Driver-(TB6612FNG)-p-3220.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/130-DC-Motor-p-2023.html" target="_blank">Get One Now</a>|
 
 
 !!!note
@@ -1445,7 +1445,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 
 !!!Tip
-        In this section we only show you part of the schematic, for the full document please refer to the [Resources](http://wiki.seeedstudio.com/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/#resources)
+        In this section we only show you part of the schematic, for the full document please refer to the [Resources](https://wiki.seeedstudio.com/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/#resources)
 
 
 ## Platforms Supported
@@ -1624,7 +1624,7 @@ You can use this board to control the 4-wire stepper motor as well, it can outpu
 | Seeeduino V4.2 | Base Shield | Grove - I2C Motor Driver (TB6612FNG) |DC Motor|
 |--------------|-------------|-----------------|----|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/thumbnail.jpg)|![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/DC_Motor_01.jpg)|
-|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-I2C-Motor-Driver-(TB6612FNG)-p-3220.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/130-DC-Motor-p-2023.html" target="_blank">Get One Now</a>|
+|<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-I2C-Motor-Driver-(TB6612FNG)-p-3220.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/130-DC-Motor-p-2023.html" target="_blank">Get One Now</a>|
 
 
 !!!note
@@ -1774,7 +1774,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 
 !!!Tip
-        In this section we only show you part of the schematic, for the full document please refer to the [Resources](http://wiki.seeedstudio.com/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/#resources)
+        In this section we only show you part of the schematic, for the full document please refer to the [Resources](https://wiki.seeedstudio.com/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/#resources)
 
 
 ## Platforms Supported
@@ -1953,7 +1953,7 @@ You can use this board to control the 4-wire stepper motor as well, it can outpu
 | Seeeduino V4.2 | Base Shield | Grove - I2C Motor Driver (TB6612FNG) |DC Motor|
 |--------------|-------------|-----------------|----|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/thumbnail.jpg)|![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/DC_Motor_01.jpg)|
-|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-I2C-Motor-Driver-(TB6612FNG)-p-3220.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/130-DC-Motor-p-2023.html" target="_blank">Get One Now</a>|
+|<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-I2C-Motor-Driver-(TB6612FNG)-p-3220.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/130-DC-Motor-p-2023.html" target="_blank">Get One Now</a>|
 
 
 !!!note
@@ -1978,7 +1978,7 @@ category: Actuator
 bzurl: https://seeedstudio.com/Grove-I2C-Motor-Driver-p-907.html
 oldwikiname: Grove_-_I2C_Motor_Driver
 prodimagename: Grove-I2C_Motor_Driver_V1.1.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/12Cmotor.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/12Cmotor.jpg
 surveyurl: https://www.research.net/r/Grove-I2C_Motor_Driver
 sku: 105020001
 ---
@@ -2010,7 +2010,7 @@ sku: 105020001
 </table>
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_I2C_Motor_Driver -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_I2C_Motor_Driver -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

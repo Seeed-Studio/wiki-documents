@@ -449,13 +449,13 @@ Here is what it looks like with the watch case:
 
 ##   Resource
 
-*   [Seeed depot](http://www.seeedstudio.com/depot/)
+*   [Seeed depot](https://www.seeedstudio.com/depot/)
 
 *   [source code on github](https://github.com/Seeed-Studio/Xadow_Edison_Demos)
 
 *   [Edison Pedometer 3D models](https://file.seeedstudi.com/wiki/Xadow_Wearable_Kit_For_Edison/res/Edison_Pedometer_3D_models.zipp)
 
-*   [Intel® Edison official site](http://www.intel.com/content/www/us/en/do-it-yourself/edison.html)
+*   [Intel® Edison official site](https://www.intel.com/content/www/us/en/do-it-yourself/edison.html)
 
 *   [Edison Getting Started Guide](https://communities.intel.com/docs/DOC-23147)
 
@@ -464,4 +464,4 @@ Here is what it looks like with the watch case:
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

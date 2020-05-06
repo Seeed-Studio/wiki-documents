@@ -50,7 +50,7 @@ Answer: Select the "Arduino Dueminalove 328" in the Arduino IDE and also make su
 
 ##   Support   ##
 
-If you have questions or other better design ideas, you can go to our [forum](http://www.seeedstudio.com/forum) or **wish** to discuss.
+If you have questions or other better design ideas, you can go to our [forum](https://www.seeedstudio.com/forum) or **wish** to discuss.
 
 ##   Version Tracker   ##
 
@@ -75,7 +75,7 @@ The Additional Idea is the place to write your project ideas about this product,
 
 ##   How to buy   ##
 
-Here to buy Seeeduino v2.21 [(Atmega 168P)](http://seeedstudio.com/depot/seeeduino-v221-atmega-168p-p-690.html) and Seeeduino v3.0 [(Atmega 328P)](http://www.seeedstudio.com/depot/seeeduino-v30-atmega-328p-p-669.html?cPath=132_133) on SEEED **Bazaar**
+Here to buy Seeeduino v2.21 [(Atmega 168P)](https://www.seeedstudio.com/depot/seeeduino-v221-atmega-168p-p-690.html) and Seeeduino v3.0 [(Atmega 328P)](https://www.seeedstudio.com/depot/seeeduino-v30-atmega-328p-p-669.html?cPath=132_133) on SEEED **Bazaar**
 
 
 ##   Licensing   ##
@@ -87,4 +87,4 @@ This documentation is licensed under the Creative Commons [Attribution-ShareAlik
 - **[PDF]** [Schematic in pdf](https://files.seeedstudio.com/wiki/Seeeduino_v2.21/res/Seeeduino_v2.21.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

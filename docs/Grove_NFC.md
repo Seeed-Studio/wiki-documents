@@ -4,7 +4,7 @@ category: Communication
 bzurl: https://seeedstudio.com/Grove-NFC-p-1804.html
 oldwikiname: Grove_-_NFC
 prodimagename: Grove-NFC_01.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/grove nfc.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/grove nfc.jpg
 surveyurl: https://www.research.net/r/Grove-NFC
 sku: 113020006
 tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit
@@ -26,7 +26,7 @@ Grove NFC features a highly integrated transceiver module PN532 which handles co
 
 
 
-<p style=":center"><a href="http://www.seeedstudio.com/Grove-NFC-p-1804.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-NFC-p-1804.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 
 ## Version
@@ -53,7 +53,7 @@ Grove NFC features a highly integrated transceiver module PN532 which handles co
 -   Dimensions: 25.43mm x 20.35mm
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
     
 Platforms Supported
 
@@ -98,7 +98,7 @@ The default setting is UART, if you need to change it into I2C, then you should 
 ## Getting Started
 
 !!!Note
-    If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+    If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
 
 The Grove - NFC supports I2C and UART, [Seeed Arduino NFC Library](https://github.com/Seeed-Studio/Seeed_Arduino_NFC) supports Arduino Uno/Seeeduino v4.2, Arduino Mega/Seeeduino Mega, Arduino Zero/Seeeduino Lorawan and Arduino Leonardo/Seeeduino Lite. 
@@ -130,7 +130,7 @@ The Grove - NFC supports I2C and UART, [Seeed Arduino NFC Library](https://githu
 
 - **Step 1.**  Download [Seeed Arduino NFC Library](https://github.com/Seeed-Studio/Seeed_Arduino_NFC).
 
-- **Step 2.**  Refer to [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install **Seeed Arduino NFC** library for Arduino.
+- **Step 2.**  Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install **Seeed Arduino NFC** library for Arduino.
 
 - **Step 3.**  Download [PN532 Library](https://github.com/Seeed-Studio/PN532) and put it under **C:\Program Files (x86)\Arduino\libraries\Seeed_Arduino_NFC-master\src**.
 
@@ -166,7 +166,7 @@ NfcAdapter nfc = NfcAdapter(pn532_i2c);
 #endif
 ```
 
-- **Step 7.** Upload the code. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 7.** Upload the code. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 - **Step 8.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time. Set the baud Rate **9600**
 
@@ -213,7 +213,7 @@ NfcAdapter nfc = NfcAdapter(pn532_i2c);
 | Seeeduino V4.2 | Base Shield| Grove - NFC |  NFC Tags|
 |--------------|-------------|-----------------|---|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-NFC/img/thumbnail.jpg)|![](https://files.seeedstudio.com/wiki/Grove-NFC/img/NFC-for-Marketing-Header.jpg)|
-|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-NFC-p-1804.html" target="_blank">Get One Now</a>|Please Prepare yourself|
+|<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-NFC-p-1804.html" target="_blank">Get One Now</a>|Please Prepare yourself|
 
 
 !!!note
@@ -240,7 +240,7 @@ NfcAdapter nfc = NfcAdapter(pn532_i2c);
 
 - **Step 1.**  Download [Seeed Arduino NFC Library](https://github.com/Seeed-Studio/Seeed_Arduino_NFC).
 
-- **Step 2.**  Refer to [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install **Seeed Arduino NFC** library for Arduino.
+- **Step 2.**  Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install **Seeed Arduino NFC** library for Arduino.
 
 - **Step 3.**  Download [PN532 Library](https://github.com/Seeed-Studio/PN532) and put it under **C:\Program Files (x86)\Arduino\libraries\Seeed_Arduino_NFC-master\src**.
 
@@ -276,7 +276,7 @@ NfcAdapter nfc = NfcAdapter(pn532_i2c);
 #endif
 ```
 
-- **Step 6.** Upload the code. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 6.** Upload the code. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 - **Step 7.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time. Set the baud Rate **9600**
 
@@ -305,7 +305,7 @@ NfcAdapter nfc = NfcAdapter(pn532_i2c);
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/peacemoon/particle-photon-grove-nfc-grove-lcd-via-i2c-7e7d36/embed' width='350'></iframe>
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_NFC -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_NFC -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

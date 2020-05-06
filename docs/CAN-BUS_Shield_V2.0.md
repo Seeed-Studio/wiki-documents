@@ -147,9 +147,9 @@ Here's a simple example to show you how CAN-BUS Shield works. In this example we
 
 |Name|Function|Qty|Link|
 |----|--------|---|----|
-|CAN-BUS Shield|CAN Bus communication | 2 | [link](http://www.seeedstudio.com/depot/CANBUS-Shield-V12-p-2256.html) |
-|Seeeduino V4.2|Controller|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=2517)|
-|Jumper Wire|connection|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=234)|
+|CAN-BUS Shield|CAN Bus communication | 2 | [link](https://www.seeedstudio.com/depot/CANBUS-Shield-V12-p-2256.html) |
+|Seeeduino V4.2|Controller|2|[link](https://www.seeedstudio.com/item_detail.html?p_id=2517)|
+|Jumper Wire|connection|2|[link](https://www.seeedstudio.com/item_detail.html?p_id=234)|
 
 **STEP2: Hardware Connection**
 
@@ -162,7 +162,7 @@ Insert each CAN-BUS Shield into Seeeduino V4.2, and connect the 2 CAN-BUS Shield
 
 **STEP3: Software**
 
-Please follow [how to install an arduino library](http://wiki.seeed.cc/How_to_install_Arduino_Library/) procedures to install CAN BUS shield library.
+Please follow [how to install an arduino library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install CAN BUS shield library.
 
 
 Click on below button to download the library.
@@ -327,9 +327,9 @@ Here's a simple example to show you how CAN-BUS Shield works. In this example we
 
 |Name|Function|Qty|Link|
 |----|--------|---|----|
-|CAN-BUS Shield|CAN Bus communication | 2 | [link](http://www.seeedstudio.com/depot/CANBUS-Shield-V12-p-2256.html) |
-|Seeeduino V4.2|Controller|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=2517)|
-|Jumper Wire|connection|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=234)|
+|CAN-BUS Shield|CAN Bus communication | 2 | [link](https://www.seeedstudio.com/depot/CANBUS-Shield-V12-p-2256.html) |
+|Seeeduino V4.2|Controller|2|[link](https://www.seeedstudio.com/item_detail.html?p_id=2517)|
+|Jumper Wire|connection|2|[link](https://www.seeedstudio.com/item_detail.html?p_id=234)|
 
 **STEP2: Hardware Connection**
 
@@ -342,7 +342,7 @@ Insert each CAN-BUS Shield into Seeeduino V4.2, and connect the 2 CAN-BUS Shield
 
 **STEP3: Software**
 
-Please follow [how to install an arduino library](http://wiki.seeed.cc/How_to_install_Arduino_Library/) procedures to install CAN BUS shield library.
+Please follow [how to install an arduino library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install CAN BUS shield library.
 
 
 Click on below button to download the library.
@@ -507,9 +507,9 @@ Here's a simple example to show you how CAN-BUS Shield works. In this example we
 
 |Name|Function|Qty|Link|
 |----|--------|---|----|
-|CAN-BUS Shield|CAN Bus communication | 2 | [link](http://www.seeedstudio.com/depot/CANBUS-Shield-V12-p-2256.html) |
-|Seeeduino V4.2|Controller|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=2517)|
-|Jumper Wire|connection|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=234)|
+|CAN-BUS Shield|CAN Bus communication | 2 | [link](https://www.seeedstudio.com/depot/CANBUS-Shield-V12-p-2256.html) |
+|Seeeduino V4.2|Controller|2|[link](https://www.seeedstudio.com/item_detail.html?p_id=2517)|
+|Jumper Wire|connection|2|[link](https://www.seeedstudio.com/item_detail.html?p_id=234)|
 
 **STEP2: Hardware Connection**
 
@@ -522,7 +522,7 @@ Insert each CAN-BUS Shield into Seeeduino V4.2, and connect the 2 CAN-BUS Shield
 
 **STEP3: Software**
 
-Please follow [how to install an arduino library](http://wiki.seeed.cc/How_to_install_Arduino_Library/) procedures to install CAN BUS shield library.
+Please follow [how to install an arduino library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install CAN BUS shield library.
 
 
 Click on below button to download the library.
@@ -687,9 +687,9 @@ Here's a simple example to show you how CAN-BUS Shield works. In this example we
 
 |Name|Function|Qty|Link|
 |----|--------|---|----|
-|CAN-BUS Shield|CAN Bus communication | 2 | [link](http://www.seeedstudio.com/depot/CANBUS-Shield-V12-p-2256.html) |
-|Seeeduino V4.2|Controller|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=2517)|
-|Jumper Wire|connection|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=234)|
+|CAN-BUS Shield|CAN Bus communication | 2 | [link](https://www.seeedstudio.com/depot/CANBUS-Shield-V12-p-2256.html) |
+|Seeeduino V4.2|Controller|2|[link](https://www.seeedstudio.com/item_detail.html?p_id=2517)|
+|Jumper Wire|connection|2|[link](https://www.seeedstudio.com/item_detail.html?p_id=234)|
 
 **STEP2: Hardware Connection**
 
@@ -702,7 +702,7 @@ Insert each CAN-BUS Shield into Seeeduino V4.2, and connect the 2 CAN-BUS Shield
 
 **STEP3: Software**
 
-Please follow [how to install an arduino library](http://wiki.seeed.cc/How_to_install_Arduino_Library/) procedures to install CAN BUS shield library.
+Please follow [how to install an arduino library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install CAN BUS shield library.
 
 
 Click on below button to download the library.
@@ -867,9 +867,9 @@ Here's a simple example to show you how CAN-BUS Shield works. In this example we
 
 |Name|Function|Qty|Link|
 |----|--------|---|----|
-|CAN-BUS Shield|CAN Bus communication | 2 | [link](http://www.seeedstudio.com/depot/CANBUS-Shield-V12-p-2256.html) |
-|Seeeduino V4.2|Controller|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=2517)|
-|Jumper Wire|connection|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=234)|
+|CAN-BUS Shield|CAN Bus communication | 2 | [link](https://www.seeedstudio.com/depot/CANBUS-Shield-V12-p-2256.html) |
+|Seeeduino V4.2|Controller|2|[link](https://www.seeedstudio.com/item_detail.html?p_id=2517)|
+|Jumper Wire|connection|2|[link](https://www.seeedstudio.com/item_detail.html?p_id=234)|
 
 **STEP2: Hardware Connection**
 
@@ -882,7 +882,7 @@ Insert each CAN-BUS Shield into Seeeduino V4.2, and connect the 2 CAN-BUS Shield
 
 **STEP3: Software**
 
-Please follow [how to install an arduino library](http://wiki.seeed.cc/How_to_install_Arduino_Library/) procedures to install CAN BUS shield library.
+Please follow [how to install an arduino library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install CAN BUS shield library.
 
 
 Click on below button to download the library.
@@ -1047,9 +1047,9 @@ Here's a simple example to show you how CAN-BUS Shield works. In this example we
 
 |Name|Function|Qty|Link|
 |----|--------|---|----|
-|CAN-BUS Shield|CAN Bus communication | 2 | [link](http://www.seeedstudio.com/depot/CANBUS-Shield-V12-p-2256.html) |
-|Seeeduino V4.2|Controller|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=2517)|
-|Jumper Wire|connection|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=234)|
+|CAN-BUS Shield|CAN Bus communication | 2 | [link](https://www.seeedstudio.com/depot/CANBUS-Shield-V12-p-2256.html) |
+|Seeeduino V4.2|Controller|2|[link](https://www.seeedstudio.com/item_detail.html?p_id=2517)|
+|Jumper Wire|connection|2|[link](https://www.seeedstudio.com/item_detail.html?p_id=234)|
 
 **STEP2: Hardware Connection**
 
@@ -1062,7 +1062,7 @@ Insert each CAN-BUS Shield into Seeeduino V4.2, and connect the 2 CAN-BUS Shield
 
 **STEP3: Software**
 
-Please follow [how to install an arduino library](http://wiki.seeed.cc/How_to_install_Arduino_Library/) procedures to install CAN BUS shield library.
+Please follow [how to install an arduino library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install CAN BUS shield library.
 
 
 Click on below button to download the library.
@@ -1318,8 +1318,8 @@ Here's a simple example to show you how CAN-BUS Shield works. In this example we
 |Name|Function|Qty|Link|
 |----|--------|---|----|
 |CAN-BUS Shield|CAN Bus communication | 2 | [link](https://www.seeedstudio.com/CAN-BUS-Shield-V2-p-2921.html) |
-|Seeeduino V4.2|Controller|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=2517)|
-|Jumper Wire|connection|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=234)|
+|Seeeduino V4.2|Controller|2|[link](https://www.seeedstudio.com/item_detail.html?p_id=2517)|
+|Jumper Wire|connection|2|[link](https://www.seeedstudio.com/item_detail.html?p_id=234)|
 
 **STEP2: Hardware Connection**
 
@@ -1332,7 +1332,7 @@ Insert each CAN-BUS Shield into Seeeduino V4.2, and connect the 2 CAN-BUS Shield
 
 **STEP3: Software**
 
-Please follow [how to install an arduino library](http://wiki.seeed.cc/How_to_install_Arduino_Library/) procedures to install CAN BUS shield library.
+Please follow [how to install an arduino library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install CAN BUS shield library.
 
 
 Click on below button to download the library.
@@ -1448,7 +1448,7 @@ In conditions that masks and filters have been set. This function can only get f
 
 ### 7.init_CS
 
-it is very usefule for you to use two CAN-BUS shields with one Arduino.we provide CS_CAN pin to select for you.if you cannot kown how to use CS_CAN pin , you can go to [CS_CAN pin](http://wiki.seeedstudio.com/CAN-BUS_Shield_V2.0/#cs_can-pin) to learn.
+it is very usefule for you to use two CAN-BUS shields with one Arduino.we provide CS_CAN pin to select for you.if you cannot kown how to use CS_CAN pin , you can go to [CS_CAN pin](https://wiki.seeedstudio.com/CAN-BUS_Shield_V2.0/#cs_can-pin) to learn.
 
 	void MCP_CAN::init_CS(byte _CS)
 
@@ -1537,7 +1537,7 @@ All electronic functions are connected to the TIPM, (Totally integrated Power Mo
 From each node (IE Switch pod that controls your windows or electric door locks) it broadcasts a message across the CAN. When the TIPM detects a valid message it will react accordingly like, lock the doors, switch on lights and so on.
 
 
-[![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/Wiki_makeitnow_logo.png)](http://www.instructables.com/id/Hack-your-vehicle-CAN-BUS-with-Arduino-and-Seeed-C/)
+[![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/Wiki_makeitnow_logo.png)](https://www.instructables.com/id/Hack-your-vehicle-CAN-BUS-with-Arduino-and-Seeed-C/)
 
 ## FAQ
 ------
@@ -1573,5 +1573,5 @@ From each node (IE Switch pod that controls your windows or electric door locks)
 * **[Drawing]**[CAN BUS Shield v2.0 Drawing in DXF](https://files.seeedstudio.com/wiki/CAN-BUS-Shield-V2.0/res/CAN-BUS%C2%A0SHIELD%C2%A0V2.0.dxf.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-Mouse-Encoder-p-2607.html
 oldwikiname: Grove_-_Mouser_Encoder
 prodimagename: Grove-Mouse_Encoder_product_view.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/103020030 1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/103020030 1.jpg
 surveyurl: https://www.research.net/r/Grove-Mouse_Encoder
 sku: 103020030
 ---
@@ -13,7 +13,7 @@ sku: 103020030
 
 Grove - Mouse Encoder is a type of mechanical incremental rotary encoder with feedback data of rotary direction and rotary speed<sup>\[1\]</sup>. It features standard Grove interface that will save your lots of work in wiring and programming. Also, it is well adapted to heavy duty and a harsh environment. This product can be applied in toys, robots, and consumer input devices.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-%E2%80%93-Mouse-Encoder-p-2607.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-%E2%80%93-Mouse-Encoder-p-2607.html)
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -30,7 +30,7 @@ Features
 -   Accurate and reliable.
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 Applications
 ------------
@@ -168,7 +168,7 @@ Resources
 
 - [Schematic files](https://files.seeedstudio.com/wiki/Grove-Mouse_Encoder/res/Grove_Mouse_Encoder_v1.0_Schematic_File.zip)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Mouser_Encoder -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Mouser_Encoder -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

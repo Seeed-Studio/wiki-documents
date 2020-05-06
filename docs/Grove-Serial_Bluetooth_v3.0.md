@@ -4,7 +4,7 @@ category: Communication
 bzurl: https://seeedstudio.com/Grove-Serial-Bluetooth-v3.0-p-2475.html
 oldwikiname: Grove_-_Serial_Bluetooth_v3.0‏‎
 prodimagename: Grove-Serial_Bluetooth_v3.0.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/113020008 1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/113020008 1.jpg
 surveyurl: https://www.research.net/r/Grove-Serial_Bluetooth_v3_0
 sku: 113020008
 ---
@@ -27,7 +27,7 @@ Specifications
 -   Auto-reconnect in 30 min when disconnected as a result of beyond the range of connection
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
     
 Demonstration
 -------------
@@ -133,7 +133,7 @@ Resources
 -   [Bluetooth Software Instruction](https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/res/Bluetooth_en.pdf)
 -   [Bluetooth - Module Datasheet](https://files.seeedstudio.com/wiki/Grove-Serial_Bluetooth_v3.0/res/Bluetooth_module.pdf)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Serial_Bluetooth_v3.0 -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Serial_Bluetooth_v3.0 -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -4,7 +4,7 @@ category: Actuator
 bzurl: https://seeedstudio.com/Grove-MP3-v2.0-p-2597.html
 oldwikiname: Grove_-_MP3_v2.0
 prodimagename: Grove-MP3_v2.0_Product_View_700_S.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/107020008 2.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/107020008 2.jpg
 surveyurl: https://www.research.net/r/Grove-MP3_v2_0
 sku: 107020008
 tags: plat_duino, plat_pi, plat_bbg, plat_linkit
@@ -16,7 +16,7 @@ Grove - MP3 v2.0 is a tiny-sized and compact audio module. It supports various a
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/3FMlt_aqhOc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<p style=":center"><a href="http://www.seeedstudio.com/depot/Grove-MP3-v20-p-2597.html?cPath=98_106_57" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/depot/Grove-MP3-v20-p-2597.html?cPath=98_106_57" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
 
 
 ## Version
@@ -36,7 +36,7 @@ Grove - MP3 v2.0 is a tiny-sized and compact audio module. It supports various a
 -   Embed 10 levels of equalization in total
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 ## Application ideas
 
@@ -77,7 +77,7 @@ Grove - MP3 v2.0 is a tiny-sized and compact audio module. It supports various a
 ## Getting Started
 
 !!!Note
-    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
 ### Play With Arduino
 
@@ -88,7 +88,7 @@ Grove - MP3 v2.0 is a tiny-sized and compact audio module. It supports various a
 | Seeeduino V4.2 | Base Shield|  Grove - MP3 v2.0 |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-MP3_v2.0/img/Grove-MP3_v2.0_s.jpg)|
-|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/depot/Grove-MP3-v20-p-2597.html?cPath=98_106_57)|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/depot/Grove-MP3-v20-p-2597.html?cPath=98_106_57)|
 
 !!!Note
     We need SD card with music inside and Headset/earphone or stereo with 3.5 mm audio jack as well.
@@ -112,8 +112,8 @@ Grove - MP3 v2.0 is a tiny-sized and compact audio module. It supports various a
 #### Software
 
 - **Step 1.** Download the  [ Grove-MP3 v2.0](https://github.com/Seeed-Studio/Seeed_Serial_MP3_Player)  from Github.
-- **Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
-- **Step 3.** You can select **Seeed_Serial_MP3_Player/examples/KT403A_Terminal_player** example and upload to arduino. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- **Step 3.** You can select **Seeed_Serial_MP3_Player/examples/KT403A_Terminal_player** example and upload to arduino. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 - **Step 4.** We will see the info at COM terminal as below.
 
 ![](https://files.seeedstudio.com/wiki/Grove-MP3_v2.0/img/COM.png)
@@ -128,7 +128,7 @@ Grove - MP3 v2.0 is a tiny-sized and compact audio module. It supports various a
 
 There are 2 kinds of serial ports. One is COMSerial, stands for communication port(connecting with Grove-MP3 module). The other is ShowSerial, stands for serial info display port(connectiong with PC). 
 
-Most of arduino boards have at least one Serial, some have multiple serials(Arduino Mega has 4 Serials). It communicates on digital pins 0 (RX) and 1 (TX) as well as with the computer via USB. So if you connect UART device on pin D0 and pin D1, you have to remove them before downloading program through USB. Or else it will cause upload fails. Sometimes you need more serial ports than the number of hardware serial ports available. If this is the case, you can use an Software Serial that uses software to emulate serial hardware. Software serial requires a lot of help from the Arduino controller to send and receive data, so it’s not as fast or efficient as hardware serial. For more info about the Serial, please refer to [Seeed Arduino Serial](http://wiki.seeedstudio.com/Seeed_Arduino_Serial/). 
+Most of arduino boards have at least one Serial, some have multiple serials(Arduino Mega has 4 Serials). It communicates on digital pins 0 (RX) and 1 (TX) as well as with the computer via USB. So if you connect UART device on pin D0 and pin D1, you have to remove them before downloading program through USB. Or else it will cause upload fails. Sometimes you need more serial ports than the number of hardware serial ports available. If this is the case, you can use an Software Serial that uses software to emulate serial hardware. Software serial requires a lot of help from the Arduino controller to send and receive data, so it’s not as fast or efficient as hardware serial. For more info about the Serial, please refer to [Seeed Arduino Serial](https://wiki.seeedstudio.com/Seeed_Arduino_Serial/). 
 
 - **AVR:** For the below example, We define Software Serial as COMSerial(connectiong with Grove-MP3 module). NOT all the digital pins can be used for software serial. You can refer to [Software Serial](https://www.arduino.cc/en/Reference/SoftwareSerial) for detail pins. We define hardware Serial as ShowSerial(connecting with PC). If you use Arduino Mega, you can connect the hardware Serial to ShowSerial and the other Serial1/Serial2/Serial3 to COMSerial. So you can refer to AVR Mega setting. 
 
@@ -137,7 +137,7 @@ Most of arduino boards have at least one Serial, some have multiple serials(Ardu
 - **STM32F4:** For the below example, We use the hardware serial **Serial** to commuincate with Grove-MP3 Module and **SerialUSB** to print message on PC. 
 
 !!!Note
-    For more info about the Serial, please refer to [Seeed Arduino Serial](http://wiki.seeedstudio.com/Seeed_Arduino_Serial/). 
+    For more info about the Serial, please refer to [Seeed Arduino Serial](https://wiki.seeedstudio.com/Seeed_Arduino_Serial/). 
 
 
 
@@ -190,5 +190,5 @@ KT403A<HardwareSerial> Mp3Player;
 
 ## Tech Support
 
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

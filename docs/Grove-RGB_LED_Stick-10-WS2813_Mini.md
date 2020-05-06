@@ -97,7 +97,7 @@ As long as not two or more adjacent LEDs are broken, the remaining LEDs will be 
 | Seeeduino V4.2 | Base Shield | Grove - RGB LED Stick (10 WS2813 Mini) |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Stick-10-WS2813_Mini/img/thumbnail.jpg)|
-|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-RGB-LED-Stick-10-WS2813-Min-p-3226.html" target="_blank">Get One Now</a>|
+|<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-RGB-LED-Stick-10-WS2813-Min-p-3226.html" target="_blank">Get One Now</a>|
 
 
 !!!note
@@ -137,12 +137,12 @@ As long as not two or more adjacent LEDs are broken, the remaining LEDs will be 
 #### Software
 
 !!!Attention
-        If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+        If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
 
 - **Step 1.** Download the [Led_Strip](https://github.com/Seeed-Studio/Seeed_Led_Strip) Library from Github.
 
-- **Step 2.** Refer to [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 - **Step 3.** Restart the Arduino IDE. Open the example, you can open it in the following three ways：
     1. Open it directly in the Arduino IDE via the path: **File --> Examples --> Adafruit_Neopixel --> simple**. 
@@ -208,7 +208,7 @@ void loop() {
         The library file may be updated. This code may not be applicable to the updated library file, so we recommend that you use the first two methods.
 
 
-- **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 
 

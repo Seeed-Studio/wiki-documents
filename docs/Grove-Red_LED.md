@@ -52,7 +52,7 @@ Grove - Red LED is similar to the Grove - LED module which houses an LED light s
 | Seeeduino V4.2 | Base Shield|  Grove - Red LED |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Red_LED/img/Red%20LED_s.jpg)|
-|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/s/Grove-Red-LED-p-1142.html)|
+|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/s/Grove-Red-LED-p-1142.html)|
 
 - Step 2. Connect Grove-Red LED to port D2 of Grove-Base Shield.
 - Step 3. Plug Grove - Base Shield into Seeeduino.
@@ -106,7 +106,7 @@ void loop() {
 **Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
 
 !!!Note
-    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](https://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
@@ -138,7 +138,7 @@ Upload the program to your Arduino/Seeeduino.
 
 #### Software
 
-- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
 - **Step 2**. Download the source file by cloning the grove.py library. 
 
 ```
@@ -313,6 +313,6 @@ LED OFF!
 
 ## Tech Support
 
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 
  <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

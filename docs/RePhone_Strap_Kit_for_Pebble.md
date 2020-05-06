@@ -301,7 +301,7 @@ This app is only for demonstration of partial attribute call, please feel free t
 
 The adapter is built with LPC11U35 and running mbed software inside. The initial firmware is located at mbed.org. Please take a look at [https://developer.mbed.org/teams/Seeed/code/xadow_smartstrap_for_pebble/](https://developer.mbed.org/teams/Seeed/code/xadow_smartstrap_for_pebble/)
 
-The eagle schematic of the adapter can be downloaded here: [http://www.seeedstudio.com/wiki/images/f/f8/Xadow_Pebble_Time_Adapter.rar](https://files.seeedstudio.com//wiki/RePhone_Strap_Kit_for_Pebble/res/Xadow_Pebble_Time_Adapter.rar)
+The eagle schematic of the adapter can be downloaded here: [https://www.seeedstudio.com/wiki/images/f/f8/Xadow_Pebble_Time_Adapter.rar](https://files.seeedstudio.com//wiki/RePhone_Strap_Kit_for_Pebble/res/Xadow_Pebble_Time_Adapter.rar)
 
 After building the firmware binary, you can follow the steps below to flash the binary into the adapter.
 
@@ -323,15 +323,15 @@ After building the firmware binary, you can follow the steps below to flash the 
 
 ##  RePhone Community
 ---
-[![](https://files.seeedstudio.com/wiki/RePhone_Strap_Kit_for_Pebble/img/RePhone_Community-2.png)](http://forum.seeedstudio.com/viewforum.php?f=71&amp;sid=b70f8138c89becf7701260bb41faf9f4)
+[![](https://files.seeedstudio.com/wiki/RePhone_Strap_Kit_for_Pebble/img/RePhone_Community-2.png)](https://forum.seeedstudio.com/viewforum.php?f=71&amp;sid=b70f8138c89becf7701260bb41faf9f4)
 
 We’ve been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the RePhone Community.
 
-Now join us in the [RePhone Community](http://forum.seeedstudio.com/viewforum.php?f=71&amp;sid=b70f8138c89becf7701260bb41faf9f4)! Together we seek answers, make interesting stuff, care about each other, and share our experiences.
+Now join us in the [RePhone Community](https://forum.seeedstudio.com/viewforum.php?f=71&amp;sid=b70f8138c89becf7701260bb41faf9f4)! Together we seek answers, make interesting stuff, care about each other, and share our experiences.
 
 ###   Frequently Asked Questions
 
-Some frequently asked questions in RePhone Community are collected and answered to the topic **["Frequently Asked Questions of RePhone (FAQ)"](http://forum.seeedstudio.com/viewtopic.php?f=71&amp;t=6664&amp;p=23753#p23753)** , the topic will be kept updating whenever a new FAQ comes out.
+Some frequently asked questions in RePhone Community are collected and answered to the topic **["Frequently Asked Questions of RePhone (FAQ)"](https://forum.seeedstudio.com/viewtopic.php?f=71&amp;t=6664&amp;p=23753#p23753)** , the topic will be kept updating whenever a new FAQ comes out.
 
 
 ## Schematic Online Viewer
@@ -347,4 +347,4 @@ The schematic diagram of Xadow Pebble Time Adapter is provided in the following 
 *   [_Xadow Pebble Time Adapter eagle files_](https://files.seeedstudio.com//wiki/RePhone_Strap_Kit_for_Pebble/res/Xadow_Pebble_Time_Adapter.rar)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

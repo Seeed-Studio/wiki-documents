@@ -56,11 +56,20 @@ extra:
     - type: facebook
       link: https://www.facebook.com/seeedstudiosz/
     - type: github-alt
-      link: https://github.com/SeeedDocument
+      link: https://github.com/Seeed-studio
   logo: 'images/favicon.ico'
   search:
     language: 'en'
     tokenizer: '[\s\-\.]+'
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+      minify_js: true
+      htmlmin_opts:
+          remove_comments: true
+
 
 
 # Extensions
@@ -177,8 +186,7 @@ nav:
 
       - BeagleBone®:
           - BeagleBone® Introduction: BeagleBone.md
-          - BeagleBone® Solutions: Beaglebone_Solutions.md
-          - BeagleBone® Blue: BeagleBone_Blue.md
+          - BeagleBone® Solutions: BeagleBone_Solutions.md
           - BeagleBone® Case: Beaglebone_Case.md
           - Seeed Studio BeagleBone® Green: BeagleBone_Green.md
           - Seeed Studio BeagleBone® Green HDMI Cape: BeagleBone_Green_HDMI_Cape.md
@@ -277,6 +285,7 @@ nav:
             - Reading Raspberry Pi's Info using Wio Terminal: Wio-Terminal-Reading-Raspberry-Pi.md
             - Accessing to GitHub using Wio Terminal: Wio-Terminal-Reading-Github.md
             - Gesture Recognition with Wio Terminal: Wio-Terminal-Gesture-Recognition.md
+            - Reading Coronavirus Live Data using Wio Terminal: Wio-Terminal-Reading-COVID19.md
 
       - ReSpeaker:
           - ReSpeaker Introduction: ReSpeaker.md
@@ -881,6 +890,7 @@ nav:
           - Arduino Common Error: Arduino_Common_Error.md
           - Arduino IDE for RePhone Kit: Arduino_IDE_for_RePhone_Kit.md
           - Arduino Software I2C user guide: Arduino_Software_I2C_user_guide.md
+          - Download Arduino and install Arduino Driver: Download-Arduino-and-install-Arduino-Driver.md
           - Dfu-util: Dfu-util.md
           - Driver for Seeeduino: Driver_for_Seeeduino.md
           - Eclipse IDE for RePhone Kit: Eclipse_IDE_for_RePhone_Kit.md
@@ -1032,10 +1042,11 @@ nav:
           - XBee Shield: XBee_Shield.md
 
   - License: license.md
+  - About: About.md
 
 # Google Analytics
-google_analytics:
-#  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
-  - UA-115878881-1
-#  - UA-84917600-1
-  - auto
+# google_analytics:
+# #  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+#   - UA-115878881-1
+# #  - UA-84917600-1
+#   - auto

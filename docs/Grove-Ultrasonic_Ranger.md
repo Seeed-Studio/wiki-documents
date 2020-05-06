@@ -42,7 +42,7 @@ This Grove - Ultrasonic ranger is a non-contact distance measurement module whic
 
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 ## Platforms Supported
 
@@ -57,7 +57,7 @@ This Grove - Ultrasonic ranger is a non-contact distance measurement module whic
 ## Getting Started
 
 !!!Note
-    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
 ### Play With Arduino
 
@@ -68,7 +68,7 @@ This Grove - Ultrasonic ranger is a non-contact distance measurement module whic
 | Seeeduino V4.2 | Base Shield|  Grove - Ultrasonic Ranger |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/Ultrasonic_small.jpg)|
-|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html)|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html)|
 
 - **Step 2.** Connect Ultrasonic Ranger to port D7 of Grove-Base Shield.
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
@@ -89,8 +89,8 @@ This Grove - Ultrasonic ranger is a non-contact distance measurement module whic
 #### Software
 
 - **Step 1.** Download the  [ UltrasonicRanger Library](https://github.com/Seeed-Studio/Grove_Ultrasonic_Ranger/archive/master.zip)  from Github.
-- **Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
-- **Step 3.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- **Step 3.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 ```
 #include "Ultrasonic.h"
@@ -147,7 +147,7 @@ The distance to obstacles in front is:
 **Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
 
 !!!Note
-    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](https://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
@@ -185,7 +185,7 @@ Upload the program to your Arduino/Seeeduino.
 
 #### Software
 
-- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
 - **Step 2**. Download the source file by cloning the grove.py library. 
 
 ```
@@ -465,5 +465,5 @@ void loop()
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -38,7 +38,7 @@ The demo will show you how to get the air pressure and temperature of the curren
 ## Download Library
 ----
 - Xadow Barometer is sharing the library with Grove - Barometer Sensor. You can download directly the [library](https://github.com/Seeed-Studio/Grove_Barometer_Sensor) from Github.
-- Now you can open the code and upload it to Xadow Main Board. If you have not installed the Xadow Driver, You can learn the operation steps by referring to the [getting started](http://wiki.seeedstudio.com/Xadow_Main_Board/) in wiki main page .
+- Now you can open the code and upload it to Xadow Main Board. If you have not installed the Xadow Driver, You can learn the operation steps by referring to the [getting started](https://wiki.seeedstudio.com/Xadow_Main_Board/) in wiki main page .
 
 ```
 /*
@@ -107,4 +107,4 @@ void loop()
 - [BST-BMP085-DS000-06](https://files.seeedstudio.com/wiki/Xadow_Barometer/res/BST-BMP085-DS000-06.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

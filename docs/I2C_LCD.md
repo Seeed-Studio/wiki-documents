@@ -82,13 +82,13 @@ Here is some funny project for your reference.
 |Display Picture|Clock With Calendar|Used As Debuger|
 |-------|-------|-------|
 |![enter image description here](https://raw.githubusercontent.com/SparkingStudio/I2C_LCD/master/images/BitmapDisplay_p1.png)|![enter image description here](https://raw.githubusercontent.com/SparkingStudio/I2C_LCD/master/images/ClockWithCalendar_p1.png)|![enter image description here](https://raw.githubusercontent.com/SparkingStudio/I2C_LCD/master/images/debugWithMe_p1.png)|
-| [Make it Now](http://www.instructables.com/id/Display-Picture-Or-Icon-On-the-fancy-I2CLCD/) | [Make it Now](http://www.instructables.com/id/Beautiful-and-practical-clock-with-calendar/) | [Make it Now](http://www.instructables.com/id/Use-I2CLCD-to-Debug-Your-Project-1/ )|
+| [Make it Now](https://www.instructables.com/id/Display-Picture-Or-Icon-On-the-fancy-I2CLCD/) | [Make it Now](https://www.instructables.com/id/Beautiful-and-practical-clock-with-calendar/) | [Make it Now](https://www.instructables.com/id/Use-I2CLCD-to-Debug-Your-Project-1/ )|
 
 
 |Automatic Humidifier|Snake Game|
 |-------|-------|
 |![enter image description here](https://raw.githubusercontent.com/SparkingStudio/I2C_LCD/master/images/AutomaticHumidifier.png)|![enter image description here](https://raw.githubusercontent.com/SparkingStudio/I2C_LCD/master/images/DIY_SnakeGame.png)|
-| [Make it Now](http://www.instructables.com/id/DIY-a-Simple-Automatic-Humidifier/) | [Make it Now](https://community.seeedstudio.com/project_detail.html?id=1621)|
+| [Make it Now](https://www.instructables.com/id/DIY-a-Simple-Automatic-Humidifier/) | [Make it Now](https://community.seeedstudio.com/project_detail.html?id=1621)|
 
 
 
@@ -136,7 +136,7 @@ Select the COM: **Click Tools -> Serial Port -> COMX(which connected with your b
 
 **PS:**
 
-1. For more details about library install please refer to http://www.arduino.cc/en/Guide/Liaries.
+1. For more details about library install please refer to https://arduino.cc/en/Guide/Liaries.
 2. If you encounter other problems during the use, please refer to the User Manual for help. If you can't solve it, please contact us.
 
 **Technical support:** Joney.s@foxmail.com
@@ -176,4 +176,4 @@ The [repository of Arduino library hosted here](https://github.com/SparkingStudi
 * [BitmapConverter(ForLinux)](https://github.com/SparkingStudio/I2C_LCD/blob/master/resources/Bitmap%20Converter.tar.gz)
 * [I2C_LCD_SourceFile](https://github.com/SparkingStudio/I2C_LCD/blob/master/resources/I2C_LCD12864_SourceFile.zip)
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

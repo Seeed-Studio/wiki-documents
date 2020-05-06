@@ -284,7 +284,7 @@ The default setting of ADC PIN is floating_input.
 
 ### Example
 
-We will take the [Grove - Sound Sensor](http://wiki.seeedstudio.com/Grove-Sound_Sensor/) as an example to introduce you how to use this board.
+We will take the [Grove - Sound Sensor](https://wiki.seeedstudio.com/Grove-Sound_Sensor/) as an example to introduce you how to use this board.
 
 Hardware connection
 

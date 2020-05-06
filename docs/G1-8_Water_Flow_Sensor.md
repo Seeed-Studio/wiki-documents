@@ -1,13 +1,13 @@
 ---
 name: G1/8" Water Flow Sensor
 category: MakerPro
-bzurl: http://www.seeedstudio.com/depot/G18-Water-Flow-Sensor-p-1346.html?cPath=25_32
+bzurl: https://www.seeedstudio.com/depot/G18-Water-Flow-Sensor-p-1346.html?cPath=25_32
 oldwikiname:  G1/8" Water Flow Sensor
 prodimagename:  G18_Water_Flow_Sensor.jpg
 surveyurl: https://www.research.net/r/G1-8_Water_Flow_Sensor
 sku:    314150001
 ---
-[![](https://files.seeedstudio.com/wiki/G1-8_Water_Flow_Sensor/img/G18_Water_Flow_Sensor.jpg)](http://www.seeedstudio.com/depot/G18-Water-Flow-Sensor-p-1346.html?cPath=25_32)
+[![](https://files.seeedstudio.com/wiki/G1-8_Water_Flow_Sensor/img/G18_Water_Flow_Sensor.jpg)](https://www.seeedstudio.com/depot/G18-Water-Flow-Sensor-p-1346.html?cPath=25_32)
 
 Water flow sensor consists of a plastic valve body, a water rotor, and a hall-effect sensor. When water flows through the rotor, rotor rolls. Its speed changes with different rate of flow. The hall-effect sensor outputs the corresponding pulse signal. This one is suitable to detect flow in water dispenser or coffee machine.
 
@@ -111,7 +111,7 @@ Once you have it wired up you will need to upload the following code to your See
 ```
 // reading liquid flow rate using Seeeduino and Water Flow Sensor from Seeedstudio.com
 // Code adapted by Charles Gantt from PC Fan RPM code written by Crenn @thebestcasescenario.com
-// http:/themakersworkbench.com http://thebestcasescenario.com http://seeedstudio.com
+// http:/themakersworkbench.com http://thebestcasescenario.com https://www.seeedstudio.com
 
 volatile int NbTopsFan; //measuring the rising edges of the signal
 int Calc;
@@ -148,7 +148,7 @@ void loop ()
 }
 ```
 
-You can refer our forum for more details about [Reading Water Flow rate with Water Flow Sensor](http://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632).
+You can refer our forum for more details about [Reading Water Flow rate with Water Flow Sensor](https://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632).
 
 ##  Wiring Diagram
 
@@ -186,11 +186,11 @@ Pulse frequency (Hz) in Horizontal Test= 7.5Q, Q is flow rate in L/min. (Results
 
 *   [Water flow sensor datasheet.pdf](https://files.seeedstudio.com/wiki/G1-8_Water_Flow_Sensor/res/Water_flow_sensor_datasheet.pdf)
 
-*   [Reading Water Flow rate with Water Flow Sensor](http://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632)
+*   [Reading Water Flow rate with Water Flow Sensor](https://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632)
 
 *   [Water Flow rate display on LCD](http://www.practicalarduino.com/projects/water-flow-gauge)
 
 *   [datasheet for the material](http://garden.seeedstudio.com/images/4/4e/YEE70G30HSLNC..pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

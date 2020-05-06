@@ -4,7 +4,7 @@ category: Communication
 bzurl: https://seeedstudio.com/Grove-GPS-p-959.html
 oldwikiname: Grove_-_GPS
 prodimagename: Grove-GPS.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/113020003 1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/113020003 1.jpg
 surveyurl: https://www.research.net/r/Grove-GPS
 sku: 113020003
 tags: grove_uart, io_3v3, io_5v, plat_duino, plat_bbg, plat_pi, plat_linkit,
@@ -14,7 +14,7 @@ tags: grove_uart, io_3v3, io_5v, plat_duino, plat_bbg, plat_pi, plat_linkit,
 
 This Grove - GPS module is a cost-efficient and field-programmable gadget armed with a SIM28 (u-blox 6 is the old version) and serial communication configuration. It features 22 tracking / 66 acquisition channels GPS receiver. The sensitivity of tracking and acquisition both reach up to -160dBm, making it a great choice for personal navigation projects and location services, as well as an outstanding one among products of the same price class.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/grove-gps-p-959.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/depot/grove-gps-p-959.html)
 
 ## Version
 
@@ -30,7 +30,7 @@ This Grove - GPS module is a cost-efficient and field-programmable gadget armed 
 -   Grove compatible interface
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 
 ## Specifications
@@ -55,7 +55,7 @@ This Grove - GPS module is a cost-efficient and field-programmable gadget armed 
 ## Getting Started
 
 !!!Note
-    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
 ### Play With Arduino
 
@@ -68,7 +68,7 @@ This sample simply reads from the GPS by using software serial and sends it back
 | Seeeduino V4.2 | Base Shield|  Grove - GPS |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-GPS/img/45d_small.jpg)|
-|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-GPS-p-959.html)|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-GPS-p-959.html)|
 
 - **Step 2.** Connect Grove - GPS to port **D2** of Grove-Base Shield.
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
@@ -92,7 +92,7 @@ This sample simply reads from the GPS by using software serial and sends it back
     Please note that the u-center software is for windows only.
 
 - **Step 1.** Install [u-center](https://www.u-blox.com/en/product/u-center-windows) software.
-- **Step 2.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 2.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 ```c
 #include <SoftwareSerial.h>
@@ -166,7 +166,7 @@ void clearBufferArray()                     // function to clear buffer array
 | Raspberry pi | GrovePi_Plus | Grove - GPS |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-GPS/img/45d_small.jpg)|
-|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](http://www.seeedstudio.com/depot/grove-gps-p-959.html)|
+|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/depot/grove-gps-p-959.html)|
 
 
 - **Step 2.** Plug the GrovePi_Plus into Raspberry.
@@ -226,9 +226,9 @@ def safefloat(in_str):
 	return out_str
 
 class GPS:
-	#The GPS module used is a Grove GPS module http://www.seeedstudio.com/depot/Grove-GPS-p-959.html
+	#The GPS module used is a Grove GPS module https://www.seeedstudio.com/depot/Grove-GPS-p-959.html
 	inp=[]
-	# Refer to SIM28 NMEA spec file http://www.seeedstudio.com/wiki/images/a/a0/SIM28_DATA_File.zip
+	# Refer to SIM28 NMEA spec file https://www.seeedstudio.com/wiki/images/a/a0/SIM28_DATA_File.zip
 	GGA=[]
 
 
@@ -379,7 +379,7 @@ GPS is better used outdoors. It is recommended to put your raspberry pi outside 
 - **[Document]**  [SIM28\_DATA\_File](https://files.seeedstudio.com/wiki/Grove-GPS/res/SIM28_DATA_File.zip)
 - **[Document]** [SIMCom\_GPS\_DEMO\_V1.07](https://files.seeedstudio.com/wiki/Grove-GPS/res/SIMCom_GPS_DEMO_V1.07.zip)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_GPS -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_GPS -->
 
 ## Projects
 
@@ -388,4 +388,4 @@ GPS is better used outdoors. It is recommended to put your raspberry pi outside 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/OHAlgerie/project-of-gps-gprs-tracker-36c425/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

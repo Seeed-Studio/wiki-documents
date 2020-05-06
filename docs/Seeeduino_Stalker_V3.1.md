@@ -1,7 +1,7 @@
 ---
 name: Seeeduino Stalker V3.1
 category: Arduino
-bzurl: http://www.seeedstudio.com/Seeeduino-Stalker-V3.1-p-2686.html
+bzurl: https://www.seeedstudio.com/Seeeduino-Stalker-V3.1-p-2686.html
 prodimagename: cover.JPG
 surveyurl: https://www.research.net/r/Seeeduino_Stalker
 sku: 102010070
@@ -25,7 +25,7 @@ Seeeduino Stalker V3.1 is not just a simple update of V3.0.The main surprise you
 |Seeeduino Stalker V2.2|Dec27, 2011|![enter image description here](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/EOL.png)|
 |Seeeduino Stalker V2.3|Jan10, 2013|![enter image description here](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/EOL.png)|
 |Seeeduino Stalker V3.0|Jun6, 2014|![enter image description here](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/EOL.png)|
-|Seeeduino Stalker V3.1|Jul10, 2016|[![enter image description here](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png)](http://www.seeedstudio.com/Seeeduino-Stalker-V3.1-p-2686.html)|
+|Seeeduino Stalker V3.1|Jul10, 2016|[![enter image description here](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Seeeduino-Stalker-V3.1-p-2686.html)|
 
 
 ###What's new in Seeeduino Stalker V3.1
@@ -75,9 +75,9 @@ We also added 2 toggle switch on RTC circuitry corresponding 2 INT pin of MCU, s
 ----
 
 - Wireless Sensor Network (using **XBee** bought separately)
-- GPS Logging (using [GPSBee](http://www.seeedstudio.com/wiki/GPS_Bee_kit) bought separately)
-- Data Acquisition System capable of communicating with an App running on iPhone/Android Phone (using [BluetoothBee](http://www.seeedstudio.com/wiki/Bluetooth_Bee) bought separately).
-- RF Remote Control (using [RFBee](http://wiki.seeedstudio.com/RFbee_V1.1-Wireless_Arduino_compatible_node/) bought separately).
+- GPS Logging (using [GPSBee](https://www.seeedstudio.com/wiki/GPS_Bee_kit) bought separately)
+- Data Acquisition System capable of communicating with an App running on iPhone/Android Phone (using [BluetoothBee](https://www.seeedstudio.com/wiki/Bluetooth_Bee) bought separately).
+- RF Remote Control (using [RFBee](https://wiki.seeedstudio.com/RFbee_V1.1-Wireless_Arduino_compatible_node/) bought separately).
 - As a simple standalone Arduino compatible physical computing platform.
 
 ## Hardware Overview
@@ -120,7 +120,7 @@ If this is your first time to program with a Seeeduino Stalker. You can follow t
 |Seeeduino Stalker V3.1|UartSBee V4|Mini USB Cable|6pin Cable|
 |----------------------|-----------|--------------|----------|
 |![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/gs_stalker.JPG)|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/gs_uartsbee.jpg)|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/gs_miniusb.jpg)|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/gs_6pincable.jpg)|
-|[GET ONE NOW](http://www.seeedstudio.com/Seeeduino-Stalker-V3.1-p-2686.html)|[GET ONE NOW](http://www.seeedstudio.com/UartSBee-V4-p-688.html)|[GET ONE NOW](http://www.seeedstudio.com/Mini-USB-cable-100cm-p-252.html)|[GET ONE NOW](http://www.seeedstudio.com/6-pin-dual-female-jumper-wire-300mm-(5-PCs-pack)-p-128.html)|
+|[GET ONE NOW](https://www.seeedstudio.com/Seeeduino-Stalker-V3.1-p-2686.html)|[GET ONE NOW](https://www.seeedstudio.com/UartSBee-V4-p-688.html)|[GET ONE NOW](https://www.seeedstudio.com/Mini-USB-cable-100cm-p-252.html)|[GET ONE NOW](https://www.seeedstudio.com/6-pin-dual-female-jumper-wire-300mm-(5-PCs-pack)-p-128.html)|
 
 !!!Note
     UartSBee V4, Mini USB Cable and 6pin cable are not included.
@@ -142,7 +142,7 @@ Firstly connect Staler to UartSBee via the 6pin jumper wire, then connect UartSB
 
 ###STEP2: UartSBee and the Driver
 
-UartSBee is a USB to Serial UART interface which is based on FT232RL from FDTI. Click to download the [driver](http://www.ftdichip.com/FTDrivers.htm) for the board.
+UartSBee is a USB to Serial UART interface which is based on FT232RL from FDTI. Click to download the [driver](https://www.ftdichip.com/FTDrivers.htm) for the board.
 
 In our case, it will perform three functions:
 
@@ -158,7 +158,7 @@ Seeeduino Stalker is an Arduino compatible board that with rich function. If you
 
 ###STEP4: Add Seeeduino Stalker to your Arduino IDE
 
-There is no *Seeeduino Stalker* option in the boards of your Arduino IDE, click on [How to Add Seeed boards to Arduino IDE](http://wiki.seeed.cc/Seeed_Arduino_Boards/) for the instruction.
+There is no *Seeeduino Stalker* option in the boards of your Arduino IDE, click on [How to Add Seeed boards to Arduino IDE](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/) for the instruction.
 
 
 ###STEP5: Blink
@@ -252,12 +252,12 @@ Bees are a series of modules that consist of rich function. Such as Wi-Fi, BLE, 
 |Bluetooth Bee |XBee Wi-Fi PCB Antenna| RFbee V1.1|
 |---|---|---|
 |![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/bee1.jpg)|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/bee2.jpg)|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/bee3.jpg)|
-|[GET ONE NOW](http://www.seeedstudio.com/Bluetooth-Bee-Standalone-p-1157.html)    |<a href="https://www.seeedstudio.com/XBee-Wi-Fi-PCB-Antenna-S6-p-1114.html">GET ONE NOW</a> |[GET ONE NOW](http://www.seeedstudio.com/RFbee-V1.1-Wireless-arduino-compatible-node-p-614.html)|
+|[GET ONE NOW](https://www.seeedstudio.com/Bluetooth-Bee-Standalone-p-1157.html)    |<a href="https://www.seeedstudio.com/XBee-Wi-Fi-PCB-Antenna-S6-p-1114.html">GET ONE NOW</a> |[GET ONE NOW](https://www.seeedstudio.com/RFbee-V1.1-Wireless-arduino-compatible-node-p-614.html)|
 
 |Bluetooth Bee - Standalone|GPS Bee kit|Mesh Bee|
 |:---:|:---:|:---:|
 |![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/bee4.jpg)|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/bee5.jpg)|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/bee6.jpg)|
-|[GET ONE NOW](http://www.seeedstudio.com/Bluetooth-Bee-v2.0-p-2373.html)    |<a href="https://www.seeedstudio.com/GPS-Bee-kit-(with-Mini-Embedded-Antenna)-p-560.html">GET ONE NOW</a> |<a href="http://www.seeedstudio.com/Mesh-Bee-Open-Source-Zigbee-Pro-Module-with-MCU-(JN5168)-p-1751.html">GET ONE NOW</a>|
+|[GET ONE NOW](https://www.seeedstudio.com/Bluetooth-Bee-v2.0-p-2373.html)    |<a href="https://www.seeedstudio.com/GPS-Bee-kit-(with-Mini-Embedded-Antenna)-p-560.html">GET ONE NOW</a> |<a href="https://www.seeedstudio.com/Mesh-Bee-Open-Source-Zigbee-Pro-Module-with-MCU-(JN5168)-p-1751.html">GET ONE NOW</a>|
 
 !!!Note
     - You need to select the Serial pin for a Bee, D0/D1 and D5/D6 is available. Please refer to Hardware Overview get more info.
@@ -312,4 +312,4 @@ Here are some questions that we usually received from new users. If you have any
 > Make sure your solar panel is able to supple 4.5~6V voltage.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

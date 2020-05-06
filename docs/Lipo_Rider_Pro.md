@@ -4,7 +4,7 @@ category: Essentials
 bzurl: https://seeedstudio.com/LiPo-Rider-Pro-p-992.html
 oldwikiname: Lipo_Rider_Pro
 prodimagename: LiPo_Rider_Pro.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/lipopro1s.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/lipopro1s.jpg
 surveyurl: https://www.research.net/r/Lipo_Rider_Pro
 sku: 106990008
 ---
@@ -54,7 +54,7 @@ The LiPo Rider Pro can be purchased as a separate board or as a kit (LiPo Rider 
 ## Dimensions
 ----------
 
-The dimensions of LiPo Rider Pro is like the [6A Lithium Polymer Battery](http://www.seeedstudio.com/depot/lithium-ion-polymer-battery-pack-6a-p-602.html?cPath=178_183).
+The dimensions of LiPo Rider Pro is like the [6A Lithium Polymer Battery](https://www.seeedstudio.com/depot/lithium-ion-polymer-battery-pack-6a-p-602.html?cPath=178_183).
 
 ![](https://files.seeedstudio.com/wiki/Lipo_Rider_Pro/img/Liporiderprod.jpg)
 
@@ -237,7 +237,7 @@ Larger/multiple batteries and/or solar panels can be used, but only with end-use
 -   [CN3065 Datasheet in PDF](https://files.seeedstudio.com/wiki/Lipo_Rider_Pro/res/DSE-CN3065.pdf)
 -   [Schematic and Layout in Eagle format](https://files.seeedstudio.com/wiki/Lipo_Rider_Pro/res/Lipo_Rider_Pro_v0.9b.rar)
 -   [Schematic in pdf format](https://files.seeedstudio.com/wiki/Lipo_Rider_Pro/res/LiPo_Rider_Pro_v0.9b.pdf)
--   [Get Lipo rider pro to charge Ipod or Iphone](http://forum.seeedstudio.com/viewtopic.php?f=4&t=3575)
+-   [Get Lipo rider pro to charge Ipod or Iphone](https://forum.seeedstudio.com/viewtopic.php?f=4&t=3575)
 -   [Lithium Ion polymer Battery pack - 6A](https://www.seeedstudio.com/Lithium-Ion-polymer-Battery-pack-6A-p-602.html)
 
 ## Project
@@ -252,4 +252,4 @@ The purpose of the project is to detect the passing of cars and people at the en
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/juan-salvador-aleixandre-talens/step-detection-system-by-a-way-with-arduino-bc6f3a/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

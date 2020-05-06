@@ -37,15 +37,15 @@ More over, we will make more RF modules ourselves with different frequency and c
 
 ##   Resources
 ---
-*   [Demo Scheme](http://www.seeedstudio.com/depot/datasheet/315MRFlink.pdf)
+*   [Demo Scheme](https://www.seeedstudio.com/depot/datasheet/315MRFlink.pdf)
 
 *   [File:VirtualWire.zip](https://files.seeedstudio.com/wiki/315Mhz_RF_link_kit/res/VirtualWire.zip "File:VirtualWire.zip")
 
-*   [Documentation For 1.3](http://www.seeedstudio.com/depot/images/product/VirtualWire.pdf)
+*   [Documentation For 1.3](https://www.seeedstudio.com/depot/images/product/VirtualWire.pdf)
 
 *   [Example from sparkfun](http://www.sparkfun.com/datasheets/RF/KLP_Walkthrough.pdf)
 
 *   [Example running rf modules](http://winavr.scienceprog.com/example-avr-projects/running-tx433-and-rx433-rf-modules-with-avr-microcontrollers.html)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

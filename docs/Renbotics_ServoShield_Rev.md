@@ -113,9 +113,9 @@ void loop()
 
 ##   Resources
 
-*   [Manual Rev 1.5](http://www.seeedstudio.com/depot/datasheet/RenboticsServoShield1.5.pdf)
+*   [Manual Rev 1.5](https://www.seeedstudio.com/depot/datasheet/RenboticsServoShield1.5.pdf)
 
-*   [Arduino Library Rev 1.3 (Updated 07-09-2009)](http://www.seeedstudio.com/depot/images/product/ServoShield.zip)
+*   [Arduino Library Rev 1.3 (Updated 07-09-2009)](https://www.seeedstudio.com/depot/images/product/ServoShield.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

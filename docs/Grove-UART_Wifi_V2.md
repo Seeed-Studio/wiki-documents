@@ -58,7 +58,7 @@ Grove - UART WiFi is a serial transceiver module featuring the ubiquitous ESP828
 * Reset switch
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 
 ## Specifications
@@ -124,7 +124,7 @@ After this section, you can make Grove - UART WiFi run with only few steps.
 
 ### Play With Arduino
 !!!Note
-    If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+    If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
 
 #### Materials required
@@ -161,7 +161,7 @@ After this section, you can make Grove - UART WiFi run with only few steps.
 
 - **Step 1.** Download the [128X64 OLED library](https://github.com/Seeed-Studio/OLED_Display_128X64/archive/master.zip) from Github.
 
-- **Step 2.** Refer to [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 - **Step 3.** Open the Arduino IDE and copy the following code into a new sketch. 
 
@@ -303,7 +303,7 @@ void display_ap()
 }
 ```
 
-- **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 
 Then you will see the OLED show the wifi AP around you.
@@ -382,7 +382,7 @@ Our module board got a firmware burned into it for factory settings, you can bur
 
 #### Hardware
 
-The **Materials required** and **Hardware connection** are the same as [Firmware update](http://wiki.seeedstudio.com/Grove-UART_Wifi/#firmware-update)
+The **Materials required** and **Hardware connection** are the same as [Firmware update](https://wiki.seeedstudio.com/Grove-UART_Wifi/#firmware-update)
 
 
 Let's go to software part  
@@ -503,4 +503,4 @@ You can use any serial Tools you like, we use Arduino here. And please make sure
 * **[MoreReading]** [https://nurdspace.nl/ESP8266](https://nurdspace.nl/ESP8266)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

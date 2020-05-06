@@ -39,10 +39,10 @@ Grove-IMU 10DOF v2.0 is a upgrade version of Grove-IMU-10DOF， which replace BM
 - I2C Address: default connected a and b address from I2C select pad is 0x68, if connect b and c address is 0x69
 
 !!!Note
-    If you want to use multiplue I2C devices, please refer to [Software I2C](http://wiki.seeedstudio.com/Arduino_Software_I2C_user_guide/).
+    If you want to use multiplue I2C devices, please refer to [Software I2C](https://wiki.seeedstudio.com/Arduino_Software_I2C_user_guide/).
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 ## Platforms Supported
 
@@ -81,7 +81,7 @@ The diagram below shows the orientation of the axes of sensitivity and the polar
 | Seeeduino V4.2 | Base Shield| Base Shield |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF_v2.0/img/Grove-imu-10dof-v2.0_s.jpg)|
-|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-IMU-10DOF-v2.0-p-2691.html)|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-IMU-10DOF-v2.0-p-2691.html)|
 
 - **Step 2.** Connect Grove - IMU 10DOF v2.0 to **I2C** port of base shield.
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
@@ -95,7 +95,7 @@ The diagram below shows the orientation of the axes of sensitivity and the polar
 #### Software
 
 - **Step 1.** Download the [Grove-IMU_10DOF_v2 library.](https://github.com/Seeed-Studio/Grove_IMU_10DOF_v2.0/archive/master.zip)
-- **Step 2.** Please follow [how to install an arduino library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install library.
+- **Step 2.** Please follow [how to install an arduino library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install library.
 - **Step 3.** Restart the Arduino IDE. Open “ IMM_10DOF_Test example via the path: **File -> Example ->GROVE_IMU_10DOF_V2-master-> IMU_10DOF_V2_Test**.
 
 ![](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF_v2.0/img/library%20example.jpg)
@@ -118,7 +118,7 @@ We can see:
 -   **[Dtasheet]** [MPU-9250 datasheet](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF/res/MPU-9250A_Product_Specification.pdf)
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_IMU_10DOF -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_IMU_10DOF -->
 
 ## Projects
 
@@ -128,5 +128,5 @@ We can see:
 
 ## Tech Support
 
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

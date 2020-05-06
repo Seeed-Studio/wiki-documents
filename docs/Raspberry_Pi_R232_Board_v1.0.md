@@ -4,7 +4,7 @@ category: Raspberry Pi
 bzurl: https://seeedstudio.com/Raspberry-Pi-RS232-Board-v1.0-p-2408.html
 oldwikiname: Raspberry_Pi_R232_Board_v1.0
 prodimagename: Raspberry_Pi-R232-Board-v1.0.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/seeed/img/2016-08/SpUze3JXjsgK1XzFCoMPaSfr.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/seeed/img/2016-08/SpUze3JXjsgK1XzFCoMPaSfr.jpg
 surveyurl: https://www.research.net/r/Raspberry_Pi_R232_Board_v1_0
 sku: 103030028
 ---
@@ -13,7 +13,7 @@ sku: 103030028
 
 Raspberry Pi RS232 Board v1.0 is a standard communication port for industry equipment.This module is base on MAX3232,which is a dual driver/receiver that includes a capacitive voltage generator to supply TIA/EIA-232-F voltage levels from a single 5-V supply. The shield integrates DB9 connectors (female) that provide connection to various devices with RS232 interface. Also the RS232 headers will facilitate your connections and commissioning. It provides the welding areas to make full use of extra space on it, which is highly convenient for prototyping.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Raspberry-Pi-RS232-Board-v1.0-p-2408.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Raspberry-Pi-RS232-Board-v1.0-p-2408.html)
 
 Features
 --------
@@ -151,7 +151,7 @@ Resources
 - [MAX3232](https://files.seeedstudio.com/wiki/Raspberry_Pi_R232_Board_v1.0/res/MAX3232.pdf)
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Raspberry_Pi_R232_Board_v1.0 -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Raspberry_Pi_R232_Board_v1.0 -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

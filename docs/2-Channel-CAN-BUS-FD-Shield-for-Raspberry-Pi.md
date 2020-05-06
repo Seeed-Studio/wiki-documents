@@ -247,7 +247,7 @@ candump can0
 
 In this demo, we only use one of the two channels.
 
-For Arduino CAN BUS Shield, we provide the Arduino Code, if you don't know how to use Arduino, please check [here](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/).
+For Arduino CAN BUS Shield, we provide the Arduino Code, if you don't know how to use Arduino, please check [here](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/).
 
 For 2 channel pi hat, there are two ways to send & receive, you can use both **can-util**/**cangen** and **python code**. 
 
@@ -553,6 +553,6 @@ Thank you!
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

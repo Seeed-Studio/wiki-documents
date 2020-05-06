@@ -54,7 +54,7 @@ The Grove interface on the breadboard and on the Grove Passive Buzzer are connec
 
 ### Software
 
-- **Step1** Copy the code below to the Arduino IDE and upload. If you do not know how to update the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step1** Copy the code below to the Arduino IDE and upload. If you do not know how to update the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 #### Code example1 - simply get the beep sound
 

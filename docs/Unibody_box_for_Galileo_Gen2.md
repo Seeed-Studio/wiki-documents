@@ -77,15 +77,15 @@ It is quite necessary to read this guide before assembling you Galileo board int
 
 ##  Related Projects
 ---
-- [Cubieboard A20 Acrylic Enclosure](http://www.seeedstudio.com/depot/Cubieboard-A20-Acrylic-Enclosure-p-2396.html)
+- [Cubieboard A20 Acrylic Enclosure](https://www.seeedstudio.com/depot/Cubieboard-A20-Acrylic-Enclosure-p-2396.html)
 
-- [Arduino UNO R3 Acrylic Enclosure - Clear](http://www.seeedstudio.com/depot/Arduino-UNO-R3-Acrylic-Enclosure-Clear-p-2362.html)
+- [Arduino UNO R3 Acrylic Enclosure - Clear](https://www.seeedstudio.com/depot/Arduino-UNO-R3-Acrylic-Enclosure-Clear-p-2362.html)
 
-- [Acrylic Case for BeagleBone Green](http://www.seeedstudio.com/depot/Acrylic-Case-for-BeagleBone-Green-p-2515.html)
+- [Acrylic Case for BeagleBone Green](https://www.seeedstudio.com/depot/Acrylic-Case-for-BeagleBone-Green-p-2515.html)
 
 ##  Resources
 ---
 - [CNC files](https://files.seeedstudio.com/wiki/Unibody_box_for_Galileo_Gen2/res/CNC_files.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

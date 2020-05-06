@@ -2,7 +2,7 @@
 name: ODYSSEY - X86J4105
 category: ODYSSEY
 bzurl: https://www.seeedstudio.com/ODYSSEY-X86J4105800-p-4445.html
-wikiurl: http://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-FreeNAS/
+wikiurl: https://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-FreeNAS/
 sku: 102110399
 ---
 
@@ -144,7 +144,11 @@ We have also designed an Acrylic Case for building your own NAS into a enclosure
 
 ## Resources
 
-Other usefull applications:
+- Explaining Computers Video on FreeNAS on Odyssey-X86:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qyz91Q_JrBc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Other useful applications:
 
 - [Getting Started With FreeNAS 11 Install, Configure, Setup Users, Setup Shares & How Snapshots Work](https://www.youtube.com/watch?v=sMZ-s8wHkHw&list=PLMeX7dgR89SvzGW0eumZuP_LAeBGEDnBb&index=11)
 
@@ -154,4 +158,4 @@ Other usefull applications:
 - [Backing Up FreeNAS and TrueNAS to Backblaze B2](https://www.backblaze.com/blog/how-to-setup-freenas-cloud-storage/)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

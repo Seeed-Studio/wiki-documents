@@ -111,9 +111,9 @@ To see what the current boot-args are, if any, type: `sudo nvram boot-args`
 
 Now we are making a demo for Grove - Joint v2.0 which require following modules.
 
-*   [Grove Rotary Angle Sensor](http://www.seeedstudio.com/depot/Grove-Rotary-Angle-Sensor-p-770.html)
+*   [Grove Rotary Angle Sensor](https://www.seeedstudio.com/depot/Grove-Rotary-Angle-Sensor-p-770.html)
 
-*   [Digital RGB LED Flexi-Strip](http://www.seeedstudio.com/depot/Digital-RGB-LED-FlexiStrip-60-LED-1-Meter-p-1666.html)
+*   [Digital RGB LED Flexi-Strip](https://www.seeedstudio.com/depot/Digital-RGB-LED-FlexiStrip-60-LED-1-Meter-p-1666.html)
 
 Grove - Joint is compatible with Arduino.
 If this is your first time using Arduino, Please put hand on [here](/Getting_Started_with_Seeeduino) to start your Arduino journey.
@@ -149,7 +149,7 @@ After configurations, please restart Arduino, click File&gt;Sketchbook and choos
 
 Click Tools&gt;Board to choose Arduino Fio and select respective serial port.
 
-Now click Upload(CTRL+U) to burn testing code. Please refer to [here](/Arduino_Common_Error "Arduino Common Error") for any error prompt and you can also add comment on [forum](http://www.forum.seeedstudio.com/)
+Now click Upload(CTRL+U) to burn testing code. Please refer to [here](/Arduino_Common_Error "Arduino Common Error") for any error prompt and you can also add comment on [forum](http://forum.seeedstudio.com/)
 
 ###  Review Results
 
@@ -206,4 +206,4 @@ void loop()
 *   [Schematic in PDF](https://files.seeedstudio.com/wiki/Grove-Joint_v2.0/res/Grove-Joint_v2.0_SCH.rar)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

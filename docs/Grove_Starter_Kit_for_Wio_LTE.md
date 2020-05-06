@@ -41,13 +41,13 @@ This section lists all parts in this kit and links to get more information for e
 
 | Item                                       | Number | Learn |
 |--------------------------------------------|--------|-------|
-| Grove - 3-Axis Digital Accelerometer(±16g) | 1      | [Wiki](http://wiki.seeedstudio.com/Grove-3-Axis_Digital_Accelerometer-16g/)  |
-| Grove - Relay                              | 1      | [Wiki](http://wiki.seeedstudio.com/Grove-Relay/)   |
-| Grove - Light Sensor v1.2                  | 1      | [Wiki](http://wiki.seeedstudio.com/Grove-Light_Sensor/)   |
-| Grove - Temp&humidity                      | 1      | [Wiki](http://wiki.seeedstudio.com/Grove-TemperatureAndHumidity_Sensor/)   |
-| Grove - Buzzer                             | 1      | [Wiki](http://wiki.seeedstudio.com/Grove-Buzzer)   |
-| Grove - Button(P)                          | 1      | [Wiki](http://wiki.seeedstudio.com/Grove-Button)   |
-| Grove - Servo                              | 1      | [Wiki](http://wiki.seeedstudio.com/Grove-Servo/)   |
+| Grove - 3-Axis Digital Accelerometer(±16g) | 1      | [Wiki](https://wiki.seeedstudio.com/Grove-3-Axis_Digital_Accelerometer-16g/)  |
+| Grove - Relay                              | 1      | [Wiki](https://wiki.seeedstudio.com/Grove-Relay/)   |
+| Grove - Light Sensor v1.2                  | 1      | [Wiki](https://wiki.seeedstudio.com/Grove-Light_Sensor/)   |
+| Grove - Temp&humidity                      | 1      | [Wiki](https://wiki.seeedstudio.com/Grove-TemperatureAndHumidity_Sensor/)   |
+| Grove - Buzzer                             | 1      | [Wiki](https://wiki.seeedstudio.com/Grove-Buzzer)   |
+| Grove - Button(P)                          | 1      | [Wiki](https://wiki.seeedstudio.com/Grove-Button)   |
+| Grove - Servo                              | 1      | [Wiki](https://wiki.seeedstudio.com/Grove-Servo/)   |
 
 
 
@@ -61,8 +61,8 @@ Arduino quickly and effectively. You can visit [https://www.arduino.cc/en/Tutori
 ###  Arduino Sketches (basic example for each module)
 
 After you have gotten an LED blinking (for Windows user, you can find it at [https://www.arduino.cc/en/Guide/Windows](https://www.arduino.cc/en/Guide/Windows), you can find other versions for Mac OS and Linux variants at
-[https://www.arduino.cc/en/Guide/HomePage](https://www.arduino.cc/en/Guide/HomePage) ), you still need to get familiar with Seeedstudio Grove system at [http://www.seeedstudio.com/wiki/Grove_System](/Grove_System). And now, you can do some more practical quizzes which are specialized designed for this kit. Download the sketches of quizzes at [https://github.com/Seeed-Studio/Sketchbook_Starter_Kit_for_Arduino](https://github.com/Seeed-Studio/Sketchbook_Starter_Kit_for_Arduino).
+[https://www.arduino.cc/en/Guide/HomePage](https://www.arduino.cc/en/Guide/HomePage) ), you still need to get familiar with Seeedstudio Grove system at [https://www.seeedstudio.com/wiki/Grove_System](/Grove_System). And now, you can do some more practical quizzes which are specialized designed for this kit. Download the sketches of quizzes at [https://github.com/Seeed-Studio/Sketchbook_Starter_Kit_for_Arduino](https://github.com/Seeed-Studio/Sketchbook_Starter_Kit_for_Arduino).
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

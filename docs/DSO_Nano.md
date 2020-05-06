@@ -20,7 +20,7 @@ Click the image to get to different version of DSO Nano.
 
 ##   Hardware details
 ---
-So far there have been three major versions of the DSO Nano, the original one in 2009, and the DSO Nano V2 in 2010. (A significant hardware upgrade including dual channels was introduced with the [DSO Quad](http://wiki.seeedstudio.com/DSO_Quad).) Apart from the improved charging unit in V2, and a redesigned PCB, the specifications are pretty much the same. They can use the same firmware.
+So far there have been three major versions of the DSO Nano, the original one in 2009, and the DSO Nano V2 in 2010. (A significant hardware upgrade including dual channels was introduced with the [DSO Quad](https://wiki.seeedstudio.com/DSO_Quad).) Apart from the improved charging unit in V2, and a redesigned PCB, the specifications are pretty much the same. They can use the same firmware.
 
 A photo from inside the V2 was posted to the [forum](https://community.seeedstudio.com/discover.html?t=DSO).
 
@@ -80,12 +80,12 @@ A photo from inside the V2 was posted to the [forum](https://community.seeedstud
 ---
 The DSO Nano you hold in your hand took some time to reach you; it is more than likely that a newer version of the firmware is already available.
 
-The newest firmware from BenF is available from the [Tech Support](http://forum.seeedstudio.com/viewtopic.php?f=12&amp;t=1793)(This link is broken, if you are looking for the firmware please refer to the wiki of [DSO Nano V3](http://wiki.seeed.cc/DSO_Nano_v3/)) forum. Inside the ZIP file you will also find the operating manual for this firmware release.
+The newest firmware from BenF is available from the [Tech Support](https://forum.seeedstudio.com/viewtopic.php?f=12&amp;t=1793)(This link is broken, if you are looking for the firmware please refer to the wiki of [DSO Nano V3](https://wiki.seeedstudio.com/DSO_Nano_v3/)) forum. Inside the ZIP file you will also find the operating manual for this firmware release.
 
 To upgrade the firmware to the latest version, you have a few options:
 
 *   If you work with Windows, follow the instructions contained in the official [v2 User Manual](https://files.seeedstudio.com/wiki/DSO_Nano/res/DSO%20Nano%20v2%20Manual.pdf) (pages 8-10). The required utility DfuSeDemo.exe is also available [here](http://dsonano.googlecode.com/files/um0412.zip).
-*   On Linux and Mac OS X you can use [Dfu-util](http://wiki.seeedstudio.com/Dfu-util) (0.5 or newer).
+*   On Linux and Mac OS X you can use [Dfu-util](https://wiki.seeedstudio.com/Dfu-util) (0.5 or newer).
 
 ##   Capabilities
 ---
@@ -218,4 +218,4 @@ To upgrade the firmware to the latest version, you have a few options:
 *   [Sewa Mobil Jakarta](http://www.awanirentcar.com), [Aksesoris mobil](http://kiosauto.com)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

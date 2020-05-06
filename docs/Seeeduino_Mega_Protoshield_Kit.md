@@ -7,7 +7,7 @@ prodimagename:  Seeeduino_ethernet-2.jpg
 surveyurl: https://www.research.net/r/Seeeduino_Mega_Protoshield_Kit
 sku:   110060001
 ---
-![http://www.seeedstudio.com/depot/images/large/product/protomega_LRG.jpg](http://www.seeedstudio.com/depot/images/large/product/protomega_LRG.jpg)
+![https://www.seeedstudio.com/depot/images/large/product/protomega_LRG.jpg](https://www.seeedstudio.com/depot/images/large/product/protomega_LRG.jpg)
 
 This is the 1st Protoshield for [Seeeduino Mega](/Seeeduino_Mega "Seeeduino Mega") which brought all pins from [Seeeduino](/Seeeduino_V2.2 "Seeeduino V2.2"), even [Arduino](/Arduino "Arduino") to the top! With this protoshield, users will find a large prototyping area, you can even use Xbee with this board to make it a Xbee shield.
 
@@ -32,7 +32,7 @@ This is the 1st Protoshield for [Seeeduino Mega](/Seeeduino_Mega "Seeeduino Mega
 
 Accembled view:
 
-![http://www.seeedstudio.com/depot/images/large/product/protomega_01_LRG.jpg](http://www.seeedstudio.com/depot/images/large/product/protomega_01_LRG.jpg)
+![https://www.seeedstudio.com/depot/images/large/product/protomega_01_LRG.jpg](https://www.seeedstudio.com/depot/images/large/product/protomega_01_LRG.jpg)
 
 
 ## Schematic Online Viewer
@@ -46,4 +46,4 @@ Accembled view:
 [SeeeduinoMegaProtoShield Schmatics](http://garden.seeedstudio.com/images/3/3d/SeeeduinoMegaProtoShield_v1.1_source.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -51,15 +51,15 @@ Near Field Communication (NFC) is the set of protocols for the communication of 
 
 ## RePhone Community
 
-[![](https://seeeddoc.github.io/Xadow_NFC_v2/img/RePhone_Community-2.png)](http://forum.seeedstudio.com/viewforum.php?f=71&sid=b70f8138c89becf7701260bb41faf9f4)
+[![](https://seeeddoc.github.io/Xadow_NFC_v2/img/RePhone_Community-2.png)](https://forum.seeedstudio.com/viewforum.php?f=71&sid=b70f8138c89becf7701260bb41faf9f4)
 
 We’ve been looking for a better place where our backers (RePhone Users) can sit together, warmly and comfortably, have conversations about RePhone, discuss technical problems, share ideas/projects, and give feedback on the modules’ development in the future. And then here we go, the RePhone Community.
 
-Now join us in the [RePhone Community](http://forum.seeedstudio.com/viewforum.php?f=71&sid=b70f8138c89becf7701260bb41faf9f4)! Together we seek answers, make interesting stuff, care about each other, and share our experiences.
+Now join us in the [RePhone Community](https://forum.seeedstudio.com/viewforum.php?f=71&sid=b70f8138c89becf7701260bb41faf9f4)! Together we seek answers, make interesting stuff, care about each other, and share our experiences.
 
 ### **<span style="font-size:1.1em;">Frequently Asked Questions</span>**
 
-Some frequently asked questions in RePhone Community are collected and answered to the topic **["Frequently Asked Questions of RePhone (FAQ)"](http://www.forum.seeedstudio.com/viewtopic.php?f=71&t=6664&p=23753#p23753)** , the topic will be kept updating whenever a new FAQ comes out.
+Some frequently asked questions in RePhone Community are collected and answered to the topic **["Frequently Asked Questions of RePhone (FAQ)"](http://forum.seeedstudio.com/viewtopic.php?f=71&t=6664&p=23753#p23753)** , the topic will be kept updating whenever a new FAQ comes out.
 
 
 
@@ -87,9 +87,9 @@ And the MCU Kinetis KL02:
 
 *   [_Datasheet of Kinetis KL02_](https://files.seeedstudio.com/wiki/Xadow_NFC/res/KL02P32M48SF0.pdf)
 
-Copyright (c) 2008-2016 Seeed Development Limited ([www.seeedstudio.com](http://www.seeedstudio.com) / [community.seeedstudio.com/](https://community.seeedstudio.com/))
+Copyright (c) 2008-2016 Seeed Development Limited ([www.seeedstudio.com](https://www.seeedstudio.com) / [community.seeedstudio.com/](https://community.seeedstudio.com/))
 
-###### This static html page was created from http://www.seeedstudio.com/wiki
+###### This static html page was created from https://www.seeedstudio.com/wiki
 
 </div>
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

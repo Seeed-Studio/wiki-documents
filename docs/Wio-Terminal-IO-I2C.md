@@ -6,7 +6,7 @@ This repo demonstrates how to use the Grove I2C Port on Wio Terminal, you can si
 
 To use the Grove I2C port on Wio Terminal, Simply connect your Grove sensor that uses I2C to the physical I2C port on Wio Terminal.
 
-**Note:** Remember to include the Sensor libraries in Arduino IDE. Refer to this [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/) for more information.
+**Note:** Remember to include the Sensor libraries in Arduino IDE. Refer to this [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) for more information.
 
 
 ## Example Code 

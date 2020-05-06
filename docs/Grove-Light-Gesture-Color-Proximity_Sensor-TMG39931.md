@@ -90,7 +90,7 @@ The Color and ALS detection feature provides red, green, blue and clear light in
 | Seeeduino V4.2 | Base Shield | Grove - Light&Gesture&Color&Proximity Sensor(TMG39931)|
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/img/thumbnail.jpg)
-|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com)|
+|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com)|
 
 
 !!!note
@@ -111,7 +111,7 @@ The Color and ALS detection feature provides red, green, blue and clear light in
 #### Software
 
 !!!Attention
-        If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+        If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
 
 !!!Tips
@@ -123,7 +123,7 @@ The Color and ALS detection feature provides red, green, blue and clear light in
 
 - **Step 1.** Download the [Seeed_TMG3993](https://github.com/Seeed-Studio/Seeed_TMG3993.git) Library from Github.
 
-- **Step 2.** Refer to [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 
 
@@ -201,7 +201,7 @@ Two thresholds need to be configured - low and high. Any proximity value which i
 
 - **Step 1.** Download the [Seeed_TMG3993](https://github.com/Seeed-Studio/Seeed_TMG3993.git) Library from Github.
 
-- **Step 2.** Refer to [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 
 
@@ -279,7 +279,7 @@ This example reads the R, G, B, C sensor values. C is defined as the non-color f
 
 - **Step 1.** Download the [Seeed_TMG3993](https://github.com/Seeed-Studio/Seeed_TMG3993.git) Library from Github.
 
-- **Step 2.** Refer to [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 
 - **Step 3.** Restart the Arduino IDE. Open the example, the same way as in Example 1, but this time choose "Example3-Color-Light" instead of "Example1". Or copy the following code into Arduino IDE:

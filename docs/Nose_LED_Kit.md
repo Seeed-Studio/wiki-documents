@@ -23,7 +23,7 @@ NFC operate on unlicensed ISM(Industry Scientific Medical) band of **13.56 MHz**
 
 The communication between Arduino and [NFC Shield](https://seeeddoc.github.io/NFC_Shield/)  is via SPI.
 
-Model: [SLD80453P](http://www.seeedstudio.com/depot/nfc-shield-p-916.html?cPath=132_134)
+Model: [SLD80453P](https://www.seeedstudio.com/depot/nfc-shield-p-916.html?cPath=132_134)
 
 
 ##   Features   ##
@@ -242,7 +242,7 @@ NFC operate on unlicensed ISM(Industry Scientific Medical) band of **13.56 MHz**
 
 The communication between Arduino and [NFC Shield](https://seeeddoc.github.io/NFC_Shield/)  is via SPI.
 
-Model: [SLD80453P](http://www.seeedstudio.com/depot/nfc-shield-p-916.html?cPath=132_134)
+Model: [SLD80453P](https://www.seeedstudio.com/depot/nfc-shield-p-916.html?cPath=132_134)
 
 
 ##   Features   ##
@@ -461,7 +461,7 @@ NFC operate on unlicensed ISM(Industry Scientific Medical) band of **13.56 MHz**
 
 The communication between Arduino and [NFC Shield](https://seeeddoc.github.io/NFC_Shield/)  is via SPI.
 
-Model: [SLD80453P](http://www.seeedstudio.com/depot/nfc-shield-p-916.html?cPath=132_134)
+Model: [SLD80453P](https://www.seeedstudio.com/depot/nfc-shield-p-916.html?cPath=132_134)
 
 
 ##   Features   ##
@@ -680,7 +680,7 @@ NFC operate on unlicensed ISM(Industry Scientific Medical) band of **13.56 MHz**
 
 The communication between Arduino and [NFC Shield](https://seeeddoc.github.io/NFC_Shield/)  is via SPI.
 
-Model: [SLD80453P](http://www.seeedstudio.com/depot/nfc-shield-p-916.html?cPath=132_134)
+Model: [SLD80453P](https://www.seeedstudio.com/depot/nfc-shield-p-916.html?cPath=132_134)
 
 
 ##   Features   ##
@@ -899,7 +899,7 @@ NFC operate on unlicensed ISM(Industry Scientific Medical) band of **13.56 MHz**
 
 The communication between Arduino and [NFC Shield](https://seeeddoc.github.io/NFC_Shield/)  is via SPI.
 
-Model: [SLD80453P](http://www.seeedstudio.com/depot/nfc-shield-p-916.html?cPath=132_134)
+Model: [SLD80453P](https://www.seeedstudio.com/depot/nfc-shield-p-916.html?cPath=132_134)
 
 
 ##   Features   ##
@@ -1118,7 +1118,7 @@ NFC operate on unlicensed ISM(Industry Scientific Medical) band of **13.56 MHz**
 
 The communication between Arduino and [NFC Shield](https://seeeddoc.github.io/NFC_Shield/)  is via SPI.
 
-Model: [SLD80453P](http://www.seeedstudio.com/depot/nfc-shield-p-916.html?cPath=132_134)
+Model: [SLD80453P](https://www.seeedstudio.com/depot/nfc-shield-p-916.html?cPath=132_134)
 
 
 ##   Features   ##
@@ -1326,11 +1326,11 @@ sku:   110990217
 
 *   [https://docs.google.com/open?id=0B2MvWvAFndBdcTR5SWhuRl9WNUk](https://docs.google.com/open?id=0B2MvWvAFndBdcTR5SWhuRl9WNUk)
 
-*   [http://www.youtube.com/watch?v=CFH_GJ4jTB4](http://www.youtube.com/watch?v=CFH_GJ4jTB4)
+*   [https://www.youtube.com/watch?v=CFH_GJ4jTB4](https://www.youtube.com/watch?v=CFH_GJ4jTB4)
 
 ###  How to solder battery terminals
 
-*   [http://www.youtube.com/watch?v=_ze1ZoqXn0U](http://www.youtube.com/watch?v=_ze1ZoqXn0U)
+*   [https://www.youtube.com/watch?v=_ze1ZoqXn0U](https://www.youtube.com/watch?v=_ze1ZoqXn0U)
 
 ##  How To put batteries
 
@@ -1354,7 +1354,7 @@ Nose LED Kit's pin layout is different from Hanahotaru's one.Please see followin
 
 ##  PR movie
 
-*   [http://www.youtube.com/watch?v=CQJDa41mKwA](http://www.youtube.com/watch?v=CQJDa41mKwA)
+*   [https://www.youtube.com/watch?v=CQJDa41mKwA](https://www.youtube.com/watch?v=CQJDa41mKwA)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

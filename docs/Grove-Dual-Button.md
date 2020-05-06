@@ -58,7 +58,7 @@ The Grove Dual Button connects with "D2" interface on the Grove shield, Grove Pa
 interface.
 
 #### Softwawre
-- **Step1** Copy the code below to the Arduino IDE and upload. If you do not know how to update the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step1** Copy the code below to the Arduino IDE and upload. If you do not know how to update the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 ```c++
  //set the corresponding notes with frequency
  #define NOTE_D0 0

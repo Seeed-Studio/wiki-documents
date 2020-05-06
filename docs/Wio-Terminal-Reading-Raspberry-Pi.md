@@ -123,7 +123,7 @@ if __name__ == '__main__':
 
 ### Arduino libraries needed
 
-- Install the LCD screen Library `Seeed_Arduino_LCD`, please visit [Wio Terminal LCD](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/) for more information.
+- Install the LCD screen Library `Seeed_Arduino_LCD`, please visit [Wio Terminal LCD](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/) for more information.
 
 - Download the [`Free_Fonts.h`](https://files.seeedstudio.com/wiki/Wio-Terminal/res/Free_Fonts.h) header file so that can use abbreviations for the free fonts included in the LCD library. Please make sure to put this header file in the same location as the Arduino Sketch.
 
@@ -142,4 +142,4 @@ Download the complete code [here](https://files.seeedstudio.com/wiki/Wio-Termina
 4. Now, you should be able to see the Raspberry's Pi System info on Wio Terminal's LCD Screen.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -4,7 +4,7 @@ category: Shield
 bzurl: https://seeedstudio.com/Wifi-Shield-V2.0-p-2505.html
 oldwikiname: Wifi_Shield_V2.0
 prodimagename: Wifi_Shield_v2.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/113030008 1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/113030008 1.jpg
 surveyurl: https://www.research.net/r/Wifi_Shield_V2_0
 sku: 113030008
 ---
@@ -19,7 +19,7 @@ An on-board antenna allows the shield to cover a wider range and transmit strong
 
 The shield is very well documented with our examples below and its [user manual](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/res/WiFly-RN-UM.pdf).
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Wifi-Shield-V20-p-2505.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/depot/Wifi-Shield-V20-p-2505.html)
 
 Version Tracker
 ---------------
@@ -1237,7 +1237,7 @@ To learn more about adhoc mode check out the [WiFly RN User Manual](https://file
 
 **Q1: How to set a configuration when using WiFi shield with Mega?**
 
-A1: Please follow below instructions. More information about Software serial please refer to [SoftwareSerial Library](http://arduino.cc/en/Reference/SoftwareSerial).
+A1: Please follow below instructions. More information about Software serial please refer to [SoftwareSerial Library](https://arduino.cc/en/Reference/SoftwareSerial).
 
 - Connect D2 to D10 then D3 to D11 by jumper wires           
 - Modify the program: Wifly(2,3); → Wifly(10,11);
@@ -1269,7 +1269,7 @@ A3: Do not place plastic or any other dielectric material in touch with the ante
 -   [w3schools](http://www.w3schools.com/) Great website to learn HTML, Javascript, and JQuery
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Wifi_Shield_V2.0 -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Wifi_Shield_V2.0 -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

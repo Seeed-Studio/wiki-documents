@@ -47,14 +47,14 @@ The Stalker Kit includes all necessary components to work with Seeeduino Stalker
 <td> 1
 </td></tr>
 <tr>
-<td> [Mini USB cable 100cm](http://www.seeedstudio.com/depot/mini-usb-cable-110cm-p-252.html?cPath=178_179)
+<td> [Mini USB cable 100cm](https://www.seeedstudio.com/depot/mini-usb-cable-110cm-p-252.html?cPath=178_179)
 </td>
 <td> As programming cable used with UartSBee
 </td>
 <td> 1
 </td></tr>
 <tr>
-<td> [UartSBee V4](http://www.seeedstudio.com/depot/uartsbee-v31-p-688.html?cPath=109)
+<td> [UartSBee V4](https://www.seeedstudio.com/depot/uartsbee-v31-p-688.html?cPath=109)
 </td>
 <td> Provides USB-Serial port to program Stalker V3 using Arduino IDE
 </td>
@@ -68,7 +68,7 @@ The Stalker Kit includes all necessary components to work with Seeeduino Stalker
 <td> 1
 </td></tr>
 <tr>
-<td> [Seeeduino Stalker v3 enclosure](http://www.seeedstudio.com/depot/Seeeduino-Stalker-v3-enclosure-p-2419.html)
+<td> [Seeeduino Stalker v3 enclosure](https://www.seeedstudio.com/depot/Seeeduino-Stalker-v3-enclosure-p-2419.html)
 </td>
 <td> Waterproof plastic case
 </td>
@@ -162,11 +162,11 @@ You will require the following hardware for running your first program.
 
 |![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/img/Seeed_Stalker_v3-6.png)|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/img/Uartsb40.jpg)|
 |:---:|:---:|
-|**Seeeduino Stalker v3**<br>[Buy Here](http://www.seeedstudio.com/depot/Seeeduino-Stalker-v3-p-1882.html)|**UartsBee v4.0**<br>Required for programming the Seeeduino Stalker.<br>[Buy Here](http://www.seeedstudio.com/depot/uartsbee-v31-p-688.html)|
+|**Seeeduino Stalker v3**<br>[Buy Here](https://www.seeedstudio.com/depot/Seeeduino-Stalker-v3-p-1882.html)|**UartsBee v4.0**<br>Required for programming the Seeeduino Stalker.<br>[Buy Here](https://www.seeedstudio.com/depot/uartsbee-v31-p-688.html)|
 
 |![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/img/Miniusb.jpg)|![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/img/Seeeduino_Stalker_V3-Waterproof_Solar_Kit_5pin_cable.jpg)|
 |---|---|
-|**Mini USB Cable**<br>You would probably have this one lying around,or if not, buy one [here](http://www.seeedstudio.com/depot/mini-usb-cable-110cm-p-252.html). We would use this to connect the UartSBee_V4 to one of the USB ports on your computer.|**6 pin dual-female jumper wire**<br>Required for connecting the UartSBee_V4 to Seeeduino Stalker.You might already have few lying around your workspace. If not, you can buy a colourful one [here](http://www.seeedstudio.com/depot/6-pin-dualfemale-jumper-wire-100mm-5-PCs-pack-p-129.html).</div>
+|**Mini USB Cable**<br>You would probably have this one lying around,or if not, buy one [here](https://www.seeedstudio.com/depot/mini-usb-cable-110cm-p-252.html). We would use this to connect the UartSBee_V4 to one of the USB ports on your computer.|**6 pin dual-female jumper wire**<br>Required for connecting the UartSBee_V4 to Seeeduino Stalker.You might already have few lying around your workspace. If not, you can buy a colourful one [here](https://www.seeedstudio.com/depot/6-pin-dualfemale-jumper-wire-100mm-5-PCs-pack-p-129.html).</div>
 </td></tr></table>
 
 **Step 2: Installing the drivers and plugging in the hardware**
@@ -176,7 +176,7 @@ You will require the following hardware for running your first program.
     *   Allow us to communicate with Seeeduino Stalker.
     *   Provide power (from USB power of your computer) to Seeeduino Stalker (including any peripherals connected to it).
 
-2.  The first two functions of UartSBee_V4 (programming and communication) are achieved through an Integrated Circuit called FT232RL which is present on it. Before FT232RL can be used for these purposes, its drivers (certain freely available programs from FT232RL's manufacturer) must be installed on your windows/ubuntu based PC. So before proceeding further, download the driver setup file [from here](http://www.ftdichip.com/Drivers/CDM/CDM20802_Setup.exe) and install it on your Windows PC.
+2.  The first two functions of UartSBee_V4 (programming and communication) are achieved through an Integrated Circuit called FT232RL which is present on it. Before FT232RL can be used for these purposes, its drivers (certain freely available programs from FT232RL's manufacturer) must be installed on your windows/ubuntu based PC. So before proceeding further, download the driver setup file [from here](https://www.ftdichip.com/Drivers/CDM/CDM20802_Setup.exe) and install it on your Windows PC.
 
 3.  UartSBee_V4 has an onboard voltage regulator and a switch to allow you to select what voltage (5.0V or 3.3V) you would like to supply to the target circuit board. In our case the target circuit board is Seeeduino Stalker and so you would need to set this slide switch to 5.0 volts
 
@@ -321,9 +321,9 @@ The principal application of Seeeduino Stalker v3.0 is data-logging of sensor si
 ##   Resources
 ---
 
-*   [ Comparison between various versions of Seeeduino Stalker](http://wiki.seeedstudio.com/Seeeduino_Stalker#Comparison_between_various_versions_of_Seeeduino_Stalker)
+*   [ Comparison between various versions of Seeeduino Stalker](https://wiki.seeedstudio.com/Seeeduino_Stalker#Comparison_between_various_versions_of_Seeeduino_Stalker)
 
-*   [SD card reading mini-USB cable, in a capsule](http://www.seeedstudio.com/depot/sd-card-reading-miniusb-cable-in-a-capsule-p-575.html?cPath=77)
+*   [SD card reading mini-USB cable, in a capsule](https://www.seeedstudio.com/depot/sd-card-reading-miniusb-cable-in-a-capsule-p-575.html?cPath=77)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

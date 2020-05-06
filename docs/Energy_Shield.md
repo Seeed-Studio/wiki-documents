@@ -4,7 +4,7 @@ category: Shield
 bzurl: https://seeedstudio.com/Energy-Shield-p-1373.html
 oldwikiname: Energy_Shield
 prodimagename: Energy_Shield.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/106030000 1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/106030000 1.jpg
 surveyurl: https://www.research.net/r/Energy_Shield
 sku: 106030000
 ---
@@ -13,7 +13,7 @@ sku: 106030000
 
 Energy Shield is a LiPo battery based power shield that keeps your project alive. It keeps its battery charged whenever an available power source exists. It accepts a wide range of power sources, from common solar cells via JST connector and USB via USB port on microcontroller, to 9V and 12V DC adapters via DC Jack on your Arduino. Meanwhile it can not only provide power for your Arduino project, with a standard USB port populated on the shield, it’s also capable of rescuing your mobile electric devices from dying batteries, such as mobile phone, mp3 and tablet.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/energy-shield-p-1373.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/energy-shield-p-1373.html)
 
 Features
 --------
@@ -94,7 +94,7 @@ You can charge the Lipo battery with massive external power sources. Here we sho
 
 **1) Solar Panel**    
 
-Solar panel is one of the most common green power sources we use. The typical output of one unit is around 5V. We provide [lots of solar panels](http://www.seeedstudio.com/s/solar%20panel.html) at our store. They are all pre-assembled with JST connencors which can seamlessly match up with Energy Shield. 
+Solar panel is one of the most common green power sources we use. The typical output of one unit is around 5V. We provide [lots of solar panels](https://www.seeedstudio.com/s/solar%20panel.html) at our store. They are all pre-assembled with JST connencors which can seamlessly match up with Energy Shield. 
 
 Plug solar panel into JST socket on the shield as below.
 
@@ -153,7 +153,7 @@ Resources
 - [ISL97516 Datasheet](https://files.seeedstudio.com/wiki/Energy_Shield/res/ISL97516.pdf)
 - [LM293D Datasheet](https://files.seeedstudio.com/wiki/Energy_Shield/res/LM293D.pdf)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Energy_Shield -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Energy_Shield -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

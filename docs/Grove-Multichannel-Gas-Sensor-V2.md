@@ -118,11 +118,11 @@ The module in the image of Hardware Connection has the same arrangeme
 
 - **Step 4** Download the  [ Grove_Multichannel_Gas_Sensor_v2 Library](https://github.com/Seeed-Studio/Seeed_Multichannel_Gas_Sensor/archive/master.zip) from Github.
 
-- **Step 5** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- **Step 5** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
-- **Step 6** Copy the code into Wio Terminal and upload. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/).
+- **Step 6** Copy the code into Wio Terminal and upload. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/).
 
-- **Step 7** Refer [How to TFT LCD Library](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/) to install TFT LCD Library.
+- **Step 7** Refer [How to TFT LCD Library](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/) to install TFT LCD Library.
 
 - **Step 8** Upload code from the Software Code below and the data has to be displayed successfully.
 
@@ -232,4 +232,4 @@ void loop() {
 - **[PDF]** [GM-702B Technical Parameter(Ver1.1).pdf](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/res/GM-702B+Technical+Parameter(Ver1.1).pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

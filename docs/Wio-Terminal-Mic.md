@@ -28,9 +28,9 @@ void loop() {
 
 ### Libraries Installation
 
-- Install the [LCD](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/) library.
+- Install the [LCD](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/) library.
 
-- Install the [Linechart](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Linecharts/) library.
+- Install the [Linechart](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Linecharts/) library.
 
 ```cpp
 #include"seeed_line_chart.h" //include the library

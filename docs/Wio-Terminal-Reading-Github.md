@@ -22,13 +22,13 @@ With this, you can implement the Demo to others api such as grabbing Weather inf
 
 ## Arduino libraries needed
 
-- Install the LCD screen Library `Seeed_Arduino_LCD`, please visit [Wio Terminal LCD](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/) for more information.
+- Install the LCD screen Library `Seeed_Arduino_LCD`, please visit [Wio Terminal LCD](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/) for more information.
 
 - Visit the [ArduinoJson](https://github.com/bblanchon/ArduinoJson) repositories and download the entire repo to your local drive.
 
     - Now, the ArduinoJson library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `ArduinoJson` file that you've have just downloaded.
 
-- For more information about Https connection, please visit [**here**](http://wiki.seeedstudio.com/Wio-Terminal-Wi-Fi/#wi-fi-https-connection-example-code).
+- For more information about Https connection, please visit [**here**](https://wiki.seeedstudio.com/Wio-Terminal-Wi-Fi/#wi-fi-https-connection-example-code).
 
 ## Arduino Instructions
 

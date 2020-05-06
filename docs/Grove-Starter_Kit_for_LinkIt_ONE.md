@@ -4,7 +4,7 @@ category: LinkIt
 bzurl: https://seeedstudio.com/Grove-Starter-Kit-for-LinkIt-ONE-p-2028.html
 oldwikiname: Grove_-_Starter_Kit_for_LinkIt_ONE
 prodimagename: Grove_Starter_Kit_for_LinkIt_ONE_530x397.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/starter kit for linkit one 1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/starter kit for linkit one 1.jpg
 surveyurl: https://www.research.net/r/Grove-Starter_Kit_for_LinkIt_ONE
 sku: 110060039
 ---
@@ -13,7 +13,7 @@ sku: 110060039
 
 Grove - Starter Kit for LinkIt ONE is a toolkit for building your applications quicker and easier with LinkIt ONE development platform. With this kit, you can concentrate just on design process for your projects which will save you lots for time or expenses. It consist of the most popular modules for build IoT (Internet of Things) applications such as [Base Shield](/Base_Shield_V2).
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Grove-Starter-Kit-for-LinkIt-ONE-p-2028.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/depot/Grove-Starter-Kit-for-LinkIt-ONE-p-2028.html)
 
 Features
 --------
@@ -23,7 +23,7 @@ Features
 -   Cut down your expense by including typical and popular modules.
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 
 Specifications
@@ -124,7 +124,7 @@ Resources
 - [Manual for Grove Starter Kit for LinkIt ONE](https://files.seeedstudio.com/wiki/Grove-Starter_Kit_for_LinkIt_ONE/res/Manual_for_Grove_Starter_kit_for_LinkIt_ONE_compressed.pdf)
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Starter_Kit_for_LinkIt_ONE -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Starter_Kit_for_LinkIt_ONE -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

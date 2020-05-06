@@ -4,7 +4,7 @@ category: Communication
 bzurl: https://seeedstudio.com/Grove-BLE-p-1929.html
 oldwikiname: Grove_BLE_v1
 prodimagename: Grove-BLE_front.png
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/grove ble.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/grove ble.jpg
 surveyurl: https://www.research.net/r/Grove-BLE_v1
 sku: 113020007
 tags: grove_uart, io_3v3, io_5v, plat_duino, plat_linkit
@@ -16,7 +16,7 @@ tags: grove_uart, io_3v3, io_5v, plat_duino, plat_linkit
 
 Grove - BLE v1 (Grove - Bluetooth Low Energy v1) uses a Low Energy Bluetooth module -- **HM-11**, based on TI CC2540 chip, which has AT command support. As a Grove product it's convenient to use Grove - BLE with Arduino board via Base Shield.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-BLE-p-1929.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-BLE-p-1929.html)
 
 Parameters
 ----------
@@ -44,7 +44,7 @@ The supply power of HM-11 is 3.3v, but the Grove - BLE is 3.3V to 5V.
 </div>
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 Platforms Supported
 -------------------
@@ -312,7 +312,7 @@ Resources
 - [Datasheet of BLE module](https://files.seeedstudio.com/wiki/Grove-BLE_v1/res/Bluetooth4_en.pdf)
 - [Schematic](https://files.seeedstudio.com/wiki/Grove-BLE_v1/res/Grove-BLE_v1.0.zip)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_BLE_v1 -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_BLE_v1 -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

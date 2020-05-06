@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-IMU-10DOF-p-2386.html
 oldwikiname: Grove_-_IMU_10DOF
 prodimagename: Grove-imu-10dof.JPG
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/101020079 2.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/101020079 2.jpg
 surveyurl: https://www.research.net/r/Grove-IMU_10DOF
 sku: 101020079
 tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit, plat_bbg
@@ -15,7 +15,7 @@ tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit, plat_bbg
 Grove - IMU 10DOF is a combination of Grove - IMU 9DOF and [Grove - Barometer Sensor (BMP180)](/Grove-Barometer_Sensor-BMP180 "Grove - Barometer Sensor (BMP180)"). This module is base on MPU-9250 and BMP180, the MPU-9250 is a 9-axis MotionTracking device that combines a 3-axis gyroscope, 3-axis accelerometer, 3-axis magnetometer and a Digital Motion Processor(DMP), and BMP180 is a high precision, ultra-low power digital pressure sensors for consumer applications. This module is very suitable for the application of smartphones, tablets and wearable devices.
 
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-IMU-10DOF-p-2386.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-IMU-10DOF-p-2386.html)
 
 Specifications
 
@@ -32,10 +32,10 @@ Specifications
 - I2C Address: default 0x68, refer to Hardware Overview to change to 0x69.
 
 !!!Note
-    If you want to use multiplue I2C devices, please refer to [Software I2C](http://wiki.seeedstudio.com/Arduino_Software_I2C_user_guide/)
+    If you want to use multiplue I2C devices, please refer to [Software I2C](https://wiki.seeedstudio.com/Arduino_Software_I2C_user_guide/)
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 ## Platforms Supported
 
@@ -72,7 +72,7 @@ We will provide an example here to show you how to use this sensor.
 | Seeeduino V4.2 | Base Shield| Grove-IMU_10DOF |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF/img/45d_small.jpg)|
-|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/Grove-IMU-10DOF-p-2386.html)|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-IMU-10DOF-p-2386.html)|
 
 - **Step 2.** Connect Grove-IMU_10DOF to port **I2C** of Grove-Base Shield.
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
@@ -97,7 +97,7 @@ We will provide an example here to show you how to use this sensor.
 
 **Step 1.** Download the [library](https://github.com/Seeed-Studio/IMU_10DOF) from Github.
 
-**Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+**Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 
 **Step 3.** Open the code directly by the path:File -> Example -> IMU_10DOF_Test.
@@ -235,5 +235,5 @@ The diagram below shows the orientation of the axes of sensitivity and the polar
 
 ## Tech Support
 
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

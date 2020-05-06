@@ -20,7 +20,7 @@ Grove is a modular electronics platform for quick prototyping that does not invo
 This kit is designed for you to get started with mbed as soon as possible. It contains many plug-n-play Grove modules to start exploring the mbed world. One goal is to have fun and build confidence with hardware and software in the journey.
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 ## Get Started
 ---
@@ -108,4 +108,4 @@ The idea is from [Makey Makey](http://makeymakey.com/), but uses different hardw
 - [Temperature controls color](https://developer.mbed.org/teams/Seeed/wiki/Temperature-Color)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

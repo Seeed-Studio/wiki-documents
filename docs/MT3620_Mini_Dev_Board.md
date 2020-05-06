@@ -199,7 +199,7 @@ If you have MT3620 Mini Dev Board that has not yet been used, complete [these st
 
 ## MT3620 Mini Dev Board Demos
 
-We build there demoes which combine MT3620 Mini Dev Board and [Seeed Grove system](http://wiki.seeedstudio.com/Grove_System/). 
+We build there demoes which combine MT3620 Mini Dev Board and [Seeed Grove system](https://wiki.seeedstudio.com/Grove_System/). 
 
 **Demo#1**: MT3620 Mini Dev Board performs as an MCU, which connects with Grove-Button and USB to TTL adapter. Then you connect MT3620 Mini Dev Board and the USB to TTL adapter to PC usb ports. After you downloading the code, press Grove-Button and enter "Hello World!" from USB to TTL adapter, you can receive "Hello World!" from Visual Studio Output window.  
 
@@ -392,5 +392,5 @@ On top of the box , there is a warning light ,which will flash when the door is 
 - **[FAQ Web]** [Azure Sphere Github issues](https://github.com/MicrosoftDocs/azure-sphere-issues/issues?utf8=%E2%9C%93&q=is%3Aissue)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -13,7 +13,7 @@ sku: 103030033
 
 ![](https://files.seeedstudio.com/wiki/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/images/Arduino_Breakout_for_LinkIt_Smart_7688_Duo_product_view.jpg)
 
-LinkIt Smart 7688 Duo is an open development board based on the OpenWrt Linux distribution, MT7688 and ATmega32u4. The board is designed especially to enable the prototyping of Rich Application IoT devices for Smart-Home. If you want to find out more about LinkIt Smart 7688 Duo, please click [HERE](http://www.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo).
+LinkIt Smart 7688 Duo is an open development board based on the OpenWrt Linux distribution, MT7688 and ATmega32u4. The board is designed especially to enable the prototyping of Rich Application IoT devices for Smart-Home. If you want to find out more about LinkIt Smart 7688 Duo, please click [HERE](https://www.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo).
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/Arduino-Breakout-for-LinkIt-Smart-7688-Duo-p-2576.html)
 
@@ -73,9 +73,9 @@ In this simple application, you are going to make a buzzer to buzz different sou
 
 - Step4：Plug Grove - Buzzer into port D4.
 
-- Step5: This step is to build the Arduino environment for LinkIt Smart 7688 Duo platform on host computer. Since the tutorial has been written in the Wiki of LinkIt Smart 7688, please refer to [Here](http://www.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo#Installing_Arduino_programming_environment).
+- Step5: This step is to build the Arduino environment for LinkIt Smart 7688 Duo platform on host computer. Since the tutorial has been written in the Wiki of LinkIt Smart 7688, please refer to [Here](https://www.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo#Installing_Arduino_programming_environment).
 - Step6: Download firmata.
-- Step7: Refer to [Here](http://www.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo#Installing_Arduino_programming_environment) to install Arduino IDE for LinkIt Smart 7688 platform, and flash the file firmata to development board.
+- Step7: Refer to [Here](https://www.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo#Installing_Arduino_programming_environment) to install Arduino IDE for LinkIt Smart 7688 platform, and flash the file firmata to development board.
 
 !!!Note
     Following steps should be carried out on embedded OS(OpenWRT). Please make sure you have Python in your system and installed pip.
@@ -106,7 +106,7 @@ Have you successfully make the buzzer to buzz? Here are 2 more awesome projects 
 |Smart Router With <br>WiFi Connection Visualization|Facebook Like Monitor|
 |:---:|:---:|
 |![](https://files.seeedstudio.com/wiki/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/images/F9SCHIKIPH4SPTP.MEDIUM.jpg)|![](https://files.seeedstudio.com/wiki/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/images/F9MQJJOIHQOBV4Q.MEDIUM.jpg)|
-|[![](https://files.seeedstudio.com/wiki/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/images/200px-Wiki_makeitnow_logo.png)](http://www.instructables.com/id/ReRouter-Make-an-Extensible-IoT-Router/)|[![](https://files.seeedstudio.com/wiki/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/images/200px-Wiki_makeitnow_logo.png)](http://www.instructables.com/id/Facebook-Like-Monitor/)|
+|[![](https://files.seeedstudio.com/wiki/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/images/200px-Wiki_makeitnow_logo.png)](https://www.instructables.com/id/ReRouter-Make-an-Extensible-IoT-Router/)|[![](https://files.seeedstudio.com/wiki/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/images/200px-Wiki_makeitnow_logo.png)](https://www.instructables.com/id/Facebook-Like-Monitor/)|
 
 
 ## Schematic Online Viewer
@@ -118,8 +118,8 @@ Have you successfully make the buzzer to buzz? Here are 2 more awesome projects 
 ## Resources
 
 - [Schematic files](https://files.seeedstudio.com/wiki/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/resources/Schematic_files_for_Arduino_Breakout_for_LinkIt_Smart_7688_Duo.zip)
-- [Wiki link for LinkIt Smart 7688 Duo](http://www.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo)
+- [Wiki link for LinkIt Smart 7688 Duo](https://www.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo)
 - [OpenWrt](http://wiki.openwrt.org/doc/howto/user.beginner)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -16,7 +16,7 @@ tags:
 **Bluetooth Bee** is an easy to use <font size=4face="黑体">Bluetooth Serial Port Profile(SPP)</font> module compatible with existing **Xbee** sockets, designed for transparent wireless serial connection setup.
 Serial port Bluetooth module is fully qualified Bluetooth V2.0+EDR(Enhanced Data Rate) 3Mbps Modulation with complete 2.4GHz radio transceiver and baseband. It uses **CSR Bluecore 04**-External single chip Bluetooth system with CMOS technology and with AFH(Adaptive Frequency Hopping Feature). It has the smallest footprint of **12.7mm x 27mm**
 
-Model:[WLS125E1P](http://www.seeedstudio.com/depot/bluetooth-bee-p-598.html?cPath=139_142)
+Model:[WLS125E1P](https://www.seeedstudio.com/depot/bluetooth-bee-p-598.html?cPath=139_142)
 
 
 
@@ -314,7 +314,7 @@ You should have received a copy of the GNU Lesser General Public
 License along with this library; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-For more details about the product please check http://www.seeedstudio.com/depot/
+For more details about the product please check https://www.seeedstudio.com/depot/
 
 */
 
@@ -431,7 +431,7 @@ You should have received a copy of the GNU Lesser General Public
 License along with this library; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-For more details about the product please check http://www.seeedstudio.com/depot/
+For more details about the product please check https://www.seeedstudio.com/depot/
 
 */
 
@@ -622,7 +622,7 @@ This demo uses hardware arrangement described in [Hardware Installation - UartSB
 
 ##   Support   ##
 
-If you have questions or other better design ideas, you can go to our [forum](http://www.seeedstudio.com/forum) or [wish](http://wish.seeedstudio.com) to discuss.
+If you have questions or other better design ideas, you can go to our [forum](https://www.seeedstudio.com/forum) or [wish](http://wish.seeedstudio.com) to discuss.
 
 ##   Version Tracker   ##
 
@@ -648,7 +648,7 @@ Bug Tracker is the place you can publish any bugs you think you might have found
 
 ##   How to buy   ##
 
-Click here to buy:[http://www.seeedstudio.com/depot/bluetooth-bee-p-598.html?cPath=139_142](http://www.seeedstudio.com/depot/bluetooth-bee-p-598.html?cPath=139_142).
+Click here to buy:[https://www.seeedstudio.com/depot/bluetooth-bee-p-598.html?cPath=139_142](https://www.seeedstudio.com/depot/bluetooth-bee-p-598.html?cPath=139_142).
 
 
 ##   Licensing   ##
@@ -692,25 +692,25 @@ Now share you awesome projects on with us on [Recipe](https://community.seeedstu
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="http://wiki.seeedstudio.com/images/f/f6/Bluetooth_Bee_Schematic_Board.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://wiki.seeedstudio.com/images/f/f6/Bluetooth_Bee_Schematic_Board.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ##   Resources   ##
 
-- **[Eagle]** [Bluetooth Bee Schematic and Board Files](http://wiki.seeedstudio.com/images/f/f6/Bluetooth_Bee_Schematic_Board.zip)
+- **[Eagle]** [Bluetooth Bee Schematic and Board Files](https://wiki.seeedstudio.com/images/f/f6/Bluetooth_Bee_Schematic_Board.zip)
 
 - **[PDF]**[Bluetooth_Bee_v2.0_SCH_PCB.zip](http://images/0/06/Bluetooth_Bee_v2.0_SCH_PCB.zip)
 
 - **[Library]** [NewSoftLibrary](http://arduiniana.org/NewSoftSerial/NewSoftSerial10c.zip)
 
-- **[Information]** [Information on how to setup connections between Bluetooth Bees is available in Seeedstudio Forum](http://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=687)
+- **[Information]** [Information on how to setup connections between Bluetooth Bees is available in Seeedstudio Forum](https://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=687)
 
-- **[Information]** [PC connecting Bluetooth Bee in Seeedstudio Forum](http://forum.seeedstudio.com/viewtopic.php?f=18&amp;t=1436&amp;p=5637#p5637)
+- **[Information]** [PC connecting Bluetooth Bee in Seeedstudio Forum](https://forum.seeedstudio.com/viewtopic.php?f=18&amp;t=1436&amp;p=5637#p5637)
 
 - **[Datasheet]**  [Bluetooth Bee datasheet](https://files.seeedstudio.com/wiki/Bluetooth-Bee/res/Bluetooth_Bee_datasheet.pdf)
 
 - **[Datasheet]**[HM－01_Datasheet](https://files.seeedstudio.com/wiki/Bluetooth-Bee/res/HM%EF%BC%8D01_Datasheet.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -25,17 +25,17 @@ The core of the RePhone is provided by Xadow GSM+BLE or by RePhone Core 3G Modul
 |Xadow GPS v2|Xadow Basic Sensors|Xadow NFC v2|
 |----------------|--------------|-------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Rephone/image/product1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Rephone/image/product2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Rephone/image/product3.jpg)|
-|[Get More Details](http://www.seeedstudio.com/Xadow-GPS-v2-p-2557.html)|[Get More Details](http://www.seeedstudio.com/Xadow-Basic-Sensors-p-2555.html)|[Get More Details](http://www.seeedstudio.com/Xadow-NFC-v2-p-2562.html)|
+|[Get More Details](https://www.seeedstudio.com/Xadow-GPS-v2-p-2557.html)|[Get More Details](https://www.seeedstudio.com/Xadow-Basic-Sensors-p-2555.html)|[Get More Details](https://www.seeedstudio.com/Xadow-NFC-v2-p-2562.html)|
 
 |Xadow LED 5 x 7|Xadow GSM + BLE|Xadow 1.54 inch Touchscreen|
 |----------------|--------------|-------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Rephone/image/product4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Rephone/image/product5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Rephone/image/product6.jpg)|
-|[Get More Details](http://www.seeedstudio.com/Xadow-LED-5-x-7-p-2561.html)|[Get More Details](http://www.seeedstudio.com/Xadow-GSM-%2B-BLE-p-2560.html)|[Get More Details](http://www.seeedstudio.com/Xadow-1.54-inch-Touchscreen-p-2553.html)|
+|[Get More Details](https://www.seeedstudio.com/Xadow-LED-5-x-7-p-2561.html)|[Get More Details](https://www.seeedstudio.com/Xadow-GSM-%2B-BLE-p-2560.html)|[Get More Details](https://www.seeedstudio.com/Xadow-1.54-inch-Touchscreen-p-2553.html)|
 
 |Xadow Audio|Xadow GSM Breakout|Xadow Duino|
 |----------------|--------------|-------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Rephone/image/product7.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Rephone/image/product8.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Rephone/image/product9.jpg)|
-|[Get More Details](http://www.seeedstudio.com/Xadow-Audio-p-2554.html)|[Get More Details](http://www.seeedstudio.com/Xadow-GSM-Breakout-p-2559.html)|[Get More Details](http://www.seeedstudio.com/Xadow-Duino-p-2556.html)|
+|[Get More Details](https://www.seeedstudio.com/Xadow-Audio-p-2554.html)|[Get More Details](https://www.seeedstudio.com/Xadow-GSM-Breakout-p-2559.html)|[Get More Details](https://www.seeedstudio.com/Xadow-Duino-p-2556.html)|
 
 
 ###RePhone Kit Create
@@ -71,13 +71,13 @@ We have developed rich libraries hooking into Arduino IDE, Lua and JavaScript, w
 
 Check out:
 
-[Arduino IDE for RePhone Kit](http://wiki.seeedstudio.com/Arduino_IDE_for_RePhone_Kit/)
+[Arduino IDE for RePhone Kit](https://wiki.seeedstudio.com/Arduino_IDE_for_RePhone_Kit/)
 
-[Eclipse IDE for RePhone Kit](http://wiki.seeedstudio.com/Eclipse_IDE_for_RePhone_Kit)
+[Eclipse IDE for RePhone Kit](https://wiki.seeedstudio.com/Eclipse_IDE_for_RePhone_Kit)
 
-[Lua for RePhone Kit](http://wiki.seeedstudio.com/Lua_for_RePhone)
+[Lua for RePhone Kit](https://wiki.seeedstudio.com/Lua_for_RePhone)
 
-[JavaScript for RePhone Kit](http://wiki.seeedstudio.com/JavaScript_for_RePhone)
+[JavaScript for RePhone Kit](https://wiki.seeedstudio.com/JavaScript_for_RePhone)
 
 [Building RePhone Applications on Mac OS X](https://github.com/Seeed-Studio/CodeLite_for_RePhone/wiki/building-RePhone-applications-on-Mac-OS-X)
 
@@ -102,9 +102,9 @@ We will keep updating the RePhone SDK on our Github page:
 
 To reset your RePhone to **DEFAULTS:**
 
-1. Follow the instructions in "[Update/Flash the Firmware](http://wiki.seeedstudio.com/Arduino_IDE_for_RePhone_Kit/#updateflash-the-firmware)" section to flash the firmware
+1. Follow the instructions in "[Update/Flash the Firmware](https://wiki.seeedstudio.com/Arduino_IDE_for_RePhone_Kit/#updateflash-the-firmware)" section to flash the firmware
 2. Download the [RePhone_Create_Kit_VXP](https://github.com/WayenWeng/RePhone_Create_Kit_VXP/) file
-3. Enter the [RePhone Mass Storage Mode](http://wiki.seeedstudio.com/Xadow_GSMPlusBLE/#mass-storage-mode)
+3. Enter the [RePhone Mass Storage Mode](https://wiki.seeedstudio.com/Xadow_GSMPlusBLE/#mass-storage-mode)
 4. Copy everything under the file named "RePhone Create Kit VXP" into the RePhone 5MB mass storage.
 5. Restart your RePhone then its done. As reset have deleted all the files, you would have to put an mp3 file in the mass storage as well for the use of ringtone.
 
@@ -135,14 +135,14 @@ The schematic diagrams of RePhone Modules are provided in the following link:
 
 which includes:
 
-- [Xadow GSM+BLE](http://wiki.seeedstudio.com/Xadow_GSMPlusBLE/).
-- [Xadow GSM Breakout](http://wiki.seeedstudio.com/Xadow_GSM_Breakout/).
-- [Xadow 1.54” Touchscreen](http://wiki.seeedstudio.com/Xadow_1.54_inch_Touchscreen/).
-- [Xadow Audio](http://wiki.seeedstudio.com/Xadow_Audio/).
-- [Xadow Duino](http://wiki.seeedstudio.com/Xadow_Duino/).
-- [Xadow GPS v2](http://wiki.seeedstudio.com/Xadow_GPS/).
-- [Xadow Basic Sensors](http://wiki.seeedstudio.com/Xadow_Basic_Sensors/).
-- [Xadow NFC v2](http://wiki.seeedstudio.com/Xadow_NFC_v2/).
-- [Xadow LED 5x7](http://wiki.seeedstudio.com/Xadow_LED_5x7/).
-- [Xadow Pebble Time Adapter](http://wiki.seeedstudio.com/Xadow_Pebble_Time_Adapter/).
+- [Xadow GSM+BLE](https://wiki.seeedstudio.com/Xadow_GSMPlusBLE/).
+- [Xadow GSM Breakout](https://wiki.seeedstudio.com/Xadow_GSM_Breakout/).
+- [Xadow 1.54” Touchscreen](https://wiki.seeedstudio.com/Xadow_1.54_inch_Touchscreen/).
+- [Xadow Audio](https://wiki.seeedstudio.com/Xadow_Audio/).
+- [Xadow Duino](https://wiki.seeedstudio.com/Xadow_Duino/).
+- [Xadow GPS v2](https://wiki.seeedstudio.com/Xadow_GPS/).
+- [Xadow Basic Sensors](https://wiki.seeedstudio.com/Xadow_Basic_Sensors/).
+- [Xadow NFC v2](https://wiki.seeedstudio.com/Xadow_NFC_v2/).
+- [Xadow LED 5x7](https://wiki.seeedstudio.com/Xadow_LED_5x7/).
+- [Xadow Pebble Time Adapter](https://wiki.seeedstudio.com/Xadow_Pebble_Time_Adapter/).
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

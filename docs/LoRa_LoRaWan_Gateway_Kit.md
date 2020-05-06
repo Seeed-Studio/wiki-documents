@@ -74,7 +74,7 @@ Regarding the gateway module RHF0M301, it is a 10 channel(8 x Multi-SF + 1 x Sta
   </tr>
   <tr>
     <td class="tg-6k2t"><font face="" size=5 font color="00b0f0">❶</font></td>
-    <td class="tg-vn4c"><a href="http://wiki.seeed.cc/Raspberry_Pi_3_Model_B/">Raspberry Pi 3</a></td>
+    <td class="tg-vn4c"><a href="https://wiki.seeedstudio.com/Raspberry_Pi_3_Model_B/">Raspberry Pi 3</a></td>
     <td class="tg-vn4c">1 PCS</td>
   </tr>   
 
@@ -90,7 +90,7 @@ Regarding the gateway module RHF0M301, it is a 10 channel(8 x Multi-SF + 1 x Sta
   </tr>
   <tr>
     <td class="tg-yw4l"><font face="" size=5 font color="00b0f0">❹</font></td>
-    <td class="tg-031e"><a href="http://wiki.seeed.cc/Seeeduino_LoRAWAN/">Seeeduino LoRaWAN with GPS (RHF76-052AM)</a></td>
+    <td class="tg-031e"><a href="https://wiki.seeedstudio.com/Seeeduino_LoRAWAN/">Seeeduino LoRaWAN with GPS (RHF76-052AM)</a></td>
     <td class="tg-031e">1 PCS</td>
   </tr>
   <tr>
@@ -188,7 +188,7 @@ When you finished all the steps, the whole system should be like the picture bel
 ### Software Tool
 In the following guide, below tools will be needed, please install it to your computer.
 
-- **[Arduino](http://wiki.seeed.cc/Getting_Started_with_Arduino/)**, portable serial tool, used to open the serial port of Seeeduino LoRaWAN with GPS (RHF76-052AM) and send AT commands to it.
+- **[Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)**, portable serial tool, used to open the serial port of Seeeduino LoRaWAN with GPS (RHF76-052AM) and send AT commands to it.
 - **[PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)**, terminal tool include both serial and SSH terminal, used to control Raspberry Pi.
 - Internet browser, used to access RHF2S001 integrated LoRaWAN server (It is recommended to use Chrome or Firefox).
 
@@ -204,7 +204,7 @@ your other favorite serial tools,of cause you can use them.However if you are no
 #### Step 1. Power up and connect to putty
 a) First, make sure the serial tool and RPi (RHF4T002 Adapter) are connected correctly.  
 
-b) Plug FT232 tool to PC (If COM port is not recognized correctly, please refer to [Virtual COM Port Drivers](http://www.ftdichip.com/Drivers/VCP.htm))
+b) Plug FT232 tool to PC (If COM port is not recognized correctly, please refer to [Virtual COM Port Drivers](https://www.ftdichip.com/Drivers/VCP.htm))
 
 c) Open **Device Manager** of your PC to get the right COM port. Like COM15 for example. Configure
 ExtraPuTTY according to below picture (Speed 115200, others use defaults), click **Open**. As the gateway is still not opened, so there is nothing in the terminal.
@@ -405,7 +405,7 @@ Frequency Plan for US915 HYBRID
 
  - Firstly, you need to connect Seeeduino LoRaWAN GPS to your PC.
 
- - Secondly, open the **[Arduino](http://wiki.seeed.cc/Getting_Started_with_Arduino/)** IDE, and copy the code blew into a new skech.
+ - Secondly, open the **[Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)** IDE, and copy the code blew into a new skech.
 
 ```
  void setup()
@@ -427,7 +427,7 @@ Frequency Plan for US915 HYBRID
  }
 ```
 
- - Then choose the right serial port of Seeeduino Lora GPS, and choose the board **Tool->Board->Seeeduino_LoRAWAN**. After that you can click the upload button.If you can not find Seeeduino_LoRAWAN in the board list or do not know how to update the code,please click [here](http://wiki.seeed.cc/Seeeduino_LoRAWAN/#install-the-driver-for-windows) for more information.
+ - Then choose the right serial port of Seeeduino Lora GPS, and choose the board **Tool->Board->Seeeduino_LoRAWAN**. After that you can click the upload button.If you can not find Seeeduino_LoRAWAN in the board list or do not know how to update the code,please click [here](https://wiki.seeedstudio.com/Seeeduino_LoRAWAN/#install-the-driver-for-windows) for more information.
 
 ![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/port_lora.png)
 
@@ -648,5 +648,5 @@ chmod +x loriot-gw
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/SeeedStudio/seeed-lora-iotea-solution-b5ee95/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

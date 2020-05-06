@@ -329,7 +329,7 @@ Hercules is a suite of open-platform. It is convenient for users to install all 
 
 **Note:**
 
-<dl><dd> 1) For details about the control panel, please refer [here](http://seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller)
+<dl><dd> 1) For details about the control panel, please refer [here](https://www.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller)
 </dd><dd> 2) The product specification of 25GA-370 Reducing-Motor.
 </dd></dl>
 <table  cellspacing="0" width="80%">
@@ -414,8 +414,8 @@ Hercules is a suite of open-platform. It is convenient for users to install all 
 
 ![](https://files.seeedstudio.com/wiki/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/img/4WD_Robot_Car_Body.jpg)
 
-About the usage of the kit, please click [here](http://seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller#Expand_Usage).
-Here is a video, Showing the hercules strong: [http://www.youtube.com/watch?v=uc4-Dqgwrq8](http://www.youtube.com/watch?v=uc4-Dqgwrq8).
+About the usage of the kit, please click [here](https://www.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller#Expand_Usage).
+Here is a video, Showing the hercules strong: [https://www.youtube.com/watch?v=uc4-Dqgwrq8](https://www.youtube.com/watch?v=uc4-Dqgwrq8).
 
 
 ## Schematic Online Viewer
@@ -431,4 +431,4 @@ Here is a video, Showing the hercules strong: [http://www.youtube.com/watch?v=uc
 - [Specification for Motor](https://files.seeedstudio.com/wiki/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/res/Specifications_for_Motor.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -169,15 +169,15 @@ WiFi and Bluetooth 4.1 (Classic and LE) are provided by Broadcom BCM43438 chip
 
 Buy:
 
-*   [Raspberry Pi 3 Preorder](http://www.seeedstudio.com/depot/Raspberry-Pi-3-Model-B-p-2625.html)
+*   [Raspberry Pi 3 Preorder](https://www.seeedstudio.com/depot/Raspberry-Pi-3-Model-B-p-2625.html)
 
-*   [Raspberry Pi Main Boards](http://www.seeedstudio.com/depot/Raspberry-Pi-main-board-c-122_154_159)
+*   [Raspberry Pi Main Boards](https://www.seeedstudio.com/depot/Raspberry-Pi-main-board-c-122_154_159)
 
-*   [Raspberry Pi Related Products](http://www.seeedstudio.com/depot/Raspberry-Pi-c-122_154)
+*   [Raspberry Pi Related Products](https://www.seeedstudio.com/depot/Raspberry-Pi-c-122_154)
 
 This page will be updated with new information as and when available.
 
 All trademarks are the property of their respective owners. Raspberry Pi and its logo are trademarks of the Raspberry Pi Foundation.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -4,7 +4,7 @@ category: mbed
 bzurl: https://seeedstudio.com/Arch-Max-v1.1-p-2632.html
 oldwikiname: Arch_Max_v1.1
 prodimagename: Arch_Max_v1.1_product_view.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/102110014 1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/102110014 1.jpg
 surveyurl: https://www.research.net/r/Arch_Max_v1_1
 sku: 102110014
 ---
@@ -13,7 +13,7 @@ sku: 102110014
 
 The Arch Max is a mbed enabled development board for rapid prototyping. It is based on an STM32F407VET6 microcontroller with an ARM Cortex-M4F core running at 168MHz. It provides [Serial Wire Debug](https://en.wikipedia.org/wiki/Joint_Test_Action_Group#Serial_Wire_Debug)(SWD) debug, drag-and-drop programming and USB serial communication.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Arch-Max-v11-p-2632.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/depot/Arch-Max-v11-p-2632.html)
 
 
 Version Tracker
@@ -126,7 +126,7 @@ Resources
 -   [Schematics PDF file for ARCH Max](https://files.seeedstudio.com/wiki/Arch_Max_v1.1/res/Arch_Max.pdf)
 -   [STM32F407 datasheet](https://files.seeedstudio.com/wiki/Arch_Max_v1.1/res/STM32F407.pdf)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Arch_Max_v1.1 -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Arch_Max_v1.1 -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

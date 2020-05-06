@@ -29,7 +29,7 @@ sku: 101020054
 - Suli-compatible Library
 
 !!!Tip
-    - More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    - More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 ## Demonstration
 ---
@@ -41,10 +41,10 @@ Here below we show you how to read the raw data and obtain data in the unit of g
 ![](https://files.seeedstudio.com/wiki/Grove_3_Axis_Digital_Accelerometer_Plus_Minus_16g/images/Grove_-_3-Axis_Digital_Accelerometer_ADXL345_connect_photo.JPG)
 
 - **Step1:** Plug it onto the I2C port of your Grove - Base Shield.
-- **Step2:** Download the [Digital Accelerometer(±16g) Library](https://github.com/Seeed-Studio/Accelerometer_ADXL345) .zip and unpack it into arduino-1.0\libraries in your Arduino installation folder. If you don't know how to install library for Arduino, please follow the toturial [How to install an Arduino library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/)
+- **Step2:** Download the [Digital Accelerometer(±16g) Library](https://github.com/Seeed-Studio/Accelerometer_ADXL345) .zip and unpack it into arduino-1.0\libraries in your Arduino installation folder. If you don't know how to install library for Arduino, please follow the toturial [How to install an Arduino library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/)
 - **Step3：** If you  have the library installed, Open the demo code directly by the path:
 ** File(文件) -> Example(示例) ->DigitalAccelerometer_ADXL345->ADXL345_demo_code. **
-- **Step4：** Upload the code and open the serial monitor(usually it is on the right up corner). Please refer to the toturial [Upload code](http://wiki.seeedstudio.com/Upload_Code/) if you do not know how to upload.
+- **Step4：** Upload the code and open the serial monitor(usually it is on the right up corner). Please refer to the toturial [Upload code](https://wiki.seeedstudio.com/Upload_Code/) if you do not know how to upload.
 - **Step5：** The result will be showed as the format in below image, shake the grove and you will find the number changing.
 
 ![](https://files.seeedstudio.com/wiki/Grove_3_Axis_Digital_Accelerometer_Plus_Minus_16g/images/Digital_Accelerometer.jpg)
@@ -64,7 +64,7 @@ The outputs of this sensor consist of two parts: raw data and 3-axis acceleratio
 **Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
 
 !!!Note
-    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](https://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
@@ -79,7 +79,7 @@ Upload the program to your Arduino/Seeeduino.
 
 - **Step1:** You should have got a raspberry pi and a grovepi or grovepi+.
 
-- **Step2:** You should have completed configuring the development enviroment, otherwise follow [here](http://wiki.seeedstudio.com/GrovePi_Plus/#Introducing_the_GrovePi.2B).
+- **Step2:** You should have completed configuring the development enviroment, otherwise follow [here](https://wiki.seeedstudio.com/GrovePi_Plus/#Introducing_the_GrovePi.2B).
 
 ![](https://files.seeedstudio.com/wiki/Grove_3_Axis_Digital_Accelerometer_Plus_Minus_16g/images/C9-create-tab.png)
 
@@ -361,4 +361,4 @@ if __name__ == "__main__":
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -75,67 +75,67 @@ This section lists main parts in this kit and links to get more information for 
 <tr>
 <td> Grove - Rotary Angle Sensor(P)  </td>
 <td> 1 piece </td>
-<td> [http://www.seeedstudio.com/wiki/Grove_-_Rotary_Angle_Sensor](/Grove-Rotary_Angle_Sensor)
+<td> [https://www.seeedstudio.com/wiki/Grove_-_Rotary_Angle_Sensor](/Grove-Rotary_Angle_Sensor)
 </td></tr>
 <tr>
 <td> Grove – Button</td>
 <td>1 piece </td>
-<td> [http://www.seeedstudio.com/wiki/Grove_-_Button](/Grove-Button)
+<td> [https://www.seeedstudio.com/wiki/Grove_-_Button](/Grove-Button)
 </td></tr>
 <tr>
 <td>Grove - Touch Sensor </td>
 <td>1 piece</td>
-<td> [http://www.seeedstudio.com/wiki/Grove_-_Touch_Sensor](/Grove-Touch_Sensor)
+<td> [https://www.seeedstudio.com/wiki/Grove_-_Touch_Sensor](/Grove-Touch_Sensor)
 </td></tr>
 <tr>
 <td>Grove LEDs</td>
 <td>1 piece</td>
-<td>[http://www.seeedstudio.com/depot/s/GROVE%2520LED.html?search_in_description=0](http://www.seeedstudio.com/depot/s/GROVE%2520LED.html?search_in_description=0)
+<td>[https://www.seeedstudio.com/depot/s/GROVE%2520LED.html?search_in_description=0](https://www.seeedstudio.com/depot/s/GROVE%2520LED.html?search_in_description=0)
 </td></tr>
 <tr>
 <td>Grove - Buzzer</td>
 <td>1 piece</td>
-<td>[http://www.seeedstudio.com/wiki/Grove_-_Buzzer](/Grove-Buzzer)
+<td>[https://www.seeedstudio.com/wiki/Grove_-_Buzzer](/Grove-Buzzer)
 </td></tr>
 <tr>
 <td>Grove - Sound Sensor</td>
 <td>1 piece</td>
-<td>[http://www.seeedstudio.com/wiki/Grove_-_Sound_Sensor](/Grove-Sound_Sensor)
+<td>[https://www.seeedstudio.com/wiki/Grove_-_Sound_Sensor](/Grove-Sound_Sensor)
 </td></tr>
 <tr>
 <td>Grove - Light Sensor</td>
 <td>1 piece</td>
-<td>[http://www.seeedstudio.com/wiki/Grove_-_Light_Sensor_v1.2](/Grove-Light_Sensor_v1.2)
+<td>[https://www.seeedstudio.com/wiki/Grove_-_Light_Sensor_v1.2](/Grove-Light_Sensor_v1.2)
 </td></tr>
 <tr>
 <td>Grove - Temperature Sensor</td>
 <td>1 piece</td>
-<td>[http://www.seeedstudio.com/wiki/Grove_-_Temperature_Sensor](/Grove-Temperature_Sensor)
+<td>[https://www.seeedstudio.com/wiki/Grove_-_Temperature_Sensor](/Grove-Temperature_Sensor)
 </td></tr>
 <tr>
 <td>Grove - Relay</td>
 <td>1 piece</td>
-<td>[http://www.seeedstudio.com/wiki/Grove_-_Relay](/Grove-Relay)
+<td>[https://www.seeedstudio.com/wiki/Grove_-_Relay](/Grove-Relay)
 </td></tr>
 <tr>
 <td>Grove - Servo</td>
 <td>1 piece</td>
-<td>[http://www.seeedstudio.com/wiki/Grove_-_Servo](/Grove-Servo)
+<td>[https://www.seeedstudio.com/wiki/Grove_-_Servo](/Grove-Servo)
 </td></tr>
 <tr>
 <td>Grove - LCD RGB Backlight</td>
 <td>1 piece</td>
-<td>[http://www.seeedstudio.com/wiki/Grove_-_LCD_RGB_Backlight](/Grove-LCD_RGB_Backlight)
+<td>[https://www.seeedstudio.com/wiki/Grove_-_LCD_RGB_Backlight](/Grove-LCD_RGB_Backlight)
 </td></tr>
 <tr>
 <td>Base Shield V2.0</td>
 <td>1 piece</td>
-<td>[http://www.seeedstudio.com/wiki/Base_Shield_v2](/Base_Shield_v2)
+<td>[https://www.seeedstudio.com/wiki/Base_Shield_v2](/Base_Shield_v2)
 </td></tr>
 <tr>
 <td>User Manual (printed copy) </td>
 <td> 1 piece</td>
-<td> [http://www.seeedstudio.com/wiki/images/2/2e/Grove_Starter_Kit_arduino_101_manual%28printed_version%29_s.pdf](https://files.seeedstudio.com/wiki/Grove_Starter_kit_for_Arduino_101/res/Grove_Starter_Kit_arduino_101_manual-printed_version-s.pdf)
+<td> [https://www.seeedstudio.com/wiki/images/2/2e/Grove_Starter_Kit_arduino_101_manual%28printed_version%29_s.pdf](https://files.seeedstudio.com/wiki/Grove_Starter_kit_for_Arduino_101/res/Grove_Starter_Kit_arduino_101_manual-printed_version-s.pdf)
 </td></tr></table>
 
 ##  Getting Started
@@ -148,7 +148,7 @@ Arduino quickly and effectively. You can visit [https://www.arduino.cc/en/Tutori
 ###  Arduino Sketches (basic example for each module)
 
 After you have gotten an LED blinking (for Windows user, you can find it at [https://www.arduino.cc/en/Guide/Windows](https://www.arduino.cc/en/Guide/Windows), you can find other versions for Mac OS and Linux variants at
-[https://www.arduino.cc/en/Guide/HomePage](https://www.arduino.cc/en/Guide/HomePage) ), you still need to get familiar with Seeedstudio Grove system at [http://www.seeedstudio.com/wiki/Grove_System](/Grove_System). And now, you can do some more practical quizzes which are specialized designed for this kit. Download the sketches of quizzes at [https://github.com/Seeed-Studio/Sketchbook_Starter_Kit_for_Arduino](https://github.com/Seeed-Studio/Sketchbook_Starter_Kit_for_Arduino).
+[https://www.arduino.cc/en/Guide/HomePage](https://www.arduino.cc/en/Guide/HomePage) ), you still need to get familiar with Seeedstudio Grove system at [https://www.seeedstudio.com/wiki/Grove_System](/Grove_System). And now, you can do some more practical quizzes which are specialized designed for this kit. Download the sketches of quizzes at [https://github.com/Seeed-Studio/Sketchbook_Starter_Kit_for_Arduino](https://github.com/Seeed-Studio/Sketchbook_Starter_Kit_for_Arduino).
 
 ## Project
 
@@ -161,4 +161,4 @@ After you have gotten an LED blinking (for Windows user, you can find it at [htt
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/shadeydave/arduino-101-ble-rover-05fa85/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

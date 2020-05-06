@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-IR-Distance-Interrupter-p-1278.html
 oldwikiname: Grove_-_IR_Distance_Interrupter_v1.2
 prodimagename: Grove_-_IR_Distance_Interrupter_v1.2.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/101020040 1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/101020040 1.jpg
 surveyurl: https://www.research.net/r/Grove-IR_Distance_Interrupter_v1_2
 sku: 101020040
 tags: grove_digital, io_3v3, io_5v, plat_duino, plat_bbg, plat_wio
@@ -18,7 +18,7 @@ When the reflected light is detected, it produces **Digital HIGH** (or Binary **
 
 With this sensor, you can build the following (but not limited to) applications: **line following robots, optical encoders** and **object counting applications**.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-IR-Distance-Interrupter-p-1278.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-IR-Distance-Interrupter-p-1278.html)
 
 
 <div class="admonition note">
@@ -51,7 +51,7 @@ Features
 -   More durable
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
     
 Specifications
 --------------
@@ -92,7 +92,7 @@ Hardware Overview
 | Parts name                                                                                                                    | Quantity |
 |-------------------------------------------------------------------------------------------------------------------------------|----------|
 | Grove - Infrared Reflective Sensor                                                                                            | 1 piece  |
-| [Grove cable](http://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) | 1 piece  |
+| [Grove cable](https://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) | 1 piece  |
 
 Getting Started
 ---------------
@@ -105,7 +105,7 @@ Let us see how to implement few basic applications with this module:
 
 -   Grove - IR Distance Interrupter v1.2 × 1
 -   Arduino UNO (other models also are fine) × 1
--   [Grove cable](http://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) × 1
+-   [Grove cable](https://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) × 1
 -   [Grove - Base Shield](/Base_Shield_V2) × 1
 
 #### Connections
@@ -156,8 +156,8 @@ void loop()  {
 #### Material required
 
 -   Raspberry Pi (other models also are fine) × 1
--   [GrovePi](http://www.seeedstudio.com/depot/GrovePi-p-1672.html?cPath=73) or [Grovepi+](http://www.seeedstudio.com/depot/GrovePi-p-2241.html?cPath=122_154_158) × 1
--   [Grove cable](http://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) × 1
+-   [GrovePi](https://www.seeedstudio.com/depot/GrovePi-p-1672.html?cPath=73) or [Grovepi+](https://www.seeedstudio.com/depot/GrovePi-p-2241.html?cPath=122_154_158) × 1
+-   [Grove cable](https://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) × 1
 
 #### Hardware Connections and Software Work
 
@@ -167,7 +167,7 @@ void loop()  {
 
 3.Connection: 
 
-Plug Grove - IR Distance Interrupter into port D4 on GrovePi with [Grove cable](http://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57).
+Plug Grove - IR Distance Interrupter into port D4 on GrovePi with [Grove cable](https://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57).
 
 4.Navigate to the demos' directory, run the following command in a terminal.
 ```
@@ -227,7 +227,7 @@ Resources
 -   [LMV358 Datasheet](https://files.seeedstudio.com/wiki/Grove-IR_Distance_Interrupter_v1.2/res/LMV358_datasheet.pdf)
 -   [Infrared Reflective Sensor Source Files](https://files.seeedstudio.com/wiki/Grove-IR_Distance_Interrupter_v1.2/res/Grove-Infrared_Reflective_Sensor_v1.0_SourceFile.zip)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_IR_Distance_Interrupter_v1.2 -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_IR_Distance_Interrupter_v1.2 -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

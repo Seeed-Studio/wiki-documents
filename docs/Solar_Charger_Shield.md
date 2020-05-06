@@ -15,7 +15,7 @@ tags:
 
 The solar charger is a stackable shield to Arduino compatible platforms, enables adaptive battery power and act as energy harvester for in-field charging. You may use various batteries just to shift up for 5V output, or put on Li-ion battery and solar panel to form an autonomous sensor unit.
 
-**Model:[INT107D3P](http://www.seeedstudio.com/depot/solar-charger-shield-p-594.html?cPath=104_107)**
+**Model:[INT107D3P](https://www.seeedstudio.com/depot/solar-charger-shield-p-594.html?cPath=104_107)**
 
 
 
@@ -271,7 +271,7 @@ Please list your question here:
 
 ##   Support  
 
-If you have questions or other better design ideas, you can go to our [forum](http://www.seeedstudio.com/forum) or **wish** to discuss.
+If you have questions or other better design ideas, you can go to our [forum](https://www.seeedstudio.com/forum) or **wish** to discuss.
 
 ##   Version Tracker  
 
@@ -301,11 +301,11 @@ The Additional Idea is the place to write your project ideas about this product,
 
 ##   How to buy  
 
-Here to buy Solar Charger Shield: [http://www.seeedstudio.com/depot/solar-charger-shield-p-594.html?cPath=104_107](http://www.seeedstudio.com/depot/solar-charger-shield-p-594.html?cPath=104_107)
+Here to buy Solar Charger Shield: [https://www.seeedstudio.com/depot/solar-charger-shield-p-594.html?cPath=104_107](https://www.seeedstudio.com/depot/solar-charger-shield-p-594.html?cPath=104_107)
 
 ##   Licensing  
 
 This documentation is licensed under the Creative Commons [Attribution-ShareAlike License 3.0](http://creativecommons.org/licenses/by-sa/3.0/) Source code and libraries are licensed under [GPL/LGPL](http://www.gnu.org/licenses/gpl.html), see source code files for details.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

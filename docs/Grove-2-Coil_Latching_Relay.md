@@ -4,7 +4,7 @@ category: Actuator
 bzurl: https://seeedstudio.com/Grove-2-Coil-Latching-Relay-p-1446.html
 oldwikiname: Grove_-_2-Coil_Latching_Relay
 prodimagename: 2Coil_Latching_Relay_01.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/2Coil Latching Relay.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/2Coil Latching Relay.jpg
 surveyurl: https://www.research.net/r/Grove-2-Coil_Latching_Relay
 sku: 103020010
 tags: grove_digital, io_5v, plat_duino
@@ -14,7 +14,7 @@ tags: grove_digital, io_5v, plat_duino
 
 This module is based on 2-Coil Latching Relay. Contrast to the ordinary relay, this latching relay does not need continuous power to keep the state, only a rising/falling pulse is needed to change the work state. Even the power can be removed when the work state do not need to change, making this module especially suitable for low-power projects.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-2-Coil-Latching-Relay-p-1446.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-2-Coil-Latching-Relay-p-1446.html)
 
 Features
 -------
@@ -24,7 +24,7 @@ Features
 -   Dual Switch
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 Specifications
 -------------
@@ -168,8 +168,8 @@ After reading that you will know how to use Base shield with Grove products to w
 
 This tutorial will include some necessary products:
 
--   [Arduino UNO R3](http://www.seeedstudio.com/depot/Arduino-Uno-Rev3-p-694.html) or [Seeeduino v4](http://www.seeedstudio.com/depot/Seeeduino-V4-p-669.html)
--   [Base Shield](http://www.seeedstudio.com/depot/Base-Shield-V2-p-1378.html)
+-   [Arduino UNO R3](https://www.seeedstudio.com/depot/Arduino-Uno-Rev3-p-694.html) or [Seeeduino v4](https://www.seeedstudio.com/depot/Seeeduino-V4-p-669.html)
+-   [Base Shield](https://www.seeedstudio.com/depot/Base-Shield-V2-p-1378.html)
 -   Grove - 2-Coil Latching Relay
 
 
@@ -306,7 +306,7 @@ Resources
 - [Grove - 2-Coil Latching Relay Eagle File](https://files.seeedstudio.com/wiki/Grove-2-Coil_Latching_Relay/res/Grove-2-Coil_Latching_Relay_Eagle_File.zip)
 - [Latching_Relay_Datasheet](https://files.seeedstudio.com/wiki/Grove-2-Coil_Latching_Relay/res/Latching_Relay_Datesheet.pdf)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_2-Coil_Latching_Relay -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_2-Coil_Latching_Relay -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

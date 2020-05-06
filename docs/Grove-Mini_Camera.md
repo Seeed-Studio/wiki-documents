@@ -4,7 +4,7 @@ category: Others
 bzurl: https://seeedstudio.com/Grove-Mini-Camera-p-1578.html
 oldwikiname: Grove_-_Mini_Camera
 prodimagename: Grove_camera.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/grove camera.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/grove camera.jpg
 surveyurl: https://www.research.net/r/Grove-Mini_Camera
 sku: 101020007
 ---
@@ -13,7 +13,7 @@ sku: 101020007
 
 If you are searching a small size camera, perhaps, Grove-Mini Camera would be your best choice. It’s a mini camera which can be controlled by Arduino. It has integrated image processing to generate 1280\*720 JPEG image. The captured pictures are stored in SD card and you can read SD card information via Mini 8Pin USB interface.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Mini-Camera-p-1578.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-Mini-Camera-p-1578.html)
 
 Features
 -------
@@ -23,7 +23,7 @@ Features
 -   Tiny size and light weight
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 Specifications
 -------------
@@ -156,7 +156,7 @@ Resources
 
 - [Mini Camera Eagle File](https://files.seeedstudio.com/wiki/Grove-Mini_Camera/res/Mini_Camera_Eagle_File.zip)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Mini_Camera -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Mini_Camera -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

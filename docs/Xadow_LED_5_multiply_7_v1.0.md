@@ -12,7 +12,7 @@ sku:  104040000
 
 The Xadow LED 5x7 contains two parts: an LED panel and an LED controller. The LED panel is a 5x7 Monochrome matrix. The LED controller is a control module for controlling the LED panel using 12 I/O pins of the Atmega168PV. You can send command to LED controller through I2C interface. Then let the led controller to control the LED display. For example, display alphabet and number, or enter sleep mode to reduce the consumption.
 
-[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](http://www.seeedstudio.com/depot/xadow-led-p-1518.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/depot/xadow-led-p-1518.html)
 
 ##  Specification
 ---
@@ -188,4 +188,4 @@ You can see the belowing scene after uploading the code to Xadow Main Board.
 *   [Xadow LED Firmware](https://files.seeedstudio.com/wiki/Xadow_LED_5_multiply_7_v1.0/res/Xadow_LED_Firmware.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

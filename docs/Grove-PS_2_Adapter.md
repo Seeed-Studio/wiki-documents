@@ -147,7 +147,7 @@ A PS/2 connector has 6 pins as you can see from the following diagram. Pin 1 and
 <td> -
 </td></tr></table>
 
-1.Plug the PS/2 mouse or keyboard to the Grove-PS/2 Adapter, and then connect Grove to the D5/D6 of [Grove - Base Shield](http://www.seeedstudio.com/depot/grove-base-shield-p-754.html?cPath=132_134). You can change the digital port as you like. But, don't forget to change the port number in the definition of the demo code at the same time.
+1.Plug the PS/2 mouse or keyboard to the Grove-PS/2 Adapter, and then connect Grove to the D5/D6 of [Grove - Base Shield](https://www.seeedstudio.com/depot/grove-base-shield-p-754.html?cPath=132_134). You can change the digital port as you like. But, don't forget to change the port number in the definition of the demo code at the same time.
 
 !!!Note
      Pin 5 is the mouse data pin, pin 6 is the clock pin.
@@ -207,7 +207,7 @@ void loop()
     }
 }
 ```
-Please click [here](http://www.seeedstudio.com/wiki/Upload_Code) if you do not know how to upload.
+Please click [here](https://www.seeedstudio.com/wiki/Upload_Code) if you do not know how to upload.
  After uploading the firmware to the MCU,you can check the status via a Serial Monitor(9600 baudrate):
 
  ![](https://files.seeedstudio.com/wiki/Grove-PS_2_Adapter/img/Result.jpg)
@@ -229,4 +229,4 @@ Please click [here](http://www.seeedstudio.com/wiki/Upload_Code) if you do not k
 *   [PS2 Adapter Library](https://files.seeedstudio.com/wiki/Grove-PS_2_Adapter/res/PS2_Adapter_Library.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

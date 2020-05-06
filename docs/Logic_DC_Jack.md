@@ -123,15 +123,15 @@ Even we know how to use the logic function, but how we know the default level st
 
 Something is needed:
 
-*   [Grove - Button](http://www.seeedstudio.com/depot/Grove-Button-p-766.html?cPath=85_50)
+*   [Grove - Button](https://www.seeedstudio.com/depot/Grove-Button-p-766.html?cPath=85_50)
 
-*   [Grove - Red LED](http://www.seeedstudio.com/depot/Grove-Red-LED-p-1142.html?cPath=81_35)
+*   [Grove - Red LED](https://www.seeedstudio.com/depot/Grove-Red-LED-p-1142.html?cPath=81_35)
 
 *   9V Battery
 
 ####  Connecting hardware
 
-In this demo, we use [Grove - Button](http://www.seeedstudio.com/depot/Grove-Button-p-766.html?cPath=85_50) as INPUT, and [Grove - Red LED](http://www.seeedstudio.com/depot/Grove-Red-LED-p-1142.html?cPath=81_35) as OUTPUT.
+In this demo, we use [Grove - Button](https://www.seeedstudio.com/depot/Grove-Button-p-766.html?cPath=85_50) as INPUT, and [Grove - Red LED](https://www.seeedstudio.com/depot/Grove-Red-LED-p-1142.html?cPath=81_35) as OUTPUT.
 
 Switch to **NOT** gate.
 
@@ -175,51 +175,51 @@ Below Groves can work with Logic DC Jack well:
 
 ###  Input
 
--  [Grove - Button](http://www.seeedstudio.com/depot/Grove-Button-p-766.html?cPath=85_50)
+-  [Grove - Button](https://www.seeedstudio.com/depot/Grove-Button-p-766.html?cPath=85_50)
 
--   [Grove - Touch Sensor](http://www.seeedstudio.com/depot/Grove-Touch-Sensor-p-747.html?cPath=85_94)
+-   [Grove - Touch Sensor](https://www.seeedstudio.com/depot/Grove-Touch-Sensor-p-747.html?cPath=85_94)
 
--    [Grove - Switch](http://www.seeedstudio.com/depot/Grove-SwitchP-p-1252.html?cPath=85_50)
+-    [Grove - Switch](https://www.seeedstudio.com/depot/Grove-SwitchP-p-1252.html?cPath=85_50)
 
--    [Grove - Light Sensor](http://www.seeedstudio.com/depot/Grove-Light-Sensor-p-746.html?cPath=25_27)
+-    [Grove - Light Sensor](https://www.seeedstudio.com/depot/Grove-Light-Sensor-p-746.html?cPath=25_27)
 
--    [Grove - Loudness Sensor](http://www.seeedstudio.com/depot/Grove-Loudness-Sensor-p-1382.html?cPath=25_128)
+-    [Grove - Loudness Sensor](https://www.seeedstudio.com/depot/Grove-Loudness-Sensor-p-1382.html?cPath=25_128)
 
--    [Grove - Moisture Sensor](http://www.seeedstudio.com/depot/Grove-Moisture-Sensor-p-955.html?cPath=25_27)
+-    [Grove - Moisture Sensor](https://www.seeedstudio.com/depot/Grove-Moisture-Sensor-p-955.html?cPath=25_27)
 
--   [Grove - Water Sensor](http://www.seeedstudio.com/depot/Grove-Water-Sensor-p-748.html?cPath=25_27)
+-   [Grove - Water Sensor](https://www.seeedstudio.com/depot/Grove-Water-Sensor-p-748.html?cPath=25_27)
 
--    [Grove - Magnetic Switch](http://www.seeedstudio.com/depot/Grove-Magnetic-Switch-p-744.html)
+-    [Grove - Magnetic Switch](https://www.seeedstudio.com/depot/Grove-Magnetic-Switch-p-744.html)
 
-*   [Grove - Tilt Switch](http://www.seeedstudio.com/depot/Grove-Tilt-Switch-p-771.html)
+*   [Grove - Tilt Switch](https://www.seeedstudio.com/depot/Grove-Tilt-Switch-p-771.html)
 
-*   [Grove - Line Finder](http://www.seeedstudio.com/depot/Grove-Line-Finder-p-825.html?cPath=25_31)
+*   [Grove - Line Finder](https://www.seeedstudio.com/depot/Grove-Line-Finder-p-825.html?cPath=25_31)
 
-*   [Grove - PIR Motion Sensor](http://www.seeedstudio.com/depot/Grove-PIR-Motion-Sensor-p-802.html?cPath=25_31)
+*   [Grove - PIR Motion Sensor](https://www.seeedstudio.com/depot/Grove-PIR-Motion-Sensor-p-802.html?cPath=25_31)
 
-*   [Grove - Rotary Angle Sensor](http://www.seeedstudio.com/depot/Grove-Rotary-Angle-Sensor-p-770.html?cPath=85_52)
+*   [Grove - Rotary Angle Sensor](https://www.seeedstudio.com/depot/Grove-Rotary-Angle-Sensor-p-770.html?cPath=85_52)
 
-*   [Grove - Slide Potentiometer](http://www.seeedstudio.com/depot/Grove-Slide-Potentiometer-p-1196.html?cPath=85_52)
+*   [Grove - Slide Potentiometer](https://www.seeedstudio.com/depot/Grove-Slide-Potentiometer-p-1196.html?cPath=85_52)
 
-*   [Grove - Flame Sensor](http://www.seeedstudio.com/depot/Grove-Flame-Sensor-p-1450.html)
+*   [Grove - Flame Sensor](https://www.seeedstudio.com/depot/Grove-Flame-Sensor-p-1450.html)
 
 ###  Output
 
-*   [Grove - LED](http://www.seeedstudio.com/depot/Grove-Red-LED-p-1142.html)
+*   [Grove - LED](https://www.seeedstudio.com/depot/Grove-Red-LED-p-1142.html)
 
-*   [Grove - LED String Light](http://www.seeedstudio.com/depot/Grove-LED-String-Light-p-2324.html)
+*   [Grove - LED String Light](https://www.seeedstudio.com/depot/Grove-LED-String-Light-p-2324.html)
 
-*   [Grove - Vibration Motor](http://www.seeedstudio.com/depot/Grove-Vibration-Motor-p-839.html)
+*   [Grove - Vibration Motor](https://www.seeedstudio.com/depot/Grove-Vibration-Motor-p-839.html)
 
-*   [Grove - Buzzer](http://www.seeedstudio.com/depot/Grove-Buzzer-p-768.html?cPath=38)
+*   [Grove - Buzzer](https://www.seeedstudio.com/depot/Grove-Buzzer-p-768.html?cPath=38)
 
-*   [Grove - Mini Fan](http://www.seeedstudio.com/depot/Grove-Mini-Fan-p-1819.html)
+*   [Grove - Mini Fan](https://www.seeedstudio.com/depot/Grove-Mini-Fan-p-1819.html)
 
-*   [Grove - Recorder](http://www.seeedstudio.com/depot/Grove-Recorder-p-1825.html?cPath=25_128)
+*   [Grove - Recorder](https://www.seeedstudio.com/depot/Grove-Recorder-p-1825.html?cPath=25_128)
 
-*   [Grove - Electromagnet](http://www.seeedstudio.com/depot/Grove-Electromagnet-p-1820.html?cPath=25_33)
+*   [Grove - Electromagnet](https://www.seeedstudio.com/depot/Grove-Electromagnet-p-1820.html?cPath=25_33)
 
-*   [Grove - Relay](http://www.seeedstudio.com/depot/Grove-Relay-p-769.html?cPath=39_42)
+*   [Grove - Relay](https://www.seeedstudio.com/depot/Grove-Relay-p-769.html?cPath=39_42)
 
 
 
@@ -239,4 +239,4 @@ Below Groves can work with Logic DC Jack well:
 - **[Wik]**    [Wiki page of AND Gate](https://en.wikipedia.org/wiki/AND_gate)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

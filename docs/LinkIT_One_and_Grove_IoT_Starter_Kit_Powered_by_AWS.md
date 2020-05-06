@@ -9,7 +9,7 @@ sku:
 ---
 ![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/Aws_linkit_cover.JPG)
 
-_Primary reference: [Grove IoT Starter Kits Powered by AWS](/Grove_IoT_Starter_Kits_Powered_by_AWS "Grove IoT Starter Kits Powered by AWS") , [LinkIt ONE](/LinkIt_ONE "LinkIt ONE"), [MediaTek AWS IoT Guide](http://labs.mediatek.com/site/global/developer_tools/mediatek_linkit/hdk_intro/aws_kit/index.gsp)_
+_Primary reference: [Grove IoT Starter Kits Powered by AWS](/Grove_IoT_Starter_Kits_Powered_by_AWS "Grove IoT Starter Kits Powered by AWS") , [LinkIt ONE](/LinkIt_ONE "LinkIt ONE"), [MediaTek AWS IoT Guide](https://labs.mediatek.com/site/global/developer_tools/mediatek_linkit/hdk_intro/aws_kit/index.gsp)_
 
 **LinkIt ONE** development board is an open source, high-performance development board for wearable and IoT product prototyping. It is based on MT2502 (ARM7EJ-S™ MCU) and integrates GSM, GPRS, Wi-Fi, Bluetooth BR/EDR/BLE, GPS, Audio decoder, and SD card connector on a single development board. The kit enables you to build up cloud computing connected projects that involve communications for smart cities, transportation and logistics.
 
@@ -29,52 +29,52 @@ With MediaTek LinkIt™ ONE and Grove IoT Starter Kit Powered by AWS, you can cr
 <th> Documentation
 </th></tr>
 <tr>
-<td>[LinkIt ONE](http://www.seeedstudio.com/depot/LinkIt-ONE-p-2017.html?cPath=122_142) </td>
+<td>[LinkIt ONE](https://www.seeedstudio.com/depot/LinkIt-ONE-p-2017.html?cPath=122_142) </td>
 <td> 1 </td>
 <td> [ Read Here](/LinkIt_ONE "LinkIt ONE")
 </td></tr>
 <tr>
-<td>[Base Shield](http://www.seeedstudio.com/depot/Base-Shield-V2-p-1378.html?cPath=98_16) </td>
+<td>[Base Shield](https://www.seeedstudio.com/depot/Base-Shield-V2-p-1378.html?cPath=98_16) </td>
 <td> 1 </td>
 <td> [ Read Here](/Base_shield_v2 "Base shield v2")
 </td></tr>
 <tr>
-<td>[Grove - 3-Axis Digital Accelerometer(±16g)](http://www.seeedstudio.com/depot/Grove-3Axis-Digital-Accelerometer16g-p-1156.html?cPath=25_132) </td>
+<td>[Grove - 3-Axis Digital Accelerometer(±16g)](https://www.seeedstudio.com/depot/Grove-3Axis-Digital-Accelerometer16g-p-1156.html?cPath=25_132) </td>
 <td> 1 </td>
 <td> [ Read Here](/Grove-3-Axis_Digital_Accelerometer_ADXL345 "Grove - 3-Axis Digital Accelerometer ADXL345")
 </td></tr>
 <tr>
-<td>[Grove - Light Sensor](http://www.seeedstudio.com/depot/Grove-Light-Sensor-p-746.html?cPath=25_27) </td>
+<td>[Grove - Light Sensor](https://www.seeedstudio.com/depot/Grove-Light-Sensor-p-746.html?cPath=25_27) </td>
 <td> 1 </td>
 <td>[ Read Here](/Grove-Light_Sensor "Grove - Light Sensor")
 </td></tr>
 <tr>
-<td>[Grove - LED Bar v2.0](http://www.seeedstudio.com/depot/Grove-LED-Bar-v20-p-2474.html) </td>
+<td>[Grove - LED Bar v2.0](https://www.seeedstudio.com/depot/Grove-LED-Bar-v20-p-2474.html) </td>
 <td> 1 </td>
 <td>[ Read Here](/Grove-LED_Bar "Grove - LED Bar")
 </td></tr>
 <tr>
-<td>[Grove - Moisture Sensor](http://www.seeedstudio.com/depot/Grove-Moisture-Sensor-p-955.html?cPath=25_27) </td>
+<td>[Grove - Moisture Sensor](https://www.seeedstudio.com/depot/Grove-Moisture-Sensor-p-955.html?cPath=25_27) </td>
 <td> 1 </td>
 <td>[ Read Here](/Grove-Moisture_Sensor "Grove - Moisture Sensor")
 </td></tr>
 <tr>
-<td>[Grove - Touch Sensor](http://www.seeedstudio.com/depot/Grove-Touch-Sensor-p-747.html?cPath=85_94) </td>
+<td>[Grove - Touch Sensor](https://www.seeedstudio.com/depot/Grove-Touch-Sensor-p-747.html?cPath=85_94) </td>
 <td> 1 </td>
 <td>[ Read Here](/Grove-Touch_Sensor "Grove - Touch Sensor")
 </td></tr>
 <tr>
-<td>[Grove - Temperature Sensor](http://www.seeedstudio.com/depot/Grove-Temperature-Sensor-p-774.html?cPath=25_125) </td>
+<td>[Grove - Temperature Sensor](https://www.seeedstudio.com/depot/Grove-Temperature-Sensor-p-774.html?cPath=25_125) </td>
 <td> 1 </td>
 <td>[ Read Here](/Grove-Temperature_Sensor_V1.2 "Grove - Temperature Sensor V1.2")
 </td></tr>
 <tr>
-<td>[Grove - OLED Display](http://www.seeedstudio.com/depot/Grove-OLED-Display-112-p-781.html?cPath=34_36) 1.12’’</td>
+<td>[Grove - OLED Display](https://www.seeedstudio.com/depot/Grove-OLED-Display-112-p-781.html?cPath=34_36) 1.12’’</td>
 <td> 1 </td>
 <td>[ Read Here](/Grove-OLED_Display_0.96inch "Grove - OLED Display 0.96")
 </td></tr>
 <tr>
-<td>[Grove - Loudness Sensor](http://www.seeedstudio.com/depot/Grove-Loudness-Sensor-p-1382.html?cPath=25_128) </td>
+<td>[Grove - Loudness Sensor](https://www.seeedstudio.com/depot/Grove-Loudness-Sensor-p-1382.html?cPath=25_128) </td>
 <td> 1 </td>
 <td>[ Read Here](/Grove-Loudness_Sensor "Grove - Loudness Sensor")
 </td></tr>
@@ -160,13 +160,13 @@ This tutorial is under Windows(Windows 7 or above) system and Arduino IDE 1.5.7 
 
 *   [Download Arduino IDE 1.5.7](https://www.arduino.cc/en/Main/OldSoftwareReleases#previous)
 
-*   [Download LinkIt SDK 1.1.17](http://labs.mediatek.com/site/global/developer_tools/mediatek_linkit/sdk_intro/index.gsp)
+*   [Download LinkIt SDK 1.1.17](https://labs.mediatek.com/site/global/developer_tools/mediatek_linkit/sdk_intro/index.gsp)
 
 *   [How to install SDK and use LinkIt ONE](/LinkIt_ONE)
 
 *   [Update firmware of LinkIt ONE to 1.1.17](/LinkIt_ONE#Updating_Firmware)
 
-*   Refer to [here](http://labs.mediatek.com/site/global/developer_tools/mediatek_linkit/get-started/index.gsp) to build a development  environment.
+*   Refer to [here](https://labs.mediatek.com/site/global/developer_tools/mediatek_linkit/get-started/index.gsp) to build a development  environment.
 
 **Note**: This Version support Arduino IDE 1.5.7(And Arduino IDE 1.6.5) and LinkIt SDK 1.1.17 only.
 
@@ -335,4 +335,4 @@ You can check the status of Touch Sensor now. Try press the Touch Sensor, and up
 *   [AWS IoT](https://aws.amazon.com/iot/)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

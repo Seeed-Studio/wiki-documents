@@ -9,7 +9,7 @@ This time we would like to take CAN-Bus shield for example to show you how to mo
 
 Firstly, a github account is needed, if it is your first time to use github, please go to [github.com](https://github.com/) to register.
 
-If you already have a github account, click the url: [http://wiki.seeed.cc/CAN-BUS_Shield_V1.2/](http://wiki.seeed.cc/CAN-BUS_Shield_V1.2/)   to visit the wiki page for **CAN-Bus Shield.**
+If you already have a github account, click the url: [https://wiki.seeedstudio.com/CAN-BUS_Shield_V1.2/](https://wiki.seeedstudio.com/CAN-BUS_Shield_V1.2/)   to visit the wiki page for **CAN-Bus Shield.**
 
 - Step1: Click the the github icon on the right up corner, it will lead you to the github repository main page of the whole documentation system.
 
@@ -46,4 +46,4 @@ Then, github will fork the whole repository to your personal account, please cli
 If this is too complicated to you, you are also welcome to fill in the survey at the end of the document or write to us at Jeremy.xiao@seeed.cc or Loovee@seeed.cc. We are looking forward to your message! Happy hacking!
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

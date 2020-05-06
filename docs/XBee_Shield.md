@@ -14,10 +14,10 @@ tags:
 
 A **Xbee shield** allows an **Arduino** or [Seeeduino](https://seeeddoc.github.io/Seeeduino_V2.2/) board to communicate wirelessly using **Bee compatible modules** (like Zigbee or BlueTooth Bee). It is designed to be used with **Xbee module from MaxStream**. It can be used as a **Serial Port** / **USB replacement. ** It is used to connect two **Seeeduinos** using **Zigbee** / **Bluetooth Bee** or connect a **Seeeduino** with PC Wirelessly. Two toggle switches decides how **Rxd** and **Txd** pins of Bee modules be connected to **Seeeduino** pins. These two switches provides options to connect **RxD** and **TxD** lines of Bee Modules to **Seeduino Hardware Serial Port** or **Digital pins** **11** and **12** or **FTDI** **RxD** and **Txd** Pins.
 
- **Model:[WLS114A0P](http://www.seeedstudio.com/depot/xbee%C3%82%C2%AE-shield-v11-by-seeedstudio-p-419.html?cPath=104_109)**
+ **Model:[WLS114A0P](https://www.seeedstudio.com/depot/xbee%C3%82%C2%AE-shield-v11-by-seeedstudio-p-419.html?cPath=104_109)**
 
 
-Seeed Studio's **XBee®_Shield** is derived from [Arduino Xbee shield](http://www.arduino.cc/en/Main/ArduinoXbeeShield), with following features:
+Seeed Studio's **XBee®_Shield** is derived from [Arduino Xbee shield](https://arduino.cc/en/Main/ArduinoXbeeShield), with following features:
 
 *   Smaller form
 *   SMT package for most of the components
@@ -67,7 +67,7 @@ void loop()
 
 ##   Specification  
 
-See [features](http://wiki.seeedstudio.com/XBee_Shield/#features "XBee_Shield#Features") above.
+See [features](https://wiki.seeedstudio.com/XBee_Shield/#features "XBee_Shield#Features") above.
 
 ##   Mechanic Dimensions  
 
@@ -223,7 +223,7 @@ void loop()
 
 ###   Send AT Updated Version for V 1.0  
 
-The code above may have worked on earlier versions but the SoftwareSerial library is now part of the core.  The following code is taken almost directly from the [Aruino SoftwareSerial manual.](http://arduino.cc/en/Reference/SoftwareSerial)
+The code above may have worked on earlier versions but the SoftwareSerial library is now part of the core.  The following code is taken almost directly from the [Aruino SoftwareSerial manual.](https://arduino.cc/en/Reference/SoftwareSerial)
 
 <pre>
 /*
@@ -276,7 +276,7 @@ You should have received a copy of the GNU Lesser General Public
 License along with this library; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-For more details about the product please check http://www.seeedstudio.com/depot/
+For more details about the product please check https://www.seeedstudio.com/depot/
 
 Upload this sketch to Seeeduino and press reset*/
 
@@ -368,7 +368,7 @@ Please list your question here(if any).
 
 ##   Support  
 
-If you have questions or other better design ideas, you can go to our [forum](http://www.seeedstudio.com/forum) or **wish** to discuss.
+If you have questions or other better design ideas, you can go to our [forum](https://www.seeedstudio.com/forum) or **wish** to discuss.
 
 ##   Version Tracker  
 
@@ -398,7 +398,7 @@ The Additional Idea is the place to write your project ideas about this product,
 
 ##   How to buy  
 
-Click here to buy : [http://www.seeedstudio.com/depot/xbee%C3%82%C2%AE-shield-v11-by-seeedstudio-p-419.html?cPath=104_109](http://www.seeedstudio.com/depot/xbee%C3%82%C2%AE-shield-v11-by-seeedstudio-p-419.html?cPath=104_109)
+Click here to buy : [https://www.seeedstudio.com/depot/xbee%C3%82%C2%AE-shield-v11-by-seeedstudio-p-419.html?cPath=104_109](https://www.seeedstudio.com/depot/xbee%C3%82%C2%AE-shield-v11-by-seeedstudio-p-419.html?cPath=104_109)
 
 ##   Licensing  
 
@@ -422,7 +422,7 @@ Links to external webpages which provide more application ideas, documents/datas
 
 ##   Resources  
 
-- **[Arduino]**    [Arduino Xbee Shield Page](http://www.arduino.cc/en/Main/ArduinoXbeeShield)
+- **[Arduino]**    [Arduino Xbee Shield Page](https://arduino.cc/en/Main/ArduinoXbeeShield)
 
 - **[Eagle]**    [eagle for Xbee_Shield_v1.0](https://files.seeedstudio.com/wiki/XBee-Shield/res/Eagle_XBee_Shield_v1.0.zip)
 
@@ -436,4 +436,4 @@ Links to external webpages which provide more application ideas, documents/datas
 - **[EAGLE]**[Xbee_shield_v1.1 sch](https://files.seeedstudio.com/wiki/XBee-Shield/res/Xbee_shield_v1.11.sch)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

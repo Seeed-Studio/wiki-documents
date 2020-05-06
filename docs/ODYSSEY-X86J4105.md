@@ -2,7 +2,7 @@
 name: ODYSSEY - X86J4105
 category: ODYSSEY
 bzurl: https://www.seeedstudio.com/ODYSSEY-X86J4105800-p-4445.html
-wikiurl: http://wiki.seeedstudio.com/ODYSSEY-X86J4105/
+wikiurl: https://wiki.seeedstudio.com/ODYSSEY-X86J4105/
 sku: 102110399
 ---
 
@@ -201,25 +201,25 @@ You can also power the ODYSSEY - X86J4105 through the USB-C port with 12V input.
 
 The ODYSSEY - X86J4105 is built with Arduino Core(ATSAMD21G18) which provides more functionality to the board, and to use it, simply download the [Arduino IDE](https://www.arduino.cc/en/main/software), and Install the Windows version.
 
-1. Click `File`->`Preferences`->`Additional Boards Manager URL:` and Copy the following link into it `https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_seeeduino_boards_index.json`.
+1. Click `File`->`Preferences`->`Additional Boards Manager URL:` and Copy the following link into it `https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json`.
 
-2. Click `Tools`->`Board:`->`Boards Manager...`, and Boards Manager will appear. Search and install the **`Seeeduino SAMD Zero`** board library.
+2. Click `Tools`->`Board:`->`Boards Manager...`, and Boards Manager will appear. Search and install the **`Seeeduino Zero`** board library.
 
-![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/SAMD.jpg)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/ArduinoBoard.png)
 
 3. Select the right Port and Board before uploading. 
 
-- `Port` -> `COM4(Seeeduno Cortex M0+)`
+- `Port` -> `COMxx(Seeeduno Zero)`
 
-- `Board` -> `Seeeduino Cortex M0+`
+- `Board` -> `Seeeduino Zero`
 
-![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/Arduino%20IDE.png)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/ArduinoPort.png)
 
-1. Feel free to explore your creativity with ODYSSEY - X86J4105!
+Feel free to explore your creativity with ODYSSEY - X86J4105!
 
 ## Using the Arduino Core (ATSAMD21G18) in Linux OS
 
-If you have installed Linux OS, Download the Linux verison of [Arduino IDE](https://www.arduino.cc/en/main/software) and install the IDE as follow:
+If you have installed Linux OS, Download the Linux version of [Arduino IDE](https://www.arduino.cc/en/main/software) and install the IDE as follow:
 
 ### Installing Arduino IDE
 
@@ -255,17 +255,17 @@ cd /opt/arduino-1.8.10 && ./arduino-linux-setup.sh
 
 ### Installing Board Libraries
 
-1. Click `File`->`Preferences`->`Additional Boards Manager URL:` and Copy the following link into it `https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_seeeduino_boards_index.json`.
+1. Click `File`->`Preferences`->`Additional Boards Manager URL:` and Copy the following link into it `https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json`.
 
-2. Click `Tools`->`Board:`->`Boards Manager...`, and Boards Manager will appear. Search and install the **`Seeeduino SAMD Zero`** board library.
+2. Click `Tools`->`Board:`->`Boards Manager...`, and Boards Manager will appear. Search and install the **`Seeeduino Zero`** board library.
 
-![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/Linux.png)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/LinuxBoard.png)
 
 3. Select the right Port and Board before uploading.
 
-- `Port` -> `ttyACM0(Seeeduno Cortex M0+)`
+- `Port` -> `ttyACM0(Seeeduno Zero)`
 
-- `Board` -> `Seeeduino Cortex M0+`
+- `Board` -> `Seeeduino Zero`
 
 ## FAQs
 
@@ -313,6 +313,8 @@ This also need to be configured in the BIOS. Enter BIOS settings by pressing DEL
 
 - **[PDF]** [Atmel-SAMD21-datasheet](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/Atmel-SAMD21-datasheet.pdf)
 
+- **[PDF]** [ODYSSEY-X86 User Manual](https://files.seeedstudio.com/products/102110399/Documents/ODYSSEY-X86%20User-Manual-v1.1.pdf)
+
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

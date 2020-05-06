@@ -26,7 +26,7 @@ Here are some funny projects for your reference.
 |Simple Wi-Fi Messager|Send data to Google Docs|Solar Panel Monitoring System|
 |--------|----------|---------|
 |![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/example_1.jpg)|![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/example_2.jpg)|![](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/example_3.jpg)|
-|[Make it Now](http://www.instructables.com/id/Arduino-Yun-Messager/)|[Make it Now](http://www.instructables.com/id/Google-Docs-and-the-Arduino-Y%C3%BAn/)|[Make it Now](http://www.instructables.com/id/Arduino-Yun-Solar-Panel-Monitoring-System/)|
+|[Make it Now](https://www.instructables.com/id/Arduino-Yun-Messager/)|[Make it Now](https://www.instructables.com/id/Google-Docs-and-the-Arduino-Y%C3%BAn/)|[Make it Now](https://www.instructables.com/id/Arduino-Yun-Solar-Panel-Monitoring-System/)|
 
 
 ## Features
@@ -122,7 +122,7 @@ First of all, you need to:
 
 * **Get a Micro-USB cable**
     * You need a Micro-USB cable first; the data cable of an Android Phone will do fine.
-If you can't find one, you can buy one [here](http://www.seeedstudio.com/depot/Micro-USB-Cable-48cm-p-1475.html?cPath=98_100).
+If you can't find one, you can buy one [here](https://www.seeedstudio.com/depot/Micro-USB-Cable-48cm-p-1475.html?cPath=98_100).
 
 !!!Warning
     Take gentle care in handling micro USB socket, or you might break the socket off.
@@ -388,4 +388,4 @@ String getTimeStamp() {
 Yun Bridge Library is the mechanism used in Arduino Yun for communication between a MPU and a MCU. Seeeduino Cloud supports Yun Bridge Library to make it easy for Arduino users to build their IoT projects.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

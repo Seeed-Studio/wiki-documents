@@ -14,7 +14,7 @@ This repo demonstrates how to use the built-in Infrared Emitter as component in 
 
 ## Example Code
 
-Navigate to **Files** -> **Examples** -> **IRLib2** -> **Send**. The send example will appear and should look like below. To test the IR signal from Wio Terminal, you can use a [Grove - Infrared Receiver](http://wiki.seeedstudio.com/Grove-Infrared_Receiver/). This can be easily modified to use Wio Terminal as your TV remote control!
+Navigate to **Files** -> **Examples** -> **IRLib2** -> **Send**. The send example will appear and should look like below. To test the IR signal from Wio Terminal, you can use a [Grove - Infrared Receiver](https://wiki.seeedstudio.com/Grove-Infrared_Receiver/). This can be easily modified to use Wio Terminal as your TV remote control!
 
 **Note:** **`WIO_IR`** is defined for the builtin Infrared Emitter(Already defined in the header file of this library so no need to defined in ino file)
 

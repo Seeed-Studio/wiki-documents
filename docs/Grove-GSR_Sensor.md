@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-GSR-sensor-p-1614.html
 oldwikiname: Grove_-_GSR_Sensor
 prodimagename: GSR.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/101020052 1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/101020052 1.jpg
 surveyurl: https://www.research.net/r/Grove-GSR_Sensor
 sku: 101020052
 tags: grove_analog, io_3v3, io_5v, plat_duino, plat_linkit, plat_pi, plat_bbg
@@ -17,7 +17,7 @@ GSR stands for galvanic skin response, is a method of measuring the electrical c
 !!!Warning
     Grove-GSR Sensor measures the resistance of the people, NOT Conductivity!
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-GSR-sensor-p-1614.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-GSR-sensor-p-1614.html)
 
 ## Version
 
@@ -39,7 +39,7 @@ GSR stands for galvanic skin response, is a method of measuring the electrical c
 
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 ## Platforms Supported
 
@@ -60,7 +60,7 @@ GSR stands for galvanic skin response, is a method of measuring the electrical c
 | Seeeduino V4.2 | Base Shield |  Grove - GSR|
 |--------------|----------------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/img/Grove-GSR_s.jpg)|
-|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-GSR-sensor-p-1614.html)|
+|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-GSR-sensor-p-1614.html)|
 
 - Step 2. Connect the Grove-GSR to **A0** on Base Shield.
 - Step 3. Plug the base Shield into Seeeduino-V4.2.
@@ -141,7 +141,7 @@ void loop(){
 
 #### Software
 
-- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
 - **Step 2**. Download the source file by cloning the grove.py library. 
 
 ```
@@ -283,4 +283,4 @@ A1:  We measure the signal by voltage and print to COM port as (0~1023).
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/factoryeight/emotion-towards-a-better-future-a01489/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

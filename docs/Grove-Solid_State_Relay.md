@@ -30,7 +30,7 @@ Grove – Solid State Relay is a non-contact electronic switch module that has r
 - Grove compatible
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 
 ## Application Ideas
@@ -72,7 +72,7 @@ Grove – Solid State Relay is a non-contact electronic switch module that has r
 
 
 !!!Note
-    If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+    If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
 !!!Warning
         This demon works with 220V AC load, please pay attention for your safety.
@@ -83,7 +83,7 @@ Grove – Solid State Relay is a non-contact electronic switch module that has r
 | Seeeduino V4.2 | Base Shield| Bulb |Grove - Solid State Relay|
 |--------------|-------------|-----------------|-----|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay/img/bulb.jpg)|![](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay/img/thumbnail.jpg)|
-|<a href="http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|Use your own bulb :)</a>|<a href="https://www.seeedstudio.com/Grove-Solid-State-Relay-p-1359.html" target="_blank">Get One Now</a>|
+|<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|Use your own bulb :)</a>|<a href="https://www.seeedstudio.com/Grove-Solid-State-Relay-p-1359.html" target="_blank">Get One Now</a>|
 
 
 !!!note
@@ -128,7 +128,7 @@ Grove – Solid State Relay is a non-contact electronic switch module that has r
 /*
   Grove - Solid State Relay Demo Code
   The ssr will turn on for 5s and then turn off for 5s, and so on.
-  http://www.seeedstudio.com
+  https://www.seeedstudio.com
 */
 
 int ssrControlPin = 3;
@@ -145,7 +145,7 @@ void loop() {
 }
 ```
 
-- **Step 2.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 2.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 
 Done uploading, then you will see the bulb turn on 5s and then turn off 5s continuously.
@@ -358,4 +358,4 @@ From the above experimental results, the following conclusions can be drawn:
 - **[PDF]** [Grove - Solid State Relay Test Report](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay/res/Grove-SSR_Test_Report_V0.3.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

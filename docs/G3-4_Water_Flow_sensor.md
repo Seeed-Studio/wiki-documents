@@ -237,7 +237,7 @@ Once you have it wired up you will need to upload the following code to your See
 ```
 // reading liquid flow rate using Seeeduino and Water Flow Sensor from Seeedstudio.com
 // Code adapted by Charles Gantt from PC Fan RPM code written by Crenn @thebestcasescenario.com
-// http:/themakersworkbench.com http://thebestcasescenario.com http://seeedstudio.com
+// http:/themakersworkbench.com http://thebestcasescenario.com https://www.seeedstudio.com
 
 volatile int NbTopsFan; //measuring the rising edges of the signal
 int Calc;
@@ -273,7 +273,7 @@ void loop ()
     Serial.print (" L/hour\r\n"); //Prints "L/hour" and returns a  new line
 }
 ```
-You can refer our forum for more details about [Reading Water Flow rate with Water Flow Sensor](http://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632).
+You can refer our forum for more details about [Reading Water Flow rate with Water Flow Sensor](https://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632).
 
 ##   Wiring Diagram
 ---
@@ -324,7 +324,7 @@ Yeah, it has been used on drinking machine.
 
 ##   Resource
 ---
-*   [Reading Water Flow rate with Water Flow Sensor](http://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632)
+*   [Reading Water Flow rate with Water Flow Sensor](https://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632)
 
 *   [Water Flow rate display on LCD](http://www.practicalarduino.com/projects/water-flow-gauge)
 
@@ -333,11 +333,11 @@ Yeah, it has been used on drinking machine.
 
 ##   Related Projects
 ---
-It's a pity that we don't have any demo about G3/4 Water Flow Sensor in the [Recipe](http://www.seeedstudio.com/recipe/) yet.
+It's a pity that we don't have any demo about G3/4 Water Flow Sensor in the [Recipe](https://www.seeedstudio.com/recipe/) yet.
 
 Post your awesome project about G3/4 Water Flow Sensor to <font color="#FF0000">win $100 Coupon!</font>. Please feel free to contact us: [recipe@seeed.cc](mailto:recipe@seeed.cc)
 
-Here we introduce some projects about [Grove-Water Sensor](http://www.seeedstudio.com/depot/Grove-Water-Sensor-p-748.html).
+Here we introduce some projects about [Grove-Water Sensor](https://www.seeedstudio.com/depot/Grove-Water-Sensor-p-748.html).
 
 ###  What is Grove - Water Sensor
 
@@ -365,9 +365,9 @@ How it works:
 
 *   Supply the variation in color by 10 RGB LEDs.
 
-[**I want to make it.**](http://www.seeedstudio.com/recipe/102-arduino-plant-warden.html)
+[**I want to make it.**](https://www.seeedstudio.com/recipe/102-arduino-plant-warden.html)
 
-[**More Awesome Projects by Water Sensor**](http://www.seeedstudio.com/recipe/index.php?query=water+sensor)
+[**More Awesome Projects by Water Sensor**](https://www.seeedstudio.com/recipe/index.php?query=water+sensor)
 
 ###   Share Your Awesome Projects with Us
 
@@ -379,7 +379,7 @@ It does not matter what you are and what you have made, hacker, maker, artist or
 
 As long as you start sharing your works with others, you are being part of the open source community and you are making your contributions.
 
-Now share your awesome projects with us on [Recipe](http://www.seeedstudio.com/recipe/), and win a chance to become the Core User of Seeed.
+Now share your awesome projects with us on [Recipe](https://www.seeedstudio.com/recipe/), and win a chance to become the Core User of Seeed.
 
 *   Core Users, are those who show high interests in Seeed products and make significant contributions on Recipe.
 *   We cooperate with our Core Users in the development of our new product, this, in another word, the Core Users will have the chance to experience any new products of Seeed before its official launch, and in return we expect valuable feedback from them to help us improve the product performance and user experience. And in most cases when our Core Users have some good ideas of making things, we'll offer hardware pieces, PCBA services as well as technical support. Besides, further commercial cooperation with the Core Users is highly possible.
@@ -387,4 +387,4 @@ Now share your awesome projects with us on [Recipe](http://www.seeedstudio.com/r
 <font color="#FF0000">Get more information about Core User, please email to:</font> [recipe@seeed.cc](mailto:recipe@seeed.cc)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

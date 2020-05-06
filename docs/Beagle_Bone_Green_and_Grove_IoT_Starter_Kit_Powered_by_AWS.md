@@ -12,9 +12,9 @@ surveyurl: https://www.research.net/r/Beagle_Bone_Green_and_Grove_IoT_Starter_Ki
 
 *Main articles: Start here [Grove IoT Starter Kits Powered by AWS](/Grove_IoT_Starter_Kits_Powered_by_AWS "Grove IoT Starter Kits Powered by AWS") , [Beaglebone Green](/BeagleBone_Green "Beaglebone green")*
 
-[BeagleBone Green](http://www.seeedstudio.com/depot/BeagleBone-Green-p-2504.html?cPath=122_113) (BBG) is a joint effort by BeagleBoard.org and Seeed Studio. It is based on the open-source hardware design of [BeagleBone Black](http://beagleboard.org/BLACK) and has added two Grove connectors. The kit contains the new BBG, 10 Grove modules as well as step-by-step tutorials to hook them up quickly. The Grove IoT Starter Kit includes most frequently used sensors and actuators to turn your ideas into tangible applications with AWS Cloud computing.
+[BeagleBone Green](https://www.seeedstudio.com/depot/BeagleBone-Green-p-2504.html?cPath=122_113) (BBG) is a joint effort by BeagleBoard.org and Seeed Studio. It is based on the open-source hardware design of [BeagleBone Black](https://beagleboard.org/BLACK) and has added two Grove connectors. The kit contains the new BBG, 10 Grove modules as well as step-by-step tutorials to hook them up quickly. The Grove IoT Starter Kit includes most frequently used sensors and actuators to turn your ideas into tangible applications with AWS Cloud computing.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.amazon.com/dp/B0168L6B0C)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://wwww.amazon.com/dp/B0168L6B0C)
 
 Features
 --------
@@ -30,18 +30,18 @@ Included in the Box
 
 | Board/Part                                                                                                                                   | Qty | Documentation                                                                                     |
 |----------------------------------------------------------------------------------------------------------------------------------------------|-----|---------------------------------------------------------------------------------------------------|
-| [BeagleBone Green](http://www.seeedstudio.com/depot/BeagleBone-Green-p-2504.html?cPath=122_113)                                              | 1   | [Read Here](/BeagleBone_Green "Beaglebone green")                                                 |
-| [Grove - I2C ADC](http://www.seeedstudio.com/depot/Grove-I2C-ADC-p-1580.html?cPath=98_16)                                                    | 1   | [Read Here](/Grove-I2C_ADC "Grove - I2C ADC")                                                     |
-| [Grove - I2C Hub](http://www.seeedstudio.com/depot/Grove-I2C-Hub-p-851.html?cPath=98_16)                                                     | 1   | [Read Here](/Grove-I2C_Hub "Grove - I2C Hub")                                                     |
-| [Grove - Relay](http://www.seeedstudio.com/depot/Grove-Relay-p-769.html?cPath=39_42)                                                         | 1   | [Read Here](/Grove-Relay "Grove - Relay")                                                         |
-| [Grove - Buzzer](http://www.seeedstudio.com/depot/Grove-Buzzer-p-768.html?cPath=38)                                                          | 1   | [Read Here](/Grove-Buzzer "Grove - Buzzer")                                                       |
-| [Grove - OLED Display 0.96'](http://www.seeedstudio.com/depot/Grove-OLED-Display-096-p-824.html?cPath=34_36)'                                | 1   | [Read Here](/Grove-OLED_Display_0.96inch "Grove - OLED Display 96*96")                               |
-| [Grove - Button](http://www.seeedstudio.com/depot/Grove-Button-p-766.html?cPath=85_50)                                                       | 1   | [Read Here](/Grove-Button "Grove - Button")                                                       |
-| [Grove - Temperature Sensor](http://www.seeedstudio.com/depot/Grove-Temperature-Sensor-p-774.html?cPath=25_125)                              | 1   | [Read Here](/Grove-Temperature_Sensor_V1.2 "Grove - Temperature Sensor V1.2")                     |
-| [Grove - Sound Sensor](http://www.seeedstudio.com/depot/Grove-Sound-Sensor-p-752.html?cPath=25_128)                                          | 1   | [Read Here](/Grove-Sound_Sensor "Grove - Sound Sensor")                                           |
-| [Grove - 3-Axis Digital Accelerometer(±16g)](http://www.seeedstudio.com/depot/Grove-3Axis-Digital-Accelerometer16g-p-1156.html?cPath=25_132) | 1   | [Read Here](/Grove-3-Axis_Digital_Accelerometer-16g "Grove - 3-Axis Digital Accelerometer(±16g\)") |
-| [Grove - Chainable RGB LED](http://www.seeedstudio.com/depot/Grove-Chainable-RGB-LED-p-850.html?cPath=81_35)                                 | 1   | [Read Here](/Grove-Chainable_RGB_LED "Grove - Chainable RGB LED")                                 |
-| [Micro USB Cable - 48cm](http://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)                                                                                                                       | 1   |                                                                                                   |
+| [BeagleBone Green](https://www.seeedstudio.com/depot/BeagleBone-Green-p-2504.html?cPath=122_113)                                              | 1   | [Read Here](/BeagleBone_Green "Beaglebone green")                                                 |
+| [Grove - I2C ADC](https://www.seeedstudio.com/depot/Grove-I2C-ADC-p-1580.html?cPath=98_16)                                                    | 1   | [Read Here](/Grove-I2C_ADC "Grove - I2C ADC")                                                     |
+| [Grove - I2C Hub](https://www.seeedstudio.com/depot/Grove-I2C-Hub-p-851.html?cPath=98_16)                                                     | 1   | [Read Here](/Grove-I2C_Hub "Grove - I2C Hub")                                                     |
+| [Grove - Relay](https://www.seeedstudio.com/depot/Grove-Relay-p-769.html?cPath=39_42)                                                         | 1   | [Read Here](/Grove-Relay "Grove - Relay")                                                         |
+| [Grove - Buzzer](https://www.seeedstudio.com/depot/Grove-Buzzer-p-768.html?cPath=38)                                                          | 1   | [Read Here](/Grove-Buzzer "Grove - Buzzer")                                                       |
+| [Grove - OLED Display 0.96'](https://www.seeedstudio.com/depot/Grove-OLED-Display-096-p-824.html?cPath=34_36)'                                | 1   | [Read Here](/Grove-OLED_Display_0.96inch "Grove - OLED Display 96*96")                               |
+| [Grove - Button](https://www.seeedstudio.com/depot/Grove-Button-p-766.html?cPath=85_50)                                                       | 1   | [Read Here](/Grove-Button "Grove - Button")                                                       |
+| [Grove - Temperature Sensor](https://www.seeedstudio.com/depot/Grove-Temperature-Sensor-p-774.html?cPath=25_125)                              | 1   | [Read Here](/Grove-Temperature_Sensor_V1.2 "Grove - Temperature Sensor V1.2")                     |
+| [Grove - Sound Sensor](https://www.seeedstudio.com/depot/Grove-Sound-Sensor-p-752.html?cPath=25_128)                                          | 1   | [Read Here](/Grove-Sound_Sensor "Grove - Sound Sensor")                                           |
+| [Grove - 3-Axis Digital Accelerometer(±16g)](https://www.seeedstudio.com/depot/Grove-3Axis-Digital-Accelerometer16g-p-1156.html?cPath=25_132) | 1   | [Read Here](/Grove-3-Axis_Digital_Accelerometer-16g "Grove - 3-Axis Digital Accelerometer(±16g\)") |
+| [Grove - Chainable RGB LED](https://www.seeedstudio.com/depot/Grove-Chainable-RGB-LED-p-850.html?cPath=81_35)                                 | 1   | [Read Here](/Grove-Chainable_RGB_LED "Grove - Chainable RGB LED")                                 |
+| [Micro USB Cable - 48cm](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)                                                                                                                       | 1   |                                                                                                   |
 
 Getting Started
 ---------------
@@ -643,7 +643,7 @@ Good Luck.
 Tech Support
 ------------
 
-Please post any question on the [forum](http://beagleboard.org/Community/Forums).
+Please post any question on the [forum](https://beagleboard.org/Community/Forums).
 
 Firmware update
 ---------------
@@ -662,7 +662,7 @@ Resources
 -   [【Github】AWS SDK for BeagleBone Green kit](https://github.com/Seeed-Studio/AWS_SDK_for_BBG)
 -   [【Github】Libraries for BeagleBone Green kit](https://github.com/Seeed-Studio/Grove_Starter_Kit_for_BBG)
 -   [BeagleBone Green](/BeagleBone_Green)
--   [Main page of Beagleboard](http://beagleboard.org/getting-started)
+-   [Main page of Beagleboard](https://beagleboard.org/getting-started)
 -   [Grove - I2C ADC](/Grove-I2C_ADC)
 -   [Grove - I2C Hub](/Grove-I2C_Hub)
 -   [Grove - Relay](/Grove-Relay)
@@ -674,7 +674,7 @@ Resources
 -   [Grove - 3-Axis Digital Accelerometer ADXL345](/Grove-3-Axis_Digital_Accelerometer-16g)
 -   [Grove - Chainable RGB LED](/Grove-Chainable_RGB_LED)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

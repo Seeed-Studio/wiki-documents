@@ -82,4 +82,4 @@ The schematic diagram of Xadow LED 5x7 is provided in the following link:
 - [Xadow LED 5×7 v1.0_schemic files.zip](https://files.seeedstudio.com/wiki/Xadow_LED_5x7/res/202000746_PCBA%3BXadow%20LED%205%C3%977%20v1.0_schemic%20files.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

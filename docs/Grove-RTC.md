@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-RTC-p-758.html
 oldwikiname: Grove_-_RTC
 prodimagename: Grove-RTC.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/101020013 1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/101020013 1.jpg
 surveyurl: https://www.research.net/r/Grove-RTC
 sku: 101020013
 tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_pi
@@ -33,7 +33,7 @@ The battery is not included.
 -   Battery Voltage：2.0~3.5 V
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 ## Platforms Supported
 
@@ -57,7 +57,7 @@ The battery is not included.
 | Seeeduino V4.2 | Base Shield| Grove-RTC |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-RTC/img/45d_small.jpg)|
-|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-RTC-p-758.html)|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-RTC-p-758.html)|
 
 - **Step 2.** Connect Grove-RTC to port **I2C** of Grove-Base Shield.
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
@@ -86,7 +86,7 @@ The battery is not included.
 #### Software
 **Step 1.** Download the [RTC Library](https://github.com/Seeed-Studio/RTC_DS1307/archive/master.zip).
 
-**Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+**Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 
 **Step 3.** Create a new Arduino sketch and paste the codes below to it or open the code directly by the path: **File -> Example ->RTC->SetTimeAndDisplay**.
@@ -215,7 +215,7 @@ Here is the code
 ```Python
 #!/usr/bin/env python
 #
-# GrovePi Example for using the Grove I2C RTC (http://www.seeedstudio.com/wiki/Grove_-_RTC)
+# GrovePi Example for using the Grove I2C RTC (https://www.seeedstudio.com/wiki/Grove_-_RTC)
 #
 # The GrovePi connects the Raspberry Pi and Grove sensors.  You can learn more about GrovePi here:  http://www.dexterindustries.com/GrovePi
 #
@@ -438,5 +438,5 @@ Here is the result.
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/zou-wei/colorful-clock-4cea6b/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

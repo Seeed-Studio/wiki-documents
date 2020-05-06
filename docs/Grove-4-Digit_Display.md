@@ -4,13 +4,13 @@ category: Display
 bzurl: https://seeedstudio.com/Grove-4-Digit-Display-p-1198.html
 oldwikiname: Grove_-_4-Digit_Display
 prodimagename: Grove-4_digit_display.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/4-Digital Display.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/4-Digital Display.jpg
 surveyurl: https://www.research.net/r/Grove-4-Digit_Display
 sku: 104030003
 tags: grove_digital, io_3v3, io_5v, plat_duino, plat_pi, plat_wio
 ---
 
-[![](https://files.seeedstudio.com/wiki/Grove-4-Digit_Display/img/Grove-4_digit_display.jpg)](http://www.seeedstudio.com/depot/grove-4digital-display-p-1198.html)
+[![](https://files.seeedstudio.com/wiki/Grove-4-Digit_Display/img/Grove-4_digit_display.jpg)](https://www.seeedstudio.com/depot/grove-4digital-display-p-1198.html)
 
 Grove - 4-Digit Display module is a 12-pin module. In this module, we utilise a TM1637 to scale down the number of controlling pins to 2. That is to say, it controls both the content and the luminance via only 2 digital pins of Arduino or Seeeduino. For projects that require alpha-numeric display, this can be a nice choice.
 
@@ -30,7 +30,7 @@ Grove - 4-Digit Display module is a 12-pin module. In this module, we utilise a 
 -   8 adjustable luminance levels
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 ## Specifications
 
@@ -129,7 +129,7 @@ g
 ## Getting Started
 
 !!!Note
-    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
 
 ### Play With Arduino
@@ -141,7 +141,7 @@ g
 | Seeeduino V4.2 | Base Shield|  Grove-4-Digit Display |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_4_Digit_Display/image/500px-Grove_-_4_digit_display_s.jpg)|
-|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/grove-4digital-display-p-1198.html)|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/grove-4digital-display-p-1198.html)|
 
 - **Step 2.** Connect Grove-4-Digit Display to **D2** port of Grove-Base Shield.
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
@@ -165,8 +165,8 @@ g
 **Software**
 
 - **Step 1.** Download the  [Grove-4-Digit Display Library](https://github.com/Seeed-Studio/Grove_4Digital_Display/archive/master.zip) and [TimerOne Library](https://code.google.com/p/arduino-timerone/downloads/detail?name=TimerOne-v9.zip&can=2&q=).
-- **Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
-- **Step 3.** Follow below instructions to select code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/). There are 3 examples as below.
+- **Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- **Step 3.** Follow below instructions to select code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/). There are 3 examples as below.
     - Clock Display
     - Number Flow
     - Stop Watch
@@ -190,7 +190,7 @@ g
 **Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
 
 !!!Note
-    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](http://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](https://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
 
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
@@ -227,7 +227,7 @@ Upload the program to your Arduino/Seeeduino.
 
 #### Software
 
-- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
 - **Step 2**. Download the source file by cloning the grove.py library. 
 
 ```
@@ -728,7 +728,7 @@ void loop()
 - **[Library]** [Four-Digit Display Suli Library](https://github.com/Seeed-Studio/Four_Digit_Display_Suli)
 - **[Library]** [CodeCraft Code](https://files.seeedstudio.com/wiki/Grove_4_Digit_Display/resource/4-Digit%20Display.zip)
 - **[Datasheet]** [TM1637 datasheet](https://files.seeedstudio.com/wiki/Grove-4-Digit_Display/res/TM1637_datasheet.pdf)
-- **[More Reading]** [The Wooden Laser Gun](http://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)
+- **[More Reading]** [The Wooden Laser Gun](https://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)
 
 ![](https://files.seeedstudio.com/wiki/Seeeduino_Lotus/img/gun.jpg)
 
@@ -747,4 +747,4 @@ The Wooden Laser Gun and the Gun Target are all based on an Arduino board called
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/ingo-lohs/clock-grove-4-digit-display-using-photon-7c4369/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

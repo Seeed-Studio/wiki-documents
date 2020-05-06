@@ -38,7 +38,7 @@ We will test the Seeeduino Ethernet functions of writing or reading information 
 
 Firstly, install the hardware. We have two alternatives to plug in the power.
 
-**Method 1**: You can use one [Passive PoE Cable Set](http://www.seeedstudio.com/depot/passive-poe-cable-set-p-1175.html?cPath=207) to provide power and Ethernet connection at the same time like the picture below.
+**Method 1**: You can use one [Passive PoE Cable Set](https://www.seeedstudio.com/depot/passive-poe-cable-set-p-1175.html?cPath=207) to provide power and Ethernet connection at the same time like the picture below.
 
 ![](https://files.seeedstudio.com/wiki/Seeeduino_Ethernet/img/Seeeduino_ethernet-3.jpg)
 
@@ -234,7 +234,7 @@ void loop()
 
 ###   Step 3: Download the program
 
-Because there is no USB connector on the board. Seeeduino Ethernet requires a [UartSBee](http://www.seeedstudio.com/depot/uartsbee-v4-p-688.html?cPath=109) to download the program. 
+Because there is no USB connector on the board. Seeeduino Ethernet requires a [UartSBee](https://www.seeedstudio.com/depot/uartsbee-v4-p-688.html?cPath=109) to download the program. 
 
 Connect the UartSBee to Seeeduino Ethernet as below:
 
@@ -275,4 +275,4 @@ Open a web browser and enter the web address:192.168.1.177, then you can check t
 *   Please reformat SD card to FAT/FTA32 .If it still can't work ,suggest to download the [SD Formatter](https://www.sdcard.org/downloads/formatter_3/) and reformat SD card by this software.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

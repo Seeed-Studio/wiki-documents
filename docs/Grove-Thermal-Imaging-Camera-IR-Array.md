@@ -93,8 +93,8 @@ We need two parts to realize this project. First,an Arduino program should be do
 
 
 - **Step 1** Open the Arduino IDE and select the Arch Mix board you have downloaded.
-- **Step 2** Download the Arduino library from the [github](https://github.com/Seeed-Studio/Seeed_Arduino_MLX90640), Refer to [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/) to install library for Arduino.
-- **Step 3** Select File-> Examples -> Seeed_Arduino_MLX90640 -> BasicReadings, Download the code to Arch Mix.If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 2** Download the Arduino library from the [github](https://github.com/Seeed-Studio/Seeed_Arduino_MLX90640), Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) to install library for Arduino.
+- **Step 3** Select File-> Examples -> Seeed_Arduino_MLX90640 -> BasicReadings, Download the code to Arch Mix.If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 - **Step 4** Install the [python 3.7](https://www.python.org/downloads/), if your python is another version, we recommend you to reinstall the version 3.7 for this project.
 - **Step 5** Open your "Command Prompt" on your computer, you can search "CMD" to open it from the "Start" menu.
 - **Step 6** If you have already installed python 3.7, type the command to install the pypi package.

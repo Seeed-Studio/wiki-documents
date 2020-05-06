@@ -1,7 +1,7 @@
 ---
 name: Seeeduino LoRaWAN
 category: Arduino
-bzurl: http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html
+bzurl: https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html
 oldwikiname:
 prodimagename: cover.png
 surveyurl: https://www.research.net/r/SeeeduinoLoRa
@@ -97,7 +97,7 @@ If you want to build an IoT application quickly, Seeeduino LoRaWAN is your best 
 !!!Tip
     Use Grove modules to expand your application
 
-There are 4 Grove connects on board. If this is your first time to hear about Grove, please put had on [Grove System](http://wiki.seeed.cc/Grove_System/) for more details.
+There are 4 Grove connects on board. If this is your first time to hear about Grove, please put had on [Grove System](https://wiki.seeedstudio.com/Grove_System/) for more details.
 In brief, Groves is hundreds of sensor that in standard style, which is consist of sensors, actuators, displays as well as communication.
 
 ##Hardware Overview
@@ -159,10 +159,10 @@ In brief, Groves is hundreds of sensor that in standard style, which is consist 
 
 
 !!!Note
-    If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](http://wiki.seeed.cc/Getting_Started_with_Arduino)
+    If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino)
 
 
-First you need to install the latest Arduino IDE, and [ADD Seeeduino LoRa to your Arduino IDE](http://wiki.seeed.cc/Seeed_Arduino_Boards/).
+First you need to install the latest Arduino IDE, and [ADD Seeeduino LoRa to your Arduino IDE](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/).
 
 **Install the Driver (For Windows)**
 
@@ -202,7 +202,7 @@ And Then,
 
 
 
-If you can not find the Seeeduino LoRaWAN, please check [How to Add Seeed boards to Arduino IDE](http://wiki.seeedstudio.com/Seeed_Arduino_Boards/)
+If you can not find the Seeeduino LoRaWAN, please check [How to Add Seeed boards to Arduino IDE](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/)
 
 
 
@@ -341,8 +341,8 @@ After both of the sketch is well uploaded, open the serial monitor of the receiv
 
 **3.3 ABP**
 
-- Step 1. Please refer to [LoRa/LoRaWAN Gateway Kit](http://wiki.seeedstudio.com/LoRa_LoRaWan_Gateway_Kit/) to setup gateway first.  
-- Step 2. Connect the [Grove-Temperature_and_Humidity_Sensor_Pro](http://wiki.seeedstudio.com/Grove-Temperature_and_Humidity_Sensor_Pro/) to D2 port of base shield. 
+- Step 1. Please refer to [LoRa/LoRaWAN Gateway Kit](https://wiki.seeedstudio.com/LoRa_LoRaWan_Gateway_Kit/) to setup gateway first.  
+- Step 2. Connect the [Grove-Temperature_and_Humidity_Sensor_Pro](https://wiki.seeedstudio.com/Grove-Temperature_and_Humidity_Sensor_Pro/) to D2 port of base shield. 
 - Step 3. Connect the base shield to Seeeduino Lorawan.
 - Step 4. Download [DHT Library](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/DHT.zip) and unzip to arduino library folder.
 - Step 5. Copy below code to arduino IDE and upload.
@@ -851,4 +851,4 @@ Click on **Files Transfer > Ymodem > Send**, and select the .bin file we had dow
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/SeeedStudio/seeed-lora-iotea-solution-b5ee95/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

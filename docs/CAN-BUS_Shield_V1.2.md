@@ -147,9 +147,9 @@ Here's a simple example to show you how CAN-BUS Shield works. In this example we
 
 |Name|Function|Qty|Link|
 |----|--------|---|----|
-|CAN-BUS Shield|CAN Bus communication | 2 | [link](http://www.seeedstudio.com/depot/CANBUS-Shield-V12-p-2256.html) |
-|Seeeduino V4.2|Controller|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=2517)|
-|Jumper Wire|connection|2|[link](http://www.seeedstudio.com/item_detail.html?p_id=234)|
+|CAN-BUS Shield|CAN Bus communication | 2 | [link](https://www.seeedstudio.com/depot/CANBUS-Shield-V12-p-2256.html) |
+|Seeeduino V4.2|Controller|2|[link](https://www.seeedstudio.com/item_detail.html?p_id=2517)|
+|Jumper Wire|connection|2|[link](https://www.seeedstudio.com/item_detail.html?p_id=234)|
 
 **STEP2: Hardware Connection**
 
@@ -162,7 +162,7 @@ Insert each CAN-BUS Shield into Seeeduino V4.2, and connect the 2 CAN-BUS Shield
 
 **STEP3: Software**
 
-Please follow [how to install an arduino library](http://wiki.seeed.cc/How_to_install_Arduino_Library/) procedures to install CAN BUS shield library.
+Please follow [how to install an arduino library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install CAN BUS shield library.
 
 
 Click on below button to download the library.
@@ -358,7 +358,7 @@ All electronic functions are connected to the TIPM, (Totally integrated Power Mo
 From each node (IE Switch pod that controls your windows or electric door locks) it broadcasts a message across the CAN. When the TIPM detects a valid message it will react accordingly like, lock the doors, switch on lights and so on.
 
 
-[![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/Wiki_makeitnow_logo.png)](http://www.instructables.com/id/Hack-your-vehicle-CAN-BUS-with-Arduino-and-Seeed-C/)
+[![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/Wiki_makeitnow_logo.png)](https://www.instructables.com/id/Hack-your-vehicle-CAN-BUS-with-Arduino-and-Seeed-C/)
 
 ## FAQ
 ------
@@ -373,7 +373,7 @@ From each node (IE Switch pod that controls your windows or electric door locks)
 
 **Q3. Where can I find technical support if I have some other issues.**
 
-* You can post a question to [Seeed Forum](http://forum.seeedstudio.com/).
+* You can post a question to [Seeed Forum](https://forum.seeedstudio.com/).
 
 
 
@@ -397,5 +397,5 @@ From each node (IE Switch pod that controls your windows or electric door locks)
 * **【Cable】**[DB9 to OBD2 Cable](https://www.seeedstudio.com/DB9-to-OBD2-Cable-With-Switch-p-2872.html)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

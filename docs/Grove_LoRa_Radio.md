@@ -43,7 +43,7 @@ This is the 433MHz version, which can be used for 433MHz communication. You can 
 - Resered MHF antenna connector
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 ## Platforms Supported
 
@@ -99,11 +99,11 @@ Now we are making a demo for P2P(point to point) communication with the Grove - 
 |Grove - LoRa Radio 433MHz|2|[GET ONE NOW!](https://www.seeedstudio.com/Grove-LoRa-Radio-433MHz-p-2777.html)|
 |Micro USB Cable|2|[GET ONE NOW!](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|
 
-If this is your first time using [Seeeduino Lotus](https://www.seeedstudio.com/Seeeduino-Lotus-ATMega328-Board-with-Grove-Interface-p-1942.html), please refer to [Seeeduino Lotus's wiki](http://wiki.seeedstudio.com/Seeeduino_Lotus/).
+If this is your first time using [Seeeduino Lotus](https://www.seeedstudio.com/Seeeduino-Lotus-ATMega328-Board-with-Grove-Interface-p-1942.html), please refer to [Seeeduino Lotus's wiki](https://wiki.seeedstudio.com/Seeeduino_Lotus/).
 
 Seeeduino Lotus is fully compatible with Arduino which works as simple as Arduino.
 
-If this is your first time using Arduino, Please put hand on [here](http://arduino.cc) to start your Arduino journey.
+If this is your first time using Arduino, Please put hand on [here](https://arduino.cc) to start your Arduino journey.
 
 ###Connecting hardware
 
@@ -114,7 +114,7 @@ If this is your first time using Arduino, Please put hand on [here](http://ardui
 
 ###Download Library
 
-Click to download the library and install it ([How to install an Arduino Library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/))
+Click to download the library and install it ([How to install an Arduino Library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/))
 
 [![](https://files.seeedstudio.com/wiki/Grove_LoRa_Radio/img/library.png)](https://github.com/Seeed-Studio/Grove_LoRa_433MHz_and_915MHz_RF/archive/master.zip)
 
@@ -123,7 +123,7 @@ Click to download the library and install it ([How to install an Arduino Library
 
 There are 2 kinds of serial ports. One is COMSerial, stands for communication port(connecting with Grove-LoRa Radio). The other is ShowSerial, stands for serial info display port(connectiong with PC). 
 
-Most of arduino boards have at least one Serial, some have multiple serials(Arduino Mega has 4 Serials). It communicates on digital pins 0 (RX) and 1 (TX) as well as with the computer via USB. So if you connect UART device on pin D0 and pin D1, you have to remove them before downloading program through USB. Or else it will cause upload fails. Sometimes you need more serial ports than the number of hardware serial ports available. If this is the case, you can use an Software Serial that uses software to emulate serial hardware. Software serial requires a lot of help from the Arduino controller to send and receive data, so it’s not as fast or efficient as hardware serial. For more info about the Serial, please refer to [Seeed Arduino Serial](http://wiki.seeedstudio.com/Seeed_Arduino_Serial/). 
+Most of arduino boards have at least one Serial, some have multiple serials(Arduino Mega has 4 Serials). It communicates on digital pins 0 (RX) and 1 (TX) as well as with the computer via USB. So if you connect UART device on pin D0 and pin D1, you have to remove them before downloading program through USB. Or else it will cause upload fails. Sometimes you need more serial ports than the number of hardware serial ports available. If this is the case, you can use an Software Serial that uses software to emulate serial hardware. Software serial requires a lot of help from the Arduino controller to send and receive data, so it’s not as fast or efficient as hardware serial. For more info about the Serial, please refer to [Seeed Arduino Serial](https://wiki.seeedstudio.com/Seeed_Arduino_Serial/). 
 
 - **AVR:** For the below example, We define Software Serial as SSCOM(connectiong with PC), you need USB to TTL adapter to connect with PC. NOT all the digital pins can be used for software serial. You can refer to [Software Serial](https://www.arduino.cc/en/Reference/SoftwareSerial) for detail pins. We define hardware Serial as COMSerial(connecting with Grove-LoRa Radio). If you want to use the hardware serial as COMSerial and software serial as ShowSerial, you can define as **#define ShowSerial Serial** and **#define COMSerial SSerial**. If you use Arduino Mega, you can connect the hardware Serial to ShowSerial and the other Serial1/Serial2/Serial3 to COMSerial. So you can refer to AVR Mega setting. 
 
@@ -132,7 +132,7 @@ Most of arduino boards have at least one Serial, some have multiple serials(Ardu
 - **STM32F4:** For the below example, We use the hardware serial **Serial** to commuincate with Grove-LoRa Radio and **SerialUSB** to print message on PC. 
 
 !!!Note
-    For more info about the Serial, please refer to [Seeed Arduino Serial](http://wiki.seeedstudio.com/Seeed_Arduino_Serial/). 
+    For more info about the Serial, please refer to [Seeed Arduino Serial](https://wiki.seeedstudio.com/Seeed_Arduino_Serial/). 
 
 
 ```
@@ -254,4 +254,4 @@ The below chart shows the relationships between the band rate signal band width 
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

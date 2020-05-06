@@ -4,7 +4,7 @@ category: Communication
 bzurl: https://seeedstudio.com/Grove-NFC-Tag-p-1866.html
 oldwikiname: Grove_-_NFC_Tag
 prodimagename: Grove-NFC_Tag_uasge.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/grove nfc tag.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/grove nfc tag.jpg
 surveyurl: https://www.research.net/r/Grove-NFC_Tag
 sku: 101020070
 tags: grove_i2c, io_3v3, io_5v, plat_duino
@@ -15,7 +15,7 @@ tags: grove_i2c, io_3v3, io_5v, plat_duino
 Grove - NFC Tag is a highly integrated Near Field Communication Tag module,this module is I2C interface,which base on M24LR64E-R,M24LR64E-R have a 64-bit unique identifier and 64 -Kbit EEPROM.Grove - NFC Tag attach an independent PCB antenna which can easily stretch out of any enclosure you use, leaving more room for you to design the exterior of your project.
 
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-NFC-Tag-p-1866.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-NFC-Tag-p-1866.html)
 
 Specifications
 =============
@@ -30,7 +30,7 @@ Specifications
 -   Grove I2C Interface
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
     
 Platforms Supported
 -------------------
@@ -124,7 +124,7 @@ Resources
 
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_NFC_Tag -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_NFC_Tag -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

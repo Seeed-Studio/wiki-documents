@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-Electricity-Sensor-p-777.html
 oldwikiname: Grove_-_Electricity_Sensor
 prodimagename: Twig-Electricity-Sensor.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/P2130726.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/P2130726.jpg
 surveyurl: https://www.research.net/r/Grove-Electricity_Sensor
 sku: 101020027
 tags: grove_analog, io_3v3, io_5v, plat_duino, plat_linkit, plat_bbg
@@ -14,7 +14,7 @@ tags: grove_analog, io_3v3, io_5v, plat_duino, plat_linkit, plat_bbg
 
 The Electricity sensor module is a member of Grove. It is based on the TA12-200 current transformer which can transform the large AC into small amplitude. You can use it to test large alternating current up to 5A.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Electricity-Sensor-p-777.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-Electricity-Sensor-p-777.html)
 
 ## Features
 
@@ -25,7 +25,7 @@ The Electricity sensor module is a member of Grove. It is based on the TA12-200 
 -   Small size
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 ## Application Ideas
 
@@ -88,7 +88,7 @@ The following sketch demonstrates a simple application of measuring the amplitud
 | Seeeduino V4.2 | Base Shield| Grove-Electricity_Sensor |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Electricity_Sensor/img/45d_small.jpg)|
-|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/Grove-Electricity-Sensor-p-777.html)|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Electricity-Sensor-p-777.html)|
 
 - **Step 2.** Connect  Grove-Electricity_Sensor to port **A0** of Grove-Base Shield.
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
@@ -192,7 +192,7 @@ The minimum effective current that can be sensed by the code can be calculated u
 | Raspberry pi | GrovePi_Plus | Grove-Electricity_Sensor |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Electricity_Sensor/img/45d_small.jpg)|
-|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](http://www.seeedstudio.com/Grove-Electricity-Sensor-p-777.html)|
+|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/Grove-Electricity-Sensor-p-777.html)|
 
 
 
@@ -229,7 +229,7 @@ Here is the code of example:
 ```Python
 #!/usr/bin/env python
 #
-# GrovePi Example for using the Grove Electricity Sensor (http://www.seeedstudio.com/wiki/Grove_-_Electricity_Sensor)
+# GrovePi Example for using the Grove Electricity Sensor (https://www.seeedstudio.com/wiki/Grove_-_Electricity_Sensor)
 #
 # The GrovePi connects the Raspberry Pi and Grove sensors.  You can learn more about GrovePi here:  http://www.dexterindustries.com/GrovePi
 #
@@ -311,5 +311,5 @@ Here is the result.
 
 ## Tech Support
 
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

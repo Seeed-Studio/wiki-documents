@@ -2,7 +2,7 @@
 
 This repo provides some gifs for the TFT LCD library examples, all the examples can be found under `File`->`Example`->`Seeed_Arduino_LCD` -> `320 x 240`.  You can use these examples to implement in your design.
 
-For more information about the TFT LCD screen, please visit [Basics of the TFT LCD Screen](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Basic/).
+For more information about the TFT LCD screen, please visit [Basics of the TFT LCD Screen](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Basic/).
 
 ## Useful Graphics
 

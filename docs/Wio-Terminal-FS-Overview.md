@@ -15,3 +15,17 @@ If you want to install the FS library separately, or updating just the FS librar
 2. Now, the FS library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_FS` file that you've have just downloaded.
 
 ![InstallLibrary](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Xnip2019-11-21_15-50-13.jpg)
+
+## MicroSD Card Format
+
+- **Maximum MicroSD Card Capacity: `16GB`**
+
+- **MicroSD Card Format Supported:**
+
+  - FAT12
+
+  - FAT16
+
+  - FAT32
+
+  - exFAT

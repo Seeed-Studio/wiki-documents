@@ -38,15 +38,15 @@ The Rainbowduino series is an Arduino compatible controller board with professio
 
 ##   Seeed depot sales
 ---
-*   [Rainbowduino V3.0](http://www.seeedstudio.com/depot/rainbowduino-led-driver-platform-atmega-328-p-371.html?cPath=132_133)
+*   [Rainbowduino V3.0](https://www.seeedstudio.com/depot/rainbowduino-led-driver-platform-atmega-328-p-371.html?cPath=132_133)
 
-*   [Rainbow Cube kit - RGB 4*4*4 (Rainbowduino Compatible)](http://www.seeedstudio.com/depot/rainbow-cube-kit-rgb-4x4x4-rainbowduino-compatible-p-596.html?cPath=138)
+*   [Rainbow Cube kit - RGB 4*4*4 (Rainbowduino Compatible)](https://www.seeedstudio.com/depot/rainbow-cube-kit-rgb-4x4x4-rainbowduino-compatible-p-596.html?cPath=138)
 
-*   [Rainbowduino Extension Board v0.9b](http://www.seeedstudio.com/depot/rainbowduino-extension-board-v09b-p-692.html?cPath=175_177)
+*   [Rainbowduino Extension Board v0.9b](https://www.seeedstudio.com/depot/rainbowduino-extension-board-v09b-p-692.html?cPath=175_177)
 
-*   [Rainbow Cube](http://www.seeedstudio.com/depot/rainbow-cube-kit-assembled-p-998.html?cPath=138)
+*   [Rainbow Cube](https://www.seeedstudio.com/depot/rainbow-cube-kit-assembled-p-998.html?cPath=138)
 
-*   [Rainbow Cube Kit Acrylic Harness](http://www.seeedstudio.com/depot/rainbow-cube-kit-acrylic-harness-p-1021.html?cPath=178_184)
+*   [Rainbow Cube Kit Acrylic Harness](https://www.seeedstudio.com/depot/rainbow-cube-kit-acrylic-harness-p-1021.html?cPath=178_184)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

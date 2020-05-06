@@ -150,7 +150,7 @@ Grove-433MHz_Simple_RF_Link_Kit
 #include <VirtualWire.h>
 
 //Grove - 315(433) RF link kit Demo v1.0
-//by :http://www.seeedstudio.com/
+//by :https://www.seeedstudio.com/
 //connect the sent module to D2 to use
 #include <VirtualWire.h>
 
@@ -174,7 +174,7 @@ void loop()
 *   Upload the below code for receiver module:
 ```
 //Grove - 315(433) RF link kit Demo v1.0
-//by :http://www.seeedstudio.com/
+//by :https://www.seeedstudio.com/
 //connect the receive module to D2 to use ..
 #include <VirtualWire.h>
 
@@ -242,4 +242,4 @@ This is just a simple transmitter and receiver instance as a reference.
 *   [VirtualWire Documentation](http://www.open.com.au/mikem/arduino/VirtualWire.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

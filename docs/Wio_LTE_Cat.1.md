@@ -147,7 +147,7 @@ Hold the reset button for a short time(More than 10 seconds)| The hole board wil
 
 
 !!!Tip
-    Use Grove modules to expand your application. There are 6 Grove connects on board. If this is your first time to hear about Grove, please put had on [Grove System](http://wiki.seeed.cc/Grove_System/) for more details. In brief, Groves is hundreds of sensor that in standard style, which is consist of sensors, actuators, displays as well as communication.
+    Use Grove modules to expand your application. There are 6 Grove connects on board. If this is your first time to hear about Grove, please put had on [Grove System](https://wiki.seeedstudio.com/Grove_System/) for more details. In brief, Groves is hundreds of sensor that in standard style, which is consist of sensors, actuators, displays as well as communication.
 
 ## Hardware Overview
 
@@ -992,9 +992,9 @@ For more info, please refer to [Wio_LTE_Module](http://www.espruino.com/modules/
 **1. Software Configuration**
 
 - Step 1. Install Arduino IDE, recommand IDE version upon 1.8.0.
-- Step 2. Follow [How to Add Seeed boards to Arduino IDE](http://wiki.seeed.cc/Seeed_Arduino_Boards/) to add Wio_LTE into arduino board manager.
+- Step 2. Follow [How to Add Seeed boards to Arduino IDE](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/) to add Wio_LTE into arduino board manager.
 - Step 3. Download the [Wio_LTE Library](https://github.com/Seeed-Studio/Wio_LTE_Arduino_Library) from Github.
-- Step 4. Refer [How to install library](http://wiki.seeed.cc/How_to_install_Arduino_Library) to install library for Arduino.
+- Step 4. Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 **2. Play with SMS Send**
 
@@ -1637,13 +1637,13 @@ Files found on the card (name, date and size in bytes):
 
 **9.1 Play with Grove Digital Module**  
 
-We use [Grove-TemperatureAndHumidity_Sensor](http://wiki.seeedstudio.com/Grove-TemperatureAndHumidity_Sensor/) as digital input and connect to D20 of Wio LTE. 
+We use [Grove-TemperatureAndHumidity_Sensor](https://wiki.seeedstudio.com/Grove-TemperatureAndHumidity_Sensor/) as digital input and connect to D20 of Wio LTE. 
 
 - Step 1. Press and hold BOOT button at back side of the Wio LTE and plug the USB to PC.
 - Step 2. We will see **STM BOOTLARDER** in device manager.
 - Step 3. Select Tools-->Boards-->Wio_Tracker_LTE.
 - Step 4. Keep COM Port blank.
-- Step 5. Download [WioLTEforArduino Library](https://github.com/SeeedJP/WioLTEforArduino/archive/master.zip) and [Grove-TemperatureAndHumidity_Sensor Library](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor/archive/master.zip) from Github. Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- Step 5. Download [WioLTEforArduino Library](https://github.com/SeeedJP/WioLTEforArduino/archive/master.zip) and [Grove-TemperatureAndHumidity_Sensor Library](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor/archive/master.zip) from Github. Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 - Step 6. Copy below code to Sketch.
 - Step 7. Click Upload to upload the code to Wio_LTE.
 
@@ -1714,13 +1714,13 @@ Humidity: 39.00 %	Temperature: 27.00 *C
 
 **9.2 Play with Grove Analog Module**  
 
-We use [Grove-Light Sensor](http://wiki.seeedstudio.com/Grove-Light_Sensor/) as analog input and connect to A4 of Wio LTE(12bit ADC). 
+We use [Grove-Light Sensor](https://wiki.seeedstudio.com/Grove-Light_Sensor/) as analog input and connect to A4 of Wio LTE(12bit ADC). 
 
 - Step 1. Press and hold BOOT button at back side of the Wio LTE and plug the USB to PC.
 - Step 2. We will see **STM BOOTLARDER** in device manager.
 - Step 3. Select Tools-->Boards-->Wio_Tracker_LTE.
 - Step 4. Keep COM Port blank.
-- Step 5. Download [WioLTEforArduino Library](https://github.com/SeeedJP/WioLTEforArduino/archive/master.zip) from Github. Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- Step 5. Download [WioLTEforArduino Library](https://github.com/SeeedJP/WioLTEforArduino/archive/master.zip) from Github. Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 - Step 6. Copy below code to Sketch.
 - Step 7. Click Upload to upload the code to Wio_LTE.
 
@@ -1768,13 +1768,13 @@ void loop() {
 
 **9.3 Play with Grove I2C Module**  
 
-We use [Grove - 3-Axis Digital Accelerometer(±16g)](http://wiki.seeedstudio.com/Grove-3-Axis_Digital_Accelerometer-16g/) as I2C device and connect to I2C port of Wio LTE. 
+We use [Grove - 3-Axis Digital Accelerometer(±16g)](https://wiki.seeedstudio.com/Grove-3-Axis_Digital_Accelerometer-16g/) as I2C device and connect to I2C port of Wio LTE. 
 
 - Step 1. Press and hold BOOT button at back side of the Wio LTE and plug the USB to PC.
 - Step 2. We will see **STM BOOTLARDER** in device manager.
 - Step 3. Select Tools-->Boards-->Wio_Tracker_LTE.
 - Step 4. Keep COM Port blank.
-- Step 5. Download [WioLTEforArduino Library](https://github.com/SeeedJP/WioLTEforArduino/archive/master.zip)  and [ADXL345](https://github.com/Seeed-Studio/Accelerometer_ADXL345/archive/master.zip) from Github. Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- Step 5. Download [WioLTEforArduino Library](https://github.com/SeeedJP/WioLTEforArduino/archive/master.zip)  and [ADXL345](https://github.com/Seeed-Studio/Accelerometer_ADXL345/archive/master.zip) from Github. Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 - Step 6. Copy below code to Sketch.
 - Step 7. Click Upload to upload the code to Wio_LTE.
 
@@ -1832,13 +1832,13 @@ void loop()
 
 **9.4 Play with Grove UART Module**  
 
-We use [Grove-CO2](http://wiki.seeedstudio.com/Grove-CO2_Sensor/) as UART device and connect to UART port of Wio LTE. 
+We use [Grove-CO2](https://wiki.seeedstudio.com/Grove-CO2_Sensor/) as UART device and connect to UART port of Wio LTE. 
 
 - Step 1. Press and hold BOOT button at back side of the Wio LTE and plug the USB to PC.
 - Step 2. We will see **STM BOOTLARDER** in device manager.
 - Step 3. Select Tools-->Boards-->Wio_Tracker_LTE.
 - Step 4. Keep COM Port blank.
-- Step 5. Download [WioLTEforArduino Library](https://github.com/SeeedJP/WioLTEforArduino/archive/master.zip) from Github. Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- Step 5. Download [WioLTEforArduino Library](https://github.com/SeeedJP/WioLTEforArduino/archive/master.zip) from Github. Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 - Step 6. Copy below code to Sketch.
 - Step 7. Click Upload to upload the code to Wio_LTE.
 
@@ -2143,5 +2143,5 @@ A8: Here is https://github.com/Seeed-Studio/Wio_LTE_JavaScript_Demo .
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/SeeedStudio/atmospheric-pollution-visualization-1940f4/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

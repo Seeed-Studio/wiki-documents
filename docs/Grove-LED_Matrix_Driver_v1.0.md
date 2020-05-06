@@ -4,7 +4,7 @@ category: Actuator
 bzurl: https://seeedstudio.com/Grove-LED-Matrix-Driver-v1.0-p-2645.html
 oldwikiname: Grove_-_LED_Matrix_Driver_v1.0
 prodimagename: Grove-LED_Matrix_Driver_v1.0_product_view_700_s.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/seeed/img/2016-07/POVQFNSv9hKluouORsqs2H5s.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/seeed/img/2016-07/POVQFNSv9hKluouORsqs2H5s.jpg
 surveyurl: https://www.research.net/r/Grove-LED_Matrix_Driver_v1_0
 sku: 105020013
 tags: plat_duino, plat_pi, plat_bbg, plat_linkit
@@ -16,7 +16,7 @@ Grove - LED Matrix Driver v1.0 is UART (Serial) to dot matrix LED driver that in
 
 Each dot(i.e pixel) support dual color LEDs. It can produce three colors totally: red (primary color), green(primary color) and yellow (mixed color). The input current for all LEDs can be set at a time.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-LED-Matrix-Driver-v1.0-p-2645.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-LED-Matrix-Driver-v1.0-p-2645.html)
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -32,7 +32,7 @@ Features
 -   Interface: UART(SoftSerial in Arduino)
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
   
   
 Specifications
@@ -76,7 +76,7 @@ Hardware Overview
 | Parts name                                                                                                                    | Quantity |
 |-------------------------------------------------------------------------------------------------------------------------------|----------|
 | Grove - LED Matrix Driver v1.0                                                                                                | 1 piece  |
-| [Grove cable](http://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) | 1 piece  |
+| [Grove cable](https://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) | 1 piece  |
 
 Getting Started
 ---------------
@@ -93,7 +93,7 @@ Now let us run some basic examples with this module.
 -   5 Volts(output) Adapter to regulate input voltage for LED matrix × 1
 -   8-pin(female) ribbon cable × 1
 -   Arduino UNO (other Arduino models will also be fine) × 1
--   [Grove cable](http://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) × 1
+-   [Grove cable](https://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) × 1
 -   Grove - Base Shield × 1
 
 #### Connections
@@ -132,7 +132,7 @@ Resources
 -   [Library on Github](https://github.com/Seeed-Studio/Grove_LED_Matrix_Driver)
 -   [Firmware for this product](https://github.com/Seeed-Studio/Grove_LED_Matrix_Driver/tree/master/Firmware)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_LED_Matrix_Driver_v1.0 -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_LED_Matrix_Driver_v1.0 -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

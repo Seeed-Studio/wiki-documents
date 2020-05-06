@@ -14,7 +14,7 @@ tags:
 
 **UartSB Frame** is a USB based programming adapter for **Seeeduino Film** equipped with a FPC socket. The integrated USB UART IC **FT232RL** can be used for programming or communicating with MCUs with 3.3V logic. It also doubles as a "FT232RL" Low Voltage(3.3V) Breakout board. **UartSB Frame** provides breakouts for the bit-bang mode pins of **FT232RL** as well.This Bit-bang mode pins (8 I/O pins) can be used as a replacement for applications involving PC parallel port which is scares now a days.
 
-**Model:[PGM31058P](http://www.seeedstudio.com/depot/seeeduino-frame-uartsbs-p-778.html?cPath=132_135)**
+**Model:[PGM31058P](https://www.seeedstudio.com/depot/seeeduino-frame-uartsbs-p-778.html?cPath=132_135)**
 
 
 
@@ -236,7 +236,7 @@ tags:
 
 Download and install the **Virtual COM port** driver from FTDI website :
 
-[http://www.ftdichip.com/Drivers/VCP.htm](http://www.ftdichip.com/Drivers/VCP.htm)
+[https://www.ftdichip.com/Drivers/VCP.htm](https://www.ftdichip.com/Drivers/VCP.htm)
 
 *   A wizard opens for installing the driver. Choose "Install from a list or specific location"
 
@@ -306,7 +306,7 @@ In this mode data is sent synchronously. An input is read before an output byte 
 
 This is a special mode which requires reprogramming of FT232RL EEPROM. This uses signals **C0 - C3**.
 
-**Bit-Bang Mode** of **FT232RL** is well documented in the application note[[1]](http://www.ftdichip.com/Support/Documents/AppNotes/AN_232R-01_Bit_Bang_Mode_Available_For_FT232R_and_Ft245R.pdf)
+**Bit-Bang Mode** of **FT232RL** is well documented in the application note[[1]](https://www.ftdichip.com/Support/Documents/AppNotes/AN_232R-01_Bit_Bang_Mode_Available_For_FT232R_and_Ft245R.pdf)
 
 **Table: Bit-Bang I/O Mapping**
 
@@ -371,7 +371,7 @@ This above image is made with Fritzing.org
 
 ![](https://files.seeedstudio.com/wiki/UartSB_Frame/img/Seeeduino_Frame_UarSBs_Bottom.jpg)
 
-Bit-Bang mode requires special FTDI direct driver called [D2XX](http://www.ftdichip.com/Drivers/D2XX.htm). This driver needs to be installed after removing the Virtual COM Port driver of FT232RL chip. In GNU/Linux this driver runs in kernel mode. As an alternative to D2XX an Free Open Source driver [libFTDI](http://www.intra2net.com/en/developer/libftdi/) is available. This works in Windows, GNU/Linux and Mac OS. It runs in user mode in GNU/Linux. Hence no need to remove the existing FT232RL driver.
+Bit-Bang mode requires special FTDI direct driver called [D2XX](https://www.ftdichip.com/Drivers/D2XX.htm). This driver needs to be installed after removing the Virtual COM Port driver of FT232RL chip. In GNU/Linux this driver runs in kernel mode. As an alternative to D2XX an Free Open Source driver [libFTDI](http://www.intra2net.com/en/developer/libftdi/) is available. This works in Windows, GNU/Linux and Mac OS. It runs in user mode in GNU/Linux. Hence no need to remove the existing FT232RL driver.
 
 **libFTDI**
 
@@ -456,7 +456,7 @@ Please list your question here:
 
 ##   Support  
 
-If you have questions or other better design ideas, you can go to our [forum](http://www.seeedstudio.com/forum) or **wish** to discuss.
+If you have questions or other better design ideas, you can go to our [forum](https://www.seeedstudio.com/forum) or **wish** to discuss.
 
 ##   Document Version Tracker  
 
@@ -508,13 +508,13 @@ The Additional Idea is the place to write your project ideas about this product,
 
 ##   Resources  
 
-- **[Eagle]**[Schematic and Board Files in Eagle](http://wiki.seeedstudio.com/images/d/d3/UartSBs_Frame_Schematic_Board.zip)
+- **[Eagle]**[Schematic and Board Files in Eagle](https://wiki.seeedstudio.com/images/d/d3/UartSBs_Frame_Schematic_Board.zip)
 
-- **[PDF]** [PDF Schematic](http://wiki.seeedstudio.com/images/9/91/UartSBs_0.9b_Schematic.pdf)
+- **[PDF]** [PDF Schematic](https://wiki.seeedstudio.com/images/9/91/UartSBs_0.9b_Schematic.pdf)
 
 ##   How to buy  
 
-Click here to buy [UartSB Frame](http://www.seeedstudio.com/depot/seeeduino-frame-uartsbs-p-778.html?cPath=132_135)
+Click here to buy [UartSB Frame](https://www.seeedstudio.com/depot/seeeduino-frame-uartsbs-p-778.html?cPath=132_135)
 
 
 ##   Licensing  
@@ -523,12 +523,12 @@ This documentation is licensed under the Creative Commons [Attribution-ShareAlik
 
 ##   External Links  
 
-*   **[[2]](http://www.ftdichip.com/Products/ICs/FT232R.htm)**[FTDI FT232RL product Page](http://www.ftdichip.com/Products/ICs/FT232R.htm)
+*   **[[2]](https://www.ftdichip.com/Products/ICs/FT232R.htm)**[FTDI FT232RL product Page](https://www.ftdichip.com/Products/ICs/FT232R.htm)
 
-* [[http://www.ftdichip.com/Drivers/VCP.htm](http://www.ftdichip.com/Drivers/VCP.htm) FTDI Virtual COM Port (VCP) drivers
-* [FTDI D2XX drivers](http://www.ftdichip.com/Drivers/D2XX.htm)
+* [[https://www.ftdichip.com/Drivers/VCP.htm](https://www.ftdichip.com/Drivers/VCP.htm) FTDI Virtual COM Port (VCP) drivers
+* [FTDI D2XX drivers](https://www.ftdichip.com/Drivers/D2XX.htm)
 
-* [FTDI Bit-Bang mode application note](http://www.ftdichip.com/Support/Documents/AppNotes/AN_232R-01_Bit_Bang_Mode_Available_For_FT232R_and_Ft245R.pdf)
+* [FTDI Bit-Bang mode application note](https://www.ftdichip.com/Support/Documents/AppNotes/AN_232R-01_Bit_Bang_Mode_Available_For_FT232R_and_Ft245R.pdf)
 
 **Open Source Drivers**
 
@@ -545,4 +545,4 @@ This documentation is licensed under the Creative Commons [Attribution-ShareAlik
 * [FT232R SPI Bitbang Mode example](http://openschemes.com/2009/11/05/bit-banging-spi-on-arduinos-ft232rl/)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

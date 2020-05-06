@@ -79,7 +79,7 @@ The cape provides 12 easy-to-use Grove connectors to do plug-and-play with the b
 
 **USER button**, is a button that can be used as BeagleBone® USER button.
 
-**Cape address switch**, is a switch to choose cape address (only useful when multiple capes are attached) to avoid I2C address collision. For details about using more capes, please visit [http://beagleboard.org/Support/bone101/#capes](http://beagleboard.org/Support/bone101/#capes) and [http://elinux.org/BeagleBone_Community#Capes](http://elinux.org/BeagleBone_Community#Capes). You can use this switch to choose address from **00**(binary, pulled down for factory setttings) to **11**(binary, on Grove Base Cape for BeagleBone v2) which correspond to 0x54 to 0x57 for all capes.
+**Cape address switch**, is a switch to choose cape address (only useful when multiple capes are attached) to avoid I2C address collision. For details about using more capes, please visit [https://beagleboard.org/Support/bone101/#capes](https://beagleboard.org/Support/bone101/#capes) and [http://elinux.org/BeagleBone_Community#Capes](http://elinux.org/BeagleBone_Community#Capes). You can use this switch to choose address from **00**(binary, pulled down for factory setttings) to **11**(binary, on Grove Base Cape for BeagleBone v2) which correspond to 0x54 to 0x57 for all capes.
 
 **Write protection pin**, is used to disable write protection of EEPROM of a cape if those pins are connected. By default, it is not connected.
 
@@ -91,17 +91,17 @@ The cape provides 12 easy-to-use Grove connectors to do plug-and-play with the b
 
 ##  Get started
 
-In this section, we will show you a basic example to use this board. You can find more demos at [BeagleBone® Recipes](http://www.seeedstudio.com/recipe/index.php?query=beaglebone) page. Just append Grove Base Cape for BeagleBone® v2 to those projects to make wire connection convenient.
+In this section, we will show you a basic example to use this board. You can find more demos at [BeagleBone® Recipes](https://www.seeedstudio.com/recipe/index.php?query=beaglebone) page. Just append Grove Base Cape for BeagleBone® v2 to those projects to make wire connection convenient.
 
 ###  Suggested reading
 
 *   [BeagleBone® Green](/BeagleBone_Green)
 
-*   [BeagleBone® community](http://beagleboard.org/)
+*   [BeagleBone® community](https://beagleboard.org/)
 
-*   [BeagleBone® 101](http://beagleboard.org/support/bone101)
+*   [BeagleBone® 101](https://beagleboard.org/support/bone101)
 
-*   [BoneScript](http://beagleboard.org/support/bonescript)
+*   [BoneScript](https://beagleboard.org/support/bonescript)
 
 ###  Materials required
 
@@ -113,7 +113,7 @@ In this section, we will show you a basic example to use this board. You can fin
 
 *   USB cable (type A to type B, for Arduino) × 1 or USB cable (Type-A to micro Type-B, for Seeeduino) × 1
 
-*   [Grove cable](http://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) × 1
+*   [Grove cable](https://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) × 1
 
 ###  Coding work
 
@@ -126,7 +126,7 @@ In this section, we will show you a basic example to use this board. You can fin
 
 ```
 var b = require('bonescript');
-b.pinMode('P9_16', b.INPUT);//GPIO 51 correspond to P9_16. More details at http://beagleboard.org/Support/bone101/#headers
+b.pinMode('P9_16', b.INPUT);//GPIO 51 correspond to P9_16. More details at https://beagleboard.org/Support/bone101/#headers
 
 setInterval(check,1000);
 
@@ -166,11 +166,11 @@ function checkButton(x) {
 
 *   [BeagleBone® Green](/BeagleBone_Green)
 
-*   [BeagleBone® community](http://beagleboard.org/)
+*   [BeagleBone® community](https://beagleboard.org/)
 
-*   [BeagleBone® 101](http://beagleboard.org/support/bone101)
+*   [BeagleBone® 101](https://beagleboard.org/support/bone101)
 
-*   [BoneScript](http://beagleboard.org/support/bonescript)
+*   [BoneScript](https://beagleboard.org/support/bonescript)
 
 *   [Cloud9](https://c9.io/)
 
@@ -178,7 +178,7 @@ function checkButton(x) {
 
 *   [LMV324 datasheet](http://www.ti.com/lit/ds/symlink/lmv324.pdf)
 
-*   More demos at [http://www.seeedstudio.com/recipe/index.php?query=beaglebone](http://www.seeedstudio.com/recipe/index.php?query=beaglebone) and [http://www.seeedstudio.com/recipe/index.php?query=beaglebone](http://www.seeedstudio.com/recipe/index.php?query=beaglebone)
+*   More demos at [https://www.seeedstudio.com/recipe/index.php?query=beaglebone](https://www.seeedstudio.com/recipe/index.php?query=beaglebone) and [https://www.seeedstudio.com/recipe/index.php?query=beaglebone](https://www.seeedstudio.com/recipe/index.php?query=beaglebone)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

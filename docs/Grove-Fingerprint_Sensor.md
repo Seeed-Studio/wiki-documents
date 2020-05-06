@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-Fingerprint-Sensor-p-1424.html
 oldwikiname: Grove_-_Fingerprint_Sensor
 prodimagename: Print_Sensor.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/Print Sensor.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/Print Sensor.jpg
 surveyurl: https://www.research.net/r/Grove-Fingerprint_Sensor
 sku: 101020057
 tags: grove_uart, io_5v, plat_duino, plat_linkit, plat_pi
@@ -14,7 +14,7 @@ tags: grove_uart, io_5v, plat_duino, plat_linkit, plat_pi
 
 The Finger Print Sensor is one optical fingerprint sensor which will make fingerprint detection and verification adding super simple.There's a high powered DSP chip AS601 that does the image rendering, calculation, feature-finding and searching. You can also enroll new fingers directly - up to 162 finger prints can be stored in the onboard FLASH memory. There's a red LED in the lens which will light up during taking photos so that you know its working condition. It is easy to use and by far the best fingerprint sensor you can get.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Fingerprint-Sensor-p-1424.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-Fingerprint-Sensor-p-1424.html)
 
 Specifications
 -------------
@@ -93,7 +93,7 @@ Once you have the finger enrolled, it's a good idea to do a quick test to make s
 -   If it is not a finger in the database, This serial port will output nothing.
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 Resources
 --------
@@ -102,7 +102,7 @@ Resources
 - **[Datasheet]** [ZhianTec ZFM-206 Series Datasheet (for this version, but in Simplified Chinese)](https://files.seeedstudio.com/wiki/Grove-Fingerprint_Sensor/res/ZFM206用户手册V2.1.pdf)
 - **[Datasheet]** [ZhianTec ZFM-20 Series Datasheet (for older series, but in English)](https://files.seeedstudio.com/wiki/Grove-Fingerprint_Sensor/res/ZFM-user-manualV15.pdf)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Fingerprint_Sensor -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Fingerprint_Sensor -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

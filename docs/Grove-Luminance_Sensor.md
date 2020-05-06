@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-Luminance-Sensor-p-1941.html
 oldwikiname: Grove_-_Luminance_Sensor
 prodimagename: Luminance.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/Grove Luminance Sensor.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/Grove Luminance Sensor.jpg
 surveyurl: https://www.research.net/r/Grove-Luminance_Sensor
 sku: 101020076
 tags: grove_analog, io_3v3, io_5v, plat_duino, plat_linkit
@@ -16,7 +16,7 @@ Grove - Luminance Sensor detects the intensity of the ambient light on a surface
 
 This Luminance Sensor can be used in application which requires automatic light adjustment in residential or commercial lighting.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Luminance-Sensor-p-1941.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-Luminance-Sensor-p-1941.html)
 
 
 Specifications
@@ -29,7 +29,7 @@ Specifications
 | Luminance measurement range | 0 ~ 1000 Lux |
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
   
 Platforms Supported
 -------------------
@@ -165,7 +165,7 @@ Resources
 -   [Grove-Luminance Sensor Schematic (PDF)](https://files.seeedstudio.com/wiki/Grove-Luminance_Sensor/res/Grove-Luminance_Sensor_v1.0.pdf)
 -   [APDS-900 Datasheet](https://files.seeedstudio.com/wiki/Grove-Luminance_Sensor/res/APDS-9002-.pdf)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Luminance_Sensor -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Luminance_Sensor -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

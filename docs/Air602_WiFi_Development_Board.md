@@ -323,7 +323,7 @@ AT+WJOIN
 
 For the firmware programming please check here：
 
-[Air602 Firmware Programming Manual](http://wiki.seeedstudio.com/Air602_Firmware_Programming_Manual)
+[Air602 Firmware Programming Manual](https://wiki.seeedstudio.com/Air602_Firmware_Programming_Manual)
 
 
 ## FAQ

@@ -45,10 +45,10 @@ Before reading/writing tag, what you need to prepare is the hardware installatio
 ![](https://files.seeedstudio.com/wiki/Xadow_NFC/images/XadowNFC.jpg)
 
 !!!Note:
-    When connect Xadow - NFC to [Xadow - Main Board](http://wiki.seeedstudio.com/Xadow_Main_Board), you should concern about the connection direction. The connection method is that the unfilled corner of one Xadow module need to connect to the right angle of another module (see four corners of each Xadow module).
+    When connect Xadow - NFC to [Xadow - Main Board](https://wiki.seeedstudio.com/Xadow_Main_Board), you should concern about the connection direction. The connection method is that the unfilled corner of one Xadow module need to connect to the right angle of another module (see four corners of each Xadow module).
 
 
-- Download [PN532 library](https://github.com/Seeed-Studio/PN532) and [NDEF Library](https://github.com/don/NDEF). Do not forget to install these libraries into Arduino Library. If you haven't knew clearly the operation, please refer [here](http://www.seeedstudio.com/wiki/How_to_install_Arduino_Library) for a closer look.
+- Download [PN532 library](https://github.com/Seeed-Studio/PN532) and [NDEF Library](https://github.com/don/NDEF). Do not forget to install these libraries into Arduino Library. If you haven't knew clearly the operation, please refer [here](https://www.seeedstudio.com/wiki/How_to_install_Arduino_Library) for a closer look.
 
 !!!Note:
     Make sure that you have folders - PN532, PN532_SPI, PN532_I2C, PN532_HSU and NDEF (from NDEF Library) in your Arduino Library folder.
@@ -59,7 +59,7 @@ Before reading/writing tag, what you need to prepare is the hardware installatio
 
 ![](https://files.seeedstudio.com/wiki/Xadow_NFC/images/Code_Interfae.jpg)
 
-In this code, the function message.addUriRecord("http://arduino.cc") is used to write message to tag. You can replace the message "http://arduino.cc" with new message. For example, we input "do you happy?" and "hello, world" using this function.
+In this code, the function message.addUriRecord("https://arduino.cc") is used to write message to tag. You can replace the message "https://arduino.cc" with new message. For example, we input "do you happy?" and "hello, world" using this function.
 
 - Upload the code and open the Serial Monitor, It prompts you to place a NFC tag on the NFC antenna. After a successful operation, it will prompt you to read the tag.
 
@@ -108,4 +108,4 @@ It is essential to explain a NDEF message in order to have a clear recognition a
 - [PN532 Datasheet](https://files.seeedstudio.com/wiki/Xadow_NFC/resources/PN532.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

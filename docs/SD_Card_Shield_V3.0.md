@@ -17,7 +17,7 @@ The SD Card shield v3.0 makes use of pin 10 as a chip select. Please be sure oth
 
 These next lines were user added: This shield works fine for the Arduino Mega 2560, you just have to make the appropriate connections. 4or10 -&gt;53, 11-&gt;51, 12 -&gt;50, and 13 -&gt;52. This arrangement works fine so long as you make sure not to assign anything else to those pins.
 
-**Model: [INT106D1P](http://www.seeedstudio.com/depot/sd-card-shield-p-492.html?cPath=109)**
+**Model: [INT106D1P](https://www.seeedstudio.com/depot/sd-card-shield-p-492.html?cPath=109)**
 
 
 ##   Features  
@@ -106,7 +106,7 @@ Plug the SD Card Shield onto the Arduino; Insert your SD card into the socket an
 
 ###   Software  
 
-First you have to get an [SD card or micro SD card](http://www.seeedstudio.com/depot/sandisk-microsd%C3%82%E2%84%A2-card-2gb-p-546.html?cPath=178_182), and then format the SD card as FAT16 or FAT32 if it is necessary.
+First you have to get an [SD card or micro SD card](https://www.seeedstudio.com/depot/sandisk-microsd%C3%82%E2%84%A2-card-2gb-p-546.html?cPath=178_182), and then format the SD card as FAT16 or FAT32 if it is necessary.
 Format the SD card as the screenshots below:
  ![](https://files.seeedstudio.com/wiki/SD_Card_Shield_V3.0/img/Format.jpg) ![](https://files.seeedstudio.com/wiki/SD_Card_Shield_V3.0/img/Format2.jpg)
 
@@ -160,7 +160,7 @@ With that done, you can take a look at the other library examples for reading, w
 
 ## SD Card Shield v3.0 Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="http://wiki.seeedstudio.com/images/0/09/Eagle_file_of_SD_Card_Shield_v3.0.ZIP" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://wiki.seeedstudio.com/images/0/09/Eagle_file_of_SD_Card_Shield_v3.0.ZIP" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
@@ -172,7 +172,7 @@ With that done, you can take a look at the other library examples for reading, w
 
 - **[PDF]**   [PDF file of SD Card Sheild v3.1](https://files.seeedstudio.com/wiki/SD_Card_Shield_V3.0/res/SD_Card_Shield.pdf)
 
-- **[Eagle]**   [Eagle file of SD Card Shield v3.0](http://wiki.seeedstudio.com/images/0/09/Eagle_file_of_SD_Card_Shield_v3.0.ZIP).
+- **[Eagle]**   [Eagle file of SD Card Shield v3.0](https://wiki.seeedstudio.com/images/0/09/Eagle_file_of_SD_Card_Shield_v3.0.ZIP).
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -737,7 +737,7 @@ Thumb of rule: We recommend you only select drivers and flash tool to be install
 
 ####  Flash latest firmware on windows
 
-*   [Flashing guide on windows](http://www.intel.com/support/edison/sb/CS-035286.htm)
+*   [Flashing guide on windows](https://www.intel.com/support/edison/sb/CS-035286.htm)
 
 ##  Preliminary application
 
@@ -751,7 +751,7 @@ This section completed a simple application to show its powerful features. You c
 
 *   [Download compressed file](https://drive.google.com/open?id=0B44iVZMUKA7-eS1CUXpVRHBTYTg) required to drive this application.
 
-*   Tools required: USB OTG cables * 1, [few cable ties](http://www.seeedstudio.com/depot/Multicolor-Tie-Wraps-p-1337.html), [Intel Edison chip](http://www.seeedstudio.com/depot/Intel-Edison-p-2150.html?cPath=6_7) * 1, USB webcam*1.
+*   Tools required: USB OTG cables * 1, [few cable ties](https://www.seeedstudio.com/depot/Multicolor-Tie-Wraps-p-1337.html), [Intel Edison chip](https://www.seeedstudio.com/depot/Intel-Edison-p-2150.html?cPath=6_7) * 1, USB webcam*1.
 
 ####  Burn downloaded image files into Edison
 
@@ -854,4 +854,4 @@ Now you can control you robot movement by virtual joystick on your phone.
 - [Module Interfaces](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform_2.0/res/4WD_Driver_Platform_V1.0_3400_Modules.jpg)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

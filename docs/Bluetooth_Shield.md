@@ -14,7 +14,7 @@ tags:
 
 The Bluetooth Shield integrates a Serial Bluetooth module. It can be easily used with Arduino/Seeedstudio for transparent wireless serial communication. You can choose two pins from Arduino D0 to D7 as Software Serial Ports to communicate with Bluetooth Shield (D0 and D1 is Hardware Serial Port). The shield also has two Grove connectors (one is Digital, the other is Analog) for you to install Grove modules.
 
-Model:[SLD63030P](http://www.seeedstudio.com/depot/bluetooth-shield-p-866.html?cPath=19_21)
+Model:[SLD63030P](https://www.seeedstudio.com/depot/bluetooth-shield-p-866.html?cPath=19_21)
 
 ##   Features   ##
 
@@ -54,7 +54,7 @@ Model:[SLD63030P](http://www.seeedstudio.com/depot/bluetooth-shield-p-866.html?c
 
 This demo will show you how to connect two Bluetooth shield.
 
-You need two piece of [Seeeduino V3.0](http://www.seeedstudio.com/depot/seeeduino-v30-atmega-328p-p-669.html?cPath=6_7), a [Grove - Button](http://www.seeedstudio.com/depot/grove-button-p-766.html?cPath=85_50), and a [Grove - LED](http://www.seeedstudio.com/depot/grove-led-p-767.html?cPath=81_35).
+You need two piece of [Seeeduino V3.0](https://www.seeedstudio.com/depot/seeeduino-v30-atmega-328p-p-669.html?cPath=6_7), a [Grove - Button](https://www.seeedstudio.com/depot/grove-button-p-766.html?cPath=85_50), and a [Grove - LED](https://www.seeedstudio.com/depot/grove-led-p-767.html?cPath=81_35).
 
 One Bluetooth Shield as Master while the other as Slave, and there's a Botton connect to the Master, a Led connect to Slave.
 
@@ -138,11 +138,11 @@ When connect is ok, send 't' to SeeedBTSlave, and you can get the temperature no
 
 ##   Related Projects  ##
 
-It's a pity that we don't have any demo about Bluetooth Shield in the [Recipe](http://www.seeedstudio.com/recipe/) yet.
+It's a pity that we don't have any demo about Bluetooth Shield in the [Recipe](https://www.seeedstudio.com/recipe/) yet.
 
 Post your awesome project about CAN BUS Shield to win $100 Coupon! Please feel free to contact us: [recipe@seeed.cc](mailto:recipe@seeed.cc)
 
-Here we introduce some projects about [Serial port bluetooth module ](http://www.seeedstudio.com/recipe/255-control-multiple-servo-motor-from-android-app.html).
+Here we introduce some projects about [Serial port bluetooth module ](https://www.seeedstudio.com/recipe/255-control-multiple-servo-motor-from-android-app.html).
 
 ###  What is Serial Port Bluetooth Module  ###
 
@@ -156,7 +156,7 @@ Serial port bluetooth, Drop-in replacement for wired serial connections, transpa
 
 This is a complete tutorial about how to control multiple servo motors from android app through Serial Port Bluetooth Module.
 
-[I want to make it](http://www.seeedstudio.com/recipe/255-control-multiple-servo-motor-from-android-app.html).
+[I want to make it](https://www.seeedstudio.com/recipe/255-control-multiple-servo-motor-from-android-app.html).
 
 ###   Share Your Awesome Projects with Us  ###
 
@@ -168,7 +168,7 @@ It does not matter what you are and what you have made, hacker, maker, artist or
 
 As long as you start sharing your works with others, you are being part of the open source community and you are making your contributions.
 
-Now share your awesome projects with us on [Recipe](http://www.seeedstudio.com/recipe/), and win a chance to become the Core User of Seeed.
+Now share your awesome projects with us on [Recipe](https://www.seeedstudio.com/recipe/), and win a chance to become the Core User of Seeed.
 
 -  Core Users, are those who show high interests in Seeed products and make significant contributions on Recipe.
 
@@ -189,7 +189,7 @@ Now share your awesome projects with us on [Recipe](http://www.seeedstudio.com/r
 - **[Library]**[Bluetooth Shield Library for Arduino 1.0](https://files.seeedstudio.com/wiki/Bluetooth-Shield/res/BluetoothShieldDemoCode_For_Arduino1.0.zip)
 - **[Instruction]**[Bluetooth Software instruction](https://seeeddoc.github.io/Bluetooth_Shield/res/BTSoftware_Instruction.pdf)
 - **[Datasheet]**[Bluetooth - module Datasheet](https://seeeddoc.github.io/Bluetooth_Shield/res/Bluetooth_module.pdf)
-- **[Connections]** [Set up connections between two BluetoothBee step by step](http://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=687)
+- **[Connections]** [Set up connections between two BluetoothBee step by step](https://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=687)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

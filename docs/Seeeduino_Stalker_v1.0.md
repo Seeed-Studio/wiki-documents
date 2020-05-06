@@ -16,7 +16,7 @@ The latest version can be found here: [Seeeduino Stalker v2.1](https://seeeddoc.
 Look [ here](/Seeeduino_Stalker#Comparison_between_various_versions_of_Seeeduino_Stalker)  for comparison between v1.0, v2.0 and v2.1.**
 
 Link to product page for this device (follow this link to buy):
-**Seeeduino Stalker Atmega 168P v1.0Model: [ARD125B5P](http://www.seeedstudio.com/depot/seeeduino-stalker-atmega-168-p-639.html?cPath=79_80)**
+**Seeeduino Stalker Atmega 168P v1.0Model: [ARD125B5P](https://www.seeedstudio.com/depot/seeeduino-stalker-atmega-168-p-639.html?cPath=79_80)**
 
 Seeeduino Stalker is a feature rich Arduino compatible Wireless Sensor Network node. It's modular structure and onboard peripherals makes it convenient to log time stamp sensor data on a periodic basis. The Seeeduino Stalker is a good candidate for all your tracking, monitoring and control projects.
 
@@ -66,7 +66,7 @@ Seeeduino Stalker is a feature rich Arduino compatible Wireless Sensor Network n
 
 ##   Schematics   ##
 
-[Schematics for Seeeduino Stalker v1.0 (PDF)](http://www.seeedstudio.com/depot/datasheet/Seeedstalker_V1.0.pdf)
+[Schematics for Seeeduino Stalker v1.0 (PDF)](https://www.seeedstudio.com/depot/datasheet/Seeedstalker_V1.0.pdf)
 
 ##   Specifications  ##
 
@@ -129,9 +129,9 @@ Seeeduino Stalker is a feature rich Arduino compatible Wireless Sensor Network n
 
 Programming Seeeduino Stalker is made easy through the use of Arduino and its libraries. A few code snippets provided below will help you kickstart the coding for your project. A RAR archive containing all of the following sketches is available **here**.
 
-Please note that all of the Demo sketches presented below make use of the FileLogger library. Please refer to [this](http://www.arduino.cc/cgi-bin/yabb2/YaBB.pl?num=1240704747/all) thread at the Arduino Forum and download the library from its [project page](http://code.google.com/p/arduino-filelogger/) at Google Code.
+Please note that all of the Demo sketches presented below make use of the FileLogger library. Please refer to [this](https://arduino.cc/cgi-bin/yabb2/YaBB.pl?num=1240704747/all) thread at the Arduino Forum and download the library from its [project page](http://code.google.com/p/arduino-filelogger/) at Google Code.
 
-Also, a few Seeeduino Stalker users have shared some of the code developed by them in a [thread](http://www.arduino.cc/cgi-bin/yabb2/YaBB.pl?num=1273413449%20) at the Arduino Forum.
+Also, a few Seeeduino Stalker users have shared some of the code developed by them in a [thread](https://arduino.cc/cgi-bin/yabb2/YaBB.pl?num=1273413449%20) at the Arduino Forum.
 
 ###   Demo 1 - SD card usage  ###
 
@@ -222,7 +222,7 @@ byte start[7]={'B','e','g','i','n',0x0D,0x0A};unsignedchar buffer[10];unsignedch
 
 ##   Support   ##
 
-If you have questions or other better design ideas, you can go to our [forum](http://www.seeedstudio.com/forum) or **wish** to discuss.
+If you have questions or other better design ideas, you can go to our [forum](https://www.seeedstudio.com/forum) or **wish** to discuss.
 
 ##   Revision History   ##
 
@@ -241,11 +241,11 @@ The Additional Ideas is the place to write your project ideas about this product
 
 ##   Resources   ##
 
-[Stalker Eagle Design Files](http://seeedstudio.com/wiki/images/4/40/Stalker.zip)
+[Stalker Eagle Design Files](https://www.seeedstudio.com/wiki/images/4/40/Stalker.zip)
 
 ##   How to buy   ##
 
-Seeeduino Stalker v1.0 is already out of stock (Product page [here](http://www.seeedstudio.com/depot/seeeduino-stalker-atmega-328-p-600.html?cPath=80), instead please checkout Seeeduino Stalker v2.0: [ Wiki page](https://seeeddoc.github.io/Seeeduino_Stalker_v2.0/)  | [Product Page](http://www.seeedstudio.com/depot/seeeduino-stalker-v2b-p-727.html?cPath=80)
+Seeeduino Stalker v1.0 is already out of stock (Product page [here](https://www.seeedstudio.com/depot/seeeduino-stalker-atmega-328-p-600.html?cPath=80), instead please checkout Seeeduino Stalker v2.0: [ Wiki page](https://seeeddoc.github.io/Seeeduino_Stalker_v2.0/)  | [Product Page](https://www.seeedstudio.com/depot/seeeduino-stalker-v2b-p-727.html?cPath=80)
 
 ##   See Also   ##
 
@@ -257,4 +257,4 @@ Seeeduino Stalker v1.0 is already out of stock (Product page [here](http://www.s
 This documentation is licensed under the Creative Commons [Attribution-ShareAlike License 3.0](http://creativecommons.org/licenses/by-sa/3.0/) Source code and libraries are licensed under [GPL/LGPL](http://www.gnu.org/licenses/gpl.html), see source code files for details.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

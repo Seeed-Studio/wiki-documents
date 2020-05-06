@@ -236,7 +236,7 @@ The software development environment is [Arduino IDE](https://www.arduino.cc/en/
 
 Since Version 1.6.4, Arduino allows installation of third-party platform packages using Boards Manager. We have packages available for Windows, Mac OS, and Linux (32 and 64 bit).
 
-- Install the current upstream Arduino IDE at the 1.8 level or later. The current version is at the [Arduino website](http://www.arduino.cc/en/main/software).
+- Install the current upstream Arduino IDE at the 1.8 level or later. The current version is at the [Arduino website](https://arduino.cc/en/main/software).
 - Start Arduino and open Preferences window.
 - Enter ```https://dl.espressif.com/dl/package_esp32_index.json``` into *Additional Board Manager URLs* field. You can add multiple URLs, separating them with commas.
 - Open Boards Manager from Tools > Board menu and install *esp32* platform (and don't forget to select your ESP32 board from Tools > Board menu after installation).
@@ -349,7 +349,7 @@ Then, the following tutorial will show you how to control the GPIO/ADC/DAC/RGB-L
 
 - Located to the `examples` folder, choose any example, double cilck the .ino file.
 
-- Upload the demo. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 
 
@@ -789,4 +789,4 @@ The **running status** of vivado is displayed in the upper right corner.
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 

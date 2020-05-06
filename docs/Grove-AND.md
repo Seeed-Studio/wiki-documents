@@ -37,7 +37,7 @@ This [Grove](/Grove "Grove") module is available as part of the following [Grove
 
 *   [Grove Mixer Pack V2](/Grove-Mixer_Pack_V2 "GROVE MIXER PACK V2")
 
-Note that this Grove - AND module is sold only as part of the above mentioned packs and is not available stand-alone from the [Seeed Studio Bazaar](http://www.seeedstudio.com/depot/).
+Note that this Grove - AND module is sold only as part of the above mentioned packs and is not available stand-alone from the [Seeed Studio Bazaar](https://www.seeedstudio.com/depot/).
 
 
 ## Schematic Online Viewer
@@ -51,4 +51,4 @@ Note that this Grove - AND module is sold only as part of the above mentioned pa
 *   [Grove - AND v2.0 Source Files](https://files.seeedstudio.com/wiki/Grove-AND/res/Grove-AND_v2.0_Eagle.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

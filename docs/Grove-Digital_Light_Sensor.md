@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html
 oldwikiname: Grove_-_Digital_Light_Sensor
 prodimagename:
-bzprodimageurl: http://statics3.seeedstudio.com/images/101020030 1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/101020030 1.jpg
 surveyurl: https://www.research.net/r/Grove-Digital_Light_Sensor
 sku: 101020030
 tags: grove_digital, io_3v3, io_5v, plat_duino, plat_pi
@@ -14,13 +14,13 @@ tags: grove_digital, io_3v3, io_5v, plat_duino, plat_pi
 
 ![](https://files.seeedstudio.com/wiki/Grove-Digital_Light_Sensor/img/hardware%20overview.jpg)
 
-This module is based on the I2C light-to-digital converter TSL2561 to transform light intensity to a digital signal. Different from traditional analog light sensor, as [Grove - Light Sensor](http://www.seeedstudio.com/depot/grove-light-sensorp-p-1253.html?cPath=144_148), this digital module features a selectable light spectrum range due to its dual light sensitive diodes: infrared and full spectrum.
+This module is based on the I2C light-to-digital converter TSL2561 to transform light intensity to a digital signal. Different from traditional analog light sensor, as [Grove - Light Sensor](https://www.seeedstudio.com/depot/grove-light-sensorp-p-1253.html?cPath=144_148), this digital module features a selectable light spectrum range due to its dual light sensitive diodes: infrared and full spectrum.
 
 We can switch among three detection modes to take your readings. They are infrared mode, full spectrum and human visible mode. When running under the human visible mode, this sensor will give you readings just close to your eye feelings.
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4df5kaaKa6I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)
 
 ## Version
 
@@ -39,10 +39,10 @@ We can switch among three detection modes to take your readings. They are infrar
 -   I2C Address  0x29
 
 !!!Note
-    If you want to use multiplue I2C devices, please refer to [Software I2C](http://wiki.seeedstudio.com/Arduino_Software_I2C_user_guide/).
+    If you want to use multiplue I2C devices, please refer to [Software I2C](https://wiki.seeedstudio.com/Arduino_Software_I2C_user_guide/).
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 ## Specifications
 
@@ -92,7 +92,7 @@ We can switch among three detection modes to take your readings. They are infrar
 ## Getting Started
 
 !!!Note
-    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
 ### Play With Arduino
 
@@ -103,7 +103,7 @@ We can switch among three detection modes to take your readings. They are infrar
 | Seeeduino V4 | Base Shield | Grove - Digital light sensor |
 |--------------|----------------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Digital_Light_Sensor/img/digital%20light%20sensor_small.jpg)|
-|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|
+|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|
 
 
 - **Step 2.** Connect Grove - Digital light Sensor to **I2C** port of base shield.
@@ -115,7 +115,7 @@ We can switch among three detection modes to take your readings. They are infrar
 #### Software
 
 - **Step 1.** Download the library from here [Digital Light Sensor Library](https://github.com/Seeed-Studio/Grove_Digital_Light_Sensor/archive/master.zip);
-- **Step 2.** Please follow [how to install an arduino library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install library.
+- **Step 2.** Please follow [how to install an arduino library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install library.
 - **Step 3.** Open the code directly by the path: **File -> Example ->Digital_Light_Sensor->Digital_Light_Sensor**.
 
 ![](https://files.seeedstudio.com/wiki/Grove-Digital_Light_Sensor/img/library%20example.jpg)
@@ -185,7 +185,7 @@ void loop()
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Digital_Light_Sensor/img/digital%20light%20sensor_small.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|
 
-- Follow [instruction](http://wiki.seeedstudio.com/GrovePi_Plus/) to configure the development environment.
+- Follow [instruction](https://wiki.seeedstudio.com/GrovePi_Plus/) to configure the development environment.
 - Plug the sensor to grovepi+ socket **I2C** by using a grove cable.
 
 ![](https://files.seeedstudio.com/wiki/Grove-Digital_Light_Sensor/img/pi%20connection.jpg)
@@ -545,7 +545,7 @@ sudo python grove_i2c_digital_light_sensor.py
 - **[Datasheet]** [TSL2561 Datasheet](https://files.seeedstudio.com/wiki/Grove-Digital_Light_Sensor/res/TSL2561T.pdf)
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Digital_Light_Sensor -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Digital_Light_Sensor -->
 
 ## Projects
 
@@ -562,4 +562,4 @@ sudo python grove_i2c_digital_light_sensor.py
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/DigitalFabber/coi-light-transmission-meter-8044fd/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

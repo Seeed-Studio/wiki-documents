@@ -4,7 +4,7 @@ category: Shield
 bzurl: https://seeedstudio.com/NFC-Shield-V2.0-p-1370.html
 oldwikiname: NFC_Shield_V2.0
 prodimagename: NFC_front.png
-bzprodimageurl: http://statics3.seeedstudio.com/images/113030001 1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/113030001 1.jpg
 surveyurl: https://www.research.net/r/NFC_Shield_V2_0
 sku: 113030001
 ---
@@ -40,9 +40,9 @@ If you want to make some awesome projects by NFC Shield V2.0, here are some proj
 
 ![](https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/img/Seeed-recipe-paper_man.jpg)
 
-[Make it NOW!](http://www.seeedstudio.com/recipe/40-paper-man-an-interesting-object-to-interact-with-android.html)
+[Make it NOW!](https://www.seeedstudio.com/recipe/40-paper-man-an-interesting-object-to-interact-with-android.html)
 
-[***More Awesome Projects by NFC Shield V2.0***](http://www.seeedstudio.com/recipe/index.php?query=NFC+Shield)
+[***More Awesome Projects by NFC Shield V2.0***](https://www.seeedstudio.com/recipe/index.php?query=NFC+Shield)
 
 Features
 --------
@@ -89,7 +89,7 @@ NFC Shield Setup
 
 - **Step 1.**  Download [Seeed Arduino NFC Library](https://github.com/Seeed-Studio/Seeed_Arduino_NFC).
 
-- **Step 2.**  Refer to [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install **Seeed Arduino NFC** library for Arduino.
+- **Step 2.**  Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install **Seeed Arduino NFC** library for Arduino.
 
 - **Step 3.**  Download [PN532 Library](https://github.com/Seeed-Studio/PN532) and put it under **C:\Program Files (x86)\Arduino\libraries\Seeed_Arduino_NFC-master\src**.
 
@@ -813,7 +813,7 @@ Resources
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/litliao/nfc-card-controlled-remote-car-af27c9/embed' width='350'></iframe>
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/NFC_Shield_V2.0 -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/NFC_Shield_V2.0 -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

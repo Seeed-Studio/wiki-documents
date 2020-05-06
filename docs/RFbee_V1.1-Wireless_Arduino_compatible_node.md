@@ -4,7 +4,7 @@ category: Wireless
 bzurl: https://seeedstudio.com/RFbee-V1.1-Wireless-arduino-compatible-node-p-614.html
 oldwikiname: RFbee_V1.1_-_Wireless_Arduino_compatible_node
 prodimagename: rfbee1.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/rfbee1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/rfbee1.jpg
 surveyurl: https://www.research.net/r/RFbee_V1_1-Wireless_Arduino_compatible_node
 sku: 113050002
 ---
@@ -14,7 +14,7 @@ sku: 113050002
 The RFBee is a RF module providing easy and flexible wireless data transmission between devices. It is based on a AVR ATmega168 working as a fully functional **Arduino** connected via SPI to a TI CC1101 RF transceiver.
 
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/rfbee-v11-wireless-arduino-compatible-node-p-614.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/depot/rfbee-v11-wireless-arduino-compatible-node-p-614.html)
 
 Version Tracker
 ---------------
@@ -185,7 +185,7 @@ You can update the RFbee firmware using the Arduino IDE using the procedure belo
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="http://www.seeedstudio.com/depot/datasheet/RFBee%20hardware%20v1.1.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://www.seeedstudio.com/depot/datasheet/RFBee%20hardware%20v1.1.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
@@ -195,11 +195,11 @@ Resources
 -   [RFBee User Manual](https://files.seeedstudio.com/wiki/RFbee_V1.1-Wireless_Arduino_compatible_node/res/rfbee-manual.pdf)
 -   [RFbee firmware for Arduino 1.0](https://files.seeedstudio.com/wiki/RFbee_V1.1-Wireless_Arduino_compatible_node/res/RFbee_for_arduino1.0.zip)
 -   [RFbee firmware 1.1 (latest)](https://github.com/Seeed-Studio/RFBee)
--   [Schematic and layout in EAGLE file](http://www.seeedstudio.com/depot/datasheet/RFBee%20hardware%20v1.1.zip)
--   [Forum](http://forum.seeedstudio.com/viewtopic.php?f=10&t=682&sid=7a9b1bed4f9fd10a9b1003ca1e48e756)
+-   [Schematic and layout in EAGLE file](https://www.seeedstudio.com/depot/datasheet/RFBee%20hardware%20v1.1.zip)
+-   [Forum](https://forum.seeedstudio.com/viewtopic.php?f=10&t=682&sid=7a9b1bed4f9fd10a9b1003ca1e48e756)
 
 
-<!-- This Markdown file was created from http://wiki.seeedstudio.com/RFbee_V1.1-Wireless_Arduino_compatible_node/ -->
+<!-- This Markdown file was created from https://wiki.seeedstudio.com/RFbee_V1.1-Wireless_Arduino_compatible_node/ -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

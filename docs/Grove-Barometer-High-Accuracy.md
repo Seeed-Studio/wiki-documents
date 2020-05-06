@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-Barometer-(High-Accuracy)-p-1865.html
 oldwikiname: Grove_-_Barometer_(High-Accuracy)
 prodimagename: Grove-Barometer-High-Accuracy.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/Grove Barometer High-Accuracy.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/Grove Barometer High-Accuracy.jpg
 surveyurl: https://www.research.net/r/Grove-Barometer-High-Accuracy
 sku: 101020068
 tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit
@@ -14,7 +14,7 @@ tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit
 
 This Grove - Barometer (High-Accuracy) Sensor features a HP206C high-accuracy chip to detect barometric pressure ,Altimeter and temperature. It can widely measure pressure ranging from 300mbar~1200mbar, with a super high accuracy of 0.01mbar(0.1m) in ultra-high resolution mode.The chip only accepts 1.8V to 3.6V input voltage. However, with outer circuit added, this module becomes compatible with 3.3V and 5V. Therefore, it can be used on Arduino/Seeeduino or Seeeduino Stalker without modification. It is designed to be connected directly to a micro-controller via the I2C bus.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-Barometer-(High-Accuracy)-p-1865.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-Barometer-(High-Accuracy)-p-1865.html)
 
 
 ## Features
@@ -32,10 +32,10 @@ This Grove - Barometer (High-Accuracy) Sensor features a HP206C high-accuracy ch
 -   I2C Address: 0x76
 
 !!!Note
-    If you want to use multiplue I2C devices, please refer to [Software I2C](http://wiki.seeedstudio.com/Arduino_Software_I2C_user_guide/).
+    If you want to use multiplue I2C devices, please refer to [Software I2C](https://wiki.seeedstudio.com/Arduino_Software_I2C_user_guide/).
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 ## Application Ideas
 
@@ -190,7 +190,7 @@ Barometric condition is one of the criteria used to predict coming change in wea
 | Seeeduino V4.2 | Base Shield| Grove-Barometer-High-Accuracy |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/img/45d_small.jpg)|
-|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](http://www.seeedstudio.com/Grove-Barometer-(High-Accuracy)-p-1865.html)|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Barometer-(High-Accuracy)-p-1865.html)|
 
 - **Step 2.** Connect Grove-Barometer-High-Accuracy to port **I2C** of Grove-Base Shield.
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
@@ -217,7 +217,7 @@ Barometric condition is one of the criteria used to predict coming change in wea
 
 **Step 1.** Download the [library](https://github.com/Seeed-Studio/Grove_Barometer_HP20x) from Github.
 
-**Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+**Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 
 **Step 3.** Create a new Arduino sketch and paste the codes below to it or open the code directly by the path:File -> Example ->Barometer_Sensor->Barometer_Sensor.
@@ -325,7 +325,7 @@ void loop()
 | Raspberry pi | GrovePi_Plus | Grove-Barometer-High-Accuracy |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/img/45d_small.jpg)|
-|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](http://www.seeedstudio.com/Grove-Barometer-(High-Accuracy)-p-1865.html)|
+|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/Grove-Barometer-(High-Accuracy)-p-1865.html)|
 
 
 
@@ -362,7 +362,7 @@ Here is the code :
 ```Python
 #!/usr/bin/env python
 #
-# GrovePi Example for using the Grove - Barometer (High-Accuracy)(http://www.seeedstudio.com/depot/Grove-Barometer-HighAccuracy-p-1865.html
+# GrovePi Example for using the Grove - Barometer (High-Accuracy)(https://www.seeedstudio.com/depot/Grove-Barometer-HighAccuracy-p-1865.html
 #
 # The GrovePi connects the Raspberry Pi and Grove sensors.  You can learn more about GrovePi here:  http://www.dexterindustries.com/GrovePi
 #
@@ -438,5 +438,5 @@ Our mission with nature is to preserve it, designing and implementing technologi
 
 ## Tech Support
 
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

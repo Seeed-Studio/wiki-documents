@@ -52,7 +52,7 @@ There are a numerous use of these gas sensors. Particularly, using these gas sen
 
 For all the Grove Gas sensors in our bazaar, please click [bazaar Grove Gas sensors tag](https://www.seeedstudio.com/tag/index/index/tag/GAS-SENSOR/?product_list_limit=all) to check.
 
-Or you can click **[here](http://wiki.seeedstudio.com/gas_sensor_selection/)** to get better view of the table. 
+Or you can click **[here](https://wiki.seeedstudio.com/gas_sensor_selection/)** to get better view of the table. 
 
 
 | Name                                                            | Target Gas                                                                                   | Class of gas sensors | Field of application                                                                                                                                 | Sensor     | Detecting Range                                                                                                                    | Accuracy                                                                                                                                                                                   | Operate voltage | Interface | Click to Buy                                                                                                            |
@@ -75,7 +75,7 @@ Or you can click **[here](http://wiki.seeedstudio.com/gas_sensor_selection/)** t
 
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+ if you have any technical issue.  submit the issue into our [forum](https://forum.seeedstudio.com/). 
 
 
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

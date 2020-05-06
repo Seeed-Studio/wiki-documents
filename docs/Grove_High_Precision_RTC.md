@@ -66,11 +66,11 @@ Now we are making a demo for Grove - High Precision RTC module, in this demo we'
 * [Grove - High Precision RTC](https://www.seeedstudio.com/)*1
 
 
-If this is your first time using [Seeeduino Lotus](https://www.seeedstudio.com/Seeeduino-Lotus-ATMega328-Board-with-Grove-Interface-p-1942.html), please refer to [Seeeduino Lotus's wiki](http://wiki.seeedstudio.com/Seeeduino_Lotus/).
+If this is your first time using [Seeeduino Lotus](https://www.seeedstudio.com/Seeeduino-Lotus-ATMega328-Board-with-Grove-Interface-p-1942.html), please refer to [Seeeduino Lotus's wiki](https://wiki.seeedstudio.com/Seeeduino_Lotus/).
 
 Seeeduino Lotus is fully compatible with Arduino which works as simple as Arduino.
 
-If this is your first time using Arduino, Please put hand on [here](http://arduino.cc) to start your Arduino journey.
+If this is your first time using Arduino, Please put hand on [here](https://arduino.cc) to start your Arduino journey.
 
 ###Connecting hardware
 
@@ -80,7 +80,7 @@ If this is your first time using Arduino, Please put hand on [here](http://ardui
 
 ###Download the library
 
-Click to download the library and install it ([How to install an Arduino Library](http://wiki.seeed.cc/How_to_install_Arduino_Library/)).
+Click to download the library and install it ([How to install an Arduino Library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/)).
 
 [![](https://files.seeedstudio.com/wiki/Grove-High_Precision_RTC/img/library.png)](https://github.com/Seeed-Studio/Grove_High_Precision_RTC_PCF85063TP/archive/master.zip)
 
@@ -115,4 +115,4 @@ After upload completed, you can open the serial monitor to see the result.
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

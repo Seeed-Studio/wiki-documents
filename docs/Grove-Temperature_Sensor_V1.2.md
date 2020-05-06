@@ -17,7 +17,7 @@ tags: io_3v3, io_5v, plat_duino
 
 The Grove - Temperature Sensor uses a [Thermistor](https://files.seeedstudio.com/wiki/Grove-Temperature_Sensor_V1.2/res/NCP18WF104F03RC.pdf) to detect the ambient temperature. The resistance of a thermistor will increase when the ambient temperature decreases. It's this characteristic that we use to calculate the ambient temperature. The detectable range of this sensor is -40 - 125ºC, and the accuracy is ±1.5ºC
 
-Note: This wiki works with Grove - Temperature sensor V1.1 as well, for V1.0 please refer to [Grove - Temperature Sensor](http://wiki.seeedstudio.com/Grove-Temperature_Sensor)
+Note: This wiki works with Grove - Temperature sensor V1.1 as well, for V1.0 please refer to [Grove - Temperature Sensor](https://wiki.seeedstudio.com/Grove-Temperature_Sensor)
 
 
 
@@ -34,7 +34,7 @@ Note: This wiki works with Grove - Temperature sensor V1.1 as well, for V1.0 ple
 - Nominal B-Constant： 4250 ~ 4299K
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 
 ## Platforms Supported
@@ -53,7 +53,7 @@ Note: This wiki works with Grove - Temperature sensor V1.1 as well, for V1.0 ple
 After this section, you can make Grove - Temperature Sensor V1.1/1.2 run with only few steps.
 
 !!!Note
-    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
 ### Play With Arduino
 
@@ -64,7 +64,7 @@ After this section, you can make Grove - Temperature Sensor V1.1/1.2 run with on
 | Seeeduino V4.2 | Base Shield|  Grove - Temperature Sensor |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Temperature_Sensor_V1.2/img/Grove_Temperature_Sensor_View_little.jpg)|
-|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Temperature-Sensor-p-774.html)|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Temperature-Sensor-p-774.html)|
 
 - **Step 2.** Connect Grove - Temperature Sensor to port **A0** of Grove-Base Shield.
 
@@ -89,7 +89,7 @@ After this section, you can make Grove - Temperature Sensor V1.1/1.2 run with on
 
 #### Software
 
-- **Step 1.** Launch Arduino IDE and click **File>New** to open a new page. Copy the following code into the new page and upload. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 1.** Launch Arduino IDE and click **File>New** to open a new page. Copy the following code into the new page and upload. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 
 ```
@@ -166,7 +166,7 @@ The result should be like:
 
 #### Software
 
-- **Step 1**. Follow [Setting Software](http://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
 - **Step 2**. Download the source file by cloning the grove.py library. 
 
 ```
@@ -379,5 +379,5 @@ If you want to know how the algorithm of temperature coming, please refer to the
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vI9pkmiK8EM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

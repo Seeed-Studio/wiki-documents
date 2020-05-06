@@ -4,7 +4,7 @@ category: Communication
 bzurl: https://seeedstudio.com/Grove-315MHz-Simple-RF-Link-Kit-p-1061.html
 oldwikiname: Grove_-_315MHz_RF_Kit
 prodimagename: 315MHz-Simple-RF-Link-Kit.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/315MHz Simple RF Link Kit.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/315MHz Simple RF Link Kit.jpg
 surveyurl: https://www.research.net/r/Grove-315MHz_RF_Kit
 sku: 113020001
 tags: grove_uart, io_5v, plat_duino
@@ -14,7 +14,7 @@ tags: grove_uart, io_5v, plat_duino
 
 This kit is used for one way wireless communication at a frequency of 315MHz and includes a transmitter module and a receiver module. The twig configuration of this kit allows for around 40 meters of transmitting distance indoors, or around 100 meters outside. The 315 MHz frequency is suitable for use without a license in the United States. For use in Europe, please see the 433 MHz version of this product.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-315MHz-Simple-RF-Link-Kit-p-1061.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-315MHz-Simple-RF-Link-Kit-p-1061.html)
 
 
 Features
@@ -25,7 +25,7 @@ Features
 -   One way communication.
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 Application Ideas
 -----------------
@@ -134,7 +134,7 @@ Resources
 -   [TI:LM358PSR](https://files.seeedstudio.com/wiki/Grove-315MHz_RF_Kit/res/1110010P1.pdf)
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_315MHz_RF_Kit -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_315MHz_RF_Kit -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

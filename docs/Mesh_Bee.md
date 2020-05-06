@@ -554,17 +554,17 @@ This is a simple example about remote control with 2 Mesh Bee nodes.
 
 They are:
 
-*   [Seeeduino v3](http://www.seeedstudio.com/depot/seeeduino-v30-atmega-328p-p-669.html?cPath=6_7) x2
+*   [Seeeduino v3](https://www.seeedstudio.com/depot/seeeduino-v30-atmega-328p-p-669.html?cPath=6_7) x2
 
-*   XBee shield x2 , version 1/2, picture above shows [XBee Shield v1](http://www.seeedstudio.com/depot/xbee-shield-p-419.html?cPath=73) and [XBee Shield v2](http://www.seeedstudio.com/depot/xbee-shield-v20-p-1375.html?cPath=98_16)
+*   XBee shield x2 , version 1/2, picture above shows [XBee Shield v1](https://www.seeedstudio.com/depot/xbee-shield-p-419.html?cPath=73) and [XBee Shield v2](https://www.seeedstudio.com/depot/xbee-shield-v20-p-1375.html?cPath=98_16)
 
 *   Mesh Bee x2 (pic above shows the prototype version, the release version maybe different in color)
 
 *   UartSBee v5 x1
 
-*   [Rotary Angle](http://www.seeedstudio.com/depot/grove-rotary-angle-sensor-p-770.html?cPath=85_52) x1
+*   [Rotary Angle](https://www.seeedstudio.com/depot/grove-rotary-angle-sensor-p-770.html?cPath=85_52) x1
 
-*   [Servo](http://www.seeedstudio.com/depot/grove-servo-p-1241.html?cPath=39_41) x1
+*   [Servo](https://www.seeedstudio.com/depot/grove-servo-p-1241.html?cPath=39_41) x1
 
 *   Cables
 
@@ -899,7 +899,7 @@ Download page: [http://www.nxp.com/techzones/wireless-connectivity/smart-energy.
 
 ###   7.4 Contribution
 
-[![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/MeshBeeFirmwareProject.png)](http://seeed-studio.github.io/Mesh_Bee/)
+[![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/MeshBeeFirmwareProject.png)](https://seeed-studio.github.io/Mesh_Bee/)
 
 ##   8. Discussion Group
 
@@ -952,4 +952,4 @@ End-device's firmware: [https://github.com/Seeed-Studio/Mesh_Bee/raw/v1.0.4/buil
 *   [Mesh Bee firmware source code on Github](https://github.com/Seeed-Studio/Mesh_Bee)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

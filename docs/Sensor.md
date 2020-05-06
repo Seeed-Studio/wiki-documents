@@ -16,19 +16,19 @@ nointro:
   <img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grove_icon/Gas.png" width="110" height="110" border=0/>
   
   <p class="links"> 
-  <a href="http://wiki.seeedstudio.com/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/">VOC and eCO2 Gas Sensor</a>
+  <a href="https://wiki.seeedstudio.com/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/">VOC and eCO2 Gas Sensor</a>
   </p>
 
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Grove-Air_Quality_Sensor_v1.3/">Air Quality Sensor v1.3</a>
+  <a href="https://wiki.seeedstudio.com/Grove-Air_Quality_Sensor_v1.3/">Air Quality Sensor v1.3</a>
   </p>
 
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Grove-Gas_Sensor/">Gas Sensor</a>
+  <a href="https://wiki.seeedstudio.com/Grove-Gas_Sensor/">Gas Sensor</a>
   </p>
 
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Sensor_gas/">More</a>
+  <a href="https://wiki.seeedstudio.com/Sensor_gas/">More</a>
   </p>
 </div>
 
@@ -38,19 +38,19 @@ nointro:
   <img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grove_icon/Barometer.png" width="110" height="110" border=0/>
   
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Grove-Barometer_Sensor-BMP180/">Barometer Sensor (BMP180)</a>
+  <a href="https://wiki.seeedstudio.com/Grove-Barometer_Sensor-BMP180/">Barometer Sensor (BMP180)</a>
   </p>
 
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Grove-Barometer_Sensor-BMP280/">Barometer Sensor (BMP280)</a>
+  <a href="https://wiki.seeedstudio.com/Grove-Barometer_Sensor-BMP280/">Barometer Sensor (BMP280)</a>
   </p>
 
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Grove-Barometer-High-Accuracy/">Barometer (High-Accuracy)</a>
+  <a href="https://wiki.seeedstudio.com/Grove-Barometer-High-Accuracy/">Barometer (High-Accuracy)</a>
   </p>
 
    <p class="links">
-  <a href="http://wiki.seeedstudio.com/Sensor_barometer/">More</a>
+  <a href="https://wiki.seeedstudio.com/Sensor_barometer/">More</a>
   </p>
 </div>
 
@@ -60,19 +60,19 @@ nointro:
   <img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grove_icon/Accelerometer.png" width="110" height="110" border=0/>
   
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Grove-6-Axis_AccelerometerAndCompass_V2.0/">6-Axis Accelerometer&Compass V2.0</a>
+  <a href="https://wiki.seeedstudio.com/Grove-6-Axis_AccelerometerAndCompass_V2.0/">6-Axis Accelerometer&Compass V2.0</a>
   </p>
 
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Grove-3-Axis_Digital_Accelerometer-16g/">3 Axis Digital Accelerometer(±16g)</a>
+  <a href="https://wiki.seeedstudio.com/Grove-3-Axis_Digital_Accelerometer-16g/">3 Axis Digital Accelerometer(±16g)</a>
   </p>
 
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Grove-IMU_10DOF_v2.0/">IMU 10DOF v2.0</a>
+  <a href="https://wiki.seeedstudio.com/Grove-IMU_10DOF_v2.0/">IMU 10DOF v2.0</a>
   </p>
 
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Sensor_accelerometer/">More</a>
+  <a href="https://wiki.seeedstudio.com/Sensor_accelerometer/">More</a>
   </p>
 </div>
 </div>
@@ -94,19 +94,19 @@ nointro:
   <img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grove_icon/Temperature.png" width="110" height="110" border=0/>
   
   <p class="links"> 
-  <a href="http://wiki.seeedstudio.com/Grove-Digital_Infrared_Temperature_Sensor/">Digital Infrared Temperature Sensor</a>
+  <a href="https://wiki.seeedstudio.com/Grove-Digital_Infrared_Temperature_Sensor/">Digital Infrared Temperature Sensor</a>
   </p>
 
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Grove-High_Temperature_Sensor/">High Temperature Sensor</a>
+  <a href="https://wiki.seeedstudio.com/Grove-High_Temperature_Sensor/">High Temperature Sensor</a>
   </p>
 
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Grove-Temperature_Sensor_V1.2/">Temperature Sensor V1.2</a>
+  <a href="https://wiki.seeedstudio.com/Grove-Temperature_Sensor_V1.2/">Temperature Sensor V1.2</a>
   </p>
 
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Sensor_temperature/">More</a>
+  <a href="https://wiki.seeedstudio.com/Sensor_temperature/">More</a>
   </p>
 </div>
 
@@ -116,19 +116,19 @@ nointro:
   <img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grove_icon/Light.png" width="110" height="110" border=0/>
   
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Grove-Digital_Light_Sensor/">Digital Light Sensor</a>
+  <a href="https://wiki.seeedstudio.com/Grove-Digital_Light_Sensor/">Digital Light Sensor</a>
   </p>
 
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Grove-PIR_Motion_Sensor/">PIR Motion Sensor</a>
+  <a href="https://wiki.seeedstudio.com/Grove-PIR_Motion_Sensor/">PIR Motion Sensor</a>
   </p>
 
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Grove-I2C_Color_Sensor/">I2C Color Sensor</a>
+  <a href="https://wiki.seeedstudio.com/Grove-I2C_Color_Sensor/">I2C Color Sensor</a>
   </p>
 
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Sensor_light/">More</a>
+  <a href="https://wiki.seeedstudio.com/Sensor_light/">More</a>
   </p>
 </div>
 
@@ -138,19 +138,19 @@ nointro:
   <img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grove_icon/Health.png" width="110" height="110" border=0/>
   
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Grove-Ear-clip_Heart_Rate_Sensor/">Ear-clip Heart Rate Sensor</a>
+  <a href="https://wiki.seeedstudio.com/Grove-Ear-clip_Heart_Rate_Sensor/">Ear-clip Heart Rate Sensor</a>
   </p>
 
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Grove-Fingerprint_Sensor/">Fingerprint Sensor</a>
+  <a href="https://wiki.seeedstudio.com/Grove-Fingerprint_Sensor/">Fingerprint Sensor</a>
   </p>
 
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Grove-GSR_Sensor/">GSR Sensor</a>
+  <a href="https://wiki.seeedstudio.com/Grove-GSR_Sensor/">GSR Sensor</a>
   </p>
 
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Sensor_health/">More</a>
+  <a href="https://wiki.seeedstudio.com/Sensor_health/">More</a>
   </p>
 </div>
 </div>
@@ -172,19 +172,19 @@ nointro:
   <img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grove_icon/Sound.png" width="110" height="110" border=0/>
   
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Grove-Speech_Recognizer/">Speech Recognizer</a>
+  <a href="https://wiki.seeedstudio.com/Grove-Speech_Recognizer/">Speech Recognizer</a>
   </p>
 
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Grove-Loudness_Sensor/">Loudness Sensor</a>
+  <a href="https://wiki.seeedstudio.com/Grove-Loudness_Sensor/">Loudness Sensor</a>
   </p>
 
   <p class="links"> 
-  <a href="http://wiki.seeedstudio.com/Grove-Sound_Sensor/">Sound Sensor</a>
+  <a href="https://wiki.seeedstudio.com/Grove-Sound_Sensor/">Sound Sensor</a>
   </p>
 
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Sensor_sound/">More</a>
+  <a href="https://wiki.seeedstudio.com/Sensor_sound/">More</a>
   </p>
 </div>
 
@@ -198,15 +198,15 @@ nointro:
   </p>
 
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Grove-Infrared_Reflective_Sensor/">Infrared Reflective Sensor</a>
+  <a href="https://wiki.seeedstudio.com/Grove-Infrared_Reflective_Sensor/">Infrared Reflective Sensor</a>
   </p>
 
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Grove-Ultrasonic_Ranger/">Ultrasonic Ranger</a>
+  <a href="https://wiki.seeedstudio.com/Grove-Ultrasonic_Ranger/">Ultrasonic Ranger</a>
   </p>
 
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Sensor_distance/">More</a>
+  <a href="https://wiki.seeedstudio.com/Sensor_distance/">More</a>
   </p>
 </div>
 
@@ -216,19 +216,19 @@ nointro:
   <img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grove_icon/Others.png" width="110" height="110" border=0/>
   
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Grove-Electricity_Sensor/">Electricity Sensor</a>
+  <a href="https://wiki.seeedstudio.com/Grove-Electricity_Sensor/">Electricity Sensor</a>
   </p>
 
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Grove-Dust_Sensor/">Dust Sensor</a>
+  <a href="https://wiki.seeedstudio.com/Grove-Dust_Sensor/">Dust Sensor</a>
   </p>
 
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Grove-RTC/">Grove–RTC</a>
+  <a href="https://wiki.seeedstudio.com/Grove-RTC/">Grove–RTC</a>
   </p>
 
   <p class="links">
-  <a href="http://wiki.seeedstudio.com/Sensor_Others/">More</a>
+  <a href="https://wiki.seeedstudio.com/Sensor_Others/">More</a>
   </p>
 </div>
 </div>

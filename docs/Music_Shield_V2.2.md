@@ -19,7 +19,7 @@ The recording function works with Seeeduino Mega and Arduino Mega only. And the 
 </div>
 
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Music-Shield-V20-p-1372.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/depot/Music-Shield-V20-p-1372.html)
 
 
 Hardware Overview
@@ -188,7 +188,7 @@ Resources
 - [Music Shield libraries](https://github.com/Seeed-Studio/Music_Shield)
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Music_Shield_V2.2 -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Music_Shield_V2.2 -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

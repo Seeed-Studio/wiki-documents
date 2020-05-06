@@ -16,7 +16,7 @@ This repo demonstrates how to use Anti-aliased fonts in Wio Terminal (**i.e. Dis
 
 ### Installing the TFT LCD Library For Wio Terminal
 
-- visit [TFT LCD Overview](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/)
+- visit [TFT LCD Overview](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/)
 
 ## Generate vlw Font file
 

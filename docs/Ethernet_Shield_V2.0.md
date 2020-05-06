@@ -14,7 +14,7 @@ tags:
 
 Your Ethernet Shield gets a total renewal now! This shield provides you instant Internet connectivity with a high spec Ethernet controller, W5200, with twice the buffer size of v1.0 and support for up to eight simultaneous TCP/UDP connections. An included SD slot enables applications that require storing large amounts of data, like IoT data logging. Thanks to a lowered RJ45 pot, you can flexibly add most of shields on top of this Ethernet Shield.
 
-Model:[SLD91000P](http://www.seeedstudio.com/depot/w5200-ethernet-shield-p-1577.html)
+Model:[SLD91000P](https://www.seeedstudio.com/depot/w5200-ethernet-shield-p-1577.html)
 
 
 
@@ -130,11 +130,11 @@ To check what's going on to the SD card, open the serial monitor. You can use th
 
 ##   Related Projects  ##
 
-It's a pity that we don't have any demo about Ethernet Shield in the [Recipe](http://www.seeedstudio.com/recipe/) yet.
+It's a pity that we don't have any demo about Ethernet Shield in the [Recipe](https://www.seeedstudio.com/recipe/) yet.
 
 Post your awesome project about Ethernet Shield to **win $100 Coupon!** Please feel free to contact us: **recipe@seeed.cc**
 
-Here we introduce some projects about [LinkIt ONE](http://www.seeedstudio.com/depot/LinkIt-ONE-p-2017.html).
+Here we introduce some projects about [LinkIt ONE](https://www.seeedstudio.com/depot/LinkIt-ONE-p-2017.html).
 
 ###  What is LinkIt ONE ###
 
@@ -166,7 +166,7 @@ With this demo, we can:
 
 -  Table Lamp, 3D Printing, controlled by your phone
 
-[I want to make it](http://www.seeedstudio.com/recipe/77-linkit-one-iot-demo.html).
+[I want to make it](https://www.seeedstudio.com/recipe/77-linkit-one-iot-demo.html).
 
 ###  Pringles Can antenna with a LinkIt ONE ###
 
@@ -174,9 +174,9 @@ With this demo, we can:
 
 Make a focused antenna with a pringles can.
 
-[I want to make it.](http://www.seeedstudio.com/recipe/177-pringles-can-antenna-with-a-linkit-one.html)
+[I want to make it.](https://www.seeedstudio.com/recipe/177-pringles-can-antenna-with-a-linkit-one.html)
 
-[More Awesome Projects by LinkIt ONE](http://www.seeedstudio.com/recipe/index.php?m=Home&amp;controller=Recipe&amp;action=productDetail&amp;id=2)
+[More Awesome Projects by LinkIt ONE](https://www.seeedstudio.com/recipe/index.php?m=Home&amp;controller=Recipe&amp;action=productDetail&amp;id=2)
 
 ###   Share Your Awesome Projects with Us  ###
 
@@ -213,4 +213,4 @@ Get more information about Core User please email to:[recipe@seeed.cc](mailto:re
 - **[Datasheet]**[W5200 Datasheet.pdf](https://files.seeedstudio.com/wiki/Ethernet_Shield_V2.0/res/W5200_Datasheet.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

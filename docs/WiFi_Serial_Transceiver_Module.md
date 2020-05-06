@@ -16,7 +16,7 @@ In this tutorial, we'll use a seeeduino to control the ESP8266 WiFi module to re
 **Material list:**
 
 - [Seeeduino V3](https://www.seeedstudio.com/Seeeduino-V30-Atmega-328P-p-669.html) / Arduino Uno
-- [ESP8266 Serial WiFi module](http://www.seeedstudio.com/depot/WiFi-Serial-Transceiver-Module-w-ESP8266-p-1994.html)
+- [ESP8266 Serial WiFi module](https://www.seeedstudio.com/depot/WiFi-Serial-Transceiver-Module-w-ESP8266-p-1994.html)
 - [UartSBee v4](https://www.seeedstudio.com/UartSBee-V4-p-688.html) / other USB to TTL converter
 
 !!!Note
@@ -141,7 +141,7 @@ At last, Happy Hakcing! :)
 
 ## Related Projects
 ---
-[Recipe Community](http://www.seeedstudio.com/recipe/) is an awesome place where makers share their amazing works here. Our makers have made a lot of awesome projects with esp8266, check this out!
+[Recipe Community](https://www.seeedstudio.com/recipe/) is an awesome place where makers share their amazing works here. Our makers have made a lot of awesome projects with esp8266, check this out!
 
 **WiFi Scanner -Know the WiFi Signal around you**
 
@@ -176,4 +176,4 @@ Na, not enough? More [Awesome Projects with ESP8266](https://community.seeedstud
 Even more Awesome Projects On [Recipe](https://community.seeedstudio.com/projects.html#recipe)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

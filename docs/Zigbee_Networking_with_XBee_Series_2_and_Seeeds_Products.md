@@ -39,11 +39,11 @@ Any data sent from one Zigbee device to another is sent by specifying the 16-bit
 
 **Seeedstudio Bazaar** currently sells two types of Zigbee modules from [digi](http://www.digi.com/) :
 
-*   [XBee® RF Modules ZNet 2.5 RF Module](http://www.seeedstudio.com/depot/xbee-pro-series2-rf-module-p-418.html?cPath=139_142) and
+*   [XBee® RF Modules ZNet 2.5 RF Module](https://www.seeedstudio.com/depot/xbee-pro-series2-rf-module-p-418.html?cPath=139_142) and
 
-*   [XBee® Pro Series 2 RF module](http://www.seeedstudio.com/depot/xbee%C3%82%C2%AE-rf-modules-znet-25-1-mw-chip-antenna-p-226.html?cPath=139_142).
+*   [XBee® Pro Series 2 RF module](https://www.seeedstudio.com/depot/xbee%C3%82%C2%AE-rf-modules-znet-25-1-mw-chip-antenna-p-226.html?cPath=139_142).
 
-[XBee® RF Modules ZNet 2.5 RF Module](http://www.seeedstudio.com/depot/xbee-pro-series2-rf-module-p-418.html?cPath=139_142) modules are **Series 2** hardware which comes with **ZNet 2.5 firmware**.
+[XBee® RF Modules ZNet 2.5 RF Module](https://www.seeedstudio.com/depot/xbee-pro-series2-rf-module-p-418.html?cPath=139_142) modules are **Series 2** hardware which comes with **ZNet 2.5 firmware**.
 
 In this tutorial we are going to use **XBee ZB firmware** on a **XBee Znet 2.5 Module**. **XBee ZNet 2.5 Module** modules can be upgraded to **XBee ZB** firmware by following the procedure listed at [Converting a XBee/XBee-PRO ZNet 2.5 Module to a ZB Module](http://www.digi.com/support/kbase/kbaseresultdetl.jsp?id=3025). This procedure is also illustrated in the next section.
 
@@ -51,7 +51,7 @@ In this tutorial we are going to use **XBee ZB firmware** on a **XBee Znet 2.5 M
 
 *   XBee ZB module is available with a chip antenna.
 
-[http://www.seeedstudio.com/depot/images/product/xbee2.jpg](http://www.seeedstudio.com/depot/images/product/xbee2.jpg)
+[https://www.seeedstudio.com/depot/images/product/xbee2.jpg](https://www.seeedstudio.com/depot/images/product/xbee2.jpg)
 
 *   Pins of XBee ZB module are shown below.
 
@@ -87,7 +87,7 @@ The XBee modules have to be configured with a 3.3V logic UART. Both [UartSBee_V3
 
 Download and install the **Virtual COM port** driver from FTDI website :
 
-[http://www.ftdichip.com/Drivers/VCP.htm](http://www.ftdichip.com/Drivers/VCP.htm)
+[https://www.ftdichip.com/Drivers/VCP.htm](https://www.ftdichip.com/Drivers/VCP.htm)
 
 *   A wizard opens for installing the driver. Choose "Install from a list or specific location"
 
@@ -235,7 +235,7 @@ This is an interesting demo made by XBee and [Grove](/Grove_System "Grove System
 
 This project uses a zigbee mesh and GPRS SIM900 card to communicate to a server. The server conducts an analysis on the data and provides the user with real time information as well as forecasting.
 
-[<font color="#FF0000">**I want to make it.**</font>](http://www.seeedstudio.com/recipe/265-hummingbird.html)
+[<font color="#FF0000">**I want to make it.**</font>](https://www.seeedstudio.com/recipe/265-hummingbird.html)
 
 ###  Hot Water Solar Boiler Project
 
@@ -245,7 +245,7 @@ This is an IoT demo made by XBee and [Grove](/Grove_System "Grove System").
 
 A solar boiler is great because it gives you hot water using free-sun-energy, but what if there is not enough sun or someone already used all the hot water ? This project helps you take the right decision. It warns you when you run out of hot water and allows you to turn on the electric heating. It also let you know when you can take a bath or shower !
 
-[<font color="#FF0000">**I want to make it.**</font>](http://www.seeedstudio.com/recipe/168-hot-water-solar-boiler-project.html)
+[<font color="#FF0000">**I want to make it.**</font>](https://www.seeedstudio.com/recipe/168-hot-water-solar-boiler-project.html)
 
 ###   Share Your Awesome Projects with Us
 
@@ -259,7 +259,7 @@ as long as you start sharing your works with others,
 
 you are being part of the open source community and you are making your contributions .
 
-Now share you awesome projects on with us on [Recipe](http://www.seeedstudio.com/recipe/), and win a chance to become the Core User of Seeed.
+Now share you awesome projects on with us on [Recipe](https://www.seeedstudio.com/recipe/), and win a chance to become the Core User of Seeed.
 
 *   Core Users, are those who showing high interests and significant contributions in Seeed products.
 *   We cooperate with our Core Users in the development of our new product, this, in another word, the Core Users will have the chance to experience any new products of Seeed before its official launch, and in return we expect valuable feedback from them to help us improving the product performance and user experience. And for most of cases if our Core Users have any good ideas for making things, we'll offer hardware pieces, PCBA services as well as technical support. Besides, further commercial cooperation with the Core Users is highly possible.
@@ -267,4 +267,4 @@ Now share you awesome projects on with us on [Recipe](http://www.seeedstudio.com
 <font color="#FF0000">Get more information about Core User please email to: recipe@seeed.cc</font>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

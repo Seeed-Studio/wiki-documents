@@ -426,7 +426,7 @@ pi@raspberrypi:~/usb_4_mic_array $ sudo python VAD.py
 ```
 
 !!!Note
-    For the threshold of VAD, we also can use the GAMMAVAD_SR to set. Please refer to [Tuning](http://wiki.seeedstudio.com/ReSpeaker_Mic_Array_v2.0/#tuning) for more detail.
+    For the threshold of VAD, we also can use the GAMMAVAD_SR to set. Please refer to [Tuning](https://wiki.seeedstudio.com/ReSpeaker_Mic_Array_v2.0/#tuning) for more detail.
 
 ### Extract Voice
 
@@ -784,7 +784,7 @@ A4: Yes, thanks for Yuki sharing the package for integrating [ReSpeaker USB Mic 
 
 **Q5: How to enable 3.5mm audio port to receive the signal as well as usb port?**
 
-A5: Please download the [new firmware](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/i2s_i1o2.bin) and burn the XMOS by following [How to update firmware](http://wiki.seeedstudio.com/ReSpeaker_Mic_Array_v2.0/#update-firmware).
+A5: Please download the [new firmware](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/i2s_i1o2.bin) and burn the XMOS by following [How to update firmware](https://wiki.seeedstudio.com/ReSpeaker_Mic_Array_v2.0/#update-firmware).
 
 **Q6: #include "portaudio.h" Error when run "sudo pip install pyaudio".**
 
@@ -805,5 +805,5 @@ sudo apt-get install portaudio19-dev
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

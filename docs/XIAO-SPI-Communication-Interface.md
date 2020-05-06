@@ -4,7 +4,7 @@
 
 **Materials required**
 
-- [Seeeduino XIAO x1](http://www.seeedstudio.com/.html)
+- [Seeeduino XIAO x1](https://www.seeedstudio.com/.html)
 
 - [Grove-High Precision pressure Sensor](https://www.seeedstudio.com/Grove-High-Precision-Barometer-Sensor-DPS310-p-4397.html)
 
@@ -32,14 +32,14 @@
 
 !!!Attention
 
-        If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+        If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
 
 
 - **Step 1.** Download the [DPS310-Pressure-Sensor](https://github.com/Infineon/DPS310-Pressure-Sensor.git) Library from Github.
 
 
-- **Step 2.** Refer to [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 - **Step 3.** Copy the code into Arduino IDE and upload.
 ```c

@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-3-Axis-Analog-Accelerometer-p-1086.html
 oldwikiname: Grove_-_3-Axis_Analog_Accelerometer
 prodimagename: Grove-3-axis_Analog_Accelerometer_photo.JPG
-bzprodimageurl: http://statics3.seeedstudio.com/images/P2241478.JPG
+bzprodimageurl: https://statics3.seeedstudio.com/images/P2241478.JPG
 surveyurl: https://www.research.net/r/Grove-3-Axis_Analog_Accelerometer
 sku: 101020051
 tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit
@@ -15,7 +15,7 @@ tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit
 The ADXL335 is a small, thin, low power, complete 3-axis accelerometer with signal conditioned voltage outputs. The product measures acceleration with a minimum full-scale range of ±3 g.
 The module was designed as breakout board because ADXL335's signal is analog( more ports requested ). But the board outline is grove module that you can fix it conveniently like other groves. The sensor combined 3.3 and 5V power supply, can be used in standard Arduino device and Seeeduino Stalker. The following program code includes first-order filter which can make the output smoothly if the sensor was used in robot or toy car.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/Grove-3-Axis-Analog-Accelerometer-p-1086.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-3-Axis-Analog-Accelerometer-p-1086.html)
 
 Features
 --------
@@ -31,7 +31,7 @@ Features
 -   RoHS/WEEE lead-free compliant
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 Application Ideas
 -----------------
@@ -118,11 +118,11 @@ Resources
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/ingo-lohs/grove-introduction-in-3-axis-digital-accelerometer-ea05c3/embed' width='350'></iframe>
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_3-Axis_Analog_Accelerometer -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_3-Axis_Analog_Accelerometer -->
 
 **Solar Panel Dual Management System (SP DMS)** This IoT prototype performs two functions: 1) Theft prevention and 2) Maintenance Indication of solar panel using LinkIt ONE and Sensors.
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/skyline/solar-panel-dual-management-system-sp-dms-3a87ca/embed' width='350'></iframe>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

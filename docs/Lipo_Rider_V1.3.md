@@ -4,7 +4,7 @@ category: Essentials
 bzurl: https://seeedstudio.com/Lipo-Rider-v1.3-p-2403.html
 oldwikiname: Lipo_Rider_V1.3
 prodimagename: LiPo-Rider-v1.3.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/106990022 5.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/106990022 5.jpg
 surveyurl: https://www.research.net/r/Lipo_Rider_V1_3
 sku: 106990022
 ---
@@ -277,7 +277,7 @@ Resources
 -   [Li-Po Rider v1.3 Schematic and Layout in Eagle format](https://files.seeedstudio.com/wiki/Lipo_Rider_V1.3/res/Li-Po_Rider_v1.3_sch_pcb.zip)
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Lipo_Rider_V1.3 -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Lipo_Rider_V1.3 -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

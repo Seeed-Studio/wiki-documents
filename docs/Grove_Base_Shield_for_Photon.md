@@ -70,14 +70,14 @@ sku:  103020031
 
 ###  Material required
 
-*   [Particle Photon](http://www.seeedstudio.com/depot/Particle-Photon-p-2527.html) × 1
+*   [Particle Photon](https://www.seeedstudio.com/depot/Particle-Photon-p-2527.html) × 1
 
 *   USB cable (type A to micro type-B) × 1
 *   A PC or Mac
 
 *   Grove Base Shield for Photon × 1
 
-*   [Grove - Buzzer](http://www.seeedstudio.com/depot/Grove-Buzzer-p-768.html?cPath=38) × 1
+*   [Grove - Buzzer](https://www.seeedstudio.com/depot/Grove-Buzzer-p-768.html?cPath=38) × 1
 
 ###  Buzzing
 
@@ -147,4 +147,4 @@ void loop() {
 *   [Grove_System](/Grove_System)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

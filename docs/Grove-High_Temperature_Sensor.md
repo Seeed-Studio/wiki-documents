@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-High-Temperature-Sensor-p-1810.html
 oldwikiname: Grove_-_High_Temperature_Sensor
 prodimagename: High_Temperature_Sensor_01.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/High Temperature Sensor.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/High Temperature Sensor.jpg
 surveyurl: https://www.research.net/r/Grove-High_Temperature_Sensor
 sku: 111020002
 tags: grove_analog, io_3v3, io_5v, plat_duino, plat_linkit, plat_pi
@@ -15,7 +15,7 @@ tags: grove_analog, io_3v3, io_5v, plat_duino, plat_linkit, plat_pi
 Thermocouples are very sensitive devices. It requires a good amplifier with cold-junction compensation. The Grove - High Temperatire Sensor uses a K-Type themocouple and a thermocouple amplifier that measures ambient temperature using thermistor for cold-junction compensation. The detectable range of this Sensor is -50~600°C , and the accuracy is ±(2.0% + 2°C).
 
 
-<p style=":center"><a href="http://www.seeedstudio.com/depot/Grove-High-Temperature-Sensor-p-1810.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/depot/Grove-High-Temperature-Sensor-p-1810.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
 
 ## Version
 
@@ -44,7 +44,7 @@ Thermocouples are very sensitive devices. It requires a good amplifier with cold
 
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 ## Platforms Supported
 
@@ -67,7 +67,7 @@ Thermocouples are very sensitive devices. It requires a good amplifier with cold
 | Seeeduino V4.2 | Base Shield |  Grove-High Temperature Sensor|
 |--------------|----------------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-High_Temperature_Sensor/img/High_Temperature_Sensor_s.jpg)|
-|[Get ONE Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://seeedstudio.com/Grove-High-Temperature-Sensor-p-1810.html)|
+|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://seeedstudio.com/Grove-High-Temperature-Sensor-p-1810.html)|
 
 - Step 2. Connect the Grove-High Temperature Sensor to **A0** on Base Shield.
 - Step 3. Plug the base Shield into Seeeduino-V4.2.
@@ -88,7 +88,7 @@ Thermocouples are very sensitive devices. It requires a good amplifier with cold
 #### Software
 
 - Step 1. Download the  [ Grove-High Temperature Sensor Library](https://github.com/Seeed-Studio/Grove_HighTemp_Sensor/archive/master.zip) from Github.
-- Step 2. Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- Step 2. Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 - Step 3. Copy the code into Arduino IDE and upload.
 
 ```c++
@@ -258,7 +258,7 @@ pi@raspberrypi:~/GrovePi/Software/Python/grove_hightemperature_sensor $ python h
 - **[Datasheet]** [LMV358 PDF](https://files.seeedstudio.com/wiki/Grove-High_Temperature_Sensor/res/Lmv358.pdf)
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_High_Temperature_Sensor -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_High_Temperature_Sensor -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

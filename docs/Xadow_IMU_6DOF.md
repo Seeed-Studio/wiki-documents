@@ -34,7 +34,7 @@ Note: when connect Xadow IMU 6DOF to Xadow Main Board, the connection direction 
 
 **Test Code：**
   
-- Download [Xadow - IMU 6DOF  MPU6050 Library](https://github.com/Seeed-Studio/Xadow_IMU_6DOF) from Github, and install I2Cdev file and MPU6050 file to your Arduino Library. About the library installation，please refer to [here](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) in wiki page.
+- Download [Xadow - IMU 6DOF  MPU6050 Library](https://github.com/Seeed-Studio/Xadow_IMU_6DOF) from Github, and install I2Cdev file and MPU6050 file to your Arduino Library. About the library installation，please refer to [here](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) in wiki page.
 - Open the example: **MPU6050_DMP6 by the pathFile - >Examples -> MPU6050 ->Examples->MPU6050_DMP6**.
 
 ```
@@ -124,4 +124,4 @@ The diagram below shows the orientation of the axes of sensitivity and the polar
 - [Library File](https://github.com/Seeed-Studio/Xadow_IMU_6DOF)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

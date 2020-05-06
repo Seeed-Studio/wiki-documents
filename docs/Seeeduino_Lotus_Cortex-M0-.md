@@ -219,7 +219,7 @@ First of all, you need to:
 
 * **Get a Micro-USB cable**
 You need a Micro-USB cable first; the data cable of an Android Phone will do fine.
-If you can't find one, you can buy one [here](http://www.seeedstudio.com/depot/Micro-USB-Cable-48cm-p-1475.html?cPath=98_100).
+If you can't find one, you can buy one [here](https://www.seeedstudio.com/depot/Micro-USB-Cable-48cm-p-1475.html?cPath=98_100).
 
 * **Connect the board**
 Connect the Arduino board to your computer using the USB cable. The green power LED (labelled **PWR**) should go on.
@@ -256,7 +256,7 @@ Open the LED blink example sketch: **File > Examples >01.Basics > Blink**.
 
 
 - **Step 3. Add the Seeed Board**  
-Please follow the [Seeed Board Intallation Guide](http://wiki.seeedstudio.com/Seeed_Arduino_Boards/) to add the Seeeduino Lotus Cortex-M0+ into your Arduino IDE.
+Please follow the [Seeed Board Intallation Guide](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/) to add the Seeeduino Lotus Cortex-M0+ into your Arduino IDE.
 
 
 <div align="center">
@@ -319,5 +319,5 @@ A few seconds after the upload finishes, you should see the pin 13 (L) LED on th
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

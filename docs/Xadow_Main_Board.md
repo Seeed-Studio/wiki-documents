@@ -79,7 +79,7 @@ Similar to the Arduino, the Xadow Main Board uses only a single microcontroller 
 - Download the driver files from [https://github.com/Seeed-Studio/Signed_USB_Serial_Driver](https://github.com/Seeed-Studio/Signed_USB_Serial_Driver)
 - Connect the Micro-USB cable to the Xadow Main Board.
 - Connect the other side of the Micro-USB connector to the computer's USB port.
-- Then install the Xadow Driver. You can refer to [Download Arduino and install Arduino driver](http://wiki.seeedstudio.com/Guide_to_use_demos_downloaded_from_Seeed-s_Github/) to learn how to install the Xadow driver.
+- Then install the Xadow Driver. You can refer to [Download Arduino and install Arduino driver](https://wiki.seeedstudio.com/Guide_to_use_demos_downloaded_from_Seeed-s_Github/) to learn how to install the Xadow driver.
 
 ![](https://files.seeedstudio.com/wiki/Xadow_Main_Board/img/Xadow_Main_Board_Driver_step4.jpg)
 
@@ -100,4 +100,4 @@ Similar to the Arduino, the Xadow Main Board uses only a single microcontroller 
 - [Library of Xadow Main Board](https://github.com/Seeed-Studio/Xadow_MainBoard)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

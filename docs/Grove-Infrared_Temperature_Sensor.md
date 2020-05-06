@@ -4,7 +4,7 @@ category: Sensor
 bzurl: https://seeedstudio.com/Grove-Infrared-Temperature-Sensor-p-1058.html
 oldwikiname: Grove_-_Infrared_Temperature_Sensor
 prodimagename: Grove-Infrared_Temperature_Sensor.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/101020062 1.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/101020062 1.jpg
 surveyurl: https://www.research.net/r/Grove-Infrared_Temperature_Sensor
 sku: 101020062
 tags: grove_analog, io_3v3, io_5v, plat_duino
@@ -17,7 +17,7 @@ The Infrared temperature sensor is a non-contact temperature measure model. It i
 
 
 
-<p style=":center"><a href="http://www.seeedstudio.com/Grove-Infrared-Temperature-Sensor-p-1058.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-Infrared-Temperature-Sensor-p-1058.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
 
 
 
@@ -44,7 +44,7 @@ Grove - Infrared Temperature Sensor v1.2	| Change the power chip to make the pow
 -   Storage Temperature: -35-80 °C
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
     
 ## Platforms Supported
 
@@ -65,7 +65,7 @@ Grove - Infrared Temperature Sensor v1.2	| Change the power chip to make the pow
 The following sketch demonstrates a simple application of measure the measure the surrounding temperature around the sensor and the temperature of the target which is in front of the sensor. And print the result on the serial monitor.
 
 !!!Note
-    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
 
 - **Step 1.** Prepare the following materials:
@@ -73,7 +73,7 @@ The following sketch demonstrates a simple application of measure the measure th
 | Seeeduino V4.2 | Base Shield| Grove - Infrared Temperature Sensor |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor/img/JUH4jM8D85pxTHah3QXYxhe7.jpg)|
-|[Get One Now](http://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Infrared-Temperature-Sensor-p-1058.html)|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Infrared-Temperature-Sensor-p-1058.html)|
 
 
 - **Step 2.** Connect Grove - Infrared Temperature Sensor to port **A0** of Grove-Base Shield.
@@ -135,7 +135,7 @@ Now we can measure the surrounding temperature around the sensor. The sensor is 
 ![](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor/img/Dsdiagram.jpg)
 
 
-- **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 - **Step 5.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time. if every thing goes well, you will get the temperature.
 
@@ -161,7 +161,7 @@ The result should be like:
 - **[Zip]** [Demo Code](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor/res/MeasureTemperature.zip)
 - **[Zip]** [Infrared Temperature Demo Code with SerialLCD](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor/res/Infrared_temperature_demo_code_with_serialLCD.zip)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Infrared_Temperature_Sensor -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Infrared_Temperature_Sensor -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

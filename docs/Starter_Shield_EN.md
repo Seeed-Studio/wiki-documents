@@ -13,11 +13,11 @@ tags:
 
 Starter Shield is a perfect start for beginners of Arduino world. You can learn basic soldering tricks and practice programming principles when learning this kit. Have prepared a detailed soldering guide and a fully supported library of programming examples from easy to difficult. , so electronic could be fun even if you have bare technical knowledge, Hope you have fun and gain some knowledge with this kit!   
 
-This is a example [How to make tiny tiger Machine](http://www.instructables.com/id/How-to-Make-Your-Tiny-Tiger-Machine/) used by Starter Shield.
+This is a example [How to make tiny tiger Machine](https://www.instructables.com/id/How-to-Make-Your-Tiny-Tiger-Machine/) used by Starter Shield.
 
 Starter Shield contains some basic electronic resources, like buttons, sensors, buzzer and display. There is a great way to learn how to solder.  Starter Shield is a through-hole soldering kit for beginners. After assembling the kit, you’ll have mastered the basics of through-hole soldering and you’ll have a geek style alarm clock that works with your Arduino.
 
-Model: [SLD90400P](http://www.seeedstudio.com/depot/tick-tock-shield-p-1371.html?cPath=6_7)
+Model: [SLD90400P](https://www.seeedstudio.com/depot/tick-tock-shield-p-1371.html?cPath=6_7)
 
 ##  Parts list
 
@@ -124,7 +124,7 @@ Model: [SLD90400P](http://www.seeedstudio.com/depot/tick-tock-shield-p-1371.html
 
 ##   Demonstration  
 
-You are supposed to finish the soldering of your Tick Tock Shield before moving on to following demos. If you didn't, click [here](http://www.seeedstudio.com/document/pdf/Tick%20Tock%20Shield%20Soldering%20Guide.pdf) to download the soldering guide.
+You are supposed to finish the soldering of your Tick Tock Shield before moving on to following demos. If you didn't, click [here](https://www.seeedstudio.com/document/pdf/Tick%20Tock%20Shield%20Soldering%20Guide.pdf) to download the soldering guide.
 
 Here we start to present you 7 demos from easy to difficult. They involve usage of all hardware resources on Tick Tock Shield:
 
@@ -498,4 +498,4 @@ Example:
 Display alpha-numeric information 7 segment Display.
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

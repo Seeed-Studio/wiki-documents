@@ -2,7 +2,7 @@
 name: ODYSSEY - X86J4105
 category: ODYSSEY
 bzurl: https://www.seeedstudio.com/ODYSSEY-X86J4105800-p-4445.html
-wikiurl: http://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-OS/
+wikiurl: https://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-OS/
 sku: 102110399
 ---
 
@@ -74,7 +74,15 @@ If everything goes well, ubuntu should be installed on the ODYSSEY - X86J4105 an
 
 ## How to Upgrade the BIOS
 
-BIOS is also like an OS and can be upgraded to fix bugs and enhance performance of the RODYSSEY - X86J4105. Here is the instruction how to upgrade the BIOS verison on ODYSSEY - X86J4105:
+BIOS is also like an OS and can be upgraded to fix bugs and enhance performance of the RODYSSEY - X86J4105. Here is the instruction how to upgrade the BIOS verison on ODYSSEY - X86J4105.
+
+### Current Latest BIOS Version and Changelog
+
+- Latest BIOS:
+
+**SD-BS-CJ41G-M-101-E 01/07/2020 14:03:11**
+
+1. Fix the problem of incomplete display of startup Seeed logo screen.
 
 ### Step 1 - Download the newest version of BIOS
 
@@ -125,4 +133,4 @@ When the BIOS is upgraded, reboot the ODYSSEY - X86J4105(Switch on and off the p
 - **Ubuntu 16 is not supported by ODYSSEY - X86J4105**
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

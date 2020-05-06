@@ -45,7 +45,7 @@ Here is an example to show you how to read temperature information from the sens
 *  This sensor detects the environment temperature,
 *  Connect the signal of this sensor to A0, use the
 *  Serial monitor to get the result.
-*  By: http://www.seeedstudio.com
+*  By: https://www.seeedstudio.com
 */
 #include <math.h>
 int a;
@@ -266,4 +266,4 @@ You'll find that the terminal outputs Temperature value every 2 seconds.
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

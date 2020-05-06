@@ -103,7 +103,7 @@ You should have received a copy of the GNU Lesser General Public
 License along with this library; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-For more details about the product please check http://www.seeedstudio.com/depot/
+For more details about the product please check https://www.seeedstudio.com/depot/
 
 */
 
@@ -232,11 +232,11 @@ Use another Bluetooth Bee connect to the Bluetooth Bee-Standalone.How to connect
 
 *   [NewSoftLibrary](http://arduiniana.org/NewSoftSerial/NewSoftSerial10c.zip)
 
-*   [Information](http://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=687) on how to setup connections between Bluetooth Bees is available in Seeedstudio Forum.
+*   [Information](https://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=687) on how to setup connections between Bluetooth Bees is available in Seeedstudio Forum.
 
-*   [Information](http://forum.seeedstudio.com/viewtopic.php?f=18&amp;t=1436&amp;p=5637#p5637) on PC connecting Bluetooth Bee in Seeedstudio Forum
+*   [Information](https://forum.seeedstudio.com/viewtopic.php?f=18&amp;t=1436&amp;p=5637#p5637) on PC connecting Bluetooth Bee in Seeedstudio Forum
 
 *   [File:Bluetooth Bee Standalone v1.0.pdf](https://files.seeedstudio.com/wiki/Bluetooth_Bee_Standalone/res/Bluetooth_Bee_Standalone_v1.0.pdf "File:Bluetooth Bee Standalone v1.0.pdf")
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

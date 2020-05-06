@@ -7,7 +7,7 @@ prodimagename:
 surveyurl: https://www.research.net/r/Scream_out_loud-110dBA_fixed_tone_Siren
 sku:   107100000
 ---
-![http://www.seeedstudio.com/depot/images/product/screamout.jpg](http://bz.seeedstudio.com/depot/images/product/screamout.jpg)
+![https://www.seeedstudio.com/depot/images/product/screamout.jpg](http://bz.seeedstudio.com/depot/images/product/screamout.jpg)
 
 This Passive Piezoelectric Type Buzzer is made of plastic, very eye catching colors. It can generate sound over 110DBA(!), so Do not make it close to your ears when you test the buzzer. Includes build-in signal generator, just power on 6-12V and it will scream out loud.
 
@@ -66,7 +66,7 @@ This Passive Piezoelectric Type Buzzer is made of plastic, very eye catching col
 
 ##   Mechanic Dimensions
 
-![http://www.seeedstudio.com/depot/images/product/pbuzzer3.jpg](http://bz.seeedstudio.com/depot/images/product/pbuzzer3.jpg)
+![https://www.seeedstudio.com/depot/images/product/pbuzzer3.jpg](http://bz.seeedstudio.com/depot/images/product/pbuzzer3.jpg)
 
 ##   Version Tracker
 
@@ -87,4 +87,4 @@ This Passive Piezoelectric Type Buzzer is made of plastic, very eye catching col
 </td></tr></table>
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

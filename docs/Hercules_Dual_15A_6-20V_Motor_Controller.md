@@ -4,7 +4,7 @@ category: Arduino
 bzurl: https://seeedstudio.com/Hercules-Dual-15A-6-20V-Motor-Controller-p-1515.html
 oldwikiname: Hercules_Dual_15A_6-20V_Motor_Controller
 prodimagename: Hercules_03.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/Hercules controller.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/Hercules controller.jpg
 surveyurl: https://www.research.net/r/Hercules_Dual_15A_6-20V_Motor_Controller
 sku: 105010000
 ---
@@ -74,7 +74,7 @@ Usage
 
 **Encoder Connectors**
 
-There are encoders in the motors of the [Hercules platform](http://wiki.seeedstudio.com/Skeleton_Bot-4WD_hercules_mobile_robotic_platform) to measure the motor speed. These two Connectors are used to connect these encoders. The header also supplies 5VDC to power the encoder.
+There are encoders in the motors of the [Hercules platform](https://wiki.seeedstudio.com/Skeleton_Bot-4WD_hercules_mobile_robotic_platform) to measure the motor speed. These two Connectors are used to connect these encoders. The header also supplies 5VDC to power the encoder.
 
 **Grove Connectors**
 
@@ -86,7 +86,7 @@ The battery connectors are marked with a GND and VM on the input screw terminal.
 
 **Motor Screw Terminals**
 
-The motor screw terminals are marked with M1A / M1B for channel 1 and M2A / M2B for channel 2. There is no specific polarities for the motors. If the motor runs in the opposite way that you want, you may reverse the motor wires to reverse rotation. Please note that the J21&J20,J22&J23 are parallel connected, that is, you should connect the left 2 motors of the [Hercules](http://wiki.seeedstudio.com/Skeleton_Bot-4WD_hercules_mobile_robotic_platform) to one channel, and the right 2 motors to the other channel.
+The motor screw terminals are marked with M1A / M1B for channel 1 and M2A / M2B for channel 2. There is no specific polarities for the motors. If the motor runs in the opposite way that you want, you may reverse the motor wires to reverse rotation. Please note that the J21&J20,J22&J23 are parallel connected, that is, you should connect the left 2 motors of the [Hercules](https://wiki.seeedstudio.com/Skeleton_Bot-4WD_hercules_mobile_robotic_platform) to one channel, and the right 2 motors to the other channel.
 
 ### The Usage
 
@@ -296,7 +296,7 @@ Resources
 - [4WD Robot Controller Schematic.pdf](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/res/4WD_Robot_Controller_Schematic.pdf)
 - [Motor Controller Library](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/res/Motor_Controller_Library.zip)
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

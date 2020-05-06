@@ -6,7 +6,7 @@ This repo demonstrates how Wio Terminal used the built-in acclerator to sense th
 
 ## 3-Axis Accelerator Initialization
 
-To initialize the accelerator on Wio Terminal, please visit [Getting Started with IMU](http://wiki.seeedstudio.com/Wio-Terminal-IMU-Basic/) for more information.
+To initialize the accelerator on Wio Terminal, please visit [Getting Started with IMU](https://wiki.seeedstudio.com/Wio-Terminal-IMU-Basic/) for more information.
 
 ## Tapping Sensitivity Configurations
 

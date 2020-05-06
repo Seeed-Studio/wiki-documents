@@ -48,9 +48,9 @@ By simply plugging it on your Joule board, it will own 8 solid and easy-to-use G
 
 - Grove I2C Port: ③/④/⑤
 
-- [Breakout 1 / J12 of the Intel Joule: ①](http://www.intel.com/content/www/us/en/support/boards-and-kits/000022494.html)
+- [Breakout 1 / J12 of the Intel Joule: ①](https://www.intel.com/content/www/us/en/support/boards-and-kits/000022494.html)
 
-- [Breakout 2 / J13 of the Intel Joule: ②](http://www.intel.com/content/www/us/en/support/boards-and-kits/000022494.html)
+- [Breakout 2 / J13 of the Intel Joule: ②](https://www.intel.com/content/www/us/en/support/boards-and-kits/000022494.html)
 
 - 3.3V & 5V Power Switch: ⑪
 
@@ -93,4 +93,4 @@ By simply plugging it on your Joule board, it will own 8 solid and easy-to-use G
 * [Grove Shield for Intel Joule Schematic files](https://github.com/SeeedDocument/Grove_Shield_for_Intel_Joule/tree/master/res)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -19,7 +19,7 @@ Compared to the previous version, the Shield Bot V1.2 has not changed much.
 Compatible Arduino Board is not included, get a Seeeduino or Arduino.
 </div>
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/Shield-Bot-p-1380.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/depot/Shield-Bot-p-1380.html)
 
 Features
 --------
@@ -272,7 +272,7 @@ Resources
 -   [Op-Amp LMV358 Datasheet](http://www.ti.com/product/lmv358)
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Shield_Bot_V1.2 -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Shield_Bot_V1.2 -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

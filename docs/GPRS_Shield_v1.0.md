@@ -1,14 +1,14 @@
 ---
 name: GPRS Shield V1.0
 category: Shield
-bzurl: http://www.seeedstudio.com/depot/gprs-shield-p-779.html
+bzurl: https://www.seeedstudio.com/depot/gprs-shield-p-779.html
 oldwikiname:  GPRS Shield V1.0
 prodimagename: gprs-shield-p-779.html
 surveyurl: https://www.research.net/r/GPRS_Shield_V1
 sku:  103030013
 ---
 
-[![](https://files.seeedstudio.com/wiki/GPRS_Shield_v1.0/img/GPRS_shield_v1.4.jpg)](http://www.seeedstudio.com/depot/gprs-shield-p-779.html)
+[![](https://files.seeedstudio.com/wiki/GPRS_Shield_v1.0/img/GPRS_shield_v1.4.jpg)](https://www.seeedstudio.com/depot/gprs-shield-p-779.html)
 
 The GPRS Shield provides you a way to use the GSM cell phone network to receive data from a remote location. The shield allows you to achieve this via any of the three methods:
 
@@ -18,7 +18,7 @@ The GPRS Shield provides you a way to use the GSM cell phone network to receive 
 
 The GPRS Shield is compatible with all boards which have the same form factor (and pinout) as a standard Arduino Board. The GPRS Shield can be configured and controlled through UART by simple AT commands. Based on the SIM900 module from SIMCOM, the GPRS Shield is like a cell phone. Besides the communications features, the GPRS Shield has 12 GPIOs, 2 PWMs and an ADC.
 
-[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](http://www.seeedstudio.com/depot/gprs-shield-p-779.html)
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/depot/gprs-shield-p-779.html)
 
 ##  Version
 
@@ -47,7 +47,7 @@ The GPRS Shield is compatible with all boards which have the same form factor (a
 
 *   M2M (Machine 2 Machine) Applications - To transfer control data using SMS or GPRS between two machines located at two different factories.
 *   Remote control of appliances - Send SMS to turn on or off your washing machine at home while you are at your office.
-*   Remote Weather station or a Wireless Sensor Network - Make it with [Seeeduino Stalker](http://wiki.seeed.cc/Seeeduino_Stalker_V3.1/) and create a sensor node which is capable of transferring sensor data (like from a weather station - temperature, humidity etc.) to a web server (like [pachube.com](http://www.pachube.com)).
+*   Remote Weather station or a Wireless Sensor Network - Make it with [Seeeduino Stalker](https://wiki.seeedstudio.com/Seeeduino_Stalker_V3.1/) and create a sensor node which is capable of transferring sensor data (like from a weather station - temperature, humidity etc.) to a web server (like [pachube.com](http://www.pachube.com)).
 *   Interactive Voice Response System - Couple the GPRS Shield with an MP3 Decoder and DTMF Decoder (besides an Arduino) to create an [Interactive Vocice Response System (IVRS)](https://en.wikipedia.org/wiki/Interactive_voice_response).
 *   Vehicle Tracking System - Couple the GPRS Shield with an Arduino and GPS module. Then install it in your car and publish your location live on the internet. It can be used as a automotive burglar alarm.
 
@@ -56,11 +56,11 @@ The GPRS Shield is compatible with all boards which have the same form factor (a
 *   Make sure your SIM card is unlocked.
 *   The product is provided without an insulating enclosure. Please observe ESD precautions specially in dry (low humidity) weather.
 *   The factory default setting of the GPRS Shield UART is 19200 bps 8-N-1. (It can be changed by AT commands).
-*   When using GPRS Shield with [Seeeduino Stalker](http://wiki.seeed.cc/Seeeduino_Stalker_V3.1/), please remember to dismount the **OK_READ** Jumper (i.e. open it). This will disconnect the Battery Charger IC's OK pin from the microcontrollers Digital Pin 7 and hence allow unhindered communication with GPRS Shield by using NewSoftSerial Library.
+*   When using GPRS Shield with [Seeeduino Stalker](https://wiki.seeedstudio.com/Seeeduino_Stalker_V3.1/), please remember to dismount the **OK_READ** Jumper (i.e. open it). This will disconnect the Battery Charger IC's OK pin from the microcontrollers Digital Pin 7 and hence allow unhindered communication with GPRS Shield by using NewSoftSerial Library.
 
 ##  Specifications
 
-For SIM900's Specifications, please refer this PDF file: [SIM900_SPEC.pdf](http://wiki.seeedstudio.com/images/0/0b/SIM900_SPEC.pdf)
+For SIM900's Specifications, please refer this PDF file: [SIM900_SPEC.pdf](https://wiki.seeedstudio.com/images/0/0b/SIM900_SPEC.pdf)
 
 <table  cellspacing="0" width="80%">
 <tr>
@@ -240,7 +240,7 @@ As you received your GPRS Shield, what would be the first thing you want to do w
 !!!note:
     Almost all the AT commands should be sent by following with **carriage return** and you need to select the "+CR"option in the serial port terminal.
 
-To do experiment with AT commands, you would require a way to power up and communicate with your GPRS Shield. The best way to do this using an Arduino Duemilanove board described below. The same steps are applicable for [Seeeduino](http://wiki.seeed.cc/Seeeduino_v4.2/) or [Seeeduino Stalker](http://wiki.seeed.cc/Seeeduino_Stalker_V3.1/).
+To do experiment with AT commands, you would require a way to power up and communicate with your GPRS Shield. The best way to do this using an Arduino Duemilanove board described below. The same steps are applicable for [Seeeduino](https://wiki.seeedstudio.com/Seeeduino_v4.2/) or [Seeeduino Stalker](https://wiki.seeedstudio.com/Seeeduino_Stalker_V3.1/).
 
 *   Follow the previous hardware installation steps to set up the hardware system;
 *   Make sure the GPRS_TX &amp; GPRS_RX jumpers on the GPRS Shield are mounted in SWSerial position - so GPRS_TX will be connected to D7(RX) and GPRS_RX to D8(TX).
@@ -336,7 +336,7 @@ Now that you have gotten a taste of how the AT Commands work, you can try out ot
 
 This involves to create a sketch for sending out these same sequence of AT Commands (on your behalf) out the serial port to the GPRS Shield to perform the same task of sending and SMS, making a call or sending data over a GPRS connection.
 
-You can go through the [AT Commands reference manual](http://wiki.seeedstudio.com/images/a/a0/SIM900_ATC_V1_00.pdf) to figure out the sequence of commands. If you develop an Arduino sketch, you find that the GPRS Shield doesn't act as what you expect, then you will need to check your AT Commands and their sequence. To do this, reload the serial relay sketch attached above in the getting started section into ATmega328P and type out the AT Commands manually and check the output. The responses sent back by the GPRS Shield will help you debug the AT Command sequence.
+You can go through the [AT Commands reference manual](https://wiki.seeedstudio.com/images/a/a0/SIM900_ATC_V1_00.pdf) to figure out the sequence of commands. If you develop an Arduino sketch, you find that the GPRS Shield doesn't act as what you expect, then you will need to check your AT Commands and their sequence. To do this, reload the serial relay sketch attached above in the getting started section into ATmega328P and type out the AT Commands manually and check the output. The responses sent back by the GPRS Shield will help you debug the AT Command sequence.
 
 !!!note:
     A C program to perform the same task has also been developed and attached: [Softuart relay atmega328p.zip](https://files.seeedstudio.com/wiki/GPRS_Shield_v1.0/res/Softuart_relay_atmega328p.zip "File:Softuart relay atmega328p.zip").
@@ -353,7 +353,7 @@ With Arduino 1.0 you should be able to use the SoftwareSerial library included w
 
 This means that if the GPRS module receive more data than the buffer, you are likely to lose it with a buffer overflow! For instance, reading out an SMS from the module with "AT+CMGR=xx" (xx is the message index), you might not even see the message part because the preceding header information (like telephone number and time) takes up a lot of space. The fix seems to be to manually change **_SS_MAX_RX_BUFF** to a higher value (but reasonable so you don't use all your memory!)
 
-The [Softwareserial library](http://arduino.cc/hu/Reference/SoftwareSerial) has the following limitations (taken from arduino page). If use multiple software serial ports, only one can receive data at a time.
+The [Softwareserial library](https://arduino.cc/hu/Reference/SoftwareSerial) has the following limitations (taken from arduino page). If use multiple software serial ports, only one can receive data at a time.
 This means that if you try to add another serial device such as grove serial LCD you may get communication errors unless you craft your code carefully.
 
 ##  A Simple Source Code Examples
@@ -623,7 +623,7 @@ This is a demo made by GPRS Shield V2.0.
 
 With this demo, we make a mobile phone named Arduino Phone by  Arduino, GPRS Shield shield and other modules.
 
-[![](https://files.seeedstudio.com/wiki/GPRS_Shield_v1.0/img/Wiki_makeitnow_logo.png)](http://www.instructables.com/id/ArduinoPhone/)
+[![](https://files.seeedstudio.com/wiki/GPRS_Shield_v1.0/img/Wiki_makeitnow_logo.png)](https://www.instructables.com/id/ArduinoPhone/)
 
 
 
@@ -637,13 +637,13 @@ With this demo, we make a mobile phone named Arduino Phone by  Arduino, GPRS Shi
 - [GPRS Shield v1.4 Schematic in PDF format](https://files.seeedstudio.com/wiki/GPRS_Shield_v1.0/res/GPRSshield_Schematic.pdf)
 - [GPRS Shield v1.4 PCB in PDF format](https://files.seeedstudio.com/wiki/GPRS_Shield_v1.0/res/GPRSshield%20v1.4.pdf)
 - [GPRS Shield v1.4 Schematic and PCB in eagle format](https://files.seeedstudio.com/wiki/GPRS_Shield_v1.0/res/GPRS_shield_v1.4.zip)
-- [AT Commands v1.00](http://wiki.seeedstudio.com/images/a/a0/SIM900_ATC_V1_00.pdf)
-- [AT Commands v1.03](http://wiki.seeedstudio.com/images/a/a8/SIM900_AT_Command_Manual_V1.03.pdf)
+- [AT Commands v1.00](https://wiki.seeedstudio.com/images/a/a0/SIM900_ATC_V1_00.pdf)
+- [AT Commands v1.03](https://wiki.seeedstudio.com/images/a/a8/SIM900_AT_Command_Manual_V1.03.pdf)
 - [AT Commands v1.11](https://files.seeedstudio.com/wiki/GPRS_Shield_v1.0/res/AT_Commands_v1.11.pdf)
 - [Si5902BDC](http://www.vishay.com/docs/70415/si5902bd.pdf)
-- [SIM900 Hardware Design](http://wiki.seeedstudio.com/images/e/e3/SIM900_HD_V1.05.pdf)
-- [SIM900 firmware and tool(firmware:1137B08SIM900M64_ST)](http://wiki.seeedstudio.com/images/8/87/SIM900_firmware_and_tool.zip)
-- [SIM900datasheeet](http://www.seeedstudio.com/document/SIM900datasheeet.zip)
+- [SIM900 Hardware Design](https://wiki.seeedstudio.com/images/e/e3/SIM900_HD_V1.05.pdf)
+- [SIM900 firmware and tool(firmware:1137B08SIM900M64_ST)](https://wiki.seeedstudio.com/images/8/87/SIM900_firmware_and_tool.zip)
+- [SIM900datasheeet](https://www.seeedstudio.com/document/SIM900datasheeet.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

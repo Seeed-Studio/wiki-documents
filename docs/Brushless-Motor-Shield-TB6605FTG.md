@@ -112,7 +112,7 @@ Or you can just use our [TB6605FTG Brushless Motor Kit for Arduino](https://www.
 ### Software
 
 !!!Attention
-        If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](http://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+        If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
 
 
@@ -120,7 +120,7 @@ Or you can just use our [TB6605FTG Brushless Motor Kit for Arduino](https://www.
 Download the [BLDC Motor Shield (TB6605) lib](https://github.com/Seeed-Studio/BLDC_Motor_Shield_TB6605) Library from Github. 
 Download the [Grove-LCD RGB Backlight Library](https://github.com/Seeed-Studio/Grove_LCD_RGB_Backlight/archive/master.zip) Library from Github. 
 
-- **Step 2.** Refer to [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino. 
+- **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino. 
 
 - **Step 3.** Restart the Arduino IDE. Open the example, you can open it via the path: **File --> Examples -->BLDC Motor Shield (TB6605)--> TB6605_demo**. 
 
@@ -133,7 +133,7 @@ Download the [Grove-LCD RGB Backlight Library](https://github.com/Seeed-Studio/G
 </div>
 
 
-- **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 
 !!!Success

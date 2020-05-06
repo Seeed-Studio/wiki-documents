@@ -16,7 +16,7 @@ The Android 3.1 platform (also backported to Android 2.3.4) introduces Android O
 
 Now connect Seeeduino ADK Main Board to your Android mobile device and get started developing your custom accessory.
 
-[SKU:ARD52028P](http://www.seeedstudio.com/depot/seeeduino-adk-main-board-p-846.html?cPath=6_8)
+[SKU:ARD52028P](https://www.seeedstudio.com/depot/seeeduino-adk-main-board-p-846.html?cPath=6_8)
 
 ##  Specifications ##
 
@@ -368,15 +368,15 @@ And following is a demo showing 2.8%27%27 TFT Touch Shield working with Seeeduin
 
 - Set the operating voltage slide switch to 3.3V
 
-- Copy few 24-bit Bitmap Images (.bmp) files of 240 x 320 size to SD Card. Few samples are present in [bmp demo application archive](http://seeedstudio.com/wiki/images/1/11/Tftbmp_demo.zip)
+- Copy few 24-bit Bitmap Images (.bmp) files of 240 x 320 size to SD Card. Few samples are present in [bmp demo application archive](https://www.seeedstudio.com/wiki/images/1/11/Tftbmp_demo.zip)
 - Connect the SD card / microSD Card Adapter (with a microSD card) as shown in the illustration to **Seeeduino ADK Main Board**
 
 ![](https://files.seeedstudio.com/wiki/Seeeduino-ADK_Main_Board/img/TFT_Touch_Shield_photoframe.png)
 
-- Download and install [TFT Touch Library](http://seeedstudio.com/wiki/images/6/6e/Tft_touch_libraries.zip)
+- Download and install [TFT Touch Library](https://www.seeedstudio.com/wiki/images/6/6e/Tft_touch_libraries.zip)
 - Download [SD Card](https://github.com/adafruit/SD) library and install it to Arduino folder.
 
-- Compile and upload [this](http://seeedstudio.com/wiki/images/1/11/Tftbmp_demo.zip) sketch.
+- Compile and upload [this](https://www.seeedstudio.com/wiki/images/1/11/Tftbmp_demo.zip) sketch.
 
 Output:
 ![](https://files.seeedstudio.com/wiki/Seeeduino-ADK_Main_Board/img/TFT_Touch_Shield_PhotoframeDemo.jpg)
@@ -388,20 +388,20 @@ Output:
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="http://wiki.seeedstudio.com/images/1/1a/Seeeduino_ADK_0.9b_final_Eagle_files.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://wiki.seeedstudio.com/images/1/1a/Seeeduino_ADK_0.9b_final_Eagle_files.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ##   Resources   ##
 
-- **[Library]** [Modified MicroBridge Arduino Library](http://wiki.seeedstudio.com/images/1/19/MicroBridge-ModifiedForSeeeduinoADK.zip)
+- **[Library]** [Modified MicroBridge Arduino Library](https://wiki.seeedstudio.com/images/1/19/MicroBridge-ModifiedForSeeeduinoADK.zip)
 - **[Library]** [Modified MicroBridge Arduino Library for Arduino1.0](https://files.seeedstudio.com/wiki/Seeeduino-ADK_Main_Board/res/Adb_for_Arduino1.0.zip)
-- **[Demo]**[Seeeduino Demo - Android App](http://wiki.seeedstudio.com/images/1/1b/SeeeduinoADKDemo-App.zip)
-- **[PDF]**[Seeeduino ADK Eagle Schematic PDF](http://wiki.seeedstudio.com/images/6/67/Seeeduino_ADK_0.9b_final_Scehmatic.pdf)
-- **[Eagle]** [Seeeduino ADK Eagle Schematic and Board Files](http://wiki.seeedstudio.com/images/1/1a/Seeeduino_ADK_0.9b_final_Eagle_files.zip)
+- **[Demo]**[Seeeduino Demo - Android App](https://wiki.seeedstudio.com/images/1/1b/SeeeduinoADKDemo-App.zip)
+- **[PDF]**[Seeeduino ADK Eagle Schematic PDF](https://wiki.seeedstudio.com/images/6/67/Seeeduino_ADK_0.9b_final_Scehmatic.pdf)
+- **[Eagle]** [Seeeduino ADK Eagle Schematic and Board Files](https://wiki.seeedstudio.com/images/1/1a/Seeeduino_ADK_0.9b_final_Eagle_files.zip)
 - **[Accessory]**[Android Open Accessory Development Kit Page](http://developer.android.com/guide/topics/usb/adk.html)
 - **[MicroBridge]**[MicroBridge Page](http://blogs.unpad.ac.id/dominodiaz/)
 - **[USB]**[Game controllers using USB Host Shield](http://adrian-fh98.web.unair.ac.id/)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

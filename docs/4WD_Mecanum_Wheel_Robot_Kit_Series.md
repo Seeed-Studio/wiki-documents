@@ -741,7 +741,7 @@ Moving all four wheels in the same direction causes forward or backward movement
 <tr>
 <th scope="row"> 20
 </th>
-<td> [Grove - I2C Motor Driver](http://www.seeedstudio.com/depot/Grove-I2C-Motor-Driver-p-907.html)
+<td> [Grove - I2C Motor Driver](https://www.seeedstudio.com/depot/Grove-I2C-Motor-Driver-p-907.html)
 </td>
 <td>
 </td>
@@ -752,7 +752,7 @@ Moving all four wheels in the same direction causes forward or backward movement
 <tr>
 <th scope="row"> 21
 </th>
-<td> [RF Bee](http://www.seeedstudio.com/depot/RFbee-V11-Wireless-arduino-compatible-node-p-614.html?cPath=19_22)
+<td> [RF Bee](https://www.seeedstudio.com/depot/RFbee-V11-Wireless-arduino-compatible-node-p-614.html?cPath=19_22)
 </td>
 <td>
 </td>
@@ -763,7 +763,7 @@ Moving all four wheels in the same direction causes forward or backward movement
 <tr>
 <th scope="row"> 22
 </th>
-<td> [Grove - XBee Carrier](http://www.seeedstudio.com/depot/Grove-XBee-Carrier-p-905.html?cPath=98_16)
+<td> [Grove - XBee Carrier](https://www.seeedstudio.com/depot/Grove-XBee-Carrier-p-905.html?cPath=98_16)
 </td>
 <td>
 </td>
@@ -774,7 +774,7 @@ Moving all four wheels in the same direction causes forward or backward movement
 <tr>
 <th scope="row"> 23
 </th>
-<td> [Grove - Thumb Joystick](http://www.seeedstudio.com/depot/Grove-Thumb-Joystick-p-935.html?cPath=85_51)
+<td> [Grove - Thumb Joystick](https://www.seeedstudio.com/depot/Grove-Thumb-Joystick-p-935.html?cPath=85_51)
 </td>
 <td>
 </td>
@@ -785,7 +785,7 @@ Moving all four wheels in the same direction causes forward or backward movement
 <tr>
 <th scope="row"> 24
 </th>
-<td> [Grove - Universal 4 Pin Buckled 20cm Cable](http://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-20cm-Cable-5-PCs-pack-p-936.html)
+<td> [Grove - Universal 4 Pin Buckled 20cm Cable](https://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-20cm-Cable-5-PCs-pack-p-936.html)
 </td>
 <td>
 </td>
@@ -796,7 +796,7 @@ Moving all four wheels in the same direction causes forward or backward movement
 <tr>
 <th scope="row"> 25
 </th>
-<td> [Grove - Branch Cable](http://www.seeedstudio.com/depot/Grove-Branch-Cable-5PCs-pack-p-847.html)
+<td> [Grove - Branch Cable](https://www.seeedstudio.com/depot/Grove-Branch-Cable-5PCs-pack-p-847.html)
 </td>
 <td>
 </td>
@@ -1066,7 +1066,7 @@ Moving all four wheels in the same direction causes forward or backward movement
 <tr>
 <th scope="row"> 19
 </th>
-<td> [Grove - I2C Motor Driver](http://www.seeedstudio.com/depot/Grove-I2C-Motor-Driver-p-907.html)
+<td> [Grove - I2C Motor Driver](https://www.seeedstudio.com/depot/Grove-I2C-Motor-Driver-p-907.html)
 </td>
 <td>
 </td>
@@ -1077,7 +1077,7 @@ Moving all four wheels in the same direction causes forward or backward movement
 <tr>
 <th scope="row"> 20
 </th>
-<td> [Grove - BLE](http://www.seeedstudio.com/depot/Grove-BLE-p-1929.html)
+<td> [Grove - BLE](https://www.seeedstudio.com/depot/Grove-BLE-p-1929.html)
 </td>
 <td>
 </td>
@@ -1088,7 +1088,7 @@ Moving all four wheels in the same direction causes forward or backward movement
 <tr>
 <th scope="row"> 21
 </th>
-<td> [Seeeduino](http://www.seeedstudio.com/depot/Seeeduino-V30-Atmega-328P-p-669.html)
+<td> [Seeeduino](https://www.seeedstudio.com/depot/Seeeduino-V30-Atmega-328P-p-669.html)
 </td>
 <td>
 </td>
@@ -1099,7 +1099,7 @@ Moving all four wheels in the same direction causes forward or backward movement
 <tr>
 <th scope="row"> 22
 </th>
-<td> [Base Shield](http://www.seeedstudio.com/depot/Base-Shield-V2-p-1378.html)
+<td> [Base Shield](https://www.seeedstudio.com/depot/Base-Shield-V2-p-1378.html)
 </td>
 <td>
 </td>
@@ -1110,7 +1110,7 @@ Moving all four wheels in the same direction causes forward or backward movement
 <tr>
 <th scope="row"> 23
 </th>
-<td> [Grove - Universal 4 Pin Buckled 20cm Cable](http://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-20cm-Cable-5-PCs-pack-p-936.html)
+<td> [Grove - Universal 4 Pin Buckled 20cm Cable](https://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-20cm-Cable-5-PCs-pack-p-936.html)
 </td>
 <td>
 </td>
@@ -1121,7 +1121,7 @@ Moving all four wheels in the same direction causes forward or backward movement
 <tr>
 <th scope="row"> 24
 </th>
-<td> [Grove - Branch Cable](http://www.seeedstudio.com/depot/Grove-Branch-Cable-5PCs-pack-p-847.html)
+<td> [Grove - Branch Cable](https://www.seeedstudio.com/depot/Grove-Branch-Cable-5PCs-pack-p-847.html)
 </td>
 <td>
 </td>
@@ -1183,4 +1183,4 @@ Moving all four wheels in the same direction causes forward or backward movement
 [Specs for Motor](https://files.seeedstudio.com/wiki/4WD_Mecanum_Wheel_Robot_Kit_Series/res/Motor_Specs_for_4WD_Mecanum_Wheel_Robot_Kit_Series_Products.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

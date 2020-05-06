@@ -126,7 +126,7 @@ Taking Grove - Digital Light Sensor as example, let's learn its usage.
 /* Digital Light sensor demo V1.0
 * Connect the sensor to I2C port of Arduino to use.
 *
-* By:http://www.seeedstudio.com
+* By:https://www.seeedstudio.com
 */
 #include &lt;Wire.h&gt;
 #include &lt;Digital_Light_TSL2561.h&gt;
@@ -168,4 +168,4 @@ The ADC IC ADC121C021 used in  Xadow Grove Adaptor have been adopter on  Grove -
 *   [A/DC IC ADC121C021 datasheet](https://files.seeedstudio.com/wiki/Xadow_Grove_Adaptor/res/Xadow_Grove_Adaptor_Eagle_File.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

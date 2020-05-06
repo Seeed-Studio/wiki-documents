@@ -14,7 +14,7 @@ tags:
 
 **Wifi Bee** is a xBee Pro socket compatible standalone MCU node useful for Wireless Sensor Network. It integrates Microchip IEEE 802.11 Wi-Fi transceiver module [MRF24WB0MA](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en548014) and a 8bit AVR MCU [ATMega328P](http://www.atmel.com/dyn/products/product_card.asp?part_id=4198). The smart and xBee Pro Socket compatible outlook makes it very easy to integrate in your product. The **ATMega328P** could be directly programmed under the open source Arduino IDE when you plug it on to the [UartSBee](https://seeeddoc.github.io/UartSBee/)  or [Grove - XBee Carrier](https://seeeddoc.github.io/Grove-XBee_Carrier/) . The SPI pins on MCU are connected to the corresponding pins of MRF24WB0MA to communicate with each other, while some of the other pins (DIO, AD,PWM etc.) are brought out to the 20 pins of 2.0 mm male pin headers. Please note there is no dedicated firmware for Wifi Bee yet now, but you may use the firmware of [WiShield](https://github.com/asynclabs/WiShield) from AsyncLabs. Please make sure you can use it before you buy.
 
-Model: [WLS48188P](http://www.seeedstudio.com/depot/wifi-bee-p-823.html?cPath=139_141&amp;zenid=15bcf2644eb7ecf4b3722eb98c79b074)
+Model: [WLS48188P](https://www.seeedstudio.com/depot/wifi-bee-p-823.html?cPath=139_141&amp;zenid=15bcf2644eb7ecf4b3722eb98c79b074)
 
 
 
@@ -48,7 +48,7 @@ Model: [WLS48188P](http://www.seeedstudio.com/depot/wifi-bee-p-823.html?cPath=13
 
 ![](https://files.seeedstudio.com/wiki/Wifi_Bee/img/Wifi_Bee_v0.91b.png)
 
-[Click here to open schematic in PDF format](http://wiki.seeedstudio.com/images/9/9f/WifiBee_v0.91b.pdf)
+[Click here to open schematic in PDF format](https://wiki.seeedstudio.com/images/9/9f/WifiBee_v0.91b.pdf)
 
 ##   Key Specification   ##
 
@@ -502,7 +502,7 @@ void loop(){
 
 ##   Support   ##
 
-If you have questions or other better design ideas, you can go to our [forum](http://www.seeedstudio.com/forum) or **wish** to discuss.
+If you have questions or other better design ideas, you can go to our [forum](https://www.seeedstudio.com/forum) or **wish** to discuss.
 
 ##   Version Tracker   ##
 
@@ -520,7 +520,7 @@ If you have questions or other better design ideas, you can go to our [forum](ht
 
 ## WifiBee v0.91b Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="http://wiki.seeedstudio.com/images/f/ff/Wifi_Bee_v0.91b_eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://wiki.seeedstudio.com/images/f/ff/Wifi_Bee_v0.91b_eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
@@ -529,10 +529,10 @@ If you have questions or other better design ideas, you can go to our [forum](ht
 - **[Eagle]**[WifiBee v1.0 Eagle Files.zip](https://files.seeedstudio.com/wiki/Wifi_Bee/res/WifiBee_v1.0_Eagle_Files.zip)
 - **[PDF]**[WifiBee v1.0 PCB](https://files.seeedstudio.com/wiki/Wifi_Bee/res/WifiBee%20v1.0%20PCB.pdf)
 - **[PDF]**[WifiBee v1.0 SCH](https://files.seeedstudio.com/wiki/Wifi_Bee/res/WifiBee%20v1.0%20Sch.pdf)
-- **[PDF]**[WifiBee v0.91b schematics in pdf format](http://wiki.seeedstudio.com/images/9/9f/WifiBee_v0.91b.pdf)
-- **[EAGLE]**[Wifi Bee v0.91b design files in Eagle format](http://wiki.seeedstudio.com/images/f/ff/Wifi_Bee_v0.91b_eagle.zip)
+- **[PDF]**[WifiBee v0.91b schematics in pdf format](https://wiki.seeedstudio.com/images/9/9f/WifiBee_v0.91b.pdf)
+- **[EAGLE]**[Wifi Bee v0.91b design files in Eagle format](https://wiki.seeedstudio.com/images/f/ff/Wifi_Bee_v0.91b_eagle.zip)
 - **[Library]**[WiShield Library](https://github.com/asynclabs/WiShield)
 - **[Library]**[a more up to date WiShield Library, compatible with Arduino 1.0](https://github.com/CapnBry/WiShield_user_contrib)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

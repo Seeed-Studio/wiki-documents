@@ -4,17 +4,17 @@ category: Actuator
 bzurl: https://seeedstudio.com/Grove-Serial-MP3-Player-p-1542.html
 oldwikiname: Grove_-_Serial_MP3_Player
 prodimagename: Mp3sensor_02.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/mp3sensor.jpg
+bzprodimageurl: https://statics3.seeedstudio.com/images/product/mp3sensor.jpg
 surveyurl: https://www.research.net/r/Grove-Serial_MP3_Player
 sku: 107020002
 tags: grove_uart, io_3v3, io_5v, plat_duino, plat_linkit
 ---
 
-[![](https://files.seeedstudio.com/wiki/Grove-Serial_MP3_Player/img/Mp3sensor_02.jpg)](http://www.seeedstudio.com/depot/grove-serial-mp3-player-p-1542.html)
+[![](https://files.seeedstudio.com/wiki/Grove-Serial_MP3_Player/img/Mp3sensor_02.jpg)](https://www.seeedstudio.com/depot/grove-serial-mp3-player-p-1542.html)
 
 Grove-Serial MP3 Player is a kind of simple MP3 player device whose design is based on a high-quality MP3 audio chip---WT5001. It can support 8KHZ~44.1kHZ sampling frequency MP3 and WAV file formats. This product has several peripheral ports: a standard UART Grove interface, a dual track headphone jack, an external interface and also a Micro SD card interface. You can control the MP3 playback state by sending commands to module via serial port tools, such as switch songs, change the volume and play mode and so on. It seems a simple module, but it owns such strong function. Want to know how the sound quality is? Please come and experience it!
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](http://www.seeedstudio.com/depot/grove-serial-mp3-player-p-1542.html)
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/depot/grove-serial-mp3-player-p-1542.html)
 
 Features
 --------
@@ -27,7 +27,7 @@ Features
 -   Support FAT16 and FAT32 file system
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](http://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 
 Platforms Supported
 -------------------
@@ -65,8 +65,8 @@ The Grove - Serial MP3 Play can be controlled by Arduino/Seeeduino. And there is
 ### Software
 
 - **Step 1.** Download the  [ Grove-MP3 v2.0](https://github.com/Seeed-Studio/Seeed_Serial_MP3_Player)  from Github.
-- **Step 2.** Refer [How to install library](http://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
-- **Step 3.** You can select **Seeed_Serial_MP3_Player/examples/WT2003S_Terminal_Player** example and upload to arduino. If you do not know how to upload the code, please check [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
+- **Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- **Step 3.** You can select **Seeed_Serial_MP3_Player/examples/WT2003S_Terminal_Player** example and upload to arduino. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 - **Step 4.** We will see the info at COM terminal as below.
 
 ![](https://files.seeedstudio.com/wiki/Grove-MP3_v2.0/img/COM.png)
@@ -79,7 +79,7 @@ The Grove - Serial MP3 Play can be controlled by Arduino/Seeeduino. And there is
 
 There are 2 kinds of serial ports. One is COMSerial, stands for communication port(connecting with Grove-MP3 module). The other is ShowSerial, stands for serial info display port(connectiong with PC). 
 
-Most of arduino boards have at least one Serial, some have multiple serials(Arduino Mega has 4 Serials). It communicates on digital pins 0 (RX) and 1 (TX) as well as with the computer via USB. So if you connect UART device on pin D0 and pin D1, you have to remove them before downloading program through USB. Or else it will cause upload fails. Sometimes you need more serial ports than the number of hardware serial ports available. If this is the case, you can use an Software Serial that uses software to emulate serial hardware. Software serial requires a lot of help from the Arduino controller to send and receive data, so it’s not as fast or efficient as hardware serial. For more info about the Serial, please refer to [Seeed Arduino Serial](http://wiki.seeedstudio.com/Seeed_Arduino_Serial/). 
+Most of arduino boards have at least one Serial, some have multiple serials(Arduino Mega has 4 Serials). It communicates on digital pins 0 (RX) and 1 (TX) as well as with the computer via USB. So if you connect UART device on pin D0 and pin D1, you have to remove them before downloading program through USB. Or else it will cause upload fails. Sometimes you need more serial ports than the number of hardware serial ports available. If this is the case, you can use an Software Serial that uses software to emulate serial hardware. Software serial requires a lot of help from the Arduino controller to send and receive data, so it’s not as fast or efficient as hardware serial. For more info about the Serial, please refer to [Seeed Arduino Serial](https://wiki.seeedstudio.com/Seeed_Arduino_Serial/). 
 
 - **AVR:** For the below example, We define Software Serial as COMSerial(connectiong with Grove-MP3 module). NOT all the digital pins can be used for software serial. You can refer to [Software Serial](https://www.arduino.cc/en/Reference/SoftwareSerial) for detail pins. We define hardware Serial as ShowSerial(connecting with PC). If you use Arduino Mega, you can connect the hardware Serial to ShowSerial and the other Serial1/Serial2/Serial3 to COMSerial. So you can refer to AVR Mega setting. 
 
@@ -88,7 +88,7 @@ Most of arduino boards have at least one Serial, some have multiple serials(Ardu
 - **STM32F4:** For the below example, We use the hardware serial **Serial** to commuincate with Grove-MP3 Module and **SerialUSB** to print message on PC. 
 
 !!!Note
-    For more info about the Serial, please refer to [Seeed Arduino Serial](http://wiki.seeedstudio.com/Seeed_Arduino_Serial/). 
+    For more info about the Serial, please refer to [Seeed Arduino Serial](https://wiki.seeedstudio.com/Seeed_Arduino_Serial/). 
 
 ```
 #ifdef __AVR__
@@ -120,7 +120,7 @@ WT2003S<HardwareSerial> Mp3Player;
 
 -   Now you can hear songs stored in your SD card. And in the playing mode, the D1 indicator is on. If in the pause mode, the indicator will blink. More experience is waiting for you！
 
-There is another way to control MP3 play mode via serial tool.In this way, you need a [UartSBee](http://www.seeedstudio.com/depot/uartsbee-v4-p-688.html?cPath=63_66) to connect MP3 to PC. The hardware installation as shown below:
+There is another way to control MP3 play mode via serial tool.In this way, you need a [UartSBee](https://www.seeedstudio.com/depot/uartsbee-v4-p-688.html?cPath=63_66) to connect MP3 to PC. The hardware installation as shown below:
 ![](https://files.seeedstudio.com/wiki/Grove-Serial_MP3_Player/img/Using_UartSBee_to_Control_MP3.jpg)
 
 After the connection is completed, open the serial tool to send commands. About the specific commands, please see the reference part!
@@ -244,7 +244,7 @@ Resources
 - [WT5001 Datasheet](https://files.seeedstudio.com/wiki/Grove-Serial_MP3_Player/res/WT5001_datasheet_V1.5.pdf)
 
 
-<!-- This Markdown file was created from http://www.seeedstudio.com/wiki/Grove_-_Serial_MP3_Player -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Serial_MP3_Player -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

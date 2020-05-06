@@ -237,7 +237,7 @@ Once you have it wired up you will need to upload the following code to your See
 ```
 // reading liquid flow rate using Seeeduino and Water Flow Sensor from Seeedstudio.com
 // Code adapted by Charles Gantt from PC Fan RPM code written by Crenn @thebestcasescenario.com
-// http:/themakersworkbench.com http://thebestcasescenario.com http://seeedstudio.com
+// http:/themakersworkbench.com http://thebestcasescenario.com https://www.seeedstudio.com
 
 volatile int NbTopsFan;                       // measuring the rising edges of the signal
 int Calc;
@@ -274,7 +274,7 @@ void loop ()
 }
 ```
 
-You can refer our forum for more details about [Reading Water Flow rate with Water Flow Sensor](http://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632).
+You can refer our forum for more details about [Reading Water Flow rate with Water Flow Sensor](https://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632).
 
 ##   Wiring Diagram
 ---
@@ -324,11 +324,11 @@ Yeah, it has been used on drinking machine.
 
 ##   Resource
 ---
-*   [Reading Water Flow rate with Water Flow Sensor](http://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632)
+*   [Reading Water Flow rate with Water Flow Sensor](https://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632)
 
 *   [Water Flow rate display on LCD](http://www.practicalarduino.com/projects/water-flow-gauge)
 
-*   [datasheet for the material](http://wiki.seeedstudio.com/images/4/4e/YEE70G30HSLNC..pdf)
+*   [datasheet for the material](https://wiki.seeedstudio.com/images/4/4e/YEE70G30HSLNC..pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

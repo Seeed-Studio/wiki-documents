@@ -9,11 +9,11 @@ sku:  113050003
 ---
 ![](https://files.seeedstudio.com/wiki/GPS_Bee_kit/img/Gpsbee_05.jpg)
 
-To make the GPS module be easily compatible with the existent shield , we use the same pin packaging as XBee wireless module.So you can put the GPS module into the existent shield which compatible with XBee. Also you can use the [UartSBee V4](http://www.seeedstudio.com/depot/uartsbee-v4-p-688.html?cPath=109) to connect the GPS module to USB port, run a software named u-center to analyze the GPS data and to reset the GPS module parameter. Put the GPS Bee on the [UartSBee V4](http://www.seeedstudio.com/depot/uartsbee-v4-p-688.html?cPath=109) , and connect the [UartSBee V4](http://www.seeedstudio.com/depot/uartsbee-v4-p-688.html?cPath=109) to the PC , open the u-center.exe , choose the UartSB port , then you can see the data that GPS module send back , and the software analyze them and show you the specific information ,like : time , speed , latitude and longitude, ASL and so on.
+To make the GPS module be easily compatible with the existent shield , we use the same pin packaging as XBee wireless module.So you can put the GPS module into the existent shield which compatible with XBee. Also you can use the [UartSBee V4](https://www.seeedstudio.com/depot/uartsbee-v4-p-688.html?cPath=109) to connect the GPS module to USB port, run a software named u-center to analyze the GPS data and to reset the GPS module parameter. Put the GPS Bee on the [UartSBee V4](https://www.seeedstudio.com/depot/uartsbee-v4-p-688.html?cPath=109) , and connect the [UartSBee V4](https://www.seeedstudio.com/depot/uartsbee-v4-p-688.html?cPath=109) to the PC , open the u-center.exe , choose the UartSB port , then you can see the data that GPS module send back , and the software analyze them and show you the specific information ,like : time , speed , latitude and longitude, ASL and so on.
 
-Kit is come with Mini Embedded Antenna U.FL for GPS，you can also purchase another Antenna with lager size [Embedded Antenna U.FL for GPS](http://www.seeedstudio.com/depot/embedded-antenna-ufl-for-gps-p-564.html?cPath=84_89). Compatible with all shields, breakout, boards with Xbee standard sockets.
+Kit is come with Mini Embedded Antenna U.FL for GPS，you can also purchase another Antenna with lager size [Embedded Antenna U.FL for GPS](https://www.seeedstudio.com/depot/embedded-antenna-ufl-for-gps-p-564.html?cPath=84_89). Compatible with all shields, breakout, boards with Xbee standard sockets.
 
-[4 pin 2.54mm to 2.0mm Female jumper wire](http://www.seeedstudio.com/depot/4-pin-254mm-to-20mm-female-jumper-wire-100mm-p-403.html) is also available for easy adaption!
+[4 pin 2.54mm to 2.0mm Female jumper wire](https://www.seeedstudio.com/depot/4-pin-254mm-to-20mm-female-jumper-wire-100mm-p-403.html) is also available for easy adaption!
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/gps-bee-kit-with-mini-embedded-antenna-p-560.html?cPath=144_145)
 
@@ -391,13 +391,13 @@ Click [here](http://garden.seeedstudio.com/images/2/20/GPSBee-exam-3.jpg) to see
 
 ##   Resources
 ---
-*   [NEO-5 DataSheet Of U-blox](http://www.seeedstudio.com/depot/datasheet/NEO-5x_Data_Sheet(GPS.G5-MS5-07025).pdf)
+*   [NEO-5 DataSheet Of U-blox](https://www.seeedstudio.com/depot/datasheet/NEO-5x_Data_Sheet(GPS.G5-MS5-07025).pdf)
 
 *   [NEO-6 DataSheet Of U-blox](https://files.seeedstudio.com/wiki/GPS_Bee_kit/res/NEO-6_DataSheet-GPS.G6-HW-09005-.pdf)
 
 *   [LEA-6 NEO-6 HardwareIntegrationManual](https://files.seeedstudio.com/wiki/GPS_Bee_kit/res/LEA-6_NEO-6_HardwareIntegrationManual.pdf)
 
-*   [U-center](http://www.seeedstudio.com/depot/datasheet/u-center_5.07_Installer.rar)
+*   [U-center](https://www.seeedstudio.com/depot/datasheet/u-center_5.07_Installer.rar)
 
 *   [GPSBee Schematic v1.2.pdf](http://garden.seeedstudio.com/images/5/58/GPSBee_v1.2.pdf)
 
@@ -410,4 +410,4 @@ Click [here](http://garden.seeedstudio.com/images/2/20/GPSBee-exam-3.jpg) to see
 *   [GPSBee V1.3 Eagle File](https://files.seeedstudio.com/wiki/GPS_Bee_kit/res/GPS_Bee_v1.3_eagle.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -18,13 +18,13 @@ This example demonstrates how to display multiple images (eyes) onto the LCD scr
 
 ## Arduino libraries needed
 
-- Install the LCD screen library `Seeed_Arduino_LCD`, please visit [Wio Terminal LCD](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/) for more information.
+- Install the LCD screen library `Seeed_Arduino_LCD`, please visit [Wio Terminal LCD](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/) for more information.
 
 - Install the SD Card library `Seeed_Arduino_FS`, Please visit [Seeed-Arduino-FS](https://github.com/Seeed-Studio/Seeed_Arduino_FS/tree/beta) for more information.
 
 - Install the on-board accelerator library `Seeed_Arduino_LIS3DHTR`, Please visit [Seeed_Arduino_LIS3DHTR](https://github.com/Seeed-Studio/Seeed_Arduino_LIS3DHTR/tree/beta) for more information.
 
-- Install the `RawImage.h` library, Please visit [Loading Images](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Loading-Image/) for more information.
+- Install the `RawImage.h` library, Please visit [Loading Images](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Loading-Image/) for more information.
 
 ## Arduino Instructions
 
@@ -98,7 +98,7 @@ void setup() {
 
 In this example, the images are not 320x240 full-size so when drawing, need to specified where the image begins. The images are first loaded into the buffer to avoid image lagging from shaking the Wio Terminal.
 
-For more information, please visit [Loading Images](http://wiki.seeedstudio.com/Wio-Terminal-LCD-Loading-Image/).
+For more information, please visit [Loading Images](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Loading-Image/).
 
 ```Cpp
 void loop() {

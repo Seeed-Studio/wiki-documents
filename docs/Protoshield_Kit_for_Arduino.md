@@ -82,7 +82,7 @@ Build your own Arduino shield using the compact and flexible Proto Shield kit. S
 
 ![](https://files.seeedstudio.com/wiki/Protoshield_Kit_for_Arduino/img/Step1.jpg)
 
-**Step 2:** Solder the female and male connectors. Note: solder ADC6 and ADC7 **ONLY** if your are using a [Seeeduino](http://www.seeedstudio.com/depot/index.php?main_page=advanced_search_result&amp;search_in_description=0&amp;zenid=15c0e10e2d81d5481f863ae4eaaf7ca1&amp;keyword=seeeduino&amp;x=0&amp;y=0). When using an Arduino, do **NOT** solder ADC6 and ADC7.
+**Step 2:** Solder the female and male connectors. Note: solder ADC6 and ADC7 **ONLY** if your are using a [Seeeduino](https://www.seeedstudio.com/depot/index.php?main_page=advanced_search_result&amp;search_in_description=0&amp;zenid=15c0e10e2d81d5481f863ae4eaaf7ca1&amp;keyword=seeeduino&amp;x=0&amp;y=0). When using an Arduino, do **NOT** solder ADC6 and ADC7.
 
 ![](https://files.seeedstudio.com/wiki/Protoshield_Kit_for_Arduino/img/Step2.jpg)
 ![](https://files.seeedstudio.com/wiki/Protoshield_Kit_for_Arduino/img/Step22.jpg)
@@ -99,4 +99,4 @@ Your finished kit should look similar to the picture above.
 *   [Sources file](https://files.seeedstudio.com/wiki/Protoshield_Kit_for_Arduino/res/ProtoShield.brd)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

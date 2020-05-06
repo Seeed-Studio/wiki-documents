@@ -81,7 +81,7 @@ This is the ICSP connection for the ATmega328P-MU, it is located in the standard
 
 ###   14. Grove Connectors
 
-[Our depot](http://www.seeedstudio.com/depot/) has a variety of sensors/devices that can make use of this I2C or UART connection. In addition we sell independent Grove connectors to help you make our own sensor connections. The I2C Grove connector is also connected to analog pins 4 and 5 for SDA and SCL respectively if you would like to use those pins instead. The UART Grove connector is connected to digital pins 0 and 1 for RX and TX respectively.
+[Our depot](https://www.seeedstudio.com/depot/) has a variety of sensors/devices that can make use of this I2C or UART connection. In addition we sell independent Grove connectors to help you make our own sensor connections. The I2C Grove connector is also connected to analog pins 4 and 5 for SDA and SCL respectively if you would like to use those pins instead. The UART Grove connector is connected to digital pins 0 and 1 for RX and TX respectively.
 
 ###   PWM Pins
 
@@ -114,7 +114,7 @@ Digital pins 3, 5, 6, 8, 9, and 10 can be used for pulse width modulation (PWM).
 
 ###   Automatic
 
-The Arduino/Seeeduino drivers are included with the [Arduino Software](http://arduino.cc/en/main/software).  In Windows, once the Arduino Software is installed, plug in your Seeeduino board to your PC's USB port and the driver installation will begin automatically as shown in the screenshot below:
+The Arduino/Seeeduino drivers are included with the [Arduino Software](https://arduino.cc/en/main/software).  In Windows, once the Arduino Software is installed, plug in your Seeeduino board to your PC's USB port and the driver installation will begin automatically as shown in the screenshot below:
 
 [](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Seeeduino_v4_driver_installation_first_window.png)
 
@@ -184,7 +184,7 @@ Or if you prefer we have listed and described each of the steps:
 
 Two great features of the Seeeduino V4.0 board when compared to its competitors is its ability to switch between 5V and 3.3V logic, and its USB-to-UART port essentially making it an FTDI like device great for quickly getting started with devices that use the UART protocol/interface.
 
-In this example we will show you how to use the popular [ESP8266 WiFi module](http://www.seeedstudio.com/depot/WiFi-Serial-Transceiver-Module-w-ESP8266-p-1994.html?cPath=19_20). This example is amazing because with other duino boards you would require a voltage converter, a logic converter, and software to control two separate Serial ports but with the Seeeduino board none of these three things are required.
+In this example we will show you how to use the popular [ESP8266 WiFi module](https://www.seeedstudio.com/depot/WiFi-Serial-Transceiver-Module-w-ESP8266-p-1994.html?cPath=19_20). This example is amazing because with other duino boards you would require a voltage converter, a logic converter, and software to control two separate Serial ports but with the Seeeduino board none of these three things are required.
 
 **Step 1: Putting The Board In 3.3V Mode**
 
@@ -373,4 +373,4 @@ Below is a list of changes that have been made to the Seeeduino board over all t
 -  **[Datasheet]** [ATMEGA16U2 Summary](http://www.atmel.com/Images/7799S.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

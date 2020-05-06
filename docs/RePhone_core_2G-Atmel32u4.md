@@ -95,7 +95,7 @@ We also provide an even more powerful version of new RePhone core 2G because its
 
 ##Arduino IDE
 
-After you download and install the [latest Arduino IDE](https://www.arduino.cc/en/Main/Software), then click [here](http://wiki.seeed.cc/Seeed_Arduino_Boards/) to add the board to your Arduino IDE.
+After you download and install the [latest Arduino IDE](https://www.arduino.cc/en/Main/Software), then click [here](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/) to add the board to your Arduino IDE.
 
 ###Install the Driver (For Windows)
 
@@ -130,7 +130,7 @@ And Then,
 * Click on **Tools > Board > RePhone core 2G-Atmel32u4**
 
 
-If you can not find the RePhone core 2G-Atmel32u4, please check [How to Add Seeed boards to Arduino IDE](http://wiki.seeedstudio.com/Seeed_Arduino_Boards/)
+If you can not find the RePhone core 2G-Atmel32u4, please check [How to Add Seeed boards to Arduino IDE](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/)
 
 
 
@@ -241,12 +241,12 @@ There are several chainable add-on modules to extend the features and functional
 |GPS v2|Basic Sensors|NFC v2|
 |----------------|--------------|-------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Rephone/image/product1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Rephone/image/product2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Rephone/image/product3.jpg)|
-|[Get More Details](http://www.seeedstudio.com/Xadow-GPS-v2-p-2557.html)|[Get More Details](http://www.seeedstudio.com/Xadow-Basic-Sensors-p-2555.html)|[Get More Details](http://www.seeedstudio.com/Xadow-NFC-v2-p-2562.html)|
+|[Get More Details](https://www.seeedstudio.com/Xadow-GPS-v2-p-2557.html)|[Get More Details](https://www.seeedstudio.com/Xadow-Basic-Sensors-p-2555.html)|[Get More Details](https://www.seeedstudio.com/Xadow-NFC-v2-p-2562.html)|
 
 |LED 5 x 7|Audio|Xadow GSM Breakout|
 |----------------|--------------|-------------|
 |![](https://files.seeedstudio.com/wiki/Rephone/image/product4.jpg)|![](https://files.seeedstudio.com/wiki/Rephone/image/product7.jpg)|![](https://files.seeedstudio.com/wiki/Rephone/image/product8.jpg)|
-|[Get More Details](http://www.seeedstudio.com/Xadow-LED-5-x-7-p-2561.html)|[Get More Details](http://www.seeedstudio.com/Xadow-Audio-p-2554.html)|[Get More Details](http://www.seeedstudio.com/Xadow-GSM-Breakout-p-2559.html)|
+|[Get More Details](https://www.seeedstudio.com/Xadow-LED-5-x-7-p-2561.html)|[Get More Details](https://www.seeedstudio.com/Xadow-Audio-p-2554.html)|[Get More Details](https://www.seeedstudio.com/Xadow-GSM-Breakout-p-2559.html)|
 
 
 
@@ -266,4 +266,4 @@ There are several chainable add-on modules to extend the features and functional
 - [Download ALL Above](https://github.com/SeeedDocument/RePhone_core_2G-Atmel32u4/archive/master.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
