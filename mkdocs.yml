@@ -285,6 +285,7 @@ nav:
             - Reading Raspberry Pi's Info using Wio Terminal: Wio-Terminal-Reading-Raspberry-Pi.md
             - Accessing to GitHub using Wio Terminal: Wio-Terminal-Reading-Github.md
             - Gesture Recognition with Wio Terminal: Wio-Terminal-Gesture-Recognition.md
+            - Reading Coronavirus Live Data using Wio Terminal: Wio-Terminal-Reading-COVID19.md
 
       - ReSpeaker:
           - ReSpeaker Introduction: ReSpeaker.md
