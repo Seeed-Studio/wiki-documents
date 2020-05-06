@@ -98,7 +98,7 @@ Grove - IMU 9DOF v2.0 is an upgraded version of **Grove - IMU 9DOF v1.0** and it
 
 #### Software
 
-**Step 1.** Download the [library](https://files.seeedstudio.com/wiki/Grove-IMU_9DOF_v2.0/res/Grove_IMU_9DOF_9250.zip). from Github.
+**Step 1.** Download the [library](https://github.com/Seeed-Studio/Grove_IMU_9DOF/archive/master.zip). from Github.
 
 **Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
