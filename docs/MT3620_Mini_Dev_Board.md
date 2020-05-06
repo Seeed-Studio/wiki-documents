@@ -172,7 +172,7 @@ If building a high-level OS app,it is possible to use ADC and PWM.
 
 **Board Diagram**
 
-<a href="https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/sys.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/sys.jpg"/></a>
+<a href="https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/Sys.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/Sys.jpg"/></a>
 
 
 
