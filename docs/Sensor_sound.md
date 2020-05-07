@@ -37,7 +37,6 @@ There are a numerous use of these sound sensors. Particularly, using these kinds
 | Industry | The acoustic wave sensor utilizes the positive and reverse piezoelectric effect of the conversion between electrical energy and mechanical energy of lead zirconate titanate PZT piezoelectric ceramic to measure distance. An electrical signal is added to the piezoelectric ceramic, it generates mechanical vibration and emits ultrasound. When an obstacle is encountered on the way, the ultrasound will be reflected back immediately, and there will be an electrical signal output when it acts on its ceramic. Consequently the distance between the car and the obstacle is calculated and displayed via measuring the time differences.  |
 | Medical treatment| The working principle of traditional hearing aids is: the microphone (microphone) converts the received sound signal into an electrical signal and sends it to the amplifier. The amplifier amplifies the electrical signal and sends it to the receiver (headphone), which converts the electrical signal into sound signal. The sound signal at this time is much stronger than the signal received by the microphone, so that the hearing loss of the deaf can be compensated to varying degrees.|
 | Military | The sound sensor uses sound waves to determine the chemical composition of the material in the closed container to strengthen the security of the port; The sound sensor system can locate and classify the sniper firepower, and provide the azimuth, elevation, and Range, caliber and error distance.| 
-|
 
 ## Sound Sensors at Seeed
 ### Which One is Your Preference
@@ -52,7 +51,6 @@ There are a numerous use of these sound sensors. Particularly, using these kinds
 |[Grove - Heelight Sensor](https://wiki.seeedstudio.com/Grove-Heelight_Sensor/)|<img src="https://files.seeedstudio.com/wiki/Grove_Heelight_Sensor/img/heelight sensor.png" />|3.3V-5V|0.1m-10m|/|TTL logic level|/|[Buy Now](https://www.seeedstudio.com/Grove-Heelight-Sensor.html)|
 |[Grove - Sound Recorder](https://wiki.seeedstudio.com/Grove-Sound_Recorder/)|<img src="https://files.seeedstudio.com/wiki/Grove-Sound_Recorder/img/Sound recorder.png" />|3V-5.5V|±1.5g|/|/|/|[Buy Now](https://www.seeedstudio.com/Grove-Sound-Recorder-p-904.html)|
 |[Grove - Ultrasonic Ranger](https://wiki.seeedstudio.com/Grove-Ultrasonic_Ranger/)|<img src="https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/image/Ultrasonic_Small.png" />|3.2V-5.2V|2cm-350cm|/|PWM|40kHz|[Buy Now](https://www.seeedstudio.com/Grove-Ultrasonic-Distance-Sensor.html)|
-|
 
 ### Warmly Notice
 
