@@ -14,7 +14,7 @@ This Grove - Ultrasonic ranger is a non-contact distance measurement module whic
 !!!Warning
 	Do not hot plug Grove-Ultrasonic-Ranger, otherwise it will damage the sensor. The measured area must be no less than 0.5 square meters and smooth.
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a ></p >
 
 ## Version
 
@@ -46,9 +46,9 @@ This Grove - Ultrasonic ranger is a non-contact distance measurement module whic
 
 ## Platforms Supported
 
-| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
-|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg) |
+|Arduino|Raspberry|ArduPy|
+|---|---|---|
+|![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg)|![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg)|![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/ArduPy-Logo.png)|
 
 !!!Caution
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
@@ -92,7 +92,7 @@ This Grove - Ultrasonic ranger is a non-contact distance measurement module whic
 - **Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 - **Step 3.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
-```
+```cpp
 #include "Ultrasonic.h"
 
 Ultrasonic ultrasonic(7);
@@ -120,7 +120,7 @@ void loop()
 
 - **Step 4.** We will see the distance display on terminal as below.
 
-```
+```sh
 The distance to obstacles in front is:
 2 inches
 6 cm
@@ -188,24 +188,21 @@ Upload the program to your Arduino/Seeeduino.
 - **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
 - **Step 2**. Download the source file by cloning the grove.py library. 
 
-```
+```sh
 cd ~
 git clone https://github.com/Seeed-Studio/grove.py
-
 ```
 
 - **Step 3**. Excute below commands to run the code.
 
-```
+```sh
 cd grove.py/grove
 python grove_ultrasonic_ranger.py 5 6
-
 ```
 
 Following is the grove_ultrasonic_ranger.py code.
 
 ```python
-
 import sys
 import time
 from grove.gpio import GPIO
@@ -263,9 +260,7 @@ class GroveUltrasonicRanger(object):
             if dist:
                 return dist
 
-
 Grove = GroveUltrasonicRanger
-
 
 def main():
     if len(sys.argv) < 2:
@@ -281,9 +276,6 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
 ```
 
 !!!success
@@ -306,15 +298,9 @@ Detecting distance...
   File "grove_ultrasonic_ranger.py", line 107, in main
     time.sleep(1)
 KeyboardInterrupt
-
-
 ```
 
-
 You can quit this program by simply press ++ctrl+c++.
-
-
-
 
 ### Play With Raspberry Pi (with GrovePi_Plus)
 
@@ -378,7 +364,7 @@ while True:
 
 - **Step 4.** We will see the distance display on terminal as below.
 
-```
+```python
 pi@raspberrypi:~/GrovePi/Software/Python $ python grove_ultrasonic.py
 9
 9
@@ -391,24 +377,111 @@ pi@raspberrypi:~/GrovePi/Software/Python $ python grove_ultrasonic.py
 9
 9
 9
-
 ```
 
-## FAQs
+### Play With Wio Terminal (ArduPy)
 
+#### Hardware
+
+- **Step 1.** Prepare the below stuffs:
+
+| Wio Terminal | Grove - Ultrasonic Ranger |
+|--------------|-------------|-----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-thumbnail.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/Ultrasonic_small.jpg)|
+|[Get One Now](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Get One Now](https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html)|
+
+- **Step 2.** Connect Grove - Ultrasonic Ranger to **D0** port of Wio Terminal.
+- **Step 4.** Connect the Wio Terminal to PC through USB Type-C cable.
+
+![](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/with-WT.jpg)
+
+#### Software
+
+- **Step 1.** Follow [**ArduPy Getting Started**](https://wiki.seeedstudio.com/ArduPy/) to configure the ArduPy development environment on Wio Terminal.
+
+- **Step 2.** Make sure that the ArduPy firmware contains the ultrasonic ranger ArduPy library using the following commands. For more information, please follow [**here**](https://wiki.seeedstudio.com/ArduPy/#using-aip-to-include-other-ardupy-librariesfrom-arduino-libraries-example).
+
+```sh
+aip install Seeed-Studio/seeed-ardupy-ultrasonic-sensor
+aip build
+aip flash
+```
+
+- **Step 3.** Copy the following code and save it as `ArduPy-ultrasonic.py`:
+
+```python
+from arduino import grove_ultra_ranger
+from machine import LCD
+from machine import Sprite
+import time
+
+Ultrasonic = grove_ultra_ranger(0)
+lcd = LCD()
+spr = Sprite(lcd) # Create a buff
+
+def main():
+    spr.createSprite(320, 240)
+    while True:
+        spr.setTextSize(2)
+        spr.fillSprite(spr.color.BLACK)
+        spr.setTextColor(lcd.color.RED)
+        spr.drawString("Ultrasonic Sensor", 55, 10)
+        spr.drawFastHLine(40, 35, 240, lcd.color.DARKGREY)
+        spr.setTextColor(lcd.color.WHITE)
+        spr.drawString("- Centimeters: ", 20, 50)
+        spr.drawString("- Inches: ", 20, 80)
+        spr.drawNumber(Ultrasonic.cm, 200,50)
+        time.sleep_ms(50) # Needed for data to be read again
+        spr.drawNumber(Ultrasonic.inch, 130,80)
+        spr.pushSprite(0,0)
+        time.sleep_ms(500)
+
+        print("The distance to obstacles in front is:", Ultrasonic.cm, 'centimeter')
+        print("The distance to obstacles in front is:", Ultrasonic.inch, 'inches')
+
+if __name__ == "__main__":
+    main()
+```
+
+- **Step 4.** Save the `ArduPy-ultrasonic.py` in a location that you know. Run the following command and **replace** `<YourPythonFilePath>` with your `ArduPy-ultrasonic.py` location.
+
+```sh
+aip shell -n -c "runfile <YourPythonFilePath>"
+# Example:
+# aip shell -n -c "runfile /Users/ansonhe/Desktop/ArduPy-ultrasonic.py"
+```
+
+- **Step 5.** We will see the distance display on terminal as below, and displaying on the Wio Terminal LCD screen.
+
+```sh
+ansonhe@Ansons-Macbook-Pro ~:aip shell -n -c "runfile /Users/ansonhe/Desktop/ArduPy-ultrasonic.py"
+Positional argument (/dev/cu.usbmodem1413101) takes precedence over --open.
+Connected to ardupy
+The distance to obstacles in front is: 3 centimeter
+The distance to obstacles in front is: 1 inches
+The distance to obstacles in front is: 7 centimeter
+The distance to obstacles in front is: 2 inches
+The distance to obstacles in front is: 6 centimeter
+The distance to obstacles in front is: 2 inches
+The distance to obstacles in front is: 6 centimeter
+The distance to obstacles in front is: 2 inches
+The distance to obstacles in front is: 4 centimeter
+The distance to obstacles in front is: 1 inches
+The distance to obstacles in front is: 7 centimeter
+The distance to obstacles in front is: 2 inches
+```
+
+![](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/WT-ur.jpg)
+
+## FAQs
 
 **Q1: How does the Grove-Ultrasonic sensor work?**
 
 - A1: When we provide a pulse trigger signal with more than 10uS through singal pin, the Grove_Ultrasonic_Ranger will issue 8 cycles of 40kHz cycle level and detect the echo. The pulse width of the echo signal is proportional to the measured distance. Here is the formula: Distance = echo signal high time * Sound speed (340M/S)/2.
 
-
-
-
 **Q2: Why Grove-Ultrasonic sensor only has 1 signal pin, comparing with other ultrasonic sensor Trig and Echo pins?**
 
 - A2:Grove_Ultrasonic_Ranger’s trig and echo signal share 1 SIG pin through MCU.  
-
-
 
 **Q3: Can we connect mulitule ultrasonic to one arduino?**
 
@@ -438,10 +511,7 @@ void loop()
     
     delay(250);
 }
-
 ```
-
-
 
 ## Resources
 
