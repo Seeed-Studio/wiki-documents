@@ -1,4 +1,4 @@
-# Reading Coronavirus COVID19 Live Data using Wio Terminal
+# Reading Coronavirus COVID-19 Live Data using Wio Terminal
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/COVID-19.gif"/></div>
 
