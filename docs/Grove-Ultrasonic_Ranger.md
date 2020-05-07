@@ -386,7 +386,7 @@ pi@raspberrypi:~/GrovePi/Software/Python $ python grove_ultrasonic.py
 - **Step 1.** Prepare the below stuffs:
 
 | Wio Terminal | Grove - Ultrasonic Ranger |
-|--------------|-------------|-----------------|
+|--------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-thumbnail.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/Ultrasonic_small.jpg)|
 |[Get One Now](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Get One Now](https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html)|
 
