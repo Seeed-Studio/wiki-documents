@@ -21,7 +21,7 @@ Thanks to its diode-pumped ERBUM: the high efficiency of glass solid-state laser
 
 The distance detects the amount of physical changes (time difference, angle difference, pulse speed and etc.) of an object using various elements and converts the amount of changes into a distance to measure the distance and displacement from the sensor to the object.
 
-## Field of Applicaitons
+## Field of Applications
 
 There are a numerous use of these distance sensors. Particularly, using these kinds of sensors, human beings can be monitored and benifitted or even saved from different conditions. Therefore the distance sensors play important roles in various sectors, which include daily life, industry, medical, military and etc.
 
@@ -33,7 +33,7 @@ There are a numerous use of these distance sensors. Particularly, using these ki
 | Medical treatment| Rope displacement sensor for remote surgical tool positioning and bed positioning in X-ray / CT scan.|
 | Military | Mostly used in field environment (mountain conditions, canyon depth and etc.), aircraft height detection and some are used for mine depth and material height measurement. While aircraft height measurement is mainly utilized to detect the height from the ground when taking off and landing, real-time displayed on the control panel.| 
 
-## Sound Sensors at Seeed
+## Distance Sensors at Seeed
 ### Which One is Your Preference
 
 
