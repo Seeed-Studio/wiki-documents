@@ -32,7 +32,6 @@ There are a numerous use of these distance sensors. Particularly, using these ki
 | Industry | Railway contact network measurement; Building limit measurement; Measurement of unsuitable objects; Industrial automation and production intelligent management; Automobile speed and flow statistics; Industrial monitoring signal trigger control; XY positioning of tower crane; Monitoring of ship's safe docking position; Container positioning; Overhead cable measurement, Height limitation measurement; Measure the width of the box on the conveyor belt.  |
 | Medical treatment| Rope displacement sensor for remote surgical tool positioning and bed positioning in X-ray / CT scan.|
 | Military | Mostly used in field environment (mountain conditions, canyon depth and etc.), aircraft height detection and some are used for mine depth and material height measurement. While aircraft height measurement is mainly utilized to detect the height from the ground when taking off and landing, real-time displayed on the control panel.| 
-|
 
 ## Sound Sensors at Seeed
 ### Which One is Your Preference
@@ -48,7 +47,6 @@ There are a numerous use of these distance sensors. Particularly, using these ki
 |[Grove - Digital Distance Interrupter 0.5 to 5cm(GP2Y0D805Z0F)](https://wiki.seeedstudio.com/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F/)|<img src="https://files.seeedstudio.com/wiki/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F/img/thumnail.jpg" />|3.3v-5v|0.5cm - 5cm|-10℃ -60℃|[Buy Now](https://www.seeedstudio.com/Grove-Digital-Distance-Interrupter-0-5-to-5cm-GP2Y0D805Z0F.html)|
 |[Grove - IR Distance Interrupter v1.2](https://wiki.seeedstudio.com/Grove-IR_Distance_Interrupter_v1.2/)|<img src="https://files.seeedstudio.com/wiki/Grove-IR_Distance_Interrupter_v1.2/img/IR.png" />|3.3v-5v|7.5cm–40 cm|/|[Buy Now](https://www.seeedstudio.com/Grove-IR-Distance-Interrupter-p-1278.html)|
 |[Grove-TF Mini LiDAR](https://wiki.seeedstudio.com/Grove-TF_Mini_LiDAR/)|<img src="https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/Grove-TF-Mini-LiDAR_S.JPG" />|4.5V-6V|0.3m-12m|-20℃-60℃|[Buy Now](https://www.seeedstudio.com/Seeedstudio-Grove-TF-Mini-LiDAR.html)|
-|
 
 ### Warmly Notice
 
