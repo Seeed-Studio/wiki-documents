@@ -46,6 +46,7 @@ For all the products in our bazaar, please click [Products in Bazaar](https://ww
 |Name|Thumbnail|Operate voltage|Input interface|Click to buy|
 |----|-----|-----|------|------|
 |[Grove - Fingerprint Sensor](https://wiki.seeedstudio.com/Grove-Fingerprint_Sensor/)|<img src="https://files.seeedstudio.com/wiki/Grove-Fingerprint_Sensor/img/45d_small.jpg" />|3.6V-6V|TTL Serial|[Buy Now](https://www.seeedstudio.com/Grove-Fingerprint-Sensor.html)|
+|[Grove - Capacitive Fingerprint Scanner/Sensor](https://wiki.seeedstudio.com/Grove-Capacitive-Fingerprint-Sensor/)|<img src="https://files.seeedstudio.com/wiki/Grove-Capacitive-Fingerprint-Scanner/img/fingerprint.png" />|3.3V-5V|/|[Buy Now](https://www.seeedstudio.com/Grove-Capacitive-Fingerprint-Scanner-p-4363.html)|
 |[Grove - Ear-clip Heart Rate Sensor](https://wiki.seeedstudio.com/Grove-Ear-clip_Heart_Rate_Sensor/)|<img src="https://files.seeedstudio.com/wiki/Grove-Ear-clip_Heart_Rate_Sensor/img/45d_small.jpg" />|3V-5.25V|TTL Serial|[Buy Now](https://www.seeedstudio.com/Grove-Ear-clip-Heart-Rate-Sensor.html)|
 |[Grove - Chest Strap Heart Rate Sensor](https://wiki.seeedstudio.com/Grove-Chest_Strap_Heart_Rate_Sensor/)|<img src="https://files.seeedstudio.com/wiki/Grove-Chest_Strap_Heart_Rate_Sensor/img/45d_small.jpg" />|3V-5.5V|TTL Serial|[Buy Now](https://www.seeedstudio.com/Grove-Chest-Strap-Heart-Rate-Sensor-p-1115.html)|
 |[Grove - Finger-clip Heart Rate Sensor](https://wiki.seeedstudio.com/Grove-Finger-clip_Heart_Rate_Sensor/)|<img src="https://files.seeedstudio.com/wiki/Grove-Finger-clip_Heart_Rate_Sensor/img/Grove-Finger-clip_Heart_Rate_Sensor (1).jpg" />|5V|I2C|[Buy Now](https://www.seeedstudio.com/Grove-Finger-clip-Heart-Rate-Sensor.html)|
@@ -55,7 +56,11 @@ For all the products in our bazaar, please click [Products in Bazaar](https://ww
 
 ### Warmly Notice
 
-The chart above tells a variety of attributions of each biomedical sensor, you can choose the one that is the most suited for you. For more detailed information of individuals, please visit their own pages via the links left beside the images of the products.
+The chart above tells a variety of attributions of each biomedical sensor, you can choose the one that is the most suited for you. 
+
+For fingerprint sensors, Grove - Capacitive Fingerprint Scanner/Sensor can identify biological characteristics, only identifies living body with high safety, small size, low power consumption and high accuracy while Grove - Fingerprint Sensor has a strong abrasion resistance with excellent environmental adaptability and stability. As for heart rate sensors, your preferences are up to which part of body is aimed to be tested, ear, chest or finger.
+
+If more detailed information of individuals are required, please visit their own pages via the links left beside the images of the products.
 
 ## Project
 
@@ -69,7 +74,7 @@ The chart above tells a variety of attributions of each biomedical sensor, you c
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/SeeedStudio/atmospheric-pollution-visualization-1940f4/embed' width='350'></iframe>
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+ If you have any technical issue, please submit the issue into our [forum](http://forum.seeedstudio.com/). 
 
 
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
