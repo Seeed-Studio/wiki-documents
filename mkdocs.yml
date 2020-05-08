@@ -509,7 +509,7 @@ nav:
           - Sensor - Accelerometer: Sensor_accelerometer.md
           - Sensor - Temperature: Sensor_temperature.md
           - Sensor - Light: Sensor_light.md
-          - Sensor - Health: Sensor_health.md
+          - Sensor - Biomedicine: Sensor_biomedicine.md
           - Sensor - Sound: Sensor_sound.md
           - Sensor - Distance: Sensor_distance.md
           - Sensor - Others: Sensor_Others.md
