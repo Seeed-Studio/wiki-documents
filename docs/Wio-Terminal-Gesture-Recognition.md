@@ -125,7 +125,7 @@ Or download the code [**here**](https://files.seeedstudio.com/wiki/Wio-Terminal/
 
 ## Checking the `.csv` Files
 
-Open the `punch.csv` and `flex.csv` and make sure that the first line of the csv files is **aX,aY,aZ**, check below for reference:
+Open the `punch.csv` and `flex.csv` and make sure that the first line of the csv files is **aX,aY,aZ** check below for reference:
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/IMU-csv.png"/></div>
 
