@@ -64,7 +64,7 @@ The M.2 Accelerator is a dual-key M.2 card (either A+E or B+M keys), designed to
 
 
 | Coral-Mini-PCIe-Accelerator-x86 | ODYSSEY - X86J4105 |
-|--------------|-------------|-----------------|
+|--------------|-------------|
 |![ ](https://files.seeedstudio.com/wiki/Coral_M.2_Accelerator_B_M_key/img/M.2.jpg)|![ ](https://files.seeedstudio.com/wiki/Coral_M.2_Accelerator_B_M_key/img/PC.png)|
 |[Get ONE Now](https://www.seeedstudio.com/Coral-M-2-Accelerator-B-M-key-p-4411.html)|[Get ONE Now](https://www.seeedstudio.com/ODYSSEY-X86J4105800-p-4445.html)|
 
@@ -135,7 +135,7 @@ sudo apt update
 sudo apt-get install gasket-dkms
 ```
 
-4. If the user account you'll be using does not have root permissions, you might need to add the following udev rule, and then verify that the "apex" group exists and that your user is added to it:
+4.  If the user account you'll be using does not have root permissions, you might need to add the following udev rule, and then verify that the "apex" group exists and that your user is added to it:
 
 ```
    sudo sh -c "echo 'SUBSYSTEM==\"apex\", MODE=\"0660\", GROUP=\"apex\"' >> /etc/udev/rules.d/65-apex.rules"
@@ -145,9 +145,9 @@ sudo apt-get install gasket-dkms
    sudo adduser $USER apex
 ```
 
-5. Reboot the system.
+5.   Reboot the system.
 
-6. Verify that the accelerator module is detected:
+6.   Verify that the accelerator module is detected:
 
     `lspci -x | grep 089a`
 
@@ -173,9 +173,9 @@ The Edge TPU runtime is required to communicate with the Edge TPU. You can insta
 
 `sudo apt-get install libedgetpu1-std`
 
->Notes
+Notes
 > Unlike the [USB Accelerator](https://coral.ai/products/accelerator/), the Mini PCIe and M.2 Accelerator do not use different runtime packages for "reduced" and "maximum" clock frequencies. Instead, these devices operate at the maximum frequency by default and perform  [power throttling based on thermal limits](https://coral.ai/docs/m2/get-started/#operating-frequency-and-thermal-settings).
-</div>
+
 
 
 ## 3. Install the TensorFlow Lite library
