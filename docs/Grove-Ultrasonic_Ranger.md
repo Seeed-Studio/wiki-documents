@@ -9,12 +9,13 @@ tags: io_3v3, io_5v, plat_duino, plat_pi
 ---
 ![](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/Ultrasonic.jpg)
 
-This Grove - Ultrasonic ranger is a non-contact distance measurement module which works at 40KHz. When we provide a pulse trigger signal with more than 10uS through singal pin, the Grove_Ultrasonic_Ranger will issue 8 cycles of 40kHz cycle level and detect the echo. The pulse width of the echo signal is proportional to the measured distance. Here is the formula: Distance = echo signal high time * Sound speed (340M/S)/2. Grove_Ultrasonic_Ranger's trig and echo singal share 1 SIG pin.
+This Grove - Ultrasonic ranger is a non-contact distance measurement module which works at 40KHz. When we provide a pulse trigger signal with more than 10uS through signal pin, the Grove_Ultrasonic_Ranger will issue 8 cycles of 40kHz cycle level and detect the echo. The pulse width of the echo signal is proportional to the measured distance. Here is the formula: Distance = echo signal high time * Sound speed (340M/S)/2. Grove_Ultrasonic_Ranger's trig and echo signal share 1 SIG pin.
 
 !!!Warning
 	Do not hot plug Grove-Ultrasonic-Ranger, otherwise it will damage the sensor. The measured area must be no less than 0.5 square meters and smooth.
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a ></p >
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p>
+
 
 ## Version
 
@@ -51,7 +52,7 @@ This Grove - Ultrasonic ranger is a non-contact distance measurement module whic
 |![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg)|![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg)|![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/ArduPy-Logo.png)|
 
 !!!Caution
-    The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
+    The platforms mentioned above as supported is/are an indication of the module's software or theoretical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
 
 ## Getting Started
@@ -71,7 +72,9 @@ This Grove - Ultrasonic ranger is a non-contact distance measurement module whic
 |[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html)|
 
 - **Step 2.** Connect Ultrasonic Ranger to port D7 of Grove-Base Shield.
+
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
+
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
 ![](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/arduino%20connection.jpg)
@@ -89,7 +92,9 @@ This Grove - Ultrasonic ranger is a non-contact distance measurement module whic
 #### Software
 
 - **Step 1.** Download the  [ UltrasonicRanger Library](https://github.com/Seeed-Studio/Grove_Ultrasonic_Ranger/archive/master.zip)  from Github.
+
 - **Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+
 - **Step 3.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 ```cpp
@@ -172,7 +177,9 @@ Upload the program to your Arduino/Seeeduino.
 
 
 - **Step 2**. Plug the Grove Base Hat into Raspberry.
+
 - **Step 3**. Connect the Grove - Ultrasonic Ranger to port D5 of the Base Hat.
+
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 
 
@@ -186,6 +193,7 @@ Upload the program to your Arduino/Seeeduino.
 #### Software
 
 - **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+
 - **Step 2**. Download the source file by cloning the grove.py library. 
 
 ```sh
@@ -315,7 +323,9 @@ You can quit this program by simply press ++ctrl+c++.
 
 
 - **Step 2.** Plug the GrovePi_Plus into Raspberry.
+
 - **Step 3.** Connect Grove-Ultrasonic ranger to **D4** port of GrovePi_Plus.
+
 - **Step 4.** Connect the Raspberry to PC through USB cable.
 
 ![](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/pi%20connection.jpg)
@@ -323,6 +333,7 @@ You can quit this program by simply press ++ctrl+c++.
 #### Software
 
 - **Step 1.** Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment.
+
 - **Step 2.** Git clone the Github repository.
 
 ```
@@ -391,6 +402,7 @@ pi@raspberrypi:~/GrovePi/Software/Python $ python grove_ultrasonic.py
 |[Get One Now](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Get One Now](https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html)|
 
 - **Step 2.** Connect Grove - Ultrasonic Ranger to **D0** port of Wio Terminal.
+
 - **Step 4.** Connect the Wio Terminal to PC through USB Type-C cable.
 
 ![](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/with-WT.jpg)
@@ -453,7 +465,7 @@ aip shell -n -c "runfile <YourPythonFilePath>"
 
 - **Step 5.** We will see the distance display on terminal as below, and displaying on the Wio Terminal LCD screen.
 
-```sh
+```python
 ansonhe@Ansons-Macbook-Pro ~:aip shell -n -c "runfile /Users/ansonhe/Desktop/ArduPy-ultrasonic.py"
 Positional argument (/dev/cu.usbmodem1413101) takes precedence over --open.
 Connected to ardupy
