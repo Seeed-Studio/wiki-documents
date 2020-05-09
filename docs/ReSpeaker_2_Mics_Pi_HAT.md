@@ -48,6 +48,12 @@ The board is developed based on WM8960, a low power stereo codec. There are 2 mi
 - JST 2.0 SPEAKER OUT: for connecting speaker with JST 2.0 connector
 - 3.5mm AUDIO JACK: for connecting headphone or speaker with 3.5mm Audio Plug
 
+## Platform Supported
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/IMX6-2MIC.png"/></div>
+
+- **[Get started with NPi i.MX6ULL Dev Board Linux SBC](https://wiki.seeedstudio.com/NPi-i.MX6ULL-Dev-Board-Linux-SBC/#iis)**
+
 ## Getting Started
 
 **1. Connect ReSpeaker 2-Mics Pi HAT to Raspberry Pi**
