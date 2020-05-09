@@ -353,6 +353,7 @@ nav:
           - Wifi Shield (Fi250) V1.1: Wifi_Shield_Fi250_V1.1.md
           - Wifi Shield V2.0: Wifi_Shield_V2.0.md
           - XBee Shield V2.0: XBee_Shield_V2.0.md
+          
 
       - Wio Tracker:
           - Wio Tracker Introduction: Wio_Tracker.md
@@ -971,6 +972,7 @@ nav:
   - Discontinued:
           # - Discontinued Introduction: Discontinued.md
           - 2.8inch TFT Touch Shield V1.0: 2.8inch-TFT_Touch_Shield_V1.0.md
+          - 2.7inch Triple-Color E-link Shield for Arduino: 2.7inch-Triple-Color-E-Ink-Shield-for-Arduino.md
           - 5V-3.3V Breadboard Power Supply v1.1: 5V-3.3V_Breadboard_Power_Supply_v1.1.md
           - 5V/3.3V Breadboard Power Supply‏‎: 5V-3.3V_Breadboard_Power_Supply.md
           - Arch GPRS: Arch_GPRS.md
