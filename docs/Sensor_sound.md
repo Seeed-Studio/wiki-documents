@@ -50,7 +50,6 @@ There are a numerous use of these sound sensors. Particularly, using these kinds
 |[Grove - Loudness Sensor](https://wiki.seeedstudio.com/Grove-Loudness_Sensor/)|<img src="https://files.seeedstudio.com/wiki/Grove-Loudness_Sensor/img/LoudnessSensor_s.jpg" />|3.5V-10VDC|/|-48dB~66 dB|Analog Signal|50Hz~2000 Hz|[Buy Now](https://www.seeedstudio.com/Grove-Loudness-Sensor.html)|
 |[Grove - Heelight Sensor](https://wiki.seeedstudio.com/Grove-Heelight_Sensor/)|<img src="https://files.seeedstudio.com/wiki/Grove_Heelight_Sensor/img/heelight sensor.png" />|3.3V-5V|0.1m-10m|/|TTL logic level|/|[Buy Now](https://www.seeedstudio.com/Grove-Heelight-Sensor.html)|
 |[Grove - Sound Recorder](https://wiki.seeedstudio.com/Grove-Sound_Recorder/)|<img src="https://files.seeedstudio.com/wiki/Grove-Sound_Recorder/img/Sound recorder.png" />|3V-5.5V|±1.5g|/|/|/|[Buy Now](https://www.seeedstudio.com/Grove-Sound-Recorder-p-904.html)|
-|[Grove - Ultrasonic Ranger](https://wiki.seeedstudio.com/Grove-Ultrasonic_Ranger/)|<img src="https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/image/Ultrasonic_Small.png" />|3.2V-5.2V|2cm-350cm|/|PWM|40kHz|[Buy Now](https://www.seeedstudio.com/Grove-Ultrasonic-Distance-Sensor.html)|
 
 ### Warmly Notice
 
