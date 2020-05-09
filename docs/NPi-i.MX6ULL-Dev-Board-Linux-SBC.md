@@ -562,14 +562,13 @@ In this section, we will explain the control principle of the Linux IIS program.
 - **Step 2.** Install alsa-utils by using `apt`
 
 ```bash
-apt install alsa-utils -y
+sudo apt install alsa-utils -y
 ```
 
 - **Step 3.** add dtbo package in `/boot/uEnv.txt` to make it become effective after reboot.
 
 ```bash
-echo dtoverlay=/lib/firmware/imx-seeed-voicecard-2mic-overlay.dtbo >> /boot/uEnv.txt
-reboot
+sudo sh -c  "echo dtoverlay=/lib/firmware/imx-seeed-voicecard-2mic-overlay.dtbo >> /boot/uEnv.txt"
 ```
 
 <div class="admonition note" >
@@ -579,16 +578,43 @@ You need to view SPI's guide to install dependencies about the imx-seeed-voice c
 
 - **Step 4.** Check the driver whether install successfully by using `aplay`, you will view the below information if it is successful.
 
-```
-root@npi:~# insmod /lib/modules/$(uname -r)/extra/seeed/snd-soc-seeed-voicecard.ko
-root@npi:~# aplay -l
+```sh
+debian@npi:~$ sudo insmod /lib/modules/$(uname -r)/extra/seeed/snd-soc-seeed-voicecard.ko
+debian@npi:~$ aplay -l
 **** List of PLAYBACK Hardware Devices ****
-card 0: seeed2micvoicec [seeed-2mic-voicecard], device 0: bcm2835-i2s-wm8960-hifi wm8960-hifi-0 []
+card 0: seeed2micvoicec [seeed-2mic-voicecard], device 0: 2028000.sai-wm8960-hifi wm8960-hifi-0 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+debian@npi:~$ arecord -l
+**** List of CAPTURE Hardware Devices ****
+card 0: seeed2micvoicec [seeed-2mic-voicecard], device 0: 2028000.sai-wm8960-hifi wm8960-hifi-0 []
   Subdevices: 1/1
   Subdevice #0: subdevice #0
 ```
 
-The more information about the ReSpeaker 2-Mics Pi HAT you can visit [wiki](https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/)
+- **Step 5.** Go into the `seeed-linux-dtverleys` folder and configure soundstate as follow：
+
+```sh
+debian@npi:~$ cd seeed-linux-dtverlays/
+debian@npi:~/seeed-linux-dtverlays$ sudo cp extras/wm8960_asound.state /var/lib/alsa/asound.state
+debian@npi:~/seeed-linux-dtverlays$ sudo alsactl restore
+```
+
+- **Step 6.** Now you can start playing with ReSpeaker 2-Mics Pi Hat! For simple record and play testing, run the following command:
+
+1. To record an audio to `test.wav`:
+
+```sh
+arecord -f cd -r 48000 -Dhw:0 test.wav
+```
+
+2. To play the `test.wav` audio. Remember to plug in a headphone or speaker to output the audio.
+
+```sh
+aplay -Dhw:0 -r 48000 test.wav
+```
+
+For more information about the ReSpeaker 2-Mics Pi HAT you can visit [wiki](https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/)
 
 ## Resourses
 -----
