@@ -81,23 +81,8 @@ We have released various types of distance sensors and sound sensors during the 
 
 
 
-
-<ul>
-<li>
-
-[Grove - Distance Sensor Selection Guide](https://wiki.seeedstudio.com/Sensor_distance/)</li> 
-<li>
-
-[Grove Sound Sensor Selection Guide](https://wiki.seeedstudio.com/Sensor_sound/)</li>
-</ul>
-
-
-
-
-
-
-
-
+- [Grove - Distance Sensor Selection Guide](https://wiki.seeedstudio.com/Sensor_distance/)
+- [Grove - Sound Sensor Selection Guide](https://wiki.seeedstudio.com/Sensor_sound/)
 
 
 

@@ -149,16 +149,6 @@ The content of this chapter is got from [**Wikipedia - Lumen (unit)**](https://e
 
 The lumen (symbol: lm) is the SI derived unit of luminous flux, a measure of the total "amount" of visible light emitted by a source. Luminous flux differs from power (radiant flux) in that luminous flux measurements reflect the varying sensitivity of the human eye to different wavelengths of light, while radiant flux measurements indicate the total power of all electromagnetic waves emitted, independent of the eye's ability to perceive it. Lumens are related to lux in that one lux is one lumen per square meter.
 
-**For some examples:**
-
-- Dark night: 0.001—0.02
-- Moonlight night: 0.02—0.3
-- Cloudy day indoor: 5—50
-- Cloudy day outdoor: 50—500
-- Sunny day indoor: 100—1000
-- Suitable for reading: 500—600
-- Home video camera: 1400
-
 
 **Ultraviolet index**
 
