@@ -171,7 +171,7 @@ Download the **`model.h`** files from the left panel.
 
 ## Uploading the Code on Wio Terminal
 
-- Once downloaded the model header files. Open [IMU_Classifier.ino]() or copy the following code in Arduino IDE:
+- Once downloaded the model header files. Open [IMU_Classifier.ino](https://files.seeedstudio.com/wiki/Wio-Terminal/res/IMU_Classifier.zip) or copy the following code in Arduino IDE:
 
 ```cpp
 /*
