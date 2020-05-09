@@ -21,7 +21,7 @@ Coral-Mini-PCIe-Accelerator-x86 is an M.2 module that brings the Edge TPU coproc
 
 The Edge TPU is a small ASIC designed by Google that provides high performance ML inferencing with low power requirements: it's capable of performing 4 trillion operations (tera-operations) per second (TOPS), using 0.5 watts for each TOPS (2 TOPS per watt). For example, it can execute state-of-the-art mobile vision models such as MobileNet v2 at almost 400 FPS, in a power efficient manner. This on-device processing reduces latency, increases data privacy, and removes the need for constant high-bandwidth connectivity.
 
-The M.2 Accelerator is a dual-key M.2 card (either A+E or B+M keys), designed to fit any compatible M.2 slot. This form-factor enables easy integration into ARM and x86 platforms so you can add local ML acceleration to products such as embedded platforms, mini-PCs, and industrial gateways.
+The M.2 Accelerator is a dual-key M.2 card ( B+M keys), designed to fit any compatible M.2 slot. This form-factor enables easy integration into ARM and x86 platforms so you can add local ML acceleration to products such as embedded platforms, mini-PCs, and industrial gateways.
 
 [![enter image description here](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/Coral-M-2-Accelerator-B-M-key-p-4411.html)
 
@@ -71,9 +71,7 @@ The M.2 Accelerator is a dual-key M.2 card (either A+E or B+M keys), designed to
 
 #### Hardware Connection
 
-To get started with Coral-Mini-PCIe-Accelerator-x86, all you need to do is connect the card to your system, and then install our PCIe driver, Edge TPU runtime, and the TensorFlow Lite runtime. Here tell you  through the setup and shows you how to run an example model.
-
-The setup and operation is the same for both form-factors.
+The steps of hardware connection is very simple. 
 
 - **Step 1.** Connecting Coral-Mini-PCIe-Accelerator-x86 to the ODYSSEY - X86J4105.
 - **Step 2.** Connecting the Power to the ODYSSEY - X86J4105.
@@ -84,10 +82,12 @@ The setup and operation is the same for both form-factors.
 
 
 ## Software
+After we finished hardware connection,the next step is to solve software problems.
+ Here I'll tell you a few  installation steps: install  PCIe driver, Edge TPU runtime, and the TensorFlow Lite runtime. 
 
-To get started, you need a Linux computer with the following specs:
+At first, what you need  is a Linux computer ,please follow the step.
 
-* System architecture of either x86-64, ARMv7 (32-bit), or ARMv8 (64-bit) 
+* You can choose  x86-64, ARMv7 (32-bit), or ARMv8 (64-bit) system .
 
    Please refer to how to [create a bootable USB drive and install Linux OS(Ubuntu Desktop 18.04)](https://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-OS/) onto the ODYSSEY - X86J4105.
 
@@ -97,27 +97,33 @@ To get started, you need a Linux computer with the following specs:
 
 * Python 3.5 or higher
 
-When you have finished create a bootable USB drive and install Linux OS ,you can go next step .
+After you successfully make the U disk boot disk and install the Linux os file. ,you can go next step .
 
 ## 1.Install the PCIe driver
 
-Before you install our driver, you first need to check whether you have a pre-built Apex driver installed. Some versions of the driver have a bug that prevents updates and will result in failure when calling upon the Edge TPU. So first follow these steps:
+If you aready installed a pre-built Apex driver,you should conside Whether the drive will result in the Edge TPU fail, because some of the  driver have bugs lead to this mistakes.So you should check it . So first follow these steps:
 
    1.Check your Linux kernel version with this command:
 
-   `uname -r `
+   ```
+      uname -r 
+   
+   ```
 
    If it prints 4.18 or lower, you should be okay and can skip to begin installing our PCIe driver.
 
    2.If your kernel version is 4.19 or higher, now check if you have a pre-build Apex driver installed:
  
-   `lsmod | grep apex`
+   ```
+      lsmod | grep apex
+   
+   ```
     
    If it prints nothing, then you're okay and continue to install our PCIe driver.
 
    If it does print an Apex module name, stop here and follow the [workaround to disable Apex and Gasket](https://coral.ai/docs/m2/get-started/#workaround-to-disable-apex-and-gasket). 
 
-Install our PCIe driver as follows:
+Install  PCIe driver as follows:
 
 1. Make sure the host system where you'll connect the module is shut down.
 
@@ -149,21 +155,29 @@ sudo apt-get install gasket-dkms
 
 6.   Verify that the accelerator module is detected:
 
-    `lspci -x | grep 089a`
+   ```
+      lspci -x | grep 089a
+   ```
 
    You should see something like this:
-
-    `03:00.0 System peripheral: Device 1ac1:089a`
+    ```
+      03:00.0 System peripheral: Device 1ac1:089a
+    ```
 
    The 03 number and System peripheral name might be different, because those are host-system specific, but as long as you see a device listed with 089a then you're okay to proceed.
 
 7. Verify that the PCIe driver is loaded:
 
-   `ls /dev/apex_0`
+   ```
+   ls /dev/apex_0
+   ```
 
    You should simply see the name repeated back:
 
-   `/dev/apex_0`
+   ```
+   /dev/apex_0
+   
+   ```
 
 
 
@@ -171,7 +185,9 @@ sudo apt-get install gasket-dkms
 
 The Edge TPU runtime is required to communicate with the Edge TPU. You can install it on your host computer from a command line as follows:
 
-`sudo apt-get install libedgetpu1-std`
+```
+sudo apt-get install libedgetpu1-std
+```
 
 Notes
 > Unlike the [USB Accelerator](https://coral.ai/products/accelerator/), the Mini PCIe and M.2 Accelerator do not use different runtime packages for "reduced" and "maximum" clock frequencies. Instead, these devices operate at the maximum frequency by default and perform  [power throttling based on thermal limits](https://coral.ai/docs/m2/get-started/#operating-frequency-and-thermal-settings).
@@ -239,19 +255,6 @@ As an alternative to using the TensorFlow Lite API (used above), you can use the
 
 You can also [run inference using C++ and TensorFlow Lite](https://coral.ai/docs/edgetpu/tflite-cpp/).
 
-## Next steps
-
-To run some other types of neural networks, check out [example projects](https://coral.ai/examples/), including examples that perform real-time object detection, pose estimation, keyphrase detection, on-device transfer learning, and more.
-
-If you want to create your own model, try these tutorials:
-
-* [Retrain an image classification model using post-training quantization](https://colab.sandbox.google.com/github/google-coral/tutorials/blob/master/retrain_classification_ptq_tf1.ipynb) (runs in Google Colab)
-
-* [Retrain an image classification model using quantization-aware training](https://coral.ai/docs/edgetpu/retrain-classification/) (runs in Docker)
-
-* [Retrain an object detection model using quantization-aware training](https://coral.ai/docs/edgetpu/retrain-detection/) (runs in Docker)
-
-Or to create your own model that's compatible with the Edge TPU, read [TensorFlow Models on the Edge TPU](https://coral.ai/docs/edgetpu/models-intro/).
 
 Resources
 --------
