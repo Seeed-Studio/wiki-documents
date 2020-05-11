@@ -54,6 +54,10 @@ The board is developed based on WM8960, a low power stereo codec. There are 2 mi
 
 - **[Get started with NPi i.MX6ULL Dev Board Linux SBC](https://wiki.seeedstudio.com/NPi-i.MX6ULL-Dev-Board-Linux-SBC/#iis)**
 
+<div align=center><img src="https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/STM32-2MIC.png"/></div>
+
+- **[Get started with ODYSSEY – STM32MP157C](https://wiki.seeedstudio.com/ODYSSEY-STM32MP157C/#i2s-on-odyssey-stm32mp157c)**
+
 ## Getting Started
 
 **1. Connect ReSpeaker 2-Mics Pi HAT to Raspberry Pi**
