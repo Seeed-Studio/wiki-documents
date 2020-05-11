@@ -82,6 +82,8 @@ Download the latest [**RTL8720 Firmware**](https://files.seeedstudio.com/wiki/Wi
 !!!attention
           You **must erase the Wi-Fi core** when you received the Wio Terminal the first time.
 
+<div align=center><img width = 450 src="https://s3-us-west-2.amazonaws.com/files.seeedstudio.com/wiki/Wio-Terminal/img/Erase-process.png"/></div>
+
 -   Under **Flash Download** session, click on **Browse** on these 3 image path:
 
 **Note:** Browse the right bin (downloaded from above) in each Image path as follow.
