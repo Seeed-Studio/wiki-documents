@@ -75,14 +75,19 @@ Doppler radar works by sending a beam of electromagnetic radiation waves from th
 
 #### Materials Requied
 
-| Seeeduino Lotus | 
-|--------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/Seeeduino_Lotus.png)|
-|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-Lotus-V1-1-ATMega328-Board-with-Grove-Interface.html)|
+| Seeeduino Lotus | Grove-Doppler-Radar|
+|--------------|-------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/Seeeduino_Lotus.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/small.png)|
+|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-Lotus-V1-1-ATMega328-Board-with-Grove-Interface.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Doppler-Radar-BGT24LTR11-p-4572.html)|
 
 #### Hardware Overview
 
 ![](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/pin-1.png)
+
+#### Hardware Connection
+
+![](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/connection.jpg)
+
 
 #### External headers-pin description
 
@@ -98,8 +103,11 @@ Doppler radar works by sending a beam of electromagnetic radiation waves from th
 |8|OUT1|External GPIO pin (user configurable)|
 |9|OUT2|External GPIO pin (user configurable)|
 
-#### **Notice**
-    **1** Please plug the USB cable， Doppler Radar Interface into Seeeduino D2 Interface gently, otherwise you may damage the port. 
+
+!!!Tip
+    Please plug the USB cable， Doppler Radar Interface into Seeeduino D2 Interface gently, otherwise you may damage the port.
+
+
 
 - **Step 1.** Plug Doppler Radar into Seeeduino with a Grove Cable.
 
