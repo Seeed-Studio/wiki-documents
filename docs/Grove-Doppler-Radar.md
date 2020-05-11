@@ -85,6 +85,20 @@ Doppler radar works by sending a beam of electromagnetic radiation waves from th
 
 ![](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/pin-1.png)
 
+#### External headers-pin description
+
+|Pin number|Signal name|Pin description|
+|---|---|----|
+|1| DIV_OUT	|Frequency divider output from the BGT24LTR11 |
+|2|GND|Ground|
+|3|VCC_5V_EXT|External+5.0V input power supply pin(maximum=5.5V)|
+|4|VTUNE|VCO frequency tuning voltage|
+|5|IFQ_HG|BGT24LTR11 Q-channel-analog signal output-second gain stage|
+|6|IFI_HG|BGT24LTR11 I-channel-analog signal output-second gain stage|
+|7|PWM_OUT|External user-configurable GPIO with CCU4|
+|8|OUT1|External GPIO pin (user configurable)|
+|9|OUT2|External GPIO pin (user configurable)|
+
 #### **Notice**
     **1** Please plug the USB cable， Doppler Radar Interface into Seeeduino D2 Interface gently, otherwise you may damage the port. 
 
