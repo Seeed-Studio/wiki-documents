@@ -544,6 +544,7 @@ nav:
           - Grove - Barometer Sensor(BME280): Grove-Barometer_Sensor-BME280.md
           - Grove - Temperature Humidity Pressure Gas Sensor(BME680): Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680.md
           - Grove - Button: Grove-Button.md
+          - Grove - Doppler Radar: Grove-Doppler-Radar.md
           - Grove - Dual Button: Grove-Dual-Button.md
           - Grove - LED Button: Grove-LED_Button.md
           - Grove - CO2 Sensor: Grove-CO2_Sensor.md
