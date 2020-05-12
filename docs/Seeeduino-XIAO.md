@@ -17,6 +17,16 @@ Seeeduino XIAO has 14 GPIO PINs, which can be used for 11 digital interfaces, 11
 
 <p style=":center"><a href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
+## Documentations
+
+There are two documentations on the usage of **Seeeduino XIAO** which focus on different areas, check the table below for reference:
+
+|[**Documentation by Seeed**](https://wiki.seeedstudio.com/Seeeduino-XIAO/)|[**Documentation by Nanase**](https://wiki.seeedstudio.com/Seeeduino-XIAO-by-Nanase/)|
+|---|---|
+|Pinout Digram|Interface|
+|Seeeduino XIAO Getting Started|Seeeduino XIAO with MicroSD Card(SPI)|
+|Seeeduino XIAO GPIO Usage|Seeeduino XIAO with GPS(UART)|
+|Seeeduino XIAO Resources|Single Cycle IOBUS|
 
 ## Features
 

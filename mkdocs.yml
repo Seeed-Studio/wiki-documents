@@ -146,7 +146,6 @@ nav:
           - Seeeduino Stalker v3 enclosure: Seeeduino_Stalker_v3_enclosure.md
           - Seeeduino v4.0‏‎: Seeeduino_v4.0.md
           - Seeeduino v4.2: Seeeduino_v4.2.md
-          - Seeeduino XIAO: Seeeduino-XIAO.md
           - SeeedStudio GD32 RISC-V Dev Board: SeeedStudio-GD32-RISC-V-Dev-Board.md
           - Seeeduino Crypto (ATmega4809 ECC608): Seeeduino-Crypto-ATmega4809-ECC608.md
           - Shield Bot V1.1: Shield_Bot_V1.1.md
@@ -191,6 +190,7 @@ nav:
           - Seeed Studio BeagleBone® Green: BeagleBone_Green.md
           - Seeed Studio BeagleBone® Green HDMI Cape: BeagleBone_Green_HDMI_Cape.md
           - Seeed Studio BeagleBone® Green Wireless: BeagleBone_Green_Wireless.md
+          - Seeed Studio BeagleBone® Green Gateway: BeagleBone-Green-Gateway.md
           - Grove Base Cape for Seeed Studio BeagleBone® Green v2: Grove_Base_Cape_for_BeagleBone_v2.md
           - Grove Cape for BeagleBone® Series: Grove_Cape_for_BeagleBone_Series.md
           - Grove Starter Kit for Seeed Studio BeagleBone® Green: Grove_Starter_Kit_for_BeagleBone_Green.md
@@ -221,6 +221,10 @@ nav:
       - ArduPy:
           - ArduPy Wiki: ArduPy.md
           - ArduPy LCD API Reference: ArduPy-LCD.md
+
+      - Seeeduino XIAO:
+          - Seeeduino XIAO: Seeeduino-XIAO.md
+          - Seeeduino XIAO by Nanase: Seeeduino-XIAO-by-Nanase.md
 
       - Wio Terminal:
           - Get Started with Wio Terminal: Wio-Terminal-Getting-Started.md
@@ -544,6 +548,7 @@ nav:
           - Grove - Barometer Sensor(BME280): Grove-Barometer_Sensor-BME280.md
           - Grove - Temperature Humidity Pressure Gas Sensor(BME680): Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680.md
           - Grove - Button: Grove-Button.md
+          - Grove - Doppler Radar: Grove-Doppler-Radar.md
           - Grove - Dual Button: Grove-Dual-Button.md
           - Grove - LED Button: Grove-LED_Button.md
           - Grove - CO2 Sensor: Grove-CO2_Sensor.md

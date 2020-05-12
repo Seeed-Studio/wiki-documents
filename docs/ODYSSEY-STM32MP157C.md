@@ -792,6 +792,95 @@ cd grove.py/grove
 python uart.py
 ```
 
+### I2S on ODYSSEY-STM32MP157C
+
+In this section, we will explain the control principle of the Linux I2S programming. Now we will use I2S and ReSpeaker 2-Mics Pi HAT to tell you how to use it.
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| ODYSSEY – STM32MP157C | ReSpeaker 2-Mics Pi HAT |
+|--------------|----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/perspective-19-210X157.png)|![image](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/res-thumbnail.png)|
+|[Get ONE Now](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)|[Get ONE Now](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT.html)|
+
+- **Step 2.** According to the [installation guide](https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/#getting-started) insert ReSpeaker 2-Mics Pi HAT onto ODYSSEY – STM32MP157C.
+
+#### Software
+
+- **Step 1.** Install alsa-utils by using `apt`
+
+```bash
+sudo apt install alsa-utils -y
+```
+
+- **Step 2.** Go to the dtbs file location and download the stm32mp1 dtb file.
+
+```sh
+debian@npi:~$ cd /boot/dtbs/4.19.9-stm32-r1/
+debian@npi:/boot/dtbs/4.19.9-stm32-r1$ sudo wget https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/res/stm32mp1-seeed-npi-full-rpi-exp.dtb
+```
+
+**Note:** You can also download the stm32mp1 `.dtb` file [**here**](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/res/stm32mp1-seeed-npi-full-rpi-exp.dtb)
+
+- **Step 3.** Config the `uEnv.txt` as following:
+
+```sh
+debian@npi:~$ sudo vi /boot/uEnv.txt
+```
+
+Change the dtb settings to
+
+```
+dtb=stm32mp1-seeed-npi-full-rpi-exp.dtb
+```
+
+- **Step 4.** Go into the `seeed-linux-dtverleys` folder and configure soundstate as follow：
+
+```sh
+debian@npi:~$ cd seeed-linux-dtverlays/
+debian@npi:~/seeed-linux-dtverlays$ sudo cp extras/wm8960_asound-stm32mp1 /var/lib/alsa/asound.state
+debian@npi:~/seeed-linux-dtverlays$ sudo alsactl restore
+```
+
+- **Step 5.** Check the driver whether install successfully by using `aplay` and `arecord`, you will view the below information if it is successful.
+
+```sh
+debian@npi:~/seeed-linux-dtverlays$ aplay -l
+**** List of PLAYBACK Hardware Devices ****
+card 0: seeed2micvoicec [seeed-2mic-voicecard], device 0: 4000b000.audio-controller-wm8960-hifi wm8960-hifi-0 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 1: STM32MP1SEEEDNP [STM32MP1-SEEEDNPi], device 0: 4400b004.audio-controller-wm8960-hifi0 wm8960-hifi0-0 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+debian@npi:~/seeed-linux-dtverlays$ arecord -l
+**** List of CAPTURE Hardware Devices ****
+card 0: seeed2micvoicec [seeed-2mic-voicecard], device 0: 4000b000.audio-controller-wm8960-hifi wm8960-hifi-0 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 1: STM32MP1SEEEDNP [STM32MP1-SEEEDNPi], device 1: 4400b024.audio-controller-wm8960-hifi1 wm8960-hifi1-1 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+```
+
+- **Step 6.** Now you can start playing with ReSpeaker 2-Mics Pi Hat! For simple record and play testing, run the following command:
+
+1. To record an audio to `test.wav`:
+
+```sh
+arecord -f cd -r 48000 -Dhw:0 test.wav
+```
+
+2. To play the `test.wav` audio. Remember to plug in a headphone or speaker to output the audio.
+
+```sh
+aplay -Dhw:0 -r 48000 test.wav
+```
+
+For more information about the ReSpeaker 2-Mics Pi HAT you can visit [wiki](https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/)
+
 ## Resourses
 -----
 - **[PDF]** [STM32MP157C Datasheet](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/Hardware/stm32mp157c.pdf)

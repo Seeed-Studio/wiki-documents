@@ -150,7 +150,7 @@ Now, simply click the **Upload** button in the environment. Wait a few seconds a
 </figure>
 </div>
 
-A few seconds after the upload finishes, you should see the LED on the back of the Wio Terminal start to blink. If it does, congratulations! You've gotten Wio Terminal up-and-running. If you have problems, please see the troubleshooting suggestions.
+A few seconds after the upload finishes, you should see the LED at the bottom of the Wio Terminal start to blink. If it does, congratulations! You've gotten Wio Terminal up-and-running. If you have problems, please see the troubleshooting suggestions.
 
 Please feel free to go though other tutorials of Wio Terminal and start building your IoT projects!
 
