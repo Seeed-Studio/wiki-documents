@@ -45,7 +45,7 @@ There are no components on the backside of the board, and all pins have castella
 
 Castellated holes:
 
-![image](https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F30370%2Fb4f21419-898a-1830-6820-92d3517bccc8.jpeg?ixlib=rb-1.2.2&auto=format&gif-q=60&q=75&s=7077b2ca966f5e7092e33bdc8dc29b8a)
+![image](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Castellated-holes-of-xiao-jp.jpg)
 
 ## Specification
 
