@@ -10,6 +10,7 @@ add mutiple language steps
 // 本地环境 : false
 
 var _IsProduction = true ;
+var _Language = "en";
 
 // root URL 
 //  测试版本 :  "http://192.168.5.153/b/wiki.seeedstudio.com"
@@ -38,6 +39,9 @@ var _SubRootPath = _IsProduction ? "" : "/b/wiki.seeedstudio.com";
     Over 
 *****
 */
+
+
+
 
  var site = {    
     isProduction : _IsProduction,
@@ -100,10 +104,245 @@ var _SubRootPath = _IsProduction ? "" : "/b/wiki.seeedstudio.com";
         var navMobile = document.querySelector(".md-header .md-header-nav #m-language-site-nav")
         this.createSiteList(navPC);
         this.createSiteList(navMobile);
+    },
+
+    /* modify  add nav generate  */
+    filePath :"/mkdocs/mkdocs.json",
+    currentLang : _Language,
+    navData:[],
+    navDom : {},
+    trackTarget :{
+        track:true
+    },
+    activeTarget : {},
+    drawNav : function(level,ul,navList){
+        var self = this ;
+        var navDom = self.navDom ;
+        var activeTarget = self.activeTarget;
+        var activeLevel = activeTarget.activeLevel;
+        var html = '';
+        level = level ? parseInt(level) : 1;
+
+        if(!activeLevel || level>activeLevel ){return}
+        if( parseInt(activeTarget[level].index) == NaN  ) return ;
+
+        ul = ul || document.querySelector('.md-nav--primary[data-md-level="0"]>ul.md-nav__list');
+        var li = ul.querySelector('li[data-track-index="'+activeTarget[level].index+'"]')
+        
+     
+        var input = li.querySelector("input[data-md-toggle]");
+        var navRoot = document.querySelector(".md-sidebar--primary[data-md-component='navigation']");
+        
+        if(input && navRoot && navRoot.offsetTop >0) input.checked = true;
+        var subUl = li.querySelector('ul[data-md-level="'+level+'"]');
+       
+        if(!subUl) {
+            return
+        }
+        
+        var navList = navList ?  navList[activeTarget[level].index] : self.navDom[activeTarget[level].index];
+        
+        var liHtml = navList.html || ' ';
+        for(var i in navList){
+            var item = navList[i];
+            html += (item.html ? item.html : '');
+        }
+        subUl.innerHTML = html ;
+        self.drawNav(++level,subUl,navList)
+    },
+    collapseNav : function(value){
+        console.log(value)
+    },
+    getParentInputLeval : function(el,end){
+        if(!end) end  = document;
+        var p = el.parentNode;
+        var parents = []
+        while(p != end){
+            var o = p ;
+            var input = o.querySelector("input[checkbox]")
+            if(input){
+                parents.push(input.getAttribute("data-track-index"));
+            }
+            p = o.parentNode;
+        }
+        return parents;
+    },
+    bindCollapse:function(){
+        var self = this;
+        // console.log(document.querySelectorAll("input[type='checkbox'][data-md-toggle]")).length
+        var ul = document.querySelector('.md-nav--primary[data-md-level="0"]>ul.md-nav__list');
+        ul.addEventListener("change",function(e){
+            var html = '';
+           if(e.target.nodeName == "INPUT" && e.target.checked ){
+               var level = e.target.getAttribute("data-track-index");
+               var levels = e.target.getAttribute("data-track-id");
+               var ul = e.target.parentNode.querySelector('ul[data-track-id="'+levels+'"]');
+               if(!level || !levels || !ul || ul.querySelector("li")) return
+                levels = levels.split("-");
+                var navList = {};
+                for(var i = 0; i<levels.length; i++){
+                    if(i == 0){
+                        navList = self.navDom[levels[i]] ? self.navDom[levels[i]] : {}
+                    }else{
+                        navList = navList[levels[i]] ? navList[levels[i]] : {}
+                    }
+                }
+                for(var index in navList){
+                    var item = navList[index];
+                    // li.outerHTML = (item.html ? item.html : '');
+                    html += (item.html ? item.html : '');
+                    // ul.appendChild(li)
+                }
+                /* console.log(navList)
+                console.log(html); */
+                ul.innerHTML = html
+                return navList ;
+                
+
+           }
+        })
+        
+    },
+    generateSubNav : function(navData,level,id,ul,navDom,preIndex,trackId){
+        var self = this;
+        level = level ? level : 1;
+        id = id ? id  : "nav";
+        ul = ul ? ul : document.querySelector('.md-nav--primary[data-md-level="0"]>ul.md-nav__list');
+        navDom = navDom  ? navDom : self.navDom;
+        
+        for(var i = 0 ; i < navData.length ; i++){
+            var navItem  = navData[i];
+            var li = document.createElement("li");
+            li.setAttribute("data-track-index" , i);
+            var newId = id+ "-" + (i+1) ;
+            var newTrackId = trackId ? trackId +'-'+i : i;
+            var active = false ;
+            li.setAttribute('data-track-id' ,newTrackId)
+            navDom[i] = {html:'',active:false};
+            if(self.trackTarget.track) self.trackTarget[level] = {index:i};
+            if(Object.prototype.toString.call(navItem) == '[object Object]'){
+                for(var key in navItem){
+                    var title = key ;
+                    var navList = navItem[key] ; 
+                    if(Object.prototype.toString.call(navList) == '[object Array]'){
+                        li.className =  "md-nav__item  md-nav__item--nested";
+                        var html = '<input type="checkbox" class="md-toggle md-nav__toggle" id="'+newId+'" data-track-id="'+newTrackId+'" data-track-index="'+i+'" data-md-toggle="'+newId+'"/>' +
+                                   '<label class="md-nav__link" for="'+newId+'">'+title+'</label>'+
+                                   '<nav class="md-nav" data-md-component="collapsible" data-md-level="'+level+'">'+
+                                   '<label class="md-nav__title" for="'+newId+'">'+title+'</label>'+
+                                    '<ul class="md-nav__list"  data-track-id="'+newTrackId+'" data-md-level="'+level+'" data-md-scrollfix > '+ '</ul>'+
+                                   '</nav>' ;
+                        li.innerHTML = html;
+                        navDom[i]["html"] = li.outerHTML; 
+                        self.generateSubNav(navList,level+1,newId,li.querySelector('ul[data-md-level="'+level+'"]'),navDom[i],i,newTrackId);
+
+                    }else if(Object.prototype.toString.call(navList) == "[object String]"){
+                        li.className = "md-nav__item";
+                        var path =  "/" + navList.replace(/\.md$/,'/');
+                        active = location.pathname.indexOf(path) < 0 ? false : true; 
+                        path = path.replace(/index\/$/,"");   
+                               
+                        if(path == location.pathname && (location.pathname == "/" || location.pathname == self.subRootPath + (self.currentLang == "en" ? "" : "/" + self.currentLang + "/"))){
+                            active = true 
+                        }    
+
+                        var newUrl = self.rootURl + self.subRootPath + (self.currentLang == "en" ? "" : "/" + self.currentLang) + path ;
+                        li.innerHTML = '<a href="'+path+'" class="md-nav__link '+(active? 'md-nav__link--active' : '')+'" >'+title+'</a>'
+                        navDom[i]["html"] =  li.outerHTML ; 
+                        navDom[i][title] =  title; 
+                        navDom[i]["active"] = active ;
+                        if(active){
+                            self.trackTarget[level] = {index:i,active:true};
+                            self.trackTarget['activeLevel'] = level ;
+                            self.activeTarget = JSON.parse(JSON.stringify(self.trackTarget))
+                            window.activeTarget =self.activeTarget;
+                            self.trackTarget.track = false ;
+                        }
+
+                    }
+                    if(level <= 1) ul.appendChild(li);
+                }
+
+            }
+        }
+    },
+    generateNav : function(){
+        var self = this ;
+        document.querySelector('.md-nav--primary[data-md-level="0"]>ul.md-nav__list').innerHTML = "";
+        self.generateSubNav(self.navData);
+    },
+    finishRequest : function(xhr){
+        var self = this;
+        var res = xhr.responseText;
+        var jsonData = {};
+        try{
+            var jsonData = JSON.parse(res);    
+            self.navData = jsonData["nav"] || {};
+            window.navData = self.navData ;
+            window.navDom = self.navDom ;
+            window.trackTarget =self.trackTarget;
+            self.generateNav();
+            self.drawNav();
+            self.bindCollapse()
+        }catch(e){
+            console.log(e)
+        }
+    },
+    getNavData : function(){
+        var self = this ;
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET',self.filePath,true);
+        xhr.send();
+        xhr.onreadystatechange = function(){
+            if (xhr.readyState == 4 && xhr.status == 200 || xhr.status == 304) { 
+              self.finishRequest(xhr);
+            }
+        }
     }
+    /* modify  add nav generate  END*/
 } 
+
+site.getNavData();
+
 // site.setSiteRule();
-document.addEventListener('DOMContentLoaded',function(){site.setSiteRule();})
+document.addEventListener('DOMContentLoaded',function(){
+    site.setSiteRule();
+})
+
+
+/* modify highlight code script */
+
+function highlightCode(){
+   /*  var script = document.createElement("script");
+    script.src = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/highlight.min.js";
+    var lineScript = document.createElement("script");
+    lineScript.src = "https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js";
+    var link = document.createElement("link");
+    link.href = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/styles/default.min.css";
+    document.head.appendChild(script);
+    document.head.appendChild(lineScript);
+    document.head.appendChild(link); 
+    script.onload = function(){ 
+        // hljs.initHighlightingOnLoad();
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+          });
+    }
+    lineScript.onload = function(){
+        // hljs.initLineNumbersOnLoad();
+        document.querySelectorAll('pre code').forEach((block) => {
+            // hljs.highlightBlock(block);
+            hljs.lineNumbersBlock(block);
+          });
+    }
+    */
+   hljs.initHighlightingOnLoad();
+   hljs.initLineNumbersOnLoad();
+}
+
+highlightCode();
+
+/* modify highlight code script END */
 
 // 邮箱输入 阻止F/S触发搜索聚焦
 if(document.getElementById("mce-EMAIL")){
