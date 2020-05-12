@@ -1,6 +1,6 @@
 ---
-Grove-Doppler-Radar
-category: Sensor
+name: Grove - Doppler Radar
+category: Grove sensor
 bzurl: 
 oldwikiname: 
 prodimagename:
