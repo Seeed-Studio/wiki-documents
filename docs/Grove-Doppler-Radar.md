@@ -84,11 +84,6 @@ Doppler radar works by sending a beam of electromagnetic radiation waves from th
 
 ![](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/pin-1.png)
 
-#### Hardware Connection
-
-![](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/connection.jpg)
-
-
 #### External headers-pin description
 
 |Pin number|Signal name|Pin description|
@@ -103,6 +98,9 @@ Doppler radar works by sending a beam of electromagnetic radiation waves from th
 |8|OUT1|External GPIO pin (user configurable)|
 |9|OUT2|External GPIO pin (user configurable)|
 
+#### Hardware Connection
+
+![](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/connection.jpg)
 
 !!!Tip
     Please plug the USB cable， Doppler Radar Interface into Seeeduino D2 Interface gently, otherwise you may damage the port.
