@@ -108,6 +108,12 @@ Here are some tutorials from the communities using the Seeed Studio BeagleBone®
 
 ![BeagleBoneGreenGateway](https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/img/BBGG-hardware.png)
 
+## Dimensions
+
+The Dimensions for Seeed Studio BeagleBone® Green Gateway is:
+
+- **89.0mm x 54.6mm x 19.6mm**
+
 ## Pin Map
 
 Each digital I/O pin has 8 different modes that can be selected, including GPIO.
@@ -155,10 +161,6 @@ Each digital I/O pin has 8 different modes that can be selected, including GPIO.
 ![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_SPI.png)
 
 ## Getting Started
-
-
-!!!Note
-    This chapter is writing under Win10. The steps are familiar for the other operate systems.
 
 **STEP1. Plug in your Seeed Studio BeagleBone® Green via USB**
 
@@ -280,36 +282,19 @@ First of all, you have to download the suitable image here.
 
 The file you download will have an **.img.xz** extension. This is a compressed sector-by-sector image of the SD card.
 
-**STEP2. Install compression utility and decompress the image**
+**STEP2. Install the Image Burner**
 
-Download and install [7-zip.](http://www.7-zip.org/download.html)
+Download the Open Source Flash burner [balenaEtcher](https://www.balena.io/etcher/). Download the version according to your operating system(Windows/macOS/Linux).
 
-!!!Note
-    Choose a version that suitable for your system.
+<div align=center><img width=500 src="https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/img/etcher.jpg"/></div>
 
-Use 7-zip to decompress the SD card **.img file**
+**STEP3. Writing the OS Image into SD Card**
 
-**STEP3. Install SD card programming utility**
+Select the downloaded image, select the MicroSD card and Flash!
 
-Download and install [Image Writer for Windows](https://sourceforge.net/projects/win32diskimager/files/latest/download). Be sure to download the binary distribution.
+<div align=center><img width=500 src="https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/img/bbgg-flash.png"/></div>
 
-**STEP4. Write the image to your SD card**
-
-You need a SD adapter to connect your microSD card to your computer at the first. Then use the software Image Write for Windows to write the decompressed image to your SD card.
-
-![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/win32_disk_image.png)
-
-Click on **Write** button, then the process is started.
-
-![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/win32_disk_image_process.png)
-
-!!!Note
-    * You may see a warning about damaging your device. This is fine to accept as long as you are pointing to your SD card for writing.
-    * You should not have your BeagleBone® connected to your computer at this time.
-    * This process may need up to 10 minutes.
-
-
-**STEP5. Boot your board off of the SD card**
+**STEP4. Boot your board off of the SD card**
 
 Insert SD card into your (powered-down first) board. Then the board will boot from the SD card.
 
@@ -411,7 +396,7 @@ There're many references to help you to get more information about the board.
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/SeeedStudio-BeagleBoneGreemGateway-SCH.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/SeeedStudio-BeagleBoneGreemGateway-SCH.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 ## Resources
