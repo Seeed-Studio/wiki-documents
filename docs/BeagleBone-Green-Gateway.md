@@ -12,9 +12,9 @@ sku: 102110381
 
 **Seeed Studio BeagleBone® Green Gateway** is a low cost, open-source, community supported development platform for developers and hobbyists. It is a joint effort by [BeagleBoard.org](https://beagleboard.org/) and Seeed Studio. It is based on the classical open-source hardware design of [BeagleBone® Black](https://beagleboard.org/black) and developed into this differentiated version. The Seeed Studio BeagleBone® Green Gateway includes two Grove connectors, making it easier to connect to the large family of Grove sensors. The on-board HDMI and Ethernet are removed to make room for these wireless features and Grove connectors.
 
-The **Seeed Studio BeagleBone® Green Gateway** is a combination of Seeed Studio BeagleBone® Green and Seeed Studio BeagleBone® Green Wireless, equited with both **Ethernet and Wireless connectivity**.
+The **Seeed Studio BeagleBone® Green Gateway** is a combination of Seeed Studio BeagleBone® Green and Seeed Studio BeagleBone® Green Wireless, equipped with both **Ethernet and Wireless connectivity**.
 
-Boot Linux in under 10 seconds and get started on development in less than 5 minutes with just a single USB cable.
+Boot Linux in less 10 seconds and get started on development in less than 5 minutes with just a single USB cable.
 
 
 <p style=":center"><a href="https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-Gateway-p-4586.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" /></a></p>
