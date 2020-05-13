@@ -16,7 +16,7 @@ add mutiple language steps
 
 var _IsProduction = true ;
 var _Language = "en";
-var _IsLocal = true ;
+var _IsLocal = false ;
 
 // root URL 
 //  测试版本 :  "http://192.168.5.153/b/wiki.seeedstudio.com"
