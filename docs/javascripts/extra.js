@@ -5,12 +5,18 @@ add mutiple language steps
 *****
 */
 
-// 本地 和 线上 环境的开关 
-// 线上环境 : true 
-// 本地环境 : false
+/**************************
+ ***************************
+    //@ 本地 和 线上 环境的开关 
+    //@ 线上环境 : _IsProduction = true  
+    //@ 测试环境 : _IsProduction = false 
+    //@ 本地环境 : _IsLocal = true ; 
+**************************
+***************************/
 
 var _IsProduction = true ;
 var _Language = "en";
+var _IsLocal = true ;
 
 // root URL 
 //  测试版本 :  "http://192.168.5.153/b/wiki.seeedstudio.com"
@@ -30,7 +36,10 @@ _SiteData = {
     "ph" : "Filipino"
 }
 
-
+if(_IsLocal){
+    developUrl = "http://127.0.0.1:5500/b/wiki.seeedstudio.com";
+    productionUrl = "http://127.0.0.1:5500"
+}
 
 var _RootURL = _IsProduction ?  productionUrl : developUrl ;
 var _SubRootPath = _IsProduction ? "" : "/b/wiki.seeedstudio.com";
@@ -107,7 +116,7 @@ var _SubRootPath = _IsProduction ? "" : "/b/wiki.seeedstudio.com";
     },
 
     /* modify  add nav generate  */
-    filePath :"/mkdocs/mkdocs.json",
+    filePath :"mkdocs/mkdocs.json",
     currentLang : _Language,
     navData:[],
     navDom : {},
@@ -238,16 +247,16 @@ var _SubRootPath = _IsProduction ? "" : "/b/wiki.seeedstudio.com";
 
                     }else if(Object.prototype.toString.call(navList) == "[object String]"){
                         li.className = "md-nav__item";
-                        var path =  "/" + navList.replace(/\.md$/,'/');
+                        var path = (self.currentLang == "en" ? "/" : "/" + self.currentLang + "/") + navList.replace(/\.md$/,'/');
                         active = location.pathname.indexOf(path) < 0 ? false : true; 
                         path = path.replace(/index\/$/,"");   
                                
-                        if(path == location.pathname && (location.pathname == "/" || location.pathname == self.subRootPath + (self.currentLang == "en" ? "" : "/" + self.currentLang + "/"))){
+                        if(level == 1 && i == 0 && (location.pathname == "/" || location.pathname == self.subRootPath + (self.currentLang == "en" ? "/" : "/" + self.currentLang + "/"))){
                             active = true 
                         }    
 
-                        var newUrl = self.rootURl + self.subRootPath + (self.currentLang == "en" ? "" : "/" + self.currentLang) + path ;
-                        li.innerHTML = '<a href="'+path+'" class="md-nav__link '+(active? 'md-nav__link--active' : '')+'" >'+title+'</a>'
+                        var newUrl = self.rootURl  + path ;
+                        li.innerHTML = '<a href="'+newUrl+'" class="md-nav__link '+(active? 'md-nav__link--active' : '')+'" >'+title+'</a>'
                         navDom[i]["html"] =  li.outerHTML ; 
                         navDom[i][title] =  title; 
                         navDom[i]["active"] = active ;
@@ -291,7 +300,9 @@ var _SubRootPath = _IsProduction ? "" : "/b/wiki.seeedstudio.com";
     getNavData : function(){
         var self = this ;
         var xhr = new XMLHttpRequest();
-        xhr.open('GET',self.filePath,true);
+        var relativeUrl = (self.currentLang == "en" ? "/" : "/" + self.currentLang + "/") + self.filePath;
+        var url = self.rootURl  + relativeUrl ;
+        xhr.open('GET',url,true);
         xhr.send();
         xhr.onreadystatechange = function(){
             if (xhr.readyState == 4 && xhr.status == 200 || xhr.status == 304) { 
@@ -336,8 +347,8 @@ function highlightCode(){
           });
     }
     */
-   hljs.initHighlightingOnLoad();
-   hljs.initLineNumbersOnLoad();
+   if(hljs && hljs.initHighlightingOnLoad){hljs.initHighlightingOnLoad()}
+   if(hljs && hljs.initLineNumbersOnLoad){hljs.initLineNumbersOnLoad()}
 }
 
 highlightCode();
