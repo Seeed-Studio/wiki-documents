@@ -49,7 +49,6 @@ The Grove – Doppler Radar is based on the BGT24LTR11 Silicon Germanium MMIC wh
 |Standard Detection Field|65° / horizontal (-6dB); 22° / vertical (-6dB)|
 |Supply Voltage	|3.3-5V|
 |Weight|5g|
-|
 
 ## Applications
 - Smart Home
