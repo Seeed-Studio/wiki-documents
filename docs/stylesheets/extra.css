@@ -413,3 +413,117 @@ ul {
   background: #8cbc59;
 }
 .md-container .md-content a[title^='Edit']{display: none!important;}
+
+
+
+/*
+
+Dark style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+
+*/
+pre{
+  background: #282c34!important;
+}
+pre > code {
+  font-family: "Sans Mono", "Consolas", "Courier", monospace;
+}
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em!important;
+  color: #abb2bf!important;
+  background: #282c34!important;
+  font-family: "Sans Mono", "Consolas", "Courier", monospace!important;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #5c6370!important;
+  font-style: italic!important;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #c678dd!important;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e06c75!important;
+}
+
+.hljs-literal {
+  color: #56b6c2!important;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta-string {
+  color: #98c379!important;
+}
+
+.hljs-built_in,
+.hljs-class .hljs-title {
+  color: #e6c07b!important;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #d19a66!important;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #61aeee!important;
+}
+
+.hljs-emphasis {
+  font-style: italic!important;
+}
+
+.hljs-strong {
+  font-weight: bold!important;
+}
+
+.hljs-link {
+  text-decoration: underline!important;
+}
+
+/* for block of numbers */
+.hljs-ln-numbers {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  text-align: center;
+  color: #ccc;
+  /* border-right: 1px solid #CCC; */
+  vertical-align: top;
+  padding-right: 15px!important;
+
+  /* your custom style here */
+}
+
+/* for block of code */
+.hljs-ln-code {
+  padding-left: 10px;
+}
