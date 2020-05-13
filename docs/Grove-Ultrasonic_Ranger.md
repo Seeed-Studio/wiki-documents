@@ -403,7 +403,7 @@ pi@raspberrypi:~/GrovePi/Software/Python $ python grove_ultrasonic.py
 
 - **Step 2.** Connect Grove - Ultrasonic Ranger to **D0** port of Wio Terminal.
 
-- **Step 4.** Connect the Wio Terminal to PC through USB Type-C cable.
+- **Step 3.** Connect the Wio Terminal to PC through USB Type-C cable.
 
 ![](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/with-WT.jpg)
 
