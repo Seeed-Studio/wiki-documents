@@ -23,7 +23,7 @@ var _IsLocal = false ;
 //  线上版本 ： "http://wiki.seeedstudio.com"
 
   var developUrl = "http://192.168.5.153/b/wiki.seeedstudio.com";
-  var productionUrl = "http://wiki.seeedstudio.com"
+  var productionUrl = "https://wiki.seeedstudio.com"
 
 //  add the language code & Title 
 _SiteData = {
@@ -324,7 +324,7 @@ document.addEventListener('DOMContentLoaded',function(){
 /* modify highlight code script */
 
 function highlightCode(){
-   /*  var script = document.createElement("script");
+    var script = document.createElement("script");
     script.src = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/highlight.min.js";
     var lineScript = document.createElement("script");
     lineScript.src = "https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js";
@@ -346,9 +346,9 @@ function highlightCode(){
             hljs.lineNumbersBlock(block);
           });
     }
-    */
-   if(hljs && hljs.initHighlightingOnLoad){hljs.initHighlightingOnLoad()}
-   if(hljs && hljs.initLineNumbersOnLoad){hljs.initLineNumbersOnLoad()}
+   
+//    if(hljs && hljs.initHighlightingOnLoad){hljs.initHighlightingOnLoad()}
+//    if(hljs && hljs.initLineNumbersOnLoad){hljs.initLineNumbersOnLoad()}
 }
 
 highlightCode();
