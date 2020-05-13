@@ -17,7 +17,7 @@ The **Seeed Studio BeagleBone® Green Gateway** is a combination of Seeed Studio
 Boot Linux in under 10 seconds and get started on development in less than 5 minutes with just a single USB cable.
 
 
-<p style=":center"><a href="" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-Gateway-p-4586.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" /></a></p>
 
 ## Features
 
@@ -113,6 +113,8 @@ Here are some tutorials from the communities using the Seeed Studio BeagleBone®
 The Dimensions for Seeed Studio BeagleBone® Green Gateway is:
 
 - **89.0mm x 54.6mm x 19.6mm**
+
+![BeagleBoneGreenGateway](https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/img/dimensions.png)
 
 ## Pin Map
 
@@ -392,12 +394,6 @@ There're many references to help you to get more information about the board.
 * [Troubleshooting](https://beagleboard.org/getting-started#troubleshooting)
 * [Hardware documentation](https://beagleboard.org/getting-started#hardware)
 * [Projects of BeagleBoard](https://beagleboard.org/project)
-
-
-## Schematic Online Viewer
-
-<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/SeeedStudio-BeagleBoneGreemGateway-SCH.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
-</div>
 
 ## Resources
 -----
