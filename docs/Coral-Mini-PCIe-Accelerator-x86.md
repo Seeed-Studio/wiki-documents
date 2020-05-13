@@ -17,18 +17,18 @@ tags:
 ![ ](https://files.seeedstudio.com/wiki/Coral_M.2_Accelerator_B_M_key/img/M.2.jpg)
 
 
-Coral-Mini-PCIe-Accelerator-x86 is an M.2 module that brings the Edge TPU coprocessor to existing systems and products.
+Coral-Mini-PCIe-Accelerator-x86 is an M.2 module that brings the edge tpu coprocessor to existing systems and products.
 
-The Edge TPU is a small ASIC designed by Google that provides high performance ML inferencing with low power requirements: it's capable of performing 4 trillion operations (tera-operations) per second (TOPS), using 0.5 watts for each TOPS (2 TOPS per watt). For example, it can execute state-of-the-art mobile vision models such as MobileNet v2 at almost 400 FPS, in a power efficient manner. This on-device processing reduces latency, increases data privacy, and removes the need for constant high-bandwidth connectivity.
+The edge tpu is a small ASCI designed by google that provides high-performance ml influencing with low power requirements: it's capable of performing 4 trillion operations (tera-operations) per second (tops), using 0.5 watts for each tops (2 tops per watt). For example, it can execute state-of-the-art mobile vision models such as mobileNet v2 at almost 400 fps, in a power-efficient manner. This on-device processing reduces latency, increases data privacy, and removes the need for constant high-bandwidth connectivity.
 
-The M.2 Accelerator is a dual-key M.2 card ( B+M keys), designed to fit any compatible M.2 slot. This form-factor enables easy integration into ARM and x86 platforms so you can add local ML acceleration to products such as embedded platforms, mini-PCs, and industrial gateways.
+The M.2 Accelerator is a dual-key M.2 card ( B+M keys), designed to fit any compatible M.2 slot. This form-factor enables easy integration into arm and x86 platforms so you can add local ML acceleration to products such as embedded platforms, mini-PCs, and industrial gateways.
 
 [![enter image description here](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/Coral-M-2-Accelerator-B-M-key-p-4411.html)
 
 ## Features
-* Performs high-speed ML inferencing
-* Works with Debian Linux
-* Supports TensorFlow Lite
+* Performs high-speed ML influencing
+* Works with debian linux
+* Supports tensorFlow lite
 * Supports [AutoML Vision Edge](https://cloud.google.com/vision/automl/docs/edge-quickstart)
 
 ## Specification
@@ -74,18 +74,18 @@ The M.2 Accelerator is a dual-key M.2 card ( B+M keys), designed to fit any comp
 The steps of hardware connection is very simple. 
 
 - **Step 1.** Connecting Coral-Mini-PCIe-Accelerator-x86 to the ODYSSEY - X86J4105.
-- **Step 2.** Connecting the Power to the ODYSSEY - X86J4105.
-- **Step 3.** Connecting the Power and display to the ODYSSEY - X86J4105.
-- **Step 4.**  Connecting the Keyboard and mouse to the ODYSSEY - X86J4105.
+- **Step 2.** Connecting the power to the ODYSSEY - X86J4105.
+- **Step 3.** Connecting the power and display to the ODYSSEY - X86J4105.
+- **Step 4.**  Connecting the keyboard and mouse to the ODYSSEY - X86J4105.
 - **Step 5.** If you have a network cable, please connect it to you ODYSSEY - X86J4105.
 
 
 
 ## Software
 After we finished hardware connection,the next step is to solve software problems.
- Here I'll tell you a few  installation steps: install  PCIe driver, Edge TPU runtime, and the TensorFlow Lite runtime. 
+ Here I'll tell you a few  installation steps: install  PCIe driver, edge tpu runtime, and the tensorFlow Lite runtime. 
 
-At first, what you need  is a Linux computer ,please follow the step.
+At first, what you need  is a linux computer, please follow the step.
 
 * You can choose  x86-64, ARMv7 (32-bit), or ARMv8 (64-bit) system .
 
@@ -97,39 +97,39 @@ At first, what you need  is a Linux computer ,please follow the step.
 
 * Python 3.5 or higher
 
-After you successfully make the U disk boot disk and install the Linux os file. ,you can go next step .
+After you successfully make the U disk boot disk and install the Linux os file , you can go to the next step.
 
 ## 1.Install the PCIe driver
 
-If you aready installed a pre-built Apex driver,you should conside Whether the drive will result in the Edge TPU fail, because some of the  driver have bugs lead to this mistakes.So you should check it . So first follow these steps:
+If you already installed a pre-built Apex driver, you should consider Whether the drive will result in the Edge TPU fail, because some of the drivers have bugs lead to these mistakes. So you should check it. So first follow these steps:
 
-   1.Check your Linux kernel version with this command:
+   1.Check your linux kernel version with this command:
 
    ```
       uname -r 
    
    ```
 
-   If it prints 4.18 or lower, you should be okay and can skip to begin installing our PCIe driver.
+   If it prints 4.18 or lower, you should be okay and can skip beginning installing our pcie driver.
 
-   2.If your kernel version is 4.19 or higher, now check if you have a pre-build Apex driver installed:
+   2.If your kernel version is 4.19 or higher, now check if you have a pre-build apex driver installed:
  
    ```
       lsmod | grep apex
    
    ```
     
-   If it prints nothing, then you're okay and continue to install our PCIe driver.
+   If it prints nothing, then you're okay and continue to install our pcie driver.
 
-   If it does print an Apex module name, stop here and follow the [workaround to disable Apex and Gasket](https://coral.ai/docs/m2/get-started/#workaround-to-disable-apex-and-gasket). 
+   If it does print an apex module name, stop here and follow the [workaround to disable Apex and Gasket](https://coral.ai/docs/m2/get-started/#workaround-to-disable-apex-and-gasket). 
 
-Install  PCIe driver as follows:
+Install  pcie driver as follows:
 
 1. Make sure the host system where you'll connect the module is shut down.
 
 2. Connect the Coral PCIe/M.2 module according to your host system recommendations.
 
-3. Boot the system and make sure it has an internet connection. Then add our Debian package repository to your system and install our PCIe driver with these commands:
+3. Boot the system and make sure it has an internet connection. Then add our debian package repository to your system and install our pcie driver with these commands:
 
 ```
 echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
@@ -164,9 +164,9 @@ sudo apt-get install gasket-dkms
       03:00.0 System peripheral: Device 1ac1:089a
     ```
 
-   The 03 number and System peripheral name might be different, because those are host-system specific, but as long as you see a device listed with 089a then you're okay to proceed.
+   The 03 number and system peripheral name might be different because those are host-system specific, but as long as you see a device listed with 089a then you're okay to proceed.
 
-7. Verify that the PCIe driver is loaded:
+7. Verify that the pcie driver is loaded:
 
    ```
    ls /dev/apex_0
@@ -181,28 +181,28 @@ sudo apt-get install gasket-dkms
 
 
 
-## 2. Install the Edge TPU runtime
+## 2. Install the edge tpu runtime
 
-The Edge TPU runtime is required to communicate with the Edge TPU. You can install it on your host computer from a command line as follows:
+The edge tpu runtime is required to communicate with the edge tpu. You can install it on your host computer from a command line as follows:
 
 ```
 sudo apt-get install libedgetpu1-std
 ```
 
 Notes
-> Unlike the [USB Accelerator](https://coral.ai/products/accelerator/), the Mini PCIe and M.2 Accelerator do not use different runtime packages for "reduced" and "maximum" clock frequencies. Instead, these devices operate at the maximum frequency by default and perform  [power throttling based on thermal limits](https://coral.ai/docs/m2/get-started/#operating-frequency-and-thermal-settings).
+> Unlike the [USB Accelerator](https://coral.ai/products/accelerator/), the mini pcie and M.2 accelerator do not use different runtime packages for "reduced" and "maximum" clock frequencies. Instead, these devices operate at the maximum frequency by default and perform  [power throttling based on thermal limits](https://coral.ai/docs/m2/get-started/#operating-frequency-and-thermal-settings).
 
 
 
 ## 3. Install the TensorFlow Lite library
 
-There are several ways you can install TensorFlow's APIs, but to get started with Python, the easiest option is to install the tflite_runtime package. This package provides the bare minimum code required to run an inference with Python (primarily, the [Interpreter](https://www.tensorflow.org/api_docs/python/tf/lite/Interpreter) API), thus saving you a lot of disk space.
+There are several ways you can install TensorFlow's apis, but to get started with Python, the easiest option is to install the tflite_runtime package. This package provides the bare minimum code required to run an inference with python (primarily, the [Interpreter](https://www.tensorflow.org/api_docs/python/tf/lite/Interpreter) api), thus saving you a lot of disk space.
 
 To install it, follow the [TensorFlow Lite Python quickstart](https://www.tensorflow.org/lite/guide/python), and then return to this page after you run the pip3 install command.
 
 ## 4. Run a model using the TensorFlow Lite API
 
-Now you're ready to run an inference on the Edge TPU. Follow these steps to perform image classification with our example code and model:
+Now you're ready to run  inference on the edge tpu. Follow these steps to perform image classification with our example code and model:
 
    1. Download the example code from GitHub:
    
@@ -245,13 +245,13 @@ Note: The first inference on Edge TPU is slow because it includes loading the mo
 -------RESULTS--------
 Ara macao (Scarlet Macaw): 0.76562
 ```
-Congrats! You just performed an inference on the Edge TPU using TensorFlow Lite.
+Congrats! You just performed an inference on the edge tpu using tensorflow lite.
 
 To demonstrate varying inference speeds, the example repeats the same inference five times. It prints the time to perform each inference and the top classification (the label ID/name and the confidence score, from 0 to 1.0). Your inference speeds might differ based on your host system.
 
-The classify_image.py example above uses the TensorFlow Lite Python API. To learn more about how it works, take a look at [the classify_image.py source code](https://github.com/google-coral/tflite/blob/master/python/examples/classification/classify_image.py) and read about how to [run inference with TensorFlow Lite](https://www.tensorflow.org/lite/guide/inference#load_and_run_a_model_in_python).
+The classify_image.py example above uses the tensorflow lite python api. To learn more about how it works, take a look at [the classify_image.py source code](https://github.com/google-coral/tflite/blob/master/python/examples/classification/classify_image.py) and read about how to [run inference with TensorFlow Lite](https://www.tensorflow.org/lite/guide/inference#load_and_run_a_model_in_python).
 
-As an alternative to using the TensorFlow Lite API (used above), you can use the [Edge TPU Python API](https://coral.ai/docs/edgetpu/api-intro/), which provides high-level APIs to perform inference with image classification and object detection models with just a few lines of code. For an example, try our other version of [classify_image.py using the Edge TPU API](https://coral.ai/examples/classify-image/).
+As an alternative to using the tensorflow lite api (used above), you can use the [Edge TPU Python API](https://coral.ai/docs/edgetpu/api-intro/), which provides high-level apis to perform inference with image classification and object detection models with just a few lines of code. For  example, try our other version of [classify_image.py using the Edge TPU API](https://coral.ai/examples/classify-image/).
 
 You can also [run inference using C++ and TensorFlow Lite](https://coral.ai/docs/edgetpu/tflite-cpp/).
 
