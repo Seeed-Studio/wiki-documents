@@ -23,7 +23,7 @@ var _IsLocal = false ;
 //  线上版本 ： "http://wiki.seeedstudio.com"
 
   var developUrl = "http://192.168.5.153/b/wiki.seeedstudio.com";
-  var productionUrl = "http://wiki.seeedstudio.com"
+  var productionUrl = "https://wiki.seeedstudio.com"
 
 //  add the language code & Title 
 _SiteData = {
