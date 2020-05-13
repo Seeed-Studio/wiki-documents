@@ -1,6 +1,6 @@
 ---
-name: Grove - Doppler Radar
-category: Grove sensor
+name: Grove-Doppler-Radar
+category: Sensor
 bzurl: 
 oldwikiname: 
 prodimagename:
@@ -49,6 +49,7 @@ The Grove – Doppler Radar is based on the BGT24LTR11 Silicon Germanium MMIC wh
 |Standard Detection Field|65° / horizontal (-6dB); 22° / vertical (-6dB)|
 |Supply Voltage	|3.3-5V|
 |Weight|5g|
+|
 
 ## Applications
 - Smart Home
@@ -75,10 +76,11 @@ Doppler radar works by sending a beam of electromagnetic radiation waves from th
 
 #### Materials Requied
 
-| Seeeduino Lotus | Grove-Doppler-Radar|
-|--------------|-------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/Seeeduino_Lotus.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/small.png)|
-|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-Lotus-V1-1-ATMega328-Board-with-Grove-Interface.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Doppler-Radar-BGT24LTR11-p-4572.html)|
+| Seeeduino XIAO | XIAO Expansion Board | Grove-Doppler-Radar|
+|--------------|--------------|--------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/seeeduino-XIAO-thumbnail.jpg)| ![enter image description here](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/06.png)| ![enter image description here](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/small.png)
+|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|[Coming SOON]|[Get ONE Now](https://www.seeedstudio.com/Grove-Doppler-Radar-BGT24LTR11-p-4572.html)|
+
 
 #### Hardware Overview
 
@@ -100,16 +102,14 @@ Doppler radar works by sending a beam of electromagnetic radiation waves from th
 
 #### Hardware Connection
 
-![](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/connection.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/hardware_connection.jpg)
 
 !!!Tip
-    Please plug the USB cable， Doppler Radar Interface into Seeeduino D2 Interface gently, otherwise you may damage the port.
+    Please plug the USB cable， Doppler Radar Interface into Seeeduino XIAO expansion board Interface gently, otherwise you may damage the port.
 
+- **Step 1.** Plug Doppler Radar into Seeeduino XIAO expansion board with a Grove Cable.
 
-
-- **Step 1.** Plug Doppler Radar into Seeeduino with a Grove Cable.
-
-- **Step 2.** Connect Seeeduino to PC via a USB cable.
+- **Step 2.** Connect Seeeduino XIAO to PC via a USB cable.
 
 - **Step 3.** Download the code, please refer to the software part.
 
@@ -146,7 +146,7 @@ Doppler radar works by sending a beam of electromagnetic radiation waves from th
 #endif
 
 #ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
-    #define COMSerial Serial
+    #define COMSerial Serial1
     #define ShowSerial SerialUSB
 
     GBT24LTR11<Uart> GBT;
@@ -211,14 +211,18 @@ And if there's an object approaching the radar or passing by, the outcome will a
 
 <div align="center">
 <figure>
-<img src="https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/approach.png" alt="Grove-Doppler-Radar'' OUTCOME" title="demo" />
+<img src="https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/outcome2.png" alt="Grove-Doppler-Radar'' OUTCOME" title="demo" />
 <figcaption><b>Figure 3</b>. <i>Object approaching</i></figcaption>
 </figure>
 </div>
 
+!!!Note
+    The minimum speed accuracy that the sensor is capable of detecting is 52cm/s, which equals to 0.52m/s, 3.6km/h and 2.23mph, and are also multiples of 52cm/s within the distance of 10 meters.
+
 ## Resources
 
 - **[Rar]** [Demo Code library](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/Seeed_Arduino_DopplerRadar.rar)
+- **[PDF]** [Grove_DopplerRadar(BGT24LTR11)Radar_module_communication_protocol_v1.1.pdf](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/Grove_DopplerRadar(BGT24LTR11)Radar_module_communication_protocol_v1.1.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
