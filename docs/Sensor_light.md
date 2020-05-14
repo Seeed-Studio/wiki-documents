@@ -99,7 +99,7 @@ The last light sensor type we’ll be exploring today is the phototransistor. Th
 However, it doesn’t fair better in low light level detection as compared to photodiodes.
 Since both light sensor types share a similar working principle, do refer to the previous explanation!
 
-## Barometer Sensors at Seeed
+## Light Sensors at Seeed
 
 <div align="center">
 <figure>
