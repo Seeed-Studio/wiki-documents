@@ -78,7 +78,7 @@ Are you trying to find an easy to use and cost-effect PH sensor/meter? Do you wa
 
 
 
-- **Step 1.** Download the [Demo code](https://files.seeedstudio.com/wiki/Grove-PH_Sensor_kit/Grove-PH_Sensor_kit.rar).
+- **Step 1.** Download the [Demo code](https://files.seeedstudio.com/wiki/Grove-PH_Sensor_kit/Grove-PH_Sensor_kit.zip).
 
 - **Step 2.** Copy the whole **Grove-PH_Sensor_kit** file and paste it into your Arduino IDE library file.
 
@@ -194,13 +194,11 @@ double avergearray(int* arr, int number) {
 
 ![](https://files.seeedstudio.com/wiki/Grove-PH_Sensor_kit/IMG/calibration2.png)
 
-- **Step 7.** A k value and Offset value can be calculated because of the linear characteristic of PH detecting, and following please insert k value (the same as pHValue) and Offset value into the Software Code:
+- **Step 7.** A k value and Offset value can be calculated because of the linear characteristic of PH detecting, and following please insert Offset value and k value (the same as pHValue) into **Line 10** and **Line 35** in the Software Code:
 
 !!!Tip
-		k= (PH2-PH1)/(V2-V1); Offset=((PH2+PH1)-k*(V1+V2))/2
-
-![](https://files.seeedstudio.com/wiki/Grove-PH_Sensor_kit/IMG/Calibration3.png)
-
+		k= (PH2-PH1)/(V2-V1); Offset=((PH2+PH1)-k*(V1+V2))/2;
+    There's a [Calculation Chart](https://files.seeedstudio.com/wiki/Grove-PH_Sensor_kit/Calibration_for_k&offset.xlsx) for furthur help with calibration.
 
 - **Step 4.** Finally, you are free to detect your liquid.
 
@@ -212,8 +210,8 @@ double avergearray(int* arr, int number) {
 
 ## Resources
 
-- **[Rar]** [Demo Code library](https://files.seeedstudio.com/wiki/Grove-PH_Sensor_kit/Grove-PH_Sensor_kit.rar)
-
+- **[ZIP]** [Demo Code library](https://files.seeedstudio.com/wiki/Grove-PH_Sensor_kit/Grove-PH_Sensor_kit.zip)
+- **[XLSX]** [Calibration for k&offset](https://files.seeedstudio.com/wiki/Grove-PH_Sensor_kit/Calibration_for_k&offset.xlsx)
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
