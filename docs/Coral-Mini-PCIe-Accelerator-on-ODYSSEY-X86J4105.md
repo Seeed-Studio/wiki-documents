@@ -9,7 +9,7 @@ sku: 114992124
 tags:
 ---
 
-# Coral-Mini-PCIe-Accelerator- x86
+# Coral Mini PCIe Accelerator on ODYSSEY X86J4105
 
 
 
@@ -17,7 +17,7 @@ tags:
 ![ ](https://files.seeedstudio.com/wiki/Coral_M.2_Accelerator_B_M_key/img/M.2.jpg)
 
 
-Coral-Mini-PCIe-Accelerator-x86 is an M.2 module that brings the edge tpu coprocessor to existing systems and products.
+Coral Mini PCIe Accelerator on ODYSSEY X86J4105 is an M.2 module that brings the edge tpu coprocessor to existing systems and products.
 
 The edge tpu is a small ASCI designed by google that provides high-performance ml influencing with low power requirements: it's capable of performing 4 trillion operations (tera-operations) per second (tops), using 0.5 watts for each tops (2 tops per watt). For example, it can execute state-of-the-art mobile vision models such as mobileNet v2 at almost 400 fps, in a power-efficient manner. This on-device processing reduces latency, increases data privacy, and removes the need for constant high-bandwidth connectivity.
 
@@ -63,7 +63,7 @@ The M.2 Accelerator is a dual-key M.2 card ( B+M keys), designed to fit any comp
 **Materials required**
 
 
-| Coral-Mini-PCIe-Accelerator-x86 | ODYSSEY - X86J4105 |
+| Coral Mini PCIe Accelerator | ODYSSEY  X86J4105 |
 |--------------|-------------|
 |![ ](https://files.seeedstudio.com/wiki/Coral_M.2_Accelerator_B_M_key/img/M.2.jpg)|![ ](https://files.seeedstudio.com/wiki/Coral_M.2_Accelerator_B_M_key/img/PC.png)|
 |[Get ONE Now](https://www.seeedstudio.com/Coral-M-2-Accelerator-B-M-key-p-4411.html)|[Get ONE Now](https://www.seeedstudio.com/ODYSSEY-X86J4105800-p-4445.html)|
@@ -73,7 +73,7 @@ The M.2 Accelerator is a dual-key M.2 card ( B+M keys), designed to fit any comp
 
 The steps of hardware connection is very simple. 
 
-- **Step 1.** Connecting Coral-Mini-PCIe-Accelerator-x86 to the ODYSSEY - X86J4105.
+- **Step 1.** Connecting Coral Mini PCIe Accelerator  to the ODYSSEY - X86J4105.
 - **Step 2.** Connecting the power to the ODYSSEY - X86J4105.
 - **Step 3.** Connecting the power and display to the ODYSSEY - X86J4105.
 - **Step 4.**  Connecting the keyboard and mouse to the ODYSSEY - X86J4105.
@@ -91,7 +91,7 @@ At first, what you need  is a linux computer, please follow the step.
 
    Please refer to how to [create a bootable USB drive and install Linux OS(Ubuntu Desktop 18.04)](https://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-OS/) onto the ODYSSEY - X86J4105.
 
-* An available Coral-Mini-PCIe-Accelerator-x86
+* An available Coral Mini PCIe Accelerator on ODYSSEY X86J4105
 
 * Debian 6.0 Linux distribution or higher, or any derivative thereof (such as Ubuntu 10.0+)
 
