@@ -75,12 +75,11 @@ The first version of Grove - 16 x 2 LCD series does not have a built-in pull-up 
 
 ![](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/outline.jpg)
 
-
 ## Platforms Supported
 
-| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
-|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg) |
+|Arduino|Raspberry|ArduPy|
+|---|---|---|
+|![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg)|![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg)|![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/ArduPy-Logo.png)|
 
 
 !!!Caution
@@ -200,8 +199,8 @@ void loop()
 ```
 
 !!!Attention
-        1** The library file may be updated. This code may not be applicable to the updated library file, so we recommend that you use the first two methods.  
-        2** Since the **Grove - 16 x 2 LCD** series are all monochrome backlight, you need to comment out the RGB color related code. In the demo code above, i.e., line 6 and line 17.
+        **1** The library file may be updated. This code may not be applicable to the updated library file, so we recommend that you use the first two methods.  
+        **2** Since the **Grove - 16 x 2 LCD** series are all monochrome backlight, you need to comment out the RGB color related code. In the demo code above, i.e., line 6 and line 17.
 
 
 - **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
@@ -210,7 +209,69 @@ void loop()
 !!!Success
         If every thing goes well, you will see the LCD shows the classic sentence: hello world.
 
+### Play With Wio Terminal (ArduPy)
 
+#### Hardware
+
+- **Step 1.** Prepare the below stuffs:
+
+| Wio Terminal | Grove - 16 x 2 LCD |
+|--------------|-----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-thumbnail.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/perspective.jpg)|
+|[Get One Now](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Get One Now](https://www.seeedstudio.com/Grove-16-x-2-LCD-%28Black-on-Yellow%29-p-3198.html)|
+
+- **Step 2.** Connect Grove - 16 x 2 LCD to **I2C** port of Wio Terminal.
+
+- **Step 3.** Connect the Wio Terminal to PC through USB Type-C cable.
+
+![](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/WT-LCD.png)
+
+#### Software
+
+- **Step 1.** Follow [**ArduPy Getting Started**](https://wiki.seeedstudio.com/ArduPy/) to configure the ArduPy development environment on Wio Terminal.
+
+- **Step 2.** Make sure that the ArduPy firmware contains the Grove - 16 x 2 LCD ArduPy library using the following commands. For more information, please follow [**here**](https://wiki.seeedstudio.com/ArduPy/#using-aip-to-include-other-ardupy-librariesfrom-arduino-libraries-example).
+
+```sh
+aip install Seeed-Studio/seeed-ardupy-lcd1602
+aip build
+aip flash
+```
+
+- **Step 3.** Copy the following code and save it as `ArduPy-ultrasonic.py`:
+
+```python
+from arduino import grove_lcd1602
+import time
+
+lcd = grove_lcd1602()
+
+def main():
+    lcd.print("hello, world!")
+    lcd.is_blink_cursor = True
+    i = 0
+    while True:
+        lcd.set_cursor(1, 2) #column 1, row 2
+        lcd.print(i)
+        time.sleep(1)
+        i = i + 1
+
+if __name__ == "__main__":
+    main()
+```
+
+- **Step 4.** Save the `ArduPy-ultrasonic.py` in a location that you know. Run the following command and **replace** `<YourPythonFilePath>` with your `ArduPy-ultrasonic.py` location.
+
+```sh
+aip shell -n -c "runfile <YourPythonFilePath>"
+# Example:
+# aip shell -n -c "runfile /Users/ansonhe/Desktop/ArduPy-LCD1602.py"
+```
+
+- **Step 5.** We will see the results on the Grove - 16 x 2 LCD.
+
+
+![](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/Ardupy-LCD1602.png)
 
 ## Resources
 
