@@ -1,5 +1,5 @@
 
-# Seeed Weekly Wiki Updates 2020.05.08 ~ 2020.05.14
+# Weekly Wiki
 ![](https://files.seeedstudio.com/wiki/IMAGE/May%20Week%202/week-3-new.png)
 
 
