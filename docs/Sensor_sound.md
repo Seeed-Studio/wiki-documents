@@ -26,7 +26,7 @@ The sound sensor has a built-in condenser electret microphone that is sensitive 
 
 There is a black pickup head (MIC) on the sound sensor. When birthday song plays loudly in front of the black pickup head, the sound sensor can feel the vibration of the sound, which generates electrical signals, and lit up the lights on the cake.
 
-## Field of Applicaitons
+## Field of Applications
 
 There are a numerous use of these sound sensors. Particularly, using these kinds of sensors, human beings can be monitored and benifitted or even saved from different conditions. Therefore the sound sensors play important roles in various sectors, which include daily life, industry, medical, military and etc.
 
