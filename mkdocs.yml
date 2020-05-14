@@ -85,8 +85,6 @@ markdown_extensions:
   - pymdownx.arithmatex
   - pymdownx.caret
   - pymdownx.critic
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.magiclink
   - pymdownx.mark
