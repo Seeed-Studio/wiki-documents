@@ -216,7 +216,7 @@ And if there's an object approaching the radar or passing by, the outcome will a
 </div>
 
 !!!Note
-    The minimum speed accuracy that the sensor is capable of detecting is 52cm/s, which equals to 0.52m/s, 3.6km/h and 2.23mph, and are also multiples of 52cm/s within the distance of 10 meters.
+    The minimum speed accuracy that the sensor is capable of detecting is 52cm/s, which equals to 0.52m/s, 3.6km/h and 2.23mph. Additionally, the results returned by function getSpeed() are multiples of 52cm/s and are absolute values accordingly.
 
 ## Resources
 
