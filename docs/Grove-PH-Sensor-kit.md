@@ -86,6 +86,7 @@ Are you trying to find an easy to use and cost-effect PH sensor/meter? Do you wa
 
 - **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
+
 #### Software Code
 ```C++
 /*
@@ -176,6 +177,8 @@ double avergearray(int* arr, int number) {
   return avg;
 }
 ```
+
+
 !!!Attention
    - There are several cautious reminders as following:
      - Before detecting the target solution, the sensor **MUST** be calibrated by pointed calibration fluid, and it also **MUST** be put into pointed buffer(PH=7) or clean water before detecting a new kind of solution and swiped.
@@ -183,7 +186,7 @@ double avergearray(int* arr, int number) {
      - When the measurement is completed, the electrode protective sleeve should be put on. A small amount of 3.3mol / L potassium chloride solution should be placed in the protective sleeve to keep the electrode bulb wet.
      - The leading end of the electrode must be kept clean and dry to absolutely prevent short circuits at both ends of the output, otherwise it will lead to inaccurate or invalid measurement results.
      - After long-term use of the electrode, if you find that the gradient is slightly inaccurate, you can soak the lower end of the electrode in 4% HF (hydrofluoric acid) for 3-5 seconds, wash it with distilled water, and then soak in potassium chloride solution to make it new.
-     - The sensor **MUST NOT** put into the detecting liquid for a long time.
+     - The sensor **MUST NOT** be dipped in the detecting liquid for a long time.
 
 
 - **Step 5.** When the sensor is put into a pointed calibration fluid (PH=9.18), there'll be a voltage and a PH value:
@@ -197,10 +200,9 @@ double avergearray(int* arr, int number) {
 - **Step 7.** A k value and Offset value can be calculated because of the linear characteristic of PH detecting, and following please insert Offset value and k value (the same as pHValue) into **Line 10** and **Line 35** in the Software Code:
 
 !!!Tip
-		k= (PH2-PH1)/(V2-V1); Offset=((PH2+PH1)-k*(V1+V2))/2;
-    There's a [Calculation Chart](https://files.seeedstudio.com/wiki/Grove-PH_Sensor_kit/Calibration_for_k&offset.xlsx) for furthur help with calibration.
+		k= (PH2-PH1)/(V2-V1); Offset=((PH2+PH1)-k*(V1+V2))/2; There's a [Calculation Chart](https://files.seeedstudio.com/wiki/Grove-PH_Sensor_kit/Calibration_for_k&offset.xlsx) for furthur help with calibration.
 
-- **Step 4.** Finally, you are free to detect your liquid.
+- **Step 8.** Finally, you are free to detect your liquid.
 
 ## Schematic Online Viewer
 
