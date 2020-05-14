@@ -1,4 +1,4 @@
-# Seeed Light Selection Guide
+# Seeed Light Sensor Selection Guide
 
 Here at Seeed, we have released different Light Sensors and this may cause problems for some of you where you don't know which one to pick and which one is suitable for your needs. Here comes the solution! Please check the comparison in this site for more reference.
 
