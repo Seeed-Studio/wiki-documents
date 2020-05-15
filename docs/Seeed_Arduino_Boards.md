@@ -34,6 +34,15 @@ Open your Arudino IDE, click on **File > Preferences**, and copy below url to *A
 https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_seeeduino_boards_index.json
 ```
 
+!!! attention 
+    If you use the board wih AT SAMD21 Microcontroller ,such as Seeeduino LoRaWAN/GPS board and Seeeduino cotex Mo board .Please copy below url to *Additional Boards Manager URLs*
+
+```c
+https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
+
+```
+
+
 ![](https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/img/settings.png)
 
 ##Step 3. Board Manager
