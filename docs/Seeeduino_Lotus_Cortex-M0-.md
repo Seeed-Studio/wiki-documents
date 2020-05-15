@@ -256,12 +256,12 @@ Open the LED blink example sketch: **File > Examples >01.Basics > Blink**.
 
 
 - **Step 3. Add the Seeed Board**  
-Please follow the [Seeed Board Intallation Guide](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/) to add the Seeeduino Lotus Cortex-M0+ into your Arduino IDE.
+Please follow the [Seeed Board Intallation Guide](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/) to add the Seeeduino samd into your Arduino IDE.
 
 
 <div align="center">
 <figure>
-  <img src="https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/img/add_board.jpg"/>
+  <img src="https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/img/board2.png"/>
   <figcaption><b>Figure 10</b>. <i>The key word is Lotus M0</i></figcaption>
 </figure>
 </div>
@@ -271,11 +271,11 @@ Please follow the [Seeed Board Intallation Guide](https://wiki.seeedstudio.com/S
 
 - **Step 4. Select your board and port**  
 You'll need to select the entry in the **Tools > Board** menu that corresponds to your Arduino.
-Selecting a **Seeeduino Lotus Cortex-M0+**.
+Selecting a **Seeeduino Zero**.
 
 <div align="center">
 <figure>
-  <img src="https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/img/add_board_1.jpg"/>
+  <img src="https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/img/board1.png"/>
   <figcaption><b>Figure 11</b>. <i>Choose the right board</i></figcaption>
 </figure>
 </div>
@@ -285,7 +285,7 @@ Select the serial device of the Arduino board from the Tools | Serial Port menu.
 
 <div align="center">
 <figure>
-  <img src="https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/img/add_board_2.jpg"/>
+  <img src="https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/img/port.png"/>
   <figcaption><b>Figure 12</b>. <i>Choose the right port</i></figcaption>
 </figure>
 </div>
