@@ -129,10 +129,10 @@ Double-click the Arduino application (arduino.exe) you have previously downloade
 Open your Arudino IDE, click on **File > Preferences**, and copy the following url to Additional Boards Manager URLs
 
 ```
-https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_seeeduino_boards_index.json
+https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 ```
 
-![](https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/img/settings.png)
+![](https://files.seeedstudio.com/wiki/Wio-Lite-MG126/img/preference.png)
 
 
 Click on **Toos > Board > Board Manager**. Search the board by name, just search the key word `Seeeduino_Wio_Lite_MG126` and install the corresponding board.
