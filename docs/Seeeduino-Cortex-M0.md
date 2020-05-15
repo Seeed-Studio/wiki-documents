@@ -72,12 +72,12 @@ On top of that, Seeeduino Cortex-M0+ is the first Seeeduino development board wi
 For the [Seeed M0 serial board](https://www.seeedstudio.com/tag/SEEEDUINO-M0%2B.html), there are 3 UART port as the following picture shown. When you code with Arduino IDE, you should use the corresponding port name, which is:
 
 ```
-SerialUSB
+SerialUSB or Serial
 ```
 for type C port;
 
 ```
-Serial
+Serial1
 ```
 
 for Grove UART port;
@@ -85,7 +85,7 @@ for Grove UART port;
 and 
 
 ```
-Serial1
+Serial2
 ```
 for UART pins in the header
 
