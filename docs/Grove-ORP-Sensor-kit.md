@@ -9,7 +9,7 @@ sku: 110020293
 tags:
 ---
 
-![](https://files.seeedstudio.com/wiki/Grove-ORD-Sensor/IMG/07(1).png)
+![](https://files.seeedstudio.com/wiki/Grove-ORP-Sensor/IMG/main.png)
 
 
 
@@ -49,7 +49,7 @@ An Oxidation Reduction Potential (ORP) Sensor measures the activity of oxidizers
 
 | Seeeduino Lotus | Grove-ORP Sensor kit | 
 |--------------|--------------|
-| ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/img/thumbnail.jpg)| ![enter image description here](https://files.seeedstudio.com/wiki/Grove-ORD-Sensor/IMG/thumb.png)
+| ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/img/thumbnail.jpg)| ![enter image description here](https://files.seeedstudio.com/wiki/Grove-ORP-Sensor/IMG/thumb.png)
 |[Get ONE Now](https://www.seeedstudio.com/Seeeduino-Lotus-Cortex-M0-p-2896.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-ORP-Sensor-Kit-501Z-p-4575.html)|
 
 #### Hardware Connection
