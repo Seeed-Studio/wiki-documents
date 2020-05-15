@@ -88,7 +88,6 @@ Are you trying to find an easy to use and cost-effect PH sensor/meter? Do you wa
 
 #### Software Code
 ```C++
-<pre name="code" class="c++">
 /*
   # This sample code is used to test the pH meter V1.1.
   # Editor : YouYou
@@ -98,8 +97,7 @@ Are you trying to find an easy to use and cost-effect PH sensor/meter? Do you wa
   # SKU    : SEN0161
 */
 #define SensorPin A2            //pH meter Analog output to Arduino Analog Input 0
-#define Offset 41.02740741
-           //deviation compensate
+#define Offset 41.02740741      //deviation compensate
 #define LED 13
 #define samplingInterval 20
 #define printInterval 800
@@ -123,8 +121,7 @@ void loop(void)
     pHArray[pHArrayIndex++] = analogRead(SensorPin);
     if (pHArrayIndex == ArrayLenth)pHArrayIndex = 0;
     voltage = avergearray(pHArray, ArrayLenth) * 5.0 / 1024;
-    pHValue = -19.18518519
-* voltage + Offset;
+    pHValue = -19.18518519 * voltage + Offset;
     samplingTime = millis();
   }
   if (millis() - printTime > printInterval)  //Every 800 milliseconds, print a numerical, convert the state of the LED indicator
@@ -176,7 +173,6 @@ double avergearray(int* arr, int number) {
   }//if
   return avg;
 }
-</pre>
 ```
 
 
@@ -203,10 +199,15 @@ double avergearray(int* arr, int number) {
 
 ![](https://files.seeedstudio.com/wiki/Grove-PH_Sensor_kit/IMG/calibration2.png)
 
-- **Step 7.** A k value and Offset value can be calculated because of the linear characteristic of PH detecting, and following please insert Offset value and k value (the same as pHValue) into **Line 10** and **Line 35** in the Software Code:
+- **Step 7.** A k value and Offset value can be calculated because of the linear characteristic of PH detecting, and following please insert Offset value and k value (the same as pHValue) into **Line 10** and **Line 34** in the Software Code:
 
 !!!Tip
-		$k= (PH2-PH1)/(V2-V1)$; $Offset=[(PH2+PH1)-k*(V1+V2)]/2$; There's a [Calculation Chart](https://files.seeedstudio.com/wiki/Grove-PH_Sensor_kit/Calibration_for_k&offset.xlsx) for furthur help with calibration.
+		
+    $k= (PH2-PH1)/(V2-V1)$
+    
+    $Offset=[(PH2+PH1)-k*(V1+V2)]/2$
+    
+    There's a [Calculation Chart](https://files.seeedstudio.com/wiki/Grove-PH_Sensor_kit/Calibration_for_k&offset.xlsx) for furthur help with calibration.
 
 - **Step 8.** Finally, you are free to detect your liquid.
 
@@ -214,7 +215,6 @@ double avergearray(int* arr, int number) {
 
 <div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-PH_Sensor_kit/202002811_Grove-PH_Sensor_v1.0_SCH&PCB.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
-
 
 ## Resources
 
