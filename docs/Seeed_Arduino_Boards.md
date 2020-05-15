@@ -5,16 +5,29 @@ category: Tutorial
 
 Seeed had designed so many boards that work with Arduino IDE, include,
 
-* Seeeduino V3/4
-* Seeeduino Stalker V2/3/3.1
-* Seeeduino Lite
-* Seeeduino Lotus
-* Seeeduino Mega
-* Seeeduino LoRaWAN/GPS
-* Seeeduino GPRS
-* Seeeduino Ethernet
-* LinkIt ONE
-* RePhone Series
+* Seeeduino [V3](https://wiki.seeedstudio.com/Seeeduino_v3.0/)/[4](https://wiki.seeedstudio.com/Seeeduino_v4.0/)
+* Seeeduino Stalker [V2.3](https://wiki.seeedstudio.com/Seeeduino_Stalker_v2.3/)/[3](https://wiki.seeedstudio.com/Seeeduino_v3.0/)/[3.1](https://wiki.seeedstudio.com/Seeeduino_Stalker_V3.1/)
+* [Seeeduino Lite](https://wiki.seeedstudio.com/Seeeduino_Lite/)
+* [Seeeduino Lotus](https://wiki.seeedstudio.com/Seeeduino_Lotus/)
+* [Seeeduino Lotus Cortex-M0+](https://wiki.seeedstudio.com/Seeeduino_Lotus_Cortex-M0-/)
+* [Seeeduino Mega](https://wiki.seeedstudio.com/Seeeduino_Mega/)
+* [Seeeduino Mega Protoshield Kit](https://wiki.seeedstudio.com/Seeeduino_Mega_Protoshield_Kit/)
+* [Seeeduino LoRaWAN](https://wiki.seeedstudio.com/Seeeduino_LoRAWAN/)/GPS
+* [Seeeduino GPRS](https://wiki.seeedstudio.com/Seeeduino_GPRS/)
+* [Seeeduino Ethernet](https://wiki.seeedstudio.com/Seeeduino_Ethernet/)
+* [Seeeduino Cloud ](https://wiki.seeedstudio.com/Seeeduino_Cloud/)
+* [Seeeduino Cortex M0](https://wiki.seeedstudio.com/Seeeduino-Cortex-M0/)
+* [Seeeduino Nano](https://wiki.seeedstudio.com/Seeeduino-Nano/)
+* [Seeeduino Crypto (ATmega4809 ECC608)](https://wiki.seeedstudio.com/Seeeduino-Crypto-ATmega4809-ECC608/)
+
+
+
+
+
+
+
+* [LinkIt ONE](https://wiki.seeedstudio.com/LinkIt_ONE/)
+* [RePhone Series](https://wiki.seeedstudio.com/RePhone/)
 
 Thanks to the new features of Arduino IDE, it's easy to add those board to your Arduino IDE now.
 
@@ -35,7 +48,7 @@ https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_see
 ```
 
 !!! attention 
-    If you use the board wih AT SAMD21 Microcontroller ,such as Seeeduino LoRaWAN/GPS board and Seeeduino cotex Mo board .Please copy below url to *Additional Boards Manager URLs*
+    If you use the board wih AT SAMD21 Microcontroller ,such as Seeeduino LoRaWAN/GPS board , Seeeduino cotex Mo board and Seeeduino Lotus Cortex-M0+.Please copy below url to *Additional Boards Manager URLs*
 
 ```c
 https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
@@ -43,7 +56,7 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 ```
 
 
-![](https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/img/settings.png)
+![ ](https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/img/settings.png)
 
 ##Step 3. Board Manager
 
