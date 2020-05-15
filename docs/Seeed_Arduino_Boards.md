@@ -56,7 +56,7 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 ```
 
 
-![ ](https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/img/settings.png)
+![](https://files.seeedstudio.com/wiki/Wio-Lite-MG126/img/preference.png)
 
 ##Step 3. Board Manager
 
