@@ -222,6 +222,7 @@ nav:
       - Seeeduino XIAO:
           - Seeeduino XIAO: Seeeduino-XIAO.md
           - Seeeduino XIAO by Nanase: Seeeduino-XIAO-by-Nanase.md
+          - Seeeduino XIAO with CircuitPython: Seeeduino-XIAO-CircuitPython.md
 
       - Wio Terminal:
           - Get Started with Wio Terminal: Wio-Terminal-Getting-Started.md
