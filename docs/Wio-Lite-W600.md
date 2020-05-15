@@ -130,8 +130,21 @@ Double-click the Arduino application (arduino.exe) you have previously downloade
     If the Arduino Software loads in a different language, you can change it in the preferences dialog. See the [Arduino Software (IDE) page](https://www.arduino.cc/en/Guide/Environment#languages) for details.
 
 
+- **Step 2. Setting your Arduino IDE.**
 
-- **Step 2. Add the Wio Lite W600 Board to Your Arduino IDE**   
+Open your Arudino IDE, click on **File > Preferences**, and copy below url to *Additional Boards Manager URLs*
+
+
+```c
+https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
+
+```
+
+
+ ![](https://files.seeedstudio.com/wiki/Wio-Lite-MG126/img/preference.png)
+
+
+- **Step 3. Add the Wio Lite W600 Board to Your Arduino IDE**   
 
 Please follow the [Seeed Board Intallation Guide](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/) and serch the key word **seeeduino_samd_zero** to add the **Wio Lite W600** into your Arduino IDE. 
 
@@ -145,18 +158,18 @@ Please follow the [Seeed Board Intallation Guide](https://wiki.seeedstudio.com/S
 
 
 
-- **Step 3. Add the W600 Library into Your Arduino IDE**  
+- **Step 4. Add the W600 Library into Your Arduino IDE**  
 
 Download the [W600 Library](https://github.com/Seeed-Studio/Seeed_Arduino_W600) from Seeed Github. Then Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 
-- **Step 4.** Restart the Arduino IDE. Open the AP-Station example, you can open it in the Arduino IDE by the path: **File --> Examples -->seeed_W600_wifi-->ap_sta_mode**.
+- **Step 5.** Restart the Arduino IDE. Open the AP-Station example, you can open it in the Arduino IDE by the path: **File --> Examples -->seeed_W600_wifi-->ap_sta_mode**.
 
 
 ![](https://files.seeedstudio.com/wiki/Wio-Lite-W600/img/IDE-3.jpg)
 
 
-- **Step 5.** Modify the code with your own AP and Station. In the following picture, Wio Lite W600 work as a station to join the AP marked **A** and the the Wio Lite W600 will creat the **B AP** for other devieces. You should change both AP name and password.
+- **Step 6.** Modify the code with your own AP and Station. In the following picture, Wio Lite W600 work as a station to join the AP marked **A** and the the Wio Lite W600 will creat the **B AP** for other devieces. You should change both AP name and password.
 
 
 ![](https://files.seeedstudio.com/wiki/Wio-Lite-W600/img/IDE-4.jpg)
@@ -164,7 +177,7 @@ Download the [W600 Library](https://github.com/Seeed-Studio/Seeed_Arduino_W600) 
 
 
 
-- **Step 6. Select your board and port**  
+- **Step 7. Select your board and port**  
  
 You'll need to select the entry in the **Tools > Board** menu that corresponds to your Arduino.
 Selecting a **Seeeduino Wio Lite W600**.
@@ -186,7 +199,7 @@ Select the serial device of the Arduino board from the Tools | Serial Port menu.
 
 
 
-- **Step 7.Upload the code**  
+- **Step 8.Upload the code**  
 Now, simply click the "Upload" button in the environment. Wait a few seconds and if the upload is successful, the message "Done uploading." will appear in the status bar.
 
 <div align="center">
