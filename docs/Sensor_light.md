@@ -159,16 +159,6 @@ The human visible mode gives you reading close to your eye feelings
 - Programmable interrupt function with User-Defined Upper and lower threshold settings
 - Selectable detection modes
 
-## Application Ideas
-
-- Light measurement
-- Light detector
-- Light-controlled switch
-- Smart home device
-- Ambient light sensing
-- Backlight control for display panel
-- Keyboard illumination control
-
 ### Sunlight detection option: [Grove – Sunlight Sensor](https://www.seeedstudio.com/Grove-Sunlight-Sensor.html)
 
 <div align=center><img width = 400 src="https://media-cdn.seeedstudio.site/media/catalog/product/cache/ab187aaa5f626ad16c8031644cd2de5b/h/t/httpsstatics3.seeedstudio.comseeedfile2018-07bazaar885583_3.jpg"/></div>
@@ -188,6 +178,16 @@ Since performance is key, this light sensor offers a wide dynamic and spectrum d
 - Detect sunlight directly
 - Grove compatible
 - I2C Interface(7-bit)
+
+## Application Ideas
+
+- Light measurement
+- Light detector
+- Light-controlled switch
+- Smart home device
+- Ambient light sensing
+- Backlight control for display panel
+- Keyboard illumination control
 
 ## Useful Projects
 
