@@ -238,7 +238,7 @@ aip build
 aip flash
 ```
 
-- **Step 3.** Copy the following code and save it as `ArduPy-ultrasonic.py`:
+- **Step 3.** Copy the following code and save it as `ArduPy-LCD1602.py`:
 
 ```python
 from arduino import grove_lcd1602
@@ -260,7 +260,9 @@ if __name__ == "__main__":
     main()
 ```
 
-- **Step 4.** Save the `ArduPy-ultrasonic.py` in a location that you know. Run the following command and **replace** `<YourPythonFilePath>` with your `ArduPy-ultrasonic.py` location.
+**Note:** For more API reference, please refer to [**here**](https://github.com/Seeed-Studio/seeed-ardupy-lcd1602).
+
+- **Step 4.** Save the `ArduPy-LCD1602.py` in a location that you know. Run the following command and **replace** `<YourPythonFilePath>` with your `ArduPy-LCD1602.py` location.
 
 ```sh
 aip shell -n -c "runfile <YourPythonFilePath>"
