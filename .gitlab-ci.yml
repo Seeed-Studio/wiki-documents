@@ -5,6 +5,8 @@ build:
     - ls -l /mnt
     - mkdocs build --clean
     - python3 create_search_index/search_index.py site/mkdocs/search_index.json
+    - python3 scripts/mkdocsyaml2json.py
+    - cp /tmp/mkdocs.json site/mkdocs/mkdocs.json
     - rsync -az site/*  /mnt/wiki.seeedstudio.com
-    - touch /mnt/wiki.seeedstudio.com/do_sync
     - chown  1026:100 -R /mnt/wiki.seeedstudio.com
+    - touch /mnt/wiki.seeedstudio.com/do_sync

@@ -22,7 +22,7 @@
 site_name: Seeed Wiki
 site_description: Seeed Product Document
 site_author: Baozhu Zuo
-#site_url: http://wiki.seeedstudio.com
+site_url: https://wiki.seeedstudio.com
 
 # Repository
 repo_name: All Products
