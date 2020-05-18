@@ -54,25 +54,22 @@ There are 4 kinds of gas sensors, every can detect different type of gas, here w
 
 ## Platforms Supported
 
-
-| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
-|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg) |
+|Arduino|Raspberry|ArduPy|
+|---|---|---|
+|![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg)|![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg)|![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/ArduPy-Logo.png)|
 
 !!!Caution
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
-
 ## Application Ideas
 
-
--   Gas leakage detection.
--   Toys.
-
-
-
+- Gas leakage detection.
+- Toys
+- IoT Applications
+- Smart Detections
 
 ## Getting Started
+
 The output voltage from the Gas sensor increases when the concentration of gas increases. Sensitivity can be adjusted by rotating the potentiometer. For detail information about the MQ-2 sensor, please refer the data-sheet provided in **Resources** section.
 
 !!!warning
@@ -246,34 +243,30 @@ According to the graph, we can see that the minimum concentration we can test is
 !!! Note
     For step 3 you are able to connect the Grove-Gas Sensor MQ2 to **any Analog Port** but make sure you change the command with the corresponding port number.
 
-
 #### Software
 
 - **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
 - **Step 2**. Download the source file by cloning the grove.py library. 
 
-```
+```sh
 cd ~
 git clone https://github.com/Seeed-Studio/grove.py
-
 ```
 
 - **Step 3**. Excute below commands to write the code.
 
-```
+```sh
 cd grove.py/grove
 nano grove_gas_sensor_mq2.py
 ```
+
 Then you should copy following code in this file and hit ++ctrl+x++ to quit and save.
 
 ```python
-
-
 import math
 import sys
 import time
 from grove.adc import ADC
-
 
 class GroveGasSensorMQ2:
 
@@ -303,26 +296,19 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
 ```
 
 - **Step 4**. Excute below command to run the code 
 
-```
-
+```sh
 python grove_gas_sensor_mq2.py 0
-
 ```
-
-
 
 !!!success
     If everything goes well, you will be able to see the following result
 
 
-```python
-
+```sh
 pi@raspberrypi:~/grove.py/grove $ python grove_gas_sensor_mq2.py 0
 Detecting...
 Gas value: 760
@@ -352,8 +338,6 @@ Gas value: 330
   File "grove_gas_sensor_mq2.py", line 66, in main
     time.sleep(.3)
 KeyboardInterrupt
-
-
 ```
 
 
@@ -382,25 +366,23 @@ You can quit this program by simply press ++ctrl+c++.
 <!--wrong link-->
 ![with_rpi](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ2/img/with_rpi.jpg)
 
-
-
 #### Software
 
 - **Step 1.** Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment.
 - **Step 2.** Git clone the Github repository.
 
-```
+```sh
 cd ~
 git clone https://github.com/DexterInd/GrovePi.git
-
 ```
 
--   **Step 3.** Excute below commands to use this sensor
+- **Step 3.** Execute below commands to use this sensor
 
-```bash
+```sh
 cd ~/GrovePi/Software/Python
 python grove_gas_sensor.py
 ```
+
 Here is code of grove_gas_sensor.py:
 
 ```Python
@@ -450,8 +432,6 @@ THE SOFTWARE.
 import time
 import grovepi
 
-
-
 # Connect the Grove Gas Sensor to analog port A0
 # SIG,NC,VCC,GND
 gas_sensor = 0
@@ -473,6 +453,95 @@ while True:
         print ("Error")
 ```
 
+### Play With Wio Terminal (ArduPy)
+
+#### Hardware
+
+- **Step 1.** Prepare the below stuffs:
+
+| Wio Terminal | Grove - Gas Sensor(MQ2) |
+|--------------|-----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-thumbnail.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ2/img/45d_small.jpg)|
+|[Get One Now](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Get One Now](https://www.seeedstudio.com/Grove-Gas-Sensor-MQ2.html)|
+
+- **Step 2.** Connect Grove - Gas Sensor(MQ2) to the **A0** Grove port of Wio Terminal.
+
+- **Step 3.** Connect the Wio Terminal to PC through USB Type-C cable.
+
+![](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ2/img/WT-MQ2.png)
+
+#### Software
+
+- **Step 1.** Follow [**ArduPy Getting Started**](https://wiki.seeedstudio.com/ArduPy/) to configure the ArduPy development environment on Wio Terminal.
+
+- **Step 2.** Make sure that the ArduPy firmware is flashed into Wio Terminal. For more information, please follow [**here**](https://wiki.seeedstudio.com/ArduPy/#ardupy-aip-cli-getting-started).
+
+```sh
+aip build
+aip flash
+```
+
+- **Step 3.** Copy the following code and save it as `ArduPy-mq2.py`:
+
+```python
+from machine import Pin, ADC
+from machine import LCD
+from machine import Sprite
+import time
+
+mq2 = ADC(Pin(13))
+lcd = LCD()
+spr = Sprite(lcd) # Create a buff
+
+def main():
+    spr.createSprite(320, 240)
+    while True:
+        spr.setTextSize(2)
+        spr.fillSprite(spr.color.BLACK)
+        spr.setTextColor(lcd.color.ORANGE)
+        spr.drawString("MQ2 Reading", 90, 10)
+        spr.drawFastHLine(40, 35, 240, lcd.color.DARKGREY)
+        spr.setTextColor(lcd.color.WHITE)
+        spr.drawString("- Current Level: ", 20, 50)
+        spr.drawNumber(mq2.read(), 220,50)
+        spr.pushSprite(0,0)
+        time.sleep_ms(500)
+
+        print("MQ2 Gas Sensor Reading is: ", mq2.read())
+
+if __name__ == "__main__":
+    main()
+```
+
+- **Step 4.** Save the `ArduPy-mq2.py` in a location that you know. Run the following command and **replace** `<YourPythonFilePath>` with your `ArduPy-mq2.py` location.
+
+```sh
+aip shell -n -c "runfile <YourPythonFilePath>"
+# Example:
+# aip shell -n -c "runfile /Users/ansonhe/Desktop/ArduPy-mq2.py"
+```
+
+- **Step 5.** We will see the gas value display on terminal as below, and displaying on the Wio Terminal LCD screen.
+
+```python
+ansonhe@Ansons-Macbook-Pro ~:aip shell -n -c "runfile /Users/ansonhe/Desktop/ArduPy-mq2.py"
+Positional argument (/dev/cu.usbmodem1414301) takes precedence over --open.
+Connected to ardupy
+MQ2 Gas Sensor Reading is:  60
+MQ2 Gas Sensor Reading is:  61
+MQ2 Gas Sensor Reading is:  62
+MQ2 Gas Sensor Reading is:  62
+MQ2 Gas Sensor Reading is:  64
+MQ2 Gas Sensor Reading is:  63
+MQ2 Gas Sensor Reading is:  66
+MQ2 Gas Sensor Reading is:  64
+MQ2 Gas Sensor Reading is:  65
+MQ2 Gas Sensor Reading is:  65
+MQ2 Gas Sensor Reading is:  65
+MQ2 Gas Sensor Reading is:  64
+```
+
+![](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ2/img/Ardupy-MQ2.png)
 
 ## Schematic Online Viewer
 
