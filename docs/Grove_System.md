@@ -21,8 +21,15 @@ You don't need a Base unit to connect up to Grove modules. You can use a cable (
 
 ## Grove Selection Guides
 
+- [Seeed Accelerometer Selection Guide](https://wiki.seeedstudio.com/Sensor_accelerometer/)
+- [Seeed Barometer Selection Guide](https://wiki.seeedstudio.com/Barometer-Selection-Guide/)
+- [Seeed Biomedicine Selection Guide](https://wiki.seeedstudio.com/Sensor_biomedicine/)
+- [Seeed Distance Selection Guide](https://wiki.seeedstudio.com/Sensor_distance/)
+- [Seeed Gas Sensor Selection Guide](https://wiki.seeedstudio.com/Sensor_gas/)
+- [Seeed Light Sensor Selection Guide](https://wiki.seeedstudio.com/Sensor_light/)
 - [Seeed Relay Selection Guide](https://wiki.seeedstudio.com/Seeed_Relay_Page/)
-- [Seeed Gas Sensor Selection Guide](https://wiki.seeedstudio.com/Seeed_Gas_Sensor_Selection_Guide)
+- [Seeed Sound Selection Guide](https://wiki.seeedstudio.com/Sensor_sound/)
+
 
 ## Grove Projects
 
@@ -97,17 +104,17 @@ For the detail mechnical drawing, please refer to [Grove Mechnical Drawing](http
 
 ## How to connect Grove to your board
 
-If there's no Grove connector on your board, you need a **Grove Expansion Board** which to attach the Grove modules. The Grove Expansion Board provides the processing power, and the modules offer the input sensors and output actuators of your system. There are many Grove Expansion Board for different platform already, they include Arduino UNO, Particle Phone, BeagleBone board etc.
+If there's no Grove connector on your board, you need a **Grove Expansion Board** which to attach the Grove modules. The Grove Expansion Board provides the processing power, and the modules offer the input sensors and output actuators of your system. There are many Grove Expansion Boards for different platforms already, they include Arduino UNO, Particle Phone, BeagleBone board etc.
 
 | Arduino Base Shield| BeagleBone board | Arduino Mega |
 |----------|---------------------|--------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/base_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/base_2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/base_3.jpg)|
 |[BUY ONE NOW!](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Base-Cape-for-Beaglebone-v2.0-p-2644.html)|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Mega-Shield-v1.2-p-2539.html)|
 
-| IOIO-OTG| Particle Photon | NodeMCU |
+| Particle Photon | NodeMCU | XIAO |
 |----------|---------------------|--------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/base_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/base_5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/base_6.jpg)|
-|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Base-Shield-for-IOIO-OTG-p-1613.html)|[BUY ONE NOW!](https://www.seeedstudio.com/Particle-Photon-Base-Shield-p-2598.html)|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Base-Shield-for-NodeMCU-p-2513.html)|
+|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/base_5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/base_6.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/XIAO/IMG/XIAO.png)|
+|[BUY ONE NOW!](https://www.seeedstudio.com/Particle-Photon-Base-Shield-p-2598.html)|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Base-Shield-for-NodeMCU-p-2513.html)|[Coming SOON!](https://www.seeedstudio.com/)|
 
 !!!Note
      Arduino Base Shield works for:
@@ -177,7 +184,6 @@ The Grove I2C connector has the standard layout.   Pin 1 is the SCL signal and P
 |pin3   | VCC  | Power for Grove Module, 5V/3.3V|
 |pin4	| GND  | Ground |
 
-
 ## Grove Cables
 
 ### Normal Grove Cable
@@ -212,7 +218,7 @@ The four pin keyed connector of the Grove Branch Cable for Servos will usually b
 
 ![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/cable_servo.jpg)
 
-### Grove to 4pin Female/Male Jumper
+### Grove to 4 pin Female/Male Jumper
 
 You can use it for:
 
@@ -230,6 +236,16 @@ You can use it for:
 | Grove to 4Pin Female |[BUY ONE NOW!](https://www.seeedstudio.com/Grove-4-pin-Female-Jumper-to-Grove-4-pin-Conversion-Cable-%285-PCs-per-PAck%29-p-1020.html)|
 | Grove to 4Pin Male |[BUY ONE NOW!](https://www.seeedstudio.com/Grove-4-pin-Male-Jumper-to-Grove-4-pin-Conversion-Cable-%285-PCs-per-Pack%29-p-1565.html)|
 
+## Grove Connector
+
+There are 4 kinds of Grove connectors in our Bazaar: Universal 4 pin connector 90°, Universal 4 pin connector, Arduino mkr connector carrier (Grove compatible) and Grove Qwiic Hub Compatible with Grove/Qwiic/STEMMA QT Modules & Controllers. The universal 4 pin connector is used on Stem, Twigs and the Grove cables, the pin spacing is 2mm while Arduino mkr connector carrier is the perfect companion for Arduino MKR boards and a Grove ecosystem. Additionally, Different from our Grove system, Qwiic is an I2C interface system initiated by Sparkfun around 2017, using a 4pin JST SH 1.0mm connector. STEMMA QT initiated by Adafruit is cross-compatible with Qwiic, as they use the same connector/cable. To better support different types of interface systems, we provide Grove - Qwiic Hub, which enables you easily connect the I2C devices with Grove/Qwiic/STEMMA QT interface, get the best use of your devices/controller of different interfaces. And Grove - Qwiic Hub allows you to either use Qwiic/STEMMA QT modules on Grove controller or use Grove modules on Qwiic/STEMMA QT controller. You can cascade connect more than one Qwiic/STEMMA QT and Grove modules in one I2C bus with Grove - Qwiic Hub.
+
+| Connector | Link |
+|------|------|
+|Universal 4 pin connector 90°|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Universal-4-pin-connector-90-10-PCs.html)|
+|Universal 4 pin connector|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Universal-4-pin-connector.html)|
+|Arduino mkr connector carrier (Grove compatible)|[BUY ONE NOW!](https://www.seeedstudio.com/ARDUINO-MKR-CONNECTOR-CARRIER-GROVE-COMPATIBLE.html)|
+|Grove Qwiic Hub Compatible with Grove/Qwiic/STEMMA QT Modules & Controllers|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Qwiic-Hub-p-4531.html)|
 
 ## Grove Starter Kit
 
@@ -241,21 +257,20 @@ There are many kits for different platform.
 
 | Kit Name | Link |
 |------------|----|
-|Grove - Starter Kit for Arduino|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Starter-Kit-for-Arduino-p-1855.html)|
-|Grove Starter Kit for mbed|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Starter-Kit-for-mbed-p-2032.html)|
+|GrovePi+ Starter Kit for Raspberry Pi|[BUY ONE NOW!](https://www.seeedstudio.com/GrovePi+-Starter-Kit-for-Raspberry-Pi-A+,B,B+&2,3-%28CE-certified%29-p-2572.html)|
+|Grove Starter Kit for Azure Sphere MT3620 Development Kit|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Starter-Kit-for-Azure-Sphere-MT3620-Development-Kit.html)|
+|Grove Starter Kit for Arduino|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Starter-Kit-for-Arduino-p-1855.html)|
+|Grove Starter kit for Arduino&Genuino 101|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Starter-kit-for-Arduino&Genuino-101-p-2664.html)|
+|Grove Inventor Kit for micro:bit|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Inventor-Kit-for-micro-bit-p-2891.html)|
 |Grove Starter Kit for LinkIt ONE|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Starter-Kit-for-LinkIt-ONE-p-2028.html)|
 |Grove Starter Kit for LaunchPad|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Starter-Kit-for-LaunchPad-p-2178.html)|
-|Grove Starter Kit for Photon|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Starter-Kit-for-Photon-p-2179.html)|
 |Grove Starter Kit for BeagleBone Green|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Starter-Kit-for-SeeedStudio-BeagleBone-Green-p-2526.html)|
 |Grove Starter Kit for LinkIt 7688 Duo|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Starter-Kit-for-LinkIt-7688-Duo-p-2551.html)|
 |Grove Starter Kit for 96Boards|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Starter-Kit-for-96Boards-p-2618.html)|
-|Grove Starter kit for Arduino&Genuino 101|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Starter-kit-for-Arduino&Genuino-101-p-2664.html)|
-|GrovePi+ Starter Kit for Raspberry Pi|[BUY ONE NOW!](https://www.seeedstudio.com/GrovePi+-Starter-Kit-for-Raspberry-Pi-A+,B,B+&2,3-%28CE-certified%29-p-2572.html)|
-
 
 ## Choose your Grove
 
-Want some Grove modules for your project? Here are some recommend.
+Want some Grove modules for your project? Here are some recommendations, more products please refer to [Bazaar](https://www.seeedstudio.com/) or [Bazaar-Grove](https://www.seeedstudio.com/catalogsearch/result/?q=Grove).
 
 ### Grove Basic Input and Output
 
@@ -272,15 +287,15 @@ Want some Grove modules for your project? Here are some recommend.
 
 ### Grove for Display
 
-| I2C_LCD | Grove - OLED Display 0.96" | Grove - OLED Display 1.12" |
+| OLED Display 0.96" (SSD1315) | OLED Display 1.12" V2 | Triple Color E-Ink Display 2.13" |
 |-----------|--------------------------|----------------------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/display_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/display_2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/display_3.jpg)|
-| [More Details](https://www.seeedstudio.com/I2C_LCD-%28With-universal-Grove-cable%29-p-2601.html) | [More Details](https://www.seeedstudio.com/Grove-OLED-Display-0.96%22-p-781.html) | [More Details](https://www.seeedstudio.com/Grove-OLED-Display-1.12%22-p-824.html) |
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove-OLED-Display-0.96-SSD1315-/img/Grove-OLED-Displey-0.96-SSD1315-thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/images/45d_small.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Triple_Color_E-Ink_Display_2.13/img/thumbnail.jpg)|
+| [More Details](https://www.seeedstudio.com/Grove-OLED-Display-0-96-SSD1315-p-4294.html) | [More Details](https://www.seeedstudio.com/Grove-OLED-Display-1-12-V2.html) | [More Details](https://www.seeedstudio.com/Grove-Triple-Color-E-Ink-Display-2-13-p-2889.html) |
 
 
-| Grove - LCD RGB Backlight| Grove - 4-Digit Display | Grove LED Bar v2.0 |
+|Tripple Color E-Ink Diaplay 1.54"|0.54 Red Dual Alphanumeric Display|4 Digit Display|
 |-----------|--------------------------|----------------------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/display_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/display_5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/display_6.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Triple_Color_E-Ink_Display_1.54/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-0.54-Red-Dual-Alphanumeric-Display/img/front-s.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-4-Digit_Display/img/Thumbnail.png)|
 | [More Details](https://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html) | [More Details](https://www.seeedstudio.com/Grove-4-Digit-Display-p-1198.html) | [More Details](https://www.seeedstudio.com/Grove-LED-Bar-v2.0-p-2474.html) |
 
 
@@ -291,16 +306,15 @@ Want some Grove modules for your project? Here are some recommend.
 |![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/motion_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/motion_2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/motion_3.jpg)|
 |[More Details](https://www.seeedstudio.com/Grove-IMU-10DOF-v2.0-p-2691.html)|[More Details](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer%28%C2%B1400g%29-p-1897.html)|[More Details](https://www.seeedstudio.com/Grove-3-Axis-Digital-Gyro-p-750.html)|
 
-| 3-Axis Digital Compass | 3-Axis Digital Accelerometer(±1.5g) | 3-Axis Analog Accelerometer |
+| 3-Axis Digital Compass | 3-Axis Digital Compass V2 | 3-Axis Analog Accelerometer |
 |--------------------------|---------------------------|-----------------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/motion_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/motion_5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/motion_6.JPG)|
-|[More Details](https://www.seeedstudio.com/Grove-3-Axis-Digital-Compass-p-759.html)|[More Details](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer(%C2%B11.5g)-p-765.html)|[More Details](https://www.seeedstudio.com/Grove-3-Axis-Analog-Accelerometer-p-1086.html)|
+|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/motion_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digitial_Compass_v2.0/img/45d_small.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/motion_6.JPG)|
+|[More Details](https://www.seeedstudio.com/Grove-3-Axis-Digital-Compass-p-759.html)|[More Details](https://www.seeedstudio.com/Grove-3-Axis-Digital-Compass-V2.html)|[More Details](https://www.seeedstudio.com/Grove-3-Axis-Analog-Accelerometer-p-1086.html)|
 
 | 3-Axis Digital Acc(±16g) | 6-Axis Acc&Compass v2.0 | 6-Axis Acc&Gyroscope |
 |--------------------------|---------------------------|-----------------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/motion_7.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/motion_8.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/motion_9.jpg)|
 |[More Details](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer(%C2%B116g)-p-1156.html)|[More Details](https://www.seeedstudio.com/Grove-6-Axis-Accelerometer%26Compass-v2.0-p-2476.html)|[More Details](https://www.seeedstudio.com/Grove-6-Axis-Accelerometer%26Gyroscope-p-2606.html)|
-
 
 
 ### Grove for Communication
@@ -326,22 +340,22 @@ Want some Grove modules for your project? Here are some recommend.
 
 ### Grove for Environment
 
-| Air quality sensor | Gas Sensor(MQ2) | Gas Sensor(MQ5) |
+|CO2&Tem&Humi Sensor|Multichannel Gas Sensor v2|Temp&Humi&Barometer Sensor|
 |--------------------------|---------------------------|-----------------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/env_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/env_2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/env_3.jpg)|
-|[More Details](https://www.seeedstudio.com/Grove-Air-quality-sensor-v1.3-p-2439.html)|[More Details](https://www.seeedstudio.com/Grove-Gas-Sensor(MQ2)-p-937.html)|[More Details](https://www.seeedstudio.com/Grove-Gas-Sensor(MQ5)-p-938.html)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/img/thumbnial.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/V2.png)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/env_3.jpg)|
+|[More Details](https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD30-p-2911.html)|[More Details](https://www.seeedstudio.com/Grove-Multichannel-Gas-Sensor-v2-p-4569.html)|[More Details](https://www.seeedstudio.com/Grove-BME280-Environmental-Sensor-Temperature-Humidity-Barometer.html)|
 
 
-| Gas Sensor(MQ3) | Gas Sensor(MQ9) | Gas Sensor(O2) |
+|Round Force Sensor|Air Quality Sensor v1.3| Gas Sensor(O2) |
 |--------------------------|---------------------------|-----------------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/env_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/env_5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/env_6.jpg)|
-|[More Details](https://www.seeedstudio.com/Grove-Gas-Sensor(MQ3)-p-1418.html)|[More Details](https://www.seeedstudio.com/Grove-Gas-Sensor(MQ9)-p-1419.html)|[More Details](https://www.seeedstudio.com/Grove-Gas-Sensor(O2)-p-1541.html)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Round_Force_Sensor_FSR402/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Air_Quality_Sensor_v1.3/img/Grove_Air_Quality_Sensor_small.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/env_6.jpg)|
+|[More Details](https://www.seeedstudio.com/Grove-Round-Force-Sensor-FSR402.html)|[More Details](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-v1-3-Arduino-Compatible.html)|[More Details](https://www.seeedstudio.com/Grove-Gas-Sensor(O2)-p-1541.html)|
 
 
-| Dust Sensor | Moisture Sensor | Temperature&Humidity Sensor |
+| Dust Sensor | Moisture Sensor |Integrated Pressure Sensor Kit|
 |--------------------------|---------------------------|-----------------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/env_7.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/env_8.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/env_9.jpg)|
-|[More Details](https://www.seeedstudio.com/Grove-Dust-Sensor-p-1050.html)|[More Details](https://www.seeedstudio.com/Grove-Moisture-Sensor-p-955.html)|[More Details](https://www.seeedstudio.com/Grove-Temperature%26Humidity-Sensor-Pro-p-838.html)|
+|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/env_7.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/env_8.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP/img/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP-thumbnail.jpg)|
+|[More Details](https://www.seeedstudio.com/Grove-Dust-Sensor-p-1050.html)|[More Details](https://www.seeedstudio.com/Grove-Moisture-Sensor-p-955.html)|[More Details](https://www.seeedstudio.com/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP-p-4295.html)|
 
 
 
