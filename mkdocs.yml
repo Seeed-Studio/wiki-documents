@@ -745,6 +745,7 @@ nav:
           - Grove - Bee Socket: Grove-Bee_Socket.md
           - Grove - DMX512: Grove-DMX512.md
           - Grove - GPS: Grove-GPS.md
+          - Grove - GPS (Air530): Grove-GPS-Air530.md
           - Grove - High Precision RTC: Grove_High_Precision_RTC.md
           - Grove - I2C ADC: Grove-I2C_ADC.md
           - Grove - I2C FM Receiver: Grove-I2C_FM_Receiver.md
