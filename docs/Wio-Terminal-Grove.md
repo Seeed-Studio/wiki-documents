@@ -272,34 +272,37 @@ This section introduces how to use [Grove - GPS Sensor]() with Wio Terminal for 
 
 ### Complete Code
 
-Connect the Grove GPS Sensor to the Grove D/A Pin of Wio Terminal, upload the code and check the results in Serial Monitor(w/ baud rate: 9600)!
+Connect the Grove GPS Sensor to the Grove I2C Pin (Left Side) of Wio Terminal, upload the code and check the results in Serial Monitor(w/ baud rate: 9600)!
 
 ```cpp
 #include <TinyGPS++.h>
-#include <SoftwareSerial.h>
+#include <wiring_private.h>
 
-static const int RXPin = 0, TXPin = 1;
 static const uint32_t GPSBaud = 9600;
 
 // The TinyGPS++ object
 TinyGPSPlus gps;
 
-// The serial connection to the GPS device
-SoftwareSerial ss(RXPin, TXPin);
+// The serial connection to the GPS device - Left side Grove connector.
+// Left side Grove connector shares pins with I2C1 of 40 pin connector.
+static Uart Serial3(&sercom3, PIN_WIRE_SCL, PIN_WIRE_SDA, SERCOM_RX_PAD_1, UART_TX_PAD_0);
 
 void setup()
 {
-  Serial.begin(9600);
-  ss.begin(GPSBaud);
-}
+  Serial.begin(115200);
 
+  Serial3.begin(GPSBaud);
+  pinPeripheral(PIN_WIRE_SCL, PIO_SERCOM_ALT);
+  pinPeripheral(PIN_WIRE_SCL, PIO_SERCOM_ALT);
+}
+ 
 void loop()
 {
   // This sketch displays information every time a new sentence is correctly encoded.
-  while (ss.available() > 0)
-    if (gps.encode(ss.read()))
+  while (Serial3.available() > 0)
+    if (gps.encode(Serial3.read()))
       displayInfo();
-
+ 
   if (millis() > 5000 && gps.charsProcessed() < 10)
   {
     Serial.println(F("No GPS detected: check wiring."));
@@ -356,5 +359,22 @@ void displayInfo()
   }
 
   Serial.println();
+}
+
+void SERCOM3_0_Handler()
+{
+  Serial3.IrqHandler();
+}
+void SERCOM3_1_Handler()
+{
+  Serial3.IrqHandler();
+}
+void SERCOM3_2_Handler()
+{
+  Serial3.IrqHandler();
+}
+void SERCOM3_3_Handler()
+{
+  Serial3.IrqHandler();
 }
 ```
