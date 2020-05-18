@@ -329,7 +329,7 @@ You can quit this program by simply press ++ctrl+c++.
 |![enter image description here](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-thumbnail.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ3/img/45d_small.jpg)|
 |[Get One Now](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Get One Now](https://www.seeedstudio.com/Grove-Gas-Sensor-MQ3.html)|
 
-- **Step 2.** Connect Grove - Ultrasonic Ranger to **A0** port of Wio Terminal.
+- **Step 2.** Connect Grove - Gas Sensor(MQ3) to **A0** port of Wio Terminal.
 
 - **Step 3.** Connect the Wio Terminal to PC through USB Type-C cable.
 
