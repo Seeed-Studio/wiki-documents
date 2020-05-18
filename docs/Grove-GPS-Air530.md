@@ -150,7 +150,9 @@ void clearBufferArray()                     // function to clear buffer array
 
 - **Step 4.** When we have captured enough data, click the black square to stop recording.
 
-- **Step 5.** We can then convert the .ubx file generated to KML by using uploading the ubx file to [GPSVisualizer](http://www.gpsvisualizer.com/), and the location would be shown on the map.
+- **Step 5.** We can then convert the .ubx file generated to KML by using uploading the ubx file to [GPSVisualizer](http://www.gpsvisualizer.com/), and the location (Red spot) would be shown on the map as following:
+
+![](https://files.seeedstudio.com/wiki/Grove-GPS_Air_530/IMG/outcome.png)
 
 !!!Attention
         Tests would rather be taken outdoors to avoid location inaccuracy caused by bad signal transmission.    
