@@ -609,7 +609,8 @@ nav:
           - Grove - Moisture Sensor: Grove-Moisture_Sensor.md
           - Grove - Mouse Encoder: Grove-Mouse_Encoder.md
           - Grove - Multichannel Gas Sensor: Grove-Multichannel_Gas_Sensor.md
-          - Grove - ORP Sensor Kit (501Z): Grove-ORP-Sensor-kit
+          - Grove - EC Sensor Kit : Grove-EC-Sensor-kit.md
+          - Grove - ORP Sensor Kit (501Z): Grove-ORP-Sensor-kit.md
           - Grove - PH Sensor Kit (E-201C-Blue): Grove-PH-Sensor-kit.md
           - Grove - PH Sensor: Grove-PH_Sensor.md
           - Grove - PIR Motion Sensor: Grove-PIR_Motion_Sensor.md
