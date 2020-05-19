@@ -56,33 +56,21 @@ An Oxidation Reduction Potential (ORP) Sensor measures the activity of oxidizers
 
 ![](https://files.seeedstudio.com/wiki/Grove-ORD-Sensor/IMG/ORP_Connection.jpg)
 
-!!!Tip
-    Please plug the USB cable, Grove-ORP Sensor Interface into Seeeduino Lotus board Interface gently, otherwise you may damage the port.
-
-- **Step 1.** Plug Grove-ORP Sensor into Interface **A2** of Seeeduino Lotus board with a Grove Cable.
-
-- **Step 2.** Connect Seeeduino Lotus to PC via a USB cable.
-
-- **Step 3.** Connect the interface of probe cable and then download the code, please refer to the software part.
-
-- **Step 4.** Run the code and the outcome will display on the screen of **Serial Monitor** in your Arduino IDE .
-
-
 #### Software
 
 !!!Attention
         If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
+- **Step 1.** Plug Grove-ORP Sensor into Interface **A2** of Seeeduino Lotus board with a Grove Cable and connect Seeeduino Lotus to PC via a USB cable.
+
+!!!Tip
+    Please plug the USB cable, Grove-ORP Sensor Interface into Seeeduino Lotus board Interface gently, otherwise you may damage the port.
 
 
+- **Step 2.** Download the [Demo code](https://files.seeedstudio.com/wiki/Grove-ORP-Sensor/ORPSensorSample.zip) and copy the whole **ORPSensorSample** file and paste it into your Arduino IDE library file.
 
-- **Step 1.** Download the [Demo code](https://files.seeedstudio.com/wiki/Grove-ORP-Sensor/ORPSensorSample.zip).
+- **Step 3.** Open the **ORPSensorSample.ino** file with your Arduino IDE and upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
-- **Step 2.** Copy the whole **ORPSensorSample** file and paste it into your Arduino IDE library file.
-
-- **Step 3.** Open the **ORPSensorSample.ino** file with your Arduino IDE.
-
-- **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 #### Software Code
 ```C++
@@ -178,17 +166,17 @@ void loop(void) {
      - The probe **MUST NOT** be dipped in any solution for a long time.
 
 
-- **Step 5.** Take off the interface of probe cable and continuously press the **Black Button** on the sensor to reset.
+- **Step 4.** Take off the interface of probe cable and continuously press the **Black Button** on the sensor to reset.
 
 ![](https://files.seeedstudio.com/wiki/Grove-ORP-Sensor/IMG/Calibration_for_ORP.png)
 
-- **Step 6.** From the chart above, we can figure out that the error is -11 mv, therefore the data of offset can be modified to -11 on **Line 2** in Demo Code.
+- **Step 5.** From the chart above, we can figure out that the error is -11 mv, therefore the data of offset can be modified to -11 on **Line 2** in Demo Code.
 
-- **Step 7.** After resetting the sensor, we can put it into a pointed calibration liquid with the specification of 204mv to figure out if it could work well. 
+- **Step 6.** After resetting the sensor, we can put it into a pointed calibration liquid with the specification of 204mv to figure out if it could work well. 
 
 ![](https://files.seeedstudio.com/wiki/Grove-ORP-Sensor/IMG/Calibration_Solution.png)
 
-- **Step 8.** Finally, you are free to detect your own liquid.
+- **Step 7.** Finally, you are free to detect your own liquid.
 
 ## Schematic Online Viewer
 
