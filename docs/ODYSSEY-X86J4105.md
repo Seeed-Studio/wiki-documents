@@ -311,6 +311,8 @@ This also need to be configured in the BIOS. Enter BIOS settings by pressing DEL
 
 ## Resources
 
+- **[ZIP]** [ODYSSEY-X86J4105 3D Model](http://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/ODYSSEY-X86-3D-Model.zip)
+
 - **[PDF]** [Atmel-SAMD21-datasheet](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/Atmel-SAMD21-datasheet.pdf)
 
 - **[PDF]** [ODYSSEY-X86 User Manual](https://files.seeedstudio.com/products/102110399/Documents/ODYSSEY-X86%20User-Manual-v1.1.pdf)
