@@ -35,32 +35,32 @@ You don't need a Base unit to connect up to Grove modules. You can use a cable (
 
 Here are some project made with Grove for your reference, more projects please refer to [Recipe](https://community.seeedstudio.com/discover.html?t=Grove) or [Instructables](https://www.instructables.com/howto/Grove/).
 
-| DIY a Humidifier | Personal Voice Assistant | Acrylic Monitor Stand |
+|Automated Watering|IoT Jar Notifier|Magic Mirror|
 |------------------|--------------------------|-----------------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/3.jpg)|
-|[MAKE IT NOW!](https://www.instructables.com/id/DIY-Smart-House-2-DIY-a-Humidifier/)|[MAKE IT NOW!](https://www.instructables.com/id/DIY-Smart-House-1-Personal-Voice-Assistant-based-o/)|[MAKE IT NOW!](https://www.instructables.com/id/DIY-a-Programmable-Acrylic-Monitor-Stand/)|
+|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/planting.png)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/notifier.png)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/Magic_mirror.png)|
+|[MAKE IT NOW!](https://www.instructables.com/id/Automated-Watering-of-Potted-Plants-with-Intel-Edi/)|[MAKE IT NOW!](https://www.instructables.com/id/IoT-Jar-Chandelier-Physical-Gmail-Twitter-Facebook/)|[MAKE IT NOW!](https://www.instructables.com/id/Magic-Mirror-Mini-Android-Powered/)|
 
 
-| Sensor hub & Win10 IoT | Steam-punk Style Award | Plant Watering Device |
+| Crazy Caterpillar|Voice-Control IR Remote Controller| Plant Watering Device |
 |------------------|--------------------------|-----------------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/6.jpg)|
-|[MAKE IT NOW!](https://www.instructables.com/id/DIY-a-Smart-Monitoring-Device-Based-on-Win10-IoT/)|[MAKE IT NOW!](https://www.instructables.com/id/Make-a-Steam-Punk-Style-Cup/)|[MAKE IT NOW!](https://www.instructables.com/id/DIY-an-Automatic-Plant-Watering-Device/)|
+|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/Crazy_Caterpiller.png)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/Learnable_IR_Remote.png)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/6.jpg)|
+|[MAKE IT NOW!](https://www.instructables.com/id/Crazy-Caterpillar-an-Arduino-Robot/)|[MAKE IT NOW!](https://www.instructables.com/id/Make-a-Voice-Control-IR-Remote-Controller-by-Ardui/)|[MAKE IT NOW!](https://www.instructables.com/id/DIY-an-Automatic-Plant-Watering-Device/)|
 
-| Wi-Fi Speaker | DIY a toy car | Retro Wooden Lamp |
+| Wi-Fi Speaker | DIY a toy car |Temperature-controlled USB Fan|
 |------------------|--------------------------|-----------------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/7.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/8.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/9.jpg)|
-|[MAKE IT NOW!](https://www.instructables.com/id/DIY-a-Wi-Fi-Speaker/)|[MAKE IT NOW!](https://www.instructables.com/id/Make-a-mini-toy-car-with-Arduino/)|[MAKE IT NOW!](https://www.instructables.com/id/DIY-a-Retro-Wooden-Lamp-with-BBG/)|
+|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/7.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/8.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/Temperature_controlled_fan.png)|
+|[MAKE IT NOW!](https://www.instructables.com/id/DIY-a-Wi-Fi-Speaker/)|[MAKE IT NOW!](https://www.instructables.com/id/Make-a-mini-toy-car-with-Arduino/)|[MAKE IT NOW!](https://www.instructables.com/id/Temperature-controlled-USB-fan-MilCandy/)|
 
-| Pokemon Go SAFETY BADGE | Make a Wooden Gun | Quality of Life Meter |
+| Pokemon Go SAFETY BADGE |LED Clay Ornament| Quality of Life Meter |
 |------------------|--------------------------|-----------------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/10.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/11.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/12.jpg)|
-|[MAKE IT NOW!](https://www.instructables.com/id/5-Minutes-to-DIY-Your-Own-Pokemon-Go-SAFETY-BADGE/)|[MAKE IT NOW!](https://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)|[MAKE IT NOW!](https://www.instructables.com/id/Quality-of-Life-Meter-Mk2-Smarter-and-Connected/)|
+|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/10.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/LED_Clay_Ornament.png)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/12.jpg)|
+|[MAKE IT NOW!](https://www.instructables.com/id/5-Minutes-to-DIY-Your-Own-Pokemon-Go-SAFETY-BADGE/)|[MAKE IT NOW!](https://www.instructables.com/id/LED-Clay-Ornament/)|[MAKE IT NOW!](https://www.instructables.com/id/Quality-of-Life-Meter-Mk2-Smarter-and-Connected/)|
 
 
-| Hackable RGB ornament | The Internet Of Led Wall | PI Game Box |
+|Grove Minimal Thermometer|More Humane Moisture Sensor| PI Game Box |
 |------------------|--------------------------|-----------------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/13.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/14.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/15.jpg)|
-|[MAKE IT NOW!](https://www.instructables.com/id/Glasso-a-button-free-RGB-timer/)|[MAKE IT NOW!](https://www.instructables.com/id/The-Internet-of-Led-Wall-1/)|[MAKE IT NOW!](https://www.instructables.com/id/DIY-a-Raspberry-Game-2048/)|
+|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/Grove_Minimal_Thermometer.png)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/More_Humane_Moisture_Sensor.png)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/15.jpg)|
+|[MAKE IT NOW!](https://www.instructables.com/id/Grove-Minimal-Thermometer/)|[MAKE IT NOW!](https://www.instructables.com/id/More-Humane-Moisture-sensor/)|[MAKE IT NOW!](https://www.instructables.com/id/DIY-a-Raspberry-Game-2048/)|
 
 
 ## Size of Grove
@@ -106,22 +106,21 @@ For the detail mechnical drawing, please refer to [Grove Mechnical Drawing](http
 
 If there's no Grove connector on your board, you need a **Grove Expansion Board** which to attach the Grove modules. The Grove Expansion Board provides the processing power, and the modules offer the input sensors and output actuators of your system. There are many Grove Expansion Boards for different platforms already, they include Arduino UNO, Particle Phone, BeagleBone board etc.
 
-| Arduino Base Shield| BeagleBone board | Arduino Mega |
+| Arduino Base Shield|Base Hat for Raspberry Pi Zero| Arduino Mega |
 |----------|---------------------|--------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/base_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/base_2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/base_3.jpg)|
-|[BUY ONE NOW!](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Base-Cape-for-Beaglebone-v2.0-p-2644.html)|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Mega-Shield-v1.2-p-2539.html)|
+|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/base_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi_Zero/img/small.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/base_3.jpg)|
+|[BUY ONE NOW!](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-Zero.html)|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Mega-Shield-v1.2-p-2539.html)|
 
-| Particle Photon | NodeMCU | XIAO |
+|Base Hat for Raspberry Pi | NodeMCU | XIAO |
 |----------|---------------------|--------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/base_5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/base_6.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/XIAO/IMG/XIAO.png)|
-|[BUY ONE NOW!](https://www.seeedstudio.com/Particle-Photon-Base-Shield-p-2598.html)|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Base-Shield-for-NodeMCU-p-2513.html)|[Coming SOON!](https://www.seeedstudio.com/)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/small.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/base_6.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/XIAO/IMG/XIAO.png)|
+|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Base-Shield-for-NodeMCU-p-2513.html)|[Coming SOON!](https://www.seeedstudio.com/)|
 
 !!!Note
      Arduino Base Shield works for:
 
     * Arduino UNO/Leonardo
     * Seeeduino V3/4/4.1/Lite/Clio/Lotus/Stalker
-    * LinkIt ONE
 
 
 ## Interface of Grove modules
@@ -259,13 +258,11 @@ There are many kits for different platform.
 |------------|----|
 |GrovePi+ Starter Kit for Raspberry Pi|[BUY ONE NOW!](https://www.seeedstudio.com/GrovePi+-Starter-Kit-for-Raspberry-Pi-A+,B,B+&2,3-%28CE-certified%29-p-2572.html)|
 |Grove Starter Kit for Azure Sphere MT3620 Development Kit|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Starter-Kit-for-Azure-Sphere-MT3620-Development-Kit.html)|
-|Grove Starter Kit for Arduino|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Starter-Kit-for-Arduino-p-1855.html)|
+|Grove Beginner Kit for Arduino|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-p-2895.html)|
 |Grove Starter kit for Arduino&Genuino 101|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Starter-kit-for-Arduino&Genuino-101-p-2664.html)|
 |Grove Inventor Kit for micro:bit|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Inventor-Kit-for-micro-bit-p-2891.html)|
-|Grove Starter Kit for LinkIt ONE|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Starter-Kit-for-LinkIt-ONE-p-2028.html)|
 |Grove Starter Kit for LaunchPad|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Starter-Kit-for-LaunchPad-p-2178.html)|
 |Grove Starter Kit for BeagleBone Green|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Starter-Kit-for-SeeedStudio-BeagleBone-Green-p-2526.html)|
-|Grove Starter Kit for LinkIt 7688 Duo|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Starter-Kit-for-LinkIt-7688-Duo-p-2551.html)|
 |Grove Starter Kit for 96Boards|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Starter-Kit-for-96Boards-p-2618.html)|
 
 ## Choose your Grove
@@ -274,16 +271,16 @@ Want some Grove modules for your project? Here are some recommendations, more pr
 
 ### Grove Basic Input and Output
 
-| Grove - LED| Grove - Rotary Angle Sensor | Grove - Button |
+| Grove - LED| Grove - Rotary Angle Sensor |Seeed IoT Button for AWS|
 |-----------|--------------------------|----------------------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/basic_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/basic_2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/basic_3.jpg)|
-| [More Details](https://www.seeedstudio.com/Grove-Blue-LED-p-1139.html) | [More Details](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor(P)-p-1242.html) | [More Details](https://www.seeedstudio.com/Grove-Button(P)-p-1243.html) |
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Red_LED/img/45d_small.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/img/101020017.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Seeed-IOT-BUTTON-FOR-AWS/img/small.png)|
+| [More Details](https://www.seeedstudio.com/Grove-Red-LED.html) | [More Details](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html) | [More Details](https://www.seeedstudio.com/Seeed-IoT-Button-for-AWS-p-4527.html) |
 
 
-| Grove - Switch| Grove - Encoder | Grove - Touch Sensor |
+| Grove - Micro Switch| Grove - Encoder | Grove - I2C Touch Sensor |
 |-----------|--------------------------|----------------------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/basic_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/basic_5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/basic_6.jpg)|
-| [More Details](https://www.seeedstudio.com/Grove-Switch(P)-p-1252.html) | [More Details](https://www.seeedstudio.com/Grove-Encoder-p-1352.html) | [More Details](https://www.seeedstudio.com/Grove-Touch-Sensor-p-747.html) |
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Switch-P/img/small.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/basic_5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-I2C_Touch_Sensor/img/45d_small.jpg)|
+| [More Details](https://www.seeedstudio.com/Grove-Micro-Switch.html) | [More Details](https://www.seeedstudio.com/Grove-Encoder-p-1352.html) | [More Details](https://www.seeedstudio.com/Grove-I2C-Touch-Sensor-p-840.html) |
 
 ### Grove for Display
 
@@ -301,10 +298,10 @@ Want some Grove modules for your project? Here are some recommendations, more pr
 
 ### Grove for Motion Detect
 
-| Grove - IMU 10DOF v2.0 | Digital Accelerometer(±400g) | 3-Axis Digital Gyro |
+|Single Axis Analog Accelerometer| Digital Accelerometer(±400g) | 3-Axis Digital Gyro |
 |--------------------------|---------------------------|-----------------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/motion_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/motion_2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/motion_3.jpg)|
-|[More Details](https://www.seeedstudio.com/Grove-IMU-10DOF-v2.0-p-2691.html)|[More Details](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer%28%C2%B1400g%29-p-1897.html)|[More Details](https://www.seeedstudio.com/Grove-3-Axis-Digital-Gyro-p-750.html)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Single-Axis-Analog-Accelerometer-100g-ADXL1001/img/Grove---Single-Axis-Analog-Accelerometer-100g-ADXL1001-thumbnail.png)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/motion_2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/motion_3.jpg)|
+|[More Details](https://www.seeedstudio.com/Grove-Single-Axis-Analog-Accelerometer-100g-ADXL1001-p-4035.html)|[More Details](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer%28%C2%B1400g%29-p-1897.html)|[More Details](https://www.seeedstudio.com/Grove-3-Axis-Digital-Gyro-p-750.html)|
 
 | 3-Axis Digital Compass | 3-Axis Digital Compass V2 | 3-Axis Analog Accelerometer |
 |--------------------------|---------------------------|-----------------------|
@@ -319,22 +316,22 @@ Want some Grove modules for your project? Here are some recommendations, more pr
 
 ### Grove for Communication
 
-| Grove – Uart Wifi | 433MHz Simple RF link kit | 315MHz Simple RF Link Kit |
+| Uart Wifi V2 | 433MHz Simple RF link kit | 125KHz RFID Reader |
 |--------------------------|---------------------------|-----------------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/comu_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/comu_2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/comu_3.jpg)|
-|[More Details](https://www.seeedstudio.com/Grove-%E2%80%93-Uart-Wifi-p-2495.html)|[More Details](https://www.seeedstudio.com/Grove-433MHz-Simple-RF-link-kit-p-1062.html)|[More Details](https://www.seeedstudio.com/Grove-315MHz-Simple-RF-Link-Kit-p-1061.html)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/img/V2/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/comu_2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/comu_5.jpg)|
+|[More Details](https://www.seeedstudio.com/Grove-UART-WiFi-V2-ESP8285.html)|[More Details](https://www.seeedstudio.com/Grove-433MHz-Simple-RF-link-kit-p-1062.html)|[More Details](https://www.seeedstudio.com/Grove-125KHz-RFID-Reader-p-1008.html)|
 
 
-| Grove - Serial RF Pro | 125KHz RFID Reader | Grove - BLE |
+|BLE|BLE (dual model) |BLE Shield|
 |--------------------------|---------------------------|-----------------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/comu_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/comu_5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/comu_6.jpg)|
-|[More Details](https://www.seeedstudio.com/Grove-Serial-RF-Pro-p-794.html)|[More Details](https://www.seeedstudio.com/Grove-125KHz-RFID-Reader-p-1008.html)|[More Details](https://www.seeedstudio.com/Grove-BLE-p-1929.html)|
+|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/comu_6.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/comu_7.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Seeed_BLE_Shield/img/small.png)|
+|[More Details](https://www.seeedstudio.com/Grove-BLE-p-1929.html)|[More Details](https://www.seeedstudio.com/Grove-BLE-(dual-model)-p-2407.html)|[More Details](https://www.seeedstudio.com/Seeed-Blueseeed-Shield-HM11.html)|
 
 
-| Grove - BLE (dual model) | Grove - NFC | Grove - NFC Tag |
+|NFC Antenna| Grove - NFC | Grove - NFC Tag |
 |--------------------------|---------------------------|-----------------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/comu_7.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/comu_8.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/comu_9.jpg)|
-|[More Details](https://www.seeedstudio.com/Grove-BLE-(dual-model)-p-2407.html)|[More Details](https://www.seeedstudio.com/Grove-NFC-p-1804.html)|[More Details](https://www.seeedstudio.com/Grove-NFC-Tag-p-1866.html)|
+|[More Details](https://www.seeedstudio.com/NFC-Antenna-p-1805.html)|[More Details](https://www.seeedstudio.com/Grove-NFC-p-1804.html)|[More Details](https://www.seeedstudio.com/Grove-NFC-Tag-p-1866.html)|
 
 
 
@@ -367,10 +364,10 @@ Want some Grove modules for your project? Here are some recommendations, more pr
 |[More Details](https://www.seeedstudio.com/Grove%C2%A0-%C2%A0I2C%C2%A0Mini%C2%A0Motor%C2%A0Driver-p-2508.html)|[More Details](https://www.seeedstudio.com/Grove-I2C-Motor-Driver-p-907.html)|[More Details](https://www.seeedstudio.com/Grove-Servo-p-1241.html)|
 
 
-| Line Finder | Ultrasonic Ranger | 80cm Infrared Proximity Sensor |
+|Line Finder v1.1| Ultrasonic Ranger | 80cm Infrared Proximity Sensor |
 |--------------------------|---------------------------|-----------------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/robot_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/robot_5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/robot_6.jpg)|
-|[More Details](https://www.seeedstudio.com/Grove-Line-Finder-p-825.html)|[More Details](https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html)|[More Details](https://www.seeedstudio.com/Grove-80cm-Infrared-Proximity-Sensor-p-788.html)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Line_Finder/img/line_finder_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/robot_5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/robot_6.jpg)|
+|[More Details](https://www.seeedstudio.com/Grove-Line-Finder-v1-1.html)|[More Details](https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html)|[More Details](https://www.seeedstudio.com/Grove-80cm-Infrared-Proximity-Sensor-p-788.html)|
 
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
