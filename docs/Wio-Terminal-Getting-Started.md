@@ -205,6 +205,7 @@ In addition to power-on and reset, when using SWD, Digital, Analog, Serial, I2C,
 
 - **[PDF]** [ATSAMD51N19A Datasheet](https://files.seeedstudio.com/wiki/Wio-Terminal/res/ATSAMD51.pdf)
 - **[PDF]** [Wio Terminal Schematics](https://files.seeedstudio.com/wiki/Wio-Terminal/res/Wio-Terminal-Schematics.pdf)
+- **[AI]** [Wio-Terminal-Screen-Sticker-Design-File(Wio-Terminal-ちゃん)](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-Screen-Sticker-Design-File(Wio-Terminal-ちゃん).ai)
 
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
