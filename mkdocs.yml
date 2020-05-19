@@ -292,6 +292,7 @@ nav:
             - Accessing to GitHub using Wio Terminal: Wio-Terminal-Reading-Github.md
             - Gesture Recognition with Wio Terminal: Wio-Terminal-Gesture-Recognition.md
             - Reading Coronavirus Live Data using Wio Terminal: Wio-Terminal-Reading-COVID19.md
+            - Wio Terminal Initial Firmware (Retro Gaming): Wio-Terminal-Firmware.md
 
       - ReSpeaker:
           - ReSpeaker Introduction: ReSpeaker.md
