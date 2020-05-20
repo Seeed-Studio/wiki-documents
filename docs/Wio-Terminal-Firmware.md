@@ -23,7 +23,7 @@ You can download the complete source code of the Wio Terminal Initial Firmware f
 ![InstallLibrary](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Xnip2019-11-21_15-50-13.jpg)
 
 !!!Note
-        It also depends on the LCD and FS libraries, but they are included in the Wio Terminal Board library. If having troubles, please update to the latest board library.
+        It also depends on the** LCD and FS libraries**, but they are included in the Wio Terminal Board library. If having troubles, please update to the latest board library.
 
 ## Arduino Instructions
 
@@ -31,17 +31,17 @@ There are **2 ways** of loading images of the gaming elements:
 
 1. **Using Flash:**
 
-   - This is the default method and loads the images into the flash.
+      - This is the default method and loads the images into the flash.
 
-   - Upload the code.
+      - Upload the code.
 
 2. **Loading images using SD Card:**
 
-   - Copy and paste `rgb332` file(with all the images) into the SD card.
+      - Copy and paste `rgb332` file(with all the images) into the SD card.
 
-   - If loading images from the SD card, you need to uncomment the macro `LOAD_IMAGE_SD`.
+      - If loading images from the SD card, you need to uncomment the macro `LOAD_IMAGE_SD`.
 
-   - Upload the code.
+      - Upload the code.
 
 Now, you can enjoy playing retro gaming using WIo Terminal again!
 
