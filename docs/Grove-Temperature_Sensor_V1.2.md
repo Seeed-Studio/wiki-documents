@@ -9,11 +9,7 @@ sku: 101020015
 tags: io_3v3, io_5v, plat_duino
 ---
 
-
-<p style=":center"><img src="https://files.seeedstudio.com/wiki/Grove-Temperature_Sensor_V1.2/img/Grove_Temperature_Sensor_View.jpg" ></p>
-
-
-
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-Temperature_Sensor_V1.2/img/Grove_Temperature_Sensor_View.jpg"/></div>
 
 The Grove - Temperature Sensor uses a [Thermistor](https://files.seeedstudio.com/wiki/Grove-Temperature_Sensor_V1.2/res/NCP18WF104F03RC.pdf) to detect the ambient temperature. The resistance of a thermistor will increase when the ambient temperature decreases. It's this characteristic that we use to calculate the ambient temperature. The detectable range of this sensor is -40 - 125ºC, and the accuracy is ±1.5ºC
 
@@ -40,9 +36,9 @@ Note: This wiki works with Grove - Temperature sensor V1.1 as well, for V1.0 ple
 ## Platforms Supported
 -------------------
 
-| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
-|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg) |
+|Arduino|Raspberry|ArduPy|
+|---|---|---|
+|![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg)|![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg)|![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/ArduPy-Logo.png)|
 
 !!!Caution
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
@@ -92,7 +88,7 @@ After this section, you can make Grove - Temperature Sensor V1.1/1.2 run with on
 - **Step 1.** Launch Arduino IDE and click **File>New** to open a new page. Copy the following code into the new page and upload. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 
-```
+```cpp
 // Demo code for Grove - Temperature Sensor V1.1/1.2
 // Loovee @ 2015-8-26
 
@@ -169,24 +165,21 @@ The result should be like:
 - **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
 - **Step 2**. Download the source file by cloning the grove.py library. 
 
-```
+```sh
 cd ~
 git clone https://github.com/Seeed-Studio/grove.py
-
 ```
 
 - **Step 3**. Excute below commands to run the code.
 
-```
+```sh
 cd grove.py/grove
 python grove_temperature_sensor.py 0
-
 ```
 
 Following is the grove_temperature_sensor.py code.
 
 ```python
-
 import sys
 import time
 from grove.factory import Factory
@@ -207,14 +200,12 @@ def main():
 
 if __name__ == '__main__':
     main()
-
 ```
 
 !!!success
     If everything goes well, you will be able to see the following result
     
 ```python
-
 pi@raspberrypi:~/grove.py/grove $ python grove_temperature_sensor.py 0
 Hat Name = 'Grove Base Hat RPi'
 Detecting temperature...
@@ -229,7 +220,6 @@ Detecting temperature...
   File "grove_temperature_sensor.py", line 49, in main
     time.sleep(1)
 KeyboardInterrupt
-
 ```
 
 
@@ -278,15 +268,14 @@ You can quit this program by simply press ++ctrl+c++.
 
 - **Step 3.** Git clone the Github repository.
 
-```
+```sh
 cd ~
 git clone https://github.com/DexterInd/GrovePi.git
-
 ```
 
 -	**Step 4.** Excute below commands to use the Grove - Temperature Sensor to meansure the temperature.
 
-```
+```sh
 cd ~/GrovePi/Software/Python
 sudo python grove_temperature_sensor.py
 ```
@@ -294,7 +283,6 @@ sudo python grove_temperature_sensor.py
 Here is the grove_temperature_sensor.py code.
 
 ```python
-
 # NOTE:
 # 	The sensor uses a thermistor to detect ambient temperature.
 # 	The resistance of a thermistor will increase when the ambient temperature decreases.
@@ -331,7 +319,6 @@ while True:
 The result should be like:
 
 ```python
-
 pi@raspberrypi:~/GrovePi/Software/Python $ sudo python grove_temperature_sensor.py
 
 ('temp =', 25.28652137917777)
@@ -347,6 +334,103 @@ pi@raspberrypi:~/GrovePi/Software/Python $ sudo python grove_temperature_sensor.
 
 ```
 
+### Play With Wio Terminal (ArduPy)
+
+#### Hardware
+
+- **Step 1.** Prepare the below stuffs:
+
+| Wio Terminal | Grove - Temperature Sensor |
+|--------------|-----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-thumbnail.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Temperature_Sensor_V1.2/img/Grove_Temperature_Sensor_View_little.jpg)|
+|[Get One Now](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Get One Now](https://www.seeedstudio.com/Grove-Temperature-Sensor-p-774.htmll)|
+
+- **Step 2.** Connect Grove - Temperature Sensor to **A0** port of Wio Terminal.
+
+- **Step 3.** Connect the Wio Terminal to PC through USB Type-C cable.
+
+![](https://files.seeedstudio.com/wiki/Grove-Temperature_Sensor_V1.2/img/WT-temp.png)
+
+#### Software
+
+- **Step 1.** Follow [**ArduPy Getting Started**](https://wiki.seeedstudio.com/ArduPy/) to configure the ArduPy development environment on Wio Terminal.
+
+- **Step 2.** Make sure that the ArduPy firmware is flashed into Wio Terminal. For more information, please follow [**here**](https://wiki.seeedstudio.com/ArduPy/#ardupy-aip-cli-getting-started).
+
+```sh
+aip build
+aip flash
+```
+
+- **Step 3.** Copy the following code and save it as `ArduPy-temp.py`:
+
+```python
+from machine import Pin, ADC
+from machine import LCD
+from machine import Sprite
+import time, math
+
+raw = ADC(Pin(13))
+lcd = LCD()
+spr = Sprite(lcd) # Create a buff
+B = 4275 # B value of the thermistor
+R0 = 100000 # R0 = 100k
+
+def temp(reading):
+    R = 1023.0 / reading - 1.0
+    R = R0*R 
+    temperature = 1.0/(math.log(R/R0)/B+1/298.15)-273.15 # Convert to temperature via datasheet
+    return temperature
+
+def main():
+    spr.createSprite(320, 240)
+    while True:
+        spr.setTextSize(2)
+        spr.fillSprite(spr.color.BLACK)
+        spr.setTextColor(lcd.color.ORANGE)
+        spr.drawString("Temperature Reading", 45, 10)
+        spr.drawFastHLine(40, 35, 240, lcd.color.DARKGREY)
+        spr.setTextColor(lcd.color.WHITE)
+        spr.drawString("- ", 20, 50)
+        spr.drawFloat(temp(raw.read()), 3, 40,50)
+        spr.drawString("C", 120, 50)
+        spr.pushSprite(0,0)
+        time.sleep_ms(500)
+
+        print("Temperature: ", temp(raw.read()), "C")
+
+if __name__ == "__main__":
+    main()
+```
+
+- **Step 4.** Save the `ArduPy-temp.py` in a location that you know. Run the following command and **replace** `<YourPythonFilePath>` with your `ArduPy-temp.py` location.
+
+```sh
+aip shell -n -c "runfile <YourPythonFilePath>"
+# Example:
+# aip shell -n -c "runfile /Users/ansonhe/Desktop/ArduPy-temp.py"
+```
+
+- **Step 5.** We will see the temperature value display on terminal as below, and displaying on the Wio Terminal LCD screen.
+
+```sh
+ansonhe@Ansons-Macbook-Pro ~:aip shell -n -c "runfile /Users/ansonhe/Desktop/ArduPy-temp.py"
+Positional argument (/dev/cu.usbmodem141101) takes precedence over --open.
+Connected to ardupy
+Temperature:  28.08603 C
+Temperature:  28.50415 C
+Temperature:  28.16953 C
+Temperature:  28.25308 C
+Temperature:  28.08603 C
+Temperature:  28.16953 C
+Temperature:  28.08603 C
+Temperature:  28.16953 C
+Temperature:  28.33671 C
+Temperature:  28.16953 C
+Temperature:  28.25308 C
+```
+
+![](https://files.seeedstudio.com/wiki/Grove-Temperature_Sensor_V1.2/img/Ardupy-temp.png)
 
 
 ## Reference
