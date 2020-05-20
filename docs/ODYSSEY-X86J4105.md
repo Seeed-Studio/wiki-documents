@@ -42,10 +42,14 @@ The ODYSSEY - X86J4105, is based on Intel Celeron J4105, a Quad-Core 1.5GHz CPU 
 | Expansion Slots  | M.2(Key B, 2242/2280): SATA III, USB2.0, UIM; M.2 (Key M, 2242/2280): PCIe 2.0 ×4; Micro SD card Socket; SIM Card Socket; SATA III           |
 | RTC              | JST 1.0 CR2032 3V                                                                                                                                      |
 | TPM              | Built-in TPM (2.0)                                                                                                                                  |
-| Power            | DC Jack 5.5/2.1mm or Type-C PD; DC Jack input: 12-19V DC; Type-C input: 12V DC                                                                 |
+| Power Connector           |DC Jack 5.5/2.1mm or Type-C PD                                                                 |
+|Power Supply (for bare board)| DC Jack Input: Min:12V @ 300mA - 1.2A, Max:19V @ 200mA - 0.7A </br>Type-C Input: Min: 15V @ 0.27A, Max:15V @ 0.93A
+|
 | Dimensions       | 110x110mm                                                                                                                                               |
 | Certifications   | FCC, CE                                                                                                                                                 |
 
+!!!Note
+        If you are using 3.5inch HDD drives with the ODYSSEY – X86J4105, make sure to use a DC power supply of 12V@2A or Type-C power supply of 15V@2A. 
 
 ## Hardware Overview
 
