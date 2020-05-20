@@ -263,7 +263,6 @@ There are many kits for different platform.
 |Grove Inventor Kit for micro:bit|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Inventor-Kit-for-micro-bit-p-2891.html)|
 |Grove Starter Kit for LaunchPad|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Starter-Kit-for-LaunchPad-p-2178.html)|
 |Grove Starter Kit for BeagleBone Green|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Starter-Kit-for-SeeedStudio-BeagleBone-Green-p-2526.html)|
-|Grove Starter Kit for 96Boards|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Starter-Kit-for-96Boards-p-2618.html)|
 
 ## Choose your Grove
 
@@ -271,10 +270,10 @@ Want some Grove modules for your project? Here are some recommendations, more pr
 
 ### Grove Basic Input and Output
 
-| Grove - LED| Grove - Rotary Angle Sensor |Seeed IoT Button for AWS|
+| Grove - LED| Grove - Rotary Angle Sensor |Grove - Button(P)|
 |-----------|--------------------------|----------------------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Red_LED/img/45d_small.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/img/101020017.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Seeed-IOT-BUTTON-FOR-AWS/img/small.png)|
-| [More Details](https://www.seeedstudio.com/Grove-Red-LED.html) | [More Details](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html) | [More Details](https://www.seeedstudio.com/Seeed-IoT-Button-for-AWS-p-4527.html) |
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Red_LED/img/45d_small.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/img/101020017.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Button/image/Button_p_s.png)|
+| [More Details](https://www.seeedstudio.com/Grove-Red-LED.html) | [More Details](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html) | [More Details](https://www.seeedstudio.com/Grove-Button-P.html) |
 
 
 | Grove - Micro Switch| Grove - Encoder | Grove - I2C Touch Sensor |
