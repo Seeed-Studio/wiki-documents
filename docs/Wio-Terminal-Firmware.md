@@ -23,7 +23,7 @@ You can download the complete source code of the Wio Terminal Initial Firmware f
 ![InstallLibrary](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Xnip2019-11-21_15-50-13.jpg)
 
 !!!Note
-        It also depends on the** LCD and FS libraries**, but they are included in the Wio Terminal Board library. If having troubles, please update to the latest board library.
+        It also depends on the **LCD and FS libraries**, but they are included in the Wio Terminal Board library. If having troubles, please update to the latest board library.
 
 ## Arduino Instructions
 
