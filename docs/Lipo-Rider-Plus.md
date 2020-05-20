@@ -36,7 +36,12 @@ Simply put, the Lipo Rider Plus can charge the Lipo battery much faster, at the 
 
 ### Hardware connection
 
-![](https://files.seeedstudio.com/wiki/Lipo-Rider-Plus/img/Hardware_connection.png) 
+<div align="center">
+<figure>
+<img src="https://files.seeedstudio.com/wiki/Lipo-Rider-Plus/img/Hardware_connection.png" alt="Lipo Rider Plus'' OUTCOME" title="demo" />
+<figcaption><b></b><i></i></figcaption>
+</figure>
+</div>
 
 !!!Attention
         Make sure you use a built-in battery protector for your lithium battery or that you can connect a separate battery protector, otherwise it may overcharge or over-discharge the battery.
@@ -47,13 +52,23 @@ As we know, the traditional Lipo Charger can charge the lithium battery. Well, u
 
 **Charging the lithium battery**
 
-![](https://files.seeedstudio.com/wiki/Lipo-Rider-Plus/img/GIF.gif)
+<div align="center">
+<figure>
+<img src="https://files.seeedstudio.com/wiki/Lipo-Rider-Plus/img/GIF.gif" alt="Lipo Rider Plus'' OUTCOME" title="demo" />
+<figcaption><b></b><i></i></figcaption>
+</figure>
+</div>
 
 Of course, Lipo Rider Plus can charge the Lipo battery, and it is very fast, 5V/2A, 10W charging power, what a flying experience. 
 
 **Use the battery to power the device**
 
-![](https://files.seeedstudio.com/wiki/Lipo-Rider-Plus/img/GIF2.gif)
+<div align="center">
+<figure>
+<img src="https://files.seeedstudio.com/wiki/Lipo-Rider-Plus/img/GIF2.gif" alt="Lipo Rider Plus'' OUTCOME" title="demo" />
+<figcaption><b></b><i></i></figcaption>
+</figure>
+</div>
 
 Not only a charger but also a power supply and a booster. With the help of Lipo Rider Plus, you can input a 3.7V lipo battery, and output up to 5V/2.4A via the USB Type-A port. With the on-board switch, you can control the ON/OFF of USB port easily. Meanwhile, we provide the full function pin header, which can output 3.3V/250mA as well.   
 
