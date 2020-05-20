@@ -237,7 +237,7 @@ Q(L/hour) = f*60*60/4380 = f*60 /73
 ## Water Flow Sensors at Seeed
 
 !!!Tip
-   There are numerous Water Flow Sensors on sale at Seeed, including [YF - 402](https://www.seeedstudio.com/M11-1-25-Water-Flow-Sensor-p-1345.html) and [YF - S201](https://www.seeedstudio.com/G1-2-Water-Flow-Sensor-p-635.html). Besides, we offer a variety of Water Flow Sensors with different dimensions, detecting ranges, material and etc as following:
+      There are numerous Water Flow Sensors on sale at Seeed, including [YF - 402](https://www.seeedstudio.com/M11-1-25-Water-Flow-Sensor-p-1345.html) and [YF - S201](https://www.seeedstudio.com/G1-2-Water-Flow-Sensor-p-635.html). Besides, we offer a variety of Water Flow Sensors with different dimensions, detecting ranges, material and etc as following:
 
 
 |   Type   | Dimensions(DN) | Working Voltage | Flow Rate Range | Length |    Male & Female   | Length of Thread | Material |
