@@ -321,7 +321,7 @@ This also need to be configured in the BIOS. Enter BIOS settings by pressing DEL
 
 - **[PDF]** [ODYSSEY-X86 User Manual](https://files.seeedstudio.com/products/102110399/Documents/ODYSSEY-X86%20User-Manual-v1.1.pdf)
 
-- **[ZIP]** [ODYSSEY-X86 Windows Driver Package](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/ODYSSEY-X86-WIndows-Drivers.zip)
+- **[ZIP]** [ODYSSEY-X86 Windows 10 Driver Package](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/ODYSSEY-X86-WIndows-Drivers.zip)
 
 ## Tech Support
 
