@@ -115,3 +115,15 @@ void loop() {
 
 }
 ```
+
+## Controlling Brightness of the LCD Backlight
+
+This example is written by [**Kenta IDA**](https://github.com/ciniml) and all credits goes to Kenta IDA.
+
+**STEP 1.** **Download the [repo](https://github.com/Seeed-Studio/Seeed_Arduino_Sketchbook) here.**
+
+- Under `examples/WioTerminal_BackLight` location.
+
+**STEP 2.** **Upload the code.**
+
+Upload the `lcd_backlight_control.ino` to Wio Terminal and you will see brightness change on the LCD.
