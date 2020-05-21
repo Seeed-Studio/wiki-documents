@@ -147,27 +147,6 @@ Due to the influence of the capacitance, the module can only output the bass sig
 !!!Success
      When the code finishes uploaded, you will hear the Speaker making a DO to SI sound.
 
-### Play with Codecraft
-
-**Step 1.** Connect Grove - Speaker Plus to port **D3** in a Base Shield and plug the Base Shield to your Seeeduino.
-
-**Step 2.** Link Seeeduino to your PC via an USB cable.
-
-**Step 3.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
-
-!!!Note
-    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](https://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
-
-**Step 4.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
-
-![](https://files.seeedstudio.com/wiki/Grove-Speaker/img/Speaker.png)
-
-Upload the program to your Arduino/Seeeduino.
-
-!!!Success
-     When the code finishes uploaded, you will hear the Speaker making a DO to SI sound.
-
-
 ## Schematic Online Viewer
 
 <div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Speaker_Plus/202002903_Grove-Speaker_Plus_v1.0_SCH&PCB.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
@@ -179,7 +158,6 @@ Resources
 
 -   [How to generate different tone with MCU](https://files.seeedstudio.com/wiki/Grove-Speaker/res/Tone.pdf)
 -   [LM386 Low Voltage Audio Power Amplifier Datasheet](https://files.seeedstudio.com/wiki/Grove-Speaker/res/LM386_Low_Voltage_Audio_Power_Amplifier_Datasheet.pdf)
--   [CodeCraft Code](https://files.seeedstudio.com/wiki/Grove-Speaker/res/Speaker.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
