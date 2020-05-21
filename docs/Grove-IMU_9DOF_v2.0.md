@@ -176,6 +176,9 @@ void loop()
 	delay(300);
 }
 ```
+!!!Note If we don't have Grove base shield , We also can directly connect this module to Seeeduino LoRaWAN,but we need add three line code as below picture.
+
+![](https://files.seeedstudio.com/wiki/Grove-IMU_9DOF_v2.0/img/modify_code.png)
 
 
 **Step 4.** Upload the code and after that, you can see :
