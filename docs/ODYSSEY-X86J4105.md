@@ -53,7 +53,7 @@ The ODYSSEY - X86J4105, is based on Intel Celeron J4105, a Quad-Core 1.5GHz CPU 
 
 ## Hardware Overview
 
-![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/X86-Hardware-Overview-New.jpg)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/X86-08-n.png)
 
 ## Pinout Diagram
 
@@ -321,6 +321,8 @@ This also need to be configured in the BIOS. Enter BIOS settings by pressing DEL
 
 - **[PDF]** [ODYSSEY-X86 User Manual](https://files.seeedstudio.com/products/102110399/Documents/ODYSSEY-X86%20User-Manual-v1.1.pdf)
 
+- **[ZIP]** [ODYSSEY-X86 Windows Driver Package](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/ODYSSEY-X86-WIndows-Drivers.zip)
 
 ## Tech Support
+
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -158,6 +158,8 @@ void loop()
 ](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/res/DE-LiDAR%20TFmini%20Datasheet-V1.7-EN.pdf)
 - **[Software]** [Grove-TF-Mini-LiDAR Master Computer Software
 ](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/res/Grove-TF-Mini-LiDAR%20Master%20Computer%20Software.zip)
+- **[Product Manual]** [SJ-PM-TFmini-T-01_A06 Product Manual_EN.pdf
+](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/res/SJ-PM-TFmini-T-01_A06_Product_Manual_EN.pdf)
 - **[Library]** [TFmini Examples on Arduino](https://github.com/TFmini/TFmini-Arduino)
 - **[Library]** [TFmini Examples on RaspberryPi](https://github.com/TFmini/TFmini-RaspberryPi)
 - **[Library]** [TFmini Examples on TFmini-STM32](https://github.com/TFmini/TFmini-STM32)

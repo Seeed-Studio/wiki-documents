@@ -16,8 +16,8 @@ tags: io_3v3, io_5v, plat_duino
 ## Features
 - It can supports a wide range of ATMEL AVR microcontrollor.
 - It can works with AVR Studio or WINAVR (GCC)
-- It works with ATMEL AVR Studio 4.13, you can upgraded it's firmware,in upgrade firmware Completed,it can work at a higher version of the AVR Studio and to be able to support more device,
-- Completed,it can work at a higher version of the AVR Studio and to be able to support more device,Compact Size - 75mm x 57mm x 27mm
+- It can’t upgrade the firmware. If you can’t download ATMEL AVR Studio 4.13, please download avrstudio7, please download the latest version of AvrStudio. Tools select stk500.
+
 
 ## Application Ideas
 - AVR programming
