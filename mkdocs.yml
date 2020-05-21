@@ -113,21 +113,9 @@ nav:
 
   - Platform:
       - Platform Introduction: Platform.md
+
       - Arduino:
           - Arduino Introduction: Arduino.md
-          - 4WD Driver Platform V1.0: 4WD_Driver_Platform_V1.0.md
-          - 4WD Mecanum Wheel Robot Kit Series: 4WD_Mecanum_Wheel_Robot_Kit_Series.md
-          - Basic Fastener Kit: Basic_Fastener_Kit.md
-          - Galileo Case: Galileo_Case.md
-          - Grove Maker Kit for Intel Joule: Grove Maker Kit for Intel Joule.md
-          - Grove Speech Recognizer Kit for Arduino: Grove_Speech_Recognizer_Kit_for_Arduino.md
-          - Grove Starter kit for Arduino&amp;Genuino 101: Grove_Starter_kit_for_Arduino_101.md
-          - Hercules Dual 15A 6-20V Motor Controller: Hercules_Dual_15A_6-20V_Motor_Controller.md
-          - Rainbow Cube Kit Acrylic Harness: Rainbow_Cube_Kit_Acrylic_Harness.md
-          - Rainbow Cube kit - RGB 4*4*4 (Rainbowduino Compatible): Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible.md
-          - Rainbowduino: Rainbowduino.md
-          - Rainbowduino LED driver platform - ATmega328: Rainbowduino_LED_driver_platform-ATmega328.md
-          - Rainbowduino v3.0: Rainbowduino_v3.0.md
           - Seeeduino Cloud: Seeeduino_Cloud.md
           - Seeeduino Cortex M0: Seeeduino-Cortex-M0.md
           - Seeeduino Ethernet: Seeeduino_Ethernet.md
@@ -146,17 +134,13 @@ nav:
           - Seeeduino v4.2: Seeeduino_v4.2.md
           - SeeedStudio GD32 RISC-V Dev Board: SeeedStudio-GD32-RISC-V-Dev-Board.md
           - Seeeduino Crypto (ATmega4809 ECC608): Seeeduino-Crypto-ATmega4809-ECC608.md
-          - Shield Bot V1.1: Shield_Bot_V1.1.md
-          - Shield Bot V1.2: Shield_Bot_V1.2.md
           - Sidekick Basic Kit for Arduino V2: Sidekick_Basic_Kit_for_Arduino_V2.md
           - Sidekick Basic Kit for TI LaunchPad: Sidekick_Basic_Kit_for_TI_LaunchPad.md
-          - Skeleton Bot - 4WD hercules mobile robotic platform: Skeleton_Bot-4WD_hercules_mobile_robotic_platform.md
-          - Skeleton Box: Skeleton_Box.md
-          - Skeleton Box (10x7,10x10,17x10): Skeleton_Box_10x7_10x10_17x10.md
-          - Tricycle Bot: Tricycle_Bot.md
           - UartSBee V4: UartSBee_V4.md
           - UartSBee v5: UartSBee_v5.md
-
+          - Grove Speech Recognizer Kit for Arduino: Grove_Speech_Recognizer_Kit_for_Arduino.md
+          - Grove Starter kit for Arduino&amp;Genuino 101: Grove_Starter_kit_for_Arduino_101.md
+          - Rainbow Cube kit - RGB 4*4*4 (Rainbowduino Compatible): Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible.md
 
       - Raspberry Pi:
           - Raspberry Pi Introduction: Raspberry_Pi.md
@@ -180,7 +164,6 @@ nav:
           - Grove Base Kit for Raspberry Pi: Grove_Base_Kit_for_Raspberry_Pi.md
           - 2 Channel CAN BUS FD Shield for Raspberry Pi: 2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi.md
 
-
       - BeagleBone®:
           - BeagleBone® Introduction: BeagleBone.md
           - BeagleBone® Solutions: BeagleBone_Solutions.md
@@ -195,10 +178,7 @@ nav:
           - Motor Bridge Cape v1.0: Motor_Bridge_Cape_v1.0.md
           - Skeleton box for Beaglebone®: Skeleton_box_for_Beaglebone.md
           - Seeed Studio BeagleBone® Green LCD Cape with Resistive Touch: Seeed-Studio-BeagleBone-Green-LCD-Cape-with-Resistive-Touch.md
-      - NPi-i:
-          - NPi i.MX6ULL Dev Board Linux SBC: NPi-i.MX6ULL-Dev-Board-Linux-SBC.md
-      - SenseCap:
-          - Sensecap LoRaWAN Gateway and Wireless Sensor User Guide: Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide.md
+
       - ODYSSEY:
           - ODYSSEY X86J4105:
             - ODYSSEY X86J4105 Getting Started: ODYSSEY-X86J4105.md
@@ -312,22 +292,22 @@ nav:
           - Snips Voice Interaction Satellite Kit: Snips_Voice_Interaction_Satellite_Kit.md
           - Snips Voice Interaction Base Kit: Snips_Voice_Interaction_Base_Kit.md
 
+      - NPi-i:
+          - NPi i.MX6ULL Dev Board Linux SBC: NPi-i.MX6ULL-Dev-Board-Linux-SBC.md
+
+      - SenseCap:
+          - Sensecap LoRaWAN Gateway and Wireless Sensor User Guide: Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide.md
+
       - Azure Sphere:
           - Azure Sphere MT3620 Development Kit: Azure_Sphere_MT3620_Development_Kit.md
           - Grove Starter Kit for Azure Sphere MT3620 Development Kit: Grove_Starter_Kit_for_Azure_Sphere_MT3620_Development_Kit.md
           - MT3620 Ethernet Shield v1.0: MT3620_Ethernet_Shield_v1.0.md
           - MT3620 Mini Dev Board: MT3620_Mini_Dev_Board.md
           - MT3620 Grove Breakout: MT3620_Grove_Breakout.md
-      
-      
-      - Artik:
-          - Artik Introduction: Artik.md
-          - Eagleye 530s: Eagleye_530s.md
 
       - micro:bit:
           - microbit wiki Page: microbit_wiki_page.md
           - Grove Inventor Kit for micro:bit: Grove_Inventor_Kit_for_microbit.md
-
 
       - Shield:
           - Shield Introduction: Shield.md
@@ -335,14 +315,9 @@ nav:
           - 4A Motor Shield: 4A_Motor_Shield.md
           - Base Shield V2: Base_Shield_V2.md
           - Bluetooth Shield V2.0: Bluetooth_Shield_V2.md
-          - CAN-BUS Shield V1.2: CAN-BUS_Shield_V1.2.md
           - CAN-BUS Shield V2.0: CAN-BUS_Shield_V2.0.md
           - Camera Shield: Camera_Shield.md
-          - EL Shield: EL_Shield.md
           - Energy Shield: Energy_Shield.md
-          - GPRS Shield V1.0: GPRS_Shield_v1.0.md
-          - GPRS Shield V3.0: GPRS_Shield_V3.0.md
-          - Mbed Shield: mbed_Shield.md
           - Motor Shield V2.0: Motor_Shield_V2.0.md
           - Brushless Motor Shield (TB6605FTG): Brushless-Motor-Shield-TB6605FTG.md
           - Music Shield V2.2: Music_Shield_V2.2.md
@@ -351,16 +326,11 @@ nav:
           - RS232 Shield: RS232_Shield.md
           - Relay Shield v3.0: Relay_Shield_v3.md
           - SD Card shield V4.0: SD_Card_shield_V4.0.md
-          - Seeed BLE Shield v1: Seeed_BLE_Shield.md
-          - Small e-Paper Shield V2: Small_e-Paper_Shield_V2.md
           - Solar Charger Shield V2.2: Solar_Charger_Shield_V2.2.md
           - Spartan Edge Accelerator Board: Spartan-Edge-Accelerator-Board.md
           - W5500 Ethernet Shield v1.0: W5500_Ethernet_Shield_v1.0.md
-          - Wifi Shield (Fi250) V1.1: Wifi_Shield_Fi250_V1.1.md
-          - Wifi Shield V2.0: Wifi_Shield_V2.0.md
-          - XBee Shield V2.0: XBee_Shield_V2.0.md
-          
 
+          
       - Wio Tracker:
           - Wio Tracker Introduction: Wio_Tracker.md
           - Wio LTE Cat.1: Wio_LTE_Cat.1.md
@@ -385,101 +355,16 @@ nav:
           - Wio Lite MG126: Wio-Lite-MG126.md
           - Wio Lite RISC V GD32VF103 with ESP8266: Wio_Lite_RISC_V_GD32VF103_with_ESP8266.md
       
-      - Air Serial:
-          - Air602 WiFi Development Board: Air602_WiFi_Development_Board.md
-          - Air602 Firmware Programming Manual: Air602_Firmware_Programming_Manual.md
-
-      - W600:
-          - W600 Module: W600_Module.md
-
-     
       - Arch:
           - Arch_Mix.md
 
-
-      - LinkIt:
-          - LinkIt Introduction: LinkIt.md
-          - Arduino Breakout for LinkIt Smart 7688 Duo: Arduino_Breakout_for_LinkIt_Smart_7688_Duo.md
-          - Breakout for LinkIt Smart 7688: Breakout_for_LinkIt_Smart_7688.md
-          - Breakout for LinkIt Smart 7688 v2.0: Breakout_for_LinkIt_Smart_7688_v2.0.md
-          - Grove - Starter Kit for LinkIt ONE: Grove-Starter_Kit_for_LinkIt_ONE.md
-          - Grove Breakout for LinkIt Smart 7688 Duo: Grove_Breakout_for_LinkIt_Smart_7688_Duo.md
-          - Grove Starter kit for LinkIt Smart7688 Duo: Grove_Starter_kit_for_LinkIt_Smart7688_Duo.md
-          - LinkIt ONE: LinkIt_ONE.md
-          - LinkIt Smart 7688: LinkIt_Smart_7688.md
-          - LinkIt Smart 7688 Duo: LinkIt_Smart_7688_Duo.md
-          - Linkit Connect 7681: Linkit_Connect_7681.md
-          - Sidekick Basic Kit for LinkIt ONE: Sidekick_Basic_Kit_for_LinkIt_ONE.md
-
-      - mbed:
-          - mbed Introduction: mbed.md
-          - Arch BLE: Arch_BLE.md
-          - Arch GPRS V2: Arch_GPRS_V2.md
-          - Arch Link: Arch_Link.md
-          - Arch Max v1.1: Arch_Max_v1.1.md
-          - Arch Pro: Arch_Pro.md
-          - Arch V1.1: Arch_V1.1.md
-          - Grove - Starter Kit for mbed: Grove-Starter_Kit_for_mbed.md
-          - Seeeduino Arch V1.0: Seeeduino_Arch_V1.0.md
-          - Tiny BLE: Tiny_BLE.md
-
-      - RePhone:
-          - RePhone Introduction: RePhone.md
-          - RePhone Geo Kit: RePhone_Geo_Kit.md
-          - RePhone Lumi Kit: RePhone_Lumi_Kit.md
-          - RePhone Strap Kit for Pebble: RePhone_Strap_Kit_for_Pebble.md
-          - Rephone Core 2G-Atmel32u4: RePhone_core_2G-Atmel32u4.md
-          - Rephone Core 2G-AtmelSAMD21: Rephone_core_2G-AtmelSAMD21.md
-          - Retro Phone Kit: Retro Phone Kit.md
-          - Xadow - 3-Axis Accelerometer: Xadow_3_Aixs_Accelerometer.md
-          - Xadow - 3-Axis Digital Accelerometer(±400g): Xadow_3_Aixs_Digital_Accelerometer_plusandminus_400g.md
-          - Xadow - BLE (Dual Model) v1.0: Xadow_BLE_Dual_Model_V1.0.md
-          - Xadow - BLE Slave: Xadow_BLE_Slave.md
-          - Xadow - Breakout: Xadow_Breakout.md
-          - Xadow - Buzzer: Xadow_Buzzer.md
-          - Xadow - Compass: Xadow_Compass.md
-          - Xadow - Edison Kit: Xadow_Edison_Kit.md
-          - Xadow - GPS: Xadow_GPS.md
-          - Xadow - Gesture v1.0: Xadow_Gesture_v1.0.md
-          - Xadow - Grove Adaptor: Xadow_Grove_Adaptor.md
-          - Xadow - IMU 10DOF: Xadow_IMU_10DOF.md
-          - Xadow - IMU 6DOF: Xadow_IMU_6DOF.md
-          - Xadow - IMU 9DOF: Xadow_IMU_9DOF.md
-          - Xadow - LED 5x7: Xadow_LED_5x7.md
-          - Xadow - LED 5x7 v1.0: Xadow_LED_5_multiply_7_v1.0.md
-          - Xadow - M0: Xadow_M0.md
-          - Xadow - Main Board: Xadow_Main_Board.md
-          - Xadow - Motor Driver: Xadow_Motor_Driver.md
-          - Xadow - Multichannel Gas Sensor: Xadow_Multichannel_Gas_Sensor.md
-          - Xadow - OLED 128*64: Xado_OLED_128multiply64.md
-          - Xadow - RGB OLED 96*64: Xadow_RGB_OLED_96multiply64.md
-          - Xadow - RTC: Xadow_RTC.md
-          - Xadow - Storage: Xadow_Storage.md
-          - Xadow - UV Sensor: Xadow_UV_Sensor.md
-          - Xadow - Vibrator Motor: Xadow_Vibrator_Motor.md
-          - Xadow - 1.54 inch Touchscreen: Xadow_1.54_inch_Touchscreen.md
-          - Xadow - Audio: Xadow_Audio.md
-          - Xadow - BLE: Xadow_BLE.md
-          - Xadow - Barometer: Xadow_Barometer.md
-          - Xadow - Barometer BMP180: Xadow_Barometer_BMP180.md
-          - Xadow - Basic Sensors: Xadow_Basic_Sensors.md
-          - Xadow - Duino: Xadow_Duino.md
-          - Xadow - GPS V2: Xadow_GPS_V2.md
-          - Xadow - GSM Breakout: Xadow_GSM_Breakout.md
-          - Xadow - GSM&#43;BLE: Xadow_GSMPlusBLE.md
-          - Xadow - Metal Frame: Xadow_Metal_Frame.md
-          - Xadow - NFC: Xadow_NFC.md
-          - Xadow - NFC v2: Xadow_NFC_v2.md
-          - Xadow - NFC Tag: Xadow_NFC_tag.md
-          - Xadow - Pebble Time Adapter: Xadow_Pebble_Time_Adapter.md
-          - Xadow - Q Touch Sensor: Xadow_Q_Touch_Sensor.md
-          - Xadow Tutorial - Acceleration Detector: Xadow_Tutorial_Acceleration_Detector.md
-          - Xadow Tutorial - Communicate via BLE: Xadow_Tutorial_Communicate_via_BLE.md
-          - Xadow Wearable Kit For Edison: Xadow_Wearable_Kit_For_Edison.md
-          - XadowTtutorial-Shaking Shaking: Xadow_Tutorial_Shaking_Shaking.md
-
       - Wireless:
           - Wireless Introduction: Wireless.md
+          - Air Serial:
+              - Air602 WiFi Development Board: Air602_WiFi_Development_Board.md
+              - Air602 Firmware Programming Manual: Air602_Firmware_Programming_Manual.md
+          - W600:
+              - W600 Module: W600_Module.md
           - BLE (dual) Bee v1.0: BLE_dual_Bee_v1.0.md
           - BLE Carbon: BLE_Carbon.md
           - BLE Micro: BLE_Micro.md
@@ -510,22 +395,67 @@ nav:
       - Grove Introduction: Grove.md
       - Grove System: Grove_System.md
       - Grove - New Products: Grove-New_Products.md
-      - Sensor:
-          - Sensor Introduction: Sensor.md
-          - Sensor - Gas: Sensor_gas.md
-          - Sensor - Barometer: Sensor_barometer.md
-          - Sensor - Accelerometer: Sensor_accelerometer.md
+
+      - Temperature:
           - Sensor - Temperature: Sensor_temperature.md
-          - Sensor - Light: Sensor_light.md
-          - Sensor - Biomedicine: Sensor_biomedicine.md
-          - Sensor - Sound: Sensor_sound.md
+          - Grove - CO2 & Temperature & Humidity Sensor (SCD30): Grove-CO2_Temperature_Humidity_Sensor-SCD30.md
+          - Grove - Temp and Humi Sensor(SHT31): Grove-TempAndHumi_Sensor-SHT31.md
+          - Grove - I2C High Accuracy Temp&Humi Sensor(SHT35): Grove-I2C_High_Accuracy_Temp&Humi_Sensor-SHT35.md
+          - Grove - Temperature Sensor: Grove-Temperature_Sensor.md
+          - Grove - Temperature Sensor V1.2: Grove-Temperature_Sensor_V1.2.md
+          - Grove - Temperature&Humidity Sensor Pro: Grove-Temperature_and_Humidity_Sensor_Pro.md
+          - Grove - Temperature&amp;Humidity Sensor: Grove-TemperatureAndHumidity_Sensor.md
+          - Grove - Temperature&amp;Humidity Sensor (HDC1000): Grove-TemperatureAndHumidity_Sensor-HDC1000.md
+          - Grove - Temperature&amp;Humidity Sensor (High-Accuracy &amp;Mini) v1.0: Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0.md
+          - Grove - Thermal Imaging Camera IR Array: Grove-Thermal-Imaging-Camera-IR-Array.md
+          - Grove - I2C High Accuracy Temperature Sensor(MCP9808): Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808.md
+          - Grove - Digital Infrared Temperature Sensor: Grove-Digital_Infrared_Temperature_Sensor.md
+          - Grove - Infrared Temperature Sensor: Grove-Infrared_Temperature_Sensor.md
+          - Grove - Infrared Temperature Sensor Array(AMG8833): Grove-Infrared_Temperature_Sensor_Array-AMG8833.md
+          - Grove - Temperature Humidity Pressure Gas Sensor(BME680): Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680.md
+          - Grove - High Temperature Sensor: Grove-High_Temperature_Sensor.md
+          - Grove - 1-Wire Thermocouple Amplifier(MAX31850K): Grove-1-Wire_Thermocouple_Amplifier-MAX31850K.md
+          - Grove - I2C Thermocouple Amplifier (MCP9600): Grove-I2C_Thermocouple_Amplifier-MCP9600.md
+
+      - Distance:
           - Sensor - Distance: Sensor_distance.md
-          - Sensor - Others: Sensor_Others.md
-          - Grove - 2 Channel Inductive Sensor (LDC1612): Grove-2_Channel_Inductive_Sensor-LDC1612.md
-          - Grove - Digital PIR Sensor: Grove-Digital-PIR-Sensor.md
-          - Grove - 2.5A DC Current Sensor(ACS70331): Grove-2.5A-DC-Current-Sensor-ACS70331.md
-          - Grove - ±5A DC/AC Current Sensor (ACS70331): Grove-5A_DC_AC_Current_Sensor-ACS70331.md
-          - Grove - 10A DC Current Sensor (ACS725): Grove-10A_DC_Current_Sensor-ACS725.md
+          - Grove - Ultrasonic Ranger: Grove-Ultrasonic_Ranger.md
+          - Grove - IR Distance Interrupter v1.2: Grove-IR_Distance_Interrupter_v1.2.md
+          - Grove - TF Mini LiDAR: Grove-TF_Mini_LiDAR.md
+          - Grove - Doppler Radar: Grove-Doppler-Radar.md
+          - Grove - Time of Flight Distance Sensor VL53L0X: Grove-Time_of_Flight_Distance_Sensor-VL53L0X.md
+          - Grove - Digital Distance Interrupter 0.5 to 5cm(GP2Y0D805Z0F): Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F.md
+          - Grove - Digital Distance Interrupter 0.5 to 5cm(GP2Y0D805Z0F)(P): Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F_P.md
+          - Grove - 80cm Infrared Proximity Sensor: Grove-80cm_Infrared_Proximity_Sensor.md
+
+      - Gas:
+          - Sensor - Gas: Sensor_gas.md
+          - Grove - Gas Sensor: Grove-Gas_Sensor.md
+          - Grove - Gas Sensor V2(Multichannel): Grove-Multichannel-Gas-Sensor-V2.md
+          - Grove - Gas Sensor(MQ2): Grove-Gas_Sensor-MQ2.md
+          - Grove - Gas Sensor(MQ3): Grove-Gas_Sensor-MQ3.md
+          - Grove - Gas Sensor(MQ5): Grove-Gas_Sensor-MQ5.md
+          - Grove - Gas Sensor(MQ9): Grove-Gas_Sensor-MQ9.md
+          - Grove - Gas Sensor(O₂): Grove-Gas_Sensor-O2.md
+          - Grove - Multichannel Gas Sensor: Grove-Multichannel_Gas_Sensor.md
+          - Grove - VOC and eCO2 Gas Sensor(SGP30): Grove-VOC_and_eCO2_Gas_Sensor-SGP30.md
+          - Grove - Alcohol Sensor: Grove-Alcohol_Sensor.md
+          - Grove - CO2 Sensor: Grove-CO2_Sensor.md
+          - Grove - HCHO Sensor: Grove-HCHO_Sensor.md
+          - Grove - Air Quality Sensor v1.3: Grove-Air_Quality_Sensor_v1.3.md
+
+      - Barometer:
+          - Sensor - Barometer: Sensor_barometer.md
+          - Grove - Barometer (High-Accuracy): Grove-Barometer-High-Accuracy.md
+          - Grove - Barometer Sensor: Grove-Barometer_Sensor.md
+          - Grove - Barometer Sensor (BMP180): Grove-Barometer_Sensor-BMP180.md
+          - Grove - Barometer Sensor (BMP280): Grove-Barometer_Sensor-BMP280.md
+          - Grove - Barometer Sensor(BME280): Grove-Barometer_Sensor-BME280.md
+          - Grove - High Precision Barometric Pressure Sensor DPS310: Grove-High-Precision-Barometric-Pressure-Sensor-DPS310.md
+          - Grove - Integrated Pressure Sensor Kit: Grove-Integrated-Pressure-Sensor-Kit.md
+
+      - Accelerometer:
+          - Sensor - Accelerometer: Sensor_accelerometer.md
           - Grove - 3 Axis Digital Accelerometer(±16g): Grove-3-Axis_Digital_Accelerometer-16g.md
           - Grove - 3-Axis Analog Accelerometer: Grove-3-Axis_Analog_Accelerometer.md
           - Grove - 3-Axis Compass V1.0: Grove-3-Axis_Compass_V1.0.md
@@ -538,79 +468,79 @@ nav:
           - Grove - 3-Axis Digital Accelerometer 40g (ADXL357): Grove-3-Axis_Digital_Accelerometer_40g-ADXL357.md
           - Grove - 3-Axis Digital Accelerometer 200g (ADXL372): Grove-3-Axis_Digital_Accelerometer_200g-ADXL372.md
           - Grove - 3-Axis Digital Gyro: Grove-3-Axis_Digital_Gyro.md
+          - Grove - 3 Axis Digital Accelerometer±16g Ultra-low Power (BMA400): Grove-3-Axis_Digital_Accelerometer±16g_Ultra-low_Power-BMA400.md
           - Grove - 6-Axis Accelerometer&amp;Compass V2.0: Grove-6-Axis_AccelerometerAndCompass_V2.0.md
           - Grove - 6-Axis Accelerometer&amp;Gyroscope: Grove-6-Axis_AccelerometerAndGyroscope.md
-          - Grove - Adjustable PIR Motion Sensor: Grove-Adjustable_PIR_Motion_Sensor.md
-          - Grove - 80cm Infrared Proximity Sensor: Grove-80cm_Infrared_Proximity_Sensor.md
-          - Grove - Air Quality Sensor v1.3: Grove-Air_Quality_Sensor_v1.3.md
-          - Grove - Alcohol Sensor: Grove-Alcohol_Sensor.md
-          - Grove - Barometer (High-Accuracy): Grove-Barometer-High-Accuracy.md
-          - Grove - Barometer Sensor: Grove-Barometer_Sensor.md
-          - Grove - Barometer Sensor (BMP180): Grove-Barometer_Sensor-BMP180.md
-          - Grove - Barometer Sensor (BMP280): Grove-Barometer_Sensor-BMP280.md
-          - Grove - Barometer Sensor(BME280): Grove-Barometer_Sensor-BME280.md
-          - Grove - Temperature Humidity Pressure Gas Sensor(BME680): Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680.md
-          - Grove - Button: Grove-Button.md
-          - Grove - Doppler Radar: Grove-Doppler-Radar.md
-          - Grove - Dual Button: Grove-Dual-Button.md
-          - Grove - LED Button: Grove-LED_Button.md
-          - Grove - CO2 Sensor: Grove-CO2_Sensor.md
-          - Grove - CO2 & Temperature & Humidity Sensor (SCD30): Grove-CO2_Temperature_Humidity_Sensor-SCD30.md
-          - Grove - Chest Strap Heart Rate Sensor: Grove-Chest_Strap_Heart_Rate_Sensor.md
-          - Grove - Collision Sensor: Grove-Collision_Sensor.md
-          - Grove - Capacitive Fingerprint Scanner/Sensor: Grove-Capacitive-Fingerprint-Sensor.md
-          - Grove - Capacitive Moisture Sensor (Corrosion-Resistant): Grove-Capacitive_Moisture_Sensor-Corrosion-Resistant.md
-          - Grove - Differential Amplifier v1.0: Grove-Differential_Amplifier_v1.0.md
-          - Grove - Digital Infrared Temperature Sensor: Grove-Digital_Infrared_Temperature_Sensor.md
+          - Grove - 6-Axis Accelerometer&Gyroscope(BMI088): Grove-6-Axis_Accelerometer&Gyroscope(BMI088).md
+          - Grove - IMU 10DOF: Grove-IMU_10DOF.md
+          - Grove - IMU 10DOF v2.0: Grove-IMU_10DOF_v2.0.md
+          - Grove - IMU 9DOF v2.0: Grove-IMU_9DOF_v2.0.md
+          - Grove - IMU 9DOF(lcm20600+AK09918): Grove-IMU_9DOF-lcm20600+AK09918.md
+
+      - Light:
+          - Sensor - Light: Sensor_light.md
           - Grove - Digital Light Sensor: Grove-Digital_Light_Sensor.md
-          - Grove - Dust Sensor: Grove-Dust_Sensor.md
+          - Grove - Heelight Sensor: Grove-Heelight_Sensor.md
+          - Grove - Light Sensor: Grove-Light_Sensor.md
+          - Grove - Sunlight Sensor: Grove-Sunlight_Sensor.md
+          - Grove - UV Sensor: Grove-UV_Sensor.md
+          - Grove - Light Gesture Color Proximity Sensor (TMG39931): Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931.md
+          - Grove - I2C UV Sensor (VEML6070): Grove-I2C_UV_Sensor-VEML6070.md
+          - Grove - Luminance Sensor: Grove-Luminance_Sensor.md
+
+      - Biomedicine:
+          - Sensor - Biomedicine: Sensor_biomedicine.md
+          - Grove - Finger-clip Heart Rate Sensor: Grove-Finger-clip_Heart_Rate_Sensor.md
+          - Grove - Finger-clip Heart Rate Sensor with shell: Grove-Finger-clip_Heart_Rate_Sensor_with_shell.md
           - Grove - EMG Detector: Grove-EMG_Detector.md
           - Grove - Ear-clip Heart Rate Sensor: Grove-Ear-clip_Heart_Rate_Sensor.md
+          - Grove - Chest Strap Heart Rate Sensor: Grove-Chest_Strap_Heart_Rate_Sensor.md
+          - Grove - Capacitive Fingerprint Scanner/Sensor: Grove-Capacitive-Fingerprint-Sensor.md
+          - Grove - Fingerprint Sensor: Grove-Fingerprint_Sensor.md
+          - Grove - GSR Sensor: Grove-GSR_Sensor.md
+
+      - Sound:
+          - Sensor - Sound: Sensor_sound.md
+          - Grove - Sound Sensor: Grove-Sound_Sensor.md
+          - Grove - Loudness Sensor: Grove-Loudness_Sensor.md
+          - Grove - Speech Recognizer: Grove-Speech_Recognizer.md
+          - Grove - Sound Recorder: Grove-Sound_Recorder.md
+
+      - Sensor:
+          - Sensor Introduction: Sensor.md
+          - Sensor - Others: Sensor_Others.md
+          - Grove - 2 Channel Inductive Sensor (LDC1612): Grove-2_Channel_Inductive_Sensor-LDC1612.md
+          - Grove - Digital PIR Sensor: Grove-Digital-PIR-Sensor.md
+          - Grove - 2.5A DC Current Sensor(ACS70331): Grove-2.5A-DC-Current-Sensor-ACS70331.md
+          - Grove - ±5A DC/AC Current Sensor (ACS70331): Grove-5A_DC_AC_Current_Sensor-ACS70331.md
+          - Grove - 10A DC Current Sensor (ACS725): Grove-10A_DC_Current_Sensor-ACS725.md
+          - Grove - Adjustable PIR Motion Sensor: Grove-Adjustable_PIR_Motion_Sensor.md
+          - Grove - Button: Grove-Button.md
+          - Grove - Dual Button: Grove-Dual-Button.md
+          - Grove - LED Button: Grove-LED_Button.md
+          - Grove - Collision Sensor: Grove-Collision_Sensor.md
+          - Grove - Capacitive Moisture Sensor (Corrosion-Resistant): Grove-Capacitive_Moisture_Sensor-Corrosion-Resistant.md
+          - Grove - Differential Amplifier v1.0: Grove-Differential_Amplifier_v1.0.md
+          - Grove - Dust Sensor: Grove-Dust_Sensor.md
           - Grove - Electricity Sensor: Grove-Electricity_Sensor.md
           - Grove - Electromagnet: Grove-Electromagnet.md
           - Grove - FM Receiver: Grove-FM_Receiver.md
-          - Grove - Finger-clip Heart Rate Sensor: Grove-Finger-clip_Heart_Rate_Sensor.md
-          - Grove - Finger-clip Heart Rate Sensor with shell: Grove-Finger-clip_Heart_Rate_Sensor_with_shell.md
-          - Grove - Fingerprint Sensor: Grove-Fingerprint_Sensor.md
           - Grove - Flame Sensor: Grove-Flame_Sensor.md
-          - Grove - GSR Sensor: Grove-GSR_Sensor.md
-          - Grove - Gas Sensor: Grove-Gas_Sensor.md
-          - Grove - Gas Sensor V2(Multichannel): Grove-Multichannel-Gas-Sensor-V2.md
-          - Grove - Gas Sensor(MQ2): Grove-Gas_Sensor-MQ2.md
-          - Grove - Gas Sensor(MQ3): Grove-Gas_Sensor-MQ3.md
-          - Grove - Gas Sensor(MQ5): Grove-Gas_Sensor-MQ5.md
-          - Grove - Gas Sensor(MQ9): Grove-Gas_Sensor-MQ9.md
-          - Grove - Gas Sensor(O₂): Grove-Gas_Sensor-O2.md
           - Grove - Gesture V1.0: Grove-Gesture_v1.0.md
-          - Grove - HCHO Sensor: Grove-HCHO_Sensor.md
           - Grove - Hall Sensor: Grove-Hall_Sensor.md
-          - Grove - Heelight Sensor: Grove-Heelight_Sensor.md
-          - Grove - High Temperature Sensor: Grove-High_Temperature_Sensor.md
           - Grove - Human Presence Sensor (AK9753): Grove-Human_Presence_Sensor-AK9753.md
           - Grove - I2C Color Sensor: Grove-I2C_Color_Sensor.md
           - Grove - I2C Touch Sensor: Grove-I2C_Touch_Sensor.md
           - Grove - 12 Key Capacitive I2C Touch Sensor V2(MPR121): Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121.md
           - Grove - Capacitive Touch Slide Sensor(CY8C4014LQI): Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI.md
-          - Grove - IMU 10DOF: Grove-IMU_10DOF.md
-          - Grove - IMU 10DOF v2.0: Grove-IMU_10DOF_v2.0.md
-          - Grove - IMU 9DOF v2.0: Grove-IMU_9DOF_v2.0.md
-          - Grove - IMU 9DOF(lcm20600+AK09918): Grove-IMU_9DOF-lcm20600+AK09918.md
-          - Grove - IR Distance Interrupter v1.2: Grove-IR_Distance_Interrupter_v1.2.md
           - Grove - Infrared Receiver: Grove-Infrared_Receiver.md
           - Grove - Infrared Reflective Sensor: Grove-Infrared_Reflective_Sensor.md
-          - Grove - Infrared Temperature Sensor: Grove-Infrared_Temperature_Sensor.md
-          - Grove - Infrared Temperature Sensor Array(AMG8833): Grove-Infrared_Temperature_Sensor_Array-AMG8833.md
-          - Grove - Integrated Pressure Sensor Kit: Grove-Integrated-Pressure-Sensor-Kit.md
-          - Grove - Light Sensor: Grove-Light_Sensor.md
           - Grove - Line Finder: Grove-Line_Finder.md
-          - Grove - Loudness Sensor: Grove-Loudness_Sensor.md
-          - Grove - Luminance Sensor: Grove-Luminance_Sensor.md
           - Grove - Laser PM2.5 Sensor (HM3301): Grove-Laser_PM2.5_Sensor-HM3301.md
           - Grove - Magnetic Switch: Grove-Magnetic_Switch.md
           - Grove - Mini Track Ball: Grove-Mini_Track_Ball.md
           - Grove - Moisture Sensor: Grove-Moisture_Sensor.md
           - Grove - Mouse Encoder: Grove-Mouse_Encoder.md
-          - Grove - Multichannel Gas Sensor: Grove-Multichannel_Gas_Sensor.md
           - Grove - EC Sensor Kit : Grove-EC-Sensor-kit.md
           - Grove - ORP Sensor Kit (501Z): Grove-ORP-Sensor-kit.md
           - Grove - PH Sensor Kit (E-201C-Blue): Grove-PH-Sensor-kit.md
@@ -624,53 +554,25 @@ nav:
           - Grove - RS485: Grove-RS485.md
           - Grove - Serial Camera Kit: Grove-Serial_Camera_Kit.md
           - Grove - Slide Potentiometer: Grove-Slide_Potentiometer.md
-          - Grove - Sound Recorder: Grove-Sound_Recorder.md
-          - Grove - Sound Sensor: Grove-Sound_Sensor.md
-          - Grove - Speech Recognizer: Grove-Speech_Recognizer.md
-          - Grove - Sunlight Sensor: Grove-Sunlight_Sensor.md
           - Grove - Switch(P): Grove-Switch-P.md
           - Grove - Mech Keycap: Grove-Mech_Keycap.md
           - Grove - 5-Way Switch: Grove-5-Way_Switch.md
           - Grove - 6-Position DIP Switch: Grove-6-Position_DIP_Switch.md
-          - Grove - Temp and Humi Sensor(SHT31): Grove-TempAndHumi_Sensor-SHT31.md
-          - Grove - I2C High Accuracy Temp&Humi Sensor(SHT35): Grove-I2C_High_Accuracy_Temp&Humi_Sensor-SHT35.md
-          - Grove - Temperature Sensor: Grove-Temperature_Sensor.md
-          - Grove - Temperature Sensor V1.2: Grove-Temperature_Sensor_V1.2.md
-          - Grove - Temperature&Humidity Sensor Pro: Grove-Temperature_and_Humidity_Sensor_Pro.md
-          - Grove - Temperature&amp;Humidity Sensor: Grove-TemperatureAndHumidity_Sensor.md
-          - Grove - Temperature&amp;Humidity Sensor (HDC1000): Grove-TemperatureAndHumidity_Sensor-HDC1000.md
-          - Grove - Temperature&amp;Humidity Sensor (High-Accuracy &amp;Mini) v1.0: Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0.md
-          - Grove - Thermal Imaging Camera IR Array: Grove-Thermal-Imaging-Camera-IR-Array.md
-          - Grove - I2C High Accuracy Temperature Sensor(MCP9808): Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808.md
           - Grove - Thumb Joystick: Grove-Thumb_Joystick.md
           - Grove - Tilt Switch: Grove-Tilt_Switch.md
           - Grove - Touch Sensor: Grove-Touch_Sensor.md
           - Grove - Encoder: Grove-Encoder.md
-          - Grove - UV Sensor: Grove-UV_Sensor.md
-          - Grove - Ultrasonic Ranger: Grove-Ultrasonic_Ranger.md
           - Grove - Voltage Divider: Grove-Voltage_Divider.md
           - Grove - Vibration Sensor(SW-420): Grove-Vibration_Sensor_SW-420.md
           - Grove - Water Sensor: Grove-Water_Sensor.md
           - Grove - Water Level Sensor: Grove-Water-Level-Sensor.md
           - Grove - XBee Carrier: Grove-XBee_Carrier.md
-          - Grove - TF Mini LiDAR: Grove-TF_Mini_LiDAR.md
-          - Grove - VOC and eCO2 Gas Sensor(SGP30): Grove-VOC_and_eCO2_Gas_Sensor-SGP30.md
-          - Grove - Time of Flight Distance Sensor VL53L0X: Grove-Time_of_Flight_Distance_Sensor-VL53L0X.md
-          - Grove - Digital Distance Interrupter 0.5 to 5cm(GP2Y0D805Z0F): Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F.md
-          - Grove - Digital Distance Interrupter 0.5 to 5cm(GP2Y0D805Z0F)(P): Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F_P.md
           - Grove - Round Force Sensor FSR402: Grove-Round_Force_Sensor_FSR402.md
           - Grove - Optical Rotary Encoder(TCUT1600X01): Grove-Optical_Rotary_Encoder-TCUT1600X01.md
-          - Grove - 1-Wire Thermocouple Amplifier(MAX31850K): Grove-1-Wire_Thermocouple_Amplifier-MAX31850K.md
-          - Grove - I2C Thermocouple Amplifier (MCP9600): Grove-I2C_Thermocouple_Amplifier-MCP9600.md
           - Grove - Step Counter(BMA456): Grove-Step_Counter-BMA456.md
-          - Grove - 3 Axis Digital Accelerometer±16g Ultra-low Power (BMA400): Grove-3-Axis_Digital_Accelerometer±16g_Ultra-low_Power-BMA400.md
-          - Grove - 6-Axis Accelerometer&Gyroscope(BMI088): Grove-6-Axis_Accelerometer&Gyroscope(BMI088).md
-          - Grove - I2C UV Sensor (VEML6070): Grove-I2C_UV_Sensor-VEML6070.md
           - Grove - Coulomb Counter 3.3V to 5V (LTC2941): Grove-Coulomb_Counter_3.3V_to_5V-LTC2941.md
-          - Grove - Light Gesture Color Proximity Sensor (TMG39931): Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931.md
           - Grove - 12 Channel Capacitive Touch Keypad (ATtiny1616): Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616-.md
           - Grove - 12 bit Magnetic Rotary Position Sensor(AS5600): Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600.md
-          - Grove - High Precision Barometric Pressure Sensor DPS310: Grove-High-Precision-Barometric-Pressure-Sensor-DPS310.md
           - Grove - Turbidity Sensor Meter for Arduino V1.0: Grove-Turbidity-Sensor-Meter-for-Arduino-V1.0.md
           - Grove - TDS Sensor: Grove-TDS-Sensor.md
           
@@ -803,19 +705,17 @@ nav:
           - Grove Beginner Kit for Arduino: Grove-Beginner-Kit-For-Arduino.md
           - Grove Creator Kit: Grove-Creator-Kit-1.md
 
-
-
-  - IoT:
-          # - IoT Introduction: IoT.md
-          - Seeeduino Cloud and Grove IoT Starter Kit Powered by AWS: Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS.md
-          - IoT Fast Prototyping Kit S5D9: IoT_Fast_Prototyping_Kit S5D9.md
-          - Grove Starter Kit for IoT based on Raspberry Pi: Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi.md
-          - Grove IoT Starter Kits Powered by AWS: Grove_IoT_Starter_Kits_Powered_by_AWS.md
-          - Grove IoT Developer Kit Microsoft Azure Edition: Grove_IoT_Developer_Kit-Microsoft_Azure_Edition.md
-          - BeagleBone Green and Grove IoT Starter Kit Powered by AWS: Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS.md
-          - SEEED IOT BUTTON FOR AWS: SEEED-IOT-BUTTON-FOR-AWS.md
-
   - MakerPro:
+          - IoT:
+                # - IoT Introduction: IoT.md
+                - Seeeduino Cloud and Grove IoT Starter Kit Powered by AWS: Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS.md
+                - IoT Fast Prototyping Kit S5D9: IoT_Fast_Prototyping_Kit S5D9.md
+                - Grove Starter Kit for IoT based on Raspberry Pi: Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi.md
+                - Grove IoT Starter Kits Powered by AWS: Grove_IoT_Starter_Kits_Powered_by_AWS.md
+                - Grove IoT Developer Kit Microsoft Azure Edition: Grove_IoT_Developer_Kit-Microsoft_Azure_Edition.md
+                - BeagleBone Green and Grove IoT Starter Kit Powered by AWS: Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS.md
+                - SEEED IOT BUTTON FOR AWS: SEEED-IOT-BUTTON-FOR-AWS.md
+
           # - MakerPro Introduction: MakerPro.md
           - 0.5w Solar Panel 55*70: 0.5w_Solar_Panel_55x70.md
           - 1.5W Solar Panel 81*137: 1.5W_Solar_Panel_81x137.md
@@ -893,8 +793,6 @@ nav:
           - Wireless Sensor Node - Solar Kit: Wireless_Sensor_Node-Solar_Kit.md
           - Gear Stepper Motor Driver Pack: Gear_Stepper_Motor_Driver_Pack.md
           - RS-232 To TTL Conveter (MAX3232IDR): RS-232_To_TTL_Conveter-MAX3232IDR.md
-
-
 
   - Tutorial:
           # - Tutorial Introduction: Tutorial.md
@@ -980,81 +878,187 @@ nav:
           - Xadow IO pin mapping: Xadow_IO_pin_mapping.md
           - Zigbee Networking with XBee Series 2 and Seeed Products: Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products.md
 
-
   - Discontinued:
           # - Discontinued Introduction: Discontinued.md
-          - 2.8inch TFT Touch Shield V1.0: 2.8inch-TFT_Touch_Shield_V1.0.md
-          - 2.7inch Triple-Color E-link Shield for Arduino: 2.7inch-Triple-Color-E-Ink-Shield-for-Arduino.md
-          - 5V-3.3V Breadboard Power Supply v1.1: 5V-3.3V_Breadboard_Power_Supply_v1.1.md
-          - 5V/3.3V Breadboard Power Supply‏‎: 5V-3.3V_Breadboard_Power_Supply.md
-          - Arch GPRS: Arch_GPRS.md
-          - Arch Max‏‎: Arch_Max.md
-          - BLE Bee: BLE_Bee.md
-          - Battery kit 3.7V 520mAh: Battery_kit_3.7V_520_mAh.md
-          - Bees Shield: Bees_Shield.md
-          - Bluetooth Bee: Bluetooth_Bee.md
-          - Bluetooth Shield‏‎: Bluetooth_Shield.md
-          - Edison 4WD Auto Robotic Platform 2.0‏‎: Edison_4WD_Auto_Robotic_Platform_2.0.md
-          - Edison_4WD_Auto_Robotic_Platform‏‎: Edison_4WD_Auto_Robotic_Platform.md
-          - Energy Monitor Shield V0.9b‏‎: Energy_Monitor_Shield_V0.9b.md
-          - Ethernet Shield V1.0: Ethernet_Shield_V1.0.md
-          - Ethernet Shield V2.0‏‎: Ethernet_Shield_V2.0.md
-          - Ethernet Shield‏‎: Ethernet_Shield.md
-          - GPRS Shield V2.0: GPRS_Shield_V2.0.md
-          - GPRS Shield‏‎: GPRS-Shield.md
-          - Grove BlinkM‏‎: Grove-BlinkM.md
-          - Grove Serial Bluetooth‏‎: Grove-Serial_Bluetooth.md
-          - Grove Serial LCD V1.0‏‎: Grove-Serial_LCD_V1.0.md
-          - Grove-Single Axis Analog Gyro‏‎: Grove-Single_Axis_Analog_Gyro.md
-          - Heart Sound Sensor‏‎: Heart-Sound_Sensor.md
-          - Intel® Edison and Grove IoT Starter Kit Powered by AWS: Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS.md
-          - LinkIT One and Grove IoT Starter Kit Powered by AWS: LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS.md
-          - Lipo Rider: Lipo_Rider.md
-          - Lipo Rider V1.1: Lipo_Rider_V1.1.md
-          - Logic_DC_Jack‏‎: Logic_DC_Jack.md
-          - Mini GSM/GPRS GPS Breakout SIM808: Mini_GSM_GPRS_GPS_Breakout_SIM808.md
-          - Motor Shield V1.0: Motor_Shield_V1.0.md
-          - Motor Shield‏‎: Motor_Shield.md
-          - Music Shield: Music_Shield.md
-          - Music Shield V1.0‏‎: Music_Shield_V1.0.md
-          - NFC Shield V1.0: NFC_Shield_V1.0.md
-          - NFC Shield‏‎: NFC_Shield.md
-          - Nose LED Kit: Nose_LED_Kit.md
-          - Rainbowduino Extension Board v0.9b: Rainbowduino_Extension_Board_v0.9b.md
-          - Relay Shield: Relay_Shield.md
-          - Relay Shield V1.0‏‎: Relay_Shield_V1.md
-          - Relay Shield V2.0: Relay_Shield_V2.md
-          - SD Card Shield: SD_Card_Shield.md
-          - SD Card Shield V3.0‏‎: SD_Card_Shield_V3.0.md
-          - Seeeduino ADK Main Board‏‎: Seeeduino_ADK_Main_Board.md
-          - Seeeduino Arch: Seeeduino_Arch.md
-          - Seeeduino Stalker v1.0: Seeeduino_Stalker_v1.0.md
-          - Seeeduino Stalker v2.3‏‎: Seeeduino_Stalker_v2.3.md
-          - Seeeduino Stalker‏‎: Seeeduino_Stalker.md
-          - Seeeduino Stalker‏‎ V3: Seeeduino-Stalker_v3.md
-          - Seeeduino V2.2 Atmega 168P: Seeeduino_V2.2_Atmega-168P.md
-          - Seeeduino V2.2‏‎: Seeeduino_V2.2.md
-          - Seeeduino v2.21‏‎: Seeeduino_v2.21.md
-          - Seeeduino v3.0‏‎: Seeeduino_v3.0.md
-          - Seeeduino‏‎: Seeeduino.md
-          - Serial port bluetooth module(Master/Slave)‏‎: Serial_port_bluetooth_module_Master-Slave.md
-          - Sidekick Advanced Kit‏‎: Sidekick_Advanced_Kit.md
-          - Small e-Paper Shield‏‎: Small_e-Paper_Shield.md
-          - Solar Charger Shield‏‎: Solar_Charger_Shield.md
-          - Starter_Shield_EN: Starter_Shield_EN.md
-          - Stepper Motor Driver: Stepper_Motor_Driver.md
-          - Stepper Motor Driver v2.3‏‎: Stepper_Motor_Driver_v2.3.md
-          - TFT Touch Shield V1.0‏‎: TFT_Touch_Shield_V1.0.md
-          - Techbox Tricks‏‎: Techbox_Tricks.md
-          - USB To Uart 3V3‏‎: USB_To_Uart_3V3.md
-          - UartSB Frame‏‎: UartSB_Frame.md
-          - UartSBee V3.1: UartSBee_V3.1.md
-          - WIFI Shield‏‎: Wifi_Shield.md
-          - Wifi Bee‏‎: Wifi_Bee.md
-          - Wifi Shield V1.0‏‎: Wifi_Shield_V1.0.md
-          - Wifi Shield V1.1‏‎: Wifi_Shield_V1.1.md
-          - Wifi Shield V1.2: Wifi_Shield_V1.2.md
-          - XBee Shield: XBee_Shield.md
+      - Artik:
+          - Artik Introduction: Artik.md
+          - Eagleye 530s: Eagleye_530s.md
+      - LinkIt:
+          - LinkIt Introduction: LinkIt.md
+          - Arduino Breakout for LinkIt Smart 7688 Duo: Arduino_Breakout_for_LinkIt_Smart_7688_Duo.md
+          - Breakout for LinkIt Smart 7688: Breakout_for_LinkIt_Smart_7688.md
+          - Breakout for LinkIt Smart 7688 v2.0: Breakout_for_LinkIt_Smart_7688_v2.0.md
+          - Grove - Starter Kit for LinkIt ONE: Grove-Starter_Kit_for_LinkIt_ONE.md
+          - Grove Breakout for LinkIt Smart 7688 Duo: Grove_Breakout_for_LinkIt_Smart_7688_Duo.md
+          - Grove Starter kit for LinkIt Smart7688 Duo: Grove_Starter_kit_for_LinkIt_Smart7688_Duo.md
+          - LinkIt ONE: LinkIt_ONE.md
+          - LinkIt Smart 7688: LinkIt_Smart_7688.md
+          - LinkIt Smart 7688 Duo: LinkIt_Smart_7688_Duo.md
+          - Linkit Connect 7681: Linkit_Connect_7681.md
+          - Sidekick Basic Kit for LinkIt ONE: Sidekick_Basic_Kit_for_LinkIt_ONE.md
+      - mbed:
+          - mbed Introduction: mbed.md
+          - Arch BLE: Arch_BLE.md
+          - Arch GPRS V2: Arch_GPRS_V2.md
+          - Arch Link: Arch_Link.md
+          - Arch Max v1.1: Arch_Max_v1.1.md
+          - Arch Pro: Arch_Pro.md
+          - Arch V1.1: Arch_V1.1.md
+          - Grove - Starter Kit for mbed: Grove-Starter_Kit_for_mbed.md
+          - Seeeduino Arch V1.0: Seeeduino_Arch_V1.0.md
+          - Tiny BLE: Tiny_BLE.md
+      - RePhone:
+          - RePhone Introduction: RePhone.md
+          - RePhone Geo Kit: RePhone_Geo_Kit.md
+          - RePhone Lumi Kit: RePhone_Lumi_Kit.md
+          - RePhone Strap Kit for Pebble: RePhone_Strap_Kit_for_Pebble.md
+          - Rephone Core 2G-Atmel32u4: RePhone_core_2G-Atmel32u4.md
+          - Rephone Core 2G-AtmelSAMD21: Rephone_core_2G-AtmelSAMD21.md
+          - Retro Phone Kit: Retro Phone Kit.md
+          - Xadow - 3-Axis Accelerometer: Xadow_3_Aixs_Accelerometer.md
+          - Xadow - 3-Axis Digital Accelerometer(±400g): Xadow_3_Aixs_Digital_Accelerometer_plusandminus_400g.md
+          - Xadow - BLE (Dual Model) v1.0: Xadow_BLE_Dual_Model_V1.0.md
+          - Xadow - BLE Slave: Xadow_BLE_Slave.md
+          - Xadow - Breakout: Xadow_Breakout.md
+          - Xadow - Buzzer: Xadow_Buzzer.md
+          - Xadow - Compass: Xadow_Compass.md
+          - Xadow - Edison Kit: Xadow_Edison_Kit.md
+          - Xadow - GPS: Xadow_GPS.md
+          - Xadow - Gesture v1.0: Xadow_Gesture_v1.0.md
+          - Xadow - Grove Adaptor: Xadow_Grove_Adaptor.md
+          - Xadow - IMU 10DOF: Xadow_IMU_10DOF.md
+          - Xadow - IMU 6DOF: Xadow_IMU_6DOF.md
+          - Xadow - IMU 9DOF: Xadow_IMU_9DOF.md
+          - Xadow - LED 5x7: Xadow_LED_5x7.md
+          - Xadow - LED 5x7 v1.0: Xadow_LED_5_multiply_7_v1.0.md
+          - Xadow - M0: Xadow_M0.md
+          - Xadow - Main Board: Xadow_Main_Board.md
+          - Xadow - Motor Driver: Xadow_Motor_Driver.md
+          - Xadow - Multichannel Gas Sensor: Xadow_Multichannel_Gas_Sensor.md
+          - Xadow - OLED 128*64: Xado_OLED_128multiply64.md
+          - Xadow - RGB OLED 96*64: Xadow_RGB_OLED_96multiply64.md
+          - Xadow - RTC: Xadow_RTC.md
+          - Xadow - Storage: Xadow_Storage.md
+          - Xadow - UV Sensor: Xadow_UV_Sensor.md
+          - Xadow - Vibrator Motor: Xadow_Vibrator_Motor.md
+          - Xadow - 1.54 inch Touchscreen: Xadow_1.54_inch_Touchscreen.md
+          - Xadow - Audio: Xadow_Audio.md
+          - Xadow - BLE: Xadow_BLE.md
+          - Xadow - Barometer: Xadow_Barometer.md
+          - Xadow - Barometer BMP180: Xadow_Barometer_BMP180.md
+          - Xadow - Basic Sensors: Xadow_Basic_Sensors.md
+          - Xadow - Duino: Xadow_Duino.md
+          - Xadow - GPS V2: Xadow_GPS_V2.md
+          - Xadow - GSM Breakout: Xadow_GSM_Breakout.md
+          - Xadow - GSM&#43;BLE: Xadow_GSMPlusBLE.md
+          - Xadow - Metal Frame: Xadow_Metal_Frame.md
+          - Xadow - NFC: Xadow_NFC.md
+          - Xadow - NFC v2: Xadow_NFC_v2.md
+          - Xadow - NFC Tag: Xadow_NFC_tag.md
+          - Xadow - Pebble Time Adapter: Xadow_Pebble_Time_Adapter.md
+          - Xadow - Q Touch Sensor: Xadow_Q_Touch_Sensor.md
+          - Xadow Tutorial - Acceleration Detector: Xadow_Tutorial_Acceleration_Detector.md
+          - Xadow Tutorial - Communicate via BLE: Xadow_Tutorial_Communicate_via_BLE.md
+          - Xadow Wearable Kit For Edison: Xadow_Wearable_Kit_For_Edison.md
+          - XadowTtutorial-Shaking Shaking: Xadow_Tutorial_Shaking_Shaking.md
+      - 2.8inch TFT Touch Shield V1.0: 2.8inch-TFT_Touch_Shield_V1.0.md
+      - 2.7inch Triple-Color E-link Shield for Arduino: 2.7inch-Triple-Color-E-Ink-Shield-for-Arduino.md
+      - 5V-3.3V Breadboard Power Supply v1.1: 5V-3.3V_Breadboard_Power_Supply_v1.1.md
+      - 5V/3.3V Breadboard Power Supply‏‎: 5V-3.3V_Breadboard_Power_Supply.md
+      - Arch GPRS: Arch_GPRS.md
+      - Arch Max‏‎: Arch_Max.md
+      - BLE Bee: BLE_Bee.md
+      - Battery kit 3.7V 520mAh: Battery_kit_3.7V_520_mAh.md
+      - Bees Shield: Bees_Shield.md
+      - Bluetooth Bee: Bluetooth_Bee.md
+      - Bluetooth Shield‏‎: Bluetooth_Shield.md
+      - Edison 4WD Auto Robotic Platform 2.0‏‎: Edison_4WD_Auto_Robotic_Platform_2.0.md
+      - Edison_4WD_Auto_Robotic_Platform‏‎: Edison_4WD_Auto_Robotic_Platform.md
+      - Energy Monitor Shield V0.9b‏‎: Energy_Monitor_Shield_V0.9b.md
+      - Ethernet Shield V1.0: Ethernet_Shield_V1.0.md
+      - Ethernet Shield V2.0‏‎: Ethernet_Shield_V2.0.md
+      - Ethernet Shield‏‎: Ethernet_Shield.md
+      - GPRS Shield V2.0: GPRS_Shield_V2.0.md
+      - GPRS Shield‏‎: GPRS-Shield.md
+      - Grove BlinkM‏‎: Grove-BlinkM.md
+      - Grove Serial Bluetooth‏‎: Grove-Serial_Bluetooth.md
+      - Grove Serial LCD V1.0‏‎: Grove-Serial_LCD_V1.0.md
+      - Grove-Single Axis Analog Gyro‏‎: Grove-Single_Axis_Analog_Gyro.md
+      - Heart Sound Sensor‏‎: Heart-Sound_Sensor.md
+      - Intel® Edison and Grove IoT Starter Kit Powered by AWS: Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS.md
+      - LinkIT One and Grove IoT Starter Kit Powered by AWS: LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS.md
+      - Lipo Rider: Lipo_Rider.md
+      - Lipo Rider V1.1: Lipo_Rider_V1.1.md
+      - Logic_DC_Jack‏‎: Logic_DC_Jack.md
+      - Mini GSM/GPRS GPS Breakout SIM808: Mini_GSM_GPRS_GPS_Breakout_SIM808.md
+      - Motor Shield V1.0: Motor_Shield_V1.0.md
+      - Motor Shield‏‎: Motor_Shield.md
+      - Music Shield: Music_Shield.md
+      - Music Shield V1.0‏‎: Music_Shield_V1.0.md
+      - NFC Shield V1.0: NFC_Shield_V1.0.md
+      - NFC Shield‏‎: NFC_Shield.md
+      - Nose LED Kit: Nose_LED_Kit.md
+      - Rainbowduino Extension Board v0.9b: Rainbowduino_Extension_Board_v0.9b.md
+      - Relay Shield: Relay_Shield.md
+      - Relay Shield V1.0‏‎: Relay_Shield_V1.md
+      - Relay Shield V2.0: Relay_Shield_V2.md
+      - SD Card Shield: SD_Card_Shield.md
+      - SD Card Shield V3.0‏‎: SD_Card_Shield_V3.0.md
+      - Seeeduino ADK Main Board‏‎: Seeeduino_ADK_Main_Board.md
+      - Seeeduino Arch: Seeeduino_Arch.md
+      - Seeeduino Stalker v1.0: Seeeduino_Stalker_v1.0.md
+      - Seeeduino Stalker v2.3‏‎: Seeeduino_Stalker_v2.3.md
+      - Seeeduino Stalker‏‎: Seeeduino_Stalker.md
+      - Seeeduino Stalker‏‎ V3: Seeeduino-Stalker_v3.md
+      - Seeeduino V2.2 Atmega 168P: Seeeduino_V2.2_Atmega-168P.md
+      - Seeeduino V2.2‏‎: Seeeduino_V2.2.md
+      - Seeeduino v2.21‏‎: Seeeduino_v2.21.md
+      - Seeeduino v3.0‏‎: Seeeduino_v3.0.md
+      - Seeeduino‏‎: Seeeduino.md
+      - Serial port bluetooth module(Master/Slave)‏‎: Serial_port_bluetooth_module_Master-Slave.md
+      - Sidekick Advanced Kit‏‎: Sidekick_Advanced_Kit.md
+      - Small e-Paper Shield‏‎: Small_e-Paper_Shield.md
+      - Solar Charger Shield‏‎: Solar_Charger_Shield.md
+      - Starter_Shield_EN: Starter_Shield_EN.md
+      - Stepper Motor Driver: Stepper_Motor_Driver.md
+      - Stepper Motor Driver v2.3‏‎: Stepper_Motor_Driver_v2.3.md
+      - TFT Touch Shield V1.0‏‎: TFT_Touch_Shield_V1.0.md
+      - Techbox Tricks‏‎: Techbox_Tricks.md
+      - USB To Uart 3V3‏‎: USB_To_Uart_3V3.md
+      - UartSB Frame‏‎: UartSB_Frame.md
+      - UartSBee V3.1: UartSBee_V3.1.md
+      - WIFI Shield‏‎: Wifi_Shield.md
+      - Wifi Bee‏‎: Wifi_Bee.md
+      - Wifi Shield V1.0‏‎: Wifi_Shield_V1.0.md
+      - Wifi Shield V1.1‏‎: Wifi_Shield_V1.1.md
+      - Wifi Shield V1.2: Wifi_Shield_V1.2.md
+      - XBee Shield: XBee_Shield.md
+      - Shield Bot V1.1: Shield_Bot_V1.1.md
+      - Shield Bot V1.2: Shield_Bot_V1.2.md
+      - 4WD Driver Platform V1.0: 4WD_Driver_Platform_V1.0.md
+      - 4WD Mecanum Wheel Robot Kit Series: 4WD_Mecanum_Wheel_Robot_Kit_Series.md
+      - Hercules Dual 15A 6-20V Motor Controller: Hercules_Dual_15A_6-20V_Motor_Controller.md
+      - Rainbowduino: Rainbowduino.md
+      - Rainbowduino LED driver platform - ATmega328: Rainbowduino_LED_driver_platform-ATmega328.md
+      - Rainbowduino v3.0: Rainbowduino_v3.0.md
+      - Skeleton Bot - 4WD hercules mobile robotic platform: Skeleton_Bot-4WD_hercules_mobile_robotic_platform.md
+      - Skeleton Box: Skeleton_Box.md
+      - Skeleton Box (10x7,10x10,17x10): Skeleton_Box_10x7_10x10_17x10.md
+      - Basic Fastener Kit: Basic_Fastener_Kit.md
+      - Galileo Case: Galileo_Case.md
+      - Grove Maker Kit for Intel Joule: Grove Maker Kit for Intel Joule.md
+      - Tricycle Bot: Tricycle_Bot.md
+      - Rainbow Cube Kit Acrylic Harness: Rainbow_Cube_Kit_Acrylic_Harness.md
+      - CAN-BUS Shield V1.2: CAN-BUS_Shield_V1.2.md
+      - EL Shield: EL_Shield.md
+      - GPRS Shield V1.0: GPRS_Shield_v1.0.md
+      - GPRS Shield V3.0: GPRS_Shield_V3.0.md
+      - Mbed Shield: mbed_Shield.md
+      - Wifi Shield (Fi250) V1.1: Wifi_Shield_Fi250_V1.1.md
+      - Wifi Shield V2.0: Wifi_Shield_V2.0.md
+      - XBee Shield V2.0: XBee_Shield_V2.0.md
+      - Seeed BLE Shield v1: Seeed_BLE_Shield.md
+      - Small e-Paper Shield V2: Small_e-Paper_Shield_V2.md
 
   - License: license.md
   - About: About.md
