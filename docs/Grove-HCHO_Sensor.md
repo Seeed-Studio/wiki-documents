@@ -22,7 +22,7 @@ The sensor value only reflects the approximated trend of gas concentration in a 
 </div>
 
 !!!Tip
-    We've released the [Seeed Gas Sensor Selection Guide](https://wiki.seeedstudio.com/Seeed_Gas_Sensor_Selection_Guide/), it will help you choose the gas sensor that best suits your needs.
+    We've released the [Seeed Gas Sensor Selection Guide](https://wiki.seeedstudio.com/Sensor_gas/), it will help you choose the gas sensor that best suits your needs.
 
 Specifications
 -------------
