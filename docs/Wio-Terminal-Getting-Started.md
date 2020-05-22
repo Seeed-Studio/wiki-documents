@@ -210,6 +210,10 @@ In addition to power-on and reset, when using SWD, Digital, Analog, Serial, I2C,
 - **[PDF]** [Wio Terminal Enclosure Dimensions - Back](https://files.seeedstudio.com/wiki/Wio-Terminal/res/Wio-Terminal-Main-Back-V3.0-White-72x57x7.1mm.pdf)
 - **[AI]** [Wio-Terminal-Screen-Sticker-Design-File(Wio-Terminal-ちゃん)](https://files.seeedstudio.com/wiki/Wio-Terminal/res/Wio-Terminal-Screen-Sticker-Design-File(Wio-Terminal-ちゃん).ai)
 - **[AI]** [Wio-Terminal-chan-Desgin-File-blue&white](https://files.seeedstudio.com/wiki/Wio-Terminal/res/Wio-Terminal-chan-Desgin-File-blue&white.ai)
+- **[DXF]** [Wio Terminal Enclosure Dimensions - Front](https://files.seeedstudio.com/wiki/Wio-Terminal/res/Wio-Terminal-Main-V3.0-White-72x57x10.4mm.dxf)
+- **[DXF]** [Wio Terminal Enclosure Dimensions - Back](https://files.seeedstudio.com/wiki/Wio-Terminal/res/Wio-Terminal-Main-Back-V3.0-White-72x57x7.1mm.dxf)
+- **[DXF]** [Wio Terminal Battery Chassis Dimensions](https://files.seeedstudio.com/wiki/Wio-Terminal/res/Wio-Terminal-Chassis-Battery.dxf)
+- **[DXF]** [Wio Terminal PCB Dimensions](https://files.seeedstudio.com/wiki/Wio-Terminal/res/Wio-Terminal-PCB-V3.0.dxf)
 
 ## Tech Support
 
