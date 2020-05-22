@@ -322,6 +322,7 @@ nav:
           - Brushless Motor Shield (TB6605FTG): Brushless-Motor-Shield-TB6605FTG.md
           - Music Shield V2.2: Music_Shield_V2.2.md
           - NFC Shield V2.0: NFC_Shield_V2.0.md
+          - Grove - Mega Shield: Grove-Mega_Shield.md
           - Protoshield Kit for Arduino: Protoshield_Kit_for_Arduino.md
           - RS232 Shield: RS232_Shield.md
           - Relay Shield v3.0: Relay_Shield_v3.md
@@ -360,24 +361,10 @@ nav:
 
       - Wireless:
           - Wireless Introduction: Wireless.md
-          - Air Serial:
-              - Air602 WiFi Development Board: Air602_WiFi_Development_Board.md
-              - Air602 Firmware Programming Manual: Air602_Firmware_Programming_Manual.md
-          - W600:
-              - W600 Module: W600_Module.md
-          - BLE (dual) Bee v1.0: BLE_dual_Bee_v1.0.md
-          - BLE Carbon: BLE_Carbon.md
-          - BLE Micro: BLE_Micro.md
-          - BLE Nitrogen: BLE_Nitrogen.md
-          - Bluetooth Bee v2.0: Bluetooth_Bee_v2.0.md
-          - Bluetooth Bee-Standalone: Bluetooth_Bee_Standalone.md
           - ESP32 Breakout Kit: ESP32_Breakout_Kit.md
-          - Grove - Mega Shield: Grove-Mega_Shield.md
           - LoRa/LoRaWAN Gateway Kit: LoRa_LoRaWan_Gateway_Kit.md
           - Mesh Bee: Mesh_Bee.md
-          - Qi Wireless Charger Transmitter: Qi_Wireless_Charger_Transmitter.md
           - RFbee V1.1 - Wireless Arduino compatible node: RFbee_V1.1-Wireless_Arduino_compatible_node.md
-          - Wifi Bee v2.0: Wifi_Bee_v2.0.md
 
       - Essentials:
           - Essentials Introduction: Essentials.md
@@ -387,9 +374,7 @@ nav:
           - Lipo Rider Pro: Lipo_Rider_Pro.md
           - Lipo Rider Plus: Lipo-Rider-Plus.md
           - Lipo Rider V1.3: Lipo_Rider_V1.3.md
-          - USB To Uart 5V: USB_To_Uart_5V.md
           - USB To Uart 5V/3V3: USB_To_Uart_5V_3V3.md
-          - Unibody box for Galileo Gen2: Unibody_box_for_Galileo_Gen2.md
 
   - Grove:
       - Grove Introduction: Grove.md
@@ -579,7 +564,6 @@ nav:
           
       - Actuator:
           # - Actuator Introduction: Actuator.md
-          - Atom Node: Atom_Node.md
           - Grove - 2-Coil Latching Relay: Grove-2-Coil_Latching_Relay.md
           - Grove - Buzzer: Grove-Buzzer.md
           - Grove - Passive Buzzer: Grove-Passive-Buzzer.md
@@ -881,6 +865,11 @@ nav:
 
   - Discontinued:
           # - Discontinued Introduction: Discontinued.md
+      - Air Serial:
+        - Air602 WiFi Development Board: Air602_WiFi_Development_Board.md
+        - Air602 Firmware Programming Manual: Air602_Firmware_Programming_Manual.md
+      - W600:
+          - W600 Module: W600_Module.md
       - Artik:
           - Artik Introduction: Artik.md
           - Eagleye 530s: Eagleye_530s.md
@@ -1060,6 +1049,17 @@ nav:
       - XBee Shield V2.0: XBee_Shield_V2.0.md
       - Seeed BLE Shield v1: Seeed_BLE_Shield.md
       - Small e-Paper Shield V2: Small_e-Paper_Shield_V2.md
+      - BLE (dual) Bee v1.0: BLE_dual_Bee_v1.0.md
+      - BLE Carbon: BLE_Carbon.md
+      - BLE Micro: BLE_Micro.md
+      - BLE Nitrogen: BLE_Nitrogen.md
+      - Bluetooth Bee v2.0: Bluetooth_Bee_v2.0.md
+      - Bluetooth Bee-Standalone: Bluetooth_Bee_Standalone.md
+      - Unibody box for Galileo Gen2: Unibody_box_for_Galileo_Gen2.md
+      - Wifi Bee v2.0: Wifi_Bee_v2.0.md
+      - Qi Wireless Charger Transmitter: Qi_Wireless_Charger_Transmitter.md
+      - USB To Uart 5V: USB_To_Uart_5V.md
+      - Atom Node: Atom_Node.md
 
   - License: license.md
   - About: About.md
