@@ -15,6 +15,8 @@ tags:
 
 <p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Multichannel-Gas-Sensor-v2-p-4569.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p> 
 
+!!!Tip
+      We've released the [Seeed Gas Sensor Selection Guide](https://wiki.seeedstudio.com/Sensor_gas/), it will help you choose the gas sensor that best suits your needs.
 
 Grove - Multichannel Gas Sensor V2 has 4 measuring units, each of them is sensitive to various kinds of gases, which means you are able to get four sets of data at the same time. And different sorts of gases can also be judged by these four sets of data. The gas sensor used in this module is based on MEMS technology and has the advantage of being in a small size with considerable measurement stability and is more suitable for qualitative than quantitative measurement.
 
