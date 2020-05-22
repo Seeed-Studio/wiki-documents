@@ -22,7 +22,7 @@ In addition to the Non-Dispersive Infrared(NDIR) measurement technology for CO2 
 
 
 !!!Tip
-    We've released the [Seeed Gas Sensor Selection Guide](https://wiki.seeedstudio.com/Seeed_Gas_Sensor_Selection_Guide/), it will help you choose the gas sensor that best suits your needs.
+    We've released the [Seeed Gas Sensor Selection Guide](https://wiki.seeedstudio.com/Sensor_gas/), it will help you choose the gas sensor that best suits your needs.
 
 
 ## Version
