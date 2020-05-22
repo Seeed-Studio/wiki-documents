@@ -26,7 +26,7 @@ Grove Cables are available in several different lengths, from 5cm (about 2") up 
 
 Grove Cables feature four color coded wires and two male-type modular connectors. Typically, one end plugs into the Grove Shield and the other into the Grove device. The modular connectors are keyed, meaning they are shaped uniquely, and can be put into their mating connector on the shield or device in one and only one way. When plugging Grove Cable connectors into a shield or device, be sure to exert sufficient pressure to lock the two in place.
 
-Grove Cables are wired straight through. That is to say, pin 1 on connector A is connected to pin 1 on connector B, pin 2 to pin 2, and so on. The wires are also color coded. Pin 1 is black, pin 2 is red, pin 3 is white, and pin 4 is yellow. Typically, pins 1 and 2 are  ground and power, while pins 1 and 2 are signal, e.g. A1/A2 or D1/D2.
+Grove Cables are wired straight through. That is to say, pin 1 on connector A is connected to pin 1 on connector B, pin 2 to pin 2, and so on. The wires are also color coded. Pin 1 is yellow, pin 2 is white, pin 3 is red, and pin 4 is black. Typically, pins 1 and 2 are  are signal, e.g. A1/A2 or D1/D2, while pins 3 and 4 power and ground .
 
 *   [5cm](https://www.seeedstudio.com/depot/grove-universal-4-pin-buckled-5cm-cable-5-pcs-pack-p-925.html?cPath=98_106_57)
 
