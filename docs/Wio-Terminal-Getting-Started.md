@@ -150,7 +150,9 @@ Now, simply click the **Upload** button in the environment. Wait a few seconds a
 </figure>
 </div>
 
-A few seconds after the upload finishes, you should see the LED at the bottom of the Wio Terminal start to blink. If it does, congratulations! You've gotten Wio Terminal up-and-running. If you have problems, please see the troubleshooting suggestions.
+A few seconds after the upload finishes, you should see the LED at the bottom of the Wio Terminal start to blink. If it does, congratulations! You've gotten Wio Terminal up-and-running. If you have problems, please see the FAQ suggestions.
+
+If you are not able to upload the sketch, mostly it's because Arduino IDE was not able to put Wio Terminal to **bootloader mode**. (Because MCU was halted or your program handling USB,) Workaround is putting your Wio Terminal to bootloader mode manually, as shown in FAQ.
 
 Please feel free to go though other tutorials of Wio Terminal and start building your IoT projects!
 
@@ -162,9 +164,11 @@ Please feel free to go though other tutorials of Wio Terminal and start building
 
 **To Enter Bootloader:**
 
-This is very useful when Wio Terminal crashes or somehow USB serial is not showing up in Arduino IDE.
+This is very useful when Wio Terminal crashes or somehow USB serial is not showing up in Arduino IDE. Slide the switch **twice very quickly**, as followed:
 
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-Bootloader.png"/></div>
+
+Once Wio Terminal is in the Bootloader mode, **the blue LED will start to breath** in a way that is different to blinking. Check the port again and it should appeared.
 
 **Testing with SWD**
 
