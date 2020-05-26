@@ -19,7 +19,8 @@
 |Seeeduino XIAO - Arduino Microcontroller - SAMD21 Cortex M0+|[Wiki](https://wiki.seeedstudio.com/Seeeduino-XIAO/)|[Bazaar](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|
 |Seeed Light Selection Guide|[Wiki](https://wiki.seeedstudio.com/Sensor_light/)|[Bazaar](https://www.seeedstudio.com/catalogsearch/result/?q=Light)|
 |Seeed Temperature Sensor Selection Guide|[Wiki](https://wiki.seeedstudio.com/Sensor_temperature/)|[Bazaar](https://www.seeedstudio.com/catalogsearch/result/?q=Temperature+)|
-||||
+
+
 ## April, 2020
 
 | Product                                                 | Wiki                                                                                      | Bazaar                                                                                                |
