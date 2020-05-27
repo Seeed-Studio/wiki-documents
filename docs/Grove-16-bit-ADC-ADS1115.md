@@ -20,7 +20,7 @@ The module also contains a Grove port that is internally connected to its channe
 
 ## Feature
 
-- Wide supply range: 2.0V ~ 5.5V, support 3.3/5V system
+- Wide supply range: 2.0V ~ 5.5V, support 3.3 or 5V system
 - 16-bit high resolution ADC
 - Programmable Data Rate: 8 SPS to 860 SPS
 - Internal Programmable Gain: x16 with Internal low-drift voltage reference and oscillator
@@ -46,7 +46,7 @@ The module also contains a Grove port that is internally connected to its channe
 
 |Arduino|Raspberry|ArduPy|
 |---|---|---|
-|![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg)|![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg)|![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/ArduPy-Logo.png)|
+|![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg)|![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg)|![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/ArduPy-Logo.png)|
 
 !!!Caution
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
@@ -190,6 +190,19 @@ void loop(void)
 - **Step 4.** Adjust the rotary sensor and you will see the corresponding voltage on Wio Terminal's LCD screen:
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/Grove-16bit-ADC-ADS1115/WT-ADS1115.gif"/></div>
+
+### Play With Raspberry Pi
+
+### Hardware
+
+| Raspberry Pi | Grove Base Hat for RasPi | Grove - 16 Bit ADC(ADS1115)|
+|--------------|-------------|-----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-16bit-ADC-ADS1115/109020041-preview.png)
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|[Get ONE Now]()|
+
+### Software
+
+The Grove - 16-bit ADC(ADS1115) have the same usage as 4-Channel 16-Bit ADC for Raspberry Pi (ADS1115) and so please follow tutorials [**here**](https://wiki.seeedstudio.com/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/#getting-started).
 
 ### Play With Wio Terminal (ArduPy)
 
