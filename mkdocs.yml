@@ -494,6 +494,7 @@ nav:
       - Sensor:
           - Sensor Introduction: Sensor.md
           - Sensor - Others: Sensor_Others.md
+          - Grove - 4 Channel 16-bit ADC(ADS1115): Grove-16-bit-ADC-ADS1115.md
           - Grove - 2 Channel Inductive Sensor (LDC1612): Grove-2_Channel_Inductive_Sensor-LDC1612.md
           - Grove - Digital PIR Sensor: Grove-Digital-PIR-Sensor.md
           - Grove - 2.5A DC Current Sensor(ACS70331): Grove-2.5A-DC-Current-Sensor-ACS70331.md
