@@ -197,6 +197,30 @@ distance = SeeedTFLidar.get_strength();
 
 ### Play With Ardupy
 
+#### Hardware
+
+| Wio Terminal |  Grove-TF-Mini-LiDAR | Jumper|
+|--------------|-----------------|----------|
+|![enter image description here](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-thumbnail.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/Grove-TF-Mini-LiDAR_S.JPG)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/Jumper.png)|
+|[Get ONE Now](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Get ONE Now](https://www.seeedstudio.com/Seeedstudio-Grove-TF-Mini-LiDAR-p-2996.html)|[Get ONE Now](https://www.seeedstudio.com/Breadboard-Jumper-Wire-Pack-200mm-100m-p-1032.html)|
+
+#### Hardware Connection
+
+![](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/hardware_connection.jpg)
+
+#### Pinout
+
+<div align="center">
+<figure>
+<img src="https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/pinout_wio.png" alt="Grove-TF_Mini_LiDAR'' OUTCOME" title="demo" />
+<figcaption><b></b><i></i></figcaption>
+</figure>
+</div>
+
+
+!!!Tip
+     Please refer to the pinout instruction above before you starting to connect Wio Terminal with Jumpers.
+
 - Install [AIP](https://github.com/Seeed-Studio/ardupy-aip)
 
 - Build firmware with Seeed ArduPy TFLidar
@@ -243,9 +267,10 @@ print ("The distance is:", lidar.distance, 'CM')
 print ("The strength is:", lidar.strength, '')
 ```
 
+!!!Success
+     An image will display on the screen of Wio terminal as below if everything goes well.
 
-
-
+![](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/Outcome_wio.jpg)
 
 ## Resources
 ---
