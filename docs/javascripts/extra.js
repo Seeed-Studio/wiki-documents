@@ -25,6 +25,7 @@ var _IsLocal = false ;
   var developUrl = "http://192.168.5.153/b/wiki.seeedstudio.com";
   var productionUrl = "https://wiki.seeedstudio.com"
 
+
 //  add the language code & Title 
 _SiteData = {
     "en" : "EN",
@@ -131,33 +132,51 @@ var _SubRootPath = _IsProduction ? "" : "/b/wiki.seeedstudio.com";
         var activeLevel = activeTarget.activeLevel;
         var html = '';
         level = level ? parseInt(level) : 1;
-
-        if(!activeLevel || level>activeLevel ){return}
-        if( parseInt(activeTarget[level].index) == NaN  ) return ;
-
-        ul = ul || document.querySelector('.md-nav--primary[data-md-level="0"]>ul.md-nav__list');
-        var li = ul.querySelector('li[data-track-index="'+activeTarget[level].index+'"]')
-        
-     
-        var input = li.querySelector("input[data-md-toggle]");
-        var navRoot = document.querySelector(".md-sidebar--primary[data-md-component='navigation']");
-        
-        if(input && navRoot && navRoot.offsetTop >0) input.checked = true;
-        var subUl = li.querySelector('ul[data-md-level="'+level+'"]');
-       
-        if(!subUl) {
-            return
+        if(self.activeTarget['1'].active){
+            if(!activeLevel || level>activeLevel ){return}
+            if( parseInt(activeTarget[level].index) == NaN  ) return ;
+            ul = ul || document.querySelector('.md-nav--primary[data-md-level="0"]>ul.md-nav__list');
+            var li = ul.querySelector('li[data-track-index="'+activeTarget[level].index+'"]')
+            var input = li.querySelector("input[data-md-toggle]");
+            var navRoot = document.querySelector(".md-sidebar--primary[data-md-component='navigation']");
+            if(input && navRoot && navRoot.offsetTop >0) input.checked = true;
+            var subUl = li.querySelector('ul[data-md-level="'+level+'"]');
+            if(!subUl) {
+                return
+            }
+            var navList = navList ?  navList[activeTarget[level].index] : self.navDom[activeTarget[level].index];
+            var liHtml = navList.html || ' ';
+            for(var i in navList){
+                var item = navList[i];
+                html += (item.html ? item.html : '');
+            }
+            subUl.innerHTML = html ;
+            self.drawNav(++level,subUl,navList)
+        }else{
+            ul = ul || document.querySelector('.md-nav--primary[data-md-level="0"]>ul.md-nav__list');
+            var lis = ul.children
+            for (let index = 0;index < lis.length;index++) {
+                if(index != activeTarget[level].index&&(level==1||level==2)) {
+                    lis[index].style.display = 'none'
+                }
+            }
+            var li =  lis[activeTarget[level].index]
+            var input = li.querySelector("input[data-md-toggle]");
+            var navRoot = document.querySelector(".md-sidebar--primary[data-md-component='navigation']");
+            if(input && navRoot && navRoot.offsetTop >0) input.checked = true;
+            var subUl = li.querySelector('ul[data-md-level="'+level+'"]');
+            if(!subUl) {
+                return
+            }
+            var navList = navList ?  navList[activeTarget[level].index] : self.navDom[activeTarget[level].index];
+            var liHtml = navList.html || ' ';
+            for(var i in navList){
+                var item = navList[i];
+                html += (item.html ? item.html : '');
+            }
+            subUl.innerHTML = html ;
+            self.drawNav(++level,subUl,navList)
         }
-        
-        var navList = navList ?  navList[activeTarget[level].index] : self.navDom[activeTarget[level].index];
-        
-        var liHtml = navList.html || ' ';
-        for(var i in navList){
-            var item = navList[i];
-            html += (item.html ? item.html : '');
-        }
-        subUl.innerHTML = html ;
-        self.drawNav(++level,subUl,navList)
     },
     collapseNav : function(value){
         console.log(value)
@@ -176,15 +195,25 @@ var _SubRootPath = _IsProduction ? "" : "/b/wiki.seeedstudio.com";
         }
         return parents;
     },
-    bindCollapse:function(){
+    removeClass: function(element,cName){        //移除一个class
+        var self = this
+        if(self.hasClass(element,cName)){
+            element.className = element.className.replace(new RegExp('(\\s|^)'+cName+'(\\s|$)'),' ');
+        }
+    },
+    hasClass: function(element,cName){        //检查class是否存在
+        return !!element.className.match(new RegExp('(\\s|^)'+cName+'(\\s|$)'));
+    },
+    bindCollapse: function(){
         var self = this;
-        // console.log(document.querySelectorAll("input[type='checkbox'][data-md-toggle]")).length
         var ul = document.querySelector('.md-nav--primary[data-md-level="0"]>ul.md-nav__list');
         ul.addEventListener("change",function(e){
             var html = '';
            if(e.target.nodeName == "INPUT" && e.target.checked ){
                var level = e.target.getAttribute("data-track-index");
                var levels = e.target.getAttribute("data-track-id");
+               var li = e.target.parentNode;
+               self.removeClass(li,'md-nav__link--active')
                var ul = e.target.parentNode.querySelector('ul[data-track-id="'+levels+'"]');
                if(!level || !levels || !ul || ul.querySelector("li")) return
                 levels = levels.split("-");
@@ -206,19 +235,197 @@ var _SubRootPath = _IsProduction ? "" : "/b/wiki.seeedstudio.com";
                 console.log(html); */
                 ul.innerHTML = html
                 return navList ;
-                
-
+           }else if(e.target.nodeName == "INPUT" && !e.target.checked ){
+               var level = e.target.getAttribute("data-track-index");
+               var levels = e.target.getAttribute("data-track-id");
+               var dom = {};
+               var ul = {};
+               var length = 0;
+               if(!level || !levels || !ul) return
+               levelsNew = levels.split('-')
+               length = levelsNew.length;
+               var navList = {};
+               var activeTarget = self.activeTarget;
+               var activeLevel = activeTarget.activeLevel;
+               if(length == 3){
+                    dom = document.querySelector('.md-nav--primary[data-md-level="0"]>ul.md-nav__list');
+                    ul = dom.querySelector('ul[data-track-id="'+levelsNew[0]+'"]').querySelector('ul[data-track-id="'+levelsNew[0]+ '-'+levelsNew[1]+'"]')
+                    lis = ul.getElementsByTagName('li')
+                    for(var i = 0;i < lis.length;i++){
+                        lis[i].style.display = 'block'
+                    }
+                    if(activeTarget[3].index == levelsNew[2]){
+                        var tempDom = ul.querySelector('li[data-track-id="'+levels+'"]')
+                        var className = tempDom.getAttribute("class");
+                        tempDom.setAttribute('class',className + ' md-nav__link--active')
+                    }
+                }else if(length == 2){
+                   dom = document.querySelector('.md-nav--primary[data-md-level="0"]>ul.md-nav__list');
+                   ul = dom.querySelector('ul[data-track-id="'+levelsNew[0]+'"]')
+                   lis = ul.getElementsByTagName('li')
+                   for(var i = 0;i < lis.length;i++){
+                       lis[i].style.display = 'block'
+                   }
+                   if(activeTarget[2].index == levelsNew[1]){
+                       var tempDom = ul.querySelector('li[data-track-id="'+levels+'"]')
+                       var className = tempDom.getAttribute("class");
+                       tempDom.setAttribute('class',className + ' md-nav__link--active')
+                   }
+                }else if(length == 1){
+                    dom = document.querySelector('.md-nav--primary[data-md-level="0"]>ul.md-nav__list');
+                    lis = dom.getElementsByTagName('li')
+                    for(var i = 0;i < lis.length;i++){
+                        lis[i].style.display = 'block'
+                    }
+                    if(activeTarget[1].index == levelsNew[0]){
+                        var tempDom = dom.querySelector('li[data-track-id="'+levelsNew[0]+'"]')
+                        var className = tempDom.getAttribute("class");
+                        tempDom.setAttribute('class',className + ' md-nav__link--active')
+                    }
+                }
            }
         })
         
     },
+    //创建面包屑
+    createBread: function(){
+        var self = this
+        var activeTarget = self.activeTarget;
+        var activeLevel = activeTarget.activeLevel;
+        var activeLength = activeTarget.activeLevel;
+        var breadList = []
+        var breadItem = self.navData;
+        var temp = {}
+        for(var i = 0;i < activeLength;i++){
+            //将导航数据与初始化的激活数据比对，当前的目录存在一个数组中
+            breadItem = breadItem[activeTarget[i+1].index]
+            for(var key in breadItem){
+                breadList.push(key)
+                breadItem = breadItem[key]
+            }
+        }
+        var bread = document.querySelector('.md-header-nav__title'),
+            breadStr = ''
+            //先将目前错误的面包屑置为空
+            bread.innerHTML = ''
+        //如果面包屑层级大于1，则初始化会有span，最后一个才是直接字符串
+        if(activeLength > 1){
+            for(var i = 0;i < activeLength-1;i++){
+                breadStr += '<span class="md-header-nav__parent" style="cursor:pointer;">'+ breadList[i] +'</span>'
+            }
+            breadStr += breadList[activeLength-1]
+        }else{
+            //如果面包屑层级等于1，则直接字符串
+            breadStr += breadList[0]
+        }
+        //将拼接的html字符串赋值给面包屑容器
+        bread.innerHTML = breadStr
+    },
+    //面包屑每一层级绑定点击事件
+    bindBreadClick: function(){
+        var self = this
+        var bread = document.querySelector('.md-header-nav__title'),
+         breadList  = bread.children,
+         length = breadList.length;
+         for (var j = 0 ; j<length; j++) {
+            (function(j){breadList[j].onclick = function() {
+                breadList[j].parentNode.style.color = 'hsla(0,0%,100%,.7)'
+                var sibling = breadList[j].parentNode.children
+                for(var n = 0;n<sibling.length;n++){
+                    self.removeClass(sibling[n],'bread-active')
+                    sibling[n].style.color = 'hsla(0,0%,100%,.7);'
+                }
+                breadList[j].setAttribute('class',breadList[j].getAttribute('class')+' bread-active')
+                var dom = {},
+                level1 = {},
+                level2 = {};
+                var activeTarget = self.activeTarget;
+                var activeLevel = activeTarget.activeLevel;
+                if(j == 0){
+                    //第一步：点击一级目录的时候，先让一级下的所有li标签都显示
+                    dom = document.querySelector('.md-nav--primary[data-md-level="0"]>ul.md-nav__list');
+                    level2 = self.getChildren(dom)
+                    for(var i = 0;i < level2.length;i++){
+                       level2[i].style.display = 'block'
+                    }
+                    //第二步：让一级目录已展开并且非当前的li标签都折叠
+                    var inputs = dom.getElementsByTagName('input')
+                    for(var m = 0;m < inputs.length;m++){
+                        if(m != activeTarget[1].index&&inputs[m].checked){
+                            inputs[m].click()
+                        }
+                    }
+                    //第三步：当前的一级li标签没有展开，就让展开，已展开就不处理
+                    if(dom.querySelector('input[data-track-id="'+ activeTarget[1].index +'"]').checked){
+                        dom.querySelector('input[data-track-id="'+ activeTarget[1].index +'"]').click()
+                    }
+                 }else{
+                    //第1步：点击二级目录的时候，先让已显示、展开且非当前的一级li标签都折叠（这是已点击一级目录面包屑并且展开了其他的li标签）
+                    dom = document.querySelector('.md-nav--primary[data-md-level="0"]>ul.md-nav__list');
+                    var inputs = dom.getElementsByTagName('input')
+                    for(var m = 0;m < inputs.length;m++){
+                        if(m != activeTarget[1].index&&inputs[m].checked&&inputs[m].parentNode.style.display == 'block'){
+                            inputs[m].click()
+                        }
+                    }
+                    //第2步：将当前的一级目录展开
+                    if(!dom.querySelector('input[data-track-id="'+ activeTarget[1].index +'"]').checked){
+                        dom.querySelector('input[data-track-id="'+ activeTarget[1].index +'"]').click()
+                    }
+                    //第3步：将已显示、展开非当前的li标签折叠
+                    dom = dom.querySelector('ul.md-nav__list')
+                    var inputs = dom.getElementsByTagName('input')
+                    for(var m = 0;m < inputs.length;m++){
+                        if(m != activeTarget[2].index&&inputs[m].checked&&inputs[m].parentNode.style.display == 'block'){
+                            inputs[m].click()
+                        }
+                    }
+
+                    //第4步：将当前的二级目录展开
+                    console.log(activeTarget[2].index,dom,dom.querySelector('input[data-track-id="1-7"]'))
+                    if(!dom.querySelector('input[data-track-id="'+ activeTarget[1].index + '-' + activeTarget[2].index +'"]').checked){
+                        dom.querySelector('input[data-track-id="'+ activeTarget[1].index + '-' + activeTarget[2].index +'"]').click()
+                    }
+
+                    //第5步：将当前所有的二级目录显示
+                    level1 = document.querySelector('li[data-track-index="'+ activeTarget[1].index +'"]')
+                    level2 = self.getChildren(level1.querySelector('ul.md-nav__list'))
+                    for(var i = 0;i < level2.length;i++){
+                        level2[i].style.display = 'block'
+                    }
+                    //第6步：如果当前的二级目录展开，那么就要将它折叠起来
+                    if(level2[activeTarget[j+1].index].querySelector('input').checked){
+                        level2[activeTarget[j+1].index].querySelector('input').click()
+                    }
+                 }
+            }})(j);
+        }
+    },
+    //获取直接子元素
+    getChildren : function(obj){
+          var objChild = [] ;
+          var objs = obj.getElementsByTagName('*');
+          for(var i=0,j=objs.length; i<j;++i){
+            if(objs[i].nodeType != 1){alert(objs[i].nodeType);
+              continue ;
+            }
+            var temp = objs[i].parentNode;
+            if(temp.nodeType == 1){
+              if(temp == obj){
+                objChild[objChild.length] = objs[i] ;
+              }
+            }else if(temp.parentNode == obj){
+              objChild[objChild.length] = objs[i] ;
+            }
+          }
+          return objChild ;
+        },
     generateSubNav : function(navData,level,id,ul,navDom,preIndex,trackId){
         var self = this;
         level = level ? level : 1;
         id = id ? id  : "nav";
         ul = ul ? ul : document.querySelector('.md-nav--primary[data-md-level="0"]>ul.md-nav__list');
         navDom = navDom  ? navDom : self.navDom;
-        
         for(var i = 0 ; i < navData.length ; i++){
             var navItem  = navData[i];
             var li = document.createElement("li");
@@ -256,7 +463,7 @@ var _SubRootPath = _IsProduction ? "" : "/b/wiki.seeedstudio.com";
                         }    
 
                         var newUrl = self.rootURl  + path ;
-                        li.innerHTML = '<a href="'+newUrl+'" class="md-nav__link '+(active? 'md-nav__link--active' : '')+'" >'+title+'</a>'
+                        li.innerHTML = '<a href="'+newUrl+'" class="md-nav__link '+(active? 'md-nav__link--active' : '')+'" title="'+ title +'">'+title+'</a>'
                         navDom[i]["html"] =  li.outerHTML ; 
                         navDom[i][title] =  title; 
                         navDom[i]["active"] = active ;
@@ -284,7 +491,7 @@ var _SubRootPath = _IsProduction ? "" : "/b/wiki.seeedstudio.com";
         var self = this;
         var res = xhr.responseText;
         var jsonData = {};
-        try{
+        // try{
             var jsonData = JSON.parse(res);    
             self.navData = jsonData["nav"] || {};
             window.navData = self.navData ;
@@ -293,9 +500,14 @@ var _SubRootPath = _IsProduction ? "" : "/b/wiki.seeedstudio.com";
             self.generateNav();
             self.drawNav();
             self.bindCollapse()
-        }catch(e){
-            console.log(e)
-        }
+            var self = this
+            var activeTarget = self.activeTarget;
+            var activeLevel = activeTarget.activeLevel;
+            self.createBread()
+            self.bindBreadClick()
+        // }catch(e){
+        //     console.log(e)
+        // }
     },
     getNavData : function(){
         var self = this ;
