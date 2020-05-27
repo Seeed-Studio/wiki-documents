@@ -89,7 +89,7 @@ Platforms Supported
 
 #### Software
 
-- Step 1. The Grove-TF Mini LiDAR is a hexadecimal output data. Each frame data is encoded with 9 bytes, including 1 distance data (Dist). Each distance data has corresponding signal strength information (Strength). The frame end is the data parity bit. 
+- **Step 1**. The Grove-TF Mini LiDAR is a hexadecimal output data. Each frame data is encoded with 9 bytes, including 1 distance data (Dist). Each distance data has corresponding signal strength information (Strength). The frame end is the data parity bit. 
 
 | Byte  | Data encoding interpretation                |
 |-------|---------------------------------------------|
@@ -104,53 +104,148 @@ Platforms Supported
 | Byte9 | Checksum parity.                             |
 
 
-- Step 2. Copy the code into Arduino IDE and upload.
+- **Step 2**. Copy the code into Arduino IDE and upload.
 
-```
-unsigned char dta[100];
-unsigned char len = 0;
+```C++
+#include "TFLidar.h"
+#define USE_3V3_SOFT_SERIAL
 
-void setup()
-{
-    Serial1.begin(115200);
-    Serial.begin(115200);
+#ifdef USE_3V3_SOFT_SERIAL
+  SoftwareSerial uart(0, 1);
+#else
+  SoftwareSerial uart(2, 3);
+#endif
+
+TFLuna SeeedTFLuna;
+TFLidar SeeedTFLidar(&SeeedTFLuna);
+
+void setup() {
+  // put your setup code here, to run once:
+  SERIAL.begin(9600);
+  while(!Serial);
+#ifdef USE_3V3_SOFT_SERIAL
+  SeeedTFLidar.begin(&uart,9600);
+#else
+  SeeedTFLidar.begin(&uart,115200);
+#endif
 }
 
-void loop()
-{
-    while(Serial1.available()>=9)
-    {
-        if((0x59 == Serial1.read()) && (0x59 == Serial1.read())) //Byte1 & Byte2
-        {
-            unsigned int t1 = Serial1.read(); //Byte3
-            unsigned int t2 = Serial1.read(); //Byte4
-
-            t2 <<= 8;
-            t2 += t1;
-            Serial.print(t2);
-            Serial.print('\t');
-
-            t1 = Serial1.read(); //Byte5
-            t2 = Serial1.read(); //Byte6
-
-            t2 <<= 8;
-            t2 += t1;
-            Serial.println(t2);
-
-            for(int i=0; i<3; i++) 
-            { 
-                Serial1.read(); ////Byte7,8,9
-            }
-        }
-    }
+void loop() {
+  while(!SeeedTFLidar.get_frame_data()){
+  #ifdef USE_3V3_SOFT_SERIAL
+      delay(20);
+  #else
+      delay(1);
+  #endif
+  }
+  // put your main code here, to run repeatedly:
+  SERIAL.print("dist = ");
+  SERIAL.print(SeeedTFLidar.get_distance()); //output measure distance value of LiDAR
+  SERIAL.println(" ");
 }
 ```
-- Step 3. We will see the distance display on terminal. The blue curve is the distance and the red is Strength. 
+
+#### API Reference
+
+- Begin(SoftwareSerial *TFSerial,unsigned long baud_rate):void
+
+```C++
+SoftwareSerial uart(2, 3);
+SeeedTFLidar.begin(&uart,115200);
+```
+
+- Begin(HardwareSerial *TFSerial,unsigned long baud_rate):void
+
+```C++
+SeeedTFLidar.begin(&Serial1,115200);
+```
+
+- Get_frame_data:bool
+
+```C++
+while(!SeeedTFLidar.get_frame_data()){
+    delay(1);
+}
+```
+
+- Get_distance():uint16_t
+
+```C++
+int distance;
+while(!SeeedTFLidar.get_frame_data()){
+    delay(1);
+}
+distance = SeeedTFLidar.get_distance();
+```
+
+- Get_strength():uint16_t
+
+```C++
+int distance;
+while(!SeeedTFLidar.get_frame_data()){
+    delay(1);
+}
+distance = SeeedTFLidar.get_strength();
+```
+
+- **Step 3**. We will see the distance display on terminal. The blue curve is the distance and the red is Strength. 
 
 ![](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/curve.png)
 
-- Step 4. We also can connect the sensor to PC USB port directly through Serial to USB convertor. We can use the [Grove-TF-Mini-LiDAR Master Computer Software
+- **Step 4**. We also can connect the sensor to PC USB port directly through Serial to USB convertor. We can use the [Grove-TF-Mini-LiDAR Master Computer Software
 ](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/res/Grove-TF-Mini-LiDAR%20Master%20Computer%20Software.zip) to monitor the distance and strength.  
+
+### Play With Ardupy
+
+- Install [AIP](https://github.com/Seeed-Studio/ardupy-aip)
+
+- Build firmware with Seeed ArduPy TFLidar
+```C++
+aip install Seeed-Studio/seeed-ardupy-TFLidar
+aip build
+```
+- Flash new firmware to you ArduPy board
+```C++
+aip flash # + Ardupy Bin PATH
+```
+For more examples of using AIP, please refer to [AIP](https://github.com/Seeed-Studio/ardupy-aip).
+
+#### Usage
+```C++
+from arduino import grove_tf_lidar
+import time
+
+lidar = grove_tf_lidar()
+
+while True:
+    while(lidar.get_frame_data() == False):
+        time.sleep(0.001)
+    print ("The distance is:", lidar.distance, 'CM')
+    print ("The strength is:", lidar.strength, '')
+    time.sleep_ms(1000)
+```
+
+#### API Reference
+
+- Get_frame_data() : get frame data (include distance and strength)
+```C++
+while(lidar.get_frame_data() == False):
+    time.sleep(0.001)
+```
+
+- Distance :distance from obstacle
+```C++
+print ("The distance is:", lidar.distance, 'CM')
+```
+
+- Strength : lidar strength
+```C++
+print ("The strength is:", lidar.strength, '')
+```
+
+
+
+
 
 ## Resources
 ---
