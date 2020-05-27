@@ -490,6 +490,7 @@ nav:
           - Grove - Loudness Sensor: Grove-Loudness_Sensor.md
           - Grove - Speech Recognizer: Grove-Speech_Recognizer.md
           - Grove - Sound Recorder: Grove-Sound_Recorder.md
+          - Grove - Analog Microphone: Grove-Analog-Microphone.md
 
       - Sensor:
           - Sensor Introduction: Sensor.md
