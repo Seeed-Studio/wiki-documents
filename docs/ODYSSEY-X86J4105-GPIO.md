@@ -86,6 +86,31 @@ If you prefer 40-pin to be in default GPIO, you can do this by changing setting 
 
 **Note:** You can also set other GPIO to output by default.
 
+### Using Grove Base Hat for Simple Control
+
+You can also use Grove Base Hat for Raspberry Pi for simple digital signals. I.e. The I2C and UART ports cannot be used for now (The firmware of Grove Base Hat for Odyssey-X86 is being developed, and will be released very soon).
+
+Let's take **`D5`** port on Grove Base Hat for example:
+
+**Note:** This is referring to the Raspberry Pi's BCM numbering system -> **`BCM5`**. So for now to use for Odyssey-X86, need to figure out its physical pins, which is actually physical **Pin No. `29`**. *Refernece: [Raspberry Pinouts](https://pinout.xyz/)*.
+
+So the physical pins for using D5 on the Grove Base Hat connected to Odyssey-X86 is 29 which is the linux GPIO **`415`**.
+
+Now, we can use the same methods as above to control this GPIO:
+
+```bash
+sudo -i
+cd /sys/class/gpio
+echo 415 > export
+cd gpio415
+echo "out" > direction
+echo 1 > value
+```
+
+<div align=center><img width = 500 src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/BaseHat.gif"/></div>
+
+To unexport, follow the same steps as before.
+
 ## UART
 
 To check the UART devices on ODYSSEY - X86J4105, please run the following command:
@@ -95,7 +120,6 @@ ls /sys/bus/pci/devices/0000\:00\:18.?/dw-apb-uart.*/tty/ | grep tty
 ```
 
 <div align=center><img width = 500 src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/UART.png"/></div>
-<br/>
 
 The **`ttyS4`** is associated with the UART Pin on the 40-pin header (**Pin 8 and Pin 10**). To access from these pins, please follow:
 
@@ -124,7 +148,6 @@ ls /sys/bus/pci/devices/*/i2c_designware.1/ | grep i2c
 ```
 
 <div align=center><img width = 500 src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/I2C.png"/></div>
-<br/>
 
 And to detect peripherals connected to **I2C channel 0** do the following command:
 
@@ -134,7 +157,6 @@ sudo i2cdetect -r -y 0
 ```
 
 <div align=center><img width = 500 src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/I2C-address.png"/></div>
-<br/>
 
 **Note:** For I2C Channel 1, change the last argument 0 to 1.
 
