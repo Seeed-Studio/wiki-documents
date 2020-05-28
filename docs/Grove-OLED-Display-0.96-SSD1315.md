@@ -99,7 +99,7 @@ Thanks to the new SSD1315 chip, it can work with 3.3V, so that we removed the ex
 #include <Wire.h>
 #endif
 
-U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);
+U8G2_SSD1306_128X64_NONAME_F_SW_I2C u8g2(U8G2_R0, /* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);
 
 void setup(void) {
   u8g2.begin();
@@ -112,7 +112,6 @@ void loop(void) {
   u8g2.sendBuffer();					// transfer internal memory to the display
   delay(1000);  
 }
-
 ```
 
 - **Step 3.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
