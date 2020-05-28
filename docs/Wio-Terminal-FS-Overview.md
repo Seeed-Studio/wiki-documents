@@ -10,7 +10,7 @@ By default, the FS Library is **included inside the Wio Terminal Board Library**
 
 If you want to install the FS library separately, or updating just the FS library, follow the steps below:
 
-1. Visit the [Seeed_Arduino_FS](https://github.com/Seeed-Studio/Seeed_Arduino_FS/tree/beta) repositories and download the entire repo to your local drive.
+1. Visit the [Seeed_Arduino_FS](https://github.com/Seeed-Studio/Seeed_Arduino_FS/tree/master) repositories and download the entire repo to your local drive.
 
 2. Now, the FS library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_FS` file that you've have just downloaded.
 
