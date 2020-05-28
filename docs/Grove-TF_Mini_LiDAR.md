@@ -71,135 +71,88 @@ Platforms Supported
 
 #### Hardware
 
-- Step 1. Prepare the below stuffs:
+- **Step 1**. Prepare the below stuffs:
 
-| Seeeduino Lite |  Grove-TF-Mini-LiDAR |
-|--------------|-----------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/Seeed%20lite_S.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/Grove-TF-Mini-LiDAR_S.JPG)|
-|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-Lite-p-1487.html)|[Get ONE Now](https://www.seeedstudio.com/Seeedstudio-Grove-TF-Mini-LiDAR-p-2996.html)|
+|Seeeduino V4.2| Base Shield|Grove-TF Mini LiDAR|
+|--------------|------------|-----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/Grove-TF-Mini-LiDAR_S.JPG)|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Seeedstudio-Grove-TF-Mini-LiDAR.html)|
 
-- Step 2. Connect Grove-TF-Mini-LiDAR to UART port of Seeeduino Lite.
-- Step 3. Connect Seeeduino to PC through a USB cable.
+- **Step 2**. Connect Grove-TF-Mini-LiDAR to **D2** port of Base Shield and connect Seeeduino to PC through a USB cable.
 
-![](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/Seeeduino.JPG)
+- **Step 3**. Download the [Demo code](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/res/Seeed_Arduino_TFlidar.zip) and copy the whole **Seeed_Arduino_TFlidar** file and paste it into your Arduino IDE library file.
 
-!!!Note
-    The Grove-TF Mini LiDAR's UART baud rate is 115200 and the SoftwareI2C can't support it. So if we use 1 hardware UART to hook up the sensor and other hardware UART for Serial Port display, we need at least 2 hardware UART platforms, such as arduino mega, seeeduino lite and so on.  If we only have 1 UART platform(ie. seeeduino v4.2, arduino uno), we can use the I2C LCD as display.
+![](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/hardware_connection2.jpg)
 
 
 #### Software
 
-- **Step 1**. The Grove-TF Mini LiDAR is a hexadecimal output data. Each frame data is encoded with 9 bytes, including 1 distance data (Dist). Each distance data has corresponding signal strength information (Strength). The frame end is the data parity bit. 
-
-| Byte  | Data encoding interpretation                |
-|-------|---------------------------------------------|
-| Byte1 | 0x59, frame header, all frames are the same |
-| Byte2 | 0x59, frame header, all frames are the same |
-| Byte3 | Dist_L distance value is a low 8-bit.       |
-| Byte4 | Dist_H distance value is a high 8-bit.      |
-| Byte5 | Strength_L is a low 8-bit.                  |
-| Byte6 | Strength_H is a high 8-bit.                 |
-| Byte7 | Integration time.                           |
-| Byte8 | Reserved bytes.                             |
-| Byte9 | Checksum parity.                             |
-
-
-- **Step 2**. Copy the code into Arduino IDE and upload.
-
 ```C++
 #include "TFLidar.h"
-#define USE_3V3_SOFT_SERIAL
 
-#ifdef USE_3V3_SOFT_SERIAL
-  SoftwareSerial uart(0, 1);
+#define USETFMINI
+// #define USETFLUNA
+
+#define SERIAL Serial
+
+#if defined(SEEED_XIAO_M0)
+    #define uart  Serial1
+#elif defined(SEEED_WIO_TERMINAL)
+    #define uart  Serial1
 #else
-  SoftwareSerial uart(2, 3);
+    SoftwareSerial uart(2, 3);
 #endif
 
+#ifdef USETFLUNA
 TFLuna SeeedTFLuna;
 TFLidar SeeedTFLidar(&SeeedTFLuna);
+#endif
+
+#ifdef USETFMINI
+TFMini SeeedTFMini;
+TFLidar SeeedTFLidar(&SeeedTFMini);
+#endif 
+
 
 void setup() {
   // put your setup code here, to run once:
   SERIAL.begin(9600);
   while(!Serial);
-#ifdef USE_3V3_SOFT_SERIAL
-  SeeedTFLidar.begin(&uart,9600);
-#else
   SeeedTFLidar.begin(&uart,115200);
-#endif
 }
 
 void loop() {
   while(!SeeedTFLidar.get_frame_data()){
-  #ifdef USE_3V3_SOFT_SERIAL
-      delay(20);
-  #else
-      delay(1);
-  #endif
+    delay(1); 
   }
   // put your main code here, to run repeatedly:
   SERIAL.print("dist = ");
   SERIAL.print(SeeedTFLidar.get_distance()); //output measure distance value of LiDAR
+  SERIAL.print('\t');
+  SERIAL.print("strength = ");
+  SERIAL.print(SeeedTFLidar.get_strength()); //output signal strength value
+#ifdef USETFLUNA
+  SERIAL.print("\t Chip Temprature = ");
+  SERIAL.print(SeeedTFLidar.get_chip_temperature());
+  SERIAL.print(" celcius degree"); //output chip temperature of Lidar
+#endif
   SERIAL.println(" ");
+  // delay(1000);
 }
 ```
 
-#### API Reference
+- **Step 4**. We will see the distance display on terminal. The **blue curve** is the distance and the **red one** is Strength. 
 
-- Begin(SoftwareSerial *TFSerial,unsigned long baud_rate):void
+![](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/curve.png) 
 
-```C++
-SoftwareSerial uart(2, 3);
-SeeedTFLidar.begin(&uart,115200);
-```
+!!!Note
+      You could delete the demo code from **Line 41** to **Line 43** if only the **Distance** is required. 
 
-- Begin(HardwareSerial *TFSerial,unsigned long baud_rate):void
-
-```C++
-SeeedTFLidar.begin(&Serial1,115200);
-```
-
-- Get_frame_data:bool
-
-```C++
-while(!SeeedTFLidar.get_frame_data()){
-    delay(1);
-}
-```
-
-- Get_distance():uint16_t
-
-```C++
-int distance;
-while(!SeeedTFLidar.get_frame_data()){
-    delay(1);
-}
-distance = SeeedTFLidar.get_distance();
-```
-
-- Get_strength():uint16_t
-
-```C++
-int distance;
-while(!SeeedTFLidar.get_frame_data()){
-    delay(1);
-}
-distance = SeeedTFLidar.get_strength();
-```
-
-- **Step 3**. We will see the distance display on terminal. The blue curve is the distance and the red is Strength. 
-
-![](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/curve.png)
-
-- **Step 4**. We also can connect the sensor to PC USB port directly through Serial to USB convertor. We can use the [Grove-TF-Mini-LiDAR Master Computer Software
-](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/res/Grove-TF-Mini-LiDAR%20Master%20Computer%20Software.zip) to monitor the distance and strength.  
-
-### Play With Ardupy
+### Play With Wio Terminal
 
 #### Hardware
 
-| Wio Terminal |  Grove-TF-Mini-LiDAR | Jumper|
+| Wio Terminal |  Grove-TF-Mini-LiDAR | Jumper |
 |--------------|-----------------|----------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-thumbnail.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/Grove-TF-Mini-LiDAR_S.JPG)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/Jumper.png)|
 |[Get ONE Now](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Get ONE Now](https://www.seeedstudio.com/Seeedstudio-Grove-TF-Mini-LiDAR-p-2996.html)|[Get ONE Now](https://www.seeedstudio.com/Breadboard-Jumper-Wire-Pack-200mm-100m-p-1032.html)|
@@ -221,50 +174,102 @@ distance = SeeedTFLidar.get_strength();
 !!!Tip
      Please refer to the pinout instruction above before you starting to connect Wio Terminal with Jumpers.
 
-- Install [AIP](https://github.com/Seeed-Studio/ardupy-aip)
 
-- Build firmware with Seeed ArduPy TFLidar
+**Step 1** Plug Grove-TF-Mini-LiDAR to Wio Terminal via Jumpers and also connect Wio Terminal to PC through a USB cable.
+
+**Step 2** Download the [Demo code](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/res/Seeed_Arduino_Linechart.zip) and copy the whole **Seeed_Arduino_Linechart** file and paste it into your Arduino IDE library file.
+
+**Step 3** Copy the demo code into your Arduino IDE. 
+
+#### Software
 ```C++
-aip install Seeed-Studio/seeed-ardupy-TFLidar
-aip build
-```
-- Flash new firmware to you ArduPy board
-```C++
-aip flash # + Ardupy Bin PATH
-```
-For more examples of using AIP, please refer to [AIP](https://github.com/Seeed-Studio/ardupy-aip).
+#include"seeed_line_chart.h" //include the library
+#include "TFLidar.h"
+#define LINE_DIS 0X00
+#define STRING_DIS 0X01
+TFMini SeeedTFMini;
+TFLidar SeeedTFLidar(&SeeedTFMini);
+#define uart  Serial1
 
-#### Usage
-```C++
-from arduino import grove_tf_lidar
-import time
+TFT_eSPI tft;
+ 
+#define max_size 10 //maximum size of data
+doubles data; //Initilising a doubles type to store data
+TFT_eSprite spr = TFT_eSprite(&tft);  // Sprite 
+ 
+void setup() {
+    Serial.begin(115200);
+    pinMode(WIO_KEY_C, INPUT_PULLUP);
+    tft.begin();
+    tft.setRotation(3);
+    spr.createSprite(TFT_HEIGHT,TFT_WIDTH);
+    SeeedTFLidar.begin(&uart,115200);
+}
+uint8_t mode = LINE_DIS;
+void loop() {
+    
+    if (digitalRead(WIO_KEY_C) == LOW) {
+        mode ++;
+        if(mode > STRING_DIS ) mode = LINE_DIS;
+        while(!digitalRead(WIO_KEY_C));
+    }
+    display(get_Lidar_data(),mode);
+    delay(50);
+}
 
-lidar = grove_tf_lidar()
+uint16_t get_Lidar_data()
+{
+    while(!SeeedTFLidar.get_frame_data()){
+        delay(1); 
+    }
+    return SeeedTFLidar.get_distance();
+}
 
-while True:
-    while(lidar.get_frame_data() == False):
-        time.sleep(0.001)
-    print ("The distance is:", lidar.distance, 'CM')
-    print ("The strength is:", lidar.strength, '')
-    time.sleep_ms(1000)
-```
+void display(uint16_t lidar_data,uint8_t mode){
 
-#### API Reference
+    spr.fillSprite(TFT_WHITE);
+    //Settings for the line graph title
+    auto header =  text(0, 0)
+                .value("Lidar Terminal")
+                .align(center)
+                .valign(vcenter)
+                .width(tft.width())
+                .color(green)
+                .thickness(3);
+    header.height(header.font_height() * 2);
+    header.draw(); //Header height is the twice the height of the font
+    if (LINE_DIS == mode){
+        if (data.size() == max_size) {
+            data.pop();//this is used to remove the first read variable
+        }
+        data.push(lidar_data); //read variables and store in data
+    //Settings for the line graph
+        auto content = line_chart(10, header.height()); //(x,y) where the line graph begins
+            content
+                    .height(tft.height() - header.height() * 1.5) //actual height of the line chart
+                    .width(tft.width() - content.x() * 2) //actual width of the line chart
+                    .based_on(0.0) //Starting point of y-axis, must be a float
+                    .show_circle(false) //drawing a cirle at each point, default is on.
+                    .value(data) //passing through the data to line graph
+                    .color(TFT_RED) //Setting the color for the line
+                    .draw();
+    }
+    else if (STRING_DIS == mode){
+        for(int8_t line_index = 0;line_index < 5 ; line_index++)
+        {
+            spr.drawLine(0, 50 + line_index, tft.width(), 50 + line_index, TFT_GREEN);
+        }        
+        auto header =  text(0, 0)
+                    .thickness(1);
+        spr.setFreeFont(&FreeSansBoldOblique24pt7b); 
+        spr.setTextColor(TFT_BLUE);
+        spr.drawFloat(lidar_data / 100.00,2,80,110);
+        spr.drawString(" M",80 + 90,110,1);
 
-- Get_frame_data() : get frame data (include distance and strength)
-```C++
-while(lidar.get_frame_data() == False):
-    time.sleep(0.001)
-```
+    }
+    spr.pushSprite(0, 0);
 
-- Distance :distance from obstacle
-```C++
-print ("The distance is:", lidar.distance, 'CM')
-```
-
-- Strength : lidar strength
-```C++
-print ("The strength is:", lidar.strength, '')
+}
 ```
 
 !!!Success
@@ -276,14 +281,8 @@ print ("The strength is:", lidar.strength, '')
 ---
 - **[Datasheet]** [Grove-TF-Mini-LiDAR
 ](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/res/DE-LiDAR%20TFmini%20Datasheet-V1.7-EN.pdf)
-- **[Software]** [Grove-TF-Mini-LiDAR Master Computer Software
-](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/res/Grove-TF-Mini-LiDAR%20Master%20Computer%20Software.zip)
-- **[Product Manual]** [SJ-PM-TFmini-T-01_A06 Product Manual_EN.pdf
-](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/res/SJ-PM-TFmini-T-01_A06_Product_Manual_EN.pdf)
-- **[Library]** [TFmini Examples on Arduino](https://github.com/TFmini/TFmini-Arduino)
-- **[Library]** [TFmini Examples on RaspberryPi](https://github.com/TFmini/TFmini-RaspberryPi)
-- **[Library]** [TFmini Examples on TFmini-STM32](https://github.com/TFmini/TFmini-STM32)
-- **[Library]** [TFmini Examples on 51MCU](https://github.com/TFmini/TFmini-51MCU)
+- **[ZIP]** [Seeed_Arduino_TFlidar](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/res/Seeed_Arduino_TFlidar.zip)
+- **[ZIP]** [Seeed_Arduino_Linechart](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/res/Seeed_Arduino_Linechart.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
