@@ -160,6 +160,19 @@ void loop(void)
 !!!Note
         In this example, 2/3x gain is set so need to multiply value by 0.1875mV. For example, 10201 x 0.1875mV = 1.91V.
 
+### Play With Raspberry Pi
+
+### Hardware
+
+| Raspberry Pi | Grove Base Hat for RasPi | Grove - 16 Bit ADC(ADS1115)|
+|--------------|-------------|-----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-16bit-ADC-ADS1115/109020041-preview.png)
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|[Get ONE Now]()|
+
+### Software
+
+The Grove - 16-bit ADC(ADS1115) have the same usage as 4-Channel 16-Bit ADC for Raspberry Pi (ADS1115) and so please follow tutorials [**here**](https://wiki.seeedstudio.com/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/#getting-started).
+
 ### Play with Wio Terminal
 
 **Materials required**
@@ -191,18 +204,6 @@ void loop(void)
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/Grove-16bit-ADC-ADS1115/WT-ADS1115.gif"/></div>
 
-### Play With Raspberry Pi
-
-### Hardware
-
-| Raspberry Pi | Grove Base Hat for RasPi | Grove - 16 Bit ADC(ADS1115)|
-|--------------|-------------|-----------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-16bit-ADC-ADS1115/109020041-preview.png)
-|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|[Get ONE Now]()|
-
-### Software
-
-The Grove - 16-bit ADC(ADS1115) have the same usage as 4-Channel 16-Bit ADC for Raspberry Pi (ADS1115) and so please follow tutorials [**here**](https://wiki.seeedstudio.com/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/#getting-started).
 
 ### Play With Wio Terminal (ArduPy)
 
@@ -215,7 +216,7 @@ The Grove - 16-bit ADC(ADS1115) have the same usage as 4-Channel 16-Bit ADC for 
 |![enter image description here](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-thumbnail.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-16bit-ADC-ADS1115/109020041-preview.png)|
 |[Get One Now](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Get One Now]()|
 
-- **Step 2.** Connect Grove - Gas Sensor(MQ3) to **A0** port of Wio Terminal.
+- **Step 2.** Connect Grove - 16 Bit ADC(ADS1115) to **I2C** port of Wio Terminal.
 
 - **Step 3.** Connect the Wio Terminal to PC through USB Type-C cable.
 
@@ -258,7 +259,7 @@ aip shell -n -c "runfile <YourPythonFilePath>"
 # aip shell -n -c "runfile /Users/ansonhe/Desktop/ArduPy-ads1115.py"
 ```
 
-- **Step 5.** We will see the gas value display on terminal as below:
+- **Step 5.** We will see the ADC value display on terminal as below:
 
 ```sh
 ansonhe@Ansons-Macbook-Pro ~:aip shell -n -c "runfile /Users/ansonhe/Desktop/ArduPy-ads1115.py"
