@@ -6,21 +6,17 @@
 |---------------------------------------------------------|-------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
 |Grove - I2C Hub (6 Port)| [Wiki](https://wiki.seeedstudio.com/Grove-I2C-Hub-6Port/)  | [Bazaar](https://www.seeedstudio.com/Grove-I2C-Hub-6-Port-p-4349.html) |
 |Grove - Speaker Plus|[Wiki](https://wiki.seeedstudio.com/Grove-Speaker-Plus/)| [Bazaar](https://www.seeedstudio.com/Grove-Speaker-Plus-p-4592.html)|
-|Lipo Rider Plus|[Wiki](https://wiki.seeedstudio.com/Lipo-Rider-Plus/)|[Bazaar](https://www.seeedstudio.com/Lipo-Rider-Plus-p-4204.html)|
 |Grove-EC Sensor kit|[Wiki](https://wiki.seeedstudio.com/Grove-EC-Sensor-kit/)|[Bazaar](https://www.seeedstudio.com/Grove-EC-Sensor-Kit-DJS-1C-Black-p-4576.html)|
 |Grove - GPS(Air530)|[Wiki](https://wiki.seeedstudio.com/Grove-GPS-Air530/)|[Bazaar](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html)|
 |Grove - ORP Sensor Kit (501Z)|[Wiki](https://wiki.seeedstudio.com/Grove-ORP-Sensor-kit/)|[Bazaar](https://www.seeedstudio.com/Grove-ORP-Sensor-Kit-501Z-p-4575.html)|
 |Grove - PH Sensor Kit (E-201C-Blue )|[Wiki](https://wiki.seeedstudio.com/Grove-PH-Sensor-kit/)|[Bazaar](https://www.seeedstudio.com/Grove-PH-Sensor-Kit-E-201C-Blue-p-4577.html)|
-|Seeed Studio BeagleBone® Green Gateway|[Wiki](https://wiki.seeedstudio.com/BeagleBone-Green-Gateway/)|[Bazaar](https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-Gateway-p-4586.html)|
 |Grove - Doppler Radar (BGT24LTR11) - 24GHz Transceiver|[Wiki](https://wiki.seeedstudio.com/Grove-Doppler-Radar/)|[Bazaar](https://www.seeedstudio.com/Grove-Doppler-Radar-BGT24LTR11-p-4572.html)|
-|2.7'' Triple-Color E-Ink Shield for Arduino|[Wiki](https://wiki.seeedstudio.com/2.7inch-Triple-Color-E-Ink-Shield-for-Arduino/)|[Bazaar](https://www.seeedstudio.com/2-7-Triple-Color-E-Ink-Shield-for-Arduino-p-4069.html)|
-|Seeeduino XIAO - Arduino Microcontroller - SAMD21 Cortex M0+|[Wiki](https://wiki.seeedstudio.com/Seeeduino-XIAO/)|[Bazaar](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|
 
 ## April, 2020
 
 | Product                                                 | Wiki                                                                                      | Bazaar                                                                                                |
 |---------------------------------------------------------|-------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-|Grove-Multichannel Gas Sensor V2|[Wiki](https://wiki.seeedstudio.com/Grove-Multichannel-Gas-Sensor-V2/)|[Bazaar](https://www.seeedstudio.com/Grove-Multichannel-Gas-Sensor-v2-p-4569.html)|
+|Grove - Multichannel Gas Sensor V2|[Wiki](https://wiki.seeedstudio.com/Grove-Multichannel-Gas-Sensor-V2/)|[Bazaar](https://www.seeedstudio.com/Grove-Multichannel-Gas-Sensor-v2-p-4569.html)|
 |Grove - Qwiic Hub|[Wiki](https://wiki.seeedstudio.com/Grove-Qwiic-Hub/)|[Bazaar](https://www.seeedstudio.com/Grove-Qwiic-Hub-p-4531.html)|
 |Grove - I2C Motor Driver (L298P)|[Wiki](https://wiki.seeedstudio.com/Grove-I2C-Motor-Driver-L298P/)|[Bazaar](https://www.seeedstudio.com/Grove-I2C-Motor-Driver-L298P-p-4534.html)|
 |Grove - 3-Axis Digital Accelerometer (LIS3DHTR)|[Wiki](https://wiki.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-LIS3DHTR/)|[Bazaar](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-LIS3DHTR-p-4533.html)|
@@ -58,8 +54,7 @@
 
 | Product                                                 | Wiki                                                                                      | Bazaar                                                                                                |
 |---------------------------------------------------------|-------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-|Green LCD Cape with Resistive Touch|[Wiki](https://wiki.seeedstudio.com/Seeed-Studio-BeagleBone-Green-LCD-Cape-with-Resistive-Touch/)|[Bazaar](https://www.seeedstudio.com/5-Inch-Seeed-Studio-BeagleBoner-Green-LCD-Cape-with-Resistive-Touch.html)|
-|Grove-Integrated-Pressure-Sensor-Kit|[Wiki](https://wiki.seeedstudio.com/Grove-Integrated-Pressure-Sensor-Kit/)|[Bazaar](https://www.seeedstudio.com/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP-p-4295.html)|
+|Grove - Integrated-Pressure-Sensor-Kit|[Wiki](https://wiki.seeedstudio.com/Grove-Integrated-Pressure-Sensor-Kit/)|[Bazaar](https://www.seeedstudio.com/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP-p-4295.html)|
 |Grove Creator Kit |Wiki|[Bazaar](https://www.seeedstudio.com/BitGadget-Kit-Seeed-Version-p-4360.html)|
 
 ## October, 2019
