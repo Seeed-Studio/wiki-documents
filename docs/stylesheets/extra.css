@@ -527,3 +527,40 @@ pre > code {
 .hljs-ln-code {
   padding-left: 10px;
 }
+
+.md-nav__link {
+  white-space: nowrap;
+}
+.bread-active{
+  color: #fff;
+}
+/* .md-sidebar {
+  width: 34.2rem;
+}
+
+.md-grid {
+  max-width: 142rem;
+  
+} */
+
+@media only screen and (min-width: 76.25em){
+  .md-sidebar {
+    width: 34.2rem;
+  }
+  
+  .md-grid {
+    max-width: 142rem;
+    
+  }
+  .md-content {
+      margin-left: 34.2rem;
+  }
+  .md-sidebar--secondary {
+    margin-left: 142rem;
+  }
+}
+@media only screen and (min-width: 60em){
+  .md-content {
+      margin-right: 34.2rem;
+  }
+}
