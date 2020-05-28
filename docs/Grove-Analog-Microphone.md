@@ -1,12 +1,12 @@
 ---
-name: Grove - Sound Sensor
+name: Grove - Analog Microphone
 category: Sensor
-bzurl: https://www.seeedstudio.com/Grove-Sound-Sensor-p-752.html
-oldwikiname: Grove_-_Sound_Sensor
-prodimagename: page.jpg
-surveyurl: https://www.surveymonkey.com/r/SoundSensor
-sku: 101020023
-tags: io_3v3, io_5v, plat_duino, plat_linkit, plat_bbg, plat_wio, plat_pi, plat_linkit
+bzurl: 
+oldwikiname: 
+prodimagename: 
+surveyurl: 
+sku: 101020852
+tags: 
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-Analog-Microphone/img/04.png)
@@ -92,36 +92,41 @@ Grove - Analog Microphone is an ideal choice of sound sensors where excellent a
 - **Step 1.** Please copy below code to Arduio IDE and upload to arduino. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 ```c
-// test code for Grove - Sound Sensor
-// loovee @ 2016-8-30
+/*
+  Analog input, analog output, serial output
 
-const int pinAdc = A0;
+  Reads an analog input pin, maps the result to a range from 0 to 255 and uses
+  the result to set the pulse width modulation (PWM) of an output pin.
+  Also prints the results to the Serial Monitor.
+*/
 
-void setup()
-{
-    Serial.begin(115200);
-    //Serial.println("Grove - Sound Sensor Test...");
+// These constants won't change. They're used to give names to the pins used:
+const int analogInPin = A0;  // Analog input pin that the potentiometer is attached to
+const int analogOutPin = 9; // Analog output pin that the LED is attached to
+
+int sensorValue = 0;        // value read from the pot
+int outputValue = 0;        // value output to the PWM (analog out)
+
+void setup() {             
+  Serial.begin(9600);      // initialize serial communications at 9600 bps
 }
 
-void loop()
-{
-    long sum = 0;
-    for(int i=0; i<32; i++)
-    {
-        sum += analogRead(pinAdc);
-    }
+void loop() {
+  sensorValue = analogRead(analogInPin);        // read the analog in value
+  outputValue = map(sensorValue, 0, 1023, 0, 255);       // map it to the range of the analog out
+  analogWrite(analogOutPin, outputValue);               // change the analog out value
 
-    sum >>= 5;
+  Serial.println(outputValue);    // print the results to the Serial Monitor
 
-    Serial.println(sum);
-    delay(10);
+  // wait 2 milliseconds before the next loop for the analog-to-digital
+  // converter to settle after the last reading:
+  delay(2);
 }
-
 ```
 
 - **Step 2.** Click on **Serial > Plotter** to get the changing curve of the sensor. Please make a noise to view the change of the value.
 
-![](https://files.seeedstudio.com/wiki/Grove_Sound_Sensor/images/sound_raw.png)
+![](https://files.seeedstudio.com/wiki/Grove-Analog-Microphone/img/outcome.png)
 
 
 
@@ -135,6 +140,7 @@ void loop()
 
 - [**ZIP**] [Grove-Analog_Microphone_v1.0_SCH&PCB.zip](https://files.seeedstudio.com/wiki/Grove-Analog-Microphone/res/202002902_Grove-Analog_Microphone_v1.0_SCH&PCB.zip)
 - [**PDF**] [SMD Mic OMNI-22DB_Specification.pdf](https://files.seeedstudio.com/wiki/Grove-Analog-Microphone/res/SMD_Mic_OMNI-22DB_Specification.pdf)
+
 
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
