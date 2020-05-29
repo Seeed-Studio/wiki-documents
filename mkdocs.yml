@@ -192,6 +192,7 @@ nav:
             - ODYSSEY X86J4105 Using Intel OpenVINO Toolkit: ODYSSEY-X86J4105-Intel-OpenVINO.md
             - ODYSSEY X86J4105 with Intel Neural Compute Stick 2: ODYSSEY-X86J4105-NCS2.md
             - ODYSSEY X86J4105 with Coral-Mini-PCIe-Accelerator-x86: Coral-Mini-PCIe-Accelerator-x86.md
+            - How to Use Firmata to Control the ODYSSEY X86J4105: ODYSSEY-X86J4105-Firmata.md
           - ODYSSEY STM32MP157C: ODYSSEY-STM32MP157C.md
           - SEEED SOM STM32MP157C: SEEED-SOM-STM32MP157C.md
       
