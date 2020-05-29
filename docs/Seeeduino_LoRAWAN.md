@@ -164,7 +164,7 @@ In brief, Groves is hundreds of sensor that in standard style, which is consist 
 
 First you need to install the latest Arduino IDE, and [ADD Seeeduino LoRa to your Arduino IDE](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/).
 
-## **Install the Driver (For Windows)**
+## Install the Driver (For Windows)
 
 When the first time to insert the board, you should get a USB COM device name Seeeduino LoRaWAN that need to install a driver. Click on the below button to download driver for the board.
 
@@ -174,7 +174,7 @@ To make sure the driver was installed successful, open your Device Manager to se
 
 ![](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/img/device_manager.png)
 
-## **1. Blink**
+## 1. Blink
 
 Now we can upload our first demo - Blink to Seeeduino LoRaWAN.
 
@@ -218,7 +218,7 @@ If the uploading is success, you should the some info in red and please the on-b
 
 ![](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/img/blink3.png)
 
-## **2. Battery**
+## 2. Battery
 
 You can power the board via a 3.7V Lipo battery. There's a JST2.0 cable included, use it if you can't get a battery with JST2.0 connector.
 
@@ -255,7 +255,7 @@ void loop() {
 !!!Note
     Charge status return 0 while charging, return 1 while charge done or no battery insert.
 
-## **3. Send and Receive Example**
+## 3. Send and Receive Example
 
 There is a well written library for the LoRaWAN modules, for simple applications you even don't need to know much about the protocol about LoRa, which is complex and hard to read.
 And please note that you still need some acknowledge about LoRa protocol if you want an advanced application.
@@ -268,7 +268,7 @@ You don't need to download the library, it's included in the package already. Yo
 
 You need 2 piece of Seeeduino LoRaWAN to complete this example, one for sending and another for receiving.
 
-### **3.1 P2P Sending**
+### 3.1 P2P Sending
 
 Open your Arduino IDE and click on **File > Examples > LoRaWAN > p2p_tx** to open the sketch or you can copy the code below.
 This sketch will broadcast a string "Hello World!" every 3000 ms.
@@ -292,7 +292,7 @@ void loop(void)
 }
 ```
 
-### **3.2 P2P Receiving**
+### 3.2 P2P Receiving
 
 Open your Arduino IDe and click on **File > Examples > LoRaWAN > p2p_rx** to open the sketch or you can copy the code below.
 
@@ -339,7 +339,7 @@ After both of the sketch is well uploaded, open the serial monitor of the receiv
 
 ![](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/img/monitor_rx.png)
 
-### **3.3 ABP**
+### 3.3 ABP
 
 - Step 1. Please refer to [LoRa/LoRaWAN Gateway Kit](https://wiki.seeedstudio.com/LoRa_LoRaWan_Gateway_Kit/) to setup gateway first.  
 - Step 2. Connect the [Grove-Temperature_and_Humidity_Sensor_Pro](https://wiki.seeedstudio.com/Grove-Temperature_and_Humidity_Sensor_Pro/) to D2 port of base shield. 
@@ -437,7 +437,7 @@ void loop(void)
 
 - Step 6. For local server, click Application->Seeed(the name of the Application you just added)->View application data, you will see the data you've just sent from the Seeeduino_LoRAWAN. For Loriot Server, go to Dashboard -> Applications -> SampleApp ->Device , click the Node Device EUI or DevAddr, you will find the data you've just sent here. 
 
-### **3.4 OTAA**
+### 3.4 OTAA
 
 - Step 1. Please refer to [User Manual](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/res/%5BRHF-UM01649%5DIoT%20Discovery%20User%20Manual-seeed-v2.1.pdf) Session 3.2.3 to setup the gateway. 
 - Step 2. For seeeduino Lorawan, Please open your Arduino IDE and click on **File > Examples > LoRaWAN > OTAA** and refer the code.
@@ -519,12 +519,12 @@ void loop(void)
 }
 ```
 
-## **4. GPS Data**
+## 4. GPS Data
 
 !!!Note
     This chapter works with Seeeduino LoRaWAN W/GPS only.
 
-### **4.1 NMEA**
+### 4.1 NMEA
 
 - Step 1. Copy below code you Seeeduino LoRaWAN W/GPS.
 
@@ -553,7 +553,7 @@ void loop()
 ![](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/img/gps.png)
 
 
-### **4.2 Lat and Lng**
+### 4.2 Lat and Lng
 
 Thanks for **Todd Krein** for sharing the example in Github. Please download the [TinyGPS++ library](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/TinyGPSPlus-master.zip) and then copy below code to Seeeduino Lorawan. 
 
@@ -677,7 +677,7 @@ void displayInfo()
 }
 ```
 
-## **5. Low Power**
+## 5. Low Power
 
 The minimum current is 80uA(for Seeeduino LoRaWAN) under our testing.
 Please follow below steps.
@@ -733,7 +733,7 @@ void dummy(void)
 // END File
 ```
 
-## **6. Update firmware**
+## 6. Update firmware
 
 If you want to check version of you board, please upload below code to your board.
 
