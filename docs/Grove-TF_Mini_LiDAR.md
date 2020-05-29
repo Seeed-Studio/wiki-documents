@@ -17,39 +17,44 @@ ToF is the abbreviation of Time of Flight technology, and its operating principl
 
 [![Get one now](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/image/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Seeedstudio-Grove-TF-Mini-LiDAR-p-2996.html)
 
-!!!Warning
-    Prevent dust or any other foreign matter from entering the lens; otherwise it may affect the light transmission.
+!!!Attention
+      Grove-TF Mini LiDAR is **NOT** going to sell soon and alternately we are offering other LiDAR products with superior performance and meanwhile the **GETTING STARTED** in the following of this article still works with the products below:
 
 
 ## Version
 
-| Product Version              | Changes                                                                                                                                                                                    | Released Date |
+| Product Version| Image | Order |
 |------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
-| Grove-TF Mini LiDAR V1.0 | Initial | Nov 2017      |
+| TF-Luna| ![](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/TF_Luna_thumbnail.png) |[![Get one now](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/GET_ONE_s.png)](https://www.seeedstudio.com/TF-Luna-LiDAR-Module-Short-Range-Distance-Sensor-p-4561.html)|
+|TFmini-S|![](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/tf_mini_s.png)|[![Get one now](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/GET_ONE_s.png)](https://www.seeedstudio.com/TFmini-S-LiDAR-module-Short-Range-ToF-LIDAR-Range-Finder-p-4425.html)|
+|TFmini Plus|![](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/tf_mini_plus.png)|[![Get one now](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/GET_ONE_s.png)](https://www.seeedstudio.com/TFmini-Plus-LIDAR-Range-Finder-based-on-ToF-p-3222.html)|
 
+!!!Warning
+    Prevent dust or any other foreign matter from entering the lens; otherwise it may affect the light transmission.
 
 ## Specification
----
-| Product   Name                              | TFmini                           |
-|---------------------------------------------|----------------------------------|
-| Operating range                             | 0.3m-12m                         |
-| Maximum operating range at 10% reflectivity | 5m                               |
-| Average power consumption                   | 0.6W                            |
-| Applicable voltage range                    | 4.5V-6V                          |
-| Acceptance angle                            | 2.3°                             |
-| Minimum resolution ratio                    | 1cm                              |
-| Frequency                                   | 100Hz                            |
-| Accuracy                                    | 1%   (less than 6m), 2% (6m-12m) |
-| Distance detection unit                     | cm                               |
-| Wavelength                                  | 850nm                            |
-| Size                                        | 42mm×15mm×16mm                   |
-| Operating temperature                       | -20℃-60℃                       |
-| Light sensitivity                           | 70,000lux                        |
-| Weight                                      | 4.7g                             |
-| Communication interface                     | UART 115200                      |
-| LED peak current                            | 800ma                            |
-| Serial port TTL voltage level               | 3.3V                              |
-| Electromagnetic Compatibility(EMC)          | EN 55032 Class B                  |
+
+The following table illustrates comparisons among the different LiDAR modules offered by us.
+
+|                         |            TF-Luna           |           TFmini-S           |         TFmini Plus        |    Grove - TF Mini LiDAR   |
+|:-----------------------:|:----------------------------:|:----------------------------:|:--------------------------:|:--------------------------:|
+| Operating Range         |   0.2m -8m@90%reflectivity   |   0.1 m-12m@90%reflectivity  |  0.1 m-12m@90%reflectivity | 0.3m-12m5m@10%reflectivity |
+| Frame Rate              |            1-125Hz           |           1-1000Hz           |          1-1000Hz          |            100Hz           |
+| Distance Resolution     |              1cm             |              1cm             |             1cm            |             1cm            |
+| Accuracy                |   ±6cm@(0.2m-3m)±2%@(3m-8m)  |  ±6cm@(0.1 m-6m)±1%@(6m-12m) | ±5cm@(0.1m-5m)±1%@(5m-12m) | 1%(less than 6m)2%(6m-12m) |
+| FOV                     |              2°              |              2°              |            3.6°            |            2.3°            |
+| Laser Wavelength        |             850nm            |             850nm            |            850nm           |            850nm           |
+| Light Sensitivity       |            70Klux            |            70 Klux           |           70 Klux          |          70,000lux         |
+| Output Data             | Single-point, distance value | Single-point, distance value | Single-pointdistance value | Single-pointdistance value |
+| Communication Interface |           UART, I2C          |         UART, I2C,I/O        |        UART, I2C,I/O       |            UART            |
+| Supply Voltage          |            5V±0.1V           |            5V±0.1V           |           5V±0.5V          |           4.5V-6V          |
+| Power Consumption       |            ≤0.35W            |             ≤0.7W            |            550mW           |            0.6W            |
+| Peak current            |             150mA            |             800mA            |            500mA           |            800mA           |
+| Operating Temperature   |          -10°C~60°C          |           0°C~60°C           |         -20°C~60°C         |         -20°C-60°C         |
+| Laser Safety Class      |       Class1(IEC60825)       |       Class1 (IEC60825)      |      Class1 (IEC60825)     |         FDA Class I        |
+| Dimensions(L*W*H)       |        35*21.2*12.5mm        |          42*15*16mm          |        35*18.5*21 mm       |         42*15*16mm         |
+| Weight                  |            5g±0.3g           |            5g±0.3g           |           12g±1g           |            4.7g            |
+| Enclosure Rating        |              N/A             |              N/A             |            IP65            |             N/A            ||
 
 !!!Tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
@@ -80,7 +85,7 @@ Platforms Supported
 
 - **Step 2**. Connect Grove-TF-Mini-LiDAR to **D2** port of Base Shield and connect Seeeduino to PC through a USB cable.
 
-- **Step 3**. Download the [Demo code](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/res/Seeed_Arduino_TFlidar.zip) and copy the whole **Seeed_Arduino_TFlidar** file and paste it into your Arduino IDE library file.
+- **Step 3**. Download the [Demo code](https://github.com/Seeed-Studio/Seeed_Arduino_TFlidar.git) and copy the whole **Seeed_Arduino_TFlidar** file and paste it into your Arduino IDE library file.
 
 ![](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/hardware_connection2.jpg)
 
@@ -177,7 +182,7 @@ void loop() {
 
 **Step 1** Plug Grove-TF-Mini-LiDAR to Wio Terminal via Jumpers and also connect Wio Terminal to PC through a USB cable.
 
-**Step 2** Download the [Demo code](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/res/Seeed_Arduino_Linechart.zip) and copy the whole **Seeed_Arduino_Linechart** file and paste it into your Arduino IDE library file.
+**Step 2** Download the [Demo code](https://github.com/Seeed-Studio/Seeed_Arduino_Linechart.git) and copy the whole **Seeed_Arduino_Linechart** file and paste it into your Arduino IDE library file.
 
 **Step 3** Copy the demo code into your Arduino IDE. 
 
@@ -281,8 +286,8 @@ void display(uint16_t lidar_data,uint8_t mode){
 ---
 - **[Datasheet]** [Grove-TF-Mini-LiDAR
 ](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/res/DE-LiDAR%20TFmini%20Datasheet-V1.7-EN.pdf)
-- **[ZIP]** [Seeed_Arduino_TFlidar](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/res/Seeed_Arduino_TFlidar.zip)
-- **[ZIP]** [Seeed_Arduino_Linechart](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/res/Seeed_Arduino_Linechart.zip)
+- **[ZIP]** [Seeed_Arduino_TFlidar](https://github.com/Seeed-Studio/Seeed_Arduino_TFlidar/archive/master.zip)
+- **[ZIP]** [Seeed_Arduino_Linechart](https://github.com/Seeed-Studio/Seeed_Arduino_Linechart/archive/master.zip)
 
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
