@@ -10,9 +10,12 @@ This could work perfectly with Odyssey-X86 with its onboard Arduino Core meaning
 
 *Reference: [Firmata Protocols](https://github.com/firmata/protocol)*
 
-## Burning the Firmata Firmware
+## Burning the Firmata Firmware via Arduino IDE
 
 The Arduino IDE >= 1.6.X  version comes with the Firmata firmware so we can use Arduino IDE to burn the firmata firmware into Arduino core.
+
+!!!Note
+        You can download [Arduino IDE](https://www.arduino.cc/en/Main/Software) from here.
 
 - Open Arduino IDE and navigate to `Examples` -> `Firmata` -> `StandardFirmata`:
 
@@ -58,7 +61,7 @@ Install with pip:
 pip install pyfirmata
 ```
 
-### To Blink an LED connected on D13:
+### To Blink an LED connected on D13
 
 **Note:** Change the `COM4` to your Arduino USB COM.
 
@@ -78,7 +81,7 @@ while True:
     sleep(1)
 ```
 
-### To read Analog Signals on A0:
+### To read Analog Signals on A0
 
 ```py
 #!/usr/bin/env python3
@@ -98,7 +101,7 @@ for i in range(10):
 board.analog[0].disable_reporting()
 ```
 
-### PWM Outputs on D6:
+### PWM Outputs on D6
 
 Output a PWM signal to a LED connected at D6.
 
@@ -123,11 +126,10 @@ while True:
 
 Now you can use python script (or even other languages) to control your Arduino core on Odyssey-X86, which makes it very useful in some situations where real time requirements are less important (i.e Using python to build a Web Sever, and using Arduino to control a relay).
 
-Note: For more API reference, please visit [pyFirmata API](https://pypi.org/project/pyFirmata/).
+**Note:** For more API reference, please visit [pyFirmata API](https://pypi.org/project/pyFirmata/).
 
 !!!Note
-
-For more advanced python usage of Firmata, you can consider using [pymata4](https://github.com/MrYsLab/pymata4).
+      For more advanced python usage of Firmata, you can consider using [pymata4](https://github.com/MrYsLab/pymata4).
 
 ## Using JavaScript to Interpret Firmata
 
@@ -146,7 +148,7 @@ npm init -y
 npm install --save firmata # Installing firmata.js
 ```
 
-### To blink an LED connected on D13:
+### To blink an LED connected on D13
 
 ```java
 const Board = require("firmata");
@@ -174,7 +176,7 @@ Board.requestPort((error, port) => {
 });
 ```
 
-### To read Analog Signals on A0:
+### To read Analog Signals on A0
 
 To test the analog signals, you can simply use the [Grove - Rotary Angle Sensor](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html)!
 
@@ -200,7 +202,7 @@ Board.requestPort(function(error, port) {
 });
 ```
 
-### PWM Outputs on D6:
+### PWM Outputs on D6
 
 ```java
 var Board = require('firmata');
@@ -237,7 +239,7 @@ Board.requestPort(function(error, port) {
 });
 ```
 
-### I2C Signals:
+### I2C Signals
 
 firmata.js also support I2C and UART communications, here provides an example using with [Grove - 3-Axis Digital Accelerometer(ADXL345)(±16g)](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-16g.html):
 
