@@ -20,6 +20,9 @@ The Arduino IDE >= 1.6.X  version comes with the Firmata firmware so we can use 
 
 - The `StandardFirmata.ino` will appear. Select the correct board and port and click **Upload**:
 
+!!!Note
+      If you haven't installed the board library for Odyssey please follow [**this**](https://wiki.seeedstudio.com/ODYSSEY-X86J4105/#using-the-arduino-core-atsamd21g18-in-windows) to install the board.
+
 <div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/firmata-2.jpg"/></div>
 
 - Once uploaded, it should look something like this:
