@@ -305,7 +305,7 @@ Currently the fan is controlled by BIOS, and not controlled by user. The fan spe
 
 ### How to upgrade BIOS
 
-For the instrucitons of upgrading BIOS, please check the Installing OS section.
+For the instructions of upgrading BIOS, please check the Installing OS section.
 
 ### How to set the ODYSSEY - X86J4105 to auto power on when power plugged in
 
