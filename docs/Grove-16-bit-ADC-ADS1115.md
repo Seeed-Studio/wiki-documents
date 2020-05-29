@@ -196,7 +196,7 @@ The Grove - 16-bit ADC(ADS1115) have the same usage as 4-Channel 16-Bit ADC for 
 !!!Note
         Follow [Wio Terminal's get started](https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/) before the following steps.
 
-- **Step 2.** Download the [**example code**](https://files.seeedstudio.com/wiki/Grove-16bit-ADC-ADS1115/ads1115.zip) here.
+- **Step 2.** Download the [**example code**](https://github.com/Seeed-Studio/Seeed_Arduino_Sketchbook/tree/master/examples/WioTerminal-ADS1115) here.
 
 - **Step 3.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
