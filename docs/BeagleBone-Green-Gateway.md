@@ -314,9 +314,9 @@ Change to:
     ##enable BeagleBone® Black: eMMC Flasher:
     cmdline=init=/opt/scripts/tools/eMMC/init-eMMC-flasher-v3.sh
 
-Then you will find the 4 user led light as below
+Then you will find the user leds light as below
 
-![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/flashing.gif)
+![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/img/BBGG.gif)
 
 !!!Note
     If you don't find the upper tracing light, please press the RESET button to reset the board.
