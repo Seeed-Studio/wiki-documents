@@ -766,11 +766,9 @@ Then you will get the version of your board.
 
 !!!Note
     If your Seeeduino LoRawan board is an AM version, it cannot support V3 firmware, you need DM version to update the firmware to above 3.0.Because V3 firmware is too large,  AM flash is too small.
-    If your firmware version is above 3.0, please open your Serial Monitor and INPUT
+   
 
-```
-AT+VR
-```
+
 
 ![](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/img/VER.png)
 
