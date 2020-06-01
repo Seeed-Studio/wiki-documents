@@ -23,6 +23,15 @@ If you want to build an IoT application quickly, Seeeduino LoRaWAN is your best 
 |Seeeduino LoRaWAN |Dec 20, 2016|[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Seeeduino-LoRaWAN-p-2780.html)|
 |Seeeduino LoRaWAN W/GPS |Dec 20, 2016|[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Seeeduino-LoRaWAN-W%2FGPS-p-2781.html)|
 
+## Version Change
+
+|Item| Seeeduino LoRaWAN W/GPS | Seeeduino LoRaWAN |
+|---|---|---|
+|Main Chip|ATSAMD21|ATSAMD21|
+|GPS communication|√|x|
+|modular|RHF76-052DM|RHF76-052AM|
+|modular Release Time|2018|2018|
+
 !!!Warning
     Please update the firmware when the first time to use it. Please always plug 3.7V Lipo battery in case USB power supply is not sufficient.
 
@@ -844,13 +853,14 @@ Click on **Files Transfer > Ymodem > Send**, and select the .bin file we had dow
 * [Sketchup file(3D)](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/Seeeduino LoRaWAN.skp)
 * [CE certification of RHF 76-052](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/ce-rhf76-052.pdf)
 * [RHF76-052 Firmware V2.0.10](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/rhf76-052am-v2.0.10-20160923.ebin 2.bin)
-* [RHF76-052 Firmware V2.1.16](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/rhf76-052am-v2.1.16-20171203.ebin.bin)
-* [RHF76-052 Firmware V2.1.19](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/rhf76-052am-v2.1.19-20180525.ebin.bin)
-* [RHF76-052 Firmware V3.3.1](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/rhf76-052dm-v3.3.1-20180707.ebin(1).bin)
-* [RHF76-052 Firmware V3.5.13](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/rhf76-052dm-v3.5.13-20190916.ebin.bin)
-* [Datasheet of RHF76-052AM](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/rhf-ds01500_rhf76-052_datasheet_v03.pdf)
+* [RHF76-052 Firmware V2.1.16AM](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/rhf76-052am-v2.1.16-20171203.ebin.bin)
+* [RHF76-052 Firmware V2.1.19AM](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/rhf76-052am-v2.1.19-20180525.ebin.bin)
+* [RHF76-052 Firmware V3.3.1DM](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/rhf76-052dm-v3.3.1-20180707.ebin(1).bin)
+* [RHF76-052 Firmware V3.5.13DM](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/rhf76-052dm-v3.5.13-20190916.ebin.bin)
+* [Datasheet of RHF76-052AM/DM](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/rhf-ds01500_rhf76-052_datasheet_v03.pdf)
 * [Datasheet of GPS Chip L70B-M39 ](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/L70B-M39.pdf)
 * [Azure IoT Edge LoRaWAN](https://github.com/Azure/iotedge-lorawan-starterkit/)
+* [[RHF-PS01709]LoRaWAN Class ABC AT Command Specification  ](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/AT-Command-Specificationv1.2.pdf)
 
 ## Projects
 
