@@ -90,7 +90,7 @@ Before the start, please download the **nRF Connect** app from Google/Apple Stor
 
 
 
-### Hardware
+## Hardware
 
 **Materials required**
 
@@ -108,10 +108,10 @@ Connect the Wio Lite MG126 to your computer via the USB cable.
 
 
 
-### Software
+## Software
 
 
-- **Step 1. You need to Install an Arduino Software.**
+### Step 1. You need to Install an Arduino Software.
 
 [![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/Download_IDE.png)](https://www.arduino.cc/en/Main/Software)
 
@@ -124,7 +124,7 @@ Double-click the Arduino application (arduino.exe) you have previously downloade
     If the Arduino Software loads in a different language, you can change it in the preferences dialog. See the [Arduino Software (IDE) page](https://www.arduino.cc/en/Guide/Environment#languages) for details.
 
 
-- **Step 2. Add the Wio Lite MG126 Board into Arduino IDE**
+### Step 2. Add the Wio Lite MG126 Board into Arduino IDE
 
 Open your Arudino IDE, click on **File > Preferences**, and copy the following url to Additional Boards Manager URLs
 
@@ -142,7 +142,7 @@ Click on **Toos > Board > Board Manager**. Search the board by name, just search
 
 
 
-- **Step 3. Select your board and port**  
+### Step 3. Select your board and port
 You'll need to select the entry in the **Tools > Board** menu that corresponds to your Arduino.
 Selecting the **Wio Lite MG126**.
 
@@ -161,40 +161,12 @@ Select the serial device of the Arduino board from the Tools | Serial Port menu.
 
 
 
-- **Step 4. Open the demo**
+### Step 4. Open the demo
 
-Click on **File > Examples > Examples for Seeeduino Wio Lite MG126 > wio_lite_ble >example >analog_output**.
+Download the [MG126 Library](https://github.com/Seeed-Studio/Seeed_Arduino_MG126) from Seeed Github. Then Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+Click on **File > Examples >Seeeduino Wio Lite MG126 >analog_output**.
 
-![](https://files.seeedstudio.com/wiki/Wio-Lite-MG126/img/IDE-5.jpg)
-
-
-
-
-!!!Attention
-    It is important to note that since the arduino IDE is temporarily incompatible with static libraries (our Bluetooth protocol stack is compiled into a static library), the following configuration needs to be changed when the example uses the Bluetooth library.
-
-
-1. Open the `platform.txt` file in the folder:
-
-```
- C:\Users\$(USER_NAME)\AppData\Local\Arduino15\packages\Seeeduino\hardware\Seeeduino_Wio_Lite_BLE\1.0.0\platform.txt
-```
-
-
-
-
-
-2. Go to line 75 and line 76. 
-
-```
-##recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}"  "-L{build.path}" {compiler.c.elf.flags} {compiler.c.elf.extra_flags} "-T{build.variant.path}/{build.ldscript}" "-Wl,-Map,{build.path}/{build.project_name}.map" --specs=nano.specs --specs=nosys.specs {compiler.ldflags} -o "{build.path}/{build.project_name}.elf" {object_files} -Wl,--start-group {compiler.arm.cmsis.ldflags} -lm "{build.path}/{archive_file}" -Wl,--end-group
-
-recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}"  "-L{build.path}" {compiler.c.elf.flags} {compiler.c.elf.extra_flags} "-T{build.variant.path}/{build.ldscript}" "-Wl,-Map,{build.path}/{build.project_name}.map" --specs=nano.specs --specs=nosys.specs {compiler.ldflags} -o "{build.path}/{build.project_name}.elf" {object_files} {compiler.libraries.ldflags} -Wl,--start-group {compiler.arm.cmsis.ldflags} -lm "{build.path}/{archive_file}" -Wl,--end-group
-
-```
-
-3. If the sample program has a Bluetooth library called, you need to add `##` in front of line 75 (ie, comment the line), at the same time, you need to delete `##` in front of line 76 (ie, uncomment). Conversely, if the Bluetooth library is not called, but the basic operation of the SAM D21 development board is used, the operation is reversed.
-
+![](https://files.seeedstudio.com/wiki/Wio-Lite-MG126/img/IDE-5.png)
 
 You can find 7 demos in this folder. The `button`/`get_bat_vol` demos do not use the bluetooth library, and the rest do.
 
@@ -219,7 +191,7 @@ You can find 7 demos in this folder. The `button`/`get_bat_vol` demos do not use
 
 
 
-- **Step 5. Upload the program**  
+### Step 5. Upload the program
 
 Now, simply click the "Upload" button in the environment. Wait a few seconds and if the upload is successful, the message "Done uploading." will appear in the status bar.
 
@@ -234,7 +206,7 @@ When it is finished the information **Done Uploading** will Pop up in the lower 
 
 
 
-- **Step 6. Use the phone to connect MG126**  
+### Step 6. Use the phone to connect MG126
 
 Open the [nRF Connect](#getting-started) app, click on the **SCANNER** and search for the name of the DeviceInfo in the page. Different demos have different DeviceInfo, the and the corresponding DeviceInfo of analog_output is `Wio_BLE_Analog`.
 
