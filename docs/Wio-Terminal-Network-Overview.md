@@ -67,7 +67,7 @@ Next up, download the [**Image Tool**](https://files.seeedstudio.com/wiki/Wio-Te
 
 ### Step 3 - Download the Latest Firmware
 
-Download the latest [**RTL8720 Firmware**](https://files.seeedstudio.com/wiki/Wio-Terminal/res/20200416-rtl8720d-images-v2.2.0.0.zip) Here.
+Download the latest [**RTL8720 Firmware**](https://files.seeedstudio.com/wiki/Wio-Terminal/res/20200601-rtl8720d-images-v2.2.0.0.zip) Here.
 
 ### Step 4 - Updating the Firmware
 
