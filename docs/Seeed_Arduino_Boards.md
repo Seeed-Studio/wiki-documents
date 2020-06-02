@@ -44,14 +44,14 @@ You need a Arduino IDE that after version 1.6.4, please download one if there's 
 Open your Arudino IDE, click on **File > Preferences**, and copy below url to *Additional Boards Manager URLs*
 
 ```c
-https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_seeeduino_boards_index.json
+https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 ```
 
 !!! attention 
-    If you use the board wih AT SAMD21 Microcontroller ,such as Seeeduino LoRaWAN/GPS board , Seeeduino cotex Mo board and Seeeduino Lotus Cortex-M0+.Please copy below url to *Additional Boards Manager URLs*
+    If you use the board isn't the AT SAMD21 Microcontroller ,such as Seeeduino V3/4,Seeeduino Stalker V2.3/3/3.1,Seeeduino Lite,Seeeduino Mega,Seeeduino Mega Protoshield Kit,Seeeduino GPRS,Seeeduino Ethernet,Seeeduino Cloud,Seeeduino Nano,Seeeduino Crypto (ATmega4809 ECC608),LinkIt ONE,RePhone Series.Please copy below url to *Additional Boards Manager URLs*
 
 ```c
-https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
+https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_seeeduino_boards_index.json
 
 ```
 
