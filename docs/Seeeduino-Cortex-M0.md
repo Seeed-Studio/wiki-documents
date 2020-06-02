@@ -90,7 +90,7 @@ Serial2
 for UART pins in the header
 
 
-![](https://files.seeedstudio.com/wiki/Seeeduino-Cortex-M0-/img/UART.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-Cortex-M0-/img/UART(1).jpg)
 
 
 
