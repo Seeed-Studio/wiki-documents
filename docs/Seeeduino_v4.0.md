@@ -11,7 +11,10 @@ tags:
 
 ---
 
-![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/ARD128D2P_1_02.jpg)
+<p style="text-align:center"><a href=target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/ARD128D2P_1_02.jpg" border=0 /></a></p> 
+
+
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Seeeduino-V4-p-669.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p> 
 
 The Seeeduino v4.0 is an ATMEGA328 Microcontroller development board. The ATMEGA328P-MU is a high performance, low power AVR 8-Bit Microcontroller. The Seeeduino v4.0 has 14 digital input/output pins (6 of which can be used as PWM outputs) and 6 analog pins. The board also features an ATMEGA16U2 microcontroller which acts as a UART-to-USB converter chip which means that the board can basically work like an FTDI chip.
 
@@ -83,7 +86,7 @@ This is the ICSP connection for the ATmega328P-MU, it is located in the standard
 
 [Our depot](https://www.seeedstudio.com/depot/) has a variety of sensors/devices that can make use of this I2C or UART connection. In addition we sell independent Grove connectors to help you make our own sensor connections. The I2C Grove connector is also connected to analog pins 4 and 5 for SDA and SCL respectively if you would like to use those pins instead. The UART Grove connector is connected to digital pins 0 and 1 for RX and TX respectively.
 
-###   PWM Pins
+###   15. PWM Pins
 
 Digital pins 3, 5, 6, 8, 9, and 10 can be used for pulse width modulation (PWM).
 
@@ -133,25 +136,32 @@ At this point the Seeeduino V4.0 is ready to use.
 In Windows, if the automatic driver installation fails you can install the drivers manually, they are located in the Arduino Software folder, to do so follow these steps:
 
 1.  Open the "Device Manager" window by searching for it, and clicking "Device Manager" as shown in the animated image below. Alternatively, if this does not work for you, you may right click "My Computer"-&gt;Manage-&gt;Device Manager.
-<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:428px;">![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Seeeduino_v4_how_to_open_device_manager_window.gif) <div class="thumbcaption">How to open the device manager window in Windows.</div></div></div></div>
+
+![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Seeeduino_v4_how_to_open_device_manager_window.gif) 
 
 2.  In the "Device Manager" window, under "Ports (COM&amp;LPT)" or "Other Devices" look for "USB Serial Port", this is the Seeeduino board but hasn't been recognized by Windows yet. Right click and select "Update Driver Software..."
-<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:452px;">![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Driver1.jpg) <div class="thumbcaption"></div></div></div></div>
+
+![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Driver1.jpg)
 
 3.  Next, choose the "Browse my computer for Driver Software" option.
-<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:452px;">![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Driver2.jpg) <div class="thumbcaption"></div></div></div></div>
+
+![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Driver2.jpg) 
 
 4.  Finally, find and select the folder named "Drivers", located in the folder of the Arduino Software download.
-<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:452px;">![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Updata_Driver_Software_for_Seeeduino_v4.0.jpg) <div class="thumbcaption"></div></div></div></div>
+
+![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Updata_Driver_Software_for_Seeeduino_v4.0.jpg)
 
 5.  If the driver was installed successfully you should see the dialog box below.
-<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:452px;">![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Driver4.jpg) <div class="thumbcaption"></div></div></div></div>
+
+![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Driver4.jpg)
 
 6.  In the "Device Manager" window the device you right clicked on should now display "Arduino Uno (COMXX)" or "USB Serial Port(COMXX)" as shown below.
-<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:452px;">![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Driver5.jpg) <div class="thumbcaption"></div></div></div></div>
+
+![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Driver5.jpg) 
 
 7.  And when you open the Arduino IDE the same COM port will also be available. Remember to close and open the Arduino IDE if it was opened during the driver installation or the Serial port will not be visible.
-<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:452px;">![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Driver6.jpg) <div class="thumbcaption"></div></div></div></div>
+
+![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Driver6.jpg)
 
 ##   Examples/Applications
 
@@ -161,24 +171,30 @@ As described in the "Board Interface, Features, and Components" section of this 
 
 To blink the LED in your Seeeduino board, follow the steps in the animated image below:
 
-<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:902px;">![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Seeeduino_v4_blink_led_program_step_by_step.gif) <div class="thumbcaption">How to blink the LED of your Seeeduino v4.0 board.</div></div></div></div>
+![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Seeeduino_v4_blink_led_program_step_by_step.gif)
 
 Or if you prefer we have listed and described each of the steps:
 
 1.  Open the Arduino IDE
 2.  Select the Seeeduino board by going to Tools-&gt;Board-&gt;Arduino Uno. The Seeeduino board is recognized as an Arduino Uno board.
+
 ![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Seeeduino_v4.0_upload3.jpg)
 
-3.  Make sure that the Serial COM port where your Seeeduino board is connected to is selected by going to Tools-&gt;Serial Port-&gt;COMXX where COMXX is the COM port of your board.<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:452px;">![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Seeeduino_v4.0_upload4.jpg) <div class="thumbcaption"></div></div></div></div>
+3.  Make sure that the Serial COM port where your Seeeduino board is connected to is selected by going to Tools-&gt;Serial Port-&gt;COMXX where COMXX is the COM port of your board.
+
+![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Seeeduino_v4.0_upload4.jpg) 
 
 4.  Open the "Blink" example by going to File-&gt;Examples-&gt;0.1Basics-&gt;Blink. A new window with code will open, you may close the previous/original Arduino window.
-<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:452px;">![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Seeeduino_v4.0_upload2.jpg) <div class="thumbcaption"></div></div></div></div>
+
+![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Seeeduino_v4.0_upload2.jpg) 
 
 5.  In this new window click the "Upload" button, this will upload/send the code to your Seeeduino board.  Wait a few seconds for the "Done Uploading" message to display, this messages signals that the code was successfully written to the board and ready to use.
+
 ![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Seeeduino_v4.0_upload1.jpg)
 
 6.  The blue on-board LED on the Seeduino board should start to blink as shown below:
-<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:456px;">![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Seeeduino_v4_led_blink.gif) <div class="thumbcaption">Seeeduino Blinking LED</div></div></div></div>
+
+![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Seeeduino_v4_led_blink.gif) 
 
 ###   Example 2: UART-to-USB (FTDI) and 3.3V Logic - Getting Started With The ESP8266 WiFi Module Without Extra Circuitry and Without Writing Software
 
@@ -221,7 +237,11 @@ Connect your ESP8266 WiFi module to the Seeeduino board as follows (See the phot
 <td>VCC</td>
 </tr>
 </table>
-![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Seeeduino_v4_esp8266_schematic.png) Seeeduino V4.0 and ESP8266 Schematic. SW2 shows the setting at 5V but please slide it over to 3V3.
+
+!!!Note
+     Seeeduino V4.0 and ESP8266 Schematic. SW2 shows the setting at 5V but please slide it over to 3V3.
+
+![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Seeeduino_v4_esp8266_schematic.png) 
 
 
 **Step 3: Sending Commands**
@@ -230,7 +250,6 @@ Connect your ESP8266 WiFi module to the Seeeduino board as follows (See the phot
 2.  Open the Arduino IDE
 3.  Upload a blank program to your board, or make sure that the program it has does not user any Serial functions.
 
-    ** Blank Program: **
 ```
 void setup()
 {
