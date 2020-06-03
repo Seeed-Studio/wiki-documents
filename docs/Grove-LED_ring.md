@@ -97,9 +97,9 @@ WS2813-Mini is an intelligent control LED light source that the control circuit 
 
 
 !!!Note
-    	**1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy 
+    	**1.** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy 
     
-    	**2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
+    	**2.** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
 
 
 
@@ -110,9 +110,9 @@ WS2813-Mini is an intelligent control LED light source that the control circuit 
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
 
 !!!Caution
- 		**1** If you are using Arduino UNO, connect to the DC power supply is recommended to avoid the maximum Vcc voltage ripple to exceed 100mV.
+ 		**1.** If you are using Arduino UNO, connect to the DC power supply is recommended to avoid the maximum Vcc voltage ripple to exceed 100mV.
 
- 		**2** If you are using Seeeduino V4.2, you do not need to connect to DC power supply. However, if you change to supply Grove with 3V3 the motherboard will restart when power is on. Please note, this will not affect the usage.
+ 		**2.** If you are using Seeeduino V4.2, you do not need to connect to DC power supply. However, if you change to supply Grove with 3V3 the motherboard will restart when power is on. Please note, this will not affect the usage.
 
 
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
@@ -149,10 +149,10 @@ Now, we will demonstrate you how to run the code 'buttoncycler'. This is a demon
 
 
 !!!Notice
-Due to the current limitation, the brightness of the LED is limited in the program. If you insist on adjusting the brightness limit, you can modify the setBrightness() function. But this may cause the light to not work properly.
+     Due to the current limitation, the brightness of the LED is limited in the program. If you insist on adjusting the brightness limit, you can modify the setBrightness() function. But this may cause the light to not work properly.
 
 
-**⁨buttoncycler⁩**
+#### ⁨buttoncycler⁩
 After run this code, when you press the button it will change to a new pixel animation.  Note that you need to press the button once to start the first animation!
 
 ```C++
@@ -599,7 +599,7 @@ uint8_t blue(uint32_t c) {
 ```
 
 
-**simple**
+**Simple**
 
 ```C++
 
