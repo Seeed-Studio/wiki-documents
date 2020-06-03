@@ -77,7 +77,6 @@ Mini Soldering Iron is a slender, lightweight, accurate temperature-control and 
 
 ##  Parts list'
 ---
-###  **Parts list**
 
 <table>
 <tr>
@@ -132,7 +131,7 @@ This section shows you how to basic operations with this soldering iron. For mor
 
 ###  Exploded view
 
-<div style="margin:0px 0px; display: inline-block;"><div class="floatnone">![](https://files.seeedstudio.com/wiki/Mini_Soldering_Iron/img/Mini_Soldering_Iron_exploded_view_s.jpg)</div></div>
+![](https://files.seeedstudio.com/wiki/Mini_Soldering_Iron/img/Mini_Soldering_Iron_exploded_view_s.jpg)
 <dl><dd> ①. Solder iron tip fixing screw
 </dd><dd> ②. Button A
 </dd><dd> ③. Button B
@@ -147,7 +146,7 @@ This section shows you how to basic operations with this soldering iron. For mor
 
 ###  Assemble the soldering iron
 
-<div style="margin:0px 0px; display: inline-block;"><div class="floatnone">![](https://files.seeedstudio.com/wiki/Mini_Soldering_Iron/img/Mini_Soldering_Iron_installation_guide.jpg)</div></div>
+![](https://files.seeedstudio.com/wiki/Mini_Soldering_Iron/img/Mini_Soldering_Iron_installation_guide.jpg)
 
 1.  Unscrew the tip setscrew, insert the solder tip into the connection port, and then tighten screw.
 
@@ -167,8 +166,8 @@ Press button A to enable temperatures-increasing, press button B to enable tempe
 
 <dl><dd> 1. Press button B in standby mode (no-heating state) to enter thermometer mode.
 
-</dd></dl>
-![](https://files.seeedstudio.com/wiki/Mini_Soldering_Iron/img/Mini_Soldering_Iron_calibration_step_1.jpg)</div></div>
+
+![](https://files.seeedstudio.com/wiki/Mini_Soldering_Iron/img/Mini_Soldering_Iron_calibration_step_1.jpg)
 
 <dl><dd> 2. Press button B and button A simultaneously to enter thermometer mode. It will execute calibration operation automatically, no manual operation required.
 </dd></dl>
