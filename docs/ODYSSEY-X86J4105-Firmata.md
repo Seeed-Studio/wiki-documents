@@ -6,7 +6,7 @@
 
 **[Firmata](http://firmata.org/wiki/Main_Page)** is an intermediate protocol that connects an embedded system to a host computer, and the protocol channel uses a serial port by default. The Arduino platform is the standard reference implementation for Firmata. The Arduino IDE comes with the support for Firmata.
 
-This could work perfectly with Odyssey-X86 with its onboard Arduino Core meaning that you can control the Arduino Core simply using Firmata protocol with different programming languages too! In this tutorial, it's based on Windows OS.
+This could work perfectly with [Odyssey-X86](https://www.seeedstudio.com/ODYSSEY-X86J4105864-p-4447.html) with its onboard Arduino Core meaning that you can control the Arduino Core simply using Firmata protocol with different programming languages too! In this tutorial, it's based on Windows OS.
 
 *Reference: [Firmata Protocols](https://github.com/firmata/protocol)*
 
