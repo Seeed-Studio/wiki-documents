@@ -12,6 +12,11 @@ RePhone can be a learning tool for you to start interesting projects. Currently,
 
 This wiki is a User Guide to help you start your RePhone project with Eclipse IDE.
 
+| Product Version| Order |
+|------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [RePhone core 2G-Atmel32u4 v1.0](https://wiki.seeedstudio.com/RePhone_core_2G-Atmel32u4/)| [Buy Now](https://www.seeedstudio.com/RePhone-core-2G-Atmel32u4-v1-0-p-2779.html)| 
+|[RePhone core 2G-AtmelSAMD21](https://wiki.seeedstudio.com/Rephone_core_2G-AtmelSAMD21/)|[Buy Now](https://www.seeedstudio.com/RePhone-core-2G-AtmelSAMD21-p-2775.html)|
+
 ##  Download Eclipse IDE for RePhone
 ---
 Before you download the Arduino IDE for RePhone, make sure you have a PC with the following:
