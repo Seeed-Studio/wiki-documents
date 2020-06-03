@@ -377,6 +377,9 @@ nav:
           - Lipo Rider V1.3: Lipo_Rider_V1.3.md
           - USB To Uart 5V/3V3: USB_To_Uart_5V_3V3.md
 
+  - Software:
+      - PlatformIO: Software-PlatformIO.md
+
   - Grove:
       - Grove Introduction: Grove.md
       - Grove System: Grove_System.md
