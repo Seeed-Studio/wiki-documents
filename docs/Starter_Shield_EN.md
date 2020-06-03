@@ -9,7 +9,8 @@ sku:
 tags:
 
 ---
-![](https://files.seeedstudio.com/wiki/Starter_Shield_EN/img/Tickshield_02.jpg)
+
+<p style="text-align:center"><a href=target="_blank"><img src="https://files.seeedstudio.com/wiki/Starter_Shield_EN/img/Tickshield_02.jpg" border=0 /></a></p> 
 
 Starter Shield is a perfect start for beginners of Arduino world. You can learn basic soldering tricks and practice programming principles when learning this kit. Have prepared a detailed soldering guide and a fully supported library of programming examples from easy to difficult. , so electronic could be fun even if you have bare technical knowledge, Hope you have fun and gain some knowledge with this kit!   
 
@@ -139,6 +140,7 @@ Here we start to present you 7 demos from easy to difficult. They involve usage 
 Each demo caontains detailed comments in the .ino file. To figure out how every line affects the turnout, you have to study the sketch and comments carefully.
 
 OK, let's check out what the Tick Tock Shield is capable of.
+
 ![](https://files.seeedstudio.com/wiki/Starter_Shield_EN/img/Complete_Tick_Shield.JPG)
 
 ###   Preparation: Install the Hardware and Software  
@@ -151,7 +153,9 @@ OK, let's check out what the Tick Tock Shield is capable of.
 
 3. Unzip and put them in the libraries file of Arduino IDE by the path: ..\arduino-1.0.1\libraries.
 
-** Note:**
+
+**Note**
+
 
 <dl><dd>1) Libraries MsTimer2 and Timerone are packed in Tick Tock Shield Library we prvide above. We download them from Arduino website. If you already have them in your libraries file, them no need to add them once again.
 
@@ -202,7 +206,7 @@ This demo show you how to control LEDs with the most basic input - buttons.
 
 </dd></dl>
 
-**Demo 3: Change The Pitch Of Buzzer By Keys
+**Demo 3: Change The Pitch Of Buzzer By Keys**
 **This demo involves how to make a sound with buzzer, and because you have already known how to use buttons, in this demo, we use buttons to increase or decrease the pitch of buzzer.
 
 <dl><dd>1. Open the example "changeThePitch".
