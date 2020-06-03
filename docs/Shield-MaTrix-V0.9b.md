@@ -9,11 +9,16 @@ sku:  104030021
 ---
 ![](https://files.seeedstudio.com/wiki/Shield-MaTrix-V0.9b/img/Shield_matrix.jpg)
 
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/depot/Shield-Matrix-p-1773.html)
+
 Shield MaTrix is a stackable Shield for Arduino, which makes it possible to learn programming using the most simple sensors on board.
 
-![](https://files.seeedstudio.com/wiki/Shield-MaTrix-V0.9b/img/MFull.JPG)
+##   Version Tracker
 
-[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/depot/Shield-Matrix-p-1773.html)
+|Revision|Descriptions|Release|
+|------|------|--------|
+| 0.9 | Prototype |11th-April-2013|
+|0.9b|Public version|27th-October-2013|
 
 ##   Feature
 
@@ -61,11 +66,11 @@ Demultiplexer has three address inputs (DA0, DA1, DA2) - a combination of "0" an
 
 ##   Interfaces
 
-*   Interface for 4 bicolor LED matrix :
+*   Interface for 4 bicolor LED matrix
 
     *   Set shift registers (74HC595 - 8 pcs.) To control the columns of LEDs
 
-        *   Demultiplexer 74HC138 to control the rows of LEDs and their brightness (via PWM)
+    *   Demultiplexer 74HC138 to control the rows of LEDs and their brightness (via PWM)
 
 *   Built-in clock (RTC) - based on the DS1307 with battery backup battery (CR1220 or CR1226)
 
@@ -87,99 +92,69 @@ Demultiplexer has three address inputs (DA0, DA1, DA2) - a combination of "0" an
 
 *   Interface for Arduino- Shield
 
-** Pins on the board, involved on Arduino Mega: **
+*  Pins on the board, involved on Arduino Mega
 
-*   D5 - IR receiver
+    *   D5 - IR receiver
 
-*   D24 - clock button
+    *   D24 - clock button
 
-*   xBee:
+*   xBee
 
     *   D16 - DIN
 
-        *   D17 - DOUT
+    *   D17 - DOUT
 
 *   I2C (DS1307)
 
     *   D20 - SDA
 
-        *   D21 - SCL
+    *   D21 - SCL
 
-*   RGB-LED (check):
+*   RGB-LED (check)
 
     *   D34 - red
 
-        *   D35 - Green
+    *   D35 - Green
 
-        *   D36 - Blue
+    *   D36 - Blue
 
-*   nRF24L01 +:
+*   nRF24L01 +
 
     *   D19 - RF_IRQ
 
-        *   D37 - RF_SCK
+    *   D37 - RF_SCK
 
-        *   D38 - RF_MISO
+    *   D38 - RF_MISO
 
-        *   D39 - RF_MOSI
+    *   D39 - RF_MOSI
 
-        *   D40 - RF_NSS
+    *   D40 - RF_NSS
 
-        *   D41 - RF_CE
+    *   D41 - RF_CE
 
-*   D45 - squeaker
+    *   D45 - squeaker
 
-*   A7 - light sensor
+    *   A7 - light sensor
 
-*   Shift Registers:
+*   Shift Registers
 
     *   D42 - SS
 
-        *   D51 - MOSI
+    *   D51 - MOSI
 
-        *   D52 - SCK
+    *   D52 - SCK
 
 *   Demultiplex
 
     *   D49 - DA0
 
-        *   D48 - DA1
+    *   D48 - DA1
 
-        *   D47 - DA2
+    *   D47 - DA2
 
-        *   D44 - E3 (brightness)
+    *   D44 - E3 (brightness)
 
-        *   D43 - E1, E2 (quenching)
-
-##   Cautions
-
-##   Schematic
-
-The right side of the board (when viewed from the matrix) are:
-
-*   Clock button
-
-*   Interface for nRF24l01 +
-
-*   Place mounting RGB-LED
-
-*   Select jumper type LEDs (common anode or common cathode)
-
-*   IR receiver
-
-*   I2C - Interface
-
-![](https://files.seeedstudio.com/wiki/Shield-MaTrix-V0.9b/img/MRight.JPG)
-
-On the left side of the board are:
-
-*   Light sensor
-
-*   Piezo buzzer (beeper)
-
-![](https://files.seeedstudio.com/wiki/Shield-MaTrix-V0.9b/img/MLeft.JPG)
-
-[Schematic of the device](https://files.seeedstudio.com/wiki/Shield-MaTrix-V0.9b/res/SM09b_scheme.jpg)
+    *   D43 - E1, E2 (quenching)
 
 ##   Necessary libraries
 
@@ -234,7 +209,7 @@ iBoardRF24 radio(41,40,39,38,37,19);
 
 ...</pre>
 
-#   Library functions MaTrix
+##   Library functions MaTrix
 
 To use the library in your sketch MaTrix need to declare a function void setup () to enter the following line of code:
 
@@ -433,44 +408,37 @@ Attention! Font that is used when calling the function must be defined using the
 
 ##   References
 
-Current version of the library [MaTrix](https://github.com/stepanovalex/MaTrix/archive/master.zip)
+[ **ZIP** ] Current version of the library [MaTrix](https://github.com/stepanovalex/MaTrix/archive/master.zip).
 
-##   Bill of Materials (BOM) /parts list
+##   Schematic
 
-All the components used to produce the product.
+![](https://files.seeedstudio.com/wiki/Shield-MaTrix-V0.9b/img/MFull.JPG)
 
-##   FAQ
+The right side of the board (when viewed from the matrix) are:
 
-Please list your question here:
+*   Clock button
 
-##   Support
+*   Interface for nRF24l01 +
 
-If you have questions or other better design ideas,
+*   Place mounting RGB-LED
 
-##   Version Tracker
+*   Select jumper type LEDs (common anode or common cathode)
 
-<table  cellpadding="5" cellspacing="0">
-<tr>
-<td width="150"> **Revision**
-</td>
-<td width="450"> **Descriptions**
-</td>
-<td width="80"> **Release **
-</td></tr>
-<tr style="font-size: 90%">
-<td> 0.9
-</td>
-<td> Prototype
-</td>
-<td> 11.04.2013
-</td></tr>
-<tr style="font-size: 90%">
-<td> 0.9b
-</td>
-<td> Public version
-</td>
-<td> 27.10.2013
-</td></tr></table>
+*   IR receiver
+
+*   I2C - Interface
+
+![](https://files.seeedstudio.com/wiki/Shield-MaTrix-V0.9b/img/MRight.JPG)
+
+On the left side of the board are:
+
+*   Light sensor
+
+*   Piezo buzzer (beeper)
+
+![](https://files.seeedstudio.com/wiki/Shield-MaTrix-V0.9b/img/MLeft.JPG)
+
+[Schematic of the device](https://files.seeedstudio.com/wiki/Shield-MaTrix-V0.9b/res/SM09b_scheme.jpg)
 
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
