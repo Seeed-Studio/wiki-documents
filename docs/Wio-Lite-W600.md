@@ -151,7 +151,7 @@ Please follow the [Seeed Board Intallation Guide](https://wiki.seeedstudio.com/S
 
 <div align="center">
 <figure>
-  <img src="https://files.seeedstudio.com/wiki/Wio-Lite-W600/img/IDE-1.jpg"/>
+  <img src="https://files.seeedstudio.com/wiki/Wio-Lite-W600/img/IDE1.png"/>
   <figcaption> <i>The key word is **seeeduino_samd_zero**</i> </figcaption>
 </figure>
 </div>
@@ -160,13 +160,13 @@ Please follow the [Seeed Board Intallation Guide](https://wiki.seeedstudio.com/S
 
 - **Step 4. Add the W600 Library into Your Arduino IDE**  
 
-Download the [W600 Library](https://github.com/Seeed-Studio/Seeed_Arduino_W600) from Seeed Github. Then Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+Download the [W600 Library](https://github.com/Seeed-Studio/Seeed_Arduino_W600/archive/master.zip) from Seeed Github. Then Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 
-- **Step 5.** Restart the Arduino IDE. Open the AP-Station example, you can open it in the Arduino IDE by the path: **File --> Examples -->seeed_W600_wifi-->ap_sta_mode**.
+- **Step 5.** Restart the Arduino IDE. Open the AP-Station example, you can open it in the Arduino IDE by the path: **File --> Examples -->W600_wifi-->log_data**.
 
 
-![](https://files.seeedstudio.com/wiki/Wio-Lite-W600/img/IDE-3.jpg)
+![](https://files.seeedstudio.com/wiki/Wio-Lite-W600/img/IDE3.png)
 
 
 - **Step 6.** Modify the code with your own AP and Station. In the following picture, Wio Lite W600 work as a station to join the AP marked **A** and the the Wio Lite W600 will creat the **B AP** for other devieces. You should change both AP name and password.
@@ -180,11 +180,11 @@ Download the [W600 Library](https://github.com/Seeed-Studio/Seeed_Arduino_W600) 
 - **Step 7. Select your board and port**  
  
 You'll need to select the entry in the **Tools > Board** menu that corresponds to your Arduino.
-Selecting a **Seeeduino Wio Lite W600**.
+Selecting a **Seeeduino Zero**.
 
 <div align="center">
 <figure>
-  <img src="https://files.seeedstudio.com/wiki/Wio-Lite-W600/img/IDE-2.jpg"/>
+  <img src="https://files.seeedstudio.com/wiki/Wio-Lite-W600/img/IDE2.png"/>
   <figcaption><i>Choose the right board</i></figcaption>
 </figure>
 </div>
