@@ -17,78 +17,31 @@ You can use AWS IoT to accomplish two key tasks: secured data and flexible tele-
 
 With MediaTek LinkIt™ ONE and Grove IoT Starter Kit Powered by AWS, you can create powerful Wearables, bleeding edge IoT devices, send your device data to Amazon Web Services. The kit includes a collection of Grove sensors for gathering data and peripherals to acquire visual interface on your device. And by adopting the AWS Cloud, your business will benefit from its flexibility, scalability and pay on-your-demand.
 
-[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.amazon.com/dp/B0168LBYWC)
+<p style=":center"><a href="https://www.amazon.com/dp/B0168LBYWC" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" width="200" height="38"  border=0 /></a></p>
 
 ##  Included in the Box
 
-<div class="thumb tright"><div class="thumbinner" style="width:502px;">![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/Aws_kit_linkit.JPG) <div class="thumbcaption"></div></div></div>
-<table>
-<tr>
-<th> Board/Part </th>
-<th> Quantity </th>
-<th> Documentation
-</th></tr>
-<tr>
-<td>[LinkIt ONE](https://www.seeedstudio.com/depot/LinkIt-ONE-p-2017.html?cPath=122_142) </td>
-<td> 1 </td>
-<td> [ Read Here](/LinkIt_ONE "LinkIt ONE")
-</td></tr>
-<tr>
-<td>[Base Shield](https://www.seeedstudio.com/depot/Base-Shield-V2-p-1378.html?cPath=98_16) </td>
-<td> 1 </td>
-<td> [ Read Here](/Base_shield_v2 "Base shield v2")
-</td></tr>
-<tr>
-<td>[Grove - 3-Axis Digital Accelerometer(±16g)](https://www.seeedstudio.com/depot/Grove-3Axis-Digital-Accelerometer16g-p-1156.html?cPath=25_132) </td>
-<td> 1 </td>
-<td> [ Read Here](/Grove-3-Axis_Digital_Accelerometer_ADXL345 "Grove - 3-Axis Digital Accelerometer ADXL345")
-</td></tr>
-<tr>
-<td>[Grove - Light Sensor](https://www.seeedstudio.com/depot/Grove-Light-Sensor-p-746.html?cPath=25_27) </td>
-<td> 1 </td>
-<td>[ Read Here](/Grove-Light_Sensor "Grove - Light Sensor")
-</td></tr>
-<tr>
-<td>[Grove - LED Bar v2.0](https://www.seeedstudio.com/depot/Grove-LED-Bar-v20-p-2474.html) </td>
-<td> 1 </td>
-<td>[ Read Here](/Grove-LED_Bar "Grove - LED Bar")
-</td></tr>
-<tr>
-<td>[Grove - Moisture Sensor](https://www.seeedstudio.com/depot/Grove-Moisture-Sensor-p-955.html?cPath=25_27) </td>
-<td> 1 </td>
-<td>[ Read Here](/Grove-Moisture_Sensor "Grove - Moisture Sensor")
-</td></tr>
-<tr>
-<td>[Grove - Touch Sensor](https://www.seeedstudio.com/depot/Grove-Touch-Sensor-p-747.html?cPath=85_94) </td>
-<td> 1 </td>
-<td>[ Read Here](/Grove-Touch_Sensor "Grove - Touch Sensor")
-</td></tr>
-<tr>
-<td>[Grove - Temperature Sensor](https://www.seeedstudio.com/depot/Grove-Temperature-Sensor-p-774.html?cPath=25_125) </td>
-<td> 1 </td>
-<td>[ Read Here](/Grove-Temperature_Sensor_V1.2 "Grove - Temperature Sensor V1.2")
-</td></tr>
-<tr>
-<td>[Grove - OLED Display](https://www.seeedstudio.com/depot/Grove-OLED-Display-112-p-781.html?cPath=34_36) 1.12’’</td>
-<td> 1 </td>
-<td>[ Read Here](/Grove-OLED_Display_0.96inch "Grove - OLED Display 0.96")
-</td></tr>
-<tr>
-<td>[Grove - Loudness Sensor](https://www.seeedstudio.com/depot/Grove-Loudness-Sensor-p-1382.html?cPath=25_128) </td>
-<td> 1 </td>
-<td>[ Read Here](/Grove-Loudness_Sensor "Grove - Loudness Sensor")
-</td></tr>
-<tr>
-<td>Micro USB Cable - 48cm </td>
-<td> 1 </td>
-<td>
-</td></tr></table>
+![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/Aws_kit_linkit.JPG) 
+
+|Board/Part|Quantity|Documentation|
+|-----|------|------|
+|[LinkIt ONE](https://www.seeedstudio.com/depot/LinkIt-ONE-p-2017.html?cPath=122_142)|1|[ Read Here](https://wiki.seeedstudio.com/LinkIt_ONE/)|
+|[Base Shield](https://www.seeedstudio.com/depot/Base-Shield-V2-p-1378.html?cPath=98_16)|1|[ Read Here](https://wiki.seeedstudio.com/Base_Shield_V2/)|
+|[Grove - 3-Axis Digital Accelerometer(±16g)](https://www.seeedstudio.com/depot/Grove-3Axis-Digital-Accelerometer16g-p-1156.html?cPath=25_132)|1|[ Read Here](https://wiki.seeedstudio.com/Grove-3-Axis_Digital_Accelerometer-16g/)|
+|[Grove - Light Sensor](https://www.seeedstudio.com/depot/Grove-Light-Sensor-p-746.html?cPath=25_27)|1|[Read Here](https://wiki.seeedstudio.com/Grove-Light_Sensor/)|
+|[Grove - LED Bar v2.0](https://www.seeedstudio.com/depot/Grove-LED-Bar-v20-p-2474.html)|1|[Read Here](https://wiki.seeedstudio.com/Grove-LED_Bar/)|
+|[Grove - Moisture Sensor](https://www.seeedstudio.com/depot/Grove-Moisture-Sensor-p-955.html?cPath=25_27)|1|[Read Here](https://wiki.seeedstudio.com/Grove-Moisture_Sensor/)|
+|[Grove - Touch Sensor](https://www.seeedstudio.com/depot/Grove-Touch-Sensor-p-747.html?cPath=85_94)|1|[Read Here](https://wiki.seeedstudio.com/Grove-Touch_Sensor/)|
+|[Grove - Temperature Sensor](https://www.seeedstudio.com/depot/Grove-Temperature-Sensor-p-774.html?cPath=25_125)|1|[Read Here](https://wiki.seeedstudio.com/Grove-Temperature_Sensor_V1.2/)|
+|[Grove - OLED Display](https://www.seeedstudio.com/depot/Grove-OLED-Display-112-p-781.html?cPath=34_36)|1|[Read Here](https://wiki.seeedstudio.com/Grove-OLED_Display_0.96inch/)|
+|[Grove - Loudness Sensor](https://www.seeedstudio.com/depot/Grove-Loudness-Sensor-p-1382.html?cPath=25_128)|1|[Read Here](https://wiki.seeedstudio.com/Grove-Loudness_Sensor/)|
+|[Micro USB Cable - 48cm](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|1|-|
 
 ##  Features
 
 *   Easy, complete and powerful development platform(LinkIt™ ONE).
 
-*   [Grove system](/Grove_System) with various functional modules.
+*   [Grove system](https://wiki.seeedstudio.com/Grove_System/) with various functional modules.
 
 *   Confidential communication between you application(web application, mobile apps, or controlling device) and you remote devices(sensors, actuators, embedded devices, or smart appliances) through AWS authorization service.
 
