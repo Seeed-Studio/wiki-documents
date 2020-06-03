@@ -57,7 +57,7 @@ We’ve been looking for a better place where our backers (RePhone Users) can si
 
 Now join us in the [RePhone Community](https://forum.seeedstudio.com/viewforum.php?f=71&sid=b70f8138c89becf7701260bb41faf9f4)! Together we seek answers, make interesting stuff, care about each other, and share our experiences.
 
-### **<span style="font-size:1.1em;">Frequently Asked Questions</span>**
+## Frequently Asked Questions
 
 Some frequently asked questions in RePhone Community are collected and answered to the topic **["Frequently Asked Questions of RePhone (FAQ)"](http://forum.seeedstudio.com/viewtopic.php?f=71&t=6664&p=23753#p23753)** , the topic will be kept updating whenever a new FAQ comes out.
 
@@ -71,21 +71,19 @@ Some frequently asked questions in RePhone Community are collected and answered 
 
 ## Resources
 
-We will be keep updating the source code on our github page:
-
-*   [Source Code for Xadow NFC v2](https://github.com/WayenWeng/Xadow_NFC_v2/)
+[**Source**] [Source Code for Xadow NFC v2](https://github.com/WayenWeng/Xadow_NFC_v2/)
 
 The schematic diagram of Xadow NFC v2 is provided in the following link:
 
-*   [_Xadow NFC v2 Schematic Files_](https://files.seeedstudio.com/wiki/Xadow_NFC/res/Xadow_NFC_v2.0.zip)
+[**ZIP**] [Xadow NFC v2 Schematic Files_](https://files.seeedstudio.com/wiki/Xadow_NFC/res/Xadow_NFC_v2.0.zip)
 
 Check more info about the datasheet of PN532:
 
-*   [_Datasheet of PN532_](https://files.seeedstudio.com/wiki/Xadow_NFC/resources/PN532.pdf)
+[**PDF**] [Datasheet of PN532_](https://files.seeedstudio.com/wiki/Xadow_NFC/resources/PN532.pdf)
 
 And the MCU Kinetis KL02:
 
-*   [_Datasheet of Kinetis KL02_](https://files.seeedstudio.com/wiki/Xadow_NFC/res/KL02P32M48SF0.pdf)
+[**PDF**] [Datasheet of Kinetis KL02_](https://files.seeedstudio.com/wiki/Xadow_NFC/res/KL02P32M48SF0.pdf)
 
 Copyright (c) 2008-2016 Seeed Development Limited ([www.seeedstudio.com](https://www.seeedstudio.com) / [community.seeedstudio.com/](https://community.seeedstudio.com/))
 
