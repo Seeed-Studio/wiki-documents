@@ -421,6 +421,10 @@ ul {
 Dark style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
 
 */
+.md-clipboard:before{
+    color:rgba(255,255,255,0.8)!important;
+    opacity:0.8!important;
+}
 pre{
   background: #282c34!important;
 }
