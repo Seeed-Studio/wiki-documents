@@ -36,7 +36,6 @@ Grove - Multichannel Gas Sensor V2 has 4 measuring units, each of them is sensit
 |I2C address|0x55|
 |Output voltage|3.3V~5V|
 |Sensors|GM-102B; GM-302B; GM-502B; GM-702B|
-|
 
 GM-102B
 
@@ -97,39 +96,28 @@ The output voltage in Chart 12 is the voltage across the load resistance (RL) of
 
 ## Getting Started
 
-### Use Wio Terminal platform
-
 #### Materials Requied
 
-Wio Terminal
-![enter image description here](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-Wiki.jpg)
-<p style="text-align:center"><a href="https://www.seeedstudio.com/Wio-Terminal-p-4509.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p>
+| Wio Terminal | Grove-Multichannel Gas Sensor V2 | 
+|--------------|-----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-thumbnail.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/V2.png)|
+|[Get ONE Now](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Multichannel-Gas-Sensor-v2-p-4569.html)|
 
 #### Hardware Overview
 
 ![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/Hardware+Connection+Image.jpg) ![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/Hardware+Diagram.png)
 
-#### **Notice**
-The module in the image of Hardware Connection has the same arrangement as the one in the image of Hardware Diagram above.  As you can see in the Hardware Diagram, the outlined area in the left is the Grove Interface. And there are four squares with tiny holes refer to the gas sensors. When the board with sensors is connected with Wio Terminal, the information of the gases will display on the screen.
+!!!Notice
+      The module in the image of Hardware Connection has the same arrangement as the one in the image of Hardware Diagram above. As you can see in the Hardware Diagram, the outlined area in the left is the Grove Interface. And there are four squares with tiny holes refer to the gas sensors. When the board with sensors is connected with Wio Terminal, the information of the gases will display on the screen.
 
-- **Step 1** Connect Grove - Multichannel Gas Sensor V2 to port I2C of Grove-Base Shield.
+- **Step 1.** Connect Grove - Multichannel Gas Sensor V2 to port I2C of Grove-Base Shield. Plug Grove - Base Shield into Wio Terminal. And connect Wio Terminal to PC via a USB cable.
 
-- **Step 2** Plug Grove - Base Shield into Wio Terminal.
+- **Step 2.** Download the  [ Grove_Multichannel_Gas_Sensor_v2 Library](https://github.com/Seeed-Studio/Seeed_Multichannel_Gas_Sensor/archive/master.zip) from Github. And refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
-- **Step 3** Connect Wio Terminal to PC via a USB cable.
+- **Step 3.** Copy the code into Wio Terminal and upload. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/).
 
-- **Step 4** Download the  [ Grove_Multichannel_Gas_Sensor_v2 Library](https://github.com/Seeed-Studio/Seeed_Multichannel_Gas_Sensor/archive/master.zip) from Github.
+- **Step 4.** Refer [How to TFT LCD Library](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/) to install TFT LCD Library. Lastly, upload code from the Software Code below and the data has to be displayed successfully.
 
-- **Step 5** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
-
-- **Step 6** Copy the code into Wio Terminal and upload. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/).
-
-- **Step 7** Refer [How to TFT LCD Library](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/) to install TFT LCD Library.
-
-- **Step 8** Upload code from the Software Code below and the data has to be displayed successfully.
-
-
- 
 #### Software Code
 ```C++
 #include <TFT_eSPI.h>
@@ -209,14 +197,13 @@ void loop() {
 }
 ```
 
+!!!Cautions
 
-## **Cautions**
-
-- The module should avoid being placed in the volatile silicon compound steam, or it will cause the sensitivity to be reduced and irrecoverable.
-- The module should avoid being exposured to high concentrations of corrosive gases (such as H2S, SOX, Cl2, HCl, etc.), otherwise it will be irreversibly damaged.
-- The module should not be placed in water or ice.
-- After the module is powered on, the sensor will heat up to a certain degree during the process, which is a normal phenomena.
-- Users MUST preheat the module before starting measuring gases. 
+      - The module should avoid being placed in the volatile silicon compound steam, or it will cause the sensitivity to be reduced and irrecoverable.
+      - The module should avoid being exposured to high concentrations of corrosive gases (such as H2S, SOX, Cl2, HCl, etc.), otherwise it will be irreversibly damaged.
+      - The module should not be placed in water or ice.
+      - After the module is powered on, the sensor will heat up to a certain degree during the process, which is a normal phenomena.
+      - Users MUST preheat the module before starting measuring gases. 
 
 
 ## Schematic Online Viewer
