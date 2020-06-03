@@ -13,6 +13,7 @@ tags:
 ![](https://files.seeedstudio.com/wiki/Energy_Monitor_Shield_V0.9b/img/EMS_intro.jpg)
 
 ![](https://files.seeedstudio.com/wiki/Energy_Monitor_Shield_V0.9b/img/EMS_h.jpg)
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Energy-Monitor-Shield-Monitoring-System-with-Nokia-LCD-Screen-p-1775.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p> 
 
 Energy Monitor Shield is an Arduino-compatible expansion card designed for building energy monitoring system with LCD screen and an interface for connecting the wireless transceiver nRF24L01 +.
 
@@ -40,27 +41,21 @@ Model: [830070001](https://www.seeedstudio.com/)
 
 ![](https://files.seeedstudio.com/wiki/Energy_Monitor_Shield_V0.9b/img/Em-top.jpg)
 
-The left side of EM Shield are three connectors for current sensors, right - connector for LCD-screen.
+*   The left side of EM Shield are three connectors for current sensors, right - connector for LCD-screen.
 
-Jumper JP1 is used to enable / disable real-backlight LCD-screen.
+*   Jumper JP1 is used to enable / disable real-backlight LCD-screen.
 
-In the upper right corner - I2C-connector.
+*   In the upper right corner - I2C-connector.
 
-On the right are two buttons (labeled S1 and S2).
+*   On the right are two buttons (labeled S1 and S2).
 
-In the center of the board (just to the right LCD-screen) - connector for nRF24L01 +.
+*   In the center of the board (just to the right LCD-screen) - connector for nRF24L01 +.
 
 **Schematic of the device**
 
 ##   Basic functionality
 
-In the basic version (without using Ethernet Shield) may organize monitoring of energy consumption in three different circuits using current sensors.
-
-Information about the current level of consumption can be displayed on the LCD screen.
-
-Device Management can be organized using two buttons on the Shield.
-
-The obtained data can be transmitted by the transceiver nRF24L01 +.
+In the basic version (without using Ethernet Shield) may organize monitoring of energy consumption in three different circuits using current sensors. Information about the current level of consumption can be displayed on the LCD screen. Device Management can be organized using two buttons on the Shield. The obtained data can be transmitted by the transceiver nRF24L01 +.
 
 ##  Expansion Capabilities
 
@@ -141,7 +136,8 @@ LCD5110 myGLCD(5,6,3);
 
 ##  Simple demonstration
 
-<pre>
+```C++
+
 #include &lt;SPI.h&gt;
 #include &lt;LCD5110_Graph_SPI.h&gt;
 #include "EmonLib.h"   
@@ -217,100 +213,101 @@ void loop(void)
     delay(250);
 
 }
-</pre>
+```
 
 ##  Simple demonstration  with wireless technology
 
-<div class="mw-geshi mw-code mw-content-ltr container" dir="ltr"><div class="arduino source-arduino"><pre class="de1"> 
-<span class="coMULTI">/*
+```C++
+/*
  This example code is in the public domain.
- */</span>
+ */
 
-<span class="co2">#include &lt;SPI.h&gt;</span>
-<span class="co2">#include &lt;MySensor.h&gt;  // Include MySensors.org Library V1.5</span>
-<span class="co2">#include "EmonLib.h" // Include Emon Library</span>
-<span class="co2">#include &lt;LCD5110_Graph_SPI.h&gt; // Include NOKIA5110 Library</span>
+#include <SPI.h>
+#include <MySensor.h>  // Include MySensors.org Library V1.5
+#include "EmonLib.h" // Include Emon Library
+#include <LCD5110_Graph_SPI.h> // Include NOKIA5110 Library
 
-<span class="co2">#define CHILD_ID_POWER 0</span>
+#define CHILD_ID_POWER 0
 
-EnergyMonitor emon<span class="sy4">;</span>
+EnergyMonitor emon;
 
-LCD5110 myGLCD<span class="br0">(</span><span class="nu0">5</span>,<span class="nu0">6</span>,<span class="nu0">3</span><span class="br0">)</span><span class="sy4">;</span>
-<span class="kw4">extern</span> <span class="kw4">unsigned</span> <span class="kw4">char</span> SmallFont<span class="br0">[</span><span class="br0">]</span><span class="sy4">;</span>
+LCD5110 myGLCD(5,6,3);
+extern unsigned char SmallFont[];
 
-MyTransportNRF24 transport<span class="br0">(</span><span class="nu0">7</span>, <span class="nu0">8</span><span class="br0">)</span><span class="sy4">;</span> <span class="co1">//for EMv1</span>
-MySensor gw<span class="br0">(</span>transport<span class="br0">)</span><span class="sy4">;</span>
+MyTransportNRF24 transport(7, 8); //for EMv1
+MySensor gw(transport);
 
-<span class="kw4">unsigned</span> <span class="kw4">long</span> lastSend<span class="sy4">;</span>
-<span class="kw4">unsigned</span> <span class="kw4">long</span> SEND_FREQUENCY <span class="sy1">=</span> <span class="nu0">20000</span><span class="sy4">;</span> <span class="co1">// Minimum time between send (in milliseconds). We don't wnat to spam the gateway.</span>
+unsigned long lastSend;
+unsigned long SEND_FREQUENCY = 20000; // Minimum time between send (in milliseconds). We don't wnat to spam the gateway.
 
-<span class="kw4">float</span> Irms<span class="sy4">;</span>
-<span class="kw4">float</span> lastIrms <span class="sy1">=</span> <span class="sy2">-</span><span class="nu0">99</span><span class="sy4">;</span>
+float Irms;
+float lastIrms = -99;
 
-<span class="kw4">char</span> tbuf<span class="br0">[</span><span class="nu0">8</span><span class="br0">]</span><span class="sy4">;</span>
-<span class="kw4">char</span> sbuf<span class="br0">[</span><span class="nu0">12</span><span class="br0">]</span><span class="sy4">;</span>
+char tbuf[8];
+char sbuf[12];
 
-MyMessage IrmsMsg<span class="br0">(</span>CHILD_ID_POWER, V_KWH<span class="br0">)</span><span class="sy4">;</span>
+MyMessage IrmsMsg(CHILD_ID_POWER, V_KWH);
 
-<span class="kw4">void</span> <span class="kw2">setup</span><span class="br0">(</span><span class="br0">)</span>  
-<span class="br0">{</span>
-  myGLCD.<span class="me1">InitLCD</span><span class="br0">(</span><span class="br0">)</span><span class="sy4">;</span>
-  myGLCD.<span class="me1">setFont</span><span class="br0">(</span>SmallFont<span class="br0">)</span><span class="sy4">;</span>
-  myGLCD.<span class="me1">update</span><span class="br0">(</span><span class="br0">)</span><span class="sy4">;</span>
+void setup()  
+{
+  myGLCD.InitLCD();
+  myGLCD.setFont(SmallFont);
+  myGLCD.update();
 
-  <span class="co1">// The third argument enables repeater mode.</span>
-  gw.<span class="kw3">begin</span><span class="br0">(</span><span class="kw2">NULL</span>, AUTO, <span class="kw2">true</span><span class="br0">)</span>,
-  gw.<span class="me1">sendSketchInfo</span><span class="br0">(</span><span class="st0">"Energy Monitor v1"</span>, <span class="st0">"1.0"</span><span class="br0">)</span><span class="sy4">;</span>
+  // The third argument enables repeater mode.
+  gw.begin(NULL, AUTO, true),
+  gw.sendSketchInfo("Energy Monitor v1", "1.0");
 
-<span class="co1">//  emon.current(0, 111.1);             // Current: input pin, calibration.</span>
-   emon.<span class="me1">current</span><span class="br0">(</span><span class="nu0">0</span>, <span class="nu16">66.5</span><span class="br0">)</span><span class="sy4">;</span>
+//  emon.current(0, 111.1);             // Current: input pin, calibration.
+   emon.current(0, 66.5);
 
-  <span class="co1">// Register all sensors to gw (they will be created as child devices)</span>
+  // Register all sensors to gw (they will be created as child devices)
 
-  gw.<span class="me1">present</span><span class="br0">(</span>CHILD_ID_POWER, S_POWER<span class="br0">)</span><span class="sy4">;</span>
-<span class="br0">}</span>
+  gw.present(CHILD_ID_POWER, S_POWER);
+}
 
-<span class="kw4">void</span> <span class="kw2">loop</span><span class="br0">(</span><span class="br0">)</span>      
-<span class="br0">{</span>      
-  gw.<span class="me1">process</span><span class="br0">(</span><span class="br0">)</span><span class="sy4">;</span>
-  <span class="kw4">unsigned</span> <span class="kw4">long</span> now <span class="sy1">=</span> <span class="kw3">millis</span><span class="br0">(</span><span class="br0">)</span><span class="sy4">;</span>
+void loop()      
+{      
+  gw.process();
+  unsigned long now = millis();
 
-  <span class="kw4">double</span> Irms <span class="sy1">=</span> emon.<span class="me1">calcIrms</span><span class="br0">(</span><span class="nu0">1480</span><span class="br0">)</span><span class="sy4">;</span>  <span class="co1">// Calculate Irms only</span>
-  <span class="kw4">float</span> realIrms  <span class="sy1">=</span> emon.<span class="me1">Irms</span><span class="sy2">*</span><span class="nu0">220</span><span class="sy4">;</span>        <span class="co1">//extract Real Power into variable</span>
+  double Irms = emon.calcIrms(1480);  // Calculate Irms only
+  float realIrms  = emon.Irms*220;        //extract Real Power into variable
 
- <span class="kw1">if</span> <span class="br0">(</span>realIrms <span class="sy3">!</span><span class="sy1">=</span> lastIrms<span class="br0">)</span> <span class="br0">{</span>
-      gw.<span class="kw3">send</span><span class="br0">(</span>IrmsMsg.<span class="me1">set</span><span class="br0">(</span>realIrms, <span class="nu0">1</span><span class="br0">)</span><span class="br0">)</span><span class="sy4">;</span> <span class="co1">//send to gateway</span>
+ if (realIrms != lastIrms) {
+      gw.send(IrmsMsg.set(realIrms, 1)); //send to gateway
 
-  lastIrms<span class="sy1">=</span>realIrms<span class="sy4">;</span>
-  <span class="br0">}</span>
+  lastIrms=realIrms;
+  }
 
-   dtostrf<span class="br0">(</span>realIrms,<span class="nu0">5</span>,<span class="nu0">2</span>,tbuf<span class="br0">)</span><span class="sy4">;</span>
-    <span class="kw3">sprintf</span><span class="br0">(</span>sbuf, <span class="st0">"  %s kWt"</span>, tbuf<span class="br0">)</span><span class="sy4">;</span>
-    myGLCD.<span class="kw3">print</span><span class="br0">(</span>sbuf, <span class="nu0">20</span>, <span class="nu0">0</span><span class="br0">)</span><span class="sy4">;</span>   
-    myGLCD.<span class="kw3">print</span><span class="br0">(</span><span class="st0">"Powr:"</span>, <span class="nu0">0</span>, <span class="nu0">0</span><span class="br0">)</span><span class="sy4">;</span>  
+   dtostrf(realIrms,5,2,tbuf);
+    sprintf(sbuf, "  %s kWt", tbuf);
+    myGLCD.print(sbuf, 20, 0);   
+    myGLCD.print("Powr:", 0, 0);  
 
-    dtostrf<span class="br0">(</span>Irms,<span class="nu0">5</span>,<span class="nu0">2</span>,tbuf<span class="br0">)</span><span class="sy4">;</span>
-    <span class="kw3">sprintf</span><span class="br0">(</span>sbuf, <span class="st0">"  %s Amp"</span>, tbuf<span class="br0">)</span><span class="sy4">;</span>
-    myGLCD.<span class="kw3">print</span><span class="br0">(</span>sbuf, <span class="nu0">20</span>, <span class="nu0">10</span><span class="br0">)</span><span class="sy4">;</span>   
-    myGLCD.<span class="kw3">print</span><span class="br0">(</span><span class="st0">"Irms:"</span>, <span class="nu0">0</span>, <span class="nu0">10</span><span class="br0">)</span><span class="sy4">;</span>  
+    dtostrf(Irms,5,2,tbuf);
+    sprintf(sbuf, "  %s Amp", tbuf);
+    myGLCD.print(sbuf, 20, 10);   
+    myGLCD.print("Irms:", 0, 10);  
 
-    myGLCD.<span class="me1">update</span><span class="br0">(</span><span class="br0">)</span><span class="sy4">;</span>
+    myGLCD.update();
 
-      <span class="kw2">Serial</span>.<span class="kw3">print</span><span class="br0">(</span><span class="st0">"Power: "</span><span class="br0">)</span><span class="sy4">;</span>
-      <span class="kw2">Serial</span>.<span class="kw3">println</span><span class="br0">(</span>realIrms<span class="br0">)</span><span class="sy4">;</span>
+      Serial.print("Power: ");
+      Serial.println(realIrms);
 
-  gw.<span class="me1">sleep</span><span class="br0">(</span>SEND_FREQUENCY<span class="br0">)</span><span class="sy4">;</span>
-  <span class="br0">}</span></pre></div></div>
+  gw.sleep(SEND_FREQUENCY);
+  }
+```
 
 ##  Version Tracker
 
 <table  cellpadding="5" cellspacing="0">
 <tr>
-<td width="150"> **Revision**
+<td width="150"> Revision
 </td>
-<td width="450"> **Description**
+<td width="450"> Description
 </td>
-<td width="80"> **Release**
+<td width="80"> Release
 </td></tr>
 <tr style="font-size: 90%">
 <td> 1.0
