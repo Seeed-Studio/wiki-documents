@@ -2,7 +2,7 @@
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/platformIO/platformIO.gif"/></div>
 
-Developing [**Wio Terminal**](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) and [**Seeeduino XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html) in your favorite developing environment using [**PlatformIO IDE**](https://platformio.org/)!
+As you may have experienced, Arduino IDE may not be the best IDE for **Arduino Programming** when it comes to productivity, here introduces you a more developing-friendly option! Developing [**Wio Terminal**](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) and [**Seeeduino XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html) in your favorite developing environment using [**PlatformIO IDE**](https://platformio.org/)!
 
 ## What is PlatformIO
 
