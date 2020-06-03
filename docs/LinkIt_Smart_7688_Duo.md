@@ -92,8 +92,8 @@ LinkItTM Smart 7688 Duo(a compact controller board) is an open development board
 
 !!!Note
     * In order to protect the product from improper operation, please pay attention to below notes.Choose more reliable power adapter with stable output.Recommended conditions of power input source for 7688:
-      * - Overshoot voltage of power input should not over 5.5.
-      * - Voltage wave should be within ±100mV of rated voltage.
+          * Overshoot voltage of power input should not over 5.5.
+          * Voltage wave should be within ±100mV of rated voltage.
 
 
 
@@ -113,13 +113,13 @@ LinkItTM Smart 7688 Duo(a compact controller board) is an open development board
 
 ### On Windows
 
-**1.**Install [PuTTy](http://www.putty.org/). PuTTY provides a system console environment using SSH (Secure Socket Shell) to access development board's operating system.
+**1.** Install [PuTTy](http://www.putty.org/). PuTTY provides a system console environment using SSH (Secure Socket Shell) to access development board's operating system.
 
-**2.**Install [Bonjour](https://support.apple.com/kb/DL999?viewlocale=en_US&locale=en_US) Print Service (For Windows 7, Windows 8, Windows 10).
+**2.** Install [Bonjour](https://support.apple.com/kb/DL999?viewlocale=en_US&locale=en_US) Print Service (For Windows 7, Windows 8, Windows 10).
 
-**3.**Install driver. If you are using a USB cable based on FTDI chip please download and install its driver from [here](https://www.ftdichip.com/Drivers/VCP.htm). If you are having problems with the latest driver, try installing an [older version](https://www.ftdichip.com/Support/Documents/InstallGuides.htm).
+**3.** Install driver. If you are using a USB cable based on FTDI chip please download and install its driver from [here](https://www.ftdichip.com/Drivers/VCP.htm). If you are having problems with the latest driver, try installing an [older version](https://www.ftdichip.com/Support/Documents/InstallGuides.htm).
 
-**4.**Next, you need to connect the Serial-to-USB cable to LinkIt Smart 7688's UART pins as shown in the following table:
+**4.** Next, you need to connect the Serial-to-USB cable to LinkIt Smart 7688's UART pins as shown in the following table:
 
 
 | Pin on USB adapter |	Corresponding Pin to be connected on LinkIt Smart 7688 |
@@ -130,25 +130,25 @@ LinkItTM Smart 7688 Duo(a compact controller board) is an open development board
 
 ![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/7688_duo_demo_view_1200_s.jpg)
 
-**5.**After connecting the Serial to USB cable, open the device manager and notice the COM port number as shown in Figure 22. This number may vary on different computers.
+**5.** After connecting the Serial to USB cable, open the device manager and notice the COM port number as shown in Figure 22. This number may vary on different computers.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/COM_port.jpg)
 
-**6.**Launch the PuTTY terminal and enter the COM port number of the USB device found in the device manager, click on the Serial radio button, type 57600 in Speed box and click Open, as shown in Figure 23.
+**6.** Launch the PuTTY terminal and enter the COM port number of the USB device found in the device manager, click on the Serial radio button, type 57600 in Speed box and click Open, as shown in Figure 23.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/Putty_configuration.jpg)
 
-**7.**To exit the system console, click the **close icon** on top right of the PuTTY windows.
+**7.** To exit the system console, click the **close icon** on top right of the PuTTY windows.
 
 ### On Mac
 
-**1.**Install the driver if needed. Check the cable manufacturer's website for driver requirements on Mac and installation instructions.
+**1.** Install the driver if needed. Check the cable manufacturer's website for driver requirements on Mac and installation instructions.
 
-**2.**Plug-in the cable to PC/Laptop and connect the cable to LinkIt Smart 7688.
+**2.** Plug-in the cable to PC/Laptop and connect the cable to LinkIt Smart 7688.
 
-**3.**Open a Terminal session.
+**3.** Open a Terminal session.
 
-**4.**Type **ls /dev/cu*** in the Terminal. You should see a list of devices. Look for something like cu.usbserial-XXXXXXXX where XXXXXXXX is usually a random identifier. This is the serial device used to access the system console.
+**4.** Type **ls /dev/cu** in the Terminal. You should see a list of devices. Look for something like cu.usbserial-XXXXXXXX where XXXXXXXX is usually a random identifier. This is the serial device used to access the system console.
 
 **For example:**
 
@@ -165,38 +165,38 @@ $ls /dev/cu*
 
 ```
 
-**5.**Use the screen utility to connect to the serial port and set the baudrate to 57600. This is because the baudrate of the system console is 57600 by default. For example:
+**5.** Use the screen utility to connect to the serial port and set the baudrate to 57600. This is because the baudrate of the system console is 57600 by default. For example:
 ```
 $screen /dev/cu.usbserial-XXXXXXXX 57600
 ```
-**6.**Now you should be connected to the system console. Press ENTER in the Terminal to bring up the prompt. You will notice that the prompt has become different from your OS X Terminal application, it is the LinkIt Smart 7688 prompt and it looks like the following:
+**6.** Now you should be connected to the system console. Press ENTER in the Terminal to bring up the prompt. You will notice that the prompt has become different from your OS X Terminal application, it is the LinkIt Smart 7688 prompt and it looks like the following:
 ```
   root@myLinkIt:/#
 ```
-**7.**You are ready to make changes to the LinkIt Smart 7688 system through this console.
+**7.** You are ready to make changes to the LinkIt Smart 7688 system through this console.
 
 ### On Linux
 
-**1.**Install the driver if needed. Check the cable manufacturer's website for driver requirements on Linux and installation instructions.
+**1.** Install the driver if needed. Check the cable manufacturer's website for driver requirements on Linux and installation instructions.
 
-**2.**Plug-in the cable and connect the cable to LinkIt Smart 7688 Duo.
+**2.** Plug-in the cable and connect the cable to LinkIt Smart 7688 Duo.
 
-**3.**Open a Terminal session.
+**3.** Open a Terminal session.
 
-**4.**Type **ls /dev/ttyUSB*** in the Terminal. You should see a list of devices. Look for something like cu.usbserial-XXXXXXXX where XXXXXXXX is usually a random identifier. This is the serial device used to access the system console. For example:
+**4.** Type **ls /dev/ttyUSB*** in the Terminal. You should see a list of devices. Look for something like cu.usbserial-XXXXXXXX where XXXXXXXX is usually a random identifier. This is the serial device used to access the system console. For example:
 ```
 $ls /dev/ttyUSB*
 /dev/ttyUSB0
 ```
-5.Use the **screen** utility to connect to the serial port and set the baudrate to **57600**. This is because the baudrate of the system console is 57600 by default. For example:
+**5.** Use the **screen** utility to connect to the serial port and set the baudrate to **57600**. This is because the baudrate of the system console is 57600 by default. For example:
 ```
 $sudo screen /dev/ttyUSB0 57600
 ```
-**6.**Now you should be connected to the system console. Press ENTER in the Terminal to bring up the prompt. You will notice that the prompt has become a different regular application, it is the LinkIt Smart 7688 prompt and it looks like the following:
+**6.** Now you should be connected to the system console. Press ENTER in the Terminal to bring up the prompt. You will notice that the prompt has become a different regular application, it is the LinkIt Smart 7688 prompt and it looks like the following:
 ```
   root@myLinkIt:/#
 ```
-**7.**You are ready to make changes to the LinkIt Smart 7688 system through this console.
+**7.** You are ready to make changes to the LinkIt Smart 7688 system through this console.
 
 ### Running the Blink example
 
@@ -209,55 +209,55 @@ $sudo screen /dev/ttyUSB0 57600
 
 #### Get Blink RUN
 
-**1.**Power up your board with a micro-USB cable (only connect the USB Power interface, rather than the USB Host interface).
+**1.** Power up your board with a micro-USB cable (only connect the USB Power interface, rather than the USB Host interface).
 
 
-**2.**Launch PuTTy and connect to system with USB to Serial adapter as shown in previous sections.
+**2.** Launch PuTTy and connect to system with USB to Serial adapter as shown in previous sections.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/Connect_to_computer.jpg)
 
-**3.**Type **python /IoT/examples/blink-gpio44.py** and press **Enter** to run the Blink example.
+**3.** Type **python /IoT/examples/blink-gpio44.py** and press **Enter** to run the Blink example.
 !!!note
     Please note that there is 1 blank space after the first word "python", otherwise the example won't be found.
 
-**4.**After around 2 seconds, you will notice that the Wi-Fi LED blinks steadily.
+**4.** After around 2 seconds, you will notice that the Wi-Fi LED blinks steadily.
 
-**5.**In the system console, type **CTRL + C**, this will terminate the example.
+**5.** In the system console, type **CTRL + C**, this will terminate the example.
 
 ### Connect to the Internet (Switch to Station mode)
 
 There are two kind of Wi-Fi modes: AP mode and Station mode. Refer here for the differences between them.
 
-**1.**Power up the board with a micro-USB cable.
+**1.** Power up the board with a micro-USB cable.
 
-**2.**Open the Wi-Fi connection utility on your computer and connect to the access point named LinkIt_Smart_7688_XXXXXX. XXXXXX is a kind of hardware identifier which varies from board to board.
+**2.** Open the Wi-Fi connection utility on your computer and connect to the access point named LinkIt_Smart_7688_XXXXXX. XXXXXX is a kind of hardware identifier which varies from board to board.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/Connect_wifi.jpg)
 
-**3.**Open a browser with URL mylinkit.local/ or 192.168.100.1, set the password for root and sign in. Click Network on the upper right.
+**3.** Open a browser with URL mylinkit.local/ or 192.168.100.1, set the password for root and sign in. Click Network on the upper right.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/Network_conf.jpg)
 
-**4.**Select the Station mode and click Refresh or downward arrow on the right to find the AP to connect to. After you have selected the AP, enter password if required. Click Configure & Restart to finish as shown below. Then wait for around 30 seconds to switch mode.
+**4.** Select the Station mode and click Refresh or downward arrow on the right to find the AP to connect to. After you have selected the AP, enter password if required. Click Configure & Restart to finish as shown below. Then wait for around 30 seconds to switch mode.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/Station_mode.jpg)
 
-**5.**Launch PuTTy and connect to the system with USB to Serial adapter as shown in the previous section.
+**5.** Launch PuTTy and connect to the system with USB to Serial adapter as shown in the previous section.
 
-**6.**Type ifconfig and find the IP address of inet addr as shown below:
+**6.** Type ifconfig and find the IP address of inet addr as shown below:
 
 ![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/IFCONFIG.jpg)
 
 !!!Note
     It will still enter the Station mode after rebooting the system. Press wi-fi button at least 5 seconds to switch back to AP mode. Note: It will be needed to reboot the embeded OS by using reboot command.
 
-**7.**Type the IP in a new Tab of browser and you can login to Web user interface to configure the system.
+**7.** Type the IP in a new Tab of browser and you can login to Web user interface to configure the system.
 
-**8.**Now both the host computer and LinkIt Smart 7688 are connected to internet. Type ping [www.mediatek.com](https://www.mediatek.com/) in console and you will get:
+**8.** Now both the host computer and LinkIt Smart 7688 are connected to internet. Type ping [www.mediatek.com](https://www.mediatek.com/) in console and you will get:
 
 ![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/Ping_result.jpg)
 
-**9.**Now you can use internet to configure your system on development board.
+**9.** Now you can use internet to configure your system on development board.
 
 
 ### Installing Arduino programming environment
@@ -274,7 +274,7 @@ Configure Arduino IDE for LinkIt Smart 7688 Platform
 
 Arduino IDE 1.6.5 supports third party board integration using the **Board Manager** tool. LinkIt Smart 7688 development board is a plug-in to Arduino IDE and you will need to install the board package so that Arduino supports LinkIt board. Please follow the steps below:
 
-**1.**In Arduino IDE, on the File menu click Preferences then insert
+**1.** In Arduino IDE, on the File menu click Preferences then insert
 
 ````
 http://download.labs.mediatek.com/package_mtk_linkit_smart_7688_test_index.json
@@ -284,17 +284,17 @@ http://download.labs.mediatek.com/package_mtk_linkit_smart_7688_test_index.json
 
 ![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/Install_package.jpg)
 
-**2.**Make sure your computer is connected to the internet. [Download](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/res/LinkIt.zip) **LinkIt**, decompress it and copy the files into the folder **packages** which gets same location with file **Preferences.txt**. Click following red rectangle marked section to open file location of **Preferences.txt**.
+**2.** Make sure your computer is connected to the internet. [Download](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/res/LinkIt.zip) **LinkIt**, decompress it and copy the files into the folder **packages** which gets same location with file **Preferences.txt**. Click following red rectangle marked section to open file location of **Preferences.txt**.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/7688_duo_demo_preferences.txt_location_s.jpg)
 
-**3.**In the Arduino **Tools** menu point to **Board**.
+**3.** In the Arduino **Tools** menu point to **Board**.
 
-**4.**There should now be a LinkIt Smart 7688 item appearing in the boards list on the Boards Manager and choose port with **COMxx** (**LinkIt Smart 7688 Duo**).
+**4.** There should now be a LinkIt Smart 7688 item appearing in the boards list on the Boards Manager and choose port with **COMxx** (**LinkIt Smart 7688 Duo**).
 
 ![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/Install_SDK.jpg)
 
-**5.**The installation is completed.
+**5.** The installation is completed.
 
 ### Installing LinkIt Smart 7688 Duo COM Port Driver
 
@@ -334,19 +334,19 @@ Right click on the linkit_smart_7688.inf and select install, a security windows 
 
 ###Python
 
-**1.**Use FileZilla and refer to this [tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29), the server IP(replace **host name**) address is the inet addr found in previous [Switch to Station mode](https://seeeddoc.github.io/LinkIt_Smart_7688_Duo#Switch_to_Station_mode) section, the username is root and password is password you set in that section.
+**1.** Use FileZilla and refer to this [tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29), the server IP(replace **host name**) address is the inet addr found in previous [Switch to Station mode](https://seeeddoc.github.io/LinkIt_Smart_7688_Duo#Switch_to_Station_mode) section, the username is root and password is password you set in that section.
 
-**2.**Open a text editor, copy and paste the below example code and save it as **helloworld.py**.
+**2.** Open a text editor, copy and paste the below example code and save it as **helloworld.py**.
 ```
 print "Hello World!"
 ```
-**3.**Copy the file **helloworld.py** into system on target development environment (LinkIt Smart 7688) with FileZilla, place it under the folder **root**.
+**3.** Copy the file **helloworld.py** into system on target development environment (LinkIt Smart 7688) with FileZilla, place it under the folder **root**.
 
-**4.**Launch PuTTy and connect to system with USB to Serial adapter.
+**4.** Launch PuTTy and connect to system with USB to Serial adapter.
 
-**5.**Set working directory to **/root** and enter **python helloworld.py** to execute.
+**5.** Set working directory to **/root** and enter **python helloworld.py** to execute.
 
-**6.**Now you can see **Hello World**! printed in console.
+**6.** Now you can see **Hello World**! printed in console.
 
 ###Arduino
 
@@ -354,7 +354,7 @@ print "Hello World!"
 
 The MCU side is written as an Arduino sketch. In this example, the sketch simply listens to the command sent from the MPU (Linux) side and switches the on-board LED accordingly.
 
-**1.**First, connect the LinkIt Smart 7688 Duo to your PC, then open Arduino IDE and paste the following sketch code into the IDE:
+**1.** First, connect the LinkIt Smart 7688 Duo to your PC, then open Arduino IDE and paste the following sketch code into the IDE:
 
 ```
 void setup() {
@@ -378,16 +378,16 @@ void loop() {
 }
 ```
 
-**2.**Then choose the correct COM port from the IDE (check your device manager) by clicking **Tools -> Port**.
+**2.** Then choose the correct COM port from the IDE (check your device manager) by clicking **Tools -> Port**.
 
-**3.**Upload the sketch to the board. Note the board is not blinking yet - you will need to write a program in the Linux side to make it blink, which is the next step.
+**3.** Upload the sketch to the board. Note the board is not blinking yet - you will need to write a program in the Linux side to make it blink, which is the next step.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/Blink_in_arduino.jpg)
 
 
 ####On development board(Linux side)
 
-**1.**Use a text editor of your choice and create a new file(a Python file), then copy the following code and save it.
+**1.** Use a text editor of your choice and create a new file(a Python file), then copy the following code and save it.
 
 
 ```
@@ -414,7 +414,7 @@ while True:
 loop()
 ```
 
-**2.**Execute this Python program in the system console - this program basically writes string of 1 and 0 to the /dev/ttyS0 port which maps to Serial1 interface in Arduino. The Arduino sketch that was uploaded in the previous section will receive the string and then blink the on-board LED accordingly.
+**2.** Execute this Python program in the system console - this program basically writes string of 1 and 0 to the /dev/ttyS0 port which maps to Serial1 interface in Arduino. The Arduino sketch that was uploaded in the previous section will receive the string and then blink the on-board LED accordingly.
 
 You can now extend the Arduino sketch to drive other devices such as PWM, I2C devices and synchronize the states by extending the command messages between Arduino and the Linux side. If more peripheral types need to be included, you can use some external libraries to implement the communication protocol. One such protocol - Firmata is described in the following section.
 
