@@ -13,13 +13,12 @@ tags:
 
 
 ![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/main2.jpg)
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Red-LED-Matrix-w/Driver.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p> 
 
 
 LED Matrix is low cost and usually used to display simple numbers and images. Grove - Red LED Matrix w/Driver is the combination of the 20mm  8*8 square LED Matrix - Red and the Grove - LED Matrix Driver. The HT16K33 is a memory mapping and multi-function LED controller driver which allows you to control the LED matrix with our prepared and easy-to-use libraries, or you can create your own library to control it to satisfy your need. 
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/i9hnRPuCx-Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-Red-LED-Matrix-w/Driver.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 ## Version
 
@@ -52,7 +51,7 @@ LED Matrix is low cost and usually used to display simple numbers and images. Gr
 
 
 !!! Note
-There are 8 possible I2C address of this grove, from 0x70 to 0x77. The defult I^2^C address is 0x77. You can change the I2C address by do some soldering as instructed in the below table. 
+         There are 8 possible I2C address of this grove, from 0x70 to 0x77. The defult I^2^C address is 0x77. You can change the I2C address by do some soldering as instructed in the below table. 
 
 |I^2^C address|Connection|
 |---|---|
@@ -87,15 +86,6 @@ For example, if I want to change the address to 0x73, I need to connect pad A1,A
 
 ![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/pinout.jpg)
 
-
-
-### Hardware Detail
-
-
-
-
-## Working Principle
-
 ## Platforms Supported
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
@@ -109,9 +99,6 @@ For example, if I want to change the address to 0x73, I need to connect pad A1,A
 
 ### Play With Arduino
 
-
-#### Hardware
-
 **Materials required**
 
 
@@ -122,9 +109,9 @@ For example, if I want to change the address to 0x73, I need to connect pad A1,A
 
 
 !!!note
-    **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy 
+    **1.** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy 
     
-    **2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
+    **2.** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
 
 
 - **Step 1.** Connect the Grove - Red LED Matrix w/Driver to port **I^2^C** of Grove-Base Shield.
@@ -286,7 +273,7 @@ void loop() {
 
 !!!Success
 
-If everything goes well, your LED Matrix will display as below.
+         If everything goes well, your LED Matrix will display as below.
 
 ![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/display.gif)
 
