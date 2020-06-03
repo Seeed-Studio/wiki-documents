@@ -128,7 +128,135 @@ void loop() {
 
 ![](https://files.seeedstudio.com/wiki/Grove-Analog-Microphone/img/outcome.png)
 
+### Play With Wio Terminal
 
+**Hardware**
+
+|Wio Terminal|Grove-Analog Microphone|
+|--------------|-----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-thumbnail.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Analog-Microphone/img/small.png)|
+|[Get One Now](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Get One Now](https://www.seeedstudio.com/Grove-Analog-Microphone-p-4593.html)|
+
+#### Hardware Connection
+
+![](https://files.seeedstudio.com/wiki/Grove-Analog-Microphone/img/connection.jpg)
+
+**Step 1** Plug Grove-Analog Microphone to Wio Terminal via Grove cable and also connect Wio Terminal to PC through a USB cable.
+
+**Step 2** Copy the demo code into your Arduino IDE and upload.
+
+**Software**
+
+```C
+#include "seeed_line_chart.h" //include the library
+
+TFT_eSPI tft;
+#define LINE_DIS 0X00
+#define STRING_DIS 0X01
+#define max_size 30 //maximum size of data
+doubles data;       //Initilising a doubles type to store data
+int brightness;
+TFT_eSprite spr = TFT_eSprite(&tft); // Sprite
+
+const int MIC = A0; //the microphone amplifier output is connected to pin A0
+int adc;
+int dB, PdB; //the variable that will hold the value read from the microphone each time
+uint8_t mode = LINE_DIS;
+void setup()
+{
+    Serial.begin(9600); //sets the baud rate at 9600 so we can check the values the microphone is obtaining on the Serial Monitor
+    pinMode(A0, INPUT);
+    pinMode(WIO_KEY_C, INPUT_PULLUP);
+    pinMode(WIO_BUZZER, OUTPUT);
+    tft.begin();
+    spr.createSprite(TFT_HEIGHT, TFT_WIDTH);
+    spr.setRotation(3);
+    tft.setRotation(3);
+}
+
+void loop() {
+ 
+    if (digitalRead(WIO_KEY_C) == LOW) {
+        mode ++;
+        if(mode > STRING_DIS ) mode = LINE_DIS;
+        while(!digitalRead(WIO_KEY_C));
+    }
+    display(mode);
+}
+
+void display(uint8_t mode)
+{
+    adc = analogRead(MIC); //Read the ADC value from amplifer
+    //Serial.println (adc);//Print ADC for initial calculation
+    dB = (adc + 83.2073) / 7.003; //Convert ADC value to dB using Regression values
+
+    if(dB > 50)
+    {
+        analogWrite(WIO_BUZZER, 128);
+
+    }else{
+        analogWrite(WIO_BUZZER, 0);
+    }
+
+    spr.fillSprite(TFT_WHITE);
+
+    if (data.size() == max_size)
+    {
+        data.pop(); //this is used to remove the first read variable
+    }
+    data.push(dB); //read variables and store in data
+
+    //Settings for the line graph title
+    auto header = text(0, 0)
+                      .value("MIC DB Readings")
+                      .align(center)
+                      .valign(vcenter)
+                      .width(tft.width())
+                      .thickness(2);
+
+    header.height(header.font_height() * 2);
+    header.draw(); //Header height is the twice the height of the font
+    if (LINE_DIS == mode){
+    //Settings for the line graph
+    auto content = line_chart(20, header.height()); //(x,y) where the line graph begins
+    content
+        .height(tft.height() - header.height() * 1.5) //actual height of the line chart
+        .width(tft.width() - content.x() * 2)         //actual width of the line chart
+        .based_on(0.0)                                //Starting point of y-axis, must be a float
+        .show_circle(false)                           //drawing a cirle at each point, default is on.
+        .value(data)                                  //passing through the data to line graph
+        .color(TFT_RED)                               //Setting the color for the line
+        .draw();
+    } else if (STRING_DIS == mode){
+        for(int8_t line_index = 0;line_index < 5 ; line_index++)
+        {
+            spr.drawLine(0, 50 + line_index, tft.width(), 50 + line_index, TFT_GREEN);
+        }        
+        auto header =  text(0, 0)
+                    .thickness(1);
+        spr.setFreeFont(&FreeSansBoldOblique24pt7b); 
+        if(dB > 50){
+            spr.setTextColor(TFT_RED);
+        }else{
+            spr.setTextColor(TFT_BLUE);
+        }
+        spr.drawFloat(dB,2,70,110);
+        spr.drawString(" dB",80 + 100,110,1);
+    }
+    spr.pushSprite(0, 0);
+    delay(100);
+}
+```
+
+!!!Success
+   The image will display on the screen of Wio Terminal if everything goes well.
+
+<div align="center">
+<figure>
+<img src="https://files.seeedstudio.com/wiki/Grove-Analog-Microphone/img/02.gif" alt="Grove-Analog Microphone'' OUTCOME" title="demo" />
+<figcaption><b></b><i></i></figcaption>
+</figure>
+</div>
 
 ## Schematic Online Viewer
 
