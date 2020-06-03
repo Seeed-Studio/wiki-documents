@@ -206,7 +206,7 @@ When it is finished the information **Done Uploading** will Pop up in the lower 
 
 
 
-### Step 6. Use the phone to connect MG126
+### Step 6. Use the phone to connect MG126**  
 
 Open the [nRF Connect](#getting-started) app, click on the **SCANNER** and search for the name of the DeviceInfo in the page. Different demos have different DeviceInfo, the and the corresponding DeviceInfo of analog_output is `Wio_BLE_Analog`.
 
