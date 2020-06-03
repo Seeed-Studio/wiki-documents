@@ -1,4 +1,4 @@
-# How to Use Firmata to Control the Arduino Core on ODYSSEY-X86
+# Firmata Tutorial: How to Use Firmata on Arduino Compatible Boards
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/firmata-py-js.png"/></div>
 
