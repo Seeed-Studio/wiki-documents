@@ -148,9 +148,9 @@ In brief, Groves is hundreds of sensor that in standard style, which is consist 
 |8       |#8      |YES        |YES|         |          |        |
 |9       |#9      |YES        |YES|         |          |        |
 |10      |#10     |YES        |YES|         |          |        |
-|11      |#11     |YES        |YES|         |          | SPI_MOSI|
-|12      |#12     |YES        |YES|         |          | SPI_MISO|
-|13      |#13     |YES        |YES|         |          | SPI_SCK|
+|11      |#11     |YES        |YES|         |          |        |
+|12      |#12     |YES        |YES|         |          |        |
+|13      |#13     |YES        |YES|         |          |        |
 |SDA     |#20     |YES        |YES|         |          |        |
 |SCL     |#21     |YES        |YES|         |          |        |
 |A0      |#A0     |YES        |YES|YES      |YES       |        |
