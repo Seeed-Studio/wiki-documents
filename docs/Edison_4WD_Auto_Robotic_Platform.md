@@ -19,393 +19,43 @@ The 4WD Auto Robotic Platform is a powerful mobile unit with the Intel Edison Ar
 
 ###  Part List
 
-<table  cellspacing="0" width="80%">
-<tr>
-<th scope="col">
-</th>
-<th scope="col"> Parts
-</th>
-<th scope="col"> Specification
-</th>
-<th scope="col"> Material
-</th>
-<th scope="col"> Quantity
-</th></tr>
-<tr>
-<th scope="row"> 1
-</th>
-<td> Bracket 1
-</td>
-<td> 200*35*20mm*3.0mm
-</td>
-<td> Aluminum
-</td>
-<td> 2 pcs
-</td></tr>
-<tr>
-<th scope="row"> 2
-</th>
-<td> Bracket 2
-</td>
-<td> 135*35*20mm*3.0mm
-</td>
-<td> Aluminum
-</td>
-<td> 2 pcs
-</td></tr>
-<tr>
-<th scope="row"> 3
-</th>
-<td> Angle Joint Structure
-</td>
-<td> 29*12*10mm*2.0mm
-</td>
-<td> Metal
-</td>
-<td> 4 pcs
-</td></tr>
-<tr>
-<th scope="row"> 4
-</th>
-<td> Top Plate
-</td>
-<td> 200*132*1.5mm
-</td>
-<td> Aluminum
-</td>
-<td> 1 pcs
-</td></tr>
-<tr>
-<th scope="row"> 5
-</th>
-<td> Bottom Board
-</td>
-<td> 199*129*2.0mm
-</td>
-<td> Acrylic
-</td>
-<td> 1 pcs
-</td></tr>
-<tr>
-<th scope="row"> 6
-</th>
-<td> Battery Fixer
-</td>
-<td> 67*15*2.0mm
-</td>
-<td> Acrylic
-</td>
-<td> 2 pcs
-</td></tr>
-<tr>
-<th scope="row"> 7
-</th>
-<td> Upper Board
-</td>
-<td> 184*132*2.0mm
-</td>
-<td> Acrylic
-</td>
-<td> 1 pcs
-</td></tr>
-<tr>
-<th scope="row"> 8
-</th>
-<td> Wheel
-</td>
-<td> Ф85mm*W31mm
-</td>
-<td> Plastic &amp; Rubber
-</td>
-<td> 4 pcs
-</td></tr>
-<tr>
-<th scope="row"> 9
-</th>
-<td> Shaft Coupler
-</td>
-<td> for Ф4mm shaft
-</td>
-<td> Metal
-</td>
-<td> 4 pcs
-</td></tr>
-<tr>
-<th scope="row"> 10
-</th>
-<td> DC Motor
-</td>
-<td> [Spec](https://seeeddoc.github.io/Edison_4WD_Auto_Robotic_Platform/res/Edison_4WD_Auto_Robotic_Platform_DC_Motor_Spec.pdf)
-</td>
-<td>
-</td>
-<td> 2 pcs
-</td></tr>
-<tr>
-<th scope="row"> 11
-</th>
-<td> DC Motor (Encoder Included)
-</td>
-<td> [Spec](https://seeeddoc.github.io/Edison_4WD_Auto_Robotic_Platform/res/Edison_4WD_Auto_Robotic_Platform_DC_Motor_with_Encoder_Spec.pdf)
-</td>
-<td>
-</td>
-<td> 2 pcs
-</td></tr>
-<tr>
-<th scope="row"> 12
-</th>
-<td> Distance Holder
-</td>
-<td> M3.0*H45+6.0mm
-</td>
-<td> Metal
-</td>
-<td> 4 pcs
-</td></tr>
-<tr>
-<th scope="row"> 13
-</th>
-<td> Distance Holder
-</td>
-<td> M3×10mm
-</td>
-<td> Metal
-</td>
-<td> 4 pcs
-</td></tr>
-<tr>
-<th scope="row"> 14
-</th>
-<td> Distance Holder
-</td>
-<td> M2*10mm
-</td>
-<td> Metal
-</td>
-<td> 3 pcs
-</td></tr>
-<tr>
-<th scope="row"> 15
-</th>
-<td> Hexagon socket Countersunk Head Screw
-</td>
-<td> M4.0*H8.0mm
-</td>
-<td> Metal
-</td>
-<td> 16 pcs
-</td></tr>
-<tr>
-<th scope="row"> 16
-</th>
-<td> Cross Recessed Pan Head Screw
-</td>
-<td> M4.0*H8.0mm
-</td>
-<td> Metal
-</td>
-<td> 4 pcs
-</td></tr>
-<tr>
-<th scope="row"> 17
-</th>
-<td> Cross Recessed Pan Head Screw
-</td>
-<td> M3*35mm
-</td>
-<td> Metal
-</td>
-<td> 4 pcs
-</td></tr>
-<tr>
-<th scope="row"> 18
-</th>
-<td> Cross Recessed Pan Head Screw
-</td>
-<td> M3*8mm
-</td>
-<td> Metal
-</td>
-<td> 30 pcs
-</td></tr>
-<tr>
-<th scope="row"> 19
-</th>
-<td> Cross Recessed Pan Head Screw with Washer
-</td>
-<td> M3.0*H6.0mm
-</td>
-<td> Metal
-</td>
-<td> 8 pcs
-</td></tr>
-<tr>
-<th scope="row"> 20
-</th>
-<td> Screw, Spring Lock Washer and Plain Washer assemblies
-</td>
-<td> M2*8mm
-</td>
-<td> Metal
-</td>
-<td> 6 pcs
-</td></tr>
-<tr>
-<th scope="row"> 21
-</th>
-<td> Hexagon Nut
-</td>
-<td> M3
-</td>
-<td> Metal
-</td>
-<td> 8 pcs
-</td></tr>
-<tr>
-<th scope="row"> 22
-</th>
-<td> Spring Lock Washer
-</td>
-<td> M4
-</td>
-<td> Metal
-</td>
-<td> 4 pcs
-</td></tr>
-<tr>
-<th scope="row"> 23
-</th>
-<td> Plain Washer
-</td>
-<td> M3*7*0.5
-</td>
-<td> Metal
-</td>
-<td> 4 pcs
-</td></tr>
-<tr>
-<th scope="row"> 24
-</th>
-<td> Screw Driver
-</td>
-<td>
-</td>
-<td> Metal &amp; Plastic
-</td>
-<td> 1 pcs
-</td></tr>
-<tr>
-<th scope="row"> 25
-</th>
-<td> Hexagonal Head Wrench
-</td>
-<td>
-</td>
-<td> Metal
-</td>
-<td> 1 pcs
-</td></tr>
-<tr>
-<th scope="row"> 26
-</th>
-<td> [Grove - I2C Motor Driver](https://www.seeedstudio.com/depot/Grove-I2C-Motor-Driver-p-907.html)
-</td>
-<td>
-</td>
-<td> PCB
-</td>
-<td> 1 pcs
-</td></tr>
-<tr>
-<th scope="row"> 27
-</th>
-<td> [Base Shield V2](https://www.seeedstudio.com/depot/base-shield-v13-p-1378.html?cPath=132_134)
-</td>
-<td>
-</td>
-<td> PCB
-</td>
-<td> 1 pcs
-</td></tr>
-<tr>
-<th scope="row"> 28
-</th>
-<td> [Grove - Universal 4 Pin Buckled 20cm Cable](https://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-20cm-Cable-5-PCs-pack-p-936.html)
-</td>
-<td>
-</td>
-<td> Cable
-</td>
-<td> 1 pcs
-</td></tr>
-<tr>
-<th scope="row"> 29
-</th>
-<td> Dean Parallel Adapter
-</td>
-<td> Plug
-</td>
-<td>
-</td>
-<td> 1 pcs
-</td></tr>
-<tr>
-<th scope="row"> 30
-</th>
-<td> Male of Dean Power Cable
-</td>
-<td>
-</td>
-<td> Cable
-</td>
-<td> 1 pcs
-</td></tr>
-<tr>
-<th scope="row"> 31
-</th>
-<td> Dean to DC Power Cable
-</td>
-<td>
-</td>
-<td> Cable
-</td>
-<td> 1 pcs
-</td></tr>
-<tr>
-<th scope="row"> 32
-</th>
-<td> TRX to Dean Power Cable
-</td>
-<td>
-</td>
-<td> Cable
-</td>
-<td> 1 pcs
-</td></tr>
-<tr>
-<th scope="row"> 33
-</th>
-<td> Cable Tie
-</td>
-<td> 3*60mm
-</td>
-<td> Plastic
-</td>
-<td> 3 pcs
-</td></tr>
-<tr>
-<th scope="row"> 34
-</th>
-<td> Assembly Instruction
-</td>
-<td> A4
-</td>
-<td> Copy Paper
-</td>
-<td> 1 pcs
-</td></tr></table>
-
+|Parts|Specification|Material|Quantity|
+|-----|----|-----|-----|
+|Bracket 1|200 * 35 * 20mm * 3.0mm|Aluminum|2|
+|Bracket 2|135 * 35 * 20mm * 3.0mm|Aluminum|2|
+|Angle Joint Structure|29 * 12 * 10mm * 2.0mm|Metal|4|
+|Top Plate|200 * 132 * 1.5mm|Aluminum|1|
+|Bottom Board|199 * 129 * 2.0mm|Acrylic|1|
+|Battery Fixer|67 * 15 * 2.0mm|Acrylic|2|
+|Upper Board|184 * 132 * 2.0mm|Acrylic|1|
+|Wheel|Ф85mm * W31mm|Plastic &amp; Rubber|4|
+|Shaft Coupler|for Ф4mm shaft|Metal|4|
+|DC Motor|[Spec](https://seeeddoc.github.io/Edison_4WD_Auto_Robotic_Platform/res/Edison_4WD_Auto_Robotic_Platform_DC_Motor_Spec.pdf)|/|2|
+|DC Motor (Encoder Included)|[Spec](https://seeeddoc.github.io/Edison_4WD_Auto_Robotic_Platform/res/Edison_4WD_Auto_Robotic_Platform_DC_Motor_with_Encoder_Spec.pdf)|/|2|
+|Distance Holder|M3.0 * H45+6.0mm|Metal|4|
+|Distance Holder|M3 × 10mm|Metal|4|
+|Distance Holder|M2 * 10mm|Metal|3|
+|Hexagon socket Countersunk Head Screw|M4.0 * H8.0mm|Metal|16|
+|Cross Recessed Pan Head Screw|M4.0 * H8.0mm|Metal|4|
+|Cross Recessed Pan Head Screw|M3 * 35mm|Metal|4|
+|Cross Recessed Pan Head Screw|M3 * 8mm|Metal|30|
+|Cross Recessed Pan Head Screw with Washer|M3.0 * H6.0mm|Metal|8|
+|Screw, Spring Lock Washer and Plain Washer assemblies|M2 * 8mm|Metal|6|
+|Hexagon Nut|M3|Metal|8|
+|Spring Lock Washer|M4|Metal|4|
+|Plain Washer|M3 * 7 * 0.5|Metal|4|
+|Screw Driver|/|Metal &amp; Plastic|1|
+|Hexagonal Head Wrench|/|Metal|1|
+|[Grove - I2C Motor Driver](https://www.seeedstudio.com/depot/Grove-I2C-Motor-Driver-p-907.html)|/|PCB|1|
+|[Base Shield V2](https://www.seeedstudio.com/depot/base-shield-v13-p-1378.html?cPath=132_134)|/|PCB|1|
+|[Grove - Universal 4 Pin Buckled 20cm Cable](https://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-20cm-Cable-5-PCs-pack-p-936.html)|/|Cable|1|
+|Dean Parallel Adapter|Plug|/|1|
+|Male of Dean Power Cable|/|Cable|1|
+|Dean to DC Power Cable|/|Cable|1|
+|TRX to Dean Power Cable|/|Cable|1|
+|Cable Tie|3 * 60mm|Plastic|3|
+|Assembly Instruction|A4|Copy Paper|1|
+  
 ###  How to Assemble It
 
 [Assembly Instruction.pdf](https://seeeddoc.github.io/Edison_4WD_Auto_Robotic_Platform/res/Assembly_Instruction_02.pdf)
@@ -423,38 +73,38 @@ The 4WD Auto Robotic Platform is a powerful mobile unit with the Intel Edison Ar
 ![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform/img/Edison_WiFiCar_WireAssemble01.jpg)
 ![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform/img/Edison_WiFiCar_WireAssemble17.JPG)
 
-2)Stick the aluminum heatsinks to the chips on the motor driver, and assemble the middle board.
+2) Stick the aluminum heatsinks to the chips on the motor driver, and assemble the middle board.
 
 ![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform/img/Edison_WiFiCar_WireAssemble12.JPG)
 ![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform/img/Edison_WiFiCar_WireAssemble18.png)
 ![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform/img/Edison_WiFiCar_WireAssemble19.png)
 ![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform/img/Edison_WiFiCar_WireAssemble14.JPG)
 
-3)Connect the motor driver，the motor group's black cables connect to "M1-" "M2-" and the red ones connect to "M1+" "M2+", connect the power cable,the black cable to "GND", the red one to "VS".
+3) Connect the motor driver，the motor group's black cables connect to "M1-" "M2-" and the red ones connect to "M1+" "M2+", connect the power cable,the black cable to "GND", the red one to "VS".
 
 ![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform/img/Edison_WiFiCar_WireAssemble04.jpg)
 ![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform/img/Edison_WiFiCar_WireAssemble16.png)
 
-4)Assemble the motor group into the main body, the motor in the same group must assemble to the same side. Use a nylon cable to tie up the wires,then plug the grove cable.
+4) Assemble the motor group into the main body, the motor in the same group must assemble to the same side. Use a nylon cable to tie up the wires,then plug the grove cable.
 
 ![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform/img/Edison_WiFiCar_WireAssemble05.png)
 ![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform/img/Assembly_Instruction_Step_03.PNG)
 ![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform/img/Edison_WiFiCar_WireAssemble06.jpg)
 
-5)Put on the middle board, the power cable and the grove cable were to across the right hole.
+5) Put on the middle board, the power cable and the grove cable were to across the right hole.
 
 ![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform/img/Edison_WiFiCar_WireAssemble07.jpg)
 ![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform/img/Edison_WiFiCar_WireAssemble08.jpg)
 
-6)Plug the 1-to-2 power connector the battery adapter cable and the arduino board power cable, the grove cable connect to A0 pin of the Base Shield.
+6) Plug the 1-to-2 power connector the battery adapter cable and the arduino board power cable, the grove cable connect to A0 pin of the Base Shield.
 
 ![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform/img/Edison_WiFiCar_WireAssemble09.jpg)
 
-7)Carefully plug the battery connector to get power up, test if it was right done now, if no led light up you must check the problem.
+7) Carefully plug the battery connector to get power up, test if it was right done now, if no led light up you must check the problem.
 
 ![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform/img/Edison_WiFiCar_WireAssemble10.JPG)
 
-8)Plug the USB cables to test the software.
+8) Plug the USB cables to test the software.
 
 ![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform/img/Edison_WiFiCar_WireAssemble11.JPG)
 
@@ -661,6 +311,7 @@ Here you'll need a wire stripper a soldering iron and scissors to cut down the m
 ![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform/img/Edison_4WD_Enhance_Wiring01.JPG)
 
 ![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform/img/Edison_WiFiCar_WireAssemble16.png)
+
 **Step 2.Assemble the motor and the motor driver，pay attention to the yellow arrows, two motor drivers are screwed with only two screw.**
 
 ![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform/img/Edison_4WD_Enhance_Wiring13.png)
@@ -675,7 +326,7 @@ Here you'll need a wire stripper a soldering iron and scissors to cut down the m
 
 ![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform/img/Edison_4WD_Enhance_Wiring07.JPG)
 
-**Step 5. Plug the grove cables to D4(D4,D5)  D8(D8,D9) with no special definition, test the connection by plug the battery. **
+**Step 5. Plug the grove cables to D4(D4,D5)  D8(D8,D9) with no special definition, test the connection by plug the battery.**
 
 ![](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform/img/Edison_4WD_Enhance_Wiring08.JPG)
 
