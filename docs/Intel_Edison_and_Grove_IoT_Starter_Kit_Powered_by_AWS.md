@@ -51,17 +51,18 @@ Designed for expert makers, entrepreneurs, and industrial IoT companies, the Int
 
 Visit amazone  [AWS console](http://console.aws.amazon.com), register and logon your account.
 
-1. Goto the dashboard, click Service --&gt; AWS IoT
+
+1.Goto the dashboard, click Service --&gt; AWS IoT
 
 
 ![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_click_iot.png)
 
-2. Click Get started
+2.Click Get started
 
 
 ![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_click_get_started.jpg)
 
-3. Create a new user
+3.Create a new user
 
 
 ![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_create_a_new_user.png)
@@ -70,7 +71,7 @@ Visit amazone  [AWS console](http://console.aws.amazon.com), register and logon 
 
 ![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_create_a_new_user3.png)
 
-4. Save user name and download Security Credentials
+4.Save user name and download Security Credentials
 
 
 ![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_get_Security_Credentials1.png)
@@ -78,14 +79,14 @@ Visit amazone  [AWS console](http://console.aws.amazon.com), register and logon 
 ![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_get_Security_Credentials2.png)
 
 
-5. Seeting Attach Policy with AdministratorAccess
+5.Seeting Attach Policy with AdministratorAccess
 
 
 ![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_get_Security_Credentials3.png)
 
 ![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_get_Security_Credentials4.png)
 
-6. Create a thing
+6.Create a thing
 
 
 At this section you can also refer to the [Beagle Bone wiki](/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS) for another way to create a thing and finish the left tasks. The difference is Beagle Bone didn’t use AWS CLI tool to Get Certifications.
@@ -110,22 +111,22 @@ The AWS CLI is a way to manage your AWS services from your board.  You need this
 
 1.First, you need to install pip (Python package manager):
 
-<pre>
+```C++
 curl https://bootstrap.pypa.io/ez_setup.py -o - | python
 easy_install pip
-</pre>
+```
 
 2.Next, install the AWS CLI with pip:
 
-<pre>
+```C++
 pip install awscli
-</pre>
+```
 
 Note: In order to view the help files ("aws iot help") you need to install Groff and  a non-BusyBox version of less.
 
 3.For Groff:
 
-<pre>
+```C++
 wget http://ftp.gnu.org/gnu/groff/groff-1.22.3.tar.gz
 tar -zxvf groff-1.22.3.tar.gz
 cd groff-1.22.3
@@ -134,12 +135,12 @@ make
 make install
 export PATH=$PATH:/usr/local/bin/
 cd ~
-</pre>
+```
 
 4.For Less:
 First rename the old version of less
 
-<pre>
+```C++
 mv /usr/bin/less /usr/bin/less-OLD
 Then install the new version of less
 wget http://www.greenwoodsoftware.com/less/less-458.zip
@@ -150,38 +151,38 @@ chmod 777 *
 make
 make install
 cd ~
-</pre>
+```
 
 5.To make sure everything has installed correctly, run the iot help file:
 
-<pre>
+```C++
 aws iot help
-</pre>
+```
 
 **Get AWS credentials:**
 
 At this point, you should have AWS CLI installed. And the Access ID and Key you have download before, configure AWS and enter the ID and Key with:
 
-<pre>
+```C++
 aws configure
-</pre>
+```
 
 ![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_get_aws_cli1.png)
 ![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_get_aws_cli2.png)
 
 1.First create a folder to store your certificates in:
 
-<pre>
+```C++
 $ mkdir aws_certs
 $ cd aws_certs
-</pre>
+```
 
 2.Generate a private key with open ssl:
 
-<pre>
+```C++
 openssl genrsa -out privateKey.pem 2048
 openssl req -new -key privateKey.pem -out cert.csr
-</pre>
+```
 
 3.Fill out the fields with your info.
 
@@ -189,15 +190,15 @@ openssl req -new -key privateKey.pem -out cert.csr
 
 4.Run the following to activate the certificate:
 
-<pre>
+```C++
 aws iot create-certificate-from-csr --certificate-signing-request file://cert.csr --set-as-active &gt; certOutput.txt
-</pre>
+```
 
 5.Run the following to save the certificate into a cert.pem file:
 
-<pre>
+```C++
 aws iot describe-certificate --certificate-id &lt;certificate ID&gt; --output text --query certificateDescription.certificatePem  &gt; cert.pem
-</pre>
+```
 
 ![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_get_aws_cli4.png)
 
@@ -206,7 +207,7 @@ NOTE: Replace &lt;certificate ID&gt; with the ID stored in the "certificateId" f
 6.Create a Json policy document for AWS IoT SDK:
 
 *   Copy the following text (ctrl-c):
-<pre>
+```C++
 {
 "Version": "2012-10-17",
 "Statement": [{
@@ -215,7 +216,7 @@ NOTE: Replace &lt;certificate ID&gt; with the ID stored in the "certificateId" f
 "Resource": ["*"]
 }]
 }
-</pre>
+```
 
 *   Enter vi policy.doc hit a and right click to paste the text
 *   Hit escape and type in :wq to save and quit
@@ -224,9 +225,9 @@ NOTE: Replace &lt;certificate ID&gt; with the ID stored in the "certificateId" f
 
 7.First enter:
 
-<pre>
+```C++
  aws iot create-policy --policy-name PubSubToAnyTopic --policy-document file://policy.doc
-</pre>
+```
 
 Notice:The policy name can be anything.
 
@@ -238,9 +239,9 @@ Notice:The policy name can be anything.
 
 9.Then attach the policy to the certificate with:
 
-<pre>
+```C++
 aws iot attach-principal-policy --principal &lt;principal arn&gt; --policy-name "PubSubToAnyTopic"
-</pre>
+```
 
 NOTE: replace &lt;principal arn&gt; with the  value stored in "certifcateArn" in the outputCert.txt file.
 
@@ -254,9 +255,9 @@ NOTE: replace &lt;principal arn&gt; with the  value stored in "certifcateArn" in
 
 *   Now that the certificates are in order we can use MQTT to subscribe and publish to the cloud.
 *   First get the root CA pem file:
-<pre>
+```C++
 curl https://www.symantec.com/content/en/us/enterprise/verisign/roots/VeriSign-Class%203-Public-Primary-Certification-Authority-G5.pem &gt; rootCA.pem
-</pre>
+```
 
 ![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_get_aws_cli10.png)
 
@@ -264,131 +265,134 @@ curl https://www.symantec.com/content/en/us/enterprise/verisign/roots/VeriSign-C
 
 1.Create a nodejs project
 
-<pre>
+```C++
 cd ~
 mkdir aws_nodejs &amp;&amp; cd aws_nodejs
 npm init
 npm install --save aws-iot-device-sdk
 touch main.js
-</pre>
+```
 
 ![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_coding1.png)
 
 2.Copy and save demo code to main.js
 
-<pre>
+```C
 vi main.js
-</pre>
-<div class="mw-geshi mw-code mw-content-ltr container" dir="ltr"><div class="javascript source-javascript"><pre class="de1"><span class="co1">// Plug Grove - Relay to base shield port D2</span>
-<span class="co1">// Plug Grove - Temperature&amp;Huminity(High quality) to i2c port</span>
+```
 
-<span class="kw1">var</span> sensor1 <span class="sy0">=</span> require<span class="br0">(</span><span class="st0">'jsupm_th02'</span><span class="br0">)</span><span class="sy0">;</span>
-<span class="kw1">var</span> th02 <span class="sy0">=</span> <span class="kw1">new</span> sensor1.<span class="me1">TH02</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+```C++
+// Plug Grove - Relay to base shield port D2
+// Plug Grove - Temperature&Huminity(High quality) to i2c port
 
-<span class="kw1">var</span> sensor2 <span class="sy0">=</span> require<span class="br0">(</span><span class="st0">'jsupm_grove'</span><span class="br0">)</span><span class="sy0">;</span>
-<span class="kw1">var</span> relay <span class="sy0">=</span> <span class="kw1">new</span> sensor2.<span class="me1">GroveRelay</span><span class="br0">(</span><span class="nu0">2</span><span class="br0">)</span><span class="sy0">;</span>
+var sensor1 = require('jsupm_th02');
+var th02 = new sensor1.TH02();
 
-<span class="co1">// Simulate device value</span>
-<span class="kw1">var</span> temp <span class="sy0">=</span> <span class="nu0">24.00</span><span class="sy0">;</span>
-<span class="kw1">var</span> humi <span class="sy0">=</span> <span class="nu0">50</span><span class="sy0">;</span>
-<span class="kw1">var</span> relayState <span class="sy0">=</span> <span class="kw2">false</span><span class="sy0">;</span>
-<span class="kw1">var</span> reported_state <span class="sy0">=</span> <span class="br0">{</span><span class="st0">"Temperature"</span><span class="sy0">:</span>temp<span class="sy0">,</span> <span class="st0">"Humidity"</span><span class="sy0">:</span> humi<span class="sy0">,</span> <span class="st0">"RelayState"</span><span class="sy0">:</span> relayState<span class="br0">}</span><span class="sy0">;</span>
+var sensor2 = require('jsupm_grove');
+var relay = new sensor2.GroveRelay(2);
 
-<span class="co1">//</span>
-<span class="co1">// Client token value returned from thingShadows.update() operation//app deps</span>
-<span class="kw1">const</span> thingShadow <span class="sy0">=</span> require<span class="br0">(</span><span class="st0">'./node_modules/aws-iot-device-sdk/thing'</span><span class="br0">)</span><span class="sy0">;</span><span class="co1">// Plug Grove - Relay to base shield port D2</span>
-<span class="co1">// Plug Grove - Temperature&amp;Huminity(High quality) to i2c port</span>
+// Simulate device value
+var temp = 24.00;
+var humi = 50;
+var relayState = false;
+var reported_state = {"Temperature":temp, "Humidity": humi, "RelayState": relayState};
 
-<span class="kw1">var</span> sensor1 <span class="sy0">=</span> require<span class="br0">(</span><span class="st0">'jsupm_th02'</span><span class="br0">)</span><span class="sy0">;</span>
-<span class="kw1">var</span> th02 <span class="sy0">=</span> <span class="kw1">new</span> sensor1.<span class="me1">TH02</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+//
+// Client token value returned from thingShadows.update() operation//app deps
+const thingShadow = require('./node_modules/aws-iot-device-sdk/thing');// Plug Grove - Relay to base shield port D2
+// Plug Grove - Temperature&Huminity(High quality) to i2c port
 
-<span class="kw1">var</span> sensor2 <span class="sy0">=</span> require<span class="br0">(</span><span class="st0">'jsupm_grove'</span><span class="br0">)</span><span class="sy0">;</span>
-<span class="kw1">var</span> relay <span class="sy0">=</span> <span class="kw1">new</span> sensor2.<span class="me1">GroveRelay</span><span class="br0">(</span><span class="nu0">2</span><span class="br0">)</span><span class="sy0">;</span>
+var sensor1 = require('jsupm_th02');
+var th02 = new sensor1.TH02();
 
-<span class="kw1">var</span> awsIot <span class="sy0">=</span> require<span class="br0">(</span><span class="st0">'aws-iot-device-sdk'</span><span class="br0">)</span><span class="sy0">;</span>
+var sensor2 = require('jsupm_grove');
+var relay = new sensor2.GroveRelay(2);
 
-<span class="kw1">var</span> thingShadows <span class="sy0">=</span> awsIot.<span class="me1">thingShadow</span><span class="br0">(</span><span class="br0">{</span>
-    keyPath<span class="sy0">:</span> <span class="st0">'/home/root/aws_certs/privateKey.pem'</span><span class="sy0">,</span>
-    certPath<span class="sy0">:</span> <span class="st0">'/home/root/aws_certs/cert.pem'</span><span class="sy0">,</span>
-    caPath<span class="sy0">:</span> <span class="st0">'/home/root/aws_certs/rootCA.pem'</span><span class="sy0">,</span>
-    clientId<span class="sy0">:</span> <span class="st0">'myAwsClientId'</span><span class="sy0">,</span>
-    region<span class="sy0">:</span> <span class="st0">'us-east-1'</span>
-<span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span>
+var awsIot = require('aws-iot-device-sdk');
 
-<span class="co1">// Simulate device value</span>
-<span class="kw1">var</span> temp <span class="sy0">=</span> <span class="nu0">24.00</span><span class="sy0">;</span>
-<span class="kw1">var</span> humi <span class="sy0">=</span> <span class="nu0">50</span><span class="sy0">;</span>
-<span class="kw1">var</span> relayState <span class="sy0">=</span> <span class="kw2">false</span><span class="sy0">;</span>
+var thingShadows = awsIot.thingShadow({
+    keyPath: '/home/root/aws_certs/privateKey.pem',
+    certPath: '/home/root/aws_certs/cert.pem',
+    caPath: '/home/root/aws_certs/rootCA.pem',
+    clientId: 'myAwsClientId',
+    region: 'us-east-1'
+});
 
-<span class="co1">//</span>
-<span class="co1">// Client token value returned from thingShadows.update() operation</span>
-<span class="co1">//</span>
-<span class="kw1">var</span> clientTokenUpdate<span class="sy0">;</span>
+// Simulate device value
+var temp = 24.00;
+var humi = 50;
+var relayState = false;
 
-<span class="kw1">var</span> thingName <span class="sy0">=</span> <span class="st0">"EdisonDemo"</span><span class="sy0">;</span>
-thingShadows.<span class="me1">on</span><span class="br0">(</span><span class="st0">'connect'</span><span class="sy0">,</span> <span class="kw1">function</span><span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
-    thingShadows.<span class="me1">register</span><span class="br0">(</span>thingName<span class="br0">)</span><span class="sy0">;</span>
-    console.<span class="me1">log</span><span class="br0">(</span>thingName <span class="sy0">+</span> <span class="st0">' registering...'</span><span class="br0">)</span><span class="sy0">;</span>
+//
+// Client token value returned from thingShadows.update() operation
+//
+var clientTokenUpdate;
 
-    setInterval<span class="br0">(</span><span class="kw1">function</span><span class="br0">(</span><span class="br0">)</span><span class="br0">{</span>
-      readSensor<span class="br0">(</span>sendData<span class="br0">)</span><span class="sy0">;</span>
-    <span class="br0">}</span><span class="sy0">,</span> <span class="nu0">5000</span><span class="br0">)</span><span class="sy0">;</span>
-<span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span>
+var thingName = "EdisonDemo";
+thingShadows.on('connect', function() {
+    thingShadows.register(thingName);
+    console.log(thingName + ' registering...');
 
-thingShadows.<span class="me1">on</span><span class="br0">(</span><span class="st0">'status'</span><span class="sy0">,</span> <span class="kw1">function</span><span class="br0">(</span>thingName<span class="sy0">,</span> stat<span class="sy0">,</span> clientToken<span class="sy0">,</span> stateObject<span class="br0">)</span> <span class="br0">{</span>
-    console.<span class="me1">log</span><span class="br0">(</span><span class="st0">'   received '</span><span class="sy0">+</span>stat<span class="sy0">+</span><span class="st0">' on '</span><span class="sy0">+</span>thingName<span class="sy0">+</span><span class="st0">': '</span><span class="sy0">+</span> JSON.<span class="me1">stringify</span><span class="br0">(</span>stateObject<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
-    <span class="co1">//</span>
-    <span class="co1">// These events report the status of update(), get(), and delete()</span>
-    <span class="co1">// calls.  The clientToken value associated with the event will have</span>
-    <span class="co1">// the same value which was returned in an earlier call to get(),</span>
-    <span class="co1">// update(), or delete().  Use status events to keep track of the</span>
-    <span class="co1">// status of shadow operations.</span>
-    <span class="co1">//</span>
-<span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span>
+    setInterval(function(){
+      readSensor(sendData);
+    }, 5000);
+});
 
-thingShadows.<span class="me1">on</span><span class="br0">(</span><span class="st0">'delta'</span><span class="sy0">,</span> <span class="kw1">function</span><span class="br0">(</span>thingName<span class="sy0">,</span> stateObject<span class="br0">)</span> <span class="br0">{</span>
-    console.<span class="me1">log</span><span class="br0">(</span><span class="st0">'    received delta on '</span><span class="sy0">+</span>thingName<span class="sy0">+</span><span class="st0">': '</span><span class="sy0">+</span> JSON.<span class="me1">stringify</span><span class="br0">(</span>stateObject<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+thingShadows.on('status', function(thingName, stat, clientToken, stateObject) {
+    console.log('   received '+stat+' on '+thingName+': '+ JSON.stringify(stateObject));
+    //
+    // These events report the status of update(), get(), and delete()
+    // calls.  The clientToken value associated with the event will have
+    // the same value which was returned in an earlier call to get(),
+    // update(), or delete().  Use status events to keep track of the
+    // status of shadow operations.
+    //
+});
 
-    <span class="kw1">if</span><span class="br0">(</span>stateObject.<span class="me1">state</span>.<span class="me1">RelayState</span> <span class="sy0">==</span> <span class="kw2">true</span><span class="br0">)</span><span class="br0">{</span>
-        relay.<span class="me1">on</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
-        console.<span class="me1">log</span><span class="br0">(</span><span class="st0">'Relay is on.'</span><span class="br0">)</span><span class="sy0">;</span>
-    <span class="br0">}</span>
-    <span class="kw1">else</span> <span class="kw1">if</span><span class="br0">(</span>stateObject.<span class="me1">state</span>.<span class="me1">RelayState</span> <span class="sy0">==</span> <span class="kw2">false</span><span class="br0">)</span> <span class="br0">{</span>
-        relay.<span class="me1">off</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
-        console.<span class="me1">log</span><span class="br0">(</span><span class="st0">'Relay is off.'</span><span class="br0">)</span><span class="sy0">;</span>
-    <span class="br0">}</span>
-<span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span>
+thingShadows.on('delta', function(thingName, stateObject) {
+    console.log('    received delta on '+thingName+': '+ JSON.stringify(stateObject));
 
-thingShadows.<span class="me1">on</span><span class="br0">(</span><span class="st0">'timeout'</span><span class="sy0">,</span> <span class="kw1">function</span><span class="br0">(</span>thingName<span class="sy0">,</span> clientToken<span class="br0">)</span> <span class="br0">{</span>
-    console.<span class="me1">log</span><span class="br0">(</span><span class="st0">'    received timeout on '</span><span class="sy0">+</span>thingName <span class="sy0">+</span> <span class="st0">' with token: '</span><span class="sy0">+</span> clientToken<span class="br0">)</span><span class="sy0">;</span>
-    <span class="co1">//</span>
-    <span class="co1">// In the event that a shadow operation times out, you'll receive</span>
-    <span class="co1">// one of these events.  The clientToken value associated with the</span>
-    <span class="co1">// event will have the same value which was returned in an earlier</span>
-    <span class="co1">// call to get(), update(), or delete().</span>
-    <span class="co1">//</span>
-<span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span>
+    if(stateObject.state.RelayState == true){
+        relay.on();
+        console.log('Relay is on.');
+    }
+    else if(stateObject.state.RelayState == false) {
+        relay.off();
+        console.log('Relay is off.');
+    }
+});
 
-<span class="kw1">function</span> readSensor<span class="br0">(</span>callback<span class="br0">)</span><span class="br0">{</span>
-    temp <span class="sy0">=</span> th02.<span class="me1">getTemperature</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
-    humi <span class="sy0">=</span> th02.<span class="me1">getHumidity</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
-    relayState <span class="sy0">=</span> relay.<span class="me1">isOn</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+thingShadows.on('timeout', function(thingName, clientToken) {
+    console.log('    received timeout on '+thingName + ' with token: '+ clientToken);
+    //
+    // In the event that a shadow operation times out, you'll receive
+    // one of these events.  The clientToken value associated with the
+    // event will have the same value which was returned in an earlier
+    // call to get(), update(), or delete().
+    //
+});
 
-    callback<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
-<span class="br0">}</span><span class="sy0">;</span>
+function readSensor(callback){
+    temp = th02.getTemperature();
+    humi = th02.getHumidity();
+    relayState = relay.isOn();
 
-<span class="kw1">function</span> sendData<span class="br0">(</span><span class="br0">)</span><span class="br0">{</span>
-    <span class="kw1">var</span> reported_state <span class="sy0">=</span> <span class="br0">{</span><span class="st0">"Temperature"</span><span class="sy0">:</span>temp<span class="sy0">,</span> <span class="st0">"Humidity"</span><span class="sy0">:</span> humi<span class="sy0">,</span> <span class="st0">"RelayState"</span><span class="sy0">:</span> relayState<span class="br0">}</span><span class="sy0">;</span>
-    <span class="kw1">var</span> relayTH02State <span class="sy0">=</span> <span class="br0">{</span><span class="st0">"state"</span><span class="sy0">:</span><span class="br0">{</span>desired<span class="sy0">:</span> reported_state<span class="br0">}</span><span class="br0">}</span><span class="sy0">;</span>  <span class="co1">// Use desired attribute can receive delta</span>
-    <span class="co1">// More info refer to http://docs.aws.amazon.com/iot/latest/developerguide/thing-shadow-mqtt.html#update-pub-sub-message</span>
+    callback();
+};
 
-    clientTokenUpdate <span class="sy0">=</span> thingShadows.<span class="me1">update</span><span class="br0">(</span>thingName<span class="sy0">,</span> relayTH02State<span class="br0">)</span><span class="sy0">;</span>
+function sendData(){
+    var reported_state = {"Temperature":temp, "Humidity": humi, "RelayState": relayState};
+    var relayTH02State = {"state":{desired: reported_state}};  // Use desired attribute can receive delta
+    // More info refer to http://docs.aws.amazon.com/iot/latest/developerguide/thing-shadow-mqtt.html#update-pub-sub-message
 
-    <span class="kw1">if</span> <span class="br0">(</span>clientTokenUpdate <span class="sy0">===</span> <span class="kw2">null</span><span class="br0">)</span>
-    <span class="br0">{</span>
-       console.<span class="me1">log</span><span class="br0">(</span><span class="st0">'update shadow failed, operation still in progress'</span><span class="br0">)</span><span class="sy0">;</span>
-    <span class="br0">}</span>
-<span class="br0">}</span><span class="sy0">;</span></pre></div></div>
+    clientTokenUpdate = thingShadows.update(thingName, relayTH02State);
+
+    if (clientTokenUpdate === null)
+    {
+       console.log('update shadow failed, operation still in progress');
+    }
+};
+```
 
 3.start nodejs application
 
@@ -400,9 +404,9 @@ thingShadows.<span class="me1">on</span><span class="br0">(</span><span class="s
 
 ![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_coding5.png)
 
-<pre>
+```C++
   node main.js
-</pre>
+```
 
 ![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_coding2.png)
 
@@ -428,9 +432,9 @@ thingShadows.<span class="me1">on</span><span class="br0">(</span><span class="s
 
 *   [AWS IoT MQTT update topic formate](http://docs.aws.amazon.com/iot/latest/developerguide/thing-shadow-mqtt.html#update-pub-sub-message)
 
-*   [【PDF】AWS IoT Developer Guide](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/res/AWS_IoT_Developer_Guide.pdf)
+*   [[PDF]AWS IoT Developer Guide](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/res/AWS_IoT_Developer_Guide.pdf)
 
-*   [【Wiki】Main Page for Grove IoT Starter Kits Powered by AWS](/Grove_IoT_Starter_Kits_Powered_by_AWS)
+*  [[Wiki] Main Page for Grove IoT Starter Kits Powered by AWS](/Grove_IoT_Starter_Kits_Powered_by_AWS)
 
 *   [Getting started with Edison](https://software.intel.com/en-us/iot/library/edison-getting-started)
 
