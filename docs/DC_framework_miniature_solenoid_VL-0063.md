@@ -8,11 +8,11 @@ surveyurl: https://www.research.net/r/DC_framework_miniature_solenoid_VL-0063
 sku:  311070001
 ---
 
+<p style="text-align:center"><a href=target="_blank"><img src="https://files.seeedstudio.com/wiki/DC_framework_miniature_solenoid_VL-0063/img/DC.png" border=0 /></a></p>
+
+<p style="text-align:center"><a href="https://www.seeedstudio.com/DC-framework-miniature-solenoid-VL-0063-p-1049.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p> 
+
 This 14.8-Volt DC framework miniature solenoid is for instantaneous power work and great for projects! These types of solenoid are often used for small automation system,can be used as a remote control etc. However, they work great for almost any project requiring a DC solenoid.
-
-![](https://files.seeedstudio.com/wiki/DC_framework_miniature_solenoid_VL-0063/img/Caution.jpg)
-
-<font color="Red">**The solenoid operating temperature should not exceed 80 ℃, or continuous working time less than 5 seconds. ** </font>
 
 ##   Features
 
@@ -21,9 +21,12 @@ This 14.8-Volt DC framework miniature solenoid is for instantaneous power work a
 *   Low friction to ensure high efficiency and extend the life of
 *   Simple and reliable design
 
+!!!Caution
+     The solenoid operating temperature should not exceed 80 ℃, or continuous working time less than 5 seconds.
+
 ##   Application Ideas
 
-![](https://files.seeedstudio.com/wiki/DC_framework_miniature_solenoid_VL-0063/img/HCNE1-0520-2-.jpg)</div></div>
+![](https://files.seeedstudio.com/wiki/DC_framework_miniature_solenoid_VL-0063/img/HCNE1-0520-2-.jpg)
 
 *   Vending machines, ticket vending machines,money exchange machine
 *   Office equipment: fax machines, punch card machines, copiers, typewriters, cash registers, plotters
@@ -33,7 +36,7 @@ This 14.8-Volt DC framework miniature solenoid is for instantaneous power work a
 
 ##   Specifications
 
-![](https://files.seeedstudio.com/wiki/DC_framework_miniature_solenoid_VL-0063/img/VL-0063.jpg)</div></div>
+![](https://files.seeedstudio.com/wiki/DC_framework_miniature_solenoid_VL-0063/img/VL-0063.jpg)
 
 Operating conditions:
 
@@ -108,7 +111,7 @@ Performance to show:
 *   Insulation resistanceneed 100MΩ insulating resistance when 500VDC insulator testing.
 
 *   Insulation strengththe strength should be 600VAC/1 min DC standard product table.
-*
+
 ![](https://files.seeedstudio.com/wiki/DC_framework_miniature_solenoid_VL-0063/img/HCNE1-0520-5-.jpg)
 
 ## Tech Support
