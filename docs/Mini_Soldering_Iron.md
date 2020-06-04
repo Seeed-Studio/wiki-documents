@@ -164,31 +164,31 @@ Press button A to enable temperatures-increasing, press button B to enable tempe
 
 **Calibration**
 
-<dl><dd> 1. Press button B in standby mode (no-heating state) to enter thermometer mode.
+ 1.  Press button B in standby mode (no-heating state) to enter thermometer mode.
 
 
 ![](https://files.seeedstudio.com/wiki/Mini_Soldering_Iron/img/Mini_Soldering_Iron_calibration_step_1.jpg)
 
-<dl><dd> 2. Press button B and button A simultaneously to enter thermometer mode. It will execute calibration operation automatically, no manual operation required.
-</dd></dl>
+2.  Press button B and button A simultaneously to enter thermometer mode. It will execute calibration operation automatically, no manual operation required.
 
-![](https://files.seeedstudio.com/wiki/Mini_Soldering_Iron/img/Mini_Soldering_Iron_calibration_step_2.jpg)</div></div>
 
-<dl><dd> 3. After around 30 seconds, press and hold either button to exit calibration mode.
-</dd></dl>
+![](https://files.seeedstudio.com/wiki/Mini_Soldering_Iron/img/Mini_Soldering_Iron_calibration_step_2.jpg)
 
-![](https://files.seeedstudio.com/wiki/Mini_Soldering_Iron/img/Mini_Soldering_Iron_calibration_step_3.jpg)</div></div>
+3.  After around 30 seconds, press and hold either button to exit calibration mode.
 
-<dl><dd> 4 .The left figure shows that auto-calibration succeeds and right figure shows that auto-calibration fails. If auto-calibration fails, repeat previous steps again.
-</dd></dl>
+
+![](https://files.seeedstudio.com/wiki/Mini_Soldering_Iron/img/Mini_Soldering_Iron_calibration_step_3.jpg)
+
+4.  The left figure shows that auto-calibration succeeds and right figure shows that auto-calibration fails. If auto-calibration fails, repeat previous steps again.
+
 
 ###  A little practice
 
 You can take a quiz for soldering some LEDs and resistors on a leaf-like PCB board which is included in package.
 
-<dl><dd> 1.  Assemble a soldering iron with steps described above.
-</dd><dd> 2.  Soldering all four LEDs and four resistors on PCB board.
-</dd></dl>
+1.  Assemble a soldering iron with steps described above.
+2.  Soldering all four LEDs and four resistors on PCB board.
+
 
 ![](https://files.seeedstudio.com/wiki/Mini_Soldering_Iron/img/Mini_solderin_iron_practice_s.JPG)
 
@@ -198,11 +198,10 @@ _**Note**_ that you have align LEDs in right direction since LEDs is a bipolar c
 
 _**Note**_ that you need to soldering a electronic component with following basic and fundamental steps:
 
-<dl><dd>
 
-*   Paste a little solder on soldering spot, and then paste some solder on a certain spot on pins.
-*   Join the two spots together with soldering iron.
-</dd></dl>
+-  Paste a little solder on soldering spot, and then paste some solder on a certain spot on pins.
+-  Join the two spots together with soldering iron.
+
 
 ##  Resources
 ---
