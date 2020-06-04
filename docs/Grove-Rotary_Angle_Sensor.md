@@ -50,71 +50,11 @@ There is another product, Grove - Rotary Angle Sensor(P). What does “P” mean
 
 ## Specifications
 
-
-<table border="1" cellspacing="0" width="80%">
-<tr>
-<th scope="col">
-Item
-</th>
-<th scope="col">
-Min
-</th>
-<th scope="col">
-Typical
-</th>
-<th scope="col">
-Max
-</th>
-<th scope="col">
-Unit
-</th>
-</tr>
-<tr align="center">
-<th scope="row">
-Voltage
-</th>
-<td>
-4.75
-</td>
-<td>
-5.0
-</td>
-<td>
-5.25
-</td>
-<td>
-VDC
-</td>
-</tr>
-<tr align="center">
-<th scope="row">
-Rotary Angle
-</th>
-<td>
-0
-</td>
-<td>
-~
-</td>
-<td>
-300
-</td>
-<td>
-Deg
-</td>
-</tr>
-<tr align="center">
-<th scope="row">
-Dimension
-</th>
-<td colspan="3">
-19x19x30.1
-</td>
-<td>
-mm
-</td>
-</tr>
-</table>
+|Item|Min|Typical|Max|Unit|
+|----|----|----|----|----|
+|Voltage|4.75|5.0|5.25|VDC|
+|Rotary Angle|0|/|300|Deg|
+|Dimension|/|19x19x30.1|/|mm|
 
 ## Platforms Supported
 
