@@ -192,7 +192,6 @@ nav:
             - Intel OpenVINO Toolkit: ODYSSEY-X86J4105-Intel-OpenVINO.md
             - Intel Neural Compute Stick 2: ODYSSEY-X86J4105-NCS2.md
             - Coral-Mini-PCIe-Accelerator: Coral-Mini-PCIe-Accelerator-x86.md
-            - How to Use Firmata to Control the ODYSSEY X86J4105: ODYSSEY-X86J4105-Firmata.md
           - ODYSSEY STM32MP157C: ODYSSEY-STM32MP157C.md
           - SEEED SOM STM32MP157C: SEEED-SOM-STM32MP157C.md
       
@@ -379,6 +378,7 @@ nav:
 
   - Software:
       - PlatformIO: Software-PlatformIO.md
+      - Firmata Tutorial - How to Use Firmata on Arduino Compatible Boards: ODYSSEY-X86J4105-Firmata.md
 
   - Grove:
       - Grove Introduction: Grove.md
