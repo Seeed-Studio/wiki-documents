@@ -167,6 +167,7 @@ nav:
       - BeagleBone®:
           - BeagleBone® Introduction: BeagleBone.md
           - BeagleBone® Solutions: BeagleBone_Solutions.md
+          - BeagleBone Blue: BeagleBone-Blue.md
           - BeagleBone® Case: Beaglebone_Case.md
           - Seeed Studio BeagleBone® Green: BeagleBone_Green.md
           - Seeed Studio BeagleBone® Green HDMI Cape: BeagleBone_Green_HDMI_Cape.md
