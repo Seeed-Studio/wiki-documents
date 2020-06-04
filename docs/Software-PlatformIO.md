@@ -51,7 +51,7 @@ Now, PlatformIO is installed on to your PC!
 
 ## Configurations for Wio Terminal and Seeeduino XIAO
 
-Wio Terminal and Seeeduino XIAO are not yet officially supported by PlatformIO so some configurations are needed.
+**Wio Terminal and Seeeduino XIAO are now officially supported by PlatformIO:**
 
 1. Navigate to the root location of PlatformIO:
 
@@ -61,7 +61,7 @@ Wio Terminal and Seeeduino XIAO are not yet officially supported by PlatformIO s
 
 2. Navigate to `platforms` folder.
 
-3. Download the configured [`platform-atmelsam`](https://github.com/ansonhe97/platform-atmelsam) to the `platforms` folder.
+3. Download the configured [`platform-atmelsam`](https://github.com/platformio/platform-atmelsam.git) to the `platforms` folder.
 
 <div align=center><img  src="https://files.seeedstudio.com/wiki/platformIO/platformIO-3.png"/></div>
 
@@ -82,7 +82,7 @@ The configured `platform-atmelsam` supports the following boards:
 <div class="left-icon" style="display: table-cell; vertical-align: middle; background-color: #83dfd3; padding-top: 10px; box-sizing: border-box; height: auto; width: 38px; text-align: center;"><img style="width: 26px; vertical-align: middle;" src="https://s3-us-west-2.amazonaws.com/static.seeed.cc/seeed/icon/Tip.svg" alt="attention icon" /></div>
 <div class="right-desc" style="display: table-cell; vertical-align: middle; padding-left: 15px; box-sizing: border-box; width: calc(95% - 38px);">
 <p style="font-weight: bold; margin-top: 10px;">Tip</p>
-<p style="font-size: 14px;">We have already submitted a PR to PlatformIO and it should be much easier when it's merged.</p>
+<p style="font-size: 14px;">Already merged, soon it will no longer need to do this manually.</p>
 </div>
 </div>
 
@@ -116,14 +116,13 @@ void loop() {
 }
 ```
 
-- Open the `platformio.ini` configuration file and add the platform package as follow:
+- Open the `platformio.ini` configuration file and check it's correct:
 
 ```ini
 [env:seeed_wio_terminal]
 platform = atmelsam
 board = seeed_wio_terminal
 framework = arduino
-platform_packages = framework-arduino-samd-seeed@https://github.com/Seeed-Studio/ArduinoCore-samd.git
 ```
 
 - Build the project the **Build** button on the PlatformIO toolbar or Keyboard shortcuts.
