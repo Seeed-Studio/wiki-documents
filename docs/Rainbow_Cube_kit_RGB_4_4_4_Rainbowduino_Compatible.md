@@ -8,21 +8,28 @@ surveyurl: https://www.research.net/r/Rainbow_Cube_kit_RGB_4x4x4_Rainbowduino_Co
 sku:  110060007
 ---
 
-**<font color="Red">R</font><font color="Orange">a</font><font color="Yellow">i</font><font color="Green">n</font><font color="Blue">b</font><font color="Indigo">o</font><font color="Violet">w</font> ** **Cube Kit** is a **3D<font color="red"> R</font><font color="green">G</font><font color="blue">B</font>** LED Cube useful for creating colorful design. The 3D Cube is artistically crafted with sixty-four 8mm **<font color="red">R</font><font color="green">G</font><font color="blue">B</font>** LEDs arranged in a 4 x 4 x 4 manner. **Rainbow Cube Kit** can be used to create many beautiful visual effects with A **Rainbowduino**. The **Rainbow Cube Kit** comes with an inbuilt 3.3V / 1 Amp LDO useful for  powering the kit independently. A XBee compatible socket is provided as well, this can be used to connect Rainbowduino with a PC or an Arduino wirelessly.
+<div align=center><img src="https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow-3.jpg"/><figcaption><b></b><i>Rainbow Cube Kit illuminated with random colors</i></figcaption></a>
+</figure></div>
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbowcuben.jpg"/><figcaption><b></b><i>Unassembled Rainbow Cube Kit</i></figcaption></a>
+</figure></div>
+
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Rainbow-Cube-kit-RGB-4X4X4-Rainbowduino-Compatible.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p> 
+
+<font color="Red">R</font><font color="Orange">a</font><font color="Yellow">i</font><font color="Green">n</font><font color="Blue">b</font><font color="Indigo">o</font><font color="Violet">w</font> **Cube Kit** is a **3D<font color="red"> R</font><font color="green">G</font><font color="blue">B</font>** LED Cube useful for creating colorful design. The 3D Cube is artistically crafted with sixty-four 8mm **<font color="red">R</font><font color="green">G</font><font color="blue">B</font>** LEDs arranged in a 4 x 4 x 4 manner. **Rainbow Cube Kit** can be used to create many beautiful visual effects with A **Rainbowduino**. The **Rainbow Cube Kit** comes with an inbuilt 3.3V / 1 Amp LDO useful for  powering the kit independently. A XBee compatible socket is provided as well, this can be used to connect Rainbowduino with a PC or an Arduino wirelessly.
 
 This is sold in a Kit form. For a fully assembled kit see [Rainbow_Cube_Kit_Acrylic_Harness](/Rainbow_Cube_Kit_Acrylic_Harness "Rainbow Cube")
 
-![](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbowcuben.jpg)
-
 Unassembled Rainbow Cube Kit
 
-![](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow-3.jpg)
 
 Rainbow Cube Kit illuminated with random colors
 
 ##   Kit Contents
 ---
-![](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow-2.jpg)
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow-2.jpg"/><figcaption><b></b><i></i></figcaption></a>
+</figure></div>
 
 <table >
 <tr>
@@ -97,20 +104,6 @@ Rainbow Cube Kit illuminated with random colors
 
 *   Useful for artistic application.
 
-##   Schematic
----
-*   Rainbow Cube Kit is made up of two parts :
-
-    *   Panel (board) which supports the cube structure.
-
-        *   The Cube structure (8 slim pillars, 8 side panels).
-
-*   Click here to download Rainbow Cube Kit
-
-    *   [Complete schematic in PDF](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/res/Rainbow_Cube_Kit-RGB_4x4x4_LED_schematic_board.pdf)
-
-        *   [Eagle CAD files](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/res/RainbowCube_v1.1_Panel_v1.2_Eaglefiles.zip)
-
 ##   Specification
 ---
 <dl><dt>Operating Voltage
@@ -130,15 +123,18 @@ Rainbow Cube Kit illuminated with random colors
 ---
 All pins are accessible from the Panel board show below.
 
-![](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow_Cube_Panel_Bottom.jpg) <div class="thumbcaption">Panel board (bottom view)
+<div align=center><img src="https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow_Cube_Panel_Bottom.jpg"/><figcaption><b></b><i>Panel board (bottom view)</i></figcaption></a>
+</figure></div>
 
 *   **Rainbow Cube** kit provides **2 x 16 pin header** for connecting to RGB LEDs driver board like **Rainbowduino**.
 
-![](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow_pin_diagram.png) <div class="thumbcaption">**2 x 16** pin header connector
+<div align=center><img src="https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow_pin_diagram.png"/><figcaption><b></b><i>**2 x 16** pin header connector</i></figcaption></a>
+</figure></div>
 
 *   **xBee Socket**
 
-![](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/XBee_PinOut.jpeg) <div class="thumbcaption">**2 x 16** pin header connector
+<div align=center><img src="https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/XBee_PinOut.jpeg"/><figcaption><b></b><i>**2 x 16** pin header connector</i></figcaption></a>
+</figure></div>
 
 *   **DC Jack Pin**
 
@@ -157,7 +153,8 @@ it.
 
 *   [Download and read assembly instructions](https://www.seeedstudio.com/depot/docu/CUBE.pdf)
 
-![](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow-1.jpg) <div class="thumbcaption">RGB Rainbow Cube Kit (assembled)
+<div align=center><img src="https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow-1.jpg"/><figcaption><b></b><i>RGB Rainbow Cube Kit (assembled)</i></figcaption></a>
+</figure></div>
 
 ##   Mechanical Dimensions
 ---
@@ -179,7 +176,8 @@ To easily understand the working of **Rainbow Cube kit**, a very simplified sche
 
 *   The actual 3D positions of LEDs are marked in the below photograph.
 
-![](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow_Cube_LED_3D_Coordinates.png) 
+<div align=center><img src="https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow_Cube_LED_3D_Coordinates.png"/><figcaption><b></b><i></i></figcaption></a>
+</figure></div>
 
 *   The X,Y coordinates of **2D RGB LED Matrix** is mapped to the **RGB Cube kit** block diagram as follows:
 
@@ -195,11 +193,11 @@ To easily understand the working of **Rainbow Cube kit**, a very simplified sche
 
 *   Connect **Rainbow Cube Kit** 2x16 male pin header to **Rainbowduino** as shown below
 
-![](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow_Cube_Installation_1.jpg) 
+<div align=center><img src="https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow_Cube_Installation_1.jpg"/><figcaption><b></b><i>positioning</i></figcaption></a>
+</figure></div>
 
-positioning
-
-![](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow_Cube_Installation_2.jpg) 
+<div align=center><img src="https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow_Cube_Installation_2.jpg"/><figcaption><b></b><i>A **Rainbowduino** properly connected to **Rainbow Cube kit**</i></figcaption></a>
+</figure></div>
 
 A **Rainbowduino** properly connected to **Rainbow Cube kit**
 
@@ -214,7 +212,8 @@ Let us get started with a simple example:
 *   Open Cube1.pde sketch (a copy of it is reproduced below):
 
 *   Compile and upload the sketch
-```
+
+```C++
 /*
  Rainbowduino v3.0 Library examples:  Cube1
 
@@ -245,9 +244,11 @@ void loop()
     Rb.setPixelZXY(3,0,3,0x00FF00); //uses 24bit RGB color Code
 }
 ```
+
 Output
 
-![](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow_Cube1.jpg) 
+<div align=center><img src="https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow_Cube1.jpg"/><figcaption><b></b><i>positioning</i></figcaption></a>
+</figure></div>
 
 ####   Application Programming Interfaces
 
@@ -255,40 +256,45 @@ Output
 
 In the above example, we have used few of the below **APIs**
 
-#####  init()
+#####  **init()**
 
 First we need to initialize the driver using _init()_
 
-**Usage:**
+Usage:
 
-```
+```C++
 Rb.init();//initialize Rainbowduino driver. This should be placed inside setup()
 ```
 
 To set a LED in the 3D Cube we use the below two **APIs**.
 
-#####  setPixelZXY(Z,X,Y,R,G,B)
+#####  **setPixelZXY(Z,X,Y,R,G,B)**
 
 To set a LED (Z,X,Y) we use _setPixelZXY(Z,X,Y,R,G,B)_.
 
-**Usage:**
-```
+Usage:
+
+```C++
 Rb.setPixelZXY(unsigned char x, unsigned char y, unsigned char  colorR,  unsigned char colorG, unsigned char colorB); //This sets the pixel (z,x,y) by specifying each channel(color) with a 8bit number.
 ```
-#####  setPixelZXY(Z,X,Y,24bRGB)
+
+#####  **setPixelZXY(Z,X,Y,24bRGB)**
 
 Alternatively a LED (Z,X,Y) can be set by using _setPixelZXY(Z,X,Y,24bRGB)_.
 
-**Usage:**
-```
+Usage:
+
+```C++
 Rb.setPixelZXY(unsigned char z, unsigned char x, unsigned char y, uint32_t colorRGB /*24-bit RGB Color*/) //This sets the LED (z,x,y) by specifying a 24bit RGB color code
 ```
-#####  blankDisplay(void)
+
+#####  **blankDisplay(void)**
 
 At times, it useful to blank all the LEDs. For this there is an **API blankDisplay(void)**.
 
-**Usage:**
-```
+Usage:
+
+```C++
 Rb.blankDisplay();
 //Clear the LEDs (make all LEDs blank)
 ```
@@ -296,7 +302,8 @@ Rb.blankDisplay();
 ###  Demos
 
 *   To understand the (Z,X,Y) pixel addressing let us see the another example. In this demo, the Layer 0 (i.e Z-0) is painted Green and Layer 3 is painted Blue.
-```
+
+```C++
 /*
  Rainbowduino v3.0 Library examples:  Cube2
 
@@ -333,13 +340,15 @@ void loop()
     }
 }
 ```
+
 Output
 
-
-![](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow_Cube2.jpg)
+<div align=center><img src="https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow_Cube2.jpg"/><figcaption><b></b><i>positioning</i></figcaption></a>
+</figure></div>
 
 *   In this demo, all LEDs are painted with some random color. After five seconds of delay, the whole cube is repainted with random colors.
-```
+
+```C++
 /*
  Rainbowduino v3.0 Library examples:  Cube3
 
@@ -377,46 +386,43 @@ void loop()
     Rb.blankDisplay(); //Clear the LEDs (make all blank)
 }
 ```
+
 Output
 
+<div align=center><img src="https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow_Cube3.jpg"/><figcaption><b></b><i></i></figcaption></a>
+</figure></div>
 
-![](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow_Cube3.jpg) 
-
-##   Third-party Demos
+###   Third-party Demos
 ---
 *   RGB iPhone Software (by KonchaTech)
 
     *   Send RGB values to your cube via an iPhone (requires connected computer and TouchOSC software)
 
-        *   [http://konchatech.blogspot.ca/2012/05/4x4x4-iphone-controlled-rgb-led-cube.html](http://konchatech.blogspot.ca/2012/05/4x4x4-iphone-controlled-rgb-led-cube.html) (for sourcecode)
+        *   [Sourcecode](http://konchatech.blogspot.ca/2012/05/4x4x4-iphone-controlled-rgb-led-cube.html)
 
-        *   [https://www.youtube.com/watch?v=JXr-Jgzgigs](https://www.youtube.com/watch?v=JXr-Jgzgigs) [Video]
+        *   [Video](https://www.youtube.com/watch?v=JXr-Jgzgigs) 
 
-[http://i.ytimg.com/vi/JXr-Jgzgigs/0.jpg](http://i.ytimg.com/vi/JXr-Jgzgigs/0.jpg)
+
 
 *   Ambient Visualizer Software (by KonchaTech)
 
     *   Make your cube change colors in reaction to what is displayed on your computer screen (requires connected computer)
 
-        *   [http://konchatech.blogspot.ca/2012/05/ambient-led-cube.html](http://konchatech.blogspot.ca/2012/05/ambient-led-cube.html) (for sourcecode)
+        *   [Sourcecode](http://konchatech.blogspot.ca/2012/05/ambient-led-cube.html) 
 
-        *   [https://www.youtube.com/watch?v=cC_xqA5irLA](https://www.youtube.com/watch?v=cC_xqA5irLA) [Video 1]
+        *   [Video 1](https://www.youtube.com/watch?v=cC_xqA5irLA) 
 
-        *   [https://www.youtube.com/watch?v=ed9FURoNZ6M](https://www.youtube.com/watch?v=ed9FURoNZ6M) [Video 2]
-
-[http://0.gvt0.com/vi/cC_xqA5irLA/0.jpg](http://0.gvt0.com/vi/cC_xqA5irLA/0.jpg)
-
-
+        *   [Video 2](https://www.youtube.com/watch?v=ed9FURoNZ6M)
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/res/RainbowCube_v1.1_Panel_v1.2_Eaglefiles.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/res/319010000_Slim_Panel_v1.1_20161009.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ##   Resources
 ---
-*   Click here to download Rainbow Cube Kit -
+*   Click here to download Rainbow Cube Kit
     *   [Complete schematic in PDF](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/res/Rainbow_Cube_Kit-RGB_4x4x4_LED_schematic_board.pdf)
 
     *   [Eagle CAD files](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/res/RainbowCube_v1.1_Panel_v1.2_Eaglefiles.zip)
