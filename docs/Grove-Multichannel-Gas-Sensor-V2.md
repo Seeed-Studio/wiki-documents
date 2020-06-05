@@ -45,47 +45,49 @@ Grove - Multichannel Gas Sensor V2 has 4 measuring units, each of them is sensit
   overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-jtlo{background-color:#ffffff;border-color:#efefef;color:#000000;text-align:center;vertical-align:top}
+.tg .tg-l5ls{background-color:#ffffff;border-color:#000000;color:#000000;font-size:16px;font-weight:bold;text-align:center;
+  vertical-align:top}
+.tg .tg-q7v3{background-color:#ffffff;border-color:#000000;color:#000000;font-size:16px;text-align:center;vertical-align:top}
 </style>
-<table class="tg" style="undefined;table-layout: fixed; width: 587px">
+<table class="tg" style="undefined;table-layout: fixed; width: 896px">
 <colgroup>
-<col style="width: 297.005682px">
-<col style="width: 290.005682px">
+<col style="width: 436px">
+<col style="width: 460px">
 </colgroup>
 <thead>
   <tr>
-    <th class="tg-jtlo"><span style="font-weight:bold">         Type of product</span></th>
-    <th class="tg-jtlo"><span style="font-weight:normal">GM-102B</span></th>
+    <th class="tg-l5ls"><span style="font-weight:bold">Type of product</span></th>
+    <th class="tg-q7v3"><span style="font-weight:normal">GM-102B</span></th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-jtlo"><span style="font-weight:bold">V0(V)</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">2.5-4.5</span></td>
+    <td class="tg-l5ls"><span style="font-weight:bold">V0(V)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">2.5-4.5</span></td>
   </tr>
   <tr>
-    <td class="tg-jtlo"><span style="font-weight:bold">V0-VS(V)</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">≥1.0</span></td>
+    <td class="tg-l5ls"><span style="font-weight:bold">V0-VS(V)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">≥1.0</span></td>
   </tr>
   <tr>
-    <td class="tg-jtlo"><span style="font-weight:bold">Load</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">Adjustable</span></td>
+    <td class="tg-l5ls"><span style="font-weight:bold">Load</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Adjustable</span></td>
   </tr>
   <tr>
-    <td class="tg-jtlo"><span style="font-weight:bold">Response time</span>（tres，S）</td>
-    <td class="tg-jtlo"><span style="font-weight:normal">≤30</span></td>
+    <td class="tg-l5ls"><span style="font-weight:bold">Response time</span>（tres，S）</td>
+    <td class="tg-q7v3"><span style="font-weight:normal">≤30</span></td>
   </tr>
   <tr>
-    <td class="tg-jtlo"><span style="font-weight:bold">Recovery Time</span>（trec，S）</td>
-    <td class="tg-jtlo"><span style="font-weight:normal">≤60</span></td>
+    <td class="tg-l5ls"><span style="font-weight:bold">Recovery Time</span>（trec，S）</td>
+    <td class="tg-q7v3"><span style="font-weight:normal">≤60</span></td>
   </tr>
   <tr>
-    <td class="tg-jtlo"><span style="font-weight:bold">Heating resistance</span>（RH，Ω）</td>
-    <td class="tg-jtlo"><span style="font-weight:normal">80±20</span></td>
+    <td class="tg-l5ls"><span style="font-weight:bold">Heating resistance</span>（RH，Ω）</td>
+    <td class="tg-q7v3"><span style="font-weight:normal">80±20</span></td>
   </tr>
   <tr>
-    <td class="tg-jtlo"><span style="font-weight:bold">Operating Voltage</span>（V）</td>
-    <td class="tg-jtlo"><span style="font-weight:normal">VH=2.0±0.1 AC or DC	VC=5.0±0.1DC</span></td>
+    <td class="tg-l5ls"><span style="font-weight:bold">Operating Voltage</span>（V）</td>
+    <td class="tg-q7v3"><span style="font-weight:normal">VH=2.0±0.1 AC or DC	VC=5.0±0.1DC</span></td>
   </tr>
 </tbody>
 </table>
@@ -99,84 +101,80 @@ Grove - Multichannel Gas Sensor V2 has 4 measuring units, each of them is sensit
   overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-jtlo{background-color:#ffffff;border-color:#efefef;color:#000000;text-align:center;vertical-align:top}
+.tg .tg-l5ls{background-color:#ffffff;border-color:#000000;color:#000000;font-size:16px;font-weight:bold;text-align:center;
+  vertical-align:top}
+.tg .tg-q7v3{background-color:#ffffff;border-color:#000000;color:#000000;font-size:16px;text-align:center;vertical-align:top}
 </style>
-<table class="tg" style="undefined;table-layout: fixed; width: 946px">
-<colgroup>
-<col style="width: 492.005682px">
-<col style="width: 185.005682px">
-<col style="width: 32.005682px">
-<col style="width: 237.005682px">
-</colgroup>
+<table class="tg">
 <thead>
   <tr>
-    <th class="tg-jtlo" colspan="3"><span style="font-weight:bold">Type of product</span></th>
-    <th class="tg-jtlo"><span style="font-weight:normal">GM-302B</span></th>
+    <th class="tg-l5ls" colspan="3"><span style="font-weight:bold">Type of product</span></th>
+    <th class="tg-q7v3"><span style="font-weight:normal">GM-302B</span></th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-jtlo" colspan="3"><span style="font-weight:bold">Standard package</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">Ceramic package</span></td>
+    <td class="tg-l5ls" colspan="3"><span style="font-weight:bold">Standard package</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Ceramic package</span></td>
   </tr>
   <tr>
-    <td class="tg-jtlo" colspan="3"><span style="font-weight:bold">Concentration</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">1</span>～500ppm</td>
+    <td class="tg-l5ls" colspan="3"><span style="font-weight:bold">Concentration</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">1</span>～500ppm</td>
   </tr>
   <tr>
-    <td class="tg-jtlo" rowspan="3"><br><br><span style="font-weight:bold;font-style:normal">Standard circuit conditions</span><br> </td>
-    <td class="tg-jtlo"><span style="font-weight:normal">Loop voltage</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">VC</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">≤24V DC</span></td>
+    <td class="tg-q7v3" rowspan="3"><br><br><span style="font-weight:bold;font-style:normal">Standard circuit conditions</span><br> </td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Loop voltage</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">VC</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">≤24V DC</span></td>
   </tr>
   <tr>
-    <td class="tg-jtlo"><span style="font-weight:normal">Heating Voltage</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">VH</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">2.5V±0.1V AC or DC</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Heating Voltage</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">VH</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">2.5V±0.1V AC or DC</span></td>
   </tr>
   <tr>
-    <td class="tg-jtlo"><span style="font-weight:normal">Load Resistance</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">RL</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">Adjustable</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Load Resistance</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">RL</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Adjustable</span></td>
   </tr>
   <tr>
-    <td class="tg-jtlo" rowspan="5"> <br><br><br><br><br><span style="font-weight:bold;font-style:normal">Gas sensor characteristics under standard test conditions</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">Heating resistance</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">RH</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">60~100Ω</span>（Room Temperature）</td>
+    <td class="tg-q7v3" rowspan="5"> <br><br><br><br><br><span style="font-weight:bold;font-style:normal">Gas sensor characteristics under standard test conditions</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Heating resistance</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">RH</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">60~100Ω</span>（Room Temperature）</td>
   </tr>
   <tr>
-    <td class="tg-jtlo"><span style="font-weight:normal">Heating power consumption</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">PH</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">≤50mW</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Heating power consumption</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">PH</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">≤50mW</span></td>
   </tr>
   <tr>
-    <td class="tg-jtlo"><span style="font-weight:normal">Sensitive body resistance</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">RS</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">1KΩ</span>～30KΩ(in 50ppm Ethanol )</td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Sensitive body resistance</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">RS</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">1KΩ</span>～30KΩ(in 50ppm Ethanol )</td>
   </tr>
   <tr>
-    <td class="tg-jtlo"><span style="font-weight:normal">Sensitivity</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">S</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">Rs(in air)/Rs(in 50ppm Ethanol )≥3.0</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Sensitivity</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">S</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Rs(in air)/Rs(in 50ppm Ethanol )≥3.0</span></td>
   </tr>
   <tr>
-    <td class="tg-jtlo"><span style="font-weight:normal">Concentration slope</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">α</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">≤0.9(R200ppm/R50ppm Ethanol )</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Concentration slope</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">α</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">≤0.9(R200ppm/R50ppm Ethanol )</span></td>
   </tr>
   <tr>
-    <td class="tg-jtlo" rowspan="3"><br><br><span style="font-weight:bold">Standard test conditions</span></td>
-    <td class="tg-jtlo" colspan="2"><span style="font-weight:normal">Temperature/Humidity</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">20℃±2℃</span>；55%±5%RH</td>
+    <td class="tg-q7v3" rowspan="3"><br><br><span style="font-weight:bold">Standard test conditions</span></td>
+    <td class="tg-q7v3" colspan="2"><span style="font-weight:normal">Temperature/Humidity</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">20℃±2℃</span>；55%±5%RH</td>
   </tr>
   <tr>
-    <td class="tg-jtlo" colspan="2"><span style="font-weight:normal">Standard test circuit</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">VH:2.5V±0.1V</span>； VC:5.0V±0.1V</td>
+    <td class="tg-q7v3" colspan="2"><span style="font-weight:normal">Standard test circuit</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">VH:2.5V±0.1V</span>； VC:5.0V±0.1V</td>
   </tr>
   <tr>
-    <td class="tg-jtlo" colspan="2"><span style="font-weight:normal">Preheat time</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">Less than 48hrs</span></td>
+    <td class="tg-q7v3" colspan="2"><span style="font-weight:normal">Preheat time</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Less than 48hrs</span></td>
   </tr>
 </tbody>
 </table>
@@ -190,80 +188,82 @@ Grove - Multichannel Gas Sensor V2 has 4 measuring units, each of them is sensit
   overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-jtlo{background-color:#ffffff;border-color:#efefef;color:#000000;text-align:center;vertical-align:top}
+.tg .tg-l5ls{background-color:#ffffff;border-color:#000000;color:#000000;font-size:16px;font-weight:bold;text-align:center;
+  vertical-align:top}
+.tg .tg-q7v3{background-color:#ffffff;border-color:#000000;color:#000000;font-size:16px;text-align:center;vertical-align:top}
 </style>
-<table class="tg" style="undefined;table-layout: fixed; width: 940px">
+<table class="tg" style="undefined;table-layout: fixed; width: 1084px">
 <colgroup>
-<col style="width: 468.005682px">
-<col style="width: 185.005682px">
-<col style="width: 32.005682px">
-<col style="width: 255.005682px">
+<col style="width: 547px">
+<col style="width: 211px">
+<col style="width: 35px">
+<col style="width: 291px">
 </colgroup>
 <thead>
   <tr>
-    <th class="tg-jtlo" colspan="3"><span style="font-weight:bold">Type of product</span></th>
-    <th class="tg-jtlo"><span style="font-weight:normal">GM-502B</span></th>
+    <th class="tg-l5ls" colspan="3"><span style="font-weight:bold">Type of product</span></th>
+    <th class="tg-q7v3"><span style="font-weight:normal">GM-502B</span></th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-jtlo" colspan="3"><span style="font-weight:bold">Standard package</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">Ceramic package</span></td>
+    <td class="tg-l5ls" colspan="3"><span style="font-weight:bold">Standard package</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Ceramic package</span></td>
   </tr>
   <tr>
-    <td class="tg-jtlo" colspan="3"><span style="font-weight:bold">Concentration</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">1～500ppm</span></td>
+    <td class="tg-l5ls" colspan="3"><span style="font-weight:bold">Concentration</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">1～500ppm</span></td>
   </tr>
   <tr>
-    <td class="tg-jtlo" rowspan="3"><br><br><span style="font-weight:bold">Standard circuit conditions</span><br><br> </td>
-    <td class="tg-jtlo"><span style="font-weight:normal">Loop voltage</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">VC</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">≤24V DC</span></td>
+    <td class="tg-q7v3" rowspan="3"><br><br><span style="font-weight:bold">Standard circuit conditions</span><br><br> </td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Loop voltage</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">VC</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">≤24V DC</span></td>
   </tr>
   <tr>
-    <td class="tg-jtlo"><span style="font-weight:normal">Heating Voltage</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">VH</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">2.5V±0.1V AC or DC</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Heating Voltage</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">VH</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">2.5V±0.1V AC or DC</span></td>
   </tr>
   <tr>
-    <td class="tg-jtlo"><span style="font-weight:normal">Load Resistance</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">RL</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">Adjustable</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Load Resistance</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">RL</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Adjustable</span></td>
   </tr>
   <tr>
-    <td class="tg-jtlo" rowspan="5"> <br><br><br><br><br><span style="font-weight:bold;font-style:normal">Gas sensor characteristics under standard test conditions</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">Heating resistance</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">RH</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">80Ω ± 20Ω（</span>Room temperature）</td>
+    <td class="tg-q7v3" rowspan="5"> <br><br><br><br><span style="font-weight:bold;font-style:normal">Gas sensor characteristics under standard test conditions</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Heating resistance</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">RH</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">80Ω ± 20Ω（</span>Room temperature）</td>
   </tr>
   <tr>
-    <td class="tg-jtlo"><span style="font-weight:normal">Heating power consumption</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">PH</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">≤50mW</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Heating power consumption</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">PH</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">≤50mW</span></td>
   </tr>
   <tr>
-    <td class="tg-jtlo"><span style="font-weight:normal">Sensitive body resistance</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">RS</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">1KΩ～30KΩ (in 50ppm Ethanol)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Sensitive body resistance</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">RS</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">1KΩ～30KΩ (in 50ppm Ethanol)</span></td>
   </tr>
   <tr>
-    <td class="tg-jtlo"><span style="font-weight:normal">Sensitivity</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">S</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">R0 (in air) / Rs (in 50ppm Ethanol) ≥3.0</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Sensitivity</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">S</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">R0 (in air) / Rs (in 50ppm Ethanol) ≥3.0</span></td>
   </tr>
   <tr>
-    <td class="tg-jtlo"><span style="font-weight:normal">Concentration slope</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">α</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">≤0.9 (R200ppm / R50ppm Ethanol)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Concentration slope</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">α</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">≤0.9 (R200ppm / R50ppm Ethanol)</span></td>
   </tr>
   <tr>
-    <td class="tg-jtlo" rowspan="2"><br><span style="font-weight:bold">Standard test conditions</span><br></td>
-    <td class="tg-jtlo" colspan="2"><span style="font-weight:normal">Temperature / Humidity</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">20℃ ± 2℃；55% ± 5%RH</span></td>
+    <td class="tg-q7v3" rowspan="2"><br><span style="font-weight:bold">Standard test conditions</span><br></td>
+    <td class="tg-q7v3" colspan="2"><span style="font-weight:normal">Temperature / Humidity</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">20℃ ± 2℃；55% ± 5%RH</span></td>
   </tr>
   <tr>
-    <td class="tg-jtlo" colspan="2">Standard test circuit<br></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">VH:2.5V ± 0.1V；</span><br><span style="font-weight:normal">VC:5.0V ± 0.1V</span></td>
+    <td class="tg-q7v3" colspan="2">Standard test circuit<br></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">VH:2.5V ± 0.1V；</span><br><span style="font-weight:normal">VC:5.0V ± 0.1V</span></td>
   </tr>
 </tbody>
 </table>
@@ -277,80 +277,82 @@ Grove - Multichannel Gas Sensor V2 has 4 measuring units, each of them is sensit
   overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-jtlo{background-color:#ffffff;border-color:#efefef;color:#000000;text-align:center;vertical-align:top}
+.tg .tg-l5ls{background-color:#ffffff;border-color:#000000;color:#000000;font-size:16px;font-weight:bold;text-align:center;
+  vertical-align:top}
+.tg .tg-q7v3{background-color:#ffffff;border-color:#000000;color:#000000;font-size:16px;text-align:center;vertical-align:top}
 </style>
-<table class="tg" style="undefined;table-layout: fixed; width: 1022px">
+<table class="tg" style="undefined;table-layout: fixed; width: 1126px">
 <colgroup>
-<col style="width: 527.005682px">
-<col style="width: 185.005682px">
-<col style="width: 32.005682px">
-<col style="width: 278.005682px">
+<col style="width: 564px">
+<col style="width: 211px">
+<col style="width: 35px">
+<col style="width: 316px">
 </colgroup>
 <thead>
   <tr>
-    <th class="tg-jtlo" colspan="3"><span style="font-weight:bold">Type of product</span></th>
-    <th class="tg-jtlo">GM-702B</th>
+    <th class="tg-l5ls" colspan="3"><span style="font-weight:bold">Type of product</span></th>
+    <th class="tg-q7v3">GM-702B</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-jtlo" colspan="3"><span style="font-weight:bold">Standard package</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">Ceramic package</span></td>
+    <td class="tg-l5ls" colspan="3"><span style="font-weight:bold">Standard package</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Ceramic package</span></td>
   </tr>
   <tr>
-    <td class="tg-jtlo" colspan="3"><span style="font-weight:bold">Concentration</span></td>
-    <td class="tg-jtlo">5～5000ppm(CO)</td>
+    <td class="tg-l5ls" colspan="3"><span style="font-weight:bold">Concentration</span></td>
+    <td class="tg-q7v3">5～5000ppm(CO)</td>
   </tr>
   <tr>
-    <td class="tg-jtlo" rowspan="3"><br><br><br><span style="font-weight:bold;font-style:normal">Standard circuit conditions</span><br> </td>
-    <td class="tg-jtlo"><span style="font-weight:normal">Loop voltage</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">VC</span></td>
-    <td class="tg-jtlo">≤24V DC</td>
+    <td class="tg-q7v3" rowspan="3"><br><br><span style="font-weight:bold;font-style:normal">Standard circuit conditions</span><br> </td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Loop voltage</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">VC</span></td>
+    <td class="tg-q7v3">≤24V DC</td>
   </tr>
   <tr>
-    <td class="tg-jtlo"><br><span style="font-weight:normal">Heating Voltage</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">VH</span></td>
-    <td class="tg-jtlo">2.5V±0.1V AC or DC（High Temperature）<br>0.5V±0.1V AC or DC（Low Temperature）</td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Heating Voltage</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">VH</span></td>
+    <td class="tg-q7v3">2.5V±0.1V AC or DC（High Temperature）<br>0.5V±0.1V AC or DC（Low Temperature）</td>
   </tr>
   <tr>
-    <td class="tg-jtlo"><span style="font-weight:normal">Load Resistance</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">RL</span></td>
-    <td class="tg-jtlo">60s±1s（H. T)；90s±1s（L. T）</td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Load Resistance</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">RL</span></td>
+    <td class="tg-q7v3">60s±1s（H. T)；90s±1s（L. T）</td>
   </tr>
   <tr>
-    <td class="tg-jtlo" rowspan="5"> <br><br><br><br><span style="font-weight:bold;font-style:normal">Gas sensor characteristics under standard test conditions</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">Heating resistance</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">RH</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">Adjustable</span></td>
+    <td class="tg-q7v3" rowspan="5"> <br><br><br><br><span style="font-weight:bold;font-style:normal">Gas sensor characteristics under standard test conditions</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Heating resistance</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">RH</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Adjustable</span></td>
   </tr>
   <tr>
-    <td class="tg-jtlo"><span style="font-weight:normal">Heating power consumption</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">PH</span></td>
-    <td class="tg-jtlo">80Ω±20Ω（<span style="font-weight:normal">Room temperature</span>）</td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Heating power consumption</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">PH</span></td>
+    <td class="tg-q7v3">80Ω±20Ω（<span style="font-weight:normal">Room temperature</span>）</td>
   </tr>
   <tr>
-    <td class="tg-jtlo"><span style="font-weight:normal">Sensitive body resistance</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">RS</span></td>
-    <td class="tg-jtlo">≤50mW</td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Sensitive body resistance</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">RS</span></td>
+    <td class="tg-q7v3">≤50mW</td>
   </tr>
   <tr>
-    <td class="tg-jtlo"><span style="font-weight:normal">Sensitivity</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">S</span></td>
-    <td class="tg-jtlo">1KΩ～30KΩ(in 150ppmCO)</td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Sensitivity</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">S</span></td>
+    <td class="tg-q7v3">1KΩ～30KΩ(in 150ppmCO)</td>
   </tr>
   <tr>
-    <td class="tg-jtlo"><span style="font-weight:normal">Concentration slope</span></td>
-    <td class="tg-jtlo"><span style="font-weight:normal">α</span></td>
-    <td class="tg-jtlo">R0(in air)/Rs(in 150ppmCO)≥3</td>
+    <td class="tg-q7v3"><span style="font-weight:normal">Concentration slope</span></td>
+    <td class="tg-q7v3"><span style="font-weight:normal">α</span></td>
+    <td class="tg-q7v3">R0(in air)/Rs(in 150ppmCO)≥3</td>
   </tr>
   <tr>
-    <td class="tg-jtlo" rowspan="2"><br><span style="font-weight:bold">Standard test conditions</span><br></td>
-    <td class="tg-jtlo" colspan="2"><span style="font-weight:normal">Temperature / Humidity</span></td>
-    <td class="tg-jtlo">20℃±2℃；55%±5%RH</td>
+    <td class="tg-q7v3" rowspan="2"><br><span style="font-weight:bold">Standard test conditions</span><br></td>
+    <td class="tg-q7v3" colspan="2"><span style="font-weight:normal">Temperature / Humidity</span></td>
+    <td class="tg-q7v3">20℃±2℃；55%±5%RH</td>
   </tr>
   <tr>
-    <td class="tg-jtlo" colspan="2"><span style="font-weight:normal">Standard test circuit</span></td>
-    <td class="tg-jtlo">VH: 2.5V±0.1V（H. T）<br>0.5V±0.1V（L. T） VC : 5.0V±0.1V</td>
+    <td class="tg-q7v3" colspan="2"><span style="font-weight:normal">Standard test circuit</span></td>
+    <td class="tg-q7v3">VH: 2.5V±0.1V（H. T）<br>0.5V±0.1V（L. T） VC : 5.0V±0.1V</td>
   </tr>
 </tbody>
 </table>
