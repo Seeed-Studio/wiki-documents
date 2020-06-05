@@ -73,21 +73,11 @@ Some frequently asked questions in RePhone Community are collected and answered 
 
 [**Source**] [Source Code for Xadow NFC v2](https://github.com/WayenWeng/Xadow_NFC_v2/)
 
-The schematic diagram of Xadow NFC v2 is provided in the following link:
-
 [**ZIP**] [Xadow NFC v2 Schematic Files_](https://files.seeedstudio.com/wiki/Xadow_NFC/res/Xadow_NFC_v2.0.zip)
-
-Check more info about the datasheet of PN532:
 
 [**PDF**] [Datasheet of PN532_](https://files.seeedstudio.com/wiki/Xadow_NFC/resources/PN532.pdf)
 
-And the MCU Kinetis KL02:
-
-[**PDF**] [Datasheet of Kinetis KL02_](https://files.seeedstudio.com/wiki/Xadow_NFC/res/KL02P32M48SF0.pdf)
-
-Copyright (c) 2008-2016 Seeed Development Limited ([www.seeedstudio.com](https://www.seeedstudio.com) / [community.seeedstudio.com/](https://community.seeedstudio.com/))
-
-###### This static html page was created from https://www.seeedstudio.com/wiki
+[**PDF**] [Datasheet of MCU Kinetis KL02_](https://files.seeedstudio.com/wiki/Xadow_NFC/res/KL02P32M48SF0.pdf)
 
 </div>
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
