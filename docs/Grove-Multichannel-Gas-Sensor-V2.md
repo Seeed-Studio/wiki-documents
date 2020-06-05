@@ -29,37 +29,722 @@ Grove - Multichannel Gas Sensor V2 has 4 measuring units, each of them is sensit
 
 ## Specification
 
-|Item|Value|
-|---|---|
-|MCU|STM32F030|
-|Interface|Grove I2C|
-|I2C address|0x55|
-|Output voltage|3.3V~5V|
-|Sensors|GM-102B; GM-302B; GM-502B; GM-702B|
+|      Item      |                Value               |
+|:--------------:|:----------------------------------:|
+|       MCU      |              STM32F030             |
+|    Interface   |              Grove I2C             |
+|   I2C address  |                0x55                |
+| Output voltage |               3.3V~5V              |
+|     Sensors    | GM-102B; GM-302B; GM-502B; GM-702B |
 
-GM-102B
+**GM-102B**
 
-![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/GM-102B%E5%8F%82%E6%95%B0.png)
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-jtlo{background-color:#ffffff;border-color:#efefef;color:#000000;text-align:center;vertical-align:top}
+</style>
+<table class="tg" style="undefined;table-layout: fixed; width: 587px">
+<colgroup>
+<col style="width: 297.005682px">
+<col style="width: 290.005682px">
+</colgroup>
+<thead>
+  <tr>
+    <th class="tg-jtlo"><span style="font-weight:bold">         Type of product</span></th>
+    <th class="tg-jtlo"><span style="font-weight:normal">GM-102B</span></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-jtlo"><span style="font-weight:bold">V0(V)</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">2.5-4.5</span></td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo"><span style="font-weight:bold">V0-VS(V)</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">≥1.0</span></td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo"><span style="font-weight:bold">Load</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">Adjustable</span></td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo"><span style="font-weight:bold">Response time</span>（tres，S）</td>
+    <td class="tg-jtlo"><span style="font-weight:normal">≤30</span></td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo"><span style="font-weight:bold">Recovery Time</span>（trec，S）</td>
+    <td class="tg-jtlo"><span style="font-weight:normal">≤60</span></td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo"><span style="font-weight:bold">Heating resistance</span>（RH，Ω）</td>
+    <td class="tg-jtlo"><span style="font-weight:normal">80±20</span></td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo"><span style="font-weight:bold">Operating Voltage</span>（V）</td>
+    <td class="tg-jtlo"><span style="font-weight:normal">VH=2.0±0.1 AC or DC	VC=5.0±0.1DC</span></td>
+  </tr>
+</tbody>
+</table>
 
 
-GM-302B
+**GM-302B**
 
-![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/GM-302B%E5%8F%82%E6%95%B0.png)
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-jtlo{background-color:#ffffff;border-color:#efefef;color:#000000;text-align:center;vertical-align:top}
+</style>
+<table class="tg" style="undefined;table-layout: fixed; width: 946px">
+<colgroup>
+<col style="width: 492.005682px">
+<col style="width: 185.005682px">
+<col style="width: 32.005682px">
+<col style="width: 237.005682px">
+</colgroup>
+<thead>
+  <tr>
+    <th class="tg-jtlo" colspan="3"><span style="font-weight:bold">Type of product</span></th>
+    <th class="tg-jtlo"><span style="font-weight:normal">GM-302B</span></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-jtlo" colspan="3"><span style="font-weight:bold">Standard package</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">Ceramic package</span></td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo" colspan="3"><span style="font-weight:bold">Concentration</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">1</span>～500ppm</td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo" rowspan="3"><br><br><span style="font-weight:bold;font-style:normal">Standard circuit conditions</span><br> </td>
+    <td class="tg-jtlo"><span style="font-weight:normal">Loop voltage</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">VC</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">≤24V DC</span></td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo"><span style="font-weight:normal">Heating Voltage</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">VH</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">2.5V±0.1V AC or DC</span></td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo"><span style="font-weight:normal">Load Resistance</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">RL</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">Adjustable</span></td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo" rowspan="5"> <br><br><br><br><br><span style="font-weight:bold;font-style:normal">Gas sensor characteristics under standard test conditions</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">Heating resistance</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">RH</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">60~100Ω</span>（Room Temperature）</td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo"><span style="font-weight:normal">Heating power consumption</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">PH</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">≤50mW</span></td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo"><span style="font-weight:normal">Sensitive body resistance</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">RS</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">1KΩ</span>～30KΩ(in 50ppm Ethanol )</td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo"><span style="font-weight:normal">Sensitivity</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">S</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">Rs(in air)/Rs(in 50ppm Ethanol )≥3.0</span></td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo"><span style="font-weight:normal">Concentration slope</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">α</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">≤0.9(R200ppm/R50ppm Ethanol )</span></td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo" rowspan="3"><br><br><span style="font-weight:bold">Standard test conditions</span></td>
+    <td class="tg-jtlo" colspan="2"><span style="font-weight:normal">Temperature/Humidity</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">20℃±2℃</span>；55%±5%RH</td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo" colspan="2"><span style="font-weight:normal">Standard test circuit</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">VH:2.5V±0.1V</span>； VC:5.0V±0.1V</td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo" colspan="2"><span style="font-weight:normal">Preheat time</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">Less than 48hrs</span></td>
+  </tr>
+</tbody>
+</table>
 
 
-GM-502B
+**GM-502B**
 
-![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/GM-502B%E5%8F%82%E6%95%B0.png)
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-jtlo{background-color:#ffffff;border-color:#efefef;color:#000000;text-align:center;vertical-align:top}
+</style>
+<table class="tg" style="undefined;table-layout: fixed; width: 940px">
+<colgroup>
+<col style="width: 468.005682px">
+<col style="width: 185.005682px">
+<col style="width: 32.005682px">
+<col style="width: 255.005682px">
+</colgroup>
+<thead>
+  <tr>
+    <th class="tg-jtlo" colspan="3"><span style="font-weight:bold">Type of product</span></th>
+    <th class="tg-jtlo"><span style="font-weight:normal">GM-502B</span></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-jtlo" colspan="3"><span style="font-weight:bold">Standard package</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">Ceramic package</span></td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo" colspan="3"><span style="font-weight:bold">Concentration</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">1～500ppm</span></td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo" rowspan="3"><br><br><span style="font-weight:bold">Standard circuit conditions</span><br><br> </td>
+    <td class="tg-jtlo"><span style="font-weight:normal">Loop voltage</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">VC</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">≤24V DC</span></td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo"><span style="font-weight:normal">Heating Voltage</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">VH</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">2.5V±0.1V AC or DC</span></td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo"><span style="font-weight:normal">Load Resistance</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">RL</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">Adjustable</span></td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo" rowspan="5"> <br><br><br><br><br><span style="font-weight:bold;font-style:normal">Gas sensor characteristics under standard test conditions</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">Heating resistance</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">RH</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">80Ω ± 20Ω（</span>Room temperature）</td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo"><span style="font-weight:normal">Heating power consumption</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">PH</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">≤50mW</span></td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo"><span style="font-weight:normal">Sensitive body resistance</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">RS</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">1KΩ～30KΩ (in 50ppm Ethanol)</span></td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo"><span style="font-weight:normal">Sensitivity</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">S</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">R0 (in air) / Rs (in 50ppm Ethanol) ≥3.0</span></td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo"><span style="font-weight:normal">Concentration slope</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">α</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">≤0.9 (R200ppm / R50ppm Ethanol)</span></td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo" rowspan="2"><br><span style="font-weight:bold">Standard test conditions</span><br></td>
+    <td class="tg-jtlo" colspan="2"><span style="font-weight:normal">Temperature / Humidity</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">20℃ ± 2℃；55% ± 5%RH</span></td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo" colspan="2">Standard test circuit<br></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">VH:2.5V ± 0.1V；</span><br><span style="font-weight:normal">VC:5.0V ± 0.1V</span></td>
+  </tr>
+</tbody>
+</table>
 
 
-GM-702B
+**GM-702B**
 
-![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/GM-702B%E5%8F%82%E6%95%B0.png)
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-jtlo{background-color:#ffffff;border-color:#efefef;color:#000000;text-align:center;vertical-align:top}
+</style>
+<table class="tg" style="undefined;table-layout: fixed; width: 1022px">
+<colgroup>
+<col style="width: 527.005682px">
+<col style="width: 185.005682px">
+<col style="width: 32.005682px">
+<col style="width: 278.005682px">
+</colgroup>
+<thead>
+  <tr>
+    <th class="tg-jtlo" colspan="3"><span style="font-weight:bold">Type of product</span></th>
+    <th class="tg-jtlo">GM-702B</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-jtlo" colspan="3"><span style="font-weight:bold">Standard package</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">Ceramic package</span></td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo" colspan="3"><span style="font-weight:bold">Concentration</span></td>
+    <td class="tg-jtlo">5～5000ppm(CO)</td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo" rowspan="3"><br><br><br><span style="font-weight:bold;font-style:normal">Standard circuit conditions</span><br> </td>
+    <td class="tg-jtlo"><span style="font-weight:normal">Loop voltage</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">VC</span></td>
+    <td class="tg-jtlo">≤24V DC</td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo"><br><span style="font-weight:normal">Heating Voltage</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">VH</span></td>
+    <td class="tg-jtlo">2.5V±0.1V AC or DC（High Temperature）<br>0.5V±0.1V AC or DC（Low Temperature）</td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo"><span style="font-weight:normal">Load Resistance</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">RL</span></td>
+    <td class="tg-jtlo">60s±1s（H. T)；90s±1s（L. T）</td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo" rowspan="5"> <br><br><br><br><span style="font-weight:bold;font-style:normal">Gas sensor characteristics under standard test conditions</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">Heating resistance</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">RH</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">Adjustable</span></td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo"><span style="font-weight:normal">Heating power consumption</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">PH</span></td>
+    <td class="tg-jtlo">80Ω±20Ω（<span style="font-weight:normal">Room temperature</span>）</td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo"><span style="font-weight:normal">Sensitive body resistance</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">RS</span></td>
+    <td class="tg-jtlo">≤50mW</td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo"><span style="font-weight:normal">Sensitivity</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">S</span></td>
+    <td class="tg-jtlo">1KΩ～30KΩ(in 150ppmCO)</td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo"><span style="font-weight:normal">Concentration slope</span></td>
+    <td class="tg-jtlo"><span style="font-weight:normal">α</span></td>
+    <td class="tg-jtlo">R0(in air)/Rs(in 150ppmCO)≥3</td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo" rowspan="2"><br><span style="font-weight:bold">Standard test conditions</span><br></td>
+    <td class="tg-jtlo" colspan="2"><span style="font-weight:normal">Temperature / Humidity</span></td>
+    <td class="tg-jtlo">20℃±2℃；55%±5%RH</td>
+  </tr>
+  <tr>
+    <td class="tg-jtlo" colspan="2"><span style="font-weight:normal">Standard test circuit</span></td>
+    <td class="tg-jtlo">VH: 2.5V±0.1V（H. T）<br>0.5V±0.1V（L. T） VC : 5.0V±0.1V</td>
+  </tr>
+</tbody>
+</table>
 
 ## Sample test outcomes
 
-![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/sample+test+outcomes.jpg)
-
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-7un6{background-color:#ffffff;color:#000000;text-align:center;vertical-align:top}
+.tg .tg-zqun{background-color:#ffffff;color:#000000;font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-vxga{background-color:#ffffff;text-align:center;vertical-align:middle}
+.tg .tg-bx9b{background-color:#ffffff;color:#000000;font-weight:bold;text-align:left;vertical-align:middle}
+.tg .tg-p7cy{background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle}
+.tg .tg-scrz{background-color:#ffffff;color:#000000;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-q9a8{background-color:#ffffff;color:#fe0000;font-weight:bold;text-align:left;vertical-align:top}
+</style>
+<table class="tg" style="undefined;table-layout: fixed; width: 1033px">
+<colgroup>
+<col style="width: 29px">
+<col style="width: 123px">
+<col style="width: 123px">
+<col style="width: 131px">
+<col style="width: 127px">
+<col style="width: 123px">
+<col style="width: 129px">
+<col style="width: 123px">
+<col style="width: 125px">
+</colgroup>
+<thead>
+  <tr>
+    <th class="tg-bx9b" colspan="9"><span style="font-weight:700;font-style:normal;text-decoration:none">Time：2019.06.27</span></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-bx9b" colspan="9"><span style="font-weight:700;font-style:normal;text-decoration:none">Test</span> <span style="font-weight:700;font-style:normal;text-decoration:none">conditions：VH=2.5V，VC=3.3V</span></td>
+  </tr>
+  <tr>
+    <td class="tg-bx9b" colspan="9"><span style="font-weight:700;font-style:normal;text-decoration:none">Type：GM-102B、GM-302B、GM-502B、GM-702B</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy" rowspan="6"><span style="font-weight:400;font-style:normal;text-decoration:none">1#</span></td>
+    <td class="tg-scrz" colspan="4">Gas：NO2</td>
+    <td class="tg-scrz" colspan="4">Gas：C2H5OH</td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Type</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Initial</span> <span style="font-weight:400;font-style:normal;text-decoration:none">value(V)</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">5ppm(V)</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Difference(V)</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Type</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">Initial</span> <span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">value(V)</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">50ppm(V)</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">Difference(V)</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.41</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.38</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-1.03</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.42</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">2</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">0.58</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.94</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.48</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.46</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">0.95</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">2.06</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.11</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.42</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.53</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.89</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.41</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">2.93</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.52</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.54</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.55</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.99</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.35</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">2.86</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.51</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy" rowspan="6"><span style="font-weight:400;font-style:normal;text-decoration:none">2#</span></td>
+    <td class="tg-scrz" colspan="4">Gas：NO2</td>
+    <td class="tg-scrz" colspan="4">Gas：C2H5OH</td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Type</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Initial</span> <span style="font-weight:400;font-style:normal;text-decoration:none">value(V)</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">5ppm(V)</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Difference(V)</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Type</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">Initial</span> <span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">value(V)</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">50ppm(V)</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">Difference(V)</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.94</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.22</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.72</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">0.92</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.41</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">0.49</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.45</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.24</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.21</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">0.35</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">2.09</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.74</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.45</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.49</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.96</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.51</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">2.88</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.37</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.77</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.3</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.47</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">0.74</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">2.73</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.99</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy" rowspan="6"><span style="font-weight:400;font-style:normal;text-decoration:none">3#</span></td>
+    <td class="tg-scrz" colspan="4">Gas：NO2</td>
+    <td class="tg-scrz" colspan="4">Gas：C2H5OH</td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Type</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Initial</span> <span style="font-weight:400;font-style:normal;text-decoration:none">value(V)</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">5ppm(V)</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Difference(V)</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Type</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">Initial</span> <span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">value(V)</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">50ppm(V)</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">Difference(V)</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.29</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.27</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-1.02</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.2</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.62</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">0.42</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.12</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.61</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.51</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.12</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">2.33</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.21</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.82</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.58</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-1.24</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.72</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">2.86</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.14</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.06</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.37</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.69</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.08</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">2.8</span></td>
+    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.72</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy" colspan="9"></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy" rowspan="6"><span style="font-style:normal;text-decoration:none">1#</span></td>
+    <td class="tg-scrz" colspan="4">Gas：CO</td>
+    <td class="tg-p7cy" colspan="4"></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Type</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Initial</span> <span style="font-weight:400;font-style:normal;text-decoration:none">value(V)</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">150ppm(V)</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Difference(V)</span></td>
+    <td class="tg-p7cy" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none">Types</span> <span style="font-weight:400;font-style:normal;text-decoration:none">of</span> <span style="font-weight:400;font-style:normal;text-decoration:none">sensors</span> </td>
+    <td class="tg-vxga" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">Gases</span> <span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">measured</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.31</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.33</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.02</span></td>
+    <td class="tg-p7cy" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
+    <td class="tg-vxga" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">NO2</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.72</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.88</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.16</span></td>
+    <td class="tg-p7cy" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
+    <td class="tg-vxga" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">C2H5OH</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.33</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.35</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.02</span></td>
+    <td class="tg-p7cy" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
+    <td class="tg-vxga" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">VOC</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.22</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">2.09</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.87</span></td>
+    <td class="tg-p7cy" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
+    <td class="tg-vxga" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">CO</span></td>
+  </tr>
+  <tr>
+    <td class="tg-zqun" rowspan="6"><span style="font-weight:400;font-style:normal;text-decoration:none">2#</span></td>
+    <td class="tg-scrz" colspan="4">Gas：CO</td>
+    <td class="tg-q9a8" colspan="4" rowspan="12"><br><br><br><br><br><br>NOTICE: When it comes to judging what the gas is, GM-102B can be taken as an example. As it can be seen from the four charts above and beside, GM-102B has participated three times for each gas detecting. And its number of differences peaked at the most under the atmosphere of  NO2 than other gases. Therefore GM-102B is sensible to NO2 and accordingly is able to detect NO2, which is applicable to other sensors and sorts of gases as well. When being put under other kinds of gases, the sensor is able to detect the gas which makes it the most differences.<br></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Type</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Initial</span> <span style="font-weight:400;font-style:normal;text-decoration:none">value(V)</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">150ppm(V)</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Difference(V)</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.94</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.95</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.01</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.36</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.48</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.12</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.46</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.5</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.04</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.72</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.18</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.46</span></td>
+  </tr>
+  <tr>
+    <td class="tg-zqun" rowspan="6"><span style="font-weight:400;font-style:normal;text-decoration:none">3#</span></td>
+    <td class="tg-scrz" colspan="4">Gas：CO</td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Type</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Initial</span> <span style="font-weight:400;font-style:normal;text-decoration:none">value(V)</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">150ppm(V)</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Difference(V)</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.18</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.17</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.01</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.18</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.25</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.07</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.72</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.71</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.01</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.01</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.7</span></td>
+    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.69</span></td>
+  </tr>
+  <tr>
+    <td class="tg-p7cy" rowspan="15"></td>
+    <td class="tg-7un6" colspan="4" rowspan="15"><img src="https://files.seeedstudio.com/wiki/Grove_Multichannel_Gas_Sensor_V2_101020820/1.png" width="400" height="300"></td>
+    <td class="tg-7un6" colspan="4" rowspan="15"><img src="https://files.seeedstudio.com/wiki/Grove_Multichannel_Gas_Sensor_V2_101020820/2.png" width="400" height="300"></td>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+    <td class="tg-p7cy" rowspan="15"></td>
+    <td class="tg-7un6" colspan="4" rowspan="15"><img src="https://files.seeedstudio.com/wiki/Grove_Multichannel_Gas_Sensor_V2_101020820/3.png" width="400" height="300"></td>
+    <td class="tg-7un6" colspan="4" rowspan="15"><img src="https://files.seeedstudio.com/wiki/Grove_Multichannel_Gas_Sensor_V2_101020820/4.png" width="400" height="300"></td>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+</tbody>
+</table>
 
 ## Characteristic descriptions
 
