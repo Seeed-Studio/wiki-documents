@@ -49,119 +49,129 @@ BeagleBone® Blue combines the high-performance flexible WiFi/Bluetooth WiLink�
 ----
 
 <style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;border-color:#999;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#26ADE4;}
-.tg .tg-yw4l{vertical-align:top}
-.tg .tg-6k2t{background-color:#D2E4FC;vertical-align:top}
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-mghb{background-color:#ffffff;border-color:#000000;color:#000000;font-size:18px;text-align:center;vertical-align:top}
+.tg .tg-cmsg{background-color:#ffffff;color:#000000;font-size:18px;text-align:left;vertical-align:top}
+.tg .tg-srx5{background-color:#ffffff;border-color:#000000;color:#000000;font-size:20px;font-weight:bold;text-align:center;
+  vertical-align:top}
+.tg .tg-5dab{background-color:#ffffff;border-color:#000000;color:#000000;font-size:18px;text-align:left;vertical-align:top}
+.tg .tg-firt{background-color:#ffffff;color:#000000;font-size:20px;text-align:left;vertical-align:top}
 </style>
-<table class="tg" style="undefined;table-layout: fixed; width: 776px">
+<table class="tg" style="undefined;table-layout: fixed; width: 1565px">
 <colgroup>
-<col style="width: 154.090909px">
-<col style="width: 264.090909px">
-<col style="width: 358.090909px">
+<col style="width: 643px">
+<col style="width: 307px">
+<col style="width: 615px">
 </colgroup>
+<thead>
   <tr>
-    <th class="tg-031e">Item</th>
-    <th class="tg-yw4l" colspan="2">Description</th>
+    <th class="tg-srx5">Item</th>
+    <th class="tg-srx5" colspan="2">Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-mghb">Processor<br>(Integrated in <br>the OSD3358)</td>
+    <td class="tg-5dab" colspan="2">● AM335x 1GHz ARM® Cortex-A8<br>● SGX530 graphics accelerator<br>● NEON floating-point accelerator<br>● 2x PRU 32-bit 200MHz microcontrollers</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">Processor<br>(Integrated in <br>the OSD3358)</td>
-    <td class="tg-6k2t" colspan="2">● AM335x 1GHz ARM® Cortex-A8<br>● SGX530 graphics accelerator<br>● NEON floating-point accelerator<br>● 2x PRU 32-bit 200MHz microcontrollers</td>
+    <td class="tg-mghb"><br>Memory</td>
+    <td class="tg-5dab" colspan="2">● 512MB DDR3800MHZ RAM (Integrated in the OSD3358)<br>● 4GB 8-bit eMMC on-board flash storage<br>● SD/MMC Connector for microSD</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">Memory</td>
-    <td class="tg-yw4l" colspan="2">● 512MB DDR3800MHZ RAM (Integrated in the OSD3358)<br>● 4GB 8-bit eMMC on-board flash storage<br>● SD/MMC Connector for microSD</td>
+    <td class="tg-mghb" rowspan="18"><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Connectivity<br></td>
+    <td class="tg-5dab">High speed USB 2.0 Client port</td>
+    <td class="tg-firt">Access to USB0,Client mode via microUSB</td>
   </tr>
   <tr>
-    <td class="tg-6k2t" rowspan="18">Connectivity</td>
-    <td class="tg-6k2t">High speed USB 2.0 Client port</td>
-    <td class="tg-6k2t">Access to USB0,Client mode via microUSB</td>
+    <td class="tg-5dab">High speed USB 2.0 Host port</td>
+    <td class="tg-firt">Access to USB1,Type A Socket, 500mA LS/FS/HS</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">High speed USB 2.0 Host port</td>
-    <td class="tg-yw4l">Access to USB1,Type A Socket, 500mA LS/FS/HS</td>
+    <td class="tg-5dab" rowspan="6"><br><br><br>WiLink1835 <br>WiFi 802.11 b/g/n 2.4GHz.<br>Supportsthe following modes:</td>
+    <td class="tg-cmsg">2x2 MIMO</td>
   </tr>
   <tr>
-    <td class="tg-6k2t" rowspan="6">WiLink1835 <br>WiFi 802.11 b/g/n 2.4GHz.<br>Supportsthe following modes:</td>
-    <td class="tg-6k2t">2x2 MIMO</td>
+    <td class="tg-cmsg">AP</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">AP</td>
+    <td class="tg-cmsg">SmartConfig</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">SmartConfig</td>
+    <td class="tg-cmsg">STA</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">STA</td>
+    <td class="tg-cmsg">Wi-Fi Direct</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">Wi-Fi Direct</td>
+    <td class="tg-cmsg">Mesh over Wi-Fi based on 802.11s</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">Mesh over Wi-Fi based on 802.11s</td>
+    <td class="tg-5dab" rowspan="3"><br><br>Serial port<br></td>
+    <td class="tg-cmsg">UART0, UART1, UART5 available via 4 pin JST connectors</td>
   </tr>
   <tr>
-    <td class="tg-6k2t" rowspan="3">Serial port</td>
-    <td class="tg-6k2t">UART0, UART1, UART5 available via 4 pin JST connectors</td>
+    <td class="tg-cmsg">UART2 available via 6 pin JST connector (EM-506 GPS style connector)</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">UART2 available via 6 pin JST connector (EM-506 GPS style connector)</td>
+    <td class="tg-cmsg">UART4 RX available via 3 pin DSM2 connector</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">UART4 RX available via 3 pin DSM2 connector</td>
+    <td class="tg-5dab" colspan="2">WiLink 1835 Bluetooth 4.1 with BLE</td>
   </tr>
   <tr>
-    <td class="tg-yw4l" colspan="2">WiLink 1835 Bluetooth 4.1 with BLE</td>
+    <td class="tg-5dab" colspan="2">I2C1 available via 4 pin JST connector</td>
   </tr>
   <tr>
-    <td class="tg-6k2t" colspan="2">I2C1 available via 4 pin JST connector</td>
+    <td class="tg-5dab" colspan="2">SPI1 CS0 (S1.1) and SPI1 CS1 (S1.2) available via 6 pin JST connectors</td>
   </tr>
   <tr>
-    <td class="tg-yw4l" colspan="2">SPI1 CS0 (S1.1) and SPI1 CS1 (S1.2) available via 6 pin JST connectors</td>
+    <td class="tg-5dab" colspan="2">CAN available via 4 pin JST connector (includes TCAN1051 CAN transceiver)</td>
   </tr>
   <tr>
-    <td class="tg-6k2t" colspan="2">CAN available via 4 pin JST connector (includes TCAN1051 CAN transceiver)</td>
+    <td class="tg-5dab" colspan="2">8 GPIOs (GP0 and GPI1) available via 6 pin JST connectors</td>
   </tr>
   <tr>
-    <td class="tg-yw4l" colspan="2">8 GPIOs (GP0 and GPI1) available via 6 pin JST connectors</td>
+    <td class="tg-5dab" colspan="2">ADC inputs 0 to 3 available via 6 pin JST connector</td>
   </tr>
   <tr>
-    <td class="tg-6k2t" colspan="2">ADC inputs 0 to 3 available via 6 pin JST connector</td>
+    <td class="tg-5dab" colspan="2">3.3VDC and 5VDC power output via 4 pin JST connector</td>
   </tr>
   <tr>
-    <td class="tg-yw4l" colspan="2">3.3VDC and 5VDC power output via 4 pin JST connector</td>
+    <td class="tg-mghb" rowspan="3"><br><br><br>Power management</td>
+    <td class="tg-5dab" colspan="2">TPS65217C PMIC is used along with a separate LDO to provide power to the system (Integrated in the OSD3358)</td>
   </tr>
   <tr>
-    <td class="tg-6k2t" rowspan="3">Power management</td>
-    <td class="tg-6k2t" colspan="2">TPS65217C PMIC is used along with a separate LDO to provide power to the system (Integrated in the OSD3358)</td>
+    <td class="tg-5dab" colspan="2">2 cell (2S) LiPo battery charger (powered by 9 – 18VDC DC Jack): <br>i., 4 battery level LEDs; <br>ii.,1 charger LED</td>
   </tr>
   <tr>
-    <td class="tg-yw4l" colspan="2">2 cell (2S) LiPo battery charger (powered by 9 – 18VDC DC Jack): <br>i., 4 battery level LEDs; <br>ii.,1 charger LED</td>
+    <td class="tg-5dab" colspan="2">6VDC 4A regulator to drive servo motor outputs</td>
   </tr>
   <tr>
-    <td class="tg-6k2t" colspan="2">6VDC 4A regulator to drive servo motor outputs</td>
+    <td class="tg-mghb">Debug Support</td>
+    <td class="tg-5dab" colspan="2">JTAG test points</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">Debug Support</td>
-    <td class="tg-yw4l" colspan="2">JTAG test points</td>
+    <td class="tg-mghb"><br>Power Source</td>
+    <td class="tg-5dab" colspan="2">i.,  microUSB USB,<br>ii., 2 cell (2S) LiPo battery connector,<br>iii.,9 - 18VDC DC Jack</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">Power Source</td>
-    <td class="tg-6k2t" colspan="2">i.,  microUSB USB,<br>ii., 2 cell (2S) LiPo battery connector,<br>iii.,9 - 18VDC DC Jack</td>
+    <td class="tg-mghb">User Input / Output</td>
+    <td class="tg-5dab" colspan="2">i.,Power Button; ii.,Reset Button; iii.,Boot Button; iv.,2 user configurable buttons;<br>v.,6 user configurable LEDs;vi Power LED</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">User Input / Output</td>
-    <td class="tg-yw4l" colspan="2">i.,Power Button; ii.,Reset Button; iii.,Boot Button; iv.,2 user configurable buttons;<br>v.,6 user configurable LEDs;vi Power LED</td>
+    <td class="tg-mghb">Motor Control (requires power from either DC Jack or 2S battery)</td>
+    <td class="tg-5dab" colspan="2">i.,  4 DC motor drivers,<br>ii., 4 Quadrature encoder inputs,<br>iii.,8 Servo motor outputs</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">Motor Control (requires power from either DC Jack or 2S battery)</td>
-    <td class="tg-6k2t" colspan="2">i.,  4 DC motor drivers,<br>ii., 4 Quadrature encoder inputs,<br>iii.,8 Servo motor outputs</td>
+    <td class="tg-mghb">Sensors<br></td>
+    <td class="tg-5dab" colspan="2">i., 9 axis IMU,<br>ii.,Barometer</td>
   </tr>
-  <tr>
-    <td class="tg-yw4l">Sensors</td>
-    <td class="tg-yw4l" colspan="2">i., 9 axis IMU,<br>ii.,Barometer</td>
-  </tr>
+</tbody>
 </table>
 
 --------
@@ -195,11 +205,8 @@ When you receive a BeagleBone®Blue from seeed, the image is already burned into
 
 **i.** Click and download the latest image from [beagleboard.org](https://beagleboard.org/latest-images).
 
-<div class="admonition note" style="background:#6ab0de; color:#FFF">
-<p class="admonition-title">Note</p>
-<font face="Georgia" size=2 font color="white">The "IoT" images provide more free disk space if you don't need to use a graphical user interface (GUI).Due to sizing necessities, this download may take 30 minutes or more.
-</font>
-</div>
+!!!Note
+     The "IoT" images provide more free disk space if you don't need to use a graphical user interface (GUI).Due to sizing necessities, this download may take 30 minutes or more.
 
 The Debian distribution is provied for the boards. The file you download will have an .img.xz extension. This is a compressed sector-by-sector image of the SD card.
 
@@ -224,10 +231,8 @@ Connect the BeagleBone® Blue to your computer with the Micro-USB Cable.
 
 ![](https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/connect.jpg)
 
-<div class="admonition warning" style="background:#f0b37e; color:#FFF">
-<p class="admonition-title">Caution</p>
-<font face="Georgia" size=2 font color="white">Please plug the USB cable gently, otherwise you may damage the interface.Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click <a href="https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html"><B>here</B></a> to buy. If you want to use the Motor Control modules of BeagleBone® Blue, the power supply via USB Port is not sufficiant, you need to use DC-DC Port or 2S battery. </font>
-</div>
+!!!Caution
+     Please plug the USB cable gently, otherwise you may damage the interface.Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click <a href="https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html"><B>here</B></a> to buy. If you want to use the Motor Control modules of BeagleBone® Blue, the power supply via USB Port is not sufficiant, you need to use DC-DC Port or 2S battery. 
 
 You'll see the power (PWR or ON) LED lit steadily. Within a minute or so, you should see the other LEDs blinking in their default configurations.
 
@@ -243,41 +248,49 @@ With the latest images, it should no longer be necessary to install drivers for 
 
 
 <style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;border-color:#999;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#26ADE4;}
-.tg .tg-vn4c{background-color:#D2E4FC}
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-fhi2{background-color:#ffffff;color:#000000;font-size:20px;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-cmsg{background-color:#ffffff;color:#000000;font-size:18px;text-align:left;vertical-align:top}
+.tg .tg-366q{background-color:#ffffff;color:#000000;font-size:18px;text-align:center;vertical-align:top}
 </style>
-<table class="tg">
+<table class="tg" style="undefined;table-layout: fixed; width: 1723px">
+<colgroup>
+<col style="width: 316px">
+<col style="width: 299px">
+<col style="width: 1108px">
+</colgroup>
+<thead>
   <tr>
-    <th class="tg-031e">Operating System</th>
-    <th class="tg-031e">USB Drivers</th>
-    <th class="tg-031e">Comments</th>
+    <th class="tg-fhi2">Operating System</th>
+    <th class="tg-fhi2">USB Drivers</th>
+    <th class="tg-fhi2">Comments</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-366q">Windows <br>(64-bit)</td>
+    <td class="tg-366q"><a href="https://beagleboard.org/static/Drivers/Windows/BONE_D64.exe" target="_blank" rel="noopener noreferrer">64-bit installer</a><br></td>
+    <td class="tg-cmsg" rowspan="2">If in doubt, try the 64-bit installer first.<br><br>● Windows Driver Certification warning may pop up two or three times. Click "Ignore", "Install" or "Run"<br>● To check if you're running 32 or 64-bit Windows see this <a href="https://support.microsoft.com/kb/827218" target="_blank" rel="noopener noreferrer">Link</a>.<br>● On systems without the latest service release, you may get an error (0xc000007b). In that case, please click this <a href="https://www.microsoft.com/en-us/download/confirmation.aspx?id=13523" target="_blank" rel="noopener noreferrer">Link</a> to install and retry.<br>● You may need to reboot Windows.<br>● These drivers have been tested to work up to Windows 10.</td>
   </tr>
   <tr>
-    <td class="tg-vn4c">Windows <br>(64-bit)</td>
-    <td class="tg-vn4c"><a href="https://beagleboard.org/static/Drivers/Windows/BONE_D64.exe">64-bit installer</a></td>
-    <td class="tg-vn4c" rowspan="2">If in doubt, try the 64-bit installer first.<br><br>●1: Windows Driver Certification warning may pop up two or three times. Click "Ignore", "Install" or "Run"<br>●2: To check if you're running 32 or 64-bit Windows see this <a href="https://support.microsoft.com/kb/827218">Link</a>.<br>●3: On systems without the latest service release, you may get an error (0xc000007b). In that case, please click this <a href="https://www.microsoft.com/en-us/download/confirmation.aspx?id=13523">Link</a> to install and retry.<br>●4: You may need to reboot Windows.<br>●5: These drivers have been tested to work up to Windows 10</td>
+    <td class="tg-366q">Windows <br>(32-bit)</td>
+    <td class="tg-366q"><a href="https://beagleboard.org/static/Drivers/Windows/BONE_DRV.exe" target="_blank" rel="noopener noreferrer">32-bit installer</a><br></td>
   </tr>
   <tr>
-    <td class="tg-031e">Windows <br>(32-bit)</td>
-    <td class="tg-031e"><a href="https://beagleboard.org/static/Drivers/Windows/BONE_DRV.exe">32-bit installer</a></td>
+    <td class="tg-366q">Mac OS X<br></td>
+    <td class="tg-366q"> <a href="https://beagleboard.org/static/Drivers/MacOSX/RNDIS/HoRNDIS.pkg" target="_blank" rel="noopener noreferrer">Network</a>     <br> 	<a href="https://beagleboard.org/static/Drivers/MacOSX/FTDI/EnergiaFTDIDrivers2.2.18.pkg" target="_blank" rel="noopener noreferrer">Serial</a> 		</td>
+    <td class="tg-cmsg">Install both Network and Serial driver.</td>
   </tr>
   <tr>
-    <td class="tg-vn4c">Mac OS X</td>
-    <td class="tg-vn4c">
-		<br>
-		<a href="https://beagleboard.org/static/Drivers/MacOSX/RNDIS/HoRNDIS.pkg">Network</a>
-    <br>
-		<a href="https://beagleboard.org/static/Drivers/MacOSX/FTDI/EnergiaFTDIDrivers2.2.18.pkg">Serial</a>
-		</td>
-    <td class="tg-vn4c">Install both Network and Serial driver.</td>
+    <td class="tg-366q">Linux</td>
+    <td class="tg-366q"><a href="https://beagleboard.org/static/Drivers/Linux/FTDI/mkudevrule.sh" target="_blank" rel="noopener noreferrer">mkudevrule.sh</a></td>
+    <td class="tg-cmsg">Driver installation isn't required, but you might find a few udev rules helpful.</td>
   </tr>
-  <tr>
-    <td class="tg-031e">Linux</td>
-    <td class="tg-031e"><a href="https://beagleboard.org/static/Drivers/Linux/FTDI/mkudevrule.sh">mkudevrule.sh</a></td>
-    <td class="tg-031e">Driver installation isn't required, but you might find a few udev rules helpful.</td>
-  </tr>
+</tbody>
 </table>
 
 
@@ -462,403 +475,403 @@ The list belew is the Grove modules that work well with BeagleBone® Blue.
 
 
 <style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;border-color:#999;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#26ADE4;}
-.tg .tg-yw4l{vertical-align:top}
-.tg .tg-6k2t{background-color:#D2E4FC;vertical-align:top}
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-fhi2{background-color:#ffffff;color:#000000;font-size:20px;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-366q{background-color:#ffffff;color:#000000;font-size:18px;text-align:center;vertical-align:top}
 </style>
-<table class="tg" style="undefined;table-layout: fixed; width: 545px">
-<colgroup>
-<col style="width: 93px">
-<col style="width: 270px">
-<col style="width: 60px">
-<col style="width: 122px">
-</colgroup>
+<table class="tg">
+<thead>
   <tr>
-    <th class="tg-yw4l">SKU</th>
-    <th class="tg-yw4l">item</th>
-    <th class="tg-yw4l">I/O type</th>
-    <th class="tg-yw4l">Working Voltage</th>
+    <th class="tg-fhi2">SKU</th>
+    <th class="tg-fhi2">Item</th>
+    <th class="tg-fhi2">I/O type</th>
+    <th class="tg-fhi2">Working Voltage</th>
   </tr>
+</thead>
+<tbody>
   <tr>
-    <td class="tg-6k2t">101020017</td>
-    <td class="tg-6k2t">Grove - Rotary Angle Sensor</td>
-    <td class="tg-6k2t">Analog</td>
-    <td class="tg-6k2t">Can work on 1.8V</td>
+    <td class="tg-366q">101020017</td>
+    <td class="tg-366q">Grove - Rotary Angle Sensor</td>
+    <td class="tg-366q">Analog</td>
+    <td class="tg-366q">Can work on 1.8V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">101020048</td>
-    <td class="tg-yw4l">Grove - Rotary Angle Sensor(P)</td>
-    <td class="tg-yw4l">Analog</td>
-    <td class="tg-yw4l">Can work on 1.8V</td>
+    <td class="tg-366q">101020048</td>
+    <td class="tg-366q">Grove - Rotary Angle Sensor(P)</td>
+    <td class="tg-366q">Analog</td>
+    <td class="tg-366q">Can work on 1.8V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">101020036</td>
-    <td class="tg-6k2t">Grove - Slide Potentiometer</td>
-    <td class="tg-6k2t">Analog</td>
-    <td class="tg-6k2t">Can work on 1.8V</td>
+    <td class="tg-366q">101020036</td>
+    <td class="tg-366q">Grove - Slide Potentiometer</td>
+    <td class="tg-366q">Analog</td>
+    <td class="tg-366q">Can work on 1.8V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">101020031</td>
-    <td class="tg-yw4l">Grove - Piezo Vibration Sensor</td>
-    <td class="tg-yw4l">Analog</td>
-    <td class="tg-yw4l">Can work on 1.8V</td>
+    <td class="tg-366q">101020031</td>
+    <td class="tg-366q">Grove - Piezo Vibration Sensor</td>
+    <td class="tg-366q">Analog</td>
+    <td class="tg-366q">Can work on 1.8V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">101020003</td>
-    <td class="tg-6k2t">Grove - Button</td>
-    <td class="tg-6k2t">Digital</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">101020003</td>
+    <td class="tg-366q">Grove - Button</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">111020000</td>
-    <td class="tg-yw4l">Grove - Button(P)</td>
-    <td class="tg-yw4l">Digital</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">111020000</td>
+    <td class="tg-366q">Grove - Button(P)</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">111020001</td>
-    <td class="tg-6k2t">Grove - Encoder</td>
-    <td class="tg-6k2t">Digital</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">111020001</td>
+    <td class="tg-366q">Grove - Encoder</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">101020004</td>
-    <td class="tg-yw4l">Grove - Switch(P)</td>
-    <td class="tg-yw4l">Digital</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">101020004</td>
+    <td class="tg-366q">Grove - Switch(P)</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">101020025</td>
-    <td class="tg-6k2t">Grove - Tilt Switch</td>
-    <td class="tg-6k2t">Digital</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">101020025</td>
+    <td class="tg-366q">Grove - Tilt Switch</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">101020018</td>
-    <td class="tg-yw4l">Grove - Water Sensor</td>
-    <td class="tg-yw4l">Digital</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">101020018</td>
+    <td class="tg-366q">Grove - Water Sensor</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">101020005</td>
-    <td class="tg-6k2t">Grove - Collision Sensor</td>
-    <td class="tg-6k2t">Digital</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">101020005</td>
+    <td class="tg-366q">Grove - Collision Sensor</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">103020030</td>
-    <td class="tg-yw4l">Grove - Mouse Encoder</td>
-    <td class="tg-yw4l">Digital</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">103020030</td>
+    <td class="tg-366q">Grove - Mouse Encoder</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">104030007</td>
-    <td class="tg-6k2t">Grove - Green LED</td>
-    <td class="tg-6k2t">Digital</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">104030007</td>
+    <td class="tg-366q">Grove - Green LED</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">104030005</td>
-    <td class="tg-yw4l">Grove - Red LED</td>
-    <td class="tg-yw4l">Digital</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">104030005</td>
+    <td class="tg-366q">Grove - Red LED</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">101020172</td>
-    <td class="tg-6k2t">Grove - Line Finder v1.1</td>
-    <td class="tg-6k2t">Digital</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">101020172</td>
+    <td class="tg-366q">Grove - Line Finder v1.1</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">101020018</td>
-    <td class="tg-yw4l">Grove - Water Sensor</td>
-    <td class="tg-yw4l">Digital</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">101020018</td>
+    <td class="tg-366q">Grove - Water Sensor</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">101020019</td>
-    <td class="tg-6k2t">Grove - Temperature&amp;Humidity Sensor Pro</td>
-    <td class="tg-6k2t">Digital</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">101020019</td>
+    <td class="tg-366q">Grove - Temperature&amp;Humidity Sensor Pro</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">101020020</td>
-    <td class="tg-yw4l">Grove - PIR Motion Sensor</td>
-    <td class="tg-yw4l">Digital</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">101020020</td>
+    <td class="tg-366q">Grove - PIR Motion Sensor</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">101020052</td>
-    <td class="tg-6k2t">Grove - GSR sensor</td>
-    <td class="tg-6k2t">Digital</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">101020052</td>
+    <td class="tg-366q">Grove - GSR sensor</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">101020175</td>
-    <td class="tg-yw4l">Grove - IR Distance Interrupter v1.2</td>
-    <td class="tg-yw4l">Digital</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">101020175</td>
+    <td class="tg-366q">Grove - IR Distance Interrupter v1.2</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">101020033</td>
-    <td class="tg-6k2t">Grove - Ear-clip Heart Rate Sensor</td>
-    <td class="tg-6k2t">Digital</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">101020033</td>
+    <td class="tg-366q">Grove - Ear-clip Heart Rate Sensor</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">101020037</td>
-    <td class="tg-yw4l">Grove - Touch Sensor</td>
-    <td class="tg-yw4l">Digital</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">101020037</td>
+    <td class="tg-366q">Grove - Touch Sensor</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">101020030</td>
-    <td class="tg-6k2t">Grove - Digital Light Sensor</td>
-    <td class="tg-6k2t">Digital</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">101020030</td>
+    <td class="tg-366q">Grove - Digital Light Sensor</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">101020232</td>
-    <td class="tg-yw4l">Grove - Speech Recognizer v1.0</td>
-    <td class="tg-yw4l">Digital</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">101020232</td>
+    <td class="tg-366q">Grove - Speech Recognizer v1.0</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">101020005</td>
-    <td class="tg-6k2t">Grove - Collision Sensor</td>
-    <td class="tg-6k2t">Digital</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">101020005</td>
+    <td class="tg-366q">Grove - Collision Sensor</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">105020005</td>
-    <td class="tg-yw4l">Grove - EL Driver</td>
-    <td class="tg-yw4l">Digital</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">105020005</td>
+    <td class="tg-366q">Grove - EL Driver</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">104030009</td>
-    <td class="tg-6k2t">Grove - White LED</td>
-    <td class="tg-6k2t">Digital</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">104030009</td>
+    <td class="tg-366q">Grove - White LED</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">104030010</td>
-    <td class="tg-yw4l">Grove - Blue LED</td>
-    <td class="tg-yw4l">Digital</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">104030010</td>
+    <td class="tg-366q">Grove - Blue LED</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">104030005</td>
-    <td class="tg-6k2t">Grove - Red LED</td>
-    <td class="tg-6k2t">Digital</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">104030005</td>
+    <td class="tg-366q">Grove - Red LED</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">104030007</td>
-    <td class="tg-yw4l">Grove - Green LED</td>
-    <td class="tg-yw4l">Digital</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">104030007</td>
+    <td class="tg-366q">Grove - Green LED</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">104030014</td>
-    <td class="tg-6k2t">Grove - Multi Color Flash LED (5mm)</td>
-    <td class="tg-6k2t">Digital</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">104030014</td>
+    <td class="tg-366q">Grove - Multi Color Flash LED (5mm)</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">104020001</td>
-    <td class="tg-yw4l">Grove - Variable Color LED</td>
-    <td class="tg-yw4l">Digital</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">104020001</td>
+    <td class="tg-366q">Grove - Variable Color LED</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">104020005</td>
-    <td class="tg-6k2t">Grove - LED String Light</td>
-    <td class="tg-6k2t">Digital</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">104020005</td>
+    <td class="tg-366q">Grove - LED String Light</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">104020048</td>
-    <td class="tg-yw4l">Grove - Chainable RGB LED v2.0</td>
-    <td class="tg-yw4l">Digital</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">104020048</td>
+    <td class="tg-366q">Grove - Chainable RGB LED v2.0</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">101020004</td>
-    <td class="tg-6k2t">Grove - Switch(P)</td>
-    <td class="tg-6k2t">Digital</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">101020004</td>
+    <td class="tg-366q">Grove - Switch(P)</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">111020000</td>
-    <td class="tg-yw4l">Grove - Button(P)</td>
-    <td class="tg-yw4l">Digital</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">111020000</td>
+    <td class="tg-366q">Grove - Button(P)</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">101020003</td>
-    <td class="tg-6k2t">Grove - Button</td>
-    <td class="tg-6k2t">Digital</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">101020003</td>
+    <td class="tg-366q">Grove - Button</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">101020038</td>
-    <td class="tg-yw4l">Grove - Magnetic Switch</td>
-    <td class="tg-yw4l">Digital</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">101020038</td>
+    <td class="tg-366q">Grove - Magnetic Switch</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">101020025</td>
-    <td class="tg-6k2t">Grove - Tilt Switch</td>
-    <td class="tg-6k2t">Digital</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">101020025</td>
+    <td class="tg-366q">Grove - Tilt Switch</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">103020005</td>
-    <td class="tg-yw4l">Grove - Relay</td>
-    <td class="tg-yw4l">Digital</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">103020005</td>
+    <td class="tg-366q">Grove - Relay</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">107020000</td>
-    <td class="tg-6k2t">Grove - Buzzer</td>
-    <td class="tg-6k2t">Digital</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">107020000</td>
+    <td class="tg-366q">Grove - Buzzer</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">103020014</td>
-    <td class="tg-yw4l">Grove - Dry-Reed Relay</td>
-    <td class="tg-yw4l">Digital</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">103020014</td>
+    <td class="tg-366q">Grove - Dry-Reed Relay</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">105020003</td>
-    <td class="tg-6k2t">Grove - Vibration Motor</td>
-    <td class="tg-6k2t">Digital</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">105020003</td>
+    <td class="tg-366q">Grove - Vibration Motor</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">108020021</td>
-    <td class="tg-yw4l">Grove - Mini Fan v1.1</td>
-    <td class="tg-yw4l">Digital</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">108020021</td>
+    <td class="tg-366q">Grove - Mini Fan v1.1</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">103020004</td>
-    <td class="tg-6k2t">Grove - Solid State Relay</td>
-    <td class="tg-6k2t">Digital</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">103020004</td>
+    <td class="tg-366q">Grove - Solid State Relay</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">103020007</td>
-    <td class="tg-yw4l">Grove - Screw Terminal</td>
-    <td class="tg-yw4l">Digital</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">103020007</td>
+    <td class="tg-366q">Grove - Screw Terminal</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">103020008</td>
-    <td class="tg-6k2t">Grove - MOSFET</td>
-    <td class="tg-6k2t">Digital</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">103020008</td>
+    <td class="tg-366q">Grove - MOSFET</td>
+    <td class="tg-366q">Digital</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">101020212</td>
-    <td class="tg-yw4l">Grove - Temp&amp;Humi Sensor(SHT31)</td>
-    <td class="tg-yw4l">I2C</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">101020212</td>
+    <td class="tg-366q">Grove - Temp&amp;Humi Sensor(SHT31)</td>
+    <td class="tg-366q">I2C</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">101020192</td>
-    <td class="tg-6k2t">Grove - Barometer Sensor (BMP280)</td>
-    <td class="tg-6k2t">I2C</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">101020192</td>
+    <td class="tg-366q">Grove - Barometer Sensor (BMP280)</td>
+    <td class="tg-366q">I2C</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">101020080</td>
-    <td class="tg-yw4l">Grove - IMU 9DOF v2.0</td>
-    <td class="tg-yw4l">I2C</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">101020080</td>
+    <td class="tg-366q">Grove - IMU 9DOF v2.0</td>
+    <td class="tg-366q">I2C</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">101020054</td>
-    <td class="tg-6k2t">Grove - 3-Axis Digital Accelerometer(±16g)</td>
-    <td class="tg-6k2t">I2C</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">101020054</td>
+    <td class="tg-366q">Grove - 3-Axis Digital Accelerometer(±16g)</td>
+    <td class="tg-366q">I2C</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">101020252</td>
-    <td class="tg-yw4l">Grove - IMU 10DOF v2.0</td>
-    <td class="tg-yw4l">I2C</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">101020252</td>
+    <td class="tg-366q">Grove - IMU 10DOF v2.0</td>
+    <td class="tg-366q">I2C</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">101020193</td>
-    <td class="tg-6k2t">Grove - Barometer Sensor(BME280)</td>
-    <td class="tg-6k2t">I2C</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">101020193</td>
+    <td class="tg-366q">Grove - Barometer Sensor(BME280)</td>
+    <td class="tg-366q">I2C</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">101020082</td>
-    <td class="tg-yw4l">Grove - Finger-clip Heart Rate Sensor with shell</td>
-    <td class="tg-yw4l">I2C</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">101020082</td>
+    <td class="tg-366q">Grove - Finger-clip Heart Rate Sensor with shell</td>
+    <td class="tg-366q">I2C</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">101020050</td>
-    <td class="tg-6k2t">Grove - 3-Axis Digital Gyro</td>
-    <td class="tg-6k2t">I2C</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">101020050</td>
+    <td class="tg-366q">Grove - 3-Axis Digital Gyro</td>
+    <td class="tg-366q">I2C</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">103020024</td>
-    <td class="tg-yw4l">Grove - Finger-clip Heart Rate Sensor</td>
-    <td class="tg-yw4l">I2C</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">103020024</td>
+    <td class="tg-366q">Grove - Finger-clip Heart Rate Sensor</td>
+    <td class="tg-366q">I2C</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">101020081</td>
-    <td class="tg-6k2t">Grove - 6-Axis Accelerometer&amp;Compass v2.0</td>
-    <td class="tg-6k2t">I2C</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">101020081</td>
+    <td class="tg-366q">Grove - 6-Axis Accelerometer&amp;Compass v2.0</td>
+    <td class="tg-366q">I2C</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">101020071</td>
-    <td class="tg-yw4l">Grove - 3-Axis Digital Accelerometer(±400g)</td>
-    <td class="tg-yw4l">I2C</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">101020071</td>
+    <td class="tg-366q">Grove - 3-Axis Digital Accelerometer(±400g)</td>
+    <td class="tg-366q">I2C</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">104030008</td>
-    <td class="tg-6k2t">Grove - OLED Display 0.96''</td>
-    <td class="tg-6k2t">I2C</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">104030008</td>
+    <td class="tg-366q">Grove - OLED Display 0.96''</td>
+    <td class="tg-366q">I2C</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">104030011</td>
-    <td class="tg-yw4l">Grove - OLED Display 1.12''</td>
-    <td class="tg-yw4l">I2C</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">104030011</td>
+    <td class="tg-366q">Grove - OLED Display 1.12''</td>
+    <td class="tg-366q">I2C</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">103020006</td>
-    <td class="tg-6k2t">Grove - I2C Hub</td>
-    <td class="tg-6k2t">I2C</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">103020006</td>
+    <td class="tg-366q">Grove - I2C Hub</td>
+    <td class="tg-366q">I2C</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">103020013</td>
-    <td class="tg-yw4l">Grove - I2C ADC</td>
-    <td class="tg-yw4l">I2C</td>
-    <td class="tg-yw4l">3.3V</td>
+    <td class="tg-366q">103020013</td>
+    <td class="tg-366q">Grove - I2C ADC</td>
+    <td class="tg-366q">I2C</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
   <tr>
-    <td class="tg-6k2t">113020003</td>
-    <td class="tg-6k2t">Grove - GPS</td>
-    <td class="tg-6k2t">UART</td>
-    <td class="tg-6k2t">3.3V</td>
+    <td class="tg-366q">113020003</td>
+    <td class="tg-366q">Grove - GPS</td>
+    <td class="tg-366q">UART</td>
+    <td class="tg-366q">3.3V</td>
   </tr>
+</tbody>
 </table>
 
 
