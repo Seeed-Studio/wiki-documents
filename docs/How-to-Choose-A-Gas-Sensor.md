@@ -1,9 +1,9 @@
 ---
-name: How to Chose A Gas Sensor
+name: How to Choose A Gas Sensor
 category: Tutorial
 oldwikiname:  How to Chose A Gas Sensor
 prodimagename:
-surveyurl: https://www.research.net/r/How_to_Chose_A_Gas_Sensor
+surveyurl: 
 ---
 
 If you search “gas sensor” on [www.seeedstudio.com](https://www.seeedstudio.com) , you can find a lot of gas sensor. We know that the air component is diverse, and a certain gas sensor can detect one or more air components, so we designed a series of gas sensor.
