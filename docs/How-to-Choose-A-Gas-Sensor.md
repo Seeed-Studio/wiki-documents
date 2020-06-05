@@ -22,12 +22,12 @@ It’s obvious that different sensor can detect the same gas. Such as MQ-2, MQ-3
   vertical-align:top}
 .tg .tg-q7v3{background-color:#ffffff;border-color:#000000;color:#000000;font-size:16px;text-align:center;vertical-align:top}
 </style>
-<table class="tg" style="undefined;table-layout: fixed; width: 984px">
+<table class="tg" style="undefined;table-layout: fixed; width: 800px">
 <colgroup>
-<col style="width: 229px">
-<col style="width: 248px">
-<col style="width: 256px">
-<col style="width: 251px">
+<col style="width: 119px">
+<col style="width: 259px">
+<col style="width: 271px">
+<col style="width: 151px">
 </colgroup>
 <thead>
   <tr>
@@ -45,7 +45,7 @@ It’s obvious that different sensor can detect the same gas. Such as MQ-2, MQ-3
     <td class="tg-q7v3">101020012</td>
   </tr>
   <tr>
-    <td class="tg-q7v3" rowspan="5"><br><br><br>CO</td>
+    <td class="tg-q7v3" rowspan="5"><br><br>CO</td>
     <td class="tg-q7v3">200~10000ppm</td>
     <td class="tg-q7v3">Grove-Gas Sensor(MQ2)</td>
     <td class="tg-q7v3">101020055</td>
@@ -71,7 +71,7 @@ It’s obvious that different sensor can detect the same gas. Such as MQ-2, MQ-3
     <td class="tg-q7v3">101020088</td>
   </tr>
   <tr>
-    <td class="tg-q7v3" rowspan="5"><br><br><br>Alcohol</td>
+    <td class="tg-q7v3" rowspan="5"><br><br>Alcohol</td>
     <td class="tg-q7v3">200~10000pp</td>
     <td class="tg-q7v3">Grove-Gas Sensor(MQ5)</td>
     <td class="tg-q7v3">101020056</td>
@@ -109,7 +109,7 @@ It’s obvious that different sensor can detect the same gas. Such as MQ-2, MQ-3
     <td class="tg-q7v3">101020001</td>
   </tr>
   <tr>
-    <td class="tg-q7v3" rowspan="5"><br><br><br>CH4</td>
+    <td class="tg-q7v3" rowspan="5"><br><br>CH4</td>
     <td class="tg-q7v3">200~10000ppm</td>
     <td class="tg-q7v3">Grove-Gas Sensor(MQ5)</td>
     <td class="tg-q7v3">101020056</td>
@@ -164,7 +164,7 @@ It’s obvious that different sensor can detect the same gas. Such as MQ-2, MQ-3
     <td class="tg-q7v3">01020006</td>
   </tr>
   <tr>
-    <td class="tg-q7v3" rowspan="4"><br><br>LPG</td>
+    <td class="tg-q7v3" rowspan="4"><br>LPG</td>
     <td class="tg-q7v3">200~10000ppm</td>
     <td class="tg-q7v3">Grove-Gas Sensor(MQ5)</td>
     <td class="tg-q7v3">101020056</td>
@@ -185,7 +185,7 @@ It’s obvious that different sensor can detect the same gas. Such as MQ-2, MQ-3
     <td class="tg-q7v3">01020006</td>
   </tr>
   <tr>
-    <td class="tg-q7v3" rowspan="3"><br>H2</td>
+    <td class="tg-q7v3" rowspan="3">H2</td>
     <td class="tg-q7v3">300~5000ppm</td>
     <td class="tg-q7v3">Grove-Gas Sensor(MQ2)</td>
     <td class="tg-q7v3">101020055</td>
@@ -241,184 +241,185 @@ And sometimes, we want to test many gases in one sensor, so how should we choose
   overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-v0nz{background-color:#ffffff;border-color:#000000;color:#000000;text-align:center;vertical-align:top}
-.tg .tg-wzu8{background-color:#ffffff;border-color:#000000;color:#000000;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-l5ls{background-color:#ffffff;border-color:#000000;color:#000000;font-size:16px;font-weight:bold;text-align:center;
+  vertical-align:top}
+.tg .tg-q7v3{background-color:#ffffff;border-color:#000000;color:#000000;font-size:16px;text-align:center;vertical-align:top}
 </style>
-<table class="tg" style="undefined;table-layout: fixed; width: 1024px">
+<table class="tg" style="undefined;table-layout: fixed; width: 799px">
 <colgroup>
-<col style="width: 280px">
-<col style="width: 252px">
-<col style="width: 244px">
-<col style="width: 248px">
+<col style="width: 281px">
+<col style="width: 127px">
+<col style="width: 191px">
+<col style="width: 200px">
 </colgroup>
 <thead>
   <tr>
-    <th class="tg-wzu8">Product Name</th>
-    <th class="tg-wzu8">SKU</th>
-    <th class="tg-wzu8">Measurable Gases</th>
-    <th class="tg-wzu8">Range</th>
+    <th class="tg-l5ls">Product Name</th>
+    <th class="tg-l5ls">SKU</th>
+    <th class="tg-l5ls">Measurable Gases</th>
+    <th class="tg-l5ls">Range</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-v0nz" rowspan="8"><br><br><br><br><br><br>Grove-Multichannel Gas Sensor</td>
-    <td class="tg-v0nz" rowspan="8"><br><br><br><br><br><br>101020088</td>
-    <td class="tg-v0nz">CO</td>
-    <td class="tg-v0nz">0~1000ppm</td>
+    <td class="tg-q7v3" rowspan="8"><br><br><br><br><br>Grove-Multichannel Gas Sensor</td>
+    <td class="tg-q7v3" rowspan="8"><br><br><br><br><br>101020088</td>
+    <td class="tg-q7v3">CO</td>
+    <td class="tg-q7v3">0~1000ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">Alcohol</td>
-    <td class="tg-v0nz">10~500ppm</td>
+    <td class="tg-q7v3">Alcohol</td>
+    <td class="tg-q7v3">10~500ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">CH4</td>
-    <td class="tg-v0nz">&gt;1000ppm</td>
+    <td class="tg-q7v3">CH4</td>
+    <td class="tg-q7v3">&gt;1000ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">Propane</td>
-    <td class="tg-v0nz">&gt;1000ppm</td>
+    <td class="tg-q7v3">Propane</td>
+    <td class="tg-q7v3">&gt;1000ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">NO2</td>
-    <td class="tg-v0nz">0.05~10ppm</td>
+    <td class="tg-q7v3">NO2</td>
+    <td class="tg-q7v3">0.05~10ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">NH3</td>
-    <td class="tg-v0nz">1~500p</td>
+    <td class="tg-q7v3">NH3</td>
+    <td class="tg-q7v3">1~500p</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">Iso-butane</td>
-    <td class="tg-v0nz">&gt;1000pm</td>
+    <td class="tg-q7v3">Iso-butane</td>
+    <td class="tg-q7v3">&gt;1000pm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">H2</td>
-    <td class="tg-v0nz">1~1000ppm</td>
+    <td class="tg-q7v3">H2</td>
+    <td class="tg-q7v3">1~1000ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz" rowspan="8"><br><br><br><br><br><br>Grove-Gas Sensor(MQ2)</td>
-    <td class="tg-v0nz" rowspan="8"><br><br><br><br><br><br>101020055</td>
-    <td class="tg-v0nz">CO</td>
-    <td class="tg-v0nz">200~10000ppm</td>
+    <td class="tg-q7v3" rowspan="8"><br><br><br><br><br>Grove-Gas Sensor(MQ2)</td>
+    <td class="tg-q7v3" rowspan="8"><br><br><br><br><br>101020055</td>
+    <td class="tg-q7v3">CO</td>
+    <td class="tg-q7v3">200~10000ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">Alcohol</td>
-    <td class="tg-v0nz">100~2000ppm</td>
+    <td class="tg-q7v3">Alcohol</td>
+    <td class="tg-q7v3">100~2000ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">CH4</td>
-    <td class="tg-v0nz">5000^20000ppm</td>
+    <td class="tg-q7v3">CH4</td>
+    <td class="tg-q7v3">5000^20000ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">Propane</td>
-    <td class="tg-v0nz">200~5000ppm</td>
+    <td class="tg-q7v3">Propane</td>
+    <td class="tg-q7v3">200~5000ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">LPG</td>
-    <td class="tg-v0nz">200~5000ppm</td>
+    <td class="tg-q7v3">LPG</td>
+    <td class="tg-q7v3">200~5000ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">Butane</td>
-    <td class="tg-v0nz">3000~5000ppm</td>
+    <td class="tg-q7v3">Butane</td>
+    <td class="tg-q7v3">3000~5000ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">H2</td>
-    <td class="tg-v0nz">300~500pp</td>
+    <td class="tg-q7v3">H2</td>
+    <td class="tg-q7v3">300~500pp</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">Smoke</td>
-    <td class="tg-v0nz">200~10000ppm</td>
+    <td class="tg-q7v3">Smoke</td>
+    <td class="tg-q7v3">200~10000ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz" rowspan="6"><br><br><br><br>Grove-Gas Sensor(MQ3)</td>
-    <td class="tg-v0nz" rowspan="6"><br><br><br><br>101020006</td>
-    <td class="tg-v0nz">CO</td>
-    <td class="tg-v0nz">0.05~10ppm</td>
+    <td class="tg-q7v3" rowspan="6"><br><br><br>Grove-Gas Sensor(MQ3)</td>
+    <td class="tg-q7v3" rowspan="6"><br><br><br>101020006</td>
+    <td class="tg-q7v3">CO</td>
+    <td class="tg-q7v3">0.05~10ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">Alcohol</td>
-    <td class="tg-v0nz">0.05~10ppm</td>
+    <td class="tg-q7v3">Alcohol</td>
+    <td class="tg-q7v3">0.05~10ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">CH4</td>
-    <td class="tg-v0nz">0.05~10ppm</td>
+    <td class="tg-q7v3">CH4</td>
+    <td class="tg-q7v3">0.05~10ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">Hexane</td>
-    <td class="tg-v0nz">0.05~10ppm</td>
+    <td class="tg-q7v3">Hexane</td>
+    <td class="tg-q7v3">0.05~10ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">Benzine</td>
-    <td class="tg-v0nz">0.05~10ppm</td>
+    <td class="tg-q7v3">Benzine</td>
+    <td class="tg-q7v3">0.05~10ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">LPG</td>
-    <td class="tg-v0nz">0.05~10ppm</td>
+    <td class="tg-q7v3">LPG</td>
+    <td class="tg-q7v3">0.05~10ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz" rowspan="5"><br><br><br>Grove-Gas Sensor(MQ5)</td>
-    <td class="tg-v0nz" rowspan="5"><br><br><br>101020056</td>
-    <td class="tg-v0nz">CO</td>
-    <td class="tg-v0nz">200~10000ppm</td>
+    <td class="tg-q7v3" rowspan="5"><br><br>Grove-Gas Sensor(MQ5)</td>
+    <td class="tg-q7v3" rowspan="5"><br><br>101020056</td>
+    <td class="tg-q7v3">CO</td>
+    <td class="tg-q7v3">200~10000ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">Alcohol</td>
-    <td class="tg-v0nz">200~10000ppm</td>
+    <td class="tg-q7v3">Alcohol</td>
+    <td class="tg-q7v3">200~10000ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">CH4</td>
-    <td class="tg-v0nz">200~10000ppm</td>
+    <td class="tg-q7v3">CH4</td>
+    <td class="tg-q7v3">200~10000ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">LPG</td>
-    <td class="tg-v0nz">200~10000ppm</td>
+    <td class="tg-q7v3">LPG</td>
+    <td class="tg-q7v3">200~10000ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">H2</td>
-    <td class="tg-v0nz">200~10000ppm</td>
+    <td class="tg-q7v3">H2</td>
+    <td class="tg-q7v3">200~10000ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz" rowspan="3"><br>Grove-Gas Sensor(MQ9)</td>
-    <td class="tg-v0nz" rowspan="3"><br>101020045</td>
-    <td class="tg-v0nz">CO</td>
-    <td class="tg-v0nz">20~2000ppm</td>
+    <td class="tg-q7v3" rowspan="3">Grove-Gas Sensor(MQ9)</td>
+    <td class="tg-q7v3" rowspan="3">101020045</td>
+    <td class="tg-q7v3">CO</td>
+    <td class="tg-q7v3">20~2000ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">CH4</td>
-    <td class="tg-v0nz">500~10000ppm</td>
+    <td class="tg-q7v3">CH4</td>
+    <td class="tg-q7v3">500~10000ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">LPG</td>
-    <td class="tg-v0nz">500~10000ppm</td>
+    <td class="tg-q7v3">LPG</td>
+    <td class="tg-q7v3">500~10000ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">Grove-Dust Sensor</td>
-    <td class="tg-v0nz">101020012</td>
-    <td class="tg-v0nz">Dust</td>
-    <td class="tg-v0nz">0~8000pcs/0.01cf</td>
+    <td class="tg-q7v3">Grove-Dust Sensor</td>
+    <td class="tg-q7v3">101020012</td>
+    <td class="tg-q7v3">Dust</td>
+    <td class="tg-q7v3">0~8000pcs/0.01cf</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">Grove-Alcohol Sensor</td>
-    <td class="tg-v0nz">101020044</td>
-    <td class="tg-v0nz">Alcohol</td>
-    <td class="tg-v0nz">20~1000ppm</td>
+    <td class="tg-q7v3">Grove-Alcohol Sensor</td>
+    <td class="tg-q7v3">101020044</td>
+    <td class="tg-q7v3">Alcohol</td>
+    <td class="tg-q7v3">20~1000ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">Grove-Gas Sensor(O2)<br></td>
-    <td class="tg-v0nz">101020002</td>
-    <td class="tg-v0nz">O2</td>
-    <td class="tg-v0nz">0~25%VOL<br>(0~25000pp)</td>
+    <td class="tg-q7v3">Grove-Gas Sensor(O2)<br></td>
+    <td class="tg-q7v3">101020002</td>
+    <td class="tg-q7v3">O2</td>
+    <td class="tg-q7v3">0~25%VOL<br>(0~25000pp)</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">Grove-HCHO Sensor</td>
-    <td class="tg-v0nz">101020001</td>
-    <td class="tg-v0nz">HCHO</td>
-    <td class="tg-v0nz">5~40ppm</td>
+    <td class="tg-q7v3">Grove-HCHO Sensor</td>
+    <td class="tg-q7v3">101020001</td>
+    <td class="tg-q7v3">HCHO</td>
+    <td class="tg-q7v3">5~40ppm</td>
   </tr>
   <tr>
-    <td class="tg-v0nz">Grove-CO2 Sensor</td>
-    <td class="tg-v0nz">101020067</td>
-    <td class="tg-v0nz">CO2</td>
-    <td class="tg-v0nz">0~200ppm</td>
+    <td class="tg-q7v3">Grove-CO2 Sensor</td>
+    <td class="tg-q7v3">101020067</td>
+    <td class="tg-q7v3">CO2</td>
+    <td class="tg-q7v3">0~200ppm</td>
   </tr>
 </tbody>
 </table>
