@@ -49,10 +49,10 @@ Grove - Multichannel Gas Sensor V2 has 4 measuring units, each of them is sensit
   vertical-align:top}
 .tg .tg-q7v3{background-color:#ffffff;border-color:#000000;color:#000000;font-size:16px;text-align:center;vertical-align:top}
 </style>
-<table class="tg" style="undefined;table-layout: fixed; width: 896px">
+<table class="tg" style="undefined;table-layout: fixed; width: 828px">
 <colgroup>
-<col style="width: 436px">
-<col style="width: 460px">
+<col style="width: 412px">
+<col style="width: 416px">
 </colgroup>
 <thead>
   <tr>
@@ -192,12 +192,12 @@ Grove - Multichannel Gas Sensor V2 has 4 measuring units, each of them is sensit
   vertical-align:top}
 .tg .tg-q7v3{background-color:#ffffff;border-color:#000000;color:#000000;font-size:16px;text-align:center;vertical-align:top}
 </style>
-<table class="tg" style="undefined;table-layout: fixed; width: 1084px">
+<table class="tg" style="undefined;table-layout: fixed; width: 822px">
 <colgroup>
-<col style="width: 547px">
+<col style="width: 296px">
 <col style="width: 211px">
 <col style="width: 35px">
-<col style="width: 291px">
+<col style="width: 280px">
 </colgroup>
 <thead>
   <tr>
@@ -215,7 +215,7 @@ Grove - Multichannel Gas Sensor V2 has 4 measuring units, each of them is sensit
     <td class="tg-q7v3"><span style="font-weight:normal">1～500ppm</span></td>
   </tr>
   <tr>
-    <td class="tg-q7v3" rowspan="3"><br><br><span style="font-weight:bold">Standard circuit conditions</span><br><br> </td>
+    <td class="tg-q7v3" rowspan="3"><span style="font-weight:bold">Standard circuit conditions</span><br><br> </td>
     <td class="tg-q7v3"><span style="font-weight:normal">Loop voltage</span></td>
     <td class="tg-q7v3"><span style="font-weight:normal">VC</span></td>
     <td class="tg-q7v3"><span style="font-weight:normal">≤24V DC</span></td>
@@ -257,7 +257,7 @@ Grove - Multichannel Gas Sensor V2 has 4 measuring units, each of them is sensit
     <td class="tg-q7v3"><span style="font-weight:normal">≤0.9 (R200ppm / R50ppm Ethanol)</span></td>
   </tr>
   <tr>
-    <td class="tg-q7v3" rowspan="2"><br><span style="font-weight:bold">Standard test conditions</span><br></td>
+    <td class="tg-l5ls" rowspan="2"><span style="font-weight:bold">Standard test conditions</span><br></td>
     <td class="tg-q7v3" colspan="2"><span style="font-weight:normal">Temperature / Humidity</span></td>
     <td class="tg-q7v3"><span style="font-weight:normal">20℃ ± 2℃；55% ± 5%RH</span></td>
   </tr>
@@ -277,82 +277,81 @@ Grove - Multichannel Gas Sensor V2 has 4 measuring units, each of them is sensit
   overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-l5ls{background-color:#ffffff;border-color:#000000;color:#000000;font-size:16px;font-weight:bold;text-align:center;
-  vertical-align:top}
-.tg .tg-q7v3{background-color:#ffffff;border-color:#000000;color:#000000;font-size:16px;text-align:center;vertical-align:top}
+.tg .tg-v0nz{background-color:#ffffff;border-color:#000000;color:#000000;text-align:center;vertical-align:top}
+.tg .tg-wzu8{background-color:#ffffff;border-color:#000000;color:#000000;font-weight:bold;text-align:center;vertical-align:top}
 </style>
-<table class="tg" style="undefined;table-layout: fixed; width: 1126px">
+<table class="tg" style="undefined;table-layout: fixed; width: 822px">
 <colgroup>
-<col style="width: 564px">
+<col style="width: 304px">
 <col style="width: 211px">
 <col style="width: 35px">
-<col style="width: 316px">
+<col style="width: 272px">
 </colgroup>
 <thead>
   <tr>
-    <th class="tg-l5ls" colspan="3"><span style="font-weight:bold">Type of product</span></th>
-    <th class="tg-q7v3">GM-702B</th>
+    <th class="tg-wzu8" colspan="3"><span style="font-weight:bold">Type of product</span></th>
+    <th class="tg-v0nz">GM-702B</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-l5ls" colspan="3"><span style="font-weight:bold">Standard package</span></td>
-    <td class="tg-q7v3"><span style="font-weight:normal">Ceramic package</span></td>
+    <td class="tg-wzu8" colspan="3"><span style="font-weight:bold">Standard package</span></td>
+    <td class="tg-v0nz"><span style="font-weight:normal">Ceramic package</span></td>
   </tr>
   <tr>
-    <td class="tg-l5ls" colspan="3"><span style="font-weight:bold">Concentration</span></td>
-    <td class="tg-q7v3">5～5000ppm(CO)</td>
+    <td class="tg-wzu8" colspan="3"><span style="font-weight:bold">Concentration</span></td>
+    <td class="tg-v0nz">5～5000ppm(CO)</td>
   </tr>
   <tr>
-    <td class="tg-q7v3" rowspan="3"><br><br><span style="font-weight:bold;font-style:normal">Standard circuit conditions</span><br> </td>
-    <td class="tg-q7v3"><span style="font-weight:normal">Loop voltage</span></td>
-    <td class="tg-q7v3"><span style="font-weight:normal">VC</span></td>
-    <td class="tg-q7v3">≤24V DC</td>
+    <td class="tg-v0nz" rowspan="3"><br><span style="font-weight:bold;font-style:normal">Standard circuit conditions</span><br> </td>
+    <td class="tg-v0nz"><span style="font-weight:normal">Loop voltage</span></td>
+    <td class="tg-v0nz"><span style="font-weight:normal">VC</span></td>
+    <td class="tg-v0nz">≤24V DC</td>
   </tr>
   <tr>
-    <td class="tg-q7v3"><span style="font-weight:normal">Heating Voltage</span></td>
-    <td class="tg-q7v3"><span style="font-weight:normal">VH</span></td>
-    <td class="tg-q7v3">2.5V±0.1V AC or DC（High Temperature）<br>0.5V±0.1V AC or DC（Low Temperature）</td>
+    <td class="tg-v0nz"><br><span style="font-weight:normal">Heating Voltage</span></td>
+    <td class="tg-v0nz"><span style="font-weight:normal">VH</span></td>
+    <td class="tg-v0nz">2.5V±0.1V AC or DC（High Temperature）<br>0.5V±0.1V AC or DC（Low Temperature）</td>
   </tr>
   <tr>
-    <td class="tg-q7v3"><span style="font-weight:normal">Load Resistance</span></td>
-    <td class="tg-q7v3"><span style="font-weight:normal">RL</span></td>
-    <td class="tg-q7v3">60s±1s（H. T)；90s±1s（L. T）</td>
+    <td class="tg-v0nz"><span style="font-weight:normal">Load Resistance</span></td>
+    <td class="tg-v0nz"><span style="font-weight:normal">RL</span></td>
+    <td class="tg-v0nz">60s±1s（H. T)；90s±1s（L. T）</td>
   </tr>
   <tr>
-    <td class="tg-q7v3" rowspan="5"> <br><br><br><br><span style="font-weight:bold;font-style:normal">Gas sensor characteristics under standard test conditions</span></td>
-    <td class="tg-q7v3"><span style="font-weight:normal">Heating resistance</span></td>
-    <td class="tg-q7v3"><span style="font-weight:normal">RH</span></td>
-    <td class="tg-q7v3"><span style="font-weight:normal">Adjustable</span></td>
+    <td class="tg-v0nz" rowspan="5"> <br><br><br><br><span style="font-weight:bold;font-style:normal">Gas sensor characteristics under standard test conditions</span></td>
+    <td class="tg-v0nz"><span style="font-weight:normal">Heating resistance</span></td>
+    <td class="tg-v0nz"><span style="font-weight:normal">RH</span></td>
+    <td class="tg-v0nz"><span style="font-weight:normal">Adjustable</span></td>
   </tr>
   <tr>
-    <td class="tg-q7v3"><span style="font-weight:normal">Heating power consumption</span></td>
-    <td class="tg-q7v3"><span style="font-weight:normal">PH</span></td>
-    <td class="tg-q7v3">80Ω±20Ω（<span style="font-weight:normal">Room temperature</span>）</td>
+    <td class="tg-v0nz"><span style="font-weight:normal">Heating power consumption</span></td>
+    <td class="tg-v0nz"><span style="font-weight:normal">PH</span></td>
+    <td class="tg-v0nz">80Ω±20Ω（<span style="font-weight:normal">Room temperature</span>）</td>
   </tr>
   <tr>
-    <td class="tg-q7v3"><span style="font-weight:normal">Sensitive body resistance</span></td>
-    <td class="tg-q7v3"><span style="font-weight:normal">RS</span></td>
-    <td class="tg-q7v3">≤50mW</td>
+    <td class="tg-v0nz"><span style="font-weight:normal">Sensitive body resistance</span></td>
+    <td class="tg-v0nz"><span style="font-weight:normal">RS</span></td>
+    <td class="tg-v0nz">≤50mW</td>
   </tr>
   <tr>
-    <td class="tg-q7v3"><span style="font-weight:normal">Sensitivity</span></td>
-    <td class="tg-q7v3"><span style="font-weight:normal">S</span></td>
-    <td class="tg-q7v3">1KΩ～30KΩ(in 150ppmCO)</td>
+    <td class="tg-v0nz"><span style="font-weight:normal">Sensitivity</span></td>
+    <td class="tg-v0nz"><span style="font-weight:normal">S</span></td>
+    <td class="tg-v0nz">1KΩ～30KΩ(in 150ppmCO)</td>
   </tr>
   <tr>
-    <td class="tg-q7v3"><span style="font-weight:normal">Concentration slope</span></td>
-    <td class="tg-q7v3"><span style="font-weight:normal">α</span></td>
-    <td class="tg-q7v3">R0(in air)/Rs(in 150ppmCO)≥3</td>
+    <td class="tg-v0nz"><span style="font-weight:normal">Concentration slope</span></td>
+    <td class="tg-v0nz"><span style="font-weight:normal">α</span></td>
+    <td class="tg-v0nz">R0(in air)/Rs(in 150ppmCO)≥3</td>
   </tr>
   <tr>
-    <td class="tg-q7v3" rowspan="2"><br><span style="font-weight:bold">Standard test conditions</span><br></td>
-    <td class="tg-q7v3" colspan="2"><span style="font-weight:normal">Temperature / Humidity</span></td>
-    <td class="tg-q7v3">20℃±2℃；55%±5%RH</td>
+    <td class="tg-v0nz" rowspan="2"><br><span style="font-weight:bold">Standard test conditions</span><br></td>
+    <td class="tg-v0nz" colspan="2"><span style="font-weight:normal">Temperature / Humidity</span></td>
+    <td class="tg-v0nz">20℃±2℃；55%±5%RH</td>
   </tr>
   <tr>
-    <td class="tg-q7v3" colspan="2"><span style="font-weight:normal">Standard test circuit</span></td>
-    <td class="tg-q7v3">VH: 2.5V±0.1V（H. T）<br>0.5V±0.1V（L. T） VC : 5.0V±0.1V</td>
+    <td class="tg-v0nz" colspan="2"><span style="font-weight:normal">Standard test circuit</span></td>
+    <td class="tg-v0nz">VH: 2.5V±0.1V（H. T）<br>0.5V±0.1V（L. T） VC : 5.0V±0.1V</td>
   </tr>
 </tbody>
 </table>
@@ -365,328 +364,328 @@ Grove - Multichannel Gas Sensor V2 has 4 measuring units, each of them is sensit
   overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-7un6{background-color:#ffffff;color:#000000;text-align:center;vertical-align:top}
-.tg .tg-zqun{background-color:#ffffff;color:#000000;font-weight:bold;text-align:center;vertical-align:middle}
-.tg .tg-vxga{background-color:#ffffff;text-align:center;vertical-align:middle}
-.tg .tg-bx9b{background-color:#ffffff;color:#000000;font-weight:bold;text-align:left;vertical-align:middle}
-.tg .tg-p7cy{background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle}
-.tg .tg-scrz{background-color:#ffffff;color:#000000;font-weight:bold;text-align:center;vertical-align:top}
-.tg .tg-q9a8{background-color:#ffffff;color:#fe0000;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-0c4t{background-color:#ffffff;border-color:#000000;color:#fe0000;font-size:16px;font-weight:bold;text-align:left;
+  vertical-align:top}
+.tg .tg-bjhj{background-color:#FFF;border-color:#000000;font-size:16px;text-align:center;vertical-align:top}
+.tg .tg-v0nz{background-color:#ffffff;border-color:#000000;color:#000000;text-align:center;vertical-align:top}
+.tg .tg-l5ls{background-color:#ffffff;border-color:#000000;color:#000000;font-size:16px;font-weight:bold;text-align:center;
+  vertical-align:top}
+.tg .tg-i1ym{background-color:#ffffff;border-color:#000000;color:#000000;font-size:16px;font-weight:bold;text-align:left;
+  vertical-align:top}
+.tg .tg-q7v3{background-color:#ffffff;border-color:#000000;color:#000000;font-size:16px;text-align:center;vertical-align:top}
+.tg .tg-w9f5{background-color:#ffffff;border-color:#000000;color:#000000;font-size:16px;text-align:center;vertical-align:middle}
+.tg .tg-anz3{background-color:#ffffff;border-color:#000000;color:#000000;text-align:center;vertical-align:middle}
 </style>
-<table class="tg" style="undefined;table-layout: fixed; width: 1033px">
+<table class="tg" style="undefined;table-layout: fixed; width: 818px">
 <colgroup>
-<col style="width: 29px">
-<col style="width: 123px">
-<col style="width: 123px">
-<col style="width: 131px">
-<col style="width: 127px">
-<col style="width: 123px">
-<col style="width: 129px">
-<col style="width: 123px">
-<col style="width: 125px">
+<col style="width: 43px">
+<col style="width: 84px">
+<col style="width: 100px">
+<col style="width: 96px">
+<col style="width: 112px">
+<col style="width: 93px">
+<col style="width: 92px">
+<col style="width: 89px">
+<col style="width: 109px">
 </colgroup>
 <thead>
   <tr>
-    <th class="tg-bx9b" colspan="9"><span style="font-weight:700;font-style:normal;text-decoration:none">Time：2019.06.27</span></th>
+    <th class="tg-i1ym" colspan="9"><span style="font-weight:700;font-style:normal;text-decoration:none">Time：2019.06.27</span></th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-bx9b" colspan="9"><span style="font-weight:700;font-style:normal;text-decoration:none">Test</span> <span style="font-weight:700;font-style:normal;text-decoration:none">conditions：VH=2.5V，VC=3.3V</span></td>
+    <td class="tg-i1ym" colspan="9"><span style="font-weight:700;font-style:normal;text-decoration:none">Test</span> <span style="font-weight:700;font-style:normal;text-decoration:none">conditions：VH=2.5V，VC=3.3V</span></td>
   </tr>
   <tr>
-    <td class="tg-bx9b" colspan="9"><span style="font-weight:700;font-style:normal;text-decoration:none">Type：GM-102B、GM-302B、GM-502B、GM-702B</span></td>
+    <td class="tg-i1ym" colspan="9"><span style="font-weight:700;font-style:normal;text-decoration:none">Type：GM-102B、GM-302B、GM-502B、GM-702B</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy" rowspan="6"><span style="font-weight:400;font-style:normal;text-decoration:none">1#</span></td>
-    <td class="tg-scrz" colspan="4">Gas：NO2</td>
-    <td class="tg-scrz" colspan="4">Gas：C2H5OH</td>
+    <td class="tg-q7v3" rowspan="6"><span style="font-weight:400;font-style:normal;text-decoration:none">1#</span></td>
+    <td class="tg-l5ls" colspan="4">Gas：NO2</td>
+    <td class="tg-l5ls" colspan="4">Gas：C2H5OH</td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Type</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Initial</span> <span style="font-weight:400;font-style:normal;text-decoration:none">value(V)</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">5ppm(V)</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Difference(V)</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Type</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">Initial</span> <span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">value(V)</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">50ppm(V)</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">Difference(V)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">Type</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">Initial</span> <span style="font-weight:400;font-style:normal;text-decoration:none">value(V)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">5ppm(V)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">Difference(V)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">Type</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">Initial</span> <span style="font-weight:400;font-style:normal;text-decoration:none">value(V)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">50ppm(V)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">Difference(V)</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.41</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.38</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-1.03</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.42</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">2</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">0.58</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.41</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.38</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">-1.03</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.42</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">2</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.58</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.94</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.48</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.46</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">0.95</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">2.06</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.11</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.94</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.48</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.46</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.95</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">2.06</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.11</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.42</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.53</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.89</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.41</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">2.93</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.52</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.42</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.53</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.89</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.41</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">2.93</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.52</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.54</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.55</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.99</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.35</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">2.86</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.51</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.54</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.55</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.99</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.35</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">2.86</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.51</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy" rowspan="6"><span style="font-weight:400;font-style:normal;text-decoration:none">2#</span></td>
-    <td class="tg-scrz" colspan="4">Gas：NO2</td>
-    <td class="tg-scrz" colspan="4">Gas：C2H5OH</td>
+    <td class="tg-q7v3" rowspan="6"><span style="font-weight:400;font-style:normal;text-decoration:none">2#</span></td>
+    <td class="tg-l5ls" colspan="4">Gas：NO2</td>
+    <td class="tg-l5ls" colspan="4">Gas：C2H5OH</td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Type</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Initial</span> <span style="font-weight:400;font-style:normal;text-decoration:none">value(V)</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">5ppm(V)</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Difference(V)</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Type</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">Initial</span> <span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">value(V)</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">50ppm(V)</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">Difference(V)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">Type</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">Initial</span> <span style="font-weight:400;font-style:normal;text-decoration:none">value(V)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">5ppm(V)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">Difference(V)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">Type</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">Initial</span> <span style="font-weight:400;font-style:normal;text-decoration:none">value(V)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">50ppm(V)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">Difference(V)</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.94</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.22</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.72</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">0.92</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.41</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">0.49</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.94</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.22</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.72</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.92</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.41</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.49</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.45</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.24</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.21</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">0.35</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">2.09</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.74</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.45</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.24</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.21</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.35</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">2.09</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.74</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.45</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.49</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.96</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.51</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">2.88</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.37</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.45</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.49</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.96</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.51</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">2.88</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.37</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.77</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.3</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.47</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">0.74</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">2.73</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.99</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.77</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.3</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.47</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.74</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">2.73</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.99</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy" rowspan="6"><span style="font-weight:400;font-style:normal;text-decoration:none">3#</span></td>
-    <td class="tg-scrz" colspan="4">Gas：NO2</td>
-    <td class="tg-scrz" colspan="4">Gas：C2H5OH</td>
+    <td class="tg-q7v3" rowspan="6"><span style="font-weight:400;font-style:normal;text-decoration:none">3#</span></td>
+    <td class="tg-l5ls" colspan="4">Gas：NO2</td>
+    <td class="tg-l5ls" colspan="4">Gas：C2H5OH</td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Type</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Initial</span> <span style="font-weight:400;font-style:normal;text-decoration:none">value(V)</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">5ppm(V)</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Difference(V)</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Type</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">Initial</span> <span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">value(V)</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">50ppm(V)</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">Difference(V)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">Type</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">Initial</span> <span style="font-weight:400;font-style:normal;text-decoration:none">value(V)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">5ppm(V)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">Difference(V)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">Type</span></td>
+    <td class="tg-bjhj"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">Initial</span> <span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">value(V)</span></td>
+    <td class="tg-bjhj"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">50ppm(V)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">Difference(V)</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.29</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.27</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-1.02</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.2</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.62</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">0.42</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.29</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.27</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">-1.02</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
+    <td class="tg-bjhj"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.2</span></td>
+    <td class="tg-bjhj"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.62</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.42</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.12</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.61</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.51</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.12</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">2.33</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.21</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.12</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.61</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.51</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
+    <td class="tg-bjhj"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.12</span></td>
+    <td class="tg-bjhj"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">2.33</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.21</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.82</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.58</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-1.24</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.72</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">2.86</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.14</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.82</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.58</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">-1.24</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
+    <td class="tg-bjhj"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.72</span></td>
+    <td class="tg-bjhj"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">2.86</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.14</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.06</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.37</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.69</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.08</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">2.8</span></td>
-    <td class="tg-vxga"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.72</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.06</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.37</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.69</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
+    <td class="tg-bjhj"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">1.08</span></td>
+    <td class="tg-bjhj"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">2.8</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.72</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy" colspan="9"></td>
+    <td class="tg-w9f5" colspan="9"></td>
   </tr>
   <tr>
-    <td class="tg-p7cy" rowspan="6"><span style="font-style:normal;text-decoration:none">1#</span></td>
-    <td class="tg-scrz" colspan="4">Gas：CO</td>
-    <td class="tg-p7cy" colspan="4"></td>
+    <td class="tg-q7v3" rowspan="6"><span style="font-style:normal;text-decoration:none">1#</span></td>
+    <td class="tg-l5ls" colspan="4">Gas：CO</td>
+    <td class="tg-w9f5" colspan="4"></td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Type</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Initial</span> <span style="font-weight:400;font-style:normal;text-decoration:none">value(V)</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">150ppm(V)</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Difference(V)</span></td>
-    <td class="tg-p7cy" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none">Types</span> <span style="font-weight:400;font-style:normal;text-decoration:none">of</span> <span style="font-weight:400;font-style:normal;text-decoration:none">sensors</span> </td>
-    <td class="tg-vxga" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">Gases</span> <span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">measured</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">Type</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">Initial</span> <span style="font-weight:400;font-style:normal;text-decoration:none">value(V)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">150ppm(V)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">Difference(V)</span></td>
+    <td class="tg-q7v3" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none">Types</span> <span style="font-weight:400;font-style:normal;text-decoration:none">of</span> <span style="font-weight:400;font-style:normal;text-decoration:none">sensors</span> </td>
+    <td class="tg-q7v3" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none">Gases</span> <span style="font-weight:400;font-style:normal;text-decoration:none">measured</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.31</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.33</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.02</span></td>
-    <td class="tg-p7cy" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
-    <td class="tg-vxga" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">NO2</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.31</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.33</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.02</span></td>
+    <td class="tg-q7v3" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
+    <td class="tg-q7v3" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none">NO2</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.72</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.88</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.16</span></td>
-    <td class="tg-p7cy" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
-    <td class="tg-vxga" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">C2H5OH</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.72</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.88</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.16</span></td>
+    <td class="tg-q7v3" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
+    <td class="tg-q7v3" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none">C2H5OH</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.33</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.35</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.02</span></td>
-    <td class="tg-p7cy" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
-    <td class="tg-vxga" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">VOC</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.33</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.35</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.02</span></td>
+    <td class="tg-q7v3" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
+    <td class="tg-q7v3" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none">VOC</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.22</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">2.09</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.87</span></td>
-    <td class="tg-p7cy" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
-    <td class="tg-vxga" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">CO</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.22</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">2.09</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.87</span></td>
+    <td class="tg-q7v3" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
+    <td class="tg-q7v3" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none">CO</span></td>
   </tr>
   <tr>
-    <td class="tg-zqun" rowspan="6"><span style="font-weight:400;font-style:normal;text-decoration:none">2#</span></td>
-    <td class="tg-scrz" colspan="4">Gas：CO</td>
-    <td class="tg-q9a8" colspan="4" rowspan="12"><br><br><br><br><br><br>NOTICE: When it comes to judging what the gas is, GM-102B can be taken as an example. As it can be seen from the four charts above and beside, GM-102B has participated three times for each gas detecting. And its number of differences peaked at the most under the atmosphere of  NO2 than other gases. Therefore GM-102B is sensible to NO2 and accordingly is able to detect NO2, which is applicable to other sensors and sorts of gases as well. When being put under other kinds of gases, the sensor is able to detect the gas which makes it the most differences.<br></td>
+    <td class="tg-q7v3" rowspan="6"><span style="font-weight:400;font-style:normal;text-decoration:none">2#</span></td>
+    <td class="tg-l5ls" colspan="4">Gas：CO</td>
+    <td class="tg-0c4t" colspan="4" rowspan="12"><br><br><br><br><br>NOTICE: When it comes to judging what the gas is, GM-102B can be taken as an example. As it can be seen from the four charts above and beside, GM-102B has participated three times for each gas detecting. And its number of differences peaked at the most under the atmosphere of  NO2 than other gases. Therefore GM-102B is sensible to NO2 and accordingly is able to detect NO2, which is applicable to other sensors and sorts of gases as well. When being put under other kinds of gases, the sensor is able to detect the gas which makes it the most differences.<br></td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Type</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Initial</span> <span style="font-weight:400;font-style:normal;text-decoration:none">value(V)</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">150ppm(V)</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Difference(V)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">Type</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">Initial</span> <span style="font-weight:400;font-style:normal;text-decoration:none">value(V)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">150ppm(V)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">Difference(V)</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.94</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.95</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.01</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.94</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.95</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.01</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.36</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.48</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.12</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.36</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.48</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.12</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.46</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.5</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.04</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.46</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.5</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.04</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.72</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.18</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.46</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.72</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.18</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.46</span></td>
   </tr>
   <tr>
-    <td class="tg-zqun" rowspan="6"><span style="font-weight:400;font-style:normal;text-decoration:none">3#</span></td>
-    <td class="tg-scrz" colspan="4">Gas：CO</td>
+    <td class="tg-q7v3" rowspan="6"><span style="font-weight:400;font-style:normal;text-decoration:none">3#</span></td>
+    <td class="tg-l5ls" colspan="4">Gas：CO</td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Type</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Initial</span> <span style="font-weight:400;font-style:normal;text-decoration:none">value(V)</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">150ppm(V)</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">Difference(V)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">Type</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">Initial</span> <span style="font-weight:400;font-style:normal;text-decoration:none">value(V)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">150ppm(V)</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">Difference(V)</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.18</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.17</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.01</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-102B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.18</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.17</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.01</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.18</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.25</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.07</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-302B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.18</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.25</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.07</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.72</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.71</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.01</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-502B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.72</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.71</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">-0.01</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.01</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">1.7</span></td>
-    <td class="tg-p7cy"><span style="font-weight:400;font-style:normal;text-decoration:none">0.69</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">GM-702B</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.01</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">1.7</span></td>
+    <td class="tg-q7v3"><span style="font-weight:400;font-style:normal;text-decoration:none">0.69</span></td>
   </tr>
   <tr>
-    <td class="tg-p7cy" rowspan="15"></td>
-    <td class="tg-7un6" colspan="4" rowspan="15"><img src="https://files.seeedstudio.com/wiki/Grove_Multichannel_Gas_Sensor_V2_101020820/1.png" width="400" height="300"></td>
-    <td class="tg-7un6" colspan="4" rowspan="15"><img src="https://files.seeedstudio.com/wiki/Grove_Multichannel_Gas_Sensor_V2_101020820/2.png" width="400" height="300"></td>
-  </tr>
-  <tr>
-  </tr>
-  <tr>
+    <td class="tg-anz3" rowspan="15"></td>
+    <td class="tg-v0nz" colspan="4" rowspan="15"><img src="https://files.seeedstudio.com/wiki/Grove_Multichannel_Gas_Sensor_V2_101020820/1.png" alt="Image" width="400" height="300"></td>
+    <td class="tg-v0nz" colspan="4" rowspan="15"><img src="https://files.seeedstudio.com/wiki/Grove_Multichannel_Gas_Sensor_V2_101020820/2.png" alt="Image" width="400" height="300"></td>
   </tr>
   <tr>
   </tr>
@@ -713,9 +712,13 @@ Grove - Multichannel Gas Sensor V2 has 4 measuring units, each of them is sensit
   <tr>
   </tr>
   <tr>
-    <td class="tg-p7cy" rowspan="15"></td>
-    <td class="tg-7un6" colspan="4" rowspan="15"><img src="https://files.seeedstudio.com/wiki/Grove_Multichannel_Gas_Sensor_V2_101020820/3.png" width="400" height="300"></td>
-    <td class="tg-7un6" colspan="4" rowspan="15"><img src="https://files.seeedstudio.com/wiki/Grove_Multichannel_Gas_Sensor_V2_101020820/4.png" width="400" height="300"></td>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+    <td class="tg-anz3" rowspan="15"></td>
+    <td class="tg-v0nz" colspan="4" rowspan="15"><img src="https://files.seeedstudio.com/wiki/Grove_Multichannel_Gas_Sensor_V2_101020820/3.png" alt="Image" width="400" height="300"></td>
+    <td class="tg-v0nz" colspan="4" rowspan="15"><img src="https://files.seeedstudio.com/wiki/Grove_Multichannel_Gas_Sensor_V2_101020820/4.png" alt="Image" width="400" height="300"></td>
   </tr>
   <tr>
   </tr>
