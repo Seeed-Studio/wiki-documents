@@ -264,19 +264,19 @@ This is a final demo that involves all hardware resources we mentioned above and
 
   - 2) Three buttons are used to adjust the time. They are "menu"(K3), "increase"(K2) and "decrease"(K1). Press "memu" to cycle between the next setting modes:
 
-        - a) set the hour part of normal time display
+    - a) set the hour part of normal time display
 
-        - b) set the minute part of normal time display
+    - b) set the minute part of normal time display
 
-        - c) set the hour part of alarm clock
+    - c) set the hour part of alarm clock
 
-        - d) set the minute part of alarm clock
+    - d) set the minute part of alarm clock
 
-        - e) set the default brightness of 7 segment display
+    - e) set the default brightness of 7 segment display
 
-        - f) turn on or off the alarm function
+    - f) turn on or off the alarm function
 
-        - g) quit time setting modes
+    - g) quit time setting modes
 
   - 3) If you want to quit before processing all 7 steps above. There are two interruption ways. One, press K3 no matter on which step for 3s. In this way,Tick Tock Shield will confirm all settings you have made and quit. Two, leave the Tick Tock Shield alone for 5s. In this way. No setting will be stored and you quit time setting mode also.
 
@@ -291,18 +291,18 @@ This is a final demo that involves all hardware resources we mentioned above and
 
 ##   Resources  
 
-- **[Library]**[Starter Shield library](https://github.com/Seeed-Studio/Starter_Shield)
+- **[Library]** [Starter Shield library](https://github.com/Seeed-Studio/Starter_Shield)
 
-- **[Eagle]**[Starter Shield eagle file](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Starter_Shield_v1.1.zip)
-- **[PDF]**[BLE Bee v1.0 pdf](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Starter_Shield_v1.1.pdf)
+- **[Eagle]** [Starter Shield eagle file](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Starter_Shield_v1.1.zip)
+- **[PDF]** [BLE Bee v1.0 pdf](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Starter_Shield_v1.1.pdf)
 
-- **[EAGLE]**[BLE Bee v1.0 sch](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Starter%20Shield%20v1.1.sch)
+- **[EAGLE]** [BLE Bee v1.0 sch](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Starter%20Shield%20v1.1.sch)
 
-- **[Schematic]**[Starter Shield pdf Schematic](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Starter_Shield_v1.1.pdf)
+- **[Schematic]** [Starter Shield pdf Schematic](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Starter_Shield_v1.1.pdf)
 
-- **[Datasheet]**[TM1636 datasheet](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Tm1636.pdf)
+- **[Datasheet]** [TM1636 datasheet](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Tm1636.pdf)
 
-- **[Datasheet]**[VS1307 datasheet](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Vs1307.pdf)
+- **[Datasheet]** [VS1307 datasheet](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Vs1307.pdf)
 
 ##   Reference
 
@@ -312,16 +312,18 @@ This is a final demo that involves all hardware resources we mentioned above and
 
 **Function Description:**
 
- <u>1. EEPROM.read(int address);</u>
- This function is used to read data from a specified address of EEPROM.
+**1. EEPROM.read(int address);**
+This function is used to read data from a specified address of EEPROM.
 
 *   address: the address of the targetted unit.
 
 Example：
 
-<pre>temp_data[i] = EEPROM.read(i);</pre>
+```C++
+temp_data[i] = EEPROM.read(i);
+```
 
-<u>2. EEPROM.write(int address, uint8_t value);</u>
+**2. EEPROM.write(int address, uint8_t value);**
  The function is used to write data to a specified address of EEPROM.
 
 *   address: the address of the tergetted unit 
@@ -329,7 +331,8 @@ Example：
 
 Example:
 
-<pre>if(temp_data[i] != mark[i])
+```C++
+if(temp_data[i] != mark[i])
     {
       EEPROM.write(0,mark[0]);
       EEPROM.write(1,mark[1]);
@@ -337,44 +340,49 @@ Example:
       EEPROM.write(3,mark[3]);
       EEPROM.write(4,mark[4]);
       return true;
-    }</pre>
+    }
+```
 
 ###   TM1636 class  
 
 **Class Function：**this class contains all funtions to control four 7-segment displays. 
  **Function Description:**
 
- <u>1. tm1636.point(boolean PointFlag);</u>
+ **1. tm1636.point(boolean PointFlag);**
  The function is used to turn on or off the clock point (:). This function will come into effect every time the display content changes. 
 
 *   PointFlag: can be 0(off) or 1(on).
 
 Example:
 
-<pre>if(flag_clockpoint)
+```C++
+if(flag_clockpoint)
       {
         tm1636.point(POINT_ON);
       }
-      else tm1636.point(POINT_OFF); </pre>
+      else tm1636.point(POINT_OFF); 
+```
 
-<u>2. Tm1636.display(int8_t DispData[]);</u>
+**2. Tm1636.display(int8_t DispData[]);**
 Create a character flow with the content of DispData[].
 
 *   DispData[]: an array in int8_t type, including 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, A, b, C, d, E and F.
 
 Example:
 
-<pre>tm1636.display(disp);</pre>
+```C++
+tm1636.display(disp);
+```
 
 ###   TickTockShield Class  
 
-**Class Function：**operate all components on the Tick Tock Shield.
+**Class Function** Operate all components on the Tick Tock Shield.
 **Function Description:**
 
-<u>1. ticktockshield.init();</u>
+**1. ticktockshield.init();**
 The Initialization of Tick Tock Shield.
 
-<u>2. ticktockshield.runLED(byte speed, byte direction);</u>
+**2. ticktockshield.runLED(byte speed, byte direction);**
 
 This function sweep 4 LEDs in the direction you choose.
 
@@ -383,16 +391,18 @@ This function sweep 4 LEDs in the direction you choose.
 
 Example:
 
-<pre>/*Run the 4 LEDs from left to right*/
-ticktockshield.runLED(1,LEFT_TO_RIGHT);</pre>
+```C++
+/*Run the 4 LEDs from left to right*/
+ticktockshield.runLED(1,LEFT_TO_RIGHT);
+```
 
-<u>3. ticktockshield. turnOnLED();</u>
+**3. ticktockshield. turnOnLED();**
 Turn on all 4 LEDs.
 
-<u>4. ticktockshield. turnOffLED();</u>
+**4. ticktockshield. turnOffLED();**
 Turn off all 4 LEDs.
 
-<u>5. setLed(unsigned char led_status, int pinLED);</u>
+**5. setLed(unsigned char led_status, int pinLED);**
 The Function is used to turn on or off an individual LED.
 
 *   led_status: can be LED_ON or LED_OFF.
@@ -400,28 +410,32 @@ The Function is used to turn on or off an individual LED.
 
 Example:
 
-<pre>void TickTockShield::turnOffLED()
+```C++
+void TickTockShield::turnOffLED()
 {
 	setLed(LOW,LED_CLOCK_ADJUST);
 	setLed(LOW,LED_ALARM_ADJUST);
 	setLed(LOW,LED_BRIGHT_ADJUST);
 	setLed(LOW,LED_ALARM_ENABLE);
-}</pre>
+}
+```
 
-<u>6. ticktockshield.alarming();</u>
+**6. ticktockshield.alarming();**
 Let the buzzer buzz.
 Example:
 
-<pre>/*It will sound alarm for a minute untill the "MENU" key is pressed*/
+```C++
+/*It will sound alarm for a minute untill the "MENU" key is pressed*/
     if(ticktockshield.isAlarmEnable())
     {
       ticktockshield.alarming();
-    }</pre>
+    }
+```
 
-<u>7. ticktockshield.turnOffAlarm();</u>
+**7. ticktockshield.turnOffAlarm();**
 Turn off the alarm when the buzzer is buzzing.
 
-<u>8. ticktockshield.setAlarm(uint8_t hour,uint8_t minute,uint8_t flag_enabl);</u>
+**8. ticktockshield.setAlarm(uint8_t hour,uint8_t minute,uint8_t flag_enabl);**
 Set the alarm time.
 
 *   hour: hour
@@ -430,75 +444,85 @@ Set the alarm time.
 
 Example:
 
-<pre>ticktockshield.setAlarm(12,0);//Yes,the alarm clock is initialized to 12:00 and the data in the EEPROM.</pre>
+```C++
+ticktockshield.setAlarm(12,0);//Yes,the alarm clock is initialized to 12:00 and the data in the EEPROM.
+```
 
-<u>9. ticktockshield.getAlarm();</u>
+**9. ticktockshield.getAlarm();**
 Read the preset alarm value from EEPROM and store them into given variables, including the enable flag of the alarm.
 Example:
 
-<pre>if(isFirstLoad())//if it is the first time to load the firmware?
+```C++
+if(isFirstLoad())//if it is the first time to load the firmware?
 	{
 		ticktockshield.setAlarm(12,0);
  	}
-	else ticktockshield.getAlarm();//No,read the alarm clock stored in EEPROM</pre>
+	else ticktockshield.getAlarm();//No,read the alarm clock stored in EEPROM
+  ```
 
-<u>10. ticktockshield.getTemperature();</u>
+**10. ticktockshield.getTemperature();**
 Get the reading from temperature sensor.
 Example:
 
-<pre>/*Read the ambient temperature and display on the digital tube.*/
+```C++
+/*Read the ambient temperature and display on the digital tube.*/
 	ticktockshield.displayTemperature(ticktockshield.getTemperature());
-</pre>
+```
 
-<u>11. ticktockshield.displayTemperature(int8_t temperature);</u>
+**11. ticktockshield.displayTemperature(int8_t temperature);**
 Display temperature value(negative value supported) on the 7 segment display. The character C represents celsius degrees.
 Example:　
 
-<pre> ticktockshield.displayTemperature(ticktockshield.getTemperature());</pre>
+```C++
+ ticktockshield.displayTemperature(ticktockshield.getTemperature());
+```
 
-<u>12. ticktockshield.scanKey();</u>
+**12. ticktockshield.scanKey();**
 Find out which key gets pressed. Return the pin number of the key pressed. And return "-1" if no keys is pressed.
 
-<pre>if((flag_scan_again)&amp;&amp;(KEY_MENU == ticktockshield.scanKey()))
+```C++
+if((flag_scan_again)&amp;&amp;(KEY_MENU == ticktockshield.scanKey()))
       {
         ticktockshield.writeToAdjustArea();
         ticktockshield.processKey();
         system_states = SYSTEM_ADJUSTING;
       }
-</pre>
+```
 
-<u>13. ticktockshield.processKey();</u>
+**13. ticktockshield.processKey();**
 Process the command you enter through keys. If it's a normal press. This function will make a buzz corresponding to the press. If you press the "menu" key longer than 3s, then this function will make Tick Tock Shield enter time setting mode. If no other key gets pressed after the "menu" key, then this function will make Tick Tock Shield quit the time setting mode.
 
-<u>14. ticktockshield.processSystemStatus();</u>
+**14. ticktockshield.processSystemStatus();**
 Execute different tasks according to the system status when it's called. The system status can be "adjust clock time" 、 "alarm time", "adjust 7 segment display brightness" and "enable alarm".
 
-<u>15. ticktockshield.writeToAdjustArea();</u>
+**15. ticktockshield.writeToAdjustArea();**
 Deliver the latest time information from normal time display mode to time setting mode so that they can be used under time setting mode. 
 
-<u>16. ticktockshield.writeToNormalArea();</u>
+**16. ticktockshield.writeToNormalArea();**
 Deliver the time information set in time setting mode to normal time display mode.
 
-<u>17. ticktockshield.writeTime();</u>
+**17. ticktockshield.writeTime();**
 Write time information into RTC chip.
 
-<u>18. ticktockshield.getTime();</u>
+**18. ticktockshield.getTime();**
 Read the current time information from RTC.
 
-<u>19. ticktockshield.displayTime();</u>
+**19. ticktockshield.displayTime();**
 Display time on 7 segment Display.
 
 Example:
 
-<pre> if(ticktockshield.isAlarmEnable())
+```C++
+if(ticktockshield.isAlarmEnable())
       {
         tm1636.point(POINT_ON);
         ticktockshield.displayTime();
         system_states = SYSTEM_ALARMING;
         return;
-      }</pre>
+      }
+```
 
-<u>20. ticktockshield.display(int8_t DispData []);</u>
+**20. ticktockshield.display(int8_t DispData []);**
 Display alpha-numeric information 7 segment Display.
 
 ## Tech Support
