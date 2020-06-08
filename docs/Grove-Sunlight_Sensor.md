@@ -8,15 +8,16 @@ surveyurl: https://www.research.net/r/grove_sunlight_sensor
 sku: 101020089
 ---
 
-![](https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/Grove_sunlight_sensor_view.jpg)
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/Grove_sunlight_sensor_view.jpg"/><figcaption><b></b><i></i></figcaption></a>
+</figure></div>
+
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Sunlight-Sensor-p-2530.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p> 
 
 Grove - Sunlight Sensor is a multi-channel digital light sensor, which has the ability to detect UV-light, visible light and infrared light.
 
 This device is based on SI1145, a new sensor from SiLabs. The Si1145 is a low-power, reflectance-based, infrared proximity, UV index and ambient light sensor with I2C digital interface and programmable-event interrupt output. This device offers excellent performance under a wide dynamic range and a variety of light sources including direct sunlight.
 
 Grove - Sunlight Sensor include an on-bard Grove connector, which help you to connect it your Arduino easily. You can use this device for making some project which need to detect the light, such as a simple UV detector.
-
-[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Sunlight-Sensor-p-2530.html)
 
 ## Features
 ---
@@ -53,22 +54,19 @@ Grove - Sunlight Sensor include an on-bard Grove connector, which help you to co
 ---
 After this section, you can make Grove - Sunlight Sensor run with only few steps.
 
-**Preparations**
+### Play with Arduino
 
-Now we are making a simple demo to get data from Grove - Sunlight Sensor require following modules.
+**Materials required**
 
-- [Seeeduino v4.2](https://wiki.seeedstudio.com/Seeeduino_v4.2/)
+| Seeeduino V4.2 |Grove - Sunlight Sensor|
+|--------------|-------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/sunlight_sensor.png)|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Grove-Sunlight-Sensor.html)|
 
-Seeeduino V4.2 is fully compatible with Arduino.
-
-If this is your first time using Arduino, Please put hand on [here](https://wiki.seeedstudio.com/Getting_Started_with_Seeeduino) to start your Arduino journey.
+!!!Attention 
+         If this is your first time using Arduino, Please put hand on [here](https://wiki.seeedstudio.com/Getting_Started_with_Seeeduino) to start your Arduino journey.
 
 **Connecting hardware**
-
-Just connect Grove - Sunlight Sensor into I2C connector of [Seeeduino v4.2](https://wiki.seeedstudio.com/Seeeduino_v4.2/)
-
-
-As shown below:
 
 ![](https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/Grove_sunlight_hardware_connect.jpg)
 
@@ -127,6 +125,100 @@ After upload completed, Open Serial Monitor of your Arduino IDE, you can get the
     UV - UN index
 
 Now, put Grove - Sunlight Sensor under the sun to see if it's a nice day.
+
+### Play with Raspberry Pi
+
+**Materials required**
+
+| Raspberry Pi 4 Model B |Grove - Base Hat for Raspberry Pi|Grove - Sunlight Sensor|
+|--------------|-------------|-----------|
+|![enter image description here](https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/raspberry_pi.png)|![enter image description here](https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/hat.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/sunlight_sensor.png)|
+|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-8GB-p-4595.html)|[Get One Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|[Get One Now](https://www.seeedstudio.com/Grove-Sunlight-Sensor.html)|
+
+**Connecting hardware**
+
+![](https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/connection_2.jpg)
+
+**Step 1.** Connect Grove - Sunlight Sensor to port **I2C** of Grove - Base Hat for Raspberry Pi, Plugged into Raspberry Pi 4 Model B. And then connect the Raspberry Pi 4 Model B with a PC.
+
+**Step 2.** After accessing the system of Raspberry Pi, git clone **[Seeed_Python_SI114X](https://github.com/Seeed-Studio/Seeed_Python_SI114X)** and install **grove.py** by inserting the following command:
+
+```shell
+pip3 install Seeed-grove.py
+```
+
+Or on supported GNU/Linux systems like the Raspberry Pi, you can install the driver locally from PyPI:
+
+```Shell
+pip3 install seeed-python-si114x
+```
+
+**Step 3.** To install system-wide (this may be required in some cases):
+
+```Shell
+sudo pip3 install seeed-python-si114x
+```
+And you can insert the following command to upgrade the driver locally from PyPI:
+
+```Shell
+pip3 install --upgrade seeed-python-si114x
+```
+
+**Software**
+
+```Python
+import seeed_si114x
+import time
+import signal
+def handler(signalnum, handler):
+    print("Please use Ctrl C to quit")
+def main():
+    SI1145 = seeed_si114x.grove_si114x()
+    print("Please use Ctrl C to quit")
+    signal.signal(signal.SIGTSTP, handler) # Ctrl-z
+    signal.signal(signal.SIGQUIT, handler) # Ctrl-\
+    while True:
+        print('Visible %03d UV %.2f IR %03d' % (SI1145.ReadVisible , SI1145.ReadUV/100 , SI1145.ReadIR),end=" ")
+        print('\r', end='')
+        time.sleep(0.5)
+if __name__  == '__main__':
+    main()
+```
+
+Before running the demo code, you must check the corresponding i2c number of the board:
+
+```Shell
+ls /dev/i2c*
+```
+
+If the i2c device works properly, there will be:
+
+```Shell
+/dev/i2c-1
+```
+**If NOT**, use the command **sudo raspi-config** and reboot to enable the i2c device:
+
+![](https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/1.png)
+![](https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/2.png)
+![](https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/3.png)
+
+**Step 4.** Run the demo by the following command:
+
+```Shell
+cd Seeed_Python_SI114X
+```
+
+```Shell
+python3 examples/BasicRead.py 
+```
+
+!!!Success
+          The outcome will display as following if everything goes well:
+
+![](https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/outcome.png)
+
+!!!Note
+         **Visible** refers to **visible light of Ambient** and **UV** refers to **Ultraviolet (UV) Index** while **IR** means **infrared light of Ambient**.
 
 
 ## References
