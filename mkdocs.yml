@@ -381,6 +381,7 @@ nav:
       - PlatformIO: Software-PlatformIO.md
       - Firmata Tutorial - How to Use Firmata on Arduino Compatible Boards: ODYSSEY-X86J4105-Firmata.md
       - Arduino FreeRTOS Tutorial - How to use FreeRTOS to Multi-tasking in Arduino: Software-FreeRTOS.md
+      - Arduino Software I2C user guide: Arduino_Software_I2C_user_guide.md
 
   - Grove:
       - Grove Introduction: Grove.md
@@ -796,7 +797,6 @@ nav:
           - AT Command Tester Application: AT_Command_Tester_Application.md
           - Arduino Common Error: Arduino_Common_Error.md
           - Arduino IDE for RePhone Kit: Arduino_IDE_for_RePhone_Kit.md
-          - Arduino Software I2C user guide: Arduino_Software_I2C_user_guide.md
           - Download Arduino and install Arduino Driver: Download-Arduino-and-install-Arduino-Driver.md
           - Dfu-util: Dfu-util.md
           - Driver for Seeeduino: Driver_for_Seeeduino.md
