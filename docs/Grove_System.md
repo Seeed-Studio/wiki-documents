@@ -99,7 +99,7 @@ Here are the dimensions.
 
 ![](https://files.seeedstudio.com/wiki/GroveSystem/images/40_40smd_vertical.png)
 
-For the detail mechnical drawing, please refer to [Grove Mechnical Drawing](https://github.com/SeeedDocument/GroveSystem/tree/master/res).
+For the detail mechnical drawing, please refer to [Grove Mechnical Drawing](https://files.seeedstudio.com/wiki/GroveSystem/res/Grove_Mechnical_Drawing.zip).
 
 
 ## How to connect Grove to your board
@@ -367,6 +367,23 @@ Want some Grove modules for your project? Here are some recommendations, more pr
 |--------------------------|---------------------------|-----------------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Line_Finder/img/line_finder_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/robot_5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/robot_6.jpg)|
 |[More Details](https://www.seeedstudio.com/Grove-Line-Finder-v1-1.html)|[More Details](https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html)|[More Details](https://www.seeedstudio.com/Grove-80cm-Infrared-Proximity-Sensor-p-788.html)|
+
+## Resource
+
+[ **ZIP** ] [Grove Mechnical Drawing](https://files.seeedstudio.com/wiki/GroveSystem/res/Grove_Mechnical_Drawing.zip)
+
+[ **ZIP** ] [Dimension of Grove 20X20 DIP](https://files.seeedstudio.com/wiki/GroveSystem/res/Grove-20x20-Plug-vertical.zip)
+
+[ **ZIP** ] [Dimension of Grove 20X40 DIP](https://files.seeedstudio.com/wiki/GroveSystem/res/Grove-20x40-Plug-vertical.zip)
+
+[ **ZIP** ] [Dimension of Grove 20X20 SMD Vertical](https://files.seeedstudio.com/wiki/GroveSystem/res/Grove-20x20-SMD-vertical.zip)
+
+[ **ZIP** ] [Dimension of Grove 20X40 SMD Vertical](https://files.seeedstudio.com/wiki/GroveSystem/res/Grove-20x40-SMD-vertical.zip)
+
+[ **ZIP** ] [Dimension of Grove 20X20 SMD Horizontal](https://files.seeedstudio.com/wiki/GroveSystem/res/Grove20x20-SMD-horizontal.zip)
+
+[ **ZIP** ] [Dimension of Grove 20X40 SMD Horizontal](https://files.seeedstudio.com/wiki/GroveSystem/res/Grove-20x40-SMD-horizontal.zip)
+
 
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
