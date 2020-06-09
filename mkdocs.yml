@@ -382,7 +382,9 @@ nav:
       - Firmata Tutorial - How to Use Firmata on Arduino Compatible Boards: ODYSSEY-X86J4105-Firmata.md
       - Arduino FreeRTOS Tutorial - How to use FreeRTOS to Multi-tasking in Arduino: Software-FreeRTOS.md
       - How to Debug Arduino Boards using SWD Interface: Software-SWD.md
-      - Arduino Software I2C user guide: Arduino_Software_I2C_user_guide.md
+      - Arduino Software I2C User Guide: Arduino_Software_I2C_user_guide.md
+      - Arduino Software Serial User Guide: Software-Serial.md
+      - Arduino Software SPI User Guide: Software-SPI.md
 
   - Grove:
       - Grove Introduction: Grove.md
