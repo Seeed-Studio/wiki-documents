@@ -381,6 +381,7 @@ nav:
       - PlatformIO: Software-PlatformIO.md
       - Firmata Tutorial - How to Use Firmata on Arduino Compatible Boards: ODYSSEY-X86J4105-Firmata.md
       - Arduino FreeRTOS Tutorial - How to use FreeRTOS to Multi-tasking in Arduino: Software-FreeRTOS.md
+      - How to Debug Arduino Boards using SWD Interface: Software-SWD.md
       - Arduino Software I2C user guide: Arduino_Software_I2C_user_guide.md
 
   - Grove:
