@@ -75,7 +75,7 @@ _Remarks: Users can choose different pin headers according to different needs an
  
 _New applications will be updated............._
 
-For more case resources, please visit [this Github page.](https://github.com/sea-s7)
+For more case resources, please visit [this Github page.](https://github.com/Pillar1989)
 
 ## Specifications
 
@@ -143,7 +143,7 @@ For more case resources, please visit [this Github page.](https://github.com/sea
 |8.|Mini HDMI|
 |9.|CSI Interface ：MIPI Camera (compatible with Raspberry Pi Camera V1 - OV5640)|
 |10.|Arduino Header : Compatible with Arduino UNO|
-|11.|DIP Switchs :<br>K1-K4 user switchs<br>K5 Switch FPGA Programming Mode <br>  ->>>> JTAG : Using Xilinx official Programming Tool<br>->>>> Slave : [Using ESP32 to Program the FPGA](https://github.com/sea-s7/spartan-edge-esp32-boot) |
+|11.|DIP Switchs :<br>K1-K4 user switchs<br>K5 Switch FPGA Programming Mode <br>  ->>>> JTAG : Using Xilinx official Programming Tool<br>->>>> Slave : [Using ESP32 to Program the FPGA](https://github.com/Pillar1989/spartan-edge-esp32-boot) |
 |12.|ESP32 Button ：Boot and RST|
 |13.|FPGA Button ：USER1 USER2 FPGA_RST|
 |14.|User LED: L1/L2/RGB1/RGB2<br>PWR : Power On <br> FPGA_DONE : Light up after programming the FPGA with esp32.|
@@ -257,7 +257,7 @@ If you want more details, you can click the [link](https://github.com/espressif/
 
 <div align="center">
 <figure>
-  <a href="https://github.com/sea-s7/spartan-edge-esp32-boot/archive/master.zip" target="_blank"><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/SD-boot/download-library-boot.png" />
+  <a href="https://github.com/Pillar1989/spartan-edge-esp32-boot/archive/master.zip" target="_blank"><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/SD-boot/download-library-boot.png" />
   </a>
 </figure>
 </div>
@@ -293,16 +293,16 @@ If you don't know how to install the library, please kindly check:
 ![](https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/SD-boot/format.jpg)
 
   2.2 Create a top level subfolder named __overlay__ in the SDCard.  
-  2.3 Put your bitstream or [sample bitstream](https://github.com/sea-s7/Demo_project/tree/master/spi2gpio) files (must have a extend name .bit) into the folder __overlay__.  
+  2.3 Put your bitstream or [sample bitstream](https://github.com/Pillar1989/Demo_project/tree/master/spi2gpio) files (must have a extend name .bit) into the folder __overlay__.  
 
 !!!Tip
-    The sample bitsteam : GPIO extension controlled by SPI interface, with support of ADC/DAC/RGB-LED, see [source code](https://github.com/sea-s7/Demo_project/tree/master/spi2gpio).
+    The sample bitsteam : GPIO extension controlled by SPI interface, with support of ADC/DAC/RGB-LED, see [source code](https://github.com/Pillar1989/Demo_project/tree/master/spi2gpio).
 
   2.4 If you run example 01LoadDefaultBitstream, rename the bitstream file in __overlay__ to __default.bit__.  
 
 ![](https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/SD-boot/folder.jpg)
 
-  2.5 If you run example 02LoadConfigBitstream, put [**board_config.ini**](https://github.com/sea-s7/spartan-edge-esp32-boot/blob/master/extras/board_config.ini) into SDCard root folder.  
+  2.5 If you run example 02LoadConfigBitstream, put [**board_config.ini**](https://github.com/Pillar1989/spartan-edge-esp32-boot/blob/master/extras/board_config.ini) into SDCard root folder.  
   2.6 Insert the SDCard to the Spartan (Edge Accelerator) Board.  
 
 - **3.Upload example**  
@@ -334,7 +334,7 @@ Then, the following tutorial will show you how to control the GPIO/ADC/DAC/RGB-L
 
 <div align="center">
 <figure>
-  <a href="https://github.com/sea-s7/spartan-edge-ioex/archive/master.zip" target="_blank"><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/SD-boot/download-library-IO.png" />
+  <a href="https://github.com/Pillar1989/spartan-edge-ioex/archive/master.zip" target="_blank"><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/SD-boot/download-library-IO.png" />
   </a>
 </figure>
 </div>
