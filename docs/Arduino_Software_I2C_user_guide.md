@@ -6,7 +6,7 @@ prodimagename:
 surveyurl: https://www.research.net/r/Arduino_Software_I2C_user_guide
 ---
 
-# Arduino Software I2C/Serial/SPI User Guide
+# Arduino Software I2C User Guide
 
 The standard I2C library for the Arduino is the Wire library. While this library is sufficient most of the time, there are situations when it cannot be used:
 
