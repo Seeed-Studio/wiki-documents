@@ -403,6 +403,7 @@ nav:
           - Grove - Temperature&amp;Humidity Sensor (HDC1000): Grove-TemperatureAndHumidity_Sensor-HDC1000.md
           - Grove - Temperature&amp;Humidity Sensor (High-Accuracy &amp;Mini) v1.0: Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0.md
           - Grove - Thermal Imaging Camera IR Array: Grove-Thermal-Imaging-Camera-IR-Array.md
+          - Grove - Thermal Imaging Camera IR Array (MLX90641): Grove-Thermal-Imaging-Camera-IR-Array-MLX90641.md
           - Grove - I2C High Accuracy Temperature Sensor(MCP9808): Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808.md
           - Grove - Digital Infrared Temperature Sensor: Grove-Digital_Infrared_Temperature_Sensor.md
           - Grove - Infrared Temperature Sensor: Grove-Infrared_Temperature_Sensor.md
