@@ -154,12 +154,12 @@ We have developed three simple projects to illustrate how the GrovePi works.
 *   [17. Grove-Electromagnet](/Grove-Electromagnet#With_Raspberry_Pi)
 
 *   [18. Grove-Flame_Sensor](/Grove-Flame_Sensor#With_Raspberry_Pi)
-*   [19. Relay](/Grove-Relay#With_Raspberry_Pi)
-*   [10. Relay](/Grove-Relay#With_Raspberry_Pi)
-*   [10. Relay](/Grove-Relay#With_Raspberry_Pi)
-*   [10. Relay](/Grove-Relay#With_Raspberry_Pi)
-*   [10. Relay](/Grove-Relay#With_Raspberry_Pi)
-*   [10. Relay](/Grove-Relay#With_Raspberry_Pi)
+*   [19. Grove-Gas_Sensor-MQ2](/Grove-Gas_Sensor-MQ2#With_Raspberry_Pi)
+*   [20. Grove-Gesture_v1.0](/Grove-Gesture_v1.0#With_Raspberry_Pi)
+*   [21. Grove-GPS](/Grove-GPS#With_Raspberry_Pi)
+*   [22. /Grove-High_Temperature_Sensor](//Grove-High_Temperature_Sensor#With_Raspberry_Pi)
+*   [22. Grove-Infrared_Reflective_Sensor](/Grove-Infrared_Reflective_Sensor#With_Raspberry_Pi)
+
 
 ## Schematic Online Viewer
 
