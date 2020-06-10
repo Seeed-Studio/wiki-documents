@@ -201,6 +201,7 @@ nav:
           - ArduPy LCD API Reference: ArduPy-LCD.md
 
       - Seeeduino XIAO:
+          - Grove Shield for Seeeduino XIAO with embedded battery management chip: Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip.md
           - Seeeduino XIAO: Seeeduino-XIAO.md
           - Seeeduino XIAO by Nanase: Seeeduino-XIAO-by-Nanase.md
           - Seeeduino XIAO with CircuitPython: Seeeduino-XIAO-CircuitPython.md
