@@ -117,48 +117,48 @@ We have developed three simple projects to illustrate how the GrovePi works.
 ---
 ###   Grove List
 
-*   [1. Grove - Button ](/Grove-Button#With_Raspberry_Pi)
+*   [1. Grove - Button ](https://wiki.seeedstudio.com/Grove-Button#With_Raspberry_Pi)
 
-*   [2. Light Sensor](/Grove-Light_Sensor#With_Raspberry_Pi)
+*   [2. Light Sensor](https://wiki.seeedstudio.com/Grove-Light_Sensor#With_Raspberry_Pi)
 
-*   [3. Buzzer](/Grove-Buzzer#With_Raspberry_Pi)
+*   [3. Buzzer](https://wiki.seeedstudio.com/Grove-Buzzer#With_Raspberry_Pi)
 
-*   [4. Sound Sensor ](/Grove-Sound_Sensor#With_Raspberry_Pi)
+*   [4. Sound Sensor ](https://wiki.seeedstudio.com/Grove-Sound_Sensor#With_Raspberry_Pi)
 
-*   [5. Grove - Red LED ](/Grove-Red_LED#With_Raspberry_Pi)
+*   [5. Grove - Red LED ](https://wiki.seeedstudio.com/Grove-Red_LED#With_Raspberry_Pi)
 
-*   [6. LCD RGB Backlight ](/Grove-LCD_RGB_Backlight#With_Raspberry_Pi)
+*   [6. LCD RGB Backlight ](https://wiki.seeedstudio.com/Grove-LCD_RGB_Backlight#With_Raspberry_Pi)
 
-*   [7. Rotary Angle Sensor ](/Grove-Rotary_Angle_Sensor#With_Raspberry_Pi)
+*   [7. Rotary Angle Sensor ](https://wiki.seeedstudio.com/Grove-Rotary_Angle_Sensor#With_Raspberry_Pi)
 
-*   [8. Grove-Temperature_and_Humidity_Sensor_Pro](/Grove-Temperature_and_Humidity_Sensor_Pro/#With_Raspberry_Pi)
+*   [8. Grove-Temperature_and_Humidity_Sensor_Pro](https://wiki.seeedstudio.com/Grove-Temperature_and_Humidity_Sensor_Pro/#With_Raspberry_Pi)
 
-*   [9. Ultrasonic Ranger Sensor](/Grove-Ultrasonic_Ranger#With_Raspberry_Pi)
+*   [9. Ultrasonic Ranger Sensor](https://wiki.seeedstudio.com/Grove-Ultrasonic_Ranger#With_Raspberry_Pi)
 
-*   [10. Relay](/Grove-Relay#With_Raspberry_Pi)
+*   [10. Relay](https://wiki.seeedstudio.com/Grove-Relay#With_Raspberry_Pi)
 
 
 
-*   [11. Grove-4-Digit Display](/Grove-4-Digit-Display#With_Raspberry_Pi)
+*   [11. Grove-4-Digit Display](https://wiki.seeedstudio.com/Grove-4-Digit-Display#With_Raspberry_Pi)
 
-*   [12. Grove-6-Axis_AccelerometerAndCompass_V2.0](/Grove-6-Axis_AccelerometerAndCompass_V2.0#With_Raspberry_Pi)
+*   [12. Grove-6-Axis_AccelerometerAndCompass_V2.0](https://wiki.seeedstudio.com/Grove-6-Axis_AccelerometerAndCompass_V2.0#With_Raspberry_Pi)
 
-*   [13. Grove - Barometer (High-Accuracy)](/Grove-Barometer(High-Accuracy)#With_Raspberry_Pi)
+*   [13. Grove - Barometer (High-Accuracy)](https://wiki.seeedstudio.com/Grove-Barometer(High-Accuracy)#With_Raspberry_Pi)
 
-*   [14. Grove-Barometer_Sensor-BMP180](/Grove-Barometer_Sensor-BMP180#With_Raspberry_Pi)
+*   [14. Grove-Barometer_Sensor-BMP180](https://wiki.seeedstudio.com/Grove-Barometer_Sensor-BMP180#With_Raspberry_Pi)
 
-*   [15. Grove-Dust_Sensor](/Grove-Dust_Sensor#With_Raspberry_Pi)
+*   [15. Grove-Dust_Sensor](https://wiki.seeedstudio.com/Grove-Dust_Sensor#With_Raspberry_Pi)
 
-*   [16. Grove-Electricity_Sensor](/Grove-Electricity_Sensor#With_Raspberry_Pi)
+*   [16. Grove-Electricity_Sensor](https://wiki.seeedstudio.com/Grove-Electricity_Sensor#With_Raspberry_Pi)
 
-*   [17. Grove-Electromagnet](/Grove-Electromagnet#With_Raspberry_Pi)
+*   [17. Grove-Electromagnet](https://wiki.seeedstudio.com/Grove-Electromagnet#With_Raspberry_Pi)
 
-*   [18. Grove-Flame_Sensor](/Grove-Flame_Sensor#With_Raspberry_Pi)
-*   [19. Grove-Gas_Sensor-MQ2](/Grove-Gas_Sensor-MQ2#With_Raspberry_Pi)
-*   [20. Grove-Gesture_v1.0](/Grove-Gesture_v1.0#With_Raspberry_Pi)
-*   [21. Grove-GPS](/Grove-GPS#With_Raspberry_Pi)
-*   [22. /Grove-High_Temperature_Sensor](//Grove-High_Temperature_Sensor#With_Raspberry_Pi)
-*   [22. Grove-Infrared_Reflective_Sensor](/Grove-Infrared_Reflective_Sensor#With_Raspberry_Pi)
+*   [18. Grove-Flame_Sensor](https://wiki.seeedstudio.com/Grove-Flame_Sensor#With_Raspberry_Pi)
+*   [19. Grove-Gas_Sensor-MQ2](https://wiki.seeedstudio.com/Grove-Gas_Sensor-MQ2#With_Raspberry_Pi)
+*   [20. Grove-Gesture_v1.0](https://wiki.seeedstudio.com/Grove-Gesture_v1.0#With_Raspberry_Pi)
+*   [21. Grove-GPS](https://wiki.seeedstudio.com/Grove-GPS#With_Raspberry_Pi)
+*   [22. /Grove-High_Temperature_Sensor](https://wiki.seeedstudio.com/Grove-High_Temperature_Sensor#With_Raspberry_Pi)
+*   [22. Grove-Infrared_Reflective_Sensor](https://wiki.seeedstudio.com/Grove-Infrared_Reflective_Sensor#With_Raspberry_Pi)
 
 
 ## Schematic Online Viewer
