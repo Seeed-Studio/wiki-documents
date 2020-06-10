@@ -770,7 +770,7 @@ nav:
           - M11*1.25 Water Flow Sensor: M11_1.25_Water_flow_Sensor.md
           - Matrix Clock: Matrix_Clock.md
           - Mini Soldering Iron: Mini_Soldering_Iron.md
-          - One Wire Temperature Sensor: One-Wire-Temperature-Sensor.md
+          - One Wire Temperature Sensor DS18B20: One-Wire-Temperature-Sensor-DS18B20.md
           - PIR Motion sensor module: PIR_Motion_Sensor_Large_Lens_version.md
           - Photo Reflective Sensor: Photo_Reflective_Sensor.md
           - Photo interrupter (OS25B10): Photo_interrupter_OS25B10.md
