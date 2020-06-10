@@ -15,8 +15,6 @@ tags:
 
 This IR thermal camera carries a 16x12 array of thermal sensors (MLX90641) and it can detect the temperature of objects from far away with a center area accuracy of ±1℃ and average accuracy of ±1.5℃. In order to obtain the thermal images easily, the I2C protocol is used to get the low-resolution images from the camera. The FOV (Field of View) of this camera is 110°x75°, and the temperature measurement range is -40℃ to 300℃. In order to obtain the thermal image easily, I2C protocol is used to get the low-resolution image from the camera. 
 
-
-
 <p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Thermal-Imaging-Camera-IR-Array-MLX90641-110-degree-p-4612.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p> 
 
 Grove - Thermal Imaging Camera / IR Array MLX90640 110 degree
@@ -24,7 +22,7 @@ Grove - Thermal Imaging Camera / IR Array MLX90640 110 degree
 <p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Thermal-Imaging-Camera-IR-Array-MLX90640-110-degree-p-4334.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p> 
 
 !!! Note
-	Grove - Thermal Imaging Camera / IR Array MLX90640 110 degree is the last version and this wiki fits both types of the Thermal Imageing Camera.
+	    [Grove - Thermal Imaging Camera / IR Array MLX90640 110 degree](https://wiki.seeedstudio.com/Grove-Thermal-Imaging-Camera-IR-Array/) is the old version.
 
 
 
