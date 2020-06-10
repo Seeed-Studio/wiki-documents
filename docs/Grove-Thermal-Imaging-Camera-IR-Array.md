@@ -29,8 +29,14 @@ Grove - Thermal Imaging Camera / IR Array MLX90640 110 degree
 Grove - Thermal Imaging Camera / IR Array MLX90640 55 degree
 
 !!! Note
-	This wiki fits both types of the Thermal Imageing Camera.
+	 This wiki fits both types of the Thermal Imageing Camera IR Array MLX90640 55/110 degree 
 
+## Versions
+
+|Version|Order|
+|----|-----|
+|Grove - Thermal Imaging Camera / IR Array **MLX90640** 110 degree|[Buy it](https://www.seeedstudio.com/Grove-Thermal-Imaging-Camera-IR-Array-MLX90640-110-degree-p-4334.html)|
+|Grove - Thermal Imaging Camera / IR Array **MLX90641** 110 degree|[Buy it](https://www.seeedstudio.com/Grove-Thermal-Imaging-Camera-IR-Array-MLX90641-110-degree-p-4612.html)|
 
 
 ## Features
@@ -42,16 +48,17 @@ Grove - Thermal Imaging Camera / IR Array MLX90640 55 degree
 
 ## Specification
 
-|Item|Value|
-|----|-----|
-|Operating Voltage|3V ~ 6V|
-|Current consumption|~18mA|
-|FOV(Field of View)|55°x35°/110°x75°|
-|Temperature Measurement Range|-40°C-300°C|
-|Temperature Resolution|±1.5°C|
-|Refresh Rate|0.5Hz-64Hz|
-|Interface|I2C Grove interface|
-|I2C Address|0x33|
+|Item|Grove - Thermal Imaging Camera - MLX90640|Grove - Thermal Imaging Camera - MLX90641|
+|----|-----|------|
+|Thermal sensor|32X24 array MLX90640|16x12 array MLX90641|
+|Operating Voltage|3V - 6V|3.3V - 5V
+|Current consumption|~18mA|~18mA|
+|FOV(Field of View)|110°x75°|110°x75°|
+|Temperature Measurement Range|-40°C - 300°C|-40°C - 300°C
+|Temperature Resolution|± 1.5°C|± 1.5°C (±1℃ at center area)|
+|Refresh Rate|0.5Hz - 64Hz|0.5Hz - 64Hz|
+|Interface|I2C Grove interface|I2C Grove interface|
+|I2C Address|0x33|0x33|
 
 
 ## Platforms Supported
