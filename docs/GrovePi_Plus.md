@@ -138,6 +138,29 @@ We have developed three simple projects to illustrate how the GrovePi works.
 *   [10. Relay](/Grove-Relay#With_Raspberry_Pi)
 
 
+
+*   [11. Grove-4-Digit Display](/Grove-4-Digit-Display#With_Raspberry_Pi)
+
+*   [12. Grove-6-Axis_AccelerometerAndCompass_V2.0](/Grove-6-Axis_AccelerometerAndCompass_V2.0#With_Raspberry_Pi)
+
+*   [13. Grove - Barometer (High-Accuracy)](/Grove-Barometer(High-Accuracy)#With_Raspberry_Pi)
+
+*   [14. Grove-Barometer_Sensor-BMP180](/Grove-Barometer_Sensor-BMP180#With_Raspberry_Pi)
+
+*   [15. Grove-Dust_Sensor](/Grove-Dust_Sensor#With_Raspberry_Pi)
+
+*   [16. Grove-Electricity_Sensor](/Grove-Electricity_Sensor#With_Raspberry_Pi)
+
+*   [17. Grove-Electromagnet](/Grove-Electromagnet#With_Raspberry_Pi)
+
+*   [18. Grove-Flame_Sensor](/Grove-Flame_Sensor#With_Raspberry_Pi)
+*   [19. Relay](/Grove-Relay#With_Raspberry_Pi)
+*   [10. Relay](/Grove-Relay#With_Raspberry_Pi)
+*   [10. Relay](/Grove-Relay#With_Raspberry_Pi)
+*   [10. Relay](/Grove-Relay#With_Raspberry_Pi)
+*   [10. Relay](/Grove-Relay#With_Raspberry_Pi)
+*   [10. Relay](/Grove-Relay#With_Raspberry_Pi)
+
 ## Schematic Online Viewer
 
 <div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/GrovePi_Plus/res/GrovePi%2BEagle%20FIle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
