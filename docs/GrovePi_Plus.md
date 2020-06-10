@@ -157,8 +157,8 @@ We have developed three simple projects to illustrate how the GrovePi works.
 *   [19. Grove-Gas_Sensor-MQ2](https://wiki.seeedstudio.com/Grove-Gas_Sensor-MQ2#With_Raspberry_Pi)
 *   [20. Grove-Gesture_v1.0](https://wiki.seeedstudio.com/Grove-Gesture_v1.0#With_Raspberry_Pi)
 *   [21. Grove-GPS](https://wiki.seeedstudio.com/Grove-GPS#With_Raspberry_Pi)
-*   [22. /Grove-High_Temperature_Sensor](https://wiki.seeedstudio.com/Grove-High_Temperature_Sensor#With_Raspberry_Pi)
-*   [22. Grove-Infrared_Reflective_Sensor](https://wiki.seeedstudio.com/Grove-Infrared_Reflective_Sensor#With_Raspberry_Pi)
+*   [22. Grove-High_Temperature_Sensor](https://wiki.seeedstudio.com/Grove-High_Temperature_Sensor#With_Raspberry_Pi)
+*   [23. Grove-Infrared_Reflective_Sensor](https://wiki.seeedstudio.com/Grove-Infrared_Reflective_Sensor#With_Raspberry_Pi)
 
 
 ## Schematic Online Viewer
