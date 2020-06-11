@@ -515,6 +515,7 @@ nav:
           - Grove - ±5A DC/AC Current Sensor (ACS70331): Grove-5A_DC_AC_Current_Sensor-ACS70331.md
           - Grove - 10A DC Current Sensor (ACS725): Grove-10A_DC_Current_Sensor-ACS725.md
           - Grove - Adjustable PIR Motion Sensor: Grove-Adjustable_PIR_Motion_Sensor.md
+          - Grove - AHT20 I2C Industrial Grade Temperature&Humidity Sensor: Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor.md 
           - Grove - Button: Grove-Button.md
           - Grove - Dual Button: Grove-Dual-Button.md
           - Grove - LED Button: Grove-LED_Button.md
