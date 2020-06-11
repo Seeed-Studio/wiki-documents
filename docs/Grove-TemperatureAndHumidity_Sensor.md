@@ -9,6 +9,8 @@ surveyurl: https://www.research.net/r/Grove-TemperatureAndHumidity_Sensor
 sku: 101020011
 ---
 
+# Grove - Temperature&Humidity Sensor (DHT11)
+
 ![](https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor/img/main.jpg)
 
 This Temperature&Humidity sensor provides a pre-calibrated digital output. A unique capacitive sensor element measures relative humidity and the temperature is measured by a negative temperature coefficient (NTC) thermistor. It has excellent reliability and long term stability. Please note that this sensor will not work for temperatures below 0 degree.
