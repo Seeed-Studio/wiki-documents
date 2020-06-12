@@ -394,6 +394,8 @@ nav:
       - Grove - New Products: Grove-New_Products.md
 
       - Temperature:
+          - Grove - AHT20 I2C Industrial Grade Temperature&Humidity Sensor: Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor.md
+          - One Wire Temperature Sensor DS18B20: One-Wire-Temperature-Sensor-DS18B20.md
           - Sensor - Temperature: Sensor_temperature.md
           - Grove - CO2 & Temperature & Humidity Sensor (SCD30): Grove-CO2_Temperature_Humidity_Sensor-SCD30.md
           - Grove - Temp and Humi Sensor(SHT31): Grove-TempAndHumi_Sensor-SHT31.md
@@ -514,7 +516,6 @@ nav:
           - Grove - ±5A DC/AC Current Sensor (ACS70331): Grove-5A_DC_AC_Current_Sensor-ACS70331.md
           - Grove - 10A DC Current Sensor (ACS725): Grove-10A_DC_Current_Sensor-ACS725.md
           - Grove - Adjustable PIR Motion Sensor: Grove-Adjustable_PIR_Motion_Sensor.md
-          - Grove - AHT20 I2C Industrial Grade Temperature&Humidity Sensor: Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor.md 
           - Grove - Button: Grove-Button.md
           - Grove - Dual Button: Grove-Dual-Button.md
           - Grove - LED Button: Grove-LED_Button.md
