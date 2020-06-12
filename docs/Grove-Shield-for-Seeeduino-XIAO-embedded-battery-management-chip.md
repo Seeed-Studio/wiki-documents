@@ -212,9 +212,7 @@ And if there's an object approaching the radar or passing by, the outcome will a
 
 ## Project
 
-<video id="video" controls="" preload="none" poster="http://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/demo.png">
-<source id="mp4" src="http://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/demo.M4V" type="video/mp4">
-</video>
+<p><iframe src="http://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/demo.M4V" width="560" height="315" frameborder="0" allowfullscreen=""></iframe></p>
 
 ## Tech Support
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
