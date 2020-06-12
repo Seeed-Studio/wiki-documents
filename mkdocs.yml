@@ -396,7 +396,6 @@ nav:
       - Temperature:
           - Sensor - Temperature: Sensor_temperature.md
           - Grove - AHT20 I2C Industrial Grade Temperature&Humidity Sensor: Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor.md
-          - One Wire Temperature Sensor DS18B20: One-Wire-Temperature-Sensor-DS18B20.md
           - Grove - CO2 & Temperature & Humidity Sensor (SCD30): Grove-CO2_Temperature_Humidity_Sensor-SCD30.md
           - Grove - Temp and Humi Sensor(SHT31): Grove-TempAndHumi_Sensor-SHT31.md
           - Grove - I2C High Accuracy Temp&Humi Sensor(SHT35): Grove-I2C_High_Accuracy_Temp&Humi_Sensor-SHT35.md
@@ -415,6 +414,7 @@ nav:
           - Grove - High Temperature Sensor: Grove-High_Temperature_Sensor.md
           - Grove - 1-Wire Thermocouple Amplifier(MAX31850K): Grove-1-Wire_Thermocouple_Amplifier-MAX31850K.md
           - Grove - I2C Thermocouple Amplifier (MCP9600): Grove-I2C_Thermocouple_Amplifier-MCP9600.md
+          - One Wire Temperature Sensor DS18B20: One-Wire-Temperature-Sensor-DS18B20.md
 
       - Distance:
           - Sensor - Distance: Sensor_distance.md
