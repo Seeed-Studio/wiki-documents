@@ -394,9 +394,9 @@ nav:
       - Grove - New Products: Grove-New_Products.md
 
       - Temperature:
+          - Sensor - Temperature: Sensor_temperature.md
           - Grove - AHT20 I2C Industrial Grade Temperature&Humidity Sensor: Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor.md
           - One Wire Temperature Sensor DS18B20: One-Wire-Temperature-Sensor-DS18B20.md
-          - Sensor - Temperature: Sensor_temperature.md
           - Grove - CO2 & Temperature & Humidity Sensor (SCD30): Grove-CO2_Temperature_Humidity_Sensor-SCD30.md
           - Grove - Temp and Humi Sensor(SHT31): Grove-TempAndHumi_Sensor-SHT31.md
           - Grove - I2C High Accuracy Temp&Humi Sensor(SHT35): Grove-I2C_High_Accuracy_Temp&Humi_Sensor-SHT35.md
