@@ -35,20 +35,127 @@ This 2m long One Wire Temperature Sensor has a waterproof probe and long wire sh
 |Length	|2m|
 |Operating Temperature|	-55°C to +125°C |
 
+## Platform Supported
+| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
+|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg) |
+
 ## Getting Started
 ---
 After this section, you can make One Wire Temperature Sensor run with only few steps.
 
+### Play with Arduino
+
+#### Materials Required
+
+| Seeeduino Lotus V1.1 |One Wire Temperature Sensor| 
+|--------------|--------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Lotus/img/small.png)| ![enter image description here](https://files.seeedstudio.com/wiki/One-Wire-Temperature/img/small.png)| 
+|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-Lotus-V1-1-ATMega328-Board-with-Grove-Interface.html)|[Get ONE Now](https://www.seeedstudio.com/One-Wire-Temperature-Sensor-p-1235.html)|
+
+#### Hardware Connection
+![](https://files.seeedstudio.com/wiki/One-Wire-Temperature/img/hardware-1-wire.jpg)
+
+!!!Tip
+    Please plug the USB cable，One Wire Temperature Sensor Interface into Seeeduino Lotus V1.1 Interface gently, otherwise you may damage the port.
+
+- **Step 1.** Plug One Wire Temperature Sensor into **D2** interface of Seeeduino Lotus V1.1 with a Grove Cable.
+
+- **Step 2.** Connect Seeeduino Lotus V1.1 to PC via a USB cable.
+
+- **Step 3.** Download the code, please refer to the software part.
+
+- **Step 4.** Run the code and the outcome will display on the screen of **Serial Monitor** in your Arduino IDE .
+
+
+#### Software
+
+!!!Attention
+        If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+        
+
+- **Step 1.** Download the [Library for Onewire](https://github.com/PaulStoffregen/OneWire/archive/master.zip) and [Library for Arduino Temperature Control](https://github.com/milesburton/Arduino-Temperature-Control-Library/archive/master.zip)
+
+- **Step 2.** Copy the whole **OneWire** and **Arduino-Temperature-Control-Library** files and paste them into your Arduino IDE library file.
+
+- **Step 3.** Upload the demo code from **Software Code** below. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
+
+**Software Code**
+```C++
+// Include the libraries we need
+#include <OneWire.h>
+#include <DallasTemperature.h>
+
+// Data wire is plugged into port 2 on the Arduino
+#define ONE_WIRE_BUS 2
+
+
+// Setup a oneWire instance to communicate with any OneWire devices (not just Maxim/Dallas temperature ICs)
+OneWire oneWire(ONE_WIRE_BUS);
+
+// Pass our oneWire reference to Dallas Temperature. 
+DallasTemperature sensors(&oneWire);
+
+/*
+ * The setup function. We only start the sensors here
+ */
+void setup(void)
+{
+  // start serial port
+  Serial.begin(115200);
+  Serial.println("Dallas Temperature IC Control Library Demo");
+
+  // Start up the library
+  sensors.begin();
+}
+
+/*
+ * Main function, get and show the temperature
+ */
+void loop(void)
+{ 
+  // call sensors.requestTemperatures() to issue a global temperature 
+  // request to all devices on the bus
+  Serial.print("Requesting temperatures...");
+  sensors.requestTemperatures(); // Send the command to get temperatures
+  Serial.println("DONE");
+  // After we got the temperatures, we can print them here.
+  // We use the function ByIndex, and as an example get the temperature from the first sensor only.
+  float tempC = sensors.getTempCByIndex(0);
+
+  // Check if reading was successful
+  if(tempC != DEVICE_DISCONNECTED_C) 
+  {
+    Serial.print("Temperature for the device 1 (index 0) is: ");
+    Serial.println(tempC);
+  } 
+  else
+  {
+    Serial.println("Error: Could not read temperature data");
+  }
+}
+```
+
+!!!Success
+		If everything goes well, you can go to **Serial Monitor** to see an outcome as following:
+
+<div align="center">
+<figure>
+<img src="https://files.seeedstudio.com/wiki/One-Wire-Temperature/img/outcome-1-wire.png" alt="1-wire'' OUTCOME" title="demo" />
+<figcaption><b></b><i></i></figcaption>
+</figure>
+</div>
+
 ### Play with Raspberry Pi
 
-**Materials required**
+#### Materials required
 
 | Raspberry Pi 4 Model B |Grove - Base Hat for Raspberry Pi|One Wire Temperature Sensor|
 |--------------|-------------|-----------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/raspberry_pi.png)|![enter image description here](https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/hat.png)|![enter image description here](https://files.seeedstudio.com/wiki/One-Wire-Temperature/img/small.png)|
 |[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-8GB-p-4595.html)|[Get One Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|[Get One Now](https://www.seeedstudio.com/One-Wire-Temperature-Sensor-p-1235.html)|
 
-**Connecting hardware**
+#### Connecting hardware
 
 ![](https://files.seeedstudio.com/wiki/One-Wire-Temperature/img/connection.jpg)
 
@@ -77,7 +184,7 @@ And you can insert the following command to upgrade the driver locally from PyPI
 pip3 install --upgrade seeed-python-Ds18b20
 ```
 
-**Software**
+#### Software
 
 ```Python
 import seeed_ds18b20
@@ -116,6 +223,11 @@ python3 examples/BasicRead.py
           The outcome will display as following if everything goes well:
 
 ![](https://files.seeedstudio.com/wiki/One-Wire-Temperature/img/TEM.png)
+
+## Resource
+**[ZIP]** [Library for Onewire](https://github.com/PaulStoffregen/OneWire/archive/master.zip).
+
+**[ZIP]** [Library for Arduino Temperature Control](https://github.com/milesburton/Arduino-Temperature-Control-Library/archive/master.zip).
 
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
