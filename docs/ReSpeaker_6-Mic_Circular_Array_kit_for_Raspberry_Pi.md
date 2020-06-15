@@ -122,7 +122,7 @@ Earphone or Speaker                 x1
 
 
 !!!Tips
-        Actually the ReSpeaker 6-Mic Circular Array support Raspberry Pi Zero, Raspberry Pi 1 B+, Raspberry Pi 2 B, Raspberry Pi 3 B, Raspberry Pi 3 model B+ and Raspberry Pi 3 A+, in this wiki we are using Raspberry Pi 3.
+        Actually the ReSpeaker 6-Mic Circular Array support Raspberry Pi Zero, Raspberry Pi 1 B+, Raspberry Pi 2 B, Raspberry Pi 3 B, Raspberry Pi 3 model B+ , Raspberry Pi 3 A+ and Raspberry Pi 4 in this wiki we are using Raspberry Pi 3.
 
 
 **Connection**
