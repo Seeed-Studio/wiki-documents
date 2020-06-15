@@ -1857,7 +1857,7 @@ To design your own board, you will need to design your own module's schematics, 
 
 If you don’t want to work on schematic or layout yourself, but you want to convert your prototype based on Seeed’s modules into an integrated product, we highly recommend you to try Geppetto.
 
-[Geppetto](https://geppetto.seeedstudio.com/) is, by far, the easiest and least expensive way to produce production-quality electronics. You don’t need to know about resistors, capacitors, inductors, routing paths or anything EE to design your own module. Geppetto is drag & drop simple... anyone can create professional IoT devices. To make it more convenient for you, Geppeto has a library for Seeed, so you can design your own Grove modules with ease!
+Please visit the [**Grove Beginner Kit for Arduino Geppetto Guide**](http://wiki.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-Geppetto-Guide) for more information.
 
 ### PCB Services
 

@@ -702,8 +702,9 @@ nav:
           - Grove Indoor Environment Kit for Edison: Grove_Indoor_Environment_Kit_for_Edison.md
           - Grove Shield for Intel Joule: Grove_Shield_for_Intel_Joule.md
           - Grove Smart Plant Care Kit: Grove_Smart_Plant_Care_Kit.md
-          - Grove Beginner Kit for Arduino(EOL): Grove_Beginner_Kit_for_Arduino.md
           - Grove Beginner Kit for Arduino: Grove-Beginner-Kit-For-Arduino.md
+          - Grove Beginner Kit for Arduino Geppetto Guide: Grove-Beginner-Kit-for-Arduino-Geppetto-Guide.md
+          - Grove Beginner Kit for Arduino(EOL): Grove_Beginner_Kit_for_Arduino.md
           - Grove Creator Kit: Grove-Creator-Kit-1.md
 
   - MakerPro:
