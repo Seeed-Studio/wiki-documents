@@ -175,9 +175,159 @@ Buy:
 
 *   [Raspberry Pi Related Products](https://www.seeedstudio.com/depot/Raspberry-Pi-c-122_154)
 
-This page will be updated with new information as and when available.
+
 
 All trademarks are the property of their respective owners. Raspberry Pi and its logo are trademarks of the Raspberry Pi Foundation.
+
+
+
+## GETTING STARTED 
+
+### Requirement 
+- Raspberry Pi 3 B
+- Wi-Fi network
+- micro USB cable
+- 4GB (or larger) SD card and SD reader
+- PC or Mac            
+- 5V 3A USB adapter for power supply (optional)  
+- One usb-c data cable
+- A micro HDMI to HDMI interface           
+- USB keyboard and USB mouse            
+- One display with HDMI interface  
+
+!!!Note
+    Please insert the USB cable gently, otherwise the interface may be damaged. Please use the USB cable with 4 internal cables. The USB cable with 2 internal cables cannot transfer data. If you are not sure about your line, you can buy it [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html).
+  
+
+### Boot from SD card
+
+#### How to burn a Raspbian image
+
+**1. Raspbian Stretch download**
+
+Download [Raspbian Stretch](https://www.raspberrypi.org/downloads/raspbian/) from Raspberry Pi official website and select “with desktop and recommended software” version.
+
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss0.png)
+
+**2. Win32 Disk Imager**
+
+- Download the [Win32 Disk Imager](https://sourceforge.net/projects/win32diskimager/) from the Sourceforge Project page as an installer file, and run it to install the software. 
+
+- Insert the SD card into your SD card reader and connect to your PC.
+
+- Run the Win32DiskImager utility from your desktop or menu.
+
+- In the device box, select the corresponding drive letter of the SD card. Be careful to select the correct drive: if you choose the wrong drive you could destroy the data on your computer's hard disk! If you are using an SD card slot in your computer, and can't see the drive in the Win32DiskImager window, try using an external SD adapter. 	
+
+- Click 'Write' and wait for the write to complete.
+
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss1.png)
+
+- Complete.
+
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss2.png)
+
+- Exit the imager and eject the SD card.
+- After writing the image to the SD card, insert the SD card into raspberry PI 4B. First connect the HDMI interface of raspberry PI 4B through the micro HDMI to HDMI interface, and then use the usb-c interface to power it. Do not remove the SD card during the writing process. Raspberry PI 4B will start from SD card.
+
+#### Basic Configuration
+
+**Wireless connection and SSH**
+
+**1.** Create a file called "wpa_supplicant.conf" into the /boot folder, and copy the following code.
+
+
+```txt
+country=CN
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+ 
+network={
+ssid="WiFi-name"
+psk="WiFi-password"
+key_mgmt=WPA-PSK
+priority=1
+}
+```
+
+!!!Note
+
+	The Wi-Fi name and password should be the same as your local Wi-Fi which your PC connected to(make sure your PC and Raspberry Pi are in the same LAN).
+
+
+**2.** Create a blank file called "ssh" into the /boot folder.
+
+**3.** Insert the SD Card with Raspbian into the Raspberry Pi
+
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/sd_card.jpg)
+
+**4.** Connect the Raspberry Pi to the power source and power it up. 
+
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/power.jpg)
+
+**5.** Open putty to connect PC to Raspberry Pi. 
+
+Download putty： [https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss3.png)
+
+
+**Raspberry Pi**
+Default username : pi
+Default password : raspberry
+
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss4.jpg)
+
+**VNC Configuration**
+
+**1.** Open raspi-config by typing following command in terminal.
+
+```bash
+sudo raspi-config
+```
+
+Arrow down to 5 interfacing Options and press "enter" to select.
+
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss5.png)
+
+Arrow down to P3 VNC and press "enter" to select.
+
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss6.png)
+
+Select "Yes" to enable it.
+
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss7.png)
+
+Select "Ok".
+
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss8.png)
+
+**2. ** Install VNC Viewer
+
+Downloadr [VNC Viewe](https://www.realvnc.com/en/connect/download/viewer/)
+
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss9.png)
+
+Open VNC Viewer and enter the IP address of Raspberry Pi. You can find the IP address by typing ++ifconfig++ command in the terminal of Raspberry Pi (or you can enter raspberrypi.local). 
+
+!!!Note
+
+		If you use raspberrypi.local to login your Pi, you should make sure there is only one Raspberry Pi in use in your LAN.
+
+Enter the default user name and password, and now you can enter the Raspberry Pi's remote desktop!
+
+
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss10.png)
+
+Success！
+
+![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss11.PNG)
+
+
+
+
+
+
 
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
