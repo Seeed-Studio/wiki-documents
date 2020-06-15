@@ -225,9 +225,7 @@ python3 examples/BasicRead.py
 ![](https://files.seeedstudio.com/wiki/One-Wire-Temperature/img/TEM.png)
 
 ## Resource
-**[ZIP]** [Library for Onewire](https://github.com/PaulStoffregen/OneWire/archive/master.zip).
-
-**[ZIP]** [Library for Arduino Temperature Control](https://github.com/milesburton/Arduino-Temperature-Control-Library/archive/master.zip).
+**[PDF]** [DS18B20-Datasheet](https://files.seeedstudio.com/wiki/One-Wire-Temperature/res/DS18B20-Datasheet.pdf).
 
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
