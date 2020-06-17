@@ -474,26 +474,36 @@ void DrawLegend() {
 Raspberry Pi 4 supports Python, so the project demo can be easily displayed from the Raspberry Pi 4 display if you follow the below steps.
 
 - **Step 1** Install [grove.py](https://github.com/Seeed-Studio/grove.py) by the command
+
 ```
 pip3 install Seeed-grove.py
 ```
+
 - **Step 2** Install the MLX90641 driver with the following command.
 Python environment(If you don't have authority of your Raspberry Pi):
+
 ```
 pip3 install seeed-python-mlx9064x
 ```
+
 Upgrade to the latest driver:
+
 ```
 pip3 install --upgrade seeed-python-mlx90640
 ```
+
 - **Step 3** Check the corresponding i2c number of the Raspberry Pi:
+
 ```
 ls /dev/i2c*
 ```
+
 You may get the result like this:
+
 ```
 /dev/i2c-1
 ```
+
 - **Step 4** Download the [MLX90641 Library](https://github.com/Seeed-Studio/Seeed_Python_MLX9064x.git) by **git clone** with command.
 
 - **Step 5** Run the **BasicReadings.py** file by the following commands:
@@ -507,16 +517,19 @@ You may get the result like this:
      An upgrated UI of outcome on Raspberry Pi has been released as following:
 
 - **Step 1** Installing from PyPI:
+
 ```
 sudo pip3 install seeed_python_ircamera
 ```
 
 if you think that the speed of download too slowly, you can try below command:
+
 ```
 sudo pip3 install seeed_python_ircamera -i https://pypi.tuna.tsinghua.edu.cn/simple/
 ```
 
 - **Step 2** Input below command in terminal:
+
 ```
 sudo ircamera I2C MLX90641
 ```
@@ -524,7 +537,7 @@ sudo ircamera I2C MLX90641
 !!!Success
      The outcome will be displayed as following if everything goes well.
 
-![](https://files.seeedstudio.com/wiki/Grove-Thermal-Imaging-Camera-IR-Array/img/outcome_UI.png)
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-Thermal-Imaging-Camera-IR-Array/img/outcome_UI.png"/><figcaption><b></b> <i></i></figcaption></a></figure></div>
 
 ## Resourse
 
