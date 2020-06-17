@@ -496,14 +496,35 @@ You may get the result like this:
 ```
 - **Step 4** Download the [MLX90641 Library](https://github.com/Seeed-Studio/Seeed_Python_MLX9064x.git) by **git clone** with command.
 
-- **Step 4** Run the **BasicReadings.py** file by the following commands:
+- **Step 5** Run the **BasicReadings.py** file by the following commands:
+
 ![](https://files.seeedstudio.com/wiki/Grove-Thermal-Imaging-Camera-IR-Array/img/90641-raspi.png)
 
 !!!Success
      The outcome will be displayed as above if everything goes well.
 
 !!!Note
-     An upgrated UI of outcome on Raspberry Pi is going to be released soon! 
+     An upgrated UI of outcome on Raspberry Pi has been released as following:
+
+- **Step 1** Installing from PyPI:
+```
+sudo pip3 install seeed_python_ircamera
+```
+
+if you think that the speed of download too slowly, you can try below command:
+```
+sudo pip3 install seeed_python_ircamera -i https://pypi.tuna.tsinghua.edu.cn/simple/
+```
+
+- **Step 2** Input below command in terminal:
+```
+sudo ircamera I2C MLX90641
+```
+
+!!!Success
+     The outcome will be displayed as following if everything goes well.
+
+![](https://files.seeedstudio.com/wiki/Grove-Thermal-Imaging-Camera-IR-Array/img/outcome_UI.png)
 
 ## Resourse
 
