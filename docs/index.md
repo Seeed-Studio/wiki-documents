@@ -35,11 +35,11 @@ We are super excited to release the [Grove - Thermal Imaging Camera - MLX90641 1
 This IR thermal camera carries a 16x12 array of thermal sensors (MLX90641) and it can detect the temperature of objects from far away with a center area accuracy of ±1℃ and average accuracy of ±1.5℃. In order to obtain the thermal images easily, the I2C protocol is used to get the low-resolution images from the camera. The FOV (Field of View) of this camera is 110°x75°, and the temperature measurement range is -40℃ to 300℃. In order to obtain the thermal image easily, I2C protocol is used to get the low-resolution image from the camera.
 
 
-### 3. One Wire Temperature Sensor 
+### 3. One Wire Temperature Sensor DS18B20
 
-[One Wire Temperature Sensor](https://wiki.seeedstudio.com/One-Wire-Temperature-Sensor/) has been there on Bazaar for quite a while and now we have prepared the [wiki](https://wiki.seeedstudio.com/One-Wire-Temperature-Sensor/) page for it.
+[One Wire Temperature Sensor DS18B20](https://www.seeedstudio.com/One-Wire-Temperature-Sensor-p-1235.html) has been there on Bazaar for quite a while and now we have prepared the [wiki](https://wiki.seeedstudio.com/One-Wire-Temperature-Sensor-DS18B20/) page for it.
 
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/One-Wire-Temperature-Sensor/"><img src="https://files.seeedstudio.com/wiki/One-Wire-Temperature/one-wire.png" alt="pir"  width="500" height="auto"></a></p>
+<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/One-Wire-Temperature-Sensor-DS18B20/"><img src="https://files.seeedstudio.com/wiki/One-Wire-Temperature/one-wire.png" alt="pir"  width="500" height="auto"></a></p>
 
 
 This 2m long One Wire Temperature Sensor has a waterproof probe and long wire shape, suitable for immersive temperature detection. The chip inside this sensor is DS18B20 which is widely adopted.The original one includes three wires inside, you need to add an extra resistance to get it working. For this sensor, we adjusted it into a Grove port and has a resistor pre-assembled inside so that you can use it as a regular Grove sensor. 
