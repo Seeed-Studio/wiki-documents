@@ -71,7 +71,7 @@ Simply plug in the USB Type-C cable to the USB port to power on the device. You 
 
 #### Method 2 - Using Battery
 
-You can also use battery to power on the IoT button. Open the enclosure (please refer to the gif below) and put the batteries in. Once the battery is installed, you will also need to plug the IoT button to a computer or a power adapter via USB Type-C **once** to initialize the battery circuit. You should see the power indication LED is **Green**. You may now remove the USB connection and LED will go off and everything is set.
+You can also use battery to power on the IoT button. Open the enclosure (please refer to the gif below) and put the battery in. Once the battery is installed, you will also need to plug the IoT button to a computer or a power adapter via USB Type-C **once** to initialize the battery circuit. You should see the power indication LED is **Green**. You may now remove the USB connection and LED will go off and everything is set.
 
 !!!Note
         When the Power Status LED is red, it indicates that the battery is reversed!
