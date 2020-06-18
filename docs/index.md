@@ -58,7 +58,7 @@ We have been releasing videos on a weekly basis on our "Seeed Weekly Show" and t
 Also you could also enter our giveaway in this video and win exciting prizes!
 
 
-<p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/6AILF0BSPzc" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/Pr6hiDTffMo" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 Don't forget to subscribe to our [YouTube Channel](http://www.youtube.com/c/SeeedStudioSZ) to stay updated with our Seeed Weekly Show and many other exciting videos.
 
