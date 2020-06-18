@@ -58,12 +58,29 @@ The Seeed IoT Button For AWS is a Wi-Fi based, programmable button that is easy 
 
 ## Getting Started
 
-### Device Activation
+### Powering Up
 
-When first time using the device, you must put the battery inside the button, and connect the device to a computer or a power adapter through USB Type-C. When the power indication LED is green, it indicates that it's activated(The power status LED is near the USB Type-C port).
+The first step of getting started is to power on the IoT button. There are two ways to power on the buttons:
+
+#### Method 1 - USB Type-C
+
+Simply plug in the USB Type-C cable to the USB port to power on the device. You should see the power indication LED is flash **Green** once.
+
+!!!Note
+        After Green light flashed once, you should also see the LED blink a green light at a very low brightness. You can see it under darker surrounding.
+
+#### Method 2 - Using Battery
+
+You can also use battery to power on the IoT button. Open the enclosure (please refer to the gif below) and put the batteries in. Once the battery is installed, you will also need to plug the IoT button to a computer or a power adapter via USB Type-C **once** to initialize the battery circuit. You should see the power indication LED is **Green**. You may now remove the USB connection and LED will go off and everything is set.
 
 !!!Note
         When the Power Status LED is red, it indicates that the battery is reversed!
+
+#### How To Take Out The Enclosure
+
+The following gif demonstrates how to take out the enclosure using the Triangle Plastic Pry Opening Tool provided in the package.
+
+<div align=center><img width = 250 src="https://files.seeedstudio.com/wiki/Seeed-IOT-BUTTON-FOR-AWS/img/takingApart.gif"/></div>
 
 ### Setting up Wi-Fi on the Button
 
@@ -100,6 +117,8 @@ When first time using the device, you must put the battery inside the button, an
 
 Now you can start playing with your AWS 1-Click service!
 
+Please make sure update to the latest firmware following [**this**](https://wiki.seeedstudio.com/SEEED-IOT-BUTTON-FOR-AWS/#ota-update).
+
 ### Operating Instructions
 
 - **Single Click:** Send single click event
@@ -120,14 +139,7 @@ Long Press **15s** to start searching for new version upgrades:
 
 **When it's the latest version**, the Event Status LED blinks from **Blue** to **Green**. For more information, please refer to the table below:
 
-
 <table style="border-collapse:collapse;border-spacing:0" class="tg"><tr><th style="background-color:#9b9b9b;border-color:#000000;border-style:solid;border-width:1px;color:#ffffff;font-family:Arial, sans-serif;font-size:14px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:middle;word-break:normal">Event LED Status</th><th style="background-color:#9b9b9b;border-color:#000000;border-style:solid;border-width:1px;color:#ffffff;font-family:Arial, sans-serif;font-size:14px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:middle;word-break:normal">Indication</th></tr><tr><td style="border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Blue flashes -&gt; Green</td><td style="border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Update sent successfully</td></tr><tr><td style="border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Blue flashes -&gt; Red</td><td style="border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Update sent failed</td></tr><tr><td style="border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Blue flashes -&gt; Orange</td><td style="border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Wi-Fi connection failed, please check router or change network configuration</td></tr><tr><td style="border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Blue flashes -&gt; Purple</td><td style="border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">The server connection failed, please check the network environment</td></tr></table>
-
-## How To Take Out The Enclosure
-
-The following gif demonstrates how to take out the enclosure using the Triangle Plastic Pry Opening Tool provided in the package.
-
-<div align=center><img width = 250 src="https://files.seeedstudio.com/wiki/Seeed-IOT-BUTTON-FOR-AWS/img/takingApart.gif"/></div>
 
 ## FAQs
 
