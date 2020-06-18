@@ -61,7 +61,7 @@ channel are dummy.
     - 3.5mm headset audio jack
     - Speaker jack
 - Compatible with Raspberry Pi 40-pin headers
-- Microphones: MSM321A3729H9CP
+- Microphones: MSM321A3729H9BP
 - Sensitivity: -22 dBFS (Omnidirectional)
 - SNR: 59 dB
 - Max Sample Rate: 48Khz
