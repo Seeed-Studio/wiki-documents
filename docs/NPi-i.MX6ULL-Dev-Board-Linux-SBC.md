@@ -176,13 +176,14 @@ sudo fire-config
 
 **Serial Console**
 
-Now your NPi i.MX6ULL Dev Board - Linux SBC can boot, you might want to get access to the Linux system via a console, to setup the WiFi, etc. You have two ways to get the console:
+Now your NPi i.MX6ULL Dev Board - Linux SBC can boot, you might want to get access to the Linux system via a console, to setup the WiFi, etc. 
+<!-- You have two ways to get the console: -->
 
-- A. The OTG USB port - This requires a running Linux system on the board
+<!-- - A. The OTG USB port - This requires a running Linux system on the board -->
 
 - B. The UART port - This is the hard way to access the console, it can be used for debugging low level issues
 
-**A. Connection via OTG**
+<!-- **A. Connection via OTG**
 
 - **Step 1.** Find a Type-c USB cable, and please make sure it's a data cable (not just a power cable), plug the Type-c USB end to the NPi i.MX6ULL Dev Board's Type-c USB port , then plug another end of this cable into your computer.
 
@@ -199,7 +200,7 @@ Now your NPi i.MX6ULL Dev Board - Linux SBC can boot, you might want to get acce
     - Mac: Depend on your USB To TTL Adapter, it could be ```screen /dev/cu.usbserial1412(,1422, and so on) 115200``` or ```screen /dev/cu.usbmodem1412(,1422, and so on) 115200```
 
 
-- **Step 4.** The default user name is ```debian```, and password is ```temppwd```.
+- **Step 4.** The default user name is ```debian```, and password is ```temppwd```. -->
 
 **B. Connection via The UART port**
 
@@ -212,7 +213,7 @@ In this section we will guide you how to establish a connection from your comput
     - Linux: Depend on your USB To TTL Adapter, it could be ```screen /dev/ttyACM0(,1, and so on) 115200``` or ```screen /dev/ttyUSB0(,1, and so on) 115200```.
     - Mac: Depend on your USB To TTL Adapter, it could be ```screen /dev/cu.usbserial1412(,1422, and so on) 115200``` or ```screen /dev/cu.usbmodem1412(,1422, and so on) 115200```.
 
-- **Step 3.** The login user name is NPi i.MX6ULL Dev Board, and password is NPi i.MX6ULL Dev Board too.
+- **Step 3.** The default user name is ```debian```, and password is ```temppwd```.
 
 - **Step 4.** If you do not have a USB to TTL Adapter, you may also use an Arduino. If using an Arduino, connect one end of a jumper wire to the RESET pin on the Arduino and the other end to the GND pin on the Arduino. This will bypass your Arduino's ATMEGA MCU and turn your Arduino into a USB to TTL adapter, see video tutorial [here](https://www.youtube.com/watch?v=qqSLwK1DP8Q). Now connect the GND pin on the Arduino to the GND pin on the Uart port of the NPi i.MX6ULL Dev Board. Connect the Rx pin on the Arduino to the Rx pin on the Uart port of the NPi i.MX6ULL Dev Board. Connect the Tx pin on the Arduino to the Tx pin on the Uart port of the NPi i.MX6ULL Dev Board. And lastly, connect the Arduino to your PC/Mac via the Arduino's USB cable. Now check that your Mac or Linux PC finds your Arduino by typing this command:
 
@@ -227,7 +228,7 @@ You should get back something like:
 /dev/ttyACMX where X will vary depending on which USB port you used  (on Linux)
 ```
 
-Now follow step 2 above to connect to your NPi i.MX6ULL Dev Board over this serial connection. 
+Now follow step above to connect to your NPi i.MX6ULL Dev Board over this serial connection. 
 
 ### Pin Control
 
