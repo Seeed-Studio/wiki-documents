@@ -204,7 +204,7 @@ Now your NPi i.MX6ULL Dev Board - Linux SBC can boot, you might want to get acce
 
 **B. Connection via The UART port**
 
-In this section we will guide you how to establish a connection from your computer to your NPi i.MX6ULL Dev Board using your USB to TTL adapter which will be connected to the NPi i.MX6ULL Dev Board's Uart port (Uart port located just to the left of the NPi i.MX6ULL Dev Board speaker plug).
+In this section we will guide you how to establish a connection from your computer to your NPi i.MX6ULL Dev Board using your USB to TTL adapter which will be connected to the NPi i.MX6ULL Dev Board's Uart port.
 
 - **Step 1.** Connect Uart port and your PC/Mac with an USB To TTL Adapter. If you don't have an USB To TTL Adapter, you can click [here](https://www.seeedstudio.com/USB-To-Uart-5V%26amp%3B3V3-p-1832.html) to get one.
 
