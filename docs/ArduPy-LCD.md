@@ -260,3 +260,18 @@ LCD.getTextDatum()
 
 Returns the Datum of text.
 
+## Example Usage
+
+Here will show some graphics drawn using the LCD API.
+
+### Pie Chart
+
+<div align=center><img src="https://blog.seeedstudio.com/wp-content/uploads/2020/06/Piechart-1-2.gif"/></div>
+
+Please find the complete code [here](https://www.seeedstudio.com/blog/2020/06/17/piechart-and-meters-reading-using-wio-terminal-and-ardupy/).
+
+### Analog Meter
+
+![](https://blog.seeedstudio.com/wp-content/uploads/2020/06/Meter.gif)
+
+Please find the complete code [here](https://www.seeedstudio.com/blog/2020/06/17/piechart-and-meters-reading-using-wio-terminal-and-ardupy/).
