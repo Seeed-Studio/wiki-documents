@@ -2,8 +2,6 @@
 
 To get started with ArduPy, first need to install **aip - ArduPy Integrated Platform** is a utility to develop ArduPy and interact witch ArduPy board. It enables users to quickly get started with ardupy. **aip** is meant to be a simple command line tool. You can customize your own ardupy firmware through it, without needing to know more details about ArduPy.
 
-If you prefer using **IDE**, we have also prepared an IDE version and please scroll through to IDE session.
-
 ## Install with macOS
 
 For macOS user, you can simply run the following in Terminal to install ArduPy-aip:
@@ -37,7 +35,59 @@ pip3 install ardupy-aip
 
 **Note:** please make sure you have **Python 3** installed and `pip3` is up to date.
 
-## ArduPy-aip CLI Getting Started
+## Quick Start with ArduPy
+
+Once you have installed Ardupy-aip you can do the followings to get started your first ArduPy project very quickly!
+
+- **STEP.1 Build the firmware**
+
+For **Wio Terminal**, run:
+
+```py
+aip build --borad=wio_terminal
+```
+
+For **Seeeduino XIAO**, run:
+
+```py
+aip build --board=xiao
+```
+
+!!!Note
+        This command download and extracts all the required files and may take some time. Please be patient.
+
+- **STEP.2 Flash the ArduPy firmware to the device**
+
+```py
+aip flash
+```
+
+- **STEP.3 Enter REPL mode**
+
+Run the following to enter repl mode:
+
+```py
+aip shell -c "repl"
+```
+
+Copy the following code to the repl shell-based terminal:
+
+```py
+from machine import Pin, Map
+import time
+
+LED = Pin(Map.LED_BUILTIN, Pin.OUT)
+
+while True:
+    LED.on()
+    time.sleep(1)
+    LED.on()
+    time.sleep(1)
+```
+
+Now you should see your device starts to blink! Check the below sections to find out more about ArduPy!
+
+## ArduPy-aip CLI
 
 `aip` is a command-line interface for ArduPy, you can use aip to install ArduPy libraries, build and flash ArduPy firmware to hardware with ease. Simply use `help` to get more information:
 
@@ -47,13 +97,15 @@ aip help
 
 <div align=center><img src="https://s3-us-west-2.amazonaws.com/files.seeedstudio.com/wiki/Wio-Terminal/img/aip-help.png"/></div>
 
-- To get board information:
+- To get board information (firmware info.):
 
 ```sh
 aip board
 ```
 
 - To install Arduino libraries binding with ArduPy:
+
+Please check here for the available [**ArduPy libraries**](https://github.com/Seeed-Studio?q=seeed-ardupy&type=&language=).
 
 ```sh
 aip install <ArduPy Library Path> 
@@ -69,11 +121,17 @@ aip uninstall <ArduPy Library Path>
 # aip uninstall Seeed-Studio/seeed-ardupy-ultrasonic-sensor
 ```
 
-- To build ArduPy Firmware contains the libraries you installed and the basic ArduPy features:
+- To build ArduPy Firmware contains the libraries you installed and the basic ArduPy features. Note that, you can now choose to build for [Seeeduino XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html) or [Wio Terminal](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) now!
 
 ```sh
-aip build
+aip build --board=<board>
+# For Seeeduino XIAO:
+# aip build --board=xiao
+# For Wio Terminal:
+# aip build --board=wio_terminal
 ```
+
+**Note:** You can also use `aip build -list` to check the available boards.
 
 - To list installed ArduPy Libraries
 
@@ -88,7 +146,7 @@ aip flash
 ```
 
 !!!Note
-        After commands, you use `-h` flags to see more usage for that command. For example, `aip flash -h`
+        After commands, you use `-h` flags to see more usage for that command. For example, `aip flash -h`.
 
 - To interact with the board (shell-based file explorer):
 
@@ -122,9 +180,17 @@ aip shell -n -c "put <YourPythonFilePath> [Path]"
 # aip shell -n -c "put /Users/ansonhe/Desktop/ur.py"
 ```
 
-### Boot Script
+### Running your First Script
 
-To run a MicroPython script from boot up, simply name your project **`boot.py`** in the root location of the board.
+Once flashed the ArduPy firmware, there should be a USB drive named **`ARDUPY`** appear in your PC. You can create the following Python files to get started.
+
+- **`boot.py`**
+
+To run a MicroPython script from boot up, simply name your project **`boot.py`** in the root location of the board. **This script is executed when the device boots up.**
+
+- **`main.py`**
+
+This is the default python script, but this does not run on boot up. The `main.py` runs when `main.py` has changes saved to it. i.e. it can auto reload.
 
 ### Usage under ardupy-mpfshell
 
@@ -156,13 +222,11 @@ execfile test.py
 
 <div align=center><img src="https://s3-us-west-2.amazonaws.com/files.seeedstudio.com/wiki/Wio-Terminal/img/aip-mpfshell.png"/></div>
 
-## Using aip to include Other ArduPy Libraries(From Arduino Libraries) Example
+## Using aip to include Other ArduPy Libraries Example
 
-Aip is one of the key feature of ArduPy, which can be used to convert Arduino Libraries to Python Interface to be used for ArduPy. Here we provide an example, how to include the ArduPy library into ArduPy Firmware:
+`aip` is one of the key feature of ArduPy, which can be used to convert Arduino Libraries to Python Interface to be used for ArduPy. Here we provide an example, how to include the ArduPy library into ArduPy Firmware using Wio Terminal:
 
-**Tip:** We provide few ArduPy library examples on the github page for now, and soon will release tutorials how to convert Arduino libraries to ArduPy Libraries very soon.
-
-1.Open Terminal/Powershell or in VS code, run the following to install ardupy libraries.
+1.Open Terminal/Powershell, run the following to install ardupy libraries.
 
 ```sh
 aip install Seeed-Studio/seeed-ardupy-ultrasonic-sensor
@@ -171,7 +235,7 @@ aip install Seeed-Studio/seeed-ardupy-ultrasonic-sensor
 2.Build the firmware:
 
 ```sh
-aip build
+aip build --board=wio_terminal
 ```
 
 **Note:** Usage of flashing firmware will appeared at the bottom of build.
@@ -184,14 +248,17 @@ aip flash
 
 <div align=center><img src="https://s3-us-west-2.amazonaws.com/files.seeedstudio.com/wiki/Wio-Terminal/img/aip-install-new.gif"/></div>
 
-!!!Note
-        You can also use `aip build clean` before `aip build` to remove any caches from before to avoid error.
-
-### Example Usage
+#### Library Example Usage
 
 Once the library is included within the ArduPy firmware and flashed into the device, you can import and use the module as follow:
 
-<div align=center><img width = 500 src="https://s3-us-west-2.amazonaws.com/files.seeedstudio.com/wiki/Wio-Terminal/img/ur.gif"/></div>
+```sh
+aip shell -n -c "put /Users/ansonhe/Desktop/ur.py"
+```
+
+>Replace `/Users/ansonhe/Desktop` to your path.
+
+where the `ur.py` is:
 
 ```py
 from arduino import grove_ultra_ranger
@@ -204,76 +271,13 @@ while True:
     time.sleep(1)
 ```
 
+For more reference, please check the [seeed-ardupy-ultrasonic-sensor](https://github.com/Seeed-Studio/seeed-ardupy-ultrasonic-sensor).
 
 ### FAQ
 
 For more aip reference, please visit [ardupy-aip](https://github.com/Seeed-Studio/ardupy-aip) to find out more.
 
-## IDE Getting Started
-
-### 1. Install the ArduPy IDE
-
-To use ArduPy, we need to use another IDE other than Arduino IDE to compile (and upload) the MicroPython code into our device.
-
-#### Installing Steps
-
-1. Download and install the [Visual Studio Code](https://code.visualstudio.com/Download) IDE according to your OS.
-
-2. Open the **Extensions Market** in VS Code by clicking the **Extensions** on the left panel or use the keyboard shortcut:
-
-      - Keyboard Shortcut: `Shift+CTRL+X` in **Windows** or `Shift+CMD+X` in **Mac Os**.
-
-3. Search **Seeed ArduPy IDE** in the Extension Market.
-
-4. Click **Install** to install the IDE plug-in.
-
-<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/ArduPyIDE.gif"/></div>
-
-Once installed the Seeed ArduPy IDE plug-in in VS code, you can start playing with MicroPython!
-
-### 2. Connecting with the Device
-
-1. Connect the device to your PC via a USB cable. 
-
-2. On the Bottom of the VS Code IDE, you should be able to see a **Device Connection (Plug Symbol)**. Click the Device Connection symbol, a window will appear with all the available serial connections.
-
-3. Click on the right serial connection(Your Device) to connect.
-
-    - **Windows**: `COMxx`.
-
-    - **Mac Os**: `/dev/cu.usbmodem14xxxx`.
-
-4. Once connected, a window will appear in the bottom and check if the ArduPy firmware is already loaded into the device.
-
-Choose **Yes** and it will download and load the latest ArduPy firmware onto the device and you can start programming your device in Python Syntax!
-
-<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Ardupy-Firmware.png"/></div>
-
-## IDE Basics
-
-<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/IDE-icons.png"/></div>
-
-Once connected, the device name should appear at the bottom of the IDE and you can use the features to start programming with ArduPy.
-
-**Features(Left to Right):**
-
-- Create a MicroPython Project
-
-- Open the MicroPython Terminal
-
-- Run the MicroPython Project
-
-- Status
-
-### Adding Files
-
-<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/AddingFiles.gif"/></div>
-
-To add files to the device using ArduPy, simply click the icon as shown above to choose files from your PC.
-
-### Boot Script
-
-To run a MicroPython script from boot up, simply name your project **`boot.py`** and load the files in the device as methods mentioned above.
+---
 
 ## Time and Delay
 
@@ -303,6 +307,10 @@ For more reference, please visit [MicroPython time related functions](https://do
 
 ## Pin and GPIO
 
+### Pinout Diagram for Seeeduino XIAO
+
+![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-pinout.jpg)
+
 ### Pinout Diagram for Wio Terminal
 
 ![](https://files.seeedstudio.com/wiki/Wio-Terminal/img/WioT-Pinout.jpg)
@@ -325,6 +333,23 @@ p5.value()              # Prints the value of the input pin
 
 p3 = Pin(3, Pin.OUT, value=1) # Setting Pin 3 as HIGH in one line
 p5 = Pin(5, Pin.IN, Pin.PULL_UP) # Setting Pin 5 as input with pull-up resistors
+```
+
+## Map
+
+To make it easier access to the Boards peripherals，ArduPy has mapped the same calling methods from Arduino:
+
+```py
+from machine import Pin, Map
+import time
+
+LED = Pin(Map.LED_BUILTIN, Pin.OUT) # Setting builtin LED as output
+
+while True:
+    LED.on()
+    time.sleep(1)
+    LED.on()
+    time.sleep(1)
 ```
 
 ## PWM (Pulse Width Modulation)
@@ -407,6 +432,70 @@ lcd.drawString("Hello World!", 0, 0)   # Printing Hello World at (0, 0)
 ```
 
 Note: Use **`tab`**  to see the available functions.
+
+---
+
+## IDE Getting Started
+
+>**Note:** The IDE methods of invoking ArduPy will be **depreciated** soon, we recommend to use the **CLI** method.
+
+### 1. Install the ArduPy IDE
+
+To use ArduPy, we need to use another IDE other than Arduino IDE to compile (and upload) the MicroPython code into our device.
+
+#### Installing Steps
+
+1. Download and install the [Visual Studio Code](https://code.visualstudio.com/Download) IDE according to your OS.
+
+2. Open the **Extensions Market** in VS Code by clicking the **Extensions** on the left panel or use the keyboard shortcut:
+
+      - Keyboard Shortcut: `Shift+CTRL+X` in **Windows** or `Shift+CMD+X` in **Mac Os**.
+
+3. Search **Seeed ArduPy IDE** in the Extension Market.
+
+4. Click **Install** to install the IDE plug-in.
+
+Once installed the Seeed ArduPy IDE plug-in in VS code, you can start playing with MicroPython!
+
+### 2. Connecting with the Device
+
+1. Connect the device to your PC via a USB cable. 
+
+2. On the Bottom of the VS Code IDE, you should be able to see a **Device Connection (Plug Symbol)**. Click the Device Connection symbol, a window will appear with all the available serial connections.
+
+3. Click on the right serial connection(Your Device) to connect.
+
+    - **Windows**: `COMxx`.
+
+    - **Mac Os**: `/dev/cu.usbmodem14xxxx`.
+
+4. Once connected, a window will appear in the bottom and check if the ArduPy firmware is already loaded into the device.
+
+Choose **Yes** and it will download and load the latest ArduPy firmware onto the device and you can start programming your device in Python Syntax!
+
+## IDE Basics
+
+Once connected, the device name should appear at the bottom of the IDE and you can use the features to start programming with ArduPy.
+
+**Features(Left to Right):**
+
+- Create a MicroPython Project
+
+- Open the MicroPython Terminal
+
+- Run the MicroPython Project
+
+- Status
+
+### Adding Files
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/AddingFiles.gif"/></div>
+
+To add files to the device using ArduPy, simply click the icon as shown above to choose files from your PC.
+
+### Boot Script
+
+To run a MicroPython script from boot up, simply name your project **`boot.py`** and load the files in the device as methods mentioned above.
 
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
