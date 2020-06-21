@@ -2,7 +2,60 @@
 
 To get started with ArduPy, first need to install **aip - ArduPy Integrated Platform** is a utility to develop ArduPy and interact witch ArduPy board. It enables users to quickly get started with ardupy. **aip** is meant to be a simple command line tool. You can customize your own ardupy firmware through it, without needing to know more details about ArduPy.
 
-## Install with macOS
+## Supported Boards
+
+- [**Wio Terminal**](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)
+
+- [**Seeeduino XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
+
+## Quick Start with ArduPy
+
+The following method is used to experience the ArduPy software in the simplest way. Follow the procedures to get started now! 
+
+- **STEP.1 Entering bootloader mode**
+
+Enter the bootloader mode by resetting the device quickly.
+
+  1. For Wio Terminal, please refer [here](https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/#faq).
+  2. For Seeeduino XIAO, please refer [here](https://wiki.seeedstudio.com/Seeeduino-XIAO/#reset).
+
+There should a USB drive named **`Arduino`** appeared in your PC. Go into the Arduino USB drive location.
+
+- **STEP.2 Download ArduPy DF2 Firmware**
+
+Download the ArduPy firmware in the form of UF2 files.
+
+  1. For [Wio Terminal](https://files.seeedstudio.com/wiki/Wio-Terminal/res/ArduPy_wio_terminal_lastest.uf2)
+  2. For [Seeeduino XIAO](https://files.seeedstudio.com/wiki/Wio-Terminal/res/ArduPy_xiao_lastest.uf2)
+
+- **STEP.3 Connect in the device**
+
+Connect your device to your PC via USB connection.
+
+- **STEP.4 Flashing ArduPy Firmware to the Device**
+
+Once downloaded the firmware for your device. Drag the `.UF2` files to the `ARDUINO` USB drive. Now, your board will disappear from PC. Reset the board and it has loaded ArduPy firmware into it!
+
+- **STEP.5 Blinking the device**
+
+Now, there will be a USB drive named **`ARDUPY`** appeared in your PC. Open the `ARDUPY` and you will see a `main.py` python file. Copy the following and save the file.
+
+```py
+from machine import Pin, Map
+import time
+
+LED = Pin(Map.LED_BUILTIN, Pin.OUT)
+
+while True:
+    LED.on()
+    time.sleep(1)
+    LED.off()
+    time.sleep(1)
+```
+
+Now you should see your device's built-in LED starts to blink! Check the below sections to find out more about ArduPy! You will learn about `ArduPy-aip` tool and how to use `aip` to build and flash your own firmware to devices!
+
+## Install `aip` with macOS
 
 For macOS user, you can simply run the following in Terminal to install ArduPy-aip:
 
@@ -13,7 +66,7 @@ pip3 install ardupy-aip
 **Note:** please make sure that you have installed **Python 3** on macOS. To install Python 3, you can use [**Homebrew**](https://brew.sh/) which is a software package manager for macOS. Once installed Homebrew, run the following to install python 3: **`brew install python3`**. You can also download and install [Python 3 from the official Python website](https://www.python.org/downloads/mac-osx/).
 
 
-## Install with Windows
+## Install `aip` with Windows
 
 You can download the latest versions of ArduPy for windows in the below session. Once downloaded, extract the binary `aip` into a directory that is in your `PATH`.
 
@@ -25,7 +78,7 @@ Or if you have **Python 3** environment, you can also install using `pip3`:
 pip3 install ardupy-aip
 ```
 
-## Install with Linux
+## Install `aip` with Linux
 
 For Linux user, you can simply run the following in Terminal to install ArduPy-aip:
 
@@ -34,58 +87,6 @@ pip3 install ardupy-aip
 ```
 
 **Note:** please make sure you have **Python 3** installed and `pip3` is up to date.
-
-## Quick Start with ArduPy
-
-Once you have installed Ardupy-aip you can do the followings to get started your first ArduPy project very quickly!
-
-- **STEP.1 Build the firmware**
-
-For **Wio Terminal**, run:
-
-```py
-aip build --borad=wio_terminal
-```
-
-For **Seeeduino XIAO**, run:
-
-```py
-aip build --board=xiao
-```
-
-!!!Note
-        This command download and extracts all the required files and may take some time. Please be patient.
-
-- **STEP.2 Flash the ArduPy firmware to the device**
-
-```py
-aip flash
-```
-
-- **STEP.3 Enter REPL mode**
-
-Run the following to enter repl mode:
-
-```py
-aip shell -c "repl"
-```
-
-Copy the following code to the repl shell-based terminal:
-
-```py
-from machine import Pin, Map
-import time
-
-LED = Pin(Map.LED_BUILTIN, Pin.OUT)
-
-while True:
-    LED.on()
-    time.sleep(1)
-    LED.on()
-    time.sleep(1)
-```
-
-Now you should see your device starts to blink! Check the below sections to find out more about ArduPy!
 
 ## ArduPy-aip CLI
 
@@ -121,6 +122,12 @@ aip uninstall <ArduPy Library Path>
 # aip uninstall Seeed-Studio/seeed-ardupy-ultrasonic-sensor
 ```
 
+- To list installed ArduPy Libraries
+
+```sh
+aip list
+```
+
 - To build ArduPy Firmware contains the libraries you installed and the basic ArduPy features. Note that, you can now choose to build for [Seeeduino XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html) or [Wio Terminal](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) now!
 
 ```sh
@@ -132,12 +139,6 @@ aip build --board=<board>
 ```
 
 **Note:** You can also use `aip build -list` to check the available boards.
-
-- To list installed ArduPy Libraries
-
-```sh
-aip list
-```
 
 - To flash ArduPy Firmware into hardware:
 
