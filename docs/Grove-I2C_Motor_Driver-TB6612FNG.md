@@ -126,7 +126,7 @@ You can use this board to control the 4-wire stepper motor as well, it can outpu
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg) |
+| ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg) |
 
 
 !!!Caution
@@ -248,6 +248,97 @@ You can open them in the following two ways(take the dc_motor for example)：
 
 !!!Success
         If every thing goes well, when you power up the external power port, the motor will run.
+
+
+
+
+
+### Play With Raspberry Pi 4 Computer
+
+
+#### Hardware
+
+**Materials required**
+
+*DC Motor Demo*
+
+| Raspberry Pi 4 Computer | Grove Base Hat for Raspberry Pi | Grove - I2C Motor Driver (TB6612FNG) |DC Motor|
+|--------------|-------------|-----------------|----|
+|![enter image description here](https://files.seeedstudio.com/products/102110421/raspberrypi4.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/BaseHat.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/thumbnail.jpg)|![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/DC_Motor_01.jpg)|
+|<a href="https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-8GB-p-4595.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-I2C-Motor-Driver-(TB6612FNG)-p-3220.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/130-DC-Motor-p-2023.html" target="_blank">Get One Now</a>|
+
+
+!!!note
+    **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
+    
+    **2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
+
+    **3** You also need prepare at least 2 jumpers, in case you do not have, you can click [here](https://www.seeedstudio.com/1-Pin-Female-Male-Jumper-Wire-125mm-50pcs-pac-p-1319.html) to buy.
+
+
+- **Step 1.** Plu the DC motor into the **DC Motor Output** port of the driver board, plug the external DC power into the **Power In** port.
+
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/hardwareconnect1.jpg)
+
+
+- **Step 2.** Connect the Grove - I2C Motor Driver (TB6612FNG) to port **I^2^C** of Grove Base Hat for Raspberry Pi.
+
+- **Step 3.** Plug Grove Base Hat for Raspberry Pi into Raspberry Pi 4 Computer.
+
+- **Step 4.** Connect Raspberry Pi 4 Computer to a display.
+
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/hardwareconnect2.jpg)
+
+
+Note!!!
+        If this is your first time use Raspberry Pi, please refer to [Getting started with Raspberry](https://wiki.seeedstudio.com/Grove_Base_Kit_for_Raspberry_Pi/#getting-started) before the start.
+
+
+
+
+#### Software
+
+Thanks MarkusBansky provide software library and learning resource for the Grove_Motor_Driver_TB6612FNG to Raspberry Pi 4 and python3.
+This is a port of [Grove Arduino LIbrary](https://github.com/Seeed-Studio/Grove_Motor_Driver_TB6612FNG) for [Grove I2C Motor Driver on TB6612FNG](https://wiki.seeedstudio.com/Grove-I2C_Motor_Driver-TB6612FNG/).
+
+#### Requirements
+* RaspberryPi linux image
+* Python 3.6+
+* smbus library
+* time library
+* math library
+
+Note!!!
+  The library contains 6 easing functions for the smooth start of motors.
+  Easing functions currently can only be used on a single motor at once.
+  Containing IN and OUT functions.
+
+#### How to use the library
+  First of all make sure you are running the latest released version of **pip**.This library requires you to add an additional`index-url` to **pip.conf** in order to install it. You can do this by editing your config file with `sudo nano/etc/pip.conf` and inserting this line just after the `[global]` section:
+
+  ```
+  index-url=https://pypi.python.org/
+  ```
+Now you can install the package as usual, for python3 use something for example:
+```
+python3 -m pip install raspberry-i2c-tb6612fng
+```
+After you install the library successful, please enter the raspberry-i2c-tb6612fng file use below code.
+```
+cd raspberry-i2c-tb6612fng
+```
+The last step is to run the test code.
+```
+python3 test.py
+```
+
+![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver-TB6612FNG/img/putty.png)
+!!!Success
+        If every thing goes well, when you type `python3 test.py`, the motor will run.
+
+
+
+
 
 
 
