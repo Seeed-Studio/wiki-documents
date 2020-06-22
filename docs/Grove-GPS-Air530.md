@@ -16,6 +16,8 @@ Confused of your GPS not working well in urbans or outsides under only one or fe
 
 [![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html)
 
+!!!Tip
+      We've released the [Seeed GPS Modules Selection Guide](https://wiki.seeedstudio.com/GPS-Modules-Selection-Guide/), it will help you choose the GPS Module that best suits your needs.
 
 ## Features
 
