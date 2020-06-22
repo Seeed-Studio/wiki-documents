@@ -28,7 +28,9 @@ Download the ArduPy firmware in the form of UF2 files.
   1. For [Wio Terminal](https://files.seeedstudio.com/wiki/Wio-Terminal/res/ArduPy_wio_terminal_lastest.uf2)
   2. For [Seeeduino XIAO](https://files.seeedstudio.com/wiki/Wio-Terminal/res/ArduPy_xiao_lastest.uf2)
 
-- **STEP.3 Connect in the device**
+and save it in your drive.
+
+- **STEP.3 Connect the device**
 
 Connect your device to your PC via USB connection.
 
