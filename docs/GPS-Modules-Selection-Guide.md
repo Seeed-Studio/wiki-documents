@@ -5,11 +5,11 @@ For all the GPS or Communication modules in our bazaar, please click [Seeed Stud
 
 ## Introduction to GPS and GPS Modules 
 
-One of the global positioning system (GPS) devices ultilize data from satellites to position a specific point on the Earth in a process named trilateration. Meanwhile, a GPS receiver measures the distances to satellites using radio signals to trilaterate. And trilateration is similar to triangulation, which measures angles, depicted in this illustration (Tim Gunther,2020). GPS modules contain tiny processors and antennas that directly receive data sent by satellites through dedicated RF frequencies. From there, it’ll receive timestamp from each visible satellites, along with other pieces of data. If the module’s antenna can spot 4 or more satellites, it’s able to accurately calculate its position and time.
+One of the global positioning system (GPS) devices ultilize data from satellites to position a specific point on the Earth in a process named trilateration. Meanwhile, a GPS receiver measures the distances to satellites using radio signals to trilaterate. And trilateration is similar to triangulation, which measures angles, depicted in this illustration (Tim Gunther, 2020). GPS modules contain tiny processors and antennas that directly receive data sent by satellites through dedicated RF frequencies. From there, it’ll receive timestamp from each visible satellites, along with other pieces of data. If the module’s antenna can spot 4 or more satellites, it’s able to accurately calculate its position and time.
 
-Three GPS modules are going to be introduced and compared in this article: NEO-6M, Grove – GPS Module and Grove – GPS (Air530). These GPS modules are compatible with Arduino and Raspberry Pi, making it easy for you to start to try out.
+Three GPS modules are going to be introduced and compared in this article: **NEO-6M**, **Grove – GPS Module** and **Grove – GPS ( Air530 )**. These GPS modules are compatible with Arduino and Raspberry Pi, making it easy for you to start to try out.
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-GPS/img/28251.jpg"/><figcaption><b>Figure 1</b>. <i> Illustration of globe with three satellites triangulating a precise location </i></figcaption></a>
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-GPS/img/28251.jpg"/><figcaption><b>Figure 1</b>. <i> Illustration of globe with three satellites triangulating a precise location. ( Tim Gunther,2020 ) </i></figcaption></a>
 </figure></div>
 
 ## Operating Principle
@@ -48,7 +48,7 @@ For all the GPS or Communication modules in our bazaar, please click [Seeed Stud
 | Name| Thumbnail| Size |Update Rate| Baud Rate| Navigation Sensitivity|Power Requirements|Number of Channels| Time to first start | Antennas |Accuracy |Click to Buy|
 |-----------------------------------------------------------------|----------------------------------------------------------------------------------------------|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|------------|------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-----------|-------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|--------------------------|
 | [NEO-6M](https://www.electroschematics.com/neo-6m-gps-module/)  | <img src="https://files.seeedstudio.com/wiki/Grove-GPS/img/1-Ublox-NEO-6M-Module.jpg"/>|23mm x 30mm|1Hz, max 5Hz| Default 9,600, max 230400|-161dBm|3V – 5V|22 tracking, 50 channels|Cold start: 27s; Warm start: 27s; Hot start: 1s| External patch antenna|2.5m GPS Horizontal Position Accuracy|/|
-| [Grove – GPS Module](https://wiki.seeedstudio.com/Grove-GPS/)  | <img src="https://files.seeedstudio.com/wiki/Grove-GPS/img/gps-module.jpg"/>|40mm x 20mm x 13mm|1Hz, max 10Hz|9,600 – 115,200|-160dBm|3.3/5V|22 tracking, 66 channels|Cold start: 13s; Warm start: 1-2s; Hot start: <1s|Antenna included|2.5m GPS Horizontal Position Accuracy|[Order Now](https://www.seeedstudio.com/Grove-GPS-Module.html?utm_source=blog&utm_medium=blog)|
+| [Grove – GPS Module](https://wiki.seeedstudio.com/Grove-GPS/)  | <img src="https://files.seeedstudio.com/wiki/Grove-GPS/img/gps-module.jpg"/>|40mm x 20mm x 13mm|1Hz, max 10Hz|9,600 – 115,200|-160dBm|3.3 / 5V|22 tracking, 66 channels|Cold start: 13s; Warm start: 1-2s; Hot start: <1s|Antenna included|2.5m GPS Horizontal Position Accuracy|[Order Now](https://www.seeedstudio.com/Grove-GPS-Module.html?utm_source=blog&utm_medium=blog)|
 | [Grove – GPS (Air530)](https://wiki.seeedstudio.com/Grove-GPS-Air530/)  | <img src="https://files.seeedstudio.com/wiki/Grove-GPS/img/03_11.png"/>|40mm x 20mm x 13mm|/|/|/|3.3/5V|/|Cold start: 30s; Warm start: 4s;|Antenna included|2.5m Horizontal positioning accuracy|[Order Now](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html)|
 
 ### Which GPS Module is better
@@ -59,7 +59,7 @@ The **Grove – GPS (Air530)** has a ultra-low power consumption at only 31uA, l
 
 #### Scalability
 
-With a higher maximum update rate, the Grove GPS Module is able to be used for projects that involve objects that travel at a faster speed. Furthermore, having more channels open up for other applications as well. The **Grove- GPS (Air 530)** has a multi-mode satellite positioning & navigation and supports more than 6 satellites at the same ti
+With a higher maximum update rate, the Grove GPS Module is able to be used for projects that involve objects that travel at a faster speed. Furthermore, having more channels open up for other applications as well. The **Grove- GPS (Air 530)** has a multi-mode satellite positioning & navigation and supports more than 6 satellites at the same time.
 
 #### Accuracy
 
