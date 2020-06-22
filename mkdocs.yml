@@ -649,6 +649,7 @@ nav:
 
       - Communication:
           # - Communication Introduction: Communication.md
+          - GPS Modules Selection Guide: GPS-Modules-Selection-Guide.md
           - Grove - 125KHz RFID Reader: Grove-125KHz_RFID_Reader.md
           - Grove - 315MHz RF Kit: Grove-315MHz_RF_Kit.md
           - Grove - 433MHz Simple RF Link Kit: Grove-433MHz_Simple_RF_Link_Kit.md
