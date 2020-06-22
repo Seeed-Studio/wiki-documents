@@ -22,10 +22,10 @@ You ought to acknowledge the principles of GPS modules before purchasing and the
 |Update Rate| Update rate refers to how often the GPS module recalculates and reports its position.|
 |Baud Rate|Baud Rate refers to how fast data is sent over a serial line. And higher the baud rate allows for faster GPS data to be sent.|
 |Navigation Sensitivity| dBm figure dictates how prone the gps module is able to capture the frequency. Higher dbm indicates that the module is able to better pickup satalite signals.|
-| Power Requirements| GPS modules can consume a substantial amount of power. Average being 30mA at 3.3V|
-| Number of Channels| Number of channels that the module runs will affect time to first fix. More frequencies that you can check at once, allow for faster fix time. 12 – 14 channels work fine for tracking if you don’t mind waiting a little longer|
-|Antennas|Each antenna is designed to pickup GPS L1 frequency of 1.5752 GHz. Position and design of antenna is crucial for optimal performance of GPS|
-|Accuracy|Lower the distance it can get down to = Higher accuracy. Usually able to find out your location within 30 seconds, down to +/- 10m and most modules can get it down to +/-3m|
+| Power Requirements| GPS modules can consume a substantial amount of power. Average being 30mA at 3.3V.|
+| Number of Channels| Number of channels that the module runs will affect time to first fix. More frequencies that you can check at once, allow for faster fix time. 12 – 14 channels work fine for tracking if you don’t mind waiting a little longer.|
+|Antennas|Each antenna is designed to pickup GPS L1 frequency of 1.5752 GHz. Position and design of antenna is crucial for optimal performance of GPS.|
+|Accuracy|Lower the distance it can get down to = Higher accuracy. Usually able to find out your location within 30 seconds, down to +/- 10m and most modules can get it down to +/-3m.|
 
 ## Field of Applicaitons
 
@@ -40,7 +40,7 @@ There are a numerous ultilizations of GPS Modules. Particularly, plenty of socia
 |Agriculture|At present, developed countries have begun to introduce GPS technology into agricultural production, so-called "precision agricultural farming". The method uses GPS to locate and acquire farmland information, including yield monitoring, soil sample collection, etc. The computer system determines the management measures of farmland plots by analyzing and processing the data, and loads the yield and soil status information into the GPS equipment In the spray applicator, it can accurately fertilize and spray the farmland. By implementing precision farming, it is possible to reduce agricultural production costs without reducing production as much as possible, effectively avoid waste of resources, and reduce environmental pollution caused by fertilization and insect removal.|
 |Entertainment|With the miniaturization of GPS receivers and the reduction of prices, GPS has gradually entered people's daily life and become a good helper for people to travel and explore. Through GPS, people can quickly find their destination in an unfamiliar city, and can travel on the optimal path; campers carry GPS receivers to quickly find suitable camping locations without worrying about getting lost; even some high-end video games , GPS simulation technology is also used.|
 
-## Seeed Gas Sensor
+## GPS Modules at Seeed
 
 For all the GPS or Communication modules in our bazaar, please click [Seeed Studio Bazaar](https://www.seeedstudio.com/) to check.
 
