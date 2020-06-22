@@ -213,6 +213,7 @@ nav:
       - Wio Terminal:
           - Get Started with Wio Terminal: Wio-Terminal-Getting-Started.md
           - ArduPy Get Started with Wio Terminal: Wio-Terminal-ArduPy.md
+          - Wio Terminal Battery Chassis: Wio-Terminal-Battery-Chassis.md
           - LCD:
             - Overview: Wio-Terminal-LCD-Overview.md
             - Basic of LCD: Wio-Terminal-LCD-Basic.md
