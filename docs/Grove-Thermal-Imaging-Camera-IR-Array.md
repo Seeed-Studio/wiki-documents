@@ -465,6 +465,10 @@ void DrawLegend() {
 |![](https://files.seeedstudio.com/wiki/IR-thermal-imaging-sensor-MLX90640-/raspberry-pi-preview_2.jpg)|![](https://files.seeedstudio.com/wiki/IR-thermal-imaging-sensor-MLX90640-/httpsstatics3.jpg)|![](https://files.seeedstudio.com/wiki/Grove-Thermal-Imaging-Camera-IR-Array/img/small.jpg)|
 |[Get one now](https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-4GB-p-4077.html)|[Get one now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|[Get one now](https://www.seeedstudio.com/Grove-Thermal-Imaging-Camera-IR-Array-MLX90640-110-degree-p-4334.html)|
 
+#### Hardware Connection
+
+![](https://files.seeedstudio.com/wiki/Grove-Thermal-Imaging-Camera-IR-Array/img/ras_hardware-connection.jpg)
+
 - **Step 1** Connect the Grove - Thermal Imaging Camera to one of the two I2C ports.
 - **Step 2** Plug the Raspberry Pi 4 into Grove Base Hat for Raspberry Pi.
 - **Step 3** Connect the Raspberry Pi to a display via HDMI cable, and power on the Raspberry Pi 4 by USB type-C.
