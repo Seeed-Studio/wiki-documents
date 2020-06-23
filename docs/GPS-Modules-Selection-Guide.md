@@ -22,70 +22,70 @@ You ought to acknowledge the principles of GPS modules before purchasing and the
   overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-15hm{background-color:#ffffff;border-color:#c0c0c0;color:#000000;font-size:16px;text-align:center;vertical-align:top}
-.tg .tg-zbcp{background-color:#656565;border-color:#c0c0c0;color:#ffffff;font-size:16px;text-align:center;vertical-align:top}
-.tg .tg-jhd7{background-color:#656565;border-color:#c0c0c0;color:#ffffff;font-size:16px;text-align:left;vertical-align:top}
-.tg .tg-byy0{background-color:#ffffff;border-color:#c0c0c0;color:#000000;font-size:16px;text-align:left;vertical-align:top}
+.tg .tg-dczp{background-color:#656565;border-color:#c0c0c0;color:#ffffff;font-size:18px;text-align:center;vertical-align:top}
+.tg .tg-2g31{background-color:#656565;border-color:#c0c0c0;color:#ffffff;font-size:18px;text-align:left;vertical-align:top}
+.tg .tg-q854{background-color:#ffffff;border-color:#c0c0c0;color:#000000;font-size:18px;text-align:center;vertical-align:top}
+.tg .tg-uxnu{background-color:#ffffff;border-color:#c0c0c0;color:#000000;font-size:18px;text-align:left;vertical-align:top}
 </style>
-<table class="tg" style="undefined;table-layout: fixed; width: 826px">
+<table class="tg" style="undefined;table-layout: fixed; width: 988px">
 <colgroup>
-<col style="width: 237px">
-<col style="width: 589px">
+<col style="width: 236px">
+<col style="width: 752px">
 </colgroup>
 <thead>
   <tr>
-    <th class="tg-zbcp">Term of GPS Modules</th>
-    <th class="tg-jhd7">Operating principle</th>
+    <th class="tg-dczp">Term of GPS Modules</th>
+    <th class="tg-2g31">Operating principle</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-15hm"><br><br>Chipset</td>
-    <td class="tg-byy0">The GPS chip is one of the key parts of the GPS system. The quality of the core chip largely determines the performance difference of different GPS products and determines the actual performance of the receiving terminal. It can be said that the GPS core chip is directly related to GPS Product technical indicators and future development trend.</td>
+    <td class="tg-q854"><br>Chipset<br></td>
+    <td class="tg-uxnu">The GPS chip is one of the key parts of the GPS system. The quality of the core chip largely determines the performance difference of different GPS products and determines the actual performance of the receiving terminal. It can be said that the GPS core chip is directly related to GPS Product technical indicators and future development trend.</td>
   </tr>
   <tr>
-    <td class="tg-15hm"><br><br>DGPS</td>
-    <td class="tg-byy0">DGPS is a differential GPS reference station that uses known accurate three-dimensional coordinates to obtain the pseudorange correction amount or position correction amount, and then sends this correction amount to the user (GPS navigator in real time or afterwards) t o correct the user's measurement data to improve GPS positioning accuracy.</td>
+    <td class="tg-q854"><br>DGPS<br></td>
+    <td class="tg-uxnu">DGPS is a differential GPS reference station that uses known accurate three-dimensional coordinates to obtain the pseudorange correction amount or position correction amount, and then sends this correction amount to the user (GPS navigator in real time or afterwards) to correct the user's measurement data to improve GPS positioning accuracy.</td>
   </tr>
   <tr>
-    <td class="tg-15hm">Update Rate</td>
-    <td class="tg-byy0">Update rate refers to how often the GPS module recalculates and reports its position.</td>
+    <td class="tg-q854">Update Rate</td>
+    <td class="tg-uxnu">Update rate refers to how often the GPS module recalculates and reports its position.</td>
   </tr>
   <tr>
-    <td class="tg-15hm">Baud Rate</td>
-    <td class="tg-byy0">Baud Rate refers to how fast data is sent over a serial line. And higher the baud rate allows for faster GPS data to be sent.</td>
+    <td class="tg-q854">Baud Rate</td>
+    <td class="tg-uxnu">Baud Rate refers to how fast data is sent over a serial line. And higher the baud rate allows for faster GPS data to be sent.</td>
   </tr>
   <tr>
-    <td class="tg-15hm">Navigation Sensitivity</td>
-    <td class="tg-byy0">dBm figure dictates how prone the gps module is able to capture the frequency. Higher dbm indicates that the module is able to better pickup satalite signals.</td>
+    <td class="tg-q854">Navigation Sensitivity</td>
+    <td class="tg-uxnu">dBm figure dictates how prone the gps module is able to capture the frequency. Higher dbm indicates that the module is able to better pickup satalite signals.</td>
   </tr>
   <tr>
-    <td class="tg-15hm">Power Requirements</td>
-    <td class="tg-byy0">GPS modules can consume a substantial amount of power. Average being 30mA at 3.3V.</td>
+    <td class="tg-q854">Power Requirements</td>
+    <td class="tg-uxnu">GPS modules can consume a substantial amount of power. Average being 30mA at 3.3V.</td>
   </tr>
   <tr>
-    <td class="tg-15hm"><br>Number of Channels</td>
-    <td class="tg-byy0">Number of channels that the module runs will affect time to first fix. More frequencies that you can check at once, allow for faster fix time. 12 – 14 channels work fine for tracking if you don’t mind waiting a little longer.</td>
+    <td class="tg-q854"><br>Number of Channels</td>
+    <td class="tg-uxnu">Number of channels that the module runs will affect time to first fix. More frequencies that you can check at once, allow for faster fix time. 12 – 14 channels work fine for tracking if you don’t mind waiting a little longer.</td>
   </tr>
   <tr>
-    <td class="tg-15hm">Antennas<br></td>
-    <td class="tg-byy0">Each antenna is designed to pickup GPS L1 frequency of 1.5752 GHz. Position and design of antenna is crucial for optimal performance of GPS.</td>
+    <td class="tg-q854">Antennas<br></td>
+    <td class="tg-uxnu">Each antenna is designed to pickup GPS L1 frequency of 1.5752 GHz. Position and design of antenna is crucial for optimal performance of GPS.</td>
   </tr>
   <tr>
-    <td class="tg-15hm"><br>Accuracy</td>
-    <td class="tg-byy0">Lower the distance it can get down to = Higher accuracy. Usually able to find out your location within 30 seconds, down to +/- 10m and most modules can get it down to +/-3m.</td>
+    <td class="tg-q854">Accuracy<br></td>
+    <td class="tg-uxnu">Lower the distance it can get down to = Higher accuracy. Usually able to find out your location within 30 seconds, down to +/- 10m and most modules can get it down to +/-3m.</td>
   </tr>
   <tr>
-    <td class="tg-15hm"><br><br>Hot Start</td>
-    <td class="tg-byy0">It means that there has not been too much movement in the place where the power was turned off last time, and the time from the last positioning is less than 2 hours. When positioning again, the GPS chip can continue to use the previous ephemeris to quickly search for stars through software, to achieve second positioning</td>
+    <td class="tg-q854"><br>Hot Start<br></td>
+    <td class="tg-uxnu">It means that there has not been too much movement in the place where the power was turned off last time, and the time from the last positioning is less than 2 hours. When positioning again, the GPS chip can continue to use the previous ephemeris to quickly search for stars through software, to achieve second positioning</td>
   </tr>
   <tr>
-    <td class="tg-15hm">Warm Start</td>
-    <td class="tg-byy0">Refers to the situation where the positioning time is more than 2 hours from the last positioning time, and the search time is between cold start and hot start.</td>
+    <td class="tg-q854">Warm Start</td>
+    <td class="tg-uxnu">Refers to the situation where the positioning time is more than 2 hours from the last positioning time, and the search time is between cold start and hot start.</td>
   </tr>
   <tr>
-    <td class="tg-15hm"><br>Cold Start</td>
-    <td class="tg-byy0">If the module power is turned off for a long time, and the backup capacitor disappears, the data will be lost. Next time you power up, GPS will need to download new almanac and ephemeris data</td>
+    <td class="tg-q854"><br>Cold Start<br></td>
+    <td class="tg-uxnu">If the module power is turned off for a long time, and the backup capacitor disappears, the data will be lost. Next time you power up, GPS will need to download new almanac and ephemeris data</td>
   </tr>
 </tbody>
 </table>
@@ -101,42 +101,42 @@ There are a numerous ultilizations of GPS Modules. Particularly, plenty of socia
   overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-15hm{background-color:#ffffff;border-color:#c0c0c0;color:#000000;font-size:16px;text-align:center;vertical-align:top}
-.tg .tg-zbcp{background-color:#656565;border-color:#c0c0c0;color:#ffffff;font-size:16px;text-align:center;vertical-align:top}
-.tg .tg-jhd7{background-color:#656565;border-color:#c0c0c0;color:#ffffff;font-size:16px;text-align:left;vertical-align:top}
-.tg .tg-byy0{background-color:#ffffff;border-color:#c0c0c0;color:#000000;font-size:16px;text-align:left;vertical-align:top}
+.tg .tg-5hs1{background-color:#656565;border-color:#c0c0c0;color:#FFF;font-size:18px;text-align:center;vertical-align:top}
+.tg .tg-1bch{background-color:#656565;border-color:#c0c0c0;color:#FFF;font-size:18px;text-align:left;vertical-align:top}
+.tg .tg-q854{background-color:#ffffff;border-color:#c0c0c0;color:#000000;font-size:18px;text-align:center;vertical-align:top}
+.tg .tg-uxnu{background-color:#ffffff;border-color:#c0c0c0;color:#000000;font-size:18px;text-align:left;vertical-align:top}
 </style>
-<table class="tg" style="undefined;table-layout: fixed; width: 825px">
+<table class="tg" style="undefined;table-layout: fixed; width: 989px">
 <colgroup>
-<col style="width: 217px">
-<col style="width: 608px">
+<col style="width: 236px">
+<col style="width: 753px">
 </colgroup>
 <thead>
   <tr>
-    <th class="tg-zbcp">Field of application</th>
-    <th class="tg-jhd7">Function</th>
+    <th class="tg-5hs1">Field of application</th>
+    <th class="tg-1bch">Function</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-15hm"><br>Measurement<br></td>
-    <td class="tg-byy0">It uses carrier phase differential technology (RTK) to process the carrier phase of two observation stations in real time with an accuracy of centimeter level. Measurement results are unified in WGS84 coordinates, information is automatically received and stored, reducing cumbersome intermediate processing Link.</td>
+    <td class="tg-q854"><br>Measurement<br></td>
+    <td class="tg-uxnu">It uses carrier phase differential technology (RTK) to process the carrier phase of two observation stations in real time with an accuracy of centimeter level. Measurement results are unified in WGS84 coordinates, information is automatically received and stored, reducing cumbersome intermediate processing Link.</td>
   </tr>
   <tr>
-    <td class="tg-15hm"><br><br>Transportation<br></td>
-    <td class="tg-byy0">GPS can be used for autonomous navigation, port management and entry guidance, route traffic management and tracking and monitoring. Vehicle-mounted equipment uses GPS for precise positioning, combined with electronic maps and real-time traffic conditions, automatically matches the optimal path, and implements autonomous navigation of the vehicle.</td>
+    <td class="tg-q854"><br><br>Transportation<br></td>
+    <td class="tg-uxnu">GPS can be used for autonomous navigation, port management and entry guidance, route traffic management and tracking and monitoring. Vehicle-mounted equipment uses GPS for precise positioning, combined with electronic maps and real-time traffic conditions, automatically matches the optimal path, and implements autonomous navigation of the vehicle.</td>
   </tr>
   <tr>
-    <td class="tg-15hm"><br><br>Emergency Rescue<br></td>
-    <td class="tg-byy0">Using GPS positioning technology, emergency dispatch of fire, ambulance and police can be carried out, and the emergency response department's response efficiency to fire, crime scene, traffic accident, traffic jam and other emergency events can be improved. A fishing boat equipped with a GPS device can quickly locate and alarm when a dangerous situation occurs, so that it can obtain rescue faster and more timely.</td>
+    <td class="tg-q854"><br><br>Emergency Rescue<br></td>
+    <td class="tg-uxnu">Using GPS positioning technology, emergency dispatch of fire, ambulance and police can be carried out, and the emergency response department's response efficiency to fire, crime scene, traffic accident, traffic jam and other emergency events can be improved. A fishing boat equipped with a GPS device can quickly locate and alarm when a dangerous situation occurs, so that it can obtain rescue faster and more timely.</td>
   </tr>
   <tr>
-    <td class="tg-15hm"><br><br>Agriculture<br><br></td>
-    <td class="tg-byy0">A GPS is used to locate and acquire farmland information, including yield monitoring, soil sample collection and etc. The computer system determines the management measures of farmland plots by analyzing and processing the data, and loads the yield and soil status information into the GPS equipment. In the spray applicator, it can accurately fertilize and spray the farmland.</td>
+    <td class="tg-q854"><br><br>Agriculture<br><br></td>
+    <td class="tg-uxnu">A GPS is used to locate and acquire farmland information, including yield monitoring, soil sample collection and etc. The computer system determines the management measures of farmland plots by analyzing and processing the data, and loads the yield and soil status information into the GPS equipment. In the spray applicator, it can accurately fertilize and spray the farmland.</td>
   </tr>
   <tr>
-    <td class="tg-15hm"><br>Entertainment<br></td>
-    <td class="tg-byy0">Through GPS, people can quickly find their destination in an unfamiliar city, and can travel on the optimal path; campers carry GPS receivers to quickly find suitable camping locations without worrying about getting lost; even some high-end video games , GPS simulation technology is also used.</td>
+    <td class="tg-q854"><br>Entertainment<br></td>
+    <td class="tg-uxnu">Through GPS, people can quickly find their destination in an unfamiliar city, and can travel on the optimal path; campers carry GPS receivers to quickly find suitable camping locations without worrying about getting lost; even some high-end video games , GPS simulation technology is also used.</td>
   </tr>
 </tbody>
 </table>
@@ -149,7 +149,7 @@ For all the GPS or Communication modules in our bazaar, please click [Seeed Stud
 |-----------------------------------------------------------------|----------------------------------------------------------------------------------------------|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|------------|------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-----------|-------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|--------------------------|
 | [NEO-6M](https://www.electroschematics.com/neo-6m-gps-module/)  | <img src="https://files.seeedstudio.com/wiki/Grove-GPS/img/1-Ublox-NEO-6M-Module.jpg"/>|23mm x 30mm|1Hz, max 5Hz| Default 9,600, max 230400|-161dBm|3V – 5V|22 tracking, 50 channels|Cold start: 27s; Warm start: 27s; Hot start: 1s| External patch antenna|2.5m GPS Horizontal Position Accuracy|/|
 | [Grove – GPS](https://wiki.seeedstudio.com/Grove-GPS/)  | <img src="https://files.seeedstudio.com/wiki/Grove-GPS/img/gps-module.jpg"/>|40mm x 20mm x 13mm|1Hz, max 10Hz|9,600 – 115,200|-160dBm|3.3V - 5V|22 tracking, 66 channels|Cold start: 13s; Warm start: 1-2s; Hot start: <1s|Antenna included|2.5m GPS Horizontal Position Accuracy|[Order Now](https://www.seeedstudio.com/Grove-GPS-Module.html?utm_source=blog&utm_medium=blog)|
-| [Grove – GPS (Air530)](https://wiki.seeedstudio.com/Grove-GPS-Air530/)  | <img src="https://files.seeedstudio.com/wiki/Grove-GPS/img/03_11.png"/>|40mm x 20mm x 13mm|/|/|/|3.3V - 5V|/|Cold start: 30s; Warm start: 4s;|Antenna included|2.5m Horizontal positioning accuracy|[Order Now](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html)|
+| [Grove – GPS (Air530)](https://wiki.seeedstudio.com/Grove-GPS-Air530/)  | <img src="https://files.seeedstudio.com/wiki/Grove-GPS/img/03_11.png"/>|40mm x 20mm x 13mm|/|/|-148dB|3.3V - 5V|/|Cold start: 27s; Warm start: 4s;|Antenna included|2.5m Horizontal positioning accuracy|[Order Now](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html)|
 
 ### Which GPS Module is better
 
