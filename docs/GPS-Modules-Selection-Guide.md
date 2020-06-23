@@ -5,9 +5,9 @@ For all the GPS or Communication modules in our bazaar, please click [Seeed Stud
 
 ## Introduction to GPS and GPS Modules 
 
-One of the global positioning system (GPS) devices ultilize data from satellites to position a specific point on the Earth in a process named trilateration. Meanwhile, a GPS receiver measures the distances to satellites using radio signals to trilaterate. And trilateration is similar to triangulation, which measures angles, depicted in this illustration (Tim Gunther, 2020). GPS modules contain tiny processors and antennas that directly receive data sent by satellites through dedicated RF frequencies. From there, it’ll receive timestamp from each visible satellites, along with other pieces of data. If the module’s antenna can spot 4 or more satellites, it’s able to accurately calculate its position and time.
+One of the global positioning system (GPS) devices ultilizes data from satellites to locate a specific point on the Earth in a process named trilateration. Meanwhile, a GPS receiver measures the distances to satellites using radio signals to trilaterate. And trilateration is similar to triangulation, which measures angles, depicted in this illustration (Tim Gunther, 2020). GPS modules contain tiny processors and antennas that directly receive data sent by satellites through dedicated RF frequencies. From there, it’ll receive timestamp from each visible satellites, along with other pieces of data. If the module’s antenna can spot 4 or more satellites, it’s able to accurately calculate its position and time.
 
-Three GPS modules are going to be introduced and compared in this article: **NEO-6M**, **Grove – GPS Module** and **Grove – GPS ( Air530 )**. These GPS modules are compatible with Arduino and Raspberry Pi, making it easy for you to start to try out.
+Three GPS modules are going to be introduced and compared in this article: **NEO-6M**, **Grove – GPS** and **Grove – GPS ( Air530 )**. These GPS modules are compatible with Arduino and Raspberry Pi, making it easy for you to start to try out.
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/Grove-GPS/img/28251.jpg"/><figcaption><b>Figure 1</b>. <i> Illustration of globe with three satellites triangulating a precise location. ( Tim Gunther,2020 ) </i></figcaption></a>
 </figure></div>
@@ -29,7 +29,7 @@ You ought to acknowledge the principles of GPS modules before purchasing and the
 
 ## Field of Applicaitons
 
-There are a numerous ultilizations of GPS Modules. Particularly, plenty of social aspects are able to be developed by applications of these GPS Modules. Therefore, GPS Modules play important roles in various sectors, which include industry, Emergency Rescue, environmental measurement, transportation, agriculture, entertainment and etc. 
+There are a numerous ultilizations of GPS Modules. Particularly, plenty of social activities are able to be developed by applications of these GPS Modules. Therefore, GPS Modules play important roles in various sectors, which are including Environmental Measurement, Transportation, Emergency Rescue, Agriculture, Entertainment and etc. 
 
 
 | Field of application| Function|
@@ -44,22 +44,21 @@ There are a numerous ultilizations of GPS Modules. Particularly, plenty of socia
 
 For all the GPS or Communication modules in our bazaar, please click [Seeed Studio Bazaar](https://www.seeedstudio.com/) to check.
 
-
 | Name| Thumbnail| Size |Update Rate| Baud Rate| Navigation Sensitivity|Power Requirements|Number of Channels| Time to first start | Antennas |Accuracy |Click to Buy|
 |-----------------------------------------------------------------|----------------------------------------------------------------------------------------------|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|------------|------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-----------|-------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|--------------------------|
 | [NEO-6M](https://www.electroschematics.com/neo-6m-gps-module/)  | <img src="https://files.seeedstudio.com/wiki/Grove-GPS/img/1-Ublox-NEO-6M-Module.jpg"/>|23mm x 30mm|1Hz, max 5Hz| Default 9,600, max 230400|-161dBm|3V – 5V|22 tracking, 50 channels|Cold start: 27s; Warm start: 27s; Hot start: 1s| External patch antenna|2.5m GPS Horizontal Position Accuracy|/|
-| [Grove – GPS Module](https://wiki.seeedstudio.com/Grove-GPS/)  | <img src="https://files.seeedstudio.com/wiki/Grove-GPS/img/gps-module.jpg"/>|40mm x 20mm x 13mm|1Hz, max 10Hz|9,600 – 115,200|-160dBm|3.3 / 5V|22 tracking, 66 channels|Cold start: 13s; Warm start: 1-2s; Hot start: <1s|Antenna included|2.5m GPS Horizontal Position Accuracy|[Order Now](https://www.seeedstudio.com/Grove-GPS-Module.html?utm_source=blog&utm_medium=blog)|
-| [Grove – GPS (Air530)](https://wiki.seeedstudio.com/Grove-GPS-Air530/)  | <img src="https://files.seeedstudio.com/wiki/Grove-GPS/img/03_11.png"/>|40mm x 20mm x 13mm|/|/|/|3.3/5V|/|Cold start: 30s; Warm start: 4s;|Antenna included|2.5m Horizontal positioning accuracy|[Order Now](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html)|
+| [Grove – GPS](https://wiki.seeedstudio.com/Grove-GPS/)  | <img src="https://files.seeedstudio.com/wiki/Grove-GPS/img/gps-module.jpg"/>|40mm x 20mm x 13mm|1Hz, max 10Hz|9,600 – 115,200|-160dBm|3.3V - 5V|22 tracking, 66 channels|Cold start: 13s; Warm start: 1-2s; Hot start: <1s|Antenna included|2.5m GPS Horizontal Position Accuracy|[Order Now](https://www.seeedstudio.com/Grove-GPS-Module.html?utm_source=blog&utm_medium=blog)|
+| [Grove – GPS (Air530)](https://wiki.seeedstudio.com/Grove-GPS-Air530/)  | <img src="https://files.seeedstudio.com/wiki/Grove-GPS/img/03_11.png"/>|40mm x 20mm x 13mm|/|/|/|3.3V - 5V|/|Cold start: 30s; Warm start: 4s;|Antenna included|2.5m Horizontal positioning accuracy|[Order Now](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html)|
 
 ### Which GPS Module is better
 
 #### Better power consumption
 
-The **Grove – GPS (Air530)** has a ultra-low power consumption at only 31uA, low power mode at 0.85 mA making the Air530 the better GPS with lower power consumption.
+The **Grove – GPS (Air530)** has a ultra-low power consumption at only 31uA, low power mode at 0.85 mA, which makes it be the better GPS with lower power consumption.
 
 #### Scalability
 
-With a higher maximum update rate, the Grove GPS Module is able to be used for projects that involve objects that travel at a faster speed. Furthermore, having more channels open up for other applications as well. The **Grove- GPS (Air 530)** has a multi-mode satellite positioning & navigation and supports more than 6 satellites at the same time.
+With a higher maximum update rate, the **Grove - GPS** is able to be used for projects that involve objects that travel at a faster speed. Furthermore, having more channels open up for other applications as well, the **Grove- GPS (Air 530)** has a multi-mode satellite positioning & navigation and supports more than 6 satellites at the same time.
 
 #### Accuracy
 
@@ -71,24 +70,26 @@ Featuring Horizontal positioning accuracy of 2.5m, High positioning accuracy of 
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/OHAlgerie/project-of-gps-gprs-tracker-36c425/embed' width='350'></iframe>
 
-**Vehicle Tracking System**: Now that you have just picked your GPS module, here are some projects that you can do with your Arduino and GPS module.
+**Vehicle Tracking System**: Now that you have just picked your GPS module, here are some projects that you can do with your Arduino and GPS module. Visit [here](https://create.arduino.cc/projecthub/muchika/vehicle-tracking-system-based-on-gps-and-gsm-57b814?ref=tag&ref_id=gps&offset=15) for detailed information.
 
-<iframe frameborder='0' height='327.5' scrolling='no' src='https://create.arduino.cc/projecthub/muchika/vehicle-tracking-system-based-on-gps-and-gsm-57b814?ref=tag&ref_id=gps&offset=15' width='350'></iframe>
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://hackster.imgix.net/uploads/attachments/1038379/FZNOC7NK0MP38U3.jpg?auto=compress%2Cformat&w=900&h=675&fit=min' width='350'></iframe>
 
-**LED Bike Speedometer**: Want to find out how fast you are riding? With this DIY bike speedometer, using GPS technology for speed sensing, you can tell how fast you are going! It also features an RGB LED to indicate the speed to the rider.
+**LED Bike Speedometer**: Want to find out how fast you are riding? With this DIY bike speedometer, using GPS technology for speed sensing, you can tell how fast you are going! It also features an RGB LED to indicate the speed to the rider. Visit [here](https://create.arduino.cc/projecthub/JeremySCook/gps-led-bike-speedometer-c8f956?ref=tag&ref_id=gps&offset=26) for detailed information.
 
-<iframe frameborder='0' height='327.5' scrolling='no' src='https://create.arduino.cc/projecthub/JeremySCook/gps-led-bike-speedometer-c8f956?ref=tag&ref_id=gps&offset=26' width='350'></iframe>
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.youtube.com/watch?v=CeStrH-5Llo&feature=emb_rel_end' width='350'></iframe>
 
-**Personal GPS Assistant**: This project is a device that lets you monitor people and things, and tell you continuously their location, and the values of the sensors attached to it. One of the feature allows you to set limit values for the sensors, and when these are exceeded an SMS alert is sent to you. You can also set restrictions from some places, where alerts will be given to you when the device leaves the area. It’s also possible to communicate with the device through SMS, in order to get information about it.
+**Personal GPS Assistant**: This project is a device that lets you monitor people and things, and tell you continuously their location, and the values of the sensors attached to it. One of the feature allows you to set limit values for the sensors, and when these are exceeded an SMS alert is sent to you. You can also set restrictions from some places, where alerts will be given to you when the device leaves the area. It’s also possible to communicate with the device through SMS, in order to get information about it. 
 
-<iframe frameborder='0' height='327.5' scrolling='no' src='https://create.arduino.cc/projecthub/Momy93/sandro-your-personal-gps-assistant-26dfa3?ref=tag&ref_id=gps&offset=32' width='350'></iframe>
+Visit [here](https://create.arduino.cc/projecthub/Momy93/sandro-your-personal-gps-assistant-26dfa3?ref=tag&ref_id=gps&offset=32) for detailed information.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://youtu.be/3lcP4YtxlCg' width='350'></iframe>
 
 ## Resource
 
 [**Reference**] [Triangulation from Tim Gunther, National Geographic (2020)](https://www.nationalgeographic.org/photo/triangulation-sized/)
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+ if you have any technical issue. submit the issue into our [forum](http://forum.seeedstudio.com/). 
 
 
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
