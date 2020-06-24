@@ -281,14 +281,14 @@ This is the introduction Video of this product, simple demos, you can have a try
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3slfeHKSSCw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 
-**Transportation data visualization with Google Map**：We use the Wio LTE cat.1 to monitor transportation GPS and other info. For cold chain, we can monitor the GPS location together with temperature and humidity. For the bicycling,  we can monitor the GPS location together with the hear rate. 
+**Grove IR Universal Remote Project**：Have multiple remotes? Have an Arduino? Operate multiple devices with a single press of a Keyes IR remote.
 
-<iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/SeeedStudio/transportation-data-visualization-with-google-map-517ce4/embed' width='350'></iframe>
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/ArduinoBasics/grove-ir-universal-remote-project-7ab87f' width='350'></iframe>
 
 
-**Atmospheric Pollution Visualization**：The air pollution problem attracts more and more attention. This time we tried to monitoring PM2.5 with Wio LTE and new Laser PM2.5 Sensor.
+**Range tests made easy with the RE-Mote and LCD**：Reduce the number of equipment and preparations required for field testing (2.4GHz and 868MHz), pack everything you need in your hand.
 
-<iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/SeeedStudio/atmospheric-pollution-visualization-1940f4/embed' width='350'></iframe>
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/alinan/range-tests-made-easy-with-the-re-mote-and-lcd-6e78b3' width='350'></iframe>
 
 
 ## Tech Support
