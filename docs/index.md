@@ -35,6 +35,14 @@ You can learn more about Ardupy in our [wiki page](https://wiki.seeedstudio.com/
 
 <p style="text-align:center;"><a href="https://wiki.seeedstudio.com/ArduPy/"><img src="https://files.seeedstudio.com/wiki/IMAGE/June%20Week%204/68747470733a2f2f66696c65732e736565656473747564696f2e636f6d2f6172647570792f6172647570795f6c6f676f2e706e67.png" alt="pir"  width="700" height="auto"></a></p>
 
+Check the video below to explore Ardupy along with other exciting products in our Seeed Weekly Show No.010.
+
+<p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/4xn_VNG2I0A" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+
+Also, don't forget to subscribe to our [YouTube Channel](http://www.youtube.com/c/SeeedStudioSZ) to stay updated with our Seeed Weekly Show and many other exciting videos.
+
+<p style="text-align:center;"><a href="http://www.youtube.com/c/SeeedStudioSZ"><img src="https://files.seeedstudio.com/wiki/IMAGE/Youtube%20Subs.png" alt="pir"  width="180" height="auto"></a></p>
+
 
 ### 2. Raspberry Pi 4 Support for Grove - I2C Motor Driver (TB6612FNG)
 
