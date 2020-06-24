@@ -9,20 +9,14 @@ sku: 103020133
 tags:
 ---
 
-![](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/main.jpg)
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/main.jpg"/><figcaption><b></b><i></i></figcaption></a>
+</figure></div>
 
-
-The Grove - 4-Channel SPDT Relay has four single pole - double throw (SPDT) switches. It only requires low-voltage and low current signals to
-control those switches. Specifically, you can use 5V DC to control max.250V AC or 110V DC.
-
-
+The Single Pole Double Throw SPDT relay is quite useful in certain applications because it has one common terminal and 2 contacts which are great for selecting between two options. The Grove - 4-Channel SPDT Relay has four single pole - double throw (SPDT) switches. It only requires low-voltage and low current signals to control those switches. Specifically, you can use 5V DC to control max.250V AC or 110V DC. The I2C address is changeable so that you can use multiple relay modules in the same project. The Grove - 4-Channel SPDT Relay has four single pole - double throw (SPDT) switches. It only requires low-voltage and low current signals to control those switches. Specifically, you can use 5V DC to control max.250V AC or 110V DC.
 
 We use an on-board STM32F030F4P6 to control the channels separately. The command from Arduino or other boards is transmit via the I2C interface, the on-board STM32F030F4P6 will parse the command, so that you can control the switch you want.
 
-
-
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-4-Channel-SPDT-Relay-p-3119.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
-
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-4-Channel-SPDT-Relay-p-3119.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p>
 
 ## Features
 
@@ -69,53 +63,9 @@ We use an on-board STM32F030F4P6 to control the channels separately. The command
 - audio equipment high rushing current use application
 
 
-## Hardware Overview
+## Getting Started
 
-
-### Pin Map
-
-![](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/pin_map_front.jpg)
-
-![](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/pin_map_back.jpg)
-
-
-!!!Note
-    - The switch 1-4 have the same pin fuction, so for the other switches, you can refer to **NC1**/**COM1**/**NO1**.
-    - On the back of the PCB, there are two interfaces: SWD and I^2^C. The SWD interface is used by default when programming firmware, if you want to use the I^2^C(actually work as the boot UART), you should set the 
-    **BOOT** High.
-
-
-### Schematic
-
-
-**Relay control**
-
-![](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/schematic.jpg)
-
-
-**K2** is the Relay module, there is a coil between **pin1** and **pin3** of K1. Defaultly, the **COM2** will connect to **NC2**.If the pin3 of K1 connected to the grand, then this coil will be 'closed', so the **COM2** will connect to **NO2**.
-
-To open this coil, it requires about 90mA, however, normally the GPIO pin of Arduino only can afford 20mA(40mA max.). Therefor, we use a NPN transistors [S9013](https://files.seeedstudio.com/wiki/Grove-2-Channel_SPDT_Relay/res/Transistors_NPN_25V-500mA.pdf) which can proviede 500mA. 
-
-The **PA7** is pulled down by the 10k R2, if there is no signal, the 'Gate' of **Q2** will be 0v, and Q2 is turned off, so that the K2 will be 'opened'. If **PA7** becomes 5v, then the Q2 will be turned on.
-**Pin3** of k2 will be connected to the GND of the system, for the K2 there will be 5V between **pin3** and **pin1**, so the coil will be 'closed', and the **COM2** will connect to **NO2** 
-
-!!!Tip
-    The **D1** is a [flyback diode(kickback diode)](https://en.wikipedia.org/wiki/Flyback_diode). A flyback diode is a diode connected across an inductor used to eliminate flyback, which is the sudden voltage spike seen across an inductive load when its supply current is suddenly reduced or interrupted. It is used in circuits in which inductive loads are controlled by switches, and in switching power supplies and inverters.
-
-
-**Bi-directional level shifter circuit**
-![](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/schematic_1.jpg)
-
-
-This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of this sensor use 3.3V, if the I<sup>2</sup>C bus of the Arduino use 5V, this circuit will be needed. In the schematic above, **Q17** and **Q18** are N-Channel MOSFET [2N7002A](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/AN10441.pdf)
-
-
-!!!NOTE
-        In this section we only show you part of the schematic, for the full document please refer to the [Resources](/#resources)
-
-
-## Platforms Supported
+### Platforms Supported
 
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
@@ -124,11 +74,6 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 !!!Caution
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
-
-
-
-
-## Getting Started
 
 
 ### Play With Arduino
@@ -143,22 +88,15 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 |<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-4-Channel-SPDT-Relay-p-3119.html" target="_blank">Get One Now</a>|
 
 !!!note
-    **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
+     * Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy.
     
-    **2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
+     * Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
 
 
+**Hardware Overview**
 
-
-- **Step 1.** Connect the Grove - 4-Channel SPDT Relay to the **I^2^C** port of the Base Shield.
-
-- **Step 2.** Plug Grove - Base Shield into Seeeduino.
-
-- **Step 3.** Connect Seeeduino to PC via a USB cable.
-
-
-![](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/8.22%E8%BF%9E%E6%8E%A51.jpg)
-
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/8.22%E8%BF%9E%E6%8E%A51.jpg"/><figcaption><b></b><i></i></figcaption></a>
+</figure></div>
 
 !!!Note
         If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
@@ -171,9 +109,24 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 | SDA           | White                   |
 | SCL           | Yellow                  |
 
+**Pin Map**
 
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/pin_map_front.jpg"/><figcaption><b></b><i></i></figcaption></a>
+</figure></div>
 
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/pin_map_back.jpg"/><figcaption><b></b><i></i></figcaption></a>
+</figure></div>
 
+!!!Note
+    - The switch 1-4 have the same pin fuction, so for the other switches, you can refer to **NC1**/**COM1**/**NO1**.
+    - On the back of the PCB, there are two interfaces: SWD and I^2^C. The SWD interface is used by default when programming firmware, if you want to use the I^2^C(actually work as the boot UART), you should set the 
+    **BOOT** High.
+
+- **Step 1.** Connect the Grove - 4-Channel SPDT Relay to the **I^2^C** port of the Base Shield.
+
+- **Step 2.** Plug Grove - Base Shield into Seeeduino.
+
+- **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 
 #### Software
@@ -189,7 +142,8 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 - **Step 3.** Restart the Arduino IDE. Open example via the path: **File --> Examples --> Multi Channel Relay Arduino Library --> four_channel_relay_control**. 
 
-![](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/path.jpg)
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/path.jpg"/><figcaption><b></b><i></i></figcaption></a>
+</figure></div>
 
 
 Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
@@ -291,7 +245,8 @@ void loop()
 !!!success
      If every thing goes well, you will get the result. Meanwhile, you will see the on-board LEDs alternately lit and extinguished.
 
-```c++
+
+```
 Scanning...
 I2C device found at address 0x12 !
 Found 1 I2C devices
@@ -310,10 +265,11 @@ Channel 1 on
 Channel 2 on
 ```
 
+!!!Success
+        The Grove - 4-Channel SPDT Relay will be working as below if everything goes well.
 
-![](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/_DAS5552.MOV_20180822_104218.gif)
-
-
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/_DAS5552.MOV_20180822_104218.gif"/><figcaption><b></b><i></i></figcaption></a>
+</figure></div>
 
 !!!Note
         We do not add load in this demo, if you want to check how to add load, please check the [Grove - 2-Channel SPDT Relay](https://wiki.seeedstudio.com/Grove-2-Channel_SPDT_Relay/).
@@ -389,8 +345,6 @@ void setup()
   Serial.print(relay.getFirmwareVersion(), HEX);
   Serial.println();
 }
-
-
 ```
 
 ## FAQ
@@ -422,7 +376,6 @@ We recommed you use the J-flash for the software:
 ## Resources
 
 - **[Zip]** [Grove-4-Channel SPDT Relay eagle files](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/res/Grove-4-Channel_SPDT_Relay.zip)
-- **[Zip]** [Multi Channel Relay Arduino Library](https://github.com/Seeed-Studio/Multi_Channel_Relay_Arduino_Library/archive/master.zip)
 - **[Bin]** [Factory firmware](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/res/Grove-4-Channel-SPDT-Relay-Firmware.bin)
 - **[PDF]** [Datasheet of SRD 05VDC-SL-C Relay](https://files.seeedstudio.com/wiki/Grove-2-Channel_SPDT_Relay/res/SRD_05VDC-SL-C.pdf)
 - **[PDF]** [Datasheet of S9013](https://files.seeedstudio.com/wiki/Grove-2-Channel_SPDT_Relay/res/Transistors_NPN_25V-500mA.pdf)
@@ -434,6 +387,14 @@ We recommed you use the J-flash for the software:
 This is the introduction Video of this product, simple demos, you can have a try.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5NBdUr5D-8M?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+**Home Automation and Monitoring:** An RSL10 Sense DB based system that can monitor and control the temperature, humidity, and light intensity by Smartphone app and Alexa.
+
+<iframe width="560" height="315" src="https://www.hackster.io/taifur/home-automation-and-monitoring-powered-by-rsl10-and-alexa-2439df" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+**Grove - 4-Channel SPDT Relay:** Hey Seeekers!!! This is the second week of our #newproductsTuesday segment. There will be a product showcase of our new Grove - 4-Channel SPDT Relay in this video and a cool interesting demo as well.
+
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=5NBdUr5D-8M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Tech Support
 Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).
