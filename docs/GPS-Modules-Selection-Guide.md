@@ -187,13 +187,13 @@ Featuring Horizontal positioning accuracy of 2.5m, High positioning accuracy of 
 
 **LED Bike Speedometer**: Want to find out how fast you are riding? With this DIY bike speedometer, using GPS technology for speed sensing, you can tell how fast you are going! It also features an RGB LED to indicate the speed to the rider. Visit [here](https://create.arduino.cc/projecthub/JeremySCook/gps-led-bike-speedometer-c8f956?ref=tag&ref_id=gps&offset=26) for detailed information.
 
-<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.youtube.com/watch?v=CeStrH-5Llo&feature=emb_rel_end' width='350'></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=CeStrH-5Llo&feature=emb_rel_end" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 **Personal GPS Assistant**: This project is a device that lets you monitor people and things, and tell you continuously their location, and the values of the sensors attached to it. One of the feature allows you to set limit values for the sensors, and when these are exceeded an SMS alert is sent to you. You can also set restrictions from some places, where alerts will be given to you when the device leaves the area. It’s also possible to communicate with the device through SMS, in order to get information about it. 
 
 Visit [here](https://create.arduino.cc/projecthub/Momy93/sandro-your-personal-gps-assistant-26dfa3?ref=tag&ref_id=gps&offset=32) for detailed information.
 
-<iframe frameborder='0' height='327.5' scrolling='no' src='https://youtu.be/3lcP4YtxlCg' width='350'></iframe>
+<iframe width="560" height="315" src="https://youtu.be/3lcP4YtxlCg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Resource
 
