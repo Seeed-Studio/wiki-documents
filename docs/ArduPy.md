@@ -23,7 +23,7 @@ There should a USB drive named **`Arduino`** appeared in your PC. Go into the Ar
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/USBdrive.png"/></div>
 
-- **STEP.2 Download ArduPy DF2 Firmware**
+- **STEP.2 Download ArduPy UF2 Firmware**
 
 Download the ArduPy firmware in the form of UF2 files.
 
