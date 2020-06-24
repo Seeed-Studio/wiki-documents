@@ -1,71 +1,51 @@
 
 # Weekly Wiki
-![](https://files.seeedstudio.com/wiki/IMAGE/June%20Week%203/June-Week-3-logo.png)
+![](https://files.seeedstudio.com/wiki/IMAGE/June%20Week%204/Week%204%20June.png)
 
 Hello everyone! We hope everyone is staying safe from COVID-19 and wishing you all good health!
-It's the third week of June and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
+It's the fourth week of June and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
 As you all know, Seeed Wiki is a dedicated platform where we provide the proper guidance and support you need when getting started with our products. We put a lot of effort to make this platform more user friendly because we want to enable the learning of electronics in a more systematic approach.  
 We will bring you all these wiki updates in a weekly basis. So stay tuned with us and don't forget to visit this page again next week!
 
 ## New Wiki Added
- 
-### 1. Grove - AHT20 I2C Industrial Grade Temperature & Humidity Sensor
 
-[Grove - AHT20 I2C Industrial Grade Temperature & Humidity Sensor](https://www.seeedstudio.com/Grove-AHT20-I2C-Industrial-grade-temperature-and-humidity-sensor-p-4497.html) has been there on Bazaar for quite a while and now we bring you it's [wiki page](https://wiki.seeedstudio.com/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor/). This wiki will help you use this sensor along with a [Seeeduino Lotus V1.1](https://www.seeedstudio.com/Seeeduino-Lotus-V1-1-ATMega328-Board-with-Grove-Interface.html) and obtain accurate temperature and humidity information quickly and easily!
+### 1. Wio Terminal Battery Chassis
 
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor/"><img src="https://files.seeedstudio.com/wiki/IMAGE/June%20Week%203/cover-AHT20.png" alt="pir"  width="800" height="auto"></a></p>
+[Wio Terminal](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) has become more and more popular in our community since the day it was released! Many users are already building cool projects using Wio Terminal. We have newly release a [battery chassis for Wio Terminal](https://www.seeedstudio.com/Wio-Terminal-Chassis-Battery-p-4516.html) and prepared a [wiki page](https://wiki.seeedstudio.com/Wio-Terminal-Battery-Chassis/) to help you get started!
 
+<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Wio-Terminal-Battery-Chassis/"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-Battery-Chassis/img/WT-battery-front.jpg" alt="pir"  width="900" height="auto"></a></p>
 
-### 2. Geppetto Guide for Grove Beginner Kit for Arduino 
-
-If you don’t want to work on schematic or layout by yourself, but want to convert your prototype based on Seeed modules onto an integrated product, we highly recommend you to try Geppetto. We have prepared a [step-by-step guide](https://wiki.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-Geppetto-Guide/) on how to use Gepetto to add or remove modules to our Beginner Kit or even build your own Grove modules using our Seeed library on Geppetto with ease!
+You can make your Wio Terminal portable by using this battery chassis which is powered by a Li-Po battery. The ABS enclosure provides better protection and GPIO pins/ Grove ports on-board allow you to expand your projects further!
 
 
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-Geppetto-Guide/"><img src="https://files.seeedstudio.com/wiki/Geppetto/wiki-01.png" alt="pir"  width="800" height="auto"></a></p>
+### 2. GPS Modules Selection Guide
 
- The beauty of Geppetto is that you don’t need to know about resistors, capacitors, inductors, routing paths or any advanced eletronics to design your own module. Geppetto is simply drag & drop and therefore anyone can create professional IoT devices!
+We have released various types of GPS modules over the years. But sometimes you might wonder which one is suitable for your project. So we have prepared a [selection guide](https://wiki.seeedstudio.com/GPS-Modules-Selection-Guide/) for the GPS modules so that you can make a better decision when choosing your GPS module!
 
-
-### 3. How to bridge Mosiquitto MQTT Broker to AWS IoT with Arduino Boards?
-
-Gateways are present both in industrial IoT environments and in connected home. We have prepared a [guide](https://wiki.seeedstudio.com/Arduino-AWS-IOT-Bridge/) using [Wio Terminal](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) to show you how to implement the Mosquitto Agent Bridge feature to enable the use of gateways through the MQTT messaging, setting up bi-directional data exchange with AWS IoT Core. This will allow your device to communicate locally with the Mosquitto Agent and AWS IoT Core to benefit from the power of AWS Cloud.
-
-
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Arduino-AWS-IOT-Bridge/"><img src="https://files.seeedstudio.com/wiki/AWSIOT/AWSIOT.gif" alt="pir"  width="800" height="auto"></a></p>
-
-
-### 4. How to use an LTE module to transform your ODYSSEY-X86J4105 into a 4G Wi-Fi router?
-
-[ODYSSEY - X86J4105](https://www.seeedstudio.com/tag/ODYSSEY-X86J4105.html) is a powerful Single Board Computer which has 4G cellular capabilities onboard. So by taking this into advantage, we have managed to convert this SBC into a 4G Wi-Fi router!
-This is all possible by inserting a [Quectel EM06-E LTE Cat 6 M.2 Module](https://www.seeedstudio.com/Quectel-EM06-E-LTE-Cat6-Module-p-4567.html) to the M.2 connector on the ODYSSEY - X86J4105 and inserting a SIM card.
-We have prepared a [wiki guide](https://wiki.seeedstudio.com/ODYSSEY-X86J4105-LTE-Module/) to help you easily set this up on your ODYSSEY - X864105 as well!
-
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/ODYSSEY-X86J4105-LTE-Module/"><img src="https://s3-us-west-2.amazonaws.com/files.seeedstudio.com/products/113990856/EM06-E.png" alt="pir"  width="550" height="auto"></a></p>
-
+<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/GPS-Modules-Selection-Guide/"><img src="https://files.seeedstudio.com/wiki/IMAGE/June%20Week%204/latest.png" alt="pir"  width="900" height="auto"></a></p>
 
 ## Existing Wiki Updated
 
-### 1. Arduino Getting started guide for One Wire Temperature Sensor DS18B20
+### 1. Ardupy Latest Updates - Seeeduino XIAO Support
 
-We have released One Wire Temperature Sensor DS18B20 already and had a wiki on setting it up with a Raspberry Pi. So this week we bring you a [step-by-step guide](https://wiki.seeedstudio.com/One-Wire-Temperature-Sensor-DS18B20/) on using it with an Arduino!
-
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Grove-Sunlight_Sensor/"><img src="https://files.seeedstudio.com/wiki/IMAGE/June%20Week%203/ONE-WIRE.png" alt="pir"  width="8000" height="auto"></a></p>
-
-
-## What's more?
-
-We have been releasing videos on a weekly basis on our "Seeed Weekly Show" and this week is our 9th successful week. We would like to thank everyone who watched our show and looking forward to more participants in the future!
-Also you could also enter our giveaway in this video and win exciting prizes!
+Ardupy is our latest introduction and provides a brand-new way of communicating with your Arduino boards. Through ArduPy, you can use Python to verify your ideas, learn python programming as well as micro-controller programming in a more efficient way. 
+We are working hard to constantly develop Ardupy and bring you many new features with every update. Now Ardupy is in version 0.7 and with this update you can use Ardupy with [Seeeduino XIAO!](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
+You can learn more about Ardupy in our [wiki page](https://wiki.seeedstudio.com/ArduPy/)
 
 
-<p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/Pr6hiDTffMo" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-
-Don't forget to subscribe to our [YouTube Channel](http://www.youtube.com/c/SeeedStudioSZ) to stay updated with our Seeed Weekly Show and many other exciting videos.
-
-<p style="text-align:center;"><a href="http://www.youtube.com/c/SeeedStudioSZ"><img src="https://files.seeedstudio.com/wiki/IMAGE/Youtube%20Subs.png" alt="pir"  width="180" height="auto"></a></p>
+<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/ArduPy/"><img src="https://files.seeedstudio.com/wiki/IMAGE/June%20Week%204/68747470733a2f2f66696c65732e736565656473747564696f2e636f6d2f6172647570792f6172647570795f6c6f676f2e706e67.png" alt="pir"  width="700" height="auto"></a></p>
 
 
-<hr style="border-bottom" />
+### 2. Raspberry Pi 4 Support for Grove - I2C Motor Driver (TB6612FNG)
+
+[Grove - I2C Motor Driver (TB6612FNG)](https://www.seeedstudio.com/Grove-I2C-Motor-Driver-(TB6612FNG)-p-3220.html) has been there for a while and only had a getting started tutorial using Arduino.
+Now the Grove - I2C Motor Driver (TB6612FNG) supports [Raspberry Pi 4](https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-4GB-p-4077.html) and we have prepared a [step-by-step guide](https://wiki.seeedstudio.com/Grove-I2C_Motor_Driver-TB6612FNG/) to help you get started! You can easily drive 2 DC motors or one stepper motor via the I2C interface!
+
+
+<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Grove-I2C_Motor_Driver-TB6612FNG/"><img src="https://files.seeedstudio.com/wiki/IMAGE/June%20Week%204/new.png" alt="pir"  width="900" height="auto"></a></p>
+
+
+<hr>
 
 If you have any questions or comments, please don't hesistate to hop on to our [forum](https://forum.seeedstudio.com/latest) and discuss with us directly!
 We greatly value your feedback and opinions because we always grow and prosper together with our users and the community!
