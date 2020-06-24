@@ -191,6 +191,14 @@ void loop()
 !!!Success
         If every thing goes well, you will see the LCD shows the classic sentence: **hello world**.
 
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/20200624150013.jpg"/><figcaption><b></b><i></i></figcaption></a>
+</figure></div>
+
+
+!!!Note
+        If there's no Base Shield with you, Seeeduino VX Series with I2C interface do work as well.
+
 ### Play With Wio Terminal (ArduPy)
 
 #### Hardware
