@@ -1,6 +1,6 @@
 # ArduPy Get Started
 
-To get started with ArduPy, first need to install **aip - ArduPy Integrated Platform** is a utility to develop ArduPy and interact witch ArduPy board. It enables users to quickly get started with ardupy. **aip** is meant to be a simple command line tool. You can customize your own ardupy firmware through it, without needing to know more details about ArduPy.
+To get started with ArduPy, first need to install **`aip` - ArduPy Integrated Platform** is a utility to develop ArduPy and interact witch ArduPy board. It enables users to quickly get started with ardupy. `aip` is meant to be a simple command line tool. You can customize your own ardupy firmware through it, without needing to know more details about ArduPy.
 
 ## Supported Boards
 
@@ -10,18 +10,20 @@ To get started with ArduPy, first need to install **aip - ArduPy Integrated Plat
 
 ## Quick Start with ArduPy
 
-The following method is used to experience the ArduPy software in the simplest way. Follow the procedures to get started now! 
+The following method is used to experience the ArduPy software in the simplest way. Follow the procedures to get started now!
 
 - **STEP.1 Entering bootloader mode**
 
-Enter the bootloader mode by resetting the device quickly.
+Connect your device to your PC via USB connection. Enter the bootloader mode by resetting the device quickly.
 
-  1. For Wio Terminal, please refer [here](https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/#faq).
-  2. For Seeeduino XIAO, please refer [here](https://wiki.seeedstudio.com/Seeeduino-XIAO/#reset).
+  1. For **Wio Terminal**, please refer [here](https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/#faq).
+  2. For **Seeeduino XIAO**, please refer [here](https://wiki.seeedstudio.com/Seeeduino-XIAO/#reset).
 
 There should a USB drive named **`Arduino`** appeared in your PC. Go into the Arduino USB drive location.
 
-- **STEP.2 Download ArduPy DF2 Firmware**
+<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/USBdrive.png"/></div>
+
+- **STEP.2 Download ArduPy UF2 Firmware**
 
 Download the ArduPy firmware in the form of UF2 files.
 
@@ -30,17 +32,13 @@ Download the ArduPy firmware in the form of UF2 files.
 
 and save it in your drive.
 
-- **STEP.3 Connect the device**
-
-Connect your device to your PC via USB connection.
-
-- **STEP.4 Flashing ArduPy Firmware to the Device**
+- **STEP.3 Flashing ArduPy Firmware to the Device**
 
 Once downloaded the firmware for your device. Drag the `.UF2` files to the `ARDUINO` USB drive. Now, your board will disappear from PC. Reset the board and it has loaded ArduPy firmware into it!
 
-- **STEP.5 Blinking the device**
+- **STEP.4 Blinking the device**
 
-Now, there will be a USB drive named **`ARDUPY`** appeared in your PC. Open the `ARDUPY` and you will see a `main.py` python file. Copy the following and save the file.
+Now, there will be a USB drive named **`ARDUPY`** appeared in your PC. Open the `ARDUPY` and you will see a `main.py` python file. Open the `main.py` with your favorite editor such as [Microsoft Visual Studio Code](https://code.visualstudio.com/), [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/) and etc. Copy the following code and save the `main.py`.
 
 ```py
 from machine import Pin, Map
@@ -440,65 +438,66 @@ Note: Use **`tab`**  to see the available functions.
 
 ## IDE Getting Started
 
->**Note:** The IDE methods of invoking ArduPy will be **depreciated** soon, we recommend to use the **CLI** method.
+As mentioned before, you can use your preferred editor to write your Python program. To run and test program easily, you can simply edit the `main.py` file in the `ARDUPY` USB  location (auto re-load feature). Here will demonstrate another quick example  using **Wio Terminal**:
 
-### 1. Install the ArduPy IDE
+>Make sure you have followed the above procedures before the next session.
 
-To use ArduPy, we need to use another IDE other than Arduino IDE to compile (and upload) the MicroPython code into our device.
+1.Open `main.py` in `ARDUPY` USB location.
 
-#### Installing Steps
+2.Copy the following code to `main.py` and save the file.
 
-1. Download and install the [Visual Studio Code](https://code.visualstudio.com/Download) IDE according to your OS.
+```py
+from machine import LCD
+import time, math
 
-2. Open the **Extensions Market** in VS Code by clicking the **Extensions** on the left panel or use the keyboard shortcut:
+DEG2RAD = 0.0174532925
+lcd = LCD()
+lcd.fillScreen(lcd.color.BLACK)
 
-      - Keyboard Shortcut: `Shift+CTRL+X` in **Windows** or `Shift+CMD+X` in **Mac Os**.
+# DRAW CIRCLE SEGMENTS
+# x,y == coords of centre of circle
+# start_angle = 0 - 359
+# sub_angle   = 0 - 360 = subtended angle
+# r = radius
+# colour = 16 bit colour value
 
-3. Search **Seeed ArduPy IDE** in the Extension Market.
+def fillSegment(x, y, startAngle, subAngle, r, color):
+    # Calculate first pair of coordinates for segment start
+    sx = math.cos((startAngle - 90) * DEG2RAD)
+    sy = math.sin((startAngle - 90) * DEG2RAD)
+    x1 = sx * r + x
+    y1 = sy * r + y
 
-4. Click **Install** to install the IDE plug-in.
+    # Draw colour blocks every inc degrees
+    for i in range(startAngle, startAngle+subAngle, 1):
+        # Calculate pair of coordinates for segment end
+        x2 = math.cos((i + 1 - 90) * DEG2RAD) * r + x
+        y2 = math.sin((i + 1 - 90) * DEG2RAD) * r + y
 
-Once installed the Seeed ArduPy IDE plug-in in VS code, you can start playing with MicroPython!
+        lcd.fillTriangle(int(x1), int(y1), int(x2), int(y2), x, y, color)
 
-### 2. Connecting with the Device
+        # Copy segment end to segment start for next segment
+        x1 = x2
+        y1 = y2
 
-1. Connect the device to your PC via a USB cable. 
+def main():
+    # Draw 4 pie chart segments
+    fillSegment(160, 120, 0, 60, 100, lcd.color.RED)
+    fillSegment(160, 120, 60, 30, 100, lcd.color.GREEN)
+    fillSegment(160, 120, 60 + 30, 120, 100, lcd.color.BLUE)
+    fillSegment(160, 120, 60 + 30 + 120, 150, 100, lcd.color.YELLOW)
+    time.sleep(1)
+    fillSegment(160, 120, 0, 360, 100, lcd.color.BLACK)
 
-2. On the Bottom of the VS Code IDE, you should be able to see a **Device Connection (Plug Symbol)**. Click the Device Connection symbol, a window will appear with all the available serial connections.
+if __name__ == "__main__":
+    while True:
+        main()
+```
 
-3. Click on the right serial connection(Your Device) to connect.
+3.You should see the Wio Terminal starts drawing pie chart on the screen instantly!
 
-    - **Windows**: `COMxx`.
-
-    - **Mac Os**: `/dev/cu.usbmodem14xxxx`.
-
-4. Once connected, a window will appear in the bottom and check if the ArduPy firmware is already loaded into the device.
-
-Choose **Yes** and it will download and load the latest ArduPy firmware onto the device and you can start programming your device in Python Syntax!
-
-## IDE Basics
-
-Once connected, the device name should appear at the bottom of the IDE and you can use the features to start programming with ArduPy.
-
-**Features(Left to Right):**
-
-- Create a MicroPython Project
-
-- Open the MicroPython Terminal
-
-- Run the MicroPython Project
-
-- Status
-
-### Adding Files
-
-<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/AddingFiles.gif"/></div>
-
-To add files to the device using ArduPy, simply click the icon as shown above to choose files from your PC.
-
-### Boot Script
-
-To run a MicroPython script from boot up, simply name your project **`boot.py`** and load the files in the device as methods mentioned above.
+The auto re-load can be very useful when testing on small programs.
 
 ## Tech Support
+
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

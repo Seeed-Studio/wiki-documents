@@ -9,24 +9,25 @@ sku: 104020111,104020112,104020113
 tags:
 ---
 
-![](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/main.jpg)
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/main.jpg"/><figcaption><b></b><i></i></figcaption></a>
+</figure></div>
+
+Grove - 16 x 2 LCD (Black on Yellow) is a perfect I2C LCD display for Arduino and Raspberry Pi with high contrast and easy deployment. 16x2 means two lines and each line has 16 columns, 32 characters in total. With the help of Grove I2C connector, only 2 signal pins and 2 power pins are needed. You don't even need to care about how to connect these pins. Just plug it into the I2C interface on Seeeduino or Arduino/Raspberry Pi+baseshield via the Grove cable. There won't be complicated wiring, soldering, worrying about burning the LCD caused by the wrong current limiting resistor.
+
+## Versions
+
+|Version|Order|
+|---|---|
+|The Grove - 16 x 2 LCD (Black on Yellow)|[Buy Now](https://www.seeedstudio.com/Grove-16-x-2-LCD-%28Black-on-Yellow%29-p-3198.html)|
+|The Grove - 16 x 2 LCD (Black on Red)|[Buy Now](https://www.seeedstudio.com/Grove-16-x-2-LCD-%28Black-on-Red%29-p-3197.html)|
+|The Grove - 16 x 2 LCD (White on Blue) |[Buy Now](https://www.seeedstudio.com/Grove-16-x-2-LCD-%28White-on-Blue%29-p-3196.html)|
 
 
-The [Grove - LCD RGB Backlight](https://wiki.seeedstudio.com/Grove-LCD_RGB_Backlight/) has been well received since its inception. Based on customer feedback, now, we bring more cost-effective monochrome backlight derivative for you, i.e., 
 
-The Grove - 16 x 2 LCD (Black on Yellow)  
-The Grove - 16 x 2 LCD (Black on Red)  
-The Grove - 16 x 2 LCD (White on Blue)  
+!!!Note 
+         The [Grove - LCD RGB Backlight](https://wiki.seeedstudio.com/Grove-LCD_RGB_Backlight/) has been well received since its inception. Based on customer feedback, now, we bring more cost-effective monochrome backlight derivative for you.
   
 Except for RGB backlights, these three products are almost identical to the the Grove - LCD RGB Backlight, they are all 16 characters wide, 2 rows with high brightness backlight.
-
-
-
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-16-x-2-LCD-%28Black-on-Yellow%29-p-3198.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/Y1.png" height="48" width="300" /></a></p>
-
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-16-x-2-LCD-%28Black-on-Red%29-p-3197.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/R1.png" height="48" width="300" /></a></p>
-
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-16-x-2-LCD-%28White-on-Blue%29-p-3196.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/B1.png"  height="48" width="300" /></a></p>
 
 
 ## Features
@@ -56,25 +57,6 @@ Except for RGB backlights, these three products are almost identical to the the 
 - Time display
 - Any project that requires a simple display
 
-
-
-## Hardware Overview
-
-### I2C Pull-Up Resistor
-
-The first version of Grove - 16 x 2 LCD series does not have a built-in pull-up resistor, nor does it provide a pad to solder the optional pull-up resistor. We have redesigned the module, and the new version has built-in pull-up resistors.  
- 
- If you have an older version on your hand, you can solder a 10kΩ DIP resistor yourself on the back pad of the Grove connector. Please follow the picture below, solder a 10kΩ DIP resistor between **VCC** and **SCL** pins and a 10kΩ DIP resistor between **VCC** and **SDA** pins.
-
-
-![](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/I2C-R.jpg) 
-
-
-
-### Outline
-
-![](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/outline.jpg)
-
 ## Platforms Supported
 
 |Arduino|Raspberry|ArduPy|
@@ -83,20 +65,14 @@ The first version of Grove - 16 x 2 LCD series does not have a built-in pull-up 
 
 
 !!!Caution
-    The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
-
-
+         The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
 
 ## Getting Started
 
-
 ### Play With Arduino
 
-
-#### Hardware
-
-**Materials required**
+#### Materials required
 
 | Seeeduino V4.2 | Base Shield|  Grove - 16 x 2 LCD |
 |--------------|-------------|-----------------|
@@ -105,24 +81,30 @@ The first version of Grove - 16 x 2 LCD series does not have a built-in pull-up 
 
 
 !!!note
-    **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
+        * Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy.
     
-    **2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
+        * Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
 
 
-- **Step 1.** Connect the Grove - 16 x 2 LCD to port **I^2^C** of Grove-Base Shield.
+#### Hardware Overview
 
-- **Step 2.** Plug Grove - Base Shield into Seeeduino.
+**I2C Pull-Up Resistor**
 
-- **Step 3.** Connect Seeeduino to PC via a USB cable.
+The first version of Grove - 16 x 2 LCD series does not have a built-in pull-up resistor, nor does it provide a pad to solder the optional pull-up resistor. We have redesigned the module, and the new version has built-in pull-up resistors.  
+ 
+ If you have an older version on your hand, you can solder a 10kΩ DIP resistor yourself on the back pad of the Grove connector. Please follow the picture below, solder a 10kΩ DIP resistor between **VCC** and **SCL** pins and a 10kΩ DIP resistor between **VCC** and **SDA** pins.
 
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/I2C-R.jpg"/><figcaption><b></b><i></i></figcaption></a>
+</figure></div>
+
+**Outline**
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/outline.jpg"/><figcaption><b></b><i></i></figcaption></a>
+</figure></div>
+
+#### Hardware Connection
 
 ![](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/connect.jpg)
-
-
-!!!Note
-        If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
-
 
 | Seeeduino      |  Grove Cable       | Grove - 16 x 2 LCD |
 |--------------- |--------------------|-----|
@@ -131,10 +113,13 @@ The first version of Grove - 16 x 2 LCD series does not have a built-in pull-up 
 | SDA            | White              | SDA |
 | SCL            | Yellow             | SCL |
 
+- **Step 1.** Connect the Grove - 16 x 2 LCD to port **I^2^C** of Grove-Base Shield.
+
+- **Step 2.** Plug Grove - Base Shield into Seeeduino and connect Seeeduino to PC via a USB cable.
 
 #### Software
 
-!!!Attention
+!!!Note
         If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
 
@@ -148,13 +133,16 @@ The first version of Grove - 16 x 2 LCD series does not have a built-in pull-up 
 - **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 - **Step 3.** Restart the Arduino IDE. Open the example, you can open it in the following three ways：
-    1. Open it directly in the Arduino IDE via the path: **File --> Examples --> Grove - LCD RGB Backlight --> HelloWorld**. 
-    ![](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/path_1.jpg)
     
-    2. Open it in your computer by click the **HelloWorld.ino** which you can find in the folder **XXXX\Arduino\libraries\Grove_LCD_RGB_Backlight-master\examples\HelloWorld**, **XXXX** is the location you installed the Arduino IDE.
-    ![](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/path_2.jpg)
+**1).** Open it directly in the Arduino IDE via the path: **File --> Examples --> Grove - LCD RGB Backlight --> HelloWorld**. 
+
+![](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/path_1.jpg)
     
-    3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
+**2).** Open it in your computer by click the **HelloWorld.ino** which you can find in the folder **XXXX\Arduino\libraries\Grove_LCD_RGB_Backlight-master\examples\HelloWorld**, **XXXX** is the location you installed the Arduino IDE.
+
+![](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/path_2.jpg)
+    
+**3).** Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 
 ```C++
@@ -192,22 +180,26 @@ void loop()
 
     delay(100);
 }
-
-/*********************************************************************************************************
-  END FILE
-*********************************************************************************************************/
 ```
 
-!!!Attention
-        **1** The library file may be updated. This code may not be applicable to the updated library file, so we recommend that you use the first two methods.  
-        **2** Since the **Grove - 16 x 2 LCD** series are all monochrome backlight, you need to comment out the RGB color related code. In the demo code above, i.e., line 6 and line 17.
+!!!Note
+        * The library file may be updated. This code may not be applicable to the updated library file, so we recommend that you use the first two methods.  
+
+        * Since the **Grove - 16 x 2 LCD** series are all monochrome backlight, you need to comment out the RGB color related code. In the demo code above, i.e., line 6 and line 17.
 
 
 - **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
-
 !!!Success
-        If every thing goes well, you will see the LCD shows the classic sentence: hello world.
+        If every thing goes well, you will see the LCD shows the classic sentence: **hello world**.
+
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/20200624150013.jpg"/><figcaption><b></b><i></i></figcaption></a>
+</figure></div>
+
+
+!!!Note
+        If there's no Base Shield with you, Seeeduino VX Series with I2C interface do work as well.
 
 ### Play With Wio Terminal (ArduPy)
 
@@ -260,7 +252,9 @@ if __name__ == "__main__":
     main()
 ```
 
-**Note:** For more API reference, please refer to [**here**](https://github.com/Seeed-Studio/seeed-ardupy-lcd1602).
+!!!Note
+       For more API reference, please refer to [**here**](https://github.com/Seeed-Studio/seeed-ardupy-lcd1602).
+
 
 - **Step 4.** Save the `ArduPy-LCD1602.py` in a location that you know. Run the following command and **replace** `<YourPythonFilePath>` with your `ArduPy-LCD1602.py` location.
 
@@ -272,12 +266,9 @@ aip shell -n -c "runfile <YourPythonFilePath>"
 
 - **Step 5.** We will see the results on the Grove - 16 x 2 LCD.
 
-
 ![](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/Ardupy-LCD1602.png)
 
 ## Resources
-
-- **[Zip]** [Grove-LCD RGB Backlight Library](https://github.com/Seeed-Studio/Grove_LCD_RGB_Backlight/archive/master.zip)
 
 - **[PDF]** [JDH_1804_Datasheet](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/res/JDH_1804_Datasheet.pdf)
 
@@ -290,20 +281,18 @@ This is the introduction Video of this product, simple demos, you can have a try
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3slfeHKSSCw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 
-**Transportation data visualization with Google Map**：We use the Wio LTE cat.1 to monitor transportation GPS and other info. For cold chain, we can monitor the GPS location together with temperature and humidity. For the bicycling,  we can monitor the GPS location together with the hear rate. 
+**Grove IR Universal Remote Project**：Have multiple remotes? Have an Arduino? Operate multiple devices with a single press of a Keyes IR remote.
 
-<iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/SeeedStudio/transportation-data-visualization-with-google-map-517ce4/embed' width='350'></iframe>
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/ArduinoBasics/grove-ir-universal-remote-project-7ab87f' width='350'></iframe>
 
 
-**Atmospheric Pollution Visualization**：The air pollution problem attracts more and more attention. This time we tried to monitoring PM2.5 with Wio LTE and new Laser PM2.5 Sensor.
+**Range tests made easy with the RE-Mote and LCD**：Reduce the number of equipment and preparations required for field testing (2.4GHz and 868MHz), pack everything you need in your hand.
 
-<iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/SeeedStudio/atmospheric-pollution-visualization-1940f4/embed' width='350'></iframe>
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/alinan/range-tests-made-easy-with-the-re-mote-and-lcd-6e78b3' width='350'></iframe>
 
 
 ## Tech Support
 
 Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/)
-
-
 
 <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

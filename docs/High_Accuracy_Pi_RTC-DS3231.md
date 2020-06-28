@@ -9,18 +9,14 @@ sku: 103030278
 tags:
 ---
 
-![](https://files.seeedstudio.com/wiki/High_Accuracy_Pi_RTC-DS3231/img/main.jpg)
+<div align=center><img src="https://files.seeedstudio.com/wiki/High_Accuracy_Pi_RTC-DS3231/img/main.jpg"/><figcaption><b></b><i></i></figcaption></a>
+</figure></div>
 
+The High Accuracy Pi RTC is based on the clock chip DS3231. The DS3231 is a low-cost, extremely accurate I2C realtime clock (RTC). It provides an RTC for Raspberry Pi via the I2C interface. With the clock source from the TCXO(temperature compensated crystal oscillator), the RTC maintains seconds, minutes, hours, day, date, month, and year information. The date at the end of the month is automatically adjusted for months with fewer than 31 days, including corrections for leap year. The clock operates in either the 24-hour or 12-hour format with an AM/PM indicator. The clock provides two programmable time-of-day alarms and programmable square-wave output. The INT/SQW pin either generates an interrupt due to alarm condition or outputs a square-wave signal and the selection is controlled by the bit INTCN.
 
-The High Accuracy Pi RTC is based on the clock chip DS3231, the DS3231 is a low-cost, extremely accurate I2C realtime clock (RTC). It can provide a real-time clock(RTC) for raspberry pi via the UART interface. With the clock source from the TCXO(temperaturecompensated crystal oscillator), the RTC provides seconds, minutes, hours, day, date, month, and year information. The date at the end of the month is automatically adjusted for months with fewer than 31 days, including corrections for leap year.The clock operates in either the 24-hour or 12-hour format with an AM/PM indicator.
+If you want to retain the time infomation even when the Raspberry Pi is powered off, you need to insert a 3V CR1225 lithium cell into the battery holder. And if you are looking for an RTC for your Arduino project, please also take a look at our blog  Arduino RTC Tutorial: Using DS1307 RTC with Arduino to easily get started. 
 
-The clock provides two programmable time-of-day alarms and a programmable square-wave output. The INT/SQW pin either generates an interrupt due to alarm condition or outputs a square-wave signal and the
-selection is controlled by the bit INTCN.
-
-If you want to keep this module timing when the Raspberry Pi is powered off, you need to put a 3-Volt CR1225 lithium cell in the battery-holder. 
-
-
-<p style=":center"><a href="https://www.seeedstudio.com/High-Accuracy-Pi-RTC-%28DS3231%29-p-3214.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style="text-align:center"><a href="https://www.seeedstudio.com/High-Accuracy-Pi-RTC-%28DS3231%29-p-3214.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p> 
 
 ## Version
 
@@ -62,20 +58,9 @@ If you want to keep this module timing when the Raspberry Pi is powered off, you
 
 Any applications need Real Time on Raspberry.
 
+## Get Started
 
-
-## Pin Out
-
-![](https://files.seeedstudio.com/wiki/High_Accuracy_Pi_RTC-DS3231/img/pin_out.jpg)
-
-
-!!!Note
-        1- The chip itself supports the alarm function, we also reserved the relevant hardware interface, but our software library does not include this function(S/INT pin), you need to carry out related software development.
-
-        2- RX/TX is not used in this module, but the 6x2 header takes up the RX/TX pin of the Raspberry Pi, so we bring the RX/TX out and come with a 2pin header.
-
-
-## Platforms Supported
+### Platforms Supported
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -89,12 +74,22 @@ Any applications need Real Time on Raspberry.
 |Raspberry Pi|High Accuracy Pi RTC(DS3231)|
 |---|---|
 |![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![](https://files.seeedstudio.com/wiki/High_Accuracy_Pi_RTC-DS3231/img/thumbnail.jpg)|
-|<a href="https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html" target="_blank">Get One Now</a>|<a href="hhttps://www.seeedstudio.com/High-Accuracy-Pi-RTC-%28DS3231%29-p-3214.html" target="_blank">Get One Now</a>|
+|<a href="https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/High-Accuracy-Pi-RTC-DS3231.html" target="_blank">Get One Now</a>|
 
 
 !!!note
-    Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
+    Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy.
 
+
+### Pin Out
+
+![](https://files.seeedstudio.com/wiki/High_Accuracy_Pi_RTC-DS3231/img/pin_out.jpg)
+
+
+!!!Note
+        * The chip itself supports the alarm function, we also reserved the relevant hardware interface, but our software library does not include this function(S/INT pin), you need to carry out related software development.
+
+        * RX/TX is not used in this module, but the 6x2 header takes up the RX/TX pin of the Raspberry Pi, so we bring the RX/TX out and come with a 2pin header.
 
 
 ### Install
@@ -137,7 +132,7 @@ Please make sure plug the pin 1 of this hat into the pin 1 of raspberry GPIO, ju
 - **Step 4. Power up Raspberry Pi**
 
 
-### Usage
+## Usage
 
 Now you can use the command to check whether the driver is installed successfully.
 
@@ -151,29 +146,26 @@ If you want to uninstall the driver you can use the command below:
 sudo ./install.sh -u
 ```
 
-Now let's see what the RTC module can do:
+**Now let's see what the RTC module can do:**
 
-___
+
 Read hardware clock and print result
 
 ```
 sudo hwclock -r
 ```
-___
 
 Set the system time from the hardware clock
 
 ```
 sudo hwclock -s
 ```
-___
 
 Set the hardware clock from the current system time
 
 ```
 sudo hwclock -w
 ```
-___
 
 More usage
 ```
@@ -190,8 +182,6 @@ hwclock --help
 ## Resources
 
 - **[Zip]** [High Accuracy Pi RTC(DS3231) Eagle Files](https://files.seeedstudio.com/wiki/High_Accuracy_Pi_RTC-DS3231/res/High_Accuracy_Pi_RTC-DS3231.zip)
-
-- **[http]** [Seeed Pi RTC Library](https://github.com/Seeed-Studio/pi-hats)
 
 - **[PDF]** [Datasheet DS3231](https://files.seeedstudio.com/wiki/High_Accuracy_Pi_RTC-DS3231/res/datasheet.pdf)
 
