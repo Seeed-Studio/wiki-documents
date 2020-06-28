@@ -201,34 +201,27 @@ All trademarks are the property of their respective owners. Raspberry Pi and its
 
 ### Boot from SD card
 
-#### How to burn a Raspbian image
+#### How to burn a Raspberry Pi OS
 
-**1. Raspbian Stretch download**
+**1. Raspberry Pi OS Stretch download**
 
-Download [Raspbian Stretch](https://www.raspberrypi.org/downloads/raspbian/) from Raspberry Pi official website and select “with desktop and recommended software” version.
+Download [Raspberry Pi OS](https://www.raspberrypi.org/downloads/raspbian/) from Raspberry Pi official website and select “with desktop and recommended software” version.
 
 ![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss0.png)
 
-**2. Win32 Disk Imager**
 
-- Download the [Win32 Disk Imager](https://sourceforge.net/projects/win32diskimager/) from the Sourceforge Project page as an installer file, and run it to install the software. 
+**2. Etcher**
 
-- Insert the SD card into your SD card reader and connect to your PC.
-
-- Run the Win32DiskImager utility from your desktop or menu.
-
-- In the device box, select the corresponding drive letter of the SD card. Be careful to select the correct drive: if you choose the wrong drive you could destroy the data on your computer's hard disk! If you are using an SD card slot in your computer, and can't see the drive in the Win32DiskImager window, try using an external SD adapter. 	
-
-- Click 'Write' and wait for the write to complete.
-
-![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss1.png)
-
-- Complete.
-
-![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss2.png)
-
+<font face="">Click to download <a href="https://etcher.io/">Etcher</a> here, and burn the ```*.img.xz``` file directly to your SD card with Etcher. Or unzip the ```*.img.xz``` file to a ```*.img``` file, then burn it to SD card with other image writing tools.
+<br>
+<br>Click the Plus icon to add the image you just download, the software will automatically select the SD card you plug.Then click Flash! to start burning. It will take about 10 minutes to finish. </font>
 - Exit the imager and eject the SD card.
-- After writing the image to the SD card, insert the SD card into raspberry PI 4B. First connect the HDMI interface of raspberry PI 4B through the micro HDMI to HDMI interface, and then use the usb-c interface to power it. Do not remove the SD card during the writing process. Raspberry PI 4B will start from SD card.
+- After writing the image to the SD card, insert the SD card into raspberry PI 3B. First connect the HDMI interface of raspberry PI 3B through the micro HDMI to HDMI interface, and then use the usb-c interface to power it. Do not remove the SD card during the writing process. Raspberry PI 3B will start from SD card.
+
+![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/v2-flash-sd.png)
+
+
+
 
 #### Basic Configuration
 
@@ -324,6 +317,9 @@ Success！
 ![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss11.PNG)
 
 
+
+## Use with GrovePi
+Please refer to [Grove Base Hat for Raspberry Pi wiki](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/).
 
 
 
