@@ -136,136 +136,26 @@ void loop(void) {
         If there's no Base Shield with you, [Seeeduino Vx Series](https://www.seeedstudio.com/catalogsearch/result/index/?q=Seeeduino+v&product_list_limit=all) with **I2C interface** do work as well.
 
 
-### APIs of the library
+## U8g2 Library Introduction
 
-Seeed Gray OLED library provides complete software interfaces to exercise the capabilities of
-SSD1327Z driver with a 96x96 gray OLED. Almost all useful features are implemented and all
-functions are in public scope. This makes Seeed Gray OLED Library extensible. Seeed Gray OLED
-library uses Arduino Wire library. Hence initialize wire library before initializing Seeed OLED library.
+U8g2 is a monochrome graphics library for embedded devices. U8g2 supports monochrome OLEDs and LCDs, which include our chip SSD1327/SH1107G.
 
-#### init()
+The Arduino library U8g2 can be installed from the library manager of the Arduino IDE. U8g2 also includes U8x8 library:
 
-Initializes the Seeed OLED frame and sets the display to Normal mode.
+**U8g2**
 
-Example:
+- Includes all graphics procedures (line/box/circle draw).
+- Supports many fonts. (Almost) no restriction on the font height.
+- Requires some memory in the microcontroller to render the display.
 
-    SeeedGrayOled.init();  //initialze SEEED Gray OLED display
+**U8x8**
 
-#### clearDisplay()  
+- Text output only (character) device.
+- Only fonts allowed with fit into a 8x8 pixel grid.
+- Writes directly to the display. No buffer in the microcontroller required.
 
-Clears the whole screen. Should be used before starting a fresh start or after scroll deactivation.
-This function also sets the cursor to top left corner.
+Here provides the [**U8g2 Library wiki**](https://github.com/olikraus/u8g2/wiki) as well as the [U8g2 API Reference](https://github.com/olikraus/u8g2/wiki/u8g2reference) page.
 
-Example:
-
-    SeeedGrayOled.clearDisplay();  //clear the screen and set start position to top left corner
-
-#### setNormalDisplay()  
-
-Configures the display to normal mode(non-inverse) mode.
-
-Example:
-
-    SeeedGrayOled.setNormalDisplay();//Set display to normal mode (i.e non-inverse mode)
-
-
-#### setContrastLevel(unsigned char ContrastLevel)  
-Set the contrast ratio of OLED display. ContrastLevel can be any number from 0 - 255.
-Example:
-
-    SeeedGrayOled.setContrastLevel(127); //Set display contrast ratio to half level( i.e 256/2 1 ).
-
-#### setInverseDisplay()
-Configures the display to inverse mode.
-Example:
-
-    SeeedGrayOled.setInverseDisplay();      //Set display to inverse mode
-
-#### setHorizontalMode()  
-Configures the display to horizontal addressing mode.
-Example:
-
-    SeeedGrayOled.setHorizontalMode();      //Set addressing mode to Horizontal Mode
-
-#### setVerticalMode()  
-Configures the display to vertical addressing mode. Texts are drawn in vertical mode. Please set
-the display to vertical mode before printing text.
-Example:
-
-    SeeedGrayOled.setVerticalMode();      //Set addressing mode to Vertical Mode
-
-#### setTextXY(X,Y)  
-Set the text's position (cursor) to Xth Text Row, Yth Text Column.96x96 OLED is divided into 12
-rows and 12 Columns of text. This row and column should not be confused with OLED Row and
-Column.
-
-* X can be any number from 0 - 11.
-* Y can be any number from 0 - 11.
-
-Example:
-
-    SeeedGrayOled.setTextXY(0,0);  //Set the cursor to 0th Text Row, 0th Text Column
-
-#### putChar(unsigned char c)  
-Print a character to OLED display starting from current address-pointer set by setTextXY(X,Y). This
-function is internally used by putString().
-
-Example:
-
-    SeeedGrayOled.putChar('S'); //Print the character S
-
-#### putString(cont char *string)  
-
-Print string to OLED display starting from current address-pointer set by setTextXY(X,Y)
-Example:
-
-    SeeedGrayOled.putString("Hello World!"); //Print the String
-
-### putNumber(long n)  
-
-Print numbers to OLED display starting from current address-pointer set by setTextXY(X,Y).
-Number can be any char,int or long datatype. It also takes care of -ve sign.
-
-Example:
-
-    SeeedGrayOled.putNumber(-56123); //Print number -56123
-
-### drawBitmap(unsigned char *bitmaparray, int bytes)  
-
-Display a binary bitmap on the OLED matrix. The data is provided through a pointer to uni-dimensional array holding bitmap. The bitmap data is available in continuous rows of columns
-as like Horizontal Addressing mode. bytes is size of bitmap in bytes.
-
-Example:
-
-    SeeedGrayOled.drawBitmap(SeeedLogo,96*96/8);   //  Draw binary Bitmap (96 pixels *96 pixels  / 8) bytes
-
-### setHorizontalScrollProperties
-
-Set the properties of horizontal scroll.
-
-* Direction can be any of Scroll_Left and Scroll_Right.
-* startRow can be 0 - 127
-* endRow can be 0 - 127. It should be greater than startRow
-* startColumn can be 0 - 63
-* endColumn can be 0 - 63. It should be greater than startRow
-* scrollSpeed can be any of defines:Scroll_2Frames, Scroll_3Frames, Scroll_4Frames, Scroll_5Frames, Scroll_25Frames,Scroll_64Frames, Scroll_128Frames,Scroll_256Frames.
-
-Example:
-
-    SeeedGrayOled.setHorizontalScrollProperties(Scroll_Left,72,95,0,47,Scroll_5Frames);  //Set the properties of Horizontal Scroll
-
-### activateScroll()  
-Enable scrolling. This should be used only after setting horizontal scroll properties.
-Example:
-
-    SeeedGrayOled.activateScroll();   //Enable scrolling.
-
-### deactivateScroll()  
-
-Disable scrolling. This should be used after activateScroll();
-Example:
-
-    SeeedGrayOled.activateScroll();   //Disable scrolling.
 
 
 ## Schematic Online Viewer
@@ -279,7 +169,6 @@ Example:
 * **[Eagle]** [Grove-OLED Display 1.12inch in Eagle](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/OLED%20Display.zip)
 * **[PDF]** [Grove-OLED Display 1.12inch Sch](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/Grove%20-%2096x96%20OLED%20Display%20v2.1%20Sch.pdf)
 * **[PDF]** [Grove-OLED Display 1.12inch PCB](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/Grove%20-%2096x96%20OLED%20Display%20v2.1%20PCB.pdf)
-* **[Library]** [Github Repository of the Library](https://github.com/Seeed-Studio/OLED_Display_96X96)
 * **[Datasheet]** [SSD1327 Datasheet](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/SSD1327_datasheet.pdf)
 *  **[Datasheet]** [LY120 Datasheet](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/308010007_LCD-22P-0.7.pdf)
 * **[Datasheet]** [SH1107G_datasheet](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/SH1107G_datasheet.pdf)
