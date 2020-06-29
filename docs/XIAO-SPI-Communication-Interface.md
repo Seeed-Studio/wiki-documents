@@ -4,7 +4,7 @@
 
 **Materials required**
 
-- [Seeeduino XIAO x1](https://www.seeedstudio.com/.html)
+- [Seeeduino XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html) x 1
 
 - [Grove-High Precision pressure Sensor](https://www.seeedstudio.com/Grove-High-Precision-Barometer-Sensor-DPS310-p-4397.html)
 
@@ -149,4 +149,4 @@ void loop()
 ```
 - **Step 4.** Click **Tools** > **Serial Monitor** , or press **Ctrl+Shift+M** together, open the serial monitor after uploading successfully, the output appears as follows:
 
-![](https://raw.githubusercontent.com/SeeedDocument/Seeeduino-XIAO/master/img/spi.png)
+![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/spi.png)
