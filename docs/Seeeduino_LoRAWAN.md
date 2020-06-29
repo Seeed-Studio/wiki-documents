@@ -568,39 +568,39 @@ Thanks for **Todd Krein** for sharing the example in Github. Please download the
 
 ```c++
 #define USE_GPS 1
-
+ 
 #include "LoRaWan.h"
-
+ 
 #ifdef USE_GPS
 #include "TinyGPS++.h"
 TinyGPSPlus gps;
 #endif
-
-
+ 
+ 
 void setup(void)
 {
-
+ 
     char c;
 #ifdef USE_GPS
     bool locked;
 #endif
-    
+ 
     SerialUSB.begin(115200);
     while(!SerialUSB);
-    
+ 
     lora.init();
     lora.setDeviceReset();
-
+ 
 #ifdef USE_GPS
-    Serial.begin(9600);     // open the GPS
+    Serial2.begin(9600);     // open the GPS
     locked = false;
-
+ 
     // For S&G, let's get the GPS fix now, before we start running arbitary
     // delays for the LoRa section
-
+ 
     while (!gps.location.isValid()) {
-      while (Serial.available() > 0) {
-        if (gps.encode(c=Serial.read())) {
+      while (Serial2.available() > 0) {
+        if (gps.encode(c=Serial2.read())) {
           displayInfo();
           if (gps.location.isValid()) {
 //            locked = true;
@@ -609,10 +609,10 @@ void setup(void)
         }
 //        SerialUSB.print(c);
       }
-
+ 
 //      if (locked)
 //        break;
-        
+ 
       if (millis() > 15000 && gps.charsProcessed() < 10)
       {
         SerialUSB.println(F("No GPS detected: check wiring."));
@@ -626,14 +626,14 @@ void setup(void)
     }
 #endif
 }
-
-    
+ 
+ 
 void loop(void)
 {
-displayInfo();
-delay(1000);
+//displayInfo();
+//delay(1000);
 }
-
+ 
 void displayInfo()
 {
   SerialUSB.print(F("Location: ")); 
@@ -647,7 +647,7 @@ void displayInfo()
   {
     SerialUSB.print(F("INVALID"));
   }
-
+ 
   SerialUSB.print(F("  Date/Time: "));
   if (gps.date.isValid())
   {
@@ -661,7 +661,7 @@ void displayInfo()
   {
     SerialUSB.print(F("INVALID"));
   }
-
+ 
   SerialUSB.print(F(" "));
   if (gps.time.isValid())
   {
@@ -681,9 +681,10 @@ void displayInfo()
   {
     SerialUSB.print(F("INVALID"));
   }
-
+ 
   SerialUSB.println();
 }
+
 ```
 
 ## 5. Low Power
