@@ -4,8 +4,6 @@
 
 This wiki introduces how to use Seeeduino XIAO as USB-Client with the help of TinyUSB library. It allows XIAO to be used for HID devices such as keyboard, mouse and etc.
 
-This repo introduce how to use the Wio Terminal as USB-Client, including using it for Human Interface Device(HID) such as keyboard, mouse and etc. It also supports Musical Instrument Digital Interface(MIDI).
-
 This functionality is dependent on [Adafruit TinyUSB Library for Arduino](https://github.com/adafruit/Adafruit_TinyUSB_Arduino). The library has been tested with [**Seeeduino XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html) and [**Wio Terminal(SAMD51)**](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) and working properly.
 
 ## Installing the Adafruit TinyUSB Library for Arduino

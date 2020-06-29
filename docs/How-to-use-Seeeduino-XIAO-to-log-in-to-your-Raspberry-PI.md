@@ -40,7 +40,7 @@ enable_uart=1
 
 ### Configuring Seeeduino XIAO
 
-- **Step 1.** Open [Arduino IDE](https://www.arduino.cc/en/Main/Software) and add Seeeduino XIAO by following the link [here.](https://github.com/SeeedDocument/Seeeduino-XIAO)
+- **Step 1.** Open [Arduino IDE](https://www.arduino.cc/en/Main/Software) and add Seeeduino XIAO by following the link [here.](https://wiki.seeedstudio.com/Seeeduino-XIAO/#software)
 
 - **Step 2.** Copy the following code to Arduino IDE and upload the code into Seeeduino XIAO.
 
