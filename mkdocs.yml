@@ -150,7 +150,7 @@ nav:
           - Raspberry Pi Breakout Board v1.0: Raspberry_Pi_Breakout_Board_v1.0.md
           - Raspberry Pi Motor Driver Board v1.0: Raspberry_Pi_Motor_Driver_Board_v1.0.md
           - Pi RTC (DS1307): Pi_RTC-DS1307.md
-          - High Accuracy Pi RTC (DS3231): High_Accuracy_Pi_RTC-DS3231.md
+          - High Accuracy Pi RTC (DS3231) for Raspberry Pi: High_Accuracy_Pi_RTC-DS3231.md
           - Raspberry Pi RS232 Board v1.0: Raspberry_Pi_R232_Board_v1.0.md
           - Raspberry Pi Relay Board v1.0: Raspberry_Pi_Relay_Board_v1.0.md
           - Grove Base Hat for Raspberry Pi: Grove_Base_Hat_for_Raspberry_Pi.md
