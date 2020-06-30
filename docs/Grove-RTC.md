@@ -23,7 +23,7 @@ The battery is not included.
 
 ## Pre-reading
 
-A brief introduction of RTC for Arduino is strongly recommended reading ahead if you are not familiar with it:
+An introduction of RTC for Arduino is strongly recommended reading ahead if you are not familiar with it:
 
 <p style="text-align:center"><a href="https://blog.seeedstudio.com/blog/2019/11/19/arduino-tutorial-using-ds1307-rtc-with-arduino/" target="_blank"><img src="https://blog.seeedstudio.com/wp-content/uploads/2019/11/image-88.png" border=0 /></a></p> 
 
