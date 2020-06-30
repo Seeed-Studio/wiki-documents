@@ -18,6 +18,12 @@ We use an on-board STM32F030F4P6 to control the channels separately. The command
 
 <p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-4-Channel-SPDT-Relay-p-3119.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p>
 
+## Pre-reading
+
+An introduction of Grove Relay Modules is strongly recommended reading ahead if you are not familiar with them:
+
+<p style="text-align:center"><a href="https://www.seeedstudio.com/blog/2020/01/03/arduino-tutorial-control-high-voltage-devices-with-relay-modules/" target="_blank"><img src="https://blog.seeedstudio.com/wp-content/uploads/2020/01/image-50-768x384.png" border=0 /></a></p> 
+
 ## Features
 
 + High temperature resistant plastic shell
