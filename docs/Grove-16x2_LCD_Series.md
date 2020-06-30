@@ -29,6 +29,12 @@ Grove - 16 x 2 LCD is a perfect I2C LCD display for Arduino and Raspberry Pi wit
   
 Except for RGB backlights, these three products are almost identical to the the Grove - LCD RGB Backlight, they are all 16 characters wide, 2 rows with high brightness backlight.
 
+## Pre-reading
+
+An introduction of **Grove - 16 x 2 LCD** is strongly recommended reading ahead if you are not familiar with it:
+
+<p style="text-align:center"><a href="https://www.seeedstudio.com/blog/2020/01/20/how-to-use-16x2-lcd-with-arduino-grove-lcd-rgb-backlight/" target="_blank"><img src="https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/prereading.png" border=0 /></a></p> 
+
 
 ## Features
 
