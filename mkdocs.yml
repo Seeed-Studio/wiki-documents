@@ -149,8 +149,8 @@ nav:
           - GrovePi Plus: GrovePi_Plus.md
           - Raspberry Pi Breakout Board v1.0: Raspberry_Pi_Breakout_Board_v1.0.md
           - Raspberry Pi Motor Driver Board v1.0: Raspberry_Pi_Motor_Driver_Board_v1.0.md
-          - Pi RTC (DS1307): Pi_RTC-DS1307.md
-          - High Accuracy Pi RTC (DS3231): High_Accuracy_Pi_RTC-DS3231.md
+          - DS1307 RTC (Real Time Clock) for Raspberry Pi: Pi_RTC-DS1307.md
+          - DS3231 High Accuracy RTC (Real Time Clock) for Raspberry Pi: High_Accuracy_Pi_RTC-DS3231.md
           - Raspberry Pi RS232 Board v1.0: Raspberry_Pi_R232_Board_v1.0.md
           - Raspberry Pi Relay Board v1.0: Raspberry_Pi_Relay_Board_v1.0.md
           - Grove Base Hat for Raspberry Pi: Grove_Base_Hat_for_Raspberry_Pi.md
@@ -342,7 +342,7 @@ nav:
           - Wio Tracker - GPS, BT3.0, GSM, Arduino Compatible: wio_gps_board.md
           - LTE Cat 1 Pi HAT: LTE_Cat_1_Pi_HAT.md
           - Wio LTE Cat M1/NB-IoT Tracker: Wio_LTE_Cat_M1_NB-IoT_Tracker.md
-          - Wio Extension RTC: Wio-Extension-RTC.md
+          - Wio Extension RTC (Real Time Clock): Wio-Extension-RTC.md
 
       - Wio:
           - Wio Introduction: Wio.md
@@ -552,7 +552,7 @@ nav:
           - Grove - PIR Motion Sensor: Grove-PIR_Motion_Sensor.md
           - Grove - Piezo Vibration Sensor: Grove-Piezo_Vibration_Sensor.md
           - Grove - Q Touch Sensor: Grove-Q_Touch_Sensor.md
-          - Grove - RTC: Grove-RTC.md
+          - Grove - DS1307 RTC (Real Time Clock) for Arduino: Grove-RTC.md
           - Grove - Rotary Angle Sensor: Grove-Rotary_Angle_Sensor.md
           - Grove - RS232: Grove-RS232.md
           - Grove - RS485: Grove-RS485.md
@@ -659,7 +659,7 @@ nav:
           - Grove - DMX512: Grove-DMX512.md
           - Grove - GPS: Grove-GPS.md
           - Grove - GPS (Air530): Grove-GPS-Air530.md
-          - Grove - High Precision RTC: Grove_High_Precision_RTC.md
+          - Grove - High Precision RTC (Real Time Clock): Grove_High_Precision_RTC.md
           - Grove - I2C ADC: Grove-I2C_ADC.md
           - Grove - I2C FM Receiver: Grove-I2C_FM_Receiver.md
           - Grove - I2C FM Receiver v1.1: Grove-I2C_FM_Receiver_v1.1.md
@@ -948,7 +948,7 @@ nav:
           - Xadow - Multichannel Gas Sensor: Xadow_Multichannel_Gas_Sensor.md
           - Xadow - OLED 128*64: Xado_OLED_128multiply64.md
           - Xadow - RGB OLED 96*64: Xadow_RGB_OLED_96multiply64.md
-          - Xadow - RTC: Xadow_RTC.md
+          - Xadow - RTC (Real Time Clock): Xadow_RTC.md
           - Xadow - Storage: Xadow_Storage.md
           - Xadow - UV Sensor: Xadow_UV_Sensor.md
           - Xadow - Vibrator Motor: Xadow_Vibrator_Motor.md

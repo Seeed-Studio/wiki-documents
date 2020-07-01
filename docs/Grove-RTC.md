@@ -21,6 +21,13 @@ The RTC module is based on the clock chip DS1307, which supports the I2C protoco
 The battery is not included.
 </div>
 
+## Pre-reading
+
+An introduction of RTC for Arduino is strongly recommended reading ahead if you are not familiar with it:
+
+<p style="text-align:center"><a href="https://blog.seeedstudio.com/blog/2019/11/19/arduino-tutorial-using-ds1307-rtc-with-arduino/" target="_blank"><img src="https://blog.seeedstudio.com/wp-content/uploads/2019/11/image-88.png" border=0 /></a></p> 
+
+
 ## Specifications
 
 -   PCB Size: 2.0cm\*4.0cm

@@ -53,7 +53,7 @@ You ought to acknowledge the principles of GPS modules before purchasing and the
   </tr>
   <tr>
     <td class="tg-q854"><br><br>Channels</td>
-    <td class="tg-uxnu">The number of channels that the GPS module runs will affect your time to first fix (TTFF). Since the module does not know that it is looking at the satellite, it can check more frequencies/channels at a time, so the faster it can find repairs. After the module is locked or repaired, some modules will close the extra channel blocks to save power.</td>
+    <td class="tg-uxnu">The number of channels that the GPS module runs will affect your time to first fix (TTFF). Since the module does not know that it is looking at the satellite, it can check more frequencies/channels at a time, and it can accordingly find repairs faster. After the module is locked or repaired, some modules will close the extra channel blocks to save power.</td>
   </tr>
   <tr>
     <td class="tg-q854">TTFF</td>
@@ -135,26 +135,24 @@ There are a numerous ultilizations of GPS Modules. Particularly, plenty of socia
   </tr>
   <tr>
     <td class="tg-5z8m"><br><br>Transportation<br></td>
-    <td class="tg-ut4k">GPS can be used for autonomous navigation, port management and entry guidance, route traffic management and tracking and monitoring. Vehicle-mounted equipment uses GPS for precise positioning, combined with electronic maps and real-time traffic conditions, automatically matches the optimal path, and implements autonomous navigation of the vehicle.</td>
+    <td class="tg-ut4k">GPS modules can be used for autonomous navigation, port management and entry guidance, route traffic management and tracking and monitoring. Vehicle-mounted equipment uses GPS for precise positioning, combined with electronic maps and real-time traffic conditions, automatically matches the optimal path, and implements autonomous navigation of the vehicle.</td>
   </tr>
   <tr>
     <td class="tg-5z8m"><br><br><br>Emergency Rescue<br></td>
-    <td class="tg-ut4k">Using GPS positioning technology, emergency dispatch of fire, ambulance and police can be carried out, and the emergency response department's response efficiency to fire, crime scene, traffic accident, traffic jam and other emergency events can be improved. A fishing boat equipped with a GPS device can quickly locate and alarm when a dangerous situation occurs, so that it can obtain rescue faster and more timely.</td>
+    <td class="tg-ut4k">Using GPS positioning technology, emergency dispatch of fire, ambulance and police can be carried out, and the emergency response department's response efficiency to fire, crime scene, traffic accident, traffic jam and other emergency events can be improved. A fishing boat equipped with a GPS module can quickly locate and alarm when a dangerous situation occurs, so that it can obtain rescue faster and more timely.</td>
   </tr>
   <tr>
     <td class="tg-5z8m"><br><br>Agriculture<br><br></td>
-    <td class="tg-ut4k">A GPS is used to locate and acquire farmland information, including yield monitoring, soil sample collection and etc. The computer system determines the management measures of farmland plots by analyzing and processing the data, and loads the yield and soil status information into the GPS equipment. In the spray applicator, it can accurately fertilize and spray the farmland.</td>
+    <td class="tg-ut4k">A GPS module is used to locate and acquire farmland information, including yield monitoring, soil sample collection and etc. The computer system determines the management measures of farmland plots by analyzing and processing the data, and loads the yield and soil status information into the GPS equipment. In the spray applicator, it can accurately fertilize and spray the farmland.</td>
   </tr>
   <tr>
     <td class="tg-5z8m"><br><br>Entertainment<br></td>
-    <td class="tg-ut4k">Through GPS, people can quickly find their destination in an unfamiliar city, and can travel on the optimal path; campers carry GPS receivers to quickly find suitable camping locations without worrying about getting lost; even some high-end video games , GPS simulation technology is also used.</td>
+    <td class="tg-ut4k">Through GPS modules, people can quickly find their destination in an unfamiliar city, and can travel on the optimal path; campers carry GPS receivers to quickly find suitable camping locations without worrying about getting lost; even some high-end video games , GPS simulation technology is also used.</td>
   </tr>
 </tbody>
 </table>
 
 ## GPS Modules at Seeed
-
-For all the GPS or Communication modules in our bazaar, please click [Seeed Studio Bazaar](https://www.seeedstudio.com/) to check.
 
 | Name| Thumbnail| Size |Update Rate| Baud Rate| Navigation Sensitivity|Power Requirements|Number of Channels| Time to first start | Antennas |Accuracy |Click to Buy|
 |-----------------------------------------------------------------|----------------------------------------------------------------------------------------------|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|------------|------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-----------|-------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|--------------------------|
