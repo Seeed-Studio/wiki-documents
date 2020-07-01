@@ -31,9 +31,8 @@ Except for RGB backlights, these three products are almost identical to the the 
 
 ## Pre-reading
 
-An introduction of **Grove - 16 x 2 LCD** is strongly recommended reading ahead if you are not familiar with it:
+An introduction of **What is a Grove - 16 x 2 LCD** and **How does it work** is strongly recommended reading ahead if you are not familiar with it. Please visit our **[blog](https://www.seeedstudio.com/blog/2020/01/20/how-to-use-16x2-lcd-with-arduino-grove-lcd-rgb-backlight/)** for detailed information.
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/blog/2020/01/20/how-to-use-16x2-lcd-with-arduino-grove-lcd-rgb-backlight/" target="_blank"><img src="https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/prereading.png" border=0 /></a></p> 
 
 
 ## Features
