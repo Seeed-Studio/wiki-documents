@@ -675,7 +675,7 @@ cd grove.py/grove
 sudo python3 grove_gpio.py 5
 ```
 
-###  IIC on Basehat by using Grove.py
+<!-- ###  IIC on Basehat by using Grove.py
 
 #### Hardware
 
@@ -712,7 +712,7 @@ git clone https://github.com/Seeed-Studio/grove.py
 ```bash
 cd grove.py/grove
 sudo python3 grove_12_key_cap_i2c_touch_mpr121.py
-```
+``` -->
 
 ###  ADC on Basehat by using Grove.py
 
