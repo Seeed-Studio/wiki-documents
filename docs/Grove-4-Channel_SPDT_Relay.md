@@ -20,7 +20,7 @@ We use an on-board STM32F030F4P6 to control the channels separately. The command
 
 ## Pre-reading
 
-An introduction of Grove Relay Modules is strongly recommended reading ahead if you are not familiar with them:
+An introduction of **What is a Grove Relay Module** and **How does a Relay work** is strongly recommended reading ahead if you are not familiar with them. Please visit our **[blog](https://www.seeedstudio.com/blog/2020/01/03/arduino-tutorial-control-high-voltage-devices-with-relay-modules/)** below for detailed information:
 
 <p style="text-align:center"><a href="https://www.seeedstudio.com/blog/2020/01/03/arduino-tutorial-control-high-voltage-devices-with-relay-modules/" target="_blank"><img src="https://blog.seeedstudio.com/wp-content/uploads/2020/01/image-50-768x384.png" border=0 /></a></p> 
 
