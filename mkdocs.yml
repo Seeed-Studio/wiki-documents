@@ -200,6 +200,7 @@ nav:
       - ArduPy:
           - ArduPy Wiki: ArduPy.md
           - ArduPy LCD API Reference: ArduPy-LCD.md
+          - How to Build ArduPy Firmware From Source Code: Building-Ardupy.md
 
       - Seeeduino XIAO:
           - Grove Shield for Seeeduino XIAO with embedded battery management chip: Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip.md
