@@ -57,7 +57,7 @@ Carrier board hardware details follow:
 
 - **1.Carrier board :** Install the Seeed SoM-STM32MP157C area, if the user wants to remove the core board, slowly tilt the core board up and then remove, never remove by hand.
 
-- **2.DC Power Input Port :** 12V~24V/2A (12V/2A power input is recommended).
+- **2.DC Power Input Port :** 12V~24V/2A (12V/2A power input is recommended)(5.5x2.1mm center-positive barrel).
 
 - **3.ETH Interface :** Network cable interface can be connected to gigabit level network.
 
