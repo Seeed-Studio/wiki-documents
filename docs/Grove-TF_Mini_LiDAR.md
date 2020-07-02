@@ -303,6 +303,8 @@ void display(uint16_t lidar_data,uint8_t mode){
 ## Resources
 ---
 - **[Datasheet]** [Grove-TF-Mini-LiDAR
+](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/res/SJ-PM-TF-Luna-A03-Product-Manual.pdf)
+- **[Datasheet]** [Grove-TF-Luna-LiDAR
 ](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/res/DE-LiDAR%20TFmini%20Datasheet-V1.7-EN.pdf)
 - **[ZIP]** [Seeed_Arduino_TFlidar](https://github.com/Seeed-Studio/Seeed_Arduino_TFlidar/archive/master.zip)
 - **[ZIP]** [Seeed_Arduino_Linechart](https://github.com/Seeed-Studio/Seeed_Arduino_Linechart/archive/master.zip)
