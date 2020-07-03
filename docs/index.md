@@ -15,10 +15,7 @@ We will bring you all these wiki updates in a weekly basis. So stay tuned with u
 
 <p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Grove_Shield_for_Arduino_Nano/"><img src="https://files.seeedstudio.com/wiki/IMAGE/July%20Week%201/Untitled-1.png" alt="pir"  width="900" height="auto"></a></p>
 
-
-## Existing Wiki Updated
-
-### 1. Build Ardupy firmware from source code
+### 2. Build Ardupy firmware from source code
 
 Ardupy is our latest introduction and provides a brand-new way of communicating with your Arduino boards. Through ArduPy, you can use Python to verify your ideas, learn python programming as well as micro-controller programming in a more efficient way. 
 We are working hard to constantly develop Ardupy and bring you many new feature. This week we have have prepared a [step-by-step guide](https://wiki.seeedstudio.com/Building-Ardupy/) to help you explain how to build Ardupy firmware by youself! This means you can now add your own hardware to support Ardupy by building your own version of Ardupy. 
@@ -27,8 +24,9 @@ We are working hard to constantly develop Ardupy and bring you many new feature.
 <p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Building-Ardupy/"><img src="https://files.seeedstudio.com/wiki/Building-Ardupy/make.gif" alt="pir"  width="900" height="auto"></a></p>
 
 
+## Existing Wiki Updated
 
-### 2. Grove - Thermal Imaging Camera IR Array visualization via serial monitor
+### 1. Grove - Thermal Imaging Camera IR Array visualization via serial monitor
 
 We have recently released the [Grove - Thermal Imaging Camera IR Array](https://www.seeedstudio.com/Grove-Thermal-Imaging-Camera-IR-Array-MLX90641-110-degree-p-4612.html). This is an IR thermal camera carrying a 16x12 array of thermal sensors (MLX90641) and it can detect the temperature of objects from far away with a center area accuracy of ±1℃ and average accuracy of ±1.5℃. We have added the necessary software codes to it's [wiki page](https://wiki.seeedstudio.com/Grove-Thermal-Imaging-Camera-IR-Array/#outcome-of-visualization-format) in order to visualize the temperature data on the serial monitor while it's connected to the [Wio Terminal](https://www.seeedstudio.com/Wio-Terminal-p-4509.html).
 
