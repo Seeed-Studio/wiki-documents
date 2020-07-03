@@ -24,12 +24,12 @@ An introduction of **What is a Barometric Pressure Sensor** and **How does it wo
 
 ## Feature
 
--   Get more precise temperature, atmospheric pressure values, and approximate altitude data.
+-   Get more precise temperature, atmospheric pressure values, and approximate altitude data
 -   Grove compatible and easy to use
 -   Highly abstracted library for building projects quicker
 
 !!!Tip
-    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/).
+     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/).
 
 ## Specification
 
@@ -71,7 +71,7 @@ An introduction of **What is a Barometric Pressure Sensor** and **How does it wo
 | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg) |
 
 !!!Caution
-    The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
+     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 
 
 ## Getting Started
@@ -105,22 +105,15 @@ An introduction of **What is a Barometric Pressure Sensor** and **How does it wo
 Do not touch or shake or let this product in vibration when it works. This will cause interference and will affect the accuracy of data collected.
 </div>
 
-#### Package includes (main parts)
+**Step 1.** Connect Grove-Barometer_Sensor-BMP280 to port **I2C** of Grove-Base Shield.
 
-| Parts name                                                                                                                    | Quantity |
-|-------------------------------------------------------------------------------------------------------------------------------|----------|
-| Grove - Barometer Sensor (BMP280)                                                                                             | 1 piece  |
-| [Grove cable](https://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) | 1 piece  |
-
-- **Step 1.** Connect Grove-Barometer_Sensor-BMP280 to port **I2C** of Grove-Base Shield.
-
-- **Step 2.** Plug Grove - Base Shield into Seeeduino and connect Seeeduino to PC via a USB cable.
+**Step 2.** Plug Grove - Base Shield into Seeeduino and connect Seeeduino to PC via a USB cable.
 
 ![with_ardu](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BMP280/img/with_ardu.jpg)
 
 
 !!!Note
-	If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
+	If you don't have a Grove Base Shield, you can also directly connect this module to [Seeeduino](https://www.seeedstudio.com/catalogsearch/result/?q=Seeeduino) as below.
 
 <!--I2C-->
 | Seeeduino_v4 | Grove-Barometer_Sensor-BMP280  |
@@ -129,7 +122,6 @@ Do not touch or shake or let this product in vibration when it works. This will 
 | GND         | GND                      |
 | SDA         | SDA                      |
 | SCL         | SCL                      |
-
 
 
 #### Software
@@ -141,7 +133,7 @@ Do not touch or shake or let this product in vibration when it works. This will 
 
 **Step 3.** Create a new Arduino sketch and paste the codes below to it or open the code directly by the path:File -> Example ->bmp280_example->bmp280_example
 
-Here is the code:
+**Here is the code:**
 
 ```c++
 /*
