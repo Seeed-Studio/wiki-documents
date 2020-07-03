@@ -72,10 +72,10 @@ Make sure that you have installed Seeed's SAMD board in Arduino first before the
 - **For Linux OS:**
 
 ```sh
-cmake ../ -DARDUINO_CORE_PATH=$HOME/.arduino15/packages/Seeeduino/hardware/samd/$COREVER -DTOOLCHAIN=$HOME/.arduino15/packages/Seeeduino/tools/arm-none-eabi-gcc/7-2017q4/bin -DBOARD=wio_terminal -DARDUINO_VERIANT=wio_terminal
+cmake ../ -DARDUINO_CORE_PATH=$HOME/.arduino15/packages/Seeeduino/hardware/samd/$COREVER -DTOOLCHAIN=$HOME/.arduino15/packages/Seeeduino/tools/arm-none-eabi-gcc/7-2017q4/bin -DBOARD=wio_terminal -DARDUINO_VARIANT=wio_terminal
 ```
 
-If building for Seeeduino XIAO, you can replace `-DARDUINO_VERIANT=wio_terminal` with `-DARDUINO_VERIANT=xiao`.
+If building for Seeeduino XIAO, you can replace `-DARDUINO_VARIANT=wio_terminal` with `-DARDUINO_VARIANT=xiao`.
 
 !!!Note
         `-DARDUINO_CORE_PATH` is the Arduino Core path and `-DTOOLCHAIN` is the GCC path.
@@ -85,7 +85,7 @@ If building for Seeeduino XIAO, you can replace `-DARDUINO_VERIANT=wio_terminal`
 Replace `{user-name}` with your user name for MacOS.
 
 ```sh
-cmake ../ -DARDUINO_CORE_PATH=/Users/{user-name}/Library/Arduino15/packages/Seeeduino/hardware/samd/1.7.6 -DTOOLCHAIN=/Users/{user-name}/Library/Arduino15/packages/Seeeduino/tools/arm-none-eabi-gcc/7-2017q4/bin -DBOARD=wio_terminal -DARDUINO_VERIANT=wio_terminal
+cmake ../ -DARDUINO_CORE_PATH=/Users/{user-name}/Library/Arduino15/packages/Seeeduino/hardware/samd/1.7.6 -DTOOLCHAIN=/Users/{user-name}/Library/Arduino15/packages/Seeeduino/tools/arm-none-eabi-gcc/7-2017q4/bin -DBOARD=wio_terminal -DARDUINO_VARIANT=wio_terminal
 ```
 And you should see something like this:
 
