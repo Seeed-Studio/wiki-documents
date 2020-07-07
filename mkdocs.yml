@@ -216,6 +216,7 @@ nav:
           - ArduPy Get Started with Wio Terminal: Wio-Terminal-ArduPy.md
           - Wio Terminal Battery Chassis: Wio-Terminal-Battery-Chassis.md
           - How to Use Wio Terminal as RTL8720DN Dev Board: Wio-Terminal-8720-dev.md
+          - CircuitPython with Wio Terminal: Wio-Terminal-CircuitPython.md
           - LCD:
             - Overview: Wio-Terminal-LCD-Overview.md
             - Basic of LCD: Wio-Terminal-LCD-Basic.md
