@@ -8,23 +8,23 @@ CircuitPython is a programming language designed to simplify experimenting and l
 
 ## Installing CircuitPython
 
-1. Download the official [**CircuitPython Bootloader for Seeeduino Wio Terminal**](https://circuitpython.org/board/seeeduino_wio_terminal/). A `.uf2` should be downloaded.
+- Download the official [**CircuitPython Bootloader for Seeeduino Wio Terminal**](https://circuitpython.org/board/seeeduino_wio_terminal/). A `.uf2` should be downloaded.
 
-2. Plug-in the Seeeduino Wio Terminal to your PC via USB Type-C.
+- Plug-in the Seeeduino Wio Terminal to your PC via USB Type-C.
 
-3. Entering the bootloader mode by sliding the power switch twice quickly. For more reference, please also see [here](https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/#faq).
+- Entering the bootloader mode by sliding the power switch twice quickly. For more reference, please also see [here](https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/#faq).
 
 <div align=center><img width=500 src="https://files.seeedstudio.com/wiki/Wio-Terminal-CircuitPython/dfu.gif"/></div>
 
-1. An external drive named `Arduino` should appear in your PC. Drag the the downloaded CircuitPython uf2 files to the `Arduino` drive.
+- An external drive named `Arduino` should appear in your PC. Drag the the downloaded CircuitPython uf2 files to the `Arduino` drive.
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/Circuitpython-XIAO/df2.png"/></div>
 
-5. Once loaded the CircuitPython bootloader, unplug the USB Type-C and re-connect. A new external drive called `CIRCUITPY` should appear.
+- Once loaded the CircuitPython bootloader, unplug the USB Type-C and re-connect. A new external drive called `CIRCUITPY` should appear.
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/Circuitpython-XIAO/df2-2.png"/></div>
 
-6. Now, CircuitPython is loaded on Seeeduino Wio Terminal! All you need to do it's to write you python program and name it `main.py` and drag it onto the `CIRCUITPY` drive.
+- Now, CircuitPython is loaded on Seeeduino Wio Terminal! All you need to do it's to write you python program and name it `main.py` and drag it onto the `CIRCUITPY` drive.
 
 You should also see the LCD on the Wio Terminal lights up, the CircuitPython also supports the native LCD display!
 
