@@ -1,6 +1,6 @@
 # Histogram
 
-This repo describes how to draw histogram on ReScreen. Similar to the Line Charts library, you can use this to display raw sensor values to visualize readings on screen. This library is very flexible and can modify to your own need.
+This repo describes how to draw histogram on Wio Terminal. Similar to the Line Charts library, you can use this to display raw sensor values to visualize readings on screen. This library is very flexible and can modify to your own need.
 
 <div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/20200114131505.png"/></div>
 
