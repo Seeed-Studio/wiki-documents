@@ -6,11 +6,11 @@ wikiurl: https://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-Android/
 sku: 102110399
 ---
 
-# Installing Android-x86 on ODYSSEY-X864105
+# Installing Android-x86 on ODYSSEY-X86J4105
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105-Installing-Android/BBC.png"/></div>
 
-This tutorial demonstrates how to install the Android-x86 on the ODYSSEY-X864105 and use it as a smart TV box to watch live stream TV or media from local storage(such as NAS) with the help of [Kodi](https://kodi.tv/).
+This tutorial demonstrates how to install the Android-x86 on the ODYSSEY-X86J4105 and use it as a smart TV box to watch live stream TV or media from local storage(such as NAS) with the help of [Kodi](https://kodi.tv/).
 
 The Android-x86 is a project to port Android open source project to x86 platform, formerly known as "patch hosting for android x86 support". For more reference, please visit the official [Android-x86](https://www.android-x86.org/).
 
@@ -108,7 +108,7 @@ This may look familiar with people who use Android phones!
 
 ## Setting up as Smart TV Box
 
-To get ODYSSEY-X864105 to work as a smart TV Box, we will need to install [Kodi](https://kodi.tv/).
+To get ODYSSEY-X86J4105 to work as a smart TV Box, we will need to install [Kodi](https://kodi.tv/).
 
 Kodi is a free, open source piece of media centre software that can run on anything from your Android phone to your home PC, and plenty of other devices in between. And of course it supports Android-x86!
 
