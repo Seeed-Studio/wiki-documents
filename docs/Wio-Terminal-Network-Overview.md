@@ -21,6 +21,9 @@ To be able to update the firmware on the RTL8720, we need to enable the Serial c
 - Download the [**`rtl8720_update.ino`**](https://files.seeedstudio.com/wiki/Wio-Terminal/res/rtl8720_update.zip) Arduino program, or Copy the following code to the Arduino IDE.
 
 ```cpp
+uint32_t baud;
+uint32_t old_baud;
+  
 void setup() {
   // initialize both serial ports:
   pinMode(PIN_SERIAL2_RX, OUTPUT);
@@ -32,22 +35,31 @@ void setup() {
   delay(500);
   pinMode(PIN_SERIAL2_RX, INPUT);
   Serial.beginWithoutDTR(115200);
-//  Serial.baud
-  RTL8720D.begin(115200);
-
+  //  Serial.baud
+  old_baud = Serial.baud();
+  RTL8720D.begin(old_baud);
+  
   delay(500);
 }
 
 void loop() {
 
+  baud = Serial.baud();
+  if(baud != old_baud)
+  {
+    RTL8720D.begin(baud);
+    old_baud = baud;
+  }
   // read from port 1, send to port 0:
-  if (Serial.available()) {
+  if (Serial.available())
+  {
     int inbyte = Serial.read();
     RTL8720D.write(inbyte);
     //Serial1.write(inbyte);
   }
-//   read from port 1, send to port 0:
-  if (RTL8720D.available()) {
+  //   read from port 1, send to port 0:
+  if (RTL8720D.available())
+  {
     int inbyte = RTL8720D.read();
     Serial.write(inbyte);
     //Serial1.write(inbyte);
@@ -57,13 +69,15 @@ void loop() {
 
 - **Upload** the Arduino Program to Wio Terminal.
 
-<div align=center><img width = 500 src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/rtl-ard.png"/></div>
+<div align=center><img width = 500 src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/rtl-new.png"/></div>
 
 ### Step 2 - Download the Image Tool
 
-Next up, download the [**Image Tool**](https://files.seeedstudio.com/wiki/Wio-Terminal/res/ameba-image-Tool-v2.4.1.zip) here. This is the tool for uploading the latest firmware to the RTL8720 on Wio Terminal.
+Next up, download the [**Image Tool**](https://files.seeedstudio.com/wiki/Wio-Terminal/res/ameba-image-Tool-v2.4.1.zip) here. This is the tool for uploading the latest firmware to the RTL8720 on Wio Terminal. This is based on **Windows**.
 
-**Note:** For now, the Image Tool is only available in **Windows**. Image Tool for Linux OS and Mac OS will be available very soon.
+- #### macOS and LinuxOS 
+
+For **macOS** and **Linux**, please check [CLI methods](http://wiki.seeedstudio.com/Wio-Terminal-Network-Overview/#cli-methods).
 
 ### Step 3 - Download the Latest Firmware
 
@@ -99,6 +113,63 @@ Download the latest [**RTL8720 Firmware**](https://files.seeedstudio.com/wiki/Wi
 <div align=center><img width = 450 src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/RTL-done.png"/></div>
 
 Now, the latest RTL8720 firmware is loaded onto the board.
+
+## CLI Methods
+
+Now, you can flash the RTL8720 firmware to Wio Terminal using the **CLI methods**.
+
+Download the **CLI firmware flash tools** for your OS:
+
+- [**Windows**](http://files.seeedstudio.com/arduino/tools/amebad_flash_tool/amebad_flash_tools_v0.1.0_windows.7z)
+
+- [**macOS**](http://files.seeedstudio.com/arduino/tools/amebad_flash_tool/amebad_flash_tool_v0.1.0_macos.zip)
+
+- [**Linux**](http://files.seeedstudio.com/arduino/tools/amebad_flash_tool/amebad_flash_tool_v0.1.0_linux.tar.bz2)
+
+### CLI Example Usage
+
+Let's take macOS as an example. Unzip the downloaded file into your drive.
+
+- Open terminal and navigate to the file location:
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/cli.png"/></div>
+
+- Run `./flash_tools` in the location you should see the help usage:
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/cli-2.png"/></div>
+
+- To erase the initial firmware inside the RTL8720, run:
+
+```sh
+./flash_tools erase --port /dev/cu.usbmodem*
+```
+
+Replace `/dev/cu.usbmodem*` with the port name in your PC.
+
+!!!Note
+        For **Linux**, the port name should be something like: `/dev/ttyACM*`.
+  
+  **NOTE:** The initial erase process may take a while. Please be patient and **do not** close windows.
+
+It should look something like this:
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/cli-erase.png"/></div>
+
+- To flash the new downloaded firmware into the RTL8720, run:
+
+```sh
+./flash_tools flash -d [RTL8720-firmware-path] --port /dev/cu.usbmodem*
+```
+
+Replace `[RTL8720-firmware-path]` with the path you downloaded the RTL8720 from above.
+
+This location should contain `km0_boot_all.bin`, `km0_km4_image2.bin` and `km4_boot_all.bin` these 3 files.
+
+Also replace `/dev/cu.usbmodem*` with the port name in your PC.
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/cli-upload.png"/></div>
+
+If everything goes well, you should see all a successful message. Now you have flashed the new RTL8720 firmware into the RTL8720 core!
 
 ## Libraries Installation
 
