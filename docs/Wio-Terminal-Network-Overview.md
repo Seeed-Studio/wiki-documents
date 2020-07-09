@@ -120,11 +120,11 @@ Now, you can flash the RTL8720 firmware to Wio Terminal using the **CLI methods*
 
 Download the **CLI firmware flash tools** for your OS:
 
-- [**Windows**](http://files.seeedstudio.com/arduino/tools/amebad_flash_tool/amebad_flash_tools_v0.1.0_windows.7z)
+- [**Windows**](http://files.seeedstudio.com/arduino/tools/amebad_flash_tool/amebad_flash_tool_v0.1.0_windows.7z)
 
 - [**macOS**](http://files.seeedstudio.com/arduino/tools/amebad_flash_tool/amebad_flash_tool_v0.1.0_macos.zip)
 
-- [**Linux**](http://files.seeedstudio.com/arduino/tools/amebad_flash_tool/amebad_flash_tool_v0.1.0_linux.tar.bz2)
+- [**Linux**](http://files.seeedstudio.com/arduino/tools/amebad_flash_tool/amebad_flash_tool_v0.1.0_linux.tar.gz)
 
 ### CLI Example Usage
 
