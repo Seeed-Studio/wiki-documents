@@ -188,6 +188,7 @@ nav:
             - Adding Accessories: ODYSSEY-X86J4105-Accessories.md
             - Installing OpenWrt: ODYSSEY-X86J4105-Installing-openwrt.md
             - Installing pfSense: ODYSSEY-X86J4105-pfSense.md
+            - Installing Android-x86: ODYSSEY-X86J4105-Installing-Android.md
             - Azure IoT: ODYSSEY-X86J4105-AzureIOT.md
             - Installing FreeNAS: ODYSSEY-X86J4105-Installing-FreeNAS.md
             - Intel OpenVINO Toolkit: ODYSSEY-X86J4105-Intel-OpenVINO.md
@@ -200,6 +201,7 @@ nav:
       - ArduPy:
           - ArduPy Wiki: ArduPy.md
           - ArduPy LCD API Reference: ArduPy-LCD.md
+          - How to Build ArduPy Firmware From Source Code: Building-Ardupy.md
 
       - Seeeduino XIAO:
           - Grove Shield for Seeeduino XIAO with embedded battery management chip: Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip.md
@@ -214,6 +216,8 @@ nav:
           - Get Started with Wio Terminal: Wio-Terminal-Getting-Started.md
           - ArduPy Get Started with Wio Terminal: Wio-Terminal-ArduPy.md
           - Wio Terminal Battery Chassis: Wio-Terminal-Battery-Chassis.md
+          - How to Use Wio Terminal as RTL8720DN Dev Board: Wio-Terminal-8720-dev.md
+          - CircuitPython with Wio Terminal: Wio-Terminal-CircuitPython.md
           - LCD:
             - Overview: Wio-Terminal-LCD-Overview.md
             - Basic of LCD: Wio-Terminal-LCD-Basic.md

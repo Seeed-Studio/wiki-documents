@@ -22,7 +22,7 @@ Click on the button to start downloading. Seconds you will get a package.
 
 ### 2.Download from github
 
-If you need to download from a Github page, then you can click on the **Clond or download >Download ZIP** button to get the library package.
+If you need to download from a Github page, then you can click on the **Clone or download >Download ZIP** button to get the library package.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Tutorial_Add_Arduino_Library/images/github_download.png)
 
