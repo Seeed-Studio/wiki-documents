@@ -132,16 +132,16 @@ Let's take macOS as an example. Unzip the downloaded file into your drive.
 
 - Open terminal and navigate to the file location:
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/cli.png"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/CLI-methods.png"/></div>
 
-- Run `./flash_tools` in the location you should see the help usage:
+- Run `./amebad_flash_tools` in the location you should see the help usage:
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/cli-2.png"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/CLI-HELP.png"/></div>
 
 - To erase the initial firmware inside the RTL8720, run:
 
 ```sh
-./flash_tools erase --port /dev/cu.usbmodem*
+./amebad_flash_tools erase --port /dev/cu.usbmodem*
 ```
 
 Replace `/dev/cu.usbmodem*` with the port name in your PC.
@@ -153,12 +153,12 @@ Replace `/dev/cu.usbmodem*` with the port name in your PC.
 
 It should look something like this:
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/cli-erase.png"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/CLI-ERASE-1.png"/></div>
 
 - To flash the new downloaded firmware into the RTL8720, run:
 
 ```sh
-./flash_tools flash -d [RTL8720-firmware-path] --port /dev/cu.usbmodem*
+./amebad_flash_tools flash -d [RTL8720-firmware-path] --port /dev/cu.usbmodem*
 ```
 
 Replace `[RTL8720-firmware-path]` with the path you downloaded the RTL8720 from above.
@@ -167,7 +167,7 @@ This location should contain `km0_boot_all.bin`, `km0_km4_image2.bin` and `km4_b
 
 Also replace `/dev/cu.usbmodem*` with the port name in your PC.
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/cli-upload.png"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/CLI-UPLOAD-1.png"/></div>
 
 If everything goes well, you should see all a successful message. Now you have flashed the new RTL8720 firmware into the RTL8720 core!
 
