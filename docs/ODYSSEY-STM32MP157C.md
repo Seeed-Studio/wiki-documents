@@ -57,7 +57,7 @@ Carrier board hardware details follow:
 
 - **1.Carrier board :** Install the Seeed SoM-STM32MP157C area, if the user wants to remove the core board, slowly tilt the core board up and then remove, never remove by hand.
 
-- **2.DC Power Input Port :** 12V~24V/2A (12V/2A power input is recommended).
+- **2.DC Power Input Port :** 12V~24V/2A (12V/2A power input is recommended)(5.5x2.1mm center-positive barrel).
 
 - **3.ETH Interface :** Network cable interface can be connected to gigabit level network.
 
@@ -674,45 +674,6 @@ git clone https://github.com/Seeed-Studio/grove.py
 cd grove.py/grove
 sudo python3 grove_gpio.py 5
 ```
-
-<!-- ###  IIC on Basehat by using Grove.py
-
-#### Hardware
-
-- **Step 1**. Things used in this project:
-
-| ODYSSEY – STM32MP157C |  Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121) | Grove Base Hat for Raspberry Pi |
-|--------------|-------------|----------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/perspective-19-210X157.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/thumbnail.jpg)|![image](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|
-|[Get ONE Now](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V2-MPR121.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|
-
-- **Step 2**. Plug the Grove Base Hat into ODYSSEY - STM32MP157C.
-
-- **Step 3**. Connect the Grove - 12 Key Capacitive I2C Touch Sensor V2 (MPR121) to I2C port of the Base Hat.
-
-- **Step 4**. Connect the ODYSSEY - STM32MP157C to PC through USB cable.
-
-#### Software
-
-- **Step 1**. Install the Grove.py
-
-```bash
-sudo pip3 install Seeed-grove.py
-```
-
-- **Step 2**. Download the source file by cloning the grove.py library.
-
-```bash
-cd ~
-git clone https://github.com/Seeed-Studio/grove.py
-```
-
-- **Step 3**. Excute below command to run the code.
-
-```bash
-cd grove.py/grove
-sudo python3 grove_12_key_cap_i2c_touch_mpr121.py
-``` -->
 
 ###  ADC on Basehat by using Grove.py
 

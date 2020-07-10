@@ -4,7 +4,7 @@
 
 This repo describes how to Read/Write from or to the SD Card. With this, you are able to load data from the SD Card, a simple demonstration will be storing sensor reading to the SD Card.
 
-## Initializing the SD Card on ResScreen
+## Initializing the SD Card on Wio Terminal
 
 Include the`Seeed_FS` libraries as follow. And initializing the SD Card using: `SD.begin(SDCARD_SS_PIN, SDCARD_SPI)`, where SPI is used to communicate in Wio Terminal for SD Card.
 

@@ -29,7 +29,6 @@ Boot Linux in less 10 seconds and get started on development in less than 5 minu
     * 4GB 8-bit eMMC on-board flash storage
     * 3D graphics accelerator
     * NEON floating-point accelerator
-    * 2x PRU 32-bit microcontrollers
 
 * **Connectivity**
     * Ethernet 10/100M bit
