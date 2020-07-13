@@ -241,7 +241,7 @@ This is the [video](http://ohpam657y.bkt.clouddn.com/IMG_1346%202.MOV) of this s
 
 ###Coding
 
-- Download the Arduino Library of [Motor Shield V2](https://github.com/Seeed-Studio/SeeedMotorShieldV2), [Grove - Ultrasonic Ranger](https://github.com/Seeed-Studio/Grove_Ultrasonic_Ranger) and [LED Strip](https://github.com/adafruit/Adafruit_NeoPixel).
+- Download the Arduino Library of [Motor Shield V2](https://github.com/Seeed-Studio/SeeedMotorShieldV2), [Grove - Ultrasonic Ranger](https://github.com/Seeed-Studio/Seeed_Arduino_UltrasonicRanger) and [LED Strip](https://github.com/adafruit/Adafruit_NeoPixel).
 
 
 ```
