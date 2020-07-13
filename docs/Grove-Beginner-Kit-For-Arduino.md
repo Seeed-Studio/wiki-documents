@@ -1893,6 +1893,8 @@ Seeed Studio has its very own [Open Parts Library (OPL)](https://www.seeedstudio
 
 6. [**Grove Beginner Kit For Arduino Resources in one(20200401)[7z]**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/Grove-Beginner-Kit-For-Arduino-Resources-in-one(20200401).7z)
 
+7. [**Grove Beginner Kit For Arduino FCC + SDOC Certificates**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/FCC-SDOC-Certificates.zip)
+
 ## More Learning
 
 - [LSTM for live IoT data prediction](https://github.com/256ericpan/LSTM_IoT)
