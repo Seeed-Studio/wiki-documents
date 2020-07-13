@@ -122,7 +122,7 @@ The Grove - Infrared Emitter can send data while Grove - Infrared Receiver will 
 
 #### Software
 
-- **Step 1.** Download the  [IRSendRev-master library](https://github.com/Seeed-Studio/IRSendRev)  from Github.
+- **Step 1.** Download the  [IRSendRev-master library](https://github.com/Seeed-Studio/Seeed_Arduino_IRSendRev)  from Github.
 
 - **Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
@@ -275,7 +275,7 @@ If every thing goes well, The result should be like:
 ## Resources
 
 - **[Zip]**  [Grove-Infrared Emitter eagle files](https://files.seeedstudio.com/wiki/Grove-Infrared_Emitter/res/Grove-Infrared_Emitter_eagle_files.zip)
-- **[Lib]**  [IR Send and Receiver Library](https://github.com/Seeed-Studio/IRSendRev)
+- **[Lib]**  [IR Send and Receiver Library](https://github.com/Seeed-Studio/Seeed_Arduino_IRSendRev)
 - **[Pdf]**  [TSAL6200 Datasheet](http://www.vishay.com/docs/81010/tsal6200.pdf)
 
 ## Projects
