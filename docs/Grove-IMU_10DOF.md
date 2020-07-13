@@ -95,7 +95,7 @@ We will provide an example here to show you how to use this sensor.
 
 #### Software
 
-**Step 1.** Download the [library](https://github.com/Seeed-Studio/IMU_10DOF) from Github.
+**Step 1.** Download the [library](https://github.com/Seeed-Studio/Seeed_Arduino_IMU10DOF) from Github.
 
 **Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
@@ -228,7 +228,7 @@ The diagram below shows the orientation of the axes of sensitivity and the polar
 -  **[Eagle]** [Grove - IMU 10DOF v1.1 eagle file](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF/res/Grove-IMU_10DOF_V1.1_Eagle_file.zip)
 -  **[PDF]** [Grove - IMU 10DOF v1.0 schematics pdf file](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF/res/Grove-IMU_10DOF_v1.0.pdf)
 -  **[PDF]** [Grove - IMU 10DOF v1.1 schematics pdf file](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF/res/Grove%20-%20IMU%2010DOF%20v1.1.pdf)
--  **[Library]** [Grove-IMU_10DOF Library](https://github.com/Seeed-Studio/IMU_10DOF)
+-  **[Library]** [Grove-IMU_10DOF Library](https://github.com/Seeed-Studio/Seeed_Arduino_IMU10DOF)
 -  **[PDF]** [BMP180 datasheet](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF/res/BMP180.pdf)
 -  **[PDF]** [MPU-9250 datasheet](https://files.seeedstudio.com/wiki/Grove-IMU_10DOF/res/MPU-9250A_Product_Specification.pdf)
 
