@@ -45,7 +45,7 @@ We will provide an example here to show you how to use this sensor.
     When connecting Xadow - IMU 10DOF to Xadow - Main Board, you should concern about the connection direction. The connection method is that the unfilled corner of one Xadow module need to connect to the right angle of another module(see four corners of each Xadow module).
 
 **Software Part**
-1. Download the library from [https://github.com/Seeed-Studio/IMU_10DOF](https://github.com/Seeed-Studio/IMU_10DOF)
+1. Download the library from [https://github.com/Seeed-Studio/Seeed_Arduino_IMU10DOF](https://github.com/Seeed-Studio/IMU_10DOF)
 2. Unzip it into the libraries file of Arduino IDE by the path
 2. Open the code directly by the path: **File -> Example -> IMU_10DOF_Test**
 2. Upload the code. Note that you should select the correct board type and COM port.

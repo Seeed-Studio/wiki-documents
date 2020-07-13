@@ -151,6 +151,9 @@ Success！
 
 ![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss11.PNG)
 
+## UART enable
+- enable miniuart-bt
+```
 
 
 ## Use with GrovePi
