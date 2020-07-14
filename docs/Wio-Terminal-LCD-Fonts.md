@@ -14,23 +14,23 @@ To use these fonts easily, it is strongly recommended to copy this `Free_Fonts.h
 
 To save a lot of typing, each font can  be referenced in the sketch in three ways, either with:
 
-1. Font file name with the & in front, such as: &FreeSansBoldOblique24pt7b.
+1.Font file name with the `&` in front, such as: `&FreeSansBoldOblique24pt7b`.
 
 #### Method 1 Example
 
- ```cpp
- tft.setFreeFont(&FreeSansBoldOblique24pt7b);
+```cpp
+tft.setFreeFont(&FreeSansBoldOblique24pt7b);
 ```
 
-2. FF# where # is a number determined by looking at the list in the `Free_Fonts.h` 
+2.FF# where # is a number determined by looking at the list in the `Free_Fonts.h` 
 
 #### Method 2 Example
 
- ```cpp
- tft.setFreeFont(FF32);
+```cpp
+tft.setFreeFont(FF32);
 ```
 
-3. An abbreviation of the file name. Look at the list below to see the abbreviations used.
+3.An abbreviation of the file name. Look at the list below to see the abbreviations used.
 
 #### Method 3 Example
 
@@ -61,10 +61,10 @@ void setup() {
   tft.setRotation(3);
   tft.fillScreen(TFT_BLACK); //Black background
   
-  tft.setFreeFont(FSSBO12); //select Free, Sans, Bold, Oblique, 12pt.
+  tft.setFreeFont(&FreeSansBoldOblique12pt7b); //select Free, Sans, Bold, Oblique, 12pt.
   tft.drawString("Sans Serif 12pt",70,80);//prints string at (70,80)
 
-  tft.setFreeFont(FMO12); //select Free, Mono, Oblique, 12pt.
+  tft.setFreeFont(FF10); //select Free, Mono, Oblique, 12pt.
   tft.drawString("Mono 12pt",70,110);//prints string at (70,110)
 
   tft.setFreeFont(FS12); //select Free, Serif, 12pt.
