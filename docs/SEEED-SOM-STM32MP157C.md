@@ -276,6 +276,7 @@ WKUP2|
 -----
 - **[PDF]** [STM32MP157C Datasheet](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/Hardware/stm32mp157c.pdf)
 - **[PDF]** [Seeed STM32MP157C SOM Connecter Datasheet](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/Hardware/SMD+BTB+CONN%3B70P-0.4-L15.52%C3%97W2.97%C3%97H1.14mm_Specification.pdf)
+- **[PDF]** [Seeed STM32MP157C SOM v1.0 bottom.pdf](https://files.seeedstudio.com/wiki/SEEED-SOM-STM32MP157C/res/Seeed_SoM-STM32MP157C_v1.0_bottom.pdf)
 - **[SCH]** [Seeed STM32MP157C SOM](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/Hardware/Seeed%20SoM%20-%20STM32MP157C%20v1.0_191212.pdf)
 
 ## Tech Support
