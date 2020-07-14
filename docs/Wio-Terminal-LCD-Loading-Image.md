@@ -8,11 +8,7 @@ This repo describes how to load and display images from the SD card to the TFT L
 
 ### Installing the SD Card library for Wio Terminal
 
-1. Visit the [Seeed-Arduino-FS](https://github.com/Seeed-Studio/Seeed_Arduino_FS) repositories and download the entire repo to your local drive.
-
-2. Now, the SD card library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_FS` file that you've have just downloaded.
-
-![InstallLibrary](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Xnip2019-11-21_15-50-13.jpg)
+- visit [File System Overview](https://wiki.seeedstudio.com/Wio-Terminal-FS-Overview/)
 
 ### Installing the TFT LCD Library For Wio Terminal
 
