@@ -205,6 +205,16 @@ After our test, the SWD interface is connected in parallel in this way. When pow
 
 In addition to power-on and reset, when using SWD, Digital, Analog, Serial, I2C, there will be no interference, you can switch at any time, but in order to avoid possible problems, we still recommend removing this after completing the program debugging Connection of two pads.
 
+## Wio Terminal Classroom
+
+### Lesson 1 - Hello World
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/af_I0n5iyzk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Lesson 2 - Drawing Shapes
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IFRiGpK4HK8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Resources
 
 - **[PDF]** [ATSAMD51N19A Datasheet](https://files.seeedstudio.com/wiki/Wio-Terminal/res/ATSAMD51.pdf)
