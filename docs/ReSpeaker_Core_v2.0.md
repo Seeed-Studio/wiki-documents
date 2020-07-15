@@ -1426,7 +1426,7 @@ Light value is 31
 
 Librespeaker is an audio processing library which can perform noise suppression, direction of arrival calculation, beamforming, hotword searching. It reads the microphoone stream from linux sound server, e.g. PulseAudio.
 
-Here is the list of examples in [Librespeaker Documentation](https://wiki.seeedstudio.com/librespeaker_doc/examples.html). These examples will help you understand how to make different applications with librespeaker. 
+Here is the list of examples in [Librespeaker Documentation](http://respeaker.io/librespeaker_doc/examples.html). These examples will help you understand how to make different applications with librespeaker. 
 
 ### Install librespeaker
  
