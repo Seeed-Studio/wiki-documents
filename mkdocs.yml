@@ -215,10 +215,6 @@ nav:
       - Wio Terminal:
           - Get Started with Wio Terminal: Wio-Terminal-Getting-Started.md
           - ArduPy Get Started with Wio Terminal: Wio-Terminal-ArduPy.md
-          - Wio Terminal Battery Chassis: Wio-Terminal-Battery-Chassis.md
-          - How to Use Wio Terminal as RTL8720DN Dev Board: Wio-Terminal-8720-dev.md
-          - CircuitPython with Wio Terminal: Wio-Terminal-CircuitPython.md
-          - Build a HMI Display for Raspberry Pi using Wio Terminal: Wio-Terminal-HMI.md
           - LCD:
             - Overview: Wio-Terminal-LCD-Overview.md
             - Basic of LCD: Wio-Terminal-LCD-Basic.md
@@ -271,6 +267,7 @@ nav:
             - Overview: Wio-Terminal-TensorFlow.md
           - Grove:
             - Overview: Wio-Terminal-Grove.md
+          - Wio Terminal Battery Chassis: Wio-Terminal-Battery-Chassis.md
           - Demo:
             - Wio Terminal Displaying Gyro: Wio-Terminal-Displaying-Gyro.md
             - Wio Terminal Storing Data: Wio-Terminal-Storting-Analog-Data.md
@@ -282,6 +279,9 @@ nav:
             - Gesture Recognition with Wio Terminal: Wio-Terminal-Gesture-Recognition.md
             - Reading Coronavirus Live Data using Wio Terminal: Wio-Terminal-Reading-COVID19.md
             - Wio Terminal Initial Firmware (Retro Gaming): Wio-Terminal-Firmware.md
+            - CircuitPython with Wio Terminal: Wio-Terminal-CircuitPython.md
+            - How to Use Wio Terminal as RTL8720DN Dev Board: Wio-Terminal-8720-dev.md
+            - Build a HMI Display for Raspberry Pi using Wio Terminal: Wio-Terminal-HMI.md
 
       - ReSpeaker:
           - ReSpeaker Introduction: ReSpeaker.md
