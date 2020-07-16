@@ -2,7 +2,7 @@
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminanl-HMI/Wio-Terminal-HMI.gif"/></div>
 
-In this wiki, we will introduce how to use [**Wio Terminal**](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) as a **HMI (Human Machine Interface) USB display** for [**Raspberry Pi**](https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-2GB-V1-2-p-4299.html), [**Nvidia Jetson Nano**](https://www.seeedstudio.com/NVIDIA-Jetson-Nano-Development-Kit-B01-p-4437.html) and even [**Odyssey X86J4105**](https://www.seeedstudio.com/ODYSSEY-X86J4105864-p-4447.html)! This turns Wio Terminal into a HMI USB display which makes it much more powerful and can be used in more industrial scenarios!
+In this wiki, we will introduce how to use [**Wio Terminal**](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) as a **HMI (Human Machine Interface) USB display** for [**Raspberry Pi**](https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-2GB-V1-2-p-4299.html), [**Nvidia Jetson Nano**](https://www.seeedstudio.com/NVIDIA-Jetson-Nano-Development-Kit-B01-p-4437.html), [**BeagleBone**](https://www.seeedstudio.com/beaglebone-c-954.html) and even [**Odyssey X86J4105**](https://www.seeedstudio.com/ODYSSEY-X86J4105864-p-4447.html)! This turns Wio Terminal into a HMI USB display which makes it much more powerful and can be used in more industrial scenarios!
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminanl-HMI/pyqt-new.gif"/></div>
 
@@ -12,7 +12,7 @@ It can support **multiple Wio Terminals connected onto the host device**. By the
 
 - [**Wio Terminal**](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)
 
-- [**Raspberry Pi**](https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-2GB-V1-2-p-4299.html) / [**Nvidia Jetson Nano**](https://www.seeedstudio.com/NVIDIA-Jetson-Nano-Development-Kit-B01-p-4437.html) / [**Odyssey X86J4105**](https://www.seeedstudio.com/ODYSSEY-X86J4105864-p-4447.html)
+- [**Raspberry Pi**](https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-2GB-V1-2-p-4299.html) / [**Nvidia Jetson Nano**](https://www.seeedstudio.com/NVIDIA-Jetson-Nano-Development-Kit-B01-p-4437.html) / [**BeagleBone**](https://www.seeedstudio.com/beaglebone-c-954.html) / [**Odyssey X86J4105**](https://www.seeedstudio.com/ODYSSEY-X86J4105864-p-4447.html)
 
 ## Wio Terminal Firmware
 
@@ -88,7 +88,7 @@ Now you should see you Wio Terminal display the Raspberry Pi's desktop! If you l
 !!!Note
     This version of the USB display driver do not support hot swapping.
 
-### Jetson Nano and Odyssey X86
+### Jetson Nano, Beaglebone and Odyssey X86
 
 For Nvidia Jetson Nano and Odyssey X86J4105 (Ubuntu), install the **linux driver** as followed, run the following in the terminal:
 
