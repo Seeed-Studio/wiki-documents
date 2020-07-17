@@ -11,7 +11,7 @@ tags: io_3v3, io_5v, plat_duino, plat_linkit, plat_bbg, plat_wio, plat_pi, plat_
 
 ![](https://files.seeedstudio.com/wiki/Grove_Sound_Sensor/img/page_small_1.jpg)
 
-Grove - Sound Sensor can detect the sound intensity of the environment. The main component of the module is a simple microphone, which is based on the LM386 amplifier and an electret microphone. This module's output is analog and can be easily sampled and tested by a Seeeduino.
+Grove - Sound Sensor can detect the sound intensity of the environment. The main component of the module is a simple microphone, which is based on the L358 amplifier and an electret microphone. This module's output is analog and can be easily sampled and tested by a Seeeduino.
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/EhZ7uDvoALE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -408,7 +408,7 @@ sudo python grove_sound_sensor.py
 - [**Eagle**][Schematic and PCB in Eagle format](https://files.seeedstudio.com/wiki/Grove_Sound_Sensor/resources/Grove%20-%20Sound%20Sensor.zip)
 - [**PDF**][Schematic in PDF format](https://files.seeedstudio.com/wiki/Grove_Sound_Sensor/res/Grove%20-%20Sound%20Sensor%20v1.6%20Schematic.pdf)
 - [**PDF**][PCB in PDF format](https://files.seeedstudio.com/wiki/Grove_Sound_Sensor/res/Grove%20-%20Sound%20Sensor%20v1.6%20PCB.pdf)
-- [**Datasheet**][LM386.PDF](https://files.seeedstudio.com/wiki/Grove_Sound_Sensor/res/LM386.pdf)
+- [**Datasheet**][LM358.PDF](https://files.seeedstudio.com/wiki/Grove_Sound_Sensor/res/LM358.pdf)
 - [**Codecraft**][CDC File](https://files.seeedstudio.com/wiki/Grove_Sound_Sensor/res/Grove_Sound_Sensor_CDC_File.zip)
 
 ## Projects
