@@ -236,7 +236,7 @@ And you can find the demo in the wiki of those hats.
 
 - **[PDF]** [NE555DR Datasheet](https://files.seeedstudio.com/wiki/Grove-Capacitive_Moisture_Sensor_Corrosion_Resistant/res/NE555DR.pdf)
 
-- **[PDF]** [PDF Format Wiki](https://files.seeedstudio.com/wiki/Grove-Capacitive_Moisture_Sensor_Corrosion_Resistant/res/Grove-Capacitive_Moisture_Sensor-Corrosion-Resistant.pdf)
+- **[PDF]** [PDF Format Wiki](https://files.seeedstudio.com/wiki/Grove-Capacitive_Moisture_Sensor_Corrosion_Resistant/res/soil_sensor.pdf)
 
 
 
