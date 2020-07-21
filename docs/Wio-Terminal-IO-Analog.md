@@ -32,7 +32,7 @@ void setup() {
     pinMode(A0, INPUT);
 }
 void loop() {
-    int loudness = analogRead(RPI_A0);
+    int loudness = analogRead(A0);
     Serial.print("Loudness: ");
     Serial.println(loudness);
     delay(50);
