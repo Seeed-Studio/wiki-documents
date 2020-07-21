@@ -253,8 +253,7 @@ sudo apt install linux-headers-$(uname -r) -y
 ```bash
 git clone https://github.com/Seeed-Studio/seeed-linux-dtverlays
 cd seeed-linux-dtverlays
-export CUSTOM_MOD_FILTER_OUT="jtsn-wm8960"
-make all_stm32mp1 && sudo make install_stm32mp1
+make all_stm32mp1 CUSTOM_MOD_FILTER_OUT="jtsn-wm8960" && sudo make install_stm32mp1 CUSTOM_MOD_FILTER_OUT="jtsn-wm8960"
 ```
 
 - **Step 3.** add dtbo package in `/boot/uEnv.txt` to make it become effective after reboot.
@@ -337,8 +336,7 @@ sudo apt install linux-headers-$(uname -r) -y
 ```bash
 git clone https://github.com/Seeed-Studio/seeed-linux-dtverlays
 cd seeed-linux-dtverlays
-export CUSTOM_MOD_FILTER_OUT="jtsn-wm8960"
-make all_stm32mp1 && sudo make install_stm32mp1
+make all_stm32mp1 CUSTOM_MOD_FILTER_OUT="jtsn-wm8960" && sudo make install_stm32mp1 CUSTOM_MOD_FILTER_OUT="jtsn-wm8960"
 ```
 
 - **Step 3.** add dtbo package in `/boot/uEnv.txt` to make it become effective after reboot.
@@ -495,8 +493,7 @@ sudo apt install linux-headers-$(uname -r) -y
 ```bash
 git clone https://github.com/Seeed-Studio/seeed-linux-dtverlays
 cd seeed-linux-dtverlays
-export CUSTOM_MOD_FILTER_OUT="jtsn-wm8960"
-make all_stm32mp1 && sudo make install_stm32mp1
+make all_stm32mp1 CUSTOM_MOD_FILTER_OUT="jtsn-wm8960" && sudo make install_stm32mp1 CUSTOM_MOD_FILTER_OUT="jtsn-wm8960"
 ```
 
 - **Step 3.** add dtbo package in `/boot/uEnv.txt` to make it become effective after reboot.
@@ -582,8 +579,7 @@ sudo apt install linux-headers-$(uname -r) -y
 ```bash
 git clone https://github.com/Seeed-Studio/seeed-linux-dtverlays
 cd seeed-linux-dtverlays
-export CUSTOM_MOD_FILTER_OUT="jtsn-wm8960"
-make all_stm32mp1 && sudo make install_stm32mp1
+make all_stm32mp1 CUSTOM_MOD_FILTER_OUT="jtsn-wm8960" && sudo make install_stm32mp1 CUSTOM_MOD_FILTER_OUT="jtsn-wm8960"
 ```
 
 - **Step 3.** add dtbo package in `/boot/uEnv.txt` to make it become effective after reboot.
