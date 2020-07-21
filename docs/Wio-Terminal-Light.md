@@ -4,7 +4,7 @@ This repo demonstrates how to use the built-in light sensor as a component in Wi
 
 ## Example Code
 
-**Note:** **`WIO_LIGHT`** is the pin for builtin Light Sensor. The Light sensor is connected to **A13**, so please be aware while using built-in Light sensor and A13 pin at the same time.
+**Note:** **`WIO_LIGHT`** is the pin for builtin Light Sensor. The Light sensor is connected to **A13**.
 
 ```cpp
 void setup() {

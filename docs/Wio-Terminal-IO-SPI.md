@@ -27,5 +27,3 @@ In Arduino, all SPI pins are pre-defined and you can access the pins as follow:
 - **SCK** -> `PIN_SPI_SCK`
 
 - **SS** -> `PIN_SPI_SS`
-
-**Note:** The break out SPI ports is `SPI`, where the ESP32 uses `SPI1`, built-in SD card uses `SPI2` and the TFT LCD uses `SPI3`
