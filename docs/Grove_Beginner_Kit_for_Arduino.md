@@ -1626,7 +1626,7 @@ Step 2:  Link Seeeduino Lotus with computer by a micro USB cable.
 
 **Add Library**
 
-Add [Library](https://github.com/Seeed- Studio/Grove_LCD_RGB_Backlight/archive/master.zip) for Grove - LCD RGB Backlight Screen 
+Add [Library](https://github.com/Seeed-Studio/Grove_LCD_RGB_Backlight/archive/master.zip) for Grove - LCD RGB Backlight Screen 
 
 Please follow the instructions in tutorial 3 on how to <a href="#step3">add library</a>.
 
@@ -2104,7 +2104,7 @@ Step 2: Link Seeeduino Lotus with computer by a micro USB cable
 
 **Software programming**
 
-**Add** [Library](https://github.com/Seeed- Studio/Grove_Temperature_And_Humidity_Sensor/archive/master.zip)
+**Add** [Library](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor/archive/master.zip)
 
 **Example 1**: Uses Serial Monitor to monitor the surrounding temperature and humidity
 
