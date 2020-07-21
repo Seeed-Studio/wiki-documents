@@ -253,6 +253,7 @@ sudo apt install linux-headers-$(uname -r) -y
 ```bash
 git clone https://github.com/Seeed-Studio/seeed-linux-dtverlays
 cd seeed-linux-dtverlays
+export CUSTOM_MOD_FILTER_OUT="jtsn-wm8960"
 make all_stm32mp1 && sudo make install_stm32mp1
 ```
 
@@ -336,6 +337,7 @@ sudo apt install linux-headers-$(uname -r) -y
 ```bash
 git clone https://github.com/Seeed-Studio/seeed-linux-dtverlays
 cd seeed-linux-dtverlays
+export CUSTOM_MOD_FILTER_OUT="jtsn-wm8960"
 make all_stm32mp1 && sudo make install_stm32mp1
 ```
 
@@ -493,6 +495,7 @@ sudo apt install linux-headers-$(uname -r) -y
 ```bash
 git clone https://github.com/Seeed-Studio/seeed-linux-dtverlays
 cd seeed-linux-dtverlays
+export CUSTOM_MOD_FILTER_OUT="jtsn-wm8960"
 make all_stm32mp1 && sudo make install_stm32mp1
 ```
 
@@ -579,6 +582,7 @@ sudo apt install linux-headers-$(uname -r) -y
 ```bash
 git clone https://github.com/Seeed-Studio/seeed-linux-dtverlays
 cd seeed-linux-dtverlays
+export CUSTOM_MOD_FILTER_OUT="jtsn-wm8960"
 make all_stm32mp1 && sudo make install_stm32mp1
 ```
 
