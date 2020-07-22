@@ -221,6 +221,104 @@ void loop()
 
 **Step 5.** Open the serial monitor to receive the sensor's data including temperature, barometric pressure value, altitude and humidity.
 
+### Play With Wio Terminal (ArduPy)
+
+#### Hardware
+
+- **Step 1.** Prepare the below stuffs:
+
+| Wio Terminal | Grove-Barometer Sensor-BME280 |
+|--------------|-----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-thumbnail.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BME280/img/45d_small.jpg)|
+|[Get One Now](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Get One Now](https://www.seeedstudio.com/depot/Grove-TempHumiBarometer-Sensor-BME280-p-2653.html)|
+
+- **Step 2.** Connect Grove-Barometer Sensor-BME280 to the **I2C** Grove port of Wio Terminal.
+
+- **Step 3.** Connect the Wio Terminal to PC through USB Type-C cable.
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BME280/img/WT-BME280.png"/></div>
+
+#### Software
+
+- **Step 1.** Follow [**ArduPy Getting Started**](https://wiki.seeedstudio.com/ArduPy/) to configure the ArduPy development environment on Wio Terminal.
+
+- **Step 2.** Make sure that the ArduPy firmware is flashed into Wio Terminal. For more information, please follow [**here**](https://wiki.seeedstudio.com/ArduPy/#ardupy-aip-cli-getting-started).
+
+```sh
+aip install Seeed-Studio/seeed-ardupy-bme280
+aip build
+aip flash
+```
+
+- **Step 3.** Copy the following code and save it as `ArduPy-bme280.py`:
+
+```python
+from arduino import grove_bme280
+from machine import LCD
+from machine import Sprite
+import time
+
+bme280 = grove_bme280()
+lcd = LCD()
+spr = Sprite(lcd) # Create a buff
+
+def main():
+    spr.createSprite(320, 240)
+    while True:
+      spr.setTextSize(2)
+      spr.fillSprite(spr.color.BLACK)
+      spr.setTextColor(lcd.color.ORANGE)
+      spr.drawString("BME280 Reading", 90, 10)
+      spr.drawFastHLine(40, 35, 240, lcd.color.DARKGREY)
+      spr.setTextColor(lcd.color.WHITE)
+      spr.drawString("- Temperature: ", 20, 50)
+      spr.drawString("- Humidity: ", 20, 80)
+      spr.drawString("- Pressure: ", 20, 110)
+
+      spr.drawFloat(bme280.temperature, 2, 220,50)
+      spr.drawNumber(bme280.humidity, 220,80)
+      spr.drawNumber(bme280.pressure, 220,110)
+      spr.pushSprite(0,0)
+      time.sleep_ms(500)
+
+      print ("\nTemperature: ", bme280.temperature, "C")
+      print ("Humidity: ", bme280.humidity, "%")
+      print ("Pressure: ", bme280.pressure, "Pa")
+
+if __name__ == "__main__":
+    main()
+```
+
+- **Step 4.** Save the `ArduPy-bme280.py` in a location that you know. Run the following command and **replace** `<YourPythonFilePath>` with your `ArduPy-bme280.py` location.
+
+```sh
+aip shell -n -c "runfile <YourPythonFilePath>"
+# Example:
+# aip shell -n -c "runfile /Users/ansonhe/Desktop/ArduPy-bme280.py"
+```
+
+- **Step 5.** We will see the values display on terminal as below, and displaying on the Wio Terminal LCD screen.
+
+```python
+ansonhe@Ansons-Macbook-Pro ~:aip shell -n -c "runfile /Users/ansonhe/Desktop/ArduPy-bme280.py"
+Positional argument (/dev/cu.usbmodem1414301) takes precedence over --open.
+Connected to ardupy
+
+Temperature:  29.88 C
+Humidity:  55 %
+Pressure:  100332 Pa
+
+Temperature:  29.91 C
+Humidity:  55 %
+Pressure:  100332 Pa
+
+Temperature:  29.88 C
+Humidity:  54 %
+Pressure:  100331 Pa
+```
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BME280/img/Ardupy-BME280.png"/></div>
+
 
 ## Schematic Online Viewer
 
