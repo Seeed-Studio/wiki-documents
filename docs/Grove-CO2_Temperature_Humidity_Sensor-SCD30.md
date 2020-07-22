@@ -381,7 +381,7 @@ aip shell -n -c "runfile <YourPythonFilePath>"
 # aip shell -n -c "runfile /Users/ansonhe/Desktop/ArduPy-scd30.py"
 ```
 
-- **Step 5.** We will see the gas value display on terminal as below, and displaying on the Wio Terminal LCD screen.
+- **Step 5.** We will see the 3 data values display on terminal as below, and displaying on the Wio Terminal LCD screen.
 
 ```python
 ansonhe@Ansons-Macbook-Pro ~:aip shell -n -c "runfile /Users/ansonhe/Desktop/ArduPy-scd30.py"
