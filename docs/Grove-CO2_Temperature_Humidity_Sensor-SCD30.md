@@ -303,6 +303,105 @@ When activated for the first time a period of minimum 7 days is needed so that t
 
 There are two ino sample in the SCD30 library foldor, you can run the `SCD30_auto_calibration.ino` to start the calibration.
 
+### Play With Wio Terminal (ArduPy)
+
+#### Hardware
+
+- **Step 1.** Prepare the below stuffs:
+
+| Wio Terminal | Grove-CO2 & T&H SCD30 |
+|--------------|-----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-thumbnail.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/img/thumbnial.png)|
+|[Get One Now](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Get One Now](https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD30-p-2911.html)|
+
+- **Step 2.** Connect Grove-CO2 & T&H SCD30 to the **I2C** Grove port of Wio Terminal.
+
+- **Step 3.** Connect the Wio Terminal to PC through USB Type-C cable.
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/img/WT-SCD30.png"/></div>
+
+#### Software
+
+- **Step 1.** Follow [**ArduPy Getting Started**](https://wiki.seeedstudio.com/ArduPy/) to configure the ArduPy development environment on Wio Terminal.
+
+- **Step 2.** Make sure that the ArduPy firmware is flashed into Wio Terminal. For more information, please follow [**here**](https://wiki.seeedstudio.com/ArduPy/#ardupy-aip-cli-getting-started).
+
+```sh
+aip install Seeed-Studio/seeed-ardupy-scd30
+aip build
+aip flash
+```
+
+- **Step 3.** Copy the following code and save it as `ArduPy-scd30.py`:
+
+```python
+from arduino import grove_scd30
+from machine import LCD
+from machine import Sprite
+import time
+
+scd30 = grove_scd30()
+lcd = LCD()
+spr = Sprite(lcd) # Create a buff
+
+def main():
+    spr.createSprite(320, 240)
+    while True:
+        spr.setTextSize(2)
+        spr.fillSprite(spr.color.BLACK)
+        spr.setTextColor(lcd.color.ORANGE)
+        spr.drawString("SCD30 Reading", 90, 10)
+        spr.drawFastHLine(40, 35, 240, lcd.color.DARKGREY)
+        spr.setTextColor(lcd.color.WHITE)
+        spr.drawString("- CO2 Level: ", 20, 50)
+        spr.drawString("- Temperature: ", 20, 80)
+        spr.drawString("- Humidity: ", 20, 110)
+
+        if(scd30.isAvailable()):
+            data = scd30.getCarbonDioxideConcentration()
+            spr.drawFloat(data[0], 2,220,50) # CO2
+            spr.drawFloat(data[1], 2, 220,80)
+            spr.drawFloat(data[2], 2, 220,110)
+            spr.pushSprite(0,0)
+        time.sleep_ms(500)
+
+        print("\nCarbon Dioxide Concentration:", data[0])
+        print("Temperature:", data[1])
+        print("Humidity:", data[2])
+
+if __name__ == "__main__":
+    main()
+```
+
+- **Step 4.** Save the `ArduPy-scd30.py` in a location that you know. Run the following command and **replace** `<YourPythonFilePath>` with your `ArduPy-scd30.py` location.
+
+```sh
+aip shell -n -c "runfile <YourPythonFilePath>"
+# Example:
+# aip shell -n -c "runfile /Users/ansonhe/Desktop/ArduPy-scd30.py"
+```
+
+- **Step 5.** We will see the gas value display on terminal as below, and displaying on the Wio Terminal LCD screen.
+
+```python
+ansonhe@Ansons-Macbook-Pro ~:aip shell -n -c "runfile /Users/ansonhe/Desktop/ArduPy-scd30.py"
+Positional argument (/dev/cu.usbmodem1414301) takes precedence over --open.
+Connected to ardupy
+Carbon Dioxide Concentration: 2360.639
+Temperature: 29.18707
+Humidity: 66.88538
+
+Carbon Dioxide Concentration: 2360.639
+Temperature: 29.18707
+Humidity: 66.88538
+
+Carbon Dioxide Concentration: 2500.573
+Temperature: 29.17372
+Humidity: 66.61072
+```
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/img/Ardupy-SCD30.png"/></div>
+
 
 ## Schematic Online Viewer
 
