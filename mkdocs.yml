@@ -263,8 +263,13 @@ nav:
             - Keyboard: Wio-Terminal-USBCLIENT-Keyboard.md
             - Mouse: Wio-Terminal-USBCLIENT-Mouse.md
             - MIDI: Wio-Terminal-USBCLIENT-MIDI.md
-          - TensorFlow Lite:
-            - Overview: Wio-Terminal-TensorFlow.md
+          - TinyML:
+            -Edge Impulse:
+              - Edge Impulse Getting Started: Wio-Terminal-Edge-Impulse.md
+              - Continuous Motion Recognition: Wio-Terminal-Continuous-Motion-Recognition.md
+              - Distinguishing Alcohol: Wio-Terminal-Edge-Impulse-Distinguish-Alochol.md
+            - TensorFlow Lite:
+              - Overview: Wio-Terminal-TensorFlow.md
           - Grove:
             - Overview: Wio-Terminal-Grove.md
           - Wio Terminal Battery Chassis: Wio-Terminal-Battery-Chassis.md
