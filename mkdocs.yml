@@ -202,6 +202,7 @@ nav:
           - ArduPy Wiki: ArduPy.md
           - ArduPy LCD API Reference: ArduPy-LCD.md
           - How to Build ArduPy Firmware From Source Code: Building-Ardupy.md
+          - How to Write an ArduPy Library: ArduPy-Libraries.md
 
       - Seeeduino XIAO:
           - Grove Shield for Seeeduino XIAO with embedded battery management chip: Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip.md
@@ -263,6 +264,7 @@ nav:
             - Keyboard: Wio-Terminal-USBCLIENT-Keyboard.md
             - Mouse: Wio-Terminal-USBCLIENT-Mouse.md
             - MIDI: Wio-Terminal-USBCLIENT-MIDI.md
+            - Build a HMI Display for Raspberry Pi using Wio Terminal: Wio-Terminal-HMI.md
           - TinyML:
             - Edge Impulse:
               - Edge Impulse Getting Started: Wio-Terminal-Edge-Impulse.md
@@ -286,7 +288,6 @@ nav:
             - Wio Terminal Initial Firmware (Retro Gaming): Wio-Terminal-Firmware.md
             - CircuitPython with Wio Terminal: Wio-Terminal-CircuitPython.md
             - How to Use Wio Terminal as RTL8720DN Dev Board: Wio-Terminal-8720-dev.md
-            - Build a HMI Display for Raspberry Pi using Wio Terminal: Wio-Terminal-HMI.md
 
       - ReSpeaker:
           - ReSpeaker Introduction: ReSpeaker.md
