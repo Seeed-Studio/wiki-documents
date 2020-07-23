@@ -11,7 +11,7 @@ We will bring you all these wiki updates in a weekly basis. So stay tuned with u
 
 ### 1. Ardupy Support For Grove - CO2 & Temperature & Humidity Sensor (SCD30)
 
-Wih the introduction of ArduPy along with the [Wio Terminal](https://www.seeedstudio.com/Wio-Terminal-p-4509.html), we work hard to gradually bring you it's support to all the Grove Modules in the Grove Ecosystem. 
+With the introduction of ArduPy along with the [Wio Terminal](https://www.seeedstudio.com/Wio-Terminal-p-4509.html), we work hard to gradually bring you it's support to all the Grove Modules in the Grove Ecosystem. 
 So in this week, we have added ArduPy support for our [Grove - CO2 & Temperature & Humidity Sensor (SCD30)](https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD30-p-2911.html) and prepared a [tutorial](https://wiki.seeedstudio.com/Grove-CO2_Temperature_Humidity_Sensor-SCD30/) for you to get started with [ArduPy](https://wiki.seeedstudio.com/ArduPy/) using our Grove - CO2 & Temperature & Humidity Sensor and Wio Terminal quickly and easily.
 
 <p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Grove-CO2_Temperature_Humidity_Sensor-SCD30/"><img src="https://files.seeedstudio.com/wiki/IMAGE/July%20Week%204/Untitled-1.png" alt="pir"  width="700" height="auto"></a></p>
