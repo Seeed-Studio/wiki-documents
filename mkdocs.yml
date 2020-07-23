@@ -264,7 +264,7 @@ nav:
             - Mouse: Wio-Terminal-USBCLIENT-Mouse.md
             - MIDI: Wio-Terminal-USBCLIENT-MIDI.md
           - TinyML:
-            -Edge Impulse:
+            - Edge Impulse:
               - Edge Impulse Getting Started: Wio-Terminal-Edge-Impulse.md
               - Continuous Motion Recognition: Wio-Terminal-Continuous-Motion-Recognition.md
               - Distinguishing Alcohol: Wio-Terminal-Edge-Impulse-Distinguish-Alochol.md
