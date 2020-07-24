@@ -150,7 +150,7 @@ Like Raspberry Pi, you need to install the ODYSSEY – STM32MP157C image from yo
 <br>
 <br>Click the plus icon to add the newly downloaded image file and the software will automatically select the SD card you inserted. Then click Flash! writing. It takes about 10 minutes to finish.</font>
 
-![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/v2-flash-sd.png)
+![](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/stm32_flash_sd.png)
 
 
 - **Step 4.** After writing the image to the SD card, insert the SD card into ODYSSEY – STM32MP157C. Use USB type-c port to power the Carrier board. Do not take out the SD card during writing. ODYSSEY – STM32MP157C will boot from the SD card, you can see the PWR and USER LED lighting on SOM. Now, go to the next section: the serial console.
@@ -159,9 +159,15 @@ Like Raspberry Pi, you need to install the ODYSSEY – STM32MP157C image from yo
 <p class="admonition-title">Note</p>
 they mean to start up failed if the USER LED does not blink.Please check the boot switch whether it is SD_CARD.
 </div>
-    
 
-**B. Boot from eMMC card**
+- **Step 5.** After writing the image to the SD card, insert the SD card into ODYSSEY – STM32MP157C. Use USB type-c port to power the Carrier board. Do not take out the SD card during writing. ODYSSEY – STM32MP157C will boot from the SD card, you can see the PWR and USER LED lighting on SOM. Now, go to the next section: the serial console.
+
+**B. Boot from eMMC**
+
+<div class="admonition note" >
+<p class="admonition-title">Note</p>
+If you want to Boot from eMMC, you have to access next section: the serial console first.
+</div>
 
 - **Step 1.** the process is the same as **A. Boot from SD card** if you first start up the ODYSSEY – STM32MP157C.
 
@@ -180,11 +186,11 @@ sudo reboot
 
 **Serial Console**
 
-Now your ODYSSEY – STM32MP157C is up, you may want to access your Linux system through the console, then set up WiFi, and so on. Two serial port access methods are provided for Linux access: 
+Now your ODYSSEY – STM32MP157C is up, you may want to access your Linux system through the console, then set up Network, and so on. Two serial port access methods are provided for Linux access:
 
 - A. OTG USB port - You need to run a Linux system on a circuit board.
 
-- B. UART port - Used to debug low-level problems.
+- B. UART port - Used to debug low-level problems.(recommend)
 
 **A. Connect via OTG**
 
@@ -209,6 +215,8 @@ Now your ODYSSEY – STM32MP157C is up, you may want to access your Linux system
 **B. Connect via UART port**
 
 In this section, we'll walk you through the use of the USB to TTL adapter, which connects to the ODYSSEY – STM32MP157C's Uart port(Located at the upper right of ODYSSEY – STM32MP157C), to establish a connection between your computer and ODYSSEY -STM32MP157C.
+
+![](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/uart_connection.png)
 
 - **Step 1.** Connect Uart port To PC/Mac using USB To TTL Adapter.If you don't have USB To TTL Adapter, click [HERE](https://www.seeedstudio.com/catalogsearch/result/?q=UART) to buy.（RX->TX,TX->RX）
 
@@ -238,13 +246,18 @@ Now follow the steps above to connect to ODYSSEY – STM32MP157C via a serial co
 **A. Ethernet connection**
 
 You can connect to the network using an Ethernet cable. Just plug in the Ethernet cable to the Internet.
+Now, go to the next section: the Basic tool install.
 
 **B. Wi-Fi Settings**
+
+<div class="admonition note" >
+<p class="admonition-title">Note</p>
+If you want to using Wi-Fi, you have to access next section: Basic tool install first.
+</div>
 
 - **Step 1.** Check the version of Linux kernel in the current environment and install the header file of kernel version.
 
 ```bash
-dpkg -l | grep linux
 sudo apt install linux-headers-$(uname -r) -y
 ```
 
@@ -297,9 +310,9 @@ Now use the following command to find ODYSSEY – STM32MP157C's IP address.
 ifconfig
 ```
 
-**SSH connection**
+**Basic tool install**
 
-**A. SSH**
+***1.SSH***
 
 SSH, short for Secure Shell, is formulated by the Network Working Group of IETF. SSH is a security protocol based on the application layer. SSH is a more reliable protocol that provides security for remote login sessions and other network services. There is no SSH protocol in the image provided by us, so we need to configure it through the serial port, so as to realize the communication between the device and the computer through SSH protocol. Enter the following command to install the SSH service in ODYSSEY -STM32MP157C.
 
@@ -322,12 +335,31 @@ ssh debian@IP
 If the performance experience degrades while using SSH, please switch to a more accessible WiFi network.
 </div>
 
+***2.GIT***
+
+Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+
+```bash
+sudo apt install git -y
+```
+
+***3.MAKE***
+
+```bash
+sudo apt install make device-tree-compiler gcc -y
+```
+
+***4.WGET***
+
+```bash
+sudo apt install wget -y
+```
+
 **Bluetooth Setting Up**
 
 - **Step 1.** Check the version of Linux kernel in the current environment and install the header file of kernel version.
 
 ```bash
-dpkg -l | grep linux
 sudo apt install linux-headers-$(uname -r) -y
 ```
 
@@ -447,7 +479,7 @@ The following is the process of CANBUS communication using [2 Channel CAN BUS FD
 
 - **Step 1.** According to the [installation guide](https://wiki.seeedstudio.com/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/#mounting-guide) insert 2 Channel CAN BUS FD Shield for Raspberry Pi onto ODYSSEY - STM32MP157C.
 - **Step 2.** Insert CAN BUS Shield V2 into Seeeduino V4.2.
-- **Step 3.** Connect Channel CAN BUS FD Shield for Raspberry Pi to can-bus Shield V2 using dupont wire.
+- **Step 3.** Connect Channel CAN BUS FD Shield for Raspberry Pi to can-bus Shield V2 using jumper wire.
 
 |2 Channel CAN BUS FD Shield for Raspberry Pi|CAN-BUS Shield V2|
 |:----:|:------:|
@@ -484,7 +516,6 @@ sudo apt install make device-tree-compiler gcc -y
 - **Step 1.** Check the version of Linux kernel in the current environment and install the header file of kernel version.
 
 ```bash
-dpkg -l | grep linux
 sudo apt install linux-headers-$(uname -r) -y
 ```
 
@@ -570,7 +601,6 @@ This part will introduce how to use **grove.py** to control GPIO and Grove Socke
 - **Step 1.** Check the version of Linux kernel in the current environment and install the header file of kernel version.
 
 ```bash
-dpkg -l | grep linux
 sudo apt install linux-headers-$(uname -r) -y
 ```
 
@@ -766,7 +796,7 @@ In this section, we will explain the control principle of the Linux I2S programm
 |![enter image description here](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/perspective-19-210X157.png)|![image](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/res-thumbnail.png)|
 |[Get ONE Now](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)|[Get ONE Now](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT.html)|
 
-- **Step 2.** According to the [installation guide](https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/#getting-started) insert ReSpeaker 2-Mics Pi HAT onto ODYSSEY – STM32MP157C.
+- **Step 2.** According to the [installation hardware guide](https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/#getting-started) insert ReSpeaker 2-Mics Pi HAT onto ODYSSEY – STM32MP157C.
 
 #### Software
 
@@ -797,15 +827,21 @@ Change the dtb settings to
 dtb=stm32mp1-seeed-npi-full-rpi-exp.dtb
 ```
 
-- **Step 4.** Go into the `seeed-linux-dtverleys` folder and configure soundstate as follow：
+- **Step 4.** reboot
+
+```
+sudo reboot
+```
+ 
+- **Step 5.** Go into the `seeed-linux-dtverleys` folder and configure soundstate as follow：
 
 ```sh
-debian@npi:~$ cd seeed-linux-dtverlays/
+debian@npi:~$ cd ~/seeed-linux-dtverlays/
 debian@npi:~/seeed-linux-dtverlays$ sudo cp extras/wm8960_asound-stm32mp1 /var/lib/alsa/asound.state
 debian@npi:~/seeed-linux-dtverlays$ sudo alsactl restore
 ```
 
-- **Step 5.** Check the driver whether install successfully by using `aplay` and `arecord`, you will view the below information if it is successful.
+- **Step 6.** Check the driver whether install successfully by using `aplay` and `arecord`, you will view the below information if it is successful.
 
 ```sh
 debian@npi:~/seeed-linux-dtverlays$ aplay -l
@@ -826,7 +862,7 @@ card 1: STM32MP1SEEEDNP [STM32MP1-SEEEDNPi], device 1: 4400b024.audio-controller
   Subdevice #0: subdevice #0
 ```
 
-- **Step 6.** Now you can start playing with ReSpeaker 2-Mics Pi Hat! For simple record and play testing, run the following command:
+- **Step 7.** Now you can start playing with ReSpeaker 2-Mics Pi Hat! For simple record and play testing, run the following command:
 
 1. To record an audio to `test.wav`:
 
@@ -839,6 +875,11 @@ arecord -f cd -r 48000 -Dhw:0 test.wav
 ```sh
 aplay -Dhw:0 -r 48000 test.wav
 ```
+
+<div class="admonition note" >
+<p class="admonition-title">Note</p>
+if you cannot get any sound maybe you can reboot again.
+</div>
 
 For more information about the ReSpeaker 2-Mics Pi HAT you can visit [wiki](https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/)
 
