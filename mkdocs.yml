@@ -226,6 +226,7 @@ nav:
             - Line Charts: Wio-Terminal-LCD-Linecharts.md
             - Histogram: Wio-Terminal-LCD-Histogram.md
             - LCD API Examples: Wio-Terminal-LCD-APIs.md
+            - How to use LvGL Graphics Library: Wio-Terminal-LVGL.md
           - IO:
             - Overview: Wio-Terminal-IO-Overview.md
             - Analog: Wio-Terminal-IO-Analog.md
