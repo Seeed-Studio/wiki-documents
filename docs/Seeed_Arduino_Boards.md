@@ -11,7 +11,14 @@ Seeed had designed so many boards that work with Arduino IDE, include,
 * [Seeeduino Cortex M0](https://wiki.seeedstudio.com/Seeeduino-Cortex-M0/)
 
 !!! attention 
-     The board mentioned above is the AT SAMD21 Microcontroller series,Please copy the first url to *Additional Boards Manager URLs* in the step2.
+     The board mentioned above is the AT SAMD21 Microcontroller series,Please copy the below url to *Additional Boards Manager URLs* in the step2 .
+
+
+```c
+https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
+```
+
+
 
 * Seeeduino [V3](https://wiki.seeedstudio.com/Seeeduino_v3.0/)/[4](https://wiki.seeedstudio.com/Seeeduino_v4.0/)
 * Seeeduino Stalker [V2.3](https://wiki.seeedstudio.com/Seeeduino_Stalker_v2.3/)/[3](https://wiki.seeedstudio.com/Seeeduino_v3.0/)/[3.1](https://wiki.seeedstudio.com/Seeeduino_Stalker_V3.1/)
@@ -27,8 +34,12 @@ Seeed had designed so many boards that work with Arduino IDE, include,
 * [RePhone Series](https://wiki.seeedstudio.com/RePhone/) 
 
 !!! attention 
-     The board mentioned above from Seeeduino V3 to RePhone Series isn't the AT SAMD21 Microcontroller series,Please copy the second url to *Additional Boards Manager URLs* in the step2.
+     The board mentioned above from Seeeduino V3 to RePhone Series isn't the AT SAMD21 Microcontroller series,Please copy the below url to *Additional Boards Manager URLs* in the step2.
 
+```c
+https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_seeeduino_boards_index.json
+
+```
 
 Thanks to the new features of Arduino IDE, it's easy to add those board to your Arduino IDE now.
 
@@ -43,15 +54,6 @@ You need a Arduino IDE that after version 1.6.4, please download one if there's 
 ##Step 2. Setting your Arduino IDE
 
 Open your Arudino IDE, click on **File > Preferences**, and copy below url to *Additional Boards Manager URLs* 
-
-```c
-https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
-```
-
-```c
-https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_seeeduino_boards_index.json
-
-```
 
 
 ![](https://files.seeedstudio.com/wiki/Wio-Lite-MG126/img/preference.png)
