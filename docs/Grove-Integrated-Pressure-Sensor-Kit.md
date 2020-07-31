@@ -182,11 +182,11 @@ void loop() {
 ## Resources
 
 
-- **[ZIP]** [Grove Integrated Pressure Sensor schematic diagram](https://files.seeedstudio.com/wiki/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP/res/Grove%20-%20Integrated%20Pressure%20Sensor%20Kit%20(MPX5700AP)_v1.0.zip)
+- **[ZIP]** [Grove Integrated Pressure Sensor schematic diagram](https://files.seeedstudio.com/wiki/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP/res/Grove-Integrated-Pressure-Sensor-Kit-(MPX5700AP).zip)
 
 - **[PDF]** [LMV358 Datasheet](https://files.seeedstudio.com/wiki/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP/res/LMV358_datasheet.pdf)
 
-- **[PDF]** [MPX5700AP Datasheet](https://files.seeedstudio.com/wiki/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP/res/LMV358_datasheet.pdf)
+- **[PDF]** [MPX5700AP Datasheet](https://files.seeedstudio.com/wiki/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP/res/MPX5700AP_datasheet.pdf)
 
 
 ## Tech Support
