@@ -63,7 +63,7 @@ The difference between the PCBA inside ReSpeaker USB Mic Array and Respeaker Mic
 - Dimensions: 70mm (Diameter)  
 - 3.5mm Audio jack output socket
 - Power consumption: 5V, 180mA with led on and 170mA with led off
-- Max Sample Rate: 48Khz
+- Max Sample Rate: 16Khz
 
 ## Hardware Overview
 
