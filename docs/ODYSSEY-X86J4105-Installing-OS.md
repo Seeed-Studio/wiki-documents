@@ -82,6 +82,8 @@ BIOS is also like an OS and can be upgraded to fix bugs and enhance performance 
 
 **SD-BS-CJ41G-M-101-E 01/07/2020 14:03:11**
 
+- **SHA256:** 98bb25d6d32250fb10bf047f5902630b82a8560020fb4336d7723b4dfb3f9df2
+
 1. Fix the problem of incomplete display of startup Seeed logo screen.
 
 ### Step 1 - Download the newest version of BIOS
