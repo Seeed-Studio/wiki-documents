@@ -266,6 +266,7 @@ nav:
             - Mouse: Wio-Terminal-USBCLIENT-Mouse.md
             - MIDI: Wio-Terminal-USBCLIENT-MIDI.md
             - Build a HMI Display for Raspberry Pi using Wio Terminal: Wio-Terminal-HMI.md
+            - Build a HMI Display for Windows/MacOS using Wio Terminal: Wio-Terminal-HMI-Usermode-SDK.md
           - TinyML:
             - Edge Impulse:
               - Edge Impulse Getting Started: Wio-Terminal-Edge-Impulse.md

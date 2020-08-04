@@ -346,7 +346,7 @@ You may run different PyQtGraph scripts on different screens as followed:
 
 ## Usermod SDK
 
-This USB display driver also works on your PC. We are currently working on the drivers for this, please stay tuned!
+This USB display driver also works on your PC. Please check **[this wiki](https://wiki.seeedstudio.com/Wio-Terminal-HMI-Usermode-SDK/)** for more information.
 
 ## Further Development
 
