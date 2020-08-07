@@ -236,6 +236,7 @@ nav:
           - Network:
             - Overview: Wio-Terminal-Network-Overview.md
             - Wi-Fi: Wio-Terminal-Wi-Fi.md
+            - Connecting to Microsoft Azure IoT: Wio-Terminal-Azure-IOT.md
           - IMU:
             - Overview: Wio-Terminal-IMU-Overview.md
             - Getting Started: Wio-Terminal-IMU-Basic.md
