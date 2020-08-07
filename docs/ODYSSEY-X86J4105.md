@@ -313,6 +313,18 @@ This also need to be configured in the BIOS. Enter BIOS settings by pressing DEL
 
 <div align=center><img width = 500 src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/Auto-power.png"/></div>
 
+### Fan is not turning on
+
+Odyssey fan is controlled by Embedded controller (EC) which role as initialize the device before system is up. The temperature in BIOS is detected by EC and the temperature sensor place close to the intel CPU which do not have the sensor pin. In another word, the temperature is not the CPU's direct value, maybe 5 degrees centigrade error. What you saw the temperature value in system is feedback by CPU internal, temperature in BIOS screen feedback by EC, fan run or stop according the EC value.
+
+- EC detect value (BIOS screen) and fan speed table like this:
+
+**Disable fan state**: stop
+
+**Normal fan state**: less than 40°C–stop，45-50°C–50%，50-60℃–60%，above 60℃–80%
+
+**Positive fan state**: less than 40°C–stop，45-50°C–70%，50-60℃–80%，above 60℃–100%
+
 ## Resources
 
 - **[ZIP]** [ODYSSEY-X86J4105 3D Model](http://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/ODYSSEY-X86-3D-Model.zip)
