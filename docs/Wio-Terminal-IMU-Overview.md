@@ -1,6 +1,6 @@
-# IMU Overview
+# Accelerator Overview
 
-This repo introduce how to install the built-in 3-Axis Digital Acclerometer(LIS3DHTR) library used on Wio Terminal. This allows you to access the IMU information of the Wio Terminal as well as using it for motion control and etc.
+This repo introduce how to install the built-in 3-Axis Digital Accelerometer(LIS3DHTR) library used on Wio Terminal. This allows you to access the accelerometer information of the Wio Terminal as well as using it for motion control and etc.
 
 ## Installing the 3-Axis Digital Accelerometer(LIS3DHTR) Library For Wio Terminal
 

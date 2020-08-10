@@ -1,6 +1,6 @@
-# Getting Started with IMU
+# Getting Started with accelerometer
 
-This repo demonstrates how to read IMU values from Wio Terminal.
+This repo demonstrates how to read accelerometer values from Wio Terminal.
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/2019-12-09%2015-42-57.2019-12-09%2015_43_28.gif"/></div>
 
@@ -25,9 +25,9 @@ void setup() {
 }
 ```
 
-## Reading IMU Values
+## Reading accelerometer Values
 
-To read IMU values of each axis on Wio Terminal, simply follow this:
+To read accelerometer values of each axis on Wio Terminal, simply follow this:
 
 ```cpp
 void loop() {
@@ -44,7 +44,7 @@ Note: Delay is strongly recommended to avoid large amount of data at once.
 
 ### Example Code
 
-This exmaple prints all 3-axis values of IMU on the serial monitor.
+This example prints all 3-axis values of accelerometer on the serial monitor.
 
 ```cpp
 #include"LIS3DHTR.h"
