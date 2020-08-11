@@ -325,6 +325,12 @@ Odyssey fan is controlled by Embedded controller (EC) which role as initialize t
 
 **Positive fan state**: less than 40°C–stop，45-50°C–70%，50-60℃–80%，above 60℃–100%
 
+### Fan Pinout
+
+Some of you may need to know the 5V PWM fan pinout in order to DIY/replace to your own fans. Odyssey has a 5V PWM pin for the fan with a smaller header than the usual 5V pin header. You may need to replace the header in order to fit in.
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/x86-fan.png"/></div>
+
 ## Resources
 
 - **[ZIP]** [ODYSSEY-X86J4105 3D Model](http://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/ODYSSEY-X86-3D-Model.zip)
