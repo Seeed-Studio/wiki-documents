@@ -8,7 +8,7 @@ This repo demonstrates how to read accelerometer values from Wio Terminal.
 
 To initialize the accelerator on Wio Terminal:
 
-- Setting output data rate: `lis.setOutputDataRate()`, 5Hz up to 5kHz.
+- Setting output data rate: `lis.setOutputDataRate()`, 1Hz up to 5kHz.
 
 - Setting scale range: `lis.FullScaleRange()`, 2g up to 16g.
 
