@@ -160,6 +160,7 @@ void loop(void) {
      - When measuring the electrode, the test part of the electrode (including platinum wire and reference junction) must be submerged at the same time.
 
      - The electrode standard solution-quinone hydroquinone saturated solution, the storage time is 48h. (Attachment: Preparation of quinone hydroquinone saturated solution: add excess quinone hydroquinone to the pH 4.00 buffer to make it saturated).
+     - Method to prepare hydroquinone solution：adding 10g of quinhydrone to 1L of pH 4 or pH 7 buffer solution (ASTM D1498). The solutions are mixed on a magnetic mixing plate for a minimum of 15 minutes to create a saturated solution with undissolved crystals remaining. Quinhydrone solutions are usable for 8 hrs from the time of mixing.
 
      - If the platinum wire of the electrode is stained with grease, it can be scrubbed with absorbent cotton and acetone or alcohol. And if it is dipped by insoluble inorganic substance, 30-50% hydrochloric acid works as well. Besides, it can also be cleaned by senior toilet paper once every day
 
