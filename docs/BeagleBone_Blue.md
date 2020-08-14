@@ -361,6 +361,11 @@ It may take a long time to update, but it is worthwhile.
 This is a Javascript demo.
 
 Ckick the **File->New File->** button at the top light corner of Cloud9 IDE.
+
+!!!Note
+     after create file, just donot forget save the file meanwhile add the file type.
+
+
 copy the code below and click **Run**
 ```
 var b = require('bonescript');
