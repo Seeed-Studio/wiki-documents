@@ -123,7 +123,7 @@ Doppler radar works by sending a beam of electromagnetic radiation waves from th
 
 
 
-- **Step 1.** Download the [Demo code](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/Seeed_Arduino_DopplerRadar.rar).
+- **Step 1.** Download the [Demo code](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/Seeed_Arduino_DopplerRadar.zip).
 
 - **Step 2.** Copy the whole **Seeed_Arduino_DopplerRadar** file and paste it into your Arduino IDE library file.
 
