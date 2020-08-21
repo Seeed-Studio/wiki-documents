@@ -24,17 +24,17 @@ Now, we have **developed the DAPLink firmware running on your Arduino Boards**(*
 
 ### Seeed Weekly Show
 
-As you all know, we have a weekly video series on YouTube named "Seeed Weekly Show" and we bring you many updates each week. This week is our 16th successful week for the show and we hope to bring you more exciting stuff in the future! So, sit back, relax and enjoy our show!
+As you all know, we have a weekly video series on YouTube named "Seeed Weekly Show" and we bring you many updates each week. This week is our 18th successful week for the show and we hope to bring you more exciting stuff in the future! So, sit back, relax and enjoy our show!
 
 <p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/LE8rwxQsa14" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 ### Wio Terminal Classroom
 
 Recently we released a brand-new video tutorial show on Youtube named "Wio Terminal Classroom!"
-This is our 11th successful episode and we thank you all for staying with us!
+This is our 12th successful episode and we thank you all for staying with us!
 In this show, Lakshantha explains how to use Wio terminal along with the software and present fun demos as well! By joining this show, you can get started with Wio Terminal quickly and easily! So we request you to stay tuned with our show and enjoy!
 
-<p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/C9AlljLst2o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/NQt-XLcSIwA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 
 Also, don't forget to subscribe to our [YouTube Channel](http://www.youtube.com/c/SeeedStudioSZ) to stay updated with our video releases on exciting products!
