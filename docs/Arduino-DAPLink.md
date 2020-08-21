@@ -1,4 +1,4 @@
-# How to use Arduino Borads as DAPLink Device
+# How to use Arduino Boards as DAPLink Device
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/DAPLink/eclipse-10.png"/></div>
 
