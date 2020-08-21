@@ -11,10 +11,9 @@ sku: 102110464
 
 <p style="text-align:center"><a href="https://www.seeedstudio.com/Microwave-Sensor-24GHz-Doppler-Radar-Motion-Sensor-MW2401TR11-p-4690.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p> 
 
-**MW2401TR11** is a high integration and intelligence algorithm **24 GHz** Microwave induction of human motion with high performance Transmit and receive antennas, the MW2401TR11 is able to according to place required to adjust cover range, also it can through intelligence algorithm to anti-interference of environment, and it can recognize object movement.
 
+**MW2401TR11** is a **24GHz** human motion microwave sensor module product with high integration and high intelligent algorithm, it equipped with high-performance transceiver. The antenna not only has good directivity, but can also adjust the coverage area through software settings according to different application scenarios, and filter out interference through smart algorithms, Also it is able to effectively identify the subtle movement of objects.
 
-MW2401TR11 is a 24GHz human motion microwave sensor module product with high integration and high intelligent algorithm, it equipped with high-performance transceiver. The antenna not only has good directivity, but can also adjust the coverage area through software settings according to different application scenarios, and filter out interference through smart algorithms, Also it is able to effectively identify the subtle movement of objects.
 
 ## Features
 
@@ -29,61 +28,71 @@ MW2401TR11 is a 24GHz human motion microwave sensor module product with high int
 
 ## Specification  
 
-<table>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-llyw{background-color:#c0c0c0;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-llyw"><span style="font-weight:bold">item</span></th>
+    <th class="tg-llyw"><span style="font-weight:bold">Value</span></th>
+  </tr>
+</thead>
 <tbody>
-<tr>
-<table border = "2">
-<td style="text-align:left;font-weight:bold">item</td>
-<td style="text-align:left;font-weight:bold">Value</td>
-</tr>
-<tr>
-<td>Operating Voltage</td>
-<td>5 - 12 V</td>
-</tr>
-<tr>
-<td>Operating current</td>
-<td>50 - 56 mA (Current can reduce by the distance required)</td>
-</tr>
-<tr>
-<td>Operating temperature range</td>
-<td>-30 - 85 &deg;C</td>
-</tr>
-<tr>
-<td>Working frequency</td>
-<td>50 HZ or 60 HZ</td>
-</tr>
-<tr>
-<td>Output delay</td>
-<td>2 s - infinite (Software adjustable)</td>
-</tr>
-<tr>
-<td>Transmitting frequency</td>
-<td>24 - 24.25 GHz</td>
-</tr>
-<tr>
-<td>Digital high-level signal</td>
-<td>3.2 - 3.3 V</td>
-</tr>
-<tr>
-<td>Digital low-level signal</td>
-<td>0 - 0.2 V</td>
-</tr>
-<tr>
-<td>hanging height</td>
-<td>3 - 10 meter (Software adjustable)</td>
-</tr>
-<tr>
-<td>Radius of reaction</td>
-<td>2 - 5 meter (Software adjustable)</td>
-</tr>
-<tr>
-<td>Radius of Micro</td>
-<td>0.5 - 3 meter (Software adjustable)</td>
-</tr>
-<tr>
-<td>detection angle</td>
-<td>150 - 170 &deg;</td>
-</tr>
+  <tr>
+    <td class="tg-0pky">Power supply</td>
+    <td class="tg-0pky"> 5 - 12 V</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Current consumption</td>
+    <td class="tg-0pky"> 50-56 mA (Current can reduce by the distance required)</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">operating temperature </td>
+    <td class="tg-0pky"> -30 - 85 °C</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">working frequency</td>
+    <td class="tg-0pky"> 50HZ - 60HZ</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Output delay</td>
+    <td class="tg-0pky"> 2s - infinite (Adjustable by software)</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Transmitting frequency</td>
+    <td class="tg-0pky"> 24 - 24.25 GHz</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Digital high-level signal</td>
+    <td class="tg-0pky"> 3.2 - 3.3 V</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Digital low-level signal</td>
+    <td class="tg-0pky"> 0 - 0.2 V</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Hanging height</td>
+    <td class="tg-0pky"> 3 - 10 meter (Adjustable by software)</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Radius of reaction</td>
+    <td class="tg-0pky">2 - 5 meter (Adjustable by software)</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Radius of Micro</td>
+    <td class="tg-0pky">0.5 - 3 meter (Adjustable by software)</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Detection angle</td>
+    <td class="tg-0pky">150 - 170°</td>
+  </tr>
 </tbody>
 </table>
 
@@ -96,6 +105,9 @@ MW2401TR11 is a 24GHz human motion microwave sensor module product with high int
 
 ## Hardware Overview
 ![](https://files.seeedstudio.com/wiki/MW2401TR11/img/MW2401TR11.png)
+
+!!!Tip
+    R2 is reserved I/O interface.
 
 
 ## Technical details 
@@ -143,7 +155,7 @@ MW2401TR11 is a 24GHz human motion microwave sensor module product with high int
 ## Platform Supported
 | Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg) |
+| ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/MW2401TR11/img/emptyyyy6.png) | ![](https://files.seeedstudio.com/wiki/MW2401TR11/img/emptyyyy6.png) | ![](https://files.seeedstudio.com/wiki/MW2401TR11/img/emptyyyy6.png) | ![](https://files.seeedstudio.com/wiki/MW2401TR11/img/emptyyyy6.png) |
 
 
 ## Getting Started
@@ -152,7 +164,7 @@ MW2401TR11 is a 24GHz human motion microwave sensor module product with high int
 
 | Seeeduino Cortex-M0+ |MW2401TR11| 
 |--------------|--------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/MW2401TR11/img/seeeduinoMO.png)| ![enter image description here](https://files.seeedstudio.com/wiki/MW2401TR11/img/MW_250.png)|
+|![enter image description here](https://files.seeedstudio.com/wiki/MW2401TR11/img/clearseeedriono%20pic.png)| ![enter image description here](https://files.seeedstudio.com/wiki/MW2401TR11/img/clearnMWpic6.png)|
 |[Get ONE Now](https://www.seeedstudio.com/Seeeduino-Cortex-M0-p-4070.html)|[Get ONE Now](https://www.seeedstudio.com/Microwave-Sensor-24GHz-Doppler-Radar-Motion-Sensor-MW2401TR11-p-4690.html)|
 
 !!!Tip
@@ -163,20 +175,20 @@ MW2401TR11 is a 24GHz human motion microwave sensor module product with high int
 
  ![MW2401TR11 with seeeduino Cortex-M0+ connection](https://files.seeedstudio.com/wiki/MW2401TR11/img/MW_Seeeduino.png)
 
- - **step 1. Following above picture to connect wire.** 
- - **step 2. Plug tpye-c power cable to seeeduino Cortex-MO+.** 
+ - **step 1. Following above picture to connect wire**. 
+ - **step 2. Plug tpye-c power cable to seeeduino Cortex-MO+**. 
  
  ## Software
 
- - **step 1. Download the [arduino IDE](https://www.arduino.cc/en/main/software)**
- - **step 2. setup Wio terminal device, please follow [seeedruino Cortex-MO+ instructions](https://wiki.seeedstudio.com/Seeeduino-Cortex-M0/)**
- - **step 3. copy the code into arduino IDE then upload. [upload code guide](https://wiki.seeedstudio.com/Upload_Code/)**
+ - **step 1. Download the** [arduino IDE](https://www.arduino.cc/en/main/software)
+ - **step 2. setup Seeeduino Cortex-MO+, please follow** [seeedruino Cortex-MO+ instructions](https://wiki.seeedstudio.com/Seeeduino-Cortex-M0/)
+ - **step 3. copy the code into arduino IDE then upload.** [upload code guide](https://wiki.seeedstudio.com/Upload_Code/)
 
 
 
- ```C
- int MW_out = 2;   // set pin 2 as OUT port
-
+```C
+int MW_out = 2;   
+// set pin 2 as OUT port
 void setup() {
   Serial.begin(9600);
   Serial1.begin(115200);
@@ -212,5 +224,12 @@ void loop() {
 
 ```
 
-- **step 4. open the Serial Monitor you will see the data print.** 
+- **step 4. open the Serial Monitor you will see the data print**. 
 
+![](https://files.seeedstudio.com/wiki/MW2401TR11/img/monitor2.png)
+
+**There is 1018 and 1019 is mean high-level signal, 4 and 5 is mean low-level signal, normally if the low-level signal presented, it will be not present action data.**
+
+## Tech Support
+
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
