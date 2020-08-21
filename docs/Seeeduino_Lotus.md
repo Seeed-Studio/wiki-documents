@@ -193,7 +193,7 @@ A few seconds after the upload finishes, you should see the pin 13 (L) LED on th
     * [Seeeduino Lotus PCB PDF file V1.1](https://files.seeedstudio.com/wiki/Seeeduino_Lotus/res/Seeeduino%20Lotus%20v1.1%20PCB.pdf)
 
 * **Datasheet**
-    * [ATmega328P](https://files.seeedstudio.com/wiki/SeeeduinoV4/res/ATmega328.pdf)
+    * [ATmega328P](https://files.seeedstudio.com/wiki/SeeeduinoV4/resources/ATmega328.pdf)
     * [ATmega16U2](https://files.seeedstudio.com/wiki/SeeeduinoV4/res/ATmega16u2.pdf)
 
 * **Bootloader**    
