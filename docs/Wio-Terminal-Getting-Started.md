@@ -245,7 +245,16 @@ In addition to power-on and reset, when using SWD, Digital, Analog, Serial, I2C,
 
 ### Lesson 10 -  Built-In Hardware/ Sensors Part 3 | Accelerometer & Light Sensor
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3dw-Ony6CIE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3dw-Ony6CIE" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Lesson 11 -  Build a TV Remote using the built-in IR Emitter
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C9AlljLst2o" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Lesson 12 -  Smart Garden Project using Wio Terminal
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NQt-XLcSIwA" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 
 ## Resources
