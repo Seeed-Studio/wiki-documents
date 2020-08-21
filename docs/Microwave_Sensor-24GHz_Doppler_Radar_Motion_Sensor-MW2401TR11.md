@@ -112,42 +112,52 @@ sku: 102110464
 
 ## Technical details 
 
-<table>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-6qw1{background-color:#c0c0c0;text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-6qw1" colspan="3">Define of interface</th>
+  </tr>
+</thead>
 <tbody>
-<tr>
-<table border="2" bordercolor="black" width="550" cellspacing="0" cellpadding="5">
-<th colspan = "3">Define of interface</th>
-</tr>
-<tr>
-<td>Number</td>
-<td>Pin</td>
-<td>function</td>
-</tr>
-<tr>
-<td>1</td>
-<td>TX</td>
-<td>TX port can be used as I/O with ADC function (voltage: 3.3 V)</td>
-</tr>
-<tr>
-<td>2</td>
-<td>GND</td>
-<td>ground connection</td>
-</tr>
-<tr>
-<td>3</td>
-<td>OUT</td>
-<td>sense output I/O port (voltage: 3.3 V & user-difined output waveform)</td>
-</tr>
-<tr>
-<td>4</td>
-<td>VIN</td>
-<td> 5 - 12 V</td>
-</tr>
-<tr>
-<td>5</td>
-<td>RX</td>
-<td>RX port can be used as I/O with ADC function (voltage: 3.3 V)</td>
-</tr>
+  <tr>
+    <td class="tg-baqh">Number</td>
+    <td class="tg-baqh">Pin</td>
+    <td class="tg-baqh">Function</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">1</td>
+    <td class="tg-baqh">TX</td>
+    <td class="tg-baqh">TX port can be used as I/O with ADC function (voltage: 3.3 V)</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">2</td>
+    <td class="tg-baqh">GND</td>
+    <td class="tg-baqh">Ground connection</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">3</td>
+    <td class="tg-baqh">OUT</td>
+    <td class="tg-baqh">Sense output I/O port (voltage: 3.3 V &amp; user-defined output waveform)</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">4</td>
+    <td class="tg-baqh">VIN</td>
+    <td class="tg-baqh">5 - 12 V</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">5</td>
+    <td class="tg-baqh">RX</td>
+    <td class="tg-baqh">RX port can be used as I/O with ADC function (voltage: 3.3 V)</td>
+  </tr>
 </tbody>
 </table>
 
