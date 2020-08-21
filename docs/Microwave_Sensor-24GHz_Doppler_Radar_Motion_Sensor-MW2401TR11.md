@@ -178,7 +178,7 @@ sku: 102110464
  - **step 1. Following above picture to connect wire**. 
  - **step 2. Plug tpye-c power cable to seeeduino Cortex-MO+**. 
  
- ## Software
+## Software
 
  - **step 1. Download the** [arduino IDE](https://www.arduino.cc/en/main/software)
  - **step 2. setup Seeeduino Cortex-MO+, please follow** [seeedruino Cortex-MO+ instructions](https://wiki.seeedstudio.com/Seeeduino-Cortex-M0/)
@@ -228,7 +228,7 @@ void loop() {
 
 ![](https://files.seeedstudio.com/wiki/MW2401TR11/img/monitor2.png)
 
-**There is 1018 and 1019 is mean high-level signal, 4 and 5 is mean low-level signal, normally if the low-level signal presented, it will be not present action data.**
+**The 1018 and 1019 are mean high-level signal, 4 and 5 is mean low-level signal, normally if the low-level signal presented, it will be not present action data.**
 
 ## Tech Support
 
