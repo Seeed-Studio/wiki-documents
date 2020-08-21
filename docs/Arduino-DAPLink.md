@@ -16,7 +16,7 @@ Now, we have **developed the DAPLink firmware running on your Arduino Boards**(*
 
 - Debug and Flash Arm Cortex CPUs
 - Provides a virtual serial port, eliminating the need for a usb to serial port
-- Drag
+- Drag and drop to upload firmware(coming soon)
 
 ## Supported Boards
 

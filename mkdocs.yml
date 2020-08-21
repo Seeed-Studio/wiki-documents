@@ -212,6 +212,7 @@ nav:
           - Seeeduino XIAO with TinyUSB: Seeeduino-XIAO-TinyUSB.md
           - How to use Seeeduino XIAO to log in to your Raspberry PI: How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI.md
           - SPI Communication on Seeeduino XIAO: XIAO-SPI-Communication-Interface.md
+          - Build a DAPLink Deivce using Seeeduino XIAO: Seeeduino-XIAO-DAPLink.md
 
       - Wio Terminal:
           - Get Started with Wio Terminal: Wio-Terminal-Getting-Started.md
@@ -268,6 +269,7 @@ nav:
             - MIDI: Wio-Terminal-USBCLIENT-MIDI.md
             - Build a HMI Display for Raspberry Pi using Wio Terminal: Wio-Terminal-HMI.md
             - Build a HMI Display for Windows/MacOS using Wio Terminal: Wio-Terminal-HMI-Usermode-SDK.md
+            - Build a DAPLink Deivce using Wio Terminal: Wio-Terminal-DAPLink.md
           - TinyML:
             - Edge Impulse:
               - Edge Impulse Getting Started: Wio-Terminal-Edge-Impulse.md
