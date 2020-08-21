@@ -605,7 +605,7 @@ Use a Grove cable to connect LED to Seeeduino Lotus's digital interface **D4**, 
 
 ### Lesson 4: Making the Buzzer go BEEP
 
-Just like the LED module, Buzzer is also an output module, instead of lighting up it produces a beep sound. This can be used for many situations for indication purposes.  We studied the use of potentiometer in the last section, so how do we use the potentiometer to control the volume of the buzzer? This requires the used of PWM control!
+Just like the LED module, Buzzer is also an output module, instead of lighting up it produces a beep sound. This can be used for many situations for indication purposes.Let's learn how to generate sound using the buzzer!
 
 <font size=5;font color=#314B9F >Background Information:</font>
 
