@@ -12,7 +12,7 @@ sku: 102110464
 <p style="text-align:center"><a href="https://www.seeedstudio.com/Microwave-Sensor-24GHz-Doppler-Radar-Motion-Sensor-MW2401TR11-p-4690.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p> 
 
 
-**MW2401TR11** is a **24GHz** human motion microwave sensor module product with high integration and high intelligent algorithm, it equipped with high-performance transceiver. The antenna not only has good directivity, but can also adjust the coverage area through software settings according to different application scenarios, and filter out interference through smart algorithms, Also it is able to effectively identify the subtle movement of objects.
+**MW2401TR11** is a **24GHz** human motion microwave sensor module product with high integration and a high intelligent algorithm, it equipped with the high-performance transceiver. The antenna not only has good directivity, but can also adjust the coverage area through software settings according to different application scenarios, and filter out interference through smart algorithms, Also it is able to effectively identify the subtle movement of objects.
 
 
 ## Features
