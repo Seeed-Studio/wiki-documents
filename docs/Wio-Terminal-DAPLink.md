@@ -10,7 +10,7 @@ Now, we have **developed the DAPLink firmware running on your Arduino Boards**(*
 
 ## Get Started
 
-Please visit the Arduino DAPLink Get Started Wiki here.
+Please visit the Arduino DAPLink Get Started Wiki [here](https://wiki.seeedstudio.com/Arduino-DAPLink/).
 
 ### `uf2` Method
 
