@@ -591,6 +591,8 @@ python3 QtViewerForStm32p1.py
 
 Run [CanBus_SendForArduino.ino](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/examples/CanBus_SendForArduino.ino) on `Seeeduino V4.2`.
 
+![](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/can_bus_demo.png)
+
 
 ## Play with GPIO
 
@@ -663,8 +665,13 @@ git clone https://github.com/Seeed-Studio/grove.py
 
 ```bash
 cd grove.py/grove
-sudo python3 grove_button.py 5
+sudo python3 grove_gpio.py 5
 ```
+
+<div class="admonition note" >
+<p class="admonition-title">Note</p>
+we will hear sound from the buzzer if everything has been well.
+</div>
 
 ###  Digital Input on Basehat by using Grove.py
 
@@ -702,8 +709,13 @@ git clone https://github.com/Seeed-Studio/grove.py
 
 ```bash
 cd grove.py/grove
-sudo python3 grove_gpio.py 5
+sudo python3 grove_button.py 5
 ```
+
+<div class="admonition note" >
+<p class="admonition-title">Note</p>
+we will view some information at the terminal if the button has been pressed.
+</div>
 
 ###  ADC on Basehat by using Grove.py
 
@@ -744,6 +756,11 @@ cd grove.py/grove
 sudo python3 grove_temperature_sensor.py 0
 ```
 
+<div class="admonition note" >
+<p class="admonition-title">Note</p>
+we will view temperature data at the terminal if everything has been well.
+</div>
+
 ###  UART on Basehat by using Grove.py
 
 #### Hardware
@@ -782,6 +799,13 @@ git clone https://github.com/Seeed-Studio/grove.py
 cd grove.py/grove
 python uart.py
 ```
+
+if we connect the TX to RX we will get `hello seeder` at terminal.and the location of TX and RX we can view [Pin Function](https://wiki.seeedstudio.com/ODYSSEY-STM32MP157C/#pin-function).
+
+<div class="admonition note" >
+<p class="admonition-title">Note</p>
+if you cannot get any sound maybe you can reboot again.
+</div>
 
 ### I2S on ODYSSEY-STM32MP157C
 
