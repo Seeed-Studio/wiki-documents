@@ -690,7 +690,7 @@ pip3 install seeed-python-mlx9064x
 Upgrade to the latest driver:
 
 ```
-pip3 install --upgrade seeed-python-mlx90640
+pip3 install --upgrade seeed-python-mlx9064x
 ```
 
 - **Step 3** Check the corresponding i2c number of the Raspberry Pi:
@@ -717,19 +717,26 @@ You may get the result like this:
 !!!Note
      An upgrated UI of outcome on Raspberry Pi has been released as following:
 
-- **Step 1** Installing from PyPI:
+- **Step 1** Install pyqt5:
+
+```
+sudo apt-get install python3-pyqt5 -y
+```
+
+- **Step 2** Installing from PyPI:
 
 ```
 sudo pip3 install seeed_python_ircamera
 ```
 
-if you think that the speed of download too slowly, you can try below command:
+- **Step 3** Set the max i2c speed then reboot:
 
-```
-sudo pip3 install seeed_python_ircamera -i https://pypi.tuna.tsinghua.edu.cn/simple/
+```bash
+sudo sh -c "echo dtparam=i2c_arm=on,i2c_arm_baudrate=400000 >> /boot/config.txt"
+sudo reboot
 ```
 
-- **Step 2** Input below command in terminal:
+- **Step 4** Input below command in terminal:
 
 ```
 sudo ircamera I2C MLX90641
