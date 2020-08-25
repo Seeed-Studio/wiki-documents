@@ -665,12 +665,6 @@ void loop() {
 - <font size=5;font color=#314B9F >Code Analysis</font>
 
 ```cpp
-Value = map(potentioValue, 0, 1023, 0, 255);
-```
-
-**Description:**
-
-```cpp
 analogWrite(BuzzerPin, 128);
 ```
 
