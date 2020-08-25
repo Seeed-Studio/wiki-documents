@@ -802,10 +802,6 @@ python uart.py
 
 if we connect the TX to RX we will get `hello seeder` at terminal.and the location of TX and RX we can view [Pin Function](https://wiki.seeedstudio.com/ODYSSEY-STM32MP157C/#pin-function).
 
-<div class="admonition note" >
-<p class="admonition-title">Note</p>
-if you cannot get any sound maybe you can reboot again.
-</div>
 
 ### I2S on ODYSSEY-STM32MP157C
 
