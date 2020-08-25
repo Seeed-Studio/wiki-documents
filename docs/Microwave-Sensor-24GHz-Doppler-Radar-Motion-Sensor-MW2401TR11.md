@@ -163,7 +163,7 @@ sku: 102110464
 
 
 ## Platform Supported
-| Arduino                                                                                             | Raspberry Pi                                                                                             | BeagleBone                                                                                      | Wio                                                                                               | LinkIt ONE                                                                                         |
+| Arduino                                                                                             |                                                                                              |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
 | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/MW2401TR11/img/emptyyyy6.png) | ![](https://files.seeedstudio.com/wiki/MW2401TR11/img/emptyyyy6.png) | ![](https://files.seeedstudio.com/wiki/MW2401TR11/img/emptyyyy6.png) | ![](https://files.seeedstudio.com/wiki/MW2401TR11/img/emptyyyy6.png) |
 
@@ -239,6 +239,11 @@ void loop() {
 ![](https://files.seeedstudio.com/wiki/MW2401TR11/img/monitor2.png)
 
 **The 1018 and 1019 are mean high-level signal, 4 and 5 is mean low-level signal, normally if the low-level signal presented, it will be not present action data.**
+
+**There is a simple show when my hand is leaving, the monitor is displaying object state: leaving**
+![when my hand is leaving](https://files.seeedstudio.com/wiki/MW2401TR11/img/MW2401TR11_gGIF.gif)
+
+![](https://files.seeedstudio.com/wiki/MW2401TR11/img/MW2401TR11_GIF.gif)
 
 ## Tech Support
 
