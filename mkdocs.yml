@@ -254,6 +254,8 @@ nav:
             - Overview: Wio-Terminal-Mic.md
           - Buzzer:
             - Overview: Wio-Terminal-Buzzer.md
+          - RTC:
+            - Overview: Wio-Terminal-RTC.md
           - File System:
             - Overview: Wio-Terminal-FS-Overview.md
             - Read and Write: Wio-Terminal-FS-ReadWrite.md
