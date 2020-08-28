@@ -914,5 +914,39 @@ For more information about the ReSpeaker 2-Mics Pi HAT you can visit [wiki](http
 - **[PDF]** [ODYSSEY-STM32MP157C 2d file](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/STM32-2d-file.pdf)
 - **[PDF]** [STM32 Reference Guide](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/STM32+Reference+Guide+V1.0.pdf)
 - **[URL]** [Advanced system development](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C)
+
+
+## Resourses
+-----
+
+- **[PDF]** [i.MX 6ULL datasheet](https://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/REG/IMX6ULLCEC.pdf)
+- **[PDF]** [NPi i.MX6ULL Dev Board - Linux SBC Mechanical_Dimensions](https://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/REG/Mechanical_Dimensions.pdf)
+- **[PDF]** [NPi i.MX6ULL Dev Board - Linux SBC Breakout Board](https://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/REG/NPi-i.MX6ULL-Breakout-Board-Schematic-V1.0.pdf)
+- **[PDF]** [NPi i.MX6ULL Dev Board - Linux SBC Core Module](https://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/REG/NPi-i.MX6ULL-Core-Module-Schematic-V1.0.pdf)
+- **[URL]** [Advanced system development](https://www.digikey.com/eewiki/display/linuxonarm/NPi+i.MX6ULL)
+
+## ODYSSEY-STM32MP157C Advanced system development
+- [Availability](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-Availability)
+- [Vendor Documentation](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-VendorDocumentation)
+- [Basic Requirements](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-BasicRequirements)
+- [ARM Cross Compiler: GCC](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-ARMCrossCompiler:GCC)
+- [Bootloader: U-Boot](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-Bootloader:U-Boot)
+- [Linux Kernel](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-LinuxKernel)
+- [Root File System](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-RootFileSystem)
+  - [Debian 10](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-Debian10)
+  - [Ubuntu 20.04 LTS](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-Ubuntu20.04LTS)
+- [Setup microSD card](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-SetupmicroSDcard)
+- [Install Kernel and Root File System](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-InstallKernelandRootFileSystem)
+- [Copy Root File System](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-CopyRootFileSystem)
+- [Set uname_r in /boot/uEnv.txt](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-Setuname_rin/boot/uEnv.txt)
+- [Device Tree Binary](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-DeviceTreeBinary)
+- [Copy Kernel Image](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-CopyKernelImage)
+- [Copy Kernel Device Tree Binaries](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-CopyKernelDeviceTreeBinaries)
+- [Copy Kernel Modules](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-CopyKernelModules)
+- [File Systems Table (/etc/fstab)](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-FileSystemsTable(/etc/fstab))
+- [Remove microSD/SD card](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-RemovemicroSD/SDcard)
+- [Comments](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-Comments)
+
+
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
