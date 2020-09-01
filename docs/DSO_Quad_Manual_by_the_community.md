@@ -231,6 +231,8 @@ The DSO Quad is charged by connecting the USB cable. The LTC4054 battery control
 There are several versions of the DSO Quad, and the firmware for each is different. Please carefully identify your hardware. When you first turn on the DSO Quad, look for the hardware version. Compare what you see to the following table:
 
 Check here for the latest firmware: [DSO Quad Building Firmware](/DSO_Quad-Building_Firmware "DSO Quad Building Firmware")
+Here is the latest firmware under special contract with [FPGA(DFU，SYS，APP) v2.7.2](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/res/DS203.V2.72.zip).
+
 
 <table>
 <tr>
@@ -491,6 +493,12 @@ Note that the values on screen are 1/10 of the input, so please multiply by 10 i
 The DSO Quad can be charged from any normal USB port. Please charge your DSO Quad for at least 1 hour before using it.
 
 The DSO Quad firmware does a rapid USB disconnect-reconnect to do a "live" firmware update. This method is incompatible with Mac OS X or Linux. Please see [this forum thread](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1934) for more information.  See [DSO Quad Building Firmware](/DSO_Quad-Building_Firmware "DSO Quad Building Firmware") for how to upgrade firmware from Linux.
+
+
+## Resource
+[FPGA(DFU，SYS，APP) v2.7.2](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/res/DS203.V2.72.zip)
+
+
 
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
