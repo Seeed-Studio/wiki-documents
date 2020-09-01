@@ -138,7 +138,6 @@ aip build --board=<board>
 # aip build --board=wio_terminal
 ```
 
-**Note:** You can also use `aip build -list` to check the available boards.
 
 - To flash ArduPy Firmware into hardware:
 
@@ -299,7 +298,7 @@ import time
 
 time.ticks_ms()          # milliseconds counter
 start = time.ticks_us()  # microseconds counter
-time.ticks_diff(time.tickus(), start) # Measure the difference between counters
+time.ticks_diff(time.tick_us(), start) # Measure the difference between counters
 ```
 
 **Note:** You can use the **`TAB`** key to auto-suggest and see all the functions available.For example, after typing `time.`, press **`TAB`** to sell all the functions in time.
@@ -332,7 +331,7 @@ p3.value(1)             # Setting Pin 3 to HIGH using value method
 p5 = Pin(5, Pin.IN)     # Setting Pin 5 as input pin
 p5.value()              # Prints the value of the input pin
 
-p3 = Pin(3, Pin.OUT, value=1) # Setting Pin 3 as HIGH in one line
+p3 = Pin(3, Pin.OUT, value=1) # Setting Pin 3 as output pin and HIGH in one line
 p5 = Pin(5, Pin.IN, Pin.PULL_UP) # Setting Pin 5 as input with pull-up resistors
 ```
 
