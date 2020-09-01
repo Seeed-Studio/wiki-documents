@@ -127,7 +127,7 @@ Install  pcie driver as follows:
 
 1. Make sure the host system where you'll connect the module is shut down.
 
-2. Connect the Coral PCIe/M.2 module according to your host system recommendations.
+2. Connect the Coral PCIe module to your host system at the B Key M.2 interface(SATA_SSD M.2 interface not support the Coral module).
 
 3. Boot the system and make sure it has an internet connection. Then add our debian package repository to your system and install our pcie driver with these commands:
 
