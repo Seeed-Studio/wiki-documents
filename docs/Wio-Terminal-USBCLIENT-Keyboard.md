@@ -1,8 +1,20 @@
 # Using Wio Terminal as a Keyboard
 
-This repo introduces how to use the Wio Terminal as one of the USB device and in this example, Wio Terminal is used as a simple keyboard. It has assigned 3 keys `s`, `e`, `d` to the 3 buttons of Wio Terminal. This can be easily implemented into your design for more challenging tasks.
+This wiki introduces how to use the Wio Terminal as a simple keyboard. It has assigned the 3 keys `s`, `e`, `d` to the 3 buttons on the Wio Terminal. This can be easily implemented into your design for more challenging tasks.
+
+## Installing Libraries
+
+This example also requires an additional Arduino keyboard library:
+
+1. Visit the [Arduino Keyboard Library](https://github.com/arduino-libraries/Keyboard) repository and download the entire repo to your local drive.
+
+2. Now, the  library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Keyboard-master` file that you have just downloaded.
+
+![InstallLibrary](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Xnip2019-11-21_15-50-13.jpg)
 
 ## Complete Code
+
+For more functionality, please refer the official [keyboard functions](https://www.arduino.cc/reference/en/language/functions/usb/keyboard/) from Arduino.
 
 ```cpp
 #include "Keyboard.h" //keyboard library 
