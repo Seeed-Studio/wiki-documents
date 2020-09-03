@@ -23,13 +23,13 @@ As you all know, we have a weekly video series on YouTube named "Seeed Weekly Sh
 
 <p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/iDC2nIovkz4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
-### Wio Terminal Classroom
+### Wio Terminal Classroom with Ardupy 
 
-Recently we released a brand-new video tutorial show on Youtube named "Wio Terminal Classroom!"
-This is our 14th and the final episode of the first phase of the series and we thank you all for staying with us!
-In this show, Lakshantha explains how to use Wio terminal along with the software and present fun demos as well! By joining this show, you can get started with Wio Terminal quickly and easily! So we request you to stay tuned with our show and enjoy!
+We are excited to release the second edition of the Wio Terminal Classroom Series; Wio Terminal Classroom with Ardupy!
+This is our first episode of the second edition of the series and we thank you all for staying with us!
+In this show, Lakshantha explains how to use Wio terminal along with the Ardupy and present fun demos as well! By joining this show, you can get started with Wio Terminal quickly and easily! So we request you to stay tuned with our show and enjoy!
 
-<p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/JLrP058LDr8" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/9nuhsdrizps" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 
 Also, don't forget to subscribe to our [YouTube Channel](http://www.youtube.com/c/SeeedStudioSZ) to stay updated with our video releases on exciting products!
