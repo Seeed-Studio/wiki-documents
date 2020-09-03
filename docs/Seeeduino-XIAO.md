@@ -342,6 +342,7 @@ Now, simply click the "Upload" button in the environment. Wait a few seconds and
 
 - [SPI Communication Interface](https://wiki.seeedstudio.com/XIAO-SPI-Communication-Interface)
 
+- [How to unbrick a dead xiao using raspberry pi](https://forum.seeedstudio.com/t/how-to-unbrick-a-dead-xiao-using-raspberry-pi-guide-openocd/253990). Thanks John_Doe for sharing.
 
 ## Resourses
 
