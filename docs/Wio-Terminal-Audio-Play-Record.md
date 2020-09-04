@@ -253,6 +253,91 @@ void adjustMicLevel() {
 }
 ```
 
+## Peak Detection
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-Audio/peak-detect.gif"/></div>
+
+This example plays a music file from the MicroSD card and detects peak value of both channels and display on the Serial Monitor.
+
+- Same configurations as the *Playing Audio from SD Card* from above.
+
+- Upload the code, and you should be able to see the peaks of both channels of on the Serial Monitor, whilst the music is playing via the speaker.
+
+```cpp
+#include <Audio.h>
+#include <Wire.h>
+#include <SPI.h>
+#include <Seeed_FS.h>
+#include "SD/Seeed_SD.h"
+
+// GUItool: begin automatically generated code
+AudioPlaySdWav           playSdWav1;     //xy=422,359
+AudioAnalyzePeak         peak1;          //xy=611,306
+AudioAnalyzePeak         peak2;          //xy=612,396
+AudioOutputI2S           i2s1;           //xy=792,365
+AudioConnection          patchCord1(playSdWav1, 0, peak1, 0);
+AudioConnection          patchCord2(playSdWav1, 0, i2s1, 0);
+AudioConnection          patchCord3(playSdWav1, 1, peak2, 0);
+AudioConnection          patchCord4(playSdWav1, 1, i2s1, 1);
+AudioControlWM8960 wm8960;
+// GUItool: end automatically generated code
+
+void setup() {
+  Serial.begin(9600);
+  AudioMemory(10);
+  wm8960.enable();
+  // wm8960.outputSelect(HEADPHONE);
+  wm8960.volume(0.7);
+  while (!SD.begin(SDCARD_SS_PIN,SDCARD_SPI,10000000UL)) {
+      Serial.println("Card Mount Failed");
+      return;
+  }
+  delay(1000);
+}
+
+// for best effect make your terminal/monitor a minimum of 62 chars wide and as high as you can.
+elapsedMillis msecs;
+
+void loop() {
+  if (playSdWav1.isPlaying() == false) {
+    Serial.println("Start playing");
+    //playSdWav1.play("SDTEST1.WAV");
+    playSdWav1.play("SDTEST2.WAV");
+    //playSdWav1.play("SDTEST3.WAV");
+    //playSdWav1.play("SDTEST4.WAV");
+    delay(10); // wait for library to parse WAV info
+  }
+  
+  if (msecs > 40) {
+    if (peak1.available() && peak2.available()) {
+      msecs = 0;
+      float leftNumber = peak1.read();
+      float rightNumber = peak2.read();
+      int leftPeak = leftNumber * 30.0;
+      int rightPeak = rightNumber * 30.0;
+      int count;
+      for (count=0; count < 30-leftPeak; count++) {
+        Serial.print(" ");
+      }
+      while (count++ < 30) {
+        Serial.print("<");
+      }
+      Serial.print("||");
+      for (count=0; count < rightPeak; count++) {
+        Serial.print(">");
+      }
+      while (count++ < 30) {
+        Serial.print(" ");
+      }
+      Serial.print(leftNumber);
+      Serial.print(", ");
+      Serial.print(rightNumber);
+      Serial.println();
+    }
+  }
+}
+```
+
 ## Playing Audio with the LCD Display
 
 <div align=center><video width="560" height="315" controls>
