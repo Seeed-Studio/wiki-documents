@@ -441,3 +441,327 @@ void loop() {
   }
 }
 ```
+
+## Example Demos
+
+### Audio Spectrum Visualizer
+
+<div align=center><video width="560" height="315" controls>
+  <source src="https://files.seeedstudio.com/wiki/Wio-Terminal-Audio/Audio-Spectrum.mp4" type="video/mp4">
+</video></div>
+
+This is an example using the FFT function of the Audio Library to calculate and visualize Audio Spectrum.
+
+#### Feature
+
+- Audio Spectrum of Music
+
+- Press buttons to increase/decrease volume
+
+#### Complete Code
+
+```cpp
+#include <Audio.h>
+#include <Wire.h>
+#include <Seeed_FS.h>
+#include "SD/Seeed_SD.h"
+#include <TFT_eSPI.h> // Hardware-specific library
+#include <Bounce.h>
+
+// The display size and color to use
+const unsigned int matrix_width = 19;
+const unsigned int matrix_height = 12;
+
+// These parameters adjust the vertical thresholds
+const float maxLevel = 0.5;      // 1.0 = max, lower is more "sensitive"
+const float dynamicRange = 10.0; // total range to display, in decibels
+const float linearBlend = 0.4;   // useful range is 0 to 0.7
+
+// GUItool: begin automatically generated code
+AudioPlaySdWav           playSdWav1;     //xy=260,184
+AudioMixer4              mixer1;         //xy=505,238
+AudioOutputI2S           i2s2;           //xy=701,139
+AudioAnalyzeFFT1024      fft1024_1;      //xy=761,235
+AudioConnection          patchCord1(playSdWav1, 0, mixer1, 0);
+AudioConnection          patchCord2(playSdWav1, 0, i2s2, 0);
+AudioConnection          patchCord3(playSdWav1, 1, mixer1, 1);
+AudioConnection          patchCord4(playSdWav1, 1, i2s2, 1);
+AudioConnection          patchCord5(mixer1, fft1024_1);
+AudioControlWM8960 wm8960;
+// GUItool: end automatically generated code
+
+const int lowerFFTBins[] = {0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 15, 18, 22, 27, 32, 38, 45, 53, 63, 74, 87, 102, 119, 138, 160, 186, 216, 250, 289, 334, 385, 444};
+const int upperFFTBins[] = {0, 1, 2, 3, 4, 5, 7, 9, 11, 14, 17, 21, 26, 31, 37, 44, 52, 62, 73, 86, 101, 118, 137, 159, 185, 215, 249, 288, 333, 384, 443, 511};
+float thresholdVertical[matrix_height];
+float thresholdVert[matrix_height];
+
+float level;
+unsigned int x, y;
+const uint8_t gridSize = 10;
+float val = 0.7;
+
+Bounce buttonUp = Bounce(WIO_KEY_A, 8);
+Bounce buttonDown =   Bounce(WIO_KEY_C, 8);
+
+TFT_eSPI tft = TFT_eSPI();
+TFT_eSprite spr = TFT_eSprite(&tft);
+
+void setup() {
+  Serial.begin(115200);
+//  while (!Serial);
+
+  pinMode(WIO_KEY_A, INPUT_PULLUP);
+  pinMode(WIO_KEY_C, INPUT_PULLUP);
+
+  tft.begin();
+  tft.fillScreen(TFT_BLACK);
+  tft.setRotation(3);
+  tft.setTextSize(2);
+  tft.drawString("Audio Spectrum Visualiser", 10, 10);
+
+  AudioMemory(20);
+  computeVerticalLevels();
+
+  for (int i = 0; i < 8; i++) {
+    Serial.print("thresholdVertical ");
+    Serial.print(i);
+    Serial.print(" = ");
+    Serial.println(thresholdVertical[i]);
+  }
+  for (unsigned int j = 0; j < matrix_height; j++) {
+    thresholdVert[j] = thresholdVertical[matrix_height - j - 1];
+  }
+  wm8960.enable();
+//  wm8960.outputSelect(HEADPHONE);
+  wm8960.volume(val);
+  while (!SD.begin(SDCARD_SS_PIN, SDCARD_SPI, 16000000UL)) {
+    Serial.println("Card Mount Failed");
+    return;
+  }
+  playSdWav1.play("SDTEST2.WAV");
+  delay(20);
+  
+  fft1024_1.windowFunction(AudioWindowHanning1024);
+  
+  spr.createSprite(180, 320);
+  spr.fillSprite(TFT_BLACK);
+  tft.setRotation(2);
+}
+
+void loop() {
+    buttonUp.update();
+    buttonDown.update();
+    if (buttonUp.fallingEdge() && val < 1.0) {
+        val += 0.1;
+    }
+    if(buttonDown.fallingEdge() && val >= 0.1) {
+        val -= 0.1;
+    }
+    wm8960.volume(val);
+  
+    if (fft1024_1.available()) {
+        colorRainbow();
+        spr.pushSprite(0, 10);
+    }
+}
+
+void colorRainbow() {
+  for (x = 0; x < matrix_width; x++) {
+    level = fft1024_1.read(lowerFFTBins[x], upperFFTBins[x]);
+    for (y = 0; y < 12; y++) {
+      if (level >= thresholdVert[y]) {
+        spr.fillRect(y * 12, xy(x, y) * 2, gridSize, gridSize, Wheel(y * 24));
+        // Serial.println(xy(x, y));
+      }
+      else {
+        spr.fillRect(y * 12, xy(x, y) * 2, gridSize, gridSize, TFT_BLACK);
+      }
+    }
+  }
+}
+
+// Input a value 0 to 255 to get a color value.
+// The colours are a transition r - g - b - back to r.
+uint32_t Wheel(byte WheelPos) {
+  WheelPos = 255 - WheelPos;
+  if (WheelPos < 85) {
+    return color2color(255 - WheelPos * 3, 0, WheelPos * 3);
+  } else if (WheelPos < 170) {
+    WheelPos -= 85;
+    return color2color(0, WheelPos * 3, 255 - WheelPos * 3);
+  } else {
+    WheelPos -= 170;
+    return color2color(WheelPos * 3, 255 - WheelPos * 3, 0);
+  }
+}
+
+uint32_t color2color(uint8_t r, uint8_t g, uint8_t b) {
+  return ((uint32_t)r << 16) | ((uint32_t)g <<  8) | b;
+}
+
+unsigned int xy(unsigned int x, unsigned int y) {
+  return x * 8;
+}
+
+void computeVerticalLevels() {
+  unsigned int y;
+  float n, logLevel, linearLevel;
+
+  for (y = 0; y < matrix_height; y++) {
+    n = (float)y / (float)(matrix_height - 1);
+    logLevel = pow(n * -1.0 * (dynamicRange / 20.0), 10);
+    linearLevel = 1.0 - n;
+    linearLevel = linearLevel * linearBlend;
+    logLevel = logLevel * (1.0 - linearBlend);
+    thresholdVertical[y] = (logLevel + linearLevel) * maxLevel;
+  }
+}
+```
+
+### Mic Spectrum Visualizer
+
+<div align=center><video width="560" height="315" controls>
+  <source src="https://files.seeedstudio.com/wiki/Wio-Terminal-Audio/mic-spec.mp4" type="video/mp4">
+</video></div>
+
+This is an example using the Mics of ReSpeaker 2-Mic Hats and FFT calculations.
+
+#### Feature
+
+- Audio Spectrum of Mics
+
+#### Complete Code
+
+```cpp
+#include <Audio.h>
+#include <Wire.h>
+#include <Seeed_FS.h>
+#include "SD/Seeed_SD.h"
+#include <TFT_eSPI.h> // Hardware-specific library
+
+// The display size and color to use
+const unsigned int matrix_width = 19;
+const unsigned int matrix_height = 12;
+
+// These parameters adjust the vertical thresholds
+const float maxLevel = 0.6;      // 1.0 = max, lower is more "sensitive"
+const float dynamicRange = 10.0; // total range to display, in decibels
+const float linearBlend = 0.6;   // useful range is 0 to 0.7
+
+// GUItool: begin automatically generated code
+AudioInputI2S            i2s1;           //xy=376,203
+AudioMixer4              mixer1;         //xy=608,235
+AudioAnalyzeFFT1024      fft1024_1;      //xy=770,200
+AudioConnection          patchCord1(i2s1, 0, mixer1, 0);
+AudioConnection          patchCord2(i2s1, 1, mixer1, 1);
+AudioConnection          patchCord3(mixer1, fft1024_1);
+AudioControlWM8960 wm8960;
+// GUItool: end automatically generated code
+
+const int lowerFFTBins[] = {0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 15, 18, 22, 27, 32, 38, 45, 53, 63, 74, 87, 102, 119, 138, 160, 186, 216, 250, 289, 334, 385, 444};
+const int upperFFTBins[] = {0, 1, 2, 3, 4, 5, 7, 9, 11, 14, 17, 21, 26, 31, 37, 44, 52, 62, 73, 86, 101, 118, 137, 159, 185, 215, 249, 288, 333, 384, 443, 511};
+float thresholdVertical[matrix_height];
+float thresholdVert[matrix_height];
+
+float level;
+unsigned int x, y;
+const uint8_t gridSize = 10;
+
+TFT_eSPI tft = TFT_eSPI();
+TFT_eSprite spr = TFT_eSprite(&tft);
+
+void setup() {
+  Serial.begin(115200);
+  //  while (!Serial);
+
+  tft.begin();
+  tft.fillScreen(TFT_BLACK);
+  tft.setRotation(3);
+  tft.setTextSize(2);
+  tft.drawString("Mic Spectrum Visualiser", 20, 10);
+
+  AudioMemory(20);
+  computeVerticalLevels();
+
+  for (int i = 0; i < 8; i++) {
+    Serial.print("thresholdVertical ");
+    Serial.print(i);
+    Serial.print(" = ");
+    Serial.println(thresholdVertical[i]);
+  }
+  for (unsigned int j = 0; j < matrix_height; j++) {
+    thresholdVert[j] = thresholdVertical[matrix_height - j - 1];
+  }
+  wm8960.enable();
+  while (!SD.begin(SDCARD_SS_PIN, SDCARD_SPI, 16000000UL)) {
+    Serial.println("Card Mount Failed");
+    return;
+  }
+  delay(20);
+
+  fft1024_1.windowFunction(AudioWindowHanning1024);
+
+  spr.createSprite(180, 320);
+  spr.fillSprite(TFT_BLACK);
+  tft.setRotation(2);
+}
+
+void loop() {
+  if (fft1024_1.available()) {
+    colorRainbow();
+    spr.pushSprite(0, 10);
+  }
+}
+
+void colorRainbow() {
+  for (x = 0; x < matrix_width; x++) {
+    level = fft1024_1.read(lowerFFTBins[x], upperFFTBins[x]);
+    for (y = 0; y < 12; y++) {
+      if (level >= thresholdVert[y]) {
+        spr.fillRect(y * 12, xy(x, y) * 2, gridSize, gridSize, Wheel(y * 24));
+        // Serial.println(xy(x, y));
+      }
+      else {
+        spr.fillRect(y * 12, xy(x, y) * 2, gridSize, gridSize, TFT_BLACK);
+      }
+    }
+  }
+}
+
+// Input a value 0 to 255 to get a color value.
+// The colours are a transition r - g - b - back to r.
+uint32_t Wheel(byte WheelPos) {
+  WheelPos = 255 - WheelPos;
+  if (WheelPos < 85) {
+    return color2color(255 - WheelPos * 3, 0, WheelPos * 3);
+  } else if (WheelPos < 170) {
+    WheelPos -= 85;
+    return color2color(0, WheelPos * 3, 255 - WheelPos * 3);
+  } else {
+    WheelPos -= 170;
+    return color2color(WheelPos * 3, 255 - WheelPos * 3, 0);
+  }
+}
+
+uint32_t color2color(uint8_t r, uint8_t g, uint8_t b) {
+  return ((uint32_t)r << 16) | ((uint32_t)g <<  8) | b;
+}
+
+unsigned int xy(unsigned int x, unsigned int y) {
+  return x * 8;
+}
+
+void computeVerticalLevels() {
+  unsigned int y;
+  float n, logLevel, linearLevel;
+
+  for (y = 0; y < matrix_height; y++) {
+    n = (float)y / (float)(matrix_height - 1);
+    logLevel = pow(n * -1.0 * (dynamicRange / 20.0), 10);
+    linearLevel = 1.0 - n;
+    linearLevel = linearLevel * linearBlend;
+    logLevel = logLevel * (1.0 - linearBlend);
+    thresholdVertical[y] = (logLevel + linearLevel) * maxLevel;
+  }
+}
+```
