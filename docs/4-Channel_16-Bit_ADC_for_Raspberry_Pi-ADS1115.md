@@ -141,127 +141,74 @@ sudo raspi-config
 
 **Installation**
 
-!!! Caution
-		Please follow the steps strictly when installing, otherwise the installation may failed or even damage the module.
+- To check the I2C is enabled in Raspberry Pi.
 
-- **Step 1**. Power up Raspberry Pi.
-- **Step 2**. Open the terminal and type the following commands.
+Navigate to the `config.txt` file by running the following in the terminal:
 
-```C++
-cd ~
-git clone https://github.com/Seeed-Studio/pi-hats.git
-cd ~/pi-hats/tools
-sudo ./install.sh -u adc_ads1115
-sync
+```sh
+cd /boot
+sudo nano config.txt
 ```
 
-- **Step 3**. Power off Raspberry Pi.
-- **Step 4**. Insert the HAT to Raspberry Pi
-- **Step 5**. Power up Raspberry Pi.
+- Make sure there is line stating of `dtparam=i2c_arm=on` in the file.
 
-**List install status**
+- The default I2C speed is 100 kHz. You can increase it to 400 kHz like by adding the following line to the config file:
 
-```C++
-
- ./install.sh -l
-
+```sh
+dtparam=i2c_arm_baudrate=400000
 ```
 
-!!! Success
-		If your installation was successful, you should be able to see the following result.
+- Then to use the ads1115-overlay add the following to `config.txt`:
 
-```C++
-
-pi@raspberrypi:~/pi-hats $ ./install.sh -l
-adc_ads1115   : installed
-rtc_ds1307    : not installed
-rtc_ds3231    : not installed
-
+```sh
+dtoverlay=ads1115
 ```
 
+- After that you need to provide parameters to the overlay to configure the driver. To enable all 4 channels of the ADC in single-ended mode, add the following:
 
-**Uninstallation**
-
-```C++
-
-sudo ./install.sh -u
-
+```sh
+dtparam=cha_enable
+dtparam=chb_enable
+dtparam=chc_enable
+dtparam=chd_enable
 ```
 
+- Save the file and reboot your raspberry pi.
 
-## ADC Guide
+If you reboot the system with those changes to `config.txt` you will see the following kernel modules:
 
-![](https://files.seeedstudio.com/wiki/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/img/configuration.png) 
+- Run the following to check the kernel modules:
 
-channels 0-3 is differntial voltage, full scale range -2.048V - +2.048V 
+```sh
+lsmod | grep ads
+```
+<div align=center><img src="https://files.seeedstudio.com/wiki/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/img/1.png"/></div>
 
-channels 4-7 is absolute voltage of AIN0-AIN3, full scale range 0 - +2.048V
+!!!Note
+	Note that the ADS1115 uses the same kernel as ADS1015.
 
-Read AIN0(channel 4) voltage(unit mV).
-```bash
-    cat /sys/devices/platform/soc/*04000.i2c/i2c-1/1-0048/in4_input
+We can see that the ADS1115 is already there and can be used by Industrial IO.
+
+- Navigate to the Industrial IO folder:
+
+```sh
+cd /sys/bus/iio/devices/iio\:device0/
 ```
 
-|INPUT|channel|/sys/.../XXX|
-|------|------|------|
-|AIN0|4|in4_input|
-|AIN1|5|in5_input|
-|AIN2|6|in6_input|
-|AIN3|7|in7_input|
+<div align=center><img src="https://files.seeedstudio.com/wiki/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/img/2.png"/></div>
 
-Read all channels the same time.
-```bash
-    ./ads1115.sh
+- Now you may access these hardware config files easily:
+
+```sh
+cat in_voltage0-voltage1_raw
 ```
 
-Take [Grove - Sound Sensor](https://wiki.seeedstudio.com/Grove-Sound_Sensor/) as an example, if you use the grove cable to connect sound sensor with the ADC hat as shown below, it means you are using A0(channel four). Now, run the command ++./ads1115.s++ inside the terminal, you will be able to see the following result if it is reading data from the sound sensor.
+<div align=center><img src="https://files.seeedstudio.com/wiki/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/img/3.png"/></div>
 
-![](https://files.seeedstudio.com/wiki/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/img/connection.jpg) 
-
-```bash
-pi@raspberrypi:~/pi-hats $ ./ads1115.sh
-3f804000.i2c
-four channels' value are :
-1024
-,
-285
-,
-285
-,
-285
-four channels' value are :
-796
-,
-285
-,
-285
-,
-285
-four channels' value are :
-304
-,
-286
-,
-283
-,
-283
-four channels' value are :
-366
-,
-284
-,
-284
-,
-283
-^Cpi@raspberrypi:~/pi-hats $ 
-
-```
-
-!!!Success
-
-		You will be noticed that channel 5, 6, 7 is about fixed while channel 4 is reading some data.
+Channel 0 and 1 using scale of 0.1875mV. Measured potential difference is **17670 * 0.1875mv = 3.3V**
 
 
+This adding kernel method allows you to develop your own shell or python script using the ADS1115!
 
 ## Schematic Online Viewer
 
