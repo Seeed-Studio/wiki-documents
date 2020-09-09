@@ -1,10 +1,20 @@
 # Using Wio Terminal as a Mouse
 
-A demo for Wio Terminal to simulate mouse by buttons. Such as Mouse Up, Mouse Down, Mouse Left, Mouse Right, Click the left mouse button, Click the right mouse button, Up roll, Down roll and etc.
+This wiki introduces how to use the Wio Terminal as a simple mouse. This can be used to simulate mouse movements such as up,down,left and right. Furthermore left /right mouse button clicks, up/ down rolls can be implemented as well.
+
+## Installing Libraries
+
+This example also requires an additional Arduino mouse library:
+
+1. Visit the [Arduino Mouse Library](https://github.com/arduino-libraries/Mouse) repository and download the entire repo to your local drive.
+
+2. Now, the  library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Mouse-master` file that you have just downloaded.
+
+![InstallLibrary](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Xnip2019-11-21_15-50-13.jpg)
 
 ## Complete Code
 
-Please check the following code or from the github [here](https://github.com/Seeed-Studio/Seeed_Arduino_Sketchbook/blob/master/examples/WioTerminal_ButtonMouseControl/WioTerminal_ButtonMouseControl.ino).
+Please check the following code or from github [here](https://github.com/Seeed-Studio/Seeed_Arduino_Sketchbook/blob/master/examples/WioTerminal_ButtonMouseControl/WioTerminal_ButtonMouseControl.ino). Also, for more functionality, please refer to the official [mouse functions](https://www.arduino.cc/reference/en/language/functions/usb/mouse/) from Arduino.
 
 ```cpp
 /*    
