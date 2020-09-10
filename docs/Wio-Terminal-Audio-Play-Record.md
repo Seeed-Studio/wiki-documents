@@ -765,3 +765,61 @@ void computeVerticalLevels() {
   }
 }
 ```
+
+### Record and Play at Real Time
+
+<div align=center><video width="560" height="315" controls>
+  <source src="https://files.seeedstudio.com/wiki/Wio-Terminal-Audio/record-play.mp4" type="video/mp4">
+</video></div>
+
+This is an example of real-time recording and playing.
+
+#### Feature
+
+- Recording and Playing at real-time
+
+#### Complete Code
+
+```cpp
+#include <Audio.h>
+#include <Wire.h>
+#include <Seeed_FS.h>
+#include "SD/Seeed_SD.h"
+
+// GUItool: begin automatically generated code
+AudioInputI2S            i2s1;           //xy=274,186
+AudioRecordQueue         queue1;         //xy=550,172
+AudioPlayQueue           queue2;         //xy=550,220
+AudioOutputI2S           i2s2;           //xy=769,208
+AudioConnection          patchCord1(i2s1, 0, queue1, 0);
+AudioConnection          patchCord2(queue2, 0, i2s2, 0);
+AudioConnection          patchCord3(queue2, 0, i2s2, 1);
+AudioControlWM8960 wm8960;
+// GUItool: end automatically generated code
+
+const int myInput = AUDIO_INPUT_MIC;
+
+void setup() {
+  Serial.begin(9600);
+//  while (!Serial);
+  AudioMemory(20);
+  wm8960.enable();
+  wm8960.inputSelect(myInput);
+  wm8960.volume(0.9);
+  //  wm8960.outputSelect(HEADPHONE);
+  queue1.begin();
+}
+
+void loop() {
+  if (queue1.available() >= 2)
+  {
+    // Recording buffer
+    byte buffer[256];
+    memcpy(buffer, queue1.readBuffer(), 256);
+    queue1.freeBuffer();
+    // Playing buffer
+    queue2.getBuffer();
+    queue2.playBuffer();
+  }
+}
+```
