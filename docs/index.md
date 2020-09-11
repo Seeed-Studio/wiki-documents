@@ -13,7 +13,7 @@ We will bring you all these wiki updates in a weekly basis. So stay tuned with u
 
 Last week we introduced [how to use the Audio library](https://wiki.seeedstudio.com/Wio-Terminal-Audio-Play-Record/) with [Wio Terminal](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) using [ReSpeaker 2-Mic Hat](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT.html). With the help of this library, you are able to record, play and analysis audio using Wio Terminal! Now we bring you three demos; [Audio Spectrum Visualizer](https://wiki.seeedstudio.com/Wio-Terminal-Audio-Play-Record/#audio-spectrum-visualizer), [Mic Spectrum Visualizer](https://wiki.seeedstudio.com/Wio-Terminal-Audio-Play-Record/#mic-spectrum-visualizer), [Record and play in real-time](https://wiki.seeedstudio.com/Wio-Terminal-Audio-Play-Record/#record-and-play-at-real-time). We hope you will have fun with these demos!
 
-<p style="text-align:center;"><video width="900" height="auto" controls><source src="https://files.seeedstudio.com/wiki/Wio-Terminal-Audio/Audio-Spectrum.mp4"></video></p>
+<p style="text-align:center;"><video width="720" height="auto" controls><source src="https://files.seeedstudio.com/wiki/Wio-Terminal-Audio/Audio-Spectrum.mp4"></video></p>
 
 ### 2. 4-Channel 16-Bit ADC for Raspberry Pi (ADS1115) usage on the New Raspberry Pi OS
 
