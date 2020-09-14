@@ -842,10 +842,10 @@ void loop() {
   Serial.println(sensorValue);
 
   if (sensorValue < 200) {
-    digitalWrite(ledPin, LOW);
+    digitalWrite(ledPin, HIGH);
   }
   else {
-    digitalWrite(ledPin, HIGH);
+    digitalWrite(ledPin, LOW);
   }
 
   delay(200);
