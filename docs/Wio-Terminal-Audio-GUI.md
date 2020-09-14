@@ -8,7 +8,7 @@ This wiki introduces how to use the **Audio System Design Tool** to design a aud
 
 ## Getting Started
 
-- Visit the [**Audio System Design Tool**](https://seeed-studio.github.io/Seeed_Arduino_Audio/) here.
+- Visit the [**Audio System Design Tool**](https://seeed-studio.github.io/Seeed_Arduino_Audio/) here. For more information about this, please also visit [teensy](https://www.pjrc.com/teensy/).
 
 - Once you are on the site, you should see all the **available features of the Audio library to the left column**.
 
