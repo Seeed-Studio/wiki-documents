@@ -197,7 +197,7 @@ nav:
             - LTE Modules: ODYSSEY-X86J4105-LTE-Module.md
           - ODYSSEY STM32MP157C: ODYSSEY-STM32MP157C.md
           - SEEED SOM STM32MP157C: SEEED-SOM-STM32MP157C.md
-      
+
       - ArduPy:
           - ArduPy Wiki: ArduPy.md
           - ArduPy LCD API Reference: ArduPy-LCD.md
@@ -241,6 +241,7 @@ nav:
           - Audio:
             - Overview: Wio-Terminal-Audio-Overview.md
             - Play and Record: Wio-Terminal-Audio-Play-Record.md
+            - Audio System Design Tool: Wio-Terminal-Audio-GUI.md
           - IMU:
             - Overview: Wio-Terminal-IMU-Overview.md
             - Getting Started: Wio-Terminal-IMU-Basic.md
@@ -355,7 +356,7 @@ nav:
           - Spartan Edge Accelerator Board: Spartan-Edge-Accelerator-Board.md
           - W5500 Ethernet Shield v1.0: W5500_Ethernet_Shield_v1.0.md
 
-          
+
       - Wio Tracker:
           - Wio Tracker Introduction: Wio_Tracker.md
           - Wio LTE Cat.1: Wio_LTE_Cat.1.md
@@ -379,7 +380,7 @@ nav:
           - Wio Lite W600: Wio-Lite-W600.md
           - Wio Lite MG126: Wio-Lite-MG126.md
           - Wio Lite RISC V GD32VF103 with ESP8266: Wio_Lite_RISC_V_GD32VF103_with_ESP8266.md
-      
+
       - Arch:
           - Arch_Mix.md
 
@@ -600,8 +601,8 @@ nav:
           - Grove - 12 bit Magnetic Rotary Position Sensor(AS5600): Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600.md
           - Grove - Turbidity Sensor Meter for Arduino V1.0: Grove-Turbidity-Sensor-Meter-for-Arduino-V1.0.md
           - Grove - TDS Sensor: Grove-TDS-Sensor.md
-          
-          
+
+
       - Actuator:
           # - Actuator Introduction: Actuator.md
           - Grove - 2-Coil Latching Relay: Grove-2-Coil_Latching_Relay.md
@@ -647,7 +648,7 @@ nav:
           - Grove - 4-Digit Display: Grove-4-Digit_Display.md
           - Grove - 0.54 inch Red Dual Alphanumeric Display: Grove-0.54_inch_Red_Dual_Alphanumeric_Display.md
           - Grove - 0.54 inch Red Quad Alphanumeric Display: Grove-0.54_inch_Red_Quad_Alphanumeric_Display.md
-          - Grove - 16x2 LCD: Grove-16x2_LCD_Series.md          
+          - Grove - 16x2 LCD: Grove-16x2_LCD_Series.md
           - Grove - Circular LED: Grove-Circular_LED.md
           - Grove - LCD RGB Backlight: Grove-LCD_RGB_Backlight.md
           - Grove - LED Bar: Grove-LED_Bar.md
