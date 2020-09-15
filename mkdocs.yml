@@ -301,6 +301,8 @@ nav:
             - Wio Terminal Initial Firmware (Retro Gaming): Wio-Terminal-Firmware.md
             - CircuitPython with Wio Terminal: Wio-Terminal-CircuitPython.md
             - How to Use Wio Terminal as RTL8720DN Dev Board: Wio-Terminal-8720-dev.md
+            - How to measure noise levels with Wio Terminal: Wio-Terminal-Sound-Meter.md
+            - Pressure sensor using the Wio terminal: Barometric-Pressure-sensor-using-the-Wio-terminal.md
 
       - ReSpeaker:
           - ReSpeaker Introduction: ReSpeaker.md
