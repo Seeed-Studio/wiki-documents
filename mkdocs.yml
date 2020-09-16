@@ -238,6 +238,7 @@ nav:
             - Overview: Wio-Terminal-Network-Overview.md
             - Wi-Fi: Wio-Terminal-Wi-Fi.md
             - Connecting to Microsoft Azure IoT: Wio-Terminal-Azure-IOT.md
+            - Ethernet: Wio-Terminal-Ethernet.md
           - Bluetooth:
             - Overview: Wio-Terminal-Bluetooth-Overview.md
           - Audio:
