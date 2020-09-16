@@ -10,7 +10,7 @@ This wiki introduces how to use the Audio library with Wio Terminal using [**ReS
 
 - [**ReSpeaker 2-Mics Pi HAT**](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT.html)
 
-- *ReSpeaker 2-Mics Pi HAT Adapter board for Wio Terminal (Not released yet)*
+- *40 Pin Pi HAT Adapter board for Wio Terminal (Not released yet)*
 
 ## Hardware Connection
 
