@@ -361,9 +361,9 @@ void loop() {
 
 This also provides a simple testing sketch using the set-up.
 
->This is the screenshot of ping-ing the web server 200 times.
+>This is the screenshot of ping-ing the web server over 10 hours.
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-Ethernet/serverTest.png"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-Ethernet/moretest.png"/></div>
 
 - Under the same network, use your computer to ping the server's IP:
 
