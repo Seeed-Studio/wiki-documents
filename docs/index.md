@@ -7,14 +7,14 @@ It's the third week of September and we are back with "Seeed Weekly Wiki Updates
 As you all know, Seeed Wiki is a dedicated platform where we provide the proper guidance and support you need when getting started with our products. We put a lot of effort to make this platform more user friendly because we want to enable the learning of electronics in a more systematic approach.  
 We will bring you all these wiki updates in a weekly basis. So stay tuned with us and don't forget to visit this page again next week!
 
-## Existing Wiki Added
+<!-- ## Existing Wiki Added
 
 ### 1. ODYSSEY - X86J4105 BIOS and Embedded Controller Update
 
 We have a [tutorial](https://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-OS/) to explain how to create a bootable USB drive and install Linux OS(Ubuntu Desktop 18.04) onto the [ODYSSEY - X86J4105](https://www.seeedstudio.com/tag/ODYSSEY-X86J4105.html).
 Now we have updated the [BIOS](https://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-OS/#step-1-download-the-newest-version-of-bios) and the [Embedded Controller](https://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-OS/#latest-ec-firmware). 
 
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-OS/"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/InstallingOS/biosDone.png" alt="pir"  width="900" height="auto"></a></p>
+<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-OS/"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/InstallingOS/biosDone.png" alt="pir"  width="900" height="auto"></a></p> -->
 
 ## New Wiki Added
 

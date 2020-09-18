@@ -80,26 +80,26 @@ BIOS is also like an OS and can be upgraded to fix bugs and enhance performance 
 
 - **Latest BIOS:**
 
-**SD-BS-CJ41G-M-101-G 08/31/2020 14:01:20**
+<!-- **SD-BS-CJ41G-M-101-G 08/31/2020 14:01:20**
 
 - **SHA256:** 3d816657e0391bfeb64dcd1d6f99b8c958e8ce377e4abe0bd71cb1da2c226bde
 
 1. Under BIOS Menu, **Setup** -> **Chipset** -> **Fan Control**, added **Always On** options.
 
->**History BIOS:**
+>**History BIOS:** -->
 
->**[SD-BS-CJ41G-M-101-E 01/07/2020 14:03:11](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-BS-CJ41G-M-101-E.zip)**
+**[SD-BS-CJ41G-M-101-E 01/07/2020 14:03:11](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-BS-CJ41G-M-101-E.zip)**
 
->- **SHA256:** 98bb25d6d32250fb10bf047f5902630b82a8560020fb4336d7723b4dfb3f9df2
+- **SHA256:** 98bb25d6d32250fb10bf047f5902630b82a8560020fb4336d7723b4dfb3f9df2
 
->1. Fix the problem of incomplete display of startup Seeed logo screen.
+1. Fix the problem of incomplete display of startup Seeed logo screen.
 
-!!!Note
-        Latest BIOS support **auto-flash feature**, where you only need to place the files in the **root location of FAT32 format USB** and **select the USB-drive as boot up** option. It will automatic enters flashing.
+<!-- !!!Note
+        Latest BIOS support **auto-flash feature**, where you only need to place the files in the **root location of FAT32 format USB** and **select the USB-drive as boot up** option. It will automatic enters flashing. -->
 
 ### Step 1 - Download the newest version of BIOS
 
-Download the latest version of BIOS from [**here**](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-BS-CJ41G-M-101-G.zip).
+Download the latest version of BIOS from [**here**](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-BS-CJ41G-M-101-E.zip).
 
 ### Step 2 -  Prepare bootable USB
 
@@ -141,7 +141,7 @@ When the BIOS is upgraded, reboot the ODYSSEY - X86J4105(Switch on and off the p
 
 ***Note: The first boot up from the BIOS upgrade is relatively long, please be patient to wait, and the installed OS will launch eventually.***
 
-## How to update the Embedded Controller
+<!-- ## How to update the Embedded Controller
 
 The X86 also has a embedded controller that can be updated. Updating the EC has the same procedure as updating BIOS(auto-update):
 
@@ -159,7 +159,7 @@ The X86 also has a embedded controller that can be updated. Updating the EC has 
 
 - **SHA256:** 4b7ed82357eb608c3ec00f6f5f0358a35e63b327ae33855eb5e7608814f8df6a
 
-1. Optimize the problem of incorrect starting and turning temperature of the Fan.
+1. Optimize the problem of incorrect starting and turning temperature of the Fan. -->
 
 ## Notes
 
