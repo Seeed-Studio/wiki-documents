@@ -61,27 +61,32 @@ The example code
 #include <BLEScan.h>
 #include <BLEAdvertisedDevice.h>
 #include "Seeed_erpcUnified.h"
+
 int scanTime = 5; //In seconds
 BLEScan* pBLEScan;
 class MyAdvertisedDeviceCallbacks: public BLEAdvertisedDeviceCallbacks {
     void onResult(BLEAdvertisedDevice advertisedDevice) {
-      Serial.printf("Advertised Device: %s \n", advertisedDevice.toString()c_str());
+      Serial.printf("Advertised Device: %s \n", advertisedDevice.toString().c_str());
     }
 };
 void setup() {
     Serial.begin(115200);
+//    while(!Serial);
     Serial.printf("Scanning...");
+    
+    BLEDevice::init("");
     pBLEScan = BLEDevice::getScan(); //create new scan
-    pBLEScan->setAdvertisedDeviceCallbacks(new MyAdvertisedDeviceCallbacks();
+    pBLEScan->setAdvertisedDeviceCallbacks(new MyAdvertisedDeviceCallbacks());
     pBLEScan->setActiveScan(true); 
     pBLEScan->setInterval(100);
     pBLEScan->setWindow(99);  // less or equal setInterval value
+}
+    
 void loop() {
     BLEScanResults foundDevices = pBLEScan->start(scanTime, false);
     Serial.print("Devices found: ");
     Serial.println(foundDevices.getCount());
     pBLEScan->clearResults();  
-}
 }
 ```
 
