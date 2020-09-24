@@ -1,4 +1,4 @@
-# Client and Server introduction
+# Client and Server Introduction
 
 This wiki introduces Client and server communicate function via BLE using the Wio terminal.
 
@@ -14,7 +14,7 @@ This wiki introduces Client and server communicate function via BLE using the Wi
 
 ## **Overview**
 
-### **what is Client and Server**
+### **what is client and server**
 
 - The client made a request to the Server for data communication which allows a device to wirelessly exchange data with other Bluetooth devices.
 - The server provides data services to the Client, it encapsulates data through characteristic. Multiple characteristics form a Service, therefore service is a basic BLE application.
@@ -28,11 +28,14 @@ This wiki introduces Client and server communicate function via BLE using the Wi
 
 The Wio terminal with Bluetooth Low Energy can act as either server and client. The server advertises its existence. And it can be found by other devices and it contains the data that the client can read. The BLE supports two types of modes such as Broadcast mode and Mesh network mode. In broadcast mode, the server transmits data to many clients that are connected and in a mesh network mode, all the devices are connected.
 
-![Wio terminal and nRF connect APP](https://files.seeedstudio.com/wiki/wio%20terminal%20bluetooth/BLE%20AND%20Wio_PIC.png)
+
+<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/wio%20terminal%20bluetooth/BLE%20AND%20Wio_PIC.png"/></div>
+
+
 
 Both server and client have a “SERVICE UUID” to make a connection between server and client. Inside this service, there can be several “characteristics” which are defined by characteristic UUID’s. We use two characteristics TX and RX to send data to and receive data from the client. The ESP32 (acting as the server) “notifies” the client via the TX characteristic UUID and data is sent to the Wio terminal and received via the RX characteristic UUID. However, since there is sending and receiving, TX on the Wio terminal is actually RX on the Android app.
 
-### **nRF Connect APP Usage**
+### **nRF Connect APP usage**
 
 The nRF connect APP is used to search the BLE device of UUID and MAC address when you have not idea what the UUID and MAC address of the device is, also it is able to communicate with BLE device.
 
@@ -43,18 +46,19 @@ The nRF connect APP is used to search the BLE device of UUID and MAC address whe
 
 There are BLE devices scanned by the nRF Connect APP.
 
-![scan BLE devices result](https://files.seeedstudio.com/wiki/wio%20terminal%20bluetooth/nRF-device-scan.png)
+<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/wio%20terminal%20bluetooth/nRF-device-scan.png"/></div>
+
 
 
 On the characteristic, that has up arrow which is mean sent to data to the server, and down arrow means to receive the data from the server.
 
-![scan BLE devices result](https://files.seeedstudio.com/wiki/wio%20terminal%20bluetooth/interface.png)
+<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/wio%20terminal%20bluetooth/interface.png"/></div>
 
 
 The interface option is according to the devices function, for example, i was connected to a Wio terminal(server) with a simple function, so there are only have one Service UUID with difference function characteristic, it depends on the complicacy of the equipment.
 
 
-## **BLE Client Usage**
+## **BLE Client usage**
 
 This example the Wio terminal as Client to search around all the BLE devices, and then display the BLE devices name and MAC address via BLE.
 
@@ -239,9 +243,8 @@ void loop() {
 
 This is a simple Client code demonstration without connecting any devices, the Wio terminal scan around BLE devices and displays the devices. 
 
-![UUID](https://files.seeedstudio.com/wiki/wio%20terminal%20bluetooth/BLE-device-print.png)
 
-
+<div align=center><img width = 500 src="https://files.seeedstudio.com/wiki/wio%20terminal%20bluetooth/BLE-device-print.png"/></div>
 
 
 
@@ -319,13 +322,13 @@ We made a simple test in this example, the Wio terminal Client connects with the
 
  When upload and running **The server code**, you will see it keep printing "unpaired" on the Arduino IDE monitor before connect the Client.
 
-
-![UUID](https://files.seeedstudio.com/wiki/wio%20terminal%20bluetooth/Server_side3.png)
+<div align=center><img width = 500 src="https://files.seeedstudio.com/wiki/wio%20terminal%20bluetooth/Server_side3.png"/></div>
 
 
 After connected to the Client, it will stop print message and the Client will print message from server. 
 
-![UUID](https://files.seeedstudio.com/wiki/wio%20terminal%20bluetooth/Client_side7.png)
+<div align=center><img width = 500 src="https://files.seeedstudio.com/wiki/wio%20terminal%20bluetooth/Client_side7.png"/></div>
+
 
 
 ## Server code
@@ -393,10 +396,148 @@ void loop() {
 }
 ```
 
+## Server connect to Client of Smartphone
+
+<div align=center><video width="560" height="315" controls>
+  <source src="https://www.youtube.com/watch?v=CqAL6sZyfnE&ab_channel=%E6%96%BD%E5%A5%8B%E7%86%A0" type="video/mp4">
+</video></div>
+
+This example is using a smartphone as a Client to connect the Wio terminal(server), and the Wio terminal is able to receive the message from the Client.
+
+- Download the nRF connect APP on the Phone.
+- Upload the code on the Wio terminal.
+- Open the nRF connect APP to search the Wio terminal and then connect it.
+
+!!!note
+    Check the device name on the code, that will help you search it.
 
 
 
 
+```cpp
+#include <BLEDevice.h>
+#include <BLEServer.h>
+#include <BLE2902.h>
+#include <TFT_eSPI.h> // Hardware-specific library
+#include <SPI.h>
+TFT_eSPI tft = TFT_eSPI();       // Invoke custom library
+TFT_eSprite spr = TFT_eSprite(&tft);  // Sprite 
+
+BLEServer *pServer = NULL;
+BLECharacteristic * pTxCharacteristic;
+bool deviceConnected = false;
+bool oldDeviceConnected = false;
+String Value11;
+
+#define SERVICE_UUID           "6E400001-B5A3-F393-E0A9-E50E24DCCA9E" // UART service UUID
+#define CHARACTERISTIC_UUID_RX "6E400002-B5A3-F393-E0A9-E50E24DCCA9E"
+#define CHARACTERISTIC_UUID_TX "6E400003-B5A3-F393-E0A9-E50E24DCCA9E"
+
+class MyServerCallbacks: public BLEServerCallbacks {
+    void onConnect(BLEServer* pServer) {
+      deviceConnected = true;
+      spr.fillSprite(TFT_BLACK);
+      spr.createSprite(240, 100);
+      spr.setTextColor(TFT_WHITE, TFT_BLACK);
+      spr.setFreeFont(&FreeSansBoldOblique12pt7b);
+      spr.drawString("Message: ", 20, 70);
+      spr.setTextColor(TFT_GREEN, TFT_BLACK);
+      spr.drawString("status: connected",10 ,5); 
+      spr.pushSprite(0, 0);
+    };
+
+    void onDisconnect(BLEServer* pServer) {
+      deviceConnected = false;
+      Serial.print("123123");
+      spr.fillSprite(TFT_BLACK);
+      spr.createSprite(240, 100);
+      spr.setTextColor(TFT_WHITE, TFT_BLACK);
+      spr.setFreeFont(&FreeSansBoldOblique12pt7b);
+      spr.drawString("Message: ", 20, 70);
+      spr.setTextColor(TFT_RED, TFT_BLACK);
+      spr.drawString("status: disconnect",10 ,5); 
+      spr.pushSprite(0, 0);
+    }
+};
+
+class MyCallbacks: public BLECharacteristicCallbacks {
+    void onWrite(BLECharacteristic *pCharacteristic) {
+      std::string rxValue = pCharacteristic->getValue();
+        
+        if (rxValue.length() > 0) {
+        spr.fillSprite(TFT_BLACK);
+        spr.setTextColor(TFT_WHITE, TFT_BLACK);
+        spr.setFreeFont(&FreeSansBoldOblique9pt7b);
+        for (int i = 0; i < rxValue.length(); i++){
+//           Serial.print(rxValue[i]);
+           spr.drawString((String)rxValue[i],10 + i*15,0);
+        spr.pushSprite(10, 100);
+        }
+       }
+    }
+};
+
+void setup() {
+  tft.begin();
+  tft.init();
+  tft.setRotation(3);
+  tft.fillScreen(TFT_BLACK);
+  
+  BLEDevice::init("UART Servicess");  //device name define
+
+  // Create the BLE Server
+  pServer = BLEDevice::createServer();
+  pServer->setCallbacks(new MyServerCallbacks());
+
+  // Create the BLE Service
+  BLEService *pService = pServer->createService(SERVICE_UUID);
+
+  // Create a BLE Characteristic
+  pTxCharacteristic = pService->createCharacteristic(
+                    CHARACTERISTIC_UUID_TX,
+                    BLECharacteristic::PROPERTY_NOTIFY | BLECharacteristic::PROPERTY_READ
+                  );
+  pTxCharacteristic->setAccessPermissions(GATT_PERM_READ);      
+  pTxCharacteristic->addDescriptor(new BLE2902());
+
+  BLECharacteristic * pRxCharacteristic = pService->createCharacteristic(
+                       CHARACTERISTIC_UUID_RX,
+                      BLECharacteristic::PROPERTY_WRITE
+                      
+                    );
+  pRxCharacteristic->setAccessPermissions(GATT_PERM_READ | GATT_PERM_WRITE);           
+
+  pRxCharacteristic->setCallbacks(new MyCallbacks());
+
+  // Start the service
+  pService->start();
+
+  // Start advertising
+  pServer->getAdvertising()->start();
+      spr.fillSprite(TFT_BLACK);
+      spr.createSprite(240, 100);
+      spr.setTextColor(TFT_WHITE, TFT_BLACK);
+      spr.setFreeFont(&FreeSansBoldOblique12pt7b);
+      spr.drawString("status: disconnect",10 ,5); 
+      spr.drawString("Message: ", 20, 70);
+      spr.pushSprite(0, 0);
+}
+
+void loop() {
+
+    // disconnecting
+    if (!deviceConnected && oldDeviceConnected) {
+        delay(500); // give the bluetooth stack the chance to get things ready
+        pServer->startAdvertising(); // restart advertising
+        oldDeviceConnected = deviceConnected;
+    }
+    // connecting
+    if (deviceConnected && !oldDeviceConnected) {
+    // do stuff here on connecting
+        oldDeviceConnected = deviceConnected;
+    }
+}
+```
 
 
 
