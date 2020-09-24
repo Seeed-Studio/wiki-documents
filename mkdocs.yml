@@ -241,7 +241,7 @@ nav:
             - Ethernet: Wio-Terminal-Ethernet.md
           - Bluetooth:
             - Overview: Wio-Terminal-Bluetooth-Overview.md
-            - Client and Server applications: Wio-terminal-BLE-application.md 
+            - Client and Server introduction: Wio-terminal-BLE-introduction.md 
           - Audio:
             - Overview: Wio-Terminal-Audio-Overview.md
             - Play and Record: Wio-Terminal-Audio-Play-Record.md
