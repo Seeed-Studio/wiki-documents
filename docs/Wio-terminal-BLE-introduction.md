@@ -30,7 +30,7 @@ This wiki introduces Client and server communicate function via BLE using the Wi
 
 The Wio terminal with Bluetooth Low Energy can act as either server and client. The server advertises its existence. And it can be found by other devices and it contains the data that the client can read. The BLE supports two types of modes such as Broadcast mode and Mesh network mode. In broadcast mode, the server transmits data to many clients that are connected and in a mesh network mode, all the devices are connected.
 
-Both server and client have a “SERVICE UUID” to make a connection between server and client. Inside this service, there can be several “characteristics” which are defined by characteristic UUID’s. We use two characteristics TX and RX to send data to and receive data from the client. The ESP32 (acting as the server) “notifies” the client via the TX characteristic UUID and data is sent to the Wio terminal and received via the RX characteristic UUID. However, since there is sending and receiving, TX on the Wio terminal is actually RX on the Android app.
+Both server and client have a “SERVICE UUID” to make a connection between server and client. Inside this service, there can be several “characteristics” which are defined by characteristic UUID’s. We use two characteristics TX and RX to send data to and receive data from the client. The Wio terminal (acting as the server) “notifies” the client via the TX characteristic UUID and data is sent to the Wio terminal and received via the RX characteristic UUID. However, since there is sending and receiving, TX on the Wio terminal is actually RX on the Android app.
 
 ### **nRF Connect APP usage**
 
