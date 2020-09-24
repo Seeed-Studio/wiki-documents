@@ -3,6 +3,8 @@
 This wiki introduces Client and server communicate function via BLE using the Wio terminal.
 
 
+<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/wio%20terminal%20bluetooth/Wio-nRF.png"/></div>
+
 ## **Hardware required**
 
 - [**Wio terminal**](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)
@@ -27,11 +29,6 @@ This wiki introduces Client and server communicate function via BLE using the Wi
 ### **BLE Server on Wio terminal** 
 
 The Wio terminal with Bluetooth Low Energy can act as either server and client. The server advertises its existence. And it can be found by other devices and it contains the data that the client can read. The BLE supports two types of modes such as Broadcast mode and Mesh network mode. In broadcast mode, the server transmits data to many clients that are connected and in a mesh network mode, all the devices are connected.
-
-
-<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/wio%20terminal%20bluetooth/BLE%20AND%20Wio_PIC.png"/></div>
-
-
 
 Both server and client have a “SERVICE UUID” to make a connection between server and client. Inside this service, there can be several “characteristics” which are defined by characteristic UUID’s. We use two characteristics TX and RX to send data to and receive data from the client. The ESP32 (acting as the server) “notifies” the client via the TX characteristic UUID and data is sent to the Wio terminal and received via the RX characteristic UUID. However, since there is sending and receiving, TX on the Wio terminal is actually RX on the Android app.
 
@@ -398,9 +395,8 @@ void loop() {
 
 ## Server connect to Client of Smartphone
 
-<div align=center><video width="560" height="315" controls>
-  <source src="https://www.youtube.com/watch?v=CqAL6sZyfnE&ab_channel=%E6%96%BD%E5%A5%8B%E7%86%A0" type="video/mp4">
-</video></div>
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/wio%20terminal%20bluetooth/vidoeh-GIF.gif"/></div>
 
 This example is using a smartphone as a Client to connect the Wio terminal(server), and the Wio terminal is able to receive the message from the Client.
 
