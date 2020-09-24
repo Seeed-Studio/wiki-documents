@@ -328,7 +328,7 @@ After connected to the Client, it will stop print message and the Client will pr
 
 
 
-## Server code
+### Server code
 ```cpp
 #include <BLEDevice.h>
 #include <BLEServer.h>
@@ -408,7 +408,7 @@ This example is using a smartphone as a Client to connect the Wio terminal(serve
     Check the device name on the code, that will help you search it.
 
 
-
+### **Code** 
 
 ```cpp
 #include <BLEDevice.h>
