@@ -448,7 +448,7 @@ void loop(void)
 
 ### 3.4 OTAA
 
-- Step 1. Please refer to [User Manual](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/res/%5BRHF-UM01649%5DIoT%20Discovery%20User%20Manual-seeed-v2.1.pdf) Session 3.2.3 to setup the gateway. 
+- Step 1. Please refer to [User Manual](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/res/RHF-UM01649 IoT Discovery User Manual-seeed-v2.1.pdf) Session 3.2.3 to setup the gateway. 
 - Step 2. For seeeduino Lorawan, Please open your Arduino IDE and click on **File > Examples > LoRaWAN > OTAA** and refer the code.
 
 ```c++
