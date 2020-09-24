@@ -32,6 +32,27 @@ The Wio terminal with Bluetooth Low Energy can act as either server and client. 
 
 Both server and client have a “SERVICE UUID” to make a connection between server and client. Inside this service, there can be several “characteristics” which are defined by characteristic UUID’s. We use two characteristics TX and RX to send data to and receive data from the client. The ESP32 (acting as the server) “notifies” the client via the TX characteristic UUID and data is sent to the Wio terminal and received via the RX characteristic UUID. However, since there is sending and receiving, TX on the Wio terminal is actually RX on the Android app.
 
+### **nRF Connect APP Usage**
+
+The nRF connect APP is used to search the BLE device of UUID and MAC address when you have not idea what the UUID and MAC address of the device is, also it is able to communicate with BLE device.
+
+- Download the [**nRF Connect APP**](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en) on your smartphone.
+- Scan the BLE device.
+- Find out the BLE device and connect it, then you will see the UUID and MAC address.
+- You can sent or revice the data on the Characteristic.
+
+There are BLE devices scanned by the nRF Connect APP.
+
+![scan BLE devices result](https://files.seeedstudio.com/wiki/wio%20terminal%20bluetooth/nRF-device-scan.png)
+
+
+On the characteristic, that has up arrow which is mean sent to data to the server, and down arrow means to receive the data from the server.
+
+![scan BLE devices result](https://files.seeedstudio.com/wiki/wio%20terminal%20bluetooth/interface.png)
+
+
+The interface option is according to the devices function, for example, i was connected to a Wio terminal(server) with a simple function, so there are only have one Service UUID with difference function characteristic, it depends on the complicacy of the equipment.
+
 
 ## **BLE Client Usage**
 
@@ -41,11 +62,12 @@ This example the Wio terminal as Client to search around all the BLE devices, an
 - Setup the Server UUID and MAC address on the code.
 - Upload the [**Client code**](https://github.com/Seeed-Studio/Seeed_Arduino_rpcBLE/blob/master/examples/BLE_client/BLE_client.ino) on the Wio terminal.
 
+### Client code snippet
 
-In the code, we need to put the UUID and characteristic UUID service of the server which you want to connect.
+In the code, we need to put the UUID and characteristic UUID service of the server which you want to connect that device.
 
 !!!note
-    If you do not konw the UUID of device, please go to the **nRF Connect APP** page.
+    If you do not konw the MAC address and UUID of device, please go to the **nRF Connect APP** page.
 
 ```cpp
 // The remote service we wish to connect to.
@@ -57,12 +79,32 @@ static BLEUUID    charUUID(0x2A19);
 !!!Note 
     The UUID of code was defined by us and it just for the test, Normally The UUID format for commercial products is different to present, for example, xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx.
 
-Define the MAC address of the device you want to connect.
+Update the MAC address of the device you want to connect that device on the code.
+
 ```cpp
-uint8_t bd_addr[6] = {0x7d, 0x18, 0x1b, 0xf1, 0xf7, 0x2c};
+uint8_t bd_addr[6] = {0x7d, 0x18, 0x1b, 0xf1, 0xf7, 0x2c}; // MAC address: 2c:f7:f1:1b:18:7d
 ```
+
 !!!Note
-    A Bluetooth MAC address is designed to be unique and is traceable to the chip manufacturer.
+    A Bluetooth MAC address is designed to be unique and is traceable to the chip manufacturer, in addition, you need put the MAC address in reverse order.
+
+Connect to the remove BLE Server.
+```cpp
+pClient->connect(myDevice);
+```
+
+Obtain a reference to the service we are after in the remote BLE server.
+
+```cpp
+BLERemoteService* pRemoteService = pClient->getService(serviceUUID);
+```
+
+Obtain a reference to the characteristic in the service of the remote BLE server.
+
+```cpp
+pRemoteCharacteristic = pRemoteService->getCharacteristic(charUUID);
+```
+
 
 ### **Client code**
 
@@ -145,6 +187,7 @@ bool connectToServer() {
     return true;
 }
 
+//Scan for BLE servers and find the first one that advertises the service we are looking for.
 class MyAdvertisedDeviceCallbacks: public BLEAdvertisedDeviceCallbacks {
   void onResult(BLEAdvertisedDevice advertisedDevice) {
     Serial.print("BLE Advertised Device found: ");
@@ -192,45 +235,22 @@ void loop() {
 ```
 
 
-### **BLE Devices information**
+### **Code running result**
+
+This is a simple Client code demonstration without connecting any devices, the Wio terminal scan around BLE devices and displays the devices. 
 
 ![UUID](https://files.seeedstudio.com/wiki/wio%20terminal%20bluetooth/BLE-device-print.png)
 
 
 
-### **nRF Connect APP Usage**
 
-The nRF connect APP is used to search the BLE device of UUID and MAC address when you have not idea what the UUID and MAC address of the device is, also it is able to communicate with BLE device.
-
-- Download the [**nRF Connect APP**](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en) on your smartphone.
-- Scan the BLE device.
-- Find out the BLE device and connect it, then you will see the UUID and MAC address.
-- You can sent or revice the data on the Characteristic.
-
-There are BLE devices scanned by the nRF Connect APP.
-
-![scan BLE devices result](https://files.seeedstudio.com/wiki/wio%20terminal%20bluetooth/nRF-device-scan.png)
-
-
-On the characteristic, that has up arrow which is mean sent to data to the server, and down arrow means to receive the data from the server.
-
-![scan BLE devices result](https://files.seeedstudio.com/wiki/wio%20terminal%20bluetooth/interface.png)
-
-
-The interface option is according to the devices function, for example, i was connected to a Wio terminal(server) with a simple function, so there are only have one Service UUID with difference function characteristic, it depends on the complicacy of the equipment.
 
 ## **BLE Server Usage**
 
 This example the Wio terminal as Server to connect the other Wio terminal(Client), and then receive the Client require via BLE.
 
-- You need two Wio terminals.
-- You need to create the UUID to provide Client to connect it.
- - Please download the [**Client**](https://github.com/Seeed-Studio/Seeed_Arduino_rpcBLE/tree/master/examples/BLE_client) and [**Server**](https://github.com/Seeed-Studio/Seeed_Arduino_rpcBLE/tree/master/examples/BLE_server) code in this **github**.
- - Upload the Client code in the Wio terminal.
- - Upload the Server code in the other Wio terminal.
 
-
-### **Code Snippet**
+### **Server code Snippet**
 
 You can define the BLE device name as below:
 
@@ -274,8 +294,7 @@ Read and write function.
   BLEDescriptor *pDescriptor = pCharacteristic->createDescriptor(
                                          DESCRIPTOR_UUID,
                                           ATTRIB_FLAG_VOID | ATTRIB_FLAG_ASCII_Z,
-                                         GATT_PERM_READ | GATT_PERM_WRITE,
-                                         2
+                                         GATT_PERM_READ | GATT_PERM_WRITE,2
                                          );
 ```
 
@@ -291,14 +310,14 @@ BLEAdvertising *pAdvertising = BLEDevice::getAdvertising();
 ### **Client and server commnication**
 We made a simple test in this example, the Wio terminal Client connects with the Wio terminal Server, when Client found the server then they will connect meanwhile server will text Client a message.
 
- - You will need two Wio terminals.
- - Please download the [**Client**](https://github.com/Seeed-Studio/Seeed_Arduino_rpcBLE/tree/master/examples/BLE_client) and [**Server**](https://github.com/Seeed-Studio/Seeed_Arduino_rpcBLE/tree/master/examples/BLE_server) code in this **github**.
-
- - Upload the Client code in the one of Wio terminal
- - Upload the Server code in the other one.
+- You need two Wio terminals.
+- You need to create the UUID to provide Client to connect it.
+- Please download the [**Client**](https://github.com/Seeed-Studio/Seeed_Arduino_rpcBLE/tree/master/examples/BLE_client) and [**Server**](https://github.com/Seeed-Studio/Seeed_Arduino_rpcBLE/tree/master/examples/BLE_server) code in this **github**.
+- Upload the Client code in the Wio terminal.
+- Upload the Server code in the other Wio terminal.
  
 
- **The server** will keep printing "unpaired" before connect the Client.
+ When upload and running **The server code**, you will see it keep printing "unpaired" on the Arduino IDE monitor before connect the Client.
 
 
 ![UUID](https://files.seeedstudio.com/wiki/wio%20terminal%20bluetooth/Server_side3.png)
