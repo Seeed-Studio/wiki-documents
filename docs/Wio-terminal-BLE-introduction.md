@@ -3,7 +3,7 @@
 This wiki introduces Client and server communicate function via BLE using the Wio terminal.
 
 
-<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/wio%20terminal%20bluetooth/Wio-nRF.png"/></div>
+<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/wio%20terminal%20bluetooth/Wio-connect.png"/></div>
 
 ## **Hardware required**
 
