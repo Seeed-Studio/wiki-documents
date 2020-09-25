@@ -37,12 +37,12 @@
       {% endif %}
     {% endblock %}
     {% block libs %}
-      <script src="https://wiki.seeedstudio.com/assets/javascripts/modernizr-1df76c4e58.js"></script>
+      <script src="https://wiki.seeedstudio.com/assets/javascripts/modernizr-seeed101.js"></script>
     {% endblock %}
     {% block styles %}
-      <link rel="stylesheet" href="https://wiki.seeedstudio.com/assets/stylesheets/application-769c285a91.css">
+      <link rel="stylesheet" href="https://wiki.seeedstudio.com/assets/stylesheets/application-seeed101.css">
       {% if config.extra.palette %}
-        <link rel="stylesheet" href="https://wiki.seeedstudio.com/assets/stylesheets/application-02c2a4388f.palette.css">
+        <link rel="stylesheet" href="https://wiki.seeedstudio.com/assets/stylesheets/application-seeed101.palette.css">
       {% endif %}
     {% endblock %}
     {% block fonts %}
@@ -154,7 +154,7 @@
       {% endblock %}
     </div>
     {% block scripts %}
-      <script src="https://wiki.seeedstudio.com/assets/javascripts/application-c35428f87f.js"></script>
+      <script src="https://wiki.seeedstudio.com/assets/javascripts/application-seeed101.js"></script>
       {% set languages = lang.t("search.languages").split(",") %}
       {% if languages | length and languages[0] != "" %}
         {% set path = base_url + "/assets/javascripts/lunr" %}
