@@ -15,7 +15,7 @@ Same configuration as updating network firmware, Please follow [**this guide**](
 
 ### Bluetooth Firmware Files
 
-Download the Bluetooth Firmware Files from **[here](https://files.seeedstudio.com/wiki/Wio-Terminal-BLE/20200914-seeed-ambd-firmware-rpc-v1.0.0.zip)**
+Download the Bluetooth Firmware Files from **[here](https://files.seeedstudio.com/wiki/Wio-Terminal-BLE/20200925-seeed-ambd-firmware-rpc-v1.1.0.zip)**
 
 ## Libraries Installations
 
