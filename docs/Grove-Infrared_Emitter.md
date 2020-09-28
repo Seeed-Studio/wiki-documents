@@ -20,8 +20,6 @@ The Infrared Emitter is used to transmit infrared signals through an infrared LE
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-Infrared-Emitter-p-993.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
 
 
-
-
 ## Version
 
 Product Version | Changes |	Released Date
@@ -31,11 +29,12 @@ Grove - Infrared Emitter v1.1	| Change the Infrared transmitting tube location  
 Grove - Infrared Emitter v1.2	| Change the valnue of C1 to make the power more stable  |	Dec. 14 2016
 
 ## Application
+
 - Infrared remote control units with high power requirements
 - Free air transmission systems
 - Infrared source for optical counters and card readers
 
-##　Specification
+## Specification
 
 | Parameter               | Value/Range   |
 |-------------------------|---------------|
@@ -50,8 +49,6 @@ Grove - Infrared Emitter v1.2	| Change the valnue of C1 to make the power more s
 !!!Tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
     
-
-
 
 ## Platforms Supported
 
@@ -122,149 +119,108 @@ The Grove - Infrared Emitter can send data while Grove - Infrared Receiver will 
 
 #### Software
 
-- **Step 1.** Download the  [IRSendRev-master library](https://github.com/Seeed-Studio/Seeed_Arduino_IRSendRev)  from Github.
+- **Step 1.** Download the  [Seeed_Arduino_IR](https://github.com/Seeed-Studio/Seeed_Arduino_IR) from Github.
 
 - **Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
-- **Step 3.** Restart the Arduino IDE. Open `recv` example via the path: **File->Examples->Grove - Infrared Receiver  And Emitter->recv**. 
+Copy the following **Send Example Code** to the Arduino IDE:
 
-![](https://files.seeedstudio.com/wiki/Grove-Infrared_Receiver/img/path.png)
-
-
-Or you can open a new sketch and copy the belowing code into your Arduino IDE.
+**Send Example Code:**
 
 ```c++
+/* send.ino Example sketch for IRLib2
+ *  Illustrates how to send a code.
+ */
+#include <IRLibSendBase.h>    // First include the send base
+//Now include only the protocols you wish to actually use.
+//The lowest numbered protocol should be first but remainder 
+//can be any order.
+#include <IRLib_P01_NEC.h>    
+#include <IRLib_P02_Sony.h>   
+#include <IRLibCombo.h>     // After all protocols, include this
+// All of the above automatically creates a universal sending
+// class called "IRsend" containing only the protocols you want.
+// Now declare an instance of that sender.
 
-#include <IRSendRev.h>
+IRsend mySender;
 
-#define BIT_LEN         0
-#define BIT_START_H     1
-#define BIT_START_L     2
-#define BIT_DATA_H      3
-#define BIT_DATA_L      4
-#define BIT_DATA_LEN    5
-#define BIT_DATA        6
+#define IR_SEND_PWM_PIN D3
 
-const int pinRecv = 2;              // ir receiver connect to D2
-
-void setup()
-{
-    Serial.begin(115200);
-    IR.Init(pinRecv);
-    Serial.println("init over");
+void setup() {
+  Serial.begin(9600);
+  delay(2000); while (!Serial); //delay for Leonardo
+  Serial.println(F("Every time you press a key is a serial monitor we will send."));
 }
 
-unsigned char dta[20];
+void loop() {
+  if (Serial.read() != -1) {
+    //send a code every time a character is received from the 
+    // serial port. You could modify this sketch to send when you
+    // push a button connected to an digital input pin.
+    //Substitute values and protocols in the following statement
+    // for device you have available.
+    mySender.send(SONY,0xa8bca, 20);//Sony DVD power A8BCA, 20 bits
+    //mySender.send(NEC,0x61a0f00f,0);//NEC TV power button=0x61a0f00f
+    Serial.println(F("Sent signal."));
+  }
+}
 
-void loop()
-{
-    if(IR.IsDta())                  // get IR data
-    {
-        IR.Recv(dta);               // receive data to dta
+```
 
-        Serial.println("+------------------------------------------------------+");
-		Serial.print("LEN = ");
-        Serial.println(dta[BIT_LEN]);
-        Serial.print("START_H: ");
-        Serial.print(dta[BIT_START_H]);
-        Serial.print("\tSTART_L: ");
-        Serial.println(dta[BIT_START_L]);
-        
-        Serial.print("DATA_H: ");
-        Serial.print(dta[BIT_DATA_H]);
-        Serial.print("\tDATA_L: ");
-        Serial.println(dta[BIT_DATA_L]);
-        
-        Serial.print("\r\nDATA_LEN = ");
-        Serial.println(dta[BIT_DATA_LEN]);
-        
-		Serial.print("DATA: ");
-        for(int i=0; i<dta[BIT_DATA_LEN]; i++)
-        {
-            Serial.print("0x");
-            Serial.print(dta[i+BIT_DATA], HEX);
-            Serial.print("\t");
-        }
-        Serial.println();
-		
-		Serial.print("DATA: ");
-        for(int i=0; i<dta[BIT_DATA_LEN]; i++)
-        {
-            Serial.print(dta[i+BIT_DATA], DEC);
-            Serial.print("\t");
-        }
-        Serial.println();
-        Serial.println("+------------------------------------------------------+\r\n\r\n");
+Copy the following **Receive Example Code** to the Arduino IDE:
+
+**Receive Example Code:**
+
+
+```cpp
+/* rawR&cv.ino Example sketch for IRLib2
+ *  Illustrate how to capture raw timing values for an unknow protocol.
+ *  You will capture a signal using this sketch. It will output data the 
+ *  serial monitor that you can cut and paste into the "rawSend.ino"
+ *  sketch.
+ */
+// Recommend only use IRLibRecvPCI or IRLibRecvLoop for best results
+#include <IRLibRecvPCI.h> 
+
+IRrecvPCI myReceiver(2);//pin number for the receiver
+
+void setup() {
+  Serial.begin(9600);
+  delay(2000); while (!Serial); //delay for Leonardo
+  myReceiver.enableIRIn(); // Start the receiver
+  Serial.println(F("Ready to receive IR signals"));
+}
+
+void loop() {
+  //Continue looping until you get a complete signal received
+  if (myReceiver.getResults()) { 
+    Serial.println(F("Do a cut-and-paste of the following lines into the "));
+    Serial.println(F("designated location in rawSend.ino"));
+    Serial.print(F("\n#define RAW_DATA_LEN "));
+    Serial.println(recvGlobal.recvLength,DEC);
+    Serial.print(F("uint16_t rawData[RAW_DATA_LEN]={\n\t"));
+    for(bufIndex_t i=1;i<recvGlobal.recvLength;i++) {
+      Serial.print(recvGlobal.recvBuffer[i],DEC);
+      Serial.print(F(", "));
+      if( (i % 8)==0) Serial.print(F("\n\t"));
     }
+    Serial.println(F("1000};"));//Add arbitrary trailing space
+    myReceiver.enableIRIn();      //Restart receiver
+  }
 }
-
 ```
-
-- **Step 4.** Upload the `recv` demo to the seeeduino with Grove - Infrared Receiver. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
-
-- **Step 5.** Open `send` example via the path: **File->Examples->Grove - Infrared Receiver  And Emitter->send**. 
-
-Or you can open a new sketch and copy the belowing code into your Arduino IDE.
-
-```
-#include <IRSendRev.h>
-
-#define BIT_LEN         0
-#define BIT_START_H     1
-#define BIT_START_L     2
-#define BIT_DATA_H      3
-#define BIT_DATA_L      4
-#define BIT_DATA_LEN    5
-#define BIT_DATA        6
-
-const int ir_freq = 38;                 // 38k
-
-unsigned char dtaSend[20];
-
-void dtaInit()
-{
-    dtaSend[BIT_LEN]        = 11;			// all data that needs to be sent
-    dtaSend[BIT_START_H]    = 179;			// the logic high duration of "Start"
-    dtaSend[BIT_START_L]    = 90;			// the logic low duration of "Start"
-    dtaSend[BIT_DATA_H]     = 11;			// the logic "long" duration in the communication
-    dtaSend[BIT_DATA_L]     = 33;			// the logic "short" duration in the communication
-    
-    dtaSend[BIT_DATA_LEN]   = 6;			// Number of data which will sent. If the number is other, you should increase or reduce dtaSend[BIT_DATA+x].
-    
-    dtaSend[BIT_DATA+0]     = 128;			// data that will sent
-    dtaSend[BIT_DATA+1]     = 127;
-    dtaSend[BIT_DATA+2]     = 192;
-    dtaSend[BIT_DATA+3]     = 63;
-	dtaSend[BIT_DATA+4]     = 192;
-    dtaSend[BIT_DATA+5]     = 63;
-}
-
-void setup()
-{
-    dtaInit();
-}
-
-void loop()
-{
-    IR.Send(dtaSend, 38);
-    
-    delay(2000);
-}
-
-
-```
-
-- **Step 6.** Upload the `send` demo to the seeeduino with Grove - Infrared Emitter. 
-
 
 - **Step 7.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time.
 
+For the **Send Example**, the Serial should be like this:
 
-If every thing goes well, The result should be like:
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-Infrared_Emitter/img/send.png"/></div>
 
+For the **Receive Example**, the Serial Monitor should be like this:
 
-![](https://files.seeedstudio.com/wiki/Grove-Infrared_Emitter/img/results.png)
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-Infrared_Emitter/img/recv.png"/></div>
 
+> For more advanced usage of the library, please check [Seeed_Arduino_IR](https://github.com/Seeed-Studio/Seeed_Arduino_IR).
 
 ## Schematic Online Viewer
 
