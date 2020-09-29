@@ -181,7 +181,7 @@ Please download and install the Arduino IDE according to your operating system.
 <b id="step3">Step 3.</b> Add library for Seeeduino Lotus
 
 - Open Arduino | Preferences, from the preferences window under settings page find Additional Boards Manager URLS, copy & paste the Library URL into the text box, then press ok to take effect.
-Library URL:	https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_seeeduino_boards_index.json
+Library URL:	https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_legacy_seeeduino_boards_index.json
 
 ![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/ard1.png)![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/ard2.png)![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_Arduino/img/ard3.png)
 
