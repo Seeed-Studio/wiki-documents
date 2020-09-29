@@ -132,7 +132,7 @@ In theory, Grove AI HAT can be compatible with all Grove modules, but inevitably
 Click **File --> Preference**, copy the following URL into the **Additional Boards Manager URLs**
 
 ```
-https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_seeeduino_boards_index.json
+https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_legacy_seeeduino_boards_index.json
 
 ``` 
 
