@@ -37,7 +37,7 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
      The board mentioned above from Seeeduino V3 to RePhone Series isn't the AT SAMD21 Microcontroller series,Please copy the below url to *Additional Boards Manager URLs* in the step2.
 
 ```c
-https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_seeeduino_boards_index.json
+https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_legacy_seeeduino_boards_index.json
 
 ```
 
@@ -62,7 +62,7 @@ Open your Arudino IDE, click on **File > Preferences**, and copy below url to *A
 
 Click on **Toos > Board > Board Manager**.
 
-![](https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/img/board_manager.png)
+![](https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_legacy_seeeduino_boards_index.json)
 
 
 Now you can search the board by name, if you need to use `LinkIt ONE`, then just search `LinkIt`; and if you need to use `RePhone Series`,
@@ -79,7 +79,7 @@ After Step 3 was successful, a board named Seeeduino Stalker V3 will show up at 
 
 Click on **Tools > Board**, *Seeeduino Stalker V3* is available now. 
 
-![](https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/img/stalker_board.png)
+![](https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_legacy_seeeduino_boards_index.json)
 
 
 
