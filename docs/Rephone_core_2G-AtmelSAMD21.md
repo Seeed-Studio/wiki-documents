@@ -105,7 +105,7 @@ Open your Arduino IDE, and click on **File > Preferences**
 Copy blow code to **Additional Boards Manager URLs**, and then **OK**
 
 ```c
-https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_seeeduino_boards_index.json
+https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_legacy_seeeduino_boards_index.json
 ```
 
 ![](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/img/setting.png)
