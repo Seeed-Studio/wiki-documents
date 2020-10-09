@@ -1057,7 +1057,7 @@ For more information, please also visit [How to install Arduino Libraries](https
 #include <Arduino.h>
 #include <U8x8lib.h>
 
-U8X8_SSD1306_128X64_ALT0_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);
+U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);
 
 void setup(void) {
   u8x8.begin();
@@ -1092,7 +1092,7 @@ Note that `#include`, similar to `#define`, has no semicolon terminator, and the
 **#include** is an instruction that introduces a header file. Here we use the U8x8lib.h library.
 
 ```cpp
-U8X8_SSD1306_128X64_ALT0_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);
+U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);
 ```
 
 **Description:**
@@ -1242,7 +1242,7 @@ The host then receives the data sent from the device, and the host terminates th
 #define DHTTYPE DHT11   // DHT 11 
 DHT dht(DHTPIN, DHTTYPE);
 
-U8X8_SSD1306_128X64_ALT0_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);
+U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);
 
 void setup(void) {
   Serial.begin(9600); 

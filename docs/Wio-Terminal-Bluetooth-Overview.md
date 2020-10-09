@@ -31,6 +31,6 @@ Download the Bluetooth Firmware Files from **[here](https://files.seeedstudio.co
 
 ### Installing the Seeed_Arduino_rpcUnified
 
-1. Visit the [Seeed_Arduino_rpcUnified](https://github.com/Seeed-Studio/Seeed_Arduino_rpcBLE) repositories and download the entire repo to your local drive.
+1. Visit the [Seeed_Arduino_rpcUnified](https://github.com/Seeed-Studio/Seeed_Arduino_rpcUnified) repositories and download the entire repo to your local drive.
 
 2. Now, the  library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_rpcUnified` file that you've have just downloaded.
