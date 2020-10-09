@@ -35,7 +35,7 @@ It supports all the SAMD boards by Seeed:
 
 ### 1. Installing the DAPLink Arduino Libraries
 
-1. Visit the [**Seeed_Arduino_DAPLink**](https://github.com/Seeed-Studio/Seeed_Arduino_DAPLink) repositories and download the entire repo to your local drive.
+1. Visit the [**Seeed_Arduino_DAPLink**](https://github.com/Seeed-Studio/Seeed_Arduino_DAPLink/tree/eebd1283b82a81b1223207ed01198e4f08b88f06) repositories and download the entire repo to your local drive.
 
 2. Now, the Seeed_Arduino_DAPLink library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_DAPLink` file that you've have just downloaded.
 
