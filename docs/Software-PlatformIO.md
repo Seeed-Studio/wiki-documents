@@ -198,6 +198,28 @@ lib_extra_dirs = /Users/{username}/Documents/Arduino/libraries
 
 For more Library options, please see [**PlatformIO Library docs**](https://docs.platformio.org/en/latest/projectconf/section_env_library.html).
 
+## Using the Latest ArduinoCore Library for Seeed
+
+The ArduinoCore in PlatformIO is maintained by PlatformIO itself and sometimes, it is not up to date with the latest released version from Seeed. In this case, you may use the following `platform.ini`, for Example:
+
+```ini
+; PlatformIO Project Configuration File
+;
+;   Build options: build flags, source filter
+;   Upload options: custom upload port, speed and extra flags
+;   Library options: dependencies, extra library storages
+;   Advanced options: extra scripting
+;
+; Please visit documentation for the other options and examples
+; https://docs.platformio.org/page/projectconf.html
+
+[env:seeed_wio_terminal]
+platform = atmelsam
+board = seeed_wio_terminal
+framework = arduino
+platform_packages = framework-arduino-samd-seeed@https://github.com/Seeed-Studio/ArduinoCore-samd.git
+```
+
 ## Other Useful Features of PlatformIO
 
 - [Serial Monitors](https://docs.platformio.org/en/latest/integration/ide/vscode.html#serial-port-monitor)
