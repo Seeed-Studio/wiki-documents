@@ -12,18 +12,19 @@ sku: 102080027
 ![](https://files.seeedstudio.com/wiki/Arch_Mix/img/main1.jpg)
 
 
-Arch Mix is a thin, lightweight development board based on NXP i.MX RT1052 processor(3020 CoreMark/1284 DMIPS @ 600 MHz). This development board comes pre-installed RT-Thread real-time operating system and built-in micro-python. Which makes it suitable for industrial control, especially for scenes with large code and high real-time application requirements.
+Arch Mix is a thin, lightweight development board based on NXP i.MX RT1052 processor(3020 CoreMark/1284 DMIPS @ 600 MHz). Which makes it suitable for industrial control, especially for scenes with large code and high real-time application requirements.
 
 The i.MX RT1052 is a new processor family featuring NXP’s advanced implementation of the Arm Cortex®-M7 core. Currently, the i.MX RT1052 is the highest performing Cortex-M7 solution delivering 3036 CoreMarks, which is 13 times better than the LPC1788 microcontroller. In addition to the high-speed performance it provides fast real-time responsiveness. The i.MX RT1050 also has rich audio and video features, including LCD display, basic 2D graphics, camera interface, SPDIF, and I2S audio interface.
 
-The RT-Thread is an open source IoT operating system for embedded devices. The kernel has real-time multi-task scheduling, semaphore, mutex, mail box, message queue, signal etc. This is a lightweight system that loads quickly. For more detail about the RTOS, please refer to the [Github Page](https://github.com/RT-Thread/rt-thread).
-
-
-
 <p style=":center"><a href="https://www.seeedstudio.com/Arch-Mix-p-2901.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
-
-
+<div class="tips" style="display: table; table-layout: fixed; background-color: #F5A9A9; height: auto;  width: 100%;">
+<div class="left-icon" style="display: table-cell; vertical-align: middle; background-color: #DF0101; padding-top: 10px; box-sizing: border-box; height: auto; width: 38px; text-align: center;"><img style="width: 26px; vertical-align: middle;" src="https://s3-us-west-2.amazonaws.com/static.seeed.cc/seeed/icon/Danger.svg" alt="attention icon" /></div>
+<div class="right-desc" style="display: table-cell; vertical-align: middle; padding-left: 15px; box-sizing: border-box; width: calc(95% - 38px);">
+<p style="color: #000000; font-weight: bold; margin-top: 10px;">Attention</p>
+<p style="color: #000000; font-size: 14px;">The Initial Firmware of Arch Mix is RT-Thread which is depreciated, please follow this wiki to flash the Arduino Bootloader into Arch Mix and use it as Arduino Dev board.</p>
+</div>
+</div>
 
 ## Application Ideas
 
@@ -38,8 +39,6 @@ The RT-Thread is an open source IoT operating system for embedded devices. The k
 ## Feature
 
 - ARM® Cortex®-M7 600MHz microcontroller(NXP i.MX RT1052)
-- Comes with real-time operating system RT-Thread
-- Build-in micro-python
 - Ultra-fast system loading speed
 - Rich peripheral interface: RMII, CAN, I2C, UART, CSI, I2S, ADC, SPDIF IN/OUT, SWD
 - Smaller than other Demo boards of RT1052/1050: 67mm x 39mm
@@ -201,230 +200,159 @@ As you can see, there is a 50 pin LCD Interface on this board, it Support up to 
 </figure>
 </div>
 
+## Flashing Arduino Bootloader to Arch Mix
 
+You can now flash the **Arduino bootloader** to the Arch Mix and use it like a Arduino board! This may be one the of most powerful (Cortex M7) Arduino board in the market.
 
+### Switch Settings
 
+Make sure it is running from the **QSPI** where switches are in order:
 
+- **0010**
 
+### Hardware Required
 
-## Hardware Connection
+- Arch Mix x 1
 
+- **J-Link Debug Probes** x 1
 
-**Materials required**
+### Getting Started
 
+- Download and install the [**J-Flash**](https://www.segger.com/products/debug-probes/j-link/tools/j-flash/about-j-flash/) software from the official site according to your PC's OS.
 
-[Arch Mix x1](https://www.seeedstudio.com/Arch-Mix-p-2901.html)<br> 
-[USB to Serial (TTL) Module&Adapter x1](https://www.seeedstudio.com/PL2303-USB-to-Serial-TTL-Module-Adapter-p-2358.html)<br> 
-[Micro USB Cable X1](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)  
-[Dual-female jumper x4](https://www.seeedstudio.com/1-pin-dual-female-jumper-wire-100mm-50pcs-pack-p-260.html)
+- Find the **installed path of J-Flash** and make the following changes.
 
+- Navigate the installed location: `SEGGER/JLink_V686/Devices/NXP/iMXRT105x`.
 
+>For example, for macOS, my installed path is : `/Applications/SEGGER/JLink_V686/Devices/NXP/iMXRT105x` 
 
-- **Step 1.** Connect Arch Mix and USB to Serial (TTL) Module&Adapter using the Dual-female jumper.
+- Download and unzip the **[iMXRT105x.zip](https://files.seeedstudio.com/wiki/Arch_Mix/res/iMXRT105x.zip)**, paste and replace the files into this path.
 
+<div align=center><img src="https://files.seeedstudio.com/wiki/Arch_Mix/img/1.png"/></div>
 
-Module|PIN Connection||||
----|---|---|---|---
-Arch Mix|VCC|GND|TXD|RXD
-USB to Serial Module|VCC|GND|RX|TX
+- Navigate back to the root location of `SEGGER/JLink_V686` and there should be a file named **`JLinkDevices.xml`**. Open the file with editor and search `NXP_iMXRT105x_` and you should see there are some options. Copy and paste the following code to the same section as indicated in the diagram:
 
-<div align="center"><b>Table 4.</b><i>UART connection</i></div>
-
-
-<div align="center">
-<figure>
-  <p style=":center"><a href="https://files.seeedstudio.com/wiki/Arch_Mix/img/UART.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/Arch_Mix/img/UART.jpg" /></a></p>
-  <figcaption><b>Figure 6</b>. <i>UART Connection</i></figcaption>
-</figure>
-</div>
-
-
-- **Step 2.** Plug the USB to Serial Module to your computer.
-
-- **Step 3.** Power Arch Mix through the OTG port. The on-board Power LED will light up and RGB LED will turn green.
-
-<div align="center">
-<figure>
-  <p style=":center"><a href="https://files.seeedstudio.com/wiki/Arch_Mix/img/RTT1.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/Arch_Mix/img/on.jpg" /></a></p>
-  <figcaption><b>Figure 7</b>. <i>Power On</i></figcaption>
-</figure>
-</div>
-
-
-- **Step 4.** Open your **Computer Management**, find **Device Manager**. You will see The **RT-Thread Debug Bridge** and the correponding COM port, keep in mind the COM port number. As you can see, this tutorial is COM8.
-
-<div align="center">
-<figure>
-  <p style=":center"><a href="https://files.seeedstudio.com/wiki/Arch_Mix/img/RTT1.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/Arch_Mix/img/RTT1.jpg" /></a></p>
-  <figcaption><b>Figure 8</b>. <i>Check the COM port, ckick the image to view the original file</i></figcaption>
-</figure>
-</div>
-
-- **Step 5.** Use the serial port tool (For example: [Putty](https://www.putty.org/)) to read the serial port data.  Select the corresponding port, set the baud rate to **115200**.
-
-
-
-<div align="center">
-<figure>
-  <p style=":center"><a href="https://files.seeedstudio.com/wiki/Arch_Mix/img/COM22.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/Arch_Mix/img/COM22.jpg" /></a></p>
-  <figcaption><b>Figure 9</b>. <i>Configure the serial tool</i></figcaption>
-</figure>
-</div>
-
-
-- **Step 6.** Press the **Reset** button, to refresh the serial output.
-
-
-
-
-## RT-Thread
-
-
-### About RT-Thread
-
-The RT-Thread was born in 2006, the license is similar to FreeRTOS and is released in an open source, free way. Unlike FreeRTOS and uC/OS, RT-Thread was released with a middleware platform that included components such as the network, file system, and GUI interface. After a short transition period, the Cortex M MCU was supported in 2009 and received a lot of developer recognition and support. After 2011, due to its mature and stable components, it is widely used in industrial control, electric power, new energy, high-speed rail, medical equipment, water conservancy, consumer electronics and other industries. We've made a comparison table for those three RTOS.
-
-| Item                              | FreeRTOS                                                     | µC/OS                                                        | RT-Thread                                                    |
-| --------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Kernel size                       | 5KB ROM, 2KB RAM                                             | 6KB ROM, 1KB RAM                                             | 3KB ROM,1KB RAM                                              |
-| Kernel mechanism                  | Mailbox  <font color='red'><b>✘</b></font> <br>Event <font color='red'><b>✔</b></font> <br>Coroutine <font color='red'><b>✔</b></font> | Mailbox  <font color='red'><b>✔</b></font> <br>Event <font color='red'><b>✔</b></font> | Mailbox  <font color='red'><b>✔</b></font> <br>Event <font color='red'><b>✔</b></font><br/>Message queue<font color='red'><b>✔</b></font> |
-| Development tools                 | Support a variety of mainstream tools, full toolchain        | Support a variety of mainstream tools, full toolchain        | Support a variety of mainstream tools, full toolchain, provide accessibility tools |
-| Debug tools                       | Shell<br/>SystemView                                         | SystemView                                                   | Shell<br/>Logging system<br/>NetUtils<br/>ADB<br/>SystemView<br/> |
-| Testing system                    | Don't support                                                | Don't support                                                | Unit test framework<br/>Auto test system                     |
-| Support chip and CPU architecture | Support ARM, MIPS, RISC-V, xtensa and other mainstream CPU architecture | Support ARM, MIPS and other mainstream CPU architecture      | Support ARM, MIPS, RISC-V and other mainstream CPU architecture |
-| File system                       | Support FAT                                                  | Need authorization                                           | Provide various file systems layer. Support fatfs, littlefs, jffs2, romfs and the popular file systems. |
-| Low power consumption             | Partial support                                              | Partial support                                              | Support                                                      |
-| GUI                               | None                                                         | µC/GUI                                                       | Provide GUI engine                                           |
-| Component ecology                 | Provide network, debugging, security related components      | There are some, but need to be authorized                    | Provide a software package platform, currently about 100 components, covering a wide range |
-| IoT component                     | TCP/UDP/AWS                                                  | Need authorization                                           | TCP/UDP, Azure, Ayla, Aliyun，onenet, webclient, mqtt， websocket, WebNet... |
-
-
-<div align="center"><b>Table 5.</b><i>Technical and ecological comparison of three embedded operating systems</i></div>
-
-
-### RT-Thread Resource and Manual
-
-Thanks the RT-Thread official team, they will continue to translate relevant resources and documents, we will publish the latest English documents here.
-
-- [RT-Thread Programming-Manual](https://github.com/RT-Thread/rtthread-manual-doc)
-
-
-### Running MicroPython
-
-
-This development board comes pre-installed RT-Thread real-time operating system(RTOS) and built-in micro-python, so when you follow the steps above to connect the hardware and power on the system, you will see the system log.
-The RTOS is a lightweight system which loads very quickly, one or two seconds later, the system starts up and you will see the following interface:
-
-
-
-<div align="center">
-<figure>
-  <p style=":center"><a href="https://files.seeedstudio.com/wiki/Arch_Mix/img/RTT2.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/Arch_Mix/img/RTT2.jpg" /></a></p>
-  <figcaption><b>Figure 10</b>. <i>RTOS Startup Interface</i></figcaption>
-</figure>
-</div>
-
-
-
-Enter `python` in the Finsh/MSH command line to enter MicroPython's interactive command line -- REPL(Read-Evaluate-Print-Loop). You can see the following interface on the terminal:
-
-
-<div align="center">
-<figure>
-  <p style=":center"><a href="https://files.seeedstudio.com/wiki/Arch_Mix/img/RTT3.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/Arch_Mix/img/RTT3.jpg" /></a></p>
-  <figcaption><b>Figure 11</b>. <i>Enter the REPL(Read-Evaluate-Print-Loop)</i></figcaption>
-</figure>
-</div>
-
-
-You can tap ++ctrl+d++ or input `quit()` or `exit()` to exit REPL and return to RT-Thread Finsh/MSH.
-
-
-#### Paste Mode
-
-
-MicroPython is a lean and efficient implementation of the Python 3 programming language that includes a small subset of the Python standard library and is optimised to run on microcontrollers and in constrained environments.
-
-- MicroPython has a special paste mode than the normal python interactive environment, which can be used to paste multiple lines of python code at a time.
-- At the command line prompt, press ++ctrl+e++, and the prompt will appear: paste mode;
-
-- ++ctrl+c++ to cancel, ++ctrl+d++ to finish. After pasting the code you need to run, press ++ctrl+d++ to exit the paste mode and the code you enter will be executed automatically.
-
-
-<div align="center">
-<figure>
-  <p style=":center"><a href="https://files.seeedstudio.com/wiki/Arch_Mix/img/RTT4.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/Arch_Mix/img/RTT4.jpg" /></a></p>
-  <figcaption><b>Figure 12</b>. <i>Paste Mode</i></figcaption>
-</figure>
-</div>
-
-
-### MicroPython Demo
-
-#### Flashing Light
-
-As you can see there is a RGB LED on this board, usually this LED shows green. This demo will show you how to control the RGB LED.   
-
-
-!!!Note
-        The RGB LED connected to the No. 52 pin of RT1052 chip.  
-
-- You can press ++ctrl+e++ to enter paste mode.  
-- Then paste the following code block into the command line.  
-- Press the ++ctrl+d++ to exit the paste mode and the code you enter will be executed automatically
-
-```python
-import time
-from machine import Pin
-
-LED = Pin(("LED1", 52), Pin.OUT_PP)          #Set pin 52 to output mode
-while True:
-    LED.value(1)
-    time.sleep_ms(500)
-    LED.value(0)
-    time.sleep_ms(500)
+```xml
+  <Device>
+    <ChipInfo Vendor="NXP" Name="MCIMXRT1051QSPI" WorkRAMAddr="0x20000000" WorkRAMSize="0x00080000" Core="JLINK_CORE_CORTEX_M7" />
+    <FlashBankInfo Name="QSPI Flash" BaseAddr="0x60000000" MaxSize="0x02000000" Loader="Devices/NXP/iMXRT105x/NXP_iMXRT105x_QSPI.elf" LoaderType="FLASH_ALGO_TYPE_OPEN" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="NXP" Name="MCIMXRT1052QSPI" WorkRAMAddr="0x20000000" WorkRAMSize="0x00080000" Core="JLINK_CORE_CORTEX_M7" />
+    <FlashBankInfo Name="QSPI Flash" BaseAddr="0x60000000" MaxSize="0x02000000" Loader="Devices/NXP/iMXRT105x/NXP_iMXRT105x_QSPI.elf" LoaderType="FLASH_ALGO_TYPE_OPEN" />
+  </Device>
 ```
 
-Now you will see the RGB LED flashing.
+<div align=center><img src="https://files.seeedstudio.com/wiki/Arch_Mix/img/2.png"/></div>
 
+- Save the file.
 
-#### Button Light
+- Now the JFlash is configured and you can open the J-Flash Software.
 
-Beside the RGB LED, you can find a USER button, this demo will show you how to use the USER button to control the RGB LED.
+- Create a new J-Flash project and Select the  **MCIMXRT1052QSPI** as the chip. You may use the filter to help you finding this chip. If you cannot see this chip then there is something wrong in your previous J-Flash configurations, and please check again.
 
-!!!Note
-    - The RGB LED connected to the No. 52 pin of RT1052 chip.  
-    - The button connected to the No. 152 pin of RT1052 chip.
+<div align=center><img src="https://files.seeedstudio.com/wiki/Arch_Mix/img/3.png"/></div>
 
+<div align=center><img src="https://files.seeedstudio.com/wiki/Arch_Mix/img/4.png"/></div>
 
-- You can press ++ctrl+e++ to enter paste mode.  
-- Then paste the following code block into the command line.  
-- Press the ++ctrl+d++ to exit the paste mode and the code you enter will be executed automatically
+- Download the [**Arduino Bootloader for Arch Mix**](https://files.seeedstudio.com/wiki/Arch_Mix/res/bootloader.hex) here. You can also check the [**source code**](https://github.com/Seeed-Studio/ArduinoCore-imxrt) in github here.
 
+- Drag this hex bootloader into the J-Flash.
 
-```python
-from machine import Pin
+<div align=center><img src="https://files.seeedstudio.com/wiki/Arch_Mix/img/5.png"/></div>
 
-led = Pin(("LED1", 52), Pin.OUT_PP)
-key = Pin(("KEY", 125), Pin.IN, Pin.PULL_UP) #Set pin 125 to pull-up input mode
-while True:
-    if key.value():
-        led.value(0)
-    else:
-        led.value(1)
+- **Connect J-Link's SWD pins to Arch Mix's SWD Pins**.
+    - DIO to DIO
+    - CLK to CLK
+    - GND to GND
+
+- Select **Target** -> **Connect** from J-Flash top left drop down menu. Once connected, you should see:
+
+>If cannot connect, please check the wiring of J-Link and Arch Mix again.
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Arch_Mix/img/6.png"/></div>
+
+- Select **Target** -> **Production Programming** to flash the bootloader to Arch Mix.
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Arch_Mix/img/7.png"/></div>
+
+- Reset the Arch Mix and now the Arduino bootloader is flashed into it!
+
+### Arduino Get Started
+
+- Add the Arch Mix board library to Arduino IDE:
+
+Open your Arduino IDE, click on **File** > **Preferences**, and copy below url to **Additional Boards Manager URLs**:
 
 ```
+https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
+```
 
-Now the code is running, the RGB LED will turn yellow, and when you press and hold the USER button, the RGB LED will turn green.
+Click on **Tools** > **Board** > **Board Manager** and Search Arch Mix in the Boards Manager.
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Arch_Mix/img/IDE.png"/></div>
+
+- Open the LED blink example sketch: **File** > **Examples** > **01.Basics** > **Blink**.
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/select_blink.jpg"/></div>
+
+- You'll need to select the entry in the **Tools** > **Board** menu that corresponds to your Arduino. Selecting the Arch Mix.
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Arch_Mix/img/board.png"/></div>
+
+- Choose the right port:
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Arch_Mix/img/port.png"/></div>
+
+- Click upload and the LED on Arch Mix should starts to blink! Now you have a powerful Cortex M7 Board in hand!
+
+!!!Note
+    For Arduino Pin Map, you can check [here](https://github.com/Seeed-Studio/ArduinoCore-imxrt/blob/master/variants/arch_mix/variant.h) for more reference.
+
+## Using NXPBooTUtility to Flash Arduino Bootloader
+
+If you **do not have a J-Link** in hand and there is also other way to flash the bootloader using [**NXP Boot Utility**](https://github.com/JayHeng/NXP-MCUBootUtility), but **it only supports Windows**.
+
+- Download the [NXP Boot Utility](https://github.com/JayHeng/NXP-MCUBootUtility).
+
+```sh
+git clone https://github.com/JayHeng/NXP-MCUBootUtility
+```
+
+- Navigate to the **NXP-MCUBootUtility** folder, go into `NXP-MCUBootUtility/bin` and open the the **NXP-MCUBootUtility.exe**.
+
+- Connect Arch Mix's **Rx Pin** to **3.3V Pin** using a Female Jumper wire and **adjust the Switches to 0001**
+
+- Connect the Arch Mix to your Computer and you should see the following screen:
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Arch_Mix/img/boot-1.png"/></div>
+
+- Click the **Boot Device Configuration**, choose the Flash and click **OK**.
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Arch_Mix/img/boot-2.png"/></div>
+
+- Click Connect to ROM to enter the download mode:
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Arch_Mix/img/boot-3.png"/></div>
+
+- Choose the Bootloader:
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Arch_Mix/img/boot-4.png"/></div>
+
+- Click All in One Action and the it will download the bootloader to the Arch Mix!
+
+- Once flashed completed, **adjust the switch back to 0010** and press reset. Now the Arduino Bootloader is flashed in the Arch Mix using the NXP Boot Utility!
+
+<div class="tips" style="display: table; table-layout: fixed; background-color: #F5A9A9; height: auto;  width: 100%;">
+<div class="left-icon" style="display: table-cell; vertical-align: middle; background-color: #DF0101; padding-top: 10px; box-sizing: border-box; height: auto; width: 38px; text-align: center;"><img style="width: 26px; vertical-align: middle;" src="https://s3-us-west-2.amazonaws.com/static.seeed.cc/seeed/icon/Danger.svg" alt="attention icon" /></div>
+<div class="right-desc" style="display: table-cell; vertical-align: middle; padding-left: 15px; box-sizing: border-box; width: calc(95% - 38px);">
+<p style="color: #000000; font-weight: bold; margin-top: 10px;">Attention</p>
+<p style="color: #000000; font-size: 14px;">Make sure the Switches are adjusted back to 0010 to enter boot from QSPI Flash and work as Arduino Dev Board.</p>
+</div>
+</div>
 
 
-
-### Firmware upgrade
-
-
-This Arch Mix comes pre-installed RT-Thread real-time operating system(RTOS) and built-in micro-python. In case you need to burn the firmware or upgrade the firmware, you can refer the Guide and download the tools.
-
-
+## Resources
 
 [Arch Mix Firmware Guide](https://files.seeedstudio.com/wiki/Arch_Mix/res/micropython_firmware.pdf)  
 [Tools](https://files.seeedstudio.com/wiki/GM6020/res/Firmware_and_Tools.zip)
