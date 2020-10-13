@@ -64,7 +64,7 @@ This is a unique ring– it has a florid body with 24 controllable LEDs. Maybe i
 </th>
 <td colspan="3"> Ring Form:4.5 diameter
 </td>
-<td> mm
+<td> cm
 </td></tr>
 <tr>
 <th scope="row"> Net Weight
