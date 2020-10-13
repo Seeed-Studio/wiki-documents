@@ -432,7 +432,7 @@ Cookie: ba71:cba6
 
 - Step2. C++ Coding
 
-The example [pulse_snowboy_1b_test.cc](https://wiki.seeedstudio.com/librespeaker_doc/pulse_snowboy_1b_test_8cc-example.html) shows how to use the VepAecBeamformingNode node, the Snowboy1bDoaKwsNode node and the ReSpeaker supervisor, to make a simple snowboy KWS demo. This example supports keyword "alexa" and "snowboy", adjustable target gain level and wav log.
+The example [pulse_snowboy_1b_test.cc](http://respeaker.io/librespeaker_doc/pulse_snowboy_1b_test_8cc-example.html) shows how to use the VepAecBeamformingNode node, the Snowboy1bDoaKwsNode node and the ReSpeaker supervisor, to make a simple snowboy KWS demo. This example supports keyword "alexa" and "snowboy", adjustable target gain level and wav log.
 
 
 ```shell
@@ -498,7 +498,7 @@ pi        1355  0.0  0.0   4376   568 pts/0    S+   16:48   0:00 grep --color=au
     
 - Step2. C++ Coding
 
-The example [alsa_snips_1b_test.cc](https://wiki.seeedstudio.com/librespeaker_doc/alsa_snips_1b_test_8cc-example.html) shows how to use the AlsaCollectorNode node with VepAecBeamformingNode node and Snips1bDoaKwsNode node.
+The example [alsa_snips_1b_test.cc](http://respeaker.io/librespeaker_doc/alsa_snips_1b_test_8cc-example.html) shows how to use the AlsaCollectorNode node with VepAecBeamformingNode node and Snips1bDoaKwsNode node.
 
 
 ```shell
@@ -534,7 +534,7 @@ hotword_count = 2
 
 If you need to test the performance of KWS, ASR, NLP or something else, it is not a good way to test it with your mouth repeatly. It is recommanded to record a testing recording first, and just send the recording to your program to get the result.
 
-[file_1beam_test.cc](https://wiki.seeedstudio.com/librespeaker_doc/file_1beam_test_8cc-example.html) shows how to read a 8-channels 16K 16-bit wav file, send the recording stream to VepAecBeamformingNode node and detect hotword from the output beam. This example supports keyword "alexa", "snowboy" and "heysnips", adjustable target gain level and wav log.
+[file_1beam_test.cc](http://respeaker.io/librespeaker_doc/file_1beam_test_8cc-example.html) shows how to read a 8-channels 16K 16-bit wav file, send the recording stream to VepAecBeamformingNode node and detect hotword from the output beam. This example supports keyword "alexa", "snowboy" and "heysnips", adjustable target gain level and wav log.
 
 
 ```shell
@@ -571,7 +571,7 @@ hotword_count = 1
 
 AloopOutputNode is designed to redirect the processed audio stream into a specific Alsa device(Loopback PCM). In this way, some third-party voice assistants can get  real-time processed audio stream from a PCM device, which provides a convenient way to build your application.
 
-[alsa_aloop_test.cc](https://wiki.seeedstudio.com/librespeaker_doc/alsa_aloop_test_8cc-example.html) shows how to achieve it. To run this example, you have to run 'sudo modprobe snd-aloop' first. And make sure "pulseaudio" doesn't start, then, after runing this example, you can open another terminal and use `arecord -Dhw:Loopback,1,0 -c 1 -r 16000 -f S16_LE loop_test.wav` to arecord the processed audio stream. Further more, you can setup a third party voice assistant to capture voice from "hw:Loopback,1,0", to run the assistant directly. Check [respeaker::AloopOutputNode Class Reference](https://wiki.seeedstudio.com/librespeaker_doc/classrespeaker_1_1AloopOutputNode.html) for more details of this node.
+[alsa_aloop_test.cc](http://respeaker.io/librespeaker_doc/alsa_aloop_test_8cc-example.html) shows how to achieve it. To run this example, you have to run 'sudo modprobe snd-aloop' first. And make sure "pulseaudio" doesn't start, then, after runing this example, you can open another terminal and use `arecord -Dhw:Loopback,1,0 -c 1 -r 16000 -f S16_LE loop_test.wav` to arecord the processed audio stream. Further more, you can setup a third party voice assistant to capture voice from "hw:Loopback,1,0", to run the assistant directly. Check [respeaker::AloopOutputNode Class Reference](http://respeaker.io/librespeaker_doc/classrespeaker_1_1AloopOutputNode.html) for more details of this node.
 
 ```shell
 cd ~
