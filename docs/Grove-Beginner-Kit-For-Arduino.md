@@ -1094,8 +1094,19 @@ Note that `#include`, similar to `#define`, has no semicolon terminator, and the
 **#include** is an instruction that introduces a header file. Here we use the U8x8lib.h library.
 
 ```cpp
-U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);
+U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);  
 ```
+
+**Note**
+  
+If you break out other modules and only use OLED, you have to software I2C:
+
+```CPP
+// U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);  
+
+U8X8_SSD1306_128X64_NONAME_SW_I2C u8x8(/* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE); 
+```
+
 
 **Description:**
 
@@ -1183,8 +1194,21 @@ If you want to more information about U8g2 library, please refer to [here](https
 
 Use Grove cable to connect the OLED to Seeeduino Lotus's **I2C** interface (Note: I2C's default address is 0x78).
 
+If you just use OLED modules, please use software I2C, you just need to replace hardware I2C code with software I2C code.
 
+```CPP
+// U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);
 
+U8X8_SSD1306_128X64_NONAME_SW_I2C u8x8(/* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);   // OLEDs without Reset of the Display
+
+```
+If you use OLED with other modules, you should shift to hardware I2C.
+
+```cpp
+U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);
+
+// U8X8_SSD1306_128X64_NONAME_SW_I2C u8x8(/* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);   // OLEDs without Reset of the Display
+```
 
 
 ### Lesson 8: Detecting Surrounding Temperature & Humidity
