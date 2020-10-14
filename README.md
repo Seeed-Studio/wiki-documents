@@ -1,25 +1,3 @@
-
-## How to edit Seeed Wiki
-
-We have the English and Chinese Wiki. The procedure is same. This article shows how to edit wiki step by step.
-
-## Wiki Structure
-
-Seeed wiki uses [MkDocs template](https://squidfunk.github.io/mkdocs-material/) desgined by Martin Donath. It includes wiki source files and compiled html files.
-
-- The English wiki source files are located at [github](https://github.com/SeeedDocument/wiki_english). The English html files are located at amazon S3(wiki.seeedstudio.com warehouse).
-- The Chinese wiki source files are located at [github](https://github.com/SeeedDocument/wiki_chinese). The Chinese html files are located at amazon S3(wiki.seeedstudio.com/cn warehouse).
-
-
-Here is the structure of the wiki source files.
-
-![](https://github.com/SeeedDocument/How_to_update_wiki/raw/master/img/source.png)
-
-Here is the structure of the html files.
-
-![](https://github.com/SeeedDocument/How_to_update_wiki/raw/master/img/html.png)
-
-
 ## How to edit source files in github
 
 ### Preparation
