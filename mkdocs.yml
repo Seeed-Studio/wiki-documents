@@ -565,6 +565,7 @@ nav:
           - Grove - Human Presence Sensor (AK9753): Grove-Human_Presence_Sensor-AK9753.md
           - Grove - I2C Color Sensor: Grove-I2C_Color_Sensor.md
           - Grove - I2C Touch Sensor: Grove-I2C_Touch_Sensor.md
+          - Grove - 12 Key Capacitive I2C Touch Sensor V3(MPR121): Grove-12-Key-Capacitive-I2C-Touch-Sensor-V3-MPR121.md
           - Grove - 12 Key Capacitive I2C Touch Sensor V2(MPR121): Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121.md
           - Grove - Capacitive Touch Slide Sensor(CY8C4014LQI): Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI.md
           - Grove - Infrared Receiver: Grove-Infrared_Receiver.md
