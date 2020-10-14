@@ -19,7 +19,7 @@ Grove Beginner Kit for Arduino is one of the best Arduino Beginner Kit for begin
 7. **[Grove - Sound](https://wiki.seeedstudio.com/Grove-Sound_Sensor/):** Detects surrounding sound intensity
 8. **[Grove - Temperature & Humidity Sensor](https://wiki.seeedstudio.com/Grove-TemperatureAndHumidity_Sensor/):** Detects surrounding temperature and humidity values
 9. **[Grove - Air Pressure Sensor](https://wiki.seeedstudio.com/Grove-Barometer_Sensor-BMP280/):** Detects surrounding atmospheric pressure
-10. **[Grove - 3-Axis Accelerator](https://wiki.seeedstudio.com/Grove-3-Axis_Digital_Accelerometer-1.5g/):** Detects object acceleration
+10. **[Grove - 3-Axis Accelerator](https://wiki.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-LIS3DHTR):** Detects object acceleration
 11. **[Seeeduino Lotus](https://wiki.seeedstudio.com/Seeeduino_Lotus/):** Arduino Compatible Board with Grove Ports
 
 
