@@ -14,7 +14,7 @@ pip install mkdocs-material
 - Run below command to download the source files into local folder.
 
 ```c
-git clone https://github.com/SeeedDocument/wiki_english.git  # please change wiki_english to wiki_chinese for Chinese wiki.
+git clone https://github.com/Seeed-Studio/wiki-documents  # please change wiki_english to wiki_chinese for Chinese wiki.
 ```
 
 ###  Create a new wiki
