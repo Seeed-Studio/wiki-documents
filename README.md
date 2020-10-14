@@ -14,7 +14,7 @@ pip install mkdocs-material
 - Run below command to download the source files into local folder.
 
 ```c
-git clone https://github.com/SeeedDocument/wiki_english.git  # please change wiki_english to wiki_chinese for Chinese wiki.
+git clone https://github.com/Seeed-Studio/wiki-documents  # please change wiki_english to wiki_chinese for Chinese wiki.
 ```
 
 ###  Create a new wiki
@@ -145,89 +145,3 @@ mkdocs serve
 ```
 mkdocs build --clean
 ```
-
-!!!Note
-    If we just update an old wiki, please skip step 4 and step 5.
-
-## How to upload the html files to Amazon S3
-
-- Step 1. Open the [Amazon S3 website](https://s3.console.aws.amazon.com/s3/buckets/wiki.seeed.cc/?region=us-west-2&tab=overview).
-- Step 2. Key in account user name and password.
-- Step 3. Click **wiki.seeedstudio.com** folder for English wiki.
-
-!!!Warning
-    For wiki Chinese, Please search **cn** and select **cn** folder. Then move to Step 4.
-
-- Step 4. Select **Upload** button.
-- Step 5. Drag all the folders under site to the pop up window for new wiki. If we just edit an old wiki, please drag the updated wiki only.
-- Step 6. Click **Upload** button.
-- Step 7. Visit [Wiki English](http://wiki.seeedstudio.com/) to verify the modifications. Or Visit [Wiki Chinese](http://wiki.seeedstudio.com/cn/) to verify the modifications.
-
-
-## Search file compress
-
-The default json search file is too large, which makes the serch time becomes more and more slow. So we need to compress the search file.
-
-
-1-copy the big file `search_index.json` from **/site/search** folder.
-
-2-run `search_index.py` 
-
-3-rename the small file `search_index_new.json` to `search_index.json`, and upload this file into S3
-wiki **English-->mkdocs**
-
-
-## How to update the banner
-
-- Step 1. Install [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) 
-- Step 2. git clone https://github.com/SeeedDocument/wiki_english.git
-- Step 3. cd wiki_english/docs/images/
-- Step 4. modify the top_banner.png or right_banner.png
-- Step 5. modify the top_banner hyperlink by editing the wiki_english/docs/index.md @ line #1 XXXXXX.
-
-```
-<a href="https://XXXXXX" target="_blank">
-```
-
-- Step 6. modify the right_banner hyperlink by editing the wiki_english\material\partials\toc.html @ line #32 XXXXXX.
-
-```
-<td align="left"><a href="XXXXXX" target="_blank">
-```
-
-- Step 7. run below command to push the changes to github
-
-```
-git add .
-git commit -m "update banner"
-git push origin master
-```
-
-- Step 8. run below command to build the site. 
-
-```
-mkdocs build --clean
-```
-
-- Step 9. Follow **How to upload the html files to Amazon S3** to upload to S3.
-
-## FAQ
-
-The yam file format is related with the PyYAML, please install the below version packages, such as "pip install Markdown==2.6.11" 
-
-
-```
-C:\Users\xyu6>pip list
-Package                       Version
------------------------------ ----------
-Markdown                      2.6.11
-mkdocs                        0.17.3
-mkdocs-material               2.9.2
-Pygments                      2.2.0
-pylint                        1.9.2
-pymdown-extensions            4.11
-PyYAML                        3.12
-```
-
-## Tech Support
-Please do not hesitate to contact [techsupport@seeed.cc](techsupport@seeed.cc) if you have any technical issue.
