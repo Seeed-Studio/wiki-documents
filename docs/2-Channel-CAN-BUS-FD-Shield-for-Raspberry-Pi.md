@@ -19,7 +19,21 @@ Also it have two On-board 120Ω terminating resistors which are controlled by th
  
 <p style="text-align:center"><a href="https://www.seeedstudio.com/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi-p-4072.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
+## Versions Declare
 
+There are **3 versions** of the CAN BUS shield for Raspberry Pi. All 3 versions work perfectly on Raspberry Pi platform, and may skip this section if you're using RPi platform.
+
+The CAN BUS shield now also **supports the Nvidia Jetson Nano platform**, and different versions of the CAN BUS Shield **do affect the functionality**, please check the table below carefully if you're using with Jetson Nano Platform.
+
+|Product Name|Chip|RPi State|Jetson Nano State|
+|--|--|--|--|
+|2-Channel CAN-BUS(FD) Shield for RPi (MCP2517FD)|MCP2517FD|Two Channels|Single Channel(can0)|
+|2-Channel CAN-BUS(FD) Shield for RPi (MCP2517FD)|MCP2518FD|Two Channels|Single Channel(can0)|
+|2-Channel CAN FD Master Hat for RPi|MCP2518FD|Two Channels|Two Channels|
+
+>2-Channel CAN FD Master Hat for RPi is the latest versions and not released yet!
+
+As you can see, there are two versions of chips used in the 2-Channel CAN-BUS(FD) Shield for RPi (MCP2517FD) and both channels work on RPi but only single channel (CAN0) works on the Jetson Nano Platform!
 
 ## Features
 
@@ -163,27 +177,28 @@ Also we need to two [male to male jumper](https://www.seeedstudio.com/Breadboard
 
 - **Step 1**. Get the CAN-HAT source code. and install all linux kernel drivers
 
-```C
-git clone https://github.com/seeed-Studio/pi-hats
-cd pi-hats/CAN-HAT
+```sh
+git clone https://github.com/Seeed-Studio/seeed-linux-dtoverlays
+cd seeed-linux-dtoverlays//modules/CAN-HAT
 sudo ./install.sh 
 sudo reboot
 ```
 
-- **Step 2**. Check the kernel log to see if MCP2517 was initialized successfully.You will also see can0 and can1 appear in the list of ifconfig results
+- **Step 2**. Check the kernel log to see if CAN-BUS HAT was initialized successfully. You will also see **can0** and **can1** appear in the list of ifconfig results
 
 ```C
 pi@raspberrypi:~ $ dmesg | grep spi
-[    3.725586] mcp25xxfd spi0.0 can0: MCP2517 successfully initialized.
-[    3.757376] mcp25xxfd spi1.0 can1: MCP2517 successfully initialized.
+[    6.178008] mcp25xxfd spi0.0 can0: MCP2517FD rev0.0 (-RX_INT +MAB_NO_WARN +CRC_REG +CRC_RX +CRC_TX +ECC -HD m:20.00MHz r:18.50MHz e:0.00MHz) successfully initialized.
+[    6.218466] mcp25xxfd spi0.1 (unnamed net_device) (uninitialized): Failed to detect MCP25xxFD (osc=0x00000000).
 
-pi@raspberrypi:~/pi-hats/CAN-HAT $ ifconfig -a
+pi@raspberrypi:~ $ ifconfig -a
 can0: flags=128<NOARP>  mtu 16
         unspec 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  txqueuelen 10  (UNSPEC)
         RX packets 0  bytes 0 (0.0 B)
         RX errors 0  dropped 0  overruns 0  frame 0
         TX packets 0  bytes 0 (0.0 B)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 166
 
 can1: flags=128<NOARP>  mtu 16
         unspec 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  txqueuelen 10  (UNSPEC)
@@ -191,12 +206,15 @@ can1: flags=128<NOARP>  mtu 16
         RX errors 0  dropped 0  overruns 0  frame 0
         TX packets 0  bytes 0 (0.0 B)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 167
 
-eth0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
-        ether b8:27:eb:c7:ed:4f  txqueuelen 1000  (Ethernet)
-        RX packets 0  bytes 0 (0.0 B)
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.0.13  netmask 255.255.255.0  broadcast 10.0.0.255
+        inet6 fe80::44cc:eeb8:47a0:7fce  prefixlen 64  scopeid 0x20<link>
+        ether b8:27:eb:25:d4:e0  txqueuelen 1000  (Ethernet)
+        RX packets 299  bytes 27437 (26.7 KiB)
         RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 0  bytes 0 (0.0 B)
+        TX packets 172  bytes 25974 (25.3 KiB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
 lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
@@ -208,40 +226,39 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
         TX packets 0  bytes 0 (0.0 B)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
-wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 192.168.250.42  netmask 255.255.255.0  broadcast 192.168.250.255
-        inet6 fe80::3842:7323:7c0d:f6d2  prefixlen 64  scopeid 0x20<link>
-        ether b8:27:eb:92:b8:1a  txqueuelen 1000  (Ethernet)
-        RX packets 2654  bytes 249303 (243.4 KiB)
+wlan0: flags=4098<BROADCAST,MULTICAST>  mtu 1500
+        ether b8:27:eb:70:81:b5  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
         RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 4433  bytes 4765896 (4.5 MiB)
+        TX packets 0  bytes 0 (0.0 B)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
 
 - **Step 3**. Set the can fd protocol, and the dbitrate can be set to 8M speed. [Refer to the kernel documentation for more usage](https://www.kernel.org/doc/Documentation/networking/can.txt)
 
-```C
+```sh
 sudo ip link set can0 up type can bitrate 1000000   dbitrate 8000000 restart-ms 1000 berr-reporting on fd on
 sudo ip link set can1 up type can bitrate 1000000   dbitrate 8000000 restart-ms 1000 berr-reporting on fd on
 
 sudo ifconfig can0 txqueuelen 65536
 sudo ifconfig can1 txqueuelen 65536
-
 ```
 
 - **Step 4**. Open two terminal windows and enter the following commands in the Windows to test can fd protocol.
 
-```C
+```sh
 #send data
 cangen can0 -mv 
-
 ```
 
-```C
+```sh
 #dump data
 candump can0
-
 ```
+
+> You can test the CAN-BUS by connecting two channels by itself using jumpers: 0_L <===> 1_L, 0_H <===> 1_H.
+
+
 
 #### Communicate with Arduino CAN BUS Shield
 
@@ -352,17 +369,14 @@ pi@raspberrypi:~ $ candump can0
 
 Or you can use **python code** to get the CAN data. To use python to receive CAN data, you should install python-can at first.
 
-```PYTHON
-
+```sh
 # install python-can
 sudo pip3 install python-can
-
 ```
 
 Open a new python file and copy the following code, save as **can_test.py**:
 
 ```python
-
 import can
 
 can_interface = 'can0'
@@ -372,14 +386,12 @@ while True:
     if message is None:
             print('Timeout occurred, no message.')
     print(message)
-
 ```
 
 Run the Python code and the results are as follows :
 
-```python
-
-pi@raspberrypi:~ $ python3 can_test.py   
+```sh
+pi@raspberrypi:~ $ python3 can_test.py
 Timestamp: 1550471771.628215        ID: 0000    S                DLC:  8    00 00 00 00 00 00 0e 63     Channel: can0
 Timestamp: 1550471772.629302        ID: 0000    S                DLC:  8    00 00 00 00 00 00 0f 00     Channel: can0
 Timestamp: 1550471773.630658        ID: 0000    S                DLC:  8    00 00 00 00 00 00 0f 01     Channel: can0
@@ -392,7 +404,6 @@ Timestamp: 1550471779.638859        ID: 0000    S                DLC:  8    00 0
 Timestamp: 1550471780.640222        ID: 0000    S                DLC:  8    00 00 00 00 00 00 0f 08     Channel: can0
 Timestamp: 1550471781.641602        ID: 0000    S                DLC:  8    00 00 00 00 00 00 0f 09     Channel: can0
 Timestamp: 1550471782.642970        ID: 0000    S                DLC:  8    00 00 00 00 00 00 0f 0a     Channel: can0
-
 ```
 
 
@@ -401,7 +412,7 @@ Timestamp: 1550471782.642970        ID: 0000    S                DLC:  8    00 0
 
 For Raspberry Pi, you can use **cangen** to send random package:
 
-```C
+```sh
 pi@raspberrypi:~ $ cangen can0 -v 
   can0  442#14.C4.1A.1A.C2.25.79.25
   can0  748#4E.C7.8B.0B.6E.B9.15.77
@@ -419,12 +430,11 @@ pi@raspberrypi:~ $ cangen can0 -v
   can0  6AC#C1.35.83.41.37
   can0  38C#22.AF
   can0  208#22.8E.97.58.E5.69.F7.2C
-
 ```
 
 For Arduino, you can use the following code to recieve CAN data.
 
-```C
+```cpp
 // demo: CAN-BUS Shield, receive data with interrupt mode
 // when in interrupt mode, the data coming can't be too fast, must >20ms, or else you can use check mode
 // loovee, 2014-6-13
@@ -519,7 +529,6 @@ def producer(id):
     time.sleep(1)
 
 producer(10)
-
 ```
 
 
@@ -528,8 +537,8 @@ producer(10)
 
 If you want to uninstall this CAN-HAT, just run the following code:
 
-```
-pi@raspberrypi:~/pi-hats/CAN-HAT $ sudo ./uninstall.sh 
+```sh
+pi@raspberrypi:~/seeed-linux-dtoverlays/modules/CAN-HAT $ sudo ./uninstall.sh
 ...
 ------------------------------------------------------
 Please reboot your raspberry pi to apply all settings
@@ -537,6 +546,90 @@ Thank you!
 ------------------------------------------------------
 ```
 
+## Using CAN-BUS Shiled with Jetson Nano
+
+Now the CAN-BUS Shiled also supports the Jetson Nano Platform but there are some limitations based on different versions of hardware. Please refer to the [**Version Declare**](https://wiki.seeedstudio.com/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/#version-declare) if you are using the Jetson Nano Platfrom!
+
+- Clone the Repo:
+
+```sh
+git clone https://github.com/Seeed-Studio/seeed-linux-dtoverlays
+```
+
+- Build dtbo & driver:
+
+```sh
+cd seeed-linux-dtoverlays
+export CUSTOM_MOD_LIST="CAN-HAT"; make all_jetsonnano
+```
+
+- Install the Driver:
+
+```sh
+sudo -E make install_jetsonnano
+```
+
+- Install dtbo:
+
+```sh
+sudo cp overlays/jetsonnano/2xMCP2518FD-spi0.dtbo /boot
+sudo /opt/nvidia/jetson-io/config-by-hardware.py -n "Seeed 2xMCP2518FD"
+sudo reboot
+```
+
+Now you can also run the `dmesg | grep spi` and `ifconfig -a` to check if the CAN-BUS initialised properly. Depending on your hardware, you should be able to see **can0 or both can0 and can1**.
+
+!!!Note
+    The hardware used here is the **latest 2-Channel CAN FD Master Hat for RPi which supports two channels on Jetson Nano Platform, if you have older versions then you will only have single channel can0**.
+
+```sh
+qqq@jetson-qqq:~$ dmesg | grep spi
+[   10.867712] mcp25xxfd spi0.0 can0: MCP2518FD rev0.0 (-RX_INT -MAB_NO_WARN +CRC_REG +CRC_RX +CRC_TX +ECC -HD m:20.00MHz r:18.50MHz e:0.00MHz) successfully initialized.
+[   10.879487] mcp25xxfd spi0.1 can1: MCP2518FD rev0.0 (-RX_INT -MAB_NO_WARN +CRC_REG +CRC_RX +CRC_TX +ECC -HD m:20.00MHz r:18.50MHz e:0.00MHz) successfully initialized.
+
+qqq@jetson-qqq:~$ ifconfig -a
+can0: flags=128<NOARP>  mtu 16
+        unspec 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  txqueuelen 10  (UNSPEC)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 112
+
+can1: flags=128<NOARP>  mtu 16
+        unspec 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  txqueuelen 10  (UNSPEC)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 114
+```
+
+### Testing
+
+> **NOTE:** Using 2-Channel CAN FD Master Hat for RPi as hardware here.
+
+You may also connect the channels as follow to test:
+
+0_L <===> 1_L
+
+0_H <===> 1_H
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/CAN-BUS-FD/jetson-connect.png"/></div>
+
+Open two terminal windows and enter the following commands in the Windows to test can fd protocol.
+
+```sh
+#send data
+cangen can0 -mv 
+```
+
+```sh
+#dump data
+candump can1 
+```
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/CAN-BUS-FD/jetson-send.png"/></div>
 
 ## Schematic Online Viewer
 
