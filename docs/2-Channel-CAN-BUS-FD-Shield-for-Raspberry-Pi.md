@@ -631,6 +631,65 @@ candump can1
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/CAN-BUS-FD/jetson-send.png"/></div>
 
+## Built-in RTC Usage
+
+The latest 2-Channel CAN FD Master Hat for RPi also has an on-board RTC. Follow though to install the RTC drivers on Raspberry Pi:
+
+- Update Raspberry Pi and Reboot:
+
+```sh
+sudo apt update
+sudo apt upgrade
+sudo reboot
+```
+
+- Instsall Dependencies
+
+```sh
+sudo apt install i2c-tools build-essential raspberrypi-kernel-headers
+```
+
+- Download the driver:
+
+```sh
+curl -O -L https://github.com/dresden-elektronik/raspbee2-rtc/archive/master.zip
+unzip master.zip
+```
+
+- Compile the RTC Kernel module
+
+```sh
+cd raspbee2-rtc-master
+make
+```
+
+- Install the RTC Kernel module
+
+```sh
+sudo make install
+sudo reboot
+```
+
+- Configure system time to the RTC module
+
+```sh
+sudo hwclock --systohc
+```
+
+- Test that the RTC is working
+
+```sh
+sudo hwclock --verbose
+```
+
+Now you can read the RTC time using the following command:
+
+```sh
+sudo hwclock -r
+```
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/CAN-BUS-FD/time.png"/></div>
+
 ## Schematic Online Viewer
 
 <div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/res/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
