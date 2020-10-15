@@ -640,9 +640,9 @@ candump can1
 ## Resources
 
 - **[ZIP]** [2-Channel CAN-BUS(FD) Shield for Raspberry Pi Schematic file](https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/res/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi.zip)
+- **[ZIP]** [2-Channel CAN FD Master Hat for RPi Schematic file](https://files.seeedstudio.com/wiki/CAN-BUS-FD/2-Channel%20CAN-BUS(FD)%20Shield%20for%20Raspberry%20Pi_SCH&PCB.zip)
 - **[PDF]** [MCP2517 Datasheet](https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/res/MCP2517-datasheet.pdf)
 - **[PDF]** [MCP2557 Datasheet](https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/res/MCP2557-datasheet.pdf)
-
 
 
 ## Tech Support
