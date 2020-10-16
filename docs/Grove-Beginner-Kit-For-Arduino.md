@@ -1051,15 +1051,23 @@ For more information, please also visit [How to install Arduino Libraries](https
 
 ![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/U8g2-lib.png)
 
+  - After you donwload the code, please follow this instrcution:
+  Clink "This PC" -> Documents -> Arduino -> libraries -> U8g2 -> src -> U8x8lib.cpp -> Sliding to 1334 line -> delete or disable this line -> save the file.
+
+  ```CPP
+  Wire.setClock(u8x8->bus_clock);   // just delete or disable this line
+  ```
+  
+  
   - Copy the following code, click Verify to check for syntax errors. Verify that there are no errors, and you can upload the code.
 
 ```cpp
 #include <Arduino.h>
 #include <U8x8lib.h>
 
-// U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);
+ U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);
 
-U8X8_SSD1306_128X64_NONAME_SW_I2C u8x8(/* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);   // OLEDs without Reset of the Display
+// U8X8_SSD1306_128X64_NONAME_SW_I2C u8x8(/* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);   // OLEDs without Reset of the Display
 
 void setup(void) {
   u8x8.begin();
