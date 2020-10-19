@@ -113,8 +113,8 @@ If there's no Grove connector on your board, you need a **Grove Expansion Board*
 
 |Base Hat for Raspberry Pi | NodeMCU | XIAO |
 |----------|---------------------|--------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/small.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/base_6.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/XIAO/IMG/XIAO.png)|
-|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Base-Shield-for-NodeMCU-p-2513.html)|[Coming SOON!](https://www.seeedstudio.com/)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/small.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/base_6.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/XIAO/IMG/xiaopreview2.png)|
+|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Base-Shield-for-NodeMCU-p-2513.html)|[BUY ONE NOW!](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html)|
 
 !!!Note
      Arduino Base Shield works for:
