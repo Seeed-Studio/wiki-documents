@@ -1196,17 +1196,18 @@ If you want to more information about U8g2 library, please refer to [here](https
 
 Use Grove cable to connect the OLED to Seeeduino Lotus's **I2C** interface (Note: I2C's default address is 0x78).
 
-If you just use OLED modules, please use software I2C, you just need to replace hardware I2C code with software I2C code.
-
 !!!Note 
-    - If you breakout other modoule to use the OLED, and it do not work, please follow this instrcution:
+    - If you breakout other modoule to use the OLED and it do not work, or you want to use fastest OLED I2C (default: 40KHZ), please follow this instrcution:
   Clink "This PC" -> Documents -> Arduino -> libraries -> U8g2 -> src -> U8x8lib.cpp -> Sliding to 1334 line -> delete or disable this line -> save the file.
 
   ```CPP
   Wire.setClock(u8x8->bus_clock);   // just delete or disable this line
   ```
   
-
+  Meanwhile, remove this line from the example code.
+```CPP
+  u8x8.setBusClock(100000);   //  it for limit the I2C bus clock
+```
 
 ### Lesson 8: Detecting Surrounding Temperature & Humidity
 
