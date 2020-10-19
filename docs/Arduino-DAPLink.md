@@ -74,6 +74,10 @@ The pins definitions for DAPLink is defined in **`DAP_config.h`** under `Seeed_A
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/DAPLink/daplink-pin.png"/></div>
 
+**NOTE:** If you are using other SAMD boards such as Seeeduino Lotus Cortex M0+, you will need to add the following:
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/DAPLink/dap-pins-m0.png"/></div>
+
 ### Upload to Arduino Boards
 
 Open the `simple_daplink.ino` under `Seeed_Arduino_DAPLink/example` using Arduino IDE. Under `Tools` -> `USB Stack` and choose **TinyUSB**.
