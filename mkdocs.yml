@@ -419,6 +419,7 @@ nav:
       - Arduino Tutorials - How to Use Static (Pre-compiled) Libraries in Arduino: Software-Static-Library.md
       - How to Bridge Mosiquitto MQTT Broker to AWS IoT with Arduino Boards: Arduino-AWS-IOT-Bridge.md
       - How to use Arduino Borads as DAPLink Device: Arduino-DAPLink.md
+      - Flashing the Arduino Bootloader using DAP Link: Flashing-Arduino-Bootloader-DAPLink.md
 
   - Grove:
       - Grove Introduction: Grove.md
