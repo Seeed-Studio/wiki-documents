@@ -640,6 +640,114 @@ temp = 26.00 C humidity =40.00%
 
 ```
 
+### Play With Wio Terminal (ArduPy)
+
+#### Hardware
+
+- **Step 1.** Prepare the following:
+
+| Wio Terminal | Grove - Temperature & Humidity Sensor (DHT11) |
+|--------------|-----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-thumbnail.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor/img/new.jpeg)|
+|[Get One Now](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Get One Now](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DHT11.html)|
+
+- **Step 2.** Connect Grove - Temperature & Humidity Sensor to **D0** port of Wio Terminal.
+
+- **Step 3.** Connect Wio Terminal to PC through USB Type-C cable.
+
+![](https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor/img/new-connect.jpeg)
+
+#### Software
+
+- **Step 1.** Follow [**ArduPy Getting Started**](https://wiki.seeedstudio.com/ArduPy/) to configure the ArduPy development environment on Wio Terminal.
+
+- **Step 2.** Make sure that the ArduPy firmware contains the DHT library using the following commands. For more information, please follow [**here**](https://wiki.seeedstudio.com/ArduPy/#using-aip-to-include-other-ardupy-librariesfrom-arduino-libraries-example).
+
+```sh
+aip install Seeed-Studio/seeed-ardupy-dht/archive/main.zip
+aip build
+aip flash
+```
+
+- **Step 3.** Copy the following code and save it as `ArduPy-DHT.py`:
+
+```python
+from arduino import grove_dht
+from machine import LCD, Sprite
+import time 
+
+dht = grove_dht(0,11)
+lcd = LCD() # initialize TFT LCD 
+spr = Sprite(lcd) # initialize buffer
+
+def main(): # main function 
+    spr.createSprite(320, 240) # create buffer
+    while True: # while loop
+        spr.fillSprite(spr.color.WHITE) # fill background 
+
+        # two fill rectangles
+        spr.fillRect(0,0,160,240,spr.color.DARKGREEN) # fill rectangle in color
+        spr.fillRect(160,0,160,240,spr.color.BLUE)
+
+        # temp and humid text draw 
+        spr.setTextSize(2) # set text size
+        spr.setTextColor(spr.color.WHITE,spr.color.DARKGREEN) # set text color
+        spr.drawString("Temperature", 15, 65) # draw string 
+        spr.setTextColor(spr.color.WHITE,spr.color.BLUE) 
+        spr.drawString("Humidity", 190, 65) 
+
+        # obtain readings 
+        t = dht.temperature # store temperature readings in variable 
+        h = dht.humidity # store humidity readings in variable 
+        
+        # display temp readings
+        spr.setTextSize(4)
+        spr.setTextColor(spr.color.WHITE,spr.color.DARKGREEN)
+        spr.drawNumber(int(t),50,110) # display number  
+        spr.drawString("C", 100, 110) 
+
+        # display humi readings
+        spr.setTextColor(spr.color.WHITE,spr.color.BLUE) # set text color
+        spr.drawNumber(int(h),180,110)  
+        spr.drawString("%RH", 235, 110) 
+
+        spr.pushSprite(0,0) # push to LCD
+        time.sleep_ms(100)
+
+        print("temperature:",t,"C", end ="     ")
+        print("humidity:",h,"%RH")
+ 
+if __name__ == "__main__": # check whether this is run from main.py
+    main() # execute function
+```
+
+- **Step 4.** Save the `ArduPy-DHT.py` in a location that you know. Run the following command and **replace** `<YourPythonFilePath>` with your `ArduPy-DHT.py` location.
+
+```sh
+aip shell -n -c "runfile <YourPythonFilePath>"
+# Example:
+# aip shell -n -c "runfile /Users/user/Desktop/ArduPy-DHT.py"
+```
+
+Now, the temperature and humidity information will be displayed on the command prompt/ terminal window and the Wio Terminal LCD as well.
+
+```python
+C:\Users\user>aip shell -n -c "runfile /Users/user/Desktop/ArduPy-DHT.py"
+Positional argument (COM4) takes precedence over --open.
+Connected to ardupy
+temperature: 31.0 C     humidity: 85.0 %RH
+temperature: 31.0 C     humidity: 85.0 %RH
+temperature: 31.0 C     humidity: 85.0 %RH
+temperature: 31.0 C     humidity: 87.0 %RH
+temperature: 31.0 C     humidity: 87.0 %RH
+temperature: 31.0 C     humidity: 87.0 %RH
+temperature: 31.0 C     humidity: 87.0 %RH
+temperature: 31.0 C     humidity: 87.0 %RH
+temperature: 31.0 C     humidity: 87.0 %RH
+temperature: 31.0 C     humidity: 87.0 %RH
+```
+
+![](https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor/img/new-demo.jpeg)
 
 ## Schematic Online Viewer
 
