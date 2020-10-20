@@ -25,7 +25,7 @@ This wiki introduces how to make a intrusion alarm.
 
 ### Hardware Connection
 Please follow the same color line to connect each sensor on the board.
-<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/intrustion-Alarm/alram.png"/></div>
+<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/intrustion-Alarm/alarm11.png"/></div>
 
 !!!Note
     The buzzer (D5) and LED (D4) are embedded in the board.
@@ -173,7 +173,7 @@ This wiki introduces how to make a remote control oscillating fan.
 
 ### Hardware Connection
 Please follow the same color line to connect each sensor on the board.
-<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Remote-Control-Oscillating-Fan/Remote-Control-Oscillating-Fan-pic.png"/></div>
+<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Remote-Control-Oscillating-Fan/remote_control_new.png"/></div>
 
 
 This is controller botton function. 
@@ -193,14 +193,14 @@ This is controller botton function.
 #include <Servo.h>
 
 Servo myservo;  // create servo object to control a servo
-int RECV_PIN = 2; // set pin 2 as IR control 
+int RECV_PIN = 2; // set pin 2 as IR control
 
-IRrecv irrecv(RECV_PIN); 
+IRrecv irrecv(RECV_PIN);
 
-decode_results results;  
+decode_results results;
 
-int pos = 0;    // variable to store the servo position
-int fanPin = 6;  // set D6 as control switch 
+int pos = 90;    // variable to store the servo position
+int fanPin = 7;  // set D6 as control switch
 int fanState = LOW;
 int IO = 0;
 
@@ -212,48 +212,58 @@ void setup()
   Serial.println("Enabled IRin");
   myservo.attach(3);  // attaches the servo on pin 2 to the servo object
   pinMode(fanPin, OUTPUT);
+
 }
 
 //  power_encode 2155829415     left  2155870215  right  2155821255
 
 void loop() {
-  
   if (irrecv.decode(&results)) { //checking IR signal
-
-    if(results.value == 2155829415){      // Power off/on
+    if (results.value == 2155829415) {    // Power off/on
       IO++;
-      if(IO%2 == 0){
+      if (IO % 2 == 0) {
         fanState = HIGH;
         digitalWrite(fanPin, fanState);
         delay(100);
-        }
-       else{
+      }
+      else {
         fanState = LOW;
         digitalWrite(fanPin, fanState);
         delay(100);
-        }
-      
       }
+    }
 
-    if(results.value == 2155821255){      // fan swing to left
-         for (pos = 0; pos <= 90; pos += 1) { // goes from 0 degrees to 90 degrees
-    // in steps of 1 degree
-    myservo.write(pos);              // tell servo to go to position in variable 'pos'
-    delay(40);                       // waits 15ms for the servo to reach the position
-        }
-      }
+    if (results.value == 2155821255 ) {    // fan swing to left
+      for (pos; pos <= 89; pos += 1) { // goes from 0 degrees to 90 degrees
+        // in steps of 1 degree
+        myservo.write(pos);              // tell servo to go to position in variable 'pos'
 
-    if(results.value == 2155870215){      // fan swing to right
-          for (pos = 90; pos >= 0; pos -= 1) { // goes from 90 degrees to 0 degrees
-    myservo.write(pos);              // tell servo to go to position in variable 'pos'
-    delay(40);                       // waits 15ms for the servo to reach the position
+        delay(40);                       // waits 15ms for the servo to reach the position
+        if (irrecv.decode(&results)) {
+          irrecv.resume();
+          if (results.value == 2155870215)
+            break;
         }
       }
-    
-    Serial.println(results.value, HEX); 
+    }
+
+    if (results.value == 2155870215 ) {    // fan swing to right
+      for (pos; pos >= 1; pos -= 1) { // goes from 90 degrees to 0 degrees
+        myservo.write(pos);              // tell servo to go to position in variable 'pos'
+        delay(40);                       // waits 15ms for the servo to reach the position
+
+        if (irrecv.decode(&results)) {
+          irrecv.resume();
+          if (results.value == 2155821255)
+            break;
+        }
+      }
+    }
+    Serial.println(pos);
+    Serial.println(results.value, HEX);
     Serial.println(results.value);
     irrecv.resume();                    //recive next intrustion
-    
+
   }
   delay(100);
 }
@@ -293,7 +303,7 @@ This wiki introduces how to make water atomization to keep indoor humidity norma
 
 ### Hardware Connection
 Please follow the same color line to connect each sensor on the board.
-<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Smart-Humidifier/aomization_connection.png"/></div>
+<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Smart-Humidifier/hummmm.png"/></div>
 
 
 ### Arduino Instructions
@@ -314,7 +324,7 @@ Please follow the same color line to connect each sensor on the board.
 
 #include "DHT.h"
 #define DHTTYPE DHT11   // DHT 11
-#define DHTPIN 7     // what pin we're connected to
+#define DHTPIN 3     // what pin we're connected to
 DHT dht(DHTPIN, DHTTYPE);
 
 #include <Wire.h>
@@ -327,6 +337,7 @@ void setup(void) {
   u8x8.setFlipMode(1);
   Wire.begin();
   dht.begin();
+  pinMode(2,INPUT);
 }
  
 void loop(void) {
@@ -359,12 +370,12 @@ void loop(void) {
   if(b > 70){
   u8x8.setCursor(9, 20);
   u8x8.print("OFF");  
-  digitalWrite(A6, LOW);    // atomization stopped
+  digitalWrite(2, LOW);    // atomization stopped
   }
   if(b <= 70) {
   u8x8.setCursor(9, 20);
   u8x8.print("ON "); 
-  digitalWrite(A6, HIGH);   // atomize 
+  digitalWrite(2, HIGH);   // atomize 
     }
   delay(1000);  
 
