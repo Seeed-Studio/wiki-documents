@@ -186,33 +186,12 @@ sudo reboot
 
 **Serial Console**
 
-Now your ODYSSEY – STM32MP157C is up, you may want to access your Linux system through the console, then set up Network, and so on. Two serial port access methods are provided for Linux access:
+Now your ODYSSEY – STM32MP157C is up, you may want to access your Linux system through the console, then set up Network, and so on. A serial port access method is provided for Linux access:
 
-- A. OTG USB port - You need to run a Linux system on a circuit board.
-
-- B. UART port - Used to debug low-level problems.(recommend)
-
-**A. Connect via OTG**
-
-- **Step 1.** Take a USB type-c cable and make sure it's a data cable, plug it into ODYSSEY – STM32MP157C's USB type-c port, and then plug the other end of the USB type-c cable into your computer. 
-
-- **Step 2.** Check whether the computer serial port is enabled:
-
-    - Windows : Check the device manager, there should be a new serial device named ```COMx```, x is a bigger and bigger number. If you can not recognizes the driver you can visit [link](https://beagleboard.org/getting-started#troubleshooting) to install the driver.
-    - Linux : ls ```/dev/ttyACM*```, should be ```/dev/ttyACMx``` x depends on the USB port you use.
-    - Mac : ls ```/dev/cu.usb*```, should be ```/dev/cu.usbmodem14xx``` xx depends on the USB port you use.
+- UART port - Used to debug low-level problems.(recommend)
 
 
-- **Step 3.** Use your favorite serial debugging tool to connect to serial ports: 115200 baud rate, 8 bits, no parity bits, a stop bit 1, no flow control. Here are SoMe examples:
-
-    - Windows : Use [PUTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), select ```Serial``` protocol, fill in the COM port corresponding to ODYSSEY -STM32MP157C,```115200``` baud rate, 8 bit, no parity bits, a stop bit 1, no flow control.
-    - Linux : Depending on the USB To TTL Adapter, should be ```screen /dev/ttyACM0(,1, and so on) 115200``` or ```screen /dev/ttyUSB0(,1, and so on) 115200```.
-    - Mac : Depending on the USB To TTL Adapter, should be ```screen /dev/cu.usbserial1412(,1422, and so on) 115200``` or ```screen /dev/cu.usbmodem1412(,1422, and so on) 115200```.
-
-
-- **Step 4.** The default user name is ```debian```, the password is ```temppwd```.
-
-**B. Connect via UART port**
+**Connect via UART port**
 
 In this section, we'll walk you through the use of the USB to TTL adapter, which connects to the ODYSSEY – STM32MP157C's Uart port(Located at the upper right of ODYSSEY – STM32MP157C), to establish a connection between your computer and ODYSSEY -STM32MP157C.
 
