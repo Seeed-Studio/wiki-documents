@@ -1,3 +1,10 @@
+## Make Your Customized Arduino Board for Under $50
+
+By utilizing the strong production chain of Seeed and the convenience of Geppetto, prototyping has never been easier. Customize your own Arduino board for under $50, including design, PCB manufacture, components procurement, assembly and international shipping.
+Let's see how it works:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AqyNJZpCt8Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Background
 
 If you don’t want to work on schematic or layout yourself, but you want to convert your prototype based on the Seeed’s modules into an integrated product, we highly recommend you to try [**Geppetto**](
