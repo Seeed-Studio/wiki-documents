@@ -1063,7 +1063,7 @@ For more information, please also visit [How to install Arduino Libraries](https
 // U8X8_SSD1306_128X64_NONAME_SW_I2C u8x8(/* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);   // OLEDs without Reset of the Display
 
 void setup(void) {
-  u8x8.setBusClock(100000);
+  // u8x8.setBusClock(100000);
   u8x8.begin();
   u8x8.setFlipMode(1);
 }
@@ -1198,15 +1198,21 @@ Use Grove cable to connect the OLED to Seeeduino Lotus's **I2C** interface (Note
 
 !!!Note 
     - If you breakout other modoule to use the OLED and it do not work, or you want to use fastest OLED I2C (default: 40KHZ), please follow this instrcution:
+
   Clink "This PC" -> Documents -> Arduino -> libraries -> U8g2 -> src -> U8x8lib.cpp -> Sliding to 1334 line -> delete or disable this line -> save the file.
 
   ```CPP
   Wire.setClock(u8x8->bus_clock);   // just delete or disable this line
   ```
   
-  Meanwhile, remove this line from the example code.
+
+ Or you can set the bus lock to 100000 then add in the setup().
 ```CPP
-  u8x8.setBusClock(100000);   //  it for limit the I2C bus clock
+void setup(void) {
+  u8x8.setBusClock(100000); //  it for limit the I2C bus clock
+  u8x8.begin();
+  u8x8.setFlipMode(1);
+}
 ```
 
 ### Lesson 8: Detecting Surrounding Temperature & Humidity
