@@ -280,6 +280,7 @@ It should be like:
 - **Step 2**. Download the source file by cloning the grove.py library. 
 
 ```
+sudo pip3 install Seeed-grove.py
 cd ~
 git clone https://github.com/Seeed-Studio/grove.py
 
@@ -289,7 +290,7 @@ git clone https://github.com/Seeed-Studio/grove.py
 
 ```
 cd grove.py/grove
-python grove_ryb_led_button.py 5
+sudo python3 grove_ryb_led_button.py 5
 
 ```
 
