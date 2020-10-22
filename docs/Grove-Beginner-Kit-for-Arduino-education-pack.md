@@ -1,42 +1,42 @@
 # Grove Beginner Kit for Arduino Projects
 
-## Intrusion Alarm
+## Project 1: Intrusion Alarm
 
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/intrustion-Alarm/intursion%20Alarm.gif"/></div>
 
-### Overview
+**Overview**
 
 This wiki introduces how to make a intrusion alarm.
 
-### Feature
+**Feature*
 
 - The PIR motion sensor can detect people if in the area, then alarm triggered.
 
 
-### Component required
+**Component required**
 
-#### hardware
+**hardware**
 - [**Grove Beginner Kit**](https://www.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-p-4549.html)
 - [**MINI PIR motion sensor**](https://www.seeedstudio.com/Grove-mini-PIR-motion-sensor-p-2930.html)
 
-#### Software
+**Software**
 - Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 
 
-### Hardware Connection
+**Hardware Connection**
 Please follow the same color line to connect each sensor on the board.
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/intrustion-Alarm/alarm11.png"/></div>
 
 !!!Note
     The buzzer (D5) and LED (D4) are embedded in the board.
 
-### Arduino Instructions
+**Arduino Instructions**
 
 1. Follow the connection picture connect all the sensor on the board.
 2. Place the Mini PIR motion sensor in the location of the detection.
 3. Copy the code stick on the Aruino IDE then upload it.
 
-###Code
+**Code**
 
 ```CPP
 #define PIR_MOTION_SENSOR 2//Use pin 2 to receive the signal from the module
@@ -68,34 +68,34 @@ void loop() {
 ```
 
 
-## Oscillating fan
+## project 2: Oscillating fan
 
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Oscillating-fan/Oscillating-Fan-gif.gif"/></div>
 
 
-### Overview
+**Overview**
 
 This wiki introduce how to make a Mini fan to plase on your room keep cool. 
 
-### Feature
+**Feature**
 
 - Automatic swing fan
 
-### Component required
+**Component required**
 
-#### Hardware
+**Hardware**
 - [**Grove Beginner Kit**](https://www.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-p-4549.html)
 - [**Grove mini fan**](https://www.seeedstudio.com/Grove-Mini-Fan-v1-1.html)
 - [**Grove-Servo**](https://www.seeedstudio.com/Grove-Servo.html)
 
 
-#### Software
+**Software**
 - Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 
-#### Hardware Connection
+**Hardware Connection**
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Oscillating-fan/Osc-fan.png"/></div>
 
-### Arduino Instructions
+**Arduino Instructions**
 
 1. Copy the Code and stick on the Arduino IDE
 2. Select the current port: Tools -> Port -> COM (number)
@@ -104,7 +104,7 @@ This wiki introduce how to make a Mini fan to plase on your room keep cool.
 !!!note
     Please set the fan in the safety position.
 
-### Code
+**Code**
 
 ```CPP
 #include <Servo.h>
@@ -138,40 +138,40 @@ void loop() {
 }
 ```
 
-## Remote Control Oscillating Fan
+## Project 3: Remote Control Oscillating Fan
 
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Remote-Control-Oscillating-Fan/Fan_IRcontroler.gif
 "/></div>
 
 
 
-### Overview
+**Overview**
 
 This wiki introduces how to make a remote control oscillating fan.
 
 
-### Feature
+**Feature**
 
 - The fan power controlled by the controller. 
 - The fan swing way is able to use remote control.
 
-### Component required
+**Component required**
 
-#### hardware
+**Hardware**
 
 - [**Grove Beginner Kit**](https://www.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-p-4549.html)
 - [**Grove mini fan**](https://www.seeedstudio.com/Grove-Mini-Fan-v1-1.html)
 - [**Grove-Servo**](https://www.seeedstudio.com/Grove-Servo.html)
 - [**Grove - IR (Infrared) Receiver**](https://www.seeedstudio.com/Grove-Infrared-Receiver.html)
 
-#### Software
+**Software**
 - Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 - Navigate to **Sketch** -> **Include Library** -> **Manage Libraries**, search **IRremote** then install it. 
 
 !!!Note
     Refer How to [**install library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
-### Hardware Connection
+**Hardware Connection**
 Please follow the same color line to connect each sensor on the board.
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Remote-Control-Oscillating-Fan/remote_control_new.png"/></div>
 
@@ -180,13 +180,13 @@ This is controller botton function.
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Remote-Control-Oscillating-Fan/remote_controller.png"/></div>
 
 
-### Arduino Instructions
+**Arduino Instructions**
 
 1. Follow the connection picture connect all the sensor on the board.
 2. Copy the code stick on the Aruino IDE then upload it.
 3. Place the Fan in the safety position, try to press the button make sure it can work safely.
 
-### Code
+**Code**
 
 ```CPP
 #include <IRremote.h>
@@ -271,28 +271,28 @@ void loop() {
 ```
 
 
-## Smart Humidifier
+## Project 4: Smart Humidifier
 
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Smart-Humidifier/water_atomization_11.gif"/></div>
 
 
-### Overview
+**Overview**
 
 This wiki introduces how to make water atomization to keep indoor humidity normal.
 
-### Feature
+**Feature**
 
 - Automatically use the water atomization when the humidity is low.
 - Display the temperature and humidity in real-time.
 
-### Component required
+**Component required**
 
-#### hardware
+**hardware**
 - [**Grove Beginner Kit**](https://www.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-p-4549.html)
 - [**Grove water atomization**](https://www.seeedstudio.com/Grove-Water-Atomization-v1-0.html)
 
 
-#### Software
+**Software**
 - Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 - Navigate to **Sketch** -> **Include Library** -> **Manage Libraries**, search **U8g2** then install it. 
 - Download the [**Grove_Temperature_And_Humidity_Sensor library**](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor)
@@ -301,12 +301,12 @@ This wiki introduces how to make water atomization to keep indoor humidity norma
     Refer How to [**install library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 
-### Hardware Connection
+**Hardware Connection**
 Please follow the same color line to connect each sensor on the board.
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Smart-Humidifier/hummmm.png"/></div>
 
 
-### Arduino Instructions
+**Arduino Instructions**
 
 1. Follow the connection picture connect all the sensor on the board.
 2. Copy the code stick on the Aruino IDE then upload it.
@@ -316,7 +316,7 @@ Please follow the same color line to connect each sensor on the board.
     Prepare some tissue put on the water, let the water atomization keep afloat. The function of tissue is lead water to the transducer and keep upper side of transducer above water.
 
 
-### Code
+**Code**
 
 ```cpp
 #include <Arduino.h>
@@ -382,29 +382,29 @@ void loop(void) {
 }
 ```
 
-## Ultrasonic Radar
+## Project 5: Ultrasonic Radar
 
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Ultrasonic-Radar/Radar-gif.gif"/></div>
 
 
 
-### Overview
+**Overview**
 
 This wiki introduce how to make a Ultrasonic Radar to detect the object and distance.
 
-### Feature 
+**Feature**
 - Detect the object distance
 - Scan if exist the object in around
 
-### Component required
+**Component required**
 
-### hardware
+**hardware**
 - [**Grove Beginner Kit**](https://www.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-p-4549.html)
 - [**Grove-Servo**](https://www.seeedstudio.com/Grove-Servo.html)
 - [**Grove-Ultrasonic distance sensor**](https://www.seeedstudio.com/Grove-Ultrasonic-Distance-Sensor.html)
 
 
-### Software
+**Software**
 - Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 - Download the [**Processing**](https://processing.org/download/)
 - Download the [**UltrasonicRanger**](https://github.com/Seeed-Studio/Seeed_Arduino_UltrasonicRanger/archive/master.zip) Library from Github.
@@ -413,10 +413,10 @@ This wiki introduce how to make a Ultrasonic Radar to detect the object and dist
     If you do not konw how to intall the library, Click [**here**](https://wiki.seeedstudio.com/Grove-Ultrasonic_Ranger/#software).
 
 
-### Hardware Connection
+**Hardware Connection**
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Ultrasonic-Radar/Radar_pic.png"/></div>
 
-### Arduino Instructions
+**Arduino Instructions**
 
 1. Follow the Connection to plug the cable on the port.
 1. Copy the Radar code and stick on the Arduino IDE then upload it.
@@ -424,7 +424,7 @@ This wiki introduce how to make a Ultrasonic Radar to detect the object and dist
 3. Copy the Radar-Processing Code and stick on the Processing.
 4. After the Servo start swing, click play on the Processing software.
 
-### Radar code
+**Radar code**
 
 ```cpp
 #include <Servo.h>
@@ -463,7 +463,7 @@ void loop() {
 }
 ```
 
-### Radar-Processing Code
+**Radar-Processing Code**
 
 ```cpp
 import processing.serial.*; // imports library for serial communication
