@@ -107,6 +107,14 @@ Just like creating a bootable USB for installing OS, format the USB into `FAT32`
 
 ### Step 3 - Upgrading BIOS
 
+<div class="tips" style="display: table; table-layout: fixed; background-color: #F5A9A9; height: auto;  width: 100%;">
+<div class="left-icon" style="display: table-cell; vertical-align: middle; background-color: #DF0101; padding-top: 10px; box-sizing: border-box; height: auto; width: 38px; text-align: center;"><img style="width: 26px; vertical-align: middle;" src="https://s3-us-west-2.amazonaws.com/static.seeed.cc/seeed/icon/Danger.svg" alt="attention icon" /></div>
+<div class="right-desc" style="display: table-cell; vertical-align: middle; padding-left: 15px; box-sizing: border-box; width: calc(95% - 38px);">
+<p style="color: #000000; font-weight: bold; margin-top: 10px;">Attention</p>
+<p style="color: #000000; font-size: 14px;">The first boot up from the BIOS upgrade is <b>relatively long</b>, please be patient to wait, and the installed OS will launch eventually. It will take <b>around 3 ~ 5 minutes</b>.</p>
+</div>
+</div>
+
 Plug the USB into ODYSSEY - X86J4105 and boot up and follow steps below:
 
 - Keep pressing `F7` Key to Enter Boot Manager Screen. Select the `UEFI: Built-in EFI Shell` as boot device and press `Enter`.
@@ -139,7 +147,14 @@ Plug the USB into ODYSSEY - X86J4105 and boot up and follow steps below:
 
 When the BIOS is upgraded, reboot the ODYSSEY - X86J4105(Switch on and off the power).
 
-***Note: The first boot up from the BIOS upgrade is relatively long, please be patient to wait, and the installed OS will launch eventually.***
+
+<div class="tips" style="display: table; table-layout: fixed; background-color: #F5A9A9; height: auto;  width: 100%;">
+<div class="left-icon" style="display: table-cell; vertical-align: middle; background-color: #DF0101; padding-top: 10px; box-sizing: border-box; height: auto; width: 38px; text-align: center;"><img style="width: 26px; vertical-align: middle;" src="https://s3-us-west-2.amazonaws.com/static.seeed.cc/seeed/icon/Danger.svg" alt="attention icon" /></div>
+<div class="right-desc" style="display: table-cell; vertical-align: middle; padding-left: 15px; box-sizing: border-box; width: calc(95% - 38px);">
+<p style="color: #000000; font-weight: bold; margin-top: 10px;">Attention</p>
+<p style="color: #000000; font-size: 14px;">The first boot up from the BIOS upgrade is <b>relatively long</b>, please be patient to wait, and the installed OS will launch eventually. It will take <b>around 3 ~ 5 minutes</b>.</p>
+</div>
+</div>
 
 ## How to update the Embedded Controller
 
