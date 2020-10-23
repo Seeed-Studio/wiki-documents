@@ -112,25 +112,32 @@ The OLED128*64 uses all the pins of SSD1308 chip, the default original point is 
 - **Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 - **Step 3.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
-```c
+```CPP
+#include <Arduino.h>
+#include <U8g2lib.h>
+ 
+#ifdef U8X8_HAVE_HW_SPI
+#include <SPI.h>
+#endif
+#ifdef U8X8_HAVE_HW_I2C
 #include <Wire.h>
-#include <SeeedOLED.h>
-
-void setup()
-{
-  Wire.begin();
-  SeeedOled.init();  //initialze SEEED OLED display
-
-  SeeedOled.clearDisplay();          //clear the screen and set start position to top left corner
-  SeeedOled.setNormalDisplay();      //Set display to normal mode (i.e non-inverse mode)
-  SeeedOled.setPageMode();           //Set addressing mode to Page Mode
-  SeeedOled.setTextXY(0, 0);         //Set the cursor to Xth Page, Yth Column
-  SeeedOled.putString("Hello World!"); //Print the String
+#endif
+ 
+ 
+U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, /* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);  // High speed I2C
+ 
+// U8G2_SSD1306_128X64_NONAME_F_SW_I2C u8g2(U8G2_R0, /* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);    //Low spped I2C
+ 
+void setup(void) {
+  u8g2.begin();
 }
-
-void loop()
-{
-
+ 
+void loop(void) {
+  u8g2.clearBuffer();                   // clear the internal memory
+  u8g2.setFont(u8g2_font_ncenB08_tr);   // choose a suitable font
+  u8g2.drawStr(0,10,"Hello World!");    // write something to the internal memory
+  u8g2.sendBuffer();                    // transfer internal memory to the display
+  delay(1000);  
 }
 
 ```
