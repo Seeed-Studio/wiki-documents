@@ -108,7 +108,7 @@ The OLED128*64 uses all the pins of SSD1308 chip, the default original point is 
 
 #### Software
 
-- **Step 1.** Download the  [Seeed OLED Display 128*64 library](https://github.com/Seeed-Studio/OLED_Display_128X64/archive/master.zip)  from Github.
+- **Step 1.** Download the  [U8G2 128*64 library](https://github.com/olikraus/u8g2/archive/master.zip)  from Github.
 - **Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 - **Step 3.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
@@ -123,8 +123,7 @@ The OLED128*64 uses all the pins of SSD1308 chip, the default original point is 
 #include <Wire.h>
 #endif
  
- 
-U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, /* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);  // High speed I2C
+U8G2_SSD1306_128X64_ALT0_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE); // High speed I2C
  
 // U8G2_SSD1306_128X64_NONAME_F_SW_I2C u8g2(U8G2_R0, /* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);    //Low spped I2C
  
