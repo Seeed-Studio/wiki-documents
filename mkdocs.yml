@@ -203,6 +203,7 @@ nav:
           - ArduPy LCD API Reference: ArduPy-LCD.md
           - How to Build ArduPy Firmware From Source Code: Building-Ardupy.md
           - How to Write an ArduPy Library: ArduPy-Libraries.md
+          - Improve Readability of Your MicroPython Code with Pylint and Black: Pylint-Black.md
 
       - Seeeduino XIAO:
           - Grove Shield for Seeeduino XIAO with embedded battery management chip: Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip.md
