@@ -15,15 +15,9 @@ This wiki introduces how to make a intrusion alarm.
 
 **Component required**
 
-**hardware**
-
 - [**Grove Beginner Kit**](https://www.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-p-4549.html)
 
 - [**MINI PIR motion sensor**](https://www.seeedstudio.com/Grove-mini-PIR-motion-sensor-p-2930.html)
-
-**Software**
-
-- Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 
 
 **Hardware Connection**
@@ -41,11 +35,13 @@ Please follow the same color line to connect each sensor on the board, put the P
 
 **Arduino Instructions**
 
-**Step 1**. Follow the connection picture connect all the sensor on the board.
+**Step 1**. Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 
-**Step 2**. Place the Mini PIR motion sensor in the location of the detection.
+**Step 2**. Follow the connection picture connect all the sensor on the board.
 
-**Step 3**. Copy the code stick on the Aruino IDE then upload it.
+**Step 3**. Place the Mini PIR motion sensor in the location of the detection.
+
+**Step 4**. Copy the code stick on the Aruino IDE then upload it.
 
 **Code**
 
@@ -91,17 +87,12 @@ This wiki introduce how to make a Mini fan to plase on your room keep cool.
 
 **Component required**
 
-**Hardware**
-
 - [**Grove Beginner Kit**](https://www.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-p-4549.html)
 
 - [**Grove mini fan**](https://www.seeedstudio.com/Grove-Mini-Fan-v1-1.html)
 
 - [**Grove-Servo**](https://www.seeedstudio.com/Grove-Servo.html)
 
-**Software**
-
-- Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 
 **Hardware Connection**
 
@@ -117,11 +108,13 @@ Please connect the fan grove cable to D7, Servo grove cable to D3.
 
 **Arduino Instructions**
 
-**Step 1**. Copy the Code and stick on the Arduino IDE
+**Step 1**. Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 
-**Step 2**. Select the current port: Tools -> Port -> COM (number)
+**Step 2**. Copy the Code and stick on the Arduino IDE
 
-**Step 3**. Upload the code
+**Step 3**. Select the current port: Tools -> Port -> COM (number)
+
+**Step 4**. Upload the code
 
 !!!note
     Please set the fan in the safety position.
@@ -177,8 +170,6 @@ This wiki introduces how to make a remote control oscillating fan.
 
 **Component required**
 
-**Hardware**
-
 - [**Grove Beginner Kit**](https://www.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-p-4549.html)
 
 - [**Grove mini fan**](https://www.seeedstudio.com/Grove-Mini-Fan-v1-1.html)
@@ -186,15 +177,6 @@ This wiki introduces how to make a remote control oscillating fan.
 - [**Grove-Servo**](https://www.seeedstudio.com/Grove-Servo.html)
 
 - [**Grove - IR (Infrared) Receiver**](https://www.seeedstudio.com/Grove-Infrared-Receiver.html)
-
-**Software**
-
-- Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
-
-- Navigate to **Sketch** -> **Include Library** -> **Manage Libraries**, search **IRremote** then install it. 
-
-!!!Note
-    Refer How to [**install library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 **Hardware Connection**
 
@@ -206,7 +188,6 @@ This is controller botton function.
 
 <div align=center><img width = 500 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Remote-Control-Oscillating-Fan/remote_controller.png"/></div>
 
-
 **Assembly instruction**
 
 <div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Remote-Control-Oscillating-Fan/remote_fan_assembly.png"/></div>
@@ -215,9 +196,18 @@ This is controller botton function.
 
 **Step 1**. Follow the connection picture connect all the sensor on the board.
 
-**Step 2**. Copy the code stick on the Aruino IDE then upload it.
+**Step 2**. Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 
-**Step 3**. Place the Fan in the safety position, try to press the button make sure it can work safely.
+**Step 3**. Navigate to **Sketch** -> **Include Library** -> **Manage Libraries**, search **IRremote** then install it. 
+
+**Step 4**. Copy the code stick on the Aruino IDE then upload it.
+
+**Step 5**. Place the Fan in the safety position, try to press the button make sure it can work safely.
+
+
+!!!Note
+    Refer How to [**install library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+
 
 **Code**
 
@@ -321,23 +311,10 @@ This wiki introduces how to make water atomization to keep indoor humidity norma
 
 **Component required**
 
-**hardware**
-
 - [**Grove Beginner Kit**](https://www.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-p-4549.html)
 
 - [**Grove water atomization**](https://www.seeedstudio.com/Grove-Water-Atomization-v1-0.html)
 
-
-**Software**
-
-- Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
-
-- Navigate to **Sketch** -> **Include Library** -> **Manage Libraries**, search **U8g2** then install it. 
-
-- Download the [**Grove_Temperature_And_Humidity_Sensor library**](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor)
-
-!!!Note
-    Refer How to [**install library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 
 **Hardware Connection**
@@ -356,9 +333,18 @@ Connect the Grove water atomization cable to D2.
 
 **Step 1**. Follow the connection picture connect all the sensor on the board.
 
-**Step 2**. Copy the code stick on the Aruino IDE then upload it.
+**Step 2** Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 
-**Step 3**. Prepare a contain with full water then put the water atomization on the water. 
+**Step 3** Navigate to **Sketch** -> **Include Library** -> **Manage Libraries**, search **U8g2** then install it. 
+
+**Step 4** Download the [**Grove_Temperature_And_Humidity_Sensor library**](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor) and install it
+
+**Step 5**. Copy the code stick on the Aruino IDE then upload it.
+
+**Step 6**. Prepare a contain with full water then put the water atomization on the water. 
+
+!!!Note
+    Refer How to [**install library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 !!!Note
     Prepare some tissue put on the water, let the water atomization keep afloat. The function of tissue is lead water to the transducer and keep upper side of transducer above water.
@@ -448,26 +434,11 @@ This wiki introduce how to make a Ultrasonic Radar to detect the object and dist
 
 **Component required**
 
-**hardware**
-
 - [**Grove Beginner Kit**](https://www.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-p-4549.html)
 
 - [**Grove-Servo**](https://www.seeedstudio.com/Grove-Servo.html)
 
 - [**Grove-Ultrasonic distance sensor**](https://www.seeedstudio.com/Grove-Ultrasonic-Distance-Sensor.html)
-
-
-**Software**
-
-- Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
-
-- Download the [**Processing**](https://processing.org/download/)
-
-- Download the [**UltrasonicRanger**](https://github.com/Seeed-Studio/Seeed_Arduino_UltrasonicRanger/archive/master.zip) Library from Github.
-
-!!!note
-    If you do not konw how to intall the library, Click [**here**](https://wiki.seeedstudio.com/Grove-Ultrasonic_Ranger/#software).
-
 
 **Hardware Connection**
 
@@ -483,13 +454,22 @@ Please follow the picture, connect the ultrasonic sensor Grove cable to the D2, 
 
 **Step 1**. Follow the Connection to plug the cable on the port.
 
-**Step 2**. Copy the Radar code and stick on the Arduino IDE then upload it.
+**Step 2**. Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 
-**Step 3**. Download the [**Processing**](https://processing.org/download/) for display the Radar scan map.
+**Step 3**. Download the [**Processing**](https://processing.org/download/)
 
-**Step 4**. Copy the Radar-Processing Code and stick on the Processing.
+**Step 4**. Download the [**UltrasonicRanger**](https://github.com/Seeed-Studio/Seeed_Arduino_UltrasonicRanger/archive/master.zip) Library from Github.
 
-**Step 5**. After the Servo start swing, click play on the Processing software.
+**Step 5**. Copy the Radar code and stick on the Arduino IDE then upload it.
+
+**Step 6**. Download the [**Processing**](https://processing.org/download/) for display the Radar scan map.
+
+**Step 7**. Copy the Radar-Processing Code and stick on the Processing.
+
+**Step 8**. After the Servo start swing, click play on the Processing software.
+
+!!!note
+    If you do not konw how to intall the library, Click [**here**](https://wiki.seeedstudio.com/Grove-Ultrasonic_Ranger/#software).
 
 **Radar code**
 
