@@ -2,7 +2,7 @@
 
 ## Project 1: Intrusion Alarm
 
-<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/intrustion-Alarm/intursion%20Alarm.gif"/></div>
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/intrustion-Alarm/intursion%20Alarm.gif"/></div>
 
 **Overview**
 
@@ -30,7 +30,11 @@ This wiki introduces how to make a intrusion alarm.
 
 Please follow the same color line to connect each sensor on the board, put the PIR motion sensor grove cable to the D2.
 
-<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/intrustion-Alarm/alarm11.png"/></div>
+<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/intrustion-Alarm/Alarm_new.png"/></div>
+
+**Assembly instructions**
+
+<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/intrustion-Alarm/alarm_assembly.png"/></div>
 
 !!!Note
     The buzzer (D5) and LED (D4) are embedded in the board.
@@ -75,7 +79,7 @@ void loop() {
 
 ## project 2: Oscillating fan
 
-<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Oscillating-fan/Oscillating-Fan-gif.gif"/></div>
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Oscillating-fan/Oscillating-Fan-gif.gif"/></div>
 
 **Overview**
 
@@ -103,7 +107,13 @@ This wiki introduce how to make a Mini fan to plase on your room keep cool.
 
 Please connect the fan grove cable to D7, Servo grove cable to D3.
 
-<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Oscillating-fan/Osc-fan.png"/></div>
+<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Oscillating-fan/Fan_new.png"/></div>
+
+**Assembly instruction**
+
+<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Oscillating-fan/fan_assembly.png"/></div>
+
+
 
 **Arduino Instructions**
 
@@ -152,7 +162,7 @@ void loop() {
 
 ## Project 3: Remote Control Oscillating Fan
 
-<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Remote-Control-Oscillating-Fan/Fan_IRcontroler.gif
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Remote-Control-Oscillating-Fan/Fan_IRcontroler.gif
 "/></div>
 
 **Overview**
@@ -190,11 +200,16 @@ This wiki introduces how to make a remote control oscillating fan.
 
 Please follow the same color line to connect each sensor on the board. Please connect the fan grove cable to D7, servo grove cable to D3, IR grove cable to D2.
 
-<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Remote-Control-Oscillating-Fan/remote_control_new.png"/></div>
+<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Remote-Control-Oscillating-Fan/remote_fan_new.png"/></div>
 
 This is controller botton function. 
 
-<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Remote-Control-Oscillating-Fan/remote_controller.png"/></div>
+<div align=center><img width = 500 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Remote-Control-Oscillating-Fan/remote_controller.png"/></div>
+
+
+**Assembly instruction**
+
+<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Remote-Control-Oscillating-Fan/remote_fan_assembly.png"/></div>
 
 **Arduino Instructions**
 
@@ -291,7 +306,7 @@ void loop() {
 
 ## Project 4: Smart Humidifier
 
-<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Smart-Humidifier/water_atomization_11.gif"/></div>
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Smart-Humidifier/water_atomization_11.gif"/></div>
 
 
 **Overview**
@@ -330,7 +345,11 @@ This wiki introduces how to make water atomization to keep indoor humidity norma
 Please follow the same color line to connect each sensor on the board.
 Connect the Grove water atomization cable to D2. 
 
-<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Smart-Humidifier/hummmm.png"/></div>
+<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Smart-Humidifier/smart_hum_new.png"/></div>
+
+**Assembly instructions**
+
+<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Smart-Humidifier/Smart_hum_assembly.png"/></div>
 
 
 **Arduino Instructions**
@@ -413,7 +432,7 @@ void loop(void) {
 
 ## Project 5: Ultrasonic Radar
 
-<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Ultrasonic-Radar/Radar-gif.gif"/></div>
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Ultrasonic-Radar/Radar-gif.gif"/></div>
 
 
 
@@ -454,7 +473,11 @@ This wiki introduce how to make a Ultrasonic Radar to detect the object and dist
 
 Please follow the picture, connect the ultrasonic sensor Grove cable to the D2, connect the servo to the D7.
 
-<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Ultrasonic-Radar/Radar_pic.png"/></div>
+<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Ultrasonic-Radar/Radar_new.png"/></div>
+
+**Assembly instuction**
+
+<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Ultrasonic-Radar/Radar_assembly.png"/></div>
 
 **Arduino Instructions**
 
