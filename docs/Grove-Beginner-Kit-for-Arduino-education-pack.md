@@ -8,7 +8,7 @@
 
 This wiki introduces how to make a intrusion alarm.
 
-**Feature*
+**Feature**
 
 - The PIR motion sensor can detect people if in the area, then alarm triggered.
 
@@ -16,15 +16,20 @@ This wiki introduces how to make a intrusion alarm.
 **Component required**
 
 **hardware**
+
 - [**Grove Beginner Kit**](https://www.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-p-4549.html)
+
 - [**MINI PIR motion sensor**](https://www.seeedstudio.com/Grove-mini-PIR-motion-sensor-p-2930.html)
 
 **Software**
+
 - Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 
 
 **Hardware Connection**
-Please follow the same color line to connect each sensor on the board.
+
+Please follow the same color line to connect each sensor on the board, put the PIR motion sensor grove cable to the D2.
+
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/intrustion-Alarm/alarm11.png"/></div>
 
 !!!Note
@@ -32,46 +37,45 @@ Please follow the same color line to connect each sensor on the board.
 
 **Arduino Instructions**
 
-1. Follow the connection picture connect all the sensor on the board.
-2. Place the Mini PIR motion sensor in the location of the detection.
-3. Copy the code stick on the Aruino IDE then upload it.
+**Step 1**. Follow the connection picture connect all the sensor on the board.
+
+**Step 2**. Place the Mini PIR motion sensor in the location of the detection.
+
+**Step 3**. Copy the code stick on the Aruino IDE then upload it.
 
 **Code**
 
 ```CPP
 #define PIR_MOTION_SENSOR 2//Use pin 2 to receive the signal from the module
- 
-int BuzzerPin = 5;     // set D5 as buzzer 
+
+int BuzzerPin = 5;     // set D5 as buzzer
 int LED_RAD = 4;       // set D4 as LED
- 
+
 void setup() {
+  Serial.begin(9600);
   pinMode(PIR_MOTION_SENSOR, INPUT);
   pinMode(BuzzerPin, OUTPUT);
   pinMode(LED_RAD, OUTPUT);
 }
- 
+
 void loop() {
 
-  if(digitalRead(PIR_MOTION_SENSOR)){
-    analogWrite(BuzzerPin, 1);
+  if (digitalRead(PIR_MOTION_SENSOR)) {
+    analogWrite(BuzzerPin, 100);
     digitalWrite(LED_RAD, HIGH);
-    delay(1000);
-    }
-  if(!digitalRead(PIR_MOTION_SENSOR)){
+    delay(2000);
     analogWrite(BuzzerPin, 0);
     digitalWrite(LED_RAD, LOW);
-    delay(1000);
-    }
+    delay(4000);
+  }
 
 }
 
 ```
 
-
 ## project 2: Oscillating fan
 
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Oscillating-fan/Oscillating-Fan-gif.gif"/></div>
-
 
 **Overview**
 
@@ -84,22 +88,30 @@ This wiki introduce how to make a Mini fan to plase on your room keep cool.
 **Component required**
 
 **Hardware**
+
 - [**Grove Beginner Kit**](https://www.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-p-4549.html)
+
 - [**Grove mini fan**](https://www.seeedstudio.com/Grove-Mini-Fan-v1-1.html)
+
 - [**Grove-Servo**](https://www.seeedstudio.com/Grove-Servo.html)
 
-
 **Software**
+
 - Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 
 **Hardware Connection**
+
+Please connect the fan grove cable to D7, Servo grove cable to D3.
+
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Oscillating-fan/Osc-fan.png"/></div>
 
 **Arduino Instructions**
 
-1. Copy the Code and stick on the Arduino IDE
-2. Select the current port: Tools -> Port -> COM (number)
-2. Upload the code
+**Step 1**. Copy the Code and stick on the Arduino IDE
+
+**Step 2**. Select the current port: Tools -> Port -> COM (number)
+
+**Step 3**. Upload the code
 
 !!!note
     Please set the fan in the safety position.
@@ -112,12 +124,12 @@ This wiki introduce how to make a Mini fan to plase on your room keep cool.
 Servo myservo;  // create servo object to control a servo
 
 int pos = 0;    // variable to store the servo position
-int fanPin = 6;  // set D6 as control switch 
+int fanPin = 7;  // set D6 as control switch 
 int fanState = LOW;
 
 void setup() {
     Serial.begin(9600);
-    myservo.attach(2);  // attaches the servo on pin 2 to the servo object
+    myservo.attach(3);  // attaches the servo on pin 2 to the servo object
     pinMode(fanPin, OUTPUT);
 }
 
@@ -143,16 +155,14 @@ void loop() {
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Remote-Control-Oscillating-Fan/Fan_IRcontroler.gif
 "/></div>
 
-
-
 **Overview**
 
 This wiki introduces how to make a remote control oscillating fan.
 
-
 **Feature**
 
 - The fan power controlled by the controller. 
+
 - The fan swing way is able to use remote control.
 
 **Component required**
@@ -160,31 +170,39 @@ This wiki introduces how to make a remote control oscillating fan.
 **Hardware**
 
 - [**Grove Beginner Kit**](https://www.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-p-4549.html)
+
 - [**Grove mini fan**](https://www.seeedstudio.com/Grove-Mini-Fan-v1-1.html)
+
 - [**Grove-Servo**](https://www.seeedstudio.com/Grove-Servo.html)
+
 - [**Grove - IR (Infrared) Receiver**](https://www.seeedstudio.com/Grove-Infrared-Receiver.html)
 
 **Software**
+
 - Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
+
 - Navigate to **Sketch** -> **Include Library** -> **Manage Libraries**, search **IRremote** then install it. 
 
 !!!Note
     Refer How to [**install library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 **Hardware Connection**
-Please follow the same color line to connect each sensor on the board.
+
+Please follow the same color line to connect each sensor on the board. Please connect the fan grove cable to D7, servo grove cable to D3, IR grove cable to D2.
+
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Remote-Control-Oscillating-Fan/remote_control_new.png"/></div>
 
-
 This is controller botton function. 
-<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Remote-Control-Oscillating-Fan/remote_controller.png"/></div>
 
+<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Remote-Control-Oscillating-Fan/remote_controller.png"/></div>
 
 **Arduino Instructions**
 
-1. Follow the connection picture connect all the sensor on the board.
-2. Copy the code stick on the Aruino IDE then upload it.
-3. Place the Fan in the safety position, try to press the button make sure it can work safely.
+**Step 1**. Follow the connection picture connect all the sensor on the board.
+
+**Step 2**. Copy the code stick on the Aruino IDE then upload it.
+
+**Step 3**. Place the Fan in the safety position, try to press the button make sure it can work safely.
 
 **Code**
 
@@ -283,18 +301,24 @@ This wiki introduces how to make water atomization to keep indoor humidity norma
 **Feature**
 
 - Automatically use the water atomization when the humidity is low.
+
 - Display the temperature and humidity in real-time.
 
 **Component required**
 
 **hardware**
+
 - [**Grove Beginner Kit**](https://www.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-p-4549.html)
+
 - [**Grove water atomization**](https://www.seeedstudio.com/Grove-Water-Atomization-v1-0.html)
 
 
 **Software**
+
 - Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
+
 - Navigate to **Sketch** -> **Include Library** -> **Manage Libraries**, search **U8g2** then install it. 
+
 - Download the [**Grove_Temperature_And_Humidity_Sensor library**](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor)
 
 !!!Note
@@ -302,15 +326,20 @@ This wiki introduces how to make water atomization to keep indoor humidity norma
 
 
 **Hardware Connection**
+
 Please follow the same color line to connect each sensor on the board.
+Connect the Grove water atomization cable to D2. 
+
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Smart-Humidifier/hummmm.png"/></div>
 
 
 **Arduino Instructions**
 
-1. Follow the connection picture connect all the sensor on the board.
-2. Copy the code stick on the Aruino IDE then upload it.
-3. Prepare a contain with full water then put the water atomization on the water. 
+**Step 1**. Follow the connection picture connect all the sensor on the board.
+
+**Step 2**. Copy the code stick on the Aruino IDE then upload it.
+
+**Step 3**. Prepare a contain with full water then put the water atomization on the water. 
 
 !!!Note
     Prepare some tissue put on the water, let the water atomization keep afloat. The function of tissue is lead water to the transducer and keep upper side of transducer above water.
@@ -393,20 +422,28 @@ void loop(void) {
 This wiki introduce how to make a Ultrasonic Radar to detect the object and distance.
 
 **Feature**
+
 - Detect the object distance
+
 - Scan if exist the object in around
 
 **Component required**
 
 **hardware**
+
 - [**Grove Beginner Kit**](https://www.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-p-4549.html)
+
 - [**Grove-Servo**](https://www.seeedstudio.com/Grove-Servo.html)
+
 - [**Grove-Ultrasonic distance sensor**](https://www.seeedstudio.com/Grove-Ultrasonic-Distance-Sensor.html)
 
 
 **Software**
+
 - Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
+
 - Download the [**Processing**](https://processing.org/download/)
+
 - Download the [**UltrasonicRanger**](https://github.com/Seeed-Studio/Seeed_Arduino_UltrasonicRanger/archive/master.zip) Library from Github.
 
 !!!note
@@ -414,15 +451,22 @@ This wiki introduce how to make a Ultrasonic Radar to detect the object and dist
 
 
 **Hardware Connection**
+
+Please follow the picture, connect the ultrasonic sensor Grove cable to the D2, connect the servo to the D7.
+
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Ultrasonic-Radar/Radar_pic.png"/></div>
 
 **Arduino Instructions**
 
-1. Follow the Connection to plug the cable on the port.
-1. Copy the Radar code and stick on the Arduino IDE then upload it.
-2. Download the [**Processing**](https://processing.org/download/) for display the Radar scan map.
-3. Copy the Radar-Processing Code and stick on the Processing.
-4. After the Servo start swing, click play on the Processing software.
+**Step 1**. Follow the Connection to plug the cable on the port.
+
+**Step 2**. Copy the Radar code and stick on the Arduino IDE then upload it.
+
+**Step 3**. Download the [**Processing**](https://processing.org/download/) for display the Radar scan map.
+
+**Step 4**. Copy the Radar-Processing Code and stick on the Processing.
+
+**Step 5**. After the Servo start swing, click play on the Processing software.
 
 **Radar code**
 
