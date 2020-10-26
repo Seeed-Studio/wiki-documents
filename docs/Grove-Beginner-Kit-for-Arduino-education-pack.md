@@ -142,7 +142,7 @@ void setup() {
     myservo.attach(3);  // attaches the servo on pin 2 to the servo object
     pinMode(fanPin, OUTPUT);
 }
-
+ 
 void loop() {
 
  fanState = HIGH;
