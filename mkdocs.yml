@@ -245,6 +245,7 @@ nav:
             - Overview: Wio-Terminal-Bluetooth-Overview.md
             - Client and Server introduction: Wio-terminal-BLE-introduction.md
             - Web Bluetooth APIs: Wio-Terminal-Web-Bluetooth.md
+            - Bluetooth Ibeacon: BLE-ibeacon-using-Wio-terminal.md
           - Audio:
             - Overview: Wio-Terminal-Audio-Overview.md
             - Play and Record: Wio-Terminal-Audio-Play-Record.md
