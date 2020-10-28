@@ -423,9 +423,9 @@ nav:
 
   - SenseCap:
       - SenseCAP Introduction: Industrial-IoT-SenseCAP-Introduction.md
-          - SenseCAP LoRaWAN: Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide.md
-          # - SenseCAP Sensor Hub Data Logger: 
-          # - SenseCAP ONE Compact Weather Station: 
+      - SenseCAP LoRaWAN: Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide.md
+    # - SenseCAP Sensor Hub Data Logger: 
+    # - SenseCAP ONE Compact Weather Station: 
 
   - Grove:
       - Grove Introduction: Grove.md
