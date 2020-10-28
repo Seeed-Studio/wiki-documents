@@ -330,9 +330,6 @@ nav:
       - NPi-i:
           - NPi i.MX6ULL Dev Board Linux SBC: NPi-i.MX6ULL-Dev-Board-Linux-SBC.md
 
-      - SenseCap:
-          - Sensecap LoRaWAN Gateway and Wireless Sensor User Guide: Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide.md
-
       - Azure Sphere:
           - Azure Sphere MT3620 Development Kit: Azure_Sphere_MT3620_Development_Kit.md
           - Grove Starter Kit for Azure Sphere MT3620 Development Kit: Grove_Starter_Kit_for_Azure_Sphere_MT3620_Development_Kit.md
@@ -423,6 +420,12 @@ nav:
       - How to Bridge Mosiquitto MQTT Broker to AWS IoT with Arduino Boards: Arduino-AWS-IOT-Bridge.md
       - How to use Arduino Borads as DAPLink Device: Arduino-DAPLink.md
       - Flashing the Arduino Bootloader using DAP Link: Flashing-Arduino-Bootloader-DAPLink.md
+
+  - SenseCap:
+      - SenseCAP Introduction: Industrial-IoT-SenseCAP-Introduction.md
+          - SenseCAP LoRaWAN: Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide.md
+          # - SenseCAP Sensor Hub Data Logger: 
+          # - SenseCAP ONE Compact Weather Station: 
 
   - Grove:
       - Grove Introduction: Grove.md
