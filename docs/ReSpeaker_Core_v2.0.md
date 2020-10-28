@@ -285,7 +285,7 @@ Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2.0 image f
 
 **A. Boot from the SD card**
 
-- **Step 1.** Click the [Fangcloud](https://v2.fangcloud.com/share/7395fd138a1cab496fd4792fe5?lang=en) / [mirror-azure](http://respeaker.seeed.io/images/) to download our latest image zip files: ```respeaker-debian-9-lxqt-sd-********-4gb.img.xz``` or ```respeaker-debian-9-iot-sd-********-4gb.img.xz```.
+- **Step 1.** Click the [mirror-azure](http://respeaker.seeed.io/images/) to download our latest image zip files: ```respeaker-debian-9-lxqt-sd-********-4gb.img.xz``` or ```respeaker-debian-9-iot-sd-********-4gb.img.xz```.
 
 
 |Section|Description|
@@ -317,7 +317,7 @@ Similar to the Raspberry Pi, you need to install the ReSpeaker Core v2.0 image f
 
 There is no firmware in the EMMC when leaving the factory, you can flash the ReSpeaker image files to the ReSpeaker's eMMC (onboard flash memory) by using your PC or Mac. Then the ReSpeaker will boot from it's eMMC (onboard flash memory) and not from the SD card.
 
-- **Step 1.** Download our latest image zip file ```respeaker-debian-9-iot-flasher-********-4gb.img.xz``` or ```respeaker-debian-9-lxqt-flasher-********-4gb.img.xz``` at Fangcloud. The lxqt version comes with Debian desktop and the iot version does not. And the flasher version is for flashing eMMC, and the sd version is for booting from SD card.
+- **Step 1.** Download our latest image zip file ```respeaker-debian-9-iot-flasher-********-4gb.img.xz``` or ```respeaker-debian-9-lxqt-flasher-********-4gb.img.xz``` at mirror-azure. The lxqt version comes with Debian desktop and the iot version does not. And the flasher version is for flashing eMMC, and the sd version is for booting from SD card.
 
 - **Step 2.** Burn the ```*.img.xz``` file directly to SD card with Etcher, or unzip the ```*.img.xz``` file to a ```*.img``` file, then burn it to SD card with other image writing tools.
 
