@@ -63,7 +63,7 @@ void loop() {
   if (digitalRead(PIR_MOTION_SENSOR)) {
     analogWrite(BuzzerPin, 100);
     digitalWrite(LED_RAD, HIGH);
-    delay(2000);
+    delay(3000);
     analogWrite(BuzzerPin, 0);
     digitalWrite(LED_RAD, LOW);
     delay(4000);
