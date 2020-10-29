@@ -1075,8 +1075,8 @@ void loop(void) {
 }
 ```
 
-!!!Note 
-  If you breakout other modules, please read the **Description:** chapter. 
+!!!Attention
+  If you breakout all the modules and use the Grove OLED separately, you may find it won't work with this code. If you encounter such a problem, please refer to the end of this section: Breakout Guide.
 
 
 - **Code analysis**
