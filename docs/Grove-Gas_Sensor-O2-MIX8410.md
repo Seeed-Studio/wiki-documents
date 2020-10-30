@@ -203,6 +203,134 @@ Open serial monitor of your Arduino IDE, and you will get the data now.
     
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_O2/images/data.png)
 
+## Getting Started with Raspberry Pi(With Grove Base Hat for Raspberry Pi)
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| Raspberry pi | Grove Base Hat for RasPi| Grove - Gas Sensor O₂(MIX8410)|
+|--------------|-------------|-----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/products/101990680/MIX8410py.png)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Oxygen-Sensor-MIX8410-p-4697.html)|
+
+
+- **Step 2**. Plug the Grove Base Hat into Raspberry.
+- **Step 3**. Connect Grove - Gas Sensor O₂(MIX8410) to analog port A0 of the Base Hat.
+- **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+
+
+![](https://files.seeedstudio.com/products/101990680/MIX8410hardwareconnection1.jpg)
+
+
+
+#### Software
+
+- **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 2**. Download the source file by cloning the grove.py library. 
+
+```
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+
+```
+
+- **Step 3**. Execute below commands to create the python code.
+
+```
+cd grove.py/grove/
+nano MIX8410.py
+
+
+```
+- **Step 4**. Copy the following code into the file:
+
+
+```python
+import time , sys, math
+from adc import ADC
+
+__all__ = ["GroveMix8410Sensor"]
+
+VRefer = 3.3
+total = 0
+Measuredvout = 0
+
+class GroveMix8410:
+
+
+
+    def __init__(self, channel):
+        self.channel = channel
+        self.adc = ADC()
+    
+    @property
+    def Mix8410(self):
+        value = self.adc.read(self.channel)
+        if value != 0:
+            voltage = value*5/1024.0
+            Mix8410Value = voltage* 0.21 *100/ 2.0
+            return Mix8410Value
+        else:
+            return 0
+
+Grove = GroveMix8410
+
+def main():
+    if len(sys.argv) < 2:
+        print('Usage: {} adc_channel'.format(sys.argv[0]))
+        sys.exit(1)
+ 
+    sensor = GroveMix8410(int(sys.argv[1]))
+    print('Detecting 02 value...')
+ 
+    while True:
+        print('Mix8410 Value: {0}'.format(sensor.Mix8410))
+        time.sleep(1)
+ 
+if __name__ == '__main__':
+    main()  
+
+```
+
+- **Step 5**. Use Ctrl+O to save and Ctrl+X to quit.
+- **Step 6**. Run the following to execute:
+```
+python MIX8410.py 0
+```
+
+!!!success
+    If everything goes well, you will be able to see the following result.
+    
+```python
+
+pi@raspberrypi:~/grove.py/grove$ python MIX8410.py 0
+
+Detecting 02 value...
+Mix8410 Value: 36.298828125
+Mix8410 Value: 35.888671875
+Mix8410 Value: 36.3500976562
+Mix8410 Value: 36.3500976562
+Mix8410 Value: 36.3500976562
+Mix8410 Value: 36.3500976562
+Mix8410 Value: 36.298828125
+Mix8410 Value: 36.298828125
+Mix8410 Value: 36.298828125
+Mix8410 Value: 36.298828125
+Mix8410 Value: 36.3500976562
+Mix8410 Value: 36.298828125
+Mix8410 Value: 36.2475585938
+Mix8410 Value: 36.298828125
+Mix8410 Value: 36.3500976562
+Mix8410 Value: 36.2475585938
+Mix8410 Value: 36.3500976562
+Mix8410 Value: 36.3500976562
+
+
+```
+
+
+
 
 
 ## Schematic Online Viewer
