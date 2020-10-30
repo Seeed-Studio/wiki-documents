@@ -268,7 +268,7 @@ class GroveMix8410:
     def Mix8410(self):
         value = self.adc.read(self.channel)
         if value != 0:
-            voltage = value*5/1024.0
+            voltage = value*3.3/1024.0
             Mix8410Value = voltage* 0.21 *100/ 2.0
             return Mix8410Value
         else:
@@ -307,24 +307,24 @@ python MIX8410.py 0
 pi@raspberrypi:~/grove.py/grove$ python MIX8410.py 0
 
 Detecting 02 value...
-Mix8410 Value: 36.298828125
-Mix8410 Value: 35.888671875
-Mix8410 Value: 36.3500976562
-Mix8410 Value: 36.3500976562
-Mix8410 Value: 36.3500976562
-Mix8410 Value: 36.3500976562
-Mix8410 Value: 36.298828125
-Mix8410 Value: 36.298828125
-Mix8410 Value: 36.298828125
-Mix8410 Value: 36.298828125
-Mix8410 Value: 36.3500976562
-Mix8410 Value: 36.298828125
-Mix8410 Value: 36.2475585938
-Mix8410 Value: 36.298828125
-Mix8410 Value: 36.3500976562
-Mix8410 Value: 36.2475585938
-Mix8410 Value: 36.3500976562
-Mix8410 Value: 36.3500976562
+Mix8410 Value: 23.6419354839
+Mix8410 Value: 23.9129032258
+Mix8410 Value: 23.9467741935
+Mix8410 Value: 23.9467741935
+Mix8410 Value: 23.8451612903
+Mix8410 Value: 23.9467741935
+Mix8410 Value: 23.9467741935
+Mix8410 Value: 23.9467741935
+Mix8410 Value: 23.9806451613
+Mix8410 Value: 23.9467741935
+Mix8410 Value: 23.9467741935
+Mix8410 Value: 23.9806451613
+Mix8410 Value: 23.9467741935
+Mix8410 Value: 23.9129032258
+Mix8410 Value: 23.9129032258
+Mix8410 Value: 23.9129032258
+Mix8410 Value: 23.9467741935
+Mix8410 Value: 23.9129032258
 
 
 ```
