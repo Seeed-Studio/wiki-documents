@@ -395,6 +395,7 @@ nav:
           - Wireless Introduction: Wireless.md
           - ESP32 Breakout Kit: ESP32_Breakout_Kit.md
           - LoRa/LoRaWAN Gateway Kit: LoRa_LoRaWan_Gateway_Kit.md
+          - The Things Indoor Gateway: The-Things-Indoor-Gateway.md
           - Mesh Bee: Mesh_Bee.md
           - RFbee V1.1 - Wireless Arduino compatible node: RFbee_V1.1-Wireless_Arduino_compatible_node.md
 
