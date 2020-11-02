@@ -16,7 +16,7 @@ The **Wio Terminal** is a SAMD51-based microcontroller with Wireless Connectivit
 
 <p style=":center"><a href="https://www.seeedstudio.com/Wio-Terminal-p-4509.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
-<p style=":center"><a href="https://www.youtube.com/watch?v=af_I0n5iyzk&t" target="_blank"><div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/WT-classroom.png"/></div></a></p>
+<p style=":center"><a href="https://www.youtube.com/playlist?list=PLpH_4mf13-A0MzOdPNITVfoVBMvf7Rg9g" target="_blank"><div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/WT-classroom.png"/></div></a></p>
 
 ## Feature
 
