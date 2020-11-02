@@ -422,7 +422,7 @@ nav:
       - How to use Arduino Borads as DAPLink Device: Arduino-DAPLink.md
       - Flashing the Arduino Bootloader using DAP Link: Flashing-Arduino-Bootloader-DAPLink.md
 
-  - SenseCap:
+  - Industrial IoT:
       - SenseCAP Introduction: Industrial-IoT-SenseCAP-Introduction.md
       - SenseCAP LoRaWAN: Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide.md
       - SenseCAP Sensor Hub Data Logger: SenseCAP-Sensor-Hub-Data-Logger.md
