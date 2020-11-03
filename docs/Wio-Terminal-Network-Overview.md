@@ -55,6 +55,10 @@ $ git clone https://github.com/LynnL4/ambd_flash_tool
 
 - For **Windows OS**, please use the **`ambd_flash_tool.exe`** script.
 
+> Usage under **Window OS**:
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/win-new-tool.png"/></div>
+
 Let's take macOS as an example, which is the `ambd_flash_tool.py` script.
 
 - Open terminal and navigate to the file location. Run `python3 ambd_flash_tool.py` in the location and you should see the help usage:
