@@ -1,6 +1,6 @@
 # The Things Indoor Gateway
 
-![TTIG](https://files.seeedstudio.com/products/113990896/wiki/ttig%20image.png)
+![TTIG](https://files.seeedstudio.com/products/113990896/wiki/113990894_All-22.png)
 
 ## Product Introduction
 [The Things Indoor Gateway](https://www.thethingsnetwork.org/docs/gateways/thethingsindoor/) is a [The Things Network](https://www.thethingsnetwork.org/) product featuring high reliability, high performance, and cost-effective. It is an 8-channel LoRaWAN gateway based on SX1308 with build-in ESP8266 WiFi connectivity. With multiple versions and various power outlets available, it satisfies a wide range of applications requiring dynamic coverage. As an IoT gateway designed by The Things Network, it enjoys all the superior functions TTN provides to its customers. And of course, this gateway is able to connect with the secure and collaborative Internet of Things Network which is built that spans across many countries around the globe to provide coverage to millions of people. The tool which a lot of people apply in their community is [TTN Mapper](https://ttnmapper.org/). Therefore, you can use this gateway to become one of the contributors of this network by loading onto [The Network Console](https://console.thethingsnetwork.org/), or enjoy the public community network built up by the other TTN gateways!
@@ -33,6 +33,11 @@ With the use of The Things Indoor LoRaWAN WiFi Gateway, The Things Network Conso
 ## The Things Indoor Gateway Get Started with SenseCAP
 
 ![combo](https://files.seeedstudio.com/products/113990896/wiki/connection%20diagram.png)
+
+NOTE: If you don't know about SenseCAP, here is a brief intro: 
+> Among the first launch of Seeed industrial IoT (IIoT) product series, SenseCAP is focusing on wireless environmental sensing applications: smart agriculture, precision farming, and smart city, to name a few. It consists of hardware products (sensors, data-loggers & gateways, etc.), software services (SenseCAP portal, mobile App, open dashboard), and API for device & data management. SenseCAP supports different communication protocols, such as LoRa, 2G, 4G, NB-IoT, and more.
+
+To learn more, kindly click the [SenseCAP Introduction](https://wiki.seeedstudio.com/Industrial-IoT-SenseCAP-Introduction/)
 
 ### Step 1: Activate your TTIG Gateway 
 * Press the reset button (small button at the back of the gateway next to the USB-C port) for 5 seconds until the LED blinks rapidly GREEN<->RED for a couple of times.
