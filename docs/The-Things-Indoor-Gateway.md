@@ -1,4 +1,4 @@
-# The Things Indoor Gateway
+# The Things Indoor LoRaWAN WiFi Gateway based on SX1308 
 
 ![TTIG](https://files.seeedstudio.com/products/113990896/wiki/113990894_All-22.png)
 
