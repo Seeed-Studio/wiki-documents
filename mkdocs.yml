@@ -193,7 +193,7 @@ nav:
             - Installing FreeNAS: ODYSSEY-X86J4105-Installing-FreeNAS.md
             - Intel OpenVINO Toolkit: ODYSSEY-X86J4105-Intel-OpenVINO.md
             - Intel Neural Compute Stick 2: ODYSSEY-X86J4105-NCS2.md
-            - Coral-Mini-PCIe-Accelerator: Coral-Mini-PCIe-Accelerator-x86.md
+            - Coral-Mini-PCIe-Accelerator: Coral-Mini-PCIe-Accelerator-on-ODYSSEY-X86J4105.md
             - LTE Modules: ODYSSEY-X86J4105-LTE-Module.md
           - ODYSSEY STM32MP157C: ODYSSEY-STM32MP157C.md
           - SEEED SOM STM32MP157C: SEEED-SOM-STM32MP157C.md
