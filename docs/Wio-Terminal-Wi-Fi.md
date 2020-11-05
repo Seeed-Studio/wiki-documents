@@ -657,6 +657,135 @@ void loop()
 }
 ```
 
+### UDP Client Example Code
+
+This example connects to a Wi-Fi and sends UDP packets to a UDP Server that's running on your PC.
+
+**Note:** Make sure that your PC and Wio Terminal are in the same network!
+
+#### Python UDP Server Code
+
+- Save the following code as `udp_server.py`.
+
+- Run the python script : **`python udp_server.py`**.
+
+```py
+# This python script listens on UDP port 3333 
+# for messages from the Wio Terminal board and prints them
+import socket
+import sys
+
+try :
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+except socket.error, msg :
+    print 'Failed to create socket. Error Code : ' + str(msg[0]) + ' Message ' + msg[1]
+    sys.exit()
+
+try:
+    s.bind(('', 3333))
+except socket.error , msg:
+    print 'Bind failed. Error: ' + str(msg[0]) + ': ' + msg[1]
+    sys.exit()
+     
+print 'Server listening'
+
+while 1:
+    d = s.recvfrom(1024)
+    data = d[0]
+     
+    if not data: 
+        break
+    
+    print data.strip()
+    
+s.close()
+```
+
+#### Arduino Code
+
+- Change the `networkName` and `networkPswd` to your Wi-Fi settings.
+
+- Change the `udpAddress` to your PC's IP address and make sure your PC that's running the UDP Server is at the same network as Wio Terminal.
+
+- Upload the code to Wio Terminal.
+
+```cpp
+#include <rpcWiFi.h>
+#include <WiFiUdp.h>
+
+// WiFi network name and password:
+const char * networkName = "your-ssid";
+const char * networkPswd = "your-password";
+
+//IP address to send UDP data to:
+// either use the ip address of the server or 
+// a network broadcast address
+const char * udpAddress = "192.168.0.255";
+const int udpPort = 3333;
+
+//Are we currently connected?
+boolean connected = false;
+
+//The udp library class
+WiFiUDP udp;
+
+void setup(){
+  // Initilize hardware serial:
+  Serial.begin(115200);
+  
+  //Connect to the WiFi network
+  connectToWiFi(networkName, networkPswd);
+}
+
+void loop(){
+  //only send data when connected
+  if(connected){
+    //Send a packet
+    udp.beginPacket(udpAddress,udpPort);
+    udp.printf("Seconds since boot: %lu", millis()/1000);
+    udp.endPacket();
+  }
+  //Wait for 1 second
+  delay(1000);
+}
+
+void connectToWiFi(const char * ssid, const char * pwd){
+  Serial.println("Connecting to WiFi network: " + String(ssid));
+
+  // delete old config
+  WiFi.disconnect(true);
+  //register event handler
+  WiFi.onEvent(WiFiEvent);
+  
+  //Initiate connection
+  WiFi.begin(ssid, pwd);
+
+  Serial.println("Waiting for WIFI connection...");
+}
+
+//wifi event handler
+void WiFiEvent(WiFiEvent_t event){
+    switch(event) {
+      case SYSTEM_EVENT_STA_GOT_IP:
+          //When connected set 
+          Serial.print("WiFi connected! IP address: ");
+          Serial.println(WiFi.localIP());  
+          //initializes the UDP state
+          //This initializes the transfer buffer
+          udp.begin(WiFi.localIP(),udpPort);
+          connected = true;
+          break;
+      case SYSTEM_EVENT_STA_DISCONNECTED:
+          Serial.println("WiFi lost connection");
+          connected = false;
+          break;
+      default: break;
+    }
+}
+
+```
+
 ## Configuring Wi-Fi as Access Point (AP) Mode / Web Server
 
 - Include `rpcWiFi.h`, `WiFiClient.h` and `WifiAP.h` libraries in Arduino.
