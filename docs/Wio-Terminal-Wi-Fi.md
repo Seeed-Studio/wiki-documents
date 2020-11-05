@@ -659,6 +659,8 @@ void loop()
 
 ### UDP Client Example Code
 
+<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/udp-example.png"/></div>
+
 This example connects to a Wi-Fi and sends UDP packets to a UDP Server that's running on your PC.
 
 **Note:** Make sure that your PC and Wio Terminal are in the same network!
