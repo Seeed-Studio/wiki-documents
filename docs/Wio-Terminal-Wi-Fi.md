@@ -5,9 +5,17 @@ This wiki introduces how to configure Wi-Fi connectivity on Wio Terminal using t
 !!!Note
         Make sure that you have followed through the Network overview, **updated the latest firmware on RTL8720 and downloaded the dependant Arduino libraries.**
 
+<div class="tips" style="display: table; table-layout: fixed; background-color: #f5cfa9; height: auto;  width: 100%;">
+<div class="left-icon" style="display: table-cell; vertical-align: middle; background-color: #eda964; padding-top: 10px; box-sizing: border-box; height: auto; width: 38px; text-align: center;"><img style="width: 26px; vertical-align: middle;" src="https://s3-us-west-2.amazonaws.com/static.seeed.cc/seeed/icon/Danger.svg" alt="attention icon" /></div>
+<div class="right-desc" style="display: table-cell; vertical-align: middle; padding-left: 15px; box-sizing: border-box; width: calc(95% - 38px);">
+<p style="color: #000000; font-weight: bold; margin-top: 10px;">Attention</p>
+<p style="color: #000000; font-size: 14px;">The following examples have updated to work with <b>eRPC Structure Framework Firmware</b>, please update to eRPC structure. Simply replace the <code><b>AtWifi.h</b></code> with <code><b>rpcWiFi.h</b></code>.</p>
+</div>
+</div>
+
 ## Configuring as Station (STA) Mode
 
-- Include the `AtWifi.h` library in Arduino.
+- Include the `rpcWifi.h` library in Arduino.
 
 - Configure as STA mode:
 
@@ -20,7 +28,7 @@ WiFi.mode(WIFI_STA);
 This example will configure itself as Wi-Fi STA mode, scan and print out all the available networks to the Serial.
 
 ```cpp
-#include "AtWiFi.h"
+#include "rpcWiFi.h"
 
 void setup() {
     Serial.begin(115200);
@@ -70,7 +78,7 @@ void loop() {
 This example connects to a specified Wi-Fi Network. Change the `ssid` and `password` to your Wi-Fi network.
 
 ```cpp
-#include "AtWiFi.h"
+#include "rpcWiFi.h"
 
 const char* ssid = "yourNetworkName";
 const char* password =  "yourNetworkPassword";
@@ -78,18 +86,18 @@ const char* password =  "yourNetworkPassword";
 void setup() {
     Serial.begin(115200);
     while(!Serial); // Wait for Serial to be ready
-    delay(1000);
 
     // Set WiFi to station mode and disconnect from an AP if it was previously connected
     WiFi.mode(WIFI_STA);
     WiFi.disconnect();
-    delay(2000);
 
+    Serial.println("Connecting to WiFi..");
     WiFi.begin(ssid, password);
 
     while (WiFi.status() != WL_CONNECTED) {
         delay(500);
         Serial.println("Connecting to WiFi..");
+        WiFi.begin(ssid, password);
     }
     Serial.println("Connected to the WiFi network");
     Serial.print("IP Address: ");
@@ -103,7 +111,7 @@ void loop() {
 
 ### WiFi Multi Example Code
 
-- Include the `AtWiFi.h`and `WiFiMulti.h` libraries in Arduino.
+- Include the `rpcWiFi.h`and `WiFiMulti.h` libraries in Arduino.
 
 This example invoke the `WiFiMulti` class, you can use
 
@@ -116,7 +124,7 @@ to add several AP Wi-Fi to the list and `wifiMulti.run()` will try to connect to
 **Note:** Change the `SSID` and `Password` according to your Wi-Fi.
 
 ```cpp
-#include "AtWiFi.h"
+#include "rpcWiFi.h"
 #include <WiFiMulti.h>
 
 WiFiMulti wifiMulti;
@@ -186,7 +194,7 @@ python -m SimpleHTTPServer 80
 4. Upload the code to Wio Terminal, check Serial monitor to observe results.
 
 ```cpp
-#include <AtWiFi.h>
+#include <rpcWiFi.h>
 
 const char* ssid = "yourNetworkName";
 const char* password =  "yourNetworkPassword";
@@ -270,6 +278,7 @@ This example demonstrates establishing Https connection using Wio Terminal. With
 - Change the `ssid` and `password` to your Wi-Fi.
 
 ```cpp
+#include <rpcWiFi.h>
 #include <WiFiClientSecure.h>
 
 const char* ssid     = "yourNetworkName";     // your network SSID
@@ -384,9 +393,273 @@ sudo apt update
 sudo apt install openssl
 ```
 
-## Configuring Wi-Fi as Access Point (AP) Mode
+### Connecting to MQTT Server Example Code
 
-- Include `AtWiFi.h`, `WiFiClient.h` and `WifiAP.h` libraries in Arduino.
+This example demonstrates establishing MQTT connection using Wio Terminal with a MQTT Server. With this, you can use the Wio Terminal to subscribe and publish messages to the MQTT server. Here used a free MQTT Server: https://test.mosquitto.org/.
+
+- Download and Install the [**Arduino MQTT Library**](https://github.com/knolleary/pubsubclient) here.
+
+```cpp
+#include "rpcWiFi.h"
+#include <PubSubClient.h>
+
+// Update these with values suitable for your network.
+const char *ssid = "yourNetworkName";      // your network SSID
+const char *password = "yourNetworkPassword"; // your network password
+
+const char *ID = "Wio-Terminal-Client";  // Name of our device, must be unique
+const char *TOPIC = "WioTerminal";  // Topic to subcribe to
+const char *subTopic = "inTopic";  // Topic to subcribe to
+const char *server = "test.mosquitto.org"; // Server URL
+
+
+WiFiClient wifiClient;
+PubSubClient client(wifiClient);
+
+void callback(char* topic, byte* payload, unsigned int length) {
+  Serial.print("Message arrived [");
+  Serial.print(topic);
+  Serial.print("] ");
+  for (int i=0;i<length;i++) {
+    Serial.print((char)payload[i]);
+  }
+  Serial.println();
+}
+
+void reconnect() {
+  // Loop until we're reconnected
+  while (!client.connected())
+  {
+    Serial.print("Attempting MQTT connection...");
+    // Attempt to connect
+    if (client.connect(ID)) {
+      Serial.println("connected");
+      // Once connected, publish an announcement...
+      client.publish(TOPIC, "{\"message\": \"Wio Terminal is connected!\"}");
+      Serial.println("Published connection message successfully!");
+      // ... and resubscribe
+      client.subscribe(subTopic);
+      Serial.print("Subcribed to: ");
+      Serial.println(subTopic);
+    }
+    else {
+      Serial.print("failed, rc=");
+      Serial.print(client.state());
+      Serial.println(" try again in 5 seconds");
+      // Wait 5 seconds before retrying
+      delay(5000);
+    }
+  }
+}
+
+void setup()
+{
+  Serial.begin(115200);
+  while (!Serial)
+    ; // Wait for Serial to be ready
+  Serial.print("Attempting to connect to SSID: ");
+  Serial.println(ssid);
+  WiFi.begin(ssid, password);
+
+  // attempt to connect to Wifi network:
+  while (WiFi.status() != WL_CONNECTED)
+  {
+    Serial.print(".");
+    WiFi.begin(ssid, password);
+    // wait 1 second for re-trying
+    delay(1000);
+  }
+  
+  Serial.print("Connected to ");
+  Serial.println(ssid);
+  delay(500);
+
+  client.setServer(server, 1883);
+  client.setCallback(callback);
+}
+
+void loop()
+{
+  if (!client.connected()) {
+    reconnect();
+  }
+  client.loop();
+}
+```
+
+### Connecting to MQTTs Server Example Code
+
+<div align=center><video width="560" height="315" controls>
+  <source src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/mqtts.mp4" type="video/mp4">
+</video></div>
+
+This example demonstrates establishing MQTTs connection using Wio Terminal. Here used a free MQTTs Server: https://test.mosquitto.org/ and sending accelerator data to a topic.
+
+- Download and Install the [**Arduino MQTT Library**](https://github.com/knolleary/pubsubclient) here.
+
+- Install the Accelerator Library for Wio Terminal following [**this wiki**](https://wiki.seeedstudio.com/Wio-Terminal-IMU-Overview/).
+
+- The Wio Terminal will publish accelerator to the `WioTerminal/IMU` topic and subscribe messages from the `inTopic` topic.
+
+```cpp
+#include "rpcWiFi.h"
+#include <PubSubClient.h>
+#include <WiFiClientSecure.h>
+#include"LIS3DHTR.h"
+
+const char *ssid = "yourNetworkName";      // your network SSID
+const char *password = "yourNetworkPassword"; // your network password
+
+const char *ID = "Wio-Terminal-Client";  // Name of our device, must be unique
+const char *TOPIC = "WioTerminal/IMU";  // Topic to subcribe to
+const char *subTopic = "inTopic";  // Topic to subcribe to
+
+const char *server = "test.mosquitto.org"; // Server URL
+const char *test_root_ca =
+"-----BEGIN CERTIFICATE-----\n"
+"MIIEAzCCAuugAwIBAgIUBY1hlCGvdj4NhBXkZ/uLUZNILAwwDQYJKoZIhvcNAQEL\n"
+"BQAwgZAxCzAJBgNVBAYTAkdCMRcwFQYDVQQIDA5Vbml0ZWQgS2luZ2RvbTEOMAwG\n"
+"A1UEBwwFRGVyYnkxEjAQBgNVBAoMCU1vc3F1aXR0bzELMAkGA1UECwwCQ0ExFjAU\n"
+"BgNVBAMMDW1vc3F1aXR0by5vcmcxHzAdBgkqhkiG9w0BCQEWEHJvZ2VyQGF0Y2hv\n"
+"by5vcmcwHhcNMjAwNjA5MTEwNjM5WhcNMzAwNjA3MTEwNjM5WjCBkDELMAkGA1UE\n"
+"BhMCR0IxFzAVBgNVBAgMDlVuaXRlZCBLaW5nZG9tMQ4wDAYDVQQHDAVEZXJieTES\n"
+"MBAGA1UECgwJTW9zcXVpdHRvMQswCQYDVQQLDAJDQTEWMBQGA1UEAwwNbW9zcXVp\n"
+"dHRvLm9yZzEfMB0GCSqGSIb3DQEJARYQcm9nZXJAYXRjaG9vLm9yZzCCASIwDQYJ\n"
+"KoZIhvcNAQEBBQADggEPADCCAQoCggEBAME0HKmIzfTOwkKLT3THHe+ObdizamPg\n"
+"UZmD64Tf3zJdNeYGYn4CEXbyP6fy3tWc8S2boW6dzrH8SdFf9uo320GJA9B7U1FW\n"
+"Te3xda/Lm3JFfaHjkWw7jBwcauQZjpGINHapHRlpiCZsquAthOgxW9SgDgYlGzEA\n"
+"s06pkEFiMw+qDfLo/sxFKB6vQlFekMeCymjLCbNwPJyqyhFmPWwio/PDMruBTzPH\n"
+"3cioBnrJWKXc3OjXdLGFJOfj7pP0j/dr2LH72eSvv3PQQFl90CZPFhrCUcRHSSxo\n"
+"E6yjGOdnz7f6PveLIB574kQORwt8ePn0yidrTC1ictikED3nHYhMUOUCAwEAAaNT\n"
+"MFEwHQYDVR0OBBYEFPVV6xBUFPiGKDyo5V3+Hbh4N9YSMB8GA1UdIwQYMBaAFPVV\n"
+"6xBUFPiGKDyo5V3+Hbh4N9YSMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQEL\n"
+"BQADggEBAGa9kS21N70ThM6/Hj9D7mbVxKLBjVWe2TPsGfbl3rEDfZ+OKRZ2j6AC\n"
+"6r7jb4TZO3dzF2p6dgbrlU71Y/4K0TdzIjRj3cQ3KSm41JvUQ0hZ/c04iGDg/xWf\n"
+"+pp58nfPAYwuerruPNWmlStWAXf0UTqRtg4hQDWBuUFDJTuWuuBvEXudz74eh/wK\n"
+"sMwfu1HFvjy5Z0iMDU8PUDepjVolOCue9ashlS4EB5IECdSR2TItnAIiIwimx839\n"
+"LdUdRudafMu5T5Xma182OC0/u/xRlEm+tvKGGmfFcN0piqVl8OrSPBgIlb+1IKJE\n"
+"m/XriWr/Cq4h/JfB7NTsezVslgkBaoU=\n"
+"-----END CERTIFICATE-----\n";
+
+long lastMsg = 0;
+
+LIS3DHTR<TwoWire> lis;
+WiFiClientSecure wifiClient;
+PubSubClient client(wifiClient);
+
+void callback(char *topic, byte *payload, unsigned int length)
+{
+  Serial.print("Message arrived [");
+  Serial.print(topic);
+  Serial.print("] ");
+  for (int i = 0; i < length; i++)
+  {
+    Serial.print((char)payload[i]);
+  }
+  Serial.println();
+}
+
+void reconnect()
+{
+  // Loop until we're reconnected
+  while (!client.connected())
+  {
+    Serial.print("Attempting MQTT connection...");
+    // Attempt to connect
+    if (client.connect(ID))
+    {
+      Serial.println("connected");
+      // Once connected, publish an announcement...
+      client.publish(TOPIC, "{\"message\": \"Wio Terminal is connected!\"}");
+      Serial.println("Published connection message successfully!");
+      // ... and resubscribe
+      client.subscribe(subTopic);
+      Serial.print("Subcribed to: ");
+      Serial.println(subTopic);
+    }
+    else
+    {
+      Serial.print("failed, rc=");
+      Serial.print(client.state());
+      Serial.println(" try again in 5 seconds");
+      // Wait 5 seconds before retrying
+      delay(5000);
+    }
+  }
+}
+
+void setup()
+{
+  //Initialize serial and wait for port to open:
+  Serial.begin(115200);
+  while (!Serial)
+    ; // Wait for Serial to be ready
+  delay(1000);
+
+  lis.begin(Wire1);
+ 
+  if (!lis) {
+    Serial.println("ERROR");
+    while(1);
+  }
+  lis.setOutputDataRate(LIS3DHTR_DATARATE_25HZ); //Data output rate
+  lis.setFullScaleRange(LIS3DHTR_RANGE_2G); //Scale range set to 2g
+
+  Serial.print("Attempting to connect to SSID: ");
+  Serial.println(ssid);
+  WiFi.begin(ssid, password);
+
+  // attempt to connect to Wifi network:
+  while (WiFi.status() != WL_CONNECTED)
+  {
+    Serial.print(".");
+    WiFi.begin(ssid, password);
+    // wait 1 second for re-trying
+    delay(1000);
+  }
+  Serial.print("Connected to ");
+  Serial.println(ssid);
+
+  wifiClient.setCACert(test_root_ca);
+
+  client.setServer(server, 8883);
+  client.setCallback(callback);
+}
+
+
+void loop()
+{
+  if (!client.connected())
+  {
+    reconnect();
+  }
+  
+  float x_values, y_values, z_values;
+  
+  // Sending Data
+  long now = millis();
+  if (now - lastMsg > 5000) {
+    lastMsg = now;
+ 
+  x_values = lis.getAccelerationX();
+  y_values = lis.getAccelerationY();
+  z_values = lis.getAccelerationZ();
+  String data="{\"x-axis\": "+String(x_values)+","+"\"y-axis\": "+String(y_values)+","+"\"z-axis\": "+String(z_values)+"}";
+
+  if (!client.publish(TOPIC, data.c_str())) {
+    Serial.println("Message failed to send.");
+  }
+  Serial.printf("Message Send [%s] ", TOPIC);
+  Serial.println(data);
+  }
+  
+  client.loop();
+}
+```
+
+## Configuring Wi-Fi as Access Point (AP) Mode / Web Server
+
+- Include `rpcWiFi.h`, `WiFiClient.h` and `WifiAP.h` libraries in Arduino.
 
 - Configure AP Wi-Fi `ssid` and `password`.
 
@@ -402,13 +675,13 @@ WiFiServer server(80);
 WiFi.softAP(ssid, password);
 ```
 
-- Start the Server:
+- Start the Web Server:
 
 ```cpp
 server.begin();
 ```
 
-### Configure as AP Mode Example Code
+### Configure as AP Mode (Simple Web Server) Example Code
 
 This example configures Wio Terminal as a simple web server and allows you to connect to its AP network and control the hardware based on the response on the HTTP.
 
@@ -427,7 +700,7 @@ This example configures Wio Terminal as a simple web server and allows you to co
     by Elochukwu Ifediora (fedy0)
 */
 
-#include <AtWiFi.h>
+#include <rpcWiFi.h>
 #include <WiFiClient.h>
 #include <WiFiAP.h>
 

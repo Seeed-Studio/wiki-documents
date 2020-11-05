@@ -2,6 +2,9 @@
 
 This wiki introduce how to update the latest firmware for the Wireless Core Realtek RTL8720 on Wio Terminal, as well as installing all the dependent libraries for Wio Terminal to enable wireless connectivity.
 
+!!!Note
+    **We are moving the Wi-Fi Software to the new eRPC Structure which is more stable and can work with the Bluetooth at the same time**! Please follow through to update to eRPC Wi-Fi firmware and related libraries!
+
 ## Update the Wireless Core Firmware
 
 First, we need to update the firmware for the Realtek RTL8720 Wireless core on Wio Terminal. **This is essential and must update to the latest firmware before proceeding to examples.**
@@ -36,7 +39,9 @@ You should see that **Burn RTL8720 fw** on the Wio Terminal's screen. This means
 
 ### Step 2 - Download the Latest Firmware
 
-Download the latest [**RTL8720 Firmware**](https://files.seeedstudio.com/wiki/Wio-Terminal/res/20200730-rtl8720d-images-v2.2.0.2.zip) Here.
+**Note:** This is the latest **eRPC Structure Firmware** for RTL8720
+
+- Download the latest [**RTL8720 Firmware**](https://files.seeedstudio.com/wiki/Wio-Terminal/res/20201105-seeed-ambd-firmware-rpc-v2.0.0.zip) Here.
 
 ## CLI Methods
 
@@ -97,44 +102,77 @@ This location should contain `km0_boot_all.bin`, `km0_km4_image2.bin` and `km4_b
 
 If everything goes well, you should see all a successful message. Now you have flashed the new RTL8720 firmware into the RTL8720 core!
 
-## Libraries Installation
+## Libraries Installations (eRPC)
 
-There are few Arduino Libraries that are needed for the Wireless connectivity. Follow through to install all the libraries needed:
+There are few Arduino Libraries that are needed for the Wireless connectivity. Follow  through to install all the libraries needed:
 
-### 1. Install the Seeed_Arduino_atWiFi
-
-1. Visit the [Seeed_Arduino_atWiFi](https://github.com/Seeed-Studio/Seeed_Arduino_atWiFi) repositories and download the entire repo to your local drive.
-
-2. Now, the Seeed_Arduino_atWiFi library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_atWiFi` file that you've have just downloaded.
-
+### 1. Install the Seeed_Arduino_rpcWiFi
+ 
+1. Visit the [**Seeed_Arduino_rpcWiFi**](https://github.com/Seeed-Studio/Seeed_Arduino_rpcWiFi) repositories and download the entire repo to your local drive.
+ 
+2. Now, the Seeed_Arduino_rpcWiFi library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_rpcWiFi` file that you've have just downloaded.
+ 
 ![InstallLibrary](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Xnip2019-11-21_15-50-13.jpg)
 
-### 2. Install the Seeed-Arduino-FreeRTOS
+### 2. Install the Seeed_Arduino_rpcUnified
 
-1. Visit the [Seeed-Arduino-FreeRTOS](https://github.com/Seeed-Studio/Seeed_Arduino_FreeRTOS) repositories and download the entire repo to your local drive.
+1. Visit the [**Seeed_Arduino_rpcUnified**](https://github.com/Seeed-Studio/Seeed_Arduino_rpcUnified) repositories and download the entire repo to your local drive.
 
-2. Now, the Seeed-Arduino-FreeRTOS library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed-Arduino-FreeRTOS` file that you've have just downloaded.
+2. Now, the Seeed-Arduino-FreeRTOS library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_rpcUnified` file that you've have just downloaded.
 
-### 3. Install the Seeed_Arduino_atUnified
+### 3. Install the Seeed_Arduino_FreeRTOS
 
-1. Visit the [Seeed_Arduino_atUnified](https://github.com/Seeed-Studio/Seeed_Arduino_atUnified) repositories and download the entire repo to your local drive.
+1. Visit the [**Seeed_Arduino_FreeRTOS**](https://github.com/Seeed-Studio/Seeed_Arduino_FreeRTOS) repositories and download the entire repo to your local drive.
 
-2. Now, the Seeed_Arduino_atUnified library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_atUnified` file that you've have just downloaded.
+2. Now, the Seeed-Arduino-FreeRTOS library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_FreeRTOS` file that you've have just downloaded.
 
-### 4. Install the Seeed-Studio/esp-at-lib
+-----------
 
-1. Visit the [Seeed-Studio/esp-at-lib](https://github.com/Seeed-Studio/esp-at-lib) repositories and download the entire repo to your local drive.
+> **NOTE:** The following are dependencies of the **old AT-Command Structure Wi-Fi  firmware and related libraries**.This software does not work with Bluetooth at the same time and is getting **depreciated**, please move the eRPC firmware if possible!
 
-2. Now, the esp-at-lib library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `esp-at-lib` file that you've have just downloaded.
 
-### 5. Install the Seeed_Arduino_mbedtls
-
-1. Visit the [Seeed_Arduino_mbedtls](https://github.com/Seeed-Studio/Seeed_Arduino_mbedtls) repositories and download the entire repo to your local drive.
-
-2. Now, the Seeed_Arduino_mbedtls library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_mbedtls` file that you've have just downloaded.
-
-### 6. Install the Seeed_Arduino_atWiFiClientSecure
-
-1. Visit the [Seeed_Arduino_atWiFiClientSecure](https://github.com/Seeed-Studio/Seeed_Arduino_atWiFiClientSecure.git) repositories and download the entire repo to your local drive.
-
-2. Now, the Seeed_Arduino_atWiFiClientSecure library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_atWiFiClientSecure` file that you've have just downloaded.
+> ## RTL8720 AT-Command Structure Firmware
+> 
+>This is the AT-Command Structure [RTL8720 Firmware](https://files.seeedstudio.com/wiki/Wio-Terminal/res/20200730-rtl8720d-images-v2.2.0.2.zip).
+> 
+> ## AT-Firmware Libraries Installation
+> 
+> There are few Arduino Libraries that are needed for the Wireless connectivity. Follow  through to install all the libraries needed:
+> 
+> ### 1. Install the Seeed_Arduino_atWiFi
+> 
+> 1. Visit the [Seeed_Arduino_atWiFi](https://github.com/Seeed-Studio/Seeed_Arduino_atWiFi) > repositories and download the entire repo to your local drive.
+> 
+> 2. Now, the Seeed_Arduino_atWiFi library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_atWiFi` file that you've have just downloaded.
+> 
+> ![InstallLibrary](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Xnip2019-11-21_15-50-13.jpg)
+> 
+> ### 2. Install the Seeed-Arduino-FreeRTOS
+> 
+> 1. Visit the [Seeed-Arduino-FreeRTOS](https://github.com/Seeed-Studio/Seeed_Arduino_FreeRTOS) repositories and download the entire repo to your local drive.
+> 
+> 2. Now, the Seeed-Arduino-FreeRTOS library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed-Arduino-FreeRTOS` file that you've have just downloaded.
+> 
+> ### 3. Install the Seeed_Arduino_atUnified
+> 
+> 1. Visit the [Seeed_Arduino_atUnified](https://github.com/Seeed-Studio/Seeed_Arduino_atUnified) repositories and download the entire repo to your local drive.
+> 
+> 2. Now, the Seeed_Arduino_atUnified library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_atUnified` file that you've have just downloaded.
+> 
+> ### 4. Install the Seeed-Studio/esp-at-lib
+> 
+> 1. Visit the [Seeed-Studio/esp-at-lib](https://github.com/Seeed-Studio/esp-at-lib) > repositories and download the entire repo to your local drive.
+> 
+> 2. Now, the esp-at-lib library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `esp-at-lib` file that you've have just downloaded.
+> 
+> ### 5. Install the Seeed_Arduino_mbedtls
+> 
+> 1. Visit the [Seeed_Arduino_mbedtls](https://github.com/Seeed-Studio/Seeed_Arduino_mbedtls) repositories and download the entire repo to your local drive.
+> 
+> 2. Now, the Seeed_Arduino_mbedtls library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_mbedtls` file that you've have just downloaded.
+> 
+> ### 6. Install the Seeed_Arduino_atWiFiClientSecure
+> 
+> 1. Visit the [Seeed_Arduino_atWiFiClientSecure](https://github.com/Seeed-Studio/Seeed_Arduino_atWiFiClientSecure.git) repositories and download the entire repo to your local drive.
+> 
+> 2. Now, the Seeed_Arduino_atWiFiClientSecure library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_atWiFiClientSecure` file that you've have just downloaded.
