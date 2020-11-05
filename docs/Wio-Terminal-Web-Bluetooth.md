@@ -23,7 +23,6 @@ The following example demonstrate how to set up Wio Terminal and use a simple HT
 - Copy the following code and upload to Wio Terminal:
 
 ```cpp
-#include <Seeed_erpcUnified.h>
 #include <BLEDevice.h>
 #include <BLEServer.h>
 #include <BLE2902.h>
@@ -169,7 +168,6 @@ The following is a good example of using Web Bluetooth APIs on a Site. This exam
 ```cpp
 #include <BLEDevice.h>
 #include <BLEServer.h>
-#include <Seeed_erpcUnified.h>
 #include <LIS3DHTR.h>
 
 #define accelerometerService "19b10000-e8f2-537e-4f6c-d104768a1214"

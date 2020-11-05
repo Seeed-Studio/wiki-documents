@@ -43,6 +43,7 @@ With this, you can implement the Demo to others api such as grabbing Weather inf
 **Note:** Change the `ssid` and `password` to your Network Wi-Fi.
 
 ```cpp
+#include "rpcWiFi.h"
 #include <WiFiClientSecure.h>
 #include <ArduinoJson.h>
 #include"Free_Fonts.h"

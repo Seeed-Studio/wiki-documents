@@ -76,7 +76,7 @@ This example simply connects to a specific Wi-Fi then connects to the Blynk Serv
 ```cpp
 #define BLYNK_PRINT Serial
 
-#include <AtWiFi.h>
+#include <rpcWiFi.h>
 #include <WiFiClient.h>
 #include <BlynkSimpleWioTerminal.h>
 
@@ -125,7 +125,7 @@ This example is an demonstrations of sending data from Wio Terminal to the Blynk
 ```cpp
 #define BLYNK_PRINT Serial
 
-#include <AtWiFi.h>
+#include <rpcWiFi.h>
 #include <WiFiClient.h>
 #include <BlynkSimpleWioTerminal.h>
 
@@ -196,7 +196,6 @@ This is the simple example of using Wio Terminal's Bluetooth to connect with Mob
 #include <BlynkSimpleWioTerminal_BLE.h>
 #include <BLEDevice.h>
 #include <BLEServer.h>
-#include <Seeed_erpcUnified.h>
 
 // You should get Auth Token in the Blynk App.
 // Go to the Project Settings (nut icon).
@@ -260,7 +259,6 @@ This example connects a RGB strip to Wio Terminal and uses the Blynk to control 
 #include <BlynkSimpleWioTerminal_BLE.h>
 #include <BLEDevice.h>
 #include <BLEServer.h>
-#include <Seeed_erpcUnified.h>
 #include <Adafruit_NeoPixel.h>
 
 #include <TFT_eSPI.h> // Hardware-specific library

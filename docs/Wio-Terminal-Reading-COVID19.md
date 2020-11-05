@@ -42,6 +42,7 @@ This wiki is a modification of [Reading Github Repository Stats from Wio Termina
 
 
 ```cpp
+#include "rpcWiFi.h"
 #include <WiFiClientSecure.h>
 #include <ArduinoJson.h>
 #include"Free_Fonts.h"
