@@ -1,4 +1,4 @@
-# Client and Server Introduction
+# **Client and Server Introduction**
 
 This wiki introduces Client and server communicate function via BLE using the Wio terminal.
 
@@ -110,22 +110,28 @@ pRemoteCharacteristic = pRemoteService->getCharacteristic(charUUID);
 ### **Client code**
 
 ```cpp
-#include "BLEDevice.h"
-#include "Seeed_erpcUnified.h"
+/**
+ * A BLE client example that is rich in capabilities.
+ * There is a lot new capabilities implemented.
+ * author unknown
+ * updated by chegewara
+ */
+
+#include "rpcBLEDevice.h"
 #include <BLEScan.h>
 #include <BLEAdvertisedDevice.h>
 
 // The remote service we wish to connect to.
-static BLEUUID serviceUUID(0x180F);
+static BLEUUID serviceUUID(0xFEE0);
 // The characteristic of the remote service we are interested in.
-static BLEUUID    charUUID(0x2A19);
+static BLEUUID    charUUID(0x2A2B);
 
 static boolean doConnect = false;
 static boolean connected = false;
 static boolean doScan = false;
 static BLERemoteCharacteristic* pRemoteCharacteristic;
 static BLEAdvertisedDevice* myDevice;
-uint8_t bd_addr[6] = {0x7d, 0x18, 0x1b, 0xf1, 0xf7, 0x2c};
+uint8_t bd_addr[6] = {0xD7, 0x1D, 0x12, 0xDC, 0x64, 0xF0};
 BLEAddress BattServer(bd_addr);
 
 static void notifyCallback(
@@ -140,22 +146,34 @@ static void notifyCallback(
     Serial.print("data: ");
     Serial.print(*(uint8_t *)pData);
 }
+
+
 class MyClientCallback : public BLEClientCallbacks {
   void onConnect(BLEClient* pclient) {
   }
+
   void onDisconnect(BLEClient* pclient) {
     connected = false;
     Serial.println("onDisconnect");
   }
 };
+
+
 bool connectToServer() {
     Serial.print("Forming a connection to ");
     Serial.println(myDevice->getAddress().toString().c_str());
+    
     BLEClient*  pClient  = BLEDevice::createClient();
     Serial.println(" - Created client");
+
     pClient->setClientCallbacks(new MyClientCallback());
+	
+
+    // Connect to the remove BLE Server.
     pClient->connect(myDevice);  // if you pass BLEAdvertisedDevice instead of address, it will be recognized type of peer device address (public or private)
     Serial.println(" - Connected to server");
+
+    // Obtain a reference to the service we are after in the remote BLE server.
     BLERemoteService* pRemoteService = pClient->getService(serviceUUID);
     Serial.println(serviceUUID.toString().c_str());
     if (pRemoteService == nullptr) {
@@ -165,6 +183,8 @@ bool connectToServer() {
       return false;
     }
     Serial.println(" - Found our service");
+
+
     // Obtain a reference to the characteristic in the service of the remote BLE server.
     pRemoteCharacteristic = pRemoteService->getCharacteristic(charUUID);
     if (pRemoteCharacteristic == nullptr) {
@@ -174,6 +194,8 @@ bool connectToServer() {
       return false;
     }
     Serial.println(" - Found our characteristic");
+
+
     // Read the value of the characteristic.
     if(pRemoteCharacteristic->canRead()) {
       Serial.println(" -  can  read  start");
@@ -184,15 +206,22 @@ bool connectToServer() {
     
     if(pRemoteCharacteristic->canNotify())
       pRemoteCharacteristic->registerForNotify(notifyCallback);
+
     connected = true;
     return true;
 }
-
-//Scan for BLE servers and find the first one that advertises the service we are looking for.
+/**
+ * Scan for BLE servers and find the first one that advertises the service we are looking for.
+ */
 class MyAdvertisedDeviceCallbacks: public BLEAdvertisedDeviceCallbacks {
+ /**
+   * Called for each advertising BLE server.
+   */
   void onResult(BLEAdvertisedDevice advertisedDevice) {
     Serial.print("BLE Advertised Device found: ");
     Serial.println(advertisedDevice.toString().c_str());
+	  
+    // We have found a device, let us now see if it contains the service we are looking for.
     if (memcmp(advertisedDevice.getAddress().getNative(),BattServer.getNative(), 6) == 0) {
       Serial.print("BATT Device found: ");
       Serial.println(advertisedDevice.toString().c_str());
@@ -206,12 +235,17 @@ class MyAdvertisedDeviceCallbacks: public BLEAdvertisedDeviceCallbacks {
   }
 }; // MyAdvertisedDeviceCallbacks
 
+
 void setup() {
   Serial.begin(115200);
   while(!Serial){};
   delay(2000);
   Serial.println("Starting Arduino BLE Client application...");
   BLEDevice::init("");
+
+  // Retrieve a Scanner and set the callback we want to use to be informed when we
+  // have detected a new device.  Specify that we want active scanning and start the
+  // scan to run for 5 seconds.
   BLEScan* pBLEScan = BLEDevice::getScan();
   pBLEScan->setAdvertisedDeviceCallbacks(new MyAdvertisedDeviceCallbacks());
   pBLEScan->setInterval(1349);
@@ -220,8 +254,13 @@ void setup() {
   pBLEScan->start(5, false);
 } // End of setup.
 
-void loop() {
 
+// This is the Arduino main loop function.
+void loop() {
+	
+  // If the flag "doConnect" is true then we have scanned for and found the desired
+  // BLE Server with which we wish to connect.  Now we connect to it.  Once we are 
+  // connected we set the connected flag to be true.
   if (doConnect == true) {
     if (connectToServer()) {
       Serial.println("We are now connected to the BLE Server.");
@@ -330,11 +369,9 @@ After connected to the Client, it will stop print message and the Client will pr
 
 ### Server code
 ```cpp
-#include <BLEDevice.h>
+#include <rpcBLEDevice.h>
 #include <BLEServer.h>
-#include "Seeed_erpcUnified.h"
 
-// See the following for generating UUIDs:
 #define SERVICE_UUID        "180f"
 #define CHARACTERISTIC_UUID "2a19"
 #define DESCRIPTOR_UUID     "4545"
@@ -342,11 +379,13 @@ After connected to the Client, it will stop print message and the Client will pr
 class MyCallbacks: public BLECharacteristicCallbacks {
     void onWrite(BLECharacteristic *pCharacteristic) {
       std::string rxValue = pCharacteristic->getValue();
+
       if (rxValue.length() > 0) {
         Serial.println("*********");
         Serial.print("Received Value: ");
         for (int i = 0; i < rxValue.length(); i++)
           Serial.print(rxValue[i]);
+
         Serial.println();
         Serial.println("*********");
       }
@@ -357,7 +396,8 @@ void setup() {
   Serial.begin(115200);
   while(!Serial){};
   Serial.println("Starting BLE work!");
-  BLEDevice::init("UART servicess");
+
+  BLEDevice::init("Long name 11");
   BLEServer *pServer = BLEDevice::createServer();
   BLEService *pService = pServer->createService(SERVICE_UUID);
   BLECharacteristic *pCharacteristic = pService->createCharacteristic(
@@ -388,13 +428,12 @@ void setup() {
 
 void loop() { 
   // put your main code here, to run repeatedly:
-  Serial.println("unpaired");
+  Serial.println("1");
   delay(2000);
 }
 ```
 
 ## Server connect to Client of Smartphone
-
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/wio%20terminal%20bluetooth/vidoeh-GIF.gif"/></div>
 
@@ -411,24 +450,23 @@ This example is using a smartphone as a Client to connect the Wio terminal(serve
 ### **Code** 
 
 ```cpp
-#include <BLEDevice.h>
-#include <BLEServer.h>
+#include "rpcBLEDevice.h"
 #include <BLE2902.h>
 #include <TFT_eSPI.h> // Hardware-specific library
 #include <SPI.h>
 TFT_eSPI tft = TFT_eSPI();       // Invoke custom library
 TFT_eSprite spr = TFT_eSprite(&tft);  // Sprite 
-
+ 
 BLEServer *pServer = NULL;
 BLECharacteristic * pTxCharacteristic;
 bool deviceConnected = false;
 bool oldDeviceConnected = false;
 String Value11;
-
+ 
 #define SERVICE_UUID           "6E400001-B5A3-F393-E0A9-E50E24DCCA9E" // UART service UUID
 #define CHARACTERISTIC_UUID_RX "6E400002-B5A3-F393-E0A9-E50E24DCCA9E"
 #define CHARACTERISTIC_UUID_TX "6E400003-B5A3-F393-E0A9-E50E24DCCA9E"
-
+ 
 class MyServerCallbacks: public BLEServerCallbacks {
     void onConnect(BLEServer* pServer) {
       deviceConnected = true;
@@ -441,7 +479,7 @@ class MyServerCallbacks: public BLEServerCallbacks {
       spr.drawString("status: connected",10 ,5); 
       spr.pushSprite(0, 0);
     };
-
+ 
     void onDisconnect(BLEServer* pServer) {
       deviceConnected = false;
       Serial.print("123123");
@@ -455,11 +493,11 @@ class MyServerCallbacks: public BLEServerCallbacks {
       spr.pushSprite(0, 0);
     }
 };
-
+ 
 class MyCallbacks: public BLECharacteristicCallbacks {
     void onWrite(BLECharacteristic *pCharacteristic) {
       std::string rxValue = pCharacteristic->getValue();
-        
+ 
         if (rxValue.length() > 0) {
         spr.fillSprite(TFT_BLACK);
         spr.setTextColor(TFT_WHITE, TFT_BLACK);
@@ -472,22 +510,22 @@ class MyCallbacks: public BLECharacteristicCallbacks {
        }
     }
 };
-
+ 
 void setup() {
   tft.begin();
   tft.init();
   tft.setRotation(3);
   tft.fillScreen(TFT_BLACK);
-  
+ 
   BLEDevice::init("UART Servicess");  //device name define
-
+ 
   // Create the BLE Server
   pServer = BLEDevice::createServer();
   pServer->setCallbacks(new MyServerCallbacks());
-
+ 
   // Create the BLE Service
   BLEService *pService = pServer->createService(SERVICE_UUID);
-
+ 
   // Create a BLE Characteristic
   pTxCharacteristic = pService->createCharacteristic(
                     CHARACTERISTIC_UUID_TX,
@@ -495,19 +533,19 @@ void setup() {
                   );
   pTxCharacteristic->setAccessPermissions(GATT_PERM_READ);      
   pTxCharacteristic->addDescriptor(new BLE2902());
-
+ 
   BLECharacteristic * pRxCharacteristic = pService->createCharacteristic(
                        CHARACTERISTIC_UUID_RX,
                       BLECharacteristic::PROPERTY_WRITE
-                      
+ 
                     );
   pRxCharacteristic->setAccessPermissions(GATT_PERM_READ | GATT_PERM_WRITE);           
-
+ 
   pRxCharacteristic->setCallbacks(new MyCallbacks());
-
+ 
   // Start the service
   pService->start();
-
+ 
   // Start advertising
   pServer->getAdvertising()->start();
       spr.fillSprite(TFT_BLACK);
@@ -518,9 +556,9 @@ void setup() {
       spr.drawString("Message: ", 20, 70);
       spr.pushSprite(0, 0);
 }
-
+ 
 void loop() {
-
+ 
     // disconnecting
     if (!deviceConnected && oldDeviceConnected) {
         delay(500); // give the bluetooth stack the chance to get things ready
