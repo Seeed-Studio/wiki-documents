@@ -41,7 +41,7 @@ You should see that **Burn RTL8720 fw** on the Wio Terminal's screen. This means
 
 **Note:** This is the latest **eRPC Structure Firmware** for RTL8720
 
-- Download the latest [**RTL8720 Firmware**](https://files.seeedstudio.com/wiki/Wio-Terminal/res/20201105-seeed-ambd-firmware-rpc-v2.0.0.zip) Here.
+- Download the latest [**RTL8720 Firmware**](https://github.com/Seeed-Studio/seeed-ambd-firmware/releases) Here.
 
 ## CLI Methods
 
