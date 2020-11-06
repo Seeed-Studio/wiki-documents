@@ -85,6 +85,17 @@ sudo service lightdm restart
 
 Now you should see you Wio Terminal display the Raspberry Pi's desktop! If you loaded with the `USBDisplayAndMouseControl` firmware in Wio Terminal, you can even use the buttons and 5-way switches to control the mouse of Raspberry Pi!
 
+**Note:** If nothing shows on the display, please follow the steps below
+- Run the following command in terminal:
+```sh
+sudo raspi-config
+```
+- Once the Raspberry Pi Software Configuration Tool opens, navigate to the following location
+```sh
+Advanced Options > Resolution
+```
+- Select a different resolution except "default"
+
 !!!Note
     This version of the USB display driver do not support hot swapping.
 
