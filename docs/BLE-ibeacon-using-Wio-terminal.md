@@ -50,14 +50,15 @@ This is a simple test for scan the Wio terminal iBeacon device and presents the 
 **Test code**
 
 ```CPP
+
 #include "sys/time.h"
-#include "BLEDevice.h"
+#include "rpcBLEDevice.h"
 #include "BLEBeacon.h"
 
 BLEAdvertising *pAdvertising;
 //struct timeval now;
 
-#define BEACON_UUID           "8ec76ea3-6668-48da-9866-75be8bc86f4d" // UUID 1 128-Bit (may use linux tool uuidgen or random numbers via https://www.uuidgenerator.net/)
+#define BEACON_UUID           "8ec76ea3-6668-48da-9866-75be8bc86f4d" // UUID 1 
 
 void setBeacon() {
 
@@ -85,10 +86,16 @@ void setBeacon() {
 }
 
 void setup() {
+
+    
   Serial.begin(115200);
   while(!Serial){};
+  
   // Create the BLE Device
   BLEDevice::init("");
+
+  // Create the BLE Server
+  // BLEServer *pServer = BLEDevice::createServer(); // <-- no longer required to instantiate BLEServer, less flash and ram usage
 
   pAdvertising = BLEDevice::getAdvertising();
   
