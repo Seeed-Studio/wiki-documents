@@ -2,8 +2,6 @@
 
 This wiki introduce how to update the Bluetooth firmware for the Wireless Core Realtek RTL8720 on Wio Terminal, as well as installing all the dependent libraries for Wio Terminal to enable BLE functionality.
 
-!!!Note
-        Please note for the current framework, **the BLE firmware and Wi-Fi firmware are different** (BLE: eRPC and Wi-Fi: AT Commands) and therefore they **cannot be used together** for a period of time. The Wi-Fi will be able to use with BLE very shortly after the BLE release.
 
 ## Update the Wireless Core Firmware(BLE)
 
@@ -15,7 +13,10 @@ Same configuration as updating network firmware, Please follow [**this guide**](
 
 ### Bluetooth Firmware Files
 
-Download the Bluetooth Firmware Files from **[here](https://files.seeedstudio.com/wiki/Wio-Terminal-BLE/20200925-seeed-ambd-firmware-rpc-v1.1.0.zip)**
+Download the Bluetooth Firmware Files from **[here](https://github.com/Seeed-Studio/seeed-ambd-firmware/releases/download/v2.0.1/20201106-seeed-ambd-firmware-rpc-v2.0.1.zip)**
+
+!!!Note
+        Bluetooth and WIFI can use the same firmware.
 
 ## Libraries Installations
 
