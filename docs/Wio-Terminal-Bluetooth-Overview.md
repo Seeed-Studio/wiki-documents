@@ -13,7 +13,7 @@ Same configuration as updating network firmware, Please follow [**this guide**](
 
 ### Bluetooth Firmware Files
 
-Download the Bluetooth Firmware Files from **[here](https://github.com/Seeed-Studio/seeed-ambd-firmware/releases/download/v2.0.1/20201106-seeed-ambd-firmware-rpc-v2.0.1.zip)**
+Download the Bluetooth Firmware Files from **[here](https://github.com/Seeed-Studio/seeed-ambd-firmware/releases)**
 
 !!!Note
         Bluetooth and WIFI can use the same firmware.
