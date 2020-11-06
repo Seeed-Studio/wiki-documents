@@ -23,7 +23,7 @@ The following example demonstrate how to set up Wio Terminal and use a simple HT
 - Copy the following code and upload to Wio Terminal:
 
 ```cpp
-#include <BLEDevice.h>
+#include <rpcBLEDevice.h>
 #include <BLEServer.h>
 #include <BLE2902.h>
 
@@ -166,7 +166,7 @@ The following is a good example of using Web Bluetooth APIs on a Site. This exam
 - Download the **[`WebBluetooth-Accelerator.ino`](https://github.com/Seeed-Studio/Seeed_Arduino_Sketchbook/blob/master/examples/WioTerminal_WebBluetooth/WioTerminal_WebBluetooth.ino) Example** or Copy the following code in Arduino IDE.
 
 ```cpp
-#include <BLEDevice.h>
+#include <rpcBLEDevice.h>
 #include <BLEServer.h>
 #include <LIS3DHTR.h>
 
