@@ -31,11 +31,14 @@ It supports all the SAMD boards by Seeed:
     - [Wio Lite MG126 - ATSAMD21 Cortex-M0 Blue Wireless Development Board](https://www.seeedstudio.com/Wio-Lite-MG126-p-4189.html)
 - [Seeeduino LoRaWAN](https://www.seeedstudio.com/Seeeduino-LoRaWAN-p-2780.html)
 
+!!!Note
+    Please make sure you have installed the **latest ArduinoSAMD board library for Seeed (>=1.8.1)** for this to work!
+
 ## Get Started
 
 ### 1. Installing the DAPLink Arduino Libraries
 
-1. Visit the [**Seeed_Arduino_DAPLink**](https://github.com/Seeed-Studio/Seeed_Arduino_DAPLink/tree/eebd1283b82a81b1223207ed01198e4f08b88f06) repositories and download the entire repo to your local drive.
+1. Visit the [**Seeed_Arduino_DAPLink**](https://github.com/Seeed-Studio/Seeed_Arduino_DAPLink/) repositories and download the entire repo to your local drive.
 
 2. Now, the Seeed_Arduino_DAPLink library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_DAPLink` file that you've have just downloaded.
 
@@ -43,40 +46,17 @@ It supports all the SAMD boards by Seeed:
 
 ### 2. Installing the Adafruit_TinyUSB_Arduino Library
 
-1. Visit the [**Adafruit_TinyUSB_Arduino**](https://github.com/Pillar1989/Adafruit_TinyUSB_Arduino) repositories and download the entire repo to your local drive.
+1. Visit the [**Adafruit_TinyUSB_Arduino**](https://github.com/adafruit/Adafruit_TinyUSB_Arduino) repositories and download the entire repo to your local drive.
 
 2. Now, the Adafruit_TinyUSB_Arduino library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Adafruit_TinyUSB_Arduino` file that you've have just downloaded.
 
-### Arduino Configurations
-
-Once these two libraries are installed to the Arduino, there is **1 more thing** that needs to be changed. Navigate to the **root path** of the Seeed SAMD Board Library, for example, in macOS it is:
-
-```sh
-/Users/USERNAME/Library/Arduino15/packages/Seeeduino/hardware/samd/1.7.9/cores/arduino/TinyUSB/Adafruit_TinyUSB_ArduinoCore
-```
->`USERNAME` and `1.7.9` may be different to yours.
-
-- There should be a `Adafruit_TinyUSB_ArduinoCore` inside this location, and **delete this folder**.
-
-- In the same location, run the following command in terminal to **download a new core**:
-
-```sh
-git clone https://github.com/Pillar1989/Adafruit_TinyUSB_ArduinoCore
-```
-
-Now, all the configurations are set!
-
 ### Customizing Pin Definitions
 
-If you are using Wio Terminal or Seeeduino Xiao, you may skip this section and just use the default definitions.
+If you are using **Wio Terminal** or **Seeeduino Xiao**, you may skip this section and just use the default definitions.
 
-The pins definitions for DAPLink is defined in **`DAP_config.h`** under `Seeed_Arduino_DAPLink/src`, reference the followings:
+- The pins definitions for DAPLink is defined in **`DAP_config.h`** under `Seeed_Arduino_DAPLink/src`, reference the followings:
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/DAPLink/daplink-pin.png"/></div>
-
-**NOTE:** If you are using other SAMD boards such as Seeeduino Lotus Cortex M0+, you will need to add the following:
-
-<div align=center><img src="https://files.seeedstudio.com/wiki/DAPLink/dap-pins-m0.png"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/DAPLink/pins-new.png"/></div>
 
 ### Upload to Arduino Boards
 
