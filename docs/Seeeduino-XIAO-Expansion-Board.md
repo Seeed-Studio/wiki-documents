@@ -11,7 +11,7 @@ tags:
 
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/103030356_Preview-07.png"/></div>
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p> 
+<p style="text-align:center"><a href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p> 
 
 
 A powerful functional expansion board for Seeeduino XIAO of only half Raspberry Pi 4 size. It enables build prototype and project in easy and quick way. With its rich peripherals including OLED, RTC, expandable memory, passive buzzer, RESET/User button, 5V servo connector, multiple data interfaces… you could explore infinite possibilities of Seeeduino XIAO. Circuit python is also well supported by this board.
