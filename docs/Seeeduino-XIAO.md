@@ -17,7 +17,7 @@ Seeeduino XIAO has 14 GPIO PINs, which can be used for 11 digital interfaces, 11
 
 <p style=":center"><a href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" /></a></p>
 
-## Documentations
+## **Documentations**
 
 There are two documentations on the usage of **Seeeduino XIAO** which focus on different areas, check the table below for reference:
 
@@ -28,11 +28,11 @@ There are two documentations on the usage of **Seeeduino XIAO** which focus on d
 |Seeeduino XIAO GPIO Usage|Seeeduino XIAO with GPS(UART)|
 |Seeeduino XIAO Resources|Single Cycle IOBUS|
 
-### CircuitPython on Seeeduino XIAO
+### **CircuitPython on Seeeduino XIAO**
 
 - Get started with [**CircuitPython on Seeeduino XIAO**](http://wiki.seeedstudio.com/Seeeduino-XIAO-CircuitPython).
 
-## Features
+## **Features**
 
 - Powerful CPU: ARM® Cortex®-M0+ 32bit 48MHz microcontroller(SAMD21G18) with 256KB Flash,32KB SRAM.
 - Flexible compatibility: Compatible with Arduino IDE.
@@ -40,7 +40,7 @@ There are two documentations on the usage of **Seeeduino XIAO** which focus on d
 - Small size: As small as a thumb(20x17.5mm) for wearable devices and small projects.
 - Multiple development interfaces: 11 digital/analog pins, 10 PWM Pins, 1 DAC output, 1 SWD Bonding pad interface, 1 I2C interface, 1 UART interface, 1 SPI interface.
 
-## Specification
+## **Specification**
 
 |Item|Value|
 |---|---|
@@ -58,7 +58,7 @@ There are two documentations on the usage of **Seeeduino XIAO** which focus on d
 
 
 
-## Hardware Overview
+## **Hardware Overview**
 
 
 ![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-pinout.jpg)
@@ -80,7 +80,7 @@ There are two documentations on the usage of **Seeeduino XIAO** which focus on d
     Please pay attention to use, do not lift the shield cover.
     
     
-### Reset
+### **Reset**
 
 
 Sometimes the Seeeduino XIAO port may disappear when user programming process fails. we can solve this problem by the following operation: 
@@ -95,13 +95,13 @@ At this point, the chip enters Bootloader mode and the burn port appears again. 
 ![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-reset.gif)
 
 
-### Interrupt
+### **Interrupt**
 
 
 All pins on Seeeduino XIAO support interrupts, but two pins cannot be used at the same time: 5 pin and 7 pin. For more detail about Interrupt please check [here](https://github.com/Seeed-Studio/ArduinoCore-samd/blob/master/variants/XIAO_m0/variant.cpp).
 
 
-### Pin Multuiplexing
+### **Pin Multuiplexing**
 
 We don't need to configure the pins ourselves, after using the pins, you can call a function directly.
 
@@ -232,10 +232,76 @@ void loop (void) {
 }
 ```
 
-## Getting Started
+#### **Analog Input and Output**
+
+While it still has PWM-based "analog outputs", the SAMD21 also features true analog output in the form of a digital-to-analog converter (DAC). This module can produce an analog voltage between 0 and 3.3V. It can be used to produce audio with more natural sound, or as a kind of "digital potentiometer" to control analog devices.
+
+The DAC is only available on the Arduino pin A0, and is controlled using analogWrite(A0, <value>). The DAC can be set up to 10-bit resolution (make sure to call [**analogWriteResolution(10)**](https://www.arduino.cc/reference/en/language/functions/zero-due-mkr-family/analogwriteresolution/) in your setup), which means values between 0 and 1023 will set the voltage to somewhere between 0 and 3.3V.
+
+In addition to the DAC, the SAMD21's ADC channels also stand apart from the ATmega328: they're equipped with up to 12-bit resolution. That means the analog input values can range from 0-4095, representing a voltage between 0 and 3.3V. To use the ADC's in 12-bit mode, make sure you call [**analogReadResolution(12)**](https://www.arduino.cc/reference/en/language/functions/zero-due-mkr-family/analogreadresolution/) in your setup.
+
+**Serial Plotting the DAC**
+
+Here's an example that demonstrates both the DAC and the ADC. To set the experiment up, connect A0 to A1 -- we'll drive A0 with an analog voltage, then read it with A1. It's the simplest circuit we've ever put in a tutorial:
 
 
-### Hardware
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/AO_A1.jpg"/></div>
+
+!!!Note
+  The Seeeduino XIAO using the [**Seeeduino XIAO expansion board**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) 
+
+
+This sketch produces a sine wave output on A0, with values ranging from 0 to 3.3V. Then it uses A1 to read that output into its ADC, and convert it into a voltage between 0 and 3.3V.
+
+You can, of course, open the serial monitor to view the voltage values stream by. But if the the sine wave is hard to visualize through text, check out Arduino's new Serial Plotter, by going to Tools > Serial Plotter.
+
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Serial%20poltting.png"/></div>
+
+
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO_DAC_wave.gif"/></div>
+
+**Code**
+
+```CPP
+#define DAC_PIN A0 // Make code a bit more legible
+
+float x = 0; // Value to take the sin of
+float increment = 0.02;  // Value to increment x by each time
+int frequency = 440; // Frequency of sine wave
+
+void setup() 
+{
+  analogWriteResolution(10); // Set analog out resolution to max, 10-bits
+  analogReadResolution(12); // Set analog input resolution to max, 12-bits
+
+  SerialUSB.begin(9600);
+}
+
+void loop() 
+{
+  // Generate a voltage value between 0 and 1023. 
+  // Let's scale a sin wave between those values:
+  // Offset by 511.5, then multiply sin by 511.5.
+  int dacVoltage = (int)(511.5 + 511.5 * sin(x));
+  x += increment; // Increase value of x
+
+  // Generate a voltage between 0 and 3.3V.
+  // 0= 0V, 1023=3.3V, 512=1.65V, etc.
+  analogWrite(DAC_PIN, dacVoltage);
+
+  // Now read A1 (connected to A0), and convert that
+  // 12-bit ADC value to a voltage between 0 and 3.3.
+  float voltage = analogRead(A1) * 3.3 / 4096.0;
+  SerialUSB.println(voltage); // Print the voltage.
+  delay(1); // Delay 1ms
+}
+```
+
+
+## **Getting Started**
+
+
+### **Hardware**
 
 
 **Materials required**
@@ -254,7 +320,7 @@ void loop (void) {
 - Step 2. Connect the Seeeduino XIAO to your computer.Then the yellow power LED should go on.
 
 
-### Software
+### **Software**
 
 
 !!!Note
