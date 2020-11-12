@@ -14,43 +14,28 @@ tags:
 <p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p> 
 
 
-A functional expansion board for Seeeduino XIAO of only half Raspberry Pi 4 size. With OLED display, embedded RTC, expandable memory mini SD card slot, on-board passive buzzer, you could obtain more possibilities using SeeeduinoXIAO. The one-key reset button and SWD led-out pin enable you debug in an easier and efficient way. 
+A powerful functional expansion board for Seeeduino XIAO of only half Raspberry Pi 4 size. It enables build prototype and project in easy and quick way. With its rich peripherals including OLED, RTC, expandable memory, passive buzzer, RESET/User button, 5V servo connector, multiple data interfaces… you could explore infinite possibilities of Seeeduino XIAO. Circuit python is also well supported by this board.
 
-Seeeduino XIAO has become one of the hottest products in the Seeeduino series since its release. You may adore its small size and elegant design, powerful CPU powered by SAMD21, rich and useful interfaces of GPIOs, or its super high cost performance.No matter what reason makes Seeeduino XIAO attract to you, now you have one more reason to choose it —— the powerful Seeeduino XIAO Expansion Board, which definitely helps you better utilize SeeeduinoXIAO and get the most of it. 
-
-
-
-<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/444.png"/></div>
 
 
 
 ## **Features**
 
--	The board build-in **OLED Display**
+- **Quick Prototyping:** Easy debug and Reset with RESET button and SWD pin led out to male header. 0.96”OLED, enables visual data display without PC serial monitor; Convenient plug and play Grove connectors support multiple data protocols, including IIC, Uart, Analog/Digital; No soldering needed with all pin led out.
 
--	**One-key RESET botton**: No more jump wire and short circuit, reset with just one click. 
+- **Rich peripherals:** OLED display, RTC, expandable memory space, passive buzzer, user button, on board battery management chip… One board on hand to explore infinite possibilities of Seeeduino XIAO. 
 
--	**SWD debug**: SWD pin led-out as male pin header, making debugger connection and  firmware download much easier.
+- **No Soldering Needed:** All pin led out. Convenient plug and play Grove connectors support multiple data protocols, including IIC, Uart, Analog/Digital.
 
--	**High precision RTC**: High precision real time clock with battery backup, enable maintain accurate time when the main power is turned off.
+- **Circuit Python Supported:** Well supports circuit python. Mini SD card slot enables memory space expand, making it possible to allocate more libraries needed in prototyping and project building.
 
--   **Expandable memory**: With an mini-SD card slot on the back, no worry on memory limit any more, when adding libraries and using circuit python.
+- **Mini Size:** Compact and elegant with only half Raspberry Pi 4 size, especially suitable for projects require mini size.
 
--	**Lipo Battery Charging**: JST2.0mm standard lipo battery connector and on-board battery management chip, supports both USB and lipo battery power supply, and easy on-board battery recharge.
-
--	**Rich external equipment**: Passive buzzer, user button, 5V servo connector. Along with the OLED display, mini SD card, RTC, more possibilities waiting for discovery.
-
--	**Grove connectors**: Support common transmit protocol (Grove IIC*2, Grove UART*1, A0/D0 Grove*1)
-
--   All 14 GPIO led out.
-
--	Circuit python supported
-
--	**Mini size**: Only half Raspberry Pi 4 size, compact and cute, making it easy to carry and build in the projects that have strict size requirements.
 
 
 
 ## **Specification**
+
 |Item|Value|
 |---|---|
 |Operating voltage|5V / 3.7V Lithium Battery|
@@ -65,16 +50,18 @@ Seeeduino XIAO has become one of the hottest products in the Seeeduino series si
 
 ## **Applications**
 
-- SWD Serial port test
-- environmental monitor station
-- Detection of soil moisture
-- Mini temperature control fan
-- PWM control test
-- wearable light-emitting devices
+- SWD debug
+- Rapid prototyping
+- Data display
+- Mini Size Project
 
 ## **Part List** 
 
-- SeeeduinoXIAO Expansion Board PCBA*1
+|Item|Value|
+|---|---|
+|SeeeduinoXIAO Expansion Board PCBA  | *1 |
+
+
 
 !!!Note
     This product does not include Seeeduino XIAO and battery, please click this link to get [**Seeeduino XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html?gclid=Cj0KCQjwufn8BRCwARIsAKzP695mYBI8wwzrR8rXiJgv9QBK5DeTJGCU9bzXvzGUheFVZxqHcuw0SgYaAqDqEALw_wcB)
@@ -86,6 +73,15 @@ Seeeduino XIAO has become one of the hottest products in the Seeeduino series si
 
 
 
+## **Getting Started**
+
+
+### **Materials Required**
+
+| Seeeduino XIAO | Seeeduino XIAO Expansion board|
+|--------------|--------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/seeeduino-XIAO-thumbnail.jpg)| <div align=center><img width = 210 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/103030356_Preview-07.png"/></div>
+|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)|
 
 
 ### **Hardware Overview**
@@ -93,95 +89,31 @@ Seeeduino XIAO has become one of the hottest products in the Seeeduino series si
 
 <div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/XIAO_port_info.png"/></div>
 
-<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/XIAO_size.png"/></div>
+there are an external SD card slot and RTC Battery Holder, the SD card mostly is used for saving and run the `python.py` file, the RTC is for tracks the current time and can be used to program actions at a specific time.  
+
+<div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/1111111111111111111111110.jpg"/></div>
+
+<div align=center><img width = 420 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/XIAO_size.png"/></div>
+
+
 
 ### **Pinout Diagram**
 
 External headers-pin description for Grove-Shield for Seeeduino XIAO.
 
-<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/555.png"/></div>
-
-there are an external SD card slot and RTC Battery Holder, the SD card mostly is used for saving and run the `python.py` file, the RTC is for tracks the current time and can be used to program actions at a specific time.  
-
-<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/XIAO_BACK.png"/></div>
+<div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/555.png"/></div>
 
 
-## **Getting Started**
-
-
-### **Materials Required**
-
-| Seeeduino XIAO | Grove-Doppler-Radar|
-|--------------|--------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/seeeduino-XIAO-thumbnail.jpg)| <div align=center><img width = 210 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/103030356_Preview-07.png"/></div>
-|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Doppler-Radar-BGT24LTR11-p-4572.html)|
-
-
-
-
-### **Software**
-
-
-**Step 1. Please Install the Arduino IDE** 
-
-[![](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/Download_IDE.png)](https://www.arduino.cc/en/Main/Software)
-
-
-**Step 2. Add the XIAO Board library**
-
-1.Open your Arduino IDE, click on File > Preferences, and copy below url to Additional Boards Manager URLs:
-
-```CPP
-https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
-```
-
-![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Preference.png)
-
-2.Click on **Tools** > **Board** > **Board Manager** and Search **Wio Terminal** in the Boards Manager.
-
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Boards_manager.png"/>
-  <figcaption><i>The keyword is XIAO</i></figcaption>
-</figure>
-</div>
-
-**STEP 3. Select your board and port**  
-
-You'll need to select the entry in the **Tools > Board** menu that corresponds to your Arduino.
-Selecting the **Seeeduino XIAO**.
-
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/board_select_new.png"/>
-  <figcaption> <i>Choose the right board</i></figcaption>
-</figure>
-</div>
-
-Select the serial device of the Seeeduino XIAO board from the **Tools -> Port** menu. This is likely to be COM3 or higher (**COM1** and **COM2** are usually reserved for hardware serial ports). To find out, you can disconnect your Seeeduino XIAO board and re-open the menu; the entry that disappears should be the Arduino board. Reconnect the board and select that serial port.
-
-
-**Step 4. Upload the program**   
-
-Now, simply click the **Upload** button in the environment. Wait a few seconds and if the upload is successful, the message "Done uploading." will appear in the status bar.
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/upload.png"/>
-  <figcaption><i>Upload the code</i></figcaption>
-</figure>
-</div>
-
-A few seconds after the upload finishes, you should see the yellow LED on the XIAO board start to blink, after the yellow light off, it means the program has uploaded. 
+## **Expansion Board usage**
 
 
 
 ### **Connection**
 
-Put the XIAO board on the expansion board, the XIAO green LED should light up.
+Put the XIAO board on the expansion board, the XIAO green LED should light up. If you want to know more about Seeeduino XIAO, please click [**Seeeduino XIAO detail**](https://wiki.seeedstudio.com/Seeeduino-XIAO/).
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/XIAO-to-board.png"/></div>
+
+
 
 ## **Battery usage**
 
@@ -197,118 +129,34 @@ As the below picture, if the LED flashing which means the battery does not charg
 <div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/XIAO_flash_light.png"/></div>
 
 
-## **Specific Buzzer usage**
-
-The Buzzer is connecting with the Pin A3, if you active the Pin A3 without other operation the buzzer will be work, so when just want to use the Pin A3 to connect with other modules, you need to disconnect the Pin A3 soldering, as the below picture, under the board there is the A3 soldering, you need to use the electric soldering iron to separate the soldering.   
-
-<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/buzzar_connection.png"/></div>
+## **Modules on the expansion board**
 
 
-## **SD card usage**
+Rich peripherals on board including:
 
-The Seeedruino XIAO build-in about 40 KB flash, but it may have not enough space to store the large size code file, so we add an SD card slot to plug the SD card to extend the space. 
+- **OLED display:** Visual data display without connecting to PC, which enables debug in a more efficient way, and builds application such as a sensor hub, data monitor system, etc.
 
-**Step 1.** Preper a SD Card plug in the XIAO expansion board
+- **RESET button:** No more jumper wire and short circuit, easy reset with just one click. 
 
-**Step 2.** Downloard the [**circuitPython file**](https://circuitpython.org/board/seeeduino_xiao/). Please refer to **Installing CircuitPython** chapter to learn how to use circuitpython.
+- **SWD debug:** SWD pin led out as male pin header, making debugger connection and firmware download much easier.
 
-**Step 3.** Download [**lib**](https://http://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/lib.rar) unzips the file, then replace it with the new lib in the  `CIRCUITPY`, meanwhile, add the [**main.py**](https://http://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/main.py) and [**sd.py**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Preference.png) file in the `CIRCUITPY` drive as well.
+- **High precision RTC:** High precision real-time clock with battery backup, enable maintain accurate time when the main power is turned off.
 
-**Example**
+- **Expandable memory:** With a mini-SD card slot on the back, no worry on memory limit any more when adding libraries and using circuit python.
 
-This example i add a lib file as library, buzzer.py, and txt file in the SD card.
+- **User button:** Besides the RESET button, also provide with another user-defined button.
 
-<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/python.png"/></div>
+- **Passive buzzer:** Same passive buzzer on Wio Terminal, with which you could change the PMW frequency to award different beep sound to get a "buzzer music".
 
-If you want to run the **buzzer.py** file, please follow this instruction: `CIRCUITPY` **->**  **main.py**  **->**  **add import buzzer**  **->**  if you want to read **hello.txt** just follow as below picture
+- **Grove connectors:** All pin led out, plug and play grove connectors support common data protocols (Grove IIC*2, Grove UART*1, A0/D0 Grove*1)
 
-<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/add_buzzer.png"/></div>
+- **Lipo Battery Charging:** JST2.0mm standard lipo battery connector and battery management system, supports both USB and lipo battery power supply, and easy onboard battery recharge.
 
-
-!!!Note
-    If you want to run another python file in SD, please imitate the example.
-
-
-## **Circuitpython on Seeeduino XIAO with expansion board**
-
-
-This wiki introduce how to install and run the official [**CircuitPython**](https://circuitpython.org/) by Adafruit Industries on the [**Seeeduino XIAO development board**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html) !
-
-CircuitPython is a programming language designed to simplify experimenting and learning to program on low-cost microcontroller boards. It makes getting started easier than ever with no upfront desktop downloads needed. Once you get your board set up, open any text editor, and get started editing code. For more info, please refer to [**here**](https://learn.adafruit.com/welcome-to-circuitpython/what-is-circuitpython).
-
-
-## **Installing CircuitPython**
-
-**Step 1.** Install the Seeeduino XIAO on the Expansion board then conect the Type-C cable
-
-**Step 2.** Download the official [**CircuitPython Bootloader for Seeeduino XIAO**](https://circuitpython.org/board/seeeduino_xiao/). A `.uf2` , the flie will be store in your PC download.
-
-<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/circutpyhthon.png"/></div>
-
-**Step 3.** Entering the DFU bootloader mode by press the reset button twice quickly on the XIAO expansion board, then your PC will appear Arduino drive.
-
-<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/reboot_XIAO.gif"/></div>
-
-<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/arduino_boot.png"/></div>
-
-**Step 4.** An external drive named `Arduino` should appear in your PC. Drag the the downloaded CircuitPython uf2 files to the `Arduino` drive.
-
-<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/python_to_arduino.png"/></div>
-
-
-**Step 5.** Once loaded the CircuitPython bootloader, unplug the USB Type-C and re-connect. A new external drive called `CIRCUITPY` should appear.
-
-<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Circuitpy.png"/></div>
-
-**Step 6.** Now, CircuitPython is loaded on Seeeduino XIAO! All you need to do it's to write you python program and name it `main.py` and drag it onto the `CIRCUITPY` drive.
-
-
-### **CircuitPyhton Basics**
-
-Running `Blink` using CircuitPython:
-
-**Note:** simply copy and save the following code and name it `main.py`, and drag it to `CIRCUITPY` drive.
-
-```py
-import time
-import board
-from digitalio import DigitalInOut, Direction
-
-led = DigitalInOut(board.D13)
-led.direction = Direction.OUTPUT
-
-while True:
-    led.value = True
-    time.sleep(1)
-    led.value = False
-    time.sleep(1)
-```
-
-You should see the built-in LED starts to blink!
+- **5V servo connector:** 5V output led out to male header for 5V servo and sensor connection.
 
 
 
-
-## **Modules demonstration**
-
-There is some simple demo realized on the XIAO expansion board. 
-
-**Componet required**
-
-- [**Seeeduino XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
-
-- [**Seeeduino XIAO expansion board**]()
-
-- [**Servo**](https://www.seeedstudio.com/Grove-Servo.html)
-
-
-
-!!!Note
-    We assume you have been installed the Arduino IDE and XIAO library. if you do not have it, please go to **Getting start** chapter -> **software**, then follow the instructions download the Arduino IDE and library.
-
-
-
-### **Lesson 1 - OLED display**
+### **OLED display**
 
 This example introduces how to use the OLED display on the XIAO expansion board.
 
@@ -316,7 +164,7 @@ This example introduces how to use the OLED display on the XIAO expansion board.
 
 **Step 1**. Install the Seeeduino XIAO on the Expansion board then conect the Type-C cable
 
-**Step 2**. Open Arduino IDE, Navigate to **Sketch** -> **Include Library** -> **Manage Libraries**, search **U8g2** then install it. 
+**Step 2**. Install the [**u8g2**](https://github.com/olikraus/u8g2) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/). 
 
 **Step 3**. Copy the code and stick on the Ardiono IDE then uploard it.
 
@@ -342,7 +190,7 @@ void loop(void) {
 } 
 ```
 
-### **Lesson 2 - Botton control LED**
+### **Botton control LED**
 
 This example introduces how to use the button on the XIAO expansion board to control the LED on the Seeeduino XIAO. 
 
@@ -382,7 +230,7 @@ void loop() {
 }
 ```
 
-### **Lesson 3 - Buzzer play Happy brithday**
+### **Buzzer play Happy brithday**
 
 This example uses Buzzer on the XIAO expansion board to play Happy birthday.
 
@@ -445,7 +293,7 @@ void loop() {
 }
 ```
 
-### **Lesson 4 - Rotary angle sensor control servo**
+### **Rotary angle sensor control servo**
 
 This example uses a rotary angle sensor to control servo via integration ports on the XIAO expansion board.
 
@@ -453,7 +301,7 @@ This example uses a rotary angle sensor to control servo via integration ports o
 
 **Step 1**. Install the Seeeduino XIAO on the Expansion board then conect the Type-C cable
 
-**Step 2**. Connect the Servo cable to I2C port, rotary angle sensor to D0
+**Step 2**. Connect the Servo cable to **I2C** port, rotary angle sensor to **D0**
 
 **Step 3**. Open Arduino IDE, Copy the code and stick on the Ardiono IDE then uploard it.
 
@@ -488,7 +336,7 @@ void loop() {
 }
 ```
 
-### **Lesson 5 - RTC clock display**
+### **RTC clock display**
 
 This example uses RTC to display the clock on the OLED.
 
@@ -496,7 +344,7 @@ This example uses RTC to display the clock on the OLED.
 
 **Step 1**. Install the Seeeduino XIAO on the Expansion board then conect the Type-C cable
 
-**Step 2**. Open Arduino IDE, Navigate to **Sketch** -> **Include Library** -> **Manage Libraries**, search **U8g2** then install it. 
+**Step 2**. Install the [**u8g2**](https://github.com/olikraus/u8g2) and [**PCF8563**](https://github.com/lewisxhe/PCF8563_Library) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/). 
 
 **Step 3**. Copy the code and stick on the Ardiono IDE then uploard it.
 
@@ -548,6 +396,126 @@ void loop() {
 ```
 
 
+
+
+## **Circuitpython on Seeeduino XIAO with expansion board**
+
+
+This wiki introduce how to install and run the official [**CircuitPython**](https://circuitpython.org/) by Adafruit Industries on the [**Seeeduino XIAO development board**](https://www.seeedstudio.com/Seeeduino-XIAO-Pre-Soldered-p-4747.html) !
+
+CircuitPython is a programming language designed to simplify experimenting and learning to program on low-cost microcontroller boards. It makes getting started easier than ever with no upfront desktop downloads needed. Once you get your board set up, open any text editor, and get started editing code. For more info, please refer to [**here**](https://learn.adafruit.com/welcome-to-circuitpython/what-is-circuitpython).
+
+
+## **Installing CircuitPython**
+
+**Step 1.** Install the Seeeduino XIAO on the Expansion board then conect the Type-C cable
+
+**Step 2.** Download the official [**CircuitPython Bootloader for Seeeduino XIAO**](https://circuitpython.org/board/seeeduino_xiao/). A `.uf2` , the flie will be store in your PC download.
+
+<div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/circutpyhthon.png"/></div>
+
+**Step 3.** Entering the DFU bootloader mode by press the reset button twice quickly on the XIAO expansion board, then your PC will appear Arduino drive.
+
+<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/reboot_XIAO.gif"/></div>
+
+<div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/arduino_boot.png"/></div>
+
+**Step 4.** An external drive named `Arduino` should appear in your PC. Drag the downloaded CircuitPython uf2 files to the `Arduino` drive.
+
+<div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/python_to_arduino.png"/></div>
+
+
+**Step 5.** Once loaded the CircuitPython bootloader, unplug the USB Type-C and re-connect. A new external drive called `CIRCUITPY` should appear.
+
+<div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Circuitpy.png"/></div>
+
+**Step 6.** Now, CircuitPython is loaded on Seeeduino XIAO! All you need to do it's to write you python program and name it `main.py` and drag it onto the `CIRCUITPY` drive.
+
+
+### **CircuitPyhton Basics**
+
+Running `Blink` using CircuitPython:
+
+**Note:** simply copy and save the following code and name it `main.py`, and drag it to `CIRCUITPY` drive.
+
+```py
+import time
+import board
+from digitalio import DigitalInOut, Direction
+
+led = DigitalInOut(board.D13)
+led.direction = Direction.OUTPUT
+
+while True:
+    led.value = True
+    time.sleep(1)
+    led.value = False
+    time.sleep(1)
+```
+
+You should see the built-in LED starts to blink!
+
+
+## **SD card**
+
+The Seeedruino XIAO build-in about 40 KB flash, but it may have not enough space to store the large size code file, so we add an SD card slot to plug the SD card to extend the space. 
+
+**Step 1.** Preper a SD Card plug in the XIAO expansion board
+
+**Step 2.** Downloard the [**circuitPython file**](https://circuitpython.org/board/seeeduino_xiao/). Please refer to **Installing CircuitPython** chapter to learn how to use circuitpython.
+
+**Step 3.** Download [**lib**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/lib.zip) unzips the file, then replace it with the new lib in the  `CIRCUITPY`.
+
+**Step 4.** Add the [**main.py**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/main.py) file in the `CIRCUITPY` drive.
+
+```CPP
+import sd    
+f = open("/sd/hello.txt", "r")   ## read the file from SD card
+print(f.read())
+```
+
+**Step 5.** and [**sd.py**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/sd.py) file in the `CIRCUITPY` drive as well.
+
+```CPP
+import os
+import adafruit_sdcard
+import board
+import busio
+import digitalio
+import storage
+import sys
+
+# Connect to the card and mount the filesystem for Seeeduino XIAO.
+spi = busio.SPI(board.SCK, board.MOSI, board.MISO)
+cs = digitalio.DigitalInOut(board.D2)
+sdcard = adafruit_sdcard.SDCard(spi, cs)
+vfs = storage.VfsFat(sdcard)
+storage.mount(vfs, "/sd")
+sys.path.append("/sd")
+sys.path.append("/sd/lib")  ## switch to the path to SD card
+```
+
+**Example**
+
+This example for test the buzzer via the circuitpyhton, as the below picture: the [**buzzer.py**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/buzzer.py) and txt file have store in the SD card.
+
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/python.png"/></div>
+
+If you want to run the **buzzer.py** file, please follow this instruction: `CIRCUITPY` **->**  **main.py**  **->**  **add import buzzer**  **->**  if you want to read **hello.txt** just follow as below picture
+
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/add_buzzer.png"/></div>
+
+
+!!!Note
+    If you want to run another python file in SD, please imitate the example.
+
+
+
+
+
+
+
+
 ## **Demo demonstration**
 
 
@@ -557,7 +525,7 @@ void loop() {
 
 **Overview**
 
-<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/remoteFan-g.gif"/></div>
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/remoteFan-g.gif"/></div>
 
 This wiki introduce how to make a Mini fan to plase on your room keep cool.
 
@@ -691,7 +659,9 @@ void loop() {
 
 **Overview**
 
-This wiki introduce how to make a Mini fan to plase on your room keep cool.
+<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/remote_control_car.gif"/></div>
+
+This wiki introduce how to make a remote control car.
 
 **Feature**
 
