@@ -59,7 +59,7 @@ A powerful functional expansion board for Seeeduino XIAO of only half Raspberry 
 
 |Item|Value|
 |---|---|
-|SeeeduinoXIAO Expansion Board PCBA  | *1 |
+|SeeeduinoXIAO Expansion Board  | *1 |
 
 
 
@@ -89,7 +89,7 @@ A powerful functional expansion board for Seeeduino XIAO of only half Raspberry 
 
 <div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/XIAO_port_info.png"/></div>
 
-there are an external SD card slot and RTC Battery Holder, the SD card mostly is used for saving and run the `python.py` file, the RTC is for tracks the current time and can be used to program actions at a specific time.  
+There are an external SD card slot and RTC Battery Holder, the SD card mostly is used for saving and run the `python.py` file, the RTC is for tracks the current time and can be used to program actions at a specific time.  
 
 <div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/1111111111111111111111110.jpg"/></div>
 
@@ -437,7 +437,7 @@ CircuitPython is a programming language designed to simplify experimenting and l
 
 Running `Blink` using CircuitPython:
 
-**Note:** simply copy and save the following code and name it `main.py`, and drag it to `CIRCUITPY` drive.
+**Note:** Simply copy and save the following code and name it `main.py`, and drag it to `CIRCUITPY` drive.
 
 ```py
 import time
@@ -457,7 +457,7 @@ while True:
 You should see the built-in LED starts to blink!
 
 
-## **SD card**
+### **SD card for circuitpython**
 
 The Seeedruino XIAO build-in about 40 KB flash, but it may have not enough space to store the large size code file, so we add an SD card slot to plug the SD card to extend the space. 
 
@@ -475,7 +475,7 @@ f = open("/sd/hello.txt", "r")   ## read the file from SD card
 print(f.read())
 ```
 
-**Step 5.** and [**sd.py**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/sd.py) file in the `CIRCUITPY` drive as well.
+**Step 5.** Add [**sd.py**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/sd.py) file in the `CIRCUITPY` drive.
 
 ```CPP
 import os
@@ -548,7 +548,7 @@ This wiki introduce how to make a Mini fan to plase on your room keep cool.
 
 **Hardware Connection**
 
-Please follow the same color line to connect each sensor on the board. Please connect the fan grove cable to D0, servo grove cable to I2C, IR grove cable to D7.
+Please follow the same color line to connect each sensor on the board. Please connect the fan grove cable to D0, servo grove cable to **I2C**, IR grove cable to **D7**.
 
 
 <div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/remote_fan_pic.png"/></div>
@@ -666,14 +666,14 @@ This wiki introduce how to make a remote control car.
 
 **Feature**
 
-- Automatic swing fan
+- Mini size car easy to across the narrow road
 
 **Component required**
 
 - [**Seeeduino XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
 
-- [**Seeeduino XIAO expansion board**]()
+- [**Seeeduino XIAO expansion board**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
 
 
 - [**Grove - I2C Mini Motor Driver**](https://www.seeedstudio.com/Grove-I2C-Mini-Motor-Driver.html)
