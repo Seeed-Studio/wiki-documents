@@ -155,6 +155,7 @@ Rich peripherals on board including:
 - **5V servo connector:** 5V output led out to male header for 5V servo and sensor connection.
 
 
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/444.png"/></div>
 
 ### **OLED display**
 
