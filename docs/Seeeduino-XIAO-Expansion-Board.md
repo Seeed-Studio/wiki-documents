@@ -23,7 +23,7 @@ A powerful functional expansion board for Seeeduino XIAO of only half Raspberry 
 
 - **Quick Prototyping:** Easy debug and Reset with RESET button and SWD pin led out to male header. 0.96”OLED, enables visual data display without PC serial monitor; Convenient plug and play Grove connectors support multiple data protocols, including IIC, Uart, Analog/Digital; No soldering needed with all pin led out.
 
-- **Rich peripherals:** OLED display, RTC, expandable memory space, passive buzzer, user button, on board battery management chip… One board on hand to explore infinite possibilities of Seeeduino XIAO. 
+- **Rich peripherals:** OLED display, RTC, expandable memory space, passive buzzer, user button, on board battery management chip. 
 
 - **No Soldering Needed:** All pin led out. Convenient plug and play Grove connectors support multiple data protocols, including IIC, Uart, Analog/Digital.
 
@@ -76,8 +76,8 @@ A powerful functional expansion board for Seeeduino XIAO of only half Raspberry 
 
 | Seeeduino XIAO | Seeeduino XIAO Expansion board|
 |--------------|--------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/seeeduino-XIAO-thumbnail.jpg)| <div align=center><img width = 210 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg"/></div>
-|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)|
+|<div align=center><img width = 210 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/102010388_Package-03.png"/></div>| <div align=center><img width = 210 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg"/></div>
+|[**Get ONE Now**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|[**Get ONE Now**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)|
 
 
 ### **Hardware Overview**
@@ -89,7 +89,7 @@ There are an external SD card slot and RTC Battery Holder, the SD card mostly is
 
 <div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/1111111111111111111111110.jpg"/></div>
 
-<div align=center><img width = 350 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/XIAO_size.png"/></div>
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/ssssssssssccccccccc.png"/></div>
 
 
 
@@ -97,18 +97,20 @@ There are an external SD card slot and RTC Battery Holder, the SD card mostly is
 
 External headers-pin description for Grove-Shield for Seeeduino XIAO.
 
-<div align=center><img width = 850 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/55555555555555555.png"/></div>
+<div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/pinpinpin4.jpg"/></div>
 
 
 ## **Expansion Board Usage**
 
 
-
 ### **Connection**
 
-Put the XIAO board on the expansion board, the XIAO green LED should light up. If you want to know more about Seeeduino XIAO, please click [**Seeeduino XIAO detail**](https://wiki.seeedstudio.com/Seeeduino-XIAO/).
+Put the Seeeduino XIAO on the expansion board, the XIAO green LED should light up. If you want to know more about Seeeduino XIAO, please click [**Seeeduino XIAO**](https://wiki.seeedstudio.com/Seeeduino-XIAO/).
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/XIAO-to-board.png"/></div>
 
+
+!!!Note
+    Please plug the Seeeduino XIAO on the expansion board first, then plug Type-C, in case damage the board and Seeeduino XIAO. 
 
 
 ## **Battery usage**

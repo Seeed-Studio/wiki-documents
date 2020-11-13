@@ -164,7 +164,7 @@ void loop() {
 }
 ```
 
-#### **Serial1 println**
+#### **Serial**
 
 - Use pin 6 as the TX pin of UART(RX pin of UART is pin 7):
 
@@ -181,7 +181,7 @@ void loop() {
 }
 ```
 
-#### **SCL**
+#### **I2C**
 
 - Use pin 5 as the SCL pin of IIC(SDA pin of IIC is pin 4):
 
@@ -218,7 +218,7 @@ void loop()
 }
 ```
 
-#### **SCK**
+#### **SPI**
 
 - Use pin 8 as the SCK pin of SPI(MISO pin of SPI is pin 9,MOSI pin of SPI is pin 10):
 
