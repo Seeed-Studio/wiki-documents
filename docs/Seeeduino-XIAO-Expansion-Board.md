@@ -539,7 +539,7 @@ This wiki introduce how to make a Mini fan to plase on your room keep cool.
 - [**Seeeduino XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
 
-- [**Seeeduino XIAO expansion board**]()
+- [**Seeeduino XIAO expansion board**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
 
 
 - [**Grove mini fan**](https://www.seeedstudio.com/Grove-Mini-Fan-v1-1.html)
@@ -559,17 +559,12 @@ Please follow the same color line to connect each sensor on the board. Please co
 
 **Step 1**. Follow the connection picture connect all the sensor on the board.
 
-**Step 2**. Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
-
-**Step 3**. Navigate to **Sketch** -> **Include Library** -> **Manage Libraries**, search **IRremote** then install it. 
+**Step 2**. Install the [**Arduino-IRremote**](https://github.com/z3t0/Arduino-IRremote) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
 
 **Step 4**. Copy the code stick on the Aruino IDE then upload it.
 
 **Step 5**. Place the Fan in the safety position, try to press the button make sure it can work safely.
 
-
-!!!Note
-    Refer How to [**install library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 
 **Code**
@@ -694,13 +689,10 @@ Please follow the same color line to connect each sensor on the board. Please co
 
 **Step 2**. Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 
-**Step 3**. Navigate to **Sketch** -> **Include Library** -> **Manage Libraries**, search **IRremote** then install it. 
-
-**Step 4**. Download the [**Motor driver library**](https://github.com/Seeed-Studio/Drv8830_Motor_Driver)
+**Step 3**. Install the [**Arduino-IRremote**](https://github.com/z3t0/Arduino-IRremote) and [**Motor driver**](https://github.com/Seeed-Studio/Drv8830_Motor_Driver) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
 
 **Step 4**. Copy the code stick on the Aruino IDE then upload it.
 
-**Step 5**. Place the Fan in the safety position, try to press the button make sure it can work safely.
 
 **Code**
 
