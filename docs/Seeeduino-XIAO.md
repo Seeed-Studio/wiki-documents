@@ -105,6 +105,8 @@ All pins on Seeeduino XIAO support interrupts, but two pins cannot be used at th
 
 We don't need to configure the pins ourselves, after using the pins, you can call a function directly.
 
+#### **Digital Input and Output**
+
 - Use pin 6 as the digital pin:
 
 ```c
@@ -135,6 +137,9 @@ void loop() {
 }
 ```
 
+
+#### **AnalogRead**
+
 - Use pin 6 as the analog pin:
 
 ```c
@@ -159,6 +164,8 @@ void loop() {
 }
 ```
 
+#### **Serial1 println**
+
 - Use pin 6 as the TX pin of UART(RX pin of UART is pin 7):
 
 ```c
@@ -173,6 +180,8 @@ void loop() {
     delay(1000);
 }
 ```
+
+#### **SCL**
 
 - Use pin 5 as the SCL pin of IIC(SDA pin of IIC is pin 4):
 
@@ -208,6 +217,8 @@ void loop()
   delay(500);
 }
 ```
+
+#### **SCK**
 
 - Use pin 8 as the SCK pin of SPI(MISO pin of SPI is pin 9,MOSI pin of SPI is pin 10):
 
