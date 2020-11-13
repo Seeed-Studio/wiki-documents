@@ -76,7 +76,7 @@ A powerful functional expansion board for Seeeduino XIAO of only half Raspberry 
 
 | Seeeduino XIAO | Seeeduino XIAO Expansion board|
 |--------------|--------------|
-|<div align=center><img width = 210 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/102010388_Package-03.png"/></div>| <div align=center><img width = 210 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg"/></div>
+|<div align=center><img width = 210 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/102010388_Preview-07.png"/></div>| <div align=center><img width = 210 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg"/></div>
 |[**Get ONE Now**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|[**Get ONE Now**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)|
 
 
