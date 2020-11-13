@@ -248,7 +248,7 @@ Here's an example that demonstrates both the DAC and the ADC. To set the experim
 <div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/AO_A1.jpg"/></div>
 
 !!!Note
-  The Seeeduino XIAO using the [**Seeeduino XIAO expansion board**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) 
+    The Seeeduino XIAO using the [**Seeeduino XIAO expansion board**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) 
 
 
 This sketch produces a sine wave output on A0, with values ranging from 0 to 3.3V. Then it uses A1 to read that output into its ADC, and convert it into a voltage between 0 and 3.3V.
