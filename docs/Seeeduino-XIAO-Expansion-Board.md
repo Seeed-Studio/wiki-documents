@@ -9,7 +9,7 @@ tags:
 ---
 
 
-<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/103030356_Preview-07.png"/></div>
+<div align=center><img width = 550 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg"/></div>
 
 <p style="text-align:center"><a href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p> 
 
@@ -66,10 +66,6 @@ A powerful functional expansion board for Seeeduino XIAO of only half Raspberry 
 !!!Note
     This product does not include Seeeduino XIAO and battery, please click this link to get [**Seeeduino XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html?gclid=Cj0KCQjwufn8BRCwARIsAKzP695mYBI8wwzrR8rXiJgv9QBK5DeTJGCU9bzXvzGUheFVZxqHcuw0SgYaAqDqEALw_wcB)
 
-## **Platform Supported**
-| Arduino                                                                                             |                                                                                              |                                                                                                 |                                                                                                          |                                                                                                    |
-|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg) |
 
 
 
@@ -80,20 +76,20 @@ A powerful functional expansion board for Seeeduino XIAO of only half Raspberry 
 
 | Seeeduino XIAO | Seeeduino XIAO Expansion board|
 |--------------|--------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/seeeduino-XIAO-thumbnail.jpg)| <div align=center><img width = 210 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/103030356_Preview-07.png"/></div>
+|![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/seeeduino-XIAO-thumbnail.jpg)| <div align=center><img width = 210 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg"/></div>
 |[Get ONE Now](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)|
 
 
 ### **Hardware Overview**
 
 
-<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/XIAO_port_info.png"/></div>
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/2222222222222222222222222222221.jpg"/></div>
 
 There are an external SD card slot and RTC Battery Holder, the SD card mostly is used for saving and run the `python.py` file, the RTC is for tracks the current time and can be used to program actions at a specific time.  
 
-<div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/1111111111111111111111110.jpg"/></div>
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/1111111111111111111111110.jpg"/></div>
 
-<div align=center><img width = 420 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/XIAO_size.png"/></div>
+<div align=center><img width = 350 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/XIAO_size.png"/></div>
 
 
 
@@ -101,10 +97,10 @@ There are an external SD card slot and RTC Battery Holder, the SD card mostly is
 
 External headers-pin description for Grove-Shield for Seeeduino XIAO.
 
-<div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/555.png"/></div>
+<div align=center><img width = 850 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/55555555555555555.png"/></div>
 
 
-## **Expansion Board usage**
+## **Expansion Board Usage**
 
 
 
@@ -157,11 +153,11 @@ Rich peripherals on board including:
 
 <div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/444.png"/></div>
 
-### **OLED display**
+### **OLED Display**
 
 This example introduces how to use the OLED display on the XIAO expansion board.
 
-<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Hello_world11.jpg"/></div>
+<div align=center><img width = 550 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Hello_world11.jpg"/></div>
 
 **Step 1**. Install the Seeeduino XIAO on the Expansion board then conect the Type-C cable
 
@@ -181,7 +177,7 @@ This example introduces how to use the OLED display on the XIAO expansion board.
  
 void setup(void) {
   u8x8.begin();
-  u8x8.setFlipMode(1);
+  u8x8.setFlipMode(1);   // set number from 1 to 3, the screen word will rotary 180
 }
  
 void loop(void) {
@@ -191,11 +187,11 @@ void loop(void) {
 } 
 ```
 
-### **Botton control LED**
+### **LED control by User Button**
 
 This example introduces how to use the button on the XIAO expansion board to control the LED on the Seeeduino XIAO. 
 
-<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/LED_botton.gif"/></div>
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/LED_botton.gif"/></div>
 
 **Step 1**. Install the Seeeduino XIAO on the Expansion board then conect the Type-C cable
 
@@ -231,7 +227,14 @@ void loop() {
 }
 ```
 
-### **Buzzer play Happy brithday**
+### **Buzzer**
+
+The Buzzer is default connected to the Pin A3, if you want to remove the buzzer function, just follow the below picture, cut off the line.
+
+
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/111123232325.png"/></div>
+
+#### **Play Song with Passive Buzzer**
 
 This example uses Buzzer on the XIAO expansion board to play Happy birthday.
 
@@ -294,7 +297,7 @@ void loop() {
 }
 ```
 
-### **Rotary angle sensor control servo**
+### **Servo Control by Rotary Angle Sensor**
 
 This example uses a rotary angle sensor to control servo via integration ports on the XIAO expansion board.
 
@@ -341,7 +344,7 @@ void loop() {
 
 This example uses RTC to display the clock on the OLED.
 
-<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/time_clock.gif"/></div>
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/time_clock.gif"/></div>
 
 **Step 1**. Install the Seeeduino XIAO on the Expansion board then conect the Type-C cable
 
@@ -417,7 +420,7 @@ CircuitPython is a programming language designed to simplify experimenting and l
 
 **Step 3.** Entering the DFU bootloader mode by press the reset button twice quickly on the XIAO expansion board, then your PC will appear Arduino drive.
 
-<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/reboot_XIAO.gif"/></div>
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/reboot_XIAO.gif"/></div>
 
 <div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/arduino_boot.png"/></div>
 
@@ -517,7 +520,7 @@ If you want to run the **buzzer.py** file, please follow this instruction: `CIRC
 
 
 
-## **Demo demonstration**
+## **Demo**
 
 
 ### **Project 1 - Remote control fan**
@@ -559,7 +562,7 @@ Please follow the same color line to connect each sensor on the board. Please co
 
 **Step 1**. Follow the connection picture connect all the sensor on the board.
 
-**Step 2**. Install the [**Arduino-IRremote**](https://github.com/z3t0/Arduino-IRremote) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
+**Step 2**. Install the [**Arduino-IRremote**](https://github.com/Seeed-Studio/Seeed_Arduino_IRSendRev) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
 
 **Step 4**. Copy the code stick on the Aruino IDE then upload it.
 
@@ -649,7 +652,7 @@ void loop() {
 
 
 
-### **Project 1 - Remote control car**
+### **Project 2 - Remote control car**
 
 
 
@@ -689,7 +692,7 @@ Please follow the same color line to connect each sensor on the board. Please co
 
 **Step 2**. Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 
-**Step 3**. Install the [**Arduino-IRremote**](https://github.com/z3t0/Arduino-IRremote) and [**Motor driver**](https://github.com/Seeed-Studio/Drv8830_Motor_Driver) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
+**Step 3**. Install the [**Arduino-IRremote**](https://github.com/Seeed-Studio/Seeed_Arduino_IRSendRev) and [**Motor driver**](https://github.com/Seeed-Studio/Drv8830_Motor_Driver) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
 
 **Step 4**. Copy the code stick on the Aruino IDE then upload it.
 
