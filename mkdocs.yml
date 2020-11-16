@@ -764,6 +764,7 @@ nav:
                 - BeagleBone Green and Grove IoT Starter Kit Powered by AWS: Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS.md
                 - SEEED IOT BUTTON FOR AWS: SEEED-IOT-BUTTON-FOR-AWS.md
                 - The Things Indoor Gateway: The-Things-Indoor-Gateway.md
+                - LoRa-E5 STM32WLE5JC Module embedded SX126X & MCU: LoRa-E5_STM32WLE5JC_Module.md
 
           # - MakerPro Introduction: MakerPro.md
           - 0.5w Solar Panel 55*70: 0.5w_Solar_Panel_55x70.md
