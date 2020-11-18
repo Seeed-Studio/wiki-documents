@@ -129,6 +129,10 @@ There are few Arduino Libraries that are needed for the Wireless connectivity. F
 
 2. Now, the Seeed_Arduino_mbedtls library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_mbedtls` file that you've have just downloaded.
 
+### 4. Install the Seeed_Arduino_FS
+
+1. Please follow the [**Wio Terminal FS Overview**](https://wiki.seeedstudio.com/Wio-Terminal-FS-Overview/) to install dependent libraries.
+
 -----------
 
 > **NOTE:** The following are dependencies of the **old AT-Command Structure Wi-Fi  firmware and related libraries**.This software does not work with Bluetooth at the same time and is getting **depreciated**, please move the eRPC firmware if possible!
