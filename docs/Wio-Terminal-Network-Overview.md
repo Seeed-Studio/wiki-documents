@@ -106,6 +106,9 @@ If everything goes well, you should see all a successful message. Now you have f
 
 There are few Arduino Libraries that are needed for the Wireless connectivity. Follow  through to install all the libraries needed:
 
+!!!Note
+    Please update the **Seeed SAMD ArduinoCore to the latest version(>=1.8.1)**!
+
 ### 1. Install the Seeed_Arduino_rpcWiFi
  
 1. Visit the [**Seeed_Arduino_rpcWiFi**](https://github.com/Seeed-Studio/Seeed_Arduino_rpcWiFi) repositories and download the entire repo to your local drive.
@@ -118,13 +121,13 @@ There are few Arduino Libraries that are needed for the Wireless connectivity. F
 
 1. Visit the [**Seeed_Arduino_rpcUnified**](https://github.com/Seeed-Studio/Seeed_Arduino_rpcUnified) repositories and download the entire repo to your local drive.
 
-2. Now, the Seeed-Arduino-FreeRTOS library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_rpcUnified` file that you've have just downloaded.
+2. Now, the Seeed_Arduino_rpcUnified library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_rpcUnified` file that you've have just downloaded.
 
-### 3. Install the Seeed_Arduino_FreeRTOS
+### 3. Install the Seeed_Arduino_mbedtls
 
-1. Visit the [**Seeed_Arduino_FreeRTOS**](https://github.com/Seeed-Studio/Seeed_Arduino_FreeRTOS) repositories and download the entire repo to your local drive.
+1. Visit the [**Seeed_Arduino_mbedtls**](https://github.com/Seeed-Studio/Seeed_Arduino_mbedtls/tree/dev) repositories and download the entire repo to your local drive.
 
-2. Now, the Seeed-Arduino-FreeRTOS library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_FreeRTOS` file that you've have just downloaded.
+2. Now, the Seeed_Arduino_mbedtls library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_mbedtls` file that you've have just downloaded.
 
 -----------
 
