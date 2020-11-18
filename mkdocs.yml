@@ -239,6 +239,7 @@ nav:
           - Network:
             - Overview: Wio-Terminal-Network-Overview.md
             - Wi-Fi: Wio-Terminal-Wi-Fi.md
+            - Advanced Wi-Fi Usage: Wio-Terminal-Advanced-Wi-Fi.md
             - Connecting to Microsoft Azure IoT: Wio-Terminal-Azure-IOT.md
             - Ethernet: Wio-Terminal-Ethernet.md
             - Connecting to Blynk: Wio-Terminal-Blynk.md
