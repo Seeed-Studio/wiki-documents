@@ -895,16 +895,7 @@ For more information about the ReSpeaker 2-Mics Pi HAT you can visit [wiki](http
 - **[URL]** [Advanced system development](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C)
 
 
-## Resourses
------
-
-- **[PDF]** [i.MX 6ULL datasheet](https://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/REG/IMX6ULLCEC.pdf)
-- **[PDF]** [NPi i.MX6ULL Dev Board - Linux SBC Mechanical_Dimensions](https://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/REG/Mechanical_Dimensions.pdf)
-- **[PDF]** [NPi i.MX6ULL Dev Board - Linux SBC Breakout Board](https://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/REG/NPi-i.MX6ULL-Breakout-Board-Schematic-V1.0.pdf)
-- **[PDF]** [NPi i.MX6ULL Dev Board - Linux SBC Core Module](https://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/REG/NPi-i.MX6ULL-Core-Module-Schematic-V1.0.pdf)
-- **[URL]** [Advanced system development](https://www.digikey.com/eewiki/display/linuxonarm/NPi+i.MX6ULL)
-
-## ODYSSEY-STM32MP157C Advanced system development
+# ODYSSEY-STM32MP157C Advanced system development
 - [Availability](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-Availability)
 - [Vendor Documentation](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-VendorDocumentation)
 - [Basic Requirements](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-BasicRequirements)
