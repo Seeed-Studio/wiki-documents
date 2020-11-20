@@ -45,9 +45,9 @@ As explained in the section above, we intend to run [Gnuk](http://www.fsij.org/g
 
 ![](https://files.seeedstudio.com/wiki/FST-01/img/Gnuk-sticker.png)
 
-Gnuk is an implementation of Cryptographic Token for GnuPG, and it runs on STM32F103.  Source code is available at gniibe.org or gitorious.org.  FOr source code, please visit: [https://gitorious.org/gnuk/gnuk/trees/release/1.0.1](https://gitorious.org/gnuk/gnuk/trees/release/1.0.1)
+Gnuk is an implementation of Cryptographic Token for GnuPG, and it runs on STM32F103.  Source code is available at http://www.gniibe.org/ (https://git.gniibe.org/cgit/chopstx/ttxs.git/)
 
-For more information about Gnuk, please visit: [Gnuk WiKi](https://gitorious.org/gnuk/pages/Home) and [Official Gnuk Documentation](http://www.fsij.org/doc-gnuk/).
+For more information about Gnuk, please visit: [Official Gnuk Documentation](http://www.fsij.org/doc-gnuk/).
 
 Also, we intend to run NeuG on FST-01.
 
