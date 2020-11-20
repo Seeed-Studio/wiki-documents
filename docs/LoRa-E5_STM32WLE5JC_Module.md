@@ -177,3 +177,5 @@ LoRa-E5 is a low-cost, ultra-low power, extremely compact, and high-performance 
 ## Sources
 
 [LoRa-E5 Datasheet](https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20module%20datasheet_V1.0.pdf)
+[LoRa-E5 AT Command Specification](https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20AT%20Command%20Specification_V1.0%20.pdf)
+[STM32WLE5JB Datasheet](https://files.seeedstudio.com/products/317990687/res/stm32wle5jb%20datasheet.pdf)
