@@ -424,11 +424,13 @@ nav:
       - Flashing the Arduino Bootloader using DAP Link: Flashing-Arduino-Bootloader-DAPLink.md
 
   - Industrial IoT:
-      - SenseCAP Introduction: Industrial-IoT-SenseCAP-Introduction.md
-      - SenseCAP LoRaWAN: Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide.md
-      - SenseCAP Sensor Hub Data Logger: SenseCAP-Sensor-Hub-Data-Logger.md
-      - SenseCAP ONE Compact Weather Station: SenseCAP-One-Series-Meteorological-Sensors.md
+      - SenseCAP:
+          -  SenseCAP Introduction: Industrial-IoT-SenseCAP-Introduction.md
+          - SenseCAP LoRaWAN: Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide.md
+          - SenseCAP Sensor Hub Data Logger: SenseCAP-Sensor-Hub-Data-Logger.md
+          - SenseCAP ONE Compact Weather Station: SenseCAP-One-Series-Meteorological-Sensors.md
       - LoRa-E5 STM32WLE5JC Module embedded SX126X & MCU: LoRa-E5_STM32WLE5JC_Module.md
+      - The Things Indoor Gateway: The-Things-Indoor-Gateway.md
 
   - Grove:
       - Grove Introduction: Grove.md
@@ -765,7 +767,6 @@ nav:
                 - Grove IoT Developer Kit Microsoft Azure Edition: Grove_IoT_Developer_Kit-Microsoft_Azure_Edition.md
                 - BeagleBone Green and Grove IoT Starter Kit Powered by AWS: Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS.md
                 - SEEED IOT BUTTON FOR AWS: SEEED-IOT-BUTTON-FOR-AWS.md
-                - The Things Indoor Gateway: The-Things-Indoor-Gateway.md
 
           # - MakerPro Introduction: MakerPro.md
           - 0.5w Solar Panel 55*70: 0.5w_Solar_Panel_55x70.md
