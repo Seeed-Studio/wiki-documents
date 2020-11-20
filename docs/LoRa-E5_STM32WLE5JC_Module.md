@@ -1,4 +1,4 @@
-![LORA E5](https://files.seeedstudio.com/products/317990687/image/DSC09372.png)
+![LORA E5](https://files.seeedstudio.com/products/317990687/image/lora-e5_Preview-07.png)
 
 ## Product Introduction
 LoRa-E5 LoRaWAN module is designed with ST system-level package chip STM32WLE5JC, ARM Cortex M4 ultra-low-power MCU and LoRa SX126X. It supports (G)FSK mode and LoRa. 62.5kHz, 125kHz, 250kHz, and 500kHz bandwidth can be used in LoRa® mode, making it suitable for the design of various IoT nodes, supporting EU868 and US915.
