@@ -36,7 +36,7 @@ dfu-util -a 0 --dfuse-address 0x0800C000 -D your-app.bin
 
 ##   How to build dfu-util from source
 
-See the [build instructions](http://dfu-util.gnumonks.org/build.html) at the dfu-util home page.
+See the [build instructions](http://dfu-util.sourceforge.net/build.html) at the dfu-util home page.
 
 ##   Links
 
@@ -48,7 +48,7 @@ Original forum posts and discussion:
 
 Official home page
 
-*   [dfu-util homepage](http://dfu-util.gnumonks.org/)
+*   [dfu-util homepage](http://dfu-util.sourceforge.net/)
 
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
