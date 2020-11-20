@@ -115,7 +115,7 @@ Put the Seeeduino XIAO on the expansion board, the XIAO green LED should light u
 
 ## **Battery usage**
 
-The Seeeduino XIAO expansion board can be powered by a battery, so if you do some demo that needs to be moved, that battery will help you to solve the power supply issue. when you plug the battery please watch out for the positive and negative anodes, follow the picture to connect the battery in case of damage the 
+The Seeeduino XIAO expansion board can be powered by a battery, so if you do some demo that needs to be moved, that battery will help you to solve the power supply issue. when you plug the battery please watch out for the positive and negative anodes, follow the picture to connect the battery in case of damage the board. 
 
 <div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/battery-board.png"/></div>
 
@@ -161,7 +161,7 @@ This example introduces how to use the OLED display on the XIAO expansion board.
 
 <div align=center><img width = 550 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Hello_world11.jpg"/></div>
 
-**Step 1**. Install the Seeeduino XIAO on the Expansion board then conect the Type-C cable
+**Step 1**. Install the Seeeduino XIAO on the Expansion board then conect the Type-C cable.
 
 **Step 2**. Install the [**u8g2**](https://github.com/olikraus/u8g2) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/). 
 
@@ -195,7 +195,7 @@ This example introduces how to use the button on the XIAO expansion board to con
 
 <div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/LED_botton.gif"/></div>
 
-**Step 1**. Install the Seeeduino XIAO on the Expansion board then conect the Type-C cable
+**Step 1**. Install the Seeeduino XIAO on the Expansion board then conect the Type-C cable.
 
 **Step 2**. Open Arduino IDE, Copy the code and stick on the Ardiono IDE then uploard it.
 
@@ -240,7 +240,7 @@ The Buzzer is default connected to the Pin A3, if you want to remove the buzzer 
 
 This example uses Buzzer on the XIAO expansion board to play Happy birthday.
 
-**Step 1**. Install the Seeeduino XIAO on the Expansion board then conect the Type-C cable
+**Step 1**. Install the Seeeduino XIAO on the Expansion board then conect the Type-C cable.
 
 **Step 2**. Open Arduino IDE, Copy the code and stick on the Ardiono IDE then uploard it.
 
@@ -305,9 +305,9 @@ This example uses a rotary angle sensor to control servo via integration ports o
 
 <div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/rotary_servo.gif"/></div>
 
-**Step 1**. Install the Seeeduino XIAO on the Expansion board then conect the Type-C cable
+**Step 1**. Install the Seeeduino XIAO on the Expansion board then conect the Type-C cable.
 
-**Step 2**. Connect the Servo cable to **I2C** port, rotary angle sensor to **D0**
+**Step 2**. Connect the Servo cable to **I2C** port, rotary angle sensor to **D0**.
 
 **Step 3**. Open Arduino IDE, Copy the code and stick on the Ardiono IDE then uploard it.
 
@@ -348,7 +348,7 @@ This example uses RTC to display the clock on the OLED.
 
 <div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/time_clock.gif"/></div>
 
-**Step 1**. Install the Seeeduino XIAO on the Expansion board then conect the Type-C cable
+**Step 1**. Install the Seeeduino XIAO on the Expansion board then conect the Type-C cable.
 
 **Step 2**. Install the [**u8g2**](https://github.com/olikraus/u8g2) and [**PCF8563**](https://github.com/lewisxhe/PCF8563_Library) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/). 
 
@@ -414,7 +414,7 @@ CircuitPython is a programming language designed to simplify experimenting and l
 
 ## **Installing CircuitPython**
 
-**Step 1.** Install the Seeeduino XIAO on the Expansion board then conect the Type-C cable
+**Step 1.** Install the Seeeduino XIAO on the Expansion board then conect the Type-C cable.
 
 **Step 2.** Download the official [**CircuitPython Bootloader for Seeeduino XIAO**](https://circuitpython.org/board/seeeduino_xiao/). A `.uf2` , the flie will be store in your PC download.
 
@@ -466,7 +466,7 @@ You should see the built-in LED starts to blink!
 
 The Seeedruino XIAO build-in about 40 KB flash, but it may have not enough space to store the large size code file, so we add an SD card slot to plug the SD card to extend the space. 
 
-**Step 1.** Preper a SD Card plug in the XIAO expansion board
+**Step 1.** Preper a SD Card plug in the XIAO expansion board.
 
 **Step 2.** Downloard the [**circuitPython file**](https://circuitpython.org/board/seeeduino_xiao/). Please refer to **Installing CircuitPython** chapter to learn how to use circuitpython.
 
@@ -507,7 +507,7 @@ This example for test the buzzer via the circuitpyhton, as the below picture: th
 
 <div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/python.png"/></div>
 
-If you want to run the **buzzer.py** file, please follow this instruction: `CIRCUITPY` **->**  **main.py**  **->**  **add import buzzer**  **->**  if you want to read **hello.txt** just follow as below picture
+If you want to run the **buzzer.py** file, please follow this instruction: `CIRCUITPY` **->**  **main.py**  **->**  **add import buzzer**  **->**  if you want to read **hello.txt** just follow as below picture:
 
 <div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/add_buzzer.png"/></div>
 
