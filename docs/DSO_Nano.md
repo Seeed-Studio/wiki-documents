@@ -211,7 +211,7 @@ To upgrade the firmware to the latest version, you have a few options:
 *   Please visit our [DSO Nano forum](https://community.seeedstudio.com/discover.html?t=DSO) for prompt technical support and usage discussion.
 *   [Official firmware, schematics and development documentation](http://code.google.com/p/dsonano/)
 
-*   [Community firmware source git tree](http://gitorious.org/dsonano/dso-firmware) (for gcc and IAR)
+*   [Community firmware source git tree](https://gitlab.com/dsonano/dso-firmware) (for gcc and IAR)
 
 *   [MOD your DSO nano UI](https://files.seeedstudio.com/wiki/DSO_Nano/res/DSOUI.pdf)
 

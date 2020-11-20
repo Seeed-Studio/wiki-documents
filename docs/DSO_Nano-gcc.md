@@ -31,9 +31,9 @@ If you can not find a pre-built ARM toolchain for your platform, or otherwise wa
 
 ##   Get and build the firmware source code
 
-For now, get the code from Tormod's gitorious tree:
+For now, get the code from Tormod's gitlab tree:
 ```
-git clone [git://gitorious.org/dsonano/dso-firmware.git](git://gitorious.org/dsonano/dso-firmware.git)
+git clone https://gitlab.com/dsonano/dso-firmware.git
 cd dso-firmware
 ```
 
