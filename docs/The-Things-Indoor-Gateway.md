@@ -21,11 +21,118 @@ With the use of The Things Indoor LoRaWAN WiFi Gateway, The Things Network Conso
 
 ## Specifications 
 
-![spec](https://files.seeedstudio.com/products/113990896/wiki/chart%201.png)
+<style type="text/css" xml="space"><!--
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:2px 20px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:2px 20px;word-break:normal;}
+.tg .tg-2egc{background-color:#efefef;border-color:#ffffff;text-align:left;vertical-align:top}
+.tg .tg-gmm0{background-color:#9b9b9b;border-color:#ffffff;color:#ffffff;text-align:left;vertical-align:top}
+--></style>
+<table class="tg">
+<thead>
+<tr><th class="tg-gmm0" colspan="2">LoRa</th></tr>
+</thead>
+<tbody>
+<tr>
+<td class="tg-2egc">Chipset</td>
+<td class="tg-2egc">Semtech SX1308</td>
+</tr>
+<tr>
+<td class="tg-2egc">Channels</td>
+<td class="tg-2egc">8 Channels</td>
+</tr>
+<tr>
+<td class="tg-2egc">Receive Sensitivity</td>
+<td class="tg-2egc">-140/-135 dBm (EU/US)</td>
+</tr>
+<tr>
+<td class="tg-2egc">Transmit Power</td>
+<td class="tg-2egc">Upto +27 dBM</td>
+</tr>
+<tr>
+<td class="tg-2egc">LoRaWAN® Spec Version</td>
+<td class="tg-2egc">V.1.0.3</td>
+</tr>
+<tr>
+<td class="tg-2egc">Packet Forwarder</td>
+<td class="tg-2egc">Basic station protocol</td>
+</tr>
+</tbody>
+<thead>
+<tr><th class="tg-gmm0" colspan="2">Wi-Fi</th></tr>
+</thead>
+<tbody>
+<tr>
+<td class="tg-2egc">SoC</td>
+<td class="tg-2egc">ESP9266</td>
+</tr>
+<tr>
+<td class="tg-2egc">Mode</td>
+<td class="tg-2egc">802.11 b/g/n, Client Mode</td>
+</tr>
+<tr>
+<td class="tg-2egc">Tx Power</td>
+<td class="tg-2egc">+20 dBm</td>
+</tr>
+<tr>
+<td class="tg-2egc">Frequency Bands</td>
+<td class="tg-2egc">2.4 GHz</td>
+</tr>
+<tr>
+<td class="tg-2egc">WAN/LAN ports</td>
+<td class="tg-2egc">-</td>
+</tr>
+<tr>
+<td class="tg-2egc">USB Port</td>
+<td class="tg-2egc">USB Type-C (900 mA)</td>
+</tr>
+<tr>
+<td class="tg-2egc">Security</td>
+<td class="tg-2egc">WPA/WPA2</td>
+</tr>
+<tr>
+<td class="tg-2egc">Dimensions</td>
+<td class="tg-2egc">90*80*40 mm</td>
+</tr>
+<tr>
+<td class="tg-2egc">Operating Temperature</td>
+<td class="tg-2egc">0-40℃</td>
+</tr>
+<tr>
+<td class="tg-2egc">Certification</td>
+<td class="tg-2egc">CE/FC/IC/RCM/WPC/RoHS</td>
+</tr>
+</tbody>
+</table>
+<style type="text/css" xml="space"><!--
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:2px 20px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:2px 20px;word-break:normal;}
+.tg .tg-2egc{background-color:#efefef;border-color:#ffffff;text-align:left;vertical-align:top}
+.tg .tg-gmm0{background-color:#9b9b9b;border-color:#ffffff;color:#ffffff;text-align:left;vertical-align:top}
+--></style>
+<table class="tg">
+<tbody>
+<tr>
+<td class="tg-2egc">Interfaces</td>
+<td class="tg-2egc">LED indicators</td>
+</tr>
+<tr>
+<td class="tg-2egc">Antenna Type</td>
+<td class="tg-2egc">Integrated</td>
+</tr>
+<tr>
+<td class="tg-2egc">Frequency Band</td>
+<td class="tg-2egc">AU915</td>
+</tr>
+</tbody>
+</table>
 
-![spec](https://files.seeedstudio.com/products/113990896/wiki/chart%202.png)
-
-## Datasheets
+## Sources
 * [Get Started The Things Indoor Gateway](https://www.thethingsnetwork.org/docs/gateways/thethingsindoor/Getting_Started_TTIG.pdf)
 * [The Things Indoor Gateway Datasheet](https://www.thethingsnetwork.org/docs/gateways/thethingsindoor/TTIG_datasheet.pdf)
 * [Getting started in for AWS](https://www.thethingsnetwork.org/docs/gateways/thethingsindoor/Getting_Started_TTIG_AWS.pdf)
