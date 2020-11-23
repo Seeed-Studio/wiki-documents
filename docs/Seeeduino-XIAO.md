@@ -368,7 +368,7 @@ Open the LED blink example sketch: **File > Examples >01.Basics > Blink**.
 - **Step 3. Add Seeeduino to your Arduino IDE**
 
 Click on **File > Preference**, and fill Additional Boards Manager URLs with the url below:
-    *https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json*
+    *https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_legacy_seeeduino_boards_index.json*
 
 
 ![](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Boardurl.png)
