@@ -4,8 +4,10 @@ build:
   script:
     - ls -l /mnt
     - mkdocs build --clean
-    - python3 create_search_index/search_index.py site/mkdocs/search_index.json
+    - python3 create_search_index/search_index.py site/search_index.json
+    - python3 create_search_index/search_index.py site/search/search_index.json
     - python3 scripts/mkdocsyaml2json.py
+    - mkdir -p site/mkdocs
     - cp /tmp/mkdocs.json site/mkdocs/mkdocs.json
     - rsync -az site/*  /mnt/wiki.seeedstudio.com
     - chown  1026:100 -R /mnt/wiki.seeedstudio.com
