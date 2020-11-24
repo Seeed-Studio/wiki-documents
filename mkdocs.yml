@@ -760,6 +760,7 @@ nav:
   - MakerPro:
           - IoT:
                 # - IoT Introduction: IoT.md
+                - Quantum Mini Linux Development Kit: Quantum-Mini-Linux-Development-Kit.md
                 - Seeeduino Cloud and Grove IoT Starter Kit Powered by AWS: Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS.md
                 - IoT Fast Prototyping Kit S5D9: IoT_Fast_Prototyping_Kit S5D9.md
                 - Grove Starter Kit for IoT based on Raspberry Pi: Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi.md
