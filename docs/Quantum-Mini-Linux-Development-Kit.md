@@ -83,7 +83,7 @@ Select the downloaded System Image, select the formatted MicroSD card and Flash!
 
 Now, plug the MicroSD card to the MicroSD Slot of the Atom-N and **plug in the USB Type-C for power (USB Serial direction)**.
 
-And now you can open the USB serial using any type of Serial software from your PC! You should be able system status LED starts to blink on the **Quark-N**(SoC) and messages are printed to the Serial.
+And now you can open the USB serial using any type of Serial software from your PC! You should be able system status LED starts to blink on the **Quark-N**(SoM) and messages are printed to the Serial.
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/Quantum-Mini-Linux-Dev-Kit/bootup-n.png"/></div>
 
@@ -254,12 +254,12 @@ $ cd WorkSpace/GPIO
 $ sudo python gpio_key_led.py
 ```
 
-Now you can press the user button and you should be able to see the output in serial and the LED on the Quark-N (SoC) dims!
+Now you can press the user button and you should be able to see the output in serial and the LED on the Quark-N (SoM) dims!
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/Quantum-Mini-Linux-Dev-Kit/gpio.png"/></div>
 
 !!!Note
-    The LED is on Quark-N(Soc) and did not lead out on the Atom-N(Carrier Board).
+    The LED is on Quark-N(SoM) and did not lead out on the Atom-N(Carrier Board).
 
 ## OpenCV
 
