@@ -63,7 +63,7 @@ There are two documentations on the usage of **Seeeduino XIAO** which focus on d
 
 ![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-pinout.jpg)
 
-
+![](https:///files.seeedstudio.com/wiki/Seeeduino-XIAO/img/new1.png)
 ![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino%20XIAO%20pinout%202.png)
 
 ![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/regulator_to_3.3v.png)
