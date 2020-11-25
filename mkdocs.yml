@@ -296,6 +296,7 @@ nav:
           - Grove:
             - Overview: Wio-Terminal-Grove.md
           - Wio Terminal Battery Chassis: Wio-Terminal-Battery-Chassis.md
+          - Wio Terminal Chassis Battery(650mAh): Wio-Terminal-Chassis-Battery(650mAh).md 
           - Demo:
             - Wio Terminal Displaying Gyro: Wio-Terminal-Displaying-Gyro.md
             - Wio Terminal Storing Data: Wio-Terminal-Storting-Analog-Data.md
