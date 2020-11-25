@@ -53,7 +53,7 @@ If you are using Compute Modules with eMMC storage, please use Nvidia’s offici
 
 1.Insert the computer module to the main node.
 
-<div align=center><img width = 550 src="https://files.seeedstudio.com/wiki/Jetson-Mate/h-2.jpg"/></div>
+<div align=center><img width = 550 src="https://files.seeedstudio.com/wiki/Jetson-Mate/h-3.jpg"/></div>
 
 2.Short the **2 GND pin** shown in the picture.
 
@@ -61,7 +61,7 @@ If you are using Compute Modules with eMMC storage, please use Nvidia’s offici
 
 3.Connect Jetson Mate to your computer via micro USB port.
 
-<div align=center><img width = 550 src="https://files.seeedstudio.com/wiki/Jetson-Mate/h-3.jpg"/></div>
+<div align=center><img width = 550 src="https://files.seeedstudio.com/wiki/Jetson-Mate/h-2.jpg"/></div>
 
 4.Power on the machine, press the **wake up button**.
 
