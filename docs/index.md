@@ -1,32 +1,27 @@
 
 # Weekly Wiki
-![](http://files.seeedstudio.com/wiki/IMAGE/November%20Week%203/November-Week-3.png)
+![](https://files.seeedstudio.com/wiki/IMAGE/November%20Week%204/November-Week-4.png)
 
-It's the third week of November and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
+It's the fourth week of November and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
 As you all know, Seeed Wiki is a dedicated platform where we provide the proper guidance and support you need when getting started with our products. We put a lot of effort to make this platform more user friendly because we want to enable the learning of electronics in a more systematic approach.  
 We will bring you all these wiki updates in a weekly basis. So stay tuned with us and don't forget to visit this page again next week!
 
-## Existing Wiki Updated
-
-### RTL8720 Firmware Update and Additional Libraries
-
-We have updated the RTL8720 firmware to v2.0.2 and you can follow [this wiki](https://wiki.seeedstudio.com/Wio-Terminal-Network-Overview/#step-2-download-the-latest-firmware) to update yours too, before using Wi-Fi on the [Wio Terminal](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)! Also we have updated with [2 additional Arduino libraries](https://wiki.seeedstudio.com/Wio-Terminal-Network-Overview/#libraries-installations-erpc) which are needed for Wi-Fi connectivity!
-
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Wio-Terminal-Network-Overview/"><img src="https://files.seeedstudio.com/wiki/IMAGE/November%20Week%203/1605788695(1).png" alt="pir" width="900" height="auto"></a></p>
-
 ## New Wiki Added 
 
-### Advanced Wi-Fi Usage on Wio Terminal
+### Wio Terminal Chassis Battery(650mAh) Wiki
 
-We have added advanced WI-Fi functionalies with HTTPClient, DNSServer and WebServer libraries! Develop your next IoT projects with these simple APIs! Learn more [here](https://wiki.seeedstudio.com/Wio-Terminal-Advanced-Wi-Fi/)!
+The Wio Terminal Battery Chassis is a must-have extension board for Wio Terminal Dev Board as it provides an external power source for Wio Terminal to enhance its portability and compactness.
+The new version of the Wio Terminal Battery Chassis has added the Texas Instrument's BQ27441-G1A - self-calibrating, I2C-based fuel gauge for lithium polymer (LiPo) batteries which can be used to measures your battery's voltage to estimate its charge percentage and remaining capacity!
+Learn more about how to get started [here](https://wiki.seeedstudio.com/Wio-Terminal-Chassis-Battery(650mAh)/)!
 
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Wio-Terminal-Advanced-Wi-Fi/"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-Advanced-Wi-Fi/banner.png" alt="pir"  width="900" height="auto"></a></p>
+<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Wio-Terminal-Chassis-Battery(650mAh)/"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-Battery-Chassis/img/demo.gif" alt="pir"  width="900" height="auto"></a></p>
 
-### LoRa-E5 STM32WLE5JC Module Embedded SX126X & MCU
+### Quantum Mini Linux Development Kit Wiki
 
-LoRa-E5 LoRaWAN module is designed with ST system-level package chip STM32WLE5JC, ARM Cortex M4 ultra-low-power MCU and LoRa SX126X. It supports (G)FSK mode and LoRa. 62.5kHz, 125kHz, 250kHz, and 500kHz bandwidth can be used in LoRa® mode, making it suitable for the design of various IoT nodes, supporting EU868 and US915. Learn more [here](https://wiki.seeedstudio.com/LoRa-E5_STM32WLE5JC_Module/)!
+Quantum Mini Linux Dev. Kit is possibly the smallest Linux development board on the market, a highly integrated kit with quad-core CPU that can run Linux at only 40mm x 35mm, which also includes network connectivity. It is suitable for scenarios such as as a personal server, intelligent voice assistant, and for robotic development.
+We have prepared a [wiki guide](https://wiki.seeedstudio.com/Quantum-Mini-Linux-Development-Kit/) for this kit so that you can quickly get started!
 
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/LoRa-E5_STM32WLE5JC_Module/"><img src="https://files.seeedstudio.com/products/317990687/image/DSC09372.png" alt="pir"  width="300" height="auto"></a></p>
+<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Quantum-Mini-Linux-Development-Kit/"><img src="https://files.seeedstudio.com/wiki/Quantum-Mini-Linux-Dev-Kit/Quantum-Mini-Linux-Dev-Kit.png" alt="pir"  width="650" height="auto"></a></p>
 
 ## What's more?
 
