@@ -28,24 +28,25 @@ The new version of the Wio Terminal Battery Chassis has added the **Texas Instru
 
 - The built-in battery is a rechargeable lithium-polymer battery, with a capacity of **650mAh**. The **battery output voltage is 3.7V**, with a battery charging voltage of 4.2V.
 
-- The battery board **allows the maximum current as 660mA**. If the board on the charing status then the green LED turn on.
+- The maximum current **allowed by the board is 660mA**. If the board on the charing status then the green LED turn on.
 
-- The battery board get into the trickle charge status when the battery too low, and **the current of trickle charge status is 30mA**.
+- When the battery on low battery, the battery board will enter to the trickle charging status and **the current of trickle charging status is 30mA**.
 
-- The battery board can **output 5.15V to 40Pin female interface**, and **the maximum current is 380mA**.
+- The battery board can **output 5.15V to 40Pin female interface** with a **maximum current of 380mA**.
 
 - The Wio Terminal Battery Chassis **standby current is less than 200uA**.
 
-- The battery board can switch the mode via press mode button, then according to LED to konw the mode:
-  1. **Green LED:** Light On is mean the board charing.
+- The battery board mode can switch by pressing the mode button, and then the mode is determined by the LED colour:
+  1. **Green LED:** Light on is mean the board charing.
   2. **Red LED:** Light on is mean the OTG(Battery discharge) enable.
   3. **Yellow LED:** Light on is mean the male interface output/input 5V.   
 
-- The battery board default using the battery to supply the WioTerminal when unplug the Type-C. If plug the type-C the battery baord will automatically force into the battery charging state(Green light on) until the battery full, but you are able to press mode button to control the battery board shift to default mode.
+- When the Type-C is unplugged, the board uses the battery to power the Wio terminal by default. If plug the type-C the battery board will automatically force into the battery charging state(Green light on) until the battery full, but you are able to press the mode button to control the battery board shift to default mode.
 
-- The battery board can **charged by the 40Pin female interface**, meanwhile the Yellow and the green LED will turn on until the battery full green light turn to off. 
+- The battery board can be **charged by the 40Pin female interface**, meanwhile, the Yellow and the green LED will light up until the green light off when the battery is fully charged. 
 
-- The battery board can read the bettery information via I2C port of 40Pin female interface, such as state of charge, battery voltage, average current, remain capacity, full capacity, average power and state of health.
+
+- The battery board can read charging information via I2C port on 40Pin female interface, such as charging status, battery voltage, average current, remaining capacity, full capacity, average power and health status.
 
 ## **Hardware Overview**
 
@@ -59,17 +60,17 @@ The new version of the Wio Terminal Battery Chassis has added the **Texas Instru
 
 - When the Wio Terminal Battery Chassis is switched from battery charging mode to battery power mode, there will be a 500 ms voltage drop time.
 
-- The battery only can chared by the I2C of 40Pin female interface or USB Tpye-C.
+- The battery can only be chare by the I2C on 40Pin female interface or USB Type-C.
 
-- The USB Type-C or 40 female pin header will stop charging when the input voltage lower than 4.3V, but the green light will keep on. 
+- When the input voltage falls below 4.3V, the USB Type-C or 40 female pin header will stop charging, but the green light will keep on. 
 
-- When the battery voltage lower than 3V on OTG(battery discharge) state, the board will stop battery discharge and the red light turn off. 
+- If the battery voltage below 3V on OTG(battery discharge) state, the battery board will stop discharge and the red light off.
 
-- When the battery board on the OTG mode, If The output short circuit then the mode will automatedly shift to hiccup mode until the short circuit gets repair then the board recovers to normal power supply mode.
+- When the battery board on the OTG mode, If The output is shorted, the mode will automatically switch to hiccup mode until the short circuit is repaired, and then the board recovers to normal power supply mode.
 
-- If plug out the battery when the board on the charging mode, the board will shift to failure mode and the green light flash at 1Hz.
+- If the battery is removed while the board is in charge mode, the board will switch to failure mode and the green light blink at a frequency of 1Hz.
 
-- When the battery board on the unuse state, please press the button to shift to sleep mode, all the LED will turn off.
+- When the battery board is not in use, please press the button to enter sleep mode and all the LED will off.
 
 ## **Detecting LiPo Battery Status**
 
@@ -189,17 +190,6 @@ void loop()
 }
 ```
 
-## **FAQ**
-
-Charging Current:
-
-
-<div align=center><img width = 900 src="https://files.seeedstudio.com/wiki/Wio-Terminal-Battery-Chassis/img/NFQ-one.png"/></div>
-
-<div align=center><img width = 760 src="https://files.seeedstudio.com/wiki/Wio-Terminal-Battery-Chassis/img/NFQ-two.png"/></div>
-
-
-- This resistor is changed to **680kΩ/1%** to limit the charging current to **450mA**.
 
 ## **Schematic Online Viewer**
 
