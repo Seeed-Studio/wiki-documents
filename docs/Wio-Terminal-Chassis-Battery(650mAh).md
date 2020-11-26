@@ -24,29 +24,54 @@ The new version of the Wio Terminal Battery Chassis has added the **Texas Instru
 
 ## **Specification**
 
-- The Wio Terminal Battery Chassis is either powered by USB Type-C interface or the internal battery. **The maximum input current of USB Type-C is 2A**, and the input voltage range is 4.75V ~ 5.25V.
+<style type="text/css" xml="space"><!--
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-pu0z{background-color:#9b9b9b;border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+--></style>
+<table class="tg">
+<thead>
+<tr><th class="tg-pu0z">Item</th><th class="tg-pu0z">Detail</th></tr>
+</thead>
+<tbody>
+<tr>
+<td class="tg-fymr">Power Supply</td>
+<td class="tg-0pky">4.75V - 5.25V</td>
+</tr>
+<tr>
+<td class="tg-1wig">Built-in battery</td>
+<td class="tg-0lax">650mAh</td>
+</tr>
+<tr>
+<td class="tg-1wig">Charging current</td>
+<td class="tg-0lax">Max: 660mA</td>
+</tr>
+<tr>
+<td class="tg-1wig">battery board mode</td>
+<td class="tg-0lax">Green LED: Light On is mean the board charing.<br /><br />Red LED: Light on is mean the OTG(battery discharge) enable.<br /><br />Yellow LED: Light on is mean the male interface output/input 5V.</td>
+</tr>
+<tr>
+<td class="tg-1wig">GPIO output</td>
+<td class="tg-0lax">Max voltage: 5.15V <br /><br />Max current: 380mA</td>
+</tr>
+<tr>
+<td class="tg-1wig">Trickle charge current</td>
+<td class="tg-0lax">30mA</td>
+</tr>
+<tr>
+<td class="tg-1wig">Grove Interface</td>
+<td class="tg-0lax">Grove Analog/Digital * 4, Grove I2C * 1, Grove UART * 1</td>
+</tr>
+</tbody>
+</table>
 
-- The built-in battery is a rechargeable lithium-polymer battery, with a capacity of **650mAh**. The **battery output voltage is 3.7V**, with a battery charging voltage of 4.2V.
-
-- The maximum current **allowed by the board is 660mA**. If the board on the charing status then the green LED turn on.
-
-- When the battery on low battery, the battery board will enter to the trickle charging status and **the current of trickle charging status is 30mA**.
-
-- The battery board can **output 5.15V to 40Pin female interface** with a **maximum current of 380mA**.
-
-- The Wio Terminal Battery Chassis **standby current is less than 200uA**.
-
-- The battery board mode can switch by pressing the mode button, and then the mode is determined by the LED colour:
-  1. **Green LED:** Light on is mean the board charing.
-  2. **Red LED:** Light on is mean the OTG(Battery discharge) enable.
-  3. **Yellow LED:** Light on is mean the male interface output/input 5V.   
-
-- When the Type-C is unplugged, the board uses the battery to power the Wio terminal by default. If plug the type-C the battery board will automatically force into the battery charging state(Green light on) until the battery full, but you are able to press the mode button to control the battery board shift to default mode.
-
-- The battery board can be **charged by the 40Pin female interface**, meanwhile, the Yellow and the green LED will light up until the green light off when the battery is fully charged. 
-
-
-- The battery board can read charging information via I2C port on 40Pin female interface, such as charging status, battery voltage, average current, remaining capacity, full capacity, average power and health status.
 
 ## **Hardware Overview**
 
@@ -55,18 +80,6 @@ The new version of the Wio Terminal Battery Chassis has added the **Texas Instru
 <div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-Battery-Chassis/img/new-pin.png"/></div>
 
 ## **Precautions**
-
-- The Wio Terminal Battery Chassis cannot output 3.3V voltage by itself, it can only output 5V voltage.
-
-- When the Wio Terminal Battery Chassis is switched from battery charging mode to battery power mode, there will be a 500 ms voltage drop time.
-
-- The battery can only be chare by the I2C on 40Pin female interface or USB Type-C.
-
-- When the input voltage falls below 4.3V, the USB Type-C or 40 female pin header will stop charging, but the green light will keep on. 
-
-- If the battery voltage below 3V on OTG(battery discharge) state, the battery board will stop discharge and the red light off.
-
-- When the battery board on the OTG mode, If The output is shorted, the mode will automatically switch to hiccup mode until the short circuit is repaired, and then the board recovers to normal power supply mode.
 
 - If the battery is removed while the board is in charge mode, the board will switch to failure mode and the green light blink at a frequency of 1Hz.
 
