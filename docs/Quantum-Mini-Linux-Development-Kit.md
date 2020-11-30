@@ -50,7 +50,7 @@ The carrier board is called **Atom-N, and Quark-N is connected to Atom-N through
 
 ### Download the Latest System Image
 
-- Download the **[Latest System Image]()** here.
+- Download the **[Latest System Image](https://files.seeedstudio.com/wiki/Quantum-Mini-Linux-Dev-Kit/Quark-N_release_20-11-19.zip)** here.
 
 > **Latest Build**: 2020-11-19
 > 
