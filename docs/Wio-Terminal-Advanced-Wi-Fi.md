@@ -704,3 +704,55 @@ void loop(void)
     Serial.println("Done with client");
 }
 ```
+
+## WiFiManager Usage
+
+We have ported the well known WiFi Manager to the Wio Terminal platform so that you may use your phone or other device to configure Wi-Fi settings for your Wio Terminal!
+
+### Install the Seeed_Arduino_rpcWiFiManager
+
+1. Visit the [**Seeed_Arduino_rpcWiFiManager**](https://github.com/Seeed-Studio/Seeed_Arduino_rpcWiFiManager) repositories and download the entire repo to your local drive.
+
+2. Now, the Seeed_Arduino_rpcWiFiManager library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_rpcWiFiManager` file that you've have just downloaded.
+
+### WiFiManager Auto Connect Example
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-Advanced-Wi-Fi/wifimanager.gif"/></div>
+
+This example is the demonstration of the auto connect example. You can use the example to set the WiFi settings for Wio Terminal.
+
+- Upload the code to Wio Terminal.
+
+- If Wio Terminal have connected to WiFi before, it will auto-connect to the same network. If it cannot connect to any WiFi it will go into AP mode and emit a WiFi. Use your phone to connect to this WiFi and input the WiFi settings.
+
+```cpp
+#include <rpcWiFi.h>
+#include <DNSServer.h>
+#include <WebServer.h>
+#include <WiFiManager.h>
+
+void setup() {
+    Serial.begin(115200);
+    while(!Serial); // wait till Serial is opened
+
+    WiFiManager wifiManager;
+    // Uncomment the resetSettings() will wipe out the saved settings
+    //wifiManager.resetSettings();
+
+    //Fetches ssid and pass from RTL8720 and tries to connect
+    //if it does not connect it starts an access point with the specified name
+    //here  "AutoConnectAP"
+    //and goes into a blocking loop awaiting configuration
+    wifiManager.autoConnect("AutoConnectAP");
+    //or use this for auto generated name ESP + ChipID
+    //wifiManager.autoConnect();
+
+    //if you get here you have connected to the WiFi
+    Serial.println("connected...yeey :)");
+    Serial.println(WiFi.localIP());
+}
+
+void loop() {
+    // put your main code here, to run repeatedly:
+}
+```
