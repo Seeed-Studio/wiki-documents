@@ -350,7 +350,7 @@ This example uses RTC to display the clock on the OLED.
 
 **Step 1**. Install the Seeeduino XIAO on the Expansion board then conect the Type-C cable.
 
-**Step 2**. Install the [**u8g2**](https://github.com/olikraus/u8g2) and [**PCF8563**](https://github.com/lewisxhe/PCF8563_Library) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/). 
+**Step 2**. Install the [**u8g2**](https://github.com/olikraus/u8g2) and [**PCF8563**](https://github.com/Bill2462/PCF8563-Arduino-Library) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/). 
 
 **Step 3**. Copy the code and stick on the Ardiono IDE then uploard it.
 
