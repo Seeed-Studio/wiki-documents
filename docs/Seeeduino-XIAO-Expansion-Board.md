@@ -431,19 +431,27 @@ CircuitPython is a programming language designed to simplify experimenting and l
 <div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/python_to_arduino.png"/></div>
 
 
-**Step 5.** Once loaded the CircuitPython bootloader, unplug the USB Type-C and re-connect. A new external drive called `CIRCUITPY` should appear.
+**Step 5.** Once loaded the CircuitPython bootloader, unplug the USB Type-C and re-connect. A new external drive called `CIRCUITPY` should be appear.
 
 <div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Circuitpy.png"/></div>
 
 **Step 6.** Now, CircuitPython is loaded on Seeeduino XIAO! All you need to do it's to write you python program and name it `main.py` and drag it onto the `CIRCUITPY` drive.
 
 
-### **CircuitPyhton Basics**
+### **CircuitPyhton Blink example**
 
-Running `Blink` using CircuitPython:
+There is a simple example introduce how to use the CirsuitPython on the seeeduino XIAO. 
 
-**Note:** Simply copy and save the following code and name it `main.py`, and drag it to `CIRCUITPY` drive.
+**Step 1** Create a txt file name `main` on the  `CIRCUITPY` drive.
 
+<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/circuit_python_pic/main_create.png"/></div>
+
+!!!Note
+  The `main` name is one of these: **code.txt**, **code.py**, **main.py**, **main.txt**, there is more detail about [**this behavior**](https://circuitpython.readthedocs.io/en/6.0.x/README.html#behavior).
+
+**Step 2** Paste the code on the `main` file then save it, you will see the orange LED blinking on the Seeeduino XIAO board.
+
+**Code**
 ```py
 import time
 import board
@@ -459,28 +467,35 @@ while True:
     time.sleep(1)
 ```
 
-You should see the built-in LED starts to blink!
-
 
 ### **SD card for circuitpython**
 
-The Seeedruino XIAO build-in about 40 KB flash, but it may have not enough space to store the large size code file, so we add an SD card slot to plug the SD card to extend the space. 
+The Seeedruino XIAO build-in about 40 KB flash, but it may have not enough space to store the large size python code file, fortunately, Seeeduino XIAO expansion board built-in an SD card slot for extending the store space, so you can follow this instruction to learn how to run the circuitpython on the SD card.
 
-**Step 1.** Preper a SD Card plug in the XIAO expansion board.
+!!!Note
+  The best SD card system format is FAT or exFAT. If you use other SD card system format that will cause the file can not be recognized. 
 
-**Step 2.** Downloard the [**circuitPython file**](https://circuitpython.org/board/seeeduino_xiao/). Please refer to **Installing CircuitPython** chapter to learn how to use circuitpython.
+**Step 1.** Prepare a micro SD Card to plug in the XIAO expansion board.
+
+**Step 2.** Assume you do not download the [**circuitPython file**](https://circuitpython.org/board/seeeduino_xiao/) yet, please refer to [**Installing CircuitPython**](https://wiki.seeedstudio.com/Seeeduino-XIAO-Expansion-Board/#installing-circuitpython) chapter.
 
 **Step 3.** Download [**lib**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/lib.zip) unzips the file, then replace it with the new lib in the  `CIRCUITPY`.
 
-**Step 4.** Add the [**main.py**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/main.py) file in the `CIRCUITPY` drive.
+<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/circuit_python_pic/lib_replace.png"/></div>
+
+**Step 4.** Download the [**main.py**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/main.py) file in the `CIRCUITPY` drive.
+
+**The `main.py` code** 
 
 ```CPP
-import sd    
+import sd     
 f = open("/sd/hello.txt", "r")   ## read the file from SD card
 print(f.read())
 ```
 
-**Step 5.** Add [**sd.py**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/sd.py) file in the `CIRCUITPY` drive.
+**Step 5.** Download the [**sd.py**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/sd.py) file in the `CIRCUITPY` drive.
+
+**The `sd.py` code** 
 
 ```CPP
 import os
@@ -501,23 +516,22 @@ sys.path.append("/sd")
 sys.path.append("/sd/lib")  ## switch to the path to SD card
 ```
 
-**Example**
+**Buzzer Example**
 
-This example for test the buzzer via the circuitpyhton, as the below picture: the [**buzzer.py**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/buzzer.py) and txt file have store in the SD card.
+This example for test the buzzer via the run the `buzzer.py` in the SD card.
 
-<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/python.png"/></div>
+**Step 1.** You can just paste [**buzzer.py**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/buzzer.py) in the SD card.
 
-If you want to run the **buzzer.py** file, please follow this instruction: `CIRCUITPY` **->**  **main.py**  **->**  **add import buzzer**  **->**  if you want to read **hello.txt** just follow as below picture:
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/circuit_python_pic/sd_card_store.png"/></div>
 
+**Step 2.** Open `main.py` in the `CIRCUITPY` drive. 
+
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/circuit_python_pic/main.PY.png"/></div>
+
+**Step 3.** Add `import buzzer` in the main.py file. 
 <div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/add_buzzer.png"/></div>
 
-
-!!!Note
-    If you want to run another python file in SD, please imitate the example.
-
-
-
-
+When you finish all the step, the buzzer will work. If you to run other python files in the SD card, please imitate the example.
 
 
 
