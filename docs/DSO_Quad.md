@@ -415,6 +415,7 @@ More details and Linux instructions here: [DSO_Quad:Upgrading_Firmware](/DSO_Qua
 
 ##   Resources
 ---
+- [<font color=red>**Latest V2.72 firmware**</font>](https://files.seeedstudio.com/products/109990015/DS203.V2.72.zip)
 - [Schematic and firmware (HW2.2 ~ HW2.72)](https://wiki.seeedstudio.com/DSO_Quad/#upgrading-firmware)
 
 - [Discussion board with resouces for HW2.6](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1929)
