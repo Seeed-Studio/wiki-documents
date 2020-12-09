@@ -418,22 +418,22 @@ CircuitPython is a programming language designed to simplify experimenting and l
 
 **Step 2.** Download the official [**CircuitPython Bootloader for Seeeduino XIAO**](https://circuitpython.org/board/seeeduino_xiao/). A `.uf2` , the flie will be store in your PC download.
 
-<div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/circutpyhthon.png"/></div>
+<div align=center><img width = 850 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/circutpyhthon.png"/></div>
 
 **Step 3.** Entering the DFU bootloader mode by press the reset button twice quickly on the XIAO expansion board, then your PC will appear Arduino drive.
 
 <div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/reboot_XIAO.gif"/></div>
 
-<div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/arduino_boot.png"/></div>
+<div align=center><img width = 850 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/arduino_boot.png"/></div>
 
 **Step 4.** An external drive named `Arduino` should appear in your PC. Drag the downloaded CircuitPython uf2 files to the `Arduino` drive.
 
-<div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/python_to_arduino.png"/></div>
+<div align=center><img width = 850 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/python_to_arduino.png"/></div>
 
 
 **Step 5.** Once loaded the CircuitPython bootloader, unplug the USB Type-C and re-connect. A new external drive called `CIRCUITPY` should be appear.
 
-<div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Circuitpy.png"/></div>
+<div align=center><img width = 850 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Circuitpy.png"/></div>
 
 **Step 6.** Now, CircuitPython is loaded on Seeeduino XIAO! All you need to do it's to write you python program and name it `main.py` and drag it onto the `CIRCUITPY` drive.
 
@@ -444,7 +444,7 @@ There is a simple example introduce how to use the CirsuitPython on the seeeduin
 
 **Step 1** Create a txt file name `main` on the  `CIRCUITPY` drive.
 
-<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/circuit_python_pic/main_create.png"/></div>
+<div align=center><img width = 850 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/circuit_python_pic/main_create.png"/></div>
 
 !!!Note
   The `main` name is one of these: **code.txt**, **code.py**, **main.py**, **main.txt**, there is more detail about [**this behavior**](https://circuitpython.readthedocs.io/en/6.0.x/README.html#behavior).
@@ -473,7 +473,7 @@ while True:
 The Seeedruino XIAO build-in about 40 KB flash, but it may have not enough space to store the large size python code file, fortunately, Seeeduino XIAO expansion board built-in an SD card slot for extending the store space, so you can follow this instruction to learn how to run the circuitpython on the SD card.
 
 !!!Note
-  The best SD card system format is FAT or exFAT. If you use other SD card system format that will cause the file can not be recognized. 
+    The SD card system format is FAT or exFAT. If you use other SD card system format that will cause the SD card can not be recognized. 
 
 **Step 1.** Prepare a micro SD Card to plug in the XIAO expansion board.
 
@@ -481,7 +481,7 @@ The Seeedruino XIAO build-in about 40 KB flash, but it may have not enough space
 
 **Step 3.** Download [**lib**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/lib.zip) unzips the file, then replace it with the new lib in the  `CIRCUITPY`.
 
-<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/circuit_python_pic/lib_replace.png"/></div>
+<div align=center><img width = 850 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/circuit_python_pic/lib_replace.png"/></div>
 
 **Step 4.** Download the [**main.py**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/main.py) file in the `CIRCUITPY` drive.
 
@@ -522,14 +522,14 @@ This example for test the buzzer via the run the `buzzer.py` in the SD card.
 
 **Step 1.** You can just paste [**buzzer.py**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/buzzer.py) in the SD card.
 
-<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/circuit_python_pic/sd_card_store.png"/></div>
+<div align=center><img width = 850 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/circuit_python_pic/sd_card_store.png"/></div>
 
 **Step 2.** Open `main.py` in the `CIRCUITPY` drive. 
 
-<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/circuit_python_pic/main.PY.png"/></div>
+<div align=center><img width = 850 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/circuit_python_pic/main.PY.png"/></div>
 
 **Step 3.** Add `import buzzer` in the main.py file. 
-<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/add_buzzer.png"/></div>
+<div align=center><img width = 650 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/add_buzzer.png"/></div>
 
 When you finish all the step, the buzzer will work. If you to run other python files in the SD card, please imitate the example.
 
