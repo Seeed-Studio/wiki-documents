@@ -430,8 +430,14 @@ nav:
           - SenseCAP LoRaWAN: Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide.md
           - SenseCAP Sensor Hub Data Logger: SenseCAP-Sensor-Hub-Data-Logger.md
           - SenseCAP ONE Compact Weather Station: SenseCAP-One-Series-Meteorological-Sensors.md
-      - LoRa-E5 STM32WLE5JC Module embedded SX126X & MCU: LoRa-E5_STM32WLE5JC_Module.md
-      - The Things Indoor Gateway: The-Things-Indoor-Gateway.md
+      #- Sensor Probe & Accessories
+
+  - LoRa: 
+      - LoRa Module: 
+          - LoRa-E5 STM32WLE5JC Module embedded SX126X & MCU: LoRa-E5_STM32WLE5JC_Module.md
+      - LoRa Gateway: 
+          - The Things Indoor Gateway: The-Things-Indoor-Gateway.md
+      #- LoRa Dev Kit: 
 
   - Grove:
       - Grove Introduction: Grove.md
