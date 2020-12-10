@@ -9,7 +9,7 @@ sku: 103030296
 
 ---
 
-![enter image description here](https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi-wiki.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/CAN-BUS-FD/MCP2518FD.png)
 
 
 This is a CAN BUS shield for Raspberry Pi(hereinafter referred to as 2 channel pi hat), 2 channel CAN BUS I/O, support [CAN FD](https://en.wikipedia.org/wiki/CAN_FD). CAN FD support much faster transmission speed(up to 8Mbps)
@@ -49,7 +49,7 @@ As you can see, there are two versions of chips used in the 2-Channel CAN-BUS(FD
 <div align="center">
 <figure>
   <a href="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/block.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/block.jpg" alt="Raspberry Pi CAN BUS shield" title="hardware overview" />
-  <figcaption><b>Figure 1</b>. <i>Hardware overview A</i></figcaption></a>
+  <figcaption><b>Figure 1</b>. <i>Hardware overview(MCP2517)</i></figcaption></a>
 </figure>
 </div>
 
@@ -57,7 +57,7 @@ As you can see, there are two versions of chips used in the 2-Channel CAN-BUS(FD
 <div align="center">
 <figure>
   <a href="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/block2.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/block2.jpg" alt="Raspberry Pi CAN BUS shield" title="hardware overview" />
-  <figcaption><b>Figure 2</b>. <i>Hardware overview B</i></figcaption></a>
+  <figcaption><b>Figure 2</b>. <i>Hardware overview(MCP2517)</i></figcaption></a>
 </figure>
 </div>
 
@@ -65,11 +65,16 @@ As you can see, there are two versions of chips used in the 2-Channel CAN-BUS(FD
 <div align="center">
 <figure>
   <a href="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/block-diagram.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/block-diagram.jpg" alt="Raspberry Pi CAN BUS shield" title="hardware overview" />
-  <figcaption><b>Figure 3</b>. <i>Block Diagram</i></figcaption></a>
+  <figcaption><b>Figure 3</b>. <i>Block Diagram(MCP2517)</i></figcaption></a>
 </figure>
 </div>
 
-
+<div align="center">
+<figure>
+  <a href="https://files.seeedstudio.com/wiki/CAN-BUS-FD/CANBUS_REVIEW.png" target="_blank"><img src="https://files.seeedstudio.com/wiki/CAN-BUS-FD/CANBUS_REVIEW.png" alt="Raspberry Pi CAN BUS shield" title="hardware overview" />
+  <figcaption><b>Figure 4</b>. <i>Hardware overview(MCP2518FD)</i></figcaption></a>
+</figure>
+</div>
   
 
 
@@ -688,6 +693,593 @@ sudo hwclock -r
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/CAN-BUS-FD/time.png"/></div>
 
+## Using with Wio Terminal
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/CAN-BUS-FD/ban-1.png"/></div>
+
+
+Apart from using the CAN-BUS Pi Hat with SBCs, now you can also use it the [**Wio Terminal**](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) (Arduino Compatitable Board)! And develop CAN related projects on MCU!
+
+Please check the following wikis to find out more about Wio Terminal:
+
+- [Wio Terminal Getting Started](https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/)
+
+### Hardware Required
+
+- [**Wio Terminal**](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)
+
+- [**40 Pin Raspberry Pi Hat Adapter Board For Wio Terminal**](https://www.seeedstudio.com/40-Pin-Raspberry-Pi-Hat-Adapter-Board-For-Wio-Terminal-p-4730.html)
+
+- [**2-Channel CAN-BUS(FD) Shield for Raspberry Pi (MCP2518FD)**](https://www.seeedstudio.com/CAN-BUS-FD-HAT-for-Raspberry-Pi-p-4742.html)
+
+For testing purpose, you may also prepare some other CAN-BUS devs components, for this example we are using the following:
+
+- [**CAN-BUS Shield V2 adopts MCP2515 and MCP2551**](https://www.seeedstudio.com/CAN-BUS-Shield-V2.html) + **Arduino Board**
+
+### Install the Seeed_Arduino_CAN Arduino Library
+
+!!!Note
+    Please make sure you have installed Seeed SAMD Board library and updated to the latest version!
+
+1. Visit the [**Seeed_Arduino_CAN**](https://github.com/Seeed-Studio/Seeed_Arduino_CAN) repositories and download the entire repo to your local drive.
+ 
+2. Now, the Seeed_Arduino_CAN library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_CAN` file that you've have just downloaded.
+ 
+![InstallLibrary](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Xnip2019-11-21_15-50-13.jpg)
+
+### Send Example Code
+
+This is an example of using the **2-Channel CAN-BUS(FD) Shield for Raspberry Pi (MCP2518FD) with Wio Terminal to send CAN-BUS data** to another CAN-BUS device(In this case, it's CAN-BUS Shield V2 adopts MCP2515 and MCP2551 + Arduino Uno)
+
+**Hardware Connection**
+
+- Connect **2-Channel CAN-BUS(FD) Shield for Raspberry Pi (MCP2518FD)**'s `Channel 0 L` -> **CAN-BUS Shield V2**'s `CANL`
+
+- Connect **2-Channel CAN-BUS(FD) Shield for Raspberry Pi (MCP2518FD)**'s `Channel 0 H` -> **CAN-BUS Shield V2**'s `CANH`
+
+- Connect 2-Channel CAN-BUS(FD) Shield for Raspberry Pi (MCP2518FD) with Wio Terminal using **40 Pin Raspberry Pi Hat Adapter Board For Wio Terminal**.
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/CAN-BUS-FD/connect.png"/></div>
+
+- **Code for Arduino Uno + CAN-BUS Shield V2**
+
+```cpp
+#include <SPI.h>
+#include "mcp2515_can.h"
+
+/*SAMD core*/
+#ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
+    #define SERIAL SerialUSB
+#else
+    #define SERIAL Serial
+#endif
+
+const int SPI_CS_PIN = 9;
+mcp2515_can CAN(SPI_CS_PIN);
+
+unsigned char len = 0;
+unsigned char buf[8];
+
+void setup() {
+    SERIAL.begin(115200);
+    while (!SERIAL) {
+        ; // wait for serial port to connect. Needed for native USB port only
+    }
+    while (CAN_OK != CAN.begin(CAN_500KBPS)) {             // init can bus : baudrate = 500k
+        // init can bus : baudrate = 500k
+        SERIAL.println("CAN BUS Shield init fail");
+        SERIAL.println(" Init CAN BUS Shield again");
+        delay(100);
+    }
+    SERIAL.println("CAN BUS Shield init ok!");
+}
+
+void loop() {
+        // iterate over all pending messages
+        // If either the bus is saturated or the MCU is busy,
+        // both RX buffers may be in use and reading a single
+        // message does not clear the IRQ conditon.
+        while (CAN_MSGAVAIL == CAN.checkReceive()) {
+            // read data,  len: data length, buf: data buf
+            SERIAL.println("checkReceive");
+            CAN.readMsgBuf(&len, buf);
+
+            // print the data
+            for (int i = 0; i < len; i++) {
+                SERIAL.print(buf[i]); SERIAL.print("\t");
+            }
+            SERIAL.println();
+        }
+}
+```
+
+- **Code for Wio Terminal + 2-Channel CAN-BUS(FD) Shield for Raspberry Pi (MCP2518FD)**
+
+```cpp
+#include <SPI.h>
+#include "mcp2518fd_can.h"
+
+/*SAMD core*/
+#ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
+    #define SERIAL SerialUSB
+#else
+    #define SERIAL Serial
+#endif
+
+// Set SPI CS Pin according to your hardware
+// For Wio Terminal w/ MCP2518FD RPi Hat：
+// Channel 0 SPI_CS Pin: BCM 8
+// Channel 1 SPI_CS Pin: BCM 7
+// Interupt Pin: BCM25
+// *****************************************
+// For Arduino MCP2515 Hat:
+// SPI_CS Pin: D9
+
+const int SPI_CS_PIN = BCM8;
+mcp2518fd CAN(SPI_CS_PIN); // Set CS pin
+
+void setup() {
+    SERIAL.begin(115200);
+    while(!Serial){};
+
+    while (0 != CAN.begin((byte)CAN_500K_1M)) {            // init can bus : baudrate = 500k
+        SERIAL.println("CAN BUS Shield init fail");
+        SERIAL.println(" Init CAN BUS Shield again");
+        delay(100);
+    }
+    SERIAL.println("CAN BUS Shield init ok!");
+}
+
+unsigned char stmp[8] = {0, 0, 0, 0, 0, 0, 0, 0};
+void loop() {
+    // send data:  id = 0x00, standrad frame, data len = 8, stmp: data buf
+    stmp[7] = stmp[7] + 1;
+    if (stmp[7] == 100) {
+        stmp[7] = 0;
+        stmp[6] = stmp[6] + 1;
+
+        if (stmp[6] == 100) {
+            stmp[6] = 0;
+            stmp[5] = stmp[6] + 1;
+        }
+    }
+
+    CAN.sendMsgBuf(0x00, 0, 8, stmp);
+    delay(100);                       // send data per 100ms
+    SERIAL.println("CAN BUS sendMsgBuf ok!");
+}
+```
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/CAN-BUS-FD/Send.png"/></div>
+
+### Recevice Example Code
+
+This is an example of using the **2-Channel CAN-BUS(FD) Shield for Raspberry Pi (MCP2518FD) with Wio Terminal to receive CAN-BUS data** from another CAN-BUS device(In this case, it's CAN-BUS Shield V2 adopts MCP2515 and MCP2551 + Arduino Uno)
+
+**Hardware Connection**
+
+Same conncection as the above Send Example.
+
+- **Code for Arduino Uno + CAN-BUS Shield V2**
+
+```cpp
+#include <SPI.h>
+#include "mcp2515_can.h"
+
+/*SAMD core*/
+#ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
+    #define SERIAL SerialUSB
+#else
+    #define SERIAL Serial
+#endif
+
+const int SPI_CS_PIN = 9;
+mcp2515_can CAN(SPI_CS_PIN); // Set CS pin
+
+
+void setup() {
+    SERIAL.begin(115200);
+    while(!Serial){};
+
+    while (CAN_OK != CAN.begin(CAN_500KBPS)) {             // init can bus : baudrate = 500k
+        SERIAL.println("CAN BUS Shield init fail");
+        SERIAL.println(" Init CAN BUS Shield again");
+        delay(100);
+    }
+    SERIAL.println("CAN BUS Shield init ok!");
+}
+
+unsigned char stmp[8] = {0, 0, 0, 0, 0, 0, 0, 0};
+void loop() {
+    // send data:  id = 0x00, standrad frame, data len = 8, stmp: data buf
+    stmp[7] = stmp[7] + 1;
+    if (stmp[7] == 100) {
+        stmp[7] = 0;
+        stmp[6] = stmp[6] + 1;
+
+        if (stmp[6] == 100) {
+            stmp[6] = 0;
+            stmp[5] = stmp[6] + 1;
+        }
+    }
+
+    CAN.sendMsgBuf(0x00, 0, 8, stmp);
+    delay(100);                       // send data per 100ms
+    SERIAL.println("CAN BUS sendMsgBuf ok!");
+}
+```
+
+- **Code for Wio Terminal + 2-Channel CAN-BUS(FD) Shield for Raspberry Pi (MCP2518FD)**
+
+```cpp
+#include <SPI.h>
+#include "mcp2518fd_can.h"
+
+/*SAMD core*/
+#ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
+    #define SERIAL SerialUSB
+#else
+    #define SERIAL Serial
+#endif
+
+// Set SPI CS Pin according to your hardware
+// For Wio Terminal w/ MCP2518FD RPi Hat：
+// Channel 0 SPI_CS Pin: BCM 8
+// Channel 1 SPI_CS Pin: BCM 7
+// Interupt Pin: BCM25
+// *****************************************
+// For Arduino MCP2515 Hat:
+// SPI_CS Pin: D9
+
+const int SPI_CS_PIN = BCM8;
+mcp2518fd CAN(SPI_CS_PIN);
+
+unsigned char len = 0;
+unsigned char buf[8];
+
+void setup() {
+    SERIAL.begin(115200);
+    while (!SERIAL) {
+        ; // wait for serial port to connect. Needed for native USB port only
+    }
+    while (0 != CAN.begin((byte)CAN_500K_1M)) {            // init can bus : baudrate = 500k
+        SERIAL.println("CAN BUS Shield init fail");
+        SERIAL.println(" Init CAN BUS Shield again");
+        delay(100);
+    }
+    SERIAL.println("CAN BUS Shield init ok!");
+}
+
+void loop() {
+        // iterate over all pending messages
+        // If either the bus is saturated or the MCU is busy,
+        // both RX buffers may be in use and reading a single
+        // message does not clear the IRQ conditon.
+        while (CAN_MSGAVAIL == CAN.checkReceive()) {
+            // read data,  len: data length, buf: data buf
+            SERIAL.println("checkReceive");
+            CAN.readMsgBuf(&len, buf);
+
+            // print the data
+            for (int i = 0; i < len; i++) {
+                SERIAL.print(buf[i]); SERIAL.print("\t");
+            }
+            SERIAL.println();
+        }
+}
+```
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/CAN-BUS-FD/Receive.png"/></div>
+
+### Receive using Interrupt Example Code
+
+This is an example of using the **2-Channel CAN-BUS(FD) Shield for Raspberry Pi (MCP2518FD) with Wio Terminal to receive CAN-BUS data** from another CAN-BUS device(In this case, it's CAN-BUS Shield V2 adopts MCP2515 and MCP2551 + Arduino Uno). To make it more reliable, here used **interupt to trigger the incoming data flow**.
+
+**Hardware Connection**
+
+- **Code for Arduino Uno + CAN-BUS Shield V2**
+
+```cpp
+#include <SPI.h>
+#include "mcp2515_can.h"
+
+/*SAMD core*/
+#ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
+    #define SERIAL SerialUSB
+#else
+    #define SERIAL Serial
+#endif
+
+const int SPI_CS_PIN = 9;
+mcp2515_can CAN(SPI_CS_PIN); // Set CS pin
+
+void setup() {
+    SERIAL.begin(115200);
+    while(!Serial){};
+
+    while (CAN_OK != CAN.begin(CAN_500KBPS)) {             // init can bus : baudrate = 500k
+        SERIAL.println("CAN BUS Shield init fail");
+        SERIAL.println(" Init CAN BUS Shield again");
+        delay(100);
+    }
+    SERIAL.println("CAN BUS Shield init ok!");
+}
+
+unsigned char stmp[8] = {0, 0, 0, 0, 0, 0, 0, 0};
+void loop() {
+    // send data:  id = 0x00, standrad frame, data len = 8, stmp: data buf
+    stmp[7] = stmp[7] + 1;
+    if (stmp[7] == 100) {
+        stmp[7] = 0;
+        stmp[6] = stmp[6] + 1;
+
+        if (stmp[6] == 100) {
+            stmp[6] = 0;
+            stmp[5] = stmp[6] + 1;
+        }
+    }
+
+    CAN.sendMsgBuf(0x00, 0, 8, stmp);
+    delay(100);                       // send data per 100ms
+    SERIAL.println("CAN BUS sendMsgBuf ok!");
+}
+```
+
+**Code for Wio Terminal + 2-Channel CAN-BUS(FD) Shield for Raspberry Pi (MCP2518FD)**
+
+
+```cpp
+#include <SPI.h>
+#include "mcp2518fd_can.h"
+
+/*SAMD core*/
+#ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
+    #define SERIAL SerialUSB
+#else
+    #define SERIAL Serial
+#endif
+
+// Set SPI CS Pin according to your hardware
+// For Wio Terminal w/ MCP2518FD RPi Hat：
+// Channel 0 SPI_CS Pin: BCM 8
+// Channel 1 SPI_CS Pin: BCM 7
+// Interupt Pin: BCM25
+// *****************************************
+// For Arduino MCP2515 Hat:
+// SPI_CS Pin: D9
+
+const int SPI_CS_PIN = BCM8;
+const int CAN_INT_PIN = BCM25;
+
+mcp2518fd CAN(SPI_CS_PIN);
+
+unsigned char flagRecv = 0;
+unsigned char len = 0;
+unsigned char buf[8];
+
+void MCP2515_ISR() {
+    Serial.println("INTERUPTED!");
+    flagRecv = 1;
+}
+
+void setup() {
+    SERIAL.begin(115200);
+    while (!SERIAL) {
+        ; // wait for serial port to connect. Needed for native USB port only
+    }
+    pinMode(CAN_INT_PIN, INPUT);
+    attachInterrupt(digitalPinToInterrupt(CAN_INT_PIN), MCP2515_ISR, FALLING); // start interrupt
+    
+    while (0 != CAN.begin((byte)CAN_500K_1M)) {            // init can bus : baudrate = 500k
+        SERIAL.println("CAN BUS Shield init fail");
+        SERIAL.println(" Init CAN BUS Shield again");
+        delay(100);
+    }
+    SERIAL.println("CAN BUS Shield init ok!");
+}
+
+void loop() {
+  if (flagRecv) // Triggered Interrupt
+  {
+    flagRecv = 0;
+  // iterate over all pending messages
+  // If either the bus is saturated or the MCU is busy,
+  // both RX buffers may be in use and reading a single
+  // message does not clear the IRQ conditon.
+    while (CAN_MSGAVAIL == CAN.checkReceive()) {
+        // read data,  len: data length, buf: data buf
+      SERIAL.println("checkReceive");
+      CAN.readMsgBuf(&len, buf);
+  
+        // print the data
+      for (int i = 0; i < len; i++) {
+        SERIAL.print(buf[i]); SERIAL.print("\t");
+        }
+      SERIAL.println();
+    }
+  }
+}
+```
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/CAN-BUS-FD/Interrupt.png"/></div>
+
+### Self Send-Receive Example Code
+
+This is an example of **sending and receivce CAN-BUS data on its own** using the 2-Channel CAN-BUS(FD) Shield for Raspberry Pi (MCP2518FD).
+
+**Hardware Connection**
+
+- Connect **2-Channel CAN-BUS(FD) Shield for Raspberry Pi (MCP2518FD)**'s `Channel 0 L` -> **2-Channel CAN-BUS(FD) Shield for Raspberry Pi (MCP2518FD)**'s `Channel 1 L`
+
+- Connect **2-Channel CAN-BUS(FD) Shield for Raspberry Pi (MCP2518FD)**'s `Channel 0 H` -> **2-Channel CAN-BUS(FD) Shield for Raspberry Pi (MCP2518FD)**'s `Channel 1 H`
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/CAN-BUS-FD/connect-1.png"/></div>
+
+```cpp
+#include <SPI.h>
+#include "mcp2518fd_can.h"
+
+/*SAMD core*/
+#ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
+    #define SERIAL SerialUSB
+#else
+    #define SERIAL Serial
+#endif
+
+// Set SPI CS Pin according to your hardware
+// For Wio Terminal w/ MCP2518FD RPi Hat：
+// Channel 0 SPI_CS Pin: BCM 8
+// Channel 1 SPI_CS Pin: BCM 7
+// Interupt Pin: BCM25
+// *****************************************
+// For Arduino MCP2515 Hat:
+// SPI_CS Pin: D9
+
+const int SPI_CS_PIN_SEND = BCM8;
+const int SPI_CS_PIN_RECEIVE = BCM7;
+
+mcp2518fd CAN_SEND(SPI_CS_PIN_SEND);
+mcp2518fd CAN_RECEIVE(SPI_CS_PIN_RECEIVE);
+
+unsigned char len = 0;
+unsigned char buf[8];
+
+void setup() {
+    SERIAL.begin(115200);
+    while(!Serial); // wait for Serial
+
+    if (CAN_SEND.begin((byte)CAN_500K_1M) != 0 || CAN_RECEIVE.begin((byte)CAN_500K_1M) != 0) {
+      Serial.println("CAN-BUS initiliased error!");
+      while(1);
+    }
+    
+    SERIAL.println("CAN BUS Shield init ok!");
+}
+
+unsigned char stmp[8] = {0, 0, 0, 0, 0, 0, 0, 0};
+void loop() {
+    // send data:  id = 0x00, standrad frame, data len = 8, stmp: data buf
+    stmp[7] = stmp[7] + 1;
+    if (stmp[7] == 100) {
+        stmp[7] = 0;
+        stmp[6] = stmp[6] + 1;
+
+        if (stmp[6] == 100) {
+            stmp[6] = 0;
+            stmp[5] = stmp[6] + 1;
+        }
+    }
+
+    CAN_SEND.sendMsgBuf(0x00, 0, 8, stmp);
+    delay(100);                       // send data per 100ms
+    SERIAL.println("CAN BUS sendMsgBuf ok!");
+
+    // ---------------------
+        
+    if (CAN_MSGAVAIL == CAN_RECEIVE.checkReceive()) {
+    // read data,  len: data length, buf: data buf
+      SERIAL.println("checkReceive");
+      CAN_RECEIVE.readMsgBuf(&len, buf);
+    // print the data
+    for (int i = 0; i < len; i++) {
+        SERIAL.print(buf[i]); SERIAL.print(" ");
+    }
+    SERIAL.println();
+    }
+    SERIAL.println("---LOOP END---");
+}
+```
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/CAN-BUS-FD/send-rec.png"/></div>
+
+### Sending FD Example Code
+
+This is an example of **sending and receivce CAN-BUS data (up to 64 bit) using the `FD` Protocol on its own** using the 2-Channel CAN-BUS(FD) Shield for Raspberry Pi (MCP2518FD).
+
+**Hardware Connection**
+
+Same connection as the Self Send-Receive Example.
+
+```cpp
+#include <SPI.h>
+#include "mcp2518fd_can.h"
+
+/*SAMD core*/
+#ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
+    #define SERIAL SerialUSB
+#else
+    #define SERIAL Serial
+#endif
+
+// Set SPI CS Pin according to your hardware
+// For Wio Terminal w/ MCP2518FD RPi Hat：
+// Channel 0 SPI_CS Pin: BCM 8
+// Channel 1 SPI_CS Pin: BCM 7
+// Interupt Pin: BCM25
+// *****************************************
+// For Arduino MCP2515 Hat:
+// SPI_CS Pin: D9
+
+const int SPI_CS_PIN_SEND = BCM8;
+const int SPI_CS_PIN_RECEIVE = BCM7;
+
+mcp2518fd CAN_SEND(SPI_CS_PIN_SEND);
+mcp2518fd CAN_RECEIVE(SPI_CS_PIN_RECEIVE);
+
+void setup() {
+    SERIAL.begin(115200);
+    while(!Serial); // wait for Serial
+    CAN_SEND.setMode(0);
+    CAN_RECEIVE.setMode(0);
+    
+    if (CAN_SEND.begin((byte)CAN_500K_1M) != 0 || CAN_RECEIVE.begin((byte)CAN_500K_1M) != 0) {
+      Serial.println("CAN-BUS initiliased error!");
+      while(1);
+    }
+    byte send_mode = CAN_SEND.getMode();
+    byte receive_mode = CAN_RECEIVE.getMode();
+    SERIAL.printf("CAN BUS Send Mode = %d, CAN BUS Receive Mode = %d\n\r",send_mode, receive_mode);
+    SERIAL.println("CAN BUS Shield init ok!");
+}
+
+unsigned char stmp[64] = {0};
+unsigned char len = 0;
+unsigned char buf[64];
+
+void loop() {
+    stmp[63] = stmp[63] + 1;
+    if (stmp[63] == 100) {
+        stmp[63] = 0;
+        stmp[62] = stmp[62] + 1;
+
+        if (stmp[62] == 100) {
+            stmp[62] = 0;
+            stmp[61] = stmp[62] + 1;
+        }
+    }
+
+    CAN_SEND.sendMsgBuf(0x00, 0, 15, stmp);
+    delay(100);                       // send data per 100ms
+    SERIAL.println("CAN BUS sendMsgBuf ok!");
+
+    // ---------------------
+        
+    if (CAN_MSGAVAIL == CAN_RECEIVE.checkReceive()) {
+    // read data,  len: data length, buf: data buf
+      SERIAL.println("checkReceive");
+      CAN_RECEIVE.readMsgBuf(&len, buf);
+    // print the data
+    for (int i = 0; i < len; i++) {
+        SERIAL.print(buf[i]); SERIAL.print(" ");
+    } 
+    SERIAL.println();
+    }
+    SERIAL.println("---LOOP END---");
+}
+```
+
+<div align=center><img src="https://files.seeedstudio.com/wiki/CAN-BUS-FD/fd.png"/></div>
+
 ## Schematic Online Viewer
 
 <div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/res/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
@@ -696,6 +1288,7 @@ sudo hwclock -r
 
 ## Resources
 
+- **[PDF]** [2-Channel CAN-BUS(FD) Shield for Raspberry Pi (MCP2518FD) Schematics](https://files.seeedstudio.com/wiki/CAN-BUS-FD/CAN-BUS(FD)-HAT-for-Raspberry-Pi_MCP2518FD_SCH.pdf)
 - **[ZIP]** [2-Channel CAN-BUS(FD) Shield for Raspberry Pi Schematic file](https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/res/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi.zip)
 - **[ZIP]** [2-Channel CAN FD Master Hat for RPi Schematic file](https://files.seeedstudio.com/wiki/CAN-BUS-FD/2-Channel%20CAN-BUS(FD)%20Shield%20for%20Raspberry%20Pi_SCH&PCB.zip)
 - **[PDF]** [MCP2517 Datasheet](https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/res/MCP2517-datasheet.pdf)
