@@ -154,10 +154,7 @@ Insert each CAN-BUS Shield into Seeeduino V4.2, and connect the 2 CAN-BUS Shield
 
 Please follow [how to install an arduino library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install CAN BUS shield library.
 
-
-Click on below button to download the library.
-
-[![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/download_library.png)](https://github.com/Seeed-Studio/CAN_BUS_Shield)
+- Download the [**Seeed_Arduino_CAN**](https://github.com/Seeed-Studio/Seeed_Arduino_CAN) Arduino library here.
 
 Install the library to your Arduino IDE when it is downloaded.
 
@@ -166,9 +163,57 @@ One of the node (a node means Seeeduino + CAN_BUS Shield) acts as master, the ot
 !!!note
     Each node can act as master before the code being uploaded.
 
-Open the **send** example (**File > Examples > CAN_BUS_Shield-master > send**) and upload to the **master**.
+Open the **send** example (**File > Examples > Seeed_Arduino_CAN > send**) and upload to the **master**.
 
-![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/send%20example.png)
+![](https://files.seeedstudio.com/wiki/CAN-BUS-Shield-V2.0/img/example.png)
+
+Or copy the following to the Arduino IDE and upload:
+
+```cpp
+#include <SPI.h>
+#include "mcp2515_can.h"
+
+/*SAMD core*/
+#ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
+    #define SERIAL SerialUSB
+#else
+    #define SERIAL Serial
+#endif
+
+const int SPI_CS_PIN = 9;
+mcp2515_can CAN(SPI_CS_PIN); // Set CS pin
+
+void setup() {
+    SERIAL.begin(115200);
+    while(!Serial){};
+
+    while (CAN_OK != CAN.begin(CAN_500KBPS)) {             // init can bus : baudrate = 500k
+        SERIAL.println("CAN BUS Shield init fail");
+        SERIAL.println(" Init CAN BUS Shield again");
+        delay(100);
+    }
+    SERIAL.println("CAN BUS Shield init ok!");
+}
+
+unsigned char stmp[8] = {0, 0, 0, 0, 0, 0, 0, 0};
+void loop() {
+    // send data:  id = 0x00, standrad frame, data len = 8, stmp: data buf
+    stmp[7] = stmp[7] + 1;
+    if (stmp[7] == 100) {
+        stmp[7] = 0;
+        stmp[6] = stmp[6] + 1;
+
+        if (stmp[6] == 100) {
+            stmp[6] = 0;
+            stmp[5] = stmp[6] + 1;
+        }
+    }
+
+    CAN.sendMsgBuf(0x00, 0, 8, stmp);
+    delay(100);                       // send data per 100ms
+    SERIAL.println("CAN BUS sendMsgBuf ok!");
+}
+```
 
 **STEP4: View Result**
 
@@ -321,9 +366,6 @@ Yet you may still can't find the rate you want. Here we provide a software to he
 Click [here](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/resource/CAN_Baudrate_CalcV1.3.zip) to download the software, it's in Chinese, but never mind, it's easy to use.
 
 ![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/CAN_BUS_Shield_SetBaud.jpg)
-
-!!!note
-    This software supports Windows system only. If you can't open it, please feel free to contact loovee@seeed.cc for support.
 
 Open the software, what you need to do is to set the baud rate you want, and then do some simple setting, then click **calculate**.
 
