@@ -803,6 +803,7 @@ A5: Please download the [new firmware](https://files.seeedstudio.com/wiki/ReSpea
 
 
 ## Resource
+- **[PDF]** [ReSpeaker MicArray v2.0 Schematic](https://files.seeedstudio.com/products/107990053/ReSpeakerMicArrayv2.0.1Schematic.zip)
 - **[PDF]** [ReSpeaker MicArray v2.0 Product Brief](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/ReSpeaker%20MicArray%20v2.0%20Product%20Brief.pdf)
 - **[PDF]** [ReSpeaker MicArray v2.0 3D Model](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/RESPEAKER%20MIC%20v2.0.pdf)
 - **[SKP]** [ReSpeaker MicArray v2.0 3D Model](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/Respeaker%20Microphone%20Array%20v2.0_20180316.skp.zip)
