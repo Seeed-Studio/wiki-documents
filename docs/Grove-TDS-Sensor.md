@@ -99,7 +99,7 @@ void setup() {
 void loop() {
     sensorValue = analogRead(sensorPin);
     Voltage = sensorValue*5/1024.0; //Convert analog reading to Voltage
-    tdsValue=(133.42*Voltage*Voltage*Voltage - 255.86*Voltage*Voltage + 857.39*Voltage)*0.5; //Convert voltage value to TDS value
+    tdsValue=(133.42/Voltage*Voltage*Voltage - 255.86*Voltage*Voltage + 857.39*Voltage)*0.5; //Convert voltage value to TDS value
     SERIAL.print("TDS Value = "); 
     SERIAL.print(tdsValue);
     SERIAL.println(" ppm");
@@ -170,7 +170,7 @@ class GroveTDS:
         value = self.adc.read(self.channel)
         if value != 0:
             voltage = value*5/1024.0
-            tdsValue = (133.42*voltage*voltage*voltage-255.86*voltage*voltage+857.39*voltage)*0.5
+            tdsValue = (133.42/voltage*voltage*voltage-255.86*voltage*voltage+857.39*voltage)*0.5
             return tdsValue
         else:
             return 0
