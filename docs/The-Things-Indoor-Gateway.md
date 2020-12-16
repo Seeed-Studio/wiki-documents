@@ -2,6 +2,8 @@
 
 ![TTIG](https://files.seeedstudio.com/products/113990896/wiki/113990894_All-22.png)
 
+[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/The-Things-Indoor-Gateway-US-p-4710.html)
+
 ## Product Introduction
 [The Things Indoor Gateway](https://www.thethingsnetwork.org/docs/gateways/thethingsindoor/) is a [The Things Network](https://www.thethingsnetwork.org/) product featuring high reliability, high performance, and cost-effective. It is an 8-channel LoRaWAN gateway based on SX1308 with build-in ESP8266 WiFi connectivity. With multiple versions and various power outlets available, it satisfies a wide range of applications requiring dynamic coverage. As an IoT gateway designed by The Things Network, it enjoys all the superior functions TTN provides to its customers. And of course, this gateway is able to connect with the secure and collaborative Internet of Things Network which is built that spans across many countries around the globe to provide coverage to millions of people. The tool which a lot of people apply in their community is [TTN Mapper](https://ttnmapper.org/). Therefore, you can use this gateway to become one of the contributors of this network by loading onto [The Network Console](https://console.thethingsnetwork.org/), or enjoy the public community network built up by the other TTN gateways!
 
