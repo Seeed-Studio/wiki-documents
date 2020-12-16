@@ -19,7 +19,7 @@ This wiki introduces how to use the Wio Terminal with the [**Blynk**](https://bl
 
 ### Installing the blynk-library
 
-1. Visit the [blynk-library](https://github.com/ansonhe97/blynk-library) repositories and download the entire repo to your local drive.
+1. Visit the [**blynk-library**](https://github.com/blynkkk/blynk-library) repositories and download the entire repo to your local drive.
 
 2. Now, the  library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `blynk-library` file that you've have just downloaded.
 
