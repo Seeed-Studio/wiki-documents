@@ -457,7 +457,7 @@ The lighting commands are defined by a Picovoice *Speech-to-Intent context*. You
   <source src="https://files.seeedstudio.com/wiki/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/respeaker-wakeword.mp4" type="video/mp4">
 </video></div>
 
-To demonstrate the Picovoice's cabability we have also prepared a multi wake work examples using ReSpeaker 4-Mic Array with Raspberry Pi! Different wake word can set to execute certain tasks.
+To demonstrate the Picovoice's cabability we have also prepared a multi wake word examples using ReSpeaker 4-Mic Array with Raspberry Pi! Different wake word can set to execute certain tasks.
 
 *This package contains a commandline demo for controlling ReSpeaker 4-mic microphone array LEDs using Porcupine.*
 
