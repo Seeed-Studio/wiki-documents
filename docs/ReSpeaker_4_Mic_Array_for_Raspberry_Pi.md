@@ -528,6 +528,10 @@ Below are the colors associated with supported wake words for this demo:
 
 Please see the complete source code of this example here: https://github.com/Picovoice/porcupine/tree/master/demo/respeaker.
 
+### Picovoice Tech Support
+
+If you encounter technical problems using Picovoice, please visit **[Picovoice](https://github.com/Picovoice)** for discussions.
+
 ## FAQ
 
 **Q1: How to change the Raspbian Mirrors source?**
@@ -545,7 +549,7 @@ deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main non-free
 deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main non-free contrib
 ```
 
-**Q2: We can hear the voice by play from the 3.5mm audio jack but we can't hear the voice when running ns_kws_doa_alexa_with_light.py**
+**Q2: We can hear the voice by `aplay` from the 3.5mm audio jack but we can't hear the voice when running ns_kws_doa_alexa_with_light.py**
 
 A2: We have 3 players (mpv, mpg123 and gstreamer) to use. SpeechSynthesizer and Alerts prefer mpg123 which is more responsive. AudioPlayer likes gstreamer > mpv > mpg123. Gstreamer supports more audio format and works well on raspberry pi. We can also specify the player of AudioPlayer using the environment variable PLAYER. So please try below commands to enable the voice.
 
