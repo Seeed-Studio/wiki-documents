@@ -165,7 +165,7 @@ This example introduces how to use the OLED display on the XIAO expansion board.
 
 **Step 2**. Install the [**u8g2**](https://github.com/olikraus/u8g2) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/). 
 
-**Step 3**. Copy the code and stick on the Ardiono IDE then uploard it.
+**Step 3**. Copy the code and stick on the Ardiono IDE then upload it.
 
 **OLED Code**
 
@@ -197,7 +197,7 @@ This example introduces how to use the button on the XIAO expansion board to con
 
 **Step 1**. Install the Seeeduino XIAO on the Expansion board then conect the Type-C cable.
 
-**Step 2**. Open Arduino IDE, Copy the code and stick on the Ardiono IDE then uploard it.
+**Step 2**. Open Arduino IDE, Copy the code and stick on the Ardiono IDE then upload it.
 
 **Code**
 
@@ -234,7 +234,7 @@ void loop() {
 The Buzzer is default connected to the Pin A3, if you want to remove the buzzer function, just follow the below picture, cut off the line.
 
 
-<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/111123232325.png"/></div>
+<div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/111123232325.png"/></div>
 
 #### **Play Song with Passive Buzzer**
 
@@ -242,7 +242,7 @@ This example uses Buzzer on the XIAO expansion board to play Happy birthday.
 
 **Step 1**. Install the Seeeduino XIAO on the Expansion board then conect the Type-C cable.
 
-**Step 2**. Open Arduino IDE, Copy the code and stick on the Ardiono IDE then uploard it.
+**Step 2**. Open Arduino IDE, Copy the code and stick on the Ardiono IDE then upload it.
 
 **Code**    
 
@@ -309,7 +309,7 @@ This example uses a rotary angle sensor to control servo via integration ports o
 
 **Step 2**. Connect the Servo cable to **I2C** port, rotary angle sensor to **D0**.
 
-**Step 3**. Open Arduino IDE, Copy the code and stick on the Ardiono IDE then uploard it.
+**Step 3**. Open Arduino IDE, Copy the code and stick on the Ardiono IDE then upload it.
 
 ```CPP
 #include <Servo.h>
@@ -352,7 +352,7 @@ This example uses RTC to display the clock on the OLED.
 
 **Step 2**. Install the [**u8g2**](https://github.com/olikraus/u8g2) and [**PCF8563**](https://github.com/Bill2462/PCF8563-Arduino-Library) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/). 
 
-**Step 3**. Copy the code and stick on the Ardiono IDE then uploard it.
+**Step 3**. Copy the code and stick on the Ardiono IDE then upload it.
 
 ```CPP
 #include <Arduino.h>
@@ -447,7 +447,7 @@ There is a simple example introduce how to use the CirsuitPython on the seeeduin
 <div align=center><img width = 850 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/circuit_python_pic/main_create.png"/></div>
 
 !!!Note
-  The `main` name is one of these: **code.txt**, **code.py**, **main.py**, **main.txt**, there is more detail about [**this behavior**](https://circuitpython.readthedocs.io/en/6.0.x/README.html#behavior).
+    The `main` name is one of these: **code.txt**, **code.py**, **main.py**, **main.txt**, there is more detail about [**this behavior**](https://circuitpython.readthedocs.io/en/6.0.x/README.html#behavior).
 
 **Step 2** Paste the code on the `main` file then save it, you will see the orange LED blinking on the Seeeduino XIAO board.
 
@@ -533,7 +533,8 @@ This example for test the buzzer via the run the `buzzer.py` in the SD card.
 
 When you finish all the step, the buzzer will work. If you to run other python files in the SD card, please imitate the example.
 
-
+!!!Note
+    If you want back to Arduino mode, you just need to upload any programme on the Arduino IDE.
 
 
 ## **Demo**
