@@ -241,7 +241,7 @@ nav:
             - Wi-Fi: Wio-Terminal-Wi-Fi.md
             - Advanced Wi-Fi Usage: Wio-Terminal-Advanced-Wi-Fi.md
             - Connecting to Microsoft Azure IoT: Wio-Terminal-Azure-IOT.md
-            - Connecting to Google Cloud IoT: Connect_Wio_Terminal_to_Google_Cloud_IoT_Core.md
+            - Connecting to Google Cloud IoT: Connect-Wio-Terminal-to-Google-Cloud-IoT-Core.md
             - Ethernet: Wio-Terminal-Ethernet.md
             - Connecting to Blynk: Wio-Terminal-Blynk.md
           - Bluetooth:
