@@ -401,7 +401,22 @@ void loop() {
 }
 ```
 
+## Acrylic Case for Seeeduino XIAO Expansion Board 
 
+We made this acrylic case for protecting the Seeeduino XIAO expansion board, those are acrylic case components.
+
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Acrylic_Case/componets.png"/></div>
+
+Compare with the Grove Shield for Seeeduino XIAO, the Seeeduino XIAO expansion board added a lot useful modules for the users.
+
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Acrylic_Case/board_compare.png"/></div>
+
+This Acrylic case easy to build it up and it also can dress the case look neater.
+
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Acrylic_Case/build_up.gif"/></div>
+
+!!!Note
+    The Acrylic case is release soon.  
 
 
 ## **Circuitpython on Seeeduino XIAO with expansion board**
@@ -672,7 +687,6 @@ void loop() {
 ### **Project 2 - Remote control car**
 
 
-
 **Overview**
 
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/remote_control_car.gif"/></div>
@@ -792,6 +806,696 @@ void delayUntil(unsigned long elapsedTime) {
   }
 }
 ```
+
+
+
+
+### **Project 3 - Fingerprint unlocks treasure box - SeeeduinoXIAO**
+
+**Overview**
+
+<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Fingerprint_unlocks/fingerprint_open.gif"/></div>
+
+This box can store your important stuff, and you are not worried about some people will take your thing, the box has the fingerprint function to protecting your thing, and if the fingerprint authorization failed, the buzzer will alarm and the LED ring will display the red colour, only your finger has registered on the board when the begin, then put your finger on the board, when fingerprint pass the authorization, the LED ring will display green colour.
+
+**Feature**
+
+- Easy to record your fingerprint
+- LED ring can remind you the lock state
+- The OLED screen can display the current information
+- The buzzer can remind you the fingerprint whether pass authorization
+
+**Component required**
+
+- [**Seeeduino XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
+
+- [**Seeeduino XIAO expansion board**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
+
+- [**Seeed Grove - Capacitive Fingerprint Scanner/Sensor**](https://www.hackster.io/products/buy/80263?s=BAhJIhMzNzA5MzAsUHJvamVjdAY6BkVG%0A)
+
+- [**Seeed Grove RGB LED Ring - 24**](https://www.hackster.io/products/buy/80264?s=BAhJIhMzNzA5MzAsUHJvamVjdAY6BkVG%0A)
+
+- [**Seeed Grove - Servo**](https://www.hackster.io/products/buy/80265?s=BAhJIhMzNzA5MzAsUHJvamVjdAY6BkVG%0A)
+
+
+**Hardware Connection**
+
+Please follow the same color line to connect each sensor on the board. Please connect the IR sensor grove cable to D0, Mini Motor Driver grove cable to I2C.
+
+<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Fingerprint_unlocks/finger_pinter.png"/></div>
+
+
+**Arduino Instructions**
+
+**Step 1**. Follow the connection picture connect all the sensor on the board.
+
+**Step 2**. Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
+
+**Step 3**. Install the [**u8g2**](https://github.com/olikraus/u8g2),  [**Servo**](https://github.com/arduino-libraries/Servo),  [**Seeed_Arduino_KCT202**](https://github.com/Seeed-Studio/Seeed_Arduino_KCT202) and [**Seeed_LED_Ring**](https://github.com/Seeed-Studio/Seeed_LED_Ring) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
+
+**Step 4**. Copy the code stick on the Aruino IDE then upload it.
+
+**Demonstration**
+
+1. Record your fingerprint
+
+The screen will display finger recording at the begin, you just need to put your finger on the finger device, after that, the program will analyze your fingerprint, then finish registered.
+
+<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Fingerprint_unlocks/fingerprint_record.gif"/></div>
+
+2. Identity authorization(pass certification)
+
+The screen will display "Please verify", you need to put your finger on the fingerprint device, then the LED ring will turn to green colour.
+
+<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Fingerprint_unlocks/fingerprint_open.gif"/></div>
+
+3. Identity authorization(unpass certification)
+
+If other people put their finger on it, the LED ring will turn to red colour and the board will display "Identity deny" meanwhile the alarm will be work.
+
+<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Fingerprint_unlocks/fingerprint_close.gif"/></div>
+
+
+
+**Code**
+
+```C
+#include <Servo.h>
+#include <Arduino.h>
+#include <U8x8lib.h>
+#include "ATSerial.h"
+#include "Protocol.h"
+#include "KCT202.h"
+#include "Adafruit_NeoPixel.h"
+
+#define PIXEL_PIN    2    // Digital IO pin connected to the NeoPixels.
+#define PIXEL_COUNT 24
+#define debug SerialUSB
+#define uart  Serial1
+FingerPrint_KCT202<Uart, Serial_> kct202;
+Adafruit_NeoPixel strip = Adafruit_NeoPixel(PIXEL_COUNT, PIXEL_PIN, NEO_GRB + NEO_KHZ800);
+
+Servo myservo;
+
+Protocol_oprt oprt;
+uint8_t err_code = 0;
+uint8_t param[10];
+uint32_t param_len;
+int pos = 0;
+const int buttonPin = 1;
+int buttonState = 0;
+int BuzzerPin = A3;
+
+U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);
+
+void setup(void) {
+  Serial.begin(115200);
+  strip.setBrightness(255);
+  strip.begin();
+  strip.show(); // Initialize all pixels to 'off'
+  colorWipe(strip.Color(125, 0, 125), 50);
+  u8x8.begin();
+  u8x8.setFlipMode(0);
+  debug.begin(115200);
+  pinMode(buttonPin, INPUT_PULLUP);
+  pinMode(BuzzerPin, OUTPUT);
+  kct202.begin(uart, debug);
+  myservo.attach(0);
+  myservo.write(0);
+  kct202.autoRegisterFingerPrint(1, 4, LED_OFF_AFTER_GET_GRAGH | PRETREATMENT_GRAGH | NOT_RET_FOR_EVERY_STEP | OVERRIDE_CURR_FINGER_PRINT);
+
+  u8x8.setFont(u8x8_font_chroma48medium8_r);
+  u8x8.setCursor(0, 3);
+  u8x8.print("finger recording");
+  if (0 == kct202.getRegisterResponAndparse()) {
+    debug.println("Register ok!");
+    u8x8.setFont(u8x8_font_chroma48medium8_r);
+    u8x8.setCursor(0, 3);
+    u8x8.print("    be ready    ");
+    delay(500);
+    colorWipe(strip.Color(0, 125, 125), 50);
+    u8x8.setCursor(0, 3);
+    u8x8.print("   *** 3 ***    ");
+    delay(500);
+    u8x8.setCursor(0, 3);
+    u8x8.print("   *** 2 ***    ");
+    delay(500);
+    u8x8.setCursor(0, 3);
+    u8x8.print("   *** 1 ***    ");
+    delay(500);
+    u8x8.setCursor(0, 3);
+    u8x8.print("   Registered");
+    delay(800);
+  }
+}
+
+void loop(void) {
+  uint16_t finger_num = 0;
+
+  kct202.autoVerifyFingerPrint(CHECK_ALL_FINGER_TEMP,
+                               LED_OFF_AFTER_GET_GRAGH | PRETREATMENT_GRAGH | NOT_RET_FOR_EVERY_STEP);
+  u8x8.setFont(u8x8_font_chroma48medium8_r);
+  u8x8.setCursor(0, 3);
+  u8x8.print(" Please verify  ");
+
+  if (0 == kct202.getVerifyResponAndparse(finger_num)) {
+    debug.println("Verify ok!");
+    debug.print("Your finger temp id = ");
+    debug.println(finger_num, HEX);
+    colorWipe(strip.Color(0, 255, 30), 50);
+    u8x8.setFont(u8x8_font_chroma48medium8_r);
+    u8x8.setCursor(0, 3);
+    u8x8.print("Identity comfirm");
+    delay(800);
+    
+    analogWrite(BuzzerPin, 128);
+    delay(100);
+    analogWrite(BuzzerPin, 0);
+    delay(100);
+    analogWrite(BuzzerPin, 128);
+    delay(100);
+    analogWrite(BuzzerPin, 0);
+    delay(100);
+    
+    for (pos = 0; pos <= 90; pos += 1) {
+      myservo.write(pos);
+      delay(15);
+    }
+    while (1) {
+      //      pinMode(buttonPin, INPUT);
+      buttonState = digitalRead(buttonPin);
+      u8x8.setFont(u8x8_font_chroma48medium8_r);
+      u8x8.setCursor(0, 3);
+      u8x8.print("Please close    ");
+      Serial.println(pos);
+      Serial.println(buttonState);
+      if (buttonState == LOW && pos == 91) {
+        for (pos = 91; pos >= 0; pos -= 1) { // goes from 180 degrees to 0 degrees
+          u8x8.setFont(u8x8_font_chroma48medium8_r);
+          u8x8.setCursor(0, 3);
+          u8x8.print("Lock closing    ");
+          myservo.write(pos);              // tell servo to go to position in variable 'pos'
+          delay(15);                       // waits 15ms for the servo to reach the position
+        }
+        colorWipe(strip.Color(255, 0, 0), 50);
+        break;
+      }
+    }
+  }
+
+  else {
+    colorWipe(strip.Color(255, 0, 0), 50);
+    u8x8.setFont(u8x8_font_chroma48medium8_r);
+    u8x8.setCursor(0, 3);
+    u8x8.print(" Identity deny ");
+    //    myservo.write(0);
+    delay(200);
+
+  analogWrite(BuzzerPin, 250);
+  delay(2000);
+    analogWrite(BuzzerPin, 0);
+  delay(100);
+
+    u8x8.setCursor(0, 3);
+    u8x8.print("  Please retry  ");
+    delay(1500);
+  }
+}
+
+void colorWipe(uint32_t c, uint8_t wait) {
+  for (uint16_t i = 0; i < strip.numPixels(); i++) {
+    strip.setPixelColor(i, c);
+    strip.show();
+    delay(70);
+  }
+}
+```
+
+
+
+
+
+
+
+### **Project 4 - Seeedruino XIAO Expansion Board - mjolnir**
+
+**Overview**
+
+<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/mjolnir/humer1.png"/></div>
+
+This hammer is simulated Mjolnir, you need you to record your fingerprint on this device then you will become its master. The hammer needs a magnet to adsorb on the grove - electromagnet until its master to unlock via fingerprint, the hammer can take away.
+
+**Component required**
+
+- [**Seeeduino XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
+
+
+- [**Seeeduino XIAO expansion board**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
+
+- [**Seeed Grove - Capacitive Fingerprint Scanner/Sensor**](https://www.hackster.io/products/buy/81052?s=BAhJIhMzNzQxMDUsUHJvamVjdAY6BkVG%0A)
+
+- [**Seeed Grove - Electromagnet**](https://www.hackster.io/products/buy/32769?s=BAhJIhMzNzQxMDUsUHJvamVjdAY6BkVG%0A)
+
+
+**Hardware Connection**
+
+Please follow the same color line to connect each sensor on the board. Please connect the IR sensor grove cable to D0, Mini Motor Driver grove cable to I2C.
+
+<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/mjolnir/66666.png"/></div>
+
+
+**Arduino Instructions**
+
+**Step 1**. Follow the connection picture connect all the sensor on the board.
+
+**Step 2**. Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
+
+**Step 3**. Install the [**u8g2**](https://github.com/olikraus/u8g2) and [**Seeed_Arduino_KCT202**](https://github.com/Seeed-Studio/Seeed_Arduino_KCT202) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
+
+**Step 4**. Copy the code stick on the Aruino IDE then upload it.
+
+**Code**
+
+```C
+#include <U8x8lib.h>
+#include "ATSerial.h"
+#include "Protocol.h"
+#include "KCT202.h"
+
+#define debug SerialUSB
+#define uart  Serial1
+FingerPrint_KCT202<Uart, Serial_> kct202;
+
+Protocol_oprt oprt;
+uint8_t err_code = 0;
+uint8_t param[10];
+uint32_t param_len;
+
+int Electromagnet = 0;
+
+U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);
+
+// the setup routine runs once when you press reset:
+void setup() {
+  // initialize the digital pin as an output.
+
+  u8x8.begin();
+  u8x8.setFlipMode(0);
+  debug.begin(115200);
+  pinMode(Electromagnet, OUTPUT);
+  digitalWrite(Electromagnet, HIGH);  // turn the Electromagnet on (HIGH is the voltage level)
+  kct202.begin(uart, debug);
+  kct202.autoRegisterFingerPrint(1, 4, LED_OFF_AFTER_GET_GRAGH | PRETREATMENT_GRAGH | NOT_RET_FOR_EVERY_STEP | OVERRIDE_CURR_FINGER_PRINT);
+  u8x8.setFont(u8x8_font_chroma48medium8_r);
+  u8x8.setCursor(0, 3);
+  u8x8.print("finger recording");
+  if (0 == kct202.getRegisterResponAndparse()) {
+    u8x8.setFont(u8x8_font_chroma48medium8_r);
+    u8x8.setCursor(0, 3);
+    u8x8.print("    be ready    ");
+    delay(500);
+    u8x8.setCursor(0, 3);
+    u8x8.print("   *** 3 ***    ");
+    delay(500);
+    u8x8.setCursor(0, 3);
+    u8x8.print("   *** 2 ***    ");
+    delay(500);
+    u8x8.setCursor(0, 3);
+    u8x8.print("   *** 1 ***    ");
+    delay(500);
+    u8x8.setCursor(0, 3);
+    u8x8.print("   Registered");
+    delay(800);
+  }
+
+}
+
+  // the loop routine runs over and over again forever:
+  void loop() {
+
+    uint16_t finger_num = 0;
+    kct202.autoVerifyFingerPrint(CHECK_ALL_FINGER_TEMP, LED_OFF_AFTER_GET_GRAGH | PRETREATMENT_GRAGH | NOT_RET_FOR_EVERY_STEP);
+    u8x8.setFont(u8x8_font_chroma48medium8_r);
+    u8x8.setCursor(0, 3);
+    u8x8.print(" Please verify  ");
+
+    if (0 == kct202.getVerifyResponAndparse(finger_num)) {
+      u8x8.setFont(u8x8_font_chroma48medium8_r);
+      u8x8.setCursor(0, 3);
+      u8x8.print("Identity comfirm");
+      delay(800);
+      digitalWrite(Electromagnet, LOW);  // turn the Electromagnet on (HIGH is the voltage level)
+      delay(5000);
+      digitalWrite(Electromagnet, HIGH);
+    }
+
+    else {
+      u8x8.setFont(u8x8_font_chroma48medium8_r);
+      u8x8.setCursor(0, 3);
+      u8x8.print(" Identity deny ");
+      //    myservo.write(0);
+      delay(200);
+
+      u8x8.setCursor(0, 3);
+      u8x8.print("  Please retry  ");
+      delay(1500);
+      digitalWrite(Electromagnet, HIGH);  // turn the Electromagnet on (HIGH is the voltage level)
+
+    }
+  }
+```
+
+
+
+
+
+
+
+### **Project 5 - Air Quality Sensor Hub - Seeeduino XIAO Expansion Board**
+
+**Overview**
+
+<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Air_Quality_Sensor_Hub/environment_detect_g.gif"/></div>
+
+This is an environment detect device to collect PM2.5, PM10, temperature, humidity, CO2 and dust particle via Grove - Laser PM2.5 Sensor, Grove - CO2 & Temperature & Humidity sensor and Grove - dust Sensor respectively.
+
+**Component required**
+
+- [**Seeeduino XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
+
+
+- [**Seeeduino XIAO expansion board**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
+
+- [**Seeed Grove - CO2 & Temperature & Humidity Sensor for Arduino (SCD30) - 3-in-1**](https://www.hackster.io/products/buy/80471?s=BAhJIhMzNzE2NzQsUHJvamVjdAY6BkVG%0A)
+
+- [**Seeed Grove - Laser PM2.5 Dust Sensor - Arduino Compatible - HM3301**](https://www.hackster.io/products/buy/80472?s=BAhJIhMzNzE2NzQsUHJvamVjdAY6BkVG%0A)
+
+- [**Seeed Grove - Dust Sensor（PPD42NS）**](https://www.hackster.io/products/buy/30140?s=BAhJIhMzNzE2NzQsUHJvamVjdAY6BkVG%0A)
+
+
+**Hardware Connection**
+
+Please follow the same color line to connect each sensor on the board. Please connect the IR sensor grove cable to D0, Mini Motor Driver grove cable to I2C.
+
+<div align=center><img width = 450 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Air_Quality_Sensor_Hub/environment_detect_g.png"/></div>
+
+**Arduino Instructions**
+
+**Step 1**. Follow the connection picture connect all the sensor on the board.
+
+**Step 2**. Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
+
+**Step 3**. Install the [**u8g2**](https://github.com/olikraus/u8g2),  [**Seeed_PM2_5_sensor_HM3301**](https://github.com/Seeed-Studio/Seeed_PM2_5_sensor_HM3301) and [**Seeed_SCD30**](https://github.com/Seeed-Studio/Seeed_SCD30) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
+
+**Step 4**. Copy the code stick on the Aruino IDE then upload it.
+
+**Code**
+
+```C
+#include <Arduino.h>
+#include <U8x8lib.h>
+#include <Seeed_HM330X.h>
+#include "SCD30.h"
+
+#define SERIAL_OUTPUT SerialUSB
+#define SERIAL SerialUSB
+
+int pin = 7;
+unsigned long duration;
+unsigned long starttime;
+unsigned long sampletime_ms = 5000;//sampe 30s ;
+unsigned long lowpulseoccupancy = 0;
+float ratio = 0;
+float concentration = 0;
+
+const int buttonPin = 1;
+int buttonState = 0;
+int memu = 0;
+
+U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);
+HM330X sensor;
+uint8_t buf[30];
+
+const char* str[] = {"sensor num: ", "PM1.0 concentration(CF=1,Standard particulate matter,unit:ug/m3): ",
+                     "PM2.5 concentration(CF=1,Standard particulate matter,unit:ug/m3): ",
+                     "PM10 concentration(CF=1,Standard particulate matter,unit:ug/m3): ",
+                     "PM1.0 concentration(Atmospheric environment,unit:ug/m3): ",
+                     "PM2.5 concentration(Atmospheric environment,unit:ug/m3): ",
+                     "PM10 concentration(Atmospheric environment,unit:ug/m3): ",
+                    };
+
+
+///////////////////////////////////////////////////////////////////
+//PM2.5 concentration(Atmospheric environment,unit:ug/m3): value
+///////////////////////////////////////////////////////////////////
+HM330XErrorCode print_result(const char* str, uint16_t value) {
+  if (NULL == str) {
+    return ERROR_PARAM;
+  }
+  //  SERIAL_OUTPUT.print(str);
+  u8x8.setFont(u8x8_font_chroma48medium8_r);
+  u8x8.setCursor(0, 0);
+  u8x8.print("PM2.5: ");
+  u8x8.setCursor(7, 0);
+  u8x8.print(value);
+  u8x8.setCursor(11, 0);
+  u8x8.print("ug/m");
+  Serial.println(value);
+  return NO_ERROR;
+}
+
+HM330XErrorCode print_result_1(const char* str, uint16_t value) {
+  if (NULL == str) {
+    return ERROR_PARAM;
+  }
+  //  SERIAL_OUTPUT.print(str);
+  u8x8.setFont(u8x8_font_chroma48medium8_r);
+  u8x8.setCursor(0, 0);
+  u8x8.print("PM10: ");
+  u8x8.setCursor(7, 0);
+  u8x8.print(value);
+  u8x8.setCursor(11, 0);
+  u8x8.print("ug/m");
+  Serial.println(value);
+  return NO_ERROR;
+}
+
+/*parse buf with 29 uint8_t-data*/
+HM330XErrorCode parse_result(uint8_t* data) {
+  uint16_t value = 0;
+  if (NULL == data) {
+    return ERROR_PARAM;
+  }
+  value = (uint16_t) data[6 * 2] << 8 | data[6 * 2 + 1];
+  print_result(str[6 - 1], value);
+  return NO_ERROR;
+}
+
+
+HM330XErrorCode parse_result2(uint8_t* data) {
+  uint16_t value = 0;
+  if (NULL == data) {
+    return ERROR_PARAM;
+  }
+  value = (uint16_t) data[7 * 2] << 8 | data[7 * 2 + 1];
+  print_result_1(str[7 - 1], value);
+  return NO_ERROR;
+}
+
+////////////////////////////////////////////////////////////////////
+
+/*30s*/
+void setup() {
+  Serial.begin(115200);
+  Wire.begin();
+  u8x8.begin();
+  u8x8.setFlipMode(0);
+  scd30.initialize();
+  pinMode(pin, INPUT);
+  pinMode(buttonPin, INPUT_PULLUP);
+  starttime = millis();//get the current time;
+
+}
+
+void loop() {
+  float result[3] = {0};
+  duration = pulseIn(pin, LOW);
+  lowpulseoccupancy = lowpulseoccupancy + duration;
+
+  buttonState = digitalRead(buttonPin);
+
+  if (buttonState == LOW) {
+    memu++;
+    delay(15);
+    if (memu == 2) {
+      memu = 0;
+    }
+  }
+  Serial.println(memu);
+
+  if (scd30.isAvailable() && memu == 0) {
+    scd30.getCarbonDioxideConcentration(result);
+    u8x8.setFont(u8x8_font_chroma48medium8_r);
+    u8x8.setCursor(0, 3);
+    u8x8.print("CO2: ");
+    u8x8.setCursor(5, 3);
+    u8x8.print(result[0]);
+    u8x8.setCursor(12, 3);
+    u8x8.print("pmm");
+    delay(1000);
+  }
+
+  if (sensor.read_sensor_value(buf, 29) && memu == 0) {
+    SERIAL_OUTPUT.println("HM330X read result failed!!!");
+  }
+  if(memu == 0){
+  parse_result(buf);
+  }
+
+  if ((millis() - starttime) > sampletime_ms  && memu == 0) {
+    ratio = lowpulseoccupancy / (sampletime_ms * 10.0); // Integer percentage 0=>100
+    concentration = 1.1 * pow(ratio, 3) - 3.8 * pow(ratio, 2) + 520 * ratio + 0.62; // using spec sheet curve
+
+    u8x8.setFont(u8x8_font_chroma48medium8_r);
+    u8x8.setCursor(0, 6);
+    u8x8.print("Dust: ");
+
+    u8x8.setCursor(6, 6);
+    u8x8.print(concentration);
+
+    u8x8.setCursor(12, 6);
+    u8x8.print("pcs");
+
+    //    Serial.println(concentration);
+    lowpulseoccupancy = 0;
+    starttime = millis();
+  }
+
+
+
+  if (scd30.isAvailable() && memu == 1) {
+    scd30.getCarbonDioxideConcentration(result);
+    u8x8.setFont(u8x8_font_chroma48medium8_r);
+    u8x8.setCursor(0, 3);
+    u8x8.print("Temp: ");
+    u8x8.setCursor(6, 3);
+    u8x8.print(result[1]);
+    u8x8.setCursor(10, 3);
+    u8x8.print(" C   ");
+    
+    u8x8.setCursor(0, 6);
+    u8x8.print("Humi: ");
+    u8x8.setCursor(5, 6);
+    u8x8.print(result[2]);
+    u8x8.setCursor(8, 6);
+    u8x8.print("  %     ");
+
+    delay(1000);
+  }
+
+  if (sensor.read_sensor_value(buf, 29) && memu == 1) {
+    SERIAL_OUTPUT.println("HM330X read result failed!!!");
+  }
+  if(memu == 1){
+  parse_result2(buf);
+  }
+}
+```
+
+
+
+
+
+
+
+
+
+
+### **Project 6 - Seeeduino XIAO Expansion Board - Heart Rate**
+
+**Overview**
+
+<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Heartrate_Monitor_Watch/heartRate.gif"/></div>
+
+This simple and inexpensive project is based on the Seeeduino XIAO expansion board to report the heart rate.
+The device used has an I2C two-wire interface and therefore keeps the wiring down to a minimum.
+
+**Component required**
+
+- [**Seeeduino XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
+
+- [**Seeeduino XIAO expansion board**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
+
+- [**Seeed Grove - Finger-clip Heart Rate Sensor**](https://www.hackster.io/products/buy/80359?s=BAhJIhMzNzExNzMsUHJvamVjdAY6BkVG%0A)
+
+
+**Hardware Connection**
+
+Please follow the same color line to connect each sensor on the board. Please connect the IR sensor grove cable to D0, Mini Motor Driver grove cable to I2C.
+
+<div align=center><img width = 450 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Heartrate_Monitor_Watch/heart_detect.png"/></div>
+
+
+**Arduino Instructions**
+
+**Step 1**. Follow the connection picture connect all the sensor on the board.
+
+**Step 2**. Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
+
+**Step 3**. Install the [**u8g2**](https://github.com/olikraus/u8g2) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
+
+**Step 4**. Copy the code stick on the Aruino IDE then upload it.
+
+
+**Code**
+
+```C
+#include <Arduino.h>
+#include <U8x8lib.h>
+
+#include <Wire.h>
+
+U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);
+
+void setup() {
+  Serial.begin(9600);
+  Serial.println("heart rate sensor:");
+
+  u8x8.begin();
+  u8x8.setFlipMode(1);
+  Wire.begin();
+}
+void loop() {
+  Wire.requestFrom(0xA0 >> 1, 1);    // request 1 bytes from slave device
+  while (Wire.available()) {         // slave may send less than requested
+    unsigned char c = Wire.read();   // receive heart rate value (a byte)
+    u8x8.setFont(u8x8_font_chroma48medium8_r);
+//    u8x8.setCursor(0, 3);
+//    u8x8.print("blood detecting ");
+//    delay(10000);
+
+    u8x8.setCursor(0, 3);
+    u8x8.print("HeartRate: ");
+    u8x8.setCursor(10, 3);
+    u8x8.print(c);
+    u8x8.setCursor(13, 3);
+    u8x8.print("bpm");
+    Serial.println(c);
+
+  }
+  delay(500);
+}
+```
+
+
+
+
+
+
+
+
+
+
 
 ## Resources
 
