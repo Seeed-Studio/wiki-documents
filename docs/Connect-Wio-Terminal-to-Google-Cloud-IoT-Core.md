@@ -1,6 +1,6 @@
 # Connect Wio Terminal to Google Cloud IoT Core
 
-![](https://files.seeedstudio.com/wiki/Google_Cloud_IoT/5555555.png)
+![](https://files.seeedstudio.com/wiki/Google_Cloud_IoT/thumb.png)
 
 ## Introduction 
 In this tutorial, we will walk you through the process of connecting the Wio Terminal to Google Cloud IoT Core and send telemetry data from the Wio Terminal to the Google Cloud IoT core. This will be divided into two sections where the first section will talk about how to use the exciting libraries to send telemtry data preconfigured in the code, whereas the second section will talk about how to add your own sensors to the Wio Terminal to send the telemtry data to Google Cloud IoT Core. Google Cloud IoT Core supports both HTTP and MQTT protocols for communication, but however we will be using the MQTT protocol in this tutorial.
@@ -24,6 +24,8 @@ In cloud computing, what you might be used to thinking of as software and hardwa
 ## Connecting Wio Terminal to Google Cloud IoT Core via MQTT
 
 As explained before, we will be using the availble MQTT bridge for the communication between the Wio Terminal and the Google Cloud IoT Core. However, you may use the HTTP bridge as well, if that is your requirement.
+
+![](https://files.seeedstudio.com/wiki/Google_Cloud_IoT/5555555.png)
 
 ### Google Cloud Console Set Up 
 
@@ -147,7 +149,6 @@ Now that we have created a device registry, created a topic and added a device t
 - **STEP 1:** Type **Pub** on the search bar of Google Cloud Console and select **Pub/Sub** from the results
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Google_Cloud_IoT/333333.png" alt="pir" width="700" height="auto"></a></p>
-
 
 - **STEP 2:** Click **Subscriptions** on the navigation menu
 
@@ -508,6 +509,231 @@ void loop() {
 After you upload the code to the Wio Terminal, pull from the newly created topic as a subscriber and you will see the following result.
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Google_Cloud_IoT/222222.png" alt="pir" width="950" height="auto"></a></p>
+
+### How to Add Other Sensors And Visualize Data on Dashboards?
+
+Eventhough Google Cloud IoT Core doesn't offer a ready-to-use dashboard to visualize the data from sensors, we will explain how to achieve this by using InfluxDB and Grafana.
+
+[InfluxDB](https://www.influxdata.com/) is a time series database,that is each data in InfluxDB is associated with a particular timestamp which shows date and time associated with a particular data. Whereas [Grafana](https://grafana.com/) is an open source solution for running data analytics, pulling up metrics that make sense of the massive amount of data and to monitor apps with the help of customizable dashboards.
+
+Basically, we will connect a temperature/ humidity sensor to the Wio Terminal, use a Google Cloud Function to transmit data from a Pub/Sub to a InfluxDB located in a GKE (Google Kubernetes Engine) cluster and display the data from InfluxDB on Grafana using interactive dashboards.
+
+![](https://files.seeedstudio.com/wiki/Google_Cloud_IoT/thumb.png)
+
+#### Hardware Set Up for Arduino
+
+Connect the Grove - Temperature and Humudity Sensor (DHT11) to the Grove - Digital/Analog Port (D0) of the Wio Terminal.
+
+#### Software Set Up for Arduino 
+
+- **STEP 1:** Visit the [Grove - Temperature and Humidity Sensor repo](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor) and download it as a zip file
+
+- **STEP 2:** Open Arduino, navigate to `Sketch > Include Library > Add .ZIP Library` and select the downloaded library to install it
+
+Navigate to the previously used **Esp32-lwmqtt.ino** and add the following:
+
+- **STEP 1:** Add the following after **#include "esp32-mqtt.h"**
+
+```c++
+#include "DHT.h" //DHT library
+
+#define DHTPIN 0 //Define Signal Pin of DHT
+#define DHTTYPE DHT11 //Define DHT Sensor Type
+DHT dht(DHTPIN, DHTTYPE); //Initializing DHT sensor  
+```
+
+- **STEP 2:** Add the following inside the **setup** to start the DHT sensor
+
+```c++
+dht.begin(); 
+```
+
+- **STEP 3:** Add the following inside the **if loop** within **void loop()**
+
+```c++
+int temperature = dht.readTemperature(); //Assign variable to store temperature
+int humidity = dht.readHumidity(); //Assign variable to store humidity
+
+String payload = String("{\"timestamp\":") + getNTPtime() +
+                  String(",\"temperature\":") temperature +
+                  String(",\"humidity\":") + humidity +
+                  String("}");
+publishTelemetry(payload); 
+```
+**Note:** Here we parse all the data as a string into influxDB. Parsing the **time** is important because influxDB is a time series database. Also the **pushTelemtry** function will send the data to the default topic we have created at the very beginning of this tutorial.
+
+- **STEP 4:** Upload the code to the Wio Terminal
+
+#### Google Cloud IoT Set Up
+
+- **STEP 1:** Visit [this](https://github.com/lakshanthad/esp32-cloud-iot-core-k8s) repo and download it as a zip file 
+
+- **STEP 2:** Extract the downloaded zip file 
+
+- **STEP 3:** Open Google Cloud Console and navigate to [Google Kubernetes Engine](https://console.cloud.google.com/kubernetes/list) and wait for the system to initialize
+
+- **STEP 4:** Start the Cloud shell by pressing the button on the top right corner 
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Google_Cloud_IoT/cloud_shell_1.png" alt="pir" width="700" height="auto"></a></p>
+
+- **STEP 5:** Type the following commands to set defaults for the gcloud command-line tool
+
+```sh
+export ZONE=<enter_zone> # e.g. us-central1-a, see https://cloud.google.com/compute/docs/regions-zones/#available
+export PROJECT_ID=<enter_project-id> # project ID name 
+gcloud config set project $PROJECT_ID
+gcloud config set compute/zone $ZONE
+```
+
+- **STEP 6:** Type the following commands to create a GKE cluster with one n1-standard-1 node
+
+```sh
+gcloud container clusters create influxdb-grafana \
+                --num-nodes 1 \
+                --machine-type n1-standard-1 \
+                --zone $ZONE
+```
+
+- **STEP 7:** Type the following commands to create a secret to store InfluxDB and Grafana auth information
+
+```sh
+kubectl create secret generic influxdb-grafana \
+  --from-literal=influxdb-user=admin \
+  --from-literal=influxdb-password=passw0rd \
+  --from-literal=grafana-user=admin \
+  --from-literal=grafana-password=passw0rd
+```
+
+**Note:** You can change influxdb/ grafana usernames and passwords according to your preference
+
+- **STEP 8:** Click on **Open Editor** within Google Shell
+
+- **STEP 9:** Drag and drop the previously downloaded and extracted folder into **Cloud Shell Editor**
+
+- **STEP 10:** Click on **Open Terminal** to go back to terminal. Navigate to **05-influxdb_grafana_k8s** directory by typing the following
+
+```sh
+cd esp32-cloud-iot-core-k8s-master/05-influxdb_grafana_k8s
+```
+
+- **STEP 11:** Type the following commands to deploy InfluxDB and Grafana to Kubernetes
+
+```sh
+kubectl create -f k8s/
+```
+#### Grafana Setup
+
+- **STEP 1:** Type the following to check the services external IPs / ports
+
+```sh
+kubectl get services
+```
+
+- **STEP 2:** Copy the external IP of Grafana
+
+- **STEP 3:** Visit `http://<grafana service external ip>:3000`
+
+**Note:** Paste the previously copied Grafana external IP to `<grafana service external ip>`
+
+- **STEP 4:** Log in to Grafana with the previously set credentials
+
+- **STEP 5:** Click on the gear icon and navigate to `Configuration > Data Sources`
+
+- **STEP 6:** Click **Add data source** and select **influxDB**
+
+- **STEP 7:** Enter the following into the **URL** field
+
+```sh
+http://influxdb:8086
+```
+
+- **STEP 8:** Enter the following in the **Database** field and click **Save & Test**
+
+```sh
+iot
+```
+
+**Note:** You should see the message **Data source is working**, if you have sucessfully set up **InfluxDB** data source on Grafana
+
+#### Create a Google Cloud Function
+
+Now we need to create a Google Cloud Function to transmit data from a topic on Pub/Sub to InfluxDB and display the data from InfluxDB on Grafana using interactive dashboards.
+
+- **STEP 1:** Go back to **Google Cloud Console** and open the **Cloud Shell**
+
+- **STEP 2:** Type the following to enable **Cloud Functions API**
+
+```sh
+gcloud services enable cloudfunctions.googleapis.com
+```
+
+- **STEP 3:** Navigate to **06-cloud_function** directory by typing the following
+
+```sh
+cd esp32-cloud-iot-core-k8s-master/06-cloud_function
+```
+
+- **STEP 4:** Open **main.py** in a **vim text editor**
+
+```sh
+cd esp32-cloud-iot-core-k8s-master/06-cloud_function
+```
+
+- **STEP 5:** Press **i** on the keyboard to enter **editing mode**
+
+- **STEP 6:** modify **InfluxDB variables** (host, port, username, password) in the **_get_influxdb_client function**
+
+**Note:** Obtain the InfluxDB host by typing the following on Cloud Shell and copying the external IP 
+
+```sh
+kubectl get services
+```
+
+- **STEP 7:** Save the file by typing **:wq**
+
+- **STEP 8:** Deploy the **Cloud Function** by typing the following 
+
+```sh
+export PUBSUB_TOPIC="enter_topic-name>"
+export REGION="enter_region" # https://cloud.google.com/functions/docs/locations
+gcloud functions deploy iotcore_pubsub_to_influxdb --runtime python37 --trigger-topic $PUBSUB_TOPIC --region $REGION
+```
+
+#### Back to Grafana Setup
+
+- **STEP 1:** Open Grafana and navigate to `Dashboards > Manage`
+
+- **STEP 2:** Click **New Dashboard** and click **Add new panel**
+
+- **STEP 3:** Navigate to **Visualization** and click **Graph**
+
+- **STEP 4:** Under **Query**, in the **FROM** tab, click **select measurement** and select **temperature** from the drop-down menu
+
+- **STEP 5:** Click **+ Query** and repeat the same step as **step 12** for **humidity**
+
+- **STEP 6:** Change the other settings according to your preference
+
+- **STEP 7:** Click **Apply**
+
+- **STEP 8:** Click **Add panel** and **Add new panel**
+
+- **STEP 9:** Navigate to **Visualization** and click **Gauge**
+
+- **STEP 10:** Under **Query**, in the **FROM** tab, click **select measurement** and select **temperature** from the drop-down menu
+
+- **STEP 11:** In **Field** tab, under **Unit**, select `Temperature > Celcius` from the drop-down menu
+
+- **STEP 12:** Set a minimum and maximum value for the gauge by typing in **Min** and **Max**
+
+- **STEP 13:** Under **Display name**, type `Temperature`
+
+- **STEP 14:** Repeat the same for **humidity** by following from **step 15**.
+
+- **STEP 15:** Click **Apply**
+
+You will now see the dashboard created on Grafana
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Google_Cloud_IoT/grafana_dash_1.png" alt="pir" width="900" height="auto"></a></p>
 
 
 ## Tech Support
