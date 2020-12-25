@@ -80,7 +80,7 @@ There are two documentations on the usage of **Seeeduino XIAO** which focus on d
     Please pay attention to use, do not lift the shield cover.
     
     
-### **Reset**
+### **Enter Bootloader Mode**
 
 
 Sometimes the Seeeduino XIAO port may disappear when user programming process fails. we can solve this problem by the following operation: 
@@ -89,10 +89,18 @@ Sometimes the Seeeduino XIAO port may disappear when user programming process fa
 - Use tweezers or short lines to short the RST pins in the diagram twice.
 - The orange LED lights flicker on and light up.
 
-At this point, the chip enters Bootloader mode and the burn port appears again. Because the samd21 chip has two partitions, one is the Bootloader and the other is the user program. The product will burn a bootloader code in the system memory when it leaves the factory. We can switch modes with a quick reset.
+At this point, the chip enters Bootloader mode and the burn port appears again. Because the samd21 chip has two partitions, one is the Bootloader and the other is the user program. The product will burn a bootloader code in the system memory when it leaves the factory. We can switch modes by performing the above steps.
 
 
 ![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-reset.gif)
+
+### **Reset**
+
+If you want to reset the Seeeduino XIAO, perform the following steps:
+
+- Connect the Seeeduino XIAO to your computer.
+- Use tweezers or short lines to short the RST pins **only once**
+- The orange LED lights flicker on and light up.
 
 
 ### **Interrupt**
