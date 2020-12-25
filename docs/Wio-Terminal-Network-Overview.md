@@ -35,6 +35,9 @@ An external drive named `Arduino` should appear in your PC. Drag the the downloa
 
 You should see that **Burn RTL8720 fw** on the Wio Terminal's screen. This means that it is currently in the burning firmware mode!
 
+!!!Note
+    If you want to get out of the **Burn RTL8720 fw** mode, you simply need to [reset](https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/#faq) the Wio Terminal and upload any Arduino sketch using the Arduino IDE.
+
 > You can also find the source code of the rtl8720_update_v2.uf2 [**here**](https://github.com/Seeed-Studio/Seeed_Arduino_Sketchbook/blob/master/examples/WioTerminal_USB2Serial_Burn8720/WioTerminal_USB2Serial_Burn8720.ino).
 
 ### Step 2 - Download the Latest Firmware
