@@ -1,12 +1,20 @@
 
 # Weekly Wiki
-![](https://files.seeedstudio.com/wiki/IMAGE/December%20Week%203/December-Week-3.png)
+![](https://files.seeedstudio.com/wiki/IMAGE/December%20Week%205/December-Week-5.png)
 
-It's the third week of December and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
+May the joy and peace of Christmas be with you throughout the year. Wishing you a season of blessings. Merry Christmas!
+It's the fifth week of December and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
 As you all know, Seeed Wiki is a dedicated platform where we provide the proper guidance and support you need when getting started with our products. We put a lot of effort to make this platform more user friendly because we want to enable the learning of electronics in a more systematic approach.  
 We will bring you all these wiki updates in a weekly basis. So stay tuned with us and don't forget to visit this page again next week!
 
 ## Existing Wiki Updated 
+
+### Add Demos to Seeeduino XIAO Expansion Board Wiki
+
+We have updated the wiki page for [Seeeduino XIAO Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) with a lot more interesting demos for you to have fun with! Explorer them [here!](https://wiki.seeedstudio.com/Seeeduino-XIAO-Expansion-Board/#demo)
+
+<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Seeeduino-XIAO-Expansion-Board/#demo"><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Fingerprint_unlocks/fingerprint_open.gif" alt="pir"  width="800" height="auto"></a></p>
+
 
 ### Enabling Voice Recognition at the Edge with Picovoice
 
@@ -22,9 +30,9 @@ We have made a [step-by-step guide](https://wiki.seeedstudio.com/ReSpeaker_4_Mic
 
 [Google Cloud](https://cloud.google.com/) consists of a set of physical assets, such as computers and hard disk drives, and virtual resources, such as virtual machines (VMs), that are contained in Google's data centers around the globe. This distribution of resources provides several benefits, including redundancy in case of failure and reduced latency by locating resources closer to clients.
 
-We have prepared a [tutorial](https://wiki.seeedstudio.com/Connect_Wio_Terminal_to_Google_Cloud_IoT_Core/) to walk you through the process of connecting the Wio Terminal to Google Cloud IoT Core and send telemetry data from the Wio Terminal to the Google Cloud IoT core. 
+We have prepared a [tutorial](https://wiki.seeedstudio.com/Connect_Wio_Terminal_to_Google_Cloud_IoT_Core/) to walk you through the process of connecting the Wio Terminal to Google Cloud IoT Core and send telemetry data from the Wio Terminal to the Google Cloud IoT core, store that data in InfluxDB and visualize on Grafana dashboards.
 
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Connect_Wio_Terminal_to_Google_Cloud_IoT_Core/"><img src="https://files.seeedstudio.com/wiki/Google_Cloud_IoT/5555555.png" alt="pir"  width="850" height="auto"></a></p>
+<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Connect_Wio_Terminal_to_Google_Cloud_IoT_Core/"><img src="https://files.seeedstudio.com/wiki/Google_Cloud_IoT/thumb.png" alt="pir"  width="950" height="auto"></a></p>
 
 ## What's more?
 
