@@ -173,7 +173,7 @@ void setup()
     while(!SERIAL) {};
     while(!(sfud_init() == SFUD_SUCCESS));
     #ifdef SFUD_USING_QSPI
-    sfud_qspi_fast_read_enable(sfud_get_device(SFUD_W25Q32_DEVICE_INDEX), 4);
+    sfud_qspi_fast_read_enable(sfud_get_device(SFUD_W25Q32_DEVICE_INDEX), 2);
     #endif
     sfud_demo(0, sizeof(sfud_demo_test_buf), sfud_demo_test_buf);
 }
