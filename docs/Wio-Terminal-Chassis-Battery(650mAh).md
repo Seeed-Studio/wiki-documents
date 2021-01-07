@@ -211,7 +211,7 @@ void loop()
 
 ## **Resources**
 
-- **[ZIP]** [Wio Terminal Battery Chassis Schematics Design File](https://http://files.seeedstudio.com/wiki/Wio-Terminal-Battery-Chassis/res/Wio%20Terminal%20Chassis%20-%20Battery_SCH_NEW.ZIP)
+- **[ZIP]** [Wio Terminal Battery Chassis Schematics Design File](https://files.seeedstudio.com/wiki/Wio-Terminal-Battery-Chassis/res/Wio%20Terminal%20Chassis%20-%20Battery_SCH_NEW.ZIP)
 
 ## **Tech Support**
 
