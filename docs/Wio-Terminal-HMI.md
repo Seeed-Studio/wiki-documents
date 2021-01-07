@@ -43,10 +43,16 @@ Now let's set up the display driver on the host device and this can be Raspberry
 
 ### Raspberry Pi
 
-For Raspberry Pi, you will first need to **update kernel headers and kernels**, run the following command in terminal:
+For Raspberry Pi, you first need to download package information from all configured sources:
 
 ```sh
-sudo apt-get -y --force-yes install raspberrypi-kernel-headers raspberrypi-kernel
+sudo apt-get update
+```
+
+- Install the necessary packages such as **kernel headers, kernels, build-essential, dkms** by running the following command in terminal:
+
+```sh
+sudo apt-get install raspberrypi-kernel-headers raspberrypi-kernel build-essential dkms
 ```
 
 - Download the display driver on Raspberry Pi:
@@ -92,7 +98,7 @@ sudo raspi-config
 ```
 - Once the Raspberry Pi Software Configuration Tool opens, navigate to the following location
 ```sh
-Advanced Options > Resolution
+Display Options > Resolution
 ```
 - Select a different resolution except "default"
 
