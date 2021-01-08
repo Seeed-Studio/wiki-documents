@@ -1,6 +1,6 @@
 
 # Weekly Wiki
-![](https://files.seeedstudio.com/wiki/IMAGE/December%20Week%205/December-Week-5.png)
+![](https://files.seeedstudio.com/wiki/IMAGES/January_Week_2_2021.png)
 
 May the joy and peace of Christmas be with you throughout the year. Wishing you a season of blessings. Merry Christmas!
 It's the fifth week of December and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
