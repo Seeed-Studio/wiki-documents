@@ -36,7 +36,7 @@ The carrier board is called **Atom-N, and Quark-N is connected to Atom-N through
 
 ## Hardware Overview
 
-<div align=center><img src="https://files.seeedstudio.com/products/114992462/hardware-overview.png"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/Quantum-Mini-Linux-Dev-Kit/hardwareoverview1.png"/></div>
 
 ## Getting Started
 
@@ -291,7 +291,8 @@ There are also more example usages of the dev board in the `WorkSpace` such as *
 
 ## Resources
 
-- [**ZIP**] [**Atom-N Schematics (Carrier Board)**](https://files.seeedstudio.com/wiki/Quantum-Mini-Linux-Dev-Kit/Atom-N-resources.zip)
+- [**ZIP**] [**Atom Shield N AD**](https://files.seeedstudio.com/wiki/Quantum-Mini-Linux-Dev-Kit/Atom-Shield-N-AD-files.zip)
+- [**ZIP**] [**Heat sink and Stand 3D file**](https://files.seeedstudio.com/wiki/Quantum-Mini-Linux-Dev-Kit/3D%20Files.zip)
 
 ## Tech Support
 
