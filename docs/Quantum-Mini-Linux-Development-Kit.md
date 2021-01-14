@@ -54,7 +54,7 @@ The carrier board is called **Atom-N, and Quark-N is connected to Atom-N through
 
 > **Latest Build**:  2021-1-11
 > 
-> **sha256**: 71c7f286be07df3d2a9f62cda54ad723b16c080e934b7a77ed82c691b53f3f5c
+> **sha256**: 8f466adf56468b05d622eba27eb7b1a11ef6d4b943272984730a73ddff7cf59a  
 
 !!!Note
     The system image of Quantum Mini Linux dev board is modified from Nano Pi's image.
