@@ -92,7 +92,6 @@ sudo service lightdm restart
 ```
 
 - Run the following command in terminal for display configuration:
-<<<<<<< HEAD
 
 ```sh
 sudo raspi-config
@@ -100,34 +99,11 @@ sudo raspi-config
 
 - Once the Raspberry Pi Software Configuration Tool opens, navigate to the following location:
 
-=======
-```sh
-sudo raspi-config
-```
-- Once the Raspberry Pi Software Configuration Tool opens, navigate to the following location:
->>>>>>> b224cc98ed2453cb318a2b44efda90699ff1ebad
 ```sh
 Display Options > Resolution
 ```
 
 - Select a different resolution except "default"
-```sh
-Ex: DMT Mode 82 1920x1080 60Hz 16:9  
-```
-
-- Turn off the Raspberry Pi:
-```sh
-sudo poweroff
-```
-
-- Connect the Wio Terminal to Raspberry Pi's USB port
-
-- Turn on the Raspberry Pi
-
-<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminanl-HMI/display-new.png"/></div>
-
-Now you should see you Wio Terminal display the Raspberry Pi's desktop! If you loaded with the `USBDisplayAndMouseControl` firmware in Wio Terminal, you can even use the buttons and 5-way switches to control the mouse of Raspberry Pi!
-
 
 ```sh
 Ex: DMT Mode 82 1920x1080 60Hz 16:9  
@@ -423,10 +399,7 @@ Need a bigger screen? Need a higher resolution? Higher refresh rate? Please cont
 ## FAQ
 
 **Q.** When I connect the Wio Terminal to the Raspberry Pi and turn on the Raspberry Pi, the Wio Terminal LCD is completely white.
-<<<<<<< HEAD
 
-=======
->>>>>>> b224cc98ed2453cb318a2b44efda90699ff1ebad
 **A.** While the Wio Terminal is still connected to the Raspberry Pi, navigate to: `seeed-linux-usbdisp/drivers/linux-driver` and run the command: `make & sudo make install`. After that run: `sudo reboot`
 
 
