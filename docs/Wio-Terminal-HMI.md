@@ -91,22 +91,32 @@ sudo cp ~/seeed-linux-usbdisp/drivers/linux-driver/xserver_conf/10-disp.conf /us
 sudo service lightdm restart
 ```
 
-- Connect the Wio Terminal to Raspberry Pi's USB port!
+- Run the following command in terminal for display configuration:
+```sh
+sudo raspi-config
+```
+- Once the Raspberry Pi Software Configuration Tool opens, navigate to the following location:
+```sh
+Display Options > Resolution
+```
+- Select a different resolution except "default"
+```sh
+Ex: DMT Mode 82 1920x1080 60Hz 16:9  
+```
+
+- Turn off the Raspberry Pi:
+```sh
+sudo poweroff
+```
+
+- Connect the Wio Terminal to Raspberry Pi's USB port
+
+- Turn on the Raspberry Pi
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminanl-HMI/display-new.png"/></div>
 
 Now you should see you Wio Terminal display the Raspberry Pi's desktop! If you loaded with the `USBDisplayAndMouseControl` firmware in Wio Terminal, you can even use the buttons and 5-way switches to control the mouse of Raspberry Pi!
 
-**Note:** If nothing shows on the display, please follow the steps below
-- Run the following command in terminal:
-```sh
-sudo raspi-config
-```
-- Once the Raspberry Pi Software Configuration Tool opens, navigate to the following location
-```sh
-Display Options > Resolution
-```
-- Select a different resolution except "default"
 
 !!!Note
     This version of the USB display driver do not support hot swapping.
@@ -379,6 +389,12 @@ Need a bigger screen? Need a higher resolution? Higher refresh rate? Please cont
 
 - [PyQtGraph official documents](https://pyqtgraph.readthedocs.io/en/latest/)
 - [Screen xorg.conf configuration document](https://www.x.org/releases/current/doc/man/man5/xorg.conf.5.xhtml)
+
+## FAQ
+
+**Q.** When I connect the Wio Terminal to the Raspberry Pi and turn on the Raspberry Pi, the Wio Terminal LCD is completely white.
+**A.** While the Wio Terminal is still connected to the Raspberry Pi, navigate to: `seeed-linux-usbdisp/drivers/linux-driver` and run the command: `make & sudo make install`. After that run: `sudo reboot`
+
 
 ## Tech Support
 
