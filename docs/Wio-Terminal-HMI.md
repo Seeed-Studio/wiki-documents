@@ -55,6 +55,12 @@ sudo apt-get update
 sudo apt-get install raspberrypi-kernel-headers raspberrypi-kernel build-essential dkms
 ```
 
+- Reboot the Raspberry Pi:
+
+```sh
+sudo reboot
+```
+
 - Download the display driver on Raspberry Pi:
 
 ```sh
