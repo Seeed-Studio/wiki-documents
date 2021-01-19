@@ -1,9 +1,8 @@
 
 # Weekly Wiki
-![](https://files.seeedstudio.com/wiki/IMAGES/January_Week_2_2021.png)
+![](https://files.seeedstudio.com/wiki/IMAGES/January_Week_4_2021.png)
 
-May the joy and peace of Christmas be with you throughout the year. Wishing you a season of blessings. Merry Christmas!
-It's the fifth week of December and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
+It's the fourth week of January and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
 As you all know, Seeed Wiki is a dedicated platform where we provide the proper guidance and support you need when getting started with our products. We put a lot of effort to make this platform more user friendly because we want to enable the learning of electronics in a more systematic approach.  
 We will bring you all these wiki updates in a weekly basis. So stay tuned with us and don't forget to visit this page again next week!
 
@@ -36,19 +35,19 @@ We have prepared a [tutorial](https://wiki.seeedstudio.com/Connect_Wio_Terminal_
 
 ## What's more?
 
-### Seeed Weekly Show
+### Seeed on YouTube
 
-As you all know, we have a weekly video series on YouTube named "Seeed Weekly Show" and we bring you many updates each week. Check our last show here and we hope to bring you more exciting stuff in the future! So, sit back, relax and enjoy our show!
+No Monitor, no problem! Learn how you can easily use the Wio Terminal as a USB HMI display for your Raspberry Pi! It doesn't stop there! You can also use it as a display for NVIDIA Jetson Nano, BeagleBone, and ODYSSEY - X86J4105!
 
-<p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/e0zxUlRZj7Q" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/MYqr1auC8wA" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 ### Wio Terminal Classroom with IoT
 
 We are excited to release the third edition of the Wio Terminal Classroom Series; Wio Terminal Classroom with IoT!
-This is our fourth episode of the third edition of the series and we thank you all for staying with us!
+This is our sixth episode of the third edition of the series and we thank you all for staying with us!
 In this show, Lakshantha explains how to use Wio Terminal as an IoT device and build IoT projects using the Wio Terminal! So we request you to stay tuned with our show and we hope this helps you to gain more knowledge on how to program with the Wio Terminal!
 
-<p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/2M4bZyadxXA" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/y92xqy8D1Ks" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 
 Also, don't forget to subscribe to our [YouTube Channel](http://www.youtube.com/c/SeeedStudioSZ) to stay updated with our video releases on exciting products!
