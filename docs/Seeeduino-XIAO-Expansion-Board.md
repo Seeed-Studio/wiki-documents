@@ -403,7 +403,11 @@ void loop() {
 
 ## Acrylic Case for Seeeduino XIAO Expansion Board 
 
-We made this acrylic case for protecting the Seeeduino XIAO expansion board, those are acrylic case components.
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Acrylic_Case/110010024_Preview-08.png"/></div>
+
+<p style="text-align:center"><a href="https://www.seeedstudio.com/XIAO-p-4812.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p> 
+
+We made this [**acrylic case**](https://www.seeedstudio.com/XIAO-p-4812.html) for protecting the Seeeduino XIAO expansion board, those are acrylic case components.
 
 <div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Acrylic_Case/componets.png"/></div>
 
@@ -415,8 +419,7 @@ This Acrylic case easy to build it up and it also can dress the case look neater
 
 <div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Acrylic_Case/build_up.gif"/></div>
 
-!!!Note
-    The Acrylic case is release soon.  
+
 
 
 ## **Circuitpython on Seeeduino XIAO with expansion board**
