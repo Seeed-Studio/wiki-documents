@@ -72,7 +72,9 @@ As an extension board, the Grove Shield for Seeeduino XIAO also pulls all 14 pin
 
 <p style="text-align:center"><a href=target="_blank"><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/hardware-overview.png" border=0 /></a></p> 
 
-If you need use the back of the Xiao Grove Shield provisions pads for a Flash memory in SOIC8 package, please go to check Schematic Online Viewer.
+If you need use the back of the Xiao Grove Shield provisions pads for a Flash memory in SOIC8 package, please soldering the PIN1.
+
+<p style="text-align:center"><a href=target="_blank"><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/Grove-shield-XIAO.png" border=0 /></a></p> 
 
 #### External headers-pin description for Grove-Shield for Seeeduino XIAO
 <p style="text-align:center"><a href=target="_blank"><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/pinout.png" border=0 /></a></p> 
