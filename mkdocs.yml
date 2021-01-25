@@ -431,7 +431,9 @@ nav:
           - SenseCAP LoRaWAN: Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide.md
           - SenseCAP Sensor Hub Data Logger: SenseCAP-Sensor-Hub-Data-Logger.md
           - SenseCAP ONE Compact Weather Station: SenseCAP-One-Series-Meteorological-Sensors.md
-      #- Sensor Probe & Accessories
+      - Sensor Probe & Accessories:
+         - Liquid Level Sensor: Liquid_Level_Sensor.md
+         - Water Leak Detector: Water_Leak_Detector.md
 
   - LoRa: 
       - LoRa Module: 
