@@ -78,19 +78,36 @@ BIOS is also like an OS and can be upgraded to fix bugs and enhance performance 
 
 ### Current Latest BIOS Version and Changelog
 
+<div class="tips" style="display: table; table-layout: fixed; background-color: #fbd373; height: auto;  width: 100%;">
+<div class="left-icon" style="display: table-cell; vertical-align: middle; background-color: #FC4A1A; padding-top: 10px; box-sizing: border-box; height: auto; width: 38px; text-align: center;"><img style="width: 26px; vertical-align: middle;" src="https://s3-us-west-2.amazonaws.com/static.seeed.cc/seeed/icon/Danger.svg" alt="attention icon" /></div>
+<div class="right-desc" style="display: table-cell; vertical-align: middle; padding-left: 15px; box-sizing: border-box; width: calc(95% - 38px);">
+<p style="color: #000000; font-weight: bold; margin-top: 10px;">Important Notes</p>
+<p style="color: #000000; font-size: 14px;"> 1. It <b>wipes the old BIOS settings</b>, and so you would need to <b>re-activate</b> your Windows(if using Windows) again (wipes the activation key, needs Internet to activate again). <br/><br/> 2. If you have the <b>non-EMMC version of ODYSSEY-X86</b>, before updating the BIOS, Please make sure to <b>disable eMMC in the BIOS Settings</b> Before and After the updates.</p>
+</div>
+</div>
+
 - **Latest BIOS:**
 
-**SD-BS-CJ41G-M-101-G 08/31/2020 14:01:20**
+**SD-BS-CJ41G-M-101-K 12/31/2020 20:34:37**
 
-- **SHA256:** eb932b69435d26a5b076c485c90e4289a697681ac092c18e85c86804e3fe4206
+- **SHA256:** 7208d39c4f77a4837a0a1072dce45c7bc8feba28597522ea036778a9c09aa61a
 
-1. Under BIOS Menu, **Setup** -> **Chipset** -> **Fan Control**, added **Always On** options.
+    1. Added **Secure Boot**.
+    2. Added **Wake on LAN**.
+    3. Fix reboot into BIOS settings page under Linux environment (Eg. `systemctl reboot --firmware-setup`).
+    4. Fix Linux Wake on Lan light issue.
 
 >**History BIOS:**
 
+> **[SD-BS-CJ41G-M-101-G 08/31/2020 14:01:20](http://files.seeedstudio.com/wiki/X86-BIOS/SD-BS-CJ41G-M-101-G.zip)**
+
+> **SHA256:** eb932b69435d26a5b076c485c90e4289a697681ac092c18e85c86804e3fe4206
+
+>1. Under BIOS Menu, **Setup** -> **Chipset** -> **Fan Control**, added **Always On** options.
+
 >**[SD-BS-CJ41G-M-101-E 01/07/2020 14:03:11](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-BS-CJ41G-M-101-E.zip)**
 
->- **SHA256:** 98bb25d6d32250fb10bf047f5902630b82a8560020fb4336d7723b4dfb3f9df2
+>**SHA256:** 98bb25d6d32250fb10bf047f5902630b82a8560020fb4336d7723b4dfb3f9df2
 
 >1. Fix the problem of incomplete display of startup Seeed logo screen.
 
@@ -99,7 +116,7 @@ BIOS is also like an OS and can be upgraded to fix bugs and enhance performance 
 
 ### Step 1 - Download the newest version of BIOS
 
-Download the latest version of BIOS from [**here**](http://files.seeedstudio.com/wiki/X86-BIOS/SD-BS-CJ41G-M-101-G.zip).
+Download the latest version of BIOS from [**here**](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-BS-CJ41G-M-101-K.zip).
 
 ### Step 2 -  Prepare bootable USB
 
@@ -170,11 +187,19 @@ The X86 also has a embedded controller that can be updated. Updating the EC has 
 
 ### Latest EC Firmware
 
-**[SD-EC-CJ41G-M-101-C 08/31/2020 14:01:20](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-EC-CJ41G-M-101-C.zip)**
+[**SD-EC-CJ41G-M-101-I 12/31/2020 20:34:37**](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-EC-CJ41G-M-101-I.zip)
 
-- **SHA256:** 4b7ed82357eb608c3ec00f6f5f0358a35e63b327ae33855eb5e7608814f8df6a
+- **SHA256:** 94f664401120183238c5eaa41ea267b240dd5836fa879c568bf3275bca508c52
 
-1. Optimize the problem of incorrect starting and turning temperature of the Fan.
+1. Optimize FAN control logic
+
+>**History EC Firmware:**
+
+>**[SD-EC-CJ41G-M-101-C 08/31/2020 14:01:20](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-EC-CJ41G-M-101-C.zip)**
+
+>- **SHA256:** 4b7ed82357eb608c3ec00f6f5f0358a35e63b327ae33855eb5e7608814f8df6a
+
+> 1. Optimize the problem of incorrect starting and turning temperature of the Fan.
 
 ## Notes
 
