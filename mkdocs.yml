@@ -432,8 +432,8 @@ nav:
           - SenseCAP Sensor Hub Data Logger: SenseCAP-Sensor-Hub-Data-Logger.md
           - SenseCAP ONE Compact Weather Station: SenseCAP-One-Series-Meteorological-Sensors.md
       - Sensor Probe & Accessories:
-         - Liquid Level Sensor: Liquid_Level_Sensor.md
-         - Water Leak Detector: Water_Leak_Detector.md
+          - Liquid Level Sensor: Liquid_Level_Sensor.md
+          - Water Leak Detector: Water_Leak_Detector.md
 
   - LoRa: 
       - LoRa Module: 
