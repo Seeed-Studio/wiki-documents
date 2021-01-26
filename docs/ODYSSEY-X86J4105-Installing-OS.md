@@ -74,7 +74,7 @@ If everything goes well, ubuntu should be installed on the ODYSSEY - X86J4105 an
 
 ## How to Upgrade the BIOS
 
-BIOS is also like an OS and can be upgraded to fix bugs and enhance performance of the RODYSSEY - X86J4105. Here is the instruction how to upgrade the BIOS verison on ODYSSEY - X86J4105.
+BIOS is also like an OS and can be upgraded to fix bugs and enhance performance of the ODYSSEY - X86J4105. Here is the instruction how to upgrade the BIOS version on ODYSSEY - X86J4105.
 
 ### Current Latest BIOS Version and Changelog
 
@@ -85,6 +85,10 @@ BIOS is also like an OS and can be upgraded to fix bugs and enhance performance 
 <p style="color: #000000; font-size: 14px;"> 1. It <b>wipes the old BIOS settings</b>, and so you would need to <b>re-activate</b> your Windows(if using Windows) again (wipes the activation key, needs Internet to activate again). <br/><br/> 2. If you have the <b>non-EMMC version of ODYSSEY-X86</b>, before updating the BIOS, Please make sure to <b>disable eMMC in the BIOS Settings</b> Before and After the updates.</p>
 </div>
 </div>
+
+> You may check in the BIOS main page for BIOS and EC Firmware's versions.
+
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105-Installing-OS/latest-BIOS.png"/></div>
 
 - **Latest BIOS:**
 
