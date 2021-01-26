@@ -79,15 +79,15 @@ This weather instrument supports two universal standard protocols: MODBUS (MODBU
 </table>
 </div>
 <div class="wide-screen-container__39MF" data-is-widescreen="false" data-type="paragraph">
-<style type="text/css" xml="space"><!--
+<style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 10px;word-break:normal;}
+  overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 10px;word-break:normal;}
-.tg .tg-qw69{background-color:#9b9b9b;border-color:#c0c0c0;color:#ffffff;text-align:left;vertical-align:top}
-.tg .tg-855q{background-color:#ffffff;border-color:#c0c0c0;text-align:left;vertical-align:top}
---></style>
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-2fdn{border-color:#9b9b9b;text-align:left;vertical-align:top}
+.tg .tg-e2cz{background-color:#9b9b9b;border-color:#9b9b9b;color:#ffffff;text-align:left;vertical-align:top}
+</style>
 <table class="tg">
 <thead>
 <tr><th class="tg-qw69">General Parameters</th><th class="tg-qw69"></th></tr>
@@ -119,15 +119,15 @@ This weather instrument supports two universal standard protocols: MODBUS (MODBU
 </tr>
 </tbody>
 </table>
-<style type="text/css" xml="space"><!--
+<style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-qw69{background-color:#9b9b9b;border-color:#c0c0c0;color:#ffffff;text-align:left;vertical-align:top}
-.tg .tg-wo29{border-color:#c0c0c0;text-align:left;vertical-align:top}
---></style>
+.tg .tg-2fdn{border-color:#9b9b9b;text-align:left;vertical-align:top}
+.tg .tg-e2cz{background-color:#9b9b9b;border-color:#9b9b9b;color:#ffffff;text-align:left;vertical-align:top}
+</style>
 <table class="tg">
 <thead>
 <tr><th class="tg-qw69" colspan="3">Barometric Pressure</th></tr>
@@ -175,15 +175,15 @@ This weather instrument supports two universal standard protocols: MODBUS (MODBU
 </tr>
 </tbody>
 </table>
-<style type="text/css" xml="space"><!--
+<style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 10px;word-break:normal;}
+  overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 10px;word-break:normal;}
-.tg .tg-qw69{background-color:#9b9b9b;border-color:#c0c0c0;color:#ffffff;text-align:left;vertical-align:top}
-.tg .tg-855q{background-color:#ffffff;border-color:#c0c0c0;text-align:left;vertical-align:top}
---></style>
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-2fdn{border-color:#9b9b9b;text-align:left;vertical-align:top}
+.tg .tg-e2cz{background-color:#9b9b9b;border-color:#9b9b9b;color:#ffffff;text-align:left;vertical-align:top}
+</style>
 <table class="tg">
 <thead>
 <tr><th class="tg-qw69" colspan="2">Air Temperature</th></tr>
