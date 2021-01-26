@@ -27,6 +27,8 @@ The stainless steel probe can be permanently inserted in the soil with quick tes
 
 ## Applications
 
+![Applications](https://files.seeedstudio.com/wiki/Soil_Moisture_Temperature_EC_Sensor/Applications.png)
+
 * Water-saving irrigation
 * Scientific Experiments
 * Greenhouse Management
