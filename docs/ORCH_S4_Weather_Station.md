@@ -40,7 +40,7 @@ This weather instrument supports two universal standard protocols: MODBUS (MODBU
 
 <div class="wide-screen-container__39MF" data-is-widescreen="false" data-type="paragraph">
 <style type="text/css" xml="space"><!--
-.tg  {border-collapse:collapse;border-spacing:0;}
+.tg  {border-collapse:collapse;border-spacing:20px；}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   overflow:hidden;padding:10px 10px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
@@ -82,7 +82,7 @@ This weather instrument supports two universal standard protocols: MODBUS (MODBU
 </div>
 <div class="wide-screen-container__39MF" data-is-widescreen="false" data-type="paragraph">
 <style type="text/css" xml="space"><!--
-.tg  {border-collapse:collapse;border-spacing:0;}
+.tg  {border-collapse:collapse;border-spacing:0;margin:10px}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   overflow:hidden;padding:10px 10px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
@@ -121,6 +121,9 @@ This weather instrument supports two universal standard protocols: MODBUS (MODBU
 </tr>
 </tbody>
 </table>
+</div>
+<div class="wide-screen-container__39MF" data-is-widescreen="false" data-type="paragraph">
+
 <style type="text/css" xml="space"><!--
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
@@ -177,6 +180,9 @@ This weather instrument supports two universal standard protocols: MODBUS (MODBU
 </tr>
 </tbody>
 </table>
+</div>
+<div class="wide-screen-container__39MF" data-is-widescreen="false" data-type="paragraph">
+
 <style type="text/css" xml="space"><!--
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
