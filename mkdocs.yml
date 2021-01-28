@@ -435,8 +435,8 @@ nav:
           - Liquid Level Sensor: Liquid_Level_Sensor.md
           - Water Leak Detector: Water_Leak_Detector.md
           - pH Sensor: Industrial_ph_Sensor.md
-          - Soil Moisture & Temperature & EC Sensor: Soil_Moisture_Temperature_EC_Sensor_MODBUS-RTU_RS485_(S-Soil_MTEC-02A).md
-          - Soil Moisture & Temperature Sensor: Soil_Moisture_Temperature_Sensor_MODBUS-RTU_RS485_(S-Soil_MT-02A).md
+          - Soil Moisture & Temperature & EC Sensor: Soil_Moisture_Temperature_EC_Sensor.md
+          - Soil Moisture & Temperature Sensor: Soil_Moisture_Temperature_Sensor.md
           - Optical Rain Gauge RG-15: Industrial-Grade_Optical_Rain_Gauge_RG-15.md
           - Optical Rain Gauge RG-9: Optical_Rain_Gauge_RG-9.md
           - SenseCAP CO2 Sensor: SenseCAP_SOLO_CO2_Sensor.md
