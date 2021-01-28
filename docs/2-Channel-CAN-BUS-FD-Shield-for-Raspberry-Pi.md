@@ -43,6 +43,8 @@ As you can see, there are two versions of chips used in the 2-Channel CAN-BUS(FD
 
 
 
+
+
 ## Hardware Overview
 
 
