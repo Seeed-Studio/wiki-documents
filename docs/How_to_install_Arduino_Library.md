@@ -13,7 +13,7 @@ Here we will show you how to install an Arduino library. You should notice that 
 
 There are two ways to download a Arduino library.
 
-### 1.Dowload in the product page
+### 1.Download in the product page
 Normally, if a product needs a library, you will find a download library button bar like this below:
 
 [![enter image description here](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/images/library.png)](https://github.com/Seeed-Studio/OLED_Display_96X96/archive/master.zip)
