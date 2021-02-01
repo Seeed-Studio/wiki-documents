@@ -432,15 +432,15 @@ nav:
           - SenseCAP Sensor Hub Data Logger: SenseCAP-Sensor-Hub-Data-Logger.md
           - SenseCAP ONE Compact Weather Station: SenseCAP-One-Series-Meteorological-Sensors.md
       - Sensor Probe & Accessories:
-          - Liquid Level Sensor: Liquid_Level_Sensor.md
-          - Water Leak Detector: Water_Leak_Detector.md
-          - pH Sensor: Industrial_ph_Sensor.md
-          - Soil Moisture & Temperature & EC Sensor: Soil_Moisture_Temperature_EC_Sensor.md
-          - Soil Moisture & Temperature Sensor: Soil_Moisture_Temperature_Sensor.md
-          - Optical Rain Gauge RG-15: Industrial-Grade_Optical_Rain_Gauge_RG-15.md
-          - Optical Rain Gauge RG-9: Optical_Rain_Gauge_RG-9.md
-          - SenseCAP CO2 Sensor: SenseCAP_SOLO_CO2_Sensor.md
-          - ORCH S4 Weather Station: ORCH_S4_Weather_Station.md
+          - Liquid Level Sensor: Liquid-Level-Sensor.md
+          - Water Leak Detector: Water-Leak-Detector.md
+          - pH Sensor: Industrial-ph-Sensor.md
+          - Soil Moisture & Temperature & EC Sensor: Soil-Moisture-Temperature-EC_Sensor.md
+          - Soil Moisture & Temperature Sensor: Soil-Moisture-Temperature-Sensor.md
+          - Optical Rain Gauge RG-15: Industrial-Grade-Optical-Rain-Gauge-RG-15.md
+          - Optical Rain Gauge RG-9: Optical-Rain-Gauge-RG-9.md
+          - SenseCAP CO2 Sensor: SenseCAP-SOLO-CO2-Sensor.md
+          - ORCH S4 Weather Station: ORCH-S4-Weather-Station.md
 
   - LoRa: 
       - LoRa Module: 
