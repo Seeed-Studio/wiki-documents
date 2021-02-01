@@ -19,6 +19,7 @@ We have updated the BIOS and EC firmware to fix bugs and enhance the performance
 ### Sensor Probes and Accessories for Industrial IoT
 
 We have also added getting started guides for various different sensor probes and accessories that suit well for Industrial IoT applications. Explore them by following the links below:
+
 - [Liquid Level Sensor](https://wiki.seeedstudio.com/Liquid_Level_Sensor/)
 - [Water Leak Detector](https://wiki.seeedstudio.com/Water_Leak_Detector/)
 - [Industrial ph Sensor](https://wiki.seeedstudio.com/Industrial_ph_Sensor/)
