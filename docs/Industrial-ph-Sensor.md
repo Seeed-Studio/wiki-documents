@@ -37,7 +37,8 @@ This pH Sensor comes with a MODBUS-RTU RS485 serial communications protocol or 4
 
 
 ## Specifications
-<p><style type="text/css">
+<div class="wide-screen-container__39MF" data-is-widescreen="false" data-type="paragraph">
+<style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0; margin:10px}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   overflow:hidden;padding:10px 5px;word-break:normal;}
@@ -113,7 +114,9 @@ This pH Sensor comes with a MODBUS-RTU RS485 serial communications protocol or 4
 <td class="tg-vkfu">400g</td>
 </tr>
 </tbody>
-</table></p>
+</table>
+</div>
+<div class="wide-screen-container__39MF" data-is-widescreen="false" data-type="paragraph"></div>
 
 ## Dimensions
 

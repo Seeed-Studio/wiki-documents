@@ -12,7 +12,7 @@ sku: 102991299
 
 ![](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-Wiki.jpg)
 
-The **Wio Terminal** is a SAMD51-based microcontroller with Wireless Connectivity supported by **Realtek RTL8720DN** that’s compatible with Arduino and MicroPython. It runs at **120MHz** (Boost up to 200MHz), **4MB** External Flash and **192KB** RAM. It supports both Bluetooth and Wi-Fi providing backbone for IoT projects. The Wio Terminal itself is equipped with **a 2.4” LCD Screen, onboard IMU(LIS3DHTR), Microphone, Buzzer, microSD card slot, Light sensor, and Infrared Emitter(IR 940nm).** On top of that, it also has two multifunctional Grove ports for [Grove Ecosystem](https://www.seeedstudio.com/grove.html) and 40 Raspberry pi compatible pin GPIO for more add-ons.
+The **Wio Terminal** is a SAMD51-based microcontroller with Wireless Connectivity powered by **Realtek RTL8720DN** that’s compatible with Arduino and MicroPython. Currently, wireless connectivity is only supported by Arduino. It runs at **120MHz** (Boost up to 200MHz), **4MB** External Flash and **192KB** RAM. It supports both Bluetooth and Wi-Fi providing backbone for IoT projects. The Wio Terminal itself is equipped with **a 2.4” LCD Screen, onboard IMU(LIS3DHTR), Microphone, Buzzer, microSD card slot, Light sensor, and Infrared Emitter(IR 940nm).** On top of that, it also has two multifunctional Grove ports for [Grove Ecosystem](https://www.seeedstudio.com/grove.html) and 40 Raspberry pi compatible pin GPIO for more add-ons.
 
 <p style=":center"><a href="https://www.seeedstudio.com/Wio-Terminal-p-4509.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
@@ -27,7 +27,7 @@ The **Wio Terminal** is a SAMD51-based microcontroller with Wireless Connectivit
     - **4 MB** External Flash, **192 KB** RAM
 - Comprehensive Protocol Support
     - SPI, I2C, I2S, ADC, DAC, PWM, UART(Serial)
-- Powerful **Wireless Connectivity**
+- Powerful **Wireless Connectivity** (supported only by Arduino)
     - Powered by **Realtek RTL8720DN**
     - Dual Band 2.4Ghz / 5Ghz Wi-Fi (802.11 a/b/g/n)
     - BLE / BLE 5.0

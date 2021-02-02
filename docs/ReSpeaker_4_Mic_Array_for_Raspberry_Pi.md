@@ -433,9 +433,7 @@ Turn off the lights by:
 
 **Demo Video Demonstration**
 
-<div align=center><video width="560" height="315" controls>
-  <source src="https://files.seeedstudio.com/wiki/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/respeaker-wakeword.mp4" type="video/mp4">
-</video></div>
+<p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/icTZeMIJAxw" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 ### Demo Source Code
 
@@ -453,9 +451,7 @@ The lighting commands are defined by a Picovoice *Speech-to-Intent context*. You
 
 ### Multiple Wake Word Examples
 
-<div align=center><video width="560" height="315" controls>
-  <source src="https://files.seeedstudio.com/wiki/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/respeaker-wakeword.mp4" type="video/mp4">
-</video></div>
+<p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/Dfn3wBE2pwY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 To demonstrate the Picovoice's cabability we have also prepared a multi wake word examples using ReSpeaker 4-Mic Array with Raspberry Pi! Different wake word can set to execute certain tasks.
 
