@@ -50,7 +50,7 @@ The Base Shield is tested and fully compatible with [Pi Pico](https://www.seeeds
 - **5-Power Switch**: 5V/3.3V selectable power switch.
 - **6-SPI port**: 1 spi0 port.
 
-- **Dimension**: 6.5mm * 6.5mm  
+- **Dimension**: 56mm * 56mm  
 
 ## Getting Started with demo1
 
