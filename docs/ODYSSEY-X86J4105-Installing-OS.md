@@ -191,7 +191,7 @@ The X86 also has a embedded controller that can be updated. Updating the EC has 
 
 ### Latest EC Firmware
 
-[**SD-EC-CJ41G-M-101-J 02/02/2021 12:32:42**](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-EC-CJ41G-M-101-J.zip)
+[**SD-EC-CJ41G-M-101-J 02/02/2021 15:39:11**](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-EC-CJ41G-M-101-J.zip)
 
 - **SHA256:** 4ab099f45439f8f6ec14e25ae50a64f878eed4c998e39000e17f2047df6bbb83
 
