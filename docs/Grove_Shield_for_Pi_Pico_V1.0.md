@@ -35,7 +35,8 @@ The Base Shield is tested and fully compatible with [Pi Pico](https://www.seeeds
 
 
 !!!Note
-   Pico is not included in this product, please click [here](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html) if you need to get a Raspberry Pi Pico.
+   Pico is not included in this product, please click [here](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html) 
+   if you need to get a Raspberry Pi Pico.
 
 
 ## Hardware Overview
@@ -67,7 +68,7 @@ The Base Shield is tested and fully compatible with [Pi Pico](https://www.seeeds
 - Step 4. Plug Grove Shield for Pi Pico into Pi Pico.
 - Step 5. Connect Pi Pico to PC through a USB cable.
 
-![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/hardwareconnection1.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/hardwareconnection.jpg)
 
 ### Software
 - Step 1. Download [Thonny](https://thonny.org/) Integrated Development Environment(IDE) according to your computer system. The latest release 
@@ -153,11 +154,11 @@ while True:
     
 ```
 Then you can get the temperature and humidity displayed on the OLED as below.
-![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/oled.jpg)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/oled1.jpg)
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Base_Shield_V2/res/Base%20Shield%20v2%20eagle%20file.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
