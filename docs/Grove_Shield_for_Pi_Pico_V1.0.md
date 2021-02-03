@@ -65,7 +65,7 @@ The Base Shield is tested and fully compatible with [Pi Pico](https://www.seeeds
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/hardwareconnection.jpg)
 
-### Software
+#### Software
 - Step 1. Download Thonny([Windows](https://github.com/thonny/thonny/releases/download/v3.3.3/thonny-3.3.3.exe), [Mac](https://github.com/thonny/thonny/releases/download/v3.3.3/thonny-3.3.3.pkg))Integrated Development Environment(IDE) according to your computer system. 
 
 **For linux develop environment**: 
@@ -144,7 +144,7 @@ Rotate Grove-Rotary-Angle-Sensor, you will hear different sounds from the buzzer
 
 
 
-### Software
+#### Software
 Please refer to the demo1 software part.
 
 Copy below code to the Thonny IDE at first.
