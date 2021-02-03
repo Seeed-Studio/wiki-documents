@@ -27,16 +27,11 @@ The Grove Shield for Pi Pico v1.0 is a plug-and-play shield for Raspberry Pi Pic
 | Digital Ports         | 3            |
 | UART Ports            | 2            |
 | I2C Ports             | 2            |
-| Size                  | 65mm x65mm   |
+| Size                  | 56mm x56mm   |
 
 ## Compatible Boards
 
 The Base Shield is tested and fully compatible with [Pi Pico](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html).
-
-
-!!!Note
-   Pico is not included in this product, please click [here](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html) 
-   if you need to get a Raspberry Pi Pico.
 
 
 ## Hardware Overview
@@ -52,9 +47,9 @@ The Base Shield is tested and fully compatible with [Pi Pico](https://www.seeeds
 
 - **Dimension**: 56mm * 56mm  
 
-## Getting Started with demo1
-
-### Hardware
+## Getting Started 
+### Project 1 
+#### Materials Required
 
 - Step 1. Prepare the below stuffs:
 
@@ -71,9 +66,32 @@ The Base Shield is tested and fully compatible with [Pi Pico](https://www.seeeds
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/hardwareconnection.jpg)
 
 ### Software
-- Step 1. Download [Thonny](https://thonny.org/) Integrated Development Environment(IDE) according to your computer system. The latest release 
-(version 3.3.0) of Thonny can be downloaded from [Github](https://github.com/thonny/thonny/releases/tag/v3.3.0)
-- Step 2. Download the Pico backend wheel from [Github](https://github.com/raspberrypi/thonny-pico/releases/tag/v0.2),  or you can download it directly at here. [thonny_rpi_pico-0.2-py3-none-any.whl](https://github.com/raspberrypi/thonny-pico/releases/download/v0.2/thonny_rpi_pico-0.2-py3-none-any.whl), this wheel file can be installed into an existing Thonny installation(version 3.3.0b6 or later).
+- Step 1. Download Thonny([Windows](https://github.com/thonny/thonny/releases/download/v3.3.3/thonny-3.3.3.exe), [Mac](https://github.com/thonny/thonny/releases/download/v3.3.3/thonny-3.3.3.pkg))Integrated Development Environment(IDE) according to your computer system. 
+
+**For linux develop environment**: 
+
+Binary bundle for PC (Thonny+Python):
+```
+bash <(wget -O - https://thonny.org/installer-for-linux)
+```
+With pip:
+```
+pip3 install thonny
+```
+Debian, Rasbian, Ubuntu, Mint and others:
+```
+sudo apt install thonny
+```
+Debian, Rasbian, Ubuntu, Mint and others:
+```
+sudo apt install thonny
+```
+
+
+
+- Step 2. Download the Pico backend wheel, [thonny_rpi_pico-0.2-py3-none-any.whl](https://github.com/raspberrypi/thonny-pico/releases/download/v0.2/thonny_rpi_pico-0.2-py3-none-any.whl), this wheel file is a firmware for pico which can be installed into an existing Thonny installation(version 3.3.0b6 or later).
+
+
 - Step 3. Start Thonny and navigate to "Tools -> Manage plug-ins" and click on the link to "Install from local file" in the right hand panel, and select the Pico backend wheel. Hit the "close" button to finish.
 
 ![](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Thonny.png)
@@ -108,9 +126,9 @@ while True:
 ```
 Rotate Grove-Rotary-Angle-Sensor, you will hear different sounds from the buzzer.
 
-## Getting Started with demo2
+### project 2
 
-### Hardware
+#### Materials Required
 
 - Step 1. Prepare the below stuffs:
 
@@ -129,7 +147,7 @@ Rotate Grove-Rotary-Angle-Sensor, you will hear different sounds from the buzzer
 ### Software
 Please refer to the demo1 software part.
 
-Copy below code to the Thonny IDE, and click the green run button.
+Copy below code to the Thonny IDE at first.
 ```
 from ssd1306 import SSD1306_I2C
 from dht11 import *
@@ -153,12 +171,24 @@ while True:
     sleep(0.5)
     
 ```
+Then please download the [ssd1306.py](https://github.com/micropython/micropython/blob/master/drivers/display/ssd1306.py) and [dht11.py](https://github.com/jiacheng-lu/Micropython-pico-grove/blob/main/examples/Grove/Digital/dht11.py) to your local. Use Thonny open dht11.py, click file->save as->MicroPython device.
+
+![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/saveas.png)
+
+Input **dht11.py** in File name column, click "ok", then the file is saved at File->Open->MicroPython device, the same with the **ssd1306.py** file.
+
+
+![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/open.png)
+
+After you have save both of the files to your MicroPython device, now please click the green button to run the demo code.
+
 Then you can get the temperature and humidity displayed on the OLED as below.
+
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/oled1.jpg)
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Grove_Shield_for_Pi_Pico_SCH&PCB.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https:///files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/res/Grove_Shield_for_Pi_Pico.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
@@ -166,6 +196,7 @@ Then you can get the temperature and humidity displayed on the OLED as below.
 
 - **[PDF]** [Pico python SDK](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/pico_python_sdk.pdf)
 - **[PDF]** [SCH](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Grove_shield_for_PI_PICOv1.0SCH.pdf)
+- **[Eagle]** [PCB&SCH](https:///files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/res/Grove_Shield_for_Pi_Pico.zip)
 
 
 ## Tech Support
