@@ -171,7 +171,7 @@ while True:
     sleep(0.5)
     
 ```
-Then please download the [ssd1306.py](https://github.com/micropython/micropython/blob/master/drivers/display/ssd1306.py) and [dht11.py](https://github.com/jiacheng-lu/Micropython-pico-grove/blob/main/examples/Grove/Digital/dht11.py) to your local. Use Thonny open dht11.py, click file->save as->MicroPython device.
+Then please download the [ssd1306.py](https://github.com/micropython/micropython/blob/master/drivers/display/ssd1306.py) and [dht11.py](http://47.106.166.129/Embeded/pico-micropython-grove/blob/master/Digital/dht11.py) to your local. Use Thonny open dht11.py, click file->save as->MicroPython device.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/saveas.png)
 
