@@ -82,9 +82,9 @@ Debian, Rasbian, Ubuntu, Mint and others:
 ```
 sudo apt install thonny
 ```
-Debian, Rasbian, Ubuntu, Mint and others:
+Fedora:
 ```
-sudo apt install thonny
+sudo dnf install thonny
 ```
 
 
