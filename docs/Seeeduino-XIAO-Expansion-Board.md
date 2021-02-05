@@ -163,7 +163,7 @@ This example introduces how to use the OLED display on the XIAO expansion board.
 
 **Step 1**. Install the Seeeduino XIAO on the Expansion board then conect the Type-C cable.
 
-**Step 2**. Install the [**u8g2**](https://github.com/olikraus/u8g2) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/). 
+**Step 2**. Install the [**u8g2**](https://github.com/olikraus/U8g2_Arduino) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/). 
 
 **Step 3**. Copy the code and stick on the Ardiono IDE then upload it.
 
@@ -350,7 +350,7 @@ This example uses RTC to display the clock on the OLED.
 
 **Step 1**. Install the Seeeduino XIAO on the Expansion board then conect the Type-C cable.
 
-**Step 2**. Install the [**u8g2**](https://github.com/olikraus/u8g2) and [**PCF8563**](https://github.com/Bill2462/PCF8563-Arduino-Library) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/). 
+**Step 2**. Install the [**u8g2**](https://github.com/olikraus/U8g2_Arduino) and [**PCF8563**](https://github.com/Bill2462/PCF8563-Arduino-Library) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/). 
 
 **Step 3**. Copy the code and stick on the Ardiono IDE then upload it.
 
@@ -854,7 +854,7 @@ Please follow the same color line to connect each sensor on the board. Please co
 
 **Step 2**. Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 
-**Step 3**. Install the [**u8g2**](https://github.com/olikraus/u8g2),  [**Servo**](https://github.com/arduino-libraries/Servo),  [**Seeed_Arduino_KCT202**](https://github.com/Seeed-Studio/Seeed_Arduino_KCT202) and [**Seeed_LED_Ring**](https://github.com/Seeed-Studio/Seeed_LED_Ring) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
+**Step 3**. Install the [**u8g2**](https://github.com/olikraus/U8g2_Arduino),  [**Servo**](https://github.com/arduino-libraries/Servo),  [**Seeed_Arduino_KCT202**](https://github.com/Seeed-Studio/Seeed_Arduino_KCT202) and [**Seeed_LED_Ring**](https://github.com/Seeed-Studio/Seeed_LED_Ring) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
 
 **Step 4**. Copy the code stick on the Aruino IDE then upload it.
 
@@ -1073,7 +1073,7 @@ Please follow the same color line to connect each sensor on the board. Please co
 
 **Step 2**. Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 
-**Step 3**. Install the [**u8g2**](https://github.com/olikraus/u8g2) and [**Seeed_Arduino_KCT202**](https://github.com/Seeed-Studio/Seeed_Arduino_KCT202) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
+**Step 3**. Install the [**u8g2**](https://github.com/olikraus/U8g2_Arduino) and [**Seeed_Arduino_KCT202**](https://github.com/Seeed-Studio/Seeed_Arduino_KCT202) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
 
 **Step 4**. Copy the code stick on the Aruino IDE then upload it.
 
@@ -1208,7 +1208,7 @@ Please follow the same color line to connect each sensor on the board. Please co
 
 **Step 2**. Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 
-**Step 3**. Install the [**u8g2**](https://github.com/olikraus/u8g2),  [**Seeed_PM2_5_sensor_HM3301**](https://github.com/Seeed-Studio/Seeed_PM2_5_sensor_HM3301) and [**Seeed_SCD30**](https://github.com/Seeed-Studio/Seeed_SCD30) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
+**Step 3**. Install the [**u8g2**](https://github.com/olikraus/U8g2_Arduino),  [**Seeed_PM2_5_sensor_HM3301**](https://github.com/Seeed-Studio/Seeed_PM2_5_sensor_HM3301) and [**Seeed_SCD30**](https://github.com/Seeed-Studio/Seeed_SCD30) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
 
 **Step 4**. Copy the code stick on the Aruino IDE then upload it.
 
@@ -1445,7 +1445,7 @@ Please follow the same color line to connect each sensor on the board. Please co
 
 **Step 2**. Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 
-**Step 3**. Install the [**u8g2**](https://github.com/olikraus/u8g2) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
+**Step 3**. Install the [**u8g2**](https://github.com/olikraus/U8g2_Arduino) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
 
 **Step 4**. Copy the code stick on the Aruino IDE then upload it.
 
