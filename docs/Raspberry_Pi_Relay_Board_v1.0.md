@@ -25,7 +25,7 @@ The 4-Channel SPDT Relay HAT for Raspberry Pi utilizes four high-quality SPDT (s
 ## Features
 --------
 - High-quality SPDT (single pole - double throw) relays
-- Compatible with Raspberry Pi 1/2/3/4
+- Compatible with Raspberry Pi 1, 2, 3, 4
 - I2C interface with three hardware SW1 (1, 2, 3) to select the fixed I2C-bus address
 - Relay screw terminals for easy connection 
 - Standardized shield shape and design
