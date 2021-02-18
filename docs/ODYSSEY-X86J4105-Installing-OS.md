@@ -166,7 +166,7 @@ Plug the USB into ODYSSEY - X86J4105 and boot up and follow steps below:
 
 ### Step 4 - Reboot
 
-When the BIOS is upgraded, reboot the ODYSSEY - X86J4105(Switch on and off the power).
+When the BIOS is upgraded, **unplug the DC power and RTC battery** from the ODYSSEY-X86 and re-plug to power back on.
 
 
 <div class="tips" style="display: table; table-layout: fixed; background-color: #F5A9A9; height: auto;  width: 100%;">
