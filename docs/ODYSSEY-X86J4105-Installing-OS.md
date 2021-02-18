@@ -166,14 +166,23 @@ Plug the USB into ODYSSEY - X86J4105 and boot up and follow steps below:
 
 ### Step 4 - Reboot
 
-When the BIOS is upgraded, **unplug the DC power and RTC battery** from the ODYSSEY-X86 and re-plug to power back on.
+- When the BIOS is upgraded, **press the ON/OFF button**, and you should see the blue light goes off.
 
+- **Unplug the DC power and RTC battery** from the ODYSSEY-X86.
+
+- Plug the DC power and RTC battery back to the ODYSSEY-X86.
+
+- **Press the ON/OFF button and wait patiently**. You should see the blue light goes on.
+
+### Step 5 - Wait Patiently
+
+Please wait patiently and **DO NOT** unplug power to corrupt the updating process.
 
 <div class="tips" style="display: table; table-layout: fixed; background-color: #F5A9A9; height: auto;  width: 100%;">
 <div class="left-icon" style="display: table-cell; vertical-align: middle; background-color: #DF0101; padding-top: 10px; box-sizing: border-box; height: auto; width: 38px; text-align: center;"><img style="width: 26px; vertical-align: middle;" src="https://s3-us-west-2.amazonaws.com/static.seeed.cc/seeed/icon/Danger.svg" alt="attention icon" /></div>
 <div class="right-desc" style="display: table-cell; vertical-align: middle; padding-left: 15px; box-sizing: border-box; width: calc(95% - 38px);">
 <p style="color: #000000; font-weight: bold; margin-top: 10px;">Attention</p>
-<p style="color: #000000; font-size: 14px;">The first boot up from the BIOS upgrade is <b>relatively long</b>, please be patient to wait, and the installed OS will launch eventually. It will take <b>around 3 ~ 5 minutes</b>.</p>
+<p style="color: #000000; font-size: 14px;">The first boot up from the BIOS upgrade is <b>relatively long</b>, please be patient to wait, and the installed OS will launch eventually. It will take <b>around 6 ~ 8 minutes</b>.</p>
 </div>
 </div>
 
