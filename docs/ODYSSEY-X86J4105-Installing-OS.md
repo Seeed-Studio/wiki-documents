@@ -176,7 +176,7 @@ Plug the USB into ODYSSEY - X86J4105 and boot up and follow steps below:
 
 ### Step 5 - Wait Patiently
 
-Please wait patiently and **DO NOT** unplug power to corrupt the updating process.
+Please wait patiently and **DO NOT** unplug power (or the hardware) to corrupt the updating process. The process will take **6 ~ 8 minutes**, feel free for a coffee break!
 
 <div class="tips" style="display: table; table-layout: fixed; background-color: #F5A9A9; height: auto;  width: 100%;">
 <div class="left-icon" style="display: table-cell; vertical-align: middle; background-color: #DF0101; padding-top: 10px; box-sizing: border-box; height: auto; width: 38px; text-align: center;"><img style="width: 26px; vertical-align: middle;" src="https://s3-us-west-2.amazonaws.com/static.seeed.cc/seeed/icon/Danger.svg" alt="attention icon" /></div>
