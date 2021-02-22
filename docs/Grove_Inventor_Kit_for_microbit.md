@@ -213,7 +213,7 @@ display.
 
 ## Resources
 
-  [**Grove Inventor Kit for micro:bit User Manual**](https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/res/Guide-Grove%20kit%20for%20microbit.pdf)
+  [**Grove Inventor Kit for micro:bit User Manual**](https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/res/Guide_Grove_kit_for_microbit.pdf)
 
   [**micro:bit Getting Started Videos**](http://microbit.org/start/)
 
