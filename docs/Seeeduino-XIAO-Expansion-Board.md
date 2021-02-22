@@ -27,7 +27,7 @@ A powerful functional expansion board for Seeeduino XIAO of only half Raspberry 
 
 - **No Soldering Needed:** All pin led out. Convenient plug and play Grove connectors support multiple data protocols, including IIC, Uart, Analog/Digital.
 
-- **Circuit Python Supported:** Well supports circuit python. Mini SD card slot enables memory space expand, making it possible to allocate more libraries needed in prototyping and project building.
+- **Circuit Python Supported:** Well supports circuit python. MicroSD card slot enables memory space expand, making it possible to allocate more libraries needed in prototyping and project building.
 
 - **Mini Size:** Compact and elegant with only half Raspberry Pi 4 size, especially suitable for projects require mini size.
 
@@ -43,7 +43,7 @@ A powerful functional expansion board for Seeeduino XIAO of only half Raspberry 
 |RTC timer precision|± 1.5S/DAY(25°C)|
 |RTC battery|CR1220|
 |Display|0.96" OLED display|
-|Expandable memory|mini SD card|
+|Expandable memory|MicroSD card|
 |Grove Interface|Grove IIC*2, Grove UART*1, A0/D0 Grove*1|
 |Other External Equipment|Passive buzzer, user button, 5V servo connector|
 
@@ -85,7 +85,7 @@ A powerful functional expansion board for Seeeduino XIAO of only half Raspberry 
 
 <div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/2222222222222222222222222222221.jpg"/></div>
 
-There are an external SD card slot and RTC Battery Holder, the SD card mostly is used for saving and run the `python.py` file, the RTC is for tracks the current time and can be used to program actions at a specific time.  
+There are an external MicroSD card slot and RTC Battery Holder, the MicroSD card mostly is used for saving and run the `python.py` file, the RTC is for tracks the current time and can be used to program actions at a specific time.  
 
 <div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/1111111111111111111111110.jpg"/></div>
 
@@ -140,7 +140,7 @@ Rich peripherals on board including:
 
 - **High precision RTC:** High precision real-time clock with battery backup, enable maintain accurate time when the main power is turned off.
 
-- **Expandable memory:** With a mini-SD card slot on the back, no worry on memory limit any more when adding libraries and using circuit python.
+- **Expandable memory:** With a MicroSD card slot on the back, no worry on memory limit any more when adding libraries and using circuit python.
 
 - **User button:** Besides the RESET button, also provide with another user-defined button.
 
@@ -163,7 +163,7 @@ This example introduces how to use the OLED display on the XIAO expansion board.
 
 **Step 1**. Install the Seeeduino XIAO on the Expansion board then conect the Type-C cable.
 
-**Step 2**. Install the [**u8g2**](https://github.com/olikraus/u8g2) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/). 
+**Step 2**. Install the [**u8g2**](https://github.com/olikraus/U8g2_Arduino) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/). 
 
 **Step 3**. Copy the code and stick on the Ardiono IDE then upload it.
 
@@ -350,7 +350,7 @@ This example uses RTC to display the clock on the OLED.
 
 **Step 1**. Install the Seeeduino XIAO on the Expansion board then conect the Type-C cable.
 
-**Step 2**. Install the [**u8g2**](https://github.com/olikraus/u8g2) and [**PCF8563**](https://github.com/Bill2462/PCF8563-Arduino-Library) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/). 
+**Step 2**. Install the [**u8g2**](https://github.com/olikraus/U8g2_Arduino) and [**PCF8563**](https://github.com/Bill2462/PCF8563-Arduino-Library) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/). 
 
 **Step 3**. Copy the code and stick on the Ardiono IDE then upload it.
 
@@ -486,12 +486,12 @@ while True:
 ```
 
 
-### **SD card for circuitpython**
+### **MicroSD card for circuitpython**
 
-The Seeedruino XIAO build-in about 40 KB flash, but it may have not enough space to store the large size python code file, fortunately, Seeeduino XIAO expansion board built-in an SD card slot for extending the store space, so you can follow this instruction to learn how to run the circuitpython on the SD card.
+The Seeedruino XIAO build-in about 40 KB flash, but it may have not enough space to store the large size python code file, fortunately, Seeeduino XIAO expansion board built-in an MicroSD card slot for extending the store space, so you can follow this instruction to learn how to run the circuitpython on the MicroSD card.
 
 !!!Note
-    The SD card system format is FAT or exFAT. If you use other SD card system format that will cause the SD card can not be recognized. 
+    The MicroSD card system format is FAT or exFAT. If you use other MicroSD card system format that will cause the MicroSD card can not be recognized. 
 
 **Step 1.** Prepare a micro SD Card to plug in the XIAO expansion board.
 
@@ -536,9 +536,9 @@ sys.path.append("/sd/lib")  ## switch to the path to SD card
 
 **Buzzer Example**
 
-This example for test the buzzer via the run the `buzzer.py` in the SD card.
+This example for test the buzzer via the run the `buzzer.py` in the MicroSD card.
 
-**Step 1.** You can just paste [**buzzer.py**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/buzzer.py) in the SD card.
+**Step 1.** You can just paste [**buzzer.py**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/buzzer.py) in the MicroSD card.
 
 <div align=center><img width = 850 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/circuit_python_pic/sd_card_store.png"/></div>
 
@@ -549,7 +549,7 @@ This example for test the buzzer via the run the `buzzer.py` in the SD card.
 **Step 3.** Add `import buzzer` in the main.py file. 
 <div align=center><img width = 650 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/add_buzzer.png"/></div>
 
-When you finish all the step, the buzzer will work. If you to run other python files in the SD card, please imitate the example.
+When you finish all the step, the buzzer will work. If you to run other python files in the MicroSD card, please imitate the example.
 
 !!!Note
     If you want back to Arduino mode, you just need to upload any programme on the Arduino IDE.
@@ -854,7 +854,7 @@ Please follow the same color line to connect each sensor on the board. Please co
 
 **Step 2**. Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 
-**Step 3**. Install the [**u8g2**](https://github.com/olikraus/u8g2),  [**Servo**](https://github.com/arduino-libraries/Servo),  [**Seeed_Arduino_KCT202**](https://github.com/Seeed-Studio/Seeed_Arduino_KCT202) and [**Seeed_LED_Ring**](https://github.com/Seeed-Studio/Seeed_LED_Ring) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
+**Step 3**. Install the [**u8g2**](https://github.com/olikraus/U8g2_Arduino),  [**Servo**](https://github.com/arduino-libraries/Servo),  [**Seeed_Arduino_KCT202**](https://github.com/Seeed-Studio/Seeed_Arduino_KCT202) and [**Seeed_LED_Ring**](https://github.com/Seeed-Studio/Seeed_LED_Ring) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
 
 **Step 4**. Copy the code stick on the Aruino IDE then upload it.
 
@@ -1073,7 +1073,7 @@ Please follow the same color line to connect each sensor on the board. Please co
 
 **Step 2**. Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 
-**Step 3**. Install the [**u8g2**](https://github.com/olikraus/u8g2) and [**Seeed_Arduino_KCT202**](https://github.com/Seeed-Studio/Seeed_Arduino_KCT202) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
+**Step 3**. Install the [**u8g2**](https://github.com/olikraus/U8g2_Arduino) and [**Seeed_Arduino_KCT202**](https://github.com/Seeed-Studio/Seeed_Arduino_KCT202) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
 
 **Step 4**. Copy the code stick on the Aruino IDE then upload it.
 
@@ -1208,7 +1208,7 @@ Please follow the same color line to connect each sensor on the board. Please co
 
 **Step 2**. Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 
-**Step 3**. Install the [**u8g2**](https://github.com/olikraus/u8g2),  [**Seeed_PM2_5_sensor_HM3301**](https://github.com/Seeed-Studio/Seeed_PM2_5_sensor_HM3301) and [**Seeed_SCD30**](https://github.com/Seeed-Studio/Seeed_SCD30) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
+**Step 3**. Install the [**u8g2**](https://github.com/olikraus/U8g2_Arduino),  [**Seeed_PM2_5_sensor_HM3301**](https://github.com/Seeed-Studio/Seeed_PM2_5_sensor_HM3301) and [**Seeed_SCD30**](https://github.com/Seeed-Studio/Seeed_SCD30) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
 
 **Step 4**. Copy the code stick on the Aruino IDE then upload it.
 
@@ -1445,7 +1445,7 @@ Please follow the same color line to connect each sensor on the board. Please co
 
 **Step 2**. Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 
-**Step 3**. Install the [**u8g2**](https://github.com/olikraus/u8g2) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
+**Step 3**. Install the [**u8g2**](https://github.com/olikraus/U8g2_Arduino) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
 
 **Step 4**. Copy the code stick on the Aruino IDE then upload it.
 

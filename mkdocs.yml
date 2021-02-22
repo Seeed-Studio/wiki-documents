@@ -152,7 +152,7 @@ nav:
           - DS1307 RTC (Real Time Clock) for Raspberry Pi: Pi_RTC-DS1307.md
           - DS3231 High Accuracy RTC (Real Time Clock) for Raspberry Pi: High_Accuracy_Pi_RTC-DS3231.md
           - Raspberry Pi RS232 Board v1.0: Raspberry_Pi_R232_Board_v1.0.md
-          - Raspberry Pi Relay Board v1.0: Raspberry_Pi_Relay_Board_v1.0.md
+          - 4-Channel SPDT Relay HAT for Raspberry Pi: Raspberry_Pi_Relay_Board_v1.0.md
           - Grove Base Hat for Raspberry Pi: Grove_Base_Hat_for_Raspberry_Pi.md
           - Grove Base Hat for Raspberry Pi Zero: Grove_Base_Hat_for_Raspberry_Pi_Zero.md
           - Skeleton Box for Raspberry Pi Compute Module Development Kit: Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit.md
@@ -241,7 +241,8 @@ nav:
             - Overview: Wio-Terminal-Network-Overview.md
             - Wi-Fi: Wio-Terminal-Wi-Fi.md
             - Advanced Wi-Fi Usage: Wio-Terminal-Advanced-Wi-Fi.md
-            - Connecting to Microsoft Azure IoT: Wio-Terminal-Azure-IOT.md
+            - Connecting to Microsoft Azure IoT Central: Connect-Wio-Terminal-to-Microsoft-Azure-IoT-Central.md
+            - Connecting to Microsoft Azure IoT Hub: Wio-Terminal-Azure-IOT.md
             - Connecting to Google Cloud IoT: Connect-Wio-Terminal-to-Google-Cloud-IoT-Core.md
             - Ethernet: Wio-Terminal-Ethernet.md
             - Connecting to Blynk: Wio-Terminal-Blynk.md

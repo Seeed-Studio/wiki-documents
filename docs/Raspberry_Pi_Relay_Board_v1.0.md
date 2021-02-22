@@ -1,33 +1,36 @@
 ---
-name: Raspberry Pi Relay Board v1.0
+name: 4-Channel SPDT Relay HAT for Raspberry Pi
 category: Raspberry Pi
-bzurl: https://seeedstudio.com/Raspberry-Pi-Relay-Board-v1.0-p-2409.html
+bzurl: https://www.seeedstudio.com/Raspberry-Pi-4-Channel-SPDT-Relay-Hat-p-4850.html
 oldwikiname: Raspberry_Pi_Relay_Board_v1.0
-prodimagename: Raspberry_Pi_Relay_Board_v1.0.jpg
-bzprodimageurl: https://statics3.seeedstudio.com/images/product/103030029 1.jpg
+prodimagename: 1.png
+bzprodimageurl: https://files.seeedstudio.com/wiki/Raspberry-Relay-Hat/1.png
 surveyurl: https://www.research.net/r/Raspberry_Pi_Relay_Board_v1_0
-sku: 103030029
+sku: 114992543
 ---
 
-![](https://files.seeedstudio.com/wiki/Raspberry_Pi_Relay_Board_v1.0/img/Raspberry_Pi_Relay_Board_v1.0.jpg)
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Raspberry-Relay-Hat/1.png" alt="pir"  width="650" height="auto"></p>
 
-The Relay Shield utilizes four high quality relays and provides NO/NC interfaces that control the load of high current. Which means it could be a nice solution for controlling devices that couldn’t be directly controlled by IIC bus. Standardized shield form factor enables smoothly connection with the Raspberry Pi. The shield also has four dynamic indicators show the on/off state of each relay.
+The 4-Channel SPDT Relay HAT for Raspberry Pi utilizes four high-quality SPDT (single pole - double throw) relays and provides NO/NC (Normally Open/ Normally Closed) interfaces that can control the load of high current. This means it could be a nice solution for controlling devices that can't be directly controlled by the I2C bus. The standardized shield form factor enables smooth connection with a Raspberry Pi and it also has four LED indicators that show the on/off state of each relay. 
 
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Raspberry-Pi-4-Channel-SPDT-Relay-Hat-p-4850.html)
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Raspberry-Pi-Relay-Board-v1.0-p-2409.html)
+## Version
 
-
+| Product Version | Changes | Released Date |
+|-|-|-|
+| Raspberry Pi Relay Board v1.0 | Initial | 2015-04-08 |
+| 4-Channel SPDT Relay HAT for Raspberry Pi | 1.Replaced components for better stability<br>2.Electronic components layout change | 2021-02-08 |
 
 ## Features
 --------
--   Raspberry Pi3B, Pi3B+, Pi4 compatible
--   Interface: IIC, Three hardware SW1 (1, 2, 3) select the fixed I2C-bus address
--   Relay screw terminals
--   Standardized shield shape and design
--   LED working status indicators for each relay
--   COM, NO (Normally Open), and NC (Normally Closed) relay pins for each relay
--   High quality relays
--   Working status indicators for each relay
+- High-quality SPDT (single pole - double throw) relays
+- Compatible with Raspberry Pi 1, 2, 3, 4
+- I2C interface with three hardware SW1 (1, 2, 3) to select the fixed I2C-bus address
+- Relay screw terminals for easy connection 
+- Standardized shield shape and design
+- LED working status indicators for each relay
+- COM, NO (Normally Open), and NC (Normally Closed) relay pins for each relay
 
 ## Specifications
 --------------
@@ -186,7 +189,7 @@ mm
 ## Hardware Overview
 -----------------
 
-![](https://files.seeedstudio.com/wiki/Raspberry_Pi_Relay_Board_v1.0/img/Raspberry_Pi_Relay_Board_v1.0_p3.jpg)
+![](https://files.seeedstudio.com/wiki/Raspberry-Relay-Hat/2.png)
 
 ## Usage
 -----
@@ -335,8 +338,7 @@ That’s it, that’s all there is to it. Enjoy.
 
 Resources
 ---------
-- [Raspberry_Pi_Relay_Board_v1.0_sch_pcb](https://files.seeedstudio.com/wiki/Raspberry_Pi_Relay_Board_v1.0/res/Raspberry_Pi_Relay_Board_v1.0_sch_pcb.zip)
-- [Raspberry_Pi_Relay_Board_v1.0_PDF](https://files.seeedstudio.com/wiki/Raspberry_Pi_Relay_Board_v1.0/res/Raspberry%20Pi%20Relay%20Board%20v1.0.pdf)
+- [Schematics](https://files.seeedstudio.com/wiki/Raspberry-Relay-Hat/Raspberry-Pi-Relay-Hat_v1.0_SCH.zip)
 - [HLS8L Datasheet](https://files.seeedstudio.com/wiki/Raspberry_Pi_Relay_Board_v1.0/res/HLS8L.pdf)
 - [PCAL9535A Datasheet](https://files.seeedstudio.com/wiki/Raspberry_Pi_Relay_Board_v1.0/res/PCAL9535A.pdf)
 -  [Python Test Code](https://github.com/johnwargo/Seed-Studio-Relay-Board)

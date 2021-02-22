@@ -3,7 +3,7 @@
 ![](https://files.seeedstudio.com/wiki/Google_Cloud_IoT/thumb.png)
 
 ## Introduction 
-In this tutorial, we will walk you through the process of connecting the Wio Terminal to Google Cloud IoT Core and send telemetry data from the Wio Terminal to the Google Cloud IoT core. This will be divided into two sections where the first section will talk about how to use the exciting libraries to send telemtry data preconfigured in the code, whereas the second section will talk about how to add your own sensors to the Wio Terminal to send the telemtry data to Google Cloud IoT Core. Google Cloud IoT Core supports both HTTP and MQTT protocols for communication, but however we will be using the MQTT protocol in this tutorial.
+In this tutorial, we will walk you through the process of connecting the Wio Terminal to Google Cloud IoT Core and send telemetry data from the Wio Terminal to the Google Cloud IoT core. This will be divided into two sections where the first section will talk about how to use the exciting libraries to send telemetry data preconfigured in the code, whereas the second section will talk about how to add your own sensors to the Wio Terminal to send the telemetry data to Google Cloud IoT Core. Google Cloud IoT Core supports both HTTP and MQTT protocols for communication, but however we will be using the MQTT protocol in this tutorial.
 
 
 ### What is Google Cloud?
@@ -560,7 +560,7 @@ String payload = String("{\"timestamp\":") + getNTPtime() +
                   String("}");
 publishTelemetry(payload); 
 ```
-**Note:** Here we parse all the data as a string into influxDB. Parsing the **time** is important because influxDB is a time series database. Also the **pushTelemtry** function will send the data to the default topic we have created at the very beginning of this tutorial.
+**Note:** Here we parse all the data as a string into influxDB. Parsing the **time** is important because influxDB is a time series database. Also the **pushTelemetry** function will send the data to the default topic we have created at the very beginning of this tutorial.
 
 - **STEP 4:** Upload the code to the Wio Terminal
 

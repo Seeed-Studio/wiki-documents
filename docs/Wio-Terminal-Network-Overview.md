@@ -112,6 +112,8 @@ There are few Arduino Libraries that are needed for the Wireless connectivity. F
 !!!Note
     Please update the **Seeed SAMD ArduinoCore to the latest version(>=1.8.1)**!
 
+> You can also find the source code of Seeed SAMD ArduinoCore [**here**](https://github.com/Seeed-Studio/ArduinoCore-samd).    
+
 ### 1. Install the Seeed_Arduino_rpcWiFi
  
 1. Visit the [**Seeed_Arduino_rpcWiFi**](https://github.com/Seeed-Studio/Seeed_Arduino_rpcWiFi) repositories and download the entire repo to your local drive.

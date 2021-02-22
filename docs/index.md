@@ -1,36 +1,28 @@
 
 # Weekly Wiki
-![](https://files.seeedstudio.com/wiki/IMAGES/February_week1.png)
+![](https://files.seeedstudio.com/wiki/IMAGES/21_Feb_Week4.png)
 
-It's the first week of February and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
+It's the fourth week of February and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
 As you all know, Seeed Wiki is a dedicated platform where we provide the proper guidance and support you need when getting started with our products. We put a lot of effort to make this platform more user friendly because we want to enable the learning of electronics in a more systematic approach.  
 We will bring you all these wiki updates in a weekly basis. So stay tuned with us and don't forget to visit this page again next week!
 
 ## Existing Wiki Updated 
 
-### BIOS and EC Firmware Update for ODYSSEY-X86J4105
+### 4-Channel SPDT Relay HAT for Raspberry Pi
 
-We have updated the BIOS and EC firmware to fix bugs and enhance the performance of the [ODYSSEY - X86J4105](https://www.seeedstudio.com/tag/ODYSSEY-X86J4105.html). Follow [this link](https://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-OS/#how-to-upgrade-the-bios) to update your ODYSSEY-X86J4105!
+We have released a new version of the [4-Channel SPDT Relay HAT for Raspberry Pi](https://www.seeedstudio.com/Raspberry-Pi-4-Channel-SPDT-Relay-Hat-p-4850.html) with some hardware improvements compared to the existing version. Check the [getting started guide](https://wiki.seeedstudio.com/Raspberry_Pi_Relay_Board_v1.0) to learn more!
 
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-OS/#how-to-upgrade-the-bios"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105-Installing-OS/latest-BIOS.png" alt="pir"  width="800" height="auto"></a></p>
+<p style="text-align:center;"><a href="https://www.seeedstudio.com/Raspberry-Pi-4-Channel-SPDT-Relay-Hat-p-4850.html"><img src="https://files.seeedstudio.com/wiki/Raspberry-Relay-Hat/1.png" alt="pir"  width="500" height="auto"></a></p>
 
 ## New Wiki Added
 
-### Sensor Probes and Accessories for Industrial IoT
+### Connect Wio Terminal to Microsoft Azure IoT Central
 
-We have also added getting started guides for various different sensor probes and accessories that suit well for Industrial IoT applications. Explore them by following the links below:
+[Microsoft Azure IoT Central](https://azure.microsoft.com/en-us/services/iot-central/) is a fully managed global IoT SaaS (software as a service) solution that makes it easy to connect, monitor and manage your IoT assets at scale.
 
-- [Liquid Level Sensor](https://wiki.seeedstudio.com/Liquid_Level_Sensor/)
-- [Water Leak Detector](https://wiki.seeedstudio.com/Water_Leak_Detector/)
-- [Industrial ph Sensor](https://wiki.seeedstudio.com/Industrial_ph_Sensor/)
-- [Soil Moisture Temperature EC Sensor](https://wiki.seeedstudio.com/Soil_Moisture_Temperature_EC_Sensor/)
-- [Soil Moisture Temperature Sensor](https://wiki.seeedstudio.com/Soil_Moisture_Temperature_Sensor/)
-- [Industrial Grade Optical Rain Gauge RG 15](https://wiki.seeedstudio.com/Industrial-Grade_Optical_Rain_Gauge_RG-15/)
-- [Optical Rain Gauge RG 9](https://wiki.seeedstudio.com/Optical_Rain_Gauge_RG-9/)
-- [SenseCAP SOLO CO2 Sensor](https://wiki.seeedstudio.com/SenseCAP_SOLO_CO2_Sensor/)
-- [ORCH S4 Weather Station](https://wiki.seeedstudio.com/ORCH_S4_Weather_Station/)
+Learn how to connect the [Wio Terminal](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) to Microsoft Azure IoT Central and send telemetry data from the onboard sensors/ hardware on the Wio Terminal such as the 3-axis accelerometer, light sensor, 3 buttons to Microsoft Azure IoT Central. Check [this wiki](https://wiki.seeedstudio.com/Connect-Wio-Terminal-to-Microsoft-Azure-IoT-Central) to get started!
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Industrial-Grade_Optical_Rain_Gauge_RG-15/applications.png" alt="pir"  width="950" height="auto"></p>
+<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Connect-Wio-Terminal-to-Microsoft-Azure-IoT-Central"><img src="https://files.seeedstudio.com/wiki/Azure_IoTc_WT/WT_client_send.png" alt="pir"  width="1000" height="auto"></a></p>
 
 ## What's more?
 
@@ -44,9 +36,10 @@ In this show, Lakshantha explains how to use Wio Terminal as an IoT device and b
 
 ### Seeed on YouTube
 
-We have recently released the [Grove Shield for Raspberry Pi Pico](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html). It brings hundreds of Grove Sensors, actuators, and displays to your Raspberry Pi Pico with simple plug-and-play connections! Learn more below.
+The All-New [Raspberry Pi Pico](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html) is a microcontroller board based on the Raspberry Pi RP2040 microcontroller chip. It has been designed to be a low-cost, high-performance microcontroller board with flexible digital interfaces. 
+Now you can perform machine learning inference on the Raspberry Pi Pico 2040 via Edge Impulse! Check the video below to learn more!
 
-<p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/3htK45-_XOI" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/LmSrY_pZho0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 
 Also, don't forget to subscribe to our [YouTube Channel](http://www.youtube.com/c/SeeedStudioSZ) to stay updated with our video releases on exciting products!
