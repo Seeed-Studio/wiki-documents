@@ -1,39 +1,28 @@
 
 # Weekly Wiki
-![](https://files.seeedstudio.com/wiki/IMAGES/21_Feb_Week2.png)
+![](https://files.seeedstudio.com/wiki/IMAGES/21_Feb_Week4.png)
 
-It's the second week of February and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
+It's the fourth week of February and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
 As you all know, Seeed Wiki is a dedicated platform where we provide the proper guidance and support you need when getting started with our products. We put a lot of effort to make this platform more user friendly because we want to enable the learning of electronics in a more systematic approach.  
 We will bring you all these wiki updates in a weekly basis. So stay tuned with us and don't forget to visit this page again next week!
 
 ## Existing Wiki Updated 
 
-### EC Firmware Update for ODYSSEY-X86J4105
+### 4-Channel SPDT Relay HAT for Raspberry Pi
 
-We have updated the EC firmware to fix bugs and enhance the performance of the [ODYSSEY - X86J4105](https://www.seeedstudio.com/tag/ODYSSEY-X86J4105.html). Follow [this link](https://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-OS/#how-to-update-the-embedded-controller) to update your ODYSSEY-X86J4105!
+We have released a new version of the [4-Channel SPDT Relay HAT for Raspberry Pi](https://www.seeedstudio.com/Raspberry-Pi-4-Channel-SPDT-Relay-Hat-p-4850.html) with some hardware improvements compared to the existing version. Check the [getting started guide](https://wiki.seeedstudio.com/Raspberry_Pi_Relay_Board_v1.0) to learn more!
 
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-OS/#how-to-update-the-embedded-controller"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105-Installing-OS/latest-BIOS.png" alt="pir"  width="800" height="auto"></a></p>
-
-### Enabling Voice Recognition at the Edge with Picovoice
-
-[Picovoice](https://picovoice.ai/) enables enterprises to innovate and differentiate rapidly with private voice AI. Build a unified AI strategy around your brand and products with our speech recognition and [Natural-language understanding (NLU) technologies](https://searchenterpriseai.techtarget.com/definition/natural-language-understanding-NLU). Seeed has partnered with Picovice to bring Speech Recognition solution on the edge using [ReSpeaker 4-Mic Array](https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi.html) and [ReSpeaker 2-Mic Pi HAT](https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/) for developers.
-
-We have made a step-by-step guide, where you can get started with Picovoice on the [ReSpeaker 4-Mic Array](https://wiki.seeedstudio.com/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/#enabling-voice-recognition-at-edge-with-picovoice) and [ReSpeaker 2-Mic Pi HAT](https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/#enabling-voice-recognition-at-the-edge-with-picovoice) combined with a [Raspberry Pi](https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-4GB-p-4077.html).
-Also you can use the [ReSpeaker 2-Mic Pi HAT](https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/#picovoice-with-respeaker-2-mic-pi-hat-and-raspberry-pi-zero-getting-started) combined with a [Raspberry Pi Zero](https://www.seeedstudio.com/Raspberry-Pi-Zero-p-4254.html) to experience Picovoice!
-
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/#enabling-voice-recognition-at-the-edge-with-picovoice"><img src="https://files.seeedstudio.com/wiki/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/banner.gif" alt="pir"  width="900" height="auto"></a></p>
-
-
+<p style="text-align:center;"><a href="https://www.seeedstudio.com/Raspberry-Pi-4-Channel-SPDT-Relay-Hat-p-4850.html"><img src="https://files.seeedstudio.com/wiki/Raspberry-Relay-Hat/1.png" alt="pir"  width="500" height="auto"></a></p>
 
 ## New Wiki Added
 
-### Grove Shield for Pi Pico V1.0
+### Connect Wio Terminal to Microsoft Azure IoT Central
 
-The Raspberry Pi Pico is a brand-new, popular, low-cost, high-performance microcontroller board. So how to integrate Grove sensors to it? The [Grove Shield for Pi Pico](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html) perfectly will solve this problem.
+[Microsoft Azure IoT Central](https://azure.microsoft.com/en-us/services/iot-central/) is a fully managed global IoT SaaS (software as a service) solution that makes it easy to connect, monitor and manage your IoT assets at scale.
 
-Learn how to get started with this shield combined with a Raspberry Pi Pico quickly and easily, by following this [step-by-step guide](https://wiki.seeedstudio.com/Grove_Shield_for_Pi_Pico_V1.0/)!
+Learn how to connect the [Wio Terminal](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) to Microsoft Azure IoT Central and send telemetry data from the onboard sensors/ hardware on the Wio Terminal such as the 3-axis accelerometer, light sensor, 3 buttons to Microsoft Azure IoT Central. Check [this wiki](https://wiki.seeedstudio.com/Connect-Wio-Terminal-to-Microsoft-Azure-IoT-Central) to get started!
 
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Grove_Shield_for_Pi_Pico_V1.0/"><img src="https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Pico_hardware.png" alt="pir"  width="700" height="auto"></a></p>
+<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Connect-Wio-Terminal-to-Microsoft-Azure-IoT-Central"><img src="https://files.seeedstudio.com/wiki/Azure_IoTc_WT/WT_client_send.png" alt="pir"  width="1000" height="auto"></a></p>
 
 ## What's more?
 
@@ -47,9 +36,10 @@ In this show, Lakshantha explains how to use Wio Terminal as an IoT device and b
 
 ### Seeed on YouTube
 
-We have recently released the [Grove Shield for Raspberry Pi Pico](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html). It brings hundreds of Grove Sensors, actuators, and displays to your Raspberry Pi Pico with simple plug-and-play connections! Learn more below.
+The All-New [Raspberry Pi Pico](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html) is a microcontroller board based on the Raspberry Pi RP2040 microcontroller chip. It has been designed to be a low-cost, high-performance microcontroller board with flexible digital interfaces. 
+Now you can perform machine learning inference on the Raspberry Pi Pico 2040 via Edge Impulse! Check the video below to learn more!
 
-<p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/3htK45-_XOI" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/LmSrY_pZho0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 
 Also, don't forget to subscribe to our [YouTube Channel](http://www.youtube.com/c/SeeedStudioSZ) to stay updated with our video releases on exciting products!
