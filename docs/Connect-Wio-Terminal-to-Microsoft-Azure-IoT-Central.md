@@ -388,16 +388,7 @@ DHT dht(DHTPIN, DHTTYPE); //Initializing DHT sensor
 
 **Note:** The DHT11 sensor can be connected to both the Grove Ports on the Wio Terminal. If **Digital Port** is used, pin can be defined as **0** and if **I2C port** is used, pin can be defined as **PIN_WIRE_SCL**. The port diagram will be shown later in this document
 
-- **STEP 16:** Add the following after the above codes to define the variables we are going to use to store temperature and humidity values
-
-```cpp
-//variable definitions 
-
-int temp;
-int humi;
-```
-
-- **STEP 17:** Add the following codes under the **SendTelemetry()** function to parse the json file along with the telemetry data
+- **STEP 16:** Add the following codes under the **SendTelemetry()** function to parse the json file along with the telemetry data
 
 ```cpp
 static az_result SendTelemetry()
@@ -409,6 +400,11 @@ static az_result SendTelemetry()
 
     int light;
     light = analogRead(WIO_LIGHT) * 100 / 1023;
+
+    int temp; //assign variable to store temperature
+    int humi; //assign variable to store humidity
+    temp = dht.readTemperature(); //read temperature
+    humi = dht.readHumidity(); //read humidity
 
     char telemetry_topic[128];
     if (az_result_failed(az_iot_hub_client_telemetry_get_publish_topic(&HubClient, NULL, telemetry_topic, sizeof(telemetry_topic), NULL)))
@@ -427,24 +423,15 @@ static az_result SendTelemetry()
     AZ_RETURN_IF_FAILED(az_json_writer_append_int32(&json_builder, humi));
 ```
 
-- **STEP 18:** Add the following codes after the line **ntp.begin**, in order to start the DHT11 sensor
+- **STEP 17:** Add the following codes after the line **ntp.begin**, in order to start the DHT11 sensor
 
 ```cpp
 dht.begin(); //start DHT sensor
 ```
 
-- **STEP 19:** Add the following codes under **void loop()** in order to assign variables to store temperature and humidity data
-
-```cpp
-void loop()
-{
-    temp = dht.readTemperature(); //assign variable to store temperature
-    humi = dht.readHumidity(); //assign variable to store humidity
-```
-
 Now we have completed all the codes for this demo. 
 
-- **STEP 20:** Click **PlatformIO icon** from the left navigation menu and click **Build**
+- **STEP 18:** Click **PlatformIO icon** from the left navigation menu and click **Build**
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Azure_IoTc_WT/platformio_build.png" alt="pir" width="400" height="auto"></a></p>
 
@@ -497,7 +484,7 @@ Now we need to create a custom device template so that the data from the Wio Ter
 | Middle button | 1 x 1 | KPI |
 | Right button | 1 x 1 | KPI |
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Azure_IoTc_WT/new_layout_1.png" alt="pir" width="1000" height="auto"></a></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Azure_IoTc_WT/dashboard.png" alt="pir" width="1000" height="auto"></a></p>
 
 - **STEP 8:** Click **Save** and **Publish**
 
@@ -557,7 +544,7 @@ Now you will be able to see the Wio Terminal LCD displaying that it's connecting
 
 Go back to Azure IoT Central and from the left navigation menu, click **Devices**, click on your **Device name**
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Azure_IoTc_WT/final_aziot.png" alt="pir" width="1000" height="auto"></a></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Azure_IoTc_WT/dashboard_final1.png" alt="pir" width="1000" height="auto"></a></p>
 
 Now you will be able to visualize all the sensor data from the Wio Terminal on Microsoft Azure IoT Central Dashboard!
 
