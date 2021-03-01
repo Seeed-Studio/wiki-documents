@@ -44,7 +44,6 @@ cd ambd_flash_tool
 
 - **STEP 4:** Execute the following command to erase the initial firmware
 
-
 ```sh
 .\ambd_flash_tool.exe erase
 ```
@@ -99,6 +98,7 @@ python3 ambd_flash_tool.py erase
 #### For Windows
 
 - While you are inside the **ambd_flash_tool** directory, execute the following command to flash the **latest firmware** to RTL8720
+
 ```sh
 .\ambd_flash_tool.exe flash
 ``` 
