@@ -147,7 +147,7 @@ python3 ambd_flash_tool.py flash -d [RTL8720-firmware-path]
 
 If everything goes well, you should see all a successful message. Now you have flashed the RTL8720 firmware into the RTL8720 core!
 
-### Check RTL8720 Firmware Version from Arduino IDE
+## Check RTL8720 Firmware Version from Arduino IDE
 
 After installing the above firmware, you can check whether the firmware is installed correctly, by uploading the following code to the Wio Terminal via **Arduino IDE**
 
