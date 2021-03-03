@@ -40,7 +40,7 @@ The Grove - Loudness Sensor is designed to detect the sound of environment. Base
 |-----------------------|------------------------|
 | Voltage               | 3.5~10 VDC             |
 | Working Frequency     | 5~2000 Hz              |
-| Sensitivity           | -48~66 dB              |
+| Sensitivity           | -60~-56dBV/Pa           |
 | Signal-to-noise Ratio | >58 dB                 |
 | Output Signal range   | Analog Signal (0-1023) |
 
