@@ -102,6 +102,7 @@ If you want to reset the Seeeduino XIAO, perform the following steps:
 - Use tweezers or short lines to short the RST pins **only once**
 - The orange LED lights flicker on and light up.
 
+Please note: The behavior of the built-in LED is reversed to the one on an Arduino. On the Seeeduino Xiao, the pin has to be pulled low, whereas on other micro-controllers it has to be pulled high.  
 
 ### **Interrupt**
 
