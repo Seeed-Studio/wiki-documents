@@ -166,35 +166,45 @@ void loop() {
 
 Once you open **Serial Monitor**, you should see the **firmware version** printed
 
-## Libraries Installations
-
-There are few Arduino Libraries that are needed for the Wireless connectivity. Follow  through to install all the libraries needed:
+## Update Seeed SAMD ArduinoCore
 
 !!!Note
-    Please update the **Seeed SAMD ArduinoCore to the latest version(>=1.8.1)**!
+    Please update the **Seeed SAMD ArduinoCore to the latest version (1.8.1)**!
+
+- **STEP 1:** Open the **Arduino IDE**, and click `Tools` -> `Board` -> `Boards Manager`, and search **Wio Terminal** in the search box
+
+- **STEP 2:** Make sure the latest version (1.8.1) is installed. If not, click on the `Select version` drop-down menu, select the latest version and click `Install`
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/ArduinoCore_new.png" alt="pir" width="850" height="auto"></p>
 
 > You can also find the source code of Seeed SAMD ArduinoCore [**here**](https://github.com/Seeed-Studio/ArduinoCore-samd).    
 
-### 1. Install the Seeed_Arduino_rpcWiFi
- 
-1. Visit the [**Seeed_Arduino_rpcWiFi**](https://github.com/Seeed-Studio/Seeed_Arduino_rpcWiFi) repositories and download the entire repo to your local drive.
- 
-2. Now, the Seeed_Arduino_rpcWiFi library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_rpcWiFi` file that you've have just downloaded.
- 
-![InstallLibrary](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Xnip2019-11-21_15-50-13.jpg)
+## Libraries Installation
 
-### 2. Install the Seeed_Arduino_rpcUnified
+There are a few Arduino Libraries that are needed for Wireless connectivity. We have included all the wireless-related libraries for the Wio Terminal in the **Arduino Library Manager**. So you simply have to open Arduino Library Manager within Arduino IDE and search for the libraries that you need and easily install them!
 
-1. Visit the [**Seeed_Arduino_rpcUnified**](https://github.com/Seeed-Studio/Seeed_Arduino_rpcUnified) repositories and download the entire repo to your local drive.
+### How to Install a Library from Arduino Library Manager
 
-2. Now, the Seeed_Arduino_rpcUnified library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_rpcUnified` file that you've have just downloaded.
+- **STEP 1:** Open the **Arduino IDE**, and click `Sketch` -> `Include Library` -> `Manage Libraries...`
 
-### 3. Install the Seeed_Arduino_mbedtls
+- **STEP 2:** Type the **name of the library** that we need and select the **latest version** from the drop-down menu (if available)
 
-1. Visit the [**Seeed_Arduino_mbedtls**](https://github.com/Seeed-Studio/Seeed_Arduino_mbedtls/tree/dev) repositories and download the entire repo to your local drive.
+- **STEP 3:** Click **Install**
 
-2. Now, the Seeed_Arduino_mbedtls library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_mbedtls` file that you've have just downloaded.
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/library_install_1.jpg" alt="pir" width="870" height="auto"></p>
 
-### 4. Install the Seeed_Arduino_FS
+### Needed Libraries for Wi-Fi
 
-1. Please follow the [**Wio Terminal FS Overview**](https://wiki.seeedstudio.com/Wio-Terminal-FS-Overview/) to install dependent libraries.
+We need the following libraries to get started with Wi-Fi on the Wio Terminal. You can search for these libraries by typing the library name in the search box of Arduino Library Manager.
+
+- [**Seeed_Arduino_rpcWiFi**](https://github.com/Seeed-Studio/Seeed_Arduino_rpcWiFi) - search for `"seeed rpcwifi"` 
+
+- [**Seeed_Arduino_rpcUnified**](https://github.com/Seeed-Studio/Seeed_Arduino_rpcUnified) - search for `"seeed rpcunified"`
+
+- [**Seeed_Arduino_mbedtls**](https://github.com/Seeed-Studio/Seeed_Arduino_mbedtls) - search for `"seeed mbedtls"`
+
+- [**Seeed_Arduino_FS**](https://github.com/Seeed-Studio/Seeed_Arduino_FS) - search for `"seeed fs"`
+
+- [**Seeed_Arduino_SFUD**](https://github.com/Seeed-Studio/Seeed_Arduino_SFUD) - search for `"seeed sfud"`
+
+
