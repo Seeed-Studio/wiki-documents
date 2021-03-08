@@ -1,8 +1,8 @@
 
 # Weekly Wiki
-![](https://files.seeedstudio.com/wiki/IMAGES/21-March-Week-1.png)
+![](https://files.seeedstudio.com/wiki/IMAGES/21-March-Week-2.png)
 
-It's the first week of March and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
+It's the second week of March and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
 As you all know, Seeed Wiki is a dedicated platform where we provide the proper guidance and support you need when getting started with our products. We put a lot of effort to make this platform more user friendly because we want to enable the learning of electronics in a more systematic approach.  
 We will bring you all these wiki updates in a weekly basis. So stay tuned with us and don't forget to visit this page again next week!
 
@@ -11,9 +11,20 @@ We will bring you all these wiki updates in a weekly basis. So stay tuned with u
 ### New Tool to Erase and Flash Firmware for RTL8720 on Wio Terminal
 
 If you have been playing around with Wi-Fi on the [Wio Terminal](https://www.seeedstudio.com/Wio-Terminal-p-4509.html), you might have experienced that the process of erasing and flashing a new firmware was a bit lengthy. Now we have streamlined the process by reducing the steps using the new **ambd flash tool**. Now you can quickly flash new firmware to RTL8720!
+
 Follow [this wiki](https://wiki.seeedstudio.com/Wio-Terminal-Network-Overview) to learn more!
 
 <p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Wio-Terminal-Network-Overview"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/ambd_tool_win_2.png" alt="pir"  width="750" height="auto"></a></p>
+
+### Update Wi-Fi libraries for Wio Terminal using Arduino Library Manager
+
+Until now, if you wanted to install Wi-Fi libraries for the Wio Terminal, you had to visit the corresponding GitHub repos for each library, download them and install them using Arduino IDE.
+
+Now we have made the process much easier by including all Wi-Fi libraries for Wio Terminal inside the **Arduino Library Manager**. You can easily **download, install and update** the libraries only from Arduino IDE!
+
+We will support this for the Bluetooth Library as well in the following days!
+
+<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Wio-Terminal-Network-Overview"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/library_install_1.jpg" alt="pir"  width="850" height="auto"></a></p>
 
 ### Connect Wio Terminal to Microsoft Azure IoT Central
 
