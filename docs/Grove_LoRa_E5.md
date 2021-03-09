@@ -28,7 +28,11 @@ By connecting Grove - LoRa-E5 to your development boards, your devices are able 
 - Ultra-low power consumption and high performance
 
 ## Harware Overview 
+
 ![](https://files.seeedstudio.com/products/113020091/2951615280157_.pic_hd.jpg)
+
+
+
 1. LoRa-E5 STM32WLE5JC ([Datasheet](https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20module%20datasheet_V1.0.pdf))
 2. MHF IPEX Connector
 3. Wire Antenna
