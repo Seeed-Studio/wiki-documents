@@ -25,21 +25,103 @@ By connecting Grove - LoRa-E5 to your development boards, your devices are able 
 ## Harware Overview 
 
 ![](https://files.seeedstudio.com/products/113020091/2951615280157_.pic_hd.jpg)
+
 1. LoRa-E5 STM32WLE5JC ([Datasheet](https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20module%20datasheet_V1.0.pdf))
+
 2. MHF IPEX Connector
+
 3. Wire Antenna
+
 4. Grove Connector
+
 5. LED Indicators
 
 ## Platform Supported
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| <div align=center><img width = 90 src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg"/></div> | <div align=center><img width = 180 src="https://files.seeedstudio.com/products/113020091/Raspberry_Pi-Logo.wine.png"/></div> | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg) |
+| <div align=center><img width = 150 src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg"/></div> | <div align=center><img width = 250 src="https://files.seeedstudio.com/products/113020091/Raspberry_Pi-Logo.wine.png"/></div> | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg) |
 
 ## Specification
 
 
+<style type="text/css" xml="space"><!--
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-f2tp{background-color:#c0c0c0;border-color:#c0c0c0;color:#ffffff;text-align:left;vertical-align:top}
+.tg .tg-uu1j{background-color:#ffffff;border-color:#c0c0c0;color:#343434;text-align:left;vertical-align:top}
+--></style>
+<table class="tg">
+<thead>
+<tr><th class="tg-f2tp" colspan="2">General Parameters</th></tr>
+</thead>
+<tbody>
+<tr>
+<td class="tg-uu1j">Voltage <span>Supply: </span></td>
+<td class="tg-uu1j">3.3V/5V</td>
+</tr>
+<tr>
+<td class="tg-uu1j">Power <span>Output: </span></td>
+<td class="tg-uu1j">Up to +20 dBm at 3.3V</td>
+</tr>
+<tr>
+<td class="tg-uu1j">Working Frequency</td>
+<td class="tg-uu1j">868/915MHz</td>
+</tr>
+<tr>
+<td class="tg-uu1j">Protocol</td>
+<td class="tg-uu1j">LoRaWAN</td>
+</tr>
+<tr>
+<td class="tg-uu1j">Sensitivity</td>
+<td class="tg-uu1j">-116.5dBm ~ -136dBm</td>
+</tr>
+<tr>
+<td class="tg-uu1j">Modulation</td>
+<td class="tg-uu1j">LoRa, (G)FSK, (G)MSK and BPSK</td>
+</tr>
+<tr>
+<td class="tg-uu1j">Current</td>
+<td class="tg-uu1j">Only 60uA in sleep mode</td>
+</tr>
+<tr>
+<td class="tg-uu1j">Size</td>
+<td class="tg-uu1j">20*40mm</td>
+</tr>
+<tr>
+<td class="tg-uu1j">Working Temperature</td>
+<td class="tg-uu1j">-40℃ ~ 85℃</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<style type="text/css" xml="space"><!--
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-f2tp{background-color:#c0c0c0;border-color:#c0c0c0;color:#ffffff;text-align:left;vertical-align:top}
+.tg .tg-uu1j{background-color:#ffffff;border-color:#c0c0c0;color:#343434;text-align:left;vertical-align:top}
+--></style>
+<table class="tg">
+<thead>
+<tr><th class="tg-f2tp" colspan="2">Part List:</th></tr>
+</thead>
+<tbody>
+<tr>
+<td class="tg-uu1j" colspan="2">Grove - LoRa-E5 PCBA *1</td>
+</tr>
+<tr>
+<td class="tg-uu1j" colspan="2">Grove Universal Cable *1</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -71,7 +153,7 @@ Here is a demo showing you how to connect TTN (The Things Network) and Seeeduino
 
 | Seeeduino XIAO | Grove - LoRa-E5 | Seeeduino XIAO Expansion Board | Grove - Temperature & Humidity Sensor (DHT11) | 
 |--------------|--------------|--------------|--------------|
-|<div align=center><img width = 180 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/seeeduino-XIAO-thumbnail.jpg"/></div>| <div align=center><img width = 300 src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/9d0ce51a71ce6a79dfa2a98d65a0f0bd/1/1/11302009_preview-34.png"/></div>| <div align=center><img width = 250 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg"/></div>| <div align=center><img width = 180 src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/9d0ce51a71ce6a79dfa2a98d65a0f0bd/g/r/grove-temperature-humidity-sensor-dht11-preview.png"/></div>
+|<div align=center><img width = 250 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/seeeduino-XIAO-thumbnail.jpg"/></div>| <div align=center><img width = 350 src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/9d0ce51a71ce6a79dfa2a98d65a0f0bd/1/1/11302009_preview-34.png"/></div>| <div align=center><img width = 250 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg"/></div>| <div align=center><img width = 180 src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/9d0ce51a71ce6a79dfa2a98d65a0f0bd/g/r/grove-temperature-humidity-sensor-dht11-preview.png"/></div>
 |[Get ONE Now](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Doppler-Radar-BGT24LTR11-p-4572.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DHT11.html)|
 
 
@@ -342,8 +424,11 @@ void loop(void)
 - **Step 2**: Add an Application: 
 
 1. Application ID: Enter a unique name.
+
 2. Description: Enter a description.
+
 3. Handler registration: select the same handler as the gateway router.
+
 4. Select Add Application to continue.
 
 ![3.5](https://files.seeedstudio.com/products/113990896/wiki/s3.5.png)
@@ -368,6 +453,7 @@ function Decoder(bytes, port) {
 
 - **Step 4**: Add Grove - LoRa-E5 device to the TTN Console
 
+
 1. Run the downloaded program module, view the DEVEUI and APP EUI of the LoRa-E5 module through the serial port.
 
 ![3.10](https://files.seeedstudio.com/products/113020091/Screen%20Shot%202021-03-09%20at%203.19.22%20PM.png)
@@ -381,8 +467,11 @@ function Decoder(bytes, port) {
 ![3.10](https://files.seeedstudio.com/products/113020091/Screen%20Shot%202021-03-09%20at%203.19.35%20PM.png)
 
 1. Device ID: Enter a unique name.
+
 2. Device EUI: Select the E5 dev EUI.
+
 3. APP KEY:  Use this APPkey 2B7E151628AED2A6ABF7158809CF4F3C
+
 4. App EUI: Select the E5 App EUI.
 
 ![3.10](https://files.seeedstudio.com/products/113020091/Screen%20Shot%202021-03-09%20at%203.19.44%20PM.png)
