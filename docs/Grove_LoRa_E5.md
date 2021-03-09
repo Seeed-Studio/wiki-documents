@@ -161,7 +161,7 @@ Here is a demo showing you how to connect TTN (The Things Network) and Seeeduino
 
 Download the example; copy the code stick onto the Aruino IDE and then upload it.
 
-```C++
+```CPP
 #include <Arduino.h>
 #include <U8x8lib.h>
 #include "DHT.h"
@@ -385,7 +385,8 @@ void loop(void)
         delay(1000);
     }
 }
- ```
+
+```
  
 ### TTN Console Configuration Setup
 
