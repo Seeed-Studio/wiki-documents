@@ -11,7 +11,7 @@ LoRa-E5 LoRaWAN STM32WLE5JC module is the major functional part integrated into 
 More comparison between the LoRa-E5 and RFM95 chip:
 ![](https://files.seeedstudio.com/products/113990934/%E8%8A%AF%E7%89%87%E5%AF%B9%E6%AF%94_2021.3.4.png)
 
-By connecting Grove - LoRa-E5 to your development boards, your devices are able to communicate with and control LoRa-E5 conveniently by AT command through UART connection. Grove LoRa-E5 will be a superior choice for IoT device development, testing, and long-distance, ultra-low power consumption IoT scenarios like smart agriculture, smart office, and smart industry. It is designed with industrial standards with a wide working temperature at -40℃ ~ 85℃, high sensitivity between -136 dBm and -137 dBm, and power output between 10 dBm and 22 dBm.
+By connecting Grove - LoRa-E5 to your development boards, your devices are able to communicate with and control LoRa-E5 conveniently by AT command through UART connection. Grove LoRa-E5 will be a superior choice for IoT device development, testing, and long-distance, ultra-low power consumption IoT scenarios like smart agriculture, smart office, and smart industry. It is designed with industrial standards with a wide working temperature at -40℃ ~ 85℃, high sensitivity between -116.5 dBm and -136 dBm, and power output between 10 dBm and 22 dBm.
 
 ## Features
 
@@ -24,7 +24,7 @@ By connecting Grove - LoRa-E5 to your development boards, your devices are able 
 
 ## Harware Overview 
 
-![](https://files.seeedstudio.com/products/113020091/2951615280157_.pic_hd.jpg)
+![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/hardware%20overview/4081615359627_.pic_hd.jpg)
 
 1. LoRa-E5 STM32WLE5JC ([Datasheet](https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20module%20datasheet_V1.0.pdf))
 
@@ -157,7 +157,7 @@ Here is a demo showing you how to connect TTN (The Things Network) and Seeeduino
 |[Get ONE Now](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Doppler-Radar-BGT24LTR11-p-4572.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DHT11.html)|
 
 
-!!!Attention
+!!!Notes
         If this is your first time using Seeeduino XIAO, please refer to [Seeeduino XIAO's wiki](https://wiki.seeedstudio.com/Seeeduino_Lotus/).
         If this is your first time to use Arduino, [Arduino’s website](https://www.arduino.cc/) is a great resource for you to start your Arduino journey. 
 
@@ -165,7 +165,7 @@ Here is a demo showing you how to connect TTN (The Things Network) and Seeeduino
 
 - **Step 1.** Connect the LoRa-E5 module directly to the "UART" slot. 
 
-- **Step 2.** Put DH11 into the "A0D0" socket. As shown below.
+- **Step 2.** Put DH11 into the "A0/D0" socket. As shown below.
 
 - **Step 3.** Download the code, please refer to the software part.
 
@@ -174,7 +174,7 @@ Here is a demo showing you how to connect TTN (The Things Network) and Seeeduino
 
 ### Software Preparation
 
-!!!Attention
+!!!Notes
         If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
         Click to learn about detail about [how to install an Arduino Library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/)
 
