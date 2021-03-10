@@ -53,7 +53,7 @@ If you are unfamiliar with LoRa and LoRaWAN technology, please check out this bl
 
 ## Harware Overview 
 
-![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/3021615286761_.pic_hd.jpg)
+![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/hardware%20overview/4071615359366_.pic_hd.jpg)
 
 ![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/3011615286741_.pic_hd.jpg)
 
@@ -163,11 +163,163 @@ If you are unfamiliar with LoRa and LoRaWAN technology, please check out this bl
 
 ![](https://files.seeedstudio.com/products/317990687/image/application.png)
 
+## Getting Started
 
+### 1. Quick start of AT Commands
+
+#### 1.1 Preparation
+
+- **Step 1.** Connect LoRa-E5 Development Board to PC via a Type-C cable
+
+- **Step 2.** Open a serial tool(eg. Arudino Serial Monitor), select the right COM port, set baudrate to 9600 and select Both NL & CR
+
+- **Step 3.** Try to send "AT" and you will see the response.
+
+![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/4.png)
+
+#### 1.2 Basic AT Commands
+
+- AT+ID // Read all, DevAddr(ABP), DevEui(OTAA), AppEui(OTAA)
+
+- AT+ID=DevAddr // Read DevAddr
+
+- AT+ID=DevEui // Read DevEui
+
+- AT+ID=AppEui // Read AppEui
+
+- AT+ID=DevAddr,"devaddr" // Set new DevAddr
+
+- AT+ID=DevEui,"deveui" // Set new DevEui
+
+- AT+ID=AppEui,"appeui" // Set new AppEui
+
+- AT+KEY=APPKEY,"16 bytes length key" // Change application session key
+
+- AT+DR=band // Change the Band Plans
+
+- AT+DR=SCHEME // Check current band
+
+- AT+CH=NUM, 0-7 // Enable channel 0~7
+
+- AT+MODE="mode" // Select work mode: LWOTAA, LWABP or TEST
+
+- AT+JOIN // Send JOIN request
+
+- AT+MSG="Data to send" // Use to send string format frame which is no need to be confirmed by the server
+
+- AT+CMSG="Data to send" // Use to send string format frame which must be confirmed by the server
+
+- AT+MSGHEX="xx xx xx xx" // Use to send hex format frame which is no need to be confirmed by the server
+
+- AT+CMSGHEX="xx xx xx xx" // Use to send hex format frame which must be confirmed by the server
+
+#### 1.3 Connect and send Data to TTN
+
+- Step 1: Load into TTN website: https://www.thethingsnetwork.org and create your account, then access "Console" and first click on "APPLICATIONS"
+
+![](https://files.seeedstudio.com/products/113990896/wiki/s2.1.png)
+
+- Step 2: Add an Application
+
+![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/2.png)
+
+- Step3: Copy the `APPLICATION EUIS` and click "register device" button to add your device to TTN
+
+![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/1.png)
+
+- Step4: Send AT command `AT+ID=DevEu`i to get your Device EUI, send AT command `AT+KEY=APPKEY,"11223344556677889900112233445566"` to set the App Key, and send AT command `AT+ID=AppEui,"APPLICATION EUIS you copy just now"` to set the App EUI, finally fill all these EUIs and Key to the page to register your device
+```
+Tx: AT+ID=DevEui
+Rx: +ID: DevEui, 2C:F7:F1:20:24:90:16:1D
+Tx: AT+KEY=APPKEY,"11223344556677889900112233445566"
+Rx: +KEY: APPKEY 11223344556677889900112233445566
+Tx: AT+ID=AppEui,"70B3D57ED003F06A"
+Rx: +ID: AppEui, 70:B3:D5:7E:D0:03:F0:6A
+```
+![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/3.png)
+
+- Step 5: Register your LoRaWAN Gateway on TTN Console,
+please refer to the instruction shown in [The Things Indoor Gateway wiki page: The Things Indoor Gateway Get Started with SenseCAP](https://wiki.seeedstudio.com/The-Things-Indoor-Gateway/#step-2-gateway-registration-on-ttn-console)
+
+- Step 6: Type the following AT Commmand to connect to TTN
+
+```
+Tx: AT+ID
+Rx: +ID: DevAddr, 24:90:16:1D
++ID: DevEui, 2C:F7:F1:20:24:90:16:1D
++ID: AppEui, 70:B3:D5:7E:D0:03:F0:6A
+
+Tx: AT+DR=EU868
+Rx: +DR: EU868
+
+Tx: AT+CH=NUM,0-2
+Rx: +CH: NUM, 0-2
+
+Tx: AT+MODE=LWOTAA
+Rx: +MODE: LWOTAA
+
+Tx: AT+JOIN
+Rx: +JOIN: Start
++JOIN: NORMAL
++JOIN: Network joined
++JOIN: NetID 000013 DevAddr 26:01:5F:66
++JOIN: Done
+```
+
+If you see `+JOIN: Network joined` in your serial console, congratulations, your device have already connect to TTN! You can also check your device status at the "overview" page.
+
+![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/5.jpg)
+
+- Step 7: Type the following AT Command to send data to TTN
+
+```
+// send string "HELLO" to TTN 
+Tx: AT+MSG=HELLO
+Rx: +MSG: Start
++MSG: FPENDING
++MSG: RXWIN2, RSSI -112, SNR -1.0
++MSG: Done
+// send hex "00 11 22 33 44" 
+Tx: AT+MSGHEX="00 11 22 33 44"
+Rx: +MSGHEX: Start
++MSGHEX: Done
+```
+
+![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/6.jpg)
+
+- Step 8: For more information about AT Commands, please refer to [LoRa-E5 AT Command Specification](https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20AT%20Command%20Specification_V1.0%20.pdf)
+
+### 2. Develop with STM32Cube MCU Package
+
+#### 2.1 Erase Factory AT Firmware
+
+LoRa-E5 has a built-in AT command firmware, which supports LoRaWAN Class A/B/C protocol and wide frequency plan: EU868/US915/AU915/AS923/KR920/IN865. With this AT commond firmware, customers can easily and quickly build their prototype or application.
+
+But for those uesr who perfer to directly develop applications on LoRa-E5 module, with STM32Cube MCU packege for STM32WL series, there are several areas to pay attention to:
+
+- Read Protection is needed to remove first, after you connect the MCU via SWD. STM32Cube Programmer is the recommended tool  to do this.
+
+- Once the factory AT firmware is erased, it can't be flashed to the MCU again
+
+- The "PB13/SPI_SCK/BOOT" pin on the LoRa-E5 module is just a normal GPIO, not the "BOOT0" pin of the MCU. This "PB13/SPI_SCK/BOOT" pin is used in the bootloader of the Fatory AT firmware, to decide to jump to APP or stay in bootloader(for DFU). The real "BOOT0" pin doesn't pinout to the module, so customers need to be careful when develop low power application.
+
+#### 2.2 Hardware
+
+- Clock Configuration:
+  - HSE
+    - 32MHz TCXO
+    - TCXO power supply: PB0-VDD_TCXO
+  - LSE
+    - 32.768KHz crystal oscillator
+- RF Switch 
+  - Receive: PA4=1, PB5=0
+  - Transmit(high output power, SMPS mode): PA4=0, PB5=1
+
+More demos coming soon...
 
 ## Resources
 
-Grove LoRa-E5 Datasheet:
+LoRa-E5 Development Board Datasheet:
 
 - <p><a href="http://files.seeedstudio.com/products/113990934/LoRa-E5%20Dev%20Board%20v1.0.brd">LoRa-E5 Development Board v1.0.brd</a></p>
 
