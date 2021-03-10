@@ -61,7 +61,7 @@ By connecting Grove - LoRa-E5 to your development boards, your devices are able 
 <tbody>
 <tr>
 <td class="tg-uu1j">Voltage <span>Supply: </span></td>
-<td class="tg-uu1j">3.3V/5V</td>
+<td class="tg-uu1j">3.3V - 5V</td>
 </tr>
 <tr>
 <td class="tg-uu1j">Power <span>Output: </span></td>

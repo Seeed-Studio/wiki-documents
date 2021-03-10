@@ -449,7 +449,11 @@ nav:
           - LoRa-E5 STM32WLE5JC Module embedded SX126X & MCU: LoRa-E5_STM32WLE5JC_Module.md
       - LoRa Gateway: 
           - The Things Indoor Gateway: The-Things-Indoor-Gateway.md
-      - LoRa Dev Kit: LoRa_E5_Dev_Board.md
+      - LoRa Development Kit: 
+          - LoRa-E5 Development Kit: LoRa_E5_Dev_Board.md
+      - LoRa Development Board: 
+          - LoRa-E5 Development Board: LoRa_E5_Dev_Board.md
+          - LoRa-E5 mini:
 
   - Grove:
       - Grove Introduction: Grove.md

@@ -53,9 +53,10 @@ If you are unfamiliar with LoRa and LoRaWAN technology, please check out this bl
 
 ## Harware Overview 
 
+![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/3021615286761_.pic_hd.jpg)
+
 ![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/3011615286741_.pic_hd.jpg)
 
-![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/3021615286761_.pic_hd.jpg)
 
 
 ## Specification
@@ -93,7 +94,7 @@ If you are unfamiliar with LoRa and LoRaWAN technology, please check out this bl
 </tr>
 <tr>
 <td class="tg-g9rn">Frequency</td>
-<td class="tg-g9rn">EU868/US915/AU915/AS923/KR920/IN865</td>
+<td class="tg-g9rn">EU868 / US915 / AU915 / AS923 / KR920 / IN865</td>
 </tr>
 <tr>
 <td class="tg-g9rn">Protocol</td>
