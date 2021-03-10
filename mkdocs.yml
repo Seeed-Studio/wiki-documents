@@ -453,7 +453,7 @@ nav:
           - LoRa-E5 Development Kit: LoRa_E5_Dev_Board.md
       - LoRa Development Board: 
           - LoRa-E5 Development Board: LoRa_E5_Dev_Board.md
-          - LoRa-E5 mini:
+          - LoRa-E5 mini: LoRa_E5_mini.md
 
   - Grove:
       - Grove Introduction: Grove.md
