@@ -186,6 +186,224 @@ Then you can get the temperature and humidity displayed on the OLED as below.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/oled1.jpg)
 
+
+
+
+
+
+
+
+
+
+
+
+### project 3
+
+#### Materials Required
+
+- Step 1. Prepare the below stuffs:
+
+| Pi Pico | Grove Shield for Pi Pico|  Grove-button |Grove-LED|Grove relay|
+|--------------|-------------|-----------------|-----------------|-----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Picoboard1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/picobaseshield.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Button/img/button_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/ledsocket.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Relay/img/Thumbnail.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Button-p-766.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-LED-Pack-p-4364.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Relay-p-769.html)|
+
+- Step 2. Connect Grove button to digital pin 18 of Base Shield.
+- Step 3. Connect Grove led to port D16 of Base Shield.
+- Step 4. Connect Grove Relay to port D20 of Base Shield.
+- Step 5. Plug Grove Shield for Pi Pico into Pi Pico.
+- Step 6. Connect Pi Pico to PC through a USB cable.
+
+
+
+#### Software
+Please refer to the demo1 software part.
+
+Copy below code to the Thonny IDE at first.
+```
+from machine import Pin
+
+button = Pin(18, Pin.IN, Pin.PULL_UP)# button connect to D18
+button.irq(lambda pin: InterruptsButton(),Pin.IRQ_FALLING)#Set key interrupt
+led = Pin(16, Pin.OUT)#led connect to D16
+relay = Pin(20, Pin.OUT)
+tmp = 0
+'''Key interrupt function, change the state of the light when the key is pressed'''
+def InterruptsButton(): #button input
+    global tmp
+    tmp = ~tmp
+    led.value(tmp)
+    relay.value(tmp)
+while True:  
+    pass
+    
+```
+Now please click the green button to run the demo code.
+
+Then you can press the grove button, you can control the led and relay open and close.
+
+
+
+![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/demo3.jpg)
+
+
+
+
+### project 4
+
+#### Materials Required
+
+- Step 1. Prepare the below stuffs:
+
+| Pi Pico | Grove Shield for Pi Pico|  RGB LED WS2813 mini |
+|--------------|-------------|-----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Picoboard1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/picobaseshield.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/redrgb.png)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-RGB-LED-WS2813-Mini-p-4269.html)|
+
+
+- Step 2. Connect RGB LED WS2813 mini to port 18 of Base Shield.
+- Step 3. Plug Grove Shield for Pi Pico into Pi Pico.
+- Step 4. Connect Pi Pico to PC through a USB cable.
+
+
+
+
+#### Software
+Please refer to the demo1 software part.
+
+Copy below code to the Thonny IDE at first.
+```
+from ws2812 import WS2812
+import time
+
+BLACK = (0, 0, 0)
+RED = (255, 0, 0)
+YELLOW = (255, 150, 0)
+GREEN = (0, 255, 0)
+CYAN = (0, 255, 255)
+BLUE = (0, 0, 255)
+PURPLE = (180, 0, 255)
+WHITE = (255, 255, 255)
+COLORS = (BLACK, RED, YELLOW, GREEN, CYAN, BLUE, PURPLE, WHITE)
+
+#WS2812(pin_num,led_count)
+led = WS2812(18,30)
+
+print("fills")
+for color in COLORS:
+    led.pixels_fill(color)
+    led.pixels_show()
+    time.sleep(0.2)
+
+print("chases")
+for color in COLORS:
+    led.color_chase(color, 0.01)
+
+print("rainbow")
+led.rainbow_cycle(0)
+
+
+```
+Then please download the [ws2812.py](http://47.106.166.129/Embeded/pico-micropython-grove/blob/master/Digital/ws2812.py) to your local. Use Thonny open ws2812.py, click file->save as->MicroPython device.
+
+
+Input **ws2812.py** in File name column, click "ok", then the file is saved at File->Open->MicroPython device.
+
+
+
+![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/ws2813savelocal.png)
+
+After you have save the files to your MicroPython device, now please click the green button to run the demo code.
+Then you can get the RGB LED WS2813 mini flash beautiful color as below.
+
+
+
+![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/ws2813mini.gif)
+
+
+
+
+
+
+### project 5
+
+#### Materials Required 
+
+- Step 1. Prepare the below stuffs:
+
+| Pi Pico | Grove Shield for Pi Pico| grove sound sensor |Grove light sensor|Grove-16x2 LCD|
+|--------------|-------------|-----------------|-----------------|-----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Picoboard1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/picobaseshield.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Sound_Sensor/img/page_small_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/img/light_sensor_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/perspective.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Sound-Sensor-p-752.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Light-Sensor-v1.2-p-2727.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-16-x-2-LCD-Black-on-Yellow.html)|
+
+
+
+- Step 2. Connect Grove sound sensor to analog pin 0 of Base Shield.
+- Step 3. Connect Grove light to port A1 of Base Shield.
+- Step 4. Connect Grove 16X2 lcd to port I2C1 of Base Shield.
+- Step 5. Plug Grove Shield for Pi Pico into Pi Pico.
+- Step 6. Connect Pi Pico to PC through a USB cable.
+
+
+
+#### Software
+Please refer to the demo1 software part.
+
+Copy below code to the Thonny IDE at first.
+```
+#from lcd1602 import LCD1602_RGB  #LCD1602 RGB grove
+from LCD1602 import LCD1602
+from machine import I2C,Pin,ADC
+from time import sleep
+i2c = I2C(1,scl=Pin(7), sda=Pin(6), freq=400000)
+d = LCD1602(i2c, 2, 16)
+#d = LCD1602_RGB.display(i2c, 2, 16)
+#d.set_rgb(255, 0, 0)
+sleep(1)
+light = ADC(0)
+sound = ADC(1)
+
+while True:
+    
+    lightVal = light.read_u16()
+    soundVal = sound.read_u16()
+    d.home()
+    d.print('lightvalue=')
+    d.print(str(lightVal))
+    #d.set_rgb(0, 255, 0)
+    sleep(1)
+    d.setCursor(0, 1)
+    d.print('soundvalue=')
+    d.print(str(soundVal))
+    #d.set_rgb(0, 0, 255)
+    sleep(1)
+    
+```
+
+Then please download the [LCD1602.py](http://47.106.166.129/Embeded/pico-micropython-grove/blob/master/I2C/lcd1602.py) to your local. Use Thonny open LCD1602.py, click file->save as->MicroPython device.
+
+
+Input **LCD1602.py** in File name column, click "ok", then the file is saved at File->Open->MicroPython device.
+
+
+
+![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/lcdlightsound.png)
+
+After you have save the files to your MicroPython device, now please click the green button to run the demo code.
+Then you can get the sound sensor and light sensor data as below.
+
+
+
+![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/demo5.jpg)
+
+
+
+
+
+
+
+
+
 ## Schematic Online Viewer
 
 <div class="altium-ecad-viewer" data-project-src="https:///files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/res/Grove_Shield_for_Pi_Pico.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
