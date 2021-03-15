@@ -378,9 +378,9 @@ But for those uesr who perfer to directly develop applications on LoRa-E5 module
     - TCXO power supply: PB0-VDD_TCXO
   - LSE
     - 32.768KHz crystal oscillator
-- RF Switch 
-  - Receive: PA4=1, PB5=0
-  - Transmit(high output power, SMPS mode): PA4=0, PB5=1
+  - RF Switch 
+    - Receive: PA4=1, PB5=0
+    - Transmit(high output power, SMPS mode): PA4=0, PB5=1
 
 More demos coming soon...
 
