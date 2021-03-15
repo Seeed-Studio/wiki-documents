@@ -12,7 +12,7 @@ More comparison between the LoRa-E5 and LoRa RFM95 chip:
 
 ![](https://files.seeedstudio.com/products/113990934/%E8%8A%AF%E7%89%87%E5%AF%B9%E6%AF%94_2021.3.4.png)
 
-LoRa-E5 mini leads out all GPIOs of LoRa-E5, including UART, ADC, SPI, IIC, and etc. It contains RESET and BOOT buttons and is use-friendly. Supporting LoRaWAN protocol, LoRa-E5 mini features ultra-long-range transmission and ultra-low power consumption: it is able to achieve a transmission range of up to 10 km, and the sleep current of LoRa-E5 modules on board is as low as 2.1 uA(WOR mode). It is designed with industrial standards with a wide working temperature at -40 ℃ ~ 85℃, high sensitivity between -116.5dBm ~ -136 dBm, and power output up to +20.8 dBm at 3.3V.
+LoRa-E5 mini leads out all GPIOs of LoRa-E5, including UART, ADC, SPI, IIC, and etc. It contains RESET and BOOT buttons and is use-friendly. Supporting LoRaWAN protocol, LoRa-E5 mini features ultra-long-range transmission and ultra-low power consumption: it is able to achieve a transmission range of up to 10 km, and the sleep current of LoRa-E5 modules on board is as low as 2.1 uA(WOR mode). It is designed with industrial standards with a wide working temperature at -40 ℃ ~ 85℃, high sensitivity between -116.5dBm ~ -136 dBm, and RF output power up to +20.8 dBm at 3.3V.
  
 Other than the LoRa-E5 mini, we also provide other choices including the LoRa-E5 Development Board carrying more complex interfaces and features to unlock the more powerful performance of the LoRa-E5 module.  It provides a broader range of access protocols and superabundant types of interfaces. Thus you are able to test and prototype the module rapidly with RS-485, Grove interfaces, and rich GPIOs.  (Learn more about LoRa-E5 Development Board)
  
