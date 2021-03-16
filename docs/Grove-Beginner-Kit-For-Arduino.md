@@ -1927,11 +1927,11 @@ To design your own board, you will need to design your own module's schematics, 
 
 [KiCad](https://www.kicad-pcb.org/) is a free software suite for electronic design automation. It facilitates the design of schematics for electronic circuits and their conversion to PCB designs. It features an integrated environment for schematic capture and PCB layout design. The programs handle Schematic Capture and PCB Layout with Gerber output. The suite runs on Windows, Linux, and macOS and is licensed under GNU GPL v3.
 
-- **Geppetto**
+- **Upverter**
 
-If you don’t want to work on schematic or layout yourself, but you want to convert your prototype based on Seeed’s modules into an integrated product, we highly recommend you to try Geppetto.
+If you don’t want to work on schematic or layout yourself, but you want to convert your prototype based on Seeed’s modules into an integrated product, we highly recommend you to try Upverter.
 
-Please visit the [**Grove Beginner Kit for Arduino Geppetto Guide**](http://wiki.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-Geppetto-Guide) for more information.
+Please visit the [**Grove Beginner Kit for Arduino Upverter Guide**](http://wiki.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-Geppetto-Guide) for more information.
 
 ### PCB Services
 

@@ -1,22 +1,22 @@
 ## Make Your Customized Arduino Board for Under $50
 
-By utilizing the strong production chain of Seeed and the convenience of Geppetto, prototyping has never been easier. Customize your own Arduino board for under $50, including design, PCB manufacture, components procurement, assembly and international shipping.
+By utilizing the strong production chain of Seeed and the convenience of Upverter, prototyping has never been easier. Customize your own Arduino board for under $50, including design, PCB manufacture, components procurement, assembly and international shipping.
 Let's see how it works:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NoM4eGqcm1Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Background
 
-If you don’t want to work on schematic or layout yourself, but you want to convert your prototype based on the Seeed’s modules into an integrated product, we highly recommend you to try [**Geppetto**](https://geppetto.seeedstudio.com/).
+If you don’t want to work on schematic or layout yourself, but you want to convert your prototype based on the Seeed’s modules into an integrated product, we highly recommend you to try [**Upverter**](https://geppetto.seeedstudio.com/).
 
-Geppetto is, by far, the easiest and least expensive way to produce production-quality electronics. You don’t need to know about resistors, capacitors, inductors, routing paths or anything EE to design your own module. Geppetto is drag & drop simple... anyone can create professional IoT devices. To make it more convenient for you, Geppeto has a library for Seeed, so you can design your own Grove modules with ease!
+Upverter is, by far, the easiest and least expensive way to produce production-quality electronics. You don’t need to know about resistors, capacitors, inductors, routing paths or anything EE to design your own module. Upverter is drag & drop simple... anyone can create professional IoT devices. To make it more convenient for you, Geppeto has a library for Seeed, so you can design your own Grove modules with ease!
 
 ## Geppepo Seeed Design Using Guide
 
 ### Open the Design 
 
-- Step1. Click to open Geppetto + Seeed page.
-[Geppetto+Seeed Entrance](https://geppetto.seeedstudio.com/)
+- Step1. Click to open Upverter + Seeed page.
+[Upverter+Seeed Entrance](https://geppetto.seeedstudio.com/)
 
 
 - Step2. Click **Seeed Designs**, chose **Grove Beginner Kit For Arduino**, 
@@ -39,7 +39,7 @@ If you customized based on grove beginner kit, you can have one board with your 
 
 Let's get started!
 1. Finish your prototype with grove beginner kit to validate your idea.  
-2. Login geppetto in Seeed and open the grove beginner kit design;
+2. Login Upverter in Seeed and open the grove beginner kit design;
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-for-Arduino-Geppetto-Guide/111.png"/></div>
 
@@ -68,8 +68,8 @@ Let's get started!
 
 6.  Congratulations! You have finished the design of your (first)board. All you need to do is wait for the package arrive. 
 
-If you have any special requirement for your board, you can send email to us ( fusion@seeed.cc)  after  you place the order (like the pcb color, or even the shape of the board), we will have engineer work on it. All you need to do is to make your idea come true with our grove beginner kit and other grove sensors and tell us through geppetto. Seeed will handle the rest of the work, you will get a board with your name around 7 working days in a reasonable price, possibley under $50.
-We will have more grove modules coming into geppetto and it will empower the capabilities of your demo. Stay tuned. Let us know if you have any other suggestion for our campaign, contact us at fusion@seeed.cc
+If you have any special requirement for your board, you can send email to us ( fusion@seeed.cc)  after  you place the order (like the pcb color, or even the shape of the board), we will have engineer work on it. All you need to do is to make your idea come true with our grove beginner kit and other grove sensors and tell us through upverter. Seeed will handle the rest of the work, you will get a board with your name around 7 working days in a reasonable price, possibley under $50.
+We will have more grove modules coming into upverter and it will empower the capabilities of your demo. Stay tuned. Let us know if you have any other suggestion for our campaign, contact us at fusion@seeed.cc
 
 
 
