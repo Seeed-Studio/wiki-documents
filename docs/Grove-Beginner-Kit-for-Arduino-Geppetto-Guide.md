@@ -41,7 +41,7 @@ Let's get started!
 1. Finish your prototype with grove beginner kit to validate your idea.  
 2. Login Upverter in Seeed and open the grove beginner kit design;
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-for-Arduino-Geppetto-Guide/111.png"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-for-Arduino-Geppetto-Guide/1111.png"/></div>
 
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-for-Arduino-Geppetto-Guide/222.png"/></div>
@@ -49,14 +49,14 @@ Let's get started!
 3. Delete the unnecessary parts and fit the board to modules
 
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-for-Arduino-Geppetto-Guide/333.png"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-for-Arduino-Geppetto-Guide/3333.png"/></div>
 
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-for-Arduino-Geppetto-Guide/444.png"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-for-Arduino-Geppetto-Guide/4444.png"/></div>
 
 4. Save the file and place order. 
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-for-Arduino-Geppetto-Guide/555.png"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-for-Arduino-Geppetto-Guide/5555.png"/></div>
 
 5. Place order in seeed, you can choose the quantity you want. You can leave msg to us for special requirement and send the related file to us with your order number  ( fusion@seeed.cc).
 
