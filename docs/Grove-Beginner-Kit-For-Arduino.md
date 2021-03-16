@@ -1931,7 +1931,7 @@ To design your own board, you will need to design your own module's schematics, 
 
 If you don’t want to work on schematic or layout yourself, but you want to convert your prototype based on Seeed’s modules into an integrated product, we highly recommend you to try Upverter.
 
-Please visit the [**Grove Beginner Kit for Arduino Upverter Guide**](http://wiki.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-Geppetto-Guide) for more information.
+Please visit the [**Grove Beginner Kit for Arduino Upverter Guide**](https://wiki.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-Upverter-Guide/) for more information.
 
 ### PCB Services
 
