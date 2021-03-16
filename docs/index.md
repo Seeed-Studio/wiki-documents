@@ -1,58 +1,50 @@
 
 # Weekly Wiki
-![](https://files.seeedstudio.com/wiki/IMAGES/21-March-Week-2.png)
+![](https://files.seeedstudio.com/wiki/IMAGES/21-March-Week-3.png)
 
-It's the second week of March and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
+It's the third week of March and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
 As you all know, Seeed Wiki is a dedicated platform where we provide the proper guidance and support you need when getting started with our products. We put a lot of effort to make this platform more user friendly because we want to enable the learning of electronics in a more systematic approach.  
 We will bring you all these wiki updates in a weekly basis. So stay tuned with us and don't forget to visit this page again next week!
 
 ## Existing Wiki Updated 
 
-### New Tool to Erase and Flash Firmware for RTL8720 on Wio Terminal
+### Grove Shield for Raspberry Pi Pico V1.0 Getting Started Projects
 
-If you have been playing around with Wi-Fi on the [Wio Terminal](https://www.seeedstudio.com/Wio-Terminal-p-4509.html), you might have experienced that the process of erasing and flashing a new firmware was a bit lengthy. Now we have streamlined the process by reducing the steps using the new **ambd flash tool**. Now you can quickly flash new firmware to RTL8720!
+We recently released the [Grove Shield for Raspberry Pi Pico V1.0](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html) and got a lot of great feedback from the community!
 
-Follow [this wiki](https://wiki.seeedstudio.com/Wio-Terminal-Network-Overview) to learn more!
+This enables you to connect your favorite [Grove modules](https://www.seeedstudio.com/category/Grove-c-1003.html) to [Raspberry Pi Pico](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html) and bring your ideas to life! We have made [getting started projects](https://wiki.seeedstudio.com/Grove_Shield_for_Pi_Pico_V1.0) for you to experiment with this shield along with Raspberry Pi Pico in a much fun and easy way!
 
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Wio-Terminal-Network-Overview"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/ambd_tool_win_2.png" alt="pir"  width="750" height="auto"></a></p>
+<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Grove_Shield_for_Pi_Pico_V1.0"><img src="https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/tutieshi_480x272_3s.gif" alt="pir"  width="750" height="auto"></a></p>
 
-### Update Wi-Fi libraries for Wio Terminal using Arduino Library Manager
+## New Wiki Added
 
-Until now, if you wanted to install Wi-Fi libraries for the Wio Terminal, you had to visit the corresponding GitHub repos for each library, download them and install them using Arduino IDE.
+### LoRa-E5 Development Kits Wiki Pages
 
-Now we have made the process much easier by including all Wi-Fi libraries for Wio Terminal inside the **Arduino Library Manager**. You can easily **download, install and update** the libraries only from Arduino IDE!
+Few weeks ago, we released the [LoRa-E5](https://www.seeedstudio.com/LoRa-E5-Wireless-Module-p-4745.html), the world's first combo of LoRa RF and MCU chip. It is a low cost, ultra-low power high performance LoRaWAN module that is smaller than most coins! Our new development kits make it easier for everybody to build prototypes with the support of LoRa technology.
 
-We will support this for the Bluetooth Library as well in the following days!
+We have now prepared getting started guides for you to experience these LoRa-E5 based products. Enjoy!
 
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Wio-Terminal-Network-Overview"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/library_install_1.jpg" alt="pir"  width="850" height="auto"></a></p>
+- [Grove LoRa-E5 Wiki](https://wiki.seeedstudio.com/Grove_LoRa_E5/)
+- [LoRa-E5 Development Board Wiki](https://wiki.seeedstudio.com/LoRa_E5_Dev_Board/)
+- [LoRa-E5 mini Wiki](https://wiki.seeedstudio.com/LoRa_E5_mini/)
 
-### Connect Wio Terminal to Microsoft Azure IoT Central
+<p style="text-align:center;"><a href="https://www.seeedstudio.com/lora-c-755.html?product_list_stock=3"><img src="https://blog.seeedstudio.com/wp-content/uploads/2021/03/twitter-banner-1030x574.png" alt="pir"  width="750" height="auto"></a></p>
 
-Last week we released a wiki, explaining about how you can connect the Wio Terminal to [Microsoft Azure IoT Central](https://azure.microsoft.com/en-us/services/iot-central). However, you were only able to run an already compiled code to get started quickly with Azure IoT Central.
-Now you can easily add more sensors to the Wio Terminal and send telemetry data to Azure IoT Central while coding in **Microsoft Visual Studio Code**, along with **PlatformIO**. [Click here](https://wiki.seeedstudio.com/Connect-Wio-Terminal-to-Microsoft-Azure-IoT-Central/#how-to-add-other-sensors) to jump straight into the tutorial!
 
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Connect-Wio-Terminal-to-Microsoft-Azure-IoT-Central/#how-to-add-other-sensors"><img src="https://files.seeedstudio.com/wiki/Azure_IoTc_WT/dashboard_final1.png" alt="pir"  width="750" height="auto"></a></p>
+
+
 
 ## What's more?
 
-### Wio Terminal Classroom with IoT
-
-We are excited to release the third edition of the Wio Terminal Classroom Series; Wio Terminal Classroom with IoT!
-This is our seventh episode of the third edition of the series and we thank you all for staying with us!
-In this show, Lakshantha explains how to use Wio Terminal as an IoT device and build IoT projects using the Wio Terminal! So we request you to stay tuned with our show and we hope this helps you to gain more knowledge on how to program with the Wio Terminal!
-
-<p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/LI3julXCpD0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-
 ### Seeed on YouTube
 
-The All-New [Raspberry Pi Pico](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html) is a microcontroller board based on the Raspberry Pi RP2040 microcontroller chip. It has been designed to be a low-cost, high-performance microcontroller board with flexible digital interfaces. 
-Now you can perform machine learning inference on the Raspberry Pi Pico 2040 via Edge Impulse! Check the video below to learn more!
+We have released the [Dual Gigabit Carrier Board for Raspberry Pi Compute Module 4](https://www.seeedstudio.com/Rapberry-Pi-CM4-Dual-GbE-Carrier-Board-p-4874.html) which is equipped with Dual Gigabit Ethernet ports and dual USB 3.0 ports, making it suitable for soft router applications, while keeping the hardware to minimal.
 
-<p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/LmSrY_pZho0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+It features a variety of I/O peripherals such as MIPI CSI, MIPI DSI, micro-HDMI to connect displays/ cameras, a standard 9-pin USB 3.0 header for more USB expansion, a micro-SD card slot, and an FPC connector, while maintaining a compact form factor! Check the video below to learn more!
 
+<p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/21j9M6pvtsQ" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 Also, don't forget to subscribe to our [YouTube Channel](http://www.youtube.com/c/SeeedStudioSZ) to stay updated with our video releases on exciting products!
-
 
 <p style="text-align:center;"><a href="http://www.youtube.com/c/SeeedStudioSZ"><img src="https://files.seeedstudio.com/wiki/IMAGE/Youtube%20Subs.png" alt="pir"  width="180" height="auto"></a></p>
 
