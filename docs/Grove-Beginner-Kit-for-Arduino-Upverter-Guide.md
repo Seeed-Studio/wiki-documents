@@ -10,7 +10,7 @@ If you don’t want to work on schematic or layout yourself, but you want to con
 
 Upverter is, by far, the easiest and least expensive way to produce production-quality electronics. You don’t need to know about resistors, capacitors, inductors, routing paths or anything EE to design your own module. Upverter is drag & drop simple... anyone can create professional IoT devices. To make it more convenient for you, Geppeto has a library for Seeed, so you can design your own Grove modules with ease!
 
-## Geppepo Seeed Design Using Guide
+## Upverter Seeed Design Using Guide
 
 ### Open the Design 
 
