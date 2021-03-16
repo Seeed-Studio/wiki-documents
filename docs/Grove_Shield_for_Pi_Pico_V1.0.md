@@ -404,6 +404,76 @@ Then you can get the sound sensor and light sensor data as below.
 
 
 
+
+
+
+
+
+
+
+### project 6
+
+#### Materials Required 
+
+- Step 1. Prepare the below stuffs:
+
+| Pi Pico | Grove Shield for Pi Pico| grove servo |Grove Mini Fan|Grove mini pir motion sensor|
+|--------------|-------------|-----------------|-----------------|-----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Picoboard1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/picobaseshield.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Servo/img/Grove%20Servo_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/groveminifan.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/minipir.png)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Servo-p-1241.html)|[Get One Now](https://www.seeedstudio.com/Grove-Mini-Fan-p-1819.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-mini-PIR-motion-sensor-p-2930.html)|
+
+
+- Step 2. Connect Grove servo to analog pin 1 of Base Shield.
+- Step 3. Connect Grove Mini fan to port D16 of Base Shield.
+- Step 4. Connect Grove Mini pir motion sensor to port D18 of Base Shield.
+- Step 5. Plug Grove Shield for Pi Pico into Pi Pico.
+- Step 6. Connect Pi Pico to PC through a USB cable.
+
+
+
+#### Software
+Please refer to the demo1 software part.
+
+Copy below code to the Thonny IDE at first.
+```
+from machine import Pin,ADC,PWM
+from time import sleep
+import utime
+
+miniFun = Pin(16, Pin.OUT)  
+miniPir = Pin(18, Pin.IN)  
+
+pwm_Servo=PWM(Pin(27))
+pwm_Servo.freq(500)
+Servo_Val =0  
+
+while True:
+    
+    if  miniPir.value() == 1 :
+        miniFun.value(1)
+            
+        while  Servo_Val<65535:
+            Servo_Val=Servo_Val+50
+            utime.sleep_ms(1)
+            pwm_Servo.duty_u16(Servo_Val)
+        while Servo_Val>0: 
+            Servo_Val=Servo_Val-50
+            utime.sleep_ms(1)
+            pwm_Servo.duty_u16(Servo_Val)
+        
+    else :
+        miniFun.value(0)
+        
+        pwm_Servo.duty_u16(0)    
+       
+          
+
+```
+Now please click the green button to run the demo code.
+Then you can get the grove mini fan and grove servo run When you hands swiping past the pir sensor as below.
+
+![](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/tutieshi_480x272_3s.gif)
+
 ## Schematic Online Viewer
 
 <div class="altium-ecad-viewer" data-project-src="https:///files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/res/Grove_Shield_for_Pi_Pico.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
