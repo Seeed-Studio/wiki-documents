@@ -35,7 +35,7 @@ If you are not quite familiar with LoRa and LoRaWAN, check out this article [LoR
 
 * **Worldwide Compatibility**: wide frequency range; EU868 / US915 / AU915 / AS923 / KR920 / IN865
 
-* **Great Flexibility**: For customers who want to develop software on the MCU of the module, other GPIOs of the MCU can be easily manipulated, including UART, I2C, ADC, etc. These rich GPIO interfaces are useful for users who need to expand peripherals.
+* **Great Flexibility**: For users who want to develop software on the MCU of the module, other GPIOs of the MCU can be easily manipulated, including UART, I2C, ADC, etc. These rich GPIO interfaces are useful for users who need to expand peripherals.
 
 * **FCC and CE Certified**
 
@@ -50,17 +50,14 @@ If you are not quite familiar with LoRa and LoRaWAN, check out this article [LoR
 
 **1. Factroy AT Firmare**
 
-LoRa-E5 series has a built-in AT command firmware, which supports LoRaWAN Class A/B/C protocol and a wide frequency plan: EU868/US915/AU915/AS923/KR920/IN865. With this AT command firmware, customers can easily and quickly build their prototype or application.
+LoRa-E5 series has a built-in AT command firmware, which supports LoRaWAN Class A/B/C protocol and a wide frequency plan: EU868/US915/AU915/AS923/KR920/IN865. With this AT command firmware, developers can easily and quickly build their prototype or application.
 
 The AT command firmware contains a bootloader for DFU and the AT application. The "PB13/SPI_SCK/BOOT" pin is used to control LoRa-E5 to stay in the bootloader or jump to the AT application. When PB13 is HIGH, the module will jump to AT application after reset, with a default baud rate of 9600. When PB13 is LOW (press the "Boot" button on LoRa-E5 Dev Board or LoRa-E5 mini), the module will stay in the bootloader, and keep transmitting "C" character every 1S at baud rate 115200.
 
-### Attentions:
+!!!Attention
+        - Factory AT Firmware is programmed with RDP(Read Protection) Level 1, developers need to remove RDP first with STM32Cube Programmer. Note that regression RDP to level 0 will cause a flash memory mass to erase and the Factory AT Firmware can't be restored again.
+        - The "PB13/SPI_SCK/BOOT" pin on the LoRa-E5 module is just a normal GPIO, not the "BOOT0" pin of the MCU. This "PB13/SPI_SCK/BOOT" pin is used in the bootloader of the Factory AT firmware, to decide to jump to APP or stay in bootloader(for DFU). The real "BOOT0" pin doesn't pinout to the module, so users need to be careful when developing the low-power applications.
 
-For users who prefer to directly develop applications on LoRa-E5 module with STM32Cube MCU package for STM32WL series, there are several areas to pay attention to:
-
-- Factory AT Firmware is programmed with RDP(Read Protection) Level 1, customers need to remove RDP first with STM32Cube Programmer. Note that regression RDP to level 0 will cause a flash memory mass to erase and the Factory AT Firmware can't be restored again.
-
-- The "PB13/SPI_SCK/BOOT" pin on the LoRa-E5 module is just a normal GPIO, not the "BOOT0" pin of the MCU. This "PB13/SPI_SCK/BOOT" pin is used in the bootloader of the Factory AT firmware, to decide to jump to APP or stay in bootloader(for DFU). The real "BOOT0" pin doesn't pinout to the module, so customers need to be careful when developing the low-power applications.
 
 **2. Clock Configuration**
 
@@ -81,6 +78,7 @@ For users who prefer to directly develop applications on LoRa-E5 module with STM
 - Receive: PA4=1, PB5=0
 
 - Transmit(high output power, SMPS mode): PA4=0, PB5=1
+
 
 ## Hardware Pinout
 
@@ -397,7 +395,7 @@ Rx: +MSGHEX: Start
 
 #### 2.1 Erase Factory AT Firmware
 
-LoRa-E5 has a built-in AT command firmware, which supports LoRaWAN Class A/B/C protocol and wide frequency plan: EU868/US915/AU915/AS923/KR920/IN865. With this AT commond firmware, customers can easily and quickly build their prototype or application.
+LoRa-E5 has a built-in AT command firmware, which supports LoRaWAN Class A/B/C protocol and wide frequency plan: EU868/US915/AU915/AS923/KR920/IN865. With this AT commond firmware, developers can easily and quickly build their prototype or application.
 
 But for those uesr who perfer to directly develop applications on LoRa-E5 module, with STM32Cube MCU packege for STM32WL series, there are several areas to pay attention to:
 
@@ -405,7 +403,7 @@ But for those uesr who perfer to directly develop applications on LoRa-E5 module
 
 - Once the factory AT firmware is erased, it can't be flashed to the MCU again
 
-- The "PB13/SPI_SCK/BOOT" pin on the LoRa-E5 module is just a normal GPIO, not the "BOOT0" pin of the MCU. This "PB13/SPI_SCK/BOOT" pin is used in the bootloader of the Fatory AT firmware, to decide to jump to APP or stay in bootloader(for DFU). The real "BOOT0" pin doesn't pinout to the module, so customers need to be careful when develop low power application.
+- The "PB13/SPI_SCK/BOOT" pin on the LoRa-E5 module is just a normal GPIO, not the "BOOT0" pin of the MCU. This "PB13/SPI_SCK/BOOT" pin is used in the bootloader of the Fatory AT firmware, to decide to jump to APP or stay in bootloader(for DFU). The real "BOOT0" pin doesn't pinout to the module, so users need to be careful when develop low power application.
 
 #### 2.2 Hardware
 
