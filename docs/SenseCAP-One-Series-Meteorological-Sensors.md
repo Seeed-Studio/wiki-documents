@@ -4,6 +4,9 @@
 ##### _(SenseCAP ONE series compact weather stations)_
 
 ## Product Introduction 
+
+Today, data on localized weather, known as microclimates, is the new frontier for more precise and accurate weather forecasting. As a result, the collection of weather data is becoming increasingly smaller and gridded. In light of this, weather stations, which are the most convenient means of collecting weather data, are seeing a rise in demand.
+
  SenseCAP ONE compact weather stations consists of several meteorological sensors that measure the following parameters: air temperature & humidity, barometric pressure, light, precipitation, wind speed, wind direction, PM2.5, and PM10. By adopting a modular design, SenseCAP ONE makes it possible for you to conveniently integrate different combinations of sensors into one compact weather station according to actual application needs.
 
 The products are designed with industry standards, IP66 rated, featuring high accuracy, high reliability and stability, and strong robustness. SenseCAP ONE series supports RS485/RS422 (Modbus) and SDI-12 interface, enabling easy extension with other sensors of respective interfaces. SenseCAP ONE is easy to deploy, durable for long-term operation in the harsh environment in the outdoor field, making it perfect for applications in the scenarios of smart city, power-grid, power plants, road weather stations, airports, and smart agriculture, etc.
@@ -12,16 +15,37 @@ The products are designed with industry standards, IP66 rated, featuring high ac
 
 There are six total SenseCAP Products with distinctive combination of sensors included. To find the ones matching your particular scenarios, here is a chart clearly demonstrates the appearance of SenseCAP ONEs and the parameters each product can measure. 
 
+### SenseCAP ONE S700 7-in-1 Compact Weather Sensor
+
+SenseCAP ONE S700 7-in-1 Compact Weather Sensor can help you collect and monitor environmental and weather data, which are crucial in different application scenarios such as smart city projects and etc. The SenseCAP ONE S700 is equipped with sensors to measure the seven following parameters: air temperature, relative humidity, barometric pressure, light intensity, rainfall, wind speed, and wind direction.
+
+SenseCAP ONE is IP66 certified, and it features strong robustness to withstand even the toughest outdoor environment. The Sensors to measure wind speed and wind direction use ultrasound instead of traditional mechanical 3-cup or vane anemometer. The advantage of using ultrasonic sensors is that reducing the movable parts can make the sensor less likely to be broken and thereby is easier to be maintained without any sacrifices in precision or manpower.
+
+The SenseCAP ONE series uses the RS 485 (MODBUS-RTU)  / 232 / 422 (Modbus) / SDI-12 communication protocol. Hence, the SenseCAP ONE compact weather sensor can be used with any datalogger that supports RS 485 (MODBUS-RTU)  / 232 / 422 (Modbus) / SDI-12.
+
+We also provide the SenseCAP [Sensor Hub 4G Data Logger](https://solution.seeedstudio.com/product/sensor-hub-4g-data-logger/) (supporting solar power and DC wall power) that can be used with the SenseCAP ONE series weather sensor. The data can be transmitted to the Sensor Hub and then to the SenseCAP server or a private server. If you choose to use the SenseCAP server, we also provide an API for you to easily make your own applications. 
+
+![](https://sensecap-solution-upload.cdn.seeed.cn/cc/2020/05/Picture16.png?x-oss-process=image%2Fformat,webp)
+
 ## Features 
-* stable, accurate and reliable
-* modular design, integrating multiple sensors
-* ultrasonic wind sensor, reliable and robust 
-* IP66 rated, heating available, suitable for severe environments
-* supporting RS485.232.422 (Modbus)/SDI-12
-* compact design, easy to install and maintenance free
-* build-in compass & gyroscope
-* supporting 4G communication
-* extendable with more sensors
+
+- **multiple weather parameters to measure in one**: rain intensity, air temperature, relative humidity, barometric pressure, light intensity, precipitation intensity, wind speed, and wind direction, etc. 
+
+- **Embedded with the electronic compass**: enabling easy installation and you can choose to disable the electronic compass while orienting to the North manually.
+
+- **A flange plate and 3m cable** are included in the package for the pole mount
+
+- **IP66 rated**: waterproof, and dustproof, heaters available, suitable for severe outdoor environment.
+
+- **Ultrasonic wind speed & direction sensors without moving parts**
+
+- **compact in size, calibrated, easy to install, maintenance free and user-friendly**
+
+- **Radiation shields** are equipped to ensure accurate ambient measurement.
+
+- **Supported interface**: RS 485 (MODBUS-RTU)  / 232 / 422 (Modbus) / SDI-12
+
+- **CE, FCC certifications are in process**, coming soon….
 
 ## Measurement Specifications 
 
