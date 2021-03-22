@@ -16,17 +16,17 @@ LoRa-E5 Dev Board also has rich interfaces. Developed to unlock the full functio
  
 Since LoRa-E5 is a LoRaWAN chip with an MCU, there are three main ways to utilize the LoRa-E5 Dev Board:
  
-1. Connect LoRa-E5 Dev Board to PC via USB and control by AT commands
+1: Connect LoRa-E5 Dev Board to PC via USB and control by AT commands
 
 There is a built-in USB to UART function on board, you could just simply connect the LoRa-E5 Dev Board to your PC with a USB type C cable, and use serial communication software to send AT commands and read data from the board
 
  
-2. Connect LoRa-E5 Dev Board to another mainboard via UART and control by AT commands
+2: Connect LoRa-E5 Dev Board to another mainboard via UART and control by AT commands
 
 For example, connect LoRa-E5 Dev Board to Seeeduino XIAO and the Expansion Board via UART, and send AT commands and read data from Seeeduino XIAO through Arduino IDE serial monitor.
 
  
-3. Develop user application by using SDK
+3: Develop user application by using SDK
 
 Develop your own LoRa development board with MCU function by using STM32Cube Programmer, which is the SDK officially provided by STMicroelectronics. To download this SDK resource, please find the resources in learning and document down below.
 
