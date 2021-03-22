@@ -1,20 +1,20 @@
 
 # Weekly Wiki
-![](https://files.seeedstudio.com/wiki/IMAGES/21-March-Week-3.png)
+![](https://files.seeedstudio.com/wiki/IMAGES/21-March-Week-4.png)
 
-It's the third week of March and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
+It's the fourth week of March and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
 As you all know, Seeed Wiki is a dedicated platform where we provide the proper guidance and support you need when getting started with our products. We put a lot of effort to make this platform more user friendly because we want to enable the learning of electronics in a more systematic approach.  
 We will bring you all these wiki updates in a weekly basis. So stay tuned with us and don't forget to visit this page again next week!
 
 ## Existing Wiki Updated 
 
-### Grove Shield for Raspberry Pi Pico V1.0 Getting Started Projects
+### SenseCAP ONE Series Meteorological Sensors Wiki
 
-We recently released the [Grove Shield for Raspberry Pi Pico V1.0](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html) and got a lot of great feedback from the community!
+[SenseCAP ONE](https://www.seeedstudio.com/SenseCAPONE-S700-7in1-Compact-Weather-Sensor.html) compact weather station consists of several meteorological sensors that measure the following parameters: air temperature & humidity, barometric pressure, light, precipitation, wind speed, wind direction, PM2.5, and PM10. By adopting a modular design, SenseCAP ONE makes it possible for you to conveniently integrate different combinations of sensors into one compact weather station according to actual application needs.
 
-This enables you to connect your favorite [Grove modules](https://www.seeedstudio.com/category/Grove-c-1003.html) to [Raspberry Pi Pico](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html) and bring your ideas to life! We have made [getting started projects](https://wiki.seeedstudio.com/Grove_Shield_for_Pi_Pico_V1.0) for you to experiment with this shield along with Raspberry Pi Pico in a much fun and easy way!
+We have added a [demo](https://wiki.seeedstudio.com/SenseCAP-One-Series-Meteorological-Sensors/#demo) on how to create your very own weather station with the [SenseCAP ONE S700](https://www.seeedstudio.com/SenseCAPONE-S700-7in1-Compact-Weather-Sensor.html) and a [Raspberry Pi](https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-4GB-p-4077.html)!
 
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Grove_Shield_for_Pi_Pico_V1.0"><img src="https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/tutieshi_480x272_3s.gif" alt="pir"  width="750" height="auto"></a></p>
+<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/SenseCAP-One-Series-Meteorological-Sensors/#demo"><img src="https://lh4.googleusercontent.com/CFwdaJ3jBZHVROiCzg1Mfu2dF5pNJwH3DAt7dloC4IKyKO_nFwISY_J-3JpZIqiZCazf9Y5DAxB7OxwNwhnwot3BY_I4Wx3CBdWrZNUwJMoDe9bCSzLmS4yxLVz0JYrm9HhjZl7N" alt="pir"  width="750" height="auto"></a></p>
 
 ## New Wiki Added
 
