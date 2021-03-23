@@ -29,7 +29,7 @@ When you get your hands on the Wio Terminal for the very first time, you need to
 
 ```sh
 cd ~
-git clone https://github.com/LynnL4/ambd_flash_tool
+git clone https://github.com/Seeed-Studio/ambd_flash_tool
 ```
 
 **NOTE**: Here **cd ~** command directs you to your home directory and **git clone** command downloads the repo from GitHub
@@ -62,7 +62,7 @@ cd ambd_flash_tool
 
 ```sh
 cd ~
-git clone https://github.com/LynnL4/ambd_flash_tool
+git clone https://github.com/Seeed-Studio/ambd_flash_tool
 ```
 
 **NOTE**: Here **cd ~** command directs you to your home directory and **git clone** command downloads the repo from GitHub
