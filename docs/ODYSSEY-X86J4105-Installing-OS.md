@@ -92,16 +92,21 @@ BIOS is also like an OS and can be upgraded to fix bugs and enhance performance 
 
 - **Latest BIOS:**
 
-**SD-BS-CJ41G-M-101-K 12/31/2020 20:34:37**
+**SD-BS-CJ41G-300-101-C 03/11/2021 16:28:07**
 
-- **SHA256:** 7208d39c4f77a4837a0a1072dce45c7bc8feba28597522ea036778a9c09aa61a
-
-    1. Added **Secure Boot**.
-    2. Added **Wake on LAN**.
-    3. Fix reboot into BIOS settings page under Linux environment (Eg. `systemctl reboot --firmware-setup`).
-    4. Fix Linux Wake on Lan light issue.
+- **SHA256:** 12f4ce1ab81008525138fcd7d830e18dc13936f3ce4a51e17c314fc55debe480
+    1. Fix bug: loads into other OS other than Windows when set to load others.
 
 >**History BIOS:**
+
+> **[SD-BS-CJ41G-M-101-K 12/31/2020 20:34:37](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-BS-CJ41G-M-101-K.zip)**
+
+> - **SHA256:** 7208d39c4f77a4837a0a1072dce45c7bc8feba28597522ea036778a9c09aa61a
+
+>    1. Added **Secure Boot**.
+>    2. Added **Wake on LAN**.
+>    3. Fix reboot into BIOS settings page under Linux environment (Eg. `systemctl reboot --firmware-setup`).
+>    4. Fix Linux Wake on Lan light issue.
 
 > **[SD-BS-CJ41G-M-101-G 08/31/2020 14:01:20](http://files.seeedstudio.com/wiki/X86-BIOS/SD-BS-CJ41G-M-101-G.zip)**
 
@@ -120,7 +125,7 @@ BIOS is also like an OS and can be upgraded to fix bugs and enhance performance 
 
 ### Step 1 - Download the newest version of BIOS
 
-Download the latest version of BIOS from [**here**](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-BS-CJ41G-M-101-K.zip).
+Download the latest version of BIOS from [**here**](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-BS-CJ41G-300-101-C.zip).
 
 ### Step 2 -  Prepare bootable USB
 
