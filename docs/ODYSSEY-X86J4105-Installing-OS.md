@@ -200,13 +200,19 @@ The X86 also has a embedded controller that can be updated. Updating the EC has 
 
 ### Latest EC Firmware
 
-[**SD-EC-CJ41G-M-101-J 02/02/2021 15:39:11**](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-EC-CJ41G-M-101-J.zip)
+[**SD-EC-CJ41G-M-101-K 03/23/2021 10:57:32**](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-EC-CJ41G-M-101-K.zip)
 
-- **SHA256:** 4ab099f45439f8f6ec14e25ae50a64f878eed4c998e39000e17f2047df6bbb83
+- **SHA256:** 514b1cd994c66889d908b4d13f6f0d9aa1750d4a600228b66d86fff4688d1eb3
 
-1. **Fixing bug**: Shutting down during BIOS setting page causes the ODYSSEY needs to reset the power in order to turn back on.
+1. **Fixing bug**: Increase stability of the EC firmware.
 
 >**History EC Firmware:**
+
+> [**SD-EC-CJ41G-M-101-J 02/02/2021 15:39:11**](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-EC-CJ41G-M-101-J.zip)
+
+> - **SHA256:** 4ab099f45439f8f6ec14e25ae50a64f878eed4c998e39000e17f2047df6bbb83
+
+> 1. **Fixing bug**: Shutting down during BIOS setting page causes the ODYSSEY needs to reset the power in order to turn back on.
 
 > [**SD-EC-CJ41G-M-101-I 12/31/2020 20:34:37**](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-EC-CJ41G-M-101-I.zip)
 
