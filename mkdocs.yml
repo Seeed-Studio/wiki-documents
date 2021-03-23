@@ -505,6 +505,7 @@ nav:
           - Grove - Gas Sensor(MQ9): Grove-Gas_Sensor-MQ9.md
           - Grove - Gas Sensor(O₂): Grove-Gas_Sensor-O2.md
           - Grove - Gas O₂ Sensor(MIX8410): Grove-Gas_Sensor-O2-MIX8410.md
+          - Grove - Gas O₂ Sensor(MIX2801): Grove-Oxygen-Sensor-Pro-MIX2801.md
           - Grove - Multichannel Gas Sensor: Grove-Multichannel_Gas_Sensor.md
           - Grove - VOC and eCO2 Gas Sensor(SGP30): Grove-VOC_and_eCO2_Gas_Sensor-SGP30.md
           - Grove - Alcohol Sensor: Grove-Alcohol_Sensor.md
