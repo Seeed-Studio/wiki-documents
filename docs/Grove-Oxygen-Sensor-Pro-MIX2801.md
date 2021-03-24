@@ -10,7 +10,7 @@ tags: plat_duino, grove_analog, io_3v3, io_5v
 ---
 <!-- tags: io_3v3, io_5v, grove_i2c, grove_analog, grove_digital, grove_uart, plat_duino, plat_bbg, plat_pi, plat_wio, plat_linkit -->
 
-![enter image description here](https://files.seeedstudio.com/wiki/Grove_Oxygen_Sensor_Pro_MIX2801/img/IMG_9608.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove_Oxygen_Sensor_Pro_MIX2801/img/IMG_9618.png)
 
 Grove-Oxygen-Sensor-Pro is a kind of sensor to test the oxygen concentration in air, which is based on the principle of the electrochemical cell to the original work，When it starts to work.it will produce a current proportional to the concentration of oxygen.,then you can determine the concentration of oxygen by measuring the Current size  
 
@@ -87,7 +87,7 @@ Here we will show you how this Grove - Oxygen Sensor(MIX8410) works via a simple
 
 | Seeeduino V4 | Grove - Oxygen Sensor Pro(MIX281) | Base Shield |
 |--------------|----------------------|-----------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Oxygen_Sensor_Pro_MIX2801/img/IMG_9609.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Oxygen_Sensor_Pro_MIX2801/img/IMG_9619.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/grove-gas-sensoro2-p-1541.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Universal-4-Pin-20cm-Unbuckled-Cable-%285-PCs-Pack%29-p-749.html)|
 
 
@@ -98,7 +98,7 @@ Thanks to the benefit of Grove series modules, you don't need to make soldering 
 
 * Grove - Oxygen Sensor(MIX8410) is an analog input module, we connect it to **A0** at this demo
 
-![enter image description here](https://files.seeedstudio.com/wiki/Grove_Oxygen_Sensor_Pro_MIX2801/img/IMG_9610.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove_Oxygen_Sensor_Pro_MIX2801/img/IMG_9620.png)
 
 
 ### Upload the code to Arduino
@@ -182,7 +182,6 @@ Open serial monitor of your Arduino IDE, and you will get the data now.
 
 ## Resources
 
-* [MIX8410 Datasheet](https://files.seeedstudio.com/products/101990680/MIX841datasheetV1.6.pdf)
 * [Schematic in Eagle File](http://files.seeedstudio.com/wiki/Grove_Oxygen_Sensor_Pro_MIX2801/res/Grove-OxygenSensorProv1.0.zip)
 * [Github Repository of this Document](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2)
 * [PDF SCH](files.seeedstudio.com/wiki/Grove_Oxygen_Sensor_Pro_MIX2801/res/GroveOxygenSensorProv1.0sch.pdf)
