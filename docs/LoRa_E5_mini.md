@@ -325,45 +325,30 @@ Rx: +MSGHEX: Start
 
 ### 2. Develop with STM32Cube MCU Package
 
-#### 2.1 Erase Factory AT Firmware
+#### LoRa-E5-LoRaWAN-End-Node
 
-LoRa-E5 has a built-in AT command firmware, which supports LoRaWAN Class A/B/C protocol and wide frequency plan: EU868/US915/AU915/AS923/KR920/IN865. With this AT commond firmware, developers can easily and quickly build their prototype or application.
+This wiki is for LoRa-E5 Mini or LoRa-E5 Dev Board, aiming at creating a LoRaWAN End Node with STM32Cube MCU Package for STM32WL series(SDK), to join and send data to LoRaWAN Network.
 
-But for those uesr who perfer to directly develop applications on LoRa-E5 module, with STM32Cube MCU packege for STM32WL series, there are several areas to pay attention to:
+!!!Attention
+       Please read [Erase Factory AT Firmware](https://wiki.seeedstudio.com/LoRa_E5_mini/#21-erase-factory-at-firmware) section first, as if we need to erase the Factory AT Firmware before we program with SDK. After erasing the Factory AT Firmware it CANNOT be recovered.
 
-- Read Protection is needed to remove first, after you connect the MCU via SWD. STM32Cube Programmer is the recommended tool  to do this.
+#### Preparasions
 
-- Once the factory AT firmware is erased, it can't be flashed to the MCU again
+Softwares:
 
-- The "PB13/SPI_SCK/BOOT" pin on the LoRa-E5 module is just a normal GPIO, not the "BOOT0" pin of the MCU. This "PB13/SPI_SCK/BOOT" pin is used in the bootloader of the Fatory AT firmware, to decide to jump to APP or stay in bootloader(for DFU). The real "BOOT0" pin doesn't pinout to the module, so users need to be careful when develop low power application.
+- Install [STM32CubeIDE(to compilation and debug)](https://my.st.com/content/my_st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-ides/stm32cubeide.html) 
 
-#### 2.2 Hardware
+- Install [STM32CubeProgrammer(to program STM32 devices)](https://my.st.com/content/my_st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-programmers/stm32cubeprog.license=1614563305396.product=STM32CubePrg-W64.version=2.6.0.html)
 
-- Clock Configuration:
-  - HSE
-    - 32MHz TCXO
-    - TCXO power supply: PB0-VDD_TCXO
-  - LSE
-    - 32.768KHz crystal oscillator
-  -  RF Switch 
-    - Receive: PA4=1, PB5=0
-    - Transmit(high output power, SMPS mode): PA4=0, PB5=1
+- Download and extract [STM32Cube MCU Package for STM32WL series(SDK)](https://my.st.com/content/my_st_com/en/products/embedded-software/mcu-mpu-embedded-software/stm32-embedded-software/stm32cube-mcu-mpu-packages/stm32cubewl.license=1608693595598.product=STM32CubeWL.version=1.0.0.html#overview)
 
-### 3. Creating a LoRaWAN End Node with SDK
-
-This part is for LoRa-E5 Mini or LoRa-E5 Dev Board, aiming at creating a LoRaWAN End Node with STM32Cube MCU Package for STM32WL series(SDK), to join and send data to LoRaWAN Network.
-
-#### Before the start
-
-- Please read [Erase Factory AT Firmware](https://wiki.seeedstudio.com/LoRa_E5_mini/#21-erase-factory-at-firmware) section first, as if we need to erase the Factory AT Firmware before we program with SDK
-
-- Install [STM32CubeIDE(to compilation and debug)](https://my.st.com/content/my_st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-ides/stm32cubeide.html) and [STM32CubeProgrammer(to program STM32 devices)](https://my.st.com/content/my_st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-programmers/stm32cubeprog.license=1614563305396.product=STM32CubePrg-W64.version=2.6.0.html), also download and extract [STM32Cube MCU Package for STM32WL series(SDK)](https://my.st.com/content/my_st_com/en/products/embedded-software/mcu-mpu-embedded-software/stm32-embedded-software/stm32cube-mcu-mpu-packages/stm32cubewl.license=1608693595598.product=STM32CubeWL.version=1.0.0.html#overview)
+Hardwares:
 
 - LoRaWAN Gateway connected to LoRaWAN Network Server(e.g. TTN)
 
 - Prepare an USB TypeC cable and a ST-LINK. Connect the TypeC cable to the TypeC port for power and serial communication, connect the ST-LINK to the SWD pins like this:
 
-![connection](https://files.seeedstudio.com/products/113990934/connection.png)
+![connection](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/connection.png)
 
 
 #### GPIO Configuration Overview
@@ -387,7 +372,9 @@ This part is for LoRa-E5 Mini or LoRa-E5 Dev Board, aiming at creating a LoRaWAN
 |DBG4|PB10|PB4|
 |Usart|Usart2(PA2/PA3)|Usart1(PB6/PB7)|
 
-#### Step 1. Build the LoRaWAN End Node Example
+#### Getting Started
+
+#### 1. Build the LoRaWAN End Node Example
 
 - Download and copy [this repo](https://github.com/seeed-lora/LoRa-E5-LoRaWAN-End-Node.git) to your SDK folder `en.stm32cubewl\STM32Cube_FW_WL_V1.0.0\Projects\NUCLEO-WL55JC\Applications\LoRaWAN` and replace the origin `en.stm32cubewl\STM32Cube_FW_WL_V1.0.0\Projects\NUCLEO-WL55JC\Applications\LoRaWAN\LoRaWAN_End_Node` folder
 
@@ -395,9 +382,11 @@ This part is for LoRa-E5 Mini or LoRa-E5 Dev Board, aiming at creating a LoRaWAN
 
 - Click `Build Debug` for this example, it should works without any errors
 
-![build](https://files.seeedstudio.com/products/113990934/build.png)
+![build](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/build.png)
 
-#### Step 2. Modify your Device EUI and Application EUI
+#### 2. Modify your Device EUI, Application EUI, Application KEY and your LoRawan Region
+
+![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/5611616569871_.pic_hd.jpg)
 
 - Please follow the [guide](https://wiki.seeedstudio.com/LoRa_E5_mini/#13-connect-and-send-data-to-ttn) here to setup your TTN application, get your Application EUI and copy it to the macro definition `LORAWAN_JOIN_EUI` in `LoRaWAN/App/se-identity.h` , for example, my Application EUI is `70 B3 D5 7E D0 03 F0 6A` :
 
@@ -411,7 +400,7 @@ This part is for LoRa-E5 Mini or LoRa-E5 Dev Board, aiming at creating a LoRaWAN
 
 ```
 
-- Also, you can modify your Device EUI, by setting the macro definition `LORAWAN_DEVICE_EUI` in `LoRaWAN/App/se-identity.h` , don't forget to ensure `LORAWAN_DEVICE_EUI` is the same as the `Device EUI` in TTN console.
+- Also, you can modify your Device EUI and Application Key, by setting the macro definition `LORAWAN_DEVICE_EUI` and `LORAWAN_APP_KEY` in `LoRaWAN/App/se-identity.h` , don't forget to ensure `LORAWAN_DEVICE_EUI` and `LORAWAN_APP_KEY` are the same as the `Device EUI` and `App Key` in TTN console.
 
 ```C
 // LoRaWAN/App/se-identity.h
@@ -421,16 +410,41 @@ This part is for LoRa-E5 Mini or LoRa-E5 Dev Board, aiming at creating a LoRaWAN
  */
 #define LORAWAN_DEVICE_EUI                                 { 0x00, 0x80, 0xE1, 0x15, 0x00, 0x07, 0x4C, 0xD5 }
 
+/*!
+ * Application root key
+ */
+#define LORAWAN_APP_KEY                                    2B,7E,15,16,28,AE,D2,A6,AB,F7,15,88,09,CF,4F,3C
 ```
 
-- After modification, please **rebuild the example** and program to your LoRa-E5. Make sure the Read Out Protection is `AA`, if it is shown as `BB`, select `AA` and click `Apply`:
+![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/key.png)
 
-![](https://files.seeedstudio.com/products/113990934/read-protect.png)
+- The default LoRaWAN Region is `EU868`, you can modify it, by setting the macro definition `ACTIVE_REGION` in `LoRaWAN/App/lora_app.h`
 
-![](https://files.seeedstudio.com/products/113990934/start-programming.png)
+```c
+// LoRaWAN/App/lora_app.h
+
+/* LoraWAN application configuration (Mw is configured by lorawan_conf.h) */
+/* Available: LORAMAC_REGION_AS923, LORAMAC_REGION_AU915, LORAMAC_REGION_EU868, LORAMAC_REGION_KR920, LORAMAC_REGION_IN865, LORAMAC_REGION_US915, LORAMAC_REGION_RU864 */
+#define ACTIVE_REGION                               LORAMAC_REGION_EU868
+
+```
+
+![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/region.png)
+
+- After modification, please **rebuild the example** and program to your LoRa-E5. Open `STM32CubeProgrammer`, connect ST-LINK to your PC, hold `RESET Button` of your Device, then click `Connect` and release `RESET Button`:
+
+![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program1.png)
+
+- Make sure the Read Out Protection is `AA`, if it is shown as `BB`, select `AA` and click `Apply`:
+
+![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program2.png)
+
+- Now, go to the `Erasing & Programming` page, select your hex file path(my path is `E:\en.stm32cubewl\STM32Cube_FW_WL_V1.0.0\Projects\NUCLEO-WL55JC\Applications\LoRaWAN\LoRaWAN_End_Node\STM32CubeIDE\LoRaWAN_End_Node_Debug.hex` ), select the programming options as the following picture, then click `Start Programming`! Once the prgramming is finished, 
+
+![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program3.png)
 
 
-#### Step 3. Connect to TTN
+#### 3. Connect to TTN
 
 - If your LoRaWAN Gateway and TTN are setup, LoRa-E5 will join successfully after reset! A comfirm LoRaWAN package will be sent to TTN every 30 seconds. The following log will come out from the serial port if the join is successful:
 
@@ -471,7 +485,7 @@ MW_RADIO_VERSION:   V0.6.1
 ###### ========== MCPS-Confirm =============
 ```
 
-![](https://files.seeedstudio.com/products/113990934/serial.png)
+![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/serial.png)
 
 - Cheers! You have already connected LoRa-E5 to LoRaWAN Network! Can't wait to see you develop some wonderful LoRaWAN End Node applications!
 
