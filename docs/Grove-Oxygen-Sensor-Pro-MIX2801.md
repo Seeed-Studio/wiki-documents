@@ -1,5 +1,5 @@
 ---
-name: Grove - Gas Sensor O₂(MIX8410)
+name: Grove - Oxygen Sensor Pro(GGC2330-O2)
 category: Sensor
 bzurl:    https://www.seeedstudio.com/Grove-Oxygen-Sensor-MIX8410-p-4697.html
 oldwikiname:
@@ -10,11 +10,11 @@ tags: plat_duino, grove_analog, io_3v3, io_5v
 ---
 <!-- tags: io_3v3, io_5v, grove_i2c, grove_analog, grove_digital, grove_uart, plat_duino, plat_bbg, plat_pi, plat_wio, plat_linkit -->
 
-![enter image description here](https://files.seeedstudio.com/wiki/Grove_Oxygen_Sensor_Pro_MIX2801/img/IMG_9618.png)
+![enter image description here](https://files.seeedstudio.com/wiki/Grove_Oxygen_Sensor_Pro_MIX2801/img/IMG_9621.png)
 
-Grove-Oxygen-Sensor-Pro is a kind of sensor to test the oxygen concentration in air, which is based on the principle of the electrochemical cell to the original work，When it starts to work.it will produce a current proportional to the concentration of oxygen.,then you can determine the concentration of oxygen by measuring the Current size  
+Grove-Oxygen-Sensor-Pro is a kind of sensor to test the oxygen concentration in air, which is based on the principle of the electrochemical cell to the original work.When it starts to work, it will produce a current proportional to the concentration of oxygen, then you can determine the concentration of oxygen by measuring the Current size.
 
-Grove-Oxygen-Sensor-Pro(MIX2801) is a  enhanced version of Grove-Oxygen-Sensor(MIX8410), Compared to the Grove-Oxygen-Sensor(MIX8410) ,It has built-in temperature sensor to make temperature compensation,which can corrects the measurement error caused by the temperature difference and and make the measurement more accurate
+Grove - Oxygen Sensor Pro(GGC2330-O2) is an enhanced version of Grove - Oxygen Sensor(GG2020-O2), Compared to the Grove - Oxygen Sensor(GG2020-O2), It has a built-in temperature sensor to make temperature compensation, which can correct the measurement error caused by the temperature difference and make the measurement more accurate.On top of that, it is equipped with a high-performance microprocessor, which allows it to have digital output and analog voltage output capabilities at the same time, making the sensor easier to use and calibrate and shorten the development period.
 
 [![](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/get_one_now.png)](https://www.seeedstudio.com/Grove-Oxygen-Sensor-MIX8410-p-4697.html)
 
@@ -36,18 +36,18 @@ Grove-Oxygen-Sensor-Pro(MIX2801) is a  enhanced version of Grove-Oxygen-Sensor(M
 
 ## Specification
 
-|Items	| Parameter |
+|Items  | Parameter |
 |-------|---------------|
-|Target Gas	| O2 |
+|Target Gas | O2 |
 |Resolution| 0.1%VOL |
-|Measurement Range	| 0-25%VOL |
+|Measurement Range  | 0-25%VOL |
 |ReOperating Voltage  | DC 5±0.1V DC |
 |Operating Current | ＜ 10 mA |
 |Output| Output UART(TTL electrical Level, 3V)Analog voltage(refer table 2 for sensor original amplifying signal) |
 |Operating Conditions| -20～25℃/15～90%RH(no condensation) |
 |Storage Conditions|  -20～50℃/15～90%RH(no condensation) |
-|Size |	ø23.5mm*24.5mm |
-|Life Expectancy	| 2 years(in air)|
+|Size | ø23.5mm*24.5mm |
+|Life Expectancy    | 2 years(in air)|
 
 !!!Note
     The aging time of power-on is not less than 5min; 
@@ -79,15 +79,15 @@ Grove-Oxygen-Sensor-Pro(MIX2801) is a  enhanced version of Grove-Oxygen-Sensor(M
 !!!Note
     This chapter is based on Win10 and Arduino IDE 1.7.9
 
-This new Grove-Oxygen-Sensor-Pro(MIX2801) usage method is exactly the same as Grove-Oxygen-Sensor(MIX8410) [MIX8410](https://wiki.seeedstudio.com/Grove-Gas_Sensor-O2-MIX8410/).
+This new Grove - Oxygen Sensor Pro(GGC2330-O2) usage method is exactly the same as Grove - Oxygen Sensor(GG2020-O2) [GG2020-O2](https://wiki.seeedstudio.com/Grove-Gas_Sensor-O2-MIX8410/).
 
 This an easy-to-use module, what you need to do is connect the signal pin (the YELLOW pin of Grove cable) to the ADC input of your controller. If there's no internal ADC in your controller, [Grove - I2C ADC](https://www.seeedstudio.com/Grove-I2C-ADC-p-1580.html) is recommend. 
 
-Here we will show you how this Grove - Oxygen Sensor(MIX8410) works via a simple demo. First of all, you need to prepare the below stuffs:
+Here we will show you how this Grove - Oxygen Sensor Pro(GGC2330-O2) works via a simple demo. First of all, you need to prepare the below stuffs:
 
-| Seeeduino V4 | Grove - Oxygen Sensor Pro(MIX281) | Base Shield |
+| Seeeduino V4 | Grove - Oxygen Sensor Pro(GGC2330-O2) | Base Shield |
 |--------------|----------------------|-----------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Oxygen_Sensor_Pro_MIX2801/img/IMG_9619.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Oxygen_Sensor_Pro_MIX2801/img/IMG_9621.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/grove-gas-sensoro2-p-1541.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Universal-4-Pin-20cm-Unbuckled-Cable-%285-PCs-Pack%29-p-749.html)|
 
 
@@ -96,7 +96,7 @@ Here we will show you how this Grove - Oxygen Sensor(MIX8410) works via a simple
 
 Thanks to the benefit of Grove series modules, you don't need to make soldering or bread board, what you need to do is connect the modules to the right port of Base Shield. For this demo, we have only one Grove module. 
 
-* Grove - Oxygen Sensor(MIX8410) is an analog input module, we connect it to **A0** at this demo
+* Grove - Oxygen Sensor Pro(GGC2330-O2) is an analog input module, we connect it to **A0** at this demo
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Oxygen_Sensor_Pro_MIX2801/img/IMG_9620.png)
 
@@ -120,7 +120,7 @@ void setup()
 {
     // put your setup code here, to run once:
     Serial.begin(9600);
-    Serial.println("Grove_Oxygen_Sensor_Pro(MIX2801) Test Code...");
+    Serial.println("Grove_Oxygen_Sensor_Pro(GGC2330-O2) Test Code...");
 }
 
 void loop() 
@@ -182,6 +182,7 @@ Open serial monitor of your Arduino IDE, and you will get the data now.
 
 ## Resources
 
+* [Grove - Oxygen Sensor Pro Datasheet](https://files.seeedstudio.com/wiki/Grove_Oxygen_Sensor_Pro_MIX2801/res/GGC2330-O2.pdf)
 * [Schematic in Eagle File](http://files.seeedstudio.com/wiki/Grove_Oxygen_Sensor_Pro_MIX2801/res/Grove-OxygenSensorProv1.0.zip)
 * [Github Repository of this Document](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2)
 * [PDF SCH](files.seeedstudio.com/wiki/Grove_Oxygen_Sensor_Pro_MIX2801/res/GroveOxygenSensorProv1.0sch.pdf)
