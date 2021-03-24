@@ -3,7 +3,7 @@
 This wiki introduces how to update the latest firmware for the Wireless Core Realtek RTL8720 on the Wio Terminal, as well as installing all the dependent libraries for Wio Terminal to enable wireless connectivity.
 
 !!!Note
-    **We are moving the Wi-Fi Software to the new eRPC Structure which is more stable and can work with Bluetooth at the same time**! Please follow through to update to eRPC Wi-Fi firmware and related libraries!
+    **We have moved the Wi-Fi Software to the new eRPC Structure which is more stable and can work with Bluetooth at the same time**! Please follow through to update to eRPC Wi-Fi firmware and related libraries!
 
 ## Update the Wireless Core Firmware
 
