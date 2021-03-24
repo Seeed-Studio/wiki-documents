@@ -207,7 +207,7 @@ The X86 also has a embedded controller that can be updated. Updating the EC has 
 
 [**SD-EC-CJ41G-M-101-K 03/23/2021 10:57:32**](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-EC-CJ41G-M-101-K.zip)
 
-- **SHA256:** 514b1cd994c66889d908b4d13f6f0d9aa1750d4a600228b66d86fff4688d1eb3
+- **SHA256:** 5e479185398121b1913ada3cff03264ea1522196b53f34c9ace77bd1f3ecc47e
 
 1. **Fixing bug**: Increase stability of the EC firmware.
 
