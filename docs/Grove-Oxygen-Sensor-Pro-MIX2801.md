@@ -87,7 +87,7 @@ Here we will show you how this Grove - Oxygen Sensor Pro(GGC2330-O2) works via a
 
 | Seeeduino V4 | Grove - Oxygen Sensor Pro(GGC2330-O2) | Base Shield |
 |--------------|----------------------|-----------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Oxygen_Sensor_Pro_MIX2801/img/IMG_9621.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Oxygen_Sensor_Pro_MIX2801/img/Grove_Oxygen_Sensor_Pro_Preview-07-210x157.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/grove-gas-sensoro2-p-1541.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Universal-4-Pin-20cm-Unbuckled-Cable-%285-PCs-Pack%29-p-749.html)|
 
 
