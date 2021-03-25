@@ -5,9 +5,7 @@
 ## Product Introduction
 
 !!!Notes
-        We has recently released the LoRa-E5 Series based on LoRa-E5 module. Click [here](https://www.seeedstudio.com/lora-c-755.html?product_list_stock=3) to meet new members of the LoRa-E5 family from the [Grove module](https://wiki.seeedstudio.com/Grove_LoRa_E5_New_Version/), [mini Dev boards](https://wiki.seeedstudio.com/LoRa_E5_mini/) to [Development Kit](https://wiki.seeedstudio.com/LoRa_E5_Dev_Board/).
-
-
+        We has recently released the LoRa-E5 Series based on LoRa-E5 module. Click [here](https://www.seeedstudio.com/lora-c-755.html?product_list_stock=3) to meet new members of the LoRa-E5 family from the [Grove module](https://wiki.seeedstudio.com/Grove_LoRa_E5_New_Version/), [mini Dev boards](https://wiki.seeedstudio.com/LoRa_E5_mini/) to [Development Kit](https://wiki.seeedstudio.com/LoRa_E5_Dev_Board/). To learn more on creating a LoRaWAN End Node with STM32Cube MCU Package for STM32WL series(SDK), to join and to send data to LoRaWAN Network, read more on wiki pages for [mini Dev boards](https://wiki.seeedstudio.com/LoRa_E5_mini/) and [Development Kit](https://wiki.seeedstudio.com/LoRa_E5_Dev_Board/).
 
 LoRa-E5 is a low-cost, ultra-low power, extremely compact, and high-performance LoRaWAN Module designed by Seeed Technology Co., Ltd. **It contains ST system-level package chip STM32WLE5JE, which is the world first SoC integrated with the combo of LoRa RF and MCU chip.** This module is also embedded with ARM Cortex M4 ultra-low-power MCU and LoRa SX126X, and therefore supports (G)FSK mode and LoRa. 62.5kHz, 125kHz, 250kHz, and 500kHz bandwidth can be used in LoRa® mode, making it suitable for the design of various IoT nodes, supporting EU868 and US915.
 
