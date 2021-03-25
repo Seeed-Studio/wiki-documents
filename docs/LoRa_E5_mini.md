@@ -325,14 +325,12 @@ Rx: +MSGHEX: Start
 
 ### 2. Develop with STM32Cube MCU Package
 
-#### LoRa-E5-LoRaWAN-End-Node
-
-This wiki is for LoRa-E5 Mini or LoRa-E5 Dev Board, aiming at creating a LoRaWAN End Node with STM32Cube MCU Package for STM32WL series(SDK), to join and send data to LoRaWAN Network.
+This section is for LoRa-E5 Mini or LoRa-E5 Dev Board, aiming at creating a LoRaWAN End Node with STM32Cube MCU Package for STM32WL series(SDK), to join and send data to LoRaWAN Network.
 
 !!!Attention
        Please read [Erase Factory AT Firmware](https://wiki.seeedstudio.com/LoRa_E5_mini/#21-erase-factory-at-firmware) section first, as if we need to erase the Factory AT Firmware before we program with SDK. After erasing the Factory AT Firmware it CANNOT be recovered.
 
-#### Preparasions
+#### 2.1 Preparasions
 
 Softwares:
 
@@ -351,7 +349,7 @@ Hardwares:
 ![connection](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/connection.png)
 
 
-#### GPIO Configuration Overview
+#### 2.2 GPIO Configuration Overview
 
 - As the hardware design of LoRa-E5 series is a bit different with NUCLEO-WL55JC, the official STM32WL55JC development board from ST, developers need to reconfigure some gpios, to adapt the SDK example to LoRa-E5 series. We have already reconfigured gpios in this example, but we think it is nessary to point out the difference.
 
@@ -372,9 +370,7 @@ Hardwares:
 |DBG4|PB10|PB4|
 |Usart|Usart2(PA2/PA3)|Usart1(PB6/PB7)|
 
-#### Getting Started
-
-#### 1. Build the LoRaWAN End Node Example
+#### 2.3 Build the LoRaWAN End Node Example
 
 - Download and copy [this repo](https://github.com/seeed-lora/LoRa-E5-LoRaWAN-End-Node.git) to your SDK folder `en.stm32cubewl\STM32Cube_FW_WL_V1.0.0\Projects\NUCLEO-WL55JC\Applications\LoRaWAN` and replace the origin `en.stm32cubewl\STM32Cube_FW_WL_V1.0.0\Projects\NUCLEO-WL55JC\Applications\LoRaWAN\LoRaWAN_End_Node` folder
 
@@ -384,7 +380,7 @@ Hardwares:
 
 ![build](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/build.png)
 
-#### 2. Modify your Device EUI, Application EUI, Application KEY and your LoRawan Region
+#### 2.4 Modify your Device EUI, Application EUI, Application KEY and your LoRawan Region
 
 ![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/5611616569871_.pic_hd.jpg)
 
@@ -444,7 +440,7 @@ Hardwares:
 ![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program3.png)
 
 
-#### 3. Connect to TTN
+#### 2.5 Connect to TTN
 
 - If your LoRaWAN Gateway and TTN are setup, LoRa-E5 will join successfully after reset! A comfirm LoRaWAN package will be sent to TTN every 30 seconds. The following log will come out from the serial port if the join is successful:
 
