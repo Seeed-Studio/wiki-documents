@@ -1,37 +1,45 @@
 # Bluetooth Overview
 
-This wiki introduce how to update the Bluetooth firmware for the Wireless Core Realtek RTL8720 on Wio Terminal, as well as installing all the dependent libraries for Wio Terminal to enable BLE functionality.
+This wiki introduces how to update the latest firmware for the Wireless Core Realtek RTL8720 on the Wio Terminal, as well as installing all the dependent libraries for Wio Terminal to enable Bluetooth connectivity.
 
+## Update the Wireless Core Firmware
 
-## Update the Wireless Core Firmware(BLE)
-
-In order to use the Bluetooth functionality, you must **update the Bluetooth firmware** to the Wireless Core to Wio Terminal.
-
-### Tools and Set-ups
-
-Same configuration as updating network firmware, Please follow [**this guide**](https://wiki.seeedstudio.com/Wio-Terminal-Network-Overview/#update-the-wireless-core-firmware) for **tools and procedures**, but use the Bluetooth Firmware files below.
-
-### Bluetooth Firmware Files
-
-Download the Bluetooth Firmware Files from **[here](https://github.com/Seeed-Studio/seeed-ambd-firmware/releases)**
+Please follow [this guide](https://wiki.seeedstudio.com/Wio-Terminal-Network-Overview/#update-the-wireless-core-firmware) to update the wireless core firmware on the Wio Terminal. 
 
 !!!Note
-        Bluetooth and WIFI can use the same firmware.
+        This firmware allows Wi-Fi and Bluetooth to work at the same time!
 
-## Libraries Installations
+## Update Seeed SAMD ArduinoCore
 
-- Update your **ArduinoSAMD Core** for Seeed's board to the latest verison: **≥1.8.0**.
+!!!Note
+    Please update the **Seeed SAMD ArduinoCore to the latest version (1.8.1)**!
 
-### Installing the Seeed_Arduino_rpcBLE
+- **STEP 1:** Open the **Arduino IDE**, and click `Tools` -> `Board` -> `Boards Manager`, and search **Wio Terminal** in the search box
 
-1. Visit the [Seeed_Arduino_rpcBLE](https://github.com/Seeed-Studio/Seeed_Arduino_rpcBLE) repositories and download the entire repo to your local drive.
+- **STEP 2:** Make sure the latest version (1.8.1) is installed. If not, click on the `Select version` drop-down menu, select the latest version and click `Install`
 
-2. Now, the  library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_rpcBLE` file that you've have just downloaded.
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/ArduinoCore_new.png" alt="pir" width="850" height="auto"></p>
 
-![InstallLibrary](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Xnip2019-11-21_15-50-13.jpg)
+> You can also find the source code of Seeed SAMD ArduinoCore [**here**](https://github.com/Seeed-Studio/ArduinoCore-samd).    
 
-### Installing the Seeed_Arduino_rpcUnified
+## Libraries Installation
 
-1. Visit the [Seeed_Arduino_rpcUnified](https://github.com/Seeed-Studio/Seeed_Arduino_rpcUnified) repositories and download the entire repo to your local drive.
+There are a few Arduino Libraries that are needed for Bluetooth connectivity. We have included all the wireless-related libraries for the Wio Terminal in the **Arduino Library Manager**. So you simply have to open Arduino Library Manager within Arduino IDE and search for the libraries that you need and easily install them!
 
-2. Now, the  library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_rpcUnified` file that you've have just downloaded.
+### How to Install a Library from Arduino Library Manager
+
+- **STEP 1:** Open the **Arduino IDE**, and click `Sketch` -> `Include Library` -> `Manage Libraries...`
+
+- **STEP 2:** Type the **name of the library** that we need and select the **latest version** from the drop-down menu (if available)
+
+- **STEP 3:** Click **Install**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/library_install_1.jpg" alt="pir" width="870" height="auto"></p>
+
+### Needed Libraries for Bluetooth
+
+We need the following libraries to get started with Bluetooth on the Wio Terminal. You can search for these libraries by typing the library name in the search box of Arduino Library Manager.
+
+- [**Seeed_Arduino_rpcBLE**](https://github.com/Seeed-Studio/Seeed_Arduino_rpcBLE) - search for `"seeed rpcble"` 
+
+- [**Seeed_Arduino_rpcUnified**](https://github.com/Seeed-Studio/Seeed_Arduino_rpcUnified) - search for `"seeed rpcunified"`
