@@ -57,64 +57,60 @@ Pinout:
 <tr><th class="tg-4onr">Region</th><th class="tg-ev79">EU868</th><th class="tg-ev79">US915</th></tr>
 </thead>
 <tbody>
-<tr>
-<td class="tg-4onr">Frequency</td>
-<td class="tg-f42p">863-870MHz</td>
-<td class="tg-f42p">902-928MHz</td>
-</tr>
-<tr>
-<td class="tg-4onr">Sensitivity</td>
-<td class="tg-f42p">-125dBm @125K/SF7<br />-139dBm @125K/SF12</td>
-<td class="tg-f42p">-125dBm @125K/SF7<br />-139dBm @125K/SF12</td>
-</tr>
-<tr>
-<td class="tg-4onr">TX Power</td>
-<td class="tg-f42p">26 dBm (with 3.3V power supply)</td>
-<td class="tg-f42p">25 dBm (with 3.3V power supply)</td>
-</tr>
-<tr>
-<td class="tg-4onr">LEDs</td>
-<td class="tg-f42p" colspan="2">Power: Green Config: Red TX: Green RX: Blue</td>
-</tr>
-<tr>
-<td class="tg-4onr">Form Factor</td>
-<td class="tg-f42p" colspan="2">Mini PCIe, 52pin Golden Finger</td>
-</tr>
-<tr>
-<td class="tg-4onr">Power Consumption (SPI version)</td>
-<td class="tg-f42p" colspan="2">Standby: 7.5 mA<br />TX maximum power: 415 mA<br />RX: 40 mA</td>
-</tr>
-<tr>
-<td class="tg-4onr">Power Consumption (USB version)</td>
-<td class="tg-f42p" colspan="2">Standby: 20 mA<br />TX maximum power: 425 mA<br />RX: 53 mA</td>
-</tr>
-<tr>
-<td class="tg-4onr">LBT(Listen Before Talk)</td>
-<td class="tg-f42p" colspan="2">Support</td>
-</tr>
-<tr>
-<td class="tg-4onr">Antenna Connector</td>
-<td class="tg-f42p" colspan="2">U.FL</td>
-</tr>
-<tr>
-<td class="tg-4onr">Operating Temperature</td>
-<td class="tg-f42p" colspan="2">-40°C to 85°C</td>
-</tr>
-<tr>
-<td class="tg-4onr">Dimensions</td>
-<td class="tg-f42p" colspan="2">30 mm (width) × 50.95 mm (length)</td>
-</tr>
-<tr>
-<td class="tg-4onr">Certification</td>
-<td class="tg-f42p" colspan="2">CE</td>
-</tr>
+  <tr>
+    <td class="tg-4onr">Frequency</td>
+    <td class="tg-f42p">863-870MHz</td>
+    <td class="tg-f42p">902-928MHz</td>
+  </tr>
+  <tr>
+    <td class="tg-4onr">Sensitivity</td>
+    <td class="tg-f42p">-125dBm @125K/SF7<br />-139dBm @125K/SF12</td>
+    <td class="tg-f42p">-125dBm @125K/SF7<br />-139dBm @125K/SF12</td>
+  </tr>
+  <tr>
+    <td class="tg-4onr">TX Power</td>
+    <td class="tg-f42p">26 dBm (with 3.3V power supply)</td>
+    <td class="tg-f42p">25 dBm (with 3.3V power supply)</td>
+  </tr>
+  <tr>
+    <td class="tg-4onr">LEDs</td>
+    <td class="tg-f42p" colspan="2">Power: Green Config: Red TX: Green RX: Blue</td>
+  </tr>
+  <tr>
+    <td class="tg-4onr">Form Factor</td>
+    <td class="tg-f42p" colspan="2">Mini PCIe, 52pin Golden Finger</td>
+  </tr>
+  <tr>
+    <td class="tg-4onr">Power Consumption (SPI version)</td>
+    <td class="tg-f42p" colspan="2">Standby: 7.5 mA<br />TX maximum power: 415 mA<br />RX: 40 mA</td>
+  </tr>
+  <tr>
+    <td class="tg-4onr">Power Consumption (USB version)</td>
+    <td class="tg-f42p" colspan="2">Standby: 20 mA<br />TX maximum power: 425 mA<br />RX: 53 mA</td>
+  </tr>
+  <tr>
+    <td class="tg-4onr">LBT(Listen Before Talk)</td>
+    <td class="tg-f42p" colspan="2">Support</td>
+  </tr>
+  <tr>
+    <td class="tg-4onr">Antenna Connector</td>
+    <td class="tg-f42p" colspan="2">U.FL</td>
+  </tr>
+  <tr>
+    <td class="tg-4onr">Operating Temperature</td>
+    <td class="tg-f42p" colspan="2">-40°C to 85°C</td>
+  </tr>
+  <tr>
+    <td class="tg-4onr">Dimensions</td>
+    <td class="tg-f42p" colspan="2">30 mm (width) × 50.95 mm (length)</td>
+  </tr>
+  <tr>
+    <td class="tg-4onr">Certification</td>
+    <td class="tg-f42p" colspan="2">CE</td>
+  </tr>
 </tbody>
 </table>
-</div>
-<div><strong><br /></strong></div>
-</div>
-<div></div>
-<div></div>
+
 
 
 ## Application
