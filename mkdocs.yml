@@ -447,6 +447,7 @@ nav:
   - LoRa: 
       - LoRa Module: 
           - LoRa-E5 STM32WLE5JC Module embedded SX126X & MCU: LoRa-E5_STM32WLE5JC_Module.md
+          - LoRaWAN gateway module WM1302: WM1302_module-md
       - LoRa Gateway: 
           - The Things Indoor Gateway: The-Things-Indoor-Gateway.md
       - LoRa Development Kit: 
