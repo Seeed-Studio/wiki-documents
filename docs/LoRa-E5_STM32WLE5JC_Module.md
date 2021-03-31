@@ -232,37 +232,6 @@ The AT command firmware contains a bootloader for DFU and the AT application. Th
 </table>
 
 
-## Sources
-
-- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20module%20datasheet_V1.0.pdf">LoRa-E5 datasheet and specifications</a></p>
-
-- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20AT%20Command%20Specification_V1.0%20.pdf">LoRa-E5 AT Command Specification</a></p>
-
-- <p><a href="https://files.seeedstudio.com/products/317990687/res/STM32WLE5JC%20Datasheet.pdf">STM32WLE5JC Datasheet</a></p>
-
-Certifications:
-
-- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20Certification%20CE-VOC-RED.pdf">LoRa-E5-HF Certification CE-VOC-RED</a></p>
-
-- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20FCC%20Certification%20-DSS.pdf">LoRa-E5-HF FCC Certification -DSS</a></p>
-
-- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20FCC%20Certification%20-DTS.pdf">LoRa-E5-HF FCC Certification -DTS</a></p>
-
-Library: 
-
-- [LoRa-E5 kicad library](https://files.seeedstudio.com/products/317990687/res/LoRa-E5_kicad_Library.zip)
-
-- [LoRa-E5 HF 3D File](https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF_3D_File.stp)
-
-- [LoRa-E5 Eagle Library](https://files.seeedstudio.com/products/317990687/res/LORA_E5_Eagle_Library.lbr)
-
-Relevant SDK:
-
-- <p><a href="https://my.st.com/content/my_st_com/en/products/embedded-software/mcu-mpu-embedded-software/stm32-embedded-software/stm32cube-mcu-mpu-packages/stm32cubewl.license=1608693595598.product=STM32CubeWL.version=1.0.0.html#overview" target="_blank">STM32Cube MCU Package for STM32WL series</a></p>
-<div id="gtx-trans" style="position: absolute; left: -36px; top: 48.875px;">
-<div class="gtx-trans-icon"></div>
-</div>
-
 ## Getting Started
 
 ### 1. Quick start of AT Commands
@@ -416,6 +385,37 @@ But for those uesr who perfer to directly develop applications on LoRa-E5 module
     - Transmit(high output power, SMPS mode): PA4=0, PB5=1
 
 More demos coming soon...
+
+## Sources
+
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20module%20datasheet_V1.0.pdf">LoRa-E5 datasheet and specifications</a></p>
+
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20AT%20Command%20Specification_V1.0%20.pdf">LoRa-E5 AT Command Specification</a></p>
+
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/STM32WLE5JC%20Datasheet.pdf">STM32WLE5JC Datasheet</a></p>
+
+Certifications:
+
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20Certification%20CE-VOC-RED.pdf">LoRa-E5-HF Certification CE-VOC-RED</a></p>
+
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20FCC%20Certification%20-DSS.pdf">LoRa-E5-HF FCC Certification -DSS</a></p>
+
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20FCC%20Certification%20-DTS.pdf">LoRa-E5-HF FCC Certification -DTS</a></p>
+
+Library: 
+
+- [LoRa-E5 kicad library](https://files.seeedstudio.com/products/317990687/res/LoRa-E5_kicad_Library.zip)
+
+- [LoRa-E5 HF 3D File](https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF_3D_File.stp)
+
+- [LoRa-E5 Eagle Library](https://files.seeedstudio.com/products/317990687/res/LORA_E5_Eagle_Library.lbr)
+
+Relevant SDK:
+
+- <p><a href="https://my.st.com/content/my_st_com/en/products/embedded-software/mcu-mpu-embedded-software/stm32-embedded-software/stm32cube-mcu-mpu-packages/stm32cubewl.license=1608693595598.product=STM32CubeWL.version=1.0.0.html#overview" target="_blank">STM32Cube MCU Package for STM32WL series</a></p>
+<div id="gtx-trans" style="position: absolute; left: -36px; top: 48.875px;">
+<div class="gtx-trans-icon"></div>
+</div>
 
 ## Tech Support
 

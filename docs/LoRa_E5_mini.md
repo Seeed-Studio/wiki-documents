@@ -51,7 +51,7 @@ If you are unfamiliar with LoRa and LoRaWAN technology, please check out this bl
 
 ![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/hardware%20overview/4041615358935_.pic_hd.jpg)
 
-![](https://files.seeedstudio.com/products/317990687/image/3001615286723_.pic_hd.jpg)
+![](https://files.seeedstudio.com/products/113100022/4601617173003_.pic_hd.jpg)
 
 
 
@@ -491,11 +491,11 @@ More demos coming soon...
 
 LoRa-E5 mini Datasheet:
 
-- <p><a href="http://files.seeedstudio.com/products/113990939/LoRa-E5%20mini%20v1.0.brd">LoRa-E5 mini v1.0.brd</a></p>
+- <p><a href="https://files.seeedstudio.com/products/113990939/LoRa-E5%20mini%20v1.0.brd">LoRa-E5 mini v1.0.brd</a></p>
 
 - <p><a href="https://files.seeedstudio.com/products/113990939/LoRa-E5%20mini%20v1.0.pdf">LoRa-E5 mini v1.0.pdf</a></p>
 
-- <p><a href="http://files.seeedstudio.com/products/113990939/LoRa-E5%20mini%20v1.0.sch">LoRa-E5 mini v1.0.sch</a></p>
+- <p><a href="https://files.seeedstudio.com/products/113990939/LoRa-E5%20mini%20v1.0.sch">LoRa-E5 mini v1.0.sch</a></p>
 
 LoRa-E5 Datasheet: 
 
