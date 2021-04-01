@@ -117,16 +117,13 @@ WM1302 Pi HAT, together with the WM1302 Gateway Module and Raspberry Pi, can hel
     <td class="tg-uu1j" colspan="2">WM1302 Pi Hat *1</td>
   </tr>
   <tr>
-    <td class="tg-uu1j" colspan="2">Antenna(EU868/US915) *1</td>
+    <td class="tg-uu1j" colspan="2">APM2.5*6mm Screw *8</td>
   </tr>
   <tr>
-    <td class="tg-uu1j" colspan="2">USB TypeC (20cm) *1</td>
+    <td class="tg-uu1j" colspan="2">M2.5*11.0mm Stud *4</td>
   </tr>
   <tr>
-    <td class="tg-uu1j" colspan="2">Sticker *1 </td>
-  </tr>
-  <tr>
-    <td class="tg-uu1j" colspan="2">1X12pin male pin headers *2</td>
+    <td class="tg-uu1j" colspan="2">PM2.0*H6.0mm Screw *2</td>
   </tr>
 </tbody>
 </table>
