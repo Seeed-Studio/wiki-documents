@@ -92,12 +92,17 @@ BIOS is also like an OS and can be upgraded to fix bugs and enhance performance 
 
 - **Latest BIOS:**
 
-**SD-BS-CJ41G-300-101-C 03/11/2021 16:28:07**
+**SD-BS-CJ41G-300-101-D 03/28/2021 11:22:07**
 
-- **SHA256:** 12f4ce1ab81008525138fcd7d830e18dc13936f3ce4a51e17c314fc55debe480
-    1. Fix bug: loads into other OS other than Windows when set to load others.
+- **SHA256:** 6fd7ce0c2d36b93b9a06e488e94bb16cb837eb75df22c3ba6ddca7575b152aa4
+    1. Increase BIOS stability.
 
 >**History BIOS:**
+
+> **[SD-BS-CJ41G-300-101-C 03/11/2021 16:28:07](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-BS-CJ41G-300-101-C.zip)**
+
+> - **SHA256:** 12f4ce1ab81008525138fcd7d830e18dc13936f3ce4a51e17c314fc55debe480
+>     1. Fix bug: loads into other OS other than Windows when set to load others.
 
 > **[SD-BS-CJ41G-M-101-K 12/31/2020 20:34:37](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-BS-CJ41G-M-101-K.zip)**
 
@@ -125,7 +130,7 @@ BIOS is also like an OS and can be upgraded to fix bugs and enhance performance 
 
 ### Step 1 - Download the newest version of BIOS
 
-Download the latest version of BIOS from [**here**](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-BS-CJ41G-300-101-C.zip).
+Download the latest version of BIOS from [**here**](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-BS-CJ41G-300-101-D.zip).
 
 ### Step 2 -  Prepare bootable USB
 
@@ -205,13 +210,20 @@ The X86 also has a embedded controller that can be updated. Updating the EC has 
 
 ### Latest EC Firmware
 
-[**SD-EC-CJ41G-M-101-K 03/23/2021 10:57:32**](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-EC-CJ41G-M-101-K.zip)
+[**SD-EC-CJ41G-M-101-L 03/28/2021 11:22:07**](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-EC-CJ41G-M-101-L.zip)
 
-- **SHA256:** 5e479185398121b1913ada3cff03264ea1522196b53f34c9ace77bd1f3ecc47e
+- **SHA256:** 7f042dee2c8902e6298ac8584943d1704cfe0bd64ec192298e9c36d1c5e51b47
 
-1. **Fixing bug**: Increase stability of the EC firmware.
+1. **Fixing bug**: Increase stability of the EC firmware(v2).
+
 
 >**History EC Firmware:**
+
+> [**SD-EC-CJ41G-M-101-K 03/23/2021 10:57:32**](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-EC-CJ41G-M-101-K.zip)
+
+> - **SHA256:** 5e479185398121b1913ada3cff03264ea1522196b53f34c9ace77bd1f3ecc47e
+
+> 1. **Fixing bug**: Increase stability of the EC firmware.
 
 > [**SD-EC-CJ41G-M-101-J 02/02/2021 15:39:11**](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-EC-CJ41G-M-101-J.zip)
 
