@@ -450,11 +450,13 @@ nav:
           - LoRaWAN gateway module WM1302: WM1302_module.md
       - LoRa Gateway: 
           - The Things Indoor Gateway: The-Things-Indoor-Gateway.md
-      - LoRa Development Kit: 
-          - LoRa-E5 Development Kit: LoRa_E5_Dev_Board.md
       - LoRa Development Board: 
           - LoRa-E5 Development Board: LoRa_E5_Dev_Board.md
           - LoRa-E5 mini: LoRa_E5_mini.md
+      - LoRa Development Kit: 
+          - LoRa-E5 Development Kit: LoRa_E5_Dev_Board.md
+      - Breakout:
+          - WM1302 Pi Hat for Raspberry Pi: WM1302_Pi_HAT.md
 
   - Grove:
       - Grove Introduction: Grove.md
