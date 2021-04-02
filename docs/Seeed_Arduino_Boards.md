@@ -5,7 +5,8 @@ category: Tutorial
 
 Seeed had designed so many boards that work with Arduino IDE, include,
 
-* [Seeeduino Lotus](https://wiki.seeedstudio.com/Seeeduino_Lotus/)
+* [Seeeduino XIAO](https://wiki.seeedstudio.com/Seeeduino-XIAO/)
+* [Seeeduino Wio Terminal](https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/)
 * [Seeeduino Lotus Cortex-M0+](https://wiki.seeedstudio.com/Seeeduino_Lotus_Cortex-M0-/)
 * [Seeeduino LoRaWAN](https://wiki.seeedstudio.com/Seeeduino_LoRAWAN/)/GPS
 * [Seeeduino Cortex M0](https://wiki.seeedstudio.com/Seeeduino-Cortex-M0/)
@@ -21,6 +22,7 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 
 * Seeeduino [V3](https://wiki.seeedstudio.com/Seeeduino_v3.0/)/[4](https://wiki.seeedstudio.com/Seeeduino_v4.0/)
+* Seeeduino Lotus (https://wiki.seeedstudio.com/Seeeduino_Lotus/)
 * Seeeduino Stalker [V2.3](https://wiki.seeedstudio.com/Seeeduino_Stalker_v2.3/)/[3](https://wiki.seeedstudio.com/Seeeduino_v3.0/)/[3.1](https://wiki.seeedstudio.com/Seeeduino_Stalker_V3.1/)
 * [Seeeduino Lite](https://wiki.seeedstudio.com/Seeeduino_Lite/)
 * [Seeeduino Mega](https://wiki.seeedstudio.com/Seeeduino_Mega/)
