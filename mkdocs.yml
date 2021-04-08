@@ -199,13 +199,6 @@ nav:
           - ODYSSEY STM32MP157C: ODYSSEY-STM32MP157C.md
           - SEEED SOM STM32MP157C: SEEED-SOM-STM32MP157C.md
 
-      - ArduPy:
-          - ArduPy Wiki: ArduPy.md
-          - ArduPy LCD API Reference: ArduPy-LCD.md
-          - How to Build ArduPy Firmware From Source Code: Building-Ardupy.md
-          - How to Write an ArduPy Library: ArduPy-Libraries.md
-          - Improve Readability of Your MicroPython Code with Pylint and Black: Pylint-Black.md
-
       - Seeeduino XIAO:
           - Grove Shield for Seeeduino XIAO with embedded battery management chip: Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip.md
           - Seeeduino XIAO Expansion board: Seeeduino-XIAO-Expansion-Board.md
@@ -219,7 +212,6 @@ nav:
 
       - Wio Terminal:
           - Get Started with Wio Terminal: Wio-Terminal-Getting-Started.md
-          - ArduPy Get Started with Wio Terminal: Wio-Terminal-ArduPy.md
           - LCD:
             - Overview: Wio-Terminal-LCD-Overview.md
             - Basic of LCD: Wio-Terminal-LCD-Basic.md
