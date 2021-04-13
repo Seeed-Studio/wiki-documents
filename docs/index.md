@@ -1,5 +1,5 @@
 # Weekly Wiki
-![](https://files.seeedstudio.com/wiki/IMAGES/21-April-Week-1.png)
+![](https://files.seeedstudio.com/wiki/IMAGE/21%20April%20Week%203/21-April-Week-3.png)
 
 It's the first week of April and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
 As you all know, Seeed Wiki is a dedicated platform where we provide the proper guidance and support you need when getting started with our products. We put a lot of effort to make this platform more user friendly because we want to enable the learning of electronics in a more systematic approach.  
