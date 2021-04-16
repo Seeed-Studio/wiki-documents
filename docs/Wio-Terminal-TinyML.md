@@ -35,8 +35,8 @@ Seeed EDU team has came up with a definitive step-by-step course on how to get s
 
 You can download the course in PDF format and course materials by clicking on the links below. Additionally, you can find stand-alone projects published previously on Seeed studio blog and Hackster.io site - both projects in the course and standalone projects make use Arduino IDE for programming the devices and a mix of Edge Impulse and Tensorflow Lite for Microcontrollers for model training and inference. 
 
-    ***Main difference*** 
-    between course and standalone projects is that course mainly aims at being used by STEM teachers as foundation for development of their own teaching materials or as ready-to-use lesson material, while standalone projects are for makers and hackers to explore and improve on them.
+!!!Note
+    Main difference between course and standalone projects is that course mainly aims at being used by STEM teachers as foundation for development of their own teaching materials or as ready-to-use lesson material, while standalone projects are for makers and hackers to explore and improve on them.
 
 [Edge Impulse](https://www.edgeimpulse.com) is a user-friendly development platform for machine learning on edge devices, providing beginner friendly (yet powerful) web interface and toolkit for whole TinyMl pipeline, from data collection all the way to model deployment. 
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML-EI-1/index.png"/></div> 
@@ -48,8 +48,8 @@ You can download the course in PDF format and course materials by clicking on th
 [Link](https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML/TinyML_with_Wio_Terminal_Course.pdf)
 ##### Download course materials:
 Link(WIP)
-##### Github repository with course materials and PDF:
-Link(WIP)
+##### Github repository with course materials:
+[Link](https://github.com/Seeed-Studio/Seeed_Arduino_WioTerminal_TinyML_Course)
 
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

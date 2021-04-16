@@ -10,7 +10,7 @@ We will also utilize Microsoft Azure IoT Central service to store the room occup
 
 For more details and video tutorial, watch the corresponding video!
 
-<iframe width="560" height="315" src="https://youtu.be/pt1maDNXznI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pt1maDNXznI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Understanding the data
 
@@ -48,7 +48,7 @@ void loop() {
 }
 ```
 
-We  can immediately see that for walking it, we get relatively high   values(corresponding to distance from the object) first, which then   decrease. And for walking out, we get completely opposite signal.
+We  can immediately see that for walking it, we get relatively high values(corresponding to distance from the object) first, which then   decrease. And for walking out, we get completely opposite signal.
 
 <div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML-EI-4/full (Time 0_02_01;29).png"/></div> 
 
