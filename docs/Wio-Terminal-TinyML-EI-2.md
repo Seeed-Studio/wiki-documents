@@ -1,4 +1,4 @@
-# Wio Terminal Continuous Motion Recognition
+# Wio Terminal Edge Impulse Continuous Motion Recognition with Built-in Accelerometer
 
 In this tutorial, you'll use machine learning to build a gesture recognition system that runs on Wio Terminal. This is a hard task to solve using rule based programming, as people don't perform gestures in the exact same way every time. But machine learning can handle these variations with ease. You'll learn how to collect high-frequency data from real sensors, use signal processing to clean up data, build a neural network classifier, and how to deploy your model back to a device. At the end of this tutorial you'll have a firm understanding of applying machine learning in embedded devices using Edge Impulse.
 
@@ -29,9 +29,6 @@ If your device is connected under Devices in the studio you can proceed:
 With your device connected we can collect some data. In the studio go to the **Data acquisition** tab. This is the place where all your raw data is stored, and - if your device is connected to the remote management API - where you can start sampling new data.
 
 Under **Record new data**, select your device, set the label to `idle`, the sample length to `5000`, the sensor to **`Built-in accelerometer`** and the frequency to `62.5Hz`. This indicates that you want to record data for 10 seconds, and label the recorded data as `idle`. You can later edit these labels if needed.
-
-!!!Note
-        There is also another options for `External multichannel gas`, this uses the [Grove - Multichannel Gas Sensor v2](https://www.seeedstudio.com/Grove-Multichannel-Gas-Sensor-v2-p-4569.html) for collecting gas sensor values.
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-Edge-Impulse/record.png"/></div>
 
@@ -149,7 +146,81 @@ Known clusters in blue, the shake data in orange. It's clearly outside of any kn
 
 With the impulse designed, trained and verified you can deploy this model back to your device. This makes the model run without an internet connection, minimizes latency, and runs with minimum power consumption. Edge Impulse can package up the complete impulse - including the signal processing code, neural network weights, and classification code - up in a single C++ library that you can include in your embedded software.
 
-**THIS IS STILL UNDER DEVELOPMENT FOR WIO TERMINAL, PLEASE STAY TUNED!**
+After clicking on Deployment tab, choose Arduino library and download it. Extract the archive and place it in your Arduino libraries folder. Open Arduino IDE and choose Examples-> name of your project Inferencing Edge Impulse - > nano_ble33_sense_accelerometer sketch. Our board is similar to Arduino Nano BLE33 Sense, but uses different accelerometer (LIS3DHTR instead of LSM9DS1), so we will need to change the data acquisition section accordingly. Also, since Wio Terminal has an LCD screen, we're going to display name of the detected class if this class confidence value is above threshold.
+First change the header
+
+```cpp
+#include <Arduino_LSM9DS1.h>
+```
+to
+```cpp
+#include"LIS3DHTR.h"
+#include"TFT_eSPI.h"
+LIS3DHTR<TwoWire> lis;
+TFT_eSPI tft;
+```
+
+Then change initialization in setup function
+```cpp
+    if (!IMU.begin()) {
+        ei_printf("Failed to initialize IMU!\r\n");
+    }
+    else {
+        ei_printf("IMU initialized\r\n");
+    }
+```   
+to
+```cpp
+    tft.begin();
+    tft.setRotation(3);
+    tft.fillScreen(TFT_WHITE);
+
+	lis.begin(Wire1);
+    
+    if (!lis.available()) {
+    Serial.println("Failed to initialize IMU!");
+    while (1);
+    }
+    else {
+        ei_printf("IMU initialized\r\n");
+    }
+    lis.setOutputDataRate(LIS3DHTR_DATARATE_100HZ); // Setting output data rage to 25Hz, can be set up tp 5kHz 
+    lis.setFullScaleRange(LIS3DHTR_RANGE_16G); // Setting scale range to 2g, select from 2,4,8,16g
+```
+We do data collection and inference within loop function, here is where we need to change data acquisition with LSM9DS1 to data acquisition function for LIS3DHTR
+```cpp
+IMU.readAcceleration(buffer[ix], buffer[ix + 1], buffer[ix + 2]);
+```
+to
+```cpp
+lis.getAcceleration(&buffer[ix], &buffer[ix + 1], &buffer[ix + 2]);
+```
+
+And then to display the class name on the LCD screen, after
+```cpp
+#if EI_CLASSIFIER_HAS_ANOMALY == 1
+    ei_printf("    anomaly score: %.3f\n", result.anomaly);
+#endif
+```
+add the following code block, in which we check confidence values of every class and if one of them is higher than threshold, change the color of the screen and display that classes name.
+```cpp
+   if (result.classification[1].value > 0.7) {
+    tft.fillScreen(TFT_PURPLE);
+    tft.setFreeFont(&FreeSansBoldOblique12pt7b);
+    tft.drawString("Wave", 20, 80);
+    delay(1000);
+    tft.fillScreen(TFT_WHITE);
+   }
+   
+   if (result.classification[2].value > 0.7) {
+    tft.fillScreen(TFT_RED);
+    tft.setFreeFont(&FreeSansBoldOblique12pt7b);
+    tft.drawString("Circle", 20, 80);
+    delay(1000);
+    tft.fillScreen(TFT_WHITE);
+   }
+```
+Then compile and upload - open the serial monitor and perform one the gestures! You will be able to see the inference results displayed on the Serial monitor and also on LCD screen.
 
 ## 7. Conclusion
 
@@ -163,6 +234,3 @@ Edge Impulse helps you unlock this data. By processing data directly on the devi
 
 - [Wio Terminal Edge Impulse Getting Started](http://wiki.seeedstudio.com/Wio-Terminal-Edge-Impulse)
 
-## Tech Support
-
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

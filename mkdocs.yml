@@ -280,14 +280,18 @@ nav:
             - MIDI: Wio-Terminal-USBCLIENT-MIDI.md
             - Build a HMI Display for Raspberry Pi using Wio Terminal: Wio-Terminal-HMI.md
             - Build a HMI Display for Windows/MacOS using Wio Terminal: Wio-Terminal-HMI-Usermode-SDK.md
-            - Build a DAPLink Deivce using Wio Terminal: Wio-Terminal-DAPLink.md
+            - Build a DAPLink Device using Wio Terminal: Wio-Terminal-DAPLink.md
           - TinyML:
-            - Edge Impulse:
-              - Edge Impulse Getting Started: Wio-Terminal-Edge-Impulse.md
-              - Continuous Motion Recognition: Wio-Terminal-Continuous-Motion-Recognition.md
-              - Distinguishing Alcohol: Wio-Terminal-Edge-Impulse-Distinguish-Alochol.md
-            - TensorFlow Lite:
-              - Overview: Wio-Terminal-TensorFlow.md
+            - TinyML with Wio Terminal Course: Wio-Terminal-TinyML.md
+            - Edge Impulse Projects:
+              - Edge Impulse Getting Started: Wio-Terminal-TinyML-EI-1.md
+              - Continuous Motion Recognition: Wio-Terminal-TinyML-EI-2.md
+              - Audio scene recognition: Wio-Terminal-TinyML-EI-3.md
+              - People counting with Ultrasonic sensor: Wio-Terminal-TinyML-EI-4.md              
+              - Distinguishing Alcohol: Wio-Terminal-TinyML-EI-5.md
+            - TensorFlow Lite Micro Projects:
+              - TensorFlow Lite Micro Getting Started: Wio-Terminal-TinyML-TFLM-1.md
+              - Weather Prediction with BME280: Wio-Terminal-TinyML-TFLM-2.md
           - Grove:
             - Overview: Wio-Terminal-Grove.md
           - Wio Terminal Battery Chassis: Wio-Terminal-Battery-Chassis.md

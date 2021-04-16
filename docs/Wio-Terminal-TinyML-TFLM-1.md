@@ -1,10 +1,12 @@
-# Overview
+# Wio Terminal Tensorflow Lite Micro Getting started
 
-This repo introduces how to install the official [Arduino Tensorflow Lite library](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/lite/micro/examples/hello_world) into your Wio Terminal, allowing you to test out some Machine Learning models using Wio Terminal.
+This article introduces how to install the official [Arduino Tensorflow Lite library](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/lite/micro/examples/hello_world) into your Wio Terminal, allowing you to test out some Machine Learning models using Wio Terminal.
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/20200221174623.jpg"/></div>
 
 For more information, please visit [TensorFlow Lite For Microcontrollers](https://www.tensorflow.org/lite/microcontrollers).
+
+Make sure to use 1.8.1dev version of Seeed SAMD boards definitions, see how to check and update board definitions in Get started with Wio Terminal.
 
 ## Install the Arduino TensorFlow Lite Library
 
@@ -14,40 +16,9 @@ For more information, please visit [TensorFlow Lite For Microcontrollers](https:
 
 2. In the Library Manager, Search the keywords **Arduino TensorFlow Lite** and the library will appear. Under **Select Version**, select the one that is **NOT** precompiled and click Install.
 
-![](https://files.seeedstudio.com/wiki/Wio-Terminal/img/20200221164739.jpg)
+The examples were tested with latest version with 2.4.0-ALPHA.
 
-## Library Configurations
-
-Now, we need to make a small adjustment to the library files in order for it to compile with Wio Terminal.
-
-1. Navigate to the library file location. It should be something like `Documents/libraries/Arduino_TensorFlowLite` 
-
-2. Once inside the **Arduino_TensorFlowLite** file, navigate `src` -> `third_party` -> `kissfft` and open the **kiss_fft.h** file.
-
-![](https://files.seeedstudio.com/wiki/Wio-Terminal/img/20200221170104.jpg)
-
-3. Use a code editor to open and find the line where it includes the `<sys/types.h>` header file, which look like this:
-
-```cpp
-#ifdef FIXED_POINT
-#include <sys/types.h>
-# if (FIXED_POINT == 32)
-```
-
-And change it to this:
-
-```cpp
-#ifdef FIXED_POINT
-#include <sys/types.h>
-#if  __GNUC__ == 4
-#include <stdint.h>
-#endif
-# if (FIXED_POINT == 32)
-```
-
-<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/20200221171349.jpg"/></div>
-
-Save the changes.
+![](https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML-TFLM-1/tf.PNG)
 
 ## Running the Arduino TensorFlow Lite Hello World Example
 

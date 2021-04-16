@@ -1,4 +1,4 @@
-# Using Wio Terminal with Edge Impulse to Distinguish Alcohol
+# Wio Terminal Edge Impulse Distinguish Alcohol with Multi-channel Gas Sensor
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-Edge-Impulse/booze.jpg"/></div>
 
@@ -127,10 +127,10 @@ As we can see from the results, this is pretty good results where you are able t
 
 **For now, implementing the model back into Wio Terminal as a library is still being developed**. It will be released very soon, and then you can detect alcohol 'offline' with the trained model loaded onto Wio Terminal!
 
-## Resources
+## Reference
 
 - [Benjamin Cabé's Artificial nose project](https://twitter.com/kartben/status/1258791793073815552)
 
-## Tech Support
+- [Edge Impulse Public project](https://studio.edgeimpulse.com/public/27214/latest)
 
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+- [Project Github](http://wiki.seeedstudio.com/Wio-Terminal-Edge-Impulse)
