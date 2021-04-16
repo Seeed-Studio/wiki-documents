@@ -282,7 +282,8 @@ nav:
             - Build a HMI Display for Windows/MacOS using Wio Terminal: Wio-Terminal-HMI-Usermode-SDK.md
             - Build a DAPLink Device using Wio Terminal: Wio-Terminal-DAPLink.md
           - TinyML:
-            - TinyML with Wio Terminal Course: Wio-Terminal-TinyML.md
+            - TinyML with Wio Terminal Course: 
+              - Overview: Wio-Terminal-TinyML.md
             - Edge Impulse Projects:
               - Edge Impulse Getting Started: Wio-Terminal-TinyML-EI-1.md
               - Continuous Motion Recognition: Wio-Terminal-TinyML-EI-2.md
@@ -311,6 +312,10 @@ nav:
             - How to Use Wio Terminal as RTL8720DN Dev Board: Wio-Terminal-8720-dev.md
             - How to measure noise levels with Wio Terminal: Wio-Terminal-Sound-Meter.md
             - Pressure sensor using the Wio terminal: Barometric-Pressure-sensor-using-the-Wio-terminal.md
+            - Distinguishing Alcohol(old): Wio-Terminal-Edge-Impulse-Distinguish-Alochol.md
+            - Continuous Motion Recognition(old): Wio-Terminal-Continuous-Motion-Recognition.md
+            - Edge Impulse Getting Started(old): Wio-Terminal-Edge-Impulse.md
+            - Tensorflow Lite Getting Started(old): Wio-Terminal-TensorFlow.md
 
       - ReSpeaker:
           - ReSpeaker Introduction: ReSpeaker.md
