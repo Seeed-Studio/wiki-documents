@@ -41,13 +41,13 @@ You can download the course in PDF format and course materials by clicking on th
 [Edge Impulse](https://www.edgeimpulse.com) is a user-friendly development platform for machine learning on edge devices, providing beginner friendly (yet powerful) web interface and toolkit for whole TinyMl pipeline, from data collection all the way to model deployment. 
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML-EI-1/index.png"/></div> 
 
-[Tensorflow Lite for Microcontrollers](https://www.tensorflow.org/lite/microcontrollers/get_started) on the other hand, while having steeer learning cureve, allows you to implement your own model training and inference pipeline.
+[Tensorflow Lite for Microcontrollers](https://www.tensorflow.org/lite/microcontrollers/get_started) on the other hand, while having steeer learning curve, allows you to implement your own model training and inference pipeline.
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML-EI-1/tensorflow-lite-logo-social.png"/></div> 
 
 ##### Download PDF:
 [Link](https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML/TinyML_with_Wio_Terminal_Course.pdf)
 ##### Download course materials:
-Link(WIP)
+[Link](https://github.com/Seeed-Studio/Seeed_Arduino_WioTerminal_TinyML_Course/archive/refs/tags/1.0.zip)
 ##### Github repository with course materials:
 [Link](https://github.com/Seeed-Studio/Seeed_Arduino_WioTerminal_TinyML_Course)
 

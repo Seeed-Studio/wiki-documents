@@ -428,3 +428,5 @@ Find the full code for NN inference + Blynk notification in Github repository fo
 - [Edge Impulse Public project](https://studio.edgeimpulse.com/public/25382/latest)
 
 - [Project Github](https://github.com/Seeed-Studio/Seeed_Arduino_Sketchbook/tree/master/examples/WioTerminal_TinyML_2_Audio_Scene_Recognition)
+
+- [Original project for using DMA ADC for sound recording with Wio Terminal](https://github.com/ShawnHymel/ei-keyword-spotting/blob/master/embedded-demos/arduino/wio-terminal/wio-terminal.ino)
