@@ -5,7 +5,7 @@ ML as you might have guessed stands for Machine Learning and in most of cases (n
 
 Embedded devices come in all sorts of shapes and sizes, starting from “embedded supercomputer” Nvidia Jetson Xavier AGX to the tiniest of microcontrollers, for example ESP32 or Cortex M0. 
 
-<div align=left><img width = 200 src="https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML-EI-1/1-750x750.jpg"
+<div align=left><img width = 200 src="https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML-EI-1/1-750x750.jpg"/>
 
 <div align=right><img width = 350 src="https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML-EI-1/xavier-module-dev-kit-3qrtr-1945px.png"/></div>
 
