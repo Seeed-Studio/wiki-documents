@@ -317,6 +317,9 @@ nav:
             - Edge Impulse Getting Started(old): Wio-Terminal-Edge-Impulse.md
             - Tensorflow Lite Getting Started(old): Wio-Terminal-TensorFlow.md
 
+      - reTerminal:
+          - reTerminal Introduction: reTerminal-Introduction.md
+
       - ReSpeaker:
           - ReSpeaker Introduction: ReSpeaker.md
           - ReSpeaker Solutions: ReSpeaker_Solutions.md
