@@ -209,15 +209,22 @@ The **40-pins** consist of **26 GPIO, up to 5 × I2C, up to 5 × SPI, up to 5 ×
 
 The **USB interface** is extended from the internal **USB 2.0 interface** on the Compute Module 4. So you can expand to even more USB connectors and get speeds up to **480 Mbit/s** using this interface.
 
-You can also use these 40 pins to connect to **Raspberry Pi compatible Hats** and expand your projects! For example the [Grove Base Hat](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html) can be connected so that you can dive deep into the [Grove ecosystem](https://www.seeedstudio.com/category/Grove-c-1003.html) using the reTerminal!
+You can also use these 40 pins to connect to **Raspberry Pi compatible Hats** and expand your projects!
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/main.jpg" alt="pir" width="550" height="auto"></p>
+[Visit here](https://www.seeedstudio.com/hats-shields-c-840.html) to explore a wide range of Raspberry Pi Hats offered by Seeed Studio and [visit here](https://uk.pi-supply.com/collections/all-raspberry-pi-hats-and-phats) to check even more 3rd party Raspberry Pi Hats!
 
 The GPIO pins can draw a maximum current of **50mA safely**. This means 50mA distributed across all the pins. Therefore an individual GPIO pin can only safely draw **16mA** current. On the other hand, the maximum current draw for each of the remaning pins is **2A**. Please keep this in mind when you connect additional hardware to these pins.
 
 ### High-Speed Interface for Expansion Modules
 
-There is a high-speed expansion interface at the back of the reTerminal. It consists of 1 PCIe 1-lane Host Gen 2 (supporting speeds up to 5Gbps), 1 USB 2.0, 1 PoE and 26 GPIOs. The 26 GPIO pins can be further used as 2 I2C, 2 SPI, 2 CAN-FD, 1 UART.
+There is a high-speed expansion interface at the back of the reTerminal. It consists of 1 PCIe 1-lane Host Gen 2 (supporting speeds up to 5Gbps), 1 USB 2.0, 1 PoE and 26 GPIOs. The 26 GPIO pins can be further used as 2 I2C, 2 SPI and 1 UART.
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/Expansion_Schematic.png" alt="pir" width="1000" height="auto"></p>
+
+**Tip:** Click [here](https://files.seeedstudio.com/wiki/ReTerminal/Expansion_Schematic.png) for a higher resolution image
+
+!!!Note
+        PCIe, USB 3.0, 2 x CAN-FD and SDIO3.0 interfaces are defined for future products and therefore they are not usable at the moment
 
 We plan to build expansion modules in the future for reTerminal and we have reserved this interface to connect these modules to the reTerminal. We will release a wide range of modules such as:
 
