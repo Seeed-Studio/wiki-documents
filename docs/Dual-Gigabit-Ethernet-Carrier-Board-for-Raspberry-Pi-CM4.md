@@ -722,6 +722,7 @@ git clone https://github.com/Seeed-Studio/seeed-linux-dtoverlays.git
 ```
 
 - **Step 3.** Enter the repo directory
+
 ```sh
 cd seeed-linux-dtoverlays
 ```
