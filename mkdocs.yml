@@ -164,6 +164,7 @@ nav:
           - Grove Base Kit for Raspberry Pi: Grove_Base_Kit_for_Raspberry_Pi.md
           - 2 Channel CAN BUS FD Shield for Raspberry Pi: 2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi.md
           - Grove Shield for Pi Pico V1.0: Grove_Shield_for_Pi_Pico_V1.0.md
+          - Dual Gigabit Ethernet Carrier Board for Raspberry Pi CM4: Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4.md
 
       - BeagleBone®:
           - BeagleBone® Introduction: BeagleBone.md
