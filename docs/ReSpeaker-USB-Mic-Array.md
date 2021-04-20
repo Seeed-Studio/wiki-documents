@@ -118,16 +118,7 @@ Here is the table for the differences.
 | Firmware                           | Channels | Note                                                                                          |
 |------------------------------------|----------|-----------------------------------------------------------------------------------------------|
 | 1_channel_firmware.bin             | 1        | processed audio for ASR                                                                       |
-| 1_channel_firmware_6.02dB.bin      | 1        | same as 1_channel_firmware.bin, but 4 microphones have a 6.02dB gain                          |
-| 1_channel_firmware_12.06dB.bin     | 1        | same as 1_channel_firmware.bin, but 4 microphones have a 12.04dB gain                         |
-| 48k_1_channels_firmware.bin        | 1        | 48k sample rate, 1 input channel                                                              |
-| 48k_1_channel_firmware_6.02dB.bin  | 1        | 48k sample rate, 1 input channel, but 4 microphones have a 6.02dB gain                        |
 | 6_channels_firmware.bin            | 6        | channel 0: processed audio for ASR, channel 1-4: 4 microphones' raw data, channel 5: playback（factory firmware） |
-| 6_channels_firmware_6.02dB.bin     | 6        | same as 6_channels_firmware.bin, but 4 microphones have a 6.02dB gain                         |
-| 6_channels_firmware_12.04dB.bin    | 6        | same as 6_channels_firmware.bin, but 4 microphones have a 12.04dB gain                        |
-| 48k_6_channels_firmware.bin        | 6        | 48k sample rate, 6 input channels                                                            |
-| 48k_6_channels_firmware_6.02dB.bin | 6        | 48k sample rate, 6 input channels, 6.02dB gain                                               |
-
 
 **For Linux:**  The Mic array supports the USB DFU. We develop a python script dfu.py to update the firmware through USB.
 
