@@ -168,28 +168,31 @@ Also we need to two [male to male jumper](https://www.seeedstudio.com/Breadboard
 
 ![](https://github.com/Seeed-Studio/pi-hats/raw/master/images/can_hat_and_arduinno_hardware.jpg)
 
-
-
-
-
-
 ### Software
-
 
 #### Install CAN-HAT
 
-
-
-- **Step 1**. Get the CAN-HAT source code. and install all linux kernel drivers
+- **Step 1**. Open **config.txt** file 
 
 ```sh
-git clone https://github.com/Seeed-Studio/seeed-linux-dtoverlays
-cd seeed-linux-dtoverlays//modules/CAN-HAT
-sudo ./install.sh 
+sudo nano /boot/config.txt
+```
+
+- **Step 2**. Add the following line at the end of the file
+
+```sh
+dtoverlay=seeed-can-fd-hat-v2
+```
+
+- **Step 3**. Press **Ctrl + x**, press **y** and press **Enter** to **save** the file 
+
+- **Step 4**. **Reboot** Raspberry Pi
+
+```sh
 sudo reboot
 ```
 
-- **Step 2**. Check the kernel log to see if CAN-BUS HAT was initialized successfully. You will also see **can0** and **can1** appear in the list of ifconfig results
+- **Step 5**. Check the kernel log to see if CAN-BUS HAT was initialized successfully. You will also see **can0** and **can1** appear in the list of ifconfig results
 
 ```C
 pi@raspberrypi:~ $ dmesg | grep spi
@@ -239,7 +242,7 @@ wlan0: flags=4098<BROADCAST,MULTICAST>  mtu 1500
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
 
-- **Step 3**. Set the can fd protocol, and the dbitrate can be set to 8M speed. [Refer to the kernel documentation for more usage](https://www.kernel.org/doc/Documentation/networking/can.txt)
+- **Step 6**. Set the can fd protocol, and the dbitrate can be set to 8M speed. [Refer to the kernel documentation for more usage](https://www.kernel.org/doc/Documentation/networking/can.txt)
 
 ```sh
 sudo ip link set can0 up type can bitrate 1000000   dbitrate 8000000 restart-ms 1000 berr-reporting on fd on
@@ -249,7 +252,7 @@ sudo ifconfig can0 txqueuelen 65536
 sudo ifconfig can1 txqueuelen 65536
 ```
 
-- **Step 4**. Open two terminal windows and enter the following commands in the Windows to test can fd protocol.
+- **Step 7**. Open two terminal windows and enter the following commands in the Windows to test can fd protocol.
 
 ```sh
 #send data
