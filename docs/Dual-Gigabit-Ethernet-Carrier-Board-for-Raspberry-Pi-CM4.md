@@ -47,22 +47,53 @@ It features a variety of I/O peripherals such as MIPI CSI, MIPI DSI, micro-HDMI 
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/hw-overview.png" alt="pir" width="900" height="auto"></p>
 
-!!!Note
-        For the rest of this guide, we will refer **Dual Gigabit Ethernet Carrier Board for Raspberry Pi Compute Module 4** as **Dual Gigabit Ethernet Carrier Board for RPi CM4**
-
 ## Hardware Introduction
+
+### 200-Pin Interface for Raspberry Pi Compute Module 4
+
+This carrier board has a **200-pin interface** with 2 rows of 100 pins each, so that you can connect a [Raspberry Pi Compute Module 4](https://www.seeedstudio.com/Raspberry-Pi-Compute-Module-CM4001000-p-4720.html) and realize your projects!
+
+#### Schematics
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/CM4.png" alt="pir" width="1000" height="auto"></p>
+
+**Tip:** Click [here](https://files.seeedstudio.com/wiki/102110497/CM4.png) for a higher resolution image
 
 ### Dual Gigabit Ethernet Ports
 
 This carrier board features **2 x Gigabit Ethernet Ports (RJ45)**. One Ethernet Port is connected to the **Gigabit Ethernet PHY** of the CM4 module which is based on **Broadcom BCM54210PE**. On the the hand, the other Gigabit Ethernet Port is connected to **Microchip's LAN7800** which is a **USB 3.0 to GbE (Gigabit Ethernet Bridge)**. The **USB 3.0 interface** here is extended from the **PCIe interface** of the CM4 Module. Also, both ports can support speeds up to 1Gbps. 
 
+#### Schematics of Dual Gigabit Ethernet Ports
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/RJ45.png" alt="pir" width="1000" height="auto"></p>
+
+**Tip:** Click [here](https://files.seeedstudio.com/wiki/102110497/RJ45.png) for a higher resolution image
+
+#### Schematics of USB 3.0 to GbE (Gigabit Ethernet Bridge)
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/LAN7800.png" alt="pir" width="1000" height="auto"></p>
+
+**Tip:** Click [here](https://files.seeedstudio.com/wiki/102110497/LAN7800.png) for a higher resolution image
+
 ### CSI Camera Interface
 
-This has a MIPI CSI camera interface, and you can connect a camera via a **15-pin CSI flex cable**. This camera interface can be used for object detection and machine learning applications.
+This has a **MIPI CSI camera interface**, and you can connect a camera via a **15-pin CSI flex cable**. This camera interface can be used for object detection and machine learning applications.
+
+#### Schematics
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/CSI.png" alt="pir" width="1000" height="auto"></p>
+
+**Tip:** Click [here](https://files.seeedstudio.com/wiki/102110497/CSI.png) for a higher resolution image
 
 ### DSI Display Interface
 
-This has a MIPI DSI display interface, and you can connect a display via a **15-pin DSI flex cable**. This display interface can be used for interacting with the carrier board.
+This has a **MIPI DSI display interface**, and you can connect a display via a **15-pin DSI flex cable**. This display interface can be used for interacting with the carrier board.
+
+#### Schematics
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/DSI.png" alt="pir" width="1000" height="auto"></p>
+
+**Tip:** Click [here](https://files.seeedstudio.com/wiki/102110497/DSI.png) for a higher resolution image
 
 ### FPC Interface
 
@@ -77,7 +108,7 @@ There is an **8-pin FPC** interface on this carrier board with **1.0mm Pitch H2.
 - Insulation Resistance: 800mΩ
 - Working Temperature: -20°C ~ +85°C
 
-#### Pin Numbering
+#### Schematics
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/FPC_Schematics.png" alt="pir" width="550" height="auto"></p>
 
@@ -85,37 +116,99 @@ There is an **8-pin FPC** interface on this carrier board with **1.0mm Pitch H2.
 
 ### Dual USB 3.0 Ports and 9-Pin Header
 
-Compute Module 4 natively has only a **USB 2.0 interface**. However, we have used the existing **PCIe interface** on the CM4 and expanded it into a **USB 3.0 interface with 2 x USB 3.0 Ports**. These USB port offer a transfer speed up to 5Gbps. 
+Compute Module 4 natively has only a **USB 2.0 interface**. However, we have used the existing **PCIe interface** on the CM4 and expanded it into a **USB 3.0 interface with 2 x USB 3.0 Ports**. These USB ports offer a transfer speed up to 5Gbps.
 
 Additionally there is a **USB 3.0 9-pin header** and you can connect even more USB devices using this header.
+
+#### Schematics of USB 3.0 HOST
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/USB3.0.png" alt="pir" width="1000" height="auto"></p>
+
+**Tip:** Click [here](https://files.seeedstudio.com/wiki/102110497/USB3.0.png) for a higher resolution image
+
+#### Schematics of PCIe to USB 3.0
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/PCIe_to_USB.png" alt="pir" width="1000" height="auto"></p>
+
+**Tip:** Click [here](https://files.seeedstudio.com/wiki/102110497/PCIe_to_USB.png) for a higher resolution image
 
 ### Micro HDMI Port
 
 There is a micro HDMI port on the carrier board and you can use it to connect to HDMI displays via a **micro HDMI to standard HDMI cable**. It supports video up to 4K resolution at 60fps.
 
+#### Schematics
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/micro-HDMI.png" alt="pir" width="1000" height="auto"></p>
+
+**Tip:** Click [here](https://files.seeedstudio.com/wiki/102110497/micro-HDMI.png) for a higher resolution image
+
 ### UART IO
 
 There is a **4-pin interface** on the carrier board for **UART communications**. You can use this interface and **log in** to the **Raspberry Pi OS** directly using a **USB to Serial Adapter Cable**. It has the pins: **TX, RX, 3V3, GND**.
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/UART_connection.png" alt="pir" width="1000" height="auto"></p>
 
 ### Boot Mode Pin
 
 This **3-pin interface** is used when you want to make the carrier board as a **USB Device**. Once you short the **GND** and **BOOT** pins, you can access the **eMMC storage** or the **micro-SD card storage** using a **HOST PC**.
 
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/eMMC_boot.png" alt="pir" width="1000" height="auto"></p>
+
 ### Reset Button
 
 This button is used to **reset** the CM4. It acts as a **hardware reboot**.
+
+#### Schematics
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/RESET.png" alt="pir" width="650" height="auto"></p>
+
+
 
 ### Micro - SD Card Slot
 
 This is equipped with a **micro-sd card slot**. This is useful when you want to **install the operating system** on to a micro-SD card, while the **CM4 module without eMMC** is used. However, when the eMMC version of the CM4 module is used, you can use a micro-SD card as additional storage. It is recommeded to use a card with a minimum of at least 16GB.
 
+#### Schematics
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/micro_SD.png" alt="pir" width="1000" height="auto"></p>
+
+**Tip:** Click [here](https://files.seeedstudio.com/wiki/102110497/micro_SD.png) for a higher resolution image
+
 ### USB Type-C Port
 
 The **USB Type-C Port** on the carrier board can be used to **power the carrier board using 5V/3A**. However it can also be used to act as a **USB Device** where you can connect the carrier board to a **HOST PC** and the carrier board will act as a **USB Mass Storage Device**. In here, you will be able to access the **onboard eMMC** and the connected **micro-SD card** of the carrier board via the PC.
 
+#### Schematics of USB Type-C as USB Device
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/type-c.png" alt="pir" width="1000" height="auto"></p>
+
+**Tip:** Click [here](https://files.seeedstudio.com/wiki/102110497/type-c.png) for a higher resolution image
+
+#### Schematics of Power Management
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/power-manage.png" alt="pir" width="1000" height="auto"></p>
+
+**Tip:** Click [here](https://files.seeedstudio.com/wiki/102110497/power-manage.png) for a higher resolution image
+
 ### 4-Pin Fan Connector
 
 You can connect a **4-pin PWM fan** to this connector and control it using software.
+
+#### Schematics
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/Fan.png" alt="pir" width="1000" height="auto"></p>
+
+**Tip:** Click [here](https://files.seeedstudio.com/wiki/102110497/Fan.png) for a higher resolution image
+
+### Power and Working LEDs
+
+The carrier board has 3 LEDs. One is to indicate that it is powered on and it lights up in **Blue**, whereas the other 2 LEDs is to indicate the working status of the carrier board and they light up in **Green** and **White**.
+
+#### Schematics 
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/LEDs.png" alt="pir" width="1000" height="auto"></p>
+
+**Tip:** Click [here](https://files.seeedstudio.com/wiki/102110497/LEDs.png) for a higher resolution image
 
 ## Getting Started - Hardware Required
 
@@ -189,7 +282,7 @@ Windows will now find the hardware and install the necessary drivers
 
 - **Step 9.** Click **CHOOSE STORAGE** and select the connected eMMC drive
 
-- **Step 6.** Finally, click **WRITE**
+- **Step 10.** Finally, click **WRITE**
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"></p>
 
@@ -255,11 +348,11 @@ sudo ./rpiboot
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"></p>
 
-- **Step 8.** Click **CHOOSE OS** and select the latest version of the **Raspberry Pi OS (32-bit)**
+- **Step 12.** Click **CHOOSE OS** and select the latest version of the **Raspberry Pi OS (32-bit)**
 
-- **Step 9.** Click **CHOOSE STORAGE** and select the connected eMMC drive
+- **Step 13.** Click **CHOOSE STORAGE** and select the connected eMMC drive
 
-- **Step 6.** Finally, click **WRITE**
+- **Step 14.** Finally, click **WRITE**
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"></p>
 
@@ -310,7 +403,7 @@ C:\Users\user> F:
 F:\>
 ```
 
-- **Step 5.** Once you are inside the micro-SD card, create an empty file called **SSH** by typing typing the following
+- **Step 7.** Once you are inside the micro-SD card, create an empty file called **SSH** by typing typing the following
 
 ```sh
 echo > ssh
@@ -318,32 +411,32 @@ echo > ssh
 
 **Note:** This is done to enable SSH on the Raspberry Pi OS
 
-- **Step 6.** Eject the micro-SD card from PC and insert it into the Dual Gigabit Ethernet Carrier Board
+- **Step 8.** Eject the micro-SD card from PC and insert it into the Dual Gigabit Ethernet Carrier Board
 
-- **Step 7.** Connect a USB Typc-C cable to the Type-C port on the carrier board and connect the other end of the Type-C cable to a power adapter and turn it on
+- **Step 9.** Connect a USB Typc-C cable to the Type-C port on the carrier board and connect the other end of the Type-C cable to a power adapter and turn it on
 
-- **Step 8.** Download and install **Putty** by visiting [this link](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+- **Step 10.** Download and install **Putty** by visiting [this link](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
 **Note:** Putty is an SSH and telnet client where you can use it to connect to the Carrier Board via SSH
 
-- **Step 9.** Open Putty to connect the PC to the Carrier Board
+- **Step 11.** Open Putty to connect the PC to the Carrier Board
 
-- **Step 10.** Select **SSH** under the **Connection Type**
+- **Step 12.** Select **SSH** under the **Connection Type**
 
-- **Step 11.** Under **Host Name**. type **raspberrypi.local** and leave the **Port** as **22**
+- **Step 13.** Under **Host Name**. type **raspberrypi.local** and leave the **Port** as **22**
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss3.png" alt="pir" width="450" height="auto"></p>
 
-- **Step 12.** Click **Open**
+- **Step 14.** Click **Open**
 
-- **Step 13.** On the Putty window, enter the login details as follows
+- **Step 15.** On the Putty window, enter the login details as follows
 
 ```sh
 - Username: pi
 - Password: raspberry
 ```
 
-- **Step 14.** If you have sucessfully logged into the Raspberry Pi OS, you will see the following output
+- **Step 16.** If you have sucessfully logged into the Raspberry Pi OS, you will see the following output
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/SSH_WiFi.png" alt="pir" width="900" height="auto"></p>
 
@@ -521,7 +614,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 raspberry
 ```
 
-- **Step 13.** If you have sucessfully logged into the Raspberry Pi OS, you will see the following output
+- **Step 10.** If you have sucessfully logged into the Raspberry Pi OS, you will see the following output
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/SSH_WiFi_Linux.png" alt="pir" width="900" height="auto"></p>
 
@@ -949,6 +1042,8 @@ The output will be as follows
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/spi_list.png" alt="pir" width="450" height="auto"></p>
 
 ## Resources
+
+- **[PDF]** [Dual Gigabit Ethernet Carrier Board for Raspberry Pi CM4 Schematics](https://files.seeedstudio.com/wiki/102110497/Rapberry%20Pi%20CM4%20Dual%20GbE%20Carrier%20Board%20V1.0_SCH.pdf)
 
 - **[PDF]** [Raspberry Pi Compute Module 4 Datasheet](https://datasheets.raspberrypi.org/cm4/cm4-datasheet.pdf)
 
