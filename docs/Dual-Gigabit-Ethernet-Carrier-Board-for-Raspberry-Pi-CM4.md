@@ -66,7 +66,22 @@ This has a MIPI DSI display interface, and you can connect a display via a **15-
 
 ### FPC Interface
 
-There is a **8-pin FPC** interface on the reTerminal. You can use this interface to connect additional hardware such as cameras and displays to the reTerminal.
+There is an **8-pin FPC** interface on this carrier board with **1.0mm Pitch H2.5**. You can use this interface to connect additional hardware such as cameras and displays to the carrier board.
+
+#### Specifications
+
+- Rated Current: 0.5A
+- Rated Voltage: 50V
+- Withstand Voltage: 500V
+- Contact Resistance: 20mΩ
+- Insulation Resistance: 800mΩ
+- Working Temperature: -20°C ~ +85°C
+
+#### Pin Numbering
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/FPC_Schematics.png" alt="pir" width="550" height="auto"></p>
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/FPC_connection.png" alt="pir" width="1000" height="auto"></p>
 
 ### Dual USB 3.0 Ports and 9-Pin Header
 
@@ -76,7 +91,7 @@ Additionally there is a **USB 3.0 9-pin header** and you can connect even more U
 
 ### Micro HDMI Port
 
-There is a micro HDMI port on the reTerminal and you can use it to connect to HDMI displays via a **micro HDMI to standard HDMI cable**. It supports video up to 4K resolution at 60fps.
+There is a micro HDMI port on the carrier board and you can use it to connect to HDMI displays via a **micro HDMI to standard HDMI cable**. It supports video up to 4K resolution at 60fps.
 
 ### UART IO
 
@@ -92,7 +107,7 @@ This button is used to **reset** the CM4. It acts as a **hardware reboot**.
 
 ### Micro - SD Card Slot
 
-reTerminal is equipped with a **micro-sd card slot**. This is useful when you want to **install the operating system** on to a micro-SD card, while the **CM4 module without eMMC** is used. However, when the eMMC version of the CM4 module is used, you can use a micro-SD card as additional storage. It is recommeded to use a card with a minimum of at least 16GB.
+This is equipped with a **micro-sd card slot**. This is useful when you want to **install the operating system** on to a micro-SD card, while the **CM4 module without eMMC** is used. However, when the eMMC version of the CM4 module is used, you can use a micro-SD card as additional storage. It is recommeded to use a card with a minimum of at least 16GB.
 
 ### USB Type-C Port
 
@@ -792,6 +807,146 @@ raspistill -v -o test.jpg
 ```
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/DSI_CSI.png" alt="pir" width="850" height="auto"></p>
+
+### I2C Configuration
+
+#### Hardware Set Up
+
+If you want to connect an **I2C device** to the **FPC interface**, please follow the connections:
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/FPC_I2C.png" alt="pir" width="1000" height="auto"></p>
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/FPC_connection.png" alt="pir" width="1000" height="auto"></p>
+
+#### Software Set Up
+
+You can connect I2C devices to the **8-pin FPC connector** and control them using Raspberry Pi OS.
+
+- **Step 1.** Visit **Raspberry Pi software configuration tool**
+
+```sh 
+sudo raspi-config
+```
+
+- **Step 2.** Go to `Interface Options > I2C` and press **Enter**
+
+- **Step 3.** Select **Yes** to enable I2C
+
+- **Step 4.** **Reboot** the carrier board
+
+```sh
+sudo reboot
+```
+
+### I2C Debugging
+
+- **Step 1.** Connect an I2C device to the **8-pin FPC connector** of the carrier board
+
+- **Step 2.** List all the available I2C busses
+
+```sh
+i2cdetect -l
+```
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/I2C_Detect.png" alt="pir" width="1000" height="auto"></p>
+
+- **Step 3.**  Immediately scan the standard addresses on I2C bus 1 (i2c-1), using the default method for each address
+
+```sh
+i2cdetect -y 1
+```
+
+**Note** 1 represents the I2C bus number 
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/detect.png" alt="pir" width="1000" height="auto"></p>
+
+The above picture shows a device detected with an I2C address of 0x5c
+
+- **Step 4.** Read the contents of the register by typing the following
+
+```sh
+i2cget -f -y 1 0x5c 0x0f
+```
+
+- -y disables interactive mode. By default, i2cdetect will wait for a confirmation from the user before messing with the I2C bus. When this  flag is used, it will perform the operation directly
+- 1 represents the I2C bus number
+- 0x5c represents the I2C device address
+- 0x0f represents the memory address 
+
+The output will be as follows
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/i2cget.png" alt="pir" width="400" height="auto"></p>  
+
+- **Step 5.** Write data to register by typing the following
+
+```sh
+i2cset -y 1 0x5c 0x11 0x10
+```
+
+- -y disables interactive mode. By default, i2cdetect will wait for a confirmation from the user before messing with the I2C bus. When this  flag is used, it will perform the operation directly
+- 1 represents the I2C bus number
+- 0x5c represents the I2C device address
+- 0x11 represents the memory address
+- 0x10 represents the specific content in the memory address 
+<br>
+
+- **Step 6.** Read all register values by typing the following
+
+```sh
+i2cdump -y 1 0x5c
+```
+
+- -y disables interactive mode. By default, i2cdetect will wait for a confirmation from the user before messing with the I2C bus. When this  flag is used, it will perform the operation directly
+- 1 represents the I2C bus number
+- 0x5c represents the I2C device address 
+
+The output will be as follows
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/i2cdump.png" alt="pir" width="1000" height="auto"></p>  
+
+### SPI Configuration
+
+#### Hardware Set Up
+
+If you want to connect an **SPI device** to the **FPC interface**, please follow the connections:
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/FPC_SPI.png" alt="pir" width="1000" height="auto"></p>
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/FPC_connection.png" alt="pir" width="1000" height="auto"></p>
+
+#### Software Set Up
+
+You can connect SPI devices to the **8-pin FPC connector** and control them using Raspberry Pi OS.
+
+- **Step 1.** Visit **Raspberry Pi software configuration tool**
+
+```sh 
+sudo raspi-config
+```
+
+- **Step 2.** Go to `Interface Options > SPI` and press **Enter**
+
+- **Step 3.** Select **Yes** to enable SPI
+
+- **Step 4.** **Reboot** the carrier board
+
+```sh
+sudo reboot
+```
+
+### SPI Debugging
+
+- **Step 1.** Connect an SPI device to the **8-pin FPC connector** of the carrier board
+
+- **Step 2.** List all the available SPI devices
+
+```sh
+ls /dev/spi*
+```
+
+The output will be as follows
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/spi_list.png" alt="pir" width="450" height="auto"></p>
 
 ## Resources
 
