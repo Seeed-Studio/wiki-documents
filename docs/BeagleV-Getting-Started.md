@@ -14,8 +14,6 @@ BeagleV™ - StarLight is the first affordable RISC-V computer designed to run L
 
 It is powered by RISC-V SiFive U74 Dual-Core 64-bit RV64GC ISA SoC running at 1.5GHz with 4GB/ 8GB LPDDR4 RAM variants and has rich I/O peripherals such as USB 3.0 ports, 40 pin GPIO header, Gigabit Ethernet Connector, Micro-SD card slot and much more. BeagleV™ - StarLight also has rich AI features with Neural Network Engine and NVDLA Engine. It has onboard audio and video processing capabilities and has MIPI-CSI and MIPI-DSI connectors for video hardware. It has wireless capabilities with Wi-Fi and BLE and has a wide software compatibility including support for Fedora.
 
-You can use Seeed Fusion service to customize BeagleV™ - StarLight according to your application and then move on to mass production.
-
 ## Features
 
 - Truly open-source hardware, software and RISC-V open architecture
@@ -86,10 +84,7 @@ You need to prepare the following hardware before getting started with the Beagl
 
 Now we need to burn **Fedora** (which a Linux distribution) on to a micro-SD card, so that it can run on the BeagleV™ - StarLight. Follow the steps below according to your operating system.
 
-Start by downloading the **Fedora image** from [here](https://rcn-ee.net/rootfs/fedora/Fedora-riscv64-vic7100-dev-raw-image-Rawhide-202104161415.n.0-sda.raw.zst).
-
-**sha256sum:**
-c24c47513b0cd2cde24325c24d1660c29a8cc28104a50861fd25b68f2f5ba87f
+Start by downloading the **Fedora image** from [here](https://rcn-ee.net/rootfs/fedora/).
 
 #### For Windows 
 
@@ -292,7 +287,7 @@ You can log in to Fedora OS using a **USB to Serial Converter**. Please follow t
 - **Step 13.** Type username and password in the prompt as follows:
 
 ```sh
-Username: root
+Username: riscv
 Password: starfive
 ```
 
@@ -349,7 +344,7 @@ minicom -D /dev/ttyACM0 -b 115200
 - **Step 11.** Type username and password in the prompt as follows:
 
 ```sh
-Username: root
+Username: riscv
 Password: starfive
 ``` 
 
@@ -395,4 +390,4 @@ It is probable that some of the old model displays can not work with the board's
 - **[ZST]** [Fedora Image - 202104161415](https://rcn-ee.net/rootfs/fedora/Fedora-riscv64-vic7100-dev-raw-image-Rawhide-202104161415.n.0-sda.raw.zst)
 
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into [StarFive GitHub repo](https://github.com/starfive-tech/beaglev_fedora/issues) or [BeagleBoard forum](https://forum.beagleboard.org/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
