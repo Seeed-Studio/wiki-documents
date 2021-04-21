@@ -12,7 +12,7 @@ sku:
 
 BeagleV™ - StarLight is the first affordable RISC-V computer designed to run Linux. It is fully open-source with open-source software, open hardware design and RISC-V open architecture. It is a joint effort by Seeed Studio, BeagleBoard.org® and StarFive.
 
-It is powered by RISC-V SiFive U74 Dual-Core 64-bit RV64GC ISA SoC running at 1.5GHz with 4GB/ 8GB LPDDR4 RAM variants and has rich I/O peripherals such as USB 3.0 ports, 40 pin GPIO header, Gigabit Ethernet Connector, Micro-SD card slot and much more. BeagleV™ - StarLight also has rich AI features with Neural Network Engine and NVDLA Engine. It has onboard audio and video processing capabilities and has MIPI-CSI and MIPI-DSI connectors for video hardware. It has wireless capabilities with Wi-Fi and BLE and has a wide software compatibility including support for FreeRTOS and Linux (Debian, Fedora).
+It is powered by RISC-V SiFive U74 Dual-Core 64-bit RV64GC ISA SoC running at 1.5GHz with 4GB/ 8GB LPDDR4 RAM variants and has rich I/O peripherals such as USB 3.0 ports, 40 pin GPIO header, Gigabit Ethernet Connector, Micro-SD card slot and much more. BeagleV™ - StarLight also has rich AI features with Neural Network Engine and NVDLA Engine. It has onboard audio and video processing capabilities and has MIPI-CSI and MIPI-DSI connectors for video hardware. It has wireless capabilities with Wi-Fi and BLE and has a wide software compatibility including support for Fedora.
 
 You can use Seeed Fusion service to customize BeagleV™ - StarLight according to your application and then move on to mass production.
 
@@ -23,7 +23,7 @@ You can use Seeed Fusion service to customize BeagleV™ - StarLight according t
 - Abundant I/O peripherals
 - Wireless connectivity with Wi-Fi and BLE
 - Onboard video and audio processing
-- Supports Fedora
+- Wide software compatibility including support for Fedora
 - Integrated with Seeed Fusion Service for customization and mass production
 
 ## Specifications
@@ -109,7 +109,7 @@ c24c47513b0cd2cde24325c24d1660c29a8cc28104a50861fd25b68f2f5ba87f
 - **Step 5.** Open **Windows Powershell** and navigate to the `zstd` directory
 
 ```sh
-Ex:
+Example:
 cd D:\Downloads\zstd
 ```
 
@@ -180,9 +180,11 @@ sudo dd if=Fedora-riscv64-vic7100-dev-raw-image-Rawhide-202104161415.n.0-sda.raw
 
 After installing Fedora, you can log in to Fedora using an **SSH connection** over the local network
 
-- **Step 1.** Connect one end of an Ethernet cable to the RJ45 connector on the BeagleV™ - StarLight and the other end of the cable to a router
+- **Step 1.** Insert the **micro-SD card** with the **Fedora image** into the BeagleV™ - StarLight and power on
 
-- **Step 2.** Unplug the Ethernet cable from BeagleV™ - StarLight, plug again, unplug and plug again.
+- **Step 2.** Connect one end of an Ethernet cable to the RJ45 connector on the BeagleV™ - StarLight and the other end of the cable to a router
+
+- **Step 3.** Unplug the Ethernet cable from BeagleV™ - StarLight, plug again, unplug and plug again.
 
 **Note:** This is a [known issue](https://github.com/starfive-tech/beaglev_fedora/issues/2) and will be fixed in the future
 
@@ -211,7 +213,16 @@ After that, your router will assign an **IP address** to the BeagleV™ - StarLi
 
 - **Step 7.** Click open
 
-Now you have logged into Fedora using SSH!
+- **Step 8.** Enter the credentials as follows:
+
+```sh
+Username: riscv
+Password: starfive
+```
+
+Now you have connected with the BeagleV™ - StarLight via SSH using windows!
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/tera_4.jpg" alt="pir" width="650" height="auto"></p>
 
 ##### For Mac/Linux
 
@@ -231,9 +242,11 @@ ssh riscv@192.168.1.xxx
 
 - **Step 4.** Type the password as **starfive** in the prompt
 
-> <p style="font-size:16px">root@192.168.1.xxx's password: **starfive**</p>
+> <p style="font-size:16px">riscv@192.168.1.xxx's password: **starfive**</p>
 
-Now you have connected with the BeagleV™ - StarLight via SSH!
+Now you have connected with the BeagleV™ - StarLight via SSH using Mac/Linux!
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/tera_4.jpg" alt="pir" width="650" height="auto"></p>
 
 #### Method 2: Using a USB to Serial Converter
 
@@ -276,16 +289,16 @@ You can log in to Fedora OS using a **USB to Serial Converter**. Please follow t
 
 - **Step 12.** Turn on the power from the wall power socket to power on the BeagleV™ - StarLight
 
-- **Step 13.** If you have sucessfully logged into the Fedora OS, you will see the following output
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/tera_4.jpg" alt="pir" width="650" height="auto"></p>
-
-- **Step 13.** Type username and password as follows:
+- **Step 13.** Type username and password in the prompt as follows:
 
 ```sh
 Username: root
 Password: starfive
 ```
+
+Now you have connected with the BeagleV™ - StarLight via serial communication using windows!
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/tera_4.jpg" alt="pir" width="650" height="auto"></p>
 
 ##### For Mac/Linux
 
@@ -319,7 +332,7 @@ sudo apt-get install minicom
 dmesg | grep tty
 ```
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/minicom_1.png" alt="pir" width="800" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/minicom_1.png" alt="pir" width="850" height="auto"></p>
 
 - **Step 9.** Connect to the serial device by typing the following
 
@@ -329,20 +342,20 @@ minicom -D /dev/ttyACM0 -b 115200
 
 **Note:** The baud rate is set to 115200
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/minicom_2.png" alt="pir" width="600" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/minicom_2.png" alt="pir" width="650" height="auto"></p>
 
 - **Step 10.** Turn on the power from the wall power socket to power on the BeagleV™ - StarLight
 
-- **Step 11.** If you have sucessfully logged into the Fedora OS, you will see the following output
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/tera_4.jpg" alt="pir" width="650" height="auto"></p>
-
-- **Step 12.** Type username and password as follows:
+- **Step 11.** Type username and password in the prompt as follows:
 
 ```sh
 Username: root
 Password: starfive
 ``` 
+
+Now you have connected with the BeagleV™ - StarLight via serial communication using Mac/Linux!
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/tera_4.jpg" alt="pir" width="650" height="auto"></p>
 
 ## FAQ
 
