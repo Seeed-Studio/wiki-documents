@@ -379,7 +379,7 @@ It is probable that some of the old model displays can not work with the board's
 
 ## Resources
 
-- **[ZST]** [Fedora Image](https://rcn-ee.net/rootfs/fedora/Fedora-riscv64-vic7100-dev-raw-image-Rawhide-202104161415.n.0-sda.raw.zst)
+- **[ZST]** [Fedora Image - 202104161415](https://rcn-ee.net/rootfs/fedora/Fedora-riscv64-vic7100-dev-raw-image-Rawhide-202104161415.n.0-sda.raw.zst)
 
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
