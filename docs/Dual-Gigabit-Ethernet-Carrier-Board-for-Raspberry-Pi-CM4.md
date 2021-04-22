@@ -1041,6 +1041,34 @@ The output will be as follows
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/spi_list.png" alt="pir" width="450" height="auto"></p>
 
+- **Step 3.** Insert micro-SD card into PC
+
+- **Step 4.** Navigate to the **boot** drive
+
+- **Step 5.** Download [this file](https://files.seeedstudio.com/wiki/102110497/spidev_test) and move into **boot** drive
+
+- **Step 6.** Unplug micro-SD card from PC and plug into carrier board
+
+- **Step 7.** Turn on carrier board and navigate into the **boot** directory
+
+```sh
+cd /boot
+```
+
+- **Step 8.** Short **GPIO 10 (Pin 6)** and **GPIO 9 (Pin 7)** using a jumper wire
+
+**Note:** Here we short-circuit **MOSI and MISO pins**
+
+- **Step 9.** Run the the following SPI test tool
+
+```sh
+./spidev_test -D /dev/spidev0.0 -v -p hello
+```
+
+If you see the following output, SPI is working properly
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/SPI_test.jpg" alt="pir" width="1000" height="auto"></p>
+
 ## Resources
 
 - **[PDF]** [Dual Gigabit Ethernet Carrier Board for Raspberry Pi CM4 Schematics](https://files.seeedstudio.com/wiki/102110497/Rapberry%20Pi%20CM4%20Dual%20GbE%20Carrier%20Board%20V1.0_SCH.pdf)
