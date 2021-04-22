@@ -179,7 +179,7 @@ After installing Fedora, you can log in to Fedora using an **SSH connection** ov
 
 - **Step 2.** Connect one end of an Ethernet cable to the RJ45 connector on the BeagleV™ - StarLight and the other end of the cable to a router
 
-- **Step 3.** Unplug the Ethernet cable from BeagleV™ - StarLight, plug again, unplug and plug again.
+- **Step 3.** Unplug the Ethernet cable from BeagleV™ - StarLight, plug again
 
 **Note:** This is a [known issue](https://github.com/starfive-tech/beaglev_fedora/issues/2) and will be fixed in the future
 
