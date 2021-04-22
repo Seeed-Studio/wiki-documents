@@ -84,7 +84,7 @@ You need to prepare the following hardware before getting started with the Beagl
 
 Now we need to burn **Fedora** (which a Linux distribution) on to a micro-SD card, so that it can run on the BeagleV™ - StarLight. Follow the steps below according to your operating system.
 
-Start by downloading the **Fedora image** from [here](https://rcn-ee.net/rootfs/fedora/).
+Start by downloading the **Fedora image** from [here](https://github.com/starfive-tech/beaglev_fedora).
 
 #### For Windows 
 
