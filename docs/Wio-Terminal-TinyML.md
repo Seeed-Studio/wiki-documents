@@ -20,9 +20,7 @@ Take ARM Cortex M0+ and the little [Seeeduino XIAO](https://www.seeedstudio.com/
 Thanks to recent improvements in model optimization and emergence of frameworks specifically created for running machine learning model inference on microcontrollers, it has became possible to give more intelligence to these tiny devices. We now can deploy neural networks on microcontrollers for audio scene recognition (for example elephant activity or sound of breaking glass), hot-word detection(to activate device with a specific phrase) or even for simple image recognition tasks. The devices with embedded microcontrollers can be used to give new life and meaning to old sensors, such as using an accelerometer installed on a mechanism for anomaly detection and predictive maintenance – or to distinguish various kinds of liqueurs as in [this demo](https://wiki.seeedstudio.com/Wio-Terminal-Edge-Impulse-Distinguish-Alochol/)! 
 <div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-Edge-Impulse/booze.jpg"/></div>
 The possibilities of TinyML are truly huge.
-
-<br></br>
-
+<br>
 What about limitations? The main limiting factor is RAM/FLASH size of MCUs – no matter how you well optimize, you wouldn’t be able to fit [that YOLO9999](https://arxiv.org/abs/1612.08242) into a tiny microcontroller.
 
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML-EI-1/yolo9000-pr023-1-638.jpg"/></div> 
@@ -43,13 +41,14 @@ You can download the course in PDF format and course materials by clicking on th
 
 [Tensorflow Lite for Microcontrollers](https://www.tensorflow.org/lite/microcontrollers/get_started) on the other hand, while having steeer learning curve, allows you to implement your own model training and inference pipeline.
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML-EI-1/tensorflow-lite-logo-social.png"/></div> 
-
+TinyML with Wio Terminal course
+<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML-EI-1/1.png"/></div> 
 ##### Download PDF:
-[Link](https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML/TinyML_with_Wio_Terminal_Course.pdf)
+[PDF of the TinyML with Wio Terminal course](https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML/TinyML_with_Wio_Terminal_Course.pdf)
 ##### Download course materials:
-[Link](https://github.com/Seeed-Studio/Seeed_Arduino_WioTerminal_TinyML_Course/archive/refs/tags/1.0.zip)
+[Seeed_Arduino_WioTerminal_TinyML_Course-1.0.zip](https://github.com/Seeed-Studio/Seeed_Arduino_WioTerminal_TinyML_Course/archive/refs/tags/1.0.zip)
 ##### Github repository with course materials:
-[Link](https://github.com/Seeed-Studio/Seeed_Arduino_WioTerminal_TinyML_Course)
+[Github of the TinyML with Wio Terminal course](https://github.com/Seeed-Studio/Seeed_Arduino_WioTerminal_TinyML_Course)
 
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -18,8 +18,7 @@ The  MAix M1 is a powerful RISC-V 600MHz AI module features dual core 64-bit cpu
 In addition to the powerful Kendryte K210 processor, the Grove AI HAT for Edge Computing board provide a wealth of peripherals: I2C/UART/SPI/I2S/PWM/GPIO. The hat also offers LCD and camera interface, which support the Sipeed 2.4inch QVGA LCD and DVP camera, it will be helpful and convenience with your AI vision project. Just like the <a href="https://www.seeedstudio.com/Sipeed-MAix-BiT-for-RISC-V-AI-IoT-1-p-2873.html" target="_blank">Sipeed MAix BiT Kit for RISC-V AI+IoT</a>, we will release the kit with camera and LCD soon. For AI voice recognition applications, we add a high-quality microphone. And for robot or motion applications, there is a onboard 3-axis accelerometers sensor, which is more accurate and easy to use compared to external sensors.
 
 
-We have released varies of SIPPED AI products, we believe it is time to make it Grove, and bring all our hundreds of grove senors and grove acvotors to your AI applications. So here comes the  Grove AI HAT for Edge Computing. We've added 6 grove connectors to this hat, including 1xDigital IO, 2xAnalog IO, 1xI2C, 1xUART and 1xPWM. On top of that, based on <a href="https://github.com/kendryte/kendryte-standalone-sdk" target="_blank">kendryte-standalone-sdk</a>, we added the full <a href="https://github.com/Seeed-Studio/ArduinoCore-k210" target="_blank">ArduinoCore-API</a> interface to support Arduino IDE, Linux, Windows, Mac OS X and other development environments. Which means you can run Grove Arduino Libraries and many <a href="https://www.arduinolibraries.info/" target="_blank">excellent Arduino libraries</a> on this board easily. 
-
+We have released varies of SIPPED AI products, we believe it is time to make it Grove, and bring all our hundreds of grove senors and grove acvotors to your AI applications. So here comes the  Grove AI HAT for Edge Computing. We've added 6 grove connectors to this hat, including 1xDigital IO, 2xAnalog IO, 1xI2C, 1xUART and 1xPWM. On top of that, based on <a href="https://github.com/kendryte/kendryte-standalone-sdk" target="_blank">kendryte-standalone-sdk</a>, we support Linux, Windows, Mac OS X and other development environments. 
 
 We hope this board may help you with your edge computing, AI vision, voice recognition, and other AI projects, just enjoy it.
 
@@ -54,7 +53,6 @@ We hope this board may help you with your edge computing, AI vision, voice recog
 |CPU|K210 RISC-V Dual Core 64bit, 400Mh(Max. 600Mhz) |
 |FPU|IEEE754-2008 compliant high-performance pipelined FPU|
 |KPU(Neural Network Processor )|• Supports the fixed-point model that the mainstream training framework trains according to specific restriction rules<br>• Support for 1x1 and 3x3 convolution kernels<br>• Support for any form of activation function<br>• The maximum supported neural network parameter size for real-time work is 5MiB to 5.9MiB|
-|APU(Audio Processor)|• Up to 192kHz sample rate<br>• Up to 8 channels of audio input data, ie 4 stereo channels|
 |Debugging Support|High-speed UART and JTAG interface for debugging|
 |Supply Voltage|5V<br>can not exceed 5.5V|
 |IO Voltage|3.3V|
@@ -102,99 +100,11 @@ We hope this board may help you with your edge computing, AI vision, voice recog
 ## Platforms Supported
 
 
-| Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
+|                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg) |
-
-
-
-## Getting Started
-
-
-!!!ReadMe
-    - When the board is used in standalone mode, please turn the toggle switch J4 to the ON terminal. Then the Pin2 and Pin4 of the 2x20Pin socket J6 will connect to 5V power.  
-    - When the board is plugged into the Raspberry Pi, if only one board is powered, J4 needs to be dialed to the ON end; if the board and the Raspberry Pi use different USB power at the same time, J4 needs to be dialed to the OFF end to disconnect The two sets of 5V connections on the J6 avoid the two USB power supplies being directly connected.
-
-
-### Play With Arduino
-
-!!!Attention
-        If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
-
-
-In theory, Grove AI HAT can be compatible with all Grove modules, but inevitably there will be compatibility issues. If you find a Grove module that is not compatible with the Grove AI HAT, please submit it to our [Github Page](https://github.com/Seeed-Studio/ArduinoCore-k210/issues). 
-
-
-#### Arduino config
-
-
-- **Step 1.** Configure the Arduino Board Manager URL.  
-Click **File --> Preference**, copy the following URL into the **Additional Boards Manager URLs**
-
-```
-https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_legacy_seeeduino_boards_index.json
-
-``` 
-
-
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/wiki-Arduino-1.jpg" alt="Grove AI HAT Arduino config" title="Grove AI HAT Arduino config" />
-  <figcaption><b>Figure 2</b>. <i>Arduino Board URL config</i></figcaption>
-</figure>
-</div>
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/wiki-Arduino-2.jpg" alt="Grove AI HAT Arduino config" title="Grove AI HAT Arduino config" />
-  <figcaption><b>Figure 3</b>. <i>Arduino Board URL config</i></figcaption>
-</figure>
-</div>
-
-
-- **Step 2.** Add the Grove AI HAT board into Arduino IDE.  
-Click **Tools --> Board:"xxxx" -->Boards Manager**, tap **K210** into the search bar.  
-Find the **Grove AI HAT for Edge Computing by Seeed Studio**, click Install button. 
-
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/wiki-Arduino-3.jpg" alt="Grove AI HAT Arduino config" title="Grove AI HAT Arduino config" />
-  <figcaption><b>Figure 4</b>. <i>Open Board Manager</i></figcaption>
-</figure>
-</div>
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/wiki-Arduino-4.jpg" alt="Grove AI HAT Arduino config" title="Grove AI HAT Arduino config" />
-  <figcaption><b>Figure 5</b>. <i>Install the Grove AI HAT Board</i></figcaption>
-</figure>
-</div>
-
-When the installation is complete, you can find the **Seeed K210 Pi** board in the Arduino board list.
-
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/wiki-Arduino-5.jpg" alt="Grove AI HAT Arduino config" title="Grove AI HAT Arduino config" />
-  <figcaption><b>Figure 6</b>. <i>Select Seeed K210 Pi</i></figcaption>
-</figure>
-</div>
-
-Also, to use the Grove AI HAT in the Arduino IDE, you need to select the **K-flash** Programmer at the Arduino Programmer list.
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/wiki-Arduino-6.jpg" alt="Grove AI HAT Arduino config" title="Grove AI HAT Arduino config" />
-  <figcaption><b>Figure 7</b>. <i>Select K-flash Programmer</i></figcaption>
-</figure>
-</div>
-
+| ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg) |
 
 #### Digital Demo
-
-
 
 **Materials required**
 
@@ -215,33 +125,6 @@ Also, to use the Grove AI HAT in the Arduino IDE, you need to select the **K-fla
   <figcaption><b>Figure 8</b>. <i>Hardware connection</i></figcaption>
 </figure>
 </div>
-
-
-##### Software
-
-
-- **Step 1.** Creat a new blank sketch in your Arduino IDE, copy the following code into that sketch.
-
-```C++
-void setup() {
-  // initialize digital pin LED_BUILTIN as an output.
-  pinMode(13, OUTPUT);
-}
-
-
-void loop() {
-  digitalWrite(13, HIGH);   // 
-  delay(1000);                       // wait for a second
-  digitalWrite(13, LOW);    // 
-  delay(1000);                       // wait for a second
-}
-
-```
-
-- **Step 2.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
-
-After done uploading, the Grove - LED will flash.
-
 
 #### Analog Demo
 
@@ -265,53 +148,6 @@ After done uploading, the Grove - LED will flash.
 </figure>
 </div>
 
-
-
-##### Software
-
-- **Step 1.** Download the [ADS1115 library](https://github.com/baorepo/ADS1115/archive/master.zip)
-
-- **Step 2.** Open the demo at **File --> Examples -->ADS-1115-master -->Example -->ADS1115_ReadVoltage**
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/path-analog.jpg" alt="Grove AI HAT Arduino demo" title="Grove AI HAT Arduino demo" />
-  <figcaption><b>Figure 10</b>. <i>ADC Demo Path</i></figcaption>
-</figure>
-</div>
-
-- **Step 3.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
-
-- **Step 4.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time. Set the baud rate to **115200**.
-
-
-Then, press the Grove -  Round Force Sensor, the A0 valnue will change. 
-
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/result-analog.jpg" alt="Grove AI HAT Arduino demo" title="Grove AI HAT Arduino demo" />
-  <figcaption><b>Figure 11</b>. <i>Output</i></figcaption>
-</figure>
-</div>
-
-
-
-
-### kendryte k210 Standalone SDK
-
-In order to use the kendryte k210 Standalone SDK with Grove AI HAT you should config the Arduino IDE as the previous chapter [Play with Arduino](https://wiki.seeedstudio.com/Grove_AI_HAT_for_Edge_Computing/#play-with-arduino).  
-
-Now let's assume that you have downloaded the K210 development board in the Arduino IDE, selected **Seeed K210 Pi** board and **k-flash**.
-
-First of all download the [kendryte-standalone-demo](https://github.com/kendryte/kendryte-standalone-demo) at github.
-
-We will take the [face_detect](https://github.com/kendryte/kendryte-standalone-demo/tree/develop/face_detect) for instance.
-
-
-
-
-
 #### Face Detect Demo
 
 
@@ -322,13 +158,11 @@ We will take the [face_detect](https://github.com/kendryte/kendryte-standalone-d
 - [2.4 inch TFT LCD](https://www.seeedstudio.com/2-4-TFT-LCD-p-4049.html) x1
 - USB Type C cable x1
 
-
 ##### Hardware Connection
 
 - a. Connect the OV2640 camera into the Grove AI Hat 24 pin FPC camera connector
 - b. Connect the 2.4 inch TFT LCD into the Grove AI Hat 24 pin FPC LCD connector 
 - c. Connect the Grove AI HAT to the computer via USB Type C port.
-
 
 <div align="center">
 <figure>
@@ -336,224 +170,6 @@ We will take the [face_detect](https://github.com/kendryte/kendryte-standalone-d
   <figcaption><b>Figure 12</b>. <i>Hardware connection of face detect demo</i></figcaption>
 </figure>
 </div>
-
-
-
-##### Software
-
-
-###### Download the AI module
-
-- Step 1. Enter the folder, **D:XXXXXX\kendryte-standalone-demo\face_detect\kfpkg**, **D:XXXXXX** is the path where you download the **kendryte-standalone-demo**. You will find four files as following:
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-01.jpg" alt="Grove AI HAT face detect demo-1" title="" />
-  <figcaption><b>Figure 13</b>. <i>This folder contains the AI module of face detect</i></figcaption>
-</figure>
-</div>
-
-
-- Step 2. Open the Arduino IDE, click **File --> Preferences**, click on the part marked in the red box to open the Arduino package folder.
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-02.jpg" alt="Grove AI HAT face detect demo-2" title="" />
-  <figcaption><b>Figure 14</b>. <i>Open preferences windows</i></figcaption>
-</figure>
-</div>
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-03.jpg" alt="Grove AI HAT face detect demo-3" title="" />
-  <figcaption><b>Figure 15</b>. <i>Click on the part marked in the red box</i></figcaption>
-</figure>
-</div>
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-04.jpg" alt="Grove AI HAT face detect demo-4" title="" />
-  <figcaption><b>Figure 16</b>. <i>Click on the part marked in the red box</i></figcaption>
-</figure>
-</div>
-
-
-
-- Step 3. Find the **Kflash_py.exe** in the path **XXXXX\packages\Seeeduino\tools\kflash\1.1.0**, XXXX is the folder you just open by click the links in the Arduino references Windows. For instance mine is `C:\Users\seeed\AppData\Local\Arduino15\packages\Seeeduino\tools\kflash\1.1.0`, copy the whole path of your own, we need to use it in the next step. 
-
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-05.jpg" alt="Grove AI HAT face detect demo-5" title="" />
-  <figcaption><b>Figure 17</b>. <i>Copy the path of Kflash_py.exe</i></figcaption>
-</figure>
-</div>
-
-
-- Step 4. Back to the **kfpkg** folder, enter a command console, you can use any console you like. If you don't know how to open one, for win10 user, you can click **File -->Open Windows Power Shell -->Open Windows Power Shell**
-
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-06.jpg" alt="Grove AI HAT face detect demo-6" title="" />
-  <figcaption><b>Figure 18</b>. <i>Open power shell</i></figcaption>
-</figure>
-</div>
-
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-07.jpg" alt="Grove AI HAT face detect demo-7" title="" />
-  <figcaption><b>Figure 19</b>. <i>Open power shell</i></figcaption>
-</figure>
-</div>
-
-
-- Step 5. Download the AI module into your Grove AI Hat  
-Remember the path we copied in the **step3**? Mine is:
-
-```C
-C:\Users\seeed\AppData\Local\Arduino15\packages\Seeeduino\tools\kflash\1.1.0
-``` 
-
-For windows user, you should change all the `\` in the path into `/`, then we get:
-
-```c
-C:/Users/seeed/AppData/Local/Arduino15/packages/Seeeduino/tools/kflash/1.1.0
-```
-
-Replace the following command with you own Path
-
-```C
-C:/Users/seeed/AppData/Local/Arduino15/packages/Seeeduino/tools/kflash/1.1.0/kflash_py -n -p COM31 -b 2000000 -B dan face_detect.kfpkg
-```
-
-
-Check your COM number in the Computer Device Manager 
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-08.jpg" alt="Grove AI HAT face detect demo-8" title="" />
-  <figcaption><b>Figure 20</b>. <i>Check the COM number</i></figcaption>
-</figure>
-</div>
-
-
-Replace the COM number with your own COM number, as you can see, mine is COM21, then enter the following command and run:
-
-
-```C
-C:/Users/seeed/AppData/Local/Arduino15/packages/Seeeduino/tools/kflash/1.1.0/kflash_py -n -p COM21 -b 2000000 -B dan face_detect.kfpkg
-```
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-09.jpg" alt="Grove AI HAT face detect demo-9" title="" />
-  <figcaption><b>Figure 21</b>. <i>Replace the Path of kflash_py and the COM port number with your own path and COM port</i></figcaption>
-</figure>
-</div>
-
-
-
-When the download is finish, you will see:
-
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-10.jpg" alt="Grove AI HAT face detect demo-10" title="" />
-  <figcaption><b>Figure 22</b>. <i>Download Success</i></figcaption>
-</figure>
-</div>
-
-
-Now you will see the LCD screen light on with full white. Let's move to next step.
-
-
-###### Download Demo code
-
-
-- Step 1. Creat a new folder, creat a new blank `xxx.ino` file. `xxx` must be the same as the folder name. For instance both of mine is `Face_Detect_Demo`
-
-
-!!!Attention
-    Please make sure the .ino file is blank and the .ino name is the same as your folder.
-
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-1.jpg" alt="Grove AI HAT face detect download-1" title="" />
-  <figcaption><b>Figure 23</b>. <i>Great blank ino</i></figcaption>
-</figure>
-</div>
-
-
-- Step 2. Copy all the files in the folder `XXXXX\kendryte-standalone-demo\face_detect` into the new folder you've just created.
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-2.jpg" alt="Grove AI HAT face detect download-2" title="" />
-  <figcaption><b>Figure 24</b>. <i>Copy file into the ino folder</i></figcaption>
-</figure>
-</div>
-
-
-- Step 3. Open the .ino file with your Arduino IDE. The whole project will opened in the Arduino IDE.
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-3.jpg" alt="Grove AI HAT face detect download-3" title="" />
-  <figcaption><b>Figure 25</b>. <i>Open the .ino file with Arduino IDE</i></figcaption>
-</figure>
-</div>
-
-
-- Step 4. Board Config. Before building, we need to config the camera and LED. In this demo, we use OV2604 and Grove AI Hat.  
-The code for Grove AI Hat is `BOARD_LICHEEDAN`, so we need to config as below:
-
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-4.jpg" alt="Grove AI HAT face detect download-4" title="" />
-  <figcaption><b>Figure 26</b>. <i>Board Config</i></figcaption>
-</figure>
-</div>
-
-
-- Step 5. Build the main.c, please make sure you have selected the right board and flasher.  
-K-flash/Seeed k210 Pi/  
-
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-6.jpg" alt="Grove AI HAT face detect download-6" title="" />
-  <figcaption><b>Figure 27</b>. <i>Board Select</i></figcaption>
-</figure>
-</div>
-
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-5.jpg" alt="Grove AI HAT face detect download-5" title="" />
-  <figcaption><b>Figure 28</b>. <i>Build the main.c</i></figcaption>
-</figure>
-</div>
-
-
-
-- Step 6. Download the face_detect_demo into your Grove AI Hat. When the downloading is success, you can see as below:
-
-<div align="center">
-<figure>
-  <img src="https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/face_detect_demo-7.jpg" alt="Grove AI HAT face detect download-7" title="" />
-  <figcaption><b>Figure 29</b>. <i>Success</i></figcaption>
-</figure>
-</div>
-
-
-Now you can use the camera to shoot faces, rotate the focus ring on the camera or adjust the distance from the camera to the face to make the face clear. A red box appears when it recognizes a face.
-
-
-
 
 ## Resources
 
