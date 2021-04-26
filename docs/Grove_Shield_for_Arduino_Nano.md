@@ -60,10 +60,10 @@ The Base Shield is tested and fully compatible with following boards:
 |![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino-Nano/img/seeeduino-Nano-front.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-shield-for-Arduino-Nano/img/Grove-Shoeld-for-Arduino-Nano-wiki.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Base_Shield_V2/img/Buzzer.png)|![enter image description here](https://files.seeedstudio.com/wiki/Base_Shield_V2/img/button_s.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|[Get ONE Now](https://www.seeedstudio.com/category/Grove-Button-p-766.html)|
 
-- Step 2. Connect Grove - Buzzer to port D4 of Grove Shield.
-- Step 3. Connect Grove - Button to port D2 of Grove Shield.
-- Step 4. Plug Grove Shield for Arduino Nano into Seeeduino nano.
-- Step 5. Connect Seeeduino to PC through a USB cable.
+- Step 2. Connect Grove - Buzzer to port D4 of Grove Shield
+- Step 3. Connect Grove - Button to port D2 of Grove Shield
+- Step 4. Plug Grove Shield for Arduino Nano into Seeeduino nano
+- Step 5. Connect Seeeduino to PC through a USB cable
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove-shield-for-Arduino-Nano/img/hardwareconnect.jpg)
 
