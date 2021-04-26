@@ -357,6 +357,7 @@ get_available_gpus()
 
 All right, here's your show.
 ## Resources
+<iframe frameborder='0' height='385' scrolling='no' src='https://www.hackster.io/WhoseAI/set-up-a-jetson-nano-nx-cluster-in-one-systerm-ac4235/embed' width='350'></iframe>
 
 ## Tech Support
 
