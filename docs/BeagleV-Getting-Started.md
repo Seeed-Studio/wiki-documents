@@ -34,7 +34,8 @@ It is powered by RISC-V SiFive U74 Dual-Core 64-bit RV64GC ISA SoC running at 1.
 | Video<br>Processing | • 2 x MIPI-CSI (up to 4K@30fps), 1 x MIPI-DSI (up to 4K@30fps)<br>• 1 x HDMI 1.4 (up to 1080p@60fps display)<br>• Video Decoder (H264/H265) up to 4K@60FPS; Support Dual stream decoding for 2K@30FPS each<br>• Dual channels of ISP, each channel support up to 4K@30FPS<br>• Support MIPI-CSI TX for video output after ISP and AI processing<br>• JPEG encoder/decoder |
 | Dedicated Audio<br>Processing DSP<br>and Sub-system | • Ultra-low power Voice Activity Detector for audio bit-stream as a Voice Trigger<br>• On-chip Audio DAC<br>• Support DMIC and AMIC, up to 4 channels |
 | Peripherals | • 4 x USB 3.0 ports<br>• 40 Pin GPIO Header (28 x GPIO, I2C, I2S, SPI, UART)<br>• Gigabit Ethernet Connector<br>• 3.5mm Audio jack (4-pole stereo audio output)<br>• Micro-SD card slot for system boot and data storage<br>• Support TRNG and OTP<br>• Support DMAC, QSPI and other peripheral<br>• Reset button and Power Button |
-| Power | • 5V DC via USB-C connector (minimum 3A)<br>• 5V DC via GPIO header (minimum 3A) |
+| Power Supply | • Minimum: 5V/1.5A<br>• Recommended: 5V/3A |
+| Power Connector | • USB Type-C port or 40-pin GPIO header |
 | Dimensions | • 86.9 x 70 x 19mm |
 
 ## Hardware Overview
@@ -64,7 +65,10 @@ It is powered by RISC-V SiFive U74 Dual-Core 64-bit RV64GC ISA SoC running at 1.
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/pinout.jpg" alt="pir" width="550" height="auto"></p>
 
 !!!Note
-        All GPIOs can be configured to different functions including but not limited to SDIO, Audio, SPI, I2C, UART and PWM 
+        Each GPIO pin can safely draw a maximum current of 39mA, whereas the maximum current draw when all GPIOs are combined should be less than 100mA. Please take this into account or otherwise you will end up destroying the GPIO pins.
+
+!!!Note
+        All GPIOs can be configured to different functions including but not limited to **SDIO, Audio, SPI, I2C, UART and PWM**.   
 
 ## Getting Started - Hardware Required
 
