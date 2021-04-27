@@ -82,6 +82,14 @@ You need to prepare the following hardware before getting started with the Beagl
 - Power Adapter (5V/3A) 
 - USB Type-C Cable
 
+## Getting Started - Connecting a Fan
+
+BeagleV™ - StarLight tends to run hot even with a heat sink installed. So it's recommended to use a fan with BeagleV™ - StarLight. You can connect a 5V fan to the board as follows:
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/Fan_connection_1.jpg" alt="pir" width="1000" height="auto"></p>
+
+**Note:** You can also connect the red wire (+) to pin 2 (5V) and connect the black wire (-) to pin 9/14/20/25/30/34/39 (GND)
+
 ## Getting Started - Software Set Up
 
 ### Flash Fedora OS to Micro-SD Card
