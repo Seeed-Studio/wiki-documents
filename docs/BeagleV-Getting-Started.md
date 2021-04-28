@@ -40,7 +40,7 @@ It is powered by RISC-V SiFive U74 Dual-Core 64-bit RV64GC ISA SoC running at 1.
 
 ## Hardware Overview
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/HW_Top.jpg" alt="pir" width="550" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/HW_Top_1.jpg" alt="pir" width="550" height="auto"></p>
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/HW_Bottom.jpg" alt="pir" width="550" height="auto"></p>
 
