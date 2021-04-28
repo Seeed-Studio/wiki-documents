@@ -1,12 +1,12 @@
 ---
-name: How to Make Fedora OS File System, Compile u-boot and Linux Kernel
+name: How to Make File System, Compile u-boot and Linux Kernel
 category: BeagleV™ - StarLight
 bzurl: 
 wikiurl: 
 sku: 
 ---
 
-# How to Make Fedora OS File System, Compile u-boot and Linux Kernel
+# How to Make File System, Compile u-boot and Linux Kernel
 
 ## Hardware Needed
 
@@ -20,8 +20,31 @@ sku:
 
 **Note:** In this guide, **Ubuntu 20.04 LTS** is installed on the **host PC**.
 
-## Set Up Your Own Cross-Compile (riscv64-linux-gnu-gcc)
-First we need to install the **riscv64-linux-gnu-gcc** compiler on the host PC
+## Set Up Compile Environment
+
+First we need to set up the compile environment. There are 2 methods to do this. You can begin with the first method and if that fails, you can move on to the second method.
+
+### Method 1 - Using Pre-Compiled Cross-Compile (riscv64-unknown-linux-gnu-gcc)
+
+- **Step 1.** Click [this link](https://files.seeedstudio.com/wiki/BeagleV/gcc10.2.0.tar.xz) to download a pre-compiled compiler (riscv64-unknown-linux-gnu-gcc)
+
+- **Step 2.** Extract the file to a directory of your choice
+
+- **Step 3.** Open a terminal window and add the compiler to your **PATH**
+
+```sh
+export PATH=/home/user/gcc10.2.0/gcc/bin:$PATH
+```
+
+**Note:** Point to the directory that you extracted the file before
+
+- **Step 4.** Check the version of the riscv64-unknown-linux-gnu-gcc
+
+```sh
+riscv64-unknown-linux-gnu-gcc -v
+```
+
+### Method 2: Set Up Your Own Cross-Compile (riscv64-linux-gnu-gcc)
 
 - **Step 1.** Install the **riscv64-linux-gnu-gcc** compiler from Ubuntu packages 
 
@@ -146,12 +169,11 @@ The final lines of the output will be as follows:
 
 **Note:** Please ignore the error messages in this output.
 
-## Make Fedora OS File System
+## Make File System
 
-Now we need to make the Fedora OS file system. Follow the steps below to proceed
+Now we need to make the file system. Follow the steps below to proceed
 
 - **Step 1.** Create the directory structure
-
 ```sh
 mkdir rootfs
 cd rootfs
@@ -414,167 +436,7 @@ There will be these 2 files generated after compilation inside the **beagle_uboo
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/uboot-compile2.png" alt="pir" width="800" height="auto"></p>
 
-**Note:** The **u-boot.dtb** file will be used later in this guide when we try to move rootfs, uboot and kernel to BeagleV, whereas both **u-boot.dtb** and **u-boot.bin** will be used next for **OpenSBI compilation**
-
-## Compile OpenSBI
-
-Now we need to compile OpenSBI for BeagleV™ - Starlight. Follow the steps below
-
-- **Step 1.** Move into your desired directory to store the OpenSBI files
-
-```sh
-Example:
-cd ~ # home directory
-```
-
-- **Step 2.** Download the source code for OpenSBI compilation
-
-```sh
-git clone https://github.com/starfive-tech/beagle_opensbi 
-```
-
-- **Step 3.** Navigate to the following file path and open the file using vim text editor
-
-```sh
-vim beagle_opensbi/platform/starfive/vic7100/config.mk
-```
-
-- **Step 4.** Modify the configuration as follows and save the file
-
-```sh
-FW_JUMP_ADDR=0x8002000
-FW_PAYLOAD_OFFSET=0x20000
-```
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/opensbi-config.png" alt="pir" width="500" height="auto"></p>
-
-- **Step 5.** Go to the **root of beagle_opensbi directory** and type the following to **compile openSBI**
-
-```sh
-cd beagle_opensbi
-make CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv PLATFORM=starfive/vic7100 FW_PAYLOAD_PATH={U-BOOT_PATH}/u-boot.bin FW_PAYLOAD_FDT_PATH={U-BOOT_PATH}/u-boot.dtb 
-```
-
-**Note:** Modify the path to the path of **beagle_uboot-opensbi**
-
-The file will be generated in the directory **beagle_opensbi/build/platform/starfive/vic7100/firmware** as **fw_payload.bin** after compilation and the size is about 700+K
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/opensbi-compile.png" alt="pir" width="850" height="auto"></p>
-
-- **Step 6.** Navigate to the directory containing **fw_payload.bin**
-
-```sh
-cd beagle_opensbi/build/platform/starfive/vic7100/firmware
-```
-
-- **Step 7** Copy the file **fw_payload.bin** to a different location
-
-```sh
-cp fw_payload.bin /home/user/Desktop
-```
-
-- **Step 8.** Navigate to the copied location and execute the following to install an **image conversion tool**
-
-```sh
-sudo apt install subversion
-svn export https://github.com/starfive-tech/freelight-u-sdk.git/branches/starfive/fsz.sh
-```
-
-**Note:** [Here](https://github.com/starfive-tech/freelight-u-sdk/blob/starfive/fsz.sh) is the source code
-
-- **Step 9.** Change the user rights of the tool
-
-```sh
-chmod 777 fsz.sh
-```
-
-- **Step 10.** Convert the file from **fw_payload.bin** to **fw_payload.bin.out**
-
-```sh
-./fsz.sh fw_payload.bin fw_payload.bin.out
-```
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/bin-conversion.png" alt="pir" width="750" height="auto"></p>
-
-**Note:** You will see a new file named **fw_payload.bin.out** generated
-
-## Flash uboot
-
-Let's move on to flash the **fw_payload.bin.out** file generated before to BeagleV™ - StarLight. This fw_payload file is the result of OpenSBI and uboot both compiled together
-
-- **Step 1.** Connect one end of the USB Type-C cable to the USB Type-C port on the BeagleV™ - StarLight and connect the other end of the cable to the power adapter
-
-- **Step 2.** Connect the jumper wires from the USB to Serial Converter to the 40-Pin GPIO header of the BeagleV™ - StarLight as follows
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/connection.jpg" alt="pir" width="1000" height="auto"></p>
-
-- **Step 3.** Connect power adapter to wall power socket
-
-- **Step 4.** Open a **terminal window** on host PC
-
-- **Step 5.** Type the following to update the **packages list**
-
-```sh
-sudo apt-get update
-```
-
-- **Step 6.** Install **minicom**, which is a **serial communication software** that helps to establish a serial communcation between your host PC and BeagleV™ - StarLight
-
-```sh
-sudo apt-get install minicom
-```
-
-- **Step 7.** Connect the **USB To Serial Converter** to the **PC**
-
-- **Step 8.** Type the following in the terminal to view the connected serial devices
-
-```sh
-dmesg | grep tty
-```
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/minicom_1.png" alt="pir" width="800" height="auto"></p>
-
-- **Step 9.** Connect to the serial device by typing the following
-
-```sh 
-minicom -D /dev/ttyACM0 -b 115200
-```
-
-**Note:** The baud rate is set to 115200
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/minicom_2.png" alt="pir" width="600" height="auto"></p>
-
-- **Step 10.** After the hardware connections mentioned above, turn on the power from the wall power socket to power on the BeagleV™ - StarLight and you will see the startup information as follows
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/minicom_3.png" alt="pir" width="600" height="auto"></p>
-
-- **Step 11.** Press any key as soon as it starts up to enter the **upgrade menu**. In this menu, you can update uboot
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/minicom_4.png" alt="pir" width="1000" height="auto"></p>
-
-- **Step 12.** Type "0" and press **Enter** to update uboot
-
-- **Step 13.** Press **Ctrl+A** and then press **s** to enter **upload mode**
-
-- **Step 14.** Select **xmodem** and press **Enter**
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/minicom-xmodem-select.png" alt="pir" width="800" height="auto"></p>
-
-- **Step 15.** Select **Goto** from the bottom tab menu and press **Enter**
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/minicom-goto.png" alt="pir" width="750" height="auto"></p>
-
-- **Step 16.** Enter the directory path and press **Enter**
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/minicom-directory-path.png" alt="pir" width="750" height="auto"></p>
-
-- **Step 17.** Select **fw_payload.bin.out** by navigating using **arrow keys** ,press **Space** and press **Enter**
-
-If you see the following output, that means you have successfully transferred the **fw_payload.bin.out** file to BeagleV™ - Starlight.
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/xmodem-complete.png" alt="pir" width="600" height="auto"></p>
-
-- **Step 18.** Finally press **Enter**
+**Note:** The **u-boot.dtb** file will be used later in this guide when we try to move rootfs, uboot and kernel to BeagleV, whereas both **u-boot.dtb** and **u-boot.bin** will be used later for **OpenSBI compilation**
 
 ## Compile Linux Kernel
 
@@ -660,92 +522,7 @@ sudo cp -r lib/modules/5.10.6+/kernel/ /media/user/__/lib/modules/5.10.6+/ && sy
 
 ## Move rootfs, kernel and uboot into BeagleV™ - Starlight
 
-### Method 1: Using Ethernet Cable
-
-- **Step 1.** Connect an Ethernet Cable from the RJ45 port of BeagleV™ - Starlight to a router, connect serial adapter cable and power on the board
-
-**Note:** Make sure the host PC is also connected to the same router using Ethernet or Wi-Fi
-
-- **Step 2.** Open **minicom** and wait until board enters **uboot mode**. You will see the following output when it is in uboot mode
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/uboot-mode.png" alt="pir" width="700" height="auto"></p>
-
-- **Step 3.** Enter the following commands to set ubooot environment variables 
-
-```sh
-setenv serverip 192.168.1.5;setenv ipaddr 192.168.1.33;setenv hostname starfive;setenv netdev eth0;setenv kernel_comp_addr_r 0x90000000;setenv kernel_comp_size 0x10000000; setenv bootargs console=ttyS0,115200 earlycon=sbi root=/dev/ram0 stmmaceth=chain_mode:1 loglevel=8
-```
-
-**Note:** In general the default IP of a router is 192.168.1.1. In this case, use the server IP as the IP assigned by the DHCP server of the router and use the BeagleV IP as 192.168.1.xxx. However, if your router IP is different (ex: 192.168.2.1), the server and BeagleV should follow the IP format of 192.168.2.xxx. 
-
-- **Step 4.** Check the connectivity by pinging the host PC from BeagleV™ - Starlight
-
-```sh
-Example:
-ping 192.168.1.5
-```
-
-If you see the following output, the host PC and BeagleV™ - Starlight has established a communication on the same network
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/ping-test.png" alt="pir" width="300" height="auto"></p>
-
-- **Step 5.** Install a tftp server on the Host PC
-
-```sh
-sudo apt-get update 
-sudo apt install tftpd-hpa
-```
-
-- **Step 6.** Check the status of the server
-
-```sh
-sudo systemctl status tftpd-hpa
-```
-
-- **Step 7.** Move the previously compiled rootfs file system package, kernel and uboot images into a single directory
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/needed-files.png" alt="pir" width="300" height="auto"></p>
-
-- **Step 8.** Execute the following to enter the tftp server configuration
-
-```sh
-sudo nano /etc/default/tftpd-hpa
-```
-
-- **Step 9.** Configure the tftp server as follows
-
-```sh
-# /etc/default/tftpd-hpa
-
-TFTP_USERNAME="tftp"
-TFTP_DIRECTORY="/home/user/Desktop/compiled"  
-TFTP_ADDRESS=":69"
-TFTP_OPTIONS="--secure"
-```
-
-
-**Note:** The **TFTP_DIRECTORY** is the directory that we created before with all the 3 images (Image.gz, u-boot.dtb, rootfs.cpio.gz)
-
-- **Step 10.** Restart the tftp server
-
-```sh 
-sudo systemctl restart tftpd-hpa
-```
-
-- **Step 11.** Type the following inside the uboot mode of BeagleV™ - Starlight to download the files from the tftp server of the host PC and start the kernel 
-
-```sh
-tftpboot ${fdt_addr_r}  u-boot.dtb;tftpboot ${kernel_addr_r} Image.gz;tftpboot ${ramdisk_addr_r} rootfs.cpio.gz;booti ${kernel_addr_r} ${ramdisk_addr_r}:${filesize} ${fdt_addr_r}
-```
-
-- **Step 12.** Log in with the following credentials
-
-```sh
-Username：root
-Password：starfive
-```
-
-### Method 2: Using Micro-SD Card
+### Method 1: Using Micro-SD Card
 
 - **Step 1.** Insert a micro-sd card to the host PC
 
@@ -754,7 +531,6 @@ Password：starfive
 ```sh
 lsblk
 ```
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/sd-partition.png" alt="pir" width="700" height="auto"></p>
 
 For example, it's /dev/sdc
 
@@ -786,13 +562,13 @@ df -h
 
 You will see an output as follows and take a note of the mount location:
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/sd-mount.png" alt="pir" width="700" height="auto"></p>
+(image)
 
 - **Step 8.** Navigate to the directory containing the 3 images as mentioned before
 
 ```sh
 Example:
-cd Desktop/compiled
+cd Desktop/Compiled
 ```
 
 - **Step 9.** Copy the files to the micro-sd card by typing the following
@@ -820,7 +596,7 @@ booti ${kernel_addr_r} ${ramdisk_addr_r}:${filesize} ${fdt_addr_r}
 
 - **Step 12.** If you have succussfully executed the above commands, you will see the following output:
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/sdcard-success.png" alt="pir" width="600" height="auto"></p>
+(image)
 
 - **Step 13.** Log in by typing the following credentials 
 
@@ -829,5 +605,250 @@ Username：root
 Password：starfive
 ```
 
+### Method 2: Using Ethernet Cable
 
+- **Step 1.** Connect an Ethernet Cable from the RJ45 port of BeagleV™ - Starlight to a router, connect serial adapter cable and power on the board
 
+**Note:** Make sure the host PC is also connected to the same router using Ethernet or Wi-Fi
+
+- **Step 2.** Open **minicom** and wait until board enters **uboot mode**. You will see the following output when it is in uboot mode
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/uboot-mode.png" alt="pir" width="700" height="auto"></p>
+
+- **Step 3.** Enter the following commands to set ubooot environment variables 
+
+```sh
+setenv serverip 192.168.1.5;setenv ipaddr 192.168.1.33;setenv hostname starfive;setenv netdev eth0;setenv kernel_comp_addr_r 0x90000000;setenv kernel_comp_size 0x10000000; setenv bootargs console=ttyS0,115200 earlycon=sbi root=/dev/ram0 stmmaceth=chain_mode:1 loglevel=8
+```
+
+**Note:** In general the default IP of a router is 192.168.1.1. In this case, use the server IP as the IP assigned by the DHCP server of the router and use the BeagleV IP as 192.168.1.xxx. However, if your router IP is different (ex: 192.168.2.1), the server and BeagleV should follow the IP format of 192.168.2.xxx. 
+
+- **Step 4.** Check the connectivity by pinging the host PC from BeagleV™ - Starlight
+
+```sh
+Example:
+ping 192.168.1.5
+```
+
+If you see the following output, the host PC and BeagleV™ - Starlight has established a communication on the same network
+
+(image)
+
+- **Step 5.** Install a tftp server on the Host PC
+
+```sh
+sudo apt-get update 
+sudo apt install tftpd-hpa
+```
+
+- **Step 6.** Check the status of the server
+
+```sh
+sudo systemctl status tftpd-hpa
+```
+
+- **Step 7.** Move the previously compiled rootfs file system package, kernel and uboot images into a single directory
+
+(image)
+
+- **Step 8.** Execute the following to enter the tftp server configuration
+
+```sh
+sudo nano /etc/default/tftpd-hpa
+```
+
+- **Step 9.** Configure the tftp server as follows
+
+```sh
+# /etc/default/tftpd-hpa
+
+TFTP_USERNAME="tftp"
+TFTP_DIRECTORY="/home/user/Desktop/compiled"  
+TFTP_ADDRESS=":69"
+TFTP_OPTIONS="--secure"
+```
+
+**Note:** The **TFTP_DIRECTORY** is the directory that we created before with all the 3 images (Image.gz, u-boot.dtb, rootfs.cpio.gz)
+
+- **Step 10.** Restart the tftp server
+
+```sh 
+sudo systemctl restart tftpd-hpa
+```
+
+- **Step 11.** Type the following inside the uboot mode of BeagleV™ - Starlight to download the files from the tftp server of the host PC and start the kernel 
+
+```sh
+tftpboot ${fdt_addr_r}  u-boot.dtb;tftpboot ${kernel_addr_r} Image.gz;tftpboot ${ramdisk_addr_r} rootfs.cpio.gz;booti ${kernel_addr_r} ${ramdisk_addr_r}:${filesize} ${fdt_addr_r}
+```
+
+- **Step 12.** Log in with the following credentials
+
+```sh
+Username：root
+Password：starfive
+```
+
+## What is OpenSBI?
+
+OpenSBI stands for Open-Source Supervisor Binary Interface and it is an open-source implementation of the RISC-V Supervisor Binary Interface. It is a RISC-V specific runtime service provider and it is typically used in boot stage following ROM and LOADER. A typical boot flow is as follows:
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/opensbi_fig.png" alt="pir" width="700" height="auto"></p>
+
+### Compile OpenSBI
+
+Now we need to compile OpenSBI for BeagleV™ - Starlight. Follow the steps below
+
+- **Step 1.** Move into your desired directory to store the OpenSBI files
+
+```sh
+Example:
+cd ~ # home directory
+```
+
+- **Step 2.** Download the source code for OpenSBI compilation
+
+```sh
+git clone https://github.com/starfive-tech/beagle_opensbi 
+```
+
+- **Step 3.** Navigate to the following file path and open the file using vim text editor
+
+```sh
+vim beagle_opensbi/platform/starfive/vic7100/config.mk
+```
+
+- **Step 4.** Modify the configuration as follows and save the file
+
+```sh
+FW_JUMP_ADDR=0x8002000
+FW_PAYLOAD_OFFSET=0x20000
+```
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/opensbi-config.png" alt="pir" width="500" height="auto"></p>
+
+- **Step 5.** Go to the **root of beagle_opensbi directory** and type the following to **compile openSBI**
+
+```sh
+cd beagle_opensbi
+make CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv PLATFORM=starfive/vic7100 FW_PAYLOAD_PATH={U-BOOT_PATH}/u-boot.bin FW_PAYLOAD_FDT_PATH={U-BOOT_PATH}/u-boot.dtb 
+```
+
+**Note:** Modify the path to the path of **beagle_uboot-opensbi** from before
+
+The file will be generated in the directory **beagle_opensbi/build/platform/starfive/vic7100/firmware** as **fw_payload.bin** after compilation and the size is about 700+K
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/opensbi-compile.png" alt="pir" width="850" height="auto"></p>
+
+- **Step 6.** Navigate to the directory containing **fw_payload.bin**
+
+```sh
+cd beagle_opensbi/build/platform/starfive/vic7100/firmware
+```
+
+- **Step 7** Copy the file **fw_payload.bin** to a different location
+
+```sh
+cp fw_payload.bin /home/user/Desktop
+```
+
+- **Step 8.** Navigate to the copied location and execute the following to install an **image conversion tool**
+
+```sh
+sudo apt install subversion
+svn export https://github.com/starfive-tech/freelight-u-sdk.git/branches/starfive/fsz.sh
+```
+
+**Note:** [Here](https://github.com/starfive-tech/freelight-u-sdk/blob/starfive/fsz.sh) is the source code
+
+- **Step 9.** Change the user rights of the tool
+
+```sh
+chmod 777 fsz.sh
+```
+
+- **Step 10.** Convert the file from **fw_payload.bin** to **fw_payload.bin.out**
+
+```sh
+./fsz.sh fw_payload.bin fw_payload.bin.out
+```
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/bin-conversion.png" alt="pir" width="750" height="auto"></p>
+
+**Note:** You will see a new file named **fw_payload.bin.out** generated
+
+### Flash uboot
+
+Let's move on to flash the **fw_payload.bin.out** file generated before to BeagleV™ - StarLight. This fw_payload file is the result of OpenSBI and uboot both compiled together
+
+- **Step 1.** Connect one end of the USB Type-C cable to the USB Type-C port on the BeagleV™ - StarLight and connect the other end of the cable to the power adapter
+
+- **Step 2.** Connect the jumper wires from the USB to Serial Converter to the 40-Pin GPIO header of the BeagleV™ - StarLight as follows
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/connection.jpg" alt="pir" width="1000" height="auto"></p>
+
+- **Step 3.** Connect power adapter to wall power socket
+
+- **Step 4.** Open a **terminal window** on host PC
+
+- **Step 5.** Type the following to update the **packages list**
+
+```sh
+sudo apt-get update
+```
+
+- **Step 6.** Install **minicom**, which is a **serial communication software** that helps to establish a serial communcation between your host PC and BeagleV™ - StarLight
+
+```sh
+sudo apt-get install minicom
+```
+
+- **Step 7.** Connect the **USB To Serial Converter** to the **PC**
+
+- **Step 8.** Type the following in the terminal to view the connected serial devices
+
+```sh
+dmesg | grep tty
+```
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/minicom_1.png" alt="pir" width="800" height="auto"></p>
+
+- **Step 9.** Connect to the serial device by typing the following
+
+```sh 
+minicom -D /dev/ttyACM0 -b 115200
+```
+
+**Note:** The baud rate is set to 115200
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/minicom_2.png" alt="pir" width="600" height="auto"></p>
+
+- **Step 10.** After the hardware connections mentioned above, turn on the power from the wall power socket to power on the BeagleV™ - StarLight and you will see the startup information as follows
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/minicom_3.png" alt="pir" width="600" height="auto"></p>
+
+- **Step 11.** Press any key as soon as it starts up to enter the **upgrade menu**. In this menu, you can update uboot
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/minicom_4.png" alt="pir" width="1000" height="auto"></p>
+
+- **Step 12.** Type "0" and press **Enter** to update uboot
+
+- **Step 13.** Press **Ctrl+A** and then press **s** to enter **upload mode**
+
+- **Step 14.** Select **xmodem** and press **Enter**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/minicom-xmodem-select.png" alt="pir" width="800" height="auto"></p>
+
+- **Step 15.** Select **Goto** from the bottom tab menu and press **Enter**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/minicom-goto.png" alt="pir" width="750" height="auto"></p>
+
+- **Step 16.** Enter the directory path and press **Enter**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/minicom-directory-path.png" alt="pir" width="750" height="auto"></p>
+
+- **Step 17.** Select **fw_payload.bin.out** by navigating using **arrow keys** ,press **Space** and press **Enter**
+
+If you see the following output, that means you have successfully transferred the **fw_payload.bin.out** file to BeagleV™ - Starlight.
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/xmodem-complete.png" alt="pir" width="600" height="auto"></p>
