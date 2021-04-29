@@ -30,7 +30,7 @@ First we need to set up the compilation environment. There are 3 ways to do this
 
 In this guide, method 2 is used, where **CROSS_COMPILE=riscv64-linux-gnu-**
 
-### Method 1 - Use Pre-Compiled Cross-Compile (riscv64-unknown-linux-gnu-gcc)
+### Method 1: Use Pre-Compiled Cross-Compile (riscv64-unknown-linux-gnu-gcc)
 
 - **Step 1.** Click [this link](https://files.seeedstudio.com/wiki/BeagleV/gcc10.2.0.tar.xz) to download a pre-compiled compiler (riscv64-unknown-linux-gnu-gcc)
 
@@ -177,7 +177,7 @@ The final lines of the output will be as follows:
 
 **Note:** Please ignore the error messages in this output.
 
-### Method 3 - Use Docker Fedora Cross-Compile (riscv64-linux-gnu-gcc)
+### Method 3: Use Docker Fedora Cross-Compile (riscv64-linux-gnu-gcc)
 
 Let's start by installing Docker. If you have installed Docker already, you can start from **step xx**
 
