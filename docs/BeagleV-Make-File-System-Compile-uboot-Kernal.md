@@ -258,13 +258,12 @@ riscv64-linux-gnu-gcc -v
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/docker_gcc.png" alt="pir" width="800" height="auto"></p>
 
-
-
 ## Make File System
 
 Now we need to make the file system. Follow the steps below to proceed
 
 - **Step 1.** Create the directory structure
+
 ```sh
 mkdir rootfs
 cd rootfs
