@@ -60,6 +60,9 @@ It is powered by RISC-V SiFive U74 Dual-Core 64-bit RV64GC ISA SoC running at 1.
 - **14.** 3.5mm Audio Jack (4-pole stereo audio output)
 - **15.** Micro-SD SDXC Card Slot
 
+!!!Note
+        3A of current is recommended for this board due to the following. The onboard components need about 1A, the 4 USB ports can draw a total of 1A combined, one USB port alone can also draw 1A and the remaining current is for expansion header and others.
+
 ## Pinout Diagram
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/pinout.jpg" alt="pir" width="550" height="auto"></p>
@@ -399,6 +402,14 @@ We did not take low power functioning into consideration when designing the JH71
 ### Why some of the displays cannot be driven via the HDMI port?
 
 It is probable that some of the old model displays can not work with the board's HDMI port. This is because the driver is not compatible with all displays. We suggest using new displays manufactured in the last 2 years. We will keep developing software drivers to support more display models.
+
+### How to check the temperature of CPU?
+
+You can enter the following commands to check the CPU temperarature
+
+```sh
+cat /sys/devices/platform/soc/124a0000.tmpsensor/temp1_input
+```
 
 ## Resources
 
