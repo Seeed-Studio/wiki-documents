@@ -20,11 +20,17 @@ sku:
 
 **Note:** In this guide, **Ubuntu 20.04 LTS** is installed on the **host PC**.
 
-## Set Up Compile Environment
+## Set Up Compilation Environment
 
-First we need to set up the compile environment. There are 2 methods to do this. You can begin with the first method and if that fails, you can move on to the second method.
+First we need to set up the compilation environment. There are 3 ways to do this. You can use any method of your choice. Please note the following, according to the method you use.
 
-### Method 1 - Using Pre-Compiled Cross-Compile (riscv64-unknown-linux-gnu-gcc)
+- Method 1: Use pre-compiled cross-compile. To compile using this method, use **CROSS_COMPILE=riscv64-unknown-linux-gnu-**
+- Method 2: Set up your own cross-compile. To compile using this method, use **CROSS_COMPILE=riscv64-linux-gnu-**
+- Method 3: Use Docker Fedora cross-compile. To compile using this method, use **CROSS_COMPILE=riscv64-linux-gnu-**
+
+In this guide, method 2 is used, where **CROSS_COMPILE=riscv64-linux-gnu-**
+
+### Method 1 - Use Pre-Compiled Cross-Compile (riscv64-unknown-linux-gnu-gcc)
 
 - **Step 1.** Click [this link](https://files.seeedstudio.com/wiki/BeagleV/gcc10.2.0.tar.xz) to download a pre-compiled compiler (riscv64-unknown-linux-gnu-gcc)
 
@@ -43,6 +49,8 @@ export PATH=/home/user/gcc10.2.0/gcc/bin:$PATH
 ```sh
 riscv64-unknown-linux-gnu-gcc -v
 ```
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/compiled_gcc.png" alt="pir" width="800" height="auto"></p>
 
 ### Method 2: Set Up Your Own Cross-Compile (riscv64-linux-gnu-gcc)
 
@@ -169,6 +177,89 @@ The final lines of the output will be as follows:
 
 **Note:** Please ignore the error messages in this output.
 
+### Method 3 - Use Docker Fedora Cross-Compile (riscv64-linux-gnu-gcc)
+
+Let's start by installing Docker. If you have installed Docker already, you can start from **step xx**
+
+- **Step 1.** Update your existing pckages list
+
+```sh
+sudo apt update
+```
+
+- **Step 2.** Install a few prerequisite packages which let apt use packages over HTTPS
+
+```sh
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+```
+
+- **Step 3.** Add the GPG key for the official Docker repository to your system
+
+```sh
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+```
+
+- **Step 4.** Add the Docker repository to APT sources
+
+```sh
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+```
+
+- **Step 5.** Update the package database with the Docker packages from the newly added repo
+
+```sh
+sudo apt update
+```
+
+- **Step 6.** Make sure you are about to install from the Docker repo instead of the default Ubuntu repo
+
+```sh
+apt-cache policy docker-ce
+```
+
+- **Step 7.** Install Docker
+
+```sh
+sudo apt install docker-ce
+```
+
+- **Step 8.** Docker should now be installed, the daemon started, and the process enabled to start on boot. Check that it’s running
+
+```sh
+sudo systemctl status docker
+```
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/docker_running.png" alt="pir" width="750" height="auto"></p>
+
+- **Step 9.** Install Fedora container 
+
+```sh
+sudo docker pull fedora:33
+```
+
+- **Step 10.** Start the Fedora container 
+
+```sh
+sudo docker run -v $(dirname $PWD):/workspace -w /workspace -it fedora:33
+```
+
+- **Step 11.** Install the necessary dependencies inside the container
+
+```sh
+dnf update
+dnf install make ncurses-devel gcc-riscv64-linux-gnu findutils bc perl xz openssl openssl-devel git flex bison elfutils-libelf-devel cpio
+```
+
+- **Step 12.** Check the version of the riscv64-linux-gnu-gcc
+
+```sh
+riscv64-linux-gnu-gcc -v
+```
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/docker_gcc.png" alt="pir" width="800" height="auto"></p>
+
+
+
 ## Make File System
 
 Now we need to make the file system. Follow the steps below to proceed
@@ -180,43 +271,45 @@ cd rootfs
 mkdir dev usr bin sbin lib etc proc tmp sys var root mnt
 ```
 
-- **Step 2.** Download the busybox source code by visiting [here](https://busybox.net/)
-
-- **Step 3.** Extract the file to your desired location
-
-- **Step 4.** Navigate to the extracted location and enter busybox configuration
+- **Step 2.** Download the busybox source code
 
 ```sh
-cd busybox-1.32.1
+git clone https://git.busybox.net/busybox
+```
+
+- **Step 3.** Navigate to the extracted location and enter busybox configuration
+
+```sh
+cd busybox
 make CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv menuconfig
 ```
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/busybox-config.png" alt="pir" width="750" height="auto"></p>
 
-- **Step 5.** Navigate to `Settings > Build Options` and check **Build static binary (no shared libs)** by pressing **y**
+- **Step 4.** Navigate to `Settings > Build Options` and check **Build static binary (no shared libs)** by pressing **y**
 
-- **Step 6.** Under `Build Options`, select `cross compiler prefix` and type the following to specify the compiler
+- **Step 5.** Under `Build Options`, select `cross compiler prefix` and type the following to specify the compiler
 
 ```sh 
 riscv64-unknown-linux-gnu-
 ```
 
-- **Step 7.** Under `Installation Options > Destination path for 'make install'`, change the path to the path of the **rootfs file directory** (this is the installation location of the compiled busybox)
+- **Step 6.** Under `Installation Options > Destination path for 'make install'`, change the path to the path of the **rootfs file directory** (this is the installation location of the compiled busybox)
 
 ```sh
 Example:
 /home/user/rootfs
 ```
 
-- **Step 8.** **Exit** from the busybox configuration window and **save the configuration**
+- **Step 7.** **Exit** from the busybox configuration window and **save the configuration**
 
-- **Step 9.** Compile busybox
+- **Step 8.** Compile busybox
 
 ```sh
 make CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv
 ```
 
-- **Step 10.** Install busybox
+- **Step 9.** Install busybox
 
 ```sh
 make install CONFIG_PREFIX=/home/user/rootfs
@@ -224,26 +317,26 @@ make install CONFIG_PREFIX=/home/user/rootfs
 
 **Note:** The path here is the same rootfs directory that we created before.
 
-- **Step 11.** Navigate to the **rootfs/etc** directory created before, create a file called **inittab** and open it using vim text editor
+- **Step 10.** Navigate to the **rootfs/etc** directory created before, create a file called **inittab** and open it using vim text editor
 
 ```sh
 cd rootfs/etc
 vim inittab
 ```
 
-- **Step 12.** Copy and paste the following content inside the **inittab file**
+- **Step 11.** Copy and paste the following content inside the **inittab file**
 
 ```sh
 ::sysinit:/etc/init.d/rcS
 ```
 
-- **Step 13.** Create a file called **profile** inside `rootfs/etc` and open it using vim text editor
+- **Step 12.** Create a file called **profile** inside `rootfs/etc` and open it using vim text editor
 
 ```sh
 vim profile
 ```
 
-- **Step 14.** Copy and paste the following content inside the **profile file**
+- **Step 13.** Copy and paste the following content inside the **profile file**
 
 ```sh 
 # /etc/profile: system-wide .profile file for the Bourne shells
@@ -272,13 +365,13 @@ export PS1="\\e[00;32m[$USER@\\w\\a]\\$\\e[00;34m"
 #echo "Done"
 ```
 
-- **Step 15.** Create a file called **fstab** inside `rootfs/etc` and open it using vim text editor
+- **Step 14.** Create a file called **fstab** inside `rootfs/etc` and open it using vim text editor
 
 ```sh
 vim fstab
 ```
 
-- **Step 16.** Copy and paste the following content inside the **fstab file**
+- **Step 15.** Copy and paste the following content inside the **fstab file**
 
 ```sh
 proc	/proc	proc	defaults	0	0
@@ -287,56 +380,56 @@ mdev 	/dev 	tmpfs 	defaults 	0 	0
 sysfs 	/sys 	sysfs 	defaults 	0 	0
 ```
 
-- **Step 17.** Create a file called **passwd** inside `rootfs/etc` and open it using vim text editor
+- **Step 16.** Create a file called **passwd** inside `rootfs/etc` and open it using vim text editor
 
 ```sh
 vim passwd
 ```
 
-- **Step 18.** Copy and paste the following content inside the **passwd file**
+- **Step 17.** Copy and paste the following content inside the **passwd file**
 
 ```sh
 root:x:0:0:root:/root:/bin/sh
 ```
 
-- **Step 19.** Create a file called **group** inside `rootfs/etc` and open it using vim text editor
+- **Step 18.** Create a file called **group** inside `rootfs/etc` and open it using vim text editor
 
 ```sh
 vim group
 ```
 
-- **Step 20.** Copy and paste the following content inside the **group file**
+- **Step 19.** Copy and paste the following content inside the **group file**
 
 ```sh
 root:x:0:root
 ```
 
-- **Step 21.** Create a file called **shadow** inside `rootfs/etc` and open it using vim text editor
+- **Step 20.** Create a file called **shadow** inside `rootfs/etc` and open it using vim text editor
 
 ```sh
 vim shadow
 ```
 
-- **Step 22.** Copy and paste the following content inside the **shadow file**
+- **Step 21.** Copy and paste the following content inside the **shadow file**
 
 ```sh
 root:BAy5qvelNWKns:1:0:99999:7:::
 ```
 
-- **Step 23.** Create a directory called **init.d** inside `rootfs/etc` and navigate inside it
+- **Step 22.** Create a directory called **init.d** inside `rootfs/etc` and navigate inside it
 
 ```sh
 mkdir init.d
 cd init.d
 ```
 
-- **Step 24.** Create a file called **rcS** inside `rootfs/etc/init.d` and open it using vim text editor
+- **Step 23.** Create a file called **rcS** inside `rootfs/etc/init.d` and open it using vim text editor
 
 ```sh
 vim rcS
 ```
 
-- **Step 25.** Copy and paste the following content inside the **rcS file**
+- **Step 24.** Copy and paste the following content inside the **rcS file**
 
 ```sh
 #! /bin/sh
@@ -352,7 +445,7 @@ echo " starfive mini RISC-V Rootfs"
 echo "********************************************************"
 ```
 
-- **Step 26.** Navigate to the **rootfs/dev** directory created before and execute the following 
+- **Step 25.** Navigate to the **rootfs/dev** directory created before and execute the following 
 
 ```sh
 cd rootfs/dev
@@ -360,20 +453,20 @@ sudo mknod -m 666 console c 5 1
 sudo mknod -m 666 null c 1 3
 ```
 
-- **Step 27.** Create a soft link in the root directory of **rootfs**
+- **Step 26.** Create a soft link in the root directory of **rootfs**
 
 ```sh
 cd rootfs/
 ln -s bin/busybox init
 ```
 
-- **Step 28.** Modify the permissions of all files in the **rootfs** directory
+- **Step 27.** Modify the permissions of all files in the **rootfs** directory
 
 ```sh
 sudo chmod 777 -R *
 ```
 
-- **Step 29.** Execute the following command in the **rootfs** directory to generate rootfs.cpio.gz (cpio file system package) in a different directory
+- **Step 28.** Execute the following command in the **rootfs** directory to generate rootfs.cpio.gz (cpio file system package) in a different directory
 
 ```sh
 cd rootfs
@@ -399,32 +492,32 @@ cd ~ # home directory
 git clone https://github.com/starfive-tech/beagle_uboot-opensbi
 ```
 
-- **Step 3.** Navigate to the following file path and open the file using vim text editor
+- **Step 3.** Move into **Fedora** branch
 
 ```sh
-vim beagle_uboot-opensbi/configs/starfive_vic7100_beagle_v_smode_defconfig
+cd beagle_uboot-opensbi
+git checkout -b Fedora origin/Fedora
 ```
 
-- **Step 6.** Modify the configuration as follows and save the file
+- **Step 4.** Navigate to the following file path and open the file using vim text editor
+
+```sh
+vim configs/starfive_vic7100_beagle_v_smode_defconfig
+```
+
+- **Step 5.** Modify the configuration as follows and save the file
 
 ```sh
 CONFIG_SYS_TEXT_BASE=0x80020000
 ```
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/uboot-edit.png" alt="pir" width="400" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/compil_uboot_1-new.png" alt="pir" width="400" height="auto"></p>
 
 **Note:** Press **i** to enter **editing mode**
 
-- **Step 7.** Execute the following commands to install the necessary dependencies for compilation
+- **Step 6.** Inside the **beagle_uboot-opensbi directory**, type the following to **compile uboot**
 
 ```sh
-sudo apt-get install autoconf automake autotools-dev bc bison build-essential curl flex gawk gdisk git gperf libgmp-dev libmpc-dev libmpfr-dev libncurses-dev libssl-dev libtool patchutils python screen texinfo unzip zlib1g-dev device-tree-compiler
-```
-
-- **Step 8.** Go back to the **root of beagle_uboot-opensbi directory** and type the following to **compile uboot**
-
-```sh
-cd beagle_uboot-opensbi
 make CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv starfive_vic7100_beagle_v_smode_defconfig
 ```
 
@@ -455,11 +548,11 @@ cd ~ # home directory
 git clone https://github.com/starfive-tech/beagle_kernel_5.10
 ```
 
-- **Step 3.** Move into **starfive** branch
+- **Step 3.** Move into **Fedora** branch
 
 ```sh
 cd beagle_kernel_5.10
-git checkout -b starfive origin/starfive
+git checkout -b Fedora origin/Fedora
 ```
 
 - **Step 4.** Type the following to **compile Linux Kernel** with default configuration settings
@@ -522,6 +615,10 @@ sudo cp -r lib/modules/5.10.6+/kernel/ /media/user/__/lib/modules/5.10.6+/ && sy
 
 ## Move rootfs, kernel and uboot into BeagleV™ - Starlight
 
+Start by moving the previously compiled **rootfs file system package, kernel and uboot images** into a single directory
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/needed-files.png" alt="pir" width="350" height="auto"></p>
+
 ### Method 1: Using Micro-SD Card
 
 - **Step 1.** Insert a micro-sd card to the host PC
@@ -534,17 +631,23 @@ lsblk
 
 For example, it's /dev/sdc
 
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/lsblk-1.png" alt="pir" width="500" height="auto"></p>
+
 - **Step 3.** Type the following to enter the partition configuration
 
 ```sh
 sudo gdisk /dev/sdc
 ```
 
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/gdisk.png" alt="pir" width="650" height="auto"></p>
+
 - **Step 4.** Delete the original partition and then create a new partition by entering the following respectively
 
 ```sh
 d--->o--->n--->w--->y
 ```
+
+**Note:** Press **Enter** to keep some settings to default in this configuration
 
 - **Step 5.** Format the micro-sd card and create the file system
 
@@ -562,13 +665,13 @@ df -h
 
 You will see an output as follows and take a note of the mount location:
 
-(image)
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/sd_mount-1.png" alt="pir" width="700" height="auto"></p>
 
-- **Step 8.** Navigate to the directory containing the 3 images as mentioned before
+- **Step 8.** Navigate to the directory containing the 3 images as before
 
 ```sh
 Example:
-cd Desktop/Compiled
+cd Desktop/compiled
 ```
 
 - **Step 9.** Copy the files to the micro-sd card by typing the following
@@ -594,11 +697,7 @@ fatload mmc 0:1 ${ramdisk_addr_r} rootfs.cpio.gz
 booti ${kernel_addr_r} ${ramdisk_addr_r}:${filesize} ${fdt_addr_r}
 ```
 
-- **Step 12.** If you have succussfully executed the above commands, you will see the following output:
-
-(image)
-
-- **Step 13.** Log in by typing the following credentials 
+- **Step 12.** Log in by typing the following credentials 
 
 ```sh
 Username：root
@@ -632,7 +731,8 @@ ping 192.168.1.5
 
 If you see the following output, the host PC and BeagleV™ - Starlight has established a communication on the same network
 
-(image)
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/ping-test.png" alt="pir" width="350" height="auto"></p>
+
 
 - **Step 5.** Install a tftp server on the Host PC
 
@@ -647,17 +747,13 @@ sudo apt install tftpd-hpa
 sudo systemctl status tftpd-hpa
 ```
 
-- **Step 7.** Move the previously compiled rootfs file system package, kernel and uboot images into a single directory
-
-(image)
-
-- **Step 8.** Execute the following to enter the tftp server configuration
+- **Step 7.** Execute the following to enter the tftp server configuration
 
 ```sh
 sudo nano /etc/default/tftpd-hpa
 ```
 
-- **Step 9.** Configure the tftp server as follows
+- **Step 8.** Configure the tftp server as follows
 
 ```sh
 # /etc/default/tftpd-hpa
@@ -670,19 +766,19 @@ TFTP_OPTIONS="--secure"
 
 **Note:** The **TFTP_DIRECTORY** is the directory that we created before with all the 3 images (Image.gz, u-boot.dtb, rootfs.cpio.gz)
 
-- **Step 10.** Restart the tftp server
+- **Step 9.** Restart the tftp server
 
 ```sh 
 sudo systemctl restart tftpd-hpa
 ```
 
-- **Step 11.** Type the following inside the uboot mode of BeagleV™ - Starlight to download the files from the tftp server of the host PC and start the kernel 
+- **Step 10.** Type the following inside the uboot mode of BeagleV™ - Starlight to download the files from the tftp server of the host PC and start the kernel 
 
 ```sh
 tftpboot ${fdt_addr_r}  u-boot.dtb;tftpboot ${kernel_addr_r} Image.gz;tftpboot ${ramdisk_addr_r} rootfs.cpio.gz;booti ${kernel_addr_r} ${ramdisk_addr_r}:${filesize} ${fdt_addr_r}
 ```
 
-- **Step 12.** Log in with the following credentials
+- **Step 11.** Log in with the following credentials
 
 ```sh
 Username：root
@@ -712,13 +808,20 @@ cd ~ # home directory
 git clone https://github.com/starfive-tech/beagle_opensbi 
 ```
 
-- **Step 3.** Navigate to the following file path and open the file using vim text editor
+- **Step 3.** Move into **Fedora** branch
 
 ```sh
-vim beagle_opensbi/platform/starfive/vic7100/config.mk
+cd beagle_opensbi
+git checkout -b Fedora origin/Fedora
 ```
 
-- **Step 4.** Modify the configuration as follows and save the file
+- **Step 4.** Navigate to the following file path and open the file using vim text editor
+
+```sh
+vim platform/starfive/vic7100/config.mk
+```
+
+- **Step 5.** Modify the configuration as follows and save the file
 
 ```sh
 FW_JUMP_ADDR=0x8002000
@@ -727,10 +830,9 @@ FW_PAYLOAD_OFFSET=0x20000
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/opensbi-config.png" alt="pir" width="500" height="auto"></p>
 
-- **Step 5.** Go to the **root of beagle_opensbi directory** and type the following to **compile openSBI**
+- **Step 6.** Inside **beagle_opensbi directory**, type the following to **compile openSBI**
 
 ```sh
-cd beagle_opensbi
 make CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv PLATFORM=starfive/vic7100 FW_PAYLOAD_PATH={U-BOOT_PATH}/u-boot.bin FW_PAYLOAD_FDT_PATH={U-BOOT_PATH}/u-boot.dtb 
 ```
 
@@ -740,19 +842,19 @@ The file will be generated in the directory **beagle_opensbi/build/platform/star
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/opensbi-compile.png" alt="pir" width="850" height="auto"></p>
 
-- **Step 6.** Navigate to the directory containing **fw_payload.bin**
+- **Step 7.** Navigate to the directory containing **fw_payload.bin**
 
 ```sh
 cd beagle_opensbi/build/platform/starfive/vic7100/firmware
 ```
 
-- **Step 7** Copy the file **fw_payload.bin** to a different location
+- **Step 8** Copy the file **fw_payload.bin** to a different location
 
 ```sh
 cp fw_payload.bin /home/user/Desktop
 ```
 
-- **Step 8.** Navigate to the copied location and execute the following to install an **image conversion tool**
+- **Step 9.** Navigate to the copied location and execute the following to install an **image conversion tool**
 
 ```sh
 sudo apt install subversion
@@ -761,13 +863,13 @@ svn export https://github.com/starfive-tech/freelight-u-sdk.git/branches/starfiv
 
 **Note:** [Here](https://github.com/starfive-tech/freelight-u-sdk/blob/starfive/fsz.sh) is the source code
 
-- **Step 9.** Change the user rights of the tool
+- **Step 10.** Change the user rights of the tool
 
 ```sh
 chmod 777 fsz.sh
 ```
 
-- **Step 10.** Convert the file from **fw_payload.bin** to **fw_payload.bin.out**
+- **Step 11.** Convert the file from **fw_payload.bin** to **fw_payload.bin.out**
 
 ```sh
 ./fsz.sh fw_payload.bin fw_payload.bin.out
