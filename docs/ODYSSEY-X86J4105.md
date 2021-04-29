@@ -347,7 +347,7 @@ The eMMC versions of ODYSSEY-X86 will have Windows 10 pre-installed into the dev
 
 - **[PDF]** [ODYSSEY-X86J4105 2D Model](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/ODYSSEY-X86-2D.pdf)
 
-- **[DXF]** [ODYSSEY-X86J4105 2D Model](files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/ODYSSEY-X86-2D.dxf)
+- **[DXF]** [ODYSSEY-X86J4105 2D Model](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/ODYSSEY-X86-2D.dxf)
 
 - **[PDF]** [Atmel-SAMD21-datasheet](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/Atmel-SAMD21-datasheet.pdf)
 
