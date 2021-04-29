@@ -12,7 +12,7 @@ sku:
 
 BeagleV™ - StarLight is the first affordable RISC-V computer designed to run Linux. It is fully open-source with open-source software, open hardware design and RISC-V open architecture. It is a joint effort by Seeed Studio, BeagleBoard.org® and StarFive.
 
-It is powered by RISC-V SiFive U74 Dual-Core 64-bit RV64GC ISA SoC running at 1.5GHz with 4GB/ 8GB LPDDR4 RAM variants and has rich I/O peripherals such as USB 3.0 ports, 40 pin GPIO header, Gigabit Ethernet Connector, Micro-SD card slot and much more. BeagleV™ - StarLight also has rich AI features with Neural Network Engine and NVDLA Engine. It has onboard audio and video processing capabilities and has MIPI-CSI and MIPI-DSI connectors for video hardware. It has wireless capabilities with Wi-Fi and BLE and has a wide software compatibility including support for Fedora.
+It is powered by RISC-V SiFive U74 Dual-Core 64-bit RV64GC ISA SoC running at 1.0GHz with 4GB/ 8GB LPDDR4 RAM variants and has rich I/O peripherals such as USB 3.0 ports, 40 pin GPIO header, Gigabit Ethernet Connector, Micro-SD card slot and much more. BeagleV™ - StarLight also has rich AI features with Neural Network Engine and NVDLA Engine. It has onboard audio and video processing capabilities and has MIPI-CSI and MIPI-DSI connectors for video hardware. It has wireless capabilities with Wi-Fi and BLE and has a wide software compatibility including support for Fedora.
 
 ## Features
 
@@ -28,7 +28,7 @@ It is powered by RISC-V SiFive U74 Dual-Core 64-bit RV64GC ISA SoC running at 1.
 
 | Specification | Details |
 |-|-|
-| Processor | • RISC-V SiFive U74 Dual-Core 64-bit RV64GC ISA SoC with 2MB L2 cache @ 1.5GHz<br>• Vision DSP Tensilica-VP6 for computing vision @ 600MHz<br>• NVDLA Engine (configuration 2048 MACs @ 800MHz)<br>• Neural Network Engine (1024MACs @ 500MHz) |
+| Processor | • RISC-V SiFive U74 Dual-Core 64-bit RV64GC ISA SoC with 2MB L2 cache @ 1.0GHz<br>• Vision DSP Tensilica-VP6 for computing vision @ 600MHz<br>• NVDLA Engine (configuration 2048 MACs @ 800MHz)<br>• Neural Network Engine (1024MACs @ 500MHz) |
 | Memory | • 4GB LPDDR4/ 8GB LPDDR4 |
 | Wireless<br>Connectivity | • 2.4 GHz Wi-Fi (IEEE 802.11b/g/n)<br>• Bluetooth 4.2 (BLE) |
 | Video<br>Processing | • 2 x MIPI-CSI (up to 4K@30fps), 1 x MIPI-DSI (up to 4K@30fps)<br>• 1 x HDMI 1.4 (up to 1080p@60fps display)<br>• Video Decoder (H264/H265) up to 4K@60FPS; Support Dual stream decoding for 2K@30FPS each<br>• Dual channels of ISP, each channel support up to 4K@30FPS<br>• Support MIPI-CSI TX for video output after ISP and AI processing<br>• JPEG encoder/decoder |
