@@ -31,10 +31,14 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
 - Gigabit Ethernet Port and Dual USB 2.0 Type-A ports
 - 40-Pin Raspberry Pi compatible header for IoT applications
 
-
 ## Specifications
 
-<table>
+<table style="undefined;table-layout: fixed; width: 744px">
+<colgroup>
+<col style="width: 141px">
+<col style="width: 193px">
+<col style="width: 410px">
+</colgroup>
 <thead>
   <tr>
     <th colspan="2">Specification</th>
@@ -61,13 +65,9 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
     <td>LPDDR4 with on-die ECC</td>
   </tr>
   <tr>
-    <td rowspan="2">eMMC</td>
+    <td>eMMC</td>
     <td>Capacity</td>
     <td>32GB</td>
-  </tr>
-  <tr>
-    <td>Bandwidth</td>
-    <td>100MBytes/s</td>
   </tr>
   <tr>
     <td rowspan="2">Wireless</td>
@@ -112,7 +112,7 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
     <td>NXP Semiconductors PCF8563T</td>
   </tr>
   <tr>
-    <td>Low backup current; typical 0.25μA at VDD = 3.0 V <br>and Temperature = 25°C</td>
+    <td>Low backup current; typical 0.25μA at VDD = 3.0 V and Temperature = 25 ℃</td>
   </tr>
   <tr>
     <td rowspan="2">Accelerometer</td>
@@ -126,7 +126,7 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
     <td>Microchip ATECC608A</td>
   </tr>
   <tr>
-    <td>Secure Hardware-Based Key Storage, Asymmetric Sign, <br>Verify, Key Agreement</td>
+    <td>Secure Hardware-Based Key Storage, Asymmetric Sign, Verify, Key Agreement</td>
   </tr>
   <tr>
     <td rowspan="2">Light Sensor</td>
@@ -179,13 +179,9 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
     <td>POE</td>
   </tr>
   <tr>
-    <td rowspan="2">Power</td>
-    <td>Minimum </td>
-    <td>5V@1A DC</td>
-  </tr>
-  <tr>
+    <td>Power</td>
     <td>Recommended</td>
-    <td>5V@2A DC</td>
+    <td>5V@4A DC</td>
   </tr>
   <tr>
     <td>Mechanical</td>
@@ -290,11 +286,12 @@ Raspberry Pi CM4 already has a **USB 2.0 Hub onboard**. This Hub is extended to 
 
 ### Micro - SD Card Slot
 
-reTerminal is equipped with a **micro-sd card slot**. This is useful when you want to **install the operating system** on to a micro-SD card, while the **CM4 module without eMMC** is used. However, when the eMMC version of the CM4 module is used, you can use a micro-SD card as additional storage.
+reTerminal is equipped with a **micro-sd card slot**. This is useful when you want to **install the operating system** on to a micro-SD card, while the **CM4 module without eMMC** is used. However, when the eMMC version of the CM4 module is used, you can use a micro-SD card as additional storage. It is recommeded to use a card with a minimum of at least 16GB.
 
 ### Micro HDMI Port
 
-There is a micro HDMI port on the reTerminal and you can use it to connect to HDMI displays via a **micro HDMI to standard HDMI cable**.
+There is a micro HDMI port on the reTerminal and you can use it to connect to HDMI displays via a **micro HDMI to standard HDMI cable**. It supports video up to 4K resolution at 60fps.
+
 
 ### USB Type-C Port
 
