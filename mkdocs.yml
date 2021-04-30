@@ -329,7 +329,10 @@ nav:
           - ReSpeaker Introduction: ReSpeaker.md
           - ReSpeaker Solutions: ReSpeaker_Solutions.md
           - ReSpeaker Product Guide: ReSpeaker_Product_Guide.md
-          - ReSpeaker 2-Mics Pi HAT: ReSpeaker_2_Mics_Pi_HAT.md
+          - ReSpeaker 2-Mics Pi HAT: 
+            - Overview: ReSpeaker_2_Mics_Pi_HAT.md
+            - Getting Started with Raspberry Pi: ReSpeaker_2_Mics_Pi_HAT_Raspberry.md
+            - Getting started with Nvidia Jetson: ReSpeaker_2_Mics_Pi_HAT_Jetson.md
           - ReSpeaker 4-Mic Array for Raspberry Pi: ReSpeaker_4_Mic_Array_for_Raspberry_Pi.md
           - ReSpeaker 4-Mic Linear Array Kit for Raspberry Pi: ReSpeaker_4-Mic_Linear_Array_Kit_for_Raspberry_Pi.md
           - ReSpeaker 6-Mic Circular Array kit for Raspberry Pi: ReSpeaker_6-Mic_Circular_Array_kit_for_Raspberry_Pi.md
