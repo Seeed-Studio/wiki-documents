@@ -20,7 +20,9 @@ sku:
 
 This wiki explains how to update the bootloader and ddr init boot on to the SPI flash of BeagleV™ - Starlight. On the other hand, it also explains how to recover the bootloader if you accidentally emptied the flash or if the flash is damaged on your BeagleV™ - StarLight.
 
-## File Preparation
+**Note:** In this guide, **Ubuntu 20.04 LTS** is installed on the **host PC**
+
+## File Preparation - Use Pre-Built Binary Packages
 
 Please visit the following links to download **bootloader, ddr init boot and vic_second_boot** files. 
 
@@ -32,7 +34,71 @@ Prepare them as follows:
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/needed-for-reset.jpg" alt="pir" width="350 height="auto"></p>
 
-## Update the bootloader and ddr init boot
+## Compile bootloader and ddr init boot
+
+Alternatively, if you are interested in compiling bootloader and ddr init boot from source code, you can follow this:
+
+### Prepare Compilation Environment
+
+- **Step 1.** Visit [this link](https://github.com/sifive/freedom-tools/releases/tag/v2020.12.0) and download the latest version of **riscv64-unknown-elf-toolchain-xxx** according to your operating system
+
+- **Step 2.** Add the downloaded compiler to your PATH
+
+```sh
+export PATH=/home/user/riscv64-unknown-elf-toolchain-xxx/bin:$PATH
+```
+
+**Note:** The location should be the location of the downloaded compiler
+
+### Compile bootloader
+
+- **Step 1.** Clone the repo from GitHub
+
+```sh
+git clone https://github.com/starfive-tech/beagle_secondBoot
+```
+
+- **Step 2.** Go into **build** directory
+
+```sh
+cd beagle_secondBoot/build
+```
+
+- **Step 3.** Compile bootloader
+
+```sh
+make
+```
+
+You will see the following output if the compilation is successful
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki-3/secondboot-build.png" alt="pir" width="800" height="auto"></p>
+
+### Compile ddr init boot
+
+- **Step 1.** Clone the repo from GitHub
+
+```sh
+git clone https://github.com/starfive-tech/beagle_ddrlnit
+```
+
+- **Step 2.** Go into **build** directory
+
+```sh
+cd beagle_ddrlnit/build
+```
+
+- **Step 3.** Compile ddr init boot
+
+```sh
+make
+```
+
+You will see the following output if the compilation is successful
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki-3/ddrinit-build.png" alt="pir" width="800" height="auto"></p>
+
+## Update the bootloader, ddr init boot and u-boot
 
 ### Hardware Connections
 
