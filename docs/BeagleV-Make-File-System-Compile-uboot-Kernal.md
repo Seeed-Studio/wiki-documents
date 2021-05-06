@@ -264,12 +264,13 @@ cd ~ # home directory
 - **Step 2.** Download the source code for uboot compilation
 
 ```sh
-git clone https://github.com/starfive-tech/beagle_uboot-opensbi
+git clone https://github.com/starfive-tech/u-boot
 ```
 
-- **Step 3.** Inside the **beagle_uboot-opensbi** directory, type the following to **compile u-boot**
+- **Step 3.** Inside the **u-boot** directory, type the following to **compile u-boot**
 
 ```sh
+cd u-boot
 make CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv starfive_vic7100_beagle_v_smode_defconfig
 ```
 
@@ -277,7 +278,7 @@ make CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv starfive_vic7100_beagle_v_smode
 make CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv u-boot.bin u-boot.dtb
 ```
 
-There will be these 2 files generated after compilation inside the **beagle_uboot-opensbi** directory: **u-boot.bin** and **u-boot.dtb**
+There will be these 2 files generated after compilation inside the **u-boot** directory: **u-boot.bin** and **u-boot.dtb**
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/uboot-compile2.png" alt="pir" width="800" height="auto"></p>
 
@@ -301,26 +302,26 @@ cd ~ # home directory
 - **Step 2.** Download the source code for OpenSBI compilation
 
 ```sh
-git clone https://github.com/starfive-tech/beagle_opensbi 
+git clone https://github.com/starfive-tech/opensbi
 ```
 
-- **Step 3.** Inside **beagle_opensbi** directory, type the following to **compile openSBI**
+- **Step 3.** Inside **opensbi** directory, type the following to **compile openSBI**
 
 ```sh
-cd beagle_opensbi
+cd opensbi
 make CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv PLATFORM=starfive/vic7100 FW_PAYLOAD_PATH={U-BOOT_PATH}/u-boot.bin FW_PAYLOAD_FDT_PATH={U-BOOT_PATH}/u-boot.dtb 
 ```
 
-**Note:** Modify the path to the path of **beagle_uboot-opensbi** from before
+**Note:** Modify the path to the path of **u-boot** from before
 
-The file will be generated in the directory **beagle_opensbi/build/platform/starfive/vic7100/firmware** as **fw_payload.bin** after compilation and the size is about 700+K
+The file will be generated in the directory **opensbi/build/platform/starfive/vic7100/firmware** as **fw_payload.bin** after compilation and the size is about 700+K
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/opensbi-compile-2-edit.png" alt="pir" width="850" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/u-boot-new.png" alt="pir" width="850" height="auto"></p>
 
 - **Step 4.** Navigate to the directory containing **fw_payload.bin**
 
 ```sh
-cd beagle_opensbi/build/platform/starfive/vic7100/firmware
+cd opensbi/build/platform/starfive/vic7100/firmware
 ```
 
 - **Step 5** Copy the file **fw_payload.bin** to a different location
@@ -445,13 +446,13 @@ cd ~ # home directory
 - **Step 2.** Download the source code for Linux Kernel
 
 ```sh
-git clone https://github.com/starfive-tech/beagle_kernel_5.10
+git clone https://github.com/starfive-tech/linux
 ```
 
 - **Step 3.** Type the following to set the **default configuration settings** for compiling Linux Kernel
 
 ```sh
-cd beagle_kernel_5.10
+cd linux
 make CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv starfive_vic7100_evb_sd_net_fedora_defconfig
 ```
 
@@ -471,11 +472,11 @@ make CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv -jx
 
 You will see the following output after compilation
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/kernel-output.png" alt="pir" width="550" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/linux-compile.png" alt="pir" width="530" height="auto"></p>
 
-The kernel image will be generated as **Image.gz** inside the **beagle_kernel_5.10/arch/riscv/boot** directory
+The kernel image will be generated as **Image.gz** inside the **linux/arch/riscv/boot** directory
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/image-gz-1.png" alt="pir" width="800" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/linux-file-new.png" alt="pir" width="800" height="auto"></p>
 
 ## Make File System
 
