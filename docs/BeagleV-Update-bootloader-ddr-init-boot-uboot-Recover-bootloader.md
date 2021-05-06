@@ -22,7 +22,13 @@ This wiki explains how to update the bootloader and ddr init boot on to the SPI 
 
 ## File Preparation
 
-Please visit [this link](https://files.seeedstudio.com/wiki/BeagleV/wiki_2/bootloader-ddrinit-vic_second_boot.rar) to find a **.zip** file containing **bootloader, ddr init boot and vic_second_boot** files. Download and extract the .zip file and you will see the files as follows:
+Please visit the following links to download **bootloader, ddr init boot and vic_second_boot** files. 
+
+- [bootloader](https://github.com/starfive-tech/beagle_secondBoot/releases)
+- [ddr init boot](https://github.com/starfive-tech/beagle_ddrlnit/releases)
+- [vic_second_boot](https://files.seeedstudio.com/wiki/BeagleV/vic_second_boot.zip)
+
+Prepare them as follows:
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/needed-for-reset.jpg" alt="pir" width="350 height="auto"></p>
 
