@@ -8,6 +8,16 @@ sku:
 
 # How to Make File System, Compile u-boot and Linux Kernel
 
+<div class="tips" style="background-color: #ffefd9;height: 97px;">
+            <div class="left-icon" style="background-color: #ffc983;padding-top: 10px;box-sizing: border-box;height: 100%;width: 38px;text-align: center;float: left;height: 97px;">
+                <img src="https://s3-us-west-2.amazonaws.com/static.seeed.cc/seeed/icon/Attention.svg" alt="attention icon" style="width: 26px;">
+            </div>
+            <div class="right-desc" style="margin-left: 15px;width:calc(95% - 38px);float: left;">
+                <p style="font-weight: bold;margin-top: 10px;">Disclaimer</p>
+               <p style="font-size: 14px;">Please note that this guide is for the use of the pre-production beta version of BeagleV™ - StarLight</p>
+          </div>
+    </div>
+
 ## Hardware Needed
 
 - BeagleV™ - Starlight
