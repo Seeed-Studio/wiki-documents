@@ -204,9 +204,12 @@ After installing Fedora, you can log in to Fedora using an **SSH connection** ov
 
 - **Step 2.** Connect one end of an Ethernet cable to the RJ45 connector on the BeagleV™ - StarLight and the other end of the cable to a router
 
-- **Step 3.** Unplug the Ethernet cable from BeagleV™ - StarLight, plug again
+**Note:** If the ethernet connection is not established and the lights on the ethernet port of BeagleV™ - StarLight are not blinking, follow either of the below 2 methods:
 
-**Note:** This is a [known issue](https://github.com/starfive-tech/beaglev_fedora/issues/2) and will be fixed in the future
+- Method 1: Unplug the ethernet cable from BeagleV™ - StarLight, plug again 
+- Method 2: Type **sudo mii-tool -R eth0** on the BeagleV™ - StarLight terminal
+
+This is a [known issue](https://github.com/starfive-tech/beaglev_fedora/issues/2) and will be fixed in the future
 
 After that, your router will assign an **IP address** to the BeagleV™ - StarLight and it will be connected to the **internet**.
 
