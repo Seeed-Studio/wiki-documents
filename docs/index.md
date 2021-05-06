@@ -1,21 +1,17 @@
 # Weekly Wiki
-![](https://files.seeedstudio.com/wiki/IMAGES/21-April-Week-4.png)
+![](https://files.seeedstudio.com/wiki/IMAGES/21-May-Week-2.png)
 
-It's the fourth week of April and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
+It's the second week of May and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
 As you all know, Seeed Wiki is a dedicated platform where we provide the proper guidance and support you need when getting started with our products. We put a lot of effort to make this platform more user friendly because we want to enable the learning of electronics in a more systematic approach.  
 We will bring you all these wiki updates in a weekly basis. So stay tuned with us and don't forget to visit this page again next week!
 
 ## Existing Wiki Updated 
 
-### BIOS and EC Firmware Update for ODYSSEY-X86J4105
+### ReSpeaker 2-Mics Pi HAT
 
-We have updated the BIOS and EC firmware to fix bugs and enhance the performance of the [ODYSSEY - X86J4105](https://www.seeedstudio.com/tag/ODYSSEY-X86J4105.html). Update yours now!z
+We have updated the getting started guide for [ReSpeaker 2-Mics Pi HAT](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html) with new projects and more functionality! Click [here](https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/) to learn more!
 
-- [Upgrade to Latest BIOS](https://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-OS/#how-to-upgrade-the-bios)
-
-- [Upgrade to Latest EC Firmware](https://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-OS/#how-to-update-the-embedded-controller)
-
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-OS/"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105-Installing-OS/latest-BIOS.png" alt="pir"  width="800" height="auto"></a></p>
+<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-OS/"><img src="https://files.seeedstudio.com/products/107100001/01.png" alt="pir"  width="600" height="auto"></a></p>
 
 ## New Wiki Added
 
@@ -36,24 +32,15 @@ You can follow [this link](https://wiki.seeedstudio.com/Dual-Gigabit-Ethernet-Ca
 
 <p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4/"><img src="https://files.seeedstudio.com/wiki/102110497/CM4-default.png" alt="pir"  width="450" height="auto"></a></p>
 
-### BeagleV™ - StarLight
-
-We have also releaed the BeagleV™ - StarLight which is the first affordable RISC-V computer designed to run Linux. It is fully open-source with open-source software, open hardware design and RISC-V open architecture. It is a joint effort by Seeed Studio, BeagleBoard.org® and StarFive.
-You can learn more about getting started with this board [here](https://wiki.seeedstudio.com/BeagleV-Getting-Started/)!
-
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/BeagleV-Getting-Started/"><img src="https://files.seeedstudio.com/wiki/BeagleV/DSC09915.png" alt="pir"  width="500" height="auto"></a></p>
-
 ## What's More?
 
 ### Seeed on YouTube
 
-Functional testing is a critical quality control method to ensure the performance of the assembled PCB. It verifies that the boards do what they are supposed to do, by simulating the real operating environment.
+With the help of TinyML technology, simple sensors become smart. We can now teach accelerometers to recognize various actions. Accelerate solution development by paring ready-to-use certified [Wio Terminal](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) with Azure IoT Central.
 
-With the help of Seeed Fusion functional testing, realize improved yield, greater efficiency and cheaper turnkey PCB assembly. [Get a quotation now](https://www.seeedstudio.com/prototype-pcb-assembly.html) and become one of the first to take advantage of free Seeed PCBA functional testing.
+IoT Plug and Play enables developers to integrate smart devices into solutions without complex manual configuration, reducing the barrier for beginner developers and saving the overall timeline of the project building.
 
-Seeed now provides [free functional testing](https://www.seeedstudio.com/blog/2021/04/08/free-functional-testing-for-one-piece-with-seeed-fusion-pcb-assembly-2/) for one piece with every PCBA order. Check the video below to learn more!
-
-<p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/_9Fj1erQETo" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/qm_G5K7VzgY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 Also, don't forget to subscribe to our [YouTube Channel](http://www.youtube.com/c/SeeedStudioSZ) to stay updated with our video releases on exciting products!
 
