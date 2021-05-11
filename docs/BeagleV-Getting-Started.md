@@ -271,6 +271,9 @@ Now you have connected with the BeagleV™ - StarLight via SSH using Mac/Linux!
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/tera_4.jpg" alt="pir" width="650" height="auto"></p>
 
+!!!Note
+        The mac address range is 2C:F7:F1:1B:E3:00 - 2C:F7:F1:1B:E4:FF
+
 #### Method 2: Using a USB to Serial Converter
 
 You can log in to Fedora OS using a **USB to Serial Converter**. Please follow the guide below.
