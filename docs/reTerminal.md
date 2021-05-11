@@ -6,7 +6,7 @@ wikiurl:
 sku: 
 ---
 
-# reTerminal - Getting Started
+# Getting Started with reTerminal
 
  <p style="text-align:center;"><img src="https://raw.githubusercontent.com/lakshanthad/Image/master/CM4_wiki/wiki_thumb.png" alt="pir" width="600" height="auto"></p>
 
