@@ -616,7 +616,7 @@ Now you have successfully logged into Raspberry Pi OS.
 
 ## Resources
 
-- **[PDF]** [reTerminal Schematics](https://files.seeedstudio.com/wiki/ReTerminal/202003183_PCBA_reTerminal-CM1432_SCH.pdf)
+- **[ZIP]** [reTerminal Schematics](https://files.seeedstudio.com/wiki/ReTerminal/202003183_PCBA-reTerminal-CM1432.zip)
 
 - **[PDF]** [Raspberry Pi Compute Module 4 Datasheet](https://datasheets.raspberrypi.org/cm4/cm4-datasheet.pdf)
 
