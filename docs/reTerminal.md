@@ -139,7 +139,7 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
     <td>Microchip MCP23008-E</td>
   </tr>
   <tr>
-    <td>Speaker</td>
+    <td>Buzzer</td>
     <td>≥85dB @10cm 2700±300Hz</td>
   </tr>
   <tr>
