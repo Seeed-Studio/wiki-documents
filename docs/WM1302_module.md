@@ -323,7 +323,13 @@ Restart `lora_pkt_fwd`, you will find your Raspberry Pi Gateway are conntected t
 ./lora_pkt_fwd -c global_conf.json.sx1250.US915.USB
 ```
 
+## Sources
+- [Semtech SX1302 datasheet](https://semtech.my.salesforce.com/sfc/p/#E0000000JelG/a/2R000000Hkyg/U8CIV3e9yI9T_aILFMxuzLNs_6_0Io1WIaksrNYyCMQ)
 
+Certificates
+
+- [WM1302(USB) CE Certificate](https://files.seeedstudio.com/products/114992549/SHEA587_EU_Cert.pdf)
+- [WM1302(SPI) CE Certificate](https://files.seeedstudio.com/products/114992549/SHEA588_EU_Cert.pdf)
 
 ## Tech Support
 
