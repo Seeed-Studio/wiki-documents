@@ -99,9 +99,9 @@ You need to prepare the following hardware before getting started with the Beagl
 
 BeagleV™ - StarLight tends to run hot even with a heat sink installed. So it's recommended to use a fan with BeagleV™ - StarLight. You can connect a 5V fan to the board as follows:
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/Fan_connection_1.jpg" alt="pir" width="1000" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/Fan-connect-2.jpg" alt="pir" width="1000" height="auto"></p>
 
-**Note:** You can also connect the red wire (+) to pin 2 (5V) and connect the black wire (-) to pin 9/14/20/25/30/34/39 (GND)
+**Note:** You can also connect the red wire (+) to pin 2 (5V) and connect the black wire (-) to pin 6/9/20/25/30/34/39 (GND)
 
 ## Getting Started - Software Set Up
 
@@ -270,6 +270,9 @@ ssh riscv@192.168.1.xxx
 Now you have connected with the BeagleV™ - StarLight via SSH using Mac/Linux!
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/tera_4.jpg" alt="pir" width="650" height="auto"></p>
+
+!!!Note
+        The mac address range is 2C:F7:F1:1B:E3:00 - 2C:F7:F1:1B:E4:FF
 
 #### Method 2: Using a USB to Serial Converter
 

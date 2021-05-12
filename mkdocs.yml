@@ -324,7 +324,7 @@ nav:
             - Tensorflow Lite Getting Started(old): Wio-Terminal-TensorFlow.md
 
       - reTerminal:
-          - reTerminal Introduction: reTerminal.md
+          - Getting Started with reTerminal: reTerminal.md
 
       - ReSpeaker:
           - ReSpeaker Introduction: ReSpeaker.md

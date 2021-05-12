@@ -162,11 +162,9 @@ This button is used to **reset** the CM4. It acts as a **hardware reboot**.
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/RESET.png" alt="pir" width="650" height="auto"></p>
 
-
-
 ### Micro - SD Card Slot
 
-This is equipped with a **micro-sd card slot**. This is useful when you want to **install the operating system** on to a micro-SD card, while the **CM4 module without eMMC** is used. However, when the eMMC version of the CM4 module is used, you can use a micro-SD card as additional storage. It is recommeded to use a card with a minimum of at least 16GB.
+This is equipped with a **micro-sd card slot**. This is useful when you want to **install the operating system** on to a micro-SD card, while the **CM4 module without eMMC** is used. It is recommeded to use a card with a minimum of at least 8GB.
 
 #### Schematics
 

@@ -6,18 +6,17 @@ wikiurl:
 sku: 
 ---
 
-# reTerminal - Introduction
+# Getting Started with reTerminal
 
  <p style="text-align:center;"><img src="https://raw.githubusercontent.com/lakshanthad/Image/master/CM4_wiki/wiki_thumb.png" alt="pir" width="600" height="auto"></p>
 
 Introducing reTerminal, a new member of our reThings family. This future-ready Human-Machine Interface (HMI) device can easily and efficiently work with IoT and cloud systems to unlock endless scenarios at the edge.
 
-reTerminal is powered by a Raspberry Pi Compute Module 4 (CM4) which is a Quad-Core Cortex-A72 CPU running at 1.5GHz and a 5-inch IPS capacitive multi-touch screen with a resolution of 720 x 1280. It has sufficient amount of RAM (4GB) to perform multitasking and also has sufficient amount of eMMC storage (32GB) to install an operating system, enabling fast boot up times and smooth overall experience. It has wireless connectivity with dual-band 2.4GHz/5GHz Wi-Fi and Bluetooth 5.0 BLE. 
+reTerminal is powered by a Raspberry Pi Compute Module 4 (CM4) which is a Quad-Core Cortex-A72 CPU running at 1.5GHz and a 5-inch IPS capacitive multi-touch screen with a resolution of 1280 x 720. It has sufficient amount of RAM (4GB) to perform multitasking and also has sufficient amount of eMMC storage (32GB) to install an operating system, enabling fast boot up times and smooth overall experience. It has wireless connectivity with dual-band 2.4GHz/5GHz Wi-Fi and Bluetooth 5.0 BLE.
 
 reTerminal consists of a high-speed expansion interface and rich I/O for more expandability. This device has security features such as a cryptographic co-processor with secure hardware-based key storage. It also has built-in modules such as an accelerometer, light sensor and an RTC (Real-Time Clock). reTerminal has a Gigabit Ethernet Port for faster network connections and also has dual USB 2.0 Type-A ports. The 40-pin Raspberry Pi compatible header on the reTerminal opens it for a wide range of IoT applications.
 
 reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to do is connect it to power and start building your IoT, HMI and Edge AI applications right away!
-
 
 ## Features
 
@@ -33,11 +32,11 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
 
 ## Specifications
 
-<table style="undefined;table-layout: fixed; width: 744px">
+<table style="undefined;table-layout: fixed; width: 743px">
 <colgroup>
-<col style="width: 141px">
-<col style="width: 193px">
-<col style="width: 410px">
+<col style="width: 146px">
+<col style="width: 198px">
+<col style="width: 399px">
 </colgroup>
 <thead>
   <tr>
@@ -107,7 +106,7 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
     <td>OpenGL ES 3.0 graphics</td>
   </tr>
   <tr>
-    <td rowspan="9">Built-In Modules</td>
+    <td rowspan="10">Built-In Modules</td>
     <td rowspan="2">Real-Time Clock</td>
     <td>NXP Semiconductors PCF8563T</td>
   </tr>
@@ -138,6 +137,10 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
   <tr>
     <td>Internal IO<br>Expansion</td>
     <td>Microchip MCP23008-E</td>
+  </tr>
+  <tr>
+    <td>Buzzer</td>
+    <td>≥85dB @10cm 2700±300Hz</td>
   </tr>
   <tr>
     <td rowspan="12">External I/O</td>
@@ -195,111 +198,433 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/HW_overview.png" alt="pir" width="1000" height="auto"></p>
 
-## Hardware and Interfaces Introduction
-
-### 40-Pin Raspberry Pi Compatible Pins
+## Pinout Diagram
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/pinout_pic.png" alt="pir" width="1000" height="auto"></p>
 
-The **40-pins** consist of **26 GPIO, up to 5 × I2C, up to 5 × SPI, up to 5 × UART, 1 x PCM, 1 x PWM, 1 × SDIO interface, 1 × DPI (Parallel RGB Display), up to 3× GPCLK outputs and 1 USB interface**.
+## Quick Start with reTerminal
 
-The **USB interface** is extended from the internal **USB 2.0 interface** on the Compute Module 4. So you can expand to even more USB connectors and get speeds up to **480 Mbit/s** using this interface.
+If you want to get started with the reTerminal in the most fastest and easiest way, you can follow the guide below.
 
-You can also use these 40 pins to connect to **Raspberry Pi compatible Hats** and expand your projects!
+### Hardware Required
 
-[Visit here](https://www.seeedstudio.com/hats-shields-c-840.html) to explore a wide range of Raspberry Pi Hats offered by Seeed Studio and [visit here](https://uk.pi-supply.com/collections/all-raspberry-pi-hats-and-phats) to check even more 3rd party Raspberry Pi Hats!
+You need to prepare the following hardware before getting started with reTerminal
 
-The GPIO pins can draw a maximum current of **50mA safely**. This means 50mA distributed across all the pins. Therefore an individual GPIO pin can only safely draw **16mA** current. On the other hand, the maximum current draw for each of the remaning pins is **2A**. Please keep this in mind when you connect additional hardware to these pins.
+- reTerminal
+- Ethernet cable or Wi-Fi connection
+- Power adapter (5V/4A) 
+- USB Type-C cable
 
-### High-Speed Interface for Expansion Modules
+### Software Set Up
 
-There is a high-speed expansion interface at the back of the reTerminal. It consists of 1 PCIe 1-lane Host Gen 2 (supporting speeds up to 5Gbps), 1 USB 2.0, 1 PoE and 26 GPIOs. The 26 GPIO pins can be further used as 2 I2C, 2 SPI and 1 UART.
+#### Log in to Raspberry Pi OS 
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/Expansion_Schematic.png" alt="pir" width="1000" height="auto"></p>
+reTerminal comes with Raspberry Pi OS pre-installed out-of-the-box. So we can turn on the reTerminal and log in to Raspberry Pi OS straight away!
 
-**Tip:** Click [here](https://files.seeedstudio.com/wiki/ReTerminal/Expansion_Schematic.png) for a higher resolution image
+- **Step 1.** Connect one end of a USB Type-C cable to the reTerminal and the other end to a power adapter (5V/4A)
 
-!!!Note
-        PCIe, USB 3.0, 2 x CAN-FD and SDIO3.0 interfaces are defined for future products and therefore they are not usable at the moment
+- **Step 2.** Press the power button to turn on the reTerminal
 
-We plan to build expansion modules in the future for reTerminal and we have reserved this interface to connect these modules to the reTerminal. We will release a wide range of modules such as:
+You will see the Raspberry Pi OS boot in to Desktop
 
-- Mic Array & Speaker Module
-- Camera Module
-- Industrial I/O
-- LoraWAN Module
-- 5G/4G Module 
-- PoE Module 
-- Ethernet Switch
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/RPI-Desktop-1.jpg" alt="pir" width="800" height="auto"></p>
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/external_modules.png" alt="pir" width="750" height="auto"></p>
+#### Update Packages and Raspberry Pi OS
 
-There are 2 x M4 mechanical screw holes on the side of the reTerminal to help keep the expansion modules in place.
+Now we will update all the packages and also the Raspberry Pi OS to the latest version
 
-### CSI Camera Interface
+- **Step 1.** Open the **on-screen virtual keyboard** by touching on the **Raspberry Pi icon** at the top left corner and navigating to `Accessories > Keyboard`
 
-reTerminal has a 2-lane MIPI CSI camera interface, which means you can connect up to 2 cameras to the reTerminal. One interface has **15 pins** whereas the other interface has **22 pins**. So make sure to use the correct flex cable corresponding to the interface that you intend to use. These camera interfaces can be used for object detection and machine learning applications.
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/keyboard-2.jpg" alt="pir" width="800" height="auto"></p>
 
-### FPC Interface
+- **Step 2.** If you have a **Wi-Fi connection**, click the **Wi-Fi icon** on the top right corner, select your Wi-Fi network and enter the password using the on-screen virtual keyboard
 
-There is a **6-pin FPC** interface on the reTerminal. You can use this interface to connect additional hardware such as cameras and displays to the reTerminal.
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/wifi.jpg" alt="pir" width="400" height="auto"></p>
 
-### 5-Inch LCD
+- **Step 3.** If you don't have a **Wi-Fi connection**, you can connect an ethernet cable from your router to the ethernet port of the reTerminal
 
-The inbuilt 5-inch LCD on the reTerminal is connected to the **DSI interface** on the carrier board inside. This LCD supports **5-point multi-touch** and in order to enable this feature, the LCD is connected to another **TP interface** on the carrier board.
+- **Step 4.** Open a **terminal window** by touching on the **Raspberry Pi icon** at the top left corner and navigating to `Accessories > Terminal`
 
-### 4 User Programmable Buttons
+- **Step 5.** Update all packages and the Raspberry Pi OS to the latest versions
 
-There are 4 user programmable buttons at the front of the reTerminal. These buttons can be easily controlled using software and can be assigned to switch ON/OFF different functions according to your applications!
+```sh
+sudo apt update
+sudo apt full-upgrade
+```
 
-### 2 User Programmable LEDs
+- **Step 6.** Reboot reTerminal
 
-There are 2 user programmable LEDs at the front of the reTerminal. These LEDs can be switched ON/OFF using software and can be useful in scenarios where you want to use them as status LEDs to monitor different hardware features. The **USR** LED can be lighted up **Green**, wheras the **STA** LED can be lighted up either **Red** or **Green**
+```sh
+sudo reboot
+```
 
-### Gigabit Ethernet Port
+Now your Raspberry Pi OS and all the necessary packages are up to update!
 
-reTerminal has a Gigabit Ethernet Connector (RJ45) onboard. This port is connected to the **Gigabit Ethernet PHY** of the CM4 module which is based on **Broadcom BCM54210PE**. It is also **IEEE 1588-2008 compliant**. 
+**Note:** If you want to experience the Raspberry Pi OS on a bigger screen, you can connect a display to the micro-HDMI port of the reTerminal and also connect a keyboard and a mouse to the USB ports of the reTerminal.
 
-### Encryption Co-Processor
+## Getting Started with reTerminal (Extended)
 
-reTerminal has security features such as a **cryptographic co-processor** with secure hardware-based key storage. It also has protected storage for up to 16 keys, certificates, or data. It provides hardware support for symmetric sign, verify, key agreement – ECDSA. It has hardware support for symmetric algorithms, networking key management and secure boot. 
+If you want to install Raspberry Pi OS by yourself, install other OS such as 64-bit Ubuntu, log in to reTerminal via SSH over WiFi, SSH over Ethernet and USB to Serial Adapter, you can follow the guide below!
 
-### RTC
+### Hardware Required
 
-The in-built RTC on the reTerminal is based on **NXP Semiconductors PCF8563T**. It has a low backup current; typical 0.25μA at VDD = 3.0 V and a temperature = 25°C. It can be used for projects where you need to implement time keeping functions.
+You need to prepare the following hardware
 
-### Light Sensor
+- reTerminal
+- Computer (Windows/Mac/Linux)
+- 8GB (or more) micro-SD card (optional)
+- Micro-SD card reader (optional)
+- USB to serial converter (optional)
+- Ethernet cable (optional)
+- Wi-Fi connection (optional)
+- Power adapter (5V/4A) 
+- USB Type-C cable
 
-reTerminal is quipped with a **Levelek LTR-303ALS-01** digital light sensor. It can be used to sense the light levels in the environment and also can be used for **automatic brightness adjustment of LCD backlight** according to the surrounding light levels.
+### Software Set Up
 
-### Accelerometer
+#### Flash Raspberry Pi OS/ 64-bit Ubuntu OS or Other OS
 
-The in-built **STMicroelectronics LIS3DHTR 3-axis accelerometer** can be used to realize many different applications with the reTerminal. You can use it to automatically change screen orientation as you rotate the reTerminal and much more.
+We can flash **Raspberry Pi OS/ 64-bit Ubuntu OS or other OS** on to the **eMMC storage** of the CM4 on the reTerminal. However, if you plan to switch the CM4 to a **non-eMMC version**, you can insert a micro SD-card to the reTerminal and flash your desired OS on to the micro SD-card
 
-### Buzzer
+##### Flash to eMMC (CM4 eMMC Version)
 
-There is a built-in buzzer on the reTerminal. This can be controlled using software. This buzzer can be used as an indicator in different applications.
+If you have the reTerminal with CM4 (eMMC), then you can directly flash the OS on to the eMMC storage. Once the necessary drivers are installed, you just have to connect the USB Type-C port of the reTerminal to your PC, and it will show as an external drive. Start by removing the reTerminal back shell.
 
-### USB 2.0 Ports
+- **Step 1.** Remove the 4 rubber covers and open the reTerminal back shell unscrewing the 4 screws underneath
 
-Raspberry Pi CM4 already has a **USB 2.0 Hub onboard**. This Hub is extended to **2 USB 2.0 Ports** on the reTerminal as **USB HOST**.
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/remove-screw-1.png" alt="pir" width="450" height="auto"></p>
 
-### Micro - SD Card Slot
+- **Step 2.** Remove the 2 screws to disassemble the heatsink and also the remaining 2 screws to take apart the entire case
 
-reTerminal is equipped with a **micro-sd card slot**. This is useful when you want to **install the operating system** on to a micro-SD card, while the **CM4 module without eMMC** is used. However, when the eMMC version of the CM4 module is used, you can use a micro-SD card as additional storage. It is recommeded to use a card with a minimum of at least 16GB.
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/remove-screw-2.jpg" alt="pir" width="500" height="auto"></p>
 
-### Micro HDMI Port
+- **Step 3.** Flip down the **boot mode switch** according to the below diagram
 
-There is a micro HDMI port on the reTerminal and you can use it to connect to HDMI displays via a **micro HDMI to standard HDMI cable**. It supports video up to 4K resolution at 60fps.
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flip-switch.jpg" alt="pir" width="700" height="auto"></p>
 
+Now let's move on to software set up. Follow the steps according to your desired operating system
 
-### USB Type-C Port
+###### For Windows 
 
-The **USB Type-C Port** on the reTerminal can be used to **power the reTerminal using 5V/2A (recommended)**. However it can also be used to act as a **USB Device** where you can connect the reTerminal to a **HOST PC** and the reTerminal will act as a **USB Mass Storage Device**. In here, you will be able to access the **onboard eMMC** and the connected **micro-SD card** of the reTerminal via the PC.
+- **Step 1.** Download and run [this installer](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe) to install the necessary drivers and the boot tool
 
-### Standard Camera Mount (1/4 inch)
+- **Step 2.** Connect reTerminal to the PC via USB Type-C cable 
 
-reTerminal has a **standard camera mount with a diameter 1/4 inch**. So you can connect the reTerminal to a **standard tripod**.
+Windows will now find the hardware and install the necessary drivers
+
+- **Step 3.** Search for **rpiboot** tool that we installed before and open it 
+
+- **Step 4.** Open **file explorer** and you will see the eMMC of the Computer Module 4 shown as a **USB mass storage device**
+
+- **Step 5.** Download **Raspberry Pi Imager** software by visiting [this link](https://www.raspberrypi.org/software/)
+
+- **Step 6.** Open Raspberry Pi Imager software
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"></p>
+
+- **Step 7.** Click **CHOOSE OS** and select your preferred OS
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"></p>
+
+**NOTE:** You can select other OS such as **64-bit Ubuntu** by navigating into **Other general purpose OS**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"></p>
+
+- **Step 8.** Click **CHOOSE STORAGE** and select the connected eMMC drive
+
+- **Step 9.** Finally, click **WRITE**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"></p>
+
+Please wait a few minutes until the flashing process is complete.
+
+- **Step 10.** Flip the **Boot Mode switch** back to the original position and assemble the reTerminal shell
+
+##### For Mac/Linux
+
+We will use Git to obtain the **rpiboot** source code, so make sure Git is installed
+
+- **Step 1.** Open a **Terminal** window and type the following to update the **packages list**
+
+```sh
+sudo apt-get update
+```
+
+- **Step 2.** Install **Git** by the following command 
+
+```sh 
+sudo apt install git
+```
+
+- **Step 3.** Git might produce an error if the date is not set properly. Type the following to correct this 
+
+```sh 
+sudo date MMDDhhmm
+```
+
+**NOTE:** Where **MM** is the month, **DD** is the date, and **hh** and **mm** are hours and minutes respectively.
+
+- **Step 4.** Clone the **usbboot** tool repository
+
+```sh 
+git clone --depth=1 https://github.com/raspberrypi/usbboot
+cd usbboot
+```
+
+- **Step 5.** Enter the following to install **libusb**
+
+```sh 
+sudo apt install libusb-1.0-0-dev
+```
+
+- **Step 6.** Build and install the usbboot tool
+
+```sh 
+make
+```
+
+- **Step 7.** Run the usbboot tool and it will wait for a connection
+
+```sh 
+sudo ./rpiboot
+```
+
+- **Step 8.** Connect reTerminal to the PC via USB Type-C cable 
+
+- **Step 9.** Download **Raspberry Pi Imager** software by visiting [this link](https://www.raspberrypi.org/software/)
+
+- **Step 10.** Open Raspberry Pi Imager software
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"></p>
+
+- **Step 11.** Click **CHOOSE OS** and select your preferred OS
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"></p>
+
+**NOTE:** You can select OS such as **64-bit Ubuntu** by navigating into **Other general purpose OS**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"></p>
+
+- **Step 12.** Click **CHOOSE STORAGE** and select the connected eMMC drive
+
+- **Step 13.** Finally, click **WRITE**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"></p>
+
+Please wait a few minutes until the flashing process is complete.
+
+- **Step 14.** Flip the **Boot Mode switch** back to the original postion and assemble the reTerminal shell
+
+##### Flash to Micro-SD Card (CM4 Non-eMMC Version)
+
+If you want to use a Compute Module 4 without eMMC on the reTerminal, then you need to insert a micro-SD and flash the Raspberry Pi OS. Follow the steps below according to your operating system.
+
+- **Step 1.** Insert a micro-SD card to the computer using a **micro-SD card reader** connected to the computer, or by using a **built-in card reader** on a laptop
+
+- **Step 2.** Download **Raspberry Pi Imager** software by visiting [this link](https://www.raspberrypi.org/software/)
+
+**Note:** You can choose to download for either **Windows, Mac or Ubuntu**
+
+- **Step 3.** Open Raspberry Pi Imager software
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"></p>
+
+- **Step 4.** Click **CHOOSE OS** and select your preferred OS
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"></p>
+
+**NOTE:** You can select OS such as **64-bit Ubuntu** by navigating into **Other general purpose OS**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"></p>
+
+- **Step 5.** Click **CHOOSE STORAGE** and select the connected eMMC drive
+
+- **Step 6.** Finally, click **WRITE**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"></p>
+
+Please wait a few minutes until the flashing process is complete.
+
+- **Step 7.** Eject the micro-SD card from computer and insert it into the reTerminal.
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/micro-sd.jpg" alt="pir" width="600" height="auto"></p>
+
+**Note:** You need to open the shell of the reTerminal to access the micro-sd card slot
+
+### Log in to Raspberry Pi OS/ Ubuntu OS or Other OS
+
+#### Method 1: Using SSH over Wi-Fi/ Ethernet
+
+If you want to log in to the Raspberry Pi OS using **SSH over Wi-Fi/ Ethernet**, you can follow the steps below. First set up Wi-Fi/Ethernet on the reTerminal and then SSH using Windows/Mac/Linux.
+
+- **Step 1.** If you have a **Wi-Fi connection**, click the **Wi-Fi icon** on the top right corner of the Raspberry Pi OS Desktop, select your Wi-Fi network and enter the password using the on-screen virtual keyboard
+
+**Note:** The location of the Wi-Fi setting might be different for other OS
+
+- **Step 2.** If you don't have a **Wi-Fi connection**, you can connect an ethernet cable from your router to the ethernet port of the reTerminal
+
+**Note:** Make sure the reTerminal and your computer is connected to the same network
+
+- **Step 3.** Touch on the Raspberry Pi icon at the top left corner and navigate to `Preferences > Raspberry Pi Configuration` and click on **Interfaces** tab
+
+- **Step 4.** Select **Enable** which is next to **SSH** and click **OK**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/ssh-select-2.jpg" alt="pir" width="1000" height="auto"></p>
+
+Now let's configure the software on the computer. Please follow according to your operating system
+
+##### For Windows
+
+- **Step 1.** Download and install **Putty** on the computer by visiting [this link](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+
+**Note:** Putty is an SSH and telnet client where you can use it to connect to the reTerminal via SSH
+
+- **Step 2.** Open Putty to connect the PC to reTerminal
+
+- **Step 3.** Select **SSH** under the **Connection Type**
+
+- **Step 4.** Under **Host Name**. type **raspberrypi.local** and leave the **Port** as **22**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss3.png" alt="pir" width="450" height="auto"></p>
+
+- **Step 5.** Click **Open**
+
+- **Step 6.** On the Putty window, enter the login details as follows
+
+```sh
+- Username: pi
+- Password: raspberry
+```
+
+- **Step 7.** If you have sucessfully logged into the Raspberry Pi OS, you will see the following output
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/SSH_WiFi.png" alt="pir" width="900" height="auto"></p>
+
+##### For Mac/Linux
+
+- **Step 1.** Open **Terminal** on the computer and type the following 
+
+```sh
+ssh pi@raspberrypi.local
+```
+
+- **Step 2.** Type **yes** for the following message
+
+```sh
+ECDSA key fingerprint is SHA256:XXXXXXX.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+```
+
+- **Step 3.** When it asks for the password, type the following
+
+```sh
+raspberry
+```
+
+- **Step 4.** If you have sucessfully logged into the Raspberry Pi OS, you will see the following output
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/SSH_WiFi_Linux.png" alt="pir" width="900" height="auto"></p>
+
+#### Method 2: Using USB to Serial Converter
+
+If you have a **USB to Serial Converter**, you can use the following steps to log in to Raspberry Pi OS
+
+- **Step 1.** Touch on the Raspberry Pi icon at the top left corner and navigate to `Preferences > Raspberry Pi Configuration` and click on **Interfaces** tab
+
+- **Step 2.** Select **Enable** which is next to **Serial Port** and **Serial Console**, and click **OK**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/serial-config.jpg" alt="pir" width="1000" height="auto"></p>
+
+- **Step 3.** Connect jumper wires from a USB to Serial Converter to the **UART pins** on the 40-pin GPIO header of the reTerminal as follows
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/UART-connect.png" alt="pir" width="1000" height="auto"></p>
+
+Now let's configure the software on the computer. Please follow according to your operating system
+
+##### For Windows
+
+- **Step 1.** Connect the USB to Serial Converter to the PC
+
+- **Step 2.** Open **Device Manager** by typing **Device Manager** in the windows search box
+
+- **Step 3.** Click on the drop-down arrow from **Ports (COM & LPT)** and find the name of the connected serial port (ex: **COM4**)
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/device_manager1.png" alt="pir" width="320" height="auto"></p>
+
+- **Step 4.** Download and install **Putty** by visiting [this link](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+
+**Note:** Putty is an SSH and telnet client where you can use it to connect to the reTerminal via SSH. You can skip this step if you already have Putty installed
+
+- **Step 5.** Open Putty to connect the PC to the reTerminal
+
+- **Step 6.** Select **Serial** under the **Connection Type**
+
+- **Step 7.** Configure the settings as follows:
+
+    - Serial line: COM4 (choose your COM port)
+    - Speed: 9600
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/Putty_Serial_1.png" alt="pir" width="450" height="auto"></p>
+
+- **Step 8.** Click **Open**
+
+- **Step 9.** On the Putty window, enter the login details as follows
+
+```sh
+- Username: pi
+- Password: raspberry
+```
+
+- **Step 10.** If you have sucessfully logged into the Raspberry Pi OS, you will see the following output
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/SSH_WiFi.png" alt="pir" width="900" height="auto"></p>
+
+##### For Mac/Linux
+
+- **Step 1.** Connect the USB to Serial Converter to the PC
+
+- **Step 2.** Open a **terminal window** on Mac/Linux
+
+- **Step 3.** Type the following to update the **packages list**
+
+```sh
+sudo apt-get update
+```
+
+- **Step 4.** Type the following to install **minicom**
+
+```sh
+sudo apt-get install minicom
+```
+
+- **Step 5.** Type the following in the terminal to view the connected serial devices
+
+```sh
+dmesg | grep tty
+```
+
+> <p style="font-size:16px">Ex: <br>
+  [ 1562.048241] cdc_acm 1-3:1.0: ttyACM0: USB ACM device</p>
+
+- **Step 6.** Connect to the serial device by typing the following
+
+```sh 
+minicom -D /dev/ttyACM0 -b 9600
+```
+
+**Note:** The baud rate is set to 9600
+
+- **Step 7.** After the hardware connections mentioned above, turn on the power from the wall power socket to power on the reTerminal
+
+Now you have successfully logged into Raspberry Pi OS.
+
+## Resources
+
+- **[ZIP]** [reTerminal Schematics](https://files.seeedstudio.com/wiki/ReTerminal/202003183_PCBA-reTerminal-CM1432.zip)
+
+- **[PDF]** [Raspberry Pi Compute Module 4 Datasheet](https://datasheets.raspberrypi.org/cm4/cm4-datasheet.pdf)
+
+- **[Web Page]** [Raspberry Pi Official Documentation](https://www.raspberrypi.org/documentation/)
 
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
