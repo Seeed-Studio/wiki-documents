@@ -32,11 +32,11 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
 
 ## Specifications
 
-<table style="undefined;table-layout: fixed; width: 744px">
+<table style="undefined;table-layout: fixed; width: 743px">
 <colgroup>
-<col style="width: 141px">
-<col style="width: 193px">
-<col style="width: 410px">
+<col style="width: 146px">
+<col style="width: 198px">
+<col style="width: 399px">
 </colgroup>
 <thead>
   <tr>
@@ -80,7 +80,7 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
   <tr>
     <td rowspan="2">Display</td>
     <td>LCD</td>
-    <td>5-inch 1280x720 LCD</td>
+    <td>5-inch 720x1280 LCD</td>
   </tr>
   <tr>
     <td>Touch Panel</td>
@@ -106,7 +106,7 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
     <td>OpenGL ES 3.0 graphics</td>
   </tr>
   <tr>
-    <td rowspan="9">Built-In Modules</td>
+    <td rowspan="10">Built-In Modules</td>
     <td rowspan="2">Real-Time Clock</td>
     <td>NXP Semiconductors PCF8563T</td>
   </tr>
@@ -137,6 +137,10 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
   <tr>
     <td>Internal IO<br>Expansion</td>
     <td>Microchip MCP23008-E</td>
+  </tr>
+  <tr>
+    <td>Speaker</td>
+    <td>≥85dB @10cm 2700±300Hz</td>
   </tr>
   <tr>
     <td rowspan="12">External I/O</td>
