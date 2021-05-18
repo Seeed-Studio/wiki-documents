@@ -109,7 +109,7 @@ You will see the following output if the compilation is successful
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/connection.jpg" alt="pir" width="1000" height="auto"></p>
 
 !!!Note
-        You can use any USB to Serial Converter with 3.3V I/O
+        After testing, we have found out that USB to serial converters with CP2102 chip (3.3V I/O) work best with UART header on the 40-pin GPIO.
 
 - **Step 3.** Connect power adapter to wall power socket
 
@@ -251,11 +251,11 @@ Connect the jumper wires from the USB to Serial Converter to the **DEBUG header*
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/debug_connect_1.jpg" alt="pir" width="900" height="auto"></p>
 
 !!!Note
-        You can use any USB to Serial Converter with 3.3V I/O
+        After testing, we have found out that USB to serial converters with CP2102 chip (3.3V I/O) work best with DEBUG header.
 
 ### Software Set Up
 
-Before you recover the bootloader, you need to have a **serial communication software** on your computer in order to communicate with the BeagleV™ - StarLight. We will use a software called **Tera Term for windows** and another software called **SecureCRT on Mac/Linux**. Follow the steps below according to your operating system
+Before you recover the bootloader, you need to have a **serial communication software** on your computer in order to communicate with the BeagleV™ - StarLight. We will use a software called **Tera Term for windows** and another **Bootloader recovery and updater tool for Mac/Linux**. Follow the steps below according to your operating system
 
 #### For Windows
 
@@ -274,7 +274,7 @@ Before you recover the bootloader, you need to have a **serial communication sof
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/debug_on.jpg" alt="pir" width="600" height="auto"></p>
 
-- **Step 6.** You will see the following output on **SecureCRT**
+- **Step 6.** You will see the following output on **Tera Term**
 
 > <p style="font-size:16px">(C) SiFive</p>
 
@@ -310,63 +310,51 @@ You will see an output like this
 
 #### For Mac/Linux
 
-- **Step 1.** Register an account and download **SecureCRT** by visiting [this link](https://www.vandyke.com/products/securecrt/)
+- **Step 1.** Clone the following GitHub repo which includes a **bootloader recovery and updater tool**
 
-**Note:** The free trial version of SecureCRT is only valid for 30 days
+```sh
+git clone https://github.com/kprasadvnsi/JH71xx-tools
+```
 
-- **Step 2.** Install SecureCRT on the computer and open it
+- **Step 2.** Navigate to the cloned repo and build the tool
 
-- **Step 3.** Type the following in the terminal to view the connected serial devices
+```sh
+cd JH71xx-tools
+gcc -o jh7100-recover jh7100-recover.c
+```
+
+- **Step 3.** Copy **vic_second_boot, bootloader and ddr init boot** to **JH71xx-tools** directory
+
+**Note:** This step is not a must, but it makes it more convenient in the following steps when we point to the file locations
+
+- **Step 4.** Type the following in the terminal to view the connected serial devices
 
 ```sh
 dmesg | grep tty
 ```
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/minicom_1.png" alt="pir" width="800" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki-3/dmesg.png" alt="pir" width="750" height="auto"></p>
 
-- **Step 4.** Navigate to `File > Quick Connect...` inside SecureCRT and configure the settings as follows:
+- **Step 5.** Type the following and it will wait for bootloader mode
 
-    - Protocol: Serial
-    - Port: /dev/ttyACM0 (according to the above port name)
-    - Baud rate: 9600
+```sh
+./jh7100-recover -D /dev/ttyUSB1 \
+-r vic_second_boot.bin \
+-b bootloader-BEAGLEV-210209.bin.out \
+-d ddrinit-2133-210302.bin.out 
+```
 
-- **Step 5.** Press on the **BOOT** button while turning on BeagleV™ - StarLight 
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki-3/bootloader-mode-wait.png" alt="pir" width="800" height="auto"></p>
+
+**Note:** You may change the serial port according to yours and also the file locations if you haven't moved them into the **JH71xx-tools** directory
+
+- **Step 6.** Press on the **BOOT** button while turning on BeagleV™ - StarLight to enter bootloader mode
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/debug_on.jpg" alt="pir" width="600" height="auto"></p>
 
-- **Step 6.** You will see the following output on the terminal
+If you see the following output, you have sucessfully updated **bootloader and ddr init boot**
 
-> <p style="font-size:16px">(C) SiFive</p>
-
-- **Step 7.** Type the following
-
-> <p style="font-size:16px">load 0x18000000</p>
-
-You will see an output like this 
-
-> <p style="font-size:16px">ccccccccccccccc</p>
-
-- **Step 8.** Navigate to `Transfer > Send Xmodem...` and select the **vic_second_boot.bin** file from before
-
-You will see an output like this after the transfer is complete
-
-> <p style="font-size:16px">Load file ok</p>
-
-- **Step 9.** Type the following
-
-> <p style="font-size:16px">do 0x18000000</p>
-
-You will see an output like this 
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/securecrt.png" alt="pir" width="700" height="auto"></p>
-
-- **Step 10.** Type "0" and press **Enter** to update the bootloader
-
-- **Step 11.** Navigate to `Transfer > Send Xmodem...` and choose the following file from the .zip file we downloaded before: `bootloader-BEAGLEV-210209.bin.out`
-
-- **Step 12.** Repeat the **steps 10 and 11** to update the **ddr init boot** as well according to the following:
-
-> <p style="font-size:16px">Type '1' - update ddr init boot `[Filename: ddrinit-2133-210302.bin.out]`</p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki-3/bootloader-mode-success.png" alt="pir" width="700" height="auto"></p>
 
 ## Burn u-boot 
 
