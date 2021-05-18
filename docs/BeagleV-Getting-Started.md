@@ -279,8 +279,6 @@ Now you have connected with the BeagleV™ - StarLight via SSH using Mac/Linux!
 
 You can log in to Fedora OS using a **USB to Serial Converter**. Please follow the guide below.
 
-**Note:** After testing, we have found out that USB to serial converters with CP2102 chip works best with UART header on the 40-pin GPIO.
-
 ##### For Windows
 
 - **Step 1.** Insert the micro-SD card with the Fedora image from before into BeagleV™ - StarLight
@@ -292,7 +290,7 @@ You can log in to Fedora OS using a **USB to Serial Converter**. Please follow t
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/connection.jpg" alt="pir" width="1000" height="auto"></p>
 
 !!!Note
-        You can use any USB to Serial Converter with 3.3V I/O
+        After testing, we have found out that USB to serial converters with CP2102 chip (3.3V I/O) work best with UART header on the 40-pin GPIO.
 
 - **Step 4.** Connect the USB to Serial Converter to the PC
 
