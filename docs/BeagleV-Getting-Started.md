@@ -166,11 +166,15 @@ cd D:\Downloads\zstd
 sudo apt-get update
 ```
 
+**Note:** If you are a Mac user, type **brew update**
+
 - **Step 4.** Type the following to install **zstd** package which we will use to unzip our Fedora image file
 
 ```sh
 sudo apt-get install zstd
 ```
+
+**Note:** If you are a Mac user, type **brew install zstd**
 
 - **Step 5.** Navigate to the location of the downloaded **Fedora** image directory before
 
@@ -189,6 +193,12 @@ zstd -d Fedora-riscv64-vic7100-dev-raw-image-Rawhide-202104161415.n.0-sda.raw.zs
 
 ```sh
 sudo dd if=Fedora-riscv64-vic7100-dev-raw-image-Rawhide-202104161415.n.0-sda.raw of=/dev/sdc bs=8M status=progress && sync
+```
+
+**Note:** If you are a Mac user, **burn** the Fedora image to the micro-SD card by running the following command
+
+```sh
+sudo dd if=Fedora-riscv64-vic7100-dev-raw-image-Rawhide-202104161415.n.0-sda.raw of=/dev/sdc bs=8m && sync
 ```
 
 > <p style="font-size:16px">**Note:** <br>
