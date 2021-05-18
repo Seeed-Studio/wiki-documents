@@ -108,7 +108,7 @@ Hit "ok" if your Raspberry Pi Pico is plugged in and running MicroPython Thonny 
 ```
 from machine import Pin,PWM,ADC
 from time import sleep
-adc = ADC(0) #ADC input (knob potentiometer) connected to A2
+adc = ADC(0) #ADC input (knob potentiometer) connected to A0
 pwm = PWM(Pin(27))#DAC output (buzzer) connected to A1
 pwm.freq(10000)
 while True:
@@ -334,7 +334,7 @@ Then you can get the RGB LED WS2813 mini flash beautiful color as below.
 | Pi Pico | Grove Shield for Pi Pico| grove sound sensor |Grove light sensor|Grove-16x2 LCD|
 |--------------|-------------|-----------------|-----------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Picoboard1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/picobaseshield.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Sound_Sensor/img/page_small_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/img/light_sensor_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/perspective.jpg)|
-|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Sound-Sensor-p-752.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Light-Sensor-v1.2-p-2727.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-16-x-2-LCD-Black-on-Yellow.html)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Sound-Sensor-p-752.html)|[Get One Now](https://www.seeedstudio.com/Grove-Light-Sensor-v1.2-p-2727.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-16-x-2-LCD-Black-on-Yellow.html)|[Get ONE Now]()|
 
 
 
@@ -384,7 +384,8 @@ Then please download the [LCD1602.py](http://47.106.166.129/Embeded/pico-micropy
 
 
 Input **LCD1602.py** in File name column, click "ok", then the file is saved at File->Open->MicroPython device.
-
+!!!Note
+        In this example, the version of LCD1602 we are using is a monochrome backlit version. If you need to control the full-color backlit version of LCD1602, check out the functions in this library file to learn how to use it.
 
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/lcdlightsound.png)
