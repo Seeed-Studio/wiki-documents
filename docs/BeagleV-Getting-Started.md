@@ -91,8 +91,9 @@ You need to prepare the following hardware before getting started with the Beagl
 - 16GB (or more) micro-SD card
 - micro-SD card reader
 - Computer (PC/Mac/Linux)
-- USB To Serial Converter (3.3V I/O) or Ethernet Cable
-- Power Adapter (5V/3A) 
+- USB to serial converter (3.3V I/O) - [CP2102](https://www.amazon.com/gp/product/B00LODGRV8/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&psc=1&pldnSite=1) is recommended
+- Ethernet cable
+- Power adapter (5V/3A) 
 - USB Type-C Cable
 
 ## Getting Started - Connecting a Fan
@@ -277,6 +278,8 @@ Now you have connected with the BeagleV™ - StarLight via SSH using Mac/Linux!
 #### Method 2: Using a USB to Serial Converter
 
 You can log in to Fedora OS using a **USB to Serial Converter**. Please follow the guide below.
+
+**Note:** After testing, we have found out that USB to serial converters with CP2102 chip works best with UART header on the 40-pin GPIO.
 
 ##### For Windows
 
