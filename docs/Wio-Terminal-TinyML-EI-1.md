@@ -15,7 +15,7 @@ To set Wio Terminal up in Edge Impulse, you will need to install the following s
 3. The Edge Impulse CLI and a serial monitor. Install by opening command prompt or terminal and run:
 
 ```sh
-npm install -g edge-impulse-cli @serialport/terminal
+npm install -g edge-impulse-cli 
 ```
 
 !!!Note
