@@ -325,7 +325,7 @@ nav:
 
       - reTerminal:
           - Getting Started with reTerminal: reTerminal.md
-          - Hardware and Interfaces Usage: reTerminal-Hardware-and-Interfaces-Usage.md
+          - Hardware and Interfaces Usage: reTerminal-hardware-interfaces-usage.md
 
       - ReSpeaker:
           - ReSpeaker Introduction: ReSpeaker.md
