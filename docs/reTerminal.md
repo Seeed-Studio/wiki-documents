@@ -221,13 +221,15 @@ You need to prepare the following hardware before getting started with reTermina
 
 reTerminal comes with Raspberry Pi OS pre-installed out-of-the-box. So we can turn on the reTerminal and log in to Raspberry Pi OS straight away!
 
-- **Step 1.** Connect one end of a USB Type-C cable to the reTerminal and the other end to a power adapter (5V/4A)
-
-- **Step 2.** Press the power button to turn on the reTerminal
+Connect one end of a USB Type-C cable to the reTerminal and the other end to a power adapter (5V/4A)
 
 You will see the Raspberry Pi OS boot in to Desktop
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/RPI-Desktop-1.jpg" alt="pir" width="800" height="auto"></p>
+
+**NOTE:** The button on the top left corner can be used to turn on the reTerminal after shutting down using software
+
+<p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/ReTerminal/power-button-press.jpg" alt="pir" width="650" height="auto"></p>
 
 #### Update Packages and Raspberry Pi OS
 
@@ -294,9 +296,9 @@ If you have the reTerminal with CM4 (eMMC), then you can directly flash the OS o
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/remove-screw-1.png" alt="pir" width="450" height="auto"></p>
 
-- **Step 2.** Remove the 2 screws to disassemble the heatsink and also the remaining 2 screws to take apart the entire case
+- **Step 2.** Remove the 2 screws to disassemble the heatsink and also the remaining 4 screws to take apart the entire case
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/remove-screw-2.jpg" alt="pir" width="500" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/remove-screw-3.jpg" alt="pir" width="500" height="auto"></p>
 
 - **Step 3.** Flip down the **boot mode switch** according to the below diagram
 
@@ -322,7 +324,13 @@ Windows will now find the hardware and install the necessary drivers
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"></p>
 
-- **Step 7.** Click **CHOOSE OS** and select your preferred OS
+- **Step 7.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
+
+<p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"></p>
+
+Here you can **set a hostname, enable SSH, set a password, configure wifi, set locale settings** and more
+
+- **Step 8.** Click **CHOOSE OS** and select your preferred OS
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"></p>
 
@@ -330,15 +338,15 @@ Windows will now find the hardware and install the necessary drivers
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"></p>
 
-- **Step 8.** Click **CHOOSE STORAGE** and select the connected eMMC drive
+- **Step 9.** Click **CHOOSE STORAGE** and select the connected eMMC drive
 
-- **Step 9.** Finally, click **WRITE**
+- **Step 10.** Finally, click **WRITE**
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"></p>
 
 Please wait a few minutes until the flashing process is complete.
 
-- **Step 10.** Flip the **Boot Mode switch** back to the original position and assemble the reTerminal shell
+- **Step 11.** Flip the **Boot Mode switch** back to the original position and assemble the reTerminal shell
 
 ##### For Mac/Linux
 
@@ -397,7 +405,13 @@ sudo ./rpiboot
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"></p>
 
-- **Step 11.** Click **CHOOSE OS** and select your preferred OS
+- **Step 11.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
+
+<p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"></p>
+
+Here you can **set a hostname, enable SSH, set a password, configure wifi, set locale settings** and more
+
+- **Step 12.** Click **CHOOSE OS** and select your preferred OS
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"></p>
 
@@ -405,15 +419,15 @@ sudo ./rpiboot
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"></p>
 
-- **Step 12.** Click **CHOOSE STORAGE** and select the connected eMMC drive
+- **Step 13.** Click **CHOOSE STORAGE** and select the connected eMMC drive
 
-- **Step 13.** Finally, click **WRITE**
+- **Step 14.** Finally, click **WRITE**
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"></p>
 
 Please wait a few minutes until the flashing process is complete.
 
-- **Step 14.** Flip the **Boot Mode switch** back to the original postion and assemble the reTerminal shell
+- **Step 15.** Flip the **Boot Mode switch** back to the original postion and assemble the reTerminal shell
 
 ##### Flash to Micro-SD Card (CM4 Non-eMMC Version)
 
@@ -429,7 +443,13 @@ If you want to use a Compute Module 4 without eMMC on the reTerminal, then you n
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"></p>
 
-- **Step 4.** Click **CHOOSE OS** and select your preferred OS
+- **Step 4.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
+
+<p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"></p>
+
+Here you can **set a hostname, enable SSH, set a password, configure wifi, set locale settings** and more
+
+- **Step 5.** Click **CHOOSE OS** and select your preferred OS
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"></p>
 
@@ -437,15 +457,15 @@ If you want to use a Compute Module 4 without eMMC on the reTerminal, then you n
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"></p>
 
-- **Step 5.** Click **CHOOSE STORAGE** and select the connected eMMC drive
+- **Step 6.** Click **CHOOSE STORAGE** and select the connected eMMC drive
 
-- **Step 6.** Finally, click **WRITE**
+- **Step 7.** Finally, click **WRITE**
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"></p>
 
 Please wait a few minutes until the flashing process is complete.
 
-- **Step 7.** Eject the micro-SD card from computer and insert it into the reTerminal.
+- **Step 8.** Eject the micro-SD card from computer and insert it into the reTerminal.
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/micro-sd.jpg" alt="pir" width="600" height="auto"></p>
 
@@ -456,6 +476,8 @@ Please wait a few minutes until the flashing process is complete.
 #### Method 1: Using SSH over Wi-Fi/ Ethernet
 
 If you want to log in to the Raspberry Pi OS using **SSH over Wi-Fi/ Ethernet**, you can follow the steps below. First set up Wi-Fi/Ethernet on the reTerminal and then SSH using Windows/Mac/Linux.
+
+**Note:** If you have configured WiFi and enabled SSH using Raspberry Pi Imager, you can skip steps 1 - 4
 
 - **Step 1.** If you have a **Wi-Fi connection**, click the **Wi-Fi icon** on the top right corner of the Raspberry Pi OS Desktop, select your Wi-Fi network and enter the password using the on-screen virtual keyboard
 
@@ -529,13 +551,7 @@ raspberry
 
 If you have a **USB to Serial Converter**, you can use the following steps to log in to Raspberry Pi OS
 
-- **Step 1.** Touch on the Raspberry Pi icon at the top left corner and navigate to `Preferences > Raspberry Pi Configuration` and click on **Interfaces** tab
-
-- **Step 2.** Select **Enable** which is next to **Serial Port** and **Serial Console**, and click **OK**
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/serial-config.jpg" alt="pir" width="1000" height="auto"></p>
-
-- **Step 3.** Connect jumper wires from a USB to Serial Converter to the **UART pins** on the 40-pin GPIO header of the reTerminal as follows
+Connect jumper wires from a USB to Serial Converter to the **UART pins** on the 40-pin GPIO header of the reTerminal as follows
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/UART-connect.png" alt="pir" width="1000" height="auto"></p>
 
@@ -618,9 +634,44 @@ minicom -D /dev/ttyACM0 -b 9600
 
 Now you have successfully logged into Raspberry Pi OS.
 
+### Install reTerminal drivers after flashing new Raspberry Pi OS/ Ubuntu OS or Other OS
+
+reTerminal comes with the necessary drivers pre-installed out-of-the-box. However, if you flash new OS by yourself, you need to install the necessary drivers separately.
+
+- **Step 1.** Clone the following repo
+
+```sh
+git clone https://github.com/Seeed-Studio/seeed-linux-dtoverlays
+```
+
+- **Step 2.** Enter the repo and switch the branch to **mipi_dsi**
+
+```sh
+cd seeed-linux-dtoverlays
+git checkout mipi_dsi
+```
+
+- **Step 3.** Type the following to install the drivers
+
+```sh
+sudo ./reTerminal.sh
+```
+
+You will see the following output if you have successfully installed the drivers
+
+<p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/ReTerminal/driver-success.png" alt="pir" width="1000" height="auto"></p>
+
+- **Step 4.** Reboot the reTerminal
+
+```sh
+sudo reboot
+```
+
 ## Resources
 
-- **[ZIP]** [reTerminal Schematics](https://files.seeedstudio.com/wiki/ReTerminal/202003183_PCBA-reTerminal-CM1432.zip)
+- **[PDF]** [reTerminal Schematics](https://files.seeedstudio.com/wiki/ReTerminal/202003183_PCBA_reTerminal-CM1432_SCH.pdf)
+
+- **[ZIP]** [reTerminal Schematics](https://files.seeedstudio.com/wiki/ReTerminal/202003183_PCBA-reTerminal.zip)
 
 - **[PDF]** [Raspberry Pi Compute Module 4 Datasheet](https://datasheets.raspberrypi.org/cm4/cm4-datasheet.pdf)
 
