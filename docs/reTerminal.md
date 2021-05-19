@@ -636,7 +636,7 @@ Now you have successfully logged into Raspberry Pi OS.
 
 ### Install reTerminal drivers after flashing new Raspberry Pi OS/ Ubuntu OS or Other OS
 
-reTerminal comes with the necessary drivers pre-installed out-of-the-box. However, if you flash new OS by yourself, you need to install the necessary drivers separately.
+reTerminal comes with the necessary drivers pre-installed out-of-the-box so you don't need to install any additional drivers. However, if you flash new OS by yourself, you need to install the necessary drivers separately. The hardware that need drivers include the **5-inch LCD, accelerometer, light sensor, user LEDs and user buttons, RTC and the cryptographic co-processor**.
 
 - **Step 1.** Clone the following repo
 
