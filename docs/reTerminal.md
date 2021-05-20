@@ -200,7 +200,7 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
 
 ## Pinout Diagram
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/pinout_pic.png" alt="pir" width="1000" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/pinout-v1.png" alt="pir" width="1000" height="auto"></p>
 
 ## Quick Start with reTerminal
 
@@ -282,15 +282,9 @@ You need to prepare the following hardware
 - Power adapter (5V/4A) 
 - USB Type-C cable
 
-### Software Set Up
+### Flash Raspberry Pi OS/ 64-bit Ubuntu OS or Other OS to eMMC
 
-#### Flash Raspberry Pi OS/ 64-bit Ubuntu OS or Other OS
-
-We can flash **Raspberry Pi OS/ 64-bit Ubuntu OS or other OS** on to the **eMMC storage** of the CM4 on the reTerminal. However, if you plan to switch the CM4 to a **non-eMMC version**, you can insert a micro SD-card to the reTerminal and flash your desired OS on to the micro SD-card
-
-##### Flash to eMMC (CM4 eMMC Version)
-
-If you have the reTerminal with CM4 (eMMC), then you can directly flash the OS on to the eMMC storage. Once the necessary drivers are installed, you just have to connect the USB Type-C port of the reTerminal to your PC, and it will show as an external drive. Start by removing the reTerminal back shell.
+We can flash **Raspberry Pi OS/ 64-bit Ubuntu OS or other OS** on to the **eMMC storage** of the CM4 on the reTerminal. Once the necessary drivers are installed, you just have to connect the USB Type-C port of the reTerminal to your PC, and it will show as an external drive. Start by removing the reTerminal back shell.
 
 - **Step 1.** Remove the 4 rubber covers and open the reTerminal back shell unscrewing the 4 screws underneath
 
@@ -306,7 +300,7 @@ If you have the reTerminal with CM4 (eMMC), then you can directly flash the OS o
 
 Now let's move on to software set up. Follow the steps according to your desired operating system
 
-###### For Windows 
+##### For Windows 
 
 - **Step 1.** Download and run [this installer](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe) to install the necessary drivers and the boot tool
 
@@ -429,51 +423,7 @@ Please wait a few minutes until the flashing process is complete.
 
 - **Step 15.** Flip the **Boot Mode switch** back to the original postion and assemble the reTerminal shell
 
-##### Flash to Micro-SD Card (CM4 Non-eMMC Version)
-
-If you want to use a Compute Module 4 without eMMC on the reTerminal, then you need to insert a micro-SD and flash the Raspberry Pi OS. Follow the steps below according to your operating system.
-
-- **Step 1.** Insert a micro-SD card to the computer using a **micro-SD card reader** connected to the computer, or by using a **built-in card reader** on a laptop
-
-- **Step 2.** Download **Raspberry Pi Imager** software by visiting [this link](https://www.raspberrypi.org/software/)
-
-**Note:** You can choose to download for either **Windows, Mac or Ubuntu**
-
-- **Step 3.** Open Raspberry Pi Imager software
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"></p>
-
-- **Step 4.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
-
-<p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"></p>
-
-Here you can **set a hostname, enable SSH, set a password, configure wifi, set locale settings** and more
-
-- **Step 5.** Click **CHOOSE OS** and select your preferred OS
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"></p>
-
-**NOTE:** You can select OS such as **64-bit Ubuntu** by navigating into **Other general purpose OS**
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"></p>
-
-- **Step 6.** Click **CHOOSE STORAGE** and select the connected eMMC drive
-
-- **Step 7.** Finally, click **WRITE**
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"></p>
-
-Please wait a few minutes until the flashing process is complete.
-
-- **Step 8.** Eject the micro-SD card from computer and insert it into the reTerminal.
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/micro-sd.jpg" alt="pir" width="600" height="auto"></p>
-
-**Note:** You need to open the shell of the reTerminal to access the micro-sd card slot
-
-### Log in to Raspberry Pi OS/ Ubuntu OS or Other OS
-
-#### Method 1: Using SSH over Wi-Fi/ Ethernet
+### Log in to Raspberry Pi OS/ Ubuntu OS or Other OS using SSH over Wi-Fi/ Ethernet
 
 If you want to log in to the Raspberry Pi OS using **SSH over Wi-Fi/ Ethernet**, you can follow the steps below. First set up Wi-Fi/Ethernet on the reTerminal and then SSH using Windows/Mac/Linux.
 
@@ -497,30 +447,25 @@ Now let's configure the software on the computer. Please follow according to you
 
 ##### For Windows
 
-- **Step 1.** Download and install **Putty** on the computer by visiting [this link](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
-
-**Note:** Putty is an SSH and telnet client where you can use it to connect to the reTerminal via SSH
-
-- **Step 2.** Open Putty to connect the PC to reTerminal
-
-- **Step 3.** Select **SSH** under the **Connection Type**
-
-- **Step 4.** Under **Host Name**. type **raspberrypi.local** and leave the **Port** as **22**
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss3.png" alt="pir" width="450" height="auto"></p>
-
-- **Step 5.** Click **Open**
-
-- **Step 6.** On the Putty window, enter the login details as follows
+- **Step 1.** Open **Command Prompt** and type the following
 
 ```sh
-- Username: pi
-- Password: raspberry
+ssh pi@raspberrypi.local
 ```
 
-- **Step 7.** If you have sucessfully logged into the Raspberry Pi OS, you will see the following output
+- **Step 2.** Type **yes** for the prompt
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/SSH_WiFi.png" alt="pir" width="900" height="auto"></p>
+<p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/ReTerminal/ssh-windows-prompt.png" alt="pir" width="750" height="auto"></p>
+
+- **Step 3.** Enter the password as follows
+
+```sh
+raspberry
+```
+
+- **Step 4.** If you have sucessfully logged into the Raspberry Pi OS, you will see the following output
+
+<p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/ReTerminal/ssh-windows.png" alt="pir" width="1000" height="auto"></p>
 
 ##### For Mac/Linux
 
@@ -547,7 +492,83 @@ raspberry
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/SSH_WiFi_Linux.png" alt="pir" width="900" height="auto"></p>
 
-#### Method 2: Using USB to Serial Converter
+### Install reTerminal drivers after flashing new Raspberry Pi OS/ Ubuntu OS or Other OS
+
+reTerminal comes with the necessary drivers pre-installed out-of-the-box so you don't need to install any additional drivers. However, if you flash new OS by yourself, you need to install the necessary drivers separately. The hardware that need drivers include the **5-inch LCD, accelerometer, light sensor, user LEDs and user buttons, RTC and the cryptographic co-processor**.
+
+- **Step 1.** Clone the following repo while switching to **mipi_dsi** branch
+
+```sh
+git clone --depth 1 -b mipi_dsi https://github.com/Seeed-Studio/seeed-linux-dtoverlays
+```
+
+- **Step 2.** Enter the repo
+
+```sh
+cd seeed-linux-dtoverlays
+```
+
+- **Step 3.** Type the following to install the drivers
+
+```sh
+sudo ./reTerminal.sh
+```
+
+You will see the following output if you have successfully installed the drivers
+
+<p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/ReTerminal/driver-success.png" alt="pir" width="1000" height="auto"></p>
+
+- **Step 4.** Reboot the reTerminal
+
+```sh
+sudo reboot
+```
+
+## FAQ
+
+### Q1: How can I flash OS if I replace the CM4 with non-eMMC version
+
+If you want to use a Compute Module 4 without eMMC on the reTerminal, then you need to insert a micro-SD and flash the OS of your choice. Follow the steps below according to your operating system.
+
+- **Step 1.** Insert a micro-SD card to the computer using a **micro-SD card reader** connected to the computer, or by using a **built-in card reader** on a laptop
+
+- **Step 2.** Download **Raspberry Pi Imager** software by visiting [this link](https://www.raspberrypi.org/software/)
+
+**Note:** You can choose to download for either **Windows, Mac or Ubuntu**
+
+- **Step 3.** Open Raspberry Pi Imager software
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"></p>
+
+- **Step 4.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
+
+<p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"></p>
+
+Here you can **set a hostname, enable SSH, set a password, configure wifi, set locale settings** and more
+
+- **Step 5.** Click **CHOOSE OS** and select your preferred OS
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"></p>
+
+**NOTE:** You can select OS such as **64-bit Ubuntu** by navigating into **Other general purpose OS**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"></p>
+
+- **Step 6.** Click **CHOOSE STORAGE** and select the connected micro-sd card
+
+- **Step 7.** Finally, click **WRITE**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"></p>
+
+Please wait a few minutes until the flashing process is complete.
+
+- **Step 8.** Eject the micro-SD card from computer and insert it into the reTerminal.
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/micro-sd.jpg" alt="pir" width="600" height="auto"></p>
+
+**Note:** You need to open the shell of the reTerminal to access the micro-sd card slot
+
+### Q2: How can I log in to Raspberry Pi OS/ Ubuntu OS or other OS using a USB to serial converter
 
 If you have a **USB to Serial Converter**, you can use the following steps to log in to Raspberry Pi OS
 
@@ -633,39 +654,6 @@ minicom -D /dev/ttyACM0 -b 9600
 - **Step 7.** After the hardware connections mentioned above, turn on the power from the wall power socket to power on the reTerminal
 
 Now you have successfully logged into Raspberry Pi OS.
-
-### Install reTerminal drivers after flashing new Raspberry Pi OS/ Ubuntu OS or Other OS
-
-reTerminal comes with the necessary drivers pre-installed out-of-the-box so you don't need to install any additional drivers. However, if you flash new OS by yourself, you need to install the necessary drivers separately. The hardware that need drivers include the **5-inch LCD, accelerometer, light sensor, user LEDs and user buttons, RTC and the cryptographic co-processor**.
-
-- **Step 1.** Clone the following repo
-
-```sh
-git clone https://github.com/Seeed-Studio/seeed-linux-dtoverlays
-```
-
-- **Step 2.** Enter the repo and switch the branch to **mipi_dsi**
-
-```sh
-cd seeed-linux-dtoverlays
-git checkout mipi_dsi
-```
-
-- **Step 3.** Type the following to install the drivers
-
-```sh
-sudo ./reTerminal.sh
-```
-
-You will see the following output if you have successfully installed the drivers
-
-<p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/ReTerminal/driver-success.png" alt="pir" width="1000" height="auto"></p>
-
-- **Step 4.** Reboot the reTerminal
-
-```sh
-sudo reboot
-```
 
 ## Resources
 
