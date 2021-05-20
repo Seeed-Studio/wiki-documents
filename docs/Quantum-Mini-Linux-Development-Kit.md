@@ -291,7 +291,7 @@ There are also more example usages of the dev board in the `WorkSpace` such as *
 
 ### Q1: How can I install a fan to cool down the board
 
-We are planning to release a fan and a fan holder for this product in the near future. However, for now we have released [fan holder DXF files](files.seeedstudio.com/wiki/Quantum-Mini-Linux-Dev-Kit/cooling-case-202006-fan.zip) for your reference.
+We are planning to release a fan and a fan holder for this product in the near future. However, for now we have released [fan holder DXF files](files.seeedstudio.com/wiki/Quantum-Mini-Linux-Dev-Kit/cooling-case-202006-fan.zip) for your reference. You can install a 20x20x6mm fan to this fan holder.
 
 The fan holder can be installed as follows:
 
