@@ -637,22 +637,27 @@ There is a micro HDMI port on the reTerminal and you can use it to connect to HD
 
 **Note:** If you connect a display while the reTerminal is powered on, you need to type **sudo service lightdm restart** to display the UI on the connected HDMI display.
 
-- **Step 3.** Click on the Raspberry Pi icon on the top left corner and navigate to `Preferences > Screen Configuration`
+- **Step 3.** Type the following in a terminal window to install **Screen Configuration** utility
+
+```sh
+sudo apt install arandr
+```
+
+- **Step 4.** Click on the Raspberry Pi icon on the top left corner and navigate to `Preferences > Screen Configuration`
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/screen-config-setup.png" alt="pir" width="1000" height="auto"></p>
 
-- **Step 4.** Inside the **Screen Layout Editor** window, navigate to `Configure > Screens > HDMI-1 > Resolution` and adjust select the resolution of the connected HDMI display. 
+- **Step 5.** Inside the **Screen Layout Editor** window, navigate to `Configure > Screens > HDMI-1 > Resolution` and adjust select the resolution of the connected HDMI display. 
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/screen-drag.png" alt="pir" width="1000" height="auto"></p>
 
-
 **Note:** You can also change the **frequency** and the **orientation** of the display
 
-- **Step 5.** Drag the two boxes to change the arrangement of the displays. 
+- **Step 6.** Drag the two boxes to change the arrangement of the displays. 
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/screen-setting.png" alt="pir" width="1000" height="auto"></p>
 
-- **Step 6.** Click on the **tick mark** to apply the settings
+- **Step 7.** Click on the **tick mark** to apply the settings
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/screen-apply.png" alt="pir" width="1000" height="auto"></p>
 
