@@ -494,7 +494,7 @@ raspberry
 
 ### Install reTerminal drivers after flashing new Raspberry Pi OS/ Ubuntu OS or Other OS
 
-reTerminal comes with the necessary drivers pre-installed out-of-the-box so you don't need to install any additional drivers. However, if you flash new OS by yourself, you need to install the necessary drivers separately. The hardware that need drivers include the **5-inch LCD, accelerometer, light sensor, user LEDs and user buttons, RTC and the cryptographic co-processor**.
+reTerminal comes with the necessary drivers pre-installed out-of-the-box so you don't need to install any additional drivers. However, if you flash new OS by yourself, you need to install the necessary drivers separately. The hardware that need drivers include the **5-inch LCD, touch panel, accelerometer, light sensor, user LEDs, user buttons, RTC, buzzer, cryptographic co-processor**.
 
 - **Step 1.** Clone the following repo while switching to **mipi_dsi** branch
 
@@ -505,7 +505,7 @@ git clone --depth 1 -b mipi_dsi https://github.com/Seeed-Studio/seeed-linux-dtov
 - **Step 2.** Enter the repo
 
 ```sh
-cd seeed-linux-dtoverlays
+cd seeed-linux-dtoverlays/scripts
 ```
 
 - **Step 3.** Type the following to install the drivers
