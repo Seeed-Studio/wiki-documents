@@ -44,7 +44,7 @@ You can download the course in PDF format and course materials by clicking on th
 TinyML with Wio Terminal course
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML-EI-1/1.png"/></div> 
 ##### Download PDF:
-[PDF of the TinyML with Wio Terminal course](https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML/TinyML_with_Wio_Terminal_Course_v1-2.pdf)
+[PDF of the TinyML with Wio Terminal course](https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML/TinyML_with_Wio_Terminal_Course_v1-3.pdf)
 ##### Download course materials:
 [Seeed_Arduino_WioTerminal_TinyML_Course-1.0.zip](https://github.com/Seeed-Studio/Seeed_Arduino_WioTerminal_TinyML_Course/archive/refs/tags/1.0.zip)
 ##### Github repository with course materials:
