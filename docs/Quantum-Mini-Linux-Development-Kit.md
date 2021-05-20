@@ -287,13 +287,21 @@ You should see the video stream on the LCD screen of the dev board!
 
 There are also more example usages of the dev board in the `WorkSpace` such as **TensorFlow Lite**, **[WuKong Robot](https://github.com/wzpan/wukong-robot)**, [**snowboy**](https://github.com/Kitt-AI/snowboy) and etc. Please navigate to the path and find out more!
 
-<!-- ## FAQs -->
+## FAQ
+
+### Q1: How can I install a fan to cool down the board
+
+We are planning to release a fan and a fan holder for this product in the near future. However, for now we have released [fan holder DXF files](files.seeedstudio.com/wiki/Quantum-Mini-Linux-Dev-Kit/cooling-case-202006-fan.zip) for your reference.
+
+The fan holder can be installed as follows:
+
+ <p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/Quantum-Mini-Linux-Dev-Kit/connection-diagram.jpg" alt="pir" width="500" height="auto"></p>
 
 ## Resources
 
 - [**ZIP**] [**Atom Shield N AD**](https://files.seeedstudio.com/wiki/Quantum-Mini-Linux-Dev-Kit/Atom-Shield-N-AD-files.zip)
 - [**ZIP**] [**Heat sink and Stand 3D file**](https://files.seeedstudio.com/wiki/Quantum-Mini-Linux-Dev-Kit/3D%20Files.zip)
-
+- [**ZIP**] [**Fan holder**](files.seeedstudio.com/wiki/Quantum-Mini-Linux-Dev-Kit/cooling-case-202006-fan.zip)
 
 ## Tech Support
 
