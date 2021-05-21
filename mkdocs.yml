@@ -393,6 +393,7 @@ nav:
           - Wio Extension RTC (Real Time Clock): Wio-Extension-RTC.md
 
       - Wio:
+          - Wio RP2040 Module: Wio_RP2040_Module_Build-in_Wireless_2.4G.md
           - Wio Introduction: Wio.md
           - Wio Link: Wio_Link.md
           - Wio Link Bootcamp Kit: Wio_Link_Bootcamp_Kit.md
