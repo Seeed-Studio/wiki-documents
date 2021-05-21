@@ -4,7 +4,7 @@
 
 In this wiki, we will introduce how to use [**Wio Terminal**](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) with [**Edge Impulse**](http://edgeimpulse.com/) to simply deploy a machine learning project. Wio Terminal with the [**Grove systems**](https://www.seeedstudio.com/category/Grove-c-1003.html) can be very powerful, which brings hundreds of sensor data in for analysis and to possible evaluate different scenarios!
 
-This is a project inspired by [Benjamin Cabé's Artificial nose project](https://twitter.com/kartben/status/1258791793073815552). With this wiki, you will get a understanding of the workflow of Edge Impulse using Wio Terminal.
+This is a project inspired by [Benjamin Cabé's Artificial nose project](https://twitter.com/kartben/status/1258791793073815552). Through this article, you will get a understanding of the workflow of Edge Impulse using Wio Terminal.
 
 ## Hardware Required
 
