@@ -39,7 +39,7 @@ Now, navigate to [**Edge Impulse homepage**](https://studio.edgeimpulse.com/stud
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-Edge-Impulse/device.png"/></div>
 
-Now your Wio Terminal is all set and ready to collect data!
+Now your Wio Terminal is all set up and ready to collect data!
 
 ### 2. Collecting Data
 
