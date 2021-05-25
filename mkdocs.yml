@@ -394,6 +394,11 @@ nav:
 
       - Wio:
           - Wio RP2040 Module: Wio_RP2040_Module_Build-in_Wireless_2.4G.md
+          - Wio RP2040 mini Dev Board:
+              - Get Started with Wio RP2040 mini Dev Board: Get_Started_with_Wio_RP2040_mini_dev_board.md
+              - LAN Communications: LAN_Communications.md
+              - Use MQTT to remotely light up LED lights: Use_MQTT_to_remotely_light_up_LED_lights.md
+              - Use Socket to connect to the forum.md: Use_Socket_to_connect_to_the_forum.md
           - Wio Introduction: Wio.md
           - Wio Link: Wio_Link.md
           - Wio Link Bootcamp Kit: Wio_Link_Bootcamp_Kit.md
