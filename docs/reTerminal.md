@@ -505,13 +505,13 @@ git clone --depth 1 -b mipi_dsi https://github.com/Seeed-Studio/seeed-linux-dtov
 - **Step 2.** Enter the repo
 
 ```sh
-cd seeed-linux-dtoverlays/scripts
+cd seeed-linux-dtoverlays
 ```
 
 - **Step 3.** Type the following to install the drivers
 
 ```sh
-sudo ./reTerminal.sh
+sudo ./scripts/reTerminal.sh
 ```
 
 You will see the following output if you have successfully installed the drivers
