@@ -842,7 +842,7 @@ git checkout mipi_dsi
 - **Step 5.** Type the following to install the scipt
 
 ```sh
-sudo ./cm4_lan7800.sh
+sudo ./scripts/cm4_lan7800.sh
 ```
 
 - **Step 6.** Reboot the carrier board
